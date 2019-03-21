@@ -8,7 +8,9 @@ buildPythonPackage rec {
     inherit pname version;
     sha256 = "0y3hxyd84q7c0091cci3dnsg8pm9yw9i4fxgc09wzzgaiq8y3k40";
   };
-  
+
+  patches = [ ./0001-Add-support-for-Nix-NixOS.patch ];
+
   # Tries to download files
   doCheck = false;
 

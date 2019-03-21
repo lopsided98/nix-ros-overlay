@@ -10,6 +10,8 @@ buildPythonPackage rec {
   };
 
   propagatedBuildInputs = [ catkin-pkg pyyaml ];
+  
+  patches = [ ./0001-os_detect-add-support-for-NixOS.patch ];
 
   meta = {
     description = "Library for retrieving information about ROS packages and stacks";

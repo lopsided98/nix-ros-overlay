@@ -1,4 +1,4 @@
-{ buildPythonPackage, fetchPypi, rospkg, catkin-pkg, pyyaml }:
+{ lib, buildPythonPackage, fetchPypi, rospkg, catkin-pkg, pyyaml }:
 
 buildPythonPackage rec {
   pname = "rosdistro";
@@ -11,8 +11,9 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [ rospkg catkin-pkg pyyaml ];
 
-  meta = {
+  meta = with lib; {
     description = "A tool to work with rosdistro files";
     homepage = http://wiki.ros.org/rosdistro;
+    license = licenses.bsd3;
   };
 }

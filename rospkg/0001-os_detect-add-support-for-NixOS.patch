@@ -1,0 +1,41 @@
+From 2f9ca3ff1c81ef8d497cd867a2c2904d579cdc80 Mon Sep 17 00:00:00 2001
+From: Ben Wolsieffer <benwolsieffer@gmail.com>
+Date: Tue, 12 Mar 2019 11:53:25 -0400
+Subject: [PATCH] os_detect: add support for NixOS
+
+Also reorder the OS name declarations to match their usages.
+---
+ src/rospkg/os_detect.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/rospkg/os_detect.py b/src/rospkg/os_detect.py
+index 42b902e..482a566 100644
+--- a/src/rospkg/os_detect.py
++++ b/src/rospkg/os_detect.py
+@@ -687,13 +687,14 @@ OS_LINARO = 'linaro'
+ OS_MINT = 'mint'
+ OS_NEON = 'neon'
+ OS_OPENSUSE = 'opensuse'
+-OS_TIZEN = 'tizen'
+ OS_OPENSUSE13 = 'opensuse'
++OS_TIZEN = 'tizen'
+ OS_OSX = 'osx'
+ OS_QNX = 'qnx'
+ OS_RHEL = 'rhel'
+ OS_SLACKWARE = 'slackware'
+ OS_UBUNTU = 'ubuntu'
++OS_NIXOS = 'nixos'
+ OS_WINDOWS = 'windows'
+ 
+ OsDetect.register_default(OS_ALPINE, FdoDetect("alpine"))
+@@ -720,6 +721,7 @@ OsDetect.register_default(OS_QNX, QNX())
+ OsDetect.register_default(OS_RHEL, Rhel())
+ OsDetect.register_default(OS_SLACKWARE, Slackware())
+ OsDetect.register_default(OS_UBUNTU, LsbDetect("Ubuntu"))
++OsDetect.register_default(OS_NIXOS, FdoDetect("nixos"))
+ OsDetect.register_default(OS_WINDOWS, Windows())
+ 
+ 
+-- 
+2.21.0
+

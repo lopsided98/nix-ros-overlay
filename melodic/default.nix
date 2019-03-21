@@ -5,10 +5,7 @@ self: super: let
     
     buildRosPackage = rosSelf.callPackage ../build-ros-package { };
     
-    buildEnv = import ../build-env {
-      inherit (self) stdenv runCommand makeWrapper;
-      inherit (rosSelf) python;
-    };
+    buildEnv = rosSelf.callPackage ../build-env { };
     
     python = self.python3;
     pythonPackages = self.python3Packages;

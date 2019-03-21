@@ -1,4 +1,4 @@
-{ buildPythonPackage, fetchPypi, catkin-pkg, rosdistro, rospkg, pyyaml }:
+{ lib, buildPythonPackage, fetchPypi, catkin-pkg, rosdistro, rospkg, pyyaml }:
 
 buildPythonPackage rec {
   pname = "rosinstall_generator";
@@ -11,8 +11,9 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [ catkin-pkg rosdistro rospkg pyyaml ];
 
-  meta = {
+  meta = with lib; {
     description = "A tool to generator rosinstall files";
     homepage = http://wiki.ros.org/rosinstall_generator;
+    license = licenses.bsd3;
   };
 }

@@ -1,0 +1,134 @@
+From 062a441c889a870b01493485565554703987ee83 Mon Sep 17 00:00:00 2001
+From: Ben Wolsieffer <benwolsieffer@gmail.com>
+Date: Thu, 14 Mar 2019 17:30:55 -0400
+Subject: [PATCH] Add support for Nix/NixOS
+
+---
+ src/rosdep2/__init__.py       |  3 +-
+ src/rosdep2/platforms/arch.py |  9 ++---
+ src/rosdep2/platforms/nix.py  | 62 +++++++++++++++++++++++++++++++++++
+ 3 files changed, 69 insertions(+), 5 deletions(-)
+ create mode 100644 src/rosdep2/platforms/nix.py
+
+diff --git a/src/rosdep2/__init__.py b/src/rosdep2/__init__.py
+index b7bbbfb..7d844f5 100644
+--- a/src/rosdep2/__init__.py
++++ b/src/rosdep2/__init__.py
+@@ -59,6 +59,7 @@ def create_default_installer_context(verbose=False):
+     from .platforms import cygwin
+     from .platforms import debian
+     from .platforms import gentoo
++    from .platforms import nix
+     from .platforms import opensuse
+     from .platforms import osx
+     from .platforms import pip
+@@ -68,7 +69,7 @@ def create_default_installer_context(verbose=False):
+     from .platforms import slackware
+     from .platforms import source
+ 
+-    platform_mods = [arch, cygwin, debian, gentoo, opensuse, osx, redhat, slackware, freebsd]
++    platform_mods = [arch, cygwin, debian, gentoo, nix, opensuse, osx, redhat, slackware, freebsd]
+     installer_mods = [source, pip, gem] + platform_mods
+ 
+     context = InstallerContext()
+diff --git a/src/rosdep2/platforms/arch.py b/src/rosdep2/platforms/arch.py
+index c03e2f1..6aaf4f4 100644
+--- a/src/rosdep2/platforms/arch.py
++++ b/src/rosdep2/platforms/arch.py
+@@ -29,10 +29,11 @@
+ 
+ import subprocess
+ 
++from rospkg.os_detect import OS_ARCH
++
+ from ..installers import PackageManagerInstaller
+ from .source import SOURCE_INSTALLER
+ 
+-ARCH_OS_NAME = 'arch'
+ PACMAN_INSTALLER = 'pacman'
+ 
+ 
+@@ -41,9 +42,9 @@ def register_installers(context):
+ 
+ 
+ def register_platforms(context):
+-    context.add_os_installer_key(ARCH_OS_NAME, SOURCE_INSTALLER)
+-    context.add_os_installer_key(ARCH_OS_NAME, PACMAN_INSTALLER)
+-    context.set_default_os_installer_key(ARCH_OS_NAME, lambda self: PACMAN_INSTALLER)
++    context.add_os_installer_key(OS_ARCH, SOURCE_INSTALLER)
++    context.add_os_installer_key(OS_ARCH, PACMAN_INSTALLER)
++    context.set_default_os_installer_key(OS_ARCH, lambda self: PACMAN_INSTALLER)
+ 
+ 
+ def pacman_detect_single(p):
+diff --git a/src/rosdep2/platforms/nix.py b/src/rosdep2/platforms/nix.py
+new file mode 100644
+index 0000000..c6c21b9
+--- /dev/null
++++ b/src/rosdep2/platforms/nix.py
+@@ -0,0 +1,62 @@
++# Copyright (c) 2009, Willow Garage, Inc.
++# All rights reserved.
++#
++# Redistribution and use in source and binary forms, with or without
++# modification, are permitted provided that the following conditions are met:
++#
++#     * Redistributions of source code must retain the above copyright
++#       notice, this list of conditions and the following disclaimer.
++#     * Redistributions in binary form must reproduce the above copyright
++#       notice, this list of conditions and the following disclaimer in the
++#       documentation and/or other materials provided with the distribution.
++#     * Neither the name of the Willow Garage, Inc. nor the names of its
++#       contributors may be used to endorse or promote products derived from
++#       this software without specific prior written permission.
++#
++# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++# ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
++# LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
++# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
++# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
++# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
++# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
++# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
++# POSSIBILITY OF SUCH DAMAGE.
++
++# Author Ben Wolsieffer/benwolsieffer@gmail.com
++import subprocess
++
++from rospkg.os_detect import OS_NIXOS
++
++from ..installers import PackageManagerInstaller
++
++NIX_INSTALLER = 'nix'
++
++
++def register_installers(context):
++    context.set_installer(NIX_INSTALLER, NixInstaller())
++
++
++def register_platforms(context):
++    context.add_os_installer_key(OS_NIXOS, NIX_INSTALLER)
++    context.set_default_os_installer_key(OS_NIXOS, lambda self: NIX_INSTALLER)
++
++
++def nix_detect(packages):
++    # Say that all packages are installed, because Nix handles installation
++    # automatically
++    return packages
++
++
++class NixInstaller(PackageManagerInstaller):
++
++    def __init__(self):
++        super(NixInstaller, self).__init__(nix_detect)
++
++    def get_install_command(self, resolved, interactive=True, reinstall=False, quiet=False):
++        raise NotImplementedError('Nix does not support installing packages through ROS')
++
++    def get_version_strings(self):
++        return subprocess.check_output(('nix', '--version'))
+-- 
+2.21.0
+
