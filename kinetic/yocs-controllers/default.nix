@@ -1,0 +1,22 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, catkin, roscpp }:
+buildRosPackage {
+  pname = "ros-kinetic-yocs-controllers";
+  version = "0.8.2";
+
+  src = fetchurl {
+    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_controllers/0.8.2-0.tar.gz;
+    sha256 = "4245e367e47411753aa148e9a267d7554bc5d0b341a8c51e90be763637c7e5b0";
+  };
+
+  propagatedBuildInputs = [ roscpp ];
+  nativeBuildInputs = [ catkin roscpp ];
+
+  meta = {
+    description = ''Library for various controller types and algorithms'';
+    #license = lib.licenses.BSD;
+  };
+}

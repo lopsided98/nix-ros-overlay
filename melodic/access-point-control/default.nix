@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rospy, catkin, dynamic-reconfigure }:
 buildRosPackage {
   pname = "ros-melodic-access-point-control";
-  version = "1.0.13-r2";
+  version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/access_point_control/1.0.13-2.tar.gz;
-    sha256 = "39437c7678dd643ca15a57d31c319e44d806e652a955b8f040cda6239366e000";
+    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/access_point_control/1.0.15-0.tar.gz;
+    sha256 = "bd928fbd2ace49080fc8c8691939402be907acdf7a84259735f03e7278e5afe5";
   };
 
   propagatedBuildInputs = [ rospy dynamic-reconfigure ];

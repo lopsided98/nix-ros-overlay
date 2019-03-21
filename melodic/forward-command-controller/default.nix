@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, hardware-interface, realtime-tools, catkin, controller-interface, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-forward-command-controller";
-  version = "0.14.3";
+  version = "0.15.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/forward_command_controller/0.14.3-0.tar.gz;
-    sha256 = "033b65a8cfaadbc143f33b8ef6e9a66a2347bb95a91f651ff2a3121d0bc71a86";
+    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/forward_command_controller/0.15.0-0.tar.gz;
+    sha256 = "811c1ec365f2d1e20a0c2269f4b678683e6b71788a4adc5c64379e3e523c2ab0";
   };
 
   propagatedBuildInputs = [ std-msgs hardware-interface controller-interface realtime-tools ];

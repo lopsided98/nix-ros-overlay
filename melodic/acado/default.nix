@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, boost }:
 buildRosPackage {
   pname = "ros-melodic-acado";
-  version = "1.2.2-r1";
+  version = "1.2.3";
 
   src = fetchurl {
-    url = https://github.com/tud-cor/acado-release/archive/release/melodic/acado/1.2.2-1.tar.gz;
-    sha256 = "bfb8864f764eb70aa712553524ee677d50512954cc87bb0a126c2e65bac5dac8";
+    url = https://github.com/tud-cor/acado-release/archive/release/melodic/acado/1.2.3-0.tar.gz;
+    sha256 = "2d84945378a8f8b6c9d8667b4e1aa02a0001130853e6bb04e29dc1906582598e";
   };
 
   propagatedBuildInputs = [ catkin boost ];

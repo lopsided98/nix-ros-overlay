@@ -1,0 +1,25 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, roscpp-tutorials, openrtm-tools, catkin, rostopic, rospy }:
+buildRosPackage {
+  pname = "ros-kinetic-rosnode-rtc";
+  version = "1.4.2";
+
+  src = fetchurl {
+    url = https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/rosnode_rtc/1.4.2-0.tar.gz;
+    sha256 = "bb126f1601b1d3d15caeec29ed19a1db359829af3420bfa411828125f6fcba71";
+  };
+
+  propagatedBuildInputs = [ openrtm-tools ];
+  nativeBuildInputs = [ roscpp-tutorials rostopic rospy openrtm-tools catkin ];
+
+  meta = {
+    description = ''This package gives transparency between RTM and ROS.
+
+     rtmros-data-bridge.py is a RT-Component for dataport/topic.
+     This automatically convert ROS/topic into RTM/dataport.'';
+    #license = lib.licenses.BSD;
+  };
+}

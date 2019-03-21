@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, p2os-teleop, p2os-driver, p2os-urdf, catkin, p2os-msgs }:
 buildRosPackage {
   pname = "ros-melodic-p2os-launch";
-  version = "2.2.0";
+  version = "2.1.1-r3";
 
   src = fetchurl {
-    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_launch/2.2.0-0.tar.gz;
-    sha256 = "466e247e9a9c302f0070b881742bef7ff9a0de402ff403691035d91d14c5bff1";
+    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_launch/2.1.1-3.tar.gz;
+    sha256 = "44ce86f957548ceb122a58f2073bf32128e8e5c2ed32a95e4c76ad16ae37856f";
   };
 
   propagatedBuildInputs = [ p2os-teleop p2os-urdf p2os-driver p2os-msgs ];

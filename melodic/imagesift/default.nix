@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cmake-modules, libsiftfast, image-transport, sensor-msgs, cv-bridge, posedetection-msgs, catkin, jsk-topic-tools, rostest, jsk-recognition-utils, nodelet, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-imagesift";
-  version = "1.2.9";
+  version = "1.2.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/imagesift/1.2.9-0.tar.gz;
-    sha256 = "cde7884d37ac150c32553a35447cb6aa7fa11fec05c4d052d3aba07a7eac1e9d";
+    url = https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/imagesift/1.2.10-0.tar.gz;
+    sha256 = "322d64597608e08314224ee31b4fd32f1d3ab7fe3b6fea7cbff20131e411ffc5";
   };
 
   checkInputs = [ rostest ];

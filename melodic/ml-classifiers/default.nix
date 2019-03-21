@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pluginlib, roslint, catkin, roslib, message-generation, message-runtime, eigen, std-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-ml-classifiers";
-  version = "0.4.0";
+  version = "0.4.1";
 
   src = fetchurl {
-    url = https://github.com/astuff/ml_classifiers-release/archive/release/melodic/ml_classifiers/0.4.0-0.tar.gz;
-    sha256 = "d2ff2bb82ef058b476e9b0ca97006a18aae8e0d7c4e16401a6b87300680331cf";
+    url = https://github.com/astuff/ml_classifiers-release/archive/release/melodic/ml_classifiers/0.4.1-0.tar.gz;
+    sha256 = "8d0314032aceb9b0ecc092f8aedef9e87342bb6bf9d33c58261e4597038f703a";
   };
 
   propagatedBuildInputs = [ roslib pluginlib message-runtime eigen std-msgs roscpp ];

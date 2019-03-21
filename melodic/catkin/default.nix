@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gtest, cmake, pythonPackages, gmock }:
+{ lib, buildRosPackage, fetchurl, python, gtest, pythonPackages, cmake, gmock }:
 buildRosPackage {
   pname = "ros-melodic-catkin";
   version = "0.7.17";
@@ -13,8 +13,8 @@ buildRosPackage {
   };
 
   checkInputs = [ pythonPackages.nose pythonPackages.mock ];
-  propagatedBuildInputs = [ pythonPackages.catkin-pkg pythonPackages.nose gtest gmock pythonPackages.empy ];
-  nativeBuildInputs = [ pythonPackages.catkin-pkg cmake pythonPackages.empy ];
+  propagatedBuildInputs = [ python pythonPackages.catkin-pkg pythonPackages.nose gtest gmock pythonPackages.empy ];
+  nativeBuildInputs = [ python pythonPackages.catkin-pkg cmake pythonPackages.empy ];
 
   meta = {
     description = ''Low-level build system macros and infrastructure for ROS.'';

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-runtime, std-msgs, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-p2os-teleop";
-  version = "2.2.0";
+  version = "2.1.1-r3";
 
   src = fetchurl {
-    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_teleop/2.2.0-0.tar.gz;
-    sha256 = "6828013c5b117f7b94adb25c04337e2e469a7ad99a5a8b1df558976c32ba29f6";
+    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_teleop/2.1.1-3.tar.gz;
+    sha256 = "f263fffb042a86ffea63279e319c18b59efe102b6ad0f0d2f868ddd86e754fc2";
   };
 
   propagatedBuildInputs = [ message-runtime std-msgs sensor-msgs tf geometry-msgs ];

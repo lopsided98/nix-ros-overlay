@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rospy, catkin, dynamic-reconfigure }:
 buildRosPackage {
   pname = "ros-melodic-network-traffic-control";
-  version = "1.0.13-r2";
+  version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_traffic_control/1.0.13-2.tar.gz;
-    sha256 = "a6ab6e3990f79606e3b67d8e1ee877c85a13469f3fcfc51faa321d79dfceafe1";
+    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_traffic_control/1.0.15-0.tar.gz;
+    sha256 = "688195036f7eb3da7fe668ddd56bafdc53648a11e81fb61627e20bfca0187f70";
   };
 
   propagatedBuildInputs = [ rospy dynamic-reconfigure ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roscpp-serialization, abseil-cpp, rostime }:
 buildRosPackage {
   pname = "ros-melodic-ros-type-introspection";
-  version = "1.3.0";
+  version = "1.3.1";
 
   src = fetchurl {
-    url = https://github.com/facontidavide/ros_type_introspection-release/archive/release/melodic/ros_type_introspection/1.3.0-0.tar.gz;
-    sha256 = "dd4a65f0facf184daca9db53fb4199071a366ca7f939d147796d9ad0fd0dcbb4";
+    url = https://github.com/facontidavide/ros_type_introspection-release/archive/release/melodic/ros_type_introspection/1.3.1-0.tar.gz;
+    sha256 = "c3b62db46928a7b5946b9c2ff988313f92826a967912736601a53029b789a296";
   };
 
   propagatedBuildInputs = [ abseil-cpp roscpp rostime roscpp-serialization ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, kdl-parser, tf, catkin, p2os-msgs, diagnostic-updater, nav-msgs, message-runtime, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-p2os-driver";
-  version = "2.2.0";
+  version = "2.1.1-r3";
 
   src = fetchurl {
-    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_driver/2.2.0-0.tar.gz;
-    sha256 = "aa0e4297afd7633bc1049a8524c1cebd057b4d7a60bf8125e241da31d099e903";
+    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_driver/2.1.1-3.tar.gz;
+    sha256 = "6964b9f9c333b2290f586f8ea5bb23cd9bf6d3eb0e774dd33d2498624bae978d";
   };
 
   propagatedBuildInputs = [ kdl-parser roscpp p2os-msgs diagnostic-updater nav-msgs message-runtime std-msgs tf geometry-msgs ];
@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Driver file descriptions for P2OS/ARCOS robot'';
-    #license = lib.licenses.GPL-2.0;
+    #license = lib.licenses.BSD;
   };
 }

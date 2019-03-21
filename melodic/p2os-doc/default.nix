@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-p2os-doc";
-  version = "2.2.0";
+  version = "2.1.1-r3";
 
   src = fetchurl {
-    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_doc/2.2.0-0.tar.gz;
-    sha256 = "7e567f72d9968ed1411ae855b5b9c45a15c831fea99f5d22acf7cc5c2d185c79";
+    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_doc/2.1.1-3.tar.gz;
+    sha256 = "227edf1f84b669f969f96db7c374ba1985c0ae65383edeccbae293321d80ab86";
   };
 
   nativeBuildInputs = [ catkin ];

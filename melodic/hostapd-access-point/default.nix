@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, access-point-control, catkin, ieee80211-channels, rospy, dynamic-reconfigure }:
 buildRosPackage {
   pname = "ros-melodic-hostapd-access-point";
-  version = "1.0.13-r2";
+  version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/hostapd_access_point/1.0.13-2.tar.gz;
-    sha256 = "bea0177adb3f798682f1b3a981dbf8c76443c5b0588d067fef6ee2cd3adffb61";
+    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/hostapd_access_point/1.0.15-0.tar.gz;
+    sha256 = "e12d76fdbde92293ff72cc2ff0393e826e2008e23e01f7031aac00ed4a2c3f13";
   };
 
   propagatedBuildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];

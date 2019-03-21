@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, hardware-interface, pluginlib, realtime-tools, sensor-msgs, catkin, rostest, controller-interface, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-joint-state-controller";
-  version = "0.14.3";
+  version = "0.15.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/joint_state_controller/0.14.3-0.tar.gz;
-    sha256 = "23c02e2b6b37c5502acb54ae071ee257f7803f0265d1b5e301444762108999a0";
+    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/joint_state_controller/0.15.0-0.tar.gz;
+    sha256 = "97c1c877b5f1f3fd9377c0c1e8a8fb5ef9b2ab05957d3469d25300bb088e937e";
   };
 
   checkInputs = [ rostest ];

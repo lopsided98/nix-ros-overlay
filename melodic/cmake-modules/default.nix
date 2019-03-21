@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-cmake-modules";
-  version = "0.4.1";
+  version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/cmake_modules-release/archive/release/melodic/cmake_modules/0.4.1-0.tar.gz;
-    sha256 = "f967e92480eb619fe0442ca64000a820ad3370c38648c6e2f262e1353a5246b6";
+    url = https://github.com/ros-gbp/cmake_modules-release/archive/release/melodic/cmake_modules/0.4.2-0.tar.gz;
+    sha256 = "3598bda2ce4a55fdbe097c3d5c16cee1735b180cf234fea89628d78ea88da0bb";
   };
 
   nativeBuildInputs = [ catkin ];

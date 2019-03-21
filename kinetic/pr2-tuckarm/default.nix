@@ -1,0 +1,23 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, pr2-mechanism-msgs, trajectory-msgs, catkin, rospy, pr2-tuck-arms-action }:
+buildRosPackage {
+  pname = "ros-kinetic-pr2-tuckarm";
+  version = "0.6.0";
+
+  src = fetchurl {
+    url = https://github.com/pr2-gbp/pr2_apps-release/archive/release/kinetic/pr2_tuckarm/0.6.0-0.tar.gz;
+    sha256 = "5e4a04899cb1f09027c550b29a79882d85e7dc2b1736ff2320dce118a201b399";
+  };
+
+  propagatedBuildInputs = [ pr2-mechanism-msgs pr2-tuck-arms-action trajectory-msgs rospy ];
+  nativeBuildInputs = [ catkin ];
+
+  meta = {
+    description = ''Tucks the arms of the PR2 robot into a safe position for moving the base of the robot.
+     This also moves the arms out of the view of the tilting laser scanner, as much as possible.'';
+    #license = lib.licenses.BSD;
+  };
+}

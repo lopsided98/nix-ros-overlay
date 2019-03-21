@@ -1,0 +1,28 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, cmake-modules, git, cacert, openssl, cmake, opencv3 }:
+buildRosPackage {
+  pname = "ros-kinetic-slic";
+  version = "2.1.11";
+
+  src = fetchurl {
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/slic/2.1.11-0.tar.gz;
+    sha256 = "e0827b668e4dc5ba0b6dd155e4919679ed82e184a9e59a074508216b1187e15f";
+  };
+
+  propagatedBuildInputs = [ opencv3 ];
+  nativeBuildInputs = [ cacert cmake-modules openssl git cmake opencv3 ];
+
+  meta = {
+    description = ''SLIC-Superpizel ROS Wrapper
+  This file contains the class elements of the class Slic. This class is an
+  implementation of the SLIC Superpixel algorithm by Achanta et al. [PAMI'12,
+  vol. 34, num. 11, pp. 2274-2282].
+
+  This implementation is created for the specific purpose of creating
+  over-segmentations in an OpenCV-based environment.'';
+    #license = lib.licenses.N/A;
+  };
+}

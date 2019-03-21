@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, actionlib, rospy, geometry-msgs, py-trees, pythonPackages, unique-id, rosbag, catkin, move-base-msgs, nav-msgs, std-msgs, python-qt-binding, sensor-msgs, py-trees-msgs, uuid-msgs, rostest, dynamic-reconfigure, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-py-trees-ros";
-  version = "0.5.16";
+  version = "0.5.18";
 
   src = fetchurl {
-    url = https://github.com/stonier/py_trees_ros-release/archive/release/melodic/py_trees_ros/0.5.16-0.tar.gz;
-    sha256 = "ff4969870401c0ab359a185328c283b3e50ac51c2edad4dcefda781735bf7ecb";
+    url = https://github.com/stonier/py_trees_ros-release/archive/release/melodic/py_trees_ros/0.5.18-0.tar.gz;
+    sha256 = "1bc3f54d395458994329b16c3e3abff63702270a44e1443c5cafafe85a7362ac";
   };
 
   checkInputs = [ rostest python-qt-binding rosunit geometry-msgs py-trees ];

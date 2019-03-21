@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, jsk-footstep-msgs, catkin, sensor-msgs, message-generation, pcl-msgs, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-jsk-recognition-msgs";
-  version = "1.2.9";
+  version = "1.2.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/jsk_recognition_msgs/1.2.9-0.tar.gz;
-    sha256 = "2bf7fd2c7608709b0f5670d49e201d672b7ed85ccce7c0078c5dce53aa07ecfa";
+    url = https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/jsk_recognition_msgs/1.2.10-0.tar.gz;
+    sha256 = "29666d54c5db407b249a6233047344608e66d1760ad1576db9148dcec5255a87";
   };
 
   propagatedBuildInputs = [ message-generation jsk-footstep-msgs pcl-msgs std-msgs sensor-msgs geometry-msgs ];

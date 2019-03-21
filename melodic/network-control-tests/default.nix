@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, access-point-control, hostapd-access-point, catkin, network-monitor-udp, linksys-access-point, rostest, network-traffic-control, dynamic-reconfigure, ddwrt-access-point }:
 buildRosPackage {
   pname = "ros-melodic-network-control-tests";
-  version = "1.0.13-r2";
+  version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_control_tests/1.0.13-2.tar.gz;
-    sha256 = "277a453251b08e5d8616c7c1af2081b1f9a5fde81c7415b7eb5eac329e1aefb6";
+    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_control_tests/1.0.15-0.tar.gz;
+    sha256 = "4add026eec7c8446a8d73d41c53a13ebd581c20dc59cc4bae70bca03bafd9864";
   };
 
   propagatedBuildInputs = [ rostest network-traffic-control access-point-control dynamic-reconfigure ddwrt-access-point hostapd-access-point network-monitor-udp linksys-access-point ];

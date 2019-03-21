@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, access-point-control, catkin, ieee80211-channels, rospy, dynamic-reconfigure }:
 buildRosPackage {
   pname = "ros-melodic-linksys-access-point";
-  version = "1.0.13-r2";
+  version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/linksys_access_point/1.0.13-2.tar.gz;
-    sha256 = "7bda12e4d3aeb0d720f2771e17fd000c1cc7722a73e5ef237f261472ea0643b3";
+    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/linksys_access_point/1.0.15-0.tar.gz;
+    sha256 = "55dd46632ddd7f101ab243a61ebdba3479af1187d7ea143d4b8cd419aed58592";
   };
 
   propagatedBuildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];

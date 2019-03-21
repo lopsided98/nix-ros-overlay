@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, actionlib, message-runtime, rospy, diagnostic-msgs }:
 buildRosPackage {
   pname = "ros-melodic-network-monitor-udp";
-  version = "1.0.13-r2";
+  version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_monitor_udp/1.0.13-2.tar.gz;
-    sha256 = "d203956bc49ba42bf2f54ef0cb57253ec42fd8278260bd5090fd998765198154";
+    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_monitor_udp/1.0.15-0.tar.gz;
+    sha256 = "13796a8d318164b470a8a64961490c98240910da407b5ca63eb148d7c97c49b6";
   };
 
   propagatedBuildInputs = [ message-runtime actionlib-msgs actionlib diagnostic-msgs rospy ];

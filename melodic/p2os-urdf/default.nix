@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, kdl-parser, p2os-driver, sensor-msgs, catkin, p2os-msgs, urdf, std-msgs, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-p2os-urdf";
-  version = "2.2.0";
+  version = "2.1.1-r3";
 
   src = fetchurl {
-    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_urdf/2.2.0-0.tar.gz;
-    sha256 = "bda7d9b660aba7d77667c54cda251a01b037a4e64e91668f16ecafc602a2ab11";
+    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_urdf/2.1.1-3.tar.gz;
+    sha256 = "10b0c2e34e4c56a3816165507eb40d1424b6d77c82f9fa09729e5f5069745c11";
   };
 
   propagatedBuildInputs = [ urdf kdl-parser p2os-driver std-msgs sensor-msgs tf geometry-msgs p2os-msgs ];
