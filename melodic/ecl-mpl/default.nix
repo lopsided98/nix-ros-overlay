@@ -1,0 +1,23 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ecl-license, catkin }:
+buildRosPackage {
+  pname = "ros-melodic-ecl-mpl";
+  version = "0.62.2";
+
+  src = fetchurl {
+    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/melodic/ecl_mpl/0.62.2-0.tar.gz;
+    sha256 = "b0d2d0c068130287e3f8bc5d6e0fcf93cc5a5cefb02e2a8432504557dc411e46";
+  };
+
+  propagatedBuildInputs = [ ecl-license ];
+  nativeBuildInputs = [ ecl-license catkin ];
+
+  meta = {
+    description = ''Metaprogramming tools move alot of runtime calculations to be shifted to
+    compile time. This has only very elementary structures at this stage.'';
+    #license = lib.licenses.BSD;
+  };
+}

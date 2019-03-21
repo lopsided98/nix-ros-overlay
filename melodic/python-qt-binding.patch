@@ -1,0 +1,47 @@
+From a6919e94de354edefec860490b69b5bad0428e09 Mon Sep 17 00:00:00 2001
+From: Ben Wolsieffer <benwolsieffer@gmail.com>
+Date: Sat, 16 Mar 2019 10:24:17 -0400
+Subject: [PATCH] Test patch.
+
+---
+ cmake/sip_configure.py | 2 ++
+ cmake/sip_helper.cmake | 5 +++++
+ 2 files changed, 7 insertions(+)
+
+diff --git a/cmake/sip_configure.py b/cmake/sip_configure.py
+index 1dfa1cb..4667ac6 100644
+--- a/cmake/sip_configure.py
++++ b/cmake/sip_configure.py
+@@ -116,6 +116,8 @@ def split_paths(paths):
+     return paths
+ 
+ 
++print("sip_configure.py: include_dirs: {}".format(include_dirs))
++
+ for include_dir in split_paths(include_dirs):
+     include_dir = include_dir.replace('\\', '')
+     makefile.extra_include_dirs.append(include_dir)
+diff --git a/cmake/sip_helper.cmake b/cmake/sip_helper.cmake
+index ce76008..2dbe76a 100644
+--- a/cmake/sip_helper.cmake
++++ b/cmake/sip_helper.cmake
+@@ -199,11 +199,16 @@ function(build_sip_binding PROJECT_NAME SIP_FILE)
+ 
+     set(SIP_BUILD_DIR ${sip_BINARY_DIR}/sip/${PROJECT_NAME})
+ 
++    message(WARNING "CMAKE: project include dirs: ${${PROJECT_NAME}_INCLUDE_DIRS}")
++    message(WARNING "CMAKE: python include dirs: ${PYTHON_INCLUDE_DIRS}")
++
+     set(INCLUDE_DIRS ${${PROJECT_NAME}_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
+     set(LIBRARIES ${${PROJECT_NAME}_LIBRARIES})
+     set(LIBRARY_DIRS ${${PROJECT_NAME}_LIBRARY_DIRS})
+     set(LDFLAGS_OTHER ${${PROJECT_NAME}_LDFLAGS_OTHER})
+ 
++    message(WARNING "CMAKE: sip include dirs: ${INCLUDE_DIRS}")
++
+     add_custom_command(
+         OUTPUT ${SIP_BUILD_DIR}/Makefile
+         COMMAND ${PYTHON_EXECUTABLE} ${sip_SIP_CONFIGURE} ${SIP_BUILD_DIR} ${SIP_FILE} ${sip_LIBRARY_DIR} \"${INCLUDE_DIRS}\" \"${LIBRARIES}\" \"${LIBRARY_DIRS}\" \"${LDFLAGS_OTHER}\"
+-- 
+2.21.0
+

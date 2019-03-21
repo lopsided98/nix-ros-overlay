@@ -1,0 +1,21 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, catkin }:
+buildRosPackage {
+  pname = "ros-melodic-urg-c";
+  version = "1.0.405";
+
+  src = fetchurl {
+    url = https://github.com/ros-gbp/urg_c-release/archive/release/melodic/urg_c/1.0.405-0.tar.gz;
+    sha256 = "f747da6d3ab437c8a455194bbd9cf64f84798700d7458584c77916f9c479691a";
+  };
+
+  nativeBuildInputs = [ catkin ];
+
+  meta = {
+    description = ''The urg_c package'';
+    #license = lib.licenses.BSD;
+  };
+}
