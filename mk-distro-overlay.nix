@@ -92,22 +92,35 @@ self: super: with self.lib; let
     });
 
     python-qt-binding = rosSuper.python-qt-binding.overrideDerivation ({
+      propagatedNativeBuildInputs ? [],
       postPatch ? "", ...
     }: {
+      propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [ rosSelf.pythonPackages.sip ];
       postPatch = ''
         sed -e "s#'-I', sip_dir,#'-I', '${rosSelf.pythonPackages.pyqt5}/share/sip/PyQt5',#" \
             -e "s#qtconfig\['QT_INSTALL_HEADERS'\]#'${self.qt5.qtbase.dev}/include'#g" \
             -i cmake/sip_configure.py
       '' + postPatch;
+
+      setupHook = self.writeText "python-qt-binding-setup-hook" ''
+        _pythonQtBindingPreFixupHook() {
+          # Prevent /build RPATH references
+          rm -rf devel/lib
+        }
+        preFixupHooks+=(_pythonQtBindingPreFixupHook)
+      '';
     });
 
-    qt-gui-cpp = rosSuper.qt-gui-cpp.overrideDerivation ({
-      nativeBuildInputs ? [], ...
+    rviz = rosSuper.rviz.overrideDerivation ({
+      nativeBuildInputs ? [],
+      postFixup ? "", ...
     }: {
-      nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.pythonPackages.sip ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.makeWrapper ];
 
-      # Prevent /build RPATH references
-      preFixup = "rm -r devel/lib";
+      postFixup = ''
+        wrapProgram $out/bin/rviz \
+          --prefix QT_PLUGIN_PATH : "${self.qt5.qtbase.bin}/${self.qt5.qtbase.qtPluginPrefix}"
+      '' + postFixup;
     });
 
     rqt-gui = rosSuper.rqt-gui.overrideDerivation ({
@@ -118,7 +131,7 @@ self: super: with self.lib; let
 
       postFixup = ''
         wrapProgram $out/bin/rqt \
-          --set QT_PLUGIN_PATH "${self.qt5.qtbase.bin}/${self.qt5.qtbase.qtPluginPrefix}"
+          --prefix QT_PLUGIN_PATH : "${self.qt5.qtbase.bin}/${self.qt5.qtbase.qtPluginPrefix}"
       '' + postFixup;
     });
 
