@@ -1,5 +1,7 @@
-{ stdenv, buildEnv, requiredRosPackages, catkin, cmake }:
+{ lib, stdenv, buildEnv, catkin, cmake }:
 { paths ? [], ... }@args:
+
+with lib;
 
 let
   propagatePackages = drvs: let
