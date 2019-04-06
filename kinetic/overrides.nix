@@ -51,6 +51,17 @@ rosSelf: rosSuper: {
     cmakeFlags = cmakeFlags ++ [ "-DROS_BUILD_TYPE=1" ];
   });
 
+  python-qt-binding = rosSuper.python-qt-binding.overrideDerivation ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = https://github.com/ros-visualization/python_qt_binding/commit/0a4893791039d5c3f851ee7bc2de832209d52f6d.patch;
+        sha256 = "0f1iqh7s0wnb2268lwc7r1pgmvalnjjyxy2v71iplw5wdib6bk6y";
+      })
+    ];
+  });
+
   rospack = rosSuper.rospack.overrideDerivation ({
     patches ? [], ...
   }: {
