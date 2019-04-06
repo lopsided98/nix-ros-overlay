@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, control-msgs, sensor-msgs, catkin, nav-msgs, actionlib, topic-tools, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-fetch-teleop";
-  version = "0.8.0";
+  version = "0.8.1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_teleop/0.8.0-0.tar.gz;
-    sha256 = "1e6d65aa8aabe6fe4d77e22c7443c985a76e0092c8513da6192dd330e0862765";
+    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_teleop/0.8.1-0.tar.gz;
+    sha256 = "cfb1141e6a532b67af9d7435c2797936e24fd9d2661a6327a3ad785be4bf33a4";
   };
 
   propagatedBuildInputs = [ nav-msgs control-msgs actionlib topic-tools sensor-msgs roscpp geometry-msgs ];

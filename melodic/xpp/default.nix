@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, xpp-states, xpp-quadrotor, xpp-msgs, xpp-hyq, catkin, xpp-vis, xpp-examples }:
 buildRosPackage {
   pname = "ros-melodic-xpp";
-  version = "1.0.9";
+  version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp/1.0.9-0.tar.gz;
-    sha256 = "0ae1750672383b8bb426d410df74906f5ba29c01edc81972c331b1a8e27b4061";
+    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp/1.0.10-0.tar.gz;
+    sha256 = "b5df600ccf29b0c24148d6eac7312ddd566f19024c48a49779a9f6905cef89ee";
   };
 
   propagatedBuildInputs = [ xpp-states xpp-msgs xpp-quadrotor xpp-hyq xpp-examples xpp-vis ];

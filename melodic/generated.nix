@@ -176,7 +176,11 @@ self: super: {
 
  cob-common = self.callPackage ./cob-common {};
 
+ cob-default-env-config = self.callPackage ./cob-default-env-config {};
+
  cob-description = self.callPackage ./cob-description {};
+
+ cob-environments = self.callPackage ./cob-environments {};
 
  cob-msgs = self.callPackage ./cob-msgs {};
 
@@ -505,6 +509,8 @@ self: super: {
  fetch-navigation = self.callPackage ./fetch-navigation {};
 
  fetch-open-auto-dock = self.callPackage ./fetch-open-auto-dock {};
+
+ fetch-ros = self.callPackage ./fetch-ros {};
 
  fetch-simulation = self.callPackage ./fetch-simulation {};
 
@@ -1174,6 +1180,16 @@ self: super: {
 
  multires-image = self.callPackage ./multires-image {};
 
+ multisense = self.callPackage ./multisense {};
+
+ multisense-bringup = self.callPackage ./multisense-bringup {};
+
+ multisense-cal-check = self.callPackage ./multisense-cal-check {};
+
+ multisense-description = self.callPackage ./multisense-description {};
+
+ multisense-lib = self.callPackage ./multisense-lib {};
+
  mvsim = self.callPackage ./mvsim {};
 
  nanomsg = self.callPackage ./nanomsg {};
@@ -1645,6 +1661,8 @@ self: super: {
  robot-mechanism-controllers = self.callPackage ./robot-mechanism-controllers {};
 
  robot-navigation = self.callPackage ./robot-navigation {};
+
+ robot-pose-ekf = self.callPackage ./robot-pose-ekf {};
 
  robot-self-filter = self.callPackage ./robot-self-filter {};
 

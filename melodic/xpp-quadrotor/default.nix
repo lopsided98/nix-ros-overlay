@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, xpp-vis }:
+{ lib, buildRosPackage, fetchurl, catkin, xacro, roscpp, xpp-vis }:
 buildRosPackage {
   pname = "ros-melodic-xpp-quadrotor";
-  version = "1.0.9";
+  version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_quadrotor/1.0.9-0.tar.gz;
-    sha256 = "bf8d27c1805c0b68de3e187193033742d9bbfbd5eec1e417d087016293dd4b32";
+    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_quadrotor/1.0.10-0.tar.gz;
+    sha256 = "8a3c7cbaa6def3250bf3825790f587b3626799b51dc7105917c20af6b8f5d3b4";
   };
 
-  propagatedBuildInputs = [ roscpp xpp-vis ];
-  nativeBuildInputs = [ catkin roscpp xpp-vis ];
+  propagatedBuildInputs = [ roscpp xacro xpp-vis ];
+  nativeBuildInputs = [ catkin roscpp xacro xpp-vis ];
 
   meta = {
     description = ''The URDF file for a quadrotor to be used with the xpp packages and a 

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, xpp-states, xpp-msgs, xpp-hyq, rosbag, catkin, rqt-bag, xterm, roscpp, message-generation, rviz, ncurses, visualization-msgs, message-runtime, std-msgs, towr }:
 buildRosPackage {
   pname = "ros-melodic-towr-ros";
-  version = "1.4.0";
+  version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/ethz-adrl/towr-release/archive/release/melodic/towr_ros/1.4.0-0.tar.gz;
-    sha256 = "bc5d15bff32bd5836c651227fe8d737b00fe1f4d5c1e215f6d8913ba2f831dda";
+    url = https://github.com/ethz-adrl/towr-release/archive/release/melodic/towr_ros/1.4.1-0.tar.gz;
+    sha256 = "fd30887f7c1a5dcd841ed043da22a724bc30cc47f3db12593a0da5d7a99ae854";
   };
 
   propagatedBuildInputs = [ xpp-states xpp-msgs xpp-hyq rosbag roscpp xterm rqt-bag message-generation rviz ncurses visualization-msgs message-runtime std-msgs towr ];

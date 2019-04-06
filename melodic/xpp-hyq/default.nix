@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, xpp-vis }:
+{ lib, buildRosPackage, fetchurl, catkin, xacro, roscpp, xpp-vis }:
 buildRosPackage {
   pname = "ros-melodic-xpp-hyq";
-  version = "1.0.9";
+  version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_hyq/1.0.9-0.tar.gz;
-    sha256 = "926fef74e45d3606fae7f4802cab03a73b49c3372e4fa9e71880366c15f429e4";
+    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_hyq/1.0.10-0.tar.gz;
+    sha256 = "92f200e4ca8f3bb5c9b5e4b9657aadd436267efeae2f74f235a682ad9c3fca62";
   };
 
-  propagatedBuildInputs = [ roscpp xpp-vis ];
-  nativeBuildInputs = [ catkin roscpp xpp-vis ];
+  propagatedBuildInputs = [ roscpp xacro xpp-vis ];
+  nativeBuildInputs = [ catkin roscpp xacro xpp-vis ];
 
   meta = {
     description = ''HyQ-robot specific functions for visualization in the  XPP Motion Framework.

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, map-server, costmap-2d, amcl, base-local-planner, navfn, slam-karto, fetch-depth-layer, catkin, rotate-recovery, move-base, move-base-msgs, voxel-grid, clear-costmap-recovery, roslaunch, fetch-maps }:
 buildRosPackage {
   pname = "ros-melodic-fetch-navigation";
-  version = "0.8.0";
+  version = "0.8.1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_navigation/0.8.0-0.tar.gz;
-    sha256 = "4436574cf785bf8a33fe225041d8d89bcddb87c9f79dd84683839d3c5bf48b20";
+    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_navigation/0.8.1-0.tar.gz;
+    sha256 = "533785a8a7b95afaa733d8670b138f897fcf5472326aac258478f23e88fbe129";
   };
 
   checkInputs = [ roslaunch ];

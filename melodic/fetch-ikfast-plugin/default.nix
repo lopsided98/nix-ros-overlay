@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, liblapack, moveit-core, tf-conversions, roscpp }:
+{ lib, buildRosPackage, fetchurl, pluginlib, catkin, tf2-kdl, liblapack, moveit-core, tf2-eigen, eigen-conversions, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-fetch-ikfast-plugin";
-  version = "0.8.0";
+  version = "0.8.1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_ikfast_plugin/0.8.0-0.tar.gz;
-    sha256 = "1a89ad6b1e5c8c0c0ece9d1ac65861ee4e5654eed95361feceb152ffca78d80f";
+    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_ikfast_plugin/0.8.1-0.tar.gz;
+    sha256 = "62c825a29e1ea77397875b05777eacde641a4a67ceba2c5b2f3ab161effeff67";
   };
 
-  propagatedBuildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
-  nativeBuildInputs = [ liblapack moveit-core pluginlib tf-conversions catkin roscpp ];
+  propagatedBuildInputs = [ liblapack moveit-core pluginlib eigen-conversions roscpp ];
+  nativeBuildInputs = [ liblapack catkin moveit-core pluginlib tf2-eigen eigen-conversions roscpp tf2-kdl ];
 
   meta = {
     description = ''Kinematics plugin for Fetch robot, generated through IKFast'';

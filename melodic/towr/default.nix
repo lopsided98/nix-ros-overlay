@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cmake, catkin, ifopt, eigen }:
 buildRosPackage {
   pname = "ros-melodic-towr";
-  version = "1.4.0";
+  version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/ethz-adrl/towr-release/archive/release/melodic/towr/1.4.0-0.tar.gz;
-    sha256 = "18224d80b20f9ee0fbce448953e2ceccb1d7b4b9b99f54d7a95c33d11eb7da43";
+    url = https://github.com/ethz-adrl/towr-release/archive/release/melodic/towr/1.4.1-0.tar.gz;
+    sha256 = "62df4c4444a14ce7bfb5bef8fbcd602942cb97a36b24ed7a7413575568b9a50f";
   };
 
   propagatedBuildInputs = [ catkin ifopt eigen ];

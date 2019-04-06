@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, xpp-states, xpp-msgs, kdl-parser, catkin, roscpp, robot-state-publisher, visualization-msgs, tf, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-xpp-vis";
-  version = "1.0.9";
+  version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_vis/1.0.9-0.tar.gz;
-    sha256 = "27a413f9b6c6b80509d79ccab7f27e83cc2245361d958023980e36b5578a9632";
+    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_vis/1.0.10-0.tar.gz;
+    sha256 = "a28dddd1ac40ec97257e52ee5f1dc6b2a0989fcf0fceccba4698019bbcfe56e7";
   };
 
   checkInputs = [ rosunit ];

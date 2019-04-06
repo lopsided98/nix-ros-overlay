@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen }:
 buildRosPackage {
   pname = "ros-melodic-xpp-states";
-  version = "1.0.9";
+  version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_states/1.0.9-0.tar.gz;
-    sha256 = "dd438deb5015cdeb271107a8b8b3b1feb538d6b95704f1cf050e2f5545247e79";
+    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_states/1.0.10-0.tar.gz;
+    sha256 = "7844597910c688e3ae3664b58bf6d3f17f0364d049d890156ed4675a2a2825f9";
   };
 
   propagatedBuildInputs = [ eigen ];

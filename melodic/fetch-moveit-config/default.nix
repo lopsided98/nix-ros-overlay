@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, moveit-fake-controller-manager, moveit-ros-move-group, moveit-ros-visualization, moveit-python, moveit-kinematics, catkin, fetch-description, rostest, moveit-simple-controller-manager, robot-state-publisher, fetch-ikfast-plugin, rospy, joint-state-publisher, xacro, moveit-planners-ompl }:
 buildRosPackage {
   pname = "ros-melodic-fetch-moveit-config";
-  version = "0.8.0";
+  version = "0.8.1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_moveit_config/0.8.0-0.tar.gz;
-    sha256 = "be73df6ce2a5da34245f9786daf8a85415518960a67c911182e07175edcbe33b";
+    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_moveit_config/0.8.1-0.tar.gz;
+    sha256 = "cd8f245340ae00e0138b66eebbe75fb95da8a60bfbe05b329d20160f098a858f";
   };
 
   checkInputs = [ rostest ];
