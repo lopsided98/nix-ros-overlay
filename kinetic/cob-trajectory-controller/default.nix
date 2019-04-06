@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, control-msgs, trajectory-msgs, sensor-msgs, catkin, cob-srvs, actionlib, std-msgs, dynamic-reconfigure, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-cob-trajectory-controller";
-  version = "0.7.3";
+  version = "0.7.4";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_trajectory_controller/0.7.3-0.tar.gz;
-    sha256 = "560067f8191a713fd7844fba0d02fae610cc91de3fb424bed63bb4058ec69821";
+    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_trajectory_controller/0.7.4-0.tar.gz;
+    sha256 = "91020bad163796e64c526322bde2b074d272b246b20a1e3877ab05fc7ee0e971";
   };
 
   propagatedBuildInputs = [ std-srvs control-msgs trajectory-msgs sensor-msgs cob-srvs actionlib std-msgs dynamic-reconfigure roscpp ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, actionlib }:
 buildRosPackage {
   pname = "ros-kinetic-mongodb-store-msgs";
-  version = "0.4.2";
+  version = "0.4.4-r2";
 
   src = fetchurl {
-    url = https://github.com/strands-project-releases/mongodb_store/archive/release/kinetic/mongodb_store_msgs/0.4.2-0.tar.gz;
-    sha256 = "bbb8dced7ecc5b9ecdd6b39d1f7703a7d00be5d5af5f2bda35a24eddb7a8d132";
+    url = https://github.com/strands-project-releases/mongodb_store/archive/release/kinetic/mongodb_store_msgs/0.4.4-2.tar.gz;
+    sha256 = "eb3065137064881113c2dae3a702c174d6a434b4059f2f191de8779c4473b536";
   };
 
   propagatedBuildInputs = [ message-generation message-runtime actionlib-msgs actionlib ];

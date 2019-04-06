@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cob-script-server, catkin, message-generation, message-runtime, visualization-msgs, dynamic-reconfigure, rospy, diagnostic-msgs, cob-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-cob-helper-tools";
-  version = "0.6.10";
+  version = "0.6.11";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_helper_tools/0.6.10-0.tar.gz;
-    sha256 = "80c365e1a89476b53a874970ba302cc40a97b7080f634b8f887e8a7f932176fe";
+    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_helper_tools/0.6.11-0.tar.gz;
+    sha256 = "f355a4fc81149bfdc587a02eca33e8197d35d49e463e7ab38dfe60b6fdcb1642";
   };
 
   propagatedBuildInputs = [ message-runtime visualization-msgs dynamic-reconfigure rospy cob-script-server cob-msgs tf diagnostic-msgs ];

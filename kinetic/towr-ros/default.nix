@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, xpp-states, xpp-msgs, xpp-hyq, rosbag, catkin, rqt-bag, xterm, roscpp, message-generation, rviz, ncurses, visualization-msgs, message-runtime, std-msgs, towr }:
 buildRosPackage {
   pname = "ros-kinetic-towr-ros";
-  version = "1.4.0";
+  version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/ethz-adrl/towr-release/archive/release/kinetic/towr_ros/1.4.0-0.tar.gz;
-    sha256 = "d041fc24d514401fb9b69119d8ad8a3cd7780469c53fad0ca1cbcd0e494415ab";
+    url = https://github.com/ethz-adrl/towr-release/archive/release/kinetic/towr_ros/1.4.1-0.tar.gz;
+    sha256 = "d234570a2b4c0b399d520ae66c0e72a8cc07773abfe8829dfb31919d2a5ea4c7";
   };
 
   propagatedBuildInputs = [ xpp-states xpp-msgs xpp-hyq rosbag roscpp xterm rqt-bag message-generation rviz ncurses visualization-msgs message-runtime std-msgs towr ];

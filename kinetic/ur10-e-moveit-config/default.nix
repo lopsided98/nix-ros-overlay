@@ -4,12 +4,12 @@
 
 { lib, buildRosPackage, fetchurl, moveit-fake-controller-manager, moveit-ros-move-group, moveit-ros-visualization, ur-description, catkin, moveit-simple-controller-manager, robot-state-publisher, roslaunch, joint-state-publisher, xacro, moveit-planners-ompl }:
 buildRosPackage {
-  pname = "ros-kinetic-ur5-moveit-config";
+  pname = "ros-kinetic-ur10-e-moveit-config";
   version = "1.2.5";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur5_moveit_config/1.2.5-0.tar.gz;
-    sha256 = "326d9b87631325c5282eef8fbf55003fcab03da7c1ed16d5c064bcd2deff3918";
+    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur10_e_moveit_config/1.2.5-0.tar.gz;
+    sha256 = "26195fd9ef4ddde7ebe8e1b00e7291c31ae3328652ab96f7622f9c97164c2d8e";
   };
 
   checkInputs = [ roslaunch ];
@@ -17,7 +17,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ur-description ];
 
   meta = {
-    description = ''An automatically generated package with all the configuration and launch files for using the ur5 with the MoveIt Motion Planning Framework'';
+    description = ''An automatically generated package with all the configuration and launch files for using the ur10e with the MoveIt Motion Planning Framework'';
     #license = lib.licenses.BSD;
   };
 }

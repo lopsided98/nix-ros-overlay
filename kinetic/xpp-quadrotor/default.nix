@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, xpp-vis }:
+{ lib, buildRosPackage, fetchurl, catkin, xacro, roscpp, xpp-vis }:
 buildRosPackage {
   pname = "ros-kinetic-xpp-quadrotor";
-  version = "1.0.8";
+  version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/xpp_quadrotor/1.0.8-0.tar.gz;
-    sha256 = "b8a188e515c23909a6eae6b3c98371272c81ca372b6fefd057305a53f4362334";
+    url = https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/xpp_quadrotor/1.0.10-0.tar.gz;
+    sha256 = "b7b0dfb338aa33269aeb5c2d9f63f41cb3f6784b9b5a03fb9d81d7bfda4493c7";
   };
 
-  propagatedBuildInputs = [ roscpp xpp-vis ];
-  nativeBuildInputs = [ catkin roscpp xpp-vis ];
+  propagatedBuildInputs = [ roscpp xacro xpp-vis ];
+  nativeBuildInputs = [ catkin roscpp xacro xpp-vis ];
 
   meta = {
     description = ''The URDF file for a quadrotor to be used with the xpp packages and a 

@@ -9,7 +9,7 @@ buildRosPackage {
 
   src = fetchurl {
     url = https://github.com/ros-gbp/laser_filters-release/archive/release/kinetic/laser_filters/1.8.5-0.tar.gz;
-    sha256 = "488974cb235caec153bb9c67b53d712ccff41819978324722b9ef7e064642f4a";
+    sha256 = "1fda3b068605b6ce9553eb1d4f050ca8de9656c68a79803f81756b47de6bf05d";
   };
 
   propagatedBuildInputs = [ filters laser-geometry pluginlib angles tf sensor-msgs roscpp message-filters ];

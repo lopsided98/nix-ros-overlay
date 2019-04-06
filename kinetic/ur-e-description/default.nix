@@ -4,12 +4,12 @@
 
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
-  pname = "ros-kinetic-ur-description";
+  pname = "ros-kinetic-ur-e-description";
   version = "1.2.5";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_description/1.2.5-0.tar.gz;
-    sha256 = "367ee7fd4d1d9456e4e2337b6be216a7f39743e1a4efdcaa6ea206393441fcff";
+    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_e_description/1.2.5-0.tar.gz;
+    sha256 = "4d85e7476684dd8e39c2a0b2638c25276e7454fed8a7e3670e5df4bcfd87d959";
   };
 
   propagatedBuildInputs = [ urdf xacro ];

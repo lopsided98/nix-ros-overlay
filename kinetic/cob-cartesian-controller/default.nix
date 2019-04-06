@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, actionlib, rospy, tf, geometry-msgs, boost, roslint, message-generation, rviz, message-runtime, robot-state-publisher, xacro, std-srvs, cob-twist-controller, catkin, cob-frame-tracker, std-msgs, visualization-msgs, roscpp, cob-srvs, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-cob-cartesian-controller";
-  version = "0.7.3";
+  version = "0.7.4";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_cartesian_controller/0.7.3-0.tar.gz;
-    sha256 = "39eac40c129a678d9ab69794f14876f59823692a8e4d2ff77befab402d0abaf0";
+    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_cartesian_controller/0.7.4-0.tar.gz;
+    sha256 = "9bdc0ef131d56fd0a75f39a70ec621887fc770d27607ca185e9630a028d18786";
   };
 
   propagatedBuildInputs = [ std-srvs cob-twist-controller boost actionlib-msgs topic-tools roscpp rospy cob-srvs rviz actionlib robot-state-publisher cob-frame-tracker std-msgs visualization-msgs message-runtime tf xacro geometry-msgs ];

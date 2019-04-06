@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, cob-sound, cob-script-server, sensor-msgs, catkin, cob-light, actionlib, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-teleop";
-  version = "0.6.10";
+  version = "0.6.11";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_teleop/0.6.10-0.tar.gz;
-    sha256 = "532e947477bd86ad9eab79272f84d4c0946aecf5ed1b8599e30113f7b2248d65";
+    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_teleop/0.6.11-0.tar.gz;
+    sha256 = "88c917a02d7a89cf88e4434b377b1089c909e99cf00203f292a81e8e96074f50";
   };
 
   propagatedBuildInputs = [ std-srvs cob-sound cob-script-server sensor-msgs cob-light actionlib std-msgs roscpp geometry-msgs ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cob-supported-robots, roslaunch, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-cob-default-robot-config";
-  version = "0.6.10";
+  version = "0.6.11";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_default_robot_config/0.6.10-0.tar.gz;
-    sha256 = "1fbc0126b0b6afafcaf75ceb9812883019dc8414f9a22005afff6434819ecd42";
+    url = https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_default_robot_config/0.6.11-0.tar.gz;
+    sha256 = "c19aa6886086d6b7c9e75ca9697b00e630444a59843d882ada32a36e73144624";
   };
 
   propagatedBuildInputs = [ cob-supported-robots roslaunch ];

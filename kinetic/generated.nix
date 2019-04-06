@@ -4318,9 +4318,17 @@ self: super: {
 
  universal-robot = self.callPackage ./universal-robot {};
 
+ universal-robots = self.callPackage ./universal-robots {};
+
+ ur10-e-moveit-config = self.callPackage ./ur10-e-moveit-config {};
+
  ur10-moveit-config = self.callPackage ./ur10-moveit-config {};
 
+ ur3-e-moveit-config = self.callPackage ./ur3-e-moveit-config {};
+
  ur3-moveit-config = self.callPackage ./ur3-moveit-config {};
+
+ ur5-e-moveit-config = self.callPackage ./ur5-e-moveit-config {};
 
  ur5-moveit-config = self.callPackage ./ur5-moveit-config {};
 
@@ -4329,6 +4337,10 @@ self: super: {
  ur-description = self.callPackage ./ur-description {};
 
  ur-driver = self.callPackage ./ur-driver {};
+
+ ur-e-description = self.callPackage ./ur-e-description {};
+
+ ur-e-gazebo = self.callPackage ./ur-e-gazebo {};
 
  ur-gazebo = self.callPackage ./ur-gazebo {};
 

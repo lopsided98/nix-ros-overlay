@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, mongodb-store-msgs, std-srvs, catkin, pythonPackages, topic-tools, libmongocxx-ros, rostest, message-generation, std-msgs, rospy, openssl, mongodb, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mongodb-store";
-  version = "0.4.2";
+  version = "0.4.4-r2";
 
   src = fetchurl {
-    url = https://github.com/strands-project-releases/mongodb_store/archive/release/kinetic/mongodb_store/0.4.2-0.tar.gz;
-    sha256 = "1b81a347853366d384a1a28bdcf3df757252ab12b2f347b92d0145b3e168f535";
+    url = https://github.com/strands-project-releases/mongodb_store/archive/release/kinetic/mongodb_store/0.4.4-2.tar.gz;
+    sha256 = "f436796d73f133bdd319a39fdd4bb8643bdcf9d6f9069c674f6e41213b4b7c35";
   };
 
   propagatedBuildInputs = [ mongodb-store-msgs std-srvs pythonPackages.pymongo topic-tools libmongocxx-ros rospy std-msgs mongodb roscpp geometry-msgs ];

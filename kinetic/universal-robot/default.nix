@@ -2,17 +2,17 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ur-gazebo, ur10-moveit-config, ur-description, ur-kinematics, catkin, ur-bringup, ur-msgs, ur3-moveit-config, ur-driver, ur5-moveit-config }:
+{ lib, buildRosPackage, fetchurl, catkin, universal-robots }:
 buildRosPackage {
   pname = "ros-kinetic-universal-robot";
-  version = "1.2.1";
+  version = "1.2.5";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/universal_robot/1.2.1-0.tar.gz;
-    sha256 = "e6261be0db566fe6bd17abab5df61eed0e2fb9eb6bd4cd057d04ba0ec1f22153";
+    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/universal_robot/1.2.5-0.tar.gz;
+    sha256 = "1e36ffdabb1bf7c44d5448cecaa7e311f255d0fa4f251827f5a8f0262646b1cd";
   };
 
-  propagatedBuildInputs = [ ur-gazebo ur10-moveit-config ur-description ur-kinematics ur-bringup ur-msgs ur3-moveit-config ur-driver ur5-moveit-config ];
+  propagatedBuildInputs = [ universal-robots ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

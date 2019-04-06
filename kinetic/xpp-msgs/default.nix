@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-xpp-msgs";
-  version = "1.0.8";
+  version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/xpp_msgs/1.0.8-0.tar.gz;
-    sha256 = "cca6ae6fbc8f7073d507c2c7c7529389bcbc174aff00d155e377f7b4c1c44be2";
+    url = https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/xpp_msgs/1.0.10-0.tar.gz;
+    sha256 = "4940b1e34abbd298f6f6865aab13779b5702c6e59af1cfcbb881ea9e08100532";
   };
 
   propagatedBuildInputs = [ message-generation message-runtime std-msgs sensor-msgs geometry-msgs ];

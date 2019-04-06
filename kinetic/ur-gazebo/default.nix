@@ -2,17 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, joint-state-controller, ur-description, catkin, joint-trajectory-controller, robot-state-publisher, effort-controllers, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, joint-state-controller, ur-description, catkin, joint-trajectory-controller, rostopic, robot-state-publisher, effort-controllers, roslaunch, gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-kinetic-ur-gazebo";
-  version = "1.2.1";
+  version = "1.2.5";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_gazebo/1.2.1-0.tar.gz;
-    sha256 = "a115b00c3a1bf2d6b5f148fcc8c6a5080e3a6caed8aebff775230ae46683e259";
+    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_gazebo/1.2.5-0.tar.gz;
+    sha256 = "2a9f1b9e0ac888656638b4c48aa8b866786461ba0f482c6d8398d990a9fb985b";
   };
 
-  propagatedBuildInputs = [ gazebo-ros controller-manager joint-state-controller robot-state-publisher effort-controllers ur-description gazebo-ros-control joint-trajectory-controller ];
+  checkInputs = [ roslaunch ];
+  propagatedBuildInputs = [ gazebo-ros controller-manager joint-state-controller ur-description joint-trajectory-controller rostopic robot-state-publisher effort-controllers gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

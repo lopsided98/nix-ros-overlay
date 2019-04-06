@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cmake, catkin, ifopt, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-towr";
-  version = "1.4.0";
+  version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/ethz-adrl/towr-release/archive/release/kinetic/towr/1.4.0-0.tar.gz;
-    sha256 = "353c220ee873df79bec517de0e0046e10e78279673a45a1cd74571d6b305b9ec";
+    url = https://github.com/ethz-adrl/towr-release/archive/release/kinetic/towr/1.4.1-0.tar.gz;
+    sha256 = "56676dbc1ebbfa3259e500aabed8410028abb1797b63fd4893507bf15eb52175";
   };
 
   propagatedBuildInputs = [ catkin ifopt eigen ];

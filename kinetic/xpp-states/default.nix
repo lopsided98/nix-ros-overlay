@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-xpp-states";
-  version = "1.0.8";
+  version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/xpp_states/1.0.8-0.tar.gz;
-    sha256 = "8d3ab0c3051c1352bdce184357e7306ef43079302065987dd73463638bd4d0e7";
+    url = https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/xpp_states/1.0.10-0.tar.gz;
+    sha256 = "a630ba9f899c40baba9de98fda70db4992a1048dc5adabfba02b3feaed13140f";
   };
 
   propagatedBuildInputs = [ eigen ];

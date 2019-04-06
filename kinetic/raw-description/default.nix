@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, catkin, cob-description, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-raw-description";
-  version = "0.6.10";
+  version = "0.6.11";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_common-release/archive/release/kinetic/raw_description/0.6.10-0.tar.gz;
-    sha256 = "dd3edbadfdd31e297e8f97c333bd3d7c50445a5df32ac004ea8d90c9ad1967f3";
+    url = https://github.com/ipa320/cob_common-release/archive/release/kinetic/raw_description/0.6.11-0.tar.gz;
+    sha256 = "fd3ba602099c81646d98a838ad510e9a57a4c63e7d96cec77374bf1dc7d10999";
   };
 
   propagatedBuildInputs = [ gazebo-ros cob-description xacro ];

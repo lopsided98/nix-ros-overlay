@@ -5,14 +5,14 @@
 { lib, buildRosPackage, fetchurl, hardware-interface, pluginlib, realtime-tools, catkin, industrial-msgs, controller-interface, industrial-robot-status-interface }:
 buildRosPackage {
   pname = "ros-kinetic-industrial-robot-status-controller";
-  version = "0.1.0";
+  version = "0.1.1";
 
   src = fetchurl {
-    url = https://github.com/gavanderhoorn/industrial_robot_status_controller-release/archive/release/kinetic/industrial_robot_status_controller/0.1.0-0.tar.gz;
-    sha256 = "dc5fc61ae81171064529ee62e4d8f9e696d5f190b056002e5da8a87260df86e6";
+    url = https://github.com/gavanderhoorn/industrial_robot_status_controller-release/archive/release/kinetic/industrial_robot_status_controller/0.1.1-0.tar.gz;
+    sha256 = "593b629fb685766d9dce639c9f8e68816072f960d07e74053d715aebf8a1ff65";
   };
 
-  propagatedBuildInputs = [ industrial-msgs hardware-interface controller-interface industrial-robot-status-interface pluginlib realtime-tools ];
+  propagatedBuildInputs = [ industrial-msgs hardware-interface controller-interface pluginlib realtime-tools ];
   nativeBuildInputs = [ industrial-msgs hardware-interface controller-interface industrial-robot-status-interface pluginlib realtime-tools catkin ];
 
   meta = {
