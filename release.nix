@@ -1,3 +1,11 @@
 { nixpkgs ? <nixpkgs>, nix-ros-overlay ? ./., distro }:
 
-(import nix-ros-overlay { inherit nixpkgs; }).rosPackages."${distro}"
+removeAttrs (import nix-ros-overlay { inherit nixpkgs; }).rosPackages."${distro}" [
+  "python"
+  "python3"
+  "python2"
+  "pythonPackages"
+  "python2Packages"
+  "python3Packages"
+  "boost"
+]
