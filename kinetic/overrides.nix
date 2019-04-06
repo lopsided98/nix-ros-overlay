@@ -37,6 +37,18 @@ rosSelf: rosSuper: {
     ];
   });
 
+  joint-trajectory-generator = rosSuper.joint-trajectory-generator.overrideDerivation ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = https://github.com/PR2/pr2_common_actions/commit/25685db776a43d173ca1410a87f818cfefea8e11.patch;
+        stripLen = 1;
+        sha256 = "02bccrz306h54jjja5s871avq2rl740jk3f4zyk1hvcnb7pq1jn8";
+      })
+    ];
+  });
+
   libfreenect = rosSuper.libfreenect.overrideDerivation ({
     buildInputs ? [], ...
   }: {
