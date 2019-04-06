@@ -1,0 +1,24 @@
+From da0de25eb982c1476cf1276f741a11175e9b08fb Mon Sep 17 00:00:00 2001
+From: Ben Wolsieffer <benwolsieffer@gmail.com>
+Date: Wed, 3 Apr 2019 18:17:58 -0400
+Subject: [PATCH] Fix build with GCC 7.
+
+---
+ src/types.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/types.h b/src/types.h
+index 0455c836..a964bf3e 100644
+--- a/src/types.h
++++ b/src/types.h
+@@ -22,6 +22,7 @@
+ #include <atomic>
+ #include <map>          
+ #include <algorithm>
++#include <functional>
+ 
+ const uint8_t RS_STREAM_NATIVE_COUNT    = 5;
+ const int RS_USER_QUEUE_SIZE = 20;
+-- 
+2.21.0
+

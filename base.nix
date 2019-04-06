@@ -15,13 +15,17 @@ self: super: with super.lib; let
       rosinstall-generator = pySelf.callPackage ./rosinstall-generator { };
 
       rospkg = pySelf.callPackage ./rospkg { };
+
+      vcstools = pySelf.callPackage ./vcstools { };
+
+      wstool = pySelf.callPackage ./wstool { };
     };
   });
 
 in {
+  openni2 = self.callPackage ./openni2 { };
+
   python27 = pythonOverridesFor super.python27;
   python36 = pythonOverridesFor super.python36;
   python37 = pythonOverridesFor super.python37;
-
-  console-bridge = self.callPackage ./console-bridge { };
 }

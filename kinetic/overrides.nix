@@ -6,23 +6,9 @@ rosSelf: rosSuper: {
     gazebo = self.gazeboSimulator.gazebo7;
   };
   
-  astra-camera = rosSuper.astra-camera.overrideDerivation ({
-    cmakeFlags ? [],
-    preConfigure ? "", ...
-  }: let 
-    astraOpenNI2 = self.fetchFromGitHub {
-      owner = "orbbec";
-      repo = "OpenNI2";
-      rev = "orbbec_ros";
-      sha256 = "1yxgb6vf0kic45jgxvh5bbcrcl7bnjq0fxa5cgvg45is1313d530";
-    };
-  in {
-    cmakeFlags = cmakeFlags ++ [ "-DUPDATE_DISCONNECTED=1" ];
-    preConfigure = preConfigure + ''
-      mkdir -p build/.third-party
-      ln -s ${astraOpenNI2} build/.third-party/astra_openni2
-    '';
-  });
+  # If anyone actually needs this package, its your problem to get it to
+  # compile.
+  astra-camera = null;
 
   catkin = rosSuper.catkin.overrideDerivation ({
     patches ? [], ...
@@ -57,6 +43,14 @@ rosSelf: rosSuper: {
     buildInputs = buildInputs ++ [ self.libGL self.libGL.dev self.libGLU self.libGLU.dev ];
   });
 
+  librealsense = rosSuper.librealsense.overrideDerivation ({
+    patches ? [],
+    cmakeFlags ? [], ...
+  }: {
+    patches = patches ++ [ ./librealsense/gcc7.patch ];
+    cmakeFlags = cmakeFlags ++ [ "-DROS_BUILD_TYPE=1" ];
+  });
+
   rospack = rosSuper.rospack.overrideDerivation ({
     patches ? [], ...
   }: {
@@ -69,7 +63,7 @@ rosSelf: rosSuper: {
   });
   
   realsense-camera = rosSuper.realsense-camera.overrideDerivation ({
-    buildInputs ? [],
+    buildInputs ? [], ...
   }: {
     buildInputs = buildInputs ++ [ rosSelf.librealsense ];
   });

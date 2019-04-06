@@ -1,7 +1,7 @@
 { lib, buildPythonPackage, fetchPypi, makeWrapper, vcstools, pyyaml, rosdistro
 , catkin-pkg, wstool, rospkg }:
 
-rosinstall = buildPythonPackage rec {
+buildPythonPackage rec {
   pname = "rosinstall";
   version = "0.7.8";
 
@@ -18,4 +18,4 @@ rosinstall = buildPythonPackage rec {
     homepage = http://wiki.ros.org/rosinstall;
     license = licenses.bsd3;
   };
-};
+}

@@ -13,9 +13,22 @@ _addRosPackagePath() {
 }
 addEnvHooks "$hostOffset" _addRosPackagePath
 
+_catkinPostPatchHook() {
+  patchShebangs cfg
+}
+postPatchHooks+=(_catkinPostPatchHook)
+
 _catkinPreConfigureHook() {
-    cmakeFlags+=" -DCATKIN_ENABLE_TESTING=${doCheck:-OFF}"
+  cmakeFlags+=" -DCATKIN_ENABLE_TESTING=${doCheck:-OFF}"
 }
 preConfigureHooks+=(_catkinPreConfigureHook)
+
+_catkinPostInstallHook() {
+  pushd $out
+  rm -f *setup.*sh
+  rm -f _setup_util.py env.sh .rosinstall
+  popd
+}
+postInstallHooks+=(_catkinPostInstallHook)
 
 export ROS_DISTRO="@distro@"

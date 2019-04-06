@@ -1,6 +1,6 @@
 { overlays ? [] }@args: import <nixpkgs> {
   overlays = [
     (import ./base.nix)
-    (import ./melodic)
+    (import ./overlay.nix)
   ] ++ overlays;
 } // args
