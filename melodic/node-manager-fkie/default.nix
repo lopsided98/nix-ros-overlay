@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f1fcdc8979b5f7b35450e6db900c488adc683cef8abea3d06dbfb4070498f598";
   };
 
+  buildInputs = [ diagnostic-msgs multimaster-msgs-fkie master-discovery-fkie ];
   propagatedBuildInputs = [ master-sync-fkie default-cfg-fkie rqt-gui rosmsg rosservice screen rosgraph rospy pythonPackages.paramiko diagnostic-msgs python-qt-binding pythonPackages.docutils multimaster-msgs-fkie rqt-reconfigure xterm dynamic-reconfigure master-discovery-fkie roslaunch roslib ];
-  nativeBuildInputs = [ diagnostic-msgs catkin multimaster-msgs-fkie master-discovery-fkie ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Graphical interface, written in PySide, to manage the running and 

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "58292956027c9b5bc85b4223fc9ce1220d88b975e68206ad1a963728ca27d396";
   };
 
+  buildInputs = [ marker-msgs pcl sensor-msgs cv-bridge qt5.qtbase roscpp nav-msgs mrpt-msgs message-generation mrpt1 std-msgs tf pcl-conversions geometry-msgs stereo-msgs ];
   checkInputs = [ gtest rosunit ];
   propagatedBuildInputs = [ marker-msgs tf sensor-msgs cv-bridge message-generation mrpt-msgs message-runtime nav-msgs mrpt1 std-msgs roscpp geometry-msgs stereo-msgs ];
-  nativeBuildInputs = [ marker-msgs pcl sensor-msgs cv-bridge catkin qt5.qtbase roscpp nav-msgs mrpt-msgs message-generation mrpt1 std-msgs tf pcl-conversions geometry-msgs stereo-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''C++ library to convert between ROS messages and MRPT classes'';

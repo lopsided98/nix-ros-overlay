@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "ae5364cd22c42db83150c148f0d9981ff3568b5285630029b87b491f64b6e1a5";
   };
 
+  buildInputs = [ std-srvs actionlib-msgs people-msgs rosbag cv-bridge image-geometry actionlib std-msgs rospy roscpp tf geometry-msgs stereo-msgs stereo-image-proc image-transport sensor-msgs message-filters message-generation roslib ];
   checkInputs = [ rostest stereo-image-proc ];
   propagatedBuildInputs = [ std-srvs actionlib-msgs people-msgs rosbag cv-bridge image-geometry actionlib std-msgs rospy roscpp tf geometry-msgs stereo-msgs stereo-image-proc image-transport sensor-msgs message-filters message-runtime dynamic-reconfigure roslib ];
-  nativeBuildInputs = [ std-srvs actionlib-msgs people-msgs rosbag cv-bridge catkin image-geometry actionlib std-msgs rospy roscpp tf geometry-msgs stereo-msgs stereo-image-proc image-transport sensor-msgs message-filters message-generation roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Face detection in images.'';

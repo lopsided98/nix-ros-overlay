@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "f771723a5af6fefabb6ab3313897e9ae04dbef4a37b18aa0163b331a99152066";
   };
 
+  buildInputs = [ controller-manager hardware-interface muparser filters joint-limits-interface canopen-402 controller-manager-msgs urdf canopen-chain-node roscpp canopen-master ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ controller-manager hardware-interface muparser filters joint-limits-interface canopen-402 controller-manager-msgs urdf canopen-chain-node roscpp canopen-master ];
-  nativeBuildInputs = [ controller-manager hardware-interface muparser filters joint-limits-interface catkin canopen-402 controller-manager-msgs urdf canopen-chain-node roscpp canopen-master ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''canopen_chain_node specialization for handling of canopen_402 motor devices. It facilitates interface abstraction with ros_control.'';

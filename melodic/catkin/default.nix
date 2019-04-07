@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "316178707bc3f0edcb86a77ec2ec174b98b4d2ccf41306162cefe6588b3a9d41";
   };
 
+  buildInputs = [ python pythonPackages.catkin-pkg pythonPackages.empy ];
   checkInputs = [ pythonPackages.nose pythonPackages.mock ];
   propagatedBuildInputs = [ python pythonPackages.catkin-pkg pythonPackages.nose gtest gmock pythonPackages.empy ];
-  nativeBuildInputs = [ python pythonPackages.catkin-pkg cmake pythonPackages.empy ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''Low-level build system macros and infrastructure for ROS.'';

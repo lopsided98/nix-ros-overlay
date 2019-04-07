@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6a689760da538561f5481b327ee0f0c43fc49f3bc152b3fcfa51b406819ff40f";
   };
 
+  buildInputs = [ cmake-modules libyamlcpp trajectory-msgs sensor-msgs dynamixel-workbench-msgs dynamixel-workbench-toolbox eigen roscpp geometry-msgs ];
   propagatedBuildInputs = [ cmake-modules libyamlcpp trajectory-msgs sensor-msgs dynamixel-workbench-msgs dynamixel-workbench-toolbox eigen roscpp geometry-msgs ];
-  nativeBuildInputs = [ cmake-modules libyamlcpp trajectory-msgs sensor-msgs catkin dynamixel-workbench-msgs dynamixel-workbench-toolbox eigen roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains examples of applying the 'dynamixel_workbench_toolbox' library developed on the basis of dynamixel_sdk to various operating modes of Dynamixel.'';

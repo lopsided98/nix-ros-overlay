@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "9aea7f4b03a74445c52faddfcd58ea086b7ad8af058a6a3749e9b992849a5361";
   };
 
+  buildInputs = [ std-srvs roscpp robot-activity-msgs roslint ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ std-srvs roscpp robot-activity-msgs ];
-  nativeBuildInputs = [ std-srvs robot-activity-msgs roslint catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The robot_activity package implements ROS node lifecycle'';

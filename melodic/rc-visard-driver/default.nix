@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c22eca62d0d777efcc0589eb80b8f1a5a6b4ee31964696c6e4cd22b5d67d77d9";
   };
 
+  buildInputs = [ std-srvs image-transport sensor-msgs roscpp diagnostic-updater rc-genicam-api message-generation nav-msgs curl visualization-msgs dynamic-reconfigure nodelet protobuf tf rc-dynamics-api geometry-msgs stereo-msgs ];
   propagatedBuildInputs = [ std-srvs image-transport sensor-msgs roscpp diagnostic-updater rc-genicam-api nav-msgs curl visualization-msgs dynamic-reconfigure nodelet message-runtime protobuf tf rc-dynamics-api geometry-msgs stereo-msgs ];
-  nativeBuildInputs = [ std-srvs image-transport sensor-msgs catkin roscpp diagnostic-updater rc-genicam-api message-generation nav-msgs curl visualization-msgs dynamic-reconfigure nodelet protobuf tf rc-dynamics-api geometry-msgs stereo-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rc_visard_driver provides data from a Roboception rc_visard 3D sensor on several ROS topics.'';

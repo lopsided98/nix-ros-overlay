@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9650990b4fed04c6f124e9fbd4c007937351ea9b3fbb924e36a6c58aeb89cf95";
   };
 
+  buildInputs = [ qt5.qtsvg ];
   propagatedBuildInputs = [ qt5.qtsvg ];
-  nativeBuildInputs = [ catkin qt5.qtsvg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''libqt-svg-dev metapackage supporting qt4 and qt5'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cdef1fc782da0f8084335f59afe6d4e49d0415b7e5cbd9c3225cef3a8cfdc126";
   };
 
+  buildInputs = [ dbw-mkz-msgs dynamic-reconfigure std-msgs sensor-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ dbw-mkz-msgs dynamic-reconfigure std-msgs sensor-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ dbw-mkz-msgs catkin dynamic-reconfigure std-msgs sensor-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Twist (speed and angular rate) controller for brake/throttle/steering'';

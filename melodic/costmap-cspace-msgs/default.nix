@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0b474cf9732adf886955945c15639cdeecf9854c91de31e901c94b36dcccb072";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definitions for costmap_cspace package'';

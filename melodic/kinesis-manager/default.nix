@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "455faeba33ec5a7f671ac3311e0afb2a4a6081da7a36cf5fdddbd83704b95b39";
   };
 
+  buildInputs = [ aws-common boost curl openssl log4cplus ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ aws-common boost curl openssl log4cplus ];
-  nativeBuildInputs = [ aws-common boost curl openssl log4cplus cmake pkg-config ];
+  nativeBuildInputs = [ cmake pkg-config ];
 
   meta = {
     description = ''AWS Kinesis stream management library intended for use with the Kinesis Video Producer SDK'';

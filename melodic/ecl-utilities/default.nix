@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4e3ab2bd3246bbda3763e850f949bac0dcd3988bf5ec5269563bd4906ad23bdd";
   };
 
+  buildInputs = [ ecl-license ecl-concepts ecl-mpl ];
   propagatedBuildInputs = [ ecl-license ecl-concepts ecl-mpl ];
-  nativeBuildInputs = [ ecl-license catkin ecl-concepts ecl-mpl ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Includes various supporting tools and utilities for c++ programming.'';

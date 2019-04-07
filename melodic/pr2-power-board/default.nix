@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9e6596dd8cdea88ca5abd93ecf2d567d34b89e97a4ffa32dbfdc8f001ce0cea9";
   };
 
+  buildInputs = [ diagnostic-updater message-generation diagnostic-msgs pr2-msgs roscpp log4cxx ];
   propagatedBuildInputs = [ diagnostic-updater message-runtime rospy diagnostic-msgs pr2-msgs roscpp log4cxx ];
-  nativeBuildInputs = [ diagnostic-updater message-generation catkin diagnostic-msgs pr2-msgs roscpp log4cxx ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This provides a ROS node for the PR2 Power Board.'';

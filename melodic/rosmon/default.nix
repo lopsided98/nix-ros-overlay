@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "86889a64f484e3a77ff9c176c3c47c185e7c2d1e6a748885e2f658344bbad92a";
   };
 
+  buildInputs = [ rosmon-core rqt-rosmon ];
   propagatedBuildInputs = [ rosmon-core rqt-rosmon ];
-  nativeBuildInputs = [ catkin rosmon-core rqt-rosmon ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Node launcher and monitor for ROS. rosmon is a replacement

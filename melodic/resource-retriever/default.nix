@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "568a6d1f0bd3a0c6e4c26b6e6524bc14a282df35a6b3ea1720e37591aaf024a1";
   };
 
+  buildInputs = [ curl roslib rosconsole boost ];
   propagatedBuildInputs = [ curl rosconsole boost pythonPackages.rospkg roslib ];
-  nativeBuildInputs = [ curl rosconsole boost catkin roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package retrieves data from url-format files such as http://,

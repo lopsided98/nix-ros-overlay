@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3be2a120f7f4b5a020daac7cc5b8715c2af79c7d2d3c899ac49f2b6640065c04";
   };
 
+  buildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-time-lite ecl-config ecl-build ];
   propagatedBuildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-time-lite ecl-config ecl-build ];
-  nativeBuildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-time-lite catkin ecl-config ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Timing utilities are very dependent on the system api provided for their use.

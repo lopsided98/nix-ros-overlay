@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "11734081b68d909b9061a8569ba8a9d480dfc05785c1fe34fdfe4ad118c1adbc";
   };
 
+  buildInputs = [ gazebo-msgs gazebo-dev ];
   propagatedBuildInputs = [ gazebo-msgs gazebo-dev ];
-  nativeBuildInputs = [ catkin gazebo-msgs gazebo-dev ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The uuv_world_plugins package'';

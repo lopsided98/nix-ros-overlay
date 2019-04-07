@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "1aab125d405ed53be48b7f49db7594343f35cccfecd3f4ef14571311ff5ae0f2";
   };
 
+  buildInputs = [ roscpp tf2-ros geometry-msgs vrpn ];
   checkInputs = [ roslaunch roslint ];
   propagatedBuildInputs = [ roscpp tf2-ros geometry-msgs vrpn ];
-  nativeBuildInputs = [ vrpn geometry-msgs catkin roscpp tf2-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS client nodes for the <a href="https://github.com/vrpn/vrpn/wiki">VRPN</a> library, compatible with VICON, OptiTrack, and other <a href="https://github.com/vrpn/vrpn/wiki/Supported-hardware-devices">hardware interfaces</a>.'';

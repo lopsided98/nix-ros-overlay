@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "df300b82eb4135d5c0343d75f1c11dc6e3c03df09b07582ab3a4f753338522df";
   };
 
+  buildInputs = [ xpp-quadrotor xpp-hyq rosbag roscpp xpp-vis ];
   propagatedBuildInputs = [ xpp-quadrotor xpp-hyq rosbag roscpp xpp-vis ];
-  nativeBuildInputs = [ xpp-quadrotor catkin xpp-hyq rosbag roscpp xpp-vis ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Examples of how to use the xpp framework.'';

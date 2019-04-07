@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cfdcb09b275da8304f367682c9d46fb3f02008e741a8634b67fd235f443c0a08";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definition files for the PACMod driver'';

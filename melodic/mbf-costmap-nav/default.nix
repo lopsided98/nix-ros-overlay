@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "90930d3e6a71b902aa8171c57d1d967a9d2fb131770d854494b932339bcad2cc";
   };
 
+  buildInputs = [ std-srvs mbf-costmap-core pluginlib actionlib-msgs base-local-planner tf mbf-msgs nav-core nav-msgs std-msgs actionlib dynamic-reconfigure mbf-utility roscpp mbf-abstract-nav geometry-msgs ];
   propagatedBuildInputs = [ std-srvs mbf-costmap-core pluginlib actionlib-msgs base-local-planner tf mbf-msgs nav-core move-base move-base-msgs nav-msgs std-msgs actionlib dynamic-reconfigure mbf-utility roscpp mbf-abstract-nav geometry-msgs ];
-  nativeBuildInputs = [ std-srvs mbf-costmap-core pluginlib actionlib-msgs base-local-planner tf mbf-msgs nav-core catkin nav-msgs std-msgs actionlib dynamic-reconfigure mbf-utility roscpp mbf-abstract-nav geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The mbf_costmap_nav package contains the costmap navigation server implementation of Move Base Flex (MBF). The costmap navigation server is bound to the <a href="wiki.ros.org/costmap_2d">costmap_2d</a> representation. It provides the Actions for planning, controlling and recovering. At the time of start MBF loads all defined plugins. Therefor, it loads all plugins which are defined in the lists *planners*, *controllers* and *recovery_behaviors*. Each list holds a pair of a *name* and a *type*. The *type* defines which kind of plugin to load. The *name* defines under which name the plugin should be callable by the actions. 

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "360134fe15fab3cd01a1869458c0d767006f445a2124532ac6b0c2484e4cc38f";
   };
 
+  buildInputs = [ nav-msgs cmake-modules dynamic-reconfigure mav-msgs sensor-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ nav-msgs cmake-modules dynamic-reconfigure mav-msgs sensor-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ nav-msgs catkin cmake-modules dynamic-reconfigure mav-msgs sensor-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''RotorS control package'';

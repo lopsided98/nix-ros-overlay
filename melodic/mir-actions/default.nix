@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7a98d3c84c4620fd3f311c2419aec7a9f25eb2bf432373316cabeb5198e5dc6d";
   };
 
+  buildInputs = [ nav-msgs message-generation geometry-msgs actionlib ];
   propagatedBuildInputs = [ nav-msgs message-runtime geometry-msgs actionlib ];
-  nativeBuildInputs = [ nav-msgs message-generation actionlib catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Action definitions for the MiR100 robot'';

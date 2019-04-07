@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4c30092a42cad55c7ed008b877d72fa55f90fd899352daa35e4e1bf64797c092";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages and Services definitions for the ArbotiX.'';

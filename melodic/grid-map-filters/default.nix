@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b320f6311be2c0c2ad860f9a14b1a0a3bc90e91b3064c33d4736aa7fd3b6188c";
   };
 
+  buildInputs = [ grid-map-core grid-map-msgs grid-map-ros filters ];
   propagatedBuildInputs = [ grid-map-core grid-map-msgs grid-map-ros filters ];
-  nativeBuildInputs = [ grid-map-core filters grid-map-ros grid-map-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Processing grid maps as a sequence of ROS filters.'';

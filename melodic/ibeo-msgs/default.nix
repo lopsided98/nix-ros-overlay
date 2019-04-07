@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "dea8e5394662faf24cdc6a29a2d03de48952bf5000498f87110a5735c413e2f2";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package containing messages for Ibeo sensors.'';

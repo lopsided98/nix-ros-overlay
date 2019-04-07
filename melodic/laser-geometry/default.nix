@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "d2c0acb926c14dd2000db4b395b3bbcc26b53fc76461f4cf7c262947e3ed9138";
   };
 
+  buildInputs = [ cmake-modules boost eigen angles sensor-msgs tf roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ pythonPackages.numpy boost eigen angles sensor-msgs tf roscpp ];
-  nativeBuildInputs = [ catkin cmake-modules boost eigen angles sensor-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a class for converting from a 2D laser scan as defined by

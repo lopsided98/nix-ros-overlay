@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "cda8f3c7329460e52f3d90c4072ab345cfd7de20b8faee0b99895644f0639312";
   };
 
+  buildInputs = [ aws-common ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ aws-common ];
-  nativeBuildInputs = [ cmake aws-common ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''AWS CloudWatch management library used by ROS1/2 node to publish logs to CloudWatch service'';

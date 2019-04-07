@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fa9045a3f94fdde980a537997f23ae3d74accc8f0019fa18172c007862865408";
   };
 
+  buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
-  nativeBuildInputs = [ catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The md49_serialport package'';

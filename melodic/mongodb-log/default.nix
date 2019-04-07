@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5ce0f217758fb3d15c24d5e6a00c59116028201b7ae95e3b5fa91af0ed8d5f2d";
   };
 
+  buildInputs = [ rosgraph rostopic mongodb-store rospy openssl sensor-msgs roslib tf ];
   propagatedBuildInputs = [ rosgraph rostopic mongodb-store rospy pythonPackages.pymongo sensor-msgs roslib tf ];
-  nativeBuildInputs = [ tf sensor-msgs catkin rosgraph rostopic mongodb-store rospy openssl roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The mongodb_log package'';

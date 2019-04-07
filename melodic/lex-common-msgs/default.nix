@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "38bc675f3d1607953a04c92775548a0cda08aa90b0699ed3c8ae3cd0d5d3c98d";
   };
 
+  buildInputs = [ std-msgs message-generation audio-common-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime audio-common-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation audio-common-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common messages for interacting with Amazon Lex using the lex_node package'';

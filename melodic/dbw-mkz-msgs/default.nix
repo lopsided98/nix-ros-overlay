@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e8dedab69c722847607dbbd6cb5f5d0f3270e023f450f76251852b0e36cd154d";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs rosbag-migration-rule message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Drive-by-wire messages for the Lincoln MKZ'';

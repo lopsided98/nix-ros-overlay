@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6133fdac73fbedffae19ec5ec6b203225f7e8db9ac1d88fca425d95dc97beae4";
   };
 
+  buildInputs = [ ecl-license ];
   propagatedBuildInputs = [ ecl-license ];
-  nativeBuildInputs = [ ecl-license catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Collection of cmake/make build tools primarily for ecl development itself, but also

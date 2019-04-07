@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8de5b8fb856c5ca84c37447698c4635251f39b39db82d323f6b788aea4b1d93f";
   };
 
+  buildInputs = [ exotica-core eigen ];
   propagatedBuildInputs = [ exotica-core eigen ];
-  nativeBuildInputs = [ exotica-core catkin eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A Levenberg-Marquardt solver for EXOTica'';

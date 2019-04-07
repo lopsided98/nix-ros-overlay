@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6a9f5fb5b44ce6285800177903b4364061521de47bda8cd8902814405aac83f4";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A bond allows two processes, A and B, to know when the other has

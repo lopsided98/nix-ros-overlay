@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "97c1c877b5f1f3fd9377c0c1e8a8fb5ef9b2ab05957d3469d25300bb088e937e";
   };
 
+  buildInputs = [ hardware-interface controller-interface pluginlib realtime-tools sensor-msgs roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ hardware-interface controller-interface pluginlib realtime-tools sensor-msgs roscpp ];
-  nativeBuildInputs = [ hardware-interface controller-interface catkin pluginlib realtime-tools sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controller to publish joint state'';

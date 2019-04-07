@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d488ba248dce19a054e54b2054930c7120d2c383c193efc659e8c42714f77dbd";
   };
 
+  buildInputs = [ ecl-license ecl-type-traits ];
   propagatedBuildInputs = [ ecl-license ecl-type-traits ];
-  nativeBuildInputs = [ ecl-license catkin ecl-type-traits ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides simple support to cmath, filling in holes

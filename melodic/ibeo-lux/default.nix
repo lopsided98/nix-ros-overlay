@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0aa9797cbee3936a930074405e44de2f604c0eaf99b7b4e6b60d3773243a0fb3";
   };
 
+  buildInputs = [ ibeo-core ibeo-msgs pcl-ros std-msgs network-interface visualization-msgs geometry-msgs roscpp ];
   propagatedBuildInputs = [ ibeo-core ibeo-msgs pcl-ros std-msgs network-interface visualization-msgs geometry-msgs roscpp ];
-  nativeBuildInputs = [ network-interface catkin roscpp ibeo-core std-msgs pcl-ros ibeo-msgs visualization-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS driver for IBEO LUX'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "164f92e63ab8188d83e4107e9cb19fdf9db3c96a44282ffb85833bc0c58bfb98";
   };
 
+  buildInputs = [ std-msgs can-msgs rosbag roslib roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ std-msgs can-msgs rosbag roslib roscpp ];
-  nativeBuildInputs = [ catkin std-msgs can-msgs rosbag roslib roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''CAN bus introspection'';

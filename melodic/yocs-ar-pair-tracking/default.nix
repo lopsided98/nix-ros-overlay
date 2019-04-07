@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "60179e49a3644effdd14bf503e183c3ef7c0690f550b89e64847399f3934c7df";
   };
 
+  buildInputs = [ ar-track-alvar-msgs yocs-ar-marker-tracking std-msgs sensor-msgs roscpp yocs-math-toolkit yocs-msgs geometry-msgs ];
   propagatedBuildInputs = [ ar-track-alvar-msgs yocs-ar-marker-tracking std-msgs sensor-msgs roscpp yocs-math-toolkit yocs-msgs geometry-msgs ];
-  nativeBuildInputs = [ sensor-msgs catkin yocs-math-toolkit yocs-msgs ar-track-alvar-msgs yocs-ar-marker-tracking std-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The AR pair tracking package'';

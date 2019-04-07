@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "aa88a178c8b721288077bbbb32c4bd4ca3b36e3b2cbda1535320326140d82ec5";
   };
 
+  buildInputs = [ message-generation actionlib-msgs actionlib std-msgs power-msgs geometry-msgs ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs actionlib std-msgs power-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation actionlib-msgs actionlib std-msgs power-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for the fetch_drivers package'';

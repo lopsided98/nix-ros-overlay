@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, rosbag, catkin, rostest, nav-msgs, message-generation, message-runtime, rospy, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, roslint, rosbag, catkin, rostest, message-generation, nav-msgs, message-runtime, rospy, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-bagger";
   version = "0.1.3";
@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "e8275de0f4ad29f758472ae12d8ce534b53705ec57066e8611498b6077188226";
   };
 
+  buildInputs = [ rostest message-generation roslint std-msgs roscpp ];
   checkInputs = [ nav-msgs geometry-msgs ];
   propagatedBuildInputs = [ rostest message-runtime rospy std-msgs rosbag roscpp ];
-  nativeBuildInputs = [ rostest message-generation roslint std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An application used to systematically record rosbags'';

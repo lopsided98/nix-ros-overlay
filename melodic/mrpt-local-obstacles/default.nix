@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "40b6c7ce3bb0cd3b6cfe48d215c391cda92e40e26820a06664c041964fbfa893";
   };
 
+  buildInputs = [ mrpt1 mrpt-bridge visualization-msgs dynamic-reconfigure sensor-msgs tf roscpp ];
   propagatedBuildInputs = [ mrpt1 mrpt-bridge visualization-msgs dynamic-reconfigure sensor-msgs tf roscpp ];
-  nativeBuildInputs = [ catkin mrpt1 mrpt-bridge visualization-msgs dynamic-reconfigure sensor-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Maintains a local obstacle map (point cloud,

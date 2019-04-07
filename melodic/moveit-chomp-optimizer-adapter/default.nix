@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b9065477079418a14d4a7ba689e48b048557070f3abe99b9ebe80e239d1cf461";
   };
 
+  buildInputs = [ chomp-motion-planner pluginlib moveit-core ];
   propagatedBuildInputs = [ chomp-motion-planner pluginlib moveit-core ];
-  nativeBuildInputs = [ chomp-motion-planner catkin pluginlib moveit-core ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''MoveIt planning request adapter utilizing chomp for solution optimization'';

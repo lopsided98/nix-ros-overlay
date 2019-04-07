@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d99a7287aca9e4fad4aeae4c8fedfd9d69c8ccf7977b0488bd27d5c57c5fb208";
   };
 
+  buildInputs = [ cpp-common boost ];
   propagatedBuildInputs = [ cpp-common boost ];
-  nativeBuildInputs = [ catkin cpp-common boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Time and Duration implementations for C++ libraries, including roscpp.'';

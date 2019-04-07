@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f4ac426256f77af184a3f5e595d6cc2e035caa9146e810e86f0049f0f1e44aea";
   };
 
+  buildInputs = [ turtlesim message-generation actionlib asmach actionlib-msgs rospy smach-ros ];
   propagatedBuildInputs = [ turtlesim actionlib asmach actionlib-msgs rospy smach-ros ];
-  nativeBuildInputs = [ turtlesim message-generation actionlib asmach actionlib-msgs rospy catkin smach-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package containes numerous examples of how to use SMACH. See the examples directory.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2d84945378a8f8b6c9d8667b4e1aa02a0001130853e6bb04e29dc1906582598e";
   };
 
+  buildInputs = [ boost ];
   propagatedBuildInputs = [ catkin boost ];
-  nativeBuildInputs = [ cmake boost ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''ACADO Toolkit'';

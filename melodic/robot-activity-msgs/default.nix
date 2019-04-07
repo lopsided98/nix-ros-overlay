@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c7047f132a865f58489413a1bb4e9c08ffe2014f3d404b4874f399eefeb9872e";
   };
 
+  buildInputs = [ std-msgs message-generation message-runtime ];
   propagatedBuildInputs = [ std-msgs message-generation message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation message-runtime ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains messages used by robot_activity, such as node's state

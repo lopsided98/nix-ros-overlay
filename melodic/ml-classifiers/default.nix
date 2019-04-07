@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8d0314032aceb9b0ecc092f8aedef9e87342bb6bf9d33c58261e4597038f703a";
   };
 
+  buildInputs = [ roslib message-generation pluginlib roslint eigen std-msgs roscpp ];
   propagatedBuildInputs = [ roslib pluginlib message-runtime eigen std-msgs roscpp ];
-  nativeBuildInputs = [ roslib message-generation pluginlib roslint eigen std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ml_classifiers'';

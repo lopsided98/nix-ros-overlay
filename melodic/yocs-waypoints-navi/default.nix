@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b0134c5b12ed2067775780964a54a4d339efc42bcb4481b013913c93550f0e96";
   };
 
+  buildInputs = [ actionlib-msgs tf yocs-math-toolkit yocs-msgs roscpp move-base-msgs nav-msgs actionlib visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs tf yocs-math-toolkit yocs-msgs roscpp move-base-msgs nav-msgs actionlib visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ actionlib-msgs tf catkin yocs-math-toolkit yocs-msgs roscpp move-base-msgs nav-msgs actionlib visualization-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Simple tool for waypoints navigation with two functions:

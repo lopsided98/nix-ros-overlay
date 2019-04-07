@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "58e4c4ce3d73beaebecfda86a761f17d4680cad274ab57d361ab9bdfe726b29c";
   };
 
+  buildInputs = [ tf2-sensor-msgs tf2 nodelet sensor-msgs roscpp message-filters tf2-ros ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ tf2-sensor-msgs tf2 nodelet sensor-msgs roscpp message-filters tf2-ros ];
-  nativeBuildInputs = [ tf2-sensor-msgs tf2 catkin nodelet sensor-msgs roscpp message-filters tf2-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Converts a 3D Point Cloud into a 2D laser scan. This is useful for making devices like the Kinect appear like a laser scanner for 2D-based algorithms (e.g. laser-based SLAM).'';

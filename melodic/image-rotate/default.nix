@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, tf2-geometry-msgs, image-transport, catkin, cv-bridge, tf2-ros, roscpp, rostest, tf2, dynamic-reconfigure, nodelet, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, cmake-modules, tf2-geometry-msgs, image-transport, catkin, cv-bridge, tf2-ros, roscpp, tf2, rostest, dynamic-reconfigure, nodelet, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-image-rotate";
   version = "1.12.23";
@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "300158018b97ce2b2f3cdfac00889d443b74165b3fb49105317148c76657638a";
   };
 
+  buildInputs = [ cmake-modules tf2-geometry-msgs image-transport cv-bridge roscpp tf2-ros tf2 dynamic-reconfigure nodelet geometry-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ tf2 cv-bridge tf2-ros tf2-geometry-msgs dynamic-reconfigure image-transport nodelet roscpp ];
-  nativeBuildInputs = [ cmake-modules tf2-geometry-msgs image-transport cv-bridge catkin roscpp tf2-ros tf2 dynamic-reconfigure nodelet geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>

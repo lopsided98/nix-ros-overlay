@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-std-msgs";
   version = "0.5.12";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4e8b6a65ca70e92bbc9044c99cde67b5859392f6489e3e2fd7fc74844cedce1c";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Standard ROS Messages including common message types representing primitive data types and other basic message constructs, such as multiarrays.

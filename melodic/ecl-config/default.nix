@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a8fb8da4c0d398f4f209b8a0f35c738ee3aaca992c8bd3c5d541f60637b83063";
   };
 
+  buildInputs = [ ecl-license ecl-build ];
   propagatedBuildInputs = [ ecl-license ecl-build ];
-  nativeBuildInputs = [ ecl-license catkin ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''These tools inspect and describe your system with macros, types 

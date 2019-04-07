@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "67e0ef7ef6d8f71198043fa55ce97ec74cd53cc1c9caf3e21f04dc58df7c7fb5";
   };
 
+  buildInputs = [ aws-common ffmpeg ];
   propagatedBuildInputs = [ aws-common ffmpeg ];
-  nativeBuildInputs = [ cmake aws-common ffmpeg ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''Common base code for ROS1/ROS2 H264 encoder node'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f4d7567a8deb08fa914feb0d768f67ad855f1c9baf060734bbe593b6961e070f";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package includes ROS messages and services for dynamixel_workbench packages'';

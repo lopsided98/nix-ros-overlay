@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2269c8659cbed4f904a98824cb128ee15b954efeb3b47bdb0152a61e2e69eba6";
   };
 
+  buildInputs = [ std-msgs sensor-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ message-generation std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The lgsvl_msgs package for ground truth data.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "45317e8776023604286708e4f7f9b206d3d64e59601af91849a5f80b94cbd0db";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message and service types: custom messages and services for TurtleBot3 packages'';

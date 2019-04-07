@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "548d65fb0fba265d22e0ad2e2fdb4d522f97a751b62bf01fb7dfbac36e9899d4";
   };
 
+  buildInputs = [ std-srvs sensor-msgs roscpp rosconsole ];
   propagatedBuildInputs = [ std-srvs sensor-msgs roscpp rosconsole ];
-  nativeBuildInputs = [ std-srvs catkin rosconsole sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rplidar ros package, support rplidar A2/A1 and A3'';

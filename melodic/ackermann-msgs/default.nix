@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2696633432ef72489b77e8ff6b0d4782e2e526a62fda01c92d984348b4b0e13b";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for robots using Ackermann steering.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8b8bbd122bf7977a8b16518c7eb79ad915969f5d69fed23f85100fb33f58865f";
   };
 
+  buildInputs = [ kdl-parser pluginlib actionlib-msgs orocos-kdl control-msgs trajectory-msgs sensor-msgs roscpp nav-msgs robot-controllers-interface tf-conversions urdf actionlib std-msgs angles tf geometry-msgs ];
   propagatedBuildInputs = [ kdl-parser pluginlib actionlib-msgs orocos-kdl control-msgs trajectory-msgs sensor-msgs roscpp nav-msgs robot-controllers-interface tf-conversions urdf actionlib std-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ kdl-parser pluginlib actionlib-msgs orocos-kdl control-msgs trajectory-msgs sensor-msgs catkin roscpp nav-msgs robot-controllers-interface tf-conversions urdf actionlib std-msgs angles tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Some basic robot controllers for use with robot_controllers_interface.'';

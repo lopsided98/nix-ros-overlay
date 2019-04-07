@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f77e8657675508e110c8e9d34d404a6f786b46fb91ccbec84ca6b8e2cd7ff444";
   };
 
+  buildInputs = [ std-msgs pr2-msgs roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ std-msgs pr2-msgs roscpp dynamic-reconfigure ];
-  nativeBuildInputs = [ catkin dynamic-reconfigure std-msgs pr2-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The power_monitor collects messages from the ocean_battery_server and

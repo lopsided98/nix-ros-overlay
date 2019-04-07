@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b3da422d3baebaea5aa422558b878f02058f7695617e5b116ee7bdf1723c12cc";
   };
 
+  buildInputs = [ octomap ];
   propagatedBuildInputs = [ catkin octomap ];
-  nativeBuildInputs = [ cmake octomap ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The dynamicEDT3D library implements an inrementally updatable Euclidean distance transform (EDT) in 3D. It comes with a wrapper to use the OctoMap 3D representation and hooks into the change detection of the OctoMap library to propagate changes to the EDT.'';

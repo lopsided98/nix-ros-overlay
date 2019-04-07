@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ed530def634447f8d6970857f1f33b8ddfadefc07cffd6e4ce01e71e179df4cf";
   };
 
+  buildInputs = [ std-msgs message-generation actionlib-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime actionlib-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation actionlib-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package defines services that are used to communicate with

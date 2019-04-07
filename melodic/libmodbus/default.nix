@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f5b0b1453abb1f1950ad1ca3378b061979259515d0d5bdc5958dd46a5c6b3c36";
   };
 
+  buildInputs = [ cmake-modules ];
   propagatedBuildInputs = [ cmake-modules ];
-  nativeBuildInputs = [ catkin cmake-modules ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The iirob_filters package implements following filters:

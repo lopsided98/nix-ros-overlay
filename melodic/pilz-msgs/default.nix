@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "83d399a6e0db26ccb56590b15c3817e8b82da0d5572a0661e3852ed7d689081d";
   };
 
+  buildInputs = [ genmsg message-generation moveit-msgs ];
   propagatedBuildInputs = [ moveit-msgs message-runtime ];
-  nativeBuildInputs = [ genmsg catkin message-generation moveit-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pilz_msgs package'';

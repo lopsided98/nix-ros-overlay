@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c4d63d427acace6162d68513c68fc64da0d5631be84c81ac6193ea339ec163f0";
   };
 
+  buildInputs = [ message-generation geometry-msgs ];
   propagatedBuildInputs = [ message-runtime geometry-msgs ];
-  nativeBuildInputs = [ catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definitions for the MiR100 robot'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0097c690bd551d83154cc551b7d50439d86e8acda2bc4ebc307d1157cdf8c24d";
   };
 
+  buildInputs = [ tf2 cmake-modules geometry-msgs eigen ];
   propagatedBuildInputs = [ tf2 geometry-msgs eigen ];
-  nativeBuildInputs = [ tf2 cmake-modules eigen catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''tf2_eigen'';

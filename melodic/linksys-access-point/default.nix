@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "55dd46632ddd7f101ab243a61ebdba3479af1187d7ea143d4b8cd419aed58592";
   };
 
+  buildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
-  nativeBuildInputs = [ catkin access-point-control rospy dynamic-reconfigure ieee80211-channels ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS node that controls a Linksys access point with

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e32be3bf72bffa92847724a0d2ca5fa70a636b9a80b836a28d6ccf244888c8a3";
   };
 
+  buildInputs = [ robot-controllers-msgs roscpp pluginlib actionlib ];
   propagatedBuildInputs = [ robot-controllers-msgs roscpp pluginlib actionlib ];
-  nativeBuildInputs = [ pluginlib actionlib robot-controllers-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generic framework for robot controls.'';

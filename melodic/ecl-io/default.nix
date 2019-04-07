@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8ed29cb5c059af11e82868c532fedfcefd85d2e4d8d16f97bee45fb5af9b6ee4";
   };
 
+  buildInputs = [ ecl-license ecl-errors ecl-config ];
   propagatedBuildInputs = [ ecl-license ecl-errors ecl-config ];
-  nativeBuildInputs = [ ecl-license catkin ecl-errors ecl-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Most implementations (windows, posix, ...) have slightly different api for 

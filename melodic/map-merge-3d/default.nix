@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "7413dc94e5c7e8b52bf48c1b7be92e7b7381fac6cd5db59b93e5b9fdf5a4d163";
   };
 
+  buildInputs = [ roscpp tf2-ros tf2-eigen pcl-ros ];
   checkInputs = [ roslaunch rosunit ];
   propagatedBuildInputs = [ roscpp tf2-ros tf2-eigen pcl-ros ];
-  nativeBuildInputs = [ tf2-eigen pcl-ros catkin roscpp tf2-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Merging multiple 3D maps, represented as pointclouds,

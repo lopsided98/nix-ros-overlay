@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "03d382b561c972861428737b3804a666bc1e8f20a962e160049cda6202c4bbd4";
   };
 
+  buildInputs = [ costmap-2d cmake-modules pluginlib nav-core roscpp geometry-msgs ];
   propagatedBuildInputs = [ costmap-2d pluginlib nav-core roscpp geometry-msgs ];
-  nativeBuildInputs = [ costmap-2d catkin cmake-modules pluginlib nav-core roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''move_slow_and_clear'';

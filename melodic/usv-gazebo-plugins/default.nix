@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "61bbed37ef07cd02e27f6710063400a17b259523bbe721a0f657120b3a3c11ad";
   };
 
+  buildInputs = [ gazebo-ros eigen std-msgs roscpp gazebo-dev ];
   propagatedBuildInputs = [ gazebo-ros message-runtime eigen std-msgs roscpp gazebo-dev ];
-  nativeBuildInputs = [ gazebo-ros eigen std-msgs catkin roscpp gazebo-dev ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo plugins for simulating Unmanned Surface Vehicles

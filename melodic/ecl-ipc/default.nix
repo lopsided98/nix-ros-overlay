@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-time-lite, catkin, ecl-time, ecl-exceptions, ecl-build, ecl-license, ecl-errors, ecl-config }:
+{ lib, buildRosPackage, fetchurl, ecl-time-lite, catkin, ecl-build, ecl-exceptions, ecl-time, ecl-license, ecl-errors, ecl-config }:
 buildRosPackage {
   pname = "ros-melodic-ecl-ipc";
   version = "0.62.2";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "35873c953237fc4218b4a354119e76304a5a8aa4c4147e2ccfab5aac4f3bf4dc";
   };
 
+  buildInputs = [ ecl-exceptions ecl-build ecl-license ecl-errors ecl-time-lite ecl-config ecl-time ];
   propagatedBuildInputs = [ ecl-exceptions ecl-build ecl-license ecl-errors ecl-time-lite ecl-config ecl-time ];
-  nativeBuildInputs = [ ecl-exceptions ecl-build ecl-license ecl-errors ecl-time-lite catkin ecl-config ecl-time ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interprocess mechanisms vary greatly across platforms - sysv, posix, win32, there

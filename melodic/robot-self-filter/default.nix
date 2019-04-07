@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8a6538dd30770242d25476003332f8ac072fbb0837e50cdde55600dc7d063150";
   };
 
+  buildInputs = [ filters bullet cmake-modules tf sensor-msgs tinyxml assimp urdf resource-retriever visualization-msgs pcl-ros roscpp ];
   propagatedBuildInputs = [ filters bullet tf sensor-msgs tinyxml assimp urdf resource-retriever visualization-msgs pcl-ros roscpp ];
-  nativeBuildInputs = [ filters bullet cmake-modules tf sensor-msgs catkin tinyxml assimp urdf resource-retriever visualization-msgs pcl-ros roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Filters the robot's body out of point clouds.'';

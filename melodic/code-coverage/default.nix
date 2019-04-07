@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "aaf9d0b3b00d1b1af932e9099dbb3a92475ee92e45f189b3bfb3559e8abb1c50";
   };
 
+  buildInputs = [ lcov ];
   propagatedBuildInputs = [ lcov ];
-  nativeBuildInputs = [ lcov catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''CMake configuration to run coverage'';

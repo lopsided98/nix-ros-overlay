@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c47b3746216db63830a678b6d220f7f39bacebe9980d4fa40aeb106012873da1";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generic Messages for Navigation Objectives in Automotive Automation Software'';

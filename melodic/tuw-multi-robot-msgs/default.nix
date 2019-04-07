@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c46ab49af256d3f580c7eade0281686d12dfa70472080d9c6b4a6c9c3e153f43";
   };
 
+  buildInputs = [ std-msgs nav-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs nav-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ nav-msgs message-generation std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tuw_multi_robot_msgs package contains messages for sending graph, route and sync data over topics.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3272a80421da42c672c81733bc649c88783104d945c886f589acf5fd90d97294";
   };
 
+  buildInputs = [ exotica-core fcl-catkin geometric-shapes ];
   propagatedBuildInputs = [ exotica-core fcl-catkin geometric-shapes ];
-  nativeBuildInputs = [ exotica-core fcl-catkin geometric-shapes catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Collision checking and distance computation using the latest version of the FCL library.'';

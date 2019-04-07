@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "adfb1e8a3002fcfc90f654c8def944f6cd7a8753b3e908b5760eca786b1546ef";
   };
 
+  buildInputs = [ rostest std-srvs message-generation rospy std-msgs roslaunch ];
   checkInputs = [ pythonPackages.mock pythonPackages.coverage pythonPackages.pep8 rosservice geometry-msgs ];
   propagatedBuildInputs = [ std-srvs message-runtime rospy std-msgs bondpy roslaunch nodelet pythonPackages.pyyaml ];
-  nativeBuildInputs = [ rostest std-srvs message-generation rospy std-msgs roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package which implements capabilities, including code to parse capability interface specs, to parse capability provider specs, and implement the capability server.'';

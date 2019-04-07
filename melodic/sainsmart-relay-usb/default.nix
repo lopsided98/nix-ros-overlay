@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libftdi, roscpp, std-msgs, roslib }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, libftdi, std-msgs, roslib }:
 buildRosPackage {
   pname = "ros-melodic-sainsmart-relay-usb";
   version = "0.0.2";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "73e7449cf27e9caa518695cb6996d8909422ae70540708e07580a666560ddd66";
   };
 
+  buildInputs = [ std-msgs roscpp roslib libftdi ];
   propagatedBuildInputs = [ std-msgs roscpp libftdi ];
-  nativeBuildInputs = [ roslib std-msgs catkin roscpp libftdi ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''SainSmart USB relay driver controller'';

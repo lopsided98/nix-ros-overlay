@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3ec093cac435218696a0a1172957a05724706c83c0f644369c48bbe36161c5d3";
   };
 
+  buildInputs = [ roscpp dynamixel-workbench-msgs dynamixel-workbench-toolbox qt5.qtbase ];
   propagatedBuildInputs = [ dynamixel-workbench-msgs dynamixel-workbench-toolbox roscpp qt5.qtbase ];
-  nativeBuildInputs = [ dynamixel-workbench-msgs dynamixel-workbench-toolbox catkin roscpp qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''It provides a grapic user interface to check the status of Dynamixel and control it before using Dynamixel'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d946568df0327384e9e5e2304964454753889b4f703096a17d6d94795e64ce8a";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The mcl_3dl message definition package'';

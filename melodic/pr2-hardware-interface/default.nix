@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "abbcd1c6b4af9419057f2bb0b7f7677943e16e03abdd15933e41efdc16975247";
   };
 
+  buildInputs = [ roscpp geometry-msgs ];
   propagatedBuildInputs = [ roscpp geometry-msgs ];
-  nativeBuildInputs = [ catkin roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the C++ interfaces to the PR2 hardware

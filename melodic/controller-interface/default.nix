@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6b4025c033f2785cdbf9c8246c7699e597de302f0651fd94e64d3b7746786350";
   };
 
+  buildInputs = [ hardware-interface roscpp pluginlib ];
   propagatedBuildInputs = [ hardware-interface roscpp pluginlib ];
-  nativeBuildInputs = [ hardware-interface catkin roscpp pluginlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interface base class for controllers'';

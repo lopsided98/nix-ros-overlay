@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "65ebf60e6f3b3113b73e67b86b44184e8157dd2b33a3a9ced64765641a1a32df";
   };
 
+  buildInputs = [ std-srvs phidgets-api pluginlib sensor-msgs roscpp diagnostic-updater nodelet std-msgs diagnostic-msgs roslaunch tf ];
   propagatedBuildInputs = [ std-srvs phidgets-api pluginlib sensor-msgs roscpp diagnostic-updater nodelet std-msgs diagnostic-msgs tf imu-filter-madgwick diagnostic-aggregator ];
-  nativeBuildInputs = [ std-srvs phidgets-api pluginlib sensor-msgs catkin roscpp diagnostic-updater nodelet std-msgs diagnostic-msgs roslaunch tf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for the Phidgets Spatial 3/3/3 devices'';

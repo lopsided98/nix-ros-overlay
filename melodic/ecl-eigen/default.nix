@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e876bba5caea9487942c43d124404890361df1004126e7233a29d6b5c6e1c0c7";
   };
 
+  buildInputs = [ ecl-license cmake-modules eigen ];
   propagatedBuildInputs = [ ecl-license eigen ];
-  nativeBuildInputs = [ ecl-license catkin cmake-modules eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This provides an Eigen implementation for ecl's linear algebra.'';

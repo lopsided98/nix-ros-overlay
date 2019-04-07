@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "585d9e6b911d982399db49255a0dd202555a1d36413898683de933e21d45b6ce";
   };
 
+  buildInputs = [ message-generation nav-2d-msgs actionlib-msgs ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs nav-2d-msgs ];
-  nativeBuildInputs = [ catkin message-generation nav-2d-msgs actionlib-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Action definition for Locomotor'';

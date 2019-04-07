@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "deb1b59fcc5f3f9247e9fa90e7f5bde35d22668aa13a9300a4d6d3315552215e";
   };
 
+  buildInputs = [ rosconsole pluginlib cmake-modules pcl rosbag nodelet-topic-tools message-filters pcl-msgs roscpp sensor-msgs roslib tf2-eigen dynamic-reconfigure std-msgs nodelet tf pcl-conversions eigen ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ pluginlib pcl rosbag nodelet-topic-tools message-filters pcl-msgs roscpp sensor-msgs tf2-eigen dynamic-reconfigure std-msgs nodelet tf pcl-conversions eigen ];
-  nativeBuildInputs = [ rosconsole rosbag catkin dynamic-reconfigure std-msgs roscpp nodelet tf pcl-conversions eigen pluginlib cmake-modules pcl sensor-msgs nodelet-topic-tools message-filters tf2-eigen pcl-msgs roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the preferred

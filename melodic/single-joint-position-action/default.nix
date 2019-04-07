@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "52bd7e24d99be30953d7cf5ae23d1cd007b0863b86aa4dab5b3dcb741cca41a8";
   };
 
+  buildInputs = [ pr2-controllers-msgs roscpp actionlib ];
   propagatedBuildInputs = [ pr2-controllers-msgs roscpp actionlib ];
-  nativeBuildInputs = [ pr2-controllers-msgs catkin roscpp actionlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The single joint position action is a node that provides an action

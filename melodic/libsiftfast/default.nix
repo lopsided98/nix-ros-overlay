@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ca3a75a0f18b137f41486124251c3fc8319bbe4b7b6b959662f46067dffe6457";
   };
 
+  buildInputs = [ rospack pythonPackages.numpy rosboost-cfg boost mk roslib subversion ];
   propagatedBuildInputs = [ pythonPackages.numpy boost ];
-  nativeBuildInputs = [ rospack pythonPackages.numpy rosboost-cfg boost mk catkin roslib subversion ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Library to compute SIFT features'';

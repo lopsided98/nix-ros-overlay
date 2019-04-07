@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "43cc5478e64f5499139be34e4cdc8015fa3ca70d03bd49134c85b83e6934b0a2";
   };
 
+  buildInputs = [ suitesparse nav2d-msgs tf roscpp tbb nav2d-localizer nav-msgs eigen visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ suitesparse nav2d-msgs tf roscpp tbb nav2d-localizer nav-msgs eigen visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ suitesparse nav2d-msgs tf catkin roscpp tbb nav2d-localizer nav-msgs eigen visualization-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Graph-based Simultaneous Localization and Mapping module.

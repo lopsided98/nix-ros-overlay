@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ab87c65d8f8d392258c9d733edf76c417488f78b564a7ce7000bd67ed5bd26fd";
   };
 
+  buildInputs = [ liblapack suitesparse blas eigen ];
   propagatedBuildInputs = [ liblapack suitesparse blas eigen ];
-  nativeBuildInputs = [ liblapack suitesparse eigen catkin blas ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS wrapper for the sparse bundle adjustment (sba) library (needed for slam_karto)'';

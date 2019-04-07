@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, catkin, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, catkin, rospy }:
 buildRosPackage {
   pname = "ros-melodic-ddynamic-reconfigure-python";
   version = "0.0.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bc8dcf50274a8e4a0548a9044f4af8ef90d207eab61b8a3ff4e474582b88121c";
   };
 
+  buildInputs = [ rospy dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy dynamic-reconfigure ];
-  nativeBuildInputs = [ rospy catkin dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ddynamic_reconfigure_python package contains

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "86fec955adf084d6ebdf11e8a17ecb03586afcfab3b15329e02535a773dc7a4d";
   };
 
+  buildInputs = [ std-srvs rosconsole urg-c sensor-msgs roscpp diagnostic-updater message-generation nodelet dynamic-reconfigure std-msgs tf laser-proc ];
   checkInputs = [ roslaunch roslint ];
   propagatedBuildInputs = [ std-srvs rosconsole urg-c sensor-msgs roscpp diagnostic-updater message-generation message-runtime nodelet dynamic-reconfigure std-msgs tf laser-proc ];
-  nativeBuildInputs = [ std-srvs rosconsole urg-c sensor-msgs catkin roscpp diagnostic-updater message-generation nodelet dynamic-reconfigure std-msgs tf laser-proc ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''urg_node'';

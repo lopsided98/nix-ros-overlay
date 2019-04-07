@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8fdd41c3aab78f532ddc8c228da3778ecdcb64e8a566952f1ec9dc4f026ba144";
   };
 
+  buildInputs = [ ecl-containers ecl-license ecl-utilities ecl-errors ecl-type-traits ecl-mpl ecl-config ecl-threads ];
   propagatedBuildInputs = [ ecl-containers ecl-license ecl-utilities ecl-errors ecl-type-traits ecl-mpl ecl-config ecl-threads ];
-  nativeBuildInputs = [ ecl-utilities catkin ecl-threads ecl-containers ecl-license ecl-errors ecl-type-traits ecl-config ecl-mpl ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides an extensible and standardised framework for input-output devices.'';

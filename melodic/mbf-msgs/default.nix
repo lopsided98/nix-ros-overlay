@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9ce647ffa0b672e1cda95157baf45218b9000882e3cad50dd384c5c59a5504da";
   };
 
+  buildInputs = [ nav-msgs message-generation message-runtime actionlib-msgs std-msgs genmsg geometry-msgs ];
   propagatedBuildInputs = [ nav-msgs message-runtime actionlib-msgs std-msgs geometry-msgs ];
-  nativeBuildInputs = [ nav-msgs message-generation message-runtime actionlib-msgs std-msgs genmsg catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The move_base_flex messages package providing the action definition files for the action GetPath, ExePath, Recovery and MoveBase. The action servers providing these action are implemented in <a href="http://wiki.ros.org/mbf_abstract_nav">mbf_abstract_nav</a>.'';

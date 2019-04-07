@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "938b5bff6f2fb9ec9e2fe36b383f0b81828c5147f0870cda2650b2cc863e2652";
   };
 
+  buildInputs = [ image-transport sensor-msgs roscpp tf2-ros ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ image-transport sensor-msgs roscpp tf2-ros ];
-  nativeBuildInputs = [ catkin image-transport sensor-msgs roscpp tf2-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Improved ROS message filters'';

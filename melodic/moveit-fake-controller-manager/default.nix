@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "feaa120207501e6224b2ce7340cadecc2bd54533ab516ffea3423d635a58a612";
   };
 
+  buildInputs = [ pluginlib roscpp moveit-core moveit-ros-planning ];
   propagatedBuildInputs = [ pluginlib roscpp moveit-core moveit-ros-planning ];
-  nativeBuildInputs = [ moveit-ros-planning pluginlib moveit-core catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A fake controller manager plugin for MoveIt.'';

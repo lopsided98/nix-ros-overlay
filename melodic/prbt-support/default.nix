@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "f38e5c99cb99f6999ecdfbc6ffc01b608b48cce3f71bfc22e5497d6f7ef06301";
   };
 
+  buildInputs = [ roscpp ];
   checkInputs = [ rostest cmake-modules moveit-core eigen roslaunch moveit-kinematics ];
   propagatedBuildInputs = [ controller-manager joint-state-controller pilz-control prbt-hardware-support rosservice joint-trajectory-controller canopen-motor-node rviz robot-state-publisher topic-tools roscpp joint-state-publisher xacro ];
-  nativeBuildInputs = [ catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Mechanical, kinematic and visual description

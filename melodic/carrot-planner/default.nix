@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a5d041ba34682f24432fac22801b54a438dc58d3e13e1a4dde1e81e09d2c3ab4";
   };
 
+  buildInputs = [ costmap-2d pluginlib base-local-planner tf2-geometry-msgs nav-core tf2-ros tf2 eigen roscpp ];
   propagatedBuildInputs = [ tf2 costmap-2d pluginlib base-local-planner eigen nav-core roscpp tf2-ros ];
-  nativeBuildInputs = [ costmap-2d pluginlib base-local-planner tf2-geometry-msgs nav-core catkin tf2-ros tf2 eigen roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This planner attempts to find a legal place to put a carrot for the robot to follow. It does this by moving back along the vector between the robot and the goal point.'';

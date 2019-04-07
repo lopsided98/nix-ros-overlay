@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d47fadd37a04d4f165bef5173d536190baa3006dac2fa0235a14527d32169afc";
   };
 
+  buildInputs = [ rosconsole console-bridge cpp-common ];
   propagatedBuildInputs = [ rosconsole console-bridge cpp-common ];
-  nativeBuildInputs = [ rosconsole console-bridge cpp-common catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosconsole_bridge is a package used in conjunction with console_bridge and rosconsole for connecting console_bridge-based logging to rosconsole-based logging.'';

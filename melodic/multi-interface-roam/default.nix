@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a01fbdcf55341c0055f0c7a0d6dc5ff894e6880547eeb6e446ef781fe6214157";
   };
 
+  buildInputs = [ asmach dynamic-reconfigure std-msgs diagnostic-msgs pr2-msgs ieee80211-channels network-monitor-udp rospy ];
   propagatedBuildInputs = [ asmach dynamic-reconfigure std-msgs diagnostic-msgs pr2-msgs ieee80211-channels network-monitor-udp rospy ];
-  nativeBuildInputs = [ ieee80211-channels catkin network-monitor-udp rospy asmach dynamic-reconfigure std-msgs diagnostic-msgs pr2-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''sdsdddsdsds'';

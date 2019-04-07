@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "58621f94cdf383410e0b4e896be17b09320461196422f8e14e28e19a58680625";
   };
 
+  buildInputs = [ pr2-controllers-msgs actionlib std-msgs geometry-msgs tf topic-tools roscpp rospy ];
   propagatedBuildInputs = [ pr2-controllers-msgs actionlib std-msgs geometry-msgs tf topic-tools roscpp rospy ];
-  nativeBuildInputs = [ pr2-controllers-msgs topic-tools catkin roscpp rospy actionlib std-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_teleop package'';

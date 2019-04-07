@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "18b3d8ec019e01a906981d524a8f1d0cc067e39f53494f1ce0a8c94e07801340";
   };
 
+  buildInputs = [ std-msgs sensor-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs sensor-msgs message-generation catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''stereo_msgs contains messages specific to stereo processing, such as disparity images.'';

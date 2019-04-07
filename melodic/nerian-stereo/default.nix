@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cab332138682cb2a2fb8de01086a05bf0c8e7a81c2ad1f169e7b5304968539ca";
   };
 
+  buildInputs = [ message-generation boost std-msgs sensor-msgs cv-bridge roscpp ];
   propagatedBuildInputs = [ cv-bridge boost curl message-runtime std-msgs sensor-msgs roscpp ];
-  nativeBuildInputs = [ message-generation catkin boost std-msgs sensor-msgs cv-bridge roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver node for SceneScan and SP1 stereo vision sensors by Nerian Vision Technologies'';

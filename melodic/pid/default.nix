@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6066703ba3197ee904f55d7e6b1fc054e1901b5ad4d826753061715945a57d62";
   };
 
+  buildInputs = [ std-msgs message-generation roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ std-msgs roscpp message-runtime dynamic-reconfigure ];
-  nativeBuildInputs = [ message-generation dynamic-reconfigure std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch a PID control node.'';

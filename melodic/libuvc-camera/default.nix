@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2ea19c5821e70fe6c63da750b35c6ae0dfff43faadca9f951c0137e5701834b0";
   };
 
+  buildInputs = [ dynamic-reconfigure camera-info-manager image-transport sensor-msgs nodelet libuvc roscpp ];
   propagatedBuildInputs = [ dynamic-reconfigure camera-info-manager image-transport sensor-msgs nodelet libuvc roscpp ];
-  nativeBuildInputs = [ catkin dynamic-reconfigure camera-info-manager image-transport sensor-msgs nodelet libuvc roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''USB Video Class camera driver'';

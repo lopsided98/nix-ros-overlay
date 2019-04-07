@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a267e4c4c19156dc78278f5efe291fc40f84e12fde5516279738f4f68110540d";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ rosbridge-library rosgraph message-runtime rospy rosnode ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides service calls for getting ros meta-information, like list of

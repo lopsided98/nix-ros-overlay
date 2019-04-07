@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, realtime-tools, control-toolbox, catkin, controller-interface, urdf, angles, forward-command-controller }:
+{ lib, buildRosPackage, fetchurl, control-msgs, control-toolbox, realtime-tools, catkin, controller-interface, urdf, angles, forward-command-controller }:
 buildRosPackage {
   pname = "ros-melodic-effort-controllers";
   version = "0.15.0";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "52db667f0de73f3ceff16dc3ec2d5e5c3b4a1d67ede0c58c89a53883f194821e";
   };
 
+  buildInputs = [ realtime-tools urdf controller-interface control-msgs angles control-toolbox forward-command-controller ];
   propagatedBuildInputs = [ realtime-tools urdf controller-interface control-msgs angles control-toolbox forward-command-controller ];
-  nativeBuildInputs = [ realtime-tools urdf controller-interface control-msgs angles control-toolbox catkin forward-command-controller ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''effort_controllers'';

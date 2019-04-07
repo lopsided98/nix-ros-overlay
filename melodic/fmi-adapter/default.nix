@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "bfe24f7aa9671c953277071e419fc78de19d4ff33b5342fb7aef9e0b8f964f49";
   };
 
+  buildInputs = [ std-msgs roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ std-msgs roscpp ];
-  nativeBuildInputs = [ std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Wraps FMUs for co-simulation'';

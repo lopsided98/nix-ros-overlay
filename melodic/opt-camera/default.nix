@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "57af7e6334d1a87c5da35fc6984d7e35906cbb53c0a9d57d8deb7843aafc9505";
   };
 
+  buildInputs = [ rospack roslang dynamic-reconfigure camera-calibration-parsers image-proc cv-bridge compressed-image-transport sensor-msgs ];
   propagatedBuildInputs = [ rospack dynamic-reconfigure camera-calibration-parsers image-proc cv-bridge compressed-image-transport sensor-msgs ];
-  nativeBuildInputs = [ rospack camera-calibration-parsers sensor-msgs cv-bridge catkin roslang dynamic-reconfigure image-proc compressed-image-transport ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''opt_camera'';

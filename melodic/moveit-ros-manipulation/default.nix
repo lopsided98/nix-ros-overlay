@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2bbac6007c1cf0799f38dfbadaaed30957d5d1d31fd7781e599254db553517a9";
   };
 
+  buildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib rosconsole actionlib moveit-core tf2-eigen dynamic-reconfigure moveit-msgs roscpp eigen ];
   propagatedBuildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib rosconsole actionlib moveit-core tf2-eigen dynamic-reconfigure moveit-msgs roscpp ];
-  nativeBuildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib rosconsole catkin actionlib moveit-core tf2-eigen dynamic-reconfigure moveit-msgs roscpp eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Components of MoveIt! used for manipulation'';

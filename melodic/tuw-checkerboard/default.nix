@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, marker-msgs, image-transport, catkin, cv-bridge, image-geometry, image-view, dynamic-reconfigure, tf }:
+{ lib, buildRosPackage, fetchurl, marker-msgs, image-transport, cv-bridge, catkin, image-geometry, image-view, dynamic-reconfigure, tf }:
 buildRosPackage {
   pname = "ros-melodic-tuw-checkerboard";
   version = "0.1.1-r1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e7d76c6bb8a14e31094674fc33504b7cca4335d4d0c2362ceda6811633fc483c";
   };
 
+  buildInputs = [ marker-msgs image-view dynamic-reconfigure tf image-transport cv-bridge image-geometry ];
   propagatedBuildInputs = [ marker-msgs image-view dynamic-reconfigure tf image-transport cv-bridge image-geometry ];
-  nativeBuildInputs = [ marker-msgs image-view dynamic-reconfigure tf image-transport catkin cv-bridge image-geometry ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tuw_checkerboard package is designed to detect one 

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4a0f8dbf4cf73db3976b83dea3cb12c86d3bc81e41241ec3a1b00bdb23245c85";
   };
 
+  buildInputs = [ std-srvs message-generation curl message-runtime dynamic-reconfigure roscpp geometry-msgs ];
   propagatedBuildInputs = [ std-srvs message-generation curl message-runtime dynamic-reconfigure roscpp geometry-msgs ];
-  nativeBuildInputs = [ std-srvs message-generation curl message-runtime dynamic-reconfigure catkin roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rc_hand_eye_calibration_client package'';

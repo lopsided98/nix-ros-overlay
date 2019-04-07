@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ce9cacbbb9e4456865e0c8591d0dc48d821e1823a97127deb9963bb6f3a5a75a";
   };
 
+  buildInputs = [ move-base-msgs nav-msgs actionlib rospy tf roscpp yocs-math-toolkit yocs-msgs ];
   propagatedBuildInputs = [ move-base-msgs nav-msgs actionlib rospy tf roscpp yocs-math-toolkit yocs-msgs ];
-  nativeBuildInputs = [ catkin yocs-math-toolkit yocs-msgs roscpp move-base-msgs nav-msgs actionlib rospy tf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Navigation module for robots'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c35030b57adc01d75f9d3e5e061c933839f850d7a4d6dbc4d9a0f3fcdd1e0803";
   };
 
+  buildInputs = [ grid-map-core grid-map-ros nav-msgs visualization-msgs tf grid-map-msgs roscpp sensor-msgs ];
   propagatedBuildInputs = [ grid-map-core grid-map-ros nav-msgs visualization-msgs tf grid-map-msgs roscpp sensor-msgs ];
-  nativeBuildInputs = [ grid-map-core tf sensor-msgs catkin roscpp grid-map-ros nav-msgs grid-map-msgs visualization-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Configurable tool to visualize grid maps in RViz.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "407300df55fa840ad29485ae7f9506e49482bad4b9783aef2bf6d90afe163f4b";
   };
 
+  buildInputs = [ python pythonPackages.numpy boost eigen git ];
   propagatedBuildInputs = [ python pythonPackages.numpy boost eigen ];
-  nativeBuildInputs = [ python pythonPackages.numpy boost eigen git catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Bindings between Numpy and Eigen using Boost.Python - wrapped for catkin.'';

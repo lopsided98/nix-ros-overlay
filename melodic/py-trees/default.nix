@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f0749de4867ee89d353aa9ba22338ec73044a05e186ee0d611caa917fc708c4d";
   };
 
+  buildInputs = [ pythonPackages.setuptools ];
   propagatedBuildInputs = [ pythonPackages.pydot pythonPackages.enum34 ];
-  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Pythonic implementation of behaviour trees.'';

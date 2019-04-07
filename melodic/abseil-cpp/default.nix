@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "016b0cb70355a46ec06fa709a09117aaed9f8c7351a216634cefdfc642456b91";
   };
 
-  nativeBuildInputs = [ rsync catkin ];
+  buildInputs = [ rsync ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The abseil_cpp package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fbe23c95911cfbb840e28142bf91da168207ff3cde4ef61f703674672c2e5431";
   };
 
+  buildInputs = [ pluginlib sensor-msgs yocs-math-toolkit roscpp ecl-threads nodelet std-msgs tf geometry-msgs yocs-controllers ];
   propagatedBuildInputs = [ pluginlib sensor-msgs yocs-math-toolkit roscpp ecl-threads nodelet std-msgs tf geometry-msgs yocs-controllers ];
-  nativeBuildInputs = [ pluginlib sensor-msgs catkin yocs-math-toolkit roscpp ecl-threads nodelet std-msgs tf geometry-msgs yocs-controllers ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A controller for driving a differential drive base to a pose goal or along a path specified by multiple poses.

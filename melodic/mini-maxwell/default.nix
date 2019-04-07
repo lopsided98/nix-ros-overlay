@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a69fc95ceca0f3b9035039ac42b1805c74f2bb0f11dd017e7ec7fbbd1a531e7c";
   };
 
+  buildInputs = [ roslib cmake-modules dynamic-reconfigure ];
   propagatedBuildInputs = [ dynamic-reconfigure ];
-  nativeBuildInputs = [ catkin roslib cmake-modules dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''mini_maxwell'';

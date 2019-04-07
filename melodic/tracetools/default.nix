@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosbash, pkg-config, boost }:
+{ lib, buildRosPackage, fetchurl, catkin, boost, pkg-config, rosbash }:
 buildRosPackage {
   pname = "ros-melodic-tracetools";
   version = "0.2.1-r1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1c5114e1acce416cfb16dfca419508fd9dfcfd682ffdd63eafbe7a609d5f14f7";
   };
 
+  buildInputs = [ boost ];
   checkInputs = [ rosbash ];
-  nativeBuildInputs = [ catkin boost pkg-config ];
+  nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''Wrapper interface for tracing libraries'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fd30887f7c1a5dcd841ed043da22a724bc30cc47f3db12593a0da5d7a99ae854";
   };
 
+  buildInputs = [ xpp-states xpp-msgs rosbag roscpp message-generation ncurses visualization-msgs message-runtime std-msgs towr ];
   propagatedBuildInputs = [ xpp-states xpp-msgs xpp-hyq rosbag roscpp xterm rqt-bag message-generation rviz ncurses visualization-msgs message-runtime std-msgs towr ];
-  nativeBuildInputs = [ xpp-states xpp-msgs rosbag catkin roscpp message-generation ncurses visualization-msgs message-runtime std-msgs towr ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS dependent wrapper for

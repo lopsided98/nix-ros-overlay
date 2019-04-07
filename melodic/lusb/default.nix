@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a2b403bcddedcfb51d9c51f29f2364cd8a82997ba8bdb801a40e84bea748daf6";
   };
 
+  buildInputs = [ libusb1 boost ];
   propagatedBuildInputs = [ boost libusb ];
-  nativeBuildInputs = [ libusb1 catkin boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Library for interfacing to USB devices'';

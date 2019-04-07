@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "80c4c52600e704c7da3482638cdf95cd69b35ddb0f00402c5d279be2247eabca";
   };
 
+  buildInputs = [ std-msgs geometry-msgs ];
   propagatedBuildInputs = [ std-msgs geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides common interfaces for navigation specific robot actions. It contains the AbstractPlanner, AbstractController and AbstractRecovery plugin interfaces. This interfaces have to be implemented by the plugins to make the plugin available for Move Base Flex. The abstract classes provides a meaningful interface enabling the planners, controllers and recovery behaviors to return information, e.g. why something went wrong. Derivided interfaces can, for example, provide methods to initialize the planner, controller or recovery with map representations like costmap_2d, grid_map or other representations.'';

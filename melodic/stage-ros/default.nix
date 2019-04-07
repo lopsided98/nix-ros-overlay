@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5762c477b0401c12f43573895f7a94ec3bdfddc4aa9fe3a127d3acc1ce2960d8";
   };
 
+  buildInputs = [ std-srvs boost sensor-msgs roscpp rostest nav-msgs std-msgs tf stage geometry-msgs ];
   propagatedBuildInputs = [ std-srvs boost sensor-msgs roscpp nav-msgs std-msgs tf stage geometry-msgs ];
-  nativeBuildInputs = [ std-srvs boost sensor-msgs catkin roscpp rostest nav-msgs std-msgs tf stage geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides ROS specific hooks for stage'';

@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "659fc4d1dd3a388860d8daffe67a537beed9a9cb2cf1ec447546a2e90abd604c";
   };
 
-  nativeBuildInputs = [ rospack rosbash mk rosbuild catkin flex cacert unzip openssl roslib bison ];
+  buildInputs = [ rospack rosbash mk rosbuild flex cacert unzip openssl roslib bison ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ff: pddl planner. see http://www.loria.fr/~hoffmanj/ff.html'';

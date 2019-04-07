@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "01a2d5c29791a6b4a85dc55a16b5a904fa22c58e73c99df0172cf8e8870c02b2";
   };
 
+  buildInputs = [ console-bridge boost mavlink ];
   checkInputs = [ gtest rosunit ];
   propagatedBuildInputs = [ console-bridge boost mavlink ];
-  nativeBuildInputs = [ catkin console-bridge boost mavlink ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''MAVLink communication library.

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7111ea1c30ce167523138bb317797a8fe472475671b3308673f6041d72b356c6";
   };
 
+  buildInputs = [ qt5.qtbase ];
   propagatedBuildInputs = [ qt5.qtbase ];
-  nativeBuildInputs = [ catkin qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''libqt-widgets metapackage supporting qt4 and qt5'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "dfccafb19b7d79ae310f7ed1b741b2d11921c5392d0bc4f45257738b8f7bba47";
   };
 
+  buildInputs = [ std-msgs genmsg message-generation trajectory-msgs ];
   propagatedBuildInputs = [ std-msgs genmsg trajectory-msgs message-runtime ];
-  nativeBuildInputs = [ message-generation trajectory-msgs std-msgs genmsg catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The industrial message package containes industrial specific messages 

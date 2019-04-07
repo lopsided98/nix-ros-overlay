@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "670edf72be59ce0c5d2fce6df933f1c50895c8351f250f9d192164157c2fc46e";
   };
 
+  buildInputs = [ roslz4 bzip2 boost pluginlib cpp-common roscpp-traits gpgme rostest console-bridge roscpp-serialization openssl rostime ];
   propagatedBuildInputs = [ roslz4 bzip2 boost pluginlib cpp-common roscpp-traits gpgme console-bridge roscpp-serialization openssl rostime ];
-  nativeBuildInputs = [ roslz4 bzip2 boost pluginlib cpp-common roscpp-traits catkin gpgme rostest console-bridge roscpp-serialization openssl rostime ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This is a set of tools for recording from and playing back ROS

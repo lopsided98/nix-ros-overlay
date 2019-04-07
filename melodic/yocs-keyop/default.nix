@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9b6de8d0572c1d3c31cca79bf6ad19f484cc7f0bbb4c6af27012f6eaf010f26d";
   };
 
+  buildInputs = [ ecl-exceptions ecl-threads std-msgs roscpp geometry-msgs ecl-time ];
   propagatedBuildInputs = [ ecl-exceptions ecl-threads std-msgs roscpp geometry-msgs ecl-time ];
-  nativeBuildInputs = [ ecl-exceptions ecl-threads std-msgs catkin roscpp geometry-msgs ecl-time ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Keyboard teleoperation for your robot'';

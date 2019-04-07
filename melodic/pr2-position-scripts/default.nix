@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8a6dddf6474456caf8bc7efdec66febbabfc1c4f5c4ca533a0520dcc5b6b660c";
   };
 
+  buildInputs = [ pr2-controllers-msgs tf actionlib rospy ];
   propagatedBuildInputs = [ pr2-controllers-msgs tf actionlib rospy ];
-  nativeBuildInputs = [ pr2-controllers-msgs actionlib rospy catkin tf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a number of scripts to set various components of the PR2. They are used in the apps to improve usablity.'';

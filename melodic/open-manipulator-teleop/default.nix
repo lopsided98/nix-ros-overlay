@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4ee30aac61a7e2b66ced2141c722c2c7de04cbc061d985b49387f7a205e6eac1";
   };
 
+  buildInputs = [ std-msgs sensor-msgs roscpp open-manipulator-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs roscpp open-manipulator-msgs ];
-  nativeBuildInputs = [ catkin std-msgs sensor-msgs roscpp open-manipulator-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides teleoperation using keyboard for OpenManipulator.'';

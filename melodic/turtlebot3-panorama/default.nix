@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1ea012a9fb7e79c68cb54f5e608739f79f378ab6867bad8d1aeee3d7e5039c3e";
   };
 
+  buildInputs = [ std-srvs turtlebot3-applications-msgs cmake-modules image-transport sensor-msgs cv-bridge rospy nav-msgs eigen std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ std-srvs turtlebot3-applications-msgs cmake-modules image-transport sensor-msgs cv-bridge rospy nav-msgs turtlebot3-bringup eigen std-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ std-srvs turtlebot3-applications-msgs cmake-modules image-transport sensor-msgs cv-bridge catkin rospy nav-msgs eigen std-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This app utilises pano_ros for taking snapshots and stitching them together to create panorama pictures.'';

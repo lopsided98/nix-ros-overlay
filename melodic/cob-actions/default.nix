@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6c0b39e34438edd6749609a999bb18ec80f6ed807da5aabaf7e650f80dc053e7";
   };
 
+  buildInputs = [ message-generation actionlib-msgs ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs ];
-  nativeBuildInputs = [ catkin message-generation actionlib-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This Package contains Care-O-bot specific action definitions.'';

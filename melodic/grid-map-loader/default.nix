@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp, catkin, grid-map-ros, grid-map-msgs }:
+{ lib, buildRosPackage, fetchurl, roscpp, grid-map-msgs, catkin, grid-map-ros }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-loader";
   version = "1.6.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "933535f2c73fb43bc6502d724b03e684683ccdc476dce5b3b602ed7a4a0e60d1";
   };
 
+  buildInputs = [ grid-map-msgs roscpp grid-map-ros ];
   propagatedBuildInputs = [ grid-map-msgs roscpp grid-map-ros ];
-  nativeBuildInputs = [ catkin grid-map-msgs roscpp grid-map-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Loading and publishing grid maps from bag files.'';

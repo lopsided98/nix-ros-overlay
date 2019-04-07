@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "96a3356c1fe0467cb3049b0a3962a1a987b55aa11fc69d4dfdd9e7ec9c4d666e";
   };
 
+  buildInputs = [ rosbag rospy ];
   propagatedBuildInputs = [ rosbag rospy ];
-  nativeBuildInputs = [ rosbag catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Plays rosbags as though they were happening NOW.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3a9e9701df570659d70f871eb7e1970dacd3b89c02513c456f8f0ea1a446d15a";
   };
 
+  buildInputs = [ rosconsole pluginlib boost cmake-modules bondcpp message-generation std-msgs roscpp utillinux ];
   propagatedBuildInputs = [ rosconsole pluginlib boost bondcpp message-runtime rospy std-msgs roscpp utillinux ];
-  nativeBuildInputs = [ rosconsole pluginlib boost cmake-modules bondcpp catkin message-generation std-msgs roscpp utillinux ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The nodelet package is designed to provide a way to run multiple

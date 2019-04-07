@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b7ece361d35ee477a65ab530192408ac5a4fb3f8813c52a48a911989568fd0cf";
   };
 
+  buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
-  nativeBuildInputs = [ catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a device-independent utility functions for qbrobotics® devices.'';

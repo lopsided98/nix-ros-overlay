@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "f1cfdca5119fb941e00a174dbd2ad42a577543994efd979e81fd22970ffc7a0e";
   };
 
+  buildInputs = [ lz4 ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ lz4 ];
-  nativeBuildInputs = [ lz4 catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A Python and C++ implementation of the LZ4 streaming format.  Large data

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "90e7b4ba3167ae06f5ad213c193b0c5ab7888b4abd75542a3d7c02592ef9c707";
   };
 
+  buildInputs = [ rosunit boost ];
   propagatedBuildInputs = [ rosmaster rosgraph boost rospy roslaunch rosunit ];
-  nativeBuildInputs = [ catkin rosunit boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Integration test suite based on roslaunch that is compatible with xUnit frameworks.'';

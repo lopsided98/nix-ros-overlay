@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3e32af08b49c5a8b698e9e98b01c1fee182559c0b5e96025fc1be922ff306478";
   };
 
+  buildInputs = [ roscpp cmake-modules eigen ];
   propagatedBuildInputs = [ roscpp cmake-modules eigen ];
-  nativeBuildInputs = [ catkin roscpp cmake-modules eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the manipulation API and functions for controlling the manipulator.'';

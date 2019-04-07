@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0fb40a3caa90ebc1d116a96f2779e15443e7f4e3f06c96d8e3f3fd8946326c8d";
   };
 
+  buildInputs = [ std-msgs message-generation roscpp geometry-msgs ];
   propagatedBuildInputs = [ message-generation message-runtime std-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ message-generation std-msgs catkin roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Definition of the multi-layered grid map message type.'';

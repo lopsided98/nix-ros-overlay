@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1c486fc48c4770e001309be306cc1e28975e1da17fbbc865967c410df538c9cc";
   };
 
+  buildInputs = [ rosboost-cfg boost mk git rosbuild cacert unzip openssl zlib ];
   propagatedBuildInputs = [ zlib boost ];
-  nativeBuildInputs = [ rosboost-cfg boost mk git rosbuild catkin cacert unzip openssl zlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''assimp library'';

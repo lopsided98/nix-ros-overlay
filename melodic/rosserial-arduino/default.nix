@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "dd4574a7017d7e81ffdf3d68f443017a16946a2788c02daa2ba21cf9ca351da6";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ rosserial-python message-runtime rosserial-client rospy arduino rosserial-msgs ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosserial for Arduino/AVR platforms.'';

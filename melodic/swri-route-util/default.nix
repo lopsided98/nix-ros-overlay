@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "abb33dfe7604804a00e7a03fc1b8460067b3302851e54df037dfcbe1ab0fbe04";
   };
 
+  buildInputs = [ swri-math-util marti-common-msgs visualization-msgs swri-geometry-util marti-nav-msgs roscpp swri-transform-util ];
   propagatedBuildInputs = [ swri-math-util marti-common-msgs visualization-msgs swri-geometry-util marti-nav-msgs roscpp swri-transform-util ];
-  nativeBuildInputs = [ swri-math-util catkin marti-common-msgs visualization-msgs swri-geometry-util marti-nav-msgs roscpp swri-transform-util ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This library provides functionality to simplify working with the

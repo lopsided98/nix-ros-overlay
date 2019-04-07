@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "83f0799143de08c0f6c8aa93c665fbac01d8a7dc3e8e04752bdc59e042244557";
   };
 
+  buildInputs = [ pluginlib nodelet geometry-msgs std-msgs sensor-msgs roscpp yocs-controllers ecl-threads ];
   propagatedBuildInputs = [ pluginlib nodelet geometry-msgs std-msgs sensor-msgs roscpp yocs-controllers ecl-threads ];
-  nativeBuildInputs = [ pluginlib sensor-msgs catkin roscpp ecl-threads std-msgs nodelet geometry-msgs yocs-controllers ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A controller ensuring the safe operation of your robot.

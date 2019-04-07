@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, moveit-resources, pluginlib, rosconsole, catkin, ompl, tf2-ros, moveit-core, dynamic-reconfigure, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, moveit-ros-planning, moveit-resources, rosconsole, pluginlib, catkin, ompl, tf2-ros, moveit-core, dynamic-reconfigure, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-moveit-planners-ompl";
   version = "1.0.1";
@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "ff42c067ffeea4f9430e365946b5a958bec447d2e0e5a4fee66eee6a306e51df";
   };
 
+  buildInputs = [ moveit-ros-planning pluginlib rosconsole moveit-core dynamic-reconfigure roscpp ompl tf2-ros ];
   checkInputs = [ moveit-resources rosunit ];
   propagatedBuildInputs = [ moveit-ros-planning pluginlib rosconsole moveit-core dynamic-reconfigure roscpp ompl tf2-ros ];
-  nativeBuildInputs = [ moveit-ros-planning pluginlib rosconsole catkin ompl tf2-ros moveit-core dynamic-reconfigure roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''MoveIt! interface to OMPL'';

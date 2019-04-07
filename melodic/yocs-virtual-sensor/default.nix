@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, yocs-math-toolkit, yocs-msgs, roscpp, rospy-message-converter, visualization-msgs, rospy, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, yocs-math-toolkit, yocs-msgs, rospy-message-converter, visualization-msgs, rospy, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-yocs-virtual-sensor";
   version = "0.8.2";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4505ba05080e444b2000591f1628a4e204e1efb9e9e45be6a8ccb19506193631";
   };
 
+  buildInputs = [ tf sensor-msgs roscpp yocs-math-toolkit yocs-msgs geometry-msgs ];
   propagatedBuildInputs = [ tf sensor-msgs yocs-math-toolkit yocs-msgs roscpp rospy-message-converter rospy visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ catkin tf sensor-msgs roscpp yocs-math-toolkit yocs-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Virtual sensor that uses semantic map information to &quot;see&quot; obstacles undetectable by robot sensors.

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e12d76fdbde92293ff72cc2ff0393e826e2008e23e01f7031aac00ed4a2c3f13";
   };
 
+  buildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
-  nativeBuildInputs = [ catkin access-point-control rospy dynamic-reconfigure ieee80211-channels ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS node that controls a hostapd-based access

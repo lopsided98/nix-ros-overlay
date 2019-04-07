@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b904a96dd4edffa57b21856d75d7d0bf9b064921e330012922c67a545ee54f6a";
   };
 
+  buildInputs = [ suitesparse boost eigen libGLU libGL ];
   propagatedBuildInputs = [ libGL suitesparse boost eigen libGLU catkin ];
-  nativeBuildInputs = [ suitesparse cmake boost eigen libGLU libGL ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The libg2o library from http://openslam.org/g2o.html'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "1325a90b8357006a4558333457a3abf62096b18e0cacce3cb1ce68996f0ee0f9";
   };
 
+  buildInputs = [ gazebo-ros tf roscpp ];
   checkInputs = [ rostest rospy ];
   propagatedBuildInputs = [ gazebo-ros gazebo-ros-pkgs rviz robot-state-publisher tf roscpp ];
-  nativeBuildInputs = [ gazebo-ros catkin tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo model plugin to simulate Audibot'';

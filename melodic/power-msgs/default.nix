@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "97f1dcb8217d6baa4939f53e64b59498cc550a26c3ed03f13249041f78ff120b";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for power measurement and breaker control.'';

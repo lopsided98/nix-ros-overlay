@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1a0322dc068da4153612ec54bc60c3d5603217eb160da8c1632fa01c9578eeff";
   };
 
+  buildInputs = [ people-msgs bfl std-msgs sensor-msgs tf message-filters geometry-msgs roscpp ];
   propagatedBuildInputs = [ people-msgs bfl std-msgs sensor-msgs tf message-filters geometry-msgs roscpp ];
-  nativeBuildInputs = [ people-msgs sensor-msgs catkin message-filters roscpp bfl std-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A collection of filtering tools for tracking people's locations'';

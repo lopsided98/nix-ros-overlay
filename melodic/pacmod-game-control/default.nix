@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "279a95661041ef6f88cf7ba26f5f61af4010fac0ca579a38eddad0088f6dcabb";
   };
 
+  buildInputs = [ pacmod-msgs std-msgs sensor-msgs joy roscpp ];
   propagatedBuildInputs = [ pacmod-msgs std-msgs sensor-msgs joy roscpp ];
-  nativeBuildInputs = [ catkin pacmod-msgs std-msgs sensor-msgs joy roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS Package for controlling the AStuff PACMod with a Joystick'';

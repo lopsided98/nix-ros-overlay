@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4466aa2fd48b25d0fa963f756b1ed3c5bb4bcba29d9dc1fc6d392d2dfe4685a5";
   };
 
+  buildInputs = [ rosconsole boost actionlib-msgs roscpp roscpp-serialization actionlib std-msgs rostime geometry-msgs calibration-msgs ];
   propagatedBuildInputs = [ rosconsole boost actionlib-msgs roscpp roscpp-serialization actionlib std-msgs rostime geometry-msgs calibration-msgs ];
-  nativeBuildInputs = [ rosconsole boost actionlib-msgs catkin roscpp roscpp-serialization actionlib std-msgs rostime geometry-msgs calibration-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Tools for calculating the intersection of interval messages coming

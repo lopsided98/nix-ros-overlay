@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8d4cb4eb59c9bbcb053aef3cd75652525a4f7276d424cc3600a4d0e443807fd2";
   };
 
+  buildInputs = [ std-srvs robot-activity roscpp roslint ];
   propagatedBuildInputs = [ std-srvs robot-activity roscpp ];
-  nativeBuildInputs = [ std-srvs robot-activity roslint catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The robot_activity_tutorials package'';

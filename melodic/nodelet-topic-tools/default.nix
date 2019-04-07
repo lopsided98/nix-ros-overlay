@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "39f55bdfb39c520b29a3c6004ca8d359a2e2ffc8da9ed254ba38c180bd035ae3";
   };
 
+  buildInputs = [ boost dynamic-reconfigure ];
   propagatedBuildInputs = [ pluginlib boost dynamic-reconfigure nodelet roscpp message-filters ];
-  nativeBuildInputs = [ catkin boost dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains common nodelet tools such as a mux, demux and throttle.'';

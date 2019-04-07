@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "617c5cf1ac30c5af9d02024bef3b9a010ff70fb3779220d77eb9e4863530c790";
   };
 
+  buildInputs = [ cmake-modules boost smclib roscpp utillinux bond ];
   propagatedBuildInputs = [ boost smclib roscpp utillinux bond ];
-  nativeBuildInputs = [ cmake-modules boost smclib catkin roscpp utillinux bond ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''C++ implementation of bond, a mechanism for checking when

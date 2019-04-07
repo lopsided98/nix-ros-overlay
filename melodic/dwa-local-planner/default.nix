@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, base-local-planner, tf2-geometry-msgs, cmake-modules, sensor-msgs, catkin, nav-core, tf2-ros, tf2, nav-msgs, angles, dynamic-reconfigure, roscpp, eigen }:
+{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, base-local-planner, cmake-modules, tf2-geometry-msgs, sensor-msgs, nav-core, catkin, tf2-ros, tf2, nav-msgs, angles, dynamic-reconfigure, roscpp, eigen }:
 buildRosPackage {
   pname = "ros-melodic-dwa-local-planner";
   version = "1.16.2";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e142fe402484f27336add5adf42e945d56d2495c629181704c8f2263757c0310";
   };
 
+  buildInputs = [ costmap-2d cmake-modules pluginlib tf2-geometry-msgs base-local-planner sensor-msgs nav-core tf2-ros tf2 nav-msgs dynamic-reconfigure angles roscpp eigen ];
   propagatedBuildInputs = [ costmap-2d pluginlib tf2-geometry-msgs base-local-planner sensor-msgs nav-core tf2-ros tf2 nav-msgs dynamic-reconfigure roscpp eigen ];
-  nativeBuildInputs = [ costmap-2d cmake-modules pluginlib tf2-geometry-msgs base-local-planner sensor-msgs nav-core catkin tf2-ros tf2 nav-msgs dynamic-reconfigure angles roscpp eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides an implementation of the Dynamic Window Approach to

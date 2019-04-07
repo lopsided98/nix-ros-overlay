@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6fb5e71fbb5ab94c72316c1d653a760b4dc068026bdbb954991eed26229ef74f";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-generation ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for rosmon, the node launcher and monitor for ROS.

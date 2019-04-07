@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "106139809be8e491881b20b8510ca74eb2b73109bef94c30f1c58be452e2e4cd";
   };
 
+  buildInputs = [ costmap-2d pluginlib angles people-msgs dynamic-reconfigure roscpp geometry-msgs ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ costmap-2d pluginlib angles people-msgs dynamic-reconfigure roscpp geometry-msgs ];
-  nativeBuildInputs = [ costmap-2d catkin pluginlib angles people-msgs dynamic-reconfigure roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Plugin-based layers for the navigation stack that

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "01274911d72afb49bda01ff79f7c15aec55668bc0d29342f70d3ea3be5faaa8a";
   };
 
+  buildInputs = [ franka-description ];
   propagatedBuildInputs = [ moveit-fake-controller-manager franka-description moveit-ros-move-group moveit-ros-visualization moveit-kinematics robot-state-publisher topic-tools joint-state-publisher xacro moveit-planners-ompl ];
-  nativeBuildInputs = [ catkin franka-description ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the panda with the MoveIt! Motion Planning Framework'';

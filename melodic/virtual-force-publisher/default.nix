@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "12b7dd32a18a6b444d59d0dacd15781a6ea157a23924c04dc1aa7ca176de8a20";
   };
 
+  buildInputs = [ urdf kdl-parser tf-conversions sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ urdf kdl-parser tf-conversions sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ urdf kdl-parser tf-conversions sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''publish end effector's force, which is estmated from joint torque value'';

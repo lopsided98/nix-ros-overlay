@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7029b7cebfd39f6ff41fe8988b972ec265072336cad162905116689fea92e59a";
   };
 
+  buildInputs = [ euslisp ];
   propagatedBuildInputs = [ euslisp ];
-  nativeBuildInputs = [ catkin euslisp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''EusLisp software developed and used by JSK at The University of Tokyo'';

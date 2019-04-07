@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d34dac272c3aa77d62056445748c784c6a9acf8f4fc69945d6dd05be8dcc7815";
   };
 
+  buildInputs = [ ecl-license ecl-type-traits ecl-config ];
   propagatedBuildInputs = [ ecl-license ecl-type-traits ecl-config ];
-  nativeBuildInputs = [ ecl-license catkin ecl-type-traits ecl-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Introduces a compile time concept checking mechanism that can be used

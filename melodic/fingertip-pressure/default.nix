@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b4ed5a369a34c342f410d4fbfb050d286cb4ff8db96482684e0e6354c66e5ac5";
   };
 
+  buildInputs = [ std-msgs rostest message-generation geometry-msgs ];
   propagatedBuildInputs = [ message-runtime rospy std-msgs pr2-msgs visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ rostest message-generation std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides access to the PR2 fingertip pressure sensors. This information includes:'';

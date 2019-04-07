@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e57ee6c62599e33b6690b2bb2869d82769cc69b24194955243562baa00f6f38b";
   };
 
+  buildInputs = [ boost ];
   propagatedBuildInputs = [ boost ];
-  nativeBuildInputs = [ catkin boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''swri_serial_util'';

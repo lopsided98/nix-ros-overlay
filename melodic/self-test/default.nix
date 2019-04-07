@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cf23d9e067a2cf40f2264386a257c0059656e83854509ad42c00b4c037a4d5a8";
   };
 
+  buildInputs = [ diagnostic-msgs rostest roscpp diagnostic-updater ];
   propagatedBuildInputs = [ diagnostic-msgs roscpp diagnostic-updater ];
-  nativeBuildInputs = [ diagnostic-updater rostest diagnostic-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''self_test'';

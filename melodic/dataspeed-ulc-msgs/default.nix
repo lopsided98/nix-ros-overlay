@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4547e16e8182c95fab5e2b34575f8eccef5d687496e0d20f7b2dc937f8632411";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for interacting with the Universal Lat/Lon Controller (ULC)'';

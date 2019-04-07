@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b7b44054b32cbdfbf30134b7af3c8c9d1ec0763872d7e230c9a7eaac0f1a317d";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for proprietary (non-NMEA) sentences from Novatel GPS receivers.'';

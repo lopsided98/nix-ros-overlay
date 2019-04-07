@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "68d46a359b8eec02f2ee60c6997f9bf3399925e9f93c453839a07125ce8f959f";
   };
 
+  buildInputs = [ uuid-msgs message-generation std-msgs geometry-msgs ];
   propagatedBuildInputs = [ std-msgs uuid-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ uuid-msgs message-generation std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for Geographic Information Systems.'';

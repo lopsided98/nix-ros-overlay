@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c35584b4ef0c7fed1e90a35bfeb17ad63ec36a9a86ba1aaf74547cdcbd1cea37";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   checkInputs = [ std-srvs rosunit ];
   propagatedBuildInputs = [ std-msgs roslib message-runtime rospy ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Converts between Python dictionaries and JSON to rospy messages.'';

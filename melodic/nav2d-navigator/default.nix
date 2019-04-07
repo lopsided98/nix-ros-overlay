@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d2f314f6da94486aaa5a19d27aa7c1a598950b95287b37a494359ba2911881aa";
   };
 
+  buildInputs = [ std-srvs pluginlib actionlib-msgs nav2d-operator nav2d-msgs roscpp message-generation actionlib tf geometry-msgs ];
   propagatedBuildInputs = [ std-srvs pluginlib actionlib-msgs nav2d-operator nav2d-msgs roscpp message-runtime actionlib tf geometry-msgs ];
-  nativeBuildInputs = [ std-srvs pluginlib actionlib-msgs nav2d-operator nav2d-msgs catkin roscpp message-generation actionlib tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a node for higher level navigation of a mobile

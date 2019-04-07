@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e41cdee101ab35c2963fc8e080294f597646006e246cae31242898b1b69e4eb9";
   };
 
+  buildInputs = [ ecl-license ecl-config ];
   propagatedBuildInputs = [ ecl-license ecl-config ];
-  nativeBuildInputs = [ ecl-license catkin ecl-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This library provides lean and mean error mechanisms. 

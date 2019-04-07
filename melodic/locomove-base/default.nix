@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "f8eb11d52a5e4b23ba8563021f1273b28f5be9f690335ab490ae50ca34f23b30";
   };
 
+  buildInputs = [ move-base-msgs nav-2d-utils nav-core-adapter locomotor nav-core ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ move-base-msgs nav-2d-utils nav-core-adapter locomotor nav-core ];
-  nativeBuildInputs = [ move-base-msgs nav-2d-utils nav-core-adapter locomotor nav-core catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Extension of locomotor that implements move_base's functionality.'';

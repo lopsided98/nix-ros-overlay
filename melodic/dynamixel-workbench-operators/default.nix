@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3b6f638d34a57d08365ca8029049067af23b0c8cbd185762ff4c2a65e07207f6";
   };
 
+  buildInputs = [ std-srvs cmake-modules libyamlcpp trajectory-msgs sensor-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ std-srvs cmake-modules libyamlcpp trajectory-msgs sensor-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ std-srvs catkin cmake-modules libyamlcpp trajectory-msgs sensor-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains nodes that control the Dynamixel by communicating with the server registered in the 'dynamixel_workbench_controllers' package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "850380ab0564923c37a6ee93227fe934647a1c4e5dfb4c5d2502f156b6b17d3f";
   };
 
+  buildInputs = [ rostest roslib rosconsole pluginlib roscpp ];
   propagatedBuildInputs = [ rosconsole roslib pluginlib roscpp ];
-  nativeBuildInputs = [ rostest roslib rosconsole pluginlib catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This library provides a standardized interface for processing data as a sequence 

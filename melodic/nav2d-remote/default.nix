@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "91aa99978a86691724e4b4079baa5825b7f19ec127b1ca8d349af55c22cd64fa";
   };
 
+  buildInputs = [ sensor-msgs nav2d-navigator roscpp nav2d-operator ];
   propagatedBuildInputs = [ sensor-msgs nav2d-navigator roscpp nav2d-operator ];
-  nativeBuildInputs = [ nav2d-navigator catkin nav2d-operator sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is used to manually control a robot that uses the operator and

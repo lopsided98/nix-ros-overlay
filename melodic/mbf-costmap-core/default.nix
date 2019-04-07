@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "99c4b3f406d65d71f039477cd8f153e4514c064ef30fcba5e10e582cc3b15d66";
   };
 
+  buildInputs = [ mbf-utility costmap-2d mbf-abstract-core std-msgs nav-core tf geometry-msgs ];
   propagatedBuildInputs = [ mbf-utility costmap-2d mbf-abstract-core std-msgs nav-core tf geometry-msgs ];
-  nativeBuildInputs = [ mbf-utility costmap-2d mbf-abstract-core catkin std-msgs nav-core tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides common interfaces for navigation specific robot actions. It contains the CostmapPlanner, CostmapController and CostmapRecovery interfaces. The interfaces have to be implemented by the plugins to make them available for Move Base Flex using the mbf_costmap_nav navigation implementation. That implementation inherits the mbf_abstract_nav implementation and binds the system to a local and a global costmap.'';

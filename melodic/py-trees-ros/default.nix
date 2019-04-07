@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "1bc3f54d395458994329b16c3e3abff63702270a44e1443c5cafafe85a7362ac";
   };
 
+  buildInputs = [ pythonPackages.setuptools ];
   checkInputs = [ rostest python-qt-binding rosunit geometry-msgs py-trees ];
   propagatedBuildInputs = [ unique-id actionlib-msgs pythonPackages.termcolor pythonPackages.rospkg rosbag sensor-msgs py-trees-msgs rospy uuid-msgs move-base-msgs nav-msgs actionlib dynamic-reconfigure std-msgs geometry-msgs py-trees ];
-  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Ros extensions and behaviours for py_trees.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cd37b6d275b0d1afa0755a76162c63914f46c02465318338481db82341e0fba9";
   };
 
+  buildInputs = [ grid-map-core pcl-ros ];
   propagatedBuildInputs = [ grid-map-core pcl-ros ];
-  nativeBuildInputs = [ grid-map-core catkin pcl-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Conversions between grid maps and Point Cloud Library (PCL) types.'';

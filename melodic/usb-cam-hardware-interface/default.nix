@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "27863a2c68f5c59653e0625b1aafd1edb8f12f90c4439176db8a325a26f79b61";
   };
 
+  buildInputs = [ hardware-interface roscpp ];
   propagatedBuildInputs = [ hardware-interface roscpp ];
-  nativeBuildInputs = [ hardware-interface catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The usb_cam_hardware_interface package'';

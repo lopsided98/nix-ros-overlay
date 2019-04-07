@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f6e3f4d552bb5e39c857b79e0c53233791f44ec01cbc768a507fb434f67d4492";
   };
 
+  buildInputs = [ roscpp rospy ];
   propagatedBuildInputs = [ roscpp rospy ];
-  nativeBuildInputs = [ catkin roscpp rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is wrapping version of ROBOTIS Dynamxel SDK for ROS. The ROBOTIS Dynamixel SDK, or SDK, is a software development library that provides Dynamixel control functions for packet communication. The API is designed for Dynamixel actuators and Dynamixel-based platforms.'';

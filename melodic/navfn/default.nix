@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, rosconsole, pluginlib, cmake-modules, nav-core, catkin, sensor-msgs, tf2-ros, roscpp, nav-msgs, message-generation, message-runtime, visualization-msgs, netpbm, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, costmap-2d, rosconsole, pluginlib, cmake-modules, sensor-msgs, catkin, nav-core, tf2-ros, roscpp, nav-msgs, message-generation, message-runtime, visualization-msgs, netpbm, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-navfn";
   version = "1.16.2";
@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "d4795ca8a10f1cb8d8ff7a2949637be11bb6e14ca0d2878731cdd82d20acb271";
   };
 
+  buildInputs = [ costmap-2d rosconsole pluginlib cmake-modules sensor-msgs nav-core tf2-ros roscpp nav-msgs message-generation visualization-msgs netpbm geometry-msgs ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ costmap-2d rosconsole pluginlib nav-core sensor-msgs roscpp tf2-ros nav-msgs message-runtime visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ costmap-2d rosconsole pluginlib cmake-modules sensor-msgs nav-core catkin tf2-ros roscpp nav-msgs message-generation visualization-msgs netpbm geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''navfn provides a fast interpolated navigation function that can be used to create plans for

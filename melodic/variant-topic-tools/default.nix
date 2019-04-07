@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1ae4620ffffc3b0a3aa6b54e148f6bf58f06ca520131aa72d07bc8c0732445eb";
   };
 
+  buildInputs = [ variant-msgs roslib roscpp ];
   propagatedBuildInputs = [ variant-msgs roslib roscpp ];
-  nativeBuildInputs = [ variant-msgs catkin roslib roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Topic tools for treating messages as variant types.'';

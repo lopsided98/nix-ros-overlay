@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3a791764a80f3b660e57428d8274ecf2b13fefbb7959080aa035f7f8d16a0b35";
   };
 
+  buildInputs = [ rostest rosboost-cfg std-msgs mk rosbuild roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp ];
-  nativeBuildInputs = [ rostest rosboost-cfg std-msgs mk catkin rosbuild roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosping is the tool to send ICMP ECHO_REQUEST to network hosts where roscore is running, and send back to you as rostopic message. <br/>

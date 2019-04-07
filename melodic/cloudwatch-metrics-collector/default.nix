@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "85f807efb7f6dfc6cca35eed12ee12e4bc864e618221903eddab3c28920721cf";
   };
 
+  buildInputs = [ aws-common cloudwatch-metrics-common aws-ros1-common ros-monitoring-msgs roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ aws-ros1-common ros-monitoring-msgs roscpp cloudwatch-metrics-common ];
-  nativeBuildInputs = [ aws-common cloudwatch-metrics-common aws-ros1-common catkin ros-monitoring-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Subscriber node for the aws/monitoring topic to publish metrics to AWS Cloudwatch'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bfbd02aa5ca164b4ba558a53dd7ddeff44e81b7682c9ea21c08f4f3aa9333152";
   };
 
+  buildInputs = [ libusb1 libphidget21 ];
   propagatedBuildInputs = [ libphidget21 libusb ];
-  nativeBuildInputs = [ libusb1 catkin libphidget21 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A C++ Wrapper for the Phidgets C API'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7f1ae8931ebeb64b13cf0b1976fb269a63257de51d8de79c6cebbd716a307661";
   };
 
+  buildInputs = [ tf2-ros pcl-ros std-msgs rospy angles roscpp nodelet tf pcl-conversions pluginlib libpcap pcl sensor-msgs diagnostic-updater rostest rslidar-msgs message-generation dynamic-reconfigure roslaunch roslib ];
   propagatedBuildInputs = [ pluginlib pcl sensor-msgs roscpp rospy diagnostic-updater roslib rslidar-msgs message-runtime nodelet pcl-ros std-msgs angles dynamic-reconfigure tf pcl-conversions ];
-  nativeBuildInputs = [ catkin tf2-ros pcl-ros std-msgs rospy angles roscpp nodelet tf pcl-conversions pluginlib libpcap pcl sensor-msgs diagnostic-updater rostest rslidar-msgs message-generation dynamic-reconfigure roslaunch roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''segmentation'';

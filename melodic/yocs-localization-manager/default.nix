@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, ar-track-alvar, catkin, yocs-msgs, ar-track-alvar-msgs, actionlib, rospy, std-msgs, dynamic-reconfigure, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, roslint, ar-track-alvar, catkin, yocs-msgs, ar-track-alvar-msgs, std-msgs, actionlib, rospy, dynamic-reconfigure, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-yocs-localization-manager";
   version = "0.8.2";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "eb2e39a17f8f78cbe98c04b73a63d666fb5937156490539ae49ad1e94b607a49";
   };
 
+  buildInputs = [ roslint ];
   propagatedBuildInputs = [ ar-track-alvar yocs-msgs ar-track-alvar-msgs rospy actionlib std-msgs dynamic-reconfigure tf geometry-msgs ];
-  nativeBuildInputs = [ catkin roslint ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Localization Manager helps to localize robot's position with annotated information'';

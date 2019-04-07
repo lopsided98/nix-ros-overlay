@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5d865c30cd327b025024612b430e223e073cc182a7d8cb5c46b2612348982bbf";
   };
 
+  buildInputs = [ protobuf curl ];
   propagatedBuildInputs = [ protobuf catkin curl ];
-  nativeBuildInputs = [ protobuf cmake curl ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The rc_dynamics_api provides an API for easy handling of the dynamic-state data

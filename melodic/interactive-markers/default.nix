@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "600001c06acb4e88fe5c9f512476d50b41a795356643bb02e528748b158b81f8";
   };
 
+  buildInputs = [ rostest rosconsole visualization-msgs rospy std-msgs tf roscpp ];
   propagatedBuildInputs = [ rostest rosconsole visualization-msgs rospy std-msgs tf roscpp ];
-  nativeBuildInputs = [ rostest rosconsole visualization-msgs rospy std-msgs catkin tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''3D interactive marker communication library for RViz and similar tools.'';

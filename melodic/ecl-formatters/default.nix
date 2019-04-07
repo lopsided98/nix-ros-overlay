@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a7f04f361b91c1ef60014240ddc7aacb2a54d37385d89b0163607bc0b536929f";
   };
 
+  buildInputs = [ ecl-exceptions ecl-converters ecl-license ecl-config ];
   propagatedBuildInputs = [ ecl-exceptions ecl-converters ecl-license ecl-config ];
-  nativeBuildInputs = [ ecl-exceptions ecl-converters ecl-license catkin ecl-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The formatters here simply format various input types to a specified

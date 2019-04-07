@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a9c5c55ee30becfd534ae7acfff19329236e4425da972dbdd2ba143480cf642f";
   };
 
+  buildInputs = [ tf sensor-msgs nav-msgs mrpt-msgs mrpt1 dynamic-reconfigure std-msgs mrpt-bridge roscpp pose-cov-ops ];
   propagatedBuildInputs = [ tf sensor-msgs nav-msgs mrpt-msgs mrpt1 dynamic-reconfigure std-msgs mrpt-bridge roscpp pose-cov-ops ];
-  nativeBuildInputs = [ tf sensor-msgs catkin nav-msgs mrpt-msgs mrpt1 dynamic-reconfigure std-msgs mrpt-bridge roscpp pose-cov-ops ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for robot 2D self-localization using dynamic or static (MRPT or ROS) maps.

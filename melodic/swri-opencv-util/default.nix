@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1300a00f92191a4558880a4849e8daff33a53e12e1c10c43e6782bb99bf5eeef";
   };
 
+  buildInputs = [ swri-math-util cv-bridge ];
   propagatedBuildInputs = [ swri-math-util cv-bridge ];
-  nativeBuildInputs = [ swri-math-util catkin cv-bridge ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''swri_opencv_util'';

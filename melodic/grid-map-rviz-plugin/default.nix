@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b08f8ea81daf464016e80cbe342b8d320237d799ac4529923a0068f43dfeac0d";
   };
 
+  buildInputs = [ grid-map-msgs grid-map-ros rviz qt5.qtbase ];
   propagatedBuildInputs = [ grid-map-ros rviz grid-map-msgs qt5.qtbase ];
-  nativeBuildInputs = [ grid-map-ros rviz grid-map-msgs catkin qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''RViz plugin for displaying grid map messages.'';

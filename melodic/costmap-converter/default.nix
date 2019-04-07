@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "350d4ffc88daa687ea48b4fb8b04889a95b9213f2f5ef676e49ceba9120fc8c7";
   };
 
+  buildInputs = [ costmap-2d message-generation pluginlib dynamic-reconfigure std-msgs geometry-msgs cv-bridge roscpp ];
   propagatedBuildInputs = [ costmap-2d cv-bridge pluginlib message-runtime dynamic-reconfigure std-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ costmap-2d pluginlib cv-bridge catkin message-generation dynamic-reconfigure std-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ros package that includes plugins and nodes to convert occupied costmap2d cells to primitive types.'';

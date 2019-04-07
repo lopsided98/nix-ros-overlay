@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5ab127fe3a3ff9c1eb767058c423d2e7625925a482c808ddf35047daaa4852be";
   };
 
+  buildInputs = [ nav-msgs rospy std-msgs sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ nav-msgs rospy std-msgs sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ nav-msgs rospy std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for turtlebot3 automatic_parking. You need a reflective tape and real robots. You can see parking spot using this pacakge on rviz.'';

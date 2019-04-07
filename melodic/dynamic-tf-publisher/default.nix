@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a6f34176461073a9a15126d6c6948988f94fc3de6d9698a9c94d7784e941a914";
   };
 
+  buildInputs = [ message-generation rospy dynamic-reconfigure tf geometry-msgs ];
   propagatedBuildInputs = [ tf message-runtime geometry-msgs rospy ];
-  nativeBuildInputs = [ message-generation catkin rospy dynamic-reconfigure tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''dynamically set the tf trensformation'';

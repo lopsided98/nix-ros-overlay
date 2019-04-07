@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7c4c61c15768d1cd276cdaaf9a9f5e3088f478383789ffec9fdee325dafc0990";
   };
 
+  buildInputs = [ cppunit ros ];
   propagatedBuildInputs = [ cppunit catkin ros ];
-  nativeBuildInputs = [ cmake cppunit ros ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''This package contains a recent version of the Bayesian Filtering

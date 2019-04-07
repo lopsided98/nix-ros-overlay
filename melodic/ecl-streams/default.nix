@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0fd7c5407bc67d28e90e8bb3cee3850ab90ee195b74703949c991cfc0a5836c3";
   };
 
+  buildInputs = [ ecl-converters ecl-license ecl-errors ecl-type-traits ecl-devices ecl-concepts ecl-time ];
   propagatedBuildInputs = [ ecl-converters ecl-license ecl-errors ecl-type-traits ecl-devices ecl-concepts ecl-time ];
-  nativeBuildInputs = [ ecl-converters ecl-license ecl-errors ecl-type-traits ecl-devices catkin ecl-concepts ecl-time ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''These are lightweight text streaming classes that connect to standardised

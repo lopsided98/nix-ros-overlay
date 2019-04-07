@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a758de5b3c03eb824046bbc33e13759b0c233f87583b39f73b6689ba717a3846";
   };
 
+  buildInputs = [ mrpt-bridge tf sensor-msgs roscpp nav-msgs mrpt1 visualization-msgs dynamic-reconfigure std-msgs roslaunch roslib ];
   propagatedBuildInputs = [ mrpt-bridge tf sensor-msgs mrpt-rawlog roscpp roslib nav-msgs rviz mrpt1 dynamic-reconfigure std-msgs roslaunch visualization-msgs ];
-  nativeBuildInputs = [ mrpt-bridge tf sensor-msgs catkin roscpp nav-msgs mrpt1 visualization-msgs dynamic-reconfigure std-msgs roslaunch roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''mrpt_icp_slam_2d contains a wrapper on MRPT's 2D ICP-SLAM algorithms.'';

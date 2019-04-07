@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "82520ea279a265a4015699da6af28432d11f37ea05b9c742774c83a989fa1294";
   };
 
+  buildInputs = [ multisense-description multisense-ros ];
   propagatedBuildInputs = [ multisense-description multisense-ros ];
-  nativeBuildInputs = [ multisense-description multisense-ros catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''multisense_bringup'';

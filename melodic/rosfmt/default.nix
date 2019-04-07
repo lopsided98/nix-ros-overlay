@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e1ad333968f25d127063d05379f33345f56fa5fa9d195f24c69d9139b9013770";
   };
 
+  buildInputs = [ roscpp rosconsole ];
   propagatedBuildInputs = [ roscpp rosconsole ];
-  nativeBuildInputs = [ catkin roscpp rosconsole ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''fmt is an open-source formatting library for C++.

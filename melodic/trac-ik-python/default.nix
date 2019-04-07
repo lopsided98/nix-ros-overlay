@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d61541a1eb22c8c6af749e058557fdbd0259fe89d4045230871a54b60666a5e1";
   };
 
+  buildInputs = [ swig trac-ik-lib tf-conversions rospy ];
   propagatedBuildInputs = [ swig trac-ik-lib rospy tf-conversions tf ];
-  nativeBuildInputs = [ swig trac-ik-lib rospy tf-conversions catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The trac_ik_python package contains a python wrapper using SWIG

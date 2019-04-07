@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a85796618e8e9b7092aff7b93ed2c83becbf7f6ad4ba74fdd2afacdee2f800bf";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''neobotix_usboard package'';

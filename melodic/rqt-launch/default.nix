@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslaunch, rqt-gui-py, catkin, rqt-gui, rqt-console, rospy, rqt-py-common, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, rqt-gui-py, rqt-gui, catkin, rqt-py-common, rqt-console, rospy, roslaunch, python-qt-binding }:
 buildRosPackage {
   pname = "ros-melodic-rqt-launch";
   version = "0.4.8";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7aab0c6b78ad90736d40ae6b7ce54048936ef38c0f032858b65a8347b4cbccc8";
   };
 
+  buildInputs = [ rqt-py-common ];
   propagatedBuildInputs = [ roslaunch rqt-gui-py rqt-console rospy rqt-py-common rqt-gui python-qt-binding ];
-  nativeBuildInputs = [ rqt-py-common catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This rqt plugin ROS package provides easy view of .launch files.

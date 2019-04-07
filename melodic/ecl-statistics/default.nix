@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "67ed25a3f69aa9d272c6c700e2b079115fddd28ed7b0f020f1fec28061a7579b";
   };
 
+  buildInputs = [ ecl-build ecl-license ecl-type-traits ecl-linear-algebra ecl-config ecl-mpl ];
   propagatedBuildInputs = [ ecl-build ecl-license ecl-type-traits ecl-linear-algebra ecl-config ecl-mpl ];
-  nativeBuildInputs = [ ecl-build ecl-license ecl-type-traits ecl-linear-algebra catkin ecl-config ecl-mpl ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common statistical structures and algorithms for control systems.'';

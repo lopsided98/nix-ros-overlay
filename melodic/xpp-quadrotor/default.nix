@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8a3c7cbaa6def3250bf3825790f587b3626799b51dc7105917c20af6b8f5d3b4";
   };
 
+  buildInputs = [ roscpp xacro xpp-vis ];
   propagatedBuildInputs = [ roscpp xacro xpp-vis ];
-  nativeBuildInputs = [ catkin roscpp xacro xpp-vis ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The URDF file for a quadrotor to be used with the xpp packages and a 

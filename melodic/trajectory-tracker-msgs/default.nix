@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c6c75c98fa9489ae279b8e4f5b88e7f34a23c3ca66b9543851858a140f56778e";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   checkInputs = [ rosunit nav-msgs roslint roscpp ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definitions for trajectory_tracker package'';

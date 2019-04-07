@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "aa01563f804f8c52c6403b872b0a321abd916083757aebf25ac9530c7798830a";
   };
 
+  buildInputs = [ eigen ];
   checkInputs = [ cppunit ];
   propagatedBuildInputs = [ catkin pkg-config eigen ];
-  nativeBuildInputs = [ cmake eigen ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''This package contains a recent version of the Kinematics and Dynamics

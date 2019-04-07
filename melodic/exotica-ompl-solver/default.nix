@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "07851ceb7d6c1cae605a7ba07157219995fcb3e1358f65c62daf96e73012ff26";
   };
 
+  buildInputs = [ exotica-python exotica-core ompl ];
   propagatedBuildInputs = [ exotica-python exotica-core ompl ];
-  nativeBuildInputs = [ exotica-python exotica-core catkin ompl ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Exotica solvers based on the Open Motion Planning Libary (OMPL)'';

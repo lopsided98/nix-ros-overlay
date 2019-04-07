@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "58ea5472112e231d213667c8977c5910de7398b71471b12a8a9e55dab48defd2";
   };
 
+  buildInputs = [ image-geometry marker-msgs cv-bridge dynamic-reconfigure std-msgs tf roscpp rospy ];
   propagatedBuildInputs = [ image-geometry marker-msgs cv-bridge dynamic-reconfigure std-msgs tf roscpp rospy ];
-  nativeBuildInputs = [ marker-msgs cv-bridge catkin roscpp image-geometry rospy dynamic-reconfigure std-msgs tf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This node does pose estimation for detected fiducials (marker_msgs/FiducialDetection.msg)'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "cd8f245340ae00e0138b66eebbe75fb95da8a60bfbe05b329d20160f098a858f";
   };
 
+  buildInputs = [ fetch-description ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-python moveit-kinematics rospy moveit-simple-controller-manager robot-state-publisher fetch-ikfast-plugin fetch-description joint-state-publisher xacro moveit-planners-ompl ];
-  nativeBuildInputs = [ fetch-description catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the fetch_urdf with the MoveIt Motion Planning Framework'';

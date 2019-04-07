@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "90eea30842973033f2e20449457a89b871d1a66249113b2a423da84f45b4ff0a";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for publishing graphs of different data types'';

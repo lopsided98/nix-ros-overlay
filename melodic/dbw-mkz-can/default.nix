@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "912edcf6f79ab86b6040b97bab30c9804b42d7694b41d4c58f2e300df70600e4";
   };
 
+  buildInputs = [ dbw-mkz-msgs sensor-msgs can-msgs dataspeed-can-msg-filters nodelet rospy std-msgs roscpp geometry-msgs ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ dbw-mkz-msgs sensor-msgs can-msgs dbw-mkz-description roscpp dataspeed-can-usb dataspeed-ulc-can rospy std-msgs roslaunch nodelet geometry-msgs ];
-  nativeBuildInputs = [ dbw-mkz-msgs sensor-msgs can-msgs catkin dataspeed-can-msg-filters nodelet rospy std-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Drive-by-wire interface to the Dataspeed Inc. Lincoln MKZ DBW kit'';

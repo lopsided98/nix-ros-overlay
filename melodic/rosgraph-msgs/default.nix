@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5aa9e1b1adbf5e86931e771b1a154384485803a73e50804e0c739f83767270c9";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages relating to the ROS Computation Graph. These are generally considered to be low-level messages that end users do not interact with.'';

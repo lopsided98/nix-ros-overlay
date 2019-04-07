@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "eec87e068f5106c1835fb093d5995ca8c6972e3a5e127038d94c68701ad2029e";
   };
 
+  buildInputs = [ kdl-conversions orocos-kdl eigen tf geometry-msgs ];
   propagatedBuildInputs = [ kdl-conversions orocos-kdl eigen python-orocos-kdl tf geometry-msgs ];
-  nativeBuildInputs = [ kdl-conversions orocos-kdl eigen catkin tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a set of conversion functions to convert

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-converters, ecl-sigslots, ecl-command-line, ecl-mobile-robot, catkin, ecl-geometry, ecl-time, ecl-build, ecl-devices }:
+{ lib, buildRosPackage, fetchurl, ecl-converters, ecl-sigslots, ecl-command-line, ecl-mobile-robot, catkin, ecl-geometry, ecl-build, ecl-time, ecl-devices }:
 buildRosPackage {
   pname = "ros-melodic-kobuki-driver";
   version = "0.7.8";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7cfcc4b9309c4a352fa54c9a6cb0fb0b53a5da43a0243aa13556670ec97bd34e";
   };
 
+  buildInputs = [ ecl-converters ecl-build ecl-sigslots ecl-mobile-robot ecl-command-line ecl-devices ecl-geometry ecl-time ];
   propagatedBuildInputs = [ ecl-converters ecl-sigslots ecl-mobile-robot ecl-command-line ecl-devices ecl-geometry ecl-time ];
-  nativeBuildInputs = [ ecl-converters ecl-sigslots ecl-mobile-robot ecl-command-line catkin ecl-geometry ecl-build ecl-time ecl-devices ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''C++ driver library for Kobuki:

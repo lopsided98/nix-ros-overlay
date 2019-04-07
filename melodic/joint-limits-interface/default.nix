@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c79c7fa6eaa2ccb35ed79b7dc6b125db16a98d298085a1fb1a2ed530e9817a64";
   };
 
+  buildInputs = [ hardware-interface roscpp urdf urdfdom ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ hardware-interface roscpp urdf urdfdom ];
-  nativeBuildInputs = [ hardware-interface urdf catkin roscpp urdfdom ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interface for enforcing joint limits.'';

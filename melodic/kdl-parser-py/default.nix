@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "66da27c1d53a445cc5334768a54a2f792df8c46475fe24a91ff486675082c86a";
   };
 
+  buildInputs = [ urdf orocos-kdl ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ python-orocos-kdl urdf orocos-kdl urdfdom-py ];
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin urdf orocos-kdl ];
+  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
 
   meta = {
     description = ''The Kinematics and Dynamics Library (KDL) defines a tree structure

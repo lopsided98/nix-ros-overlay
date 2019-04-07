@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2a421d7ea4d04ba27c7221abd753f1ebbe040227df1e4c87a3df559064002c17";
   };
 
+  buildInputs = [ roscpp pluginlib ];
   propagatedBuildInputs = [ roscpp pluginlib ];
-  nativeBuildInputs = [ catkin roscpp pluginlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pluginlib_tutorials package'';

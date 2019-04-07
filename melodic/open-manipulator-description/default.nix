@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f44f4bb8965b79fffdf4906f742e4fccd178a55c8ee11e3abacc24828e5ae9c5";
   };
 
+  buildInputs = [ urdf joint-state-publisher xacro robot-state-publisher ];
   propagatedBuildInputs = [ urdf joint-state-publisher xacro robot-state-publisher ];
-  nativeBuildInputs = [ urdf robot-state-publisher catkin joint-state-publisher xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''OpenManipulator 3D model description for visualization and simulation'';

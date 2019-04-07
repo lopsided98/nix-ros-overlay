@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, cpp-common, catkin, roscpp, rostest, message-generation, message-runtime, xmlrpcpp, std-msgs, rostime, rosunit }:
+{ lib, buildRosPackage, fetchurl, rosconsole, cpp-common, catkin, rostime, rostest, message-generation, message-runtime, xmlrpcpp, std-msgs, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-topic-tools";
   version = "1.14.3";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "11737ac9aee93efcde7615891fd0342a8151e09b03435b1a173ddedef6c91f18";
   };
 
+  buildInputs = [ rosconsole cpp-common roscpp rostest message-generation xmlrpcpp std-msgs rostime rosunit ];
   propagatedBuildInputs = [ rosconsole xmlrpcpp message-runtime std-msgs rostime roscpp ];
-  nativeBuildInputs = [ rosconsole cpp-common catkin roscpp rostest message-generation xmlrpcpp std-msgs rostime rosunit ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Tools for directing, throttling, selecting, and otherwise messing with

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp-traits, catkin, cpp-common, rostime }:
+{ lib, buildRosPackage, fetchurl, roscpp-traits, rostime, cpp-common, catkin }:
 buildRosPackage {
   pname = "ros-melodic-roscpp-serialization";
   version = "0.6.12";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ba4ea435dc1d1680f6242b142f06376785ca3abeed71862c23bd6dd0220833e5";
   };
 
+  buildInputs = [ roscpp-traits rostime cpp-common ];
   propagatedBuildInputs = [ roscpp-traits rostime cpp-common ];
-  nativeBuildInputs = [ roscpp-traits rostime cpp-common catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''roscpp_serialization contains the code for serialization as described in

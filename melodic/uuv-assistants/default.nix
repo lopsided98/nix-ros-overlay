@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a1fca8150c90ca1a8b4c3960e38ee39acfbb5d99b4689d8cc6dd1b29d6804c7d";
   };
 
+  buildInputs = [ nav-msgs topic-tools sensor-msgs roscpp geometry-msgs tf ];
   propagatedBuildInputs = [ pythonPackages.numpy geometry-msgs sensor-msgs roscpp nav-msgs rosgraph rostopic visualization-msgs rospy topic-tools tf gazebo-msgs ];
-  nativeBuildInputs = [ nav-msgs catkin topic-tools sensor-msgs roscpp geometry-msgs tf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Tools and utilities to monitor and analyze the simulation'';

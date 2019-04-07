@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6a3221be450c74fed270dcff5e3399e8e5650169b2bdf36ecf588a9602d95a2c";
   };
 
+  buildInputs = [ roscpp gazebo-plugins ];
   propagatedBuildInputs = [ gazeboSimulator.gazebo roscpp gazebo-plugins ];
-  nativeBuildInputs = [ catkin roscpp gazebo-plugins ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_gazebo_thermal_camera provides a gazebo plugin that produces simulated thermal camera images. The plugin uses modified code from the gazebo_ros_camera plugin.'';

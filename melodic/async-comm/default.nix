@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9a87d3e8db68cf7c7fc3c318f1d31d6660dd5ca39172d0f78efdf6330de49bcc";
   };
 
+  buildInputs = [ boost ];
   propagatedBuildInputs = [ catkin boost ];
-  nativeBuildInputs = [ cmake boost ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''A C++ library for asynchronous serial communication'';

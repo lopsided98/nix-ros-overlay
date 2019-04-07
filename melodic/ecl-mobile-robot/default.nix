@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b90849f51b703d6d5c3b246161ad8679bf14b8a27865ae175e9c945fe9edf31e";
   };
 
+  buildInputs = [ ecl-license ecl-formatters ecl-errors ecl-math ecl-linear-algebra ecl-geometry ecl-build ];
   propagatedBuildInputs = [ ecl-license ecl-formatters ecl-errors ecl-math ecl-linear-algebra ecl-geometry ecl-build ];
-  nativeBuildInputs = [ ecl-license ecl-formatters ecl-errors ecl-math ecl-linear-algebra catkin ecl-geometry ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Contains transforms (e.g. differential drive inverse kinematics)

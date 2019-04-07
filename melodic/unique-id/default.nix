@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "8f995d23c4bdefadf40cd213fead2b4f4be1285f536a3578823fdaa46cc9019c";
   };
 
+  buildInputs = [ uuid-msgs roscpp rospy ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ uuid-msgs roscpp rospy ];
-  nativeBuildInputs = [ uuid-msgs catkin roscpp rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS Python and C++ interfaces for universally unique identifiers.'';

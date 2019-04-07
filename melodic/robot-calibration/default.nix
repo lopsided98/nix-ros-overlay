@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bd39604970ae9dd0a27d006fac49afbf50604f89ff7d7218e4967c91d866b175";
   };
 
+  buildInputs = [ ceres-solver orocos-kdl tf2-geometry-msgs control-msgs rosbag cv-bridge tf2-ros nav-msgs actionlib std-msgs moveit-msgs protobuf roscpp tf visualization-msgs robot-calibration-msgs geometry-msgs suitesparse kdl-parser pluginlib gflags camera-calibration-parsers sensor-msgs ];
   propagatedBuildInputs = [ ceres-solver orocos-kdl tf2-geometry-msgs control-msgs rosbag cv-bridge tf2-ros nav-msgs actionlib std-msgs moveit-msgs protobuf roscpp tf visualization-msgs robot-calibration-msgs geometry-msgs suitesparse kdl-parser pluginlib camera-calibration-parsers sensor-msgs ];
-  nativeBuildInputs = [ ceres-solver orocos-kdl tf2-geometry-msgs control-msgs rosbag cv-bridge catkin tf2-ros nav-msgs actionlib std-msgs moveit-msgs protobuf roscpp tf visualization-msgs robot-calibration-msgs geometry-msgs suitesparse kdl-parser pluginlib gflags camera-calibration-parsers sensor-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Calibrate a Robot'';

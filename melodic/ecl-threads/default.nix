@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ba9d0e01c8f88af99570d7a92b88a2184521c7c4e4622a440a7ab7eea56af380";
   };
 
+  buildInputs = [ ecl-exceptions ecl-build ecl-license ecl-utilities ecl-errors ecl-concepts ecl-config ecl-time ];
   propagatedBuildInputs = [ ecl-exceptions ecl-build ecl-license ecl-utilities ecl-errors ecl-concepts ecl-config ecl-time ];
-  nativeBuildInputs = [ ecl-utilities catkin ecl-concepts ecl-build ecl-exceptions ecl-time ecl-license ecl-errors ecl-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides the c++ extensions for a variety of threaded 

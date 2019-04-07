@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "27d4fffce53dd393d4c705e38fb1f2bf9696c4a0e33081ce28db0d237994d238";
   };
 
+  buildInputs = [ rviz trajectory-tracker-msgs pluginlib qt5.qtbase ];
   propagatedBuildInputs = [ rviz trajectory-tracker-msgs pluginlib qt5.qtbase ];
-  nativeBuildInputs = [ rviz trajectory-tracker-msgs pluginlib catkin qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Rviz plugins for trajectory_tracker_msgs'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f6b39c252c011e5572aa0a1fed50b3ecdefa2abe7c96da0259fd1e578cac6541";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''speech_recognition_msgs'';

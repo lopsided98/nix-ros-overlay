@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "70cc442ffa095dd5da8b61cd98ac71d2399f5c66e2becb9509a8860c6b3f55cd";
   };
 
+  buildInputs = [ cacert cmake-modules openssl git opencv3 ];
   propagatedBuildInputs = [ opencv3 ];
-  nativeBuildInputs = [ cacert cmake-modules openssl git cmake opencv3 ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''SLIC-Superpizel ROS Wrapper

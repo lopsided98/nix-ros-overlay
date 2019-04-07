@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "6f2b565c98396653f9364c57fddafa0ca244781c27edd5b5467502fa77dafc9a";
   };
 
+  buildInputs = [ std-srvs sensor-msgs roscpp roslint ];
   checkInputs = [ rostest roslaunch ];
   propagatedBuildInputs = [ rviz-imu-plugin std-srvs rviz rqt-plot sensor-msgs roscpp imu-filter-madgwick xacro ];
-  nativeBuildInputs = [ std-srvs catkin roslint sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The adi_driver package'';

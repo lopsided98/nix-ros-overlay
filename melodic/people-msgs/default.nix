@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "37885342c0d98ce64a2bfd0f0145edc510220564fdea1284c496e28b848f36d7";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used by nodes in the people stack.'';

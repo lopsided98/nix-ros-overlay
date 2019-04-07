@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b78cf601ef185042b96bd253b246286853ed1a7d47f76c58f733f02213e64c5c";
   };
 
+  buildInputs = [ gazebo-ros controller-manager urdf xacro gazebo-ros-control ];
   propagatedBuildInputs = [ gazebo-ros controller-manager urdf xacro gazebo-ros-control ];
-  nativeBuildInputs = [ gazebo-ros controller-manager urdf catkin xacro gazebo-ros-control ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Simulation package using gazebo for OpenManipulator with TurtleBot3'';

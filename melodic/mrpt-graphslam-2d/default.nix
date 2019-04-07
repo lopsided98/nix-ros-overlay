@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1d13420731691fcb21456de1885e8e2faedfcd67596c3eb0603b7c7f24fc9946";
   };
 
+  buildInputs = [ sensor-msgs multimaster-msgs-fkie roscpp tf2 nav-msgs mrpt-msgs mrpt1 rospy std-msgs mrpt-bridge tf geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs multimaster-msgs-fkie roscpp tf2 nav-msgs mrpt-msgs mrpt1 rospy std-msgs mrpt-bridge tf geometry-msgs ];
-  nativeBuildInputs = [ sensor-msgs multimaster-msgs-fkie catkin roscpp tf2 nav-msgs mrpt-msgs mrpt1 rospy std-msgs mrpt-bridge tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Implement graphSLAM using the mrpt-graphslam library, in an online fashion

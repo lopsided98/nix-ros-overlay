@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e10632b9c182ffc09170b5fc80bf0a0f3cb8ab1091c01b44953042ba71ad5843";
   };
 
+  buildInputs = [ cmake-modules eigen ];
   propagatedBuildInputs = [ eigen ];
-  nativeBuildInputs = [ catkin cmake-modules eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a set of typedef's that allow

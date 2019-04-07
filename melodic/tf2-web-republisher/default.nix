@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "401fcc79bf11e5071e8304b1053bf8afed6f3e91d3df30c0823c87c82b741420";
   };
 
+  buildInputs = [ message-generation tf2-ros actionlib-msgs actionlib geometry-msgs tf roscpp ];
   checkInputs = [ rostest rospy ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs actionlib tf2-ros geometry-msgs tf roscpp ];
-  nativeBuildInputs = [ message-generation catkin tf2-ros actionlib-msgs actionlib geometry-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Republishing of Selected TFs'';

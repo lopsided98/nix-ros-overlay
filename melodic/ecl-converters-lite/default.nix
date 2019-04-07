@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ebd1d37b95bab3798917d592fa2fe83236f1b6a530ce43d1bf823b8730320368";
   };
 
+  buildInputs = [ ecl-license ecl-config ];
   propagatedBuildInputs = [ ecl-license ecl-config ];
-  nativeBuildInputs = [ ecl-license catkin ecl-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''These are a very simple version of some of the functions in ecl_converters 

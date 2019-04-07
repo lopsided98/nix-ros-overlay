@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, catkin, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, catkin, rospy }:
 buildRosPackage {
   pname = "ros-melodic-access-point-control";
   version = "1.0.15";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bd928fbd2ace49080fc8c8691939402be907acdf7a84259735f03e7278e5afe5";
   };
 
+  buildInputs = [ rospy dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy dynamic-reconfigure ];
-  nativeBuildInputs = [ rospy catkin dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Defines an API for access point control based on 

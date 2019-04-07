@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d6a4a9bdd86e6645bd539ec12ebcde5a87f46368643f4485561e3fae9478e951";
   };
 
+  buildInputs = [ gazebo-ros joy-teleop joy wamv-gazebo gazebo-dev geographic-msgs message-runtime std-msgs xacro ];
   propagatedBuildInputs = [ gazebo-ros joy-teleop joy wamv-gazebo gazebo-dev geographic-msgs message-runtime std-msgs xacro ];
-  nativeBuildInputs = [ gazebo-ros joy-teleop joy catkin wamv-gazebo gazebo-dev geographic-msgs message-runtime std-msgs xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ROS package for the RobotX competition running in Gazebo.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "06a553e6d043735a10fff606d5f71a20661fc9b6be392b69a06c35b8aca8d3f6";
   };
 
+  buildInputs = [ libusb1 libjpeg pkg-config ];
   propagatedBuildInputs = [ libusb1 catkin libjpeg ];
-  nativeBuildInputs = [ libusb1 cmake libjpeg pkg-config ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''USB Video Class driver library'';

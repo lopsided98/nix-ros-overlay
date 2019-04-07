@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "13796a8d318164b470a8a64961490c98240910da407b5ca63eb148d7c97c49b6";
   };
 
+  buildInputs = [ message-generation actionlib-msgs actionlib rospy diagnostic-msgs ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs actionlib diagnostic-msgs rospy ];
-  nativeBuildInputs = [ message-generation actionlib-msgs actionlib rospy diagnostic-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Facilities to monitor a network connection by sending UDP packets from

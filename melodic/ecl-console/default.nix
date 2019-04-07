@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5586ad3bb23b745e301fb78ddc22ae1125f5b0c559d93e39b9c832ca2307557b";
   };
 
+  buildInputs = [ ecl-license ecl-config ecl-build ];
   propagatedBuildInputs = [ ecl-license ecl-config ecl-build ];
-  nativeBuildInputs = [ ecl-license catkin ecl-config ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Color codes for ansii consoles.'';

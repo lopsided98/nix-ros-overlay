@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "521a28a3dcc722a2eac2208e66f7f511a2010c3fda6e0b81fe45548c3ead692a";
   };
 
+  buildInputs = [ message-generation actionlib-msgs actionlib ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs actionlib ];
-  nativeBuildInputs = [ catkin message-generation actionlib-msgs actionlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The twist_mux msgs and actions package'';

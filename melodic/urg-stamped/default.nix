@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "61fcca882388f29606ea22d0017c5e19cec9c4edb2b970816693598b38609678";
   };
 
+  buildInputs = [ sensor-msgs roscpp ];
   checkInputs = [ rostest roslint rosunit ];
   propagatedBuildInputs = [ sensor-msgs roscpp ];
-  nativeBuildInputs = [ sensor-msgs roscpp catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Precisely stamped URG driver for ROS'';

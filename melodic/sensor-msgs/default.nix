@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "25b8448825591eb461e1d3e24c32fd2a1f2e1e2e69c56bd67748c54c7f8d3529";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   checkInputs = [ rosbag rosunit ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package defines messages for commonly used sensors, including

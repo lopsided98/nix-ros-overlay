@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "af9fef611fcdbaf9296af1f04ee2af940412d36a3bdddc6098cf77a7c795dffa";
   };
 
+  buildInputs = [ console-bridge boost ];
   propagatedBuildInputs = [ console-bridge boost ];
-  nativeBuildInputs = [ catkin console-bridge boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cpp_common contains C++ code for doing things that are not necessarily ROS

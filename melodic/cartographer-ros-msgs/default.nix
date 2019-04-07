@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f4572cb110370abc6059493e41532e143142c3ee974c6737c6a42aa7811d11d4";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for the cartographer_ros package.'';

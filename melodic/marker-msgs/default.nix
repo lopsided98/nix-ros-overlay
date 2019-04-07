@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "97c6b32ffed3602939b7decce5e38a880e7e64a3d1dd22217512ddf2779e48c5";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The marker_msgs package contains messages usable to setup a marker/fiducial system. 

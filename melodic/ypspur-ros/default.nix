@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "aa18debf2c372f040b3ac8ae242bac35a325e0135b2761b59d1b2a6b0797b8ca";
   };
 
+  buildInputs = [ roslint trajectory-msgs sensor-msgs ypspur roscpp rostest nav-msgs rospy std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ trajectory-msgs sensor-msgs ypspur roscpp nav-msgs rospy std-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ roslint trajectory-msgs sensor-msgs catkin ypspur roscpp rostest nav-msgs rospy std-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS wrapper for the mobile robot control platform YP-Spur'';

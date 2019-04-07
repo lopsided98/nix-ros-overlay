@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, mav-msgs, sensor-msgs, mavros, catkin, roscpp, mavros-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, cmake-modules, mav-msgs, sensor-msgs, catkin, mavros, roscpp, mavros-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rotors-hil-interface";
   version = "2.2.3";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ee4f035b44afcf982354c3740f05087f5dc9c8f2fffee6816a5e9dc435d46fc5";
   };
 
+  buildInputs = [ cmake-modules geometry-msgs mav-msgs sensor-msgs mavros mavros-msgs roscpp ];
   propagatedBuildInputs = [ geometry-msgs mav-msgs sensor-msgs mavros mavros-msgs roscpp ];
-  nativeBuildInputs = [ catkin cmake-modules geometry-msgs mav-msgs sensor-msgs mavros mavros-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''RotorS Hardware-in-the-loop interface package'';

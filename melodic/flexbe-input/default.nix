@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5df6e897ef3b2b6890162fce3b14381f09fcb9d04cbfae3b2aa2d59cb50408ff";
   };
 
+  buildInputs = [ actionlib ];
   propagatedBuildInputs = [ flexbe-msgs smach-ros actionlib rospy ];
-  nativeBuildInputs = [ catkin actionlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''flexbe_input enables to send data to onboard behavior when required.'';

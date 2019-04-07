@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7031baf19ed479dcc35455fc5090a740ccc28592c8fd565154ea6556aa80f747";
   };
 
+  buildInputs = [ urdfdom-headers ];
   propagatedBuildInputs = [ urdfdom-headers ];
-  nativeBuildInputs = [ urdfdom-headers catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a C++ base class for URDF parsers.'';

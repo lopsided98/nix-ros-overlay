@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e9f578692846ccaf041da048fcfcef51d1a421a2869c94d2970541af319d3823";
   };
 
+  buildInputs = [ filters pluginlib tf sensor-msgs message-filters roscpp rostest message-generation laser-geometry ];
   propagatedBuildInputs = [ filters laser-geometry pluginlib message-runtime tf sensor-msgs roscpp message-filters ];
-  nativeBuildInputs = [ filters pluginlib tf sensor-msgs catkin message-filters roscpp rostest message-generation laser-geometry ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides nodes to assemble point clouds from either LaserScan or PointCloud messages'';

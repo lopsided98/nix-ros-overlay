@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d5b03777119dd51d50536b5e9613f00b0bb7558f363ed7f7358b8ceb8062b154";
   };
 
+  buildInputs = [ genmsg ];
   propagatedBuildInputs = [ genmsg ];
-  nativeBuildInputs = [ genmsg catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''C++ ROS message and service generators.'';

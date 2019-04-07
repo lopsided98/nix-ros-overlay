@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8d25bddf370f8550b5ddac3e38c98c17d4880893c20bc601f8fd8b86c5bc4c2c";
   };
 
+  buildInputs = [ actionlib-msgs pcl-conversions sensor-msgs roscpp message-generation actionlib pr2-msgs laser-geometry pcl-ros eigen ];
   propagatedBuildInputs = [ actionlib-msgs pcl-conversions sensor-msgs roscpp message-runtime actionlib pr2-msgs laser-geometry pcl-ros eigen ];
-  nativeBuildInputs = [ actionlib-msgs pcl-conversions sensor-msgs catkin roscpp message-generation actionlib pr2-msgs laser-geometry pcl-ros eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides a set of tools/actions for manipulating the pr2's tilting

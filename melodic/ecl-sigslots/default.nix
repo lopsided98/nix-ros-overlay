@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "092e00b6e973f3ea2fd160ff8c691a649c324192c2f06e8141cfa71ddb0e28b4";
   };
 
+  buildInputs = [ ecl-license ecl-config ecl-threads ];
   propagatedBuildInputs = [ ecl-license ecl-config ecl-threads ];
-  nativeBuildInputs = [ ecl-license catkin ecl-config ecl-threads ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides a signal/slot mechanism (in the same vein as qt sigslots, 

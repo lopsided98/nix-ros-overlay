@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c5f91ca156ad37a8357e9b650c39fab45ea4327bf1a4a645f1bdc2bcde2e59fc";
   };
 
+  buildInputs = [ moveit-ros-planning kdl-parser pluginlib cmake-modules eigen-conversions roscpp moveit-core tf-conversions message-runtime std-msgs moveit-msgs tinyxml-2 tf geometry-msgs ];
   propagatedBuildInputs = [ moveit-ros-planning kdl-parser pluginlib eigen-conversions roscpp moveit-core tf-conversions message-runtime std-msgs moveit-msgs tinyxml-2 tf geometry-msgs ];
-  nativeBuildInputs = [ moveit-ros-planning kdl-parser pluginlib cmake-modules catkin eigen-conversions roscpp moveit-core tf-conversions message-runtime std-msgs moveit-msgs tinyxml-2 tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The Extensible Optimization Toolset (EXOTica) is a library for defining problems for robot motion planning.'';

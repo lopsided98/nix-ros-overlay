@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a9b1ee115c3252718a9915a94ba16421a39309ed237a33d790f486d468f8a1ef";
   };
 
+  buildInputs = [ message-generation actionlib-msgs geometry-msgs ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs geometry-msgs ];
-  nativeBuildInputs = [ catkin message-generation actionlib-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Holds the action description and relevant messages for the move_base package'';

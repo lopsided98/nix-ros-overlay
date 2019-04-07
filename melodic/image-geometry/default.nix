@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f1f06fc227662b34743a3391431538326fa3c8833c7ab47b6b1eeeeb631082e2";
   };
 
+  buildInputs = [ sensor-msgs opencv3 ];
   propagatedBuildInputs = [ sensor-msgs opencv3 ];
-  nativeBuildInputs = [ sensor-msgs catkin opencv3 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''`image_geometry` contains C++ and Python libraries for interpreting images

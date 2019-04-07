@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5cf3f26df26c9c7a8045f5d75aa0b6b6fecccd58a38495b850c49b94540969e5";
   };
 
+  buildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs message-filters roscpp tf2-ros move-base-msgs actionlib angles roslib geometry-msgs eigen ];
   propagatedBuildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs message-filters roscpp tf2-ros move-base-msgs actionlib angles roslib geometry-msgs eigen ];
-  nativeBuildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs catkin message-filters roscpp tf2-ros move-base-msgs actionlib angles roslib geometry-msgs eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The assisted_teleop node subscribes to a desired trajectory topic

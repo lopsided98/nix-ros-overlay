@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "baf8fd73e1c316f837c29fcaea20d6cb5cb84d4083813944b09005de9297de1d";
   };
 
+  buildInputs = [ std-msgs sensor-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ message-generation std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for MRPT classes and objects'';

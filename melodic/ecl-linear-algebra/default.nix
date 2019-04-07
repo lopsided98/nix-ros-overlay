@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5e9b99a6c02c0546ffdd155726bb735897f8591739850b9614143d6719e756e6";
   };
 
+  buildInputs = [ ecl-exceptions ecl-converters ecl-eigen ecl-license ecl-formatters ecl-math sophus ecl-build ];
   propagatedBuildInputs = [ ecl-exceptions ecl-converters ecl-eigen ecl-license ecl-formatters ecl-math sophus ecl-build ];
-  nativeBuildInputs = [ ecl-converters ecl-eigen ecl-formatters sophus catkin ecl-build ecl-exceptions ecl-license ecl-math ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Ecl frontend to a linear matrix package (currently eigen).'';

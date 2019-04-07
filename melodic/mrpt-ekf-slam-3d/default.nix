@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "033e62947e318122335f9c223589f340fa8425204178da6b817ea933c20973c5";
   };
 
+  buildInputs = [ mrpt-bridge cmake-modules tf sensor-msgs roscpp nav-msgs mrpt1 visualization-msgs dynamic-reconfigure std-msgs roslaunch roslib ];
   propagatedBuildInputs = [ mrpt-bridge cmake-modules tf sensor-msgs mrpt-rawlog roscpp roslib nav-msgs rviz mrpt1 dynamic-reconfigure std-msgs roslaunch visualization-msgs ];
-  nativeBuildInputs = [ mrpt-bridge cmake-modules tf sensor-msgs catkin roscpp nav-msgs mrpt1 visualization-msgs dynamic-reconfigure std-msgs roslaunch roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a wrapper for the implementation of EKF-based SLAM with range-bearing sensors, odometry, a full 6D robot pose, and 3D landmarks.'';

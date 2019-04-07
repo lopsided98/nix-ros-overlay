@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "659c8d7707b844cc4c8c9eeab40e3e33fdd65f1ca0e07f71b471dd4dad633e4f";
   };
 
+  buildInputs = [ rosconsole rosatomic roslib allocators ];
   propagatedBuildInputs = [ rosconsole rosatomic roslib allocators ];
-  nativeBuildInputs = [ rosatomic rosconsole catkin roslib allocators ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The lockfree package contains lock-free data structures for use in multithreaded programming.  These

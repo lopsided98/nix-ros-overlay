@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4089701e5cb0a7f06d6e42aef2863cd985f8e43d46d7aca46f5c0e01caaead86";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for robots using FourWheelSteering.'';

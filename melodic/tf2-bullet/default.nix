@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2cb1d1e6d4ba180010c3f53ac138ba147ef4fb2c037d1b76be5cfb7d60ecd8e8";
   };
 
+  buildInputs = [ tf2 bullet geometry-msgs ];
   propagatedBuildInputs = [ tf2 bullet geometry-msgs ];
-  nativeBuildInputs = [ pkg-config tf2 bullet catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''tf2_bullet'';

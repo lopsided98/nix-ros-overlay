@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "8204f445e165a048869660415c84fa1f478c1d1ecf8dabd79dd9a1187b95048e";
   };
 
+  buildInputs = [ pythonPackages.pytest rospy ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ pythonPackages.pytest rospy ];
-  nativeBuildInputs = [ catkin pythonPackages.pytest rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ros_pytest package'';

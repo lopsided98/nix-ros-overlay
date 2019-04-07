@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0c218b7644479fe4c625fd32883d1e45d945f3662f73152e60e45bbf3cabc8b0";
   };
 
+  buildInputs = [ rospy ];
   propagatedBuildInputs = [ xacro rospy ];
-  nativeBuildInputs = [ catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The urdf_test package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7625fdf3c7c87b21dd67a05f53faa5d09926c6065251b5d761b1ec3a23f79654";
   };
 
+  buildInputs = [ settlerlib actionlib rosconsole actionlib-msgs roscpp-serialization std-msgs roscpp ];
   propagatedBuildInputs = [ settlerlib actionlib rosconsole actionlib-msgs roscpp-serialization std-msgs roscpp ];
-  nativeBuildInputs = [ settlerlib actionlib rosconsole actionlib-msgs roscpp-serialization std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides a node that reports how long a subset of joints has been

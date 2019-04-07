@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "dd134fee71bd93a6e756305e084c1767c516f369c0afe70f921c87d040f84d1b";
   };
 
+  buildInputs = [ boost ];
   propagatedBuildInputs = [ boost ];
-  nativeBuildInputs = [ catkin boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Catkinized ROS packaging of the OpenKarto library'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3cd3bc10e3c4567f7589abd4d3029b5b346d8db5944fb427a9097cc35c3c9296";
   };
 
+  buildInputs = [ std-srvs pcl sensor-msgs roscpp octomap-msgs nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs dynamic-reconfigure nodelet pcl-conversions ];
   propagatedBuildInputs = [ std-srvs pcl sensor-msgs roscpp octomap-msgs nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs dynamic-reconfigure nodelet pcl-conversions ];
-  nativeBuildInputs = [ std-srvs pcl sensor-msgs catkin roscpp octomap-msgs nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs dynamic-reconfigure nodelet pcl-conversions ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''octomap_server loads a 3D map (as Octree-based OctoMap) and distributes it to other nodes in a compact binary format. It also allows to incrementally build 3D OctoMaps, and provides map saving in the node octomap_saver.'';

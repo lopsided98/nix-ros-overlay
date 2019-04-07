@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0d4a39404ca6ce3fe26eb6a00df0edf208a58651c7605d42f20c9c6a2df9be72";
   };
 
+  buildInputs = [ shape-msgs message-generation actionlib-msgs std-msgs sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ shape-msgs message-runtime actionlib-msgs std-msgs sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ shape-msgs message-generation actionlib-msgs std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Object_recognition_msgs contains the ROS message and the actionlib definition used in object_recognition_core'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "73cbede7be9f363559992d9bab141eea8b9c4ac72928fb567e0542cfb0ea7c2a";
   };
 
+  buildInputs = [ tf sensor-msgs fetch-driver-msgs roscpp rospy nav-msgs fetch-auto-dock-msgs actionlib std-msgs angles roslib geometry-msgs eigen ];
   propagatedBuildInputs = [ tf fetch-driver-msgs sensor-msgs roscpp rospy nav-msgs fetch-auto-dock-msgs actionlib std-msgs roslib geometry-msgs eigen ];
-  nativeBuildInputs = [ tf sensor-msgs fetch-driver-msgs catkin roscpp rospy nav-msgs fetch-auto-dock-msgs actionlib std-msgs angles roslib geometry-msgs eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An open-source version of the Fetch charge docking system.'';

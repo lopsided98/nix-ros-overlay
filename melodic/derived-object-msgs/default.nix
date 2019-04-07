@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5b5450bf1c0968aa5b7f6190cb26b07b11563d0041e410d322ceff66567b5a23";
   };
 
+  buildInputs = [ shape-msgs message-generation radar-msgs std-msgs geometry-msgs ];
   propagatedBuildInputs = [ shape-msgs radar-msgs message-runtime std-msgs geometry-msgs ];
-  nativeBuildInputs = [ shape-msgs message-generation radar-msgs std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Abstracted Messages from Perception Modalities'';

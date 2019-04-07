@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d748e0b392248e2d2c64695d95a7ac37fe884a0f0c999e2e0c8e69931efeda89";
   };
 
+  buildInputs = [ std-msgs sensor-msgs roscpp boost ];
   propagatedBuildInputs = [ std-msgs sensor-msgs roscpp boost ];
-  nativeBuildInputs = [ catkin boost std-msgs sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS package for LDS(HLS-LFCD2).

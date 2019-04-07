@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c7077ff6fff4119b0383218c2426ac4629ee02485af8e569920149031f791b2c";
   };
 
+  buildInputs = [ json-msgs roscpp ];
   checkInputs = [ rostest roslint rosunit ];
   propagatedBuildInputs = [ json-msgs roscpp pythonPackages.msgpack ];
-  nativeBuildInputs = [ json-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''JSON transport for ROS'';

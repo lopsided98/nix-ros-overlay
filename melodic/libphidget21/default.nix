@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "69660b7d771da1f35e899d0a658ba8d32e940015d336c37a176d7a21dc715aed";
   };
 
+  buildInputs = [ libusb ];
   propagatedBuildInputs = [ libusb ];
-  nativeBuildInputs = [ catkin libusb ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package wraps the libphidget21 to use it as a ROS dependency'';

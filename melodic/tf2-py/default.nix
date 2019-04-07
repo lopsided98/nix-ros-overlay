@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "24fc32a89eb1f6714d2f05c138c5d85741aabe819fc18475e63564aa0e2c388b";
   };
 
+  buildInputs = [ tf2 rospy ];
   propagatedBuildInputs = [ tf2 rospy ];
-  nativeBuildInputs = [ tf2 catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tf2_py package'';

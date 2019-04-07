@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-rosserial-msgs";
   version = "0.8.0";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8e7997385cc06168097b0d5e56c91155f5a3fea6a28cecbc9ba0d9dc48cad6af";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for automatic topic configuration using rosserial.'';

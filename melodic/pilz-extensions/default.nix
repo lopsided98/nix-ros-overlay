@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "e424ed432021db160b038cfb5aadb2bec718f5b919a50bd9fabd47488df1a300";
   };
 
+  buildInputs = [ joint-limits-interface roscpp ];
   checkInputs = [ rostest code-coverage rosunit ];
   propagatedBuildInputs = [ prbt-support ];
-  nativeBuildInputs = [ joint-limits-interface catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pilz_extensions package. Here are classes extending the functionality of other packages.

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fd26afa06f8f7acd5dcc50aeab04521d73b266f1b921150cdd675cdf62a9c840";
   };
 
+  buildInputs = [ rqt-gui-py rqt-gui mavros-msgs rospy ];
   propagatedBuildInputs = [ rqt-gui-py rqt-gui mavros-msgs rospy ];
-  nativeBuildInputs = [ rqt-gui-py rospy catkin rqt-gui mavros-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rqt_rotors package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "597115fae1876c7b86e7aa7f919eb130d9e03bc5ca4978653e2a3d09344b98f2";
   };
 
+  buildInputs = [ multimaster-msgs-fkie ];
   propagatedBuildInputs = [ roslib roslaunch multimaster-msgs-fkie rospy ];
-  nativeBuildInputs = [ catkin multimaster-msgs-fkie ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The configuration node loads a given launch configuration and offers services to 

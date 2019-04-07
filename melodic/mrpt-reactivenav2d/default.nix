@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "808b2bf5865060d35c80defc9bcc8976135f4ff2e8d54c4528aae759062a8e55";
   };
 
+  buildInputs = [ mrpt-bridge actionlib-msgs tf roscpp mrpt1 actionlib dynamic-reconfigure visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ mrpt-bridge actionlib-msgs tf roscpp mrpt1 actionlib dynamic-reconfigure visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ mrpt-bridge actionlib-msgs tf catkin roscpp mrpt1 actionlib dynamic-reconfigure visualization-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Reactive navigation for 2D robots using MRPT navigation algorithms (TP-Space)'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "68dd63390a89e5634e7ae241aa2e8c21e8e80753d49eaf8569de7f8ac1c8dfd3";
   };
 
+  buildInputs = [ nav-msgs geometry-msgs sensor-msgs tf roscpp ];
   propagatedBuildInputs = [ nav-msgs geometry-msgs sensor-msgs tf roscpp ];
-  nativeBuildInputs = [ nav-msgs catkin geometry-msgs sensor-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Processors for sensor_msgs::Imu data'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "23c70277cc132ceacb08eaea3ce9ff79d956458f817b9ab72bcf2713b12e7824";
   };
 
+  buildInputs = [ hardware-interface controller-interface controller-manager-msgs pluginlib ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ hardware-interface controller-interface controller-manager-msgs pluginlib ];
-  nativeBuildInputs = [ hardware-interface controller-interface controller-manager-msgs pluginlib catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The controller manager.'';

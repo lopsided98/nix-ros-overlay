@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e5b831d55d98996965fed4fcdd67e9c99bc140caa7b0273227c9805a193565ec";
   };
 
+  buildInputs = [ exotica-core ompl ];
   propagatedBuildInputs = [ exotica-core ompl ];
-  nativeBuildInputs = [ exotica-core catkin ompl ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Time-Indexed RRT-Connect solver (Humanoids 2018)'';

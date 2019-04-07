@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag, catkin, rospy, roslib, qt-gui, rostopic, actionlib, std-msgs, genmsg, genpy, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, rosbag, catkin, roslib, qt-gui, rostopic, actionlib, rospy, std-msgs, genmsg, genpy, python-qt-binding }:
 buildRosPackage {
   pname = "ros-melodic-rqt-py-common";
   version = "0.5.0";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "54fd2fa913483ae10a05f07b58c91b78b3f3cf79f0dfd53544adb1ca1e576123";
   };
 
+  buildInputs = [ std-msgs genmsg ];
   propagatedBuildInputs = [ roslib qt-gui rostopic actionlib rospy rosbag genpy python-qt-binding ];
-  nativeBuildInputs = [ std-msgs genmsg catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_py_common provides common functionality for rqt plugins written in Python.

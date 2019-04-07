@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "01b472150f0c2e6250cfb8db3a04a66d23c16c987d3f95900be335c64b9886e7";
   };
 
+  buildInputs = [ rospy ];
   propagatedBuildInputs = [ rospy ];
-  nativeBuildInputs = [ catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The dataset evaluation package for the RotorS simulator.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "754395eafaca8f39801e1b53e4abc321787bbb47341aa82a767b507651114126";
   };
 
+  buildInputs = [ ecl-converters ecl-formatters ecl-utilities ecl-exceptions ecl-license ecl-errors ecl-type-traits ecl-config ecl-mpl ];
   propagatedBuildInputs = [ ecl-converters ecl-formatters ecl-utilities ecl-exceptions ecl-license ecl-errors ecl-type-traits ecl-config ecl-mpl ];
-  nativeBuildInputs = [ ecl-converters ecl-formatters ecl-utilities catkin ecl-exceptions ecl-license ecl-errors ecl-type-traits ecl-config ecl-mpl ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The containers included here are intended to extend the stl containers.

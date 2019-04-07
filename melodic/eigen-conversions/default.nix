@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6485f64dd54db8430e4aacfa15b0d09b575aff8cfcf4ad24f946e090004521ad";
   };
 
+  buildInputs = [ std-msgs orocos-kdl geometry-msgs eigen ];
   propagatedBuildInputs = [ std-msgs orocos-kdl geometry-msgs eigen ];
-  nativeBuildInputs = [ orocos-kdl eigen std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Conversion functions between:

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f9bcc221412c9950f156dc4c57c6dd8ca9aa4eff1201c12a412a05211fcd07ea";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk_hark_msgs'';

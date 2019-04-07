@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "34f30fe803b0fad0edc3a7983308c34404592920ce11fbdd0d96fd8ea849eb77";
   };
 
+  buildInputs = [ message-generation actionlib actionlib-msgs geometry-msgs ];
   propagatedBuildInputs = [ actionlib message-runtime actionlib-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation actionlib-msgs actionlib catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for fetch_auto_dock package'';

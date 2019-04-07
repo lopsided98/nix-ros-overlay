@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e50544b8a90f38c20e2ff250224eee48ac0d667fefcb7fa172e1b2dafb6119e8";
   };
 
+  buildInputs = [ geometry-msgs rospy ];
   propagatedBuildInputs = [ geometry-msgs rospy ];
-  nativeBuildInputs = [ catkin geometry-msgs rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides teleoperation using keyboard for TurtleBot3.'';

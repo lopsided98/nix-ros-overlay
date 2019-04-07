@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3a760fad6164fa6a5ed47d7cd6302f5378bae282f5018dc568d2666b867cdb46";
   };
 
+  buildInputs = [ libv4l camera-info-manager image-transport sensor-msgs nodelet roscpp ];
   propagatedBuildInputs = [ libv4l camera-info-manager image-transport sensor-msgs nodelet roscpp ];
-  nativeBuildInputs = [ catkin libv4l camera-info-manager image-transport sensor-msgs nodelet roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A collection of node(let)s that stream images from USB cameras (UVC)

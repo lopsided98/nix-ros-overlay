@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "dae8cee834dfdb902000812bf4e6141f678bf813a077dd6b6f1580a90a909876";
   };
 
+  buildInputs = [ rospy ];
   propagatedBuildInputs = [ rospy ];
-  nativeBuildInputs = [ catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Simple Kalman Filter in Python'';

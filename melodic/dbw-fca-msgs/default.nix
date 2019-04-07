@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c88dcd572943e157cb201add7fcc19f1a1ee7080d6af6b027c2c67bf2d61e041";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs rosbag-migration-rule message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Drive-by-wire messages for the Chrysler Pacifica'';

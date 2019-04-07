@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c3b9715488a681cdf76d351b888be38da5e5934d11342ce2f9e2ea9b09eafc34";
   };
 
+  buildInputs = [ image-transport sensor-msgs roscpp pluginlib ];
   propagatedBuildInputs = [ image-transport sensor-msgs roscpp pluginlib ];
-  nativeBuildInputs = [ catkin pluginlib image-transport sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The codec_image_transport package'';

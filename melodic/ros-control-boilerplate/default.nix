@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b597b2799ddfb59bdc4e395c3392f794594606bf24e929ebcf03e4cb253dc576";
   };
 
+  buildInputs = [ controller-manager hardware-interface cmake-modules gflags control-msgs control-toolbox trajectory-msgs joint-limits-interface sensor-msgs urdf actionlib std-msgs rosparam-shortcuts roscpp transmission-interface ];
   propagatedBuildInputs = [ controller-manager hardware-interface control-msgs control-toolbox trajectory-msgs joint-limits-interface sensor-msgs urdf actionlib std-msgs rosparam-shortcuts roscpp transmission-interface ];
-  nativeBuildInputs = [ controller-manager hardware-interface cmake-modules gflags control-msgs control-toolbox trajectory-msgs joint-limits-interface sensor-msgs catkin urdf actionlib std-msgs rosparam-shortcuts roscpp transmission-interface ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Simple simulation interface and template for setting up a hardware interface for ros_control'';

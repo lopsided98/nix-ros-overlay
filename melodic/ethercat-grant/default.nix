@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3b5baa1b6b84b2538af53dcc410d980579cbfc932f002dcf3cc25071bb452a52";
   };
 
+  buildInputs = [ roscpp libcap ];
   propagatedBuildInputs = [ roscpp libcap ];
-  nativeBuildInputs = [ catkin roscpp libcap ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Makes it possible to run the ros_ethercat_loop without using sudo. Forked from pr2-grant'';

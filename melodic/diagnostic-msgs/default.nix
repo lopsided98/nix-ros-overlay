@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "649136f24515903a713e856fe413d5692073ce77b2970afefbb510af76964e70";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package holds the diagnostic messages which provide the

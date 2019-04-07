@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "71d8d3b25202546af7f8f085a532d72bf3fc35a591958d88927c6506571f3b37";
   };
 
+  buildInputs = [ uuid-msgs message-generation actionlib-msgs dynamic-reconfigure std-msgs ];
   propagatedBuildInputs = [ uuid-msgs message-runtime actionlib-msgs dynamic-reconfigure std-msgs ];
-  nativeBuildInputs = [ uuid-msgs message-generation actionlib-msgs dynamic-reconfigure std-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used by py_trees_ros and some extras for the mock demos/tests.'';

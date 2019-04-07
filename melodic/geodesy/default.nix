@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "58e20388e22a583385b39acf097e80a508617623d484f29a30f31ee96558f58b";
   };
 
+  buildInputs = [ uuid-msgs geographic-msgs unique-id angles pythonPackages.catkin-pkg tf sensor-msgs geometry-msgs ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ uuid-msgs geographic-msgs unique-id tf sensor-msgs pythonPackages.pyproj geometry-msgs ];
-  nativeBuildInputs = [ unique-id sensor-msgs catkin uuid-msgs geographic-msgs angles pythonPackages.catkin-pkg tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Python and C++ interfaces for manipulating geodetic coordinates.'';

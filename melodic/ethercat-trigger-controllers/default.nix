@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a90e00f501dc42e5a50347e28237683a31cd2d959a2fad379d5bda7706de9aed";
   };
 
+  buildInputs = [ message-generation pluginlib pr2-controller-interface std-msgs realtime-tools roscpp libtool diagnostic-msgs ];
   propagatedBuildInputs = [ pluginlib pr2-controller-interface realtime-tools libtool message-runtime rospy std-msgs diagnostic-msgs roscpp ];
-  nativeBuildInputs = [ pluginlib pr2-controller-interface realtime-tools catkin libtool message-generation std-msgs diagnostic-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controllers to operate the digital output of the motor controller

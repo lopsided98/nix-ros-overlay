@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "88875fc4613ea154a28967c8402e847aac51cbec89a0a5afe32449f291b47d66";
   };
 
+  buildInputs = [ tf2-msgs rosconsole pluginlib tf2-geometry-msgs moveit-ros-perception srdfdom message-filters tf2-ros tf2 actionlib moveit-core tf2-eigen dynamic-reconfigure urdf moveit-msgs roscpp eigen ];
   propagatedBuildInputs = [ tf2-msgs rosconsole pluginlib tf2-geometry-msgs moveit-ros-perception srdfdom message-filters tf2-ros tf2 urdf moveit-core tf2-eigen dynamic-reconfigure actionlib moveit-msgs roscpp ];
-  nativeBuildInputs = [ tf2-msgs rosconsole pluginlib tf2-geometry-msgs moveit-ros-perception srdfdom catkin message-filters tf2-ros tf2 actionlib moveit-core tf2-eigen dynamic-reconfigure urdf moveit-msgs roscpp eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Planning components of MoveIt! that use ROS'';
