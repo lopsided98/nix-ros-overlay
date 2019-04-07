@@ -58,6 +58,8 @@ self: super: {
 
  async-comm = self.callPackage ./async-comm {};
 
+ async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
  audibot = self.callPackage ./audibot {};
 
  audibot-description = self.callPackage ./audibot-description {};
@@ -87,6 +89,10 @@ self: super: {
  base-local-planner = self.callPackage ./base-local-planner {};
 
  bayesian-belief-networks = self.callPackage ./bayesian-belief-networks {};
+
+ behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
+
+ behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bfl = self.callPackage ./bfl {};
 
@@ -133,6 +139,10 @@ self: super: {
  carrot-planner = self.callPackage ./carrot-planner {};
 
  cartesian-msgs = self.callPackage ./cartesian-msgs {};
+
+ cartographer = self.callPackage ./cartographer {};
+
+ cartographer-ros = self.callPackage ./cartographer-ros {};
 
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
@@ -610,6 +620,8 @@ self: super: {
 
  geometry-tutorials = self.callPackage ./geometry-tutorials {};
 
+ gl-dependency = self.callPackage ./gl-dependency {};
+
  global-planner = self.callPackage ./global-planner {};
 
  global-planner-tests = self.callPackage ./global-planner-tests {};
@@ -838,6 +850,8 @@ self: super: {
 
  jsk-recognition-msgs = self.callPackage ./jsk-recognition-msgs {};
 
+ jsk-recognition-utils = self.callPackage ./jsk-recognition-utils {};
+
  jsk-roseus = self.callPackage ./jsk-roseus {};
 
  jsk-rqt-plugins = self.callPackage ./jsk-rqt-plugins {};
@@ -1050,6 +1064,8 @@ self: super: {
 
  mir-description = self.callPackage ./mir-description {};
 
+ mir-driver = self.callPackage ./mir-driver {};
+
  mir-dwb-critics = self.callPackage ./mir-dwb-critics {};
 
  mir-gazebo = self.callPackage ./mir-gazebo {};
@@ -1140,6 +1156,10 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ movie-publisher = self.callPackage ./movie-publisher {};
+
+ mrpt1 = self.callPackage ./mrpt1 {};
+
  mrpt-bridge = self.callPackage ./mrpt-bridge {};
 
  mrpt-ekf-slam-2d = self.callPackage ./mrpt-ekf-slam-2d {};
@@ -1189,6 +1209,8 @@ self: super: {
  multisense-description = self.callPackage ./multisense-description {};
 
  multisense-lib = self.callPackage ./multisense-lib {};
+
+ multisense-ros = self.callPackage ./multisense-ros {};
 
  mvsim = self.callPackage ./mvsim {};
 
@@ -1292,6 +1314,8 @@ self: super: {
 
  octomap-server = self.callPackage ./octomap-server {};
 
+ octovis = self.callPackage ./octovis {};
+
  odva-ethernetip = self.callPackage ./odva-ethernetip {};
 
  ompl = self.callPackage ./ompl {};
@@ -1376,6 +1400,8 @@ self: super: {
 
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
 
+ parrot-arsdk = self.callPackage ./parrot-arsdk {};
+
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
  pcl-msgs = self.callPackage ./pcl-msgs {};
@@ -1408,6 +1434,8 @@ self: super: {
 
  phidgets-imu = self.callPackage ./phidgets-imu {};
 
+ photo = self.callPackage ./photo {};
+
  pid = self.callPackage ./pid {};
 
  pilz-control = self.callPackage ./pilz-control {};
@@ -1419,6 +1447,8 @@ self: super: {
  pilz-industrial-motion-testutils = self.callPackage ./pilz-industrial-motion-testutils {};
 
  pilz-msgs = self.callPackage ./pilz-msgs {};
+
+ pilz-robot-programming = self.callPackage ./pilz-robot-programming {};
 
  pilz-robots = self.callPackage ./pilz-robots {};
 
@@ -1538,6 +1568,8 @@ self: super: {
 
  prbt-support = self.callPackage ./prbt-support {};
 
+ ps3joy = self.callPackage ./ps3joy {};
+
  py-trees = self.callPackage ./py-trees {};
 
  py-trees-msgs = self.callPackage ./py-trees-msgs {};
@@ -1618,6 +1650,8 @@ self: super: {
 
  raw-description = self.callPackage ./raw-description {};
 
+ rc-cloud-accumulator = self.callPackage ./rc-cloud-accumulator {};
+
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
@@ -1635,6 +1669,8 @@ self: super: {
  resized-image-transport = self.callPackage ./resized-image-transport {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
+
+ respeaker-ros = self.callPackage ./respeaker-ros {};
 
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
@@ -1727,6 +1763,8 @@ self: super: {
  rosboost-cfg = self.callPackage ./rosboost-cfg {};
 
  rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
+
+ rosbridge-server = self.callPackage ./rosbridge-server {};
 
  rosbridge-suite = self.callPackage ./rosbridge-suite {};
 
@@ -1854,6 +1892,8 @@ self: super: {
 
  roswtf = self.callPackage ./roswtf {};
 
+ roswww = self.callPackage ./roswww {};
+
  rotate-recovery = self.callPackage ./rotate-recovery {};
 
  rotors-comm = self.callPackage ./rotors-comm {};
@@ -1865,6 +1905,8 @@ self: super: {
  rotors-evaluation = self.callPackage ./rotors-evaluation {};
 
  rotors-gazebo = self.callPackage ./rotors-gazebo {};
+
+ rotors-gazebo-plugins = self.callPackage ./rotors-gazebo-plugins {};
 
  rotors-hil-interface = self.callPackage ./rotors-hil-interface {};
 
@@ -1915,6 +1957,8 @@ self: super: {
  rqt-nav-view = self.callPackage ./rqt-nav-view {};
 
  rqt-plot = self.callPackage ./rqt-plot {};
+
+ rqt-pose-view = self.callPackage ./rqt-pose-view {};
 
  rqt-publisher = self.callPackage ./rqt-publisher {};
 
@@ -1974,6 +2018,8 @@ self: super: {
 
  rviz-python-tutorial = self.callPackage ./rviz-python-tutorial {};
 
+ rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
+
  sainsmart-relay-usb = self.callPackage ./sainsmart-relay-usb {};
 
  sbg-driver = self.callPackage ./sbg-driver {};
@@ -2001,6 +2047,8 @@ self: super: {
  sick-scan = self.callPackage ./sick-scan {};
 
  sick-tim = self.callPackage ./sick-tim {};
+
+ simple-grasping = self.callPackage ./simple-grasping {};
 
  simple-message = self.callPackage ./simple-message {};
 
@@ -2337,6 +2385,8 @@ self: super: {
  uuv-world-ros-plugins-msgs = self.callPackage ./uuv-world-ros-plugins-msgs {};
 
  uvc-camera = self.callPackage ./uvc-camera {};
+
+ vapor-master = self.callPackage ./vapor-master {};
 
  variant = self.callPackage ./variant {};
 
