@@ -1,4 +1,4 @@
-{ lib, stdenv, buildEnv, catkin, cmake }:
+{ lib, stdenv, writeText, buildEnv, catkin, cmake }:
 { paths ? [], ... }@args:
 
 with lib;
@@ -16,8 +16,8 @@ let
 
     passthru.env = stdenv.mkDerivation {
       name = "interactive-ros-env";
-      nativeBuildInputs = [ catkin cmake ];
-      buildInputs = [ env ];
+
+      buildInputs = [ env catkin ];
 
       buildCommand = ''
         echo >&2 ""

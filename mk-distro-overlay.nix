@@ -59,13 +59,21 @@ self: super: with self.lib; let
 
     catkin = rosSuper.catkin.overrideDerivation ({
       postPatch ? "", ...
-    }: {
+    }: let
+      setupHook = self.callPackage ./catkin-setup-hook { } distro;
+    in {
+      prePhases = [ "setupPhase" ];
+      # Catkin uses its own setup hook
+      setupPhase = ''
+        source "${setupHook}"
+      '';
+
       postPatch = postPatch + ''
         patchShebangs cmake
         substituteInPlace cmake/templates/python_distutils_install.sh.in \
           --replace /usr/bin/env "${self.coreutils}/bin/env"
       '';
-      setupHook = self.callPackage ./catkin-setup-hook { } distro;
+      inherit setupHook;
     });
 
     cv-bridge = rosSuper.cv-bridge.overrideDerivation ({

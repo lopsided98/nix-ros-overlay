@@ -1,20 +1,28 @@
 isCatkinPackage() {
-  local pkg="$1"
-  [ -d "$pkg/share" ] && \
-  [ -n "$(find "$pkg/share" \
-    -maxdepth 2 -mindepth 2 \
-    -name package.xml -print -quit)" ]
+  [ -f "$1/.catkin" ]
 }
 
-_addRosPackagePath() {
-  if isCatkinPackage "$1"; then
-    addToSearchPath ROS_PACKAGE_PATH "$1"
+declare -gA _rosPackagesSeen
+
+_runCatkinEnvHooks() {
+  local pkg="$1"
+  # Deduplicate the packages. This prevents running hooks multiple times.
+  if [ -z "${_rosPackagesSeen["$pkg"]}" ] && isCatkinPackage "$pkg"; then
+    for hook in "$pkg"/etc/catkin/profile.d/{*.sh,*.bash}; do
+      # Causes hooks to look in the wrong place
+      unset CATKIN_ENV_HOOK_WORKSPACE
+      # Some hooks fail in stripped down bash during builds
+      source "$hook" || true
+    done
   fi
+  _rosPackagesSeen["$pkg"]=1
 }
-addEnvHooks "$hostOffset" _addRosPackagePath
+addEnvHooks "$hostOffset" _runCatkinEnvHooks
 
 _catkinPostPatchHook() {
-  patchShebangs cfg
+  find . -name '*.cfg' -executable -print0 | while IFS= read -rd '' cfg; do
+    patchShebangs "$cfg"
+  done
 }
 postPatchHooks+=(_catkinPostPatchHook)
 
@@ -31,4 +39,4 @@ _catkinPostInstallHook() {
 }
 postInstallHooks+=(_catkinPostInstallHook)
 
-export ROS_DISTRO="@distro@"
+export CATKIN_SHELL=bash
