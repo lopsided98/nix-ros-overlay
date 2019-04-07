@@ -116,6 +116,8 @@ self: super: {
 
  async-comm = self.callPackage ./async-comm {};
 
+ async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
  ati-ft-sensor = self.callPackage ./ati-ft-sensor {};
 
  audibot = self.callPackage ./audibot {};
@@ -177,6 +179,10 @@ self: super: {
  bcap-service = self.callPackage ./bcap-service {};
 
  bcap-service-test = self.callPackage ./bcap-service-test {};
+
+ behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
+
+ behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bfl = self.callPackage ./bfl {};
 
@@ -243,6 +249,10 @@ self: super: {
  carrot-planner = self.callPackage ./carrot-planner {};
 
  cartesian-msgs = self.callPackage ./cartesian-msgs {};
+
+ cartographer = self.callPackage ./cartographer {};
+
+ cartographer-ros = self.callPackage ./cartographer-ros {};
 
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
@@ -1068,6 +1078,8 @@ self: super: {
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
+ gcloud-speech = self.callPackage ./gcloud-speech {};
+
  gcloud-speech-msgs = self.callPackage ./gcloud-speech-msgs {};
 
  gencpp = self.callPackage ./gencpp {};
@@ -1103,6 +1115,8 @@ self: super: {
  geometry-msgs = self.callPackage ./geometry-msgs {};
 
  geometry-tutorials = self.callPackage ./geometry-tutorials {};
+
+ gl-dependency = self.callPackage ./gl-dependency {};
 
  glkh-solver = self.callPackage ./glkh-solver {};
 
@@ -1466,6 +1480,8 @@ self: super: {
 
  ipr-extern = self.callPackage ./ipr-extern {};
 
+ ira-laser-tools = self.callPackage ./ira-laser-tools {};
+
  ivcon = self.callPackage ./ivcon {};
 
  jackal-control = self.callPackage ./jackal-control {};
@@ -1579,6 +1595,8 @@ self: super: {
  jsk-recognition = self.callPackage ./jsk-recognition {};
 
  jsk-recognition-msgs = self.callPackage ./jsk-recognition-msgs {};
+
+ jsk-recognition-utils = self.callPackage ./jsk-recognition-utils {};
 
  jsk-roseus = self.callPackage ./jsk-roseus {};
 
@@ -2004,6 +2022,8 @@ self: super: {
 
  mir-description = self.callPackage ./mir-description {};
 
+ mir-driver = self.callPackage ./mir-driver {};
+
  mir-dwb-critics = self.callPackage ./mir-dwb-critics {};
 
  mir-gazebo = self.callPackage ./mir-gazebo {};
@@ -2116,6 +2136,8 @@ self: super: {
 
  mqtt-bridge = self.callPackage ./mqtt-bridge {};
 
+ mrpt1 = self.callPackage ./mrpt1 {};
+
  mrpt-bridge = self.callPackage ./mrpt-bridge {};
 
  mrpt-local-obstacles = self.callPackage ./mrpt-local-obstacles {};
@@ -2175,6 +2197,8 @@ self: super: {
  multisense-description = self.callPackage ./multisense-description {};
 
  multisense-lib = self.callPackage ./multisense-lib {};
+
+ multisense-ros = self.callPackage ./multisense-ros {};
 
  multiwii = self.callPackage ./multiwii {};
 
@@ -2388,6 +2412,8 @@ self: super: {
 
  octomap-server = self.callPackage ./octomap-server {};
 
+ octovis = self.callPackage ./octovis {};
+
  oculusprime = self.callPackage ./oculusprime {};
 
  odometry-publisher-tutorial = self.callPackage ./odometry-publisher-tutorial {};
@@ -2492,6 +2518,8 @@ self: super: {
 
  open-manipulator-with-tb3-waffle-pi-moveit = self.callPackage ./open-manipulator-with-tb3-waffle-pi-moveit {};
 
+ opencv3 = self.callPackage ./opencv3 {};
+
  opencv-apps = self.callPackage ./opencv-apps {};
 
  opencv-candidate = self.callPackage ./opencv-candidate {};
@@ -2567,6 +2595,8 @@ self: super: {
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
 
  parameter-pa = self.callPackage ./parameter-pa {};
+
+ parrot-arsdk = self.callPackage ./parrot-arsdk {};
 
  pcdfilter-pa = self.callPackage ./pcdfilter-pa {};
 
@@ -2647,6 +2677,8 @@ self: super: {
  pilz-industrial-motion-testutils = self.callPackage ./pilz-industrial-motion-testutils {};
 
  pilz-msgs = self.callPackage ./pilz-msgs {};
+
+ pilz-robot-programming = self.callPackage ./pilz-robot-programming {};
 
  pilz-robots = self.callPackage ./pilz-robots {};
 
@@ -2874,6 +2906,8 @@ self: super: {
 
  prosilica-gige-sdk = self.callPackage ./prosilica-gige-sdk {};
 
+ ps3joy = self.callPackage ./ps3joy {};
+
  ps4eye = self.callPackage ./ps4eye {};
 
  puma-motor-driver = self.callPackage ./puma-motor-driver {};
@@ -3038,6 +3072,8 @@ self: super: {
 
  rbcar-sim-bringup = self.callPackage ./rbcar-sim-bringup {};
 
+ rc-cloud-accumulator = self.callPackage ./rc-cloud-accumulator {};
+
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
@@ -3071,6 +3107,8 @@ self: super: {
  resized-image-transport = self.callPackage ./resized-image-transport {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
+
+ respeaker-ros = self.callPackage ./respeaker-ros {};
 
  rfsm = self.callPackage ./rfsm {};
 
@@ -3376,6 +3414,8 @@ self: super: {
 
  rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
 
+ rosbridge-server = self.callPackage ./rosbridge-server {};
+
  rosbridge-suite = self.callPackage ./rosbridge-suite {};
 
  rosbuild = self.callPackage ./rosbuild {};
@@ -3536,6 +3576,8 @@ self: super: {
 
  roswtf = self.callPackage ./roswtf {};
 
+ roswww = self.callPackage ./roswww {};
+
  rotate-recovery = self.callPackage ./rotate-recovery {};
 
  route-network = self.callPackage ./route-network {};
@@ -3593,6 +3635,8 @@ self: super: {
  rqt-nav-view = self.callPackage ./rqt-nav-view {};
 
  rqt-plot = self.callPackage ./rqt-plot {};
+
+ rqt-pose-view = self.callPackage ./rqt-pose-view {};
 
  rqt-pr2-dashboard = self.callPackage ./rqt-pr2-dashboard {};
 
@@ -3741,6 +3785,8 @@ self: super: {
  rviz-python-tutorial = self.callPackage ./rviz-python-tutorial {};
 
  rviz-recorder-buttons = self.callPackage ./rviz-recorder-buttons {};
+
+ rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
  safe-teleop-stage = self.callPackage ./safe-teleop-stage {};
 
