@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "82f99f33b68d526f54fd3ce0947101974e81ae4f1059007100d368e992c1bc07";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a set of messages and services for using thormang3_feet_ft_module.'';

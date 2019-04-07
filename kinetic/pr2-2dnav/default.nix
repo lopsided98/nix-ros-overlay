@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "200fd5682451a57e823c5d22dfb1f44a78cd37881be7c99f2623f7be67bf6cc6";
   };
 
+  buildInputs = [ pr2-machine pr2-navigation-global pr2-navigation-teleop pr2-navigation-perception ];
   propagatedBuildInputs = [ pr2-machine pr2-navigation-global pr2-navigation-teleop pr2-navigation-perception ];
-  nativeBuildInputs = [ pr2-navigation-global pr2-navigation-teleop pr2-machine catkin pr2-navigation-perception ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This application allows the PR2 robot to navigate autonomously with a pre-specified static map.'';

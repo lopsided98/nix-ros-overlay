@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "31b1e4bfca66e05deec11ad8cb142a9076f31b84bba06f2ddbce103379afdeeb";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package containing message files'';

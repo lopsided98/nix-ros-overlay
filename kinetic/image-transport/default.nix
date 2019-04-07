@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6f9e7abf09c1ac9f8b8ea7f6df2c49f88c7708a5feefe25089bda48a877fef22";
   };
 
+  buildInputs = [ roslib pluginlib rosconsole sensor-msgs roscpp message-filters ];
   propagatedBuildInputs = [ roslib pluginlib rosconsole sensor-msgs roscpp message-filters ];
-  nativeBuildInputs = [ roslib catkin pluginlib rosconsole sensor-msgs roscpp message-filters ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''image_transport should always be used to subscribe to and publish images. It provides transparent

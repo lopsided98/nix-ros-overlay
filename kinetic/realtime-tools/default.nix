@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b8ba7ac211929a3f1e5b7ab0056dab8ae3b93581fcd5280ee16dc0e0a6c056c0";
   };
 
+  buildInputs = [ roscpp rospy ];
   propagatedBuildInputs = [ roscpp rospy ];
-  nativeBuildInputs = [ catkin roscpp rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Contains a set of tools that can be used from a hard

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2575ada47fc86c87207483c2e467c999f6fc8142b28f93a2f59a455ef1e5f57e";
   };
 
+  buildInputs = [ dense-laser-assembler pr2-msgs ];
   propagatedBuildInputs = [ dense-laser-assembler pr2-msgs ];
-  nativeBuildInputs = [ dense-laser-assembler pr2-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Stores the data from a series of laser scan messages in a dense representation, allowing

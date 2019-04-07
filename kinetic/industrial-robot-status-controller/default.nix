@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "593b629fb685766d9dce639c9f8e68816072f960d07e74053d715aebf8a1ff65";
   };
 
+  buildInputs = [ industrial-msgs hardware-interface controller-interface industrial-robot-status-interface pluginlib realtime-tools ];
   propagatedBuildInputs = [ industrial-msgs hardware-interface controller-interface pluginlib realtime-tools ];
-  nativeBuildInputs = [ industrial-msgs hardware-interface controller-interface industrial-robot-status-interface pluginlib realtime-tools catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ros_control controller that reports robot status using the ROS-Industrial RobotStatus message.'';

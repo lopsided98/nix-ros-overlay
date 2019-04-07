@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d7df46549709f4a0ef815ce127cc2dee8a7de0baf24011d4dade9e68ce7206e4";
   };
 
+  buildInputs = [ rosjava-build-tools rosjava-bootstrap ];
   propagatedBuildInputs = [ rosjava-build-tools rosjava-bootstrap ];
-  nativeBuildInputs = [ catkin rosjava-build-tools rosjava-bootstrap ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An implementation of zeroconf in pure java.'';

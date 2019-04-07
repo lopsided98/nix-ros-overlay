@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9f967def8078ff38d3862a0179fd63528756e373dfde2f10804d3ec9288a1dc4";
   };
 
+  buildInputs = [ costmap-2d pluginlib nav-core sbpl tf2 nav-msgs message-generation roscpp geometry-msgs ];
   propagatedBuildInputs = [ costmap-2d pluginlib nav-core sbpl tf2 nav-msgs message-runtime roscpp geometry-msgs ];
-  nativeBuildInputs = [ costmap-2d pluginlib nav-core catkin sbpl tf2 nav-msgs message-generation roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The sbpl_lattice_planner is a global planner plugin for move_base and wraps

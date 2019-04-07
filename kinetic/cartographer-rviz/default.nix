@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c6a1b6f8f330707000654165ebd30de105fed8724066f1cd71e85e4cdd377939";
   };
 
+  buildInputs = [ roscpp qt5.qtbase cartographer-ros-msgs rviz message-runtime cartographer eigen-conversions roslib ];
   propagatedBuildInputs = [ roscpp qt5.qtbase cartographer-ros-msgs rviz message-runtime cartographer eigen-conversions roslib ];
-  nativeBuildInputs = [ catkin roscpp qt5.qtbase cartographer-ros-msgs rviz message-runtime cartographer eigen-conversions roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Cartographer is a system that provides real-time simultaneous localization

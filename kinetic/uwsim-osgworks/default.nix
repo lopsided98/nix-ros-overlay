@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2a509179c47ceaf57e6bf4b620eaf1bb70f5014dde5fe6925c3cd82923e61c68";
   };
 
+  buildInputs = [ libGLU libGL openscenegraph boost ];
   propagatedBuildInputs = [ libGL boost libGLU catkin openscenegraph ];
-  nativeBuildInputs = [ cmake boost libGLU libGL openscenegraph ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The OSG Works library adapted to UWSim. See https://code.google.com/p/osgworks'';

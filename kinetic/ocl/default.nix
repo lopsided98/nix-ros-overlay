@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "117ba27fda71b1f601c74b7d8f315b10d831230bfdb2b3fe9fc76a90116f1c00";
   };
 
+  buildInputs = [ netcdf ncurses rtt readline log4cpp lua ];
   propagatedBuildInputs = [ netcdf ncurses rtt readline catkin log4cpp lua ];
-  nativeBuildInputs = [ netcdf cmake ncurses rtt readline catkin log4cpp lua ];
+  nativeBuildInputs = [ cmake catkin ];
 
   meta = {
     description = ''Orocos component library

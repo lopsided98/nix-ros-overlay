@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, tf, catkin, pythonPackages, rostest, rviz, robot-state-publisher, roscpp, xacro, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, std-srvs, catkin, pythonPackages, roscpp, rostest, rviz, robot-state-publisher, tf, xacro, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dynpick-driver";
   version = "0.2.0";
@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "3a78a3fd5ab15c800d3f2fddac1e6e8d50c150d8ffb775d656947e7f2cf4f5b4";
   };
 
+  buildInputs = [ std-srvs pythonPackages.catkin-pkg roscpp geometry-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ std-srvs rviz robot-state-publisher geometry-msgs tf xacro roscpp ];
-  nativeBuildInputs = [ std-srvs catkin pythonPackages.catkin-pkg roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver package for Wacohtech dynpick force sensor. This contains <a href="http://ros.org/">ROS</a>-compatible linux driver, as well as a communication test tool.<br/>

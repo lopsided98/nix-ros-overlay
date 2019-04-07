@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b5a720da115f3a9db015b020c78c0b9336a48e77d848fd6aa237f53ef4099d13";
   };
 
+  buildInputs = [ roscpp rviz qt5.qtbase ];
   propagatedBuildInputs = [ roscpp rviz qt5.qtbase ];
-  nativeBuildInputs = [ catkin roscpp rviz qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Tutorial showing how to compile your own C++ program with RViz displays and features.'';

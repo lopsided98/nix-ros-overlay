@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f516927f1373ea37fcc1e7f844f5b5799e3c7ab0c14d1e7863576f57bcfdb83f";
   };
 
+  buildInputs = [ urdf xacro ];
   propagatedBuildInputs = [ urdf xacro create-description kobuki-description ];
-  nativeBuildInputs = [ catkin urdf xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''turtlebot_description provides a complete 3D model of the TurtleBot for simulation and visualization. The files in this package are parsed and used by a variety of other components. Most users will not interact directly with this package.'';

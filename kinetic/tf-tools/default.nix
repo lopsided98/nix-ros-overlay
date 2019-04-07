@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e3c2f3524ebb86c4063a304e5b89c04d4b12fbbf65ebc1f6f8a816c73e8e9528";
   };
 
+  buildInputs = [ tf nav-msgs ];
   propagatedBuildInputs = [ tf nav-msgs ];
-  nativeBuildInputs = [ tf catkin nav-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS tools and scripts relates to tf'';

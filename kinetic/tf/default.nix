@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, roswtf, sensor-msgs, catkin, message-filters, rostime, tf2-ros, rostest, message-generation, message-runtime, graphviz, angles, std-msgs, roscpp, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, rosconsole, roswtf, sensor-msgs, catkin, message-filters, rostime, tf2-ros, rostest, message-generation, message-runtime, angles, std-msgs, rosunit, roscpp, graphviz, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-tf";
   version = "1.11.9";
@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "145ad3bd3c5ea0b4b1ff224c39eb03ba5b719f016609f6960589658a9687f53f";
   };
 
+  buildInputs = [ rosconsole sensor-msgs message-filters roscpp tf2-ros message-generation angles std-msgs rostime geometry-msgs ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ rosconsole roswtf sensor-msgs message-filters tf2-ros message-runtime std-msgs roscpp graphviz geometry-msgs ];
-  nativeBuildInputs = [ rosconsole sensor-msgs catkin message-filters roscpp tf2-ros message-generation angles std-msgs rostime geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''tf is a package that lets the user keep track of multiple coordinate

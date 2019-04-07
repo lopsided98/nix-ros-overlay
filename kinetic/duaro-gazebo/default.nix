@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "7f0058114b0e1a7b1b352859db757644cc58ce4e425ee50e535e2692a9ad3b2f";
   };
 
-  nativeBuildInputs = [ catkin gazebo-ros-control ];
+  buildInputs = [ gazebo-ros-control ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The duaro_gazebo package'';

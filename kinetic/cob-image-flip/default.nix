@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3479d5189488d7f6a7fe865e7d62a8f576c5a55c595f98bde7044ef362af8c9f";
   };
 
+  buildInputs = [ cob-perception-msgs pluginlib boost opencv3 image-transport sensor-msgs cv-bridge roscpp nodelet pcl-ros tf pcl-conversions geometry-msgs stereo-msgs ];
   propagatedBuildInputs = [ cob-perception-msgs pluginlib boost opencv3 image-transport sensor-msgs cv-bridge roscpp nodelet pcl-ros tf pcl-conversions geometry-msgs stereo-msgs ];
-  nativeBuildInputs = [ cob-perception-msgs pluginlib boost opencv3 image-transport sensor-msgs cv-bridge catkin roscpp nodelet pcl-ros tf pcl-conversions geometry-msgs stereo-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Flips the image of Care-O-bots kinect in dependence of the viewing direction of the cameras to receive an upright image all the time.'';

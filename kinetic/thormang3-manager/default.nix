@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "851d1a0a18226ac5e4558145c140aaae2a5c71665ff88102e871d56efc3573c6";
   };
 
+  buildInputs = [ thormang3-gripper-module thormang3-base-module thormang3-head-control-module robotis-controller roscpp thormang3-walking-module thormang3-manipulation-module thormang3-feet-ft-module thormang3-action-module ];
   propagatedBuildInputs = [ thormang3-gripper-module thormang3-base-module thormang3-description thormang3-head-control-module robotis-controller thormang3-feet-ft-module thormang3-walking-module thormang3-manipulation-module roscpp thormang3-imu-3dm-gx4 thormang3-action-module ];
-  nativeBuildInputs = [ thormang3-gripper-module thormang3-base-module thormang3-head-control-module catkin robotis-controller roscpp thormang3-walking-module thormang3-manipulation-module thormang3-feet-ft-module thormang3-action-module ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package describes robot manager to execute THORMANG3's motion modules.'';

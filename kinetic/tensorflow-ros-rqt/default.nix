@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "06e6774b09dfe73a4719350c97d50c46b6f6572e7dc1a9416be6cd1cb78c717f";
   };
 
+  buildInputs = [ rqt-gui-py rqt-gui tensorflow-ros ];
   propagatedBuildInputs = [ rqt-gui-py rqt-gui tensorflow-ros ];
-  nativeBuildInputs = [ rqt-gui-py catkin rqt-gui tensorflow-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tensorflow_ros_rqt package'';

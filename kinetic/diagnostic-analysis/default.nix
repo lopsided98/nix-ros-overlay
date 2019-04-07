@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f0b897d5c65da2e01d8120922a77804c8de4ad6ea8daf32ec6f117686730d25e";
   };
 
+  buildInputs = [ diagnostic-msgs rostest rosbag roslib ];
   propagatedBuildInputs = [ diagnostic-msgs rosbag roslib ];
-  nativeBuildInputs = [ rostest catkin diagnostic-msgs rosbag roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The diagnostic_analysis package can convert a log of diagnostics data

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "38139dbce8bcc522358ee39dd3d4be7e65e79654dcea7b8ae584e260b474fb96";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ptu_msgs package'';

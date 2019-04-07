@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2e486cd37f7d9fa293971c2aeb8bad0ce8862d954c64a3b02a0cf5a119a960a1";
   };
 
+  buildInputs = [ shape-msgs actionlib-msgs trajectory-msgs sensor-msgs octomap-msgs message-generation object-recognition-msgs std-msgs geometry-msgs ];
   propagatedBuildInputs = [ shape-msgs actionlib-msgs trajectory-msgs sensor-msgs octomap-msgs message-runtime object-recognition-msgs std-msgs geometry-msgs ];
-  nativeBuildInputs = [ shape-msgs actionlib-msgs trajectory-msgs sensor-msgs catkin octomap-msgs message-generation object-recognition-msgs std-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages, services and actions used by MoveIt'';

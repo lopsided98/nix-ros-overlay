@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "e31fa1f8808b4f7e21de3c59dc446e67483f870178ab6f0d937a0ad486b30e73";
   };
 
+  buildInputs = [ tf nav-2d-msgs nav-grid ];
   checkInputs = [ rosunit roslint ];
   propagatedBuildInputs = [ tf nav-2d-msgs nav-grid ];
-  nativeBuildInputs = [ catkin tf nav-2d-msgs nav-grid ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interfaces for Costmap, LocalPlanner and GlobalPlanner. Replaces nav_core.'';

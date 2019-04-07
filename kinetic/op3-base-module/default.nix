@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1fc6ab0e6efe480f8a14a4e7bf9b40144b9750ae1d2475266b5e72d8847a872a";
   };
 
+  buildInputs = [ cmake-modules boost geometry-msgs libyamlcpp roscpp roslib robotis-math op3-kinematics-dynamics eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ cmake-modules boost geometry-msgs libyamlcpp roscpp roslib robotis-math op3-kinematics-dynamics eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
-  nativeBuildInputs = [ cmake-modules boost geometry-msgs libyamlcpp catkin roscpp roslib robotis-math op3-kinematics-dynamics eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_base_module package'';

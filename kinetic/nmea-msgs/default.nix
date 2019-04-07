@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c4309447901276e86de75e5fb216fc2d9e430fb81df83fed51ec14f42e5ba862";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The nmea_msgs package contains messages related to data in the NMEA format.'';

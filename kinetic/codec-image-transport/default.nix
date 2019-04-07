@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7f61900f36d1a74800ed7c89d1be308d31aeac291fc8449563d0c895737b295b";
   };
 
+  buildInputs = [ pluginlib image-transport sensor-msgs roscpp ffmpeg ];
   propagatedBuildInputs = [ pluginlib image-transport sensor-msgs roscpp ffmpeg ];
-  nativeBuildInputs = [ catkin pluginlib image-transport sensor-msgs roscpp ffmpeg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The codec_image_transport package'';

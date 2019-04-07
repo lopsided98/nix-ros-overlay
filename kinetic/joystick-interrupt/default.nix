@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "766f87e627921c632b905d8204f6ca8ad5c95e17ed2804e5366fe61501f8c81f";
   };
 
+  buildInputs = [ neonavigation-common topic-tools sensor-msgs roscpp geometry-msgs ];
   checkInputs = [ rostest roslint rosunit ];
   propagatedBuildInputs = [ neonavigation-common topic-tools sensor-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ catkin neonavigation-common topic-tools sensor-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interrupt cmd_vel by joystick input'';

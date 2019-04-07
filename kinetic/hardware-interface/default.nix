@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "87d812bfa3d2a03df47ff2cb240d6b8cfeb66511d622dd71453a76185e1b5641";
   };
 
+  buildInputs = [ roscpp ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ roscpp ];
-  nativeBuildInputs = [ catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Hardware Interface base class.'';

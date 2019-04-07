@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c9a9ba008cc63befa85f00182eae4c0d5927f923ebaa7d05137e914919b6736e";
   };
 
+  buildInputs = [ network-interface roslint ];
   propagatedBuildInputs = [ network-interface ];
-  nativeBuildInputs = [ network-interface catkin roslint ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ibeo_core package'';

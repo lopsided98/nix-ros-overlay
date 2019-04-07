@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b2732c77bfafcf29c26e9a2611de2c7af9ae1b845b9877be9645a1d6055d1327";
   };
 
+  buildInputs = [ hrpsys rostest ];
   propagatedBuildInputs = [ hrpsys openrtm-tools ];
-  nativeBuildInputs = [ hrpsys rostest catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The hrpsys_tools package'';

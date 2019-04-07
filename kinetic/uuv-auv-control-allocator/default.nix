@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "627d0cbf25e6e1ad2c3ecf2fc8c8ba64f7bea2029d6c4e949d760b209310c8eb";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Optimal allocation of forces and torques to thruster and fins of AUVs'';

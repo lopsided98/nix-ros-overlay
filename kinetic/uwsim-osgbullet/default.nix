@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a3b912aa1c36abd61d916a60ae4fb67596cdb5893de4caa5f2ae2ca93368ea6e";
   };
 
+  buildInputs = [ uwsim-osgworks openscenegraph boost uwsim-bullet ];
   propagatedBuildInputs = [ uwsim-osgworks boost uwsim-bullet catkin openscenegraph ];
-  nativeBuildInputs = [ uwsim-osgworks boost uwsim-bullet cmake openscenegraph ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The OSG Bullet library adapted to UWSim. See https://code.google.com/p/osgbullet'';

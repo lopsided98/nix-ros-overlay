@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d1aa144fc6c36368221cbb9d59c647bf6d52e4133fc9ba966c8a596a07a4e596";
   };
 
+  buildInputs = [ std-msgs sensor-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ message-generation std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used for 2D-Navigation.'';

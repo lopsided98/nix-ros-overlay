@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "35fe121c2f721cbbf7f457bd727f7ed9db57dee3b49eb5db58908fa7d925d575";
   };
 
+  buildInputs = [ rosgraph-msgs roscpp ];
   propagatedBuildInputs = [ rosgraph-msgs roscpp ];
-  nativeBuildInputs = [ rosgraph-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''System-wide logging mechanism for messages sent to the /rosout topic.'';

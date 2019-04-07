@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6867ba977e0f86416a88c4c1df098441f1e29f023496265f3caf5b40d33e16ef";
   };
 
+  buildInputs = [ roscpp sensor-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ roscpp sensor-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ catkin tf sensor-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4cf2d6cb2dec4df41e39e4b8395f0ae3d87abd10703941b5a767de07c7143b4e";
   };
 
+  buildInputs = [ libyamlcpp cost-map-core opencv3 boost ];
   propagatedBuildInputs = [ libyamlcpp cost-map-core opencv3 boost ];
-  nativeBuildInputs = [ boost libyamlcpp catkin cost-map-core opencv3 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Conversions between cost_maps and opencv images.'';

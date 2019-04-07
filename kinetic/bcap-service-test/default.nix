@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5ee0c5f4cb25bb45edc6975bb6b609714c0d4924f48140c835cfb30898c28fe8";
   };
 
+  buildInputs = [ bcap-service roscpp ];
   propagatedBuildInputs = [ roscpp ];
-  nativeBuildInputs = [ bcap-service catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The bcap service test package includes a node for testing bcap service node.'';

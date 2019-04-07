@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a56d2d703300accb15861dccee05182931eec249d114560614c9a4d1ef95681c";
   };
 
+  buildInputs = [ rqt-gui-py image-recognition-msgs image-recognition-util rospy rqt-gui ];
   propagatedBuildInputs = [ rqt-gui-py image-recognition-msgs image-recognition-util rospy rqt-gui ];
-  nativeBuildInputs = [ rqt-gui-py image-recognition-msgs image-recognition-util rospy catkin rqt-gui ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The image_recognition_rqt package'';

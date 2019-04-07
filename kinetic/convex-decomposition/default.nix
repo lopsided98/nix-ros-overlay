@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "990f02bf853c764648a95c2005bb32176728baf03ef691676979bdc45881a0fc";
   };
 
+  buildInputs = [ unzip ];
   propagatedBuildInputs = [ unzip ];
-  nativeBuildInputs = [ catkin unzip ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Convex Decomposition Tool for Robot Model'';

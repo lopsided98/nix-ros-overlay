@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "4c686f7bc3ed2e1b687d9f90a2f2fddb905f63dd72422dc15e9cda42cf47f798";
   };
 
+  buildInputs = [ aws-ros1-common aws-common roscpp cloudwatch-logs-common ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ aws-ros1-common aws-common roscpp cloudwatch-logs-common ];
-  nativeBuildInputs = [ aws-common cloudwatch-logs-common aws-ros1-common catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''CloudWatch Logger node for publishing logs to AWS CloudWatch Logs'';

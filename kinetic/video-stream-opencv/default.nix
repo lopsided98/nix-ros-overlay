@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "76b02cb8f5e67c4a53ce1f55bface4333292e0a2d84e710305c32d632bca7415";
   };
 
+  buildInputs = [ rospy camera-info-manager image-transport sensor-msgs cv-bridge roscpp ];
   propagatedBuildInputs = [ rospy camera-info-manager image-transport sensor-msgs cv-bridge roscpp ];
-  nativeBuildInputs = [ catkin rospy camera-info-manager image-transport sensor-msgs cv-bridge roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The video_stream_opencv package contains a node to publish a video stream (the protocols that

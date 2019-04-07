@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "9832eca7901959d7990e91415d9101f37eefd9c69aa91427f07550733e5f2af2";
   };
 
+  buildInputs = [ std-srvs message-generation cv-bridge nodelet dynamic-reconfigure std-msgs image-transport roscpp ];
   checkInputs = [ rostest rostopic image-view topic-tools rosbag image-proc compressed-image-transport rosservice ];
   propagatedBuildInputs = [ std-srvs cv-bridge message-runtime nodelet dynamic-reconfigure std-msgs image-transport roscpp ];
-  nativeBuildInputs = [ std-srvs image-transport cv-bridge catkin roscpp message-generation dynamic-reconfigure std-msgs nodelet ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>opencv_apps provides various nodes that run internally OpenCV's functionalities and publish the result as ROS topics. With opencv_apps, you can skip writing OpenCV application codes for a lot of its functionalities by simply running a launch file that corresponds to OpenCV's functionality you want.</p>

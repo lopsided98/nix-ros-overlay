@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "916b4e29ffbe5a67a09bc81e1c6ae19179b54d93f0b97a7bd499c38086a2cea3";
   };
 
+  buildInputs = [ diagnostic-updater hardware-interface roscpp controller-manager ];
   checkInputs = [ rostest roslaunch roslint ];
   propagatedBuildInputs = [ diagnostic-updater hardware-interface position-controllers joint-state-controller controller-manager robot-state-publisher roscpp joint-trajectory-controller ];
-  nativeBuildInputs = [ diagnostic-updater hardware-interface controller-manager catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The melfa_driver package'';

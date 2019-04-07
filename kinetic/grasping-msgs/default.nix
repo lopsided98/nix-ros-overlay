@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "afc0af83897f468ecf723597704aaebb582ce330d818ff073b397051c328aa46";
   };
 
+  buildInputs = [ shape-msgs message-generation actionlib moveit-msgs sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ shape-msgs message-runtime actionlib moveit-msgs sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ shape-msgs message-generation actionlib moveit-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for describing objects and how to grasp them.'';

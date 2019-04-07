@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e8a0a4a49987f30897611c7e0d8edc76ab63e82a607db095a6fc5aa2633c4e22";
   };
 
+  buildInputs = [ costmap-2d actionlib-msgs pcl roscpp move-base-msgs message-generation visualization-msgs actionlib std-msgs dynamic-reconfigure tf geometry-msgs ];
   propagatedBuildInputs = [ costmap-2d actionlib-msgs pcl roscpp move-base-msgs message-runtime visualization-msgs actionlib std-msgs dynamic-reconfigure tf geometry-msgs ];
-  nativeBuildInputs = [ costmap-2d actionlib-msgs pcl catkin roscpp move-base-msgs message-generation visualization-msgs actionlib std-msgs dynamic-reconfigure tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Implementation of <a href="http://www.robotfrontier.com/papers/cira97.pdf">frontier exploration</a> for ROS, extending on the existing navigation stack (costmap_2d, move_base).

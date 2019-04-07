@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bd8e294a9004e09b1eac382037172bc97ff33d703c06f1a5c83c428f26b6c4e9";
   };
 
+  buildInputs = [ rosbag-storage rosgraph-msgs boost roscpp qt5.qtbase ];
   propagatedBuildInputs = [ rosbag-storage rosgraph-msgs boost roscpp qt5.qtbase ];
-  nativeBuildInputs = [ rosbag-storage rosgraph-msgs boost catkin roscpp qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A rosout GUI viewer developed at Southwest Research Insititute as an

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "85f572414acd8e1edd1b8d7ebec9647e8b49fd809d293d4f69f3349813b2bded";
   };
 
+  buildInputs = [ gazebo-ros hardware-interface controller-manager pluginlib joint-limits-interface urdf roscpp transmission-interface gazebo-ros-control ];
   propagatedBuildInputs = [ gazebo-ros hardware-interface controller-manager pluginlib joint-limits-interface urdf roscpp transmission-interface gazebo-ros-control ];
-  nativeBuildInputs = [ gazebo-ros hardware-interface controller-manager pluginlib joint-limits-interface catkin urdf roscpp transmission-interface gazebo-ros-control ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a specialization of the gazebo_ros_control plugin.

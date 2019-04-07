@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6de0127434c711897d57f1bbe5aa0cbf02dc036056ecfd6685602fb364fdcc0e";
   };
 
+  buildInputs = [ gazebo-ros std-srvs joint-state-controller agvs-pad velocity-controllers roscpp agvs-description agvs-robot-control effort-controllers std-msgs tf ];
   propagatedBuildInputs = [ gazebo-ros std-srvs joint-state-controller agvs-pad velocity-controllers roscpp agvs-description agvs-robot-control effort-controllers std-msgs tf ];
-  nativeBuildInputs = [ gazebo-ros std-srvs joint-state-controller catkin agvs-pad velocity-controllers roscpp agvs-description agvs-robot-control effort-controllers std-msgs tf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The agvs_gazebo package. Launch files and worlds to run Gazebo.'';

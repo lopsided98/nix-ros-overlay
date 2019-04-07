@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0404fdb0e9b922ce077ecead23b4631406e9d24d7dcf7afd48b16818f2e5e138";
   };
 
+  buildInputs = [ xacro rosbash ];
   propagatedBuildInputs = [ hsr-meshes rviz rosbash robot-state-publisher joint-state-publisher xacro ];
-  nativeBuildInputs = [ catkin xacro rosbash ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF files for Toyota HSR'';

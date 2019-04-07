@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "442b5e3b9e071e2968f829c7a9d0088aaac898135c92c7f0017de0c0ba1ef59a";
   };
 
+  buildInputs = [ nav-msgs geometry-msgs std-msgs sensor-msgs tf turtlebot3-msgs roscpp ];
   propagatedBuildInputs = [ nav-msgs robot-state-publisher geometry-msgs std-msgs sensor-msgs tf turtlebot3-msgs roscpp ];
-  nativeBuildInputs = [ nav-msgs catkin geometry-msgs std-msgs sensor-msgs tf turtlebot3-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for TurtleBot3 fake node. With this package, simple tests can be done without a robot.

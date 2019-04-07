@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d96d4656313b90d6d89a8eac560fe8213e1a9e19a710eb098f465a5a8d2d9976";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tuw_airskin_msgs package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7b23664447588d905403914f8b516a98b2c7b157c39bd2659748c0381fb70a0d";
   };
 
+  buildInputs = [ diagnostic-updater socketcan-interface std-msgs diagnostic-msgs roscpp ];
   propagatedBuildInputs = [ pythonPackages.numpy diagnostic-updater cob-srvs socketcan-interface rospy std-msgs diagnostic-msgs cob-msgs roscpp ];
-  nativeBuildInputs = [ diagnostic-updater socketcan-interface std-msgs diagnostic-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver package for interfacing the battery management system (BMS) on Care-O-bot.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2356fa55caad20d964941c691329ab0b8d1487b9d11ff514bdcc4fca3af7e70d";
   };
 
+  buildInputs = [ nav-msgs geometry-msgs sensor-msgs tf roscpp ];
   propagatedBuildInputs = [ nav-msgs geometry-msgs sensor-msgs tf roscpp ];
-  nativeBuildInputs = [ nav-msgs catkin geometry-msgs sensor-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Wrapper around Particle Filter implementation.

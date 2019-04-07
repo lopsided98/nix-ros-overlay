@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "045c7102c2b9756890ea7def52b0072ec44f1432850ef02f05ada35d2e855e20";
   };
 
+  buildInputs = [ exotica-core ];
   propagatedBuildInputs = [ exotica-core ];
-  nativeBuildInputs = [ exotica-core catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Implementation of the Approximate Inference Control algorithm (AICO)'';

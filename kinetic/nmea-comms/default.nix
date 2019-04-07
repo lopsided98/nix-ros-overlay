@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "50ef1deacdb9b1bc3f9fa5251264b1a8e7e3fb495828b1e6c47db086a20f5716";
   };
 
+  buildInputs = [ rostest roslint roslaunch roscpp nmea-msgs ];
   propagatedBuildInputs = [ roscpp nmea-msgs ];
-  nativeBuildInputs = [ rostest catkin roslint roslaunch roscpp nmea-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The nmea_comms package provides helper nodes for transmitting and receiving

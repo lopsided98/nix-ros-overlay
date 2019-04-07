@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5923bce29d4fa4a29dcd3400ebf777fa3ad611318ff33b1e109331f3a8c2245b";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Test messages for rosjava.'';

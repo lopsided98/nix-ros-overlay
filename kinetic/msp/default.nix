@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "aae98cb60d11d1c32809e0f6660157a6af15f5e82767eb180241243df5098ee4";
   };
 
-  nativeBuildInputs = [ cmake asio ];
+  buildInputs = [ asio ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''Implementation of the MultiWii Serial Protocol (MSP)'';

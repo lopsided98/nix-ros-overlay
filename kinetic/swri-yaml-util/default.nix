@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a3aa3f99dd054c98671cd4712364c570747729f7dfef053885370e48c1ad4980";
   };
 
+  buildInputs = [ libyamlcpp boost ];
   propagatedBuildInputs = [ libyamlcpp boost ];
-  nativeBuildInputs = [ libyamlcpp catkin boost pkg-config ];
+  nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''Provides wrappers around the yaml-cpp library for various utility functions

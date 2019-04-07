@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "a949bc19bdcb19900eade604f210bfca6af6cdd2d652f0c834073064a82329ac";
   };
 
+  buildInputs = [ hardware-interface controller-interface urdf libfranka joint-limits-interface roscpp ];
   checkInputs = [ rostest gtest franka-description ];
   propagatedBuildInputs = [ hardware-interface controller-interface urdf libfranka joint-limits-interface roscpp ];
-  nativeBuildInputs = [ hardware-interface controller-interface urdf libfranka joint-limits-interface catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''franka_hw provides hardware interfaces for using Franka Emika research robots with ros_control'';

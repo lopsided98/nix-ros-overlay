@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4a63347c6c46154ad0e35b0a5f652aaee3b1cad20378b17ab80c163f7fd709f8";
   };
 
+  buildInputs = [ std-srvs control-msgs schunk-libm5api trajectory-msgs sensor-msgs linuxHeaders cob-srvs libntcan urdf std-msgs diagnostic-msgs roscpp libpcan ];
   propagatedBuildInputs = [ std-srvs control-msgs schunk-libm5api trajectory-msgs sensor-msgs linuxHeaders cob-srvs libntcan urdf std-msgs diagnostic-msgs roscpp libpcan ];
-  nativeBuildInputs = [ std-srvs control-msgs schunk-libm5api trajectory-msgs sensor-msgs catkin linuxHeaders cob-srvs libntcan urdf std-msgs diagnostic-msgs roscpp libpcan ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This packages provides a configurable driver of a chain

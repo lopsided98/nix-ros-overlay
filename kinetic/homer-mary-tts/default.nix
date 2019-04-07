@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "25077804fdec7a71ac9677c2952107c514ae41d2994e568d08578e36a90d8ed8";
   };
 
+  buildInputs = [ rospy pythonPackages.catkin-pkg roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy roscpp pythonPackages.pyaudio dynamic-reconfigure ];
-  nativeBuildInputs = [ dynamic-reconfigure catkin rospy pythonPackages.catkin-pkg roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The homer_mary_tts package'';

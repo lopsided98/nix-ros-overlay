@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "aab566e09adc7db91774769602e1806f087fdb62970a453e7707ca5596c44f13";
   };
 
+  buildInputs = [ hardware-interface ];
   propagatedBuildInputs = [ hardware-interface ];
-  nativeBuildInputs = [ hardware-interface catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pal_hardware_interfaces package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "70d8ffe9e7e466a9b0929b3fbba8182560078459f079d539702cdab9b9dcffbc";
   };
 
+  buildInputs = [ costmap-2d nav-msgs base-local-planner ecl-linear-algebra tf roscpp ecl-build ];
   propagatedBuildInputs = [ costmap-2d nav-msgs base-local-planner ecl-linear-algebra tf roscpp ecl-build ];
-  nativeBuildInputs = [ costmap-2d nav-msgs base-local-planner ecl-linear-algebra catkin tf roscpp ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Ros navigation utilities.'';

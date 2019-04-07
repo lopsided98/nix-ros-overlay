@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8b1d84160c5af342e0bf2485329c5408492e911edf9e9141083738b27dbed0d4";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides standard messages specific to Heron, especially for 

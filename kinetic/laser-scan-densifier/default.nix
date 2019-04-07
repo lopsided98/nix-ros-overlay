@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, roscpp, catkin, nodelet }:
+{ lib, buildRosPackage, fetchurl, roscpp, sensor-msgs, catkin, nodelet }:
 buildRosPackage {
   pname = "ros-kinetic-laser-scan-densifier";
   version = "0.6.13";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5cdb1eb64c8c21141017c335944d48e3c9b46f0f6e332c2bbb0c2ea28049bf64";
   };
 
+  buildInputs = [ sensor-msgs roscpp nodelet ];
   propagatedBuildInputs = [ sensor-msgs roscpp nodelet ];
-  nativeBuildInputs = [ catkin sensor-msgs roscpp nodelet ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The laser_scan_densifier takes in a LaserScan message and densifies it.

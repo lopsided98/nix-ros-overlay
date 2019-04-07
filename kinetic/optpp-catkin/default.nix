@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "9af2eb6cb36367547f1ef5a9ae0f9a18ea0b8035a72930fa667bb5b616ac2a9e";
   };
 
-  nativeBuildInputs = [ autoconf git catkin gfortran ];
+  buildInputs = [ autoconf git gfortran ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The OPT++ catkin wrapper package'';

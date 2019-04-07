@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "63c1a1ecf12184be1954ffa38860b918033dc4f169dda552791abb1443452528";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generic Messages for Communication with an Automotive Autonomous Platform'';

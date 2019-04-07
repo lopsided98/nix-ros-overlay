@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "353fdb38ae42360f5d134583ddf045c36c6bb959b3406c46257f3e2b0774f5e7";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs rosbag-migration-rule message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package defines messages for defining robot trajectories. These messages are

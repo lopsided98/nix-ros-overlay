@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "afa18dd5fdfadd08f2c2707c74d3119beabe30017a946d973176d56ce9b24094";
   };
 
+  buildInputs = [ alsaLib pulseaudio gtk3 gtk2 glib ];
   propagatedBuildInputs = [ alsaLib pulseaudio gtk3 gtk2 glib ];
-  nativeBuildInputs = [ alsaLib pulseaudio gtk3 git wget gtk2 cmake glib ];
+  nativeBuildInputs = [ git cmake wget ];
 
   meta = {
     description = ''WebRTC Native API'';

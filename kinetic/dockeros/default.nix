@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c7291cd8989bb1613c53c15193d16f82e8e438274c1f221352c1f695138a7489";
   };
 
+  buildInputs = [ pythonPackages.docker ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ pythonPackages.docker ];
-  nativeBuildInputs = [ pythonPackages.docker catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Simply running ros nodes in docker containers on remote robots.'';

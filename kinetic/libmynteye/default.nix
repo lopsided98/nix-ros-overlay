@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "d80fe8ef6765408447ec457fc22e3c84117b639eb592054b7d1ef7c95f796655";
   };
 
-  nativeBuildInputs = [ catkin opencv3 ];
+  buildInputs = [ opencv3 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The mynt eye sdk package'';

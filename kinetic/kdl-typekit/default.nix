@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1e4b5606f26d32ba7f0cb68caaa986117e21cd9aaa0e5a090ab415a530d6fbbc";
   };
 
+  buildInputs = [ ocl orocos-kdl rtt ];
   propagatedBuildInputs = [ ocl orocos-kdl rtt ];
-  nativeBuildInputs = [ catkin ocl orocos-kdl rtt ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the KDL RTT bindings'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "58b43b0685e0d6fe1b2476e39feaaacd7220e146fe5227547e00fa201fb0a602";
   };
 
+  buildInputs = [ libyamlcpp dynamixel-sdk op3-offset-tuner-msgs op3-base-module std-msgs roscpp robotis-controller ];
   propagatedBuildInputs = [ libyamlcpp dynamixel-sdk op3-offset-tuner-msgs op3-base-module std-msgs roscpp robotis-controller ];
-  nativeBuildInputs = [ libyamlcpp dynamixel-sdk op3-offset-tuner-msgs op3-base-module std-msgs catkin roscpp robotis-controller ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The offset_tuner_server package'';

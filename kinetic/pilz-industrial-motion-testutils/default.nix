@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "11eda60d34e77a7b334e6fa9dbf61d19c6a8d2c6caaf240802a56fff33363491";
   };
 
+  buildInputs = [ moveit-msgs eigen-conversions pilz-msgs moveit-core ];
   propagatedBuildInputs = [ moveit-msgs pilz-msgs moveit-core ];
-  nativeBuildInputs = [ catkin moveit-core moveit-msgs eigen-conversions pilz-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Helper scripts and functionality to test industrial motion generation'';

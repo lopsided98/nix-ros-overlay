@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "13405c7e5c550b8aadbf595d9c5694a4368a28185063264e3d5bf2e559502cba";
   };
 
+  buildInputs = [ controller-manager hardware-interface naoqi-libqicore sensor-msgs roscpp diagnostic-updater rospy std-msgs diagnostic-msgs tf naoqi-libqi geometry-msgs ];
   propagatedBuildInputs = [ controller-manager hardware-interface naoqi-libqicore sensor-msgs roscpp rospy std-msgs tf naoqi-libqi geometry-msgs ];
-  nativeBuildInputs = [ controller-manager hardware-interface naoqi-libqicore sensor-msgs catkin roscpp diagnostic-updater rospy std-msgs diagnostic-msgs tf naoqi-libqi geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package containing the hardware interface to connect to Nao, Romeo, or Pepper robots.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d989d8305bec3c3779af859a65be2f8dc9fedb90d1d960767bfa35950f66fd5f";
   };
 
+  buildInputs = [ swri-math-util pluginlib mapviz glew roscpp swri-yaml-util libqt-dev libqt-opengl-dev jsoncpp tf swri-transform-util ];
   propagatedBuildInputs = [ swri-math-util pluginlib mapviz libqt-core libqt-opengl roscpp jsoncpp swri-yaml-util glew tf swri-transform-util ];
-  nativeBuildInputs = [ swri-math-util pluginlib mapviz glew catkin roscpp qt-qmake swri-yaml-util libqt-dev libqt-opengl-dev jsoncpp tf swri-transform-util ];
+  nativeBuildInputs = [ catkin qt-qmake ];
 
   meta = {
     description = ''Tile map provides a slippy map style interface for visualizing 

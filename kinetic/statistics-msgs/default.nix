@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-statistics-msgs";
   version = "0.13.4";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0593822189fe6b7bae956bac76fad51b843825bee0a0d6a5a6f6b1689db7fa82";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages related to the Point Grey camera driver.'';

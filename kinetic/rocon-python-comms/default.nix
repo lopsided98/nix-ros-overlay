@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "241eb85920e0822ea5f6bb9911d5dc0cf3ff32c6ccddc5d5acc9e09029d17699";
   };
 
+  buildInputs = [ rostest pythonPackages.catkin-pkg ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ unique-id genpy rosservice pythonPackages.pyyaml uuid-msgs rocon-console rocon-service-pair-msgs rosgraph rostopic rospy roslib rosnode ];
-  nativeBuildInputs = [ rostest pythonPackages.catkin-pkg catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Service pair libraries for pub/sub non-blocking services.'';

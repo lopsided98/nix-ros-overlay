@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c82e1710ff94764048e06d5f4485f6e18b372d622c012079793321ab1263bae8";
   };
 
+  buildInputs = [ boost cmake-modules libyamlcpp sensor-msgs op3-walking-module-msgs roscpp op3-ball-detector op3-action-module-msgs roslib robotis-math eigen std-msgs robotis-controller-msgs geometry-msgs ];
   propagatedBuildInputs = [ op3-web-setting-tool boost cmake-modules op3-manager libyamlcpp op3-camera-setting-tool sensor-msgs op3-walking-module-msgs roscpp ros-madplay-player op3-ball-detector op3-action-module-msgs robotis-math roslib eigen std-msgs robotis-controller-msgs geometry-msgs ];
-  nativeBuildInputs = [ boost cmake-modules libyamlcpp sensor-msgs catkin op3-walking-module-msgs roscpp op3-ball-detector op3-action-module-msgs roslib robotis-math eigen std-msgs robotis-controller-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''OP3 default demo

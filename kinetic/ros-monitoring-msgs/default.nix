@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6fab3b96fbc03dae4c15ec6b50ca013837658fffaddbb4698f1832972c60ca97";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for publishing monitoring data about ROS systems'';

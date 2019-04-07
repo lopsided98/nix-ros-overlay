@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "347b7d966462fd1f273b2e36f3ceeb83675508afd24897f1bb838ece185e279a";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gmapping dwa-local-planner map-server amcl base-local-planner navfn move-base ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Autonomous mapping and navigation demos for the Clearpath Grizzly'';

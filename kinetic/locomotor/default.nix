@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "19b6f2635913dfeeb3117561d98839c16f35661ef850c80e07477e1d8a5165c5";
   };
 
+  buildInputs = [ pluginlib nav-core2 nav-2d-utils nav-msgs actionlib rospy locomotor-msgs roscpp nav-2d-msgs geometry-msgs ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ pluginlib nav-core2 nav-2d-utils nav-msgs actionlib rospy locomotor-msgs roscpp nav-2d-msgs geometry-msgs ];
-  nativeBuildInputs = [ pluginlib nav-core2 catkin nav-2d-utils nav-msgs actionlib rospy locomotor-msgs roscpp nav-2d-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Locomotor is an extensible path planning coordination engine that replaces move_base. The goal is to provide a mechanism for controlling what happens when the global and local planners succeed and fail. It leverages ROS callback queues to coordinate multiple threads.'';

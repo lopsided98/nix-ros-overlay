@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d98155bcfb53b5c1f254c3c565fe54edfadda6258ecee1b3888c57c78b8d059b";
   };
 
+  buildInputs = [ dynamic-reconfigure std-msgs sensor-msgs serial roscpp ];
   propagatedBuildInputs = [ dynamic-reconfigure std-msgs sensor-msgs serial roscpp ];
-  nativeBuildInputs = [ catkin dynamic-reconfigure std-msgs sensor-msgs serial roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The teraranger package'';

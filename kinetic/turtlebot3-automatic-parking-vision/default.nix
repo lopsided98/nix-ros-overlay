@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e83048ac1a2f6be0ca3abbaf2819e858b8b88ff4ae80d05def1c5746b215fa79";
   };
 
+  buildInputs = [ nav-msgs rospy std-msgs sensor-msgs ar-track-alvar-msgs ar-track-alvar geometry-msgs ];
   propagatedBuildInputs = [ ar-track-alvar sensor-msgs ar-track-alvar-msgs nav-msgs rviz turtlebot3-bringup robot-state-publisher rospy std-msgs joint-state-publisher geometry-msgs ];
-  nativeBuildInputs = [ nav-msgs catkin rospy std-msgs sensor-msgs ar-track-alvar-msgs ar-track-alvar geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for TurtleBot3 automatic_parking which uses ar code. This example needs a printed ar code and a TurtleBot3.'';

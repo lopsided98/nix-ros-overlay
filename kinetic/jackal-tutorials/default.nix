@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "a7f26d6969c18c80f135c4c7e2af701ecd16c1f50e0cc4e6bab9c5e9cd7d91f5";
   };
 
-  nativeBuildInputs = [ rosdoc-lite catkin ];
+  buildInputs = [ rosdoc-lite ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Jackal's tutorials.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "44eb8f5cd6b32e784a2360cdd96e74d1453608661eb083f3275ed4e42390dd92";
   };
 
+  buildInputs = [ cmake-modules roslint eigen eigen-conversions roscpp ];
   propagatedBuildInputs = [ roscpp eigen ];
-  nativeBuildInputs = [ catkin cmake-modules roslint eigen eigen-conversions roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Quickly load variables from rosparam with good command line error checking.'';

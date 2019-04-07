@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6cc348641406c6549ccc7e1311e7f53f1dd7e91790f588c081ef43eb199e915a";
   };
 
+  buildInputs = [ std-msgs sensor-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs pythonPackages.scipy geometry-msgs tf ];
-  nativeBuildInputs = [ catkin std-msgs sensor-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Node to combine IMU data (accelerometers and gyroscopes) with Compass data (magnetometers) for a cleaner reading of a Vehicles Heading'';

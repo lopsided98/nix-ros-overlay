@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1ab708070d327862301d048d17a06346ea18b3e72eeacc2bcf756b1060f2da9f";
   };
 
+  buildInputs = [ sensor-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ catkin sensor-msgs message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_worldmodel_msgs is a message package to comes with the hector_worldmodel stack.

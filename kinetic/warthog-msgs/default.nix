@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7a2debb78ec4379a8c84a543d60d000adcd01c604be4ef7edd75134a84d27898";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages exclusive to Warthog, especially for representing low-level motor commands and sensors.'';

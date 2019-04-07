@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5a25f39bc13940211cec4fae8d377da4117fa07033d73226a588bce4a9e34129";
   };
 
+  buildInputs = [ openssl libusb1 pkg-config linuxHeaders ];
   propagatedBuildInputs = [ openssl libusb1 linuxHeaders ];
-  nativeBuildInputs = [ libusb1 linuxHeaders openssl catkin pkg-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Library for capturing data from the Intel(R) RealSense(TM) F200, SR300, R200, LR200 and ZR300 cameras. This effort was initiated to better support researchers, creative coders, and app developers in domains such as robotics, virtual reality, and the internet of things. Several often-requested features of RealSense(TM); devices are implemented in this project, including multi-camera capture.'';

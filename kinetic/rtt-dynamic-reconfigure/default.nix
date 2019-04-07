@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a78802b54ba63874baffcd130dc05b1b22f338ef0241aceb7658862a2c0be00f";
   };
 
+  buildInputs = [ roscpp rtt-ros dynamic-reconfigure ];
   propagatedBuildInputs = [ rtt-rosnode roscpp rtt-ros dynamic-reconfigure ];
-  nativeBuildInputs = [ catkin roscpp rtt-ros dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rtt_dynamic_reconfigure package'';

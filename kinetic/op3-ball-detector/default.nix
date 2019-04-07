@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8bb00a403db528463977ca3d432f4be635d27c91366963b156f37116f1930e86";
   };
 
+  buildInputs = [ boost libyamlcpp image-transport sensor-msgs cv-bridge roslib message-generation dynamic-reconfigure std-msgs roscpp opencv3 geometry-msgs ];
   propagatedBuildInputs = [ boost usb-cam uvc-camera libyamlcpp image-transport sensor-msgs cv-bridge roslib message-runtime dynamic-reconfigure std-msgs roscpp opencv3 geometry-msgs ];
-  nativeBuildInputs = [ boost libyamlcpp image-transport sensor-msgs cv-bridge catkin roslib message-generation dynamic-reconfigure std-msgs roscpp opencv3 geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package implements a circle-like shape detector of the input image.

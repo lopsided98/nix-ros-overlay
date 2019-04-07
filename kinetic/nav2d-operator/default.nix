@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3261678917200a28bf0bba2b608fb70aacd15feabf1c0747f1faa4f618083841";
   };
 
+  buildInputs = [ costmap-2d message-generation sensor-msgs tf roscpp ];
   propagatedBuildInputs = [ costmap-2d message-runtime sensor-msgs tf roscpp ];
-  nativeBuildInputs = [ costmap-2d message-generation catkin sensor-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The operator is a lightweight, purely reactive obstacle-avoidance

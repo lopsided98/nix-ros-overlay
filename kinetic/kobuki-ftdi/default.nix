@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-command-line, catkin, libftdi, pkg-config, libusb }:
+{ lib, buildRosPackage, fetchurl, ecl-command-line, catkin, pkg-config, libftdi, libusb }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-ftdi";
   version = "0.7.8-r1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c9469f2e65acc68339b7b100eba98e364ed334be32c22519c38e55f1cf5ee4ee";
   };
 
+  buildInputs = [ libftdi ecl-command-line libusb pkg-config ];
   propagatedBuildInputs = [ libusb libftdi ecl-command-line ];
-  nativeBuildInputs = [ libftdi ecl-command-line catkin libusb pkg-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Utilities for flashing and enabling Kobuki's USB connection.

@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "0a09c49dbdab8f7a533c9ac348ad6e65582f7cece91a6dda9368ce64509cf86a";
   };
 
-  nativeBuildInputs = [ catkin openjdk ];
+  buildInputs = [ openjdk ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''meshes for the Aldebaran Robotics Pepper'';

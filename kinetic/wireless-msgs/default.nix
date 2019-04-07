@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "640e622ca48d718ae7f3acf0c250c7768bee747bc9ecdcd9ed71391c63d735a4";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for describing aspects of a wireless network, connection, etc.'';

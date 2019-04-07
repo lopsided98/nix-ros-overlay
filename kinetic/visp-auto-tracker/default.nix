@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fb49ad259aeac43ef505b5bb02e6b0720e601ca257d59afeb7318d8f072f8c9f";
   };
 
+  buildInputs = [ libdmtx visp-bridge sensor-msgs message-filters zbar visp visp-tracker resource-retriever std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ libdmtx visp-bridge sensor-msgs message-filters zbar visp visp-tracker resource-retriever std-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ libdmtx visp-bridge sensor-msgs catkin message-filters zbar visp visp-tracker resource-retriever std-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Online automated pattern-based object tracker relying on visual servoing.

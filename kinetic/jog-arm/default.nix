@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "382bcfbf79085567186b63fa2f6bfa9a9243bacaca122421c1dacd9cd1199d25";
   };
 
+  buildInputs = [ moveit-ros-move-group cmake-modules sensor-msgs joy moveit-ros-manipulation roscpp rospy tf moveit-ros-planning-interface geometry-msgs ];
   propagatedBuildInputs = [ moveit-ros-move-group cmake-modules sensor-msgs joy moveit-ros-manipulation roscpp rospy tf moveit-ros-planning-interface geometry-msgs ];
-  nativeBuildInputs = [ moveit-ros-move-group cmake-modules sensor-msgs joy catkin moveit-ros-manipulation roscpp rospy tf moveit-ros-planning-interface geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides manipulator cartesian jogging.'';

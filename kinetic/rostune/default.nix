@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "534824c7b7e90a2a392ddb2bd82ac53ee867626be2a781a8fe55438afca1a6a7";
   };
 
+  buildInputs = [ std-msgs message-generation topic-tools ];
   propagatedBuildInputs = [ std-msgs topic-tools message-runtime ];
-  nativeBuildInputs = [ std-msgs message-generation catkin topic-tools ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rostune is a tool that helps ROS developers distribute their nodes in the most effective way. It collects statistics for topics and nodes, such as CPU and network usage.'';

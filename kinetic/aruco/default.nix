@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6631c37497ef6d33f00bc31237fad18e38e7435815df99804ab2c3dea77aa7a9";
   };
 
+  buildInputs = [ opencv3 ];
   propagatedBuildInputs = [ opencv3 ];
-  nativeBuildInputs = [ catkin opencv3 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain).

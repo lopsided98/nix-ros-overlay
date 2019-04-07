@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9964d5d08e9c46f13870d07658f54ef869ad0e2e79f3a8fd5cc82c781774f96d";
   };
 
+  buildInputs = [ std-msgs message-generation actionlib-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime actionlib-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation actionlib-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for use with robot_controllers framework.'';

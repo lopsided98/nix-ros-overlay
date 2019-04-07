@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "db632abf2e50a94225e7aec7de6585a92ba2494c4cb5e0459752a581e66e948b";
   };
 
+  buildInputs = [ diagnostic-updater rostest rospy ];
   propagatedBuildInputs = [ diagnostic-updater pythonPackages.psutil rospy hddtemp tf ];
-  nativeBuildInputs = [ diagnostic-updater rostest catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''diagnostic_common_diagnostics'';

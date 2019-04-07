@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f5855c1044dd86dfaab57dace95580d1838d7e0330a8a21eb0ec2d93d850216f";
   };
 
+  buildInputs = [ rdl-msgs rostest nav-msgs rdl-urdfreader sensor-msgs roscpp rdl-dynamics geometry-msgs ];
   propagatedBuildInputs = [ rdl-msgs rostest nav-msgs rdl-urdfreader sensor-msgs roscpp rdl-dynamics geometry-msgs ];
-  nativeBuildInputs = [ rdl-msgs rdl-urdfreader sensor-msgs catkin rdl-dynamics rostest nav-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS interface into rdl tools'';

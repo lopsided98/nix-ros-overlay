@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "dae77302c7c08cc7d0ff33f26b77f7a00168e5e99ccc8d7b55b1f60a6cecb85b";
   };
 
+  buildInputs = [ diagnostic-updater linuxConsoleTools sensor-msgs roscpp ];
   checkInputs = [ rosbag ];
   propagatedBuildInputs = [ diagnostic-updater linuxConsoleTools sensor-msgs roscpp ];
-  nativeBuildInputs = [ diagnostic-updater catkin sensor-msgs linuxConsoleTools roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS driver for a generic Linux joystick.

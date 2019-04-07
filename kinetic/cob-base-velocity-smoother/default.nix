@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d303591c5669b85d760d68a9e08a67818bee2ba7d798a7190d906cc5838e2567";
   };
 
+  buildInputs = [ nav-msgs boost roslint dynamic-reconfigure std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ nav-msgs boost roslint dynamic-reconfigure std-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ nav-msgs boost roslint dynamic-reconfigure std-msgs catkin roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The 'cob_base_velocity_smoother' reads velocity messages and publishes messages of the same type for &quot;smoothed&quot; velocity to avoid shaking behavior.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "522ca0c3b697a586943eb48df1ca8a106b1d0b8d5b3210c4747531cfe9dc3488";
   };
 
+  buildInputs = [ nav-msgs control-msgs actionlib topic-tools sensor-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ nav-msgs control-msgs actionlib topic-tools sensor-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ nav-msgs catkin control-msgs actionlib topic-tools sensor-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Teleoperation for fetch and freight.'';

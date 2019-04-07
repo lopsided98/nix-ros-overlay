@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "771ca836cc90bcb9b2228222bdcce39b97556db914d27f36916596fee36d6d91";
   };
 
+  buildInputs = [ diagnostic-updater std-srvs pr2-controller-manager ethercat-hardware diagnostic-msgs realtime-tools roscpp ];
   propagatedBuildInputs = [ diagnostic-updater std-srvs pr2-controller-manager ethercat-hardware diagnostic-msgs realtime-tools roscpp ];
-  nativeBuildInputs = [ diagnostic-updater std-srvs pr2-controller-manager ethercat-hardware diagnostic-msgs realtime-tools catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Main loop that runs the robot.'';

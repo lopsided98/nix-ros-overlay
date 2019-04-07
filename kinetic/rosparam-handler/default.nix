@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "06fe3ee40f9a9901065ee9bde10fb96f6177fc5bab1fbf40f555f61bb8f51729";
   };
 
+  buildInputs = [ rostest ];
   checkInputs = [ roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ catkin ];
-  nativeBuildInputs = [ rostest catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An easy wrapper for using parameters in ROS.'';

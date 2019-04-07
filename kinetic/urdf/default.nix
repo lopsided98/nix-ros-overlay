@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "3ef94e4c96e189e1df3b4e57d0309bd1bd76a7a28a674a5944e26b8fd674cb33";
   };
 
+  buildInputs = [ urdfdom-headers tinyxml pluginlib cmake-modules urdfdom roscpp rosconsole-bridge urdf-parser-plugin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ urdfdom-headers tinyxml pluginlib roscpp rosconsole-bridge urdfdom ];
-  nativeBuildInputs = [ pluginlib cmake-modules catkin tinyxml rosconsole-bridge urdfdom urdf-parser-plugin urdfdom-headers roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a C++ parser for the Unified Robot Description

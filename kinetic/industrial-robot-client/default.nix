@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, actionlib-msgs, trajectory-msgs, sensor-msgs, catkin, industrial-utils, industrial-msgs, simple-message, urdf, robot-state-publisher, actionlib, std-msgs, roslaunch, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, control-msgs, actionlib-msgs, trajectory-msgs, sensor-msgs, industrial-utils, catkin, industrial-msgs, simple-message, urdf, robot-state-publisher, actionlib, std-msgs, roslaunch, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-industrial-robot-client";
   version = "0.7.0";
@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "fb9e9464e6fb6f86cfd77efcd8a67a1402f5eba2a16a038fb6c32b8c33fa4055";
   };
 
+  buildInputs = [ actionlib-msgs control-msgs trajectory-msgs sensor-msgs industrial-utils industrial-msgs simple-message urdf actionlib std-msgs roslaunch roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ actionlib-msgs control-msgs trajectory-msgs sensor-msgs industrial-utils industrial-msgs simple-message urdf robot-state-publisher actionlib std-msgs roscpp ];
-  nativeBuildInputs = [ actionlib-msgs control-msgs trajectory-msgs sensor-msgs industrial-utils catkin industrial-msgs simple-message urdf actionlib std-msgs roslaunch roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''industrial robot client contains generic clients for connecting 

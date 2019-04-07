@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b73fbb676cee85ef6d2fc2e658ee6bc8928dff8d2b2b14efde44870c752364f6";
   };
 
+  buildInputs = [ rospy ];
   propagatedBuildInputs = [ rospy ];
-  nativeBuildInputs = [ catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS wrapping of gmplot library'';

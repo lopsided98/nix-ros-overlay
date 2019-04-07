@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f43112e8fd99573415ffe4b82aa281353bd8cd25461e5d2dc3437b46ea23e4c9";
   };
 
+  buildInputs = [ move-base ];
   propagatedBuildInputs = [ move-base ];
-  nativeBuildInputs = [ catkin move-base ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package holds common configuration files for running the'';

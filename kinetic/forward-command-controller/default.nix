@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c837c1c4f2e07d4a0709cf9d824f9e4add7dd083a5bd26945d335746e78b6e66";
   };
 
+  buildInputs = [ std-msgs hardware-interface controller-interface realtime-tools ];
   propagatedBuildInputs = [ std-msgs hardware-interface controller-interface realtime-tools ];
-  nativeBuildInputs = [ hardware-interface controller-interface std-msgs realtime-tools catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''forward_command_controller'';

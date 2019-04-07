@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "802b223aa02c760a62d63c31de19f472da76857467906b5fa1ca9347f19e22dc";
   };
 
+  buildInputs = [ std-srvs boost cmake-modules sensor-msgs message-filters dynamic-edt-3d octomap-msgs roscpp nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs tf pcl-conversions geometry-msgs eigen ];
   propagatedBuildInputs = [ std-srvs boost cmake-modules sensor-msgs message-filters dynamic-edt-3d octomap-msgs roscpp nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs tf pcl-conversions geometry-msgs eigen ];
-  nativeBuildInputs = [ std-srvs catkin octomap-msgs nav-msgs octomap pcl-ros std-msgs roscpp visualization-msgs tf pcl-conversions geometry-msgs boost cmake-modules sensor-msgs message-filters dynamic-edt-3d octomap-ros eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>6D localization for humanoid robots based on depth data (laser, point clouds).

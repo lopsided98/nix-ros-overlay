@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7a251c8cc43731f47d2a5f4b9b8961523a77d88a0f183a7aaa5ca935227636af";
   };
 
+  buildInputs = [ std-srvs message-generation rospy roscpp geometry-msgs ];
   propagatedBuildInputs = [ std-srvs message-runtime rospy roscpp geometry-msgs ];
-  nativeBuildInputs = [ std-srvs message-generation rospy catkin roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Rotate camera to look at a given pose.'';

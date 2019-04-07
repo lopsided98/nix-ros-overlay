@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5990b1818fb3cc2d7921fde37ddbe0ec0ebcea00c279d82c5d79b4723f7ddba9";
   };
 
+  buildInputs = [ ecl-license ecl-errors ecl-config ecl-build ];
   propagatedBuildInputs = [ ecl-license ecl-errors ecl-config ecl-build ];
-  nativeBuildInputs = [ ecl-license ecl-errors catkin ecl-config ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides a portable set of time functions that are especially useful for 

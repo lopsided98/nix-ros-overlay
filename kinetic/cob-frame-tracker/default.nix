@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3aa539093d6e9643706b2bb1ac5839f2bfb632ae374aba67a722c566fee2de55";
   };
 
+  buildInputs = [ kdl-conversions std-srvs orocos-kdl actionlib-msgs actionlib std-msgs roscpp visualization-msgs tf geometry-msgs kdl-parser boost roslint control-toolbox sensor-msgs cob-srvs message-generation interactive-markers dynamic-reconfigure ];
   propagatedBuildInputs = [ kdl-conversions std-srvs orocos-kdl actionlib-msgs actionlib std-msgs rospy roscpp visualization-msgs tf geometry-msgs kdl-parser boost roslint control-toolbox sensor-msgs cob-srvs message-runtime interactive-markers dynamic-reconfigure ];
-  nativeBuildInputs = [ kdl-conversions std-srvs orocos-kdl actionlib-msgs catkin actionlib std-msgs roscpp visualization-msgs tf geometry-msgs kdl-parser boost roslint control-toolbox sensor-msgs cob-srvs message-generation interactive-markers dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_frame_tracker package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1a515ed7a40b86917533b8ccc7e6b7989dece2503fd6791287ae9f0357a0662e";
   };
 
+  buildInputs = [ sensor-msgs roscpp nav-msgs message-generation message-runtime mrpt1 dynamic-reconfigure std-msgs visualization-msgs mrpt-bridge tf ];
   propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs message-generation message-runtime mrpt1 dynamic-reconfigure std-msgs visualization-msgs mrpt-bridge tf ];
-  nativeBuildInputs = [ sensor-msgs catkin roscpp nav-msgs message-generation message-runtime mrpt1 dynamic-reconfigure std-msgs visualization-msgs mrpt-bridge tf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Node for the &quot;multivehicle simulator&quot; framework.'';

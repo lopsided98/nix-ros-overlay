@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "af16d583c7798ed4b9e83e16fcc32898fd12bf8d1dca18b4c1bce7e276acd5f4";
   };
 
+  buildInputs = [ urdf xacro ];
   propagatedBuildInputs = [ urdf xacro ];
-  nativeBuildInputs = [ catkin urdf xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Description of the Kobuki model.

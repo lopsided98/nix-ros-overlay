@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "19f9de89c455340fedfce4e75283e9e27f669159f95fa4a0964cbde883b80eee";
   };
 
+  buildInputs = [ pr2-controllers-msgs urdf actionlib-msgs actionlib pr2-common-action-msgs geometry-msgs tf roscpp ];
   propagatedBuildInputs = [ pr2-controllers-msgs urdf actionlib-msgs actionlib pr2-common-action-msgs geometry-msgs tf roscpp ];
-  nativeBuildInputs = [ pr2-controllers-msgs actionlib-msgs pr2-common-action-msgs catkin roscpp urdf actionlib tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Move the pr2 arm using inverse kinematics'';

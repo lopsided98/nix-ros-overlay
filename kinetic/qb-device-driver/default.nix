@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c1046ed3676714fe830f63ce77f4485918f0fb16c291da9c9380b3cf9f667d6a";
   };
 
+  buildInputs = [ qb-device-srvs roscpp qb-device-utils ];
   propagatedBuildInputs = [ qb-device-srvs roscpp qb-device-utils ];
-  nativeBuildInputs = [ qb-device-srvs catkin roscpp qb-device-utils ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a device-independent API wrapper for qbrobotics® devices.'';

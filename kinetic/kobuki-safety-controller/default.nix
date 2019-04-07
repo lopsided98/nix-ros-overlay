@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8a33921af46704980110c752c39f1b9e0837907951ecd9efa229973f6d215229";
   };
 
+  buildInputs = [ roscpp kobuki-msgs pluginlib geometry-msgs std-msgs nodelet yocs-controllers ecl-threads ];
   propagatedBuildInputs = [ roscpp kobuki-msgs pluginlib geometry-msgs std-msgs nodelet yocs-controllers ecl-threads ];
-  nativeBuildInputs = [ kobuki-msgs pluginlib catkin ecl-threads nodelet std-msgs roscpp geometry-msgs yocs-controllers ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A controller ensuring the safe operation of Kobuki.

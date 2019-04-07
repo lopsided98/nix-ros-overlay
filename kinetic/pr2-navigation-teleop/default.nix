@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "254013859ee8e6e2f76b3ecb0aa5788a413ba47b91071c5ede5fbff6e0d11923";
   };
 
+  buildInputs = [ topic-tools pr2-teleop pr2-machine ];
   propagatedBuildInputs = [ topic-tools pr2-teleop pr2-machine ];
-  nativeBuildInputs = [ topic-tools pr2-teleop catkin pr2-machine ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package holds a special teleop configuration for the PR2 robot that

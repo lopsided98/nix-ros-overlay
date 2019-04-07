@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5d364f22fa53a8f40ddc77ca8ba02eba4722f1fdf03c24c11d28db21c7df87d5";
   };
 
+  buildInputs = [ gazebo-ros roslaunch multi-jackal-base rviz ];
   propagatedBuildInputs = [ gazebo-ros multi-jackal-base rviz ];
-  nativeBuildInputs = [ gazebo-ros catkin rviz roslaunch multi-jackal-base ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Tutorials for multi-Jackal simulations.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b57f1ab96096e0d1f8ca5b47251e3a1cb9901f6b311488edda68b5178fa0af2a";
   };
 
+  buildInputs = [ hardware-interface roscpp pluginlib ];
   propagatedBuildInputs = [ hardware-interface roscpp pluginlib ];
-  nativeBuildInputs = [ hardware-interface catkin roscpp pluginlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Combined Robot HW class.'';

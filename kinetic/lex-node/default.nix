@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "ec7b27480f26ceb43976df980aa85776855d86dee6eac61000775f260874d9cc";
   };
 
+  buildInputs = [ lex-common-msgs aws-common std-msgs aws-ros1-common roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ lex-common-msgs aws-common std-msgs aws-ros1-common roscpp ];
-  nativeBuildInputs = [ lex-common-msgs aws-common std-msgs aws-ros1-common catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package providing a ROS node for interacting with Amazon Lex'';

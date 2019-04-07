@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "593042e1837931f5a094e7b782cfd27ef9b9c0527738015153f188b246d58206";
   };
 
+  buildInputs = [ naoqi-libqi ];
   propagatedBuildInputs = [ naoqi-libqi ];
-  nativeBuildInputs = [ catkin naoqi-libqi ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Aldebaran's libqicore: a layer on top of libqi'';

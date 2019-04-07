@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, tinyxml, catkin, boost }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, tinyxml, boost }:
 buildRosPackage {
   pname = "ros-kinetic-fzi-icl-core";
   version = "1.0.6";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "319cdebb275fded9216a64c17608ff047b021e2d68694176652d19acaa7bf70d";
   };
 
+  buildInputs = [ tinyxml boost ];
   propagatedBuildInputs = [ catkin tinyxml boost ];
-  nativeBuildInputs = [ cmake tinyxml boost ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The fzi_icl_core package'';

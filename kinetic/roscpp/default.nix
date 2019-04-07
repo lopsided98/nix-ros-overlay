@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, cpp-common, roscpp-traits, catkin, pkg-config, rosgraph-msgs, message-generation, message-runtime, xmlrpcpp, roscpp-serialization, std-msgs, roslang, rostime }:
+{ lib, buildRosPackage, fetchurl, rosconsole, cpp-common, roscpp-traits, catkin, pkg-config, rosgraph-msgs, message-generation, roslang, xmlrpcpp, roscpp-serialization, std-msgs, message-runtime, rostime }:
 buildRosPackage {
   pname = "ros-kinetic-roscpp";
   version = "1.12.14";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4520279b2c32794d79ca4217ab61bc92cb6229d71a04312859b71d95f794e1a0";
   };
 
+  buildInputs = [ rosconsole cpp-common roscpp-traits pkg-config rosgraph-msgs message-generation roslang xmlrpcpp roscpp-serialization std-msgs rostime ];
   propagatedBuildInputs = [ rosconsole cpp-common roscpp-traits rosgraph-msgs message-runtime xmlrpcpp roscpp-serialization std-msgs rostime ];
-  nativeBuildInputs = [ rosconsole cpp-common roscpp-traits catkin pkg-config rosgraph-msgs message-generation roslang xmlrpcpp roscpp-serialization std-msgs rostime ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''roscpp is a C++ implementation of ROS. It provides

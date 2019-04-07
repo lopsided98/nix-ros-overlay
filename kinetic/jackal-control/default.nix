@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d88b33dcd28c0e905c380499b64cc9e7e8a44d28244ece638fd1b05b70b27eaa";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ controller-manager twist-mux joint-state-controller diff-drive-controller joy robot-localization teleop-twist-joy interactive-marker-twist-server topic-tools ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controllers for Jackal'';

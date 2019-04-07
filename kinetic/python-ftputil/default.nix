@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "ea7134ed605ab490095d888680edee69e8c2dfc95bb36b9fc3b8f067eb5dfc37";
   };
 
-  nativeBuildInputs = [ catkin-pip catkin ];
+  buildInputs = [ catkin-pip ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''a high-level FTP client library for Python'';

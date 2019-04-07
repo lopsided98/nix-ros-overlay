@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "a7ed463ffefc6f3bd1aee6111310ad55a6ac847c5bb3b9ce1d31e00adec74ba7";
   };
 
+  buildInputs = [ message-generation dynamic-reconfigure std-msgs sensor-msgs serial geometry-msgs roscpp rospy ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ message-runtime dynamic-reconfigure std-msgs sensor-msgs serial geometry-msgs roscpp rospy ];
-  nativeBuildInputs = [ sensor-msgs serial catkin rospy message-generation dynamic-reconfigure std-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The teraranger_array package for TeraRanger Array Products (Multiflex, One)'';

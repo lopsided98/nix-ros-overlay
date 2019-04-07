@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c0c63abe070f17dbf7db2d372d78e66687fbf026ec1f0a4952383540454424e1";
   };
 
+  buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
-  nativeBuildInputs = [ catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS integration for the Catch unit test framework'';

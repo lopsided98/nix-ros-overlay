@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "331470d3472ac076145b872aa59ba793f70dcd8285357277ac5fc92aadde4fe9";
   };
 
+  buildInputs = [ hardware-interface std-srvs pluginlib tf2-geometry-msgs cmake-modules rosparam-handler realtime-tools tf2-ros rospy roscpp tf2 dynamic-reconfigure std-msgs iirob-filters geometry-msgs ];
   propagatedBuildInputs = [ hardware-interface std-srvs pluginlib tf2-geometry-msgs cmake-modules rosparam-handler realtime-tools roscpp rospy tf2-ros tf2 message-runtime dynamic-reconfigure std-msgs iirob-filters geometry-msgs ];
-  nativeBuildInputs = [ hardware-interface std-srvs pluginlib tf2-geometry-msgs cmake-modules rosparam-handler realtime-tools catkin tf2-ros rospy roscpp tf2 dynamic-reconfigure std-msgs iirob-filters geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The force_torque_sensor package'';

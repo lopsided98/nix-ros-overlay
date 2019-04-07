@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "162edff86d570c52e71d78b56a3c076bc91556bd4fba5613f4714f0a65ecaf84";
   };
 
+  buildInputs = [ roslib message-generation cmake-modules eigen roscpp ];
   propagatedBuildInputs = [ roslib cmake-modules message-runtime eigen roscpp ];
-  nativeBuildInputs = [ roslib message-generation cmake-modules eigen catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ProAut parameter package'';

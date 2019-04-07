@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a924bd27ee86ebecbc540a12e8b0afb25d44728dc02571b9ee634daa62058172";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common messages for Grizzly.'';

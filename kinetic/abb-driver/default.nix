@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "96d96d288b6c389f94df427ac061ce3eaba78bea0f19559ca45fdc1ce3a6abe8";
   };
 
+  buildInputs = [ industrial-robot-client ];
   propagatedBuildInputs = [ industrial-robot-client ];
-  nativeBuildInputs = [ catkin industrial-robot-client ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>

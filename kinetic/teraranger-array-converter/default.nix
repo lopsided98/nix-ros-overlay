@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2e0b096a60b5932333999952d0ba84b78e0c0aadd617fada3d3f486e387c490e";
   };
 
+  buildInputs = [ rospy ];
   propagatedBuildInputs = [ rospy ];
-  nativeBuildInputs = [ catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package that handle conversion from RangeArray messsages'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fd2a63942add5b97f2d64aa2396931744efc704d4b4aef4465346aa016005544";
   };
 
+  buildInputs = [ octomap tf sensor-msgs catkin octomap-msgs ];
   propagatedBuildInputs = [ sensor-msgs tf octomap octomap-msgs ];
-  nativeBuildInputs = [ octomap tf sensor-msgs catkin octomap-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''octomap_ros provides conversion functions between ROS and OctoMap's native types.

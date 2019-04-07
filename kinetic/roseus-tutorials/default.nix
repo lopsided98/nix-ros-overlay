@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "637a022cbdb3835b9b883a77825340462d412e56482ec2750f37dc7a50112609";
   };
 
+  buildInputs = [ roseus ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ image-view2 jsk-recognition-msgs ar-track-alvar image-proc visualization-msgs posedetection-msgs checkerboard-detector opencv-apps ];
-  nativeBuildInputs = [ roseus catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''roseus_tutorials'';

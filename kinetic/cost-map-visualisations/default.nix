@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d96fb9a3e1b81af0d4118a8cc0f45de80cc5112c6747f4f8c8d462b8259e981c";
   };
 
+  buildInputs = [ ecl-console nav-msgs cost-map-ros ecl-command-line cost-map-msgs cost-map-core roscpp ecl-build ];
   propagatedBuildInputs = [ ecl-console nav-msgs cost-map-ros ecl-command-line cost-map-msgs cost-map-core roscpp ecl-build ];
-  nativeBuildInputs = [ cost-map-ros ecl-command-line cost-map-msgs catkin roscpp ecl-build nav-msgs ecl-console cost-map-core ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Visualisation tools for cost maps.'';

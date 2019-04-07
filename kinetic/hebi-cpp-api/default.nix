@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "e9d0e1e06d85612d7b04f5d2d41ffdd654e5957285e51078228fc36f265b6423";
   };
 
-  nativeBuildInputs = [ catkin cmake-modules eigen ];
+  buildInputs = [ cmake-modules eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS package providing access to the HEBI C++ API.'';

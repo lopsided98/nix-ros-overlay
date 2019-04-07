@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "deaafb06cb77f01a7557b79cf20f1056487d7340ccd234399c210fe0f423cda0";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for DrRobot's Jaguar 4X4'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a30d432375ee3f192925307a43c2af9003868601cac799811351cfde4c910470";
   };
 
+  buildInputs = [ roscpp rosconsole ];
   propagatedBuildInputs = [ roscpp rosconsole ];
-  nativeBuildInputs = [ catkin roscpp rosconsole ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''driver for the KUKA youBot robot'';

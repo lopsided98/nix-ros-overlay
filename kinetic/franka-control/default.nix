@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1eb6aa78aff3ad5c5f617462d21be812931fe5d2bfecc774d8dc0550596d7b8e";
   };
 
+  buildInputs = [ controller-manager tf2-msgs pluginlib actionlib-msgs realtime-tools sensor-msgs roscpp message-generation controller-interface franka-msgs actionlib libfranka franka-hw tf geometry-msgs ];
   propagatedBuildInputs = [ franka-description tf2-msgs franka-gripper actionlib-msgs controller-interface franka-msgs actionlib roscpp tf geometry-msgs controller-manager pluginlib realtime-tools sensor-msgs message-runtime robot-state-publisher libfranka franka-hw joint-state-publisher ];
-  nativeBuildInputs = [ controller-manager tf2-msgs pluginlib actionlib-msgs realtime-tools sensor-msgs catkin roscpp message-generation controller-interface franka-msgs actionlib libfranka franka-hw tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''franka_control provides a hardware node to control a Franka Emika research robot'';

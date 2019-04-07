@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9d2484a38c6db5057f097dec74cbd66a8d8ba01b1c7050f82f16f56f2d77be94";
   };
 
+  buildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs filters rosconsole robot-mechanism-controllers nav-msgs rospy std-msgs diagnostic-msgs roscpp tf pr2-mechanism-model visualization-msgs geometry-msgs pr2-controller-interface pluginlib control-toolbox realtime-tools diagnostic-updater message-generation angles pr2-msgs ];
   propagatedBuildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs filters rosconsole robot-mechanism-controllers nav-msgs rospy std-msgs diagnostic-msgs roscpp tf pr2-mechanism-model visualization-msgs geometry-msgs pr2-controller-interface pluginlib control-toolbox realtime-tools diagnostic-updater message-runtime angles pr2-msgs ];
-  nativeBuildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs filters rosconsole catkin robot-mechanism-controllers nav-msgs rospy std-msgs diagnostic-msgs roscpp tf pr2-mechanism-model visualization-msgs geometry-msgs pr2-controller-interface pluginlib control-toolbox realtime-tools diagnostic-updater message-generation angles pr2-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_mechanism_controllers package contains realtime

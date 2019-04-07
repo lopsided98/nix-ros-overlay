@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, actionlib-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, catkin, actionlib-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-gx-sound-msgs";
   version = "0.2.2";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "834fc3c54921a462d9a0be0357dd5bac2de11b3b6583b46cd89cc1109c07242e";
   };
 
+  buildInputs = [ message-generation actionlib-msgs ];
   propagatedBuildInputs = [ actionlib-msgs ];
-  nativeBuildInputs = [ catkin message-generation actionlib-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The gx_sound_msgs package'';

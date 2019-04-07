@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5dc450600dc5efc57ce501d9e67d3cc5a2520388438264af655f653268f25515";
   };
 
+  buildInputs = [ opencv-candidate cmake-modules eigen object-recognition-core ecto ];
   propagatedBuildInputs = [ opencv-candidate ecto-openni object-recognition-core ecto-opencv ecto ];
-  nativeBuildInputs = [ opencv-candidate cmake-modules eigen catkin object-recognition-core ecto ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Textured Object Recognition a standard bag of features approach'';

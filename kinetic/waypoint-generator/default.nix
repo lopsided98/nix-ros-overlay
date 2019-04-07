@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a6910dbbe3a5b557a592dcae66e6c6b239b63e49d69117aff907c8429899d2a4";
   };
 
+  buildInputs = [ geometry-msgs rospy ];
   propagatedBuildInputs = [ geometry-msgs rospy ];
-  nativeBuildInputs = [ catkin geometry-msgs rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generates waypoint yaml file'';

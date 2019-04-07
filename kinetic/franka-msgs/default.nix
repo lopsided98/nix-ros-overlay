@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b1e39e3068cec5d43ff9afc64c3a31cc4f8640817d3b3c849debe460d51e02c2";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''franka_msgs provides messages specific to Franka Emika research robots'';

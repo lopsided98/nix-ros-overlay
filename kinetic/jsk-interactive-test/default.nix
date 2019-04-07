@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "737f4c1e45cbce834250e2adc1244b99a01d2e604bb1276859058c6678b50408";
   };
 
+  buildInputs = [ jsk-interactive-marker visualization-msgs rospy mk rosbuild jsk-interactive ];
   propagatedBuildInputs = [ rviz jsk-interactive-marker rospy visualization-msgs jsk-interactive ];
-  nativeBuildInputs = [ jsk-interactive-marker visualization-msgs rospy mk catkin rosbuild jsk-interactive ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk_interactive_test'';

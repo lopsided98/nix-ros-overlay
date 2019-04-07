@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "30be9336043991e64fc422b3d70cd02af14b358db74ead19788c4ff5a284f6c9";
   };
 
+  buildInputs = [ image-transport sensor-msgs cv-bridge message-filters image-geometry dynamic-reconfigure image-proc nodelet stereo-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge message-filters image-geometry dynamic-reconfigure image-proc nodelet stereo-msgs ];
-  nativeBuildInputs = [ image-transport sensor-msgs cv-bridge message-filters catkin image-geometry dynamic-reconfigure image-proc nodelet stereo-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Stereo and single image rectification and disparity processing.'';

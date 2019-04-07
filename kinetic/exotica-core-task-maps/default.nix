@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a418a7fbc9f792628c166a655fcdcac930857f7e39b973cf01516e74e87b43a0";
   };
 
+  buildInputs = [ exotica-python exotica-core geometry-msgs ];
   propagatedBuildInputs = [ exotica-python exotica-core geometry-msgs ];
-  nativeBuildInputs = [ exotica-python exotica-core catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common taskmaps provided with EXOTica.'';

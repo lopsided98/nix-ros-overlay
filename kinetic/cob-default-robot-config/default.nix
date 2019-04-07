@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c19aa6886086d6b7c9e75ca9697b00e630444a59843d882ada32a36e73144624";
   };
 
+  buildInputs = [ cob-supported-robots roslaunch ];
   propagatedBuildInputs = [ cob-supported-robots roslaunch ];
-  nativeBuildInputs = [ cob-supported-robots roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Default configuration of the different robots supported by the Care-O-bot stacks. Configuration is e.g. preconfigured joint positions.'';

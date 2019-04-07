@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a9ae6714f45d7a352651752f210c5bddd1d85a7ba63572e7b042b2a71c71044e";
   };
 
+  buildInputs = [ tf2 tf2-ros tf2-geometry-msgs geometry-msgs tf roscpp ];
   propagatedBuildInputs = [ tf2 tf2-ros tf2-geometry-msgs geometry-msgs tf roscpp ];
-  nativeBuildInputs = [ tf2 tf2-ros tf2-geometry-msgs geometry-msgs catkin tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The mbf_utility package'';

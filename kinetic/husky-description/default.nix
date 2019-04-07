@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "079b3c29eb3c1a1fffa8086406e5072e81bc955180ef50513ed8000018688ee7";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ lms1xx urdf xacro ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Clearpath Husky URDF description'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3c990411b0b339b4072b45f71e1c6669cb188914e9366428b024edbf6f83b579";
   };
 
+  buildInputs = [ boost libGLU libGL openscenegraph fftw ];
   propagatedBuildInputs = [ libGL boost libGLU catkin openscenegraph fftw ];
-  nativeBuildInputs = [ cmake boost libGLU libGL openscenegraph fftw ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The OSG Ocean library adapted to UWSim. See https://code.google.com/p/osgocean'';

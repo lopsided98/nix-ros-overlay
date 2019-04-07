@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "f1bf1dc0f7f2e1d53f5ae7c16c4dbf46b7422f07ab8b88f831280bb649584617";
   };
 
+  buildInputs = [ std-msgs sensor-msgs roscpp dbw-fca-msgs ];
   checkInputs = [ roslaunch roslib ];
   propagatedBuildInputs = [ roslaunch dbw-fca-msgs dbw-fca-can std-msgs sensor-msgs joy roscpp ];
-  nativeBuildInputs = [ catkin dbw-fca-msgs std-msgs sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Demonstration of drive-by-wire with joystick'';

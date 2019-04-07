@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d2636f769fc14f2c386788ba52b55a71857757442c53ef31d8eeba4cf70b8952";
   };
 
+  buildInputs = [ message-generation actionlib-msgs actionlib ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs actionlib ];
-  nativeBuildInputs = [ catkin message-generation actionlib-msgs actionlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cob_android_msgs'';

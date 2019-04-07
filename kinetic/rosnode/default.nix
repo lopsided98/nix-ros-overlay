@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "67a92127e9afea2f6bd62a6bec36a085e5f7f38dd54d731fb20a38b3b4d8200a";
   };
 
+  buildInputs = [ rostest ];
   propagatedBuildInputs = [ rosgraph rostopic ];
-  nativeBuildInputs = [ rostest catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosnode is a command-line tool for displaying debug information

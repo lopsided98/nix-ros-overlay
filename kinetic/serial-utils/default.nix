@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "907e265f1c308e7fa0c6c70405ec9b279af540a0213a64707302019845d85256";
   };
 
+  buildInputs = [ serial boost ];
   propagatedBuildInputs = [ serial boost ];
-  nativeBuildInputs = [ catkin serial boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A package which adds useful additions to the serial package.'';

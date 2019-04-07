@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ac7f565766ee1c96434711462dd6b82235b3668c2cec91724aa8b745081c46cb";
   };
 
+  buildInputs = [ pluginlib rosconsole libGLU image-transport sensor-msgs cv-bridge message-filters glew tf libGL urdf moveit-core octomap eigen tf-conversions moveit-msgs freeglut roscpp ];
   propagatedBuildInputs = [ pluginlib rosconsole libGLU image-transport sensor-msgs cv-bridge message-filters glew tf libGL urdf moveit-core octomap tf-conversions moveit-msgs freeglut roscpp ];
-  nativeBuildInputs = [ rosconsole cv-bridge catkin freeglut urdf octomap tf-conversions libGLU moveit-msgs tf roscpp pluginlib image-transport sensor-msgs message-filters moveit-core eigen glew libGL ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Components of MoveIt! connecting to perception'';

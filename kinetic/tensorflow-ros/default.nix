@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7d612340a4abff8cd0f826a38f3b6bdba4eae0569288126c146f39c6158a6046";
   };
 
+  buildInputs = [ image-recognition-msgs image-recognition-util rospy ];
   propagatedBuildInputs = [ pythonPackages.numpy image-recognition-msgs image-recognition-util rospy ];
-  nativeBuildInputs = [ catkin image-recognition-msgs image-recognition-util rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tensorflow_ros package'';

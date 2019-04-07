@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "74c8a4bcd239baeb1a7f7ca9e548dd1439638984fe3f3498d7cb1076f13776e2";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common messages and services used in various packages within cob_control.'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gateway-msgs, rocon-app-manager-msgs, uuid-msgs, message-generation, message-runtime, std-msgs, rocon-std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, rocon-app-manager-msgs, gateway-msgs, uuid-msgs, message-generation, message-runtime, std-msgs, rocon-std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-concert-msgs";
   version = "0.9.0-r1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5f4d45afbfaecbe8322955b7007b125fba4eda3eb3541f51cb7376c7567fd68b";
   };
 
+  buildInputs = [ uuid-msgs message-generation std-msgs gateway-msgs rocon-app-manager-msgs rocon-std-msgs ];
   propagatedBuildInputs = [ uuid-msgs message-runtime std-msgs gateway-msgs rocon-app-manager-msgs rocon-std-msgs ];
-  nativeBuildInputs = [ uuid-msgs message-generation std-msgs catkin gateway-msgs rocon-app-manager-msgs rocon-std-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Shared communication types for the concert framework.'';

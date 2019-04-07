@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "31f59d360d6d8af9554d57d2f1fca0ef00977d250373f950603f1a48a1fea660";
   };
 
+  buildInputs = [ controller-manager hardware-interface joint-state-controller kdl-parser joint-limits-interface joint-trajectory-controller position-controllers urdf roscpp transmission-interface ];
   propagatedBuildInputs = [ controller-manager hardware-interface joint-state-controller kdl-parser joint-limits-interface joint-trajectory-controller position-controllers urdf roscpp transmission-interface ];
-  nativeBuildInputs = [ controller-manager hardware-interface joint-state-controller kdl-parser joint-limits-interface catkin joint-trajectory-controller position-controllers urdf roscpp transmission-interface ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The denso_ros_control package'';

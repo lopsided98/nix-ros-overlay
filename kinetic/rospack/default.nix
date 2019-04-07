@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "149f27ece8b24235aaea6ed37ab49d89ec00dad1fa77843ac93fb6836fccf3b4";
   };
 
+  buildInputs = [ python cmake-modules boost gtest tinyxml pkg-config ];
   checkInputs = [ pythonPackages.coverage ];
   propagatedBuildInputs = [ python boost pythonPackages.rosdep pythonPackages.catkin-pkg tinyxml pkg-config ];
-  nativeBuildInputs = [ python cmake-modules boost gtest catkin tinyxml pkg-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS Package Tool'';

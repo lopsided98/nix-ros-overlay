@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "55861d117d65932f565bcc078ae354f83b8ae440247e578fe9b0f8024aa0b545";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ rviz joint-state-publisher robot-state-publisher abb-driver ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>

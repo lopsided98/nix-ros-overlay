@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "95ebf4af85ebcf125df7bbf21c214d7f8fa35c1014bca7c21595281a84d61793";
   };
 
+  buildInputs = [ nav-core2 roscpp ];
   checkInputs = [ rosunit roslint ];
   propagatedBuildInputs = [ nav-core2 roscpp ];
-  nativeBuildInputs = [ nav-core2 roscpp catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Tool for iterating through the cells of a costmap to find the closest distance to a subset of cells.'';

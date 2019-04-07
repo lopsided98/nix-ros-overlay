@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a3b42c512b8362b594165c7d8b4037c8bbb0802c2400f361a4cadafd0e229b7d";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ lms1xx urdf robot-state-publisher pointgrey-camera-description xacro ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF robot description for Jackal'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4a20e3f9b80d5c1000960774d78558c54a35232fe2f611cefa0d0246bb4b9ba7";
   };
 
+  buildInputs = [ message-generation actionlib-msgs sensor-msgs visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs sensor-msgs visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation catkin actionlib-msgs sensor-msgs visualization-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common Manipulation Messages and Services Used in RAIL Manipulation Packages'';

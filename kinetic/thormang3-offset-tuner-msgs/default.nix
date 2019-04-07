@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0caded3d1ef7ad5ed7a3252e6f7d05dfaf22e0bc036c68a339250cc8122a3562";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a set of messages and services for using thormang3_offset_tuner.'';

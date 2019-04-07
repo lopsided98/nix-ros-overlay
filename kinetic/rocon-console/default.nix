@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "69f9fea0fa54cf97c6e6c98ba7891ee87a02e3fe98a295612bdf5920865e86c5";
   };
 
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  buildInputs = [ pythonPackages.catkin-pkg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Command line python console utilities (mostly for colourisation).'';

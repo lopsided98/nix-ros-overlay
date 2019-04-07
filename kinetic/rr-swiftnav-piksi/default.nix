@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1582be8a0ff55c255c8d20245c2a2acadc859aba450b3e72b269dde6984b0a84";
   };
 
+  buildInputs = [ std-msgs roscpp rospy ];
   propagatedBuildInputs = [ std-msgs roscpp rospy ];
-  nativeBuildInputs = [ std-msgs catkin roscpp rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Rover Robotics: ROS package for connecting to SwiftNav Piksi'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e6ff6da2fb4fb508010133657ab883caf1736698055305225ae5720683e79f1a";
   };
 
+  buildInputs = [ image-transport sensor-msgs roscpp rospy message-generation visp resource-retriever nodelet dynamic-reconfigure std-msgs image-proc tf geometry-msgs ];
   propagatedBuildInputs = [ image-transport sensor-msgs roscpp rospy message-generation visp message-runtime nodelet dynamic-reconfigure std-msgs resource-retriever image-proc tf geometry-msgs ];
-  nativeBuildInputs = [ image-transport sensor-msgs catkin roscpp rospy message-generation visp resource-retriever nodelet dynamic-reconfigure std-msgs image-proc tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Wraps the ViSP moving edge tracker provided by the ViSP visual

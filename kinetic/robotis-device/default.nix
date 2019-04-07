@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "aa72b1f902c9045bfd34d8baf9ff416f8ffe4af276f82294532523b933739780";
   };
 
+  buildInputs = [ dynamixel-sdk roscpp ];
   propagatedBuildInputs = [ dynamixel-sdk roscpp ];
-  nativeBuildInputs = [ dynamixel-sdk catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The package that manages device information of ROBOTIS robots.

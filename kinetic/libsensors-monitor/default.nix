@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "aff4a809302d370d75499dccc31136723e8b69293ed6b8bd4de011b88337e749";
   };
 
+  buildInputs = [ diagnostic-updater roscpp lm_sensors ];
   propagatedBuildInputs = [ diagnostic-updater roscpp lm_sensors ];
-  nativeBuildInputs = [ diagnostic-updater catkin roscpp lm_sensors ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS node for using libsensors to provide diagnostics information about the sensors on a computer system.'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "4e594e53eb985a25f1a05a6671eb52d535d06e7bc6c6d72c6009f579a7ea8544";
   };
 
+  buildInputs = [ pluginlib cmake-modules sensor-msgs message-filters roscpp voxel-grid message-generation nav-msgs laser-geometry visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
   checkInputs = [ rostest rosbag rosunit map-server ];
   propagatedBuildInputs = [ pluginlib rosconsole sensor-msgs message-filters roscpp voxel-grid nav-msgs laser-geometry message-runtime visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
-  nativeBuildInputs = [ pluginlib cmake-modules sensor-msgs catkin message-filters roscpp voxel-grid message-generation nav-msgs laser-geometry visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides an implementation of a 2D costmap that takes in sensor

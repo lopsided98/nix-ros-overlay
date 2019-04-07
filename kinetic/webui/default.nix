@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8753024f20e58e32a92435fcbf34e9fa99c334a3091c77bb9351540e874adfc0";
   };
 
+  buildInputs = [ std-srvs ros-apache2 rosservice rospy std-msgs pyclearsilver web-msgs rosweb diagnostic-msgs roslib launchman ];
   propagatedBuildInputs = [ std-srvs ros-apache2 rosservice rospy std-msgs pyclearsilver web-msgs rosweb diagnostic-msgs roslib launchman ];
-  nativeBuildInputs = [ std-srvs ros-apache2 catkin rosservice rospy std-msgs pyclearsilver web-msgs rosweb diagnostic-msgs roslib launchman ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A web interface to install and launch applications for the PR2.'';

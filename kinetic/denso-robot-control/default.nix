@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "33b3ba06eb17f5100b0367d092c998bf2aae98054345a8480a9fc81f34b71dbe";
   };
 
+  buildInputs = [ controller-manager hardware-interface denso-robot-core joint-limits-interface bcap-core std-msgs bcap-service roscpp transmission-interface ];
   propagatedBuildInputs = [ controller-manager hardware-interface denso-robot-core joint-limits-interface bcap-core std-msgs bcap-service roscpp transmission-interface ];
-  nativeBuildInputs = [ controller-manager hardware-interface denso-robot-core joint-limits-interface catkin bcap-core std-msgs bcap-service roscpp transmission-interface ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The denso robot control package includes a node for controlling DENSO robot controllers with MoveIt!.'';

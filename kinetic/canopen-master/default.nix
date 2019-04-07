@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "ed0bf9861aa139470bf939eb6ca53f5b522665e201d564fe7751b72161a2e932";
   };
 
+  buildInputs = [ class-loader boost socketcan-interface ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ class-loader boost socketcan-interface ];
-  nativeBuildInputs = [ class-loader catkin boost socketcan-interface ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''CiA(r) CANopen 301 master implementation with support for interprocess master synchronisation.'';

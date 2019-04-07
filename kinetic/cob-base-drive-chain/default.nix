@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ca991ebc0dd718b5b507b4f2e094d220706352ea8bd4839f2741ae4e1120565c";
   };
 
+  buildInputs = [ std-srvs control-msgs cob-canopen-motor cob-generic-can sensor-msgs cob-utilities message-generation std-msgs diagnostic-msgs roscpp ];
   propagatedBuildInputs = [ std-srvs control-msgs cob-canopen-motor cob-generic-can sensor-msgs cob-utilities message-runtime std-msgs diagnostic-msgs roscpp ];
-  nativeBuildInputs = [ std-srvs control-msgs cob-canopen-motor cob-generic-can sensor-msgs catkin cob-utilities message-generation std-msgs diagnostic-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains classes that are able to control the platform of the Care-O-Bot. This means to establish a CAN communication to drive and steering motors of the platform and later send motion commands and receive motor information.'';

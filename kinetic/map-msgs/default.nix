@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d64d8011c9286a5ca31e055bbf201d5fee118e79851feade72e3b6c2faa1b20a";
   };
 
+  buildInputs = [ std-msgs nav-msgs message-generation sensor-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs nav-msgs message-runtime ];
-  nativeBuildInputs = [ nav-msgs message-generation std-msgs sensor-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package defines messages commonly used in mapping packages.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8642914defe3b2a987aa069cd25d683d02d1ae98fa1cc10da66faeca8852f57c";
   };
 
+  buildInputs = [ rostest ];
   propagatedBuildInputs = [ rosbag genpy rospy ];
-  nativeBuildInputs = [ rostest catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rostopic contains the rostopic command-line tool for displaying

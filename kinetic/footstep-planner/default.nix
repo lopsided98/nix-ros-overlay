@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, rosconsole, sensor-msgs, catkin, roscpp, sbpl, gridmap-2d, nav-msgs, visualization-msgs, actionlib, rospy, angles, tf, opencv3, humanoid-nav-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, map-server, rosconsole, tf, sensor-msgs, catkin, sbpl, gridmap-2d, nav-msgs, visualization-msgs, actionlib, rospy, angles, roscpp, opencv3, humanoid-nav-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-footstep-planner";
   version = "0.4.2";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "065d2d1c76650b2d9afaf45a34017adcf54b604c0f33081b60380200f3cc427d";
   };
 
+  buildInputs = [ map-server rosconsole tf sensor-msgs roscpp sbpl nav-msgs visualization-msgs actionlib rospy angles gridmap-2d opencv3 humanoid-nav-msgs geometry-msgs ];
   propagatedBuildInputs = [ map-server rosconsole tf sensor-msgs roscpp sbpl nav-msgs visualization-msgs actionlib rospy angles gridmap-2d opencv3 humanoid-nav-msgs geometry-msgs ];
-  nativeBuildInputs = [ map-server rosconsole tf sensor-msgs catkin roscpp sbpl nav-msgs visualization-msgs actionlib rospy angles gridmap-2d opencv3 humanoid-nav-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>A footstep planner for humanoid / biped robots. The planner builds on SBPL and has anytime as well as dynamic replanning capabilities. The supported planners are: ARA*, AD*, R*.</p>

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "505e22ef5da1d1fce30367dee7c5b216bd24b4cccdc32d0b8a995420d62d6368";
   };
 
+  buildInputs = [ kdl-conversions urdf jsk-footstep-planner diagnostic-msgs tf-conversions std-msgs tf geometry-msgs kdl-parser jsk-pcl-ros sensor-msgs jsk-footstep-msgs message-filters jsk-topic-tools diagnostic-updater tf2 message-generation dynamic-reconfigure genmsg ];
   propagatedBuildInputs = [ kdl-conversions urdf jsk-footstep-planner tf-conversions std-msgs diagnostic-msgs tf geometry-msgs kdl-parser jsk-pcl-ros sensor-msgs jsk-footstep-msgs message-filters jsk-topic-tools sound-play diagnostic-updater tf2 message-generation dynamic-reconfigure genmsg ];
-  nativeBuildInputs = [ kdl-conversions catkin urdf jsk-footstep-planner diagnostic-msgs tf-conversions std-msgs tf geometry-msgs kdl-parser jsk-pcl-ros sensor-msgs jsk-footstep-msgs message-filters jsk-topic-tools diagnostic-updater tf2 message-generation dynamic-reconfigure genmsg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The jsk_footstep_controller package'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "3989dd0c9fe6e06337d815385beb14ef3a0f97336855b186a052fe647161d51b";
   };
 
+  buildInputs = [ console-bridge boost ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ console-bridge boost ];
-  nativeBuildInputs = [ catkin console-bridge boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Library implementing ODVA EtherNet/IP (Industrial Protocol).'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "2fd90df67337deadde23ca02ecf0f683c26c8547fc268d5b9794d784a34c37b4";
   };
 
+  buildInputs = [ rdl-cmake rdl-dynamics rdl-urdfreader ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ rdl-cmake rdl-dynamics rdl-urdfreader ];
-  nativeBuildInputs = [ rdl-cmake catkin rdl-dynamics rdl-urdfreader ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rdl_benchmark package'';

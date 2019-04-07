@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8f89dbcf4685b17a72b21151a1f679b7064efbc21c8e411aef92c8d29013c6f2";
   };
 
+  buildInputs = [ cob-supported-robots ];
   propagatedBuildInputs = [ xacro ];
-  nativeBuildInputs = [ cob-supported-robots catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This repository holds the current calibration data for Care-O-bot.'';

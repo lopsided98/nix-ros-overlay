@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, poco, boost, cmake-modules, catkin, console-bridge }:
+{ lib, buildRosPackage, fetchurl, poco, cmake-modules, boost, catkin, console-bridge }:
 buildRosPackage {
   pname = "ros-kinetic-class-loader";
   version = "0.3.9";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5733b84bec8e5a4da05b07d2f4594541a04a6e88d772e9d9a944776429f7d45b";
   };
 
+  buildInputs = [ poco console-bridge cmake-modules boost ];
   propagatedBuildInputs = [ poco console-bridge boost ];
-  nativeBuildInputs = [ poco console-bridge cmake-modules boost catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The class_loader package is a ROS-independent package for loading plugins during runtime and the foundation of the higher level ROS &quot;pluginlib&quot; library. class_loader utilizes the host operating system's runtime loader to open runtime libraries (e.g. .so/.dll files), introspect the library for exported plugin classes, and allows users to instantiate objects of said exported classes without the explicit declaration (i.e. header file) for those classes.'';

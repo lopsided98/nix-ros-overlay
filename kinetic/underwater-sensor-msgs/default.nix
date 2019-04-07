@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "09e79419faaff652910292b12a85e36b44065acd3d2d3148d39d7c2d4b29a16f";
   };
 
+  buildInputs = [ std-msgs roscpp message-generation visualization-msgs ];
   propagatedBuildInputs = [ std-msgs visualization-msgs message-runtime roscpp ];
-  nativeBuildInputs = [ message-generation visualization-msgs std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common messages for underwater robotics'';

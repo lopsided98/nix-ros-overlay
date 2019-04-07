@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3458015b4fdcd90adaa71b2d7202a413518ee58b883d076418db654dce93b3f2";
   };
 
+  buildInputs = [ dr-cmake ];
   propagatedBuildInputs = [ dr-cmake ];
-  nativeBuildInputs = [ catkin dr-cmake ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Delft Robotics base dependencies.'';

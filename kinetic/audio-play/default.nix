@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "132d07c5b00eb358b933445dc747bcb64f4c676da40db2d66058651f5c32f345";
   };
 
+  buildInputs = [ gst_all_1.gst-plugins-base roscpp gst_all_1.gstreamer audio-common-msgs ];
   propagatedBuildInputs = [ gst_all_1.gstreamer gst_all_1.gst-plugins-base roscpp gst_all_1.gst-plugins-ugly audio-common-msgs gst_all_1.gst-plugins-good ];
-  nativeBuildInputs = [ catkin audio-common-msgs gst_all_1.gst-plugins-base roscpp gst_all_1.gstreamer ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Outputs audio to a speaker from a source node.'';

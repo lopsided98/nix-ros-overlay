@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5c40ad99149fb2e2c8847afac406a8d21dfefc99f2749bc9a6d3b4005645d2f4";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros ridgeback-gazebo-plugins ridgeback-control hector-gazebo-plugins ridgeback-description gazebo-ros-control gazebo-plugins ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launchfiles to use Ridgeback in Gazebo.'';

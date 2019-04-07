@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f20c14ef1bd6e22e3b25dd9f5a1c618dac5a84da0987e85abdef7e9512bcb5a9";
   };
 
+  buildInputs = [ costmap-2d nav-core roscpp pluginlib ];
   propagatedBuildInputs = [ costmap-2d nav-core roscpp pluginlib ];
-  nativeBuildInputs = [ costmap-2d catkin pluginlib nav-core roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A global planner plugin for move_base that simply passes the target pose on

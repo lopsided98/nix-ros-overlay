@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "92a2fe41999f309f1214cb057dffe83f2c303e584f2dd6792356df02768a0f39";
   };
 
+  buildInputs = [ message-generation actionlib-msgs geometry-msgs ];
   propagatedBuildInputs = [ message-generation actionlib-msgs geometry-msgs ];
-  nativeBuildInputs = [ catkin message-generation actionlib-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''tf2_msgs'';

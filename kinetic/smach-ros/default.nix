@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c8335753bfb9ae2df4558961578a63f9c5ecd277d1ed548fb174369664030e61";
   };
 
+  buildInputs = [ rostest ];
   propagatedBuildInputs = [ std-srvs smach-msgs rostopic actionlib-msgs actionlib std-msgs smach rospy ];
-  nativeBuildInputs = [ rostest catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The smach_ros package contains extensions for the SMACH library to

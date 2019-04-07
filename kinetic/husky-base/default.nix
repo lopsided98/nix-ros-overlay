@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6026539875a7a353f24452cd4877a980c2640f2e8e65836396706874002d539c";
   };
 
+  buildInputs = [ controller-manager hardware-interface husky-msgs roslint sensor-msgs diagnostic-updater diagnostic-msgs roslaunch roscpp ];
   propagatedBuildInputs = [ controller-manager hardware-interface husky-msgs diff-drive-controller sensor-msgs diagnostic-updater husky-description topic-tools diagnostic-msgs roscpp husky-control geometry-msgs diagnostic-aggregator ];
-  nativeBuildInputs = [ controller-manager hardware-interface husky-msgs roslint sensor-msgs catkin diagnostic-updater diagnostic-msgs roslaunch roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Clearpath Husky robot driver'';

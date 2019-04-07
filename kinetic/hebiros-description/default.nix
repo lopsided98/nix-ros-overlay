@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e68ce4376b95b40da84bcc1618d8f09635c2988ace6aedf6d50724b5db06086d";
   };
 
+  buildInputs = [ urdf transmission-interface ];
   propagatedBuildInputs = [ urdf transmission-interface ];
-  nativeBuildInputs = [ catkin urdf transmission-interface ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Models for Hebi components and hebiros'';

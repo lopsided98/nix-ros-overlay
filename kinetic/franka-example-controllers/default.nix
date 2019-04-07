@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "40806f66dfb7263fd2f893ac44bcbd621b1e124e87e19247aa90b74a55f69b2f";
   };
 
+  buildInputs = [ hardware-interface pluginlib realtime-tools message-generation controller-interface dynamic-reconfigure libfranka franka-hw roscpp geometry-msgs eigen ];
   propagatedBuildInputs = [ panda-moveit-config hardware-interface franka-description pluginlib realtime-tools franka-control controller-interface message-runtime dynamic-reconfigure rospy franka-hw roscpp libfranka geometry-msgs ];
-  nativeBuildInputs = [ hardware-interface pluginlib realtime-tools catkin message-generation controller-interface dynamic-reconfigure libfranka franka-hw roscpp geometry-msgs eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''franka_example_controllers provides example code for controlling Franka Emika research robots with ros_control'';

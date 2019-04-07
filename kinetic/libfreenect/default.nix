@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c1523f04c9e92d69fe6bf05189a87b74f2b1db907aee16c7fe38d87b7e45457a";
   };
 
+  buildInputs = [ libusb1 xorg.libXi freeglut xorg.libXmu ];
   propagatedBuildInputs = [ libusb1 xorg.libXi freeglut catkin xorg.libXmu ];
-  nativeBuildInputs = [ libusb1 xorg.libXi freeglut cmake xorg.libXmu ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''Open source libraries that will enable the Kinect to be used with Windows, Linux, and Mac.'';

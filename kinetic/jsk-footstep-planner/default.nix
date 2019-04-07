@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "823eff27f809adc07f6542759b8b3a1b28e06650254e5fb2de797e3ed8ba7ee2";
   };
 
+  buildInputs = [ roseus jsk-footstep-msgs jsk-topic-tools roscpp jsk-rviz-plugins message-generation jsk-interactive-marker jsk-recognition-utils pcl-ros dynamic-reconfigure visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ roseus jsk-pcl-ros jsk-footstep-msgs jsk-topic-tools roscpp jsk-rviz-plugins jsk-interactive-marker jsk-recognition-utils pcl-ros jsk-recognition-msgs dynamic-reconfigure visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ roseus jsk-footstep-msgs catkin jsk-topic-tools roscpp jsk-rviz-plugins message-generation jsk-interactive-marker jsk-recognition-utils pcl-ros dynamic-reconfigure visualization-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk_footstep_planner'';

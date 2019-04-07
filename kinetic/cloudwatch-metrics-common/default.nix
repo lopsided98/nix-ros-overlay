@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "80bb44578788707b799a0b5d6ae287c00d145100e92b3ff4d4ad55179deb5233";
   };
 
+  buildInputs = [ aws-common ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ aws-common ];
-  nativeBuildInputs = [ cmake aws-common ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''Library used by ROS1/2 node to publish metrics'';

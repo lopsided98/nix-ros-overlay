@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3e1567ad16d1937541595ebd3e05e0ef1920f35beac9b380c660eb171cf5dd1c";
   };
 
+  buildInputs = [ std-msgs sensor-msgs roscpp rospy ];
   propagatedBuildInputs = [ std-msgs sensor-msgs roscpp rospy ];
-  nativeBuildInputs = [ catkin rospy std-msgs sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The epson_imu_driver package'';

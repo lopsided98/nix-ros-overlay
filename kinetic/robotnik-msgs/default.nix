@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5997ae3da9ecb371c7c27532319c33b9f8779395bf1e0d5a1891b4265e1fa263";
   };
 
+  buildInputs = [ std-msgs message-generation actionlib-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime actionlib-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation actionlib-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The robotnik_msgs package. Common messages and services used by some Robotnik's packages.'';

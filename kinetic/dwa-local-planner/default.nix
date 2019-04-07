@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7b552ce10750a1cdd98115344b812f0f213668133226f83cbbcd662af5a27dfc";
   };
 
+  buildInputs = [ costmap-2d pluginlib cmake-modules base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf pcl-conversions eigen ];
   propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf eigen ];
-  nativeBuildInputs = [ costmap-2d pluginlib cmake-modules base-local-planner nav-core catkin roscpp nav-msgs dynamic-reconfigure tf pcl-conversions eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides an implementation of the Dynamic Window Approach to

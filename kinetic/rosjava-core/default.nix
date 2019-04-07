@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "d1e862dbc3b04840f0c64d2498e38ad6d8e77d84327465dd02d3a4bca5c8f1bb";
   };
 
-  nativeBuildInputs = [ rosjava-build-tools tf2-msgs sensor-msgs catkin rosjava-messages rosjava-bootstrap rosgraph-msgs nav-msgs rosjava-test-msgs geometry-msgs ];
+  buildInputs = [ rosjava-build-tools tf2-msgs sensor-msgs rosjava-messages rosjava-bootstrap rosgraph-msgs nav-msgs rosjava-test-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An implementation of ROS in pure-Java with Android support.'';

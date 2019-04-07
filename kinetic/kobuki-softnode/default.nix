@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4dfe45f4d62f9c3645046f4ef432126b33477a58ea95d4cee0db1128141be6e7";
   };
 
+  buildInputs = [ nav-msgs kobuki-msgs nodelet geometry-msgs sensor-msgs tf roscpp ];
   propagatedBuildInputs = [ kobuki-msgs tf sensor-msgs roscpp nav-msgs robot-state-publisher kobuki-description diagnostic-aggregator nodelet geometry-msgs ];
-  nativeBuildInputs = [ nav-msgs kobuki-msgs catkin nodelet geometry-msgs sensor-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS nodelet for fake Kobuki.'';

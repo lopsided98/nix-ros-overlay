@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "65d497c7f4af3aec8291e0bffb04124792ca956e94dc6c30a392eb09567cba0a";
   };
 
+  buildInputs = [ rostest roslaunch cob-supported-robots ];
   propagatedBuildInputs = [ costmap-2d joint-state-controller raw-description ur-description velocity-controllers cob-calibration-data joint-trajectory-controller rostest position-controllers laser-filters cob-description rviz robot-state-publisher cob-omni-drive-controller diagnostic-aggregator roslaunch joint-state-publisher xacro ];
-  nativeBuildInputs = [ rostest roslaunch catkin cob-supported-robots ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains configuration for each robot instance (e.g. cob4-X, raw3-X). There is a directory for each robot with configuration about urdf and hardware/device configurations.'';

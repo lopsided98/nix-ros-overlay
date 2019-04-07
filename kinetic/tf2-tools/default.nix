@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e864250cde2e5c28ebf296336a77a1fd44c97c8ea945b1b08e769841bde06b8d";
   };
 
+  buildInputs = [ tf2 tf2-msgs tf2-ros ];
   propagatedBuildInputs = [ tf2 tf2-msgs tf2-ros ];
-  nativeBuildInputs = [ tf2 catkin tf2-msgs tf2-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''tf2_tools'';

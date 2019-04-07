@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4cb6d325c05f9535a55afeba7b62a73ed694ba81f846bb438f4ffe18ac98a8cb";
   };
 
+  buildInputs = [ dynamic-reconfigure ];
   propagatedBuildInputs = [ actionlib pythonPackages.lxml ur-msgs rospy trajectory-msgs dynamic-reconfigure control-msgs sensor-msgs ];
-  nativeBuildInputs = [ catkin dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for the UR5/10 arm based on the Polyscope control scheme.'';

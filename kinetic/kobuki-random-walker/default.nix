@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fdd6297d90e2f4c99ab99b1bf14e005bdef6d53ba10e06ecc571f26b1703cb8a";
   };
 
+  buildInputs = [ kobuki-msgs pluginlib nodelet geometry-msgs std-msgs roscpp yocs-controllers ecl-threads ];
   propagatedBuildInputs = [ kobuki-msgs pluginlib roscpp ecl-threads std-msgs yocs-cmd-vel-mux nodelet geometry-msgs yocs-controllers ];
-  nativeBuildInputs = [ kobuki-msgs pluginlib catkin roscpp ecl-threads std-msgs nodelet geometry-msgs yocs-controllers ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Random walker app for Kobuki'';

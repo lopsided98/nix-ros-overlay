@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "d68feda8aeb6a094a793452a0e87004446d87ded0e2b66005d2f273e666cd4b7";
   };
 
+  buildInputs = [ roslaunch ];
   checkInputs = [ cob-supported-robots ];
   propagatedBuildInputs = [ gazebo-ros control-msgs trajectory-msgs cob-script-server cob-hardware-config gazebo-plugins rostest cob-gazebo-ros-control cob-bringup rospy roslaunch cob-default-robot-config gazebo-ros-control ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files and tools for 3D simulation of Care-O-bot in gazebo simulator.'';

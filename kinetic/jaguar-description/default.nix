@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e18b6815a1f4e2bfa9e27f96b7513f23c31a08394fae025f003eb340a51b6b66";
   };
 
+  buildInputs = [ tf urdf xacro roscpp ];
   propagatedBuildInputs = [ tf urdf xacro roscpp ];
-  nativeBuildInputs = [ urdf catkin tf xacro roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A robot description package for Dr Robot's Jaguar 4x4'';

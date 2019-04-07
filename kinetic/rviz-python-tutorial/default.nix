@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "30bab9adabf6c5f06ce36eae6cbd2941fbda56fd51675330ced07110d9dee064";
   };
 
+  buildInputs = [ rviz ];
   propagatedBuildInputs = [ rviz ];
-  nativeBuildInputs = [ catkin rviz ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Tutorials showing how to call into rviz internals from python scripts.'';

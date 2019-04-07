@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7d05d99045d03d73c4f44e70bc958ffd6d39c89988886f39a537c3b9bac5856d";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ controller-manager twist-mux joint-state-controller diff-drive-controller rosserial-server joy robot-localization teleop-twist-joy interactive-marker-twist-server topic-tools ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controllers for Warthog'';

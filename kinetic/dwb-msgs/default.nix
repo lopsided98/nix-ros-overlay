@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7d22ff9b120f812928567f20651cfe110c57e473b7c7ba8199cf279b6fc69760";
   };
 
+  buildInputs = [ nav-msgs message-generation nav-2d-msgs geometry-msgs ];
   propagatedBuildInputs = [ nav-msgs message-runtime geometry-msgs nav-2d-msgs ];
-  nativeBuildInputs = [ nav-msgs message-generation catkin nav-2d-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message/Service definitions specifically for the dwb_local_planner'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "26b15d9ddeb6561b5e177589d26635dfa00818578084ee553699660ed8ed4fdb";
   };
 
+  buildInputs = [ roscpp settlerlib actionlib-msgs actionlib std-msgs cv-bridge message-filters image-cb-detector ];
   propagatedBuildInputs = [ roscpp settlerlib actionlib-msgs actionlib std-msgs cv-bridge message-filters image-cb-detector ];
-  nativeBuildInputs = [ actionlib-msgs cv-bridge message-filters catkin image-cb-detector settlerlib actionlib std-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Extracts checkerboard corners from a dense laser snapshot.

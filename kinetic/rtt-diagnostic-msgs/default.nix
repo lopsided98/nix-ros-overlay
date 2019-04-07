@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "75813e883761632edea52ccddb5c6da21232acfaf162b87c1ceee9493c860c17";
   };
 
+  buildInputs = [ diagnostic-msgs rtt-std-msgs rtt-roscomm ];
   propagatedBuildInputs = [ diagnostic-msgs rtt-std-msgs rtt-roscomm ];
-  nativeBuildInputs = [ diagnostic-msgs catkin rtt-std-msgs rtt-roscomm ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides an rtt typekit for ROS diagnostic_msgs messages.

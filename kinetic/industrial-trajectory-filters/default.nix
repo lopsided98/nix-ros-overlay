@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "967c02ff7e7e92d017fad6bb74fe4be2bcc3ceb98dcc750c4074bfac27772a8e";
   };
 
+  buildInputs = [ moveit-ros-planning moveit-core pluginlib orocos-kdl trajectory-msgs ];
   propagatedBuildInputs = [ moveit-ros-planning moveit-core pluginlib orocos-kdl trajectory-msgs ];
-  nativeBuildInputs = [ moveit-ros-planning moveit-core pluginlib orocos-kdl trajectory-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>

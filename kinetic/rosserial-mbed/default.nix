@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "db94568438120f6953f926941b3a8d8d12da8202bc1a19bcfcbd7fdce4d1686b";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ rospy rosserial-msgs message-runtime rosserial-client ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosserial for mbed platforms.'';

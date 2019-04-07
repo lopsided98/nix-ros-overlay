@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a631bbe6e98228624f07877ab7581a01c9881c96c69c1a57b757e0a4df5a0c01";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''this package contains a set of messages that are used by the introspection

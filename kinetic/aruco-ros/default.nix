@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ce8f1625b98d03e73fe10208cf432a0862d72645e1b780a515b050d426d9f51e";
   };
 
+  buildInputs = [ tf image-transport sensor-msgs cv-bridge aruco-msgs roscpp dynamic-reconfigure visualization-msgs aruco geometry-msgs ];
   propagatedBuildInputs = [ tf image-transport sensor-msgs cv-bridge aruco-msgs roscpp dynamic-reconfigure visualization-msgs aruco geometry-msgs ];
-  nativeBuildInputs = [ tf image-transport sensor-msgs cv-bridge aruco-msgs catkin roscpp dynamic-reconfigure visualization-msgs aruco geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain).

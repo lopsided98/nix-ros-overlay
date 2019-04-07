@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, gazebo-ros-pkgs, hector-models, catkin, hector-gazebo-plugins, robot-state-publisher, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros, gazebo-ros-pkgs, hector-gazebo-plugins, catkin, hector-models, robot-state-publisher, dynamic-reconfigure, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-igvc-self-drive-gazebo-plugins";
   version = "0.1.4-r1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3691f480209b027c3db97c2fc6cc46e4dfa5766be2a0f504ff8fbe5a0ef8618e";
   };
 
+  buildInputs = [ gazebo-ros roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ gazebo-ros gazebo-ros-pkgs robot-state-publisher dynamic-reconfigure hector-models hector-gazebo-plugins roscpp ];
-  nativeBuildInputs = [ gazebo-ros catkin roscpp dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo plugins for IGVC Self-Drive simulator'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-geometry-msgs, fiducial-msgs, image-transport, catkin, cv-bridge, sensor-msgs, tf2-ros, roscpp, tf2, dynamic-reconfigure, visualization-msgs, opencv3 }:
+{ lib, buildRosPackage, fetchurl, tf2-geometry-msgs, fiducial-msgs, sensor-msgs, image-transport, cv-bridge, catkin, tf2-ros, roscpp, tf2, dynamic-reconfigure, visualization-msgs, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-aruco-detect";
   version = "0.10.0";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1625f2ff481ac9478a3a25d817cba60bc7b96db68f80f7b8386e9f77c9e8bdc8";
   };
 
+  buildInputs = [ tf2-geometry-msgs fiducial-msgs image-transport sensor-msgs cv-bridge roscpp tf2-ros tf2 dynamic-reconfigure visualization-msgs opencv3 ];
   propagatedBuildInputs = [ tf2-geometry-msgs fiducial-msgs image-transport sensor-msgs cv-bridge roscpp tf2-ros tf2 dynamic-reconfigure visualization-msgs opencv3 ];
-  nativeBuildInputs = [ tf2-geometry-msgs fiducial-msgs image-transport sensor-msgs cv-bridge catkin roscpp tf2-ros tf2 dynamic-reconfigure visualization-msgs opencv3 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Fiducial detection based on the aruco library'';

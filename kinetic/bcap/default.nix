@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0950b4c4499ed1b8a308bceb0d9e3c213da753f414140253b546ca75254f8459";
   };
 
+  buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
-  nativeBuildInputs = [ catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''bCAP library as a ROS package'';

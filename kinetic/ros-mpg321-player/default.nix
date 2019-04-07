@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8d6783a5578afb7f436d8139c5b72bf8190882905738b9eaf055bc22ca91349a";
   };
 
+  buildInputs = [ std-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp ];
-  nativeBuildInputs = [ std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a node that can playing mp3 file.

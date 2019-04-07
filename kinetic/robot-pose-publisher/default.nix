@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, tf, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, tf, catkin, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-robot-pose-publisher";
   version = "0.2.4";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f9d05e9dcd841a192caf488678928ffda8553134d3d7335fc2a3a05ee52b7b9e";
   };
 
+  buildInputs = [ tf roscpp geometry-msgs ];
   propagatedBuildInputs = [ tf roscpp geometry-msgs ];
-  nativeBuildInputs = [ catkin tf roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A Simple Node to Publish the Robot's Position Relative to the Map using TFs'';

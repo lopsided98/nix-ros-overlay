@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "61fe1d0c109317ec7114e7a4e38f4ecd6351aa1f6d1d1bb4606523091c1a386d";
   };
 
+  buildInputs = [ poco eigen ];
   propagatedBuildInputs = [ poco catkin ];
-  nativeBuildInputs = [ poco cmake eigen ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''libfranka is a C++ library for Franka Emika research robots'';

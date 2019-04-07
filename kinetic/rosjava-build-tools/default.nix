@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "782ea027bff0cf3c868b55e77efbc2d28ccc734abe37efed8da31a1f0b587ea1";
   };
 
+  buildInputs = [ openjdk ant ];
   propagatedBuildInputs = [ openjdk catkin ant ];
-  nativeBuildInputs = [ catkin openjdk ant ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Simple tools and catkin modules for rosjava development.'';

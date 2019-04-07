@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "129597da5dc34c612b14815d8b6ec56f405b2f1e04762248e0c1e9558db302a6";
   };
 
+  buildInputs = [ std-msgs grid-map-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs grid-map-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs grid-map-msgs message-generation catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Definition of cost map messages (related to the grid map message type).'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "4a4c794d1f100121b7bee42dcc83688aa0b98a3bf3412c8177ebba1d0345bf8b";
   };
 
+  buildInputs = [ diagnostic-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ diagnostic-msgs pythonPackages.requests rostopic rospy ];
-  nativeBuildInputs = [ diagnostic-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The iot_bridge provides a bi-directional bridge between ROS and the OpenHAB Home Automation system. This allows a ROS robot to connect to a vast variety of IoT devices such as motion detectors, Z-Wave devices, lighting, door locks, etc.'';

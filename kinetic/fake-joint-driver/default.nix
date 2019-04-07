@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "5efd962625fe2f2c1ff41a08768f34ad796a51b64325ccb4d59e48cf0aa36efc";
   };
 
+  buildInputs = [ controller-manager hardware-interface urdf roslaunch roscpp xacro ];
   checkInputs = [ rostest roslint ];
   propagatedBuildInputs = [ controller-manager hardware-interface joint-state-controller joint-trajectory-controller position-controllers urdf robot-state-publisher roslaunch roscpp xacro ];
-  nativeBuildInputs = [ controller-manager hardware-interface catkin urdf roslaunch roscpp xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The fake_joint_driver package'';

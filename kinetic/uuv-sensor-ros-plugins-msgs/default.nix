@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0ed1ed97d6fdcb9cc5a435d8ef2b1b3e88d659eca632007d549babe1457eb3a4";
   };
 
+  buildInputs = [ message-generation geometry-msgs ];
   propagatedBuildInputs = [ message-runtime geometry-msgs ];
-  nativeBuildInputs = [ catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The uuv_sensor_ros_plugins_msgs package'';

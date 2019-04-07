@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "25df36974ab8d97df23e60fc3c636c8d5f7d90a8b53fb18e1fc78660e8897052";
   };
 
+  buildInputs = [ abseil-cpp roscpp rostime roscpp-serialization ];
   propagatedBuildInputs = [ abseil-cpp roscpp rostime roscpp-serialization ];
-  nativeBuildInputs = [ roscpp-serialization abseil-cpp catkin roscpp rostime ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ros_type_introspection package allows the user to parse and deserialize

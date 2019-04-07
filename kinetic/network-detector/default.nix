@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1517add1961f39be682a01927313133edfa6394d67772586953d4f5b41875a29";
   };
 
+  buildInputs = [ std-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp ];
-  nativeBuildInputs = [ std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS node that watches a given network interface and publishes

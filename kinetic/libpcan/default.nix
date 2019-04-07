@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c4f41404fcc3bb9bbeae205b04ad04e5c99b3d230f6dd52a7feb3dc3d75faaf4";
   };
 
+  buildInputs = [ linuxHeaders ];
   propagatedBuildInputs = [ linuxHeaders ];
-  nativeBuildInputs = [ linuxHeaders catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package wraps the libpcan to use it as a ros dependency'';

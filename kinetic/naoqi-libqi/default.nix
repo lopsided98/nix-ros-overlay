@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6f66801ecd8acb3f681d7954458c683df2afa06e624e4c7ee923d143552e2d3c";
   };
 
+  buildInputs = [ boost ];
   propagatedBuildInputs = [ boost ];
-  nativeBuildInputs = [ catkin boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Aldebaran's libqi: a core library for NAOqiOS development'';

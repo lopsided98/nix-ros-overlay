@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2eb6856fb42192813c1ac60f0a408705c6e61ed425cf14f95b4aa6aa36d2717c";
   };
 
+  buildInputs = [ sensor-msgs message-generation ];
   propagatedBuildInputs = [ sensor-msgs message-generation ];
-  nativeBuildInputs = [ sensor-msgs message-generation catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The image_recognition_msgs package'';

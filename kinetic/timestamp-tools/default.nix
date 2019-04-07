@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roslib, roscpp }:
+{ lib, buildRosPackage, fetchurl, roslib, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-timestamp-tools";
   version = "1.6.8";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "62b0c3856b1275b15ec5ae303284165bbdd15ff35a3e3f8304c54817768bc6f4";
   };
 
+  buildInputs = [ roslib roscpp ];
   propagatedBuildInputs = [ roslib roscpp ];
-  nativeBuildInputs = [ catkin roslib roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is currently for internal use only. Its API may change

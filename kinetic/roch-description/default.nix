@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "14d2a9581abd500c47276e48a1579c7aa203bc7e1b62b6dccec2b684bc5d8f55";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ urdf xacro robot-state-publisher ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''SawYer Roch URDF description'';

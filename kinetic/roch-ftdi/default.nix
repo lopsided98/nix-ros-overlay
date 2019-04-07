@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e2bd52557ad5e8645672365013360606387554f12bdc6d8fd73efb3337d0fd64";
   };
 
+  buildInputs = [ libusb libftdi ecl-command-line ];
   propagatedBuildInputs = [ libusb libftdi ecl-command-line ];
-  nativeBuildInputs = [ catkin libusb libftdi ecl-command-line ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Utilities for flashing and enabling roch's USB connection.

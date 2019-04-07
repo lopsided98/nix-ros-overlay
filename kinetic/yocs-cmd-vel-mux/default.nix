@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ff197e158bd6a94b4991ccf8d2ae752e41c050dbb13792ac13ade322965a35fa";
   };
 
+  buildInputs = [ pluginlib dynamic-reconfigure libyamlcpp geometry-msgs nodelet roscpp ];
   propagatedBuildInputs = [ pluginlib dynamic-reconfigure libyamlcpp geometry-msgs nodelet roscpp ];
-  nativeBuildInputs = [ catkin pluginlib dynamic-reconfigure libyamlcpp geometry-msgs nodelet roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A multiplexer for command velocity inputs. Arbitrates incoming cmd_vel messages from several topics,

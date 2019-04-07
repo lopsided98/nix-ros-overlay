@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1589626fcadd210d2105ef7c7d8382b9bc826c173200c034f640949727550ee2";
   };
 
+  buildInputs = [ std-msgs xiaoqiang-msgs xiaoqiang-driver rospy ];
   propagatedBuildInputs = [ std-msgs xiaoqiang-msgs xiaoqiang-driver rospy ];
-  nativeBuildInputs = [ xiaoqiang-msgs xiaoqiang-driver rospy std-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''monitor the status of xiaoqiang'';

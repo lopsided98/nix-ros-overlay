@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "075cf9581432b2585529375d7e86772a8b3b0690910f9dcf2fa7656f8624f3ba";
   };
 
+  buildInputs = [ uuid-msgs message-generation ];
   propagatedBuildInputs = [ uuid-msgs message-runtime ];
-  nativeBuildInputs = [ uuid-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used to feed the trolls.'';

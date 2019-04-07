@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, tf, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, tf, catkin, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-binpicking-simple-utils";
   version = "0.1.4";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d1375bd5f7379048fb2c3a67729e4dfe43fb280c6f6744ec0ec4d87065f1a118";
   };
 
+  buildInputs = [ tf roscpp geometry-msgs ];
   propagatedBuildInputs = [ tf roscpp geometry-msgs ];
-  nativeBuildInputs = [ catkin tf roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>

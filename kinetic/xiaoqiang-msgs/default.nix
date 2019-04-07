@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6b94b5df5ec1607f7bc391af6640b1f3333df52628ab586461e7a3da53c57488";
   };
 
+  buildInputs = [ std-msgs message-generation rospy ];
   propagatedBuildInputs = [ std-msgs message-generation rospy ];
-  nativeBuildInputs = [ std-msgs catkin message-generation rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used by xiaoqiang'';

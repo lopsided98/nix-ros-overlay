@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "27b797eaba4c900709c89791c69663d1390d8e15330c98ecc82cf92044411384";
   };
 
+  buildInputs = [ cmake-modules rtt eigen ];
   propagatedBuildInputs = [ rtt ];
-  nativeBuildInputs = [ catkin cmake-modules rtt eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An Orocos typekit for Eigen types.'';

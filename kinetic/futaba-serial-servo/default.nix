@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9498f9d91ff377a484fd4ba85b80ff1a070a3c21f5cb116f30fa61bda010ca75";
   };
 
+  buildInputs = [ pythonPackages.pyserial rospy ];
   propagatedBuildInputs = [ pythonPackages.pyserial rospy ];
-  nativeBuildInputs = [ catkin pythonPackages.pyserial rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The futaba_serial_servo package'';

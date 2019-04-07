@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "538c214100b3c57362642b43903a64528777f92d038462d88dc6ca297afde123";
   };
 
+  buildInputs = [ roscpp tf interactive-markers visualization-msgs ];
   propagatedBuildInputs = [ roscpp tf interactive-markers visualization-msgs ];
-  nativeBuildInputs = [ interactive-markers visualization-msgs tf catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The interactive_marker_tutorials package'';

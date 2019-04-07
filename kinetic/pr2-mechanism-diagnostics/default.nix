@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e460ffa727c3e8f1e15d40e99fc784516d1afe49f01fad8254865e926a18c7fa";
   };
 
+  buildInputs = [ pr2-mechanism-msgs std-srvs diagnostic-updater rostest urdf angles std-msgs diagnostic-msgs roscpp pr2-mechanism-model ];
   propagatedBuildInputs = [ pr2-mechanism-msgs std-srvs diagnostic-updater std-msgs urdf angles rospy diagnostic-msgs roscpp pr2-mechanism-model ];
-  nativeBuildInputs = [ pr2-mechanism-msgs std-srvs catkin diagnostic-updater rostest urdf angles std-msgs diagnostic-msgs roscpp pr2-mechanism-model ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The `pr2_mechanism_diagnostics` node subscribes to `mechanism_statistics` and publishes diagnostics data for joints and controllers on `/diagnostics`.'';

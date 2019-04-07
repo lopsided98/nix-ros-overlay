@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "63ef29e75e746b6e69e12d4883e563739c5d4c534fea2a5e065d2599e71b1c8f";
   };
 
+  buildInputs = [ rostest ];
   propagatedBuildInputs = [ rostest rocon-console rospy roslaunch rocon-python-utils rocon-launch rosunit ];
-  nativeBuildInputs = [ rostest catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Rocon test framework (i.e. multi-launch rostest framework).'';

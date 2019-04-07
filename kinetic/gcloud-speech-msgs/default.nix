@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5f10526be93f5e409499e384edeace0babdfcbfc93a7ff226db7e8b715d8acd5";
   };
 
+  buildInputs = [ message-generation actionlib-msgs actionlib ];
   propagatedBuildInputs = [ message-runtime ];
-  nativeBuildInputs = [ catkin message-generation actionlib-msgs actionlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS message definitions for gcloud_speech and relevant packages.'';

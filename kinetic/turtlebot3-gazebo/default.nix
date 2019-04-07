@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7cbb7c8fa92d4145fb3af1aa2ab1abcd37e12f9c5308704ec67c5b1c78d4bd49";
   };
 
+  buildInputs = [ gazebo-ros nav-msgs geometry-msgs std-msgs sensor-msgs tf roscpp ];
   propagatedBuildInputs = [ gazebo-ros nav-msgs geometry-msgs std-msgs gazeboSimulator.gazebo sensor-msgs tf roscpp ];
-  nativeBuildInputs = [ gazebo-ros nav-msgs catkin geometry-msgs std-msgs sensor-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo simulation package for the TurtleBot3'';

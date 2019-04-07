@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "ed38253289573acb154da91af3979be6e3941a78c49edb8f272f180f5862986c";
   };
 
+  buildInputs = [ nav-2d-utils nav-msgs nav-grid roscpp nav-2d-msgs ];
   checkInputs = [ rosunit roslint ];
   propagatedBuildInputs = [ nav-2d-utils nav-msgs nav-grid roscpp nav-2d-msgs ];
-  nativeBuildInputs = [ nav-2d-utils nav-msgs nav-grid catkin roscpp nav-2d-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Iterator implementations for moving around the cells of a nav_grid in a number of common patterns.'';

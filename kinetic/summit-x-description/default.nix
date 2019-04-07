@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "43a639d5d44313b61f8e731fb9baffb1ba9d71d7b02dbb77e4a53447ca8822cb";
   };
 
+  buildInputs = [ robotnik-sensors urdf xacro robot-state-publisher ];
   propagatedBuildInputs = [ robotnik-sensors urdf xacro robot-state-publisher ];
-  nativeBuildInputs = [ urdf robot-state-publisher catkin xacro robotnik-sensors ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The summit_x_description package'';

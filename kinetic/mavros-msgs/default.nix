@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9f9f92c2d6e0c3397c3c4819cb9de7d0a86cfd989e3e0756c433e8272bf2a319";
   };
 
+  buildInputs = [ geographic-msgs message-generation std-msgs sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ geographic-msgs message-runtime std-msgs sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ geographic-msgs message-generation std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''mavros_msgs defines messages for <a href="http://wiki.ros.org/mavros">MAVROS</a>.'';

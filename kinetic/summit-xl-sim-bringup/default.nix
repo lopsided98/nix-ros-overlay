@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "62393ea44759d966e34620bbcd2db13c0386e4c7643dccafbed50afdcf702293";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros summit-xl-description summit-xl-pad summit-xl-control ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files for Summit XL simulation.'';

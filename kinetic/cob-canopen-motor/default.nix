@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a33b97dabed4b6b2b3ffabcdf262d11833d453c9beb8d4959a9bfd7981347b9e";
   };
 
+  buildInputs = [ cob-generic-can roscpp cob-utilities ];
   propagatedBuildInputs = [ cob-generic-can roscpp cob-utilities ];
-  nativeBuildInputs = [ cob-generic-can catkin roscpp cob-utilities ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The package cob_canopen_motor implements a controller-drive component which is connected to a can-bus and works with a canopen-interface. &quot;CanDriveItf&quot; provides a - more or less - generic interface to the controller-drive components. &quot;CanDrvie...&quot; then implements a specific setup, e.g. an ELMO Harmonica Controller in case of the &quot;CanDriveHarmonica&quot;.'';

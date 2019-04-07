@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "489e901d3c30a154c755e7b88d86d05e0b5c9aecf2603a435af26f8f6285f60b";
   };
 
+  buildInputs = [ master-sync-fkie master-discovery-fkie message-generation message-runtime std-msgs roslaunch roscpp ];
   propagatedBuildInputs = [ master-sync-fkie master-discovery-fkie message-generation message-runtime std-msgs roscpp ];
-  nativeBuildInputs = [ master-sync-fkie master-discovery-fkie message-generation catkin message-runtime std-msgs roslaunch roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Synchronises parameters across multiple masters.'';

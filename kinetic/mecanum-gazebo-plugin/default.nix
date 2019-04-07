@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c19ac0fbf254b7116e2cad8fad565d59d081e03becd9918933181faffc4dea66";
   };
 
+  buildInputs = [ gazeboSimulator.gazebo rosconsole roslint ];
   propagatedBuildInputs = [ gazeboSimulator.gazebo rosconsole ];
-  nativeBuildInputs = [ gazeboSimulator.gazebo catkin rosconsole roslint ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Plugin which uses directional friction to simulate mecanum wheels.'';

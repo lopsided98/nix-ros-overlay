@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ca90755d497b4ccfc1ced8b457a1e99bfc1dad143e36aa7318b42ce55209245a";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The aruco_msgs package'';

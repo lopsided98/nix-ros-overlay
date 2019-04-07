@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "29855bf9e99615ad683b601ba8e8b3e180386cff168082aefb16f657cfe00f3a";
   };
 
+  buildInputs = [ roch-msgs sensor-msgs roscpp nodelet ];
   propagatedBuildInputs = [ roch-msgs sensor-msgs roscpp nodelet ];
-  nativeBuildInputs = [ roch-msgs catkin nodelet sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Ult/psd/cliff to pointcloud:

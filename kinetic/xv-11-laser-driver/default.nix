@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3367511ab65de9627e4c08e0ff9da72c8d88be900f6c9eb3a42dece062f9a7cb";
   };
 
+  buildInputs = [ sensor-msgs roscpp ];
   propagatedBuildInputs = [ boost ];
-  nativeBuildInputs = [ sensor-msgs roscpp catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Neato XV-11 Laser Driver. This driver works with the laser when it is removed from the XV-11 Robot as opposed to reading scans from the Neato's USB port.'';

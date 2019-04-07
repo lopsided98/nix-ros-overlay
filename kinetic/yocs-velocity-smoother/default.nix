@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "301ea3851f8e6b544e903177b47025430d8345efde31afbd883754e4c0763b83";
   };
 
+  buildInputs = [ nav-msgs pluginlib dynamic-reconfigure geometry-msgs nodelet roscpp ecl-threads ];
   propagatedBuildInputs = [ nav-msgs pluginlib dynamic-reconfigure geometry-msgs nodelet roscpp ecl-threads ];
-  nativeBuildInputs = [ nav-msgs catkin pluginlib dynamic-reconfigure geometry-msgs nodelet roscpp ecl-threads ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Bound incoming velocity messages according to robot velocity and acceleration limits.'';

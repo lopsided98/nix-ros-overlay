@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, orocos-kdl, catkin, eigen, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, cmake-modules, catkin, eigen, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-eigen-conversions";
   version = "1.11.9";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "37608f29197051e03374ef024fce58f2fc17dbcca737fc49ad139b7c81b289f5";
   };
 
+  buildInputs = [ cmake-modules orocos-kdl eigen std-msgs geometry-msgs ];
   propagatedBuildInputs = [ std-msgs orocos-kdl geometry-msgs eigen ];
-  nativeBuildInputs = [ cmake-modules orocos-kdl eigen std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Conversion functions between:

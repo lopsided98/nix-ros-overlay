@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ba4752b9db03b2f01c4e383def2cbe61685c91cb9ade7d57e6305eef955b2677";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for representing PR2 state, such as battery information and the PR2 fingertip sensors.'';

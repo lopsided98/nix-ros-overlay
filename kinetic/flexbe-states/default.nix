@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "b6e7c4bdce6328d8ab17c8294bf34af1cb0f6accc5966c65a5afe80751b89fcb";
   };
 
+  buildInputs = [ rostest ];
   checkInputs = [ geometry-msgs ];
   propagatedBuildInputs = [ flexbe-msgs flexbe-testing rospy rosbag smach-ros ];
-  nativeBuildInputs = [ rostest catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''flexbe_states provides a collection of predefined states.

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4ab12f770bed70b0f14ff7a20463f039d261279c70811b7ea3449ba1a66383b9";
   };
 
+  buildInputs = [ nav-msgs nodelet sensor-msgs tf message-filters hector-pose-estimation-core geometry-msgs ];
   propagatedBuildInputs = [ nav-msgs nodelet sensor-msgs tf message-filters hector-pose-estimation-core geometry-msgs ];
-  nativeBuildInputs = [ nav-msgs catkin nodelet sensor-msgs tf message-filters hector-pose-estimation-core geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_pose_estimation provides the hector_pose_estimation node and the hector_pose_estimation nodelet.'';

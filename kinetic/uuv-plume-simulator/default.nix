@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "82a06dc4031547cfea25deba1cc03d223539736553ea9de5b304cc03afb9411c";
   };
 
+  buildInputs = [ uuv-plume-msgs pythonPackages.numpy rospy std-msgs sensor-msgs visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ uuv-plume-msgs pythonPackages.numpy rospy std-msgs sensor-msgs visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ uuv-plume-msgs pythonPackages.numpy catkin rospy std-msgs sensor-msgs visualization-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Plume simulator package'';

@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "8e671afc307443fe67016a76bfe9dacdb33a39583c9f9f99522d099e8d64aaac";
   };
 
-  nativeBuildInputs = [ catkin openjdk ];
+  buildInputs = [ openjdk ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''meshes for the Aldebaran Robotics NAO'';

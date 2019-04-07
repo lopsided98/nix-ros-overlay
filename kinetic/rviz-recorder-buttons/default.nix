@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f061af668eba0b24cc909015056d70db30d52de6018955dd457404d8087d1de5";
   };
 
+  buildInputs = [ std-srvs rviz pluginlib actionlib class-loader roscpp ];
   propagatedBuildInputs = [ std-srvs rviz pluginlib actionlib roscpp ];
-  nativeBuildInputs = [ std-srvs catkin rviz pluginlib actionlib class-loader roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rviz_recorder_buttons package'';

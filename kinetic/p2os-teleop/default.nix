@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ab335eef79180097bb377478917ae2f091b29fdb0c07812e51462f283558849d";
   };
 
+  buildInputs = [ std-msgs sensor-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ message-runtime std-msgs sensor-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ catkin std-msgs sensor-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A teleoperation node for the p2os_driver package.'';

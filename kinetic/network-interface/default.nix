@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "ee4826ed8fa164d3473409bd9bb1f15b0af0d785fd7f7f5dfaae24d28cad4060";
   };
 
+  buildInputs = [ std-msgs message-generation roslint ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation roslint ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Network interfaces and messages.'';

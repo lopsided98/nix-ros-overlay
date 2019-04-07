@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2dca3d4c71024aadaa0a5ddcb1edcb45fb300a3fd91b530a9f2c40a15397f0ea";
   };
 
+  buildInputs = [ dynamixel-sdk roscpp rh-p12-rn-base-module cmake-modules robotis-device robotis-controller-msgs robotis-controller robotis-framework-common ];
   propagatedBuildInputs = [ dynamixel-sdk roscpp rh-p12-rn-base-module cmake-modules robotis-device robotis-controller-msgs robotis-controller robotis-framework-common ];
-  nativeBuildInputs = [ dynamixel-sdk cmake-modules catkin robotis-controller robotis-controller-msgs rh-p12-rn-base-module robotis-device roscpp robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Manager package using ROBOTIS framework to control the RH-P12-RN'';

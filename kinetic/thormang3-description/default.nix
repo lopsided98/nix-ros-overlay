@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "19cb524c61e39215e833148d1ca807ea927d785178efdff954344f9586f7ff3f";
   };
 
+  buildInputs = [ sensor-msgs roscpp ];
   propagatedBuildInputs = [ urg-node rviz robot-state-publisher sensor-msgs roscpp joint-state-publisher ];
-  nativeBuildInputs = [ sensor-msgs roscpp catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''3D models of the Thormang3 for simulation and visualization'';

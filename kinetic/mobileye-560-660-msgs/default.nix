@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2cf291c63246557cdaddd403354f584cc317b6d191bbadf616e6d4364bd0bdd5";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definitions for the Mobileye 560/660'';

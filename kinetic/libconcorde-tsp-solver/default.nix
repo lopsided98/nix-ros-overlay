@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6bc33bbe462860121915c9ea60425299a581c8a55ac0e925a0027258652aec61";
   };
 
+  buildInputs = [ libqsopt ];
   propagatedBuildInputs = [ libqsopt ];
-  nativeBuildInputs = [ libqsopt catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Wrapper for the concorde traveling salesman problem solver. The code was obtained from http://www.math.uwaterloo.ca/tsp/concorde/downloads/downloads.htm all rights of it go to the corresponding authors David Applegate, Robert Bixby, Vasek Chvatal and William Cook. 

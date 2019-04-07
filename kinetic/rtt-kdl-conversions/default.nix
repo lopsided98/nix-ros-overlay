@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "64797229d92e8ec44f4886bd7203167cf302d58629e4c7fda1e5fba4b68e0dcf";
   };
 
+  buildInputs = [ kdl-conversions rtt ];
   propagatedBuildInputs = [ kdl-conversions rtt ];
-  nativeBuildInputs = [ kdl-conversions catkin rtt ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the components of the kdl_conversions package'';

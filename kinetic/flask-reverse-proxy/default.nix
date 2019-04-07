@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "c3f4fb621008261448d9396b6b2ac22a5fe02fd8c20adc5d1f83e3e7a09a5bc4";
   };
 
-  nativeBuildInputs = [ catkin-pip catkin ];
+  buildInputs = [ catkin-pip ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A Flask &quot;extension&quot; for applications in a reverse proxy not at the root. A complete rip off of http://flask.pocoo.org/snippets/35/.'';

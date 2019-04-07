@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e30d8dcac64fa38e60f4eaee72284d4e606b92b288da28df2c2db8832930f2c5";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages exclusive to Ridgeback, especially for representing low-level motor commands and sensors.'';

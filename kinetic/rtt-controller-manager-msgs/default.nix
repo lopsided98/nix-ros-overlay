@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "36ecb84d9b805f9fb415ccb2e04be67b7f2056e46c40784ac989434051c38b7c";
   };
 
+  buildInputs = [ rtt-roscomm rtt-std-msgs controller-manager-msgs ];
   propagatedBuildInputs = [ rtt-roscomm rtt-std-msgs controller-manager-msgs ];
-  nativeBuildInputs = [ rtt-roscomm catkin rtt-std-msgs controller-manager-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides an rtt typekit for ROS controller_manager_msgs messages.

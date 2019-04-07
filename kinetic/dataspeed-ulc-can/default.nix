@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "225f1f32ba0e5cd74a7db6729e5048b8ae40a5be9670fe65bc577bf2883a610c";
   };
 
+  buildInputs = [ nodelet dataspeed-ulc-msgs std-msgs can-msgs roscpp geometry-msgs ];
   checkInputs = [ rostest roslib ];
   propagatedBuildInputs = [ nodelet dataspeed-ulc-msgs std-msgs can-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ nodelet dataspeed-ulc-msgs std-msgs can-msgs catkin roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package to translate ROS messages to and from CAN messages to interact with the Universal Lat/Lon Controller (ULC) firmware'';

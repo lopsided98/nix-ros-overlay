@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bea11a0f8177cd5d22af74b12ca02a61755dac877b0c4f723ae692a96e79c67a";
   };
 
+  buildInputs = [ roscpp joy geometry-msgs ];
   propagatedBuildInputs = [ turtlebot-bringup roscpp geometry-msgs yocs-velocity-smoother joy kobuki-safety-controller ];
-  nativeBuildInputs = [ catkin roscpp joy geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides teleoperation using joysticks or keyboard.'';

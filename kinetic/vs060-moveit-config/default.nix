@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "18083bd47e95cccd84e417f1c301f3a46362cc1ee305160dd32a1b8122c0c514";
   };
 
+  buildInputs = [ moveit-simple-controller-manager moveit-ros-move-group moveit-ros-visualization robot-state-publisher moveit-planners-ompl ];
   propagatedBuildInputs = [ moveit-simple-controller-manager moveit-ros-move-group moveit-ros-visualization robot-state-publisher vs060 moveit-planners-ompl ];
-  nativeBuildInputs = [ moveit-simple-controller-manager moveit-ros-move-group moveit-ros-visualization robot-state-publisher catkin moveit-planners-ompl ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the vs060A1_AV6_NNN_NNN with the MoveIt Motion Planning Framework'';

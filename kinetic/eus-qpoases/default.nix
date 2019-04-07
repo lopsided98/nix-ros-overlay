@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "44e08b2b25f83155361557905ed18ec6f898a22c4aa7b964547f34630866fafa";
   };
 
+  buildInputs = [ rostest subversion euslisp ];
   propagatedBuildInputs = [ rostest euslisp ];
-  nativeBuildInputs = [ rostest catkin subversion euslisp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''eus_qpoases'';

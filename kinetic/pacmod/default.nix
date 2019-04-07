@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8c6f53699c4548da8a76cde1e431bb4f64c95d82b2201453160568b0780c6e14";
   };
 
+  buildInputs = [ roslint pacmod-msgs std-msgs can-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs can-msgs roscpp pacmod-msgs ];
-  nativeBuildInputs = [ roslint pacmod-msgs std-msgs can-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''AutonomouStuff PACMod driver package'';

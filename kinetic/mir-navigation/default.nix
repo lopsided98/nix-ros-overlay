@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a67cee2331f8e371249a0ffcb6647b5d5c8f4d099d4d7d7c657483fe0467baa6";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ map-server nav-core-adapter amcl base-local-planner mir-dwb-critics dwb-critics dwb-plugins sbpl-lattice-planner move-base mir-driver dwb-local-planner ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch and configuration files for move_base, localization etc. on the MiR robot.'';

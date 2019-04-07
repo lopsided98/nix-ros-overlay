@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4beba9c4829f9c177fdd4fd78a5f1c112b336e2d234d475304c4b4c1d9533db5";
   };
 
+  buildInputs = [ interactive-markers visualization-msgs std-msgs tf roscpp geometry-msgs ];
   propagatedBuildInputs = [ rviz interactive-markers visualization-msgs geometry-msgs std-msgs tf roscpp ];
-  nativeBuildInputs = [ catkin interactive-markers visualization-msgs std-msgs tf roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''COB teleop interactive marker for RViz provided by dcgm-robotics@FIT group.'';

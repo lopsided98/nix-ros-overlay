@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "34824a9a2aa860bd9747dc1f57d9a3bad1b38257731d08fd34ee6018eec9738a";
   };
 
+  buildInputs = [ roscpp urdf ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ roscpp urdf ];
-  nativeBuildInputs = [ catkin roscpp urdf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Industrial utils is a library package that captures common funcitonality for the ROS-Industrial distribution.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b1d4248db3584ba802bb5336b9b5a550c9ce6d0b0e0e099e4d3c67080eacda9b";
   };
 
+  buildInputs = [ roscpp elfutils ];
   propagatedBuildInputs = [ roscpp elfutils ];
-  nativeBuildInputs = [ catkin roscpp elfutils ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The backward_ros package is a ros wrapper of backward-cpp from https://github.com/bombela/backward-cpp'';

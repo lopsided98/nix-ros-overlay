@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ab1a42774b066258b5a581eb339d682667b1c34f56d2ad85bb563331a3534f5b";
   };
 
+  buildInputs = [ std-msgs message-generation actionlib-msgs rospy ];
   propagatedBuildInputs = [ std-msgs message-runtime rospy ];
-  nativeBuildInputs = [ message-generation actionlib-msgs rospy std-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>The ftm_msgs package provides a recommended interface to be used when developing FTM application in ROS.</p>

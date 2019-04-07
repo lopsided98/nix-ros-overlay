@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d97de686cb11d08039a4037888ba86301c60580fa4004e8d9864bd1856a20eb0";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generic Radar Messages'';

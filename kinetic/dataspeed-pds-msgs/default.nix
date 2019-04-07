@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "004be678fc6c9f32f68246f116c653b8bb36f252c9867e268dda5bdd870b12f9";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs rosbag-migration-rule message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for the Dataspeed Inc. Power Distribution System (PDS)'';

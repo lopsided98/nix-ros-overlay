@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "2ec60de42401432db69b67247a38ae52eff9fc7a3814ee6e00eb26c66cc797d6";
   };
 
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  buildInputs = [ pythonPackages.catkin-pkg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pythonwifi package is available through pypi, but not through a 

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ea43f367a00c522865e27057ba95a348b032185da70b24d2da57e2c8b24d2d48";
   };
 
+  buildInputs = [ rospy ];
   propagatedBuildInputs = [ rospy ];
-  nativeBuildInputs = [ catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ros_wild package'';

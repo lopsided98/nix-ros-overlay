@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "72cd378db75a699c55e7915f8e0d65dae7cc3eb4f40ef100fc1c1a96646927c7";
   };
 
+  buildInputs = [ pythonPackages.catkin-pkg ];
   propagatedBuildInputs = [ pythonPackages.rospkg rocon-python-comms rocon-bubble-icons rocon-console rocon-icons rospy rocon-python-utils rocon-std-msgs rocon-uri ];
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Publish master information - name, description, icon.'';

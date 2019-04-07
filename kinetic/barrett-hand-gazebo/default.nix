@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4b52a48be7bfa7afcf77fc35dcea6980f408094bc4163205fa6168ff51ced16c";
   };
 
+  buildInputs = [ gazebo-ros barrett-hand-description roscpp ];
   propagatedBuildInputs = [ gazebo-ros barrett-hand-description roscpp ];
-  nativeBuildInputs = [ gazebo-ros barrett-hand-description catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The barrett_hand_gazebo package'';

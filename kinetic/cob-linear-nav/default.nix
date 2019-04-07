@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "89f158b4948419a3d930762a72fd8ac2bb3dec90b859e5607af83a13ca7640a8";
   };
 
+  buildInputs = [ cob-srvs move-base-msgs nav-msgs actionlib angles geometry-msgs tf roscpp ];
   propagatedBuildInputs = [ cob-srvs move-base-msgs nav-msgs actionlib angles geometry-msgs tf roscpp ];
-  nativeBuildInputs = [ catkin roscpp cob-srvs move-base-msgs nav-msgs actionlib angles tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cob_linear_nav provides a simple navigation instrument driving on a linear path from current position to goal without any planning or obstacle avoidance capabilites.

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "49c6ec8bd510dc0fb1514ee94d2e0f8b12a6b7489e31025028f9ca7362ba8bd3";
   };
 
+  buildInputs = [ std-srvs boost roslint control-msgs trajectory-msgs sensor-msgs cob-srvs libntcan message-generation urdf actionlib libusb std-msgs diagnostic-msgs roscpp libpcan dpkg ];
   propagatedBuildInputs = [ std-srvs boost control-msgs trajectory-msgs sensor-msgs cob-srvs libntcan urdf actionlib message-runtime libusb std-msgs diagnostic-msgs roscpp libpcan dpkg ];
-  nativeBuildInputs = [ std-srvs boost roslint control-msgs trajectory-msgs sensor-msgs catkin cob-srvs libntcan message-generation urdf actionlib libusb std-msgs diagnostic-msgs roscpp libpcan dpkg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides an interface for operating the schunk dexterous hand (SDH), including the tactile sensors.'';

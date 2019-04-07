@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a77e9391ece6f3c2d65fcce807dc9f9c79982e226bb8b75555d38b35abf5d140";
   };
 
+  buildInputs = [ console-bridge tf2-msgs rostime geometry-msgs ];
   propagatedBuildInputs = [ console-bridge tf2-msgs rostime geometry-msgs ];
-  nativeBuildInputs = [ console-bridge tf2-msgs catkin rostime geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''tf2 is the second generation of the transform library, which lets

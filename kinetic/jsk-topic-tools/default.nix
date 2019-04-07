@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "2159e5b0217e8306979562dee0962cb77351ba5578182b68bd0d823ff614d60d";
   };
 
+  buildInputs = [ roslaunch std-srvs dynamic-tf-publisher std-msgs diagnostic-msgs roscpp nodelet tf geometry-msgs rosnode image-transport diagnostic-updater rostest message-generation rostopic dynamic-reconfigure topic-tools eigen-conversions rostime ];
   checkInputs = [ roscpp-tutorials roslint ];
   propagatedBuildInputs = [ std-srvs pythonPackages.numpy pythonPackages.scipy pythonPackages.opencv3 dynamic-tf-publisher std-msgs diagnostic-msgs roscpp nodelet tf geometry-msgs rosnode image-transport sensor-msgs eigen-conversions sound-play diagnostic-updater message-runtime rostopic dynamic-reconfigure topic-tools roslaunch rostime ];
-  nativeBuildInputs = [ roslaunch std-srvs catkin dynamic-tf-publisher std-msgs diagnostic-msgs roscpp nodelet tf geometry-msgs rosnode image-transport diagnostic-updater rostest message-generation rostopic dynamic-reconfigure topic-tools eigen-conversions rostime ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk_topic_tools'';

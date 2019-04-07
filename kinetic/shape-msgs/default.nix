@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "35157ebb79cdaa9df362b514b3b19a6065fc2c5db4cb17fb3d7a2390a6d0e3ca";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains messages for defining shapes, such as simple solid

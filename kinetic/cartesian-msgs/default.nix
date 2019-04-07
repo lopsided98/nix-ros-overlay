@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3c805a4b05bde27a645d82fa6e9773c5bb442188928b67b1daa0939497e9d568";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Stream cartesian commands'';

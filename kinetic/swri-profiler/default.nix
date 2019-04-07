@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "71c6d17509b4af8e5213f518c277af04a9d9b0ce046b60baa705f5be60a88be7";
   };
 
+  buildInputs = [ diagnostic-updater swri-profiler-msgs roscpp std-msgs ];
   propagatedBuildInputs = [ diagnostic-updater std-msgs swri-profiler-msgs rosbridge-server roscpp ];
-  nativeBuildInputs = [ diagnostic-updater std-msgs catkin swri-profiler-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''swri_profiler provides basic tools for real-time selective

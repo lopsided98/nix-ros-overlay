@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c31519ac5ff27c8dd3749b6e6866d1108a0c76619a15ebd7a8a9f1b58b4ab1c6";
   };
 
+  buildInputs = [ rostest pythonPackages.boto3 message-generation actionlib-msgs rospy std-msgs rosunit sound-play ];
   checkInputs = [ rostest pythonPackages.mock rosunit ];
   propagatedBuildInputs = [ pythonPackages.boto3 message-runtime actionlib-msgs rospy std-msgs sound-play ];
-  nativeBuildInputs = [ actionlib-msgs catkin sound-play rostest pythonPackages.boto3 message-generation rospy std-msgs rosunit ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package enabling a robot to speak with a human voice by providing a Text-To-Speech ROS service'';

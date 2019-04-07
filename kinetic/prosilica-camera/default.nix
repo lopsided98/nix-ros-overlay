@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d10b65251619a898f1bdc38fb8e9a95eab87d2c70eba4f0fe1047e8b19a43b72";
   };
 
+  buildInputs = [ rosconsole self-test camera-calibration-parsers image-transport sensor-msgs driver-base polled-camera prosilica-gige-sdk diagnostic-updater dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
   propagatedBuildInputs = [ self-test camera-calibration-parsers image-transport sensor-msgs driver-base polled-camera prosilica-gige-sdk diagnostic-updater dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
-  nativeBuildInputs = [ rosconsole self-test camera-calibration-parsers image-transport sensor-msgs catkin driver-base polled-camera prosilica-gige-sdk diagnostic-updater dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS driver node for AVT/Prosilica Gigabit Ethernet (GigE) cameras.'';

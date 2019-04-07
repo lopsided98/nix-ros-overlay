@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2735725eb5e55baa6d4bbc719d63dd1898f4c03bcce965488dd8139059fbd285";
   };
 
+  buildInputs = [ pythonPackages.flask catkin-pip pythonPackages.six ];
   propagatedBuildInputs = [ pythonPackages.flask pythonPackages.six ];
-  nativeBuildInputs = [ pythonPackages.flask catkin-pip catkin pythonPackages.six ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Cross Origin Resource Sharing ( CORS ) support for Flask'';

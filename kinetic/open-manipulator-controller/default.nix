@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1ac3e1f84937a1e2e8e9ee7d3506c8ebcd7625dfea1bcf3a1761abf1a9a652a9";
   };
 
+  buildInputs = [ moveit-ros-planning boost cmake-modules geometry-msgs trajectory-msgs sensor-msgs robotis-manipulator open-manipulator-libs moveit-core std-msgs moveit-msgs roscpp moveit-ros-planning-interface open-manipulator-msgs ];
   propagatedBuildInputs = [ moveit-ros-planning boost cmake-modules geometry-msgs trajectory-msgs sensor-msgs robotis-manipulator open-manipulator-libs moveit-core std-msgs moveit-msgs roscpp moveit-ros-planning-interface open-manipulator-msgs ];
-  nativeBuildInputs = [ moveit-ros-planning boost cmake-modules geometry-msgs trajectory-msgs sensor-msgs catkin robotis-manipulator open-manipulator-libs moveit-core std-msgs moveit-msgs roscpp moveit-ros-planning-interface open-manipulator-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''OpenManipulator controller package'';

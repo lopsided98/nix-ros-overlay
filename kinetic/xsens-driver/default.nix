@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2f5757ac831bc2ad82cbcc34b650966dac084b5531910e1d00d2185957bc467c";
   };
 
+  buildInputs = [ rospy std-msgs diagnostic-msgs sensor-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ pythonPackages.pyserial rospy std-msgs diagnostic-msgs sensor-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ catkin rospy std-msgs diagnostic-msgs sensor-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS Driver for XSens MT/MTi/MTi-G devices.'';

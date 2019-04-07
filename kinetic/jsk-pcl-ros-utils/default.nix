@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "1fbbf9fa20c68ff5ed60ea21692a93b4caa7617c40b1f85549b82dc2f8dfd871";
   };
 
+  buildInputs = [ cv-bridge image-geometry octomap pcl-ros tf-conversions moveit-ros-perception diagnostic-msgs tf pcl-conversions geometry-msgs stereo-msgs laser-assembler boost robot-self-filter image-transport jsk-footstep-msgs jsk-topic-tools message-generation octomap-ros moveit-core jsk-data pcl-msgs eigen-conversions kdl-conversions std-srvs tf2-ros octomap-msgs nav-msgs jsk-recognition-msgs std-msgs nodelet visualization-msgs octomap-server image-view2 rosboost-cfg roscpp-tutorials kdl-parser libyamlcpp sensor-msgs diagnostic-updater interactive-markers jsk-recognition-utils dynamic-reconfigure ];
   checkInputs = [ rostest roslaunch jsk-tools ];
   propagatedBuildInputs = [ cv-bridge image-geometry octomap image-view pcl-ros tf-conversions moveit-ros-perception diagnostic-msgs tf pcl-conversions geometry-msgs stereo-msgs laser-assembler boost robot-self-filter image-transport jsk-footstep-msgs jsk-topic-tools octomap-ros rviz message-runtime jsk-data pcl-msgs compressed-depth-image-transport moveit-core eigen-conversions kdl-conversions std-srvs rosbag tf2-ros octomap-msgs nav-msgs jsk-recognition-msgs std-msgs openni2-launch nodelet compressed-image-transport visualization-msgs octomap-server image-view2 rosboost-cfg roscpp-tutorials kdl-parser libyamlcpp sensor-msgs pythonPackages.scikitlearn diagnostic-updater interactive-markers jsk-recognition-utils dynamic-reconfigure ];
-  nativeBuildInputs = [ cv-bridge image-geometry octomap pcl-ros tf-conversions moveit-ros-perception diagnostic-msgs tf pcl-conversions geometry-msgs stereo-msgs laser-assembler boost robot-self-filter image-transport jsk-footstep-msgs jsk-topic-tools message-generation octomap-ros moveit-core jsk-data pcl-msgs eigen-conversions kdl-conversions std-srvs catkin tf2-ros octomap-msgs nav-msgs jsk-recognition-msgs std-msgs nodelet visualization-msgs octomap-server image-view2 rosboost-cfg roscpp-tutorials kdl-parser libyamlcpp sensor-msgs diagnostic-updater interactive-markers jsk-recognition-utils dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS utility nodelets for pointcloud perception.'';

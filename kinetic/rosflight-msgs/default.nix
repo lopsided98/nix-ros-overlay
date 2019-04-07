@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c14dec48c1306792d18490e5b388a4199656e1c434d8fa7f3ea7e22a3e306a5c";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message and service definitions for the ROSflight ROS stack'';

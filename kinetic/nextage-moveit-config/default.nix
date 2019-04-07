@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "a53f376904d833d8bc62e24aaf59f838bd5ea788d1c7e193bb5e4f50a3525def";
   };
 
+  buildInputs = [ nextage-ros-bridge hironx-moveit-config ];
   checkInputs = [ rostest joint-state-publisher robot-state-publisher ];
   propagatedBuildInputs = [ trac-ik-kinematics-plugin moveit-ros-move-group moveit-ros-visualization hironx-moveit-config moveit-ros moveit-ros-planning-interface moveit-simple-controller-manager moveit-planners nextage-ros-bridge ];
-  nativeBuildInputs = [ catkin nextage-ros-bridge hironx-moveit-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the NextageOpen with the MoveIt Motion Planning Framework.'';

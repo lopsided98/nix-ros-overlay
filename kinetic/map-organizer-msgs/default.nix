@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav-msgs, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, catkin, nav-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-map-organizer-msgs";
   version = "0.3.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "41458475dd47881774f6475f9807a315a76467a10efd37534b3009c50357fa7e";
   };
 
+  buildInputs = [ nav-msgs message-generation ];
   propagatedBuildInputs = [ nav-msgs message-runtime ];
-  nativeBuildInputs = [ nav-msgs message-generation catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definitions for map_organizer_msgs package'';

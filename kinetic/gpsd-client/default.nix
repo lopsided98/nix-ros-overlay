@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "65374d1b731fbb14f66284e274ed13089439964e40e6f827d8189bd261385eab";
   };
 
-  nativeBuildInputs = [ gspd gps-common catkin sensor-msgs roscpp pkg-config ];
+  buildInputs = [ gspd gps-common sensor-msgs roscpp pkg-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''connects to a GPSd server and broadcasts GPS fixes 

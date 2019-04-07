@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a3f88938c7ba79e961dcec2ed5921cebfa88e94c857ac4855a8900bc650b1d75";
   };
 
+  buildInputs = [ controller-manager pluginlib camera-info-manager image-transport sensor-msgs cv-bridge usb-cam-hardware-interface controller-interface roscpp ];
   propagatedBuildInputs = [ controller-manager pluginlib camera-info-manager image-transport sensor-msgs cv-bridge usb-cam-hardware-interface controller-interface roscpp ];
-  nativeBuildInputs = [ controller-manager pluginlib camera-info-manager image-transport sensor-msgs cv-bridge catkin usb-cam-hardware-interface controller-interface roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The usb_cam_controllers package'';

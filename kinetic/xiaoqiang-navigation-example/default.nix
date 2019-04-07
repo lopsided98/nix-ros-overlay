@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b20088d0a643b12e5946f07af15a954273eca49a026c1ad78deaf0ce2917ccbb";
   };
 
+  buildInputs = [ std-msgs xiaoqiang-msgs rospy xiaoqiang-freenect ];
   propagatedBuildInputs = [ std-msgs xiaoqiang-msgs rospy xiaoqiang-freenect ];
-  nativeBuildInputs = [ xiaoqiang-msgs rospy std-msgs catkin xiaoqiang-freenect ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''xiaoqiang navigation stack examples'';

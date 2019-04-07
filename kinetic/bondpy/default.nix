@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0aa53cb5fb4da50b9d6a3422ecd25e2bf2a25e33e55080f95349da79eb228fe1";
   };
 
+  buildInputs = [ smclib bond rospy ];
   propagatedBuildInputs = [ smclib utillinux rospy ];
-  nativeBuildInputs = [ smclib catkin bond rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Python implementation of bond, a mechanism for checking when

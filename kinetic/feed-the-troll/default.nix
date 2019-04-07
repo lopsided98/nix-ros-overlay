@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5676c27d3395d17fcb697f732b80679bb425f5905aaa1d392126be661af93fa1";
   };
 
+  buildInputs = [ unique-id pythonPackages.termcolor uuid-msgs rostest feed-the-troll-msgs rocon-console rosgraph dynamic-reconfigure rospy rocon-python-utils ];
   propagatedBuildInputs = [ unique-id pythonPackages.termcolor uuid-msgs feed-the-troll-msgs rocon-console rosgraph dynamic-reconfigure rospy rocon-python-utils ];
-  nativeBuildInputs = [ unique-id pythonPackages.termcolor catkin uuid-msgs rostest feed-the-troll-msgs rocon-console rosgraph dynamic-reconfigure rospy rocon-python-utils ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Mechanisms for loading a ros node at runtime.'';

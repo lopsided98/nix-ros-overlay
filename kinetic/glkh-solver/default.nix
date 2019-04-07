@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "178edf5606555aea5a79c12d78fc03d13398f6defb0f309ebea082f8cd8d9cb1";
   };
 
+  buildInputs = [ lkh-solver roscpp ];
   propagatedBuildInputs = [ lkh-solver roscpp ];
-  nativeBuildInputs = [ lkh-solver catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS package for solving the Generalized Traveling Salesman Problem using

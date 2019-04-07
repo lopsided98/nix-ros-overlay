@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "46c0b777acdca5d11ebcce78f3bef3c5ef5110d6311c9b3bb905e5eb5532f494";
   };
 
+  buildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers actionlib-msgs actionlib roscpp pr2-mechanism-model robot-mechanism-controllers ];
   propagatedBuildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers actionlib-msgs actionlib roscpp pr2-mechanism-model robot-mechanism-controllers ];
-  nativeBuildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers actionlib-msgs actionlib catkin roscpp pr2-mechanism-model robot-mechanism-controllers ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_gripper_action provides an action interface for using the

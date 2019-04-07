@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, pythonPackages, libmongocxx-ros, rosgraph, mongodb-store, rostopic, rospy, openssl, roslib }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, libmongocxx-ros, roslib, rosgraph, rostopic, mongodb-store, rospy, openssl, tf }:
 buildRosPackage {
   pname = "ros-kinetic-mongodb-log";
   version = "0.4.4-r2";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c3eab2526fa63a48778723282db9807350a4140642d52d60ea0a87dfc832d90b";
   };
 
+  buildInputs = [ tf sensor-msgs libmongocxx-ros rosgraph rostopic mongodb-store rospy openssl roslib ];
   propagatedBuildInputs = [ pythonPackages.pymongo tf sensor-msgs libmongocxx-ros rosgraph rostopic mongodb-store rospy roslib ];
-  nativeBuildInputs = [ tf sensor-msgs catkin libmongocxx-ros rosgraph rostopic mongodb-store rospy openssl roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The mongodb_log package'';

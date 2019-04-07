@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e7084fd0b85be3b40470e512d2f14e9db9ef1f75812361e1061dd4b691b10fdd";
   };
 
+  buildInputs = [ marker-msgs cmake-modules tf image-transport cv-bridge roscpp image-geometry dynamic-reconfigure rospy nodelet eigen ];
   propagatedBuildInputs = [ marker-msgs tf image-transport cv-bridge roscpp image-geometry dynamic-reconfigure rospy nodelet ];
-  nativeBuildInputs = [ marker-msgs cmake-modules tf image-transport cv-bridge catkin roscpp image-geometry dynamic-reconfigure rospy nodelet eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tuw_ellipses package contains a computer vision library which is able to detect ellipses within images.  

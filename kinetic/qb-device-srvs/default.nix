@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "06532b026d7d5803e1cf3499ade82c92c3be2c6d1f32b80cf3914ced46a04859";
   };
 
+  buildInputs = [ std-srvs message-generation qb-device-msgs ];
   propagatedBuildInputs = [ std-srvs message-runtime qb-device-msgs ];
-  nativeBuildInputs = [ std-srvs catkin message-generation qb-device-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the device-independent custom ROS services for qbrobotics® devices.'';

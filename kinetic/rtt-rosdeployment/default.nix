@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0a01448b81141e4b478abb90a4ceb42dc66bee97aa38adc5c6ff02ea484f0202";
   };
 
+  buildInputs = [ rtt-ros-msgs roscpp rtt-ros ];
   propagatedBuildInputs = [ rtt-ros-msgs roscpp rtt-ros ];
-  nativeBuildInputs = [ rtt-ros-msgs catkin roscpp rtt-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rtt_rosdeployment provides an RTT plugin to control an ocl deployment component over ROS service calls.'';

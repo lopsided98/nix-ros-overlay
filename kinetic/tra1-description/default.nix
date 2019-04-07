@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "2c0bad1d3a63bff14d3be1b3f5f62f849f4024a926de179672c7f77e94092db1";
   };
 
+  buildInputs = [ xacro ];
   checkInputs = [ rostest roslaunch ];
   propagatedBuildInputs = [ rviz robot-state-publisher tf joint-state-publisher xacro ];
-  nativeBuildInputs = [ catkin xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the description (mechanical, kinematic, visual,  etc.) of the TRA1 robot. The files in this package are parsed and used by a variety of other components.  Most users will not interact directly with this package.'';

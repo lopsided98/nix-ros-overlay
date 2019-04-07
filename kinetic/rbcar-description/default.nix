@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "734d9b1f982d3bbfe7d0d05f7e1457dfd1c5ea9cc92d8bc7e10c6ef2aa79d549";
   };
 
+  buildInputs = [ std-msgs std-srvs tf robotnik-sensors ];
   propagatedBuildInputs = [ std-srvs message-runtime std-msgs tf robotnik-sensors ];
-  nativeBuildInputs = [ std-srvs std-msgs catkin tf robotnik-sensors ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rbcar_description package'';

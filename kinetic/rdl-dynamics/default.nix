@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "65b04cf2a3b86031f11f44bbb8f02db4f237a3a6a5aef4086fe32e67ce789ec7";
   };
 
+  buildInputs = [ eigen graphviz doxygen ];
   checkInputs = [ lcov gtest rdl-cmake ];
   propagatedBuildInputs = [ eigen graphviz doxygen ];
-  nativeBuildInputs = [ catkin eigen graphviz doxygen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rdl_dynamics package'';

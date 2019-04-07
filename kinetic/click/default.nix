@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "013f8c679a4570dd4795f91b8984f1ad66b6cfb594b285c8e5087a5a3cc57ef9";
   };
 
+  buildInputs = [ catkin-pip ];
   checkInputs = [ pythonPackages.colorama ];
-  nativeBuildInputs = [ catkin-pip catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Python composable command line utility http://click.pocoo.org/'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5a8c856cb265e7accc502383cd29d18b4aa42dcbdbf8eb07686d536531c0c7f1";
   };
 
+  buildInputs = [ cmake-modules open-manipulator-msgs eigen std-msgs sensor-msgs roscpp qt5.qtbase ];
   propagatedBuildInputs = [ cmake-modules open-manipulator-msgs eigen std-msgs sensor-msgs roscpp qt5.qtbase ];
-  nativeBuildInputs = [ catkin cmake-modules open-manipulator-msgs eigen std-msgs sensor-msgs roscpp qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''OpenManipulator GUI control package based on QT'';

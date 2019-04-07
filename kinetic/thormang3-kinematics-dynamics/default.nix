@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "60085ae5fee76c539b7dd620bf0773b563c23c545a1da2dd5e1a01590d957d5e";
   };
 
+  buildInputs = [ roscpp cmake-modules robotis-math eigen ];
   propagatedBuildInputs = [ roscpp cmake-modules robotis-math eigen ];
-  nativeBuildInputs = [ robotis-math cmake-modules eigen catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a kinematics and dynamics impletation for the thormang3.

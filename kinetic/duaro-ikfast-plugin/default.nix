@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "156e01ed1c1bf8818287c88333f57d70a87e41dde731dd4eba3aeff5dcdd24fd";
   };
 
+  buildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
   propagatedBuildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
-  nativeBuildInputs = [ liblapack moveit-core pluginlib tf-conversions catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The duaro_ikfast_plugin package'';

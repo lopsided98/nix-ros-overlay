@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bd7f88e11df09fc332ada9f3f0e595b1e70c83ac9a9294a4a0b0e2269e795e4f";
   };
 
+  buildInputs = [ camera-info-manager image-transport sensor-msgs message-filters polled-camera image-geometry diagnostic-updater dynamic-reconfigure std-msgs roscpp ];
   propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs message-filters polled-camera image-geometry diagnostic-updater dynamic-reconfigure std-msgs roscpp ];
-  nativeBuildInputs = [ camera-info-manager image-transport sensor-msgs catkin message-filters polled-camera image-geometry diagnostic-updater dynamic-reconfigure std-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Wrapper of the Allied Vision Technologies (AVT) VIMBA Ethernet and Firewire SDK.'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "4c749124a45a335b371fcb36d61c58c4191671efedc8a8b26bdb768a77f52b14";
   };
 
+  buildInputs = [ boost ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ catkin boost ];
-  nativeBuildInputs = [ cmake boost ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''C++ library for interfacing with iRobot's Create 1 and Create 2'';

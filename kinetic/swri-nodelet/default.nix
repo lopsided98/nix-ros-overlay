@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "41ed0cc6a7092c55a2e2b1ee1d7bd756f4e53e81e981ae09a0baec7236fa09f3";
   };
 
+  buildInputs = [ std-msgs nodelet roscpp ];
   checkInputs = [ rostest rosbash ];
   propagatedBuildInputs = [ std-msgs nodelet rosbash roscpp ];
-  nativeBuildInputs = [ std-msgs catkin nodelet roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a simple script to write simple launch files

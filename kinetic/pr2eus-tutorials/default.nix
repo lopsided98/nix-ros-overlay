@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "867b35b55ec034aff412e7bcdc213d318f21cd27682ccda3ddbb282579c41de0";
   };
 
+  buildInputs = [ pr2eus jsk-pcl-ros ];
   propagatedBuildInputs = [ pr2eus jsk-pcl-ros jsk-interactive-marker roseus-tutorials ];
-  nativeBuildInputs = [ pr2eus catkin jsk-pcl-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''pr2eus_tutorials'';

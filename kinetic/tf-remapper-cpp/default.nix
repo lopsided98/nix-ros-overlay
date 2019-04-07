@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "da882c8a6467c9123bd974dcaf94a6c0bd621ec87218a360af7587fbac411be5";
   };
 
+  buildInputs = [ roscpp tf2-msgs xmlrpcpp ];
   checkInputs = [ rostest tf ];
   propagatedBuildInputs = [ roscpp tf2-msgs xmlrpcpp ];
-  nativeBuildInputs = [ catkin roscpp tf2-msgs xmlrpcpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''More efficient version of tf/tf_remap able to handle TFs at kHz with tens of subscribers.'';

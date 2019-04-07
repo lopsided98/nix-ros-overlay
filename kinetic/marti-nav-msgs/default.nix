@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6ff8ffceb82bf7632fb7abcea09207abc5036b1ef85801340f25621bc8a61173";
   };
 
+  buildInputs = [ geographic-msgs message-generation marti-common-msgs std-msgs sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ geographic-msgs marti-common-msgs message-runtime std-msgs sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ geographic-msgs message-generation marti-common-msgs std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''marti_nav_msgs'';

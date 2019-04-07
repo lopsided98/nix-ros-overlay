@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "191d59fb2ee63011ac734f82d6e451c4e87a06827c42e9200cbf7b8584cb7098";
   };
 
+  buildInputs = [ visp std-msgs camera-calibration-parsers roscpp sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ visp std-msgs camera-calibration-parsers roscpp sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ catkin visp std-msgs camera-calibration-parsers roscpp sensor-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Converts between ROS structures and ViSP structures.'';

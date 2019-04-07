@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0c02106323f3f2acf92d104a193f9698c81cf557e3c4962a944c242baf5e51a2";
   };
 
+  buildInputs = [ rosgraph-msgs std-srvs rospy sensor-msgs roscpp geometry-msgs gazebo-msgs rosflight-msgs ];
   propagatedBuildInputs = [ rosgraph-msgs std-srvs rospy sensor-msgs roscpp geometry-msgs gazebo-msgs rosflight-msgs ];
-  nativeBuildInputs = [ std-srvs sensor-msgs gazebo-msgs catkin rosgraph-msgs rospy roscpp geometry-msgs rosflight-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Supporting utilities for ROSflight packages'';

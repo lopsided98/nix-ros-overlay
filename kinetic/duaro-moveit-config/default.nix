@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "9bd0a4579bbbf006fe8c3301a88a869afd4511709f2444e04b803fd8f6edca4a";
   };
 
+  buildInputs = [ duaro-description ];
   checkInputs = [ rostest roslaunch ];
   propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-kinematics duaro-description moveit-simple-controller-manager robot-state-publisher tf joint-state-publisher xacro moveit-planners-ompl ];
-  nativeBuildInputs = [ duaro-description catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the duaro with the MoveIt! Motion Planning Framework'';

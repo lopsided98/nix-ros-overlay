@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "90b3431f779c8d9db5d15d509e22dd1a7fc9761da0f03b2c8cee140964ca1d19";
   };
 
+  buildInputs = [ message-generation actionlib-msgs actionlib ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs actionlib ];
-  nativeBuildInputs = [ catkin message-generation actionlib-msgs actionlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''message for pddl planner'';

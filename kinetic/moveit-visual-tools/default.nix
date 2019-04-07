@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fcff31c9a81c3cd874cc91af2dad5c6cc3e1d8995f68ea436f0e3335d967b185";
   };
 
+  buildInputs = [ moveit-ros-planning roslint cmake-modules trajectory-msgs roscpp rviz-visual-tools moveit-core graph-msgs tf-conversions std-msgs eigen-conversions visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ moveit-ros-planning roslint cmake-modules trajectory-msgs roscpp rviz-visual-tools moveit-core graph-msgs tf-conversions std-msgs eigen-conversions visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ moveit-ros-planning roslint cmake-modules trajectory-msgs catkin roscpp rviz-visual-tools moveit-core graph-msgs tf-conversions std-msgs eigen-conversions visualization-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Helper functions for displaying and debugging MoveIt! data in Rviz via published markers'';

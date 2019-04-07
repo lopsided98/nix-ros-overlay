@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a8674655f38ec8dfc935c03c12dcee8afb4ae615d4cb57813b397bcc7462d4a9";
   };
 
+  buildInputs = [ thormang3-head-control-module-msgs cmake-modules boost sensor-msgs roscpp robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ thormang3-head-control-module-msgs cmake-modules boost sensor-msgs roscpp robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
-  nativeBuildInputs = [ thormang3-head-control-module-msgs cmake-modules boost sensor-msgs catkin roscpp robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A module to control the head.

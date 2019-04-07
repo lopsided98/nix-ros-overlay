@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cb1c8be78f0e5b9e8aa54a2a7f1d44e6e7160c125fa4b724727ff3be78d42208";
   };
 
+  buildInputs = [ std-msgs sensor-msgs rospy ];
   propagatedBuildInputs = [ std-msgs sensor-msgs futaba-serial-servo rospy ];
-  nativeBuildInputs = [ std-msgs sensor-msgs catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The raspigibbon_bringup package'';

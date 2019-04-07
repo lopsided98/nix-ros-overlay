@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bbf5462db5e557342a36d22c5d7ff42559a5319bdb04589d7e7b0c57118ada07";
   };
 
+  buildInputs = [ message-generation actionlib actionlib-msgs cob-object-detection-msgs std-msgs sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ actionlib message-runtime actionlib-msgs cob-object-detection-msgs std-msgs sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation actionlib actionlib-msgs cob-object-detection-msgs std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message, service and action definitions for environment perception.'';

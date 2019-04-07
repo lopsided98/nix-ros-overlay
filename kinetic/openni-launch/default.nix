@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ec0a07c5239ce3b8d9bf6dd9ec13f481341bf36b1f319f55240e9e101e0ee7d6";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ rgbd-launch nodelet openni-camera ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files to open an OpenNI device and load all nodelets to 

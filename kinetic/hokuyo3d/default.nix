@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0f80bbea913053d898a32926c20df0f24547b10bb843e59b184715cc50168409";
   };
 
+  buildInputs = [ rostest sensor-msgs roscpp roslint ];
   propagatedBuildInputs = [ sensor-msgs roscpp ];
-  nativeBuildInputs = [ rostest catkin roslint sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS driver node for HOKUYO 3D LIDARs'';

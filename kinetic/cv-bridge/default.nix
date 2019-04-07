@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "e7fe00e14863ff03d5a6df0032c8bda00e166c4a20fffbc1ce16fe55f3bc2397";
   };
 
+  buildInputs = [ python rosconsole boost sensor-msgs opencv3 ];
   checkInputs = [ rostest pythonPackages.numpy ];
   propagatedBuildInputs = [ python rosconsole boost sensor-msgs opencv3 ];
-  nativeBuildInputs = [ python rosconsole boost sensor-msgs catkin opencv3 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This contains CvBridge, which converts between ROS

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "50e9095e43cb549af5deb4a00b393971084674c33e175b4c1650e5f69d30e9d5";
   };
 
+  buildInputs = [ gazebo-ros rosflight-firmware eigen rosflight-msgs gazeboSimulator.gazebo roscpp geometry-msgs gazebo-plugins ];
   propagatedBuildInputs = [ gazebo-ros rosflight-firmware eigen rosflight-msgs gazeboSimulator.gazebo roscpp geometry-msgs gazebo-plugins ];
-  nativeBuildInputs = [ gazebo-ros gazeboSimulator.gazebo catkin gazebo-plugins rosflight-firmware eigen roscpp geometry-msgs rosflight-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Software-in-the-loop (SIL) simulator for the ROSflight firmware'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "61a368d2edcaebf1a09a2294f4a6598f0462ad96b6d95987b9858e371831cd0e";
   };
 
+  buildInputs = [ moveit-simple-controller-manager controller-manager-msgs moveit-core pluginlib actionlib trajectory-msgs ];
   propagatedBuildInputs = [ moveit-simple-controller-manager controller-manager-msgs moveit-core pluginlib actionlib trajectory-msgs ];
-  nativeBuildInputs = [ moveit-simple-controller-manager controller-manager-msgs moveit-core pluginlib actionlib trajectory-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ros_control controller manager interface for MoveIt!'';

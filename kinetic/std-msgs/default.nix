@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-std-msgs";
   version = "0.5.11";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "64d894cdc86fba346136f61ee98b638f1cbc92eb8a58dadb74ee15bea21b9d70";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Standard ROS Messages including common message types representing primitive data types and other basic message constructs, such as multiarrays.

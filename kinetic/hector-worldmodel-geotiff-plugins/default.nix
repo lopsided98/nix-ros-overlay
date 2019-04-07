@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "68aa6355f7c39c11ad20cdc7ce8129f6c4fb4bf9710105b1e76c2214395701d1";
   };
 
+  buildInputs = [ hector-worldmodel-msgs hector-geotiff ];
   propagatedBuildInputs = [ hector-worldmodel-msgs hector-geotiff ];
-  nativeBuildInputs = [ hector-worldmodel-msgs hector-geotiff catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_worldmodel_geotiff_plugins contains a plugin to visualize worldmodel objects (e.g. victims in a

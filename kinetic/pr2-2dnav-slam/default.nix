@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9ec8418dcdbecb53490581053618d23cf5f9e24b4af3790f336ef92e673e5d31";
   };
 
+  buildInputs = [ pr2-machine pr2-navigation-slam pr2-navigation-teleop pr2-navigation-perception ];
   propagatedBuildInputs = [ pr2-machine pr2-navigation-slam pr2-navigation-teleop pr2-navigation-perception ];
-  nativeBuildInputs = [ pr2-navigation-teleop pr2-machine pr2-navigation-slam catkin pr2-navigation-perception ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This application allows the PR2 to navigate autonomously while also building a map of its environment as it drives along.'';

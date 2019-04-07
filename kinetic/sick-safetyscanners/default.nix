@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "15c08cd9d706ea5c1730737c4399f4c6e1ee922a979383da21c0cc5c1d34848f";
   };
 
+  buildInputs = [ message-generation dynamic-reconfigure std-msgs sensor-msgs roscpp ];
   propagatedBuildInputs = [ message-runtime dynamic-reconfigure std-msgs sensor-msgs roscpp rqt-reconfigure ];
-  nativeBuildInputs = [ message-generation catkin dynamic-reconfigure std-msgs sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides an Interface to read the sensor output of a SICK

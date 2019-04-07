@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bb3509065f910c2abda25531a629b633338d577e409c4255636a5d2e4a63e80c";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ single-joint-position-action pr2-controller-manager pr2-head-action pr2-machine robot-mechanism-controllers pr2-gripper-action ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Configuration files for PR2 controllers.'';

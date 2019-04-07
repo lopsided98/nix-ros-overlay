@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-gmplot-msgs";
   version = "1.0.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a365d3bd44fc2c3e17451240a917973db2813dc8b355d629a7506bf8b39ee774";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definitions for gmplot ROS wrapper'';

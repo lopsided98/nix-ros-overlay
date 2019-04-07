@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "dcf5e41d49f0d4ba06657b653c533c538660edf08072fac116c1034a097e0764";
   };
 
+  buildInputs = [ rospy tf tf2-ros geometry-msgs ];
   propagatedBuildInputs = [ python tf2-ros rospy tf geometry-msgs ];
-  nativeBuildInputs = [ catkin rospy geometry-msgs tf tf2-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The static_tf package'';

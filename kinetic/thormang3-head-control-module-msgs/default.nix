@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b8546320341590906e3c3e04e15add9d5d08e1ebeeeebdbdc60485818f456426";
   };
 
+  buildInputs = [ std-msgs sensor-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs sensor-msgs message-generation catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a set of messages and services for using thormang3_head_control_module.'';

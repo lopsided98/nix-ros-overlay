@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ac92aa1fb7cdc84515b51ee6c8bb677e5557c00f557a54425af282eb89ffd52b";
   };
 
+  buildInputs = [ diagnostic-msgs rostest roscpp std-msgs ];
   propagatedBuildInputs = [ diagnostic-msgs roscpp std-msgs ];
-  nativeBuildInputs = [ rostest std-msgs diagnostic-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''diagnostic_updater contains tools for easily updating diagnostics. it is commonly used in device drivers to keep track of the status of output topics, device status, etc.'';

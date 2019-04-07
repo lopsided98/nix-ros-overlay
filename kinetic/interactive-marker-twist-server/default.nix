@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "af453490a78b550877d0ec79593922b0c8810e3716b3bb72d242e10db0e21969";
   };
 
+  buildInputs = [ visualization-msgs interactive-markers roscpp ];
   checkInputs = [ roslaunch roslint ];
   propagatedBuildInputs = [ visualization-msgs interactive-markers roscpp ];
-  nativeBuildInputs = [ catkin visualization-msgs interactive-markers roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interactive control for generic Twist-based robots using interactive markers'';

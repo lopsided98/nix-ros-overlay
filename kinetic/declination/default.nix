@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1c37c79dd33b2c2619f179c8a164a97a066b98f95aaa2934d4940ca4438ff51d";
   };
 
+  buildInputs = [ rospy std-msgs sensor-msgs tf geometry-msgs roscpp ];
   propagatedBuildInputs = [ rospy std-msgs sensor-msgs tf geometry-msgs roscpp ];
-  nativeBuildInputs = [ catkin rospy std-msgs sensor-msgs tf geometry-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Computes magnetic compass offset from NavSatFix, and provides

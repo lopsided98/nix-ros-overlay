@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "9911276f244b4a5d26acd43b2647ddecf585986e229a3331a0269b171ff7d6c0";
   };
 
+  buildInputs = [ linuxHeaders class-loader boost ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ linuxHeaders class-loader boost ];
-  nativeBuildInputs = [ linuxHeaders class-loader catkin boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generic CAN interface description with helpers for filtering and driver implementation. Further a socketcan implementation based on boost::asio is included.'';

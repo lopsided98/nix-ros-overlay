@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8ad08ec8d76d95de8fb8b29e19b741120860517559c7cdc9394f318b2583757b";
   };
 
+  buildInputs = [ urdf xacro ];
   propagatedBuildInputs = [ urdf xacro ];
-  nativeBuildInputs = [ catkin urdf xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pheeno_ros_description package'';

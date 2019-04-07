@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4b80799dc0fc94ff36948bcc084e739c5b6d8d04c71b22a912a192e6fdcc65fb";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The messages required by multimaster packages.'';

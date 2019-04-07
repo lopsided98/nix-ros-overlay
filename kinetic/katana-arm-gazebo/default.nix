@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "825f9ad6babb194166708ba91aaeedabb685bef7e0963b0ce9f246d1c6b61b2e";
   };
 
+  buildInputs = [ gazebo-ros controller-manager katana-gazebo-plugins katana-description joint-trajectory-controller controller-manager-msgs urdf robot-state-publisher actionlib std-msgs roscpp xacro ];
   propagatedBuildInputs = [ gazebo-ros controller-manager katana-gazebo-plugins katana-description joint-trajectory-controller controller-manager-msgs urdf robot-state-publisher actionlib std-msgs roscpp xacro ];
-  nativeBuildInputs = [ gazebo-ros controller-manager katana-gazebo-plugins catkin katana-description joint-trajectory-controller controller-manager-msgs urdf robot-state-publisher actionlib std-msgs roscpp xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package starts a Neuronics Katana robot arm in the Gazebo simulation environment. It is modeled after the <a href="http://www.ros.org/wiki/pr2_arm_gazebo">pr2_arm_gazebo</a> package by John Hsu.'';

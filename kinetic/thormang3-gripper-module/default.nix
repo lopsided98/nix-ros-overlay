@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "03d52259ce1ded160ac58572e53ba173e47a648cc89c9b93dcc08c72a5704630";
   };
 
+  buildInputs = [ cmake-modules boost libyamlcpp sensor-msgs roscpp roslib robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ cmake-modules boost libyamlcpp sensor-msgs roscpp roslib robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
-  nativeBuildInputs = [ cmake-modules boost libyamlcpp sensor-msgs catkin roscpp roslib robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The thormang3_gripper_module package'';

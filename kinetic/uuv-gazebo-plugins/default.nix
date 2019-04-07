@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "1dbb7640a02b805a4ea1b2a107b2025e22f30dbc66178f6ffc8f78b865d0dace";
   };
 
+  buildInputs = [ protobuf eigen gazebo-dev ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ protobuf eigen gazebo-dev ];
-  nativeBuildInputs = [ protobuf catkin eigen gazebo-dev ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''UUV Simulator's Gazebo plugins for simulation of hydrodynamic and hydrostatic

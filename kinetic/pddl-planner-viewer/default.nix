@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "08e145556c84fb223f370ab0ee0aacc938102e6d09675c59b00842b1b15f462e";
   };
 
+  buildInputs = [ pddl-planner ];
   propagatedBuildInputs = [ pddl-planner ];
-  nativeBuildInputs = [ catkin pddl-planner ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''a viewer of pddl_planner.'';

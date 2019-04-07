@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "47c7eb96c4e87aaf97b7787dd7b89125bbc08ecc8dc50ce58ab501ce7f9ecbca";
   };
 
+  buildInputs = [ pr2-controllers-msgs filters control-msgs trajectory-msgs libtool actionlib tf-conversions std-msgs diagnostic-msgs roscpp tf pr2-mechanism-model geometry-msgs kdl-parser pr2-controller-interface pluginlib control-toolbox realtime-tools message-filters pr2-controller-manager message-generation angles eigen-conversions ];
   propagatedBuildInputs = [ pr2-controllers-msgs filters control-msgs trajectory-msgs libtool actionlib std-msgs tf-conversions rospy tf roscpp pr2-mechanism-model diagnostic-msgs geometry-msgs kdl-parser pr2-controller-interface pluginlib control-toolbox realtime-tools message-filters pr2-controller-manager message-runtime angles eigen-conversions ];
-  nativeBuildInputs = [ pr2-controllers-msgs filters control-msgs trajectory-msgs catkin libtool actionlib tf-conversions std-msgs diagnostic-msgs roscpp tf pr2-mechanism-model geometry-msgs kdl-parser pr2-controller-interface pluginlib control-toolbox realtime-tools message-filters pr2-controller-manager message-generation angles eigen-conversions ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generic Mechanism Controller Library'';

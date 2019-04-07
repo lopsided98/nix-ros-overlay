@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ec2098e225e210719c0b7b0ab85daad43b6bf7c914cc1e58dd01a83ed8b10176";
   };
 
+  buildInputs = [ roscpp rviz tf2-ros eigen ];
   propagatedBuildInputs = [ roscpp rviz tf2-ros ];
-  nativeBuildInputs = [ rviz eigen catkin roscpp tf2-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a gui program as well as a rviz plugin to publish static transforms.

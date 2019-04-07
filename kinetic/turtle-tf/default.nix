@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e5c783340ea80801232163ccb2fa8f949ba900901c97767a3d728a9e7bac15df";
   };
 
+  buildInputs = [ turtlesim rospy std-msgs tf roscpp geometry-msgs ];
   propagatedBuildInputs = [ turtlesim rospy std-msgs tf roscpp geometry-msgs ];
-  nativeBuildInputs = [ turtlesim catkin rospy std-msgs tf roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''turtle_tf demonstrates how to write a tf broadcaster and listener with the turtlesim. The tutle_tf_listener commands turtle2 to follow turtle1 around as you drive turtle1 using the keyboard.'';

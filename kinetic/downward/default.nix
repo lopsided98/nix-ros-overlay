@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e770e89d1261ef1253095e31b423bcc32892ffe3a60467282f6636f3eb9a894b";
   };
 
+  buildInputs = [ python rostest flex gawk cacert time bison ];
   propagatedBuildInputs = [ time gawk ];
-  nativeBuildInputs = [ python rostest flex gawk cacert catkin time bison ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''fast downward: PDDL Planner (http://www.fast-downward.org)'';

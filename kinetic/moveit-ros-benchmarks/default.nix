@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "08c844d6105c043d3cf500ac24a775898239966cb15ea289c56a85632fa45e80";
   };
 
+  buildInputs = [ moveit-ros-planning moveit-ros-warehouse roscpp pluginlib ];
   propagatedBuildInputs = [ moveit-ros-planning moveit-ros-warehouse roscpp pluginlib ];
-  nativeBuildInputs = [ moveit-ros-planning moveit-ros-warehouse pluginlib catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Enhanced tools for benchmarks in MoveIt!'';

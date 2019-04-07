@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "69c2a485f84f360c3b39a6673b83a939b2e10ab8f3808d6ccb9e5dc04e54ab4f";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ dynamixel-driver actionlib control-msgs rospy std-msgs trajectory-msgs dynamixel-msgs diagnostic-msgs ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a configurable node, services and a spawner script

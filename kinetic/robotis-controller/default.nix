@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cf475cd7288d5291ed7fb5e01739bc964e2f984d7315581c534b4f2ef3847a6e";
   };
 
+  buildInputs = [ dynamixel-sdk cmake-modules libyamlcpp sensor-msgs roscpp roslib std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ dynamixel-sdk cmake-modules libyamlcpp sensor-msgs roscpp roslib std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
-  nativeBuildInputs = [ dynamixel-sdk cmake-modules libyamlcpp sensor-msgs catkin roscpp roslib std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''robotis_controller package for ROBOTIS's platform like Manipulator-H, THORMANG and OP series'';

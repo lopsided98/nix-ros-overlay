@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5beea7df47ba2f5cc36e80ac7d559746ce10702382c8131bf13f2a07c692738f";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package includes ROS messages and services for the ROBOTIS OP3 packages'';

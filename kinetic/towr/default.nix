@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, catkin, ifopt, eigen }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, ifopt, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-towr";
   version = "1.4.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "56676dbc1ebbfa3259e500aabed8410028abb1797b63fd4893507bf15eb52175";
   };
 
+  buildInputs = [ ifopt eigen ];
   propagatedBuildInputs = [ catkin ifopt eigen ];
-  nativeBuildInputs = [ cmake ifopt eigen ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''A light-weight, Eigen-based

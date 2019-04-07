@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7bcd5743de51b2fc714fc8da916ebbe34761770f924e56d9df839d9eb8bd1c47";
   };
 
+  buildInputs = [ hector-gazebo-plugins urdf xacro gazebo-plugins ];
   propagatedBuildInputs = [ hector-gazebo-plugins urdf xacro gazebo-plugins ];
-  nativeBuildInputs = [ urdf hector-gazebo-plugins catkin xacro gazebo-plugins ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Robotnik standard sensors description. URDF and meshses.'';

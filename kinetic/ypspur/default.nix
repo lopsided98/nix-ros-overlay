@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e819227be184eb7e504d97f14693b064538bcb2b9e5631176247fe73db10a7ad";
   };
 
+  buildInputs = [ readline ];
   propagatedBuildInputs = [ readline catkin ];
-  nativeBuildInputs = [ readline cmake ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''YP-Spur is a mobile robot motion control software with coordinate frame based commands.'';

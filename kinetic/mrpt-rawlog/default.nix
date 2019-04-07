@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "85eccb96a32f94e4b04dedd7127ffe4ec5a2a4e19fd56f19b96ff2fa984dfdc7";
   };
 
+  buildInputs = [ marker-msgs tf rosbag sensor-msgs nav-msgs mrpt-msgs mrpt1 dynamic-reconfigure std-msgs mrpt-bridge roscpp ];
   propagatedBuildInputs = [ marker-msgs tf rosbag sensor-msgs nav-msgs mrpt-msgs mrpt1 dynamic-reconfigure std-msgs mrpt-bridge roscpp ];
-  nativeBuildInputs = [ marker-msgs tf rosbag sensor-msgs catkin nav-msgs mrpt-msgs mrpt1 dynamic-reconfigure std-msgs mrpt-bridge roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package enables you to record a rawlog from a ROS drive robot.

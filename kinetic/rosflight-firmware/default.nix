@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f67261299a26a7c6a6b69c245e555ddc8efd3621d422e2f7f23fd29ddee21f54";
   };
 
+  buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
-  nativeBuildInputs = [ catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Firmware library for software-in-the-loop of the ROSflight ROS stack'';

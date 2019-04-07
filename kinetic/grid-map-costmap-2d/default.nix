@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, grid-map-core, catkin, tf, costmap-2d }:
+{ lib, buildRosPackage, fetchurl, tf, grid-map-core, catkin, costmap-2d }:
 buildRosPackage {
   pname = "ros-kinetic-grid-map-costmap-2d";
   version = "1.6.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1b0cef78ed381ec06f7a46800aa432dc084edb0ef1fda60f2893f5cf3a585e3e";
   };
 
+  buildInputs = [ grid-map-core tf costmap-2d ];
   propagatedBuildInputs = [ grid-map-core tf costmap-2d ];
-  nativeBuildInputs = [ grid-map-core catkin tf costmap-2d ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interface for grid maps to the costmap_2d format.'';

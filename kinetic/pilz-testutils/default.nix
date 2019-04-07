@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "9e7042f169ec06f59ba78734679cc689bcd6dcad3924bd1f20a764269f7bf262";
   };
 
-  nativeBuildInputs = [ catkin roscpp ];
+  buildInputs = [ roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains testing utilities used by Pilz packages.'';

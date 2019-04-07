@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, boost, image-transport, sensor-msgs, cv-bridge, catkin, message-filters, tf2-ros, image-geometry, tf2, nav-msgs, eigen-conversions, nodelet, stereo-msgs }:
+{ lib, buildRosPackage, fetchurl, cmake-modules, boost, image-transport, sensor-msgs, cv-bridge, message-filters, catkin, tf2-ros, image-geometry, tf2, nav-msgs, eigen-conversions, nodelet, stereo-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-xiaoqiang-depth-image-proc";
   version = "0.0.12";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "76d314e6b6de79d52965706fc95142a1d725a9217752477b30581473519a4eec";
   };
 
+  buildInputs = [ boost cmake-modules image-transport sensor-msgs cv-bridge message-filters tf2-ros image-geometry tf2 nav-msgs eigen-conversions nodelet stereo-msgs ];
   propagatedBuildInputs = [ tf2 boost nodelet image-transport eigen-conversions cv-bridge tf2-ros image-geometry ];
-  nativeBuildInputs = [ boost cmake-modules image-transport sensor-msgs cv-bridge message-filters catkin tf2-ros image-geometry tf2 nav-msgs eigen-conversions nodelet stereo-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Modified version of depth image process, add occupancy xyz

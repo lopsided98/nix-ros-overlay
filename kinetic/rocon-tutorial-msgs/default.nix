@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, rocon-service-pair-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, catkin, rocon-service-pair-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-tutorial-msgs";
   version = "0.9.0-r1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "59acd2d2c212159596c47e7fb6703b19c97446c3c105b08ab7f541f999008b8d";
   };
 
+  buildInputs = [ message-generation rocon-service-pair-msgs ];
   propagatedBuildInputs = [ rocon-service-pair-msgs message-runtime ];
-  nativeBuildInputs = [ catkin message-generation rocon-service-pair-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used by rocon tutorials.'';

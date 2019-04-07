@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7ef0d95ed8bf11a406fda925cfbf30291cd83763df01ef7322029b5832bb966c";
   };
 
+  buildInputs = [ roscpp cmake-modules robotis-math eigen ];
   propagatedBuildInputs = [ roscpp cmake-modules robotis-math eigen ];
-  nativeBuildInputs = [ robotis-math cmake-modules eigen catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The thormang3_balance_control package

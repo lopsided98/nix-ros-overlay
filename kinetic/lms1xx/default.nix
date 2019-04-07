@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c14f2f6e88a9f791ec177ad64ea3a5013d52642ace02c6011c6a490652660abc";
   };
 
+  buildInputs = [ sensor-msgs roscpp rosconsole-bridge roscpp-serialization ];
   checkInputs = [ roslaunch rosunit roslint ];
   propagatedBuildInputs = [ sensor-msgs roscpp rosconsole-bridge roscpp-serialization ];
-  nativeBuildInputs = [ catkin roscpp-serialization sensor-msgs roscpp rosconsole-bridge ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The lms1xx package contains a basic ROS driver for the SICK LMS1xx line of LIDARs.'';

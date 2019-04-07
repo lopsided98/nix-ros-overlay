@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, visualization-msgs, eigen }:
+{ lib, buildRosPackage, fetchurl, roscpp, catkin, visualization-msgs, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-hector-marker-drawing";
   version = "0.3.5";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f7668e98788044b276c795338e1f59ea346b8c5dbc0bcba540632415d6526cca";
   };
 
+  buildInputs = [ visualization-msgs roscpp eigen ];
   propagatedBuildInputs = [ visualization-msgs roscpp eigen ];
-  nativeBuildInputs = [ catkin visualization-msgs roscpp eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_marker_drawing provides convenience functions for easier publishing of visualization markers.'';

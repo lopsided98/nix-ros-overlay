@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8e2853fb3cd997ed6aa52c1732a1b3314182de7af22ce80e4ae422cb9a91245e";
   };
 
+  buildInputs = [ op3-online-walking-module-msgs orocos-kdl boost cmake-modules libyamlcpp geometry-msgs sensor-msgs op3-balance-control roscpp roslib robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ op3-online-walking-module-msgs orocos-kdl boost cmake-modules libyamlcpp geometry-msgs sensor-msgs op3-balance-control roscpp roslib robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
-  nativeBuildInputs = [ op3-online-walking-module-msgs orocos-kdl boost cmake-modules libyamlcpp geometry-msgs sensor-msgs catkin op3-balance-control roscpp roslib robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_online_walking_module package'';

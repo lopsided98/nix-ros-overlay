@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c157ce87feed82ceba296a66a2f37ad4c77508f8e882e77bcd7d9d3149afd499";
   };
 
+  buildInputs = [ gazebo-ros kobuki-msgs boost sensor-msgs roscpp gazebo-plugins nav-msgs std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ gazebo-ros kobuki-msgs boost sensor-msgs roscpp gazebo-plugins nav-msgs std-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ gazebo-ros kobuki-msgs boost sensor-msgs catkin roscpp gazebo-plugins nav-msgs std-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Kobuki-specific ROS plugins for Gazebo'';

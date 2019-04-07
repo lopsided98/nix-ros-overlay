@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3ef2838d7479e42fc83ac6737bc0df2fd33809dc3c4f87fc8022c1b7545bcbb1";
   };
 
+  buildInputs = [ message-generation control-msgs actionlib-msgs ];
   propagatedBuildInputs = [ control-msgs message-runtime actionlib-msgs ];
-  nativeBuildInputs = [ catkin message-generation control-msgs actionlib-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The teleop_tools_msgs package'';

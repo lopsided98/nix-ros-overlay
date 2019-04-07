@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ebc17ee30ca55f8db9ec9fc43bfecbe684e78fdff42ba8449069de593f7e1215";
   };
 
+  buildInputs = [ qt-gui ];
   propagatedBuildInputs = [ catkin qt-gui ];
-  nativeBuildInputs = [ catkin qt-gui ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_gui provides the main to start an instance of the ROS integrated graphical user interface provided by qt_gui.'';

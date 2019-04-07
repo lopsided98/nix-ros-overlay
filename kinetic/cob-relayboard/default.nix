@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "30649f76617d54a7e06d9c7721be718d0f1f3e05ffea104723a0d9be6a8e30ab";
   };
 
+  buildInputs = [ std-msgs cob-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs cob-msgs roscpp rospy ];
-  nativeBuildInputs = [ std-msgs cob-msgs roscpp catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cob_relayboard'';

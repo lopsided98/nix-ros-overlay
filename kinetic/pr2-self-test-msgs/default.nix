@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-self-test-msgs";
   version = "1.0.14";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0f3936262032ea31f2e1736140948b8c7cbf350488491c6cb36065d5575a186e";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used in PR2 hardware testing.'';

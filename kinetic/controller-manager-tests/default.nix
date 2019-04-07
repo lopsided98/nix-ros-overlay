@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "2c53a56ac8a4397ae21b4a814691fe728d011d25d76e5386b840f3bc5bf8de29";
   };
 
+  buildInputs = [ controller-manager controller-interface ];
   checkInputs = [ rostest rosbash rosservice rosnode ];
   propagatedBuildInputs = [ controller-manager controller-interface ];
-  nativeBuildInputs = [ controller-manager catkin controller-interface ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''controller_manager_tests'';

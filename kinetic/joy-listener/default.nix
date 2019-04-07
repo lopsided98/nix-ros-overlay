@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e9bd30cc98788deb6a8ca51733ee07569d541eec0c261229bd5ca627d87aecdc";
   };
 
+  buildInputs = [ sensor-msgs rospy ];
   propagatedBuildInputs = [ sensor-msgs rospy ];
-  nativeBuildInputs = [ sensor-msgs catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Translates joy msgs'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "39ee77142fe54c5f9913ba6f88aa6a387b71f3331603e638c324f1cd87992688";
   };
 
+  buildInputs = [ gsl ];
   propagatedBuildInputs = [ gsl catkin ];
-  nativeBuildInputs = [ gsl cmake ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''This is a ROS 3rd-party wrapper <a href="http://www.ros.org/reps/rep-0136.html">(see REP-136 for more detail)</a> of Andrea Censi's CSM package. 

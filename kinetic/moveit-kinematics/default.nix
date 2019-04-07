@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "623f0f5d6932cdeab3b294718f5056f911469440956fb278d670ad0d3f164047";
   };
 
+  buildInputs = [ moveit-ros-planning moveit-core pluginlib actionlib eigen ];
   propagatedBuildInputs = [ moveit-ros-planning pluginlib moveit-core actionlib ];
-  nativeBuildInputs = [ moveit-ros-planning moveit-core pluginlib actionlib catkin eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for all inverse kinematics solvers in MoveIt!'';

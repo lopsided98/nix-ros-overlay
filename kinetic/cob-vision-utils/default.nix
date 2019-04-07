@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1899fd8d6fb4f913d38ae0c96971d7120d83216c074b28a96f8f2efc9d83ef26";
   };
 
+  buildInputs = [ cmake-modules visualization-msgs opencv3 tinyxml roscpp ];
   propagatedBuildInputs = [ cmake-modules visualization-msgs opencv3 tinyxml roscpp ];
-  nativeBuildInputs = [ cmake-modules catkin visualization-msgs opencv3 tinyxml roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Contains utilities used within the object detection tool chain.'';

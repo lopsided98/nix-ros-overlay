@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "90bf63d14451775d25f29cb3eed25327c9aec175df20c1fc5f6adc9de6b8d1e9";
   };
 
+  buildInputs = [ gazebo-ros pointgrey-camera-driver pointgrey-camera-description lms1xx nav-msgs urdf robot-state-publisher roslaunch tf xacro ];
   propagatedBuildInputs = [ gazebo-ros pointgrey-camera-driver pointgrey-camera-description lms1xx nav-msgs urdf robot-state-publisher tf xacro ];
-  nativeBuildInputs = [ gazebo-ros pointgrey-camera-driver pointgrey-camera-description catkin lms1xx nav-msgs urdf robot-state-publisher roslaunch tf xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Spawns the Jackal model.'';

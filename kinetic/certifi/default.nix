@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "4d532dbb968f6d15afdcbcfd6c0aa92218bdcc09a19fc406b3d582a8068c8d2e";
   };
 
-  nativeBuildInputs = [ catkin-pip catkin ];
+  buildInputs = [ catkin-pip ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''(Python Distribution) A carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. http://certifi.io'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-cob-srvs";
   version = "0.6.11";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "173a1b7c997d5469d78c9606da5611be9c492ca16ebe6261ced1a35033777575";
   };
 
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
-  nativeBuildInputs = [ catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This Package contains Care-O-bot specific service definitions.'';

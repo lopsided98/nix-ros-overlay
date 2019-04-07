@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "795ef7eed7e0b72fa50f1b684b0b2994322c03bc557aa342a134da0df0ce877f";
   };
 
+  buildInputs = [ hardware-interface ];
   propagatedBuildInputs = [ hardware-interface ];
-  nativeBuildInputs = [ hardware-interface catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Exposes ROS-Industrial's RobotStatus info from hardware_interfaces for consumption by ros_control controllers.'';

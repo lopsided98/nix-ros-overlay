@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "210a3d5d8bfdb2b269cdfe7c122a93cedbee1a16bc05093089cb48550a3602f7";
   };
 
+  buildInputs = [ roslaunch urdf xacro robotnik-sensors ];
   propagatedBuildInputs = [ robotnik-sensors urdf xacro robot-state-publisher ];
-  nativeBuildInputs = [ urdf roslaunch catkin xacro robotnik-sensors ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF description of the Summit XL and Summit XL HL and omni versions'';

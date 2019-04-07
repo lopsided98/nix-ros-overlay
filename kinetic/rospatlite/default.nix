@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "707b8676ce6a4c437dae350d950d2c0b589cf9eb19dabfa3053847ce1d052c65";
   };
 
+  buildInputs = [ std-msgs rospy ];
   propagatedBuildInputs = [ std-msgs rospy ];
-  nativeBuildInputs = [ std-msgs catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rospatlite'';

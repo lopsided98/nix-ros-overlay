@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "79a1fb353d602ec3932a6f4e288034ece55f2b2970025c955624320fc96bd589";
   };
 
+  buildInputs = [ std-msgs costmap-2d tf geometry-msgs ];
   propagatedBuildInputs = [ std-msgs costmap-2d tf geometry-msgs ];
-  nativeBuildInputs = [ costmap-2d std-msgs catkin tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides common interfaces for navigation specific robot actions. Currently, this package provides the BaseGlobalPlanner, BaseLocalPlanner, and RecoveryBehavior interfaces, which can be used to build actions that can easily swap their planner, local controller, or recovery behavior for new versions adhering to the same interface.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c42e8ab697a8851635ef3341593cb500993611ac22bb55d97094ec92ddc8c08a";
   };
 
+  buildInputs = [ rospy pddl-msgs actionlib ];
   propagatedBuildInputs = [ ff ffha time actionlib rospy lpg-planner downward pddl-msgs ];
-  nativeBuildInputs = [ rospy catkin pddl-msgs actionlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''pddl planner wrappers'';

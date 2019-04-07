@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "70cea6a4d984eee00bbf0c0b2099a0f7634596d9b414ab2c9c2a2046c3a97028";
   };
 
+  buildInputs = [ nav-msgs tf roscpp ];
   propagatedBuildInputs = [ nav-msgs tf roscpp ];
-  nativeBuildInputs = [ catkin nav-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The odometry_publisher_tutorial package'';

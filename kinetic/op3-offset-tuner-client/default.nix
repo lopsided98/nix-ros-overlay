@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c20033dd184e285fc2797bfff7cbb90961c44e476dff51c909602bd4e71e4762";
   };
 
+  buildInputs = [ libyamlcpp qt4 roslib op3-offset-tuner-msgs qt-build std-msgs roscpp ];
   propagatedBuildInputs = [ libyamlcpp qt4 op3-offset-tuner-msgs op3-offset-tuner-server std-msgs qt-build roslib roscpp ];
-  nativeBuildInputs = [ libyamlcpp qt4 roslib op3-offset-tuner-msgs qt-build std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_offset_tuner_client package'';

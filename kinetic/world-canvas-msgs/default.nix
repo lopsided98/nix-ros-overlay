@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6686832e89831aba0a5ed492d94f3d7fd36481ca58e55b52ce686220fa030afc";
   };
 
+  buildInputs = [ uuid-msgs std-srvs message-generation std-msgs geometry-msgs ];
   propagatedBuildInputs = [ uuid-msgs std-srvs message-runtime std-msgs geometry-msgs ];
-  nativeBuildInputs = [ uuid-msgs std-srvs message-generation std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''World canvas framework messages package'';

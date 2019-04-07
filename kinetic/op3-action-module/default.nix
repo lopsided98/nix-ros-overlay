@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f19338516aa79cb1951aabc477ea97b73ec09cbea91d9d7a849751ccecbaca4f";
   };
 
+  buildInputs = [ roslib op3-action-module-msgs boost std-msgs robotis-device robotis-controller-msgs robotis-framework-common roscpp ];
   propagatedBuildInputs = [ roslib op3-action-module-msgs boost std-msgs robotis-device robotis-controller-msgs robotis-framework-common roscpp ];
-  nativeBuildInputs = [ boost catkin roscpp robotis-controller-msgs op3-action-module-msgs std-msgs robotis-device roslib robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_action_module package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c19e3d14a2377f5d58c7f1229dc15fa8519182f57d28069b4e1d20108d0f8010";
   };
 
+  buildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib std-msgs tf ];
   propagatedBuildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib cob-moveit-config std-msgs tf ];
-  nativeBuildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib std-msgs catkin tf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The collision monitor uses the planning scene monitor to read the state of the robot and check it for collision with itselt or the environment. It addition a ground plane is added in any case. Can be used as a stand-aloan node or a move_group capability.'';

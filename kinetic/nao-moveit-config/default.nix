@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d16e19059a41c598250059b89c579108bb8aa4ccb02db935eb1d94b9ba03dbad";
   };
 
+  buildInputs = [ nao-description ];
   propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-simple-controller-manager nao-description robot-state-publisher joint-state-publisher xacro moveit-planners-ompl ];
-  nativeBuildInputs = [ catkin nao-description ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the NAO robot with the MoveIt Motion Planning Framework'';

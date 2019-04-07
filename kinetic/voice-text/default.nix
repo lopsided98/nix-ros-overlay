@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e11501fac04909abe1288c3ce9d5b3029e01109e7728e8e092de8f12f7bb5aba";
   };
 
+  buildInputs = [ message-generation roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ dynamic-reconfigure nkf message-runtime sound-play ];
-  nativeBuildInputs = [ catkin message-generation roscpp dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''voice_text (www.voicetext.jp)'';

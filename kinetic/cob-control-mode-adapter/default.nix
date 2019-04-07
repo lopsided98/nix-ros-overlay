@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "268dfcd264f0ac4c196a81e8a96eef3274b27a27ea7895a302a8fa137509a803";
   };
 
+  buildInputs = [ controller-manager-msgs boost roslint std-msgs roscpp ];
   propagatedBuildInputs = [ controller-manager-msgs boost roslint std-msgs roscpp ];
-  nativeBuildInputs = [ controller-manager-msgs boost roslint std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_control_mode_adapter package'';

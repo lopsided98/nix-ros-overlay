@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a8071741c6d75abf5e8b0d9119a124f165cbef7f7a327789768ac87c3fb3d256";
   };
 
+  buildInputs = [ object-recognition-core ecto boost ];
   propagatedBuildInputs = [ boost object-recognition-core ecto-openni ecto-opencv ecto ecto-ros ecto-image-pipeline ];
-  nativeBuildInputs = [ catkin object-recognition-core ecto boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Capture is a set of tools to capture objects in 3D and perform odometry'';

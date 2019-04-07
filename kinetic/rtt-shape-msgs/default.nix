@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "012869bfea0aa3c1f693337048fccc8c1d6bc5eddc3e1583f56eb438d443ef1d";
   };
 
+  buildInputs = [ rtt-roscomm shape-msgs rtt-std-msgs rtt-geometry-msgs ];
   propagatedBuildInputs = [ rtt-roscomm shape-msgs rtt-std-msgs rtt-geometry-msgs ];
-  nativeBuildInputs = [ shape-msgs rtt-geometry-msgs rtt-std-msgs rtt-roscomm catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides an rtt typekit for ROS shape_msgs messages.

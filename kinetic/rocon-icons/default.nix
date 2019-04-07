@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "82f1982ca80bfa25bf41eeccd556449b9adceb2ebd9045c910ab1526328424f2";
   };
 
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  buildInputs = [ pythonPackages.catkin-pkg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Icons for rocon.'';

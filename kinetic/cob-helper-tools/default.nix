@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f355a4fc81149bfdc587a02eca33e8197d35d49e463e7ab38dfe60b6fdcb1642";
   };
 
+  buildInputs = [ message-generation dynamic-reconfigure ];
   propagatedBuildInputs = [ message-runtime visualization-msgs dynamic-reconfigure rospy cob-script-server cob-msgs tf diagnostic-msgs ];
-  nativeBuildInputs = [ catkin message-generation dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Helper scripts for Care-O-bot'';

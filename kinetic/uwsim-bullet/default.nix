@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e753ed61af76cbf466a018d6934e38612072daf902caf500eeb478e3051fb369";
   };
 
+  buildInputs = [ freeglut xorg.libXext ];
   propagatedBuildInputs = [ freeglut catkin xorg.libXext ];
-  nativeBuildInputs = [ freeglut cmake xorg.libXext ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The bullet library. See https://code.google.com/p/bullet'';

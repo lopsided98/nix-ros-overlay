@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "a44960f689d3696104db4b6260c86aa40cb9107abd7363557973bef8ee96571b";
   };
 
+  buildInputs = [ control-msgs play-motion-msgs sensor-msgs diagnostic-updater controller-manager-msgs actionlib diagnostic-msgs roscpp moveit-ros-planning-interface ];
   checkInputs = [ controller-manager rostest position-controllers joint-state-controller hardware-interface robot-state-publisher xacro joint-trajectory-controller ];
   propagatedBuildInputs = [ control-msgs play-motion-msgs sensor-msgs diagnostic-updater controller-manager-msgs actionlib diagnostic-msgs roscpp moveit-ros-planning-interface ];
-  nativeBuildInputs = [ control-msgs play-motion-msgs sensor-msgs catkin diagnostic-updater controller-manager-msgs actionlib diagnostic-msgs roscpp moveit-ros-planning-interface ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Plays a pre-recorded motion on a robot'';

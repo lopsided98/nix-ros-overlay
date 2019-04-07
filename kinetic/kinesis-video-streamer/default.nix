@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "45f0af4f63a652548c1a0449518de7cac6633a173dcb54fa1ead6fa612605652";
   };
 
+  buildInputs = [ image-transport aws-common kinesis-video-msgs kinesis-manager std-msgs aws-ros1-common roscpp ];
   checkInputs = [ rostest rostopic ];
   propagatedBuildInputs = [ image-transport aws-common kinesis-video-msgs kinesis-manager std-msgs aws-ros1-common roscpp ];
-  nativeBuildInputs = [ image-transport aws-common kinesis-video-msgs kinesis-manager std-msgs aws-ros1-common catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Kinesis Video Streams producer node'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2252342a125f03ac6333387bdbdb03c3cfb59c5f3ea8ee6cb70e42d007f33243";
   };
 
+  buildInputs = [ gst_all_1.gst-plugins-base roscpp gst_all_1.gstreamer audio-common-msgs ];
   propagatedBuildInputs = [ gst_all_1.gstreamer gst_all_1.gst-plugins-base roscpp gst_all_1.gst-plugins-ugly audio-common-msgs gst_all_1.gst-plugins-good ];
-  nativeBuildInputs = [ catkin audio-common-msgs gst_all_1.gst-plugins-base roscpp gst_all_1.gstreamer ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Transports audio from a source to a destination. Audio sources can come

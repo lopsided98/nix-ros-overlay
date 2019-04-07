@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "43506de54d2cc50d04945003e80d0276122e889fcbfc39a1755168ca4edb6699";
   };
 
+  buildInputs = [ message-generation libphidgets std-msgs sensor-msgs roscpp ];
   propagatedBuildInputs = [ message-runtime libphidgets rospy std-msgs sensor-msgs roscpp ];
-  nativeBuildInputs = [ message-generation catkin libphidgets std-msgs sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cob_phidgets'';

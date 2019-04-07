@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c8cf4c9cda0c57cdfba45f7370f95c5f387ee179be2906551321efc02bfaeac4";
   };
 
+  buildInputs = [ std-srvs tf image-transport sensor-msgs cv-bridge roscpp laser-geometry message-generation pcl-ros std-msgs parameter-pa pcl-conversions ];
   propagatedBuildInputs = [ std-srvs tf image-transport sensor-msgs cv-bridge roscpp laser-geometry message-runtime pcl-ros std-msgs parameter-pa pcl-conversions ];
-  nativeBuildInputs = [ std-srvs tf image-transport sensor-msgs cv-bridge catkin roscpp laser-geometry message-generation pcl-ros std-msgs parameter-pa pcl-conversions ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ProAut pointcloud filter package'';

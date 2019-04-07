@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7e4eb1a95a616fa7af3c1541ad6abf672dc69b26a36fe9acec545c4b27310bcd";
   };
 
+  buildInputs = [ rosjava-build-tools ];
   propagatedBuildInputs = [ rosjava-build-tools ];
-  nativeBuildInputs = [ catkin rosjava-build-tools ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Bootstrap utilities for rosjava builds.'';

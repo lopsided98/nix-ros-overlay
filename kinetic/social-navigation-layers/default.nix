@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b91f57c0dccbe5ca62c5bb704003413904caf8c9ca0ba32c66f8706c12c03016";
   };
 
+  buildInputs = [ people-msgs costmap-2d roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ people-msgs costmap-2d roscpp dynamic-reconfigure ];
-  nativeBuildInputs = [ costmap-2d dynamic-reconfigure people-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Plugin-based layers for the navigation stack that 

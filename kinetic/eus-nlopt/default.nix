@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8dc3bbf2d760f1b7640478ea00d86468f7d401ff9d453bb939cb42111d691db0";
   };
 
+  buildInputs = [ nlopt cmake-modules ];
   propagatedBuildInputs = [ nlopt euslisp ];
-  nativeBuildInputs = [ catkin nlopt cmake-modules ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''eus_nlopt'';

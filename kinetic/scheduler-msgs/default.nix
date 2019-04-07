@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b60dd96065e4ed9942d5cfdbdd964eb0888dbc451720148e3854b2a6c44f77ab";
   };
 
+  buildInputs = [ uuid-msgs message-generation std-msgs rocon-std-msgs ];
   propagatedBuildInputs = [ std-msgs uuid-msgs message-runtime rocon-std-msgs ];
-  nativeBuildInputs = [ uuid-msgs message-generation std-msgs catkin rocon-std-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used by the rocon scheduler.'';

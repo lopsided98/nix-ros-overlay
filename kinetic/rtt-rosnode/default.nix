@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "50e67866ba198b1ea3e868d575e325f67c9c95271a207a9eca27cfbce551d5f9";
   };
 
+  buildInputs = [ roscpp rtt-ros ];
   propagatedBuildInputs = [ roscpp rtt-ros ];
-  nativeBuildInputs = [ catkin roscpp rtt-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides an RTT plugin to add a ROS node to the RTT process.'';

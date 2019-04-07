@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "2191991cc36b6a91b40d68ce8224f3ace51fa6af0ea14ca07b5271ca471e6052";
   };
 
+  buildInputs = [ roseus-smach ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ roseus-smach pddl-planner ];
-  nativeBuildInputs = [ catkin roseus-smach ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''task_compiler

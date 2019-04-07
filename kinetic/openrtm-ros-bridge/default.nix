@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bd98d729dfa985d85e8812fec751c9dbf1fba5cbc71a1afb5a31679a1dad2e76";
   };
 
+  buildInputs = [ rostest message-generation std-msgs openrtm-tools roscpp rtmbuild ];
   propagatedBuildInputs = [ std-msgs openrtm-tools roscpp ];
-  nativeBuildInputs = [ rostest message-generation catkin std-msgs openrtm-tools roscpp rtmbuild ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''openrtm_ros_bridge package provides basic functionalities to bind

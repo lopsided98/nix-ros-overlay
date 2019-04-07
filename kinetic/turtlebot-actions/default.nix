@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "21c14463f4401f75e2bf220cac6211a6de31808dc0d235cfbf07995ea42b951f";
   };
 
+  buildInputs = [ cmake-modules actionlib-msgs image-transport cv-bridge roscpp image-geometry message-generation actionlib tf geometry-msgs eigen ];
   propagatedBuildInputs = [ turtlebot-bringup actionlib-msgs image-transport cv-bridge roscpp image-geometry message-runtime actionlib tf geometry-msgs eigen ];
-  nativeBuildInputs = [ cmake-modules actionlib-msgs image-transport cv-bridge catkin roscpp image-geometry message-generation actionlib tf geometry-msgs eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''turtlebot_actions provides several basic actionlib actions for the TurtleBot.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8d1742395fe6ebbe154b03f8b5da56774772996177cc5f089df2eda06dee945c";
   };
 
+  buildInputs = [ libyamlcpp thormang3-action-module-msgs roslib boost std-msgs robotis-controller-msgs roscpp ];
   propagatedBuildInputs = [ libyamlcpp thormang3-action-module-msgs roslib boost std-msgs robotis-controller-msgs roscpp ];
-  nativeBuildInputs = [ libyamlcpp thormang3-action-module-msgs roslib boost std-msgs catkin robotis-controller-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a action script playing for thormang3.

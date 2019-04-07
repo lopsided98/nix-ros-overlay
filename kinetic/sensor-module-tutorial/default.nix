@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "10ee406db0188592993202ac6075c720d822e7bd575d9e3a8fe88cb5955c1f0a";
   };
 
+  buildInputs = [ std-msgs roscpp boost robotis-framework-common ];
   propagatedBuildInputs = [ std-msgs roscpp boost robotis-framework-common ];
-  nativeBuildInputs = [ boost std-msgs catkin roscpp robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The sensor_module_tutorial package'';

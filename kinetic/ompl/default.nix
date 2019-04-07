@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3930855a0141df54e5c4758446f3aee262fdda700cbf3377b6044cf1ff7fa538";
   };
 
+  buildInputs = [ cmake boost eigen ];
   propagatedBuildInputs = [ boost eigen ];
-  nativeBuildInputs = [ cmake boost eigen ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''OMPL is a free sampling-based motion planning library.'';

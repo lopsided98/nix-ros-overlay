@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "a7d457980e0d856c7b627bf527a1a5ce1f4a862d77d8862018d8c4d4af8898d4";
   };
 
-  nativeBuildInputs = [ catkin qt-build ];
+  buildInputs = [ qt-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides templates and scripts for creating qt-ros packages

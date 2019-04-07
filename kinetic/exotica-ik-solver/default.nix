@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "535f0ae4bc0843b65e146336560747815b88c846aa1e4a98b24022e78372c1b3";
   };
 
+  buildInputs = [ exotica-core ];
   propagatedBuildInputs = [ exotica-core ];
-  nativeBuildInputs = [ exotica-core catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Pseudo-inverse unconstrained end-pose solver'';

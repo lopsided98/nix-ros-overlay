@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "88c917a02d7a89cf88e4434b377b1089c909e99cf00203f292a81e8e96074f50";
   };
 
+  buildInputs = [ std-srvs cob-sound cob-script-server sensor-msgs cob-light actionlib std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ std-srvs cob-sound cob-script-server sensor-msgs cob-light actionlib std-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ std-srvs cob-sound cob-script-server sensor-msgs catkin cob-light actionlib std-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Teleop node'';

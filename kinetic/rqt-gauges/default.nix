@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "157858ffe398bfda5b9b69bd87466e0a7f1c4987d3c915e318eaf740217e7f7e";
   };
 
+  buildInputs = [ pluginlib roslint rqt-gui-cpp std-msgs rqt-gui roscpp ];
   propagatedBuildInputs = [ rqt-gui-cpp pluginlib std-msgs rqt-gui roscpp ];
-  nativeBuildInputs = [ pluginlib roslint rqt-gui-cpp std-msgs catkin rqt-gui roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rqt_gauges package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fa31852bacdc0bd6a836516d8c54331b173ab9d29eb821c6a57ca3bc1f63e96c";
   };
 
+  buildInputs = [ grid-map-core ecl-eigen ecl-console ecl-build ];
   propagatedBuildInputs = [ grid-map-core ecl-eigen ecl-console ecl-build ];
-  nativeBuildInputs = [ grid-map-core ecl-eigen catkin ecl-console ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Cost maps, following the style of ethz-asl's grid_map library.'';

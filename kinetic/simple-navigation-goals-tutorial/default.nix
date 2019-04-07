@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c10b2a1e98aa617b16dbea9340eb73e50cc8b5184f1bd454884d0b6505a09d9f";
   };
 
+  buildInputs = [ move-base-msgs tf roscpp actionlib ];
   propagatedBuildInputs = [ move-base-msgs tf roscpp actionlib ];
-  nativeBuildInputs = [ move-base-msgs actionlib catkin tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The simple_navigation_goals_tutorial package'';

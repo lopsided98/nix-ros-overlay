@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7be19db8ffec57bdfa8de7cfbc121aa7ce703ef9e43bf4d9f8c5499448649059";
   };
 
+  buildInputs = [ shape-msgs cmake-modules sensor-msgs roscpp message-generation actionlib pcl-ros moveit-msgs tf grasping-msgs geometry-msgs ];
   propagatedBuildInputs = [ shape-msgs moveit-python sensor-msgs roscpp message-runtime actionlib moveit-msgs tf pcl-ros grasping-msgs geometry-msgs ];
-  nativeBuildInputs = [ shape-msgs cmake-modules sensor-msgs catkin roscpp message-generation actionlib pcl-ros moveit-msgs tf grasping-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Basic grasping applications and demos.'';

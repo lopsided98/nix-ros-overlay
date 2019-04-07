@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ec22bd2b90873336242132827de6549b9ccf284e2e924ae0e267854e4d982f31";
   };
 
+  buildInputs = [ message-generation rosgraph rospy roslaunch rosunit ];
   propagatedBuildInputs = [ rosgraph message-runtime rospy roslaunch rosunit ];
-  nativeBuildInputs = [ message-generation rosgraph rospy roslaunch catkin rosunit ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''app_manager'';

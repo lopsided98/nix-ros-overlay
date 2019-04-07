@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5074f3fe72d4156c322f59a28874ca9636d3ce2b2ec76048532f6d1a00832cc5";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ urdf xacro robot-state-publisher ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF robot description for Warthog'';

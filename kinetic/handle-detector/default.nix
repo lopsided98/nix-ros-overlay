@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "33c01a3dac7e8a6d395963ecbbb23d9f0d0face2abadb8eb606f98bfcb0da341";
   };
 
+  buildInputs = [ cmake-modules roscpp liblapack message-generation std-msgs visualization-msgs tf-conversions eigen-conversions tf pcl-conversions geometry-msgs ];
   propagatedBuildInputs = [ cmake-modules roscpp liblapack std-msgs message-runtime visualization-msgs tf-conversions eigen-conversions tf pcl-conversions geometry-msgs ];
-  nativeBuildInputs = [ cmake-modules catkin roscpp liblapack message-generation std-msgs visualization-msgs tf-conversions eigen-conversions tf pcl-conversions geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS package to detect handles.'';

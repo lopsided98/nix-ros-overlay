@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "354967660e9f9f5fa71f10857dad8ed817846895b6cda6c22e6e5d54c256ab2c";
   };
 
+  buildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
   propagatedBuildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
-  nativeBuildInputs = [ liblapack moveit-core pluginlib tf-conversions catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The katana_moveit_ikfast_plugin package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c35b71b27a5fa8e5bef94f76d56481471f7c6ddc93f16463d4e4537d6bdb362c";
   };
 
+  buildInputs = [ urdf tf sensor-msgs roscpp message-filters xacro ];
   propagatedBuildInputs = [ urdf robot-state-publisher tf sensor-msgs roscpp message-filters xacro ];
-  nativeBuildInputs = [ catkin urdf tf sensor-msgs roscpp message-filters xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Description of the Nao robot model that can be used with robot_state_publisher to display the robot's state of joint angles.'';

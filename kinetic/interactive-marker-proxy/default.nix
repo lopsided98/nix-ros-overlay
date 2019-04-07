@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e8897cc0cdf968b281e777aa3362da2cd5405c79b20f4b7d591997fdb8e187a9";
   };
 
+  buildInputs = [ roscpp message-generation interactive-markers visualization-msgs ];
   propagatedBuildInputs = [ interactive-markers visualization-msgs message-runtime roscpp ];
-  nativeBuildInputs = [ message-generation interactive-markers visualization-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A Proxy Server for Interactive Markers'';

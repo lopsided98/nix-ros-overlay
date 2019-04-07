@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "67eeaa61f398a4fb22d44e876a0c9a6c50ab644fdf72b1bb80456c39bbaf9a4b";
   };
 
+  buildInputs = [ message-generation rospy std-msgs joy roscpp ];
   propagatedBuildInputs = [ message-runtime rospy std-msgs joy roscpp ];
-  nativeBuildInputs = [ message-generation rospy std-msgs catkin joy roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS package for bridging ROS with Modelica tools via TCP/IP sockets.

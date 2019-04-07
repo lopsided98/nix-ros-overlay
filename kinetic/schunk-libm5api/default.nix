@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "79f620ee8a0222e25676bfc02356067ee4d279a37d88c28096ead42a7dad30e9";
   };
 
+  buildInputs = [ libntcan libpcan ];
   propagatedBuildInputs = [ libntcan libpcan ];
-  nativeBuildInputs = [ catkin libntcan libpcan ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package wraps the libm5api to use it as a ros dependency. Original sources from http://www.schunk-modular-robotics.com/fileadmin/user_upload/software/schunk_libm5api_source.zip.'';

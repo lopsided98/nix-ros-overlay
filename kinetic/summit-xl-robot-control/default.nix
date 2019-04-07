@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "354a23827855fe935dbb3b13519f996428613d30555ee2e9ba9fece730701f1b";
   };
 
+  buildInputs = [ diagnostic-updater nav-msgs geometry-msgs diagnostic-msgs sensor-msgs tf robotnik-msgs roscpp ];
   propagatedBuildInputs = [ diagnostic-updater nav-msgs geometry-msgs diagnostic-msgs sensor-msgs tf robotnik-msgs roscpp ];
-  nativeBuildInputs = [ sensor-msgs catkin robotnik-msgs roscpp diagnostic-updater nav-msgs diagnostic-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Control the robot joints in all kinematic configurations, publishes odom topic and, 

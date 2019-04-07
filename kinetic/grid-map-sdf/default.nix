@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5bbc1756b64c889099d4b53d02bde831a9844474ff65d824ddc67ec52b361a31";
   };
 
+  buildInputs = [ grid-map-core pcl-ros ];
   propagatedBuildInputs = [ grid-map-core pcl-ros ];
-  nativeBuildInputs = [ grid-map-core catkin pcl-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generates signed distance fields from grid maps.'';

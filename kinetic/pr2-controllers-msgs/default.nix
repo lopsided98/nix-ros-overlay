@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ff328cd99fc20adecc2287db00bfbc83bd44fc90cf5145c0edd087317f695681";
   };
 
+  buildInputs = [ trajectory-msgs message-generation actionlib-msgs geometry-msgs ];
   propagatedBuildInputs = [ trajectory-msgs message-runtime actionlib-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation actionlib-msgs trajectory-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages, services, and actions used in the pr2_controllers stack.'';

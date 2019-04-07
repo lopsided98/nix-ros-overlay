@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "762f7009b740be0da0a975edeba3521816746d1f3b2faa36ccf42f1844f1c78e";
   };
 
+  buildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
-  nativeBuildInputs = [ catkin access-point-control rospy dynamic-reconfigure ieee80211-channels ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS node that controls a Linksys WRT610Nv2 access point with

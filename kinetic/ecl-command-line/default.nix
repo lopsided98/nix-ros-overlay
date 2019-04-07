@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8e4ad3a4d858473e87d02d2fb7cb59695617526e52b41c951b2e625af7dbafc4";
   };
 
+  buildInputs = [ ecl-license ];
   propagatedBuildInputs = [ ecl-license ];
-  nativeBuildInputs = [ ecl-license catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Embeds the TCLAP library inside the ecl. This is a very convenient

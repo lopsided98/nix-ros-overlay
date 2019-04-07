@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a222dcefa000b5a33659131ff0657d0704becddd37ad8e7382b69bd7b0e6edb0";
   };
 
+  buildInputs = [ diagnostic-updater diagnostic-msgs pr2-msgs roscpp log4cxx ];
   propagatedBuildInputs = [ diagnostic-updater diagnostic-msgs pr2-msgs roscpp log4cxx ];
-  nativeBuildInputs = [ diagnostic-updater catkin diagnostic-msgs pr2-msgs roscpp log4cxx ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This is an interface to the Ocean Server Technology Intelligent Battery and Power System.'';

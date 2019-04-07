@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "17fc175e223a93caefc042fd6eeea7ba7fb54f33113e2f5690f9649119867220";
   };
 
+  buildInputs = [ gazebo-ros robot-controllers-interface robot-controllers angles control-toolbox gazeboSimulator.gazebo7 ];
   propagatedBuildInputs = [ gazebo-ros depth-image-proc control-toolbox trajectory-msgs gazeboSimulator.gazebo gazebo-plugins robot-controllers-interface robot-controllers rgbd-launch actionlib fetch-description image-proc nodelet xacro geometry-msgs ];
-  nativeBuildInputs = [ gazebo-ros robot-controllers-interface robot-controllers angles control-toolbox catkin gazeboSimulator.gazebo7 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo package for Fetch.'';

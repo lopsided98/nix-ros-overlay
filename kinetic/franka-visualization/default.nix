@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0dd98f3753c5847a39afabb933e6f5df266719349db7a1cdf67b364d464dc1e2";
   };
 
+  buildInputs = [ libfranka sensor-msgs roscpp ];
   propagatedBuildInputs = [ franka-description libfranka sensor-msgs roscpp xacro ];
-  nativeBuildInputs = [ libfranka sensor-msgs roscpp catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains visualization tools for Franka Emika.'';

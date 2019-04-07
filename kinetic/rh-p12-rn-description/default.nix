@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3abc818c0e94231fb971b1a18371a661294f24bdc26ebfb55d5586c487d8777d";
   };
 
+  buildInputs = [ sensor-msgs roscpp ];
   propagatedBuildInputs = [ sensor-msgs roscpp joint-state-publisher robot-state-publisher ];
-  nativeBuildInputs = [ sensor-msgs roscpp catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''3D models of the RH-P12-RN for simulation and visualization'';

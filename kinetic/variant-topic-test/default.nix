@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6ae04151a3f0016de0091e9b86fe6d42fd5373e6ae071997ad87b4788d50ca2b";
   };
 
+  buildInputs = [ geometry-msgs std-msgs variant-topic-tools variant-msgs roscpp ];
   propagatedBuildInputs = [ geometry-msgs std-msgs variant-topic-tools variant-msgs roscpp ];
-  nativeBuildInputs = [ geometry-msgs std-msgs variant-topic-tools catkin variant-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Variant topic tools testing suites.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0fa89e016bd9d6e4a87f70412f9493ca49fae68c6aeb794ca1974bd752c493cb";
   };
 
+  buildInputs = [ urdf ];
   propagatedBuildInputs = [ urdf ];
-  nativeBuildInputs = [ catkin urdf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''As a part of rtmros_nextage package that is a ROS interface for <a href="http://nextage.kawada.jp/en/">Nextage</a> dual-armed robot from Kawada Robotics Inc, this package provides its 3D model that can be used in simulation and <a href="http://ros.org/wiki/moveit">MoveIt!</a>-based motion planning tasks.'';

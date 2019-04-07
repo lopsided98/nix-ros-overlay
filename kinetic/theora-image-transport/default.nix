@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "88c28d0f55dd9ca60a3dc313b3eccf4ba387728ccd50890ff302119cbb59dac7";
   };
 
+  buildInputs = [ pluginlib image-transport rosbag cv-bridge libogg libtheora message-generation dynamic-reconfigure std-msgs ];
   propagatedBuildInputs = [ pluginlib image-transport rosbag cv-bridge libogg libtheora message-runtime dynamic-reconfigure std-msgs ];
-  nativeBuildInputs = [ pluginlib image-transport rosbag cv-bridge catkin libogg libtheora message-generation dynamic-reconfigure std-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Theora_image_transport provides a plugin to image_transport for

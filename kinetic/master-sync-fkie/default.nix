@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fed364d0d45f3decfc995cf31f2e5e944c6311ce82095c0ad117bd296b94d0cf";
   };
 
+  buildInputs = [ master-discovery-fkie multimaster-msgs-fkie ];
   propagatedBuildInputs = [ roslib rosgraph rospy master-discovery-fkie multimaster-msgs-fkie ];
-  nativeBuildInputs = [ master-discovery-fkie catkin multimaster-msgs-fkie ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Synchronize the local ROS master to the remote masters 

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "dd8a5a54972e9972f5d8e014f5802e305c42fb5f6ad8eb49caf423a89e6f11a8";
   };
 
+  buildInputs = [ trac-ik-lib orocos-kdl boost ];
   propagatedBuildInputs = [ trac-ik-lib orocos-kdl boost pr2-description xacro ];
-  nativeBuildInputs = [ trac-ik-lib catkin orocos-kdl boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the source code for testing and comparing trac_ik'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "86ce9e87e976cf3db062cc07ffdee2291e2f83865235765c99e72120bacbdba6";
   };
 
+  buildInputs = [ diagnostic-msgs message-generation std-msgs ];
   propagatedBuildInputs = [ diagnostic-msgs std-msgs message-runtime ];
-  nativeBuildInputs = [ diagnostic-msgs catkin message-generation std-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for representing state information, such as battery information and emergency stop status.'';

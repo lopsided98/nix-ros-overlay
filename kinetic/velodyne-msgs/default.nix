@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8d559a77e5fdb9bd94d1938644690333665fad616a3dfef0525e29653e3048aa";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS message definitions for Velodyne 3D LIDARs.'';

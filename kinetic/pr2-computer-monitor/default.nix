@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d3a44754f1af2850996a4d83023c7957a75294c4fb41b34c600afa010033e738";
   };
 
+  buildInputs = [ diagnostic-msgs pr2-msgs roscpp std-msgs ];
   propagatedBuildInputs = [ rospy std-msgs diagnostic-msgs pr2-msgs roscpp ];
-  nativeBuildInputs = [ std-msgs catkin diagnostic-msgs pr2-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Monitors the computer's processor and hard drives of the PR2 and publishes data to diagnostics.'';

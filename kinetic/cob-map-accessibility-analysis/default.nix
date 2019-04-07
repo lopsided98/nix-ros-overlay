@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "143520de9742bcf0e4737cf3ddfe8fad8223fa7ba3a6f450fb16c73c7540337f";
   };
 
+  buildInputs = [ boost image-transport sensor-msgs cv-bridge message-filters pcl roscpp message-generation nav-msgs cob-3d-mapping-msgs pcl-ros tf opencv3 geometry-msgs ];
   propagatedBuildInputs = [ boost image-transport sensor-msgs cv-bridge message-filters pcl roscpp nav-msgs cob-3d-mapping-msgs message-runtime pcl-ros rospy tf opencv3 geometry-msgs ];
-  nativeBuildInputs = [ boost image-transport sensor-msgs cv-bridge message-filters pcl roscpp catkin message-generation nav-msgs cob-3d-mapping-msgs pcl-ros tf opencv3 geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cob_map_accessibility_analysis receives the map from navigation as well as obstacles and inflates_obstacles topics to assemble a common obstacle map. Upon request, this node checks the accessibility of poses within thin map by (i) checking whether the pose itself is free and by (ii) checking whether there is a closed path from robot to the goal pose.'';

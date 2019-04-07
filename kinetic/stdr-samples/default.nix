@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ad1d00afd61790ecd3711da0614f6b85957cc0b117786253eef21e860d833079";
   };
 
+  buildInputs = [ nav-msgs geometry-msgs stdr-msgs sensor-msgs roslib roscpp tf ];
   propagatedBuildInputs = [ nav-msgs geometry-msgs stdr-msgs sensor-msgs roslib roscpp tf ];
-  nativeBuildInputs = [ nav-msgs catkin geometry-msgs stdr-msgs sensor-msgs roslib roscpp tf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides sample codes to demonstrate STDR simulator functionalities.'';

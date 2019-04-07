@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4245e367e47411753aa148e9a267d7554bc5d0b341a8c51e90be763637c7e5b0";
   };
 
+  buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
-  nativeBuildInputs = [ catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Library for various controller types and algorithms'';

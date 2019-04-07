@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ad912c51c6a8ba19a4ee192cece83e333181ba20caeaf351a2f1005c15c2436a";
   };
 
+  buildInputs = [ std-msgs sensor-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ message-generation std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains common message type definitions for perception tasks.'';

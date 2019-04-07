@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8ba7ebafa1f72b6fb69f8524704aba33c32a9b8907613524a5788bafc880dfcd";
   };
 
+  buildInputs = [ message-generation visp visp-bridge std-msgs camera-calibration-parsers roscpp sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ visp-bridge camera-calibration-parsers sensor-msgs message-generation visp message-runtime std-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ visp-bridge camera-calibration-parsers sensor-msgs catkin message-generation visp std-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''visp_camera_calibration allows easy calibration of

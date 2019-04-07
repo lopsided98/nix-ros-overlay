@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "872cf14bc924a6061f0505fe4c8fa13bb3970e7602ac287dbe7624b0dba09328";
   };
 
+  buildInputs = [ gazebo-ros controller-manager urdf std-msgs roscpp xacro gazebo-ros-control ];
   propagatedBuildInputs = [ gazebo-ros controller-manager urdf std-msgs roscpp xacro gazebo-ros-control ];
-  nativeBuildInputs = [ gazebo-ros controller-manager urdf std-msgs catkin roscpp xacro gazebo-ros-control ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo configurations package for OpenManipulator'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7c81fc30270feac8fed1a8e716f1f83f4c902c3ce6e85a8bcdb80fa3b810db3c";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ husky-description rviz-imu-plugin rviz robot-state-publisher joint-state-publisher ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Visualization configuration for Clearpath Husky'';

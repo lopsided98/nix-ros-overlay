@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9deb989fefcdb712061679ffffc0a3d03e46ec54807c6072703698eca9c18000";
   };
 
+  buildInputs = [ std-msgs sensor-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs sensor-msgs message-generation catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package containing PCL (Point Cloud Library)-related ROS messages.'';

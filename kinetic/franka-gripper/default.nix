@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5a59e493975969f8c78eee2d6458c613bf3bec4006edf8b1cd1c3262df992610";
   };
 
+  buildInputs = [ message-generation actionlib xmlrpcpp actionlib-msgs libfranka control-msgs sensor-msgs roscpp ];
   propagatedBuildInputs = [ actionlib-msgs control-msgs sensor-msgs message-generation message-runtime xmlrpcpp actionlib libfranka roscpp ];
-  nativeBuildInputs = [ actionlib-msgs control-msgs sensor-msgs catkin message-generation xmlrpcpp actionlib libfranka roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package implements the franka gripper of type Franka Hand for the use in ros'';

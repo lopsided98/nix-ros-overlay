@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fbd23391f70b14845c239ccea096c10cc4af66e990f46bb83d0139663640f4b1";
   };
 
+  buildInputs = [ std-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp controller-manager gazebo-ros ];
-  nativeBuildInputs = [ std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides basic message pub and launch file to use RH-P12-RN on Gazebo'';

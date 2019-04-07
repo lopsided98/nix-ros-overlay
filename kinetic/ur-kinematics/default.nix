@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e40c7d24ab7ecf1e7eabfa39319d47c88d07580e506b700d8f1bacb9e6e42950";
   };
 
+  buildInputs = [ moveit-ros-planning moveit-core pluginlib boost tf-conversions geometry-msgs moveit-kinematics roscpp ];
   propagatedBuildInputs = [ moveit-ros-planning pluginlib boost moveit-kinematics moveit-core rospy tf-conversions roscpp geometry-msgs ];
-  nativeBuildInputs = [ moveit-ros-planning pluginlib boost moveit-kinematics catkin moveit-core tf-conversions roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides forward and inverse kinematics for Universal Robots designs.

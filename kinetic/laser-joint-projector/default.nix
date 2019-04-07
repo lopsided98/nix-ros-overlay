@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "62973d13cea88d5a8a267ba68dfe0f8e6c7f0af3d284799bc47afb3ce91d5c2b";
   };
 
+  buildInputs = [ kdl-parser cmake-modules orocos-kdl roscpp-serialization roscpp geometry-msgs calibration-msgs ];
   propagatedBuildInputs = [ kdl-parser cmake-modules orocos-kdl roscpp-serialization geometry-msgs calibration-msgs ];
-  nativeBuildInputs = [ kdl-parser cmake-modules orocos-kdl roscpp-serialization catkin roscpp geometry-msgs calibration-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Projects laser readings into a point cloud, based on a set of recorded joint angles

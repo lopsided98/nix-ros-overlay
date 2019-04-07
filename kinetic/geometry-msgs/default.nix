@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "72c6e3da3f14bcd688dd4fd56465d2abb1a32d95aec1ecef94df123dee2c52a5";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''geometry_msgs provides messages for common geometric primitives

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a55813892b189be9f5b0adf06d1e981fe8aca34e67c2abd58d92f8d278c1f153";
   };
 
+  buildInputs = [ std-srvs roscpp nav-msgs message-generation dynamic-reconfigure std-msgs tf gazeboSimulator.gazebo7 geometry-msgs ];
   propagatedBuildInputs = [ gazebo-ros std-srvs gazeboSimulator.gazebo roscpp nav-msgs message-runtime dynamic-reconfigure std-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ std-srvs catkin roscpp nav-msgs message-generation dynamic-reconfigure std-msgs tf gazeboSimulator.gazebo7 geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_gazebo_plugins provides gazebo plugins from Team Hector.

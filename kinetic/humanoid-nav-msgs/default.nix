@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "80f6163d1ad0170811809fff118132f99cc4ac39af51339f51f5c3d66490289b";
   };
 
+  buildInputs = [ std-msgs message-generation actionlib-msgs geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime actionlib-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation actionlib-msgs std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages and services for humanoid robot navigation'';

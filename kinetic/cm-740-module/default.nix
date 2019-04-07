@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f5378955bc1b88df9084fd15982bbf7148a73b1f333c5bd5d7c4f015797f0215";
   };
 
+  buildInputs = [ dynamixel-sdk boost cmake-modules sensor-msgs roscpp robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ dynamixel-sdk boost cmake-modules sensor-msgs roscpp robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
-  nativeBuildInputs = [ dynamixel-sdk boost cmake-modules sensor-msgs catkin roscpp robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cm_740_module package'';

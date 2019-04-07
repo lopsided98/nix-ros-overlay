@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0ae71a854438fb1034b90fa0aec5ddcd2d4d71f960ace95a8e3c96e4e33d4aa6";
   };
 
+  buildInputs = [ msp sensor-msgs message-generation dynamic-reconfigure std-msgs roscpp mavros-msgs geometry-msgs eigen ];
   propagatedBuildInputs = [ msp message-runtime roscpp dynamic-reconfigure ];
-  nativeBuildInputs = [ msp sensor-msgs catkin message-generation dynamic-reconfigure std-msgs roscpp mavros-msgs geometry-msgs eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The multiwii package'';

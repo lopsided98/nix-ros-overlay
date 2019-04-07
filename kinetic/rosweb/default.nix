@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7124fe8b1cdec6255f85ddb27db8a629a5d65e43dd54dfeeb884da418a623d4f";
   };
 
+  buildInputs = [ rosjson rospy std-msgs roslib rosservice ];
   propagatedBuildInputs = [ rosjson rospy std-msgs roslib rosservice ];
-  nativeBuildInputs = [ rosjson rospy std-msgs catkin roslib rosservice ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosweb is a temporary package to replace the original rosweb in the ROS

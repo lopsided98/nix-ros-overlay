@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "13c1abf94d8b4f3f4ed3f1f375a2595b5f0192f0e73ddc62f6751e65c810ca77";
   };
 
+  buildInputs = [ pythonPackages.future python pythonPackages.lxml pythonPackages.setuptools ];
   propagatedBuildInputs = [ python catkin ];
-  nativeBuildInputs = [ python pythonPackages.lxml pythonPackages.future cmake pythonPackages.setuptools ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''MAVLink message marshaling library.

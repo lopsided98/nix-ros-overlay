@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "30119d05a64c7be774157c120b51baf2b97c5308a92f933cfac79593dd5a2dfb";
   };
 
+  buildInputs = [ roscpp xacro xpp-vis ];
   propagatedBuildInputs = [ roscpp xacro xpp-vis ];
-  nativeBuildInputs = [ catkin roscpp xacro xpp-vis ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''HyQ-robot specific functions for visualization in the  XPP Motion Framework.

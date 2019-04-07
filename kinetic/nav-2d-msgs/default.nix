@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a2b424b63f21f63d2e4602edd45387ea250b252e1fd18cba3803c8d6573b06e7";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Basic message types for two dimensional navigation, extending from geometry_msgs::Pose2D.'';

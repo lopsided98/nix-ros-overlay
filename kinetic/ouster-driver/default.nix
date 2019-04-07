@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6696f1152949ac3729d2b7be7b3f03f835d783cb3866c0664d4d5770a19ea1c1";
   };
 
+  buildInputs = [ message-generation pcl-ros std-msgs sensor-msgs roscpp pcl-conversions ];
   propagatedBuildInputs = [ message-runtime pcl-ros std-msgs sensor-msgs roscpp pcl-conversions ];
-  nativeBuildInputs = [ message-generation catkin pcl-ros std-msgs sensor-msgs roscpp pcl-conversions ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''OS1 ROS client'';

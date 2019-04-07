@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b8b5c1dbd4ffb9ba7d55b7a37c152d7f5ccc8b7fa8101431e68ebdf11daec266";
   };
 
+  buildInputs = [ pr2-calibration-launch ];
   propagatedBuildInputs = [ pr2-calibration-launch ];
-  nativeBuildInputs = [ pr2-calibration-launch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''pr2_se_calibration_launch'';

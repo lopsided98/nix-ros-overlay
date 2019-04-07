@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7e26de305073066fc8e1025448dfbf33af8b5b0a2f464495ec43c0e1e7224730";
   };
 
+  buildInputs = [ ecl-exceptions ecl-formatters ecl-license ecl-geometry ecl-build ];
   propagatedBuildInputs = [ ecl-exceptions ecl-formatters ecl-license ecl-geometry ecl-build ];
-  nativeBuildInputs = [ ecl-exceptions ecl-formatters ecl-license catkin ecl-geometry ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Deploys various manipulation algorithms, currently just 

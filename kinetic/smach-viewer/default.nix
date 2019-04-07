@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8473346bc221e0342a8d18c5f42a2fbf0b4f0bdd195bceed01d97bc121d1e26d";
   };
 
+  buildInputs = [ rostest ];
   propagatedBuildInputs = [ smach-msgs smach-ros graphviz pythonPackages.wxPython ];
-  nativeBuildInputs = [ rostest catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The smach viewer is a GUI that shows the state of hierarchical

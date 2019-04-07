@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cd2f09bc9d79b8a1794833d1b3d57e22a0f65b35a04d3153fa06c79dbf32ec02";
   };
 
+  buildInputs = [ rtt-actionlib-msgs rtt-geometry-msgs rtt-std-msgs control-msgs rtt-trajectory-msgs rtt-roscomm ];
   propagatedBuildInputs = [ rtt-actionlib-msgs rtt-geometry-msgs rtt-std-msgs control-msgs rtt-trajectory-msgs rtt-roscomm ];
-  nativeBuildInputs = [ rtt-actionlib-msgs rtt-geometry-msgs rtt-std-msgs control-msgs rtt-trajectory-msgs catkin rtt-roscomm ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides an rtt typekit for ROS control_msgs messages.

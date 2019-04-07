@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "081dba0d00f1b1ab63aea7313a6f067b5ef3386ee8eec9e42d6c22c4631215c9";
   };
 
+  buildInputs = [ ps3joy joy-mouse tf jsk-footstep-msgs diagnostic-updater jsk-rviz-plugins view-controller-msgs interactive-markers jsk-interactive-marker diagnostic-msgs visualization-msgs ];
   propagatedBuildInputs = [ ps3joy image-view2 joy-mouse tf jsk-footstep-msgs pythonPackages.pygame diagnostic-updater jsk-rviz-plugins view-controller-msgs interactive-markers jsk-interactive-marker diagnostic-msgs visualization-msgs ];
-  nativeBuildInputs = [ ps3joy joy-mouse tf jsk-footstep-msgs catkin diagnostic-updater jsk-rviz-plugins view-controller-msgs interactive-markers jsk-interactive-marker diagnostic-msgs visualization-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk_teleop_joy'';

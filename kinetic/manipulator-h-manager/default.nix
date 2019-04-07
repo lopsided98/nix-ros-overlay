@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "84335dac8bad900cac41ff0f4732e59e9042af83d4185d49a3b3225947a138cb";
   };
 
+  buildInputs = [ roscpp robotis-controller manipulator-h-base-module ];
   propagatedBuildInputs = [ roscpp robotis-controller manipulator-h-base-module ];
-  nativeBuildInputs = [ catkin roscpp robotis-controller manipulator-h-base-module ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The manipulator_h_manager package

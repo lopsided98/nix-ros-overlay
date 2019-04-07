@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "da8c911f4c5d111716441d6cbbc32b9994a7e83d22ab452a5aab8267742e45f8";
   };
 
+  buildInputs = [ sensor-msgs rospy diagnostic-updater rostest message-generation dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
   propagatedBuildInputs = [ diagnostic-updater message-runtime dynamic-reconfigure std-msgs diagnostic-msgs sensor-msgs roscpp rospy ];
-  nativeBuildInputs = [ sensor-msgs catkin rospy diagnostic-updater rostest message-generation dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk_network_tools'';

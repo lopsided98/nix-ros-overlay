@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cbeb10975db44f053f24aad7539ee0fe890f00f50602fd9f659c27cdaf246a48";
   };
 
+  buildInputs = [ csm pcl sensor-msgs roscpp nav-msgs nodelet pcl-ros tf pcl-conversions geometry-msgs ];
   propagatedBuildInputs = [ csm pcl sensor-msgs roscpp nav-msgs nodelet pcl-ros tf pcl-conversions geometry-msgs ];
-  nativeBuildInputs = [ csm pcl sensor-msgs catkin roscpp nav-msgs nodelet pcl-ros tf pcl-conversions geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>

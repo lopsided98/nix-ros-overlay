@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "eedeb0e20406c9ae3c30e3613ab12589fe5904243fcf2d14ac98fce2951e6a54";
   };
 
+  buildInputs = [ rospy-message-converter rostest interactive-markers rospy tf roslib ];
   checkInputs = [ pythonPackages.nose ];
   propagatedBuildInputs = [ rospy-message-converter roslib visualization-msgs rospy std-msgs tf ];
-  nativeBuildInputs = [ rospy-message-converter rostest interactive-markers rospy tf catkin roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Easily create interactive markers from yaml files'';

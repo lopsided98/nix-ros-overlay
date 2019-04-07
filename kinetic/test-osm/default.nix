@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7fd6af55b0a2548b5d501882bcac1429f7ad9039be66bc07a5049b6229cdeb17";
   };
 
+  buildInputs = [ geodesy osm-cartography geographic-msgs route-network ];
   propagatedBuildInputs = [ geodesy osm-cartography geographic-msgs route-network ];
-  nativeBuildInputs = [ geodesy geographic-msgs osm-cartography route-network catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''These are regression tests for the osm_cartography and

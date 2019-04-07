@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "204c5079b16a3a234503468ceb503f8cc3965461d235bffe1413471234ab8e33";
   };
 
+  buildInputs = [ swri-math-util mapviz cv-bridge swri-route-util move-base-msgs nav-msgs swri-yaml-util actionlib std-msgs tf roscpp visualization-msgs stereo-msgs swri-transform-util pluginlib marti-visualization-msgs image-transport sensor-msgs marti-nav-msgs gps-common marti-common-msgs libqt-dev libqt-opengl-dev swri-image-util map-msgs ];
   propagatedBuildInputs = [ swri-math-util mapviz cv-bridge swri-route-util move-base-msgs nav-msgs swri-yaml-util actionlib std-msgs tf roscpp visualization-msgs stereo-msgs swri-transform-util pluginlib marti-visualization-msgs image-transport sensor-msgs libqt-core marti-nav-msgs gps-common marti-common-msgs libqt-opengl swri-image-util map-msgs ];
-  nativeBuildInputs = [ swri-math-util mapviz cv-bridge swri-route-util catkin move-base-msgs nav-msgs qt-qmake swri-yaml-util actionlib std-msgs tf roscpp visualization-msgs stereo-msgs swri-transform-util pluginlib marti-visualization-msgs image-transport sensor-msgs marti-nav-msgs gps-common marti-common-msgs libqt-dev libqt-opengl-dev swri-image-util map-msgs ];
+  nativeBuildInputs = [ catkin qt-qmake ];
 
   meta = {
     description = ''Common plugins for the Mapviz visualization tool'';

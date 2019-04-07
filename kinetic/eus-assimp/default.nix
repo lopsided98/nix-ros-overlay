@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2a1ab35081290825e37022a99c6e8f04460e76aef4af6cea16befa0a94dae2d8";
   };
 
+  buildInputs = [ euslisp pkg-config assimp-devel ];
   propagatedBuildInputs = [ roseus assimp-devel ];
-  nativeBuildInputs = [ catkin euslisp pkg-config assimp-devel ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''eus_assimp'';

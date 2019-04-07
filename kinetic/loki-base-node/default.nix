@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3a52534217926fe09476948959b9abaf8b5251e0a37f99bbbb5b2dae96c09b8f";
   };
 
+  buildInputs = [ std-msgs message-generation roscpp rospy ];
   propagatedBuildInputs = [ std-msgs roscpp message-runtime rospy ];
-  nativeBuildInputs = [ message-generation rospy std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''loki_base_node has a ROS node to communicate with the Loki robot base and allow communication with the motors and sonars'';

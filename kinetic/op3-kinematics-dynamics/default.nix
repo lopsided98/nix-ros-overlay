@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a9e592483d32506bf257acbf47a3fc1eae9b474e38bb708efeacda11f63c5239";
   };
 
+  buildInputs = [ roscpp cmake-modules robotis-math eigen ];
   propagatedBuildInputs = [ roscpp cmake-modules robotis-math eigen ];
-  nativeBuildInputs = [ robotis-math cmake-modules eigen catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_kinematics_dynamics package'';

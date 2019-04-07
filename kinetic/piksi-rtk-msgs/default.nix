@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "97b66905e8f10501eaa569fc83c227277034bd3c6f02f9cb2f2732ccc9328132";
   };
 
+  buildInputs = [ message-generation message-runtime rospy std-msgs sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ message-generation message-runtime rospy std-msgs sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation message-runtime rospy std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package containing messages for Piksi RTK GPS ROS Driver.'';

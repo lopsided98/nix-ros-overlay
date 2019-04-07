@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "59fdc0c908dd33a16d7c6a5ef61715ec72565aa75446a8bbed2ef3e960b25061";
   };
 
+  buildInputs = [ rostest nav-msgs message-generation rospy std-msgs roscpp ];
   propagatedBuildInputs = [ rostest nav-msgs message-runtime rospy std-msgs roscpp ];
-  nativeBuildInputs = [ rostest nav-msgs message-generation rospy std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The indoor_localization package'';

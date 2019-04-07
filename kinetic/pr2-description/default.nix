@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c265964655deb371058b06a91b4489769b3124b903446e3991c05840ec94283c";
   };
 
+  buildInputs = [ convex-decomposition ivcon ];
   checkInputs = [ gtest urdfdom ];
   propagatedBuildInputs = [ xacro ];
-  nativeBuildInputs = [ catkin convex-decomposition ivcon ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the description (mechanical, kinematic, visual,

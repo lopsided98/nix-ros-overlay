@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1f38ac50d24d8ac6a5ee9b7eeeecbdace2b80192adb1b82c63f5dd8f9b0a2084";
   };
 
+  buildInputs = [ rtt-rosnode rtt-ros rtt-rospack genmsg roscpp ];
   propagatedBuildInputs = [ rtt-rosnode rtt-ros rtt-rospack genmsg roscpp ];
-  nativeBuildInputs = [ rtt-rosnode rtt-ros rtt-rospack genmsg catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rtt_roscomm provides the necessary template files and cmake macros for

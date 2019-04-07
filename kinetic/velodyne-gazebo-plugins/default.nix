@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, tf, sensor-msgs, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros, sensor-msgs, catkin, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-velodyne-gazebo-plugins";
   version = "1.0.9";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9366456f31e82a1abd305fb89722153c3ae43fe52a486e5de4a64b8c9f82273c";
   };
 
+  buildInputs = [ gazebo-ros sensor-msgs tf roscpp ];
   propagatedBuildInputs = [ gazebo-ros sensor-msgs tf roscpp ];
-  nativeBuildInputs = [ gazebo-ros catkin sensor-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo plugin to provide simulated data from Velodyne laser scanners.'';

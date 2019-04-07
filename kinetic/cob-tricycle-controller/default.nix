@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d75576a7832aca5a2abc5431956e8d0d8323a1bb6655a0c409143833c0f78a4b";
   };
 
+  buildInputs = [ hardware-interface std-srvs pluginlib boost cob-base-controller-utils realtime-tools roscpp nav-msgs controller-interface angles tf geometry-msgs ];
   propagatedBuildInputs = [ hardware-interface std-srvs pluginlib boost cob-base-controller-utils realtime-tools roscpp nav-msgs controller-interface angles tf geometry-msgs ];
-  nativeBuildInputs = [ hardware-interface std-srvs pluginlib boost cob-base-controller-utils realtime-tools catkin roscpp nav-msgs controller-interface angles tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_tricycle_controller package'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "a443607dc2f9dc266c5aa2155924895bd7da130e9a2e7b0198239384ac0bc20e";
   };
 
+  buildInputs = [ pythonPackages.scipy message-generation rospy ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ pythonPackages.scipy message-runtime rospy ];
-  nativeBuildInputs = [ pythonPackages.scipy catkin message-generation rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Parameter/Structure Estimation and Inference for Bayesian Belief Network'';

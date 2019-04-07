@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "728d84330cb0fa9a45a0b62a2aacb3903bbc26bff35cd0baf0e8c3b66bc77a01";
   };
 
+  buildInputs = [ boost ];
   propagatedBuildInputs = [ boost ];
-  nativeBuildInputs = [ catkin boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides the third-party KNI (Katana Native Interface) library for Katana

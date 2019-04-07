@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "47b5e54e19a9ada4e0d4355f4c1ff1e0eeb9a58c2d09bc9474c23848bf718de3";
   };
 
+  buildInputs = [ forward-command-controller controller-interface ];
   propagatedBuildInputs = [ forward-command-controller controller-interface ];
-  nativeBuildInputs = [ forward-command-controller catkin controller-interface ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''position_controllers'';

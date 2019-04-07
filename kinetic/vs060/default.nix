@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "561344bcd209e4de9f51e2ade5eb61f661dfe0af43b472f2729ccda85fcdf6ef";
   };
 
+  buildInputs = [ moveit-ros-planning roscpp moveit-commander roslang ];
   propagatedBuildInputs = [ moveit-ros-planning roscpp moveit-commander roslang ];
-  nativeBuildInputs = [ moveit-ros-planning moveit-commander roslang catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>This package provides <a href="http://goo.gl/kL0vnf">ORiN</a>-based controller functionality for VS060, a Denso's virtical multi-joint robot.</p>'';

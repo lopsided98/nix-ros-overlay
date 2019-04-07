@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "acd3a89a24533609d680f36bc03463ebc3e4a12cb3c2103c830832b621baac11";
   };
 
+  buildInputs = [ urdf xacro ];
   propagatedBuildInputs = [ urdf xacro ];
-  nativeBuildInputs = [ catkin urdf xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''3D models of the TurtleBot3 for simulation and visualization'';

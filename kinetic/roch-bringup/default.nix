@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "39a0f64bc0d30b4fd57b7bd086a138ce5171c1b97ed3cefda84c9370740ea509";
   };
 
+  buildInputs = [ roslaunch rospy ];
   propagatedBuildInputs = [ roch-control microstrain-3dmgx2-imu roch-safety-controller realsense-camera pythonPackages.scipy freenect-launch tf2-ros robot-localization roch-description rplidar-ros rospy rocon-app-manager openni2-launch astra-launch tf nodelet nmea-comms roch-base roch-capabilities zeroconf-avahi nmea-navsat-driver robot-upstart rocon-bubble-icons rocon-app-manager-msgs rocon-interaction-msgs laser-filters roch-sensorpc robot-state-publisher rgbd-launch depthimage-to-laserscan imu-filter-madgwick imu-transformer diagnostic-aggregator ];
-  nativeBuildInputs = [ roslaunch catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''SawYer roch installation and integration package'';

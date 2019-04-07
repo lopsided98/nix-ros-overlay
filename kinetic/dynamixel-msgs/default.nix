@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "adc3d35f7f4cbae814fe5f38956b64b1753225b579e4474cbd919a169cdbe8cb";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common messages used throughout dynamixel_motor stack.'';

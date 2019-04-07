@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e524feefba31851bbdc98e1388312597f102ccba343f4bf218cd2176adebb496";
   };
 
+  buildInputs = [ ecl-converters ecl-formatters ecl-sigslots ecl-streams ecl-time-lite ecl-command-line ecl-geometry ecl-threads ecl-exceptions ecl-containers ecl-license ecl-build ecl-errors ecl-type-traits ecl-devices ecl-linear-algebra ecl-config ecl-ipc ];
   propagatedBuildInputs = [ ecl-converters ecl-formatters ecl-sigslots ecl-streams ecl-time-lite ecl-command-line ecl-geometry ecl-threads ecl-exceptions ecl-containers ecl-license ecl-build ecl-errors ecl-type-traits ecl-devices ecl-linear-algebra ecl-config ecl-ipc ];
-  nativeBuildInputs = [ ecl-sigslots ecl-streams ecl-command-line catkin ecl-threads ecl-exceptions ecl-containers ecl-devices ecl-linear-algebra ecl-config ecl-ipc ecl-converters ecl-formatters ecl-time-lite ecl-geometry ecl-build ecl-license ecl-errors ecl-type-traits ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This includes a suite of programs demo'ing various aspects of the

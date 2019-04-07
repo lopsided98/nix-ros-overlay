@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c3e67287546f4b12d9c43ca682b5e78243218614d98939a14cdcf88b0cfb80b1";
   };
 
+  buildInputs = [ nav-msgs tf-conversions rospy std-msgs sensor-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ nav-msgs tf-conversions rospy std-msgs sensor-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ nav-msgs catkin tf-conversions rospy std-msgs sensor-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An underwater dynamics module'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "197551b92f6e7efa5966f1261631f8a73709fecac74f0bd64c00b3793ab2844d";
   };
 
+  buildInputs = [ roseus mk rosbuild tinyxml dynamic-tf-publisher jsk-rviz-plugins urdf jsk-recognition-msgs actionlib tf-conversions moveit-msgs tf roscpp visualization-msgs geometry-msgs cmake-modules libyamlcpp sensor-msgs jsk-footstep-msgs message-filters jsk-topic-tools message-generation rviz interactive-markers jsk-recognition-utils dynamic-reconfigure eigen-conversions roslib ];
   propagatedBuildInputs = [ roseus tinyxml dynamic-tf-publisher jsk-rviz-plugins urdf jsk-recognition-msgs actionlib tf-conversions moveit-msgs tf roscpp visualization-msgs geometry-msgs libyamlcpp sensor-msgs jsk-footstep-msgs message-filters jsk-topic-tools rviz message-runtime interactive-markers dynamic-reconfigure jsk-recognition-utils eigen-conversions roslib ];
-  nativeBuildInputs = [ roseus mk rosbuild catkin tinyxml dynamic-tf-publisher jsk-rviz-plugins urdf jsk-recognition-msgs actionlib tf-conversions moveit-msgs tf roscpp visualization-msgs geometry-msgs cmake-modules libyamlcpp sensor-msgs jsk-footstep-msgs message-filters jsk-topic-tools message-generation rviz interactive-markers jsk-recognition-utils dynamic-reconfigure eigen-conversions roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk interactive markers'';

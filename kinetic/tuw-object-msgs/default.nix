@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d8f5229251f802d18938dc867fe768967e3fd5d4179afc0948bea0de55588818";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tuw_object_msgs package. This pkg provides a set of messages used to detect, map and track objects of different types.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "59c69786e6a77421309a24fb371ef011dfd53a0e58ff9ec5cafff398f6f26bfb";
   };
 
+  buildInputs = [ costmap-2d nav-msgs pluginlib base-local-planner nav-core tf roscpp ];
   propagatedBuildInputs = [ costmap-2d nav-msgs pluginlib base-local-planner nav-core tf roscpp ];
-  nativeBuildInputs = [ costmap-2d nav-msgs catkin pluginlib base-local-planner nav-core tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A implementation of a local planner that attempts to follow a plan as closely as possible.'';

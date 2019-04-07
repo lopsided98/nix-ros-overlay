@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "251af90686f2c4c5fc4332b6606fe69e5b993226ae9fe50b214c2c4aafe1f4c9";
   };
 
+  buildInputs = [ pr2-power-board pr2-msgs roscpp std-srvs ];
   propagatedBuildInputs = [ pr2-power-board pr2-msgs roscpp std-srvs ];
-  nativeBuildInputs = [ pr2-power-board std-srvs catkin pr2-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a node that monitors the state of the run stops of the pr2_robot. When the state of the

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5741f403e137a07cdb55a1c0ad196f8dd8a30d4cbe9a39111bc5a29073eda3b6";
   };
 
+  buildInputs = [ sensor-msgs rosjava-build-tools rosjava-core rosjava-bootstrap ];
   propagatedBuildInputs = [ sensor-msgs rosjava-build-tools rosjava-core rosjava-bootstrap ];
-  nativeBuildInputs = [ rosjava-build-tools sensor-msgs catkin rosjava-core rosjava-bootstrap ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Extra packages for rosjava_core'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "82243a29379e1dd189f170afad371c0cbe6b9ace00cafc2d496c6ff857b91c71";
   };
 
+  buildInputs = [ rqt-robot-dashboard kobuki-msgs rospy ];
   propagatedBuildInputs = [ rqt-robot-dashboard kobuki-msgs rospy ];
-  nativeBuildInputs = [ rqt-robot-dashboard catkin kobuki-msgs rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The Kobuki dashboard is a RQT-based plug-in for visualising data from Kobuki and giving easy access

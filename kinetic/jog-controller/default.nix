@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2e1d30d6a78ecc8f4b32be7853786da128878df658ccf6bdf770ce5016d7db0d";
   };
 
+  buildInputs = [ moveit-ros-planning moveit-visual-tools jog-msgs control-msgs rviz moveit-core actionlib moveit-msgs roslaunch roscpp ];
   propagatedBuildInputs = [ moveit-ros-planning moveit-visual-tools jog-msgs control-msgs joy rviz moveit-core actionlib moveit-msgs roscpp ];
-  nativeBuildInputs = [ moveit-ros-planning moveit-visual-tools jog-msgs control-msgs catkin rviz moveit-core actionlib moveit-msgs roslaunch roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The jog_controller package'';

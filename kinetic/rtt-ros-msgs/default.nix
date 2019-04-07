@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7ec814fe536b7d9ef8c047512987da95e2f019ba4575e95ced0650f7252bc0b5";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides .msg and .srv files for use with the rtt_ros_integration packages.'';

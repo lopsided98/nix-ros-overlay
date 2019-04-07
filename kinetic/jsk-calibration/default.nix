@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6044a830abc5ae15ef55b7062fd722fe0950199e6fabffccc38437cb17544f4b";
   };
 
+  buildInputs = [ roseus pr2-msgs ];
   propagatedBuildInputs = [ roseus pr2-msgs ];
-  nativeBuildInputs = [ roseus pr2-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The jsk_calibration package'';

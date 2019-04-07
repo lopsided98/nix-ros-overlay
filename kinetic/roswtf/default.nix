@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "0d3d052af6249ebd27dc854ecc4987eaf1fb15ab6b29800c9616bbb89413d721";
   };
 
+  buildInputs = [ rostest ];
   checkInputs = [ cmake-modules ];
   propagatedBuildInputs = [ roslib pythonPackages.rospkg rosgraph pythonPackages.paramiko roslaunch rosbuild rosservice rosnode ];
-  nativeBuildInputs = [ rostest catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''roswtf is a tool for diagnosing issues with a running ROS system. Think of it as a FAQ implemented in code.'';

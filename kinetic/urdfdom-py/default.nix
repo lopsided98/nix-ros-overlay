@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "227ecfa29755182798418037715d3467c7879788669f1c1b8b999b4512e8988d";
   };
 
+  buildInputs = [ python ];
   propagatedBuildInputs = [ python catkin pythonPackages.lxml ];
-  nativeBuildInputs = [ python pythonPackages.catkin-pkg catkin ];
+  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
 
   meta = {
     description = ''Python implementation of the URDF parser.'';

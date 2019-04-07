@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9a0f80ebe4968f668b575fe33869c6cc9b622456930f851e74d58aa25777f63a";
   };
 
+  buildInputs = [ ecl-threads roch-msgs std-msgs roscpp geometry-msgs yocs-controllers ];
   propagatedBuildInputs = [ ecl-threads roch-msgs std-msgs roscpp geometry-msgs yocs-controllers ];
-  nativeBuildInputs = [ ecl-threads roch-msgs std-msgs catkin roscpp geometry-msgs yocs-controllers ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A controller ensuring the safe operation of roch.

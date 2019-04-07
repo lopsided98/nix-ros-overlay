@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2a97381641acf66a09208a595f6756519c14fe5464609e0b4a8051fad978d089";
   };
 
+  buildInputs = [ tf2-geometry-msgs roscpp move-base-msgs message-generation interactive-markers moveit-core eigen visualization-msgs message-runtime tf moveit-ros-planning-interface geometry-msgs ];
   propagatedBuildInputs = [ tf2-geometry-msgs roscpp move-base-msgs message-generation interactive-markers moveit-core eigen visualization-msgs message-runtime tf moveit-ros-planning-interface geometry-msgs ];
-  nativeBuildInputs = [ tf2-geometry-msgs catkin roscpp move-base-msgs message-generation interactive-markers moveit-core eigen visualization-msgs message-runtime tf moveit-ros-planning-interface geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Move the robot base until a desired end-effector pose can be reached.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fb8e40bccc40b1911fa8a442974d3960ed52f3b8d7758f75376da3cc8a1e8a28";
   };
 
+  buildInputs = [ libyamlcpp dynamixel-sdk ncurses std-msgs robotis-device roscpp robotis-controller thormang3-action-module ];
   propagatedBuildInputs = [ dynamixel-sdk libyamlcpp robotis-controller thormang3-manager ncurses std-msgs robotis-device roscpp thormang3-action-module ];
-  nativeBuildInputs = [ dynamixel-sdk libyamlcpp catkin robotis-controller ncurses std-msgs robotis-device roscpp thormang3-action-module ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The thormang3_action_editor package

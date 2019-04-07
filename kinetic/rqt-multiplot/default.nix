@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8609de1db057f16d19ba9097a5022e0551f29f20b4e185a154e5fa2b09c3de0e";
   };
 
+  buildInputs = [ roscpp rqt-gui-cpp qwt6 variant-topic-tools rosbag rqt-gui qt5.qtbase ];
   propagatedBuildInputs = [ roscpp rqt-gui-cpp qwt6 variant-topic-tools rosbag rqt-gui qt5.qtbase ];
-  nativeBuildInputs = [ roscpp catkin rqt-gui-cpp qwt6 variant-topic-tools rosbag rqt-gui qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_multiplot provides a GUI plugin for visualizing numeric values

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bcfa4da677e54989fbe02414166c39ac0f26c6b364d1bd1c81725557c6afc7a5";
   };
 
+  buildInputs = [ pcl roscpp pcl-conversions pcl-ros ];
   propagatedBuildInputs = [ pcl roscpp pcl-conversions pcl-ros ];
-  nativeBuildInputs = [ pcl-ros pcl catkin roscpp pcl-conversions ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Converts LaserScan to PointCloud messages.'';

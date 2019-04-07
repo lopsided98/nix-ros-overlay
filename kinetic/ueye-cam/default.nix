@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b58bc503b7feca34d7d68fe1af42d122635fbef9f5a6263d1d38269f09b18acc";
   };
 
+  buildInputs = [ camera-info-manager dynamic-reconfigure camera-calibration-parsers image-transport sensor-msgs nodelet roscpp ];
   propagatedBuildInputs = [ camera-info-manager dynamic-reconfigure camera-calibration-parsers image-transport sensor-msgs nodelet roscpp ];
-  nativeBuildInputs = [ camera-info-manager catkin dynamic-reconfigure camera-calibration-parsers image-transport sensor-msgs nodelet roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS nodelet and node that wraps the driver API for UEye cameras

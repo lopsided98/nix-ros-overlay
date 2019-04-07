@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2357067dfe93be5ed3bdadd4b28e08f39aa6bb5002b7c3aa75090e9e54cb6803";
   };
 
+  buildInputs = [ rostest rtshell openrtm-aist-python rosbash openrtm-aist ];
   propagatedBuildInputs = [ rtshell openrtm-aist-python openrtm-aist rosbash ];
-  nativeBuildInputs = [ rostest rtshell openrtm-aist-python rosbash openrtm-aist catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The openrtm_tools package'';

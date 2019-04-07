@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e5277d6f28bd2320220e4919f18a20be95082acb76f0eec2d96e73db9e1c793c";
   };
 
+  buildInputs = [ pr2-mechanism-controllers pluginlib pr2-controller-interface std-msgs realtime-tools roscpp pr2-mechanism-model robot-mechanism-controllers ];
   propagatedBuildInputs = [ pr2-mechanism-controllers pluginlib pr2-controller-interface std-msgs realtime-tools roscpp pr2-mechanism-model robot-mechanism-controllers ];
-  nativeBuildInputs = [ pr2-mechanism-controllers pluginlib pr2-controller-interface realtime-tools catkin robot-mechanism-controllers std-msgs roscpp pr2-mechanism-model ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_calibration_controllers package contains the controllers

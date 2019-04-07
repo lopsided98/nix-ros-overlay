@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "eea289928174804be2f07c480b31fbd7d0ac4412424a84b45abdbde5fef58e83";
   };
 
+  buildInputs = [ std-srvs geometry-msgs sensor-msgs robotnik-msgs roscpp diagnostic-updater message-generation nav-msgs std-msgs diagnostic-msgs tf ackermann-msgs ];
   propagatedBuildInputs = [ std-srvs geometry-msgs sensor-msgs robotnik-msgs roscpp diagnostic-updater nav-msgs message-runtime std-msgs diagnostic-msgs tf ackermann-msgs ];
-  nativeBuildInputs = [ std-srvs geometry-msgs sensor-msgs catkin robotnik-msgs roscpp diagnostic-updater message-generation nav-msgs std-msgs diagnostic-msgs tf ackermann-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The agvs_robot_control package. Robot controller that interacts with Gazebo motor controllers.'';

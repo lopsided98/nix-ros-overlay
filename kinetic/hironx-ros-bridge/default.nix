@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gnuplot, roslint, hrpsys-ros-bridge, control-msgs, rosbash, mk, tf, rosbuild, catkin, unzip, moveit-commander, roslang, rospy, openni2-launch, roslib }:
+{ lib, buildRosPackage, fetchurl, gnuplot, roslint, rosbash, control-msgs, hrpsys-ros-bridge, mk, tf, rosbuild, catkin, unzip, moveit-commander, roslang, rospy, openni2-launch, roslib }:
 buildRosPackage {
   pname = "ros-kinetic-hironx-ros-bridge";
   version = "2.1.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "def7a3f70e8008f62b6e115c2e850a0951d6699b0c80f727b7a357bec0eae27d";
   };
 
+  buildInputs = [ gnuplot rosbash hrpsys-ros-bridge roslint control-msgs mk rosbuild unzip roslang roslib ];
   propagatedBuildInputs = [ gnuplot hrpsys-ros-bridge control-msgs rosbash roslib moveit-commander roslang rospy openni2-launch tf ];
-  nativeBuildInputs = [ gnuplot rosbash hrpsys-ros-bridge roslint control-msgs mk rosbuild catkin unzip roslang roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS-OpenRTM interfacing package for the opensource version of Kawada's Hiro/NEXTAGE dual-arm robot.

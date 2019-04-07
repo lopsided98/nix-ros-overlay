@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "eb337688407be5b0f8f30323d371dd0ab0dff36506cda1f1fd89d4b145b0693c";
   };
 
+  buildInputs = [ diagnostic-msgs sensor-msgs ];
   propagatedBuildInputs = [ diagnostic-msgs sensor-msgs rospy ];
-  nativeBuildInputs = [ diagnostic-msgs sensor-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Simple script to check battery status'';

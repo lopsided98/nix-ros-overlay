@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a630ba9f899c40baba9de98fda70db4992a1048dc5adabfba02b3feaed13140f";
   };
 
+  buildInputs = [ eigen ];
   propagatedBuildInputs = [ eigen ];
-  nativeBuildInputs = [ catkin eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common definitions (positions, velocities, angular angles,

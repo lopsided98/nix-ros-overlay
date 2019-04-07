@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8b8e945323dae33489bcb1163238a2a9791f34cbf3aa07b93920970a8b1194d6";
   };
 
+  buildInputs = [ laser-geometry tf sensor-msgs roscpp ];
   propagatedBuildInputs = [ laser-geometry tf sensor-msgs roscpp ];
-  nativeBuildInputs = [ catkin tf sensor-msgs laser-geometry roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_scan_unifier package holds code to unify two or more laser-scans to one unified scan-message'';

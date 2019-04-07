@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b6e7861f84afa4caf9094f2c48005f74e996ac5d1a6e31085d38246053f7a9cf";
   };
 
+  buildInputs = [ std-msgs sensor-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ message-generation std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The homer_msgs package'';

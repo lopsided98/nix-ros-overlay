@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "22c8cee256bee0006130e6ee0ca220a336a609e045d48b56df22163d79320e91";
   };
 
+  buildInputs = [ ecl-exceptions ecl-formatters roscpp ecl-linear-algebra geometry-msgs tf ecl-config ecl-build ];
   propagatedBuildInputs = [ ecl-exceptions ecl-formatters roscpp ecl-linear-algebra geometry-msgs tf ecl-config ecl-build ];
-  nativeBuildInputs = [ ecl-formatters tf catkin ecl-config ecl-build ecl-exceptions ecl-linear-algebra roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Math toolkit for Yujin open control system. This package is intended to contain common use functions,

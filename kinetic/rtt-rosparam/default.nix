@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7727b0f85c88c28f9cd48e0843223afbdaf24ed9dbffe22016a155f1618573c2";
   };
 
+  buildInputs = [ roscpp rtt-ros eigen ];
   propagatedBuildInputs = [ roscpp rtt-ros eigen ];
-  nativeBuildInputs = [ catkin roscpp rtt-ros eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides an RTT service and service-requester for associating RTT component properties with ROS parameters'';

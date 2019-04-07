@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d1c743e2165fe557a11673a131c29a03f41bf2716853579f6f12189c04dd6904";
   };
 
+  buildInputs = [ gazebo-ros romeo-description ];
   propagatedBuildInputs = [ gazebo-ros gazebo-plugins ros-controllers romeo-control ros-control gazebo-ros-control romeo-description ];
-  nativeBuildInputs = [ gazebo-ros catkin romeo-description ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The romeo_gazebo_plugin package'';

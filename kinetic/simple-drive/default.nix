@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "abe34cd8127d63aaca2d44e70634d780cbfdb6cef5b6ae9d8076a01796eaeeca";
   };
 
+  buildInputs = [ actionlib-msgs rospy std-msgs sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs rospy std-msgs sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ actionlib-msgs rospy std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A full, but simple robot drive system. Includes skid steering joystick teleoperation, control of a panning servo, a cmd_vel multiplexer, and Arduino firmware.'';

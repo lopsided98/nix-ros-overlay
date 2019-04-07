@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "d7f3353e325059f376a2a72d11b876fd3ff4e942e097d8ddb82829f2485e7308";
   };
 
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  buildInputs = [ pythonPackages.catkin-pkg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Bubble icon library for rocon.'';

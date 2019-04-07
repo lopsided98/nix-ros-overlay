@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a0ecf2f7eccb4ce41df905278f6b92146d7f757571e2bcb34f280fbe9d5457dd";
   };
 
+  buildInputs = [ diagnostic-msgs message-generation ];
   propagatedBuildInputs = [ diagnostic-msgs message-runtime ];
-  nativeBuildInputs = [ diagnostic-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for transmitting video frames to Kinesis Video Streams'';

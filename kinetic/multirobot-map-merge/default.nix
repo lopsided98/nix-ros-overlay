@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "df9d13dc9aeb42feb2562689ce1fc9da1e99c3ace61d92fbe2be10d914bd6bda";
   };
 
+  buildInputs = [ nav-msgs tf2-geometry-msgs roscpp opencv3 geometry-msgs map-msgs ];
   checkInputs = [ roslaunch rosunit ];
   propagatedBuildInputs = [ nav-msgs tf2-geometry-msgs roscpp opencv3 geometry-msgs map-msgs ];
-  nativeBuildInputs = [ nav-msgs tf2-geometry-msgs catkin roscpp opencv3 geometry-msgs map-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Merging multiple maps without knowledge of initial

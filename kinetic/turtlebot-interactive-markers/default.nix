@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot-bringup, catkin, roscpp, interactive-markers, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, turtlebot-bringup, catkin, interactive-markers, visualization-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-interactive-markers";
   version = "2.3.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f17cda78e7b855b25d058aab4cf8a6afff1daf9fd9b3dbe5ab61951bedcabfc6";
   };
 
+  buildInputs = [ visualization-msgs interactive-markers roscpp ];
   propagatedBuildInputs = [ turtlebot-bringup visualization-msgs interactive-markers roscpp ];
-  nativeBuildInputs = [ catkin visualization-msgs interactive-markers roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interactive control for the TurtleBot using RViz and interactive markers'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c0d067a46cdb30c3d2bcfe0f39e6dbd228b6fdeeca954dcebb8e81c2b3e16192";
   };
 
+  buildInputs = [ std-msgs sensor-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ message-generation std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a set of messages and services for using thormang3_manipulation_module.'';

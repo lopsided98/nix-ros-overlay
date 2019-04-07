@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4b0ed81d49c292d841cc281b9d659fed0e855f31bb267cfb068858e62eb54234";
   };
 
+  buildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs kdl-parser pluginlib cmake-modules control-msgs urdf moveit-core actionlib angles tf-conversions eigen-conversions roscpp ];
   propagatedBuildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs kdl-parser pluginlib control-msgs urdf moveit-core actionlib angles tf-conversions eigen-conversions roscpp ];
-  nativeBuildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs kdl-parser pluginlib cmake-modules control-msgs catkin urdf moveit-core actionlib angles tf-conversions eigen-conversions roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''PR2 specific plugins for MoveIt'';

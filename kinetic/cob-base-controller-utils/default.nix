@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "886746c512237e6acb9155544d4229c23f933899f645f23e4dcdc4b3545bbfc7";
   };
 
+  buildInputs = [ std-srvs roscpp tf2 nav-msgs message-generation urdf std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ std-srvs roscpp tf2 nav-msgs urdf message-runtime rospy std-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ std-srvs catkin roscpp tf2 nav-msgs message-generation urdf std-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_base_controller_utils package'';

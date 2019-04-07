@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "edf33279c0cc70f96807eba0264d01dcb8691a2a20954d0c9736a5cd0baab321";
   };
 
+  buildInputs = [ pythonPackages.catkin-pkg ];
   checkInputs = [ rosunit ];
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Internal packaging of the 0.91 version of the simple python

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2cebfdf68fe9ca20cc7c4d57f0ac59ff8a9f43bad2dd29c93c07573ce5482e4c";
   };
 
+  buildInputs = [ eigen ];
   propagatedBuildInputs = [ eigen ];
-  nativeBuildInputs = [ catkin eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Universal grid map library to manage two-dimensional grid maps with multiple data layers.'';

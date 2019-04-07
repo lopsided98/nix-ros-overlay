@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bc621e2650d55f3082e262b8c305d1343d89984f89a7b1afd26ae2d236b23703";
   };
 
+  buildInputs = [ roscpp rviz marker-msgs ];
   propagatedBuildInputs = [ roscpp rviz marker-msgs ];
-  nativeBuildInputs = [ catkin roscpp rviz marker-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The marker_rviz_plugin package contains RViz plugins to visualize messages of the marker_msgs package using RViz.'';

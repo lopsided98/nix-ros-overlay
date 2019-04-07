@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b240a1ac8fcd1684a9e78513c0a44e45360c772157b5d16d7219153b1136463b";
   };
 
+  buildInputs = [ dynamixel-sdk roscpp ];
   propagatedBuildInputs = [ dynamixel-sdk roscpp ];
-  nativeBuildInputs = [ dynamixel-sdk catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is composed of 'dynamixel_item', 'dynamixel_tool', 'dynamixel_driver' and 'dynamixel_workbench' class.

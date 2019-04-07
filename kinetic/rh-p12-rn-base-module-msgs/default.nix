@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5b70e427adf158b2d360ce8bcd5befb71525a4150eaab26131b908b837b2090f";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package includes ROS messages and services for the rh_p12_rn packages'';

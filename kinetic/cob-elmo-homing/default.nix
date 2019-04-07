@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "74ef235875833a9a3945684962f174cb3f01e21467c573d14c3d18b394780d5f";
   };
 
+  buildInputs = [ class-loader canopen-402 ];
   propagatedBuildInputs = [ class-loader canopen-402 ];
-  nativeBuildInputs = [ class-loader catkin canopen-402 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This packagae implements the special homing procedure that is needed for old cob4/raw bases'';

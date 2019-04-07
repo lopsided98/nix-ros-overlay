@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a89967f570dea9bf79137fe0b32f08b56d44159c48d516c3c8aecdb20437211f";
   };
 
+  buildInputs = [ roslint camera-info-manager image-transport sensor-msgs cv-bridge roscpp rostest nodelet opencv3 ];
   propagatedBuildInputs = [ cv-bridge camera-info-manager image-transport sensor-msgs nodelet opencv3 roscpp ];
-  nativeBuildInputs = [ roslint camera-info-manager image-transport sensor-msgs cv-bridge catkin roscpp rostest nodelet opencv3 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cv_camera uses OpenCV capture object to capture camera image.

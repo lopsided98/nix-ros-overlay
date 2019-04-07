@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f9c5dfe75bfe073df9758dc739b811203f1f64fe80900209070316c282f2db12";
   };
 
+  buildInputs = [ robot-localization roslaunch tf move-base ];
   propagatedBuildInputs = [ robot-localization tf move-base ];
-  nativeBuildInputs = [ robot-localization catkin roslaunch tf move-base ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Localization and navigation for the Jackal.'';

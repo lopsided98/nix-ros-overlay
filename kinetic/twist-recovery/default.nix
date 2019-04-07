@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e1c8aeafc110eacfe1b0c362a7d7ac43b4ffe40761695cd8c353467c6d5e3b7f";
   };
 
+  buildInputs = [ costmap-2d pluginlib base-local-planner nav-core geometry-msgs ];
   propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core geometry-msgs ];
-  nativeBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A recovery behavior that performs a particular used-defined twist.'';

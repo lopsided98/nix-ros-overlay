@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "0327a6e55458e966641c3467b66ee59515573e3bcfc06a6cb7ddfabc13b72086";
   };
 
+  buildInputs = [ rviz xacro ];
   checkInputs = [ rostest roslaunch ];
   propagatedBuildInputs = [ rviz joint-state-publisher xacro robot-state-publisher ];
-  nativeBuildInputs = [ catkin rviz xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The melfa_description package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0d7add3be65bb923b7f0d3116a2ba9233514c5c4e7109ebbdd7f5736e76a72f6";
   };
 
+  buildInputs = [ ecl-sigslots ecl-streams kobuki-driver kobuki-msgs ecl-threads ecl-exceptions nav-msgs rospy std-msgs diagnostic-msgs roscpp nodelet tf geometry-msgs kobuki-ftdi pluginlib kobuki-keyop sensor-msgs kobuki-safety-controller diagnostic-updater angles ];
   propagatedBuildInputs = [ ecl-sigslots ecl-streams kobuki-driver kobuki-msgs ecl-threads ecl-exceptions nav-msgs rospy std-msgs diagnostic-msgs diagnostic-aggregator roscpp nodelet tf geometry-msgs capabilities kobuki-ftdi kobuki-rapps kobuki-keyop pluginlib sensor-msgs kobuki-safety-controller diagnostic-updater angles ];
-  nativeBuildInputs = [ ecl-sigslots ecl-streams kobuki-driver kobuki-msgs catkin ecl-threads ecl-exceptions nav-msgs rospy std-msgs diagnostic-msgs roscpp nodelet tf geometry-msgs kobuki-ftdi pluginlib kobuki-keyop sensor-msgs kobuki-safety-controller diagnostic-updater angles ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.'';

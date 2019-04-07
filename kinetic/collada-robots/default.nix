@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "a28835c9d60ebe5ccf281fa145ebee872889281e10d10f0e0aff20951cc2d86c";
   };
 
-  nativeBuildInputs = [ git catkin unzip ];
+  buildInputs = [ git unzip ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''COLLADA 1.5 Robot Models Repository

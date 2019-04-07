@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a4ad8975345794f5376ef3c794e45298278deb030a1cb039b361132dcdfc3da7";
   };
 
+  buildInputs = [ std-msgs tf geometry-msgs rospy ];
   propagatedBuildInputs = [ std-msgs tf geometry-msgs rospy ];
-  nativeBuildInputs = [ rospy std-msgs catkin tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for the Innok Heros robot plattform'';

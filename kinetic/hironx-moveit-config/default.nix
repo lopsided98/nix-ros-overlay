@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "923ed918a6cfa4713f9a2726c4baef93fdfcddd194c6c1f97f7168831be5fd9d";
   };
 
+  buildInputs = [ hironx-ros-bridge moveit-ros-move-group collada-urdf ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ hironx-ros-bridge moveit-simple-controller-manager moveit-planners moveit-ros ];
-  nativeBuildInputs = [ hironx-ros-bridge catkin moveit-ros-move-group collada-urdf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the HiroNX with the MoveIt Motion Planning Framework'';

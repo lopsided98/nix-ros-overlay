@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f083c70688f848452c3c68ac030b5ecf36bd7899a36331eadf1f6132954dca79";
   };
 
+  buildInputs = [ filters cmake-modules pluginlib roscpp tf2-ros rostest dynamic-reconfigure eigen-conversions rosparam-handler geometry-msgs ];
   propagatedBuildInputs = [ filters cmake-modules pluginlib roscpp tf2-ros rostest dynamic-reconfigure eigen-conversions rosparam-handler geometry-msgs ];
-  nativeBuildInputs = [ filters cmake-modules pluginlib catkin roscpp tf2-ros rostest dynamic-reconfigure eigen-conversions rosparam-handler geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The iirob_filters package implements following filters:

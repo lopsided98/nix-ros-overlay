@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1f95ea36f8f6777b0f49fe7a04379c0e09ce2ecd758be99f860464a8e6d595aa";
   };
 
+  buildInputs = [ pr2-controllers-msgs kdl-parser orocos-kdl trajectory-msgs sensor-msgs message-filters roscpp actionlib tf-conversions tf geometry-msgs ];
   propagatedBuildInputs = [ pr2-controllers-msgs kdl-parser orocos-kdl trajectory-msgs sensor-msgs message-filters roscpp actionlib tf-conversions tf geometry-msgs ];
-  nativeBuildInputs = [ pr2-controllers-msgs kdl-parser orocos-kdl trajectory-msgs sensor-msgs catkin message-filters roscpp actionlib tf-conversions tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The PR2 head action is a node that provides an action interface for

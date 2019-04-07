@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5e91161f084f2da82293897d0665d47104e79a2383481dd4f0b8c1404f16f02a";
   };
 
+  buildInputs = [ geographic-msgs message-generation std-msgs geometry-msgs ];
   propagatedBuildInputs = [ std-msgs geographic-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ geographic-msgs message-generation std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Plume simulator messages and services package.'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "a1f7deaff0e45aadc4de4224709360da068c740c776103d531d68644195ca54d";
   };
 
+  buildInputs = [ roslaunch ];
   checkInputs = [ cob-supported-robots ];
   propagatedBuildInputs = [ cob-collision-monitor rosserial-python usb-cam cob-base-controller-utils sick-visionary-t-driver cob-moveit-config realsense-camera cob-monitoring joint-trajectory-controller position-controllers cob-voltage-control rplidar-ros generic-throttle cob-omni-drive-controller cob-default-robot-behavior joint-state-controller cob-sound cob-mimic cob-hardware-config theora-image-transport cob-default-env-config cob-phidgets rviz cob-sick-s300 robot-state-publisher cob-dashboard cob-cam3d-throttle compressed-depth-image-transport roslaunch image-proc joint-state-publisher openni-launch cob-sick-lms1xx cob-phidget-power-state cob-reflector-referencing cob-image-flip cob-twist-controller rosserial-server joy velocity-controllers tf2-ros cob-light cob-scan-unifier canopen-motor-node cob-helper-tools cob-control-mode-adapter canopen-chain-node diagnostic-aggregator openni2-launch cob-frame-tracker cob-default-robot-config cob-phidget-em-state compressed-image-transport nodelet controller-manager costmap-2d twist-mux spacenav-node cob-teleop cob-bms-driver cob-script-server cob-command-gui cob-hand-bridge cob-safety-controller cob-collision-velocity-filter laser-filters cob-base-velocity-smoother cob-docker-control cob-obstacle-distance topic-tools ur-driver cob-calibration-data cob-linear-nav rostopic cob-android-script-server ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides launch files for operating Care-O-bot.'';

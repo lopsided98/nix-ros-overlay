@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8716cd0606b804c50ffe1ff79d1c263e85081535f5efb3606f74d01095576f19";
   };
 
+  buildInputs = [ std-msgs message-generation roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp message-runtime ];
-  nativeBuildInputs = [ std-msgs message-generation catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The wts_driver package'';

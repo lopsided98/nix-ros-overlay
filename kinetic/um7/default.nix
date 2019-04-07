@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "96835957db572d596a12aeef84e6319b9f9f2e14876e0251542763a323ae24b4";
   };
 
+  buildInputs = [ roscpp sensor-msgs message-generation serial ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ sensor-msgs roscpp message-runtime serial ];
-  nativeBuildInputs = [ message-generation catkin sensor-msgs roscpp serial ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The um7 package provides a C++ implementation of the CH Robotics serial protocol, and a

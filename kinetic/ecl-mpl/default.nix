@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6ce178d9b883052c5786f28df3686ffe1d7f6e427eb784585668d2a128f3d891";
   };
 
+  buildInputs = [ ecl-license ];
   propagatedBuildInputs = [ ecl-license ];
-  nativeBuildInputs = [ ecl-license catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Metaprogramming tools move alot of runtime calculations to be shifted to

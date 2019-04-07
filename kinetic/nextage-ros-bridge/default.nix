@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "ee0d8d99fad8476ad39ccbd1f95f22625c689d8e23cd176b841b9c267f1ba87f";
   };
 
+  buildInputs = [ nextage-description hironx-ros-bridge roslint ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ nextage-description hironx-ros-bridge stereo-image-proc ueye-cam ];
-  nativeBuildInputs = [ nextage-description hironx-ros-bridge catkin roslint ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A main ROS interface for developers and users of <a href="http://nextage.kawada.jp/en/">Nextage</a> dual-armed robot from Kawada Robotics Inc. Developers can build their own application that takes control over Nextage via this package. Interface for both ROS and <a href="http://openrtm.org/">OpenRTM</a> is provided.'';

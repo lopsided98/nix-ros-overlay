@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "de405b3ff1619332f66cdeacc64251da10f72961edce4973f8d414cb9d50aec4";
   };
 
+  buildInputs = [ kdl-conversions kobuki-msgs pluginlib actionlib-msgs kobuki-dock-drive message-filters ecl-geometry roscpp ecl-threads rospy nav-msgs actionlib std-msgs nodelet ecl-linear-algebra geometry-msgs ];
   propagatedBuildInputs = [ kdl-conversions kobuki-msgs pluginlib actionlib-msgs kobuki-dock-drive message-filters ecl-geometry roscpp ecl-threads rospy nav-msgs actionlib ecl-linear-algebra std-msgs yocs-cmd-vel-mux nodelet geometry-msgs ];
-  nativeBuildInputs = [ kdl-conversions kobuki-msgs pluginlib actionlib-msgs kobuki-dock-drive message-filters ecl-geometry roscpp ecl-threads rospy catkin nav-msgs actionlib std-msgs nodelet ecl-linear-algebra geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Automatic docking for Kobuki:

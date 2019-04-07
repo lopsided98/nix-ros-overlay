@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0499419cd9f77c00890c12bd32da24c3c82e7b8120d7a0e1f5dbd174b72698fa";
   };
 
+  buildInputs = [ hardware-interface controller-interface pluginlib realtime-tools sensor-msgs roscpp ];
   propagatedBuildInputs = [ hardware-interface controller-interface pluginlib realtime-tools sensor-msgs roscpp ];
-  nativeBuildInputs = [ hardware-interface controller-interface catkin pluginlib realtime-tools sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controller to publish state of IMU sensors'';

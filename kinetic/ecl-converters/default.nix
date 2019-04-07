@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "88b6bc078843e94363cd3888a84c16d38d0c5ac077b46fe714a8ae73da054e46";
   };
 
+  buildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-type-traits ecl-concepts ecl-config ecl-mpl ];
   propagatedBuildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-type-traits ecl-concepts ecl-config ecl-mpl ];
-  nativeBuildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-type-traits catkin ecl-concepts ecl-config ecl-mpl ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Some fast/convenient type converters, mostly for char strings or strings.

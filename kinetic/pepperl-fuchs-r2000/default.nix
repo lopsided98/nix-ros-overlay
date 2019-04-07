@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, sensor-msgs, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, std-msgs, sensor-msgs, roscpp, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-pepperl-fuchs-r2000";
   version = "0.1.3";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9c1393e1aaceeba29b9c28f36cc1fe623397e9aa32ef82de1eefb0103e530680";
   };
 
+  buildInputs = [ std-msgs sensor-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs sensor-msgs roscpp ];
-  nativeBuildInputs = [ std-msgs sensor-msgs roscpp catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The Pepperl+Fuchs R2000 laser range finder driver package'';

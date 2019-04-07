@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f6884a05446ea5ea487640a3a0c6accefb24b6ae6284fa57c1179612bd099f21";
   };
 
+  buildInputs = [ pkg-config ];
   propagatedBuildInputs = [ catkin message-generation message-runtime ];
-  nativeBuildInputs = [ catkin pkg-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosbuild contains scripts for managing the CMake-based build system for ROS.'';

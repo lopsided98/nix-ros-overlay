@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-swri-profiler-msgs";
   version = "0.1.0";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a1036164f098906d31ef4449ae16acb503f93585ee09f6d9eb87eb3ff0e0867d";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for the swri_profiler tool.'';

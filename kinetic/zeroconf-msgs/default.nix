@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2cb5de5b8b7320b0b3f931b56368ca120eea3627d6781994373c51d321e6786b";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''General ros communications used by the various zeroconf implementations.'';

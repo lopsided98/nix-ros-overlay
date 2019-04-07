@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fb44eeb670d3a4f34cb98abeb57833217a69197cc3691a90825713a0e9171995";
   };
 
+  buildInputs = [ dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy sensor-msgs geometry-msgs dynamic-reconfigure ];
-  nativeBuildInputs = [ catkin dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS Node that convert IMU data to a Twist for manual robot drive.'';

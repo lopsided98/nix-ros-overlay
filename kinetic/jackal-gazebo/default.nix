@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "64556e62a587c25fa3afcf3aa67eeba763d0ec233fa8d5db3e922e3621587c6b";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros gazebo-plugins hector-gazebo-plugins jackal-control gazebo-ros-control jackal-description ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launchfiles to use Jackal in Gazebo.'';

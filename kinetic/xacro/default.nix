@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c89a5b901d3c6aaff9bb964d2f634e789e6c992229e7f4985ce68e0a0ba7e265";
   };
 
+  buildInputs = [ roslint ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ roslaunch ];
-  nativeBuildInputs = [ catkin roslint ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Xacro (XML Macros)

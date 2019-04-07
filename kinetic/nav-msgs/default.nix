@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "986a5654829d3abf8df823f456b2a2df589af13fe74e77e469395f2ad186c300";
   };
 
+  buildInputs = [ std-msgs message-generation actionlib-msgs geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime actionlib-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation actionlib-msgs std-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''nav_msgs defines the common messages used to interact with the

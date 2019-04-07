@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "dc40c75f30a95dcb59f25d8e57560bc61c29096aa2947c9dab9a160eef98348b";
   };
 
+  buildInputs = [ dpkg ];
   propagatedBuildInputs = [ dpkg ];
-  nativeBuildInputs = [ catkin dpkg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package wraps the libntcan to use it as a ros dependency.'';

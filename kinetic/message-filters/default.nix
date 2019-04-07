@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "faa45c9fa60f227b7a015a7edc4824d5f823563bb7753a37fffb300472dded96";
   };
 
+  buildInputs = [ rostest rosconsole xmlrpcpp boost roscpp rosunit ];
   propagatedBuildInputs = [ roscpp rosconsole xmlrpcpp ];
-  nativeBuildInputs = [ rostest rosconsole xmlrpcpp boost catkin roscpp rosunit ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A set of message filters which take in messages and may output those messages at a later time, based on the conditions that filter needs met.'';

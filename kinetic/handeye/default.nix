@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "fa94544f3376bdc42885751c94ebfc40e9fe895b70bcbf141708cbb5b6fb9847";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ criutils pythonPackages.enum34 pythonPackages.numpy pythonPackages.scipy baldor message-runtime std-msgs pythonPackages.matplotlib geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The handeye package'';

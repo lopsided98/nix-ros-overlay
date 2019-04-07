@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e85194ba3cc5481c1b4e68627f7352898852cdc504b8b564cc256057f01d775d";
   };
 
+  buildInputs = [ sensor-msgs rospy ];
   propagatedBuildInputs = [ sensor-msgs rospy ];
-  nativeBuildInputs = [ sensor-msgs catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Measures the core temp of a raspberry pi'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "3f698bd22b69737a57ef35e5a26c798defd431511e590b0e0ffeb315397acba6";
   };
 
+  buildInputs = [ rostest sensor-msgs rospy ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ pythonPackages.rospkg sensor-msgs pythonPackages.pyyaml rospy ];
-  nativeBuildInputs = [ rostest sensor-msgs catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Python interface for camera calibration information.

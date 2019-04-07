@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f22f5ee8b82401a70e6b832a2f99e03f554f5922d56cf9dfd607e331fed82dec";
   };
 
+  buildInputs = [ message-generation actionlib-msgs actionlib ];
   propagatedBuildInputs = [ actionlib message-runtime actionlib-msgs rospy smach-ros ];
-  nativeBuildInputs = [ catkin message-generation actionlib-msgs actionlib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''flexbe_msgs provides the messages used by FlexBE.'';

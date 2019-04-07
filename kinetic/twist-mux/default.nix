@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "dcbf3f46aa024404abaca50eb5fbfdbd47834e16dc274bf479323781818061f8";
   };
 
+  buildInputs = [ diagnostic-updater rostest geometry-msgs std-msgs visualization-msgs roscpp ];
   checkInputs = [ rostopic rospy ];
   propagatedBuildInputs = [ diagnostic-updater geometry-msgs std-msgs visualization-msgs twist-mux-msgs roscpp ];
-  nativeBuildInputs = [ diagnostic-updater rostest geometry-msgs std-msgs catkin visualization-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Twist multiplexer, which multiplex several velocity commands (topics) and

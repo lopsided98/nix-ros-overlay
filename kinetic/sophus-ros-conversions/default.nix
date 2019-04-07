@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e1cfba0989700bb4b96f67c8e60c3d7c7b69f51aca0b8a8457a287436e8b9d65";
   };
 
+  buildInputs = [ cmake-modules sophus tf geometry-msgs ecl-build ];
   propagatedBuildInputs = [ cmake-modules sophus tf geometry-msgs ecl-build ];
-  nativeBuildInputs = [ cmake-modules sophus catkin tf geometry-msgs ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Conversions between ros and sophus.'';

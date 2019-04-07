@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d8730b6deff7796f6ff5b112341331ebe49b6fd2bf4a89cbc87893f5d2bd798e";
   };
 
+  buildInputs = [ kobuki-msgs pluginlib std-msgs nodelet roscpp yocs-controllers ];
   propagatedBuildInputs = [ kobuki-msgs pluginlib std-msgs nodelet roscpp yocs-controllers ];
-  nativeBuildInputs = [ kobuki-msgs pluginlib std-msgs catkin nodelet roscpp yocs-controllers ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Code for the Kobuki controller tutorial.'';

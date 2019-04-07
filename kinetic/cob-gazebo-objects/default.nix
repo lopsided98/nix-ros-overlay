@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3ab010e2d381494424b40aade47fde9ac0e2fb6ac54509989492ecd2d59064ff";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros roslaunch cob-description ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides some objects and furniture for gazebo simulation.'';

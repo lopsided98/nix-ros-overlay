@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag-storage, tf, gtest, catkin, message-filters, sensor-msgs, nav-msgs, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, rosbag-storage, tf, sensor-msgs, gtest, message-filters, catkin, nav-msgs, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-slam-constructor";
   version = "0.9.3";
@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "87b75373121fee8d6ecc36e9d3336f948cb16e99bdca089907e1b72c00c83ab2";
   };
 
+  buildInputs = [ rosbag-storage nav-msgs geometry-msgs std-msgs sensor-msgs tf message-filters roscpp ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ rosbag-storage nav-msgs geometry-msgs std-msgs sensor-msgs tf message-filters roscpp ];
-  nativeBuildInputs = [ rosbag-storage sensor-msgs catkin message-filters roscpp nav-msgs std-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The package provides implementation of several 2D laser-based simultaneous

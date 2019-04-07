@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b7620ebe892cc9b2442770c55bdb90c5953236cfdad5fbaf8165c7a8b3c01f62";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ rviz joint-state-publisher heron-description ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Visualization and rviz helpers for Heron.'';

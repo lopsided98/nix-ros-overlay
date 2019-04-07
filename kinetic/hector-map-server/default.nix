@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "916463a0cb7f0b1ffa93bb6c43c72e7b821d33ac2296b54fc8a9c21dd464934d";
   };
 
+  buildInputs = [ roscpp nav-msgs hector-map-tools tf hector-marker-drawing hector-nav-msgs ];
   propagatedBuildInputs = [ roscpp nav-msgs hector-map-tools tf hector-marker-drawing hector-nav-msgs ];
-  nativeBuildInputs = [ roscpp nav-msgs catkin hector-map-tools tf hector-marker-drawing hector-nav-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_map_server provides a service for retrieving the map, as well as for raycasting based obstacle queries (finds next obstacle in the map, given start and endpoint

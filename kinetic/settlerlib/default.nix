@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "61737cc215bdf01acfbee2d2071761b241befb7d7ceaac78ebae8588a5442aa7";
   };
 
+  buildInputs = [ boost rostime rosconsole calibration-msgs ];
   propagatedBuildInputs = [ boost rostime rosconsole calibration-msgs ];
-  nativeBuildInputs = [ boost rosconsole catkin rostime calibration-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Defines helper functions and routines that greatly help when trying to create a settler

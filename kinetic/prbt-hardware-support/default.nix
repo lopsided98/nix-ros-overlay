@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "a0361cd1a5c469e499da155fc72b17579b17b6843f489670d320029c2724d6d2";
   };
 
+  buildInputs = [ std-srvs message-generation libmodbus std-msgs roscpp message-filters ];
   checkInputs = [ rostest cmake-modules pilz-testutils code-coverage rosunit ];
   propagatedBuildInputs = [ std-msgs std-srvs roscpp message-runtime ];
-  nativeBuildInputs = [ std-srvs message-generation libmodbus std-msgs catkin roscpp message-filters ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Control hardware functions of the PRBT manipulator like STO for Stop1 functionality.'';

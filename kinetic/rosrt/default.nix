@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d059e4e4434e4f0d21069db378ac23798fc644b559ac390b3cfa3886cba5195e";
   };
 
+  buildInputs = [ roslib rosatomic std-msgs rosunit lockfree roscpp allocators ];
   propagatedBuildInputs = [ roslib rosatomic std-msgs rosunit lockfree roscpp allocators ];
-  nativeBuildInputs = [ roslib rosatomic catkin std-msgs rosunit lockfree roscpp allocators ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosrt provides classes for interfacing with ROS from within realtime systems, such as realtime-safe Publisher and Subscriber classes.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1a0a22982e97d7420ccff601e07108efc51183525e01b34b6a69a6957b39b979";
   };
 
+  buildInputs = [ std-srvs message-generation actionlib-msgs std-msgs sensor-msgs ];
   propagatedBuildInputs = [ std-srvs message-runtime actionlib-msgs std-msgs sensor-msgs ];
-  nativeBuildInputs = [ std-srvs message-generation actionlib-msgs std-msgs sensor-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages, serivices and actions for SawYer roch'';

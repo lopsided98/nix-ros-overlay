@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "56c938f226b1b0f70ca84eab221b463f90deac4719e83ffa60e83d37a55d5dc1";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages and services package for OpenManipulator to send information about state or pose'';

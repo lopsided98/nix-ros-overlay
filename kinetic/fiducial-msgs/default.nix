@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9685a7b69d09fb1946cda3f341a344057a8f4d6665ebaa61b4bb2e6035380146";
   };
 
+  buildInputs = [ message-generation std-msgs sensor-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ message-runtime std-msgs sensor-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ message-generation catkin std-msgs sensor-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package containing message definitions for fiducials'';

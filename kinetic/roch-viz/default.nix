@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3a6a0cd994f5a9974bb6581097565f0d38835fe6f44ccc0d9dec961d2254f680";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ rviz-imu-plugin roch-description rviz robot-state-publisher joint-state-publisher ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Visualization configuration for SawYer roch'';

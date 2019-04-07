@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3a70c85f6a6c6c0e35348b7372e496303e94a8cedaf87da5395077c3add3a329";
   };
 
+  buildInputs = [ move-base-msgs actionlib rospy std-msgs smach geometry-msgs ];
   propagatedBuildInputs = [ move-base-msgs actionlib rospy std-msgs smach geometry-msgs ];
-  nativeBuildInputs = [ move-base-msgs actionlib rospy std-msgs catkin smach geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The follow_waypoints node will listen for waypoints given as

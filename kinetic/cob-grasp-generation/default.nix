@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d39fe63293a12bc0f58e3290a5f316eb0cf563f4ca508d015bb021cb0139d685";
   };
 
+  buildInputs = [ moveit-msgs message-generation actionlib-msgs ];
   propagatedBuildInputs = [ actionlib-msgs trajectory-msgs schunk-description pythonPackages.scipy tf2-ros cob-description actionlib std-msgs rospy moveit-msgs tf visualization-msgs geometry-msgs sensor-msgs rviz message-runtime robot-state-publisher roslib xacro ];
-  nativeBuildInputs = [ moveit-msgs catkin message-generation actionlib-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Grasp generation for Care-O-bot based on OpenRAVE'';

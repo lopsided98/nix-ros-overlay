@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a07eb3bde5b7712e0d494ea4d1ede6a845ed62f2cf4c6e7a16baaf3ee1bb0361";
   };
 
+  buildInputs = [ message-generation actionlib-msgs ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs ];
-  nativeBuildInputs = [ catkin message-generation actionlib-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages, services and actions used by play_motion.'';

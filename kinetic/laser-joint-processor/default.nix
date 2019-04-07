@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "70586dfb537b887de968949cbea8ad55c23c966496635d64bfa954fbd99d5b34";
   };
 
+  buildInputs = [ joint-states-settler settlerlib message-filters geometry-msgs image-geometry ];
   propagatedBuildInputs = [ joint-states-settler settlerlib message-filters geometry-msgs image-geometry ];
-  nativeBuildInputs = [ joint-states-settler settlerlib catkin message-filters geometry-msgs image-geometry ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Computes joint angles associated with a specific set of detected checkerboard corners.

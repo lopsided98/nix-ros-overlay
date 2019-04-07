@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "03ca7dd20b0b7f3316887a13bdff4a00ea648252cfe33e9a71ac4268193a2c04";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message defined in the BRICS project'';

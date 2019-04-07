@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cfe0747bf3863120aa14df24c1983677446a90db3021d5ac1dd7c8d7b396a6e0";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a ROS wrapper for Alvar, an open source AR tag tracking library.'';

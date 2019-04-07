@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "38f7df44a151ce5072c1de91c4382066ee5b305dd0f572b121065f337acf8e34";
   };
 
+  buildInputs = [ diagnostic-updater message-generation boost std-msgs sensor-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ diagnostic-updater boost message-runtime std-msgs sensor-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ diagnostic-updater message-generation catkin boost std-msgs sensor-msgs roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for Microstrain 3DM-GX4-25 IMU

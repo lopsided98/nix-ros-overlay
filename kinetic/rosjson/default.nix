@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roslib, rospy }:
+{ lib, buildRosPackage, fetchurl, roslib, catkin, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-rosjson";
   version = "1.0.7";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c5be596820a6f0fdba80fd28517a307c862d7c6a1f09437d530b9341d4fa571a";
   };
 
+  buildInputs = [ roslib rospy ];
   propagatedBuildInputs = [ roslib rospy ];
-  nativeBuildInputs = [ catkin roslib rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosjson is a Python library for converting ROS messages to JSON

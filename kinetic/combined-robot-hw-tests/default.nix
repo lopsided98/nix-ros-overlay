@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "e32b1cb024910e272987686faa470d1bdf98860227eb0a2e368415ca3ac9102f";
   };
 
+  buildInputs = [ controller-manager hardware-interface combined-robot-hw controller-manager-tests roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ controller-manager hardware-interface combined-robot-hw controller-manager-tests roscpp ];
-  nativeBuildInputs = [ controller-manager hardware-interface combined-robot-hw controller-manager-tests catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The combined_robot_hw_tests package'';

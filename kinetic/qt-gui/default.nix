@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "48c6cd5dae43672949a1d97f639bec05eb5cb58e9fe6c2f09d80f6c70e2542bd";
   };
 
+  buildInputs = [ pythonPackages.pyqt5 qt5.qtbase ];
   propagatedBuildInputs = [ pythonPackages.rospkg python-qt-binding tango-icon-theme ];
-  nativeBuildInputs = [ pythonPackages.pyqt5 catkin qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''qt_gui provides the infrastructure for an integrated graphical user interface based on Qt.

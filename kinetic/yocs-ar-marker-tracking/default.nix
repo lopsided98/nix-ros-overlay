@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "af4176e9087c34093f4462a38dfd67e38e62844e632a4a957aa33580e63ef1c4";
   };
 
+  buildInputs = [ ar-track-alvar-msgs libyamlcpp sensor-msgs roscpp yocs-math-toolkit geometry-msgs ];
   propagatedBuildInputs = [ ar-track-alvar-msgs libyamlcpp sensor-msgs roscpp yocs-math-toolkit geometry-msgs ];
-  nativeBuildInputs = [ ar-track-alvar-msgs catkin libyamlcpp sensor-msgs roscpp yocs-math-toolkit geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Collecting, tracking and generating statistics for ar markers from ar_track_alvar.'';

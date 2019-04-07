@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "25df3a7baddd2d233d210a24749f2cb69b94f51c6078d37fafda82e933c32aaa";
   };
 
+  buildInputs = [ std-msgs message-generation roscpp rospy ];
   propagatedBuildInputs = [ std-msgs roscpp message-runtime rospy ];
-  nativeBuildInputs = [ message-generation rospy std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A node to control nonlinear dynamic systems'';

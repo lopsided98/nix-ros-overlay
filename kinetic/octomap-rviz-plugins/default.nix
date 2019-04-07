@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "72f811c29603254838cd28a71a97c4ccc029ac5e046e121e662274a9e7519e5d";
   };
 
+  buildInputs = [ roscpp rviz octomap octomap-msgs ];
   propagatedBuildInputs = [ roscpp rviz octomap octomap-msgs ];
-  nativeBuildInputs = [ rviz octomap catkin roscpp octomap-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A set of plugins for displaying occupancy information decoded from binary octomap messages.'';

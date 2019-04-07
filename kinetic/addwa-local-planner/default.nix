@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7acaa3894129b79d41e35dd91729d144609a2ea855fec3c2ddedff35379a2a86";
   };
 
+  buildInputs = [ costmap-2d pluginlib cmake-modules base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf pcl-conversions eigen ];
   propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf eigen ];
-  nativeBuildInputs = [ costmap-2d pluginlib cmake-modules base-local-planner nav-core catkin roscpp nav-msgs dynamic-reconfigure tf pcl-conversions eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''a modified version of dwa local planner'';

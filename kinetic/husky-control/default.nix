@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "33234b9db22f766e0824cc06f812cfca7f59e4a31ea69dd9443e58634d43f2b3";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ controller-manager twist-mux joint-state-controller diff-drive-controller joy joint-trajectory-controller husky-description robot-localization multimaster-launch robot-state-publisher interactive-marker-twist-server rostopic teleop-twist-joy ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Clearpath Husky controller configurations'';

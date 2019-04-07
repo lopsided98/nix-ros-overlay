@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c00581c3619079fa862447f37878201086bbd62a8f65405e68c80af761beba61";
   };
 
+  buildInputs = [ std-msgs message-generation statistics-msgs ];
   propagatedBuildInputs = [ std-msgs statistics-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation statistics-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages related to the Point Grey camera driver.'';

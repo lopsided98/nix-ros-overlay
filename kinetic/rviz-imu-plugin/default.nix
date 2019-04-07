@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "fd647aebf281f3ff8c653f0da0c84999bff918aa07fa2910ab83be3e7bb882ec";
   };
 
+  buildInputs = [ roscpp rviz qt5.qtbase ];
   propagatedBuildInputs = [ roscpp rviz qt5.qtbase ];
-  nativeBuildInputs = [ catkin roscpp rviz qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''RVIZ plugin for IMU visualization'';

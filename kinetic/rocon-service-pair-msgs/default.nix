@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8e43ccdea25c6f671cc8e33a5ef6b30438bc470676d39b36a043dd9c3a8ce67c";
   };
 
+  buildInputs = [ uuid-msgs message-generation ];
   propagatedBuildInputs = [ uuid-msgs message-runtime rospy ];
-  nativeBuildInputs = [ uuid-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Paired pubsubs generators for non-blocking services.'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, warthog-description, catkin, rviz, roslaunch, joint-state-publisher }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, rviz, roslaunch, warthog-description }:
 buildRosPackage {
   pname = "ros-kinetic-warthog-viz";
   version = "0.0.1-r1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f622e14b667b7d14a1db9692e8faee8bd5d7987793d383a2a5e30ada2210fdab";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ joint-state-publisher warthog-description rviz ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Visualization launchers and helpers for Warthog.'';

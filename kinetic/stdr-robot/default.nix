@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8f462e093caac6e63e5cfe3a6985a9863b9106bf3ef4b23a85e48089b588ff77";
   };
 
+  buildInputs = [ tf sensor-msgs roscpp nav-msgs actionlib stdr-msgs stdr-parser nodelet geometry-msgs ];
   propagatedBuildInputs = [ stdr-server tf sensor-msgs roscpp nav-msgs actionlib stdr-msgs stdr-parser nodelet geometry-msgs ];
-  nativeBuildInputs = [ tf sensor-msgs catkin roscpp nav-msgs actionlib stdr-msgs stdr-parser nodelet geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides robot, sensor implementation, using nodelets for stdr_server to load them.'';

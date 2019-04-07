@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "89e82ba00a356de1c0279e00ff4f1c4b98600de375d50311b5e898af00c48a00";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ rviz joint-state-publisher xacro robot-state-publisher ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a number of URDF tutorials.'';

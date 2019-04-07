@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ad15290fa35aaef1125beb105db5f63ed42100625eb51d2c2c80b4af717dc2b0";
   };
 
+  buildInputs = [ settlerlib roscpp-serialization std-msgs sensor-msgs roscpp calibration-msgs ];
   propagatedBuildInputs = [ settlerlib roscpp-serialization std-msgs sensor-msgs roscpp calibration-msgs ];
-  nativeBuildInputs = [ settlerlib catkin roscpp-serialization std-msgs sensor-msgs roscpp calibration-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Stores streaming data from a laser sensor in a

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "de5201287fc6fbdb208d06a0de7cef153df87fb69e046c7fd315697fac8db789";
   };
 
+  buildInputs = [ std-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp ];
-  nativeBuildInputs = [ std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Some experiments testing roscpp unreliable transports.'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "ed10061311156b7194caade3b6f27493ef7652f4c3b4e498867bc3815afe23b0";
   };
 
+  buildInputs = [ rostest pythonPackages.catkin-pkg ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ rospy pythonPackages.rospkg pythonPackages.catkin-pkg roslib rocon-std-msgs ];
-  nativeBuildInputs = [ rostest pythonPackages.catkin-pkg catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Python system and ros utilities.'';

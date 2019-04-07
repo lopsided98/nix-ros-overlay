@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e52a4bbe761932e7b0c4baf47184b690153aec1457693ad5eb6ee9cced11a70b";
   };
 
+  buildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
   propagatedBuildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
-  nativeBuildInputs = [ liblapack moveit-core pluginlib tf-conversions catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a5194a03ee2bbe0dd7688ad15d6b3609a194c00b28e8a0f4b9c6108f251e7759";
   };
 
+  buildInputs = [ catkin-pip pythonPackages.pytest pythonPackages.six ];
   propagatedBuildInputs = [ pythonPackages.pytest pythonPackages.six ];
-  nativeBuildInputs = [ catkin-pip catkin pythonPackages.pytest pythonPackages.six ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Configuration package for Pyros'';

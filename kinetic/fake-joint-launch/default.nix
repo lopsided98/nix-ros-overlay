@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3c7f30a7201c2463f705eb8f0d3fc815d49ebf3cc839c8b68b28f86ee6fd0ee1";
   };
 
+  buildInputs = [ rostest roslaunch fake-joint-driver ];
   propagatedBuildInputs = [ controller-manager pr2-description ur-description vs060 denso-ros-control rostest rviz tra1-description robot-state-publisher nextage-description roslaunch abb-irb2400-support fake-joint-driver ];
-  nativeBuildInputs = [ rostest roslaunch catkin fake-joint-driver ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Collection of the launch files for fake_joint_driver.'';

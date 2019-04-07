@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "43689fffafa1432d96c708ba99e1f71268a153f74ce93f2f4f98f384852d4e27";
   };
 
+  buildInputs = [ ecl-license ecl-errors ecl-config ];
   propagatedBuildInputs = [ ecl-license ecl-errors ecl-config ];
-  nativeBuildInputs = [ ecl-license catkin ecl-errors ecl-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This avoids use of dynamic storage (malloc/new) and thread safety (mutexes) to

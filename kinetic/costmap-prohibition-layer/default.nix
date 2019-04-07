@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "249a5d7b9bbd812905db2e734dd6ecdf38f35db27d615af06a816734f3ccc4c6";
   };
 
+  buildInputs = [ costmap-2d roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ costmap-2d roscpp dynamic-reconfigure ];
-  nativeBuildInputs = [ costmap-2d catkin roscpp dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS-Package that implements a costmap layer to add prohibited areas to the costmap-2D by a user configuration.'';

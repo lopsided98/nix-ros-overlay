@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5d281f05f339daa847be5a486a68aa98cf4be9b49a12d1807101cb14cc45be1e";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS message definitions for Rslidar 3D LIDARs.'';

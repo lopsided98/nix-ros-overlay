@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "10ebfb329265e6c266c26d6cba8f7e4710bca03fef93b0722bf240654499da57";
   };
 
+  buildInputs = [ dpkg ];
   propagatedBuildInputs = [ dpkg ];
-  nativeBuildInputs = [ catkin dpkg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Wrapper for the Qsopt linear programming solver. The code was obtained from http://www.math.uwaterloo.ca/~bico/qsopt/index.html, all rights on Qsopt go to the authors David Applegate, William Cook, Sanjeeb Dash, and Monika Mevenkamp. 

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1d0065ebc2d093020959ca0695a7b671b68f3b15ab8757212bb312d0db35c568";
   };
 
+  buildInputs = [ ecl-license ecl-config ecl-mpl ];
   propagatedBuildInputs = [ ecl-license ecl-config ecl-mpl ];
-  nativeBuildInputs = [ ecl-license catkin ecl-config ecl-mpl ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Extends c++ type traits and implements a few more to boot.'';

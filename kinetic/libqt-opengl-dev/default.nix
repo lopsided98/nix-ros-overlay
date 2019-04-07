@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4f5d48e6cc45407922151d337ce5898f71819dab09343eaedc4954fc17495df4";
   };
 
+  buildInputs = [ qt5.qtbase ];
   propagatedBuildInputs = [ qt5.qtbase ];
-  nativeBuildInputs = [ catkin qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''libqt-opengl metapackage supporting qt4 and qt5'';

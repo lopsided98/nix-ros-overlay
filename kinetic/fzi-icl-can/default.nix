@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "20d111da9da0ed8bed825a559b452a15a147ecef9fc113b213125cfcd039840a";
   };
 
+  buildInputs = [ fzi-icl-core wget libpcan tinyxml popt ];
   propagatedBuildInputs = [ linuxHeaders fzi-icl-core catkin libpcan tinyxml popt ];
-  nativeBuildInputs = [ fzi-icl-core wget cmake libpcan tinyxml popt ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The fzi_icl_can package'';

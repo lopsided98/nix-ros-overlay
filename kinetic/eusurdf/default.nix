@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, roseus, collada-urdf, catkin, pythonPackages, rostest }:
+{ lib, buildRosPackage, fetchurl, roseus, gazebo-ros, collada-urdf, catkin, pythonPackages, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-eusurdf";
   version = "0.4.2";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "918ffb3836ea2109887da5f3b0e49ca435efd0a338766e0ffcc5efa252dca3d1";
   };
 
+  buildInputs = [ roseus rostest gazebo-ros collada-urdf pythonPackages.lxml ];
   propagatedBuildInputs = [ gazebo-ros rostest collada-urdf pythonPackages.lxml ];
-  nativeBuildInputs = [ roseus rostest gazebo-ros collada-urdf pythonPackages.lxml catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''urdf models converted from euslisp'';

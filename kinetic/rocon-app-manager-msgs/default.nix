@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4a0974e63257e62d1e74dbd3c11bd5eeeb714a78ccd895366da7fdf5df51dce6";
   };
 
+  buildInputs = [ message-generation rocon-service-pair-msgs rocon-std-msgs ];
   propagatedBuildInputs = [ rocon-service-pair-msgs message-runtime rocon-std-msgs ];
-  nativeBuildInputs = [ catkin message-generation rocon-service-pair-msgs rocon-std-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used by the platform app manager.'';

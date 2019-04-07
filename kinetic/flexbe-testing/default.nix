@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "7a73ec5bc1cb92ed1af61249712a1d5ff1e985bfb816497ffbc20e0727fc3ca3";
   };
 
+  buildInputs = [ rostest ];
   checkInputs = [ std-msgs rosunit ];
   propagatedBuildInputs = [ flexbe-msgs smach-ros flexbe-core rospy ];
-  nativeBuildInputs = [ rostest catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''flexbe_testing provides a framework for unit testing states.'';

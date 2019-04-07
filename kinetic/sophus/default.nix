@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9cdcd5a6ddc898b2ee5fd6d279d4273c44bde127e74b63edefbfe0a3f795815b";
   };
 
+  buildInputs = [ eigen ];
   propagatedBuildInputs = [ catkin eigen ];
-  nativeBuildInputs = [ cmake eigen ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''C++ implementation of Lie Groups using Eigen.'';

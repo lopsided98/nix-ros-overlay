@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "26561921c2bc64d06b4aa4fd12faf8966454bbaa31b5de5548bdf9a0e8ce2713";
   };
 
+  buildInputs = [ class-loader canopen-master ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ class-loader canopen-master ];
-  nativeBuildInputs = [ class-loader catkin canopen-master ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This implements the CANopen device profile for drives and motion control. CiA(r) 402'';

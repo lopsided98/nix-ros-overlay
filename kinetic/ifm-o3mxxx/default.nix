@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1c4b8423548da9b6e19cfdd85a7d4451313efb7c1cc1471b810337042b6509c7";
   };
 
+  buildInputs = [ message-generation pcl-ros std-msgs sensor-msgs tf geometry-msgs roscpp ];
   propagatedBuildInputs = [ message-runtime pcl-ros std-msgs sensor-msgs tf geometry-msgs roscpp ];
-  nativeBuildInputs = [ message-generation catkin pcl-ros std-msgs sensor-msgs tf geometry-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ifm_o3mxxx package'';

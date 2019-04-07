@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "74603b7a6428bb76f03f8ab757a6410c02aaca14c1a5e493d0dd10c83c59ddec";
   };
 
+  buildInputs = [ pluginlib nodelet std-msgs sensor-msgs roscpp ecl-threads ];
   propagatedBuildInputs = [ pluginlib nodelet std-msgs sensor-msgs roscpp ecl-threads ];
-  nativeBuildInputs = [ catkin pluginlib nodelet std-msgs sensor-msgs roscpp ecl-threads ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The dumpbot_serial_func package for getting data of dumpbot from MCU'';

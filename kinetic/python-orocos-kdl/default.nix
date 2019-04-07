@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, catkin, pythonPackages, orocos-kdl }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, pythonPackages, orocos-kdl }:
 buildRosPackage {
   pname = "ros-kinetic-python-orocos-kdl";
   version = "1.3.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a243fca87aad9a138c4356d5c850dc1ea078e8ef77c15bcb395fe373d28c859d";
   };
 
+  buildInputs = [ pythonPackages.sip orocos-kdl ];
   propagatedBuildInputs = [ catkin orocos-kdl pythonPackages.sip ];
-  nativeBuildInputs = [ cmake pythonPackages.sip orocos-kdl ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''This package contains the python bindings PyKDL for the Kinematics and Dynamics

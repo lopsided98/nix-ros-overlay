@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "00ef848728018b26157794c97496c3e3793faa59abf3b16526f1ea8bee59a533";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The manipulator_h_base_module_msgs package

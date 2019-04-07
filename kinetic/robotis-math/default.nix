@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3004f917906cfaf06a61a0c0bad0dd14d24693b47f82fe5520008dddb9eaf175";
   };
 
+  buildInputs = [ roscpp eigen ];
   propagatedBuildInputs = [ roscpp eigen ];
-  nativeBuildInputs = [ catkin roscpp eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a set of basic math fuctions for ROBOTIS's robots.

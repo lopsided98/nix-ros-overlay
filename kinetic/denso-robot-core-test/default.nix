@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "073f4c18f619371ce9e88255c61de8477ae6c653dabee7c1a5b15f1d031e86a1";
   };
 
+  buildInputs = [ bcap-core actionlib std-msgs roscpp denso-robot-core ];
   propagatedBuildInputs = [ std-msgs roscpp actionlib ];
-  nativeBuildInputs = [ bcap-core actionlib std-msgs catkin roscpp denso-robot-core ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The denso robot core test package includes a node for testing denso robot core node.'';

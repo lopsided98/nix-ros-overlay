@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "44a776b10b02d4faef56d3f77df5eb31ad2f4f9424255247823ab4499d3442c5";
   };
 
+  buildInputs = [ rdl-cmake urdf roslib rdl-dynamics roscpp ];
   checkInputs = [ lcov gtest ];
   propagatedBuildInputs = [ rdl-cmake urdf roslib rdl-dynamics roscpp ];
-  nativeBuildInputs = [ rdl-cmake urdf catkin roslib rdl-dynamics roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rdl_urdfreader package'';

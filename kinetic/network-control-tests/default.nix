@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d88b347e5713476cbc43f1c5935d2749107992c9acaa159ae9a8bb46f9df1dac";
   };
 
+  buildInputs = [ rostest network-traffic-control access-point-control dynamic-reconfigure ddwrt-access-point hostapd-access-point network-monitor-udp linksys-access-point ];
   propagatedBuildInputs = [ rostest network-traffic-control access-point-control dynamic-reconfigure ddwrt-access-point hostapd-access-point network-monitor-udp linksys-access-point ];
-  nativeBuildInputs = [ access-point-control hostapd-access-point catkin network-monitor-udp linksys-access-point rostest network-traffic-control dynamic-reconfigure ddwrt-access-point ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Test suite for the packages that are part of the &quot;WiFi Test Setup&quot; project:

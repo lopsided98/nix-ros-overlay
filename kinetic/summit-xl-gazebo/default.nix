@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, std-srvs, summit-xl-robot-control, tf, catkin, summit-xl-description, summit-xl-control, std-msgs, roscpp, xacro }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros, std-srvs, summit-xl-robot-control, summit-xl-description, catkin, summit-xl-control, roscpp, std-msgs, tf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-summit-xl-gazebo";
   version = "1.1.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c884aa197af85170706dadb272925aac0afeaef181c0eb9d9aa5f4b973536801";
   };
 
+  buildInputs = [ gazebo-ros std-srvs summit-xl-robot-control tf summit-xl-description summit-xl-control std-msgs roscpp xacro ];
   propagatedBuildInputs = [ gazebo-ros std-srvs summit-xl-robot-control tf summit-xl-description summit-xl-control std-msgs roscpp xacro ];
-  nativeBuildInputs = [ gazebo-ros std-srvs summit-xl-robot-control tf summit-xl-description catkin summit-xl-control std-msgs roscpp xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files and world files to start the models in gazebo'';

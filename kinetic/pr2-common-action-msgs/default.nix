@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "224479db830855ee366fdfd783c6757fe911ef2ce33d99cbae711afd7ae7bad6";
   };
 
+  buildInputs = [ sensor-msgs message-generation actionlib-msgs geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs message-runtime actionlib-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation actionlib-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_common_action_msgs package'';

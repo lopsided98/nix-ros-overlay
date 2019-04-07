@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "0cf8a41e16f5b0df5e6a18710cb3e189747ba48c8ce849e5601b987d682ffc4f";
   };
 
-  nativeBuildInputs = [ catkin zlib autoconf git rsync libtool ];
+  buildInputs = [ zlib autoconf git rsync libtool ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Catkinized gRPC Package'';

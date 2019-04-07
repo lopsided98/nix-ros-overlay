@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c0ffe69d61a2a6685a8cd858454400c55306e8388ee07ff66491f69629594188";
   };
 
+  buildInputs = [ topic-tools roscpp rosserial-msgs std-msgs ];
   propagatedBuildInputs = [ rosserial-python std-msgs topic-tools rosserial-msgs roscpp ];
-  nativeBuildInputs = [ std-msgs topic-tools catkin roscpp rosserial-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A more performance- and stability-oriented server alternative implemented

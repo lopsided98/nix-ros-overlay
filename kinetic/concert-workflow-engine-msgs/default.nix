@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "601e6f5dff3ab0b715aa5adb87c5a14de6e91fd9df39f82671b50ac98e1a8bb4";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used by workflow engine'';

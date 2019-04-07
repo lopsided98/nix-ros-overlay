@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "06885d6419dad80bc40830296bcb3e6370c48c49256efe8683e60efb62991ec5";
   };
 
+  buildInputs = [ rospy ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ rospy ];
-  nativeBuildInputs = [ catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''scratch4robots'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "afc108f9723e14a7a7785c2ab92a5bf373c633d304a9c894746fbc85f6e32d2c";
   };
 
+  buildInputs = [ sensor-msgs message-filters roscpp tf2-ros tf2-sensor-msgs tf2 topic-tools roslaunch nodelet geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs message-filters roscpp tf2-ros tf2-sensor-msgs tf2 nodelet topic-tools roslaunch tf geometry-msgs ];
-  nativeBuildInputs = [ sensor-msgs catkin message-filters roscpp tf2-ros tf2-sensor-msgs tf2 topic-tools roslaunch nodelet geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Node/nodelet combination to transform sensor_msgs::Imu data from one frame into another.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2fa4c1786cac35782374058671e0574802d58b64270c75f16a9fdfb8cef7d836";
   };
 
+  buildInputs = [ pr2-controllers-msgs std-srvs pluginlib actionlib-msgs pr2-controller-interface realtime-tools roscpp rosrt pr2-gripper-sensor-msgs pr2-controller-manager std-msgs roslib pr2-mechanism-model ];
   propagatedBuildInputs = [ pr2-controllers-msgs std-srvs pluginlib actionlib-msgs pr2-controller-interface realtime-tools roscpp rosrt pr2-gripper-sensor-msgs pr2-controller-manager std-msgs roslib pr2-mechanism-model ];
-  nativeBuildInputs = [ pr2-controllers-msgs std-srvs pluginlib actionlib-msgs pr2-controller-interface realtime-tools catkin roscpp rosrt pr2-gripper-sensor-msgs pr2-controller-manager std-msgs roslib pr2-mechanism-model ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_gripper_sensor_controller package is a real-time controller that integrates signals from the PR2 hand-mounted accelerometer and finger-mounted pressure sensors with motor control of the gripper joint to do highly responsive sensing and low-latency closed-loop control.'';

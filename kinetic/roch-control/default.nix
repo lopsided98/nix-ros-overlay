@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "00a6df72881a5a49c657a2990a1c148efec2b755919c5897f471e6d41ed3d55a";
   };
 
+  buildInputs = [ roslaunch roscpp joy geometry-msgs ];
   propagatedBuildInputs = [ controller-manager twist-mux joint-state-controller create-node diff-drive-controller joy joint-trajectory-controller robot-localization rostopic teleop-twist-joy interactive-marker-twist-server roscpp geometry-msgs ];
-  nativeBuildInputs = [ catkin joy roslaunch roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''SawYer roch controller configurations'';

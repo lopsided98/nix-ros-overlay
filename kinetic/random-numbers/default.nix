@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0e74947775fe6c8be2e455d1d471e99467d7d3252ea9d850cd531bc8c0c5fe62";
   };
 
+  buildInputs = [ boost ];
   propagatedBuildInputs = [ boost ];
-  nativeBuildInputs = [ catkin boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This  library contains wrappers for generating floating point values, integers, quaternions using boost libraries.

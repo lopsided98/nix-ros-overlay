@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d386f83bb76f20ddd6ee8cafeba89933a5dd69b9854b1bce4c501642587baffc";
   };
 
+  buildInputs = [ std-msgs roslaunch rospy ];
   propagatedBuildInputs = [ std-msgs roslaunch rospy ];
-  nativeBuildInputs = [ std-msgs roslaunch catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch Manager'';

@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "4fa66a09cbc6cf1644cce94d703cdd9ad1f6cbd6ce60452935c94b6031155dd1";
   };
 
-  nativeBuildInputs = [ moveit-experimental catkin roscpp moveit-core ];
+  buildInputs = [ moveit-experimental roscpp moveit-core ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''chomp_motion_planner'';

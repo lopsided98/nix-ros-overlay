@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "ed04c92382ede02d8098c828a7bd474d1ce96c3a4f78edb61966e7a9850033be";
   };
 
+  buildInputs = [ python pythonPackages.pip ];
   checkInputs = [ git ];
   propagatedBuildInputs = [ python pythonPackages.pip ];
-  nativeBuildInputs = [ python pythonPackages.pip catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Catkin macros to allow using pure python packages in usual catkin workspaces with normal python workflow.'';

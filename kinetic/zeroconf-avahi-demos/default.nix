@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "455fcbd44c676d4f8927b48a783b53ddd14aea5473b7a907b411ac91bb497000";
   };
 
+  buildInputs = [ zeroconf-avahi ];
   propagatedBuildInputs = [ zeroconf-avahi avahi ];
-  nativeBuildInputs = [ zeroconf-avahi catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Several demos and launch-tests for the avahi based zero-configuration.'';

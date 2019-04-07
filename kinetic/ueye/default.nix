@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f1c2687559e090ce3a4e5c4fceb484286894f0e33ff114dda6ccb6b831600b52";
   };
 
+  buildInputs = [ rostest roslib nodelet dynamic-reconfigure camera-calibration-parsers image-transport roslaunch roscpp ];
   propagatedBuildInputs = [ roslib nodelet dynamic-reconfigure camera-calibration-parsers image-transport roscpp ];
-  nativeBuildInputs = [ camera-calibration-parsers image-transport catkin roscpp rostest nodelet dynamic-reconfigure roslaunch roslib ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for IDS Imaging uEye cameras.'';

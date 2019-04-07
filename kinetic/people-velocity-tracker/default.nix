@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f0d5f59a802464e62231f54bf7c0a76957bd03f479f77df6a6995f7e8fdc3ad9";
   };
 
+  buildInputs = [ easy-markers kalman-filter rospy people-msgs roslib geometry-msgs ];
   propagatedBuildInputs = [ easy-markers kalman-filter rospy people-msgs geometry-msgs roslib leg-detector ];
-  nativeBuildInputs = [ easy-markers kalman-filter rospy people-msgs catkin roslib geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Track the output of the leg_detector to indicate the velocity of person.'';

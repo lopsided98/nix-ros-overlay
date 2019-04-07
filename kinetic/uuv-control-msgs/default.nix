@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9e8de2f07e64e4243c6fc01ba16c1909235076ba288e3df15ae430d40baa150f";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-generation message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The uuv_control_msgs package'';

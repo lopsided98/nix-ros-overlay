@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3856e8fa93ddc1aaf7b2e4c2095b23f8190bc0c70f3c3f8825d4e2b16872d044";
   };
 
+  buildInputs = [ openssl cacert git opencv3 ];
   propagatedBuildInputs = [ opencv3 ];
-  nativeBuildInputs = [ cacert openssl git cmake opencv3 ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''libCMT ROS Wrapper'';

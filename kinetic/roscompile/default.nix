@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "f82097dea3c6114b1012be659199e80b4307bb3d1f4b6edf2dd0a996987fd448";
   };
 
+  buildInputs = [ ros-introspection catkin ];
   checkInputs = [ tf pluginlib geometry-msgs roslint ];
   propagatedBuildInputs = [ ros-introspection catkin ];
-  nativeBuildInputs = [ ros-introspection catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The roscompile package'';

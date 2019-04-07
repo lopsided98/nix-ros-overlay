@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bfa4a1b4c44379dd44881d41b928f7a37d6b1620e60994b70829e964be6d6126";
   };
 
+  buildInputs = [ qt5.qtbase ];
   propagatedBuildInputs = [ qt5.qtbase ];
-  nativeBuildInputs = [ catkin qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''libqt-concurrent metapackage supporting qt4 and qt5'';

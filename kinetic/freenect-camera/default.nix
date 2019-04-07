@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "671ddb218106633626d497ab69fd7ccc2efaef187d2db5ae557ac9aa91873c7b";
   };
 
+  buildInputs = [ pluginlib camera-info-manager image-transport sensor-msgs diagnostic-updater libfreenect dynamic-reconfigure nodelet roscpp log4cxx ];
   propagatedBuildInputs = [ pluginlib camera-info-manager image-transport sensor-msgs diagnostic-updater libfreenect dynamic-reconfigure nodelet roscpp log4cxx ];
-  nativeBuildInputs = [ pluginlib camera-info-manager image-transport sensor-msgs catkin diagnostic-updater libfreenect dynamic-reconfigure nodelet roscpp log4cxx ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A libfreenect-based ROS driver for the Microsoft Kinect.  This is

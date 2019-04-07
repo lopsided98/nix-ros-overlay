@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "198efeb1ded4f470492830c7ebd382798589a9cce96a86ce0bfc6c7b32617c8e";
   };
 
+  buildInputs = [ urdfdom-headers urdf orocos-kdl cmake-modules rosconsole tinyxml ];
   checkInputs = [ rostest roscpp ];
   propagatedBuildInputs = [ urdfdom-headers urdf orocos-kdl rosconsole tinyxml ];
-  nativeBuildInputs = [ urdfdom-headers urdf orocos-kdl cmake-modules rosconsole catkin tinyxml ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The Kinematics and Dynamics Library (KDL) defines a tree structure

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e15b5e6bbd7f152fa92cb9a85361014f3c88defb93bddaab20fea1b72e254ab2";
   };
 
+  buildInputs = [ cmake-modules boost sensor-msgs roscpp robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ cmake-modules boost sensor-msgs roscpp robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
-  nativeBuildInputs = [ cmake-modules boost sensor-msgs catkin roscpp robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_head_control_module package'';

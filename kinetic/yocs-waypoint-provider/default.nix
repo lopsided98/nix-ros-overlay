@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "dedef537750bbe13bf390abb18260f3c5afad44e88c7247fffeee598ab35e7da";
   };
 
+  buildInputs = [ geometry-msgs libyamlcpp visualization-msgs yocs-msgs roscpp ];
   propagatedBuildInputs = [ geometry-msgs libyamlcpp visualization-msgs yocs-msgs roscpp ];
-  nativeBuildInputs = [ geometry-msgs libyamlcpp catkin visualization-msgs yocs-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Parse a multiple poses from yaml and provide as topic and service. This package is highly inspired by yocs_waypoints_navi'';

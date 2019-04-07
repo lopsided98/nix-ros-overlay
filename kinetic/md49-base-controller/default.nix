@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b67dddd94b6a93f0c6fc9515a3f692344278e7c7e87a47171e9fb2617530a8ca";
   };
 
+  buildInputs = [ md49-messages message-generation md49-serialport rospy std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ md49-messages message-runtime md49-serialport rospy std-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ md49-messages message-generation md49-serialport rospy std-msgs catkin roscpp geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The md49_base_controller package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "619c3c5231906342603d61d46c6e45e0363f046b56428111c114c5f3cc6b1690";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros grizzly-description controller-manager grizzly-control rostopic hector-gazebo-plugins gazebo-ros-control gazebo-plugins ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Clearpath Grizzly Simulator bringup'';

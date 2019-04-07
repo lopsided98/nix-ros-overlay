@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e6475b9491f357caab0b422f7394a467ebbe340332e291e92810974855b2ec33";
   };
 
+  buildInputs = [ rospy cv-bridge image-recognition-util image-recognition-msgs ];
   propagatedBuildInputs = [ pythonPackages.numpy image-recognition-msgs image-recognition-util rospy cv-bridge ];
-  nativeBuildInputs = [ image-recognition-msgs image-recognition-util rospy catkin cv-bridge ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The openface_ros package'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "7441b8f0c300d45fd52367d4ccc062a2b904726fc5eccebdf8fdf49d38812cbf";
   };
 
+  buildInputs = [ industrial-msgs roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ industrial-msgs roscpp ];
-  nativeBuildInputs = [ industrial-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''simple_message defines a simple messaging connection and protocol for communicating 

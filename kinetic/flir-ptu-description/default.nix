@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "90fccd005996b59742619f65837a44fcc94b4c1e76bafb7762ea076606ff50bf";
   };
 
+  buildInputs = [ xacro ];
   propagatedBuildInputs = [ urdf xacro ];
-  nativeBuildInputs = [ catkin xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF description the FLIR PTUs, currently the D46.'';

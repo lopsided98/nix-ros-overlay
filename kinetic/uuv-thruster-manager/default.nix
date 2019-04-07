@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9048a90e21b86367c234f958d9c8579c142f04549ae2b852d38e3d0bd2a70b75";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ uuv-gazebo-ros-plugins-msgs message-runtime rospy std-msgs geometry-msgs tf pythonPackages.pyyaml ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The thruster manager package'';

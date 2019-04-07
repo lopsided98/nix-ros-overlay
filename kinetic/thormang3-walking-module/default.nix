@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "deb67b0e6fc31b5f942a7355eb17114c249c0317ba76326f23a3c732e692cb76";
   };
 
+  buildInputs = [ boost cmake-modules thormang3-walking-module-msgs libyamlcpp geometry-msgs sensor-msgs roscpp thormang3-kinematics-dynamics roslib thormang3-balance-control robotis-math eigen std-msgs eigen-conversions robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ boost cmake-modules thormang3-walking-module-msgs libyamlcpp geometry-msgs sensor-msgs roscpp thormang3-kinematics-dynamics roslib thormang3-balance-control robotis-math eigen std-msgs eigen-conversions robotis-controller-msgs robotis-framework-common ];
-  nativeBuildInputs = [ boost cmake-modules thormang3-walking-module-msgs libyamlcpp geometry-msgs sensor-msgs catkin roscpp thormang3-kinematics-dynamics roslib thormang3-balance-control robotis-math eigen std-msgs eigen-conversions robotis-controller-msgs robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a motion module for thormang3 walking.

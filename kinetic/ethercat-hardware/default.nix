@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cfeb3b7a7a44fd0c5d617e03fb7b1a5ca49320c94b236fb32bcbf23383963378";
   };
 
+  buildInputs = [ pr2-hardware-interface pluginlib eml realtime-tools diagnostic-updater message-generation diagnostic-msgs pr2-msgs roscpp log4cxx ];
   propagatedBuildInputs = [ pr2-hardware-interface pluginlib eml realtime-tools diagnostic-updater message-runtime diagnostic-msgs pr2-msgs roscpp log4cxx ];
-  nativeBuildInputs = [ pr2-hardware-interface pluginlib eml realtime-tools catkin diagnostic-updater message-generation diagnostic-msgs pr2-msgs roscpp log4cxx ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for creating a hardware interface to the robot using the EtherCAT motor controller/driver'';

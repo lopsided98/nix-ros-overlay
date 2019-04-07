@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c6d406d24ab0f12f8f32bb26a1bc680223ef5c5f4fd85bdc0e4765ddd9760d86";
   };
 
+  buildInputs = [ roseus moveit-msgs pr2eus control-msgs ];
   checkInputs = [ rostest moveit-planners-ompl ];
   propagatedBuildInputs = [ roseus moveit-msgs pr2eus control-msgs ];
-  nativeBuildInputs = [ roseus pr2eus control-msgs moveit-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''pr2eus_moveit'';

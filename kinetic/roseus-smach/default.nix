@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ad4ebbfe69c99fea50f7c5153ed33479ad99eb528224f91d3677b8f428ed0de5";
   };
 
+  buildInputs = [ roseus smach-ros rostest message-generation smach-msgs actionlib std-msgs smach actionlib-tutorials ];
   propagatedBuildInputs = [ roseus smach-ros rostest smach-msgs message-runtime actionlib std-msgs smach actionlib-tutorials euslisp ];
-  nativeBuildInputs = [ roseus catkin smach-ros rostest message-generation smach-msgs actionlib std-msgs smach actionlib-tutorials ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''roseus_smach

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e322c0fbc460a686ba7d31d087414394ead40ef7eb61e62d1c8a1927f67019af";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains messages/services used by tango ros lib'';

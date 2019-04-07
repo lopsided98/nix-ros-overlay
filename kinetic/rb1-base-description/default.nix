@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "0a253a76260528c5e2d31d1664250bd5aa267c0085af3ed4d91b143cf5afbb09";
   };
 
+  buildInputs = [ roslaunch urdf xacro robotnik-sensors ];
   propagatedBuildInputs = [ robotnik-sensors urdf xacro robot-state-publisher ];
-  nativeBuildInputs = [ urdf roslaunch catkin xacro robotnik-sensors ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rb1_base_description package'';

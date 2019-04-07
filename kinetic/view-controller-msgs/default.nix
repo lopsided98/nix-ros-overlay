@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "18c0b2f99090be9199cff68e57ab95df08d90864b67c632f6d93cd9042e76a20";
   };
 
+  buildInputs = [ std-msgs genmsg message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ message-generation std-msgs genmsg catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for (camera) view controllers'';

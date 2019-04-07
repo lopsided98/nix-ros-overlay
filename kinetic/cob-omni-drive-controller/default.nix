@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b3448749acce6bf9b2d4a92db6dfca32a39bd9c9f192de33d98313c65e71a39b";
   };
 
+  buildInputs = [ hardware-interface std-srvs pluginlib boost cob-base-controller-utils realtime-tools sensor-msgs roscpp tf2 message-generation nav-msgs urdf controller-interface dynamic-reconfigure std-msgs angles tf geometry-msgs ];
   propagatedBuildInputs = [ hardware-interface std-srvs pluginlib boost cob-base-controller-utils realtime-tools sensor-msgs roscpp tf2 nav-msgs urdf controller-interface dynamic-reconfigure std-msgs angles tf geometry-msgs ];
-  nativeBuildInputs = [ std-srvs cob-base-controller-utils catkin nav-msgs urdf controller-interface std-msgs angles roscpp tf geometry-msgs hardware-interface pluginlib boost realtime-tools sensor-msgs tf2 message-generation dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_omni_drive_controller package'';

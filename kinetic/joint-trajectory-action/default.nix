@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2713e4ea1b13fefe115aee33bc573e674fec524abeda64fdcc9d7b1261de081a";
   };
 
+  buildInputs = [ pr2-controllers-msgs trajectory-msgs roscpp actionlib ];
   propagatedBuildInputs = [ pr2-controllers-msgs trajectory-msgs roscpp actionlib ];
-  nativeBuildInputs = [ pr2-controllers-msgs actionlib trajectory-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The joint_trajectory_action is a node that exposes an action interface

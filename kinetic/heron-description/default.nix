@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a3d4e5015eea784f70d45912f6519423727e86ada4d622ecb10898f1f71c3c09";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ lms1xx urdf xacro robot-state-publisher ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF description for Heron'';

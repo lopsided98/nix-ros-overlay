@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7ee4d843071f900cf92e96c1e4008568115276bb1f7cbcdd5ef39c32f19529cf";
   };
 
+  buildInputs = [ pr2-controllers-msgs trajectory-msgs pr2-controller-manager ];
   propagatedBuildInputs = [ pr2-controllers-msgs trajectory-msgs pr2-controller-manager ];
-  nativeBuildInputs = [ pr2-controllers-msgs trajectory-msgs catkin pr2-controller-manager ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_mannequin_mode package'';

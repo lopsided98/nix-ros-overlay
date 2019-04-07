@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a497f365516b0ab256de4149374271e8f9d8a58a57b0912dce952a418db8eede";
   };
 
+  buildInputs = [ roslib rospack ocl rtt libxml2 rostime ];
   propagatedBuildInputs = [ roslib rospack ocl rtt libxml2 rostime ];
-  nativeBuildInputs = [ roslib rospack ocl rtt libxml2 catkin rostime ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides an RTT plugin to add a ROS node to the RTT process,

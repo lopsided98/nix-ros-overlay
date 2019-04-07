@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, tf-conversions, dynamic-reconfigure, tf, geometry-msgs, boost, roslint, rviz, robot-state-publisher, eigen-conversions, xacro, kdl-conversions, orocos-kdl, cob-control-msgs, trajectory-msgs, catkin, nav-msgs, urdf, cob-frame-tracker, std-msgs, roscpp, visualization-msgs, kdl-parser, cmake-modules, pluginlib, sensor-msgs, cob-srvs, eigen, topic-tools }:
+{ lib, buildRosPackage, fetchurl, rospy, tf-conversions, dynamic-reconfigure, tf, geometry-msgs, roslint, boost, rviz, robot-state-publisher, eigen-conversions, xacro, kdl-conversions, orocos-kdl, cob-control-msgs, trajectory-msgs, catkin, nav-msgs, urdf, cob-frame-tracker, std-msgs, roscpp, visualization-msgs, kdl-parser, cmake-modules, pluginlib, sensor-msgs, cob-srvs, eigen, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-cob-twist-controller";
   version = "0.7.4";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5bfaa5c0056828ca7a552269e723a1e46d57529a0d5317650e19397449469373";
   };
 
+  buildInputs = [ kdl-conversions orocos-kdl cob-control-msgs trajectory-msgs nav-msgs urdf tf-conversions std-msgs roscpp tf visualization-msgs geometry-msgs eigen kdl-parser cmake-modules roslint boost pluginlib sensor-msgs cob-srvs dynamic-reconfigure eigen-conversions ];
   propagatedBuildInputs = [ kdl-conversions orocos-kdl cob-control-msgs trajectory-msgs nav-msgs urdf rospy tf-conversions std-msgs cob-frame-tracker tf roscpp visualization-msgs geometry-msgs eigen kdl-parser cmake-modules boost pluginlib sensor-msgs cob-srvs rviz robot-state-publisher dynamic-reconfigure topic-tools eigen-conversions xacro ];
-  nativeBuildInputs = [ kdl-conversions orocos-kdl cob-control-msgs trajectory-msgs catkin nav-msgs urdf tf-conversions std-msgs roscpp tf visualization-msgs geometry-msgs eigen kdl-parser cmake-modules roslint boost pluginlib sensor-msgs cob-srvs dynamic-reconfigure eigen-conversions ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The main purpose of the cob_twist_controller is to convert target twists into joint velocities. 

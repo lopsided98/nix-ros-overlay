@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f6609bba80a8ce2581b5ea6460bdc0955c9a0bd4f0d0785367072d0212fd1a7e";
   };
 
+  buildInputs = [ std-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp controller-manager gazebo-ros ];
-  nativeBuildInputs = [ std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides basic message pub and launch file to use Thormang3 on Gazebo'';

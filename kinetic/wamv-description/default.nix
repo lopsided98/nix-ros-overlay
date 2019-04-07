@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6400f010d080b918b2a71ab699acf137ec1bb4cbf90c9aa0d12a992ed30dd6fc";
   };
 
+  buildInputs = [ xacro ];
   propagatedBuildInputs = [ xacro ];
-  nativeBuildInputs = [ catkin xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a URDF model of WAM-V'';

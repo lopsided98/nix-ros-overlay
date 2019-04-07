@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e240a1e09279eb6adf769c81c4b8b580ba47209034e909aca808b5c54a3805f8";
   };
 
+  buildInputs = [ message-generation rospy std-msgs visualization-msgs roscpp ];
   propagatedBuildInputs = [ message-runtime visualization-msgs rospy std-msgs roscpp ];
-  nativeBuildInputs = [ message-generation rospy std-msgs catkin visualization-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Marvelmind local navigation system'';

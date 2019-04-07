@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4e3641e1523e34a555daca7e5c122f7e6a2978c7f997b3e8b4943dedc883329d";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gmapping dwa-local-planner frontier-exploration amcl map-server base-local-planner navfn move-base ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Navigation package for DrRobot's Jaguar 4X4'';

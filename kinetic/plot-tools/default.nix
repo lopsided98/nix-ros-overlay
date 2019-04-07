@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "749c5e70c3d85169a8dcb63ee406b9727028609a11ce7ab1d4a7679ee0c7ac35";
   };
 
+  buildInputs = [ rospy ];
   propagatedBuildInputs = [ rospy ];
-  nativeBuildInputs = [ catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''plot_tools'';

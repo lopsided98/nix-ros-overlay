@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "e5c54406e2e37a79b3c01ff7d897109114b846d9d2f9f0e761f5e43c637d7c25";
   };
 
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  buildInputs = [ pythonPackages.catkin-pkg ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Locally patched version of the python redis client (https://github.com/andymccurdy/redis-py).'';

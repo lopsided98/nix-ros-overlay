@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7ca3a2bd8b1caf1a2486ee0646596fe57a8be5877cf11a8128d432c9e07af15b";
   };
 
+  buildInputs = [ boost cmake-modules geometry-msgs libyamlcpp roscpp thormang3-kinematics-dynamics roslib robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ boost cmake-modules geometry-msgs libyamlcpp roscpp thormang3-kinematics-dynamics roslib robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
-  nativeBuildInputs = [ boost cmake-modules geometry-msgs libyamlcpp catkin roscpp thormang3-kinematics-dynamics roslib robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The thormang3_base_module package'';

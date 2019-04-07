@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8c1b54ae0baf598e1d525b5d8a6ee847f113ada7216d11ab2f3cb2c7aee34554";
   };
 
+  buildInputs = [ std-srvs rosapi rqt-gui cv-bridge xorg.libXi freeglut rqt-gui-cpp swri-yaml-util roscpp tf xorg.libXmu swri-transform-util pluginlib image-transport message-generation marti-common-msgs libqt-dev libqt-opengl-dev glew ];
   propagatedBuildInputs = [ std-srvs rosapi rqt-gui cv-bridge xorg.libXi freeglut rqt-gui-cpp swri-yaml-util roscpp tf xorg.libXmu swri-transform-util pluginlib image-transport libqt-core libqt-opengl marti-common-msgs message-runtime glew ];
-  nativeBuildInputs = [ std-srvs rosapi rqt-gui cv-bridge catkin xorg.libXi freeglut qt-qmake rqt-gui-cpp swri-yaml-util roscpp tf xorg.libXmu swri-transform-util pluginlib image-transport pkg-config message-generation marti-common-msgs libqt-dev libqt-opengl-dev glew ];
+  nativeBuildInputs = [ catkin qt-qmake pkg-config ];
 
   meta = {
     description = ''mapviz'';

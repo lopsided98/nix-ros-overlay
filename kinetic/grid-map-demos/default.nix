@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4be5f16776d808d74f91df63bf52c23ffd3e71fcaf8dd65a704a5ca66f79ff1c";
   };
 
+  buildInputs = [ grid-map-rviz-plugin grid-map-core grid-map-visualization geometry-msgs sensor-msgs cv-bridge grid-map-filters octomap-msgs grid-map-cv grid-map-ros grid-map-msgs roscpp grid-map-loader grid-map-octomap ];
   propagatedBuildInputs = [ grid-map-rviz-plugin grid-map-core grid-map-visualization geometry-msgs sensor-msgs cv-bridge grid-map-filters octomap-msgs grid-map-cv grid-map-ros grid-map-msgs roscpp grid-map-loader grid-map-octomap ];
-  nativeBuildInputs = [ grid-map-rviz-plugin grid-map-core grid-map-visualization geometry-msgs sensor-msgs cv-bridge catkin grid-map-filters octomap-msgs grid-map-cv grid-map-ros grid-map-msgs roscpp grid-map-loader grid-map-octomap ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Demo nodes to demonstrate the usage of the grid map library.'';

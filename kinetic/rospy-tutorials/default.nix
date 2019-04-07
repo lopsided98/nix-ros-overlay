@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3275210916f09b9291ea3cf694770165eda8c63ca2a44b8e4c28ffde9417cd62";
   };
 
+  buildInputs = [ std-msgs rostest message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime rospy ];
-  nativeBuildInputs = [ std-msgs rostest catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package attempts to show the features of ROS python API step-by-step,

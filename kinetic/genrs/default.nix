@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "67c1e8dc2db9aa0c8e2f71e3c337bfc86dbc88bc5d752a854267e0aa9df0192e";
   };
 
+  buildInputs = [ genmsg ];
   propagatedBuildInputs = [ genmsg ];
-  nativeBuildInputs = [ genmsg catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Rust ROS message and service generators'';

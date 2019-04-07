@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "652e6f49cef2311e8304b70314c8ec385e3d5db92de206abd24f8644de9d794f";
   };
 
+  buildInputs = [ sensor-msgs roscpp nodelet dynamic-reconfigure ];
   checkInputs = [ rostest roslaunch ];
   propagatedBuildInputs = [ sensor-msgs roscpp nodelet dynamic-reconfigure ];
-  nativeBuildInputs = [ catkin nodelet dynamic-reconfigure sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Extract a single ring of a Velodyne PointCloud2 and publish it as a LaserScan message'';

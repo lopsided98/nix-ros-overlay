@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9b5b761ac6295f5d15ec568c9972998153057ecf6caab16e8d45122f76d93799";
   };
 
+  buildInputs = [ topic-tools ros-type-introspection roscpp rospy ];
   propagatedBuildInputs = [ topic-tools ros-type-introspection roscpp rospy ];
-  nativeBuildInputs = [ catkin rospy topic-tools ros-type-introspection roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The topic_switch package'';

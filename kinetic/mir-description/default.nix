@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "caf5b1cdbe34b59f999dc0a5fdb5f735670aac8fbde7d6c13d4697a081a61271";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ joint-state-controller diff-drive-controller position-controllers rviz urdf robot-state-publisher joint-state-publisher xacro gazebo-ros-control ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF description of the MiR100 robot'';

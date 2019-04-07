@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c0752cf726d2b82e1e749a526fd8b49a1740c99702a8c6c55428fa05cb07be33";
   };
 
+  buildInputs = [ std-msgs roscpp message-generation bcap-core ];
   propagatedBuildInputs = [ std-msgs roscpp message-runtime bcap-core ];
-  nativeBuildInputs = [ message-generation bcap-core std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The bcap service package includes a node for communicating ORiN from ROS.'';

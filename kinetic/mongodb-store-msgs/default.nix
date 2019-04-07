@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "eb3065137064881113c2dae3a702c174d6a434b4059f2f191de8779c4473b536";
   };
 
+  buildInputs = [ catkin message-generation actionlib-msgs actionlib ];
   propagatedBuildInputs = [ message-generation message-runtime actionlib-msgs actionlib ];
-  nativeBuildInputs = [ message-generation actionlib-msgs actionlib catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The mongodb_store_msgs package'';

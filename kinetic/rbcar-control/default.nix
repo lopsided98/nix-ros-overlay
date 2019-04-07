@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e217c86778fdb66afbda9fd48792ddb5271ea57e59e1a6bdcd9583753089893c";
   };
 
+  buildInputs = [ robot-state-publisher ];
   propagatedBuildInputs = [ robot-state-publisher ];
-  nativeBuildInputs = [ catkin robot-state-publisher ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rbcar_control package'';

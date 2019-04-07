@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a37e75af1544fc229b6fce54be8e4916f275b7863909d03d66f1037fdf226f93";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ lms1xx urdf xacro robot-state-publisher ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF robot description for Ridgeback'';

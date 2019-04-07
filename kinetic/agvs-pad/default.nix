@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4d5ed9a41e12e21d86ab4613dcdef0b72171d2f38b610e305c579589e8f6df3a";
   };
 
+  buildInputs = [ diagnostic-updater std-srvs geometry-msgs std-msgs diagnostic-msgs sensor-msgs robotnik-msgs ackermann-msgs ];
   propagatedBuildInputs = [ diagnostic-updater std-srvs geometry-msgs std-msgs diagnostic-msgs sensor-msgs robotnik-msgs ackermann-msgs ];
-  nativeBuildInputs = [ std-srvs sensor-msgs catkin robotnik-msgs ackermann-msgs diagnostic-updater std-msgs diagnostic-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The agvs_pad package.Component to control the robot by using a ps3 pad.'';

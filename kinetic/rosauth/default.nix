@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b77263b92aed05aef959a32cefc664967c7d1ac842a92d9ac84820126e41042f";
   };
 
+  buildInputs = [ openssl rostest message-generation roscpp ];
   propagatedBuildInputs = [ roscpp message-runtime ];
-  nativeBuildInputs = [ rostest message-generation openssl catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Server Side tools for Authorization and Authentication of ROS Clients'';

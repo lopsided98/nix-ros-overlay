@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "47dfddda81934ed6721d21653f0defed39ca80085357918bffe691239b1b8b08";
   };
 
+  buildInputs = [ nav-msgs message-generation tuw-geometry-msgs rospy std-msgs geometry-msgs tf roscpp ];
   propagatedBuildInputs = [ nav-msgs tuw-geometry-msgs message-runtime rospy std-msgs geometry-msgs tf roscpp ];
-  nativeBuildInputs = [ tuw-geometry-msgs catkin roscpp nav-msgs message-generation rospy std-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tuw_nav_msgs package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "21e0c558d6483007164e81cfeed0ee6b7a54db4368942ef47078d15e13239f5f";
   };
 
+  buildInputs = [ pr2-navigation-local pr2-navigation-teleop pr2-machine pr2-navigation-perception ];
   propagatedBuildInputs = [ pr2-navigation-local pr2-navigation-teleop pr2-machine pr2-navigation-perception ];
-  nativeBuildInputs = [ pr2-navigation-local pr2-navigation-teleop pr2-machine catkin pr2-navigation-perception ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This application allows the PR2 to navigate autonomously in an odometric frame.'';

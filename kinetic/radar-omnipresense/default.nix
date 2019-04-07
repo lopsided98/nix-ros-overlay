@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "14dae2bb24aa13c09d11082add66ed2e2d50421f536e86623fb780de0f05990b";
   };
 
+  buildInputs = [ rostest message-generation rospy std-msgs roscpp ];
   propagatedBuildInputs = [ message-generation message-runtime rospy std-msgs roscpp ];
-  nativeBuildInputs = [ rostest message-generation rospy std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This is the radar driver package developed for the omnipresense radar module.'';

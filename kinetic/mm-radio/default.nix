@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mm-messages, nanomsg, ecl-utilities, ecl-command-line, catkin, ecl-threads, ecl-exceptions, ecl-time, ecl-build, mm-core-msgs }:
+{ lib, buildRosPackage, fetchurl, mm-messages, nanomsg, ecl-utilities, ecl-command-line, catkin, ecl-time, ecl-exceptions, ecl-threads, ecl-build, mm-core-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mm-radio";
   version = "0.2.4";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2536477d5e835d74d9a0c20296b60c960e0deefbefa33e1d852bbac4524f0f20";
   };
 
+  buildInputs = [ mm-messages nanomsg ecl-utilities ecl-command-line ecl-time ecl-exceptions ecl-threads ecl-build mm-core-msgs ];
   propagatedBuildInputs = [ mm-messages nanomsg ecl-utilities ecl-command-line ecl-time ecl-exceptions ecl-threads ecl-build mm-core-msgs ];
-  nativeBuildInputs = [ mm-messages nanomsg ecl-utilities ecl-command-line catkin ecl-time ecl-exceptions ecl-threads ecl-build mm-core-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Multiplexing many packet types across a two-way radio connection with publishers and subscribers.

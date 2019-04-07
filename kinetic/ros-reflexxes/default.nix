@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6fffe8bdbc4b262e0c0c806be94310d9429959403af9a3fea107d4612d6dc858";
   };
 
+  buildInputs = [ roscpp cmake-modules libreflexxestype2 ];
   propagatedBuildInputs = [ roscpp libreflexxestype2 ];
-  nativeBuildInputs = [ catkin roscpp cmake-modules libreflexxestype2 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ros_reflexxes package'';

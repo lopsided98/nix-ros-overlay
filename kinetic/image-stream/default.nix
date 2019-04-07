@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "57c40cb2935de0812d1e5925bdd06a45dae48ce97f28e9eeaa534290c0e4029c";
   };
 
+  buildInputs = [ rosweb cv-bridge opencv3 rospy ];
   propagatedBuildInputs = [ rosweb cv-bridge opencv3 rospy ];
-  nativeBuildInputs = [ rospy rosweb catkin cv-bridge opencv3 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosweb plugin to serve images as streams (MJPEG, Theora, FLV, etc)'';

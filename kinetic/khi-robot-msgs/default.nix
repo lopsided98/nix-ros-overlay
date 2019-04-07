@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f691e3ad39e1b66e9ceec1f08df42028f2fcd250621bab689a3f0e87251529fc";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains KHI ROS robot msgs'';

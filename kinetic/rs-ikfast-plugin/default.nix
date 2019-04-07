@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6922ad5e543fa7e286f237a08ed8efc02b07ff098f5650b95ecb19565d83ad87";
   };
 
+  buildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
   propagatedBuildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
-  nativeBuildInputs = [ liblapack moveit-core pluginlib tf-conversions catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rs_ikfast_plugin package'';

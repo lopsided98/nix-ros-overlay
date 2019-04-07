@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "99173c8c962cf3339d30b7453a9e59fed2e36ab0b66de3197ea97d7d553d1646";
   };
 
+  buildInputs = [ rostest roslib boost camera-calibration-parsers image-transport sensor-msgs roscpp ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ roslib boost camera-calibration-parsers image-transport sensor-msgs roscpp ];
-  nativeBuildInputs = [ rostest roslib catkin boost camera-calibration-parsers image-transport sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a C++ interface for camera calibration

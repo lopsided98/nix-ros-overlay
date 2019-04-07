@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a88faa66329fc0c878e772b7787b10c47cd5f21ca4ca0beab833a37b377201a6";
   };
 
+  buildInputs = [ mm-core-msgs ecl-build ];
   propagatedBuildInputs = [ mm-core-msgs ecl-build ];
-  nativeBuildInputs = [ catkin mm-core-msgs ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definitions and serialisations for Eigen messages.'';

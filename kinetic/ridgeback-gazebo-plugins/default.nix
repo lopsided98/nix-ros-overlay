@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3746b4ede1648b98626218f1d27932e56fd0dae79730ca4d61a34166c6f82845";
   };
 
+  buildInputs = [ std-srvs nav-msgs geometry-msgs std-msgs tf gazeboSimulator.gazebo7 roscpp ];
   propagatedBuildInputs = [ gazebo-ros nav-msgs message-runtime geometry-msgs std-msgs gazeboSimulator.gazebo tf roscpp ];
-  nativeBuildInputs = [ std-srvs nav-msgs geometry-msgs std-msgs catkin tf gazeboSimulator.gazebo7 roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A fork of hector_gazebo_plugins to provide the ros_force_based_move plugin.'';

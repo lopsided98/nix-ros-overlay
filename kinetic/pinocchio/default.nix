@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "833a3a116c6690d4d3f3481530ee22f16907b3dcc5728c246e99f053e6638c13";
   };
 
+  buildInputs = [ python pythonPackages.numpy boost eigen eigenpy git urdfdom ];
   propagatedBuildInputs = [ python pythonPackages.numpy boost eigen eigenpy urdfdom ];
-  nativeBuildInputs = [ python pythonPackages.numpy boost eigen eigenpy git catkin urdfdom ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives - wrapped for catkin.'';

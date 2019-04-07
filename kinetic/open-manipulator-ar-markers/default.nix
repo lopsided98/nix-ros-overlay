@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4885e8982d1c719369b36db057e8040802d621b4ff437fae69a488ae31ec0bc3";
   };
 
+  buildInputs = [ ar-track-alvar image-transport image-proc ar-track-alvar-msgs ];
   propagatedBuildInputs = [ ar-track-alvar image-transport image-proc ar-track-alvar-msgs ];
-  nativeBuildInputs = [ ar-track-alvar image-transport image-proc catkin ar-track-alvar-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''To find AR marker, it depends ar_track_alvar packages'';

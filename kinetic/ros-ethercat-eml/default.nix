@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "5590af3202eb4798de1ed2576b0ef47dedf6b56780fecb61b82e34e93edc31bf";
   };
 
+  buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
-  nativeBuildInputs = [ catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This is an implementation of the EtherCAT master protocol for use wiht ros_ethercar package

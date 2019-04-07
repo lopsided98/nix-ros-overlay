@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ba365f76d8d3d6ccca2653bfcc91fabbddbf0d6cfd6cd70ba5814b19f0d171a6";
   };
 
+  buildInputs = [ std-msgs xiaoqiang-msgs rospy ];
   propagatedBuildInputs = [ std-msgs xiaoqiang-msgs rospy ];
-  nativeBuildInputs = [ std-msgs xiaoqiang-msgs catkin rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''xiaoqiang remote control server'';

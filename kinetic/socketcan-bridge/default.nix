@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "44760caaf9b93229a113e91b889e6b2a6dcc7d7425335044a7776ee085cfed43";
   };
 
+  buildInputs = [ can-msgs roscpp socketcan-interface ];
   checkInputs = [ rostest roslint rosunit ];
   propagatedBuildInputs = [ can-msgs roscpp socketcan-interface ];
-  nativeBuildInputs = [ can-msgs catkin roscpp socketcan-interface ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Conversion nodes for messages from SocketCAN to a ROS Topic and vice versa.'';

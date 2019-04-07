@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a5889f67c061753e8971189c93b8da7fa9222c180cd61da7b1b6c473ce957816";
   };
 
+  buildInputs = [ image-transport cv-bridge dynamic-reconfigure ];
   propagatedBuildInputs = [ image-transport cv-bridge dynamic-reconfigure ];
-  nativeBuildInputs = [ image-transport catkin cv-bridge dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Compressed_image_transport provides a plugin to image_transport for transparently sending images

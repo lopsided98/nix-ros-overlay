@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "40ecf4689465aaac2e02fedc910a8ee83e3bfc137de54c9532649099d441ed82";
   };
 
+  buildInputs = [ pyros-common catkin-pip pythonPackages.mock pyros-interfaces-ros ];
   propagatedBuildInputs = [ pyros-common pythonPackages.mock pyros-interfaces-ros ];
-  nativeBuildInputs = [ pyros-common pythonPackages.mock pyros-interfaces-ros catkin-pip catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides Python to ROS multiprocess API, useful for using ROS from different multiprocess environment while keeping both isolated.'';

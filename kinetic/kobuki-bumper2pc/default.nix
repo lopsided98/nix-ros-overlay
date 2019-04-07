@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "562175272121859d7332becc7eb3c297ae4f115c320542ed4b23f2e922f545d4";
   };
 
+  buildInputs = [ kobuki-msgs pluginlib sensor-msgs nodelet roscpp ];
   propagatedBuildInputs = [ kobuki-msgs pluginlib sensor-msgs nodelet roscpp ];
-  nativeBuildInputs = [ catkin kobuki-msgs pluginlib sensor-msgs nodelet roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Bumper/cliff to pointcloud nodelet:

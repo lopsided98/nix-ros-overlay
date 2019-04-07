@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "745d5814394253e3d5438dc2c1447d31cca5f5cc860c9d6eb2341bcd613d4b16";
   };
 
+  buildInputs = [ libusb ];
   propagatedBuildInputs = [ libusb ];
-  nativeBuildInputs = [ catkin libusb ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package wraps the libphidgets to use it as a ros dependency'';

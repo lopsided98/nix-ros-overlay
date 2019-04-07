@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ad777f0222357f71362b428e92d3c99cb10dae1176d0f6c8ba6f8fccf90a9198";
   };
 
+  buildInputs = [ std-msgs roscpp boost robotis-framework-common ];
   propagatedBuildInputs = [ std-msgs roscpp boost robotis-framework-common ];
-  nativeBuildInputs = [ boost std-msgs catkin roscpp robotis-framework-common ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The motion_module_tutorial package'';

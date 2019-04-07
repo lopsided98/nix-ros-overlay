@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "255a61ab90d1ef50d94f6efbd1dec851e81c8fc66d67cbd6cfea2a98f57b6f39";
   };
 
-  nativeBuildInputs = [ gawk roslib rospack flex mk catkin rosbuild bison ];
+  buildInputs = [ gawk roslib rospack flex mk rosbuild bison ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ffha: PDDL Planner (http://ipc.informatik.uni-freiburg.de)'';

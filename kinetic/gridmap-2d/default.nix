@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6effc57a592a8641ce08172a58a76376798283ba0a9263eee55416e7a80f1c02";
   };
 
+  buildInputs = [ nav-msgs opencv3 rosconsole roscpp ];
   propagatedBuildInputs = [ nav-msgs opencv3 rosconsole roscpp ];
-  nativeBuildInputs = [ nav-msgs rosconsole catkin roscpp opencv3 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''gridmap_2d - a simple 2D gridmap structure, based on OpenCV's cv::Mat'';

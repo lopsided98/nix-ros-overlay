@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c0120f056850ac8a374748968fe4c91fcc640ba1e075107527e6c98bce0d5143";
   };
 
+  buildInputs = [ cv-bridge visualization-msgs sensor-msgs roscpp image-geometry ];
   propagatedBuildInputs = [ cv-bridge visualization-msgs sensor-msgs roscpp image-geometry ];
-  nativeBuildInputs = [ catkin cv-bridge visualization-msgs sensor-msgs roscpp image-geometry ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ipa_3d_fov_visualization package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6da14e4bd43b284e08490dba88f78af807d21f7b3e1aa06e4691e5124f2f77ec";
   };
 
+  buildInputs = [ genmsg ];
   propagatedBuildInputs = [ genmsg pythonPackages.pyyaml ];
-  nativeBuildInputs = [ genmsg catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Python ROS message and service generators.'';

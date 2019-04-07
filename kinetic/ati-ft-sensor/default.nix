@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "93bbb0f85950aa050074046de3e5f7e3f136bafddd423034bda56f1ce09fa35b";
   };
 
+  buildInputs = [ roslib robotis-math cmake-modules boost eigen libyamlcpp roscpp geometry-msgs ];
   propagatedBuildInputs = [ roslib robotis-math cmake-modules boost eigen libyamlcpp roscpp geometry-msgs ];
-  nativeBuildInputs = [ cmake-modules boost libyamlcpp catkin roscpp robotis-math eigen roslib geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a library for using ATI's transducer.

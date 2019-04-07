@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "e3eaaad3b8c4551b9d5e5514c06f457f7a15bb15d0eda26338e90df72f0d3618";
   };
 
+  buildInputs = [ sensor-msgs roslint geometry-msgs rospy ];
   checkInputs = [ rosunit roslint ];
   propagatedBuildInputs = [ sensor-msgs roslint geometry-msgs rospy ];
-  nativeBuildInputs = [ roslint rospy sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''RoDI ROS package.

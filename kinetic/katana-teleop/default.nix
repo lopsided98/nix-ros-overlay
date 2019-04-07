@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ba6a7c0cc003c5929474b50c163471adf1778ff42770de6043e70c4e7b209326";
   };
 
+  buildInputs = [ control-msgs actionlib sensor-msgs roscpp katana-msgs ];
   propagatedBuildInputs = [ control-msgs actionlib sensor-msgs roscpp katana-msgs ];
-  nativeBuildInputs = [ catkin control-msgs actionlib sensor-msgs roscpp katana-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides tele-operation nodes to control the Neuronics Katana 450 arm via keyboard commands or with a playstation 3 controller.'';

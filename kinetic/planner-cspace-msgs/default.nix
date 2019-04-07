@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c45b2c10dd46ce2021c1f2282859ab5b52364ab7882cac0ea2e3b2337587519b";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definitions for planner_cspace package'';

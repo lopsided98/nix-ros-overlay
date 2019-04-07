@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d0423d8dee8204b58b4f489be31397afe876f6d197381f413fa76c2ef2b2b181";
   };
 
+  buildInputs = [ urdf rospy std-msgs sensor-msgs xacro ];
   propagatedBuildInputs = [ urdf rospy std-msgs sensor-msgs xacro ];
-  nativeBuildInputs = [ urdf rospy std-msgs sensor-msgs catkin xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The raspigibbon_description package'';

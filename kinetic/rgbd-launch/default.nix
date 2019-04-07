@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "c5a51eacfedf43adc47cbd95156c3aeee110c8a53b40d9e5cac1415830b72dcd";
   };
 
+  buildInputs = [ image-proc nodelet depth-image-proc tf2-ros ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ image-proc nodelet depth-image-proc tf2-ros ];
-  nativeBuildInputs = [ catkin depth-image-proc image-proc nodelet tf2-ros ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files to open an RGBD device and load all nodelets to 

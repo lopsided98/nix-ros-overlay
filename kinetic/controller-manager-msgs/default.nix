@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "14f1c504b6a28cc2cdce210d42be3f84a9d7f1b7aad39e0c6cb8e959629dc81b";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages and services for the controller manager.'';

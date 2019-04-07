@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d9f7dc0151808ef7f6e441d46f770cacfa3e3f74a38dfe3fbabddc4e74e3fe2d";
   };
 
+  buildInputs = [ urdf xacro ];
   propagatedBuildInputs = [ urdf xacro ];
-  nativeBuildInputs = [ catkin urdf xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''3D models of the xiaoqiang for simulation and visualization'';

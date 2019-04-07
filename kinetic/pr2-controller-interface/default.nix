@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "529432c34b823d416113f8974ec688de4aaac2a8a71fb252bad72106119c7e2b";
   };
 
+  buildInputs = [ controller-interface pr2-mechanism-model roscpp ];
   propagatedBuildInputs = [ controller-interface pr2-mechanism-model roscpp ];
-  nativeBuildInputs = [ catkin controller-interface pr2-mechanism-model roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package specifies the interface to a realtime controller. A

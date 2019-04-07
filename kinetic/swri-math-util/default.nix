@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "41221e748149de04d1083039e0730eddb3f6aae6dfb73552b8fe8ded78a8c7b8";
   };
 
+  buildInputs = [ roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ roscpp ];
-  nativeBuildInputs = [ catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''swri_math_util'';

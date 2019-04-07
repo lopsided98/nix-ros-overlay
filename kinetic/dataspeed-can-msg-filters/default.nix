@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "6015e319320d8aeab0fa5e15b9abcf98ed273876d12d16cf9b058ab52961b8a0";
   };
 
+  buildInputs = [ can-msgs roscpp ];
   propagatedBuildInputs = [ can-msgs roscpp ];
-  nativeBuildInputs = [ can-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Time synchronize multiple CAN messages to get a single callback'';

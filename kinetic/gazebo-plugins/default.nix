@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "e5552128bf39a1db90a01d7163507a5557e58d8cf4e9fe70dc5f503aabe557d3";
   };
 
+  buildInputs = [ std-srvs rosconsole camera-info-manager trajectory-msgs cv-bridge polled-camera tf2-ros gazebo-dev rosgraph-msgs nav-msgs urdf rospy std-msgs dynamic-reconfigure roscpp nodelet tf gazebo-msgs geometry-msgs image-transport sensor-msgs diagnostic-updater message-generation angles ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ std-srvs rosconsole camera-info-manager trajectory-msgs cv-bridge polled-camera tf2-ros gazebo-dev rosgraph-msgs nav-msgs urdf rospy std-msgs dynamic-reconfigure roscpp nodelet tf gazebo-msgs geometry-msgs image-transport sensor-msgs diagnostic-updater message-runtime angles ];
-  nativeBuildInputs = [ std-srvs rosconsole camera-info-manager trajectory-msgs cv-bridge catkin polled-camera tf2-ros gazebo-dev rosgraph-msgs nav-msgs urdf rospy std-msgs dynamic-reconfigure roscpp nodelet tf gazebo-msgs geometry-msgs image-transport sensor-msgs diagnostic-updater message-generation angles ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components.'';

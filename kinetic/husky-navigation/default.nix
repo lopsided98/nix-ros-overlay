@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d23ca344b12ece712e41e43f45e6f452a0fd87cbf42241f6eda768a0c3114b4d";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gmapping dwa-local-planner frontier-exploration amcl map-server base-local-planner navfn move-base ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Autonomous mapping and navigation demos for the Clearpath Husky'';

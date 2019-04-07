@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "0e67c67bba4e7339bda61ef3f8ada290a0374da8b8e46670215bc41080f179c1";
   };
 
-  nativeBuildInputs = [ catkin-pip catkin ];
+  buildInputs = [ catkin-pip ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Traceback fiddling library. Allows you to pickle tracebacks.'';

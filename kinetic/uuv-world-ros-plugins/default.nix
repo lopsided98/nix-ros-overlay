@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4817cdac8abde3a0c786806dc8c9d9b8cbfc52d03c6c3e3ac66a74a9722770c4";
   };
 
+  buildInputs = [ uuv-world-plugins geometry-msgs uuv-world-ros-plugins-msgs roscpp gazebo-msgs gazebo-dev ];
   propagatedBuildInputs = [ uuv-world-plugins geometry-msgs uuv-world-ros-plugins-msgs roscpp gazebo-msgs gazebo-dev ];
-  nativeBuildInputs = [ uuv-world-plugins geometry-msgs uuv-world-ros-plugins-msgs catkin roscpp gazebo-msgs gazebo-dev ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The uuv_world_ros_plugins package'';

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "0658a7204d23448b528664e8d5cb05f730edec2fb62377fb401cbc1ccfd68714";
   };
 
+  buildInputs = [ roscpp dynamic-reconfigure ];
   checkInputs = [ rostest gmock ];
   propagatedBuildInputs = [ roscpp dynamic-reconfigure ];
-  nativeBuildInputs = [ catkin roscpp dynamic-reconfigure ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ddynamic_reconfigure package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8779ee249aeb2cbe9b9fc6a9b81f6ad4becfda9415c1bed8891ee7e7ecc8c5c6";
   };
 
+  buildInputs = [ rospack boost ];
   propagatedBuildInputs = [ pythonPackages.rospkg ros-environment rospack catkin ];
-  nativeBuildInputs = [ rospack catkin boost ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Base dependencies and support libraries for ROS.

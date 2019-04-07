@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1d8c41a55a787e66638cd0eda28f68ce3725773c25160369426049e8d95d3d18";
   };
 
+  buildInputs = [ image-transport roslaunch cv-bridge sensor-msgs roscpp ];
   propagatedBuildInputs = [ image-transport roslaunch cv-bridge sensor-msgs roscpp ];
-  nativeBuildInputs = [ catkin image-transport roslaunch cv-bridge sensor-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Open source driver for the SICK Visionary-T 3D TOF camera.'';

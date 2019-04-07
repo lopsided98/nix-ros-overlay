@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "61612458f72d81d91f80bd87186b457a672a1ed8039a4732c151c6d507d4a539";
   };
 
+  buildInputs = [ cv-bridge libpng12 ];
   propagatedBuildInputs = [ cv-bridge libpng12 ];
-  nativeBuildInputs = [ catkin cv-bridge libpng12 ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''multisense_lib'';

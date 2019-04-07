@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "143479a522059085716a089c6292eacf4c777ed39f689c70e2cb4b8dbd57d8f9";
   };
 
+  buildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
   propagatedBuildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
-  nativeBuildInputs = [ liblapack moveit-core pluginlib tf-conversions catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''IKFast package for NEXTAGE Open'';

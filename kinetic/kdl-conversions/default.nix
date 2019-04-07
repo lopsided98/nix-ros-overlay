@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "34efddf9eb4ade2ba483d41cbe433179eb50f0533c9b3bddc023c242375be002";
   };
 
+  buildInputs = [ orocos-kdl geometry-msgs ];
   propagatedBuildInputs = [ orocos-kdl geometry-msgs ];
-  nativeBuildInputs = [ catkin orocos-kdl geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Conversion functions between KDL and geometry_msgs types.'';

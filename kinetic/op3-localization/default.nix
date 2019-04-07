@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e9c6d3acec7b401ee6ed5a9552295b8b3adf48071ca9424ec9439187756f555f";
   };
 
+  buildInputs = [ cmake-modules boost sensor-msgs roscpp robotis-math eigen std-msgs eigen-conversions tf geometry-msgs ];
   propagatedBuildInputs = [ cmake-modules boost sensor-msgs roscpp robotis-math eigen std-msgs eigen-conversions tf geometry-msgs ];
-  nativeBuildInputs = [ cmake-modules boost sensor-msgs catkin roscpp robotis-math eigen std-msgs eigen-conversions tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_localization package'';

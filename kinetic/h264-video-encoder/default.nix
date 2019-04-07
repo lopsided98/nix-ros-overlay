@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, h264-encoder-core, image-transport, sensor-msgs, catkin, image-transport-plugins, rostest, kinesis-video-msgs, message-generation, message-runtime, aws-ros1-common }:
+{ lib, buildRosPackage, fetchurl, h264-encoder-core, image-transport, sensor-msgs, catkin, image-transport-plugins, rostest, message-generation, kinesis-video-msgs, message-runtime, aws-ros1-common }:
 buildRosPackage {
   pname = "ros-kinetic-h264-video-encoder";
   version = "1.1.1-r1";
@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "6b1afa3c05a4b916e68416e26de61fc42c6592fef6820bd216a8e0c9a6654c7a";
   };
 
+  buildInputs = [ h264-encoder-core message-generation image-transport kinesis-video-msgs aws-ros1-common sensor-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ image-transport kinesis-video-msgs message-runtime aws-ros1-common sensor-msgs image-transport-plugins ];
-  nativeBuildInputs = [ h264-encoder-core message-generation image-transport kinesis-video-msgs aws-ros1-common sensor-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS1 H264 encoder node'';

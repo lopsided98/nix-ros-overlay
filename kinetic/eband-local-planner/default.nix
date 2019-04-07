@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "28af2a7ee8fa4ef4b4bf938fd8314d9ccd334315caf5aa6eccc492230a0a3fe6";
   };
 
+  buildInputs = [ costmap-2d pluginlib cmake-modules base-local-planner control-toolbox nav-core roscpp nav-msgs tf-conversions tf geometry-msgs ];
   propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner control-toolbox nav-core roscpp nav-msgs tf-conversions tf geometry-msgs ];
-  nativeBuildInputs = [ costmap-2d pluginlib cmake-modules base-local-planner control-toolbox nav-core catkin roscpp nav-msgs tf-conversions tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''eband_local_planner implements a plugin to the

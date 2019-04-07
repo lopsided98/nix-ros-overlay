@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "53eebac8a0d8c2ad29cc9f861e70e5cc74a335a54723b1d1f7fb4b1c7e758102";
   };
 
+  buildInputs = [ roch-msgs depth-image-proc visualization-msgs dynamic-reconfigure nodelet roscpp ];
   propagatedBuildInputs = [ depth-image-proc roch-teleop roscpp roch-msgs nodelet dynamic-reconfigure topic-tools roch-bringup visualization-msgs ];
-  nativeBuildInputs = [ roch-msgs depth-image-proc visualization-msgs dynamic-reconfigure nodelet catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Follower for the roch. Follows humans and robots around by following the centroid of a box points in front of the roch.'';

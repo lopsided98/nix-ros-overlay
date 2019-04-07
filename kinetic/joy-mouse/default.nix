@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "21bff14799c179bb5e86a0bfd5a0a08623c95d518c0be46d95cc7b89fd7c248d";
   };
 
+  buildInputs = [ sensor-msgs pythonPackages.pyudev rospy ];
   propagatedBuildInputs = [ sensor-msgs pythonPackages.pyudev rospy ];
-  nativeBuildInputs = [ sensor-msgs catkin pythonPackages.pyudev rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The joy_mouse package'';

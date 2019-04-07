@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, roscpp, catkin, nodelet }:
+{ lib, buildRosPackage, fetchurl, roscpp, sensor-msgs, catkin, nodelet }:
 buildRosPackage {
   pname = "ros-kinetic-laser-scan-splitter";
   version = "0.3.2";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1ca78fa9bf67097693b7a19019a02b96ad48d310cf5d39e9a5e07d21b9f639ad";
   };
 
+  buildInputs = [ sensor-msgs roscpp nodelet ];
   propagatedBuildInputs = [ sensor-msgs roscpp nodelet ];
-  nativeBuildInputs = [ catkin sensor-msgs roscpp nodelet ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The laser_scan_splitter takes in a LaserScan message and splits it into a number of other LaserScan messages. Each of the resulting laser scans can be assigned an arbitrary coordinate frame, and is published on a separate topic.'';

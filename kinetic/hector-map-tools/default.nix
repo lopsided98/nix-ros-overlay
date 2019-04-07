@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "859a4ea5632ad469694755ed6f6f1a7436013803a4337f217c91aa9de23b0286";
   };
 
+  buildInputs = [ nav-msgs eigen ];
   propagatedBuildInputs = [ nav-msgs eigen ];
-  nativeBuildInputs = [ catkin nav-msgs eigen ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_map_tools contains some functions related to accessing information from OccupancyGridMap maps.

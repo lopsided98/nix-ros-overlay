@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "04fe5ba4851051522074c80d34d8db6cdfbf64f3ba87f690eca36bc8ce876e09";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ grizzly-description rviz rviz-imu-plugin joint-state-publisher ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Visualization configuration for Clearpath Grizzly'';

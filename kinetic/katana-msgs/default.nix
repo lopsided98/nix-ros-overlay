@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1506075d75625aa7ccc7cbf70f61f4c865b450319d2f4db60929b2715a4f3f00";
   };
 
+  buildInputs = [ sensor-msgs message-generation actionlib-msgs ];
   propagatedBuildInputs = [ sensor-msgs message-runtime actionlib-msgs ];
-  nativeBuildInputs = [ catkin sensor-msgs message-generation actionlib-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains messages specific to the Neuronics Katana arm.'';

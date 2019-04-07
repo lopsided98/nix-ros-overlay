@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "94bf0ae2bfb725c95a5ab9d6a683edae7d35e7b2f8440dc95aaa153b01420992";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-generation message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''actionlib_msgs defines the common messages to interact with an

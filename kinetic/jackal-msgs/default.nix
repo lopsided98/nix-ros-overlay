@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "92888cd04fe174debffc499b2e18ff39fb040e745321cc8f268e9834b3729ce2";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages exclusive to Jackal, especially for representing low-level motor commands and sensors.'';

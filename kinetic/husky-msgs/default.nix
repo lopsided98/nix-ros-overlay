@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4ebde2d186ea1d8672d28c703163ad857b4b65df17d4b16ce0ab628c0158a236";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for Clearpath Husky'';

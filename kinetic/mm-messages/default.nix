@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3459d98461dd72e3047d221663447115e445f9412205084f62d88b648d4e8a5e";
   };
 
+  buildInputs = [ ecl-containers nanomsg ecl-utilities ecl-build ];
   propagatedBuildInputs = [ ecl-containers nanomsg ecl-utilities ecl-build ];
-  nativeBuildInputs = [ ecl-containers nanomsg ecl-utilities catkin ecl-build ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definitions and serialisations for core messages.'';

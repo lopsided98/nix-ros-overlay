@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "82ace3f48d2683e856ce9459089f167235e8274e4a2e60a41b9e9939ce694ebc";
   };
 
+  buildInputs = [ moveit-experimental moveit-core pluginlib roscpp chomp-motion-planner ];
   checkInputs = [ rostest moveit-ros-planning-interface ];
   propagatedBuildInputs = [ pluginlib roscpp moveit-core ];
-  nativeBuildInputs = [ moveit-experimental moveit-core pluginlib catkin roscpp chomp-motion-planner ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The interface for using CHOMP within MoveIt!'';

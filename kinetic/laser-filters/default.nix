@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "1fda3b068605b6ce9553eb1d4f050ca8de9656c68a79803f81756b47de6bf05d";
   };
 
+  buildInputs = [ filters pluginlib tf sensor-msgs message-filters roscpp rostest angles laser-geometry ];
   propagatedBuildInputs = [ filters laser-geometry pluginlib angles tf sensor-msgs roscpp message-filters ];
-  nativeBuildInputs = [ filters pluginlib tf sensor-msgs catkin message-filters roscpp rostest angles laser-geometry ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Assorted filters designed to operate on 2D planar laser scanners,

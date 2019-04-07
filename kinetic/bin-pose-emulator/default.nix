@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "28a3761aec2c63b42f99aaca2fea78f9d6b48f155fe07d8635979153b3880dd5";
   };
 
+  buildInputs = [ libyamlcpp visualization-msgs bin-pose-msgs tf roscpp ];
   propagatedBuildInputs = [ libyamlcpp visualization-msgs bin-pose-msgs tf roscpp ];
-  nativeBuildInputs = [ libyamlcpp catkin visualization-msgs bin-pose-msgs tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>

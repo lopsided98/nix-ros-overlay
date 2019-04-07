@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4cbc68d5c798258cf24d035d72be27139e2dd18a68f8c42356ccc55c512747f7";
   };
 
+  buildInputs = [ move-base-msgs pr2-controllers-msgs dynamic-reconfigure actionlib-msgs actionlib rospy pr2-common-action-msgs pr2-msgs ];
   propagatedBuildInputs = [ move-base-msgs pr2-controllers-msgs dynamic-reconfigure actionlib-msgs actionlib rospy pr2-common-action-msgs pr2-msgs ];
-  nativeBuildInputs = [ pr2-controllers-msgs actionlib-msgs pr2-common-action-msgs catkin move-base-msgs actionlib dynamic-reconfigure rospy pr2-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''pr2_move_base'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "c9baa844569cef40231442ddd9bd68daeb4c9c93c98511cbe3f383b70393d095";
   };
 
+  buildInputs = [ std-msgs std-srvs tf roscpp ];
   propagatedBuildInputs = [ std-srvs message-runtime std-msgs tf roscpp ];
-  nativeBuildInputs = [ std-srvs std-msgs catkin tf roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The agvs_description package. Robot description. Urdf and mesh files.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "30d1768ad414151ea1e69f71dd154bb11e6c2ae76537a6cdde3e9fd8bfb4a6bd";
   };
 
+  buildInputs = [ boost tf message-filters roscpp laser-geometry nav-msgs message-generation eigen tf-conversions visualization-msgs ];
   propagatedBuildInputs = [ boost tf message-filters roscpp laser-geometry nav-msgs message-runtime eigen tf-conversions visualization-msgs ];
-  nativeBuildInputs = [ boost tf catkin message-filters roscpp laser-geometry nav-msgs message-generation eigen tf-conversions visualization-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_mapping is a SLAM approach that can be used without odometry as well as on platforms that exhibit roll/pitch motion (of the sensor, the platform or both).

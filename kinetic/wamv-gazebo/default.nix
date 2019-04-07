@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4038c6923a803b428329b65f796262626db1fe949d9213c36c7553f528da2867";
   };
 
+  buildInputs = [ velodyne-gazebo-plugins usv-gazebo-plugins xacro wamv-description ];
   propagatedBuildInputs = [ velodyne-gazebo-plugins usv-gazebo-plugins xacro wamv-description ];
-  nativeBuildInputs = [ usv-gazebo-plugins velodyne-gazebo-plugins catkin xacro wamv-description ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides templates and examples for integrating the WAM-V model into gazebo with dynamics, sensors, etc.'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d34fe2fbdd0aa77992a803495a43563145315c2d7e0ad1ac3229d2c194f5dd5d";
   };
 
+  buildInputs = [ pythonPackages.catkin-pkg roslint ];
   propagatedBuildInputs = [ rocon-console pythonPackages.rospkg roslaunch rocon-python-utils rocon-uri ];
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin roslint ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rocon_app_utilities package'';

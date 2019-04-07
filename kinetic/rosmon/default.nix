@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "8518757f656368a959cbdb9f8af2df9d0ee8640bf26deebfc07776600e8205c5";
   };
 
+  buildInputs = [ python rospack boost rosbash cmake-modules libyamlcpp rqt-gui qt5.qtbase roslib message-generation rqt-gui-cpp ncurses std-msgs roscpp ];
   checkInputs = [ pythonPackages.rospkg rostest catch-ros ];
   propagatedBuildInputs = [ rospack boost rosbash cmake-modules libyamlcpp rqt-gui roslib message-generation rqt-gui-cpp ncurses std-msgs roscpp ];
-  nativeBuildInputs = [ python rospack boost rosbash cmake-modules libyamlcpp rqt-gui catkin qt5.qtbase roslib message-generation rqt-gui-cpp ncurses std-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Node launcher and monitor for ROS. rosmon is a replacement

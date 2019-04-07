@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a6427b547fe2c4e026fc4dc52b7ed53c4d21a104cd5c9839274022385540c835";
   };
 
+  buildInputs = [ message-generation actionlib-msgs actionlib std-msgs roscpp ];
   propagatedBuildInputs = [ roscpp message-runtime actionlib ];
-  nativeBuildInputs = [ message-generation actionlib-msgs actionlib std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The actionlib_tutorials package'';

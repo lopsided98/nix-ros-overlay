@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f701d7e55980b2995cc26c417de11bd41f465eafdfd4a434e92756b1b99933ff";
   };
 
+  buildInputs = [ pythonPackages.catkin-pkg ];
   propagatedBuildInputs = [ rocon-console rosbash rospy roslaunch rocon-python-utils ];
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A multi-roslaunch (for single and multi-master systems).'';

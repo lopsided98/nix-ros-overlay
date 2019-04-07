@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8d8ded6c9745f78888e621e74090f34bd6f919d7d209a441c4fc170ccf2d2d0c";
   };
 
+  buildInputs = [ costmap-2d pluginlib cmake-modules sensor-msgs message-filters roscpp voxel-grid message-generation nav-msgs laser-geometry visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
   propagatedBuildInputs = [ costmap-2d pluginlib rosconsole sensor-msgs message-filters roscpp voxel-grid nav-msgs laser-geometry message-runtime visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
-  nativeBuildInputs = [ catkin nav-msgs pcl-ros std-msgs roscpp laser-geometry visualization-msgs tf pcl-conversions geometry-msgs costmap-2d pluginlib cmake-modules sensor-msgs message-filters voxel-grid message-generation dynamic-reconfigure map-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''include

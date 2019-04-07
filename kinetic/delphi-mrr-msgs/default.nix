@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8fb994bb02623ad2011740e1b929b4a935c6944ddaa18100ee09fb6d62e7624a";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message definitions for the Delphi MRR'';

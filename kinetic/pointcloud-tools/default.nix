@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "747fc3d2106b4952cbc9120a73215752e9203421976c6dc3526d21254b6904ce";
   };
 
+  buildInputs = [ nav-msgs pcl-ros std-msgs vtk sensor-msgs roscpp pcl-conversions ];
   propagatedBuildInputs = [ nav-msgs pcl-ros std-msgs vtk sensor-msgs roscpp pcl-conversions ];
-  nativeBuildInputs = [ nav-msgs catkin pcl-ros std-msgs vtk sensor-msgs roscpp pcl-conversions ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''pointcloud_tools'';

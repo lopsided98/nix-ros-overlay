@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "bea19bc2d54c5a09dc22c301ca24fbb1521c92c14443f72cc64affa68c2ecc27";
   };
 
+  buildInputs = [ cv-bridge ];
   propagatedBuildInputs = [ cv-bridge ];
-  nativeBuildInputs = [ catkin cv-bridge ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Experimental OpenCV functions'';

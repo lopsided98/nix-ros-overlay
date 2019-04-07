@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "76998d671893d077f5fe8a074f9c8bcef142956e81a5902250509a4d061d598a";
   };
 
+  buildInputs = [ rviz qt5.qtbase ];
   propagatedBuildInputs = [ rviz qt5.qtbase ];
-  nativeBuildInputs = [ catkin rviz qt5.qtbase ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Tutorials showing how to write plugins for RViz.'';

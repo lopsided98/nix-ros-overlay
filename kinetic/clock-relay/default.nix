@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "4fc68bffec25eb3c8e0b9c60bea8ad10c71a9abb2e784c8e2ad6404014218d0e";
   };
 
+  buildInputs = [ rosgraph-msgs roscpp message-relay ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ rosgraph-msgs roscpp message-relay ];
-  nativeBuildInputs = [ rosgraph-msgs catkin roscpp message-relay ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Specialization of message_relay for clock'';

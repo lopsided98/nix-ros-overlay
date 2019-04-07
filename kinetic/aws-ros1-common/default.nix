@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "1d5d17631e07c0bf544bb13ecfee572dff235e14239bd7e86ead078bc812dbc8";
   };
 
+  buildInputs = [ aws-common roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ aws-common roscpp ];
-  nativeBuildInputs = [ catkin aws-common roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common utilities for ROS1 nodes using Amazon Web Services'';

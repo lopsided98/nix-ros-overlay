@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "62a6785f3a50ee894b55b9f8bd094b13fe729467004e82662295da1f12251858";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a set of messages and services for using thormang3_walking_module.'';

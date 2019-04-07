@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "fc2982b4daed5a489be13143ffee1ba9d25f8c2eea9b6fcb9d123474f1c27153";
   };
 
+  buildInputs = [ costmap-2d rosconsole pluginlib cmake-modules pcl-conversions nav-core roscpp message-generation nav-msgs visualization-msgs pcl-ros tf netpbm geometry-msgs ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ costmap-2d rosconsole pluginlib tf nav-core roscpp nav-msgs message-runtime pcl-ros visualization-msgs pcl-conversions geometry-msgs ];
-  nativeBuildInputs = [ costmap-2d rosconsole pluginlib cmake-modules pcl-conversions nav-core catkin roscpp message-generation nav-msgs visualization-msgs pcl-ros tf netpbm geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''navfn provides a fast interpolated navigation function that can be used to create plans for

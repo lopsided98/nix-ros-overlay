@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "848c25e4cff02d007cce4da5e235fc75dc39d41a6c4fdd3278884ff297d750e9";
   };
 
+  buildInputs = [ message-generation actionlib-msgs std-msgs sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs std-msgs sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation actionlib-msgs std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for calibrating a robot'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d35e000a94e11dcc409b2718f46f86a5581b381c363e70c693edd02e52e61429";
   };
 
+  buildInputs = [ rqt-gui-py rostest roslint rospy roslaunch rqt-gui ];
   propagatedBuildInputs = [ rqt-gui-py control-msgs rospy trajectory-msgs rqt-gui ];
-  nativeBuildInputs = [ rqt-gui-py rostest catkin roslint rospy roslaunch rqt-gui ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rqt_joint_trajectory_plot package'';

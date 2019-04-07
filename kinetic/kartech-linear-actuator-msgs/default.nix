@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d6d6b78f353f2d0ac6f9a74038f2413f8afe9ed4b7977bd54280e933770eca62";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The kartech_linear_actuator_msgs package'';

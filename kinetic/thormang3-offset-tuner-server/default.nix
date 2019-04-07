@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "55295d0916ff373d54812e77783b2561f07bd48cd96aa97b18b4c6e0a0e0878d";
   };
 
+  buildInputs = [ libyamlcpp dynamixel-sdk thormang3-base-module std-msgs roscpp robotis-controller thormang3-offset-tuner-msgs ];
   propagatedBuildInputs = [ libyamlcpp dynamixel-sdk thormang3-base-module std-msgs roscpp robotis-controller thormang3-offset-tuner-msgs ];
-  nativeBuildInputs = [ libyamlcpp dynamixel-sdk thormang3-base-module std-msgs catkin roscpp robotis-controller thormang3-offset-tuner-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The offset_tuner_server package'';

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "df59d7a59fda9b319985dc04e146a6dfad289c54bf8898b12a4988b2bd83835b";
   };
 
+  buildInputs = [ tf2 roscpp urdf ];
   propagatedBuildInputs = [ tf2 roscpp urdf ];
-  nativeBuildInputs = [ tf2 catkin roscpp urdf ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Extract geometry value of a vehicle from urdf'';

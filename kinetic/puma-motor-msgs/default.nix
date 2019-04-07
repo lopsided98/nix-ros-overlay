@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2e0e778fc4066927acc564f167b321c407f71d8f6ea93c119d8377ba339c6873";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages specific to Puma.'';

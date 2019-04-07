@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "96b09fbf7dc2104408ebd2042b9008d315dd528525564789aa8c7a5bb5701ee2";
   };
 
+  buildInputs = [ tf2-geometry-msgs actionlib-msgs sensor-msgs nav-core roscpp tf2-ros move-base-msgs tf2 actionlib std-msgs visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ tf2-geometry-msgs actionlib-msgs sensor-msgs nav-core roscpp tf2-ros move-base-msgs tf2 actionlib std-msgs visualization-msgs geometry-msgs ];
-  nativeBuildInputs = [ tf2-geometry-msgs actionlib-msgs sensor-msgs nav-core catkin roscpp tf2-ros move-base-msgs tf2 actionlib std-msgs visualization-msgs geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Simple navigation package'';

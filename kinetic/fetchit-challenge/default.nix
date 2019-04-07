@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f3b2f364d011d27ee4b3be8038fed51b194bbe6baf8190e8b7ea55e7b9b78e63";
   };
 
+  buildInputs = [ gazebo-ros controller-manager robot-state-publisher rospy fetch-gazebo ];
   propagatedBuildInputs = [ gazebo-ros controller-manager robot-state-publisher effort-controllers rospy fetch-gazebo ];
-  nativeBuildInputs = [ gazebo-ros controller-manager robot-state-publisher rospy fetch-gazebo catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The fetchit_challenge package'';

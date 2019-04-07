@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "d052c675f08fd1db9327be3d0140b3b56d003d0f3aaff92b3fc5d139568b1786";
   };
 
+  buildInputs = [ omniorb utillinux doxygen ];
   propagatedBuildInputs = [ omniorb catkin utillinux ];
-  nativeBuildInputs = [ automake omniorb cmake utillinux libtool pkg-config doxygen ];
+  nativeBuildInputs = [ automake cmake libtool pkg-config ];
 
   meta = {
     description = ''<p>This package represents <a href="http://openrtm.org/">OpenRTM-aist</a> that's built within ROS eco system. Although being ROS-agnostic by itself, you can use this via ROS together with the packages in <a href="http://www.ros.org/wiki/rtmros_common">rtmros_common</a> that bridge between two framework.</p>

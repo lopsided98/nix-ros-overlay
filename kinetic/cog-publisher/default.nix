@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "15304f3b223acf45cbc5c8c5f5aaf16343ec71d15c5457134d2d1abe46dfa781";
   };
 
+  buildInputs = [ kdl-conversions kdl-parser tf2-geometry-msgs sensor-msgs roscpp tf2-ros tf2 urdf std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ kdl-conversions kdl-parser tf2-geometry-msgs sensor-msgs roscpp tf2-ros tf2 urdf std-msgs tf geometry-msgs ];
-  nativeBuildInputs = [ kdl-conversions kdl-parser tf2-geometry-msgs sensor-msgs catkin roscpp tf2-ros tf2 urdf std-msgs tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cog_publisher package'';

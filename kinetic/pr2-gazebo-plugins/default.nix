@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "9cea0ffba8f2902834e15f6dcba5b0a3f407694ea7063870854ab23b393ed66d";
   };
 
+  buildInputs = [ std-srvs pr2-hardware-interface orocos-kdl gazeboSimulator.gazebo cv-bridge polled-camera gazebo-plugins nav-msgs urdf rospy std-msgs diagnostic-msgs tf roscpp pr2-mechanism-model gazebo-msgs geometry-msgs image-transport sensor-msgs diagnostic-updater pr2-controller-manager message-generation message-runtime angles pr2-msgs ];
   propagatedBuildInputs = [ gazebo-ros pr2-hardware-interface orocos-kdl gazeboSimulator.gazebo cv-bridge polled-camera gazebo-plugins nav-msgs urdf rospy std-msgs diagnostic-msgs tf roscpp pr2-mechanism-model gazebo-msgs geometry-msgs image-transport sensor-msgs diagnostic-updater pr2-controller-manager message-generation message-runtime angles pr2-msgs ];
-  nativeBuildInputs = [ std-srvs pr2-hardware-interface orocos-kdl gazeboSimulator.gazebo cv-bridge catkin polled-camera gazebo-plugins nav-msgs urdf rospy std-msgs diagnostic-msgs tf roscpp pr2-mechanism-model gazebo-msgs geometry-msgs image-transport sensor-msgs diagnostic-updater pr2-controller-manager message-generation message-runtime angles pr2-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo Plugins for various PR2-specific sensors and actuators on the robot.'';

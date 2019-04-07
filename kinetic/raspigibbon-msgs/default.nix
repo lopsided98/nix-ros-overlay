@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "92f61325af35a9e01436e28c78ee37a0b2b242ce7b4798db001f7c4ed89a4c91";
   };
 
+  buildInputs = [ std-msgs sensor-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs sensor-msgs message-generation catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The raspigibbon_msgs package'';

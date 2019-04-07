@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b48b6e9d1ca0d048d451551b971d15faa21c373e0fab3107925384bf6387f7de";
   };
 
+  buildInputs = [ ecl-license ecl-errors ecl-config ];
   propagatedBuildInputs = [ ecl-license ecl-errors ecl-config ];
-  nativeBuildInputs = [ ecl-license catkin ecl-errors ecl-config ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Template based exceptions - these are simple and practical

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "55d6adaac409ced3a7ea834f55339b3d4e3a98bc81647658654a8fe38855e9d5";
   };
 
+  buildInputs = [ message-generation jsk-footstep-msgs pcl-msgs std-msgs sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ message-generation jsk-footstep-msgs pcl-msgs std-msgs sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ message-generation jsk-footstep-msgs pcl-msgs std-msgs sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for jsk_pcl_ros and jsk_perception.'';

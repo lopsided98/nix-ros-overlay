@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, hector-marker-drawing, roscpp, image-geometry, hector-nav-msgs, hector-worldmodel-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, tf, catkin, hector-marker-drawing, hector-nav-msgs, image-geometry, hector-worldmodel-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-hector-object-tracker";
   version = "0.3.4";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ecd9277505a8ac1f834315da62eaef06597ea2762bfd4593db597517f442c793";
   };
 
+  buildInputs = [ hector-worldmodel-msgs tf roscpp hector-marker-drawing hector-nav-msgs image-geometry ];
   propagatedBuildInputs = [ hector-worldmodel-msgs tf roscpp hector-marker-drawing hector-nav-msgs image-geometry ];
-  nativeBuildInputs = [ hector-worldmodel-msgs tf catkin roscpp hector-marker-drawing hector-nav-msgs image-geometry ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_object_tracker is the core package of hector_worldmodel. It listens to percept message from

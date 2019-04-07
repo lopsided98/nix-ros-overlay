@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a8aafe6029f2c0bb249388524edfb8ba4616d6aa24ef17c925ff775fbe6832e8";
   };
 
+  buildInputs = [ cv-bridge async-web-server-cpp webrtc image-transport nodelet roscpp ];
   propagatedBuildInputs = [ cv-bridge async-web-server-cpp webrtc image-transport nodelet roscpp ];
-  nativeBuildInputs = [ cv-bridge async-web-server-cpp webrtc image-transport catkin nodelet roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A collection of ROS utilities for using WebRTC with ROS'';

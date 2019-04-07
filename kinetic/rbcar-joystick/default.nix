@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "db5e41c29c92519214e12465cf9089f5bc7d34fb698daff0aa198ddbba8816c8";
   };
 
+  buildInputs = [ std-srvs geometry-msgs sensor-msgs robotnik-msgs diagnostic-updater nav-msgs std-msgs diagnostic-msgs roscpp ackermann-msgs ];
   propagatedBuildInputs = [ std-srvs geometry-msgs sensor-msgs robotnik-msgs diagnostic-updater nav-msgs std-msgs diagnostic-msgs roscpp ackermann-msgs ];
-  nativeBuildInputs = [ std-srvs geometry-msgs sensor-msgs catkin robotnik-msgs diagnostic-updater nav-msgs std-msgs diagnostic-msgs roscpp ackermann-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rbcar_joystick package'';

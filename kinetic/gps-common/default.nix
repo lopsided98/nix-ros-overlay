@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3827c093987666c0b823d42b095e3d9e7fbb6622333f14b0a62c9f7a54f0e209";
   };
 
+  buildInputs = [ nav-msgs message-generation rospy std-msgs sensor-msgs roscpp message-filters ];
   propagatedBuildInputs = [ nav-msgs message-runtime rospy std-msgs sensor-msgs roscpp message-filters ];
-  nativeBuildInputs = [ nav-msgs message-generation catkin rospy std-msgs sensor-msgs roscpp message-filters ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''GPS messages and common routines for use in GPS drivers'';

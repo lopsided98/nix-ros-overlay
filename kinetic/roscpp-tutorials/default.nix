@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, catkin, rostime, message-generation, message-runtime, roscpp-serialization, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, rosconsole, catkin, roscpp, message-generation, message-runtime, roscpp-serialization, std-msgs, rostime }:
 buildRosPackage {
   pname = "ros-kinetic-roscpp-tutorials";
   version = "0.7.1";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "f7650f9a85250adc854ef4d01bfd2376cbb4a5778f451fb8aa2ec63481756d95";
   };
 
+  buildInputs = [ message-generation rosconsole roscpp-serialization std-msgs rostime roscpp ];
   propagatedBuildInputs = [ rosconsole message-runtime roscpp-serialization std-msgs rostime roscpp ];
-  nativeBuildInputs = [ message-generation rosconsole roscpp-serialization std-msgs catkin rostime roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package attempts to show the features of ROS step-by-step,

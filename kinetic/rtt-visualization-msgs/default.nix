@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "e24ecfe1c4aed4f9234bc44b1c21e5443be28537d57ba4ba00fbe0d629d0bca2";
   };
 
+  buildInputs = [ rtt-roscomm rtt-geometry-msgs visualization-msgs rtt-std-msgs ];
   propagatedBuildInputs = [ rtt-roscomm rtt-geometry-msgs visualization-msgs rtt-std-msgs ];
-  nativeBuildInputs = [ rtt-geometry-msgs rtt-std-msgs rtt-roscomm catkin visualization-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides an rtt typekit for ROS visualization_msgs messages.

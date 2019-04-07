@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ea8bfa9c4d66a8f09f3c8ce6ed2a1ac7673bba0f40873a5490c46c9c4b570723";
   };
 
+  buildInputs = [ kdl-parser orocos-kdl eigen std-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp orocos-kdl ];
-  nativeBuildInputs = [ kdl-parser orocos-kdl eigen std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Saturation in the Null Space (SNS) Inverse Kinematic Library.

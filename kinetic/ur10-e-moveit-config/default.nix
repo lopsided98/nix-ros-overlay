@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "26195fd9ef4ddde7ebe8e1b00e7291c31ae3328652ab96f7622f9c97164c2d8e";
   };
 
+  buildInputs = [ ur-description ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization ur-description moveit-simple-controller-manager robot-state-publisher joint-state-publisher xacro moveit-planners-ompl ];
-  nativeBuildInputs = [ catkin ur-description ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the ur10e with the MoveIt Motion Planning Framework'';

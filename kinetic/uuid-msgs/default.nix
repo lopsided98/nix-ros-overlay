@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "48f1a7f03999df0e532ffdd6aea70920507c308c64b635cc7cf881462462534e";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for universally unique identifiers.'';

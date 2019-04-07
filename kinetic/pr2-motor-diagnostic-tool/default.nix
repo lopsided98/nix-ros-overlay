@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "2dd9f1c99a5c9aaf06ce9d1921bb4fbfe3a69153f199699d5b324ec47b82212d";
   };
 
+  buildInputs = [ pr2-mechanism-msgs rqt-gui-py pluginlib pr2-controller-interface rospy ethercat-hardware rqt-gui pr2-mechanism-model ];
   propagatedBuildInputs = [ pr2-mechanism-msgs rqt-gui-py pluginlib pr2-controller-interface rospy ethercat-hardware rqt-gui pr2-mechanism-model ];
-  nativeBuildInputs = [ pr2-mechanism-msgs rqt-gui-py pluginlib pr2-controller-interface ethercat-hardware rqt-gui catkin rospy pr2-mechanism-model ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''pr2_motor_diagnostic_tool'';

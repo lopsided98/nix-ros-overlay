@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a80177f9f8719b9c1a911b4cc118797c12e0ab6a6b0f7f162d8baef282dfd0ce";
   };
 
+  buildInputs = [ diagnostic-updater message-generation self-test dynamic-reconfigure std-msgs roscpp ];
   propagatedBuildInputs = [ diagnostic-updater message-runtime self-test dynamic-reconfigure std-msgs roscpp ];
-  nativeBuildInputs = [ diagnostic-updater message-generation self-test dynamic-reconfigure std-msgs catkin roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A framework for writing drivers that helps with runtime reconfiguration, diagnostics and self-test.

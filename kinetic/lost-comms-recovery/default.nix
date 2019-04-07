@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "faff7f1c50aa083d57a091bb6c229b2522293fda9df8c9a2c78dce4705755623";
   };
 
+  buildInputs = [ move-base-msgs actionlib actionlib-msgs rospy sensor-msgs geometry-msgs ];
   propagatedBuildInputs = [ move-base-msgs actionlib actionlib-msgs rospy sensor-msgs geometry-msgs ];
-  nativeBuildInputs = [ move-base-msgs actionlib actionlib-msgs rospy sensor-msgs catkin geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''If your robot loses connection to the base station it will stop motors or navigate home.'';

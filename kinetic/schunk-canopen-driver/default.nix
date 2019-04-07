@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "7f759e22ba5437b68850346429aa1b4bc1b6cb25252c1a571bb50c12f1ae7060";
   };
 
+  buildInputs = [ controller-manager hardware-interface std-srvs fzi-icl-core control-msgs joint-limits-interface sensor-msgs message-generation urdf fzi-icl-can actionlib std-msgs roscpp ];
   propagatedBuildInputs = [ controller-manager hardware-interface std-srvs fzi-icl-core control-msgs joint-limits-interface sensor-msgs urdf message-runtime robot-state-publisher actionlib std-msgs fzi-icl-can roscpp xacro ros-controllers ];
-  nativeBuildInputs = [ controller-manager hardware-interface std-srvs fzi-icl-core control-msgs joint-limits-interface sensor-msgs catkin message-generation urdf fzi-icl-can actionlib std-msgs roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The schunk_canopen_driver package'';

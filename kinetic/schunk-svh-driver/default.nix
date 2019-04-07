@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "454534ca0f2ab9dcaadac08692c0c972dcd737de3df41092ac28d0df03c2f7d8";
   };
 
+  buildInputs = [ rqt-gui-py fzi-icl-core fzi-icl-comm sensor-msgs rqt-gui rospy urdf dynamic-reconfigure std-msgs roscpp xacro ];
   propagatedBuildInputs = [ rqt-gui-py fzi-icl-core fzi-icl-comm sensor-msgs rqt-gui rospy urdf dynamic-reconfigure std-msgs roscpp xacro ];
-  nativeBuildInputs = [ rqt-gui-py fzi-icl-core fzi-icl-comm sensor-msgs rqt-gui catkin rospy urdf dynamic-reconfigure std-msgs roscpp xacro ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''SVH Driver wrapper to enable control of the Schunk five finger hand'';

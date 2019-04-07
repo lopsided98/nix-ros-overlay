@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "f09fba71a55b61b2d8d7a20684a7ccbf28fef7c462bf5b799dd9b6c90d1cbb54";
   };
 
+  buildInputs = [ rosconsole pluginlib moveit-ros-robot-interaction moveit-ros-perception class-loader roscpp moveit-ros-warehouse rviz interactive-markers geometric-shapes object-recognition-msgs rospy eigen-conversions tf moveit-ros-planning-interface eigen ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ pluginlib moveit-ros-perception moveit-ros-robot-interaction moveit-ros-warehouse rviz interactive-markers geometric-shapes object-recognition-msgs rospy roscpp moveit-ros-planning-interface ];
-  nativeBuildInputs = [ rosconsole pluginlib moveit-ros-robot-interaction moveit-ros-perception class-loader catkin roscpp pkg-config moveit-ros-warehouse rviz interactive-markers geometric-shapes object-recognition-msgs rospy eigen-conversions tf moveit-ros-planning-interface eigen ];
+  nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''Components of MoveIt! that offer visualization'';

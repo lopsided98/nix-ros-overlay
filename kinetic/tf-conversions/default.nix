@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kdl-conversions, cmake-modules, orocos-kdl, python-orocos-kdl, catkin, eigen, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, kdl-conversions, orocos-kdl, cmake-modules, python-orocos-kdl, catkin, eigen, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-tf-conversions";
   version = "1.11.9";
@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "8fee2dbf9f0fe32faf00d36aaaebb9a5d311b2ff9838c5ef8a7b409b4d655e86";
   };
 
+  buildInputs = [ kdl-conversions cmake-modules orocos-kdl eigen tf geometry-msgs ];
   propagatedBuildInputs = [ kdl-conversions orocos-kdl eigen python-orocos-kdl tf geometry-msgs ];
-  nativeBuildInputs = [ kdl-conversions cmake-modules orocos-kdl eigen catkin tf geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a set of conversion functions to convert

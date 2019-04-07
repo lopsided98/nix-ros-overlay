@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "ffb97cd951ccb490d46d778000482b59031d4c931cccdf611038fecbf9aa29aa";
   };
 
+  buildInputs = [ std-msgs xiaoqiang-driver message-runtime rospy ];
   propagatedBuildInputs = [ std-msgs xiaoqiang-driver message-runtime rospy ];
-  nativeBuildInputs = [ xiaoqiang-driver message-runtime rospy std-msgs catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''xiaoqiang controller package, use terminal to move xiaoqiang around'';

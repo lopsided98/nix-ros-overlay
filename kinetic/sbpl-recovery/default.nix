@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a115808f76c0af411478169c4de14e809274618006234a4a20cae744d4b38eb0";
   };
 
+  buildInputs = [ sbpl-lattice-planner pose-follower costmap-2d pluginlib base-local-planner nav-core roscpp ];
   propagatedBuildInputs = [ sbpl-lattice-planner pose-follower costmap-2d pluginlib base-local-planner nav-core roscpp ];
-  nativeBuildInputs = [ sbpl-lattice-planner pose-follower costmap-2d catkin pluginlib base-local-planner nav-core roscpp ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A recovery behavior that uses the sbpl lattice planner and the pose

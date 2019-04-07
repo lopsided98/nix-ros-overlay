@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "385de8d290eb6cb443e34d6796534eb49e6ace9fe28e01b71ecf89e03bfc69ad";
   };
 
+  buildInputs = [ gforth rospy ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ gforth rospy ];
-  nativeBuildInputs = [ catkin gforth rospy ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Source for the WGE100 Ethernet camera: Verilog source for the

@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4959e3047940b5ea5b3219209993dc31685c3750c86336bad04c63518ea0d21d";
   };
 
+  buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
-  nativeBuildInputs = [ std-msgs catkin message-generation ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used by the gateway model.'';

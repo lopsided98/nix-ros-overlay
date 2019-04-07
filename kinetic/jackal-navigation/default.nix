@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "4253f00535930e79559c60ff4f07918a03dd853792ab29c03747d9595865b02b";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gmapping map-server urdf amcl xacro move-base ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files and code for autonomous navigation of the Jackal'';

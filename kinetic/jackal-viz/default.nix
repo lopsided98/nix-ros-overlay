@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "b69377b82726124fa24f38c0c2ffda040469127e0073a33f83b0cbfa6ba8b38d";
   };
 
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ rviz joint-state-publisher jackal-description ];
-  nativeBuildInputs = [ roslaunch catkin ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Visualization launchers and helpers for Jackal.'';

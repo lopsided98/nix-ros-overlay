@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "26f9fb61066acef3154ee628653722ad7b2bf66ec9452af5cb3b06a0a081a1c9";
   };
 
-  nativeBuildInputs = [ rospack cmake-modules mk catkin rosbuild libtool ];
+  buildInputs = [ rospack cmake-modules mk rosbuild libtool ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''nlopt'';

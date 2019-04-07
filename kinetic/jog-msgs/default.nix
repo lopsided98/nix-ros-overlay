@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "3d5fa80e96a256cb5fd769a0b522562f3e615a9a128b7d5cd8f3f1f26209c470";
   };
 
+  buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
-  nativeBuildInputs = [ std-msgs catkin message-generation geometry-msgs ];
+  nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The jog_msgs package'';
