@@ -63,6 +63,10 @@ rosSelf: rosSuper: {
     cmakeFlags = cmakeFlags ++ [ "-DROS_BUILD_TYPE=1" ];
   });
 
+  # ROS kinetic and older provide their own OpenCV 3 package, because older
+  # Ubuntu versions did not have one. We don't need to use this.
+  inherit (self) opencv3;
+
   python-qt-binding = rosSuper.python-qt-binding.overrideDerivation ({
     patches ? [], ...
   }: {
