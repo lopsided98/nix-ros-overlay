@@ -74,6 +74,17 @@ rosSelf: rosSuper: {
     ];
   });
 
+  naoqi-libqi = rosSuper.naoqi-libqi.overrideDerivation ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = https://github.com/aldebaran/libqi/commit/9cb62b463bc9277d6083a50fdd0cef47172f944d.patch;
+        sha256 = "01z156yqrvd1vqsjidfzhnpgpxlb78svhpllszhji66s6hckr7cq";
+      })
+    ];
+  });
+
   # ROS kinetic and older provide their own OpenCV 3 package, because older
   # Ubuntu versions did not have one. We don't need to use this.
   inherit (self) opencv3;

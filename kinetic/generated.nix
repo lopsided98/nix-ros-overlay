@@ -88,6 +88,8 @@ self: super: {
 
  arbotix-sensors = self.callPackage ./arbotix-sensors {};
 
+ ardrone-autonomy = self.callPackage ./ardrone-autonomy {};
+
  arduino-daq = self.callPackage ./arduino-daq {};
 
  arm-navigation-msgs = self.callPackage ./arm-navigation-msgs {};
@@ -348,6 +350,8 @@ self: super: {
 
  cob-collision-velocity-filter = self.callPackage ./cob-collision-velocity-filter {};
 
+ cob-command-gui = self.callPackage ./cob-command-gui {};
+
  cob-command-tools = self.callPackage ./cob-command-tools {};
 
  cob-common = self.callPackage ./cob-common {};
@@ -422,6 +426,8 @@ self: super: {
 
  cob-model-identifier = self.callPackage ./cob-model-identifier {};
 
+ cob-monitoring = self.callPackage ./cob-monitoring {};
+
  cob-moveit-bringup = self.callPackage ./cob-moveit-bringup {};
 
  cob-moveit-config = self.callPackage ./cob-moveit-config {};
@@ -468,6 +474,8 @@ self: super: {
 
  cob-scan-unifier = self.callPackage ./cob-scan-unifier {};
 
+ cob-script-server = self.callPackage ./cob-script-server {};
+
  cob-sick-lms1xx = self.callPackage ./cob-sick-lms1xx {};
 
  cob-sick-s300 = self.callPackage ./cob-sick-s300 {};
@@ -493,6 +501,8 @@ self: super: {
  cob-utilities = self.callPackage ./cob-utilities {};
 
  cob-vision-utils = self.callPackage ./cob-vision-utils {};
+
+ cob-voltage-control = self.callPackage ./cob-voltage-control {};
 
  code-coverage = self.callPackage ./code-coverage {};
 
@@ -1082,6 +1092,8 @@ self: super: {
 
  gcloud-speech-msgs = self.callPackage ./gcloud-speech-msgs {};
 
+ gcloud-speech-utils = self.callPackage ./gcloud-speech-utils {};
+
  gencpp = self.callPackage ./gencpp {};
 
  generic-throttle = self.callPackage ./generic-throttle {};
@@ -1318,11 +1330,17 @@ self: super: {
 
  hpp-fcl = self.callPackage ./hpp-fcl {};
 
+ hrpsys = self.callPackage ./hrpsys {};
+
+ hrpsys-ros-bridge = self.callPackage ./hrpsys-ros-bridge {};
+
  hrpsys-tools = self.callPackage ./hrpsys-tools {};
 
  hsr-description = self.callPackage ./hsr-description {};
 
  hsr-meshes = self.callPackage ./hsr-meshes {};
+
+ hugin-panorama = self.callPackage ./hugin-panorama {};
 
  humanoid-localization = self.callPackage ./humanoid-localization {};
 
@@ -1931,6 +1949,8 @@ self: super: {
  marker-msgs = self.callPackage ./marker-msgs {};
 
  marker-rviz-plugin = self.callPackage ./marker-rviz-plugin {};
+
+ marshmallow = self.callPackage ./marshmallow {};
 
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
@@ -2942,6 +2962,8 @@ self: super: {
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
 
+ pyzmp = self.callPackage ./pyzmp {};
+
  qb-chain = self.callPackage ./qb-chain {};
 
  qb-chain-control = self.callPackage ./qb-chain-control {};
@@ -3103,6 +3125,8 @@ self: super: {
  realsense-camera = self.callPackage ./realsense-camera {};
 
  realtime-tools = self.callPackage ./realtime-tools {};
+
+ recordit = self.callPackage ./recordit {};
 
  resized-image-transport = self.callPackage ./resized-image-transport {};
 
@@ -3402,6 +3426,8 @@ self: super: {
 
  rosbag-migration-rule = self.callPackage ./rosbag-migration-rule {};
 
+ rosbag-pandas = self.callPackage ./rosbag-pandas {};
+
  rosbag-storage = self.callPackage ./rosbag-storage {};
 
  rosbaglive = self.callPackage ./rosbaglive {};
@@ -3563,6 +3589,8 @@ self: super: {
  rosservice = self.callPackage ./rosservice {};
 
  rostest = self.callPackage ./rostest {};
+
+ rostful = self.callPackage ./rostful {};
 
  rostime = self.callPackage ./rostime {};
 
@@ -3788,6 +3816,8 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ safe-teleop-base = self.callPackage ./safe-teleop-base {};
+
  safe-teleop-stage = self.callPackage ./safe-teleop-stage {};
 
  safety-limiter = self.callPackage ./safety-limiter {};
@@ -3908,6 +3938,8 @@ self: super: {
 
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 
+ spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
+
  speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
 
  spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
@@ -3992,6 +4024,8 @@ self: super: {
 
  swri-dbw-interface = self.callPackage ./swri-dbw-interface {};
 
+ swri-geometry-util = self.callPackage ./swri-geometry-util {};
+
  swri-image-util = self.callPackage ./swri-image-util {};
 
  swri-math-util = self.callPackage ./swri-math-util {};
@@ -4019,6 +4053,8 @@ self: super: {
  swri-string-util = self.callPackage ./swri-string-util {};
 
  swri-system-util = self.callPackage ./swri-system-util {};
+
+ swri-transform-util = self.callPackage ./swri-transform-util {};
 
  swri-yaml-util = self.callPackage ./swri-yaml-util {};
 
