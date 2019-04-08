@@ -2114,6 +2114,8 @@ self: super: {
 
  swri-dbw-interface = self.callPackage ./swri-dbw-interface {};
 
+ swri-geometry-util = self.callPackage ./swri-geometry-util {};
+
  swri-image-util = self.callPackage ./swri-image-util {};
 
  swri-math-util = self.callPackage ./swri-math-util {};
@@ -2135,6 +2137,8 @@ self: super: {
  swri-string-util = self.callPackage ./swri-string-util {};
 
  swri-system-util = self.callPackage ./swri-system-util {};
+
+ swri-transform-util = self.callPackage ./swri-transform-util {};
 
  swri-yaml-util = self.callPackage ./swri-yaml-util {};
 
