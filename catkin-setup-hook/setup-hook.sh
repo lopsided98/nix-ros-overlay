@@ -12,13 +12,13 @@ _findCatkinEnvHooks() {
   local pkg="$1"
   local pkgEnvHookDir="$pkg/etc/catkin/profile.d"
   # Deduplicate the packages
-  if [ -z "${_catkinPackagesSeen["$pkg"]}" ] && isCatkinPackage "$pkg"; then
+  if [ -z "${_catkinPackagesSeen["$pkg"]}" ] && isCatkinPackage "$pkg" && [ -d "$pkgEnvHookDir" ]; then
     while IFS= read -rd '' hook; do
-      _catkinGenericEnvHooks["$(basename "$hook")"]="$hook"
-    done < <(find "$pkgEnvHookDir" -name "*.sh" -print0)
-    while IFS= read -rd '' hook; do
-      _catkinSpecificEnvHooks["$(basename "$hook")"]="$hook"
-    done < <(find "$pkgEnvHookDir" -name "*.$CATKIN_SHELL" -print0)
+      case "$hook" in
+        *.sh) _catkinGenericEnvHooks["$(basename "$hook")"]="$hook" ;; #" (buggy syntax highlighting)
+        *) _catkinSpecificEnvHooks["$(basename "$hook")"]="$hook" ;; #"
+      esac
+    done < <(find "$pkgEnvHookDir" \( -name "*.sh" -o -name "*.$CATKIN_SHELL" \) -print0)
   fi
   _catkinPackagesSeen["$pkg"]=1
 }
