@@ -40,7 +40,7 @@ self: super: with self.lib; let
   in {
     # ROS package overrides/fixups
 
-    actionlib = rosSuper.actionlib.overrideDerivation ({
+    actionlib = rosSuper.actionlib.overrideAttrs ({
       patches ? [], ...
     }: {
       patches = patches ++ [
@@ -51,13 +51,13 @@ self: super: with self.lib; let
       ];
     });
 
-    camera-calibration-parsers = rosSuper.camera-calibration-parsers.overrideDerivation ({
+    camera-calibration-parsers = rosSuper.camera-calibration-parsers.overrideAttrs ({
       postPatch ? "", ...
     }: {
       postPatch = postPatch + patchBoostPython;
     });
 
-    catkin = rosSuper.catkin.overrideDerivation ({
+    catkin = rosSuper.catkin.overrideAttrs ({
       prePhases ? [],
       postPatch ? "", ...
     }: let
@@ -79,7 +79,7 @@ self: super: with self.lib; let
 
     # Packages that depend on catkin-pip still fail because they try to
     # download from the internet, but it should work outside of Nix builds.
-    catkin-pip = rosSuper.catkin-pip.overrideDerivation ({
+    catkin-pip = rosSuper.catkin-pip.overrideAttrs ({
       postPatch ? "", ...
     }: {
       postPatch = postPatch + ''
@@ -91,7 +91,7 @@ self: super: with self.lib; let
       '';
     });
 
-    cv-bridge = rosSuper.cv-bridge.overrideDerivation ({
+    cv-bridge = rosSuper.cv-bridge.overrideAttrs ({
       postPatch ? "",
       propagatedBuildInputs ? [], ...
     }: {
@@ -99,7 +99,7 @@ self: super: with self.lib; let
       propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.pythonPackages.opencv3 ];
     });
 
-    dynamic-reconfigure = rosSuper.dynamic-reconfigure.overrideDerivation ({
+    dynamic-reconfigure = rosSuper.dynamic-reconfigure.overrideAttrs ({
       postPatch ? "", ...
     }: {
       postPatch = postPatch + ''
@@ -108,13 +108,13 @@ self: super: with self.lib; let
       '';
     });
 
-    map-server = rosSuper.map-server.overrideDerivation ({
+    map-server = rosSuper.map-server.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
       nativeBuildInputs = nativeBuildInputs ++ [ self.pkgconfig ];
     });
 
-    python-qt-binding = rosSuper.python-qt-binding.overrideDerivation ({
+    python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
       propagatedNativeBuildInputs ? [],
       postPatch ? "", ...
     }: {
@@ -134,7 +134,7 @@ self: super: with self.lib; let
       '';
     });
 
-    rviz = rosSuper.rviz.overrideDerivation ({
+    rviz = rosSuper.rviz.overrideAttrs ({
       nativeBuildInputs ? [],
       postFixup ? "", ...
     }: {
@@ -146,7 +146,7 @@ self: super: with self.lib; let
       '' + postFixup;
     });
 
-    rqt-gui = rosSuper.rqt-gui.overrideDerivation ({
+    rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
       nativeBuildInputs ? [],
       postFixup ? "", ...
     }: {
@@ -158,7 +158,7 @@ self: super: with self.lib; let
       '' + postFixup;
     });
 
-    urdf = rosSuper.urdf.overrideDerivation ({
+    urdf = rosSuper.urdf.overrideAttrs ({
       postPatch ? "", ...
     }: {
       postPatch = postPatch + patchBoostPython;

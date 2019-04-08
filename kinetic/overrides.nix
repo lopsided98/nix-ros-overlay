@@ -10,7 +10,7 @@ rosSelf: rosSuper: {
   # compile.
   astra-camera = null;
 
-  catkin = rosSuper.catkin.overrideDerivation ({
+  catkin = rosSuper.catkin.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
@@ -25,7 +25,7 @@ rosSelf: rosSuper: {
     ];
   });
 
-  ecl-containers = rosSuper.ecl-containers.overrideDerivation ({
+  ecl-containers = rosSuper.ecl-containers.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
@@ -37,7 +37,7 @@ rosSelf: rosSuper: {
     ];
   });
 
-  joint-trajectory-generator = rosSuper.joint-trajectory-generator.overrideDerivation ({
+  joint-trajectory-generator = rosSuper.joint-trajectory-generator.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
@@ -49,13 +49,13 @@ rosSelf: rosSuper: {
     ];
   });
 
-  libfreenect = rosSuper.libfreenect.overrideDerivation ({
+  libfreenect = rosSuper.libfreenect.overrideAttrs ({
     buildInputs ? [], ...
   }: {
     buildInputs = buildInputs ++ [ self.libGL self.libGL.dev self.libGLU self.libGLU.dev ];
   });
 
-  librealsense = rosSuper.librealsense.overrideDerivation ({
+  librealsense = rosSuper.librealsense.overrideAttrs ({
     patches ? [],
     cmakeFlags ? [], ...
   }: {
@@ -63,7 +63,7 @@ rosSelf: rosSuper: {
     cmakeFlags = cmakeFlags ++ [ "-DROS_BUILD_TYPE=1" ];
   });
 
-  msp = rosSuper.msp.overrideDerivation ({
+  msp = rosSuper.msp.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
@@ -74,7 +74,7 @@ rosSelf: rosSuper: {
     ];
   });
 
-  naoqi-libqi = rosSuper.naoqi-libqi.overrideDerivation ({
+  naoqi-libqi = rosSuper.naoqi-libqi.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
@@ -89,7 +89,7 @@ rosSelf: rosSuper: {
   # Ubuntu versions did not have one. We don't need to use this.
   inherit (self) opencv3;
 
-  python-qt-binding = rosSuper.python-qt-binding.overrideDerivation ({
+  python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
@@ -100,7 +100,7 @@ rosSelf: rosSuper: {
     ];
   });
 
-  rospack = rosSuper.rospack.overrideDerivation ({
+  rospack = rosSuper.rospack.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
@@ -111,13 +111,13 @@ rosSelf: rosSuper: {
     ];
   });
   
-  realsense-camera = rosSuper.realsense-camera.overrideDerivation ({
+  realsense-camera = rosSuper.realsense-camera.overrideAttrs ({
     buildInputs ? [], ...
   }: {
     buildInputs = buildInputs ++ [ rosSelf.librealsense ];
   });
 
-  stage = rosSuper.stage.overrideDerivation ({
+  stage = rosSuper.stage.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
@@ -128,7 +128,7 @@ rosSelf: rosSuper: {
     ];
   });
   
-  tf2 = rosSuper.tf2.overrideDerivation ({
+  tf2 = rosSuper.tf2.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
