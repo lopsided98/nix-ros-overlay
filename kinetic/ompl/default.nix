@@ -9,7 +9,7 @@ buildRosPackage {
 
   src = fetchurl {
     url = https://github.com/ros-gbp/ompl-release/archive/release/kinetic/ompl/1.2.3-1.tar.gz;
-    sha256 = "3930855a0141df54e5c4758446f3aee262fdda700cbf3377b6044cf1ff7fa538";
+    sha256 = "c2a90683339a8607111609b1c04a168e33f789b550f4d897498bf73211143d4d";
   };
 
   buildInputs = [ cmake boost eigen ];
