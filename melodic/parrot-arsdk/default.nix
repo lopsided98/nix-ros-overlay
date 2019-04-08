@@ -9,7 +9,7 @@ buildRosPackage {
 
   src = fetchurl {
     url = https://github.com/AutonomyLab/parrot_arsdk-release/archive/release/melodic/parrot_arsdk/3.14.1-0.tar.gz;
-    sha256 = "7c12a877881ee154fb0899c3b8d365276cb5c7afc319859078e610ec06f66ec1";
+    sha256 = "0a18657e00b65da8ce70a45a210cf1a5a0725ed7daf2c865079501d2d6a9a146";
   };
 
   buildInputs = [ autoconf libtool ffmpeg automake unzip yasm nasm curl zlib ncurses avahi ];
