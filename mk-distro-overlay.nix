@@ -58,11 +58,12 @@ self: super: with self.lib; let
     });
 
     catkin = rosSuper.catkin.overrideDerivation ({
+      prePhases ? [],
       postPatch ? "", ...
     }: let
       setupHook = self.callPackage ./catkin-setup-hook { } distro;
     in {
-      prePhases = [ "setupPhase" ];
+      prePhases = prePhases ++ [ "setupPhase" ];
       # Catkin uses its own setup hook
       setupPhase = ''
         source "${setupHook}"
@@ -74,6 +75,20 @@ self: super: with self.lib; let
           --replace /usr/bin/env "${self.coreutils}/bin/env"
       '';
       inherit setupHook;
+    });
+
+    # Packages that depend on catkin-pip still fail because they try to
+    # download from the internet, but it should work outside of Nix builds.
+    catkin-pip = rosSuper.catkin-pip.overrideDerivation ({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+        patchShebangs cmake
+        substituteInPlace cmake/scripts/path_prepend.sh \
+          --replace /bin/sed "${self.gnused}/bin/sed"
+        substituteInPlace cmake/catkin-pip-prefix.cmake.in \
+          --replace NO_SYSTEM_ENVIRONMENT_PATH ""
+      '';
     });
 
     cv-bridge = rosSuper.cv-bridge.overrideDerivation ({
