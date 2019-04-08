@@ -63,6 +63,17 @@ rosSelf: rosSuper: {
     cmakeFlags = cmakeFlags ++ [ "-DROS_BUILD_TYPE=1" ];
   });
 
+  msp = rosSuper.msp.overrideDerivation ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = https://github.com/christianrauch/msp/commit/e0136692e0ecbaf8faf340fa3e58eae1e196e3e7.patch;
+        sha256 = "1imkrrznw9v18yk47hm2d4c66fbl300niy2433nqbf9mw54064m7";
+      })
+    ];
+  });
+
   # ROS kinetic and older provide their own OpenCV 3 package, because older
   # Ubuntu versions did not have one. We don't need to use this.
   inherit (self) opencv3;
