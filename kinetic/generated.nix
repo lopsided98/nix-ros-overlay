@@ -2056,8 +2056,6 @@ self: super: {
 
  mk = self.callPackage ./mk {};
 
- ml-classifiers = self.callPackage ./ml-classifiers {};
-
  mm-core-msgs = self.callPackage ./mm-core-msgs {};
 
  mm-eigen-msgs = self.callPackage ./mm-eigen-msgs {};
@@ -4619,6 +4617,8 @@ self: super: {
  web-video-server = self.callPackage ./web-video-server {};
 
  webargs = self.callPackage ./webargs {};
+
+ webkit-dependency = self.callPackage ./webkit-dependency {};
 
  webrtc = self.callPackage ./webrtc {};
 

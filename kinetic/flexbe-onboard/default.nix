@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, flexbe-msgs, catkin, smach-ros, rospy, flexbe-core }:
 buildRosPackage {
   pname = "ros-kinetic-flexbe-onboard";
-  version = "1.1.1";
+  version = "1.1.2";
 
   src = fetchurl {
-    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_onboard/1.1.1-0.tar.gz;
-    sha256 = "a8ce5d399b7b03b9ab6ec1f60dc46e8bdc4018a34d75e242020c57fbe54f38da";
+    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_onboard/1.1.2-0.tar.gz;
+    sha256 = "d2e5de652788e18a0c77f443fa59335d241973e2ffe6f7bf0472aa23c9890089";
   };
 
   propagatedBuildInputs = [ flexbe-msgs smach-ros flexbe-core rospy ];
