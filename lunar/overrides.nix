@@ -2,10 +2,6 @@
 self:
 # Distro package set
 rosSelf: rosSuper: {
-  gazeboSimulator = self.gazeboSimulator // {
-    gazebo = self.gazeboSimulator.gazebo7;
-  };
-
   catkin = rosSuper.catkin.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -19,6 +15,16 @@ rosSelf: rosSuper: {
         sha256 = "02i12935w119yyqvwlrd0w3z6xl786wlrkh49wsx6djaljhk3w3a";
       })
     ];
+  });
+
+  gazeboSimulator = self.gazeboSimulator // {
+    gazebo = self.gazeboSimulator.gazebo7;
+  };
+
+  libfreenect = rosSuper.libfreenect.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ self.libGL self.libGL.dev self.libGLU self.libGLU.dev ];
   });
 
   # ROS lunar and older provide their own OpenCV 3 package, because older
