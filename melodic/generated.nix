@@ -212,6 +212,12 @@ self: super: {
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
+ concert-msgs = self.callPackage ./concert-msgs {};
+
+ concert-service-msgs = self.callPackage ./concert-service-msgs {};
+
+ concert-workflow-engine-msgs = self.callPackage ./concert-workflow-engine-msgs {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -327,6 +333,10 @@ self: super: {
  dlux-plugins = self.callPackage ./dlux-plugins {};
 
  downward = self.callPackage ./downward {};
+
+ driver-base = self.callPackage ./driver-base {};
+
+ driver-common = self.callPackage ./driver-common {};
 
  dwa-local-planner = self.callPackage ./dwa-local-planner {};
 
@@ -579,6 +589,8 @@ self: super: {
  franka-description = self.callPackage ./franka-description {};
 
  freight-bringup = self.callPackage ./freight-bringup {};
+
+ gateway-msgs = self.callPackage ./gateway-msgs {};
 
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
@@ -1058,6 +1070,8 @@ self: super: {
 
  message-runtime = self.callPackage ./message-runtime {};
 
+ microstrain-3dmgx2-imu = self.callPackage ./microstrain-3dmgx2-imu {};
+
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
  mir-actions = self.callPackage ./mir-actions {};
@@ -1077,8 +1091,6 @@ self: super: {
  mir-robot = self.callPackage ./mir-robot {};
 
  mk = self.callPackage ./mk {};
-
- ml-classifiers = self.callPackage ./ml-classifiers {};
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
@@ -1708,6 +1720,20 @@ self: super: {
 
  robotis-manipulator = self.callPackage ./robotis-manipulator {};
 
+ rocon-app-manager-msgs = self.callPackage ./rocon-app-manager-msgs {};
+
+ rocon-device-msgs = self.callPackage ./rocon-device-msgs {};
+
+ rocon-interaction-msgs = self.callPackage ./rocon-interaction-msgs {};
+
+ rocon-msgs = self.callPackage ./rocon-msgs {};
+
+ rocon-service-pair-msgs = self.callPackage ./rocon-service-pair-msgs {};
+
+ rocon-std-msgs = self.callPackage ./rocon-std-msgs {};
+
+ rocon-tutorial-msgs = self.callPackage ./rocon-tutorial-msgs {};
+
  ros = self.callPackage ./ros {};
 
  ros-base = self.callPackage ./ros-base {};
@@ -2030,6 +2056,8 @@ self: super: {
 
  sbpl-recovery = self.callPackage ./sbpl-recovery {};
 
+ scheduler-msgs = self.callPackage ./scheduler-msgs {};
+
  schunk-description = self.callPackage ./schunk-description {};
 
  self-test = self.callPackage ./self-test {};
@@ -2195,6 +2223,8 @@ self: super: {
  theora-image-transport = self.callPackage ./theora-image-transport {};
 
  tile-map = self.callPackage ./tile-map {};
+
+ timestamp-tools = self.callPackage ./timestamp-tools {};
 
  topic-tools = self.callPackage ./topic-tools {};
 
@@ -2454,9 +2484,13 @@ self: super: {
 
  web-video-server = self.callPackage ./web-video-server {};
 
+ webkit-dependency = self.callPackage ./webkit-dependency {};
+
  webrtc = self.callPackage ./webrtc {};
 
  webrtc-ros = self.callPackage ./webrtc-ros {};
+
+ wifi-ddwrt = self.callPackage ./wifi-ddwrt {};
 
  willow-maps = self.callPackage ./willow-maps {};
 

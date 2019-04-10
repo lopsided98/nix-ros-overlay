@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, prbt-support, joint-limits-interface, catkin, rostest, code-coverage, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-pilz-extensions";
-  version = "0.4.2";
+  version = "0.4.3";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_extensions/0.4.2-0.tar.gz;
-    sha256 = "e424ed432021db160b038cfb5aadb2bec718f5b919a50bd9fabd47488df1a300";
+    url = https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_extensions/0.4.3-0.tar.gz;
+    sha256 = "74f0565360bf465292bf866c016f5a60513410823efac748cc7c50c893d732f7";
   };
 
   buildInputs = [ joint-limits-interface roscpp ];
