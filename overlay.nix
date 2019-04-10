@@ -10,6 +10,11 @@ self: super: {
       python = self.python3;
     } self super;
 
+    lunar = import ./mk-distro-overlay.nix {
+      distro = "lunar";
+      python = self.python2;
+    } self super;
+
     melodic = import ./mk-distro-overlay.nix {
       distro = "melodic";
       python = self.python3;
