@@ -24,4 +24,16 @@ rosSelf: rosSuper: {
   # ROS lunar and older provide their own OpenCV 3 package, because older
   # Ubuntu versions did not have one. We don't need to use this.
   inherit (self) opencv3;
+
+  tf2 = rosSuper.tf2.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = https://github.com/ros/geometry2/commit/0173a538f89c66e2783dc67ee3609660625e16b4.patch;
+        stripLen = 1;
+        sha256 = "0v1kxi4g1s3f8wf2q0yrb3y9mf5i0sjphnq0d2hxpspr21s1wki6";
+      })
+    ];
+  });
 }
