@@ -31,6 +31,17 @@ rosSelf: rosSuper: {
   # Ubuntu versions did not have one. We don't need to use this.
   inherit (self) opencv3;
 
+  python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = https://github.com/ros-visualization/python_qt_binding/commit/0a4893791039d5c3f851ee7bc2de832209d52f6d.patch;
+        sha256 = "0f1iqh7s0wnb2268lwc7r1pgmvalnjjyxy2v71iplw5wdib6bk6y";
+      })
+    ];
+  });
+
   tf2 = rosSuper.tf2.overrideAttrs ({
     patches ? [], ...
   }: {
