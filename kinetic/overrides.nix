@@ -2,10 +2,17 @@
 self:
 # Distro package set
 rosSelf: rosSuper: {
-  gazeboSimulator = self.gazeboSimulator // {
-    gazebo = self.gazeboSimulator.gazebo7;
-  };
-  
+  actionlib = rosSuper.actionlib.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = https://github.com/ros/actionlib/commit/677e952fcbfe49e6e4c5b835357f88740f49c6ff.patch;
+        sha256 = "0825w6r5kzz9y7syrrn6q1v0fjrd8qhn11rq2n4kc064702r8jf7";
+      })
+    ];
+  });
+
   # If anyone actually needs this package, its your problem to get it to
   # compile.
   astra-camera = null;
@@ -36,6 +43,10 @@ rosSelf: rosSuper: {
       })
     ];
   });
+
+  gazeboSimulator = self.gazeboSimulator // {
+    gazebo = self.gazeboSimulator.gazebo7;
+  };
 
   joint-trajectory-generator = rosSuper.joint-trajectory-generator.overrideAttrs ({
     patches ? [], ...

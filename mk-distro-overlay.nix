@@ -40,17 +40,6 @@ self: super: with self.lib; let
   in {
     # ROS package overrides/fixups
 
-    actionlib = rosSuper.actionlib.overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = patches ++ [
-        (self.fetchpatch {
-          url = https://github.com/ros/actionlib/commit/677e952fcbfe49e6e4c5b835357f88740f49c6ff.patch;
-          sha256 = "0825w6r5kzz9y7syrrn6q1v0fjrd8qhn11rq2n4kc064702r8jf7";
-        })
-      ];
-    });
-
     camera-calibration-parsers = rosSuper.camera-calibration-parsers.overrideAttrs ({
       postPatch ? "", ...
     }: {
