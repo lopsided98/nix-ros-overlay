@@ -85,7 +85,7 @@ rosSelf: rosSuper: {
     ];
   });
 
-  # ROS kinetic and older provide their own OpenCV 3 package, because older
+  # ROS lunar and older provide their own OpenCV 3 package, because older
   # Ubuntu versions did not have one. We don't need to use this.
   inherit (self) opencv3;
 
