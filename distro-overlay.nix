@@ -1,15 +1,8 @@
 { distro, python }:
-
-self: super: with self.lib; let
-
-  applyOverlays = self: super: overlays: let
-    curSuper = applyOverlays self super (init overlays);
-  in if length overlays == 0 then super
-     else curSuper // (last overlays) self curSuper;
-
-  mkOverlay = overlays: let
-    self = applyOverlays self {} overlays;
-  in self;
+self: super:
+with self.lib;
+with import ./mk-overlay.nix { inherit (self) lib; };
+let
 
   base = rosSelf: rosSuper: {
     callPackage = self.newScope rosSelf;

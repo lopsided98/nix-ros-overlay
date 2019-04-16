@@ -63,7 +63,7 @@ rosSelf: rosSuper: {
   libfreenect = rosSuper.libfreenect.overrideAttrs ({
     buildInputs ? [], ...
   }: {
-    buildInputs = buildInputs ++ [ self.libGL self.libGL.dev self.libGLU self.libGLU.dev ];
+    buildInputs = buildInputs ++ [ self.libGL self.libGLU ];
   });
 
   librealsense = rosSuper.librealsense.overrideAttrs ({
