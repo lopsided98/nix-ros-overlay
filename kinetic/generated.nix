@@ -724,14 +724,6 @@ self: super: {
 
  driver-common = self.callPackage ./driver-common {};
 
- duaro-description = self.callPackage ./duaro-description {};
-
- duaro-gazebo = self.callPackage ./duaro-gazebo {};
-
- duaro-ikfast-plugin = self.callPackage ./duaro-ikfast-plugin {};
-
- duaro-moveit-config = self.callPackage ./duaro-moveit-config {};
-
  dwa-local-planner = self.callPackage ./dwa-local-planner {};
 
  dwb-critics = self.callPackage ./dwb-critics {};
@@ -1670,6 +1662,14 @@ self: super: {
 
  key-teleop = self.callPackage ./key-teleop {};
 
+ khi-duaro-description = self.callPackage ./khi-duaro-description {};
+
+ khi-duaro-gazebo = self.callPackage ./khi-duaro-gazebo {};
+
+ khi-duaro-ikfast-plugin = self.callPackage ./khi-duaro-ikfast-plugin {};
+
+ khi-duaro-moveit-config = self.callPackage ./khi-duaro-moveit-config {};
+
  khi-robot = self.callPackage ./khi-robot {};
 
  khi-robot-bringup = self.callPackage ./khi-robot-bringup {};
@@ -1677,6 +1677,18 @@ self: super: {
  khi-robot-control = self.callPackage ./khi-robot-control {};
 
  khi-robot-msgs = self.callPackage ./khi-robot-msgs {};
+
+ khi-rs007l-moveit-config = self.callPackage ./khi-rs007l-moveit-config {};
+
+ khi-rs007n-moveit-config = self.callPackage ./khi-rs007n-moveit-config {};
+
+ khi-rs080n-moveit-config = self.callPackage ./khi-rs080n-moveit-config {};
+
+ khi-rs-description = self.callPackage ./khi-rs-description {};
+
+ khi-rs-gazebo = self.callPackage ./khi-rs-gazebo {};
+
+ khi-rs-ikfast-plugin = self.callPackage ./khi-rs-ikfast-plugin {};
 
  kinesis-manager = self.callPackage ./kinesis-manager {};
 
@@ -3707,18 +3719,6 @@ self: super: {
  rr-openrover-basic = self.callPackage ./rr-openrover-basic {};
 
  rr-swiftnav-piksi = self.callPackage ./rr-swiftnav-piksi {};
-
- rs007l-moveit-config = self.callPackage ./rs007l-moveit-config {};
-
- rs007n-moveit-config = self.callPackage ./rs007n-moveit-config {};
-
- rs080n-moveit-config = self.callPackage ./rs080n-moveit-config {};
-
- rs-description = self.callPackage ./rs-description {};
-
- rs-gazebo = self.callPackage ./rs-gazebo {};
-
- rs-ikfast-plugin = self.callPackage ./rs-ikfast-plugin {};
 
  rslidar = self.callPackage ./rslidar {};
 

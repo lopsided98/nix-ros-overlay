@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, tf, catkin, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt-tutorials";
-  version = "0.1.23";
+  version = "0.1.24";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_tutorials/0.1.23-0.tar.gz;
-    sha256 = "f31e873bb4a099bfc4e9a811a346c23dda6dcd68f8a40e311e28f648cebe01e3";
+    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_tutorials/0.1.24-0.tar.gz;
+    sha256 = "77503be354ea6ce0931130935c4b215bb8d68d395b5339014cdd1b39be26e6ce";
   };
 
   propagatedBuildInputs = [ tf teleop-twist-keyboard ];

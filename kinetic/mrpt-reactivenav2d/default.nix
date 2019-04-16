@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, dynamic-reconfigure, actionlib-msgs, tf, catkin, mrpt1, visualization-msgs, actionlib, mrpt-bridge, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt-reactivenav2d";
-  version = "0.1.23";
+  version = "0.1.24";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_reactivenav2d/0.1.23-0.tar.gz;
-    sha256 = "0aa5d7e0662feddb0723c99a653806e4eb6beb928ff068de65a1b1620014b4a5";
+    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_reactivenav2d/0.1.24-0.tar.gz;
+    sha256 = "6c0c1726cfc29045956a24fcec51ce0276c62ba8995b48ae2f54c3f61d77e625";
   };
 
   buildInputs = [ mrpt-bridge actionlib-msgs tf roscpp mrpt1 actionlib dynamic-reconfigure visualization-msgs geometry-msgs ];

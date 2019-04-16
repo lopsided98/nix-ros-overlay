@@ -4,12 +4,12 @@
 
 { lib, buildRosPackage, fetchurl, gazebo-ros, catkin, gazebo-ros-control }:
 buildRosPackage {
-  pname = "ros-kinetic-rs-gazebo";
-  version = "1.0.0";
+  pname = "ros-kinetic-khi-rs-gazebo";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/rs_gazebo/1.0.0-0.tar.gz;
-    sha256 = "c10be9ba6c0ce1663db745640122d82d5a0abcedc453899171ab4529f402b8f7";
+    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs_gazebo/1.1.0-1.tar.gz;
+    sha256 = "eb8f05d69a193f8d45733f5babbe970a54860cae0e37bbf2a88d504687863827";
   };
 
   buildInputs = [ gazebo-ros gazebo-ros-control ];
@@ -17,7 +17,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rs_gazebo package'';
+    description = ''The khi_rs_gazebo package'';
     #license = lib.licenses.BSD;
   };
 }

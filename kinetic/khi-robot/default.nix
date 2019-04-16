@@ -2,17 +2,17 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, khi-robot-control, catkin, khi-robot-bringup, rs007l-moveit-config, duaro-moveit-config, rs080n-moveit-config, duaro-description, duaro-ikfast-plugin, duaro-gazebo, rs007n-moveit-config, rs-gazebo, khi-robot-msgs, rs-description, rs-ikfast-plugin }:
+{ lib, buildRosPackage, fetchurl, khi-rs-gazebo, khi-duaro-gazebo, khi-duaro-ikfast-plugin, khi-robot-control, catkin, khi-robot-bringup, khi-duaro-moveit-config, khi-rs080n-moveit-config, khi-rs007l-moveit-config, khi-rs007n-moveit-config, khi-rs-ikfast-plugin, khi-robot-msgs, khi-duaro-description, khi-rs-description }:
 buildRosPackage {
   pname = "ros-kinetic-khi-robot";
-  version = "1.0.0";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_robot/1.0.0-0.tar.gz;
-    sha256 = "23ff741139a7355a1661b308583b680be28020b2b8cefdd730decfdd6f7effd0";
+    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_robot/1.1.0-1.tar.gz;
+    sha256 = "c1a8d3d7585f61b933b1f695b55bcbb860ae2205ecaf6aeb56182ab622208854";
   };
 
-  propagatedBuildInputs = [ rs-description khi-robot-control khi-robot-bringup rs007l-moveit-config duaro-moveit-config rs-ikfast-plugin duaro-description duaro-gazebo rs007n-moveit-config rs-gazebo khi-robot-msgs rs080n-moveit-config duaro-ikfast-plugin ];
+  propagatedBuildInputs = [ khi-rs-gazebo khi-duaro-gazebo khi-duaro-ikfast-plugin khi-robot-control khi-robot-bringup khi-duaro-moveit-config khi-rs080n-moveit-config khi-rs007l-moveit-config khi-rs007n-moveit-config khi-rs-ikfast-plugin khi-robot-msgs khi-duaro-description khi-rs-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

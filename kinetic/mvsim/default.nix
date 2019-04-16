@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, dynamic-reconfigure, sensor-msgs, catkin, roscpp, nav-msgs, mrpt1, message-generation, visualization-msgs, message-runtime, std-msgs, mrpt-bridge, tf }:
 buildRosPackage {
   pname = "ros-kinetic-mvsim";
-  version = "0.2.0";
+  version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/ual-arm-ros-pkg-release/mvsim-release/archive/release/kinetic/mvsim/0.2.0-0.tar.gz;
-    sha256 = "1a515ed7a40b86917533b8ccc7e6b7989dece2503fd6791287ae9f0357a0662e";
+    url = https://github.com/ual-arm-ros-pkg-release/mvsim-release/archive/release/kinetic/mvsim/0.2.1-0.tar.gz;
+    sha256 = "ba854c06a37cc8b5c4eb8d83b7695f99e859bc62c337a4f4f3a0a28d7dfe8203";
   };
 
   buildInputs = [ sensor-msgs roscpp nav-msgs message-generation message-runtime mrpt1 dynamic-reconfigure std-msgs visualization-msgs mrpt-bridge tf ];

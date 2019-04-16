@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, nav-msgs, mrpt-msgs, mrpt1, dynamic-reconfigure, std-msgs, mrpt-bridge, roscpp, pose-cov-ops }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt-localization";
-  version = "0.1.23";
+  version = "0.1.24";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_localization/0.1.23-0.tar.gz;
-    sha256 = "0de8db9f42db27e3a0f93de47b8b67b4aa76bd03d3d19b76171d0a2fd7d27d31";
+    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_localization/0.1.24-0.tar.gz;
+    sha256 = "9737bdc19495acfce6722e71a6c2f33dfbc56174021588e4aa324fe305462b46";
   };
 
   buildInputs = [ tf sensor-msgs nav-msgs mrpt-msgs mrpt1 dynamic-reconfigure std-msgs mrpt-bridge roscpp pose-cov-ops ];
