@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslaunch, tf, sensor-msgs, catkin, mrpt-rawlog, roslib, nav-msgs, mrpt1, rviz, visualization-msgs, dynamic-reconfigure, std-msgs, mrpt-bridge, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-icp-slam-2d";
-  version = "0.1.8";
+  version = "0.1.9";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/melodic/mrpt_icp_slam_2d/0.1.8-0.tar.gz;
-    sha256 = "a758de5b3c03eb824046bbc33e13759b0c233f87583b39f73b6689ba717a3846";
+    url = https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/melodic/mrpt_icp_slam_2d/0.1.9-0.tar.gz;
+    sha256 = "aca7e53d844693e92f1d043660b5982dce6739932f68f63943fb87763bb6a616";
   };
 
   buildInputs = [ mrpt-bridge tf sensor-msgs roscpp nav-msgs mrpt1 visualization-msgs dynamic-reconfigure std-msgs roslaunch roslib ];

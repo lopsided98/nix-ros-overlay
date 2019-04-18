@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, prbt-pg70-support, catkin }:
 buildRosPackage {
   pname = "ros-melodic-prbt-grippers";
-  version = "0.0.1";
+  version = "0.0.2";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/prbt_grippers-release/archive/release/melodic/prbt_grippers/0.0.1-0.tar.gz;
-    sha256 = "9fa5eb2334d8d788cfa9d111db851ee031c92afea5367ba347999641885aac5c";
+    url = https://github.com/PilzDE/prbt_grippers-release/archive/release/melodic/prbt_grippers/0.0.2-0.tar.gz;
+    sha256 = "49a1079006c4814d2f82525a088bb46c449637d9454d5e15818d2a2194280cbb";
   };
 
   propagatedBuildInputs = [ prbt-pg70-support ];

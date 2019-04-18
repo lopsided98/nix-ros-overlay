@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, marker-msgs, tf, rosbag, catkin, sensor-msgs, nav-msgs, mrpt-msgs, mrpt1, dynamic-reconfigure, std-msgs, mrpt-bridge, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-rawlog";
-  version = "0.1.22";
+  version = "0.1.24";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_rawlog/0.1.22-0.tar.gz;
-    sha256 = "96ccf33cb252bc9dadc410fc8588e7fae75559a5f3d9f6d32fdd4f95f2a99337";
+    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_rawlog/0.1.24-0.tar.gz;
+    sha256 = "ba078d9fd48fddd9d067b7961f4102594d598ae3929b4146dce99793ca31479b";
   };
 
   buildInputs = [ marker-msgs tf rosbag sensor-msgs nav-msgs mrpt-msgs mrpt1 dynamic-reconfigure std-msgs mrpt-bridge roscpp ];

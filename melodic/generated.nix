@@ -1024,6 +1024,8 @@ self: super: {
 
  marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
 
+ master-discovery-fkie = self.callPackage ./master-discovery-fkie {};
+
  master-sync-fkie = self.callPackage ./master-sync-fkie {};
 
  mav-comm = self.callPackage ./mav-comm {};
@@ -1205,6 +1207,8 @@ self: super: {
  multi-interface-roam = self.callPackage ./multi-interface-roam {};
 
  multi-map-server = self.callPackage ./multi-map-server {};
+
+ multi-object-tracking-lidar = self.callPackage ./multi-object-tracking-lidar {};
 
  multimaster-fkie = self.callPackage ./multimaster-fkie {};
 
@@ -1684,6 +1688,12 @@ self: super: {
 
  respeaker-ros = self.callPackage ./respeaker-ros {};
 
+ rexrov2-control = self.callPackage ./rexrov2-control {};
+
+ rexrov2-description = self.callPackage ./rexrov2-description {};
+
+ rexrov2-gazebo = self.callPackage ./rexrov2-gazebo {};
+
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
  robot = self.callPackage ./robot {};
@@ -1722,17 +1732,45 @@ self: super: {
 
  rocon-app-manager-msgs = self.callPackage ./rocon-app-manager-msgs {};
 
+ rocon-bubble-icons = self.callPackage ./rocon-bubble-icons {};
+
+ rocon-console = self.callPackage ./rocon-console {};
+
  rocon-device-msgs = self.callPackage ./rocon-device-msgs {};
+
+ rocon-ebnf = self.callPackage ./rocon-ebnf {};
+
+ rocon-icons = self.callPackage ./rocon-icons {};
 
  rocon-interaction-msgs = self.callPackage ./rocon-interaction-msgs {};
 
+ rocon-interactions = self.callPackage ./rocon-interactions {};
+
+ rocon-launch = self.callPackage ./rocon-launch {};
+
+ rocon-master-info = self.callPackage ./rocon-master-info {};
+
  rocon-msgs = self.callPackage ./rocon-msgs {};
+
+ rocon-python-comms = self.callPackage ./rocon-python-comms {};
+
+ rocon-python-redis = self.callPackage ./rocon-python-redis {};
+
+ rocon-python-utils = self.callPackage ./rocon-python-utils {};
+
+ rocon-python-wifi = self.callPackage ./rocon-python-wifi {};
+
+ rocon-semantic-version = self.callPackage ./rocon-semantic-version {};
 
  rocon-service-pair-msgs = self.callPackage ./rocon-service-pair-msgs {};
 
  rocon-std-msgs = self.callPackage ./rocon-std-msgs {};
 
+ rocon-tools = self.callPackage ./rocon-tools {};
+
  rocon-tutorial-msgs = self.callPackage ./rocon-tutorial-msgs {};
+
+ rocon-uri = self.callPackage ./rocon-uri {};
 
  ros = self.callPackage ./ros {};
 
