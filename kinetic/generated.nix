@@ -1982,6 +1982,8 @@ self: super: {
 
  marvelmind-nav = self.callPackage ./marvelmind-nav {};
 
+ master-discovery-fkie = self.callPackage ./master-discovery-fkie {};
+
  master-sync-fkie = self.callPackage ./master-sync-fkie {};
 
  mav-comm = self.callPackage ./mav-comm {};
@@ -2170,6 +2172,14 @@ self: super: {
 
  mrpt-bridge = self.callPackage ./mrpt-bridge {};
 
+ mrpt-ekf-slam-2d = self.callPackage ./mrpt-ekf-slam-2d {};
+
+ mrpt-ekf-slam-3d = self.callPackage ./mrpt-ekf-slam-3d {};
+
+ mrpt-graphslam-2d = self.callPackage ./mrpt-graphslam-2d {};
+
+ mrpt-icp-slam-2d = self.callPackage ./mrpt-icp-slam-2d {};
+
  mrpt-local-obstacles = self.callPackage ./mrpt-local-obstacles {};
 
  mrpt-localization = self.callPackage ./mrpt-localization {};
@@ -2181,6 +2191,8 @@ self: super: {
  mrpt-navigation = self.callPackage ./mrpt-navigation {};
 
  mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
+
+ mrpt-rbpf-slam = self.callPackage ./mrpt-rbpf-slam {};
 
  mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
 
@@ -2203,6 +2215,8 @@ self: super: {
  multi-jackal-tutorials = self.callPackage ./multi-jackal-tutorials {};
 
  multi-map-server = self.callPackage ./multi-map-server {};
+
+ multi-object-tracking-lidar = self.callPackage ./multi-object-tracking-lidar {};
 
  multikey-teleop = self.callPackage ./multikey-teleop {};
 
@@ -3143,6 +3157,12 @@ self: super: {
  resource-retriever = self.callPackage ./resource-retriever {};
 
  respeaker-ros = self.callPackage ./respeaker-ros {};
+
+ rexrov2-control = self.callPackage ./rexrov2-control {};
+
+ rexrov2-description = self.callPackage ./rexrov2-description {};
+
+ rexrov2-gazebo = self.callPackage ./rexrov2-gazebo {};
 
  rfsm = self.callPackage ./rfsm {};
 
