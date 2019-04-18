@@ -96,6 +96,14 @@ let
       nativeBuildInputs = nativeBuildInputs ++ [ self.pkgconfig ];
     });
 
+    message-relay = rosSuper.message-relay.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+        patchShebangs scripts
+      '';
+    });
+
     microstrain-3dmgx2-imu = rosSuper.microstrain-3dmgx2-imu.overrideAttrs ({
       patches ? [], ...
     }: {
