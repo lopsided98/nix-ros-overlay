@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "rospkg";
-  version = "1.1.7";
+  version = "1.1.9";
   
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1axj16vc145njnn6hq8yxrkb0k2fysca5f87zmib6lba7bhiisf6";
+    sha256 = "0kkmvkc7m3j14xmq1523h8d1hvi4cv06myhxw3dxsdb4yf9qa0q0";
   };
 
   propagatedBuildInputs = [ catkin-pkg pyyaml ];
