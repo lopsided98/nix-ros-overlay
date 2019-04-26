@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-asmach";
-  version = "1.0.15";
+  version = "1.0.13-r2";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/asmach/1.0.15-0.tar.gz;
-    sha256 = "2cbe0026c3049a87ad441da973dc32f6f3b406a385184d7f51683d1b01168f43";
+    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/asmach/1.0.13-2.tar.gz;
+    sha256 = "67a3b18eccdf4d0a02c7459cb3af8c367f16bc45a0dcfb66f84c293b618e30e1";
   };
 
   nativeBuildInputs = [ catkin ];

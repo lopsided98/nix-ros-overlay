@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, image-proc, image-transport, rosbag, cv-bridge, catkin, rosservice, topic-tools, rostest, message-generation, rostopic, image-view, nodelet, std-msgs, message-runtime, dynamic-reconfigure, roscpp, compressed-image-transport }:
+{ lib, buildRosPackage, fetchurl, cv-bridge, rosservice, image-view, image-transport, message-generation, message-runtime, image-proc, roslaunch, std-srvs, rosbag, catkin, std-msgs, nodelet, roscpp, compressed-image-transport, sensor-msgs, rostest, rostopic, dynamic-reconfigure, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-opencv-apps";
-  version = "2.0.0";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-perception/opencv_apps-release/archive/release/melodic/opencv_apps/2.0.0-0.tar.gz;
-    sha256 = "8dfed794573f2526432a6d0066f5af7158d2b405ebd78eec02d14e86872266c0";
+    url = https://github.com/ros-perception/opencv_apps-release/archive/release/melodic/opencv_apps/2.0.1-1.tar.gz;
+    sha256 = "11489debf5d3b3dc194472f483d67857db62f76665f6785ad4f55882c4e4d3dc";
   };
 
-  buildInputs = [ std-srvs message-generation cv-bridge nodelet dynamic-reconfigure std-msgs image-transport roscpp ];
-  checkInputs = [ rostest rostopic image-view topic-tools rosbag image-proc compressed-image-transport rosservice ];
-  propagatedBuildInputs = [ std-srvs cv-bridge message-runtime nodelet dynamic-reconfigure std-msgs image-transport roscpp ];
+  buildInputs = [ std-srvs image-transport sensor-msgs cv-bridge roscpp message-generation dynamic-reconfigure std-msgs nodelet ];
+  checkInputs = [ image-proc rosbag rosservice rostest rostopic image-view topic-tools roslaunch compressed-image-transport ];
+  propagatedBuildInputs = [ std-srvs image-transport sensor-msgs cv-bridge roscpp message-runtime dynamic-reconfigure std-msgs nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

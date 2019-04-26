@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, access-point-control, catkin, ieee80211-channels, rospy, dynamic-reconfigure }:
 buildRosPackage {
   pname = "ros-melodic-ddwrt-access-point";
-  version = "1.0.15";
+  version = "1.0.13-r2";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/ddwrt_access_point/1.0.15-0.tar.gz;
-    sha256 = "29bee91fa257585b0337e149aef9ff31390ae5bf538519b0c37ad8ca1b258927";
+    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/ddwrt_access_point/1.0.13-2.tar.gz;
+    sha256 = "51ff9825669976f1466b3c8c58a429f3a1e52dc108e007d717b78a7c74497d97";
   };
 
   buildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];

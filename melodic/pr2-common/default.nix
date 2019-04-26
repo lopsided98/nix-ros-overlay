@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pr2-description, catkin, pr2-machine, pr2-dashboard-aggregator, pr2-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2-common";
-  version = "1.12.3";
+  version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_common/1.12.3-0.tar.gz;
-    sha256 = "0b6419b86aa4b12d30fa7b1569899a5dc61bcd78a19049a0a7d23e15d1a1a0a9";
+    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_common/1.12.4-1.tar.gz;
+    sha256 = "a079541b7d696b2a3755aaef63c34e720a67d9c5700fa0acc3a9fa9167745283";
   };
 
   propagatedBuildInputs = [ pr2-machine pr2-dashboard-aggregator pr2-msgs pr2-description ];

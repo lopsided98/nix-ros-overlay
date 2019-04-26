@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, pr2-msgs, catkin, rospy }:
 buildRosPackage {
   pname = "ros-melodic-pr2-dashboard-aggregator";
-  version = "1.12.3";
+  version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_dashboard_aggregator/1.12.3-0.tar.gz;
-    sha256 = "50c10a982c9d7fe6b1d6f64f73bcdaa207b5a8f76ddd867ff146114e1ba020c4";
+    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_dashboard_aggregator/1.12.4-1.tar.gz;
+    sha256 = "59e2885baab0aae9d693d4fc6b659a37b4f88ea3331f3e9c38c2e9cc22878576";
   };
 
   propagatedBuildInputs = [ std-msgs pr2-msgs rospy ];

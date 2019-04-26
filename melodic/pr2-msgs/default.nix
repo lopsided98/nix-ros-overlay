@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2-msgs";
-  version = "1.12.3";
+  version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_msgs/1.12.3-0.tar.gz;
-    sha256 = "9ced0d809f30168f7a97b29da6230c99e19011a5b4416111f02bc62f5e35b8d2";
+    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_msgs/1.12.4-1.tar.gz;
+    sha256 = "c0553181a4afd5606bb87f39fa2710ac6c7c1a6afc99d99bfc657218cba9a7e4";
   };
 
   buildInputs = [ std-msgs message-generation geometry-msgs ];

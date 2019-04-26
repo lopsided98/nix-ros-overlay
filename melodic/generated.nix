@@ -46,6 +46,8 @@ self: super: {
 
  arbotix-sensors = self.callPackage ./arbotix-sensors {};
 
+ ariles-ros = self.callPackage ./ariles-ros {};
+
  asmach = self.callPackage ./asmach {};
 
  asmach-tutorials = self.callPackage ./asmach-tutorials {};
@@ -310,6 +312,12 @@ self: super: {
 
  derived-object-msgs = self.callPackage ./derived-object-msgs {};
 
+ desistek-saga-control = self.callPackage ./desistek-saga-control {};
+
+ desistek-saga-description = self.callPackage ./desistek-saga-description {};
+
+ desistek-saga-gazebo = self.callPackage ./desistek-saga-gazebo {};
+
  desktop = self.callPackage ./desktop {};
 
  desktop-full = self.callPackage ./desktop-full {};
@@ -373,6 +381,12 @@ self: super: {
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
  easy-markers = self.callPackage ./easy-markers {};
+
+ eca-a9-control = self.callPackage ./eca-a9-control {};
+
+ eca-a9-description = self.callPackage ./eca-a9-description {};
+
+ eca-a9-gazebo = self.callPackage ./eca-a9-gazebo {};
 
  ecl = self.callPackage ./ecl {};
 
@@ -928,6 +942,12 @@ self: super: {
 
  laser-proc = self.callPackage ./laser-proc {};
 
+ lauv-control = self.callPackage ./lauv-control {};
+
+ lauv-description = self.callPackage ./lauv-description {};
+
+ lauv-gazebo = self.callPackage ./lauv-gazebo {};
+
  leg-detector = self.callPackage ./leg-detector {};
 
  lex-common-msgs = self.callPackage ./lex-common-msgs {};
@@ -1336,6 +1356,8 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
+ omron-os32c-driver = self.callPackage ./omron-os32c-driver {};
+
  open-karto = self.callPackage ./open-karto {};
 
  open-manipulator = self.callPackage ./open-manipulator {};
@@ -1516,6 +1538,8 @@ self: super: {
 
  pr2-common-actions = self.callPackage ./pr2-common-actions {};
 
+ pr2-controller-configuration-gazebo = self.callPackage ./pr2-controller-configuration-gazebo {};
+
  pr2-controller-interface = self.callPackage ./pr2-controller-interface {};
 
  pr2-controller-manager = self.callPackage ./pr2-controller-manager {};
@@ -1529,6 +1553,10 @@ self: super: {
  pr2-description = self.callPackage ./pr2-description {};
 
  pr2-ethercat-drivers = self.callPackage ./pr2-ethercat-drivers {};
+
+ pr2-gazebo = self.callPackage ./pr2-gazebo {};
+
+ pr2-gazebo-plugins = self.callPackage ./pr2-gazebo-plugins {};
 
  pr2-gripper-action = self.callPackage ./pr2-gripper-action {};
 
@@ -1559,6 +1587,8 @@ self: super: {
  pr2-power-board = self.callPackage ./pr2-power-board {};
 
  pr2-power-drivers = self.callPackage ./pr2-power-drivers {};
+
+ pr2-simulator = self.callPackage ./pr2-simulator {};
 
  pr2-teleop = self.callPackage ./pr2-teleop {};
 
@@ -1651,6 +1681,8 @@ self: super: {
  qt-gui-py-common = self.callPackage ./qt-gui-py-common {};
 
  qt-qmake = self.callPackage ./qt-qmake {};
+
+ quaternion-operation = self.callPackage ./quaternion-operation {};
 
  qwt-dependency = self.callPackage ./qwt-dependency {};
 
@@ -1815,6 +1847,8 @@ self: super: {
  rosbag = self.callPackage ./rosbag {};
 
  rosbag-migration-rule = self.callPackage ./rosbag-migration-rule {};
+
+ rosbag-pandas = self.callPackage ./rosbag-pandas {};
 
  rosbag-storage = self.callPackage ./rosbag-storage {};
 
