@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pr2-description, catkin, pr2-machine, pr2-dashboard-aggregator, pr2-msgs }:
 buildRosPackage {
   pname = "ros-lunar-pr2-common";
-  version = "1.12.2";
+  version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/lunar/pr2_common/1.12.2-0.tar.gz;
-    sha256 = "cfbd0fa8078999e82e76ed2966c5aee0fc5fa5dd8060b75d09ab363319b94258";
+    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/lunar/pr2_common/1.12.4-1.tar.gz;
+    sha256 = "1ca98fc773b0137159bc5d61d394920e40def8cd1f58c922ff668022de2ed649";
   };
 
   propagatedBuildInputs = [ pr2-machine pr2-dashboard-aggregator pr2-msgs pr2-description ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-lunar-pr2-machine";
-  version = "1.12.2";
+  version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/lunar/pr2_machine/1.12.2-0.tar.gz;
-    sha256 = "d2cd1bd3fc987cc7efec70c4e5ca938771d3d20a5d39c4c1ebf4ba14241fc036";
+    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/lunar/pr2_machine/1.12.4-1.tar.gz;
+    sha256 = "7d57e59951efedb9fb1ec06c31b9a7f28da770c4eb6fb5c93042b1f9a6697da2";
   };
 
   nativeBuildInputs = [ catkin ];

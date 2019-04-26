@@ -218,6 +218,12 @@ self: super: {
 
  derived-object-msgs = self.callPackage ./derived-object-msgs {};
 
+ desistek-saga-control = self.callPackage ./desistek-saga-control {};
+
+ desistek-saga-description = self.callPackage ./desistek-saga-description {};
+
+ desistek-saga-gazebo = self.callPackage ./desistek-saga-gazebo {};
+
  desktop = self.callPackage ./desktop {};
 
  desktop-full = self.callPackage ./desktop-full {};
@@ -265,6 +271,12 @@ self: super: {
  dynpick-driver = self.callPackage ./dynpick-driver {};
 
  easy-markers = self.callPackage ./easy-markers {};
+
+ eca-a9-control = self.callPackage ./eca-a9-control {};
+
+ eca-a9-description = self.callPackage ./eca-a9-description {};
+
+ eca-a9-gazebo = self.callPackage ./eca-a9-gazebo {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
@@ -640,6 +652,12 @@ self: super: {
 
  laser-proc = self.callPackage ./laser-proc {};
 
+ lauv-control = self.callPackage ./lauv-control {};
+
+ lauv-description = self.callPackage ./lauv-description {};
+
+ lauv-gazebo = self.callPackage ./lauv-gazebo {};
+
  leg-detector = self.callPackage ./leg-detector {};
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
@@ -857,6 +875,8 @@ self: super: {
  mqtt-bridge = self.callPackage ./mqtt-bridge {};
 
  multi-interface-roam = self.callPackage ./multi-interface-roam {};
+
+ multi-object-tracking-lidar = self.callPackage ./multi-object-tracking-lidar {};
 
  multires-image = self.callPackage ./multires-image {};
 
@@ -1110,6 +1130,8 @@ self: super: {
 
  pr2-common-actions = self.callPackage ./pr2-common-actions {};
 
+ pr2-controller-configuration-gazebo = self.callPackage ./pr2-controller-configuration-gazebo {};
+
  pr2-controller-interface = self.callPackage ./pr2-controller-interface {};
 
  pr2-controller-manager = self.callPackage ./pr2-controller-manager {};
@@ -1123,6 +1145,10 @@ self: super: {
  pr2-description = self.callPackage ./pr2-description {};
 
  pr2-ethercat-drivers = self.callPackage ./pr2-ethercat-drivers {};
+
+ pr2-gazebo = self.callPackage ./pr2-gazebo {};
+
+ pr2-gazebo-plugins = self.callPackage ./pr2-gazebo-plugins {};
 
  pr2-gripper-action = self.callPackage ./pr2-gripper-action {};
 
@@ -1153,6 +1179,8 @@ self: super: {
  pr2-power-board = self.callPackage ./pr2-power-board {};
 
  pr2-power-drivers = self.callPackage ./pr2-power-drivers {};
+
+ pr2-simulator = self.callPackage ./pr2-simulator {};
 
  pr2-teleop = self.callPackage ./pr2-teleop {};
 
@@ -1257,6 +1285,12 @@ self: super: {
  resource-retriever = self.callPackage ./resource-retriever {};
 
  respeaker-ros = self.callPackage ./respeaker-ros {};
+
+ rexrov2-control = self.callPackage ./rexrov2-control {};
+
+ rexrov2-description = self.callPackage ./rexrov2-description {};
+
+ rexrov2-gazebo = self.callPackage ./rexrov2-gazebo {};
 
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
