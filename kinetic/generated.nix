@@ -688,6 +688,12 @@ self: super: {
 
  derived-object-msgs = self.callPackage ./derived-object-msgs {};
 
+ desistek-saga-control = self.callPackage ./desistek-saga-control {};
+
+ desistek-saga-description = self.callPackage ./desistek-saga-description {};
+
+ desistek-saga-gazebo = self.callPackage ./desistek-saga-gazebo {};
+
  desktop = self.callPackage ./desktop {};
 
  desktop-full = self.callPackage ./desktop-full {};
@@ -714,6 +720,10 @@ self: super: {
 
  dockeros = self.callPackage ./dockeros {};
 
+ doosan-robot = self.callPackage ./doosan-robot {};
+
+ doosan-robotics = self.callPackage ./doosan-robotics {};
+
  downward = self.callPackage ./downward {};
 
  dr-base = self.callPackage ./dr-base {};
@@ -723,6 +733,20 @@ self: super: {
  driver-base = self.callPackage ./driver-base {};
 
  driver-common = self.callPackage ./driver-common {};
+
+ dsr-control = self.callPackage ./dsr-control {};
+
+ dsr-description = self.callPackage ./dsr-description {};
+
+ dsr-example-cpp = self.callPackage ./dsr-example-cpp {};
+
+ dsr-example-py = self.callPackage ./dsr-example-py {};
+
+ dsr-gazebo = self.callPackage ./dsr-gazebo {};
+
+ dsr-launcher = self.callPackage ./dsr-launcher {};
+
+ dsr-msgs = self.callPackage ./dsr-msgs {};
 
  dwa-local-planner = self.callPackage ./dwa-local-planner {};
 
@@ -775,6 +799,12 @@ self: super: {
  easy-markers = self.callPackage ./easy-markers {};
 
  eband-local-planner = self.callPackage ./eband-local-planner {};
+
+ eca-a9-control = self.callPackage ./eca-a9-control {};
+
+ eca-a9-description = self.callPackage ./eca-a9-description {};
+
+ eca-a9-gazebo = self.callPackage ./eca-a9-gazebo {};
 
  ecl = self.callPackage ./ecl {};
 
@@ -1279,6 +1309,8 @@ self: super: {
  hector-worldmodel-msgs = self.callPackage ./hector-worldmodel-msgs {};
 
  hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
+
+ heron-control = self.callPackage ./heron-control {};
 
  heron-description = self.callPackage ./heron-description {};
 
@@ -1788,6 +1820,12 @@ self: super: {
 
  launchman = self.callPackage ./launchman {};
 
+ lauv-control = self.callPackage ./lauv-control {};
+
+ lauv-description = self.callPackage ./lauv-description {};
+
+ lauv-gazebo = self.callPackage ./lauv-gazebo {};
+
  leap-motion = self.callPackage ./leap-motion {};
 
  leg-detector = self.callPackage ./leg-detector {};
@@ -2109,6 +2147,14 @@ self: super: {
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
  moveit = self.callPackage ./moveit {};
+
+ moveit-config-m0609 = self.callPackage ./moveit-config-m0609 {};
+
+ moveit-config-m0617 = self.callPackage ./moveit-config-m0617 {};
+
+ moveit-config-m1013 = self.callPackage ./moveit-config-m1013 {};
+
+ moveit-config-m1509 = self.callPackage ./moveit-config-m1509 {};
 
  moveit-controller-manager-example = self.callPackage ./moveit-controller-manager-example {};
 
@@ -3049,6 +3095,8 @@ self: super: {
  qt-ros = self.callPackage ./qt-ros {};
 
  qt-tutorials = self.callPackage ./qt-tutorials {};
+
+ quaternion-operation = self.callPackage ./quaternion-operation {};
 
  qwt-dependency = self.callPackage ./qwt-dependency {};
 

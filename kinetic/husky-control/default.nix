@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, controller-manager, twist-mux, joint-state-controller, diff-drive-controller, joy, catkin, joint-trajectory-controller, husky-description, robot-localization, multimaster-launch, robot-state-publisher, interactive-marker-twist-server, rostopic, teleop-twist-joy, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-husky-control";
-  version = "0.3.2";
+  version = "0.3.3";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_control/0.3.2-0.tar.gz;
-    sha256 = "33234b9db22f766e0824cc06f812cfca7f59e4a31ea69dd9443e58634d43f2b3";
+    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_control/0.3.3-0.tar.gz;
+    sha256 = "f4bf9fd0c8a2fded1276e7908a44bd2343a46e554dd5663e3079d5a68baf5b3a";
   };
 
   buildInputs = [ roslaunch ];

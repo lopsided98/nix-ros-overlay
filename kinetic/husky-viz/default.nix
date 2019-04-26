@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, husky-description, rviz-imu-plugin, rviz, robot-state-publisher, roslaunch, joint-state-publisher }:
 buildRosPackage {
   pname = "ros-kinetic-husky-viz";
-  version = "0.3.2";
+  version = "0.3.3";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_viz/0.3.2-0.tar.gz;
-    sha256 = "7c81fc30270feac8fed1a8e716f1f83f4c902c3ce6e85a8bcdb80fa3b810db3c";
+    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_viz/0.3.3-0.tar.gz;
+    sha256 = "1065753a0d829aa05f3cf673375e205c65207fd13f89bbe0972ad05c869b34ba";
   };
 
   buildInputs = [ roslaunch ];

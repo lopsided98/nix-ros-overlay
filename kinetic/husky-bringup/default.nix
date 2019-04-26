@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslaunch, microstrain-3dmgx2-imu, nmea-navsat-driver, husky-control, husky-base, catkin, pythonPackages, tf2-ros, husky-description, lms1xx, robot-localization, nmea-comms, robot-upstart, um6, tf, imu-filter-madgwick, imu-transformer, um7 }:
 buildRosPackage {
   pname = "ros-kinetic-husky-bringup";
-  version = "0.3.2";
+  version = "0.3.3";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_bringup/0.3.2-0.tar.gz;
-    sha256 = "a18a72faba08c7428ab3cfcfd4ff70c40329d3299f124f8ffa7427cc997d317c";
+    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_bringup/0.3.3-0.tar.gz;
+    sha256 = "c9dfca407c5f6ecf93ef5b13be4a80cf562dc322b84d62f45e770b7c1de1d228";
   };
 
   buildInputs = [ roslaunch ];

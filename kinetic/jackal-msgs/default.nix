@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-jackal-msgs";
-  version = "0.6.1";
+  version = "0.6.2";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/jackal-release/archive/release/kinetic/jackal_msgs/0.6.1-0.tar.gz;
-    sha256 = "92888cd04fe174debffc499b2e18ff39fb040e745321cc8f268e9834b3729ce2";
+    url = https://github.com/clearpath-gbp/jackal-release/archive/release/kinetic/jackal_msgs/0.6.2-0.tar.gz;
+    sha256 = "14c8deb7808dd63e2120074d75f7ea8a2ff277805ee93ffbd951fb9d27c2b5c7";
   };
 
   buildInputs = [ std-msgs message-generation ];
