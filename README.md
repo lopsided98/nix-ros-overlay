@@ -11,7 +11,7 @@ Want to use ROS, but don't want to run Ubuntu? This project uses the power of [N
 ## Setup
 
 1. Install Nix: https://nixos.org/nix/download.html
-2. (Optional) [configure Nix to use ROS binary cache](#configure-binary-cache)
+2. (Optional) [configure Nix to use my ROS binary cache](#configure-binary-cache)
 3. Try one of the [examples](#examples)
 
 ## Examples
