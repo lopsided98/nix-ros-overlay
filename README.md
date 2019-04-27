@@ -6,9 +6,7 @@ Want to use ROS, but don't want to run Ubuntu? This project uses the power of [N
 
 [Nix](https://nixos.org/nix/) is a distro agnostic package manager that uses a purely functional programming language to reliably and reproducibly build software. These qualities have the potential to make it one of the easiest ways to run ROS on any machine, no matter the operating system.
 
-<aside class="info">
-This overlay is still experimental, so you may encounter some issues. Feel free to file a bug.
-</aside>
+> This overlay is still experimental, so you may encounter some issues. Feel free to file a bug.
 
 ## Setup
 
@@ -50,9 +48,8 @@ What still needs to be done:
 
 Prebuilt ROS packages are hosted on my [Hydra build server](https://hydra.benwolsieffer.com/project/ros). Nix can be configured to download packages from this server, which eliminates the need to build the packages from source.
 
-<aside class="warning">
-Adding this binary cache requires you to trust that my build server will not tamper with the prebuilt packages. Also, note that this server also builds packages for all my NixOS systems, so it is possible that some non-ROS related packages will be downloaded from it as well.
-</aside>
+> **Warning:** Adding this binary cache requires you to trust that my build server will not tamper with the prebuilt packages. Also, note that this server also builds packages for all my NixOS systems, so it is possible that some non-ROS related packages will be downloaded from it as well.
+
 
 To use this binary cache, set the following options in `nix.conf`:
 ```
