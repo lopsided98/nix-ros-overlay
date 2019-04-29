@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl, sensor-msgs, catkin, pcl-ros, roscpp }:
+{ lib, buildRosPackage, fetchurl, pcl, sensor-msgs, catkin, cv-bridge, roscpp, pcl-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-multi-object-tracking-lidar";
-  version = "1.0.0";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/praveen-palanisamy/multi_object_tracking_lidar-release/archive/release/melodic/multi_object_tracking_lidar/1.0.0-0.tar.gz;
-    sha256 = "b1d366b334c7d7b1e9fde0909627106eb470b3aba815186b4770ab979e73b6a0";
+    url = https://github.com/praveen-palanisamy/multi_object_tracking_lidar-release/archive/release/melodic/multi_object_tracking_lidar/1.0.1-1.tar.gz;
+    sha256 = "2c8c139caef500a457297233231fcdb913d3106954789481277d4c028df6219f";
   };
 
-  buildInputs = [ pcl sensor-msgs roscpp pcl-ros ];
-  propagatedBuildInputs = [ pcl sensor-msgs roscpp pcl-ros ];
+  buildInputs = [ visualization-msgs pcl-ros pcl sensor-msgs cv-bridge roscpp ];
+  propagatedBuildInputs = [ visualization-msgs pcl-ros pcl sensor-msgs cv-bridge roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

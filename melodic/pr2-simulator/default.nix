@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pr2-gazebo-plugins, pr2-gazebo, catkin, pr2-controller-configuration-gazebo }:
 buildRosPackage {
   pname = "ros-melodic-pr2-simulator";
-  version = "2.0.13-r1";
+  version = "2.0.14";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_simulator-release/archive/release/melodic/pr2_simulator/2.0.13-1.tar.gz;
-    sha256 = "b414fbc0bca2d0e478d22a680fdb89b6b678525c8f8bf9e9032d210bb06ab35c";
+    url = https://github.com/pr2-gbp/pr2_simulator-release/archive/release/melodic/pr2_simulator/2.0.14-0.tar.gz;
+    sha256 = "4502d2d3680adc3ad5bb876120527c7deb7642208da743e0c853353d8524b0cc";
   };
 
   propagatedBuildInputs = [ pr2-gazebo-plugins pr2-gazebo pr2-controller-configuration-gazebo ];

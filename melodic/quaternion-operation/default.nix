@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rostest, eigen, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-quaternion-operation";
-  version = "0.0.1-r1";
+  version = "0.0.1-r2";
 
   src = fetchurl {
-    url = https://github.com/OUXT-Polaris/quaternion_operation-release/archive/release/melodic/quaternion_operation/0.0.1-1.tar.gz;
-    sha256 = "d99af54b505e133d0b01719a2d0ad08e7bb769218f5a200af6fda316e65678d5";
+    url = https://github.com/OUXT-Polaris/quaternion_operation-release/archive/release/melodic/quaternion_operation/0.0.1-2.tar.gz;
+    sha256 = "f33f3b9910bd5212fd5bc408af7d8f858c97fb58bc27f88fc5ca17ceeaccd15b";
   };
 
   buildInputs = [ rostest roscpp geometry-msgs eigen ];

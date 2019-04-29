@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, libmodbus, cmake-modules, pilz-testutils, catkin, message-filters, rostest, message-generation, message-runtime, std-msgs, code-coverage, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-prbt-hardware-support";
-  version = "0.5.2";
+  version = "0.5.3-r1";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_hardware_support/0.5.2-0.tar.gz;
-    sha256 = "544485f23cfc387fc67fbba6ddb48f77b2f27c1c2fe2abc01c19ef31bd392671";
+    url = https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_hardware_support/0.5.3-1.tar.gz;
+    sha256 = "8833ee4869bd8c34bf8d4b9d76ec465235de9121403da7989ed73c31f648d5f0";
   };
 
   buildInputs = [ std-srvs message-generation libmodbus std-msgs roscpp message-filters ];

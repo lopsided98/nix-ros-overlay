@@ -1614,6 +1614,10 @@ self: super: {
 
  prbt-support = self.callPackage ./prbt-support {};
 
+ prosilica-camera = self.callPackage ./prosilica-camera {};
+
+ prosilica-gige-sdk = self.callPackage ./prosilica-gige-sdk {};
+
  ps3joy = self.callPackage ./ps3joy {};
 
  py-trees = self.callPackage ./py-trees {};
@@ -1979,6 +1983,8 @@ self: super: {
  rosserial-xbee = self.callPackage ./rosserial-xbee {};
 
  rosservice = self.callPackage ./rosservice {};
+
+ rostate-machine = self.callPackage ./rostate-machine {};
 
  rostest = self.callPackage ./rostest {};
 
@@ -2539,6 +2545,8 @@ self: super: {
  viz = self.callPackage ./viz {};
 
  voice-text = self.callPackage ./voice-text {};
+
+ volksbot-driver = self.callPackage ./volksbot-driver {};
 
  voxel-grid = self.callPackage ./voxel-grid {};
 

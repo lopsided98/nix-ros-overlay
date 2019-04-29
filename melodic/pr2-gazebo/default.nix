@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pr2-description, gazebo-plugins, fingertip-pressure, rospy, geometry-msgs, pr2-tuckarm, pr2-mechanism-controllers, pr2-gazebo-plugins, gazeboSimulator, pr2-controller-manager, robot-pose-ekf, robot-state-publisher, pr2-dashboard-aggregator, image-proc, pr2-msgs, xacro, gazebo-ros, pr2-head-action, catkin, robot-mechanism-controllers, tf2-ros, pr2-machine, std-msgs, diagnostic-aggregator, pr2-controller-configuration-gazebo, stereo-image-proc, joint-trajectory-action, pr2-gripper-action, rostest, single-joint-position-action, rostopic, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-pr2-gazebo";
-  version = "2.0.13-r1";
+  version = "2.0.14";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_simulator-release/archive/release/melodic/pr2_gazebo/2.0.13-1.tar.gz;
-    sha256 = "4e8aa4150b381414b523fa9a69945f21b9e92c1a5aadadc22ef63ca6e7c6e71c";
+    url = https://github.com/pr2-gbp/pr2_simulator-release/archive/release/melodic/pr2_gazebo/2.0.14-0.tar.gz;
+    sha256 = "65a61813255f0e2fd52200aceb94b18f0e19ed5e4f9c07c521558541015392a9";
   };
 
   buildInputs = [ pr2-gazebo-plugins gazeboSimulator.gazebo gazebo-plugins ];
