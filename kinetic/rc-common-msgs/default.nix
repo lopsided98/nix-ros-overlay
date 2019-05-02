@@ -4,12 +4,12 @@
 
 { lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
 buildRosPackage {
-  pname = "ros-kinetic-pr2-self-test-msgs";
-  version = "1.0.15-r1";
+  pname = "ros-kinetic-rc-common-msgs";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_self_test-release/archive/release/kinetic/pr2_self_test_msgs/1.0.15-1.tar.gz;
-    sha256 = "a276d8c4e15f0195ff51d0fb98460dad73ba2f264f4cc6de42462c933141f702";
+    url = https://github.com/roboception-gbp/rc_common_msgs-release/archive/release/kinetic/rc_common_msgs/0.2.1-1.tar.gz;
+    sha256 = "9613554e140b10a4db41cbbcf5b00432efebb00d39b0467355bb8f9442a4d05b";
   };
 
   buildInputs = [ message-generation ];
@@ -17,7 +17,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages used in PR2 hardware testing.'';
+    description = ''Common msg and srv definitions used by Roboception's ROS packages'';
     #license = lib.licenses.BSD;
   };
 }

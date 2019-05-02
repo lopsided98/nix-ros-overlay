@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, moveit-fake-controller-manager, moveit-ros-move-group, moveit-ros-visualization, catkin, moveit-kinematics, rostest, rviz, khi-rs-description, robot-state-publisher, roslaunch, tf, joint-state-publisher, xacro, moveit-planners-ompl }:
 buildRosPackage {
   pname = "ros-kinetic-khi-rs080n-moveit-config";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs080n_moveit_config/1.1.0-1.tar.gz;
-    sha256 = "44df0cd8559e6dda80eb1dca073398ab98df767362995ac0af72f4214f6d6f3c";
+    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs080n_moveit_config/1.1.1-1.tar.gz;
+    sha256 = "716616917b981df2ea5ce7a35d0ab2e053cfa6b773bfedd718ab00c7c49327f9";
   };
 
   buildInputs = [ khi-rs-description ];

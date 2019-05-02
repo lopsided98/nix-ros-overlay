@@ -3168,6 +3168,8 @@ self: super: {
 
  rc-cloud-accumulator = self.callPackage ./rc-cloud-accumulator {};
 
+ rc-common-msgs = self.callPackage ./rc-common-msgs {};
+
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
@@ -3665,6 +3667,8 @@ self: super: {
  rosserial-xbee = self.callPackage ./rosserial-xbee {};
 
  rosservice = self.callPackage ./rosservice {};
+
+ rostate-machine = self.callPackage ./rostate-machine {};
 
  rostest = self.callPackage ./rostest {};
 

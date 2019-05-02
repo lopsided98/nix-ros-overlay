@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, python, boost, git, catkin, pythonPackages, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-eigenpy";
-  version = "1.5.0";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/kinetic/eigenpy/1.5.0-0.tar.gz;
-    sha256 = "714b2464ca1fb8d903f7dc9c343c1b1fc2a765e00df7ac873c0bbdcd47631ab1";
+    url = https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/kinetic/eigenpy/1.5.1-1.tar.gz;
+    sha256 = "1c469a9fcd39bc28cfea46fc9370d2ded8697748208c0c8609b5d03c2271a4c1";
   };
 
   buildInputs = [ python pythonPackages.numpy boost eigen git ];
@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Bindings between Numpy and Eigen using Boost.Python - wrapped for catkin.'';
-    #license = lib.licenses.LGPLv3;
+    #license = lib.licenses.BSD;
   };
 }

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, master-sync-fkie, default-cfg-fkie, catkin, multimaster-msgs-fkie, node-manager-fkie, master-discovery-fkie }:
 buildRosPackage {
   pname = "ros-kinetic-multimaster-fkie";
-  version = "0.8.11";
+  version = "0.8.12";
 
   src = fetchurl {
-    url = https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/multimaster_fkie/0.8.11-0.tar.gz;
-    sha256 = "0e0c58a1286061a2a2fc7a7ae3aca3913e3e51e67e3a13f940aba5a5c2f5d934";
+    url = https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/multimaster_fkie/0.8.12-0.tar.gz;
+    sha256 = "d1ecc94aadeea0b43f0a89223fa0d559cb3cf7198faa4caa8b68b656b1261408";
   };
 
   propagatedBuildInputs = [ master-sync-fkie default-cfg-fkie node-manager-fkie master-discovery-fkie multimaster-msgs-fkie ];

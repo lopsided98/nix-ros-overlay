@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-testutils";
-  version = "0.4.7";
+  version = "0.4.8";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/pilz_testutils/0.4.7-0.tar.gz;
-    sha256 = "9e7042f169ec06f59ba78734679cc689bcd6dcad3924bd1f20a764269f7bf262";
+    url = https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/pilz_testutils/0.4.8-0.tar.gz;
+    sha256 = "26063a93963c54ee16ff5ec4ada6ff6cdf655085fb74f61da728e6ae92c6c59b";
   };
 
   buildInputs = [ roscpp ];

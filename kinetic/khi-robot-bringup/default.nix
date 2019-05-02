@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, controller-manager, joint-state-controller, khi-robot-control, catkin, khi-duaro-moveit-config, joint-trajectory-controller, rostest, position-controllers, robot-state-publisher, roslaunch, tf, khi-duaro-description }:
 buildRosPackage {
   pname = "ros-kinetic-khi-robot-bringup";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_robot_bringup/1.1.0-1.tar.gz;
-    sha256 = "9e4deef5b478c9db1e62f078ebefcdbc735ae6e830671c1acf630da0cb4782b9";
+    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_robot_bringup/1.1.1-1.tar.gz;
+    sha256 = "711da995ed296beea2c599c2698b2418b85f52e2853ae9a5e462eda655d01e8c";
   };
 
   checkInputs = [ rostest roslaunch ];

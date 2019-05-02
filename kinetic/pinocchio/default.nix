@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, python, boost, git, catkin, pythonPackages, urdfdom, eigen, eigenpy }:
 buildRosPackage {
   pname = "ros-kinetic-pinocchio";
-  version = "2.0.0";
+  version = "2.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/kinetic/pinocchio/2.0.0-0.tar.gz;
-    sha256 = "833a3a116c6690d4d3f3481530ee22f16907b3dcc5728c246e99f053e6638c13";
+    url = https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/kinetic/pinocchio/2.1.3-1.tar.gz;
+    sha256 = "e4eaf90a73bc3f4efedb4be508fdfb753b2947e3fdbeed2a3b11da55804a8761";
   };
 
   buildInputs = [ python pythonPackages.numpy boost eigen eigenpy git urdfdom ];

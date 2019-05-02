@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-machine";
-  version = "1.12.2";
+  version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_machine/1.12.2-0.tar.gz;
-    sha256 = "6158ca9cd4b4227ad6567730b2160d24523e494e5a53e9ed8c69a8783320fc3f";
+    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_machine/1.12.4-1.tar.gz;
+    sha256 = "a8801b2076bce7bdeef9fcebaf7b9d710870ad4d650d5dc5ed7c367b4db9ec49";
   };
 
   nativeBuildInputs = [ catkin ];

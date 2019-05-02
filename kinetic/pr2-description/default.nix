@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gtest, catkin, urdfdom, convex-decomposition, ivcon, xacro }:
+{ lib, buildRosPackage, fetchurl, rosbash, gtest, catkin, urdfdom, convex-decomposition, ivcon, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-description";
-  version = "1.12.2";
+  version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_description/1.12.2-0.tar.gz;
-    sha256 = "c265964655deb371058b06a91b4489769b3124b903446e3991c05840ec94283c";
+    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_description/1.12.4-1.tar.gz;
+    sha256 = "91720940ce739f29eceec5ff61745789b66644d78b650a4dfde345a1d0ab2298";
   };
 
   buildInputs = [ convex-decomposition ivcon ];
-  checkInputs = [ gtest urdfdom ];
+  checkInputs = [ gtest rosbash urdfdom ];
   propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];
 

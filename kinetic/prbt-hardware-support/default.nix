@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, libmodbus, cmake-modules, pilz-testutils, catkin, message-filters, rostest, message-generation, message-runtime, std-msgs, code-coverage, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-prbt-hardware-support";
-  version = "0.4.7";
+  version = "0.4.8";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/prbt_hardware_support/0.4.7-0.tar.gz;
-    sha256 = "a0361cd1a5c469e499da155fc72b17579b17b6843f489670d320029c2724d6d2";
+    url = https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/prbt_hardware_support/0.4.8-0.tar.gz;
+    sha256 = "8dbb78e640f4c61cabaace0423de122bda7cd1c0b827c7caa94e93cdd5e47b84";
   };
 
   buildInputs = [ std-srvs message-generation libmodbus std-msgs roscpp message-filters ];

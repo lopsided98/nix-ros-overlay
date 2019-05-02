@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, multimaster-msgs-fkie, rosgraph, rospy, master-discovery-fkie, roslib }:
 buildRosPackage {
   pname = "ros-kinetic-master-sync-fkie";
-  version = "0.8.11";
+  version = "0.8.12";
 
   src = fetchurl {
-    url = https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/master_sync_fkie/0.8.11-0.tar.gz;
-    sha256 = "fed364d0d45f3decfc995cf31f2e5e944c6311ce82095c0ad117bd296b94d0cf";
+    url = https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/master_sync_fkie/0.8.12-0.tar.gz;
+    sha256 = "84a7438f9036320953a9eb18506c71b077ae85f977715dc14a90d393b82e8485";
   };
 
   buildInputs = [ master-discovery-fkie multimaster-msgs-fkie ];

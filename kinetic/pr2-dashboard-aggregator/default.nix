@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, pr2-msgs, catkin, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-dashboard-aggregator";
-  version = "1.12.2";
+  version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_dashboard_aggregator/1.12.2-0.tar.gz;
-    sha256 = "99c53f7c77595a452804ae50a64c19dca593392c80e234acecb378d75111e6c0";
+    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_dashboard_aggregator/1.12.4-1.tar.gz;
+    sha256 = "e261a08b72ce887286e2d57678b6dc05b576f37ed328653c2cc38cd4503893f2";
   };
 
   propagatedBuildInputs = [ std-msgs pr2-msgs rospy ];
