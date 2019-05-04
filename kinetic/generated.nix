@@ -150,6 +150,8 @@ self: super: {
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
+ aws-common = self.callPackage ./aws-common {};
+
  aws-ros1-common = self.callPackage ./aws-ros1-common {};
 
  axcli = self.callPackage ./axcli {};
@@ -2111,6 +2113,8 @@ self: super: {
  mir-robot = self.callPackage ./mir-robot {};
 
  mk = self.callPackage ./mk {};
+
+ ml-classifiers = self.callPackage ./ml-classifiers {};
 
  mm-core-msgs = self.callPackage ./mm-core-msgs {};
 
