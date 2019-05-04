@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Tutorials for multi-Jackal simulations.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

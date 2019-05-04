@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ gazebo-ros controller-manager robot-state-publisher rospy fetch-gazebo ];
-  propagatedBuildInputs = [ gazebo-ros controller-manager robot-state-publisher effort-controllers rospy fetch-gazebo ];
+  propagatedBuildInputs = [ gazebo-ros controller-manager effort-controllers robot-state-publisher rospy fetch-gazebo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The fetchit_challenge package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

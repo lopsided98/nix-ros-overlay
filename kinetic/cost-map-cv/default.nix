@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Conversions between cost_maps and opencv images.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

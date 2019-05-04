@@ -28,6 +28,6 @@ buildRosPackage {
     Also provided is adapter code to make the user's Python code
     independent of which binding provider was actually used which makes
     it very easy to switch between these.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

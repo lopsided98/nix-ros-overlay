@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''These are regression tests for the osm_cartography and
      route_network packages. They are packaged separately to avoid
      unnecessary implementation dependencies.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

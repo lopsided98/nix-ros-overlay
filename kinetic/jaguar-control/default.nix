@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''DrRobot's Jaguar 4X4 controller configurations'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

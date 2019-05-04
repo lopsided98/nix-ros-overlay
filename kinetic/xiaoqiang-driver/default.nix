@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "7779afda0b0ea51fa24d30a943a50ed1b20e6227a79bb9d162e8f5f51affba40";
   };
 
-  buildInputs = [ nav-msgs rospy std-msgs setserial sensor-msgs tf geometry-msgs roscpp ];
-  propagatedBuildInputs = [ nav-msgs rospy std-msgs setserial sensor-msgs tf geometry-msgs roscpp ];
+  buildInputs = [ setserial sensor-msgs roscpp nav-msgs rospy std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ setserial sensor-msgs roscpp nav-msgs rospy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The xiaoqiang driver package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

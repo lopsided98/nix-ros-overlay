@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "e6f717d30a6035fce7aec2c9c4fa0713f0205d0b0a7ef21c834f4a658f5a79c9";
   };
 
-  propagatedBuildInputs = [ turtlebot-actions turtlebot-calibration turtlebot-rapps turtlebot-navigation turtlebot-follower ];
+  propagatedBuildInputs = [ turtlebot-actions turtlebot-rapps turtlebot-follower turtlebot-calibration turtlebot-navigation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''turtlebot_apps is a group of simple demos and exmaples to run on your TurtleBot to help you get started with ROS and TurtleBot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

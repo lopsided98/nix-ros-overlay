@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ trac-ik-lib orocos-kdl boost ];
-  propagatedBuildInputs = [ trac-ik-lib orocos-kdl boost pr2-description xacro ];
+  propagatedBuildInputs = [ orocos-kdl boost pr2-description trac-ik-lib xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the source code for testing and comparing trac_ik'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

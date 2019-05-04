@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''RVIZ plugin for IMU visualization'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ uwsim-osgworks openscenegraph boost uwsim-bullet ];
-  propagatedBuildInputs = [ uwsim-osgworks boost uwsim-bullet catkin openscenegraph ];
+  propagatedBuildInputs = [ boost uwsim-bullet catkin openscenegraph uwsim-osgworks ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The OSG Bullet library adapted to UWSim. See https://code.google.com/p/osgbullet'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

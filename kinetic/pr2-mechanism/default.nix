@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "2d51c2389e04645a0901e2c3ea7feeaffcf7da597733eb85a2c461f432f2c14c";
   };
 
-  propagatedBuildInputs = [ pr2-controller-manager pr2-hardware-interface pr2-controller-interface pr2-mechanism-diagnostics pr2-mechanism-model ];
+  propagatedBuildInputs = [ pr2-hardware-interface pr2-controller-interface pr2-mechanism-diagnostics pr2-controller-manager pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_mechanism stack contains the infrastructure to control the PR2 robot in a hard realtime control loop.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The respeaker_ros package'';
-    #license = lib.licenses.Apache;
+    license = with lib.licenses; [ "Apache-1.0" ];
   };
 }

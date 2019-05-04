@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Implementation of dlux_global_planner plugin interfaces.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

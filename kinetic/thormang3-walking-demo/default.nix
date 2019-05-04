@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "60b4736ef56b4423262ccdca7f0768eeacb77a3734b58fd17676a0f1cbc8d358";
   };
 
-  buildInputs = [ libyamlcpp roslib roscpp std-msgs robotis-controller-msgs thormang3-walking-module-msgs ];
-  propagatedBuildInputs = [ libyamlcpp roslib roscpp std-msgs robotis-controller-msgs thormang3-walking-module-msgs ];
+  buildInputs = [ libyamlcpp roscpp roslib std-msgs robotis-controller-msgs thormang3-walking-module-msgs ];
+  propagatedBuildInputs = [ libyamlcpp roscpp roslib std-msgs robotis-controller-msgs thormang3-walking-module-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The thormang3_walking_demo package
     This package describes how to use thormang3_walking_module.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, pluginlib, catkin, rosconsole-bridge, tinyxml, urdfdom, urdf-parser-plugin, rostest, urdfdom-headers, roscpp }:
+{ lib, buildRosPackage, fetchurl, pluginlib, cmake-modules, catkin, rosconsole-bridge, tinyxml, urdf-parser-plugin, urdfdom, rostest, urdfdom-headers, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-urdf";
   version = "1.12.12";
@@ -12,9 +12,9 @@ buildRosPackage {
     sha256 = "3ef94e4c96e189e1df3b4e57d0309bd1bd76a7a28a674a5944e26b8fd674cb33";
   };
 
-  buildInputs = [ urdfdom-headers tinyxml pluginlib cmake-modules urdfdom roscpp rosconsole-bridge urdf-parser-plugin ];
+  buildInputs = [ cmake-modules pluginlib rosconsole-bridge tinyxml urdf-parser-plugin urdfdom urdfdom-headers roscpp ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ urdfdom-headers tinyxml pluginlib roscpp rosconsole-bridge urdfdom ];
+  propagatedBuildInputs = [ pluginlib rosconsole-bridge tinyxml urdfdom urdfdom-headers roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
     Format (URDF), which is an XML format for representing a robot model.
     The code API of the parser has been through our review process and will remain
     backwards compatible in future releases.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

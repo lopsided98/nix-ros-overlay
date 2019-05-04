@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ master-sync-fkie clock-relay tf2-relay master-discovery-fkie message-relay ];
+  propagatedBuildInputs = [ master-sync-fkie message-relay clock-relay tf2-relay master-discovery-fkie ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Multi-master bringup launch files for CPR platforms'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

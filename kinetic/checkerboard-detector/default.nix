@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "c8097006d40dad1bbb6e1531c6d3aa67947b20c6083c1fa1990ae1deb2d2a9cb";
   };
 
-  buildInputs = [ rosconsole sensor-msgs cv-bridge message-filters posedetection-msgs roscpp image-geometry tf2 jsk-recognition-msgs dynamic-reconfigure eigen-conversions tf ];
-  propagatedBuildInputs = [ rosconsole sensor-msgs cv-bridge message-filters posedetection-msgs roscpp image-geometry tf2 dynamic-tf-publisher jsk-recognition-msgs dynamic-reconfigure eigen-conversions tf ];
+  buildInputs = [ rosconsole sensor-msgs cv-bridge posedetection-msgs message-filters roscpp image-geometry tf2 jsk-recognition-msgs dynamic-reconfigure eigen-conversions tf ];
+  propagatedBuildInputs = [ rosconsole sensor-msgs cv-bridge posedetection-msgs message-filters roscpp image-geometry tf2 dynamic-tf-publisher jsk-recognition-msgs dynamic-reconfigure eigen-conversions tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -27,6 +27,6 @@ buildRosPackage {
      <li>grid%d_size_y - number of checkers in y direction</li>
     </ul><br/>    
     There can be more than one grid%d declared, the numbers should grow consecutively starting at 0.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

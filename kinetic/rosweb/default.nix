@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "7124fe8b1cdec6255f85ddb27db8a629a5d65e43dd54dfeeb884da418a623d4f";
   };
 
-  buildInputs = [ rosjson rospy std-msgs roslib rosservice ];
-  propagatedBuildInputs = [ rosjson rospy std-msgs roslib rosservice ];
+  buildInputs = [ rosservice rosjson rospy std-msgs roslib ];
+  propagatedBuildInputs = [ rosservice rosjson rospy std-msgs roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
      repository.  It is placed in the sandbox while development is ongoing, so
      we are not gated on ROS stack releases.  When the server is more stable,
      it will be moved to the ROS repository and replace the old rosweb.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

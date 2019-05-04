@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "0d7add3be65bb923b7f0d3116a2ba9233514c5c4e7109ebbdd7f5736e76a72f6";
   };
 
-  buildInputs = [ ecl-sigslots ecl-streams kobuki-driver kobuki-msgs ecl-threads ecl-exceptions nav-msgs rospy std-msgs diagnostic-msgs roscpp nodelet tf geometry-msgs kobuki-ftdi pluginlib kobuki-keyop sensor-msgs kobuki-safety-controller diagnostic-updater angles ];
-  propagatedBuildInputs = [ ecl-sigslots ecl-streams kobuki-driver kobuki-msgs ecl-threads ecl-exceptions nav-msgs rospy std-msgs diagnostic-msgs diagnostic-aggregator roscpp nodelet tf geometry-msgs capabilities kobuki-ftdi kobuki-rapps kobuki-keyop pluginlib sensor-msgs kobuki-safety-controller diagnostic-updater angles ];
+  buildInputs = [ ecl-streams kobuki-driver kobuki-msgs ecl-threads ecl-exceptions rospy diagnostic-msgs tf geometry-msgs kobuki-keyop angles ecl-sigslots nav-msgs std-msgs roscpp nodelet kobuki-ftdi pluginlib sensor-msgs kobuki-safety-controller diagnostic-updater ];
+  propagatedBuildInputs = [ ecl-streams kobuki-driver kobuki-msgs ecl-threads ecl-exceptions rospy diagnostic-msgs tf geometry-msgs capabilities kobuki-rapps kobuki-keyop angles ecl-sigslots nav-msgs std-msgs diagnostic-aggregator roscpp nodelet kobuki-ftdi pluginlib sensor-msgs kobuki-safety-controller diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

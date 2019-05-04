@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ camera-info-manager image-transport git sensor-msgs libusb1 message-generation nodelet dynamic-reconfigure roscpp libudev ];
-  propagatedBuildInputs = [ message-runtime dynamic-reconfigure camera-info-manager image-transport sensor-msgs nodelet roscpp ];
+  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs roscpp message-runtime dynamic-reconfigure nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Drivers for Orbbec Astra Devices.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

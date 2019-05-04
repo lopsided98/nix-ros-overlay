@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ rospy cv-bridge image-recognition-util image-recognition-msgs ];
-  propagatedBuildInputs = [ pythonPackages.numpy image-recognition-msgs image-recognition-util rospy cv-bridge ];
+  propagatedBuildInputs = [ pythonPackages.numpy cv-bridge image-recognition-msgs image-recognition-util rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The openface_ros package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

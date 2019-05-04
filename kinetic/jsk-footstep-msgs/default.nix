@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''jsk_footstep_msgs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

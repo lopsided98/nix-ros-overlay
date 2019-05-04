@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''This package provides a gui program as well as a rviz plugin to publish static transforms.
   Both support the transformation between various Euler angle representations.
   The rviz plugin also allows to configure the transform with an interactive marker.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

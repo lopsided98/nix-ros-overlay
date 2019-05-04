@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The khi_rs_description package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

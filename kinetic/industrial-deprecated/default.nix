@@ -19,6 +19,6 @@ buildRosPackage {
   deprecation.  This package is the last place something will end up before being deleted.  
   If you are missing a package/node and find it's contents here, then you should consider 
   a replacement.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

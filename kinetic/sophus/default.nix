@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''C++ implementation of Lie Groups using Eigen.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

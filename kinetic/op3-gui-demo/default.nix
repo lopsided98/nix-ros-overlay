@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ op3-online-walking-module-msgs boost cmake-modules qt4 libyamlcpp sensor-msgs op3-walking-module-msgs roscpp roslib interactive-markers visualization-msgs qt-build std-msgs eigen-conversions robotis-controller-msgs humanoid-nav-msgs geometry-msgs eigen ];
-  propagatedBuildInputs = [ op3-online-walking-module-msgs op3-navigation qt4 op3-walking-module-msgs qt-build std-msgs roscpp visualization-msgs robotis-controller-msgs geometry-msgs cmake-modules boost libyamlcpp sensor-msgs interactive-markers eigen eigen-conversions roslib humanoid-nav-msgs ];
+  propagatedBuildInputs = [ op3-online-walking-module-msgs op3-navigation qt4 op3-walking-module-msgs robotis-controller-msgs geometry-msgs boost eigen-conversions roslib qt-build std-msgs roscpp visualization-msgs cmake-modules libyamlcpp sensor-msgs interactive-markers eigen humanoid-nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_gui_demo is a GUI software to control ROBOTIS-OP3. Within this program, user can perform module settings, walking tuner, head joint control and play actions.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "5f42c955517e59a7a529056041cfba1dd5644e38d403a2003eaf1d0447b518ed";
   };
 
-  propagatedBuildInputs = [ controller-manager magni-description joint-state-controller chrony robot-state-publisher diff-drive-controller ubiquity-motor ];
+  propagatedBuildInputs = [ controller-manager joint-state-controller diff-drive-controller ubiquity-motor magni-description chrony robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The magni_bringup package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

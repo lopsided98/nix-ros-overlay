@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "ad15290fa35aaef1125beb105db5f63ed42100625eb51d2c2c80b4af717dc2b0";
   };
 
-  buildInputs = [ settlerlib roscpp-serialization std-msgs sensor-msgs roscpp calibration-msgs ];
-  propagatedBuildInputs = [ settlerlib roscpp-serialization std-msgs sensor-msgs roscpp calibration-msgs ];
+  buildInputs = [ sensor-msgs settlerlib roscpp-serialization std-msgs roscpp calibration-msgs ];
+  propagatedBuildInputs = [ sensor-msgs settlerlib roscpp-serialization std-msgs roscpp calibration-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
     processing on the data, and can also be used for very fast approx
     neighborhood searches.  This package is still experimental and unstable.
     Expect its APIs to change.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

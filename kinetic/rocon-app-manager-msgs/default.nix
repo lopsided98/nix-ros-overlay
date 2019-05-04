@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages used by the platform app manager.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

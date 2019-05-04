@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ rostest pythonPackages.catkin-pkg ];
   checkInputs = [ sensor-msgs ];
-  propagatedBuildInputs = [ rqt-gui-py tf2-msgs rospy tf rqt-py-common rqt-gui geometry-msgs ];
+  propagatedBuildInputs = [ rqt-gui-py tf2-msgs rqt-gui rospy rqt-py-common tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rqt_ez_publisher package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

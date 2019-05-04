@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''voice_text (www.voicetext.jp)'';
-    #license = lib.licenses.HOYA License;
+    license = with lib.licenses; [ "HOYA License" ];
   };
 }

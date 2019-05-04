@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "c5f36a1d98fe03c310dbd833ba3907ae8f733d68eb19eb1149d5eeff2fea0dae";
   };
 
-  buildInputs = [ mm-messages nanomsg ecl-formatters ecl-utilities ecl-command-line ecl-threads ecl-build ecl-time ecl-containers mm-core-msgs ];
-  propagatedBuildInputs = [ mm-messages nanomsg ecl-formatters ecl-utilities ecl-command-line ecl-threads ecl-build ecl-time ecl-containers mm-core-msgs ];
+  buildInputs = [ mm-messages nanomsg ecl-formatters ecl-utilities ecl-command-line ecl-build ecl-threads ecl-time ecl-containers mm-core-msgs ];
+  propagatedBuildInputs = [ mm-messages nanomsg ecl-formatters ecl-utilities ecl-command-line ecl-build ecl-threads ecl-time ecl-containers mm-core-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Multiplexing many packet types across a single connection. Great for embedded connections
    by serial or ethernet types.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

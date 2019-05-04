@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the ROS interface to control multiple qbrobotics® devices simultaneously.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

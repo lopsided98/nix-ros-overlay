@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "92eb24ebd3a9ba584aef0cdbccf9043017208b34ad766d4ed98bc350bdf135f4";
   };
 
-  buildInputs = [ gridmap-2d visualization-msgs roscpp geometry-msgs sbpl ];
-  propagatedBuildInputs = [ gridmap-2d visualization-msgs roscpp geometry-msgs sbpl ];
+  buildInputs = [ sbpl gridmap-2d visualization-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sbpl gridmap-2d visualization-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''humanoid_planner_2d - provides a simple 2D path planner as wrapper around SBPL (ARA*, AD*, R*).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

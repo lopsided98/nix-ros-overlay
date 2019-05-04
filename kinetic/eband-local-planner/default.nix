@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''eband_local_planner implements a plugin to the
     base_local_planner. It implements the Elastic Band method on the
     SE2 manifold.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

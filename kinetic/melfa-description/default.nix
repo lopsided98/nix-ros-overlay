@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The melfa_description package'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 "CC-BY-SA" ];
   };
 }

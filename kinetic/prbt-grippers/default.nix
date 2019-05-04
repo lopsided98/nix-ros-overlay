@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The package provides gripper support for the pilz_robots package.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

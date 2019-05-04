@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "7a3d626d044154e93c4d24a23f7c3dcc37cf0f182ed61cc0a40a55a623e85495";
   };
 
-  buildInputs = [ ecl-exceptions std-msgs sensor-msgs roscpp yocs-msgs geometry-msgs ecl-time ];
-  propagatedBuildInputs = [ ecl-exceptions geometry-msgs std-msgs sensor-msgs joy yocs-msgs roscpp ecl-time ];
+  buildInputs = [ sensor-msgs yocs-msgs ecl-time ecl-exceptions std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs joy yocs-msgs ecl-time ecl-exceptions std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Joystick teleoperation for your robot robot core'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

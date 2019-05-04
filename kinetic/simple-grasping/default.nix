@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ shape-msgs cmake-modules sensor-msgs roscpp message-generation actionlib pcl-ros moveit-msgs tf grasping-msgs geometry-msgs ];
-  propagatedBuildInputs = [ shape-msgs moveit-python sensor-msgs roscpp message-runtime actionlib moveit-msgs tf pcl-ros grasping-msgs geometry-msgs ];
+  propagatedBuildInputs = [ shape-msgs moveit-python sensor-msgs roscpp actionlib message-runtime pcl-ros moveit-msgs tf grasping-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Basic grasping applications and demos.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

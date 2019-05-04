@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This packagae implements the special homing procedure that is needed for old cob4/raw bases'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

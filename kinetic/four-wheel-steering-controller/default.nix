@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "79f36288c0a3bebd6987b95033f450c70564980ce68ba8e3bf5bd27b85c14df4";
   };
 
-  buildInputs = [ nav-msgs controller-interface urdf-geometry-parser realtime-tools tf four-wheel-steering-msgs ];
+  buildInputs = [ urdf-geometry-parser realtime-tools nav-msgs controller-interface tf four-wheel-steering-msgs ];
   checkInputs = [ controller-manager rostest std-srvs rosgraph-msgs ];
-  propagatedBuildInputs = [ nav-msgs controller-interface urdf-geometry-parser realtime-tools tf four-wheel-steering-msgs ];
+  propagatedBuildInputs = [ urdf-geometry-parser realtime-tools nav-msgs controller-interface tf four-wheel-steering-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controller for a four wheel steering mobile base.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

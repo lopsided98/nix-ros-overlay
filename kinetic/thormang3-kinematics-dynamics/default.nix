@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package provides a kinematics and dynamics impletation for the thormang3.
     It can be used to calculate forward and inverse kinematics.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

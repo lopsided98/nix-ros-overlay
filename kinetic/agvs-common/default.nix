@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF description of the Agvs and Agvs.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

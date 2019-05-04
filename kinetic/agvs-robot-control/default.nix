@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The agvs_robot_control package. Robot controller that interacts with Gazebo motor controllers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''cob_android package provides tools for android apps operation.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

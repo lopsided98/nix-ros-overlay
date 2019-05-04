@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libqsopt, catkin, libphidgets, opengm, libntcan, libdlib, libconcorde-tsp-solver, libpcan }:
+{ lib, buildRosPackage, fetchurl, libqsopt, libpcan, catkin, libphidgets, opengm, libdlib, libconcorde-tsp-solver, libntcan }:
 buildRosPackage {
   pname = "ros-kinetic-cob-extern";
   version = "0.6.12";
@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The cob_extern stack contains third party libraries needed for operating Care-O-bot. The packages are downloaded from the manufactorers website and not changed in any way.'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 "proprietary" ];
   };
 }

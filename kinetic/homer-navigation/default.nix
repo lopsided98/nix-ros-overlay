@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ cmake-modules homer-ptu-msgs trajectory-msgs sensor-msgs roscpp homer-mapnav-msgs roslib nav-msgs homer-robbie-architecture actionlib std-msgs homer-tts tf homer-nav-libs eigen ];
-  propagatedBuildInputs = [ homer-ptu-msgs tf trajectory-msgs sensor-msgs roscpp homer-mapnav-msgs nav-msgs homer-robbie-architecture actionlib std-msgs homer-tts roslib homer-nav-libs eigen ];
+  propagatedBuildInputs = [ homer-ptu-msgs trajectory-msgs sensor-msgs roscpp homer-mapnav-msgs roslib nav-msgs homer-robbie-architecture actionlib std-msgs homer-tts tf homer-nav-libs eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The homer_navigation package'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

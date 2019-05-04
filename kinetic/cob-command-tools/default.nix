@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "521d58bd47fdb2e4aeeecf06d4afb4f2095bbf5aeded8779f5add0f3d9fc8060";
   };
 
-  propagatedBuildInputs = [ cob-teleop cob-dashboard cob-helper-tools cob-monitoring cob-script-server cob-command-gui cob-interactive-teleop ];
+  propagatedBuildInputs = [ cob-teleop cob-monitoring cob-script-server cob-command-gui cob-interactive-teleop cob-helper-tools cob-dashboard ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_command_tools stack provides tools, for operating Care-O-bot.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

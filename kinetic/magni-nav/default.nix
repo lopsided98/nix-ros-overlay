@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The magni_nav package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

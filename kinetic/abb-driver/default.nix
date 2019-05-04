@@ -24,6 +24,6 @@ buildRosPackage {
      This package is part of the ROS-Industrial program and contains nodes 
      for interfacing with ABB industrial robot controllers.
    </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

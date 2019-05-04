@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for vehicle automation'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Rover Robotics: ROS package for connecting to SwiftNav Piksi'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

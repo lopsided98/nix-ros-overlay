@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This repository holds the current calibration data for Care-O-bot.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package is a set of basic math fuctions for ROBOTIS's robots.
     We provide some linear algebra and trajectory generation funntions and classes.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

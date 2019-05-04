@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Although the package name might indicate that it only could only contain generic .launch files, this package functions as a center location for storing .launch files for all DENSO robots (currently <a href="http://wiki.ros.org/vs060">vs060</a>).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

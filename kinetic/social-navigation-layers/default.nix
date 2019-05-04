@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Plugin-based layers for the navigation stack that 
   implement various social navigation contraints, like proxemic distance.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

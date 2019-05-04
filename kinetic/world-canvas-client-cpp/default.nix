@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "48ec132d6480d248330389682060c48d798a3592f9fccd77941d80a0011d90d2";
   };
 
-  buildInputs = [ uuid-msgs unique-id world-canvas-msgs visualization-msgs roscpp ];
-  propagatedBuildInputs = [ uuid-msgs unique-id world-canvas-msgs visualization-msgs roscpp ];
+  buildInputs = [ unique-id uuid-msgs world-canvas-msgs visualization-msgs roscpp ];
+  propagatedBuildInputs = [ unique-id uuid-msgs world-canvas-msgs visualization-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''C++ client library to access semantic maps within the world canvas framework.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

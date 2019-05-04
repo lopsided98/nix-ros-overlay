@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''This includes a suite of programs demo'ing various aspects of the
      ecl_core. It also includes various benchmarking and utility programs for
      use primarily with embedded systems.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

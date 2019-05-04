@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "0d664c1d3cc8d426d981635855042617a1ea512ac39537df5d543f09079a0114";
   };
 
-  buildInputs = [ message-generation aws-common rospy std-msgs aws-ros1-common ros-monitoring-msgs roscpp ];
+  buildInputs = [ roscpp message-generation aws-common rospy std-msgs aws-ros1-common ros-monitoring-msgs ];
   checkInputs = [ rostest gmock ];
-  propagatedBuildInputs = [ message-generation aws-common message-runtime ros-monitoring-msgs rospy std-msgs aws-ros1-common roscpp ];
+  propagatedBuildInputs = [ ros-monitoring-msgs message-generation aws-common message-runtime rospy std-msgs aws-ros1-common roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The health_metric_collector package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

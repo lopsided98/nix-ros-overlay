@@ -21,6 +21,6 @@ buildRosPackage {
     The package distinguishes between two types of messages. 
     First messages to describe the properties of a marker/fiducial detection system and the detected markers. 
     Secondly messages used to represent a map of markers/features with covariances as it would be produced by a SLAM system or published by a map server for self-localization.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

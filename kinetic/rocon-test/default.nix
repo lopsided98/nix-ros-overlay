@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Rocon test framework (i.e. multi-launch rostest framework).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

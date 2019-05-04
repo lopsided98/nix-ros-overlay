@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The tuw_multi_robot_msgs package contains messages for sending graph, route and sync data over topics.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

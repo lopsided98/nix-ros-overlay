@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A wrapper for keeping rqt programs alive.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

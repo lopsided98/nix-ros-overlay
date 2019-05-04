@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "5eedbb275f29e11aad06c2b301c2788982eea7141a4e0ad23e313ce428a9c4f4";
   };
 
-  propagatedBuildInputs = [ clock-relay tf2-relay multimaster-msgs multimaster-launch message-relay ];
+  propagatedBuildInputs = [ message-relay clock-relay tf2-relay multimaster-msgs multimaster-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Multi-master tools for configuration and message relaying'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

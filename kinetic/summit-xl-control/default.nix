@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the launch files that load the required controller interfaces for simulation in Gazebo.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

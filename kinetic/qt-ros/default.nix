@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Simple qt cmake build tools and master-chooser style application template.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Basic applications for the PR2 robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

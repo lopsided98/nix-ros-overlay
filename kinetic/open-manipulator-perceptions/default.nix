@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This packages are configured to related perception packages as AR marker, Object recognition and so on.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

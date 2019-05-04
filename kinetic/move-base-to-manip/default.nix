@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Move the robot base until a desired end-effector pose can be reached.'';
-    #license = lib.licenses.See license.txt;
+    license = with lib.licenses; [ "See license.txt" ];
   };
 }

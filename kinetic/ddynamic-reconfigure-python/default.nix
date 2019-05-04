@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''The ddynamic_reconfigure_python package contains
     a class to instantiate dynamic reconfigure servers on the fly
     registering variables'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

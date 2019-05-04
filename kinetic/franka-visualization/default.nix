@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ libfranka sensor-msgs roscpp ];
-  propagatedBuildInputs = [ franka-description libfranka sensor-msgs roscpp xacro ];
+  propagatedBuildInputs = [ franka-description sensor-msgs libfranka roscpp xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains visualization tools for Franka Emika.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ control-msgs play-motion-msgs sensor-msgs diagnostic-updater controller-manager-msgs actionlib diagnostic-msgs roscpp moveit-ros-planning-interface ];
-  checkInputs = [ controller-manager rostest position-controllers joint-state-controller hardware-interface robot-state-publisher xacro joint-trajectory-controller ];
+  checkInputs = [ controller-manager hardware-interface joint-state-controller joint-trajectory-controller rostest position-controllers robot-state-publisher xacro ];
   propagatedBuildInputs = [ control-msgs play-motion-msgs sensor-msgs diagnostic-updater controller-manager-msgs actionlib diagnostic-msgs roscpp moveit-ros-planning-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Plays a pre-recorded motion on a robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

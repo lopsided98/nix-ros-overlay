@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''To find AR marker, it depends ar_track_alvar packages'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

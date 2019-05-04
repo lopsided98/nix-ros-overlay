@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launch files and world files to start the models in gazebo'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

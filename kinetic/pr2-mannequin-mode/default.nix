@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The pr2_mannequin_mode package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

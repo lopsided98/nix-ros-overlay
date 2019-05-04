@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Stereo and single image rectification and disparity processing.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

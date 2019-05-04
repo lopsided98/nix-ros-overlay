@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "3748f5fae84d99969a4ca2a3004dbf4b5b1408f5c79f9a18f4bc4febba68639e";
   };
 
-  propagatedBuildInputs = [ ecl-core ecl-lite ecl-manipulation ecl-tools ecl-navigation ];
+  propagatedBuildInputs = [ ecl-tools ecl-core ecl-lite ecl-manipulation ecl-navigation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Metapackage bringing all of ecl together.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

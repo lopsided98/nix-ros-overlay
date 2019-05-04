@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message definitions for the Delphi SRR'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

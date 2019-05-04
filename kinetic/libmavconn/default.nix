@@ -23,6 +23,6 @@ buildRosPackage {
     and URL to connection object mapper.
 
     This library can be used in standalone programs.'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 lgpl2 bsdOriginal ];
   };
 }

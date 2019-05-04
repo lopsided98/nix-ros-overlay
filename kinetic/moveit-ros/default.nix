@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Components of MoveIt! that use ROS'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

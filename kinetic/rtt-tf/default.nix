@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the components of the rtt_tf package'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

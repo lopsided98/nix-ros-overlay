@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "9ed895b2065c4d0a608fb421cdd510e5b6d75f657ce93f6f08858271ce69a66e";
   };
 
-  buildInputs = [ message-runtime image-transport sensor-msgs cv-bridge imagezero-ros ];
-  propagatedBuildInputs = [ message-runtime image-transport sensor-msgs cv-bridge imagezero-ros ];
+  buildInputs = [ image-transport sensor-msgs cv-bridge message-runtime imagezero-ros ];
+  propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge message-runtime imagezero-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A plugin to image_transport for transparently sending images encoded with ImageZero.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "7117194cb738361b859651998760d0082990f0b2b2b045633da239c42b2f4178";
   };
 
-  buildInputs = [ rtt-rosgraph-msgs rospack ocl cmake-modules rtt libxml2 rostime roscpp ];
-  propagatedBuildInputs = [ rtt-rosgraph-msgs rospack ocl cmake-modules rtt libxml2 rostime roscpp ];
+  buildInputs = [ rospack cmake-modules rtt libxml2 roscpp rtt-rosgraph-msgs ocl rostime ];
+  propagatedBuildInputs = [ rospack cmake-modules rtt libxml2 roscpp rtt-rosgraph-msgs ocl rostime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides an RTT plugin to access different time measurements on a realtime host.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

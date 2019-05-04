@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "35227f5f2a3c4efd567378bf3929386a04a6f9a3660a6a1ec4f003c4df9e3eca";
   };
 
-  propagatedBuildInputs = [ std-srvs rospy std-msgs roslaunch nao-interaction-msgs geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs nao-interaction-msgs rospy std-msgs roslaunch geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for the Nao robot, providing access to NAOqi vision proxies'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common code for working with audio in ROS'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

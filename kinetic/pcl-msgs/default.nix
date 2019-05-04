@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package containing PCL (Point Cloud Library)-related ROS messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

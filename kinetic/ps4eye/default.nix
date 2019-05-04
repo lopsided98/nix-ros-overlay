@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The ps4eye package'';
-    #license = lib.licenses.Apache License Version 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

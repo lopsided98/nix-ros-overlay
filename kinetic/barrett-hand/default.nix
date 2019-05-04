@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The barrett_hand package contains all the components to control the Barrett Hand'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

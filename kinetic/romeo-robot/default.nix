@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The romeo_robot metapackage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

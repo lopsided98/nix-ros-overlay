@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rbcar_sim_bringup package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

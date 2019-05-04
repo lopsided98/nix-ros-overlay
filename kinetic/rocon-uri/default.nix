@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ rocon-console rospy pythonPackages.rospkg rocon-ebnf rocon-python-utils ];
+  propagatedBuildInputs = [ pythonPackages.rospkg rocon-ebnf rocon-console rospy rocon-python-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Module for working with rocon uri strings.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

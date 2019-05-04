@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''MoveIt config files for all cob and raw'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

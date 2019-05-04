@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Provides standard messages specific to Heron, especially for 
     the microcontroller's rosserial interface.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

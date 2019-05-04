@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Configuration package for Pyros'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

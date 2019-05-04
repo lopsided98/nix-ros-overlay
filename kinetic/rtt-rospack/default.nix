@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''rtt_rospack provides an RTT plugin to use rospack to find packages in your ROS_PACKAGE_PATH'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

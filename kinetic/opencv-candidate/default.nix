@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Experimental OpenCV functions'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

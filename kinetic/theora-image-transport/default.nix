@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Theora_image_transport provides a plugin to image_transport for
     transparently sending an image stream encoded with the Theora codec.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

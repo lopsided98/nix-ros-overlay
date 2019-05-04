@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Time and Duration implementations for C++ libraries, including roscpp.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

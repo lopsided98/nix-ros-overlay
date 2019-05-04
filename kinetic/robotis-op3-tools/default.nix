@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "fbc8da2b139994eceb717217bd9d21cd3b0758e8068dba6231f1cd90115264ae";
   };
 
-  propagatedBuildInputs = [ op3-offset-tuner-client op3-navigation op3-web-setting-tool op3-offset-tuner-server op3-camera-setting-tool op3-action-editor op3-gui-demo ];
+  propagatedBuildInputs = [ op3-navigation op3-web-setting-tool op3-camera-setting-tool op3-gui-demo op3-offset-tuner-client op3-offset-tuner-server op3-action-editor ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS packages for the robotis_op3_tools (meta package)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

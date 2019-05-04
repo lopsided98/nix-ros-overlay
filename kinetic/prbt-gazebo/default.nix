@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launch prbt robot in an empty Gazebo world.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

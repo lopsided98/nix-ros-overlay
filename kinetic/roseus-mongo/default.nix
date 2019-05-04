@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The roseus_mongo package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "d08557f75a04416fdccd625d938b56fbdc1ebf95107834fa4500e601749fad6c";
   };
 
-  buildInputs = [ ceres-solver orocos-kdl tf2-geometry-msgs control-msgs rosbag cv-bridge tf2-ros nav-msgs actionlib std-msgs moveit-msgs protobuf roscpp tf visualization-msgs robot-calibration-msgs geometry-msgs suitesparse kdl-parser pluginlib gflags camera-calibration-parsers sensor-msgs ];
-  propagatedBuildInputs = [ ceres-solver orocos-kdl tf2-geometry-msgs control-msgs rosbag cv-bridge tf2-ros nav-msgs actionlib std-msgs moveit-msgs protobuf roscpp tf visualization-msgs robot-calibration-msgs geometry-msgs suitesparse kdl-parser pluginlib camera-calibration-parsers sensor-msgs ];
+  buildInputs = [ cv-bridge actionlib tf robot-calibration-msgs geometry-msgs suitesparse gflags camera-calibration-parsers ceres-solver orocos-kdl tf2-geometry-msgs control-msgs rosbag tf2-ros nav-msgs std-msgs moveit-msgs protobuf roscpp visualization-msgs kdl-parser pluginlib sensor-msgs ];
+  propagatedBuildInputs = [ cv-bridge actionlib tf robot-calibration-msgs geometry-msgs suitesparse camera-calibration-parsers ceres-solver orocos-kdl tf2-geometry-msgs control-msgs rosbag tf2-ros nav-msgs std-msgs moveit-msgs protobuf roscpp visualization-msgs kdl-parser pluginlib sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Calibrate a Robot'';
-    #license = lib.licenses.Apache2;
+    license = with lib.licenses; [ asl20 ];
   };
 }

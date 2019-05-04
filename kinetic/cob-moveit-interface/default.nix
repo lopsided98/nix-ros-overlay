@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "547650c8b982b8beeefa772f2a2ee769826e98caf90df702c79d722d657bd0b0";
   };
 
-  propagatedBuildInputs = [ moveit-commander rospy cob-script-server tf geometry-msgs ];
+  propagatedBuildInputs = [ cob-script-server moveit-commander rospy tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cob_moveit_interface'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "9c831ba342b4f9354f665ee45eb62f8b067b4a5a3c77e77a9b0262ba5ee161c7";
   };
 
-  buildInputs = [ roslib lusb nodelet std-msgs can-msgs roscpp ];
+  buildInputs = [ lusb can-msgs roscpp nodelet std-msgs roslib ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ lusb std-msgs can-msgs roslaunch nodelet roscpp ];
+  propagatedBuildInputs = [ lusb can-msgs nodelet std-msgs roslaunch roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver to interface with the Dataspeed Inc. USB CAN Tool'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "4eec338f5e19d53dbaf34c7403cfab7e253982bca4f367418828e0ec3441dee3";
   };
 
-  propagatedBuildInputs = [ slime-wrapper sbcl rosemacs roslisp slime-ros ];
+  propagatedBuildInputs = [ slime-wrapper rosemacs roslisp sbcl slime-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a script that launches Emacs with Slime (the
     Superior Lisp Interaction Mode) ready for Lisp development and
     roslisp.'';
-    #license = lib.licenses.Public domain;
+    license = with lib.licenses; [ publicDomain ];
   };
 }

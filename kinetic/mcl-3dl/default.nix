@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''3-D/6-DOF localization for mobile robots with 3-D LIDAR(s)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

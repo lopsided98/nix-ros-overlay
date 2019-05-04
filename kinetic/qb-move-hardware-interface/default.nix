@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, control-toolbox, catkin, qb-device-hardware-interface, roscpp, transmission-interface }:
+{ lib, buildRosPackage, fetchurl, hardware-interface, control-toolbox, catkin, transmission-interface, roscpp, qb-device-hardware-interface }:
 buildRosPackage {
   pname = "ros-kinetic-qb-move-hardware-interface";
   version = "2.0.0";
@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "01b6c828e8cc8df099f7b48214ccd72d84edef8b95422c8b160eee138dba1aed";
   };
 
-  buildInputs = [ hardware-interface transmission-interface control-toolbox roscpp qb-device-hardware-interface ];
-  propagatedBuildInputs = [ hardware-interface transmission-interface control-toolbox roscpp qb-device-hardware-interface ];
+  buildInputs = [ hardware-interface control-toolbox transmission-interface roscpp qb-device-hardware-interface ];
+  propagatedBuildInputs = [ hardware-interface control-toolbox transmission-interface roscpp qb-device-hardware-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the hardware interface for qbrobotics® qbmove device.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

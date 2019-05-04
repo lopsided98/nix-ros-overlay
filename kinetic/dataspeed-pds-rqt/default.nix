@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "a5ef7da715d3d63496b5bb1ae163c8577efbd479b002c6b94a349e8b67ae0e6e";
   };
 
-  buildInputs = [ rqt-gui-py dataspeed-pds-msgs rospy rqt-gui python-qt-binding ];
-  propagatedBuildInputs = [ rqt-gui-py dataspeed-pds-msgs rospy rqt-gui python-qt-binding ];
+  buildInputs = [ rqt-gui-py rqt-gui dataspeed-pds-msgs rospy python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui-py rqt-gui dataspeed-pds-msgs rospy python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS rqt GUI for the Dataspeed Inc. Power Distribution System (PDS)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

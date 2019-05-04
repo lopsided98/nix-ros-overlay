@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Mechanisms for loading a ros node at runtime.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

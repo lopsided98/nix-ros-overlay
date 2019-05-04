@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Parameter/Structure Estimation and Inference for Bayesian Belief Network'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

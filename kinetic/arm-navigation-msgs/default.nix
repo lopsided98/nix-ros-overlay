@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "4da8f9b727646dd5d6434e80e074a72c63d572a60c3c4350d7db6eaca6c04847";
   };
 
-  buildInputs = [ message-generation actionlib-msgs std-msgs trajectory-msgs sensor-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ message-runtime actionlib-msgs std-msgs trajectory-msgs sensor-msgs tf geometry-msgs ];
+  buildInputs = [ actionlib-msgs trajectory-msgs sensor-msgs message-generation std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs trajectory-msgs sensor-msgs message-runtime std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''arm_navigation_msgs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

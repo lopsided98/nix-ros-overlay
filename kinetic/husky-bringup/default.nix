@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslaunch, microstrain-3dmgx2-imu, nmea-navsat-driver, husky-control, husky-base, catkin, pythonPackages, tf2-ros, husky-description, lms1xx, robot-localization, nmea-comms, robot-upstart, um6, tf, imu-filter-madgwick, imu-transformer, um7 }:
+{ lib, buildRosPackage, fetchurl, roslaunch, microstrain-3dmgx2-imu, nmea-navsat-driver, robot-upstart, husky-control, husky-base, catkin, pythonPackages, tf2-ros, husky-description, lms1xx, robot-localization, imu-filter-madgwick, um6, tf, nmea-comms, imu-transformer, um7 }:
 buildRosPackage {
   pname = "ros-kinetic-husky-bringup";
   version = "0.3.3";
@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ microstrain-3dmgx2-imu nmea-navsat-driver husky-base pythonPackages.scipy tf2-ros husky-description lms1xx um7 robot-localization nmea-comms robot-upstart um6 tf husky-control imu-transformer imu-filter-madgwick ];
+  propagatedBuildInputs = [ microstrain-3dmgx2-imu nmea-navsat-driver husky-control husky-base pythonPackages.scipy tf2-ros husky-description lms1xx um7 robot-localization robot-upstart um6 tf nmea-comms imu-transformer imu-filter-madgwick ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Clearpath Husky installation and integration package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

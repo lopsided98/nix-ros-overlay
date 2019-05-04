@@ -20,6 +20,6 @@ buildRosPackage {
     alternative Inverse Kinematics solver to the popular inverse Jacobian
     methods in KDL.  TRAC-IK handles joint-limited chains better than KDL
     without increasing solve time.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

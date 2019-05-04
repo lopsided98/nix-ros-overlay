@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "30a9b871c1d2de18ddca98f1f18b469d42c7d2eaa865b98eb201d691eebd012c";
   };
 
-  buildInputs = [ exotica-ik-solver exotica-python exotica-core exotica-core-task-maps sensor-msgs exotica-aico-solver ];
+  buildInputs = [ exotica-ik-solver sensor-msgs exotica-aico-solver exotica-python exotica-core exotica-core-task-maps ];
   checkInputs = [ rostest exotica-val-description ];
   propagatedBuildInputs = [ exotica-ik-solver geometry-msgs python-orocos-kdl sensor-msgs exotica-time-indexed-rrt-connect-solver exotica-aico-solver exotica-ompl-solver rviz interactive-markers robot-state-publisher visualization-msgs exotica-python exotica-core exotica-core-task-maps exotica-collision-scene-fcl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package containing examples and system tests for EXOTica.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

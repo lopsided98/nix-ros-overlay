@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages used by the gateway model.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

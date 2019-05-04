@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "0d07fac75280d2c2db2845e8a475a6ecd4cfc19959e578c5c8d20db8e6928e59";
   };
 
-  buildInputs = [ nav-msgs message-generation dynamic-reconfigure create-driver diagnostic-msgs tf geometry-msgs rospy ];
-  propagatedBuildInputs = [ create-driver python-orocos-kdl rospy nav-msgs message-runtime dynamic-reconfigure diagnostic-msgs tf geometry-msgs ];
+  buildInputs = [ create-driver nav-msgs message-generation rospy diagnostic-msgs dynamic-reconfigure tf geometry-msgs ];
+  propagatedBuildInputs = [ create-driver python-orocos-kdl nav-msgs message-runtime rospy diagnostic-msgs dynamic-reconfigure tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -25,6 +25,6 @@ buildRosPackage {
     create_driver's implementation instead. 
     This also contains a 'bonus' feature from the turtlebot 
     driver by Xuwen Cao and Morgan Quigley.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

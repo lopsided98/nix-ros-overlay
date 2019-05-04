@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rqt_controller_manager package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

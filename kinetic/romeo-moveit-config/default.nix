@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "6f6e1d858123b1d8a774d7957e4d07f4e3cb223f6a7bd7262f6cac1304e984a8";
   };
 
-  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-simple-controller-manager moveit-planners-ompl moveit-ros-move-group robot-state-publisher joint-state-publisher xacro romeo-description ];
+  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group romeo-description moveit-simple-controller-manager robot-state-publisher joint-state-publisher xacro moveit-planners-ompl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the romeoH37 with the MoveIt Motion Planning Framework'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

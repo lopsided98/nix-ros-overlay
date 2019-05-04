@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A metapackage to bring in the default packages second generation Transform Library in ros, tf2.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

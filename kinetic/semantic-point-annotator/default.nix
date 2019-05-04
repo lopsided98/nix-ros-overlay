@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A node which annotates 3D point cloud data with semantic labels.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

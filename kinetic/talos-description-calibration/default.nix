@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the description of the hand-eye calibration of the TALOS robot.  The files in this package are used also from the talos_description package.'';
-    #license = lib.licenses.Creative Commons BY-NC-ND 3.0;
+    license = with lib.licenses; [ "CC-BY-NC-ND-4.0" ];
   };
 }

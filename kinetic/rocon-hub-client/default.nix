@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''Client api for discovery and connection to rocon hubs. It also has
     a few convenience api for manipulating data on the hub.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

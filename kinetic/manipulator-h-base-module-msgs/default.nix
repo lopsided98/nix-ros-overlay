@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The manipulator_h_base_module_msgs package
     This package includes ROS messages and services for manipulator_h_base_module_msgs'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

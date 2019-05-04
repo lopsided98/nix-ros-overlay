@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "2a1e83129053e512369073abc6bcd08e39d7d4f7887e921af93cfa59c526ff13";
   };
 
-  buildInputs = [ cmake-modules boost curl sensor-msgs ecto ecto-image-pipeline ];
+  buildInputs = [ cmake-modules boost sensor-msgs curl ecto ecto-image-pipeline ];
   checkInputs = [ visualization-msgs ];
-  propagatedBuildInputs = [ couchdb curl boost sensor-msgs ecto ecto-image-pipeline ];
+  propagatedBuildInputs = [ couchdb boost sensor-msgs curl ecto ecto-image-pipeline ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''object_recognition_core contains tools to launch several recognition pipelines, train objects, store models ...'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

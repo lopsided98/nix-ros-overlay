@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the components of the kdl_conversions package'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ roslint camera-info-manager image-transport sensor-msgs cv-bridge roscpp rostest nodelet opencv3 ];
-  propagatedBuildInputs = [ cv-bridge camera-info-manager image-transport sensor-msgs nodelet opencv3 roscpp ];
+  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge roscpp nodelet opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cv_camera uses OpenCV capture object to capture camera image.
   This supports camera_image and nodelet.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

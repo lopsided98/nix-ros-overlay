@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''a high-level FTP client library for Python'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

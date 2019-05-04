@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "90de93f399a745aafbaba926fe30d11de3aa89a5262b536353d84c6a7518e492";
   };
 
-  propagatedBuildInputs = [ pythonPackages.numpy nav-msgs rospy sensor-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ pythonPackages.numpy sensor-msgs nav-msgs rospy tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A collection of conversion function for extracting numpy arrays from messages'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

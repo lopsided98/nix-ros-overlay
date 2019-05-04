@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Stores the data from a series of laser scan messages in a dense representation, allowing
      users to easily perform image-like operations on intensity or range data. This package is
      experimental. Expect APIs to change.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launch and configuration files for calibrating Fetch using the 'robot_calibration' package.'';
-    #license = lib.licenses.Apache2;
+    license = with lib.licenses; [ asl20 ];
   };
 }

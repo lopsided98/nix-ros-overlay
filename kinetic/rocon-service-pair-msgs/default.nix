@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Paired pubsubs generators for non-blocking services.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

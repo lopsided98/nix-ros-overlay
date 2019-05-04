@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Sawyer Roch robot driver'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

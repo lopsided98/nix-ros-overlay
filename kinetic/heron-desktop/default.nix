@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The heron_desktop metapackage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

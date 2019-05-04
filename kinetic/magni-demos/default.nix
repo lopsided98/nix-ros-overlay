@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, magni-nav, tf2-web-republisher, catkin, rosbridge-server, magni-teleop, dnn-detect, magni-bringup }:
+{ lib, buildRosPackage, fetchurl, magni-nav, tf2-web-republisher, catkin, magni-teleop, rosbridge-server, dnn-detect, magni-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-magni-demos";
   version = "0.4.2";
@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "afccea8d8a44b8115af2bf647fbca169f9e361b7af5ee092f1351f0abde1c84b";
   };
 
-  propagatedBuildInputs = [ dnn-detect magni-nav tf2-web-republisher rosbridge-server magni-teleop magni-bringup ];
+  propagatedBuildInputs = [ magni-nav tf2-web-republisher magni-teleop rosbridge-server dnn-detect magni-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The magni_demos package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

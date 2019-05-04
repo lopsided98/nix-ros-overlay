@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "dfcaf521b442fb5fa19b58084891074b930cf09041e3d894337904f169b4c818";
   };
 
-  buildInputs = [ std-srvs tf2-geometry-msgs sensor-msgs robotnik-msgs message-filters tf2-ros roscpp geographic-msgs tf2 robot-localization nav-msgs std-msgs tf mavros-msgs geometry-msgs ];
+  buildInputs = [ std-srvs tf2-geometry-msgs sensor-msgs message-filters robotnik-msgs tf2-ros roscpp geographic-msgs tf2 robot-localization nav-msgs std-msgs tf mavros-msgs geometry-msgs ];
   checkInputs = [ rostest rosbag ];
   propagatedBuildInputs = [ std-srvs tf2-geometry-msgs sensor-msgs message-filters robotnik-msgs tf2-ros roscpp geographic-msgs tf2 robot-localization nav-msgs message-runtime std-msgs tf mavros-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The summit_xl_localization package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

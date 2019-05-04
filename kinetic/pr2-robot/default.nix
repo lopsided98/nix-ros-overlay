@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "1a3043528e0a14aba70e2adf1ee8030249d2dcc443e50cccbb2ad48a3f455e92";
   };
 
-  propagatedBuildInputs = [ pr2-computer-monitor pr2-run-stop-auto-restart pr2-camera-synchronizer pr2-controller-configuration pr2-bringup imu-monitor pr2-ethercat ];
+  propagatedBuildInputs = [ pr2-controller-configuration pr2-bringup pr2-computer-monitor pr2-run-stop-auto-restart pr2-camera-synchronizer imu-monitor pr2-ethercat ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This stack collects PR2-specific components that are used in bringing up
   a robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

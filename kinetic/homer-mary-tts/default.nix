@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The homer_mary_tts package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

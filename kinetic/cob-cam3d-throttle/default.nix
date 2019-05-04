@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "025d6693fb70b320c5cf831eba859268cacaa21b530141bebabc04b93e403b5e";
   };
 
-  buildInputs = [ pluginlib nodelet sensor-msgs roscpp message-filters ];
-  propagatedBuildInputs = [ pluginlib nodelet sensor-msgs roscpp message-filters ];
+  buildInputs = [ pluginlib sensor-msgs message-filters nodelet roscpp ];
+  propagatedBuildInputs = [ pluginlib sensor-msgs message-filters nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cob_cam3d_throttle: only for Trottel'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "fea0da1714cac9b6ac2536f1b3a8f1c1324889777800f172427697a9faaaaacf";
   };
 
-  buildInputs = [ thormang3-action-module-msgs roslib boost std-msgs robotis-controller-msgs robotis-framework-common roscpp ];
-  propagatedBuildInputs = [ thormang3-action-module-msgs roslib boost std-msgs robotis-controller-msgs robotis-framework-common roscpp ];
+  buildInputs = [ boost roscpp thormang3-action-module-msgs roslib std-msgs robotis-controller-msgs robotis-framework-common ];
+  propagatedBuildInputs = [ boost roscpp thormang3-action-module-msgs roslib std-msgs robotis-controller-msgs robotis-framework-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a motion module that can play the saved action.
     This module is based on position control.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

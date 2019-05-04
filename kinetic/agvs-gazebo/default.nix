@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The agvs_gazebo package. Launch files and worlds to run Gazebo.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

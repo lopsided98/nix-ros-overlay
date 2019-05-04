@@ -26,6 +26,6 @@ buildRosPackage {
       velocity, or acceleration and are published on demand via several data streams.
       For a complete list and descriptions of these dynamics states and the
       respective data streams please refer to rc_visard's user manual.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

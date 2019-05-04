@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''A libfreenect-based ROS driver for the Microsoft Kinect
     Modified version of xiaoqiang_freenect_stack, add tilt angle control support'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

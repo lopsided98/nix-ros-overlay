@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "30992a15d19cf71ce4f49eacc57850671e5065a73d1fd47f0752bafc33ce4c03";
   };
 
-  propagatedBuildInputs = [ rostest nav-msgs world-canvas-msgs pythonPackages.pymongo rospy warehouse-ros visualization-msgs world-canvas-utils ];
+  propagatedBuildInputs = [ pythonPackages.pymongo world-canvas-utils rostest nav-msgs world-canvas-msgs rospy warehouse-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Storage manager and server for WCF semantic maps.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

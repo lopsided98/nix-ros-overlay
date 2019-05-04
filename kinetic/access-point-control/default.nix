@@ -22,6 +22,6 @@ buildRosPackage {
     implement the API for various access-point models: 
     for example: hostapd_access_point for hostapd-based control or
     linksys_access_point for Linksys router web interface.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

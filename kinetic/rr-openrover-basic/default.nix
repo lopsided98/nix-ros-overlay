@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "7de6c6fefa26c462a9db9f3464a3eb4c1d402d44f970fb9cab0ee37f22157250";
   };
 
-  buildInputs = [ nav-msgs message-generation rospy std-msgs sensor-msgs roscpp geometry-msgs tf ];
-  propagatedBuildInputs = [ nav-msgs message-runtime rospy std-msgs sensor-msgs tf geometry-msgs roscpp ];
+  buildInputs = [ tf sensor-msgs nav-msgs message-generation rospy std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs message-runtime rospy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rr_openrover_basic package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

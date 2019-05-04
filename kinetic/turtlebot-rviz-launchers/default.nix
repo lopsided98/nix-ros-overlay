@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launchers for visualizing TurtleBot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

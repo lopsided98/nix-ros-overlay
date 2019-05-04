@@ -23,6 +23,6 @@ buildRosPackage {
     servos. This low level package won't be used directly by most
     ROS users. The higher level dynamixel_controllers and specific
     robot joint controllers make use of this package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

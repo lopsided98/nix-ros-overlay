@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The image_recognition_util package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

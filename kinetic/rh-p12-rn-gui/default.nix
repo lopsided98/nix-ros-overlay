@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "3efd9d6b022c891309e16933aa644d9a55e7282409978d9d5516ed262c0e116e";
   };
 
-  buildInputs = [ qt-build qt4 rh-p12-rn-base-module-msgs robotis-controller-msgs roscpp ];
-  propagatedBuildInputs = [ qt-build qt4 rh-p12-rn-base-module-msgs robotis-controller-msgs roscpp ];
+  buildInputs = [ qt4 rh-p12-rn-base-module-msgs roscpp qt-build robotis-controller-msgs ];
+  propagatedBuildInputs = [ qt4 rh-p12-rn-base-module-msgs roscpp qt-build robotis-controller-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides GUI interface to control the RH-P12-RN'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

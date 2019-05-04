@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common interfaces packages for Pyros framework'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

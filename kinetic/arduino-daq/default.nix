@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''AVR8 firmware, a host standalone C++ library, and a ROS node for UAL eCAR's Arduino-based DAQ system, but it is generic enough for use in many other applications'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

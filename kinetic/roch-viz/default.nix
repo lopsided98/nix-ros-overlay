@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Visualization configuration for SawYer roch'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

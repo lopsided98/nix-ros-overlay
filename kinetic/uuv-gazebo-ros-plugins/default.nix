@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''UUV Simulator's extended ROS plugins for generation of the necessary
       ROS services and topics during the simulation.'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''More efficient version of tf/tf_remap able to handle TFs at kHz with tens of subscribers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

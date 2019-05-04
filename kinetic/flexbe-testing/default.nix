@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''flexbe_testing provides a framework for unit testing states.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

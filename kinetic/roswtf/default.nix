@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ rostest ];
   checkInputs = [ cmake-modules ];
-  propagatedBuildInputs = [ roslib pythonPackages.rospkg rosgraph pythonPackages.paramiko roslaunch rosbuild rosservice rosnode ];
+  propagatedBuildInputs = [ pythonPackages.rospkg rosbuild rosservice rosgraph pythonPackages.paramiko roslaunch roslib rosnode ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''roswtf is a tool for diagnosing issues with a running ROS system. Think of it as a FAQ implemented in code.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

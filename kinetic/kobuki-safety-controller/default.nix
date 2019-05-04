@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-msgs, pluginlib, catkin, roscpp, ecl-threads, std-msgs, nodelet, geometry-msgs, yocs-controllers }:
+{ lib, buildRosPackage, fetchurl, kobuki-msgs, pluginlib, catkin, ecl-threads, nodelet, std-msgs, roscpp, geometry-msgs, yocs-controllers }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-safety-controller";
   version = "0.7.6";
@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "8a33921af46704980110c752c39f1b9e0837907951ecd9efa229973f6d215229";
   };
 
-  buildInputs = [ roscpp kobuki-msgs pluginlib geometry-msgs std-msgs nodelet yocs-controllers ecl-threads ];
-  propagatedBuildInputs = [ roscpp kobuki-msgs pluginlib geometry-msgs std-msgs nodelet yocs-controllers ecl-threads ];
+  buildInputs = [ kobuki-msgs pluginlib roscpp ecl-threads std-msgs nodelet geometry-msgs yocs-controllers ];
+  propagatedBuildInputs = [ kobuki-msgs pluginlib roscpp ecl-threads std-msgs nodelet geometry-msgs yocs-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -24,6 +24,6 @@ buildRosPackage {
     
     This controller can be enabled/disabled.
     The safety states (bumper pressed etc.) can be reset. WARNING: Dangerous!'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

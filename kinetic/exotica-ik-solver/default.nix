@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Pseudo-inverse unconstrained end-pose solver'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

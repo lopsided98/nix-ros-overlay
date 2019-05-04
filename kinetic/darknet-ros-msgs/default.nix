@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "2088c1b767d52a39c01cf1271de48634287963f13749eec570e9a4521f32986b";
   };
 
-  buildInputs = [ message-generation actionlib-msgs std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ message-runtime actionlib-msgs std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ actionlib-msgs sensor-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs sensor-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Darknet is an open source neural network framework that runs on CPU and GPU. You only look once (YOLO) is a state-of-the-art, real-time object detection system.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

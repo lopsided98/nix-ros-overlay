@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the list of supported robots within the care-o-bot family.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

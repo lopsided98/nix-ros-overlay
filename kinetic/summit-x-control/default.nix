@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "d0db35c688ea68f4565c3e3e5a48b10f60b11b05138644b7735fb87660a593f6";
   };
 
-  buildInputs = [ robot-state-publisher ros-control summit-x-description summit-xl-pad ros-controllers ];
-  propagatedBuildInputs = [ robot-state-publisher ros-control summit-x-description summit-xl-pad ros-controllers ];
+  buildInputs = [ ros-control summit-x-description robot-state-publisher summit-xl-pad ros-controllers ];
+  propagatedBuildInputs = [ ros-control summit-x-description robot-state-publisher summit-xl-pad ros-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the launch files that load the required controller interfaces for simulation in Gazebo.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

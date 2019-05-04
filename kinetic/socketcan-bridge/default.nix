@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Conversion nodes for messages from SocketCAN to a ROS Topic and vice versa.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

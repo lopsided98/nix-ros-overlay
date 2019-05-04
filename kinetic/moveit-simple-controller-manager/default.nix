@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "b04cc54b5eb206396d16cf28978a5fc4ace669ce9d249b8d3f049a62f2f0d9ea";
   };
 
-  buildInputs = [ moveit-core pluginlib actionlib control-msgs roscpp ];
-  propagatedBuildInputs = [ moveit-core pluginlib actionlib control-msgs roscpp ];
+  buildInputs = [ pluginlib control-msgs moveit-core actionlib roscpp ];
+  propagatedBuildInputs = [ pluginlib control-msgs moveit-core actionlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A generic, simple controller manager plugin for MoveIt.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

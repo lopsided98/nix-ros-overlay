@@ -24,6 +24,6 @@ buildRosPackage {
       
       WARNING: This package is disabled because it cannot be catkinized by now, as xacro dependency is not
       catkin still. In the interim we use a unary pre-catkin stack named kobuki_description.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

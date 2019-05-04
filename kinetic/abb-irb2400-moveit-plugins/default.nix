@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "e52a4bbe761932e7b0c4baf47184b690153aec1457693ad5eb6ee9cced11a70b";
   };
 
-  buildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
-  propagatedBuildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
+  buildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];
+  propagatedBuildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -30,6 +30,6 @@ buildRosPackage {
       check they are correct for the particular robot model and configuration
       you intend to use them with.
     </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

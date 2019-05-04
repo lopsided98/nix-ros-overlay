@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest xacro ];
-  propagatedBuildInputs = [ std-srvs pythonPackages.enum34 rospy sensor-msgs tf pythonPackages.simplejson urdfdom-py ];
+  propagatedBuildInputs = [ std-srvs pythonPackages.enum34 sensor-msgs pythonPackages.simplejson rospy tf urdfdom-py ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Record the joint_states and/or the mobile changes (via tf) of a ROS system as three.js animation'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

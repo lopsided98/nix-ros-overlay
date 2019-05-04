@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Control for Aldebaran's ROMEO robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

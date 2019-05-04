@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Bring-up the dcm driver to control Pepper'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

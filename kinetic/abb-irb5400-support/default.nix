@@ -36,6 +36,6 @@ buildRosPackage {
       in this package, be sure to check they are correct for the particular
       robot model and configuration you intend to use them with.
     </p>'';
-    #license = lib.licenses.Apache2;
+    license = with lib.licenses; [ asl20 ];
   };
 }

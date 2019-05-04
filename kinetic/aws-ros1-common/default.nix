@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common utilities for ROS1 nodes using Amazon Web Services'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

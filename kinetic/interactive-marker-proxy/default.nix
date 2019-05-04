@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A Proxy Server for Interactive Markers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

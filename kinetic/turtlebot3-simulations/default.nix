@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS packages for the turtlebot3 simulation (meta package)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

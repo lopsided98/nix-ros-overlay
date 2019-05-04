@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''A libfreenect-based ROS driver for the Microsoft Kinect.  This is
     a port of the OpenNI driver that uses libfreenect instead, because
     on some systems with some devices it works better.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

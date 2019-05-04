@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Stdr version of turtlebot simulation. Convenient to test 2D-navigation related stuffs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

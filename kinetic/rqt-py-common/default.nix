@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   buildInputs = [ std-msgs genmsg ];
-  propagatedBuildInputs = [ roslib qt-gui rostopic actionlib rospy rosbag genpy python-qt-binding ];
+  propagatedBuildInputs = [ rosbag roslib qt-gui rostopic actionlib rospy genpy python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -24,6 +24,6 @@ buildRosPackage {
 
     Functionality included in this package should cover generic ROS concepts and
     should not introduce any special dependencies beside &quot;ros_base&quot;.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

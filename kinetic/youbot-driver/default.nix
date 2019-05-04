@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''driver for the KUKA youBot robot'';
-    #license = lib.licenses.LGPLv2.1, modified BSD;
+    license = with lib.licenses; [ lgpl21 ];
   };
 }

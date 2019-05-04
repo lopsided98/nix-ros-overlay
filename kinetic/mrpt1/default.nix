@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Mobile Robot Programming Toolkit (MRPT) version 1.5.x'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

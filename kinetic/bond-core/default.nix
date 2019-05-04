@@ -20,6 +20,6 @@ buildRosPackage {
     terminated, either cleanly or by crashing. The bond remains
     connected until it is either broken explicitly or until a
     heartbeat times out.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

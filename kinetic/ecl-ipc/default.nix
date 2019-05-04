@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "9418c272205c7d415dfe000ee6763e0d14e5afbcfc835a2ddab7c0af9bbe551c";
   };
 
-  buildInputs = [ ecl-exceptions ecl-build ecl-license ecl-errors ecl-time-lite ecl-config ecl-time ];
-  propagatedBuildInputs = [ ecl-exceptions ecl-build ecl-license ecl-errors ecl-time-lite ecl-config ecl-time ];
+  buildInputs = [ ecl-time-lite ecl-time ecl-exceptions ecl-build ecl-license ecl-errors ecl-config ];
+  propagatedBuildInputs = [ ecl-time-lite ecl-time ecl-exceptions ecl-build ecl-license ecl-errors ecl-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
   cross platform c++ wrappers around the lower level c api's that handle these 
   mechanisms. These make it not only easier to utilise such mechanisms, but allow it 
   to be done consistently across platforms.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

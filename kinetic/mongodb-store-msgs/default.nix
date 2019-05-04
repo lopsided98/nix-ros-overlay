@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The mongodb_store_msgs package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

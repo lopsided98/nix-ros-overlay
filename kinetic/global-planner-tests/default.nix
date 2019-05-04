@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "2c761414f62dd5d044ab2da756b4ad74babf71d304d5c616f1955e0d5be75615";
   };
 
-  buildInputs = [ map-server nav-msgs pluginlib libyamlcpp nav-core2 roscpp ];
+  buildInputs = [ map-server pluginlib libyamlcpp nav-core2 nav-msgs roscpp ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ map-server nav-msgs pluginlib libyamlcpp nav-core2 roscpp ];
+  propagatedBuildInputs = [ map-server pluginlib libyamlcpp nav-core2 nav-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A collection of tests for checking the validity and completeness of global planners.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "918ffb3836ea2109887da5f3b0e49ca435efd0a338766e0ffcc5efa252dca3d1";
   };
 
-  buildInputs = [ roseus rostest gazebo-ros collada-urdf pythonPackages.lxml ];
+  buildInputs = [ roseus gazebo-ros collada-urdf rostest pythonPackages.lxml ];
   propagatedBuildInputs = [ gazebo-ros rostest collada-urdf pythonPackages.lxml ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''urdf models converted from euslisp'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

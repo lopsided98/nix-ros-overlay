@@ -59,6 +59,6 @@ buildRosPackage {
      The simulated bumper must obtain the collision data in the link that the
      sensor is attached to. This is achieved by setting the &quot;frameName&quot; property
      in the gazebo_ros_bumper controller.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

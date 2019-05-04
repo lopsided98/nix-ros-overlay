@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "f6fac433344f169ff92c72877682d478c398689635d1dc695d771a2f6bc72999";
   };
 
-  buildInputs = [ libyamlcpp roslib message-generation boost dynamic-reconfigure std-msgs roscpp ];
-  propagatedBuildInputs = [ libyamlcpp roslib message-runtime boost dynamic-reconfigure std-msgs roscpp ];
+  buildInputs = [ boost libyamlcpp roslib message-generation dynamic-reconfigure std-msgs roscpp ];
+  propagatedBuildInputs = [ boost libyamlcpp roslib message-runtime dynamic-reconfigure std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_camera_setting_tool package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

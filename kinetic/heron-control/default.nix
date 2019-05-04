@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Control package for Heron'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

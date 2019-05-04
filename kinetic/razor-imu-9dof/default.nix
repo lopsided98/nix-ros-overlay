@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ dynamic-reconfigure pythonPackages.pyserial rospy sensor-msgs tf ];
+  propagatedBuildInputs = [ pythonPackages.pyserial sensor-msgs rospy dynamic-reconfigure tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -23,6 +23,6 @@ buildRosPackage {
      installed on the Razor board for the system to work. A node
      which displays the attitude (roll, pitch and yaw) of the Razor board 
      (or any IMU) is provided for testing.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

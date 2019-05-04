@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS console output library.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

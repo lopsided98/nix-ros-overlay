@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Basic ROS support for the Velodyne 3D LIDARs.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

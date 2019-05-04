@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Creates the joint and velocity controllers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A robot description package for Dr Robot's Jaguar 4x4'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

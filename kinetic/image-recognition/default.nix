@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "62653fdb62c43a51759a9a20f8541b07682cacd08693a6dd5bf50efc92a239de";
   };
 
-  propagatedBuildInputs = [ openface-ros tensorflow-ros image-recognition-util image-recognition-msgs skybiometry-ros image-recognition-rqt tensorflow-ros-rqt ];
+  propagatedBuildInputs = [ openface-ros image-recognition-rqt tensorflow-ros-rqt tensorflow-ros image-recognition-util image-recognition-msgs skybiometry-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The image_recognition package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

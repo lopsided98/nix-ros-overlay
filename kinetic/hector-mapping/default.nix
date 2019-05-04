@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "30d1768ad414151ea1e69f71dd154bb11e6c2ae76537a6cdde3e9fd8bfb4a6bd";
   };
 
-  buildInputs = [ boost tf message-filters roscpp laser-geometry nav-msgs message-generation eigen tf-conversions visualization-msgs ];
-  propagatedBuildInputs = [ boost tf message-filters roscpp laser-geometry nav-msgs message-runtime eigen tf-conversions visualization-msgs ];
+  buildInputs = [ boost tf message-filters roscpp nav-msgs message-generation visualization-msgs eigen tf-conversions laser-geometry ];
+  propagatedBuildInputs = [ boost tf message-filters roscpp nav-msgs message-runtime visualization-msgs eigen tf-conversions laser-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
     It leverages the high update rate of modern LIDAR systems like the Hokuyo UTM-30LX and provides 2D pose estimates at scan rate of the sensors (40Hz for the UTM-30LX).
     While the system does not provide explicit loop closing ability, it is sufficiently accurate for many real world scenarios. The system has successfully been used on
     Unmanned Ground Robots, Unmanned Surface Vehicles, Handheld Mapping Devices and logged data from quadrotor UAVs.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

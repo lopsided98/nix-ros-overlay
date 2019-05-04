@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''The manipulator_h_kinematics_dynamics package
     This packages provides library of kinematics and dynamics information for ROBOTIS MANIPULATOR-H.
     Additionally, there are some function to calculate kinematics and dynamics.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

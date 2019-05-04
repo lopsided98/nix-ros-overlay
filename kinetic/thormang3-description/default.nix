@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ sensor-msgs roscpp ];
-  propagatedBuildInputs = [ urg-node rviz robot-state-publisher sensor-msgs roscpp joint-state-publisher ];
+  propagatedBuildInputs = [ urg-node sensor-msgs rviz robot-state-publisher roscpp joint-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''3D models of the Thormang3 for simulation and visualization'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

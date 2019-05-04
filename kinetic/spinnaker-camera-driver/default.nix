@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Spinnaker camera driver based on Spinnaker.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

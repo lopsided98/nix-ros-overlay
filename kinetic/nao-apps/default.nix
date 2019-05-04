@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, trajectory-msgs, catkin, naoqi-pose, naoqi-bridge-msgs, naoqi-bridge, rospy, std-msgs, naoqi-driver, actionlib, naoqi-driver-py, diagnostic-msgs, dynamic-reconfigure, humanoid-nav-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, std-srvs, trajectory-msgs, catkin, naoqi-pose, naoqi-bridge-msgs, naoqi-bridge, rospy, naoqi-driver-py, diagnostic-msgs, actionlib, std-msgs, naoqi-driver, dynamic-reconfigure, humanoid-nav-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-nao-apps";
   version = "0.5.15";
@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ trajectory-msgs ];
-  propagatedBuildInputs = [ std-srvs naoqi-pose rospy naoqi-bridge-msgs diagnostic-msgs naoqi-bridge std-msgs actionlib dynamic-reconfigure naoqi-driver-py naoqi-driver humanoid-nav-msgs geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs naoqi-pose naoqi-bridge-msgs rospy naoqi-driver-py diagnostic-msgs naoqi-bridge actionlib dynamic-reconfigure std-msgs naoqi-driver humanoid-nav-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Applications for NAO using the NAOqi API'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

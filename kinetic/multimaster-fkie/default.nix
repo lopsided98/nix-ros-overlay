@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "d1ecc94aadeea0b43f0a89223fa0d559cb3cf7198faa4caa8b68b656b1261408";
   };
 
-  propagatedBuildInputs = [ master-sync-fkie default-cfg-fkie node-manager-fkie master-discovery-fkie multimaster-msgs-fkie ];
+  propagatedBuildInputs = [ master-sync-fkie default-cfg-fkie multimaster-msgs-fkie node-manager-fkie master-discovery-fkie ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The metapackage to combine the nodes required to establish and manage a multimaster network. 
     This requires no or minimal configuration. The changes are automatically detected and synchronized.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

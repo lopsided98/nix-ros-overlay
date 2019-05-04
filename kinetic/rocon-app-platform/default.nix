@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Robot application platform for ros robots with a default implementation in python.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

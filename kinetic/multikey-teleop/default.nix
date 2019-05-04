@@ -22,6 +22,6 @@ buildRosPackage {
       It's basically a keylogger, listening on any key press and producing commands accordingly.
       Its main advantage is that you will be able to simultaneously press multiple keys.
       Its main advantage is that you will be able to simultaneously press multiple keys.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

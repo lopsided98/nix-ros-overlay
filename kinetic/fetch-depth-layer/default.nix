@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "3e7fb48e76b64d166572bd6458aa4b38a88c7421e26e6ea245502b216b050b4c";
   };
 
-  buildInputs = [ costmap-2d nav-msgs opencv-candidate pluginlib image-transport sensor-msgs cv-bridge roscpp ];
-  propagatedBuildInputs = [ costmap-2d nav-msgs opencv-candidate pluginlib image-transport sensor-msgs cv-bridge roscpp ];
+  buildInputs = [ costmap-2d opencv-candidate pluginlib image-transport sensor-msgs cv-bridge nav-msgs roscpp ];
+  propagatedBuildInputs = [ costmap-2d opencv-candidate pluginlib image-transport sensor-msgs cv-bridge nav-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The fetch_depth_layer package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message definitions and serialisations for Eigen messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

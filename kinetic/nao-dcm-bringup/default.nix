@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Bring-up the nao_dcm driver to connect to Aldebaran's Nao robot (v4).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

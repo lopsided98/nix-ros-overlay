@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The kobuki_rviz_launchers package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

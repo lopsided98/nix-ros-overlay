@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''tf2_eigen'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

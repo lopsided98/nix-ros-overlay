@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "d87283903b14db4a8dd4481dc3e105cefd130f1cb500a632d2f2ec271331411d";
   };
 
-  buildInputs = [ costmap-2d pluginlib rospy angles sensor-msgs roscpp ];
-  propagatedBuildInputs = [ costmap-2d pluginlib rospy angles sensor-msgs roscpp ];
+  buildInputs = [ costmap-2d pluginlib sensor-msgs rospy angles roscpp ];
+  propagatedBuildInputs = [ costmap-2d pluginlib sensor-msgs rospy angles roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Navigation Layer for Range sensors like sonar and IR'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

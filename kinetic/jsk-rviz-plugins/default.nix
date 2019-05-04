@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "bca19afb384a9d0a027c38004e2b5094448510294675d27a2dccae210b5dd6bc";
   };
 
-  buildInputs = [ people-msgs mk cv-bridge jsk-gui-msgs rosbuild image-geometry view-controller-msgs jsk-recognition-msgs diagnostic-msgs std-msgs geometry-msgs urdfdom-py jsk-hark-msgs jsk-footstep-msgs jsk-topic-tools message-generation rviz jsk-recognition-utils dynamic-reconfigure ];
-  propagatedBuildInputs = [ people-msgs cv-bridge posedetection-msgs jsk-gui-msgs pythonPackages.scipy image-geometry view-controller-msgs jsk-recognition-msgs diagnostic-msgs image-publisher std-msgs geometry-msgs urdfdom-py jsk-hark-msgs jsk-footstep-msgs jsk-topic-tools message-generation rviz jsk-recognition-utils dynamic-reconfigure ];
+  buildInputs = [ cv-bridge jsk-gui-msgs image-geometry view-controller-msgs diagnostic-msgs geometry-msgs jsk-hark-msgs jsk-footstep-msgs jsk-topic-tools message-generation rviz people-msgs mk rosbuild jsk-recognition-msgs std-msgs urdfdom-py jsk-recognition-utils dynamic-reconfigure ];
+  propagatedBuildInputs = [ cv-bridge jsk-gui-msgs pythonPackages.scipy image-geometry view-controller-msgs diagnostic-msgs geometry-msgs jsk-hark-msgs jsk-footstep-msgs jsk-topic-tools message-generation rviz people-msgs posedetection-msgs jsk-recognition-msgs image-publisher std-msgs urdfdom-py jsk-recognition-utils dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The jsk_rviz_plugins package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

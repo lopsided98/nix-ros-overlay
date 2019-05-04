@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "cd2f09bc9d79b8a1794833d1b3d57e22a0f65b35a04d3153fa06c79dbf32ec02";
   };
 
-  buildInputs = [ rtt-actionlib-msgs rtt-geometry-msgs rtt-std-msgs control-msgs rtt-trajectory-msgs rtt-roscomm ];
-  propagatedBuildInputs = [ rtt-actionlib-msgs rtt-geometry-msgs rtt-std-msgs control-msgs rtt-trajectory-msgs rtt-roscomm ];
+  buildInputs = [ rtt-std-msgs control-msgs rtt-geometry-msgs rtt-actionlib-msgs rtt-trajectory-msgs rtt-roscomm ];
+  propagatedBuildInputs = [ rtt-std-msgs control-msgs rtt-geometry-msgs rtt-actionlib-msgs rtt-trajectory-msgs rtt-roscomm ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -29,6 +29,6 @@ buildRosPackage {
     See the http://ros.org/wiki/control_msgs documentation
     for the documentation of the ROS messages in this
     typekit.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

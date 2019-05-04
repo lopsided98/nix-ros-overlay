@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''All PR2-specific packages for MoveIt'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "a359030ac0e039fbb1a487354880c7dd9798c932f37cf893278182a40ed79a81";
   };
 
-  propagatedBuildInputs = [ ros-comm rospack std-srvs gencpp genlisp ros catkin rosconsole-bridge rosgraph-msgs roscpp-core std-msgs common-msgs cmake-modules gennodejs roslisp message-generation rosbag-migration-rule message-runtime geneus genmsg genpy ];
+  propagatedBuildInputs = [ gencpp genlisp ros rosconsole-bridge rosgraph-msgs roscpp-core gennodejs message-generation rosbag-migration-rule message-runtime genmsg ros-comm rospack std-srvs catkin std-msgs common-msgs cmake-modules roslisp geneus genpy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A metapackage to aggregate the packages required to use publish / subscribe, services, launch files, and other core ROS concepts.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

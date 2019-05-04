@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''An action interface to MoveIt!'s pick-and-place for Care-O-bot'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

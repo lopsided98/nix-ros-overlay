@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rdl_dynamics package'';
-    #license = lib.licenses.zlib;
+    license = with lib.licenses; [ "zlib" ];
   };
 }

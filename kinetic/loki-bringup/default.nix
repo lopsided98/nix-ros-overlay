@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The loki_bringup package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

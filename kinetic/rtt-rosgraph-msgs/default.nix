@@ -29,6 +29,6 @@ buildRosPackage {
 	See the http://ros.org/wiki/rosgraph_msgs documentation
 	for the documentation of the ROS messages in this
 	typekit.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

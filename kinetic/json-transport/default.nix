@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''JSON transport for ROS'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

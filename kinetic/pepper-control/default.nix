@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Control for Pepper robot'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

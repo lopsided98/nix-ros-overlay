@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Packages for working with Ridgeback from a ROS desktop.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

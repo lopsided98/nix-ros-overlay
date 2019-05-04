@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The point_cloud_publisher_tutorial package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

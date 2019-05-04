@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "0bdfd0b3e21fbc88572fc35d8918e1db00d01930df987f118efec96c63ff4ee0";
   };
 
-  buildInputs = [ urdf tf sensor-msgs roscpp message-filters xacro ];
-  propagatedBuildInputs = [ urdf robot-state-publisher tf sensor-msgs roscpp message-filters xacro ];
+  buildInputs = [ sensor-msgs message-filters roscpp urdf tf xacro ];
+  propagatedBuildInputs = [ tf sensor-msgs message-filters urdf robot-state-publisher roscpp xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The romeo_description package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

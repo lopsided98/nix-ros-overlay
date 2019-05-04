@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "baffa6449d94b13739ccfcf17cceb9283145ab80974bc10a78088d16be178982";
   };
 
-  propagatedBuildInputs = [ std-srvs actionlib-msgs actionlib std-msgs trajectory-msgs sensor-msgs rospy naoqi-bridge-msgs ];
+  propagatedBuildInputs = [ std-srvs actionlib-msgs trajectory-msgs sensor-msgs naoqi-bridge-msgs rospy actionlib std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>
           This package contains nodes for managing Nao's poses.
     </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

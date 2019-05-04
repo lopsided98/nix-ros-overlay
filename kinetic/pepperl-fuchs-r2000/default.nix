@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The Pepperl+Fuchs R2000 laser range finder driver package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

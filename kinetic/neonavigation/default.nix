@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The neonavigation meta-package including 3-dof configuration space planner'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

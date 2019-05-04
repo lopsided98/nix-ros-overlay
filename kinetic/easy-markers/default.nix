@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "23ff1f37c017bc511dd6643fb9dbab42fc15ac9137f0ce2071b4da67202ebe99";
   };
 
-  buildInputs = [ interactive-markers visualization-msgs rospy tf roslib geometry-msgs ];
-  propagatedBuildInputs = [ interactive-markers visualization-msgs rospy tf roslib geometry-msgs ];
+  buildInputs = [ roslib interactive-markers visualization-msgs rospy tf geometry-msgs ];
+  propagatedBuildInputs = [ roslib interactive-markers visualization-msgs rospy tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Python library to assist in publishing markers easily'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "767230ba5af5c961dad535fb18cfc8d30e80c17653e8008f1414d8c58d4b2907";
   };
 
-  propagatedBuildInputs = [ magni-description magni-nav magni-viz magni-demos magni-teleop magni-bringup ];
+  propagatedBuildInputs = [ magni-nav magni-viz magni-demos magni-teleop magni-description magni-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The magni_robot package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

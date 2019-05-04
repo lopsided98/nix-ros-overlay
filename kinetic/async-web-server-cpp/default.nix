@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Asynchronous Web/WebSocket Server in C++'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

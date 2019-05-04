@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF robot description for Ridgeback'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

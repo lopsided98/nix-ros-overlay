@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "a3dcccf6249967d15f72bc230df44e9974bbf888a86412d805ba4c12093e3b33";
   };
 
-  buildInputs = [ moveit-ros-planning moveit-ros-visualization moveit-core libyamlcpp srdfdom ];
+  buildInputs = [ moveit-ros-planning moveit-ros-visualization libyamlcpp srdfdom moveit-core ];
   checkInputs = [ moveit-resources ];
-  propagatedBuildInputs = [ moveit-ros-planning moveit-ros-visualization moveit-core libyamlcpp srdfdom xacro ];
+  propagatedBuildInputs = [ moveit-ros-planning moveit-ros-visualization libyamlcpp srdfdom moveit-core xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generates a configuration package that makes it easy to use MoveIt!'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Suite of packages supporing the avahi implementation of zeroconf for ros.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

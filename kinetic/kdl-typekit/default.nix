@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the KDL RTT bindings'';
-    #license = lib.licenses.LGPL / BSD;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

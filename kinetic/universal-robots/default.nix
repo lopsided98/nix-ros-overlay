@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS-Industrial support for Universal Robots manipulators (metapackage).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

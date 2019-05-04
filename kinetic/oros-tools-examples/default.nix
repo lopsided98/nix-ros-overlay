@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The oros_tools_examples package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

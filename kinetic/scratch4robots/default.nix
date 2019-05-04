@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''scratch4robots'';
-    #license = lib.licenses.GPL v3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

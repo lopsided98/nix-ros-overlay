@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Generic Messages for Navigation Objectives in Automotive Automation Software'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

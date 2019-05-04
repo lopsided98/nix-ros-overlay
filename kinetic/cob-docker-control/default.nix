@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Autonomous docking'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

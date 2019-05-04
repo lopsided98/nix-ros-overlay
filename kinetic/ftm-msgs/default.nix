@@ -40,6 +40,6 @@ buildRosPackage {
 		<br/>
 	</p>
 	<p>ftm_msgs package provides the definitions of the Messages, Services and Actions needed in order to implement the architecture described above.</p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

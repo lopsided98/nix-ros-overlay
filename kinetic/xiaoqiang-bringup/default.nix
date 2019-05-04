@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''xiaoqiang bringup package, including launch files for many devices'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

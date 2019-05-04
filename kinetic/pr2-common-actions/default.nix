@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "7e958b28f188ea7f8461fe2be57f2e2fee7f3cf60c3f6a8218827c357341d0df";
   };
 
-  propagatedBuildInputs = [ pr2-arm-move-ik pr2-tilt-laser-interface joint-trajectory-generator pr2-common-action-msgs pr2-tuck-arms-action joint-trajectory-action-tools ];
+  propagatedBuildInputs = [ pr2-tilt-laser-interface joint-trajectory-generator pr2-common-action-msgs pr2-arm-move-ik pr2-tuck-arms-action joint-trajectory-action-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Various actions which help in moving the arms of the PR2
     or getting data from its tilting laser.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

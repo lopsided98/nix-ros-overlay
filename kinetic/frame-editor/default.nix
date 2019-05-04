@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The frame_editor package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

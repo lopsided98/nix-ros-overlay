@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''cl_urdf'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

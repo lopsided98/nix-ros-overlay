@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Several demos and launch-tests for the avahi based zero-configuration.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

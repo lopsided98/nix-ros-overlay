@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''<p>
       Various binpicking utils
     </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

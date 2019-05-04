@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "791f74c3fa55e9cf2e16bb467dfd1f1ae4cb55a1502e51c5abde8cded3cc6d55";
   };
 
-  buildInputs = [ cv-bridge nodelet dynamic-reconfigure camera-info-manager image-transport sensor-msgs roscpp ];
-  propagatedBuildInputs = [ cv-bridge nodelet dynamic-reconfigure camera-info-manager image-transport sensor-msgs roscpp ];
+  buildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge nodelet dynamic-reconfigure roscpp ];
+  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge nodelet dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
       Contains a node publish an image stream from single image file
       or avi motion file.
     </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

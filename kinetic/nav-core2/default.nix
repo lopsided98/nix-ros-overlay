@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Interfaces for Costmap, LocalPlanner and GlobalPlanner. Replaces nav_core.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

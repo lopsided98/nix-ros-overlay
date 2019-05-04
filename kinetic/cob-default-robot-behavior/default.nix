@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "3602ac2507120695a46e7dd2c388bc9ec7d8549dc6bd85ac9881c4653a5d9019";
   };
 
-  propagatedBuildInputs = [ cob-light std-srvs rospy std-msgs cob-script-server ];
+  propagatedBuildInputs = [ std-srvs cob-script-server cob-light rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_default_robot_behavior package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common tools for image based pipelines. Includes stereo and mono camera drivers, rectification, image sinks, calibration, etc..'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

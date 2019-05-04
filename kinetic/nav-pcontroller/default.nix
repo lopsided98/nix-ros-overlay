@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "f07a4ac45bda0e3059d990500c8004f69915d9db360cd19c241b27910a06f723";
   };
 
-  buildInputs = [ tf sensor-msgs roscpp move-base-msgs roslib actionlib std-msgs visualization-msgs geometry-msgs ];
-  propagatedBuildInputs = [ tf sensor-msgs roscpp move-base-msgs roslib actionlib std-msgs visualization-msgs geometry-msgs ];
+  buildInputs = [ tf sensor-msgs roscpp move-base-msgs visualization-msgs actionlib std-msgs roslib geometry-msgs ];
+  propagatedBuildInputs = [ tf sensor-msgs roscpp move-base-msgs visualization-msgs actionlib std-msgs roslib geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Simple P-Controller for a holonomic robot base'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "91c14804efe06595ffb5a60a02c3c77d317ff63e598f6407cfed9491b3c38b45";
   };
 
-  propagatedBuildInputs = [ single-joint-position-action pr2-controller-manager pr2-head-action gazeboSimulator.gazebo pr2-gripper-action ];
+  propagatedBuildInputs = [ pr2-head-action gazeboSimulator.gazebo pr2-gripper-action single-joint-position-action pr2-controller-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A copy of the pr2_controller_configuration package, for use in 
     the PR2 simulator.  We maintain two copies to allow for controller
     gains to be set differently between hardware and simulation.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

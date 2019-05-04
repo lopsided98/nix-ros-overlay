@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "8353908c19528a762af7f1651f6b7411a6c55ee2fa8ea3a551f49ed97ed22c8a";
   };
 
-  buildInputs = [ settlerlib actionlib rosconsole actionlib-msgs roscpp-serialization std-msgs ];
-  propagatedBuildInputs = [ settlerlib actionlib rosconsole actionlib-msgs roscpp-serialization std-msgs ];
+  buildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs ];
+  propagatedBuildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Listens on a ImageFeatures topic, and waits for the data to settle.
      This package is experimental and unstable.
      Expect its APIs to change.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

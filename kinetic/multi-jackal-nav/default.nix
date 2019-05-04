@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Localization and navigation for the Jackal.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

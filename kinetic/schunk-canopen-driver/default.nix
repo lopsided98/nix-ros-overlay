@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The schunk_canopen_driver package'';
-    #license = lib.licenses.FZI all rights reserved;
+    license = with lib.licenses; [ "FZI all rights reserved" ];
   };
 }

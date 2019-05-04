@@ -40,6 +40,6 @@ buildRosPackage {
       The unqualified IRB 2400 model will be removed in ROS-Lunar, please
       use the IRB 2400-12/1.55 as a replacement.
     </p>'';
-    #license = lib.licenses.Apache2;
+    license = with lib.licenses; [ asl20 ];
   };
 }

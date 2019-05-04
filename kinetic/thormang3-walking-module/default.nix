@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package is a motion module for thormang3 walking.
     This package provides a online walking pattern generator for the thormang3.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

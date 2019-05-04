@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''This stack offers OpenRAVE-related bindings.
     Maintained by the JSK lab at University of Tokyo.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

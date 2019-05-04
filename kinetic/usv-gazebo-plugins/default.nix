@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "e2576c55810615d62f46775856dc94e1e0330ef3bcb2dd44e2ecc2732c479d8d";
   };
 
-  buildInputs = [ gazebo-ros eigen std-msgs roscpp gazebo-dev ];
-  propagatedBuildInputs = [ gazebo-ros message-runtime eigen std-msgs roscpp gazebo-dev ];
+  buildInputs = [ gazebo-ros gazebo-dev eigen std-msgs roscpp ];
+  propagatedBuildInputs = [ gazebo-ros gazebo-dev message-runtime eigen std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo plugins for simulating Unmanned Surface Vehicles
     Originaly copied from https://github.com/bsb808/usv_gazebo_plugins'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

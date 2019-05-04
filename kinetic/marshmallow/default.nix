@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''A lightweight library for converting complex objects to and from simple Python datatypes.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

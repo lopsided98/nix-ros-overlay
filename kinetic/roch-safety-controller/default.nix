@@ -24,6 +24,6 @@ buildRosPackage {
     This controller can be enabled/disabled.
     The safety states (cliff, psd and ult etc.) can be reset. WARNING: Dangerous!
     Refrence with yujinrobot' kobuki.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

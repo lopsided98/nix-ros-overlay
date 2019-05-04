@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Drivers, description, and utilities for Universal Robot Arms.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

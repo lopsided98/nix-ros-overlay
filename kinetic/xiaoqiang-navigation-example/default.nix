@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''xiaoqiang navigation stack examples'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

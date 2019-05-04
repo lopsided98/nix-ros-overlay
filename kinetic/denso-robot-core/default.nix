@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "512e9f991a1ba21d338bd4fead0f5040dca3eccee3099d6468065baabfada67f";
   };
 
-  buildInputs = [ message-generation actionlib bcap-core actionlib-msgs std-msgs bcap-service roscpp ];
-  propagatedBuildInputs = [ actionlib message-runtime bcap-core actionlib-msgs std-msgs bcap-service roscpp ];
+  buildInputs = [ actionlib-msgs message-generation bcap-core actionlib std-msgs bcap-service roscpp ];
+  propagatedBuildInputs = [ actionlib-msgs message-runtime bcap-core actionlib std-msgs bcap-service roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The denso robot core package includes a node for controlling DENSO robot controllers.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "e659c874bcdf91aacbaef815432703a7ba06d7a76cd7a60083751d342bf49de8";
   };
 
-  propagatedBuildInputs = [ pr2-calibration-launch pr2-dense-laser-snapshotter laser-joint-processor dense-laser-assembler pr2-se-calibration-launch laser-joint-projector ];
+  propagatedBuildInputs = [ pr2-dense-laser-snapshotter laser-joint-projector pr2-calibration-launch laser-joint-processor dense-laser-assembler pr2-se-calibration-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_calibration package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

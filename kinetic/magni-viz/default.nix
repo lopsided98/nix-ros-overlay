@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The magni_viz package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

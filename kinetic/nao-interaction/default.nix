@@ -21,6 +21,6 @@ buildRosPackage {
         - NAOqi audio proxies
         - NAOqi vision proxies
     </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

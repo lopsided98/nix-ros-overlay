@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "734a02bff32ecf9ea8e2e78f8fc61d5f083dd4a3ba3153e423cf0eac662a9899";
   };
 
-  buildInputs = [ gazebo-ros actionlib control-toolbox control-msgs katana-msgs trajectory-msgs sensor-msgs ];
-  propagatedBuildInputs = [ gazebo-ros actionlib control-toolbox control-msgs katana-msgs trajectory-msgs sensor-msgs ];
+  buildInputs = [ gazebo-ros control-msgs katana-msgs trajectory-msgs sensor-msgs control-toolbox actionlib ];
+  propagatedBuildInputs = [ gazebo-ros control-msgs katana-msgs trajectory-msgs sensor-msgs control-toolbox actionlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides Gazebo plugins to simulate the Katana arm.'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

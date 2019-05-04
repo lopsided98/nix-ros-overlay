@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "0348faf4b9b1745f18c2af598faa86999ae291d24f63681d992dcd5df2a9281b";
   };
 
-  propagatedBuildInputs = [ cob-collision-monitor cob-moveit-bringup cob-pick-place-action cob-obstacle-distance-moveit cob-lookat-action cob-grasp-generation cob-moveit-interface ];
+  propagatedBuildInputs = [ cob-collision-monitor cob-moveit-bringup cob-obstacle-distance-moveit cob-moveit-interface cob-pick-place-action cob-lookat-action cob-grasp-generation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_manipulation stack includes packages that provide manipulation capabilities for Care-O-bot.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

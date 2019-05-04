@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A viewer for the SLAM component of roboception based on ROS and PCL'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

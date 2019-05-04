@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Aldebaran's libqicore: a layer on top of libqi'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

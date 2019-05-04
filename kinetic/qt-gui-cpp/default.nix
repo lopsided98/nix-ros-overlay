@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "e2236b66c4d047093b3a30c6e2c169d307b322ce87e178a4237f6ac30e8a3cac";
   };
 
-  buildInputs = [ qt5.qtbase cmake-modules pluginlib python-qt-binding tinyxml pkg-config ];
+  buildInputs = [ cmake-modules pluginlib tinyxml pkg-config qt5.qtbase python-qt-binding ];
   propagatedBuildInputs = [ pluginlib qt-gui tinyxml ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''qt_gui_cpp provides the foundation for C++-bindings for qt_gui and creates bindings for every generator available.
     At least one specific binding must be available in order to use C++-plugins.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

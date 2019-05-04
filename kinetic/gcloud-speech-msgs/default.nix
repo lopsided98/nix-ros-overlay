@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS message definitions for gcloud_speech and relevant packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

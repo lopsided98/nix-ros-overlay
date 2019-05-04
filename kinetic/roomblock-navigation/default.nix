@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ map-server rviz amcl fake-localization move-base ];
+  propagatedBuildInputs = [ map-server amcl move-base rviz fake-localization ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The roomblock_navigation package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

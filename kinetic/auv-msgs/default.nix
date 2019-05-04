@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "2e110447ae64991a7e8488fd076f2ff5bb7d32e426152d233ba77420041fa619";
   };
 
-  buildInputs = [ geographic-msgs message-generation std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ geographic-msgs message-runtime std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geographic-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geographic-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides message types commonly used with Autonomous Underwater Vehicles'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

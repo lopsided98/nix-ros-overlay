@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''urg_node'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

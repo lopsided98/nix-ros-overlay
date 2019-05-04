@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''eus_nlopt'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

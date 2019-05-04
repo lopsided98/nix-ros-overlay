@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "3aafd40278ac6fbda007f8b64b1c167d1545db89798de3f03ad789dcf5e523b4";
   };
 
-  propagatedBuildInputs = [ naoqi-driver-py nao-description robot-state-publisher naoqi-sensors-py naoqi-driver naoqi-pose diagnostic-aggregator ];
+  propagatedBuildInputs = [ naoqi-pose naoqi-driver-py nao-description robot-state-publisher naoqi-sensors-py naoqi-driver diagnostic-aggregator ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files and scripts needed to bring ROS interfaces for Nao up into a
       running state.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

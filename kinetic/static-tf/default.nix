@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The static_tf package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

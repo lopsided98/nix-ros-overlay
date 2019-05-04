@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Localization using fiducial markers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

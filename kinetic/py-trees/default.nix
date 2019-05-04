@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Pythonic implementation of behaviour trees.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

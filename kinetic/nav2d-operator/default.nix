@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "3261678917200a28bf0bba2b608fb70aacd15feabf1c0747f1faa4f618083841";
   };
 
-  buildInputs = [ costmap-2d message-generation sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ costmap-2d message-runtime sensor-msgs tf roscpp ];
+  buildInputs = [ costmap-2d sensor-msgs roscpp message-generation tf ];
+  propagatedBuildInputs = [ costmap-2d sensor-msgs roscpp message-runtime tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
     works by evaluating a set of predefined motion primitives based on a local
     costmap and a desired direction. The best evaluated motion command will be
     send to the mobile base.'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

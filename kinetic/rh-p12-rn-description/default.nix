@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''3D models of the RH-P12-RN for simulation and visualization'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

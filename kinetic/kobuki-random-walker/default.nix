@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-msgs, pluginlib, catkin, ecl-threads, nodelet, std-msgs, yocs-cmd-vel-mux, roscpp, geometry-msgs, yocs-controllers }:
+{ lib, buildRosPackage, fetchurl, kobuki-msgs, pluginlib, catkin, roscpp, ecl-threads, std-msgs, yocs-cmd-vel-mux, nodelet, geometry-msgs, yocs-controllers }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-random-walker";
   version = "0.7.6";
@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "fdd6297d90e2f4c99ab99b1bf14e005bdef6d53ba10e06ecc571f26b1703cb8a";
   };
 
-  buildInputs = [ kobuki-msgs pluginlib nodelet geometry-msgs std-msgs roscpp yocs-controllers ecl-threads ];
-  propagatedBuildInputs = [ kobuki-msgs pluginlib roscpp ecl-threads std-msgs yocs-cmd-vel-mux nodelet geometry-msgs yocs-controllers ];
+  buildInputs = [ kobuki-msgs pluginlib ecl-threads nodelet std-msgs roscpp geometry-msgs yocs-controllers ];
+  propagatedBuildInputs = [ kobuki-msgs pluginlib ecl-threads nodelet std-msgs yocs-cmd-vel-mux roscpp geometry-msgs yocs-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Random walker app for Kobuki'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

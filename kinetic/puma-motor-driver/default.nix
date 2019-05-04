@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "75567ed22850d2cb397c2873c85fa10fc30c41e80ef40d7e463005ded8a65968";
   };
 
-  buildInputs = [ diagnostic-updater puma-motor-msgs sensor-msgs serial roscpp ];
+  buildInputs = [ puma-motor-msgs sensor-msgs serial diagnostic-updater roscpp ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ diagnostic-updater roscpp puma-motor-msgs sensor-msgs joy can-utils serial ];
+  propagatedBuildInputs = [ puma-motor-msgs sensor-msgs joy serial diagnostic-updater roscpp can-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS driver for Puma single-channel motor control board.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

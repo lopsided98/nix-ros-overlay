@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "61657a9e4a20a6684ffcde345832afc8603bb74c7aedb8cb2079c8a30cb48bf0";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-py-common rqt-gui rosservice ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui rosservice rqt-py-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_service_caller provides a GUI plugin for calling arbitrary services.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

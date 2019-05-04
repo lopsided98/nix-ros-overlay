@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "8a1a1355d7d2678a75bbc55547046047ffc98770696bd9b47f52bb11705d289b";
   };
 
-  propagatedBuildInputs = [ xiaoqiang-freenect-camera rgbd-launch tf image-proc nodelet ];
+  propagatedBuildInputs = [ xiaoqiang-freenect-camera nodelet rgbd-launch image-proc tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -20,6 +20,6 @@ buildRosPackage {
     or disparity images.  Also produce point clouds and registered
     point clouds.  Based on the openni_launch package.
     Modified version of xiaoqiang_freenect_stack, add tilt angle control support'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

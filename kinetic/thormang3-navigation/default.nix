@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''This package is for generating footsteps. 
     It has several config files and launch files in order to use footstep planner package.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The roomba_stage package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

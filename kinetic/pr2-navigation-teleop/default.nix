@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package holds a special teleop configuration for the PR2 robot that
      should be used when running applications that use autonomous navigation.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

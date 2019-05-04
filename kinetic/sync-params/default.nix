@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, master-sync-fkie, catkin, master-discovery-fkie, message-generation, message-runtime, std-msgs, roslaunch, roscpp }:
+{ lib, buildRosPackage, fetchurl, master-sync-fkie, catkin, message-generation, std-msgs, message-runtime, master-discovery-fkie, roslaunch, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-sync-params";
   version = "1.0.1";
@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Synchronises parameters across multiple masters.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

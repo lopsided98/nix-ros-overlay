@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gmapping dwa-local-planner frontier-exploration amcl map-server base-local-planner navfn move-base ];
+  propagatedBuildInputs = [ gmapping frontier-exploration map-server amcl base-local-planner navfn move-base dwa-local-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Autonomous mapping and navigation demos for the Clearpath Husky'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

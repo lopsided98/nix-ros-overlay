@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "197551b92f6e7efa5966f1261631f8a73709fecac74f0bd64c00b3793ab2844d";
   };
 
-  buildInputs = [ roseus mk rosbuild tinyxml dynamic-tf-publisher jsk-rviz-plugins urdf jsk-recognition-msgs actionlib tf-conversions moveit-msgs tf roscpp visualization-msgs geometry-msgs cmake-modules libyamlcpp sensor-msgs jsk-footstep-msgs message-filters jsk-topic-tools message-generation rviz interactive-markers jsk-recognition-utils dynamic-reconfigure eigen-conversions roslib ];
-  propagatedBuildInputs = [ roseus tinyxml dynamic-tf-publisher jsk-rviz-plugins urdf jsk-recognition-msgs actionlib tf-conversions moveit-msgs tf roscpp visualization-msgs geometry-msgs libyamlcpp sensor-msgs jsk-footstep-msgs message-filters jsk-topic-tools rviz message-runtime interactive-markers dynamic-reconfigure jsk-recognition-utils eigen-conversions roslib ];
+  buildInputs = [ tinyxml dynamic-tf-publisher actionlib tf-conversions tf geometry-msgs jsk-footstep-msgs message-filters jsk-topic-tools message-generation rviz eigen-conversions roslib roseus mk rosbuild jsk-rviz-plugins urdf jsk-recognition-msgs moveit-msgs roscpp visualization-msgs cmake-modules libyamlcpp sensor-msgs interactive-markers jsk-recognition-utils dynamic-reconfigure ];
+  propagatedBuildInputs = [ tinyxml dynamic-tf-publisher actionlib tf-conversions tf geometry-msgs jsk-footstep-msgs message-filters jsk-topic-tools rviz message-runtime eigen-conversions roslib roseus jsk-rviz-plugins urdf jsk-recognition-msgs moveit-msgs roscpp visualization-msgs libyamlcpp sensor-msgs interactive-markers jsk-recognition-utils dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk interactive markers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

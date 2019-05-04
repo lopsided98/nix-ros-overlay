@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "f9e560b17b75412fdf498b262895b005fccf8b7f8cb72691938f05cf68a2a978";
   };
 
-  buildInputs = [ people-msgs bfl std-msgs sensor-msgs tf message-filters geometry-msgs roscpp ];
-  propagatedBuildInputs = [ people-msgs bfl std-msgs sensor-msgs tf message-filters geometry-msgs roscpp ];
+  buildInputs = [ people-msgs sensor-msgs message-filters roscpp bfl std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ people-msgs sensor-msgs message-filters roscpp bfl std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A collection of filtering tools for tracking people's locations'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

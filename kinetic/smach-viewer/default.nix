@@ -24,6 +24,6 @@ buildRosPackage {
     smach viewer uses the SMACH debugging interface based on
     the <a href="http://www.ros.org/wiki/smach_msgs">smach
     messages</a> to gather information from running state machines.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

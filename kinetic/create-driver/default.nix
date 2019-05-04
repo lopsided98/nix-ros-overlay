@@ -24,6 +24,6 @@ buildRosPackage {
     before using the name create_driver.
   
     For ROS bindings, please see turtlebot_node.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

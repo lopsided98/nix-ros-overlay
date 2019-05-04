@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ opencv-candidate cmake-modules eigen object-recognition-core ecto ];
-  propagatedBuildInputs = [ opencv-candidate ecto-openni object-recognition-core ecto-opencv ecto ];
+  propagatedBuildInputs = [ opencv-candidate object-recognition-core ecto-openni ecto-opencv ecto ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Textured Object Recognition a standard bag of features approach'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -26,6 +26,6 @@ buildRosPackage {
 
     roscpp is the most widely used ROS client library and is designed to
     be the high-performance library for ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

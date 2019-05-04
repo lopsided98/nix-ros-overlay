@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Ecto bindings for common opencv functionality.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

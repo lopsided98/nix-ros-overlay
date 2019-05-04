@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "f86603ab478e037f385b55a7fe0656b59c5bc91bce31b7dfb0a0870cc3377bce";
   };
 
-  propagatedBuildInputs = [ mrpt-rbpf-slam mrpt-ekf-slam-3d mrpt-icp-slam-2d mrpt-ekf-slam-2d mrpt-graphslam-2d ];
+  propagatedBuildInputs = [ mrpt-icp-slam-2d mrpt-rbpf-slam mrpt-ekf-slam-2d mrpt-ekf-slam-3d mrpt-graphslam-2d ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''mrpt_slam'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

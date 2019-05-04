@@ -21,6 +21,6 @@ buildRosPackage {
 	The interface is similar to amcl (http://wiki.ros.org/amcl)
    but supports different particle-filter algorithms, several grid maps at
    different heights, range-only localization, etc.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal bsdOriginal ];
   };
 }

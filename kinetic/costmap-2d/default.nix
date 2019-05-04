@@ -14,7 +14,7 @@ buildRosPackage {
 
   buildInputs = [ pluginlib cmake-modules sensor-msgs message-filters roscpp voxel-grid message-generation nav-msgs laser-geometry visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
   checkInputs = [ rostest rosbag rosunit map-server ];
-  propagatedBuildInputs = [ pluginlib rosconsole sensor-msgs message-filters roscpp voxel-grid nav-msgs laser-geometry message-runtime visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
+  propagatedBuildInputs = [ rosconsole pluginlib sensor-msgs message-filters roscpp voxel-grid nav-msgs laser-geometry message-runtime visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -25,6 +25,6 @@ buildRosPackage {
         This package also provides support for map_server based initialization of a
         costmap, rolling window based costmaps, and parameter based subscription to
         and configuration of sensor topics.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
   meta = {
     description = ''This package provides documentation on common interface conventions for
     drive-by-wire systems.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

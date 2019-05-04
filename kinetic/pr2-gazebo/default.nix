@@ -13,13 +13,13 @@ buildRosPackage {
   };
 
   buildInputs = [ pr2-gazebo-plugins gazeboSimulator.gazebo gazebo-plugins ];
-  propagatedBuildInputs = [ pr2-description pr2-head-action gazeboSimulator.gazebo robot-mechanism-controllers tf2-ros gazebo-plugins fingertip-pressure rospy std-msgs diagnostic-aggregator pr2-controller-configuration-gazebo geometry-msgs pr2-mechanism-controllers stereo-image-proc joint-trajectory-action pr2-gazebo-plugins image-proc pr2-gripper-action single-joint-position-action robot-pose-ekf topic-tools pr2-dashboard-aggregator pr2-msgs xacro ];
+  propagatedBuildInputs = [ pr2-description gazeboSimulator.gazebo gazebo-plugins fingertip-pressure rospy geometry-msgs pr2-mechanism-controllers pr2-gazebo-plugins robot-pose-ekf pr2-dashboard-aggregator image-proc pr2-msgs xacro pr2-head-action robot-mechanism-controllers tf2-ros std-msgs diagnostic-aggregator pr2-controller-configuration-gazebo stereo-image-proc joint-trajectory-action pr2-gripper-action single-joint-position-action topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch scripts for simulating the PR2 in <a href="http://ros.org/wiki/gazebo">gazebo</a>.
     The simulation equivalent of pr2.launch is found here.
     pr2_fingertip_pressure_contact_translator produces the same ROS topics as fingertip_pressure package for simulated PR2.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Python Multiprocess Management Framework, based on ZeroMQ communication'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

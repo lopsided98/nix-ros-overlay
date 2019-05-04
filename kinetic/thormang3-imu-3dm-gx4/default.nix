@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "38f7df44a151ce5072c1de91c4382066ee5b305dd0f572b121065f337acf8e34";
   };
 
-  buildInputs = [ diagnostic-updater message-generation boost std-msgs sensor-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ diagnostic-updater boost message-runtime std-msgs sensor-msgs roscpp geometry-msgs ];
+  buildInputs = [ boost sensor-msgs diagnostic-updater message-generation std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ boost sensor-msgs diagnostic-updater message-runtime std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for Microstrain 3DM-GX4-25 IMU
     This package is modified by robotis.
     The original version is Kumar Robotics's imu_3dm_gx4 package.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

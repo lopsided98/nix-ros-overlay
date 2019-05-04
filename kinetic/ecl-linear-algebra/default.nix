@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "5407d14c77db0b791c72e339627897af82acc33e62637afb2dcaa0f4d3241904";
   };
 
-  buildInputs = [ ecl-exceptions ecl-converters ecl-eigen ecl-license ecl-formatters ecl-math sophus ecl-build ];
-  propagatedBuildInputs = [ ecl-exceptions ecl-converters ecl-eigen ecl-license ecl-formatters ecl-math sophus ecl-build ];
+  buildInputs = [ ecl-converters ecl-eigen ecl-formatters sophus ecl-build ecl-exceptions ecl-license ecl-math ];
+  propagatedBuildInputs = [ ecl-converters ecl-eigen ecl-formatters sophus ecl-build ecl-exceptions ecl-license ecl-math ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Ecl frontend to a linear matrix package (currently eigen).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

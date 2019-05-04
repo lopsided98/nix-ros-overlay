@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "c6e95bd91459bdc458ce90fc9606838c7c098a4fe61dbcfe25d759bd9b935f0d";
   };
 
-  propagatedBuildInputs = [ stage-ros gmapping map-server amcl fake-localization move-base ];
+  propagatedBuildInputs = [ gmapping map-server amcl move-base stage-ros fake-localization ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package holds example launch files for running the ROS navigation stack in stage.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, image-transport, catkin, rostest, roslib, nodelet, dynamic-reconfigure, roslaunch, roscpp }:
+{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, image-transport, catkin, roscpp, rostest, nodelet, dynamic-reconfigure, roslaunch, roslib }:
 buildRosPackage {
   pname = "ros-kinetic-ueye";
   version = "0.0.10";
@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "f1c2687559e090ce3a4e5c4fceb484286894f0e33ff114dda6ccb6b831600b52";
   };
 
-  buildInputs = [ rostest roslib nodelet dynamic-reconfigure camera-calibration-parsers image-transport roslaunch roscpp ];
-  propagatedBuildInputs = [ roslib nodelet dynamic-reconfigure camera-calibration-parsers image-transport roscpp ];
+  buildInputs = [ camera-calibration-parsers image-transport rostest roslib nodelet dynamic-reconfigure roslaunch roscpp ];
+  propagatedBuildInputs = [ camera-calibration-parsers image-transport roslib nodelet dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for IDS Imaging uEye cameras.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

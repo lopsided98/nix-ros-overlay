@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "49727838a653c082ad74e74e2dd60c3e4c3017121be5cbdf0ccf0931ef6da938";
   };
 
-  buildInputs = [ rospack camera-info-manager image-transport camera-calibration-parsers roscpp message-generation visualization-msgs rospy std-msgs roslib geometry-msgs ];
+  buildInputs = [ rospack camera-calibration-parsers image-transport camera-info-manager roscpp message-generation visualization-msgs rospy std-msgs roslib geometry-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ rospack camera-info-manager image-transport camera-calibration-parsers roscpp message-runtime visualization-msgs rospy std-msgs roslib geometry-msgs ];
+  propagatedBuildInputs = [ rospack camera-info-manager image-transport camera-calibration-parsers roslib message-runtime visualization-msgs rospy std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS driver for the Leap Motion gesture sensor'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

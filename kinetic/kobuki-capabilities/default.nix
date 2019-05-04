@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "6e31a8d51551c769b70103e738f58638d0e5f114ee602cebb17e43c794fe221c";
   };
 
-  propagatedBuildInputs = [ std-capabilities rocon-apps rocon-app-manager nodelet kobuki-node ];
+  propagatedBuildInputs = [ kobuki-node std-capabilities rocon-apps rocon-app-manager nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Kobuki's capabilities'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

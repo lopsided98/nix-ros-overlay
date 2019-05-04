@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The mynt eye sdk package'';
-    #license = lib.licenses.Slightech License;
+    license = with lib.licenses; [ "Slightech License" ];
   };
 }

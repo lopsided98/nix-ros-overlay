@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The robot_activity_tutorials package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

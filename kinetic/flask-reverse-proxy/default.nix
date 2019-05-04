@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A Flask &quot;extension&quot; for applications in a reverse proxy not at the root. A complete rip off of http://flask.pocoo.org/snippets/35/.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Metapackage for core of rosserial.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

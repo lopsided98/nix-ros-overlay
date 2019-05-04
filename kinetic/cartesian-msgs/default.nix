@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Stream cartesian commands'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

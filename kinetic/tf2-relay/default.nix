@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ roscpp tf2-msgs message-relay ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ tf2-msgs tf2-ros message-relay tf roscpp ];
+  propagatedBuildInputs = [ tf2-msgs roscpp tf2-ros message-relay tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Specialization of message_relay for tf2'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

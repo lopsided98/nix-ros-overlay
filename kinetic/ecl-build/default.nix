@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Collection of cmake/make build tools primarily for ecl development itself, but also
      contains a few cmake modules useful outside of the ecl.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

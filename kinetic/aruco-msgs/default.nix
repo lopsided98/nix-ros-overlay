@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The aruco_msgs package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The loki_teleop package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

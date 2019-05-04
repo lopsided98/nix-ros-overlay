@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ std-msgs swri-profiler-msgs roscpp qt5.qtbase ];
-  propagatedBuildInputs = [ std-msgs swri-profiler-msgs roscpp qt5.qtbase ];
+  propagatedBuildInputs = [ std-msgs roscpp swri-profiler-msgs qt5.qtbase ];
   nativeBuildInputs = [ catkin qt5.qtbase ];
 
   meta = {
     description = ''Provides tools for viewing data produced by nodes that use the
     swri_profiler library to output profiling information.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

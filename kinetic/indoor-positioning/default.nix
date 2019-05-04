@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "cc8fde923b77fbd3e67509827ddd6f2c0324af1b85d9f8ce116ae8ac802cc419";
   };
 
-  buildInputs = [ pythonPackages.numpy message-generation pythonPackages.pyserial rospy std-msgs roscpp pythonPackages.scipy pythonPackages.pyyaml ];
-  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.pyserial message-runtime rospy std-msgs roscpp pythonPackages.scipy pythonPackages.pyyaml ];
+  buildInputs = [ pythonPackages.numpy pythonPackages.pyserial pythonPackages.scipy pythonPackages.pyyaml message-generation rospy std-msgs roscpp ];
+  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.pyserial pythonPackages.scipy pythonPackages.pyyaml message-runtime rospy std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This is a ROS package for the metraTec Indoor Positioning System.
     You can use the regular IPS for zone location of your robot
     or the IPS+ products for 3D-position-estimation using UWB ranging.'';
-    #license = lib.licenses.BSD 2-Clause License;
+    license = with lib.licenses; [ bsd2 ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The laser_scan_publisher_tutorial package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

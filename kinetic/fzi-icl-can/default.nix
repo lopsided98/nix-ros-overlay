@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "20d111da9da0ed8bed825a559b452a15a147ecef9fc113b213125cfcd039840a";
   };
 
-  buildInputs = [ fzi-icl-core wget libpcan tinyxml popt ];
-  propagatedBuildInputs = [ linuxHeaders fzi-icl-core catkin libpcan tinyxml popt ];
+  buildInputs = [ fzi-icl-core tinyxml wget libpcan popt ];
+  propagatedBuildInputs = [ fzi-icl-core catkin tinyxml linuxHeaders libpcan popt ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The fzi_icl_can package'';
-    #license = lib.licenses.LGPLv3;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

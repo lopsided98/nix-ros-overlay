@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The jsk_control package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

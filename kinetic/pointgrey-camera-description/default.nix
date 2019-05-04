@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF descriptions for Point Grey cameras'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

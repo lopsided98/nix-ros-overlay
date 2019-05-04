@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This metapackage depends on packages related to jog control.'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

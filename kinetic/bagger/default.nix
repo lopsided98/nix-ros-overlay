@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "aba96b75ed79895ac7af81d1865b4e0e4b124ae136dff617eeb237a3a6936c1d";
   };
 
-  buildInputs = [ rostest message-generation roslint std-msgs roscpp ];
+  buildInputs = [ roslint rostest message-generation std-msgs roscpp ];
   checkInputs = [ nav-msgs geometry-msgs ];
-  propagatedBuildInputs = [ rostest message-runtime rospy std-msgs rosbag roscpp ];
+  propagatedBuildInputs = [ rosbag rostest message-runtime rospy std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An application used to systematically record rosbags'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

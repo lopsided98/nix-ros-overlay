@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ proj object-recognition-core ecto pcl-ros ];
-  propagatedBuildInputs = [ proj object-recognition-core ecto-opencv pcl-ros ecto ];
+  propagatedBuildInputs = [ object-recognition-core proj pcl-ros ecto-opencv ecto ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A technique to recognize and estimate poses of transparent objects'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

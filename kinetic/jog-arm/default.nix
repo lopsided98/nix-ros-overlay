@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Provides manipulator cartesian jogging.'';
-    #license = lib.licenses.specified in-file;
+    license = with lib.licenses; [ "specified in-file" ];
   };
 }

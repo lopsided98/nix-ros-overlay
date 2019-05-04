@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "7ddf8cfc75face6c8ff0ec06d205b9b00e5cd512f94dd8322a5cf5928096979f";
   };
 
-  buildInputs = [ std-srvs message-generation rospy std-msgs trajectory-msgs sensor-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs message-runtime rospy std-msgs trajectory-msgs sensor-msgs roscpp geometry-msgs ];
+  buildInputs = [ std-srvs trajectory-msgs sensor-msgs message-generation rospy std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs trajectory-msgs sensor-msgs message-runtime rospy std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message and service data structures.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

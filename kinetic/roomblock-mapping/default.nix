@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ gmapping map-server rviz robot-state-publisher hector-mapping slam-karto rosbag ];
+  propagatedBuildInputs = [ gmapping map-server hector-mapping slam-karto rosbag rviz robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The roomblock_mapping package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

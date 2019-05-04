@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Ult/psd/cliff to pointcloud:
     Publish Ult, cliff, and psd sensors events as points in a pointcloud, so navistack can use them
     for poor-man navigation. Implemented intended to run together with roch_base.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

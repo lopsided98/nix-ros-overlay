@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "ecd9277505a8ac1f834315da62eaef06597ea2762bfd4593db597517f442c793";
   };
 
-  buildInputs = [ hector-worldmodel-msgs tf roscpp hector-marker-drawing hector-nav-msgs image-geometry ];
-  propagatedBuildInputs = [ hector-worldmodel-msgs tf roscpp hector-marker-drawing hector-nav-msgs image-geometry ];
+  buildInputs = [ hector-marker-drawing roscpp hector-nav-msgs image-geometry hector-worldmodel-msgs tf ];
+  propagatedBuildInputs = [ hector-marker-drawing roscpp hector-nav-msgs image-geometry hector-worldmodel-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -27,6 +27,6 @@ buildRosPackage {
 
      If a hector_nav_msgs/GetDistanceToObstacle service is available, the object_tracker can optionally
      deduce the depth of objects in the scene by projection to the nearest obstacle (wall).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

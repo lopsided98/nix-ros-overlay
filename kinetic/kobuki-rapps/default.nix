@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Robot apps for Kobuki'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "397414a554081a003547e7225887b5e71ac82e3c8c17817faf6cb456c56a58df";
   };
 
-  buildInputs = [ diagnostic-updater message-generation sensor-msgs roscpp robotnik-msgs geometry-msgs ];
-  propagatedBuildInputs = [ diagnostic-updater message-runtime sensor-msgs roscpp robotnik-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs robotnik-msgs diagnostic-updater message-generation roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs robotnik-msgs diagnostic-updater message-runtime roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The summit_xl_pad package allows to control the summit_xl product range (summit_xl, summit_xl_omni, x_wam) teleoperation'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

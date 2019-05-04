@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common messages used throughout dynamixel_motor stack.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

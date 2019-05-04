@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages used in PR2 hardware testing.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

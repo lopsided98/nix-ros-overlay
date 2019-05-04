@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rbcar_common package. It contains RBCAR common packages'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

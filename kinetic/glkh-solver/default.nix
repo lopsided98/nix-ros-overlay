@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''ROS package for solving the Generalized Traveling Salesman Problem using
     the Lin–Kernighan heuristic.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

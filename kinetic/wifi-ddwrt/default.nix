@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Access to the DD-WRT wifi'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages exclusive to Jackal, especially for representing low-level motor commands and sensors.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

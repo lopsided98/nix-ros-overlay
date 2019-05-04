@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "f1b6875c8899df1fa9d07b2ebb2c9ed25bf88e76b8bb38840d6dddb41f4342ef";
   };
 
-  buildInputs = [ rostest message-generation cmake-modules openrtm-aist openrtm-aist-python std-msgs omniorb pkg-config ];
+  buildInputs = [ cmake-modules omniorb pkg-config rostest message-generation openrtm-aist-python openrtm-aist std-msgs ];
   propagatedBuildInputs = [ cmake-modules omniorb blas pkg-config liblapack rostest message-generation openrtm-aist-python openrtm-aist message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Build scripts for OpenRTM and OpenHRP'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

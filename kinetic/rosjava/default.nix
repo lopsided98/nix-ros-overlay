@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "3a67357648da216378519de67fe4a157c69086f4e2209c5c7813a629da9bfbd4";
   };
 
-  propagatedBuildInputs = [ rosjava-core zeroconf-jmdns-suite rosjava-build-tools rosjava-test-msgs rosjava-extras genjava rosjava-messages rosjava-bootstrap ];
+  propagatedBuildInputs = [ zeroconf-jmdns-suite rosjava-build-tools genjava rosjava-messages rosjava-bootstrap rosjava-test-msgs rosjava-extras rosjava-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This is a meta package for the official rosjava repositories.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

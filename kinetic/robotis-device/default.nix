@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''The package that manages device information of ROBOTIS robots.
     This package is used when reading device information with the robot information file
     from the robotis_controller package.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

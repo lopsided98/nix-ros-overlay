@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "8402eb7f6dffc1f3833589acc3407f36b55480270e777a50a86de416f812c363";
   };
 
-  propagatedBuildInputs = [ manipulator-h-bringup manipulator-h-description manipulator-h-base-module manipulator-h-base-module-msgs manipulator-h-kinematics-dynamics manipulator-h-gui manipulator-h-gazebo manipulator-h-manager ];
+  propagatedBuildInputs = [ manipulator-h-description manipulator-h-base-module manipulator-h-kinematics-dynamics manipulator-h-gui manipulator-h-bringup manipulator-h-base-module-msgs manipulator-h-gazebo manipulator-h-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS packages for the ROBOTIS MANIPULATOR-H (metapackage)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

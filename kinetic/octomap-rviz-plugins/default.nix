@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A set of plugins for displaying occupancy information decoded from binary octomap messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

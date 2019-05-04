@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Publish master information - name, description, icon.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

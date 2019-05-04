@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This stack contains the ROS driver and firmware for the WGE100 camera used on the PR2 robot.'';
-    #license = lib.licenses.BSD,GPL because of list.h; other files released under BSD,GPL;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

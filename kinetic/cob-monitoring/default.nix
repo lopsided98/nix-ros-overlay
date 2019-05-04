@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sysstat, cob-script-server, sensor-msgs, catkin, ipmitool, pythonPackages, topic-tools, diagnostic-msgs, diagnostic-updater, cob-light, actionlib, ntp, rostopic, rospy, std-msgs, ifstat-legacy, cob-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, sysstat, cob-script-server, sensor-msgs, catkin, ipmitool, pythonPackages, topic-tools, diagnostic-updater, cob-light, std-msgs, ntp, rostopic, actionlib, rospy, diagnostic-msgs, cob-msgs, roscpp, ifstat-legacy }:
 buildRosPackage {
   pname = "ros-kinetic-cob-monitoring";
   version = "0.6.11";
@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ diagnostic-updater roscpp topic-tools ];
-  propagatedBuildInputs = [ sysstat ipmitool cob-light rospy pythonPackages.paramiko actionlib std-msgs cob-msgs roscpp ifstat-legacy diagnostic-msgs pythonPackages.psutil pythonPackages.mechanize cob-script-server sensor-msgs diagnostic-updater ntp rostopic topic-tools pythonPackages.requests ];
+  propagatedBuildInputs = [ actionlib rospy pythonPackages.paramiko cob-msgs diagnostic-msgs pythonPackages.requests sysstat ipmitool cob-light std-msgs ifstat-legacy roscpp pythonPackages.psutil pythonPackages.mechanize cob-script-server sensor-msgs diagnostic-updater ntp rostopic topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cob_monitoring'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

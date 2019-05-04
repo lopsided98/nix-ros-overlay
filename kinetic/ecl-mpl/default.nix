@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Metaprogramming tools move alot of runtime calculations to be shifted to
     compile time. This has only very elementary structures at this stage.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

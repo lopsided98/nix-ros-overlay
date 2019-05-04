@@ -21,6 +21,6 @@ buildRosPackage {
    run stop changes from off to on, this node will automatically enable the power to the motors, and reset
    the motors. This allows you to use the run stop as a 'pause' button. By using the run stop as a tool to
    power up the robot, the run stop is also in reach of the user once the robot starts moving.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

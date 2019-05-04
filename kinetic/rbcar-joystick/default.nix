@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rbcar_joystick package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

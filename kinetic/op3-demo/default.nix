@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''OP3 default demo
     It includes three demontrations(soccer demo, vision demo, action script demo)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

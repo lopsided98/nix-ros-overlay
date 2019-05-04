@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The cmd_vel_smoother package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

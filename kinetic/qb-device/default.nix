@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "4b406f4b58075508d19b040ab83993f4b29cc6e7d7a6e396ed5a7a318a222ce9";
   };
 
-  propagatedBuildInputs = [ qb-device-bringup qb-device-msgs qb-device-srvs qb-device-description qb-device-driver qb-device-control qb-device-hardware-interface ];
+  propagatedBuildInputs = [ qb-device-bringup qb-device-description qb-device-msgs qb-device-srvs qb-device-driver qb-device-control qb-device-hardware-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a device-independent ROS interface for qbrobotics® devices.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

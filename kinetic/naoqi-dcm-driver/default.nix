@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package containing the hardware interface to connect to Nao, Romeo, or Pepper robots.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

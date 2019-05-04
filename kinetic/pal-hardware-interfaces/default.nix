@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The pal_hardware_interfaces package'';
-    #license = lib.licenses.Proprietary;
+    license = with lib.licenses; [ "Proprietary" ];
   };
 }

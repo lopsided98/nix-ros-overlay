@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Model description for the iRobot Create'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

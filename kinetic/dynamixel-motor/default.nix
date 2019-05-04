@@ -20,6 +20,6 @@ buildRosPackage {
     Dynamixel line of servo motors. This stack was tested with and fully
     supports AX-12, AX-18, RX-24, RX-28, MX-28, RX-64, MX-64, EX-106 and
     MX-106 models.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ rostest roslaunch cob-supported-robots ];
-  propagatedBuildInputs = [ costmap-2d joint-state-controller raw-description ur-description velocity-controllers cob-calibration-data joint-trajectory-controller rostest position-controllers laser-filters cob-description rviz robot-state-publisher cob-omni-drive-controller diagnostic-aggregator roslaunch joint-state-publisher xacro ];
+  propagatedBuildInputs = [ costmap-2d joint-state-controller raw-description ur-description cob-calibration-data velocity-controllers joint-trajectory-controller rostest position-controllers laser-filters cob-description rviz robot-state-publisher cob-omni-drive-controller diagnostic-aggregator roslaunch joint-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains configuration for each robot instance (e.g. cob4-X, raw3-X). There is a directory for each robot with configuration about urdf and hardware/device configurations.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

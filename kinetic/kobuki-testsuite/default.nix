@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "487f7a9e02b442d89d25e1b059c092291e9002fd0247bd907876b3877859c7a6";
   };
 
-  buildInputs = [ message-generation kobuki-msgs std-msgs python-orocos-kdl sensor-msgs kobuki-node geometry-msgs ];
-  propagatedBuildInputs = [ kobuki-msgs message-runtime std-msgs python-orocos-kdl sensor-msgs kobuki-node geometry-msgs ];
+  buildInputs = [ kobuki-msgs python-orocos-kdl sensor-msgs kobuki-node message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ kobuki-msgs python-orocos-kdl sensor-msgs kobuki-node message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Kobuki test suite: this package provides tools to thoroughly test Kobuki's hardware.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

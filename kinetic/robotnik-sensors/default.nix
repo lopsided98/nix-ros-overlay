@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Robotnik standard sensors description. URDF and meshses.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

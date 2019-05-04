@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Cost maps, following the style of ethz-asl's grid_map library.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

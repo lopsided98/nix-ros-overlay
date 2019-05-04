@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "4922232d723742ad144ffa501869d385d9bc6a4a542345a162178f5a53313faa";
   };
 
-  buildInputs = [ cacert boost openssl git roscpp ];
+  buildInputs = [ boost git cacert openssl roscpp ];
   propagatedBuildInputs = [ openssl roscpp boost ];
   nativeBuildInputs = [ scons catkin ];
 
   meta = {
     description = ''A wrapper for the libmongocxx for mongodb_store'';
-    #license = lib.licenses.Apache;
+    license = with lib.licenses; [ "Apache-1.0" ];
   };
 }

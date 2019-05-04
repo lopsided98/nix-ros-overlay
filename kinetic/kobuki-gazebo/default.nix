@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "0478e18c65b686328b7a9e97c401e46077d8ce7803b8af2f5600ca8074a46008";
   };
 
-  propagatedBuildInputs = [ gazebo-ros kobuki-gazebo-plugins robot-state-publisher kobuki-random-walker kobuki-description yocs-cmd-vel-mux kobuki-safety-controller gazebo-plugins ];
+  propagatedBuildInputs = [ gazebo-ros kobuki-gazebo-plugins kobuki-random-walker kobuki-safety-controller gazebo-plugins robot-state-publisher kobuki-description yocs-cmd-vel-mux ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Kobuki simulation for Gazebo'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

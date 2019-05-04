@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Python composable command line utility http://click.pocoo.org/'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

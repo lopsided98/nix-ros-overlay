@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The epson_imu_driver package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

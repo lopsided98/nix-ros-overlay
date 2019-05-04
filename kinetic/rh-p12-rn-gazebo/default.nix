@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides basic message pub and launch file to use RH-P12-RN on Gazebo'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

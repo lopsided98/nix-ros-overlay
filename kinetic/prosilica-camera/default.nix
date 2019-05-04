@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A ROS driver node for AVT/Prosilica Gigabit Ethernet (GigE) cameras.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

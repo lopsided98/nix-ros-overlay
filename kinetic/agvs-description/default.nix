@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ std-msgs std-srvs tf roscpp ];
-  propagatedBuildInputs = [ std-srvs message-runtime std-msgs tf roscpp ];
+  propagatedBuildInputs = [ std-srvs roscpp message-runtime std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The agvs_description package. Robot description. Urdf and mesh files.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

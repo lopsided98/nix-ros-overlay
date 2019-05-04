@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The messages required by multimaster packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

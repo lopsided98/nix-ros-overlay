@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package contains a specialization of the gazebo_ros_control plugin.
     The cob_gazebo_ros_control plugin allows Multi-HardwareInterface-Support.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

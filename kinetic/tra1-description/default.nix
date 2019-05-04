@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the description (mechanical, kinematic, visual,  etc.) of the TRA1 robot. The files in this package are parsed and used by a variety of other components.  Most users will not interact directly with this package.'';
-    #license = lib.licenses.GPLv2;
+    license = with lib.licenses; [ gpl2 "CC-BY-SA" ];
   };
 }

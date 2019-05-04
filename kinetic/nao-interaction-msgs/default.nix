@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, trajectory-msgs, sensor-msgs, catkin, message-generation, nav-msgs, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, trajectory-msgs, sensor-msgs, catkin, nav-msgs, message-generation, message-runtime, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-nao-interaction-msgs";
   version = "0.1.5";
@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6b90c6d03ec17b537f17adcc358ac7e2373f6383a09f5e70d0bc4f52c30b7715";
   };
 
-  buildInputs = [ message-generation nav-msgs actionlib-msgs std-msgs trajectory-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ nav-msgs message-runtime actionlib-msgs std-msgs trajectory-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ actionlib-msgs trajectory-msgs sensor-msgs nav-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs trajectory-msgs sensor-msgs nav-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages and services declarations for the nao_interaction metapackage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

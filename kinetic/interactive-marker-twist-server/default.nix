@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Interactive control for generic Twist-based robots using interactive markers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

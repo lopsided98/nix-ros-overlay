@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "354967660e9f9f5fa71f10857dad8ed817846895b6cda6c22e6e5d54c256ab2c";
   };
 
-  buildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
-  propagatedBuildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
+  buildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];
+  propagatedBuildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The katana_moveit_ikfast_plugin package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal "Apache-1.0" ];
   };
 }

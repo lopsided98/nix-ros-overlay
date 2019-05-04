@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A web interface for exploring the ROS graph'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

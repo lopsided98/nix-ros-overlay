@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The robot_setup_tf_tutorial package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

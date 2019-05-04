@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Demo of safe_teleop in stage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

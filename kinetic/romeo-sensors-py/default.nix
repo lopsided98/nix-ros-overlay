@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package that adds the depth camera to Romeo'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

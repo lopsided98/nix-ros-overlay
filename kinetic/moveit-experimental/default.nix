@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "720349033315bbdef0c7f062d819dc83355b6872b1fe1f25913c541bdd64fa9b";
   };
 
-  buildInputs = [ rosconsole actionlib-msgs trajectory-msgs octomap-msgs roslib console-bridge octomap std-msgs moveit-msgs visualization-msgs geometry-msgs shape-msgs kdl-parser boost pluginlib sensor-msgs eigen-stl-containers assimp urdfdom urdfdom-headers geometric-shapes moveit-core eigen eigen-conversions rostime ];
+  buildInputs = [ rosconsole actionlib-msgs octomap geometry-msgs boost urdfdom-headers moveit-core eigen-conversions rostime roslib trajectory-msgs octomap-msgs console-bridge std-msgs moveit-msgs visualization-msgs shape-msgs kdl-parser pluginlib sensor-msgs eigen-stl-containers assimp urdfdom geometric-shapes eigen ];
   checkInputs = [ moveit-resources tf-conversions orocos-kdl angles ];
-  propagatedBuildInputs = [ rosconsole actionlib-msgs trajectory-msgs octomap-msgs console-bridge octomap std-msgs moveit-msgs visualization-msgs geometry-msgs shape-msgs kdl-parser boost pluginlib sensor-msgs eigen-stl-containers assimp urdfdom urdfdom-headers geometric-shapes moveit-core eigen eigen-conversions rostime ];
+  propagatedBuildInputs = [ rosconsole actionlib-msgs octomap geometry-msgs boost urdfdom-headers moveit-core eigen-conversions rostime trajectory-msgs octomap-msgs console-bridge std-msgs moveit-msgs visualization-msgs shape-msgs kdl-parser pluginlib sensor-msgs eigen-stl-containers assimp urdfdom geometric-shapes eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Experimental packages for moveit.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

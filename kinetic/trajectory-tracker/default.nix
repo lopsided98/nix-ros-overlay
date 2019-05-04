@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Path following control package for wheeled mobile robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

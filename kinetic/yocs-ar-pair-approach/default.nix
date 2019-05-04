@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Search and approach behaviour, moving to a target in front of a pair of ar markers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

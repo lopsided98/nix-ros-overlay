@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "b704c84911e5d3d30e104e8032f6c5ef7c3163f667ba47104a804e447d0a124c";
   };
 
-  propagatedBuildInputs = [ controller-manager joint-state-controller robot-state-publisher effort-controllers joint-trajectory-controller ];
+  propagatedBuildInputs = [ controller-manager joint-state-controller joint-trajectory-controller robot-state-publisher effort-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The nao_control package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

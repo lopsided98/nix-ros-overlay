@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch rospy ];
-  propagatedBuildInputs = [ roch-control microstrain-3dmgx2-imu roch-safety-controller realsense-camera pythonPackages.scipy freenect-launch tf2-ros robot-localization roch-description rplidar-ros rospy rocon-app-manager openni2-launch astra-launch tf nodelet nmea-comms roch-base roch-capabilities zeroconf-avahi nmea-navsat-driver robot-upstart rocon-bubble-icons rocon-app-manager-msgs rocon-interaction-msgs laser-filters roch-sensorpc robot-state-publisher rgbd-launch depthimage-to-laserscan imu-filter-madgwick imu-transformer diagnostic-aggregator ];
+  propagatedBuildInputs = [ roch-control microstrain-3dmgx2-imu realsense-camera pythonPackages.scipy robot-localization roch-description rplidar-ros rospy zeroconf-avahi tf nmea-navsat-driver rocon-bubble-icons robot-state-publisher rgbd-launch depthimage-to-laserscan imu-filter-madgwick imu-transformer roch-safety-controller freenect-launch tf2-ros roch-capabilities rocon-app-manager openni2-launch astra-launch nodelet diagnostic-aggregator roch-base rocon-app-manager-msgs rocon-interaction-msgs laser-filters roch-sensorpc robot-upstart nmea-comms ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''SawYer roch installation and integration package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

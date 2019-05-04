@@ -12,9 +12,9 @@ buildRosPackage {
     sha256 = "99173c8c962cf3339d30b7453a9e59fed2e36ab0b66de3197ea97d7d553d1646";
   };
 
-  buildInputs = [ rostest roslib boost camera-calibration-parsers image-transport sensor-msgs roscpp ];
+  buildInputs = [ boost camera-calibration-parsers image-transport sensor-msgs rostest roslib roscpp ];
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ roslib boost camera-calibration-parsers image-transport sensor-msgs roscpp ];
+  propagatedBuildInputs = [ boost camera-calibration-parsers image-transport sensor-msgs roslib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
      information.  It provides CameraInfo, and handles SetCameraInfo
      service requests, saving and restoring the camera calibration
      data.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

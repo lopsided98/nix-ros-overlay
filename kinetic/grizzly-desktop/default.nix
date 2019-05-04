@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Metapackage of things you want to visualize and control Grizzly from a desktop.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

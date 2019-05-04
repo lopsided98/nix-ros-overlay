@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package for creating a hardware interface to the robot using the EtherCAT motor controller/driver'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

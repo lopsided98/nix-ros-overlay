@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "aab0b5257acf1a5eb8c0d4831637a61aed61c688fa0da99b6179f55520234174";
   };
 
-  buildInputs = [ nav-msgs message-generation rospy std-msgs python-orocos-kdl sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ turtlebot-bringup nav-msgs message-runtime rospy std-msgs python-orocos-kdl sensor-msgs geometry-msgs ];
+  buildInputs = [ python-orocos-kdl sensor-msgs nav-msgs message-generation rospy std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ turtlebot-bringup python-orocos-kdl sensor-msgs nav-msgs message-runtime rospy std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''turtlebot_calibration'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A recovery behavior that performs a particular used-defined twist.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

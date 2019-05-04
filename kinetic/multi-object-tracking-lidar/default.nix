@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6347710c907810f24e169eb2bf8b86227ead5ea3a2ae6d1415f1cd0e414f014f";
   };
 
-  buildInputs = [ visualization-msgs pcl-ros pcl sensor-msgs cv-bridge roscpp ];
-  propagatedBuildInputs = [ visualization-msgs pcl-ros pcl sensor-msgs cv-bridge roscpp ];
+  buildInputs = [ pcl sensor-msgs cv-bridge roscpp pcl-ros visualization-msgs ];
+  propagatedBuildInputs = [ pcl sensor-msgs cv-bridge roscpp pcl-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS package for Multiple objects detection, tracking and classification from LIDAR scans/point-clouds'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

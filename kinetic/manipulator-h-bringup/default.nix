@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''The manipulator_h_bringup package
     This package includes launch file to describe robotis in Rviz.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

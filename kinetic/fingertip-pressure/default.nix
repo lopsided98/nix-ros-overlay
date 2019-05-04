@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides access to the PR2 fingertip pressure sensors. This information includes:'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

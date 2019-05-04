@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS packages for the robotis_op3_demo (meta package)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

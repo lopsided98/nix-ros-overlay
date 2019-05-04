@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "70586dfb537b887de968949cbea8ad55c23c966496635d64bfa954fbd99d5b34";
   };
 
-  buildInputs = [ joint-states-settler settlerlib message-filters geometry-msgs image-geometry ];
-  propagatedBuildInputs = [ joint-states-settler settlerlib message-filters geometry-msgs image-geometry ];
+  buildInputs = [ message-filters image-geometry joint-states-settler settlerlib geometry-msgs ];
+  propagatedBuildInputs = [ message-filters image-geometry joint-states-settler settlerlib geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Computes joint angles associated with a specific set of detected checkerboard corners.
      This package is experimental and unstable.
      Expect its APIs to change.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

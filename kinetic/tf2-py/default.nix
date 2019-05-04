@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The tf2_py package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

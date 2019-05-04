@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''The configuration node loads a given launch configuration and offers services to 
      list or start the contained nodes. It provides additional description 
      extracted from launch file. This is used by node_manager_fkie.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

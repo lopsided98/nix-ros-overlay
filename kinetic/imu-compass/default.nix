@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ std-msgs sensor-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ std-msgs sensor-msgs pythonPackages.scipy geometry-msgs tf ];
+  propagatedBuildInputs = [ sensor-msgs pythonPackages.scipy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Node to combine IMU data (accelerometers and gyroscopes) with Compass data (magnetometers) for a cleaner reading of a Vehicles Heading'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

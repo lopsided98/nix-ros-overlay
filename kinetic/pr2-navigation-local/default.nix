@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "559339bf891e4fd109bb506274a0949dcd756ad5370b198c44f17f94318a2f0b";
   };
 
-  propagatedBuildInputs = [ pr2-navigation-config pr2-move-base joint-trajectory-generator pr2-machine pr2-tuck-arms-action topic-tools move-base ];
+  propagatedBuildInputs = [ pr2-navigation-config joint-trajectory-generator topic-tools move-base pr2-move-base pr2-machine pr2-tuck-arms-action ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package holds xml files for running the'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

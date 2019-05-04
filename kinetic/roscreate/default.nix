@@ -19,6 +19,6 @@ buildRosPackage {
     description = ''roscreate contains a tool that assists in the creation of ROS filesystem resources.
      It provides: <tt>roscreate-pkg</tt>, which creates a new package directory,
      including the appropriate build and manifest files.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

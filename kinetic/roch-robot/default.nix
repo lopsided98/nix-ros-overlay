@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "2cb5dcd0974cc1df0aa7a3541ea2759cb1711123a5e0c8f45910ea1664e0d49b";
   };
 
-  propagatedBuildInputs = [ roch-msgs roch-control roch-description roch-sensorpc roch-safety-controller roch-capabilities roch-base roch-ftdi ];
+  propagatedBuildInputs = [ roch-control roch-safety-controller roch-msgs roch-description roch-sensorpc roch-capabilities roch-base roch-ftdi ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Metapackage for SawYer roch robot software'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

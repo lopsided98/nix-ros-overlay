@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "9da5485f0e80811676a5a09e80e4f5f1945f94f5e963774cf371b35825383d75";
   };
 
-  buildInputs = [ cmake-modules pluginlib boost object-recognition-core geometric-shapes actionlib object-recognition-msgs ecto ecto-ros ecto-image-pipeline ];
+  buildInputs = [ cmake-modules pluginlib boost geometric-shapes actionlib object-recognition-msgs object-recognition-core ecto ecto-ros ecto-image-pipeline ];
   checkInputs = [ rostest visualization-msgs ];
   propagatedBuildInputs = [ pluginlib boost geometric-shapes actionlib rostopic object-recognition-msgs object-recognition-core ecto ecto-ros ecto-image-pipeline ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''object_recognition_core contains tools to launch several recognition pipelines, train objects, store models ...'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

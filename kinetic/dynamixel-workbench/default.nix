@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "3b3076c4de54c9e8088751819d0af9ab14d772b3c5531c611182a7e7cad3d6bf";
   };
 
-  propagatedBuildInputs = [ dynamixel-workbench-single-manager dynamixel-workbench-single-manager-gui dynamixel-workbench-toolbox dynamixel-workbench-controllers dynamixel-workbench-operators ];
+  propagatedBuildInputs = [ dynamixel-workbench-controllers dynamixel-workbench-single-manager dynamixel-workbench-single-manager-gui dynamixel-workbench-toolbox dynamixel-workbench-operators ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -20,6 +20,6 @@ buildRosPackage {
     This metapackage allows you to easily change the ID, baudrate and operating mode of the Dynamixel.
     Furthermore, it supports various controllers based on operating mode and Dynamixel SDK.
     These controllers are commanded by operators.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

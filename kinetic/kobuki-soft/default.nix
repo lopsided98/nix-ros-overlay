@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Soft kobuki impementation meta package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

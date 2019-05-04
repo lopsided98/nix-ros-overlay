@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "28a3761aec2c63b42f99aaca2fea78f9d6b48f155fe07d8635979153b3880dd5";
   };
 
-  buildInputs = [ libyamlcpp visualization-msgs bin-pose-msgs tf roscpp ];
-  propagatedBuildInputs = [ libyamlcpp visualization-msgs bin-pose-msgs tf roscpp ];
+  buildInputs = [ libyamlcpp roscpp visualization-msgs bin-pose-msgs tf ];
+  propagatedBuildInputs = [ libyamlcpp roscpp visualization-msgs bin-pose-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>
       bin_pose_emulator generates random poses of items in the predefined bin.
     </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

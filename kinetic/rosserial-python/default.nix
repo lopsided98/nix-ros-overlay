@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A Python-based implementation of the rosserial protocol.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

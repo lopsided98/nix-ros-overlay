@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''A main ROS interface for developers and users of <a href="http://nextage.kawada.jp/en/">Nextage</a> dual-armed robot from Kawada Robotics Inc. Developers can build their own application that takes control over Nextage via this package. Interface for both ROS and <a href="http://openrtm.org/">OpenRTM</a> is provided.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal mit ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''3D models of the xiaoqiang for simulation and visualization'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

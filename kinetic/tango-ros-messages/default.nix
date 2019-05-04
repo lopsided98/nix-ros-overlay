@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains messages/services used by tango ros lib'';
-    #license = lib.licenses.Apache;
+    license = with lib.licenses; [ "Apache-1.0" ];
   };
 }

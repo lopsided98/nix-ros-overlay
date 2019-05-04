@@ -19,6 +19,6 @@ buildRosPackage {
     description = ''<p>The nao_robot metapackage contains some useful nodes to integrate the Nao humanoid robot into ROS.
     Check out the <a href="http://www.ros.org/wiki/nao_extras">nao_extras stack</a> for more functionality.
     The <a href="http://www.ros.org/wiki/humanoid_navigation"> humanoid_navigation stack</a> contains some more general packages for humanoid/biped robots.</p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''multisense_bringup'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

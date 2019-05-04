@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "5135a9ad619561403a733ba7d1405364d417963f4863d32229e3f19a3e5dbccd";
   };
 
-  buildInputs = [ liblapack suitesparse cmake-modules eigen blas ];
+  buildInputs = [ suitesparse cmake-modules blas liblapack eigen ];
   propagatedBuildInputs = [ liblapack suitesparse blas ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS wrapper for the sparse bundle adjustment (sba) library (needed for slam_karto)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for representing PR2 state, such as battery information and the PR2 fingertip sensors.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

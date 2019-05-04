@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "2a79eaef84c7ddb88d06603b096c5e4ce11c2f1fd5ece39e607f1c12c007e743";
   };
 
-  buildInputs = [ gps-common nav-msgs geometry-msgs sensor-msgs tf roscpp ];
+  buildInputs = [ sensor-msgs roscpp gps-common nav-msgs tf geometry-msgs ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ roslaunch gps-common nav-msgs geometry-msgs sensor-msgs tf roscpp ];
+  propagatedBuildInputs = [ sensor-msgs roscpp gps-common nav-msgs roslaunch tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Ethernet interface to OxTS GPS receivers (NCOM packet structure)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

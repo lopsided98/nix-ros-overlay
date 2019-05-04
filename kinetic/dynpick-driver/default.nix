@@ -14,7 +14,7 @@ buildRosPackage {
 
   buildInputs = [ std-srvs pythonPackages.catkin-pkg roscpp geometry-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ std-srvs rviz robot-state-publisher geometry-msgs tf xacro roscpp ];
+  propagatedBuildInputs = [ std-srvs tf rviz robot-state-publisher roscpp xacro geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -24,6 +24,6 @@ buildRosPackage {
     <li><a href="http://www.wacoh-tech.com/products/dynpick/wdf-6m200-3.html">wdf-6m200-3</a></li>
     <li><a href="http://www.wacoh-tech.com/en/products/dynpick/200n.html">WEF-6A200</a> (confirmed <a href="https://github.com/tork-a/dynpick_driver/pull/35#issuecomment-256031851">here</a>)</li>
   </ul>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

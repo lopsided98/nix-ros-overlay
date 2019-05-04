@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Plugin based global planner implementing the nav_core2::GlobalPlanner interface.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

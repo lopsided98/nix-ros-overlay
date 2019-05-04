@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''A module to control the head.
     This module is included in the Thormang3 Manager as a library.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

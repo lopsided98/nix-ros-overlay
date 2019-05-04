@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "e3b076324d965a16d3c0eb08f001029f2ba24c6841876a8f741145b14c448c51";
   };
 
-  buildInputs = [ nav-msgs message-generation bfl std-msgs sensor-msgs tf geometry-msgs roscpp ];
+  buildInputs = [ sensor-msgs roscpp nav-msgs message-generation bfl std-msgs tf geometry-msgs ];
   checkInputs = [ rostest rosbag ];
-  propagatedBuildInputs = [ nav-msgs message-runtime bfl std-msgs sensor-msgs tf geometry-msgs roscpp ];
+  propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs message-runtime bfl std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The Robot Pose EKF package is used to estimate the 3D pose of a robot, based on (partial) pose measurements coming from different sources. It uses an extended Kalman filter with a 6D model (3D position and 3D orientation) to combine measurements from wheel odometry, IMU sensor and visual odometry. The basic idea is to offer loosely coupled integration with different sensors, where sensor signals are received as ROS messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

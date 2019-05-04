@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The jsk_calibration package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

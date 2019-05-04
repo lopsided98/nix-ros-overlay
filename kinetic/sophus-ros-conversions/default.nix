@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "e1cfba0989700bb4b96f67c8e60c3d7c7b69f51aca0b8a8457a287436e8b9d65";
   };
 
-  buildInputs = [ cmake-modules sophus tf geometry-msgs ecl-build ];
-  propagatedBuildInputs = [ cmake-modules sophus tf geometry-msgs ecl-build ];
+  buildInputs = [ cmake-modules sophus ecl-build tf geometry-msgs ];
+  propagatedBuildInputs = [ cmake-modules sophus ecl-build tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Conversions between ros and sophus.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

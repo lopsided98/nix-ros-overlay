@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This stack contains all software necessary to build systems using both Orocos and ROS infrastructures'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 bsdOriginal lgpl2 gpl1 ];
   };
 }

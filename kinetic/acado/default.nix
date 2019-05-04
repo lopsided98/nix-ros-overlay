@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ACADO Toolkit'';
-    #license = lib.licenses.LGPL3;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

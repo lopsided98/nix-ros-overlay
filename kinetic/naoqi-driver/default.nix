@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "af80e7758de7895ce91aeb71a4f0cf72c678e8f28542a39db55ff83da32ea710";
   };
 
-  buildInputs = [ rosbag-storage naoqi-libqicore rosconsole tf2-geometry-msgs orocos-kdl tf2-msgs cv-bridge tf2-ros naoqi-bridge-msgs rosgraph-msgs diagnostic-msgs naoqi-libqi geometry-msgs kdl-parser boost image-transport sensor-msgs diagnostic-updater robot-state-publisher ];
+  buildInputs = [ tf2-msgs rosconsole cv-bridge naoqi-bridge-msgs rosgraph-msgs diagnostic-msgs geometry-msgs boost image-transport robot-state-publisher rosbag-storage naoqi-libqicore orocos-kdl tf2-geometry-msgs tf2-ros naoqi-libqi kdl-parser sensor-msgs diagnostic-updater ];
   propagatedBuildInputs = [ rosbag-storage kdl-parser boost rosconsole orocos-kdl naoqi-libqicore image-transport cv-bridge tf2-ros naoqi-bridge-msgs robot-state-publisher naoqi-libqi ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver module between Aldebaran's NAOqiOS and ROS. It publishes all sensor and actuator data as well as basic diagnostic for battery, temperature. It subscribes also to RVIZ simple goal and cmd_vel for teleop.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

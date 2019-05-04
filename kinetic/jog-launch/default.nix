@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ rostest roslaunch jog-controller fake-joint-launch ];
-  propagatedBuildInputs = [ rostest tra1-moveit-config nextage-moveit-config ur3-moveit-config jog-controller roslaunch ur5-moveit-config fake-joint-launch ];
+  propagatedBuildInputs = [ tra1-moveit-config nextage-moveit-config rostest ur3-moveit-config jog-controller roslaunch ur5-moveit-config fake-joint-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Collection of the launch files for jog_controller'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

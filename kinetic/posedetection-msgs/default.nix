@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "049d55fae694d1e3d4a63450b71cc99a3205dd807303b173616ce6fdc8ea90b5";
   };
 
-  buildInputs = [ message-generation geometry-msgs std-msgs sensor-msgs cv-bridge message-filters roscpp ];
-  propagatedBuildInputs = [ message-runtime geometry-msgs std-msgs sensor-msgs cv-bridge message-filters roscpp ];
+  buildInputs = [ sensor-msgs cv-bridge message-filters message-generation std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs cv-bridge message-filters message-runtime std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''posedetection_msgs provides messages and services to facilitate passing pose detection results and features.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

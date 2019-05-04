@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The bin_pose_msgs package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

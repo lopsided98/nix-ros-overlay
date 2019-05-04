@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Firmware library for software-in-the-loop of the ROSflight ROS stack'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

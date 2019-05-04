@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "0ab90849feea13b0208026bdfe782dcd9e85119da5d45946bd81c4a8b50acc59";
   };
 
-  buildInputs = [ controller-manager combined-robot-hw actionlib qb-device-hardware-interface control-msgs roscpp qb-device-utils ];
-  propagatedBuildInputs = [ controller-manager combined-robot-hw actionlib qb-device-hardware-interface control-msgs roscpp qb-device-utils ];
+  buildInputs = [ controller-manager control-msgs combined-robot-hw actionlib qb-device-hardware-interface roscpp qb-device-utils ];
+  propagatedBuildInputs = [ controller-manager control-msgs combined-robot-hw actionlib qb-device-hardware-interface roscpp qb-device-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a device-independent control library for qbrobotics® devices.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

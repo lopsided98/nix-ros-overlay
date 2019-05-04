@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Holds the action description and relevant messages for the move_base package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''General ros communications used by the various zeroconf implementations.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

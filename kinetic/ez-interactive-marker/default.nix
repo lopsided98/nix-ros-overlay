@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, catkin, pythonPackages, rospy-message-converter, rostest, interactive-markers, visualization-msgs, rospy, std-msgs, roslib }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy-message-converter, rostest, roslib, interactive-markers, visualization-msgs, rospy, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-ez-interactive-marker";
   version = "0.0.2";
@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "eedeb0e20406c9ae3c30e3613ab12589fe5904243fcf2d14ac98fce2951e6a54";
   };
 
-  buildInputs = [ rospy-message-converter rostest interactive-markers rospy tf roslib ];
+  buildInputs = [ tf rospy-message-converter rostest interactive-markers rospy roslib ];
   checkInputs = [ pythonPackages.nose ];
   propagatedBuildInputs = [ rospy-message-converter roslib visualization-msgs rospy std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Easily create interactive markers from yaml files'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

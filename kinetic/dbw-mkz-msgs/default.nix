@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Drive-by-wire messages for the Lincoln MKZ'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

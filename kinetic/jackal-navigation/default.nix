@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gmapping map-server urdf amcl xacro move-base ];
+  propagatedBuildInputs = [ gmapping map-server amcl move-base urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files and code for autonomous navigation of the Jackal'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

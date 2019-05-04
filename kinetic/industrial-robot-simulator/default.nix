@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ roslaunch industrial-robot-client ];
-  propagatedBuildInputs = [ industrial-msgs control-msgs rospy pythonPackages.rospkg trajectory-msgs sensor-msgs industrial-robot-client ];
+  propagatedBuildInputs = [ control-msgs pythonPackages.rospkg trajectory-msgs sensor-msgs industrial-robot-client industrial-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The industrial robot simulator is a stand in for industrial robot driver node(s).  It adheres to the driver specification for industrial robot controllers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package bridging NAOqi to executing things on the robot.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

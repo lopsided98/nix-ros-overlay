@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package that handle conversion from RangeArray messsages'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

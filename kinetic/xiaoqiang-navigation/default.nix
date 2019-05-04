@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''xiaoqiang navigaion related'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "a3fee278389d9e261bafbcca25561c1ef2461d6dc5eeda6445805034aa96f8d5";
   };
 
-  propagatedBuildInputs = [ mm-messages mm-mux-demux mm-eigen-msgs mm-core-msgs mm-radio ];
+  propagatedBuildInputs = [ mm-messages mm-eigen-msgs mm-mux-demux mm-core-msgs mm-radio ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Lightweight communication patterns built on top of nanomsg for
     use in embedded scenarios where only a single socket connection is desirable.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

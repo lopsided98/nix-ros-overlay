@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   buildInputs = [ hardware-interface kdl-parser cmake-modules pluginlib pr2-hardware-interface urdfdom rostest urdf angles roscpp rosunit ];
-  propagatedBuildInputs = [ hardware-interface kdl-parser pluginlib urdf angles pr2-hardware-interface roscpp urdfdom ];
+  propagatedBuildInputs = [ hardware-interface kdl-parser pluginlib pr2-hardware-interface urdfdom urdf angles roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -30,6 +30,6 @@ buildRosPackage {
      <p>
         The pr2_mechanism_model package is well tested and is released with a stable API.
      </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

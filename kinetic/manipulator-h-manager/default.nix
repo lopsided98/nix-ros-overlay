@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The manipulator_h_manager package
     This package describes robot manager to execute manipulator_h_base_module.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

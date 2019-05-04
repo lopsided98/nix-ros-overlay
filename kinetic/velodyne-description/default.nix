@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF and meshes describing Velodyne laser scanners.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

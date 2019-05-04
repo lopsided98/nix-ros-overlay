@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Automatic docking for Kobuki:
 	    Users owning a docking station for Kobuki can use this tool to let Kobuki find its nest autonomously.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

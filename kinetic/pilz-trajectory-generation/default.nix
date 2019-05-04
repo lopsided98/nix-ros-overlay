@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "08ebb11d85fb3ba396c323e59ed1ad3cef112aae967f25b855cebe3380cc33be";
   };
 
-  buildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib tf2-geometry-msgs orocos-kdl pilz-extensions pilz-testutils roscpp tf2 moveit-core tf2-eigen moveit-msgs eigen-conversions pilz-msgs moveit-ros-planning-interface ];
-  checkInputs = [ panda-moveit-config cmake-modules prbt-moveit-config prbt-support prbt-pg70-support rostest pilz-industrial-motion-testutils abb-irb2400-moveit-config code-coverage rosunit ];
+  buildInputs = [ moveit-ros-planning moveit-ros-move-group orocos-kdl pluginlib tf2-geometry-msgs pilz-extensions pilz-testutils roscpp tf2 moveit-core tf2-eigen moveit-msgs eigen-conversions pilz-msgs moveit-ros-planning-interface ];
+  checkInputs = [ panda-moveit-config prbt-support cmake-modules prbt-moveit-config prbt-pg70-support rostest pilz-industrial-motion-testutils abb-irb2400-moveit-config code-coverage rosunit ];
   propagatedBuildInputs = [ moveit-ros-planning moveit-ros-move-group orocos-kdl tf2-geometry-msgs pilz-extensions roscpp tf2 moveit-core message-runtime moveit-commander moveit-msgs pilz-msgs moveit-ros-planning-interface prbt-ikfast-manipulator-plugin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pilz_trajectory_generation package containing the MoveIt! plugin pilz_command_planner.'';
-    #license = lib.licenses.LGPLv3;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

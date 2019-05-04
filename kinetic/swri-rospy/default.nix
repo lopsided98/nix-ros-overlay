@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''This package provides added functionaliy on top of rospy, including a
   single-threaded callback queue.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

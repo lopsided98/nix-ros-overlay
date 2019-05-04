@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This metapackage depends on the SMACH visualization tools.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

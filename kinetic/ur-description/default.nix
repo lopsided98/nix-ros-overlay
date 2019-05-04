@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF description for Universal UR5/10 robot arms'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

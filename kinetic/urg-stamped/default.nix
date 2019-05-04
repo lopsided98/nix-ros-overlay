@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Precisely stamped URG driver for ROS'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

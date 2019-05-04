@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Measures the core temp of a raspberry pi'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

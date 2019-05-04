@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Client implementation to use TF from Common Lisp'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

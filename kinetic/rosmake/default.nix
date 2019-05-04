@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''rosmake is a ros dependency aware build tool which can be used to
      build all dependencies in the correct order.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

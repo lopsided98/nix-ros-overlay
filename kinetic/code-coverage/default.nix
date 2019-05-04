@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''CMake configuration to run coverage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

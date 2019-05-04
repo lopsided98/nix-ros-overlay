@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The handeye package'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

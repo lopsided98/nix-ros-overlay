@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common base code for ROS1/ROS2 H264 encoder node'';
-    #license = lib.licenses.LGPLv2.1;
+    license = with lib.licenses; [ lgpl21 ];
   };
 }

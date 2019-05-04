@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages used to feed the trolls.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

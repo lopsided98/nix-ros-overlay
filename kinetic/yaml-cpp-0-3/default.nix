@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Legacy version of yaml cpp without boost, namespaced to avoid system conflicts.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

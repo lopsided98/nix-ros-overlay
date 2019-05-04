@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''An Orocos typekit for Eigen types.'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

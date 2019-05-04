@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Collection of the launch files for fake_joint_driver.'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, tf, sensor-msgs, catkin, gazeboSimulator, nav-msgs, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros, sensor-msgs, catkin, gazeboSimulator, roscpp, nav-msgs, std-msgs, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot3-gazebo";
   version = "1.2.0";
@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "7cbb7c8fa92d4145fb3af1aa2ab1abcd37e12f9c5308704ec67c5b1c78d4bd49";
   };
 
-  buildInputs = [ gazebo-ros nav-msgs geometry-msgs std-msgs sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ gazebo-ros nav-msgs geometry-msgs std-msgs gazeboSimulator.gazebo sensor-msgs tf roscpp ];
+  buildInputs = [ gazebo-ros sensor-msgs roscpp nav-msgs std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ gazebo-ros gazeboSimulator.gazebo sensor-msgs roscpp nav-msgs std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo simulation package for the TurtleBot3'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "4313a61c90265493b98b4c6805a53a7a337a90fbd0ad81f3a8ee74df75ee9c88";
   };
 
-  propagatedBuildInputs = [ gazebo-ros uuv-control-cascaded-pid gazebo-ros-control uuv-trajectory-control uuv-thruster-manager ];
+  propagatedBuildInputs = [ gazebo-ros uuv-trajectory-control uuv-thruster-manager uuv-control-cascaded-pid gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rexrov2_control package'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

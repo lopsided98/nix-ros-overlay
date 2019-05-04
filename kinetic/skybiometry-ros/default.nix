@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The skybiometry_ros package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

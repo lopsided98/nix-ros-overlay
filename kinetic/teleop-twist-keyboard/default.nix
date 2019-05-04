@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Generic keyboard teleop for twist robots.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

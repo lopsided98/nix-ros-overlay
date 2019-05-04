@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "d35e000a94e11dcc409b2718f46f86a5581b381c363e70c693edd02e52e61429";
   };
 
-  buildInputs = [ rqt-gui-py rostest roslint rospy roslaunch rqt-gui ];
-  propagatedBuildInputs = [ rqt-gui-py control-msgs rospy trajectory-msgs rqt-gui ];
+  buildInputs = [ rqt-gui-py roslint rqt-gui rostest rospy roslaunch ];
+  propagatedBuildInputs = [ rqt-gui-py control-msgs trajectory-msgs rqt-gui rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rqt_joint_trajectory_plot package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

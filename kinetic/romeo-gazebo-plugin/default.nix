@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ gazebo-ros romeo-description ];
-  propagatedBuildInputs = [ gazebo-ros gazebo-plugins ros-controllers romeo-control ros-control gazebo-ros-control romeo-description ];
+  propagatedBuildInputs = [ gazebo-ros romeo-control ros-control romeo-description gazebo-plugins gazebo-ros-control ros-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The romeo_gazebo_plugin package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

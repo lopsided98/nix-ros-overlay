@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "d0423d8dee8204b58b4f489be31397afe876f6d197381f413fa76c2ef2b2b181";
   };
 
-  buildInputs = [ urdf rospy std-msgs sensor-msgs xacro ];
-  propagatedBuildInputs = [ urdf rospy std-msgs sensor-msgs xacro ];
+  buildInputs = [ sensor-msgs urdf rospy std-msgs xacro ];
+  propagatedBuildInputs = [ sensor-msgs urdf rospy std-msgs xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The raspigibbon_description package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

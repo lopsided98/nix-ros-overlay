@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   checkInputs = [ cob-supported-robots roslaunch cob-default-env-config ];
-  propagatedBuildInputs = [ map-server amcl cob-default-env-config move-base cob-scan-unifier dwa-local-planner rviz cob-linear-nav topic-tools cob-navigation-config ];
+  propagatedBuildInputs = [ map-server amcl move-base cob-default-env-config cob-scan-unifier dwa-local-planner rviz cob-linear-nav topic-tools cob-navigation-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package holds config and launch files for running the  <a href="http://ros.org/wiki/move_base">move_base</a> node on the <a href="http://ros.org/wiki/care-o-bot">Care-O-bot</a>.
     The move_base node is configured to run over a pre-specified static map.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

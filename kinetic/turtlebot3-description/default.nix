@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''3D models of the TurtleBot3 for simulation and visualization'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

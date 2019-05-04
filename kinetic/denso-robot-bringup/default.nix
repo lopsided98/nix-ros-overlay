@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The denso robot bringup package includes launch files for starting denso robot nodes.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

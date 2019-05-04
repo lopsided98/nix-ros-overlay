@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ roseus ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ image-view2 jsk-recognition-msgs ar-track-alvar image-proc visualization-msgs posedetection-msgs checkerboard-detector opencv-apps ];
+  propagatedBuildInputs = [ image-view2 ar-track-alvar posedetection-msgs checkerboard-detector jsk-recognition-msgs image-proc visualization-msgs opencv-apps ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''roseus_tutorials'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

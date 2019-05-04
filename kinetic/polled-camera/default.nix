@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "4c30bb506474e7c9c0d2d4676d48ca86bdaae3bc5d223420db610d2163a2fbfa";
   };
 
-  buildInputs = [ message-generation std-msgs image-transport sensor-msgs roscpp ];
-  propagatedBuildInputs = [ message-runtime std-msgs image-transport sensor-msgs roscpp ];
+  buildInputs = [ image-transport sensor-msgs message-generation std-msgs roscpp ];
+  propagatedBuildInputs = [ image-transport sensor-msgs message-runtime std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''polled_camera contains a service and C++ helper classes for implementing a polled
      camera driver node and requesting images from it. The package is currently for
      internal use as the API is still under development.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

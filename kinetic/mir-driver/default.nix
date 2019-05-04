@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6077342572cee4c6daed96ea01d6f2b2444159d549080133cd5e40b72bcb3e60";
   };
 
-  buildInputs = [ actionlib-msgs geometry-msgs mir-msgs sensor-msgs rospy rospy-message-converter rosgraph-msgs move-base-msgs nav-msgs mir-actions visualization-msgs dynamic-reconfigure std-msgs diagnostic-msgs roslaunch tf pythonPackages.websocket_client ];
-  propagatedBuildInputs = [ actionlib-msgs geometry-msgs mir-msgs sensor-msgs mir-description rospy rospy-message-converter rosgraph-msgs move-base-msgs nav-msgs mir-actions robot-state-publisher dynamic-reconfigure std-msgs diagnostic-msgs visualization-msgs tf pythonPackages.websocket_client ];
+  buildInputs = [ roslaunch actionlib-msgs geometry-msgs sensor-msgs rospy rospy-message-converter rosgraph-msgs move-base-msgs nav-msgs mir-actions visualization-msgs dynamic-reconfigure std-msgs diagnostic-msgs pythonPackages.websocket_client tf mir-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs geometry-msgs sensor-msgs mir-description rospy rospy-message-converter rosgraph-msgs move-base-msgs nav-msgs mir-actions robot-state-publisher dynamic-reconfigure std-msgs diagnostic-msgs pythonPackages.websocket_client tf visualization-msgs mir-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A reverse ROS bridge for the MiR100 robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal asl20 ];
   };
 }

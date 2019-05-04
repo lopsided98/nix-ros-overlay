@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common service definitions.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

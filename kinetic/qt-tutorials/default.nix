@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Example qt programs, generated from code similar to that used by the 
      roscreate-qt-pkg script and styled on roscpp_tutorials.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

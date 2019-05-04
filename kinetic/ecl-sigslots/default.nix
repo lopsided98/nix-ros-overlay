@@ -22,6 +22,6 @@ buildRosPackage {
      some improvements - they do not need a preprocessor, are fully type safe,
      allow for simple connections via a posix style string identifier 
      and are multithread-safe.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

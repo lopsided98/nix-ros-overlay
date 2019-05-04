@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The khi_duaro_gazebo package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

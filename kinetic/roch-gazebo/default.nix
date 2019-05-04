@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''SawYer roch Simulator bringup'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

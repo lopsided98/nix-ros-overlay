@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A set of drivers for Flir cameras based on the Spinnaker SDK.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

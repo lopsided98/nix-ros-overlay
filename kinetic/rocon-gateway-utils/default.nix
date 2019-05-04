@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ rostest ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ rocon-console rosgraph rocon-python-comms gateway-msgs rosservice ];
+  propagatedBuildInputs = [ rocon-python-comms gateway-msgs rosservice rocon-console rosgraph ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Utilities for gateway users (avoids large dependency requirements).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

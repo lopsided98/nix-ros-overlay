@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, geometry-msgs, sensor-msgs, catkin, pythonPackages, rospy, nmea-msgs }:
+{ lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, pythonPackages, nmea-msgs, rospy, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-nmea-navsat-driver";
   version = "0.5.1";
@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ pythonPackages.pyserial rospy sensor-msgs geometry-msgs nmea-msgs ];
+  propagatedBuildInputs = [ pythonPackages.pyserial sensor-msgs nmea-msgs rospy geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package to parse NMEA strings and publish a very simple GPS message. Does not 
     require or use the GPSD deamon.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

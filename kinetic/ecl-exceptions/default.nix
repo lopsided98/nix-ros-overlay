@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Template based exceptions - these are simple and practical
      and avoid the proliferation of exception types. Although not
      syntatactically ideal, it is convenient and eminently practical.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

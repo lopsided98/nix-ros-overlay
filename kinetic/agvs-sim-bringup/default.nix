@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The agvs_sim_bringup package. It contains multiple launch files to perform different tasks, from creating a map with gmapping to launching amcl.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "eb6f5a08cf1e70e2160dddf092289989841b16739f16d4431db1de6ba572fc14";
   };
 
-  buildInputs = [ diagnostic-updater nav-msgs kdl-parser geometry-msgs std-msgs tf roscpp p2os-msgs ];
-  propagatedBuildInputs = [ kdl-parser roscpp p2os-msgs diagnostic-updater nav-msgs message-runtime std-msgs tf geometry-msgs ];
+  buildInputs = [ kdl-parser roscpp p2os-msgs diagnostic-updater nav-msgs std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ kdl-parser tf p2os-msgs diagnostic-updater nav-msgs message-runtime std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver file descriptions for P2OS/ARCOS robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
     This version of log4cpp deviates from the official release
     by adding custom category factories. Orocos requires this for
     setting up real-time logging.'';
-    #license = lib.licenses.LGPL v2.1 or later;
+    license = with lib.licenses; [ lgpl21 ];
   };
 }

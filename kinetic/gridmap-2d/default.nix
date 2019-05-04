@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''gridmap_2d - a simple 2D gridmap structure, based on OpenCV's cv::Mat'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

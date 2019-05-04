@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Test scripts to interface to the Dataspeed Inc. Power Distribution System (PDS)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

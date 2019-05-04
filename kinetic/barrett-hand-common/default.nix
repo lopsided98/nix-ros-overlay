@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The barrett hand common metapackage contains all the common packages for the Barrett hand'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -24,6 +24,6 @@ buildRosPackage {
     <em>&quot;Humanoid Navigation with Dynamic Footstep Plans&quot;</em>
     by A. Hornung, K.M. Wurm, and M. Bennewitz; published in 
     IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2010</p>'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ rospy ];
-  propagatedBuildInputs = [ move-base-msgs rospy std-msgs geometry-msgs visualization-msgs move-base ];
+  propagatedBuildInputs = [ move-base move-base-msgs rospy std-msgs visualization-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Tours around the waypoints'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

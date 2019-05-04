@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''rqt_pose_view provides a GUI plugin for visualizing 3D poses.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

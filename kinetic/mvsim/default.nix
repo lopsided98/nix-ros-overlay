@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "ba854c06a37cc8b5c4eb8d83b7695f99e859bc62c337a4f4f3a0a28d7dfe8203";
   };
 
-  buildInputs = [ sensor-msgs roscpp nav-msgs message-generation message-runtime mrpt1 dynamic-reconfigure std-msgs visualization-msgs mrpt-bridge tf ];
-  propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs message-generation message-runtime mrpt1 dynamic-reconfigure std-msgs visualization-msgs mrpt-bridge tf ];
+  buildInputs = [ sensor-msgs roscpp message-generation nav-msgs message-runtime mrpt1 dynamic-reconfigure std-msgs visualization-msgs mrpt-bridge tf ];
+  propagatedBuildInputs = [ sensor-msgs roscpp message-generation nav-msgs message-runtime mrpt1 dynamic-reconfigure std-msgs visualization-msgs mrpt-bridge tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Node for the &quot;multivehicle simulator&quot; framework.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

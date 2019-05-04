@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The pr2_kinematics package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

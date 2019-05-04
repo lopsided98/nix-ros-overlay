@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros gazebo-plugins hector-gazebo-plugins jackal-control gazebo-ros-control jackal-description ];
+  propagatedBuildInputs = [ gazebo-ros hector-gazebo-plugins jackal-control gazebo-plugins gazebo-ros-control jackal-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launchfiles to use Jackal in Gazebo.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

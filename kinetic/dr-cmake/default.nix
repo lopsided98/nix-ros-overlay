@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Some CMake utilities for DR.'';
-    #license = lib.licenses.Apache v2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

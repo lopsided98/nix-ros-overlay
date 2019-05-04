@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The criutils package'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

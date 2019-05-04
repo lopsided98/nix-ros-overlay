@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Capture is a set of tools to capture objects in 3D and perform odometry'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "d75d660fbcbf425976978defb7e76ba459e55d460760316ab27907e838fb7fce";
   };
 
-  propagatedBuildInputs = [ rocon-unreliable-experiments rocon-hub rocon-gateway-utils rocon-gateway-tests rocon-test rocon-gateway rocon-hub-client ];
+  propagatedBuildInputs = [ rocon-unreliable-experiments rocon-gateway-utils rocon-hub rocon-test rocon-gateway-tests rocon-gateway rocon-hub-client ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -20,6 +20,6 @@ buildRosPackage {
     provide the building blocks common to most or all multimaster systems.
     In particular, it provides the gateway model, which is an upgrade on
     old foreign_relay and master_sync concepts.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

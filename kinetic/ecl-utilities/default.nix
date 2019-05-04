@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Includes various supporting tools and utilities for c++ programming.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

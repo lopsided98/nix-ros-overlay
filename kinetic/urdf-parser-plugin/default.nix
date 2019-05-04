@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains a C++ base class for URDF parsers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

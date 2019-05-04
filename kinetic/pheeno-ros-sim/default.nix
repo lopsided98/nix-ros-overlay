@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "b7ad7942e500c94c8d77e9f4ef0d0faa67d80e52fa88f12a5abc037a7f64f524";
   };
 
-  buildInputs = [ gazebo-ros actionlib-msgs geometry-msgs image-transport sensor-msgs gazebo-msgs roscpp gazebo-plugins rospy message-generation nav-msgs rviz urdf actionlib std-msgs tf xacro gazebo-ros-control ];
+  buildInputs = [ gazebo-ros actionlib-msgs geometry-msgs image-transport sensor-msgs gazebo-msgs roscpp gazebo-plugins rospy nav-msgs message-generation rviz urdf actionlib std-msgs tf xacro gazebo-ros-control ];
   propagatedBuildInputs = [ gazebo-ros actionlib-msgs geometry-msgs image-transport sensor-msgs gazebo-msgs roscpp gazebo-plugins rospy nav-msgs rviz message-runtime urdf actionlib std-msgs tf xacro gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo simulation ROS package for Pheeno system!'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

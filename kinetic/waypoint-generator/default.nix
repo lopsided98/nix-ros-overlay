@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Generates waypoint yaml file'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

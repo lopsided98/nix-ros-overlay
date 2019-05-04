@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Provides Python to ROS multiprocess API, useful for using ROS from different multiprocess environment while keeping both isolated.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

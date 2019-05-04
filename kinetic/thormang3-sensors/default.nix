@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "085916adfb99845fc7dd2004351c71c84d7b26a25340825b82a4343ade995606";
   };
 
-  buildInputs = [ laser-assembler std-msgs pcl sensor-msgs roscpp pcl-conversions ];
-  propagatedBuildInputs = [ laser-assembler uvc-camera pcl realsense-camera sensor-msgs laser-filters rgbd-launch std-msgs roscpp pcl-conversions ];
+  buildInputs = [ laser-assembler pcl sensor-msgs std-msgs roscpp pcl-conversions ];
+  propagatedBuildInputs = [ laser-assembler uvc-camera realsense-camera pcl sensor-msgs laser-filters rgbd-launch std-msgs roscpp pcl-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains sensor related launch files.
     The package also includes a node for assembling Laserscan(LaserScan to PointCloud)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros grizzly-description controller-manager grizzly-control rostopic hector-gazebo-plugins gazebo-ros-control gazebo-plugins ];
+  propagatedBuildInputs = [ gazebo-ros grizzly-description controller-manager grizzly-control hector-gazebo-plugins gazebo-plugins rostopic gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Clearpath Grizzly Simulator bringup'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

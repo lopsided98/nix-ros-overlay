@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "17a36ff35bdf95388ca26fb2f2eae0b8ea2a18e3f94f78785921fbfae8b8db23";
   };
 
-  propagatedBuildInputs = [ cob-navigation-local cob-mapping-slam cob-map-accessibility-analysis cob-navigation-global cob-linear-nav cob-navigation-config cob-navigation-slam ];
+  propagatedBuildInputs = [ cob-navigation-global cob-navigation-slam cob-navigation-local cob-mapping-slam cob-map-accessibility-analysis cob-linear-nav cob-navigation-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_navigation stack provides different navigation packages for <a href="http://ros.org/wiki/care-o-bot">Care-O-bot</a>.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

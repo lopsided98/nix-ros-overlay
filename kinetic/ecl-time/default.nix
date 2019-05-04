@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "9b198e27672cc60f073d95138afc009f85ffae69966adb3bd4e6ec06f5726ade";
   };
 
-  buildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-time-lite ecl-config ecl-build ];
-  propagatedBuildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-time-lite ecl-config ecl-build ];
+  buildInputs = [ ecl-time-lite ecl-build ecl-exceptions ecl-license ecl-errors ecl-config ];
+  propagatedBuildInputs = [ ecl-time-lite ecl-build ecl-exceptions ecl-license ecl-errors ecl-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -23,6 +23,6 @@ buildRosPackage {
 	- posix rt : complete.
 	- macosx : posix timers only, missing absolute timers.
 	- win : none.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

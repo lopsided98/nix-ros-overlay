@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The simple_navigation_goals_tutorial package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

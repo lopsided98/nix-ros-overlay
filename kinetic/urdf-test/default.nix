@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The urdf_test package'';
-    #license = lib.licenses.Proprietary;
+    license = with lib.licenses; [ "Proprietary" ];
   };
 }

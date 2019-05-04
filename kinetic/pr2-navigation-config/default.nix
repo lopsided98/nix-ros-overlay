@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package holds common configuration files for running the'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

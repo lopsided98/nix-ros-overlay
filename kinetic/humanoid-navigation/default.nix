@@ -19,6 +19,6 @@ buildRosPackage {
     description = ''<p>This stack contains packages for humanoid (biped) navigation,
     developed at the <a href="http://hrl.informatik.uni-freiburg.de/">Humanoid Robots Lab</a>
     at the Albert-Ludwigs-Universitat in Freiburg, Germany.</p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal gpl3 ];
   };
 }

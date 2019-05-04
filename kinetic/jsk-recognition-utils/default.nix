@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''C++ library about sensor model, geometrical modeling and perception.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The agvs_control package. Config files used for Gazebo motor controllers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

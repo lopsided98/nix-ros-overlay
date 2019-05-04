@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The tensorflow_ros_rqt package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

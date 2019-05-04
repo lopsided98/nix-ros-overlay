@@ -22,6 +22,6 @@ buildRosPackage {
   etc.) of the PR2 robot.  The files in this package are parsed and used by
   a variety of other components.  Most users will not interact directly
   with this package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

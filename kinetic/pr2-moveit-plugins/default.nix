@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''PR2 specific plugins for MoveIt'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

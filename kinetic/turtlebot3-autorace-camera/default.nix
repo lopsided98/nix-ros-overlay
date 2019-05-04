@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ pythonPackages.enum34 pythonPackages.numpy rospy dynamic-reconfigure cv-bridge sensor-msgs pythonPackages.opencv3 ];
+  propagatedBuildInputs = [ pythonPackages.enum34 pythonPackages.numpy sensor-msgs cv-bridge pythonPackages.opencv3 rospy dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''TurtleBot3 AutoRace ROS package that controls Raspberry Pi Camera, and process the image'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

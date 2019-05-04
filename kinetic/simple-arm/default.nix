@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Simple velocity controlled arm. Teleoperation software and firmware.'';
-    #license = lib.licenses.Unlicense;
+    license = with lib.licenses; [ "Unlicense" ];
   };
 }

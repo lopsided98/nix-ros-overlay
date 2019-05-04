@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Robot descriptions in form of URDF files and meshes'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

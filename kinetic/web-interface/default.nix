@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "0fb1478945c0504c45bec50ec2ac9ff88902b2453647f711f3b286236bd4caa4";
   };
 
-  propagatedBuildInputs = [ webui rosweb rosjson pyclearsilver image-stream web-msgs ros-apache2 launchman ];
+  propagatedBuildInputs = [ webui ros-apache2 image-stream rosjson pyclearsilver web-msgs rosweb launchman ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The web_interface package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

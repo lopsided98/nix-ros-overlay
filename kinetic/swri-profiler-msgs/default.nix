@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for the swri_profiler tool.'';
-    #license = lib.licenses.Copyright SwRI;
+    license = with lib.licenses; [ "Copyright SwRI" ];
   };
 }

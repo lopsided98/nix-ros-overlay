@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rospy, move-base-msgs, actionlib, std-msgs, smach, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, move-base-msgs, actionlib, rospy, std-msgs, smach, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-follow-waypoints";
   version = "0.3.0-r2";
@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''The follow_waypoints node will listen for waypoints given as
       poses and when instructed will follow them one by one by publishing goals
       to move_base.'';
-    #license = lib.licenses.Unlicense;
+    license = with lib.licenses; [ "Unlicense" ];
   };
 }

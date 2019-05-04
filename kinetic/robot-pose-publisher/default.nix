@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A Simple Node to Publish the Robot's Position Relative to the Map using TFs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

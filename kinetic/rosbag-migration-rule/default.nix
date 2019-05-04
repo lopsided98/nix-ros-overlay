@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''This empty package allows to export rosbag migration rule files without depending on rosbag.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

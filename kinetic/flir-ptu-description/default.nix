@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF description the FLIR PTUs, currently the D46.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "e654ffefc17fd17fb005adbe83c437c1c9e41c617d61971146ae1136014d9c2b";
   };
 
-  buildInputs = [ cmake-modules tf sensor-msgs roscpp qt5.qtbase homer-mapnav-msgs nav-msgs eigen roslib homer-nav-libs ];
-  propagatedBuildInputs = [ tf sensor-msgs roscpp qt5.qtbase homer-mapnav-msgs nav-msgs eigen std-msgs roslib homer-nav-libs ];
+  buildInputs = [ cmake-modules tf sensor-msgs qt5.qtbase homer-mapnav-msgs roslib nav-msgs eigen roscpp homer-nav-libs ];
+  propagatedBuildInputs = [ tf sensor-msgs qt5.qtbase homer-mapnav-msgs roslib nav-msgs eigen std-msgs roscpp homer-nav-libs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''homer_mapping'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

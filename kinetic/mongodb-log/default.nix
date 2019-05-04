@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The mongodb_log package'';
-    #license = lib.licenses.GPLv2;
+    license = with lib.licenses; [ gpl2 ];
   };
 }

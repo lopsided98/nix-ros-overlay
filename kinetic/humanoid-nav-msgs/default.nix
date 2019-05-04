@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages and services for humanoid robot navigation'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

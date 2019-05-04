@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "357976070fb40fd4a22cb2f3464e05825ac10fc3dfcfcaf891eafda82e864366";
   };
 
-  propagatedBuildInputs = [ rtt-visualization-msgs rtt-geometry-msgs rtt-nav-msgs rtt-sensor-msgs rtt-diagnostic-msgs rtt-actionlib-msgs rtt-stereo-msgs rtt-shape-msgs rtt-trajectory-msgs ];
+  propagatedBuildInputs = [ rtt-visualization-msgs rtt-nav-msgs rtt-geometry-msgs rtt-sensor-msgs rtt-diagnostic-msgs rtt-actionlib-msgs rtt-stereo-msgs rtt-shape-msgs rtt-trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rtt_common_msgs package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

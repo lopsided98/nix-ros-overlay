@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Homogeneous transform library for Common Lisp.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

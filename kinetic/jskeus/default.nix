@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''EusLisp software developed and used by JSK at The University of Tokyo'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

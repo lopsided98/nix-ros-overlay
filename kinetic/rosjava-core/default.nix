@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''An implementation of ROS in pure-Java with Android support.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

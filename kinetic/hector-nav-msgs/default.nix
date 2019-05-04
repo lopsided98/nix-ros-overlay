@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''hector_nav_msgs contains messages and services used in the hector_slam stack.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

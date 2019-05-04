@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''Oros Tools is software suite that provide high
     level functions to the web plateform Oros.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

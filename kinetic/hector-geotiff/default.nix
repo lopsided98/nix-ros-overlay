@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "b7a1cafda8d69bfc4ea87656efe2974e6459434d67ce5b6baa4d0b3b2a84be78";
   };
 
-  buildInputs = [ qt4 nav-msgs pluginlib std-msgs roscpp hector-map-tools hector-nav-msgs ];
-  propagatedBuildInputs = [ qt4 nav-msgs pluginlib std-msgs roscpp hector-map-tools hector-nav-msgs ];
+  buildInputs = [ pluginlib qt4 hector-map-tools hector-nav-msgs nav-msgs std-msgs roscpp ];
+  propagatedBuildInputs = [ pluginlib qt4 hector-map-tools hector-nav-msgs nav-msgs std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_geotiff provides a node that can be used to save occupancy grid map, robot trajectory and object of interest data to RoboCup Rescue compliant GeoTiff images.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

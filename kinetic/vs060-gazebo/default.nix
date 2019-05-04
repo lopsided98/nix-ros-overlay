@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Gazebo simulation package for Denso vs060 arm.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

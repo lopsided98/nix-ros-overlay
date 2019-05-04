@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A node to control nonlinear dynamic systems'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

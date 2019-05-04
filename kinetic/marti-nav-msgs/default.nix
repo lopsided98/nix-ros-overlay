@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6ff8ffceb82bf7632fb7abcea09207abc5036b1ef85801340f25621bc8a61173";
   };
 
-  buildInputs = [ geographic-msgs message-generation marti-common-msgs std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ geographic-msgs marti-common-msgs message-runtime std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geographic-msgs message-generation marti-common-msgs std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geographic-msgs marti-common-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''marti_nav_msgs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

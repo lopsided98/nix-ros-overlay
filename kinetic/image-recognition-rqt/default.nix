@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "a56d2d703300accb15861dccee05182931eec249d114560614c9a4d1ef95681c";
   };
 
-  buildInputs = [ rqt-gui-py image-recognition-msgs image-recognition-util rospy rqt-gui ];
-  propagatedBuildInputs = [ rqt-gui-py image-recognition-msgs image-recognition-util rospy rqt-gui ];
+  buildInputs = [ rqt-gui-py rqt-gui image-recognition-msgs image-recognition-util rospy ];
+  propagatedBuildInputs = [ rqt-gui-py rqt-gui image-recognition-msgs image-recognition-util rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The image_recognition_rqt package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

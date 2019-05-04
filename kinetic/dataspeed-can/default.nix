@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''CAN bus tools using Dataspeed hardware'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

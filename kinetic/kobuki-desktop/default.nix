@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Visualisation and simulation tools for Kobuki'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

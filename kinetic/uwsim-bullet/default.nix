@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The bullet library. See https://code.google.com/p/bullet'';
-    #license = lib.licenses.Check author's website;
+    license = with lib.licenses; [ "Check author's website" ];
   };
 }

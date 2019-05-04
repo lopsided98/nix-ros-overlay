@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''self_test'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

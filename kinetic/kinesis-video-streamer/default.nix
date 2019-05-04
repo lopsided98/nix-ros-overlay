@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Kinesis Video Streams producer node'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

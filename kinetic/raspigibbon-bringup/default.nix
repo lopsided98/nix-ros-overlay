@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The raspigibbon_bringup package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

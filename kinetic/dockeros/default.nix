@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Simply running ros nodes in docker containers on remote robots.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for describing aspects of a wireless network, connection, etc.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

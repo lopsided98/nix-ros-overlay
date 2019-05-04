@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ pepper-sensors-py naoqi-driver-py rgbd-launch naoqi-sensors-py naoqi-driver pepper-description naoqi-pose ];
+  propagatedBuildInputs = [ pepper-description naoqi-pose pepper-sensors-py naoqi-driver-py rgbd-launch naoqi-sensors-py naoqi-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pepper_bringup package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

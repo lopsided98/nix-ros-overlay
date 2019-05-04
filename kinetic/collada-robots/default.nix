@@ -26,6 +26,6 @@ buildRosPackage {
     http://openrave.programmingvision.com/index.php/Started:COLLADA
     
     *.zae files are zip archives which contain the raw collada 1.5 xml (dae).'';
-    #license = lib.licenses.T.D.B;
+    license = with lib.licenses; [ "T.D.B" ];
   };
 }

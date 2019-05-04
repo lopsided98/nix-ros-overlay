@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "bf590a253108bd3d92ebc59ce7c8036062904ae7e455cc5baff471558dd35e26";
   };
 
-  propagatedBuildInputs = [ stage-ros gazebo-ros-pkgs rqt-common-plugins robot rqt-robot-plugins ];
+  propagatedBuildInputs = [ gazebo-ros-pkgs robot rqt-robot-plugins stage-ros rqt-common-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A metapackage to aggregate several packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

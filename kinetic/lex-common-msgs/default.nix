@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common messages for interacting with Amazon Lex using the lex_node package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

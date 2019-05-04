@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslaunch, gmapping, frontier-exploration, map-server, amcl, base-local-planner, navfn, roch-safety-controller, sensor-msgs, catkin, move-base, roscpp, dwa-local-planner, nodelet, yocs-cmd-vel-mux, roch-bringup, tf }:
+{ lib, buildRosPackage, fetchurl, roslaunch, gmapping, frontier-exploration, map-server, amcl, base-local-planner, roch-safety-controller, navfn, sensor-msgs, catkin, move-base, roscpp, dwa-local-planner, nodelet, yocs-cmd-vel-mux, roch-bringup, tf }:
 buildRosPackage {
   pname = "ros-kinetic-roch-navigation";
   version = "2.0.12";
@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch tf sensor-msgs roscpp ];
-  propagatedBuildInputs = [ gmapping frontier-exploration map-server amcl base-local-planner roch-safety-controller navfn tf sensor-msgs move-base dwa-local-planner nodelet yocs-cmd-vel-mux roch-bringup roscpp ];
+  propagatedBuildInputs = [ gmapping frontier-exploration map-server amcl base-local-planner navfn roch-safety-controller tf sensor-msgs move-base dwa-local-planner nodelet yocs-cmd-vel-mux roch-bringup roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Autonomous mapping and navigation demos for the SawYer Roch'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

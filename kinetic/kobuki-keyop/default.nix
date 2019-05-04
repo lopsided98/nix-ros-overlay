@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "d54e509af6238598e394898f4b980156c3e6bd37de1cee746943ab1d346dc73d";
   };
 
-  buildInputs = [ ecl-exceptions std-srvs kobuki-msgs geometry-msgs std-msgs ecl-time roscpp ecl-threads ];
-  propagatedBuildInputs = [ std-srvs kobuki-msgs yocs-velocity-smoother ecl-time ecl-exceptions ecl-threads std-msgs yocs-cmd-vel-mux roscpp geometry-msgs ];
+  buildInputs = [ std-srvs kobuki-msgs ecl-time ecl-exceptions ecl-threads std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs kobuki-msgs yocs-velocity-smoother ecl-threads ecl-exceptions ecl-time std-msgs yocs-cmd-vel-mux roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Keyboard teleoperation for Kobuki: relays commands from a keyboard to Kobuki.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

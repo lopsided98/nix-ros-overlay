@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "c582bf84e03b65888829f3883e3dc0d820b71a5ae01aa492169e9763357c1b99";
   };
 
-  propagatedBuildInputs = [ rdl-cmake rdl-msgs rdl-urdfreader rdl-benchmark rdl-ros-tools rdl-dynamics ];
+  propagatedBuildInputs = [ rdl-cmake rdl-msgs rdl-urdfreader rdl-dynamics rdl-ros-tools rdl-benchmark ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rdl meta-package'';
-    #license = lib.licenses.zlib;
+    license = with lib.licenses; [ "zlib" ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Assorted shell commands for using ros with bash.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

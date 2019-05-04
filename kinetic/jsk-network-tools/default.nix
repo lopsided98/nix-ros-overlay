@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ sensor-msgs rospy diagnostic-updater rostest message-generation dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
-  propagatedBuildInputs = [ diagnostic-updater message-runtime dynamic-reconfigure std-msgs diagnostic-msgs sensor-msgs roscpp rospy ];
+  propagatedBuildInputs = [ sensor-msgs rospy diagnostic-updater message-runtime dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk_network_tools'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

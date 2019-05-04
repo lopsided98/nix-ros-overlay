@@ -5,20 +5,20 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, serial, catkin, message-generation, message-runtime, rospy, std-msgs, dynamic-reconfigure, roscpp, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-teraranger-array";
-  version = "1.3.4";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/Terabee/teraranger_array-release/archive/release/kinetic/teraranger_array/1.3.4-0.tar.gz;
-    sha256 = "a7ed463ffefc6f3bd1aee6111310ad55a6ac847c5bb3b9ce1d31e00adec74ba7";
+    url = https://github.com/Terabee/teraranger_array-release/archive/release/kinetic/teraranger_array/2.0.0-1.tar.gz;
+    sha256 = "67cef9d3e64f2d16a34522cd17429e9829e5342d6f043fcbf2d4126e15326ebf";
   };
 
-  buildInputs = [ message-generation dynamic-reconfigure std-msgs sensor-msgs serial geometry-msgs roscpp rospy ];
+  buildInputs = [ sensor-msgs serial rospy message-generation dynamic-reconfigure std-msgs roscpp geometry-msgs ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ message-runtime dynamic-reconfigure std-msgs sensor-msgs serial geometry-msgs roscpp rospy ];
+  propagatedBuildInputs = [ sensor-msgs serial rospy message-runtime dynamic-reconfigure std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The teraranger_array package for TeraRanger Array Products (Multiflex, One)'';
-    #license = lib.licenses.MIT;
+    description = ''This package provides ros nodes for multi-sensor arrays from Terabee'';
+    license = with lib.licenses; [ mit ];
   };
 }

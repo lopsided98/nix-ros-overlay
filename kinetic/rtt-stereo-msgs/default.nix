@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "2bab5e9478669f2df3529e0c6bb5c17b98731861e99ff4891e5f1bb1fc488a78";
   };
 
-  buildInputs = [ rtt-geometry-msgs rtt-std-msgs rtt-roscomm rtt-sensor-msgs stereo-msgs ];
-  propagatedBuildInputs = [ rtt-geometry-msgs rtt-std-msgs rtt-roscomm rtt-sensor-msgs stereo-msgs ];
+  buildInputs = [ rtt-std-msgs rtt-geometry-msgs rtt-sensor-msgs rtt-roscomm stereo-msgs ];
+  propagatedBuildInputs = [ rtt-std-msgs rtt-geometry-msgs rtt-sensor-msgs rtt-roscomm stereo-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -29,6 +29,6 @@ buildRosPackage {
     See the http://ros.org/wiki/stereo_msgs documentation
     for the documentation of the ROS messages in this
     typekit.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

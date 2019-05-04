@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the rFSM flavor of Statecharts.'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 bsdOriginal ];
   };
 }

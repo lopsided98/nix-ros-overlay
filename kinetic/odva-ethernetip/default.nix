@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Library implementing ODVA EtherNet/IP (Industrial Protocol).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

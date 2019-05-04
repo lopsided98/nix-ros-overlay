@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''hector_map_tools contains some functions related to accessing information from OccupancyGridMap maps.
     Currently consists of a single header.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

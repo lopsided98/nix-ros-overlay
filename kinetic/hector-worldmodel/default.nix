@@ -19,6 +19,6 @@ buildRosPackage {
     description = ''The hector_worldmodel stack helps to collect and fuse information about objects in the world.
     It is used by Team Hector Darmstadt to localize victims and QR codes in the Robocup Rescue
     scenario. See <a href="http://wiki.ros.org/hector_object_tracker">hector_object_tracker</a> for further details.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

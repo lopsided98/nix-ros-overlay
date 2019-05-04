@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for transmitting audio via ROS'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

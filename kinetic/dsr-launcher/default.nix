@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''dsr_launcher examples'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

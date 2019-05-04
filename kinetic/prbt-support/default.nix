@@ -13,13 +13,13 @@ buildRosPackage {
   };
 
   buildInputs = [ roscpp ];
-  checkInputs = [ rostest cmake-modules moveit-core eigen roslaunch moveit-kinematics ];
+  checkInputs = [ cmake-modules moveit-kinematics rostest moveit-core eigen roslaunch ];
   propagatedBuildInputs = [ controller-manager joint-state-controller pilz-control prbt-hardware-support rosservice canopen-motor-node rviz robot-state-publisher topic-tools roscpp joint-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Mechanical, kinematic and visual description
   of the Pilz light weight arm PRBT.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

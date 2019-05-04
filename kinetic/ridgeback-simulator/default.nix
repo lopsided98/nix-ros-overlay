@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Packages for simulating Ridgeback.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

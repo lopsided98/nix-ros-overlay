@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ single-joint-position-action pr2-controller-manager pr2-head-action pr2-machine robot-mechanism-controllers pr2-gripper-action ];
+  propagatedBuildInputs = [ pr2-head-action robot-mechanism-controllers pr2-gripper-action single-joint-position-action pr2-controller-manager pr2-machine ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Configuration files for PR2 controllers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ rostest pythonPackages.catkin-pkg roslint ];
-  propagatedBuildInputs = [ rosmaster rocon-interactions rocon-python-comms gateway-msgs rocon-console roslib rocon-apps rocon-app-utilities rospy std-msgs capabilities rocon-gateway-utils rocon-master-info rocon-app-manager-msgs rocon-hub rocon-python-utils rocon-gateway rocon-std-msgs rocon-uri ];
+  propagatedBuildInputs = [ rocon-console rocon-apps rocon-app-utilities rospy capabilities rocon-gateway-utils rocon-master-info rocon-hub roslib rocon-python-utils rocon-uri rosmaster rocon-interactions rocon-python-comms gateway-msgs std-msgs rocon-app-manager-msgs rocon-gateway rocon-std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The public interface and retaskable interface for a robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

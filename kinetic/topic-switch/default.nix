@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The topic_switch package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

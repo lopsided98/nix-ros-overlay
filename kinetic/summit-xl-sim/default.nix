@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The summit_xl_sim metapackage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''This contains CvBridge, which converts between ROS
     Image messages and OpenCV images.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

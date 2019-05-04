@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package is a node that can playing mp3 file.
     This package is using mpg321 which is command-line mp3 player.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

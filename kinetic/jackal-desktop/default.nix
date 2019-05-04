@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Packages for working with Jackal from a ROS desktop.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

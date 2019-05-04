@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Metapackage allowing easy installation of Grizzly simulation components.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

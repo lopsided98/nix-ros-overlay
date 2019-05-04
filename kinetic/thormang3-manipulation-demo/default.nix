@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The thormang3_manipulation_demo package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

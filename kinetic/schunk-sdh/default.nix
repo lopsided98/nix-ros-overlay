@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides an interface for operating the schunk dexterous hand (SDH), including the tactile sensors.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

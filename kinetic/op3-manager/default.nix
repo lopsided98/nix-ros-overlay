@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "71c856f26a789b7da5d975cd3034f0073381d0002a9f6a6c780c677c00e5c69a";
   };
 
-  buildInputs = [ dynamixel-sdk op3-online-walking-module-msgs op3-walking-module op3-action-module op3-head-control-module op3-walking-module-msgs op3-balance-control robotis-controller op3-action-module-msgs robotis-math robotis-device roscpp robotis-controller-msgs robotis-framework-common op3-online-walking-module cmake-modules open-cr-module op3-base-module op3-kinematics-dynamics op3-direct-control-module ];
-  propagatedBuildInputs = [ dynamixel-sdk op3-online-walking-module-msgs op3-walking-module op3-action-module op3-head-control-module op3-walking-module-msgs op3-balance-control robotis-controller op3-action-module-msgs robotis-math robotis-device roscpp robotis-controller-msgs robotis-framework-common op3-online-walking-module cmake-modules open-cr-module op3-base-module op3-localization op3-kinematics-dynamics op3-direct-control-module ];
+  buildInputs = [ dynamixel-sdk op3-online-walking-module-msgs op3-action-module op3-head-control-module op3-walking-module-msgs op3-balance-control robotis-controller-msgs robotis-framework-common op3-base-module op3-kinematics-dynamics op3-direct-control-module op3-walking-module robotis-controller op3-action-module-msgs robotis-math robotis-device roscpp op3-online-walking-module cmake-modules open-cr-module ];
+  propagatedBuildInputs = [ dynamixel-sdk op3-online-walking-module-msgs op3-action-module op3-head-control-module op3-walking-module-msgs op3-balance-control robotis-controller-msgs robotis-framework-common op3-base-module op3-kinematics-dynamics op3-direct-control-module op3-walking-module robotis-controller op3-action-module-msgs robotis-math robotis-device roscpp op3-online-walking-module cmake-modules open-cr-module op3-localization ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_manager package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

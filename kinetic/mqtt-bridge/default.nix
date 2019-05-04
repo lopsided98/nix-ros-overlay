@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The mqtt_bridge package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides an RTT plugin to add a ROS node to the RTT process.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''ros_tutorials contains packages that demonstrate various features of ROS,
     as well as support packages which help demonstrate those features.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

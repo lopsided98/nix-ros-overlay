@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The turtlebot meta package provides all the basic drivers for running and using a TurtleBot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

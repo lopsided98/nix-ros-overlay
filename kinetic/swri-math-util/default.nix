@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''swri_math_util'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

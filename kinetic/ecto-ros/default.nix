@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A set of generic cells to interact with ROS'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

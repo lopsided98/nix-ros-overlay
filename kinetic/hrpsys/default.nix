@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, SDL, libxml2, mk, openhrp3, git, pythonPackages, irrlicht, qhull, pkg-config, doxygen, glew, xorg, freeglut, cmake, opencv3, graphviz }:
+{ lib, buildRosPackage, fetchurl, SDL, libxml2, mk, git, irrlicht, pythonPackages, openhrp3, qhull, pkg-config, doxygen, glew, xorg, freeglut, cmake, opencv3, graphviz }:
 buildRosPackage {
   pname = "ros-kinetic-hrpsys";
   version = "315.14.0";
@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "65f8505cf024ffd75186075a5fc6ce8fe8d69454b954fe00548abe9e2757bf12";
   };
 
-  buildInputs = [ SDL opencv3 libxml2 pythonPackages.tkinter mk openhrp3 git irrlicht qhull glew doxygen freeglut xorg.libXmu graphviz ];
-  propagatedBuildInputs = [ SDL xorg.libXmu libxml2 pythonPackages.tkinter openhrp3 irrlicht qhull freeglut opencv3 ];
+  buildInputs = [ SDL opencv3 libxml2 pythonPackages.tkinter mk git openhrp3 irrlicht qhull glew doxygen freeglut xorg.libXmu graphviz ];
+  propagatedBuildInputs = [ SDL opencv3 libxml2 pythonPackages.tkinter openhrp3 irrlicht qhull freeglut xorg.libXmu ];
   nativeBuildInputs = [ cmake pkg-config ];
 
   meta = {
@@ -28,6 +28,6 @@ buildRosPackage {
    </p>
    <p>API document is <a href="http://fkanehiro.github.io/hrpsys-base/">auto-generated on github</a>.
    </p>'';
-    #license = lib.licenses.EPL;
+    license = with lib.licenses; [ "EPL" ];
   };
 }

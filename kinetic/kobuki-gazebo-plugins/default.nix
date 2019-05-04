@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Kobuki-specific ROS plugins for Gazebo'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

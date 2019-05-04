@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "919129187d5eefc66a1d71bf61f5a45c0e38f5f64282885dbf1bd80c9568a406";
   };
 
-  buildInputs = [ message-generation actionlib-msgs std-msgs trajectory-msgs geometry-msgs ];
-  propagatedBuildInputs = [ message-runtime actionlib-msgs std-msgs trajectory-msgs geometry-msgs ];
+  buildInputs = [ actionlib-msgs trajectory-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs trajectory-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''control_msgs contains base messages and actions useful for
     controlling robots.  It provides representations for controller
     setpoints and joint and cartesian trajectories.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

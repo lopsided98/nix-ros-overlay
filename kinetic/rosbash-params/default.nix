@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Tools for writing ros-node-like bash scripts'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

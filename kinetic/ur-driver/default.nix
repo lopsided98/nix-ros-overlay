@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ actionlib pythonPackages.lxml ur-msgs rospy trajectory-msgs dynamic-reconfigure control-msgs sensor-msgs ];
+  propagatedBuildInputs = [ control-msgs trajectory-msgs sensor-msgs actionlib pythonPackages.lxml ur-msgs rospy dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for the UR5/10 arm based on the Polyscope control scheme.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

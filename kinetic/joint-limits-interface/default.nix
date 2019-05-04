@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Interface for enforcing joint limits.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

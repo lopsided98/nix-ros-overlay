@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "12038984195da143f1d65ed613d1a28b8614fa57f0490feb74fe2fa994cdbf53";
   };
 
-  buildInputs = [ nav-msgs message-generation actionlib-msgs actionlib genmsg geometry-msgs ];
-  propagatedBuildInputs = [ nav-msgs message-runtime actionlib-msgs actionlib geometry-msgs ];
+  buildInputs = [ actionlib-msgs nav-msgs message-generation actionlib genmsg geometry-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs nav-msgs message-runtime actionlib geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''homer_mapnav_msgs contains the messages used for mapping and navigation'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

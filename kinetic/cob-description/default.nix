@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "d3ed9d2faa903c875e72632d43988ca0e2a0f81b5196b66736f699d0c9da77f6";
   };
 
-  propagatedBuildInputs = [ gazebo-ros rosbash rospy rosunit xacro ];
+  propagatedBuildInputs = [ gazebo-ros rosbash xacro rospy rosunit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -20,6 +20,6 @@ buildRosPackage {
   etc.) of the Care-O-bot robot. The files in this package are parsed and used by
   a variety of other components. Most users will not interact directly
   with this package.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common messages for underwater robotics'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

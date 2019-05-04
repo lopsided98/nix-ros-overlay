@@ -22,6 +22,6 @@ buildRosPackage {
   through parameters. Most users will not directly interact
   with this package but with the corresponding launch files
   in other packages, e.g. schunk_bringup, cob_bringup, ...'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "6572ebda4ec91cf1102c81a2a34ab308915a176e96c36ef8fe6b91a671fd7e9d";
   };
 
-  propagatedBuildInputs = [ roslib rospy cob-script-server cob-msgs pythonPackages.pygtk pythonPackages.pygraphviz ];
+  propagatedBuildInputs = [ cob-script-server pythonPackages.pygtk pythonPackages.pygraphviz rospy cob-msgs roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a simple GUI for operating Care-O-bot.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

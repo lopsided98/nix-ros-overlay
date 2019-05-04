@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Projects laser readings into a point cloud, based on a set of recorded joint angles
      This package is experimental and unstable.
      Expect its APIs to change.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

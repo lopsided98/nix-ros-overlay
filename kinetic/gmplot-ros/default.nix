@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Metapackage for gmplot_ros'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

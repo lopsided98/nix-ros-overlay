@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "562a60b4db8f346a1265edcdaf6004996e7489d3c49070e10980ba5265332c2c";
   };
 
-  propagatedBuildInputs = [ roslib rospy topic-tools gateway-msgs rocon-app-manager-msgs rospy-tutorials ];
+  propagatedBuildInputs = [ gateway-msgs rocon-app-manager-msgs rospy topic-tools roslib rospy-tutorials ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Core rocon apps for use with the appmanager and rocon concert.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

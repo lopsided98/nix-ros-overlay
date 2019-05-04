@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "8c946a9d9355a0669979fe7a960d820d3bc68b10b2fae22bc5795bbd25bbba6f";
   };
 
-  buildInputs = [ tf pcl sensor-msgs message-filters roscpp pcl-ros nodelet pcl-conversions geometry-msgs ];
-  propagatedBuildInputs = [ tf pcl sensor-msgs message-filters roscpp pcl-ros nodelet pcl-conversions geometry-msgs ];
+  buildInputs = [ tf pcl sensor-msgs message-filters nodelet pcl-ros roscpp pcl-conversions geometry-msgs ];
+  propagatedBuildInputs = [ tf pcl sensor-msgs message-filters nodelet pcl-ros roscpp pcl-conversions geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The laser_ortho_projector package calculates orthogonal projections of LaserScan messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

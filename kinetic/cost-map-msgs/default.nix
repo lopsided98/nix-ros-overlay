@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Definition of cost map messages (related to the grid map message type).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

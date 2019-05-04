@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message defined in the BRICS project'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

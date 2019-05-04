@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package wraps the libntcan to use it as a ros dependency.'';
-    #license = lib.licenses.proprietary;
+    license = with lib.licenses; [ "proprietary" ];
   };
 }

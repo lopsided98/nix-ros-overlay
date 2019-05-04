@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''laser_proc'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

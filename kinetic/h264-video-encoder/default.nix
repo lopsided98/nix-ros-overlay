@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "6b1afa3c05a4b916e68416e26de61fc42c6592fef6820bd216a8e0c9a6654c7a";
   };
 
-  buildInputs = [ h264-encoder-core message-generation image-transport kinesis-video-msgs aws-ros1-common sensor-msgs ];
+  buildInputs = [ h264-encoder-core image-transport sensor-msgs message-generation kinesis-video-msgs aws-ros1-common ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ image-transport kinesis-video-msgs message-runtime aws-ros1-common sensor-msgs image-transport-plugins ];
+  propagatedBuildInputs = [ image-transport sensor-msgs image-transport-plugins kinesis-video-msgs message-runtime aws-ros1-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS1 H264 encoder node'';
-    #license = lib.licenses.LGPLv2.1;
+    license = with lib.licenses; [ lgpl21 ];
   };
 }

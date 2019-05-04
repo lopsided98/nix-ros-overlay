@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The denso robot control package includes a node for controlling DENSO robot controllers with MoveIt!.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

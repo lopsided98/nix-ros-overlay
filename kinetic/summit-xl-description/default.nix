@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF description of the Summit XL and Summit XL HL and omni versions'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

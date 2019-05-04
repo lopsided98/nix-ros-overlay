@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains common message type definitions for perception tasks.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

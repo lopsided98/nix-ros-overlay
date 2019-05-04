@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ mk image-view2 message-generation rosbuild ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ image-pipeline rqt-gui-py image-view2 pythonPackages.urlgrabber pythonPackages.scikitlearn rqt-gui jsk-gui-msgs cv-bridge resource-retriever message-runtime rqt-image-view rqt-plot qt-gui-py-common ];
+  propagatedBuildInputs = [ image-pipeline rqt-gui-py image-view2 pythonPackages.urlgrabber rqt-gui pythonPackages.scikitlearn jsk-gui-msgs cv-bridge resource-retriever message-runtime rqt-image-view rqt-plot qt-gui-py-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The jsk_rqt_plugins package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

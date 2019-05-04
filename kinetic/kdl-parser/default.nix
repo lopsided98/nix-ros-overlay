@@ -12,9 +12,9 @@ buildRosPackage {
     sha256 = "198efeb1ded4f470492830c7ebd382798589a9cce96a86ce0bfc6c7b32617c8e";
   };
 
-  buildInputs = [ urdfdom-headers urdf orocos-kdl cmake-modules rosconsole tinyxml ];
+  buildInputs = [ orocos-kdl cmake-modules rosconsole tinyxml urdfdom-headers urdf ];
   checkInputs = [ rostest roscpp ];
-  propagatedBuildInputs = [ urdfdom-headers urdf orocos-kdl rosconsole tinyxml ];
+  propagatedBuildInputs = [ orocos-kdl rosconsole tinyxml urdfdom-headers urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
    to represent the kinematic and dynamic parameters of a robot
    mechanism. <tt>kdl_parser</tt> provides tools to construct a KDL
    tree from an XML robot representation in URDF.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

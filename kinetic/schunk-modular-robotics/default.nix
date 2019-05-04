@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "41e299fb58e8b556a89b91a5e1c47b9ebd6156cae55dbd53b9afe03d218f4409";
   };
 
-  propagatedBuildInputs = [ schunk-powercube-chain schunk-description schunk-libm5api schunk-simulated-tactile-sensors schunk-sdh ];
+  propagatedBuildInputs = [ schunk-powercube-chain schunk-libm5api schunk-sdh schunk-description schunk-simulated-tactile-sensors ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This stack includes packages that provide access to the Schunk hardware through ROS messages, services and actions.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

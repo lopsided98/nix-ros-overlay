@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The combined_robot_hw_tests package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

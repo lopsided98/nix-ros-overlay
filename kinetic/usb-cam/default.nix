@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "43d0e60d5ed77191015411fbf3d0485f34dc2e2f6d3c60fc574f25c587c7c06b";
   };
 
-  buildInputs = [ std-srvs camera-info-manager std-msgs image-transport sensor-msgs roscpp ffmpeg ];
-  propagatedBuildInputs = [ std-srvs camera-info-manager std-msgs image-transport sensor-msgs roscpp v4l_utils ffmpeg ];
+  buildInputs = [ std-srvs camera-info-manager image-transport sensor-msgs ffmpeg std-msgs roscpp ];
+  propagatedBuildInputs = [ std-srvs camera-info-manager image-transport sensor-msgs ffmpeg std-msgs roscpp v4l_utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS Driver for V4L USB Cameras'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

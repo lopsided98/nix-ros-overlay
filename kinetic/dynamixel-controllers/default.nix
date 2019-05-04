@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, trajectory-msgs, catkin, dynamixel-driver, rospy, message-generation, actionlib, std-msgs, diagnostic-msgs, dynamixel-msgs }:
+{ lib, buildRosPackage, fetchurl, control-msgs, trajectory-msgs, catkin, dynamixel-driver, message-generation, std-msgs, actionlib, rospy, diagnostic-msgs, dynamixel-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dynamixel-controllers";
   version = "0.4.1";
@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ dynamixel-driver actionlib control-msgs rospy std-msgs trajectory-msgs dynamixel-msgs diagnostic-msgs ];
+  propagatedBuildInputs = [ control-msgs trajectory-msgs rospy dynamixel-driver actionlib std-msgs diagnostic-msgs dynamixel-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -23,6 +23,6 @@ buildRosPackage {
         torque can be set for each joint. This python package can be used by more
         specific robot controllers and all configurable parameters can be loaded
         via a yaml file.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

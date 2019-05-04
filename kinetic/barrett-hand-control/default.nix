@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The barrett_hand_control package is intended to control the gazebo simulation of the barrett hand'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

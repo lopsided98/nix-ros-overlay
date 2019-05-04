@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS messages for publishing graphs of different data types'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The image_recognition_msgs package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ pluginlib eigen-conversions moveit-core actionlib moveit-ros-perception angles dynamic-reconfigure chomp-motion-planner eigen ];
-  propagatedBuildInputs = [ moveit-core pluginlib actionlib moveit-ros-perception angles dynamic-reconfigure eigen-conversions ];
+  propagatedBuildInputs = [ pluginlib eigen-conversions actionlib moveit-core angles moveit-ros-perception dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Planning components of MoveIt! that use ROS'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

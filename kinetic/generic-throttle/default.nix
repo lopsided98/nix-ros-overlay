@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides a throttle for ROS topics'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

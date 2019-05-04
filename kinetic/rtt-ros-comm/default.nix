@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rtt_ros_comm package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

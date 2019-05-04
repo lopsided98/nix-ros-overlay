@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Visualization launchers and helpers for Jackal.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

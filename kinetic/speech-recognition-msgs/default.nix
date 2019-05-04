@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''speech_recognition_msgs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

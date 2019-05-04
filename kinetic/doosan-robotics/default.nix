@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "cc2cd045c24827927321f163967b91896498397b313ba80aff9ec0b104d10c36";
   };
 
-  buildInputs = [ controller-manager moveit-experimental twist-mux moveit-kinematics effort-controllers robot-localization position-controllers lms1xx moveit-core moveit-commander interactive-marker-twist-server gazebo-ros-control moveit-setup-assistant ];
+  buildInputs = [ controller-manager moveit-experimental twist-mux interactive-marker-twist-server moveit-kinematics robot-localization position-controllers lms1xx moveit-core moveit-commander effort-controllers gazebo-ros-control moveit-setup-assistant ];
   propagatedBuildInputs = [ dsr-msgs dsr-control moveit-config-m1013 moveit-config-m0617 dsr-gazebo dsr-example-cpp dsr-example-py moveit-config-m1509 dsr-launcher moveit-config-m0609 dsr-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The doosan_robotics metapackage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

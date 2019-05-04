@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Binpicking utils metapackage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

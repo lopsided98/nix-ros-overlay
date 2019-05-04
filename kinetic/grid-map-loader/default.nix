@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Loading and publishing grid maps from bag files.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

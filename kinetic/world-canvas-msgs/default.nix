@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6686832e89831aba0a5ed492d94f3d7fd36481ca58e55b52ce686220fa030afc";
   };
 
-  buildInputs = [ uuid-msgs std-srvs message-generation std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ uuid-msgs std-srvs message-runtime std-msgs geometry-msgs ];
+  buildInputs = [ std-srvs uuid-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs uuid-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''World canvas framework messages package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

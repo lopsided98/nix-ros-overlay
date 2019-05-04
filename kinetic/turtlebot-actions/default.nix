@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''turtlebot_actions provides several basic actionlib actions for the TurtleBot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Metapackage for SawYer roch simulation software'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

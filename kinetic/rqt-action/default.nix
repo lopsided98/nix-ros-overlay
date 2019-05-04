@@ -21,6 +21,6 @@ buildRosPackage {
   unified with it and rqt_srv. Note that the actions shown on this plugin
   is the ones that are stored on your machine, not on the ROS core your rqt
   instance connects to.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

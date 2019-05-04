@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Dock driving library for Kobuki. Users owning a docking station for Kobuki 
 	    can use this tool to develop autonomous docking drive algorithms.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

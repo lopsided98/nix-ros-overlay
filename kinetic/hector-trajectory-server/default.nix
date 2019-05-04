@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "40fb3551ed7f6a9d88e58d08a504962274d439e05515f05ce7a69aebe43ef3c9";
   };
 
-  buildInputs = [ nav-msgs tf roscpp hector-map-tools hector-nav-msgs ];
-  propagatedBuildInputs = [ nav-msgs tf roscpp hector-map-tools hector-nav-msgs ];
+  buildInputs = [ hector-map-tools roscpp hector-nav-msgs nav-msgs tf ];
+  propagatedBuildInputs = [ hector-map-tools roscpp hector-nav-msgs nav-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_trajectory_server keeps track of tf trajectories extracted from tf data and makes this data accessible via a service and topic.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "bd9fd600359b4a77b585f5e2b2518f4882b297aa93417366caf6a0fbc5638d8d";
   };
 
-  buildInputs = [ diagnostic-updater hardware-interface controller-manager realtime-tools trajectory-msgs khi-robot-msgs joint-limits-interface transmission-interface ];
+  buildInputs = [ controller-manager hardware-interface trajectory-msgs realtime-tools joint-limits-interface diagnostic-updater khi-robot-msgs transmission-interface ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ controller-manager hardware-interface joint-state-controller trajectory-msgs joint-limits-interface joint-trajectory-controller diagnostic-updater position-controllers khi-robot-msgs transmission-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS KHI robot controller package based on ros_control'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

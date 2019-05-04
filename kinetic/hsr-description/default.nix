@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ xacro rosbash ];
-  propagatedBuildInputs = [ hsr-meshes rviz rosbash robot-state-publisher joint-state-publisher xacro ];
+  propagatedBuildInputs = [ rosbash hsr-meshes rviz robot-state-publisher joint-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF files for Toyota HSR'';
-    #license = lib.licenses.BSD 3-clause Clear License;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

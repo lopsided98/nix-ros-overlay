@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''TurtleBot3 AutoRace ROS package that TurtleBot3 Auto's core'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

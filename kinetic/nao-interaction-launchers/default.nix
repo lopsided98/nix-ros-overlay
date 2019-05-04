@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launchers for bringing up the nodes of nao_interaction metapackage.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

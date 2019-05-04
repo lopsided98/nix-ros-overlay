@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "3e767369c7d950e2c4ed858a25be1fabc8d428fc4003c0bc518c43e3e73bc038";
   };
 
-  buildInputs = [ diagnostic-updater std-srvs nav-msgs marti-common-msgs dynamic-reconfigure std-msgs roscpp ];
+  buildInputs = [ std-srvs diagnostic-updater nav-msgs marti-common-msgs dynamic-reconfigure std-msgs roscpp ];
   checkInputs = [ rostest gtest ];
-  propagatedBuildInputs = [ diagnostic-updater std-srvs nav-msgs marti-common-msgs dynamic-reconfigure std-msgs roscpp ];
+  propagatedBuildInputs = [ std-srvs diagnostic-updater nav-msgs marti-common-msgs dynamic-reconfigure std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''swri_roscpp'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

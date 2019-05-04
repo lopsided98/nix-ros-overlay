@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common messages and services used in various packages within cob_control.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ khi-rs-description ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-kinematics moveit-planners-ompl rviz robot-state-publisher tf joint-state-publisher xacro khi-rs-description ];
+  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-kinematics rviz khi-rs-description robot-state-publisher tf joint-state-publisher xacro moveit-planners-ompl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the khi_rs007n with the MoveIt! Motion Planning Framework'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

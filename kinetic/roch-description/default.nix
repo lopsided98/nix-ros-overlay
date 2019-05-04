@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''SawYer Roch URDF description'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

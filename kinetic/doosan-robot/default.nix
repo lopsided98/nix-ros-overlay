@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS packages for Doosan Robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

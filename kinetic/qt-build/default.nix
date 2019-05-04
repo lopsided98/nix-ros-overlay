@@ -17,6 +17,6 @@ buildRosPackage {
   meta = {
     description = ''Currently just maintains a cmake api for simplifying the building
     of qt apps within the ros framework.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

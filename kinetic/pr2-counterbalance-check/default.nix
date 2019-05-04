@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ pr2-controllers-msgs pr2-controller-configuration rospy rostest pr2-self-test-msgs pr2-controller-manager joint-qualification-controllers actionlib std-msgs ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pr2-controllers-msgs pr2-self-test-msgs pr2-controller-manager pr2-controller-configuration joint-qualification-controllers actionlib std-msgs rospy ];
+  propagatedBuildInputs = [ pr2-controllers-msgs pr2-controller-configuration rospy pr2-self-test-msgs pr2-controller-manager joint-qualification-controllers actionlib std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''pr2_counterbalance_check'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

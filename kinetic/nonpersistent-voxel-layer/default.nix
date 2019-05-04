@@ -13,13 +13,13 @@ buildRosPackage {
   };
 
   buildInputs = [ costmap-2d pluginlib cmake-modules sensor-msgs message-filters roscpp voxel-grid message-generation nav-msgs laser-geometry visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
-  propagatedBuildInputs = [ costmap-2d pluginlib rosconsole sensor-msgs message-filters roscpp voxel-grid nav-msgs laser-geometry message-runtime visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
+  propagatedBuildInputs = [ costmap-2d rosconsole pluginlib sensor-msgs message-filters roscpp voxel-grid nav-msgs laser-geometry message-runtime visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''include
         This package provides an implementation of a 3D costmap that takes in sensor
         data from the world, builds a 3D occupancy grid of the data for only one iteration.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

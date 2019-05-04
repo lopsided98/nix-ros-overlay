@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''This package describes basic function to control THORMANG3's upper-body.
     This module is based on position control.
     We provide joint space and task space control (forward kinematics, inverse kinematics).'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

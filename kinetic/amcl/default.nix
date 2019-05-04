@@ -12,9 +12,9 @@ buildRosPackage {
     sha256 = "ff24b933e459a835da6a977d20d4a2aa1cef618fde5549798e371910ddcca3ab";
   };
 
-  buildInputs = [ std-srvs nav-msgs dynamic-reconfigure rosbag tf message-filters roscpp ];
+  buildInputs = [ std-srvs rosbag message-filters roscpp nav-msgs dynamic-reconfigure tf ];
   checkInputs = [ rostest map-server ];
-  propagatedBuildInputs = [ std-srvs nav-msgs dynamic-reconfigure tf rosbag roscpp ];
+  propagatedBuildInputs = [ std-srvs rosbag roscpp nav-msgs dynamic-reconfigure tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -28,6 +28,6 @@ buildRosPackage {
             This node is derived, with thanks, from Andrew Howard's excellent
             'amcl' Player driver.
         </p>'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

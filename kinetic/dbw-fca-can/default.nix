@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "9507a0cda2c79eaf12bcaf06a338ba089c5b6755730278a9049cbcd29d0a11b2";
   };
 
-  buildInputs = [ dbw-fca-msgs rospy std-msgs can-msgs sensor-msgs nodelet geometry-msgs roscpp ];
+  buildInputs = [ dbw-fca-msgs sensor-msgs can-msgs roscpp rospy std-msgs nodelet geometry-msgs ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ dbw-fca-msgs sensor-msgs dbw-fca-description can-msgs roscpp dataspeed-can-usb dataspeed-ulc-can rospy std-msgs roslaunch nodelet geometry-msgs ];
+  propagatedBuildInputs = [ dbw-fca-msgs sensor-msgs can-msgs roscpp dataspeed-can-usb dataspeed-ulc-can nodelet rospy std-msgs roslaunch dbw-fca-description geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Drive-by-wire interface to the Dataspeed Inc. Chrysler Pacifica DBW kit'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

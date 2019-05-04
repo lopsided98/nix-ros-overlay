@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gmapping dwa-local-planner map-server amcl base-local-planner navfn move-base ];
+  propagatedBuildInputs = [ gmapping map-server amcl base-local-planner navfn move-base dwa-local-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Autonomous mapping and navigation demos for the Clearpath Grizzly'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages used by workflow engine'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

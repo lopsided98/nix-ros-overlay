@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package contains bringup scripts/config/tools for KHI Robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

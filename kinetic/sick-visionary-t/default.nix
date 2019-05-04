@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Open source driver for the SICK Visionary-T 3D TOF camera.'';
-    #license = lib.licenses.Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0);
+    license = with lib.licenses; [ asl20 ];
   };
 }

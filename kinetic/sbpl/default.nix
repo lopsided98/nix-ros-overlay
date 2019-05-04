@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Search-based planning library (SBPL).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

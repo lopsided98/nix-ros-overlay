@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "5f4d45afbfaecbe8322955b7007b125fba4eda3eb3541f51cb7376c7567fd68b";
   };
 
-  buildInputs = [ uuid-msgs message-generation std-msgs gateway-msgs rocon-app-manager-msgs rocon-std-msgs ];
-  propagatedBuildInputs = [ uuid-msgs message-runtime std-msgs gateway-msgs rocon-app-manager-msgs rocon-std-msgs ];
+  buildInputs = [ gateway-msgs rocon-app-manager-msgs uuid-msgs message-generation std-msgs rocon-std-msgs ];
+  propagatedBuildInputs = [ gateway-msgs rocon-app-manager-msgs uuid-msgs message-runtime std-msgs rocon-std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Shared communication types for the concert framework.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ marshmallow catkin-pip ];
-  checkInputs = [ webtest pythonPackages.mock pythonPackages.pytest pythonPackages.werkzeug pythonPackages.flask pythonPackages.tornado ];
+  checkInputs = [ pythonPackages.pytest webtest pythonPackages.mock pythonPackages.werkzeug pythonPackages.flask pythonPackages.tornado ];
   propagatedBuildInputs = [ marshmallow ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A friendly library for parsing HTTP request arguments, with built-in support for popular web frameworks, including Flask, Django, Bottle, Tornado, Pyramid, webapp2, Falcon, and aiohttp.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

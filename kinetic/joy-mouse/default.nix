@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The joy_mouse package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

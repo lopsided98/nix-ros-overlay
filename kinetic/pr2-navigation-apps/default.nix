@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The pr2_navigation_apps package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

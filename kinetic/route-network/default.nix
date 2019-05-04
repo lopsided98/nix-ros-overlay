@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "8aa80c3077576ce20a1b468ced79a0cd74b98c2d21aa8cce04f124b7719e7232";
   };
 
-  buildInputs = [ geographic-msgs geodesy rostest nav-msgs dynamic-reconfigure rospy visualization-msgs geometry-msgs ];
+  buildInputs = [ geographic-msgs rostest geodesy nav-msgs dynamic-reconfigure rospy visualization-msgs geometry-msgs ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ geographic-msgs geodesy nav-msgs dynamic-reconfigure rospy visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ geographic-msgs geodesy nav-msgs rospy dynamic-reconfigure visualization-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Route network graphing and path planning.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

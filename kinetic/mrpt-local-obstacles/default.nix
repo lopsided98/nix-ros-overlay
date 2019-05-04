@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "25652c6276091be9db7a0bb623a3945bebaef54e93ea92b199b636416d1f5ac6";
   };
 
-  buildInputs = [ mrpt1 mrpt-bridge visualization-msgs dynamic-reconfigure sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ mrpt1 mrpt-bridge visualization-msgs dynamic-reconfigure sensor-msgs tf roscpp ];
+  buildInputs = [ sensor-msgs roscpp mrpt1 visualization-msgs dynamic-reconfigure mrpt-bridge tf ];
+  propagatedBuildInputs = [ sensor-msgs roscpp mrpt1 visualization-msgs dynamic-reconfigure mrpt-bridge tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Maintains a local obstacle map (point cloud,
    voxels or occupancy grid) from recent sensor readings within a
    configurable time window.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

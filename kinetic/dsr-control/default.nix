@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The dsr_control package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

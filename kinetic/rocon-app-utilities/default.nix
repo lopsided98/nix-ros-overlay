@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ pythonPackages.catkin-pkg roslint ];
-  propagatedBuildInputs = [ rocon-console pythonPackages.rospkg roslaunch rocon-python-utils rocon-uri ];
+  propagatedBuildInputs = [ pythonPackages.rospkg rocon-console roslaunch rocon-python-utils rocon-uri ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rocon_app_utilities package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

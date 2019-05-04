@@ -40,6 +40,6 @@ buildRosPackage {
       The unqualified IRB 6400 model will be removed in ROS-Lunar, please
       use the abb_irb6640_support as a replacement.
     </p>'';
-    #license = lib.licenses.Apache2;
+    license = with lib.licenses; [ asl20 ];
   };
 }

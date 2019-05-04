@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A C++ Wrapper for the Phidgets C API'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''REST API for ROS'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

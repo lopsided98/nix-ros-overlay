@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Implementation of the Approximate Inference Control algorithm (AICO)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

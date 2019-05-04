@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ std-srvs dynamic-reconfigure sensor-msgs naoqi-bridge-msgs nav-msgs actionlib rospy roslaunch humanoid-nav-msgs geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs sensor-msgs naoqi-bridge-msgs nav-msgs actionlib dynamic-reconfigure rospy roslaunch humanoid-nav-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -27,6 +27,6 @@ buildRosPackage {
 
       Note that cameras drivers are provided in a separate package (naoqi_sensors_py).
     </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

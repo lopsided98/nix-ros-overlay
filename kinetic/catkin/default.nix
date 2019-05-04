@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ python pythonPackages.catkin-pkg pythonPackages.empy ];
   checkInputs = [ pythonPackages.nose pythonPackages.mock ];
-  propagatedBuildInputs = [ python pythonPackages.catkin-pkg pythonPackages.nose gtest gmock pythonPackages.empy ];
+  propagatedBuildInputs = [ python pythonPackages.nose gtest pythonPackages.catkin-pkg gmock pythonPackages.empy ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''Low-level build system macros and infrastructure for ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''This package configures the move_base stack and makes use of the gmapping and amcl algorithms to
     move the rb1_base robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

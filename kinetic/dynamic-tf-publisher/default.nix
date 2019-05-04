@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''dynamically set the tf trensformation'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

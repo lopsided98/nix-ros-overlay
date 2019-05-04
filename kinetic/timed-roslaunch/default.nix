@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Script to delay the launch of a roslaunch file'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

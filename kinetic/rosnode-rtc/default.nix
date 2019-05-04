@@ -21,6 +21,6 @@ buildRosPackage {
 
      rtmros-data-bridge.py is a RT-Component for dataport/topic.
      This automatically convert ROS/topic into RTM/dataport.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

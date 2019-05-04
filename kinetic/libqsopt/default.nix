@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Wrapper for the Qsopt linear programming solver. The code was obtained from http://www.math.uwaterloo.ca/~bico/qsopt/index.html, all rights on Qsopt go to the authors David Applegate, William Cook, Sanjeeb Dash, and Monika Mevenkamp. 
 The library doesn't explicitly provide a license, but allows the free use for research or educational purposes. For further questions on licensing, contact the previous listed authors.'';
-    #license = lib.licenses.free for research or education purpose, all rights maintained by David Applegate, William Cook, Sanjeeb Dash, and Monika Mevenkamp;
+    license = with lib.licenses; [ "free for research or education purpose, all rights maintained by David Applegate, William Cook, Sanjeeb Dash, and Monika Mevenkamp" ];
   };
 }

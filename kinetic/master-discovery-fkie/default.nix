@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   buildInputs = [ std-srvs multimaster-msgs-fkie ];
-  propagatedBuildInputs = [ roslib std-srvs rosgraph rospy multimaster-msgs-fkie pythonPackages.avahi avahi ];
+  propagatedBuildInputs = [ std-srvs multimaster-msgs-fkie pythonPackages.avahi rosgraph rospy roslib avahi ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
      multicast group.
      The alternative is to use a zeroconf/avahi daemon to register the ROS 
      master as service and discover other ROS masters.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

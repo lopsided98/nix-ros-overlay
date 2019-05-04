@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "4940b1e34abbd298f6f6865aab13779b5702c6e59af1cfcbb881ea9e08100532";
   };
 
-  buildInputs = [ message-generation message-runtime std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ message-generation message-runtime std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages used in the XPP framework.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

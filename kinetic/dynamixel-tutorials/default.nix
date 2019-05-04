@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Example configuration and launch file for dynamixel_motor stack.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

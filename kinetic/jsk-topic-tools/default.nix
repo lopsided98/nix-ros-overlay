@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "2159e5b0217e8306979562dee0962cb77351ba5578182b68bd0d823ff614d60d";
   };
 
-  buildInputs = [ roslaunch std-srvs dynamic-tf-publisher std-msgs diagnostic-msgs roscpp nodelet tf geometry-msgs rosnode image-transport diagnostic-updater rostest message-generation rostopic dynamic-reconfigure topic-tools eigen-conversions rostime ];
+  buildInputs = [ dynamic-tf-publisher diagnostic-msgs tf geometry-msgs image-transport message-generation eigen-conversions rostime roslaunch std-srvs std-msgs roscpp nodelet rosnode diagnostic-updater rostest rostopic dynamic-reconfigure topic-tools ];
   checkInputs = [ roscpp-tutorials roslint ];
-  propagatedBuildInputs = [ std-srvs pythonPackages.numpy pythonPackages.scipy pythonPackages.opencv3 dynamic-tf-publisher std-msgs diagnostic-msgs roscpp nodelet tf geometry-msgs rosnode image-transport sensor-msgs eigen-conversions sound-play diagnostic-updater message-runtime rostopic dynamic-reconfigure topic-tools roslaunch rostime ];
+  propagatedBuildInputs = [ pythonPackages.scipy dynamic-tf-publisher diagnostic-msgs tf geometry-msgs image-transport sound-play message-runtime roslaunch rostime eigen-conversions std-srvs pythonPackages.numpy pythonPackages.opencv3 std-msgs roscpp nodelet rosnode sensor-msgs diagnostic-updater rostopic dynamic-reconfigure topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk_topic_tools'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

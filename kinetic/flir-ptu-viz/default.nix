@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launchfiles and rviz configs to assist with visualizing the FLIR PTUs.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

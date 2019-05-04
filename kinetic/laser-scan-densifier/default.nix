@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The laser_scan_densifier takes in a LaserScan message and densifies it.
     Node is inspired by laser_scan_sparsifier (http://wiki.ros.org/laser_scan_sparsifier).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "42149201e47154ee860e8ce8f49d51c1160cd159a8ed8a385ffffb6e7dbd3831";
   };
 
-  buildInputs = [ message-generation cmake-modules eigen std-msgs trajectory-msgs geometry-msgs ];
-  propagatedBuildInputs = [ message-runtime eigen std-msgs trajectory-msgs geometry-msgs ];
+  buildInputs = [ cmake-modules trajectory-msgs message-generation eigen std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ trajectory-msgs message-runtime eigen std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package containing messages for communicating with rotary wing MAVs'';
-    #license = lib.licenses.ASL 2.0;
+    license = with lib.licenses; [ "ASL 2.0" ];
   };
 }

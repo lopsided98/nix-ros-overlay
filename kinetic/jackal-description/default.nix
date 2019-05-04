@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ lms1xx urdf robot-state-publisher pointgrey-camera-description xacro ];
+  propagatedBuildInputs = [ pointgrey-camera-description lms1xx urdf robot-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF robot description for Jackal'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

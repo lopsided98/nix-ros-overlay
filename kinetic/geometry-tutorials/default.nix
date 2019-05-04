@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Metapackage of geometry tutorials ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

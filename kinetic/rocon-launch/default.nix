@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ pythonPackages.catkin-pkg ];
-  propagatedBuildInputs = [ rocon-console rosbash rospy roslaunch rocon-python-utils ];
+  propagatedBuildInputs = [ rosbash rocon-console rospy roslaunch rocon-python-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A multi-roslaunch (for single and multi-master systems).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

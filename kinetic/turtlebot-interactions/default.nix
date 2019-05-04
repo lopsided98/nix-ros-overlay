@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Catkin meta-package for turtlebot_interactions'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

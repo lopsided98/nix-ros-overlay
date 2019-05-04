@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "330095f2d2e942918b8763c2c298790e1e90f23fde137d6a4e05f2c43687ddb4";
   };
 
-  propagatedBuildInputs = [ rbcar-sim-bringup rbcar-control rbcar-robot-control rbcar-joystick rbcar-gazebo ];
+  propagatedBuildInputs = [ rbcar-gazebo rbcar-sim-bringup rbcar-control rbcar-robot-control rbcar-joystick ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rbcar_sim package. It contains RBCAR simulation packages'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

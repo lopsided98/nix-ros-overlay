@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ roslint ];
-  propagatedBuildInputs = [ std-srvs rocon-gateway-utils zeroconf-msgs rocon-python-redis rosparam rocon-python-comms gateway-msgs rosservice pythonPackages.pycrypto rocon-console roslib rosgraph rostopic rospy zeroconf-avahi rocon-python-utils rocon-python-wifi rocon-hub-client ];
+  propagatedBuildInputs = [ std-srvs rocon-gateway-utils zeroconf-msgs rocon-python-redis rosparam gateway-msgs rocon-python-comms rosservice pythonPackages.pycrypto rocon-console roslib rosgraph rostopic rospy zeroconf-avahi rocon-python-utils rocon-python-wifi rocon-hub-client ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A hub acts as a shared key-value store for multiple ros 
     systems (primarily used by gateways).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

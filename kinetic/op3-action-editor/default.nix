@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "e62501e2e21b69fddf5d2a3f0b6e9b63c2a1a71070d846029d81efe0d8d5b1f6";
   };
 
-  buildInputs = [ libyamlcpp dynamixel-sdk ncurses op3-action-module std-msgs robotis-device roscpp robotis-controller ];
+  buildInputs = [ dynamixel-sdk op3-action-module libyamlcpp robotis-controller ncurses std-msgs robotis-device roscpp ];
   propagatedBuildInputs = [ dynamixel-sdk op3-manager op3-action-module libyamlcpp robotis-controller ncurses std-msgs robotis-device roscpp ros-mpg321-player ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The op3_action_editor package porovides editor tool to make motion.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

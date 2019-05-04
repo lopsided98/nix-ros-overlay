@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The VRPN is a library and set of servers that interfaces with virtual-reality systems, such as VICON, OptiTrack, and others.'';
-    #license = lib.licenses.BSL1.0;
+    license = with lib.licenses; [ "BSL1.0" ];
   };
 }

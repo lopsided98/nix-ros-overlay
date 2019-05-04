@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''web_msgs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

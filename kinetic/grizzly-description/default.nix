@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ lms1xx urdf velodyne-description pointgrey-camera-description xacro ];
+  propagatedBuildInputs = [ velodyne-description pointgrey-camera-description lms1xx urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Clearpath Grizzly URDF description'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

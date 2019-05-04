@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "c8d8721c72639700a61d81e2c9ef2f5b64a7d2cbacc805786560203b139c2ca5";
   };
 
-  buildInputs = [ control-msgs actionlib trajectory-msgs sensor-msgs roscpp ];
-  propagatedBuildInputs = [ control-msgs actionlib trajectory-msgs sensor-msgs roscpp ];
+  buildInputs = [ control-msgs trajectory-msgs sensor-msgs actionlib roscpp ];
+  propagatedBuildInputs = [ control-msgs trajectory-msgs sensor-msgs actionlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains test and demo programs for the katana_driver stack.'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

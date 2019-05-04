@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The robot_upstart package provides scripts which may be used to install
     and uninstall Ubuntu Linux upstart jobs which launch groups of roslaunch files.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

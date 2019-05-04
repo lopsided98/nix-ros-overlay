@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "d82115e1f02b2a396f1a21b32e61919976689881feebb7c4555acc1cd4b63472";
   };
 
-  buildInputs = [ filters pluginlib pr2-msgs roscpp sensor-msgs ];
-  propagatedBuildInputs = [ filters pluginlib pr2-msgs roscpp sensor-msgs ];
+  buildInputs = [ filters pluginlib sensor-msgs pr2-msgs roscpp ];
+  propagatedBuildInputs = [ filters pluginlib sensor-msgs pr2-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''laser_tilt_controller_filter'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

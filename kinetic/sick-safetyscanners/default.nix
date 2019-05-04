@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "15c08cd9d706ea5c1730737c4399f4c6e1ee922a979383da21c0cc5c1d34848f";
   };
 
-  buildInputs = [ message-generation dynamic-reconfigure std-msgs sensor-msgs roscpp ];
-  propagatedBuildInputs = [ message-runtime dynamic-reconfigure std-msgs sensor-msgs roscpp rqt-reconfigure ];
+  buildInputs = [ sensor-msgs message-generation dynamic-reconfigure std-msgs roscpp ];
+  propagatedBuildInputs = [ sensor-msgs rqt-reconfigure message-runtime dynamic-reconfigure std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides an Interface to read the sensor output of a SICK
   Safety Scanner'';
-    #license = lib.licenses.ALv2;
+    license = with lib.licenses; [ "ALv2" ];
   };
 }

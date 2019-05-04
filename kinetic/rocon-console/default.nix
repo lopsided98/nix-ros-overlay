@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Command line python console utilities (mostly for colourisation).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

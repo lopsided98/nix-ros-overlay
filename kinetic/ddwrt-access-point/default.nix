@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''A ROS node that controls a Linksys WRT610Nv2 access point with
     a dd-wrt firmware. Other access points models/dd-wrt versions
     may be compatible as long as the web interface is identical.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

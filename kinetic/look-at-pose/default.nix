@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Rotate camera to look at a given pose.'';
-    #license = lib.licenses.see license.txt;
+    license = with lib.licenses; [ "see license.txt" ];
   };
 }

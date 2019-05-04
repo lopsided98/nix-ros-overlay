@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "4b16dda0ceab0af65050e431a44fe7362c45df60603113bc20b4392d24e00265";
   };
 
-  buildInputs = [ cmake-modules geometry-msgs roscpp robotis-controller-msgs message-generation eigen std-msgs roslib thormang3-walking-module-msgs ];
-  propagatedBuildInputs = [ cmake-modules geometry-msgs roscpp robotis-controller-msgs message-runtime eigen std-msgs roslib thormang3-walking-module-msgs ];
+  buildInputs = [ cmake-modules geometry-msgs robotis-controller-msgs roslib message-generation eigen std-msgs roscpp thormang3-walking-module-msgs ];
+  propagatedBuildInputs = [ cmake-modules geometry-msgs roscpp roslib message-runtime eigen std-msgs robotis-controller-msgs thormang3-walking-module-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides foot step generation for the thormang3'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

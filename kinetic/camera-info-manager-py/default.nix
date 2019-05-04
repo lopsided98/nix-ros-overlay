@@ -22,6 +22,6 @@ buildRosPackage {
 
     This ROS package provides a CameraInfo interface for Python camera
     drivers similar to the C++ camera_info_manager package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

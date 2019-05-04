@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This application allows the PR2 to navigate autonomously in an odometric frame.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

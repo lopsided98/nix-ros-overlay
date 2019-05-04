@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Simple script to check battery status'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

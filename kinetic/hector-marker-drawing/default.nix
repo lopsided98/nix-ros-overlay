@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''hector_marker_drawing provides convenience functions for easier publishing of visualization markers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

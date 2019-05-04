@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Implementation of the MultiWii Serial Protocol (MSP)'';
-    #license = lib.licenses.LGPLv3;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message definitions for trajectory_tracker package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ rospy pddl-msgs actionlib ];
-  propagatedBuildInputs = [ ff ffha time actionlib rospy lpg-planner downward pddl-msgs ];
+  propagatedBuildInputs = [ lpg-planner pddl-msgs ff ffha actionlib rospy downward time ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''pddl planner wrappers'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

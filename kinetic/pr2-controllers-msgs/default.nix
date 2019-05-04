@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages, services, and actions used in the pr2_controllers stack.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

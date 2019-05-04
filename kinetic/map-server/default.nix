@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "a5bed8cd6108ec0b57ec9cfb9264695e55978cb946643aa02858b5e99a1b0dca";
   };
 
-  buildInputs = [ tf2 nav-msgs bullet SDL_image SDL libyamlcpp roscpp ];
+  buildInputs = [ SDL bullet SDL_image libyamlcpp tf2 nav-msgs roscpp ];
   checkInputs = [ rostest rosunit rospy ];
-  propagatedBuildInputs = [ tf2 nav-msgs bullet SDL_image SDL libyamlcpp roscpp ];
+  propagatedBuildInputs = [ SDL bullet SDL_image libyamlcpp tf2 nav-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''map_server provides the <tt>map_server</tt> ROS <a href="http://www.ros.org/wiki/Nodes">Node</a>, which offers map data as a ROS <a href="http://www.ros.org/wiki/Services">Service</a>. It also provides the <tt>map_saver</tt> command-line utility, which allows dynamically generated maps to be saved to file.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''neobotix_usboard package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

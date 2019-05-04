@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ libGLU libGL openscenegraph boost ];
-  propagatedBuildInputs = [ libGL boost libGLU catkin openscenegraph ];
+  propagatedBuildInputs = [ boost catkin openscenegraph libGLU libGL ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The OSG Works library adapted to UWSim. See https://code.google.com/p/osgworks'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

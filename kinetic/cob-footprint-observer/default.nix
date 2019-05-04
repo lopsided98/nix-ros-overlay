@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "f59db47960bc5a7cb164ef1e01818fbc8411b573788674352faf2a12e39af8de";
   };
 
-  buildInputs = [ message-generation boost geometry-msgs std-msgs tf roscpp ];
-  propagatedBuildInputs = [ boost message-runtime geometry-msgs std-msgs tf roscpp ];
+  buildInputs = [ boost roscpp message-generation std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ boost roscpp message-runtime std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_footprint_observer package adjusts the footprint of the robot based on the setup (e.g. arm and/or tray).'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

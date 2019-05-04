@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''loki_base_node has a ROS node to communicate with the Loki robot base and allow communication with the motors and sonars'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

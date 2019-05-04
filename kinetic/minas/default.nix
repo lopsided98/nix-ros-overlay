@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "1a5f0c022a514fe533ef46f284a56463d0db3396c5cbc57a7f9d8d433b641b2d";
   };
 
-  propagatedBuildInputs = [ tra1-bringup tra1-moveit-config minas-control tra1-description ethercat-manager ];
+  propagatedBuildInputs = [ tra1-moveit-config ethercat-manager tra1-bringup minas-control tra1-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Meta package for minas for PANASONIC MINAS EtherCAT Motor Driver Control System'';
-    #license = lib.licenses.GPLv2;
+    license = with lib.licenses; [ gpl2 bsdOriginal "CC-BY-SA" ];
   };
 }

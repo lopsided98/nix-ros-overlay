@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "05c9749d1f74e10a810b52b0d3b209b22257a84f4a65e6d1cfede0fff412ae5c";
   };
 
-  propagatedBuildInputs = [ ecl-sigslots-lite ecl-errors ecl-time-lite ecl-io ecl-converters-lite ecl-config ];
+  propagatedBuildInputs = [ ecl-time-lite ecl-io ecl-sigslots-lite ecl-errors ecl-converters-lite ecl-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Libraries and utilities for embedded and low-level linux development.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

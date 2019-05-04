@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The gx_sound_player package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

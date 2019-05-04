@@ -23,6 +23,6 @@ buildRosPackage {
 
     Also includes techniques for memory debugging of common problems such
     as buffer overruns.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

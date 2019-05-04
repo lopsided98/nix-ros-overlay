@@ -19,6 +19,6 @@ buildRosPackage {
     description = ''This metapackage contains tools for integrating the Orocos Kinematics and
     Dynamics Library (KDL) with the Orocos Toolchain and Real-Time Toolkit
     (RTT).'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

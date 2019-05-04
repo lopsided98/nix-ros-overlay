@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The cob_tricycle_controller package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

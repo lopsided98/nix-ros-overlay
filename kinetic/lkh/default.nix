@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS packages for solving the TSP and GTSP problems using LKH heuristic'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

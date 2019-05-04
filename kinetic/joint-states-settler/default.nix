@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "fe19d91ab7814b863b654bf2a6d4b63bbccf0bd98cc86c6379bdfcb7c7c0e9b9";
   };
 
-  buildInputs = [ settlerlib actionlib rosconsole actionlib-msgs roscpp-serialization std-msgs roscpp ];
-  propagatedBuildInputs = [ settlerlib actionlib rosconsole actionlib-msgs roscpp-serialization std-msgs roscpp ];
+  buildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs roscpp ];
+  propagatedBuildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
      settled. That is, it calculates how long a set of joints has remained
      within a specified threshold. This package is experimental and unstable.
      Expect its APIs to change.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

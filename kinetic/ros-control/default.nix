@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A set of packages that include controller interfaces, controller managers, transmissions and hardware_interfaces.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

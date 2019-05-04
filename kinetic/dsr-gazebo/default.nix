@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The dsr_gazebo package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

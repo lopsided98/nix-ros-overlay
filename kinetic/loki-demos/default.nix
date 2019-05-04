@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "468a0d0094de6d7e2a9b979eeeff6c519bb8eb5e67652c9de83bcb3634e9e2d7";
   };
 
-  propagatedBuildInputs = [ loki-nav tf2-web-republisher loki-teleop rosbridge-server loki-bringup ];
+  propagatedBuildInputs = [ loki-nav tf2-web-republisher rosbridge-server loki-teleop loki-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The loki_demos package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS driver to use the Kork NanoKontrol MIDI device as a joystick.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

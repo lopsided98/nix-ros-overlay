@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''This package defines messages for commonly used sensors, including
     cameras and scanning laser rangefinders.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

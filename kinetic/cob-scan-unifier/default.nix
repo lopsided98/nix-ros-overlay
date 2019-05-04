@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The cob_scan_unifier package holds code to unify two or more laser-scans to one unified scan-message'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

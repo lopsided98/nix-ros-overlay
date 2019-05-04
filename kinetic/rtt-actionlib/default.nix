@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "efa5c44dbfa36a704a046c9c2d9012b3aefb1c0c727515bc0ec89be86ab83961";
   };
 
-  buildInputs = [ rtt-rosclock rtt-actionlib-msgs rtt-ros actionlib-msgs actionlib rtt-roscomm roscpp ];
-  propagatedBuildInputs = [ rtt-rosclock rtt-actionlib-msgs rtt-ros actionlib-msgs actionlib rtt-roscomm roscpp ];
+  buildInputs = [ rtt-ros actionlib-msgs rtt-rosclock rtt-actionlib-msgs actionlib rtt-roscomm roscpp ];
+  propagatedBuildInputs = [ rtt-ros actionlib-msgs rtt-rosclock rtt-actionlib-msgs actionlib rtt-roscomm roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rtt_actionlib package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

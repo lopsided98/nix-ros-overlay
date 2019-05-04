@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "e324a9ecdcabb3c34e3658cfa19fa62afe1789e04d68a57af2b936ab6032caf0";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py bhand-controller rostopic pythonPackages.rospkg sensor-msgs rqt-gui ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg sensor-msgs rqt-gui bhand-controller rostopic ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rqt_bhand package is intended to test the Barrett Hand in graphical mode'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

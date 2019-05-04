@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Plugin which uses directional friction to simulate mecanum wheels.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

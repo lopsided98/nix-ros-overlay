@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common messages for Grizzly.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

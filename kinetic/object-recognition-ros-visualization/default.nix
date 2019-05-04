@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "3c5a611d2f1d9504213727daf4671b91a6deaac35210f8f9b1d087d1402461c9";
   };
 
-  buildInputs = [ object-recognition-ros rviz pluginlib boost object-recognition-msgs ];
-  propagatedBuildInputs = [ object-recognition-ros rviz pluginlib boost object-recognition-msgs ];
+  buildInputs = [ object-recognition-ros pluginlib boost rviz object-recognition-msgs ];
+  propagatedBuildInputs = [ object-recognition-ros pluginlib boost rviz object-recognition-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''object_recognition_ros_visualization contains rviz plugins to visualize ork detection results'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

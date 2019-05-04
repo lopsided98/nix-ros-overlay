@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages used by xiaoqiang'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

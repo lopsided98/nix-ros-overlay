@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "87ae1a4474462014e28d9cb23d240d4bb25f686c8658ae7a15ff5e98f44cc3ca";
   };
 
-  propagatedBuildInputs = [ map-server rviz fake-localization kobuki-softnode move-base ];
+  propagatedBuildInputs = [ map-server move-base rviz fake-localization kobuki-softnode ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The kobuki_softapps package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

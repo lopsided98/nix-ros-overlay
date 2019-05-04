@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6de59a407d381cc9ca253990dfd7cabebee721af1f40952a9d375abb6c943e5a";
   };
 
-  buildInputs = [ cmake-modules pcl-msgs std-msgs pcl sensor-msgs roscpp ];
-  propagatedBuildInputs = [ pcl-msgs std-msgs pcl sensor-msgs roscpp ];
+  buildInputs = [ cmake-modules pcl sensor-msgs pcl-msgs std-msgs roscpp ];
+  propagatedBuildInputs = [ pcl sensor-msgs pcl-msgs std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides conversions from PCL data types and ROS message types'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

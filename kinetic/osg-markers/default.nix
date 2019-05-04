@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "fe9a3e9e95560170f90486fbe707f734c1b983a35912ef2425e8992f4147d0a2";
   };
 
-  buildInputs = [ visualization-msgs tf roslib openscenegraph roscpp ];
-  propagatedBuildInputs = [ visualization-msgs tf roslib openscenegraph roscpp ];
+  buildInputs = [ openscenegraph roscpp roslib visualization-msgs tf ];
+  propagatedBuildInputs = [ openscenegraph roscpp roslib visualization-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''osg_markers can be used to create Markers geometry in OSG.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
   meta = {
     description = ''This package provides mapping from frequencies to
     IEEE802.11 channels and vice-versa.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

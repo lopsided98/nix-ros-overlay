@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The fzi_icl_core package'';
-    #license = lib.licenses.LGPLv3;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

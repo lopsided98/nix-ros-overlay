@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''eus_qpoases'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

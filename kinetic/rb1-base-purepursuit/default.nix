@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rb1_base_purepursuit package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

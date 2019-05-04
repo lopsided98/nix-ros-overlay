@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "875763c5d69764aa9dca369f7e743e1c45c59fc52df48915892afdbf22af0cb5";
   };
 
-  buildInputs = [ nav-msgs cmake-modules eigen tf sensor-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ nav-msgs eigen tf sensor-msgs roscpp geometry-msgs ];
+  buildInputs = [ cmake-modules tf sensor-msgs nav-msgs eigen roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs eigen tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The nav_libs package'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

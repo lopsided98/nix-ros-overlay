@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This is the radar driver package developed for the omnipresense radar module.'';
-    #license = lib.licenses.ECL2.0;
+    license = with lib.licenses; [ "ECL2.0" ];
   };
 }

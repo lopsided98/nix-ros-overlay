@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   checkInputs = [ rosbuild ];
-  propagatedBuildInputs = [ pythonPackages.paramiko rosmaster pythonPackages.rospkg rosparam rosout pythonPackages.pyyaml rosgraph-msgs rosclean roslib rosunit ];
+  propagatedBuildInputs = [ rosmaster pythonPackages.rospkg rosparam rosout pythonPackages.pyyaml rosgraph-msgs rosclean pythonPackages.paramiko roslib rosunit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -24,6 +24,6 @@ buildRosPackage {
     configuration files (with the <tt>.launch</tt> extension) that
     specify the parameters to set and nodes to launch, as well as the
     machines that they should be run on.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hrpsys-ros-bridge, rosnode-rtc, openrtm-tools, catkin, openrtm-ros-bridge, hrpsys-tools, rtmbuild }:
+{ lib, buildRosPackage, fetchurl, rtmbuild, hrpsys-ros-bridge, rosnode-rtc, openrtm-tools, catkin, hrpsys-tools, openrtm-ros-bridge }:
 buildRosPackage {
   pname = "ros-kinetic-rtmros-common";
   version = "1.4.2";
@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "9cd6690acd1914cd304d17c541f0ed1f59627720614b505f223b168e16c38641";
   };
 
-  propagatedBuildInputs = [ rtmbuild hrpsys-ros-bridge hrpsys-tools rosnode-rtc openrtm-tools openrtm-ros-bridge ];
+  propagatedBuildInputs = [ rtmbuild hrpsys-ros-bridge rosnode-rtc openrtm-tools hrpsys-tools openrtm-ros-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -20,6 +20,6 @@ buildRosPackage {
     the ROS users to connect to the robots that run on
     <a href="http://www.openrtm.org/openrtm/en/content/what-rt-middleware-0">RT Middleware</a>
     or RTM-based controllers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

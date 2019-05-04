@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ roslaunch ];
   checkInputs = [ cob-supported-robots cob-default-env-config ];
-  propagatedBuildInputs = [ gazebo-ros roslaunch pythonPackages.numpy cob-default-robot-config geometry-msgs tf cob-default-env-config rospy cob-gazebo-worlds roslib cob-gazebo gazebo-msgs ];
+  propagatedBuildInputs = [ gazebo-ros roslaunch cob-default-robot-config pythonPackages.numpy geometry-msgs tf cob-default-env-config rospy cob-gazebo-worlds roslib cob-gazebo gazebo-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides launch files for starting a simulated Care-O-bot.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

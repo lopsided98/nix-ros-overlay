@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''robotis_controller package for ROBOTIS's platform like Manipulator-H, THORMANG and OP series'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

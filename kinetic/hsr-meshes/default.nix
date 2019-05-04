@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''3D mesh files for the Toyota HSR'';
-    #license = lib.licenses.Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License;
+    license = with lib.licenses; [ "CC-BY-NC-ND-4.0" ];
   };
 }

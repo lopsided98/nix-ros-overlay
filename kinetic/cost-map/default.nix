@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Meta-package for the universal cost map library.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

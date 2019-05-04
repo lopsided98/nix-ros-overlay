@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''bCAP library as a ROS package'';
-    #license = lib.licenses.BSD-3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

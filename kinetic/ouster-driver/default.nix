@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6696f1152949ac3729d2b7be7b3f03f835d783cb3866c0664d4d5770a19ea1c1";
   };
 
-  buildInputs = [ message-generation pcl-ros std-msgs sensor-msgs roscpp pcl-conversions ];
-  propagatedBuildInputs = [ message-runtime pcl-ros std-msgs sensor-msgs roscpp pcl-conversions ];
+  buildInputs = [ sensor-msgs message-generation pcl-ros std-msgs roscpp pcl-conversions ];
+  propagatedBuildInputs = [ sensor-msgs message-runtime pcl-ros std-msgs roscpp pcl-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''OS1 ROS client'';
-    #license = lib.licenses.Apache 2;
+    license = with lib.licenses; [ asl20 ];
   };
 }

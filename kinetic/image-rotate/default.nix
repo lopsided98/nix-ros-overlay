@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, tf2-geometry-msgs, image-transport, catkin, cv-bridge, tf2-ros, roscpp, tf2, rostest, dynamic-reconfigure, nodelet, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, cmake-modules, tf2-geometry-msgs, image-transport, catkin, cv-bridge, tf2-ros, tf2, rostest, nodelet, dynamic-reconfigure, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-image-rotate";
   version = "1.12.23";
@@ -12,9 +12,9 @@ buildRosPackage {
     sha256 = "555f20936b6389f00c612a52c9b1b02e437b57694ed3413d26320029ea191fa3";
   };
 
-  buildInputs = [ cmake-modules tf2-geometry-msgs image-transport cv-bridge roscpp tf2-ros tf2 dynamic-reconfigure nodelet geometry-msgs ];
+  buildInputs = [ cmake-modules tf2-geometry-msgs image-transport cv-bridge tf2-ros tf2 nodelet dynamic-reconfigure roscpp geometry-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ tf2 cv-bridge tf2-ros tf2-geometry-msgs dynamic-reconfigure image-transport nodelet roscpp ];
+  propagatedBuildInputs = [ tf2-geometry-msgs image-transport cv-bridge roscpp tf2-ros tf2 dynamic-reconfigure nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -36,6 +36,6 @@ buildRosPackage {
       computation, as it interpolates the source image, introduces black
       borders, and does not output a camera_info.
     </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

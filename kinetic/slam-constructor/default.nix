@@ -12,9 +12,9 @@ buildRosPackage {
     sha256 = "87b75373121fee8d6ecc36e9d3336f948cb16e99bdca089907e1b72c00c83ab2";
   };
 
-  buildInputs = [ rosbag-storage nav-msgs geometry-msgs std-msgs sensor-msgs tf message-filters roscpp ];
+  buildInputs = [ rosbag-storage sensor-msgs message-filters roscpp nav-msgs std-msgs tf geometry-msgs ];
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ rosbag-storage nav-msgs geometry-msgs std-msgs sensor-msgs tf message-filters roscpp ];
+  propagatedBuildInputs = [ rosbag-storage sensor-msgs message-filters roscpp nav-msgs std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -23,6 +23,6 @@ buildRosPackage {
     created with the SLAM constructor framework. The framework provides common
     SLAM components that may help to develop custom SLAM algorithms and can be
     accessed by provided links.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

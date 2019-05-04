@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "8e66b61205ec0894fd9743f373afe7a8cc2a28859b322ad5698cf4c0a4341ff4";
   };
 
-  buildInputs = [ depth-image-proc turtlebot-msgs visualization-msgs dynamic-reconfigure nodelet roscpp ];
-  propagatedBuildInputs = [ turtlebot-bringup depth-image-proc turtlebot-msgs roscpp turtlebot-teleop dynamic-reconfigure topic-tools nodelet visualization-msgs ];
+  buildInputs = [ depth-image-proc turtlebot-msgs roscpp visualization-msgs dynamic-reconfigure nodelet ];
+  propagatedBuildInputs = [ turtlebot-bringup depth-image-proc turtlebot-msgs turtlebot-teleop dynamic-reconfigure topic-tools visualization-msgs nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Follower for the turtlebot. Follows humans and robots around by following the centroid of a box points in front of the turtlebot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The lgsvl_msgs package for ground truth data.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

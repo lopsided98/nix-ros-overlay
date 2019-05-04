@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''SVH Driver wrapper to enable control of the Schunk five finger hand'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

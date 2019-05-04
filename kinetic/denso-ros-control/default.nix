@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The denso_ros_control package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

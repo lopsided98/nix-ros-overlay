@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The barrett_hand_sim package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

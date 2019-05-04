@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The find_object_2d package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

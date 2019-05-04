@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Catkin wrapper for the official ARSDK from Parrot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

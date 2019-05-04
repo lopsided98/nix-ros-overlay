@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Processing grid maps as a sequence of ROS filters.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

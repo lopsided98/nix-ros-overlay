@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "8b35c17c47ac380c5a0c01b6b9b69c36ac88ec6e4dfea8b3f75e62b31398ca5b";
   };
 
-  buildInputs = [ costmap-2d pluginlib base-local-planner eigen nav-core tf roscpp ];
-  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner eigen nav-core tf roscpp ];
+  buildInputs = [ costmap-2d pluginlib base-local-planner tf nav-core eigen roscpp ];
+  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner tf nav-core eigen roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This planner attempts to find a legal place to put a carrot for the robot to follow. It does this by moving back along the vector between the robot and the goal point.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

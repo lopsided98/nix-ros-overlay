@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Simple tools and catkin modules for rosjava development.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

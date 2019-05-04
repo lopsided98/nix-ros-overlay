@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Turtlebot messages, services and actions'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The ros_introspection package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

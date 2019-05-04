@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Provides templates and examples for integrating the WAM-V model into gazebo with dynamics, sensors, etc.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

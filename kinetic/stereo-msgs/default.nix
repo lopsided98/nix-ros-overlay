@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''stereo_msgs contains messages specific to stereo processing, such as disparity images.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

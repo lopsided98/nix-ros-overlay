@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS Node that convert IMU data to a Twist for manual robot drive.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

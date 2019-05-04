@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The op3_web_setting_tool package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

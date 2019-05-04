@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''osg_utils is a library that contains some classes that may be useful in ROS-OSG applications.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This application allows the PR2 robot to navigate autonomously with a pre-specified static map.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

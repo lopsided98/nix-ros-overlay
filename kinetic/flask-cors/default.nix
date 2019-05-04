@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Cross Origin Resource Sharing ( CORS ) support for Flask'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

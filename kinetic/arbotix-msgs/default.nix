@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages and Services definitions for the ArbotiX.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''C++/Python utilities library for the world canvas framework.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

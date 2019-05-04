@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The care-o-bot-robot meta-package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

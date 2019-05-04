@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ urdf rviz robot-state-publisher joint-state-publisher xacro create-description ];
+  propagatedBuildInputs = [ create-description urdf rviz robot-state-publisher joint-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The roomblock_description package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

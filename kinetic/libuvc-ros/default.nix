@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''libuvc_ros metapackage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

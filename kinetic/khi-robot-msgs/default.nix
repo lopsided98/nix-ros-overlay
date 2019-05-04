@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains KHI ROS robot msgs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The md49_messages package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

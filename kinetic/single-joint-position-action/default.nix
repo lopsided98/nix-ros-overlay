@@ -21,6 +21,6 @@ buildRosPackage {
   interface for commanding a trajectory to move a joint to a particular
   position. The action reports success when the joint reaches the desired
   position.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

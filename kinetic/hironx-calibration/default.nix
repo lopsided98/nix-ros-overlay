@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "ae3d2d0c587722f6a70f855994e01174e539929a9520480c936e6fd0c413d1fe";
   };
 
-  propagatedBuildInputs = [ kdl-parser orocos-kdl calibration-estimation openni2-launch calibration-launch ];
+  propagatedBuildInputs = [ kdl-parser orocos-kdl calibration-launch calibration-estimation openni2-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
    <code>
    rosrun calibration_setup_helper calibration_setup_helper.py `rospack find hironx_moveit_config`/HiroNX.urdf --base-link CHEST_JOINT0_Link --arm-tip-link RARM_JOINT5_Link --head-tip-link HEAD_JOINT1_Link --arm-controller=rarm_controller/command --head-controller=head_controller/command --head-camera-frame camera_rgb_optical_frame --head-camera-joint head_to_kinect_joint
    </code>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

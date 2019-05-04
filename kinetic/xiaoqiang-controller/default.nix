@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''xiaoqiang controller package, use terminal to move xiaoqiang around'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

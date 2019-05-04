@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The summit_x_common package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''cob_relayboard'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

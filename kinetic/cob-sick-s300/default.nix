@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "3651c5ff2e7354318f07800a7eae59ec785d5e4109460f3426e646b95a9829f1";
   };
 
-  buildInputs = [ boost std-msgs diagnostic-msgs sensor-msgs roscpp ];
-  propagatedBuildInputs = [ boost std-msgs diagnostic-msgs sensor-msgs roscpp ];
+  buildInputs = [ boost sensor-msgs std-msgs diagnostic-msgs roscpp ];
+  propagatedBuildInputs = [ boost sensor-msgs std-msgs diagnostic-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package published a laser scan message out of a Sick S300 laser scanner.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

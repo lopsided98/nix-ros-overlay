@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF description for Heron'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

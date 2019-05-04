@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''rospatlite'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

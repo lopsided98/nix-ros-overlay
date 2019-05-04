@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''ROS-Industrial support stack for facilitating communication with
 EtherCAT networks. The code is mainly copied from https://github.com/ros-industrial/robotiq/blob/jade-devel/robotiq_ethercat/src/ethercat_manager.cpp'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

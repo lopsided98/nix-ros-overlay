@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The fake_joint_driver package'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

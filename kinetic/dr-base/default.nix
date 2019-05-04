@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Delft Robotics base dependencies.'';
-    #license = lib.licenses.Apache v2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

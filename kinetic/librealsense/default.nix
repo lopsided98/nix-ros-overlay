@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Library for capturing data from the Intel(R) RealSense(TM) F200, SR300, R200, LR200 and ZR300 cameras. This effort was initiated to better support researchers, creative coders, and app developers in domains such as robotics, virtual reality, and the internet of things. Several often-requested features of RealSense(TM); devices are implemented in this project, including multi-camera capture.'';
-    #license = lib.licenses.Apache License, Version 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

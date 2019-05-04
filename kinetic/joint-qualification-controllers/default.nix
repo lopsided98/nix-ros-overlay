@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-hardware-interface, pluginlib, pr2-controller-interface, realtime-tools, control-toolbox, sensor-msgs, catkin, robot-mechanism-controllers, message-generation, urdf, message-runtime, std-msgs, roscpp, pr2-mechanism-model }:
+{ lib, buildRosPackage, fetchurl, pr2-hardware-interface, pluginlib, pr2-controller-interface, control-toolbox, realtime-tools, sensor-msgs, catkin, robot-mechanism-controllers, message-generation, urdf, message-runtime, std-msgs, roscpp, pr2-mechanism-model }:
 buildRosPackage {
   pname = "ros-kinetic-joint-qualification-controllers";
   version = "1.0.15-r1";
@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "5b66fd370c5cfcf229e952f0aff784deb01504e6688e28ea4aaff40c53ab2ba4";
   };
 
-  buildInputs = [ pr2-hardware-interface pluginlib pr2-controller-interface realtime-tools control-toolbox sensor-msgs robot-mechanism-controllers message-generation urdf std-msgs roscpp pr2-mechanism-model ];
-  propagatedBuildInputs = [ pr2-hardware-interface pluginlib pr2-controller-interface realtime-tools control-toolbox sensor-msgs robot-mechanism-controllers urdf message-runtime std-msgs roscpp pr2-mechanism-model ];
+  buildInputs = [ pr2-hardware-interface pluginlib pr2-controller-interface control-toolbox realtime-tools sensor-msgs robot-mechanism-controllers message-generation urdf std-msgs roscpp pr2-mechanism-model ];
+  propagatedBuildInputs = [ pr2-hardware-interface pluginlib pr2-controller-interface control-toolbox realtime-tools sensor-msgs robot-mechanism-controllers urdf message-runtime std-msgs roscpp pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controllers used in PR2 hardware testing. For testing counterbalance of PR2, and for internal WG use.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The futaba_serial_servo package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

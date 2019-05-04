@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Interaction management for human interactive agents in the concert.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

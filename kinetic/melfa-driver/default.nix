@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ diagnostic-updater hardware-interface roscpp controller-manager ];
   checkInputs = [ rostest roslaunch roslint ];
-  propagatedBuildInputs = [ diagnostic-updater hardware-interface position-controllers joint-state-controller controller-manager robot-state-publisher roscpp joint-trajectory-controller ];
+  propagatedBuildInputs = [ controller-manager hardware-interface joint-state-controller joint-trajectory-controller diagnostic-updater position-controllers robot-state-publisher roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The melfa_driver package'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The cog_publisher package'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''franka_msgs provides messages specific to Franka Emika research robots'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

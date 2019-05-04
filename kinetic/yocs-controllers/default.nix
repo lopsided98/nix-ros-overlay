@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Library for various controller types and algorithms'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

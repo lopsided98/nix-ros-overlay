@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''An RQT plugin for hierarchical launchfile configuration introspection.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

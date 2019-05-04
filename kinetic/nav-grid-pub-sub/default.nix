@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Publishers and Subscribers for nav_grid data.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

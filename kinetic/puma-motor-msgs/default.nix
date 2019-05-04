@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages specific to Puma.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

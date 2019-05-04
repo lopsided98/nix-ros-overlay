@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The denso robot descriptions package includes URDF files for DENSO robots.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

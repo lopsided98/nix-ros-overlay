@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6af0beeee2a538ba2947af729eb7987a579abaf7e494474b2a4556a6589e3bde";
   };
 
-  buildInputs = [ std-srvs message-generation actionlib-msgs std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs message-runtime actionlib-msgs std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ std-srvs actionlib-msgs sensor-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs actionlib-msgs sensor-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains message type definitions for object detection'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

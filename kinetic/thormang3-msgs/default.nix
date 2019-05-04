@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "c82d081ea663893e9a923f7ea442fcfaae21fd5f37267a335773850caa2bf93c";
   };
 
-  propagatedBuildInputs = [ thormang3-action-module-msgs thormang3-feet-ft-module-msgs thormang3-head-control-module-msgs thormang3-manipulation-module-msgs thormang3-walking-module-msgs thormang3-offset-tuner-msgs ];
+  propagatedBuildInputs = [ thormang3-feet-ft-module-msgs thormang3-head-control-module-msgs thormang3-offset-tuner-msgs thormang3-action-module-msgs thormang3-manipulation-module-msgs thormang3-walking-module-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS packages for the thormang3_msgs (meta package)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

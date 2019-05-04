@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Provides a portable set of time functions that are especially useful for 
      porting other code or being wrapped by higher level c++ classes.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

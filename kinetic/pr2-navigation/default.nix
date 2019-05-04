@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The pr2_navigation stack holds common configuration options for running the'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

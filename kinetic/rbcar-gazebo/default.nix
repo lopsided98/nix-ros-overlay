@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "9316766fbf95b497271444a23ede60e6fd1093b4da8e866504a6e855fb2e7ac4";
   };
 
-  buildInputs = [ gazebo-ros std-srvs rbcar-control std-msgs tf rbcar-description roscpp ];
-  propagatedBuildInputs = [ gazebo-ros std-srvs rbcar-control std-msgs tf rbcar-description roscpp ];
+  buildInputs = [ gazebo-ros std-srvs rbcar-description roscpp rbcar-control std-msgs tf ];
+  propagatedBuildInputs = [ gazebo-ros std-srvs rbcar-description roscpp rbcar-control std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rbcar_gazebo package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

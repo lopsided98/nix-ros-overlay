@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''rosjson is a Python library for converting ROS messages to JSON
      (JavaScript Object Notation) representation.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

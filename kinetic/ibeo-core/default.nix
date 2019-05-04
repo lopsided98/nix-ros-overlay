@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The ibeo_core package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

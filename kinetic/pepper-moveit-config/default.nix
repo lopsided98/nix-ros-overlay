@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "3d757ea4412b9d35654889bfaad5f6301b558e759493e72ea49ccab1d5da6122";
   };
 
-  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-simple-controller-manager moveit-ros-move-group robot-state-publisher pepper-description joint-state-publisher xacro moveit-planners-ompl ];
+  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group pepper-description moveit-simple-controller-manager robot-state-publisher joint-state-publisher xacro moveit-planners-ompl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An automatically generated package with all the configuration and launch files for using the Pepper robot with the MoveIt Motion Planning Framework'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

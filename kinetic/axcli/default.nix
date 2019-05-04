@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''A simple actionlib CLI client'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

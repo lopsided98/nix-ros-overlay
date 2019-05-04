@@ -26,6 +26,6 @@ buildRosPackage {
     tree model of the robot. The package can both be used as a library
     and as a ROS node.  This package has been well tested and the code
     is stable. No major changes are planned in the near future.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common msg and srv definitions used by Roboception's ROS packages'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

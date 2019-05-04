@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "2d674ae37ae8fb4d7bbfadb78f790fbc50f854ac3a7a13a3c41b63ad2ed434dd";
   };
 
-  buildInputs = [ robot-mechanism-controllers laser-joint-processor rospy image-view geometry-msgs stereo-image-proc pr2-dense-laser-snapshotter kdl-parser laser-cb-detector laser-joint-projector sensor-msgs monocam-settler python-orocos-kdl image-cb-detector calibration-launch pr2-teleop rostest message-generation calibration-estimation calibration-msgs ];
-  propagatedBuildInputs = [ robot-mechanism-controllers laser-joint-processor rospy image-view geometry-msgs stereo-image-proc pr2-dense-laser-snapshotter kdl-parser laser-cb-detector laser-joint-projector sensor-msgs monocam-settler python-orocos-kdl image-cb-detector calibration-launch pr2-teleop rostest message-runtime calibration-estimation calibration-msgs ];
+  buildInputs = [ laser-joint-processor rospy image-view geometry-msgs laser-cb-detector image-cb-detector message-generation calibration-msgs robot-mechanism-controllers stereo-image-proc pr2-dense-laser-snapshotter kdl-parser python-orocos-kdl laser-joint-projector sensor-msgs monocam-settler calibration-launch pr2-teleop rostest calibration-estimation ];
+  propagatedBuildInputs = [ laser-joint-processor rospy image-view geometry-msgs laser-cb-detector image-cb-detector message-runtime calibration-msgs robot-mechanism-controllers stereo-image-proc pr2-dense-laser-snapshotter kdl-parser python-orocos-kdl laser-joint-projector sensor-msgs monocam-settler calibration-launch pr2-teleop rostest calibration-estimation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files and configuration files needed to run the calibration pipeline on PR2. This package is
      still experimental. Expect large changes tp occur.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

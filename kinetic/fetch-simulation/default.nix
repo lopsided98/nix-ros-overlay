@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Fetch Simulation, packages for working with Fetch and Freight in Gazebo'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

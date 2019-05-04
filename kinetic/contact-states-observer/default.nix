@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The contact_states_observer package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

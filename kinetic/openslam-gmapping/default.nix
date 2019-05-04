@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS-ified version of gmapping SLAM. Forked from https://openslam.informatik.uni-freiburg.de/data/svn/gmapping/trunk/'';
-    #license = lib.licenses.CreativeCommons-by-nc-sa-2.0;
+    license = with lib.licenses; [ "CC-BY-SA-3.0" ];
   };
 }

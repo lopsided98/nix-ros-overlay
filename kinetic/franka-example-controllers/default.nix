@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''franka_example_controllers provides example code for controlling Franka Emika research robots with ros_control'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

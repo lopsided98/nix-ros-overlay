@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Driver package for interfacing the battery management system (BMS) on Care-O-bot.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

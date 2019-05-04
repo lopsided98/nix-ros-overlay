@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "a04086c726f66fbdde92aada134688305fe3a446ade8f8cf2f7d6ca78f07a51a";
   };
 
-  buildInputs = [ shape-msgs message-generation actionlib-msgs std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ shape-msgs message-runtime actionlib-msgs std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ shape-msgs actionlib-msgs sensor-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ shape-msgs actionlib-msgs sensor-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Object_recognition_msgs contains the ROS message and the actionlib definition used in object_recognition_core'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

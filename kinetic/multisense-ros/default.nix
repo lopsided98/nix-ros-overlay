@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "64dbfe1a34999ec414c8caec8f7b9d34baf10c08e74584ace80cab60122ce0d5";
   };
 
-  buildInputs = [ image-transport rosbag libjpeg_turbo sensor-msgs cv-bridge genmsg roscpp image-geometry message-generation message-runtime multisense-lib dynamic-reconfigure std-msgs angles tf geometry-msgs stereo-msgs ];
-  propagatedBuildInputs = [ image-transport rosbag libjpeg_turbo sensor-msgs cv-bridge genmsg roscpp image-geometry message-generation message-runtime multisense-lib dynamic-reconfigure std-msgs angles tf geometry-msgs stereo-msgs ];
+  buildInputs = [ image-transport libjpeg_turbo rosbag sensor-msgs cv-bridge genmsg roscpp image-geometry message-generation message-runtime multisense-lib dynamic-reconfigure std-msgs angles tf geometry-msgs stereo-msgs ];
+  propagatedBuildInputs = [ image-transport libjpeg_turbo rosbag sensor-msgs cv-bridge genmsg roscpp image-geometry message-generation message-runtime multisense-lib dynamic-reconfigure std-msgs angles tf geometry-msgs stereo-msgs ];
   nativeBuildInputs = [ libyamlcpp catkin ];
 
   meta = {
     description = ''multisense_ros'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

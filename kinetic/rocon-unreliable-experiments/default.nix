@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Some experiments testing roscpp unreliable transports.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

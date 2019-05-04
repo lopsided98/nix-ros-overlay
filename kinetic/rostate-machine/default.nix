@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "57ee3cbded20e661e73ca5e16a46af9282f11978146e6903b8f05043361d27c2";
   };
 
-  buildInputs = [ rostest message-generation rospy std-msgs roslib roscpp ];
-  propagatedBuildInputs = [ rostest message-runtime rospy std-msgs roslib roscpp ];
+  buildInputs = [ roscpp rostest message-generation rospy std-msgs roslib ];
+  propagatedBuildInputs = [ roscpp rostest message-runtime rospy std-msgs roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rostate_machine package'';
-    #license = lib.licenses.Apache v2;
+    license = with lib.licenses; [ asl20 ];
   };
 }

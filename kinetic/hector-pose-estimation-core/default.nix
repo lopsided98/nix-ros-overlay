@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "916a0df99a333a3c698e8c718fa05fcebe38a882e6cc7b0353781e806bdc04e3";
   };
 
-  buildInputs = [ rosconsole cmake-modules sensor-msgs rostime roscpp geographic-msgs nav-msgs eigen tf geometry-msgs ];
+  buildInputs = [ cmake-modules rosconsole sensor-msgs rostime roscpp geographic-msgs nav-msgs eigen tf geometry-msgs ];
   propagatedBuildInputs = [ rosconsole sensor-msgs rostime roscpp geographic-msgs nav-msgs eigen tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_pose_estimation_core is the core package of the hector_localization stack. It contains the Extended Kalman Filter (EKF)
     that estimates the 6DOF pose of the robot. hector_pose_estimation can be used either as a library, as a nodelet or as a standalone node.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

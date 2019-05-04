@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The thormang3_balance_control package
     This balance control is based on PD control.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

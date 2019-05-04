@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The laser_scan_sparsifier takes in a LaserScan message and sparsifies it.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

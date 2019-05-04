@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides some worlds for gazebo simulation.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

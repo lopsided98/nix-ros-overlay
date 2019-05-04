@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The dsr_example C++ package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

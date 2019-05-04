@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "3b50fa618507462f7fc8f3d91b8a73a28d4bb54d336d032118c1bf5d5bd4df00";
   };
 
-  buildInputs = [ thormang3-feet-ft-module-msgs boost cmake-modules ati-ft-sensor libyamlcpp roscpp thormang3-kinematics-dynamics robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
-  propagatedBuildInputs = [ thormang3-feet-ft-module-msgs boost cmake-modules ati-ft-sensor libyamlcpp roscpp thormang3-kinematics-dynamics robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
+  buildInputs = [ thormang3-feet-ft-module-msgs boost ati-ft-sensor cmake-modules libyamlcpp roscpp thormang3-kinematics-dynamics robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
+  propagatedBuildInputs = [ thormang3-feet-ft-module-msgs boost ati-ft-sensor cmake-modules libyamlcpp roscpp thormang3-kinematics-dynamics robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package is a sensor module for force torque sensors on feet.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

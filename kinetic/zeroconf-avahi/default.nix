@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "bf23ee2938a77f7ecbee57ea8f76a542ef82154d831aed726f8120b23f4b2a0b";
   };
 
-  buildInputs = [ rosconsole zeroconf-msgs roscpp avahi ];
-  propagatedBuildInputs = [ rosconsole zeroconf-msgs roscpp avahi ];
+  buildInputs = [ avahi roscpp rosconsole zeroconf-msgs ];
+  propagatedBuildInputs = [ avahi roscpp rosconsole zeroconf-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides zeroconf services on avahi for ros systems.
      This is a c++ implementation.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rosserial-msgs rosunit ];
-  propagatedBuildInputs = [ rosbash rospy std-msgs tf rosserial-msgs ];
+  propagatedBuildInputs = [ rosbash rosserial-msgs rospy std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generalized client side source for rosserial.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

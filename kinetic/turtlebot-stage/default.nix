@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "b71fa130c001a758087f1a0f6df2521ab3d2129a9a053ed7d60894ad3e99c462";
   };
 
-  propagatedBuildInputs = [ stage-ros turtlebot-bringup navigation yocs-virtual-sensor turtlebot-navigation yocs-velocity-smoother ];
+  propagatedBuildInputs = [ turtlebot-bringup yocs-velocity-smoother stage-ros navigation yocs-virtual-sensor turtlebot-navigation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Stage version of turtlebot simulation. Convenient to test 2D-navigation related stuffs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

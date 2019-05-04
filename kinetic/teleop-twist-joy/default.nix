@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "d18f5be0d75d09fc28c68dff4890f304df9a60b70b29915d37d96d8a7c622749";
   };
 
-  buildInputs = [ roslaunch rostest roslint geometry-msgs sensor-msgs joy roscpp ];
+  buildInputs = [ roslint sensor-msgs joy rostest roslaunch roscpp geometry-msgs ];
   propagatedBuildInputs = [ roscpp sensor-msgs joy geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Generic joystick teleop for twist robots.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

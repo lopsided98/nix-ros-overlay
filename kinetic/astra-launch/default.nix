@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, depth-image-proc, tf, catkin, rgbd-launch, image-proc, nodelet, astra-camera }:
+{ lib, buildRosPackage, fetchurl, depth-image-proc, catkin, rgbd-launch, nodelet, image-proc, tf, astra-camera }:
 buildRosPackage {
   pname = "ros-kinetic-astra-launch";
   version = "0.2.2";
@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Drivers for Orbbec Astra Devices.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

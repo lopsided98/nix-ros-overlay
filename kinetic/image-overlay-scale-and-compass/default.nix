@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ std-msgs sensor-msgs cv-bridge rospy ];
-  propagatedBuildInputs = [ pythonPackages.numpy rospy std-msgs sensor-msgs cv-bridge click pythonPackages.opencv3 ];
+  propagatedBuildInputs = [ pythonPackages.numpy click sensor-msgs cv-bridge pythonPackages.opencv3 rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Add an indication of scale and compass to images.'';
-    #license = lib.licenses.Unlicense;
+    license = with lib.licenses; [ "Unlicense" ];
   };
 }

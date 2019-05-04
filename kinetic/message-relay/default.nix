@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "8315b1329b1319e3d3580927eed17a77ea2ab2e8726f6c7dc7d944829f120eab";
   };
 
-  buildInputs = [ std-srvs tf2-msgs actionlib-msgs trajectory-msgs move-base-msgs robot-localization rosgraph-msgs nav-msgs multimaster-msgs std-msgs diagnostic-msgs visualization-msgs roscpp gazebo-msgs stereo-msgs geometry-msgs shape-msgs pythonPackages.cheetah sensor-msgs controller-manager-msgs map-msgs ];
+  buildInputs = [ tf2-msgs actionlib-msgs robot-localization rosgraph-msgs multimaster-msgs diagnostic-msgs gazebo-msgs stereo-msgs geometry-msgs pythonPackages.cheetah controller-manager-msgs std-srvs trajectory-msgs move-base-msgs nav-msgs std-msgs visualization-msgs roscpp shape-msgs sensor-msgs map-msgs ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ std-srvs tf2-msgs actionlib-msgs trajectory-msgs move-base-msgs robot-localization rosgraph-msgs nav-msgs multimaster-msgs std-msgs diagnostic-msgs visualization-msgs roscpp gazebo-msgs stereo-msgs geometry-msgs shape-msgs sensor-msgs controller-manager-msgs map-msgs ];
+  propagatedBuildInputs = [ tf2-msgs actionlib-msgs robot-localization rosgraph-msgs multimaster-msgs diagnostic-msgs geometry-msgs gazebo-msgs stereo-msgs controller-manager-msgs std-srvs trajectory-msgs move-base-msgs nav-msgs std-msgs visualization-msgs roscpp shape-msgs sensor-msgs map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package to programmatically spawn message, service, and action relays. To add support for a message/service dependency, please add to the build dependencies in package.xml and CMakeLists.txt'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

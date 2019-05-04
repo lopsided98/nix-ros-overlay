@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rb1_base_common package. It contains rb1 base common packages used for robot control and for simulation'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

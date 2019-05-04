@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "da54b1a1cfd82fd7c6686bfcf6ffc78e124db8c06e3ab3093a3952d95407bfa2";
   };
 
-  buildInputs = [ zbar cv-bridge roslint nodelet roscpp ];
+  buildInputs = [ roslint cv-bridge roscpp zbar nodelet ];
   propagatedBuildInputs = [ zbar cv-bridge roscpp nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Lightweight ROS wrapper for Zbar barcode/qrcode reader library (http://zbar.sourceforge
     .net/)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

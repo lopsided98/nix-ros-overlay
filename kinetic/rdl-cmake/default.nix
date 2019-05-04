@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rdl_cmake package'';
-    #license = lib.licenses.zlib;
+    license = with lib.licenses; [ "zlib" ];
   };
 }

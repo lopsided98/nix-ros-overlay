@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The raspigibbon_gazebo package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rc_visard_driver provides data from a Roboception rc_visard 3D sensor on several ROS topics.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

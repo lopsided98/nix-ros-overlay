@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Point Grey camera driver based on libflycapture2.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

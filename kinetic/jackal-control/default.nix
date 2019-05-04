@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Controllers for Jackal'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

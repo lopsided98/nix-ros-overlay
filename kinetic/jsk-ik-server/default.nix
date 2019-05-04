@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "ec5f30870a0afead46a6a281ed0a74256873638611b8cc4c15ec4d68b1de8a97";
   };
 
-  buildInputs = [ roseus rostest moveit-msgs cmake-modules mk tf ];
-  propagatedBuildInputs = [ roseus rostest moveit-msgs cmake-modules mk tf ];
+  buildInputs = [ roseus cmake-modules mk rostest moveit-msgs tf ];
+  propagatedBuildInputs = [ roseus cmake-modules mk rostest moveit-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk_ik_server'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -1,3 +1,7 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
 self: super: {
 
  abb = self.callPackage ./abb {};
@@ -4691,6 +4695,8 @@ self: super: {
  webargs = self.callPackage ./webargs {};
 
  webkit-dependency = self.callPackage ./webkit-dependency {};
+
+ webots-ros = self.callPackage ./webots-ros {};
 
  webrtc = self.callPackage ./webrtc {};
 

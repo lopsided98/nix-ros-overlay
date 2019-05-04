@@ -23,6 +23,6 @@ buildRosPackage {
     The usage of other sensors is application-dependent. The hector_localization stack currently supports
     GPS, magnetometer, barometric pressure sensors and other external sources that provide a geometry_msgs/PoseWithCovariance
     message via the poseupdate topic.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

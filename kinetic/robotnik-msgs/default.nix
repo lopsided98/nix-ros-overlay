@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The robotnik_msgs package. Common messages and services used by some Robotnik's packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

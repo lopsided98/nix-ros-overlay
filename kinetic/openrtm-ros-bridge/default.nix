@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "bd98d729dfa985d85e8812fec751c9dbf1fba5cbc71a1afb5a31679a1dad2e76";
   };
 
-  buildInputs = [ rostest message-generation std-msgs openrtm-tools roscpp rtmbuild ];
+  buildInputs = [ openrtm-tools rostest message-generation std-msgs roscpp rtmbuild ];
   propagatedBuildInputs = [ std-msgs openrtm-tools roscpp ];
   nativeBuildInputs = [ catkin ];
 
@@ -24,6 +24,6 @@ buildRosPackage {
   		
     For communicating with the robots that run on hrpsys, you can use
     <a href="http://wiki.ros.org/hrpsys_ros_bridge">hrpsys_ros_bridge</a> package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -22,6 +22,6 @@ buildRosPackage {
   As of version 0.7.15/March 2017, only Kinect/Xtion is capable (i.e. Ueye
   cameras, the ones the robot comes with on this head by default, are not yet
   handled).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

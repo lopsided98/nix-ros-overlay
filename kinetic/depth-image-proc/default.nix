@@ -14,7 +14,7 @@ buildRosPackage {
 
   buildInputs = [ boost cmake-modules image-transport sensor-msgs cv-bridge message-filters tf2-ros image-geometry tf2 eigen-conversions nodelet stereo-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ tf2 boost nodelet image-transport eigen-conversions cv-bridge tf2-ros image-geometry ];
+  propagatedBuildInputs = [ boost image-transport cv-bridge tf2-ros image-geometry tf2 eigen-conversions nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
      produced by OpenNI camera. Functions include creating disparity
      images and point clouds, as well as registering (reprojecting)
      a depth image into another camera frame.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

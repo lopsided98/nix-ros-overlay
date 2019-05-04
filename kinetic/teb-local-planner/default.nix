@@ -22,6 +22,6 @@ buildRosPackage {
     The underlying method called Timed Elastic Band locally optimizes
     the robot's trajectory with respect to trajectory execution time,
     separation from obstacles and compliance with kinodynamic constraints at runtime.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

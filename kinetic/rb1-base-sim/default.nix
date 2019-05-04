@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rb1_base_sim metapackage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

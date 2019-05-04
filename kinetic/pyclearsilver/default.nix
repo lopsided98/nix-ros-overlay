@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''A bunch of libraries to interface clearsilver with python and many databases.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "ee8427e16bc91b2b6f739d767e473d99ec0a0d5af7b5ee827662130c7e2c7f52";
   };
 
-  buildInputs = [ dataspeed-pds-msgs roscpp can-msgs nodelet message-filters dataspeed-can-msg-filters ];
+  buildInputs = [ can-msgs message-filters dataspeed-can-msg-filters dataspeed-pds-msgs nodelet roscpp ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ dataspeed-can-usb dataspeed-pds-msgs can-msgs roslaunch nodelet message-filters roscpp ];
+  propagatedBuildInputs = [ can-msgs message-filters roscpp dataspeed-can-usb dataspeed-pds-msgs roslaunch nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interface to the Dataspeed Inc. Power Distribution System (PDS) via CAN'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

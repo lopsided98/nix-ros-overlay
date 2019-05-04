@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Converts LaserScan to PointCloud messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

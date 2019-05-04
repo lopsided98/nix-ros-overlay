@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A libfreenect-based ROS driver for the Microsoft Kinect'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

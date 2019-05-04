@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "29c653c5625de780c20cf3e416c9211b0bac19f3ece308604a6fc0eae64ac555";
   };
 
-  buildInputs = [ actionlib pythonPackages.pyaudio actionlib-msgs dynamic-reconfigure rospy pythonPackages.catkin-pkg roscpp ];
+  buildInputs = [ dynamic-reconfigure pythonPackages.pyaudio actionlib-msgs actionlib rospy pythonPackages.catkin-pkg roscpp ];
   propagatedBuildInputs = [ pythonPackages.pyaudio actionlib-msgs actionlib rospy dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The homer_tts package'';
-    #license = lib.licenses.WTF;
+    license = with lib.licenses; [ "WTF" ];
   };
 }

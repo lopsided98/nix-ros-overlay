@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   buildInputs = [ curl roslib rosconsole boost ];
-  propagatedBuildInputs = [ curl rosconsole boost pythonPackages.rospkg roslib ];
+  propagatedBuildInputs = [ rosconsole boost pythonPackages.rospkg curl roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -23,6 +23,6 @@ buildRosPackage {
    file:// url.  The resourse retriever was initially designed to load
    mesh files into memory, but it can be used for any type of
    data. The resource retriever is based on the the libcurl library.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

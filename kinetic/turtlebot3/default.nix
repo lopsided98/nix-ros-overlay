@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "23438fd64c4ee71227d220b36c16417b6701e290d627cdcbebce95098ea8ea79";
   };
 
-  propagatedBuildInputs = [ turtlebot3-slam turtlebot3-bringup turtlebot3-example turtlebot3-teleop turtlebot3-navigation turtlebot3-description ];
+  propagatedBuildInputs = [ turtlebot3-navigation turtlebot3-description turtlebot3-slam turtlebot3-bringup turtlebot3-example turtlebot3-teleop ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS packages for the Turtlebot3 (meta package)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

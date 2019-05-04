@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ python cmake-modules boost gtest tinyxml pkg-config ];
   checkInputs = [ pythonPackages.coverage ];
-  propagatedBuildInputs = [ python boost pythonPackages.rosdep pythonPackages.catkin-pkg tinyxml pkg-config ];
+  propagatedBuildInputs = [ python boost pythonPackages.rosdep tinyxml pkg-config pythonPackages.catkin-pkg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS Package Tool'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''actionlib_lisp is a native implementation of the famous actionlib
    in Common Lisp. It provides a client and a simple server.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

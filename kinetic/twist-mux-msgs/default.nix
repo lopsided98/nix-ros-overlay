@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The twist_mux msgs and actions package'';
-    #license = lib.licenses.CC BY-NC-SA 4.0;
+    license = with lib.licenses; [ cc-by-nc-sa-40 ];
   };
 }

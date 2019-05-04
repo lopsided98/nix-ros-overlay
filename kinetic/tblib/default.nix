@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Traceback fiddling library. Allows you to pickle tracebacks.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

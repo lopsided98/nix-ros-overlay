@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains scripts to operate the LED lights on Care-O-bot.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

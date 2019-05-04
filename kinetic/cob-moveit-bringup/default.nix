@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-moveit-config, moveit-ros-move-group, moveit-ros-visualization, cob-hardware-config, catkin, moveit-setup-assistant, robot-state-publisher, moveit-ros-perception, tf, joint-state-publisher, moveit-plugins, moveit-planners-ompl }:
+{ lib, buildRosPackage, fetchurl, cob-moveit-config, moveit-ros-move-group, moveit-ros-visualization, cob-hardware-config, catkin, moveit-planners-ompl, robot-state-publisher, moveit-ros-perception, tf, joint-state-publisher, moveit-plugins, moveit-setup-assistant }:
 buildRosPackage {
   pname = "ros-kinetic-cob-moveit-bringup";
   version = "0.7.1";
@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "95c7d066abee8f9b8af3b833c995666223079137d7bb61d86dff1b7e0b787533";
   };
 
-  propagatedBuildInputs = [ moveit-ros-move-group cob-moveit-config moveit-ros-visualization cob-hardware-config moveit-planners-ompl robot-state-publisher moveit-ros-perception tf joint-state-publisher moveit-plugins moveit-setup-assistant ];
+  propagatedBuildInputs = [ moveit-ros-move-group cob-moveit-config moveit-ros-visualization cob-hardware-config moveit-setup-assistant robot-state-publisher moveit-ros-perception tf joint-state-publisher moveit-plugins moveit-planners-ompl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''MoveIt launch files'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

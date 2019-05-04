@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The bcap service test package includes a node for testing bcap service node.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ pyros-common roslint catkin-pip pyros-config rospy message-generation pyros-utils std-msgs pyzmp ];
-  checkInputs = [ rostest rostopic pyros-test rosunit rosservice ];
-  propagatedBuildInputs = [ pyros-common message-runtime rospy std-msgs pyros-config pyzmp pyros-utils ];
+  checkInputs = [ rosservice rostest rostopic pyros-test rosunit ];
+  propagatedBuildInputs = [ pyros-common pyros-config pyros-utils message-runtime rospy std-msgs pyzmp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Dynamic ROS interface for Pyros'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

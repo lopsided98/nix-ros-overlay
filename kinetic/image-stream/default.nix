@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''rosweb plugin to serve images as streams (MJPEG, Theora, FLV, etc)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

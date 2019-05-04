@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Provides teleoperation using keyboard for TurtleBot3.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

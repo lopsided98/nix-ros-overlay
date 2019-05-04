@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain).
     It provides real-time marker based 3D pose estimation using AR markers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

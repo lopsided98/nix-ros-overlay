@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Navigation launch and config files for Summit XL robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

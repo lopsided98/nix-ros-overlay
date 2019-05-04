@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A Levenberg-Marquardt solver for EXOTica'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "67037b2346efc376674ddf7d4a4e7aa8d92353544c485facf61d272ef4900337";
   };
 
-  buildInputs = [ nav-msgs geometry-msgs sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ nav-msgs geometry-msgs sensor-msgs tf roscpp ];
+  buildInputs = [ sensor-msgs roscpp nav-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_imu_tools provides some tools for processing IMU messages'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

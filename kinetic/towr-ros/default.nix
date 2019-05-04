@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xpp-states, xpp-msgs, xpp-hyq, rosbag, catkin, rqt-bag, xterm, roscpp, message-generation, rviz, ncurses, visualization-msgs, message-runtime, std-msgs, towr }:
+{ lib, buildRosPackage, fetchurl, xpp-states, xpp-msgs, xpp-hyq, rosbag, catkin, rqt-bag, xterm, towr, message-generation, rviz, ncurses, message-runtime, visualization-msgs, std-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-towr-ros";
   version = "1.4.1";
@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "d234570a2b4c0b399d520ae66c0e72a8cc07773abfe8829dfb31919d2a5ea4c7";
   };
 
-  buildInputs = [ xpp-states xpp-msgs rosbag roscpp message-generation ncurses visualization-msgs message-runtime std-msgs towr ];
-  propagatedBuildInputs = [ xpp-states xpp-msgs xpp-hyq rosbag roscpp xterm rqt-bag message-generation rviz ncurses visualization-msgs message-runtime std-msgs towr ];
+  buildInputs = [ xpp-states xpp-msgs rosbag towr message-generation ncurses visualization-msgs message-runtime std-msgs roscpp ];
+  propagatedBuildInputs = [ xpp-states xpp-msgs xpp-hyq rosbag xterm rqt-bag towr message-generation rviz ncurses visualization-msgs message-runtime std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
     Adds a keyboard user interface to set different goal states, motions
     and robots and visualizes the produced motions plan in rviz using
     <a href="http://wiki.ros.org/xpp">xpp</a>.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

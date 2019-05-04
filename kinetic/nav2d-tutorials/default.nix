@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "9c66ef5f00925e81fb4a68fd239460790ea767033ef2a4487ff102296dd0906b";
   };
 
-  propagatedBuildInputs = [ nav2d-localizer nav2d-navigator nav2d-remote nav2d-karto nav2d-operator nav2d-msgs nav2d-exploration ];
+  propagatedBuildInputs = [ nav2d-navigator nav2d-remote nav2d-karto nav2d-operator nav2d-msgs nav2d-exploration nav2d-localizer ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Contains a set of tutorials that run 2D-Navigation within Stage-Simulator.'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

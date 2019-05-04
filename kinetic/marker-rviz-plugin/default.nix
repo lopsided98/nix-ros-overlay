@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The marker_rviz_plugin package contains RViz plugins to visualize messages of the marker_msgs package using RViz.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

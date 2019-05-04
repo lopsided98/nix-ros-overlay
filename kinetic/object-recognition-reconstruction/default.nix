@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "4f670fb39bcd5753c409b409396a0229669dcf0a82a6ce953f5c3eaaf765cc69";
   };
 
-  buildInputs = [ ecto-pcl opencv-candidate cmake-modules sensor-msgs object-recognition-core ecto ecto-image-pipeline ];
-  propagatedBuildInputs = [ ecto-pcl opencv-candidate object-recognition-core ecto meshlab ecto-image-pipeline ];
+  buildInputs = [ opencv-candidate cmake-modules sensor-msgs ecto-pcl object-recognition-core ecto ecto-image-pipeline ];
+  propagatedBuildInputs = [ opencv-candidate meshlab ecto-pcl object-recognition-core ecto ecto-image-pipeline ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''basic 3d reconstruction of an object from aligned Kinect data'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

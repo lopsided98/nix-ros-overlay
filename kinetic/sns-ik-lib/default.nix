@@ -22,6 +22,6 @@ buildRosPackage {
    in the supplied kinematic chain for collision avoidance,
    joint motion optimization, or additional task objectives or
    soft constraints.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

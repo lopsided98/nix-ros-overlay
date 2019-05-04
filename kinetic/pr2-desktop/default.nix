@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "329f83ab3a280f61827493de84cdf286e4ba0f19831f68d7fbc40e4d635ae74b";
   };
 
-  propagatedBuildInputs = [ pr2-ethercat-drivers pr2-simulator pr2-power-drivers desktop-full pr2-navigation rqt-pr2-dashboard pr2-apps pr2-base ];
+  propagatedBuildInputs = [ pr2-simulator desktop-full pr2-navigation rqt-pr2-dashboard pr2-apps pr2-base pr2-power-drivers pr2-ethercat-drivers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A metapackage to aggregate several packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

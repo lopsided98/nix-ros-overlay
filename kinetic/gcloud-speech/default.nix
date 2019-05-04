@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "b1b722a5ffeb893be63d92de5b8bbb18f567f82971d32195162b347b94f05cc4";
   };
 
-  buildInputs = [ grpc actionlib glog gflags gcloud-speech-msgs actionlib-msgs ];
-  propagatedBuildInputs = [ grpc actionlib glog gflags gcloud-speech-msgs actionlib-msgs ];
+  buildInputs = [ gflags actionlib-msgs grpc glog actionlib gcloud-speech-msgs ];
+  propagatedBuildInputs = [ gflags actionlib-msgs grpc glog actionlib gcloud-speech-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Google Cloud Speech client.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

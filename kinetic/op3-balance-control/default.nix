@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The op3_balance_control package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

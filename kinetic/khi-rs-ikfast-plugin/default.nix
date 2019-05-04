@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "8a48b0f3af3014306492b445ffe692919e052e03f0fd2df40d951f7ac075b2d8";
   };
 
-  buildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
-  propagatedBuildInputs = [ liblapack moveit-core pluginlib tf-conversions roscpp ];
+  buildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];
+  propagatedBuildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The khi_rs_ikfast_plugin package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

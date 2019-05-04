@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package enables you to record a rawlog from a ROS drive robot.
   At the moment the package is able to deal with odometry and 2d laser scans.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''Provides templates and scripts for creating qt-ros packages
      (similar to roscreate-pkg).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

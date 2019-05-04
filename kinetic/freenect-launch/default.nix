@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "c066e806f953b5f3e37aac19086bb8316b20bcf58437d7df63be5562589d669a";
   };
 
-  propagatedBuildInputs = [ rgbd-launch image-proc freenect-camera nodelet tf ];
+  propagatedBuildInputs = [ freenect-camera nodelet rgbd-launch image-proc tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files for freenect_camera to produce rectified, registered
     or disparity images.  Also produce point clouds and registered
     point clouds.  Based on the openni_launch package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

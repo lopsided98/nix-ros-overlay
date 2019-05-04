@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "a5990dab5aa09a34ec03073427930b0fcdd2728cc3ae6be67669d612a26975d2";
   };
 
-  buildInputs = [ dynamic-reconfigure image-transport gtest nodelet sensor-msgs roscpp image-geometry ];
-  propagatedBuildInputs = [ dynamic-reconfigure image-transport sensor-msgs nodelet roscpp image-geometry ];
+  buildInputs = [ image-transport gtest sensor-msgs roscpp image-geometry dynamic-reconfigure nodelet ];
+  propagatedBuildInputs = [ image-transport sensor-msgs roscpp image-geometry dynamic-reconfigure nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''depthimage_to_laserscan'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

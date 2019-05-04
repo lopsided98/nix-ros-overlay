@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''Contains scripts that are useful as prefix commands for nodes
     started by roslaunch.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The bcap service package includes a node for communicating ORiN from ROS.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

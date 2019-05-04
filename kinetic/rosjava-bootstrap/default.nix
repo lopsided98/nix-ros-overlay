@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Bootstrap utilities for rosjava builds.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

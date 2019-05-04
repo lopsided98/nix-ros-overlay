@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "fe60f794d6d5e1881b7738e06cbab7560c6cb163457be0e3312aea022e3a1745";
   };
 
-  buildInputs = [ ethercat-trigger-controllers pr2-controller-manager image-view pr2-bringup pr2-mannequin-mode camera-calibration ];
-  propagatedBuildInputs = [ ethercat-trigger-controllers pr2-controller-manager image-view pr2-bringup pr2-mannequin-mode camera-calibration ];
+  buildInputs = [ ethercat-trigger-controllers pr2-bringup pr2-mannequin-mode camera-calibration pr2-controller-manager image-view ];
+  propagatedBuildInputs = [ ethercat-trigger-controllers pr2-bringup pr2-mannequin-mode camera-calibration pr2-controller-manager image-view ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Complete functionality tests for PR2. Contains utilities designed to test and verify devices, mechanicals and sensors.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

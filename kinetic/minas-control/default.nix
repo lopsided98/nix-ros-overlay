@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "8c17756f8b1d89c736f04fb45a149ddc3da5e172f4d69198c4c42aa9e751d02c";
   };
 
-  buildInputs = [ controller-manager soem hardware-interface realtime-tools trajectory-msgs sensor-msgs joint-limits-interface tinyxml ethercat-manager diagnostic-updater transmission-interface ];
+  buildInputs = [ controller-manager soem hardware-interface trajectory-msgs realtime-tools sensor-msgs joint-limits-interface ethercat-manager tinyxml diagnostic-updater transmission-interface ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ controller-manager hardware-interface realtime-tools trajectory-msgs sensor-msgs joint-limits-interface tinyxml ethercat-manager diagnostic-updater transmission-interface ];
+  propagatedBuildInputs = [ controller-manager hardware-interface trajectory-msgs realtime-tools sensor-msgs joint-limits-interface ethercat-manager tinyxml diagnostic-updater transmission-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains ros_control based robot controller for PANASONIC MINAS EtherCAT Motor Driver Control System'';
-    #license = lib.licenses.GPLv2;
+    license = with lib.licenses; [ gpl2 bsdOriginal ];
   };
 }

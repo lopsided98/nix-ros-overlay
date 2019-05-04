@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Clearpath Husky URDF description'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

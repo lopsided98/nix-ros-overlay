@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Models for Hebi components and hebiros'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

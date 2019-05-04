@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''flexbe_onboard implements the robot-side of the behavior engine from where all behaviors are started.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

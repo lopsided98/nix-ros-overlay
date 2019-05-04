@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "46d28885ce35f865ff4408dc116e7f244723b584f60a0f36ff4f66564b294d23";
   };
 
-  buildInputs = [ cmake-modules boost libGLU libGL opencv3 tinyxml roscpp ];
-  propagatedBuildInputs = [ boost libGLU libGL opencv3 tinyxml roscpp ];
+  buildInputs = [ cmake-modules boost tinyxml roscpp libGLU libGL opencv3 ];
+  propagatedBuildInputs = [ boost tinyxml roscpp libGLU libGL opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''robbie_architecture'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

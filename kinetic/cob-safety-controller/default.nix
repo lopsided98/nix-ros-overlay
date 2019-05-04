@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package is a substitute for the private implementation of cob_safety_controller package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

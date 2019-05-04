@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages, services and actions used by play_motion.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

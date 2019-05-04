@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Capabilities for Roch'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

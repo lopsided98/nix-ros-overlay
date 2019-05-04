@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Provides teleoperation using keyboard for OpenManipulator.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

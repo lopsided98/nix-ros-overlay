@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "956ff4fcb79a48c86900de082ebaffad54e7ebf32d41cb4503ebca8f2d0ec426";
   };
 
-  buildInputs = [ diagnostic-updater nav-msgs geometry-msgs diagnostic-msgs sensor-msgs tf robotnik-msgs roscpp ];
-  propagatedBuildInputs = [ diagnostic-updater nav-msgs geometry-msgs diagnostic-msgs sensor-msgs tf robotnik-msgs roscpp ];
+  buildInputs = [ sensor-msgs robotnik-msgs roscpp diagnostic-updater nav-msgs diagnostic-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs robotnik-msgs roscpp diagnostic-updater nav-msgs diagnostic-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Control the robot joints in all kinematic configurations, publishes odom topic and, 
 	  if configured, also tf odom to base_link. Usually takes as input joystick commands 
 	  and generates as outputs references for the gazebo controllers defined in summit_xl_control.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Interactive control for the TurtleBot using RViz and interactive markers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

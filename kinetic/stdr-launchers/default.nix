@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "04d61a4dc59073b1ac1e61b41ec4f14c29e497748ea3a3d72ff5b316f918a8b2";
   };
 
-  propagatedBuildInputs = [ stdr-server rviz stdr-gui stdr-robot stdr-resources ];
+  propagatedBuildInputs = [ stdr-server stdr-robot rviz stdr-gui stdr-resources ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launch files, to easily bringup server, robots, guis'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

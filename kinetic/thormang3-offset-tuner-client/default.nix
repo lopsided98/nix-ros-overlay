@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "1a9d974bcbee93804bc5836e02285417a39f59fe7e247d590ec615181c5181b6";
   };
 
-  buildInputs = [ libyamlcpp qt4 roslib qt-build std-msgs roscpp thormang3-offset-tuner-msgs ];
-  propagatedBuildInputs = [ libyamlcpp qt4 roslib qt-build std-msgs roscpp thormang3-offset-tuner-msgs ];
+  buildInputs = [ qt4 libyamlcpp thormang3-offset-tuner-msgs roslib qt-build std-msgs roscpp ];
+  propagatedBuildInputs = [ qt4 libyamlcpp thormang3-offset-tuner-msgs roslib qt-build std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The GUI program that can adjust offset of THORMANG3.
      It is used with the thormang3_offset_tuner_server.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

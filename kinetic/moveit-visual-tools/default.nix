@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Helper functions for displaying and debugging MoveIt! data in Rviz via published markers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

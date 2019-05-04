@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''pr2_se_calibration_launch'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

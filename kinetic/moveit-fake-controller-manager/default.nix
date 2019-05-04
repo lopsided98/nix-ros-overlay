@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A fake controller manager plugin for MoveIt.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

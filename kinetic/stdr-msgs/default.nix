@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6b6018788a554d44f1ab86af880a8caf311952dd68a85f0b02f76400de4f6eb0";
   };
 
-  buildInputs = [ nav-msgs message-generation actionlib-msgs std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ nav-msgs message-runtime actionlib-msgs std-msgs geometry-msgs ];
+  buildInputs = [ actionlib-msgs nav-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs nav-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides msgs, services and actions for STDR Simulator.'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

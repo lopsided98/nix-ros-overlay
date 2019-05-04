@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "8677ac301049313b9abc88e2e4cc7f17a5f9929264e93f5bccdb81252b0b4953";
   };
 
-  propagatedBuildInputs = [ loki-demos loki-nav loki-teleop loki-description loki-bringup ];
+  propagatedBuildInputs = [ loki-nav loki-demos loki-teleop loki-description loki-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Metapackage for loki configuration'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

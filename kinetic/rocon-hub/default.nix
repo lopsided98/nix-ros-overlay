@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''A hub acts as a shared key-value store for multiple ros 
     systems (primarily used by gateways).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

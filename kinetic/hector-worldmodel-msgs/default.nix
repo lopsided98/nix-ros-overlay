@@ -21,6 +21,6 @@ buildRosPackage {
      The messages can be used to send percepts from images (hector_worldmodel_msgs/ImagePercept) or other sources
      (hector_worldmodel_msgs/PosePercept) to the hector_object_tracker node. The tracker publishes model updates as
      hector_worldmodel_msgs/Object messages and latches the whole model state as a hector_worldmodel_msgs/ObjectModel message.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

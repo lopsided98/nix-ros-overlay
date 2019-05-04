@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "9a79ccf3401919d0db73124204c9df3c80dfba29c79730c4bee69fa374e89ee1";
   };
 
-  propagatedBuildInputs = [ industrial-msgs simple-message industrial-trajectory-filters industrial-deprecated industrial-utils industrial-robot-client industrial-robot-simulator ];
+  propagatedBuildInputs = [ industrial-deprecated industrial-utils industrial-robot-client industrial-msgs simple-message industrial-trajectory-filters industrial-robot-simulator ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS-Industrial core stack contains packages and libraries for supporing industrial systems'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package containing message files'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

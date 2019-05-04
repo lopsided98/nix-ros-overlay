@@ -30,6 +30,6 @@ buildRosPackage {
    Since this package is not made by the MoveIt! development team (although with
    assistance from the them), please post issue reports to the designated
    tracker (not MoveIt!'s main tracker).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "e6f5a290c477b8bbc4e30a13f546d20d7e7c9c3133d2e7463d912c71bffda2b8";
   };
 
-  buildInputs = [ nav-msgs rospy std-msgs sensor-msgs tf ];
-  propagatedBuildInputs = [ laser-filters nav-msgs rospy std-msgs sensor-msgs roslib tf ];
+  buildInputs = [ sensor-msgs nav-msgs rospy std-msgs tf ];
+  propagatedBuildInputs = [ tf sensor-msgs laser-filters nav-msgs rospy std-msgs roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Filters a laser scan to remove points that are in the current static map'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

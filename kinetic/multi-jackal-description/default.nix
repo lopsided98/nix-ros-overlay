@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Spawns the Jackal model.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -21,6 +21,6 @@ buildRosPackage {
     This package describes basic function to control ROBOTIS MANIPULATOR-H.
     This module is based on position control.
     We provides joint space and task space control (forward kinematics, inverse kinematics).'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

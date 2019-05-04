@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "9371132c8b744d7a8e8e1d7bb6722e641b5b0549fb940187a7bf4e2fa09d8a7c";
   };
 
-  buildInputs = [ rostest message-generation actionlib-msgs actionlib trajectory-msgs ];
+  buildInputs = [ actionlib-msgs trajectory-msgs rostest message-generation actionlib ];
   propagatedBuildInputs = [ std-srvs cob-sound actionlib-msgs cob-mimic control-msgs trajectory-msgs pythonPackages.ipython pythonPackages.pygraphviz move-base-msgs rostest cob-light rospy message-runtime actionlib std-msgs cob-actions tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_script_server package provides a simple interface to operate Care-O-bot. It can be used via the python API or the actionlib interface.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

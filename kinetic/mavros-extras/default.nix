@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ cmake-modules sensor-msgs mavros roscpp urdf tf2-eigen visualization-msgs std-msgs tf mavros-msgs geometry-msgs ];
-  propagatedBuildInputs = [ tf sensor-msgs mavros roscpp urdf tf2-eigen std-msgs visualization-msgs mavros-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs mavros roscpp urdf tf2-eigen visualization-msgs std-msgs tf mavros-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Extra nodes and plugins for <a href="http://wiki.ros.org/mavros">MAVROS</a>.'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 lgpl2 bsdOriginal ];
   };
 }

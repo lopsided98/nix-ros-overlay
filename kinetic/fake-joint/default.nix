@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This metapackage depends on fake-joint related package for ros_control.'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

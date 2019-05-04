@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A C++ library for asynchronous serial communication'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

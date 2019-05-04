@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''OpenManipulator controller package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package is a set of messages and services for using thormang3_offset_tuner.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

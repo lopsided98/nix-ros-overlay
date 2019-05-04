@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS tools and scripts relates to tf'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

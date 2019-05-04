@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "e3b86d1d291cc24c956dd008025ebf3fd0320b121e5c22adc7bd6b2431f81dac";
   };
 
-  buildInputs = [ diagnostic-updater message-generation sensor-msgs roscpp robotnik-msgs geometry-msgs ];
-  propagatedBuildInputs = [ diagnostic-updater message-runtime sensor-msgs roscpp robotnik-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs robotnik-msgs diagnostic-updater message-generation roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs robotnik-msgs diagnostic-updater message-runtime roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rb1_base_pad package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

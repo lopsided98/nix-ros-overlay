@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''agvs Gazebo simulation packages'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

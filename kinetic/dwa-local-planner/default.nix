@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, base-local-planner, cmake-modules, nav-core, catkin, roscpp, nav-msgs, eigen, dynamic-reconfigure, tf, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, cmake-modules, base-local-planner, nav-core, catkin, roscpp, nav-msgs, eigen, dynamic-reconfigure, tf, pcl-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-dwa-local-planner";
   version = "1.14.4";
@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "7b552ce10750a1cdd98115344b812f0f213668133226f83cbbcd662af5a27dfc";
   };
 
-  buildInputs = [ costmap-2d pluginlib cmake-modules base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf pcl-conversions eigen ];
+  buildInputs = [ costmap-2d cmake-modules pluginlib base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf pcl-conversions eigen ];
   propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf eigen ];
   nativeBuildInputs = [ catkin ];
 
@@ -25,6 +25,6 @@ buildRosPackage {
         that can be set in a launch file. The parameters for this planner are also
         dynamically reconfigurable. This package's ROS wrapper adheres to the
         BaseLocalPlanner interface specified in the <a href="http://wiki.ros.org/nav_core">nav_core</a> package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -13,13 +13,13 @@ buildRosPackage {
   };
 
   buildInputs = [ master-discovery-fkie multimaster-msgs-fkie ];
-  propagatedBuildInputs = [ roslib rosgraph rospy master-discovery-fkie multimaster-msgs-fkie ];
+  propagatedBuildInputs = [ multimaster-msgs-fkie rosgraph rospy master-discovery-fkie roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Synchronize the local ROS master to the remote masters 
      discovered by master_discovery_fkie node. The registration
      of topics and services is only perform by local ROS master.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

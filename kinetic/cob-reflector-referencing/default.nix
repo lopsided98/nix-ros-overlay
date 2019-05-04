@@ -17,6 +17,6 @@ buildRosPackage {
   meta = {
     description = ''This package provides a node broadcasting a tf frame based on reflector markers detected within sensor_msgs::LaserScan messages.
     It can be used to position/reference a robot wrt to the reflektor markers.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

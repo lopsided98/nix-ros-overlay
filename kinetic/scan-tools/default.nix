@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "64e88ee545cbf17c8373709ea7e8e3fa2e07034ebebd567122b34f75b318ad6f";
   };
 
-  propagatedBuildInputs = [ ncd-parser laser-scan-matcher laser-scan-sparsifier laser-scan-splitter scan-to-cloud-converter laser-ortho-projector polar-scan-matcher ];
+  propagatedBuildInputs = [ laser-scan-splitter scan-to-cloud-converter laser-ortho-projector ncd-parser laser-scan-matcher laser-scan-sparsifier polar-scan-matcher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Laser scan processing tools.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal lgpl2 ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides a behavior trees core.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

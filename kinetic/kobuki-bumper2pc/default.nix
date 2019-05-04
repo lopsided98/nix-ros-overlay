@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "562175272121859d7332becc7eb3c297ae4f115c320542ed4b23f2e922f545d4";
   };
 
-  buildInputs = [ kobuki-msgs pluginlib sensor-msgs nodelet roscpp ];
-  propagatedBuildInputs = [ kobuki-msgs pluginlib sensor-msgs nodelet roscpp ];
+  buildInputs = [ kobuki-msgs pluginlib sensor-msgs roscpp nodelet ];
+  propagatedBuildInputs = [ kobuki-msgs pluginlib sensor-msgs roscpp nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Bumper/cliff to pointcloud nodelet:
     Publish bumpers and cliff sensors events as points in a pointcloud, so navistack can use them
     for poor-man navigation. Implemented as a nodelet intended to run together with kobuki_node.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

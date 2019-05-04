@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "5747755ea8abcd7d17c6113686df714a59b54e41f9cc6a281e7b999f52f1b5ea";
   };
 
-  propagatedBuildInputs = [ thormang3-navigation thormang3-offset-tuner-client thormang3-demo thormang3-action-script-player thormang3-foot-step-generator ];
+  propagatedBuildInputs = [ thormang3-navigation thormang3-demo thormang3-action-script-player thormang3-foot-step-generator thormang3-offset-tuner-client ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS packages for the thormang3_opc (meta package)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

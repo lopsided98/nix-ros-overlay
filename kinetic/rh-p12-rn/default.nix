@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "4ef2abc3c89fe45c21c13a400367baa1ec48c61ce6cc1c1ab1b196f6fd14fe05";
   };
 
-  propagatedBuildInputs = [ rh-p12-rn-base-module rh-p12-rn-gui rh-p12-rn-gazebo rh-p12-rn-base-module-msgs rh-p12-rn-manager rh-p12-rn-description ];
+  propagatedBuildInputs = [ rh-p12-rn-gazebo rh-p12-rn-base-module-msgs rh-p12-rn-manager rh-p12-rn-gui rh-p12-rn-description rh-p12-rn-base-module ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages packages for the ROBOTIS RH-P12-RN (meta package)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

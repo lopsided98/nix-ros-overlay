@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The denso robot gazebo package includes a launch file for simulating DENSO robot.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

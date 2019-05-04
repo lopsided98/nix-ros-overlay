@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "683485c3defaa7d347495dbb354af782651a08b3d8ec46454ece6238cfc2d769";
   };
 
-  buildInputs = [ shape-msgs message-generation actionlib-msgs household-objects-database-msgs std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ shape-msgs message-generation message-runtime actionlib-msgs household-objects-database-msgs std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ shape-msgs actionlib-msgs household-objects-database-msgs sensor-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ shape-msgs actionlib-msgs household-objects-database-msgs sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The manipulation_msgs package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

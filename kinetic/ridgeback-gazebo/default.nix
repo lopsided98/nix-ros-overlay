@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros ridgeback-gazebo-plugins ridgeback-control hector-gazebo-plugins ridgeback-description gazebo-ros-control gazebo-plugins ];
+  propagatedBuildInputs = [ gazebo-ros ridgeback-control hector-gazebo-plugins gazebo-plugins ridgeback-gazebo-plugins ridgeback-description gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Launchfiles to use Ridgeback in Gazebo.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

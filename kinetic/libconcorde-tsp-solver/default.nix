@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Wrapper for the concorde traveling salesman problem solver. The code was obtained from http://www.math.uwaterloo.ca/tsp/concorde/downloads/downloads.htm all rights of it go to the corresponding authors David Applegate, Robert Bixby, Vasek Chvatal and William Cook. 
 The library doesn't give a specific license, but is provided free for academic research use, for further licensing options contact William Cook.'';
-    #license = lib.licenses.free for academic research, for further licensing contact Wiliam Cook;
+    license = with lib.licenses; [ "free for academic research, for further licensing contact Wiliam Cook" ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The wireless_watcher package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

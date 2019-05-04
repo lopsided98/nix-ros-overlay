@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ rqt-py-common ];
-  propagatedBuildInputs = [ roslaunch rqt-gui-py rqt-console rospy rqt-py-common rqt-gui python-qt-binding ];
+  propagatedBuildInputs = [ roslaunch rqt-gui-py rqt-gui rqt-console rospy rqt-py-common python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This rqt plugin ROS package provides easy view of .launch files.
   User can also start and end node by node that are defined in those files.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -21,6 +21,6 @@ buildRosPackage {
     a port of the OpenNI driver that uses libfreenect instead, because
     on some systems with some devices it works better.
     Modified version of xiaoqiang_freenect_stack, add tilt angle control support'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

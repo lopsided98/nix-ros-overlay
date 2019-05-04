@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The kartech_linear_actuator_msgs package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

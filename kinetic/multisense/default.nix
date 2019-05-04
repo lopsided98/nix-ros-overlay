@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "e8cc9b3db8a6ee0fccbf2f38d9e3b2cf40236bc8ad05c73c9469ef4228bd13ac";
   };
 
-  propagatedBuildInputs = [ multisense-bringup multisense-description multisense-ros multisense-lib multisense-cal-check ];
+  propagatedBuildInputs = [ multisense-description multisense-ros multisense-cal-check multisense-bringup multisense-lib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''multisense catkin driver'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

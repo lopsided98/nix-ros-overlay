@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "bdd8484af7c55e07bac8e57c4cacd493d25bfc405012c5ebf69b95bd162e822f";
   };
 
-  propagatedBuildInputs = [ roslib rqt-robot-dashboard rospy cob-msgs rqt-gui ];
+  propagatedBuildInputs = [ rqt-gui rqt-robot-dashboard rospy cob-msgs roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cob_dashboard is a modified version of [[pr2_dashboard]].'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

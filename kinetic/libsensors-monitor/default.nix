@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A ROS node for using libsensors to provide diagnostics information about the sensors on a computer system.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides an RTT service and service-requester for associating RTT component properties with ROS parameters'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

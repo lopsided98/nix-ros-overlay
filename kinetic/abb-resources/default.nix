@@ -22,6 +22,6 @@ buildRosPackage {
       This package contains common urdf / xacro resources used by
       ABB related packages.
     </p>'';
-    #license = lib.licenses.Apache2;
+    license = with lib.licenses; [ asl20 ];
   };
 }

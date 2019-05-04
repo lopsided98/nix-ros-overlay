@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Meta package that contains all essential packages for the robot recorder.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

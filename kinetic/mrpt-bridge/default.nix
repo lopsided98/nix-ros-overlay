@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ marker-msgs pcl sensor-msgs cv-bridge qt5.qtbase roscpp nav-msgs mrpt-msgs message-generation mrpt1 std-msgs tf pcl-conversions geometry-msgs stereo-msgs ];
   checkInputs = [ gtest rosunit ];
-  propagatedBuildInputs = [ marker-msgs tf sensor-msgs cv-bridge message-generation mrpt-msgs message-runtime nav-msgs mrpt1 std-msgs roscpp geometry-msgs stereo-msgs ];
+  propagatedBuildInputs = [ marker-msgs tf sensor-msgs cv-bridge nav-msgs message-generation mrpt-msgs message-runtime mrpt1 std-msgs roscpp geometry-msgs stereo-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''C++ library to convert between ROS messages and MRPT classes'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

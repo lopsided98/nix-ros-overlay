@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "446f54e7e025a15b810c4a99aaf5a74252ef8965e6b267e09a85bb827042750d";
   };
 
-  buildInputs = [ nav-msgs rospy std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ nav-msgs rospy std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs nav-msgs rospy std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs nav-msgs rospy std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for turtlebot3 automatic_parking. You need a reflective tape and real robots. You can see parking spot using this pacakge on rviz.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

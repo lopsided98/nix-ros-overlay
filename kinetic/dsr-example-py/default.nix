@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "82f6c00df71dc8e33c7c07662f5ae3d0c2e7a01a4d628c09a20116131cfa4e75";
   };
 
-  buildInputs = [ dsr-msgs message-generation actionlib-msgs actionlib rospy ];
-  propagatedBuildInputs = [ dsr-msgs actionlib message-runtime actionlib-msgs rospy ];
+  buildInputs = [ dsr-msgs actionlib-msgs message-generation actionlib rospy ];
+  propagatedBuildInputs = [ dsr-msgs actionlib-msgs actionlib message-runtime rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The dsr_example Python package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

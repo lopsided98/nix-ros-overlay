@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package wraps the libpcan to use it as a ros dependency'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "b002c8e6ee0921a4a57d6bef4a2baaf488d4116e2fbf3945380c416190db2768";
   };
 
-  buildInputs = [ dynamic-tf-publisher jsk-interactive-marker visualization-msgs actionlib rospy mk rosbuild geometry-msgs ];
+  buildInputs = [ mk rosbuild dynamic-tf-publisher jsk-interactive-marker actionlib rospy visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ dynamic-tf-publisher jsk-interactive-marker actionlib rospy visualization-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''jsk_interactive'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

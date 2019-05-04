@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "9c42cd4a7cf81130e9353c83b14ad314fe0067aca39540e90a232de6ff21c7d7";
   };
 
-  propagatedBuildInputs = [ nextage-gazebo nextage-moveit-config nextage-ik-plugin nextage-calibration nextage-description nextage-ros-bridge ];
+  propagatedBuildInputs = [ nextage-gazebo nextage-moveit-config nextage-calibration nextage-ik-plugin nextage-description nextage-ros-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rtmros_nextage package is a ROS interface for <a href="http://nextage.kawada.jp/en/">Nextage</a> dual-armed robot from Kawada Robotics Inc.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

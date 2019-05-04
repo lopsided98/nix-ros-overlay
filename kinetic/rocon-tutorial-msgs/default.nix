@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages used by rocon tutorials.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

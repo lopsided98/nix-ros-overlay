@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''monitor the status of xiaoqiang'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

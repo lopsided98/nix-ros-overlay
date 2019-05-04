@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, kdl-parser, roslint, orocos-kdl, boost, cmake-modules, sensor-msgs, catkin, roscpp, rospy, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, std-srvs, kdl-parser, orocos-kdl, cmake-modules, boost, roslint, sensor-msgs, catkin, roscpp, rospy, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-model-identifier";
   version = "0.7.4";
@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "dc1fb3802509fd59028e2a5ac05c198280804e857b79ad1536b3cc08a4549c58";
   };
 
-  buildInputs = [ std-srvs kdl-parser orocos-kdl boost roslint cmake-modules sensor-msgs roscpp tf geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs kdl-parser orocos-kdl boost roslint cmake-modules sensor-msgs roscpp rospy tf geometry-msgs ];
+  buildInputs = [ std-srvs kdl-parser orocos-kdl cmake-modules boost roslint sensor-msgs roscpp tf geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs kdl-parser orocos-kdl cmake-modules boost roslint sensor-msgs roscpp rospy tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_model_identifier package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

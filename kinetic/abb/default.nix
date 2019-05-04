@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS-Industrial support for ABB manipulators (metapackage).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal asl20 ];
   };
 }

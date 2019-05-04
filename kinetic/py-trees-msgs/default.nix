@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "98321ee885da8d5be668962f5d3205adde0d61f4daf749db394412b42cd51945";
   };
 
-  buildInputs = [ uuid-msgs message-generation actionlib-msgs dynamic-reconfigure std-msgs ];
-  propagatedBuildInputs = [ uuid-msgs message-runtime actionlib-msgs dynamic-reconfigure std-msgs ];
+  buildInputs = [ actionlib-msgs uuid-msgs message-generation dynamic-reconfigure std-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs uuid-msgs message-runtime dynamic-reconfigure std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages used by py_trees_ros and some extras for the mock demos/tests.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

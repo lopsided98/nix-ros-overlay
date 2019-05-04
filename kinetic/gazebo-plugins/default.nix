@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "e5552128bf39a1db90a01d7163507a5557e58d8cf4e9fe70dc5f503aabe557d3";
   };
 
-  buildInputs = [ std-srvs rosconsole camera-info-manager trajectory-msgs cv-bridge polled-camera tf2-ros gazebo-dev rosgraph-msgs nav-msgs urdf rospy std-msgs dynamic-reconfigure roscpp nodelet tf gazebo-msgs geometry-msgs image-transport sensor-msgs diagnostic-updater message-generation angles ];
+  buildInputs = [ rosconsole cv-bridge polled-camera rosgraph-msgs rospy tf gazebo-msgs geometry-msgs image-transport message-generation angles std-srvs camera-info-manager trajectory-msgs tf2-ros gazebo-dev nav-msgs urdf std-msgs roscpp nodelet sensor-msgs diagnostic-updater dynamic-reconfigure ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ std-srvs rosconsole camera-info-manager trajectory-msgs cv-bridge polled-camera tf2-ros gazebo-dev rosgraph-msgs nav-msgs urdf rospy std-msgs dynamic-reconfigure roscpp nodelet tf gazebo-msgs geometry-msgs image-transport sensor-msgs diagnostic-updater message-runtime angles ];
+  propagatedBuildInputs = [ rosconsole cv-bridge polled-camera rosgraph-msgs rospy tf gazebo-msgs geometry-msgs image-transport message-runtime angles std-srvs camera-info-manager trajectory-msgs tf2-ros gazebo-dev nav-msgs urdf std-msgs roscpp nodelet sensor-msgs diagnostic-updater dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components.'';
-    #license = lib.licenses.BSD, Apache 2.0;
+    license = with lib.licenses; [ bsd2 ];
   };
 }

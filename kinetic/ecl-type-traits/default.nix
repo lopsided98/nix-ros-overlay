@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Extends c++ type traits and implements a few more to boot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

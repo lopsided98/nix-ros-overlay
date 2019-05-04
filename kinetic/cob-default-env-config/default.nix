@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains configuration files for the default environments for Care-O-bot supported by IPA.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

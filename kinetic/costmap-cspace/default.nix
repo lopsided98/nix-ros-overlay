@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''3-dof configuration space costmap package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

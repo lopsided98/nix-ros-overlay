@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "7aaa45e944e3dc066d942c9b66e961a3282691e0c83f53c9d5a4709edfaca1a0";
   };
 
-  buildInputs = [ naoqi-driver-py octomap boost dynamic-reconfigure camera-info-manager octomap-msgs ];
-  propagatedBuildInputs = [ naoqi-driver-py octomap boost dynamic-reconfigure camera-info-manager sensor-msgs camera-info-manager-py rospy ];
+  buildInputs = [ boost camera-info-manager octomap-msgs octomap dynamic-reconfigure naoqi-driver-py ];
+  propagatedBuildInputs = [ boost camera-info-manager sensor-msgs naoqi-driver-py octomap dynamic-reconfigure rospy camera-info-manager-py ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS driver for miscellaneous sensors on NAO.
     Python bindings for camera, sonar and octomap
     C++: bindings for camera only (requires NAOqi to build)'';
-    #license = lib.licenses.LGPL and Apache2;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "8b0b05a9c93ad57c56e1131b46e24ef8e6a9b6d8e2ec7dfc667a1a029688ce10";
   };
 
-  buildInputs = [ nav-msgs eigen image-transport sensor-msgs cv-bridge hector-map-tools geometry-msgs ];
-  propagatedBuildInputs = [ nav-msgs eigen image-transport sensor-msgs cv-bridge hector-map-tools geometry-msgs ];
+  buildInputs = [ image-transport sensor-msgs cv-bridge hector-map-tools nav-msgs eigen geometry-msgs ];
+  propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge hector-map-tools nav-msgs eigen geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''hector_compressed_map_transport provides means for transporting compressed map data through the use of image_transport.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

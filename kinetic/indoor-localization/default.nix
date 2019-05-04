@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The indoor_localization package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

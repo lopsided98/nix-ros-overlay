@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "a19f7d15fbd106a52180a34422c07cfd02e53070dee24380d2ed8c80678207d5";
   };
 
-  buildInputs = [ rosjava-build-tools pythonPackages.rospkg genmsg pythonPackages.catkin-pkg rosjava-bootstrap ];
-  propagatedBuildInputs = [ rosjava-build-tools pythonPackages.rospkg genmsg pythonPackages.catkin-pkg rosjava-bootstrap ];
+  buildInputs = [ rosjava-build-tools pythonPackages.rospkg rosjava-bootstrap genmsg pythonPackages.catkin-pkg ];
+  propagatedBuildInputs = [ rosjava-build-tools pythonPackages.rospkg rosjava-bootstrap genmsg pythonPackages.catkin-pkg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Java ROS message and service generators.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

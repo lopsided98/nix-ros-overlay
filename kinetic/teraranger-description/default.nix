@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The teraranger_description package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launch files for Summit XL simulation.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

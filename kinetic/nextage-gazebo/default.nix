@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ gazebo-ros nextage-moveit-config ros-controllers nextage-description gazebo-ros-control gazebo-plugins ];
+  propagatedBuildInputs = [ gazebo-ros nextage-moveit-config gazebo-plugins nextage-description gazebo-ros-control ros-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo simulation for NEXTAGE Open'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

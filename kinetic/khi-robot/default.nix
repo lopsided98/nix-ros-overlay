@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Meta package for khi_robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "78a8df7a9d2745ee43a3e25336fd8e2d23c4207b0277ce649bfc2ec63c1dd702";
   };
 
-  propagatedBuildInputs = [ joint-states-settler laser-cb-detector monocam-settler interval-intersection urdfdom-py ];
+  propagatedBuildInputs = [ laser-cb-detector monocam-settler interval-intersection joint-states-settler urdfdom-py ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a collection of launch files that can be helpful in configuring
     the calibration stack to run on your robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

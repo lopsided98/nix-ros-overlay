@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The Kobuki dashboard is a RQT-based plug-in for visualising data from Kobuki and giving easy access
     to basic functionalities.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

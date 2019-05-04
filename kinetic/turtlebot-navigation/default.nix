@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''turtlebot_navigation'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

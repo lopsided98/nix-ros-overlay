@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''This package implements a circle-like shape detector of the input image.
     It requires and input image and publish, at frame rate, a marked image
     and a stamped array of circle centers and radius.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

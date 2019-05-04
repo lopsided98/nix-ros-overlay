@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains an URDF description of the Katana arm and all supporting mesh files.'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

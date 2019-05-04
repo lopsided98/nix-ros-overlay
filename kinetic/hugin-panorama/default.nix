@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "14dc3c58b3a487febd3a4464c059b7c56fdad5540f1462c60c8e15fa3e39fd2d";
   };
 
-  buildInputs = [ std-srvs image-view rospy sensor-msgs cv-bridge ];
+  buildInputs = [ std-srvs sensor-msgs cv-bridge image-view rospy ];
   propagatedBuildInputs = [ std-srvs imagemagick hugin pythonPackages.rospkg sensor-msgs cv-bridge enblend-enfuse pythonPackages.opencv3 image-view rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Create panoramas in ROS using image snapshots or multiple video streams.'';
-    #license = lib.licenses.Unlicense;
+    license = with lib.licenses; [ "Unlicense" ];
   };
 }

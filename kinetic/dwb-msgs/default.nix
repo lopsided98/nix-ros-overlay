@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message/Service definitions specifically for the dwb_local_planner'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

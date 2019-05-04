@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Driver for the Innok Heros robot plattform'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

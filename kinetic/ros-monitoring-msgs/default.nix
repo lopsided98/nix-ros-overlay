@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for publishing monitoring data about ROS systems'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

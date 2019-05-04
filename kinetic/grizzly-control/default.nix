@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Clearpath Grizzly controller configurations'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

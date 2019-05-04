@@ -19,6 +19,6 @@ buildRosPackage {
     description = ''The manipulator_h_gazebo package
     This package provides GAZEBO simulation environment for ROBOTIS MANIPULATOR-H.
     We provides two controllers such as position and effort controllers.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

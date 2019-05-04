@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, camera-calibration-parsers, image-transport, sensor-msgs, cv-bridge, nodelet-topic-tools, catkin, roscpp, image-geometry, rostest, dynamic-reconfigure, nodelet }:
+{ lib, buildRosPackage, fetchurl, boost, camera-calibration-parsers, image-transport, sensor-msgs, cv-bridge, nodelet-topic-tools, catkin, image-geometry, rostest, nodelet, dynamic-reconfigure, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-image-proc";
   version = "1.12.23";
@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "9c74897935e80a200d6a3a28ee055889f69eca787c2be11095003f75b73b2aa2";
   };
 
-  buildInputs = [ boost image-transport sensor-msgs cv-bridge nodelet-topic-tools roscpp image-geometry dynamic-reconfigure nodelet ];
+  buildInputs = [ boost image-transport sensor-msgs nodelet-topic-tools cv-bridge image-geometry nodelet dynamic-reconfigure roscpp ];
   checkInputs = [ camera-calibration-parsers rostest ];
-  propagatedBuildInputs = [ cv-bridge nodelet dynamic-reconfigure image-transport sensor-msgs nodelet-topic-tools roscpp image-geometry ];
+  propagatedBuildInputs = [ image-transport sensor-msgs nodelet-topic-tools cv-bridge image-geometry nodelet dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Single image rectification and color processing.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

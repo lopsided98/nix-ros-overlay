@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "8355c6e39a67eb1bf6bebc024e7fde0abe69513dd72a067265318072c0ac0200";
   };
 
-  buildInputs = [ actionlib pythonPackages.pyaudio gflags actionlib-msgs gcloud-speech-msgs portaudio glog ];
-  propagatedBuildInputs = [ actionlib pythonPackages.pyaudio gflags actionlib-msgs gcloud-speech-msgs portaudio glog ];
+  buildInputs = [ portaudio pythonPackages.pyaudio gflags actionlib-msgs glog actionlib gcloud-speech-msgs ];
+  propagatedBuildInputs = [ portaudio pythonPackages.pyaudio gflags actionlib-msgs glog actionlib gcloud-speech-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Utilities and examples for gcloud_speech package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

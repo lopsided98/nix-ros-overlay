@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "f1ef6881e66611729e72cb1562936c27ef5cfe8b4c0d2d412ff39582ed9da533";
   };
 
-  propagatedBuildInputs = [ std-srvs rospy std-msgs roslaunch nao-interaction-msgs ];
+  propagatedBuildInputs = [ std-srvs nao-interaction-msgs rospy std-msgs roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for the Nao robot, providing access to NAOqi audio proxies'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

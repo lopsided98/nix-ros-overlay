@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Specialization of message_relay for clock'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

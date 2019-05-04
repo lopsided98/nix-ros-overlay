@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Visualization and rviz helpers for Heron.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

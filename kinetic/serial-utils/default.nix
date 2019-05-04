@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A package which adds useful additions to the serial package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

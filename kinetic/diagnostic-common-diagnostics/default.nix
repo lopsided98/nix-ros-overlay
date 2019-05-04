@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ diagnostic-updater rostest rospy ];
-  propagatedBuildInputs = [ diagnostic-updater pythonPackages.psutil rospy hddtemp tf ];
+  propagatedBuildInputs = [ pythonPackages.psutil diagnostic-updater rospy hddtemp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''diagnostic_common_diagnostics'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

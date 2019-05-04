@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The roomblock meta package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

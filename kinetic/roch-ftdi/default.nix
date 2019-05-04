@@ -21,6 +21,6 @@ buildRosPackage {
 	    This package contains tools for flashing the roch's FTDI chip (usually done at the factory).
 	    The special firmware for the FTDI chip (USB to serial converter) enables it to appear as 
 	    /dev/roch on the user's PC.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ kdl-conversions kdl-parser boost actionlib-msgs orocos-kdl control-msgs trajectory-msgs roscpp message-generation actionlib tf-conversions tf geometry-msgs ];
-  propagatedBuildInputs = [ kdl-conversions kdl-parser boost actionlib-msgs orocos-kdl control-msgs trajectory-msgs roscpp rospy message-runtime actionlib tf-conversions tf geometry-msgs ];
+  propagatedBuildInputs = [ kdl-conversions kdl-parser orocos-kdl boost actionlib-msgs control-msgs trajectory-msgs roscpp rospy message-runtime actionlib tf-conversions tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''cob_lookat_action'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

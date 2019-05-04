@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "8e04020090600f574236e8c6e4bd9aa6f8c9c9952839df279cb7bac4e86d6aad";
   };
 
-  propagatedBuildInputs = [ odometry-publisher-tutorial simple-navigation-goals-tutorial roomba-stage laser-scan-publisher-tutorial robot-setup-tf-tutorial navigation-stage point-cloud-publisher-tutorial ];
+  propagatedBuildInputs = [ simple-navigation-goals-tutorial robot-setup-tf-tutorial odometry-publisher-tutorial point-cloud-publisher-tutorial navigation-stage roomba-stage laser-scan-publisher-tutorial ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Navigation related tutorials.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

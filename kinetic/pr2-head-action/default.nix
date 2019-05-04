@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''The PR2 head action is a node that provides an action interface for
   pointing the head of the PR2.  It passes trajectory goals to the
   controller, and reports success when they have finished executing.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

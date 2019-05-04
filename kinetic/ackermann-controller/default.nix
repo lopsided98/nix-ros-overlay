@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "40b0ec4a814e6dc4a893490338a19c4940d72b422d9ba07e362b0517b81021b0";
   };
 
-  buildInputs = [ hardware-interface control-msgs tf realtime-tools control-toolbox roscpp nav-msgs urdf controller-interface angles forward-command-controller ];
-  propagatedBuildInputs = [ hardware-interface control-msgs tf realtime-tools control-toolbox roscpp nav-msgs urdf controller-interface angles forward-command-controller ];
+  buildInputs = [ hardware-interface control-msgs tf control-toolbox realtime-tools roscpp nav-msgs urdf controller-interface angles forward-command-controller ];
+  propagatedBuildInputs = [ hardware-interface control-msgs tf control-toolbox realtime-tools roscpp nav-msgs urdf controller-interface angles forward-command-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ackermann_controller package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

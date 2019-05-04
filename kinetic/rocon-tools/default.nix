@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''Utilities and tools developed for rocon, but usable beyond the boundaries
     of rocon.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

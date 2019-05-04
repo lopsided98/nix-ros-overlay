@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''hector_xacro_tools'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

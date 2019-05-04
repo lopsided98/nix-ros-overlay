@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Interface to the Dataspeed Inc. Power Distribution System (PDS)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

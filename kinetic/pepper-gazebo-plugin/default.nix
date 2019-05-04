@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ gazebo-ros pepper-description ];
-  propagatedBuildInputs = [ gazebo-ros ros-controllers ros-control pepper-control pepper-description gazebo-ros-control gazebo-plugins ];
+  propagatedBuildInputs = [ gazebo-ros ros-control pepper-description gazebo-plugins pepper-control gazebo-ros-control ros-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo plugin for Pepper robot'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

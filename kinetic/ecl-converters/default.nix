@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "88b6bc078843e94363cd3888a84c16d38d0c5ac077b46fe714a8ae73da054e46";
   };
 
-  buildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-type-traits ecl-concepts ecl-config ecl-mpl ];
-  propagatedBuildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-type-traits ecl-concepts ecl-config ecl-mpl ];
+  buildInputs = [ ecl-concepts ecl-exceptions ecl-license ecl-errors ecl-type-traits ecl-config ecl-mpl ];
+  propagatedBuildInputs = [ ecl-concepts ecl-exceptions ecl-license ecl-errors ecl-type-traits ecl-config ecl-mpl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
      the whole range of fundamental types (e.g. all integers, not just int, unsigned int).
      
      They will come as the need arises.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "aef49f304da2d0b29eeb5815a06c2c1132601b3f154f2d78a5d96b00c42e8276";
   };
 
-  propagatedBuildInputs = [ simple-grasping actionlib moveit-python fetch-gazebo teleop-twist-keyboard fetch-navigation fetch-moveit-config ];
+  propagatedBuildInputs = [ simple-grasping moveit-python teleop-twist-keyboard fetch-moveit-config actionlib fetch-navigation fetch-gazebo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Demos for fetch_gazebo package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Motion limiter package for collision prevention'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

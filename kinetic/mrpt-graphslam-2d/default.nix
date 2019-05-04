@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Implement graphSLAM using the mrpt-graphslam library, in an online fashion
   	by directly reading measurements off ROS Topics.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

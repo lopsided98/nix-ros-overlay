@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''multires_image'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

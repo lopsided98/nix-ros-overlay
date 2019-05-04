@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides automatic collision avoidance and is intended to be used for safer teleoperation of a robot base.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

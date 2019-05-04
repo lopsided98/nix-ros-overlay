@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A driver for the KVH DSP-3000 single-axis Fiber Optic Gyroscope.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

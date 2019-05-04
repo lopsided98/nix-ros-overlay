@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for representing state information, such as battery information and emergency stop status.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

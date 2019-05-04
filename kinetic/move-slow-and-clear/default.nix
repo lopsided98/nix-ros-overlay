@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''move_slow_and_clear'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

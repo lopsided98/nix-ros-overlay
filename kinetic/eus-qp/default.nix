@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''eus_qp is an interface of euslisp to solve qp problems with linear constraints.'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

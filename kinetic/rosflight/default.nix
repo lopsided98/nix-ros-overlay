@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "552f6f958e5b07566c3889f7a535c682d19d876c75bece00c72e656a04ebff77";
   };
 
-  buildInputs = [ std-srvs boost libyamlcpp git eigen-stl-containers sensor-msgs pkg-config roscpp eigen std-msgs tf geometry-msgs rosflight-msgs ];
+  buildInputs = [ std-srvs boost libyamlcpp eigen-stl-containers git sensor-msgs pkg-config roscpp eigen std-msgs tf geometry-msgs rosflight-msgs ];
   propagatedBuildInputs = [ std-srvs boost libyamlcpp eigen-stl-containers sensor-msgs roscpp eigen std-msgs tf geometry-msgs rosflight-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for interfacing to the ROSflight autopilot firmware over MAVLink'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

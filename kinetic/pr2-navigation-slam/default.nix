@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "e8796ab2fb592f81822a0bd9a1264543c25e85164d812d30dd01d2524b5bae78";
   };
 
-  propagatedBuildInputs = [ gmapping pr2-navigation-config pr2-move-base joint-trajectory-generator pr2-machine pr2-tuck-arms-action topic-tools move-base ];
+  propagatedBuildInputs = [ gmapping pr2-navigation-config joint-trajectory-generator topic-tools move-base pr2-move-base pr2-machine pr2-tuck-arms-action ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package holds launch files for running the'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

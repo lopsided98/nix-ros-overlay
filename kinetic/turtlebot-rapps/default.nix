@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The core set of turtlebot 'app manager' apps are defined in this package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

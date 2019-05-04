@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ message-generation dynamic-reconfigure ];
-  propagatedBuildInputs = [ message-runtime visualization-msgs dynamic-reconfigure rospy cob-script-server cob-msgs tf diagnostic-msgs ];
+  propagatedBuildInputs = [ dynamic-reconfigure cob-script-server message-runtime visualization-msgs rospy diagnostic-msgs cob-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Helper scripts for Care-O-bot'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

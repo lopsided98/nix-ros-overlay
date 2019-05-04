@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Javascript ROS message and service generators.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

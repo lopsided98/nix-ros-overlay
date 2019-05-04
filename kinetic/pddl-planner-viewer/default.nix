@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''a viewer of pddl_planner.'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

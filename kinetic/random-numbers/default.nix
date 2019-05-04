@@ -21,6 +21,6 @@ buildRosPackage {
     
   The constructor of the wrapper is guaranteed to be thread safe and initialize its random number generator to a random seed.
   Seeds are obtained using a separate and different random number generator.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

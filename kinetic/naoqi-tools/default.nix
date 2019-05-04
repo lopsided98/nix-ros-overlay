@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Set of tools provided by Aldebaran to convert Aldebaran files (URDF, blender...)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

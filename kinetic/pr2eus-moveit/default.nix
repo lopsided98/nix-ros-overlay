@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''pr2eus_moveit'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

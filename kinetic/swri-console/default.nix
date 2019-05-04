@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "bd8e294a9004e09b1eac382037172bc97ff33d703c06f1a5c83c428f26b6c4e9";
   };
 
-  buildInputs = [ rosbag-storage rosgraph-msgs boost roscpp qt5.qtbase ];
-  propagatedBuildInputs = [ rosbag-storage rosgraph-msgs boost roscpp qt5.qtbase ];
+  buildInputs = [ rosbag-storage boost qt5.qtbase rosgraph-msgs roscpp ];
+  propagatedBuildInputs = [ rosbag-storage boost qt5.qtbase rosgraph-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A rosout GUI viewer developed at Southwest Research Insititute as an
      alternative to rqt_console.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''ROS packages for the ROBOTIS OP3 (meta package).
     This meta package provides launch files and plug-in for Gazebo and RViz.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

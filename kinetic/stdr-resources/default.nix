@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Provides robot and sensor descripiton files for STDR Simulator.'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

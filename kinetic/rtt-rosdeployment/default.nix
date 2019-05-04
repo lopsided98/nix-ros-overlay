@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''rtt_rosdeployment provides an RTT plugin to control an ocl deployment component over ROS service calls.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

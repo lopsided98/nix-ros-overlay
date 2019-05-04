@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "01ebea3b6c6e19181d58e687f0e0d342abf47fcfc2719337fa944da1e35eea30";
   };
 
-  propagatedBuildInputs = [ controller-manager twist-mux joint-state-controller controller-manager-msgs robot-state-publisher diff-drive-controller ];
+  propagatedBuildInputs = [ controller-manager twist-mux joint-state-controller diff-drive-controller controller-manager-msgs robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rb1_base_control package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''SainSmart USB relay driver controller'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

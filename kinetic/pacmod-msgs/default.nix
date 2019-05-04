@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message definition files for the PACMod driver'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

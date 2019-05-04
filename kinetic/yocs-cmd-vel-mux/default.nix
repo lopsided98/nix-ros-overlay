@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "ff197e158bd6a94b4991ccf8d2ae752e41c050dbb13792ac13ade322965a35fa";
   };
 
-  buildInputs = [ pluginlib dynamic-reconfigure libyamlcpp geometry-msgs nodelet roscpp ];
-  propagatedBuildInputs = [ pluginlib dynamic-reconfigure libyamlcpp geometry-msgs nodelet roscpp ];
+  buildInputs = [ pluginlib libyamlcpp roscpp dynamic-reconfigure nodelet geometry-msgs ];
+  propagatedBuildInputs = [ pluginlib libyamlcpp roscpp dynamic-reconfigure nodelet geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
      allowing one topic at a time to command the robot, based on priorities. It also deallocates current
      allowed topic if no messages are received after a configured timeout. All topics, together with their
      priority and timeout are configured through a YAML file, that can be reload at runtime.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

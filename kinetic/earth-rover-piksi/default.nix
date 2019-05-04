@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Meta-package for the earth_rover_piksi repository.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

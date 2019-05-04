@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''xiaoqiang remote control server'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

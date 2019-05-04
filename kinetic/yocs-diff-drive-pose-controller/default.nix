@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''A controller for driving a differential drive base to a pose goal or along a path specified by multiple poses.
     A pose consists of a 2D position (x,y) and a 1D orientation (theta).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "d9acd74049bd95ccf03011c7e12a513f4b0cc7590ab32821475ceea877ea3e6a";
   };
 
-  buildInputs = [ pcl-ros neonavigation-common eigen sensor-msgs roscpp eigen-conversions geometry-msgs ];
+  buildInputs = [ sensor-msgs neonavigation-common eigen eigen-conversions roscpp pcl-ros geometry-msgs ];
   checkInputs = [ rostest roslint ];
-  propagatedBuildInputs = [ pcl-ros neonavigation-common eigen sensor-msgs roscpp eigen-conversions geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs neonavigation-common eigen eigen-conversions roscpp pcl-ros geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''OBJ file to pointcloud message converter package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

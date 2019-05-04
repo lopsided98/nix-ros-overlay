@@ -19,6 +19,6 @@ buildRosPackage {
     description = ''The manipulator_h_description package
     This package includes URDF model of ROBOTIS MANIPULATOR-H.
     Additionally, we provide full kinematics and dynamics information of each link.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

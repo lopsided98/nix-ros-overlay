@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ diagnostic-updater swri-profiler-msgs roscpp std-msgs ];
-  propagatedBuildInputs = [ diagnostic-updater std-msgs swri-profiler-msgs rosbridge-server roscpp ];
+  propagatedBuildInputs = [ swri-profiler-msgs rosbridge-server diagnostic-updater std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''swri_profiler provides basic tools for real-time selective
     profiling of ROS C++ nodes.'';
-    #license = lib.licenses.Copyright SwRI;
+    license = with lib.licenses; [ "Copyright SwRI" ];
   };
 }

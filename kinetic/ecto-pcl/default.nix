@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "2691d2245038c7a7c396b770a090096c80c2734b33318f2ec80b4d823a1b6553";
   };
 
-  buildInputs = [ proj boost sensor-msgs pcl-conversions ecto ];
+  buildInputs = [ boost sensor-msgs proj pcl-conversions ecto ];
   checkInputs = [ pythonPackages.nose rosunit ];
-  propagatedBuildInputs = [ proj boost sensor-msgs pcl-conversions ecto ];
+  propagatedBuildInputs = [ boost sensor-msgs proj pcl-conversions ecto ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Ecto bindings for common PCL functionality.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

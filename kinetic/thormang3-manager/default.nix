@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ thormang3-gripper-module thormang3-base-module thormang3-head-control-module robotis-controller roscpp thormang3-walking-module thormang3-manipulation-module thormang3-feet-ft-module thormang3-action-module ];
-  propagatedBuildInputs = [ thormang3-gripper-module thormang3-base-module thormang3-description thormang3-head-control-module robotis-controller thormang3-feet-ft-module thormang3-walking-module thormang3-manipulation-module roscpp thormang3-imu-3dm-gx4 thormang3-action-module ];
+  propagatedBuildInputs = [ thormang3-gripper-module thormang3-base-module thormang3-description thormang3-head-control-module robotis-controller roscpp thormang3-walking-module thormang3-manipulation-module thormang3-feet-ft-module thormang3-imu-3dm-gx4 thormang3-action-module ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package describes robot manager to execute THORMANG3's motion modules.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

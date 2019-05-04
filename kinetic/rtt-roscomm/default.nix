@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''rtt_roscomm provides the necessary template files and cmake macros for
     automatic rtt typekit and transport generation from ROS msg files'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package includes ROS messages and services for the rh_p12_rn packages'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

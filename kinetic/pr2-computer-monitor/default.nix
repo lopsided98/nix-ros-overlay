@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Monitors the computer's processor and hard drives of the PR2 and publishes data to diagnostics.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

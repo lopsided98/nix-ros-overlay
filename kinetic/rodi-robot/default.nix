@@ -21,6 +21,6 @@ buildRosPackage {
     description = ''RoDI ROS package.
     Allows to control a RoDI from the Robot Operating System (ROS) without the need 
     to flash a custom firmware and just using the default firmware web services API.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A cascade of PID controllers for acceleration, velocity, and position control.'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

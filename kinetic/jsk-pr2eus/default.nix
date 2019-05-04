@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''<p>Metapackage that contains robot eus client package for jsk-ros-pkg</p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

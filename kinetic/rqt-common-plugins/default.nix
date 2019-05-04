@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "a13b1827d40b38442e56d9fda372cc2538828711657ec6db3476878252cba673";
   };
 
-  propagatedBuildInputs = [ rqt-srv rqt-action rqt-web rqt-topic rqt-launch rqt-py-console rqt-publisher rqt-bag rqt-msg rqt-console rqt-plot rqt-shell rqt-dep rqt-logger-level rqt-graph rqt-reconfigure rqt-top rqt-service-caller rqt-py-common rqt-image-view rqt-bag-plugins ];
+  propagatedBuildInputs = [ rqt-srv rqt-launch rqt-py-console rqt-bag rqt-msg rqt-plot rqt-shell rqt-graph rqt-reconfigure rqt-top rqt-image-view rqt-action rqt-web rqt-topic rqt-publisher rqt-console rqt-dep rqt-logger-level rqt-service-caller rqt-py-common rqt-bag-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -27,6 +27,6 @@ buildRosPackage {
      <li><a href="http://ros.org/wiki/rqt_robot_plugins">rqt_robot_plugins</a> - rqt plugins that are particularly used with robots during their runtime.</li><br/>
     </ul>
    <br/>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

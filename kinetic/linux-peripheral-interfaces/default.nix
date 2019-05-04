@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''Simple scripts which help utilise, monitor, interact with computer
      hardware abstracted by a linux OS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

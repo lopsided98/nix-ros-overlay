@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides .msg and .srv files for use with the rtt_ros_integration packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

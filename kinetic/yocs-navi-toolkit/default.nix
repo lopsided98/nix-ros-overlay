@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "70d8ffe9e7e466a9b0929b3fbba8182560078459f079d539702cdab9b9dcffbc";
   };
 
-  buildInputs = [ costmap-2d nav-msgs base-local-planner ecl-linear-algebra tf roscpp ecl-build ];
-  propagatedBuildInputs = [ costmap-2d nav-msgs base-local-planner ecl-linear-algebra tf roscpp ecl-build ];
+  buildInputs = [ costmap-2d base-local-planner tf ecl-build nav-msgs ecl-linear-algebra roscpp ];
+  propagatedBuildInputs = [ costmap-2d base-local-planner tf ecl-build nav-msgs ecl-linear-algebra roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Ros navigation utilities.'';
-    #license = lib.licenses.Yujin Robot;
+    license = with lib.licenses; [ "Yujin Robot" ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Exotica solvers based on the Open Motion Planning Libary (OMPL)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

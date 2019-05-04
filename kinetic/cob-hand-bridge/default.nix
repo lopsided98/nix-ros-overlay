@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "f3b51ce3c2630d4b96cba7f599ec516ef2f3434399fe8d3f43317cfe7b5c47ef";
   };
 
-  buildInputs = [ diagnostic-updater std-srvs message-generation control-msgs actionlib angles sensor-msgs ];
+  buildInputs = [ std-srvs control-msgs sensor-msgs diagnostic-updater message-generation actionlib angles ];
   propagatedBuildInputs = [ std-srvs rosserial-python control-msgs sensor-msgs diagnostic-updater message-runtime actionlib std-msgs angles ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The cob_hand_bridge package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

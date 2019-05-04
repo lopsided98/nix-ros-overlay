@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''The romeo_bringup package 
     contains launch and configuration files required to bring ROS interfaces for Romeo up into a running state.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }
