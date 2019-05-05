@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "e3ca51e2fb5abe5928049ac413b228ac2eda39a91be0866ae51289dd03447d5a";
   };
 
-  propagatedBuildInputs = [ arbotix-sensors arbotix-firmware arbotix-python arbotix-controllers arbotix-msgs ];
+  propagatedBuildInputs = [ arbotix-controllers arbotix-sensors arbotix-firmware arbotix-python arbotix-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ArbotiX Drivers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages specific to AStuff-provided sensors.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

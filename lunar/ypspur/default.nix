@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''YP-Spur is a mobile robot motion control software with coordinate frame based commands.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

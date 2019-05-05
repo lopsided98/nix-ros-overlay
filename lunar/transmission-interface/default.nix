@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "222b706df7e42fe63bdfac5ae3ca910771faf7d3350bd0ce0c9a43f33b13e202";
   };
 
-  buildInputs = [ hardware-interface cmake-modules pluginlib roscpp tinyxml ];
+  buildInputs = [ hardware-interface cmake-modules pluginlib tinyxml roscpp ];
   checkInputs = [ rosunit resource-retriever ];
   propagatedBuildInputs = [ tinyxml roscpp pluginlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Transmission Interface.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

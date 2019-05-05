@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Abstracted Messages from Perception Modalities'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

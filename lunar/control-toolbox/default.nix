@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "b38d1b39b0328ba87e4f7c6b777039183c65a8a3007063f84b491a202a0f8610";
   };
 
-  buildInputs = [ message-generation cmake-modules control-msgs dynamic-reconfigure std-msgs realtime-tools roscpp tinyxml ];
-  propagatedBuildInputs = [ cmake-modules message-runtime dynamic-reconfigure std-msgs realtime-tools control-msgs roscpp tinyxml ];
+  buildInputs = [ cmake-modules control-msgs realtime-tools tinyxml message-generation dynamic-reconfigure std-msgs roscpp ];
+  propagatedBuildInputs = [ cmake-modules control-msgs realtime-tools tinyxml message-runtime dynamic-reconfigure std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The control toolbox contains modules that are useful across all controllers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

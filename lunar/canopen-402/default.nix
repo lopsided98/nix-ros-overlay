@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''This implements the CANopen device profile for drives and motion control. CiA(r) 402'';
-    #license = lib.licenses.LGPLv3;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

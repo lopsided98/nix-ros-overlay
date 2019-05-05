@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "fda9dfebee41bcda0c90d734076e0091657bfb2717d922d7b9bc07b65f871d31";
   };
 
-  buildInputs = [ rostest message-generation boost actionlib-msgs rospy std-msgs roscpp ];
+  buildInputs = [ boost actionlib-msgs rostest message-generation rospy std-msgs roscpp ];
   checkInputs = [ rosnode ];
   propagatedBuildInputs = [ boost actionlib-msgs pythonPackages.wxPython rostest roslib message-runtime rostopic rospy std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
@@ -22,6 +22,6 @@ buildRosPackage {
     interfacing with preemptable tasks. Examples of this include moving
     the base to a target location, performing a laser scan and returning
     the resulting point cloud, detecting the handle of a door, etc.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "87615be0591915a3f0e7806f9d09c1f2c85a4413a74f3b73cf9eacb97fa26c8c";
   };
 
-  buildInputs = [ realtime-tools urdf controller-interface control-msgs angles control-toolbox forward-command-controller ];
-  propagatedBuildInputs = [ realtime-tools urdf controller-interface control-msgs angles control-toolbox forward-command-controller ];
+  buildInputs = [ control-msgs control-toolbox realtime-tools controller-interface urdf angles forward-command-controller ];
+  propagatedBuildInputs = [ control-msgs control-toolbox realtime-tools controller-interface urdf angles forward-command-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''velocity_controllers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

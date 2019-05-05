@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''swri_opencv_util'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

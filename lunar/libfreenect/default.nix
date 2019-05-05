@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ libusb1 xorg.libXi freeglut xorg.libXmu ];
-  propagatedBuildInputs = [ libusb1 xorg.libXi freeglut catkin xorg.libXmu ];
+  propagatedBuildInputs = [ catkin libusb1 xorg.libXi freeglut xorg.libXmu ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''Open source libraries that will enable the Kinect to be used with Windows, Linux, and Mac.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

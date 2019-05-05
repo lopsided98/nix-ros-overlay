@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Compressed_depth_image_transport provides a plugin to image_transport for transparently sending
     depth images (raw, floating-point) using PNG compression.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

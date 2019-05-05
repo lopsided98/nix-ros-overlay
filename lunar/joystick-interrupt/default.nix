@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "b7daf93a7d5658c25541f91a254237503e83d9a6ae61f3d75129e567862693bf";
   };
 
-  buildInputs = [ neonavigation-common topic-tools sensor-msgs roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs neonavigation-common topic-tools roscpp geometry-msgs ];
   checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ neonavigation-common topic-tools sensor-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs neonavigation-common topic-tools roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interrupt cmd_vel by joystick input'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

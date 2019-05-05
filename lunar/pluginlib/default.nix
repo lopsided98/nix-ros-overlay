@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "c438ec7f318c3d09c5170296cfd9a87b928e77fc12163a4b32efecd932ad7f5b";
   };
 
-  buildInputs = [ cmake-modules rosconsole boost tinyxml-2 class-loader roslib ];
-  propagatedBuildInputs = [ tinyxml-2 rosconsole boost class-loader roslib ];
+  buildInputs = [ cmake-modules rosconsole boost class-loader tinyxml-2 roslib ];
+  propagatedBuildInputs = [ rosconsole boost class-loader tinyxml-2 roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pluginlib package provides tools for writing and dynamically loading plugins using the ROS build infrastructure.
     To work, these tools require plugin providers to register their plugins in the package.xml of their package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

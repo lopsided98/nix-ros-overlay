@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Conversion functions between:
       - Eigen and KDL
       - Eigen and geometry_msgs.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

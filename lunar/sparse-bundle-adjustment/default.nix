@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS wrapper for the sparse bundle adjustment (sba) library (needed for slam_karto)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

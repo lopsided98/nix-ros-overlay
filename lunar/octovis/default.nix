@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''octovis is visualization tool for the OctoMap library based on Qt and libQGLViewer. See
   http://octomap.github.io for details.'';
-    #license = lib.licenses.GPLv2;
+    license = with lib.licenses; [ gpl2 ];
   };
 }

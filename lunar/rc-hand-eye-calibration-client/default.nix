@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rc_hand_eye_calibration_client package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "b712b236a3329fbfb8ada7feb104a64996eadcccaf3a386c3d40b4a658e58277";
   };
 
-  buildInputs = [ urdf kdl-parser std-msgs sensor-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ urdf kdl-parser p2os-driver std-msgs sensor-msgs tf geometry-msgs p2os-msgs ];
+  buildInputs = [ kdl-parser sensor-msgs urdf std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ kdl-parser p2os-driver sensor-msgs p2os-msgs urdf std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''URDF file descriptions for P2OS/ARCOS robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

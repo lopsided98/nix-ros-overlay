@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS messages which represent raw Novatel SPAN data.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

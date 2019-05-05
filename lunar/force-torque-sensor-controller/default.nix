@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "ba74f4ec064d803f6f37ba39cdf9c2b853b1f7aaa1deef5a45aa4c7bc7e17e61";
   };
 
-  buildInputs = [ hardware-interface controller-interface pluginlib realtime-tools roscpp geometry-msgs ];
-  propagatedBuildInputs = [ hardware-interface controller-interface pluginlib realtime-tools roscpp geometry-msgs ];
+  buildInputs = [ hardware-interface pluginlib realtime-tools controller-interface roscpp geometry-msgs ];
+  propagatedBuildInputs = [ hardware-interface pluginlib realtime-tools controller-interface roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controller to publish state of force-torque sensors'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

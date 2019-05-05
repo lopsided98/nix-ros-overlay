@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Placeholder package enabling generic export of media paths.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

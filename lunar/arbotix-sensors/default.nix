@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Extends the arbotix_node package with a number of more sophisticated ROS wrappers for common devices.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

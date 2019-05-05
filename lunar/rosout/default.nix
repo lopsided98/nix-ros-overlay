@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''System-wide logging mechanism for messages sent to the /rosout topic.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "47e11fc10d43777610523c157116e74e6afc08fcc9ab53954b818f9336dd719d";
   };
 
-  buildInputs = [ std-srvs rosconsole ogre1_9 rosbag tinyxml roslib nav-msgs urdf resource-retriever rospy std-msgs libGLU laser-geometry tf python-qt-binding roscpp visualization-msgs geometry-msgs cmake-modules pluginlib libyamlcpp image-transport sensor-msgs message-filters qt5.qtbase assimp urdfdom-headers interactive-markers eigen libGL map-msgs ];
-  propagatedBuildInputs = [ std-srvs rosconsole ogre1_9 rosbag tinyxml roslib nav-msgs urdf resource-retriever rospy std-msgs libGLU laser-geometry visualization-msgs tf python-qt-binding roscpp geometry-msgs pluginlib libyamlcpp image-transport sensor-msgs message-filters qt5.qtbase assimp urdfdom-headers interactive-markers eigen media-export libGL map-msgs ];
+  buildInputs = [ rosconsole tinyxml rospy tf geometry-msgs image-transport message-filters qt5.qtbase urdfdom-headers libGL roslib std-srvs ogre1_9 rosbag nav-msgs urdf resource-retriever std-msgs libGLU laser-geometry python-qt-binding roscpp visualization-msgs cmake-modules pluginlib libyamlcpp sensor-msgs assimp interactive-markers eigen map-msgs ];
+  propagatedBuildInputs = [ rosconsole tinyxml rospy tf geometry-msgs image-transport message-filters qt5.qtbase urdfdom-headers libGL roslib std-srvs ogre1_9 rosbag nav-msgs urdf resource-retriever std-msgs libGLU laser-geometry visualization-msgs python-qt-binding roscpp pluginlib libyamlcpp sensor-msgs assimp interactive-markers eigen media-export map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''3D visualization tool for ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal "CC-BY-SA-3.0" ];
   };
 }

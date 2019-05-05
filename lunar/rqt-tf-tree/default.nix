@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''rqt_tf_tree provides a GUI plugin for visualizing the ROS TF frame tree.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

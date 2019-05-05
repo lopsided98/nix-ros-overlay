@@ -22,6 +22,6 @@ buildRosPackage {
 
     Rosbridge_suite is a meta-package containing rosbridge, various front end
     packages for rosbridge like a WebSocket package, and helper packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

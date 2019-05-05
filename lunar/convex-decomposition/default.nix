@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Convex Decomposition Tool for Robot Model'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

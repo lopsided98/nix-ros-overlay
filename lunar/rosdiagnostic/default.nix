@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Command to print aggregated diagnostic contents to the command line'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Contains the controllers that run in realtime on the PR2 and supporting packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

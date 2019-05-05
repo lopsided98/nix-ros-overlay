@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''franka_description contains URDF files and meshes of Franka Emika robots'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

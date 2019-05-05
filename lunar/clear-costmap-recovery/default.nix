@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "39dbcad2d882c23ad16539135c5579378d53accd58ff60f1c6ac5f9221f9449b";
   };
 
-  buildInputs = [ costmap-2d cmake-modules pluginlib eigen nav-core tf roscpp ];
+  buildInputs = [ costmap-2d cmake-modules pluginlib nav-core roscpp eigen tf ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ costmap-2d pluginlib eigen nav-core tf roscpp ];
+  propagatedBuildInputs = [ costmap-2d pluginlib nav-core roscpp eigen tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a recovery behavior for the navigation stack that attempts to clear space by reverting the costmaps used by the navigation stack to the static map outside of a given area.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''UMD camera metapackage'';
-    #license = lib.licenses.GPLv2;
+    license = with lib.licenses; [ gpl2 ];
   };
 }

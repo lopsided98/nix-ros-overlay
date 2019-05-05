@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag, catkin, pythonPackages, genpy, std-msgs, genmsg, roslib }:
+{ lib, buildRosPackage, fetchurl, rosbag, genpy, pythonPackages, catkin, std-msgs, genmsg, roslib }:
 buildRosPackage {
   pname = "ros-lunar-rosmsg";
   version = "1.13.7";
@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   checkInputs = [ std-msgs ];
-  propagatedBuildInputs = [ genpy catkin pythonPackages.rospkg genmsg rosbag roslib ];
+  propagatedBuildInputs = [ pythonPackages.rospkg rosbag catkin genpy genmsg roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -23,6 +23,6 @@ buildRosPackage {
     types</a>. <tt>rossrv</tt> is a command-line tool for displaying
     information about <a href="http://www.ros.org/wiki/srv">ROS
     Service types</a>.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

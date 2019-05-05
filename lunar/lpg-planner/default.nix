@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''lpg_planner: LPGL Planner (http://zeus.ing.unibs.it/lpg/)'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ topic-tools roscpp rosserial-msgs std-msgs ];
-  propagatedBuildInputs = [ rosserial-python std-msgs topic-tools rosserial-msgs roscpp ];
+  propagatedBuildInputs = [ rosserial-python topic-tools rosserial-msgs std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A more performance- and stability-oriented server alternative implemented
     in C++ to rosserial_python.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

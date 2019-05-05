@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The iot_bridge provides a bi-directional bridge between ROS and the OpenHAB Home Automation system. This allows a ROS robot to connect to a vast variety of IoT devices such as motion detectors, Z-Wave devices, lighting, door locks, etc.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

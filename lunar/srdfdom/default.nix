@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "17325367e98333f0c2ad7c987606745c19b8dccbc0945b9b73bce601f49c2988";
   };
 
-  buildInputs = [ urdfdom-headers console-bridge urdf cmake-modules boost tinyxml urdfdom-py ];
+  buildInputs = [ cmake-modules boost tinyxml urdfdom-headers console-bridge urdf urdfdom-py ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ urdfdom-headers console-bridge boost tinyxml urdfdom-py ];
+  propagatedBuildInputs = [ boost tinyxml urdfdom-headers console-bridge urdfdom-py ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Parser for Semantic Robot Description Format (SRDF).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

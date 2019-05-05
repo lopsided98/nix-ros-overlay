@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The controller manager (CM) package provides the infrastructure to run controllers in a hard realtime loop.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

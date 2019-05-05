@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Tutorial showing how to compile your own C++ program with RViz displays and features.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

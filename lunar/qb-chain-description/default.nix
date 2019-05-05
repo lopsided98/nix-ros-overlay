@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the ROS description for complex chains of qbrobotics® devices.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

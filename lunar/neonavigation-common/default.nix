@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common headers for neonavigation meta-package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

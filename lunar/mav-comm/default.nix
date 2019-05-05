@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Contains messages and services for MAV communication'';
-    #license = lib.licenses.ASL 2.0;
+    license = with lib.licenses; [ "ASL 2.0" ];
   };
 }

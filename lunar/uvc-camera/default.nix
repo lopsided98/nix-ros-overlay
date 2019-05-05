@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "795a9d1f7d3c51475b048de7a84f9ac594110522f168cef86afb4c28af59d26d";
   };
 
-  buildInputs = [ libv4l camera-info-manager image-transport sensor-msgs nodelet roscpp ];
-  propagatedBuildInputs = [ libv4l camera-info-manager image-transport sensor-msgs nodelet roscpp ];
+  buildInputs = [ camera-info-manager image-transport sensor-msgs roscpp libv4l nodelet ];
+  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs roscpp libv4l nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -23,6 +23,6 @@ buildRosPackage {
      for stereo vision.
 
      Currently uses the base driver from Morgan Quigley's uvc_cam package.'';
-    #license = lib.licenses.GPLv2;
+    license = with lib.licenses; [ gpl2 ];
   };
 }

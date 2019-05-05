@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "cf451ed64ae6560f24ba3cddb4de6ba09cc3d1cc6f413903c316a0991e299149";
   };
 
-  buildInputs = [ hardware-interface controller-interface pluginlib realtime-tools sensor-msgs roscpp ];
-  propagatedBuildInputs = [ hardware-interface controller-interface pluginlib realtime-tools sensor-msgs roscpp ];
+  buildInputs = [ hardware-interface pluginlib realtime-tools sensor-msgs controller-interface roscpp ];
+  propagatedBuildInputs = [ hardware-interface pluginlib realtime-tools sensor-msgs controller-interface roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controller to publish state of IMU sensors'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

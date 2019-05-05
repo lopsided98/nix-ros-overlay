@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "5502c53d3770c04a7bcb406a81c21ec569f2ec30edb55b6eb72d8b3c9be774f0";
   };
 
-  buildInputs = [ rostest pluginlib rospy diagnostic-msgs roscpp diagnostic-aggregator ];
+  buildInputs = [ pluginlib rostest rospy diagnostic-msgs roscpp diagnostic-aggregator ];
   propagatedBuildInputs = [ pluginlib rospy diagnostic-msgs roscpp diagnostic-aggregator ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Basic diagnostic_aggregator tests are  in the'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

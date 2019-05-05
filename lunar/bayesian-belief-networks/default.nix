@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "2a7f118dee5c12f22487c9dc1093089386b9ff8bc64bd3ddd0883140da01f79a";
   };
 
-  buildInputs = [ message-generation rospy std-msgs mk git ];
+  buildInputs = [ mk git message-generation rospy std-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The bayesian_belief_networks package form https://github.com/eBay/bayesian-belief-networks, Authored by Neville Newey, Anzar Afaq, Copyright 2013 eBay Software Foundation'';
-    #license = lib.licenses.Apache License, Version 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

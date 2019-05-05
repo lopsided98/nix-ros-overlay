@@ -27,6 +27,6 @@ buildRosPackage {
     <a href="https://github.com/iit-DLSLab/hyq-description">here</a>.  
     
     See also <a href="https://dls.iit.it">IIT</a>.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "0458728c6af89e5e88ab359d615e32b0e4ea8d58dd9e72bc51f6ecb603faf93c";
   };
 
-  buildInputs = [ moveit-core pluginlib actionlib moveit-ros-perception angles dynamic-reconfigure eigen-conversions eigen ];
-  propagatedBuildInputs = [ moveit-core pluginlib actionlib moveit-ros-perception angles dynamic-reconfigure eigen-conversions ];
+  buildInputs = [ pluginlib eigen-conversions actionlib moveit-core angles moveit-ros-perception dynamic-reconfigure eigen ];
+  propagatedBuildInputs = [ pluginlib eigen-conversions actionlib moveit-core angles moveit-ros-perception dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Planning components of MoveIt that use ROS'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

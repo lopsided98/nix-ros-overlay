@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the ROS interface for qbrobotics® qbmove device.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

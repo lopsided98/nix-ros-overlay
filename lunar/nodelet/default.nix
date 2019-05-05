@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "2e33f0e4f3eca5affab08c6c7ee240071e0133516870b9137ac164a4f883d121";
   };
 
-  buildInputs = [ rosconsole pluginlib boost cmake-modules bondcpp message-generation std-msgs roscpp utillinux ];
+  buildInputs = [ rosconsole pluginlib boost bondcpp cmake-modules message-generation std-msgs roscpp utillinux ];
   propagatedBuildInputs = [ rosconsole pluginlib boost bondcpp message-runtime rospy std-msgs roscpp utillinux ];
   nativeBuildInputs = [ catkin ];
 
@@ -24,6 +24,6 @@ buildRosPackage {
     This package provides both the nodelet base class needed for
     implementing a nodelet, as well as the NodeletLoader class used
     for instantiating nodelets.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

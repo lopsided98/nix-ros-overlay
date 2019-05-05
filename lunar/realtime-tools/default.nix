@@ -27,6 +27,6 @@ buildRosPackage {
     created, the realtime publisher will start using it, which will
     result in major API changes for the realtime publisher (removal of
     all lock methods).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "b27ee639070879345d8df241ea5fe0f9b8c606f8d7e99af9244f5abecdb0d2ff";
   };
 
-  buildInputs = [ zlib autoconf git rsync libtool ];
+  buildInputs = [ autoconf git rsync libtool zlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Catkinized gRPC Package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

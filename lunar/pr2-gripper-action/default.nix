@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "863518298fab141c14c8a3f937098759cb138d76444ce5f63e011a526f3f2e58";
   };
 
-  buildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers actionlib-msgs actionlib roscpp pr2-mechanism-model robot-mechanism-controllers ];
-  propagatedBuildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers actionlib-msgs actionlib roscpp pr2-mechanism-model robot-mechanism-controllers ];
+  buildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers actionlib-msgs robot-mechanism-controllers actionlib roscpp pr2-mechanism-model ];
+  propagatedBuildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers actionlib-msgs robot-mechanism-controllers actionlib roscpp pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
   gripper. Users can specify what position to move to (while limiting the
   force) and the action will report success when the position is reached or
   failure when the gripper cannot move any longer.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

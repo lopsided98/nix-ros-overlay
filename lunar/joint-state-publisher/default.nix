@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains a tool for setting and publishing joint state values for a given URDF.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

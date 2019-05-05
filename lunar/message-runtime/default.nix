@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "dd6efff27eb4f5a02ec9cf1120c9b502abbd0f741caa57b4b3cdcc6b1ca21763";
   };
 
-  propagatedBuildInputs = [ genpy cpp-common roscpp-serialization roscpp-traits rostime ];
+  propagatedBuildInputs = [ cpp-common roscpp-traits rostime roscpp-serialization genpy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package modeling the run-time dependencies for language bindings of messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

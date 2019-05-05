@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "8337c21acfeb39f1bf045f2d38403fe6cead94f27b95c5661eee92bdb63578a1";
   };
 
-  buildInputs = [ rosconsole cpp-common roscpp rostest message-generation xmlrpcpp std-msgs rostime rosunit ];
-  propagatedBuildInputs = [ rosconsole xmlrpcpp message-runtime std-msgs rostime roscpp ];
+  buildInputs = [ cpp-common rosconsole roscpp rostest message-generation xmlrpcpp std-msgs rostime rosunit ];
+  propagatedBuildInputs = [ rosconsole roscpp message-runtime xmlrpcpp std-msgs rostime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
     know about the topics whose streams they are altering; instead, these
     tools deal with messages as generic binary blobs. This means they can be
     applied to any ROS topic.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

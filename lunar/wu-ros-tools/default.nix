@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A collection of tools for making a variety of generic ROS-related tasks easier.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

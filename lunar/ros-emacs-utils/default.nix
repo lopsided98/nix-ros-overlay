@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''A metapackage of Emacs utils for ROS.
     Only there for simplifying the release process.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

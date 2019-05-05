@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ gst_all_1.gst-plugins-base roscpp gst_all_1.gstreamer audio-common-msgs ];
-  propagatedBuildInputs = [ gst_all_1.gstreamer gst_all_1.gst-plugins-base roscpp gst_all_1.gst-plugins-ugly audio-common-msgs gst_all_1.gst-plugins-good ];
+  propagatedBuildInputs = [ gst_all_1.gst-plugins-ugly gst_all_1.gstreamer gst_all_1.gst-plugins-base roscpp audio-common-msgs gst_all_1.gst-plugins-good ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Outputs audio to a speaker from a source node.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

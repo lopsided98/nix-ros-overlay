@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package is a ROS wrapper for Alvar, an open source AR tag tracking library.'';
-    #license = lib.licenses.LGPL-2.1;
+    license = with lib.licenses; [ lgpl21 ];
   };
 }

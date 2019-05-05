@@ -23,6 +23,6 @@ buildRosPackage {
   manager</a> in the real time control loop. The package basically
   contains the C++ controller base class that all controllers need to
   inherit from.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

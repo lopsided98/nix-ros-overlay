@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "d3f45a158c97e793ae6bc4983f48917cd34936e8981f79429cc67a5ebada89e0";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py rqt-console dynamic-reconfigure rospy rqt-py-common rqt-gui python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui-py rqt-gui rqt-console dynamic-reconfigure rospy rqt-py-common python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -26,6 +26,6 @@ buildRosPackage {
 		However, currently as the name indicates, this pkg solely is dependent
 		on dynamic_reconfigure that allows access to only those params latched
 		to nodes.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

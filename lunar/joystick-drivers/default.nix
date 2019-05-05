@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''This metapackage depends on packages for interfacing common
     joysticks and human input devices with ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

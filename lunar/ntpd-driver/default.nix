@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "13fbef48869d39a1a1622e9bca602803959a148b4fe1f6be90fc1fc00ad04fc8";
   };
 
-  buildInputs = [ poco message-generation cmake-modules message-runtime sensor-msgs roscpp ];
-  propagatedBuildInputs = [ poco message-generation cmake-modules message-runtime sensor-msgs roscpp ];
+  buildInputs = [ poco cmake-modules sensor-msgs message-generation message-runtime roscpp ];
+  propagatedBuildInputs = [ poco cmake-modules sensor-msgs message-generation message-runtime roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ntpd_driver sends TimeReference message time to ntpd server'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

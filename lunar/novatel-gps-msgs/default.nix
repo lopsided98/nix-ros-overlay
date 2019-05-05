@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for proprietary (non-NMEA) sentences from Novatel GPS receivers.'';
-    #license = lib.licenses.Southwest Research Institute Proprietary;
+    license = with lib.licenses; [ "Southwest Research Institute Proprietary" ];
   };
 }

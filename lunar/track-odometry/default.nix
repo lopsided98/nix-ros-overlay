@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Odometry slip compensation package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

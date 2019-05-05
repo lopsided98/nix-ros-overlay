@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "43fdd160854708d2fb07ebdf5a854931136c714d66bcb9a55f33f5d323435dfb";
   };
 
-  buildInputs = [ std-srvs tf2-geometry-msgs tf2-ros nav-msgs xmlrpcpp std-msgs diagnostic-msgs nodelet roscpp geometry-msgs cmake-modules roslint libyamlcpp sensor-msgs message-filters eigen-conversions geographic-msgs diagnostic-updater tf2 message-generation eigen pythonPackages.catkin-pkg ];
+  buildInputs = [ diagnostic-msgs geometry-msgs roslint message-filters message-generation eigen-conversions std-srvs tf2-geometry-msgs tf2-ros nav-msgs xmlrpcpp std-msgs nodelet roscpp cmake-modules libyamlcpp sensor-msgs geographic-msgs diagnostic-updater tf2 eigen pythonPackages.catkin-pkg ];
   checkInputs = [ rostest rosbag rosunit ];
-  propagatedBuildInputs = [ std-srvs tf2-geometry-msgs tf2-ros nav-msgs xmlrpcpp std-msgs diagnostic-msgs nodelet roscpp geometry-msgs cmake-modules libyamlcpp sensor-msgs message-filters geographic-msgs diagnostic-updater tf2 message-runtime eigen eigen-conversions ];
+  propagatedBuildInputs = [ diagnostic-msgs geometry-msgs message-filters message-runtime eigen-conversions std-srvs tf2-geometry-msgs tf2-ros nav-msgs xmlrpcpp std-msgs nodelet roscpp cmake-modules libyamlcpp sensor-msgs geographic-msgs diagnostic-updater tf2 eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides nonlinear state estimation through sensor fusion of an abritrary number of sensors.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

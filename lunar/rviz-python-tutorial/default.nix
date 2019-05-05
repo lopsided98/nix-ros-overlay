@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Tutorials showing how to call into rviz internals from python scripts.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

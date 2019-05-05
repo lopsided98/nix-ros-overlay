@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''rqt_nav_view provides a gui for viewing navigation maps and paths.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package provides a set of typedef's that allow
   using Eigen datatypes in STL containers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

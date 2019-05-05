@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, actionlib-msgs, catkin, rostest, smach-msgs, actionlib, rostopic, rospy, std-msgs, smach }:
+{ lib, buildRosPackage, fetchurl, std-srvs, actionlib-msgs, catkin, rostest, smach-msgs, std-msgs, rostopic, actionlib, rospy, smach }:
 buildRosPackage {
   pname = "ros-lunar-smach-ros";
   version = "2.0.1";
@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   buildInputs = [ rostest ];
-  propagatedBuildInputs = [ std-srvs smach-msgs rostopic actionlib-msgs actionlib std-msgs smach rospy ];
+  propagatedBuildInputs = [ std-srvs actionlib-msgs rospy smach-msgs rostopic actionlib std-msgs smach ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -25,6 +25,6 @@ buildRosPackage {
     new library that takes advantage of very old concepts in order to
     quickly create robust robot behavior with maintainable and modular
     code.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

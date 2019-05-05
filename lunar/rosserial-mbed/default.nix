@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''rosserial for mbed platforms.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

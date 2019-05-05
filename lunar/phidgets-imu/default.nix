@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Driver for the Phidgets Spatial 3/3/3 devices'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

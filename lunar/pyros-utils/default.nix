@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "ca63a6f1acdddc3b64b1741839302b91f6ff30ba57d4bea50abd941e432a00fc";
   };
 
-  buildInputs = [ roslaunch rostest rosgraph roslint rospy catkin-pip ];
+  buildInputs = [ roslint catkin-pip rostest rosgraph rospy roslaunch ];
   checkInputs = [ pyros-test rosunit rosnode ];
   propagatedBuildInputs = [ rostest roslaunch rosgraph rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Miscellaneous tools for pyROS'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

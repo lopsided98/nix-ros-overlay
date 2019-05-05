@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Aldebaran's libqi: a core library for NAOqiOS development'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

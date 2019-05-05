@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Generates signed distance fields from grid maps.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

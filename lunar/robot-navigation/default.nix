@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "d10fb54482a3435d55e3b87beffa550a32135b7d80aa84531dc1f1f541240915";
   };
 
-  propagatedBuildInputs = [ dwb-local-planner nav-core-adapter nav-grid-pub-sub dlux-plugins nav-grid nav-grid-iterators dlux-global-planner nav-core2 costmap-queue dwb-critics dwb-plugins nav-2d-utils locomove-base dwb-msgs locomotor locomotor-msgs global-planner-tests nav-2d-msgs ];
+  propagatedBuildInputs = [ dwb-local-planner nav-core-adapter nav-grid-pub-sub dlux-plugins nav-grid dlux-global-planner nav-core2 costmap-queue dwb-critics nav-2d-msgs dwb-plugins nav-2d-utils locomove-base dwb-msgs locomotor locomotor-msgs global-planner-tests nav-grid-iterators ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The robot_navigation package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

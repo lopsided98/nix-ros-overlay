@@ -19,6 +19,6 @@ buildRosPackage {
     description = ''This stack contains drivers for the ethercat system and the peripherals
     that connect to it: motor control boards, fingertip sensors, texture
     projector, hand accelerometer.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal gpl1 ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "a8fa32299717ff9d99ddded5327f8638931c58687b225dd653afe75dc1ce6628";
   };
 
-  propagatedBuildInputs = [ people-velocity-tracker face-detector people-msgs people-tracking-filter leg-detector ];
+  propagatedBuildInputs = [ people-msgs leg-detector people-velocity-tracker people-tracking-filter face-detector ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The people stack holds algorithms for perceiving people from a number of sensors.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Driver for NovAtel receivers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

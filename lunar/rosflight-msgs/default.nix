@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message and service definitions for the ROSflight ROS stack'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

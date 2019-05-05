@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "2937b1415ed6848816da0f898d8ef09ed2165da94f474fdfbbfb59515349786c";
   };
 
-  buildInputs = [ costmap-2d cmake-modules pluginlib base-local-planner nav-core tf roscpp eigen ];
-  propagatedBuildInputs = [ costmap-2d pluginlib eigen nav-core tf roscpp ];
+  buildInputs = [ costmap-2d cmake-modules pluginlib base-local-planner nav-core roscpp eigen tf ];
+  propagatedBuildInputs = [ costmap-2d pluginlib nav-core roscpp eigen tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a recovery behavior for the navigation stack that attempts to clear space by performing a 360 degree rotation of the robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

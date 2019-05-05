@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "355deca6ce12fe8999f8a879cfe22f107faa619814458b70c6636bbc2e1b0abc";
   };
 
-  buildInputs = [ pr2-controllers-msgs actionlib actionlib-msgs rospy pr2-common-action-msgs trajectory-msgs ];
-  propagatedBuildInputs = [ pr2-controllers-msgs actionlib actionlib-msgs rospy pr2-common-action-msgs trajectory-msgs ];
+  buildInputs = [ pr2-controllers-msgs actionlib-msgs pr2-common-action-msgs trajectory-msgs actionlib rospy ];
+  propagatedBuildInputs = [ pr2-controllers-msgs actionlib-msgs pr2-common-action-msgs trajectory-msgs actionlib rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_tuck_arms_action package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

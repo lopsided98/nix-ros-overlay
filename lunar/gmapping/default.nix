@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "6ffffba079bb8d8a1b7612a8c83d4f2d7adc044eacc2449989934aa4ec360d72";
   };
 
-  buildInputs = [ rostest nav-msgs nodelet openslam-gmapping tf roscpp ];
-  propagatedBuildInputs = [ nav-msgs openslam-gmapping tf nodelet roscpp ];
+  buildInputs = [ openslam-gmapping tf roscpp rostest nav-msgs nodelet ];
+  propagatedBuildInputs = [ openslam-gmapping roscpp nav-msgs nodelet tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
   The gmapping package provides laser-based SLAM (Simultaneous Localization and Mapping), 
   as a ROS node called slam_gmapping. Using slam_gmapping, you can create a 2-D occupancy
   grid map (like a building floorplan) from laser and pose data collected by a mobile robot.'';
-    #license = lib.licenses.CreativeCommons-by-nc-sa-2.0;
+    license = with lib.licenses; [ "CC-BY-SA-3.0" ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "b6d54f5e5147ef4b039a7fa877cb78e701505ff8de3166bb5f2c17c53250d5d0";
   };
 
-  buildInputs = [ asmach dynamic-reconfigure std-msgs diagnostic-msgs pr2-msgs ieee80211-channels network-monitor-udp rospy ];
-  propagatedBuildInputs = [ asmach dynamic-reconfigure std-msgs diagnostic-msgs pr2-msgs ieee80211-channels network-monitor-udp rospy ];
+  buildInputs = [ ieee80211-channels network-monitor-udp rospy asmach dynamic-reconfigure std-msgs diagnostic-msgs pr2-msgs ];
+  propagatedBuildInputs = [ ieee80211-channels network-monitor-udp rospy asmach dynamic-reconfigure std-msgs diagnostic-msgs pr2-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''sdsdddsdsds'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal lgpl2 gpl1 ];
   };
 }

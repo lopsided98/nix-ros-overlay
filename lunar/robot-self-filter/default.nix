@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Filters the robot's body out of point clouds.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

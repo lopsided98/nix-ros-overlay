@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ suitesparse boost eigen libGLU libGL ];
-  propagatedBuildInputs = [ libGL suitesparse boost eigen libGLU catkin ];
+  propagatedBuildInputs = [ suitesparse boost catkin eigen libGLU libGL ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The libg2o library from http://openslam.org/g2o.html'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

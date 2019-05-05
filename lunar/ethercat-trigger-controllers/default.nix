@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "dfc4842857acfc88cd90fb7dfb0f56718b9b392198fe678362584b33abef39fb";
   };
 
-  buildInputs = [ message-generation pluginlib pr2-controller-interface std-msgs realtime-tools roscpp libtool diagnostic-msgs ];
+  buildInputs = [ pluginlib pr2-controller-interface realtime-tools libtool message-generation std-msgs diagnostic-msgs roscpp ];
   propagatedBuildInputs = [ pluginlib pr2-controller-interface realtime-tools libtool message-runtime rospy std-msgs diagnostic-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Controllers to operate the digital output of the motor controller
     boards and the projector board. This package has not been reviewed and
     should be considered unstable.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains messages specific to the Neuronics Katana arm.'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

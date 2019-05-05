@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "cae405da227ffef2c861f29c333532f3c10d9c4b56806a796f8e3f6959c14076";
   };
 
-  buildInputs = [ message-runtime sensor-msgs cv-bridge roscpp imagezero ];
+  buildInputs = [ sensor-msgs cv-bridge imagezero message-runtime roscpp ];
   propagatedBuildInputs = [ sensor-msgs cv-bridge message-runtime imagezero ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A library that provides convenient methods for manipulating ROS images with ImageZero'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package defines messages commonly used in mapping packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

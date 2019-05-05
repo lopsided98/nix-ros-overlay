@@ -22,6 +22,6 @@ buildRosPackage {
 
      Instead of using the KNI library directly, the <a href="/wiki/katana">katana</a>
      package should be used for communication with the Katana arm.'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A mouse teleop tool for holonomic mobile robots.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

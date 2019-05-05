@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Tutorials showing how to write plugins for RViz.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

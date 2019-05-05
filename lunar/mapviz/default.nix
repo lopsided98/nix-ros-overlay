@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "fe5d49cba57f66fea6a920f7f98e3499b1bf4267582eb97fa6f9c7b193525291";
   };
 
-  buildInputs = [ std-srvs rosapi rqt-gui cv-bridge xorg.libXi freeglut rqt-gui-cpp swri-yaml-util roscpp tf xorg.libXmu swri-transform-util pluginlib image-transport message-generation marti-common-msgs libqt-dev libqt-opengl-dev glew ];
-  propagatedBuildInputs = [ std-srvs rosapi rqt-gui cv-bridge xorg.libXi freeglut rqt-gui-cpp swri-yaml-util roscpp tf xorg.libXmu swri-transform-util pluginlib image-transport libqt-core libqt-opengl marti-common-msgs message-runtime glew ];
+  buildInputs = [ rqt-gui cv-bridge xorg.libXi freeglut swri-yaml-util tf xorg.libXmu swri-transform-util image-transport message-generation libqt-dev std-srvs rosapi rqt-gui-cpp roscpp pluginlib marti-common-msgs libqt-opengl-dev glew ];
+  propagatedBuildInputs = [ rqt-gui cv-bridge xorg.libXi freeglut swri-yaml-util tf xorg.libXmu swri-transform-util image-transport message-runtime libqt-opengl std-srvs rosapi rqt-gui-cpp roscpp pluginlib libqt-core marti-common-msgs glew ];
   nativeBuildInputs = [ catkin qt-qmake pkg-config ];
 
   meta = {
     description = ''mapviz'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

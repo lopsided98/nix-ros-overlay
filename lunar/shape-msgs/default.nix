@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package contains messages for defining shapes, such as simple solid
     object primitives (cube, sphere, etc), planes, and meshes.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

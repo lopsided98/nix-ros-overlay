@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''This package contains a script to generate calibration launch and configurationfiles for your robot.
     which is based on Michael Ferguson's calibration code'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

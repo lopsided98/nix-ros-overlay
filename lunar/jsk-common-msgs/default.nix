@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "2be9993a9fb506fb504b2c98056daf280f1cc5fae6a96f167271658e8a78fcb0";
   };
 
-  propagatedBuildInputs = [ speech-recognition-msgs jsk-hark-msgs jsk-footstep-msgs posedetection-msgs jsk-gui-msgs ];
+  propagatedBuildInputs = [ speech-recognition-msgs jsk-hark-msgs jsk-footstep-msgs jsk-gui-msgs posedetection-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>Metapackage that contains commonly used messages for jsk-ros-pkg</p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

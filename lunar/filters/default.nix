@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "7141ed6aa2c29c2e897a12a1ad77aa77420f29c1803cf73de2e7d8783b8e016c";
   };
 
-  buildInputs = [ rostest roslib rosconsole pluginlib roscpp ];
+  buildInputs = [ rosconsole pluginlib rostest roslib roscpp ];
   propagatedBuildInputs = [ rosconsole roslib pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''This library provides a standardized interface for processing data as a sequence 
     of filters.  This package contains a base class upon which to build specific implementations
     as well as an interface which dynamically loads filters based on runtime parameters.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

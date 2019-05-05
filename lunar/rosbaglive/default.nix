@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Plays rosbags as though they were happening NOW.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

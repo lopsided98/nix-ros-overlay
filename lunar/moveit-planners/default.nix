@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Metapacakge that installs all available planners for MoveIt'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

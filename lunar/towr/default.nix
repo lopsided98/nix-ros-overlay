@@ -24,6 +24,6 @@ buildRosPackage {
     The resulting Nonlinear Programming Problem (NLP) can then be solved with
     off-the-shelf solvers, e.g. Ipopt using the generic optimizer interface 
     <a href="http://wiki.ros.org/ifopt">ifopt</a>.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

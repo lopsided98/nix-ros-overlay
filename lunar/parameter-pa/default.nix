@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "032c38e7180a4ea2671925130753c8fe2515d21611e46701fa80e959034bda9d";
   };
 
-  buildInputs = [ roslib message-generation cmake-modules eigen roscpp ];
-  propagatedBuildInputs = [ roslib cmake-modules message-runtime eigen roscpp ];
+  buildInputs = [ cmake-modules roscpp message-generation eigen roslib ];
+  propagatedBuildInputs = [ cmake-modules roslib message-runtime eigen roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ProAut parameter package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

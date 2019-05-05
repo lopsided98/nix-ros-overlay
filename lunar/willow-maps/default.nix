@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Holds maps of Willow Garage that can be used for a number of different applications.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

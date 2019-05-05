@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains a device-independent API wrapper for qbrobotics® devices.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

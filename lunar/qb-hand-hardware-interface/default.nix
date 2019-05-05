@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, control-toolbox, catkin, qb-device-hardware-interface, roscpp, transmission-interface }:
+{ lib, buildRosPackage, fetchurl, hardware-interface, control-toolbox, catkin, transmission-interface, roscpp, qb-device-hardware-interface }:
 buildRosPackage {
   pname = "ros-lunar-qb-hand-hardware-interface";
   version = "2.0.0-r1";
@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "7b098f8ed2cea969b529b65c5ca89fa1a18c9b40cf7d8b735f2553c19c1fbb55";
   };
 
-  buildInputs = [ hardware-interface transmission-interface control-toolbox roscpp qb-device-hardware-interface ];
-  propagatedBuildInputs = [ hardware-interface transmission-interface control-toolbox roscpp qb-device-hardware-interface ];
+  buildInputs = [ hardware-interface control-toolbox transmission-interface roscpp qb-device-hardware-interface ];
+  propagatedBuildInputs = [ hardware-interface control-toolbox transmission-interface roscpp qb-device-hardware-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains the hardware interface for qbrobotics® qbhand device.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

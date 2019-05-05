@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Meta-package for the universal variant library.'';
-    #license = lib.licenses.GNU Lesser General Public License (LGPL);
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

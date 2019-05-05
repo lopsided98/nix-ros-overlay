@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "ace6beb1e31ef09315bed0c633658a1b7fde6c06bce38fb32ed85de99c1c8dcd";
   };
 
-  buildInputs = [ libusb1 diagnostic-updater roslaunch dynamic-reconfigure sensor-msgs roscpp ];
-  propagatedBuildInputs = [ libusb1 diagnostic-updater robot-state-publisher dynamic-reconfigure sensor-msgs roscpp libusb xacro ];
+  buildInputs = [ sensor-msgs libusb1 diagnostic-updater dynamic-reconfigure roslaunch roscpp ];
+  propagatedBuildInputs = [ sensor-msgs libusb1 diagnostic-updater robot-state-publisher dynamic-reconfigure roscpp libusb xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS driver for the SICK TiM and the SICK MRS 1000 laser scanners.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

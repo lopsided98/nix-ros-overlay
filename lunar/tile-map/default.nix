@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Tile map provides a slippy map style interface for visualizing 
      OpenStreetMap and GooleMap tiles.  A mapviz visualization plug-in is also
      implemented'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

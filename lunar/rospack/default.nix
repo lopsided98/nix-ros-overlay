@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "8fc699702c7489509b70df8fe2ced490c5fbbe489233f5940174c56d2b70bd77";
   };
 
-  buildInputs = [ python cmake-modules boost tinyxml-2 gtest pkg-config ];
+  buildInputs = [ python cmake-modules boost gtest pkg-config tinyxml-2 ];
   checkInputs = [ pythonPackages.coverage ];
-  propagatedBuildInputs = [ python ros-environment boost tinyxml-2 pythonPackages.rosdep pythonPackages.catkin-pkg pkg-config ];
+  propagatedBuildInputs = [ python ros-environment boost pythonPackages.rosdep pkg-config tinyxml-2 pythonPackages.catkin-pkg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS Package Tool'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

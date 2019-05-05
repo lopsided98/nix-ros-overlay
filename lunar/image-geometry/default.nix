@@ -21,6 +21,6 @@ buildRosPackage {
     geometrically. It interfaces the calibration parameters in sensor_msgs/CameraInfo
     messages with OpenCV functions such as image rectification, much as cv_bridge
     interfaces ROS sensor_msgs/Image with OpenCV data types.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

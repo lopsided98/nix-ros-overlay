@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''slam_gmapping contains a wrapper around gmapping which provides SLAM capabilities.'';
-    #license = lib.licenses.CreativeCommons-by-nc-sa-2.0;
+    license = with lib.licenses; [ "CC-BY-SA-3.0" ];
   };
 }

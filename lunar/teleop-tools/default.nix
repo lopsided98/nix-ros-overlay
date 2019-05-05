@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A set of generic teleoperation tools for any robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

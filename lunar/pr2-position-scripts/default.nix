@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains a number of scripts to set various components of the PR2. They are used in the apps to improve usablity.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

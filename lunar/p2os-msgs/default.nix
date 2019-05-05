@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Defines the messages that are used to communicate with the
     p2os_driver package and the ROS infrastructure.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

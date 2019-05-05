@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Roboception rc_visard support meta package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

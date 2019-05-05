@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The trac_ik_python package contains a python wrapper using SWIG
   for trac_ik_lib'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

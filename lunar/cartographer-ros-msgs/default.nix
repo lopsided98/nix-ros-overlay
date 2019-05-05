@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS messages for the cartographer_ros package.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

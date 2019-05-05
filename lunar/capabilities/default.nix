@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "b1ec88895ad45d5aa4037585a4be477757956978e9368726d6d996f8c78ff8f9";
   };
 
-  buildInputs = [ rostest std-srvs message-generation rospy std-msgs roslaunch ];
-  checkInputs = [ pythonPackages.mock pythonPackages.coverage pythonPackages.pep8 rosservice geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs message-runtime rospy std-msgs bondpy roslaunch nodelet pythonPackages.pyyaml ];
+  buildInputs = [ std-srvs rostest message-generation rospy std-msgs roslaunch ];
+  checkInputs = [ rosservice pythonPackages.coverage pythonPackages.mock pythonPackages.pep8 geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs bondpy pythonPackages.pyyaml message-runtime rospy std-msgs roslaunch nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package which implements capabilities, including code to parse capability interface specs, to parse capability provider specs, and implement the capability server.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''this package contains a set of messages that are used by the introspection
     interfaces for smach.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

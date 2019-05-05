@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, katana-gazebo-plugins, katana-msgs, katana-arm-gazebo, catkin, katana-description, katana-tutorials, katana, kni, katana-moveit-ikfast-plugin, katana-teleop }:
+{ lib, buildRosPackage, fetchurl, katana-gazebo-plugins, katana-msgs, katana-arm-gazebo, catkin, katana-tutorials, katana-description, katana, kni, katana-moveit-ikfast-plugin, katana-teleop }:
 buildRosPackage {
   pname = "ros-lunar-katana-driver";
   version = "1.1.2";
@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "4e6408ea9eeb476c9819d44575cad93600e145c900d7fd9be663c15f24ec82a4";
   };
 
-  propagatedBuildInputs = [ katana-gazebo-plugins katana-msgs katana-arm-gazebo katana-description katana-tutorials kni katana-teleop katana-moveit-ikfast-plugin katana ];
+  propagatedBuildInputs = [ katana-gazebo-plugins katana-msgs katana-arm-gazebo katana-tutorials katana-description kni katana-teleop katana-moveit-ikfast-plugin katana ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This stack contains all descriptions, drivers and bringup facilities for Neuronics Katana 450 arm.'';
-    #license = lib.licenses.BSD, GPL;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "e84b9d761c8baac1d016b1614a8b054378ea0edba329ae81535b3fc2ed125add";
   };
 
-  buildInputs = [ tf2 cmake-modules eigen sensor-msgs tf2-ros ];
+  buildInputs = [ cmake-modules sensor-msgs tf2-ros tf2 eigen ];
   checkInputs = [ rostest geometry-msgs ];
-  propagatedBuildInputs = [ tf2 rospy python-orocos-kdl sensor-msgs tf2-ros eigen ];
+  propagatedBuildInputs = [ python-orocos-kdl sensor-msgs tf2-ros tf2 rospy eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Small lib to transform sensor_msgs with tf. Most notably, PointCloud2'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

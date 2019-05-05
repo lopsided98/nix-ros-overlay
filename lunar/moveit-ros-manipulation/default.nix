@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Components of MoveIt used for manipulation'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

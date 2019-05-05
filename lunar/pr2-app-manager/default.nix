@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Scripts and tools for running the application manager on the PR2.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

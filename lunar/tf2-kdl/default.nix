@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "f890cd6c8a58266a3a409517318732c5859b9d643b5c875eb0ee4fbd619c3f66";
   };
 
-  buildInputs = [ tf2 cmake-modules orocos-kdl eigen tf2-ros ];
+  buildInputs = [ cmake-modules orocos-kdl tf2-ros tf2 eigen ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ tf2 orocos-kdl tf2-ros eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''KDL binding for tf2'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

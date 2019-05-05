@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Conversions between grid maps and OctoMap types.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

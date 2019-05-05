@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''rosbuild contains scripts for managing the CMake-based build system for ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

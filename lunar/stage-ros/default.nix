@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides ROS specific hooks for stage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

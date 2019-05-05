@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The urdf_sim_tutorial package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

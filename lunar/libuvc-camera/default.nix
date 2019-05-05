@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "bf421ac7035b8857015eec1f9ed7c726b7fdfc67e50bc7590b3120bbe936463b";
   };
 
-  buildInputs = [ dynamic-reconfigure camera-info-manager image-transport sensor-msgs nodelet libuvc roscpp ];
-  propagatedBuildInputs = [ dynamic-reconfigure camera-info-manager image-transport sensor-msgs nodelet libuvc roscpp ];
+  buildInputs = [ camera-info-manager image-transport sensor-msgs roscpp dynamic-reconfigure nodelet libuvc ];
+  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs roscpp dynamic-reconfigure nodelet libuvc ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''USB Video Class camera driver'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A templatized interface for overlaying a two dimensional grid on the world.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

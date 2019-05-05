@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for automatic topic configuration using rosserial.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
   meta = {
     description = ''Maintains the ecl licenses and also provides an install
      target for deploying licenses with the ecl libraries.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

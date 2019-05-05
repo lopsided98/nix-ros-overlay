@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "df5a75caebc3e567ba660b5f587b9cab8431fe2204f818334f85aa41473d16a0";
   };
 
-  buildInputs = [ pluginlib nav-grid-iterators sensor-msgs nav-core2 costmap-queue nav-2d-msgs nav-2d-utils angles roscpp dwb-local-planner geometry-msgs ];
+  buildInputs = [ pluginlib nav-grid-iterators nav-core2 costmap-queue sensor-msgs nav-2d-msgs nav-2d-utils angles roscpp dwb-local-planner geometry-msgs ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ pluginlib nav-grid-iterators sensor-msgs nav-core2 costmap-queue nav-2d-msgs nav-2d-utils angles roscpp dwb-local-planner geometry-msgs ];
+  propagatedBuildInputs = [ pluginlib nav-grid-iterators nav-core2 costmap-queue sensor-msgs nav-2d-msgs nav-2d-utils angles roscpp dwb-local-planner geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Implementations for dwb_local_planner TrajectoryCritic interface'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

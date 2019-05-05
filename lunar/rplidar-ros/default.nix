@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rplidar ros package, support rplidar A2/A1 and A3'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

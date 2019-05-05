@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs ps3joy angles actionlib-msgs pr2-common-action-msgs sensor-msgs polled-camera roscpp pr2-controller-manager urdf actionlib moveit-msgs pr2-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs ps3joy actionlib-msgs pr2-common-action-msgs polled-camera urdf actionlib moveit-msgs roscpp tf pr2-arm-kinematics geometry-msgs sensor-msgs pr2-mannequin-mode pr2-msgs pr2-controller-manager angles pr2-tuck-arms-action ];
+  propagatedBuildInputs = [ actionlib-msgs polled-camera actionlib tf geometry-msgs pr2-controller-manager angles pr2-msgs pr2-controllers-msgs pr2-mechanism-msgs ps3joy pr2-common-action-msgs urdf moveit-msgs roscpp pr2-arm-kinematics sensor-msgs pr2-mannequin-mode pr2-tuck-arms-action ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''pr2_teleop_general'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

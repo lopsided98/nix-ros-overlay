@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Extract geometry value of a vehicle from urdf'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

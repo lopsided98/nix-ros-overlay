@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Bindings and low-level controllers for ArbotiX-powered robots.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

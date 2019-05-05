@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ boost dynamic-reconfigure ];
-  propagatedBuildInputs = [ pluginlib boost dynamic-reconfigure nodelet roscpp message-filters ];
+  propagatedBuildInputs = [ pluginlib boost message-filters nodelet dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains common nodelet tools such as a mux, demux and throttle.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

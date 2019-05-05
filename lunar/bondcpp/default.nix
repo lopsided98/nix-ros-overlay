@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''C++ implementation of bond, a mechanism for checking when
     another process has terminated.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

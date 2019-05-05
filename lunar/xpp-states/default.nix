@@ -21,6 +21,6 @@ buildRosPackage {
     angular rates) and robot definitions in Cartesian and joint state
     used in the Xpp Motion Framework, as well as conversions to/from
     xpp_msgs.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

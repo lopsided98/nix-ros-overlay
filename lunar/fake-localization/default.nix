@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "5df350cd05f0dfaa73bb6371e89773ba71282fd8a2444e43b8f1f31d5c829da4";
   };
 
-  buildInputs = [ nav-msgs rosconsole angles rospy geometry-msgs tf message-filters roscpp ];
-  propagatedBuildInputs = [ nav-msgs rosconsole rospy geometry-msgs tf message-filters roscpp ];
+  buildInputs = [ rosconsole message-filters roscpp nav-msgs angles rospy tf geometry-msgs ];
+  propagatedBuildInputs = [ rosconsole message-filters roscpp nav-msgs rospy tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS node that simply forwards odometry information.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

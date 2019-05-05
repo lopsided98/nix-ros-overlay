@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "6d75252dff61cb5f56dcc6125a4c3019c7aec1156a31f96b5621adc3900ed87b";
   };
 
-  propagatedBuildInputs = [ bond-core dynamic-reconfigure actionlib pluginlib ros-core nodelet-core class-loader ];
+  propagatedBuildInputs = [ pluginlib ros-core class-loader bond-core actionlib dynamic-reconfigure nodelet-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A metapackage which extends ros_core and includes other basic non-robot tools like actionlib, dynamic reconfigure, nodelets, and pluginlib.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

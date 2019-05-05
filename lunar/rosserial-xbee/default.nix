@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "8a1a5b166064ca6ef3a2340468cd2e36598bf4dba63387a2d93582fe1415b920";
   };
 
-  propagatedBuildInputs = [ pythonPackages.pyserial rosserial-python rospy diagnostic-msgs rosserial-msgs ];
+  propagatedBuildInputs = [ pythonPackages.pyserial rosserial-python rosserial-msgs rospy diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -24,6 +24,6 @@ buildRosPackage {
 
      This pkg includes python code from the python-xbee project:
      http://code.google.com/p/python-xbee/'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

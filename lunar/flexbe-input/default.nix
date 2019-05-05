@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''flexbe_input enables to send data to onboard behavior when required.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

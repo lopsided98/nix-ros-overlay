@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "f2303a52fffc0e96fe2e955b3fd8126b7a09f117cc2d0cbe974ce4e65901134c";
   };
 
-  propagatedBuildInputs = [ rqt-msg rqt-gui-py rosmsg rospy rqt-gui ];
+  propagatedBuildInputs = [ rqt-gui-py rqt-gui rosmsg rqt-msg rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A Python GUI plugin for introspecting available ROS message types.
   Note that the srvs available through this plugin is the ones that are stored
   on your machine, not on the ROS core your rqt instance connects to.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

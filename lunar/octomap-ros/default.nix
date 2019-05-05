@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "edd2478dd7ef3cae39781cd2d8671b1b30d5f5d86bd001f54bd308d093d9541e";
   };
 
-  buildInputs = [ octomap tf sensor-msgs catkin octomap-msgs ];
+  buildInputs = [ sensor-msgs catkin octomap-msgs octomap tf ];
   propagatedBuildInputs = [ sensor-msgs tf octomap octomap-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''octomap_ros provides conversion functions between ROS and OctoMap's native types.
     This enables a convenvient use of the octomap package in ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

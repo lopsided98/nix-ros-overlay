@@ -22,6 +22,6 @@ buildRosPackage {
     including publications, subscriptions and connections. It also
     contains an experimental library for retrieving node
     information. This library is intended for internal use only.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

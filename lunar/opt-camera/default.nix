@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "f0d21ce32f8c305f483dd6f9f333d2183ec85fe63cbf5720594d2057ddf08f03";
   };
 
-  buildInputs = [ rospack roslang dynamic-reconfigure camera-calibration-parsers image-proc cv-bridge compressed-image-transport sensor-msgs ];
-  propagatedBuildInputs = [ rospack dynamic-reconfigure camera-calibration-parsers image-proc cv-bridge compressed-image-transport sensor-msgs ];
+  buildInputs = [ rospack camera-calibration-parsers sensor-msgs cv-bridge roslang dynamic-reconfigure image-proc compressed-image-transport ];
+  propagatedBuildInputs = [ rospack camera-calibration-parsers sensor-msgs cv-bridge dynamic-reconfigure image-proc compressed-image-transport ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''opt_camera'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "9f892b0bda9da46c781990102de021d99966aa05c714f37973832c674f0ed782";
   };
 
-  buildInputs = [ cv-bridge rqt-gui-cpp geometry-msgs image-transport sensor-msgs rqt-gui qt5.qtbase ];
-  propagatedBuildInputs = [ cv-bridge rqt-gui-cpp image-transport sensor-msgs rqt-gui geometry-msgs ];
+  buildInputs = [ image-transport sensor-msgs rqt-gui cv-bridge qt5.qtbase rqt-gui-cpp geometry-msgs ];
+  propagatedBuildInputs = [ image-transport sensor-msgs rqt-gui cv-bridge rqt-gui-cpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_image_view provides a GUI plugin for displaying images using image_transport.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

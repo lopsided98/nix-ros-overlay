@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "be8e2166d143607ddd870f74793668f22053a40575878a571a3f897bddd50bba";
   };
 
-  propagatedBuildInputs = [ rosgraph-msgs rospack std-srvs roslang sbcl ];
+  propagatedBuildInputs = [ std-srvs rospack sbcl rosgraph-msgs roslang ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Lisp client library for ROS, the Robot Operating System.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

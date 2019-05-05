@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''jsk_gui_msgs'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

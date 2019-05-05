@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Action definition for Locomotor'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

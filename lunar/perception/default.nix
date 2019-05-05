@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "855a4c27a0be1af848a5116080decb73f0064aebc6bc3e3423632d2ec4f40d5b";
   };
 
-  propagatedBuildInputs = [ image-pipeline laser-pipeline perception-pcl ros-base vision-opencv image-common image-transport-plugins ];
+  propagatedBuildInputs = [ image-pipeline vision-opencv ros-base image-common image-transport-plugins laser-pipeline perception-pcl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A metapackage to aggregate several packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

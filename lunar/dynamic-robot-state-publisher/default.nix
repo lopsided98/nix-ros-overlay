@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "1e99d88d7ce5592f2098d699dde48719deada4f81609ad35660822c360467179";
   };
 
-  buildInputs = [ kdl-parser robot-state-publisher dynamic-reconfigure sensor-msgs roscpp ];
-  propagatedBuildInputs = [ kdl-parser robot-state-publisher dynamic-reconfigure sensor-msgs roscpp ];
+  buildInputs = [ kdl-parser sensor-msgs robot-state-publisher dynamic-reconfigure roscpp ];
+  propagatedBuildInputs = [ kdl-parser sensor-msgs robot-state-publisher dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Improved ROS robot_state_publisher which can update the robot model via dynamic_reconfigure.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

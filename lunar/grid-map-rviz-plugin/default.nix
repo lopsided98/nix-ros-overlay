@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ grid-map-msgs grid-map-ros rviz qt5.qtbase ];
-  propagatedBuildInputs = [ grid-map-ros rviz grid-map-msgs qt5.qtbase ];
+  propagatedBuildInputs = [ grid-map-msgs grid-map-ros rviz qt5.qtbase ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''RViz plugin for displaying grid map messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

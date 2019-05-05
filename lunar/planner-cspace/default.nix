@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "99625c26d704c8f6a6d45f458b04f64739b8f4e4cd4c6b054159c59a8e3ba345";
   };
 
-  buildInputs = [ std-srvs costmap-cspace tf2-geometry-msgs trajectory-msgs costmap-cspace-msgs sensor-msgs tf2-ros diagnostic-updater move-base-msgs tf2 nav-msgs neonavigation-common trajectory-tracker-msgs planner-cspace-msgs actionlib roscpp geometry-msgs ];
-  checkInputs = [ map-server rostest roslint trajectory-tracker rosunit ];
-  propagatedBuildInputs = [ std-srvs costmap-cspace tf2-geometry-msgs trajectory-msgs costmap-cspace-msgs sensor-msgs tf2-ros diagnostic-updater move-base-msgs tf2 nav-msgs neonavigation-common trajectory-tracker-msgs planner-cspace-msgs actionlib roscpp geometry-msgs ];
+  buildInputs = [ std-srvs costmap-cspace tf2-geometry-msgs costmap-cspace-msgs trajectory-msgs sensor-msgs tf2-ros diagnostic-updater move-base-msgs tf2 nav-msgs neonavigation-common trajectory-tracker-msgs planner-cspace-msgs actionlib roscpp geometry-msgs ];
+  checkInputs = [ map-server roslint rostest trajectory-tracker rosunit ];
+  propagatedBuildInputs = [ std-srvs costmap-cspace tf2-geometry-msgs costmap-cspace-msgs trajectory-msgs sensor-msgs tf2-ros diagnostic-updater move-base-msgs tf2 nav-msgs neonavigation-common trajectory-tracker-msgs planner-cspace-msgs actionlib roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''3-dof configuration space planner for mobile robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

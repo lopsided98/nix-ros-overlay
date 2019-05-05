@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "d16f78c356b5d8ecf8d301a74d46cedb4fc198af7091d56b28c91f37c22c7b63";
   };
 
-  buildInputs = [ move-base-msgs nav-msgs actionlib geometry-msgs tf roscpp ];
-  propagatedBuildInputs = [ move-base-msgs nav-msgs actionlib geometry-msgs tf roscpp ];
+  buildInputs = [ roscpp move-base-msgs nav-msgs actionlib tf geometry-msgs ];
+  propagatedBuildInputs = [ roscpp move-base-msgs nav-msgs actionlib tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A node that provides the move_base action server interface, but instead of
     planning simply drives towards the target pose using a control-based
     approach.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

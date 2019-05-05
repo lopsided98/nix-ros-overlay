@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "137c2e361062bbbe543bd7f20c6a4044298ac04c6bb24c0cb3834e9be5bbf46d";
   };
 
-  buildInputs = [ rosconsole boost roscpp-serialization libyamlcpp sensor-msgs roscpp pkg-config ];
+  buildInputs = [ rosconsole boost libyamlcpp sensor-msgs pkg-config roscpp-serialization roscpp ];
   checkInputs = [ rosunit rosbash ];
-  propagatedBuildInputs = [ boost roscpp-serialization libyamlcpp sensor-msgs roscpp ];
+  propagatedBuildInputs = [ boost libyamlcpp sensor-msgs roscpp-serialization roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''camera_calibration_parsers contains routines for reading and writing camera calibration parameters.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "1da8539e391c6fd73ed030501b1d7a3070d61281c492183f1286ba1c53e40dbc";
   };
 
-  buildInputs = [ phidgets-api message-generation nodelet geometry-msgs std-msgs sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ phidgets-api message-runtime nodelet geometry-msgs std-msgs sensor-msgs tf roscpp ];
+  buildInputs = [ phidgets-api sensor-msgs roscpp message-generation nodelet std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ phidgets-api sensor-msgs roscpp message-runtime nodelet std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for the Phidgets InterfaceKit devices'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

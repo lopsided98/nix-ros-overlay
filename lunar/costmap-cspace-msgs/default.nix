@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message definitions for costmap_cspace package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

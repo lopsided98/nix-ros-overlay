@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, roscpp, rosgraph-msgs, roslib, rosgraph, std-msgs, genpy }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, genpy, rosgraph-msgs, roslib, rosgraph, std-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-lunar-rospy";
   version = "1.13.7";
@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "f3fd1e464ef4d66e2cfb79e936671f82978b9b3fb6033c2bfda3bda4dea64297";
   };
 
-  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.rospkg genpy roscpp pythonPackages.pyyaml rosgraph-msgs rosgraph std-msgs roslib ];
+  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.rospkg roscpp pythonPackages.pyyaml rosgraph-msgs roslib rosgraph std-msgs genpy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -29,6 +29,6 @@ buildRosPackage {
     as <a href="http://ros.org/wiki/rostopic">rostopic</a>
     and <a href="http://ros.org/wiki/rosservice">rosservice</a>, are
     built on top of rospy.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

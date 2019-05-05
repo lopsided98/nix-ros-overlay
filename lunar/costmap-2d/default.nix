@@ -12,9 +12,9 @@ buildRosPackage {
     sha256 = "34054c1f6e347e5529d109750290c18ec9ad92245c6dbc6bc31a929d59c50acb";
   };
 
-  buildInputs = [ nav-msgs pcl-ros std-msgs roscpp laser-geometry visualization-msgs tf pcl-conversions geometry-msgs cmake-modules pluginlib pcl sensor-msgs message-filters rostest voxel-grid message-generation dynamic-reconfigure map-msgs ];
+  buildInputs = [ pcl-ros tf pcl-conversions geometry-msgs message-filters voxel-grid message-generation nav-msgs std-msgs roscpp laser-geometry visualization-msgs cmake-modules pluginlib pcl sensor-msgs rostest dynamic-reconfigure map-msgs ];
   checkInputs = [ rostest rosbag rosunit map-server ];
-  propagatedBuildInputs = [ rosconsole nav-msgs pcl-ros std-msgs roscpp laser-geometry visualization-msgs tf pcl-conversions geometry-msgs pluginlib pcl sensor-msgs message-filters rostest voxel-grid message-runtime dynamic-reconfigure map-msgs ];
+  propagatedBuildInputs = [ rosconsole pcl-ros tf pcl-conversions geometry-msgs message-filters voxel-grid message-runtime nav-msgs std-msgs roscpp laser-geometry visualization-msgs pluginlib pcl sensor-msgs rostest dynamic-reconfigure map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -25,6 +25,6 @@ buildRosPackage {
         This package also provides support for map_server based initialization of a
         costmap, rolling window based costmaps, and parameter based subscription to
         and configuration of sensor topics.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

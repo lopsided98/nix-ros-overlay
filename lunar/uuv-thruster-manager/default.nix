@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ std-msgs message-generation ];
-  propagatedBuildInputs = [ uuv-gazebo-ros-plugins-msgs message-runtime rospy std-msgs geometry-msgs tf pythonPackages.pyyaml ];
+  propagatedBuildInputs = [ pythonPackages.pyyaml uuv-gazebo-ros-plugins-msgs message-runtime rospy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The thruster manager package'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

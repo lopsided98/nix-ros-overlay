@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "8bf2492999cfbcef3b3cfe55c53d12a61225f716158c42588c67fdd2066886e0";
   };
 
-  propagatedBuildInputs = [ rosflight-firmware rosflight rosflight-sim rosflight-utils rosflight-msgs ];
+  propagatedBuildInputs = [ rosflight rosflight-sim rosflight-utils rosflight-firmware rosflight-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS interface for the ROSflight autpilot stack'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

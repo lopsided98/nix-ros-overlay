@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''Tucks the arms of the PR2 robot into a safe position for moving the base of the robot.
      This also moves the arms out of the view of the tilting laser scanner, as much as possible.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

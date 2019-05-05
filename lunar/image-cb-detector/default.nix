@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Provide a node that extracts checkerboard corners from ROS images.
     This package is still experimental and unstable.
     Expect its APIs to change.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

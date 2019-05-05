@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''UUV Simulator's Gazebo plugins for simulation of hydrodynamic and hydrostatic
     forces, and underwater actuators (e.g. thrusters and fins).'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Standalone Python library for generating ROS message and service data structures for various languages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

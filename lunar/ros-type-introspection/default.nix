@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The ros_type_introspection package allows the user to parse and deserialize
   ROS messages which type is unknown at compilation time.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

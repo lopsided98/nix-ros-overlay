@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "db609b01bc3b2c79a545d4ae687ef0486e8ef0b9cfd4ed5298d44cbc12dc9a1a";
   };
 
-  buildInputs = [ nav-msgs nav2d-navigator pluginlib visualization-msgs tf roscpp geometry-msgs ];
-  propagatedBuildInputs = [ nav-msgs nav2d-navigator pluginlib visualization-msgs tf roscpp geometry-msgs ];
+  buildInputs = [ nav2d-navigator pluginlib tf nav-msgs visualization-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ nav2d-navigator pluginlib tf nav-msgs visualization-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package holds a collection of plugins for the RobotNavigator, that provide
     different cooperative exploration strategies for a team of mobile robots.'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

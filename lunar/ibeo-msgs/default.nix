@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package containing messages for Ibeo sensors.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

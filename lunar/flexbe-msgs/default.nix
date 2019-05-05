@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ message-generation actionlib-msgs actionlib ];
-  propagatedBuildInputs = [ actionlib message-runtime actionlib-msgs rospy smach-ros ];
+  propagatedBuildInputs = [ actionlib-msgs smach-ros actionlib message-runtime rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''flexbe_msgs provides the messages used by FlexBE.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

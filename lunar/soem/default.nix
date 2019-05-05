@@ -20,6 +20,6 @@ buildRosPackage {
      embedded systems. (http://developer.berlios.de/projects/soem/)
 
      This package contains the original soem c code provided by the Technische Universiteit Eindhoven.'';
-    #license = lib.licenses.GPL+linking exception;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

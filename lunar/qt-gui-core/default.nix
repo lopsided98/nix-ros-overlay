@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "21c1be35581794b3f4badd5ff2e8292b5a355e0f46db70934bf6d0d83e9bc5a8";
   };
 
-  propagatedBuildInputs = [ qt-gui-cpp qt-gui-app qt-gui qt-dotgraph qt-gui-py-common ];
+  propagatedBuildInputs = [ qt-gui-app qt-gui-cpp qt-gui qt-dotgraph qt-gui-py-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Integration of the ROS package system and ROS-specific plugins for a Qt-based GUI.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

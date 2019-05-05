@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "f4e794222b894be5ad635a0067d2c95d0bbd1174e373562ab5d0c7691611333f";
   };
 
-  propagatedBuildInputs = [ std-srvs rosmaster rosconsole roswtf rosbag ros rosout rosservice rosmsg rosgraph-msgs rosgraph xmlrpcpp rospy roscpp rosnode rosparam message-filters roslisp rostest rostopic topic-tools roslaunch ];
+  propagatedBuildInputs = [ rosconsole ros rosout rosservice rosgraph-msgs rosgraph rospy message-filters roslaunch std-srvs rosmaster roswtf rosbag rosmsg xmlrpcpp roscpp rosnode rosparam roslisp rostest rostopic topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS communications-related packages, including core client libraries (roscpp, rospy) and graph introspection tools (rostopic, rosnode, rosservice, rosparam).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

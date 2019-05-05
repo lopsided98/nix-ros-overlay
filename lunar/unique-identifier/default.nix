@@ -20,6 +20,6 @@ buildRosPackage {
 
     Not needed for wet packages, use only to resolve dry stack
     dependencies.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

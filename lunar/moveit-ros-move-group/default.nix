@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "db14325eaf834e9d35c7795a0a6540def57a37693bf064447e35d49f7674e449";
   };
 
-  buildInputs = [ moveit-ros-planning std-srvs moveit-core pluginlib actionlib tf ];
+  buildInputs = [ moveit-ros-planning std-srvs pluginlib moveit-core actionlib tf ];
   checkInputs = [ moveit-resources rostest ];
-  propagatedBuildInputs = [ moveit-ros-planning std-srvs moveit-core pluginlib actionlib tf moveit-kinematics ];
+  propagatedBuildInputs = [ moveit-ros-planning std-srvs pluginlib moveit-kinematics moveit-core actionlib tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The move_group node for MoveIt'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

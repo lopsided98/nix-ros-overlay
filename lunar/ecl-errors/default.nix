@@ -21,6 +21,6 @@ buildRosPackage {
     It includes c style error functions as well as a few 
     useful macros. For higher level mechanisms, 
     refer to ecl_exceptions.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "7ae8a1d90fce8e975bd2700c620a3b3e4e3617f1a7241696a0ad1ff10ffdb4fa";
   };
 
-  buildInputs = [ pr2-mechanism-controllers pluginlib pr2-controller-interface std-msgs realtime-tools roscpp pr2-mechanism-model robot-mechanism-controllers ];
-  propagatedBuildInputs = [ pr2-mechanism-controllers pluginlib pr2-controller-interface std-msgs realtime-tools roscpp pr2-mechanism-model robot-mechanism-controllers ];
+  buildInputs = [ pr2-mechanism-controllers pluginlib pr2-controller-interface realtime-tools robot-mechanism-controllers std-msgs roscpp pr2-mechanism-model ];
+  propagatedBuildInputs = [ pr2-mechanism-controllers pluginlib pr2-controller-interface realtime-tools robot-mechanism-controllers std-msgs roscpp pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The pr2_calibration_controllers package contains the controllers
      used to bring all the joints in the PR2 to a calibrated state.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

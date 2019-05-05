@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, assisted-teleop, catkin, sbpl-lattice-planner, pose-follower, goal-passer, twist-recovery, pose-base-controller, sbpl-recovery }:
+{ lib, buildRosPackage, fetchurl, pose-base-controller, catkin, sbpl-lattice-planner, pose-follower, goal-passer, twist-recovery, assisted-teleop, sbpl-recovery }:
 buildRosPackage {
   pname = "ros-lunar-navigation-experimental";
   version = "0.2.1";
@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "af41fdde535479a63551a96736c9ba06cc934b8312b13cbd25fbe29d9be05ccf";
   };
 
-  propagatedBuildInputs = [ sbpl-lattice-planner pose-follower assisted-teleop goal-passer twist-recovery pose-base-controller sbpl-recovery ];
+  propagatedBuildInputs = [ assisted-teleop sbpl-lattice-planner pose-follower goal-passer twist-recovery pose-base-controller sbpl-recovery ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -20,6 +20,6 @@ buildRosPackage {
     local and global planner plugins for move_base, a teleop filter for
     obstacle avoidance, a simple control-based move_base replacement
     etc.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

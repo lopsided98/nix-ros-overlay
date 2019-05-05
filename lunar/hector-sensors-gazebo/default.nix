@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''hector_sensors_gazebo depends on the necessary plugins for using the sensors from the hector_models repository.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

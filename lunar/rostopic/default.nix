@@ -27,6 +27,6 @@ buildRosPackage {
     internal-use only as the code API may change, though it does provide
     examples of how to implement dynamic subscription and publication
     behaviors in ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

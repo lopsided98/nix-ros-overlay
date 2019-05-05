@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "13913221bf345162c5dda4fec9512d76c8ad35e8f76c6cb1ec8eb11f7785a215";
   };
 
-  buildInputs = [ vtkWithQt4 std-msgs pcl sensor-msgs laser-geometry pcl-ros roscpp tf ];
-  propagatedBuildInputs = [ vtkWithQt4 std-msgs pcl sensor-msgs laser-geometry pcl-ros roscpp tf ];
+  buildInputs = [ tf pcl sensor-msgs roscpp vtkWithQt4 std-msgs laser-geometry pcl-ros ];
+  propagatedBuildInputs = [ tf pcl sensor-msgs roscpp vtkWithQt4 std-msgs laser-geometry pcl-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The ira_laser_tools package. These nodes are meant to provide some utils for lasers, like listen to different laser scan sources and merge them in a single scan or generate virtual laser scans from a pointcloud.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

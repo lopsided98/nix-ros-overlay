@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "049a1c7885ba4342a432fd44c8f56ee5a6b23e59491feb34e0b564dc25503a69";
   };
 
-  buildInputs = [ message-generation visp visp-bridge std-msgs image-proc roscpp sensor-msgs geometry-msgs ];
+  buildInputs = [ visp-bridge sensor-msgs message-generation visp std-msgs image-proc roscpp geometry-msgs ];
   propagatedBuildInputs = [ visp-bridge sensor-msgs message-generation visp message-runtime std-msgs image-proc roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''visp_hand2eye_calibration estimates the camera position with respect
      to its effector using the ViSP library.'';
-    #license = lib.licenses.GPLv2;
+    license = with lib.licenses; [ gpl2 ];
   };
 }

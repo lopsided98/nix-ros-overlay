@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''gps_umd metapackage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

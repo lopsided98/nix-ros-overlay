@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''qt_gui_py_common provides common functionality for GUI plugins written in Python.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

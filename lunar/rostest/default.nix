@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ rosunit boost ];
-  propagatedBuildInputs = [ rosmaster rosgraph boost rospy roslaunch rosunit ];
+  propagatedBuildInputs = [ rosmaster boost rosgraph rospy roslaunch rosunit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Integration test suite based on roslaunch that is compatible with xUnit frameworks.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

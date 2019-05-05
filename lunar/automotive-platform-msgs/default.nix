@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Generic Messages for Communication with an Automotive Autonomous Platform'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

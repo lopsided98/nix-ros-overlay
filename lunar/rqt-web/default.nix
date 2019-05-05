@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "7ce772b6f7fed4b5d14c1397b0d1bd92fb7b1e154e0d2b43642dde61c2723975";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py qt-gui rospy pythonPackages.rospkg webkit-dependency rqt-gui python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg webkit-dependency rqt-gui qt-gui rospy python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_web is a simple web content viewer for rqt. Users can show web content in Qt-based window by specifying its URL.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

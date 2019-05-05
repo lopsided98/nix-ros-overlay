@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''This package defines messages for defining robot trajectories. These messages are
     also the building blocks of most of the
     <a href="http://wiki.ros.org/control_msgs">control_msgs</a> actions.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "59d8c24d277f381500c781b656fe9bc38d6db463aeb82dae2613bf3fa2eb93e8";
   };
 
-  buildInputs = [ sbpl-lattice-planner pose-follower costmap-2d pluginlib base-local-planner nav-core roscpp ];
-  propagatedBuildInputs = [ sbpl-lattice-planner pose-follower costmap-2d pluginlib base-local-planner nav-core roscpp ];
+  buildInputs = [ costmap-2d pluginlib base-local-planner nav-core sbpl-lattice-planner pose-follower roscpp ];
+  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core sbpl-lattice-planner pose-follower roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A recovery behavior that uses the sbpl lattice planner and the pose
     follower to try to plan in full 3D to get the robot out of really tricky
     situations.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

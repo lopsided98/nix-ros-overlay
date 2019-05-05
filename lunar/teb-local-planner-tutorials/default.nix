@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "a59cf4c60412855eb72058096d20eaffbac92a986ddca4d2e346ed4a6f139e03";
   };
 
-  propagatedBuildInputs = [ stage-ros map-server amcl teb-local-planner move-base ];
+  propagatedBuildInputs = [ map-server amcl move-base stage-ros teb-local-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The teb_local_planner_tutorials package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

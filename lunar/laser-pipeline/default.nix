@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''Meta-package of libraries for processing laser data, including converting laser data
       into 3D representations.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

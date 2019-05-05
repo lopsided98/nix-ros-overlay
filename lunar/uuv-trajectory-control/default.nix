@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, catkin, pythonPackages, rostest, nav-msgs, visualization-msgs, rospy, std-msgs, roslib, uuv-control-msgs, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rostest, roslib, nav-msgs, visualization-msgs, rospy, std-msgs, tf, uuv-control-msgs, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-uuv-trajectory-control";
   version = "0.6.10";
@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest rosunit ];
-  propagatedBuildInputs = [ pythonPackages.numpy tf pythonPackages.scipy pythonPackages.pyyaml nav-msgs visualization-msgs rospy std-msgs roslib uuv-control-msgs pythonPackages.matplotlib geometry-msgs ];
+  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.scipy pythonPackages.pyyaml roslib nav-msgs visualization-msgs rospy std-msgs tf uuv-control-msgs pythonPackages.matplotlib geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The uuv_trajectory_control package'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

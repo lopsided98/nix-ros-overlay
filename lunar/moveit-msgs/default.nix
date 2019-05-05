@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages, services and actions used by MoveIt'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''An easy wrapper for using parameters in ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

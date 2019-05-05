@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''This package provides ROS interfaces to the Neuronics Katana 450 arm.
     It wraps the <a href="/wiki/kni">KNI</a> library for low-level communication
     with the Katana arm.'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

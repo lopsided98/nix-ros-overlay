@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Action definitions for the MiR100 robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

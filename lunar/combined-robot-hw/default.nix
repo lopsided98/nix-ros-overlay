@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Combined Robot HW class.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

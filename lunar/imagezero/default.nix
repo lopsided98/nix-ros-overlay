@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''ImageZero is a fast lossless image compression algorithm for RGB color photos.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

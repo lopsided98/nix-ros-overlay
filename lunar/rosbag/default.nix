@@ -13,13 +13,13 @@ buildRosPackage {
   };
 
   buildInputs = [ rosbag-storage std-srvs rosconsole cpp-common boost xmlrpcpp roscpp-serialization topic-tools pythonPackages.pillow roscpp ];
-  propagatedBuildInputs = [ rosbag-storage std-srvs rosconsole boost pythonPackages.rospkg genpy roscpp xmlrpcpp rospy topic-tools genmsg roslib ];
+  propagatedBuildInputs = [ rosbag-storage std-srvs rosconsole boost pythonPackages.rospkg genpy roslib xmlrpcpp rospy topic-tools genmsg roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This is a set of tools for recording from and playing back to ROS
     topics.  It is intended to be high performance and avoids
     deserialization and reserialization of the messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A metapackage to aggregate several packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

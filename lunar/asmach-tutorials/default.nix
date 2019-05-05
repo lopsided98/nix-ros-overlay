@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "308a5acf5ac347184b6a31144bb79b37a8b1ab53e250e597c58147e8389461f7";
   };
 
-  buildInputs = [ turtlesim message-generation actionlib asmach actionlib-msgs rospy smach-ros ];
-  propagatedBuildInputs = [ turtlesim actionlib asmach actionlib-msgs rospy smach-ros ];
+  buildInputs = [ turtlesim actionlib-msgs smach-ros message-generation asmach actionlib rospy ];
+  propagatedBuildInputs = [ turtlesim actionlib-msgs smach-ros actionlib asmach rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package containes numerous examples of how to use SMACH. See the examples directory.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

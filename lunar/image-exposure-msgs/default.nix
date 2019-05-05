@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages related to the Point Grey camera driver.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package attempts to show the features of ROS python API step-by-step,
     including using messages, servers, parameters, etc. These tutorials are compatible with the nodes in roscpp_tutorial.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

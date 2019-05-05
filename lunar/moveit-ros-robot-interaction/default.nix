@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "b398907cd96bae96d00710fc37a299090681db62ac1510cf698b2e5f2759191c";
   };
 
-  buildInputs = [ moveit-ros-planning interactive-markers pluginlib tf eigen-conversions roscpp ];
-  propagatedBuildInputs = [ moveit-ros-planning interactive-markers pluginlib tf eigen-conversions roscpp ];
+  buildInputs = [ moveit-ros-planning pluginlib tf interactive-markers eigen-conversions roscpp ];
+  propagatedBuildInputs = [ moveit-ros-planning pluginlib tf interactive-markers eigen-conversions roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Components of MoveIt that offer interaction via interactive markers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

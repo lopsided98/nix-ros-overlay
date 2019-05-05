@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''OpenCV 3.x'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

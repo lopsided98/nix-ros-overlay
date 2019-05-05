@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, actionlib-msgs, tf, catkin, move-base-msgs, nav-msgs, visualization-msgs, actionlib, std-msgs, roslaunch, roscpp, geometry-msgs, map-msgs }:
+{ lib, buildRosPackage, fetchurl, costmap-2d, actionlib-msgs, catkin, roscpp, move-base-msgs, nav-msgs, visualization-msgs, actionlib, std-msgs, roslaunch, tf, geometry-msgs, map-msgs }:
 buildRosPackage {
   pname = "ros-lunar-explore-lite";
   version = "2.1.1";
@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "713a1a840aeb1c4dee126055de03ab11bc82ac9ff10d2c7d2cf778d0d273bfc9";
   };
 
-  buildInputs = [ costmap-2d actionlib-msgs tf roscpp move-base-msgs nav-msgs actionlib std-msgs visualization-msgs geometry-msgs map-msgs ];
+  buildInputs = [ costmap-2d actionlib-msgs roscpp move-base-msgs nav-msgs visualization-msgs actionlib std-msgs tf geometry-msgs map-msgs ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ costmap-2d actionlib-msgs tf roscpp move-base-msgs nav-msgs actionlib std-msgs visualization-msgs geometry-msgs map-msgs ];
+  propagatedBuildInputs = [ costmap-2d actionlib-msgs roscpp move-base-msgs nav-msgs visualization-msgs actionlib std-msgs tf geometry-msgs map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Lightweight frontier-based exploration.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

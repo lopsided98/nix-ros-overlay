@@ -23,6 +23,6 @@ buildRosPackage {
     (retries, error handling, etc.) and interface
 
     timestamp_tools: Classes to help timestamp hardware events'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

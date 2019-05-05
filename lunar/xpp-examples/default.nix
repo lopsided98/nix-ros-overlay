@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "ef9b582e78e0879a1dd79d638284530c0d4f16a7d8cc9da8839b5dbef4edcc41";
   };
 
-  buildInputs = [ xpp-quadrotor xpp-hyq rosbag roscpp xpp-vis ];
-  propagatedBuildInputs = [ xpp-quadrotor xpp-hyq rosbag roscpp xpp-vis ];
+  buildInputs = [ xpp-quadrotor xpp-hyq rosbag xpp-vis roscpp ];
+  propagatedBuildInputs = [ xpp-quadrotor xpp-hyq rosbag xpp-vis roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Examples of how to use the xpp framework.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

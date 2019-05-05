@@ -23,6 +23,6 @@ buildRosPackage {
     structure buffered in time, and lets the user transform points,
     vectors, etc between any two coordinate frames at any desired
     point in time.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

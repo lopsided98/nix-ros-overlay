@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "174e6c9957adbebb06ea473dde5f3c9aa4b830d5653d4fc7e91af67be42f1253";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py pythonPackages.psutil rospy rqt-gui python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.psutil rqt-gui rospy python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''RQT plugin for monitoring ROS processes.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

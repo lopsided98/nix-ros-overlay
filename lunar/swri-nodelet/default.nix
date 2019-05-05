@@ -21,6 +21,6 @@ buildRosPackage {
     description = ''This package provides a simple script to write simple launch files
     that can easily switch between running nodelets together or as
     standalone nodes.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

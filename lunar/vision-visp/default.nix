@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "4f629d14644e52762755cc3b86b2e6b88bbf9a6d05f273f081d23300a1bcb9fa";
   };
 
-  propagatedBuildInputs = [ visp-auto-tracker visp-camera-calibration visp-tracker visp-bridge visp-hand2eye-calibration ];
+  propagatedBuildInputs = [ visp-camera-calibration visp-bridge visp-auto-tracker visp-tracker visp-hand2eye-calibration ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Virtual package providing ViSP related packages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

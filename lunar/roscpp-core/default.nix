@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Underlying data libraries for roscpp messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

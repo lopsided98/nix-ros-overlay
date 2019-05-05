@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Launch files to open an OpenNI device and load all nodelets to 
      convert raw depth/RGB/IR streams to depth images, disparity images, 
      and (registered) point clouds.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

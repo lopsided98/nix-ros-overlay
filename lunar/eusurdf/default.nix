@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''urdf models converted from euslisp'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

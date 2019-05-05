@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "998ee9e3dc4a989cc6826a48f63fb83b78b0117052de1bb194bc6557998a2500";
   };
 
-  buildInputs = [ hardware-interface urdf qb-device-msgs qb-device-srvs roscpp joint-limits-interface transmission-interface ];
+  buildInputs = [ hardware-interface joint-limits-interface urdf qb-device-msgs qb-device-srvs roscpp transmission-interface ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ hardware-interface urdf qb-device-msgs qb-device-srvs roscpp joint-limits-interface transmission-interface ];
+  propagatedBuildInputs = [ hardware-interface joint-limits-interface urdf qb-device-msgs qb-device-srvs roscpp transmission-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package contains a device-independent hardware interface for qbrobotics® devices.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

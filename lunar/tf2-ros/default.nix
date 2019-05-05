@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the ROS bindings for the tf2 library, for both Python and C++.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "e57381a24648432bd431a54e076f624b5797f06bc955bc4a956c17015afa5ac9";
   };
 
-  buildInputs = [ rostest rosconsole boost roscpp rosunit ];
+  buildInputs = [ rosconsole boost rostest roscpp rosunit ];
   propagatedBuildInputs = [ roscpp rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A set of message filters which take in messages and may output those messages at a later time, based on the conditions that filter needs met.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

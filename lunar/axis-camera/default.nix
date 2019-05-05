@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "25ddd234e777c466adc7685c7df9b76b71d22e00e7a048d08a12eea43a6412ce";
   };
 
-  buildInputs = [ message-generation dynamic-reconfigure rospy sensor-msgs tf camera-info-manager-py geometry-msgs ];
-  propagatedBuildInputs = [ message-runtime dynamic-reconfigure rospy sensor-msgs tf camera-info-manager-py geometry-msgs ];
+  buildInputs = [ sensor-msgs message-generation rospy dynamic-reconfigure tf camera-info-manager-py geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs message-runtime rospy dynamic-reconfigure tf camera-info-manager-py geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Python ROS drivers for accessing an Axis camera's MJPG
     stream. Also provides control for PTZ cameras.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

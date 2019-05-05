@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Generic Radar Messages'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "cd437a3a17ababaa09fa7e789fa6b1552f761cfe308849ace39ccb302cda8d9e";
   };
 
-  propagatedBuildInputs = [ flexbe-msgs rospy diagnostic-msgs tf smach-ros ];
+  propagatedBuildInputs = [ flexbe-msgs smach-ros rospy diagnostic-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''flexbe_core provides the core smach extension for the FlexBE behavior engine.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

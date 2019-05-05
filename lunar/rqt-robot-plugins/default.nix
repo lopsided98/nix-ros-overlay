@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "2cc4236785fb1505100ed002d2a0da502d70e4b543f6d9e568badd2f160a5f10";
   };
 
-  propagatedBuildInputs = [ rqt-nav-view rqt-rviz rqt-moveit rqt-pose-view rqt-tf-tree rqt-robot-dashboard rqt-robot-monitor rqt-robot-steering rqt-runtime-monitor ];
+  propagatedBuildInputs = [ rqt-nav-view rqt-rviz rqt-pose-view rqt-moveit rqt-tf-tree rqt-robot-dashboard rqt-robot-monitor rqt-robot-steering rqt-runtime-monitor ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -30,6 +30,6 @@ buildRosPackage {
          ROS backend tools suite that can be used on/off of robot runtime.</li>
      <li>rqt_robot_plugins (You're here!)</li>
     </ul>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

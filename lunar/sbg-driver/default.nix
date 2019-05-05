@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "abe0ab5b7deabd7e69d4ded311ba60f96f2b37ec1ee502c43fd4d213747f4b1b";
   };
 
-  buildInputs = [ std-srvs message-generation std-msgs sensor-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs message-runtime std-msgs sensor-msgs roscpp geometry-msgs ];
+  buildInputs = [ std-srvs sensor-msgs message-generation std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs sensor-msgs message-runtime std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The SBG ROS Driver package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

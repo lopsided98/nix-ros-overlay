@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "2c41aea28ed4ac661e69ab2b9dfaf762aceb2ce41bb277af2f20361cf1a79f50";
   };
 
-  propagatedBuildInputs = [ nav2d-localizer nav2d-navigator nav2d-remote nav2d-karto nav2d-operator nav2d-tutorials nav2d-msgs nav2d-exploration ];
+  propagatedBuildInputs = [ nav2d-navigator nav2d-remote nav2d-karto nav2d-operator nav2d-tutorials nav2d-msgs nav2d-exploration nav2d-localizer ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Meta-Package containing modules for 2D-Navigation'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

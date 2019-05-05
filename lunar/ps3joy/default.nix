@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bluez, sensor-msgs, linuxConsoleTools, pythonPackages, catkin, rosgraph, rospy, diagnostic-msgs, libusb }:
+{ lib, buildRosPackage, fetchurl, bluez, sensor-msgs, linuxConsoleTools, pythonPackages, catkin, rosgraph, libusb, rospy, diagnostic-msgs }:
 buildRosPackage {
   pname = "ros-lunar-ps3joy";
   version = "1.12.0";
@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "7e168b123dc0be73e4407b1386343c05d041c3cee2921726c1c5721237eba872";
   };
 
-  buildInputs = [ rosgraph pythonPackages.pybluez libusb bluez diagnostic-msgs sensor-msgs linuxConsoleTools rospy ];
-  propagatedBuildInputs = [ rosgraph pythonPackages.pybluez libusb bluez diagnostic-msgs sensor-msgs linuxConsoleTools rospy ];
+  buildInputs = [ bluez sensor-msgs linuxConsoleTools pythonPackages.pybluez rosgraph libusb rospy diagnostic-msgs ];
+  propagatedBuildInputs = [ bluez sensor-msgs linuxConsoleTools pythonPackages.pybluez rosgraph libusb rospy diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -24,6 +24,6 @@ buildRosPackage {
     for a connection on the HID ports, starts the joystick
     streaming data, and passes the data to the Linux uinput device
     so that it shows up as a normal joystick.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

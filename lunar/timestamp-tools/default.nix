@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package is currently for internal use only. Its API may change
     without warning in the future.  This package is deprecated.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

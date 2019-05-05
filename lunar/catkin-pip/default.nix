@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Catkin macros to allow using pure python packages in usual catkin workspaces with normal python workflow.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

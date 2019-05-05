@@ -25,6 +25,6 @@ buildRosPackage {
         by joint limits, this package is what you need. The code in
         this packge is stable and well tested. There are no plans for
         major changes in the near future.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

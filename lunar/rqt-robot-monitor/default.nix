@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, rqt-gui, pythonPackages, catkin, rqt-bag, qt-gui, qt-gui-py-common, rospy, diagnostic-msgs, rqt-py-common, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, rqt-gui-py, python-qt-binding, catkin, rqt-gui, pythonPackages, rqt-bag, qt-gui, rospy, diagnostic-msgs, rqt-py-common, qt-gui-py-common }:
 buildRosPackage {
   pname = "ros-lunar-rqt-robot-monitor";
   version = "0.5.8";
@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "1402d4cf18ed241c03650310a7f4d081f615bfd7aff5ddda33281820cbd34cc6";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py python-qt-binding pythonPackages.rospkg rqt-gui rqt-bag qt-gui rospy diagnostic-msgs rqt-py-common qt-gui-py-common ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui rqt-bag qt-gui qt-gui-py-common rospy diagnostic-msgs rqt-py-common python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -30,6 +30,6 @@ buildRosPackage {
   You can look at the detail of each status by double-clicking the tree nodes.<br/>
 
   Currently re-usable API to other pkgs are not explicitly provided.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

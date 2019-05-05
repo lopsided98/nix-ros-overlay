@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launch and config files designed for use with the p2os stack.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

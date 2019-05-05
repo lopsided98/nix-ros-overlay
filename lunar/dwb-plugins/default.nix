@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "df53e24bdabe2e3d107dab5da89152fefd956e3bfba187b85d4c130fdf90eca9";
   };
 
-  buildInputs = [ dwb-local-planner nav-2d-utils pluginlib dynamic-reconfigure angles nav-core2 roscpp nav-2d-msgs ];
+  buildInputs = [ pluginlib nav-core2 nav-2d-msgs nav-2d-utils dynamic-reconfigure angles roscpp dwb-local-planner ];
   checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ dwb-local-planner nav-2d-utils pluginlib dynamic-reconfigure angles nav-core2 roscpp nav-2d-msgs ];
+  propagatedBuildInputs = [ pluginlib nav-core2 nav-2d-msgs nav-2d-utils dynamic-reconfigure angles roscpp dwb-local-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Standard implementations of the GoalChecker
       and TrajectoryGenerators for dwb_local_planner'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

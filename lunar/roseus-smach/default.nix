@@ -23,6 +23,6 @@ buildRosPackage {
      * Message publisher for visualizing current state by smach_viewer.
      * Simple pickle dump script for debugging state machine.
      * Execute state machine as a action server.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

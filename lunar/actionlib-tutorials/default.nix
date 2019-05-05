@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "3b060785dae27b5af99636cfebe5f72b91ac9a98ab2e2dec977378fbc6ccf4c1";
   };
 
-  buildInputs = [ message-generation actionlib-msgs actionlib std-msgs roscpp ];
+  buildInputs = [ actionlib-msgs message-generation actionlib std-msgs roscpp ];
   propagatedBuildInputs = [ roscpp message-runtime actionlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The actionlib_tutorials package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

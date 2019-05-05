@@ -19,6 +19,6 @@ buildRosPackage {
     description = ''Provides a toolchain running through the robot calibration process. This
      involves capturing calibration data, estimating parameters, and
      then updating the URDF.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

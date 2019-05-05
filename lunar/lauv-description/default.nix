@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest xacro rosunit ];
-  propagatedBuildInputs = [ gazebo-ros uuv-assistants uuv-gazebo-ros-plugins uuv-sensor-ros-plugins robot-state-publisher uuv-descriptions xacro ];
+  propagatedBuildInputs = [ gazebo-ros uuv-gazebo-ros-plugins uuv-sensor-ros-plugins uuv-assistants uuv-descriptions robot-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Robot description files for the LAUV.'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "e7722042b0250e1a9fe0834c1cd996ecb24a047618b0888f2f1f4dd40d2cdbc5";
   };
 
-  buildInputs = [ tf2 tf2-ros tf2-geometry-msgs geometry-msgs tf roscpp ];
-  propagatedBuildInputs = [ tf2 tf2-ros tf2-geometry-msgs geometry-msgs tf roscpp ];
+  buildInputs = [ tf2-geometry-msgs roscpp tf2-ros tf2 tf geometry-msgs ];
+  propagatedBuildInputs = [ tf2-geometry-msgs roscpp tf2-ros tf2 tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The mbf_utility package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

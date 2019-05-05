@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "43359e030f6c01b73645bd253f0c97bdbe9ae93820dca0ab05db127936d0c795";
   };
 
-  buildInputs = [ rostest rosconsole visualization-msgs rospy std-msgs tf roscpp ];
-  propagatedBuildInputs = [ rostest rosconsole visualization-msgs rospy std-msgs tf roscpp ];
+  buildInputs = [ rosconsole roscpp rostest visualization-msgs rospy std-msgs tf ];
+  propagatedBuildInputs = [ rosconsole roscpp rostest visualization-msgs rospy std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''3D interactive marker communication library for RViz and similar tools.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

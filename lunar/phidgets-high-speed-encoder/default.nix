@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "471b3d5caeef64c16036af2960eb61b3b151c3dbd193de65a878e58370dd9bd9";
   };
 
-  buildInputs = [ phidgets-api message-generation libphidget21 std-msgs sensor-msgs roscpp ];
-  propagatedBuildInputs = [ phidgets-api message-runtime libphidget21 std-msgs sensor-msgs roscpp ];
+  buildInputs = [ phidgets-api libphidget21 sensor-msgs message-generation std-msgs roscpp ];
+  propagatedBuildInputs = [ phidgets-api libphidget21 sensor-msgs message-runtime std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for the Phidgets high speed encoder devices'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

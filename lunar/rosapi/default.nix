@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Provides service calls for getting ros meta-information, like list of
     topics, services, params, etc.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

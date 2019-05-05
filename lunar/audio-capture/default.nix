@@ -13,13 +13,13 @@ buildRosPackage {
   };
 
   buildInputs = [ gst_all_1.gst-plugins-base roscpp gst_all_1.gstreamer audio-common-msgs ];
-  propagatedBuildInputs = [ gst_all_1.gstreamer gst_all_1.gst-plugins-base roscpp gst_all_1.gst-plugins-ugly audio-common-msgs gst_all_1.gst-plugins-good ];
+  propagatedBuildInputs = [ gst_all_1.gst-plugins-ugly gst_all_1.gstreamer gst_all_1.gst-plugins-base roscpp audio-common-msgs gst_all_1.gst-plugins-good ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Transports audio from a source to a destination. Audio sources can come
       from a microphone or file. The destination can play the audio or save it
       to an mp3 file.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "cae60ba14f90a32681f85fa73461b2cb5f12ecf132e555ee770e1281d443b233";
   };
 
-  buildInputs = [ moveit-ros-planning rosconsole warehouse-ros tf roscpp ];
-  propagatedBuildInputs = [ moveit-ros-planning rosconsole warehouse-ros tf roscpp ];
+  buildInputs = [ moveit-ros-planning rosconsole roscpp warehouse-ros tf ];
+  propagatedBuildInputs = [ moveit-ros-planning rosconsole roscpp warehouse-ros tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Components of MoveIt connecting to MongoDB'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

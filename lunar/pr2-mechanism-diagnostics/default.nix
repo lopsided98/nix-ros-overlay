@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ pr2-mechanism-msgs std-srvs diagnostic-updater rostest urdf angles std-msgs diagnostic-msgs roscpp pr2-mechanism-model ];
-  propagatedBuildInputs = [ pr2-mechanism-msgs std-srvs diagnostic-updater std-msgs urdf angles rospy diagnostic-msgs roscpp pr2-mechanism-model ];
+  propagatedBuildInputs = [ pr2-mechanism-msgs angles std-srvs diagnostic-updater urdf rospy std-msgs diagnostic-msgs roscpp pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The `pr2_mechanism_diagnostics` node subscribes to `mechanism_statistics` and publishes diagnostics data for joints and controllers on `/diagnostics`.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

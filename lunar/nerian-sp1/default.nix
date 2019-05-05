@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "d44e98b1290148b429b9142297db76874c4b10dae4011361874b58d3160ab166";
   };
 
-  buildInputs = [ message-generation SDL boost std-msgs sensor-msgs cv-bridge roscpp ];
-  propagatedBuildInputs = [ SDL message-runtime boost std-msgs sensor-msgs cv-bridge roscpp ];
+  buildInputs = [ SDL boost sensor-msgs cv-bridge message-generation std-msgs roscpp ];
+  propagatedBuildInputs = [ SDL boost sensor-msgs cv-bridge message-runtime std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Node for the SP1 Stereo Vision System by Nerian Vision Technologies'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

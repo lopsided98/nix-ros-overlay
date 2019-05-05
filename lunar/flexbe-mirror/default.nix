@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "d563925854e946b107fc0018a4b3cdd3b90abf72e8a28bf077c855572a3c146f";
   };
 
-  propagatedBuildInputs = [ flexbe-widget flexbe-msgs rospy smach-ros flexbe-core ];
+  propagatedBuildInputs = [ flexbe-msgs smach-ros flexbe-widget rospy flexbe-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''flexbe_mirror implements functionality to remotely mirror an executed behavior.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Sample launch files to start a simulated LAUV in Gazebo.'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

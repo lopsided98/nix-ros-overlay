@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''assimp library'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

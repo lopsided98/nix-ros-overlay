@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Basic test nodes for Pyros dynamic ROS interface'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

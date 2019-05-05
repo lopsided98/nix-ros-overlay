@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Conversion functions between KDL and geometry_msgs types.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

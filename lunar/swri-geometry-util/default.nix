@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "f19bfa3e1d4b6b8dbf7fb9a7644302868c44710f862c6af1b11074f1ec68a64b";
   };
 
-  buildInputs = [ cv-bridge cmake-modules eigen geos tf roscpp ];
+  buildInputs = [ cmake-modules cv-bridge roscpp eigen geos tf ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ cv-bridge cmake-modules eigen geos tf roscpp ];
+  propagatedBuildInputs = [ cmake-modules cv-bridge roscpp eigen geos tf ];
   nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''swri_geometry_util'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

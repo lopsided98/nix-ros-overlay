@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Contains aligned allocation functions, as well as an STL-compatible AlignedAllocator class.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

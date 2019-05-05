@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Tool for iterating through the cells of a costmap to find the closest distance to a subset of cells.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

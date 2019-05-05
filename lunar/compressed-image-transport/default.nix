@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Compressed_image_transport provides a plugin to image_transport for transparently sending images
     encoded as JPEG or PNG.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

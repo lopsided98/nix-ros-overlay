@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The robot_activity package implements ROS node lifecycle'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "9cba6fd376e1ae1829e21f2a293c81b583bdf20799642db470d43542459b0c3b";
   };
 
-  buildInputs = [ nav-2d-utils nav-msgs nav-grid roscpp nav-2d-msgs ];
+  buildInputs = [ nav-grid nav-2d-utils nav-msgs roscpp nav-2d-msgs ];
   checkInputs = [ rosunit roslint ];
-  propagatedBuildInputs = [ nav-2d-utils nav-msgs nav-grid roscpp nav-2d-msgs ];
+  propagatedBuildInputs = [ nav-grid nav-2d-utils nav-msgs roscpp nav-2d-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Iterator implementations for moving around the cells of a nav_grid in a number of common patterns.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

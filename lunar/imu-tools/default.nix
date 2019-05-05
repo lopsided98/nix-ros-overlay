@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Various tools for IMU devices'';
-    #license = lib.licenses.BSD, GPL;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

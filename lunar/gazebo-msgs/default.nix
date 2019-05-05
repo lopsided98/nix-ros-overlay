@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "b2882b174264d9a0aeb07854359344f107e8b5bbe19aea46169476efb60db108";
   };
 
-  buildInputs = [ std-srvs message-generation std-msgs trajectory-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs message-runtime std-msgs trajectory-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ std-srvs trajectory-msgs sensor-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs trajectory-msgs sensor-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Message and service data structures for interacting with Gazebo from ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''tools for streaming JPEG-formatted CompressedImage topics over HTTP'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Enhanced tools for benchmarks in MoveIt!'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }
