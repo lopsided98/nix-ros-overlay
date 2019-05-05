@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''rosserial for Cortex/AVR platforms.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

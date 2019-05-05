@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "8eee5893c1058c6875ca642fa51dcb92bc7a66d0fa2fb5d7aa800f305809819a";
   };
 
-  propagatedBuildInputs = [ fetch-teleop fetch-ikfast-plugin fetch-description fetch-navigation fetch-depth-layer fetch-calibration fetch-moveit-config fetch-maps ];
+  propagatedBuildInputs = [ fetch-depth-layer fetch-calibration fetch-moveit-config fetch-teleop fetch-ikfast-plugin fetch-description fetch-navigation fetch-maps ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Fetch ROS, packages for working with Fetch and Freight'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "a9e0e0179ff125da7fca8680b2428754c2fb434db0b9d190865e95f6c650645b";
   };
 
-  buildInputs = [ rviz tf2-ros eigen roscpp qt5.qtbase ];
+  buildInputs = [ tf2-ros qt5.qtbase rviz eigen roscpp ];
   propagatedBuildInputs = [ roscpp rviz tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''This package provides a gui program as well as a rviz plugin to publish static transforms.
   Both support the transformation between various Euler angle representations.
   The rviz plugin also allows to configure the transform with an interactive marker.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

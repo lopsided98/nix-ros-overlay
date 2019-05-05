@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Embeds the TCLAP library inside the ecl. This is a very convenient
      command line parser in templatised c++.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

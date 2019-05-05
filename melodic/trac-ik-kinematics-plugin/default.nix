@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "9ac973d39470f1f0648e6e01cdd11b7207d61f3482bf7a4c302e43b7ae53896f";
   };
 
-  buildInputs = [ trac-ik-lib moveit-core pluginlib tf-conversions roscpp ];
-  propagatedBuildInputs = [ trac-ik-lib moveit-core pluginlib tf-conversions roscpp ];
+  buildInputs = [ pluginlib trac-ik-lib moveit-core tf-conversions roscpp ];
+  propagatedBuildInputs = [ pluginlib trac-ik-lib moveit-core tf-conversions roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A MoveIt! Kinematics plugin using TRAC-IK'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

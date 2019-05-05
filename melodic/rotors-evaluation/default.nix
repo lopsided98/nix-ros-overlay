@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The dataset evaluation package for the RotorS simulator.'';
-    #license = lib.licenses.ASL 2.0;
+    license = with lib.licenses; [ "ASL 2.0" ];
   };
 }

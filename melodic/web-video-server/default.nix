@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "f9939d41942b68c98fd43940bcccc09d257bd981021d01d64afeaf7f0a77cca8";
   };
 
-  buildInputs = [ roslib cv-bridge async-web-server-cpp image-transport sensor-msgs roscpp ffmpeg ];
-  propagatedBuildInputs = [ roslib cv-bridge async-web-server-cpp image-transport sensor-msgs roscpp ffmpeg ];
+  buildInputs = [ async-web-server-cpp image-transport sensor-msgs cv-bridge ffmpeg roslib roscpp ];
+  propagatedBuildInputs = [ async-web-server-cpp image-transport sensor-msgs cv-bridge ffmpeg roslib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''HTTP Streaming of ROS Image Topics in Multiple Formats'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

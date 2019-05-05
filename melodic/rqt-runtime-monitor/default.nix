@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "f58958b5649d59fca3022a1771e6a457382744c616835cc65980213ab742fd5c";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py qt-gui rospy pythonPackages.rospkg diagnostic-msgs rqt-gui python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui qt-gui rospy diagnostic-msgs python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_runtime_monitor provides a GUI plugin viewing DiagnosticsArray messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

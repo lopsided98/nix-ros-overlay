@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Icons for rocon.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

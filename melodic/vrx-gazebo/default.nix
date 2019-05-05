@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The ROS package for the RobotX competition running in Gazebo.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

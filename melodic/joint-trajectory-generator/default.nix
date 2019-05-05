@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "273943f65776908254c198a36be8792716e78e5487d52e849be32aa66094695d";
   };
 
-  buildInputs = [ pr2-controllers-msgs urdf orocos-kdl actionlib joint-trajectory-action angles roscpp ];
-  propagatedBuildInputs = [ pr2-controllers-msgs urdf orocos-kdl actionlib joint-trajectory-action angles roscpp ];
+  buildInputs = [ pr2-controllers-msgs orocos-kdl joint-trajectory-action urdf actionlib angles roscpp ];
+  propagatedBuildInputs = [ pr2-controllers-msgs orocos-kdl joint-trajectory-action urdf actionlib angles roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''joint_trajectory_generator action takes in a trajectory specified
     by a number of joint positions, and it generates a new smooth trajectory
     through these joint positions.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

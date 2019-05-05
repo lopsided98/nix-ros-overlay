@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ std-msgs sensor-msgs roscpp dbw-fca-msgs ];
   checkInputs = [ roslaunch roslib ];
-  propagatedBuildInputs = [ roslaunch dbw-fca-msgs dbw-fca-can std-msgs sensor-msgs joy roscpp ];
+  propagatedBuildInputs = [ dbw-fca-msgs sensor-msgs joy dbw-fca-can std-msgs roslaunch roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Demonstration of drive-by-wire with joystick'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

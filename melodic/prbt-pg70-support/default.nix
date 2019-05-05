@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, prbt-support, prbt-moveit-config, schunk-description, prbt-ikfast-manipulator-plugin, catkin, xacro }:
+{ lib, buildRosPackage, fetchurl, prbt-support, prbt-moveit-config, xacro, schunk-description, catkin, prbt-ikfast-manipulator-plugin }:
 buildRosPackage {
   pname = "ros-melodic-prbt-pg70-support";
   version = "0.0.3-r1";
@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''PRBT support for Schunk pg70 gripper.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

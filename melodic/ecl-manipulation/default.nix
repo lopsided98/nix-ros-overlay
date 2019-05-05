@@ -18,6 +18,6 @@ buildRosPackage {
   meta = {
     description = ''Includes basic manipulation related structures as well as a few 
     algorithms currently used at Yujin Robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

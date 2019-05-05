@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS nodes to generate command topics for vehicles and manipulators using a joystick input'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

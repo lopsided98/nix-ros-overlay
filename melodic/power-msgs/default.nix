@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS messages for power measurement and breaker control.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

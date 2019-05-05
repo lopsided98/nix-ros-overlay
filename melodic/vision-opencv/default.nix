@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Packages for interfacing ROS with OpenCV, a library of programming functions for real time computer vision.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

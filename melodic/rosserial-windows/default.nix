@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "620b3a46eb5abe13e626c55510ee6175e35b0548be995208f0b062cbb02c7089";
   };
 
-  buildInputs = [ nav-msgs rosserial-client std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs nav-msgs rosserial-client std-msgs geometry-msgs ];
   propagatedBuildInputs = [ rospy rosserial-msgs message-runtime rosserial-client ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosserial for Windows platforms.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

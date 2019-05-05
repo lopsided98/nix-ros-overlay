@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The quaternion_operation package'';
-    #license = lib.licenses.Aoache v2;
+    license = with lib.licenses; [ "Aoache v2" ];
   };
 }

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-msgs, actionlib-lisp, catkin, roslisp, cl-utils, cl-transforms-stamped }:
+{ lib, buildRosPackage, fetchurl, tf2-msgs, actionlib-lisp, catkin, roslisp, cl-transforms-stamped, cl-utils }:
 buildRosPackage {
   pname = "ros-melodic-cl-tf2";
   version = "0.2.10";
@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "668068f24600290b0c5bc0d773d81ca3115f2085a80c58c6617f5467290b2a52";
   };
 
-  propagatedBuildInputs = [ tf2-msgs cl-transforms-stamped actionlib-lisp roslisp cl-utils ];
+  propagatedBuildInputs = [ tf2-msgs actionlib-lisp roslisp cl-transforms-stamped cl-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Client implementation to use TF2 from Common Lisp'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

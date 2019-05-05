@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launch a PID control node.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

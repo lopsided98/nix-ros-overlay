@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The interface for using CHOMP within MoveIt!'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

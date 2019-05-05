@@ -21,6 +21,6 @@ buildRosPackage {
     description = ''industrial robot client contains generic clients for connecting 
      to industrial robot controllers with servers that adhere to the
      simple message protocol.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

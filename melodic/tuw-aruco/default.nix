@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This is a wrapper around the marker detection library ArUco.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -27,6 +27,6 @@ buildRosPackage {
 
     These messages are used for long term logging and will not be
     changed unless there is a very important reason.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

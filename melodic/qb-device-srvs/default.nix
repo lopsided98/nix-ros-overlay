@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the device-independent custom ROS services for qbrobotics® devices.'';
-    #license = lib.licenses.BSD 3-Clause;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

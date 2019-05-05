@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "fb72a43064b023d7be47f00194232ca28d92aea68d92e7b32d337bbe6cfda51c";
   };
 
-  buildInputs = [ gspd gps-common sensor-msgs roscpp pkg-config ];
+  buildInputs = [ sensor-msgs pkg-config gspd gps-common roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''connects to a GPSd server and broadcasts GPS fixes 
    using the NavSatFix message'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

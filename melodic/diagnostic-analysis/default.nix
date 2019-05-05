@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''The diagnostic_analysis package can convert a log of diagnostics data
     into a series of CSV files. Robot logs are recorded with rosbag, and
     can be processed offline using the scripts in this package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

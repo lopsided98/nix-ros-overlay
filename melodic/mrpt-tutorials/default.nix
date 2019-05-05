@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Example files used as tutorials for MRPT ROS packages'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Meshes and URDF descriptions for audibot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

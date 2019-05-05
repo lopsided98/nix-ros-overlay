@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''rosserial for the VEX Cortex V5 Robot Brain platform.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

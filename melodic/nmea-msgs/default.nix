@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The nmea_msgs package contains messages related to data in the NMEA format.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

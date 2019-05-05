@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "85f807efb7f6dfc6cca35eed12ee12e4bc864e618221903eddab3c28920721cf";
   };
 
-  buildInputs = [ aws-common cloudwatch-metrics-common aws-ros1-common ros-monitoring-msgs roscpp ];
+  buildInputs = [ cloudwatch-metrics-common ros-monitoring-msgs aws-common aws-ros1-common roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ aws-ros1-common ros-monitoring-msgs roscpp cloudwatch-metrics-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Subscriber node for the aws/monitoring topic to publish metrics to AWS Cloudwatch'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

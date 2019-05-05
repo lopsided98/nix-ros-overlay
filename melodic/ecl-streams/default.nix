@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "0fd7c5407bc67d28e90e8bb3cee3850ab90ee195b74703949c991cfc0a5836c3";
   };
 
-  buildInputs = [ ecl-converters ecl-license ecl-errors ecl-type-traits ecl-devices ecl-concepts ecl-time ];
-  propagatedBuildInputs = [ ecl-converters ecl-license ecl-errors ecl-type-traits ecl-devices ecl-concepts ecl-time ];
+  buildInputs = [ ecl-converters ecl-concepts ecl-time ecl-license ecl-errors ecl-type-traits ecl-devices ];
+  propagatedBuildInputs = [ ecl-converters ecl-concepts ecl-time ecl-license ecl-errors ecl-type-traits ecl-devices ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''These are lightweight text streaming classes that connect to standardised
      ecl type devices.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

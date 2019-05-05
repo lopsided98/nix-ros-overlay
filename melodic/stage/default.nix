@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "3c72bba7242ecd98b26f177e4227aef06ec85915f196ee88ec6103be4dfb492d";
   };
 
-  buildInputs = [ libjpeg fltk libGLU gtk2 libGL libtool ];
-  propagatedBuildInputs = [ libGL libjpeg fltk libGLU gtk2 catkin ];
+  buildInputs = [ gtk2 libtool libjpeg libGLU fltk libGL ];
+  propagatedBuildInputs = [ gtk2 catkin libjpeg libGLU fltk libGL ];
   nativeBuildInputs = [ cmake pkg-config ];
 
   meta = {
     description = ''Mobile robot simulator http://rtv.github.com/Stage'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "900a78c35d33c6dc2e243480f4ef04df27f1a1773184bd64c16b83c313adb438";
   };
 
-  buildInputs = [ laser-assembler laser-filters cmake-modules dynamic-reconfigure tf-conversions sensor-msgs tf ];
-  propagatedBuildInputs = [ laser-assembler urg-node laser-filters robot-state-publisher dynamic-reconfigure tf-conversions sensor-msgs tf ];
+  buildInputs = [ laser-assembler cmake-modules sensor-msgs laser-filters dynamic-reconfigure tf-conversions tf ];
+  propagatedBuildInputs = [ laser-assembler urg-node sensor-msgs laser-filters robot-state-publisher dynamic-reconfigure tf-conversions tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The jsk_tilt_laser package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

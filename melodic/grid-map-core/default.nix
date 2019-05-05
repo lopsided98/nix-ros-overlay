@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Universal grid map library to manage two-dimensional grid maps with multiple data layers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

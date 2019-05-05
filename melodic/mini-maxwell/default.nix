@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''mini_maxwell'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

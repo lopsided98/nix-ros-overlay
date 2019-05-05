@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The usb_cam_hardware_interface package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

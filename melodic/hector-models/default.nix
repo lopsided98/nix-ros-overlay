@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''hector_models contains (urdf) models of robots, sensors etc.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

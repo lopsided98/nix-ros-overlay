@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''qt_dotgraph provides helpers to work with dot graphs.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

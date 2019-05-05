@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''C++ library for SE(2/3) pose and 2D/3D point
     composition operations with uncertainty'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

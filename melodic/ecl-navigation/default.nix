@@ -20,6 +20,6 @@ buildRosPackage {
     develop navigation algorithms, in particular slam. It does not focus on
     the end-point solution, rather the tools needed to create a variety of
     end-point solutions.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

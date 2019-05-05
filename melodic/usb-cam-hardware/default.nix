@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "29d9274d9b3cf8787c3f80c5354eb605608205118e6ccf56a2aabd26011f7b43";
   };
 
-  buildInputs = [ controller-manager hardware-interface pluginlib nodelet usb-cam-hardware-interface roscpp ];
-  propagatedBuildInputs = [ controller-manager hardware-interface pluginlib nodelet usb-cam-hardware-interface roscpp ];
+  buildInputs = [ controller-manager hardware-interface pluginlib usb-cam-hardware-interface nodelet roscpp ];
+  propagatedBuildInputs = [ controller-manager hardware-interface pluginlib usb-cam-hardware-interface nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The usb_cam_hardware package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

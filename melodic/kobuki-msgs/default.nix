@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''<p>
       Kobuki message and service types: custom messages and services for Kobuki packages.
     </p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

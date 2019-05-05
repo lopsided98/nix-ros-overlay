@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "79c3e1f53669699fa6af61305dd25dfabddbf213bfa36df3b3419950dcf3568f";
   };
 
-  buildInputs = [ cv-bridge roslint camera-info-manager image-transport sensor-msgs nodelet roscpp ];
-  propagatedBuildInputs = [ cv-bridge camera-info-manager image-transport sensor-msgs nodelet roscpp ];
+  buildInputs = [ roslint camera-info-manager image-transport sensor-msgs cv-bridge roscpp nodelet ];
+  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge roscpp nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A simple USB camera driver for the FLIR BOSON using OpenCV'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

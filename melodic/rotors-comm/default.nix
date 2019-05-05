@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6f5fc3033ab80590b10c00fc416c36221be5abd5756b389577e5f3e13dbb346c";
   };
 
-  buildInputs = [ message-generation message-runtime cmake-modules geometry-msgs octomap-msgs ];
-  propagatedBuildInputs = [ message-generation message-runtime cmake-modules geometry-msgs octomap-msgs ];
+  buildInputs = [ cmake-modules octomap-msgs message-generation message-runtime geometry-msgs ];
+  propagatedBuildInputs = [ cmake-modules octomap-msgs message-generation message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''RotorS specific messages and services.'';
-    #license = lib.licenses.ASL 2.0;
+    license = with lib.licenses; [ "ASL 2.0" ];
   };
 }

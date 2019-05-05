@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "bfb1f587202ae563d3c7c967de21660efdd00723675a8e16ae0b9592fc7d5142";
   };
 
-  buildInputs = [ geometry-msgs std-msgs variant-topic-tools variant-msgs roscpp ];
-  propagatedBuildInputs = [ geometry-msgs std-msgs variant-topic-tools variant-msgs roscpp ];
+  buildInputs = [ roscpp std-msgs variant-topic-tools variant-msgs geometry-msgs ];
+  propagatedBuildInputs = [ roscpp std-msgs variant-topic-tools variant-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Variant topic tools testing suites.'';
-    #license = lib.licenses.GNU Lesser General Public License (LGPL);
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

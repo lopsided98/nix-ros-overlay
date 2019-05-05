@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "43cc5478e64f5499139be34e4cdc8015fa3ca70d03bd49134c85b83e6934b0a2";
   };
 
-  buildInputs = [ suitesparse nav2d-msgs tf roscpp tbb nav2d-localizer nav-msgs eigen visualization-msgs geometry-msgs ];
-  propagatedBuildInputs = [ suitesparse nav2d-msgs tf roscpp tbb nav2d-localizer nav-msgs eigen visualization-msgs geometry-msgs ];
+  buildInputs = [ suitesparse nav2d-msgs tf nav2d-localizer tbb nav-msgs visualization-msgs eigen roscpp geometry-msgs ];
+  propagatedBuildInputs = [ suitesparse nav2d-msgs tf nav2d-localizer tbb nav-msgs visualization-msgs eigen roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Graph-based Simultaneous Localization and Mapping module.
     Includes OpenKarto GraphSLAM library by &quot;SRI International&quot;.'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

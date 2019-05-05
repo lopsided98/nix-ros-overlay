@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "a54df1d35bffe4dbed64661144226c3077f14fbcb2097c6e84720ecaca7f7540";
   };
 
-  propagatedBuildInputs = [ mrpt-rawlog mrpt-reactivenav2d mrpt-local-obstacles mrpt-tutorials mrpt-localization mrpt-map ];
+  propagatedBuildInputs = [ mrpt-reactivenav2d mrpt-tutorials mrpt-localization mrpt-map mrpt-rawlog mrpt-local-obstacles ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Tools related to the Mobile Robot Programming Toolkit (MRPT).
     Refer to http://wiki.ros.org/mrpt_navigation for further documentation.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

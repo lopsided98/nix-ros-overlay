@@ -12,9 +12,9 @@ buildRosPackage {
     sha256 = "d2c0acb926c14dd2000db4b395b3bbcc26b53fc76461f4cf7c262947e3ed9138";
   };
 
-  buildInputs = [ cmake-modules boost eigen angles sensor-msgs tf roscpp ];
+  buildInputs = [ cmake-modules boost sensor-msgs roscpp eigen angles tf ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pythonPackages.numpy boost eigen angles sensor-msgs tf roscpp ];
+  propagatedBuildInputs = [ pythonPackages.numpy boost sensor-msgs roscpp eigen angles tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
     sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud
     or sensor_msgs/PointCloud2. In particular, it contains functionality to account
     for the skew resulting from moving robots or tilting laser scanners.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

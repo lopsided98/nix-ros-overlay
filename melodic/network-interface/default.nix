@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Network interfaces and messages.'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

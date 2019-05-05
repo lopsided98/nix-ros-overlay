@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest xacro rosunit ];
-  propagatedBuildInputs = [ gazebo-ros uuv-assistants uuv-gazebo-ros-plugins uuv-sensor-ros-plugins robot-state-publisher uuv-descriptions ];
+  propagatedBuildInputs = [ gazebo-ros uuv-gazebo-ros-plugins uuv-sensor-ros-plugins uuv-assistants uuv-descriptions robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The robot description files for the Desistek SAGA ROV underwater vehicle'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

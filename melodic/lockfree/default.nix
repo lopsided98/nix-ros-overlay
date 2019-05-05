@@ -21,6 +21,6 @@ buildRosPackage {
      kinds of data structures are generally not as easy to use as single-threaded equivalents, and are not
      always faster.  If you don't know you need to use one, try another structure with a lock around it
      first.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

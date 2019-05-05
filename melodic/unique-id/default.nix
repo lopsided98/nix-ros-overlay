@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS Python and C++ interfaces for universally unique identifiers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

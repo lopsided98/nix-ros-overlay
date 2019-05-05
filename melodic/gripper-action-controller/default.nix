@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "7b15202e7175d3352a3855ee222ddbd4db8a5221425436f4637a80e600907ce2";
   };
 
-  buildInputs = [ controller-manager hardware-interface cmake-modules control-msgs realtime-tools control-toolbox trajectory-msgs controller-interface urdf actionlib angles roscpp xacro ];
-  propagatedBuildInputs = [ controller-manager hardware-interface cmake-modules control-msgs realtime-tools control-toolbox trajectory-msgs controller-interface urdf actionlib angles roscpp xacro ];
+  buildInputs = [ controller-manager hardware-interface cmake-modules control-msgs trajectory-msgs realtime-tools control-toolbox controller-interface urdf actionlib angles roscpp xacro ];
+  propagatedBuildInputs = [ controller-manager hardware-interface cmake-modules control-msgs trajectory-msgs realtime-tools control-toolbox controller-interface urdf actionlib angles roscpp xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The gripper_action_controller package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "88c3867ac42fc3ad6533f1fabc58ab169a1f3d4cbe9ae0e165edae28ad5b4df4";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py rostopic pythonPackages.rospkg rqt-gui python-qt-binding geometry-msgs ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui rostopic python-qt-binding geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_robot_steering provides a GUI plugin for steering a robot using Twist messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

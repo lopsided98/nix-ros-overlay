@@ -22,6 +22,6 @@ buildRosPackage {
     network adapter running in master mode. It implements 
     the dynamic_reconfigure interface defined
     in the [[access_point_control]] package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

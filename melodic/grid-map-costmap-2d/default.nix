@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Interface for grid maps to the costmap_2d format.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

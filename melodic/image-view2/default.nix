@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''A simple viewer for ROS image topics with draw-on features'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

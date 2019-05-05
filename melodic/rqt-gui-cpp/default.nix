@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "29dd122311b73050bde2957210a6523688298a3c1993833b78ef18b80a671603";
   };
 
-  buildInputs = [ qt-gui-cpp roscpp qt-gui nodelet qt5.qtbase ];
+  buildInputs = [ qt5.qtbase qt-gui-cpp qt-gui nodelet roscpp ];
   propagatedBuildInputs = [ qt-gui-cpp roscpp qt-gui nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_gui_cpp enables GUI plugins to use the C++ client library for ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

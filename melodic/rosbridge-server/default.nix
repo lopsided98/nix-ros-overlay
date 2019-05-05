@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "49f8201f557a79486c03ea3d4f7b10a57d55b50b43248459f7dd55fd859f9c97";
   };
 
-  propagatedBuildInputs = [ pythonPackages.backports_ssl_match_hostname rosbridge-library pythonPackages.twisted rosauth rospy rosapi rosbridge-msgs pythonPackages.tornado ];
+  propagatedBuildInputs = [ rosapi pythonPackages.backports_ssl_match_hostname rosbridge-library pythonPackages.twisted rosauth rospy rosbridge-msgs pythonPackages.tornado ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A WebSocket interface to rosbridge.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

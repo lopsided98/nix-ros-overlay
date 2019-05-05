@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''forward_command_controller'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

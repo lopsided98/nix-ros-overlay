@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The fetch_depth_layer package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

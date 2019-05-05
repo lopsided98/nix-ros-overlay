@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "d203956bc49ba42bf2f54ef0cb57253ec42fd8278260bd5090fd998765198154";
   };
 
-  buildInputs = [ message-generation actionlib-msgs actionlib rospy diagnostic-msgs ];
-  propagatedBuildInputs = [ message-runtime actionlib-msgs actionlib diagnostic-msgs rospy ];
+  buildInputs = [ actionlib-msgs rospy message-generation actionlib diagnostic-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs rospy message-runtime actionlib diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
     a client to a server, which bounces them back to the client. The client
     collects statistics on latency and loss. The server is a C standalone utility
     or a ROS node. The client can be a ROS node, a standalone utility or a python class.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

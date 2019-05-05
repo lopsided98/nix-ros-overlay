@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ pythonPackages.mock ];
-  propagatedBuildInputs = [ rqt-gui-py qt-gui qt-dotgraph qt-gui-py-common python-qt-binding pythonPackages.rospkg rqt-graph ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-graph qt-gui qt-dotgraph qt-gui-py-common python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_dep provides a GUI plugin for visualizing the ROS dependency graph.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

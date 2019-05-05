@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "7cc4e4aa69ad033c120e3642f512750348e6a15ca373c585e9d3e56a2b75973f";
   };
 
-  buildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-config ecl-build ];
-  propagatedBuildInputs = [ ecl-exceptions ecl-license ecl-errors ecl-config ecl-build ];
+  buildInputs = [ ecl-build ecl-exceptions ecl-license ecl-errors ecl-config ];
+  propagatedBuildInputs = [ ecl-build ecl-exceptions ecl-license ecl-errors ecl-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Cross platform filesystem utilities (until c++11 makes its way in).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

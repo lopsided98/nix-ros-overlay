@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ rosserial-python message-runtime rosserial-client rospy arduino rosserial-msgs ];
+  propagatedBuildInputs = [ rosserial-python arduino rosserial-msgs message-runtime rospy rosserial-client ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosserial for Arduino/AVR platforms.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

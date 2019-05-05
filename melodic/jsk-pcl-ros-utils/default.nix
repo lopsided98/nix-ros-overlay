@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS utility nodelets for pointcloud perception.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

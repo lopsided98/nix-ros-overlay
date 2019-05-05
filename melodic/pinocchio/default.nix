@@ -5,19 +5,19 @@
 { lib, buildRosPackage, fetchurl, python, boost, git, catkin, pythonPackages, urdfdom, eigen, eigenpy }:
 buildRosPackage {
   pname = "ros-melodic-pinocchio";
-  version = "2.0.0";
+  version = "2.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/melodic/pinocchio/2.0.0-0.tar.gz;
-    sha256 = "8f84f420cbee52acb26755fd7bdba3f06013bccc0f1134d080f1bca9a37fa7ff";
+    url = https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/melodic/pinocchio/2.1.3-1.tar.gz;
+    sha256 = "55e2abcacc5f041bb5aac36853a0114852d76d03bdbe29c5a257f39429360fc6";
   };
 
-  buildInputs = [ python pythonPackages.numpy boost eigen eigenpy git urdfdom ];
-  propagatedBuildInputs = [ python pythonPackages.numpy boost eigen eigenpy urdfdom ];
+  buildInputs = [ python pythonPackages.numpy boost git urdfdom eigen eigenpy ];
+  propagatedBuildInputs = [ python pythonPackages.numpy boost urdfdom eigenpy eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives - wrapped for catkin.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

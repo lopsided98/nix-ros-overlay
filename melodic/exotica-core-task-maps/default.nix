@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common taskmaps provided with EXOTica.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

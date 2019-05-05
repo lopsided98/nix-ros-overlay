@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "e68ad89c7896f6b30f8a8dea7b8a0216dc5bfad5988cf8f287dd148069f5ccd1";
   };
 
-  buildInputs = [ jskeus std-srvs rospack actionlib-msgs mk rosmsg rosbuild tf2-ros actionlib std-msgs dynamic-reconfigure roscpp tf actionlib-tutorials euslisp rosnode geneus visualization-msgs geometry-msgs rosbash sensor-msgs rostest message-generation roslang rostopic angles coreutils ];
+  buildInputs = [ jskeus actionlib-msgs actionlib tf actionlib-tutorials geometry-msgs rosbash message-generation roslang angles coreutils std-srvs rospack mk rosmsg rosbuild tf2-ros std-msgs roscpp visualization-msgs euslisp rosnode geneus sensor-msgs rostest rostopic dynamic-reconfigure ];
   checkInputs = [ xorg.xorgserver ];
-  propagatedBuildInputs = [ jskeus std-srvs rospack actionlib-msgs rosmsg tf2-ros actionlib std-msgs roscpp tf actionlib-tutorials euslisp rosnode geneus visualization-msgs geometry-msgs rosbash sensor-msgs rostest message-runtime roslang dynamic-reconfigure ];
+  propagatedBuildInputs = [ jskeus actionlib-msgs actionlib dynamic-reconfigure tf actionlib-tutorials geometry-msgs rosbash message-runtime roslang std-srvs rospack rosmsg tf2-ros std-msgs roscpp visualization-msgs euslisp rosnode sensor-msgs rostest geneus ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''EusLisp client for ROS Robot Operating System.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

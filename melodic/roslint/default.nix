@@ -19,6 +19,6 @@ buildRosPackage {
 
     The lint commands perform static checking of Python or C++ source
     code for errors and standards compliance.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

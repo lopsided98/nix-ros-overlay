@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common Lisp utility libraries'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

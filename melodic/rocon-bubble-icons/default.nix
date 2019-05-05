@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Bubble icon library for rocon.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

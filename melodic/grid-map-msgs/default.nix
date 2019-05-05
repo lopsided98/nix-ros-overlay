@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Definition of the multi-layered grid map message type.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

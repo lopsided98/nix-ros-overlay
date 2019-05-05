@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Non-ROS software for Kobuki, Yujin Robot's mobile research base.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

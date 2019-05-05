@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launch and configuration files for move_base, localization etc. on the MiR robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

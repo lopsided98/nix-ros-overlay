@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "9a4fc0b6f45d9fe43292fa7b4656ea3190c32928c36b33aee9adfaa0c3fafcd2";
   };
 
-  buildInputs = [ gazebo-ros std-srvs gazeboSimulator.gazebo rosbag cv-bridge octomap-msgs gazebo-plugins octomap protobuf roscpp tf geometry-msgs cmake-modules libyamlcpp mav-msgs mavros rotors-control octomap-ros rotors-comm glog ];
-  propagatedBuildInputs = [ gazebo-ros std-srvs gazeboSimulator.gazebo rosbag cv-bridge octomap-msgs gazebo-plugins octomap protobuf roscpp tf geometry-msgs cmake-modules libyamlcpp mav-msgs mavros rotors-control octomap-ros rotors-comm glog ];
+  buildInputs = [ gazeboSimulator.gazebo cv-bridge gazebo-plugins octomap tf geometry-msgs mav-msgs mavros octomap-ros glog gazebo-ros std-srvs rosbag octomap-msgs protobuf roscpp cmake-modules libyamlcpp rotors-control rotors-comm ];
+  propagatedBuildInputs = [ gazeboSimulator.gazebo cv-bridge gazebo-plugins octomap tf geometry-msgs mav-msgs mavros octomap-ros glog gazebo-ros std-srvs rosbag octomap-msgs protobuf roscpp cmake-modules libyamlcpp rotors-control rotors-comm ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The rotors_gazebo_plugins package'';
-    #license = lib.licenses.ASL 2.0;
+    license = with lib.licenses; [ "ASL 2.0" ];
   };
 }

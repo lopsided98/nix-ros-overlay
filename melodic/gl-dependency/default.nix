@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This encapsulates the GL dependency for a specific ROS distribution and its Qt version'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

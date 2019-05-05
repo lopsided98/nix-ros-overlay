@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A helper node that makes sure everybody knows about all static transforms, even if they are published by multiple publishers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

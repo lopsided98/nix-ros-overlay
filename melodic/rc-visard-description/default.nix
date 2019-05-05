@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Visualization package for rc_visard'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

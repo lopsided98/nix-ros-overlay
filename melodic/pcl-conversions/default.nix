@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "14361d15d63002d2752dff7618967181b18d3bb43aaee0c42ac6eb563d1a921a";
   };
 
-  checkInputs = [ eigen std-msgs pcl sensor-msgs roscpp pcl-msgs ];
-  propagatedBuildInputs = [ eigen std-msgs pcl sensor-msgs roscpp pcl-msgs ];
+  checkInputs = [ pcl sensor-msgs pcl-msgs eigen std-msgs roscpp ];
+  propagatedBuildInputs = [ pcl sensor-msgs pcl-msgs eigen std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides conversions from PCL data types and ROS message types'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

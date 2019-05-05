@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Metapackage that contains common tutorials'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

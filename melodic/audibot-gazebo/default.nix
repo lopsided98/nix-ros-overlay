@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ gazebo-ros tf roscpp ];
   checkInputs = [ rostest rospy ];
-  propagatedBuildInputs = [ gazebo-ros gazebo-ros-pkgs rviz robot-state-publisher tf roscpp ];
+  propagatedBuildInputs = [ gazebo-ros gazebo-ros-pkgs roscpp rviz robot-state-publisher tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Gazebo model plugin to simulate Audibot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

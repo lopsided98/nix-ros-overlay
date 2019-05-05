@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The usb_cam_controllers package'';
-    #license = lib.licenses.TODO;
+    license = with lib.licenses; [ "TODO" ];
   };
 }

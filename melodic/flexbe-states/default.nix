@@ -14,12 +14,12 @@ buildRosPackage {
 
   buildInputs = [ rostest ];
   checkInputs = [ geometry-msgs ];
-  propagatedBuildInputs = [ flexbe-msgs flexbe-testing rospy rosbag smach-ros ];
+  propagatedBuildInputs = [ flexbe-msgs rosbag smach-ros flexbe-testing rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''flexbe_states provides a collection of predefined states.
      Feel free to add new states.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

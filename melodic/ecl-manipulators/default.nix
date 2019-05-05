@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "29d59a85307ce361a71f362a25d9b1ff94aaafd5a2df8a51d0659f74d3d735d9";
   };
 
-  buildInputs = [ ecl-exceptions ecl-formatters ecl-license ecl-geometry ecl-build ];
-  propagatedBuildInputs = [ ecl-exceptions ecl-formatters ecl-license ecl-geometry ecl-build ];
+  buildInputs = [ ecl-formatters ecl-geometry ecl-build ecl-exceptions ecl-license ];
+  propagatedBuildInputs = [ ecl-formatters ecl-geometry ecl-build ecl-exceptions ecl-license ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Deploys various manipulation algorithms, currently just 
     feedforward filters (interpolations).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

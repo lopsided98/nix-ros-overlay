@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ rostest pythonPackages.catkin-pkg ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ rospy pythonPackages.rospkg pythonPackages.catkin-pkg roslib rocon-std-msgs ];
+  propagatedBuildInputs = [ pythonPackages.rospkg rospy pythonPackages.catkin-pkg roslib rocon-std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Python system and ros utilities.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''This stack holds packages for IPA default environment configuration.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Drive-by-wire interface to the Dataspeed Inc. Lincoln MKZ DBW kit'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

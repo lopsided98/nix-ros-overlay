@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS tools for those who live in Emacs.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

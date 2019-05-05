@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "d0c506df63940a7cbee85eb4c56ab229459315184e65e6fa3f9f4aa827fe324a";
   };
 
-  buildInputs = [ diagnostic-updater message-generation pcl-ros dynamic-reconfigure visualization-msgs pcl-conversions sensor-msgs roscpp ];
-  propagatedBuildInputs = [ diagnostic-updater message-runtime visualization-msgs pcl-ros dynamic-reconfigure roscpp pcl-conversions sensor-msgs ];
+  buildInputs = [ sensor-msgs roscpp diagnostic-updater pcl-ros message-generation dynamic-reconfigure visualization-msgs pcl-conversions ];
+  propagatedBuildInputs = [ sensor-msgs diagnostic-updater pcl-ros message-runtime visualization-msgs dynamic-reconfigure roscpp pcl-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS driver for the SICK TiM and SICK MRS series of laser scanners.
     This package is based on the original sick_tim-repository of Martin Günther et al.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

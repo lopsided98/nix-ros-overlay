@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "54ab2164334a2a0ef5774a8b684d8275425e807891d98129795292fa2d968b99";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rostopic std-msgs rqt-gui python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui rostopic std-msgs python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_topic provides a GUI plugin for displaying debug information about ROS topics including publishers, subscribers, publishing rate, and ROS Messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

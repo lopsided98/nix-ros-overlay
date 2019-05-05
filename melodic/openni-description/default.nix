@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Model files of OpenNI device.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

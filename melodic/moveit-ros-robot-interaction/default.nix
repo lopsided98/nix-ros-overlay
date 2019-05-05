@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "7667565bf9ad5150421244374497baff91b46bc5c8ed9dd3f53e2f854480a43d";
   };
 
-  buildInputs = [ moveit-ros-planning tf2 interactive-markers tf2-geometry-msgs tf2-eigen roscpp tf2-ros ];
+  buildInputs = [ moveit-ros-planning tf2-geometry-msgs tf2-ros tf2 interactive-markers tf2-eigen roscpp ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ moveit-ros-planning tf2 interactive-markers tf2-geometry-msgs tf2-eigen roscpp tf2-ros ];
+  propagatedBuildInputs = [ moveit-ros-planning tf2-geometry-msgs tf2-ros tf2 interactive-markers tf2-eigen roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Components of MoveIt! that offer interaction via interactive markers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

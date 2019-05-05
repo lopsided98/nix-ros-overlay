@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''eus_assimp'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

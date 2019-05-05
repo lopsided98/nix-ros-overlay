@@ -24,6 +24,6 @@ buildRosPackage {
   triggers, etc... All of the hardware components in this interface are
   directly available to the controllers inside the hard realtime
   control loop.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

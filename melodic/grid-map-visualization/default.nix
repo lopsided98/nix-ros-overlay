@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, grid-map-core, tf, sensor-msgs, catkin, grid-map-ros, nav-msgs, visualization-msgs, grid-map-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, grid-map-core, sensor-msgs, catkin, roscpp, grid-map-ros, nav-msgs, visualization-msgs, grid-map-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-visualization";
   version = "1.6.1";
@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "c35030b57adc01d75f9d3e5e061c933839f850d7a4d6dbc4d9a0f3fcdd1e0803";
   };
 
-  buildInputs = [ grid-map-core grid-map-ros nav-msgs visualization-msgs tf grid-map-msgs roscpp sensor-msgs ];
-  propagatedBuildInputs = [ grid-map-core grid-map-ros nav-msgs visualization-msgs tf grid-map-msgs roscpp sensor-msgs ];
+  buildInputs = [ grid-map-core tf sensor-msgs grid-map-ros nav-msgs visualization-msgs grid-map-msgs roscpp ];
+  propagatedBuildInputs = [ grid-map-core tf sensor-msgs grid-map-ros nav-msgs visualization-msgs grid-map-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Configurable tool to visualize grid maps in RViz.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

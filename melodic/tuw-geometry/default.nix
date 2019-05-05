@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "96df80626ab8ecd101acb1f972c815be0d105e9e5539e73d691ea3b2ef5d3e84";
   };
 
-  buildInputs = [ boost rospy std-msgs cv-bridge roscpp eigen ];
+  buildInputs = [ boost cv-bridge rospy std-msgs roscpp eigen ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ std-msgs roscpp cv-bridge rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tuw_geometry package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

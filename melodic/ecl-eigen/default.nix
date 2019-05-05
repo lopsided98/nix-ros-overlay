@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This provides an Eigen implementation for ecl's linear algebra.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

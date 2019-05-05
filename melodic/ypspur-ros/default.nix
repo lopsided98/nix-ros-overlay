@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS wrapper for the mobile robot control platform YP-Spur'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

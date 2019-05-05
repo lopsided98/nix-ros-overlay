@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "527127469522f807829b1ea468b5e060556a1b55e1023deff91c921171746dec";
   };
 
-  buildInputs = [ filters laser-filters cmake-modules mk git laser-geometry ];
+  buildInputs = [ filters cmake-modules mk git laser-filters laser-geometry ];
   propagatedBuildInputs = [ filters laser-filters ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''laser_filters_jsk_patch'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

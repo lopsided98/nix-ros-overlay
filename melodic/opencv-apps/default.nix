@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cv-bridge, rosservice, image-view, image-transport, message-generation, message-runtime, image-proc, roslaunch, std-srvs, rosbag, catkin, std-msgs, nodelet, roscpp, compressed-image-transport, sensor-msgs, rostest, rostopic, dynamic-reconfigure, topic-tools }:
+{ lib, buildRosPackage, fetchurl, cv-bridge, rosservice, image-view, image-transport, message-generation, message-runtime, roslaunch, image-proc, std-srvs, rosbag, catkin, std-msgs, roscpp, nodelet, compressed-image-transport, sensor-msgs, rostest, rostopic, dynamic-reconfigure, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-opencv-apps";
   version = "2.0.1-r1";
@@ -12,9 +12,9 @@ buildRosPackage {
     sha256 = "11489debf5d3b3dc194472f483d67857db62f76665f6785ad4f55882c4e4d3dc";
   };
 
-  buildInputs = [ std-srvs image-transport sensor-msgs cv-bridge roscpp message-generation dynamic-reconfigure std-msgs nodelet ];
-  checkInputs = [ image-proc rosbag rosservice rostest rostopic image-view topic-tools roslaunch compressed-image-transport ];
-  propagatedBuildInputs = [ std-srvs image-transport sensor-msgs cv-bridge roscpp message-runtime dynamic-reconfigure std-msgs nodelet ];
+  buildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-generation nodelet dynamic-reconfigure std-msgs roscpp ];
+  checkInputs = [ roslaunch rosbag rosservice rostest rostopic image-view topic-tools image-proc compressed-image-transport ];
+  propagatedBuildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-runtime nodelet dynamic-reconfigure std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -24,6 +24,6 @@ buildRosPackage {
       <li>Some of the features covered by opencv_apps are explained in <a href="http://wiki.ros.org/opencv_apps">the wiki</a>.</li>
     </ul>
     <p>The most of code is originally taken from https://github.com/Itseez/opencv/tree/master/samples/cpp</p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

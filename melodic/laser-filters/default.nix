@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "7429472a08b080cae1e101e9e96443b884791926ad59479c553809669347d46e";
   };
 
-  buildInputs = [ filters pluginlib tf sensor-msgs message-filters roscpp rostest angles laser-geometry ];
-  propagatedBuildInputs = [ filters laser-geometry pluginlib angles tf sensor-msgs roscpp message-filters ];
+  buildInputs = [ filters pluginlib tf sensor-msgs message-filters rostest laser-geometry angles roscpp ];
+  propagatedBuildInputs = [ filters pluginlib tf sensor-msgs message-filters laser-geometry angles roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Assorted filters designed to operate on 2D planar laser scanners,
     which use the sensor_msgs/LaserScan type.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

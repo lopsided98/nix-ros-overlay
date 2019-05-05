@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''RotorS is a MAV gazebo simulator.'';
-    #license = lib.licenses.ASL 2.0;
+    license = with lib.licenses; [ "ASL 2.0" ];
   };
 }

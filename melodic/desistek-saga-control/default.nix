@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Configuration and launch files to control the Desistek SAGA ROV'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

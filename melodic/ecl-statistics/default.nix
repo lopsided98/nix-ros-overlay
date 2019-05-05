@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Common statistical structures and algorithms for control systems.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

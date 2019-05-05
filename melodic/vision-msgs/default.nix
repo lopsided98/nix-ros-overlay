@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "aea7d0a539a76bbd0072f74bb3c7ebc0a7f3b3277963f8d696de42a5c4066e90";
   };
 
-  buildInputs = [ message-generation message-runtime std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ message-generation message-runtime std-msgs sensor-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for interfacing with various computer vision pipelines, such as
     object detectors.'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

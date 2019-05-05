@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Power drivers for the PR2 robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

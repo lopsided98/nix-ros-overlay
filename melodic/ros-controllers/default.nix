@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Library of ros controllers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

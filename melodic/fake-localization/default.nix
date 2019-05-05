@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ rosconsole tf2-geometry-msgs message-filters tf2-ros nav-msgs angles rospy roscpp geometry-msgs ];
-  propagatedBuildInputs = [ nav-msgs rosconsole tf2-ros rospy roscpp message-filters geometry-msgs ];
+  propagatedBuildInputs = [ rosconsole message-filters tf2-ros nav-msgs rospy roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A ROS node that simply forwards odometry information.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

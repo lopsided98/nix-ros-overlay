@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''Merging multiple 3D maps, represented as pointclouds,
   without knowledge of initial positions of robots.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

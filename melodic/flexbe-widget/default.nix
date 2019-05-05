@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''flexbe_widget implements some smaller scripts for the behavior engine.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

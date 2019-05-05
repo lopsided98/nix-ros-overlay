@@ -21,6 +21,6 @@ buildRosPackage {
   etc.) of different schunk components. The files in this package are parsed and used by
   a variety of other components. Most users will not interact directly
   with this package.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

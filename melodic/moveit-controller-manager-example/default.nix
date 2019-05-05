@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''An example controller manager plugin for MoveIt. This is not functional code.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

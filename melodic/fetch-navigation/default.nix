@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Configuration and launch files for running ROS navigation on Fetch.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

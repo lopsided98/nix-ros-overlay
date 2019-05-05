@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Converts between Python dictionaries and JSON to rospy messages.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

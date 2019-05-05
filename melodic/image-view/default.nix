@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''A simple viewer for ROS image topics. Includes a specialized viewer
   for stereo + disparity images.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

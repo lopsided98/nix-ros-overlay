@@ -23,6 +23,6 @@ buildRosPackage {
     Server. This library is intended for internal use only.
 
     rosparam can be invoked within a <a href="http://www.ros.org/wiki/roslaunch">roslaunch</a> file.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

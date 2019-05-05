@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "2d8effa0a61ce81ef4a037ce360defc578616e2b6e5c1981144ba08e89dbd473";
   };
 
-  buildInputs = [ message-generation actionlib-msgs sensor-msgs visualization-msgs geometry-msgs ];
-  propagatedBuildInputs = [ message-runtime actionlib-msgs sensor-msgs visualization-msgs geometry-msgs ];
+  buildInputs = [ actionlib-msgs sensor-msgs message-generation visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs sensor-msgs message-runtime visualization-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Common Manipulation Messages and Services Used in RAIL Manipulation Packages'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

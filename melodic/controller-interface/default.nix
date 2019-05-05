@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Interface base class for controllers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

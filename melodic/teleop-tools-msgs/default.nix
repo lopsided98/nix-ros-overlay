@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The teleop_tools_msgs package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

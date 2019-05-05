@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "950bd57e9157767ab5699a7b93eee1083a484633b26f8931b433c71755716159";
   };
 
-  buildInputs = [ std-srvs roscpp gazebo-dev nav-msgs message-generation dynamic-reconfigure std-msgs tf geometry-msgs ];
+  buildInputs = [ std-srvs roscpp gazebo-dev message-generation nav-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ gazebo-ros std-srvs gazeboSimulator.gazebo roscpp nav-msgs message-runtime dynamic-reconfigure std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
@@ -21,6 +21,6 @@ buildRosPackage {
      Currently it contains a 6wd differential drive plugin, an IMU sensor plugin,
      an earth magnetic field sensor plugin, a GPS sensor plugin and a
      sonar ranger plugin.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

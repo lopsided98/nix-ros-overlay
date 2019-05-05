@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''rosgraph contains the rosgraph command-line tool, which prints
     information about the ROS Computation Graph. It also provides an
     internal library that can be used by graphical tools.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

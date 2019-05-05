@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "6fe815c03b7ab3c27db125908e1206c537a46da0ff6266bb0263315833c81c6a";
   };
 
-  buildInputs = [ std-srvs rtabmap class-loader cv-bridge tf2-ros image-geometry octomap-msgs move-base-msgs nav-msgs pcl-ros std-msgs tf-conversions rospy laser-geometry tf pcl-conversions find-object-2d stereo-msgs roscpp costmap-2d nodelet visualization-msgs geometry-msgs pcl sensor-msgs image-transport message-filters message-generation rviz dynamic-reconfigure eigen-conversions ];
-  propagatedBuildInputs = [ std-srvs rtabmap class-loader cv-bridge tf2-ros image-geometry octomap-msgs move-base-msgs nav-msgs pcl-ros std-msgs tf-conversions rospy laser-geometry compressed-image-transport tf pcl-conversions find-object-2d stereo-msgs costmap-2d roscpp nodelet visualization-msgs geometry-msgs image-transport sensor-msgs message-filters rviz message-runtime dynamic-reconfigure compressed-depth-image-transport eigen-conversions ];
+  buildInputs = [ class-loader cv-bridge image-geometry pcl-ros tf-conversions rospy tf pcl-conversions find-object-2d geometry-msgs stereo-msgs image-transport message-filters message-generation rviz eigen-conversions std-srvs rtabmap tf2-ros octomap-msgs move-base-msgs nav-msgs std-msgs laser-geometry roscpp nodelet visualization-msgs costmap-2d pcl sensor-msgs dynamic-reconfigure ];
+  propagatedBuildInputs = [ class-loader cv-bridge image-geometry pcl-ros tf-conversions rospy tf pcl-conversions find-object-2d geometry-msgs stereo-msgs image-transport message-filters rviz message-runtime compressed-depth-image-transport eigen-conversions std-srvs rtabmap tf2-ros octomap-msgs move-base-msgs nav-msgs std-msgs laser-geometry compressed-image-transport roscpp nodelet visualization-msgs costmap-2d sensor-msgs dynamic-reconfigure ];
   nativeBuildInputs = [ genmsg catkin ];
 
   meta = {
     description = ''RTAB-Map's ros-pkg. RTAB-Map is a RGB-D SLAM approach with real-time constraints.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

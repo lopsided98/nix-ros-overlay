@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ jsoncpp rviz boost qt5.qtbase ];
-  propagatedBuildInputs = [ rviz boost media-export qt5.qtbase ];
+  propagatedBuildInputs = [ media-export rviz boost qt5.qtbase ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Render large point clouds in rviz'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

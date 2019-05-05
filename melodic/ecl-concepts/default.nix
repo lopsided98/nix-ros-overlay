@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Introduces a compile time concept checking mechanism that can be used
      most commonly to check for required functionality when passing
      template arguments.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

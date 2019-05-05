@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

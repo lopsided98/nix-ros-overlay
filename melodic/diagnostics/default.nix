@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "dec737018e36952a217efb3fda54489da280470d5230f4a5fa282027317cc03f";
   };
 
-  propagatedBuildInputs = [ diagnostic-updater self-test diagnostic-analysis diagnostic-common-diagnostics diagnostic-aggregator ];
+  propagatedBuildInputs = [ self-test diagnostic-analysis diagnostic-common-diagnostics diagnostic-updater diagnostic-aggregator ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''diagnostics'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

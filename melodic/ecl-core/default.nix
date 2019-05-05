@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "faf777d4df832763a55bb0e32b19e5bc391f094d21aaec4acce62c11ed1695d5";
   };
 
-  propagatedBuildInputs = [ ecl-eigen ecl-utilities ecl-streams ecl-sigslots ecl-command-line ecl-threads ecl-containers ecl-exceptions ecl-math ecl-devices ecl-linear-algebra ecl-ipc ecl-converters ecl-formatters ecl-concepts ecl-statistics ecl-geometry ecl-time ecl-type-traits ecl-core-apps ecl-mpl ];
+  propagatedBuildInputs = [ ecl-streams ecl-threads ecl-exceptions ecl-linear-algebra ecl-ipc ecl-formatters ecl-concepts ecl-statistics ecl-geometry ecl-type-traits ecl-eigen ecl-utilities ecl-sigslots ecl-command-line ecl-containers ecl-math ecl-devices ecl-converters ecl-time ecl-core-apps ecl-mpl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A set of tools and interfaces extending the capabilities of c++ to 
     provide a lightweight, consistent interface with a focus for control
     programming.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

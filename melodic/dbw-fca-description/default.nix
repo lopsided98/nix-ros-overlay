@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF and meshes describing the Chrysler Pacifica.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

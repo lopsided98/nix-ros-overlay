@@ -21,6 +21,6 @@ buildRosPackage {
     hierarchical state machines.  SMACH is a new library that takes
     advantage of very old concepts in order to quickly create robust
     robot behavior with maintainable and modular code.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

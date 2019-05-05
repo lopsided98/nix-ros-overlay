@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "8e5fa9db4aea56c8bebc4514900b75d2f8bfdeb3d7ae664b4f991273f59b4dfe";
   };
 
-  buildInputs = [ pluginlib geometry-msgs std-msgs tf rostime roscpp ];
+  buildInputs = [ pluginlib tf rostime std-msgs roscpp geometry-msgs ];
   checkInputs = [ rostest gtest ];
-  propagatedBuildInputs = [ pluginlib boost geometry-msgs std-msgs tf rostime roscpp ];
+  propagatedBuildInputs = [ pluginlib boost rostime roscpp std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Persistent storage of ROS messages'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

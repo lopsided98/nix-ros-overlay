@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''rosclean: cleanup filesystem resources (e.g. log files).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Nodelet Core Metapackage'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

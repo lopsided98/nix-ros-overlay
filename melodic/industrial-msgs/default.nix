@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The industrial message package containes industrial specific messages 
 	definitions. This package is part of the ROS-Industrial program.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

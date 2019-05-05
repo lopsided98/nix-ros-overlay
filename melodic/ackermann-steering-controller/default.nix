@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "d6de33231e9dfdcb67a15c0c397f77d3e3e656823cabd02eb2464ba4a617b83a";
   };
 
-  buildInputs = [ hardware-interface pluginlib boost realtime-tools diff-drive-controller roscpp nav-msgs urdf controller-interface tf ];
-  checkInputs = [ gazebo-ros rostest controller-manager std-srvs std-msgs rosunit xacro geometry-msgs ];
-  propagatedBuildInputs = [ hardware-interface pluginlib boost realtime-tools diff-drive-controller roscpp nav-msgs urdf controller-interface tf ];
+  buildInputs = [ hardware-interface pluginlib boost diff-drive-controller realtime-tools roscpp nav-msgs urdf controller-interface tf ];
+  checkInputs = [ gazebo-ros controller-manager std-srvs rostest std-msgs rosunit xacro geometry-msgs ];
+  propagatedBuildInputs = [ hardware-interface pluginlib boost diff-drive-controller realtime-tools roscpp nav-msgs urdf controller-interface tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controller for a steer drive mobile base.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''swri_image_util'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Implementation of TF datatypes'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

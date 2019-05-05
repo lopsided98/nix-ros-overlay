@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "d7624bbbca732b5e17524908ec9e6214c448aa9cc33ffddb3538e9269c6bd313";
   };
 
-  buildInputs = [ hardware-interface cmake-modules control-msgs realtime-tools control-toolbox trajectory-msgs controller-interface urdf actionlib angles roscpp ];
+  buildInputs = [ hardware-interface cmake-modules control-msgs trajectory-msgs realtime-tools control-toolbox controller-interface urdf actionlib angles roscpp ];
   checkInputs = [ controller-manager rostest xacro ];
-  propagatedBuildInputs = [ hardware-interface control-msgs realtime-tools control-toolbox trajectory-msgs controller-interface urdf actionlib angles roscpp ];
+  propagatedBuildInputs = [ hardware-interface control-msgs trajectory-msgs realtime-tools control-toolbox controller-interface urdf actionlib angles roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controller for executing joint-space trajectories on a group of joints.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

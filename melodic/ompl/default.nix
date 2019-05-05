@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''OMPL is a free sampling-based motion planning library.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

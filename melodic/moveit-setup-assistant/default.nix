@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Generates a configuration package that makes it easy to use MoveIt!'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This provides a ROS node for the PR2 Power Board.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

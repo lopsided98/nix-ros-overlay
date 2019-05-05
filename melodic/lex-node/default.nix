@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package providing a ROS node for interacting with Amazon Lex'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

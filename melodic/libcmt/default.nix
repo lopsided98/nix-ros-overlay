@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''libCMT ROS Wrapper'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

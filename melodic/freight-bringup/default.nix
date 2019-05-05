@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Bringup for freight'';
-    #license = lib.licenses.Proprietary;
+    license = with lib.licenses; [ "Proprietary" ];
   };
 }

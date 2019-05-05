@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "f1516df538999a5fb7cb8eeaf71636c9572bba758adac8cdafbf5446918b7bbc";
   };
 
-  buildInputs = [ tf2 orocos-kdl tf2-ros python-orocos-kdl geometry-msgs ];
+  buildInputs = [ orocos-kdl python-orocos-kdl tf2-ros tf2 geometry-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ tf2 orocos-kdl tf2-ros python-orocos-kdl geometry-msgs ];
+  propagatedBuildInputs = [ orocos-kdl python-orocos-kdl tf2-ros tf2 geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''tf2_geometry_msgs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

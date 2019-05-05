@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''A ROS node that controls a Linksys access point with
     a Linksys WRT610n-compatible web interface.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

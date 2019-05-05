@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''AVT GigE SDK version 1.26 for ROS'';
-    #license = lib.licenses.Commercial;
+    license = with lib.licenses; [ "Commercial" ];
   };
 }

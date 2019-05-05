@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "70cc442ffa095dd5da8b61cd98ac71d2399f5c66e2becb9509a8860c6b3f55cd";
   };
 
-  buildInputs = [ cacert cmake-modules openssl git opencv3 ];
+  buildInputs = [ cmake-modules git cacert openssl opencv3 ];
   propagatedBuildInputs = [ opencv3 ];
   nativeBuildInputs = [ cmake ];
 
@@ -24,6 +24,6 @@ buildRosPackage {
 
   This implementation is created for the specific purpose of creating
   over-segmentations in an OpenCV-based environment.'';
-    #license = lib.licenses.N/A;
+    license = with lib.licenses; [ "N/A" ];
   };
 }

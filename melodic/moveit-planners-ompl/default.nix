@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "ff42c067ffeea4f9430e365946b5a958bec447d2e0e5a4fee66eee6a306e51df";
   };
 
-  buildInputs = [ moveit-ros-planning pluginlib rosconsole moveit-core dynamic-reconfigure roscpp ompl tf2-ros ];
+  buildInputs = [ moveit-ros-planning pluginlib rosconsole ompl tf2-ros moveit-core dynamic-reconfigure roscpp ];
   checkInputs = [ moveit-resources rosunit ];
-  propagatedBuildInputs = [ moveit-ros-planning pluginlib rosconsole moveit-core dynamic-reconfigure roscpp ompl tf2-ros ];
+  propagatedBuildInputs = [ moveit-ros-planning pluginlib rosconsole ompl tf2-ros moveit-core dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''MoveIt! interface to OMPL'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

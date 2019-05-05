@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The pybind11 package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

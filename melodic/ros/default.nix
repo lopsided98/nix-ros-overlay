@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS packaging system'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

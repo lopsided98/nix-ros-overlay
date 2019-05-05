@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The fetch_maps package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

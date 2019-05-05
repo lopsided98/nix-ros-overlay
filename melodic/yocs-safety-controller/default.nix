@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, sensor-msgs, catkin, ecl-threads, nodelet, std-msgs, roscpp, geometry-msgs, yocs-controllers }:
+{ lib, buildRosPackage, fetchurl, pluginlib, sensor-msgs, catkin, roscpp, ecl-threads, std-msgs, nodelet, geometry-msgs, yocs-controllers }:
 buildRosPackage {
   pname = "ros-melodic-yocs-safety-controller";
   version = "0.8.2";
@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "83f0799143de08c0f6c8aa93c665fbac01d8a7dc3e8e04752bdc59e042244557";
   };
 
-  buildInputs = [ pluginlib nodelet geometry-msgs std-msgs sensor-msgs roscpp yocs-controllers ecl-threads ];
-  propagatedBuildInputs = [ pluginlib nodelet geometry-msgs std-msgs sensor-msgs roscpp yocs-controllers ecl-threads ];
+  buildInputs = [ pluginlib sensor-msgs ecl-threads nodelet std-msgs roscpp geometry-msgs yocs-controllers ];
+  propagatedBuildInputs = [ pluginlib sensor-msgs ecl-threads nodelet std-msgs roscpp geometry-msgs yocs-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
     The SafetyController listens to ranger readings in order to stop (and move back), if obstacles get to close.
 
     This controller can be enabled/disabled.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

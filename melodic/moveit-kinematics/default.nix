@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "985cac460cfb1e2a2c9d0c9715fd3f8fc03a5275ef0d7056cd79e5b6048cc3a3";
   };
 
-  buildInputs = [ moveit-ros-planning tf2 moveit-core orocos-kdl pluginlib roscpp tf2-kdl eigen ];
+  buildInputs = [ moveit-ros-planning orocos-kdl pluginlib tf2-kdl tf2 moveit-core eigen roscpp ];
   checkInputs = [ moveit-resources rostest xmlrpcpp ];
   propagatedBuildInputs = [ moveit-ros-planning orocos-kdl pluginlib tf2-kdl tf2 moveit-core pythonPackages.lxml eigen roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package for all inverse kinematics solvers in MoveIt!'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

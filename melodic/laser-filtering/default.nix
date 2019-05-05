@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS Libraries for filtering specific kinds of laser scans'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

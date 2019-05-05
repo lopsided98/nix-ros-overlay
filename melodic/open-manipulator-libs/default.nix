@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "1e026abdb7af7fe42518d35f418754921f3231a328794e8eba9d10ab1bea3b63";
   };
 
-  buildInputs = [ dynamixel-workbench-toolbox cmake-modules eigen roscpp robotis-manipulator ];
-  propagatedBuildInputs = [ dynamixel-workbench-toolbox cmake-modules eigen roscpp robotis-manipulator ];
+  buildInputs = [ cmake-modules robotis-manipulator dynamixel-workbench-toolbox eigen roscpp ];
+  propagatedBuildInputs = [ cmake-modules robotis-manipulator dynamixel-workbench-toolbox eigen roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''OpenManipulator library (Kinematics lib., Dynamixel lib., Drawing path lib.)'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

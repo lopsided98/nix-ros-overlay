@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "6631d7021aa7bf102ca9be8925ec2fdc5dc4fd4ac4effa126ae8df74bb33232c";
   };
 
-  buildInputs = [ std-srvs message-generation nodelet image-transport sensor-msgs cv-bridge jsk-topic-tools ];
+  buildInputs = [ std-srvs image-transport sensor-msgs cv-bridge jsk-topic-tools message-generation nodelet ];
   checkInputs = [ rostest jsk-tools jsk-recognition-utils ];
-  propagatedBuildInputs = [ std-srvs cv-bridge message-runtime image-transport sensor-msgs nodelet jsk-topic-tools ];
+  propagatedBuildInputs = [ std-srvs image-transport sensor-msgs cv-bridge jsk-topic-tools message-runtime nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS nodes to publish resized images.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

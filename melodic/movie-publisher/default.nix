@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "d25ff36cadc9c0e22259a1e55b9e761efcc0e9ed0f4c1fcd30c1f919dfb90f4b";
   };
 
-  propagatedBuildInputs = [ pythonPackages.imageio rospy sensor-msgs cv-bridge ffmpeg rosbash-params pythonPackages.opencv3 ];
+  propagatedBuildInputs = [ sensor-msgs cv-bridge ffmpeg pythonPackages.opencv3 pythonPackages.imageio rospy rosbash-params ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Node for using a video file as video topic source.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

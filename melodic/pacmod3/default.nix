@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''AutonomouStuff PACMod v3 Driver Package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

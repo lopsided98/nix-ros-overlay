@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Gazebo plugin to provide simulated data from Velodyne laser scanners.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

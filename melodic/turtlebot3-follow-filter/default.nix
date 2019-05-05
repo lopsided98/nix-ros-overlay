@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''turtlebot3_follow_filter package using laser_filters for turtlebot3_follower package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

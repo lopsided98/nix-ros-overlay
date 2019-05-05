@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The move_group node for MoveIt'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

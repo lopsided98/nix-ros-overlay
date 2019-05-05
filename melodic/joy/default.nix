@@ -23,6 +23,6 @@ buildRosPackage {
     generic Linux joystick to ROS. This node publishes a &quot;Joy&quot;
     message, which contains the current state of each one of the
     joystick's buttons and axes.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''rqt_gui_py enables GUI plugins to use the Python client library for ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

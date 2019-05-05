@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The package provides the environment variables `ROS_VERSION`, `ROS_DISTRO`, `ROS_PACKAGE_PATH`, and `ROS_ETC_DIR`.'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

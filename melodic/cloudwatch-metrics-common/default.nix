@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Library used by ROS1/2 node to publish metrics'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

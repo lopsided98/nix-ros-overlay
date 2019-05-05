@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Simulation package using gazebo for OpenManipulator with TurtleBot3'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

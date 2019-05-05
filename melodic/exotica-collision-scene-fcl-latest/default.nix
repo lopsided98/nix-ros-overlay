@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Collision checking and distance computation using the latest version of the FCL library.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

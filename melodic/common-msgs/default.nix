@@ -23,6 +23,6 @@ buildRosPackage {
     geometric primitives (<a href="http://wiki.ros.org/geometry_msgs">geometry_msgs</a>),
     robot navigation (<a href="http://wiki.ros.org/nav_msgs">nav_msgs</a>),
     and common sensors (<a href="http://wiki.ros.org/sensor_msgs">sensor_msgs</a>), such as laser range finders, cameras, point clouds.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

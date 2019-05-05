@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Optimal allocation of forces and torques to thruster and fins of AUVs'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

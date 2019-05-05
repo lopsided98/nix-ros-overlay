@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "cff217c086340f75d87f968fe96ab08c5485fb39779aa8d1af8699bcb993f356";
   };
 
-  buildInputs = [ pr2-controllers-msgs rospy joint-trajectory-action trajectory-msgs roslib ];
-  propagatedBuildInputs = [ pr2-controllers-msgs rospy joint-trajectory-action trajectory-msgs roslib ];
+  buildInputs = [ pr2-controllers-msgs joint-trajectory-action trajectory-msgs rospy roslib ];
+  propagatedBuildInputs = [ pr2-controllers-msgs joint-trajectory-action trajectory-msgs rospy roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''joint_trajectory_action_tools'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

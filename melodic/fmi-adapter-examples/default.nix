@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Provides small examples for use of the fmi_adapter package'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

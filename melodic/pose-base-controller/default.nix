@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "92fdd5e9e92e018a8ecbb45cf342f449ad33550922b7b9de82b27c54c131af48";
   };
 
-  buildInputs = [ move-base-msgs nav-msgs tf2-ros tf2-geometry-msgs actionlib roscpp geometry-msgs ];
-  propagatedBuildInputs = [ move-base-msgs nav-msgs tf2-ros tf2-geometry-msgs actionlib roscpp geometry-msgs ];
+  buildInputs = [ tf2-geometry-msgs tf2-ros move-base-msgs nav-msgs actionlib roscpp geometry-msgs ];
+  propagatedBuildInputs = [ tf2-geometry-msgs tf2-ros move-base-msgs nav-msgs actionlib roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A node that provides the move_base action server interface, but instead of
     planning simply drives towards the target pose using a control-based
     approach.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

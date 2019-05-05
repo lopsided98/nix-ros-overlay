@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "1deeb71cb90294e0027a324105670add8ffd4dabbcd454cc4d2b9508f4fe89af";
   };
 
-  buildInputs = [ shape-msgs message-generation actionlib moveit-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ shape-msgs message-runtime actionlib moveit-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ shape-msgs sensor-msgs message-generation actionlib moveit-msgs geometry-msgs ];
+  propagatedBuildInputs = [ shape-msgs sensor-msgs message-runtime actionlib moveit-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Messages for describing objects and how to grasp them.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

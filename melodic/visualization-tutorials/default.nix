@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "5f67b564a5f87b4d7113b97de74e987a956d3985dac7639204b4ba697a056007";
   };
 
-  propagatedBuildInputs = [ librviz-tutorial interactive-marker-tutorials rviz-python-tutorial visualization-marker-tutorials rviz-plugin-tutorials ];
+  propagatedBuildInputs = [ librviz-tutorial visualization-marker-tutorials interactive-marker-tutorials rviz-python-tutorial rviz-plugin-tutorials ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Metapackage referencing tutorials related to rviz and visualization.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

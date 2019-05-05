@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The pheeno_ros_description package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

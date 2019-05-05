@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''libqt-gui metapackage supporting qt4 and qt5'';
-    #license = lib.licenses.United States Government Purpose;
+    license = with lib.licenses; [ "United States Government Purpose" "SwRI Proprietary" ];
   };
 }

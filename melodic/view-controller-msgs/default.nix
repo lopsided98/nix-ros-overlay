@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for (camera) view controllers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

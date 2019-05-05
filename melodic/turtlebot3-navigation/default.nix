@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The turtlebot3_navigation provides roslaunch scripts for starting the navigation.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

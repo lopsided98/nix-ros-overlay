@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "92aa5df09147dc1819de1d4415efe58d267744ca6cbf9ffe4dbb742d1713cdcc";
   };
 
-  buildInputs = [ std-srvs message-generation actionlib-msgs dynamic-reconfigure std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs message-runtime actionlib-msgs dynamic-reconfigure std-msgs geometry-msgs ];
+  buildInputs = [ std-srvs actionlib-msgs message-generation dynamic-reconfigure std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs actionlib-msgs message-runtime dynamic-reconfigure std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Yujin's Open Control System messages, services and actions'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

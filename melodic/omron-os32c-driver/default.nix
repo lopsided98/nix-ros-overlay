@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "ebf659a3b4a959dc4c76afcd198ebcb73f574772b9af68d3279965d14a3369b8";
   };
 
-  buildInputs = [ diagnostic-updater odva-ethernetip boost sensor-msgs roscpp rosconsole-bridge ];
+  buildInputs = [ boost sensor-msgs rosconsole-bridge diagnostic-updater odva-ethernetip roscpp ];
   checkInputs = [ roslaunch rosunit ];
-  propagatedBuildInputs = [ diagnostic-updater odva-ethernetip boost sensor-msgs roscpp rosconsole-bridge ];
+  propagatedBuildInputs = [ boost sensor-msgs rosconsole-bridge diagnostic-updater odva-ethernetip roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Interface driver for Omron OS32C Lidar via Ethernet/IP (Industrial Protocol)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

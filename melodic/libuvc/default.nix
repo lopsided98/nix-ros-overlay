@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''USB Video Class driver library'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

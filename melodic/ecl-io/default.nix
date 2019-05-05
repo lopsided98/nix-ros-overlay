@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Most implementations (windows, posix, ...) have slightly different api for 
      low level input-output functions. These are gathered here and re-represented 
      with a cross platform set of functions.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

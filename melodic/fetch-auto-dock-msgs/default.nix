@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for fetch_auto_dock package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

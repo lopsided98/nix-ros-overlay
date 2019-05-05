@@ -22,6 +22,6 @@ buildRosPackage {
       where you want to achieve graph representation can depend upon this pkg
       (use <a href="http://www.ros.org/wiki/rqt_dep">rqt_dep</a> to find out
       the pkgs that depend. rqt_dep itself depends on rqt_graph too).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

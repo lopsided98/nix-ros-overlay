@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "0c5714fce4f464fa175e42a7c8fc0ced483fdcfbd90cf4c8584f40b3cf208242";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py qt-gui qt-gui-py-common rospy pythonPackages.rospkg rqt-gui python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui qt-gui qt-gui-py-common rospy python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_py_console is a Python GUI plugin providing an interactive Python console.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

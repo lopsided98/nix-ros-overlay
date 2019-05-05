@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''position_controllers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

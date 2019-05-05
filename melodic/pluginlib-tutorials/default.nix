@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The pluginlib_tutorials package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

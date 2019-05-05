@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ map-server rosconsole SDL_image libyamlcpp pythonPackages.pyyaml rosmake roscpp nav-msgs jsk-tools rospy pythonPackages.pillow tf ];
-  propagatedBuildInputs = [ map-server nav-msgs rosconsole SDL_image rospy libyamlcpp tf roscpp ];
+  propagatedBuildInputs = [ map-server rosconsole SDL_image libyamlcpp roscpp nav-msgs rospy tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''multi_map_server provides the'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

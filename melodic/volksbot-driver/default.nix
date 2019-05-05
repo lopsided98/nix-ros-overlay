@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "c8cb933054437dd270a0a2171f0dc56922538911d1b32ea5dbb1cea60bd95880";
   };
 
-  buildInputs = [ nav-msgs epos2-motor-controller geometry-msgs sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ nav-msgs epos2-motor-controller geometry-msgs sensor-msgs tf roscpp ];
+  buildInputs = [ sensor-msgs epos2-motor-controller roscpp nav-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs epos2-motor-controller roscpp nav-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Driver for the Volksbot robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

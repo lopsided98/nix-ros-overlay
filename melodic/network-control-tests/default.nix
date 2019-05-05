@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "277a453251b08e5d8616c7c1af2081b1f9a5fde81c7415b7eb5eac329e1aefb6";
   };
 
-  buildInputs = [ rostest network-traffic-control access-point-control dynamic-reconfigure ddwrt-access-point hostapd-access-point network-monitor-udp linksys-access-point ];
-  propagatedBuildInputs = [ rostest network-traffic-control access-point-control dynamic-reconfigure ddwrt-access-point hostapd-access-point network-monitor-udp linksys-access-point ];
+  buildInputs = [ access-point-control hostapd-access-point network-monitor-udp linksys-access-point rostest network-traffic-control dynamic-reconfigure ddwrt-access-point ];
+  propagatedBuildInputs = [ access-point-control hostapd-access-point network-monitor-udp linksys-access-point rostest network-traffic-control dynamic-reconfigure ddwrt-access-point ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Test suite for the packages that are part of the &quot;WiFi Test Setup&quot; project:
     network_monitor_udp, network_traffic_control, hostapd_access_point, linksys_access_point,
     ddwrt_access_point.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

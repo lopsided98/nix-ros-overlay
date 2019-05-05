@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This app utilises pano_ros for taking snapshots and stitching them together to create panorama pictures.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

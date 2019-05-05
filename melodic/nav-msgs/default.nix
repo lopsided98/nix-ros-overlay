@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''nav_msgs defines the common messages used to interact with the
     <a href="http://wiki.ros.org/navigation">navigation</a> stack.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

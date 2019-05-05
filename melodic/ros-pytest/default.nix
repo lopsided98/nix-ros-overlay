@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The ros_pytest package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

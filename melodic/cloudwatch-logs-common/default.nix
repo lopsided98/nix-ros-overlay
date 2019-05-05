@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''AWS CloudWatch management library used by ROS1/2 node to publish logs to CloudWatch service'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

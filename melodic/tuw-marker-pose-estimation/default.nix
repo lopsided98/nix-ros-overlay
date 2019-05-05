@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, marker-msgs, tf, catkin, cv-bridge, image-geometry, rospy, std-msgs, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, marker-msgs, cv-bridge, catkin, roscpp, image-geometry, rospy, std-msgs, dynamic-reconfigure, tf }:
 buildRosPackage {
   pname = "ros-melodic-tuw-marker-pose-estimation";
   version = "0.1.1-r1";
@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "58ea5472112e231d213667c8977c5910de7398b71471b12a8a9e55dab48defd2";
   };
 
-  buildInputs = [ image-geometry marker-msgs cv-bridge dynamic-reconfigure std-msgs tf roscpp rospy ];
-  propagatedBuildInputs = [ image-geometry marker-msgs cv-bridge dynamic-reconfigure std-msgs tf roscpp rospy ];
+  buildInputs = [ marker-msgs tf cv-bridge image-geometry rospy std-msgs dynamic-reconfigure roscpp ];
+  propagatedBuildInputs = [ marker-msgs tf cv-bridge image-geometry rospy std-msgs dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This node does pose estimation for detected fiducials (marker_msgs/FiducialDetection.msg)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

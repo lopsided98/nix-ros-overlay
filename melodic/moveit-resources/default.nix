@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Resources used for MoveIt! testing'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

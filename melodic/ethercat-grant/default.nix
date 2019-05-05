@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Makes it possible to run the ros_ethercat_loop without using sudo. Forked from pr2-grant'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

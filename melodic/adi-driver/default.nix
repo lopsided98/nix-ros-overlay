@@ -14,11 +14,11 @@ buildRosPackage {
 
   buildInputs = [ std-srvs sensor-msgs roscpp roslint ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ rviz-imu-plugin std-srvs rviz rqt-plot sensor-msgs roscpp imu-filter-madgwick xacro ];
+  propagatedBuildInputs = [ std-srvs sensor-msgs rviz-imu-plugin rviz rqt-plot roscpp imu-filter-madgwick xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The adi_driver package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   buildInputs = [ costmap-2d cmake-modules pluginlib tf2-geometry-msgs base-local-planner sensor-msgs nav-core tf2-ros tf2 nav-msgs dynamic-reconfigure angles roscpp eigen ];
-  propagatedBuildInputs = [ costmap-2d pluginlib tf2-geometry-msgs base-local-planner sensor-msgs nav-core tf2-ros tf2 nav-msgs dynamic-reconfigure roscpp eigen ];
+  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner tf2-geometry-msgs sensor-msgs nav-core tf2-ros tf2 nav-msgs dynamic-reconfigure roscpp eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -25,6 +25,6 @@ buildRosPackage {
         that can be set in a launch file. The parameters for this planner are also
         dynamically reconfigurable. This package's ROS wrapper adheres to the
         BaseLocalPlanner interface specified in the <a href="http://wiki.ros.org/nav_core">nav_core</a> package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

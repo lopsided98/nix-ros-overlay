@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "62c825a29e1ea77397875b05777eacde641a4a67ceba2c5b2f3ab161effeff67";
   };
 
-  buildInputs = [ liblapack moveit-core pluginlib tf2-eigen eigen-conversions roscpp tf2-kdl ];
-  propagatedBuildInputs = [ liblapack moveit-core pluginlib eigen-conversions roscpp ];
+  buildInputs = [ pluginlib tf2-kdl liblapack moveit-core tf2-eigen eigen-conversions roscpp ];
+  propagatedBuildInputs = [ pluginlib liblapack moveit-core eigen-conversions roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Kinematics plugin for Fetch robot, generated through IKFast'';
-    #license = lib.licenses.Apache2;
+    license = with lib.licenses; [ asl20 ];
   };
 }

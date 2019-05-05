@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''The pilz_extensions package. Here are classes extending the functionality of other packages.
   On the long run these extensions should become pull requests on the respective packages.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

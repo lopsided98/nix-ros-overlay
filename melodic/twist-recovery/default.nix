@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "8c67a2c46844a984e92f59e344590deedd9525f2bfc7b3201c6a1e8999c2d881";
   };
 
-  buildInputs = [ costmap-2d pluginlib base-local-planner tf2-geometry-msgs tf2-ros nav-core geometry-msgs ];
-  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner tf2-geometry-msgs tf2-ros nav-core geometry-msgs ];
+  buildInputs = [ costmap-2d pluginlib base-local-planner tf2-geometry-msgs nav-core tf2-ros geometry-msgs ];
+  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner tf2-geometry-msgs nav-core tf2-ros geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A recovery behavior that performs a particular used-defined twist.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The joint_trajectory_action is a node that exposes an action interface
      to a joint trajectory controller.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

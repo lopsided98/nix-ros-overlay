@@ -13,7 +13,7 @@ buildRosPackage {
   };
 
   buildInputs = [ kdl-conversions orocos-kdl eigen tf geometry-msgs ];
-  propagatedBuildInputs = [ kdl-conversions orocos-kdl eigen python-orocos-kdl tf geometry-msgs ];
+  propagatedBuildInputs = [ kdl-conversions orocos-kdl python-orocos-kdl eigen tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -25,6 +25,6 @@ the datatype of their choice. Currently this package has support for
 the Kinematics and Dynamics Library (KDL) and the Eigen matrix
 library. This package is stable, and will get integrated into tf in
 the next major release cycle (see roadmap).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

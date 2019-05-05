@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The OPT++ catkin wrapper package'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

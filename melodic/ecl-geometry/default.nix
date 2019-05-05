@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''Any tools relating to mathematical geometry. 
      Primarily featuring polynomials and interpolations.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -21,6 +21,6 @@ buildRosPackage {
     stream of images off-robot, a video codec will give much lower bandwidth
     and latency. For low frame rate tranport of high-definition images, you
     might prefer sending them as JPEG or PNG-compressed form.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

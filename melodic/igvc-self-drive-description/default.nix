@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Meshes and URDF descriptions for Gem vehicle'';
-    #license = lib.licenses.BSD2;
+    license = with lib.licenses; [ bsd2 ];
   };
 }

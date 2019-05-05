@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "45f762799ae7c4ec3acf064e4e13afc43b0556a2c410b30c84df92fe62ef51bd";
   };
 
-  buildInputs = [ roslib rospack unzip mk rsync wget ];
+  buildInputs = [ rospack mk rsync wget unzip roslib ];
   propagatedBuildInputs = [ rsync unzip wget ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''julius: Open-Source Large Vocabulary CSR Engine (http://julius.sourceforge.jp/index.php)'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

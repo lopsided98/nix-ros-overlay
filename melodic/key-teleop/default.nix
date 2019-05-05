@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''A text-based interface to send a robot movement commands'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The mcl_3dl message definition package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

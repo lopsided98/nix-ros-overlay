@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''marti_common_msgs'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

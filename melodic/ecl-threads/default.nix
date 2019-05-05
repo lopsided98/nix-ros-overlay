@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-utilities, catkin, ecl-concepts, ecl-build, ecl-exceptions, ecl-time, ecl-license, ecl-errors, ecl-config }:
+{ lib, buildRosPackage, fetchurl, ecl-utilities, catkin, ecl-concepts, ecl-time, ecl-exceptions, ecl-build, ecl-license, ecl-errors, ecl-config }:
 buildRosPackage {
   pname = "ros-melodic-ecl-threads";
   version = "0.62.2";
@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "ba9d0e01c8f88af99570d7a92b88a2184521c7c4e4622a440a7ab7eea56af380";
   };
 
-  buildInputs = [ ecl-exceptions ecl-build ecl-license ecl-utilities ecl-errors ecl-concepts ecl-config ecl-time ];
-  propagatedBuildInputs = [ ecl-exceptions ecl-build ecl-license ecl-utilities ecl-errors ecl-concepts ecl-config ecl-time ];
+  buildInputs = [ ecl-utilities ecl-concepts ecl-time ecl-exceptions ecl-build ecl-license ecl-errors ecl-config ];
+  propagatedBuildInputs = [ ecl-utilities ecl-concepts ecl-time ecl-exceptions ecl-build ecl-license ecl-errors ecl-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
      programming tools. These are usually different on different 
      platforms, so the architecture for a cross-platform framework
      is also implemented.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

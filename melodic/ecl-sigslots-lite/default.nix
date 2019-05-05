@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''This avoids use of dynamic storage (malloc/new) and thread safety (mutexes) to
      provide a very simple sigslots implementation that can be used for *very*
      embedded development.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

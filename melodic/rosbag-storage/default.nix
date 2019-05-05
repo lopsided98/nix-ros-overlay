@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This is a set of tools for recording from and playing back ROS
     message without relying on the ROS client library.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

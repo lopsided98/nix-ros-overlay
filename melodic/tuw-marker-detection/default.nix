@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The tuw_marker_detection package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

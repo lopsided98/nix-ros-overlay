@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message and service types: custom messages and services for TurtleBot3 Applications packages'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

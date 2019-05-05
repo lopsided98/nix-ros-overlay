@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ std-srvs cmake-modules geometry-msgs tinyxml roscpp gazebo-dev rosgraph-msgs roslib dynamic-reconfigure std-msgs tf gazebo-msgs ];
-  propagatedBuildInputs = [ python std-srvs geometry-msgs tf tinyxml roscpp gazebo-dev rosgraph-msgs dynamic-reconfigure std-msgs roslib gazebo-msgs ];
+  propagatedBuildInputs = [ python std-srvs geometry-msgs tinyxml roscpp gazebo-dev rosgraph-msgs roslib dynamic-reconfigure std-msgs tf gazebo-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Provides ROS plugins that offer message and service publishers for interfacing with <a href="http://gazebosim.org">Gazebo</a> through ROS.
     Formally simulator_gazebo/gazebo'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

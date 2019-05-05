@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roscpp dynamixel-workbench-msgs dynamixel-workbench-toolbox qt5.qtbase ];
-  propagatedBuildInputs = [ dynamixel-workbench-msgs dynamixel-workbench-toolbox roscpp qt5.qtbase ];
+  propagatedBuildInputs = [ roscpp dynamixel-workbench-msgs dynamixel-workbench-toolbox qt5.qtbase ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''It provides a grapic user interface to check the status of Dynamixel and control it before using Dynamixel'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

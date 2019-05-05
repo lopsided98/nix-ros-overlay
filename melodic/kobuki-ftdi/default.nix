@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "e1c6ba8e7d1fbd11de09faca56c7dd845fb12aa44432909e2ae0df6867296828";
   };
 
-  buildInputs = [ libftdi ecl-command-line libusb pkg-config ];
+  buildInputs = [ pkg-config ecl-command-line libftdi libusb ];
   propagatedBuildInputs = [ libusb libftdi ecl-command-line ];
   nativeBuildInputs = [ catkin ];
 
@@ -21,6 +21,6 @@ buildRosPackage {
 	    This package contains tools for flashing the Kobuki's FTDI chip (usually done at the factory).
 	    The special firmware for the FTDI chip (USB to serial converter) enables it to appear as
 	    /dev/kobuki on the user's PC.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

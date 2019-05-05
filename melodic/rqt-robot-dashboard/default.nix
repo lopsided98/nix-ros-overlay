@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''rqt_robot_dashboard provides an infrastructure for building robot dashboard plugins in rqt.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

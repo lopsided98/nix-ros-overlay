@@ -28,6 +28,6 @@ buildRosPackage {
             This node is derived, with thanks, from Andrew Howard's excellent
             'amcl' Player driver.
         </p>'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

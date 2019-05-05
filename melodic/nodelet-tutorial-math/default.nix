@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package for Nodelet tutorial.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

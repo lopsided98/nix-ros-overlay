@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Wrapper interface for tracing libraries'';
-    #license = lib.licenses.APLv2;
+    license = with lib.licenses; [ "APLv2" ];
   };
 }

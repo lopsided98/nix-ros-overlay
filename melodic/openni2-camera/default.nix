@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "d154919dd68c19a6255bbbafd1d238d30baae4e6b146eb17875002511180181f";
   };
 
-  buildInputs = [ message-generation dynamic-reconfigure camera-info-manager image-transport sensor-msgs nodelet roscpp openni2 ];
-  propagatedBuildInputs = [ message-runtime nodelet dynamic-reconfigure camera-info-manager image-transport sensor-msgs roscpp openni2 ];
+  buildInputs = [ camera-info-manager image-transport sensor-msgs roscpp message-generation dynamic-reconfigure nodelet openni2 ];
+  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs message-runtime nodelet dynamic-reconfigure roscpp openni2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Drivers for the Asus Xtion and Primesense Devices. For using a kinect
   with ROS, try the <a href="http://wiki.ros.org/freenect_stack">freenect stack</a>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

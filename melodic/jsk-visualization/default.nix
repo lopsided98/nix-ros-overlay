@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "6a77306292fe2644e5cd6ad9df30e442aa904f920bc373a0b8b5ff9a2d0e0411";
   };
 
-  propagatedBuildInputs = [ jsk-rviz-plugins jsk-rqt-plugins jsk-interactive-marker jsk-interactive-test jsk-interactive ];
+  propagatedBuildInputs = [ jsk-rqt-plugins jsk-interactive-test jsk-rviz-plugins jsk-interactive-marker jsk-interactive ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''<p>Metapackage that contains visualization package for jsk-ros-pkg</p>'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

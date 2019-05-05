@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "a6e5d39fd81ad438d67124e646c3da415e14afb3d0e59931e0d40433a6c1ea77";
   };
 
-  propagatedBuildInputs = [ image-rotate stereo-image-proc depth-image-proc image-view image-publisher image-proc camera-calibration ];
+  propagatedBuildInputs = [ image-rotate stereo-image-proc depth-image-proc camera-calibration image-view image-publisher image-proc ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''image_pipeline fills the gap between getting raw images from a camera driver and higher-level vision processing.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ pythonPackages.enum34 pythonPackages.numpy sensor-msgs cv-bridge rospy pythonPackages.opencv3 move-base-msgs nav-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ pythonPackages.enum34 pythonPackages.numpy sensor-msgs cv-bridge pythonPackages.opencv3 rospy move-base-msgs nav-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''AutoRace ROS packages for feature detection with TurtleBot3 Auto'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

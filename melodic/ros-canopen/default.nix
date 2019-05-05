@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "8a5c65352a4fdb30215c811264abe1e29d326afebac95bb06f50124bb78ca5f1";
   };
 
-  propagatedBuildInputs = [ canopen-motor-node socketcan-interface socketcan-bridge canopen-chain-node can-msgs canopen-master canopen-402 ];
+  propagatedBuildInputs = [ socketcan-bridge can-msgs canopen-402 canopen-motor-node socketcan-interface canopen-chain-node canopen-master ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A generic canopen implementation for ROS'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

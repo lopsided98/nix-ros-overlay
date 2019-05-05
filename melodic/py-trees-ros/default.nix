@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Ros extensions and behaviours for py_trees.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

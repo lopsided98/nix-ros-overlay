@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "214f00c2a6ecf941adf7f2fb496023e48d27ee616d030b4dda85145d02319492";
   };
 
-  propagatedBuildInputs = [ moveit-commander moveit-core moveit-planners moveit-plugins moveit-setup-assistant moveit-ros ];
+  propagatedBuildInputs = [ moveit-ros moveit-commander moveit-core moveit-planners moveit-plugins moveit-setup-assistant ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Meta package that contains all essential package of MoveIt!. Until Summer 2016 MoveIt! had been developed over multiple repositories, where developers' usability and maintenance effort was non-trivial. See <a href="http://discourse.ros.org/t/migration-to-one-github-repo-for-moveit/266/34">the detailed discussion for the merge of several repositories</a>.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

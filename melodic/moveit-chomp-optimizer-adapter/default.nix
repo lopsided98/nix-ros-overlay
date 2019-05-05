@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''MoveIt planning request adapter utilizing chomp for solution optimization'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

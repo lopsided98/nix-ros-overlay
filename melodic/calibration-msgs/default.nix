@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''This package defines messages for storing calibration samples
      to be used in full robot calibration procedures. This package
      is still unstable. Expect the messages to change.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

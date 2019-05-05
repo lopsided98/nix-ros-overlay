@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The talos_description package'';
-    #license = lib.licenses.Proprietary;
+    license = with lib.licenses; [ "Proprietary" ];
   };
 }

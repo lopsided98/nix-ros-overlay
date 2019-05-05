@@ -14,7 +14,7 @@ buildRosPackage {
 
   buildInputs = [ costmap-2d rosconsole pluginlib cmake-modules sensor-msgs nav-core tf2-ros roscpp nav-msgs message-generation visualization-msgs netpbm geometry-msgs ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ costmap-2d rosconsole pluginlib nav-core sensor-msgs roscpp tf2-ros nav-msgs message-runtime visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ costmap-2d rosconsole pluginlib sensor-msgs nav-core tf2-ros nav-msgs message-runtime visualization-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -24,6 +24,6 @@ buildRosPackage {
         computed with Dijkstra's algorithm, but support for an A* heuristic may also be added in the
         near future. navfn also provides a ROS wrapper for the navfn planner that adheres to the
         nav_core::BaseGlobalPlanner interface specified in <a href="http://wiki.ros.org/nav_core">nav_core</a>.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -21,6 +21,6 @@ buildRosPackage {
     such as points, vectors, and poses. These primitives are designed
     to provide a common data type and facilitate interoperability
     throughout the system.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The Extensible Optimization Toolset (EXOTica) is a library for defining problems for robot motion planning.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Service pair libraries for pub/sub non-blocking services.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

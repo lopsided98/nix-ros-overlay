@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Time-Indexed RRT-Connect solver (Humanoids 2018)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

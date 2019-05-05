@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Color codes for ansii consoles.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

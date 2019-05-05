@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package provides simple support to cmath, filling in holes
     or redefining in a c++ formulation where desirable.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

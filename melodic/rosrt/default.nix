@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "ab1cb91949e270a78898a6d03547538b9c4da40d82d9da354cda672ba8585f11";
   };
 
-  buildInputs = [ roslib rosatomic std-msgs rosunit lockfree roscpp allocators ];
-  propagatedBuildInputs = [ roslib rosatomic std-msgs rosunit lockfree roscpp allocators ];
+  buildInputs = [ rosatomic allocators roslib std-msgs lockfree roscpp rosunit ];
+  propagatedBuildInputs = [ rosatomic allocators roslib std-msgs lockfree roscpp rosunit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rosrt provides classes for interfacing with ROS from within realtime systems, such as realtime-safe Publisher and Subscriber classes.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

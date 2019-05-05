@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, prbt-moveit-config, tf, prbt-pg70-support, pythonPackages, catkin, rostest, pilz-industrial-motion-testutils, moveit-commander, rospy, tf-conversions, pilz-msgs, pilz-trajectory-generation }:
+{ lib, buildRosPackage, fetchurl, roslint, prbt-moveit-config, prbt-pg70-support, pythonPackages, catkin, pilz-msgs, rostest, pilz-industrial-motion-testutils, moveit-commander, rospy, tf-conversions, tf, pilz-trajectory-generation }:
 buildRosPackage {
   pname = "ros-melodic-pilz-robot-programming";
   version = "0.4.3";
@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   buildInputs = [ roslint rospy ];
-  checkInputs = [ rostest pilz-industrial-motion-testutils pythonPackages.coverage prbt-moveit-config pythonPackages.docopt prbt-pg70-support ];
-  propagatedBuildInputs = [ pythonPackages.psutil moveit-commander tf-conversions rospy tf pilz-msgs pilz-trajectory-generation ];
+  checkInputs = [ prbt-moveit-config prbt-pg70-support rostest pilz-industrial-motion-testutils pythonPackages.coverage pythonPackages.docopt ];
+  propagatedBuildInputs = [ pythonPackages.psutil pilz-msgs moveit-commander rospy tf-conversions tf pilz-trajectory-generation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''An Easy to use API to execute standard industrial robot commands like Ptp, Lin, Circ and Sequence using Moveit.'';
-    #license = lib.licenses.LGPLv3;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

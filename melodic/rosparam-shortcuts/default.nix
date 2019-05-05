@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Quickly load variables from rosparam with good command line error checking.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

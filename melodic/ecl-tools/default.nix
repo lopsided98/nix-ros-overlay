@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Tools and utilities for ecl development.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

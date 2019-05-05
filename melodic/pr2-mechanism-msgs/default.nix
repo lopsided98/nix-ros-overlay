@@ -21,6 +21,6 @@ buildRosPackage {
      the realtime control loop. It also defines messages
      that represent the state of the realtime controllers, the joints
      and the actuators.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

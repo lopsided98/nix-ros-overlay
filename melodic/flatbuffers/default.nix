@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Google flatbuffers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -1,3 +1,7 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
 self: super: {
 
  abseil-cpp = self.callPackage ./abseil-cpp {};
@@ -81,6 +85,8 @@ self: super: {
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
+
+ aws-common = self.callPackage ./aws-common {};
 
  aws-ros1-common = self.callPackage ./aws-ros1-common {};
 
@@ -1114,6 +1120,8 @@ self: super: {
 
  mk = self.callPackage ./mk {};
 
+ ml-classifiers = self.callPackage ./ml-classifiers {};
+
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
  mongodb-log = self.callPackage ./mongodb-log {};
@@ -1704,6 +1712,8 @@ self: super: {
 
  rc-cloud-accumulator = self.callPackage ./rc-cloud-accumulator {};
 
+ rc-common-msgs = self.callPackage ./rc-common-msgs {};
+
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
@@ -2266,6 +2276,8 @@ self: super: {
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
+ teraranger = self.callPackage ./teraranger {};
+
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
 
  test-mavros = self.callPackage ./test-mavros {};
@@ -2569,6 +2581,12 @@ self: super: {
  webrtc = self.callPackage ./webrtc {};
 
  webrtc-ros = self.callPackage ./webrtc-ros {};
+
+ wge100-camera = self.callPackage ./wge100-camera {};
+
+ wge100-camera-firmware = self.callPackage ./wge100-camera-firmware {};
+
+ wge100-driver = self.callPackage ./wge100-driver {};
 
  wifi-ddwrt = self.callPackage ./wifi-ddwrt {};
 

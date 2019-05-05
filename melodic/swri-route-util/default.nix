@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "abb33dfe7604804a00e7a03fc1b8460067b3302851e54df037dfcbe1ab0fbe04";
   };
 
-  buildInputs = [ swri-math-util marti-common-msgs visualization-msgs swri-geometry-util marti-nav-msgs roscpp swri-transform-util ];
-  propagatedBuildInputs = [ swri-math-util marti-common-msgs visualization-msgs swri-geometry-util marti-nav-msgs roscpp swri-transform-util ];
+  buildInputs = [ swri-math-util roscpp marti-nav-msgs marti-common-msgs swri-geometry-util visualization-msgs swri-transform-util ];
+  propagatedBuildInputs = [ swri-math-util roscpp marti-nav-msgs marti-common-msgs swri-geometry-util visualization-msgs swri-transform-util ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This library provides functionality to simplify working with the
     navigation messages defined in marti_nav_msgs.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

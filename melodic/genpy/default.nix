@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Python ROS message and service generators.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

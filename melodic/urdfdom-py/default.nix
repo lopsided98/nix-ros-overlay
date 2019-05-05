@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Python implementation of the URDF parser.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

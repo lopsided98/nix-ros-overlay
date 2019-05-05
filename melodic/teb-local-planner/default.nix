@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "0f6781263817af727d483e50ac7316f162c00dc079234f23acbc796f44959894";
   };
 
-  buildInputs = [ tf2-geometry-msgs libg2o tf2-ros nav-msgs dynamic-reconfigure std-msgs visualization-msgs roscpp geometry-msgs costmap-2d cmake-modules base-local-planner pluginlib nav-core tf2 message-generation costmap-converter interactive-markers tf2-eigen ];
+  buildInputs = [ libg2o dynamic-reconfigure geometry-msgs message-generation tf2-geometry-msgs tf2-ros nav-msgs std-msgs visualization-msgs roscpp costmap-2d cmake-modules base-local-planner pluginlib nav-core tf2 costmap-converter interactive-markers tf2-eigen ];
   propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner libg2o nav-core tf2-ros tf2 nav-msgs interactive-markers costmap-converter dynamic-reconfigure std-msgs visualization-msgs message-runtime roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
@@ -22,6 +22,6 @@ buildRosPackage {
     The underlying method called Timed Elastic Band locally optimizes
     the robot's trajectory with respect to trajectory execution time,
     separation from obstacles and compliance with kinodynamic constraints at runtime.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

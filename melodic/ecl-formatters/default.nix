@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''The formatters here simply format various input types to a specified
    text format. They can be used with most streaming types (including both
    ecl and stl streams).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

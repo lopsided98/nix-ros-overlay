@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message definitions for map_organizer_msgs package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

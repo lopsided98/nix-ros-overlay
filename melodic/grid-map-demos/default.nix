@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Demo nodes to demonstrate the usage of the grid map library.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

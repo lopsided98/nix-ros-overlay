@@ -21,6 +21,6 @@ buildRosPackage {
 
     This package contains the libraries that a compiled state machine
     depends on, but it does not contain the compiler itself.'';
-    #license = lib.licenses.Mozilla Public License Version 1.1;
+    license = with lib.licenses; [ mpl11 ];
   };
 }

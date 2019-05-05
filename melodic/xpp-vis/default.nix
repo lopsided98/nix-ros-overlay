@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "a28dddd1ac40ec97257e52ee5f1dc6b2a0989fcf0fceccba4698019bbcfe56e7";
   };
 
-  buildInputs = [ xpp-states xpp-msgs kdl-parser robot-state-publisher visualization-msgs tf roscpp ];
+  buildInputs = [ xpp-states xpp-msgs kdl-parser tf robot-state-publisher visualization-msgs roscpp ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ xpp-states xpp-msgs kdl-parser robot-state-publisher visualization-msgs tf roscpp ];
+  propagatedBuildInputs = [ xpp-states xpp-msgs kdl-parser tf robot-state-publisher visualization-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Visualization for the XPP Motion Framework.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

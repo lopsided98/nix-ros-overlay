@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, catkin, mir-description, topic-tools, robot-localization, mir-driver, rostopic, robot-state-publisher, rqt-robot-steering, fake-localization, roslaunch, joint-state-publisher }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, catkin, mir-description, fake-localization, robot-localization, mir-driver, rostopic, robot-state-publisher, rqt-robot-steering, topic-tools, roslaunch, joint-state-publisher }:
 buildRosPackage {
   pname = "ros-melodic-mir-gazebo";
   version = "1.0.3";
@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros controller-manager topic-tools mir-description robot-localization mir-driver rostopic robot-state-publisher rqt-robot-steering fake-localization joint-state-publisher ];
+  propagatedBuildInputs = [ gazebo-ros controller-manager mir-description fake-localization robot-localization mir-driver rostopic robot-state-publisher rqt-robot-steering topic-tools joint-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Simulation specific launch and configuration files for the MiR100 robot.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

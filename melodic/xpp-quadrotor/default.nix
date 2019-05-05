@@ -23,6 +23,6 @@ buildRosPackage {
     Adapted from Daniel Mellinger, Nathan Michael, Vijay Kumar, 
     &quot;Trajectory Generation and Control for Precise Aggressive Maneuvers
     with Quadrotors&quot;.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

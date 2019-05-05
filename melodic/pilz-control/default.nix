@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "4ab1a3cf20ab9a31e256bc2e750d7040b10038afe80715e149921a4c7efb56e6";
   };
 
-  buildInputs = [ controller-manager std-srvs controller-interface cmake-modules roslint roscpp joint-trajectory-controller ];
+  buildInputs = [ controller-manager std-srvs cmake-modules roslint joint-trajectory-controller controller-interface roscpp ];
   checkInputs = [ rostest code-coverage ];
-  propagatedBuildInputs = [ controller-manager std-srvs controller-interface roscpp joint-trajectory-controller ];
+  propagatedBuildInputs = [ controller-manager std-srvs joint-trajectory-controller controller-interface roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package provides a specialized joint_trajectory_controller that can be moved into holding state via service call.
   No further trajectories will be accepted/followed in this state.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the source code for testing and comparing trac_ik'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

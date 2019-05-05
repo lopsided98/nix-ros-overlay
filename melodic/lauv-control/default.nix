@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, uuv-trajectory-control, catkin, uuv-control-utils, uuv-teleop, lauv-description, uuv-auv-control-allocator }:
+{ lib, buildRosPackage, fetchurl, uuv-trajectory-control, catkin, uuv-teleop, uuv-control-utils, lauv-description, uuv-auv-control-allocator }:
 buildRosPackage {
   pname = "ros-melodic-lauv-control";
   version = "0.1.6";
@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "2a5dafaa1dbc26fc3c4d0b91fc39a6a9f822b8ed8c164e5001189c881cac011d";
   };
 
-  propagatedBuildInputs = [ uuv-control-utils lauv-description uuv-auv-control-allocator uuv-trajectory-control uuv-teleop ];
+  propagatedBuildInputs = [ uuv-trajectory-control uuv-control-utils uuv-teleop lauv-description uuv-auv-control-allocator ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Collection of configuration and launch files to start controllers for the LAUV.'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

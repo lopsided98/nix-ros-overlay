@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Messages for rosmon, the node launcher and monitor for ROS.
 		rosmon is a replacement for the roslaunch tool, focused on performance,
 		remote monitoring, and usability.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

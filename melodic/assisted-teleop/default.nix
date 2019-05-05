@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "5cf3f26df26c9c7a8045f5d75aa0b6b6fecccd58a38495b850c49b94540969e5";
   };
 
-  buildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs message-filters roscpp tf2-ros move-base-msgs actionlib angles roslib geometry-msgs eigen ];
-  propagatedBuildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs message-filters roscpp tf2-ros move-base-msgs actionlib angles roslib geometry-msgs eigen ];
+  buildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs message-filters tf2-ros move-base-msgs roslib actionlib angles roscpp geometry-msgs eigen ];
+  propagatedBuildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs message-filters tf2-ros move-base-msgs roslib actionlib angles roscpp geometry-msgs eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -24,6 +24,6 @@ buildRosPackage {
     contains LaserScanMaxRangeFilter, which is a LaserScan filter plugin that
     takes max range values in a scan and turns them into valid values that are
     slightly less than max range.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

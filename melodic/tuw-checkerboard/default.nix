@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "e7d76c6bb8a14e31094674fc33504b7cca4335d4d0c2362ceda6811633fc483c";
   };
 
-  buildInputs = [ marker-msgs image-view dynamic-reconfigure tf image-transport cv-bridge image-geometry ];
-  propagatedBuildInputs = [ marker-msgs image-view dynamic-reconfigure tf image-transport cv-bridge image-geometry ];
+  buildInputs = [ marker-msgs image-transport cv-bridge image-geometry image-view dynamic-reconfigure tf ];
+  propagatedBuildInputs = [ marker-msgs image-transport cv-bridge image-geometry image-view dynamic-reconfigure tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tuw_checkerboard package is designed to detect one 
     checkerboard and to estimate the pose of the checkerboard relative to the camera.
     The detection itself is based on the opencv functions for checkerboards.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

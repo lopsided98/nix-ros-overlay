@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package with launch files for demonstrations with the ECA A9 AUV'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

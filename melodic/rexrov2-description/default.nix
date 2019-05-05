@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest xacro rosunit ];
-  propagatedBuildInputs = [ gazebo-ros uuv-assistants uuv-gazebo-ros-plugins uuv-sensor-ros-plugins robot-state-publisher uuv-descriptions xacro gazebo-ros-control ];
+  propagatedBuildInputs = [ gazebo-ros uuv-gazebo-ros-plugins uuv-sensor-ros-plugins uuv-assistants uuv-descriptions robot-state-publisher xacro gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The robot description files for the RexROV 2 underwater vehicle'';
-    #license = lib.licenses.Apache-2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

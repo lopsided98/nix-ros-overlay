@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "ee4f035b44afcf982354c3740f05087f5dc9c8f2fffee6816a5e9dc435d46fc5";
   };
 
-  buildInputs = [ cmake-modules geometry-msgs mav-msgs sensor-msgs mavros mavros-msgs roscpp ];
-  propagatedBuildInputs = [ geometry-msgs mav-msgs sensor-msgs mavros mavros-msgs roscpp ];
+  buildInputs = [ cmake-modules mav-msgs sensor-msgs mavros roscpp mavros-msgs geometry-msgs ];
+  propagatedBuildInputs = [ mav-msgs sensor-msgs mavros roscpp mavros-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''RotorS Hardware-in-the-loop interface package'';
-    #license = lib.licenses.ASL 2.0;
+    license = with lib.licenses; [ "ASL 2.0" ];
   };
 }

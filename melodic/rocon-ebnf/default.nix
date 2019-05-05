@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Internal packaging of the 0.91 version of the simple python
     <a href="http://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_Form">EBNF</a>
     parser written by LParis.'';
-    #license = lib.licenses.GPL;
+    license = with lib.licenses; [ gpl1 ];
   };
 }

@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "23e3aa89701e33665c95e1bd0f0df853a52a8bfd433c352071ba9ff597b8ecb7";
   };
 
-  buildInputs = [ rviz rqt-gui-cpp pluginlib boost rqt-gui qt5.qtbase ];
-  propagatedBuildInputs = [ rviz pluginlib boost rqt-gui-cpp rqt-gui ];
+  buildInputs = [ pluginlib boost rqt-gui qt5.qtbase rviz rqt-gui-cpp ];
+  propagatedBuildInputs = [ pluginlib boost rqt-gui rviz rqt-gui-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_rviz provides a GUI plugin embedding <a href="http://www.ros.org/wiki/rviz">RViz</a>.
     Note that this rqt plugin does NOT supersede RViz but depends on it.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

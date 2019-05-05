@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "bc06277c71ef12ba835e78b38e48a3f39886aaf0a03d779c99689f1ebea02ff0";
   };
 
-  buildInputs = [ nav-msgs urdf controller-interface control-msgs dynamic-reconfigure realtime-tools tf ];
-  checkInputs = [ controller-manager rosgraph-msgs rostest std-srvs xacro ];
-  propagatedBuildInputs = [ nav-msgs urdf controller-interface control-msgs dynamic-reconfigure realtime-tools tf ];
+  buildInputs = [ control-msgs realtime-tools nav-msgs urdf controller-interface dynamic-reconfigure tf ];
+  checkInputs = [ controller-manager std-srvs rosgraph-msgs rostest xacro ];
+  propagatedBuildInputs = [ control-msgs realtime-tools nav-msgs urdf controller-interface dynamic-reconfigure tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Controller for a differential drive mobile base.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

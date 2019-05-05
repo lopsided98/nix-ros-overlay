@@ -23,6 +23,6 @@ buildRosPackage {
     backtraces.
 
     This package is a component of <a href="http://www.ros.org/wiki/roscpp">roscpp</a>.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

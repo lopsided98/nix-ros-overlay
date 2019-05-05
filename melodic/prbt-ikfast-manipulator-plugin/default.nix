@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "def4ff61fb9b4e80534735517fdada554eb01572558047e6b7c840f923c77766";
   };
 
-  buildInputs = [ liblapack moveit-core pluginlib roscpp tf2-kdl ];
+  buildInputs = [ pluginlib tf2-kdl liblapack moveit-core roscpp ];
   checkInputs = [ rostest code-coverage rosunit ];
-  propagatedBuildInputs = [ liblapack moveit-core pluginlib roscpp tf2-kdl ];
+  propagatedBuildInputs = [ pluginlib tf2-kdl liblapack moveit-core roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The prbt_ikfast_manipulator_plugin package'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS messages for interacting with the Universal Lat/Lon Controller (ULC)'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

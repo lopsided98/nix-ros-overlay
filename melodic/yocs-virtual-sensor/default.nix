@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "4505ba05080e444b2000591f1628a4e204e1efb9e9e45be6a8ccb19506193631";
   };
 
-  buildInputs = [ tf sensor-msgs roscpp yocs-math-toolkit yocs-msgs geometry-msgs ];
-  propagatedBuildInputs = [ tf sensor-msgs yocs-math-toolkit yocs-msgs roscpp rospy-message-converter rospy visualization-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs yocs-math-toolkit yocs-msgs roscpp tf geometry-msgs ];
+  propagatedBuildInputs = [ tf sensor-msgs yocs-math-toolkit yocs-msgs rospy-message-converter visualization-msgs rospy roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
       
       Current implementation cannot read obstacles from YAML files. Until this feature gets implemented, we
       use auxiliary scripts to read and publish files' content. Data directory contains some example files.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

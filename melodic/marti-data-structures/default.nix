@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''marti_data_structures'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

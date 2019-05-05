@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rotors_joy_interface package to control MAVs with a joystick'';
-    #license = lib.licenses.ASL 2.0;
+    license = with lib.licenses; [ "ASL 2.0" ];
   };
 }

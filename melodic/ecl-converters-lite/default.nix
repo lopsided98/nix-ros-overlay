@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''These are a very simple version of some of the functions in ecl_converters 
      suitable for firmware development. That is, there is no use of new, 
      templates or exceptions.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

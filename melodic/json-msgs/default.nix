@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''JSON ROS message'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

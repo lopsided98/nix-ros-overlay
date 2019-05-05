@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ std-msgs sensor-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ message-runtime std-msgs sensor-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs message-runtime std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A teleoperation node for the p2os_driver package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

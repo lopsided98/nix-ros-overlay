@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''hector_gazebo_worlds provides gazebo scenarios used by Team Hector Darmstadt'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

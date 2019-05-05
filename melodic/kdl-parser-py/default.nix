@@ -22,6 +22,6 @@ buildRosPackage {
    to represent the kinematic and dynamic parameters of a robot
    mechanism. <tt>kdl_parser_py</tt> provides Python tools to construct a KDL
    tree from an XML robot representation in URDF.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS <a href="http://ros.org/wiki/Master">Master</a> implementation.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

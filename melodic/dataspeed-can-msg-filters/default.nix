@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Time synchronize multiple CAN messages to get a single callback'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

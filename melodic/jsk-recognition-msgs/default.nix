@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "29666d54c5db407b249a6233047344608e66d1760ad1576db9148dcec5255a87";
   };
 
-  buildInputs = [ message-generation jsk-footstep-msgs pcl-msgs std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ message-generation jsk-footstep-msgs pcl-msgs std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs jsk-footstep-msgs message-generation pcl-msgs std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs jsk-footstep-msgs message-generation pcl-msgs std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''ROS messages for jsk_pcl_ros and jsk_perception.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

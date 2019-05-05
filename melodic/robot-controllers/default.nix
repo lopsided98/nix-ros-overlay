@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Some basic robot controllers for use with robot_controllers_interface.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

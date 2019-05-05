@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS messages for robots using FourWheelSteering.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

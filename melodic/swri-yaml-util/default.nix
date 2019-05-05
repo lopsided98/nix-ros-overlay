@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''Provides wrappers around the yaml-cpp library for various utility functions
     and to abstract out the API changes made to yaml-cpp between ubuntu:precise
     and ubuntu:trusty.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

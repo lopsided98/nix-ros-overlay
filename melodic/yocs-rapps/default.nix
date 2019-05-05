@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Yujin open control system rapps for use with the app manager and rocon concert'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

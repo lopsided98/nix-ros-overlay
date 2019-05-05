@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The turtlebot3_slam package provides roslaunch scripts for starting the SLAM'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

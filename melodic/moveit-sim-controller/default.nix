@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "3d7a3062afc99ff36fa906e8796297a7ac3e1a1dea416d71a06ce22bdbfe18e9";
   };
 
-  buildInputs = [ moveit-ros-planning moveit-core roslint ros-control-boilerplate rosparam-shortcuts roscpp ];
-  propagatedBuildInputs = [ moveit-ros-planning moveit-core ros-control-boilerplate rosparam-shortcuts roscpp ];
+  buildInputs = [ moveit-ros-planning roslint ros-control-boilerplate moveit-core rosparam-shortcuts roscpp ];
+  propagatedBuildInputs = [ moveit-ros-planning ros-control-boilerplate moveit-core rosparam-shortcuts roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A simulation interface for a hardware interface for ros_control, and loads default joint values from SRDF'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

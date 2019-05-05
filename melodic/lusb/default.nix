@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Library for interfacing to USB devices'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

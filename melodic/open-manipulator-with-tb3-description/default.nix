@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''OpenManipulator 3D model description for visualization and simulation'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Locally patched version of the python redis client (https://github.com/andymccurdy/redis-py).'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "b56c3c0c52ea3cffbbca2e86a6236f6a8a0520edc2c8178682c1e0dda35dfd94";
   };
 
-  propagatedBuildInputs = [ pythonPackages.enum34 nav-msgs pythonPackages.numpy rospy std-msgs sensor-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.enum34 sensor-msgs nav-msgs rospy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''TurtleBot3 AutoRace ROS package that controls TurtleBot3 Auto'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

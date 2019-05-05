@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "208e7b94f3e9a0f384f7de704056d90747e8df288e7dd48650fd1ec1b3125b98";
   };
 
-  buildInputs = [ nav-msgs geometry-msgs sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ nav-msgs geometry-msgs sensor-msgs tf roscpp ];
+  buildInputs = [ sensor-msgs roscpp nav-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Wrapper around Particle Filter implementation.
     The SelfLocalizer can be used as library or as a ros-node.'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 ];
   };
 }

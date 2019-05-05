@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Internal packaging of the 2.2.2 version of the python semantic version module.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

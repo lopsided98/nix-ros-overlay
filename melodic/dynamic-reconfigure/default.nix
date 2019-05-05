@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "00811c7ff7a43ff5dc2d22ce9bb493e55728d403f49c359606e173b687872151";
   };
 
-  buildInputs = [ rostest message-generation boost cpp-common roscpp-serialization std-msgs roscpp ];
-  propagatedBuildInputs = [ roslib message-runtime boost rospy std-msgs roscpp rosservice ];
+  buildInputs = [ boost cpp-common rostest message-generation roscpp-serialization std-msgs roscpp ];
+  propagatedBuildInputs = [ boost rosservice roslib message-runtime rospy std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This unary stack contains the dynamic_reconfigure package which provides a means to change
     node parameters at any time without having to restart the node.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

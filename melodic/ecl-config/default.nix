@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''These tools inspect and describe your system with macros, types 
      and functions.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

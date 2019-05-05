@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "0a93dd9c3dd1fc1e579699a8c8b776bec347349364ae53fc97e2a541d7ee1068";
   };
 
-  buildInputs = [ rosbag-storage qt5.qtmultimedia ros-type-introspection rosbag rostime qt5.qtbase roscpp binutils roscpp-serialization topic-tools qt5.qtdeclarative tf ];
-  propagatedBuildInputs = [ rosbag-storage qt5.qtmultimedia ros-type-introspection rosbag rostime qt5.qtbase roscpp binutils roscpp-serialization topic-tools qt5.qtdeclarative tf ];
+  buildInputs = [ rosbag-storage qt5.qtmultimedia rosbag ros-type-introspection rostime qt5.qtbase roscpp binutils roscpp-serialization topic-tools qt5.qtdeclarative tf ];
+  propagatedBuildInputs = [ rosbag-storage qt5.qtmultimedia rosbag ros-type-introspection rostime qt5.qtbase roscpp binutils roscpp-serialization topic-tools qt5.qtdeclarative tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''PlotJuggler: juggle with data'';
-    #license = lib.licenses.LGPLv3;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

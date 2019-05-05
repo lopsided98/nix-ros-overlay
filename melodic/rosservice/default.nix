@@ -12,7 +12,7 @@ buildRosPackage {
     sha256 = "3c702a38cbf823bf15ade07745f11dd6b19af38b936630dbadb3473aea130e36";
   };
 
-  propagatedBuildInputs = [ roslib rosgraph rosmsg rospy genpy ];
+  propagatedBuildInputs = [ genpy rosmsg rosgraph rospy roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
     contains a Python library for retrieving information about
     Services and dynamically invoking them. The Python library is
     experimental and is for internal-use only.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

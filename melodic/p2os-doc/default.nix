@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Contains the Documentation for the p2os driver/componenets'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

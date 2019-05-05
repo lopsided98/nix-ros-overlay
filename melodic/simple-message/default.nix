@@ -22,6 +22,6 @@ buildRosPackage {
 	with an industrial robot controller.  Additional handler and manager classes are 
 	included for handling connection limited systems.  This package is part of the ROS-Industrial 
 	program.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

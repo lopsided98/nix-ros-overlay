@@ -21,6 +21,6 @@ buildRosPackage {
      whether it is both UP and RUNNING (indicating that a cable is
      plugged into it and communication is happening, for instance) or
      not.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

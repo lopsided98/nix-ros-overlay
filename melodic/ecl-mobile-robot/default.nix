@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "b90849f51b703d6d5c3b246161ad8679bf14b8a27865ae175e9c945fe9edf31e";
   };
 
-  buildInputs = [ ecl-license ecl-formatters ecl-errors ecl-math ecl-linear-algebra ecl-geometry ecl-build ];
-  propagatedBuildInputs = [ ecl-license ecl-formatters ecl-errors ecl-math ecl-linear-algebra ecl-geometry ecl-build ];
+  buildInputs = [ ecl-formatters ecl-geometry ecl-build ecl-license ecl-errors ecl-math ecl-linear-algebra ];
+  propagatedBuildInputs = [ ecl-formatters ecl-geometry ecl-build ecl-license ecl-errors ecl-math ecl-linear-algebra ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Contains transforms (e.g. differential drive inverse kinematics)
     for the various types of mobile robot platforms.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

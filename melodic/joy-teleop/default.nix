@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "36f191ff3945af0b25a599fecf08a999b1d7bdf91e0f387775a3e6adda9be052";
   };
 
-  propagatedBuildInputs = [ rostopic actionlib rospy sensor-msgs teleop-tools-msgs ];
+  propagatedBuildInputs = [ sensor-msgs teleop-tools-msgs actionlib rostopic rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A (to be) generic joystick interface to control a robot'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

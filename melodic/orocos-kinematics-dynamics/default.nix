@@ -20,6 +20,6 @@ buildRosPackage {
     Library (KDL), distributed by the Orocos Project. It is a meta-package that
     depends on kdl which contains the c++ version and pykdl which contains the
     generated python bindings.'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

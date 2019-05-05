@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "60f22960bd3056e62b0d354e4de2b80c3f5e377e31e330c91d82b0c4dcd8e70c";
   };
 
-  buildInputs = [ rostest pluginlib xmlrpcpp rospy bondcpp bondpy roscpp diagnostic-msgs ];
-  propagatedBuildInputs = [ pluginlib xmlrpcpp rospy bondcpp bondpy roscpp diagnostic-msgs ];
+  buildInputs = [ pluginlib bondcpp bondpy rostest xmlrpcpp rospy diagnostic-msgs roscpp ];
+  propagatedBuildInputs = [ pluginlib bondcpp bondpy xmlrpcpp rospy diagnostic-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''diagnostic_aggregator'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

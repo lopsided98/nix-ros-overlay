@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''The sbpl_lattice_planner is a global planner plugin for move_base and wraps
     the SBPL search-based planning library.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

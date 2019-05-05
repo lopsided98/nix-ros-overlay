@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Extra navigation layers.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

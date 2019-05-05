@@ -22,6 +22,6 @@ buildRosPackage {
     The 'dynamixel_tool' class loads its by model number of Dynamixels.
     The 'dynamixel_driver' class includes wraped function used in DYNAMIXEL SDK.
     The 'dynamixel_workbench' class make simple to use Dynamixels'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

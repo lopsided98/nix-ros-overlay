@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''CAN interface to the Universal Lat/Lon Controller (ULC) firmware'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

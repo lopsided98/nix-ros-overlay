@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''Base dependencies and support libraries for ROS.
     roslib contains many of the common data structures and tools that are shared across ROS client library implementations.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

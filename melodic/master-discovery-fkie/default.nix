@@ -5,15 +5,15 @@
 { lib, buildRosPackage, fetchurl, std-srvs, catkin, pythonPackages, multimaster-msgs-fkie, rosgraph, rospy, roslib, avahi }:
 buildRosPackage {
   pname = "ros-melodic-master-discovery-fkie";
-  version = "0.8.10";
+  version = "0.8.12";
 
   src = fetchurl {
-    url = https://github.com/fkie-release/multimaster_fkie-release/archive/release/melodic/master_discovery_fkie/0.8.10-0.tar.gz;
-    sha256 = "bed1b9628b65746572e5ad687ae614f1a1011fed933da0700a673e7ab1146c0a";
+    url = https://github.com/fkie-release/multimaster_fkie-release/archive/release/melodic/master_discovery_fkie/0.8.12-0.tar.gz;
+    sha256 = "a126c9f12ac3c9b370068d862b423f8476fa0d81b31e8474195049ab2ec28918";
   };
 
   buildInputs = [ std-srvs multimaster-msgs-fkie ];
-  propagatedBuildInputs = [ roslib std-srvs rosgraph rospy multimaster-msgs-fkie pythonPackages.avahi avahi ];
+  propagatedBuildInputs = [ std-srvs multimaster-msgs-fkie pythonPackages.avahi rosgraph rospy roslib avahi ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
      multicast group.
      The alternative is to use a zeroconf/avahi daemon to register the ROS 
      master as service and discover other ROS masters.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

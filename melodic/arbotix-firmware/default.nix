@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''Firmware source code for ArbotiX ROS bindings.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

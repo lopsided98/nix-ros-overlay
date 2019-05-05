@@ -12,14 +12,14 @@ buildRosPackage {
     sha256 = "8f279b3f0297b7798e82dd8d88949507d9dfa4dc58641d6c8d7ec66f65a70c19";
   };
 
-  buildInputs = [ diagnostic-updater message-generation self-test dynamic-reconfigure std-msgs roscpp ];
-  propagatedBuildInputs = [ diagnostic-updater message-runtime self-test dynamic-reconfigure std-msgs roscpp ];
+  buildInputs = [ self-test diagnostic-updater message-generation dynamic-reconfigure std-msgs roscpp ];
+  propagatedBuildInputs = [ self-test diagnostic-updater message-runtime dynamic-reconfigure std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''A framework for writing drivers that helps with runtime reconfiguration, diagnostics and self-test.
 
     This package is deprecated.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

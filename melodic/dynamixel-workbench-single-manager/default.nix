@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package is single manager for a Dynamixel.
     It provides a terminal environment to check the status of Dynamixel and control it before using Dynamixel'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

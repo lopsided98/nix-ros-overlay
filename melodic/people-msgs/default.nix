@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages used by nodes in the people stack.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -5,19 +5,19 @@
 { lib, buildRosPackage, fetchurl, python, boost, git, catkin, pythonPackages, eigen }:
 buildRosPackage {
   pname = "ros-melodic-eigenpy";
-  version = "1.5.0-r1";
+  version = "1.5.1-r2";
 
   src = fetchurl {
-    url = https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/melodic/eigenpy/1.5.0-1.tar.gz;
-    sha256 = "407300df55fa840ad29485ae7f9506e49482bad4b9783aef2bf6d90afe163f4b";
+    url = https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/melodic/eigenpy/1.5.1-2.tar.gz;
+    sha256 = "c8cf3b85343d3d89898496db8b1f5fcdfc1d3c5c43611cafb1871d7594c21a68";
   };
 
-  buildInputs = [ python pythonPackages.numpy boost eigen git ];
+  buildInputs = [ python pythonPackages.numpy boost git eigen ];
   propagatedBuildInputs = [ python pythonPackages.numpy boost eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Bindings between Numpy and Eigen using Boost.Python - wrapped for catkin.'';
-    #license = lib.licenses.LGPLv3;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

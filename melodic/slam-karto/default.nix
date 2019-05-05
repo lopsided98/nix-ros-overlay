@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "5a602df47e9778bf47a4e51c2e263c27188f949686e525bb8a446c2eb6637eea";
   };
 
-  buildInputs = [ rosconsole cmake-modules sensor-msgs message-filters roscpp nav-msgs visualization-msgs eigen sparse-bundle-adjustment tf open-karto ];
+  buildInputs = [ cmake-modules rosconsole sensor-msgs message-filters roscpp nav-msgs visualization-msgs eigen sparse-bundle-adjustment tf open-karto ];
   propagatedBuildInputs = [ rosconsole sensor-msgs message-filters roscpp nav-msgs visualization-msgs eigen sparse-bundle-adjustment tf open-karto ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''This package pulls in the Karto mapping library, and provides a ROS
      wrapper for using it.'';
-    #license = lib.licenses.LGPL;
+    license = with lib.licenses; [ lgpl2 ];
   };
 }

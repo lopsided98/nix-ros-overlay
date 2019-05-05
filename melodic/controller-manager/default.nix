@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The controller manager.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

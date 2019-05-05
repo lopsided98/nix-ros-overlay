@@ -12,13 +12,13 @@ buildRosPackage {
     sha256 = "c2fcc66a3b20e836aba40218bc745f0112986d329804f3929c275534d907a4b9";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py rospy pythonPackages.rospkg rqt-gui python-qt-binding rosservice rosnode ];
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui rosservice rospy python-qt-binding rosnode ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''rqt_logger_level provides a GUI plugin for configuring the logger level of ROS nodes.<br/>
    <br/>
   rqt_logger_level takes over `wx`-based tool [[rxloggerlevel]].'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

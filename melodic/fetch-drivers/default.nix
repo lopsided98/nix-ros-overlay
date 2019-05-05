@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "bf7c846904d5af4fd6cd3591a534d336436666f15b3e1ec28e25d5c5f5c1c241";
   };
 
-  buildInputs = [ rospack rosconsole actionlib-msgs mk power-msgs fetch-driver-msgs nav-msgs robot-controllers-interface urdf robot-controllers roscpp-serialization actionlib diagnostic-msgs roscpp robot-calibration-msgs python boost libyamlcpp sensor-msgs urdfdom curl fetch-auto-dock-msgs rostime ];
-  propagatedBuildInputs = [ rosconsole actionlib-msgs power-msgs fetch-driver-msgs nav-msgs robot-controllers-interface urdf robot-controllers roscpp-serialization actionlib diagnostic-msgs roscpp robot-calibration-msgs python boost libyamlcpp sensor-msgs urdfdom curl fetch-auto-dock-msgs rostime ];
+  buildInputs = [ rosconsole actionlib-msgs fetch-driver-msgs robot-controllers-interface actionlib diagnostic-msgs robot-calibration-msgs boost rostime rospack mk power-msgs nav-msgs urdf robot-controllers roscpp-serialization roscpp python libyamlcpp sensor-msgs urdfdom curl fetch-auto-dock-msgs ];
+  propagatedBuildInputs = [ rosconsole actionlib-msgs fetch-driver-msgs robot-controllers-interface actionlib diagnostic-msgs robot-calibration-msgs boost rostime power-msgs nav-msgs urdf robot-controllers roscpp-serialization roscpp python libyamlcpp sensor-msgs urdfdom curl fetch-auto-dock-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -22,6 +22,6 @@ buildRosPackage {
     fetch_drivers contains both the drivers and firmware for the fetch and freight research robots.
     There should be no reason to use these drivers unless you're running on a fetch or a freight research robot.
     This package, is a cmake/make only package which installs the binaries for the drivers and firmware.'';
-    #license = lib.licenses.Proprietary;
+    license = with lib.licenses; [ "Proprietary" ];
   };
 }

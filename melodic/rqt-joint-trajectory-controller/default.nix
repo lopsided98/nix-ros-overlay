@@ -12,11 +12,11 @@ buildRosPackage {
     sha256 = "469f85d30f031dece7a2077959de20084d813282ce05d007ba6296f991e68763";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py controller-manager-msgs control-msgs rospy trajectory-msgs rqt-gui ];
+  propagatedBuildInputs = [ rqt-gui-py control-msgs trajectory-msgs rqt-gui controller-manager-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Graphical frontend for interacting with joint_trajectory_controller instances.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

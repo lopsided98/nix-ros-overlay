@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Bringup for fetch'';
-    #license = lib.licenses.Proprietary;
+    license = with lib.licenses; [ "Proprietary" ];
   };
 }

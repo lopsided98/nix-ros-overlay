@@ -19,6 +19,6 @@ buildRosPackage {
   meta = {
     description = ''This package contains messages used by robot_activity, such as node's state
     and error'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

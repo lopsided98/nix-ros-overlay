@@ -21,6 +21,6 @@ buildRosPackage {
     description = ''PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the preferred
   bridge for 3D applications involving n-D Point Clouds and 3D geometry
   processing in ROS.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

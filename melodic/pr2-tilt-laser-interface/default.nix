@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "8d25bddf370f8550b5ddac3e38c98c17d4880893c20bc601f8fd8b86c5bc4c2c";
   };
 
-  buildInputs = [ actionlib-msgs pcl-conversions sensor-msgs roscpp message-generation actionlib pr2-msgs laser-geometry pcl-ros eigen ];
-  propagatedBuildInputs = [ actionlib-msgs pcl-conversions sensor-msgs roscpp message-runtime actionlib pr2-msgs laser-geometry pcl-ros eigen ];
+  buildInputs = [ actionlib-msgs sensor-msgs roscpp message-generation actionlib pcl-ros pr2-msgs laser-geometry pcl-conversions eigen ];
+  propagatedBuildInputs = [ actionlib-msgs sensor-msgs roscpp actionlib message-runtime pcl-ros pr2-msgs laser-geometry pcl-conversions eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -21,6 +21,6 @@ buildRosPackage {
     laser. Simplifies previously complex tasks, such as fetching
     a single sweep, given a set of desired parameters for both the laser
     driver and tilting platform.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

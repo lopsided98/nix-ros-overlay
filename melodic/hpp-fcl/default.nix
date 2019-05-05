@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "f6c9669e0b2cf9cbc04bfc89014ae8a82b0895e65eec29d65ca557ca6d375a41";
   };
 
-  buildInputs = [ octomap boost eigen git assimp ];
+  buildInputs = [ boost git assimp octomap eigen ];
   propagatedBuildInputs = [ octomap boost assimp eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''HPP fork of FCL with bug fixes.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

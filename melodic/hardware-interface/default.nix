@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Hardware Interface base class.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''qt_gui_app provides the main to start an instance of the integrated graphical user interface provided by qt_gui.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

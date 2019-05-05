@@ -13,11 +13,11 @@ buildRosPackage {
   };
 
   buildInputs = [ moveit-ros-planning geometry-msgs smach trajectory-msgs smach-ros ar-track-alvar-msgs nav-msgs moveit-core rospy std-msgs moveit-msgs roslaunch roscpp moveit-ros-planning-interface open-manipulator-msgs ];
-  propagatedBuildInputs = [ moveit-ros-planning trajectory-msgs smach-ros move-base ar-track-alvar-msgs joint-state-publisher nav-msgs rospy std-msgs moveit-msgs roscpp geometry-msgs map-server amcl moveit-ros-planning-interface moveit-core robot-state-publisher roslaunch smach open-manipulator-msgs ];
+  propagatedBuildInputs = [ moveit-ros-planning smach-ros ar-track-alvar-msgs rospy geometry-msgs map-server moveit-core robot-state-publisher roslaunch smach moveit-ros-planning-interface joint-state-publisher trajectory-msgs move-base nav-msgs std-msgs moveit-msgs roscpp amcl open-manipulator-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''The tools package(including SLAM, Navigation, Manipulation) for OpenManipulator with TurtleBot3'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

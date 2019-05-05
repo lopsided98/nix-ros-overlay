@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Provides a cmake config for the default version of Gazebo for the ROS distribution.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

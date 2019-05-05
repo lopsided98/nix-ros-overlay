@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Conversions between grid maps and Point Cloud Library (PCL) types.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''CAN related message types.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

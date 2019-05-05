@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Wraps FMUs for co-simulation'';
-    #license = lib.licenses.Apache License 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

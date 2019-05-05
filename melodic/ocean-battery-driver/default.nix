@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This is an interface to the Ocean Server Technology Intelligent Battery and Power System.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

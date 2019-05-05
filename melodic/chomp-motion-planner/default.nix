@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''chomp_motion_planner'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

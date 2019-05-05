@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages and services package for OpenManipulator to send information about state or pose'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

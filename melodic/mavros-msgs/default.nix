@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "80cdf9f83bf0b611e8b08201b461ca0b73909bc211c66176e64a13ee9e0143ab";
   };
 
-  buildInputs = [ geographic-msgs message-generation std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ geographic-msgs message-runtime std-msgs sensor-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geographic-msgs message-generation std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geographic-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''mavros_msgs defines messages for <a href="http://wiki.ros.org/mavros">MAVROS</a>.'';
-    #license = lib.licenses.GPLv3;
+    license = with lib.licenses; [ gpl3 lgpl2 bsdOriginal ];
   };
 }

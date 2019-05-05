@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This Package contains Care-O-bot specific action definitions.'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

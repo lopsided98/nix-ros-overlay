@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Extract a single ring of a Velodyne PointCloud2 and publish it as a LaserScan message'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Utility functions for displaying and debugging data in Rviz via published markers'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

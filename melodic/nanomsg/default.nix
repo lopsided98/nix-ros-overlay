@@ -16,6 +16,6 @@ buildRosPackage {
 
   meta = {
     description = ''The nanomsg package'';
-    #license = lib.licenses.MIT;
+    license = with lib.licenses; [ mit ];
   };
 }

@@ -12,12 +12,12 @@ buildRosPackage {
     sha256 = "afbf800cde94e405ffa9e691b9379042304dd8455e2c3e906cd7ba97ff636f70";
   };
 
-  buildInputs = [ std-msgs diagnostic-msgs sensor-msgs roscpp turtlebot3-msgs ];
+  buildInputs = [ sensor-msgs turtlebot3-msgs std-msgs diagnostic-msgs roscpp ];
   propagatedBuildInputs = [ rosserial-python sensor-msgs turtlebot3-description turtlebot3-msgs robot-state-publisher hls-lfcd-lds-driver std-msgs diagnostic-msgs turtlebot3-teleop roscpp joint-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''roslaunch scripts for starting the TurtleBot3'';
-    #license = lib.licenses.Apache 2.0;
+    license = with lib.licenses; [ asl20 ];
   };
 }

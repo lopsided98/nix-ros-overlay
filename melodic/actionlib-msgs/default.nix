@@ -22,6 +22,6 @@ buildRosPackage {
      the actionlib API see
      the <a href="http://wiki.ros.org/actionlib">actionlib</a>
      package.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

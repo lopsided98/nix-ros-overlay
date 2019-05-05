@@ -13,12 +13,12 @@ buildRosPackage {
   };
 
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ std-srvs rospy sensor-msgs cv-bridge message-filters image-geometry ];
+  propagatedBuildInputs = [ std-srvs sensor-msgs cv-bridge message-filters image-geometry rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''camera_calibration allows easy calibration of monocular or stereo
      cameras using a checkerboard calibration target.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

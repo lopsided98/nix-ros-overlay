@@ -30,6 +30,6 @@ buildRosPackage {
       reading and setting parameters, streaming and synchronizing images.
 
       See LICENSE.md for licensing terms of the different parts.'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

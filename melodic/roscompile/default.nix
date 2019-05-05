@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The roscompile package'';
-    #license = lib.licenses.BSD;
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

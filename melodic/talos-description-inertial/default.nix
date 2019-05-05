@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Inertial parameters of talos'';
-    #license = lib.licenses.Creative Commons BY-NC-ND 3.0;
+    license = with lib.licenses; [ "CC-BY-NC-ND-4.0" ];
   };
 }
