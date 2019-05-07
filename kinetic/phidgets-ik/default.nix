@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, phidgets-api, tf, sensor-msgs, catkin, message-generation, message-runtime, nodelet, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-phidgets-ik";
-  version = "0.7.7";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_ik/0.7.7-0.tar.gz;
-    sha256 = "531b0ded46f165bc13d21fc04204af17dc3007ffce2556cc97d794d66d4c482a";
+    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_ik/0.7.8-1.tar.gz;
+    sha256 = "4b8dcde27bb0070a8a9fd5857ffbceff49516a1d1b181dfd58da0be9f595375c";
   };
 
   buildInputs = [ phidgets-api sensor-msgs roscpp message-generation nodelet std-msgs tf geometry-msgs ];

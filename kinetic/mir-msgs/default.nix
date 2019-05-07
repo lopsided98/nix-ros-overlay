@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mir-msgs";
-  version = "1.0.3";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_msgs/1.0.3-0.tar.gz;
-    sha256 = "279366125aadb74a4afb62ec4500ec9b86298968a7dc309cd8899f31cedf922d";
+    url = https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_msgs/1.0.4-1.tar.gz;
+    sha256 = "c84911a8d749759ba2a64bc4d540d92c67fa6a67b12a1d95509f1899fe2c4b6d";
   };
 
   buildInputs = [ message-generation geometry-msgs ];

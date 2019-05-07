@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, joint-state-controller, diff-drive-controller, catkin, position-controllers, rviz, urdf, robot-state-publisher, roslaunch, joint-state-publisher, xacro, gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-kinetic-mir-description";
-  version = "1.0.3";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_description/1.0.3-0.tar.gz;
-    sha256 = "caf5b1cdbe34b59f999dc0a5fdb5f735670aac8fbde7d6c13d4697a081a61271";
+    url = https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_description/1.0.4-1.tar.gz;
+    sha256 = "4ce897c6f81728c305ef19b076ee285156108633af535d7290dc1386fdd5170c";
   };
 
   buildInputs = [ roslaunch ];

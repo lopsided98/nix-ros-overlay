@@ -1788,6 +1788,8 @@ self: super: {
 
  korg-nanokontrol = self.callPackage ./korg-nanokontrol {};
 
+ ksql-airport = self.callPackage ./ksql-airport {};
+
  kvh = self.callPackage ./kvh {};
 
  laptop-battery-monitor = self.callPackage ./laptop-battery-monitor {};
@@ -2059,6 +2061,8 @@ self: super: {
  mcl-3dl = self.callPackage ./mcl-3dl {};
 
  mcl-3dl-msgs = self.callPackage ./mcl-3dl-msgs {};
+
+ mcmillan-airfield = self.callPackage ./mcmillan-airfield {};
 
  md49-base-controller = self.callPackage ./md49-base-controller {};
 
@@ -3902,6 +3906,8 @@ self: super: {
 
  sainsmart-relay-usb = self.callPackage ./sainsmart-relay-usb {};
 
+ sand-island = self.callPackage ./sand-island {};
+
  sbg-driver = self.callPackage ./sbg-driver {};
 
  sbpl = self.callPackage ./sbpl {};
@@ -4831,6 +4837,8 @@ self: super: {
  yocs-waypoint-provider = self.callPackage ./yocs-waypoint-provider {};
 
  yocs-waypoints-navi = self.callPackage ./yocs-waypoints-navi {};
+
+ yosemite-valley = self.callPackage ./yosemite-valley {};
 
  youbot-description = self.callPackage ./youbot-description {};
 

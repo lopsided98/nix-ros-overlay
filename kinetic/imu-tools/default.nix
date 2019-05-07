@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, imu-complementary-filter, rviz-imu-plugin, catkin, imu-filter-madgwick }:
 buildRosPackage {
   pname = "ros-kinetic-imu-tools";
-  version = "1.1.6";
+  version = "1.1.7-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/imu_tools/1.1.6-0.tar.gz;
-    sha256 = "af91da8ce144823010eac19bf2cc9f9bc54d48a3fc83a7eac0ba4feaa327909a";
+    url = https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/imu_tools/1.1.7-1.tar.gz;
+    sha256 = "79edfa193539b654ff325a22c225c68416fb51062657384caefe687b8328957d";
   };
 
   propagatedBuildInputs = [ imu-complementary-filter rviz-imu-plugin imu-filter-madgwick ];

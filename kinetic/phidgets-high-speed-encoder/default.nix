@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, phidgets-api, libphidget21, sensor-msgs, catkin, message-generation, message-runtime, std-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-phidgets-high-speed-encoder";
-  version = "0.7.7";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_high_speed_encoder/0.7.7-0.tar.gz;
-    sha256 = "165e982cf595abbb5453f9d46a083cf274cb804e4fbf9e9a2d48186c3812275d";
+    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_high_speed_encoder/0.7.8-1.tar.gz;
+    sha256 = "60c2d4a033f7dcc345149e5932e23dc9cd028be0a3885d7831eace99073e64a0";
   };
 
   buildInputs = [ phidgets-api libphidget21 sensor-msgs message-generation std-msgs roscpp ];

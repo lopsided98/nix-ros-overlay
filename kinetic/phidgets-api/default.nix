@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, libusb1, catkin, libphidget21, libusb }:
 buildRosPackage {
   pname = "ros-kinetic-phidgets-api";
-  version = "0.7.7";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_api/0.7.7-0.tar.gz;
-    sha256 = "8f674446deca318cd65f5126ed81d14091c0bba65ab87a5712f26a3044e5b33d";
+    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_api/0.7.8-1.tar.gz;
+    sha256 = "5a6cc2024d449513e86c92379e1eb65d21242463601a4bc7c0fa25318df7b3b7";
   };
 
   buildInputs = [ libusb1 libphidget21 ];

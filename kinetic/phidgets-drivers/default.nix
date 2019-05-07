@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, phidgets-api, catkin, phidgets-imu, phidgets-high-speed-encoder, libphidget21 }:
 buildRosPackage {
   pname = "ros-kinetic-phidgets-drivers";
-  version = "0.7.7";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_drivers/0.7.7-0.tar.gz;
-    sha256 = "62a4a8e9e76c7b1e046a2e3e417a62eb1dff01864bdf509bd6025fd721251e36";
+    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_drivers/0.7.8-1.tar.gz;
+    sha256 = "2c2ce89d56f2196871a3a3d1245bb747e151cf3210f40c176517ccfe6aafb9b8";
   };
 
   propagatedBuildInputs = [ phidgets-imu phidgets-api libphidget21 phidgets-high-speed-encoder ];

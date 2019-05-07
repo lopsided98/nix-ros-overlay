@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, map-server, nav-core-adapter, amcl, base-local-planner, catkin, mir-dwb-critics, dwb-critics, dwb-plugins, sbpl-lattice-planner, move-base, mir-driver, roslaunch, dwb-local-planner }:
 buildRosPackage {
   pname = "ros-kinetic-mir-navigation";
-  version = "1.0.3";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_navigation/1.0.3-0.tar.gz;
-    sha256 = "a67cee2331f8e371249a0ffcb6647b5d5c8f4d099d4d7d7c657483fe0467baa6";
+    url = https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_navigation/1.0.4-1.tar.gz;
+    sha256 = "5c9dc0cc272ba6e26ef3bb3704453d1ec9e9e98c6ec3f05346aefa9264f6ba0c";
   };
 
   buildInputs = [ roslaunch ];
