@@ -1,4 +1,4 @@
-{ lib, stdenv, writeText, buildEnv, catkin, cmake }:
+{ lib, stdenv, buildPackages, writeText, buildEnv, catkin }:
 { paths ? [], ... }@args:
 
 with lib;
@@ -30,12 +30,11 @@ let
     # ROS dependencies to the environment, while propagating other packages like
     # nix-shell -p does.
     paths = propagatedPaths.rosPackages;
-    ignoreCollisions = true;
 
     passthru.env = stdenv.mkDerivation {
       name = "interactive-ros-env";
 
-      buildInputs = [ env catkin ];
+      buildInputs = [ env ];
 
       buildCommand = ''
         echo >&2 ""
@@ -44,14 +43,20 @@ let
         exit 1
       '';
     };
-  })).overrideAttrs ({ buildCommand, ...}: {
+  })).overrideAttrs ({ buildCommand, passAsFile ? [], ...}: {
     # Hack to allow buildEnv to use propagatedBuildInputs
-    propagatedBuildInputs = propagatedPaths.otherPackages;
     buildCommand = null;
     oldBuildCommand = buildCommand;
-    passAsFile = [ "oldBuildCommand" ];
+    passAsFile = (if passAsFile == null then [] else passAsFile) ++ [ "oldBuildCommand" ];
+
+    # catkin always needs to be propagated for its 
+    propagatedBuildInputs = propagatedPaths.otherPackages;
+
     buildPhase = ''
+      runHook preBuild
       . "$oldBuildCommandPath"
+      "${buildPackages.perl}/bin/perl" "${./setup-hook-builder.pl}"
+      runHook postBuild
     '';
     phases = [ "buildPhase" "fixupPhase" ];
   });
