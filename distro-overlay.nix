@@ -40,11 +40,13 @@ let
     });
 
     catkin = rosSuper.catkin.overrideAttrs ({
+      propagatedBuildInputs ? [],
       prePhases ? [],
       postPatch ? "", ...
     }: let
       setupHook = self.callPackage ./catkin-setup-hook { } distro;
     in {
+      propagatedBuildInputs = [ self.cmake ] ++ propagatedBuildInputs;
       prePhases = prePhases ++ [ "setupPhase" ];
       # Catkin uses its own setup hook
       setupPhase = ''
