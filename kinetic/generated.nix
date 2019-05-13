@@ -1586,6 +1586,8 @@ self: super: {
 
  joint-trajectory-generator = self.callPackage ./joint-trajectory-generator {};
 
+ jointstick = self.callPackage ./jointstick {};
+
  joy = self.callPackage ./joy {};
 
  joy-listener = self.callPackage ./joy-listener {};
