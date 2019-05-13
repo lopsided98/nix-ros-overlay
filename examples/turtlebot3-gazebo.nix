@@ -10,7 +10,6 @@ mkShell {
   buildInputs = [
     glibcLocales
     (buildEnv { paths = [
-      cmake
       turtlebot3-description
       turtlebot3-teleop
       turtlebot3-gazebo
