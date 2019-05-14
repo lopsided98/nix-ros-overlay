@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, readline, catkin, cmake }:
 buildRosPackage {
   pname = "ros-lunar-ypspur";
-  version = "1.15.3";
+  version = "1.16.0-r1";
 
   src = fetchurl {
-    url = https://github.com/openspur/yp-spur-release/archive/release/lunar/ypspur/1.15.3-0.tar.gz;
-    sha256 = "d1fd9c9b6297db6b0e7836ff6809d0773f0dc66f7bc9b04d475eae8b7041f2ce";
+    url = https://github.com/openspur/yp-spur-release/archive/release/lunar/ypspur/1.16.0-1.tar.gz;
+    sha256 = "01c2d8e520423786451e9e0e18e2db05e35cd19e476319e1497400d78cfce11e";
   };
 
   buildInputs = [ readline ];

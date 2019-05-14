@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pluginlib, tf2-geometry-msgs, sensor-msgs, catkin, message-filters, tf2-ros, roscpp, tf2, dynamic-reconfigure, nodelet, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-imu-filter-madgwick";
-  version = "1.2.0";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_filter_madgwick/1.2.0-0.tar.gz;
-    sha256 = "39c5484e8bef34201c1bc0b1a3ae57cd72be03e7763ab0479e802509e2d1291f";
+    url = https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_filter_madgwick/1.2.1-1.tar.gz;
+    sha256 = "2dbff1fa8285f12b2fe24de1a7483effe4cace0921268d607745611a3b7954b4";
   };
 
   buildInputs = [ pluginlib tf2-geometry-msgs sensor-msgs message-filters roscpp tf2-ros tf2 dynamic-reconfigure nodelet geometry-msgs ];

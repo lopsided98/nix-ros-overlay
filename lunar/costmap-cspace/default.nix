@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslint, tf2-geometry-msgs, costmap-cspace-msgs, sensor-msgs, catkin, tf2-ros, roscpp, tf2-sensor-msgs, rostest, nav-msgs, neonavigation-common, xmlrpcpp, laser-geometry, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-costmap-cspace";
-  version = "0.3.1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation-release/archive/release/lunar/costmap_cspace/0.3.1-0.tar.gz;
-    sha256 = "f8439deeaaaef41c7f5086c3a9b845d217df2dc4dec466f8990bf273ee2fbe33";
+    url = https://github.com/at-wat/neonavigation-release/archive/release/lunar/costmap_cspace/0.4.0-1.tar.gz;
+    sha256 = "6b1012cf723f88afae57bf5f8cb6676e8a709c2e92443be1e1971182f0018fd4";
   };
 
   buildInputs = [ tf2-geometry-msgs costmap-cspace-msgs sensor-msgs roscpp tf2-ros tf2-sensor-msgs nav-msgs neonavigation-common xmlrpcpp laser-geometry geometry-msgs ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, nav-msgs, message-runtime, actionlib, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-mir-actions";
-  version = "1.0.3";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/lunar/mir_actions/1.0.3-0.tar.gz;
-    sha256 = "8510a4aa0354be111f4866547a5dcc556524ec20f831ca8a8a46c1d0693741cc";
+    url = https://github.com/uos-gbp/mir_robot-release/archive/release/lunar/mir_actions/1.0.4-1.tar.gz;
+    sha256 = "6c077f3b839ad36ad3d5ad34d14ed2983465caf1dab83e61e84866078fcf0652";
   };
 
   buildInputs = [ nav-msgs message-generation geometry-msgs actionlib ];

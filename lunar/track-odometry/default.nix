@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cmake-modules, tf2-geometry-msgs, roslint, trajectory-msgs, sensor-msgs, catkin, tf2-ros, tf2, rostest, nav-msgs, neonavigation-common, eigen, std-msgs, roscpp, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-track-odometry";
-  version = "0.3.1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation-release/archive/release/lunar/track_odometry/0.3.1-0.tar.gz;
-    sha256 = "e0bbe8692b368ad260e592b7731fbf9043647dc8863569760c0a5a73ea4734f5";
+    url = https://github.com/at-wat/neonavigation-release/archive/release/lunar/track_odometry/0.4.0-1.tar.gz;
+    sha256 = "eaf69e2342b7f28db80fa56b3d905aeb30ce703293565b8d8798a6e3c36eccb1";
   };
 
   buildInputs = [ cmake-modules tf2-geometry-msgs trajectory-msgs sensor-msgs tf2-ros tf2 nav-msgs neonavigation-common eigen std-msgs roscpp geometry-msgs ];

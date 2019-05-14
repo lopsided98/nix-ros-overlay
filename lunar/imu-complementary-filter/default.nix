@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cmake-modules, sensor-msgs, catkin, message-filters, roscpp, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-lunar-imu-complementary-filter";
-  version = "1.2.0";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_complementary_filter/1.2.0-0.tar.gz;
-    sha256 = "04731f7e184fcd77edf7748dc06b4e82e26c0889f610d799da17476c8b34f1af";
+    url = https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/imu_complementary_filter/1.2.1-1.tar.gz;
+    sha256 = "6f34efdf211100332635afd7c050c14d3e7aa73d708d8a52871a864abb479519";
   };
 
   buildInputs = [ cmake-modules sensor-msgs message-filters roscpp std-msgs tf ];

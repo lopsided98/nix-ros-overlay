@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, libusb1, diagnostic-updater, robot-state-publisher, dynamic-reconfigure, roslaunch, roscpp, libusb, xacro }:
 buildRosPackage {
   pname = "ros-lunar-sick-tim";
-  version = "0.0.15";
+  version = "0.0.16-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/sick_tim-release/archive/release/lunar/sick_tim/0.0.15-0.tar.gz;
-    sha256 = "ace6beb1e31ef09315bed0c633658a1b7fde6c06bce38fb32ed85de99c1c8dcd";
+    url = https://github.com/uos-gbp/sick_tim-release/archive/release/lunar/sick_tim/0.0.16-1.tar.gz;
+    sha256 = "2bc0d9aa1d2260de388d826eb059172ed5887bfc3221bc116e5599039d407ea4";
   };
 
   buildInputs = [ sensor-msgs libusb1 diagnostic-updater dynamic-reconfigure roslaunch roscpp ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, phidgets-api, pluginlib, sensor-msgs, catkin, roscpp, diagnostic-updater, nodelet, std-msgs, diagnostic-msgs, roslaunch, tf, imu-filter-madgwick, diagnostic-aggregator }:
 buildRosPackage {
   pname = "ros-lunar-phidgets-imu";
-  version = "0.7.7";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/lunar/phidgets_imu/0.7.7-0.tar.gz;
-    sha256 = "26939b18d1fd910fdff66148ecf5b7d83e4d61ee34fba7d1178dcd89bdfb6b12";
+    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/lunar/phidgets_imu/0.7.8-1.tar.gz;
+    sha256 = "d5949b0fd272cee353a1191c956b115b566f9e5a0a90a4ec3ac005e4e1e3a039";
   };
 
   buildInputs = [ std-srvs phidgets-api pluginlib sensor-msgs roscpp diagnostic-updater nodelet std-msgs diagnostic-msgs roslaunch tf ];

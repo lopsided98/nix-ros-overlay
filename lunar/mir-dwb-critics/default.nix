@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, dwb-local-planner, pluginlib, nav-core2, costmap-queue, sensor-msgs, catkin, nav-2d-msgs, dwb-critics, nav-2d-utils, angles, roscpp, nav-grid-iterators, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-mir-dwb-critics";
-  version = "1.0.3";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/lunar/mir_dwb_critics/1.0.3-0.tar.gz;
-    sha256 = "5862ba7cc45bedbce5cb9d10f8f993a9a6971d05039893cc6de0c2483d8b8085";
+    url = https://github.com/uos-gbp/mir_robot-release/archive/release/lunar/mir_dwb_critics/1.0.4-1.tar.gz;
+    sha256 = "2ee931b97e87437a0cea64f80e393c3b34c05d1d4261ae679c3b556b6b8bf245";
   };
 
   buildInputs = [ dwb-local-planner pluginlib nav-core2 costmap-queue sensor-msgs dwb-critics nav-2d-msgs nav-2d-utils angles roscpp nav-grid-iterators geometry-msgs ];

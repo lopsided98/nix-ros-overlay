@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rviz, qt5, roscpp }:
 buildRosPackage {
   pname = "ros-lunar-rviz-imu-plugin";
-  version = "1.2.0";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/rviz_imu_plugin/1.2.0-0.tar.gz;
-    sha256 = "23330e418a9555d258c94701d28598f1060f4fae169cdd52935fdbb922d0e825";
+    url = https://github.com/uos-gbp/imu_tools-release/archive/release/lunar/rviz_imu_plugin/1.2.1-1.tar.gz;
+    sha256 = "25657b1e18287ea487aa74e8ee2102e9b36838cbd07f41ce488ae04c8cc5a547";
   };
 
   buildInputs = [ roscpp rviz qt5.qtbase ];

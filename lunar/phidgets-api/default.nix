@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, libusb1, catkin, libphidget21, libusb }:
 buildRosPackage {
   pname = "ros-lunar-phidgets-api";
-  version = "0.7.7";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/lunar/phidgets_api/0.7.7-0.tar.gz;
-    sha256 = "9db11ec1b0234b11c6041d7de4593c7d8976c6c59a352ede28992b61317a0904";
+    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/lunar/phidgets_api/0.7.8-1.tar.gz;
+    sha256 = "0a09f9b14fabf767b0315895510c3780c8d149c692f9e2935ea1e4073074d823";
   };
 
   buildInputs = [ libusb1 libphidget21 ];

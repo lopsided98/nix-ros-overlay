@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, phidgets-api, tf, sensor-msgs, catkin, message-generation, message-runtime, nodelet, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-phidgets-ik";
-  version = "0.7.7";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/lunar/phidgets_ik/0.7.7-0.tar.gz;
-    sha256 = "1da8539e391c6fd73ed030501b1d7a3070d61281c492183f1286ba1c53e40dbc";
+    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/lunar/phidgets_ik/0.7.8-1.tar.gz;
+    sha256 = "670463dfafbbe820a92263314b23c11db27e5a5ad82eb3ad57369338c8879c9a";
   };
 
   buildInputs = [ phidgets-api sensor-msgs roscpp message-generation nodelet std-msgs tf geometry-msgs ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rostest, catkin, roslint, roscpp }:
 buildRosPackage {
   pname = "ros-lunar-neonavigation-common";
-  version = "0.3.1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation-release/archive/release/lunar/neonavigation_common/0.3.1-0.tar.gz;
-    sha256 = "dea5d36f72fb7fce7b6482aff43a7491f29d6a14695e993cbfd7fb72fff370d3";
+    url = https://github.com/at-wat/neonavigation-release/archive/release/lunar/neonavigation_common/0.4.0-1.tar.gz;
+    sha256 = "3e1a777844b0557ba1a8021f7fe07247367fed69ef824805c095fb1f1a676c5f";
   };
 
   buildInputs = [ roscpp ];

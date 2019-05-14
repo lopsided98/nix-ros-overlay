@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, rostest, neonavigation-common, topic-tools, roscpp, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-joystick-interrupt";
-  version = "0.3.1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation-release/archive/release/lunar/joystick_interrupt/0.3.1-0.tar.gz;
-    sha256 = "b7daf93a7d5658c25541f91a254237503e83d9a6ae61f3d75129e567862693bf";
+    url = https://github.com/at-wat/neonavigation-release/archive/release/lunar/joystick_interrupt/0.4.0-1.tar.gz;
+    sha256 = "ca384dffa673d4ee807e30999ceb202d0f5d6f4cb915bf3ad066fa893824fd99";
   };
 
   buildInputs = [ sensor-msgs neonavigation-common topic-tools roscpp geometry-msgs ];

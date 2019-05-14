@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, mir-gazebo, mir-dwb-critics, mir-description, mir-actions, mir-navigation, mir-driver, mir-msgs }:
 buildRosPackage {
   pname = "ros-lunar-mir-robot";
-  version = "1.0.3";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/lunar/mir_robot/1.0.3-0.tar.gz;
-    sha256 = "d78d93da52d71506e61d8412ecf46a96e1915a1b0ee698db37c3d6a0ba2427c2";
+    url = https://github.com/uos-gbp/mir_robot-release/archive/release/lunar/mir_robot/1.0.4-1.tar.gz;
+    sha256 = "860c3625e9f541ffce33686668ffc1efb5f72cf29c98474f4b7c911de2b0c488";
   };
 
   propagatedBuildInputs = [ mir-description mir-gazebo mir-dwb-critics mir-actions mir-navigation mir-driver mir-msgs ];
