@@ -244,6 +244,8 @@ self: super: {
 
  costmap-converter = self.callPackage ./costmap-converter {};
 
+ costmap-cspace = self.callPackage ./costmap-cspace {};
+
  costmap-cspace-msgs = self.callPackage ./costmap-cspace-msgs {};
 
  costmap-queue = self.callPackage ./costmap-queue {};
@@ -251,6 +253,8 @@ self: super: {
  cpp-common = self.callPackage ./cpp-common {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
+
+ cv-camera = self.callPackage ./cv-camera {};
 
  dataspeed-can = self.callPackage ./dataspeed-can {};
 
@@ -842,6 +846,8 @@ self: super: {
 
  joint-trajectory-generator = self.callPackage ./joint-trajectory-generator {};
 
+ jointstick = self.callPackage ./jointstick {};
+
  joy = self.callPackage ./joy {};
 
  joy-listener = self.callPackage ./joy-listener {};
@@ -849,6 +855,8 @@ self: super: {
  joy-teleop = self.callPackage ./joy-teleop {};
 
  joystick-drivers = self.callPackage ./joystick-drivers {};
+
+ joystick-interrupt = self.callPackage ./joystick-interrupt {};
 
  jpeg-streamer = self.callPackage ./jpeg-streamer {};
 
@@ -931,6 +939,8 @@ self: super: {
  kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
 
  kobuki-msgs = self.callPackage ./kobuki-msgs {};
+
+ ksql-airport = self.callPackage ./ksql-airport {};
 
  laser-assembler = self.callPackage ./laser-assembler {};
 
@@ -1024,6 +1034,8 @@ self: super: {
 
  map-msgs = self.callPackage ./map-msgs {};
 
+ map-organizer = self.callPackage ./map-organizer {};
+
  map-organizer-msgs = self.callPackage ./map-organizer-msgs {};
 
  map-server = self.callPackage ./map-server {};
@@ -1083,6 +1095,8 @@ self: super: {
  mcl-3dl = self.callPackage ./mcl-3dl {};
 
  mcl-3dl-msgs = self.callPackage ./mcl-3dl-msgs {};
+
+ mcmillan-airfield = self.callPackage ./mcmillan-airfield {};
 
  md49-base-controller = self.callPackage ./md49-base-controller {};
 
@@ -1306,6 +1320,12 @@ self: super: {
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
+ neonavigation = self.callPackage ./neonavigation {};
+
+ neonavigation-common = self.callPackage ./neonavigation-common {};
+
+ neonavigation-launch = self.callPackage ./neonavigation-launch {};
+
  neonavigation-msgs = self.callPackage ./neonavigation-msgs {};
 
  neonavigation-rviz-plugins = self.callPackage ./neonavigation-rviz-plugins {};
@@ -1343,6 +1363,8 @@ self: super: {
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
 
  novatel-msgs = self.callPackage ./novatel-msgs {};
+
+ obj-to-pointcloud = self.callPackage ./obj-to-pointcloud {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
@@ -1503,6 +1525,8 @@ self: super: {
  pilz-trajectory-generation = self.callPackage ./pilz-trajectory-generation {};
 
  pinocchio = self.callPackage ./pinocchio {};
+
+ planner-cspace = self.callPackage ./planner-cspace {};
 
  planner-cspace-msgs = self.callPackage ./planner-cspace-msgs {};
 
@@ -2134,7 +2158,11 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ safety-limiter = self.callPackage ./safety-limiter {};
+
  sainsmart-relay-usb = self.callPackage ./sainsmart-relay-usb {};
+
+ sand-island = self.callPackage ./sand-island {};
 
  sbg-driver = self.callPackage ./sbg-driver {};
 
@@ -2332,7 +2360,11 @@ self: super: {
 
  tracetools = self.callPackage ./tracetools {};
 
+ track-odometry = self.callPackage ./track-odometry {};
+
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
+
+ trajectory-tracker = self.callPackage ./trajectory-tracker {};
 
  trajectory-tracker-msgs = self.callPackage ./trajectory-tracker-msgs {};
 
@@ -2653,6 +2685,8 @@ self: super: {
  yocs-waypoint-provider = self.callPackage ./yocs-waypoint-provider {};
 
  yocs-waypoints-navi = self.callPackage ./yocs-waypoints-navi {};
+
+ yosemite-valley = self.callPackage ./yosemite-valley {};
 
  ypspur = self.callPackage ./ypspur {};
 

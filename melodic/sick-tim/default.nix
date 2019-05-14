@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, libusb1, diagnostic-updater, robot-state-publisher, dynamic-reconfigure, roslaunch, roscpp, libusb, xacro }:
 buildRosPackage {
   pname = "ros-melodic-sick-tim";
-  version = "0.0.15";
+  version = "0.0.16-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/sick_tim-release/archive/release/melodic/sick_tim/0.0.15-0.tar.gz;
-    sha256 = "7e331af0eea21b51239fc2ed9b451fe43529d24569f208a3e71591e2f334c3e1";
+    url = https://github.com/uos-gbp/sick_tim-release/archive/release/melodic/sick_tim/0.0.16-1.tar.gz;
+    sha256 = "21cbe180b6016b00a94db9fdcaca49ef8d560608c041bb975b5babb0e8f9aaf3";
   };
 
   buildInputs = [ sensor-msgs libusb1 diagnostic-updater dynamic-reconfigure roslaunch roscpp ];

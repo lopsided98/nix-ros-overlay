@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rviz, qt5, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-rviz-imu-plugin";
-  version = "1.2.0";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/imu_tools-release/archive/release/melodic/rviz_imu_plugin/1.2.0-0.tar.gz;
-    sha256 = "8611fe62e3a09de1147588b51946ff3d88a663ff412a6fa8d1199a929d4a54ef";
+    url = https://github.com/uos-gbp/imu_tools-release/archive/release/melodic/rviz_imu_plugin/1.2.1-1.tar.gz;
+    sha256 = "d9e0540473495ab3f625d54fe3e7dd3e2e62663540504e9c524f1cb7c8c4bec1";
   };
 
   buildInputs = [ roscpp rviz qt5.qtbase ];

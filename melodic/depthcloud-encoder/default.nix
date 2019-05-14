@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, image-transport, sensor-msgs, cv-bridge, message-filters, catkin, pcl-ros, tf-conversions, dynamic-reconfigure, roscpp, pcl-conversions }:
 buildRosPackage {
   pname = "ros-melodic-depthcloud-encoder";
-  version = "0.1.0";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/RobotWebTools-release/depthcloud_encoder-release/archive/release/melodic/depthcloud_encoder/0.1.0-0.tar.gz;
-    sha256 = "f057bb543baa3dcb80b740f37262203623e9c9ecbdd5328ce3164dcb667eea39";
+    url = https://github.com/RobotWebTools-release/depthcloud_encoder-release/archive/release/melodic/depthcloud_encoder/0.1.1-1.tar.gz;
+    sha256 = "cd0303245ac1fcc135761ad4d18dda3ed256e4165cf4fbbd6a4182037cecece6";
   };
 
   buildInputs = [ image-transport sensor-msgs cv-bridge message-filters pcl-ros dynamic-reconfigure tf-conversions roscpp pcl-conversions ];

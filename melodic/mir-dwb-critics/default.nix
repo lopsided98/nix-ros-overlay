@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, dwb-local-planner, pluginlib, nav-core2, costmap-queue, sensor-msgs, catkin, nav-2d-msgs, dwb-critics, nav-2d-utils, angles, roscpp, nav-grid-iterators, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mir-dwb-critics";
-  version = "1.0.3";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_dwb_critics/1.0.3-0.tar.gz;
-    sha256 = "84b2d085130cc39d01978ba1b64100377bfd24b6b3a64a70f2f68c1bf8fb8866";
+    url = https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_dwb_critics/1.0.4-1.tar.gz;
+    sha256 = "72ef1187b0c85ee0de3f41cf602bb84854fbfdfb65422ea25b44d9e70b6b76f4";
   };
 
   buildInputs = [ dwb-local-planner pluginlib nav-core2 costmap-queue sensor-msgs dwb-critics nav-2d-msgs nav-2d-utils angles roscpp nav-grid-iterators geometry-msgs ];

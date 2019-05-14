@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, libusb }:
 buildRosPackage {
   pname = "ros-melodic-libphidget21";
-  version = "0.7.7";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/melodic/libphidget21/0.7.7-0.tar.gz;
-    sha256 = "69660b7d771da1f35e899d0a658ba8d32e940015d336c37a176d7a21dc715aed";
+    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/melodic/libphidget21/0.7.8-1.tar.gz;
+    sha256 = "b72a79de039651e82bd15d452dd153cc76339eb6f0705dc4b8875f3ffed5d650";
   };
 
   buildInputs = [ libusb ];

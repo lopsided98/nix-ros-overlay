@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, rospy-message-converter, rosgraph-msgs, rospy, diagnostic-msgs, tf, geometry-msgs, mir-description, pythonPackages, robot-state-publisher, roslaunch, catkin, move-base-msgs, mir-actions, nav-msgs, std-msgs, visualization-msgs, sensor-msgs, dynamic-reconfigure, mir-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mir-driver";
-  version = "1.0.3";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_driver/1.0.3-0.tar.gz;
-    sha256 = "7d4cc4bb4f9ec504921acb945e036711c21a75de8dadafc38260dea35ef0b202";
+    url = https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_driver/1.0.4-1.tar.gz;
+    sha256 = "da99d11e458c15ad666321a49d43326ee91a75b969f98f8bb904c7bf0a071188";
   };
 
   buildInputs = [ roslaunch actionlib-msgs geometry-msgs sensor-msgs rospy rospy-message-converter rosgraph-msgs move-base-msgs nav-msgs mir-actions visualization-msgs dynamic-reconfigure std-msgs diagnostic-msgs pythonPackages.websocket_client tf mir-msgs ];

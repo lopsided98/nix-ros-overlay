@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, mir-gazebo, mir-dwb-critics, mir-description, mir-actions, mir-navigation, mir-driver, mir-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mir-robot";
-  version = "1.0.3";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_robot/1.0.3-0.tar.gz;
-    sha256 = "3037700c38b063bebea35ba8506ede308e9115ac5487946af9c30b604e23b1db";
+    url = https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_robot/1.0.4-1.tar.gz;
+    sha256 = "1be447be46d3485524682a594f9f55d972b07c44b4e29e31c2c57105530be475";
   };
 
   propagatedBuildInputs = [ mir-description mir-gazebo mir-dwb-critics mir-actions mir-navigation mir-driver mir-msgs ];
