@@ -19,6 +19,11 @@ self: super: {
 
     melodic = import ./distro-overlay.nix {
       distro = "melodic";
+      python = self.python2;
+    } self super;
+
+    melodicPython3 = import ./distro-overlay.nix {
+      distro = "melodic";
       python = self.python3;
     } self super;
   };
