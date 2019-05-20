@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dataspeed-ulc-msgs, catkin, can-msgs, rostest, roslib, nodelet, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, dataspeed-ulc-msgs, catkin, can-msgs, rostest, roslib, nodelet, rospy, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dataspeed-ulc-can";
-  version = "0.0.3";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/melodic/dataspeed_ulc_can/0.0.3-0.tar.gz;
-    sha256 = "85673897676564ab1aea0ffe505a10469008d058ca28ce81bce53b50b4641813";
+    url = https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/melodic/dataspeed_ulc_can/0.0.4-1.tar.gz;
+    sha256 = "c4fc0d6aba845473c5420ee7e3625a5a8fbcdc13925ef38e17a2153c3e427dd0";
   };
 
-  buildInputs = [ dataspeed-ulc-msgs can-msgs nodelet std-msgs roscpp geometry-msgs ];
+  buildInputs = [ dataspeed-ulc-msgs can-msgs nodelet rospy std-msgs roscpp geometry-msgs ];
   checkInputs = [ rostest roslib ];
-  propagatedBuildInputs = [ dataspeed-ulc-msgs can-msgs nodelet std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ dataspeed-ulc-msgs can-msgs nodelet rospy std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rtt-roscomm, std-srvs, catkin, genmsg }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-std-srvs";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_std_srvs/2.9.1-0.tar.gz;
-    sha256 = "e03a346d0b2763bc9c21091e164b061382ab961ce0638b18f7922e9f93a56c86";
+    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_std_srvs/2.9.2-1.tar.gz;
+    sha256 = "bf969875f8bddc1196100c3c24e23c078be0a1b3ccb6c533c9586a469475fc9b";
   };
 
   buildInputs = [ rtt-roscomm genmsg std-srvs ];

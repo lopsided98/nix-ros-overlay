@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslib, catkin, rtt-ros }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-rospack";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_rospack/2.9.1-0.tar.gz;
-    sha256 = "dcb1cce59a0b22a2bd49d57750885cf1ddfb5a7896364b39f1ed80cc8c6bad4b";
+    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_rospack/2.9.2-1.tar.gz;
+    sha256 = "d40ef41d9b277c6b8e5cd7558058a28a5a716f180a38218187a065295d942d2c";
   };
 
   buildInputs = [ roslib rtt-ros ];

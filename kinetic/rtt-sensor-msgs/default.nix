@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rtt-std-msgs, rtt-geometry-msgs, sensor-msgs, catkin, rtt-roscomm }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-sensor-msgs";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_sensor_msgs/2.9.1-0.tar.gz;
-    sha256 = "5d6cd8214dc084d78619073a76e6cefa91cd78294fb95e6cabb2aea5e97a43d5";
+    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_sensor_msgs/2.9.2-1.tar.gz;
+    sha256 = "7a92d416e3dea491d53bbb2a94695f301df7bf37d419e93ac87cc8567bd5f7b9";
   };
 
   buildInputs = [ rtt-roscomm rtt-geometry-msgs sensor-msgs rtt-std-msgs ];

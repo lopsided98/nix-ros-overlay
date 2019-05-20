@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake }:
 buildRosPackage {
   pname = "ros-kinetic-log4cpp";
-  version = "2.9.0";
+  version = "2.9.1-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/log4cpp-release/archive/release/kinetic/log4cpp/2.9.0-0.tar.gz;
-    sha256 = "6df7cdfed639d00712d7e1b5e277b1dd6fc2fc6729456d2727465d46499a42ec";
+    url = https://github.com/orocos-gbp/log4cpp-release/archive/release/kinetic/log4cpp/2.9.1-1.tar.gz;
+    sha256 = "0825201572960526cd7fd64ad2ca9e95f0756a39882d7a3c5404b38f555e8d03";
   };
 
   propagatedBuildInputs = [ catkin ];

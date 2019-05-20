@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roscpp-serialization, abseil-cpp, rostime }:
 buildRosPackage {
   pname = "ros-kinetic-ros-type-introspection";
-  version = "1.3.2";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = https://github.com/facontidavide/ros_type_introspection-release/archive/release/kinetic/ros_type_introspection/1.3.2-0.tar.gz;
-    sha256 = "fb3281d0706d9421093b3f794417fd86cec3d4786fd8cdb83638c06f70879868";
+    url = https://github.com/facontidavide/ros_type_introspection-release/archive/release/kinetic/ros_type_introspection/1.3.3-1.tar.gz;
+    sha256 = "b63e3ec1785ec13a785f73f4a9ad3e843dc1692e1b515210f044b08ee73df703";
   };
 
   buildInputs = [ abseil-cpp roscpp rostime roscpp-serialization ];

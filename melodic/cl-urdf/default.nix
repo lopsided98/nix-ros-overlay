@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, roslisp, cl-transforms }:
 buildRosPackage {
   pname = "ros-melodic-cl-urdf";
-  version = "0.2.10";
+  version = "0.2.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_urdf/0.2.10-0.tar.gz;
-    sha256 = "d2b3ee247057cc0bee65484510f44e0342fff7fc1efcbfc4545914edf5efaa72";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_urdf/0.2.11-1.tar.gz;
+    sha256 = "dbbf17e7c5009de686d5bc1d96d6c517145b7954cae31ab33e1195d362109333";
   };
 
   propagatedBuildInputs = [ roslisp cl-transforms ];

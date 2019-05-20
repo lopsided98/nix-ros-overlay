@@ -40,6 +40,8 @@ self: super: {
 
  actionlib = self.callPackage ./actionlib {};
 
+ actionlib-enhanced = self.callPackage ./actionlib-enhanced {};
+
  actionlib-lisp = self.callPackage ./actionlib-lisp {};
 
  actionlib-msgs = self.callPackage ./actionlib-msgs {};
@@ -99,8 +101,6 @@ self: super: {
  arm-navigation-msgs = self.callPackage ./arm-navigation-msgs {};
 
  aruco = self.callPackage ./aruco {};
-
- aruco-detect = self.callPackage ./aruco-detect {};
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
@@ -3969,6 +3969,10 @@ self: super: {
  sick-visionary-t = self.callPackage ./sick-visionary-t {};
 
  sick-visionary-t-driver = self.callPackage ./sick-visionary-t-driver {};
+
+ sicktoolbox = self.callPackage ./sicktoolbox {};
+
+ sicktoolbox-wrapper = self.callPackage ./sicktoolbox-wrapper {};
 
  simple-arm = self.callPackage ./simple-arm {};
 

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, roslisp, message-runtime, cl-utils }:
 buildRosPackage {
   pname = "ros-melodic-actionlib-lisp";
-  version = "0.2.10";
+  version = "0.2.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/actionlib_lisp/0.2.10-0.tar.gz;
-    sha256 = "f7d69b33db5ed3ca13e17699bb8ec2fb18612b3f193f7bbaa46b9be73877a7bc";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/actionlib_lisp/0.2.11-1.tar.gz;
+    sha256 = "5046f94d69a0b3d61c7f7faef39d7c9c17b182dec698f7308512c6668ab083d9";
   };
 
   propagatedBuildInputs = [ roslisp message-runtime cl-utils actionlib-msgs ];

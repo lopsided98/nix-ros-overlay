@@ -34,6 +34,8 @@ self: super: {
 
  app-manager = self.callPackage ./app-manager {};
 
+ apriltag = self.callPackage ./apriltag {};
+
  ar-track-alvar = self.callPackage ./ar-track-alvar {};
 
  ar-track-alvar-msgs = self.callPackage ./ar-track-alvar-msgs {};
@@ -189,6 +191,8 @@ self: super: {
  cloudwatch-metrics-common = self.callPackage ./cloudwatch-metrics-common {};
 
  cmake-modules = self.callPackage ./cmake-modules {};
+
+ cnn-bridge = self.callPackage ./cnn-bridge {};
 
  cob-actions = self.callPackage ./cob-actions {};
 
@@ -1750,6 +1754,20 @@ self: super: {
 
  rc-visard-driver = self.callPackage ./rc-visard-driver {};
 
+ rdl = self.callPackage ./rdl {};
+
+ rdl-benchmark = self.callPackage ./rdl-benchmark {};
+
+ rdl-cmake = self.callPackage ./rdl-cmake {};
+
+ rdl-dynamics = self.callPackage ./rdl-dynamics {};
+
+ rdl-msgs = self.callPackage ./rdl-msgs {};
+
+ rdl-ros-tools = self.callPackage ./rdl-ros-tools {};
+
+ rdl-urdfreader = self.callPackage ./rdl-urdfreader {};
+
  realtime-tools = self.callPackage ./realtime-tools {};
 
  resized-image-transport = self.callPackage ./resized-image-transport {};
@@ -2021,6 +2039,8 @@ self: super: {
  rostate-machine = self.callPackage ./rostate-machine {};
 
  rostest = self.callPackage ./rostest {};
+
+ rosthrottle = self.callPackage ./rosthrottle {};
 
  rostime = self.callPackage ./rostime {};
 
@@ -2306,6 +2326,8 @@ self: super: {
 
  teraranger = self.callPackage ./teraranger {};
 
+ teraranger-array = self.callPackage ./teraranger-array {};
+
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
 
  test-mavros = self.callPackage ./test-mavros {};
@@ -2345,6 +2367,16 @@ self: super: {
  timestamp-tools = self.callPackage ./timestamp-tools {};
 
  topic-tools = self.callPackage ./topic-tools {};
+
+ toposens = self.callPackage ./toposens {};
+
+ toposens-driver = self.callPackage ./toposens-driver {};
+
+ toposens-markers = self.callPackage ./toposens-markers {};
+
+ toposens-msgs = self.callPackage ./toposens-msgs {};
+
+ toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
 
  towr = self.callPackage ./towr {};
 

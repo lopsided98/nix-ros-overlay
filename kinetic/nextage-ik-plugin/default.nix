@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pluginlib, catkin, liblapack, moveit-core, tf-conversions, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-nextage-ik-plugin";
-  version = "0.8.4";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_ik_plugin/0.8.4-0.tar.gz;
-    sha256 = "143479a522059085716a089c6292eacf4c777ed39f689c70e2cb4b8dbd57d8f9";
+    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_ik_plugin/0.8.5-1.tar.gz;
+    sha256 = "8bfc5d63f966ae59a01c170ca2f7e390f9d807206b8fd7e784d040b25d769a9c";
   };
 
   buildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];

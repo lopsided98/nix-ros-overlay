@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rospack, cmake-modules, rtt, libxml2, catkin, rostime, rtt-rosgraph-msgs, ocl, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-rosclock";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_rosclock/2.9.1-0.tar.gz;
-    sha256 = "7117194cb738361b859651998760d0082990f0b2b2b045633da239c42b2f4178";
+    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_rosclock/2.9.2-1.tar.gz;
+    sha256 = "839492b228a6a56577a2d2270ce65c5e27e68de04c6b87423b550ccdafb119cd";
   };
 
   buildInputs = [ rospack cmake-modules rtt libxml2 roscpp rtt-rosgraph-msgs ocl rostime ];

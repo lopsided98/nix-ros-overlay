@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, roslisp, cl-transforms, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cl-transforms-stamped";
-  version = "0.2.10";
+  version = "0.2.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_transforms_stamped/0.2.10-0.tar.gz;
-    sha256 = "8bb4cba56d66bb1a706d682930d296c70c682782f71a4843f623e386bec7c834";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_transforms_stamped/0.2.11-1.tar.gz;
+    sha256 = "9fd5acbf01164c3b2c07f509a312125aaaa4d09af67508f4726308d288b5d9fc";
   };
 
   propagatedBuildInputs = [ std-msgs roslisp cl-transforms geometry-msgs ];

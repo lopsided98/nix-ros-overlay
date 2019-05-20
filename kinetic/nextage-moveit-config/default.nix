@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, trac-ik-kinematics-plugin, moveit-ros-visualization, moveit-ros-move-group, catkin, hironx-moveit-config, moveit-ros, rostest, moveit-ros-planning-interface, moveit-simple-controller-manager, joint-state-publisher, robot-state-publisher, moveit-planners, nextage-ros-bridge }:
 buildRosPackage {
   pname = "ros-kinetic-nextage-moveit-config";
-  version = "0.8.4";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_moveit_config/0.8.4-0.tar.gz;
-    sha256 = "a53f376904d833d8bc62e24aaf59f838bd5ea788d1c7e193bb5e4f50a3525def";
+    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_moveit_config/0.8.5-1.tar.gz;
+    sha256 = "d0368cb6f985bc16978709d4dd315e286b645d21894ee578a417df16fa62e1f1";
   };
 
   buildInputs = [ nextage-ros-bridge hironx-moveit-config ];

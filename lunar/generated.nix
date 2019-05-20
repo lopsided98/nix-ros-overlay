@@ -310,6 +310,8 @@ self: super: {
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
+ eigen-typekit = self.callPackage ./eigen-typekit {};
+
  eml = self.callPackage ./eml {};
 
  ethercat-hardware = self.callPackage ./ethercat-hardware {};
@@ -638,6 +640,8 @@ self: super: {
 
  kdl-parser-py = self.callPackage ./kdl-parser-py {};
 
+ kdl-typekit = self.callPackage ./kdl-typekit {};
+
  key-teleop = self.callPackage ./key-teleop {};
 
  kni = self.callPackage ./kni {};
@@ -717,6 +721,8 @@ self: super: {
  locomotor-msgs = self.callPackage ./locomotor-msgs {};
 
  locomove-base = self.callPackage ./locomove-base {};
+
+ log4cpp = self.callPackage ./log4cpp {};
 
  lpg-planner = self.callPackage ./lpg-planner {};
 
@@ -995,6 +1001,8 @@ self: super: {
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
  ocean-battery-driver = self.callPackage ./ocean-battery-driver {};
+
+ ocl = self.callPackage ./ocl {};
 
  octomap = self.callPackage ./octomap {};
 
@@ -1591,6 +1599,62 @@ self: super: {
  rqt-web = self.callPackage ./rqt-web {};
 
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtt-actionlib = self.callPackage ./rtt-actionlib {};
+
+ rtt-actionlib-msgs = self.callPackage ./rtt-actionlib-msgs {};
+
+ rtt-common-msgs = self.callPackage ./rtt-common-msgs {};
+
+ rtt-diagnostic-msgs = self.callPackage ./rtt-diagnostic-msgs {};
+
+ rtt-dynamic-reconfigure = self.callPackage ./rtt-dynamic-reconfigure {};
+
+ rtt-geometry = self.callPackage ./rtt-geometry {};
+
+ rtt-geometry-msgs = self.callPackage ./rtt-geometry-msgs {};
+
+ rtt-kdl-conversions = self.callPackage ./rtt-kdl-conversions {};
+
+ rtt-nav-msgs = self.callPackage ./rtt-nav-msgs {};
+
+ rtt-ros = self.callPackage ./rtt-ros {};
+
+ rtt-ros-comm = self.callPackage ./rtt-ros-comm {};
+
+ rtt-ros-integration = self.callPackage ./rtt-ros-integration {};
+
+ rtt-ros-msgs = self.callPackage ./rtt-ros-msgs {};
+
+ rtt-rosclock = self.callPackage ./rtt-rosclock {};
+
+ rtt-roscomm = self.callPackage ./rtt-roscomm {};
+
+ rtt-rosdeployment = self.callPackage ./rtt-rosdeployment {};
+
+ rtt-rosgraph-msgs = self.callPackage ./rtt-rosgraph-msgs {};
+
+ rtt-rosnode = self.callPackage ./rtt-rosnode {};
+
+ rtt-rospack = self.callPackage ./rtt-rospack {};
+
+ rtt-rosparam = self.callPackage ./rtt-rosparam {};
+
+ rtt-sensor-msgs = self.callPackage ./rtt-sensor-msgs {};
+
+ rtt-shape-msgs = self.callPackage ./rtt-shape-msgs {};
+
+ rtt-std-msgs = self.callPackage ./rtt-std-msgs {};
+
+ rtt-std-srvs = self.callPackage ./rtt-std-srvs {};
+
+ rtt-stereo-msgs = self.callPackage ./rtt-stereo-msgs {};
+
+ rtt-tf = self.callPackage ./rtt-tf {};
+
+ rtt-trajectory-msgs = self.callPackage ./rtt-trajectory-msgs {};
+
+ rtt-visualization-msgs = self.callPackage ./rtt-visualization-msgs {};
 
  rviz = self.callPackage ./rviz {};
 

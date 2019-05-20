@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, roslisp, cl-transforms }:
 buildRosPackage {
   pname = "ros-kinetic-cl-urdf";
-  version = "0.2.10";
+  version = "0.2.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_urdf/0.2.10-0.tar.gz;
-    sha256 = "735136364a06e0e98bb8a3a93d4dc458778a72b87a095b875e2a79487cfa300d";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_urdf/0.2.11-1.tar.gz;
+    sha256 = "431f1f4e477ec9d82010d2f7df3f38bfda3dfa1cc62323d7dc54dbb2f95994fc";
   };
 
   propagatedBuildInputs = [ roslisp cl-transforms ];

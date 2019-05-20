@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, nextage-moveit-config, catkin, gazebo-plugins, rostest, nextage-description, gazebo-ros-control, ros-controllers }:
 buildRosPackage {
   pname = "ros-kinetic-nextage-gazebo";
-  version = "0.8.4";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_gazebo/0.8.4-0.tar.gz;
-    sha256 = "ae28bd62c3891633fb668a7d268b02b39c98c414b7a84f81759e4d5061c02205";
+    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_gazebo/0.8.5-1.tar.gz;
+    sha256 = "f398d760a58e559f1ebc4143cfcf85ccafbde2859f0810b79802e72a78a5addd";
   };
 
   checkInputs = [ rostest ];

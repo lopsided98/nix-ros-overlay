@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, diagnostic-msgs, rtt-roscomm, catkin, rtt-std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-diagnostic-msgs";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_diagnostic_msgs/2.9.1-0.tar.gz;
-    sha256 = "75813e883761632edea52ccddb5c6da21232acfaf162b87c1ceee9493c860c17";
+    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_diagnostic_msgs/2.9.2-1.tar.gz;
+    sha256 = "7df2d285235ff990902645eab67dc1df0780a9ecf1f98d0504e754b2eca598b4";
   };
 
   buildInputs = [ diagnostic-msgs rtt-std-msgs rtt-roscomm ];

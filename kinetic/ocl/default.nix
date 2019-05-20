@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, netcdf, rtt, readline, catkin, ncurses, cmake, log4cpp, lua }:
 buildRosPackage {
   pname = "ros-kinetic-ocl";
-  version = "2.9.0-r1";
+  version = "2.9.1-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/ocl-release/archive/release/kinetic/ocl/2.9.0-1.tar.gz;
-    sha256 = "117ba27fda71b1f601c74b7d8f315b10d831230bfdb2b3fe9fc76a90116f1c00";
+    url = https://github.com/orocos-gbp/ocl-release/archive/release/kinetic/ocl/2.9.1-1.tar.gz;
+    sha256 = "f834d79be1e506bdd94b2b0670dd47c766c81a8177549a0ebe4c7f69a0f7bd93";
   };
 
   buildInputs = [ netcdf rtt readline ncurses log4cpp lua ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, nextage-gazebo, gazebo-ros, catkin, openni2-launch, checkerboard-detector, gazebo-plugins, dynamic-tf-publisher, urdf, robot-state-publisher, turtlebot-description, tf, joint-state-publisher, freenect-stack }:
 buildRosPackage {
   pname = "ros-kinetic-nextage-calibration";
-  version = "0.8.4";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_calibration/0.8.4-0.tar.gz;
-    sha256 = "531f04f8ff752f1e242af41fe7d6183d334ea00b732ced44446fd0c8926e0641";
+    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_calibration/0.8.5-1.tar.gz;
+    sha256 = "4f3707e57a13a017c81b08678ed71bc5a9ba0248a99f72d4d684487e70a1ab04";
   };
 
   checkInputs = [ nextage-gazebo ];

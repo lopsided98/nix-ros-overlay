@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen-typekit, kdl-typekit }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-geometry";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kinetic/rtt_geometry/2.9.1-0.tar.gz;
-    sha256 = "b8c738e4a6569d7d54a3b8201a70e91afe8708ca9acf62b8ba4b2ffe671cd168";
+    url = https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kinetic/rtt_geometry/2.9.2-1.tar.gz;
+    sha256 = "b2a117e941c1697270575dd5e475e24246f22cab44652485d758dbede9b4ac82";
   };
 
   propagatedBuildInputs = [ eigen-typekit kdl-typekit ];

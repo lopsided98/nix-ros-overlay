@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, hardware-interface, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-industrial-robot-status-interface";
-  version = "0.1.1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/gavanderhoorn/industrial_robot_status_controller-release/archive/release/kinetic/industrial_robot_status_interface/0.1.1-0.tar.gz;
-    sha256 = "795ef7eed7e0b72fa50f1b684b0b2994322c03bc557aa342a134da0df0ce877f";
+    url = https://github.com/gavanderhoorn/industrial_robot_status_controller-release/archive/release/kinetic/industrial_robot_status_interface/0.1.2-1.tar.gz;
+    sha256 = "cfdae0e1db1b9e6390445514bdae4ce1bc559abba85d65a4f5d989b785c4d842";
   };
 
   buildInputs = [ hardware-interface ];

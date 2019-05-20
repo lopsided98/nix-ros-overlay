@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, roslisp }:
 buildRosPackage {
   pname = "ros-kinetic-roslisp-utilities";
-  version = "0.2.10";
+  version = "0.2.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/roslisp_utilities/0.2.10-0.tar.gz;
-    sha256 = "cd6e49104a91f3b656d4b320983a1fcaa252b42d7667df6b752c8c71aa0e1eca";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/roslisp_utilities/0.2.11-1.tar.gz;
+    sha256 = "73d47efe9aa655d16e63c6f512d74f6d65cafdad76092307055042f4dfa08244";
   };
 
   propagatedBuildInputs = [ roslisp ];

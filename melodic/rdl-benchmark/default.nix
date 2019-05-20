@@ -1,0 +1,24 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, rdl-cmake, rdl-urdfreader, gtest, catkin, rdl-dynamics }:
+buildRosPackage {
+  pname = "ros-melodic-rdl-benchmark";
+  version = "3.2.0-r1";
+
+  src = fetchurl {
+    url = https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/melodic/rdl_benchmark/3.2.0-1;
+    sha256 = "b3764041b76d8541b11d5acdb176bed3be086ec1b953a41aa2b56b42898d34aa";
+  };
+
+  buildInputs = [ rdl-cmake rdl-dynamics rdl-urdfreader ];
+  checkInputs = [ gtest ];
+  propagatedBuildInputs = [ rdl-cmake rdl-dynamics rdl-urdfreader ];
+  nativeBuildInputs = [ catkin ];
+
+  meta = {
+    description = ''The rdl_benchmark package'';
+    license = with lib.licenses; [ "zlib" ];
+  };
+}

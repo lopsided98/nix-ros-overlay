@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, sbcl }:
 buildRosPackage {
   pname = "ros-melodic-cl-utils";
-  version = "0.2.10";
+  version = "0.2.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_utils/0.2.10-0.tar.gz;
-    sha256 = "e77a28e37781eac7f3e75193f0c6adb099a860976fd96677baa28b11bfc21e44";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_utils/0.2.11-1.tar.gz;
+    sha256 = "2c46beef0097cb671d5cda59d121f5c711055ccbad85c893827b1d78af44ade4";
   };
 
   propagatedBuildInputs = [ sbcl ];

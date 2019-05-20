@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rtt-std-msgs, rtt-geometry-msgs, rtt-sensor-msgs, catkin, rtt-roscomm, stereo-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-stereo-msgs";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_stereo_msgs/2.9.1-0.tar.gz;
-    sha256 = "2bab5e9478669f2df3529e0c6bb5c17b98731861e99ff4891e5f1bb1fc488a78";
+    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_stereo_msgs/2.9.2-1.tar.gz;
+    sha256 = "15e3fa0e2e90b22adec8dc13cb68cc4403e6bd7b2889b2544e5d348a35228c7e";
   };
 
   buildInputs = [ rtt-std-msgs rtt-geometry-msgs rtt-sensor-msgs rtt-roscomm stereo-msgs ];

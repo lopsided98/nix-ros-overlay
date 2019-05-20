@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rtt-nav-msgs, rtt-geometry-msgs, rtt-visualization-msgs, catkin, rtt-sensor-msgs, rtt-diagnostic-msgs, rtt-actionlib-msgs, rtt-stereo-msgs, rtt-shape-msgs, rtt-trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-common-msgs";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_common_msgs/2.9.1-0.tar.gz;
-    sha256 = "357976070fb40fd4a22cb2f3464e05825ac10fc3dfcfcaf891eafda82e864366";
+    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_common_msgs/2.9.2-1.tar.gz;
+    sha256 = "7e007c51dac46d6e6109aa522a7c8ac2a381b3eddfa1c250c2f670122d489912";
   };
 
   propagatedBuildInputs = [ rtt-visualization-msgs rtt-nav-msgs rtt-geometry-msgs rtt-sensor-msgs rtt-diagnostic-msgs rtt-actionlib-msgs rtt-stereo-msgs rtt-shape-msgs rtt-trajectory-msgs ];

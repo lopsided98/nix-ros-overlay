@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, kdl-conversions, catkin, rtt }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-kdl-conversions";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_kdl_conversions/2.9.1-0.tar.gz;
-    sha256 = "64797229d92e8ec44f4886bd7203167cf302d58629e4c7fda1e5fba4b68e0dcf";
+    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_kdl_conversions/2.9.2-1.tar.gz;
+    sha256 = "240d2a6b471858f995ac364d13bd03a3d06dd49ac622505f983d5f0926041a45";
   };
 
   buildInputs = [ kdl-conversions rtt ];

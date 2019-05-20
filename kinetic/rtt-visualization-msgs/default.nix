@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rtt-std-msgs, rtt-geometry-msgs, catkin, rtt-roscomm, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-visualization-msgs";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_visualization_msgs/2.9.1-0.tar.gz;
-    sha256 = "e24ecfe1c4aed4f9234bc44b1c21e5443be28537d57ba4ba00fbe0d629d0bca2";
+    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_visualization_msgs/2.9.2-1.tar.gz;
+    sha256 = "a8d52507f819487398142817687d0ec970a9a40d3d4ee2f352dfa32bffadc095";
   };
 
   buildInputs = [ rtt-roscomm rtt-geometry-msgs visualization-msgs rtt-std-msgs ];

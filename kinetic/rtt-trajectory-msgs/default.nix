@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rtt-std-msgs, rtt-geometry-msgs, trajectory-msgs, catkin, rtt-roscomm }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-trajectory-msgs";
-  version = "2.9.1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_trajectory_msgs/2.9.1-0.tar.gz;
-    sha256 = "ffb2bf8a025f5688920724ae0eccc3b239aaf2812d8d3149b9da2c4bed53a83b";
+    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_trajectory_msgs/2.9.2-1.tar.gz;
+    sha256 = "d010fbab8e706ea42435691d60f8e533a87c6fc9ba3d8f1f77c818089f3af2ce";
   };
 
   buildInputs = [ rtt-geometry-msgs trajectory-msgs rtt-std-msgs rtt-roscomm ];
