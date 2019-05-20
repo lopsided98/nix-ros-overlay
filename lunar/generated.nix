@@ -1012,8 +1012,6 @@ self: super: {
 
  octomap-ros = self.callPackage ./octomap-ros {};
 
- octovis = self.callPackage ./octovis {};
-
  ompl = self.callPackage ./ompl {};
 
  open-karto = self.callPackage ./open-karto {};

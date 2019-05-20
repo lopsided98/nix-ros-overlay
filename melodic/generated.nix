@@ -1384,8 +1384,6 @@ self: super: {
 
  octomap-server = self.callPackage ./octomap-server {};
 
- octovis = self.callPackage ./octovis {};
-
  odva-ethernetip = self.callPackage ./odva-ethernetip {};
 
  ompl = self.callPackage ./ompl {};

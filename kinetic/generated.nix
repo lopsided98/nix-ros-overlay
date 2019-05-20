@@ -2516,8 +2516,6 @@ self: super: {
 
  octomap-server = self.callPackage ./octomap-server {};
 
- octovis = self.callPackage ./octovis {};
-
  oculusprime = self.callPackage ./oculusprime {};
 
  odometry-publisher-tutorial = self.callPackage ./odometry-publisher-tutorial {};
