@@ -33,12 +33,12 @@ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ## Current status
 
 What works:
-1. More than 1600 packages successfully built for ROS Kinetic
+1. More than 1700 packages successfully built for ROS Kinetic
 2. Fully function ROS development environment using `nix-shell`
 3. Automated generation of Nix package definitions using standard ROS tools ([superflore](https://github.com/lopsided98/superflore))
 
 What still needs to be done:
-1. Automaticly update packages on a regular basis
+1. Automatically update packages on a regular basis
 2. Upstream changes to nixpkgs and ROS tools
 3. Test on more Linux distributions
 3. Linux aarch64 support
