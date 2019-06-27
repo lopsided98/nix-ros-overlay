@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rostest, catkin }:
 buildRosPackage {
   pname = "ros-lunar-swri-string-util";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_string_util/2.8.0-0.tar.gz;
-    sha256 = "cd8ba46e2b950c384359e0de6c8271a394a5386b4bc2cf7bd041b58fa20a42e1";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_string_util/2.9.0-1.tar.gz;
+    sha256 = "2149db742500d7cc89bfb6e77caffd7973b3d7a7e507a3a4a3b347356efac180";
   };
 
   checkInputs = [ rostest ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rosboost-cfg, rosbash, mk, catkin, rosbuild, rosmake, roslang, rosclean, rosunit, roslib, roscreate }:
 buildRosPackage {
   pname = "ros-kinetic-ros";
-  version = "1.14.4";
+  version = "1.14.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/ros/1.14.4-0.tar.gz;
-    sha256 = "bce49473db484119c608b9b4e7c719ef8746d0ed65758e5798b1af71000429cb";
+    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/ros/1.14.6-1.tar.gz;
+    sha256 = "b6c3dba4dab4e918c1d363728b943dd3895005f580c0843b1d2295a056903dc0";
   };
 
   propagatedBuildInputs = [ rosboost-cfg rosbash mk catkin rosbuild rosmake roslang roscreate rosclean roslib rosunit ];

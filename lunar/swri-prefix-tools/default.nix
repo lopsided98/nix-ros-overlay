@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-lunar-swri-prefix-tools";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_prefix_tools/2.8.0-0.tar.gz;
-    sha256 = "38781247dcb21aeae64af873e801b0ada52c83e3c81f9af0d854c4e0306e1791";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_prefix_tools/2.9.0-1.tar.gz;
+    sha256 = "2b32caa8448d70365325bc69d11613a395be8efbd08867a469c286917884dc5b";
   };
 
   propagatedBuildInputs = [ pythonPackages.psutil ];

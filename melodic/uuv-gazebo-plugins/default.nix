@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-dev, eigen, protobuf, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-uuv-gazebo-plugins";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_gazebo_plugins/0.6.10-0.tar.gz;
-    sha256 = "caad77b6bbdeaffc03bce6f6ec99e8064951060ef0081694001d291f08db9a4a";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_gazebo_plugins/0.6.12-0.tar.gz;
+    sha256 = "348592fab624487d3da07bcd4ecdedb3e24ce8cab570b071b37d886e5a3bae3a";
   };
 
   buildInputs = [ protobuf eigen gazebo-dev ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, costmap-2d, mbf-abstract-core, nav-core, catkin, std-msgs, mbf-utility, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-mbf-costmap-core";
-  version = "0.2.3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/mbf_costmap_core/0.2.3-0.tar.gz;
-    sha256 = "5c34aa9c06c639e8b4cdce8e7b4468d64cb4ded5e5760b614c3e6990606cd49b";
+    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/mbf_costmap_core/0.2.4-1.tar.gz;
+    sha256 = "8c96407540fa851b03dd011dc97169788ae14cd78c16f7846da7616b1e4bc376";
   };
 
   buildInputs = [ costmap-2d mbf-abstract-core nav-core mbf-utility std-msgs tf geometry-msgs ];

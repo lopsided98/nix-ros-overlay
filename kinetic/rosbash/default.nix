@@ -2,17 +2,17 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin }:
+{ lib, buildRosPackage, fetchurl, rospack, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-rosbash";
-  version = "1.14.4";
+  version = "1.14.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosbash/1.14.4-0.tar.gz;
-    sha256 = "b7338397eaf46e3541d533604e4fbe7b6f437ec046df0b4d565e5d3162ce9617";
+    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosbash/1.14.6-1.tar.gz;
+    sha256 = "7853609d105cdf5042d13a6914ef8f1bc4734d48b68d9708f887b94b37cfbff0";
   };
 
-  propagatedBuildInputs = [ catkin ];
+  propagatedBuildInputs = [ rospack catkin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

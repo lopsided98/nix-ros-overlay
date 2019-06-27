@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-lunar-swri-dbw-interface";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_dbw_interface/2.8.0-0.tar.gz;
-    sha256 = "b2219feb0ec6524e284008df7cd95f9d56d7c4b004ac77e83ada80cee566eb48";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_dbw_interface/2.9.0-1.tar.gz;
+    sha256 = "bbfa7fc6a2448d9dc86c834af97485a063e1ca64fd9fa82f983e5dd4ce728f1b";
   };
 
   nativeBuildInputs = [ catkin ];

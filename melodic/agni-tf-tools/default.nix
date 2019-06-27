@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, tf2-ros, rviz, qt5, eigen, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-agni-tf-tools";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ubi-agni-gbp/agni_tf_tools-release/archive/release/melodic/agni_tf_tools/0.1.1-1.tar.gz;
-    sha256 = "a9e0e0179ff125da7fca8680b2428754c2fb434db0b9d190865e95f6c650645b";
+    url = https://github.com/ubi-agni-gbp/agni_tf_tools-release/archive/release/melodic/agni_tf_tools/0.1.2-1.tar.gz;
+    sha256 = "c36d7644b274ae9305e3ad1193039d05bd567c3e92a52794d3df735c2302cbaa";
   };
 
   buildInputs = [ tf2-ros qt5.qtbase rviz eigen roscpp ];

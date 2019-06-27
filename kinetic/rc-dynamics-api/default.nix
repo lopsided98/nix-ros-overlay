@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, protobuf, cmake, curl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-rc-dynamics-api";
-  version = "0.7.1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_dynamics_api-release/archive/release/kinetic/rc_dynamics_api/0.7.1-0.tar.gz;
-    sha256 = "8fbefa2f83b292f9fd7a41bdf009fa4c59da447a43ba90ed0d4dbb428cc4bb3e";
+    url = https://github.com/roboception-gbp/rc_dynamics_api-release/archive/release/kinetic/rc_dynamics_api/0.8.0-1.tar.gz;
+    sha256 = "69f8eadcfbe28408bf25553c29c0d66ea230708536dfe1afabc39eb883de7d42";
   };
 
   buildInputs = [ protobuf curl ];

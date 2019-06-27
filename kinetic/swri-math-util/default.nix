@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rostest, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-swri-math-util";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_math_util/2.8.0-0.tar.gz;
-    sha256 = "41221e748149de04d1083039e0730eddb3f6aae6dfb73552b8fe8ded78a8c7b8";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_math_util/2.9.0-1.tar.gz;
+    sha256 = "188535849bc58b5a6d4526596b22e350cee51faeff3b86c699ceb1173f2900e9";
   };
 
   buildInputs = [ roscpp ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, message-generation, uuv-gazebo-ros-plugins-msgs, message-runtime, rospy, std-msgs, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-uuv-thruster-manager";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_thruster_manager/0.6.10-0.tar.gz;
-    sha256 = "b37fcf9a71cf0055bbc0089becbcac6fa9e8a0b4d29d0a6567e6f23d815607d0";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_thruster_manager/0.6.12-0.tar.gz;
+    sha256 = "6570a0b2c05e3845cbe8f56935e943891280128d894edcab1ec7f0fd46bec126";
   };
 
   buildInputs = [ std-msgs message-generation ];

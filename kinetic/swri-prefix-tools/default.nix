@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-swri-prefix-tools";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_prefix_tools/2.8.0-0.tar.gz;
-    sha256 = "4b205e0544adda8e6a8c29ec9e9c5e5b52b07a0198a06c89e6c6f83f3db7812a";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_prefix_tools/2.9.0-1.tar.gz;
+    sha256 = "d8385a961caf555a9b40d35f2f5974aaa8482a34570f3203d2b6a07cf1b71c0f";
   };
 
   propagatedBuildInputs = [ pythonPackages.psutil ];

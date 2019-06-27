@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, costmap-2d, boost, tf, catkin, cob-footprint-observer, nav-msgs, visualization-msgs, dynamic-reconfigure, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-collision-velocity-filter";
-  version = "0.7.4";
+  version = "0.7.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_collision_velocity_filter/0.7.4-0.tar.gz;
-    sha256 = "73acac05785093bb89a8e2584039f97d46b7501865432b0cdada692e58f4b218";
+    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_collision_velocity_filter/0.7.6-1.tar.gz;
+    sha256 = "7194e00a79a8f79583dcf192e60c57db70fd0fe421820386d4c7724513057b83";
   };
 
   buildInputs = [ costmap-2d boost roscpp cob-footprint-observer nav-msgs visualization-msgs dynamic-reconfigure tf geometry-msgs ];

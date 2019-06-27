@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, mk, git, catkin, message-generation, message-runtime, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-bayesian-belief-networks";
-  version = "2.1.11";
+  version = "2.1.12-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/bayesian_belief_networks/2.1.11-0.tar.gz;
-    sha256 = "14c8edbbf6a4f6936db71b1c71cdc68355286b74ce209cf3070a2008efec892f";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/bayesian_belief_networks/2.1.12-1.tar.gz;
+    sha256 = "58498ec008c43f9508d131925f01266161119b1779c7a148f9f6b883926f93cd";
   };
 
   buildInputs = [ mk git message-generation rospy std-msgs ];

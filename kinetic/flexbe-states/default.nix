@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, flexbe-msgs, rosbag, catkin, smach-ros, rostest, flexbe-testing, rospy, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-flexbe-states";
-  version = "1.1.2";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_states/1.1.2-0.tar.gz;
-    sha256 = "1d44c35e6a8261acc642d2f2004c2e5def10ce311315af19a261d84c4d0a31a6";
+    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_states/1.2.1-1.tar.gz;
+    sha256 = "9437e3b828006c62f4333e08143298c941fee279d15e8328af79d612a1b4d32f";
   };
 
   buildInputs = [ rostest ];

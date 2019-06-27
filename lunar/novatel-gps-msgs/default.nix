@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-lunar-novatel-gps-msgs";
-  version = "3.6.0";
+  version = "3.8.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/lunar/novatel_gps_msgs/3.6.0-0.tar.gz;
-    sha256 = "93691cd74d4a585db01b2fb00d5761be451367a863d9170c1c9df57aa7999703";
+    url = https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/lunar/novatel_gps_msgs/3.8.0-1.tar.gz;
+    sha256 = "e679f2697457a6e3083a45b2ed02ffd32935632c258fc14d84794eefee7c4c79";
   };
 
   buildInputs = [ std-msgs message-generation ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, boost, actionlib-msgs, sensor-msgs, catkin, roscpp, message-generation, actionlib, message-runtime, rospy, std-msgs, diagnostic-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-light";
-  version = "0.6.13";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_light/0.6.13-0.tar.gz;
-    sha256 = "2f2101042d87799f78d50c428c533fa46ada35ac83e5962b97ecc478d61ef611";
+    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_light/0.6.14-1.tar.gz;
+    sha256 = "2640ad18adbd87c3d35b2c3030c0c7e93c5ad6bb412dc4cab41bfe950e9bd8d4";
   };
 
   buildInputs = [ boost actionlib-msgs sensor-msgs roscpp message-generation actionlib std-msgs diagnostic-msgs visualization-msgs ];

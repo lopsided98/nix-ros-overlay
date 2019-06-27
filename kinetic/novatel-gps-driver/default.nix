@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, swri-math-util, swri-string-util, swri-serial-util, boost, libpcap, tf, sensor-msgs, catkin, swri-nodelet, diagnostic-updater, gps-common, swri-roscpp, nav-msgs, nodelet, novatel-gps-msgs, std-msgs, diagnostic-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-novatel-gps-driver";
-  version = "3.7.0";
+  version = "3.8.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/kinetic/novatel_gps_driver/3.7.0-0.tar.gz;
-    sha256 = "f2ec830477706da0cd6540d4f265ce6f7eae43b3720450ef04ea36ba20df331b";
+    url = https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/kinetic/novatel_gps_driver/3.8.0-1.tar.gz;
+    sha256 = "ad748e3d3b88835b4f4e5961ec32884a40a63d1b9aa4d60b65c9ed6dd30ce3d9";
   };
 
   buildInputs = [ swri-math-util swri-string-util swri-serial-util boost libpcap sensor-msgs swri-nodelet roscpp diagnostic-updater gps-common swri-roscpp nav-msgs nodelet novatel-gps-msgs std-msgs diagnostic-msgs tf ];

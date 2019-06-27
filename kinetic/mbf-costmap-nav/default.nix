@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, actionlib, tf, mbf-abstract-nav, geometry-msgs, std-srvs, mbf-costmap-core, catkin, move-base, move-base-msgs, nav-msgs, std-msgs, roscpp, pluginlib, base-local-planner, mbf-msgs, nav-core, dynamic-reconfigure, mbf-utility }:
 buildRosPackage {
   pname = "ros-kinetic-mbf-costmap-nav";
-  version = "0.2.3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_costmap_nav/0.2.3-0.tar.gz;
-    sha256 = "da7eba3a94709267168c953ae7ec193c843e1c91dd19805dd3f0470de3f31a55";
+    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_costmap_nav/0.2.4-1.tar.gz;
+    sha256 = "5cf8a8c9ffc3ef95a10a1f164019c5431c0b97b8bad1848cd2d51533d986c1aa";
   };
 
   buildInputs = [ std-srvs mbf-costmap-core pluginlib actionlib-msgs base-local-planner tf mbf-msgs nav-core mbf-utility nav-msgs actionlib dynamic-reconfigure std-msgs roscpp mbf-abstract-nav geometry-msgs ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, message-generation, uuv-gazebo-ros-plugins-msgs, message-runtime, rospy, std-msgs, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uuv-thruster-manager";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_thruster_manager/0.6.10-0.tar.gz;
-    sha256 = "dd532c59413536c744721b16f10a97da19a7d88d721bf1954a495529438f2ad3";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_thruster_manager/0.6.12-0.tar.gz;
+    sha256 = "0cb9fcbf17f25b9167c503546287ba202165dd048895f6cf7c3fb684541cccd2";
   };
 
   buildInputs = [ std-msgs message-generation ];

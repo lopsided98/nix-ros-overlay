@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, mbf-abstract-core, pluginlib, actionlib-msgs, tf, mbf-msgs, catkin, tf2-ros, tf2, nav-msgs, actionlib, std-msgs, dynamic-reconfigure, roscpp, mbf-abstract-nav, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-mbf-simple-nav";
-  version = "0.2.3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/mbf_simple_nav/0.2.3-0.tar.gz;
-    sha256 = "f229cea9f4ed89d7557e5364f2f18d5fe329e8c5b39428271a8226d0f32bd89e";
+    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/mbf_simple_nav/0.2.4-1.tar.gz;
+    sha256 = "6f529d93ac7162c9e25d934897f7acce054189bd8bdb4b15eebd55f0235d9fb7";
   };
 
   buildInputs = [ std-srvs mbf-abstract-core pluginlib actionlib-msgs tf mbf-msgs tf2-ros tf2 nav-msgs actionlib dynamic-reconfigure std-msgs roscpp mbf-abstract-nav geometry-msgs ];

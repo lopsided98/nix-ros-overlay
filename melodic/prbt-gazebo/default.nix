@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, prbt-support, prbt-moveit-config, trajectory-msgs, catkin, rostest, actionlib, roslaunch, roscpp, xacro, gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-melodic-prbt-gazebo";
-  version = "0.5.3-r1";
+  version = "0.5.6-r1";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_gazebo/0.5.3-1.tar.gz;
-    sha256 = "26d15da4c7351b10b0b1ef5fce051afb1f5a904d9c9c1972fa7e910aa2547aeb";
+    url = https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_gazebo/0.5.6-1.tar.gz;
+    sha256 = "c51823bf3c09769663cd4a60224ff80f635ec24bd9463ba9437fdd246b3a3b8b";
   };
 
   checkInputs = [ rostest roscpp trajectory-msgs actionlib ];

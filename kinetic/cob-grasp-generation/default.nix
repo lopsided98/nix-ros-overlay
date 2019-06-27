@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, schunk-description, cob-description, actionlib, rospy, tf, geometry-msgs, pythonPackages, message-generation, rviz, message-runtime, robot-state-publisher, roslib, xacro, trajectory-msgs, catkin, tf2-ros, std-msgs, moveit-msgs, visualization-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-grasp-generation";
-  version = "0.7.1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_grasp_generation/0.7.1-0.tar.gz;
-    sha256 = "d39fe63293a12bc0f58e3290a5f316eb0cf563f4ca508d015bb021cb0139d685";
+    url = https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_grasp_generation/0.7.2-1.tar.gz;
+    sha256 = "9bec75db188d073b1516659886f0c227255ca45e0e410d4f97fcd607b45bd66e";
   };
 
   buildInputs = [ moveit-msgs message-generation actionlib-msgs ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-msgs, gazebo-dev }:
 buildRosPackage {
   pname = "ros-lunar-uuv-world-plugins";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_world_plugins/0.6.10-0.tar.gz;
-    sha256 = "3646689899448c9ee679604e4cf76049bd374d154a174e9913afc91a687e9a04";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_world_plugins/0.6.12-0.tar.gz;
+    sha256 = "52ba0b02db79cdb6a9c8dd8893e61337d6d399522001564d234f652b7cfe79bc";
   };
 
   buildInputs = [ gazebo-msgs gazebo-dev ];

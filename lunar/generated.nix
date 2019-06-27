@@ -2000,6 +2000,8 @@ self: super: {
 
  webkit-dependency = self.callPackage ./webkit-dependency {};
 
+ webots-ros = self.callPackage ./webots-ros {};
+
  wfov-camera-msgs = self.callPackage ./wfov-camera-msgs {};
 
  wifi-ddwrt = self.callPackage ./wifi-ddwrt {};

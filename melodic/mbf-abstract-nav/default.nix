@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, mbf-abstract-core, actionlib-msgs, tf, mbf-msgs, catkin, nav-msgs, std-msgs, xmlrpcpp, actionlib, mbf-utility, dynamic-reconfigure, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mbf-abstract-nav";
-  version = "0.2.3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_abstract_nav/0.2.3-0.tar.gz;
-    sha256 = "10abefaac5fac575dce38f004b4c92047014cfc577578d990cca8a1783fb91bb";
+    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_abstract_nav/0.2.4-1.tar.gz;
+    sha256 = "b3523cdb5349af3b442ee4bdc35f1e47d0205ec2873c2f9b1c5dfd4f12bfc171";
   };
 
   buildInputs = [ std-srvs mbf-abstract-core actionlib-msgs tf mbf-msgs mbf-utility nav-msgs actionlib xmlrpcpp dynamic-reconfigure std-msgs roscpp geometry-msgs ];

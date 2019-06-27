@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, khi-rs-gazebo, khi-duaro-gazebo, khi-duaro-ikfast-plugin, khi-robot-control, catkin, khi-robot-bringup, khi-duaro-moveit-config, khi-rs080n-moveit-config, khi-rs007l-moveit-config, khi-rs007n-moveit-config, khi-rs-ikfast-plugin, khi-robot-msgs, khi-duaro-description, khi-rs-description }:
 buildRosPackage {
   pname = "ros-kinetic-khi-robot";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_robot/1.1.1-1.tar.gz;
-    sha256 = "3c022d607e97bdab614c225a61a8ae4f6ba8baef4b4ba85ecb811321ab73ed0b";
+    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_robot/1.1.2-1.tar.gz;
+    sha256 = "e44b715ba4d86e915967708a6d4a4d993a2ffdfe3bf2cc9e950096a2459c2f2b";
   };
 
   propagatedBuildInputs = [ khi-rs-gazebo khi-duaro-gazebo khi-duaro-ikfast-plugin khi-robot-control khi-robot-bringup khi-duaro-moveit-config khi-rs080n-moveit-config khi-rs007l-moveit-config khi-rs007n-moveit-config khi-rs-ikfast-plugin khi-robot-msgs khi-duaro-description khi-rs-description ];

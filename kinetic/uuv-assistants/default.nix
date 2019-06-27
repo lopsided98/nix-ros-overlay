@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, tf, sensor-msgs, catkin, pythonPackages, nav-msgs, rosgraph, rostopic, visualization-msgs, rospy, topic-tools, roscpp, gazebo-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-assistants";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_assistants/0.6.10-0.tar.gz;
-    sha256 = "e2050e47d8efaa1003d68a19a329400e064186f5cf8b1c23a93d32e5a340a74e";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_assistants/0.6.12-0.tar.gz;
+    sha256 = "dba3cd5af3ece623f0a15564514d5ecae698b21d0c807a93a453f5d0637b9887";
   };
 
   buildInputs = [ tf sensor-msgs nav-msgs topic-tools roscpp geometry-msgs ];

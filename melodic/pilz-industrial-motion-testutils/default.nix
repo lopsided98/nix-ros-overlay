@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-commander, moveit-core, moveit-msgs, eigen-conversions, pilz-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pilz-industrial-motion-testutils";
-  version = "0.4.3";
+  version = "0.4.4-r1";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_industrial_motion_testutils/0.4.3-0.tar.gz;
-    sha256 = "8cacbe2c01a7a31208f5e212e965daf275ee72258112d6691e6206f096dedf9a";
+    url = https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_industrial_motion_testutils/0.4.4-1.tar.gz;
+    sha256 = "9f4ff40e12b93d6827ee65ce1dff8b0c20cf862a2d52c6b62a33114a31b290dd";
   };
 
   buildInputs = [ moveit-msgs eigen-conversions pilz-msgs moveit-core ];

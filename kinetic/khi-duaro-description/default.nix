@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslaunch, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-khi-duaro-description";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_duaro_description/1.1.1-1.tar.gz;
-    sha256 = "8281909ca3016832385b20c00b12722c48645a7411f697c6de9c04e9807bd3c6";
+    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_duaro_description/1.1.2-1.tar.gz;
+    sha256 = "9b46740c8c77cbf61497aaea1a8b804d1208896be9c99cc1890768e2b49ad146";
   };
 
   buildInputs = [ roslaunch ];
@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''The khi_duaro_description package'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsdOriginal "KHI CAD license (mesh data, see readme)" ];
   };
 }

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-qb-move-control";
-  version = "2.0.0";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/kinetic/qb_move_control/2.0.0-0.tar.gz;
-    sha256 = "31efd9d2a02d7c5cf9b5d4628e45682ed07def92d2e381bb14afef756cbfee6d";
+    url = https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/kinetic/qb_move_control/2.1.2-1.tar.gz;
+    sha256 = "d4303eec1730ca92281db93cc90fcf567b7964fbc1bf3b6f092ed22a164a45d6";
   };
 
   nativeBuildInputs = [ catkin ];

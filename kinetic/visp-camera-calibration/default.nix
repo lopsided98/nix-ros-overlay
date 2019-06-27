@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, visp-bridge, camera-calibration-parsers, sensor-msgs, catkin, message-generation, visp, message-runtime, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-visp-camera-calibration";
-  version = "0.10.0";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_camera_calibration/0.10.0-0.tar.gz;
-    sha256 = "8ba7ebafa1f72b6fb69f8524704aba33c32a9b8907613524a5788bafc880dfcd";
+    url = https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_camera_calibration/0.11.0-1.tar.gz;
+    sha256 = "c93b3578c8dad79090160186fa22f8b781e5f5d16c0909a30d4b6dd1a87daed6";
   };
 
   buildInputs = [ visp-bridge camera-calibration-parsers sensor-msgs message-generation visp std-msgs roscpp geometry-msgs ];

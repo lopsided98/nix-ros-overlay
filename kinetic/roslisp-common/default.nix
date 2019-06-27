@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-lisp, catkin, cl-tf2, roslisp-utilities, cl-utils, cl-transforms, cl-tf, cl-transforms-stamped, cl-urdf }:
 buildRosPackage {
   pname = "ros-kinetic-roslisp-common";
-  version = "0.2.11-r1";
+  version = "0.2.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/roslisp_common/0.2.11-1.tar.gz;
-    sha256 = "71696418fbb29ba4243a75ab6e7e456784211080f8c3b883c643b23ea2c8beb5";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/roslisp_common/0.2.12-1.tar.gz;
+    sha256 = "95da6418b0f3859552ac4dc79d2a09331227fd43208c2c6f8555a9b5d35b64f4";
   };
 
   propagatedBuildInputs = [ actionlib-lisp cl-tf2 roslisp-utilities cl-transforms cl-transforms-stamped cl-tf cl-utils cl-urdf ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-uuv-control-msgs";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_control_msgs/0.6.10-0.tar.gz;
-    sha256 = "028a00d0e1a3ced41a2994f4071e6e459447bf39a2d5338da109098c0e957520";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_control_msgs/0.6.12-0.tar.gz;
+    sha256 = "efd2e9ac0a169966498aac3a843893556809fda89dcfd866def311492e086a5d";
   };
 
   buildInputs = [ std-msgs message-generation geometry-msgs ];

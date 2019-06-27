@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rospack, cmake-modules, mk, catkin, rosbuild, libtool }:
 buildRosPackage {
   pname = "ros-kinetic-nlopt";
-  version = "2.1.11";
+  version = "2.1.12-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/nlopt/2.1.11-0.tar.gz;
-    sha256 = "26f9fb61066acef3154ee628653722ad7b2bf66ec9452af5cb3b06a0a081a1c9";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/nlopt/2.1.12-1.tar.gz;
+    sha256 = "3d40fa4bd27044767498f5230dfc5067d4684e72bae2ec3de89fa6045df4c39c";
   };
 
   buildInputs = [ rospack cmake-modules mk rosbuild libtool ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, sensor-msgs, catkin, message-generation, message-runtime, visualization-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rail-manipulation-msgs";
-  version = "0.0.12";
+  version = "0.0.13-r1";
 
   src = fetchurl {
-    url = https://github.com/gt-rail-release/rail_manipulation_msgs-release/archive/release/melodic/rail_manipulation_msgs/0.0.12-0.tar.gz;
-    sha256 = "2d8effa0a61ce81ef4a037ce360defc578616e2b6e5c1981144ba08e89dbd473";
+    url = https://github.com/gt-rail-release/rail_manipulation_msgs-release/archive/release/melodic/rail_manipulation_msgs/0.0.13-1.tar.gz;
+    sha256 = "1178e8db7c967f12dc144b1cd325ee3d3b9631b76bd4c563096882dd08ab258a";
   };
 
   buildInputs = [ actionlib-msgs sensor-msgs message-generation visualization-msgs geometry-msgs ];

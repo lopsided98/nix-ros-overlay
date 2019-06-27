@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, flexbe-msgs, catkin, smach-ros, flexbe-widget, rospy, flexbe-core }:
 buildRosPackage {
   pname = "ros-lunar-flexbe-mirror";
-  version = "1.1.2";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/lunar/flexbe_mirror/1.1.2-0.tar.gz;
-    sha256 = "d563925854e946b107fc0018a4b3cdd3b90abf72e8a28bf077c855572a3c146f";
+    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/lunar/flexbe_mirror/1.2.1-1.tar.gz;
+    sha256 = "cb37d78993ba2443a5ca8f15c0ede3489b94b14671ef4d48ecdcd02de597b037";
   };
 
   propagatedBuildInputs = [ flexbe-msgs smach-ros flexbe-widget rospy flexbe-core ];

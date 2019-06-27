@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-dev, eigen, protobuf, rosunit }:
 buildRosPackage {
   pname = "ros-lunar-uuv-gazebo-plugins";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_gazebo_plugins/0.6.10-0.tar.gz;
-    sha256 = "8ebd4b5cc095cdb7838358a5d45e648a06b47bb3ac296876d221e194c74179a3";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_gazebo_plugins/0.6.12-0.tar.gz;
+    sha256 = "437ab5b3234512fcb4c0f4e61bb725fc16b0511f9c3267a8e687d815c30cd1d0";
   };
 
   buildInputs = [ protobuf eigen gazebo-dev ];

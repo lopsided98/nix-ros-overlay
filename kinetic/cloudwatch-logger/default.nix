@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rostest, aws-common, cloudwatch-logs-common, aws-ros1-common, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-cloudwatch-logger";
-  version = "2.0.0-r1";
+  version = "2.1.0-r2";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/cloudwatch_logger-release/archive/release/kinetic/cloudwatch_logger/2.0.0-1.tar.gz;
-    sha256 = "4c686f7bc3ed2e1b687d9f90a2f2fddb905f63dd72422dc15e9cda42cf47f798";
+    url = https://github.com/aws-gbp/cloudwatch_logger-release/archive/release/kinetic/cloudwatch_logger/2.1.0-2.tar.gz;
+    sha256 = "006d0e5a98afaf1c9bf2d20205f4a8641a343087e6da46e6a869b6f8a125aa5f";
   };
 
   buildInputs = [ aws-ros1-common aws-common roscpp cloudwatch-logs-common ];

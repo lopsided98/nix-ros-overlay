@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, angles, std-msgs, dynamic-reconfigure, tf, audio-common-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-respeaker-ros";
-  version = "2.1.11";
+  version = "2.1.12-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/respeaker_ros/2.1.11-0.tar.gz;
-    sha256 = "050535e2dbd22482d68b486717caf2c8ff7da20d9dd8556dee0b423a410ef7d8";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/respeaker_ros/2.1.12-1.tar.gz;
+    sha256 = "55a92ab62b553aed6ad5264aa656b921f9f46757b46e261f29091a15c82bce7b";
   };
 
   buildInputs = [ dynamic-reconfigure ];

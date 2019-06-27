@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, image-transport, sensor-msgs, catkin, cv-bridge, nodelet, dynamic-reconfigure, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-image-publisher";
-  version = "1.12.23";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_publisher/1.12.23-0.tar.gz;
-    sha256 = "56bebe095951f6cfb7e0d4c0250ed2dea459b085b214b9e21cdd93f4878efa4a";
+    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_publisher/1.13.0-1.tar.gz;
+    sha256 = "8b0416edac96a5993367ff887c7187345ce36d6a2e52c0f7cd5d6501642d1da4";
   };
 
   buildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge nodelet dynamic-reconfigure roscpp ];

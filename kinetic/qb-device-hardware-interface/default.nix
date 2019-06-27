@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, hardware-interface, joint-limits-interface, catkin, rostest, urdf, qb-device-msgs, qb-device-srvs, roscpp, transmission-interface }:
 buildRosPackage {
   pname = "ros-kinetic-qb-device-hardware-interface";
-  version = "2.0.1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/kinetic/qb_device_hardware_interface/2.0.1-0.tar.gz;
-    sha256 = "2b14e24e4d2381b5b30e896e5c5fa242fed91949962544baaccbd1968c98a3e0";
+    url = https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/kinetic/qb_device_hardware_interface/2.1.0-1.tar.gz;
+    sha256 = "920a3102ac02e1c200fcddd2e7c0835ca93e1c1e1fd296ed828c0364d2099376";
   };
 
   buildInputs = [ hardware-interface joint-limits-interface urdf qb-device-msgs qb-device-srvs roscpp transmission-interface ];

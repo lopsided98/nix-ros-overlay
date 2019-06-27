@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, boost }:
 buildRosPackage {
   pname = "ros-lunar-swri-serial-util";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_serial_util/2.8.0-0.tar.gz;
-    sha256 = "faecebc594d975a9472886f95edd287f18badcda770cfde6f6c262b68e0bc007";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_serial_util/2.9.0-1.tar.gz;
+    sha256 = "ffb2ef4ddfca01aaad6b0b18b0f1fb98391df3b9fb81cd56b5b1683f6568c8a3";
   };
 
   buildInputs = [ boost ];

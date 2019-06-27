@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-cob-android-settings";
-  version = "0.1.4";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_android-release/archive/release/kinetic/cob_android_settings/0.1.4-0.tar.gz;
-    sha256 = "2f082fc0abe7b497178557397fd8d7c9476270a78d26899ca8252c7d62344a83";
+    url = https://github.com/ipa320/cob_android-release/archive/release/kinetic/cob_android_settings/0.1.5-1.tar.gz;
+    sha256 = "7c51aa2a4d845079f3cbdd4539ae29bf56b036cf530aae1d36684e869978d365";
   };
 
   nativeBuildInputs = [ catkin ];

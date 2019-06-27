@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, catkin, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-mbf-abstract-core";
-  version = "0.2.3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/mbf_abstract_core/0.2.3-0.tar.gz;
-    sha256 = "63a30ddf0e7f02a1e418f42e13c7eb7e3cb3d400b28f60d71df8e187cb3263fb";
+    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/mbf_abstract_core/0.2.4-1.tar.gz;
+    sha256 = "ae8aa2e48293e8a7bc98e72af3cbbaa62f009a39ba2925aaecb794b341dc2f07";
   };
 
   buildInputs = [ std-msgs geometry-msgs ];

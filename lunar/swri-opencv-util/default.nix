@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, swri-math-util, catkin, cv-bridge }:
 buildRosPackage {
   pname = "ros-lunar-swri-opencv-util";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_opencv_util/2.8.0-0.tar.gz;
-    sha256 = "49effe0ff3f51d5c297e1777b529eb9c611cc51663616c83776009353aec9f3e";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_opencv_util/2.9.0-1.tar.gz;
+    sha256 = "ecedf1b19a79a7602f27a85b73286a5d256552eebd9d68a05cb1cd597e7ac3b3";
   };
 
   buildInputs = [ swri-math-util cv-bridge ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, rtt, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-eigen-typekit";
-  version = "2.9.2-r1";
+  version = "2.9.3-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kinetic/eigen_typekit/2.9.2-1.tar.gz;
-    sha256 = "d2016dd487b06d664e04aa8f35a98f5179ab45afa25111ffde1b4f421a343447";
+    url = https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kinetic/eigen_typekit/2.9.3-1.tar.gz;
+    sha256 = "8ea1711c6e2e662b46cb7731d9c340590494c15e361d735dcde0f29c82efb7c2";
   };
 
   buildInputs = [ cmake-modules rtt eigen ];

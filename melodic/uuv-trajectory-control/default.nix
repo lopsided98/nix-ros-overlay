@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rostest, roslib, nav-msgs, visualization-msgs, rospy, std-msgs, tf, uuv-control-msgs, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uuv-trajectory-control";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_trajectory_control/0.6.10-0.tar.gz;
-    sha256 = "392957a1863c5095f5fcb8b61ecac3520e2a8fa4e8e21175ac691288882bbf63";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_trajectory_control/0.6.12-0.tar.gz;
+    sha256 = "d33638aee52e6fa72addac2f19345dd79240e8726555426b7ed55a722fd3d5ef";
   };
 
   checkInputs = [ rostest rosunit ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cv-bridge, swri-yaml-util, rospy, diagnostic-msgs, geos, tf, geometry-msgs, boost, swri-nodelet, pkg-config, gps-common, swri-math-util, catkin, proj, roscpp, nodelet, libyamlcpp, sensor-msgs, geographic-msgs, swri-roscpp, rostest, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-swri-transform-util";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_transform_util/2.8.0-0.tar.gz;
-    sha256 = "98a80e6efb2e2f6ae059a38dd203f68545e03a9681f35fb3a2717106d5150bf4";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_transform_util/2.9.0-1.tar.gz;
+    sha256 = "6c5e64e1178b6bc9a586e4f1cf4b5ba549191ed38aaca6a1f021dd9fca2b787f";
   };
 
   buildInputs = [ swri-math-util boost libyamlcpp swri-nodelet topic-tools cv-bridge roscpp geographic-msgs gps-common proj swri-roscpp swri-yaml-util rospy diagnostic-msgs nodelet geos tf geometry-msgs ];

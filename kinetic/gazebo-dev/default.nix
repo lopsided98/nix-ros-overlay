@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, gazeboSimulator }:
 buildRosPackage {
   pname = "ros-kinetic-gazebo-dev";
-  version = "2.5.18-r1";
+  version = "2.5.19-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_dev/2.5.18-1.tar.gz;
-    sha256 = "f2528405887b4492a95b21d8aecb423b47ab5b52f31054c716072d869b753ef6";
+    url = https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_dev/2.5.19-1.tar.gz;
+    sha256 = "a4f209b8bd4ef055dc4423b745ec5e12388593ea7bb5cb342fdc8f4ab6ea225e";
   };
 
   propagatedBuildInputs = [ gazeboSimulator.gazebo gazeboSimulator.gazebo7 ];

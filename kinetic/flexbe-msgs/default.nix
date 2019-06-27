@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, smach-ros, message-generation, actionlib, message-runtime, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-flexbe-msgs";
-  version = "1.1.2";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_msgs/1.1.2-0.tar.gz;
-    sha256 = "75382d69f80c86f892b896f1bb774c760825d1b9ad112d69b98be91f7f5cadd1";
+    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_msgs/1.2.1-1.tar.gz;
+    sha256 = "11496f25d463cb6e501c62c86f3c838b52294c122420bb6c651e2f4d3196f40d";
   };
 
   buildInputs = [ message-generation actionlib-msgs actionlib ];

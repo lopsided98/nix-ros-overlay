@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rospack, rosbash, mk, rosbuild, catkin, flex, cacert, unzip, openssl, roslib, bison }:
 buildRosPackage {
   pname = "ros-melodic-ff";
-  version = "2.1.11";
+  version = "2.1.12-r2";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/ff/2.1.11-0.tar.gz;
-    sha256 = "659fc4d1dd3a388860d8daffe67a537beed9a9cb2cf1ec447546a2e90abd604c";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/ff/2.1.12-2.tar.gz;
+    sha256 = "7129d14ffc1ec32e13a5e06dea0a4a761440e72d92a588012393659cc3d0f9f1";
   };
 
   buildInputs = [ rospack rosbash mk rosbuild flex cacert unzip openssl roslib bison ];

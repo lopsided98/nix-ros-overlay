@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, kdl-parser, orocos-kdl, cmake-modules, boost, roslint, sensor-msgs, catkin, roscpp, rospy, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-model-identifier";
-  version = "0.7.4";
+  version = "0.7.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_model_identifier/0.7.4-0.tar.gz;
-    sha256 = "dc1fb3802509fd59028e2a5ac05c198280804e857b79ad1536b3cc08a4549c58";
+    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_model_identifier/0.7.6-1.tar.gz;
+    sha256 = "01179c44cecffbd255cad944ea131ab5687029cc38477aeb9256f1fef1782bbe";
   };
 
   buildInputs = [ std-srvs kdl-parser orocos-kdl cmake-modules boost roslint sensor-msgs roscpp tf geometry-msgs ];

@@ -2,17 +2,17 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, tf2-ros, rviz, eigen, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, tf2-ros, rviz, qt5, eigen, roscpp }:
 buildRosPackage {
   pname = "ros-lunar-agni-tf-tools";
-  version = "0.1.0-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ubi-agni-gbp/agni_tf_tools-release/archive/release/lunar/agni_tf_tools/0.1.0-1.tar.gz;
-    sha256 = "1db3dcbb738b31b953fd08141178be0e52e07af5a8739f7d289e50404e455e41";
+    url = https://github.com/ubi-agni-gbp/agni_tf_tools-release/archive/release/lunar/agni_tf_tools/0.1.2-1.tar.gz;
+    sha256 = "0f067a188345a6bd53d78b45f4886e8683cca1846fb25d48545df4f66bc1b2bb";
   };
 
-  buildInputs = [ roscpp rviz tf2-ros eigen ];
+  buildInputs = [ tf2-ros qt5.qtbase rviz eigen roscpp ];
   propagatedBuildInputs = [ roscpp rviz tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

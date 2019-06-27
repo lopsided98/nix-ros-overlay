@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, sbcl }:
 buildRosPackage {
   pname = "ros-kinetic-cl-utils";
-  version = "0.2.11-r1";
+  version = "0.2.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_utils/0.2.11-1.tar.gz;
-    sha256 = "4c09c725227d1bd2f6091ef86f6b2baa1c70d799d948cc5d7479b48e4936a0c5";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_utils/0.2.12-1.tar.gz;
+    sha256 = "609745735e49cf5c9007acc74e6735e68aac37cbcc522dc379a7d42de6266b14";
   };
 
   propagatedBuildInputs = [ sbcl ];

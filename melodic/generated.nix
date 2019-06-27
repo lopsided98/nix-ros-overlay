@@ -36,6 +36,8 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ apriltag-ros = self.callPackage ./apriltag-ros {};
+
  ar-track-alvar = self.callPackage ./ar-track-alvar {};
 
  ar-track-alvar-msgs = self.callPackage ./ar-track-alvar-msgs {};
@@ -161,6 +163,8 @@ self: super: {
  catch-ros = self.callPackage ./catch-ros {};
 
  catkin = self.callPackage ./catkin {};
+
+ catkin-pip = self.callPackage ./catkin-pip {};
 
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
 
@@ -307,6 +311,8 @@ self: super: {
  dbw-mkz-twist-controller = self.callPackage ./dbw-mkz-twist-controller {};
 
  ddwrt-access-point = self.callPackage ./ddwrt-access-point {};
+
+ ddynamic-reconfigure = self.callPackage ./ddynamic-reconfigure {};
 
  ddynamic-reconfigure-python = self.callPackage ./ddynamic-reconfigure-python {};
 
@@ -560,6 +566,8 @@ self: super: {
 
  fetch-ros = self.callPackage ./fetch-ros {};
 
+ fetch-simple-linear-controller = self.callPackage ./fetch-simple-linear-controller {};
+
  fetch-simulation = self.callPackage ./fetch-simulation {};
 
  fetch-teleop = self.callPackage ./fetch-teleop {};
@@ -569,6 +577,12 @@ self: super: {
  ff = self.callPackage ./ff {};
 
  ffha = self.callPackage ./ffha {};
+
+ fiducial-msgs = self.callPackage ./fiducial-msgs {};
+
+ fiducial-slam = self.callPackage ./fiducial-slam {};
+
+ fiducials = self.callPackage ./fiducials {};
 
  filters = self.callPackage ./filters {};
 
@@ -1118,6 +1132,8 @@ self: super: {
 
  microstrain-3dmgx2-imu = self.callPackage ./microstrain-3dmgx2-imu {};
 
+ microstrain-mips = self.callPackage ./microstrain-mips {};
+
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
  mir-actions = self.callPackage ./mir-actions {};
@@ -1348,6 +1364,8 @@ self: super: {
 
  nlopt = self.callPackage ./nlopt {};
 
+ nmea-gps-plugin = self.callPackage ./nmea-gps-plugin {};
+
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
@@ -1361,6 +1379,8 @@ self: super: {
  nodelet-topic-tools = self.callPackage ./nodelet-topic-tools {};
 
  nodelet-tutorial-math = self.callPackage ./nodelet-tutorial-math {};
+
+ nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
 
  novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
 
@@ -1662,6 +1682,10 @@ self: super: {
 
  pybind11-catkin = self.callPackage ./pybind11-catkin {};
 
+ pyros-test = self.callPackage ./pyros-test {};
+
+ pyros-utils = self.callPackage ./pyros-utils {};
+
  python-orocos-kdl = self.callPackage ./python-orocos-kdl {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
@@ -1730,6 +1754,8 @@ self: super: {
 
  rail-manipulation-msgs = self.callPackage ./rail-manipulation-msgs {};
 
+ rail-segmentation = self.callPackage ./rail-segmentation {};
+
  random-numbers = self.callPackage ./random-numbers {};
 
  range-sensor-layer = self.callPackage ./range-sensor-layer {};
@@ -1745,6 +1771,10 @@ self: super: {
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
 
  rc-hand-eye-calibration-client = self.callPackage ./rc-hand-eye-calibration-client {};
+
+ rc-pick-client = self.callPackage ./rc-pick-client {};
+
+ rc-tagdetect-client = self.callPackage ./rc-tagdetect-client {};
 
  rc-visard = self.callPackage ./rc-visard {};
 
@@ -2248,6 +2278,8 @@ self: super: {
 
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 
+ spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
+
  speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
 
  srdfdom = self.callPackage ./srdfdom {};
@@ -2368,6 +2400,8 @@ self: super: {
 
  toposens = self.callPackage ./toposens {};
 
+ toposens-description = self.callPackage ./toposens-description {};
+
  toposens-driver = self.callPackage ./toposens-driver {};
 
  toposens-markers = self.callPackage ./toposens-markers {};
@@ -2375,6 +2409,8 @@ self: super: {
  toposens-msgs = self.callPackage ./toposens-msgs {};
 
  toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
+
+ toposens-sync = self.callPackage ./toposens-sync {};
 
  towr = self.callPackage ./towr {};
 
@@ -2610,6 +2646,18 @@ self: super: {
 
  vision-opencv = self.callPackage ./vision-opencv {};
 
+ vision-visp = self.callPackage ./vision-visp {};
+
+ visp-auto-tracker = self.callPackage ./visp-auto-tracker {};
+
+ visp-bridge = self.callPackage ./visp-bridge {};
+
+ visp-camera-calibration = self.callPackage ./visp-camera-calibration {};
+
+ visp-hand2eye-calibration = self.callPackage ./visp-hand2eye-calibration {};
+
+ visp-tracker = self.callPackage ./visp-tracker {};
+
  visualization-marker-tutorials = self.callPackage ./visualization-marker-tutorials {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
@@ -2639,6 +2687,8 @@ self: super: {
  web-video-server = self.callPackage ./web-video-server {};
 
  webkit-dependency = self.callPackage ./webkit-dependency {};
+
+ webots-ros = self.callPackage ./webots-ros {};
 
  webrtc = self.callPackage ./webrtc {};
 

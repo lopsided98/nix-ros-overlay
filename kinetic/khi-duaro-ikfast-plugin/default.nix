@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pluginlib, catkin, liblapack, moveit-core, tf-conversions, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-khi-duaro-ikfast-plugin";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_duaro_ikfast_plugin/1.1.1-1.tar.gz;
-    sha256 = "642672fba903bf87ce1d66a60a535b87cd0c2c7d90bd1bf536a94ef433818a91";
+    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_duaro_ikfast_plugin/1.1.2-1.tar.gz;
+    sha256 = "63c2ac58d289bacc188c69629427ed5bfee694f77e4b68e3b472d7d10feb7242";
   };
 
   buildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];

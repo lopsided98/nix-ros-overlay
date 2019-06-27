@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, libyamlcpp, catkin, boost, pkg-config }:
 buildRosPackage {
   pname = "ros-lunar-swri-yaml-util";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_yaml_util/2.8.0-0.tar.gz;
-    sha256 = "bb78bc7614eeb243f877c04e1b6544d548569eb36e61aa0d94d42c3d6d56722e";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_yaml_util/2.9.0-1.tar.gz;
+    sha256 = "30552195834ef60f7ba72231c4f1806d256b8c9ad6bf036f7eee0ca80b86903f";
   };
 
   buildInputs = [ libyamlcpp boost ];

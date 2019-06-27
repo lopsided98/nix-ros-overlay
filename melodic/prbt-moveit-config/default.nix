@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, moveit-fake-controller-manager, moveit-ros-visualization, moveit-ros-move-group, prbt-support, xacro, moveit-kinematics, catkin, moveit-simple-controller-manager, rviz, robot-state-publisher, roslaunch, joint-state-publisher, prbt-ikfast-manipulator-plugin, moveit-planners-ompl }:
 buildRosPackage {
   pname = "ros-melodic-prbt-moveit-config";
-  version = "0.5.3-r1";
+  version = "0.5.6-r1";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_moveit_config/0.5.3-1.tar.gz;
-    sha256 = "4a2c6a45dc6e7db035c27acdf1ed71a35453b7ae199d4e7e2e965791eeb6f78f";
+    url = https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_moveit_config/0.5.6-1.tar.gz;
+    sha256 = "4b77c1180ed3064180e366ca51f5e599efc44354643845738d37fd2c38a81ac7";
   };
 
   checkInputs = [ roslaunch ];

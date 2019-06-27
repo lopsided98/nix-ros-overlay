@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, aws-common, gtest, cmake }:
 buildRosPackage {
   pname = "ros-kinetic-cloudwatch-logs-common";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/cloudwatch_common-release/archive/release/kinetic/cloudwatch_logs_common/1.0.1-1.tar.gz;
-    sha256 = "981400211d0443ab558868c8f90dffc5d5021291bbf204827cf5d832b735fe97";
+    url = https://github.com/aws-gbp/cloudwatch_common-release/archive/release/kinetic/cloudwatch_logs_common/1.0.2-1.tar.gz;
+    sha256 = "ae28e13b0eb67d8d6bf62e875744d6a7d57a7dea955c11ca25a79bcaa4879b39";
   };
 
   buildInputs = [ aws-common ];

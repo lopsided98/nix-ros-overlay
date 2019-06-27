@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rosbag, linuxConsoleTools, catkin, sensor-msgs, diagnostic-updater, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-joy";
-  version = "1.12.0";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/joystick_drivers-release/archive/release/melodic/joy/1.12.0-0.tar.gz;
-    sha256 = "b2942c8164aec9fee0c21d0cb7f8c1e77c3e5e555b10489024e3795de272c600";
+    url = https://github.com/ros-gbp/joystick_drivers-release/archive/release/melodic/joy/1.13.0-1.tar.gz;
+    sha256 = "369447b7b00655bd9ff8e267b40084009a5bafedaf748f5265b3fa7a8ac27fa6";
   };
 
   buildInputs = [ diagnostic-updater linuxConsoleTools sensor-msgs roscpp ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, visp-bridge, sensor-msgs, catkin, message-generation, visp, message-runtime, std-msgs, image-proc, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-visp-hand2eye-calibration";
-  version = "0.10.0";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_hand2eye_calibration/0.10.0-0.tar.gz;
-    sha256 = "691fc27d7281958a709dcbdb32afe3d5166ad0fa53bcfe915382e540bf0a6a80";
+    url = https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_hand2eye_calibration/0.11.0-1.tar.gz;
+    sha256 = "9b81d8a13ff0609bf88ce629d946e849ddc9d41279738692a5c2faaae8d1b9ff";
   };
 
   buildInputs = [ visp-bridge sensor-msgs message-generation visp std-msgs image-proc roscpp geometry-msgs ];

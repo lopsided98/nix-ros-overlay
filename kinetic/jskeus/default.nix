@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, euslisp }:
 buildRosPackage {
   pname = "ros-kinetic-jskeus";
-  version = "1.2.1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jskeus-release/archive/release/kinetic/jskeus/1.2.1-0.tar.gz;
-    sha256 = "9e37bd817de53e87589a3206f0ee30c22801ca18f97f6651fa6b1f16481a083d";
+    url = https://github.com/tork-a/jskeus-release/archive/release/kinetic/jskeus/1.2.1-1.tar.gz;
+    sha256 = "26322625fc37ce5c7d724dc86269dba4300cfda1088d695ea65e832aa2ce6790";
   };
 
   buildInputs = [ euslisp ];

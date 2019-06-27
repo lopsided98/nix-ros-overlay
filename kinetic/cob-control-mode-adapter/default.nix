@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, boost, roslint, catkin, controller-manager-msgs, std-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-cob-control-mode-adapter";
-  version = "0.7.4";
+  version = "0.7.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_control_mode_adapter/0.7.4-0.tar.gz;
-    sha256 = "268dfcd264f0ac4c196a81e8a96eef3274b27a27ea7895a302a8fa137509a803";
+    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_control_mode_adapter/0.7.6-1.tar.gz;
+    sha256 = "ba8d7deb4d5a253c439d95eddcbad0e241354f86286de852995ffd0cf5804b2b";
   };
 
   buildInputs = [ boost roslint controller-manager-msgs std-msgs roscpp ];

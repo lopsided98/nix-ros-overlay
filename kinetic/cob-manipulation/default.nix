@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cob-collision-monitor, cob-moveit-bringup, cob-obstacle-distance-moveit, cob-moveit-interface, catkin, cob-pick-place-action, cob-lookat-action, cob-grasp-generation }:
 buildRosPackage {
   pname = "ros-kinetic-cob-manipulation";
-  version = "0.7.1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_manipulation/0.7.1-0.tar.gz;
-    sha256 = "0348faf4b9b1745f18c2af598faa86999ae291d24f63681d992dcd5df2a9281b";
+    url = https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_manipulation/0.7.2-1.tar.gz;
+    sha256 = "f3f9dda540aeaa619187cb816c424e09e9f44c326567cbebd83a3147f483087b";
   };
 
   propagatedBuildInputs = [ cob-collision-monitor cob-moveit-bringup cob-obstacle-distance-moveit cob-moveit-interface cob-pick-place-action cob-lookat-action cob-grasp-generation ];

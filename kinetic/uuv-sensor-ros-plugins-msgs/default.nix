@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-sensor-ros-plugins-msgs";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_sensor_ros_plugins_msgs/0.6.10-0.tar.gz;
-    sha256 = "0ed1ed97d6fdcb9cc5a435d8ef2b1b3e88d659eca632007d549babe1457eb3a4";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_sensor_ros_plugins_msgs/0.6.12-0.tar.gz;
+    sha256 = "73fc02c363aa4fe9e0693f58ece617f9ec2a58143706e7e4563758b089c189e0";
   };
 
   buildInputs = [ message-generation geometry-msgs ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, tf2-msgs, actionlib-lisp, catkin, roslisp, cl-transforms-stamped, cl-utils }:
 buildRosPackage {
   pname = "ros-melodic-cl-tf2";
-  version = "0.2.11-r1";
+  version = "0.2.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_tf2/0.2.11-1.tar.gz;
-    sha256 = "5044a8f65eff7eef03f6be69ce1fd2a761381deac628dcd9cd8c817d7b9df5ce";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_tf2/0.2.12-1.tar.gz;
+    sha256 = "3ef1ab744ff67f4a1b6a34194055decc9d0e6c7b5b53e5054ed00808661cbbdc";
   };
 
   propagatedBuildInputs = [ tf2-msgs actionlib-lisp roslisp cl-transforms-stamped cl-utils ];

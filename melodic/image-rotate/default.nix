@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cmake-modules, tf2-geometry-msgs, image-transport, catkin, cv-bridge, tf2-ros, tf2, rostest, nodelet, dynamic-reconfigure, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-image-rotate";
-  version = "1.12.23";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_rotate/1.12.23-0.tar.gz;
-    sha256 = "300158018b97ce2b2f3cdfac00889d443b74165b3fb49105317148c76657638a";
+    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_rotate/1.13.0-1.tar.gz;
+    sha256 = "bbfb1e066ba98a6f4ea1d3b7586dc0f25219e3716f025a97f6d1b7b1587ddaf5";
   };
 
   buildInputs = [ cmake-modules tf2-geometry-msgs image-transport cv-bridge tf2-ros tf2 nodelet dynamic-reconfigure roscpp geometry-msgs ];

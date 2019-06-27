@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rostest, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-lunar-swri-math-util";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_math_util/2.8.0-0.tar.gz;
-    sha256 = "4f135b1857e2de53cd9b51ab51f14559b0011b9a31d03f3d0f63ca067f33a337";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_math_util/2.9.0-1.tar.gz;
+    sha256 = "3f07787ff205ddd001391739a4adad7ed236fc5f37ac8a861aa8a0a33fff72e0";
   };
 
   buildInputs = [ roscpp ];

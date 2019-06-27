@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-rosboost-cfg";
-  version = "1.14.4";
+  version = "1.14.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosboost_cfg/1.14.4-0.tar.gz;
-    sha256 = "4477c6c23ef42c3ccd3965da5a3fbb905af6c5ca566ac017b333de30ec1f0117";
+    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosboost_cfg/1.14.6-1.tar.gz;
+    sha256 = "520c5694c165ffc84ff2d69941fd5ef20d5f82b2d3013f92231eb9722c6afe3a";
   };
 
   nativeBuildInputs = [ catkin ];

@@ -2,17 +2,17 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qb-chain-description, catkin, qb-chain-control }:
+{ lib, buildRosPackage, fetchurl, qb-chain-description, qb-chain-controllers, qb-chain-control, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-qb-chain";
-  version = "2.0.0";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/kinetic/qb_chain/2.0.0-0.tar.gz;
-    sha256 = "5389c212c933b956d3a2fab41769fe0b6624b823516b3cf85b71fb2fff047f43";
+    url = https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/kinetic/qb_chain/2.1.1-1.tar.gz;
+    sha256 = "9f44063658efe1cd32fd58111ce779593159a4762a001e2b20419b095958c033";
   };
 
-  propagatedBuildInputs = [ qb-chain-description qb-chain-control ];
+  propagatedBuildInputs = [ qb-chain-description qb-chain-controllers qb-chain-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uuv-control-msgs";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_control_msgs/0.6.10-0.tar.gz;
-    sha256 = "0bfc715f1deec3262205d5c82aa99a9c10054d0d2f6e3467aaff63b7d60c9789";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_control_msgs/0.6.12-0.tar.gz;
+    sha256 = "75a83d1402ffb40b84d82e98cac2e27d950a6f4832942321c4a9a9480386d254";
   };
 
   buildInputs = [ std-msgs message-generation geometry-msgs ];

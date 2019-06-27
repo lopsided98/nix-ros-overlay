@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime, pkg-config }:
 buildRosPackage {
   pname = "ros-kinetic-rosbuild";
-  version = "1.14.4";
+  version = "1.14.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosbuild/1.14.4-0.tar.gz;
-    sha256 = "f6884a05446ea5ea487640a3a0c6accefb24b6ae6284fa57c1179612bd099f21";
+    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosbuild/1.14.6-1.tar.gz;
+    sha256 = "64bcd41bdcfa0461106eba033f2a6cbf1e90e70f1ff4a067b02150cd0d5e945c";
   };
 
   buildInputs = [ pkg-config ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, hardware-interface, controller-manager, pluginlib, joint-limits-interface, control-toolbox, catkin, gazebo-dev, urdf, angles, std-msgs, roscpp, transmission-interface }:
 buildRosPackage {
   pname = "ros-kinetic-gazebo-ros-control";
-  version = "2.5.18-r1";
+  version = "2.5.19-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_ros_control/2.5.18-1.tar.gz;
-    sha256 = "81dca564624e7e58f83ba522de9e7c2d69f563689751d2096a92030d7c722832";
+    url = https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_ros_control/2.5.19-1.tar.gz;
+    sha256 = "cf8ff66909d778351f33baae7867e9f356a1110c0cd06c092c3ba84d59c9ee66";
   };
 
   buildInputs = [ controller-manager hardware-interface pluginlib control-toolbox joint-limits-interface gazebo-dev urdf angles std-msgs roscpp transmission-interface ];

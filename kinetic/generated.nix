@@ -78,6 +78,8 @@ self: super: {
 
  app-manager = self.callPackage ./app-manager {};
 
+ apriltag = self.callPackage ./apriltag {};
+
  ar-track-alvar = self.callPackage ./ar-track-alvar {};
 
  ar-track-alvar-msgs = self.callPackage ./ar-track-alvar-msgs {};
@@ -272,8 +274,6 @@ self: super: {
 
  catkin-pip = self.callPackage ./catkin-pip {};
 
- catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
-
  certifi = self.callPackage ./certifi {};
 
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
@@ -315,6 +315,8 @@ self: super: {
  cmake-modules = self.callPackage ./cmake-modules {};
 
  cmd-vel-smoother = self.callPackage ./cmd-vel-smoother {};
+
+ cnn-bridge = self.callPackage ./cnn-bridge {};
 
  cob-3d-mapping-msgs = self.callPackage ./cob-3d-mapping-msgs {};
 
@@ -1043,8 +1045,6 @@ self: super: {
  flexbe-widget = self.callPackage ./flexbe-widget {};
 
  flir-boson-usb = self.callPackage ./flir-boson-usb {};
-
- flir-camera-driver = self.callPackage ./flir-camera-driver {};
 
  flir-ptu-description = self.callPackage ./flir-ptu-description {};
 
@@ -1898,6 +1898,8 @@ self: super: {
 
  librealsense = self.callPackage ./librealsense {};
 
+ librealsense2 = self.callPackage ./librealsense2 {};
+
  libreflexxestype2 = self.callPackage ./libreflexxestype2 {};
 
  librviz-tutorial = self.callPackage ./librviz-tutorial {};
@@ -2095,6 +2097,8 @@ self: super: {
  message-to-tf = self.callPackage ./message-to-tf {};
 
  microstrain-3dmgx2-imu = self.callPackage ./microstrain-3dmgx2-imu {};
+
+ microstrain-mips = self.callPackage ./microstrain-mips {};
 
  minas = self.callPackage ./minas {};
 
@@ -2453,6 +2457,8 @@ self: super: {
  nlopt = self.callPackage ./nlopt {};
 
  nmea-comms = self.callPackage ./nmea-comms {};
+
+ nmea-gps-plugin = self.callPackage ./nmea-gps-plugin {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
@@ -3050,6 +3056,8 @@ self: super: {
 
  qb-chain-control = self.callPackage ./qb-chain-control {};
 
+ qb-chain-controllers = self.callPackage ./qb-chain-controllers {};
+
  qb-chain-description = self.callPackage ./qb-chain-description {};
 
  qb-device = self.callPackage ./qb-device {};
@@ -3187,6 +3195,10 @@ self: super: {
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
 
  rc-hand-eye-calibration-client = self.callPackage ./rc-hand-eye-calibration-client {};
+
+ rc-pick-client = self.callPackage ./rc-pick-client {};
+
+ rc-tagdetect-client = self.callPackage ./rc-tagdetect-client {};
 
  rc-visard = self.callPackage ./rc-visard {};
 
@@ -4030,8 +4042,6 @@ self: super: {
 
  speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
 
- spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
-
  srdfdom = self.callPackage ./srdfdom {};
 
  stage = self.callPackage ./stage {};
@@ -4305,6 +4315,20 @@ self: super: {
  topic-switch = self.callPackage ./topic-switch {};
 
  topic-tools = self.callPackage ./topic-tools {};
+
+ toposens = self.callPackage ./toposens {};
+
+ toposens-description = self.callPackage ./toposens-description {};
+
+ toposens-driver = self.callPackage ./toposens-driver {};
+
+ toposens-markers = self.callPackage ./toposens-markers {};
+
+ toposens-msgs = self.callPackage ./toposens-msgs {};
+
+ toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
+
+ toposens-sync = self.callPackage ./toposens-sync {};
 
  towr = self.callPackage ./towr {};
 

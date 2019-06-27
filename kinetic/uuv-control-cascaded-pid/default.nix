@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, nav-msgs, rospy, dynamic-reconfigure, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-control-cascaded-pid";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_control_cascaded_pid/0.6.10-0.tar.gz;
-    sha256 = "9bf2099f61d216e49b6f784026d638f72cdca1d2308e223b7f3192209579bfcf";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_control_cascaded_pid/0.6.12-0.tar.gz;
+    sha256 = "0eaed0dc810669a108e988f1ba91415ad4a09c7d31908caca22c01fa47fdd1b6";
   };
 
   buildInputs = [ dynamic-reconfigure ];

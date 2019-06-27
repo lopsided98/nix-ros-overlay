@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, prbt-pg70-support, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-prbt-grippers";
-  version = "0.0.3";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/prbt_grippers-release/archive/release/kinetic/prbt_grippers/0.0.3-0.tar.gz;
-    sha256 = "bc031a33bcf996c346521f9b15babe1cb83545ade84d93972d4d178005a5ccae";
+    url = https://github.com/PilzDE/prbt_grippers-release/archive/release/kinetic/prbt_grippers/0.0.4-1.tar.gz;
+    sha256 = "142d08d522fe6387bd59140585a269cfad11ee6cbccb23bcb7e14ecd52425fd1";
   };
 
   propagatedBuildInputs = [ prbt-pg70-support ];

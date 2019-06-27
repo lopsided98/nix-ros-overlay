@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, actionlib, rospy, cob-actions, tf, geometry-msgs, cob-sound, cob-mimic, pythonPackages, message-generation, message-runtime, std-srvs, control-msgs, trajectory-msgs, catkin, move-base-msgs, cob-light, std-msgs, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-cob-script-server";
-  version = "0.6.11";
+  version = "0.6.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_script_server/0.6.11-0.tar.gz;
-    sha256 = "9371132c8b744d7a8e8e1d7bb6722e641b5b0549fb940187a7bf4e2fa09d8a7c";
+    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_script_server/0.6.12-1.tar.gz;
+    sha256 = "7f5cc918cdeef1eba226f9956f55be29aac4ec21f7b36cb31f6941d285c79527";
   };
 
   buildInputs = [ actionlib-msgs trajectory-msgs rostest message-generation actionlib ];

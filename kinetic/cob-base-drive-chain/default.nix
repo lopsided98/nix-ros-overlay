@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, control-msgs, cob-generic-can, cob-canopen-motor, sensor-msgs, catkin, cob-utilities, message-generation, message-runtime, std-msgs, diagnostic-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-cob-base-drive-chain";
-  version = "0.6.13";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_base_drive_chain/0.6.13-0.tar.gz;
-    sha256 = "ca991ebc0dd718b5b507b4f2e094d220706352ea8bd4839f2741ae4e1120565c";
+    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_base_drive_chain/0.6.14-1.tar.gz;
+    sha256 = "62b6eb93920617b3ad84e57f24d46697c07358de9523fd77748093dab4901237";
   };
 
   buildInputs = [ std-srvs control-msgs cob-generic-can cob-canopen-motor sensor-msgs cob-utilities message-generation std-msgs diagnostic-msgs roscpp ];

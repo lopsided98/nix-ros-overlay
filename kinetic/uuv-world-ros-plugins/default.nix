@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, uuv-world-plugins, geometry-msgs, uuv-world-ros-plugins-msgs, catkin, gazebo-dev, roscpp, gazebo-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-world-ros-plugins";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_world_ros_plugins/0.6.10-0.tar.gz;
-    sha256 = "4817cdac8abde3a0c786806dc8c9d9b8cbfc52d03c6c3e3ac66a74a9722770c4";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_world_ros_plugins/0.6.12-0.tar.gz;
+    sha256 = "2ff56a130078b1b37cd3bd9f68521961b3349ca3c9bc46afb8fd84805b32df24";
   };
 
   buildInputs = [ uuv-world-plugins geometry-msgs uuv-world-ros-plugins-msgs gazebo-dev roscpp gazebo-msgs ];

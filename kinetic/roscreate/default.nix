@@ -2,17 +2,17 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, roslib, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-roscreate";
-  version = "1.14.4";
+  version = "1.14.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/roscreate/1.14.4-0.tar.gz;
-    sha256 = "d14c4028b4c41004e1da705da1a52bb99a59b149d8d8cecbe3c2e1f284155453";
+    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/roscreate/1.14.6-1.tar.gz;
+    sha256 = "286727378b5b57e90ef7e9b9f56de9d82110ee08f1ad8ac94c45a982568d5af1";
   };
 
-  propagatedBuildInputs = [ pythonPackages.rospkg ];
+  propagatedBuildInputs = [ pythonPackages.rospkg roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

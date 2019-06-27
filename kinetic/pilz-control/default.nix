@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, controller-manager, std-srvs, cmake-modules, roslint, catkin, joint-trajectory-controller, rostest, controller-interface, code-coverage, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-control";
-  version = "0.4.8";
+  version = "0.4.9-r1";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/pilz_control/0.4.8-0.tar.gz;
-    sha256 = "2116c2288aa5b3caad6f762dad24d75c163851d8f697ad57f6f3c8c5c3cd1578";
+    url = https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/pilz_control/0.4.9-1.tar.gz;
+    sha256 = "a0386e5d81732e0f71615559f98788fed8fb02a451996d003820a0cb15653a58";
   };
 
   buildInputs = [ controller-manager std-srvs cmake-modules roslint joint-trajectory-controller controller-interface roscpp ];

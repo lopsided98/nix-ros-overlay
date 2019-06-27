@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, aws-common, gtest, cmake }:
 buildRosPackage {
   pname = "ros-melodic-cloudwatch-logs-common";
-  version = "1.0.1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/cloudwatch_logs_common/1.0.1-0.tar.gz;
-    sha256 = "cda8f3c7329460e52f3d90c4072ab345cfd7de20b8faee0b99895644f0639312";
+    url = https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/cloudwatch_logs_common/1.0.2-1.tar.gz;
+    sha256 = "8262c85a2dfaea8d1fb5e3126731f9101f3e87e59a8f959f4462c3cc04b6f3a7";
   };
 
   buildInputs = [ aws-common ];

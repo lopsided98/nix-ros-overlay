@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, swri-math-util, pluginlib, mapviz, cv-bridge, catkin, libqt-core, roscpp, gps-common, qt-qmake, swri-yaml-util, rospy, libqt-dev, libqt-opengl-dev, libqt-opengl, tf, swri-transform-util }:
 buildRosPackage {
   pname = "ros-kinetic-multires-image";
-  version = "1.1.0";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/multires_image/1.1.0-0.tar.gz;
-    sha256 = "a581c7fbe0d3594cdf57a756e3a6581dac8a0fbcc5bd9ced40f0b8c0f61a4758";
+    url = https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/multires_image/1.1.1-1.tar.gz;
+    sha256 = "ec047a267af02596235afbd734c9869c073c6baf6ad681b8f9cb9391f8b75e45";
   };
 
   buildInputs = [ swri-math-util pluginlib mapviz cv-bridge roscpp gps-common swri-yaml-util libqt-dev libqt-opengl-dev tf swri-transform-util ];

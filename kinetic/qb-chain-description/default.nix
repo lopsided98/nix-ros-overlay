@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-qb-chain-description";
-  version = "2.0.0";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/kinetic/qb_chain_description/2.0.0-0.tar.gz;
-    sha256 = "00b1fe662682ef32bc816d23c9904ecb3c3545157ac1361c0883c95c226677d2";
+    url = https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/kinetic/qb_chain_description/2.1.1-1.tar.gz;
+    sha256 = "72f8dee8c28c970d54a32374023d9cb2aeae608d7d4d148c93aa231ad78afabe";
   };
 
   nativeBuildInputs = [ catkin ];

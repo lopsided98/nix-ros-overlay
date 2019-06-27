@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, mavros-extras, cmake-modules, control-toolbox, mavros, catkin, tf2-ros, angles, std-msgs, eigen-conversions, roscpp, geometry-msgs, eigen }:
 buildRosPackage {
   pname = "ros-melodic-test-mavros";
-  version = "0.29.2";
+  version = "0.31.0-r1";
 
   src = fetchurl {
-    url = https://github.com/mavlink/mavros-release/archive/release/melodic/test_mavros/0.29.2-0.tar.gz;
-    sha256 = "de15444e834540abb574c250800527f2d808fe7590139785ea7df46a07b5fe87";
+    url = https://github.com/mavlink/mavros-release/archive/release/melodic/test_mavros/0.31.0-1.tar.gz;
+    sha256 = "646d5cfb6db628af2b685a712ace5b099a4297dac69234cbc76d5f5e6b2fa54c";
   };
 
   buildInputs = [ mavros-extras cmake-modules control-toolbox mavros tf2-ros eigen std-msgs angles eigen-conversions roscpp geometry-msgs ];

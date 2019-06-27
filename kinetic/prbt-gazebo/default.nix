@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, prbt-support, prbt-moveit-config, trajectory-msgs, catkin, rostest, actionlib, roslaunch, roscpp, xacro, gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-kinetic-prbt-gazebo";
-  version = "0.4.8";
+  version = "0.4.9-r1";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/prbt_gazebo/0.4.8-0.tar.gz;
-    sha256 = "ba89e7e134b03d55a1bfdc54713fbc4f62fedfc0b60fdb6739d4d8c1c87ea436";
+    url = https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/prbt_gazebo/0.4.9-1.tar.gz;
+    sha256 = "aa805b451134e81ecd6d16956bbd93cfb4537e4f188e69e34342c8c3a3f5efca";
   };
 
   checkInputs = [ rostest roscpp trajectory-msgs actionlib ];

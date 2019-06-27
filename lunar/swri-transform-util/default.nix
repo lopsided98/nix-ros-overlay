@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cv-bridge, swri-yaml-util, rospy, diagnostic-msgs, geos, tf, geometry-msgs, boost, swri-nodelet, pkg-config, gps-common, swri-math-util, catkin, proj, roscpp, nodelet, libyamlcpp, sensor-msgs, geographic-msgs, swri-roscpp, rostest, topic-tools }:
 buildRosPackage {
   pname = "ros-lunar-swri-transform-util";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_transform_util/2.8.0-0.tar.gz;
-    sha256 = "503e389d1e0225d03b39d3891e3a46d11d8bc692d0f65824ad46da88e56108c1";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_transform_util/2.9.0-1.tar.gz;
+    sha256 = "79ce6772930852a1b9bd2a860b370e463fb2e4768f904b41ba4457d679c2cf18";
   };
 
   buildInputs = [ swri-math-util boost libyamlcpp swri-nodelet topic-tools cv-bridge roscpp geographic-msgs gps-common proj swri-roscpp swri-yaml-util rospy diagnostic-msgs nodelet geos tf geometry-msgs ];

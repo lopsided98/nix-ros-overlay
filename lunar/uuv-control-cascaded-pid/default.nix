@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, nav-msgs, rospy, dynamic-reconfigure, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-uuv-control-cascaded-pid";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_control_cascaded_pid/0.6.10-0.tar.gz;
-    sha256 = "9919c2f74948dbb09c906c2a9b62140df8f03c0adb38fb863e6d4a6399b6eea0";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_control_cascaded_pid/0.6.12-0.tar.gz;
+    sha256 = "ea779e11a1b857c072cc1a94d69b7f175da07ce07d3eaf71e99958f1e5175277";
   };
 
   buildInputs = [ dynamic-reconfigure ];

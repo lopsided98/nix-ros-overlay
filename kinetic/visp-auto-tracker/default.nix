@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, libdmtx, visp-bridge, sensor-msgs, catkin, message-filters, zbar, visp, visp-tracker, resource-retriever, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-visp-auto-tracker";
-  version = "0.10.0";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_auto_tracker/0.10.0-0.tar.gz;
-    sha256 = "fb49ad259aeac43ef505b5bb02e6b0720e601ca257d59afeb7318d8f072f8c9f";
+    url = https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_auto_tracker/0.11.0-1.tar.gz;
+    sha256 = "c4069217f9a58ff29818e82c84a24e1cd2f11f6a6a6c6903b04771fb5b0d5ba2";
   };
 
   buildInputs = [ libdmtx visp-bridge sensor-msgs message-filters zbar visp visp-tracker resource-retriever std-msgs roscpp geometry-msgs ];

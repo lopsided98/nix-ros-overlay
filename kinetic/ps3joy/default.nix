@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, bluez, sensor-msgs, linuxConsoleTools, pythonPackages, catkin, rosgraph, libusb, rospy, diagnostic-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ps3joy";
-  version = "1.12.0";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/ps3joy/1.12.0-0.tar.gz;
-    sha256 = "7ab034be1a472b3f03fd6301aac20a442c38c77de2d08a72da341cfe4d1c23a4";
+    url = https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/ps3joy/1.13.0-1.tar.gz;
+    sha256 = "bf46bab09cc1558f65421de6cc905822776603d9edfcf18b72ef51af3b99b51f";
   };
 
   buildInputs = [ bluez sensor-msgs linuxConsoleTools pythonPackages.pybluez rosgraph libusb rospy diagnostic-msgs ];

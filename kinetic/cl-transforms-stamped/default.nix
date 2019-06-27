@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, roslisp, cl-transforms, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cl-transforms-stamped";
-  version = "0.2.11-r1";
+  version = "0.2.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_transforms_stamped/0.2.11-1.tar.gz;
-    sha256 = "aa7146524a610d85b63b4007a44177fad3262c769268aef08e43e6bed674e77e";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_transforms_stamped/0.2.12-1.tar.gz;
+    sha256 = "0bab621259d0ffecc5d54ea0682567a1308c289ea658be4ca43c22072f013822";
   };
 
   propagatedBuildInputs = [ std-msgs roslisp cl-transforms geometry-msgs ];

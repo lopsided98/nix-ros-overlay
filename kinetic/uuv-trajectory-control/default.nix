@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rostest, roslib, nav-msgs, visualization-msgs, rospy, std-msgs, tf, uuv-control-msgs, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-trajectory-control";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_trajectory_control/0.6.10-0.tar.gz;
-    sha256 = "55039cf78d14ecd3f97240a4812e5c3a52abe3c2431d96a512d672ee9745cf5b";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_trajectory_control/0.6.12-0.tar.gz;
+    sha256 = "a686896a19a11cdca138404c293f5cbec4133a19117abdf9c302aff1d3f5bc53";
   };
 
   checkInputs = [ rostest rosunit ];

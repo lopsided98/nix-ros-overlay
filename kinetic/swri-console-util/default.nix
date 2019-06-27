@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, swri-math-util, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-swri-console-util";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_console_util/2.8.0-0.tar.gz;
-    sha256 = "47cb7811d6054bdc47657615f41ca63d85cad90a3f41ac04afe0a138bd0062b2";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_console_util/2.9.0-1.tar.gz;
+    sha256 = "0474550302e6d47a4b254a6d57663a03a4b56d9c6b80b66e58b1737db23934a8";
   };
 
   buildInputs = [ swri-math-util roscpp ];

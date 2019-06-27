@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, genmsg, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-roslang";
-  version = "1.14.4";
+  version = "1.14.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/roslang/1.14.4-0.tar.gz;
-    sha256 = "be96b88224a24d70844c3dccb84253791452f471b17ee8b25ebdc23bf4643f4e";
+    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/roslang/1.14.6-1.tar.gz;
+    sha256 = "3fd45a42ec2c3f61e99ce737d299dd66dd0a176ae25fc5b45ad5e7cf162e5c85";
   };
 
   propagatedBuildInputs = [ genmsg catkin ];

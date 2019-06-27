@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, std-srvs, catkin, rospy }:
 buildRosPackage {
   pname = "ros-lunar-swri-rospy";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_rospy/2.8.0-0.tar.gz;
-    sha256 = "9ebc528b9dde336ef747b750901b8f0a88d0ba92db5411cebabc654d435265c1";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_rospy/2.9.0-1.tar.gz;
+    sha256 = "f8f5a1bdb3cd832279287b6e8dbee6ec2324c4cd16144acec044cd2ca313a189";
   };
 
   propagatedBuildInputs = [ std-msgs std-srvs rospy ];

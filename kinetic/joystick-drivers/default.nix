@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, spacenav-node, ps3joy, catkin, joy, wiimote }:
 buildRosPackage {
   pname = "ros-kinetic-joystick-drivers";
-  version = "1.12.0";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/joystick_drivers/1.12.0-0.tar.gz;
-    sha256 = "4cfb6f63439d605f03fc9199200781992a4b9d22e9c6e3a7e44da26119b18c07";
+    url = https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/joystick_drivers/1.13.0-1.tar.gz;
+    sha256 = "09efaa5bcd65e0f08b9a37bcffa9b261b8b7bdb43c38501a1fbaea2b75bf7bd0";
   };
 
   propagatedBuildInputs = [ wiimote spacenav-node ps3joy joy ];

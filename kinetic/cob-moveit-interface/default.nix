@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cob-script-server, catkin, moveit-commander, rospy, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-moveit-interface";
-  version = "0.7.1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_moveit_interface/0.7.1-0.tar.gz;
-    sha256 = "547650c8b982b8beeefa772f2a2ee769826e98caf90df702c79d722d657bd0b0";
+    url = https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_moveit_interface/0.7.2-1.tar.gz;
+    sha256 = "212193d20108fb24a46552d07ec052ca8335537e23960bc19ab99ed030568820";
   };
 
   propagatedBuildInputs = [ cob-script-server moveit-commander rospy tf geometry-msgs ];

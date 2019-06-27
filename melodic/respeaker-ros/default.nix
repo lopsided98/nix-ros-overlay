@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, angles, std-msgs, dynamic-reconfigure, tf, audio-common-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-respeaker-ros";
-  version = "2.1.11";
+  version = "2.1.12-r2";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/respeaker_ros/2.1.11-0.tar.gz;
-    sha256 = "d497d9fe2e707120d60d0ce824e8476a9b65b3409d36d8e899cacc93257a56d2";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/respeaker_ros/2.1.12-2.tar.gz;
+    sha256 = "3068ce83ec0375c8febc2140cb08077de4b7d7cde40f5aff1618b7a5839c79be";
   };
 
   buildInputs = [ dynamic-reconfigure ];

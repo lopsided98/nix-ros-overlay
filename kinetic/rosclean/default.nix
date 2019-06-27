@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-rosclean";
-  version = "1.14.4";
+  version = "1.14.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosclean/1.14.4-0.tar.gz;
-    sha256 = "3d41dc3f31411b8980076618b74c112e026d2df77ceadd5b06da8c2024c5659e";
+    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosclean/1.14.6-1.tar.gz;
+    sha256 = "8d686af0c855858a4ea352a6bb3f733c970c36478358385e4cede44ff1eb825d";
   };
 
   propagatedBuildInputs = [ pythonPackages.rospkg ];

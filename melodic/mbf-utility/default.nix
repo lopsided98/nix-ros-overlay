@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, tf2-geometry-msgs, catkin, roscpp, tf2-ros, tf2, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mbf-utility";
-  version = "0.2.3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_utility/0.2.3-0.tar.gz;
-    sha256 = "7bd062652a4d93996bf5c705a3a02bf2506313a2c99993d0efd89210bd7fd5bf";
+    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_utility/0.2.4-1.tar.gz;
+    sha256 = "3c06c357bd9229ab1ff2ad139be81d98f93b2e0cd9e054d579a0ace7dbcd34bf";
   };
 
   buildInputs = [ tf2-geometry-msgs roscpp tf2-ros tf2 tf geometry-msgs ];

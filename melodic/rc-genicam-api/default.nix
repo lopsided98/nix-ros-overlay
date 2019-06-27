@@ -2,17 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, libusb }:
 buildRosPackage {
   pname = "ros-melodic-rc-genicam-api";
-  version = "2.1.0";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/melodic/rc_genicam_api/2.1.0-0.tar.gz;
-    sha256 = "eac83cc05a1e39716b5839146c3b15098ea1071599b783a4243af3f922cd4987";
+    url = https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/melodic/rc_genicam_api/2.2.0-1.tar.gz;
+    sha256 = "a825183fbab04cdd826e93dceef2c918c71254095381d4bbf7c12d0b3f3e00fd";
   };
 
-  propagatedBuildInputs = [ catkin ];
+  buildInputs = [ libusb ];
+  propagatedBuildInputs = [ catkin libusb ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

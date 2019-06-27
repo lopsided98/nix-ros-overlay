@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, python, gtest, pythonPackages, cmake, gmock }:
 buildRosPackage {
   pname = "ros-kinetic-catkin";
-  version = "0.7.14";
+  version = "0.7.18-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/catkin-release/archive/release/kinetic/catkin/0.7.14-0.tar.gz;
-    sha256 = "a70d5fcc94d1d61e3cb4a93c5b78af89f4ea0ec42506f025fa332729a22e5194";
+    url = https://github.com/ros-gbp/catkin-release/archive/release/kinetic/catkin/0.7.18-1.tar.gz;
+    sha256 = "f6827d5527925cf748b4791270fb2af25ca55cdde0c580c04767f0def5eb6098";
   };
 
   buildInputs = [ python pythonPackages.catkin-pkg pythonPackages.empy ];

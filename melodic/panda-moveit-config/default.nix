@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, moveit-fake-controller-manager, franka-description, moveit-ros-move-group, moveit-ros-visualization, moveit-kinematics, catkin, robot-state-publisher, topic-tools, joint-state-publisher, xacro, moveit-planners-ompl }:
 buildRosPackage {
   pname = "ros-melodic-panda-moveit-config";
-  version = "0.7.1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/panda_moveit_config-release/archive/release/melodic/panda_moveit_config/0.7.1-0.tar.gz;
-    sha256 = "01274911d72afb49bda01ff79f7c15aec55668bc0d29342f70d3ea3be5faaa8a";
+    url = https://github.com/ros-gbp/panda_moveit_config-release/archive/release/melodic/panda_moveit_config/0.7.2-1.tar.gz;
+    sha256 = "fc91b60881da960606742288b6b3b53aae0b3abe98246d1e1f8c9d1b56126f51";
   };
 
   buildInputs = [ franka-description ];

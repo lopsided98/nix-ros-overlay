@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cv-bridge, swri-route-util, swri-yaml-util, actionlib, tf, stereo-msgs, swri-transform-util, marti-visualization-msgs, image-transport, gps-common, libqt-dev, libqt-opengl, swri-math-util, mapviz, catkin, move-base-msgs, nav-msgs, qt-qmake, std-msgs, roscpp, visualization-msgs, pluginlib, sensor-msgs, libqt-core, marti-nav-msgs, marti-common-msgs, libqt-opengl-dev, swri-image-util, map-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mapviz-plugins";
-  version = "1.1.0";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/mapviz_plugins/1.1.0-0.tar.gz;
-    sha256 = "204c5079b16a3a234503468ceb503f8cc3965461d235bffe1413471234ab8e33";
+    url = https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/mapviz_plugins/1.1.1-1.tar.gz;
+    sha256 = "555e292b3a41efd56a9f4284d02a43fc0ef559e1004d5b9f48f6da039d3b5297";
   };
 
   buildInputs = [ cv-bridge swri-route-util swri-yaml-util actionlib tf swri-transform-util stereo-msgs marti-visualization-msgs image-transport gps-common libqt-dev swri-math-util mapviz move-base-msgs nav-msgs std-msgs roscpp visualization-msgs pluginlib sensor-msgs marti-nav-msgs marti-common-msgs libqt-opengl-dev swri-image-util map-msgs ];

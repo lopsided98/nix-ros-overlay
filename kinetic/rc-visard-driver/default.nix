@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, tf, geometry-msgs, stereo-msgs, image-transport, rc-genicam-api, message-generation, message-runtime, std-srvs, catkin, nav-msgs, protobuf, visualization-msgs, nodelet, roscpp, sensor-msgs, diagnostic-updater, curl, dynamic-reconfigure, rc-dynamics-api }:
 buildRosPackage {
   pname = "ros-kinetic-rc-visard-driver";
-  version = "2.5.0";
+  version = "2.6.4-r1";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_visard_driver/2.5.0-0.tar.gz;
-    sha256 = "d68bf25130065e5c2c7a1f795a63b4221cf64426473fb27c8a2c0692739742cb";
+    url = https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_visard_driver/2.6.4-1.tar.gz;
+    sha256 = "aa3c62d6990edaad2c40a7aea0dc687ee70130d2116845175413e8d00a823b5d";
   };
 
   buildInputs = [ std-srvs image-transport sensor-msgs roscpp diagnostic-updater rc-genicam-api message-generation nav-msgs curl visualization-msgs dynamic-reconfigure nodelet protobuf tf rc-dynamics-api geometry-msgs stereo-msgs ];

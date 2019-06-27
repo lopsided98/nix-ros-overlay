@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, moveit-ros-move-group, actionlib-msgs, geometry-msgs, cob-moveit-interface, catkin, roscpp, rospy, message-generation, geometric-shapes, message-runtime, actionlib, std-msgs, moveit-msgs, tf, moveit-ros-planning-interface, cob-grasp-generation }:
 buildRosPackage {
   pname = "ros-kinetic-cob-pick-place-action";
-  version = "0.7.1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_pick_place_action/0.7.1-0.tar.gz;
-    sha256 = "b145c20dca497e46043c8b5212937039c36a497e47db71c7201b473547af7efa";
+    url = https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_pick_place_action/0.7.2-1.tar.gz;
+    sha256 = "c946bdbb9b3fea26d7f47be23eaae5ae24b5f9204605787ebae9f76f51d77058";
   };
 
   buildInputs = [ moveit-ros-move-group actionlib-msgs geometry-msgs cob-moveit-interface roscpp message-generation geometric-shapes actionlib std-msgs moveit-msgs tf moveit-ros-planning-interface cob-grasp-generation ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, dynamic-reconfigure, image-transport, sensor-msgs, catkin, roscpp, message-generation, visp, resource-retriever, nodelet, rospy, std-msgs, message-runtime, image-proc, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-visp-tracker";
-  version = "0.10.0";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_tracker/0.10.0-0.tar.gz;
-    sha256 = "e6ff6da2fb4fb508010133657ab883caf1736698055305225ae5720683e79f1a";
+    url = https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_tracker/0.11.0-1.tar.gz;
+    sha256 = "3c57c4a30fd0a2a7d112007dd213ab922113fbe80c96981eb253b4716b61a049";
   };
 
   buildInputs = [ image-transport sensor-msgs roscpp rospy message-generation visp resource-retriever nodelet dynamic-reconfigure std-msgs image-proc tf geometry-msgs ];

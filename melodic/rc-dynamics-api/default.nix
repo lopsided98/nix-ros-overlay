@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, protobuf, cmake, curl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-rc-dynamics-api";
-  version = "0.7.1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_dynamics_api-release/archive/release/melodic/rc_dynamics_api/0.7.1-0.tar.gz;
-    sha256 = "5d865c30cd327b025024612b430e223e073cc182a7d8cb5c46b2612348982bbf";
+    url = https://github.com/roboception-gbp/rc_dynamics_api-release/archive/release/melodic/rc_dynamics_api/0.8.0-1.tar.gz;
+    sha256 = "8e3d2bcda9263dbe5672670e9aba9fbca85f2ca91ec9d8bf72c51993ee97bbe8";
   };
 
   buildInputs = [ protobuf curl ];

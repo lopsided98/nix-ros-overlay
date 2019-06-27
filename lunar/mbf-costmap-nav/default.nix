@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, actionlib, tf, mbf-abstract-nav, geometry-msgs, std-srvs, mbf-costmap-core, catkin, move-base, move-base-msgs, nav-msgs, std-msgs, roscpp, pluginlib, base-local-planner, mbf-msgs, nav-core, dynamic-reconfigure, mbf-utility }:
 buildRosPackage {
   pname = "ros-lunar-mbf-costmap-nav";
-  version = "0.2.3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/mbf_costmap_nav/0.2.3-0.tar.gz;
-    sha256 = "84de0b66d619ea6f523f6e5add798df7033d237a799e83102bac2f54e634ace5";
+    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/mbf_costmap_nav/0.2.4-1.tar.gz;
+    sha256 = "db5820d2ef66dbf71d6f1f750faae89edb1119b03dfaa5eef1d6acaed4b1b08c";
   };
 
   buildInputs = [ std-srvs mbf-costmap-core pluginlib actionlib-msgs base-local-planner tf mbf-msgs nav-core mbf-utility nav-msgs actionlib dynamic-reconfigure std-msgs roscpp mbf-abstract-nav geometry-msgs ];

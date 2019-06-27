@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cmake-modules, boost, image-transport, sensor-msgs, cv-bridge, message-filters, catkin, tf2-ros, image-geometry, tf2, rostest, eigen-conversions, nodelet, stereo-msgs }:
 buildRosPackage {
   pname = "ros-melodic-depth-image-proc";
-  version = "1.12.23";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/depth_image_proc/1.12.23-0.tar.gz;
-    sha256 = "afd0f4eaae77e022b7c340519fda4b5c170e9fca7bfed5cc6888b0f081ad85a9";
+    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/depth_image_proc/1.13.0-1.tar.gz;
+    sha256 = "9ef587dfb94e1ce789b97f3287d361570fd4e14019c248fa388797d388e839a2";
   };
 
   buildInputs = [ boost cmake-modules image-transport sensor-msgs cv-bridge message-filters tf2-ros image-geometry tf2 eigen-conversions nodelet stereo-msgs ];

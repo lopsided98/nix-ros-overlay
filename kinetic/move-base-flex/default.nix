@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, mbf-abstract-core, mbf-costmap-core, mbf-msgs, catkin, mbf-simple-nav, mbf-abstract-nav, mbf-costmap-nav }:
 buildRosPackage {
   pname = "ros-kinetic-move-base-flex";
-  version = "0.2.3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/move_base_flex/0.2.3-0.tar.gz;
-    sha256 = "693963bc17a29abddf9bbf33b7e56ffa1b971bde3ce18968a9255f4a34d6eca3";
+    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/move_base_flex/0.2.4-1.tar.gz;
+    sha256 = "c0d7c8488992e8e2547bf4ff74bc0332c0d290a228f9deaf2d49d31504b32514";
   };
 
   propagatedBuildInputs = [ mbf-abstract-core mbf-costmap-core mbf-msgs mbf-simple-nav mbf-abstract-nav mbf-costmap-nav ];

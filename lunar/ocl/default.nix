@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, netcdf, rtt, readline, catkin, ncurses, cmake, log4cpp, lua }:
 buildRosPackage {
   pname = "ros-lunar-ocl";
-  version = "2.9.1-r1";
+  version = "2.9.1-r3";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/ocl-release/archive/release/lunar/ocl/2.9.1-1.tar.gz;
-    sha256 = "bde8d2a77c1e0be8b771c994cc5bcfed3611687307593f9aea85cc0d81010e37";
+    url = https://github.com/orocos-gbp/ocl-release/archive/release/lunar/ocl/2.9.1-3.tar.gz;
+    sha256 = "e501628a2dccca1ce5b17065d058674b70a5ade2685db684d1064e50ddd32cba";
   };
 
   buildInputs = [ netcdf rtt readline ncurses log4cpp lua ];

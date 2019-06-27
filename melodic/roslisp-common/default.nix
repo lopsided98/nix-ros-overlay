@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-lisp, catkin, cl-tf2, roslisp-utilities, cl-utils, cl-transforms, cl-tf, cl-transforms-stamped, cl-urdf }:
 buildRosPackage {
   pname = "ros-melodic-roslisp-common";
-  version = "0.2.11-r1";
+  version = "0.2.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/roslisp_common/0.2.11-1.tar.gz;
-    sha256 = "9713aa6ed10fbf44506b1c8cb072dda99d99bcc1562f723de47eefbe0690773c";
+    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/roslisp_common/0.2.12-1.tar.gz;
+    sha256 = "f21f8982fd0069e1ee3f3611877153b9b675d57b019649f9c079d6c9251a57fd";
   };
 
   propagatedBuildInputs = [ actionlib-lisp cl-tf2 roslisp-utilities cl-transforms cl-transforms-stamped cl-tf cl-utils cl-urdf ];

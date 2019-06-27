@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, mbf-abstract-core, mbf-costmap-core, mbf-msgs, catkin, mbf-simple-nav, mbf-abstract-nav, mbf-costmap-nav }:
 buildRosPackage {
   pname = "ros-lunar-move-base-flex";
-  version = "0.2.3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/move_base_flex/0.2.3-0.tar.gz;
-    sha256 = "91467fd27f35979469467e722ad46a0ffc86f83ca36875e87b991181e1546df3";
+    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/lunar/move_base_flex/0.2.4-1.tar.gz;
+    sha256 = "e8dbf0f5b64777639122e3268e20ba2ec732f4b7a7ba75d92fbd9a35e3c74577";
   };
 
   propagatedBuildInputs = [ mbf-abstract-core mbf-costmap-core mbf-msgs mbf-simple-nav mbf-abstract-nav mbf-costmap-nav ];

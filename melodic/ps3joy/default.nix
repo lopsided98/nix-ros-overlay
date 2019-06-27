@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, bluez, sensor-msgs, linuxConsoleTools, pythonPackages, catkin, rosgraph, libusb, rospy, diagnostic-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ps3joy";
-  version = "1.12.0";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/joystick_drivers-release/archive/release/melodic/ps3joy/1.12.0-0.tar.gz;
-    sha256 = "c3b9aa3c6b572091d412fa7e2904b1c799471ba99aed7dd1b906f2b9e35b0f2a";
+    url = https://github.com/ros-gbp/joystick_drivers-release/archive/release/melodic/ps3joy/1.13.0-1.tar.gz;
+    sha256 = "766b29d7a4fcc3aa123fdc796f10c6862b9028466bfed7290d51976d547750b2";
   };
 
   buildInputs = [ bluez sensor-msgs linuxConsoleTools pythonPackages.pybluez rosgraph libusb rospy diagnostic-msgs ];

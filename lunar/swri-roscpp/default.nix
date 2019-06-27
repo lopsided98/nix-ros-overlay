@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, gtest, catkin, diagnostic-updater, rostest, nav-msgs, marti-common-msgs, dynamic-reconfigure, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, std-srvs, gtest, catkin, diagnostic-updater, rostest, nav-msgs, message-generation, marti-common-msgs, message-runtime, dynamic-reconfigure, std-msgs, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-lunar-swri-roscpp";
-  version = "2.8.0";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_roscpp/2.8.0-0.tar.gz;
-    sha256 = "f6172284a3e4f8db0640122a5431964141bfe06992ebc53b037e0b5bedf6f775";
+    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/lunar/swri_roscpp/2.9.0-1.tar.gz;
+    sha256 = "079d3abc1c5ff80cff409f09a38005fa84a073da76d3daa7b8327d432252ea71";
   };
 
   buildInputs = [ std-srvs diagnostic-updater nav-msgs marti-common-msgs dynamic-reconfigure std-msgs roscpp ];
-  checkInputs = [ rostest gtest ];
+  checkInputs = [ gtest rostest message-generation message-runtime rosunit ];
   propagatedBuildInputs = [ std-srvs diagnostic-updater nav-msgs marti-common-msgs dynamic-reconfigure std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 

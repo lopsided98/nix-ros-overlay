@@ -5,15 +5,15 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, uuv-gazebo-ros-plugins, uuv-sensor-ros-plugins, uuv-assistants, catkin, rostest, robot-state-publisher, rosunit, xacro, gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-lunar-uuv-descriptions";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_descriptions/0.6.10-0.tar.gz;
-    sha256 = "23c1dab26d970118f216a818efc2980ad640797831b8257084a9baa8b1657a25";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_descriptions/0.6.12-0.tar.gz;
+    sha256 = "34114c7ff6d6a08b5a98874af0b82664c724ca9344c17cf6e653f4e350cb9121";
   };
 
   checkInputs = [ rostest rosunit xacro ];
-  propagatedBuildInputs = [ gazebo-ros uuv-gazebo-ros-plugins uuv-sensor-ros-plugins uuv-assistants robot-state-publisher gazebo-ros-control ];
+  propagatedBuildInputs = [ gazebo-ros uuv-gazebo-ros-plugins uuv-sensor-ros-plugins uuv-assistants robot-state-publisher xacro gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

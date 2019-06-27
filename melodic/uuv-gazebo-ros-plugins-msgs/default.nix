@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uuv-gazebo-ros-plugins-msgs";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_gazebo_ros_plugins_msgs/0.6.10-0.tar.gz;
-    sha256 = "96a334617334392149c77d98328629f0e3b4af4058b5fd75c500e5e7971d1141";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_gazebo_ros_plugins_msgs/0.6.12-0.tar.gz;
+    sha256 = "62481c6af82f6908f2a59cf880035c37b513b3647603b8ce19614fdf6e0d2f72";
   };
 
   buildInputs = [ std-msgs message-generation geometry-msgs ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, nav-msgs, message-runtime, std-msgs, genmsg, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mbf-msgs";
-  version = "0.2.3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_msgs/0.2.3-0.tar.gz;
-    sha256 = "e66a057cfff19ef1bfb71925cb0ee69a50f5c64917c6c7cbc41668ee285731df";
+    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_msgs/0.2.4-1.tar.gz;
+    sha256 = "78830643a21e0c5fcad390ed07256c8924060a22e0ec498b696fe0e9aaaa8b8c";
   };
 
   buildInputs = [ actionlib-msgs nav-msgs message-generation message-runtime std-msgs genmsg geometry-msgs ];

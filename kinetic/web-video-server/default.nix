@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, async-web-server-cpp, image-transport, sensor-msgs, catkin, cv-bridge, ffmpeg, roslib, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-web-video-server";
-  version = "0.2.0";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/RobotWebTools-release/web_video_server-release/archive/release/kinetic/web_video_server/0.2.0-0.tar.gz;
-    sha256 = "77eedd518425f7d2daf382b1e9f6e76614b788eb0c85d8173e7d7ef5e0824b7b";
+    url = https://github.com/RobotWebTools-release/web_video_server-release/archive/release/kinetic/web_video_server/0.2.1-1.tar.gz;
+    sha256 = "7e0bd6e75bf467c4f81237e3795759e6f710bb519902eb28b0077e13a4164577";
   };
 
   buildInputs = [ async-web-server-cpp image-transport sensor-msgs cv-bridge ffmpeg roslib roscpp ];

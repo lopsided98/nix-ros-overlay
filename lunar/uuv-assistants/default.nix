@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, tf, sensor-msgs, catkin, pythonPackages, nav-msgs, rosgraph, rostopic, visualization-msgs, rospy, topic-tools, roscpp, gazebo-msgs }:
 buildRosPackage {
   pname = "ros-lunar-uuv-assistants";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_assistants/0.6.10-0.tar.gz;
-    sha256 = "333f1c7b2bf99d74e8cf570be6684e1366d7b189ec783c4f0b78d60bd7824fe4";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_assistants/0.6.12-0.tar.gz;
+    sha256 = "2d65ceafec21251a178fdd2f7dee92458d0c6f86bd7ffd31b70ff7f7b396b2d8";
   };
 
   buildInputs = [ tf sensor-msgs nav-msgs topic-tools roscpp geometry-msgs ];

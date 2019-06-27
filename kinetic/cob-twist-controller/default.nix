@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rospy, tf-conversions, tf, geometry-msgs, roslint, boost, rviz, robot-state-publisher, eigen-conversions, xacro, kdl-conversions, orocos-kdl, cob-control-msgs, trajectory-msgs, catkin, nav-msgs, urdf, cob-frame-tracker, std-msgs, roscpp, visualization-msgs, eigen, kdl-parser, cmake-modules, pluginlib, sensor-msgs, cob-srvs, dynamic-reconfigure, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-cob-twist-controller";
-  version = "0.7.4";
+  version = "0.7.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_twist_controller/0.7.4-0.tar.gz;
-    sha256 = "5bfaa5c0056828ca7a552269e723a1e46d57529a0d5317650e19397449469373";
+    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_twist_controller/0.7.6-1.tar.gz;
+    sha256 = "78484d8e5567802fc0c88808a16a640968642dbc7c1df857a5672a869abe4cf3";
   };
 
   buildInputs = [ tf-conversions tf geometry-msgs roslint boost eigen-conversions kdl-conversions orocos-kdl cob-control-msgs trajectory-msgs nav-msgs urdf std-msgs roscpp visualization-msgs eigen kdl-parser cmake-modules pluginlib sensor-msgs cob-srvs dynamic-reconfigure ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, smach-ros, message-generation, actionlib, message-runtime, rospy }:
 buildRosPackage {
   pname = "ros-lunar-flexbe-msgs";
-  version = "1.1.2";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/lunar/flexbe_msgs/1.1.2-0.tar.gz;
-    sha256 = "2dfe7512920afcb495ff444997c9b542dec3f708aed7a7d57170f7b8c6201f83";
+    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/lunar/flexbe_msgs/1.2.1-1.tar.gz;
+    sha256 = "42c7e6b2dc81d8dbeb9d28e2d1f4489e38a39fd05103b83750528b1bee680b58";
   };
 
   buildInputs = [ message-generation actionlib-msgs actionlib ];

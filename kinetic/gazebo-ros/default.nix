@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, cmake-modules, geometry-msgs, catkin, tinyxml, roscpp, gazebo-dev, rosgraph-msgs, roslib, dynamic-reconfigure, std-msgs, tf, gazebo-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-gazebo-ros";
-  version = "2.5.18-r1";
+  version = "2.5.19-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_ros/2.5.18-1.tar.gz;
-    sha256 = "cd027c4cafa7dd8f2570af29c7782d19c33d8dca1251e96cc0cbcf2c4b9a63df";
+    url = https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_ros/2.5.19-1.tar.gz;
+    sha256 = "371f707e9a9428d0ed39fe09cf0fe611508d71babd295e50d64ffe7fa5cd1250";
   };
 
   buildInputs = [ std-srvs cmake-modules geometry-msgs tinyxml roscpp gazebo-dev rosgraph-msgs roslib dynamic-reconfigure std-msgs tf gazebo-msgs ];

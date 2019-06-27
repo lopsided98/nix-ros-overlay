@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rostest, roslib, nav-msgs, visualization-msgs, rospy, std-msgs, tf, uuv-control-msgs, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-lunar-uuv-trajectory-control";
-  version = "0.6.10";
+  version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_trajectory_control/0.6.10-0.tar.gz;
-    sha256 = "c95a4c05a8153aa31ff4fd776507b3a0dd45fc89fbf290c12a06e7d943ba8978";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/lunar/uuv_trajectory_control/0.6.12-0.tar.gz;
+    sha256 = "a5a569d3c243f546a76f34d2dbdebab654efcc3a8b8d45be03934fa4bae32334";
   };
 
   checkInputs = [ rostest rosunit ];

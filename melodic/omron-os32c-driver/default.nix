@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, boost, sensor-msgs, catkin, rosconsole-bridge, diagnostic-updater, odva-ethernetip, roslaunch, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-omron-os32c-driver";
-  version = "0.1.3";
+  version = "1.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/omron-release/archive/release/melodic/omron_os32c_driver/0.1.3-0.tar.gz;
-    sha256 = "ebf659a3b4a959dc4c76afcd198ebcb73f574772b9af68d3279965d14a3369b8";
+    url = https://github.com/ros-drivers-gbp/omron-release/archive/release/melodic/omron_os32c_driver/1.0.0-0.tar.gz;
+    sha256 = "680c4b43a5231555f0b1f42d5dcbe1a6345ce1ec19aa7a0e2a9024676070797e";
   };
 
   buildInputs = [ boost sensor-msgs rosconsole-bridge diagnostic-updater odva-ethernetip roscpp ];

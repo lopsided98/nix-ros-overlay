@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, moveit-ros-planning, cob-moveit-config, moveit-ros-move-group, pluginlib, catkin, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-cob-collision-monitor";
-  version = "0.7.1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_collision_monitor/0.7.1-0.tar.gz;
-    sha256 = "c19e3d14a2377f5d58c7f1229dc15fa8519182f57d28069b4e1d20108d0f8010";
+    url = https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_collision_monitor/0.7.2-1.tar.gz;
+    sha256 = "cf114b66f9e8f9fbfa5afb05fc3ba5aeb1c982b75d45364cd8a093f626b50849";
   };
 
   buildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib std-msgs tf ];
