@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, visp-bridge, camera-calibration-parsers, sensor-msgs, catkin, message-generation, visp, message-runtime, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-visp-camera-calibration";
-  version = "0.11.0-r1";
+  version = "0.11.1-r1";
 
   src = fetchurl {
-    url = https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_camera_calibration/0.11.0-1.tar.gz;
-    sha256 = "d31f9266dceea12a92472f97047240dc99f633794a57ecc870a660280f172553";
+    url = https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_camera_calibration/0.11.1-1.tar.gz;
+    sha256 = "ad0ec2a1443b13767d73f4e5769b764e1046498ad93b94c65454687e4ed574c0";
   };
 
   buildInputs = [ visp-bridge camera-calibration-parsers sensor-msgs message-generation visp std-msgs roscpp geometry-msgs ];

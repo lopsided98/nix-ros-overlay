@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, joy-teleop, joy, catkin, wamv-gazebo, gazebo-dev, geographic-msgs, message-runtime, std-msgs, xacro }:
 buildRosPackage {
   pname = "ros-melodic-vrx-gazebo";
-  version = "1.0.1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vrx-release/archive/release/melodic/vrx_gazebo/1.0.1-0.tar.gz;
-    sha256 = "d6a4a9bdd86e6645bd539ec12ebcde5a87f46368643f4485561e3fae9478e951";
+    url = https://github.com/ros-gbp/vrx-release/archive/release/melodic/vrx_gazebo/1.1.1-1.tar.gz;
+    sha256 = "0c34fdbb792526c2eca3da6c09044f4c2c83932092cd19310b40b1ff7e626c83";
   };
 
   buildInputs = [ gazebo-ros joy-teleop joy wamv-gazebo gazebo-dev geographic-msgs message-runtime std-msgs xacro ];

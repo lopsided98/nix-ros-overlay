@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag-storage, rosbag, ros-type-introspection, catkin, rostime, roscpp, qt5, binutils, roscpp-serialization, topic-tools, tf }:
+{ lib, buildRosPackage, fetchurl, rosbag-storage, rosbag, ros-type-introspection, catkin, rostime, roscpp, nav-msgs, qt5, binutils, roscpp-serialization, topic-tools, diagnostic-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-plotjuggler";
-  version = "2.1.9";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = https://github.com/facontidavide/plotjuggler-release/archive/release/melodic/plotjuggler/2.1.9-0.tar.gz;
-    sha256 = "0a93dd9c3dd1fc1e579699a8c8b776bec347349364ae53fc97e2a541d7ee1068";
+    url = https://github.com/facontidavide/plotjuggler-release/archive/release/melodic/plotjuggler/2.3.0-1.tar.gz;
+    sha256 = "4ee6b096d29d1f33e38efb7c54b960ce7086af0005ceb6eb9b596b0e7358321e";
   };
 
-  buildInputs = [ rosbag-storage qt5.qtmultimedia rosbag ros-type-introspection rostime qt5.qtbase roscpp binutils roscpp-serialization topic-tools qt5.qtdeclarative tf ];
-  propagatedBuildInputs = [ rosbag-storage qt5.qtmultimedia rosbag ros-type-introspection rostime qt5.qtbase roscpp binutils roscpp-serialization topic-tools qt5.qtdeclarative tf ];
+  buildInputs = [ rosbag-storage qt5.qtmultimedia rosbag ros-type-introspection rostime qt5.qtbase roscpp nav-msgs binutils roscpp-serialization topic-tools diagnostic-msgs qt5.qtdeclarative tf ];
+  propagatedBuildInputs = [ rosbag-storage qt5.qtmultimedia rosbag ros-type-introspection rostime qt5.qtbase roscpp nav-msgs binutils roscpp-serialization topic-tools diagnostic-msgs qt5.qtdeclarative tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

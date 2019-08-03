@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cloudwatch-metrics-common, catkin, roscpp, rostest, aws-common, aws-ros1-common, ros-monitoring-msgs }:
+{ lib, buildRosPackage, fetchurl, std-srvs, cloudwatch-metrics-common, ros-monitoring-msgs, gtest, catkin, rostest, aws-common, std-msgs, aws-ros1-common, roscpp, gmock }:
 buildRosPackage {
   pname = "ros-melodic-cloudwatch-metrics-collector";
-  version = "2.0.0";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/cloudwatch_metrics_collector-release/archive/release/melodic/cloudwatch_metrics_collector/2.0.0-0.tar.gz;
-    sha256 = "85f807efb7f6dfc6cca35eed12ee12e4bc864e618221903eddab3c28920721cf";
+    url = https://github.com/aws-gbp/cloudwatch_metrics_collector-release/archive/release/melodic/cloudwatch_metrics_collector/2.1.1-1.tar.gz;
+    sha256 = "765bfbb06471515deaa6dc40b39f426ef386774cf658a7b9afe356cfa75e2ca2";
   };
 
-  buildInputs = [ cloudwatch-metrics-common ros-monitoring-msgs aws-common aws-ros1-common roscpp ];
-  checkInputs = [ rostest ];
-  propagatedBuildInputs = [ aws-ros1-common ros-monitoring-msgs roscpp cloudwatch-metrics-common ];
+  buildInputs = [ std-srvs cloudwatch-metrics-common roscpp aws-common std-msgs aws-ros1-common ros-monitoring-msgs ];
+  checkInputs = [ rostest gtest gmock ];
+  propagatedBuildInputs = [ std-srvs cloudwatch-metrics-common roscpp aws-common std-msgs aws-ros1-common ros-monitoring-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

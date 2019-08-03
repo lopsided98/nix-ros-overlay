@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, aws-common, cloudwatch-logs-common, aws-ros1-common, roscpp }:
+{ lib, buildRosPackage, fetchurl, std-srvs, gtest, catkin, rostest, aws-common, cloudwatch-logs-common, std-msgs, aws-ros1-common, roscpp, gmock }:
 buildRosPackage {
   pname = "ros-melodic-cloudwatch-logger";
-  version = "2.1.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/cloudwatch_logger-release/archive/release/melodic/cloudwatch_logger/2.1.0-1.tar.gz;
-    sha256 = "959398f364fb17914a2236732b98425db13aee0dfaee503a39741c9b4daead33";
+    url = https://github.com/aws-gbp/cloudwatch_logger-release/archive/release/melodic/cloudwatch_logger/2.2.1-1.tar.gz;
+    sha256 = "03cca488a1f918e13adf56eda946a89c3858f949cac82f14ccc1cbeb9c3bce81";
   };
 
-  buildInputs = [ aws-ros1-common aws-common roscpp cloudwatch-logs-common ];
-  checkInputs = [ rostest ];
-  propagatedBuildInputs = [ aws-ros1-common aws-common roscpp cloudwatch-logs-common ];
+  buildInputs = [ std-srvs aws-common cloudwatch-logs-common std-msgs aws-ros1-common roscpp ];
+  checkInputs = [ rostest gtest gmock ];
+  propagatedBuildInputs = [ std-srvs aws-common cloudwatch-logs-common std-msgs aws-ros1-common roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

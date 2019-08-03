@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-ros-monitoring-msgs";
-  version = "1.0.0";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/ros_monitoring_msgs-release/archive/release/melodic/ros_monitoring_msgs/1.0.0-0.tar.gz;
-    sha256 = "3f7de8101df1c96e947d8123e8eef5a129edc09a1e5ce723e9d91409c9cba565";
+    url = https://github.com/aws-gbp/ros_monitoring_msgs-release/archive/release/melodic/ros_monitoring_msgs/1.0.1-1.tar.gz;
+    sha256 = "d9215590fe7e1d5c0dadd7a19195db12250e64327bd5423ad6292c0a7e920165";
   };
 
   buildInputs = [ std-msgs message-generation ];

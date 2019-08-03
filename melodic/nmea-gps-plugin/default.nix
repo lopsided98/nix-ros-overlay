@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, catkin, gazeboSimulator, geodesy, geographic-msgs, quaternion-operation, eigen, rosdoc-lite, roscpp, nmea-msgs }:
 buildRosPackage {
   pname = "ros-melodic-nmea-gps-plugin";
-  version = "0.0.1-r3";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/OUXT-Polaris/nmea_gps_plugin-release/archive/release/melodic/nmea_gps_plugin/0.0.1-3.tar.gz;
-    sha256 = "d53ff70694128cf5d6b5cecad231c4cdd64deaa3f764fd116186419105d177b0";
+    url = https://github.com/OUXT-Polaris/nmea_gps_plugin-release/archive/release/melodic/nmea_gps_plugin/0.0.2-1.tar.gz;
+    sha256 = "bf0ecd5604699384b818ed34494c93bc8faee1e3645a8e3d9bd58e4e17256f8d";
   };
 
   buildInputs = [ gazebo-ros gazeboSimulator.gazebo geographic-msgs geodesy quaternion-operation eigen roscpp nmea-msgs ];

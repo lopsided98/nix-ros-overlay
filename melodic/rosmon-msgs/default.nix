@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin }:
 buildRosPackage {
   pname = "ros-melodic-rosmon-msgs";
-  version = "2.0.2";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon_msgs/2.0.2-0.tar.gz;
-    sha256 = "6fb5e71fbb5ab94c72316c1d653a760b4dc068026bdbb954991eed26229ef74f";
+    url = https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon_msgs/2.1.1-1.tar.gz;
+    sha256 = "e0d2bdc8b92bf37d1742516bd955115f7c4d3743146224c56d612eb34328aea4";
   };
 
   buildInputs = [ std-msgs message-generation ];

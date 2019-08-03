@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, phidgets-api, pluginlib, sensor-msgs, catkin, roscpp, diagnostic-updater, nodelet, std-msgs, diagnostic-msgs, roslaunch, tf, imu-filter-madgwick, diagnostic-aggregator }:
 buildRosPackage {
   pname = "ros-melodic-phidgets-imu";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/melodic/phidgets_imu/0.7.8-1.tar.gz;
-    sha256 = "11d6e527269e2e1a3e0f982bbc594b4d403391a20a505b47806f49466ad1c2e7";
+    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/melodic/phidgets_imu/0.7.9-1.tar.gz;
+    sha256 = "43c322e37f15a5ae31b5a0695c9243f134528a31e8ebefe92f6022eecd5d3fe5";
   };
 
   buildInputs = [ std-srvs phidgets-api pluginlib sensor-msgs roscpp diagnostic-updater nodelet std-msgs diagnostic-msgs roslaunch tf ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, audio-common-msgs }:
 buildRosPackage {
   pname = "ros-melodic-lex-common-msgs";
-  version = "2.0.0";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/lex_node-release/archive/release/melodic/lex_common_msgs/2.0.0-0.tar.gz;
-    sha256 = "38bc675f3d1607953a04c92775548a0cda08aa90b0699ed3c8ae3cd0d5d3c98d";
+    url = https://github.com/aws-gbp/lex_node-release/archive/release/melodic/lex_common_msgs/2.0.1-1.tar.gz;
+    sha256 = "1379689a550b1cce87b3fb444add83140f2fcd085848da18b85dbc1f2ab772eb";
   };
 
   buildInputs = [ std-msgs message-generation audio-common-msgs ];

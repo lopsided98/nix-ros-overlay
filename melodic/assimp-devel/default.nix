@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rosboost-cfg, boost, mk, git, rosbuild, catkin, cacert, unzip, openssl, zlib }:
 buildRosPackage {
   pname = "ros-melodic-assimp-devel";
-  version = "2.1.12-r2";
+  version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/assimp_devel/2.1.12-2.tar.gz;
-    sha256 = "35553f415ba145a6c90ad40362835778cd08e946699051129cc840511dc6f564";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/assimp_devel/2.1.13-1.tar.gz;
+    sha256 = "f319e55fcad41526f49375ba1d5c2dff1c0052837e39aa60ca113c28748a3450";
   };
 
   buildInputs = [ rosboost-cfg boost mk git rosbuild cacert unzip openssl zlib ];

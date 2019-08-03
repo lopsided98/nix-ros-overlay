@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, filters, rospy, actionlib, tf-conversions, diagnostic-msgs, tf, geometry-msgs, realtime-tools, message-filters, pr2-controller-manager, message-generation, message-runtime, angles, eigen-conversions, pr2-controllers-msgs, control-msgs, trajectory-msgs, catkin, libtool, std-msgs, roscpp, pr2-mechanism-model, kdl-parser, pr2-controller-interface, pluginlib, control-toolbox }:
 buildRosPackage {
   pname = "ros-melodic-robot-mechanism-controllers";
-  version = "1.10.15-r1";
+  version = "1.10.16-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/robot_mechanism_controllers/1.10.15-1.tar.gz;
-    sha256 = "3edf4bf3c0aec34188fe768259562f3af1e4795c971f6ce581febdd56a186dfd";
+    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/robot_mechanism_controllers/1.10.16-1.tar.gz;
+    sha256 = "5b89dc10710bc53e63ea53a93c0ae5634fd0ebd2da3a17b31c693dc6518bb6f2";
   };
 
   buildInputs = [ filters actionlib tf-conversions diagnostic-msgs tf geometry-msgs realtime-tools message-filters pr2-controller-manager message-generation angles eigen-conversions pr2-controllers-msgs control-msgs trajectory-msgs libtool std-msgs roscpp pr2-mechanism-model kdl-parser pr2-controller-interface pluginlib control-toolbox ];

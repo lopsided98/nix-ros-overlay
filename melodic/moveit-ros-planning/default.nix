@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, tf2-msgs, rosconsole, tf2-geometry-msgs, pluginlib, srdfdom, catkin, message-filters, tf2-ros, tf2, urdf, moveit-core, tf2-eigen, actionlib, moveit-ros-perception, moveit-msgs, dynamic-reconfigure, roscpp, eigen }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-planning";
-  version = "1.0.1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_planning/1.0.1-0.tar.gz;
-    sha256 = "88875fc4613ea154a28967c8402e847aac51cbec89a0a5afe32449f291b47d66";
+    url = https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_planning/1.0.2-1.tar.gz;
+    sha256 = "c3b8fc441f13cfac3da59cf186ac92f8c8b60449bccc9ae029b01e8a1f2c9871";
   };
 
   buildInputs = [ tf2-msgs rosconsole pluginlib tf2-geometry-msgs moveit-ros-perception srdfdom message-filters tf2-ros tf2 actionlib moveit-core tf2-eigen dynamic-reconfigure urdf moveit-msgs roscpp eigen ];

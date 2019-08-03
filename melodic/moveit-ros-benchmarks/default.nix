@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, moveit-ros-planning, pluginlib, catkin, moveit-ros-warehouse, tf2-eigen, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-benchmarks";
-  version = "1.0.1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_benchmarks/1.0.1-0.tar.gz;
-    sha256 = "3168565928ff160fe763f5c06a80f70ef3dd4be70cf043eedc35ef1aefc05e4e";
+    url = https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_benchmarks/1.0.2-1.tar.gz;
+    sha256 = "4d739a977e815a45a45542b52f31244a1755d4e4df62d68399d5bada565e3fed";
   };
 
   buildInputs = [ moveit-ros-planning pluginlib moveit-ros-warehouse tf2-eigen roscpp ];

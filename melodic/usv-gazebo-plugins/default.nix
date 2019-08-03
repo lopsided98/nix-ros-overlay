@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, catkin, gazebo-dev, message-runtime, eigen, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros, catkin, gazebo-dev, message-runtime, eigen, std-msgs, roscpp, xacro, wave-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-usv-gazebo-plugins";
-  version = "1.0.1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vrx-release/archive/release/melodic/usv_gazebo_plugins/1.0.1-0.tar.gz;
-    sha256 = "61bbed37ef07cd02e27f6710063400a17b259523bbe721a0f657120b3a3c11ad";
+    url = https://github.com/ros-gbp/vrx-release/archive/release/melodic/usv_gazebo_plugins/1.1.1-1.tar.gz;
+    sha256 = "4a2e30aff5c7dc122588cf8e652b3f604521fac2fbfbfbafffd01009a6869fab";
   };
 
-  buildInputs = [ gazebo-ros gazebo-dev eigen std-msgs roscpp ];
-  propagatedBuildInputs = [ gazebo-ros gazebo-dev message-runtime eigen std-msgs roscpp ];
+  buildInputs = [ gazebo-ros gazebo-dev eigen std-msgs roscpp xacro wave-gazebo-plugins ];
+  propagatedBuildInputs = [ gazebo-ros gazebo-dev message-runtime eigen std-msgs roscpp xacro wave-gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

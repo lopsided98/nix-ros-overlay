@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, visp-camera-calibration, visp-bridge, catkin, visp-auto-tracker, visp-tracker, visp-hand2eye-calibration }:
 buildRosPackage {
   pname = "ros-melodic-vision-visp";
-  version = "0.11.0-r1";
+  version = "0.11.1-r1";
 
   src = fetchurl {
-    url = https://github.com/lagadic/vision_visp-release/archive/release/melodic/vision_visp/0.11.0-1.tar.gz;
-    sha256 = "761ae567a610fbfafa40a71b9cd58e9e88b6e94b1b1dabae556b5ebecb94e2c7";
+    url = https://github.com/lagadic/vision_visp-release/archive/release/melodic/vision_visp/0.11.1-1.tar.gz;
+    sha256 = "ef04aa5ab2459ab1a2690f7386f223e98c86285200d45fd11f101195550dc1ef";
   };
 
   propagatedBuildInputs = [ visp-camera-calibration visp-bridge visp-auto-tracker visp-tracker visp-hand2eye-calibration ];
@@ -17,6 +17,6 @@ buildRosPackage {
 
   meta = {
     description = ''Virtual package providing ViSP related packages.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ gpl2 ];
   };
 }

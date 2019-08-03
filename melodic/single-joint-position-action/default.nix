@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pr2-controllers-msgs, catkin, roscpp, actionlib }:
 buildRosPackage {
   pname = "ros-melodic-single-joint-position-action";
-  version = "1.10.15-r1";
+  version = "1.10.16-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/single_joint_position_action/1.10.15-1.tar.gz;
-    sha256 = "52bd7e24d99be30953d7cf5ae23d1cd007b0863b86aa4dab5b3dcb741cca41a8";
+    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/single_joint_position_action/1.10.16-1.tar.gz;
+    sha256 = "54ae567edc0ffc8c8be49d337b28f44b3aeec65d5d91b60350b03bd5bb97a0c9";
   };
 
   buildInputs = [ pr2-controllers-msgs roscpp actionlib ];

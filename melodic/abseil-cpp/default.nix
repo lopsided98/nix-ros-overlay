@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rsync, catkin }:
 buildRosPackage {
   pname = "ros-melodic-abseil-cpp";
-  version = "0.2.3-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = https://github.com/Eurecat/abseil_cpp-release/archive/release/melodic/abseil_cpp/0.2.3-1.tar.gz;
-    sha256 = "016b0cb70355a46ec06fa709a09117aaed9f8c7351a216634cefdfc642456b91";
+    url = https://github.com/Eurecat/abseil_cpp-release/archive/release/melodic/abseil_cpp/0.4.2-1.tar.gz;
+    sha256 = "828ee69c9a7e77d6b31d4cdf1b12e02960ec26f2a79571bf25d4f7f060177b4f";
   };
 
   buildInputs = [ rsync ];

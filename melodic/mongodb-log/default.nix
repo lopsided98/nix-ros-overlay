@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, roslib, rosgraph, rostopic, mongodb-store, rospy, openssl, tf }:
 buildRosPackage {
   pname = "ros-melodic-mongodb-log";
-  version = "0.5.0-r5";
+  version = "0.5.1-r2";
 
   src = fetchurl {
-    url = https://github.com/strands-project-releases/mongodb_store/archive/release/melodic/mongodb_log/0.5.0-5.tar.gz;
-    sha256 = "5ce0f217758fb3d15c24d5e6a00c59116028201b7ae95e3b5fa91af0ed8d5f2d";
+    url = https://github.com/strands-project-releases/mongodb_store/archive/release/melodic/mongodb_log/0.5.1-2.tar.gz;
+    sha256 = "dc56aae114fe58747eb278bc0a61859a81ebc01ff0c8c939464aaf0620732596";
   };
 
   buildInputs = [ tf sensor-msgs rosgraph rostopic mongodb-store rospy openssl roslib ];

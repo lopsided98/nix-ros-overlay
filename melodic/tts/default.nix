@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, pythonPackages, sound-play, rostest, message-generation, message-runtime, rospy, std-msgs, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-tts";
-  version = "1.0.1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/tts-release/archive/release/melodic/tts/1.0.1-0.tar.gz;
-    sha256 = "1d5dd8813c3e0cf4e9e75bd364a93f1b0b02072ddd561fa0d316a75cd0a9d708";
+    url = https://github.com/aws-gbp/tts-release/archive/release/melodic/tts/1.0.2-1.tar.gz;
+    sha256 = "ff9513ecc2e040bc38e882badee1407e351c9c1abb6cd8c75ec1ac81dcfe5cd1";
   };
 
   buildInputs = [ actionlib-msgs sound-play rostest pythonPackages.boto3 message-generation rospy std-msgs rosunit ];

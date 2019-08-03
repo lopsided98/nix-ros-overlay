@@ -186,6 +186,8 @@ self: super: {
 
  clear-costmap-recovery = self.callPackage ./clear-costmap-recovery {};
 
+ clock-relay = self.callPackage ./clock-relay {};
+
  cloudwatch-logger = self.callPackage ./cloudwatch-logger {};
 
  cloudwatch-logs-common = self.callPackage ./cloudwatch-logs-common {};
@@ -260,9 +262,13 @@ self: super: {
 
  cpp-common = self.callPackage ./cpp-common {};
 
+ cpr-multimaster-tools = self.callPackage ./cpr-multimaster-tools {};
+
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cv-camera = self.callPackage ./cv-camera {};
+
+ dataflow-lite = self.callPackage ./dataflow-lite {};
 
  dataspeed-can = self.callPackage ./dataspeed-can {};
 
@@ -355,6 +361,22 @@ self: super: {
  diagnostics = self.callPackage ./diagnostics {};
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
+
+ distance-map = self.callPackage ./distance-map {};
+
+ distance-map-core = self.callPackage ./distance-map-core {};
+
+ distance-map-deadreck = self.callPackage ./distance-map-deadreck {};
+
+ distance-map-msgs = self.callPackage ./distance-map-msgs {};
+
+ distance-map-node = self.callPackage ./distance-map-node {};
+
+ distance-map-opencv = self.callPackage ./distance-map-opencv {};
+
+ distance-map-rviz = self.callPackage ./distance-map-rviz {};
+
+ distance-map-tools = self.callPackage ./distance-map-tools {};
 
  dlux-global-planner = self.callPackage ./dlux-global-planner {};
 
@@ -584,6 +606,8 @@ self: super: {
 
  fiducials = self.callPackage ./fiducials {};
 
+ file-management = self.callPackage ./file-management {};
+
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
@@ -628,7 +652,21 @@ self: super: {
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
+ franka-control = self.callPackage ./franka-control {};
+
  franka-description = self.callPackage ./franka-description {};
+
+ franka-example-controllers = self.callPackage ./franka-example-controllers {};
+
+ franka-gripper = self.callPackage ./franka-gripper {};
+
+ franka-hw = self.callPackage ./franka-hw {};
+
+ franka-msgs = self.callPackage ./franka-msgs {};
+
+ franka-ros = self.callPackage ./franka-ros {};
+
+ franka-visualization = self.callPackage ./franka-visualization {};
 
  freight-bringup = self.callPackage ./freight-bringup {};
 
@@ -679,6 +717,8 @@ self: super: {
  global-planner = self.callPackage ./global-planner {};
 
  global-planner-tests = self.callPackage ./global-planner-tests {};
+
+ gmapping = self.callPackage ./gmapping {};
 
  goal-passer = self.callPackage ./goal-passer {};
 
@@ -778,6 +818,8 @@ self: super: {
 
  igvc-self-drive-sim = self.callPackage ./igvc-self-drive-sim {};
 
+ iirob-filters = self.callPackage ./iirob-filters {};
+
  image-cb-detector = self.callPackage ./image-cb-detector {};
 
  image-common = self.callPackage ./image-common {};
@@ -840,6 +882,8 @@ self: super: {
 
  interactive-marker-tutorials = self.callPackage ./interactive-marker-tutorials {};
 
+ interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
+
  interactive-markers = self.callPackage ./interactive-markers {};
 
  interval-intersection = self.callPackage ./interval-intersection {};
@@ -847,6 +891,24 @@ self: super: {
  ipr-extern = self.callPackage ./ipr-extern {};
 
  ivcon = self.callPackage ./ivcon {};
+
+ jackal-control = self.callPackage ./jackal-control {};
+
+ jackal-description = self.callPackage ./jackal-description {};
+
+ jackal-desktop = self.callPackage ./jackal-desktop {};
+
+ jackal-gazebo = self.callPackage ./jackal-gazebo {};
+
+ jackal-msgs = self.callPackage ./jackal-msgs {};
+
+ jackal-navigation = self.callPackage ./jackal-navigation {};
+
+ jackal-simulator = self.callPackage ./jackal-simulator {};
+
+ jackal-tutorials = self.callPackage ./jackal-tutorials {};
+
+ jackal-viz = self.callPackage ./jackal-viz {};
 
  joint-limits-interface = self.callPackage ./joint-limits-interface {};
 
@@ -992,6 +1054,8 @@ self: super: {
 
  libcmt = self.callPackage ./libcmt {};
 
+ libfranka = self.callPackage ./libfranka {};
+
  libg2o = self.callPackage ./libg2o {};
 
  libmavconn = self.callPackage ./libmavconn {};
@@ -1033,6 +1097,8 @@ self: super: {
  linksys-access-point = self.callPackage ./linksys-access-point {};
 
  linux-networking = self.callPackage ./linux-networking {};
+
+ lms1xx = self.callPackage ./lms1xx {};
 
  lockfree = self.callPackage ./lockfree {};
 
@@ -1122,11 +1188,15 @@ self: super: {
 
  md49-serialport = self.callPackage ./md49-serialport {};
 
+ mecanum-gazebo-plugin = self.callPackage ./mecanum-gazebo-plugin {};
+
  media-export = self.callPackage ./media-export {};
 
  message-filters = self.callPackage ./message-filters {};
 
  message-generation = self.callPackage ./message-generation {};
+
+ message-relay = self.callPackage ./message-relay {};
 
  message-runtime = self.callPackage ./message-runtime {};
 
@@ -1159,8 +1229,6 @@ self: super: {
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
  mongodb-log = self.callPackage ./mongodb-log {};
-
- mongodb-store = self.callPackage ./mongodb-store {};
 
  mongodb-store-msgs = self.callPackage ./mongodb-store-msgs {};
 
@@ -1274,6 +1342,10 @@ self: super: {
 
  multimaster-fkie = self.callPackage ./multimaster-fkie {};
 
+ multimaster-launch = self.callPackage ./multimaster-launch {};
+
+ multimaster-msgs = self.callPackage ./multimaster-msgs {};
+
  multimaster-msgs-fkie = self.callPackage ./multimaster-msgs-fkie {};
 
  multires-image = self.callPackage ./multires-image {};
@@ -1364,11 +1436,15 @@ self: super: {
 
  nlopt = self.callPackage ./nlopt {};
 
+ nmea-comms = self.callPackage ./nmea-comms {};
+
  nmea-gps-plugin = self.callPackage ./nmea-gps-plugin {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
+
+ nmea-to-geopose = self.callPackage ./nmea-to-geopose {};
 
  node-manager-fkie = self.callPackage ./node-manager-fkie {};
 
@@ -1388,6 +1464,8 @@ self: super: {
 
  novatel-msgs = self.callPackage ./novatel-msgs {};
 
+ ntpd-driver = self.callPackage ./ntpd-driver {};
+
  obj-to-pointcloud = self.callPackage ./obj-to-pointcloud {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
@@ -1401,6 +1479,8 @@ self: super: {
  octomap-msgs = self.callPackage ./octomap-msgs {};
 
  octomap-ros = self.callPackage ./octomap-ros {};
+
+ octomap-rviz-plugins = self.callPackage ./octomap-rviz-plugins {};
 
  octomap-server = self.callPackage ./octomap-server {};
 
@@ -1457,6 +1537,8 @@ self: super: {
  openni-launch = self.callPackage ./openni-launch {};
 
  openrtm-aist = self.callPackage ./openrtm-aist {};
+
+ openslam-gmapping = self.callPackage ./openslam-gmapping {};
 
  opt-camera = self.callPackage ./opt-camera {};
 
@@ -1774,6 +1856,8 @@ self: super: {
 
  rc-pick-client = self.callPackage ./rc-pick-client {};
 
+ rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
+
  rc-tagdetect-client = self.callPackage ./rc-tagdetect-client {};
 
  rc-visard = self.callPackage ./rc-visard {};
@@ -1781,6 +1865,8 @@ self: super: {
  rc-visard-description = self.callPackage ./rc-visard-description {};
 
  rc-visard-driver = self.callPackage ./rc-visard-driver {};
+
+ rcdiscover = self.callPackage ./rcdiscover {};
 
  rdl = self.callPackage ./rdl {};
 
@@ -1802,8 +1888,6 @@ self: super: {
 
  resource-retriever = self.callPackage ./resource-retriever {};
 
- respeaker-ros = self.callPackage ./respeaker-ros {};
-
  rexrov2-control = self.callPackage ./rexrov2-control {};
 
  rexrov2-description = self.callPackage ./rexrov2-description {};
@@ -1811,6 +1895,24 @@ self: super: {
  rexrov2-gazebo = self.callPackage ./rexrov2-gazebo {};
 
  rgbd-launch = self.callPackage ./rgbd-launch {};
+
+ ridgeback-control = self.callPackage ./ridgeback-control {};
+
+ ridgeback-description = self.callPackage ./ridgeback-description {};
+
+ ridgeback-desktop = self.callPackage ./ridgeback-desktop {};
+
+ ridgeback-gazebo = self.callPackage ./ridgeback-gazebo {};
+
+ ridgeback-gazebo-plugins = self.callPackage ./ridgeback-gazebo-plugins {};
+
+ ridgeback-msgs = self.callPackage ./ridgeback-msgs {};
+
+ ridgeback-navigation = self.callPackage ./ridgeback-navigation {};
+
+ ridgeback-simulator = self.callPackage ./ridgeback-simulator {};
+
+ ridgeback-viz = self.callPackage ./ridgeback-viz {};
 
  robot = self.callPackage ./robot {};
 
@@ -1889,6 +1991,8 @@ self: super: {
  rocon-uri = self.callPackage ./rocon-uri {};
 
  ros = self.callPackage ./ros {};
+
+ ros1-ign = self.callPackage ./ros1-ign {};
 
  ros-base = self.callPackage ./ros-base {};
 
@@ -2022,6 +2126,8 @@ self: super: {
 
  rosparam = self.callPackage ./rosparam {};
 
+ rosparam-handler = self.callPackage ./rosparam-handler {};
+
  rosparam-shortcuts = self.callPackage ./rosparam-shortcuts {};
 
  rospatlite = self.callPackage ./rospatlite {};
@@ -2117,6 +2223,8 @@ self: super: {
  rqt-controller-manager = self.callPackage ./rqt-controller-manager {};
 
  rqt-dep = self.callPackage ./rqt-dep {};
+
+ rqt-ez-publisher = self.callPackage ./rqt-ez-publisher {};
 
  rqt-graph = self.callPackage ./rqt-graph {};
 
@@ -2248,6 +2356,8 @@ self: super: {
 
  single-joint-position-action = self.callPackage ./single-joint-position-action {};
 
+ slam-gmapping = self.callPackage ./slam-gmapping {};
+
  slam-karto = self.callPackage ./slam-karto {};
 
  slic = self.callPackage ./slic {};
@@ -2377,6 +2487,8 @@ self: super: {
  tf2-msgs = self.callPackage ./tf2-msgs {};
 
  tf2-py = self.callPackage ./tf2-py {};
+
+ tf2-relay = self.callPackage ./tf2-relay {};
 
  tf2-ros = self.callPackage ./tf2-ros {};
 
@@ -2527,6 +2639,8 @@ self: super: {
  twist-mux-msgs = self.callPackage ./twist-mux-msgs {};
 
  twist-recovery = self.callPackage ./twist-recovery {};
+
+ um6 = self.callPackage ./um6 {};
 
  um7 = self.callPackage ./um7 {};
 
@@ -2683,6 +2797,22 @@ self: super: {
  wamv-gazebo = self.callPackage ./wamv-gazebo {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ warthog-control = self.callPackage ./warthog-control {};
+
+ warthog-description = self.callPackage ./warthog-description {};
+
+ warthog-desktop = self.callPackage ./warthog-desktop {};
+
+ warthog-gazebo = self.callPackage ./warthog-gazebo {};
+
+ warthog-msgs = self.callPackage ./warthog-msgs {};
+
+ warthog-simulator = self.callPackage ./warthog-simulator {};
+
+ warthog-viz = self.callPackage ./warthog-viz {};
+
+ wave-gazebo-plugins = self.callPackage ./wave-gazebo-plugins {};
 
  web-video-server = self.callPackage ./web-video-server {};
 

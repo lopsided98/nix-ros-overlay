@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, trajectory-msgs, catkin, message-generation, message-runtime, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2-controllers-msgs";
-  version = "1.10.15-r1";
+  version = "1.10.16-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_controllers_msgs/1.10.15-1.tar.gz;
-    sha256 = "12c67675691e346b4007f9e7f8fb69e83b4c65be62f955b2a9f71f95a6099211";
+    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_controllers_msgs/1.10.16-1.tar.gz;
+    sha256 = "7df6fb2f4a1fcb88af85dcd992d6864120a383811493157e7624a724474fb95c";
   };
 
   buildInputs = [ trajectory-msgs message-generation actionlib-msgs geometry-msgs ];

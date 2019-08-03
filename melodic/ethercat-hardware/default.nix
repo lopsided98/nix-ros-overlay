@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pr2-hardware-interface, pluginlib, eml, realtime-tools, catkin, tinyxml, diagnostic-updater, message-generation, message-runtime, diagnostic-msgs, pr2-msgs, roscpp, log4cxx }:
 buildRosPackage {
   pname = "ros-melodic-ethercat-hardware";
-  version = "1.8.18";
+  version = "1.8.19-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/melodic/ethercat_hardware/1.8.18-0.tar.gz;
-    sha256 = "43368d575a4d0b4f58a1e1896649012df83ba25fa63311ce42e26f5032d767f6";
+    url = https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/melodic/ethercat_hardware/1.8.19-1.tar.gz;
+    sha256 = "b2d0eea54e31386b19e79f7929b0885f1e5402b3c0efaafe70267bc5c51dbbfc";
   };
 
   buildInputs = [ pr2-hardware-interface pluginlib eml realtime-tools tinyxml diagnostic-updater message-generation diagnostic-msgs pr2-msgs roscpp log4cxx ];

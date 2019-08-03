@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rospack, camera-calibration-parsers, sensor-msgs, cv-bridge, catkin, roslang, dynamic-reconfigure, image-proc, compressed-image-transport }:
 buildRosPackage {
   pname = "ros-melodic-opt-camera";
-  version = "2.1.12-r2";
+  version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/opt_camera/2.1.12-2.tar.gz;
-    sha256 = "9735161bfb4b2b7cf82d749d0540f5624ab0034286edc102773dad42138e493f";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/opt_camera/2.1.13-1.tar.gz;
+    sha256 = "f8a97bde5146b272ff34434c5123e0840c30434ecbb076050b7b0e7a5395157e";
   };
 
   buildInputs = [ rospack camera-calibration-parsers sensor-msgs cv-bridge roslang dynamic-reconfigure image-proc compressed-image-transport ];

@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, roscpp, catkin, aws-common }:
+{ lib, buildRosPackage, fetchurl, gtest, catkin, rostest, aws-common, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-aws-ros1-common";
-  version = "2.0.0";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/aws_ros1_common-release/archive/release/melodic/aws_ros1_common/2.0.0-0.tar.gz;
-    sha256 = "34ab3879ab871a990b6b3eb591794dcdc7c62c32ef2687d011db9fdf14fcd354";
+    url = https://github.com/aws-gbp/aws_ros1_common-release/archive/release/melodic/aws_ros1_common/2.0.1-1.tar.gz;
+    sha256 = "c4a4208d835285e1c0301cc0269f3915962c6fc14631b6fcb8cc8dd08a83ba07";
   };
 
   buildInputs = [ aws-common roscpp ];
-  checkInputs = [ rostest ];
+  checkInputs = [ rostest gtest ];
   propagatedBuildInputs = [ aws-common roscpp ];
   nativeBuildInputs = [ catkin ];
 

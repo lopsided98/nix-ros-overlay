@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-melodic-franka-description";
-  version = "0.6.0";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_description/0.6.0-0.tar.gz;
-    sha256 = "06d66f1cfccb5d012babe67314e1f34870c7f272a15b6d14c83701f514f0e18f";
+    url = https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_description/0.6.0-1.tar.gz;
+    sha256 = "2219c2f91c728564ad20606258a024b4e8523f0c1599017c20ac9a1c3a1354bb";
   };
 
   propagatedBuildInputs = [ xacro ];

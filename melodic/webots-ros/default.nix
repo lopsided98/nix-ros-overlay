@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, message-generation, message-runtime, rospy, std-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-webots-ros";
-  version = "2.0.3-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = https://github.com/omichel/webots_ros-release/archive/release/melodic/webots_ros/2.0.3-1.tar.gz;
-    sha256 = "5e29fc8f6a8f9d1030043e047589dc915c28b57515f0621fdc3c9599f329d5a6";
+    url = https://github.com/omichel/webots_ros-release/archive/release/melodic/webots_ros/2.0.5-1.tar.gz;
+    sha256 = "af8cddb4486838d1bd6bc1bdecae612faa1b03b47d06c7a5d7dce0a3b999bb69";
   };
 
   buildInputs = [ sensor-msgs roscpp message-generation rospy std-msgs tf ];

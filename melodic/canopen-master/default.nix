@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, boost, class-loader, catkin, socketcan-interface, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-canopen-master";
-  version = "0.8.0";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/canopen_master/0.8.0-0.tar.gz;
-    sha256 = "89f6dfd60a4aac3dfa09d192fa08d5f4512de568af52377d9ae64e7ff271d186";
+    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/canopen_master/0.8.1-1.tar.gz;
+    sha256 = "9034297e3286ade1aa0d5f898b58551c21e93f2a12ca9984a287095d252aaf50";
   };
 
   buildInputs = [ class-loader boost socketcan-interface ];

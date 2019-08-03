@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rosmon-core, rqt-rosmon }:
 buildRosPackage {
   pname = "ros-melodic-rosmon";
-  version = "2.0.2";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon/2.0.2-0.tar.gz;
-    sha256 = "86889a64f484e3a77ff9c176c3c47c185e7c2d1e6a748885e2f658344bbad92a";
+    url = https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon/2.1.1-1.tar.gz;
+    sha256 = "cd26c93fdcf7a7ea7c743a1debb5d0c2ab2848eae7f1b66ca953b413f910f4b6";
   };
 
   buildInputs = [ rosmon-core rqt-rosmon ];

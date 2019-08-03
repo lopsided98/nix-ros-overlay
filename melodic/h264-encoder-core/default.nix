@@ -2,19 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-common, cmake, ffmpeg }:
+{ lib, buildRosPackage, fetchurl, gtest, catkin, ffmpeg, aws-common, cmake, gmock }:
 buildRosPackage {
   pname = "ros-melodic-h264-encoder-core";
-  version = "2.0.0";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/h264_encoder_core-release/archive/release/melodic/h264_encoder_core/2.0.0-0.tar.gz;
-    sha256 = "67e0ef7ef6d8f71198043fa55ce97ec74cd53cc1c9caf3e21f04dc58df7c7fb5";
+    url = https://github.com/aws-gbp/h264_encoder_core-release/archive/release/melodic/h264_encoder_core/2.0.1-1.tar.gz;
+    sha256 = "dbc4f911dc13d008b82e2ecc282975e2579061533d77738d5611e8abff285319";
   };
 
   buildInputs = [ aws-common ffmpeg ];
+  checkInputs = [ gtest gmock ];
   propagatedBuildInputs = [ aws-common ffmpeg ];
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [ cmake catkin ];
 
   meta = {
     description = ''Common base code for ROS1/ROS2 H264 encoder node'';
