@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, chomp-motion-planner, moveit-planners-chomp, moveit-planners-ompl }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-planners";
-  version = "0.9.15";
+  version = "0.9.17-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_planners/0.9.15-0.tar.gz;
-    sha256 = "81ca8afa23bd5e8049781297d5ae4a40c3f017361c85955326a4725b75ce5436";
+    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_planners/0.9.17-1.tar.gz;
+    sha256 = "8430a18ce5057b1cfbbe3ad2a468a537d7762671d28347be02e6f1589b3f0801";
   };
 
   propagatedBuildInputs = [ chomp-motion-planner moveit-planners-chomp moveit-planners-ompl ];

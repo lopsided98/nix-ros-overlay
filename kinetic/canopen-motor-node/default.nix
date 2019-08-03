@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, filters, muparser, joint-limits-interface, catkin, canopen-402, urdf, controller-manager-msgs, canopen-chain-node, roscpp, canopen-master, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-canopen-motor-node";
-  version = "0.7.10";
+  version = "0.7.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/canopen_motor_node/0.7.10-0.tar.gz;
-    sha256 = "c10dfaaa260e419531303187c5a2b6e2a766c8b567964d9e1c5cd0d37aca5c1d";
+    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/canopen_motor_node/0.7.11-1.tar.gz;
+    sha256 = "822960aa62c16b770432c8113a460b9b15a5ba4ea41c051b9f7691b75fa28b6c";
   };
 
   buildInputs = [ controller-manager hardware-interface muparser filters joint-limits-interface canopen-402 controller-manager-msgs urdf canopen-chain-node roscpp canopen-master ];

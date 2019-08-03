@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslint, can-msgs, catkin, rostest, socketcan-interface, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-socketcan-bridge";
-  version = "0.7.10";
+  version = "0.7.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/socketcan_bridge/0.7.10-0.tar.gz;
-    sha256 = "44760caaf9b93229a113e91b889e6b2a6dcc7d7425335044a7776ee085cfed43";
+    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/socketcan_bridge/0.7.11-1.tar.gz;
+    sha256 = "350beab81aafd73ed2a827b8c6c4212519141fc3d1c301c3085b708c52a91afa";
   };
 
   buildInputs = [ can-msgs roscpp socketcan-interface ];

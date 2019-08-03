@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, libmongocxx-ros, roslib, rosgraph, rostopic, mongodb-store, rospy, openssl, tf }:
 buildRosPackage {
   pname = "ros-kinetic-mongodb-log";
-  version = "0.4.4-r2";
+  version = "0.4.5-r1";
 
   src = fetchurl {
-    url = https://github.com/strands-project-releases/mongodb_store/archive/release/kinetic/mongodb_log/0.4.4-2.tar.gz;
-    sha256 = "c3eab2526fa63a48778723282db9807350a4140642d52d60ea0a87dfc832d90b";
+    url = https://github.com/strands-project-releases/mongodb_store/archive/release/kinetic/mongodb_log/0.4.5-1.tar.gz;
+    sha256 = "f172d1720a099dcf02680c52aea645d121ebc8bceeb5571bba54c77b3d201619";
   };
 
   buildInputs = [ tf sensor-msgs libmongocxx-ros rosgraph rostopic mongodb-store rospy openssl roslib ];

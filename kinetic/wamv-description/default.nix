@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-wamv-description";
-  version = "0.3.2";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vmrc-release/archive/release/kinetic/wamv_description/0.3.2-0.tar.gz;
-    sha256 = "6400f010d080b918b2a71ab699acf137ec1bb4cbf90c9aa0d12a992ed30dd6fc";
+    url = https://github.com/ros-gbp/vrx-release/archive/release/kinetic/wamv_description/1.1.2-1.tar.gz;
+    sha256 = "2638f86176dd3707c819434d7d7116d09036d049d63d8eee409a306be8166a2a";
   };
 
   buildInputs = [ xacro ];

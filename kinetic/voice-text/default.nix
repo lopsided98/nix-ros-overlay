@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, sound-play, message-generation, message-runtime, dynamic-reconfigure, roscpp, nkf }:
 buildRosPackage {
   pname = "ros-kinetic-voice-text";
-  version = "2.1.12-r1";
+  version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/voice_text/2.1.12-1.tar.gz;
-    sha256 = "25fc2f4d5d8cca5ba537f9b0c8583551ef4d2f28ccf117f335a0c24c68d43d1c";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/voice_text/2.1.13-1.tar.gz;
+    sha256 = "9e9c565b4033ccee57af086bc1ceb93476c6571938fd114fcb67c0cdf1f5ea3a";
   };
 
   buildInputs = [ message-generation roscpp dynamic-reconfigure ];

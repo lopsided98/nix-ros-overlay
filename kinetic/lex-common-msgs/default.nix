@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, audio-common-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-lex-common-msgs";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/lex_node-release/archive/release/kinetic/lex_common_msgs/2.0.0-1.tar.gz;
-    sha256 = "68018b2090942b9c89ac2c3e68e8fd813bde28971629334a7b685dafbd76ab5e";
+    url = https://github.com/aws-gbp/lex_node-release/archive/release/kinetic/lex_common_msgs/2.0.1-1.tar.gz;
+    sha256 = "c0b17dece9e5e972eb566d7a92893ba405e66f38b11e6b6f3844e5876057aad2";
   };
 
   buildInputs = [ std-msgs message-generation audio-common-msgs ];

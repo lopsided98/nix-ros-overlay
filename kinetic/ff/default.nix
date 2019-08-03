@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, rospack, rosbash, mk, rosbuild, catkin, flex, cacert, unzip, openssl, roslib, bison }:
 buildRosPackage {
   pname = "ros-kinetic-ff";
-  version = "2.1.12-r1";
+  version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/ff/2.1.12-1.tar.gz;
-    sha256 = "30d4e141ff34ef90cb6978bc6e65d849b407d079163bc7fe4c33b79283e7389c";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/ff/2.1.13-1.tar.gz;
+    sha256 = "490b9f6322c69f550e96ba8f2d5dddf91af67a10014e4858ad1cd29215411ea4";
   };
 
   buildInputs = [ rospack rosbash mk rosbuild flex cacert unzip openssl roslib bison ];

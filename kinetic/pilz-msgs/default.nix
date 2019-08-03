@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, moveit-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-msgs";
-  version = "0.3.7";
+  version = "0.3.8";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_msgs/0.3.7-0.tar.gz;
-    sha256 = "8a7a8b5cbe3a61c054f012cb65a019ebc7b46c2e93e6ec2594349f4b007f463f";
+    url = https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_msgs/0.3.8-0.tar.gz;
+    sha256 = "9a0f38ee0ba7249d6ff24ef7e07f7f8fd7a1dd114fce97a7e7fcaa89a350155b";
   };
 
   buildInputs = [ moveit-msgs message-generation ];

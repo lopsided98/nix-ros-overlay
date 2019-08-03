@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-ros-monitoring-msgs";
-  version = "1.0.0-r3";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/ros_monitoring_msgs-release/archive/release/kinetic/ros_monitoring_msgs/1.0.0-3.tar.gz;
-    sha256 = "6fab3b96fbc03dae4c15ec6b50ca013837658fffaddbb4698f1832972c60ca97";
+    url = https://github.com/aws-gbp/ros_monitoring_msgs-release/archive/release/kinetic/ros_monitoring_msgs/1.0.1-1.tar.gz;
+    sha256 = "6c7ce0c94cb5df58f0b40861686727393121d0b34b99bdac88b12dfeee6619e5";
   };
 
   buildInputs = [ std-msgs message-generation ];

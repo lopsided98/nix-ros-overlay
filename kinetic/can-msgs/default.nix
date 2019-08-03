@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-can-msgs";
-  version = "0.7.10";
+  version = "0.7.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/can_msgs/0.7.10-0.tar.gz;
-    sha256 = "7c0ef8e282e298de88c84f31fc1df1645e2f5826ea3c971b9ae8a9cfdb4dde2e";
+    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/can_msgs/0.7.11-1.tar.gz;
+    sha256 = "9c45fc75b57c8cfa275a216e815f377619b15303cf06609569b9895bb1c715e1";
   };
 
   buildInputs = [ std-msgs message-generation ];

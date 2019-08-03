@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, robot-state-publisher, roslaunch, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-warthog-description";
-  version = "0.1.0";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/warthog-release/archive/release/kinetic/warthog_description/0.1.0-0.tar.gz;
-    sha256 = "5074f3fe72d4156c322f59a28874ca9636d3ce2b2ec76048532f6d1a00832cc5";
+    url = https://github.com/clearpath-gbp/warthog-release/archive/release/kinetic/warthog_description/0.1.1-1.tar.gz;
+    sha256 = "83a365068a304996e6bc0a131d4b9536fab934b94a84eeb15721f201b62f11c5";
   };
 
   buildInputs = [ roslaunch ];

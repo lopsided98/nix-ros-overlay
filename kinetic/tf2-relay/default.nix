@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, tf2-msgs, roslint, catkin, tf2-ros, message-relay, roscpp, roslaunch, tf }:
 buildRosPackage {
   pname = "ros-kinetic-tf2-relay";
-  version = "0.0.1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/tf2_relay/0.0.1-0.tar.gz;
-    sha256 = "48c2b0d027b701f271a12c6bb3782496187639e331fccb4d7ba8c615d7fe76b0";
+    url = https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/tf2_relay/0.0.2-1.tar.gz;
+    sha256 = "cb3226ddf3a151f77c7a139ccfb5b96c1545aae4e04b823ed58426f9ebc35b4e";
   };
 
   buildInputs = [ roscpp tf2-msgs message-relay ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, hector-gazebo-plugins, catkin, gazebo-plugins, husky-description, multimaster-launch, rostopic, pointcloud-to-laserscan, roslaunch, husky-control, gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-kinetic-husky-gazebo";
-  version = "0.3.3";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_gazebo/0.3.3-0.tar.gz;
-    sha256 = "c0512f217ed26d645befa3ad2d0a5a60599120c6f7de3f8dc352e379b8d5e1eb";
+    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_gazebo/0.3.4-1.tar.gz;
+    sha256 = "6b0c9887f8d43a2ce66e86fcd4aa198c0840386e55e37ffe3acadb55e39f040f";
   };
 
   buildInputs = [ roslaunch ];

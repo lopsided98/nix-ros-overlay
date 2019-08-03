@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, git, cacert, openssl, cmake, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-libcmt";
-  version = "2.1.12-r1";
+  version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/libcmt/2.1.12-1.tar.gz;
-    sha256 = "a6bb669fa1ac0c05fef58060c6869dd9e1cff4670ec765ccff28af04a596003b";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/libcmt/2.1.13-1.tar.gz;
+    sha256 = "fc88273a96f7202d3f0e1a45cbbcb6c891fc8c2240d2a7db90b135b06267e02a";
   };
 
   buildInputs = [ openssl cacert git opencv3 ];

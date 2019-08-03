@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslint, camera-info-manager, image-transport, sensor-msgs, catkin, cv-bridge, nodelet, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-flir-boson-usb";
-  version = "1.2.0";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/astuff/flir_boson_usb-release/archive/release/kinetic/flir_boson_usb/1.2.0-0.tar.gz;
-    sha256 = "3201b7e69e60ccf4e640eb4f9d98d79de893b23a188a1408667958ae43f8704c";
+    url = https://github.com/astuff/flir_boson_usb-release/archive/release/kinetic/flir_boson_usb/1.2.1-1.tar.gz;
+    sha256 = "acc7d8181cb7b0caa72414bc70e99e76583669a799914a6f1c0a95867df816fc";
   };
 
   buildInputs = [ roslint camera-info-manager image-transport sensor-msgs cv-bridge roscpp nodelet ];

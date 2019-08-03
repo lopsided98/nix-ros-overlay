@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, moveit-ros-planning, moveit-ros-move-group, pluginlib, rosconsole, catkin, roscpp, moveit-core, actionlib, moveit-msgs, dynamic-reconfigure, tf, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-manipulation";
-  version = "0.9.15";
+  version = "0.9.17-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_manipulation/0.9.15-0.tar.gz;
-    sha256 = "6ab6cf73d86a17c1da0bd2946f8d071a62b7b0e478a5f46dbe96e30de2516fa6";
+    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_manipulation/0.9.17-1.tar.gz;
+    sha256 = "5a4e0ae3d9b8758c1a7d941f663f88d88b4beae9588e161388a65a6e99d58bff";
   };
 
   buildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib rosconsole roscpp actionlib moveit-core dynamic-reconfigure moveit-msgs tf eigen ];

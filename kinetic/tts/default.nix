@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, pythonPackages, sound-play, rostest, message-generation, message-runtime, rospy, std-msgs, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-tts";
-  version = "1.0.1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/tts-release/archive/release/kinetic/tts/1.0.1-0.tar.gz;
-    sha256 = "c31519ac5ff27c8dd3749b6e6866d1108a0c76619a15ebd7a8a9f1b58b4ab1c6";
+    url = https://github.com/aws-gbp/tts-release/archive/release/kinetic/tts/1.0.2-1.tar.gz;
+    sha256 = "81335f5408a962901010ab231a95ee3904ac8c6eedccc43a927ba323c2379113";
   };
 
   buildInputs = [ actionlib-msgs sound-play rostest pythonPackages.boto3 message-generation rospy std-msgs rosunit ];

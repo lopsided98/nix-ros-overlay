@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, boost, git, catkin, cacert, scons, openssl, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-libmongocxx-ros";
-  version = "0.4.4-r2";
+  version = "0.4.5-r1";
 
   src = fetchurl {
-    url = https://github.com/strands-project-releases/mongodb_store/archive/release/kinetic/libmongocxx_ros/0.4.4-2.tar.gz;
-    sha256 = "4922232d723742ad144ffa501869d385d9bc6a4a542345a162178f5a53313faa";
+    url = https://github.com/strands-project-releases/mongodb_store/archive/release/kinetic/libmongocxx_ros/0.4.5-1.tar.gz;
+    sha256 = "fef506e2852bbe39dd5e87a2751dc6b1088083b61b8596376da919362b403502";
   };
 
   buildInputs = [ boost git cacert openssl roscpp ];

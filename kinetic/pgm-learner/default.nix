@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rostest, message-generation, message-runtime, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-pgm-learner";
-  version = "2.1.12-r1";
+  version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/pgm_learner/2.1.12-1.tar.gz;
-    sha256 = "846693577af4871bced780fbd432ffe093dbe597bd8ab46e396956021d3bb5fd";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/pgm_learner/2.1.13-1.tar.gz;
+    sha256 = "fa006afdbb37f17640f481824458c49f7ce8613d024f079cfc530cf1ae44ecfb";
   };
 
   buildInputs = [ pythonPackages.scipy message-generation rospy ];

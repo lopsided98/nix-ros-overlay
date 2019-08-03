@@ -78,8 +78,6 @@ self: super: {
 
  app-manager = self.callPackage ./app-manager {};
 
- apriltag = self.callPackage ./apriltag {};
-
  ar-track-alvar = self.callPackage ./ar-track-alvar {};
 
  ar-track-alvar-msgs = self.callPackage ./ar-track-alvar-msgs {};
@@ -602,6 +600,8 @@ self: super: {
 
  darknet-ros-msgs = self.callPackage ./darknet-ros-msgs {};
 
+ dataflow-lite = self.callPackage ./dataflow-lite {};
+
  dataspeed-can = self.callPackage ./dataspeed-can {};
 
  dataspeed-can-msg-filters = self.callPackage ./dataspeed-can-msg-filters {};
@@ -720,6 +720,22 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
+ distance-map = self.callPackage ./distance-map {};
+
+ distance-map-core = self.callPackage ./distance-map-core {};
+
+ distance-map-deadreck = self.callPackage ./distance-map-deadreck {};
+
+ distance-map-msgs = self.callPackage ./distance-map-msgs {};
+
+ distance-map-node = self.callPackage ./distance-map-node {};
+
+ distance-map-opencv = self.callPackage ./distance-map-opencv {};
+
+ distance-map-rviz = self.callPackage ./distance-map-rviz {};
+
+ distance-map-tools = self.callPackage ./distance-map-tools {};
+
  dlux-global-planner = self.callPackage ./dlux-global-planner {};
 
  dlux-plugins = self.callPackage ./dlux-plugins {};
@@ -741,6 +757,8 @@ self: super: {
  driver-base = self.callPackage ./driver-base {};
 
  driver-common = self.callPackage ./driver-common {};
+
+ drone-wrapper = self.callPackage ./drone-wrapper {};
 
  dsr-control = self.callPackage ./dsr-control {};
 
@@ -1011,6 +1029,8 @@ self: super: {
  fiducial-slam = self.callPackage ./fiducial-slam {};
 
  fiducials = self.callPackage ./fiducials {};
+
+ file-management = self.callPackage ./file-management {};
 
  filters = self.callPackage ./filters {};
 
@@ -1558,6 +1578,8 @@ self: super: {
 
  jaguar-navigation = self.callPackage ./jaguar-navigation {};
 
+ jderobot-assets = self.callPackage ./jderobot-assets {};
+
  jog-arm = self.callPackage ./jog-arm {};
 
  jog-control = self.callPackage ./jog-control {};
@@ -1803,6 +1825,8 @@ self: super: {
  laser-filtering = self.callPackage ./laser-filtering {};
 
  laser-filters = self.callPackage ./laser-filters {};
+
+ laser-filters-jsk-patch = self.callPackage ./laser-filters-jsk-patch {};
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
@@ -2165,6 +2189,8 @@ self: super: {
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
  moveit = self.callPackage ./moveit {};
+
+ moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
 
  moveit-config-m0609 = self.callPackage ./moveit-config-m0609 {};
 
@@ -3198,6 +3224,8 @@ self: super: {
 
  rc-pick-client = self.callPackage ./rc-pick-client {};
 
+ rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
+
  rc-tagdetect-client = self.callPackage ./rc-tagdetect-client {};
 
  rc-visard = self.callPackage ./rc-visard {};
@@ -3205,6 +3233,8 @@ self: super: {
  rc-visard-description = self.callPackage ./rc-visard-description {};
 
  rc-visard-driver = self.callPackage ./rc-visard-driver {};
+
+ rcdiscover = self.callPackage ./rcdiscover {};
 
  rdl = self.callPackage ./rdl {};
 
@@ -3220,6 +3250,10 @@ self: super: {
 
  rdl-urdfreader = self.callPackage ./rdl-urdfreader {};
 
+ realsense2-camera = self.callPackage ./realsense2-camera {};
+
+ realsense2-description = self.callPackage ./realsense2-description {};
+
  realsense-camera = self.callPackage ./realsense-camera {};
 
  realtime-tools = self.callPackage ./realtime-tools {};
@@ -3229,8 +3263,6 @@ self: super: {
  resized-image-transport = self.callPackage ./resized-image-transport {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
-
- respeaker-ros = self.callPackage ./respeaker-ros {};
 
  rexrov2-control = self.callPackage ./rexrov2-control {};
 
@@ -3640,6 +3672,10 @@ self: super: {
 
  rosmon = self.callPackage ./rosmon {};
 
+ rosmon-core = self.callPackage ./rosmon-core {};
+
+ rosmon-msgs = self.callPackage ./rosmon-msgs {};
+
  rosmsg = self.callPackage ./rosmsg {};
 
  rosnode = self.callPackage ./rosnode {};
@@ -3665,6 +3701,8 @@ self: super: {
  rospy-message-converter = self.callPackage ./rospy-message-converter {};
 
  rospy-tutorials = self.callPackage ./rospy-tutorials {};
+
+ rospy-wrapper = self.callPackage ./rospy-wrapper {};
 
  rosrt = self.callPackage ./rosrt {};
 
@@ -3736,6 +3774,8 @@ self: super: {
 
  rqt-dep = self.callPackage ./rqt-dep {};
 
+ rqt-drone-teleop = self.callPackage ./rqt-drone-teleop {};
+
  rqt-ez-publisher = self.callPackage ./rqt-ez-publisher {};
 
  rqt-gauges = self.callPackage ./rqt-gauges {};
@@ -3792,6 +3832,8 @@ self: super: {
 
  rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
 
+ rqt-rosmon = self.callPackage ./rqt-rosmon {};
+
  rqt-runtime-monitor = self.callPackage ./rqt-runtime-monitor {};
 
  rqt-rviz = self.callPackage ./rqt-rviz {};
@@ -3812,7 +3854,15 @@ self: super: {
 
  rqt-wrapper = self.callPackage ./rqt-wrapper {};
 
+ rr-control-input-manager = self.callPackage ./rr-control-input-manager {};
+
  rr-openrover-basic = self.callPackage ./rr-openrover-basic {};
+
+ rr-openrover-driver = self.callPackage ./rr-openrover-driver {};
+
+ rr-openrover-driver-msgs = self.callPackage ./rr-openrover-driver-msgs {};
+
+ rr-openrover-stack = self.callPackage ./rr-openrover-stack {};
 
  rr-swiftnav-piksi = self.callPackage ./rr-swiftnav-piksi {};
 
@@ -3951,6 +4001,8 @@ self: super: {
  schunk-svh-driver = self.callPackage ./schunk-svh-driver {};
 
  scratch4robots = self.callPackage ./scratch4robots {};
+
+ seed-smartactuator-sdk = self.callPackage ./seed-smartactuator-sdk {};
 
  self-test = self.callPackage ./self-test {};
 
@@ -4686,8 +4738,6 @@ self: super: {
 
  viz = self.callPackage ./viz {};
 
- vmrc-gazebo = self.callPackage ./vmrc-gazebo {};
-
  voice-text = self.callPackage ./voice-text {};
 
  voxel-grid = self.callPackage ./voxel-grid {};
@@ -4695,6 +4745,8 @@ self: super: {
  vrpn = self.callPackage ./vrpn {};
 
  vrpn-client-ros = self.callPackage ./vrpn-client-ros {};
+
+ vrx-gazebo = self.callPackage ./vrx-gazebo {};
 
  vs060 = self.callPackage ./vs060 {};
 
@@ -4714,9 +4766,15 @@ self: super: {
 
  warthog-desktop = self.callPackage ./warthog-desktop {};
 
+ warthog-gazebo = self.callPackage ./warthog-gazebo {};
+
  warthog-msgs = self.callPackage ./warthog-msgs {};
 
+ warthog-simulator = self.callPackage ./warthog-simulator {};
+
  warthog-viz = self.callPackage ./warthog-viz {};
+
+ wave-gazebo-plugins = self.callPackage ./wave-gazebo-plugins {};
 
  waypoint-generator = self.callPackage ./waypoint-generator {};
 

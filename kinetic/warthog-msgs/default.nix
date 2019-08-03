@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-warthog-msgs";
-  version = "0.1.0";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/warthog-release/archive/release/kinetic/warthog_msgs/0.1.0-0.tar.gz;
-    sha256 = "7a2debb78ec4379a8c84a543d60d000adcd01c604be4ef7edd75134a84d27898";
+    url = https://github.com/clearpath-gbp/warthog-release/archive/release/kinetic/warthog_msgs/0.1.1-1.tar.gz;
+    sha256 = "0e5d267589e2e1a8ad6f4e6e31165da1a9cd71a07124e9991d6bda9b1444d729";
   };
 
   buildInputs = [ std-msgs message-generation ];

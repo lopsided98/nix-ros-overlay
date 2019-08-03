@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-rosbridge-msgs";
-  version = "0.11.1-r1";
+  version = "0.11.2-r1";
 
   src = fetchurl {
-    url = https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosbridge_msgs/0.11.1-1.tar.gz;
-    sha256 = "0a5f91108d3a280f0fe84a047e6dca675dac688b88e47cc8938fc3ae9c68721c";
+    url = https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosbridge_msgs/0.11.2-1.tar.gz;
+    sha256 = "6f98f26ce58afb4bdd8c869e62099e2c0a564a460ace6f1df3e76e6a9e6b9211";
   };
 
   buildInputs = [ std-msgs message-generation ];

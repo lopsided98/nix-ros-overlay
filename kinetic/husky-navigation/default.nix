@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gmapping, frontier-exploration, map-server, amcl, base-local-planner, navfn, catkin, move-base, dwa-local-planner, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-husky-navigation";
-  version = "0.3.3";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_navigation/0.3.3-0.tar.gz;
-    sha256 = "aa5e6782581f997fa1e578ebd250e0252fe886a313aad6c0ce35c46e137a4b5f";
+    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_navigation/0.3.4-1.tar.gz;
+    sha256 = "dcdac9fbdd79fc93fd7275ca3824d35b27a4397a69993b78399004d016f7764f";
   };
 
   buildInputs = [ roslaunch ];

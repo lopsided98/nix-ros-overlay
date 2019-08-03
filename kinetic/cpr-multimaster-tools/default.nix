@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-relay, clock-relay, tf2-relay, multimaster-launch, multimaster-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cpr-multimaster-tools";
-  version = "0.0.1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/cpr_multimaster_tools/0.0.1-0.tar.gz;
-    sha256 = "5eedbb275f29e11aad06c2b301c2788982eea7141a4e0ad23e313ce428a9c4f4";
+    url = https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/cpr_multimaster_tools/0.0.2-1.tar.gz;
+    sha256 = "3263f4d958d92d50b4d5b52c16e3c4462a6b9b30e0622e5cfe4774bd699a73cc";
   };
 
   propagatedBuildInputs = [ message-relay clock-relay tf2-relay multimaster-msgs multimaster-launch ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslint, catkin, message-relay, rosgraph-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-clock-relay";
-  version = "0.0.1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/clock_relay/0.0.1-0.tar.gz;
-    sha256 = "4fc68bffec25eb3c8e0b9c60bea8ad10c71a9abb2e784c8e2ad6404014218d0e";
+    url = https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/clock_relay/0.0.2-1.tar.gz;
+    sha256 = "49a8500cdb62580a97141f79c267c0f7e58a847cee017f62e4a706ffed8eb5b3";
   };
 
   buildInputs = [ rosgraph-msgs roscpp message-relay ];

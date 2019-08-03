@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, h264-encoder-core, image-transport, sensor-msgs, gtest, catkin, image-transport-plugins, rostest, message-generation, kinesis-video-msgs, message-runtime, aws-ros1-common, gmock }:
 buildRosPackage {
   pname = "ros-kinetic-h264-video-encoder";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/h264_video_encoder-release/archive/release/kinetic/h264_video_encoder/1.1.2-1.tar.gz;
-    sha256 = "a35c747d54fcc7c32ffae2f003937f5b1e74e2981c13658c277eb74a28d08fb9";
+    url = https://github.com/aws-gbp/h264_video_encoder-release/archive/release/kinetic/h264_video_encoder/1.1.3-1.tar.gz;
+    sha256 = "9b98640a982c6a95553cbe574c44752a5ab834c8e4c9c0ff98adc938009b43a8";
   };
 
   buildInputs = [ h264-encoder-core image-transport sensor-msgs message-generation kinesis-video-msgs aws-ros1-common ];

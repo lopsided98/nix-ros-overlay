@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, husky-msgs, roslint, diff-drive-controller, sensor-msgs, catkin, topic-tools, diagnostic-updater, husky-description, diagnostic-msgs, roslaunch, roscpp, husky-control, geometry-msgs, diagnostic-aggregator }:
 buildRosPackage {
   pname = "ros-kinetic-husky-base";
-  version = "0.3.3";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_base/0.3.3-0.tar.gz;
-    sha256 = "44df37260e5d6b7931ad069da17c9575b219037b9835fc5b308c9079d68c3d8e";
+    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_base/0.3.4-1.tar.gz;
+    sha256 = "456ded3c0c2ea7ed44105c12345ca8fd37a4a6e1071f2a456c0053a28701dde5";
   };
 
   buildInputs = [ controller-manager hardware-interface husky-msgs roslint sensor-msgs diagnostic-updater diagnostic-msgs roslaunch roscpp ];

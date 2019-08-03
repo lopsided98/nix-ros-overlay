@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, controller-manager, twist-mux, joint-state-controller, rosserial-server, diff-drive-controller, joy, catkin, robot-localization, teleop-twist-joy, interactive-marker-twist-server, topic-tools, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-warthog-control";
-  version = "0.1.0";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/warthog-release/archive/release/kinetic/warthog_control/0.1.0-0.tar.gz;
-    sha256 = "7d05d99045d03d73c4f44e70bc958ffd6d39c89988886f39a537c3b9bac5856d";
+    url = https://github.com/clearpath-gbp/warthog-release/archive/release/kinetic/warthog_control/0.1.1-1.tar.gz;
+    sha256 = "e1e879c9cb9c0beedd213b24562bcd9b92ef6efc4ea1d913e57d01934ef1d5e8";
   };
 
   buildInputs = [ roslaunch ];

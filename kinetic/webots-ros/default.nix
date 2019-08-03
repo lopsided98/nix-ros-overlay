@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, message-generation, message-runtime, rospy, std-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-webots-ros";
-  version = "2.0.3-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = https://github.com/omichel/webots_ros-release/archive/release/kinetic/webots_ros/2.0.3-1.tar.gz;
-    sha256 = "7da3bebefa67a5b6b70d70bc3353c29171d784f8d6e6a34db65da2ec6a72365d";
+    url = https://github.com/omichel/webots_ros-release/archive/release/kinetic/webots_ros/2.0.5-1.tar.gz;
+    sha256 = "599d07fccbf6377bd4785b8b2632b6485a7b1ec5f919ccdf5f5b10fa8eee80c6";
   };
 
   buildInputs = [ sensor-msgs roscpp message-generation rospy std-msgs tf ];

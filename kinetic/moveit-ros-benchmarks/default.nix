@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, moveit-ros-planning, pluginlib, catkin, moveit-ros-warehouse, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-benchmarks";
-  version = "0.9.15";
+  version = "0.9.17-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_benchmarks/0.9.15-0.tar.gz;
-    sha256 = "08c844d6105c043d3cf500ac24a775898239966cb15ea289c56a85632fa45e80";
+    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_benchmarks/0.9.17-1.tar.gz;
+    sha256 = "447f9b82d349f39208c9e01ec4d9e21e5e31bddfb3ea0532327390871f452329";
   };
 
   buildInputs = [ moveit-ros-planning moveit-ros-warehouse roscpp pluginlib ];

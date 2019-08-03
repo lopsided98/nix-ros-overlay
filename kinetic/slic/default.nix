@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cmake-modules, git, cacert, openssl, cmake, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-slic";
-  version = "2.1.12-r1";
+  version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/slic/2.1.12-1.tar.gz;
-    sha256 = "e1dc3810e9ad328ed8fb3fdf8004e09efdec04a6ed93c1982d03fd7583e7321a";
+    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/slic/2.1.13-1.tar.gz;
+    sha256 = "57938cc2ebfa7b9dab48faba2da35075a2bc5d344acf1eecde379ca8e9273dd4";
   };
 
   buildInputs = [ cmake-modules git cacert openssl opencv3 ];
