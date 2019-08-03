@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "rosdep";
-  version = "0.15.1";
+  version = "0.15.2";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "0y3hxyd84q7c0091cci3dnsg8pm9yw9i4fxgc09wzzgaiq8y3k40";
+    sha256 = "1zyx1f31fb80b0q7fz5kc1px4882c42p5ag0985xxsl1glvy4mhl";
   };
 
   patches = [ ./0001-Add-support-for-Nix-NixOS.patch ];
