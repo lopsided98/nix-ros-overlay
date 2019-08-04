@@ -122,17 +122,6 @@ let
       '';
     });
 
-    microstrain-3dmgx2-imu = rosSuper.microstrain-3dmgx2-imu.overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = patches ++ [
-        (self.fetchpatch {
-          url = https://github.com/k-okada/microstrain_3dmgx2_imu/commit/f06c83793e98318c4687e475e198bb08d039fca7.patch;
-          sha256 = "0lk5p9qxsing6n8qyf17aq1qxdd4ilir0kd75lxkr3qvnby7d7hr";
-        })
-      ];
-    });
-
     python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
       propagatedNativeBuildInputs ? [],
       postPatch ? "", ...
