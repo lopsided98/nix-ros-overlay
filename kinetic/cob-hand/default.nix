@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cob-hand-bridge, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-cob-hand";
-  version = "0.6.5";
+  version = "0.6.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_hand-release/archive/release/kinetic/cob_hand/0.6.5-0.tar.gz;
-    sha256 = "ea51d99eefb08b3f77e65e28a406581945d9892cabfe0e10de7e43b1408c660e";
+    url = https://github.com/ipa320/cob_hand-release/archive/release/kinetic/cob_hand/0.6.6-1.tar.gz;
+    sha256 = "34d2c47cb533a381e98bfe6150d3193c97313750623b5ae6e8c0cd56e68b791b";
   };
 
   propagatedBuildInputs = [ cob-hand-bridge ];

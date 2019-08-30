@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.0.5-r1";
 
   src = fetchurl {
-    url = https://github.com/omichel/webots_ros-release/archive/release/kinetic/webots_ros/2.0.5-1.tar.gz;
+    url = https://github.com/cyberbotics/webots_ros-release/archive/release/kinetic/webots_ros/2.0.5-1.tar.gz;
     sha256 = "599d07fccbf6377bd4785b8b2632b6485a7b1ec5f919ccdf5f5b10fa8eee80c6";
   };
 

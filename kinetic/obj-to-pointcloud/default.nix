@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, rostest, neonavigation-common, pcl-ros, eigen-conversions, roscpp, geometry-msgs, eigen }:
+{ lib, buildRosPackage, fetchurl, roslint, pcl, sensor-msgs, catkin, rostest, neonavigation-common, eigen, eigen-conversions, roscpp, pcl-conversions, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-obj-to-pointcloud";
-  version = "0.4.0-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation-release/archive/release/kinetic/obj_to_pointcloud/0.4.0-1.tar.gz;
-    sha256 = "8cc6062986dffe4f69496bbbb0741a57d8d572f1bb7f8e56100c3ae94ef72f70";
+    url = https://github.com/at-wat/neonavigation-release/archive/release/kinetic/obj_to_pointcloud/0.4.2-1.tar.gz;
+    sha256 = "ab9db8d35e9a82ec8b914f8da2f84ac0359d534088ca67a4bf35ebd0b608e46f";
   };
 
-  buildInputs = [ sensor-msgs neonavigation-common eigen eigen-conversions roscpp pcl-ros geometry-msgs ];
+  buildInputs = [ pcl sensor-msgs neonavigation-common eigen eigen-conversions roscpp pcl-conversions geometry-msgs ];
   checkInputs = [ rostest roslint ];
-  propagatedBuildInputs = [ sensor-msgs neonavigation-common eigen eigen-conversions roscpp pcl-ros geometry-msgs ];
+  propagatedBuildInputs = [ pcl sensor-msgs neonavigation-common eigen eigen-conversions roscpp pcl-conversions geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

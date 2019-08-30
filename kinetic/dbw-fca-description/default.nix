@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rviz, urdf, robot-state-publisher, roslaunch, roslib, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-fca-description";
-  version = "1.0.1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/kinetic/dbw_fca_description/1.0.1-0.tar.gz;
-    sha256 = "13db1894cd0b3fdd3668ecb300e42fb50b6a6f7c52ec404dfb55a7a827bb4739";
+    url = https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/kinetic/dbw_fca_description/1.0.6-1.tar.gz;
+    sha256 = "b14ced68b05aaca8520ed8ffc546e23725e677d21e661ba5ab842e92f49370ca";
   };
 
   checkInputs = [ roslaunch roslib rviz ];

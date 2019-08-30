@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-trajectory-controller, position-controllers, cob-description, cob-omni-drive-controller, cob-supported-robots, joint-state-controller, rviz, robot-state-publisher, roslaunch, joint-state-publisher, xacro, catkin, velocity-controllers, diagnostic-aggregator, costmap-2d, raw-description, ur-description, rostest, laser-filters, cob-calibration-data }:
+{ lib, buildRosPackage, fetchurl, joint-trajectory-controller, position-controllers, cob-description, cob-omni-drive-controller, cob-supported-robots, joint-state-controller, rviz, robot-state-publisher, roslaunch, joint-state-publisher, xacro, catkin, velocity-controllers, diagnostic-aggregator, costmap-2d, raw-description, rostest, laser-filters, cob-calibration-data }:
 buildRosPackage {
   pname = "ros-kinetic-cob-hardware-config";
-  version = "0.6.11";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_hardware_config/0.6.11-0.tar.gz;
-    sha256 = "65d497c7f4af3aec8291e0bffb04124792ca956e94dc6c30a392eb09567cba0a";
+    url = https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_hardware_config/0.7.1-1.tar.gz;
+    sha256 = "fce40b1beeba8b31c22de0f6de19c48c3a5cfc21c1e3b79e89806e4d99b9b127";
   };
 
   buildInputs = [ rostest roslaunch cob-supported-robots ];
-  propagatedBuildInputs = [ costmap-2d joint-state-controller raw-description ur-description cob-calibration-data velocity-controllers joint-trajectory-controller rostest position-controllers laser-filters cob-description rviz robot-state-publisher cob-omni-drive-controller diagnostic-aggregator roslaunch joint-state-publisher xacro ];
+  propagatedBuildInputs = [ costmap-2d joint-state-controller raw-description cob-calibration-data velocity-controllers joint-trajectory-controller rostest position-controllers laser-filters cob-description rviz robot-state-publisher cob-omni-drive-controller diagnostic-aggregator roslaunch joint-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

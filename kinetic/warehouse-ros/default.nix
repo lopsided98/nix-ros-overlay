@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pluginlib, boost, tf, gtest, catkin, roscpp, rostest, std-msgs, rostime, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-warehouse-ros";
-  version = "0.9.2";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/warehouse_ros-release/archive/release/kinetic/warehouse_ros/0.9.2-0.tar.gz;
-    sha256 = "263b8bffbae69b15d352e6893d533d7bd79ca3a6f995b669378e0c7d0deac49c";
+    url = https://github.com/ros-gbp/warehouse_ros-release/archive/release/kinetic/warehouse_ros/0.9.3-1.tar.gz;
+    sha256 = "d1c58ca0544269702a600c838af44c88551bf2778a4c28a96d65f07ac58b8d51";
   };
 
   buildInputs = [ pluginlib tf rostime std-msgs roscpp geometry-msgs ];

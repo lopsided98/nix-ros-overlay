@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, rosserial-python, control-msgs, sensor-msgs, catkin, diagnostic-updater, message-generation, message-runtime, actionlib, std-msgs, angles }:
 buildRosPackage {
   pname = "ros-kinetic-cob-hand-bridge";
-  version = "0.6.5";
+  version = "0.6.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_hand-release/archive/release/kinetic/cob_hand_bridge/0.6.5-0.tar.gz;
-    sha256 = "f3b51ce3c2630d4b96cba7f599ec516ef2f3434399fe8d3f43317cfe7b5c47ef";
+    url = https://github.com/ipa320/cob_hand-release/archive/release/kinetic/cob_hand_bridge/0.6.6-1.tar.gz;
+    sha256 = "b7f091e1bfd65ff59f7bfbd7e324be15309f97be6ce5d0e802714ef7690398d4";
   };
 
   buildInputs = [ std-srvs control-msgs sensor-msgs diagnostic-updater message-generation actionlib angles ];

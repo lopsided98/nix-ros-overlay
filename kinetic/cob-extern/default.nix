@@ -2,17 +2,17 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libqsopt, libpcan, catkin, libphidgets, opengm, libdlib, libconcorde-tsp-solver, libntcan }:
+{ lib, buildRosPackage, fetchurl, libpcan, catkin, libphidgets, opengm, libdlib, libntcan }:
 buildRosPackage {
   pname = "ros-kinetic-cob-extern";
-  version = "0.6.12";
+  version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_extern-release/archive/release/kinetic/cob_extern/0.6.12-0.tar.gz;
-    sha256 = "de5f3eafd8f673cbe4bd3a21938e2eefc954933fc5a067de72d0918a0fcedd90";
+    url = https://github.com/ipa320/cob_extern-release/archive/release/kinetic/cob_extern/0.6.13-1.tar.gz;
+    sha256 = "7fcc6f22b2a67222124558b2c7213a871e0865363b35a80c6f91a0694ff29719";
   };
 
-  propagatedBuildInputs = [ libqsopt libphidgets opengm libntcan libdlib libconcorde-tsp-solver libpcan ];
+  propagatedBuildInputs = [ libpcan libphidgets opengm libdlib libntcan ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

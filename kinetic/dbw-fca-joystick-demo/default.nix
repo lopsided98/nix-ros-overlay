@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, dbw-fca-msgs, sensor-msgs, joy, catkin, roslib, dbw-fca-can, std-msgs, roslaunch, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-fca-joystick-demo";
-  version = "1.0.1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/kinetic/dbw_fca_joystick_demo/1.0.1-0.tar.gz;
-    sha256 = "f1bf1dc0f7f2e1d53f5ae7c16c4dbf46b7422f07ab8b88f831280bb649584617";
+    url = https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/kinetic/dbw_fca_joystick_demo/1.0.6-1.tar.gz;
+    sha256 = "3a6e6b9c5f9b77c01ae848304e44026c01ed3ea2c66e4c8e525c22a3ef9184e6";
   };
 
   buildInputs = [ std-msgs sensor-msgs roscpp dbw-fca-msgs ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cob-navigation-global, catkin, cob-navigation-slam, cob-navigation-local, cob-mapping-slam, cob-map-accessibility-analysis, cob-linear-nav, cob-navigation-config }:
 buildRosPackage {
   pname = "ros-kinetic-cob-navigation";
-  version = "0.6.7";
+  version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_navigation/0.6.7-0.tar.gz;
-    sha256 = "17a36ff35bdf95388ca26fb2f2eae0b8ea2a18e3f94f78785921fbfae8b8db23";
+    url = https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_navigation/0.6.8-1.tar.gz;
+    sha256 = "710055b40569e1fe893b460f841111d381abae483107caceeec2048e635043af";
   };
 
   propagatedBuildInputs = [ cob-navigation-global cob-navigation-slam cob-navigation-local cob-mapping-slam cob-map-accessibility-analysis cob-linear-nav cob-navigation-config ];

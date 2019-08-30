@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, catkin, gazebo-dev, message-runtime, eigen, std-msgs, roscpp, xacro, wave-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-usv-gazebo-plugins";
-  version = "1.1.2-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vrx-release/archive/release/kinetic/usv_gazebo_plugins/1.1.2-1.tar.gz;
-    sha256 = "b5790141af1a9b8d834c282ff0095ad6ecf7151b829dbb57ef21c98cb0c3377e";
+    url = https://github.com/ros-gbp/vrx-release/archive/release/kinetic/usv_gazebo_plugins/1.2.0-1.tar.gz;
+    sha256 = "3bd614a2f4d5f0b0f2303ee8f40a45dca6e60e9cc2e3ee04ac9507499a1ee135";
   };
 
   buildInputs = [ gazebo-ros gazebo-dev eigen std-msgs roscpp xacro wave-gazebo-plugins ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, hector-gazebo-plugins, catkin, wamv-description, gazebo-plugins, robot-localization, usv-gazebo-plugins, velodyne-gazebo-plugins, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-wamv-gazebo";
-  version = "1.1.2-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vrx-release/archive/release/kinetic/wamv_gazebo/1.1.2-1.tar.gz;
-    sha256 = "1a64919510cf6a618d4df4448e6427bab6c9e09d6f68b6b31ad24737b32a0a9d";
+    url = https://github.com/ros-gbp/vrx-release/archive/release/kinetic/wamv_gazebo/1.2.0-1.tar.gz;
+    sha256 = "890b2f3c301b1110561ad3d63504fdb6850a0fe7ae94d7361ea5cc0fd9526d3c";
   };
 
   buildInputs = [ hector-gazebo-plugins wamv-description gazebo-plugins robot-localization usv-gazebo-plugins velodyne-gazebo-plugins xacro ];

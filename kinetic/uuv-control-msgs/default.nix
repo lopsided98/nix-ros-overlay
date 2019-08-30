@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-control-msgs";
-  version = "0.6.12";
+  version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_control_msgs/0.6.12-0.tar.gz;
-    sha256 = "4564330eb1bf2d07a2861fa788ff03e38807556c8445c880ba7f01f7e94833d1";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_control_msgs/0.6.13-0.tar.gz;
+    sha256 = "3af3b8fefd021ca30803c461fdcdece2d0a87875717888551845b746b354f5d9";
   };
 
   buildInputs = [ std-msgs message-generation geometry-msgs ];

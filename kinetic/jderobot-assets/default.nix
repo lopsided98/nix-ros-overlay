@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot3-gazebo, catkin, turtlebot3-description }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros, turtlebot3-gazebo, catkin, turtlebot3-description, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-jderobot-assets";
-  version = "0.0.2-r1";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/JdeRobot/assets-release/archive/release/kinetic/jderobot_assets/0.0.2-1.tar.gz;
-    sha256 = "30ce184683a791181bbff6011d7afb6968adb331e30a9cbea2a0d1d8c372fe0a";
+    url = https://github.com/JdeRobot/assets-release/archive/release/kinetic/jderobot_assets/0.1.0-1.tar.gz;
+    sha256 = "259c30e26e4fadb66c7b8b9f6d9979bb1082c4f114a78c38217e4c7591dd8dd4";
   };
 
-  buildInputs = [ turtlebot3-gazebo turtlebot3-description ];
-  propagatedBuildInputs = [ turtlebot3-gazebo turtlebot3-description ];
+  buildInputs = [ gazebo-ros turtlebot3-gazebo roscpp turtlebot3-description ];
+  propagatedBuildInputs = [ gazebo-ros turtlebot3-gazebo roscpp turtlebot3-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

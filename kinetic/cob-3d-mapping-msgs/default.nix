@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, cob-object-detection-msgs, sensor-msgs, catkin, message-generation, message-runtime, actionlib, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-3d-mapping-msgs";
-  version = "0.6.13";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_3d_mapping_msgs/0.6.13-0.tar.gz;
-    sha256 = "bbf5462db5e557342a36d22c5d7ff42559a5319bdb04589d7e7b0c57118ada07";
+    url = https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_3d_mapping_msgs/0.6.14-1.tar.gz;
+    sha256 = "36bfc63af920f743641259427d57f06b97eac058ed83f6345336c573e4fb5376";
   };
 
   buildInputs = [ actionlib-msgs cob-object-detection-msgs sensor-msgs message-generation actionlib std-msgs geometry-msgs ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslaunch, map-server, amcl, catkin, cob-default-env-config, move-base, cob-scan-unifier, dwa-local-planner, rviz, cob-linear-nav, topic-tools, cob-supported-robots, cob-navigation-config }:
 buildRosPackage {
   pname = "ros-kinetic-cob-navigation-global";
-  version = "0.6.7";
+  version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_navigation_global/0.6.7-0.tar.gz;
-    sha256 = "130af0049cc492cc57eb84829a925f72fddaa1b10c4171ff9173ef7f11f10705";
+    url = https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_navigation_global/0.6.8-1.tar.gz;
+    sha256 = "ed5a734fc66b6a87bc3002ae6266a42b7a80959de8f6af826e3f75cde3d1d234";
   };
 
   checkInputs = [ cob-supported-robots roslaunch cob-default-env-config ];

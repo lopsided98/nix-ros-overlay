@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, xacro, tf, image-transport, sensor-msgs, catkin, uuv-sensor-ros-plugins-msgs, message-filters, tf2-ros, gazebo-plugins, gazebo-dev, tf2, laser-geometry, rostest, uuv-gazebo-plugins, std-msgs, roscpp, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-sensor-ros-plugins";
-  version = "0.6.12";
+  version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_sensor_ros_plugins/0.6.12-0.tar.gz;
-    sha256 = "5342931c9b7e69f3cee4703c8b5e899561fcbf0687d068568e0fb5f1df2bd795";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_sensor_ros_plugins/0.6.13-0.tar.gz;
+    sha256 = "12fcb6f31b21457041669c310aeb86debab037e06785bac517651eed31cfc81c";
   };
 
   buildInputs = [ image-transport sensor-msgs uuv-sensor-ros-plugins-msgs message-filters roscpp gazebo-dev gazebo-plugins tf2 laser-geometry tf2-ros uuv-gazebo-plugins std-msgs tf geometry-msgs ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-cob-android-resource-server";
-  version = "0.1.5-r1";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_android-release/archive/release/kinetic/cob_android_resource_server/0.1.5-1.tar.gz;
-    sha256 = "2852baf6fb04905e6eda8ce2562ea19bc32d857b82d0850480a366e8ac158327";
+    url = https://github.com/ipa320/cob_android-release/archive/release/kinetic/cob_android_resource_server/0.1.6-1.tar.gz;
+    sha256 = "0f689c6038b28f0050834211d7491635a5bcbc0678f8c1e99f19a3cb1998965f";
   };
 
   propagatedBuildInputs = [ rospy ];

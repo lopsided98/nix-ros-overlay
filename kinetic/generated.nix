@@ -3344,6 +3344,8 @@ self: super: {
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
+ robot-statemachine = self.callPackage ./robot-statemachine {};
+
  robot-upstart = self.callPackage ./robot-upstart {};
 
  robotis-controller = self.callPackage ./robotis-controller {};
@@ -3782,6 +3784,8 @@ self: super: {
 
  rqt-graph = self.callPackage ./rqt-graph {};
 
+ rqt-ground-robot-teleop = self.callPackage ./rqt-ground-robot-teleop {};
+
  rqt-gui = self.callPackage ./rqt-gui {};
 
  rqt-gui-cpp = self.callPackage ./rqt-gui-cpp {};
@@ -3873,6 +3877,16 @@ self: super: {
  rslidar-msgs = self.callPackage ./rslidar-msgs {};
 
  rslidar-pointcloud = self.callPackage ./rslidar-pointcloud {};
+
+ rsm-additions = self.callPackage ./rsm-additions {};
+
+ rsm-core = self.callPackage ./rsm-core {};
+
+ rsm-msgs = self.callPackage ./rsm-msgs {};
+
+ rsm-rqt-plugins = self.callPackage ./rsm-rqt-plugins {};
+
+ rsm-rviz-plugins = self.callPackage ./rsm-rviz-plugins {};
 
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
@@ -4001,6 +4015,8 @@ self: super: {
  schunk-svh-driver = self.callPackage ./schunk-svh-driver {};
 
  scratch4robots = self.callPackage ./scratch4robots {};
+
+ sdhlibrary-cpp = self.callPackage ./sdhlibrary-cpp {};
 
  seed-smartactuator-sdk = self.callPackage ./seed-smartactuator-sdk {};
 

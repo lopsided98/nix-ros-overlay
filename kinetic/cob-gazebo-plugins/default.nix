@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-kinetic-cob-gazebo-plugins";
-  version = "0.7.2";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_gazebo_plugins-release/archive/release/kinetic/cob_gazebo_plugins/0.7.2-0.tar.gz;
-    sha256 = "23fe1fcbdecd6db57ffc9d1bf27413a40b25ea4748c46f25eba017549274c370";
+    url = https://github.com/ipa320/cob_gazebo_plugins-release/archive/release/kinetic/cob_gazebo_plugins/0.7.3-1.tar.gz;
+    sha256 = "24aee12cecef7cd95091774b132079044d649d106e4732be9e0a0fa8fcaf4250";
   };
 
   propagatedBuildInputs = [ cob-gazebo-ros-control ];

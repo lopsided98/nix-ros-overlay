@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, roscpp, laser-geometry, tf }:
 buildRosPackage {
   pname = "ros-kinetic-cob-scan-unifier";
-  version = "0.6.14-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_scan_unifier/0.6.14-1.tar.gz;
-    sha256 = "cbdc24a01b5bc9d83f9af88d449de3486bc7b77d47a4a2857224633cc974de10";
+    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_scan_unifier/0.7.0-1.tar.gz;
+    sha256 = "3f2501c2263f5b5b680474ecfe637c853617793613a2a20aad8330a1626a7893";
   };
 
   buildInputs = [ laser-geometry tf sensor-msgs roscpp ];

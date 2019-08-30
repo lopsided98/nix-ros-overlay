@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, kdl-parser, rosconsole, orocos-kdl, sensor-msgs, catkin, tf2-kdl, rostime, tf2-ros, roscpp, rostest, urdfdom-headers, eigen, tf }:
 buildRosPackage {
   pname = "ros-kinetic-robot-state-publisher";
-  version = "1.13.6";
+  version = "1.13.7-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/robot_state_publisher-release/archive/release/kinetic/robot_state_publisher/1.13.6-0.tar.gz;
-    sha256 = "ae537f55c5810827d787830e3c2852390749c6053281ea7264e2f040f3602d00";
+    url = https://github.com/ros-gbp/robot_state_publisher-release/archive/release/kinetic/robot_state_publisher/1.13.7-1.tar.gz;
+    sha256 = "23ee023d8854b508f0cd7f1ccceac40a5b68d5f4c7bf898db4db065ac6351e57";
   };
 
   buildInputs = [ kdl-parser orocos-kdl rosconsole sensor-msgs tf2-kdl rostime roscpp tf2-ros urdfdom-headers eigen tf ];

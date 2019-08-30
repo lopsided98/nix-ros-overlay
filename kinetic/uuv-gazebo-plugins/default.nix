@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-dev, eigen, protobuf, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-gazebo-plugins";
-  version = "0.6.12";
+  version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_gazebo_plugins/0.6.12-0.tar.gz;
-    sha256 = "453ac69e249626b957ce69fa8d76c6377163439ae0b2f788ffbf324c1d567245";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_gazebo_plugins/0.6.13-0.tar.gz;
+    sha256 = "a6e14978fcb1730063e8f7e84d203e6930ee85fd3f65e567f200565afdf0cdc1";
   };
 
   buildInputs = [ protobuf eigen gazebo-dev ];

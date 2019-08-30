@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, actionlib }:
 buildRosPackage {
   pname = "ros-kinetic-cob-android-msgs";
-  version = "0.1.5-r1";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_android-release/archive/release/kinetic/cob_android_msgs/0.1.5-1.tar.gz;
-    sha256 = "5c6acb0d82172e8d5398140b64630f4268f0c8f1c6e65ae31752220acdb564e9";
+    url = https://github.com/ipa320/cob_android-release/archive/release/kinetic/cob_android_msgs/0.1.6-1.tar.gz;
+    sha256 = "2a5881e3732befaa351249f0cbb110813d2e1e726e9bcb773ccf4e384b141071";
   };
 
   buildInputs = [ message-generation actionlib-msgs actionlib ];

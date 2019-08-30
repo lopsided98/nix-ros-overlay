@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, map-server, costmap-cspace, planner-cspace, trajectory-tracker-rviz-plugins, safety-limiter, catkin, tf2-ros, trajectory-tracker }:
 buildRosPackage {
   pname = "ros-kinetic-neonavigation-launch";
-  version = "0.4.0-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation-release/archive/release/kinetic/neonavigation_launch/0.4.0-1.tar.gz;
-    sha256 = "0b377fdb95d79cbb87fb6a60a7779b1c4168ed0e6d3e0223256ef4cd9f0beabf";
+    url = https://github.com/at-wat/neonavigation-release/archive/release/kinetic/neonavigation_launch/0.4.2-1.tar.gz;
+    sha256 = "8a68d5d782c749187a367a74210fca326ceb0063838ba45cf994a3b5543e2b5a";
   };
 
   propagatedBuildInputs = [ map-server costmap-cspace trajectory-tracker-rviz-plugins planner-cspace safety-limiter tf2-ros trajectory-tracker ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roscpp, sensor-msgs, catkin, nodelet }:
 buildRosPackage {
   pname = "ros-kinetic-laser-scan-densifier";
-  version = "0.6.14-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/laser_scan_densifier/0.6.14-1.tar.gz;
-    sha256 = "3eb31445aa43cb9a9de7868095cf5d2e7ac104c9ada629cf69245973ac18332b";
+    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/laser_scan_densifier/0.7.0-1.tar.gz;
+    sha256 = "d67beb86177ebad5ededf279062c46a6f128d7ca74c980c3dfe7852e8be97d4a";
   };
 
   buildInputs = [ sensor-msgs roscpp nodelet ];

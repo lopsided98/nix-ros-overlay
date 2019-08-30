@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, control-msgs, schunk-libm5api, trajectory-msgs, sensor-msgs, catkin, linuxHeaders, cob-srvs, libntcan, urdf, std-msgs, diagnostic-msgs, roscpp, libpcan }:
 buildRosPackage {
   pname = "ros-kinetic-schunk-powercube-chain";
-  version = "0.6.12";
+  version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_powercube_chain/0.6.12-0.tar.gz;
-    sha256 = "4a63347c6c46154ad0e35b0a5f652aaee3b1cad20378b17ab80c163f7fd709f8";
+    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_powercube_chain/0.6.13-1.tar.gz;
+    sha256 = "f6a39fa1c93d1a6246b5f30e4c186b48ff86db6bb20c4ae48cfc70c477262b8a";
   };
 
   buildInputs = [ std-srvs control-msgs schunk-libm5api trajectory-msgs sensor-msgs linuxHeaders cob-srvs libntcan urdf std-msgs diagnostic-msgs roscpp libpcan ];

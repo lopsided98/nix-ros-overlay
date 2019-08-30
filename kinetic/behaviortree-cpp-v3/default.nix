@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roslib, elfutils, zeromq3 }:
+{ lib, buildRosPackage, fetchurl, roslib, catkin, elfutils, zeromq }:
 buildRosPackage {
   pname = "ros-kinetic-behaviortree-cpp-v3";
   version = "3.0.7";
@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "be5c54dc7ae328f3c0bd6bd1abdbcb073b48eec8ab19e1e6caebfc5c8a34523b";
   };
 
-  buildInputs = [ roslib zeromq3 elfutils ];
-  propagatedBuildInputs = [ roslib zeromq3 elfutils ];
+  buildInputs = [ roslib elfutils zeromq ];
+  propagatedBuildInputs = [ roslib elfutils zeromq ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

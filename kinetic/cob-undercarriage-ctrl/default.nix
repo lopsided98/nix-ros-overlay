@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, control-msgs, tf, catkin, cob-utilities, diagnostic-updater, nav-msgs, diagnostic-msgs, cob-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-undercarriage-ctrl";
-  version = "0.6.14-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_undercarriage_ctrl/0.6.14-1.tar.gz;
-    sha256 = "17ad41bfae76d9978091aaeba467a25a3ea66a71932495c70876cc959b1ffdc1";
+    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_undercarriage_ctrl/0.7.0-1.tar.gz;
+    sha256 = "b02280a45e8cee59d857a5de4e31165e85ced5d95b2a57445a2e5e4241a20949";
   };
 
   buildInputs = [ control-msgs cob-utilities roscpp diagnostic-updater nav-msgs diagnostic-msgs cob-msgs tf geometry-msgs ];

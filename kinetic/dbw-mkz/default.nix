@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, dbw-mkz-msgs, catkin, dbw-mkz-description, dbw-mkz-can, dbw-mkz-joystick-demo }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-mkz";
-  version = "1.1.1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz/1.1.1-0.tar.gz;
-    sha256 = "c10af97e0c08e042a89d6a9a3af13a58b6b621ab6cb4751cb7bd2b1951b82aac";
+    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz/1.2.3-1.tar.gz;
+    sha256 = "86eec437e5acf5a125a5a31f7178fcecb09a9a2e4812c72249add0a6f48556ad";
   };
 
   propagatedBuildInputs = [ dbw-mkz-msgs dbw-mkz-description dbw-mkz-can dbw-mkz-joystick-demo ];

@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, gtest, catkin, xacro }:
+{ lib, buildRosPackage, fetchurl, gtest, catkin, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-schunk-description";
-  version = "0.6.12";
+  version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_description/0.6.12-0.tar.gz;
-    sha256 = "3b3dcbf8825baf6015b19a479dd121ba60d3aed90114bf55d11201cf3c820123";
+    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_description/0.6.13-1.tar.gz;
+    sha256 = "ef165d9ff465bbbe7d2c1e85f89295e9ca4d5e391947f0cf9269385cb665d427";
   };
 
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ gazebo-ros xacro ];
+  propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

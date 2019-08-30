@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rosservice, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-service-tools";
-  version = "0.6.12-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/service_tools/0.6.12-1.tar.gz;
-    sha256 = "b1ae26c99eac778492dbf8c0bfdc9952cb25c7cad8d0773ad5f05a01d79835e3";
+    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/service_tools/0.6.14-1.tar.gz;
+    sha256 = "cd11311af0d299e445c6ba8a27bcd42d830532ad4a2be9bcb6d27fb71dc4c60a";
   };
 
   propagatedBuildInputs = [ rosservice rospy ];

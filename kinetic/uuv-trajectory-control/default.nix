@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rostest, roslib, nav-msgs, visualization-msgs, rospy, std-msgs, tf, uuv-control-msgs, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, uuv-assistants, catkin, pythonPackages, rostest, roslib, nav-msgs, visualization-msgs, rospy, std-msgs, tf, uuv-control-msgs, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-trajectory-control";
-  version = "0.6.12";
+  version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_trajectory_control/0.6.12-0.tar.gz;
-    sha256 = "a686896a19a11cdca138404c293f5cbec4133a19117abdf9c302aff1d3f5bc53";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_trajectory_control/0.6.13-0.tar.gz;
+    sha256 = "4047c075232c8a2978f498a43081dcc0f795f36ddee57d62d85326bc8f72fc6a";
   };
 
   checkInputs = [ rostest rosunit ];
-  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.scipy pythonPackages.pyyaml roslib nav-msgs visualization-msgs rospy std-msgs tf uuv-control-msgs pythonPackages.matplotlib geometry-msgs ];
+  propagatedBuildInputs = [ pythonPackages.numpy uuv-assistants pythonPackages.scipy pythonPackages.pyyaml roslib nav-msgs visualization-msgs rospy std-msgs tf uuv-control-msgs pythonPackages.matplotlib geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

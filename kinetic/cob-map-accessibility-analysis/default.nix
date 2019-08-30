@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, boost, tf, image-transport, sensor-msgs, catkin, cv-bridge, pcl, message-filters, nav-msgs, cob-3d-mapping-msgs, message-generation, message-runtime, pcl-ros, rospy, roscpp, opencv3, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-map-accessibility-analysis";
-  version = "0.6.7";
+  version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_map_accessibility_analysis/0.6.7-0.tar.gz;
-    sha256 = "143520de9742bcf0e4737cf3ddfe8fad8223fa7ba3a6f450fb16c73c7540337f";
+    url = https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_map_accessibility_analysis/0.6.8-1.tar.gz;
+    sha256 = "c81f3d8a2e84ee564d6b67e988ecf0daaca5afd02df3c1f842e29bcf2c4424d5";
   };
 
   buildInputs = [ boost image-transport sensor-msgs cv-bridge message-filters pcl roscpp message-generation nav-msgs cob-3d-mapping-msgs pcl-ros tf opencv3 geometry-msgs ];

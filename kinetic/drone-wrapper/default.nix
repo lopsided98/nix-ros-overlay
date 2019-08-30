@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, sensor-msgs, mavros, cv-bridge, catkin, rospy, tf, mavros-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-drone-wrapper";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/JdeRobot/drones-release/archive/release/kinetic/drone_wrapper/1.0.0-1.tar.gz;
-    sha256 = "2264aca962e73e8f377c31097207692f8ecd20456ae42d23b89a787143b689c2";
+    url = https://github.com/JdeRobot/drones-release/archive/release/kinetic/drone_wrapper/1.0.1-1.tar.gz;
+    sha256 = "82697ffd8540b432470f10e7ce9a6b622f49a5a7f03af57c9e9ca746bdd7d583";
   };
 
   buildInputs = [ gazebo-ros sensor-msgs mavros cv-bridge rospy tf mavros-msgs geometry-msgs ];

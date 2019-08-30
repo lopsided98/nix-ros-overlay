@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, std-srvs, actionlib-msgs, sensor-msgs, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-object-detection-msgs";
-  version = "0.6.13";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_object_detection_msgs/0.6.13-0.tar.gz;
-    sha256 = "6af0beeee2a538ba2947af729eb7987a579abaf7e494474b2a4556a6589e3bde";
+    url = https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_object_detection_msgs/0.6.14-1.tar.gz;
+    sha256 = "a68fa72355a45bd46e7dc389bed0c0f59e01c4e4fa1281536649d4498842269a";
   };
 
   buildInputs = [ std-srvs actionlib-msgs sensor-msgs message-generation std-msgs geometry-msgs ];

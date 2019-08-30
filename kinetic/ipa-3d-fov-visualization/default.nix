@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, cv-bridge, image-geometry, visualization-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-ipa-3d-fov-visualization";
-  version = "0.6.13";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/ipa_3d_fov_visualization/0.6.13-0.tar.gz;
-    sha256 = "c0120f056850ac8a374748968fe4c91fcc640ba1e075107527e6c98bce0d5143";
+    url = https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/ipa_3d_fov_visualization/0.6.14-1.tar.gz;
+    sha256 = "a410ad161b1c9a56e6a2e306d58ed2dabcc20a44573e2988577df5d0498e96dc";
   };
 
   buildInputs = [ sensor-msgs cv-bridge image-geometry visualization-msgs roscpp ];

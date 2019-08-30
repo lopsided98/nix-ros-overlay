@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, diagnostic-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-msgs";
-  version = "0.6.12-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_common-release/archive/release/kinetic/cob_msgs/0.6.12-1.tar.gz;
-    sha256 = "2804fae147cc7a535e36bc0982129d6f8d5b314b15b4df5571fed455d0ab0757";
+    url = https://github.com/ipa320/cob_common-release/archive/release/kinetic/cob_msgs/0.7.0-1.tar.gz;
+    sha256 = "8d9f8e32061fdfcf8c02afa45da225bd84b0693e49bbe6b270e3c987b5ae9471";
   };
 
   buildInputs = [ diagnostic-msgs message-generation std-msgs ];

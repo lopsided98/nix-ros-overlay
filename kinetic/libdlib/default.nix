@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-libdlib";
-  version = "0.6.12";
+  version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libdlib/0.6.12-0.tar.gz;
-    sha256 = "8e9c7b81de3099268bff934ddce0e8176984ac80af3226f2e745147fb8d371d9";
+    url = https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libdlib/0.6.13-1.tar.gz;
+    sha256 = "2dce81535a4d27c1c631331d24ac1c5ef433d99e1c2aded2e9e169395d8df4cd";
   };
 
   nativeBuildInputs = [ catkin ];

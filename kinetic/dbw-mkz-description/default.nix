@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rviz, urdf, robot-state-publisher, roslaunch, roslib, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-mkz-description";
-  version = "1.1.1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz_description/1.1.1-0.tar.gz;
-    sha256 = "149490f7189e497a9ff2fc32035eff5b378c4861ed5f9391fdec2a3aaaa8b645";
+    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz_description/1.2.3-1.tar.gz;
+    sha256 = "cd0f675c467b304c7371668de296aa3b05821d5875989ecdd175bd04bb3649b5";
   };
 
   checkInputs = [ roslaunch roslib rviz ];

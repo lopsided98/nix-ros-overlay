@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, cob-teleop, cob-monitoring, cob-script-server, cob-command-gui, catkin, cob-interactive-teleop, cob-helper-tools, cob-dashboard }:
 buildRosPackage {
   pname = "ros-kinetic-cob-command-tools";
-  version = "0.6.12-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_command_tools/0.6.12-1.tar.gz;
-    sha256 = "b8b4a4b64a2508051d5563e887bde407d59e445ef559fb73c7af3ba0b3ae7b9d";
+    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_command_tools/0.6.14-1.tar.gz;
+    sha256 = "f1fcce218c38de0cd489a636c44f0e0127eeedbb73e1185dfccd132ccee9b808";
   };
 
   propagatedBuildInputs = [ cob-teleop cob-monitoring cob-script-server cob-command-gui cob-interactive-teleop cob-helper-tools cob-dashboard ];

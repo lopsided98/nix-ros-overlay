@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-cob-safety-controller";
-  version = "0.6.7";
+  version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_substitute-release/archive/release/kinetic/cob_safety_controller/0.6.7-0.tar.gz;
-    sha256 = "d043fff21fb92b63813bb510ba78662f6c301b5c12ab99d8f2ae1626aa0c517e";
+    url = https://github.com/ipa320/cob_substitute-release/archive/release/kinetic/cob_safety_controller/0.6.8-1.tar.gz;
+    sha256 = "45b1e382f053c35b192e5cad91bc3f5d2e4fb2a56de8a512ecc04d6c41c50c90";
   };
 
   nativeBuildInputs = [ catkin ];

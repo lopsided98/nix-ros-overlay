@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rviz, interactive-markers, visualization-msgs, std-msgs, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-interactive-teleop";
-  version = "0.6.12-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_interactive_teleop/0.6.12-1.tar.gz;
-    sha256 = "17fb5781df9f489f8aff00c5d8a94d20664e2fb0088a394def32ff5c5df03383";
+    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_interactive_teleop/0.6.14-1.tar.gz;
+    sha256 = "ecf0cc9c8fe2a27d9411f0a08c732d47c57a2bba6261d79d3816fca76e0b4694";
   };
 
   buildInputs = [ roscpp interactive-markers visualization-msgs std-msgs tf geometry-msgs ];
