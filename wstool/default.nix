@@ -1,4 +1,4 @@
-{ buildPythonPackage, fetchPypi, vcstools, pyyaml }:
+{ lib, buildPythonPackage, fetchPypi, vcstools, pyyaml }:
 
 buildPythonPackage rec {
   pname = "wstool";
@@ -11,8 +11,10 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [ vcstools pyyaml ];
 
-  meta = {
+  meta = with lib; {
     description = "A tool for managing a workspace of multiple heterogenous SCM repositories";
-    homepage = http://wiki.ros.org/wstool;
+    homepage = "http://wiki.ros.org/wstool";
+    license = licenses.bsd3;
+    maintainers = with maintainers; [ lopsided98 ];
   };
 }
