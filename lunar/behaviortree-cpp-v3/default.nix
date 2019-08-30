@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roslib, elfutils, zeromq3 }:
+{ lib, buildRosPackage, fetchurl, roslib, catkin, elfutils, zeromq }:
 buildRosPackage {
   pname = "ros-lunar-behaviortree-cpp-v3";
   version = "3.0.7";
@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "eb1812f72a4f815b509b1046587670895ae697bf6ce80d53b23c46c351ec94a2";
   };
 
-  buildInputs = [ roslib zeromq3 elfutils ];
-  propagatedBuildInputs = [ roslib zeromq3 elfutils ];
+  buildInputs = [ roslib elfutils zeromq ];
+  propagatedBuildInputs = [ roslib elfutils zeromq ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
