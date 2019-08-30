@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-description";
-  version = "1.2.0";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_description/1.2.0-0.tar.gz;
-    sha256 = "1a16e0a23bc531a33c583cc6c3a34fed5903a831334ce8bb71e778c912406969";
+    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_description/1.2.2-1.tar.gz;
+    sha256 = "c0b22d01ac98d63f27f51f7ce6c9ea134ca186b48d8c08e2c71ca984b0791a32";
   };
 
   buildInputs = [ urdf xacro ];

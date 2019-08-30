@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-people-msgs";
-  version = "1.1.2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/OSUrobotics/people-release/archive/release/melodic/people_msgs/1.1.2-0.tar.gz;
-    sha256 = "37885342c0d98ce64a2bfd0f0145edc510220564fdea1284c496e28b848f36d7";
+    url = https://github.com/OSUrobotics/people-release/archive/release/melodic/people_msgs/1.2.0-1.tar.gz;
+    sha256 = "34ea58081f5b53566700ebf0728e024148a0b653f57b5a82560da05848f30f82";
   };
 
   buildInputs = [ std-msgs message-generation geometry-msgs ];

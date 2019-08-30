@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pr2-mechanism-controllers, pluginlib, pr2-controller-interface, realtime-tools, catkin, robot-mechanism-controllers, std-msgs, roscpp, pr2-mechanism-model }:
 buildRosPackage {
   pname = "ros-melodic-pr2-calibration-controllers";
-  version = "1.10.16-r1";
+  version = "1.10.17-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_calibration_controllers/1.10.16-1.tar.gz;
-    sha256 = "1c83da96ce0544a3f9d2c0a199c38035e8fd8781dc80ac3d4fca0bd21cd66aff";
+    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_calibration_controllers/1.10.17-1.tar.gz;
+    sha256 = "70bf36f81db6cb6ce2ca9a2a1f6517b05e1355a6423287ae8f5d114a7ef21d3b";
   };
 
   buildInputs = [ pr2-mechanism-controllers pluginlib pr2-controller-interface realtime-tools robot-mechanism-controllers std-msgs roscpp pr2-mechanism-model ];

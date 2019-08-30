@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rosbridge-library, message-generation, rosgraph, message-runtime, rospy, rosnode }:
 buildRosPackage {
   pname = "ros-melodic-rosapi";
-  version = "0.11.2-r1";
+  version = "0.11.3-r1";
 
   src = fetchurl {
-    url = https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosapi/0.11.2-1.tar.gz;
-    sha256 = "b62452211d54e3f85e6f683f647fd57e6b07e4e2631de5d29ac3a7509f60ae14";
+    url = https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosapi/0.11.3-1.tar.gz;
+    sha256 = "52cf4c91178e2a736bba78bf73454a377eabccc48621baa9445e04c6431c11f9";
   };
 
   buildInputs = [ message-generation ];

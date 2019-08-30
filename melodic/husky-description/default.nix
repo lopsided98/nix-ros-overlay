@@ -1,0 +1,23 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, catkin, lms1xx, urdf, roslaunch, xacro }:
+buildRosPackage {
+  pname = "ros-melodic-husky-description";
+  version = "0.4.0-r1";
+
+  src = fetchurl {
+    url = https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_description/0.4.0-1.tar.gz;
+    sha256 = "c6d7410ae6eecae02a616067b788c565dab837498a95ebd998898a6173998d3a";
+  };
+
+  buildInputs = [ roslaunch ];
+  propagatedBuildInputs = [ lms1xx urdf xacro ];
+  nativeBuildInputs = [ catkin ];
+
+  meta = {
+    description = ''Clearpath Husky URDF description'';
+    license = with lib.licenses; [ bsdOriginal ];
+  };
+}

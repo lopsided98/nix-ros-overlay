@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, robot-calibration, catkin }:
 buildRosPackage {
   pname = "ros-melodic-fetch-calibration";
-  version = "0.8.1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_calibration/0.8.1-0.tar.gz;
-    sha256 = "38c0c089729fa01add0ebd3318007f044b0ac9c1ca4eadf6bb58e0925f7a8716";
+    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_calibration/0.8.2-1.tar.gz;
+    sha256 = "246ba4835fc72780262b5f3444bf03a93039c0b407594e84e7fb8274a3b7d2ee";
   };
 
   propagatedBuildInputs = [ robot-calibration ];

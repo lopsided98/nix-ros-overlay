@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, map-server, amcl, catkin, move-base, turtlebot3-bringup }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-navigation";
-  version = "1.2.0";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_navigation/1.2.0-0.tar.gz;
-    sha256 = "9599bcd399b7a62899e234f85e9ab1394646211531486ae7510d040b3fd6c890";
+    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_navigation/1.2.2-1.tar.gz;
+    sha256 = "f2e7db807baf99bf7fc327d56fecaf1f6ba3695f2e9319d838b4912792b96896";
   };
 
   propagatedBuildInputs = [ amcl map-server turtlebot3-bringup move-base ];

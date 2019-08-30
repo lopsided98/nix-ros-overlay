@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, dbw-mkz-msgs, sensor-msgs, catkin, dynamic-reconfigure, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dbw-mkz-twist-controller";
-  version = "1.1.1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_twist_controller/1.1.1-0.tar.gz;
-    sha256 = "cdef1fc782da0f8084335f59afe6d4e49d0415b7e5cbd9c3225cef3a8cfdc126";
+    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_twist_controller/1.2.3-1.tar.gz;
+    sha256 = "79d02132a2fa17b12ff0dcb521c4565f0d4cfe71819803110f1eb8262a77dc09";
   };
 
   buildInputs = [ dbw-mkz-msgs sensor-msgs dynamic-reconfigure std-msgs roscpp geometry-msgs ];

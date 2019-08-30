@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pr2-controllers-msgs, trajectory-msgs, catkin, actionlib, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-joint-trajectory-action";
-  version = "1.10.16-r1";
+  version = "1.10.17-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/joint_trajectory_action/1.10.16-1.tar.gz;
-    sha256 = "9c8bb4ea9533d5003a1df77e95db20e54e487dad442c457c6e8e89ba6d5ae1a4";
+    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/joint_trajectory_action/1.10.17-1.tar.gz;
+    sha256 = "eaf127a1c131ce422b9bba23fad9a20d278360d80d23ae389a021c15e962f053";
   };
 
   buildInputs = [ pr2-controllers-msgs trajectory-msgs roscpp actionlib ];

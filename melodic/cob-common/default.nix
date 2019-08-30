@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, raw-description, catkin, cob-srvs, cob-description, cob-actions, cob-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-common";
-  version = "0.6.10";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_common-release/archive/release/melodic/cob_common/0.6.10-0.tar.gz;
-    sha256 = "84d1c74ce5aab95a64c655926aef6a9b76df9d5acd2c683fa5319e3015ff4dd6";
+    url = https://github.com/ipa320/cob_common-release/archive/release/melodic/cob_common/0.7.0-1.tar.gz;
+    sha256 = "8d43687e403871afba8178f7b1382fb575114e835ca1c70f7fa426c41852f749";
   };
 
   propagatedBuildInputs = [ raw-description cob-srvs cob-description cob-actions cob-msgs ];

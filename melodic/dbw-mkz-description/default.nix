@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rviz, urdf, robot-state-publisher, roslaunch, roslib, xacro }:
 buildRosPackage {
   pname = "ros-melodic-dbw-mkz-description";
-  version = "1.1.1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_description/1.1.1-0.tar.gz;
-    sha256 = "4a4a3e557b1eab9781065fa06b4283e97ab6d25d44f0d9696c9720418ae8b0e5";
+    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_description/1.2.3-1.tar.gz;
+    sha256 = "342433ddcb9d4f194348334c952eb39a39f0d6d6290ed9c8e8ef97665860b095";
   };
 
   checkInputs = [ roslaunch roslib rviz ];

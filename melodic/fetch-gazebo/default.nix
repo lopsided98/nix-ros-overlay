@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-plugins, robot-controllers-interface, actionlib, boost, gazeboSimulator, rgbd-launch, angles, image-proc, xacro, gazebo-ros, depth-image-proc, control-msgs, trajectory-msgs, catkin, gazebo-dev, robot-controllers, fetch-description, nodelet, control-toolbox, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-fetch-gazebo";
-  version = "0.9.1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetch_gazebo/0.9.1-0.tar.gz;
-    sha256 = "5b623f04b2a527ddd0a1b7407a754a3bb2e024a68f0baee2452dd364f8a95e2f";
+    url = https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetch_gazebo/0.9.2-1.tar.gz;
+    sha256 = "e368f635946556a5334f6daeef1d2ab3c2be880fa3429b71e14ccf15ec5814f1";
   };
 
   buildInputs = [ gazebo-ros boost control-toolbox sensor-msgs gazebo-dev gazebo-plugins robot-controllers-interface robot-controllers angles ];

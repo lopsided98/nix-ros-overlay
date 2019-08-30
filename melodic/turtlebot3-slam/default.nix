@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, roscpp, turtlebot3-bringup, catkin }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-slam";
-  version = "1.2.0";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_slam/1.2.0-0.tar.gz;
-    sha256 = "dd2f8644cf9019753493e5e080b06f28b097bd90e02669b859e708291ffcdb79";
+    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_slam/1.2.2-1.tar.gz;
+    sha256 = "76d43c239f22319a4f86404e9dc69e5bdee1a4dba98f2aaaefd01ec20fbd563c";
   };
 
   buildInputs = [ sensor-msgs roscpp ];

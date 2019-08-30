@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, catkin, gazebo-dev, message-runtime, eigen, std-msgs, roscpp, xacro, wave-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-usv-gazebo-plugins";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vrx-release/archive/release/melodic/usv_gazebo_plugins/1.1.1-1.tar.gz;
-    sha256 = "4a2e30aff5c7dc122588cf8e652b3f604521fac2fbfbfbafffd01009a6869fab";
+    url = https://github.com/ros-gbp/vrx-release/archive/release/melodic/usv_gazebo_plugins/1.2.0-1.tar.gz;
+    sha256 = "2b86e504ca9b0db315abdff6f34c78552357979d5dae7e1f6b967dea5e10c1e3";
   };
 
   buildInputs = [ gazebo-ros gazebo-dev eigen std-msgs roscpp xacro wave-gazebo-plugins ];

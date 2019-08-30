@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, rosbash, xacro, catkin, rospy, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-cob-description";
-  version = "0.6.10";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_common-release/archive/release/melodic/cob_description/0.6.10-0.tar.gz;
-    sha256 = "256b6a129e52dacbf23b263cf2eed6f1addf9ec7a718a6f658df8eacd6abb189";
+    url = https://github.com/ipa320/cob_common-release/archive/release/melodic/cob_description/0.7.0-1.tar.gz;
+    sha256 = "282e27c260bdfb7ba5ffb7ae04498f31ea57d2065d907baf88b3bd6be36f83ac";
   };
 
   propagatedBuildInputs = [ gazebo-ros rosbash xacro rospy rosunit ];

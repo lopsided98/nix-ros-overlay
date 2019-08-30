@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, turtlebot3-navigation, catkin, turtlebot3-slam, turtlebot3-description, turtlebot3-bringup, turtlebot3-example, turtlebot3-teleop }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3";
-  version = "1.2.0";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3/1.2.0-0.tar.gz;
-    sha256 = "23abc6a162dc77a97d154c591285f8c235c2afe0c2906185a91ccec0a80a2b1c";
+    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3/1.2.2-1.tar.gz;
+    sha256 = "74e13982b319116e6b0ae5bebc8e9a37b816e5e10d2335876320fa1178d2131f";
   };
 
   propagatedBuildInputs = [ turtlebot3-navigation turtlebot3-description turtlebot3-slam turtlebot3-bringup turtlebot3-example turtlebot3-teleop ];

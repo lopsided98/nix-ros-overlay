@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pr2-controllers-msgs, ethercat-trigger-controllers, pr2-calibration-controllers, pr2-mechanism-controllers, pr2-head-action, joint-trajectory-action, control-toolbox, catkin, robot-mechanism-controllers, pr2-gripper-action, single-joint-position-action }:
 buildRosPackage {
   pname = "ros-melodic-pr2-controllers";
-  version = "1.10.16-r1";
+  version = "1.10.17-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_controllers/1.10.16-1.tar.gz;
-    sha256 = "efa0912d9c9d659ae93028aa2c9d77ec6f86df760c0788d69433834051607da8";
+    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_controllers/1.10.17-1.tar.gz;
+    sha256 = "4ca1b1f88af452339502ec5babb46695425d6247dc2eab2e08a787fc4155bace";
   };
 
   propagatedBuildInputs = [ pr2-controllers-msgs ethercat-trigger-controllers pr2-calibration-controllers pr2-mechanism-controllers pr2-head-action joint-trajectory-action control-toolbox robot-mechanism-controllers pr2-gripper-action single-joint-position-action ];

@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pluginlib, pr2-controller-interface, realtime-tools, catkin, libtool, message-generation, message-runtime, rospy, std-msgs, diagnostic-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-ethercat-trigger-controllers";
-  version = "1.10.16-r1";
+  version = "1.10.17-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/ethercat_trigger_controllers/1.10.16-1.tar.gz;
-    sha256 = "21fc3e32b3271214067e176ae863a773351d94d81448c650b40f7976f057e4f9";
+    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/ethercat_trigger_controllers/1.10.17-1.tar.gz;
+    sha256 = "d3630e54d263a3f14802f4b62710e4da4f21e78b6415d70fbd3b6a0b16b0ca5c";
   };
 
   buildInputs = [ pluginlib pr2-controller-interface realtime-tools libtool message-generation std-msgs diagnostic-msgs roscpp ];

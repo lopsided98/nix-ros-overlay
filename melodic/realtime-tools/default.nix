@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, rostest, actionlib, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-realtime-tools";
-  version = "1.14.0-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/realtime_tools-release/archive/release/melodic/realtime_tools/1.14.0-1.tar.gz;
-    sha256 = "7850c4b678c90f7b427389d8acc45e771bb6e92edc0a89d05bfa017f31f114b0";
+    url = https://github.com/ros-gbp/realtime_tools-release/archive/release/melodic/realtime_tools/1.15.0-1.tar.gz;
+    sha256 = "7f931948bd7454781ba1f93a1dd3642a561c97ce7668d8c4b8e862a1616bcb5d";
   };
 
   buildInputs = [ roscpp ];

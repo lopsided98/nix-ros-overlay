@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, people-msgs, tf, sensor-msgs, catkin, message-filters, bfl, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-people-tracking-filter";
-  version = "1.1.2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/OSUrobotics/people-release/archive/release/melodic/people_tracking_filter/1.1.2-0.tar.gz;
-    sha256 = "1a0322dc068da4153612ec54bc60c3d5603217eb160da8c1632fa01c9578eeff";
+    url = https://github.com/OSUrobotics/people-release/archive/release/melodic/people_tracking_filter/1.2.0-1.tar.gz;
+    sha256 = "c248a935edf57a2326396a576622a79a75ec6d74679bf851a35c7004f0b2c8c1";
   };
 
   buildInputs = [ people-msgs sensor-msgs message-filters roscpp bfl std-msgs tf geometry-msgs ];

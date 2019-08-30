@@ -2,17 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, catkin, effort-controllers, robot-state-publisher, rospy, fetch-gazebo }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, actionlib-msgs, catkin, actionlib, robot-state-publisher, effort-controllers, rospy, fetch-gazebo, gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-melodic-fetchit-challenge";
-  version = "0.9.1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetchit_challenge/0.9.1-0.tar.gz;
-    sha256 = "0805738f391830e5c290041438956c70fdfa476e0e18535f3797d904bc0e823f";
+    url = https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetchit_challenge/0.9.2-1.tar.gz;
+    sha256 = "603d36878e1a24437139fe6bc9542bbd19f197c3bea78c6c977b2231c7abb837";
   };
 
-  propagatedBuildInputs = [ gazebo-ros controller-manager effort-controllers robot-state-publisher rospy fetch-gazebo ];
+  buildInputs = [ actionlib-msgs actionlib ];
+  propagatedBuildInputs = [ gazebo-ros controller-manager actionlib-msgs actionlib robot-state-publisher effort-controllers rospy fetch-gazebo gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

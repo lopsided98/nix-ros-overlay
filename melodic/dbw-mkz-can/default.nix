@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, dbw-mkz-msgs, sensor-msgs, can-msgs, catkin, dbw-mkz-description, dataspeed-can-msg-filters, roscpp, dataspeed-can-usb, dataspeed-ulc-can, rospy, std-msgs, roslaunch, nodelet, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dbw-mkz-can";
-  version = "1.1.1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_can/1.1.1-0.tar.gz;
-    sha256 = "912edcf6f79ab86b6040b97bab30c9804b42d7694b41d4c58f2e300df70600e4";
+    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_can/1.2.3-1.tar.gz;
+    sha256 = "c9bfcc4af61c81906db7436009f9620e4db8e92397e964c85f99cfd00519ec24";
   };
 
   buildInputs = [ dbw-mkz-msgs sensor-msgs can-msgs dataspeed-can-msg-filters roscpp rospy std-msgs nodelet geometry-msgs ];

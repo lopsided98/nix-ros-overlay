@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, roslaunch, catkin }:
 buildRosPackage {
   pname = "ros-melodic-cob-default-env-config";
-  version = "0.6.8";
+  version = "0.6.10-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_environments-release/archive/release/melodic/cob_default_env_config/0.6.8-0.tar.gz;
-    sha256 = "287d83e86a65dcd11bf0e3a84f98617e7b4120052814846fca4f8053ecd622d7";
+    url = https://github.com/ipa320/cob_environments-release/archive/release/melodic/cob_default_env_config/0.6.10-1.tar.gz;
+    sha256 = "367b393e0eaba908fab4e6cca65b1cb1c7448c3762558ae0e5131b1e9eaf02e1";
   };
 
   checkInputs = [ roslaunch ];

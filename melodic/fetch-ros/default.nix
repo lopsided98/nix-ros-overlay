@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, fetch-depth-layer, fetch-calibration, fetch-moveit-config, fetch-teleop, fetch-ikfast-plugin, fetch-description, fetch-navigation, fetch-maps }:
 buildRosPackage {
   pname = "ros-melodic-fetch-ros";
-  version = "0.8.1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_ros/0.8.1-0.tar.gz;
-    sha256 = "8eee5893c1058c6875ca642fa51dcb92bc7a66d0fa2fb5d7aa800f305809819a";
+    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_ros/0.8.2-1.tar.gz;
+    sha256 = "280ad8771e06d8c58d969ec8266fb0ab5da3e6f55bd593b552c3c72503ae677f";
   };
 
   propagatedBuildInputs = [ fetch-depth-layer fetch-calibration fetch-moveit-config fetch-teleop fetch-ikfast-plugin fetch-description fetch-navigation fetch-maps ];

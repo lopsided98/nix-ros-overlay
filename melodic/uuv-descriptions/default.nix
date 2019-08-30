@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, uuv-gazebo-ros-plugins, uuv-sensor-ros-plugins, uuv-assistants, catkin, rostest, robot-state-publisher, rosunit, xacro, gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-melodic-uuv-descriptions";
-  version = "0.6.12";
+  version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_descriptions/0.6.12-0.tar.gz;
-    sha256 = "315d7cb17b30b6a4de0a6e2c88cb431df0cc9e97f6100b6bd061f78cfac28796";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_descriptions/0.6.13-0.tar.gz;
+    sha256 = "b502f0791f2a6185ec41cd24b0a7bc29d2edb5c219ba6e21e6112017e071eff1";
   };
 
   checkInputs = [ rostest rosunit xacro ];

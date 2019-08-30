@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pluginlib, catkin, tf2-kdl, liblapack, moveit-core, tf2-eigen, eigen-conversions, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-fetch-ikfast-plugin";
-  version = "0.8.1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_ikfast_plugin/0.8.1-0.tar.gz;
-    sha256 = "62c825a29e1ea77397875b05777eacde641a4a67ceba2c5b2f3ab161effeff67";
+    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_ikfast_plugin/0.8.2-1.tar.gz;
+    sha256 = "24429d173975f72b6920d831762c727198d523f38dcd462c08beae779dc72643";
   };
 
   buildInputs = [ pluginlib tf2-kdl liblapack moveit-core tf2-eigen eigen-conversions roscpp ];

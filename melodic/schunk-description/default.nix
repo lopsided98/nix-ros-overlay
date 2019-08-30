@@ -2,18 +2,18 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, gtest, catkin, xacro }:
+{ lib, buildRosPackage, fetchurl, gtest, catkin, xacro }:
 buildRosPackage {
   pname = "ros-melodic-schunk-description";
-  version = "0.6.12";
+  version = "0.6.13-r2";
 
   src = fetchurl {
-    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_description/0.6.12-0.tar.gz;
-    sha256 = "e8b387455b278c049357886b457c7016a4b79ba90cf0b83b5382813a17505d62";
+    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_description/0.6.13-2.tar.gz;
+    sha256 = "b3ae5b1d2b3c99078751a4450ec523fbc8727ed3e2b79dbf78d7c3a8a1d80532";
   };
 
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ gazebo-ros xacro ];
+  propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

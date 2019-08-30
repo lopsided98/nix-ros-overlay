@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, xacro, tf, image-transport, sensor-msgs, catkin, uuv-sensor-ros-plugins-msgs, message-filters, tf2-ros, gazebo-plugins, gazebo-dev, tf2, laser-geometry, rostest, uuv-gazebo-plugins, std-msgs, roscpp, rosunit, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uuv-sensor-ros-plugins";
-  version = "0.6.12";
+  version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_sensor_ros_plugins/0.6.12-0.tar.gz;
-    sha256 = "ac3e8bcd2177cd655f0364adf30e48ebae2c10061e18ef905356a89943832684";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_sensor_ros_plugins/0.6.13-0.tar.gz;
+    sha256 = "403319ab9a425f0ace52c7ca845a359b67d5a0ea1fb8737a172608d9f41e4eb0";
   };
 
   buildInputs = [ image-transport sensor-msgs uuv-sensor-ros-plugins-msgs message-filters roscpp gazebo-dev gazebo-plugins tf2 laser-geometry tf2-ros uuv-gazebo-plugins std-msgs tf geometry-msgs ];

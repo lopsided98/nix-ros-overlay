@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roslib, zeromq3 }:
+{ lib, buildRosPackage, fetchurl, roslib, catkin, zeromq }:
 buildRosPackage {
   pname = "ros-melodic-behaviortree-cpp";
   version = "2.5.1";
@@ -12,8 +12,8 @@ buildRosPackage {
     sha256 = "cd1af27ccb2e5763fa4e9f02e23edf77fca7d1894d013a0d932e7f5ad05d337c";
   };
 
-  buildInputs = [ roslib zeromq3 ];
-  propagatedBuildInputs = [ roslib zeromq3 ];
+  buildInputs = [ roslib zeromq ];
+  propagatedBuildInputs = [ roslib zeromq ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

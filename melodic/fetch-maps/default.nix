@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-fetch-maps";
-  version = "0.8.1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_maps/0.8.1-0.tar.gz;
-    sha256 = "fa4b22eabaab0901562f474faff1e445bac07fede3dfbf6116fc68cdc2e90db8";
+    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_maps/0.8.2-1.tar.gz;
+    sha256 = "6e100cd6d0b97d8afd7cfedd71b7a371200312b09c5d9f3feee2e38c1597346c";
   };
 
   nativeBuildInputs = [ catkin ];

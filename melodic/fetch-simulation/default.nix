@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, fetch-gazebo, catkin, fetch-gazebo-demo, fetchit-challenge }:
 buildRosPackage {
   pname = "ros-melodic-fetch-simulation";
-  version = "0.9.1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetch_simulation/0.9.1-0.tar.gz;
-    sha256 = "a032a7e561c95e807a9a87dd91b7f0fbe9263a0afbd14457813f1850f6c2717e";
+    url = https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetch_simulation/0.9.2-1.tar.gz;
+    sha256 = "76b37846fcf07da29ab58753137ef1f324d53e8f6ca225fe46310e6673c7d801";
   };
 
   propagatedBuildInputs = [ fetch-gazebo fetch-gazebo-demo fetchit-challenge ];

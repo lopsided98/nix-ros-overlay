@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, nav-msgs, rospy, dynamic-reconfigure, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uuv-control-cascaded-pid";
-  version = "0.6.12";
+  version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_control_cascaded_pid/0.6.12-0.tar.gz;
-    sha256 = "7d7e8b5a6059846d47eb603f5381eb0f95ca102bd69bceb468c9e426ce4a8ccc";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_control_cascaded_pid/0.6.13-0.tar.gz;
+    sha256 = "dbf283b84f3ab21206873ec6a4423873ae696cd5e00d9ced11568cef4d0930be";
   };
 
   buildInputs = [ dynamic-reconfigure ];

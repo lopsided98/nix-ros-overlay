@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, tf, sensor-msgs, catkin, pythonPackages, nav-msgs, rosgraph, rostopic, visualization-msgs, rospy, topic-tools, roscpp, gazebo-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uuv-assistants";
-  version = "0.6.12";
+  version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_assistants/0.6.12-0.tar.gz;
-    sha256 = "b952f75576e52624e197af9d45457c3eb6e29794a6ed47903c34bfab1644839b";
+    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_assistants/0.6.13-0.tar.gz;
+    sha256 = "3f82b560d43b9d371d23bc2b9a6d8b1ea61b674d6578653c4b96df897f8e88f2";
   };
 
   buildInputs = [ tf sensor-msgs nav-msgs topic-tools roscpp geometry-msgs ];

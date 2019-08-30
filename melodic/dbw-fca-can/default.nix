@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, dbw-fca-msgs, sensor-msgs, can-msgs, catkin, roscpp, dataspeed-can-usb, dataspeed-ulc-can, nodelet, rospy, std-msgs, roslaunch, dbw-fca-description, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dbw-fca-can";
-  version = "1.0.1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca_can/1.0.1-0.tar.gz;
-    sha256 = "6551ac4ef59f8aa4a27cc762f1ba9dba24a9f61f28cf8f49b53496d95b2eee91";
+    url = https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca_can/1.0.6-1.tar.gz;
+    sha256 = "af20f55d7125879bc0b6728be7a12e1c0927d91c947d3722d2753b526201915d";
   };
 
   buildInputs = [ dbw-fca-msgs sensor-msgs can-msgs roscpp rospy std-msgs nodelet geometry-msgs ];

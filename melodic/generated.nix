@@ -90,6 +90,8 @@ self: super: {
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
 
+ avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
+
  aws-common = self.callPackage ./aws-common {};
 
  aws-ros1-common = self.callPackage ./aws-ros1-common {};
@@ -200,19 +202,163 @@ self: super: {
 
  cnn-bridge = self.callPackage ./cnn-bridge {};
 
+ cob-3d-mapping-msgs = self.callPackage ./cob-3d-mapping-msgs {};
+
  cob-actions = self.callPackage ./cob-actions {};
 
+ cob-android = self.callPackage ./cob-android {};
+
+ cob-android-msgs = self.callPackage ./cob-android-msgs {};
+
+ cob-android-resource-server = self.callPackage ./cob-android-resource-server {};
+
+ cob-android-script-server = self.callPackage ./cob-android-script-server {};
+
+ cob-android-settings = self.callPackage ./cob-android-settings {};
+
+ cob-base-controller-utils = self.callPackage ./cob-base-controller-utils {};
+
+ cob-base-drive-chain = self.callPackage ./cob-base-drive-chain {};
+
+ cob-base-velocity-smoother = self.callPackage ./cob-base-velocity-smoother {};
+
+ cob-bms-driver = self.callPackage ./cob-bms-driver {};
+
+ cob-calibration-data = self.callPackage ./cob-calibration-data {};
+
+ cob-cam3d-throttle = self.callPackage ./cob-cam3d-throttle {};
+
+ cob-camera-sensors = self.callPackage ./cob-camera-sensors {};
+
+ cob-canopen-motor = self.callPackage ./cob-canopen-motor {};
+
+ cob-cartesian-controller = self.callPackage ./cob-cartesian-controller {};
+
+ cob-collision-velocity-filter = self.callPackage ./cob-collision-velocity-filter {};
+
+ cob-command-gui = self.callPackage ./cob-command-gui {};
+
+ cob-command-tools = self.callPackage ./cob-command-tools {};
+
  cob-common = self.callPackage ./cob-common {};
+
+ cob-control = self.callPackage ./cob-control {};
+
+ cob-control-mode-adapter = self.callPackage ./cob-control-mode-adapter {};
+
+ cob-control-msgs = self.callPackage ./cob-control-msgs {};
+
+ cob-dashboard = self.callPackage ./cob-dashboard {};
 
  cob-default-env-config = self.callPackage ./cob-default-env-config {};
 
  cob-description = self.callPackage ./cob-description {};
 
+ cob-docker-control = self.callPackage ./cob-docker-control {};
+
+ cob-driver = self.callPackage ./cob-driver {};
+
+ cob-elmo-homing = self.callPackage ./cob-elmo-homing {};
+
  cob-environments = self.callPackage ./cob-environments {};
+
+ cob-extern = self.callPackage ./cob-extern {};
+
+ cob-footprint-observer = self.callPackage ./cob-footprint-observer {};
+
+ cob-frame-tracker = self.callPackage ./cob-frame-tracker {};
+
+ cob-gazebo-plugins = self.callPackage ./cob-gazebo-plugins {};
+
+ cob-gazebo-ros-control = self.callPackage ./cob-gazebo-ros-control {};
+
+ cob-generic-can = self.callPackage ./cob-generic-can {};
+
+ cob-hand = self.callPackage ./cob-hand {};
+
+ cob-hand-bridge = self.callPackage ./cob-hand-bridge {};
+
+ cob-helper-tools = self.callPackage ./cob-helper-tools {};
+
+ cob-image-flip = self.callPackage ./cob-image-flip {};
+
+ cob-interactive-teleop = self.callPackage ./cob-interactive-teleop {};
+
+ cob-light = self.callPackage ./cob-light {};
+
+ cob-linear-nav = self.callPackage ./cob-linear-nav {};
+
+ cob-map-accessibility-analysis = self.callPackage ./cob-map-accessibility-analysis {};
+
+ cob-mapping-slam = self.callPackage ./cob-mapping-slam {};
+
+ cob-model-identifier = self.callPackage ./cob-model-identifier {};
+
+ cob-monitoring = self.callPackage ./cob-monitoring {};
 
  cob-msgs = self.callPackage ./cob-msgs {};
 
+ cob-navigation = self.callPackage ./cob-navigation {};
+
+ cob-navigation-config = self.callPackage ./cob-navigation-config {};
+
+ cob-navigation-global = self.callPackage ./cob-navigation-global {};
+
+ cob-navigation-local = self.callPackage ./cob-navigation-local {};
+
+ cob-navigation-slam = self.callPackage ./cob-navigation-slam {};
+
+ cob-object-detection-msgs = self.callPackage ./cob-object-detection-msgs {};
+
+ cob-object-detection-visualizer = self.callPackage ./cob-object-detection-visualizer {};
+
+ cob-omni-drive-controller = self.callPackage ./cob-omni-drive-controller {};
+
+ cob-perception-common = self.callPackage ./cob-perception-common {};
+
+ cob-perception-msgs = self.callPackage ./cob-perception-msgs {};
+
+ cob-phidget-em-state = self.callPackage ./cob-phidget-em-state {};
+
+ cob-phidget-power-state = self.callPackage ./cob-phidget-power-state {};
+
+ cob-phidgets = self.callPackage ./cob-phidgets {};
+
+ cob-reflector-referencing = self.callPackage ./cob-reflector-referencing {};
+
+ cob-relayboard = self.callPackage ./cob-relayboard {};
+
+ cob-safety-controller = self.callPackage ./cob-safety-controller {};
+
+ cob-scan-unifier = self.callPackage ./cob-scan-unifier {};
+
+ cob-script-server = self.callPackage ./cob-script-server {};
+
+ cob-sick-lms1xx = self.callPackage ./cob-sick-lms1xx {};
+
+ cob-sick-s300 = self.callPackage ./cob-sick-s300 {};
+
  cob-srvs = self.callPackage ./cob-srvs {};
+
+ cob-substitute = self.callPackage ./cob-substitute {};
+
+ cob-supported-robots = self.callPackage ./cob-supported-robots {};
+
+ cob-teleop = self.callPackage ./cob-teleop {};
+
+ cob-trajectory-controller = self.callPackage ./cob-trajectory-controller {};
+
+ cob-tricycle-controller = self.callPackage ./cob-tricycle-controller {};
+
+ cob-twist-controller = self.callPackage ./cob-twist-controller {};
+
+ cob-undercarriage-ctrl = self.callPackage ./cob-undercarriage-ctrl {};
+
+ cob-utilities = self.callPackage ./cob-utilities {};
+
+ cob-vision-utils = self.callPackage ./cob-vision-utils {};
+
+ cob-voltage-control = self.callPackage ./cob-voltage-control {};
 
  code-coverage = self.callPackage ./code-coverage {};
 
@@ -686,6 +832,8 @@ self: super: {
 
  gencpp = self.callPackage ./gencpp {};
 
+ generic-throttle = self.callPackage ./generic-throttle {};
+
  geneus = self.callPackage ./geneus {};
 
  genlisp = self.callPackage ./genlisp {};
@@ -802,6 +950,28 @@ self: super: {
 
  hpp-fcl = self.callPackage ./hpp-fcl {};
 
+ husky-base = self.callPackage ./husky-base {};
+
+ husky-bringup = self.callPackage ./husky-bringup {};
+
+ husky-control = self.callPackage ./husky-control {};
+
+ husky-description = self.callPackage ./husky-description {};
+
+ husky-desktop = self.callPackage ./husky-desktop {};
+
+ husky-gazebo = self.callPackage ./husky-gazebo {};
+
+ husky-msgs = self.callPackage ./husky-msgs {};
+
+ husky-navigation = self.callPackage ./husky-navigation {};
+
+ husky-robot = self.callPackage ./husky-robot {};
+
+ husky-simulator = self.callPackage ./husky-simulator {};
+
+ husky-viz = self.callPackage ./husky-viz {};
+
  ibeo-core = self.callPackage ./ibeo-core {};
 
  ibeo-lux = self.callPackage ./ibeo-lux {};
@@ -887,6 +1057,8 @@ self: super: {
  interactive-markers = self.callPackage ./interactive-markers {};
 
  interval-intersection = self.callPackage ./interval-intersection {};
+
+ ipa-3d-fov-visualization = self.callPackage ./ipa-3d-fov-visualization {};
 
  ipr-extern = self.callPackage ./ipr-extern {};
 
@@ -1038,6 +1210,8 @@ self: super: {
 
  laser-proc = self.callPackage ./laser-proc {};
 
+ laser-scan-densifier = self.callPackage ./laser-scan-densifier {};
+
  lauv-control = self.callPackage ./lauv-control {};
 
  lauv-description = self.callPackage ./lauv-description {};
@@ -1054,6 +1228,8 @@ self: super: {
 
  libcmt = self.callPackage ./libcmt {};
 
+ libdlib = self.callPackage ./libdlib {};
+
  libfranka = self.callPackage ./libfranka {};
 
  libg2o = self.callPackage ./libg2o {};
@@ -1062,7 +1238,13 @@ self: super: {
 
  libmodbus = self.callPackage ./libmodbus {};
 
+ libntcan = self.callPackage ./libntcan {};
+
+ libpcan = self.callPackage ./libpcan {};
+
  libphidget21 = self.callPackage ./libphidget21 {};
+
+ libphidgets = self.callPackage ./libphidgets {};
 
  libqt-concurrent = self.callPackage ./libqt-concurrent {};
 
@@ -1528,6 +1710,8 @@ self: super: {
 
  opencv-apps = self.callPackage ./opencv-apps {};
 
+ opengm = self.callPackage ./opengm {};
+
  openni2-camera = self.callPackage ./openni2-camera {};
 
  openni2-launch = self.callPackage ./openni2-launch {};
@@ -1571,6 +1755,8 @@ self: super: {
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
+
+ parameter-assertions = self.callPackage ./parameter-assertions {};
 
  parrot-arsdk = self.callPackage ./parrot-arsdk {};
 
@@ -1836,6 +2022,8 @@ self: super: {
 
  rail-manipulation-msgs = self.callPackage ./rail-manipulation-msgs {};
 
+ rail-mesh-icp = self.callPackage ./rail-mesh-icp {};
+
  rail-segmentation = self.callPackage ./rail-segmentation {};
 
  random-numbers = self.callPackage ./random-numbers {};
@@ -1937,6 +2125,8 @@ self: super: {
  robot-mechanism-controllers = self.callPackage ./robot-mechanism-controllers {};
 
  robot-navigation = self.callPackage ./robot-navigation {};
+
+ robot-one = self.callPackage ./robot-one {};
 
  robot-pose-ekf = self.callPackage ./robot-pose-ekf {};
 
@@ -2332,11 +2522,25 @@ self: super: {
 
  schunk-description = self.callPackage ./schunk-description {};
 
+ schunk-libm5api = self.callPackage ./schunk-libm5api {};
+
+ schunk-modular-robotics = self.callPackage ./schunk-modular-robotics {};
+
+ schunk-powercube-chain = self.callPackage ./schunk-powercube-chain {};
+
+ schunk-sdh = self.callPackage ./schunk-sdh {};
+
+ schunk-simulated-tactile-sensors = self.callPackage ./schunk-simulated-tactile-sensors {};
+
+ sdhlibrary-cpp = self.callPackage ./sdhlibrary-cpp {};
+
  self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  serial = self.callPackage ./serial {};
+
+ service-tools = self.callPackage ./service-tools {};
 
  settlerlib = self.callPackage ./settlerlib {};
 

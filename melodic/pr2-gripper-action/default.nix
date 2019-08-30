@@ -5,11 +5,11 @@
 { lib, buildRosPackage, fetchurl, pr2-controllers-msgs, pr2-mechanism-controllers, actionlib-msgs, catkin, robot-mechanism-controllers, actionlib, roscpp, pr2-mechanism-model }:
 buildRosPackage {
   pname = "ros-melodic-pr2-gripper-action";
-  version = "1.10.16-r1";
+  version = "1.10.17-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_gripper_action/1.10.16-1.tar.gz;
-    sha256 = "b56e31a54557e63cc384cdad03c1ddbe0f8844541da81544d632ab69b2216529";
+    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_gripper_action/1.10.17-1.tar.gz;
+    sha256 = "98833a8e129e9fc682976c109d577841fb18d99d50acafe8c898e85337443ed8";
   };
 
   buildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers actionlib-msgs robot-mechanism-controllers actionlib roscpp pr2-mechanism-model ];
