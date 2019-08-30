@@ -1,9 +1,9 @@
-{ clangStdenv, fetchurl, fetchFromGitHub, libusb1, jdk, python3, doxygen
+{ lib, clangStdenv, fetchurl, fetchFromGitHub, libusb1, jdk, python3, doxygen
 , libGLU, xorg, freeglut }:
 
 let
   libopenni2_pc = fetchurl {
-    url = https://salsa.debian.org/multimedia-team/openni2/raw/master/debian/libopenni2.pc;
+    url = "https://salsa.debian.org/multimedia-team/openni2/raw/8491921c14b8c41850f0e0b0493e195cb53a71a3/debian/libopenni2.pc";
     sha256 = "1023s3j71m56fnvqmai4683ds4fbm92dhf1s8csdrdn88a726ygm";
   };
 in clangStdenv.mkDerivation rec {
@@ -62,4 +62,10 @@ in clangStdenv.mkDerivation rec {
     install -d -m755 "$doc/share/doc"
     cp -r Source/Documentation/html "$doc/share/doc/OpenNI2"
   '';
+
+  meta = with lib; {
+    description = "Open source SDK used for developing 3D sensing middleware libraries and applications";
+    license = licenses.asl20;
+    maintainers = with maintainers; [ lopsided98 ];
+  };
 }
