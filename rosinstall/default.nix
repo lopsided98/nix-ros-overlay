@@ -15,7 +15,8 @@ buildPythonPackage rec {
 
   meta = with lib; {
     description = "The installer for ROS";
-    homepage = http://wiki.ros.org/rosinstall;
+    homepage = "http://wiki.ros.org/rosinstall";
     license = licenses.bsd3;
+    maintainers = with maintainers; [ lopsided98 ];
   };
 }
