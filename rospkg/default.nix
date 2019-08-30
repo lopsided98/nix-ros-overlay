@@ -15,7 +15,7 @@ buildPythonPackage rec {
 
   meta = with lib; {
     description = "Library for retrieving information about ROS packages and stacks";
-    homepage = http://wiki.ros.org/rospkg;
+    homepage = "http://wiki.ros.org/rospkg";
     license = licenses.bsd3;
     maintainers = with maintainers; [ lopsided98 ];
   };
