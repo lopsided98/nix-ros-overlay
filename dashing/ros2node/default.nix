@@ -1,0 +1,24 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-xmllint, ament-flake8, pythonPackages, ament-pep257, ament-copyright, ros2cli }:
+buildRosPackage {
+  pname = "ros-dashing-ros2node";
+  version = "0.7.4-r1";
+
+  src = fetchurl {
+    url = https://github.com/ros2-gbp/ros2cli-release/archive/release/dashing/ros2node/0.7.4-1.tar.gz;
+    sha256 = "935f4aa8ec31a0f735c644de22c5d5b65bc05ac0e183b048449d75daf4214d56";
+  };
+
+  buildType = "ament_python";
+  buildInputs = [ ros2cli ];
+  checkInputs = [ ament-xmllint ament-flake8 pythonPackages.pytest ament-pep257 ament-copyright ];
+  propagatedBuildInputs = [ ros2cli ];
+
+  meta = {
+    description = ''The node command for ROS 2 command line tools.'';
+    license = with lib.licenses; [ asl20 ];
+  };
+}
