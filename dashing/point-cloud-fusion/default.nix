@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rclcpp-lifecycle, tf2-geometry-msgs, ament-cmake-pclint, sensor-msgs, message-filters, tf2-ros, tf2-sensor-msgs, rclcpp, autoware-auto-cmake, lidar-utils }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-point-cloud-fusion";
   version = "0.0.1-r1";
 

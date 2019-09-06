@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, lidar-utils, autoware-auto-cmake, autoware-auto-algorithm }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ray-ground-classifier";
   version = "0.0.1-r1";
 

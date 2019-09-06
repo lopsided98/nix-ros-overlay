@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rosidl-generator-cpp, rosbag2, pluginlib, ament-lint-common, ament-cmake-gmock, rosbag2-test-common, test-msgs, ament-cmake, poco-vendor, ament-index-cpp, rmw-fastrtps-cpp, ament-lint-auto, rcutils, rmw }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosbag2-converter-default-plugins";
   version = "0.1.4-r1";
 

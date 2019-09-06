@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, rmw-implementation-cmake, ament-lint-common, launch-testing, sensor-msgs, launch, launch-testing-ament-cmake, rclcpp, std-msgs, ament-lint-auto, opencv3 }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-intra-process-demo";
   version = "0.7.8-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, sensor-msgs, image-geometry, rclcpp, ament-cmake-ros, opencv3 }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-depthimage-to-laserscan";
   version = "2.2.1-r1";
 

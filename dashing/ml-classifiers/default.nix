@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ros-environment, ament-cmake-cpplint, ament-cmake, pluginlib, ament-cmake-uncrustify, rosidl-default-generators, ament-cmake-cppcheck, ament-cmake-xmllint, rclcpp, ament-cmake-lint-cmake, std-msgs, ament-lint-auto, ament-cmake-copyright, rosidl-default-runtime, eigen }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ml-classifiers";
   version = "1.0.1-r1";
 

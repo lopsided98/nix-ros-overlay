@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-pclint, ament-cmake-gtest, autoware-auto-msgs, autoware-auto-cmake, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-autoware-auto-geometry";
   version = "0.0.1-r1";
 

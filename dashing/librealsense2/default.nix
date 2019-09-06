@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, gtk3, ament-cmake, udev, pkg-config, libusb1, glfw3, linuxHeaders, openssl, libGLU, libGL }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-librealsense2";
   version = "2.16.5-r1";
 

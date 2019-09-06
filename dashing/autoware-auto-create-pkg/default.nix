@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-copyright, pythonPackages, ament-flake8, ament-pep257 }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-autoware-auto-create-pkg";
   version = "0.0.1-r1";
 

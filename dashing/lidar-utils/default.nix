@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, ament-lint-common, ament-cmake-pclint, sensor-msgs, rclcpp, autoware-auto-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-lidar-utils";
   version = "0.0.1-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-cmake-gtest, ament-cmake, ament-lint-common }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ament-index-cpp";
   version = "0.7.0-r1";
 

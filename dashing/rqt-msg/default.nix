@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rqt-gui-py, ament-cmake, rclpy, rqt-gui, rqt-console, python3Packages, rqt-py-common, python-qt-binding }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rqt-msg";
   version = "1.0.2-r1";
 

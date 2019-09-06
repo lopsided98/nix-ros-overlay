@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-test, ament-cmake-core }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ament-lint-auto";
   version = "0.7.9-r1";
 

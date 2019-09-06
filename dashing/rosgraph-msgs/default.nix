@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosgraph-msgs";
   version = "0.7.4-r1";
 

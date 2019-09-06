@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, launch-ros, ros2run, ament-cmake-gtest, launch, robot-state-publisher, ament-index-python, ament-lint-auto, dummy-sensors, dummy-map-server }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-dummy-robot-bringup";
   version = "0.7.8-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rosidl-adapter, ament-cmake, ament-lint-common, python3Packages, rosidl-parser, ament-cmake-python, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosidl-cmake";
   version = "0.7.5-r1";
 

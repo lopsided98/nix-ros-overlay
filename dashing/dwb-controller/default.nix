@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-testing, nav2-msgs, ament-cmake-gtest, nav2-util, launch, nav2-common, nav-2d-utils, rclcpp-action, rclcpp, std-msgs, ament-lint-auto, dwb-core, nav-2d-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-dwb-controller";
   version = "0.2.3-r1";
 

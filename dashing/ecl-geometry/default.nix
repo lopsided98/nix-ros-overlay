@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-formatters, ament-lint-common, ament-cmake-gtest, ecl-build, ecl-exceptions, ecl-containers, ecl-license, ecl-type-traits, ecl-math, ament-cmake-ros, ament-lint-auto, ecl-linear-algebra, ecl-config, ecl-mpl }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-geometry";
   version = "1.0.4-r1";
 

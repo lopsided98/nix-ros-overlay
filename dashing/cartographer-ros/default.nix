@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, tf2-msgs, ament-cmake, lua5, libyamlcpp, pcl, sensor-msgs, tf2-ros, cartographer-ros-msgs, tf2, nav-msgs, urdfdom-headers, rclcpp, tf2-eigen, eigen, cartographer, visualization-msgs, pcl-conversions }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-cartographer-ros";
   version = "1.0.9000-r1";
 

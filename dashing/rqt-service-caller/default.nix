@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rqt-gui-py, rqt-py-common, rqt-gui, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rqt-service-caller";
   version = "1.0.3-r1";
 

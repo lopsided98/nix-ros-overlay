@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, tf2-msgs, ament-cmake, ament-cmake-gtest, message-filters, tf2, rclcpp, std-msgs, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-tf2-ros";
   version = "0.11.4-r1";
 

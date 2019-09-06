@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-gtest, diagnostic-updater, rclcpp, diagnostic-msgs, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-self-test";
   version = "2.0.0-r1";
 

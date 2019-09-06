@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, python-qt-binding, rclpy, rosidl-default-generators, qt-gui, qt5, rosidl-default-runtime }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rqt-py-common";
   version = "1.0.4-r1";
 

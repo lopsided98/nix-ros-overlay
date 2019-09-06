@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-flake8, launch-ros, launch, pythonPackages, ament-pep257, tracetools-trace, ament-copyright }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-tracetools-launch";
   version = "0.2.0-r1";
 

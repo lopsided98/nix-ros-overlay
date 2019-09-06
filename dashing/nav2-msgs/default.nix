@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-testing, rosidl-default-generators, ament-cmake-gtest, launch, nav2-common, action-msgs, rclcpp, std-msgs, ament-lint-auto, rosidl-default-runtime, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-nav2-msgs";
   version = "0.2.3-r1";
 

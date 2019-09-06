@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, test-msgs, ament-cmake-gtest, action-msgs, ament-cmake-ros, rcl, ament-lint-auto, rcutils, osrf-testing-tools-cpp, rmw, rosidl-generator-c }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rcl-action";
   version = "0.7.6-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-auto, python3, ament-cmake, ament-lint-common }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-python-cmake-module";
   version = "0.7.7-r1";
 

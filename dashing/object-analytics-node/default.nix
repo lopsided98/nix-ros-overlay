@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, lz4, rclcpp-components, object-analytics-msgs, ament-cmake, ament-lint-common, pcl, class-loader, cv-bridge, sensor-msgs, ament-cmake-gtest, message-filters, object-msgs, rclcpp, std-msgs, ament-index-python, ament-lint-auto, pcl-conversions, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-object-analytics-node";
   version = "0.5.4-r2";
 

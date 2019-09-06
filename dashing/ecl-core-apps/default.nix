@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-streams, ecl-threads, ecl-exceptions, ecl-linear-algebra, ecl-ipc, ecl-formatters, ecl-time-lite, ecl-geometry, ecl-build, ecl-license, ecl-errors, ecl-type-traits, ecl-sigslots, ecl-command-line, ecl-containers, ecl-devices, ament-cmake-ros, ecl-config, ecl-converters }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-core-apps";
   version = "1.0.4-r1";
 

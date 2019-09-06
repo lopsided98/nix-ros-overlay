@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, class-loader, tinyxml2-vendor, ament-index-cpp, rcutils }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-pluginlib";
   version = "2.3.2-r1";
 

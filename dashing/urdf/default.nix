@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, tinyxml, urdfdom, urdfdom-headers, tinyxml-vendor, ament-cmake-ros, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-urdf";
   version = "2.2.0-r1";
 

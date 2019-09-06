@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-dynamixel-sdk";
   version = "3.7.20-r1";
 

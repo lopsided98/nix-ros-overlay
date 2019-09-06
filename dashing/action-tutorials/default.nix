@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rclpy, rosidl-default-generators, action-msgs, ament-lint-auto, rosidl-default-runtime }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-action-tutorials";
   version = "0.7.8-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-export-link-flags, ament-cmake-export-definitions, ament-cmake-core, ament-cmake-libraries, ament-cmake-export-libraries, ament-cmake-test, ament-cmake-target-dependencies, ament-cmake-export-include-directories, ament-cmake-export-interfaces, ament-cmake-python, cmake, ament-cmake-export-dependencies }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ament-cmake";
   version = "0.7.3-r1";
 

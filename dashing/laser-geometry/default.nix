@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-uncrustify, ament-cmake-gmock, sensor-msgs, ament-cmake-gtest, ament-cmake-cppcheck, tf2, rclcpp, ament-cmake-lint-cmake, ament-cmake-cpplint, eigen }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-laser-geometry";
   version = "2.0.0";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, pcl, ament-cmake-gtest, sensor-msgs, eigen, std-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-pcl-conversions";
   version = "2.0.0-r1";
 

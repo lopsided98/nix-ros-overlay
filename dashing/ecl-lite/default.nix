@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-time-lite, ecl-io, ecl-sigslots-lite, ecl-errors, ament-cmake-ros, ecl-converters-lite, ecl-config }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-lite";
   version = "1.0.3-r2";
 

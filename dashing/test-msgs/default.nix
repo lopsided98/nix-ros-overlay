@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, ament-lint-common, rosidl-default-generators, ament-cmake-gtest, action-msgs, ament-lint-auto, rosidl-default-runtime, test-interface-files }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-test-msgs";
   version = "0.7.4-r1";
 

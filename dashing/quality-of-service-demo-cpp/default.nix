@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, launch-ros, rmw-implementation-cmake, ament-lint-common, launch-testing, launch, example-interfaces, rclcpp, std-msgs, ament-lint-auto, rcutils, rmw }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-quality-of-service-demo-cpp";
   version = "0.7.8-r1";
 

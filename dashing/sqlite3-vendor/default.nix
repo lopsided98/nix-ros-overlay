@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, sqlite, cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-sqlite3-vendor";
   version = "0.1.4-r1";
 

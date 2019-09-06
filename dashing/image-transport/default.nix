@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, pluginlib, ament-lint-common, ament-cmake-gtest, sensor-msgs, message-filters, rclcpp, ament-cmake-ros, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-image-transport";
   version = "2.1.1-r1";
 

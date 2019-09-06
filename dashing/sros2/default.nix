@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-flake8, rclpy, pythonPackages, ament-pep257, python3Packages, openssl, ament-copyright, ros2cli }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-sros2";
   version = "0.7.1-r1";
 

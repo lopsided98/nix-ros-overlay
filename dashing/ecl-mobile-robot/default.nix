@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-formatters, ament-lint-common, ament-cmake-gtest, ecl-geometry, ecl-build, ecl-license, ecl-errors, ecl-math, ament-cmake-ros, ament-lint-auto, ecl-linear-algebra }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-mobile-robot";
   version = "1.0.4-r1";
 

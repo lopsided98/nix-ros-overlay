@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, gazebo-ros-pkgs, turtlebot3-description, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-turtlebot3-gazebo";
   version = "2.0.1-r1";
 

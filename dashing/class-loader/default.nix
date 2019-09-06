@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, poco, ament-cmake, ament-lint-common, ament-cmake-gtest, poco-vendor, console-bridge-vendor, console-bridge, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-class-loader";
   version = "1.3.2-r1";
 

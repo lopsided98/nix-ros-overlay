@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake, ament-cmake-lint-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-eigen3-cmake-module";
   version = "0.1.1-r1";
 

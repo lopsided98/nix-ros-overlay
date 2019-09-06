@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, ament-lint-common, rosidl-default-generators, ament-lint-auto, rosidl-default-runtime }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rcl-interfaces";
   version = "0.7.4-r1";
 

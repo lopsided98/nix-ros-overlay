@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-auto, rosidl-cmake, ament-cmake, ament-lint-common }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosidl-generator-dds-idl";
   version = "0.7.1-r1";
 

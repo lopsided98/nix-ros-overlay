@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, nav2-bringup, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-turtlebot3-navigation2";
   version = "2.0.1-r1";
 

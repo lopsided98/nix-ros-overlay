@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, libcurl-vendor, ament-index-cpp, ament-cmake-ros }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-resource-retriever";
   version = "2.1.0-r2";
 

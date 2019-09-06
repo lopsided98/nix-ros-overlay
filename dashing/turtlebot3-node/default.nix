@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, dynamixel-sdk, std-srvs, ament-cmake, sensor-msgs, message-filters, turtlebot3-msgs, tf2-ros, tf2, nav-msgs, rclcpp, std-msgs, rcutils, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-turtlebot3-node";
   version = "2.0.1-r1";
 

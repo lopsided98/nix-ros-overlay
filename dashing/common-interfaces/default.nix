@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, shape-msgs, std-srvs, ament-cmake, actionlib-msgs, trajectory-msgs, sensor-msgs, nav-msgs, std-msgs, diagnostic-msgs, visualization-msgs, geometry-msgs, stereo-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-common-interfaces";
   version = "0.7.0-r1";
 

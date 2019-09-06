@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, cyclonedds, rosidl-typesupport-introspection-c, cyclonedds-cmake-module, rosidl-typesupport-introspection-cpp, ament-cmake-ros, ament-lint-auto, rcutils, rmw, rosidl-generator-c }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rmw-cyclonedds-cpp";
   version = "0.4.0-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-flake8, rclpy, pythonPackages, example-interfaces, ament-pep257, ament-copyright }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-examples-rclpy-minimal-action-server";
   version = "0.7.4-r1";
 

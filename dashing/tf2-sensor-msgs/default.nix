@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, sensor-msgs, tf2-ros, ament-cmake-auto, tf2, eigen }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-tf2-sensor-msgs";
   version = "0.11.4-r1";
 

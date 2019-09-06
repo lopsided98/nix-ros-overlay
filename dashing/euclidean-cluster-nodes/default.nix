@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-pclint, sensor-msgs, autoware-auto-msgs, voxel-grid-nodes, rclcpp, euclidean-cluster, autoware-auto-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-euclidean-cluster-nodes";
   version = "0.0.1-r1";
 

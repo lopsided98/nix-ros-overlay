@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-export-libraries, ament-cmake-core }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ament-cmake-export-interfaces";
   version = "0.7.3-r1";
 

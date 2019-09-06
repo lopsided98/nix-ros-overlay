@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cunit, cmake, openjdk, maven }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-cyclonedds";
   version = "0.1.0-r1";
 

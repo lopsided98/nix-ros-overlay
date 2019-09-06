@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-converters, ecl-formatters, ecl-utilities, ament-lint-common, ament-cmake-gtest, ecl-build, ecl-exceptions, ecl-license, ecl-errors, ecl-type-traits, ament-cmake-ros, ament-lint-auto, ecl-config, ecl-mpl }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-containers";
   version = "1.0.4-r1";
 

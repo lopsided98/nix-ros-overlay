@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, orocos-kdl, ament-cmake-gtest, tf2-ros, ament-cmake-auto, tf2, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-tf2-geometry-msgs";
   version = "0.11.4-r1";
 

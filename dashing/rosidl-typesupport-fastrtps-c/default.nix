@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-typesupport-interface, ament-lint-common, fastrtps, rosidl-cmake, rosidl-parser, rosidl-typesupport-fastrtps-cpp, fastcdr, ament-lint-auto, fastrtps-cmake-module, rmw, rosidl-generator-c }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosidl-typesupport-fastrtps-c";
   version = "0.7.1-r1";
 

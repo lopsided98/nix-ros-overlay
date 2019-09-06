@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-cmake-core }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-nav2-common";
   version = "0.2.3-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, pluginlib, ament-lint-common, launch-testing, ament-cmake-gtest, launch, nav2-util, nav2-common, nav-2d-utils, rclcpp, angles, ament-lint-auto, dwb-core, nav-2d-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-dwb-plugins";
   version = "0.2.3-r1";
 

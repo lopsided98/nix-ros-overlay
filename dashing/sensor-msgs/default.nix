@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, ament-lint-common, rosidl-default-generators, ament-cmake-gtest, rosidl-cmake, std-msgs, ament-lint-auto, rosidl-default-runtime, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-sensor-msgs";
   version = "0.7.0-r1";
 

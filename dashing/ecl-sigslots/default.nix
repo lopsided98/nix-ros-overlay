@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, ecl-threads, ecl-build, ecl-license, ament-cmake-ros, ament-lint-auto, ecl-config }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-sigslots";
   version = "1.0.4-r1";
 

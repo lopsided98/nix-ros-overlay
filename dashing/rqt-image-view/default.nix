@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, image-transport, sensor-msgs, rqt-gui, cv-bridge, qt-gui-cpp, qt5, rqt-gui-cpp, rclcpp, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rqt-image-view";
   version = "1.0.2-r1";
 

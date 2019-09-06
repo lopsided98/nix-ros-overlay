@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-gtest, motion-model, autoware-auto-cmake, osrf-testing-tools-cpp }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-kalman-filter";
   version = "0.0.1-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, turtlebot3-cartographer, ament-cmake, turtlebot3-node, turtlebot3-description, turtlebot3-navigation2, turtlebot3-bringup, turtlebot3-teleop }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-turtlebot3";
   version = "2.0.1-r1";
 

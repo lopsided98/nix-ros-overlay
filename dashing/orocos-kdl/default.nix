@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cppunit, cmake, pkg-config, eigen }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-orocos-kdl";
   version = "3.2.0-r1";
 

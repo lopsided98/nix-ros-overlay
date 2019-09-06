@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, unique-identifier-msgs, ament-cmake, ament-lint-common, rosidl-default-generators, action-msgs, rosidl-default-runtime, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-py-trees-ros-interfaces";
   version = "1.1.2-r1";
 

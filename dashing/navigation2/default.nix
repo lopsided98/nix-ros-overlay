@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-voxel-grid, nav2-dwb-controller, nav2-lifecycle-manager, nav2-behavior-tree, nav2-bt-navigator, nav2-amcl, nav2-map-server, ament-cmake-pytest, nav2-navfn-planner, ament-cmake-gtest, launch, nav2-util, nav2-rviz-plugins, nav2-world-model, ament-lint-common, launch-testing, nav2-msgs, nav2-costmap-2d, ament-lint-auto, nav2-recoveries }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-navigation2";
   version = "0.2.3-r1";
 

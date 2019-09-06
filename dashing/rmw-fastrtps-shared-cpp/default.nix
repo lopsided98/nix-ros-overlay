@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rcpputils, ament-cmake, ament-lint-common, fastrtps, ament-cmake-ros, fastcdr, ament-lint-auto, rcutils, fastrtps-cmake-module, rmw }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rmw-fastrtps-shared-cpp";
   version = "0.7.5-r1";
 

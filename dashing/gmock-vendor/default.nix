@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, gtest-vendor }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-gmock-vendor";
   version = "1.8.9000-r1";
 

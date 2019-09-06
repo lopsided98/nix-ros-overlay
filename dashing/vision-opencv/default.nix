@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cv-bridge, ament-cmake, image-geometry }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-vision-opencv";
   version = "2.1.2-r1";
 

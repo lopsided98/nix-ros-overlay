@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, common-interfaces, ros-environment, ros2lifecycle, ros2msg, ament-cmake, rcl-lifecycle, class-loader, ament-cmake-auto, ros2param, rosidl-default-runtime, ros2service, ament-cmake-pytest, ros2action, sros2, ament-cmake-gtest, rclcpp, ament-index-python, ros2run, ros2topic, rclcpp-lifecycle, ros2node, ament-cmake-gmock, ros2component, ros2multicast, ros2launch, ament-cmake-ros, ament-index-cpp, pluginlib, ament-lint-common, rclpy, ros2srv, rosidl-default-generators, ros2pkg, ament-lint-auto, sros2-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ros-core";
   version = "0.7.2-r1";
 

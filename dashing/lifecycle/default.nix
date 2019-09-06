@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, ament-lint-common, lifecycle-msgs, ros-testing, std-msgs, ament-lint-auto, ros2run }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-lifecycle";
   version = "0.7.8-r1";
 

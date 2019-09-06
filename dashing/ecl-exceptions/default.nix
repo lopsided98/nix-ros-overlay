@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-build, ecl-license, ecl-errors, ament-cmake-ros, ecl-config }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-exceptions";
   version = "1.0.4-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, rosidl-typesupport-c, ament-cmake, rmw-implementation-cmake, ament-lint-common, rosidl-typesupport-interface, pythonPackages, python3Packages, python-cmake-module, rmw-implementation, rosidl-cmake, rosidl-parser, ament-index-python, ament-lint-auto, rmw, rosidl-generator-c }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosidl-generator-py";
   version = "0.7.7-r1";
 

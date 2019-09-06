@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-xmllint, ament-flake8, ros2node, rclpy, composition-interfaces, pythonPackages, ros2param, ament-pep257, rcl-interfaces, ament-copyright, ament-index-python, rclcpp-components, ros2pkg, ros2cli }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ros2component";
   version = "0.7.4-r1";
 

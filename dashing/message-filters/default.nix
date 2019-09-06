@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake-pytest, rclpy, ament-cmake-gtest, sensor-msgs, python-cmake-module, std-msgs, rclcpp, ament-cmake-ros, ament-cmake-python, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-message-filters";
   version = "3.1.2-r1";
 

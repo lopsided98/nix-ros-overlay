@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, rclcpp-lifecycle, ament-lint-common, rclpy, ament-cmake-gtest, std-msgs, rclcpp, ament-cmake-python, diagnostic-msgs, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-diagnostic-updater";
   version = "2.0.0-r1";
 

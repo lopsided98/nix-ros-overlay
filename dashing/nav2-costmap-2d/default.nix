@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-voxel-grid, nav2-common, nav2-lifecycle-manager, geometry-msgs, nav2-map-server, ament-cmake-pytest, ament-cmake-gtest, launch, message-filters, nav2-util, tf2-sensor-msgs, rclcpp, rclcpp-lifecycle, tf2-geometry-msgs, tf2-ros, nav-msgs, std-msgs, laser-geometry, visualization-msgs, pluginlib, ament-lint-common, launch-testing, sensor-msgs, nav2-msgs, tf2, ament-lint-auto, map-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-nav2-costmap-2d";
   version = "0.2.3-r1";
 

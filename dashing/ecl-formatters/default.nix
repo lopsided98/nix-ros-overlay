@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-converters, ecl-build, ecl-exceptions, ecl-license, ament-cmake-ros, ecl-config }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-formatters";
   version = "1.0.4-r1";
 

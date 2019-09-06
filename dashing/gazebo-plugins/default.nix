@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, gazebo-msgs, geometry-msgs, image-transport, ament-cmake-gtest, rclcpp, gazebo-ros, std-srvs, tf2-geometry-msgs, camera-info-manager, trajectory-msgs, tf2-ros, gazebo-dev, nav-msgs, std-msgs, ament-lint-common, sensor-msgs, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-gazebo-plugins";
   version = "3.3.3-r1";
 

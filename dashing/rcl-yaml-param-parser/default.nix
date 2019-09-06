@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, libyaml, ament-lint-common, ament-cmake-gtest, ament-cmake-ros, rcl, ament-lint-auto, rcutils, libyaml-vendor }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rcl-yaml-param-parser";
   version = "0.7.6-r1";
 

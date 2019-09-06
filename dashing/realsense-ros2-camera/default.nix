@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, ament-lint-common, realsense-camera-msgs, image-transport, cv-bridge, sensor-msgs, ament-cmake-gtest, tf2-ros, rosidl-default-generators, rmw-implementation, rclcpp, eigen, std-msgs, ament-lint-auto, rosidl-default-runtime, librealsense2 }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-realsense-ros2-camera";
   version = "2.0.4-r2";
 

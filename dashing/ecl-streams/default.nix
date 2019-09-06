@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-converters, ament-lint-common, ament-cmake-gtest, ecl-concepts, ecl-time, ecl-build, ecl-license, ecl-errors, ecl-type-traits, ecl-devices, ament-cmake-ros, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-streams";
   version = "1.0.4-r1";
 

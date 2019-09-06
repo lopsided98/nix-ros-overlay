@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, poco, rosidl-typesupport-interface, ament-cmake-core, ament-lint-common, ament-lint-auto, poco-vendor, rosidl-typesupport-introspection-c, rmw-implementation, rosidl-typesupport-connext-c, ament-cmake-ros, rosidl-typesupport-opensplice-c, rosidl-generator-c }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosidl-typesupport-c";
   version = "0.7.1-r1";
 

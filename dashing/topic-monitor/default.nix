@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-flake8, launch-ros, rclpy, launch, pythonPackages, ament-pep257, std-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-topic-monitor";
   version = "0.7.8-r1";
 

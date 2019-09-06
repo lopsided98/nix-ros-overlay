@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, pythonPackages, ament-lint, ament-flake8, ament-pep257 }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ament-copyright";
   version = "0.7.9-r1";
 

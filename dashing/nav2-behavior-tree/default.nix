@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-common, behaviortree-cpp, rclcpp-action, lifecycle-msgs, rosidl-default-runtime, geometry-msgs, ament-cmake-pytest, ament-cmake-gtest, launch, nav2-util, rclcpp, builtin-interfaces, std-srvs, rclcpp-lifecycle, tf2-geometry-msgs, std-msgs, ament-lint-common, launch-testing, rosidl-default-generators, nav2-msgs, tf2, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-nav2-behavior-tree";
   version = "0.2.3-r1";
 

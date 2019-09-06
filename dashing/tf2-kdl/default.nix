@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, tf2-msgs, ament-cmake, orocos-kdl, ament-cmake-gtest, tf2-ros, tf2, rclcpp, eigen, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-tf2-kdl";
   version = "0.11.4-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, pluginlib, ament-lint-common, image-transport, rosidl-default-generators, cv-bridge, libogg, std-msgs, rclcpp, libtheora, rosidl-default-runtime }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-theora-image-transport";
   version = "2.1.0-r1";
 

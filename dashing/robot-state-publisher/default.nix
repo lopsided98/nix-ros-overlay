@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, kdl-parser, ament-cmake, orocos-kdl, ament-lint-common, sensor-msgs, tf2-ros, urdfdom-headers, urdf, rclcpp, ament-lint-auto, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-robot-state-publisher";
   version = "2.2.3-r1";
 

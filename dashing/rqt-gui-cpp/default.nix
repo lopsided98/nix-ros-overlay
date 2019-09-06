@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, qt-gui-cpp, qt-gui, rclcpp, qt5 }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rqt-gui-cpp";
   version = "1.0.4-r1";
 

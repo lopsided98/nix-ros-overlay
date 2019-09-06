@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, ecl-concepts, ecl-build, ecl-license, ament-cmake-ros, ament-lint-auto, ecl-mpl }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-utilities";
   version = "1.0.4-r1";
 

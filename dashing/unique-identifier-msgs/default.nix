@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rosidl-default-generators, rosidl-default-runtime, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-unique-identifier-msgs";
   version = "2.1.0-r1";
 

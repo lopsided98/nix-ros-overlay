@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, connext-cmake-module, rosidl-cmake, ament-lint-auto, rcutils, rmw }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rmw-connext-shared-cpp";
   version = "0.7.3-r1";
 

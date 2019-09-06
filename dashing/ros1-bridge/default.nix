@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, tf2-msgs, ament-cmake, rmw-implementation-cmake, actionlib-msgs, python3Packages, action-msgs, diagnostic-msgs, demo-nodes-cpp, geometry-msgs, gazebo-msgs, stereo-msgs, launch, pkg-config, example-interfaces, rclcpp, ament-index-python, ros2run, launch-testing-ros, builtin-interfaces, std-srvs, trajectory-msgs, launch-testing-ament-cmake, nav-msgs, rosidl-cmake, rosidl-parser, std-msgs, visualization-msgs, rcutils, shape-msgs, ament-lint-common, launch-testing, sensor-msgs, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ros1-bridge";
   version = "0.7.3-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, sqlite3-vendor, pluginlib, ament-lint-common, rosbag2-test-common, ament-cmake-gmock, ament-cmake, ament-lint-auto, rosbag2-storage, rcutils }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosbag2-storage-default-plugins";
   version = "0.1.4-r1";
 

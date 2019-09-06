@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cairo, ceres-solver, boost, gflags, lua5, pythonPackages, glog, eigen, protobuf, cmake, gmock }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-cartographer";
   version = "1.0.0-r1";
 

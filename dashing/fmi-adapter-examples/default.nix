@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, fmi-adapter, launch, ament-cmake, launch-ros }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-fmi-adapter-examples";
   version = "0.1.5-r1";
 

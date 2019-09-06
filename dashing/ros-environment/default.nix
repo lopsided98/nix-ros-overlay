@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ros-environment";
   version = "2.3.0-r1";
 

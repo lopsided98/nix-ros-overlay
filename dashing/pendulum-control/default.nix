@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, pendulum-msgs, rmw-implementation-cmake, ament-lint-common, rttest, ament-cmake, launch-testing, launch, launch-testing-ament-cmake, rclcpp, launch-testing-ros, ament-lint-auto, tlsf-cpp, ros2run }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-pendulum-control";
   version = "0.7.8-r1";
 

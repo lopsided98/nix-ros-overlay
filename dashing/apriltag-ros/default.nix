@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, apriltag-msgs, tf2-msgs, ament-cmake, image-transport, sensor-msgs, cv-bridge, apriltag, rclcpp, eigen, rclcpp-components }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-apriltag-ros";
   version = "2.1.0-r1";
 

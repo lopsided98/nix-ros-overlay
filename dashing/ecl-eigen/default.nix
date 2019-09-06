@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, eigen, ament-cmake-ros }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-eigen";
   version = "1.0.4-r1";
 

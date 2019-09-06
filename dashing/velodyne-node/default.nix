@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, udp-driver, velodyne-driver, sensor-msgs, autoware-auto-cmake, lidar-utils }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-velodyne-node";
   version = "0.0.1-r1";
 

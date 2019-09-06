@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, rmw-implementation-cmake, rosidl-default-runtime, rosidl-generator-c, ament-cmake-pytest, ament-cmake-gtest, launch, rmw-implementation, osrf-testing-tools-cpp, rmw, tinydir-vendor, launch-testing-ament-cmake, rcl-interfaces, ament-cmake-ros, rcutils, ament-lint-common, test-msgs, launch-testing, rcl-logging-noop, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rcl";
   version = "0.7.6-r1";
 

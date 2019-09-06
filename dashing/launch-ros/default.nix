@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, osrf-pycommon, ament-flake8, rclpy, composition-interfaces, pythonPackages, launch, lifecycle-msgs, ament-pep257, python3Packages, ament-copyright, ament-index-python }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-launch-ros";
   version = "0.8.5-r1";
 

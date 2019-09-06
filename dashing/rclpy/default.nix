@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, rmw-implementation-cmake, rosgraph-msgs, rcl-yaml-param-parser, rcl-action, unique-identifier-msgs, ament-cmake-pytest, rosidl-generator-py, pythonPackages, rmw-implementation, ament-index-python, builtin-interfaces, rcl-interfaces, rcutils, ament-lint-common, test-msgs, python-cmake-module, rcl, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rclpy";
   version = "0.7.6-r1";
 

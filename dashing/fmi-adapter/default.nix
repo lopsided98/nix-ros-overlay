@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, rclcpp-lifecycle, ament-lint-common, ament-cmake-gmock, launch-ros, launch-testing, ament-cmake-gtest, launch, ament-cmake, rcutils, rclcpp, rcl-interfaces, std-msgs, ament-lint-auto, rclcpp-components }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-fmi-adapter";
   version = "0.1.5-r1";
 

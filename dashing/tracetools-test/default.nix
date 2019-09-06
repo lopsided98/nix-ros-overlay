@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, std-srvs, ament-cmake-pytest, tracetools-launch, ament-cmake, launch-ros, ament-lint-common, tracetools, pythonPackages, pkg-config, rclcpp, std-msgs, ament-lint-auto, tracetools-read }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-tracetools-test";
   version = "0.2.0-r1";
 

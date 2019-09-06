@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rclcpp-components, ament-cmake-pytest, ament-cmake, rmw-implementation-cmake, rcutils, ament-lint-common, launch-testing, rosidl-default-generators, launch, launch-testing-ament-cmake, rosidl-cmake, rclcpp, launch-testing-ros, std-msgs, ament-lint-auto, rosidl-default-runtime }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-logging-demo";
   version = "0.7.8-r1";
 

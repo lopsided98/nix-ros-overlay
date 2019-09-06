@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rosidl-generator-cpp, rcpputils, opensplice_6_9, ament-cmake, ament-lint-common, rosidl-generator-c, opensplice-cmake-module, rosidl-typesupport-opensplice-c, rosidl-typesupport-opensplice-cpp, rosidl-cmake, ament-lint-auto, rcutils, rmw, rosidl-generator-dds-idl }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rmw-opensplice-cpp";
   version = "0.7.3-r1";
 

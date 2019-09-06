@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ray-ground-classifier, rclcpp-lifecycle, ament-lint-common, ament-cmake-pclint, ament-cmake, rclcpp, autoware-auto-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ray-ground-classifier-nodes";
   version = "0.0.1-r1";
 

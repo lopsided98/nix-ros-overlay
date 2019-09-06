@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-cmake, ament-lint-common }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-connext-cmake-module";
   version = "0.7.2-r1";
 

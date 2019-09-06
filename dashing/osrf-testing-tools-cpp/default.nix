@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-osrf-testing-tools-cpp";
   version = "1.2.1-r1";
 

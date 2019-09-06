@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, kdl-parser, ament-cmake, tf2-geometry-msgs, ros-core, tf2-kdl, tf2-ros, tf2, urdf, robot-state-publisher, tf2-eigen }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ros-base";
   version = "0.7.2-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, camera-info-manager, image-transport, sensor-msgs, rclcpp, ament-cmake-ros, ament-lint-auto, rclcpp-components }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-v4l2-camera";
   version = "0.1.1-r1";
 

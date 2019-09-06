@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, image-transport, cv-bridge, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-compressed-depth-image-transport";
   version = "2.1.0-r1";
 

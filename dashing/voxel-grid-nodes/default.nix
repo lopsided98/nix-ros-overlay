@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, ament-lint-common, ament-cmake-pclint, sensor-msgs, voxel-grid, rclcpp, autoware-auto-cmake, lidar-utils }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-voxel-grid-nodes";
   version = "0.0.1-r1";
 

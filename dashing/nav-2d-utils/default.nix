@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, tf2-geometry-msgs, launch-testing, nav2-msgs, ament-cmake-gtest, launch, nav2-common, tf2, nav-msgs, ament-lint-auto, nav-2d-msgs, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-nav-2d-utils";
   version = "0.2.3-r1";
 

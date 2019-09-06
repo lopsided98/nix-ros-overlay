@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp, ament-cmake, boost }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-hls-lfcd-lds-driver";
   version = "2.0.0-r1";
 

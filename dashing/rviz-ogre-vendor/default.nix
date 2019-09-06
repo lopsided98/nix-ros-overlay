@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, pkg-config, xorg, libGLU, libGL, freetype }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rviz-ogre-vendor";
   version = "6.1.3-r1";
 

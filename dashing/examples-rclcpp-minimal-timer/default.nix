@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rclcpp, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-examples-rclcpp-minimal-timer";
   version = "0.7.4-r1";
 

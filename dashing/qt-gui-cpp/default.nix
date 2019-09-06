@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, pluginlib, pkg-config, tinyxml2-vendor, qt5, qt-gui, python-qt-binding }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-qt-gui-cpp";
   version = "1.0.6-r1";
 

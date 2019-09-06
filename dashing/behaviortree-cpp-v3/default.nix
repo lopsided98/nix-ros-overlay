@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cppzmq, ament-cmake-gtest, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-behaviortree-cpp-v3";
   version = "3.0.9-r1";
 

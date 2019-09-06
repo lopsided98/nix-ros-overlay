@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rmw-implementation-cmake, ament-cmake-gtest, tlsf, rclcpp, std-msgs, ament-lint-auto, rmw }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-tlsf-cpp";
   version = "0.7.1-r1";
 

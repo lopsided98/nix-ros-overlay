@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-uncrustify, ament-cmake-cppcheck, ament-cmake-lint-cmake, ament-cmake-copyright, ament-cmake-cpplint }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-autoware-auto-cmake";
   version = "0.0.1-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, std-srvs, ament-cmake, ament-lint-common, rclcpp-lifecycle, tf2-geometry-msgs, nav2-msgs, nav2-util, nav2-common, lifecycle-msgs, rclcpp-action, std-msgs, ament-lint-auto, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-nav2-lifecycle-manager";
   version = "0.2.3-r1";
 

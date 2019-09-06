@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, asio, openssl, fastcdr, tinyxml-2, cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-fastrtps";
   version = "1.8.0-r2";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, gazebo-ros, ament-cmake, gazebo-plugins, gazebo-dev, gazebo-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-gazebo-ros-pkgs";
   version = "3.3.3-r1";
 

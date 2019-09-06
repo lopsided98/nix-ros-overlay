@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rclcpp, ament-lint-auto, rcutils }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosbag2-test-common";
   version = "0.1.4-r1";
 

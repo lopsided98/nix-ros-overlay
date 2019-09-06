@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, std-srvs, ament-cmake, launch-ros, ament-lint-common, rclpy, geometry-msgs, sensor-msgs, ament-cmake-gtest, gazebo-dev, rclcpp, tinyxml-vendor, std-msgs, ament-lint-auto, gazebo-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-gazebo-ros";
   version = "3.3.3-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, console-bridge, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-console-bridge-vendor";
   version = "1.2.0-r1";
 

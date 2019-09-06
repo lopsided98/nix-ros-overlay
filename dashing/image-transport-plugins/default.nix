@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, compressed-depth-image-transport, theora-image-transport, ament-cmake, compressed-image-transport }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-image-transport-plugins";
   version = "2.1.0-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, boost, pkg-config, eigen }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ompl";
   version = "1.4.2-r2";
 

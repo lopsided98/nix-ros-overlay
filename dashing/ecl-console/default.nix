@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-build, ecl-license, ecl-config, ament-cmake-ros }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-console";
   version = "1.0.3-r2";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, sros2, ament-cmake-test, ament-lint-auto, ros2cli }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-sros2-cmake";
   version = "0.7.1-r1";
 

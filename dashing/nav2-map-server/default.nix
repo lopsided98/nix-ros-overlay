@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, yaml-cpp-vendor, ament-cmake-pytest, SDL, ament-cmake, rclcpp-lifecycle, SDL_image, launch-ros, ament-lint-common, launch-testing, ament-cmake-gtest, launch, nav2-util, nav2-common, tf2, nav-msgs, rclcpp, std-msgs, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-nav2-map-server";
   version = "0.2.3-r1";
 

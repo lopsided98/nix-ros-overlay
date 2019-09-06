@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rosbag2, ament-lint-common, ament-cmake-gmock, test-msgs, shared-queues-vendor, rosbag2-test-common, rclcpp, ament-cmake-ros, ament-lint-auto, rmw }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosbag2-transport";
   version = "0.1.4-r1";
 

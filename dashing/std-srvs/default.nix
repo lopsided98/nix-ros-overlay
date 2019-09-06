@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rosidl-default-generators, rosidl-default-runtime, ament-cmake, ament-lint-common }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-std-srvs";
   version = "0.7.0-r1";
 

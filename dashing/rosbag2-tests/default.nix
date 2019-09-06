@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rosbag2, ament-cmake, ament-lint-common, rosbag2-converter-default-plugins, test-msgs, rosbag2-test-common, ament-cmake-gmock, ros2bag, rosbag2-storage-default-plugins, rclcpp, ament-index-cpp, std-msgs, ament-lint-auto, rosbag2-storage }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosbag2-tests";
   version = "0.1.4-r1";
 

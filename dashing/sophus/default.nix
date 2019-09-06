@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, eigen }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-sophus";
   version = "1.0.2";
 

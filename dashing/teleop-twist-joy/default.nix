@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp, ament-cmake, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-teleop-twist-joy";
   version = "2.2.0-r1";
 

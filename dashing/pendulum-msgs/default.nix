@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-pendulum-msgs";
   version = "0.7.8-r1";
 

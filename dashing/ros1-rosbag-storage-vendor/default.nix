@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, pluginlib, boost, ament-lint-common, git, pkg-config, gpgme, console-bridge, ros1-bridge, openssl, ament-lint-auto, bzip2 }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ros1-rosbag-storage-vendor";
   version = "0.0.6-r2";
 

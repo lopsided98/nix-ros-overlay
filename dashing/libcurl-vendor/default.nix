@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, curl, ament-cmake, pkg-config }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-libcurl-vendor";
   version = "2.1.0-r2";
 

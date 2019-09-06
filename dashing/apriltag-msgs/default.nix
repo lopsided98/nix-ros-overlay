@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, std-msgs, rosidl-default-generators, rosidl-default-runtime, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-apriltag-msgs";
   version = "2.0.0-r2";
 

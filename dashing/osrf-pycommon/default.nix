@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl,  }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-osrf-pycommon";
   version = "0.1.7-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, ecl-license, ament-cmake-ros, ament-lint-auto, ecl-config }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ecl-converters-lite";
   version = "1.0.3-r2";
 

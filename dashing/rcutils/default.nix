@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-lint-common, ament-cmake-gmock, launch-testing, ament-cmake-gtest, launch, launch-testing-ament-cmake, python3Packages, ament-cmake-ros, ament-lint-auto, osrf-testing-tools-cpp }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rcutils";
   version = "0.7.3-r1";
 

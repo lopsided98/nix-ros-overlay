@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake, ament-lint-common, autoware-auto-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-hungarian-assigner";
   version = "0.0.1-r1";
 

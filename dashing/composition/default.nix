@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, rmw-implementation-cmake, ament-lint-common, launch-ros, ament-cmake, launch-testing, rcutils, launch, launch-testing-ament-cmake, example-interfaces, rclcpp, launch-testing-ros, std-msgs, ament-lint-auto, rclcpp-components }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-composition";
   version = "0.7.8-r1";
 

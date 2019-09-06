@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake-core, launch-testing, python-cmake-module, ament-cmake-test, ament-copyright }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-launch-testing-ament-cmake";
   version = "0.8.5-r3";
 

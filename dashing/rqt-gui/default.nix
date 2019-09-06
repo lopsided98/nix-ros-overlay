@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, rclpy, qt-gui, python3Packages, ament-index-python, ament-lint-auto, python-qt-binding }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rqt-gui";
   version = "1.0.4-r1";
 

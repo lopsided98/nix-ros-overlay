@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake-ros, boost, ament-lint-common, sensor-msgs, ament-cmake-gtest, python-cmake-module, python3Packages, ament-index-python, ament-lint-auto, opencv3 }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-cv-bridge";
   version = "2.1.2-r1";
 

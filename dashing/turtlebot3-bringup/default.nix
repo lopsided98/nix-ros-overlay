@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rviz2, ament-cmake, turtlebot3-node, turtlebot3-description, robot-state-publisher, hls-lfcd-lds-driver }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-turtlebot3-bringup";
   version = "2.0.1-r1";
 

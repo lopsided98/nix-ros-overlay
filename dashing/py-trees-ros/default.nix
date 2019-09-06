@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, unique-identifier-msgs, rclpy, py-trees, sensor-msgs, py-trees-ros-interfaces, python3Packages, std-msgs, ros2topic }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-py-trees-ros";
   version = "1.1.2-r1";
 

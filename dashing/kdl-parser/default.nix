@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, orocos-kdl, ament-lint-common, tinyxml, urdfdom-headers, urdf, tinyxml-vendor, ament-cmake-ros, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-kdl-parser";
   version = "2.2.0-r1";
 

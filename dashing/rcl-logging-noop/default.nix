@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-lint-common, ament-cmake-gmock, launch-testing, ament-cmake-gtest, python3Packages, ament-cmake-ros, ament-lint-auto, rcutils }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rcl-logging-noop";
   version = "0.2.1-r1";
 

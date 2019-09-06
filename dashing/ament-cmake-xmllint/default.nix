@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-xmllint, ament-cmake-core, ament-cmake-test, ament-cmake-lint-cmake, ament-cmake-copyright }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-ament-cmake-xmllint";
   version = "0.7.9-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-flake8, launch, pythonPackages, ament-copyright, ament-pep257, python3Packages, ament-index-python }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-launch-testing";
   version = "0.8.5-r3";
 

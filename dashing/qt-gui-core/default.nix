@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, qt-gui-app, ament-cmake, qt-gui-cpp, qt-gui, qt-dotgraph, qt-gui-py-common }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-qt-gui-core";
   version = "1.0.6-r1";
 

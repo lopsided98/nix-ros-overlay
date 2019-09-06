@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, poco, rmw-opensplice-cpp, ament-cmake, rmw-implementation-cmake, ament-lint-common, rmw-connext-cpp, poco-vendor, rmw-fastrtps-cpp, ament-lint-auto, rcutils, rmw }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rmw-implementation";
   version = "0.7.1-r2";
 

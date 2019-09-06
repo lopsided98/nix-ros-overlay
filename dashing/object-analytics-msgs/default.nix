@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, rosidl-default-generators, sensor-msgs, tf2-ros, object-msgs, std-msgs, rosidl-default-runtime, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-object-analytics-msgs";
   version = "0.5.4-r2";
 

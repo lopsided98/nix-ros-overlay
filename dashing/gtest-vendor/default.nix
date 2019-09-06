@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-gtest-vendor";
   version = "1.8.9000-r1";
 

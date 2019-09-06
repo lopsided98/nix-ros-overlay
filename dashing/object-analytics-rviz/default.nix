@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, object-analytics-msgs, ament-cmake, ament-lint-common, sensor-msgs, cv-bridge, message-filters, rclcpp, std-msgs, ament-lint-auto, visualization-msgs, object-msgs, geometry-msgs }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-object-analytics-rviz";
   version = "0.5.4-r2";
 

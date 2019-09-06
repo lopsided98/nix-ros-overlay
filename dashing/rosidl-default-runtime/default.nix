@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rosidl-generator-cpp, rosidl-typesupport-c, ament-cmake, rosidl-generator-py, ament-lint-common, rosidl-typesupport-introspection-c, rosidl-typesupport-cpp, rosidl-typesupport-introspection-cpp, ament-lint-auto }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rosidl-default-runtime";
   version = "0.7.0-r1";
 

@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-libyaml-vendor";
   version = "1.0.0-r1";
 

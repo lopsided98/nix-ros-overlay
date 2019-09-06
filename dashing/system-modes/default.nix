@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, rclcpp-lifecycle, ament-cmake-gmock, boost, ament-cmake-uncrustify, rosidl-default-generators, ament-cmake-gtest, ament-cmake-flake8, ament-cmake-cppcheck, ament-cmake-pep257, rclcpp, ament-cmake-ros, std-msgs, ament-lint-auto, ament-cmake-cpplint }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-system-modes";
   version = "0.1.4-r1";
 

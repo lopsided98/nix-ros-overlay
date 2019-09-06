@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp, ament-cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-joy";
   version = "2.3.2-r1";
 

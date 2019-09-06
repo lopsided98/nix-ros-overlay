@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rviz-rendering, ament-cmake, ament-cmake-uncrustify, ament-cmake-gmock, ament-cmake-lint-cmake, ament-cmake-gtest, ament-cmake-cppcheck, qt5, resource-retriever, ament-index-cpp, ament-cmake-cpplint }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-rviz-rendering-tests";
   version = "6.1.3-r1";
 

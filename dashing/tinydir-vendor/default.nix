@@ -3,7 +3,7 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake }:
-buildRosPackage rec {
+buildRosPackage {
   pname = "ros-dashing-tinydir-vendor";
   version = "1.1.0-r1";
 
