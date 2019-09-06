@@ -13,8 +13,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ xorg.libXaw pkg-config xorg.xrandr xorg.libX11 libGLU libGL freetype ];
-  propagatedBuildInputs = [ xorg.libXaw xorg.xrandr xorg.libX11 libGLU libGL freetype ];
+  buildInputs = [ xorg.libXaw pkg-config xorg.libXrandr xorg.libX11 libGLU libGL freetype ];
+  propagatedBuildInputs = [ xorg.libXaw xorg.libXrandr xorg.libX11 libGLU libGL freetype ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
