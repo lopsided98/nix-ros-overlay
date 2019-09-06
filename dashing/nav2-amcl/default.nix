@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-common, geometry-msgs, ament-cmake-pytest, ament-cmake-gtest, launch, message-filters, nav2-util, rclcpp, std-srvs, tf2-geometry-msgs, tf2-ros, nav-msgs, launch-ros, ament-lint-common, launch-testing, sensor-msgs, tf2, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-nav2-amcl";
   version = "0.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_amcl/0.2.3-1.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_amcl/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
     sha256 = "ac7904356961cf9e9c8eb19a094df70c150678e8112913b40cc59b56acf1f4b1";
   };
 

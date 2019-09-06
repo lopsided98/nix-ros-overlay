@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-time-lite, ament-lint-common, ament-cmake-gtest, ecl-threads, ecl-exceptions, ecl-time, ecl-build, ecl-license, ecl-errors, ament-cmake-ros, ament-lint-auto, ecl-config }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ecl-ipc";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_ipc/1.0.4-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_ipc/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "6554070454a77532ceab4ce26d7fe9cdb7b9fe599c01e820287ea61cec4d81a4";
   };
 

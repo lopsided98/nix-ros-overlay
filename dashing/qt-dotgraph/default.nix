@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, python3Packages, ament-lint-auto, python-qt-binding }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-qt-dotgraph";
   version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/qt_gui_core-release/archive/release/dashing/qt_dotgraph/1.0.6-1.tar.gz;
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/dashing/qt_dotgraph/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
     sha256 = "ec571aebdd662bc0a874486a9cf89a8ebda1106db78496f2cf6c67540c4236a4";
   };
 

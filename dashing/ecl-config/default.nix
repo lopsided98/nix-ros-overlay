@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, ecl-build, ecl-license, ament-cmake-ros, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ecl-config";
   version = "1.0.3-r2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_lite-release/archive/release/dashing/ecl_config/1.0.3-2.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/dashing/ecl_config/1.0.3-2.tar.gz";
+    name = "1.0.3-2.tar.gz";
     sha256 = "6b401eb279f56bb057a4a93202b028f77cd1701212cc4e73b23d43ff6bfd2707";
   };
 

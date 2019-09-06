@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, rclpy, qt-gui, python3Packages, ament-index-python, ament-lint-auto, python-qt-binding }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rqt-gui";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_gui/1.0.4-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_gui/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "0c1110a3651ffd814e428d67f61884af4090d86d24de8cb4a63e6e886b0fb312";
   };
 

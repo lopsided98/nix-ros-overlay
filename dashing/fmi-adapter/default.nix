@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, rclcpp-lifecycle, ament-lint-common, ament-cmake-gmock, launch-ros, launch-testing, ament-cmake-gtest, launch, ament-cmake, rcutils, rclcpp, rcl-interfaces, std-msgs, ament-lint-auto, rclcpp-components }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-fmi-adapter";
   version = "0.1.5-r1";
 
   src = fetchurl {
-    url = https://github.com/boschresearch/fmi_adapter_ros2-release/archive/release/dashing/fmi_adapter/0.1.5-1.tar.gz;
+    url = "https://github.com/boschresearch/fmi_adapter_ros2-release/archive/release/dashing/fmi_adapter/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
     sha256 = "b23081dda39b15640af630873356e1fd132983f9e710a44188357899768e98fb";
   };
 

@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, sensor-msgs, rosidl-default-generators, nav-msgs, std-msgs, rosidl-default-runtime }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-map-msgs";
   version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/navigation_msgs-release/archive/release/dashing/map_msgs/2.0.1-1.tar.gz;
+    url = "https://github.com/ros2-gbp/navigation_msgs-release/archive/release/dashing/map_msgs/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
     sha256 = "36d644ce4872515b970798586f19545e21247e0b57e1937ed6347f5a7020b8c6";
   };
 

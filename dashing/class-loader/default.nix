@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, poco, ament-cmake, ament-lint-common, ament-cmake-gtest, poco-vendor, console-bridge-vendor, console-bridge, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-class-loader";
   version = "1.3.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/class_loader-release/archive/release/dashing/class_loader/1.3.2-1.tar.gz;
+    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/dashing/class_loader/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
     sha256 = "548cefc198d57f9d46e471c195ef961d8513a8e57caed0ded81806f1d3ab43f5";
   };
 

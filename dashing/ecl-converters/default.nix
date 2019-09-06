@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, ecl-concepts, ecl-build, ecl-exceptions, ecl-license, ecl-errors, ecl-type-traits, ament-cmake-ros, ament-lint-auto, ecl-config, ecl-mpl }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ecl-converters";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_converters/1.0.4-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_converters/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "7a194e978f90284025c75407647eea2c0c44542f633d605c1ed1e717055b37b2";
   };
 

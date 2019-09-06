@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, ament-lint-auto, rosidl-default-runtime }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-lifecycle-msgs";
   version = "0.7.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/dashing/lifecycle_msgs/0.7.4-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/dashing/lifecycle_msgs/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
     sha256 = "91e7fcd53f77f409da319de4da6259b7cab40b2841f5494099ddca65f884a5f2";
   };
 

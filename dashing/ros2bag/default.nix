@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-flake8, pythonPackages, ament-pep257, ament-copyright, rosbag2-transport, ros2cli }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ros2bag";
   version = "0.1.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/ros2bag/0.1.4-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/ros2bag/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
     sha256 = "66ea47ead55b5ecf3c048e3c5bc8628fd75dd4c7865252eed6379a3d0648effa";
   };
 

@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake-ros, boost, ament-lint-common, sensor-msgs, ament-cmake-gtest, python-cmake-module, python3Packages, ament-index-python, ament-lint-auto, opencv3 }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-cv-bridge";
   version = "2.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/vision_opencv-release/archive/release/dashing/cv_bridge/2.1.2-1.tar.gz;
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/dashing/cv_bridge/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
     sha256 = "a2ea40ef8b0826917ff9994b9411ab0999302bf1ac025d0bb07e2d8488e62551";
   };
 

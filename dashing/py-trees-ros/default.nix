@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, unique-identifier-msgs, rclpy, py-trees, sensor-msgs, py-trees-ros-interfaces, python3Packages, std-msgs, ros2topic }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-py-trees-ros";
   version = "1.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/stonier/py_trees_ros-release/archive/release/dashing/py_trees_ros/1.1.2-1.tar.gz;
+    url = "https://github.com/stonier/py_trees_ros-release/archive/release/dashing/py_trees_ros/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
     sha256 = "f29be30ebcf153c16ef3fe12a1dad40b2cb9ce7a6c7b1f0f14313507a863f5a4";
   };
 

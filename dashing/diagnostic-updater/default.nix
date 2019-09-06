@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, rclcpp-lifecycle, ament-lint-common, rclpy, ament-cmake-gtest, std-msgs, rclcpp, ament-cmake-python, diagnostic-msgs, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-diagnostic-updater";
   version = "2.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/diagnostics-release/archive/release/dashing/diagnostic_updater/2.0.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/dashing/diagnostic_updater/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
     sha256 = "c7aff286cd2e8f2a53bc55f8c78cfbd1a8521f911a67af877f46ed3358394c49";
   };
 

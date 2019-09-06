@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-cmake-core, ament-cmake-test, ament-cmake-lint-cmake, ament-cmake-copyright }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ament-cmake-flake8";
   version = "0.7.9-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_cmake_flake8/0.7.9-1.tar.gz;
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_cmake_flake8/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
     sha256 = "9a5f3a6b8f569ac2cb4dd2d376400445224a21978b6a2f2585b947b344695ae9";
   };
 

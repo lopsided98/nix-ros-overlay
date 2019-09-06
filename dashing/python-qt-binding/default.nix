@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, qt5, python3Packages, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-python-qt-binding";
   version = "1.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/python_qt_binding-release/archive/release/dashing/python_qt_binding/1.0.1-1.tar.gz;
+    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/dashing/python_qt_binding/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
     sha256 = "a116343c89897e466c720e3b892c913992b1771b91c40e02fcfd6632a8d0f7a4";
   };
 

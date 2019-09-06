@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-voxel-grid, nav2-common, nav2-lifecycle-manager, geometry-msgs, nav2-map-server, ament-cmake-pytest, ament-cmake-gtest, launch, message-filters, nav2-util, tf2-sensor-msgs, rclcpp, rclcpp-lifecycle, tf2-geometry-msgs, tf2-ros, nav-msgs, std-msgs, laser-geometry, visualization-msgs, pluginlib, ament-lint-common, launch-testing, sensor-msgs, nav2-msgs, tf2, ament-lint-auto, map-msgs }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-nav2-costmap-2d";
   version = "0.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_costmap_2d/0.2.3-1.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_costmap_2d/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
     sha256 = "eb0bbfddd1d3b219fa507e05cf2de98dcf80b77063ea60a311d319af3c32d4b2";
   };
 

@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-cmake, ament-lint-common }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-tlsf";
   version = "0.5.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/tlsf-release/archive/release/dashing/tlsf/0.5.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/tlsf-release/archive/release/dashing/tlsf/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
     sha256 = "d646f2ef2aef21d079115f890d63c61313d3812f82e84a2d3678377e42aadb7e";
   };
 

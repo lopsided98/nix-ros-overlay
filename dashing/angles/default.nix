@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-angles";
   version = "1.12.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/angles-release/archive/release/dashing/angles/1.12.1-1.tar.gz;
+    url = "https://github.com/ros2-gbp/angles-release/archive/release/dashing/angles/1.12.1-1.tar.gz";
+    name = "1.12.1-1.tar.gz";
     sha256 = "d22738620d82b2705a32abef7f58c958161304b329bc9b3fd51d0f099a98d138";
   };
 

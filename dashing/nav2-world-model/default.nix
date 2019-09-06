@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-testing, nav2-msgs, ament-cmake-gtest, nav2-util, launch, tf2-ros, nav2-common, rclcpp, nav2-costmap-2d, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-nav2-world-model";
   version = "0.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_world_model/0.2.3-1.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_world_model/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
     sha256 = "3d8de8985ba21205943cff066251e7dac68909c7408cd34d91ecbfac12df80f9";
   };
 

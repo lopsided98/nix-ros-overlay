@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, osrf-pycommon, ament-flake8, pythonPackages, ament-pep257, ament-copyright }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-launch";
   version = "0.8.5-r3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/launch-release/archive/release/dashing/launch/0.8.5-3.tar.gz;
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/dashing/launch/0.8.5-3.tar.gz";
+    name = "0.8.5-3.tar.gz";
     sha256 = "06f3e0c64288f26550f16f75b6cc308f2b1d424f62b69fe34b15538b5c240657";
   };
 

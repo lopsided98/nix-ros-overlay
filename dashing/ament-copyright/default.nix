@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, pythonPackages, ament-lint, ament-flake8, ament-pep257 }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ament-copyright";
   version = "0.7.9-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_copyright/0.7.9-1.tar.gz;
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_copyright/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
     sha256 = "f610b168db22a6303e3ad0617a407c013d3e46071db96ecad6f62b5b05ba0d40";
   };
 

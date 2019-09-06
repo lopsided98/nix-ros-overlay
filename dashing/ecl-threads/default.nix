@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-utilities, ament-lint-common, ament-cmake-gtest, ecl-concepts, ecl-time, ecl-exceptions, ecl-build, ecl-license, ecl-errors, ament-cmake-ros, ament-lint-auto, ecl-config }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ecl-threads";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_threads/1.0.4-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_threads/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "c878ef22f64ca08650e7bda5d852e76b1561d8f418f08ac52fd6065f9745b679";
   };
 

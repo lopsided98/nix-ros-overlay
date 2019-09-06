@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ament-cmake-export-link-flags";
   version = "0.7.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_export_link_flags/0.7.3-1.tar.gz;
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_export_link_flags/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
     sha256 = "0fcfacd5f9c78b551cbd54e7524198acbc413979b2873b2d9ab2e9fb0c4afc1c";
   };
 

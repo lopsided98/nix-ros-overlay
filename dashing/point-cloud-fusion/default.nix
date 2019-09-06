@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rclcpp-lifecycle, tf2-geometry-msgs, ament-cmake-pclint, sensor-msgs, message-filters, tf2-ros, tf2-sensor-msgs, rclcpp, autoware-auto-cmake, lidar-utils }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-point-cloud-fusion";
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/point_cloud_fusion/0.0.1-1;
+    url = "https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/point_cloud_fusion/0.0.1-1";
+    name = "archive.tar.gz";
     sha256 = "aeed47434e3dc1c712ea0fac967b1a52e126397ababf9381673ca16f7442ffa7";
   };
 

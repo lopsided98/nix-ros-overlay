@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, pkg-config, xorg, libGLU, libGL, freetype }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rviz-ogre-vendor";
   version = "6.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_ogre_vendor/6.1.3-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_ogre_vendor/6.1.3-1.tar.gz";
+    name = "6.1.3-1.tar.gz";
     sha256 = "995fc406bc676e4222ede8b61038751e31a0006d3aaba99982cda1e61dc3488e";
   };
 

@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, qt-gui-cpp, qt-gui, rclcpp, qt5 }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rqt-gui-cpp";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_gui_cpp/1.0.4-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_gui_cpp/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "d3badbb1c1c003c02612459c7060cb1e5e4e414666910647af8924307ea2815b";
   };
 

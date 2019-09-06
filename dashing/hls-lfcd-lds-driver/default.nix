@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp, ament-cmake, boost }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-hls-lfcd-lds-driver";
   version = "2.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/robotis-ros2-release/hls_lfcd_lds_driver-release/archive/release/dashing/hls_lfcd_lds_driver/2.0.0-1.tar.gz;
+    url = "https://github.com/robotis-ros2-release/hls_lfcd_lds_driver-release/archive/release/dashing/hls_lfcd_lds_driver/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
     sha256 = "e61706dcdf5eba4b6979572f5eca489af4d17d06123dba49f4075f103f00372c";
   };
 

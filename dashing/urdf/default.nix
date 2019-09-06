@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, tinyxml, urdfdom, urdfdom-headers, tinyxml-vendor, ament-cmake-ros, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-urdf";
   version = "2.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/urdf-release/archive/release/dashing/urdf/2.2.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/urdf-release/archive/release/dashing/urdf/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
     sha256 = "23ea44ab3658a060d2f796644bdad2c33d6e28dd6cf204aef509e19b4a02b28b";
   };
 

@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-formatters, ament-lint-common, ament-cmake-gtest, ecl-geometry, ecl-build, ecl-license, ecl-errors, ecl-math, ament-cmake-ros, ament-lint-auto, ecl-linear-algebra }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ecl-mobile-robot";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_mobile_robot/1.0.4-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_mobile_robot/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "51ae2ab143447a01c00156ab68cf5bce0ea1d8d8d1ede4e75ca1dedbb6f8b20e";
   };
 

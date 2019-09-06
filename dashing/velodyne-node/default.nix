@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, udp-driver, velodyne-driver, sensor-msgs, autoware-auto-cmake, lidar-utils }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-velodyne-node";
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/velodyne_node/0.0.1-1;
+    url = "https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/velodyne_node/0.0.1-1";
+    name = "archive.tar.gz";
     sha256 = "ac89bae97af5ad1bd08e8c05933bcd3d1689bf3ffd4a474a71b6b1fdb7de86b6";
   };
 

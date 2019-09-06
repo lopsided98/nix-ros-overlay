@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rosbag2, ament-lint-common, ament-cmake-gmock, test-msgs, shared-queues-vendor, rosbag2-test-common, rclcpp, ament-cmake-ros, ament-lint-auto, rmw }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rosbag2-transport";
   version = "0.1.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/rosbag2_transport/0.1.4-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/rosbag2_transport/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
     sha256 = "8131a6289a9049ffbc2e72e893a278c9813623c3fab4b77dc7f978d2c5e60160";
   };
 

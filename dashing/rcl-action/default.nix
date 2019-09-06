@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, test-msgs, ament-cmake-gtest, action-msgs, ament-cmake-ros, rcl, ament-lint-auto, rcutils, osrf-testing-tools-cpp, rmw, rosidl-generator-c }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rcl-action";
   version = "0.7.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rcl-release/archive/release/dashing/rcl_action/0.7.6-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/dashing/rcl_action/0.7.6-1.tar.gz";
+    name = "0.7.6-1.tar.gz";
     sha256 = "d777fbfc3657bf745bddccfab997dedd88c0f3c4e3de5d360abe2d94ee1d1bf0";
   };
 

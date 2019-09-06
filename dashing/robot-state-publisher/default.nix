@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, kdl-parser, ament-cmake, orocos-kdl, ament-lint-common, sensor-msgs, tf2-ros, urdfdom-headers, urdf, rclcpp, ament-lint-auto, geometry-msgs }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-robot-state-publisher";
   version = "2.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/dashing/robot_state_publisher/2.2.3-1.tar.gz;
+    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/dashing/robot_state_publisher/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
     sha256 = "785dffebcdfff68251b7d221051ab5b853ac65e0af8577452a376a5279e75fe6";
   };
 

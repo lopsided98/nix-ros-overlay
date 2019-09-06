@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp, ament-cmake }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-joy";
   version = "2.3.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/joystick_drivers-release/archive/release/dashing/joy/2.3.2-1.tar.gz;
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/dashing/joy/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
     sha256 = "ed4fec41261bc3b2625344f595726b395e3feeefd03adeb782936770e2770190";
   };
 

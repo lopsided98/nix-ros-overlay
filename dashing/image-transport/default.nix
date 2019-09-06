@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, pluginlib, ament-lint-common, ament-cmake-gtest, sensor-msgs, message-filters, rclcpp, ament-cmake-ros, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-image-transport";
   version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/image_common-release/archive/release/dashing/image_transport/2.1.1-1.tar.gz;
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/dashing/image_transport/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
     sha256 = "d2ffbde31805683e877a833d35e19093836540d31fd629f42f9352c2c659e390";
   };
 

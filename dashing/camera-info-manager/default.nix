@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, camera-calibration-parsers, image-transport, ament-cmake-gtest, sensor-msgs, rclcpp, ament-cmake-ros, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-camera-info-manager";
   version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/image_common-release/archive/release/dashing/camera_info_manager/2.1.1-1.tar.gz;
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/dashing/camera_info_manager/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
     sha256 = "16076998df016347c19e0ef1aeac75cf8f0dd883958bd1f3331c1d3f2dd8f81d";
   };
 

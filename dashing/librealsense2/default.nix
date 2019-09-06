@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, gtk3, ament-cmake, udev, pkg-config, libusb1, glfw3, linuxHeaders, openssl, libGLU, libGL }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-librealsense2";
   version = "2.16.5-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/librealsense-release/archive/release/dashing/librealsense2/2.16.5-1.tar.gz;
+    url = "https://github.com/ros2-gbp/librealsense-release/archive/release/dashing/librealsense2/2.16.5-1.tar.gz";
+    name = "2.16.5-1.tar.gz";
     sha256 = "8200ccf50818a19a4dcd625f099e960c38285c2181cef249da10fae25206ee07";
   };
 

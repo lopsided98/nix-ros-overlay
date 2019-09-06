@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, ecl-threads, ecl-build, ecl-license, ament-cmake-ros, ament-lint-auto, ecl-config }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ecl-sigslots";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_sigslots/1.0.4-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_sigslots/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "e1e29a11a1b0356dfccc6a0d890c1526e05280bf4619e75e84001e7a53769d58";
   };
 

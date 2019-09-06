@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rviz-rendering, ament-cmake, rviz-default-plugins, nav2-lifecycle-manager, rviz-common, geometry-msgs, nav2-util, rclcpp, rclcpp-lifecycle, tf2-geometry-msgs, nav-msgs, resource-retriever, std-msgs, pluginlib, ament-lint-common, nav2-msgs, rviz-ogre-vendor, qt5, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-nav2-rviz-plugins";
   version = "0.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_rviz_plugins/0.2.3-1.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_rviz_plugins/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
     sha256 = "afabd73104ef09871db45e113d4c6931fb921f4e2e78e1c4e55dcc4128abff34";
   };
 

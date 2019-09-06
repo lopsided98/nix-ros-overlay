@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-cmake-gtest, ament-cmake, ament-lint-common }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rcpputils";
   version = "0.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rcpputils-release/archive/release/dashing/rcpputils/0.1.1-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/dashing/rcpputils/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
     sha256 = "53236dd27ecccfbcbe4d0cbf4b7b1183b7abc0c09119d8dde0462d821175ae5f";
   };
 

@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-test, pythonPackages, ament-cmake-core }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ament-cmake-pytest";
   version = "0.7.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_pytest/0.7.3-1.tar.gz;
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_pytest/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
     sha256 = "c412698e38df13eec825abcec2e8dff4f76747169c78840b5dfcf5376493594f";
   };
 

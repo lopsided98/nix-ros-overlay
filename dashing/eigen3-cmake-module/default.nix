@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake, ament-cmake-lint-cmake }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-eigen3-cmake-module";
   version = "0.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/eigen3_cmake_module-release/archive/release/dashing/eigen3_cmake_module/0.1.1-1.tar.gz;
+    url = "https://github.com/ros2-gbp/eigen3_cmake_module-release/archive/release/dashing/eigen3_cmake_module/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
     sha256 = "8901cf9f257fc053234ce7529a240291ae868ccdc7d44093d0d912c77085db0e";
   };
 

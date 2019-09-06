@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, console-bridge-vendor, console-bridge, geometry-msgs }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-tf2";
   version = "0.11.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/tf2/0.11.4-1.tar.gz;
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/tf2/0.11.4-1.tar.gz";
+    name = "0.11.4-1.tar.gz";
     sha256 = "6dd9d0814515357692e378aec9015936319c49ab234d110513d78d90a5c0f797";
   };
 

@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-common, nav-2d-msgs, geometry-msgs, ament-cmake-pytest, ament-cmake-gtest, launch, nav2-util, rclcpp, tf2-ros, nav-2d-utils, nav-msgs, std-msgs, visualization-msgs, pluginlib, ament-lint-common, launch-testing, sensor-msgs, dwb-msgs, nav2-costmap-2d, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-dwb-core";
   version = "0.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/dwb_core/0.2.3-1.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/dwb_core/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
     sha256 = "2c675e12e2fe06519a04bbe687087a0ef98aec179a3f9e775d21f248ff8e20de";
   };
 

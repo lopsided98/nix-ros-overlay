@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-xmllint, ament-flake8, pythonPackages, ament-pep257, tracetools-trace, ament-copyright, ros2cli }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ros2trace";
   version = "0.2.0-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/dashing/ros2trace/0.2.0-1;
+    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/dashing/ros2trace/0.2.0-1";
+    name = "archive.tar.gz";
     sha256 = "489f3561337a5096c0daece3bc28bc51f9780990d3f1448e11df4be0cfc60729";
   };
 

@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, rosidl-adapter, ament-cmake, ament-lint-common, pythonPackages, python3Packages, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rosidl-parser";
   version = "0.7.5-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rosidl-release/archive/release/dashing/rosidl_parser/0.7.5-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/dashing/rosidl_parser/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
     sha256 = "e8dc8dfc6bb78049d35e6483e66a05501b576adcc779c85367287ecaf5aa5972";
   };
 

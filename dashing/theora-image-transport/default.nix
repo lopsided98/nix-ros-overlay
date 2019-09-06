@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, pluginlib, ament-lint-common, image-transport, rosidl-default-generators, cv-bridge, libogg, std-msgs, rclcpp, libtheora, rosidl-default-runtime }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-theora-image-transport";
   version = "2.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/dashing/theora_image_transport/2.1.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/dashing/theora_image_transport/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
     sha256 = "78c8ba996fa1f2f371e9124244c861a5921bdf92d3fc17a29b03bb2d43041571";
   };
 

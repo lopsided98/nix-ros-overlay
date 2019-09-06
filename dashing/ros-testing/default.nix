@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-core, launch-testing, launch-testing-ament-cmake, ros2test, launch-testing-ros, ament-cmake-export-dependencies }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ros-testing";
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ros_testing-release/archive/release/dashing/ros_testing/0.1.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/ros_testing-release/archive/release/dashing/ros_testing/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "e237566717154a53547fad6b1abfbd6303363bf0b1aac82545b7b5b82913862c";
   };
 

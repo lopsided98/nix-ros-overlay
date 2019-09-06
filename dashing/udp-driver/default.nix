@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, ament-lint-common, boost, ament-cmake-gtest, rclcpp, std-msgs, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-udp-driver";
   version = "0.0.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/transport_drivers-release/archive/release/dashing/udp_driver/0.0.3-1.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/transport_drivers-release/archive/release/dashing/udp_driver/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
     sha256 = "920119abfe5338991a477d3b28d8751044506aa577c5914ffb38882cbb68521f";
   };
 

@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-flake8, launch-ros, rclpy, launch, pythonPackages, ament-pep257, std-msgs }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-topic-monitor";
   version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/demos-release/archive/release/dashing/topic_monitor/0.7.8-1.tar.gz;
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/topic_monitor/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
     sha256 = "3e4f886337769ebe838f7ab7e6d0f993ba88be4ef55add678f393450c6a17900";
   };
 

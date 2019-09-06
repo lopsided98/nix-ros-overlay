@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-pclint, ament-cmake-gtest, autoware-auto-msgs, autoware-auto-cmake, geometry-msgs }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-autoware-auto-geometry";
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/autoware_auto_geometry/0.0.1-1;
+    url = "https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/autoware_auto_geometry/0.0.1-1";
+    name = "archive.tar.gz";
     sha256 = "a32102f4f825a4d4fc17adf794f579e1c17f074a08ee6cc0933b5653be73b090";
   };
 

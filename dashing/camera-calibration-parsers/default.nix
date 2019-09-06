@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, yaml-cpp-vendor, ament-lint-common, ament-cmake-gtest, sensor-msgs, rclcpp, ament-cmake-ros, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-camera-calibration-parsers";
   version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/image_common-release/archive/release/dashing/camera_calibration_parsers/2.1.1-1.tar.gz;
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/dashing/camera_calibration_parsers/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
     sha256 = "d28184193e80422f6b1a664726267899d47cc9c04d36c1bb9fe70930616533d2";
   };
 

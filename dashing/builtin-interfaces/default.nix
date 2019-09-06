@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rosidl-default-generators, rosidl-default-runtime, ament-cmake, ament-lint-common }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-builtin-interfaces";
   version = "0.7.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/dashing/builtin_interfaces/0.7.4-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/dashing/builtin_interfaces/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
     sha256 = "8d1aaab79df0602294d3dd31645464c67174dc3bccb30846f8d29a81436b20f4";
   };
 

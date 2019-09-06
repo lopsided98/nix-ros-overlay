@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rviz-rendering, ament-cmake, geometry-msgs, ament-cmake-cpplint, yaml-cpp-vendor, ament-cmake-gtest, rclcpp, tinyxml-vendor, tf2-geometry-msgs, ament-cmake-gmock, tf2-ros, urdf, resource-retriever, std-msgs, pluginlib, ament-cmake-uncrustify, sensor-msgs, rviz-assimp-vendor, ament-cmake-cppcheck, rviz-ogre-vendor, tf2, qt5, ament-cmake-lint-cmake }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rviz-common";
   version = "6.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_common/6.1.3-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_common/6.1.3-1.tar.gz";
+    name = "6.1.3-1.tar.gz";
     sha256 = "e1d5163667cb60f9547376bb60e14292c86ac6049ee284c0adde1f2a529954ce";
   };
 

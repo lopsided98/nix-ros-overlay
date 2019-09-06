@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-pclint, sensor-msgs, autoware-auto-msgs, voxel-grid-nodes, rclcpp, euclidean-cluster, autoware-auto-cmake }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-euclidean-cluster-nodes";
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/euclidean_cluster_nodes/0.0.1-1;
+    url = "https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/euclidean_cluster_nodes/0.0.1-1";
+    name = "archive.tar.gz";
     sha256 = "028ffed712d9163b273870f40e1ca519eb686c600db062d0ae8a1fba27c4e7fb";
   };
 

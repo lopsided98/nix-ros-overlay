@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-pclint, geometry-msgs, autoware-auto-cmake, lidar-utils }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-voxel-grid";
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/voxel_grid/0.0.1-1;
+    url = "https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/voxel_grid/0.0.1-1";
+    name = "archive.tar.gz";
     sha256 = "0d0157f88ce309b666e9198b4aa8d7b8e255a5e7ebe354826e461873601b3ecd";
   };
 

@@ -804,11 +804,15 @@ self: super: {
 
  turtlebot3-description = self.callPackage ./turtlebot3-description {};
 
+ turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
+
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlebot3-navigation2 = self.callPackage ./turtlebot3-navigation2 {};
 
  turtlebot3-node = self.callPackage ./turtlebot3-node {};
+
+ turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
 
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 

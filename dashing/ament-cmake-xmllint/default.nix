@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-xmllint, ament-cmake-core, ament-cmake-test, ament-cmake-lint-cmake, ament-cmake-copyright }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ament-cmake-xmllint";
   version = "0.7.9-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_cmake_xmllint/0.7.9-1.tar.gz;
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_cmake_xmllint/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
     sha256 = "a2c4942ea62a12abd8499dbdcb0173a991b4bde727c587bb083d76422eff60dc";
   };
 

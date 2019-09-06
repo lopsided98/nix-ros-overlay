@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, image-transport, cv-bridge, ament-cmake }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-compressed-depth-image-transport";
   version = "2.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/dashing/compressed_depth_image_transport/2.1.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/dashing/compressed_depth_image_transport/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
     sha256 = "57f39c573f31d88c9eecf3509e7d20b628ae109d8b5d06dd17f6da08862e271c";
   };
 

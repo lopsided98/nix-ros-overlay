@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, action-msgs, rosidl-default-generators, rosidl-default-runtime, ament-cmake }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-example-interfaces";
   version = "0.7.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/example_interfaces-release/archive/release/dashing/example_interfaces/0.7.1-1.tar.gz;
+    url = "https://github.com/ros2-gbp/example_interfaces-release/archive/release/dashing/example_interfaces/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
     sha256 = "8e8677ed6d028dfa1af48a7115ca7064ff01bf760b7e5a5d9b5a2ef5a916e768";
   };
 

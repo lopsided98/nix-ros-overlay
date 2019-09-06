@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, ecl-build, ecl-license, ament-cmake-ros, ament-lint-auto, ecl-config, ecl-mpl }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ecl-type-traits";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_type_traits/1.0.4-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_type_traits/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "6ed2aaa2da1bafbcb1900848753f26c0d0c168a3c2926d79b296469e4be2029b";
   };
 

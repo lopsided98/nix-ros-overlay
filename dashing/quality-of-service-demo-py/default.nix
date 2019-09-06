@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-flake8, rclpy, pythonPackages, ament-pep257, std-msgs, ament-copyright }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-quality-of-service-demo-py";
   version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/demos-release/archive/release/dashing/quality_of_service_demo_py/0.7.8-1.tar.gz;
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/quality_of_service_demo_py/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
     sha256 = "0a6527fbca3622415357b3b0c43fa201f485d1c830db0f9cc4a3bc89fbbc7e98";
   };
 

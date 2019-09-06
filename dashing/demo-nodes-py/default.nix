@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-flake8, rclpy, pythonPackages, example-interfaces, ament-pep257, std-msgs, ament-copyright }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-demo-nodes-py";
   version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/demos-release/archive/release/dashing/demo_nodes_py/0.7.8-1.tar.gz;
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/demo_nodes_py/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
     sha256 = "ba4c8ff0dd545ac50eb233208dac9a836a6055a8d796f096835b74ac1d6d0575";
   };
 

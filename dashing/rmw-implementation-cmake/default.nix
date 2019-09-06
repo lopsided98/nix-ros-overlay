@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-cmake, ament-lint-common }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rmw-implementation-cmake";
   version = "0.7.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rmw-release/archive/release/dashing/rmw_implementation_cmake/0.7.2-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/dashing/rmw_implementation_cmake/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
     sha256 = "fac832b5c80357d3eeb1b573b5ac2f0531bf13874a03d10ec780628f294fab13";
   };
 

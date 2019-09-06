@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-build, ecl-license, ecl-errors, ament-cmake-ros, ecl-config }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ecl-exceptions";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_exceptions/1.0.4-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_exceptions/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "5f7ec3214552caf6bcc640a935dafa1d33ff64dbf7d3c246f6f2a5784f53e2d6";
   };
 

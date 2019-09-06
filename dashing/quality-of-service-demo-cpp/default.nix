@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, launch-ros, rmw-implementation-cmake, ament-lint-common, launch-testing, launch, example-interfaces, rclcpp, std-msgs, ament-lint-auto, rcutils, rmw }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-quality-of-service-demo-cpp";
   version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/demos-release/archive/release/dashing/quality_of_service_demo_cpp/0.7.8-1.tar.gz;
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/quality_of_service_demo_cpp/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
     sha256 = "46db461bf70c97263ee9622469759d4936d519823c4a3dd8467c274007ca6555";
   };
 

@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, class-loader, tinyxml2-vendor, ament-index-cpp, rcutils }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-pluginlib";
   version = "2.3.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/pluginlib-release/archive/release/dashing/pluginlib/2.3.2-1.tar.gz;
+    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/dashing/pluginlib/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
     sha256 = "23c7c4eddda0b14bd56479e7996ec6dee25481240ac4d25e8d7cfa068f36c3a2";
   };
 

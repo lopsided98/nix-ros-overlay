@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-testing, ament-cmake-gtest, launch, nav2-common, rclcpp, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-nav2-voxel-grid";
   version = "0.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_voxel_grid/0.2.3-1.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_voxel_grid/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
     sha256 = "c8de12fc3ba24196469692fc89eca4f4c461608658cbcc7f4d0d5ce09532133b";
   };
 

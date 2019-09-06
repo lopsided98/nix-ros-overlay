@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, qt-gui, ament-index-python, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-qt-gui-app";
   version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/qt_gui_core-release/archive/release/dashing/qt_gui_app/1.0.6-1.tar.gz;
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/dashing/qt_gui_app/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
     sha256 = "431b085ae46d569927da0e8397d79d91b8c1d66ab0bb400c73e82aa7a77ec5b4";
   };
 

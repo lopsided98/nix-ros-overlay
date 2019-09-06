@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-gtest, nav-msgs, rclcpp, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-dummy-map-server";
   version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/demos-release/archive/release/dashing/dummy_map_server/0.7.8-1.tar.gz;
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/dummy_map_server/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
     sha256 = "82d89d816738d92a58c6e6358cca48e4f784b8097753d8b6fc7f3a10a4b0bad7";
   };
 

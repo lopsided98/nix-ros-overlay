@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, console-bridge, ament-cmake }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-console-bridge-vendor";
   version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/dashing/console_bridge_vendor/1.2.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/dashing/console_bridge_vendor/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
     sha256 = "6d21c708f3252482d7dffa02dbd0c2b3e94491dbe5dca0148ac190d62a787646";
   };
 

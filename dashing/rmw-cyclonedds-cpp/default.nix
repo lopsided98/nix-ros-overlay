@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, cyclonedds, rosidl-typesupport-introspection-c, cyclonedds-cmake-module, rosidl-typesupport-introspection-cpp, ament-cmake-ros, ament-lint-auto, rcutils, rmw, rosidl-generator-c }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rmw-cyclonedds-cpp";
   version = "0.4.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/dashing/rmw_cyclonedds_cpp/0.4.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/dashing/rmw_cyclonedds_cpp/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
     sha256 = "ce056baf57cc644eee3fa9142483b1eec6cef0594a490a40e02938df583bb821";
   };
 

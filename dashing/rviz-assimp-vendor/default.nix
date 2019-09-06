@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rviz-assimp-vendor";
   version = "6.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_assimp_vendor/6.1.3-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_assimp_vendor/6.1.3-1.tar.gz";
+    name = "6.1.3-1.tar.gz";
     sha256 = "7c923a03a7192c98fbe5dbe488c06fe00a0f214c102780f5aba676b5e60aec08";
   };
 

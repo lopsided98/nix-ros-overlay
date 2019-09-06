@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, python-qt-binding, rclpy, rosidl-default-generators, qt-gui, qt5, rosidl-default-runtime }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rqt-py-common";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_py_common/1.0.4-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_py_common/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "2a9557efde2e471bac04ff2eee55db31f2d30ece0b3ab70603622d56e0094c3d";
   };
 

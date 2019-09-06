@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, pendulum-msgs, rmw-implementation-cmake, ament-lint-common, rttest, ament-cmake, launch-testing, launch, launch-testing-ament-cmake, rclcpp, launch-testing-ros, ament-lint-auto, tlsf-cpp, ros2run }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-pendulum-control";
   version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/demos-release/archive/release/dashing/pendulum_control/0.7.8-1.tar.gz;
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/pendulum_control/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
     sha256 = "6e40d0fb7334b28f72c27137d9509903465e0aab74aa2657c903f994dc383cc0";
   };
 

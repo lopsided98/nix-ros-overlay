@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cairo, ceres-solver, boost, gflags, lua5, pythonPackages, glog, eigen, protobuf, cmake, gmock }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-cartographer";
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/cartographer-release/archive/release/dashing/cartographer/1.0.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/cartographer-release/archive/release/dashing/cartographer/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
     sha256 = "09513565f6e8adb28bd13f649b6ec27d141d72c68fd1f8ca06886ec1be83f6ee";
   };
 

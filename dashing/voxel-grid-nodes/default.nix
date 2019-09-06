@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, ament-lint-common, ament-cmake-pclint, sensor-msgs, voxel-grid, rclcpp, autoware-auto-cmake, lidar-utils }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-voxel-grid-nodes";
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/voxel_grid_nodes/0.0.1-1;
+    url = "https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/voxel_grid_nodes/0.0.1-1";
+    name = "archive.tar.gz";
     sha256 = "e142520a6f8ffd3057236d401497ec433c2557a5659975fbb1daccc539811461";
   };
 

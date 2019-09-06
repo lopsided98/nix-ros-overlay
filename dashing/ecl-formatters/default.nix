@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ecl-converters, ecl-build, ecl-exceptions, ecl-license, ament-cmake-ros, ecl-config }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ecl-formatters";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_formatters/1.0.4-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/dashing/ecl_formatters/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "c40a4dcec7b8e9aa79d729f2cc9d186e5a3b295c4b17b21d13f5be15951ee075";
   };
 

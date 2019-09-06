@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-cmake, ament-lint-common }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ament-cmake-ros";
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/dashing/ament_cmake_ros/0.7.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/dashing/ament_cmake_ros/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "7acb97b85d2cb6f26d5072d6eb517f5ca7e62d37592611e06a8729acbaf31467";
   };
 

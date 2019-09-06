@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, yaml-cpp-vendor, ament-cmake-pytest, SDL, ament-cmake, rclcpp-lifecycle, SDL_image, launch-ros, ament-lint-common, launch-testing, ament-cmake-gtest, launch, nav2-util, nav2-common, tf2, nav-msgs, rclcpp, std-msgs, ament-lint-auto }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-nav2-map-server";
   version = "0.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_map_server/0.2.3-1.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_map_server/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
     sha256 = "a7e8aab04fe572b71a58fa5d08f57ced46fc852734af30c647e086cee2a3b486";
   };
 

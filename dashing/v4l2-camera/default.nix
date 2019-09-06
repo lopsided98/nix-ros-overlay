@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-common, camera-info-manager, image-transport, sensor-msgs, rclcpp, ament-cmake-ros, ament-lint-auto, rclcpp-components }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-v4l2-camera";
   version = "0.1.1-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/boldhearts/releases/ros2_v4l2_camera-release/repository/archive.tar.gz?ref=release/dashing/v4l2_camera/0.1.1-1;
+    url = "https://gitlab.com/boldhearts/releases/ros2_v4l2_camera-release/repository/archive.tar.gz?ref=release/dashing/v4l2_camera/0.1.1-1";
+    name = "archive.tar.gz";
     sha256 = "9d95b9bc438b735c65dde0379ad8d61e260198172e11a7db969540cc18dc5592";
   };
 

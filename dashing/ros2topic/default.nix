@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-xmllint, ament-flake8, ros2msg, rclpy, rosidl-runtime-py, pythonPackages, ament-pep257, python3Packages, ament-copyright, ros2cli }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-ros2topic";
   version = "0.7.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ros2cli-release/archive/release/dashing/ros2topic/0.7.4-1.tar.gz;
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/dashing/ros2topic/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
     sha256 = "2b61aaad83c4757f448be9ab3fb07997e92cebb88859eaad3376472ab52cf10c";
   };
 

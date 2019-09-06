@@ -3,12 +3,13 @@
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, rqt-gui-py, rqt-py-common, rqt-gui, rqt-gui-cpp }:
-buildRosPackage {
+buildRosPackage rec {
   pname = "ros-dashing-rqt";
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt/1.0.4-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "4a1739fbc485a8fc3e07beb1f5550ecec4cead7f5fb1331f5220d121551aaaae";
   };
 
