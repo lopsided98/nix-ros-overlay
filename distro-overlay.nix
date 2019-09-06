@@ -199,6 +199,11 @@ let
       '' + preFixup;
     });
 
+    rxcpp-vendor = patchVendorUrl rosSuper.rxcpp-vendor {
+      url = "https://github.com/ReactiveX/RxCpp/archive/v4.1.0.tar.gz";
+      sha256 = "1smxrcm0s6bz05185dx1i2xjgn47rq7m247pblil6p3bmk3lkfyk";
+    };
+
     shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
       url = "https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip";
       sha256 = "0cmsmgc87ndd9hiv187xkvjkn8fipn3hsijjc864h2lfcyigbxq1";
