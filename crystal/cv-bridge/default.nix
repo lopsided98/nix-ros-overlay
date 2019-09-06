@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/vision_opencv-release/archive/release/crystal/cv_bridge/2.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/crystal/cv_bridge/2.1.0-0.tar.gz";
+    name = "2.1.0-0.tar.gz";
     sha256 = "13c70c9ab1a1a243b1e8c6cd77384e9f037ef7e5b0daf94e1d70ffc6dda2ce53";
   };
 

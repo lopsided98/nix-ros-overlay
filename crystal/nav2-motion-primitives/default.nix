@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.1.7";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/crystal/nav2_motion_primitives/0.1.7-0.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/crystal/nav2_motion_primitives/0.1.7-0.tar.gz";
+    name = "0.1.7-0.tar.gz";
     sha256 = "50a75ca6f7675e93030ea763839db9e8f4d02795c627dc06f8c0257154c667eb";
   };
 

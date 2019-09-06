@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/crystal/compressed_image_transport/2.0.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/crystal/compressed_image_transport/2.0.0-0.tar.gz";
+    name = "2.0.0-0.tar.gz";
     sha256 = "aa631582dbcb9af820c40dd48c116d705b020b0f9fe5d49e660ba3bb078d87de";
   };
 

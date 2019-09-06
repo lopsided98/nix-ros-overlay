@@ -8,7 +8,8 @@ buildRosPackage {
   version = "3.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/crystal/gazebo_ros/3.2.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/crystal/gazebo_ros/3.2.0-0.tar.gz";
+    name = "3.2.0-0.tar.gz";
     sha256 = "15951164aa4962195cbd701f7539de10a4da2133444a759426f22ed43de36905";
   };
 

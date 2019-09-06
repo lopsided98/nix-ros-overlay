@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.1.7";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/crystal/costmap_queue/0.1.7-0.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/crystal/costmap_queue/0.1.7-0.tar.gz";
+    name = "0.1.7-0.tar.gz";
     sha256 = "b4d9d3b0b6b5447d9292858ee3a711bd91973ab3cb9b943945eea0b860ca1b7e";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/common_interfaces-release/archive/release/crystal/std_msgs/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/crystal/std_msgs/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "3713d137c312f568c5bb934b6fbf9794090862f5585cf34bdc7f080007d89720";
   };
 

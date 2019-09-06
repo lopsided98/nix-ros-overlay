@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/crystal/rosidl_typesupport_fastrtps_cpp/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/crystal/rosidl_typesupport_fastrtps_cpp/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "2daa01538507dddde0fb0cae9725c2a4410ffa22a8939dff2c562c4a6956a93e";
   };
 

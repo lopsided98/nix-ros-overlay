@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.16.5-r2";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/librealsense-release/archive/release/crystal/librealsense2/2.16.5-2.tar.gz;
+    url = "https://github.com/ros2-gbp/librealsense-release/archive/release/crystal/librealsense2/2.16.5-2.tar.gz";
+    name = "2.16.5-2.tar.gz";
     sha256 = "cb95505e6a9a4d16ebb6ca7542eee7bca1afdfca36fd46aa6de30cb011d96b97";
   };
 

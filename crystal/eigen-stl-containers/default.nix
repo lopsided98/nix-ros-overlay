@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/eigen_stl_containers-release/archive/release/crystal/eigen_stl_containers/1.0.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/eigen_stl_containers-release/archive/release/crystal/eigen_stl_containers/1.0.0-0.tar.gz";
+    name = "1.0.0-0.tar.gz";
     sha256 = "dd870ca56fe118b51f00459340ffcf4cef968c1c6e27f8eab9326b9f02c95ee4";
   };
 

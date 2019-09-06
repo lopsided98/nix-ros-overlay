@@ -8,7 +8,8 @@ buildRosPackage {
   version = "5.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_common/5.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_common/5.1.0-0.tar.gz";
+    name = "5.1.0-0.tar.gz";
     sha256 = "8fde07fc584f5c242e3849c258f00d85452c6507816c6ed6a9b543383b6d8d52";
   };
 

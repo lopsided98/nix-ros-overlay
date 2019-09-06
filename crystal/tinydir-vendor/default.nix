@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/tinydir_vendor-release/archive/release/crystal/tinydir_vendor/1.0.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/tinydir_vendor-release/archive/release/crystal/tinydir_vendor/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "993a5b8000c90a3284ca05971c79f13f7e71fa2b92e02f865d8d730b9ceaafd3";
   };
 

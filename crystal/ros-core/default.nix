@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/variants-release/archive/release/crystal/ros_core/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/variants-release/archive/release/crystal/ros_core/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "9a63fb497e726d067691d7876f32675db43300613a56920c77e1d50bd2b6ab16";
   };
 

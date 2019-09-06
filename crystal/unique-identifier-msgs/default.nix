@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/unique_identifier_msgs-release/archive/release/crystal/unique_identifier_msgs/2.0.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/unique_identifier_msgs-release/archive/release/crystal/unique_identifier_msgs/2.0.0-0.tar.gz";
+    name = "2.0.0-0.tar.gz";
     sha256 = "87eed67a35931d8ae852ed650b8b98049ee7af773fa97ba29ab0f0d42b5f3636";
   };
 

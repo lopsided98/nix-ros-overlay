@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/qt_gui_core-release/archive/release/crystal/qt_gui/1.0.6-1.tar.gz;
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/crystal/qt_gui/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
     sha256 = "e321214b3e5dd7308980cbdab72396d3fb387e3457ae67f55ab530096758627d";
   };
 

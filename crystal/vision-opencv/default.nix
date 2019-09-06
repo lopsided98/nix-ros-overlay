@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/vision_opencv-release/archive/release/crystal/vision_opencv/2.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/crystal/vision_opencv/2.1.0-0.tar.gz";
+    name = "2.1.0-0.tar.gz";
     sha256 = "c5c3156bb5a3c568428b126aa2f70fc9f811283d834d0a01b74c452dbde8f2e9";
   };
 

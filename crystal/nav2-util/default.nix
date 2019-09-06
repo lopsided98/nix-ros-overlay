@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.1.7";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/crystal/nav2_util/0.1.7-0.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/crystal/nav2_util/0.1.7-0.tar.gz";
+    name = "0.1.7-0.tar.gz";
     sha256 = "adbc4db869d72bdb3867c5d69caec08ca78918b7e4cb5cff07c244c9c4c5dbd6";
   };
 

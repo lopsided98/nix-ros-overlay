@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.5.3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ros2_object_analytics-release/archive/release/crystal/object_analytics_node/0.5.3-0.tar.gz;
+    url = "https://github.com/ros2-gbp/ros2_object_analytics-release/archive/release/crystal/object_analytics_node/0.5.3-0.tar.gz";
+    name = "0.5.3-0.tar.gz";
     sha256 = "8028765babd1011acd8ee4ad27dd07903d43f482e862920544ba212be7186c80";
   };
 

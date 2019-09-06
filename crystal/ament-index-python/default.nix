@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.5.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ament_index-release/archive/release/crystal/ament_index_python/0.5.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/crystal/ament_index_python/0.5.1-0.tar.gz";
+    name = "0.5.1-0.tar.gz";
     sha256 = "2c72c61f27599e5d25900d22ad6e70116552e5eea1570e00b519b5b2d730a97e";
   };
 

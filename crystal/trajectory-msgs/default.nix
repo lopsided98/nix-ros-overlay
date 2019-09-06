@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/common_interfaces-release/archive/release/crystal/trajectory_msgs/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/crystal/trajectory_msgs/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "9080e638daee2e5f3fb97a72dc991f24b28b7833d2d330cba35e1bcf16d171bd";
   };
 

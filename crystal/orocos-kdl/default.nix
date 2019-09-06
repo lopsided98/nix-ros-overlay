@@ -8,7 +8,8 @@ buildRosPackage {
   version = "3.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/orocos_kinematics_dynamics-release/archive/release/crystal/orocos_kdl/3.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/orocos_kinematics_dynamics-release/archive/release/crystal/orocos_kdl/3.1.0-0.tar.gz";
+    name = "3.1.0-0.tar.gz";
     sha256 = "2c444773f68360b316d826a5bf7c0f12e9a3989d90eb2d350e703a6226a4303e";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/laser_geometry-release/archive/release/crystal/laser_geometry/2.0.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/laser_geometry-release/archive/release/crystal/laser_geometry/2.0.0-0.tar.gz";
+    name = "2.0.0-0.tar.gz";
     sha256 = "7eebd7deb07fcd802f465ded75470b19331e11795f26069a2d8ce438a316ff70";
   };
 

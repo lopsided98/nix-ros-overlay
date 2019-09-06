@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.9.9";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros2-pkg-release/mrpt2-release/archive/release/crystal/mrpt2/1.9.9-0.tar.gz;
+    url = "https://github.com/mrpt-ros2-pkg-release/mrpt2-release/archive/release/crystal/mrpt2/1.9.9-0.tar.gz";
+    name = "1.9.9-0.tar.gz";
     sha256 = "f53bc01e9cecf69776f34c50e4ca8e675327efca9f672b3cf5a4ef8ba5c2631d";
   };
 

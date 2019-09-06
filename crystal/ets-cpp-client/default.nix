@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.1.2-r2";
 
   src = fetchurl {
-    url = https://github.com/brunodmt/ets_ros2-release/archive/release/crystal/ets_cpp_client/0.1.2-2.tar.gz;
+    url = "https://github.com/brunodmt/ets_ros2-release/archive/release/crystal/ets_cpp_client/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
     sha256 = "fd8f72849064578c712fd7d106067af72c38aadfeb89fea2f19e90244df93b44";
   };
 

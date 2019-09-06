@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rosidl-release/archive/release/crystal/rosidl_cmake/0.6.3-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/crystal/rosidl_cmake/0.6.3-0.tar.gz";
+    name = "0.6.3-0.tar.gz";
     sha256 = "511f4f0f1635d02c087d46fdb566d7a176bf94d1be85488a8764a9c93f706368";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_lite-release/archive/release/crystal/ecl_errors/1.0.1-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/crystal/ecl_errors/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "7253c6f1af5c15d658d23f14b52f07fa1bc48648b8dfa34eed0c95ba8875b186";
   };
 

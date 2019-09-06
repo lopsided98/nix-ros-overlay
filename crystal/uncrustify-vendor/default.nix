@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/uncrustify_vendor-release/archive/release/crystal/uncrustify_vendor/1.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/uncrustify_vendor-release/archive/release/crystal/uncrustify_vendor/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "e81702fda146eb9e430cb382a925c852d768aee7f801fe35df14c91cc2efbed5";
   };
 

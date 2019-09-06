@@ -8,7 +8,8 @@ buildRosPackage {
   version = "3.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/crystal/message_filters/3.0.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/crystal/message_filters/3.0.0-0.tar.gz";
+    name = "3.0.0-0.tar.gz";
     sha256 = "8fe2f16068afc46bdb688496deda0717a80a87a0ec6730f1c6361c9176f63f9e";
   };
 

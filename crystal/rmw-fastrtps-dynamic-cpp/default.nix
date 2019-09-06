@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.2";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/crystal/rmw_fastrtps_dynamic_cpp/0.6.2-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/crystal/rmw_fastrtps_dynamic_cpp/0.6.2-0.tar.gz";
+    name = "0.6.2-0.tar.gz";
     sha256 = "1213ab6b6f2916ca6c8718ceb31aaf58c8434a8525e26af9313b99e1f3ba6e3e";
   };
 

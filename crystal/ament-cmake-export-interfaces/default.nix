@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ament_cmake-release/archive/release/crystal/ament_cmake_export_interfaces/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/crystal/ament_cmake_export_interfaces/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "239e260cd706e537974809c2310e4f8368ff3e714dc9c31aae64d82f830bfd9d";
   };
 

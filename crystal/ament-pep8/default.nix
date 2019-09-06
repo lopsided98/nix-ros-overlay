@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.4";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ament_lint-release/archive/release/crystal/ament_pep8/0.6.4-0.tar.gz;
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/crystal/ament_pep8/0.6.4-0.tar.gz";
+    name = "0.6.4-0.tar.gz";
     sha256 = "0e32fad5d0415c3f3c752fef5cec0254d9c2bfee07cddedad4df37aa3c920497";
   };
 

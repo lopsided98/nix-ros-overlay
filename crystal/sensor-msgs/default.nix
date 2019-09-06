@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/common_interfaces-release/archive/release/crystal/sensor_msgs/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/crystal/sensor_msgs/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "09309c9ac332be8eedaf4c74f6342d60be5c8f729079edd2ee26a42ed3029075";
   };
 

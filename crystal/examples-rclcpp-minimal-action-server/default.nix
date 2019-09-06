@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/examples-release/archive/release/crystal/examples_rclcpp_minimal_action_server/0.6.3-0.tar.gz;
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/crystal/examples_rclcpp_minimal_action_server/0.6.3-0.tar.gz";
+    name = "0.6.3-0.tar.gz";
     sha256 = "b05d0aabfa0ead11e5a42ebddb00917a0033ec7199cc21b1e93e262e4c9fcd64";
   };
 

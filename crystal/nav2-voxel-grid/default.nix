@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.1.7";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/crystal/nav2_voxel_grid/0.1.7-0.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/crystal/nav2_voxel_grid/0.1.7-0.tar.gz";
+    name = "0.1.7-0.tar.gz";
     sha256 = "e5fc2f003f86f1f6d180375dce15de6af9f80f8ac943daed4d4ce4bb178ec2c5";
   };
 

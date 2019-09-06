@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/teleop_twist_keyboard-release/archive/release/crystal/teleop_twist_keyboard/2.2.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/teleop_twist_keyboard-release/archive/release/crystal/teleop_twist_keyboard/2.2.0-0.tar.gz";
+    name = "2.2.0-0.tar.gz";
     sha256 = "2b900f9b7189e874bb2d13b56426e6d1c2c6d632e92e69890b1aa32bd9d04ddb";
   };
 

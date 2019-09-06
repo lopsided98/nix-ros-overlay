@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/crystal/builtin_interfaces/0.6.3-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/crystal/builtin_interfaces/0.6.3-0.tar.gz";
+    name = "0.6.3-0.tar.gz";
     sha256 = "249ef8ac57b8ee997b7de2d8be13a6c12f2785c7e3440f7f0c9171366b30b74a";
   };
 

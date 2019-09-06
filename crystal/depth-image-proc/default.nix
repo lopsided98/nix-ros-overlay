@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/image_pipeline-release/archive/release/crystal/depth_image_proc/2.0.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/crystal/depth_image_proc/2.0.0-0.tar.gz";
+    name = "2.0.0-0.tar.gz";
     sha256 = "ffea92a4b087654cdee1786eda631c4a98b1e7725e9824630a5706a8309b2f58";
   };
 

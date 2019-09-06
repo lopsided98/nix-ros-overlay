@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.1.2-r2";
 
   src = fetchurl {
-    url = https://github.com/brunodmt/ets_ros2-release/archive/release/crystal/ets_msgs/0.1.2-2.tar.gz;
+    url = "https://github.com/brunodmt/ets_ros2-release/archive/release/crystal/ets_msgs/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
     sha256 = "082495a82ab3acee57fc481d295a4926ac065b963b3f6a8dd4355fb25a1a1851";
   };
 

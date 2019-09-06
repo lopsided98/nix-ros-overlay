@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/osrf_testings_tools_cpp-release/archive/release/crystal/osrf_testing_tools_cpp/1.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/osrf_testings_tools_cpp-release/archive/release/crystal/osrf_testing_tools_cpp/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "853939b29d8c0e8889459cd6bb22fdd69cba853bfaf2099bd4ae5a1b18ba235b";
   };
 

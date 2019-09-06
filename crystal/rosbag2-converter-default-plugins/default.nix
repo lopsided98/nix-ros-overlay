@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.0.7";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rosbag2-release/archive/release/crystal/rosbag2_converter_default_plugins/0.0.7-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/crystal/rosbag2_converter_default_plugins/0.0.7-0.tar.gz";
+    name = "0.0.7-0.tar.gz";
     sha256 = "b35732ce4c7388c40c5038fe73a76a440328b6abe6b1c70be3f4f64e7711336b";
   };
 

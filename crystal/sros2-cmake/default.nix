@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/sros2-release/archive/release/crystal/sros2_cmake/0.6.3-0.tar.gz;
+    url = "https://github.com/ros2-gbp/sros2-release/archive/release/crystal/sros2_cmake/0.6.3-0.tar.gz";
+    name = "0.6.3-0.tar.gz";
     sha256 = "80042b41404ecbb8cc07a61aa45b2b93fb2c15adfb8e6043fb1e5ef662d4fd7a";
   };
 

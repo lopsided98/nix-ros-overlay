@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.0.3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ros2_intel_realsense-release/archive/release/crystal/realsense_ros2_camera/2.0.3-0.tar.gz;
+    url = "https://github.com/ros2-gbp/ros2_intel_realsense-release/archive/release/crystal/realsense_ros2_camera/2.0.3-0.tar.gz";
+    name = "2.0.3-0.tar.gz";
     sha256 = "ccd6585ced405d85548f307ccafaffe130bbcdad898c93a6c447205304b8791d";
   };
 

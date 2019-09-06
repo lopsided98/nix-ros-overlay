@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.2-r2";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ros1_bridge-release/archive/release/crystal/ros1_bridge/0.6.2-2.tar.gz;
+    url = "https://github.com/ros2-gbp/ros1_bridge-release/archive/release/crystal/ros1_bridge/0.6.2-2.tar.gz";
+    name = "0.6.2-2.tar.gz";
     sha256 = "8dd00267aeb79b2c88892c8b6806f55684450b04fd412f3874309f069f23e9e3";
   };
 

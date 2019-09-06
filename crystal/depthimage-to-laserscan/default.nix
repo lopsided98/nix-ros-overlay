@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.2.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/depthimage_to_laserscan-release/archive/release/crystal/depthimage_to_laserscan/2.2.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/depthimage_to_laserscan-release/archive/release/crystal/depthimage_to_laserscan/2.2.1-0.tar.gz";
+    name = "2.2.1-0.tar.gz";
     sha256 = "582d63c338ab61eaa11d0299ba51a6da91979a75877b6c72208f71891e6b13a1";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rosidl_python-release/archive/release/crystal/python_cmake_module/0.6.3-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rosidl_python-release/archive/release/crystal/python_cmake_module/0.6.3-0.tar.gz";
+    name = "0.6.3-0.tar.gz";
     sha256 = "235463eab00214e06dfd277ca45e4866039703e46edb6747320e251f915bb622";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.2";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/demos-release/archive/release/crystal/topic_monitor/0.6.2-0.tar.gz;
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/crystal/topic_monitor/0.6.2-0.tar.gz";
+    name = "0.6.2-0.tar.gz";
     sha256 = "6cad0a1877a05bd2e7e7888f06f26f4739e442726da85a548f4ddb65783ead6c";
   };
 

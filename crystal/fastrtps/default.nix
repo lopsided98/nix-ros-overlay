@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.7.2";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/fastrtps-release/archive/release/crystal/fastrtps/1.7.2-0.tar.gz;
+    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/crystal/fastrtps/1.7.2-0.tar.gz";
+    name = "1.7.2-0.tar.gz";
     sha256 = "296305d8465e27e3cff4289865b15bf2bb40ccfb7a7d60e7c28b3a5df3a1a33a";
   };
 

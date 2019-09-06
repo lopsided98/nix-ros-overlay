@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/microROS/system_modes-release/archive/release/crystal/system_modes_examples/0.1.3-1.tar.gz;
+    url = "https://github.com/microROS/system_modes-release/archive/release/crystal/system_modes_examples/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
     sha256 = "e5a05a80230ade9371ee63541ccdcd0284441debde2c3f987968564187dd3470";
   };
 

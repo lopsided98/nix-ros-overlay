@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rcl_logging-release/archive/release/crystal/rcl_logging_log4cxx/0.2.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/crystal/rcl_logging_log4cxx/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "3b3814094f4ece619ceaf2f4da10e8727a961951ddc6f83812f355a8e86b888a";
   };
 

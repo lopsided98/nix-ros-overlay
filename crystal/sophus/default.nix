@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/sophus-release/archive/release/crystal/sophus/1.0.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/sophus-release/archive/release/crystal/sophus/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "bf2d15f293ed5fc5710b76bf6be309ddee55b910a37f34cc259b69bce11ef6f2";
   };
 

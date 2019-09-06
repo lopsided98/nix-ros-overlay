@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/urdfdom-release/archive/release/crystal/urdfdom/2.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/urdfdom-release/archive/release/crystal/urdfdom/2.1.0-0.tar.gz";
+    name = "2.1.0-0.tar.gz";
     sha256 = "27275c8ea3647c50538c85816341e1de41618345e4b54b9d30314886f9525b89";
   };
 

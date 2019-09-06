@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rcl-release/archive/release/crystal/rcl/0.6.6-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/crystal/rcl/0.6.6-1.tar.gz";
+    name = "0.6.6-1.tar.gz";
     sha256 = "e98f83aac311ace0a9b1d83d7f1a03765410e68f6281f74c080765133f4cb8cd";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.0.1-r2";
 
   src = fetchurl {
-    url = https://github.com/micro-ROS/micro-ROS-Agent-release/archive/release/crystal/micro_ros_agent/0.0.1-2.tar.gz;
+    url = "https://github.com/micro-ROS/micro-ROS-Agent-release/archive/release/crystal/micro_ros_agent/0.0.1-2.tar.gz";
+    name = "0.0.1-2.tar.gz";
     sha256 = "db09d137d08f374c6d6f0bfce90f0bad311ad4a809c5499866d3a5516a1ee6bb";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/resource_retriever-release/archive/release/crystal/resource_retriever/2.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/crystal/resource_retriever/2.1.0-0.tar.gz";
+    name = "2.1.0-0.tar.gz";
     sha256 = "9db42f615c9c1240dcae2f0ef91495e1177ab7c97acd884dfb38507e5d41660b";
   };
 

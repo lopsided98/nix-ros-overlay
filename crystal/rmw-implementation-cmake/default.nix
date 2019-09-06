@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rmw-release/archive/release/crystal/rmw_implementation_cmake/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/crystal/rmw_implementation_cmake/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "c6dcb8d1d0f673d63c8c2052c684efc7d91a714e6024ebc1e4805915d16b7d9c";
   };
 

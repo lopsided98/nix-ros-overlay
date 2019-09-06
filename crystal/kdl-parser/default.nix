@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/kdl_parser-release/archive/release/crystal/kdl_parser/2.2.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/kdl_parser-release/archive/release/crystal/kdl_parser/2.2.0-0.tar.gz";
+    name = "2.2.0-0.tar.gz";
     sha256 = "9f3e1d9af948522e30fceb48dc27cd55cf2726965b00b6d3f745f205e49c92bf";
   };
 

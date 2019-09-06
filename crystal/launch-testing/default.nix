@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.7.4";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/launch-release/archive/release/crystal/launch_testing/0.7.4-0.tar.gz;
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/crystal/launch_testing/0.7.4-0.tar.gz";
+    name = "0.7.4-0.tar.gz";
     sha256 = "f2e76510b9b46a57150d902ba813ec46f8f9032e2d0152091bbddc7c37c0d959";
   };
 

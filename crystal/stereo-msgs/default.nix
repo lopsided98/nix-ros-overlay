@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/common_interfaces-release/archive/release/crystal/stereo_msgs/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/crystal/stereo_msgs/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "02091b01f35da1e96319e42ee309af8aa4d495611b960d775569298133ba3d1b";
   };
 

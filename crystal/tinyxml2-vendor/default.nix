@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/tinyxml2_vendor-release/archive/release/crystal/tinyxml2_vendor/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/tinyxml2_vendor-release/archive/release/crystal/tinyxml2_vendor/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "68aa18c4cdfc73098b30c5b59de57a85458e88e38f54b790442cf6ab05861514";
   };
 

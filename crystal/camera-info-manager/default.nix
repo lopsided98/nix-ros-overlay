@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.0.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/image_common-release/archive/release/crystal/camera_info_manager/2.0.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/crystal/camera_info_manager/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
     sha256 = "65a8f9750504734de8a7033629376d64487c7a0467394f8438b92ff98aee89ef";
   };
 

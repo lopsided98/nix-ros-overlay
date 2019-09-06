@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.3.0-r2";
 
   src = fetchurl {
-    url = https://github.com/RoverRobotics/ros2-keystroke-release/archive/release/crystal/keystroke/0.3.0-2.tar.gz;
+    url = "https://github.com/RoverRobotics/ros2-keystroke-release/archive/release/crystal/keystroke/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
     sha256 = "7f8f328829b31d38c84025fc2e56eaa55c6e194ee25bcb9b8487fcc67fd19cc1";
   };
 

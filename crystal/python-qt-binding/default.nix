@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/python_qt_binding-release/archive/release/crystal/python_qt_binding/1.0.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/crystal/python_qt_binding/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "fdf6f093e4849aba0695f6fa8c9bbe628d7da9b9745f7274b0fcc5e004cd0b08";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.3-r1";
 
   src = fetchurl {
-    url = https://github.com/micro-ROS/microxrcedds_agent-release/archive/release/crystal/microxrcedds_agent/1.0.3-1.tar.gz;
+    url = "https://github.com/micro-ROS/microxrcedds_agent-release/archive/release/crystal/microxrcedds_agent/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
     sha256 = "e803c907ee996f9fe855a0eb232a56bdbdb0bb29b891abe8966c036683afc205";
   };
 

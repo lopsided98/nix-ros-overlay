@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.10.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/geometry2-release/archive/release/crystal/tf2_geometry_msgs/0.10.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/crystal/tf2_geometry_msgs/0.10.1-0.tar.gz";
+    name = "0.10.1-0.tar.gz";
     sha256 = "7aafc1e2f356900c3a04bafeebdbacb50778dc3ac072aded38af027e0bb031b0";
   };
 

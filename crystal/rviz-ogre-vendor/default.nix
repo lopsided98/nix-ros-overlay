@@ -8,13 +8,14 @@ buildRosPackage {
   version = "5.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_ogre_vendor/5.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_ogre_vendor/5.1.0-0.tar.gz";
+    name = "5.1.0-0.tar.gz";
     sha256 = "804f35dd8c1bf6183eb37bae744861da954bce63188ed3c11e1ed2bd135aecdb";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ xorg.libXaw pkg-config xorg.xrandr xorg.libX11 libGLU libGL freetype ];
-  propagatedBuildInputs = [ xorg.libXaw xorg.xrandr xorg.libX11 libGLU libGL freetype ];
+  buildInputs = [ xorg.libXaw pkg-config xorg.libXrandr xorg.libX11 libGLU libGL freetype ];
+  propagatedBuildInputs = [ xorg.libXaw xorg.libXrandr xorg.libX11 libGLU libGL freetype ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

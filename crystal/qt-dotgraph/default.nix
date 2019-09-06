@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/qt_gui_core-release/archive/release/crystal/qt_dotgraph/1.0.6-1.tar.gz;
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/crystal/qt_dotgraph/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
     sha256 = "f67cf44c9975de2788be0dce6898d2c7924516ae4e74f1354c94adceb3ed6d23";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/crystal/ecl_linear_algebra/1.0.1-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/crystal/ecl_linear_algebra/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "f5a5be624ca3ea6bc470d459a4395f3b74944c615c24987124e235922b8be9ea";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/class_loader-release/archive/release/crystal/class_loader/1.2.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/crystal/class_loader/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "eb449f54bbf1fe37e38580e83446b523eb5891f4e187acd4fbce4ec3033c0c56";
   };
 

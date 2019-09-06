@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/crystal/robot_state_publisher/2.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/crystal/robot_state_publisher/2.1.0-0.tar.gz";
+    name = "2.1.0-0.tar.gz";
     sha256 = "d849ccbb30a8a45c01a4a67ab1c7fbcfa331902a2786e127739eb63182b539a1";
   };
 

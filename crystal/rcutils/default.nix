@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.2";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rcutils-release/archive/release/crystal/rcutils/0.6.2-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/crystal/rcutils/0.6.2-0.tar.gz";
+    name = "0.6.2-0.tar.gz";
     sha256 = "0fdb96bde3e98cd975529a326ffaf7ff763f51d523d5fc98fab8c6af6980b407";
   };
 

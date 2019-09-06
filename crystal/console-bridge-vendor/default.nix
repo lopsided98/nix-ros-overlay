@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/crystal/console_bridge_vendor/1.1.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/crystal/console_bridge_vendor/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "1a8eb7126fa9825f35ad4f5373646c2df8b68595d0d6e4c2a595c3916e8f7722";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.2.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/pluginlib-release/archive/release/crystal/pluginlib/2.2.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/crystal/pluginlib/2.2.1-0.tar.gz";
+    name = "2.2.1-0.tar.gz";
     sha256 = "f520bff44d60282657c97f75a9eee211d9e49e0ed605450997a0155f774adbaf";
   };
 

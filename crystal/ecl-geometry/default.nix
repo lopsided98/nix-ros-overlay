@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/crystal/ecl_geometry/1.0.1-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/crystal/ecl_geometry/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "98e1c67a4da502cf83f49ba02364bf31a341082365569700466fcb01d3f269b3";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/cyberbotics/webots_ros2-release/archive/release/crystal/webots_ros2_examples/0.0.2-1.tar.gz;
+    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/crystal/webots_ros2_examples/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
     sha256 = "ccab36e0a04439bf43ec4101380c356d5fa7a6a6419e783ccea93fa20f56a1f2";
   };
 

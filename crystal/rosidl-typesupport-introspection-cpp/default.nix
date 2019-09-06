@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rosidl-release/archive/release/crystal/rosidl_typesupport_introspection_cpp/0.6.3-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/crystal/rosidl_typesupport_introspection_cpp/0.6.3-0.tar.gz";
+    name = "0.6.3-0.tar.gz";
     sha256 = "8c5d625a6f4d27ff0082cbfcfaf4409592d42a01ac99275d604be9bc893b6830";
   };
 

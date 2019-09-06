@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/control_msgs-release/archive/release/crystal/control_msgs/2.1.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/control_msgs-release/archive/release/crystal/control_msgs/2.1.0-0.tar.gz";
+    name = "2.1.0-0.tar.gz";
     sha256 = "1d934b64b7a9fbb74be9ce80d1b4f1791c8c40e1128abf787845853e10bd4842";
   };
 

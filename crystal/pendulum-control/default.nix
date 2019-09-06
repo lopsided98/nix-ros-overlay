@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.2";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/demos-release/archive/release/crystal/pendulum_control/0.6.2-0.tar.gz;
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/crystal/pendulum_control/0.6.2-0.tar.gz";
+    name = "0.6.2-0.tar.gz";
     sha256 = "160c00093e5a42d1b3a66f3000c322ee41dd3c43a04103b6372c99db57475f98";
   };
 

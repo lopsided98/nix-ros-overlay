@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/astuff/ml_classifiers-release/archive/release/crystal/ml_classifiers/1.0.1-1.tar.gz;
+    url = "https://github.com/astuff/ml_classifiers-release/archive/release/crystal/ml_classifiers/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
     sha256 = "fe5ced50553b27c4c5ffd272d1d51ccc8264289d8c506eba7600efd82ff9bed8";
   };
 

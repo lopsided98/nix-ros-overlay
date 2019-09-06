@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/crystal/ecl_formatters/1.0.1-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/crystal/ecl_formatters/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "b965714bbb869bbbfe9ecf925fa6e2f6e1275d8ff764f9e8f93110a00609cbe0";
   };
 

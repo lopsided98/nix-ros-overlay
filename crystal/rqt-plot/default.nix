@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rqt_plot-release/archive/release/crystal/rqt_plot/1.0.6-1.tar.gz;
+    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/crystal/rqt_plot/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
     sha256 = "2b849f99ddef657e6711f07cf034016b0b12219010431f81b467649ea2ce2f9f";
   };
 

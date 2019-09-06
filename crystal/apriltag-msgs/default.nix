@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/christianrauch/apriltag2_node-release/archive/release/crystal/apriltag_msgs/1.0.1-0.tar.gz;
+    url = "https://github.com/christianrauch/apriltag2_node-release/archive/release/crystal/apriltag_msgs/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "af7792e34c22e34c7cf69608d103c3d27cb182bb5741a3848fb21d4eb59cc028";
   };
 

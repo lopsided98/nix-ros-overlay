@@ -8,7 +8,8 @@ buildRosPackage {
   version = "2.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/nmea_msgs-release/archive/release/crystal/nmea_msgs/2.0.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/nmea_msgs-release/archive/release/crystal/nmea_msgs/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
     sha256 = "b8b45789e7f94f4153aef2bff6543ba2d51a2ab86836d74c8feb62df4253b230";
   };
 

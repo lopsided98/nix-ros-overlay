@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_lite-release/archive/release/crystal/ecl_sigslots_lite/1.0.1-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/crystal/ecl_sigslots_lite/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "e9103435c3befa6c163051a944ca2964b5761d2db5697a288be95cc82aa6a423";
   };
 

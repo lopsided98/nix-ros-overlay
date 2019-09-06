@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/cartographer-release/archive/release/crystal/cartographer/1.0.0-1.tar.gz;
+    url = "https://github.com/ros2-gbp/cartographer-release/archive/release/crystal/cartographer/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
     sha256 = "8820033c5d07d4acc754b8fe40fb5aee18cdf065b3120e14e7c4fea5115b320c";
   };
 

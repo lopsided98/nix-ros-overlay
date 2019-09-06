@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/crystal/fastrtps_cmake_module/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/crystal/fastrtps_cmake_module/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "f2a152b916a700341bd1fdb6c2730e06f094e773fac5b42b3706cabbaf79ae93";
   };
 

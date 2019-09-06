@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.0.3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rqt_publisher-release/archive/release/crystal/rqt_publisher/1.0.3-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rqt_publisher-release/archive/release/crystal/rqt_publisher/1.0.3-0.tar.gz";
+    name = "1.0.3-0.tar.gz";
     sha256 = "8d6b4cc21b3b3a1a0e1394eba2afd3921d28af0482c12af5e466d0a2080d22f7";
   };
 

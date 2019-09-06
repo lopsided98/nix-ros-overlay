@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.1.7";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/navigation2-release/archive/release/crystal/nav2_dwb_controller/0.1.7-0.tar.gz;
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/crystal/nav2_dwb_controller/0.1.7-0.tar.gz";
+    name = "0.1.7-0.tar.gz";
     sha256 = "2386ff364ba12b1c7075840d7e70f764f54f2bf2d2c93103fe57ae9703feba7e";
   };
 

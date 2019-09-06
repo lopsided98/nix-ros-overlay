@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.8.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/googletest-release/archive/release/crystal/gmock_vendor/1.8.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/googletest-release/archive/release/crystal/gmock_vendor/1.8.0-0.tar.gz";
+    name = "1.8.0-0.tar.gz";
     sha256 = "c992c3560bfbf7ea20a1eeb8330b99c796f180e7b9d33bf2ce9d5d2cad429810";
   };
 

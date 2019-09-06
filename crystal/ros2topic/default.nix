@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.3";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/ros2cli-release/archive/release/crystal/ros2topic/0.6.3-0.tar.gz;
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/crystal/ros2topic/0.6.3-0.tar.gz";
+    name = "0.6.3-0.tar.gz";
     sha256 = "cc449c6bfc2f21af43c622ffa5e00142a6b7f5cbec5a6de6534d8b37b2c51c54";
   };
 

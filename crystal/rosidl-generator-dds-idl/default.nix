@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rosidl_dds-release/archive/release/crystal/rosidl_generator_dds_idl/0.6.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rosidl_dds-release/archive/release/crystal/rosidl_generator_dds_idl/0.6.0-0.tar.gz";
+    name = "0.6.0-0.tar.gz";
     sha256 = "48f52d487269aacba9ec8e4aa8a0d0646a659daea3042708c1b5a9ac1a32596a";
   };
 

@@ -8,7 +8,8 @@ buildRosPackage {
   version = "1.12.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/angles-release/archive/release/crystal/angles/1.12.1-1.tar.gz;
+    url = "https://github.com/ros2-gbp/angles-release/archive/release/crystal/angles/1.12.1-1.tar.gz";
+    name = "1.12.1-1.tar.gz";
     sha256 = "e3c90023c90d9597d863351a77b147dc86aabf26c6ea2d44cbd5e8bf2c69ebb0";
   };
 

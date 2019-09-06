@@ -8,7 +8,8 @@ buildRosPackage {
   version = "5.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/yaml_cpp_vendor-release/archive/release/crystal/yaml_cpp_vendor/5.0.0-0.tar.gz;
+    url = "https://github.com/ros2-gbp/yaml_cpp_vendor-release/archive/release/crystal/yaml_cpp_vendor/5.0.0-0.tar.gz";
+    name = "5.0.0-0.tar.gz";
     sha256 = "40ebab2a3298b5c6f44d69b287d305097cc267912e38722e181f1a903e1d0e63";
   };
 

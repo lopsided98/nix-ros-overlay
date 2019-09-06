@@ -8,7 +8,8 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros2-gbp/rmw_connext-release/archive/release/crystal/rmw_connext_shared_cpp/0.6.1-0.tar.gz;
+    url = "https://github.com/ros2-gbp/rmw_connext-release/archive/release/crystal/rmw_connext_shared_cpp/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "7c45059558c31cf04c5130b14d5df11dedac4f01991d29cec84c4d95784a120b";
   };
 
