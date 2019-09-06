@@ -30,6 +30,14 @@ let
       sed -Ei CMakeLists.txt \
         -e 's/(Boost [^)]*)python[^ )]*([ )])/\1${pythonLib}\2/'
     '';
+
+    patchVendorUrl = pkg: args: pkg.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = ''
+        sed -i 's#URL [^ ]*$#URL file://${self.fetchurl args}#' CMakeLists.txt
+      '' + postPatch;
+    });
   in {
     # ROS package overrides/fixups
 
@@ -115,18 +123,10 @@ let
       setupHook = ./gazebo-ros-setup-hook.sh;
     });
 
-    libyaml-vendor = rosSuper.libyaml-vendor.overrideAttrs ({
-      postPatch ? "", ...
-    }: let
-      libyaml = self.fetchurl {
-        url = "https://github.com/yaml/libyaml/archive/10c907871f1ccd779c7fccf6b81a62762b5c4e7b.zip";
-        sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
-      };
-    in {
-      postPatch = ''
-        sed -i 's#URL [^ ]*$#URL file://${libyaml}#' CMakeLists.txt
-      '' + postPatch;
-    });
+    libyaml-vendor = patchVendorUrl rosSuper.libyaml-vendor {
+      url = "https://github.com/yaml/libyaml/archive/10c907871f1ccd779c7fccf6b81a62762b5c4e7b.zip";
+      sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
+    };
 
     map-server = rosSuper.map-server.overrideAttrs ({
       nativeBuildInputs ? [], ...
@@ -204,37 +204,26 @@ let
       '' + postFixup;
     });
 
-    tinydir-vendor = rosSuper.tinydir-vendor.overrideAttrs ({
-      postPatch ? "", ...
-    }: let
-      tinydir = self.fetchurl {
-        url = "https://github.com/cxong/tinydir/archive/1.2.4.tar.gz";
-        sha256 = "1qjwky7v4b9d9dmxzsybnhiz6xgx94grc67sdyvlp1d4kfkfsl4w";
-      };
-    in {
-      postPatch = ''
-        sed -i 's#URL [^ ]*$#URL file://${tinydir}#' CMakeLists.txt
-      '' + postPatch;
-    });
+    tinydir-vendor = patchVendorUrl rosSuper.tinydir-vendor {
+      url = "https://github.com/cxong/tinydir/archive/1.2.4.tar.gz";
+      sha256 = "1qjwky7v4b9d9dmxzsybnhiz6xgx94grc67sdyvlp1d4kfkfsl4w";
+    };
 
-    uncrustify-vendor = rosSuper.uncrustify-vendor.overrideAttrs ({
-      postPatch ? "", ...
-    }: let
-      uncrustify = self.fetchurl {
-        url = "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.68.1.tar.gz";
-        sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
-      };
-    in {
-      postPatch = ''
-        sed -i 's#URL [^ ]*$#URL file://${uncrustify}#' CMakeLists.txt
-      '' + postPatch;
-    });
+    uncrustify-vendor = patchVendorUrl rosSuper.uncrustify-vendor {
+      url = "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.68.1.tar.gz";
+      sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
+    };
 
     urdf = rosSuper.urdf.overrideAttrs ({
       postPatch ? "", ...
     }: {
       postPatch = postPatch + patchBoostPython;
     });
+
+    yaml-cpp-vendor = patchVendorUrl rosSuper.yaml-cpp-vendor {
+      url = "https://github.com/jbeder/yaml-cpp/archive/0f9a586ca1dc29c2ecb8dd715a315b93e3f40f79.zip";
+      sha256 = "1g45f71mk4gyca550177qf70v5cvavlsalmg7x8bi59j6z6f0mgz";
+    };
   };
 in mkOverlay [
   base
