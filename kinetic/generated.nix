@@ -4812,6 +4812,8 @@ self: super: {
 
  warthog-viz = self.callPackage ./warthog-viz {};
 
+ wave-gazebo = self.callPackage ./wave-gazebo {};
+
  wave-gazebo-plugins = self.callPackage ./wave-gazebo-plugins {};
 
  waypoint-generator = self.callPackage ./waypoint-generator {};
