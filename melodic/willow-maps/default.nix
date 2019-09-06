@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/willow_maps-release/archive/release/melodic/willow_maps/1.0.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/willow_maps-release/archive/release/melodic/willow_maps/1.0.3-0.tar.gz";
+    name = "1.0.3-0.tar.gz";
     sha256 = "8c9dbbaeabb4464c98637228bddfd69f2b0e8692e40d9a0f0921b4b910e0dfe9";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

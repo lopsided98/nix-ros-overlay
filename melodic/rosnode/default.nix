@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosnode/1.14.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosnode/1.14.3-0.tar.gz";
+    name = "1.14.3-0.tar.gz";
     sha256 = "9766e0e61bb3e82cab7763af6c0881d2c7cd95cd8a14bcb0538da50124be4d80";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest ];
   propagatedBuildInputs = [ rosgraph rostopic ];
   nativeBuildInputs = [ catkin ];

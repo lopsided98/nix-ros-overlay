@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.16.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/melodic/map_server/1.16.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/map_server/1.16.2-0.tar.gz";
+    name = "1.16.2-0.tar.gz";
     sha256 = "bfa8523b9c697f97956d24e89857dcccc5b4cc09844b42adb0ce066c6df28972";
   };
 
+  buildType = "catkin";
   buildInputs = [ SDL bullet SDL_image libyamlcpp tf2 nav-msgs roscpp ];
   checkInputs = [ rostest rosunit rospy ];
   propagatedBuildInputs = [ SDL bullet SDL_image libyamlcpp tf2 nav-msgs roscpp ];

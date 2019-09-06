@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/bfl-release/archive/release/melodic/bfl/0.8.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/bfl-release/archive/release/melodic/bfl/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
     sha256 = "7c4c61c15768d1cd276cdaaf9a9f5e3088f478383789ffec9fdee325dafc0990";
   };
 
+  buildType = "cmake";
   buildInputs = [ cppunit ros ];
   propagatedBuildInputs = [ cppunit catkin ros ];
   nativeBuildInputs = [ cmake ];

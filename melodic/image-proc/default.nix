@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_proc/1.13.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_proc/1.13.0-1.tar.gz";
+    name = "1.13.0-1.tar.gz";
     sha256 = "0766ca147ac73ee475bc3afef52a7baa337922abc116a4a4fc835001e098faa9";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost image-transport sensor-msgs nodelet-topic-tools cv-bridge image-geometry nodelet dynamic-reconfigure roscpp ];
   checkInputs = [ camera-calibration-parsers rostest ];
   propagatedBuildInputs = [ image-transport sensor-msgs nodelet-topic-tools cv-bridge image-geometry nodelet dynamic-reconfigure roscpp ];

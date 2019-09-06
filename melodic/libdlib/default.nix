@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_extern-release/archive/release/melodic/libdlib/0.6.13-1.tar.gz;
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libdlib/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
     sha256 = "772c8b82fede51aea078f7d3a320dc76d73e9c877479d5715edaf67153886383";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

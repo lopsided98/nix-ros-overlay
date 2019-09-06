@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_logger_level-release/archive/release/melodic/rqt_logger_level/0.4.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_logger_level-release/archive/release/melodic/rqt_logger_level/0.4.8-0.tar.gz";
+    name = "0.4.8-0.tar.gz";
     sha256 = "c2fcc66a3b20e836aba40218bc745f0112986d329804f3929c275534d907a4b9";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui rosservice rospy python-qt-binding rosnode ];
   nativeBuildInputs = [ catkin ];
 

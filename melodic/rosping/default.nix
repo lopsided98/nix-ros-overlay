@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/rosping/2.1.13-1.tar.gz;
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/rosping/2.1.13-1.tar.gz";
+    name = "2.1.13-1.tar.gz";
     sha256 = "b472c70876d5ec0b35b98ad397bb82db99de60570b8d319a1b06d8ce1212c462";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosboost-cfg mk rosbuild rostest std-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

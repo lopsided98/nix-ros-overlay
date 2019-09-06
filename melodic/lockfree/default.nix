@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.25";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_realtime-release/archive/release/melodic/lockfree/1.0.25-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_realtime-release/archive/release/melodic/lockfree/1.0.25-0.tar.gz";
+    name = "1.0.25-0.tar.gz";
     sha256 = "659c8d7707b844cc4c8c9eeab40e3e33fdd65f1ca0e07f71b471dd4dad633e4f";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole rosatomic roslib allocators ];
-  propagatedBuildInputs = [ rosconsole rosatomic roslib allocators ];
+  propagatedBuildInputs = [ roslib rosatomic allocators rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

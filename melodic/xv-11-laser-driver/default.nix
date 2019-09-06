@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/rohbotics/xv_11_laser_driver-release/archive/release/melodic/xv_11_laser_driver/0.3.0-0.tar.gz;
+    url = "https://github.com/rohbotics/xv_11_laser_driver-release/archive/release/melodic/xv_11_laser_driver/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "7c6485e8b062b95fd61b2eceb47f042f5d069f1c6aad947f5c237f8968ec595c";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp ];
   propagatedBuildInputs = [ boost ];
   nativeBuildInputs = [ catkin ];

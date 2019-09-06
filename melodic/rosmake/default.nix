@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.6";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/melodic/rosmake/1.14.6-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/rosmake/1.14.6-0.tar.gz";
+    name = "1.14.6-0.tar.gz";
     sha256 = "2014461723eb619c99a70d3314a6e392e922a27d17fc9bc5a83292c8dfd0d591";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.rospkg catkin ];
   nativeBuildInputs = [ catkin ];
 

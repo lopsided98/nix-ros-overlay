@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/rexrov2-release/archive/release/melodic/rexrov2_gazebo/0.1.3-0.tar.gz;
+    url = "https://github.com/uuvsimulator/rexrov2-release/archive/release/melodic/rexrov2_gazebo/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "ae244517e996486264c129ef22354f23c9e84f3e32be10a5fd7fa193bd0b15d9";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rexrov2-description rexrov2-control ];
   nativeBuildInputs = [ catkin ];
 

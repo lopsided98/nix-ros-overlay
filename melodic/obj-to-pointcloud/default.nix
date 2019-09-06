@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation-release/archive/release/melodic/obj_to_pointcloud/0.4.2-1.tar.gz;
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/obj_to_pointcloud/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
     sha256 = "9a0e581437520788936a74c2e47d4571f752dfac0a7a8953ecb65abec978fbd3";
   };
 
+  buildType = "catkin";
   buildInputs = [ pcl sensor-msgs neonavigation-common eigen eigen-conversions roscpp pcl-conversions geometry-msgs ];
   checkInputs = [ rostest roslint ];
   propagatedBuildInputs = [ pcl sensor-msgs neonavigation-common eigen eigen-conversions roscpp pcl-conversions geometry-msgs ];

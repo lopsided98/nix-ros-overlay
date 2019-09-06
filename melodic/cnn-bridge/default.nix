@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.5-r1";
 
   src = fetchurl {
-    url = https://github.com/wew84/cnn_bridge-release/archive/release/melodic/cnn_bridge/0.8.5-1.tar.gz;
+    url = "https://github.com/wew84/cnn_bridge-release/archive/release/melodic/cnn_bridge/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
     sha256 = "e1a18db4221ed9d52b21a85d68846cac16a5790d53355380d3552e0145eb691f";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation rospy std-msgs roslib geometry-msgs ];
   propagatedBuildInputs = [ message-generation message-runtime rospy std-msgs roslaunch roslib geometry-msgs ];
   nativeBuildInputs = [ catkin ];

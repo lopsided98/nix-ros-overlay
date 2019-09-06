@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.2.3-r2";
 
   src = fetchurl {
-    url = https://github.com/SteveMacenski/nonpersistent_voxel_layer-release/archive/release/melodic/nonpersistent_voxel_layer/1.2.3-2.tar.gz;
+    url = "https://github.com/SteveMacenski/nonpersistent_voxel_layer-release/archive/release/melodic/nonpersistent_voxel_layer/1.2.3-2.tar.gz";
+    name = "1.2.3-2.tar.gz";
     sha256 = "3c8ab56ed99d7856535320eaaedb8670bbf5115258808a22a1b6531ff9308107";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d pluginlib cmake-modules sensor-msgs message-filters roscpp voxel-grid message-generation nav-msgs laser-geometry visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
-  propagatedBuildInputs = [ costmap-2d rosconsole pluginlib sensor-msgs message-filters roscpp voxel-grid nav-msgs laser-geometry message-runtime visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
+  propagatedBuildInputs = [ costmap-2d rosconsole pluginlib sensor-msgs message-filters roscpp pcl-ros nav-msgs laser-geometry message-runtime voxel-grid dynamic-reconfigure std-msgs visualization-msgs tf pcl-conversions geometry-msgs map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

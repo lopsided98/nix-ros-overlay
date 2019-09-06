@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.0-r1";
 
   src = fetchurl {
-    url = https://github.com/peci1/movie_publisher-release/archive/release/melodic/movie_publisher/1.3.0-1.tar.gz;
+    url = "https://github.com/peci1/movie_publisher-release/archive/release/melodic/movie_publisher/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
     sha256 = "d25ff36cadc9c0e22259a1e55b9e761efcc0e9ed0f4c1fcd30c1f919dfb90f4b";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ sensor-msgs cv-bridge ffmpeg pythonPackages.opencv3 pythonPackages.imageio rospy rosbash-params ];
   nativeBuildInputs = [ catkin ];
 

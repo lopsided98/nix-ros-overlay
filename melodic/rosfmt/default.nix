@@ -8,10 +8,12 @@ buildRosPackage {
   version = "6.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/xqms/rosfmt-release/archive/release/melodic/rosfmt/6.1.0-1.tar.gz;
+    url = "https://github.com/xqms/rosfmt-release/archive/release/melodic/rosfmt/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
     sha256 = "8863afa48a520a2e262575c5a650c6258e5da038400063889cc44ef42bfcce3d";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp rosconsole ];
   propagatedBuildInputs = [ roscpp rosconsole ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_navigation/0.8.2-1.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_navigation/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
     sha256 = "255b963a72a9b38af080fad62427a9f9ed35ca395ed6d944880e1e9511d678c7";
   };
 
+  buildType = "catkin";
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ map-server costmap-2d amcl base-local-planner navfn slam-karto fetch-depth-layer rotate-recovery move-base move-base-msgs voxel-grid clear-costmap-recovery fetch-maps ];
   nativeBuildInputs = [ catkin ];

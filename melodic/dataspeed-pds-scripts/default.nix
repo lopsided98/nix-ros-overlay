@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_scripts/1.0.2-0.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_scripts/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "9affa7c314ddfe3804829e680b0889aef2e5b9b17c0ca0334cdf0b647ab9f666";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ dataspeed-pds-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

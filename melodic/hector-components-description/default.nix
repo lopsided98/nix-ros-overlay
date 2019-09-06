@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.0";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models-release/archive/release/melodic/hector_components_description/0.5.0-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models-release/archive/release/melodic/hector_components_description/0.5.0-0.tar.gz";
+    name = "0.5.0-0.tar.gz";
     sha256 = "b3626eafa575c9d792d9a92beefb7b588076ebdafaec15c168268b60a1890053";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ hector-sensors-description xacro hector-xacro-tools ];
   nativeBuildInputs = [ catkin ];
 

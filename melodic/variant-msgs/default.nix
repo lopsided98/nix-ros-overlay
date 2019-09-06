@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.5";
 
   src = fetchurl {
-    url = https://github.com/anybotics/variant-release/archive/release/melodic/variant_msgs/0.1.5-0.tar.gz;
+    url = "https://github.com/anybotics/variant-release/archive/release/melodic/variant_msgs/0.1.5-0.tar.gz";
+    name = "0.1.5-0.tar.gz";
     sha256 = "bc5b26692c4b9223aa4bd83c00fe4b2710a4f5acfe1b9c49cbba0e6f1ad3a16f";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

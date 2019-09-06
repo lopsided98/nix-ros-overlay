@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.13-r2";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_control_tests/1.0.13-2.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_control_tests/1.0.13-2.tar.gz";
+    name = "1.0.13-2.tar.gz";
     sha256 = "277a453251b08e5d8616c7c1af2081b1f9a5fde81c7415b7eb5eac329e1aefb6";
   };
 
+  buildType = "catkin";
   buildInputs = [ access-point-control hostapd-access-point network-monitor-udp linksys-access-point rostest network-traffic-control dynamic-reconfigure ddwrt-access-point ];
   propagatedBuildInputs = [ access-point-control hostapd-access-point network-monitor-udp linksys-access-point rostest network-traffic-control dynamic-reconfigure ddwrt-access-point ];
   nativeBuildInputs = [ catkin ];

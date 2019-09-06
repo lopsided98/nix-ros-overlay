@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/actionlib-release/archive/release/melodic/actionlib/1.12.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/actionlib-release/archive/release/melodic/actionlib/1.12.0-1.tar.gz";
+    name = "1.12.0-1.tar.gz";
     sha256 = "cf5019b5b23a1aa16c1ad5afc47ce10630a512cdc621c926bc1920803dac9ca5";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost actionlib-msgs rostest message-generation rospy std-msgs roscpp ];
   checkInputs = [ rosnode ];
   propagatedBuildInputs = [ boost actionlib-msgs pythonPackages.wxPython rostest roslib message-runtime rostopic rospy std-msgs roscpp ];

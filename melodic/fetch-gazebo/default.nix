@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetch_gazebo/0.9.2-1.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetch_gazebo/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
     sha256 = "e368f635946556a5334f6daeef1d2ab3c2be880fa3429b71e14ccf15ec5814f1";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros boost control-toolbox sensor-msgs gazebo-dev gazebo-plugins robot-controllers-interface robot-controllers angles ];
-  propagatedBuildInputs = [ gazebo-ros depth-image-proc boost control-msgs trajectory-msgs control-toolbox gazeboSimulator.gazebo sensor-msgs gazebo-plugins robot-controllers-interface robot-controllers rgbd-launch actionlib fetch-description image-proc nodelet xacro ];
+  propagatedBuildInputs = [ gazebo-ros depth-image-proc boost control-msgs control-toolbox sensor-msgs trajectory-msgs gazeboSimulator.gazebo gazebo-plugins robot-controllers-interface robot-controllers rgbd-launch actionlib fetch-description image-proc nodelet xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_robot_simulator/0.7.0-0.tar.gz;
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_robot_simulator/0.7.0-0.tar.gz";
+    name = "0.7.0-0.tar.gz";
     sha256 = "48bcc0aeacff43ba149a6320ff4e61271a7f2b1aa41309d7ac6b5dce3123db6e";
   };
 
+  buildType = "catkin";
   checkInputs = [ roslaunch industrial-robot-client ];
   propagatedBuildInputs = [ control-msgs pythonPackages.rospkg trajectory-msgs sensor-msgs industrial-robot-client industrial-msgs rospy ];
   nativeBuildInputs = [ catkin ];

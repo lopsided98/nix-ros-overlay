@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.0-r1";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_dynamics_api-release/archive/release/melodic/rc_dynamics_api/0.8.0-1.tar.gz;
+    url = "https://github.com/roboception-gbp/rc_dynamics_api-release/archive/release/melodic/rc_dynamics_api/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
     sha256 = "8e3d2bcda9263dbe5672670e9aba9fbca85f2ca91ec9d8bf72c51993ee97bbe8";
   };
 
+  buildType = "cmake";
   buildInputs = [ protobuf curl ];
   propagatedBuildInputs = [ protobuf catkin curl ];
   nativeBuildInputs = [ cmake ];

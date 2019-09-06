@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_common_plugins-release/archive/release/melodic/rqt_common_plugins/0.4.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_common_plugins-release/archive/release/melodic/rqt_common_plugins/0.4.8-0.tar.gz";
+    name = "0.4.8-0.tar.gz";
     sha256 = "f0c64a0ec07274960b5e4eb9c032c6c439e67a82b0ae25c4cc9d27be2ecacc83";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-srv rqt-launch rqt-py-console rqt-bag rqt-msg rqt-plot rqt-shell rqt-graph rqt-reconfigure rqt-top rqt-image-view rqt-action rqt-web rqt-topic rqt-publisher rqt-console rqt-dep rqt-logger-level rqt-service-caller rqt-py-common rqt-bag-plugins ];
   nativeBuildInputs = [ catkin ];
 

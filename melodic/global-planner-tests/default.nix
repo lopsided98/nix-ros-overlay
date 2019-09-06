@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.5-r1";
 
   src = fetchurl {
-    url = https://github.com/DLu/robot_navigation-release/archive/release/melodic/global_planner_tests/0.2.5-1.tar.gz;
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/global_planner_tests/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
     sha256 = "39e04b13a621dc4fd2ceec66debbb65c93034d192a2d238c26fc425a67325074";
   };
 
+  buildType = "catkin";
   buildInputs = [ map-server pluginlib libyamlcpp nav-core2 nav-msgs roscpp ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ map-server pluginlib libyamlcpp nav-core2 nav-msgs roscpp ];

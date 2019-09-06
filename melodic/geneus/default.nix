@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.6";
 
   src = fetchurl {
-    url = https://github.com/tork-a/geneus-release/archive/release/melodic/geneus/2.2.6-0.tar.gz;
+    url = "https://github.com/tork-a/geneus-release/archive/release/melodic/geneus/2.2.6-0.tar.gz";
+    name = "2.2.6-0.tar.gz";
     sha256 = "aadb96f7266f5584813ea6033317b1decf6a7358d01cf257239ae4c04ffb67c6";
   };
 
+  buildType = "catkin";
   buildInputs = [ genmsg ];
   propagatedBuildInputs = [ genmsg ];
   nativeBuildInputs = [ catkin ];

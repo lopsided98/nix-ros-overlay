@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/depth_image_proc/1.13.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/depth_image_proc/1.13.0-1.tar.gz";
+    name = "1.13.0-1.tar.gz";
     sha256 = "9ef587dfb94e1ce789b97f3287d361570fd4e14019c248fa388797d388e839a2";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost cmake-modules image-transport sensor-msgs cv-bridge message-filters tf2-ros image-geometry tf2 eigen-conversions nodelet stereo-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ boost image-transport cv-bridge tf2-ros image-geometry tf2 eigen-conversions nodelet ];

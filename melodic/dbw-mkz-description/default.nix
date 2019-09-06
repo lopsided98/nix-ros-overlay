@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_description/1.2.3-1.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_description/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
     sha256 = "342433ddcb9d4f194348334c952eb39a39f0d6d6290ed9c8e8ef97665860b095";
   };
 
+  buildType = "catkin";
   checkInputs = [ roslaunch roslib rviz ];
   propagatedBuildInputs = [ roslaunch urdf xacro robot-state-publisher ];
   nativeBuildInputs = [ catkin ];

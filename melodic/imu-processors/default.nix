@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/imu_pipeline-release/archive/release/melodic/imu_processors/0.2.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/imu_pipeline-release/archive/release/melodic/imu_processors/0.2.3-0.tar.gz";
+    name = "0.2.3-0.tar.gz";
     sha256 = "68dd63390a89e5634e7ae241aa2e8c21e8e80753d49eaf8569de7f8ac1c8dfd3";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp nav-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

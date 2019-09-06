@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/melodic/open_manipulator_control_gui/2.0.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/melodic/open_manipulator_control_gui/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
     sha256 = "e4dc03e16d77a2295b53e586737453f552dc2b256e064bf784c592fe58cca2cd";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules sensor-msgs qt5.qtbase eigen std-msgs roscpp open-manipulator-msgs ];
   propagatedBuildInputs = [ cmake-modules sensor-msgs qt5.qtbase eigen std-msgs roscpp open-manipulator-msgs ];
   nativeBuildInputs = [ catkin ];

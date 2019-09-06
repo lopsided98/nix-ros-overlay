@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/rostime/0.6.12-0.tar.gz;
+    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/rostime/0.6.12-0.tar.gz";
+    name = "0.6.12-0.tar.gz";
     sha256 = "d99a7287aca9e4fad4aeae4c8fedfd9d69c8ccf7977b0488bd27d5c57c5fb208";
   };
 
+  buildType = "catkin";
   buildInputs = [ cpp-common boost ];
   propagatedBuildInputs = [ cpp-common boost ];
   nativeBuildInputs = [ catkin ];

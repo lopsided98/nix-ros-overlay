@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/roshub/vapor_master-release/archive/release/melodic/vapor_master/0.3.0-0.tar.gz;
+    url = "https://github.com/roshub/vapor_master-release/archive/release/melodic/vapor_master/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "c6fc8a631a9237b71a58f298e1394f498f3374ba2698c365f0aae44e5a75ca32";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rospack nodejs ];
   nativeBuildInputs = [ nodePackages.npm nodejs catkin ];
 

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/RobotWebTools-release/web_video_server-release/archive/release/melodic/web_video_server/0.2.1-1.tar.gz;
+    url = "https://github.com/RobotWebTools-release/web_video_server-release/archive/release/melodic/web_video_server/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
     sha256 = "6280be50271f4d288665701715b2053fd31bc2fc0032a26956aad9cd17fc761b";
   };
 
+  buildType = "catkin";
   buildInputs = [ async-web-server-cpp image-transport sensor-msgs cv-bridge ffmpeg roslib roscpp ];
-  propagatedBuildInputs = [ async-web-server-cpp image-transport sensor-msgs cv-bridge ffmpeg roslib roscpp ];
+  propagatedBuildInputs = [ async-web-server-cpp image-transport sensor-msgs cv-bridge roscpp ffmpeg roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

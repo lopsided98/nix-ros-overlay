@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/calibration-release/archive/release/melodic/monocam_settler/0.10.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/calibration-release/archive/release/melodic/monocam_settler/0.10.14-0.tar.gz";
+    name = "0.10.14-0.tar.gz";
     sha256 = "e071a63f48ee1ed211bca1e5bcd85a46afce004dc18ba4226aee484dc7e309c7";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs ];
   propagatedBuildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs ];
   nativeBuildInputs = [ catkin ];

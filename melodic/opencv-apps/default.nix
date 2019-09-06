@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-perception/opencv_apps-release/archive/release/melodic/opencv_apps/2.0.1-1.tar.gz;
+    url = "https://github.com/ros-perception/opencv_apps-release/archive/release/melodic/opencv_apps/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
     sha256 = "11489debf5d3b3dc194472f483d67857db62f76665f6785ad4f55882c4e4d3dc";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-generation nodelet dynamic-reconfigure std-msgs roscpp ];
   checkInputs = [ roslaunch rosbag rosservice rostest rostopic image-view topic-tools image-proc compressed-image-transport ];
   propagatedBuildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-runtime nodelet dynamic-reconfigure std-msgs roscpp ];

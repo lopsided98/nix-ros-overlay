@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/driver_common-release/archive/release/melodic/timestamp_tools/1.6.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/driver_common-release/archive/release/melodic/timestamp_tools/1.6.8-0.tar.gz";
+    name = "1.6.8-0.tar.gz";
     sha256 = "dabb75248bb8528c603d556f7533df6bf701870db84b5d5c5983e2d7f08464b0";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslib roscpp ];
   propagatedBuildInputs = [ roslib roscpp ];
   nativeBuildInputs = [ catkin ];

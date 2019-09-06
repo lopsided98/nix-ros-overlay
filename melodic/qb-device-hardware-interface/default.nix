@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1";
 
   src = fetchurl {
-    url = https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_hardware_interface/2.0.1-0.tar.gz;
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_hardware_interface/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
     sha256 = "16e0d28b4e8b145ae272049cdf232830fd7e6ffc50145bcb04a1570fa1e0f791";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface joint-limits-interface urdf qb-device-msgs qb-device-srvs roscpp transmission-interface ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ hardware-interface joint-limits-interface urdf qb-device-msgs qb-device-srvs roscpp transmission-interface ];

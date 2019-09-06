@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_app/0.3.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_app/0.3.11-0.tar.gz";
+    name = "0.3.11-0.tar.gz";
     sha256 = "9906def7abafbaa4151394b237533e1e449743d63ba183d32b33f303fd1e2907";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ qt-gui ];
   nativeBuildInputs = [ catkin ];
 

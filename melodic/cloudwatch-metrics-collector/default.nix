@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/cloudwatch_metrics_collector-release/archive/release/melodic/cloudwatch_metrics_collector/2.1.1-1.tar.gz;
+    url = "https://github.com/aws-gbp/cloudwatch_metrics_collector-release/archive/release/melodic/cloudwatch_metrics_collector/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
     sha256 = "765bfbb06471515deaa6dc40b39f426ef386774cf658a7b9afe356cfa75e2ca2";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs cloudwatch-metrics-common roscpp aws-common std-msgs aws-ros1-common ros-monitoring-msgs ];
   checkInputs = [ rostest gtest gmock ];
   propagatedBuildInputs = [ std-srvs cloudwatch-metrics-common roscpp aws-common std-msgs aws-ros1-common ros-monitoring-msgs ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/dataflow_lite/1.1.0-1.tar.gz;
+    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/dataflow_lite/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
     sha256 = "db8584ba8c3ad6e409b866429a766cce5a3669849e8243e2edbf451913c7f55f";
   };
 
+  buildType = "cmake";
   buildInputs = [ aws-common ];
   checkInputs = [ gtest gmock ];
   propagatedBuildInputs = [ aws-common ];

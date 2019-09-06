@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.10.17-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_controllers_msgs/1.10.17-1.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_controllers_msgs/1.10.17-1.tar.gz";
+    name = "1.10.17-1.tar.gz";
     sha256 = "82561cde4b79968a9d87697c9a87487b9252480f072ae084497f383be300167f";
   };
 
+  buildType = "catkin";
   buildInputs = [ trajectory-msgs message-generation actionlib-msgs geometry-msgs ];
   propagatedBuildInputs = [ trajectory-msgs message-runtime actionlib-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

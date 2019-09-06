@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_rviz-release/archive/release/melodic/rqt_rviz/0.6.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_rviz-release/archive/release/melodic/rqt_rviz/0.6.0-0.tar.gz";
+    name = "0.6.0-0.tar.gz";
     sha256 = "23e3aa89701e33665c95e1bd0f0df853a52a8bfd433c352071ba9ff597b8ecb7";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib boost rqt-gui qt5.qtbase rviz rqt-gui-cpp ];
   propagatedBuildInputs = [ pluginlib boost rqt-gui rviz rqt-gui-cpp ];
   nativeBuildInputs = [ catkin ];

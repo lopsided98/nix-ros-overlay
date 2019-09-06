@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.11-r1";
 
   src = fetchurl {
-    url = https://github.com/astuff/avt_vimba_camera-release/archive/release/melodic/avt_vimba_camera/0.0.11-1.tar.gz;
+    url = "https://github.com/astuff/avt_vimba_camera-release/archive/release/melodic/avt_vimba_camera/0.0.11-1.tar.gz";
+    name = "0.0.11-1.tar.gz";
     sha256 = "2ef59b4dcd0006486e9a68b469485bd13f54d6cc9f1d76a2b01ae229c8a1a6a4";
   };
 
+  buildType = "catkin";
   buildInputs = [ camera-info-manager image-transport sensor-msgs message-filters polled-camera roscpp image-geometry diagnostic-updater dynamic-reconfigure std-msgs nodelet ];
   propagatedBuildInputs = [ stereo-image-proc camera-info-manager image-transport sensor-msgs message-filters polled-camera roscpp image-geometry diagnostic-updater dynamic-reconfigure std-msgs image-proc nodelet ];
   nativeBuildInputs = [ catkin ];

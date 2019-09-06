@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_robot_plugins-release/archive/release/melodic/rqt_robot_plugins/0.5.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_robot_plugins-release/archive/release/melodic/rqt_robot_plugins/0.5.7-0.tar.gz";
+    name = "0.5.7-0.tar.gz";
     sha256 = "2fa30a70d1eed9ff4724c1b9d1ef8303066b373bae9abcbf2b8a715a89e515ba";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-nav-view rqt-rviz rqt-pose-view rqt-moveit rqt-tf-tree rqt-robot-dashboard rqt-robot-monitor rqt-robot-steering rqt-runtime-monitor ];
   nativeBuildInputs = [ catkin ];
 

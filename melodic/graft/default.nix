@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3-r2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/graft-release/archive/release/melodic/graft/0.2.3-2.tar.gz;
+    url = "https://github.com/ros-gbp/graft-release/archive/release/melodic/graft/0.2.3-2.tar.gz";
+    name = "0.2.3-2.tar.gz";
     sha256 = "9a8974a928fe75527071337fedbe94266631129c0a1b9cb9d9163b06302bedce";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules rosconsole sensor-msgs roscpp nav-msgs message-generation eigen tf geometry-msgs ];
   propagatedBuildInputs = [ rosconsole sensor-msgs roscpp nav-msgs message-runtime dynamic-reconfigure tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

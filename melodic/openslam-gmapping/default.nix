@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/openslam_gmapping-release/archive/release/melodic/openslam_gmapping/0.2.1-1.tar.gz;
+    url = "https://github.com/ros-gbp/openslam_gmapping-release/archive/release/melodic/openslam_gmapping/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
     sha256 = "9b61107d88d219e52ecb210abcb44d5248c760182c4c6bafd39beab1f5c78f5f";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/melodic/tuw_checkerboard/0.1.1-1.tar.gz;
+    url = "https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/melodic/tuw_checkerboard/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
     sha256 = "e7d76c6bb8a14e31094674fc33504b7cca4335d4d0c2362ceda6811633fc483c";
   };
 
+  buildType = "catkin";
   buildInputs = [ marker-msgs image-transport cv-bridge image-geometry image-view dynamic-reconfigure tf ];
   propagatedBuildInputs = [ marker-msgs image-transport cv-bridge image-geometry image-view dynamic-reconfigure tf ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca_joystick_demo/1.0.6-1.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca_joystick_demo/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
     sha256 = "0e76c63bbc9bde6a5d6348a3f0656001284ba66c589e6df91211bc9365f3f5c7";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs sensor-msgs roscpp dbw-fca-msgs ];
   checkInputs = [ roslaunch roslib ];
   propagatedBuildInputs = [ dbw-fca-msgs sensor-msgs joy dbw-fca-can std-msgs roslaunch roscpp ];

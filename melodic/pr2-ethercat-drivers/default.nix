@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.19-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/melodic/pr2_ethercat_drivers/1.8.19-1.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/melodic/pr2_ethercat_drivers/1.8.19-1.tar.gz";
+    name = "1.8.19-1.tar.gz";
     sha256 = "e28b1bb1eb08c709820f7a571ca092a5ccf5035f877019f105ef2f3f485ff049";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ ethercat-hardware fingertip-pressure ];
   nativeBuildInputs = [ catkin ];
 

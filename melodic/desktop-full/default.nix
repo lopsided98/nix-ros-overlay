@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/metapackages-release/archive/release/melodic/desktop_full/1.4.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/metapackages-release/archive/release/melodic/desktop_full/1.4.1-0.tar.gz";
+    name = "1.4.1-0.tar.gz";
     sha256 = "236064fd3c4cccc5327f1ac4c951c70762a1f6c88e9faa521251f78e26ea987b";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ desktop perception simulators urdf-sim-tutorial ];
   nativeBuildInputs = [ catkin ];
 

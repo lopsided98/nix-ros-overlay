@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.16";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/genlisp-release/archive/release/melodic/genlisp/0.4.16-0.tar.gz;
+    url = "https://github.com/ros-gbp/genlisp-release/archive/release/melodic/genlisp/0.4.16-0.tar.gz";
+    name = "0.4.16-0.tar.gz";
     sha256 = "0da61ebbb633656062ce030fc94b5931bf3cdf3b5cf896116895608a739a520a";
   };
 
+  buildType = "catkin";
   buildInputs = [ genmsg ];
   propagatedBuildInputs = [ genmsg ];
   nativeBuildInputs = [ catkin ];

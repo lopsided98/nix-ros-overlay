@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1";
 
   src = fetchurl {
-    url = https://github.com/RethinkRobotics-release/gennodejs-release/archive/release/melodic/gennodejs/2.0.1-0.tar.gz;
+    url = "https://github.com/RethinkRobotics-release/gennodejs-release/archive/release/melodic/gennodejs/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
     sha256 = "09d5f9ee001d83dd19c111dc8c2d995b9e9a90e21df2a379b882ac555b9bc9b1";
   };
 
+  buildType = "catkin";
   buildInputs = [ genmsg ];
   propagatedBuildInputs = [ genmsg ];
   nativeBuildInputs = [ catkin ];

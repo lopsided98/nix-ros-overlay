@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.5-r1";
 
   src = fetchurl {
-    url = https://github.com/DLu/robot_navigation-release/archive/release/melodic/nav_2d_msgs/0.2.5-1.tar.gz;
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/nav_2d_msgs/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
     sha256 = "a69fbc32255ea51112ab78b8b5b2b8c4b38ec8263bd961558c0a7a66bf89eb20";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

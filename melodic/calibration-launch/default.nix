@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/calibration-release/archive/release/melodic/calibration_launch/0.10.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/calibration-release/archive/release/melodic/calibration_launch/0.10.14-0.tar.gz";
+    name = "0.10.14-0.tar.gz";
     sha256 = "eaf7a65341c7be0665741f2d6f22d3e9d6a5a50deb004ffd402434fc2ae715b7";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ laser-cb-detector monocam-settler interval-intersection joint-states-settler urdfdom-py ];
   nativeBuildInputs = [ catkin ];
 

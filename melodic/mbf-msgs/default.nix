@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_msgs/0.2.4-1.tar.gz;
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_msgs/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
     sha256 = "40f96691ac0963edfb6194a79452d45e36fa28bb86173d7ed974e55714e01fb8";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs nav-msgs message-generation message-runtime std-msgs genmsg geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs nav-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

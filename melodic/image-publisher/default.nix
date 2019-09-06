@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_publisher/1.13.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_publisher/1.13.0-1.tar.gz";
+    name = "1.13.0-1.tar.gz";
     sha256 = "8b0416edac96a5993367ff887c7187345ce36d6a2e52c0f7cd5d6501642d1da4";
   };
 
+  buildType = "catkin";
   buildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge nodelet dynamic-reconfigure roscpp ];
   propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge nodelet dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];

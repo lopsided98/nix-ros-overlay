@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_robot_interaction/1.0.2-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_robot_interaction/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
     sha256 = "3332b6537faed0c98ece9ea5d64d1b6c3253fa4b3b2ee738fa9bee14b2c772c6";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning tf2-geometry-msgs tf2-ros tf2 interactive-markers tf2-eigen roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ moveit-ros-planning tf2-geometry-msgs tf2-ros tf2 interactive-markers tf2-eigen roscpp ];

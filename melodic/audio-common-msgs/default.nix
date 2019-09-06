@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/audio_common-release/archive/release/melodic/audio_common_msgs/0.3.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/audio_common-release/archive/release/melodic/audio_common_msgs/0.3.3-0.tar.gz";
+    name = "0.3.3-0.tar.gz";
     sha256 = "119fea466f5d72ff6fab2bb92fed76cf3665441eb4b6012ff202817c5c42fe02";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
   nativeBuildInputs = [ catkin ];

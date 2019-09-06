@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/teleop_tools-release/archive/release/melodic/joy_teleop/0.3.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/melodic/joy_teleop/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "36f191ff3945af0b25a599fecf08a999b1d7bdf91e0f387775a3e6adda9be052";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ sensor-msgs teleop-tools-msgs actionlib rostopic rospy ];
   nativeBuildInputs = [ catkin ];
 

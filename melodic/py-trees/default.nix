@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.8";
 
   src = fetchurl {
-    url = https://github.com/stonier/py_trees-release/archive/release/melodic/py_trees/0.6.8-0.tar.gz;
+    url = "https://github.com/stonier/py_trees-release/archive/release/melodic/py_trees/0.6.8-0.tar.gz";
+    name = "0.6.8-0.tar.gz";
     sha256 = "f0749de4867ee89d353aa9ba22338ec73044a05e186ee0d611caa917fc708c4d";
   };
 
+  buildType = "catkin";
   buildInputs = [ pythonPackages.setuptools ];
   propagatedBuildInputs = [ pythonPackages.pydot pythonPackages.enum34 ];
   nativeBuildInputs = [ catkin ];

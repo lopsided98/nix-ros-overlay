@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_velocity_smoother/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_velocity_smoother/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "9de916242e06317201e15ac26eb33949b8f7aeb84dc262ee44e82ce5ceb3328a";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib roscpp ecl-threads nav-msgs dynamic-reconfigure nodelet geometry-msgs ];
   propagatedBuildInputs = [ pluginlib roscpp ecl-threads nav-msgs dynamic-reconfigure nodelet geometry-msgs ];
   nativeBuildInputs = [ catkin ];

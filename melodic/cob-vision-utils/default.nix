@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_vision_utils/0.6.14-1.tar.gz;
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_vision_utils/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
     sha256 = "0894dd4b7fc497310d4c8236696415b60d40314380217ee024058833f1944fa4";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules tinyxml roscpp visualization-msgs opencv3 ];
   propagatedBuildInputs = [ cmake-modules tinyxml roscpp visualization-msgs opencv3 ];
   nativeBuildInputs = [ catkin ];

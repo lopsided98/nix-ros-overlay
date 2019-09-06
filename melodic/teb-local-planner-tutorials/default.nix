@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/rst-tu-dortmund/teb_local_planner_tutorials-release/archive/release/melodic/teb_local_planner_tutorials/0.2.4-1.tar.gz;
+    url = "https://github.com/rst-tu-dortmund/teb_local_planner_tutorials-release/archive/release/melodic/teb_local_planner_tutorials/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
     sha256 = "844e431b24ee4635946618da536b22f2571196f298e74b7715ee6a4f4cd42d1a";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ map-server amcl move-base stage-ros teb-local-planner ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.15-r2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/eml-release/archive/release/melodic/eml/1.8.15-2.tar.gz;
+    url = "https://github.com/ros-gbp/eml-release/archive/release/melodic/eml/1.8.15-2.tar.gz";
+    name = "1.8.15-2.tar.gz";
     sha256 = "be4a25b2632c6064f9d2567a5d1f9915aca203bebd8eda03e9cb3758d90e3c2c";
   };
 
+  buildType = "cmake";
   propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 

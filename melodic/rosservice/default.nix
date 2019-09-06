@@ -2,17 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosmsg, genpy, rosgraph, rospy, roslib }:
+{ lib, buildRosPackage, fetchurl, catkin, rosmsg, roslib, rosgraph, rospy, genpy }:
 buildRosPackage {
   pname = "ros-melodic-rosservice";
   version = "1.14.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosservice/1.14.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosservice/1.14.3-0.tar.gz";
+    name = "1.14.3-0.tar.gz";
     sha256 = "3c702a38cbf823bf15ade07745f11dd6b19af38b936630dbadb3473aea130e36";
   };
 
-  propagatedBuildInputs = [ genpy rosmsg rosgraph rospy roslib ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ rosmsg roslib rosgraph rospy genpy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

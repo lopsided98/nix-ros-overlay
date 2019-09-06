@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.0";
 
   src = fetchurl {
-    url = https://github.com/vanadiumlabs/arbotix_ros-release/archive/release/melodic/arbotix_controllers/0.10.0-0.tar.gz;
+    url = "https://github.com/vanadiumlabs/arbotix_ros-release/archive/release/melodic/arbotix_controllers/0.10.0-0.tar.gz";
+    name = "0.10.0-0.tar.gz";
     sha256 = "32d41d26b0bddb10e801e02195bd604400fddb7aef4bddde8c917a62cecc6028";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ arbotix-python trajectory-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

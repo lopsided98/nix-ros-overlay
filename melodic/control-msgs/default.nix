@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.5.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/control_msgs-release/archive/release/melodic/control_msgs/1.5.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/control_msgs-release/archive/release/melodic/control_msgs/1.5.0-0.tar.gz";
+    name = "1.5.0-0.tar.gz";
     sha256 = "12c341b7f245c27bed738494241445879e58aefa0368ba688c67fb114f852d58";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs trajectory-msgs message-generation std-msgs geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs trajectory-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

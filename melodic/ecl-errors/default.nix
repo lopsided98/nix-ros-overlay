@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.61.6";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_lite-release/archive/release/melodic/ecl_errors/0.61.6-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/melodic/ecl_errors/0.61.6-0.tar.gz";
+    name = "0.61.6-0.tar.gz";
     sha256 = "e41cdee101ab35c2963fc8e080294f597646006e246cae31242898b1b69e4eb9";
   };
 
+  buildType = "catkin";
   buildInputs = [ ecl-license ecl-config ];
   propagatedBuildInputs = [ ecl-license ecl-config ];
   nativeBuildInputs = [ catkin ];

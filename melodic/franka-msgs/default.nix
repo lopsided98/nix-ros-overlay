@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.0-r1";
 
   src = fetchurl {
-    url = https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_msgs/0.6.0-1.tar.gz;
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_msgs/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
     sha256 = "7cf7e5ef5026c2227e099f45d283c1caa5b952a626b320144ca99b6ac9c69e49";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

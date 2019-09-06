@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/simple_grasping-release/archive/release/melodic/simple_grasping/0.3.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/simple_grasping-release/archive/release/melodic/simple_grasping/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "1dada4bbf81347bac9d7fee738e20246ec4f6f25a8983a7edda10894bd896a54";
   };
 
+  buildType = "catkin";
   buildInputs = [ shape-msgs cmake-modules sensor-msgs roscpp message-generation actionlib vtkWithQt4 moveit-msgs tf pcl-ros grasping-msgs geometry-msgs ];
-  propagatedBuildInputs = [ shape-msgs moveit-python sensor-msgs roscpp actionlib message-runtime vtkWithQt4 moveit-msgs tf pcl-ros grasping-msgs geometry-msgs ];
+  propagatedBuildInputs = [ shape-msgs moveit-python sensor-msgs roscpp vtkWithQt4 message-runtime actionlib moveit-msgs tf pcl-ros grasping-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

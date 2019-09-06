@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/tts-release/archive/release/melodic/tts/1.0.2-1.tar.gz;
+    url = "https://github.com/aws-gbp/tts-release/archive/release/melodic/tts/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
     sha256 = "ff9513ecc2e040bc38e882badee1407e351c9c1abb6cd8c75ec1ac81dcfe5cd1";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs sound-play rostest pythonPackages.boto3 message-generation rospy std-msgs rosunit ];
   checkInputs = [ rostest pythonPackages.mock rosunit ];
   propagatedBuildInputs = [ actionlib-msgs sound-play pythonPackages.boto3 message-runtime rospy std-msgs ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "4.0.2";
 
   src = fetchurl {
-    url = https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/melodic/multisense_lib/4.0.2-0.tar.gz;
+    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/melodic/multisense_lib/4.0.2-0.tar.gz";
+    name = "4.0.2-0.tar.gz";
     sha256 = "61da457dbdd57bfa74ac34de1523552ddb166945e81b648107bcaa7ef2eb7686";
   };
 
+  buildType = "catkin";
   buildInputs = [ cv-bridge libpng12 ];
   propagatedBuildInputs = [ cv-bridge libpng12 ];
   nativeBuildInputs = [ catkin ];

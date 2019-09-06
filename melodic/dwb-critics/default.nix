@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.2.5-r1";
 
   src = fetchurl {
-    url = https://github.com/DLu/robot_navigation-release/archive/release/melodic/dwb_critics/0.2.5-1.tar.gz;
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/dwb_critics/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
     sha256 = "42ff253d658b161baff427aa5da4a789f5dcf17d61e316cc8f40bd320ce00a3f";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib nav-grid-iterators nav-core2 costmap-queue sensor-msgs nav-2d-msgs nav-2d-utils angles roscpp dwb-local-planner geometry-msgs ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ pluginlib nav-grid-iterators nav-core2 costmap-queue sensor-msgs nav-2d-msgs nav-2d-utils angles roscpp dwb-local-planner geometry-msgs ];
+  propagatedBuildInputs = [ dwb-local-planner pluginlib sensor-msgs nav-core2 costmap-queue nav-2d-msgs nav-2d-utils angles roscpp nav-grid-iterators geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

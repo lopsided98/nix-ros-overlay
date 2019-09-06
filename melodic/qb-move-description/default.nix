@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.0-r1";
 
   src = fetchurl {
-    url = https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/melodic/qb_move_description/2.0.0-1.tar.gz;
+    url = "https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/melodic/qb_move_description/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
     sha256 = "2d1f33dc9544f001b41cd0c45f89465a068bda8b7a5948953d21581639069f5c";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

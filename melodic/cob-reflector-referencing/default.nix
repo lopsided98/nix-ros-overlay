@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_reflector_referencing/0.6.8-1.tar.gz;
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_reflector_referencing/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
     sha256 = "f6fd5812a4814bf65b6281e10f2c1af67c42c1404dede7bdec68a9f7a62924ba";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

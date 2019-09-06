@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/melodic/ridgeback_gazebo/0.1.0-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/melodic/ridgeback_gazebo/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "566ee423e7937ce8e5d92f7d12151a0fe4d5b11aa903d5d738522a65ac1ccb0c";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros ridgeback-control hector-gazebo-plugins gazebo-plugins ridgeback-gazebo-plugins ridgeback-description gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/um7-release/archive/release/melodic/um7/0.0.4-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/um7-release/archive/release/melodic/um7/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "d557326e26d705cb29897eb7ac32baa349a08c71d07cf9501e6c457e3d634349";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp sensor-msgs message-generation serial ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ sensor-msgs roscpp message-runtime serial ];

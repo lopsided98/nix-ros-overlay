@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_runtime_monitor-release/archive/release/melodic/rqt_runtime_monitor/0.5.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_runtime_monitor-release/archive/release/melodic/rqt_runtime_monitor/0.5.7-0.tar.gz";
+    name = "0.5.7-0.tar.gz";
     sha256 = "f58958b5649d59fca3022a1771e6a457382744c616835cc65980213ab742fd5c";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui qt-gui rospy diagnostic-msgs python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 

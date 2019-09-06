@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.5-r1";
 
   src = fetchurl {
-    url = https://github.com/DLu/robot_navigation-release/archive/release/melodic/nav_grid/0.2.5-1.tar.gz;
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/nav_grid/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
     sha256 = "e545bfa545436be95ac4b293fbc3026d19714fde8b00ad3d9df8a508ca34d141";
   };
 
+  buildType = "catkin";
   checkInputs = [ rosunit roslint ];
   nativeBuildInputs = [ catkin ];
 

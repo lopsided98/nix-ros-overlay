@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.9";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_robot_steering-release/archive/release/melodic/rqt_robot_steering/0.5.9-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_robot_steering-release/archive/release/melodic/rqt_robot_steering/0.5.9-0.tar.gz";
+    name = "0.5.9-0.tar.gz";
     sha256 = "88c3867ac42fc3ad6533f1fabc58ab169a1f3d4cbe9ae0e165edae28ad5b4df4";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui rostopic python-qt-binding geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

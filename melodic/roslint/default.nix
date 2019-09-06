@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.11.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslint-release/archive/release/melodic/roslint/0.11.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/roslint-release/archive/release/melodic/roslint/0.11.2-0.tar.gz";
+    name = "0.11.2-0.tar.gz";
     sha256 = "85588e28bc32d5359340c5524437aa447aadbd15f25c30d9e6cb4030f49232a5";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

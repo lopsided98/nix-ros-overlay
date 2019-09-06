@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.62.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/melodic/ecl_eigen/0.62.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/melodic/ecl_eigen/0.62.2-0.tar.gz";
+    name = "0.62.2-0.tar.gz";
     sha256 = "e876bba5caea9487942c43d124404890361df1004126e7233a29d6b5c6e1c0c7";
   };
 
+  buildType = "catkin";
   buildInputs = [ ecl-license cmake-modules eigen ];
   propagatedBuildInputs = [ ecl-license eigen ];
   nativeBuildInputs = [ catkin ];

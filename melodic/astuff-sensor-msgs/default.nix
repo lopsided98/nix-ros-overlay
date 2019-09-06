@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.1";
 
   src = fetchurl {
-    url = https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/astuff_sensor_msgs/2.3.1-0.tar.gz;
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/astuff_sensor_msgs/2.3.1-0.tar.gz";
+    name = "2.3.1-0.tar.gz";
     sha256 = "91f67f406cc09d6509d9639f61822a74c8ee42c17b423a06f21616576cd349ff";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ kartech-linear-actuator-msgs delphi-srr-msgs radar-msgs mobileye-560-660-msgs pacmod-msgs delphi-esr-msgs neobotix-usboard-msgs ibeo-msgs derived-object-msgs ];
   nativeBuildInputs = [ catkin ];
 

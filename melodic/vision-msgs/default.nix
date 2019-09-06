@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1";
 
   src = fetchurl {
-    url = https://github.com/Kukanani/vision_msgs-release/archive/release/melodic/vision_msgs/0.0.1-0.tar.gz;
+    url = "https://github.com/Kukanani/vision_msgs-release/archive/release/melodic/vision_msgs/0.0.1-0.tar.gz";
+    name = "0.0.1-0.tar.gz";
     sha256 = "aea7d0a539a76bbd0072f74bb3c7ebc0a7f3b3277963f8d696de42a5c4066e90";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];

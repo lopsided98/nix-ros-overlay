@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/nanomsg-release/archive/release/melodic/nanomsg/0.4.1-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/nanomsg-release/archive/release/melodic/nanomsg/0.4.1-0.tar.gz";
+    name = "0.4.1-0.tar.gz";
     sha256 = "0b9f6215f091598eac4c7c958693a5b4c8cb09838e18a5b18bc9feb7bf97dfff";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

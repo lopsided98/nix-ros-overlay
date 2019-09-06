@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/melodic/dataspeed_ulc/0.0.4-1.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/melodic/dataspeed_ulc/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
     sha256 = "af1df86c0a3c7bf3149e94f3eec80104933eb75b0fe9e1a639ffbc1a71aeac95";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ dataspeed-ulc-can dataspeed-ulc-msgs ];
   nativeBuildInputs = [ catkin ];
 

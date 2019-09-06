@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/diagnostic_analysis/1.9.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/diagnostic_analysis/1.9.3-0.tar.gz";
+    name = "1.9.3-0.tar.gz";
     sha256 = "72eb7b968b92d97d5c95a15a4e9e573c9f025158e2a4e4375ad18b744858093f";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-msgs rostest rosbag roslib ];
   propagatedBuildInputs = [ diagnostic-msgs rosbag roslib ];
   nativeBuildInputs = [ catkin ];

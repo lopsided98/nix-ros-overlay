@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2-r2";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_navigation/0.2.2-2.tar.gz;
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_navigation/0.2.2-2.tar.gz";
+    name = "0.2.2-2.tar.gz";
     sha256 = "22188bcee3b4be8a9d89395483016cc92e58e429d1698a8628de0b5fb2fc18b9";
   };
 
+  buildType = "catkin";
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ gmapping map-server amcl move-base urdf xacro ];
   nativeBuildInputs = [ catkin ];

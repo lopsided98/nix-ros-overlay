@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13-r2";
 
   src = fetchurl {
-    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_description/0.6.13-2.tar.gz;
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_description/0.6.13-2.tar.gz";
+    name = "0.6.13-2.tar.gz";
     sha256 = "b3ae5b1d2b3c99078751a4450ec523fbc8727ed3e2b79dbf78d7c3a8a1d80532";
   };
 
+  buildType = "catkin";
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];

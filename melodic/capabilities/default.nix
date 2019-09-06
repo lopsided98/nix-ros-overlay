@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/capabilities-release/archive/release/melodic/capabilities/0.2.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/capabilities-release/archive/release/melodic/capabilities/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "adfb1e8a3002fcfc90f654c8def944f6cd7a8753b3e908b5760eca786b1546ef";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs rostest message-generation rospy std-msgs roslaunch ];
   checkInputs = [ rosservice pythonPackages.coverage pythonPackages.mock pythonPackages.pep8 geometry-msgs ];
   propagatedBuildInputs = [ std-srvs bondpy pythonPackages.pyyaml message-runtime rospy std-msgs roslaunch nodelet ];

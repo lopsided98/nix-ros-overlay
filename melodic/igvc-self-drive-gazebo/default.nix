@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.4-r1";
 
   src = fetchurl {
-    url = https://github.com/robustify/igvc_self_drive_sim-release/archive/release/melodic/igvc_self_drive_gazebo/0.1.4-1.tar.gz;
+    url = "https://github.com/robustify/igvc_self_drive_sim-release/archive/release/melodic/igvc_self_drive_gazebo/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
     sha256 = "8b83406423a8bcc6de599c32df446a7165145353418a9c5e279c43a0b9f08e4e";
   };
 
+  buildType = "catkin";
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros robot-state-publisher ];
   nativeBuildInputs = [ catkin ];

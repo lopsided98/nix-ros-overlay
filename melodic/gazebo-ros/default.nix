@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.8.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/gazebo_ros/2.8.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/gazebo_ros/2.8.4-0.tar.gz";
+    name = "2.8.4-0.tar.gz";
     sha256 = "fde5c96dfbdfcd8550ae4b731d199348b50955157f0bc114f754c5a55170ca8a";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs cmake-modules geometry-msgs tinyxml roscpp gazebo-dev rosgraph-msgs roslib dynamic-reconfigure std-msgs tf gazebo-msgs ];
   propagatedBuildInputs = [ python std-srvs geometry-msgs tinyxml roscpp gazebo-dev rosgraph-msgs roslib dynamic-reconfigure std-msgs tf gazebo-msgs ];
   nativeBuildInputs = [ catkin ];

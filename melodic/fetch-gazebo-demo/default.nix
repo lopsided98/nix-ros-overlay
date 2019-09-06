@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetch_gazebo_demo/0.9.2-1.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetch_gazebo_demo/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
     sha256 = "05bdd08b42eef924bb22fe4761ce314019a5192c9c4905c65cecb83aa42de1e3";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ simple-grasping moveit-python teleop-twist-keyboard fetch-moveit-config moveit-commander actionlib fetch-navigation fetch-gazebo ];
   nativeBuildInputs = [ catkin ];
 

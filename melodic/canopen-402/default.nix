@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/canopen_402/0.8.1-1.tar.gz;
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/canopen_402/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
     sha256 = "c0daf1aa2a7d9f3509e9e0e631f7453f58fa8674a00e8471d2241b2ce8fcd5b9";
   };
 
+  buildType = "catkin";
   buildInputs = [ class-loader canopen-master ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ class-loader canopen-master ];

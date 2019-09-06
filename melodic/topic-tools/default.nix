@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/topic_tools/1.14.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/topic_tools/1.14.3-0.tar.gz";
+    name = "1.14.3-0.tar.gz";
     sha256 = "11737ac9aee93efcde7615891fd0342a8151e09b03435b1a173ddedef6c91f18";
   };
 
+  buildType = "catkin";
   buildInputs = [ cpp-common rosconsole roscpp rostest message-generation xmlrpcpp std-msgs rostime rosunit ];
   propagatedBuildInputs = [ rosconsole roscpp message-runtime xmlrpcpp std-msgs rostime ];
   nativeBuildInputs = [ catkin ];

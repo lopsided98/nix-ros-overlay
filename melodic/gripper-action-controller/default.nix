@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.15.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/gripper_action_controller/0.15.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/gripper_action_controller/0.15.0-0.tar.gz";
+    name = "0.15.0-0.tar.gz";
     sha256 = "7b15202e7175d3352a3855ee222ddbd4db8a5221425436f4637a80e600907ce2";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager hardware-interface cmake-modules control-msgs trajectory-msgs realtime-tools control-toolbox controller-interface urdf actionlib angles roscpp xacro ];
-  propagatedBuildInputs = [ controller-manager hardware-interface cmake-modules control-msgs trajectory-msgs realtime-tools control-toolbox controller-interface urdf actionlib angles roscpp xacro ];
+  propagatedBuildInputs = [ controller-manager hardware-interface cmake-modules control-msgs control-toolbox realtime-tools trajectory-msgs controller-interface urdf actionlib angles roscpp xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/lms1xx-release/archive/release/melodic/lms1xx/0.2.0-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/lms1xx-release/archive/release/melodic/lms1xx/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
     sha256 = "9a9ff8a7991afb1c4a8d05f8b4518fd5a944da3dba605db67a4f55ea6c049f76";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp rosconsole-bridge roscpp-serialization ];
   checkInputs = [ roslaunch rosunit roslint ];
   propagatedBuildInputs = [ sensor-msgs roscpp rosconsole-bridge roscpp-serialization ];

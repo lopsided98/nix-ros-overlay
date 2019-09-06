@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_navigation/1.2.2-1.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_navigation/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
     sha256 = "f2e7db807baf99bf7fc327d56fecaf1f6ba3695f2e9319d838b4912792b96896";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ amcl map-server turtlebot3-bringup move-base ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.13-r2";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/asmach/1.0.13-2.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/asmach/1.0.13-2.tar.gz";
+    name = "1.0.13-2.tar.gz";
     sha256 = "67a3b18eccdf4d0a02c7459cb3af8c367f16bc45a0dcfb66f84c293b618e30e1";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.7";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/melodic/pr2_power_drivers/1.1.7-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/melodic/pr2_power_drivers/1.1.7-0.tar.gz";
+    name = "1.1.7-0.tar.gz";
     sha256 = "a9c7ac432f7b7adbc1d91393381847c11f2ef23301a4ed5213b661d8855ed12c";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pr2-power-board power-monitor ocean-battery-driver ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_scan_unifier/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_scan_unifier/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "94196bb5a8e6ee59ba454fdd2a36b3067a3ff211b7f488f23ff885e252d0fa2f";
   };
 
+  buildType = "catkin";
   buildInputs = [ laser-geometry tf sensor-msgs roscpp ];
-  propagatedBuildInputs = [ laser-geometry tf sensor-msgs roscpp ];
+  propagatedBuildInputs = [ tf sensor-msgs roscpp laser-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

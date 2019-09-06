@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.45";
 
   src = fetchurl {
-    url = https://github.com/pal-gbp/talos_robot-release/archive/release/melodic/talos_description_calibration/1.0.45-0.tar.gz;
+    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/melodic/talos_description_calibration/1.0.45-0.tar.gz";
+    name = "1.0.45-0.tar.gz";
     sha256 = "d5e6dc7ae7fcb932718a916c9be6c892b135ff83c5be3795c87cd4b9412f72e0";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];
 

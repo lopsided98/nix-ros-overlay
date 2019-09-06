@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/desistek_saga-release/archive/release/melodic/desistek_saga_control/0.3.2-0.tar.gz;
+    url = "https://github.com/uuvsimulator/desistek_saga-release/archive/release/melodic/desistek_saga_control/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "81fe5ef7f2ef085fcb784c8799971f63dd8f145ea59a04902b1adc9f04eda688";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ desistek-saga-description uuv-thruster-manager uuv-control-cascaded-pid ];
   nativeBuildInputs = [ catkin ];
 

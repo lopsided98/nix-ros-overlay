@@ -8,10 +8,12 @@ buildRosPackage {
   version = "4.3.1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_common_msgs-release/archive/release/melodic/jsk_hark_msgs/4.3.1-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/melodic/jsk_hark_msgs/4.3.1-0.tar.gz";
+    name = "4.3.1-0.tar.gz";
     sha256 = "f9bcc221412c9950f156dc4c57c6dd8ca9aa4eff1201c12a412a05211fcd07ea";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

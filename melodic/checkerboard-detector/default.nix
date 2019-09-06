@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/checkerboard_detector/1.2.10-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/checkerboard_detector/1.2.10-0.tar.gz";
+    name = "1.2.10-0.tar.gz";
     sha256 = "ceea72257d2d72b4e132c9dce6d24a976081fff72abba0b7d607f9803b1bd8ad";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole sensor-msgs cv-bridge posedetection-msgs message-filters roscpp image-geometry tf2 jsk-recognition-msgs dynamic-reconfigure eigen-conversions tf ];
   propagatedBuildInputs = [ rosconsole sensor-msgs cv-bridge posedetection-msgs message-filters roscpp image-geometry tf2 dynamic-tf-publisher jsk-recognition-msgs dynamic-reconfigure eigen-conversions tf ];
   nativeBuildInputs = [ catkin ];

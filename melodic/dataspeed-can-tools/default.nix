@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.12";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/melodic/dataspeed_can_tools/1.0.12-0.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/melodic/dataspeed_can_tools/1.0.12-0.tar.gz";
+    name = "1.0.12-0.tar.gz";
     sha256 = "164f92e63ab8188d83e4107e9cb19fdf9db3c96a44282ffb85833bc0c58bfb98";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosbag can-msgs roscpp std-msgs roslib ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ rosbag can-msgs roscpp std-msgs roslib ];

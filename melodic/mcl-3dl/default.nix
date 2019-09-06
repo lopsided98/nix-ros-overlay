@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.1.5-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/mcl_3dl-release/archive/release/melodic/mcl_3dl/0.1.5-1.tar.gz;
+    url = "https://github.com/at-wat/mcl_3dl-release/archive/release/melodic/mcl_3dl/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
     sha256 = "5afe0d0e3bdd0dcf60120a0dad7b22d4be95d4ff187936b69b18123b3d4fd075";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs tf2-geometry-msgs sensor-msgs tf2-ros roscpp tf2-sensor-msgs tf2 mcl-3dl-msgs nav-msgs pcl-ros std-msgs visualization-msgs geometry-msgs eigen ];
   checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ std-srvs tf2-geometry-msgs sensor-msgs tf2-ros roscpp tf2-sensor-msgs tf2 mcl-3dl-msgs nav-msgs pcl-ros std-msgs visualization-msgs geometry-msgs eigen ];
+  propagatedBuildInputs = [ std-srvs tf2-geometry-msgs sensor-msgs tf2-ros tf2-sensor-msgs tf2 mcl-3dl-msgs nav-msgs visualization-msgs pcl-ros std-msgs roscpp geometry-msgs eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

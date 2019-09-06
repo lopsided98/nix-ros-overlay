@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/jsk_recognition_msgs/1.2.10-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/jsk_recognition_msgs/1.2.10-0.tar.gz";
+    name = "1.2.10-0.tar.gz";
     sha256 = "29666d54c5db407b249a6233047344608e66d1760ad1576db9148dcec5255a87";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs jsk-footstep-msgs message-generation pcl-msgs std-msgs geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs jsk-footstep-msgs message-generation pcl-msgs std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

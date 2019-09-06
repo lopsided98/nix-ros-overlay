@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.11.3-r1";
 
   src = fetchurl {
-    url = https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosapi/0.11.3-1.tar.gz;
+    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosapi/0.11.3-1.tar.gz";
+    name = "0.11.3-1.tar.gz";
     sha256 = "52cf4c91178e2a736bba78bf73454a377eabccc48621baa9445e04c6431c11f9";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation ];
   propagatedBuildInputs = [ rosbridge-library rosgraph message-runtime rospy rosnode ];
   nativeBuildInputs = [ catkin ];

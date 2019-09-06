@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_apps-release/archive/release/melodic/pr2_teleop/0.6.1-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_apps-release/archive/release/melodic/pr2_teleop/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "58621f94cdf383410e0b4e896be17b09320461196422f8e14e28e19a58680625";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs topic-tools roscpp actionlib rospy std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ pr2-controllers-msgs topic-tools roscpp actionlib rospy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

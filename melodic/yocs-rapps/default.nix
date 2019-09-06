@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_rapps/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_rapps/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "2767288fa43f309509dcd227d01f558b8c28ab860a65f63e92a2456abff0b1ea";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ yocs-velocity-smoother ];
   nativeBuildInputs = [ catkin ];
 

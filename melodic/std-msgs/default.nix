@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.12";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/std_msgs-release/archive/release/melodic/std_msgs/0.5.12-0.tar.gz;
+    url = "https://github.com/ros-gbp/std_msgs-release/archive/release/melodic/std_msgs/0.5.12-0.tar.gz";
+    name = "0.5.12-0.tar.gz";
     sha256 = "4e8b6a65ca70e92bbc9044c99cde67b5859392f6489e3e2fd7fc74844cedce1c";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
   nativeBuildInputs = [ catkin ];

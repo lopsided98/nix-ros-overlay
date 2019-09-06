@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/diagnostic_common_diagnostics/1.9.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/diagnostic_common_diagnostics/1.9.3-0.tar.gz";
+    name = "1.9.3-0.tar.gz";
     sha256 = "e9729593c5e73825e769d670d78ba809db061ffb344132201020eae878c1359c";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-updater rostest rospy ];
   propagatedBuildInputs = [ pythonPackages.psutil diagnostic-updater rospy hddtemp tf ];
   nativeBuildInputs = [ catkin ];

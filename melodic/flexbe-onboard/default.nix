@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_onboard/1.2.1-1.tar.gz;
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_onboard/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
     sha256 = "a64b04ebb3243326b56299763bb20236979e7d08d4d8f06f44df60e52f7eac75";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ flexbe-msgs smach-ros flexbe-core rospy ];
   nativeBuildInputs = [ catkin ];
 

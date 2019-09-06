@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.25";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_realtime-release/archive/release/melodic/rosatomic/1.0.25-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_realtime-release/archive/release/melodic/rosatomic/1.0.25-0.tar.gz";
+    name = "1.0.25-0.tar.gz";
     sha256 = "d4f38df7e64e7cef90ce597674a5832653f0e564dbc4163f5232fa180215b4d1";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

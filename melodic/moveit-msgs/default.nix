@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit_msgs-release/archive/release/melodic/moveit_msgs/0.10.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/moveit_msgs-release/archive/release/melodic/moveit_msgs/0.10.0-0.tar.gz";
+    name = "0.10.0-0.tar.gz";
     sha256 = "d1053ffe57d739fff282835af4753e39f484acad8a596049f8dc97825abeb881";
   };
 
+  buildType = "catkin";
   buildInputs = [ shape-msgs actionlib-msgs trajectory-msgs sensor-msgs octomap-msgs message-generation object-recognition-msgs std-msgs geometry-msgs ];
   propagatedBuildInputs = [ shape-msgs actionlib-msgs trajectory-msgs sensor-msgs octomap-msgs message-runtime object-recognition-msgs std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_extern-release/archive/release/melodic/libphidgets/0.6.13-1.tar.gz;
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libphidgets/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
     sha256 = "f7a17252175d38583ab243496409ca648c02c0b7f2782b7f7db40957096397d1";
   };
 
+  buildType = "catkin";
   buildInputs = [ libusb ];
   propagatedBuildInputs = [ libusb ];
   nativeBuildInputs = [ catkin ];

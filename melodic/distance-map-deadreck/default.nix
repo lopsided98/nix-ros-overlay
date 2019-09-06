@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/artivis/distance_map-release/archive/release/melodic/distance_map_deadreck/0.1.0-1.tar.gz;
+    url = "https://github.com/artivis/distance_map-release/archive/release/melodic/distance_map_deadreck/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "8a15566ebd8f5a596780668824ad86528c57a0649bc8d00de146f124ceae396e";
   };
 
+  buildType = "catkin";
   buildInputs = [ distance-map-core ];
   propagatedBuildInputs = [ distance-map-core ];
   nativeBuildInputs = [ catkin ];

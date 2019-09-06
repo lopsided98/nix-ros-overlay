@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/cartographer_ros-release/archive/release/melodic/cartographer_ros/1.0.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/cartographer_ros-release/archive/release/melodic/cartographer_ros/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
     sha256 = "9e734459067f4d18a9458ad47b0b647c937521e650865a9d68380d4adca57c3b";
   };
 
+  buildType = "catkin";
   buildInputs = [ pythonPackages.sphinx cartographer pcl-conversions geometry-msgs gflags cartographer-ros-msgs message-runtime robot-state-publisher glog roslaunch eigen-conversions roslib rosbag tf2-ros nav-msgs urdf std-msgs protobuf roscpp visualization-msgs pcl sensor-msgs tf2 tf2-eigen gmock ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ cartographer pcl-conversions geometry-msgs gflags cartographer-ros-msgs message-runtime robot-state-publisher glog roslaunch roslib eigen-conversions rosbag tf2-ros nav-msgs urdf std-msgs roscpp visualization-msgs pcl sensor-msgs tf2 tf2-eigen ];

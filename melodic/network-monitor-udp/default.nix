@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.13-r2";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_monitor_udp/1.0.13-2.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_monitor_udp/1.0.13-2.tar.gz";
+    name = "1.0.13-2.tar.gz";
     sha256 = "d203956bc49ba42bf2f54ef0cb57253ec42fd8278260bd5090fd998765198154";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs rospy message-generation actionlib diagnostic-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs rospy message-runtime actionlib diagnostic-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs actionlib message-runtime rospy diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

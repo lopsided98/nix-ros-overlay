@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/downward/2.1.13-1.tar.gz;
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/downward/2.1.13-1.tar.gz";
+    name = "2.1.13-1.tar.gz";
     sha256 = "01a39d2f69d9cdcc78ebe35b269aaca9acc5db08d9940b88d2f392cb6be88467";
   };
 
+  buildType = "catkin";
   buildInputs = [ python gawk rostest flex cacert time bison ];
   propagatedBuildInputs = [ time gawk ];
   nativeBuildInputs = [ catkin ];

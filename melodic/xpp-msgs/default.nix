@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_msgs/1.0.10-0.tar.gz;
+    url = "https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_msgs/1.0.10-0.tar.gz";
+    name = "1.0.10-0.tar.gz";
     sha256 = "0835118248689817293f9399f3c3a7ece360dc9b6ac866ba80fa8c0c74554cd5";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

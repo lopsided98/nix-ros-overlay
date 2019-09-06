@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2019.8.8-r1";
 
   src = fetchurl {
-    url = https://github.com/mavlink/mavlink-gbp-release/archive/release/melodic/mavlink/2019.8.8-1.tar.gz;
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/melodic/mavlink/2019.8.8-1.tar.gz";
+    name = "2019.8.8-1.tar.gz";
     sha256 = "a107159b029dfdeae317ad467417ce66eb3508ea1caf75fe0bb4d2a4e142f9c4";
   };
 
+  buildType = "cmake";
   buildInputs = [ pythonPackages.future python pythonPackages.lxml pythonPackages.setuptools ];
   propagatedBuildInputs = [ python catkin ];
   nativeBuildInputs = [ cmake ];

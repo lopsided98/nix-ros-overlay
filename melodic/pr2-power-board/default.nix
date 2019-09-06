@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.7";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/melodic/pr2_power_board/1.1.7-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/melodic/pr2_power_board/1.1.7-0.tar.gz";
+    name = "1.1.7-0.tar.gz";
     sha256 = "9e6596dd8cdea88ca5abd93ecf2d567d34b89e97a4ffa32dbfdc8f001ce0cea9";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-updater message-generation diagnostic-msgs pr2-msgs roscpp log4cxx ];
   propagatedBuildInputs = [ diagnostic-updater message-runtime rospy diagnostic-msgs pr2-msgs roscpp log4cxx ];
   nativeBuildInputs = [ catkin ];

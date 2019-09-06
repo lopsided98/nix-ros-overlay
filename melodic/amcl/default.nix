@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.16.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/melodic/amcl/1.16.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/amcl/1.16.2-0.tar.gz";
+    name = "1.16.2-0.tar.gz";
     sha256 = "01fc59bbf881b23905d1df0d056f0d2a76d1ce4801c70e68f3f6bfb7f2a6c818";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs tf2-msgs tf2-geometry-msgs rosbag sensor-msgs message-filters tf2-ros tf2 nav-msgs dynamic-reconfigure roscpp geometry-msgs ];
   checkInputs = [ rostest python-orocos-kdl map-server ];
   propagatedBuildInputs = [ std-srvs tf2-msgs rosbag sensor-msgs tf2-ros tf2 nav-msgs dynamic-reconfigure roscpp geometry-msgs ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.0";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/melodic/marti_sensor_msgs/0.8.0-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/melodic/marti_sensor_msgs/0.8.0-0.tar.gz";
+    name = "0.8.0-0.tar.gz";
     sha256 = "9838c4fcde586606bd556cfcb68ec801885228022c4b8e8bd721dbf18f7d88ea";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation geometry-msgs ];
   propagatedBuildInputs = [ message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

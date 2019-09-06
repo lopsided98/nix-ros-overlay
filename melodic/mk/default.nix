@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.6";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/melodic/mk/1.14.6-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/mk/1.14.6-0.tar.gz";
+    name = "1.14.6-0.tar.gz";
     sha256 = "1382c3d63ce096921a1c157c850962bb220f806dc2fa9ca88c45f3d0017bd5e2";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rospack rosbuild ];
   nativeBuildInputs = [ catkin ];
 

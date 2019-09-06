@@ -8,10 +8,12 @@ buildRosPackage {
   version = "3.2.0-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/melodic/rdl/3.2.0-1;
+    url = "https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/melodic/rdl/3.2.0-1";
+    name = "archive.tar.gz";
     sha256 = "697a892941f85b37eb08270936b94605ef7745c4aa2f7788f64b1a4974b5bf46";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rdl-cmake rdl-msgs rdl-urdfreader rdl-dynamics rdl-ros-tools rdl-benchmark ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/rexrov2-release/archive/release/melodic/rexrov2_description/0.1.3-0.tar.gz;
+    url = "https://github.com/uuvsimulator/rexrov2-release/archive/release/melodic/rexrov2_description/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "a4da8b1fd519c66c4156c38ff1107731858cf630ef0194fd3fe2e5950a450940";
   };
 
+  buildType = "catkin";
   checkInputs = [ rostest xacro rosunit ];
   propagatedBuildInputs = [ gazebo-ros uuv-gazebo-ros-plugins uuv-sensor-ros-plugins uuv-assistants uuv-descriptions robot-state-publisher xacro gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];

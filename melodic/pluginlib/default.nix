@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/pluginlib-release/archive/release/melodic/pluginlib/1.12.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/pluginlib-release/archive/release/melodic/pluginlib/1.12.1-0.tar.gz";
+    name = "1.12.1-0.tar.gz";
     sha256 = "51ad8cc72b954cf0fb32b8e562eaa2f24d830ce72832320582ec2075b95958e1";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules rosconsole boost class-loader tinyxml-2 roslib ];
   propagatedBuildInputs = [ rosconsole boost class-loader tinyxml-2 roslib ];
   nativeBuildInputs = [ catkin ];

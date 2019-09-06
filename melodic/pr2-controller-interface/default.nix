@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.18";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_controller_interface/1.8.18-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_controller_interface/1.8.18-0.tar.gz";
+    name = "1.8.18-0.tar.gz";
     sha256 = "0a6ffaecfd981a9b21e8895ac582bff371da30a6526c97a933827b9a97bf7607";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-interface pr2-mechanism-model roscpp ];
   propagatedBuildInputs = [ controller-interface pr2-mechanism-model roscpp ];
   nativeBuildInputs = [ catkin ];

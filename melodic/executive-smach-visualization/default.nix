@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.2";
 
   src = fetchurl {
-    url = https://github.com/jbohren/executive_smach_visualization-release/archive/release/melodic/executive_smach_visualization/2.0.2-0.tar.gz;
+    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/melodic/executive_smach_visualization/2.0.2-0.tar.gz";
+    name = "2.0.2-0.tar.gz";
     sha256 = "75b50684f1fcbe42e1b5307402ff4ac6f5b598d2f2ff67acc3c746af9e83b2c8";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ smach-viewer ];
   nativeBuildInputs = [ catkin ];
 

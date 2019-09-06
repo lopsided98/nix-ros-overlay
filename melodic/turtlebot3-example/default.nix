@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.2.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_example/1.2.2-1.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_example/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
     sha256 = "1de1310a4dbd92674f1c841be20ea0fb6d8e504d65459178a873d2b5bd2330bb";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs sensor-msgs turtlebot3-msgs rospy nav-msgs message-generation interactive-markers actionlib std-msgs visualization-msgs geometry-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs sensor-msgs turtlebot3-msgs nav-msgs actionlib interactive-markers turtlebot3-bringup rospy std-msgs message-runtime visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs sensor-msgs turtlebot3-msgs std-msgs nav-msgs message-runtime interactive-markers actionlib rospy turtlebot3-bringup visualization-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.0";
 
   src = fetchurl {
-    url = https://github.com/mgruhler/soem-gbp/archive/release/melodic/soem/1.3.0-0.tar.gz;
+    url = "https://github.com/mgruhler/soem-gbp/archive/release/melodic/soem/1.3.0-0.tar.gz";
+    name = "1.3.0-0.tar.gz";
     sha256 = "79cdd2124448cb591bcccded0b04a2bc74e0a44c030c84187b1e9aaa6a1ea7cb";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

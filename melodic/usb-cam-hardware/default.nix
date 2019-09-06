@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/yoshito-n-students/usb_cam_hardware-release/archive/release/melodic/usb_cam_hardware/0.0.4-0.tar.gz;
+    url = "https://github.com/yoshito-n-students/usb_cam_hardware-release/archive/release/melodic/usb_cam_hardware/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "29d9274d9b3cf8787c3f80c5354eb605608205118e6ccf56a2aabd26011f7b43";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager hardware-interface pluginlib usb-cam-hardware-interface nodelet roscpp ];
   propagatedBuildInputs = [ controller-manager hardware-interface pluginlib usb-cam-hardware-interface nodelet roscpp ];
   nativeBuildInputs = [ catkin ];

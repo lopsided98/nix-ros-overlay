@@ -8,12 +8,14 @@ buildRosPackage {
   version = "2.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_visard_driver/2.7.0-1.tar.gz;
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_visard_driver/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
     sha256 = "6573998d90aec82fca42d993a634370012660920bf6e8f375c5a857c587be3a9";
   };
 
+  buildType = "catkin";
   buildInputs = [ rc-common-msgs image-transport sensor-msgs roscpp diagnostic-updater rc-genicam-api message-generation nav-msgs curl visualization-msgs dynamic-reconfigure nodelet protobuf tf rc-dynamics-api geometry-msgs stereo-msgs ];
-  propagatedBuildInputs = [ rc-common-msgs image-transport sensor-msgs roscpp diagnostic-updater rc-genicam-api nav-msgs curl visualization-msgs dynamic-reconfigure nodelet message-runtime protobuf tf rc-dynamics-api geometry-msgs stereo-msgs ];
+  propagatedBuildInputs = [ rc-common-msgs image-transport sensor-msgs roscpp diagnostic-updater rc-genicam-api nav-msgs message-runtime nodelet dynamic-reconfigure curl visualization-msgs protobuf tf rc-dynamics-api geometry-msgs stereo-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

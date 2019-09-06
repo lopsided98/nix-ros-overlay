@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/skasperski/navigation_2d-release/archive/release/melodic/nav2d_exploration/0.4.2-0.tar.gz;
+    url = "https://github.com/skasperski/navigation_2d-release/archive/release/melodic/nav2d_exploration/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "a66a917dec44f5f164671346050a6c578e51625a1afc22e100a4f2e40758e8af";
   };
 
+  buildType = "catkin";
   buildInputs = [ nav2d-navigator pluginlib tf nav-msgs visualization-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ nav2d-navigator pluginlib tf nav-msgs visualization-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

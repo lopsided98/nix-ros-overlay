@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.0-r1";
 
   src = fetchurl {
-    url = https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/melodic/qb_hand/2.0.0-1.tar.gz;
+    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/melodic/qb_hand/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
     sha256 = "aabf19f098662ae7195c61133104fbb799d47e58f9fcc52a069fcd08978b3cc9";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ qb-hand-control qb-hand-hardware-interface qb-hand-description ];
   nativeBuildInputs = [ catkin ];
 

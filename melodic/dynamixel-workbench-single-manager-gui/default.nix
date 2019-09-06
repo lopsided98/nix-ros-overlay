@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/melodic/dynamixel_workbench_single_manager_gui/2.0.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/melodic/dynamixel_workbench_single_manager_gui/2.0.0-0.tar.gz";
+    name = "2.0.0-0.tar.gz";
     sha256 = "3ec093cac435218696a0a1172957a05724706c83c0f644369c48bbe36161c5d3";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp dynamixel-workbench-msgs dynamixel-workbench-toolbox qt5.qtbase ];
   propagatedBuildInputs = [ roscpp dynamixel-workbench-msgs dynamixel-workbench-toolbox qt5.qtbase ];
   nativeBuildInputs = [ catkin ];

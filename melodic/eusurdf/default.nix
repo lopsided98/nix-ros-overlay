@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.3";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_model_tools-release/archive/release/melodic/eusurdf/0.4.3-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/melodic/eusurdf/0.4.3-0.tar.gz";
+    name = "0.4.3-0.tar.gz";
     sha256 = "47f6b8cfb42f9516ed0993922e6f3059cb387fa533cda56fed5e2fb81937f395";
   };
 
+  buildType = "catkin";
   buildInputs = [ roseus gazebo-ros rostest pythonPackages.lxml collada-urdf-jsk-patch ];
   propagatedBuildInputs = [ gazebo-ros rostest collada-urdf-jsk-patch pythonPackages.lxml ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry-release/archive/release/melodic/geometry/1.12.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/melodic/geometry/1.12.0-0.tar.gz";
+    name = "1.12.0-0.tar.gz";
     sha256 = "6e5e79d8157d16ce6c27bc7b8f1e8411f0fea3a01698f69962746ec4af80e44d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ kdl-conversions angles tf-conversions eigen-conversions tf ];
   nativeBuildInputs = [ catkin ];
 

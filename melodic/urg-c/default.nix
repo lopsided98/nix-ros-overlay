@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.405";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/urg_c-release/archive/release/melodic/urg_c/1.0.405-0.tar.gz;
+    url = "https://github.com/ros-gbp/urg_c-release/archive/release/melodic/urg_c/1.0.405-0.tar.gz";
+    name = "1.0.405-0.tar.gz";
     sha256 = "f747da6d3ab437c8a455194bbd9cf64f84798700d7458584c77916f9c479691a";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

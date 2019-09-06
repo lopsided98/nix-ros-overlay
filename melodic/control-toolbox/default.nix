@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.17.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/control_toolbox-release/archive/release/melodic/control_toolbox/1.17.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/control_toolbox-release/archive/release/melodic/control_toolbox/1.17.0-0.tar.gz";
+    name = "1.17.0-0.tar.gz";
     sha256 = "87d87fd3110630b61fba232464add3e10dca4f7e6a080cf4900827cccf711c56";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules control-msgs realtime-tools tinyxml message-generation dynamic-reconfigure std-msgs roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ control-msgs realtime-tools tinyxml message-runtime dynamic-reconfigure std-msgs roscpp ];

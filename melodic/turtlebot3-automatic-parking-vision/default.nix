@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3_applications-release/archive/release/melodic/turtlebot3_automatic_parking_vision/1.1.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_applications-release/archive/release/melodic/turtlebot3_automatic_parking_vision/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "6e10d535cf4f41ac732ed8cc54edc197c35c8cf6969c2bf9b0649e37c97809ea";
   };
 
+  buildType = "catkin";
   buildInputs = [ ar-track-alvar sensor-msgs ar-track-alvar-msgs nav-msgs rospy std-msgs geometry-msgs ];
   propagatedBuildInputs = [ ar-track-alvar sensor-msgs ar-track-alvar-msgs nav-msgs rviz turtlebot3-bringup robot-state-publisher rospy std-msgs joint-state-publisher geometry-msgs ];
   nativeBuildInputs = [ catkin ];

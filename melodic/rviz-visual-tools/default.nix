@@ -8,13 +8,15 @@ buildRosPackage {
   version = "3.7.0";
 
   src = fetchurl {
-    url = https://github.com/PickNikRobotics/rviz_visual_tools-release/archive/release/melodic/rviz_visual_tools/3.7.0-0.tar.gz;
+    url = "https://github.com/PickNikRobotics/rviz_visual_tools-release/archive/release/melodic/rviz_visual_tools/3.7.0-0.tar.gz";
+    name = "3.7.0-0.tar.gz";
     sha256 = "e8e3e49bb0e1512cf87c0fbfe97639e415e0c304dc83bc357a0da93c56c45674";
   };
 
+  buildType = "catkin";
   buildInputs = [ ogre1_9 roslint qt5.qtx11extras trajectory-msgs eigen-stl-containers sensor-msgs roscpp rviz tf-conversions graph-msgs std-msgs eigen-conversions visualization-msgs geometry-msgs ];
   checkInputs = [ rostest rosunit ];
-  propagatedBuildInputs = [ ogre1_9 roslint qt5.qtx11extras trajectory-msgs eigen-stl-containers sensor-msgs roscpp rviz tf-conversions graph-msgs std-msgs eigen-conversions visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ ogre1_9 qt5.qtx11extras roslint trajectory-msgs eigen-stl-containers sensor-msgs rviz tf-conversions graph-msgs visualization-msgs std-msgs eigen-conversions roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

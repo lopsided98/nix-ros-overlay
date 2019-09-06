@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.1-r2";
 
   src = fetchurl {
-    url = https://github.com/gstavrinos/jointstick-release/archive/release/melodic/jointstick/0.9.1-2.tar.gz;
+    url = "https://github.com/gstavrinos/jointstick-release/archive/release/melodic/jointstick/0.9.1-2.tar.gz";
+    name = "0.9.1-2.tar.gz";
     sha256 = "40810fdb769af4467b634649a2cfabf49337ae5e00fe08f034fe0555036ba39f";
   };
 
+  buildType = "catkin";
   buildInputs = [ trajectory-msgs sensor-msgs nav-msgs controller-manager-msgs std-msgs geometry-msgs ];
   propagatedBuildInputs = [ trajectory-msgs sensor-msgs nav-msgs controller-manager-msgs std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

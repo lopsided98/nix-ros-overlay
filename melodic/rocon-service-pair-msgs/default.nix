@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.0";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/melodic/rocon_service_pair_msgs/0.9.0-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/melodic/rocon_service_pair_msgs/0.9.0-0.tar.gz";
+    name = "0.9.0-0.tar.gz";
     sha256 = "28ec43f8619ea41e4562b0940174cf0cf8ff4c331ac0cda0dc9f1fb2dad5b0b6";
   };
 
+  buildType = "catkin";
   buildInputs = [ uuid-msgs message-generation ];
   propagatedBuildInputs = [ uuid-msgs message-runtime rospy ];
   nativeBuildInputs = [ catkin ];

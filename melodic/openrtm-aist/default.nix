@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2-r3";
 
   src = fetchurl {
-    url = https://github.com/tork-a/openrtm_aist-release/archive/release/melodic/openrtm_aist/1.1.2-3.tar.gz;
+    url = "https://github.com/tork-a/openrtm_aist-release/archive/release/melodic/openrtm_aist/1.1.2-3.tar.gz";
+    name = "1.1.2-3.tar.gz";
     sha256 = "9e3839327b8c0851e91d541cbaf85d0fec16a95bd32522deeed45deb3e404320";
   };
 
+  buildType = "cmake";
   buildInputs = [ omniorb utillinux python doxygen ];
   propagatedBuildInputs = [ omniorb catkin utillinux ];
   nativeBuildInputs = [ automake cmake libtool pkg-config ];

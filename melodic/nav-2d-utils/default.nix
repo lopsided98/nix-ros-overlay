@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.2.5-r1";
 
   src = fetchurl {
-    url = https://github.com/DLu/robot_navigation-release/archive/release/melodic/nav_2d_utils/0.2.5-1.tar.gz;
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/nav_2d_utils/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
     sha256 = "8af155a85dbda95feb762385cd888cd2d9296f39e444549f51d99872303e5e20";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib tf2-geometry-msgs nav-grid nav-core2 roscpp tf2-ros nav-msgs xmlrpcpp std-msgs tf nav-2d-msgs geometry-msgs ];
   checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ pluginlib tf2-geometry-msgs nav-grid nav-core2 roscpp tf2-ros nav-msgs xmlrpcpp std-msgs tf nav-2d-msgs geometry-msgs ];
+  propagatedBuildInputs = [ pluginlib tf2-geometry-msgs nav-grid tf nav-core2 tf2-ros nav-msgs xmlrpcpp std-msgs roscpp nav-2d-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

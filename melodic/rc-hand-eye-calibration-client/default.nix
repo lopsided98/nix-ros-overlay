@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_hand_eye_calibration_client/2.7.0-1.tar.gz;
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_hand_eye_calibration_client/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
     sha256 = "fde416e77743beb474834e6ae02a47c4d1346f953985c650f1789c9bb3fdc23c";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs tf2-geometry-msgs rcdiscover tf2-ros tf2 message-generation message-runtime curl dynamic-reconfigure roscpp geometry-msgs ];
   propagatedBuildInputs = [ std-srvs tf2-geometry-msgs rcdiscover tf2-ros tf2 message-generation message-runtime curl dynamic-reconfigure roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

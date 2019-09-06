@@ -8,13 +8,15 @@ buildRosPackage {
   version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon_core/2.1.1-1.tar.gz;
+    url = "https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon_core/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
     sha256 = "eda6b1f4a31cac71c3f3f46bd154284891ce44f8f406cf165d64a1b008785b2e";
   };
 
+  buildType = "catkin";
   buildInputs = [ python rospack boost rosbash cmake-modules rosfmt libyamlcpp tinyxml roslib ncurses std-msgs diagnostic-msgs roscpp rosmon-msgs ];
   checkInputs = [ pythonPackages.rospkg rostest catch-ros ];
-  propagatedBuildInputs = [ rospack boost rosbash cmake-modules rosfmt libyamlcpp tinyxml roslib ncurses std-msgs diagnostic-msgs roscpp rosmon-msgs ];
+  propagatedBuildInputs = [ rospack cmake-modules boost rosbash rosfmt libyamlcpp tinyxml roslib ncurses std-msgs diagnostic-msgs roscpp rosmon-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

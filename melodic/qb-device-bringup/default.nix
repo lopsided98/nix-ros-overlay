@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1";
 
   src = fetchurl {
-    url = https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_bringup/2.0.1-0.tar.gz;
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_bringup/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
     sha256 = "443a0556f062e710b5f7d7dc73d706cf568d89df0fd7ad5166709f879da7949b";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

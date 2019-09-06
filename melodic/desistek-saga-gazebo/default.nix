@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/desistek_saga-release/archive/release/melodic/desistek_saga_gazebo/0.3.2-0.tar.gz;
+    url = "https://github.com/uuvsimulator/desistek_saga-release/archive/release/melodic/desistek_saga_gazebo/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "534d7e4e5fb0ab7d099d6e20561f3ac9275f98a06e13e59ca92b1b0114fb2911";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ desistek-saga-description desistek-saga-control ];
   nativeBuildInputs = [ catkin ];
 

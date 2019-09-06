@@ -8,10 +8,12 @@ buildRosPackage {
   version = "3.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/AprilRobotics/apriltag_ros-release/archive/release/melodic/apriltag_ros/3.1.0-1.tar.gz;
+    url = "https://github.com/AprilRobotics/apriltag_ros-release/archive/release/melodic/apriltag_ros/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
     sha256 = "b206fdc20c059532c6333d15dbe9441f6788ea09629c0339972a7debaded96e6";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib cmake-modules image-transport sensor-msgs cv-bridge roscpp image-geometry message-generation apriltag nodelet eigen std-msgs tf opencv3 geometry-msgs ];
   propagatedBuildInputs = [ pluginlib tf image-transport sensor-msgs cv-bridge image-geometry apriltag message-runtime nodelet eigen std-msgs roscpp opencv3 geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.16.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/melodic/costmap_2d/1.16.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/costmap_2d/1.16.2-0.tar.gz";
+    name = "1.16.2-0.tar.gz";
     sha256 = "187901c824e86f552a2412c712120acad3e06efa0a9c8a44bb8c7d6c0832a1a1";
   };
 
+  buildType = "catkin";
   buildInputs = [ geometry-msgs message-filters tf2-sensor-msgs voxel-grid message-generation tf2-geometry-msgs tf2-ros nav-msgs std-msgs roscpp visualization-msgs laser-geometry cmake-modules pluginlib sensor-msgs rostest tf2 dynamic-reconfigure map-msgs ];
   checkInputs = [ rostest rosbag rosunit map-server ];
-  propagatedBuildInputs = [ pluginlib rosconsole sensor-msgs message-filters tf2-ros rostest tf2 nav-msgs voxel-grid laser-geometry visualization-msgs dynamic-reconfigure std-msgs message-runtime roscpp geometry-msgs map-msgs ];
+  propagatedBuildInputs = [ rosconsole pluginlib sensor-msgs message-filters tf2-ros rostest laser-geometry nav-msgs tf2 message-runtime voxel-grid dynamic-reconfigure std-msgs visualization-msgs roscpp geometry-msgs map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

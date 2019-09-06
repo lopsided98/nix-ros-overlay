@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/wge100_driver-release/archive/release/melodic/wge100_camera_firmware/1.8.2-1.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/wge100_driver-release/archive/release/melodic/wge100_camera_firmware/1.8.2-1.tar.gz";
+    name = "1.8.2-1.tar.gz";
     sha256 = "4e0908e101472e4247b1c23782764c9576b37103db122bd196de406e9e951e50";
   };
 
+  buildType = "catkin";
   buildInputs = [ gforth rospy ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ gforth rospy ];

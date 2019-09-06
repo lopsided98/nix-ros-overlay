@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_bringup/1.2.2-1.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_bringup/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
     sha256 = "fd37a6185328f5fcf0bcc9be075363a81f04bd19df71eae40c10afad01517336";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs turtlebot3-msgs std-msgs diagnostic-msgs roscpp ];
   propagatedBuildInputs = [ rosserial-python sensor-msgs turtlebot3-description turtlebot3-msgs robot-state-publisher hls-lfcd-lds-driver std-msgs diagnostic-msgs turtlebot3-teleop roscpp joint-state-publisher ];
   nativeBuildInputs = [ catkin ];

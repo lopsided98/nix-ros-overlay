@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/ethz-adrl/towr-release/archive/release/melodic/towr/1.4.1-0.tar.gz;
+    url = "https://github.com/ethz-adrl/towr-release/archive/release/melodic/towr/1.4.1-0.tar.gz";
+    name = "1.4.1-0.tar.gz";
     sha256 = "62df4c4444a14ce7bfb5bef8fbcd602942cb97a36b24ed7a7413575568b9a50f";
   };
 
+  buildType = "cmake";
   buildInputs = [ ifopt eigen ];
   propagatedBuildInputs = [ catkin ifopt eigen ];
   nativeBuildInputs = [ cmake ];

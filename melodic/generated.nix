@@ -922,6 +922,8 @@ self: super: {
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
+ haros-catkin = self.callPackage ./haros-catkin {};
+
  health-metric-collector = self.callPackage ./health-metric-collector {};
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
@@ -1220,6 +1222,8 @@ self: super: {
 
  leg-detector = self.callPackage ./leg-detector {};
 
+ lex-common = self.callPackage ./lex-common {};
+
  lex-common-msgs = self.callPackage ./lex-common-msgs {};
 
  lex-node = self.callPackage ./lex-node {};
@@ -1227,6 +1231,8 @@ self: super: {
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
  libcmt = self.callPackage ./libcmt {};
+
+ libcreate = self.callPackage ./libcreate {};
 
  libdlib = self.callPackage ./libdlib {};
 
@@ -2182,8 +2188,6 @@ self: super: {
 
  ros = self.callPackage ./ros {};
 
- ros1-ign = self.callPackage ./ros1-ign {};
-
  ros-base = self.callPackage ./ros-base {};
 
  ros-canopen = self.callPackage ./ros-canopen {};
@@ -2563,6 +2567,8 @@ self: super: {
  slam-gmapping = self.callPackage ./slam-gmapping {};
 
  slam-karto = self.callPackage ./slam-karto {};
+
+ slam-toolbox = self.callPackage ./slam-toolbox {};
 
  slic = self.callPackage ./slic {};
 

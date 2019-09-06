@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.13.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/xacro-release/archive/release/melodic/xacro/1.13.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/xacro-release/archive/release/melodic/xacro/1.13.3-0.tar.gz";
+    name = "1.13.3-0.tar.gz";
     sha256 = "ef77d1f894a192888232b7b545b9f2748713066bae5c139644af3734aa09541d";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslint ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ roslaunch ];

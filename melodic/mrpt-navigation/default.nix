@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.24";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_navigation/0.1.24-0.tar.gz;
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_navigation/0.1.24-0.tar.gz";
+    name = "0.1.24-0.tar.gz";
     sha256 = "a54df1d35bffe4dbed64661144226c3077f14fbcb2097c6e84720ecaca7f7540";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ mrpt-reactivenav2d mrpt-tutorials mrpt-localization mrpt-map mrpt-rawlog mrpt-local-obstacles ];
   nativeBuildInputs = [ catkin ];
 

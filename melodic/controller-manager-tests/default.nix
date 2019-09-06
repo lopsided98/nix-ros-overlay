@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.15.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_control-release/archive/release/melodic/controller_manager_tests/0.15.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/controller_manager_tests/0.15.1-0.tar.gz";
+    name = "0.15.1-0.tar.gz";
     sha256 = "b43edda9914e25875e06aaace29bf7c78afc68d0cc59da2b77dc7e5783a7b4af";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager controller-interface ];
   checkInputs = [ rostest rosbash rosservice rosnode ];
   propagatedBuildInputs = [ controller-manager controller-interface ];

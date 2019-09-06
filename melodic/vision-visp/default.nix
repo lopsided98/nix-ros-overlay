@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.11.1-r1";
 
   src = fetchurl {
-    url = https://github.com/lagadic/vision_visp-release/archive/release/melodic/vision_visp/0.11.1-1.tar.gz;
+    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/vision_visp/0.11.1-1.tar.gz";
+    name = "0.11.1-1.tar.gz";
     sha256 = "ef04aa5ab2459ab1a2690f7386f223e98c86285200d45fd11f101195550dc1ef";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ visp-camera-calibration visp-bridge visp-auto-tracker visp-tracker visp-hand2eye-calibration ];
   nativeBuildInputs = [ catkin ];
 

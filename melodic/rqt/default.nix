@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt-release/archive/release/melodic/rqt/0.5.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt-release/archive/release/melodic/rqt/0.5.0-0.tar.gz";
+    name = "0.5.0-0.tar.gz";
     sha256 = "0838063390001fcb552096bd5a6827aae9bb3105855cbdf0c2a3105a25851e67";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py rqt-gui rqt-gui-cpp ];
   nativeBuildInputs = [ catkin ];
 

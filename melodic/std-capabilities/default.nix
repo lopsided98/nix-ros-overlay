@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/std_capabilities-release/archive/release/melodic/std_capabilities/0.1.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/std_capabilities-release/archive/release/melodic/std_capabilities/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "56846414a12f4f667aec42eaef1c602c355854fdaa729692117961e54d94a9b6";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

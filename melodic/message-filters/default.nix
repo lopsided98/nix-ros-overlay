@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/message_filters/1.14.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/message_filters/1.14.3-0.tar.gz";
+    name = "1.14.3-0.tar.gz";
     sha256 = "3a6ce5214cb6b17a3af6268ddac55c5ac812ef09eb97685e6930da32799a8a3e";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole boost rostest roscpp rosunit ];
   propagatedBuildInputs = [ roscpp rosconsole ];
   nativeBuildInputs = [ catkin ];

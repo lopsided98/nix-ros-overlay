@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_urdf/0.2.12-1.tar.gz;
+    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_urdf/0.2.12-1.tar.gz";
+    name = "0.2.12-1.tar.gz";
     sha256 = "8fa0621108c3226d84f6ff36088c8fa3786387778ff598a0c4caf1eee4579ce5";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ roslisp cl-transforms ];
   nativeBuildInputs = [ catkin ];
 

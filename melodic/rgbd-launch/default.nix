@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rgbd_launch-release/archive/release/melodic/rgbd_launch/2.2.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/rgbd_launch-release/archive/release/melodic/rgbd_launch/2.2.2-0.tar.gz";
+    name = "2.2.2-0.tar.gz";
     sha256 = "973d8f054d8b7447e8951b5dc8dc65d860a3ce48431789fee0f582d8d56d7f68";
   };
 
+  buildType = "catkin";
   buildInputs = [ image-proc nodelet depth-image-proc tf2-ros ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ image-proc nodelet depth-image-proc tf2-ros ];

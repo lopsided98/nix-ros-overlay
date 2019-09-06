@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.16.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/melodic/clear_costmap_recovery/1.16.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/clear_costmap_recovery/1.16.2-0.tar.gz";
+    name = "1.16.2-0.tar.gz";
     sha256 = "9844494fbe4443e201302dfd5a6fae1246fe452f38432696d0613c2405283572";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d cmake-modules pluginlib nav-core tf2-ros eigen roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ costmap-2d pluginlib nav-core tf2-ros eigen roscpp ];

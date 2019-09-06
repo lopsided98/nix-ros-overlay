@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/diagnostics/1.9.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/diagnostics/1.9.3-0.tar.gz";
+    name = "1.9.3-0.tar.gz";
     sha256 = "dec737018e36952a217efb3fda54489da280470d5230f4a5fa282027317cc03f";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ self-test diagnostic-analysis diagnostic-common-diagnostics diagnostic-updater diagnostic-aggregator ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_command_tools/0.6.14-1.tar.gz;
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_command_tools/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
     sha256 = "f66be4484792dca3d9430646d834338509150b69473af0074e7c8e3f1c9ba3bb";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ cob-teleop cob-monitoring cob-script-server cob-command-gui cob-interactive-teleop cob-helper-tools cob-dashboard ];
   nativeBuildInputs = [ catkin ];
 

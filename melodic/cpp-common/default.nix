@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/cpp_common/0.6.12-0.tar.gz;
+    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/cpp_common/0.6.12-0.tar.gz";
+    name = "0.6.12-0.tar.gz";
     sha256 = "af9fef611fcdbaf9296af1f04ee2af940412d36a3bdddc6098cf77a7c795dffa";
   };
 
+  buildType = "catkin";
   buildInputs = [ console-bridge boost ];
   propagatedBuildInputs = [ console-bridge boost ];
   nativeBuildInputs = [ catkin ];

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.4.1";
 
   src = fetchurl {
-    url = https://github.com/PickNikRobotics/ros_control_boilerplate-release/archive/release/melodic/ros_control_boilerplate/0.4.1-0.tar.gz;
+    url = "https://github.com/PickNikRobotics/ros_control_boilerplate-release/archive/release/melodic/ros_control_boilerplate/0.4.1-0.tar.gz";
+    name = "0.4.1-0.tar.gz";
     sha256 = "b597b2799ddfb59bdc4e395c3392f794594606bf24e929ebcf03e4cb253dc576";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager hardware-interface cmake-modules gflags control-msgs trajectory-msgs control-toolbox joint-limits-interface sensor-msgs urdf actionlib std-msgs rosparam-shortcuts roscpp transmission-interface ];
-  propagatedBuildInputs = [ controller-manager hardware-interface control-msgs trajectory-msgs control-toolbox joint-limits-interface sensor-msgs urdf actionlib std-msgs rosparam-shortcuts roscpp transmission-interface ];
+  propagatedBuildInputs = [ controller-manager hardware-interface control-msgs control-toolbox sensor-msgs trajectory-msgs joint-limits-interface urdf actionlib std-msgs rosparam-shortcuts roscpp transmission-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

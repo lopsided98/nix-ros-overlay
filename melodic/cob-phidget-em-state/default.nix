@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_phidget_em_state/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_phidget_em_state/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "d27b10fff6cb4e8a46923f44a3b505055b0b29bbe5be704fc838bde4a76622a1";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ cob-msgs cob-phidgets rospy ];
   nativeBuildInputs = [ catkin ];
 

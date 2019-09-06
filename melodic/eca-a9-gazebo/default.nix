@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.6";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/eca_a9-release/archive/release/melodic/eca_a9_gazebo/0.1.6-0.tar.gz;
+    url = "https://github.com/uuvsimulator/eca_a9-release/archive/release/melodic/eca_a9_gazebo/0.1.6-0.tar.gz";
+    name = "0.1.6-0.tar.gz";
     sha256 = "e2dce04036c923f6df2b176be5b73ffc2f2f7002fb0c2db7f54d2ea686499d9e";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ eca-a9-description eca-a9-control ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.1.12";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roswww-release/archive/release/melodic/roswww/0.1.12-0.tar.gz;
+    url = "https://github.com/ros-gbp/roswww-release/archive/release/melodic/roswww/0.1.12-0.tar.gz";
+    name = "0.1.12-0.tar.gz";
     sha256 = "108f7156256acfd659a62d57362a1b92e59114962829148cd451b032d450d3f7";
   };
 
+  buildType = "catkin";
   buildInputs = [ pythonPackages.catkin-pkg ];
   checkInputs = [ rostest phantomjs pythonPackages.selenium ];
-  propagatedBuildInputs = [ rospack rosbridge-server rosgraph ];
+  propagatedBuildInputs = [ rosbridge-server rospack rosgraph ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

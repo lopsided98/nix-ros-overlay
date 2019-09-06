@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/qt_metapackages-release/archive/release/melodic/libqt_svg_dev/1.0.1-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/qt_metapackages-release/archive/release/melodic/libqt_svg_dev/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "9650990b4fed04c6f124e9fbd4c007937351ea9b3fbb924e36a6c58aeb89cf95";
   };
 
+  buildType = "catkin";
   buildInputs = [ qt5.qtsvg ];
   propagatedBuildInputs = [ qt5.qtsvg ];
   nativeBuildInputs = [ catkin ];

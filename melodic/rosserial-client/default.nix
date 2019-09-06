@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rosserial-release/archive/release/melodic/rosserial_client/0.8.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/melodic/rosserial_client/0.8.0-0.tar.gz";
+    name = "0.8.0-0.tar.gz";
     sha256 = "13062a7278b9eefc10406a7aaa3b18cf9ab2cad7b24485d9ed4e8699e86af22b";
   };
 
+  buildType = "catkin";
   checkInputs = [ rosserial-msgs rosunit ];
   propagatedBuildInputs = [ rosbash rosserial-msgs rospy std-msgs tf ];
   nativeBuildInputs = [ catkin ];

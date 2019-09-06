@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/random_numbers-release/archive/release/melodic/random_numbers/0.3.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/random_numbers-release/archive/release/melodic/random_numbers/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "989cf481e8bd4c7b44278d73a549554fd874479c1f28e8d26f77fa905a43e409";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost ];
   propagatedBuildInputs = [ boost ];
   nativeBuildInputs = [ catkin ];

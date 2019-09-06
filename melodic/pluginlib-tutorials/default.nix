@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/common_tutorials-release/archive/release/melodic/pluginlib_tutorials/0.1.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/melodic/pluginlib_tutorials/0.1.11-0.tar.gz";
+    name = "0.1.11-0.tar.gz";
     sha256 = "2a421d7ea4d04ba27c7221abd753f1ebbe040227df1e4c87a3df559064002c17";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp pluginlib ];
   propagatedBuildInputs = [ roscpp pluginlib ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.8-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/melodic/fetch_drivers/0.8.8-1.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/melodic/fetch_drivers/0.8.8-1.tar.gz";
+    name = "0.8.8-1.tar.gz";
     sha256 = "1a93f3a08200d27d455c1fffb0d9aaf712183b52e4627161f9c3a65ba5164a62";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole actionlib-msgs fetch-driver-msgs robot-controllers-interface actionlib diagnostic-msgs robot-calibration-msgs boost rostime rospack mk power-msgs nav-msgs urdf robot-controllers roscpp-serialization roscpp python libyamlcpp sensor-msgs urdfdom curl fetch-auto-dock-msgs ];
   propagatedBuildInputs = [ rosconsole actionlib-msgs fetch-driver-msgs robot-controllers-interface actionlib diagnostic-msgs robot-calibration-msgs boost rostime power-msgs nav-msgs urdf robot-controllers roscpp-serialization roscpp python libyamlcpp sensor-msgs urdfdom curl fetch-auto-dock-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.60.3";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_manipulation-release/archive/release/melodic/ecl_manipulators/0.60.3-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_manipulation-release/archive/release/melodic/ecl_manipulators/0.60.3-0.tar.gz";
+    name = "0.60.3-0.tar.gz";
     sha256 = "29d59a85307ce361a71f362a25d9b1ff94aaafd5a2df8a51d0659f74d3d735d9";
   };
 
+  buildType = "catkin";
   buildInputs = [ ecl-formatters ecl-geometry ecl-build ecl-exceptions ecl-license ];
   propagatedBuildInputs = [ ecl-formatters ecl-geometry ecl-build ecl-exceptions ecl-license ];
   nativeBuildInputs = [ catkin ];

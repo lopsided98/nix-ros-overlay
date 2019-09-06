@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_navigator/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_navigator/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "ce9cacbbb9e4456865e0c8591d0dc48d821e1823a97127deb9963bb6f3a5a75a";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf yocs-math-toolkit yocs-msgs move-base-msgs nav-msgs actionlib rospy roscpp ];
   propagatedBuildInputs = [ tf yocs-math-toolkit yocs-msgs move-base-msgs nav-msgs actionlib rospy roscpp ];
   nativeBuildInputs = [ catkin ];

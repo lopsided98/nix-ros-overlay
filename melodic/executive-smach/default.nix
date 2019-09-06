@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/executive_smach-release/archive/release/melodic/executive_smach/2.0.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/executive_smach-release/archive/release/melodic/executive_smach/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
     sha256 = "5266563dc0f5888791fbf077127b3bb5539550c93496a103a4b0f3e1bafef697";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ smach smach-msgs smach-ros ];
   nativeBuildInputs = [ catkin ];
 

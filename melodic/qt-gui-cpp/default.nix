@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.3.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_cpp/0.3.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_cpp/0.3.11-0.tar.gz";
+    name = "0.3.11-0.tar.gz";
     sha256 = "fbbba01e82d3c63dfeab0fdc9caac8916de97295a8e8c08e715dc965e69dc545";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules pluginlib tinyxml pkg-config qt5.qtbase python-qt-binding ];
-  propagatedBuildInputs = [ pluginlib qt-gui tinyxml ];
+  propagatedBuildInputs = [ tinyxml qt-gui pluginlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

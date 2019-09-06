@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.10.17-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/single_joint_position_action/1.10.17-1.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/single_joint_position_action/1.10.17-1.tar.gz";
+    name = "1.10.17-1.tar.gz";
     sha256 = "f7761a78b2539d7cc7f01ad00d85cb426c9b57b8b696cf41d8a98e00192fb1bc";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs roscpp actionlib ];
   propagatedBuildInputs = [ pr2-controllers-msgs roscpp actionlib ];
   nativeBuildInputs = [ catkin ];

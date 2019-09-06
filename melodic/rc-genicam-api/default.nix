@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.2-r1";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/melodic/rc_genicam_api/2.2.2-1.tar.gz;
+    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/melodic/rc_genicam_api/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
     sha256 = "3d0e150794ab2b8363be54bb37e4fdb35737aa99c7c58fb1fd17c6dfc1dc745c";
   };
 
+  buildType = "cmake";
   buildInputs = [ libusb ];
   propagatedBuildInputs = [ catkin libusb ];
   nativeBuildInputs = [ cmake ];

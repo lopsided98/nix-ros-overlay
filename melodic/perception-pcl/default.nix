@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/perception_pcl-release/archive/release/melodic/perception_pcl/1.6.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/melodic/perception_pcl/1.6.2-0.tar.gz";
+    name = "1.6.2-0.tar.gz";
     sha256 = "05249c482602e692fdbcc13a26ed22ac2b0de79d93c08661ec8bcd0b87b6f3ad";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pcl-conversions pcl-msgs pcl-ros ];
   nativeBuildInputs = [ catkin ];
 

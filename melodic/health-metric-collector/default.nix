@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/health_metric_collector-release/archive/release/melodic/health_metric_collector/2.0.1-1.tar.gz;
+    url = "https://github.com/aws-gbp/health_metric_collector-release/archive/release/melodic/health_metric_collector/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
     sha256 = "f5e60876143b1062f020f54087a4513795c1f1b5b1c8facc4b466a95ac25a7a9";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp message-generation aws-common rospy std-msgs aws-ros1-common ros-monitoring-msgs ];
   checkInputs = [ rostest gtest gmock ];
   propagatedBuildInputs = [ ros-monitoring-msgs message-generation aws-common message-runtime rospy std-msgs aws-ros1-common roscpp ];

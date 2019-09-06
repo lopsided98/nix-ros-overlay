@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.15.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_control-release/archive/release/melodic/controller_manager/0.15.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/controller_manager/0.15.1-0.tar.gz";
+    name = "0.15.1-0.tar.gz";
     sha256 = "23c70277cc132ceacb08eaea3ce9ff79d956458f817b9ab72bcf2713b12e7824";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface controller-interface controller-manager-msgs pluginlib ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ hardware-interface controller-interface controller-manager-msgs pluginlib ];

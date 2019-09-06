@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_calibration_data-release/archive/release/melodic/cob_calibration_data/0.6.12-1.tar.gz;
+    url = "https://github.com/ipa320/cob_calibration_data-release/archive/release/melodic/cob_calibration_data/0.6.12-1.tar.gz";
+    name = "0.6.12-1.tar.gz";
     sha256 = "68415a57396e9fb774137d2aefad2c825fc33745a54a0b674bc69384660bede7";
   };
 
+  buildType = "catkin";
   buildInputs = [ cob-supported-robots ];
   propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];

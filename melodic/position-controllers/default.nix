@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.15.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/position_controllers/0.15.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/position_controllers/0.15.0-0.tar.gz";
+    name = "0.15.0-0.tar.gz";
     sha256 = "4fc2790e75f82b2a202e46c7c851f61348aaf1f355f69cb940ead157d5e43368";
   };
 
+  buildType = "catkin";
   buildInputs = [ forward-command-controller controller-interface ];
   propagatedBuildInputs = [ forward-command-controller controller-interface ];
   nativeBuildInputs = [ catkin ];

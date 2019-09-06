@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_rqt/1.0.2-0.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_rqt/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "e88f4d791492e0e2966a559a4af4e2b676ce72d2710220ee67c939da43e5d186";
   };
 
+  buildType = "catkin";
   buildInputs = [ rqt-gui-py rqt-gui dataspeed-pds-msgs rospy python-qt-binding ];
   propagatedBuildInputs = [ rqt-gui-py rqt-gui dataspeed-pds-msgs rospy python-qt-binding ];
   nativeBuildInputs = [ catkin ];

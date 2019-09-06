@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.6.13-r2";
 
   src = fetchurl {
-    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_powercube_chain/0.6.13-2.tar.gz;
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_powercube_chain/0.6.13-2.tar.gz";
+    name = "0.6.13-2.tar.gz";
     sha256 = "805d6614d5110463ddd7871aea6cff7460d8200a572feaf35f003a31475939c2";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs control-msgs schunk-libm5api trajectory-msgs sensor-msgs linuxHeaders cob-srvs libntcan urdf std-msgs diagnostic-msgs roscpp libpcan ];
-  propagatedBuildInputs = [ std-srvs control-msgs schunk-libm5api trajectory-msgs sensor-msgs linuxHeaders cob-srvs libntcan urdf std-msgs diagnostic-msgs roscpp libpcan ];
+  propagatedBuildInputs = [ std-srvs control-msgs schunk-libm5api trajectory-msgs sensor-msgs diagnostic-msgs linuxHeaders cob-srvs urdf std-msgs libntcan roscpp libpcan ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

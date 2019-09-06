@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.11.13";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_common-release/archive/release/melodic/image_transport/1.11.13-0.tar.gz;
+    url = "https://github.com/ros-gbp/image_common-release/archive/release/melodic/image_transport/1.11.13-0.tar.gz";
+    name = "1.11.13-0.tar.gz";
     sha256 = "070c49d03d5320c322237672d62c34b3fd3f8c4b311a76f3572894f368421d55";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib rosconsole sensor-msgs message-filters roslib roscpp ];
   propagatedBuildInputs = [ pluginlib rosconsole sensor-msgs message-filters roslib roscpp ];
   nativeBuildInputs = [ catkin ];

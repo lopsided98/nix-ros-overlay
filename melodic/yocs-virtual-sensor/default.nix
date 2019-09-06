@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_virtual_sensor/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_virtual_sensor/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "4505ba05080e444b2000591f1628a4e204e1efb9e9e45be6a8ccb19506193631";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs yocs-math-toolkit yocs-msgs roscpp tf geometry-msgs ];
   propagatedBuildInputs = [ tf sensor-msgs yocs-math-toolkit yocs-msgs rospy-message-converter visualization-msgs rospy roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

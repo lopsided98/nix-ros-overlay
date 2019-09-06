@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/wu-robotics/wu_ros_tools/archive/release/melodic/rosbaglive/0.2.4-0.tar.gz;
+    url = "https://github.com/wu-robotics/wu_ros_tools/archive/release/melodic/rosbaglive/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "96a3356c1fe0467cb3049b0a3962a1a987b55aa11fc69d4dfdd9e7ec9c4d666e";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosbag rospy ];
   propagatedBuildInputs = [ rosbag rospy ];
   nativeBuildInputs = [ catkin ];

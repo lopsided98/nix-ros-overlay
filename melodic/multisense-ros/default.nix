@@ -8,12 +8,14 @@ buildRosPackage {
   version = "4.0.2";
 
   src = fetchurl {
-    url = https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/melodic/multisense_ros/4.0.2-0.tar.gz;
+    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/melodic/multisense_ros/4.0.2-0.tar.gz";
+    name = "4.0.2-0.tar.gz";
     sha256 = "c1b2959f4247366b8fffeab9da15990e326707d8abfe4967b16065d6ec3a2af8";
   };
 
+  buildType = "catkin";
   buildInputs = [ image-transport libjpeg_turbo rosbag sensor-msgs cv-bridge genmsg roscpp image-geometry message-generation message-runtime multisense-lib dynamic-reconfigure std-msgs angles tf geometry-msgs stereo-msgs ];
-  propagatedBuildInputs = [ image-transport libjpeg_turbo rosbag sensor-msgs cv-bridge genmsg roscpp image-geometry message-generation message-runtime multisense-lib dynamic-reconfigure std-msgs angles tf geometry-msgs stereo-msgs ];
+  propagatedBuildInputs = [ image-transport rosbag libjpeg_turbo sensor-msgs cv-bridge roscpp genmsg image-geometry message-generation message-runtime multisense-lib dynamic-reconfigure std-msgs angles tf geometry-msgs stereo-msgs ];
   nativeBuildInputs = [ libyamlcpp catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.3-r1";
 
   src = fetchurl {
-    url = https://github.com/bosch-ros-pkg/photo-release/archive/release/melodic/photo/1.0.3-1.tar.gz;
+    url = "https://github.com/bosch-ros-pkg/photo-release/archive/release/melodic/photo/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
     sha256 = "61ab67a9bc3909382c062c6c93be55830c71b889b35326014bf3966b88fb354f";
   };
 
+  buildType = "catkin";
   buildInputs = [ self-test sensor-msgs message-generation libgphoto2 std-msgs roscpp opencv3 ];
   propagatedBuildInputs = [ self-test sensor-msgs message-runtime libgphoto2 std-msgs roscpp opencv3 ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.1-r3";
 
   src = fetchurl {
-    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_msgs/2.1.1-3.tar.gz;
+    url = "https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_msgs/2.1.1-3.tar.gz";
+    name = "2.1.1-3.tar.gz";
     sha256 = "03bd75df3567d74a4b0e3357d73ae5cf4085fc772aa1c65e36078f4afb566b9f";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-generation message-runtime ];
   nativeBuildInputs = [ catkin ];

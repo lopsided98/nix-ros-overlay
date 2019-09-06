@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.10";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_topic-release/archive/release/melodic/rqt_topic/0.4.10-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_topic-release/archive/release/melodic/rqt_topic/0.4.10-0.tar.gz";
+    name = "0.4.10-0.tar.gz";
     sha256 = "54ab2164334a2a0ef5774a8b684d8275425e807891d98129795292fa2d968b99";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui rostopic std-msgs python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 

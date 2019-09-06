@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.13.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/kdl_parser-release/archive/release/melodic/kdl_parser/1.13.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/kdl_parser-release/archive/release/melodic/kdl_parser/1.13.1-0.tar.gz";
+    name = "1.13.1-0.tar.gz";
     sha256 = "5931eb562bb310633fedf3c2e40b435cfa6a8d25caddb4077c04932c66c2a8a9";
   };
 
+  buildType = "catkin";
   buildInputs = [ orocos-kdl cmake-modules rosconsole tinyxml urdfdom-headers urdf tinyxml-2 ];
   checkInputs = [ rostest roscpp ];
   propagatedBuildInputs = [ orocos-kdl rosconsole tinyxml urdfdom-headers urdf tinyxml-2 ];

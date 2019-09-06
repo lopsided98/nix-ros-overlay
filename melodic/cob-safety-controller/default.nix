@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_safety_controller/0.6.8-1.tar.gz;
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_safety_controller/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
     sha256 = "fcb88a994fea2fef7b5606e83f114abf435b37e45919a8d18a684a267b6fa685";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

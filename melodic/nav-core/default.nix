@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.16.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/melodic/nav_core/1.16.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/nav_core/1.16.2-0.tar.gz";
+    name = "1.16.2-0.tar.gz";
     sha256 = "d598327496621c871e857d4fb92da871e9a7227397d849c94a7e49f993a239c3";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs costmap-2d tf2-ros geometry-msgs ];
   propagatedBuildInputs = [ std-msgs costmap-2d tf2-ros geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -5,14 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, rostest, message-generation, message-runtime, openssl, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-rosauth";
-  version = "0.1.7-r2";
+  version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/gt-rail-release/rosauth-release/archive/release/melodic/rosauth/0.1.7-2.tar.gz;
-    sha256 = "9d3f956efc11d59d7fb973249d34a497dfe1649d77dffe76da6cc29a485a6c31";
+    url = "https://github.com/gt-rail-release/rosauth-release/archive/release/melodic/rosauth/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
+    sha256 = "0ca3669ec558cc5222bad792320e30bb7e7d0321282b1abe49a0ff9b68fb5986";
   };
 
-  buildInputs = [ openssl rostest message-generation roscpp ];
+  buildType = "catkin";
+  buildInputs = [ openssl message-generation roscpp ];
+  checkInputs = [ rostest ];
   propagatedBuildInputs = [ roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 

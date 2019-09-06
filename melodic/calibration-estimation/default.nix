@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/calibration-release/archive/release/melodic/calibration_estimation/0.10.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/calibration-release/archive/release/melodic/calibration_estimation/0.10.14-0.tar.gz";
+    name = "0.10.14-0.tar.gz";
     sha256 = "b6d902974beb94a2868f04a7c820517a153083bf0c316b91036a746a411a2970";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ python-orocos-kdl sensor-msgs pythonPackages.scipy rostest urdfdom-py rospy visualization-msgs pythonPackages.matplotlib calibration-msgs ];
   nativeBuildInputs = [ catkin ];
 

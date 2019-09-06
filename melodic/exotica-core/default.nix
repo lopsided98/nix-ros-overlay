@@ -8,12 +8,14 @@ buildRosPackage {
   version = "5.0.0";
 
   src = fetchurl {
-    url = https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_core/5.0.0-0.tar.gz;
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_core/5.0.0-0.tar.gz";
+    name = "5.0.0-0.tar.gz";
     sha256 = "c5f91ca156ad37a8357e9b650c39fab45ea4327bf1a4a645f1bdc2bcde2e59fc";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning kdl-parser pluginlib cmake-modules eigen-conversions roscpp moveit-core tf-conversions message-runtime std-msgs moveit-msgs tinyxml-2 tf geometry-msgs ];
-  propagatedBuildInputs = [ moveit-ros-planning kdl-parser pluginlib eigen-conversions roscpp moveit-core tf-conversions message-runtime std-msgs moveit-msgs tinyxml-2 tf geometry-msgs ];
+  propagatedBuildInputs = [ moveit-ros-planning kdl-parser pluginlib tf eigen-conversions message-runtime moveit-core tf-conversions std-msgs moveit-msgs tinyxml-2 roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

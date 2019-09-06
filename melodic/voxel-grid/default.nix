@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.16.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/melodic/voxel_grid/1.16.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/voxel_grid/1.16.2-0.tar.gz";
+    name = "1.16.2-0.tar.gz";
     sha256 = "8102b9aae0f9856c35f38841945094d77eec895fea6d8caaac479cfa162a56d4";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ roscpp ];

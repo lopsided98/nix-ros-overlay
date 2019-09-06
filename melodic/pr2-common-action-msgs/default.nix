@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.11";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/melodic/pr2_common_action_msgs/0.0.11-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/melodic/pr2_common_action_msgs/0.0.11-0.tar.gz";
+    name = "0.0.11-0.tar.gz";
     sha256 = "65824648cd967a5c46b6861c1d0e9c76920d68ee4e28aff2783962c87f21dc3f";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs message-generation actionlib-msgs geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs message-runtime actionlib-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

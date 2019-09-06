@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_kinematics/1.0.2-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_kinematics/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
     sha256 = "5b691b09f0e6b7560ab0971ee94fb84a351142b5619dab071b3c1924a6766c13";
   };
 
+  buildType = "catkin";
   buildInputs = [ orocos-kdl pluginlib tf2-kdl tf2 moveit-core eigen roscpp ];
   checkInputs = [ moveit-resources rostest moveit-ros-planning xmlrpcpp ];
   propagatedBuildInputs = [ orocos-kdl pluginlib tf2-kdl urdfdom tf2 moveit-core pythonPackages.lxml eigen roscpp ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.5";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_rqt_plugins/2.1.5-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_rqt_plugins/2.1.5-0.tar.gz";
+    name = "2.1.5-0.tar.gz";
     sha256 = "c2205a66a68f133e6e9f7fb7dbbb8448c5291b3b077c542ea1bca58a08942527";
   };
 
+  buildType = "catkin";
   buildInputs = [ mk image-view2 message-generation rosbuild ];
   checkInputs = [ rostest roslaunch ];
   propagatedBuildInputs = [ image-pipeline rqt-gui-py image-view2 pythonPackages.urlgrabber rqt-gui pythonPackages.scikitlearn jsk-gui-msgs cv-bridge resource-retriever message-runtime rqt-image-view rqt-plot qt-gui-py-common ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_extern-release/archive/release/melodic/libntcan/0.6.13-1.tar.gz;
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libntcan/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
     sha256 = "05926b3ffb71536c9e4f39f1dc11b78eb933448468d4d1585504dbdb40ccef9b";
   };
 
+  buildType = "catkin";
   buildInputs = [ dpkg ];
   propagatedBuildInputs = [ dpkg ];
   nativeBuildInputs = [ catkin ];

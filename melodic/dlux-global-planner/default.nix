@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.2.5-r1";
 
   src = fetchurl {
-    url = https://github.com/DLu/robot_navigation-release/archive/release/melodic/dlux_global_planner/0.2.5-1.tar.gz;
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/dlux_global_planner/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
     sha256 = "6a30b86cc1610cafd21bf8248d800d59d5dbd510bff2a0a767afca90a58d9cbc";
   };
 
+  buildType = "catkin";
   buildInputs = [ nav-grid-pub-sub pluginlib nav-grid nav-core2 roscpp nav-2d-utils nav-msgs visualization-msgs nav-2d-msgs geometry-msgs ];
   checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ nav-grid-pub-sub pluginlib nav-grid nav-core2 roscpp nav-2d-utils nav-msgs visualization-msgs nav-2d-msgs geometry-msgs ];
+  propagatedBuildInputs = [ nav-grid-pub-sub pluginlib nav-grid nav-core2 nav-2d-utils nav-msgs visualization-msgs roscpp nav-2d-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

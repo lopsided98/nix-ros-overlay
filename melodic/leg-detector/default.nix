@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/OSUrobotics/people-release/archive/release/melodic/leg_detector/1.2.0-1.tar.gz;
+    url = "https://github.com/OSUrobotics/people-release/archive/release/melodic/leg_detector/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
     sha256 = "aaf47802eea191142252e69d7044c0b308fd70350c8fd2650e7c682069e2e9de";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs people-tracking-filter people-msgs sensor-msgs bfl message-filters roscpp image-geometry laser-geometry visualization-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs map-laser people-tracking-filter people-msgs sensor-msgs bfl message-filters roscpp image-geometry laser-geometry laser-filters visualization-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs map-laser people-msgs tf sensor-msgs bfl message-filters roscpp image-geometry laser-geometry laser-filters visualization-msgs dynamic-reconfigure std-msgs people-tracking-filter geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

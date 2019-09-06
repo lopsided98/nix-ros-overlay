@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.60.3";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_navigation-release/archive/release/melodic/ecl_navigation/0.60.3-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_navigation-release/archive/release/melodic/ecl_navigation/0.60.3-0.tar.gz";
+    name = "0.60.3-0.tar.gz";
     sha256 = "1d3e834b6aa0b70617f25fc03c9c7f275e5280ed6a75570483b0db48ecd5b32d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ ecl-mobile-robot ];
   nativeBuildInputs = [ catkin ];
 

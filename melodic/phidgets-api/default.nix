@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.9-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/melodic/phidgets_api/0.7.9-1.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/melodic/phidgets_api/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
     sha256 = "c3f33f14fcfc032dddcb02b6a7938265972b7133804823a5cae8c9d51c30a46f";
   };
 
+  buildType = "catkin";
   buildInputs = [ libusb1 libphidget21 ];
   propagatedBuildInputs = [ libphidget21 libusb ];
   nativeBuildInputs = [ catkin ];

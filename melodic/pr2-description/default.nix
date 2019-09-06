@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_description/1.12.4-1.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_description/1.12.4-1.tar.gz";
+    name = "1.12.4-1.tar.gz";
     sha256 = "8614f27c6963296dfcd6091bb406ac8cb85b3d3ddc240ad390b6da44363d341e";
   };
 
+  buildType = "catkin";
   buildInputs = [ convex-decomposition ivcon ];
   checkInputs = [ gtest rosbash urdfdom ];
   propagatedBuildInputs = [ xacro ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.5";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_interactive/2.1.5-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_interactive/2.1.5-0.tar.gz";
+    name = "2.1.5-0.tar.gz";
     sha256 = "739be630c6e56f915493551f092539377bfc8a224ddc9952b517e223952af8eb";
   };
 
+  buildType = "catkin";
   buildInputs = [ mk rosbuild dynamic-tf-publisher jsk-interactive-marker actionlib rospy visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ dynamic-tf-publisher jsk-interactive-marker actionlib rospy visualization-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

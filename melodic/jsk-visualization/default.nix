@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.5";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_visualization/2.1.5-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_visualization/2.1.5-0.tar.gz";
+    name = "2.1.5-0.tar.gz";
     sha256 = "6a77306292fe2644e5cd6ad9df30e442aa904f920bc373a0b8b5ff9a2d0e0411";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ jsk-rqt-plugins jsk-interactive-test jsk-rviz-plugins jsk-interactive-marker jsk-interactive ];
   nativeBuildInputs = [ catkin ];
 

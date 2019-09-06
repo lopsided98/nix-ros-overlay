@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.3-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_navigation/0.6.3-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_navigation/0.6.3-1.tar.gz";
+    name = "0.6.3-1.tar.gz";
     sha256 = "33cc60147c63d825cf40d667306fec68ada7ddf6773903ccb47b7234ea358140";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gmapping map-server amcl move-base urdf xacro ];
   nativeBuildInputs = [ catkin ];

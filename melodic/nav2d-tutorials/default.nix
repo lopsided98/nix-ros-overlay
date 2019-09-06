@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/skasperski/navigation_2d-release/archive/release/melodic/nav2d_tutorials/0.4.2-0.tar.gz;
+    url = "https://github.com/skasperski/navigation_2d-release/archive/release/melodic/nav2d_tutorials/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "ae60ec866cca40ba8cd6f96181b3dfed1bde5cac12dd9813260a77837e078b3b";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ nav2d-navigator nav2d-remote nav2d-karto nav2d-operator nav2d-msgs nav2d-exploration nav2d-localizer ];
   nativeBuildInputs = [ catkin ];
 

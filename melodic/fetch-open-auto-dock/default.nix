@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.2";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_open_auto_dock-gbp/archive/release/melodic/fetch_open_auto_dock/0.1.2-0.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/fetch_open_auto_dock-gbp/archive/release/melodic/fetch_open_auto_dock/0.1.2-0.tar.gz";
+    name = "0.1.2-0.tar.gz";
     sha256 = "73cbede7be9f363559992d9bab141eea8b9c4ac72928fb567e0542cfb0ea7c2a";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf sensor-msgs fetch-driver-msgs roscpp rospy nav-msgs actionlib fetch-auto-dock-msgs std-msgs angles roslib geometry-msgs eigen ];
-  propagatedBuildInputs = [ fetch-driver-msgs sensor-msgs roscpp rospy roslib nav-msgs actionlib fetch-auto-dock-msgs std-msgs tf geometry-msgs eigen ];
+  propagatedBuildInputs = [ sensor-msgs fetch-driver-msgs roscpp roslib fetch-auto-dock-msgs actionlib nav-msgs rospy std-msgs tf geometry-msgs eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

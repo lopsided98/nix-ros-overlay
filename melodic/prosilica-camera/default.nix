@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.4-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/prosilica_driver-release/archive/release/melodic/prosilica_camera/1.9.4-1.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/prosilica_driver-release/archive/release/melodic/prosilica_camera/1.9.4-1.tar.gz";
+    name = "1.9.4-1.tar.gz";
     sha256 = "7c2aafe58194390d9dbaaf25cf54cf5ba4060742e2ef9f10a0bb207c377d8202";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole self-test camera-calibration-parsers image-transport sensor-msgs driver-base polled-camera prosilica-gige-sdk diagnostic-updater dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
   propagatedBuildInputs = [ self-test camera-calibration-parsers image-transport sensor-msgs driver-base polled-camera prosilica-gige-sdk diagnostic-updater dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.16.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/melodic/carrot_planner/1.16.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/carrot_planner/1.16.2-0.tar.gz";
+    name = "1.16.2-0.tar.gz";
     sha256 = "a5d041ba34682f24432fac22801b54a438dc58d3e13e1a4dde1e81e09d2c3ab4";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d pluginlib base-local-planner tf2-geometry-msgs nav-core tf2-ros tf2 eigen roscpp ];
   propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core tf2-ros tf2 eigen roscpp ];
   nativeBuildInputs = [ catkin ];

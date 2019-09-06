@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/OSUrobotics/people-release/archive/release/melodic/face_detector/1.2.0-1.tar.gz;
+    url = "https://github.com/OSUrobotics/people-release/archive/release/melodic/face_detector/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
     sha256 = "4fc58742d316d190c2cddf54fbfda33d9bcde0cd5fcc80eb6687b083d4fd4874";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs cv-bridge image-geometry actionlib rospy tf geometry-msgs stereo-msgs image-transport message-filters message-generation roslib std-srvs people-msgs rosbag std-msgs roscpp stereo-image-proc sensor-msgs ];
   checkInputs = [ rostest stereo-image-proc ];
   propagatedBuildInputs = [ actionlib-msgs cv-bridge image-geometry actionlib rospy tf geometry-msgs stereo-msgs image-transport message-filters message-runtime roslib std-srvs people-msgs rosbag std-msgs roscpp stereo-image-proc sensor-msgs dynamic-reconfigure ];

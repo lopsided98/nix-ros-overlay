@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.11.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/openni_camera-release/archive/release/melodic/openni_description/1.11.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/openni_camera-release/archive/release/melodic/openni_description/1.11.1-0.tar.gz";
+    name = "1.11.1-0.tar.gz";
     sha256 = "709e253ea9d2ba4d1c81fe758da31e8359a8e00f4e0105405f37a6e68e011dc8";
   };
 
+  buildType = "catkin";
   checkInputs = [ rostest urdfdom ];
   propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];

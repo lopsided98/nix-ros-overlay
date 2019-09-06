@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_robot_client/0.7.0-0.tar.gz;
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_robot_client/0.7.0-0.tar.gz";
+    name = "0.7.0-0.tar.gz";
     sha256 = "c1039af144fc2cbd4de93b448d60d1a5bb417d8ad72f428324ed5a489e882424";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs control-msgs trajectory-msgs sensor-msgs industrial-utils industrial-msgs simple-message urdf actionlib std-msgs roslaunch roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ actionlib-msgs control-msgs trajectory-msgs sensor-msgs industrial-utils industrial-msgs simple-message urdf robot-state-publisher actionlib std-msgs roscpp ];

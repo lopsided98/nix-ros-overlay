@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.6";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/melodic/roslang/1.14.6-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/roslang/1.14.6-0.tar.gz";
+    name = "1.14.6-0.tar.gz";
     sha256 = "147d2f848b96ebd2b38f17bd62b485e3b213c1ac672c497d5216038f5c5f5bda";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ genmsg catkin ];
   nativeBuildInputs = [ catkin ];
 

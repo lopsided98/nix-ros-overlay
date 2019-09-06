@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/melodic/angles/1.9.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/melodic/angles/1.9.11-0.tar.gz";
+    name = "1.9.11-0.tar.gz";
     sha256 = "e234fbb316d2e74febab2c47710ecb9c1c7231c439d68a2f8540b416245b2b9a";
   };
 
+  buildType = "catkin";
   checkInputs = [ rosunit ];
   nativeBuildInputs = [ catkin ];
 

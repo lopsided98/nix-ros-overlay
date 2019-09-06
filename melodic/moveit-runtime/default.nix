@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_runtime/1.0.2-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_runtime/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
     sha256 = "316540c39d80e5428634877875126cd10290f49cfaa7099b8a316e7f688fbc67";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ moveit-ros-planning moveit-ros-move-group moveit-ros-manipulation moveit-ros-warehouse moveit-core moveit-ros-perception moveit-planners moveit-ros-planning-interface moveit-plugins ];
   nativeBuildInputs = [ catkin ];
 

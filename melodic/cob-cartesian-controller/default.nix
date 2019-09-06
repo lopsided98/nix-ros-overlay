@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.8.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_cartesian_controller/0.8.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_cartesian_controller/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
     sha256 = "b075e089783d55f61a9c72abb5b79e8c0b61b6a04bd970356fc7f82d24b8ba37";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs boost actionlib-msgs roslint roscpp cob-srvs message-generation visualization-msgs actionlib std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs cob-twist-controller boost actionlib-msgs topic-tools roscpp rospy cob-srvs rviz actionlib robot-state-publisher cob-frame-tracker std-msgs visualization-msgs message-runtime tf xacro geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs cob-twist-controller boost actionlib-msgs roscpp rospy cob-srvs std-msgs actionlib message-runtime robot-state-publisher cob-frame-tracker topic-tools rviz visualization-msgs tf xacro geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

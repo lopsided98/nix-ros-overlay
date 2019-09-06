@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/melodic/pinocchio/2.1.3-1.tar.gz;
+    url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/melodic/pinocchio/2.1.3-1.tar.gz";
+    name = "2.1.3-1.tar.gz";
     sha256 = "55e2abcacc5f041bb5aac36853a0114852d76d03bdbe29c5a257f39429360fc6";
   };
 
+  buildType = "catkin";
   buildInputs = [ python pythonPackages.numpy boost git urdfdom eigen eigenpy ];
   propagatedBuildInputs = [ python pythonPackages.numpy boost urdfdom eigenpy eigen ];
   nativeBuildInputs = [ catkin ];

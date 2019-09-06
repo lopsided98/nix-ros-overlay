@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_apps-release/archive/release/melodic/pr2_position_scripts/0.6.1-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_apps-release/archive/release/melodic/pr2_position_scripts/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "8a6dddf6474456caf8bc7efdec66febbabfc1c4f5c4ca533a0520dcc5b6b660c";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs tf actionlib rospy ];
-  propagatedBuildInputs = [ pr2-controllers-msgs tf actionlib rospy ];
+  propagatedBuildInputs = [ rospy pr2-controllers-msgs tf actionlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

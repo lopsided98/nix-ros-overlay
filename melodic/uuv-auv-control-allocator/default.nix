@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_auv_control_allocator/0.6.13-0.tar.gz;
+    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_auv_control_allocator/0.6.13-0.tar.gz";
+    name = "0.6.13-0.tar.gz";
     sha256 = "4db21178544a59cd19888ae887ff0bd17b75737fd0972673c4314a6db1cf3482";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_transport_plugins-release/archive/release/melodic/theora_image_transport/1.9.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/image_transport_plugins-release/archive/release/melodic/theora_image_transport/1.9.5-0.tar.gz";
+    name = "1.9.5-0.tar.gz";
     sha256 = "03701fa45f64b4642eb8b7720662363bb10c4f20e32da2783c595258fc3eaced";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib image-transport rosbag cv-bridge libogg libtheora message-generation dynamic-reconfigure std-msgs ];
   propagatedBuildInputs = [ pluginlib image-transport rosbag cv-bridge libogg libtheora message-runtime dynamic-reconfigure std-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.13.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/kdl_parser-release/archive/release/melodic/kdl_parser_py/1.13.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/kdl_parser-release/archive/release/melodic/kdl_parser_py/1.13.1-0.tar.gz";
+    name = "1.13.1-0.tar.gz";
     sha256 = "66da27c1d53a445cc5334768a54a2f792df8c46475fe24a91ff486675082c86a";
   };
 
+  buildType = "catkin";
   buildInputs = [ urdf orocos-kdl ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ python-orocos-kdl urdf orocos-kdl urdfdom-py ];

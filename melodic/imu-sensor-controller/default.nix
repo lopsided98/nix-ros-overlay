@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.15.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/imu_sensor_controller/0.15.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/imu_sensor_controller/0.15.0-0.tar.gz";
+    name = "0.15.0-0.tar.gz";
     sha256 = "9e5a18ddf716a8a9edd539104025b9d6828acb17b690b660780b56f05c2f0948";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface pluginlib realtime-tools sensor-msgs controller-interface roscpp ];
   propagatedBuildInputs = [ hardware-interface pluginlib realtime-tools sensor-msgs controller-interface roscpp ];
   nativeBuildInputs = [ catkin ];

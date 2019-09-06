@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/boschresearch/fmi_adapter-release/archive/release/melodic/fmi_adapter_examples/1.0.2-0.tar.gz;
+    url = "https://github.com/boschresearch/fmi_adapter-release/archive/release/melodic/fmi_adapter_examples/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "0cbc8b65bfcc5cd1c06eb8159dd090a7e4dd569e9f4d34a9de8e6258cee1514d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-plot roscpp fmi-adapter ];
   nativeBuildInputs = [ catkin ];
 

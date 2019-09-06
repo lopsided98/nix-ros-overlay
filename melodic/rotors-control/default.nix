@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.3";
 
   src = fetchurl {
-    url = https://github.com/ethz-asl/rotors_simulator-release/archive/release/melodic/rotors_control/2.2.3-0.tar.gz;
+    url = "https://github.com/ethz-asl/rotors_simulator-release/archive/release/melodic/rotors_control/2.2.3-0.tar.gz";
+    name = "2.2.3-0.tar.gz";
     sha256 = "360134fe15fab3cd01a1869458c0d767006f445a2124532ac6b0c2484e4cc38f";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules mav-msgs sensor-msgs nav-msgs dynamic-reconfigure roscpp geometry-msgs ];
   propagatedBuildInputs = [ cmake-modules mav-msgs sensor-msgs nav-msgs dynamic-reconfigure roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

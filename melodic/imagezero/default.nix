@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/melodic/imagezero/0.2.4-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/melodic/imagezero/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "9cd7f77aca000dcb09f08f4f618755e8ee7f6099563aee77102f336e7622ec80";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

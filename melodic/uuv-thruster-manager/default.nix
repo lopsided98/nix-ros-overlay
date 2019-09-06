@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_thruster_manager/0.6.13-0.tar.gz;
+    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_thruster_manager/0.6.13-0.tar.gz";
+    name = "0.6.13-0.tar.gz";
     sha256 = "1ab65fc013e0365a7d680c40c82f7ed9a1d1ab91514376795bf5160f80f0cdea";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   checkInputs = [ pythonPackages.numpy xacro uuv-assistants rostest robot-state-publisher joint-state-publisher rosunit geometry-msgs ];
   propagatedBuildInputs = [ uuv-assistants pythonPackages.pyyaml uuv-gazebo-ros-plugins-msgs message-runtime rospy std-msgs tf geometry-msgs ];

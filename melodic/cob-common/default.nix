@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_common-release/archive/release/melodic/cob_common/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_common-release/archive/release/melodic/cob_common/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "8d43687e403871afba8178f7b1382fb575114e835ca1c70f7fa426c41852f749";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ raw-description cob-srvs cob-description cob-actions cob-msgs ];
   nativeBuildInputs = [ catkin ];
 

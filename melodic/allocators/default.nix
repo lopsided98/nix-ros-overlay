@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.25";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_realtime-release/archive/release/melodic/allocators/1.0.25-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_realtime-release/archive/release/melodic/allocators/1.0.25-0.tar.gz";
+    name = "1.0.25-0.tar.gz";
     sha256 = "585ef0525e4b0613ee2b9aca41a692dc9efab13c0a8e78ffe36e8efc03bd8810";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

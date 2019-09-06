@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/gt-rail-release/fetch_simple_linear_controller-release/archive/release/melodic/fetch_simple_linear_controller/0.0.1-1.tar.gz;
+    url = "https://github.com/gt-rail-release/fetch_simple_linear_controller-release/archive/release/melodic/fetch_simple_linear_controller/0.0.1-1.tar.gz";
+    name = "0.0.1-1.tar.gz";
     sha256 = "d9479296511f18cc03d51eb3879bd40eb8b3d93fe77c8eb7be34b96d88959ec6";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2-geometry-msgs control-msgs sensor-msgs tf2-ros tf2 message-generation actionlib roscpp geometry-msgs ];
   propagatedBuildInputs = [ tf2-geometry-msgs control-msgs sensor-msgs tf2-ros tf2 message-runtime actionlib roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

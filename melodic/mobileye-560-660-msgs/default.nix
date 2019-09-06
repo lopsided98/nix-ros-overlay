@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.1";
 
   src = fetchurl {
-    url = https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/mobileye_560_660_msgs/2.3.1-0.tar.gz;
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/mobileye_560_660_msgs/2.3.1-0.tar.gz";
+    name = "2.3.1-0.tar.gz";
     sha256 = "8b04f0cb7b653492bdffead10bf58a81273782d2c80128de999cad8a460c2f2e";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/OSUrobotics/people-release/archive/release/melodic/people/1.2.0-1.tar.gz;
+    url = "https://github.com/OSUrobotics/people-release/archive/release/melodic/people/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
     sha256 = "6261e11750ff43c0eecd09034928197e6266c0410bc1d8310dfa0dc899798a00";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ people-msgs leg-detector people-velocity-tracker people-tracking-filter face-detector ];
   nativeBuildInputs = [ catkin ];
 

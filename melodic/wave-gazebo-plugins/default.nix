@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, catkin, eigen }:
 buildRosPackage {
   pname = "ros-melodic-wave-gazebo-plugins";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vrx-release/archive/release/melodic/wave_gazebo_plugins/1.2.0-1.tar.gz;
-    sha256 = "5cced0063ba799f3a80584248f83520afa8e2bde4d9e8fff3f38466e3093eacf";
+    url = "https://github.com/ros-gbp/vrx-release/archive/release/melodic/wave_gazebo_plugins/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "6da8404f254022a612f018205fb3cb3e6985b5829a785edd02d7585ee0156498";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros eigen ];
   propagatedBuildInputs = [ gazebo-ros ];
   nativeBuildInputs = [ catkin ];

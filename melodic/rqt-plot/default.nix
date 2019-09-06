@@ -8,11 +8,13 @@ buildRosPackage {
   version = "0.4.9";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_plot-release/archive/release/melodic/rqt_plot/0.4.9-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_plot-release/archive/release/melodic/rqt_plot/0.4.9-0.tar.gz";
+    name = "0.4.9-0.tar.gz";
     sha256 = "226ffb18dfbf7e879f20e2aecae2243582a4fae28e74a1f7d3b291e68f6a28fb";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py pythonPackages.numpy pythonPackages.rospkg qwt-dependency rqt-gui qt-gui-py-common rosgraph rostopic std-msgs rqt-py-common python-qt-binding pythonPackages.matplotlib ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.numpy qwt-dependency pythonPackages.rospkg rqt-gui rosgraph qt-gui-py-common rostopic std-msgs rqt-py-common python-qt-binding pythonPackages.matplotlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

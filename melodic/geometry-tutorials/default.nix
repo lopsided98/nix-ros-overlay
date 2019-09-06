@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry_tutorials-release/archive/release/melodic/geometry_tutorials/0.2.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/melodic/geometry_tutorials/0.2.2-0.tar.gz";
+    name = "0.2.2-0.tar.gz";
     sha256 = "681b5bd03623bc5832921eeb3d314a4f8d9dfbf05f7f48fb48adf327bfc4e2ea";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ turtle-tf2 turtle-tf ];
   nativeBuildInputs = [ catkin ];
 

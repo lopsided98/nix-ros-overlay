@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_navi_toolkit/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_navi_toolkit/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "fbf635ac9b081ac52ced067b1d5b6ffdb7c17a320ba7d229e92d53538a44ac5f";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d base-local-planner tf ecl-build nav-msgs ecl-linear-algebra roscpp ];
-  propagatedBuildInputs = [ costmap-2d base-local-planner tf ecl-build nav-msgs ecl-linear-algebra roscpp ];
+  propagatedBuildInputs = [ costmap-2d base-local-planner roscpp ecl-build nav-msgs ecl-linear-algebra tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

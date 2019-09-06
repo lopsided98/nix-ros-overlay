@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.4.0";
 
   src = fetchurl {
-    url = https://github.com/orocos/orocos-kdl-release/archive/release/melodic/python_orocos_kdl/1.4.0-0.tar.gz;
+    url = "https://github.com/orocos/orocos-kdl-release/archive/release/melodic/python_orocos_kdl/1.4.0-0.tar.gz";
+    name = "1.4.0-0.tar.gz";
     sha256 = "e2f7f6fafccaf26d88863ac50b826301c14db71f61e4caff757a482e304a62a0";
   };
 
+  buildType = "cmake";
   buildInputs = [ pythonPackages.sip orocos-kdl ];
-  propagatedBuildInputs = [ catkin orocos-kdl pythonPackages.sip ];
+  propagatedBuildInputs = [ orocos-kdl catkin pythonPackages.sip ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

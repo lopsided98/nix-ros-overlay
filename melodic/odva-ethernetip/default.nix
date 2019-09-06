@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.4";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/odva_ethernetip-release/archive/release/melodic/odva_ethernetip/0.1.4-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/odva_ethernetip-release/archive/release/melodic/odva_ethernetip/0.1.4-0.tar.gz";
+    name = "0.1.4-0.tar.gz";
     sha256 = "5ab751b07939ccd1fb02691e6d370dcf721b38371208efe92e9ec7d507481c7a";
   };
 
+  buildType = "catkin";
   buildInputs = [ console-bridge boost ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ console-bridge boost ];

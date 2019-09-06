@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/melodic/dynamic_reconfigure/1.6.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/melodic/dynamic_reconfigure/1.6.0-0.tar.gz";
+    name = "1.6.0-0.tar.gz";
     sha256 = "00811c7ff7a43ff5dc2d22ce9bb493e55728d403f49c359606e173b687872151";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost cpp-common rostest message-generation roscpp-serialization std-msgs roscpp ];
   propagatedBuildInputs = [ boost rosservice roslib message-runtime rospy std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

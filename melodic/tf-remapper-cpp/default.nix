@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.1";
 
   src = fetchurl {
-    url = https://github.com/peci1/tf_remapper_cpp-release/archive/release/melodic/tf_remapper_cpp/1.1.1-0.tar.gz;
+    url = "https://github.com/peci1/tf_remapper_cpp-release/archive/release/melodic/tf_remapper_cpp/1.1.1-0.tar.gz";
+    name = "1.1.1-0.tar.gz";
     sha256 = "e212a7354d6e6f6eb42f9f8a90551b26cc4ffd427324bfe6f82ccbcd4603f77a";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp tf2-msgs xmlrpcpp ];
   checkInputs = [ rostest tf ];
   propagatedBuildInputs = [ roscpp tf2-msgs xmlrpcpp ];

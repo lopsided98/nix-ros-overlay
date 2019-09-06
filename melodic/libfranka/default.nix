@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.1-r1";
 
   src = fetchurl {
-    url = https://github.com/frankaemika/libfranka-release/archive/release/melodic/libfranka/0.7.1-1.tar.gz;
+    url = "https://github.com/frankaemika/libfranka-release/archive/release/melodic/libfranka/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
     sha256 = "1494bbb0fa5f713ad3895f519abb23cf2bbb6a6fddd95cfbf88e7319a1e4688e";
   };
 
+  buildType = "cmake";
   buildInputs = [ poco eigen ];
   propagatedBuildInputs = [ poco catkin ];
   nativeBuildInputs = [ cmake ];

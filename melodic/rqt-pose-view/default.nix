@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_pose_view-release/archive/release/melodic/rqt_pose_view/0.5.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_pose_view-release/archive/release/melodic/rqt_pose_view/0.5.8-0.tar.gz";
+    name = "0.5.8-0.tar.gz";
     sha256 = "00e9962e4a7132dcb9082692fb49563d309b9e446b5eb17e65354dd7e1e24e4d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py geometry-msgs pythonPackages.rospkg rqt-gui rostopic pythonPackages.pyopengl rospy rqt-py-common tf python-qt-binding gl-dependency ];
   nativeBuildInputs = [ catkin ];
 

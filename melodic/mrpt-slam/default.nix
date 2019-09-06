@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.9";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/melodic/mrpt_slam/0.1.9-0.tar.gz;
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/melodic/mrpt_slam/0.1.9-0.tar.gz";
+    name = "0.1.9-0.tar.gz";
     sha256 = "3170fb5eacbd6bf03b50022ea4c324dd4e147fbcecbee376c4203e52ca004a95";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ mrpt-icp-slam-2d mrpt-rbpf-slam mrpt-ekf-slam-2d mrpt-ekf-slam-3d mrpt-graphslam-2d ];
   nativeBuildInputs = [ catkin ];
 

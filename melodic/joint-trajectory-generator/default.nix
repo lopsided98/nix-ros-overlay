@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.11";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/melodic/joint_trajectory_generator/0.0.11-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/melodic/joint_trajectory_generator/0.0.11-0.tar.gz";
+    name = "0.0.11-0.tar.gz";
     sha256 = "273943f65776908254c198a36be8792716e78e5487d52e849be32aa66094695d";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs orocos-kdl joint-trajectory-action urdf actionlib angles roscpp ];
   propagatedBuildInputs = [ pr2-controllers-msgs orocos-kdl joint-trajectory-action urdf actionlib angles roscpp ];
   nativeBuildInputs = [ catkin ];

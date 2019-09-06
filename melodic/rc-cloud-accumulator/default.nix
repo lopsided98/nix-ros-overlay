@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.4";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_cloud_accumulator-release/archive/release/melodic/rc_cloud_accumulator/1.0.4-0.tar.gz;
+    url = "https://github.com/roboception-gbp/rc_cloud_accumulator-release/archive/release/melodic/rc_cloud_accumulator/1.0.4-0.tar.gz";
+    name = "1.0.4-0.tar.gz";
     sha256 = "6356622f9801312add690a710948202c253adab5a5540ae0875e9bca83c8ee40";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs tf2-msgs pcl tf2-ros tf2 nav-msgs vtkWithQt4 roscpp pcl-ros geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs tf2-msgs pcl tf2-ros tf2 nav-msgs vtkWithQt4 roscpp pcl-ros geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs tf2-msgs pcl tf2-ros tf2 vtkWithQt4 nav-msgs pcl-ros roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

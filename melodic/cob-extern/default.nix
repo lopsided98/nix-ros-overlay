@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_extern-release/archive/release/melodic/cob_extern/0.6.13-1.tar.gz;
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/cob_extern/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
     sha256 = "58d6df6b77b5a5546ce1641a09b583f1d899c8d250f9eee8cff13f76acc0834f";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ libpcan libphidgets opengm libdlib libntcan ];
   nativeBuildInputs = [ catkin ];
 

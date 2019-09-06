@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.6.1";
 
   src = fetchurl {
-    url = https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_filters/1.6.1-0.tar.gz;
+    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_filters/1.6.1-0.tar.gz";
+    name = "1.6.1-0.tar.gz";
     sha256 = "b320f6311be2c0c2ad860f9a14b1a0a3bc90e91b3064c33d4736aa7fd3b6188c";
   };
 
+  buildType = "catkin";
   buildInputs = [ grid-map-core grid-map-msgs grid-map-ros filters ];
-  propagatedBuildInputs = [ grid-map-core grid-map-msgs grid-map-ros filters ];
+  propagatedBuildInputs = [ grid-map-core filters grid-map-ros grid-map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

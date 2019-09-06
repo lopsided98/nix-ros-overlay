@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/ff/2.1.13-1.tar.gz;
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/ff/2.1.13-1.tar.gz";
+    name = "2.1.13-1.tar.gz";
     sha256 = "7937f6b5795627983cffb79b3fd64d6e556db27246e2d48c5db3f8d788d267bb";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospack rosbash mk rosbuild flex cacert unzip openssl roslib bison ];
   nativeBuildInputs = [ catkin ];
 

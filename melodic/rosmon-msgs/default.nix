@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon_msgs/2.1.1-1.tar.gz;
+    url = "https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon_msgs/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
     sha256 = "e0d2bdc8b92bf37d1742516bd955115f7c4d3743146224c56d612eb34328aea4";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-generation ];
   nativeBuildInputs = [ catkin ];

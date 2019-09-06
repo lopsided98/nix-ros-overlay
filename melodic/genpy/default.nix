@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/genpy-release/archive/release/melodic/genpy/0.6.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/genpy-release/archive/release/melodic/genpy/0.6.8-0.tar.gz";
+    name = "0.6.8-0.tar.gz";
     sha256 = "22a962f2463d4a60fa0caefe4377195f0f294481af0736f68d50034461648844";
   };
 
+  buildType = "catkin";
   buildInputs = [ genmsg ];
   propagatedBuildInputs = [ genmsg pythonPackages.pyyaml ];
   nativeBuildInputs = [ catkin ];

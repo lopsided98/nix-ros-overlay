@@ -8,12 +8,14 @@ buildRosPackage {
   version = "2.0.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/melodic/open_manipulator_description/2.0.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/melodic/open_manipulator_description/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
     sha256 = "f44f4bb8965b79fffdf4906f742e4fccd178a55c8ee11e3abacc24828e5ae9c5";
   };
 
+  buildType = "catkin";
   buildInputs = [ urdf joint-state-publisher xacro robot-state-publisher ];
-  propagatedBuildInputs = [ urdf joint-state-publisher xacro robot-state-publisher ];
+  propagatedBuildInputs = [ joint-state-publisher urdf xacro robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

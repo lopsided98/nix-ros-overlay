@@ -8,13 +8,15 @@ buildRosPackage {
   version = "3.2.0-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/melodic/rdl_dynamics/3.2.0-1;
+    url = "https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/melodic/rdl_dynamics/3.2.0-1";
+    name = "archive.tar.gz";
     sha256 = "02996f90bf325b1c47f8b436761468a0af9662aa937ec90250cf10ecd7107fa0";
   };
 
+  buildType = "catkin";
   buildInputs = [ eigen graphviz doxygen ];
   checkInputs = [ lcov gtest rdl-cmake ];
-  propagatedBuildInputs = [ eigen graphviz doxygen ];
+  propagatedBuildInputs = [ doxygen graphviz eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

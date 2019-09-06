@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/pyros-dev/pyros-test-release/archive/release/melodic/pyros_test/0.0.6-1.tar.gz;
+    url = "https://github.com/pyros-dev/pyros-test-release/archive/release/melodic/pyros_test/0.0.6-1.tar.gz";
+    name = "0.0.6-1.tar.gz";
     sha256 = "9f1c355999d96debda08aa9cc999dade80d4c8ba9de137fabd122eb9050c35ea";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation roslint rospy ];
   checkInputs = [ rostest rosunit rostopic ];
   propagatedBuildInputs = [ std-msgs message-runtime rospy ];

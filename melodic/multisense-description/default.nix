@@ -8,10 +8,12 @@ buildRosPackage {
   version = "4.0.2";
 
   src = fetchurl {
-    url = https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/melodic/multisense_description/4.0.2-0.tar.gz;
+    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/melodic/multisense_description/4.0.2-0.tar.gz";
+    name = "4.0.2-0.tar.gz";
     sha256 = "373f9f158ad72ceeab6812656bf4a4aa64bc30ec54d4587856e26c86e14ac766";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

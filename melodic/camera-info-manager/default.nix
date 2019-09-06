@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.11.13";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_common-release/archive/release/melodic/camera_info_manager/1.11.13-0.tar.gz;
+    url = "https://github.com/ros-gbp/image_common-release/archive/release/melodic/camera_info_manager/1.11.13-0.tar.gz";
+    name = "1.11.13-0.tar.gz";
     sha256 = "c24f43db36b8922346fb722119850fdd6a0fafe87fa38521edba5c8c6ed4e98d";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost camera-calibration-parsers image-transport sensor-msgs rostest roslib roscpp ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ boost camera-calibration-parsers image-transport sensor-msgs roslib roscpp ];

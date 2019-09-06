@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_tools/0.6.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_tools/0.6.5-0.tar.gz";
+    name = "0.6.5-0.tar.gz";
     sha256 = "c474f792ecac52bec866f11bb705444141ea38f2e9f23fc1513307a4681ef724";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2 tf2-msgs tf2-ros ];
   propagatedBuildInputs = [ tf2 tf2-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];

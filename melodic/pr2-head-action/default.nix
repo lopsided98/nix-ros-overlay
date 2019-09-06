@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.10.17-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_head_action/1.10.17-1.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_head_action/1.10.17-1.tar.gz";
+    name = "1.10.17-1.tar.gz";
     sha256 = "424a5a18ed18b42bcde7b0f810213435066b8250169b2ff65886802760c7421d";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs kdl-parser orocos-kdl trajectory-msgs sensor-msgs message-filters roscpp actionlib tf-conversions tf geometry-msgs ];
   propagatedBuildInputs = [ pr2-controllers-msgs kdl-parser orocos-kdl trajectory-msgs sensor-msgs message-filters roscpp actionlib tf-conversions tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.0";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/melodic/rocon_msgs/0.9.0-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/melodic/rocon_msgs/0.9.0-0.tar.gz";
+    name = "0.9.0-0.tar.gz";
     sha256 = "5eca94dc0ac40d38a417f7e804e77d25f3abb25ceda463b681ad24186a0444c2";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ concert-msgs gateway-msgs rocon-app-manager-msgs rocon-interaction-msgs rocon-service-pair-msgs rocon-tutorial-msgs scheduler-msgs rocon-device-msgs concert-service-msgs rocon-std-msgs ];
   nativeBuildInputs = [ catkin ];
 

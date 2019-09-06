@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.16.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/melodic/move_base/1.16.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/move_base/1.16.2-0.tar.gz";
+    name = "1.16.2-0.tar.gz";
     sha256 = "63af31b19a053e4877e0af0d899b59da73df19a65258c8a823f41afed51e851d";
   };
 
+  buildType = "catkin";
   buildInputs = [ rotate-recovery actionlib rospy clear-costmap-recovery geometry-msgs message-generation std-srvs tf2-geometry-msgs navfn tf2-ros move-base-msgs nav-msgs visualization-msgs roscpp costmap-2d cmake-modules base-local-planner pluginlib nav-core dynamic-reconfigure ];
-  propagatedBuildInputs = [ costmap-2d std-srvs pluginlib base-local-planner navfn nav-core rotate-recovery tf2-ros rospy move-base-msgs nav-msgs actionlib message-runtime visualization-msgs dynamic-reconfigure clear-costmap-recovery roscpp geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs costmap-2d pluginlib base-local-planner navfn nav-core rotate-recovery tf2-ros move-base-msgs nav-msgs actionlib message-runtime visualization-msgs rospy clear-costmap-recovery dynamic-reconfigure roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

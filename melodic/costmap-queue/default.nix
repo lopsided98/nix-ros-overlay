@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.5-r1";
 
   src = fetchurl {
-    url = https://github.com/DLu/robot_navigation-release/archive/release/melodic/costmap_queue/0.2.5-1.tar.gz;
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/costmap_queue/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
     sha256 = "12cc3931e8f432c3951f95fd4379597f05ec41815ccc9aea7da7c3c9a4a3839b";
   };
 
+  buildType = "catkin";
   buildInputs = [ nav-core2 roscpp ];
   checkInputs = [ rosunit roslint ];
   propagatedBuildInputs = [ nav-core2 roscpp ];

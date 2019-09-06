@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.10.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/calibration-release/archive/release/melodic/settlerlib/0.10.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/calibration-release/archive/release/melodic/settlerlib/0.10.14-0.tar.gz";
+    name = "0.10.14-0.tar.gz";
     sha256 = "795d9982aacaca98ad5750e40e707596f6a88b7f7f703ee664ebd98464d861b8";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost rostime rosconsole calibration-msgs ];
-  propagatedBuildInputs = [ boost rostime rosconsole calibration-msgs ];
+  propagatedBuildInputs = [ calibration-msgs rosconsole rostime boost ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

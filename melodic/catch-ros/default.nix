@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/AIS-Bonn/catch_ros-release/archive/release/melodic/catch_ros/0.3.0-0.tar.gz;
+    url = "https://github.com/AIS-Bonn/catch_ros-release/archive/release/melodic/catch_ros/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "186ec627d219a896f681446242ce546c8595429ac4f058fab5ac4aebec4f261b";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/CPFL/robosense-release/archive/release/melodic/rslidar_driver/1.0.2-0.tar.gz;
+    url = "https://github.com/CPFL/robosense-release/archive/release/melodic/rslidar_driver/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "7f1ae8931ebeb64b13cf0b1976fb269a63257de51d8de79c6cebbd716a307661";
   };
 
+  buildType = "catkin";
   buildInputs = [ pcl-ros rospy tf pcl-conversions libpcap message-generation angles roslaunch roslib tf2-ros std-msgs roscpp nodelet pluginlib pcl sensor-msgs diagnostic-updater rostest rslidar-msgs dynamic-reconfigure ];
-  propagatedBuildInputs = [ pluginlib pcl sensor-msgs roscpp rospy diagnostic-updater roslib rslidar-msgs message-runtime nodelet pcl-ros std-msgs angles dynamic-reconfigure tf pcl-conversions ];
+  propagatedBuildInputs = [ pluginlib pcl sensor-msgs roscpp diagnostic-updater roslib rslidar-msgs pcl-ros message-runtime nodelet rospy std-msgs angles dynamic-reconfigure tf pcl-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

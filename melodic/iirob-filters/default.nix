@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.8.1-r2";
 
   src = fetchurl {
-    url = https://github.com/KITrobotics/iirob_filters-release/archive/release/melodic/iirob_filters/0.8.1-2.tar.gz;
+    url = "https://github.com/KITrobotics/iirob_filters-release/archive/release/melodic/iirob_filters/0.8.1-2.tar.gz";
+    name = "0.8.1-2.tar.gz";
     sha256 = "6629c570ce81b0181753951b2c3376bfe2c81ba9d8819f32380e8a5e668c3494";
   };
 
+  buildType = "catkin";
   buildInputs = [ filters cmake-modules pluginlib roscpp tf2-ros rostest dynamic-reconfigure eigen-conversions rosparam-handler geometry-msgs ];
-  propagatedBuildInputs = [ filters cmake-modules pluginlib roscpp tf2-ros rostest dynamic-reconfigure eigen-conversions rosparam-handler geometry-msgs ];
+  propagatedBuildInputs = [ filters cmake-modules pluginlib rosparam-handler tf2-ros rostest dynamic-reconfigure eigen-conversions roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

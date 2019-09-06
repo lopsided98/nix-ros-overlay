@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.7";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/camera_umd-release/archive/release/melodic/camera_umd/0.2.7-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/camera_umd-release/archive/release/melodic/camera_umd/0.2.7-0.tar.gz";
+    name = "0.2.7-0.tar.gz";
     sha256 = "fb6705f080d0f3add72ec01a70dfb7e3efd9f264c9294a4a2ced40f9415597ee";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ jpeg-streamer uvc-camera ];
   nativeBuildInputs = [ catkin ];
 

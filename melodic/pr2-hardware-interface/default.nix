@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.18";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_hardware_interface/1.8.18-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_hardware_interface/1.8.18-0.tar.gz";
+    name = "1.8.18-0.tar.gz";
     sha256 = "abbcd1c6b4af9419057f2bb0b7f7677943e16e03abdd15933e41efdc16975247";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp geometry-msgs ];
   propagatedBuildInputs = [ roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

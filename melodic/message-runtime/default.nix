@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.12";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/message_runtime-release/archive/release/melodic/message_runtime/0.4.12-0.tar.gz;
+    url = "https://github.com/ros-gbp/message_runtime-release/archive/release/melodic/message_runtime/0.4.12-0.tar.gz";
+    name = "0.4.12-0.tar.gz";
     sha256 = "70669611054c91c2d65ae94d5e2474198970929338cbb76411cb560902b1c800";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ cpp-common roscpp-traits rostime roscpp-serialization genpy ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_description/1.2.2-1.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_description/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
     sha256 = "c0b22d01ac98d63f27f51f7ce6c9ea134ca186b48d8c08e2c71ca984b0791a32";
   };
 
+  buildType = "catkin";
   buildInputs = [ urdf xacro ];
   propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];

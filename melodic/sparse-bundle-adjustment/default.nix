@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/sparse_bundle_adjustment-release/archive/release/melodic/sparse_bundle_adjustment/0.4.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/sparse_bundle_adjustment-release/archive/release/melodic/sparse_bundle_adjustment/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "ab87c65d8f8d392258c9d733edf76c417488f78b564a7ce7000bd67ed5bd26fd";
   };
 
+  buildType = "catkin";
   buildInputs = [ liblapack suitesparse blas eigen ];
   propagatedBuildInputs = [ liblapack suitesparse blas eigen ];
   nativeBuildInputs = [ catkin ];

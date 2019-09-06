@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.8.18";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_mechanism_diagnostics/1.8.18-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_mechanism_diagnostics/1.8.18-0.tar.gz";
+    name = "1.8.18-0.tar.gz";
     sha256 = "3d6fbbd7282c6a07b6ea340848aa1fb79444832f19224508ed20fab0e73bf98c";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-mechanism-msgs std-srvs diagnostic-updater rostest urdf angles std-msgs diagnostic-msgs roscpp pr2-mechanism-model ];
-  propagatedBuildInputs = [ pr2-mechanism-msgs angles std-srvs diagnostic-updater urdf rospy std-msgs diagnostic-msgs roscpp pr2-mechanism-model ];
+  propagatedBuildInputs = [ pr2-mechanism-msgs std-srvs diagnostic-msgs diagnostic-updater urdf rospy std-msgs angles roscpp pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

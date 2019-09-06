@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0";
 
   src = fetchurl {
-    url = https://github.com/fkie-release/potree_rviz_plugin-release/archive/release/melodic/fkie_potree_rviz_plugin/1.0.0-0.tar.gz;
+    url = "https://github.com/fkie-release/potree_rviz_plugin-release/archive/release/melodic/fkie_potree_rviz_plugin/1.0.0-0.tar.gz";
+    name = "1.0.0-0.tar.gz";
     sha256 = "9a9b281a5546efc32cbf9d79e4675deaf0c30bae167cd88a26c6c904a23cbd8c";
   };
 
+  buildType = "catkin";
   buildInputs = [ jsoncpp rviz boost qt5.qtbase ];
   propagatedBuildInputs = [ media-export rviz boost qt5.qtbase ];
   nativeBuildInputs = [ catkin ];

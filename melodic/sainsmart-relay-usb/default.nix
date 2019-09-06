@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/sainsmart_relay_usb-release/archive/release/melodic/sainsmart_relay_usb/0.0.2-0.tar.gz;
+    url = "https://github.com/DataspeedInc-release/sainsmart_relay_usb-release/archive/release/melodic/sainsmart_relay_usb/0.0.2-0.tar.gz";
+    name = "0.0.2-0.tar.gz";
     sha256 = "73e7449cf27e9caa518695cb6996d8909422ae70540708e07580a666560ddd66";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs roscpp roslib libftdi ];
   propagatedBuildInputs = [ std-msgs roscpp libftdi ];
   nativeBuildInputs = [ catkin ];

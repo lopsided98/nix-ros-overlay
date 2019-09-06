@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/melodic/multimaster_msgs/0.0.2-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/melodic/multimaster_msgs/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
     sha256 = "a54fb359f77128a68fcace506ee0da2be2b147ccd567b4f947d70ddf740bb153";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

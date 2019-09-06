@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.9";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_shell-release/archive/release/melodic/rqt_shell/0.4.9-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_shell-release/archive/release/melodic/rqt_shell/0.4.9-0.tar.gz";
+    name = "0.4.9-0.tar.gz";
     sha256 = "522e34ae2cf5e4af2d14805e70767f394ec88043033a1c6e44324ae58a139001";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui qt-gui qt-gui-py-common python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 

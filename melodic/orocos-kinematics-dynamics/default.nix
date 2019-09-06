@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.0";
 
   src = fetchurl {
-    url = https://github.com/orocos/orocos-kdl-release/archive/release/melodic/orocos_kinematics_dynamics/1.4.0-0.tar.gz;
+    url = "https://github.com/orocos/orocos-kdl-release/archive/release/melodic/orocos_kinematics_dynamics/1.4.0-0.tar.gz";
+    name = "1.4.0-0.tar.gz";
     sha256 = "2ba6018b3fbbced816694fafd40bf7a9eea586ee7955ec91e4de7864493a2150";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ python-orocos-kdl orocos-kdl ];
   nativeBuildInputs = [ catkin ];
 

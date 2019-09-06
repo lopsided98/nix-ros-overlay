@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.6.13-r2";
 
   src = fetchurl {
-    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_sdh/0.6.13-2.tar.gz;
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_sdh/0.6.13-2.tar.gz";
+    name = "0.6.13-2.tar.gz";
     sha256 = "f6010706d4c01738c29727fda87e6ec606db39057bdffd58473af3d4629bb3e5";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs boost roslint sdhlibrary-cpp control-msgs trajectory-msgs sensor-msgs cob-srvs libntcan message-generation urdf actionlib libusb std-msgs diagnostic-msgs roscpp libpcan dpkg ];
-  propagatedBuildInputs = [ std-srvs boost sdhlibrary-cpp control-msgs trajectory-msgs sensor-msgs cob-srvs libntcan urdf actionlib message-runtime libusb std-msgs diagnostic-msgs roscpp libpcan dpkg ];
+  propagatedBuildInputs = [ std-srvs libpcan boost sdhlibrary-cpp control-msgs trajectory-msgs sensor-msgs diagnostic-msgs cob-srvs urdf message-runtime actionlib std-msgs libntcan roscpp libusb dpkg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.7";
 
   src = fetchurl {
-    url = https://github.com/pal-gbp/backward_ros-release/archive/release/melodic/backward_ros/0.1.7-0.tar.gz;
+    url = "https://github.com/pal-gbp/backward_ros-release/archive/release/melodic/backward_ros/0.1.7-0.tar.gz";
+    name = "0.1.7-0.tar.gz";
     sha256 = "3cec255db3ff1af9bfc80b31ca88a9be50f11d663d9213edf457b0a7ed7eb967";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp elfutils ];
   propagatedBuildInputs = [ roscpp elfutils ];
   nativeBuildInputs = [ catkin ];

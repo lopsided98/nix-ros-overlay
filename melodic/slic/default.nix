@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/slic/2.1.13-1.tar.gz;
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/slic/2.1.13-1.tar.gz";
+    name = "2.1.13-1.tar.gz";
     sha256 = "9de59c93cd889ca9cd1a8abe3e859424efa134e7c76f6584c207f7c805b4972e";
   };
 
+  buildType = "cmake";
   buildInputs = [ cmake-modules git cacert openssl opencv3 ];
   propagatedBuildInputs = [ opencv3 ];
   nativeBuildInputs = [ cmake ];

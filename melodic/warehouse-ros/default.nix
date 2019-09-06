@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.9.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/warehouse_ros-release/archive/release/melodic/warehouse_ros/0.9.3-1.tar.gz;
+    url = "https://github.com/ros-gbp/warehouse_ros-release/archive/release/melodic/warehouse_ros/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
     sha256 = "9bc798170ca3d679ac4f4bf3b5db4fa7d748397c9262be0a2373085a18b051ce";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib tf rostime std-msgs roscpp geometry-msgs ];
   checkInputs = [ rostest gtest ];
-  propagatedBuildInputs = [ pluginlib boost rostime roscpp std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ pluginlib boost tf rostime std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

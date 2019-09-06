@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.13";
 
   src = fetchurl {
-    url = https://github.com/tuw-robotics/tuw_msgs-release/archive/release/melodic/tuw_geometry_msgs/0.0.13-0.tar.gz;
+    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/melodic/tuw_geometry_msgs/0.0.13-0.tar.gz";
+    name = "0.0.13-0.tar.gz";
     sha256 = "423e031652dcf0357d6e857d9a40e120bd249816739ca42785c2961006ddfbce";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation rospy std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ message-runtime rospy std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_tools-release/archive/release/melodic/rocon_python_comms/0.3.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_tools-release/archive/release/melodic/rocon_python_comms/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "9592f4282b01f537108ca98200116db495421ad1d7da6c63016e315229a37394";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest pythonPackages.catkin-pkg ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ unique-id genpy rosservice pythonPackages.pyyaml uuid-msgs rocon-console rocon-service-pair-msgs rosgraph rostopic rospy roslib rosnode ];

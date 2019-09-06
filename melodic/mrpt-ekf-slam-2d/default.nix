@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.9";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/melodic/mrpt_ekf_slam_2d/0.1.9-0.tar.gz;
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/melodic/mrpt_ekf_slam_2d/0.1.9-0.tar.gz";
+    name = "0.1.9-0.tar.gz";
     sha256 = "b9d8fdcaf4bce0c98375bb5c7a2db364d986b0818da8e489991b0bc4321901c8";
   };
 
+  buildType = "catkin";
   buildInputs = [ mrpt-bridge tf sensor-msgs roslib nav-msgs mrpt1 visualization-msgs dynamic-reconfigure std-msgs roslaunch roscpp ];
-  propagatedBuildInputs = [ mrpt-bridge sensor-msgs mrpt-rawlog roscpp roslib nav-msgs rviz mrpt1 visualization-msgs dynamic-reconfigure std-msgs roslaunch tf ];
+  propagatedBuildInputs = [ mrpt-bridge sensor-msgs mrpt-rawlog roscpp roslib nav-msgs mrpt1 rviz visualization-msgs dynamic-reconfigure std-msgs roslaunch tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

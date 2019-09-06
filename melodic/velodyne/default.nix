@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.5.2";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/velodyne-release/archive/release/melodic/velodyne/1.5.2-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/melodic/velodyne/1.5.2-0.tar.gz";
+    name = "1.5.2-0.tar.gz";
     sha256 = "31d4489ac69e37ba7a4d928e66b9d25af331252dca9ebdd9a3be6a2a0c52dde9";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ velodyne-driver velodyne-pointcloud velodyne-laserscan velodyne-msgs ];
   nativeBuildInputs = [ catkin ];
 

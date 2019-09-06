@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/octomap-release/archive/release/melodic/octomap/1.9.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/melodic/octomap/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
     sha256 = "20a5bb7d159129053c2b25f7c02a76ad4ffec83c31e2fb4486753c88115caee6";
   };
 
+  buildType = "cmake";
   propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 

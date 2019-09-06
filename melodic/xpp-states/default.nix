@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_states/1.0.10-0.tar.gz;
+    url = "https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_states/1.0.10-0.tar.gz";
+    name = "1.0.10-0.tar.gz";
     sha256 = "7844597910c688e3ae3664b58bf6d3f17f0364d049d890156ed4675a2a2825f9";
   };
 
+  buildType = "catkin";
   buildInputs = [ eigen ];
   propagatedBuildInputs = [ eigen ];
   nativeBuildInputs = [ catkin ];

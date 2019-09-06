@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/Terabee/teraranger-release/archive/release/melodic/teraranger/2.1.0-1.tar.gz;
+    url = "https://github.com/Terabee/teraranger-release/archive/release/melodic/teraranger/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
     sha256 = "7a46f25a882f135c1261b889e11462660d26f4b6e6d288d8b2026dfda5f4bc0a";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs serial dynamic-reconfigure std-msgs roscpp ];
   propagatedBuildInputs = [ sensor-msgs serial dynamic-reconfigure std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

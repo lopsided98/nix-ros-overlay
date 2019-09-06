@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace-release/archive/release/melodic/turtlebot3_autorace/1.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace-release/archive/release/melodic/turtlebot3_autorace/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "1e9063e4da91e347177fe176cdcdea7510bd47e555bada4446679354de1b53ff";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ turtlebot3-autorace-camera turtlebot3-autorace-detect turtlebot3-autorace-control turtlebot3-autorace-core ];
   nativeBuildInputs = [ catkin ];
 

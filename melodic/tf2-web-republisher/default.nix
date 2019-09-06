@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/RobotWebTools-release/tf2_web_republisher-release/archive/release/melodic/tf2_web_republisher/0.3.2-0.tar.gz;
+    url = "https://github.com/RobotWebTools-release/tf2_web_republisher-release/archive/release/melodic/tf2_web_republisher/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "401fcc79bf11e5071e8304b1053bf8afed6f3e91d3df30c0823c87c82b741420";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs tf tf2-ros message-generation actionlib roscpp geometry-msgs ];
   checkInputs = [ rostest rospy ];
-  propagatedBuildInputs = [ actionlib-msgs tf tf2-ros message-runtime actionlib roscpp geometry-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs roscpp tf2-ros message-runtime actionlib tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

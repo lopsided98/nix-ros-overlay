@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/class_loader-release/archive/release/melodic/class_loader/0.4.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/class_loader-release/archive/release/melodic/class_loader/0.4.1-0.tar.gz";
+    name = "0.4.1-0.tar.gz";
     sha256 = "09c3d35e5afb806c612e843ef15078b97a0a6051174a45712d38c38345eae4a5";
   };
 
+  buildType = "catkin";
   buildInputs = [ poco console-bridge cmake-modules boost ];
   propagatedBuildInputs = [ poco console-bridge boost ];
   nativeBuildInputs = [ catkin ];

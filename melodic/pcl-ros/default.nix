@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.6.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/perception_pcl-release/archive/release/melodic/pcl_ros/1.6.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/melodic/pcl_ros/1.6.2-0.tar.gz";
+    name = "1.6.2-0.tar.gz";
     sha256 = "deb1b59fcc5f3f9247e9fa90e7f5bde35d22668aa13a9300a4d6d3315552215e";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole pluginlib cmake-modules pcl rosbag nodelet-topic-tools message-filters pcl-msgs roscpp sensor-msgs roslib tf2-eigen dynamic-reconfigure std-msgs nodelet tf pcl-conversions eigen ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ pluginlib pcl rosbag nodelet-topic-tools message-filters pcl-msgs roscpp sensor-msgs tf2-eigen dynamic-reconfigure std-msgs nodelet tf pcl-conversions eigen ];
+  propagatedBuildInputs = [ pluginlib pcl rosbag nodelet-topic-tools sensor-msgs message-filters roscpp nodelet pcl-msgs std-msgs tf2-eigen dynamic-reconfigure tf pcl-conversions eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

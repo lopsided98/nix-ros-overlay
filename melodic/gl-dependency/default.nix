@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/gl_dependency-release/archive/release/melodic/gl_dependency/1.1.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/gl_dependency-release/archive/release/melodic/gl_dependency/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "268881107d9d7d88c38530235fe1c38bd6343ffa7d326c451136895e06f3422e";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.pyqt5 ];
   nativeBuildInputs = [ catkin ];
 

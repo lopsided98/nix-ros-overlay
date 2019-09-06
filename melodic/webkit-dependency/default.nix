@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/webkit_dependency-release/archive/release/melodic/webkit_dependency/1.1.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/webkit_dependency-release/archive/release/melodic/webkit_dependency/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "a187ab79ea2545b2dec0f48d74af9b4f3875f73ac649c8527e54e9ea6cda0e29";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.pyqt5_with_qtwebkit ];
   nativeBuildInputs = [ catkin ];
 

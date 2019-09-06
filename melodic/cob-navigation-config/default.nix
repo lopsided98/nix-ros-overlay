@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_navigation_config/0.6.8-1.tar.gz;
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_navigation_config/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
     sha256 = "8ad80877a567b3f893be1824fa243ba99f265e5ecb8e19a282cbfd79778f830e";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

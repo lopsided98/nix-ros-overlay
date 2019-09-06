@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/warthog_desktop-release/archive/release/melodic/warthog_viz/0.0.1-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/warthog_desktop-release/archive/release/melodic/warthog_viz/0.0.1-1.tar.gz";
+    name = "0.0.1-1.tar.gz";
     sha256 = "627e058e9037beadb575229c7dadfc27003f278a83edb1177aa271629be1e6d1";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joint-state-publisher warthog-description rviz ];
+  propagatedBuildInputs = [ joint-state-publisher rviz warthog-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

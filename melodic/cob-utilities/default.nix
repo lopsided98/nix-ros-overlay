@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_utilities/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_utilities/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "6f477f07e09f122c8f09c6aa6410e212b61ab819b6dcba8d8603a0c5bc15febf";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

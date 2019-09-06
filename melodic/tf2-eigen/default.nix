@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_eigen/0.6.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_eigen/0.6.5-0.tar.gz";
+    name = "0.6.5-0.tar.gz";
     sha256 = "0097c690bd551d83154cc551b7d50439d86e8acda2bc4ebc307d1157cdf8c24d";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2 cmake-modules geometry-msgs eigen ];
   propagatedBuildInputs = [ tf2 geometry-msgs eigen ];
   nativeBuildInputs = [ catkin ];

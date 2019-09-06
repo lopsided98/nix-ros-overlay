@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.12";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/genmsg-release/archive/release/melodic/genmsg/0.5.12-0.tar.gz;
+    url = "https://github.com/ros-gbp/genmsg-release/archive/release/melodic/genmsg/0.5.12-0.tar.gz";
+    name = "0.5.12-0.tar.gz";
     sha256 = "6398881d14a9653d5fccff7733c2162513814bb14350bd7958c5cc2c36201e9e";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ catkin pythonPackages.empy ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_tf2/0.2.12-1.tar.gz;
+    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_tf2/0.2.12-1.tar.gz";
+    name = "0.2.12-1.tar.gz";
     sha256 = "3ef1ab744ff67f4a1b6a34194055decc9d0e6c7b5b53e5054ed00808661cbbdc";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ tf2-msgs actionlib-lisp roslisp cl-transforms-stamped cl-utils ];
   nativeBuildInputs = [ catkin ];
 

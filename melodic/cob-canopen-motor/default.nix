@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_canopen_motor/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_canopen_motor/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "86143b61b0ff960fb5b1c0b7dd54368d48c553d07b45cb3ee787aea2a58a599e";
   };
 
+  buildType = "catkin";
   buildInputs = [ cob-generic-can roscpp cob-utilities ];
   propagatedBuildInputs = [ cob-generic-can roscpp cob-utilities ];
   nativeBuildInputs = [ catkin ];

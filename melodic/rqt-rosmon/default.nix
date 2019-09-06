@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/xqms/rosmon-release/archive/release/melodic/rqt_rosmon/2.1.1-1.tar.gz;
+    url = "https://github.com/xqms/rosmon-release/archive/release/melodic/rqt_rosmon/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
     sha256 = "9cffa354266a4e08bb3545b0a1efb9b7cc16ffebded8423366417f86dbcd1f2a";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib rqt-gui qt5.qtbase rqt-gui-cpp roscpp rosmon-msgs ];
   propagatedBuildInputs = [ pluginlib rqt-gui rqt-gui-cpp roscpp rosmon-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.3";
 
   src = fetchurl {
-    url = https://github.com/ethz-asl/rotors_simulator-release/archive/release/melodic/rotors_joy_interface/2.2.3-0.tar.gz;
+    url = "https://github.com/ethz-asl/rotors_simulator-release/archive/release/melodic/rotors_joy_interface/2.2.3-0.tar.gz";
+    name = "2.2.3-0.tar.gz";
     sha256 = "ee68f6dbc4f3d3b8b1377de6ceca6113c1d528d5a898c8766c62c0394bfd4db1";
   };
 
+  buildType = "catkin";
   buildInputs = [ mav-msgs trajectory-msgs sensor-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ mav-msgs trajectory-msgs sensor-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

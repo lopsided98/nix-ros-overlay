@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_common-release/archive/release/melodic/jsk_common/2.2.10-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/jsk_common/2.2.10-0.tar.gz";
+    name = "2.2.10-0.tar.gz";
     sha256 = "f199dfa0fec8ff6d0e253344ab11deb511b0d1f300f4473845803b2a1c54db2f";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ image-view2 jsk-topic-tools jsk-tilt-laser jsk-network-tools dynamic-tf-publisher jsk-tools virtual-force-publisher multi-map-server ];
   nativeBuildInputs = [ catkin ];
 

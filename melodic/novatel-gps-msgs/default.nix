@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-novatel-gps-msgs";
-  version = "3.8.0-r1";
+  version = "3.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/melodic/novatel_gps_msgs/3.8.0-1.tar.gz;
-    sha256 = "8f4a3f0c624739a46f6c3483100ac41ed8dbaeacc59e6ad820f46949b2a55890";
+    url = "https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/melodic/novatel_gps_msgs/3.9.0-1.tar.gz";
+    name = "3.9.0-1.tar.gz";
+    sha256 = "da4c54202e94ee79b9fb117b82c2deb5da65250efd71d89dc63de5a95dfb6e9f";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

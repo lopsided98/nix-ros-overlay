@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/melodic/open_manipulator_libs/2.0.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/melodic/open_manipulator_libs/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
     sha256 = "1e026abdb7af7fe42518d35f418754921f3231a328794e8eba9d10ab1bea3b63";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules robotis-manipulator dynamixel-workbench-toolbox eigen roscpp ];
   propagatedBuildInputs = [ cmake-modules robotis-manipulator dynamixel-workbench-toolbox eigen roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/neonavigation_msgs/0.3.1-0.tar.gz;
+    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/neonavigation_msgs/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "7d971fab567d6f8c40daf97a1d1c7a8251a23576fa5a69396babfa98813ada18";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ costmap-cspace-msgs planner-cspace-msgs map-organizer-msgs trajectory-tracker-msgs ];
   nativeBuildInputs = [ catkin ];
 

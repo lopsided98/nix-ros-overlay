@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_twist_controller/0.8.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_twist_controller/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
     sha256 = "b9d449b443b20e83c4918a015cae7b7e1a850583bf560f3ac75b4974939db22e";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf-conversions tf geometry-msgs roslint boost eigen-conversions kdl-conversions orocos-kdl cob-control-msgs trajectory-msgs nav-msgs urdf std-msgs roscpp visualization-msgs eigen kdl-parser cmake-modules pluginlib sensor-msgs cob-srvs dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy tf-conversions tf geometry-msgs boost rviz robot-state-publisher eigen-conversions xacro kdl-conversions orocos-kdl cob-control-msgs trajectory-msgs nav-msgs urdf cob-frame-tracker std-msgs roscpp visualization-msgs eigen kdl-parser cmake-modules pluginlib sensor-msgs cob-srvs dynamic-reconfigure topic-tools ];
   nativeBuildInputs = [ catkin ];

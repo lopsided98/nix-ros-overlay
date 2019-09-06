@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.12";
 
   src = fetchurl {
-    url = https://github.com/fkie-release/multimaster_fkie-release/archive/release/melodic/master_sync_fkie/0.8.12-0.tar.gz;
+    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/melodic/master_sync_fkie/0.8.12-0.tar.gz";
+    name = "0.8.12-0.tar.gz";
     sha256 = "14b81d9024f42cd1ad4eb7e35af79cdddc3682c38bbc867fea109156368b4814";
   };
 
+  buildType = "catkin";
   buildInputs = [ master-discovery-fkie multimaster-msgs-fkie ];
   propagatedBuildInputs = [ multimaster-msgs-fkie rosgraph rospy master-discovery-fkie roslib ];
   nativeBuildInputs = [ catkin ];

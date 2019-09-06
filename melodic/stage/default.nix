@@ -8,10 +8,12 @@ buildRosPackage {
   version = "4.3.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/stage-release/archive/release/melodic/stage/4.3.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/stage-release/archive/release/melodic/stage/4.3.0-0.tar.gz";
+    name = "4.3.0-0.tar.gz";
     sha256 = "3c72bba7242ecd98b26f177e4227aef06ec85915f196ee88ec6103be4dfb492d";
   };
 
+  buildType = "cmake";
   buildInputs = [ gtk2 libtool libjpeg libGLU fltk libGL ];
   propagatedBuildInputs = [ gtk2 catkin libjpeg libGLU fltk libGL ];
   nativeBuildInputs = [ cmake pkg-config ];

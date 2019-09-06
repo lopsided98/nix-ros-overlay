@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/uav_testing-release/archive/release/melodic/ksql_airport/0.0.1-1.tar.gz;
+    url = "https://github.com/ros-gbp/uav_testing-release/archive/release/melodic/ksql_airport/0.0.1-1.tar.gz";
+    name = "0.0.1-1.tar.gz";
     sha256 = "b889d36b4514ad7eb0585a6a63a596a04cc2b909d1ba90ef3ca858be9a99de47";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 

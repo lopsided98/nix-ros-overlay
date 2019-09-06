@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/ros-teleop/teleop_twist_joy-release/archive/release/melodic/teleop_twist_joy/0.1.3-0.tar.gz;
+    url = "https://github.com/ros-teleop/teleop_twist_joy-release/archive/release/melodic/teleop_twist_joy/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "3e9186dd642c84cc2776994b6afa7a97a9a4759d53170c1e1f9fddd9fbc789e4";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslint sensor-msgs joy rostest roslaunch roscpp geometry-msgs ];
-  propagatedBuildInputs = [ roscpp sensor-msgs joy geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs joy roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/mini_maxwell/2.1.13-1.tar.gz;
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/mini_maxwell/2.1.13-1.tar.gz";
+    name = "2.1.13-1.tar.gz";
     sha256 = "41f120f3219017d91224594140bf4680584f6a9efdff8aaba4e170ed62202649";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslib cmake-modules dynamic-reconfigure ];
   propagatedBuildInputs = [ dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

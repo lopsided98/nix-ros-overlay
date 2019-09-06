@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_states/1.2.1-1.tar.gz;
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_states/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
     sha256 = "5e9094761ffc0ef7cfe630c2647c261f3842dabf5f78a792ad7fc49a815fde7d";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest ];
   checkInputs = [ geometry-msgs ];
   propagatedBuildInputs = [ flexbe-msgs rosbag smach-ros flexbe-testing rospy ];

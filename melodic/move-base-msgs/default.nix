@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.13.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation_msgs-release/archive/release/melodic/move_base_msgs/1.13.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation_msgs-release/archive/release/melodic/move_base_msgs/1.13.0-0.tar.gz";
+    name = "1.13.0-0.tar.gz";
     sha256 = "a9b1ee115c3252718a9915a94ba16421a39309ed237a33d790f486d468f8a1ef";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation actionlib-msgs geometry-msgs ];
   propagatedBuildInputs = [ message-runtime actionlib-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

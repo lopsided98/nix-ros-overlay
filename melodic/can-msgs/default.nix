@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/can_msgs/0.8.1-1.tar.gz;
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/can_msgs/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
     sha256 = "1a46406026c0cf2affec4efd5e03f49c45e0a47375196a13b1c5a8b831328c6c";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

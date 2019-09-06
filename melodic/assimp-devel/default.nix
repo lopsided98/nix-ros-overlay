@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/assimp_devel/2.1.13-1.tar.gz;
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/assimp_devel/2.1.13-1.tar.gz";
+    name = "2.1.13-1.tar.gz";
     sha256 = "f319e55fcad41526f49375ba1d5c2dff1c0052837e39aa60ca113c28748a3450";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosboost-cfg boost mk git rosbuild cacert unzip openssl zlib ];
   propagatedBuildInputs = [ zlib boost ];
   nativeBuildInputs = [ catkin ];

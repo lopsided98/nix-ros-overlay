@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.13.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/urdf-release/archive/release/melodic/urdf_parser_plugin/1.13.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/urdf-release/archive/release/melodic/urdf_parser_plugin/1.13.1-0.tar.gz";
+    name = "1.13.1-0.tar.gz";
     sha256 = "7031baf19ed479dcc35455fc5090a740ccc28592c8fd565154ea6556aa80f747";
   };
 
+  buildType = "catkin";
   buildInputs = [ urdfdom-headers ];
   propagatedBuildInputs = [ urdfdom-headers ];
   nativeBuildInputs = [ catkin ];

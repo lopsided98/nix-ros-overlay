@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.6";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/eca_a9-release/archive/release/melodic/eca_a9_control/0.1.6-0.tar.gz;
+    url = "https://github.com/uuvsimulator/eca_a9-release/archive/release/melodic/eca_a9_control/0.1.6-0.tar.gz";
+    name = "0.1.6-0.tar.gz";
     sha256 = "2c5e9d6e0a17f5cf7b07029ac6e1df1dbcb1d47b77737b8c1d5a1eefd3254c1e";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ uuv-trajectory-control uuv-teleop ];
   nativeBuildInputs = [ catkin ];
 

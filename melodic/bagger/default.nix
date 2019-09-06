@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/squarerobot/bagger-release/archive/release/melodic/bagger/0.1.3-0.tar.gz;
+    url = "https://github.com/squarerobot/bagger-release/archive/release/melodic/bagger/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "e8275de0f4ad29f758472ae12d8ce534b53705ec57066e8611498b6077188226";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslint rostest message-generation std-msgs roscpp ];
   checkInputs = [ nav-msgs geometry-msgs ];
   propagatedBuildInputs = [ rosbag rostest message-runtime rospy std-msgs roscpp ];

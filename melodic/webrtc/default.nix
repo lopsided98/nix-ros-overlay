@@ -8,10 +8,12 @@ buildRosPackage {
   version = "59.0.3";
 
   src = fetchurl {
-    url = https://github.com/RobotWebTools-release/webrtc_ros-release/archive/release/melodic/webrtc/59.0.3-0.tar.gz;
+    url = "https://github.com/RobotWebTools-release/webrtc_ros-release/archive/release/melodic/webrtc/59.0.3-0.tar.gz";
+    name = "59.0.3-0.tar.gz";
     sha256 = "bdc2b6651bda28702a87bdc1cb9a53dbcd5a47dc7363d71bd81ea87dc0271e77";
   };
 
+  buildType = "cmake";
   buildInputs = [ pulseaudio gtk3 gtk2 alsaLib glib ];
   propagatedBuildInputs = [ pulseaudio gtk3 gtk2 alsaLib glib ];
   nativeBuildInputs = [ git cmake wget ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/driver_common-release/archive/release/melodic/driver_common/1.6.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/driver_common-release/archive/release/melodic/driver_common/1.6.8-0.tar.gz";
+    name = "1.6.8-0.tar.gz";
     sha256 = "ea3516b1e1c6ad29343302b5c174ea896dc280f60800fe0c6d0e34e08b31d465";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ driver-base timestamp-tools ];
   nativeBuildInputs = [ catkin ];
 

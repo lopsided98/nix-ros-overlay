@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.5";
 
   src = fetchurl {
-    url = https://github.com/shadow-robot/ethercat_grant-release/archive/release/melodic/ethercat_grant/0.2.5-0.tar.gz;
+    url = "https://github.com/shadow-robot/ethercat_grant-release/archive/release/melodic/ethercat_grant/0.2.5-0.tar.gz";
+    name = "0.2.5-0.tar.gz";
     sha256 = "3b5baa1b6b84b2538af53dcc410d980579cbfc932f002dcf3cc25071bb452a52";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp libcap ];
   propagatedBuildInputs = [ roscpp libcap ];
   nativeBuildInputs = [ catkin ];

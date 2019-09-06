@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.3.3-r1";
 
   src = fetchurl {
-    url = https://github.com/facontidavide/ros_type_introspection-release/archive/release/melodic/ros_type_introspection/1.3.3-1.tar.gz;
+    url = "https://github.com/facontidavide/ros_type_introspection-release/archive/release/melodic/ros_type_introspection/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
     sha256 = "95cc396b2deeddef4a447980088c3a45ebaf58b5200417d9c7c9b0ff96c77e19";
   };
 
+  buildType = "catkin";
   buildInputs = [ abseil-cpp roscpp rostime roscpp-serialization ];
-  propagatedBuildInputs = [ abseil-cpp roscpp rostime roscpp-serialization ];
+  propagatedBuildInputs = [ abseil-cpp rostime roscpp roscpp-serialization ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_kdl/0.6.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_kdl/0.6.5-0.tar.gz";
+    name = "0.6.5-0.tar.gz";
     sha256 = "af0a21267f7ff0d435f5b54a3b55575e399daaf75ed8e01f09906e1b9af018cf";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules orocos-kdl tf2-ros tf2 eigen ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ tf2 orocos-kdl tf2-ros eigen ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_costmap_core/0.2.4-1.tar.gz;
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_costmap_core/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
     sha256 = "0901271448412764114beba972a0f9edba30f2d71cd734ea823b5bad0d8f2715";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d mbf-abstract-core nav-core mbf-utility std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ costmap-2d mbf-abstract-core nav-core mbf-utility std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

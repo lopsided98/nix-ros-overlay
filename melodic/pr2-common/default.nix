@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_common/1.12.4-1.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_common/1.12.4-1.tar.gz";
+    name = "1.12.4-1.tar.gz";
     sha256 = "a079541b7d696b2a3755aaef63c34e720a67d9c5700fa0acc3a9fa9167745283";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pr2-machine pr2-dashboard-aggregator pr2-msgs pr2-description ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry-release/archive/release/melodic/tf/1.12.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/melodic/tf/1.12.0-0.tar.gz";
+    name = "1.12.0-0.tar.gz";
     sha256 = "00d706fa94be4c4348556e8985dae8be407e76aae3f767e92dbd35e206f5ab03";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole sensor-msgs message-filters roscpp tf2-ros message-generation angles std-msgs rostime geometry-msgs ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ rosconsole roswtf sensor-msgs message-filters tf2-ros message-runtime std-msgs roscpp graphviz geometry-msgs ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/mikeferguson/code_coverage-gbp/archive/release/melodic/code_coverage/0.2.4-1.tar.gz;
+    url = "https://github.com/mikeferguson/code_coverage-gbp/archive/release/melodic/code_coverage/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
     sha256 = "d5efb8d2d711ff2afaa056c470c4314d3efa3194eaeca1d831a07fac785e4b76";
   };
 
+  buildType = "catkin";
   buildInputs = [ lcov ];
   propagatedBuildInputs = [ lcov ];
   nativeBuildInputs = [ catkin ];

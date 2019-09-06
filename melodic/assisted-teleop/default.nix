@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/assisted_teleop/0.3.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/assisted_teleop/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "5cf3f26df26c9c7a8045f5d75aa0b6b6fecccd58a38495b850c49b94540969e5";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs message-filters tf2-ros move-base-msgs roslib actionlib angles roscpp geometry-msgs eigen ];
   propagatedBuildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs message-filters tf2-ros move-base-msgs roslib actionlib angles roscpp geometry-msgs eigen ];
   nativeBuildInputs = [ catkin ];

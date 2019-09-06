@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.0";
 
   src = fetchurl {
-    url = https://github.com/wu-robotics/navigation_layers_release/archive/release/melodic/range_sensor_layer/0.5.0-0.tar.gz;
+    url = "https://github.com/wu-robotics/navigation_layers_release/archive/release/melodic/range_sensor_layer/0.5.0-0.tar.gz";
+    name = "0.5.0-0.tar.gz";
     sha256 = "8e94872327b9579a9ca65c6aefe659bfffb7544a61ddca67580e8707af85d2e7";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d pluginlib sensor-msgs rospy angles dynamic-reconfigure roscpp geometry-msgs ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ costmap-2d pluginlib sensor-msgs rospy angles dynamic-reconfigure roscpp geometry-msgs ];

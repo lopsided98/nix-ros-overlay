@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3_applications-release/archive/release/melodic/turtlebot3_applications/1.1.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_applications-release/archive/release/melodic/turtlebot3_applications/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "6a187830b2a3b3dc070e2ad870e5e17a471fa63318a305b188b13e35b9c5bd69";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ turtlebot3-automatic-parking-vision turtlebot3-panorama turtlebot3-follow-filter turtlebot3-automatic-parking turtlebot3-follower ];
   nativeBuildInputs = [ catkin ];
 

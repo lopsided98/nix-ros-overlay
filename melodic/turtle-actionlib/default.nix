@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/common_tutorials-release/archive/release/melodic/turtle_actionlib/0.1.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/melodic/turtle_actionlib/0.1.11-0.tar.gz";
+    name = "0.1.11-0.tar.gz";
     sha256 = "692d2a6946d45017346aa4165b4331314b1fde5f0067717ce33bf7ebbce1bc94";
   };
 
+  buildType = "catkin";
   buildInputs = [ turtlesim rosconsole actionlib-msgs message-generation actionlib std-msgs angles roscpp geometry-msgs ];
   propagatedBuildInputs = [ turtlesim rosconsole actionlib-msgs message-runtime actionlib std-msgs angles roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

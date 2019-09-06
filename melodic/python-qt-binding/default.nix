@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/python_qt_binding-release/archive/release/melodic/python_qt_binding/0.3.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/python_qt_binding-release/archive/release/melodic/python_qt_binding/0.3.5-0.tar.gz";
+    name = "0.3.5-0.tar.gz";
     sha256 = "7212340713f18af32a6ee003889c16117717bc40976fe919394ce105283f4d2f";
   };
 
+  buildType = "catkin";
   buildInputs = [ pythonPackages.pyqt5 rosbuild qt5.qtbase ];
   propagatedBuildInputs = [ pythonPackages.pyqt5 ];
   nativeBuildInputs = [ catkin ];

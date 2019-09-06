@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.10.17-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/joint_trajectory_action/1.10.17-1.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/joint_trajectory_action/1.10.17-1.tar.gz";
+    name = "1.10.17-1.tar.gz";
     sha256 = "eaf127a1c131ce422b9bba23fad9a20d278360d80d23ae389a021c15e962f053";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs trajectory-msgs roscpp actionlib ];
   propagatedBuildInputs = [ pr2-controllers-msgs trajectory-msgs roscpp actionlib ];
   nativeBuildInputs = [ catkin ];

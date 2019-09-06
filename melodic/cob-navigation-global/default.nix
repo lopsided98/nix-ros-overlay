@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_navigation_global/0.6.8-1.tar.gz;
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_navigation_global/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
     sha256 = "687344547e320f8aeaac6a09d6ef92b32d7b286ffd56483230f604c327e54129";
   };
 
+  buildType = "catkin";
   checkInputs = [ cob-supported-robots roslaunch cob-default-env-config ];
   propagatedBuildInputs = [ map-server amcl move-base cob-default-env-config cob-scan-unifier dwa-local-planner rviz cob-linear-nav topic-tools cob-navigation-config ];
   nativeBuildInputs = [ catkin ];

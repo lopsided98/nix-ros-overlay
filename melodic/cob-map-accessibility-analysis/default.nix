@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_map_accessibility_analysis/0.6.8-1.tar.gz;
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_map_accessibility_analysis/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
     sha256 = "8fc1c541056aa20f6de698815ce3ba8a3533901d3c1cc7feef3e57ecaf4cc172";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost image-transport sensor-msgs cv-bridge message-filters pcl roscpp message-generation nav-msgs cob-3d-mapping-msgs pcl-ros tf opencv3 geometry-msgs ];
-  propagatedBuildInputs = [ boost image-transport sensor-msgs cv-bridge message-filters pcl roscpp nav-msgs cob-3d-mapping-msgs message-runtime pcl-ros rospy tf opencv3 geometry-msgs ];
+  propagatedBuildInputs = [ boost opencv3 pcl sensor-msgs image-transport message-filters cv-bridge roscpp cob-3d-mapping-msgs nav-msgs message-runtime rospy tf pcl-ros geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

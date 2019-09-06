@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/astuff/flir_boson_usb-release/archive/release/melodic/flir_boson_usb/1.2.1-1.tar.gz;
+    url = "https://github.com/astuff/flir_boson_usb-release/archive/release/melodic/flir_boson_usb/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
     sha256 = "8c1bec8b2961607d526d51d6ab068534865aee4f71a1a66c326f6bd552bbdedb";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslint camera-info-manager image-transport sensor-msgs cv-bridge roscpp nodelet ];
-  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge roscpp nodelet ];
+  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

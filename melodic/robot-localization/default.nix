@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.6.5-r1";
 
   src = fetchurl {
-    url = https://github.com/cra-ros-pkg/robot_localization-release/archive/release/melodic/robot_localization/2.6.5-1.tar.gz;
+    url = "https://github.com/cra-ros-pkg/robot_localization-release/archive/release/melodic/robot_localization/2.6.5-1.tar.gz";
+    name = "2.6.5-1.tar.gz";
     sha256 = "971bcda9b4564009674b21d1a344a14ef6d7458f3156b9110ed36b02d933b189";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-msgs geometry-msgs roslint message-filters message-generation eigen-conversions std-srvs tf2-geometry-msgs tf2-ros nav-msgs xmlrpcpp std-msgs nodelet roscpp cmake-modules libyamlcpp sensor-msgs geographic-msgs diagnostic-updater tf2 eigen pythonPackages.catkin-pkg ];
   checkInputs = [ rostest rosbag rosunit ];
   propagatedBuildInputs = [ diagnostic-msgs geometry-msgs message-filters message-runtime eigen-conversions std-srvs tf2-geometry-msgs tf2-ros nav-msgs xmlrpcpp std-msgs nodelet roscpp cmake-modules libyamlcpp sensor-msgs geographic-msgs diagnostic-updater tf2 eigen ];

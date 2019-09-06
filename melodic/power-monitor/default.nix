@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.7";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/melodic/power_monitor/1.1.7-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/melodic/power_monitor/1.1.7-0.tar.gz";
+    name = "1.1.7-0.tar.gz";
     sha256 = "f77e8657675508e110c8e9d34d404a6f786b46fb91ccbec84ca6b8e2cd7ff444";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs pr2-msgs roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ std-msgs pr2-msgs roscpp dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

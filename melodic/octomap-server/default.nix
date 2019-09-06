@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.6.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/octomap_mapping-release/archive/release/melodic/octomap_server/0.6.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/octomap_mapping-release/archive/release/melodic/octomap_server/0.6.3-0.tar.gz";
+    name = "0.6.3-0.tar.gz";
     sha256 = "3cd3bc10e3c4567f7589abd4d3029b5b346d8db5944fb427a9097cc35c3c9296";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs pcl sensor-msgs roscpp octomap-msgs nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs dynamic-reconfigure nodelet pcl-conversions ];
-  propagatedBuildInputs = [ std-srvs pcl sensor-msgs roscpp octomap-msgs nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs dynamic-reconfigure nodelet pcl-conversions ];
+  propagatedBuildInputs = [ std-srvs pcl sensor-msgs roscpp octomap-msgs pcl-ros nav-msgs octomap octomap-ros visualization-msgs dynamic-reconfigure std-msgs nodelet pcl-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.5.2";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/velodyne-release/archive/release/melodic/velodyne_pointcloud/1.5.2-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/melodic/velodyne_pointcloud/1.5.2-0.tar.gz";
+    name = "1.5.2-0.tar.gz";
     sha256 = "4ba277761a8c63407bf615e2aae6edf06f70f5c0349717afa3fc8be4d828dc76";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib libyamlcpp velodyne-driver sensor-msgs velodyne-msgs roscpp roslib nodelet pcl-ros angles dynamic-reconfigure tf pcl-conversions ];
   checkInputs = [ rostest roslaunch rosunit tf2-ros ];
-  propagatedBuildInputs = [ pluginlib velodyne-laserscan libyamlcpp velodyne-driver sensor-msgs velodyne-msgs roscpp roslib nodelet pcl-ros angles dynamic-reconfigure tf pcl-conversions ];
+  propagatedBuildInputs = [ pluginlib velodyne-laserscan tf velodyne-driver sensor-msgs libyamlcpp velodyne-msgs roslib pcl-ros nodelet dynamic-reconfigure angles roscpp pcl-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

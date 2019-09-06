@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_driver/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_driver/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "9a63090da04d9813b2fbcd552112f6ef758aeb6ec7b90813f3b00b1982d36db5";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ cob-base-drive-chain cob-sound cob-mimic cob-bms-driver cob-canopen-motor cob-generic-can cob-utilities cob-phidgets cob-camera-sensors cob-scan-unifier cob-voltage-control cob-light cob-relayboard cob-sick-s300 cob-undercarriage-ctrl cob-elmo-homing cob-sick-lms1xx ];
   nativeBuildInputs = [ catkin ];
 

@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, dynamic-reconfigure, catkin, toposens-driver, rviz-visual-tools, rostest, message-runtime, toposens-msgs, rospy, roslaunch, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-toposens-markers";
-  version = "1.2.2-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_markers/1.2.2-1;
-    sha256 = "a4bb27f612794a03c0d5b61579dc9d1d2b485f7297725e3e7f20490897042039";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_markers/1.2.3-1";
+    name = "archive.tar.gz";
+    sha256 = "1ee518a3d6812303fe5c48c7b02fc8590d95a34c4458fa81ffd052af0d2d4375";
   };
 
+  buildType = "catkin";
   buildInputs = [ toposens-driver rviz-visual-tools message-runtime toposens-msgs rospy dynamic-reconfigure roscpp ];
   checkInputs = [ rostest roslaunch ];
   propagatedBuildInputs = [ toposens-driver rviz-visual-tools message-runtime toposens-msgs rospy dynamic-reconfigure roscpp ];

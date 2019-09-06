@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/sbpl-release/archive/release/melodic/sbpl/1.3.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/sbpl-release/archive/release/melodic/sbpl/1.3.1-0.tar.gz";
+    name = "1.3.1-0.tar.gz";
     sha256 = "9f24887428cc4e548e8cb297b225d952a1085e3c1f555a847350016c21c7cef2";
   };
 
+  buildType = "cmake";
   buildInputs = [ cmake ];
   nativeBuildInputs = [ cmake ];
 

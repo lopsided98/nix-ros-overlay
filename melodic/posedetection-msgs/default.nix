@@ -8,10 +8,12 @@ buildRosPackage {
   version = "4.3.1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_common_msgs-release/archive/release/melodic/posedetection_msgs/4.3.1-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/melodic/posedetection_msgs/4.3.1-0.tar.gz";
+    name = "4.3.1-0.tar.gz";
     sha256 = "1538ca360bd31dcfa85392ba78374d072d64a3426425c64b08d8db149ea5cd3a";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs cv-bridge message-filters message-generation std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs cv-bridge message-filters message-runtime std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

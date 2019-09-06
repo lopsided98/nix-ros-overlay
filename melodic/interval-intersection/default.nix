@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.10.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/calibration-release/archive/release/melodic/interval_intersection/0.10.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/calibration-release/archive/release/melodic/interval_intersection/0.10.14-0.tar.gz";
+    name = "0.10.14-0.tar.gz";
     sha256 = "4466aa2fd48b25d0fa963f756b1ed3c5bb4bcba29d9dc1fc6d392d2dfe4685a5";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole boost actionlib-msgs roscpp actionlib roscpp-serialization std-msgs rostime geometry-msgs calibration-msgs ];
-  propagatedBuildInputs = [ rosconsole boost actionlib-msgs roscpp actionlib roscpp-serialization std-msgs rostime geometry-msgs calibration-msgs ];
+  propagatedBuildInputs = [ rosconsole actionlib-msgs boost rostime roscpp-serialization actionlib std-msgs roscpp geometry-msgs calibration-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

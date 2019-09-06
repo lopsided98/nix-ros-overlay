@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.11.1-r1";
 
   src = fetchurl {
-    url = https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_auto_tracker/0.11.1-1.tar.gz;
+    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_auto_tracker/0.11.1-1.tar.gz";
+    name = "0.11.1-1.tar.gz";
     sha256 = "5104d94e90ea8520a8556fe6293a20f31f824c7a178d2a332f95b69c4c05ee48";
   };
 
+  buildType = "catkin";
   buildInputs = [ libdmtx visp-bridge sensor-msgs message-filters zbar visp visp-tracker resource-retriever std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ libdmtx visp-bridge sensor-msgs message-filters zbar visp visp-tracker resource-retriever std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ libdmtx visp-bridge sensor-msgs message-filters zbar visp resource-retriever visp-tracker std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

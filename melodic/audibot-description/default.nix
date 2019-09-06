@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/robustify/audibot-release/archive/release/melodic/audibot_description/0.1.0-1.tar.gz;
+    url = "https://github.com/robustify/audibot-release/archive/release/melodic/audibot_description/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "d3ed9cf90813e8be82fbad03f60acce1ab3cfe878343f6855a7d8619674e5c13";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];
 

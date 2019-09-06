@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2-r1";
 
   src = fetchurl {
-    url = https://github.com/Eurecat/abseil_cpp-release/archive/release/melodic/abseil_cpp/0.4.2-1.tar.gz;
+    url = "https://github.com/Eurecat/abseil_cpp-release/archive/release/melodic/abseil_cpp/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
     sha256 = "828ee69c9a7e77d6b31d4cdf1b12e02960ec26f2a79571bf25d4f7f060177b4f";
   };
 
+  buildType = "catkin";
   buildInputs = [ rsync ];
   nativeBuildInputs = [ catkin ];
 

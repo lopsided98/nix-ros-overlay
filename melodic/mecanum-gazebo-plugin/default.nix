@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/melodic/mecanum_gazebo_plugin/0.1.0-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/melodic/mecanum_gazebo_plugin/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "99846c791700f0795710304765004fd57ebe2b0b215c6a8b853208cc3571793e";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazeboSimulator.gazebo rosconsole roslint ];
   propagatedBuildInputs = [ gazeboSimulator.gazebo rosconsole ];
   nativeBuildInputs = [ catkin ];

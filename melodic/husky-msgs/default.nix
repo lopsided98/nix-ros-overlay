@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.0-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_msgs/0.4.0-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_msgs/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
     sha256 = "98627232b87fd3a9c824d2ba3871f07b04e726f93a9c2ccaf7f7a7c94d9c6952";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

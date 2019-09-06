@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.4.0-r1";
 
   src = fetchurl {
-    url = https://github.com/OTL/cv_camera-release/archive/release/melodic/cv_camera/0.4.0-1.tar.gz;
+    url = "https://github.com/OTL/cv_camera-release/archive/release/melodic/cv_camera/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
     sha256 = "7119fcb01b7e39953f38be82f00d3ddf63ce52c92732091df65239b7824044dd";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslint camera-info-manager image-transport sensor-msgs cv-bridge roscpp rostest nodelet opencv3 ];
-  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge roscpp nodelet opencv3 ];
+  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge nodelet roscpp opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

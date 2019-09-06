@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.8.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/wge100_driver-release/archive/release/melodic/wge100_camera/1.8.2-1.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/wge100_driver-release/archive/release/melodic/wge100_camera/1.8.2-1.tar.gz";
+    name = "1.8.2-1.tar.gz";
     sha256 = "555d7b0249e43457e5ce245fb1c7fe895a0510b8a142197717e046e7cc1e18fe";
   };
 
+  buildType = "catkin";
   buildInputs = [ self-test camera-calibration-parsers image-transport sensor-msgs driver-base timestamp-tools diagnostic-updater rostest rospy message-generation dynamic-reconfigure std-msgs roscpp ];
-  propagatedBuildInputs = [ self-test camera-calibration-parsers image-transport sensor-msgs driver-base timestamp-tools diagnostic-updater rospy message-runtime dynamic-reconfigure std-msgs roscpp ];
+  propagatedBuildInputs = [ self-test camera-calibration-parsers image-transport sensor-msgs driver-base timestamp-tools diagnostic-updater std-msgs message-runtime dynamic-reconfigure rospy roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

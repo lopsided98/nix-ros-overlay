@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/pyros-dev/catkin_pip-release/archive/release/melodic/catkin_pip/0.2.3-1.tar.gz;
+    url = "https://github.com/pyros-dev/catkin_pip-release/archive/release/melodic/catkin_pip/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
     sha256 = "195b4747147d7d36eea1f1c5398e532289984d6d690dd58e04acf556462deda4";
   };
 
+  buildType = "catkin";
   buildInputs = [ python pythonPackages.pip ];
   checkInputs = [ git ];
   propagatedBuildInputs = [ python pythonPackages.pip ];

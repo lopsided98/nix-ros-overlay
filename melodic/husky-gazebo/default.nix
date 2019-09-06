@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.0-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_gazebo/0.4.0-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_gazebo/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
     sha256 = "cfb61ca6bf220fdd2bf64a9c5fc23d6d70ee9301613b914438d60fbe8b79aa50";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros controller-manager hector-gazebo-plugins gazebo-plugins husky-description multimaster-launch rostopic pointcloud-to-laserscan husky-control gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/depthimage_to_laserscan-release/archive/release/melodic/depthimage_to_laserscan/1.0.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/depthimage_to_laserscan-release/archive/release/melodic/depthimage_to_laserscan/1.0.8-0.tar.gz";
+    name = "1.0.8-0.tar.gz";
     sha256 = "0620a9a74ab3a0601a55d1cbe593abe68bbc838ea3fb6a1dfa57ac7e6e3c10ca";
   };
 
+  buildType = "catkin";
   buildInputs = [ image-transport gtest sensor-msgs roscpp image-geometry dynamic-reconfigure nodelet ];
   propagatedBuildInputs = [ image-transport sensor-msgs roscpp image-geometry dynamic-reconfigure nodelet ];
   nativeBuildInputs = [ catkin ];

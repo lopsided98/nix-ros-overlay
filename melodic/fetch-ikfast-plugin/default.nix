@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_ikfast_plugin/0.8.2-1.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_ikfast_plugin/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
     sha256 = "24429d173975f72b6920d831762c727198d523f38dcd462c08beae779dc72643";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib tf2-kdl liblapack moveit-core tf2-eigen eigen-conversions roscpp ];
   propagatedBuildInputs = [ pluginlib liblapack moveit-core eigen-conversions roscpp ];
   nativeBuildInputs = [ catkin ];

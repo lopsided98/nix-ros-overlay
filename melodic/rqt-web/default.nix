@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_web-release/archive/release/melodic/rqt_web/0.4.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_web-release/archive/release/melodic/rqt_web/0.4.8-0.tar.gz";
+    name = "0.4.8-0.tar.gz";
     sha256 = "3192e2e64f268d79b93d505bc475aa1f39009e75f645d294934d55c2b0b27303";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg webkit-dependency rqt-gui qt-gui rospy python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.3";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_model_tools-release/archive/release/melodic/eus_assimp/0.4.3-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/melodic/eus_assimp/0.4.3-0.tar.gz";
+    name = "0.4.3-0.tar.gz";
     sha256 = "c82e9cbb4c4fd87a20d1c6a596293aed0dbc8661a1ccb4f57f4637cc688b8548";
   };
 
+  buildType = "catkin";
   buildInputs = [ euslisp pkg-config assimp-devel ];
   propagatedBuildInputs = [ roseus assimp-devel ];
   nativeBuildInputs = [ catkin ];

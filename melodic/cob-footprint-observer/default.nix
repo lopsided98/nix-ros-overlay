@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_footprint_observer/0.8.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_footprint_observer/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
     sha256 = "e4bb923bb34919eb110cf91ee9c5312ee3bd9fca1e79f1c995baa33c00e27584";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost roscpp message-generation std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ boost roscpp message-runtime std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

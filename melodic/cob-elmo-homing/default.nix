@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_elmo_homing/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_elmo_homing/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "1fe6ad515900832d095a352303a0dffbd7d5fb15afc15bd963f370c64f1f7a8e";
   };
 
+  buildType = "catkin";
   buildInputs = [ class-loader canopen-402 socketcan-interface ];
   propagatedBuildInputs = [ class-loader canopen-402 socketcan-interface ];
   nativeBuildInputs = [ catkin ];

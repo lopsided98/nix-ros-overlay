@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/prbt_grippers-release/archive/release/melodic/prbt_grippers/0.0.4-1.tar.gz;
+    url = "https://github.com/PilzDE/prbt_grippers-release/archive/release/melodic/prbt_grippers/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
     sha256 = "6765306ed7868e1f6005ffaacebc8a0161eb24cf8fcbfefff9f587ccc10a6e52";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ prbt-pg70-support ];
   nativeBuildInputs = [ catkin ];
 

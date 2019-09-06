@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.0";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/melodic/robot_controllers_interface/0.6.0-0.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/melodic/robot_controllers_interface/0.6.0-0.tar.gz";
+    name = "0.6.0-0.tar.gz";
     sha256 = "e32be3bf72bffa92847724a0d2ca5fa70a636b9a80b836a28d6ccf244888c8a3";
   };
 
+  buildType = "catkin";
   buildInputs = [ robot-controllers-msgs roscpp pluginlib actionlib ];
   propagatedBuildInputs = [ robot-controllers-msgs roscpp pluginlib actionlib ];
   nativeBuildInputs = [ catkin ];

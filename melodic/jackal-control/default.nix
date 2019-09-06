@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.3-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_control/0.6.3-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_control/0.6.3-1.tar.gz";
+    name = "0.6.3-1.tar.gz";
     sha256 = "1a95bcfbb422b9109be66ef8b0109797bedd3e665f37985c9b63f8aa3e92b793";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ controller-manager twist-mux joint-state-controller diff-drive-controller joy robot-localization teleop-twist-joy interactive-marker-twist-server topic-tools ];
   nativeBuildInputs = [ catkin ];

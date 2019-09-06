@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.13.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vision_opencv-release/archive/release/melodic/cv_bridge/1.13.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/melodic/cv_bridge/1.13.0-0.tar.gz";
+    name = "1.13.0-0.tar.gz";
     sha256 = "fb812741718a40399f538eaef7c887b79004afcdbe0271b3258c5c8ee9c55023";
   };
 
+  buildType = "catkin";
   buildInputs = [ python rosconsole boost sensor-msgs pythonPackages.opencv3 opencv3 ];
   checkInputs = [ rostest pythonPackages.numpy ];
   propagatedBuildInputs = [ python rosconsole boost sensor-msgs pythonPackages.opencv3 opencv3 ];

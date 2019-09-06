@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/move_base_flex/0.2.4-1.tar.gz;
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/move_base_flex/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
     sha256 = "6f91a96d295d1b6e6702e20791a4a70eeffc88d5391da89395791b9670014930";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ mbf-abstract-core mbf-costmap-core mbf-msgs mbf-simple-nav mbf-abstract-nav mbf-costmap-nav ];
   nativeBuildInputs = [ catkin ];
 

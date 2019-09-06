@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.1-r3";
 
   src = fetchurl {
-    url = https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_teleop/2.1.1-3.tar.gz;
+    url = "https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_teleop/2.1.1-3.tar.gz";
+    name = "2.1.1-3.tar.gz";
     sha256 = "f263fffb042a86ffea63279e319c18b59efe102b6ad0f0d2f868ddd86e754fc2";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs sensor-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs message-runtime std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/melodic/gps_umd/0.2.0-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/melodic/gps_umd/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "8a74ec06defb2718bb21ef216302cc99a063ddf7f3cca8fe8b5a836a9aca9cb8";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ gps-common gpsd-client ];
   nativeBuildInputs = [ catkin ];
 

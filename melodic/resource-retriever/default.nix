@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/resource_retriever-release/archive/release/melodic/resource_retriever/1.12.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/resource_retriever-release/archive/release/melodic/resource_retriever/1.12.4-0.tar.gz";
+    name = "1.12.4-0.tar.gz";
     sha256 = "568a6d1f0bd3a0c6e4c26b6e6524bc14a282df35a6b3ea1720e37591aaf024a1";
   };
 
+  buildType = "catkin";
   buildInputs = [ curl roslib rosconsole boost ];
   propagatedBuildInputs = [ rosconsole boost pythonPackages.rospkg curl roslib ];
   nativeBuildInputs = [ catkin ];

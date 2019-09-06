@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.13-r2";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/hostapd_access_point/1.0.13-2.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/hostapd_access_point/1.0.13-2.tar.gz";
+    name = "1.0.13-2.tar.gz";
     sha256 = "bea0177adb3f798682f1b3a981dbf8c76443c5b0588d067fef6ee2cd3adffb61";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

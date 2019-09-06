@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.1";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/melodic/hector_gazebo_worlds/0.5.1-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/melodic/hector_gazebo_worlds/0.5.1-0.tar.gz";
+    name = "0.5.1-0.tar.gz";
     sha256 = "71ada41731ad64e3a1815c57a0f4ef98f526afaf0decf58eb26745721a39ce5b";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ gazebo-ros hector-gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 

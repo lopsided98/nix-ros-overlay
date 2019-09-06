@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_dashboard/0.6.14-1.tar.gz;
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_dashboard/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
     sha256 = "7593cb2e8eec98fd4e8d23c9df19ba86d5bf07fff5b21287be46a5359ac422f8";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui rqt-robot-dashboard rospy cob-msgs roslib ];
   nativeBuildInputs = [ catkin ];
 

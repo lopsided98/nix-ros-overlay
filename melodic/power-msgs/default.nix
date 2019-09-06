@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-power-msgs";
-  version = "0.3.0";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/power_msgs-release/archive/release/melodic/power_msgs/0.3.0-0.tar.gz;
-    sha256 = "97f1dcb8217d6baa4939f53e64b59498cc550a26c3ed03f13249041f78ff120b";
+    url = "https://github.com/fetchrobotics-gbp/power_msgs-release/archive/release/melodic/power_msgs/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "77dade4006aa8238980b62f305d04ffbcfd460fedaed7dba6ebd9db7bb59a299";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

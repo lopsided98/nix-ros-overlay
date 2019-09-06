@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.8.2-r1";
 
   src = fetchurl {
-    url = https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/melodic/teb_local_planner/0.8.2-1.tar.gz;
+    url = "https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/melodic/teb_local_planner/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
     sha256 = "a5b53799017164eb947798124f5fb2bfbe057e019b0239a587c0dd8bc80ab8a0";
   };
 
+  buildType = "catkin";
   buildInputs = [ libg2o dynamic-reconfigure geometry-msgs message-generation tf2-geometry-msgs tf2-ros nav-msgs std-msgs visualization-msgs roscpp costmap-2d cmake-modules base-local-planner pluginlib nav-core tf2 costmap-converter interactive-markers tf2-eigen ];
-  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner libg2o nav-core tf2-ros tf2 nav-msgs interactive-markers costmap-converter dynamic-reconfigure std-msgs visualization-msgs message-runtime roscpp geometry-msgs ];
+  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner libg2o nav-core tf2-ros tf2 nav-msgs message-runtime costmap-converter dynamic-reconfigure std-msgs interactive-markers visualization-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_hand-release/archive/release/melodic/cob_hand/0.6.6-1.tar.gz;
+    url = "https://github.com/ipa320/cob_hand-release/archive/release/melodic/cob_hand/0.6.6-1.tar.gz";
+    name = "0.6.6-1.tar.gz";
     sha256 = "e4e8632020fc767a075cf34ce674e510adf6594f7c167d0c2d6a31053bba240a";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ cob-hand-bridge ];
   nativeBuildInputs = [ catkin ];
 

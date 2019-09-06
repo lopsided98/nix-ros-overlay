@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/metapackages-release/archive/release/melodic/ros_core/1.4.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/metapackages-release/archive/release/melodic/ros_core/1.4.1-0.tar.gz";
+    name = "1.4.1-0.tar.gz";
     sha256 = "390d24da9397fce3a11f1dc7a0a23fb0886b81a4cfd2473906508358a670782d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rosconsole gencpp genlisp class-loader ros rosconsole-bridge rosgraph-msgs roscpp-core gennodejs message-generation rosbag-migration-rule message-runtime genmsg ros-comm rospack std-srvs catkin std-msgs common-msgs cmake-modules pluginlib roslisp geneus genpy ];
   nativeBuildInputs = [ catkin ];
 

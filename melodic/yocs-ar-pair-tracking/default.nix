@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_ar_pair_tracking/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_ar_pair_tracking/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "60179e49a3644effdd14bf503e183c3ef7c0690f550b89e64847399f3934c7df";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs yocs-math-toolkit yocs-msgs ar-track-alvar-msgs yocs-ar-marker-tracking std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs yocs-math-toolkit yocs-msgs ar-track-alvar-msgs yocs-ar-marker-tracking std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

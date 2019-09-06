@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_common-release/archive/release/melodic/image_view2/2.2.10-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/image_view2/2.2.10-0.tar.gz";
+    name = "2.2.10-0.tar.gz";
     sha256 = "fc10ec510f70e52bb26455ddc62237f9b9c3dfa77819fa84c140d41617db004c";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-filters roscpp image-geometry rostest message-generation image-view pcl-ros std-msgs tf geometry-msgs ];
   checkInputs = [ pythonPackages.numpy pythonPackages.scipy ];
   propagatedBuildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-filters roscpp image-geometry message-runtime image-view pcl-ros std-msgs tf geometry-msgs ];

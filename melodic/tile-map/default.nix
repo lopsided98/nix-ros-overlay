@@ -5,15 +5,17 @@
 { lib, buildRosPackage, fetchurl, swri-math-util, pluginlib, mapviz, catkin, libqt-core, libqt-opengl, roscpp, jsoncpp, qt-qmake, swri-yaml-util, libqt-dev, libqt-opengl-dev, glew, tf, swri-transform-util }:
 buildRosPackage {
   pname = "ros-melodic-tile-map";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/mapviz-release/archive/release/melodic/tile_map/1.1.1-1.tar.gz;
-    sha256 = "87bfd86a1c2d9486b670a33e6e4dae5086281aa23a3e67e4886039706387c5d0";
+    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/melodic/tile_map/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "4a7a37878886851d82c6c26db6664410d798da341bacf6df0818e1e81ad1ae1f";
   };
 
+  buildType = "catkin";
   buildInputs = [ swri-math-util pluginlib mapviz glew roscpp swri-yaml-util libqt-dev libqt-opengl-dev jsoncpp tf swri-transform-util ];
-  propagatedBuildInputs = [ swri-math-util pluginlib mapviz libqt-core libqt-opengl roscpp jsoncpp swri-yaml-util glew tf swri-transform-util ];
+  propagatedBuildInputs = [ swri-math-util pluginlib mapviz glew libqt-core libqt-opengl roscpp swri-yaml-util jsoncpp tf swri-transform-util ];
   nativeBuildInputs = [ catkin qt-qmake ];
 
   meta = {

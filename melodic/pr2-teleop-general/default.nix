@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_apps-release/archive/release/melodic/pr2_teleop_general/0.6.1-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_apps-release/archive/release/melodic/pr2_teleop_general/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "e3ae1cbc8602721113121e1546387c770995bf51dda293c8d593919c38ba9863";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs ps3joy angles actionlib-msgs pr2-common-action-msgs sensor-msgs polled-camera roscpp pr2-controller-manager urdf actionlib moveit-msgs pr2-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs polled-camera actionlib tf geometry-msgs pr2-controller-manager angles pr2-msgs pr2-controllers-msgs pr2-mechanism-msgs ps3joy pr2-common-action-msgs urdf moveit-msgs roscpp pr2-arm-kinematics sensor-msgs pr2-mannequin-mode pr2-tuck-arms-action ];
   nativeBuildInputs = [ catkin ];

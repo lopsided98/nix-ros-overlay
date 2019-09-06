@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/cartographer_ros-release/archive/release/melodic/cartographer_rviz/1.0.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/cartographer_ros-release/archive/release/melodic/cartographer_rviz/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
     sha256 = "4eeb8e97c9723d89c14718afc7d81ce1a0a47d41cd5e1d73a8144865840dc523";
   };
 
+  buildType = "catkin";
   buildInputs = [ cartographer-ros qt5.qtbase cartographer-ros-msgs roslib rviz message-runtime cartographer eigen-conversions roscpp ];
   propagatedBuildInputs = [ cartographer-ros qt5.qtbase cartographer-ros-msgs roslib rviz message-runtime cartographer eigen-conversions roscpp ];
   nativeBuildInputs = [ catkin ];

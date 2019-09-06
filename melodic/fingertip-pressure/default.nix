@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.19-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/melodic/fingertip_pressure/1.8.19-1.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/melodic/fingertip_pressure/1.8.19-1.tar.gz";
+    name = "1.8.19-1.tar.gz";
     sha256 = "24a090d31a677615de660c07ec0bc95bb80e2896d95455b806f3116c1ceb5c23";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs rostest message-generation geometry-msgs ];
   propagatedBuildInputs = [ message-runtime rospy std-msgs pr2-msgs visualization-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

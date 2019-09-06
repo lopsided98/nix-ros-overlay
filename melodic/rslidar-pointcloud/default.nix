@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/CPFL/robosense-release/archive/release/melodic/rslidar_pointcloud/1.0.2-0.tar.gz;
+    url = "https://github.com/CPFL/robosense-release/archive/release/melodic/rslidar_pointcloud/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "a6c848ebbe5c69d8458345fbb9c5fd54012a1a96130c1587ccf0b251de64aa75";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch pluginlib rslidar-driver sensor-msgs roscpp tf2-ros roslib rostest rslidar-msgs nodelet pcl-ros angles dynamic-reconfigure tf pcl-conversions ];
-  propagatedBuildInputs = [ pluginlib rslidar-driver sensor-msgs roscpp roslib rslidar-msgs nodelet pcl-ros angles dynamic-reconfigure tf ];
+  propagatedBuildInputs = [ pluginlib rslidar-driver sensor-msgs roscpp roslib rslidar-msgs nodelet dynamic-reconfigure angles tf pcl-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_joyop/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_joyop/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "e44414b71e3e378a83012afa9219ae787162895a4bab5bf7353528d07cc24ab7";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs yocs-msgs ecl-time ecl-exceptions std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs joy yocs-msgs ecl-time ecl-exceptions std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

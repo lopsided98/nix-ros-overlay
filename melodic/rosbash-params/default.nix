@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/peci1/rosbash_params-release/archive/release/melodic/rosbash_params/1.0.2-0.tar.gz;
+    url = "https://github.com/peci1/rosbash_params-release/archive/release/melodic/rosbash_params/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "af9e6ee8c0ffae32824fbbfa2dfcbb6483e0ad1757282f347ca744db60dcb9a1";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rosbash rospy ];
   nativeBuildInputs = [ catkin ];
 

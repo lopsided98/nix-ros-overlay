@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.16-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/sick_tim-release/archive/release/melodic/sick_tim/0.0.16-1.tar.gz;
+    url = "https://github.com/uos-gbp/sick_tim-release/archive/release/melodic/sick_tim/0.0.16-1.tar.gz";
+    name = "0.0.16-1.tar.gz";
     sha256 = "21cbe180b6016b00a94db9fdcaca49ef8d560608c041bb975b5babb0e8f9aaf3";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs libusb1 diagnostic-updater dynamic-reconfigure roslaunch roscpp ];
   propagatedBuildInputs = [ sensor-msgs libusb1 diagnostic-updater robot-state-publisher dynamic-reconfigure roscpp libusb xacro ];
   nativeBuildInputs = [ catkin ];

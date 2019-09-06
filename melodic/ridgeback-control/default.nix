@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2-r2";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_control/0.2.2-2.tar.gz;
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_control/0.2.2-2.tar.gz";
+    name = "0.2.2-2.tar.gz";
     sha256 = "01f82dc54d0014b72a8937d8a1e422319a8d28cdde23ef9ec14de797ce1311cd";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager realtime-tools nav-msgs urdf controller-interface tf ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ controller-manager joint-state-controller realtime-tools joy robot-localization nav-msgs urdf controller-interface teleop-twist-joy interactive-marker-twist-server topic-tools tf ];

@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.15.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/joint_trajectory_controller/0.15.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/joint_trajectory_controller/0.15.0-0.tar.gz";
+    name = "0.15.0-0.tar.gz";
     sha256 = "d7624bbbca732b5e17524908ec9e6214c448aa9cc33ffddb3538e9269c6bd313";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface cmake-modules control-msgs trajectory-msgs realtime-tools control-toolbox controller-interface urdf actionlib angles roscpp ];
   checkInputs = [ controller-manager rostest xacro ];
-  propagatedBuildInputs = [ hardware-interface control-msgs trajectory-msgs realtime-tools control-toolbox controller-interface urdf actionlib angles roscpp ];
+  propagatedBuildInputs = [ hardware-interface control-msgs control-toolbox realtime-tools trajectory-msgs controller-interface urdf actionlib angles roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

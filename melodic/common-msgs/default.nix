@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/common_msgs/1.12.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/common_msgs/1.12.7-0.tar.gz";
+    name = "1.12.7-0.tar.gz";
     sha256 = "631a7674053674e50d7fdadc741dcd4f112f0f12c62c179b438e0db457e86a36";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ shape-msgs actionlib-msgs trajectory-msgs sensor-msgs nav-msgs diagnostic-msgs visualization-msgs geometry-msgs stereo-msgs ];
   nativeBuildInputs = [ catkin ];
 

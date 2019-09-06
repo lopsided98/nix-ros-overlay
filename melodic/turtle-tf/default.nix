@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry_tutorials-release/archive/release/melodic/turtle_tf/0.2.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/melodic/turtle_tf/0.2.2-0.tar.gz";
+    name = "0.2.2-0.tar.gz";
     sha256 = "182947fcfff5ec44a27e343306a78fd488fbcaff6d8ca894ed0646846293f02d";
   };
 
+  buildType = "catkin";
   buildInputs = [ turtlesim roscpp rospy std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ turtlesim roscpp rospy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

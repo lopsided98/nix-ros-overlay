@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_localization_manager/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_localization_manager/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "eb2e39a17f8f78cbe98c04b73a63d666fb5937156490539ae49ad1e94b607a49";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslint ];
   propagatedBuildInputs = [ ar-track-alvar yocs-msgs ar-track-alvar-msgs actionlib rospy std-msgs dynamic-reconfigure tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

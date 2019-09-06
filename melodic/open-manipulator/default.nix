@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/melodic/open_manipulator/2.0.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/melodic/open_manipulator/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
     sha256 = "8de684b52de5da0e425146ae3a13c0ab79f047544aa163c5b3344b8df2284ea3";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ open-manipulator-control-gui open-manipulator-libs open-manipulator-moveit open-manipulator-teleop open-manipulator-description open-manipulator-controller ];
   nativeBuildInputs = [ catkin ];
 

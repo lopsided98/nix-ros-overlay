@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/PickNikRobotics/moveit_sim_controller-release/archive/release/melodic/moveit_sim_controller/0.1.0-0.tar.gz;
+    url = "https://github.com/PickNikRobotics/moveit_sim_controller-release/archive/release/melodic/moveit_sim_controller/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "3d7a3062afc99ff36fa906e8796297a7ac3e1a1dea416d71a06ce22bdbfe18e9";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning roslint ros-control-boilerplate moveit-core rosparam-shortcuts roscpp ];
   propagatedBuildInputs = [ moveit-ros-planning ros-control-boilerplate moveit-core rosparam-shortcuts roscpp ];
   nativeBuildInputs = [ catkin ];

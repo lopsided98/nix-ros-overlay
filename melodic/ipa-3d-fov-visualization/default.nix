@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/ipa_3d_fov_visualization/0.6.14-1.tar.gz;
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/ipa_3d_fov_visualization/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
     sha256 = "3292a38aa2ff33ae3f094e672e3e7f74e919f0dcba2b05f3bda5530b8cb557d9";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs cv-bridge image-geometry visualization-msgs roscpp ];
   propagatedBuildInputs = [ sensor-msgs cv-bridge image-geometry visualization-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

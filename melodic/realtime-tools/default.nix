@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.15.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/realtime_tools-release/archive/release/melodic/realtime_tools/1.15.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/realtime_tools-release/archive/release/melodic/realtime_tools/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
     sha256 = "7f931948bd7454781ba1f93a1dd3642a561c97ce7668d8c4b8e862a1616bcb5d";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp ];
   checkInputs = [ rostest rosunit actionlib ];
   propagatedBuildInputs = [ roscpp actionlib ];

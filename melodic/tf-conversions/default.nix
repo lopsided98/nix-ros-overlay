@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry-release/archive/release/melodic/tf_conversions/1.12.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/melodic/tf_conversions/1.12.0-0.tar.gz";
+    name = "1.12.0-0.tar.gz";
     sha256 = "eec87e068f5106c1835fb093d5995ca8c6972e3a5e127038d94c68701ad2029e";
   };
 
+  buildType = "catkin";
   buildInputs = [ kdl-conversions orocos-kdl eigen tf geometry-msgs ];
   propagatedBuildInputs = [ kdl-conversions orocos-kdl python-orocos-kdl eigen tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

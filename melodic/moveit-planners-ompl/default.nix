@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_planners_ompl/1.0.2-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_planners_ompl/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
     sha256 = "57dbd0aaf20ebe0619ed16d10a7835fee61df22ad5438da662dcbe71c670bdce";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning pluginlib rosconsole ompl tf2-ros moveit-core dynamic-reconfigure roscpp ];
   checkInputs = [ moveit-resources rosunit ];
   propagatedBuildInputs = [ moveit-ros-planning pluginlib rosconsole ompl tf2-ros moveit-core dynamic-reconfigure roscpp ];

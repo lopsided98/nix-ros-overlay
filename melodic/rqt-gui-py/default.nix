@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt-release/archive/release/melodic/rqt_gui_py/0.5.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt-release/archive/release/melodic/rqt_gui_py/0.5.0-0.tar.gz";
+    name = "0.5.0-0.tar.gz";
     sha256 = "0ff83fecf2965173c22e185ba5388c38645c281a5aa89dbe3baac46c431eece6";
   };
 
+  buildType = "catkin";
   buildInputs = [ rqt-gui qt-gui rospy ];
   propagatedBuildInputs = [ rqt-gui qt-gui rospy ];
   nativeBuildInputs = [ catkin ];

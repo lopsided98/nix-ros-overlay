@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_controller_manager_example/1.0.2-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_controller_manager_example/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
     sha256 = "3ac00ba25d7359af9dd91ff581b2189e04a1a4328913389f1c2f100379782a1f";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib roscpp moveit-core ];
-  propagatedBuildInputs = [ pluginlib roscpp moveit-core ];
+  propagatedBuildInputs = [ moveit-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
