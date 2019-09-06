@@ -35,7 +35,8 @@ let
       postPatch ? "", ...
     }: {
       postPatch = ''
-        sed -i 's#URL [^ ]*$#URL file://${self.fetchurl args}#' CMakeLists.txt
+        substituteInPlace CMakeLists.txt \
+          --replace '${args.url}' '${self.fetchurl args}'
       '' + postPatch;
     });
   in {
@@ -106,6 +107,11 @@ let
           --replace '#!/usr/bin/env sh' '#!${self.stdenv.shell}'
       '';
     });
+
+    fmilibrary-vendor = patchVendorUrl rosSuper.fmilibrary-vendor {
+      url = "https://jmodelica.org/fmil/FMILibrary-2.0.3-src.zip";
+      sha256 = "16lx6355zskrb7wgw2bzdzms36pcjyl2ry03wgsac5215jg1zhjc";
+    };
 
     gazebo-plugins = rosSuper.gazebo-plugins.overrideAttrs ({
       patches ? [], ...
@@ -180,6 +186,18 @@ let
       ];
     });
 
+    rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
+      nativeBuildInputs ? [],
+      postFixup ? "", ...
+    }: {
+      nativeBuildInputs = nativeBuildInputs ++ [ self.makeWrapper ];
+
+      postFixup = ''
+        wrapProgram $out/bin/rqt \
+          --prefix QT_PLUGIN_PATH : "${self.qt5.qtbase.bin}/${self.qt5.qtbase.qtPluginPrefix}"
+      '' + postFixup;
+    });
+
     rviz = rosSuper.rviz.overrideAttrs ({
       nativeBuildInputs ? [],
       postFixup ? "", ...
@@ -192,17 +210,26 @@ let
       '' + postFixup;
     });
 
-    rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
-      nativeBuildInputs ? [],
-      postFixup ? "", ...
+    rviz-ogre-vendor = (patchVendorUrl rosSuper.rviz-ogre-vendor {
+      url = "https://github.com/OGRECave/ogre/archive/v1.10.12.zip";
+      sha256 = "1nafqazv396y97z0rgrn0dmkddq7y4zgfszvmi3aw6hr6zwyrpa3";
+    }).overrideAttrs ({
+      preFixup ? "", ...
     }: {
-      nativeBuildInputs = nativeBuildInputs ++ [ self.makeWrapper ];
-
-      postFixup = ''
-        wrapProgram $out/bin/rqt \
-          --prefix QT_PLUGIN_PATH : "${self.qt5.qtbase.bin}/${self.qt5.qtbase.qtPluginPrefix}"
-      '' + postFixup;
+      dontFixCmake = true;
+      # Prevent RPATH reference to build directory
+      preFixup = ''
+        rm -r ogre_install
+      '' + preFixup;
     });
+
+    shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
+      url = "https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip";
+      sha256 = "0cmsmgc87ndd9hiv187xkvjkn8fipn3hsijjc864h2lfcyigbxq1";
+    }) {
+      url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
+      sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
+    };
 
     tinydir-vendor = patchVendorUrl rosSuper.tinydir-vendor {
       url = "https://github.com/cxong/tinydir/archive/1.2.4.tar.gz";
