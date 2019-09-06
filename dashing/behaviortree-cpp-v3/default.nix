@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake, zeromq }:
+{ lib, buildRosPackage, fetchurl, cppzmq, ament-cmake-gtest, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-behaviortree-cpp-v3";
   version = "3.0.9-r1";
@@ -13,9 +13,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ zeromq ];
+  buildInputs = [ cppzmq ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ zeromq ];
+  propagatedBuildInputs = [ cppzmq ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
