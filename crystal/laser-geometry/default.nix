@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "7eebd7deb07fcd802f465ded75470b19331e11795f26069a2d8ce438a316ff70";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ tf2 sensor-msgs rclcpp eigen ];
   checkInputs = [ ament-cmake-uncrustify ament-cmake-gmock ament-cmake-gtest ament-cmake-cppcheck ament-cmake-lint-cmake ament-cmake-cpplint ];
   propagatedBuildInputs = [ ament-cmake sensor-msgs tf2 rclcpp eigen ];

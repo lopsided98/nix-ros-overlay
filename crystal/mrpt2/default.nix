@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "f53bc01e9cecf69776f34c50e4ca8e675327efca9f672b3cf5a4ef8ba5c2631d";
   };
 
+  buildType = "cmake";
   buildInputs = [ wxGTK suitesparse libpcap assimp ffmpeg libusb1 libjpeg eigen zlib freeglut opencv3 libudev ];
   propagatedBuildInputs = [ wxGTK suitesparse libpcap assimp ffmpeg libusb1 libjpeg eigen zlib freeglut opencv3 libudev ];
   nativeBuildInputs = [ cmake ];

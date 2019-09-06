@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "30e4072ba6f57663d61f629456bc07c74bd3a9678e9d94d85e7917f09781b468";
   };
 
+  buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ launch-ros ros2run launch robot-state-publisher ament-index-python dummy-sensors dummy-map-server ];
+  propagatedBuildInputs = [ ros2run launch-ros launch robot-state-publisher ament-index-python dummy-sensors dummy-map-server ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

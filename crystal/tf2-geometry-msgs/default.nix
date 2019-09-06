@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "7aafc1e2f356900c3a04bafeebdbacb50778dc3ac072aded38af027e0bb031b0";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ tf2-ros tf2 orocos-kdl geometry-msgs ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ tf2-ros tf2 orocos-kdl geometry-msgs ];

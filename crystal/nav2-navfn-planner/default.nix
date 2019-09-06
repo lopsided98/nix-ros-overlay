@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "412542dcda7ba8032585d1d0ff7155c10051f76a66b2301d080b282d20503509";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ builtin-interfaces nav2-tasks nav2-msgs nav2-util nav2-common nav-msgs rclcpp visualization-msgs nav2-robot geometry-msgs ];
   checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
   propagatedBuildInputs = [ builtin-interfaces nav2-tasks nav2-msgs nav2-util nav-msgs rclcpp visualization-msgs nav2-robot geometry-msgs ];

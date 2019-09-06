@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "006a7b5eef7f2d33a38be6367659eec3a17a901a35339c1b30fd64b4ab2b4f76";
   };
 
+  buildType = "ament_python";
   buildInputs = [ ros2cli ];
   checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
   propagatedBuildInputs = [ openssl python3Packages.lxml ros2cli ];

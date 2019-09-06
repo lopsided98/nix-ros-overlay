@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "b05d0aabfa0ead11e5a42ebddb00917a0033ec7199cc21b1e93e262e4c9fcd64";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rclcpp-action example-interfaces rclcpp ];
   propagatedBuildInputs = [ rclcpp-action example-interfaces rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

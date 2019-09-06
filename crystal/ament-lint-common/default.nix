@@ -12,7 +12,8 @@ buildRosPackage {
     sha256 = "91f4a7f259165adea29e391b8ff97c091d12e0f112dcc6b93cb2f616653f8eb1";
   };
 
-  propagatedBuildInputs = [ ament-cmake-uncrustify ament-cmake-flake8 ament-cmake-cppcheck ament-cmake-pep257 ament-cmake-xmllint ament-cmake-lint-cmake ament-cmake-copyright ament-cmake-cpplint ];
+  buildType = "ament_cmake";
+  propagatedBuildInputs = [ ament-cmake-uncrustify ament-cmake-core ament-cmake-flake8 ament-cmake-cppcheck ament-cmake-pep257 ament-cmake-xmllint ament-cmake-lint-cmake ament-cmake-copyright ament-cmake-cpplint ];
   nativeBuildInputs = [ ament-cmake-export-dependencies ament-cmake-core ];
 
   meta = {

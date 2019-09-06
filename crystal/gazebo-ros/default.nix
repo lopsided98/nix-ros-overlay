@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "15951164aa4962195cbd701f7539de10a4da2133444a759426f22ed43de36905";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ builtin-interfaces std-srvs gazebo-dev rclcpp tinyxml-vendor gazebo-msgs ];
   checkInputs = [ ament-lint-common sensor-msgs ament-cmake-gtest std-msgs ament-lint-auto geometry-msgs ];
   propagatedBuildInputs = [ builtin-interfaces std-srvs geometry-msgs sensor-msgs gazebo-dev rclcpp tinyxml-vendor gazebo-msgs ];

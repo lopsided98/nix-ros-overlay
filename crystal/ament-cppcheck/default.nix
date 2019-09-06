@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "bb321d98c2d9bf483046b10d43e62bbefdbd50a3e9653037d39e545a59b43ff0";
   };
 
+  buildType = "ament_python";
   propagatedBuildInputs = [ cppcheck ];
 
   meta = {

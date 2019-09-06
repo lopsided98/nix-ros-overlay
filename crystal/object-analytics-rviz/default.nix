@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "00f9f160d4740e7ca9799da65b83e5337aa482e4dac4cc151ce8c84deafcb65b";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ object-analytics-msgs sensor-msgs cv-bridge message-filters rclcpp std-msgs visualization-msgs object-msgs geometry-msgs ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ object-analytics-msgs sensor-msgs cv-bridge message-filters rclcpp std-msgs visualization-msgs object-msgs geometry-msgs ];

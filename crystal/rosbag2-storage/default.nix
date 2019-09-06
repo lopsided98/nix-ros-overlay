@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "e80c7e091dc84f99bcf69adad327232cb17f5d6263b6a7062fb0be4b2aadce3f";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ yaml-cpp-vendor rcutils pluginlib ];
   checkInputs = [ ament-lint-common ament-cmake-gmock rosbag2-test-common ament-cmake-gtest ament-lint-auto ];
   propagatedBuildInputs = [ yaml-cpp-vendor rcutils pluginlib ];

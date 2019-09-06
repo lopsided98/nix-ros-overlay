@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "f40ccb7be71f24b0b87300e5198f3e721aa99a537c8cee8b3ee707bee901fbc9";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ std-msgs sensor-msgs opencv3 rclcpp ];
   checkInputs = [ ament-cmake-pytest rmw-implementation-cmake ament-lint-common launch-testing launch ament-lint-auto ];
   propagatedBuildInputs = [ sensor-msgs opencv3 rclcpp ];

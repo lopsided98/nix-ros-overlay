@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "0e3089d57956c995c412f80fd13e621dc44777f3d006c4eaf0128f694e746987";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ pluginlib sensor-msgs costmap-queue nav2-util nav2-common nav-2d-utils rclcpp nav2-costmap-2d angles dwb-core nav-2d-msgs geometry-msgs ];
   checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
   propagatedBuildInputs = [ pluginlib sensor-msgs costmap-queue nav2-util nav-2d-utils rclcpp nav2-costmap-2d angles dwb-core nav-2d-msgs geometry-msgs ];

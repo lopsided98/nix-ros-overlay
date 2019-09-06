@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "e96c60d3baab759e5bcbfb25f79d4a23bf901e99134d06dd01d2f25490c2abf6";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ pluginlib qt5.qtbase pkg-config tinyxml2-vendor python-qt-binding ];
   checkInputs = [ ament-cmake-pytest ];
   propagatedBuildInputs = [ tinyxml2-vendor qt-gui pluginlib ];

@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "bf2d15f293ed5fc5710b76bf6be309ddee55b910a37f34cc259b69bce11ef6f2";
   };
 
+  buildType = "cmake";
   buildInputs = [ eigen ];
   propagatedBuildInputs = [ eigen ];
   nativeBuildInputs = [ cmake ];

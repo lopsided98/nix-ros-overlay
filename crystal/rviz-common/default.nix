@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "8fde07fc584f5c242e3849c258f00d85452c6507816c6ed6a9b543383b6d8d52";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ yaml-cpp-vendor rviz-rendering pluginlib tf2-geometry-msgs sensor-msgs rviz-assimp-vendor qt5.qtbase tf2-ros rviz-ogre-vendor tf2 urdf rclcpp tinyxml-vendor resource-retriever std-msgs geometry-msgs ];
   checkInputs = [ ament-cmake-uncrustify ament-cmake-gmock ament-cmake-gtest ament-cmake-cppcheck ament-cmake-lint-cmake ament-cmake-cpplint ];
-  propagatedBuildInputs = [ yaml-cpp-vendor rviz-rendering pluginlib tf2-geometry-msgs sensor-msgs rviz-assimp-vendor qt5.qtbase tf2-ros rviz-ogre-vendor tf2 urdf rclcpp tinyxml-vendor resource-retriever std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ yaml-cpp-vendor rviz-rendering pluginlib tf2-geometry-msgs sensor-msgs rviz-assimp-vendor qt5.qtbase tf2-ros rviz-ogre-vendor tf2 urdf resource-retriever tinyxml-vendor rclcpp std-msgs geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

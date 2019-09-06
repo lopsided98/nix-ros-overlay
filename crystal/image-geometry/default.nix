@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "1fbf0988dbf901abd57568dc429988e5316f9184230dbe102d2cb783ccd7c913";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ sensor-msgs opencv3 ];
   checkInputs = [ ament-cmake-pytest ament-cmake-gtest ];
   propagatedBuildInputs = [ sensor-msgs opencv3 ];

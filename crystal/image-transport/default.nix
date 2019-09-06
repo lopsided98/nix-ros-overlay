@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "80d28aee0a7cf9c2412f589e27638afab061a33740970935efeb990c31cea010";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ sensor-msgs pluginlib message-filters rclcpp ];
   checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ sensor-msgs pluginlib message-filters rclcpp ];
+  propagatedBuildInputs = [ sensor-msgs rclcpp message-filters pluginlib ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

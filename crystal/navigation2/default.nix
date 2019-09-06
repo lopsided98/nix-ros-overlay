@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "a64c995199a6691b261ad3789606d0fdaf56f46c582a87ea488bee4c4228d7c0";
   };
 
+  buildType = "ament_cmake";
   checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ nav2-dynamic-params nav2-map-server nav2-mission-executor nav2-tasks nav2-voxel-grid nav2-navfn-planner nav2-msgs nav2-world-model nav2-util nav2-dwb-controller nav2-motion-primitives nav2-costmap-2d nav2-simple-navigator nav2-robot nav2-bt-navigator nav2-amcl ];
+  propagatedBuildInputs = [ nav2-map-server nav2-dynamic-params nav2-mission-executor nav2-tasks nav2-voxel-grid nav2-navfn-planner nav2-msgs nav2-world-model nav2-util nav2-dwb-controller nav2-motion-primitives nav2-costmap-2d nav2-simple-navigator nav2-robot nav2-bt-navigator nav2-amcl ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

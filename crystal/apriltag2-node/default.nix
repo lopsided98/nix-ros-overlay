@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "096c7aba240c1767464228f85390ab0162b0443d470887944047d7b0b9e56f08";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ apriltag-msgs tf2-msgs class-loader sensor-msgs apriltag rclcpp eigen ];
   propagatedBuildInputs = [ apriltag-msgs tf2-msgs class-loader sensor-msgs apriltag rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

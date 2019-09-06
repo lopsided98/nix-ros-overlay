@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "cb95505e6a9a4d16ebb6ca7542eee7bca1afdfca36fd46aa6de30cb011d96b97";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ gtk3 udev pkg-config libusb1 glfw3 linuxHeaders openssl libGLU libGL ];
   propagatedBuildInputs = [ gtk3 udev libusb1 glfw3 linuxHeaders openssl libGLU libGL ];
   nativeBuildInputs = [ ament-cmake ];

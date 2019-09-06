@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "d686069fc2136b5053f9e601e2e6f9f69359cf8e2bfc50f3119b06a8261aec74";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ sqlite3-vendor rosbag2-storage rcutils pluginlib ];
   checkInputs = [ ament-lint-auto ament-cmake-gmock ament-lint-common rosbag2-test-common ];
   propagatedBuildInputs = [ sqlite3-vendor rosbag2-storage rcutils pluginlib ];

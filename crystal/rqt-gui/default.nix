@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "4e256bfa84d8af087d1201e8e2564f34e2ea8642f6c3e35000be52f35d7404ac";
   };
 
+  buildType = "ament_python";
   buildInputs = [ qt-gui ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ python3Packages.catkin-pkg rclpy qt-gui ament-index-python python-qt-binding ];

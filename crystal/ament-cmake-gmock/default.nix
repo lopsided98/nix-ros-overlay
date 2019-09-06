@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-core }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-gtest, ament-cmake-test, gmock-vendor, gmock }:
 buildRosPackage {
   pname = "ros-crystal-ament-cmake-gmock";
   version = "0.6.1";
@@ -12,6 +12,8 @@ buildRosPackage {
     sha256 = "4117982aa38392d3fdb94a27f46863791d7885ddef97ae4a156a9375dc2a4367";
   };
 
+  buildType = "ament_cmake";
+  propagatedBuildInputs = [ ament-cmake-test ament-cmake-gtest gmock gmock-vendor ];
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {

@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "84db3e5964876c57a44fdd440da1df948bc548516baafee870546d851822990b";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rcutils ];
   checkInputs = [ ament-lint-auto ament-lint-common ament-cmake-gmock ];
   propagatedBuildInputs = [ rcutils rosidl-generator-c ];

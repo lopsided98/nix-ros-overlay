@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "296305d8465e27e3cff4289865b15bf2bb40ccfb7a7d60e7c28b3a5df3a1a33a";
   };
 
+  buildType = "cmake";
   buildInputs = [ fastcdr tinyxml-2 asio ];
   propagatedBuildInputs = [ openssl fastcdr tinyxml-2 ];
   nativeBuildInputs = [ cmake ];

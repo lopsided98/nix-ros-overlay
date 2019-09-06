@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "ff57c8465eb21ae5a6d109da36edd8b13c31c475c9e0f18fcad0c8119889f136";
   };
 
+  buildType = "ament_cmake";
   propagatedBuildInputs = [ builtin-interfaces shape-msgs std-srvs actionlib-msgs trajectory-msgs sensor-msgs nav-msgs std-msgs diagnostic-msgs visualization-msgs geometry-msgs stereo-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

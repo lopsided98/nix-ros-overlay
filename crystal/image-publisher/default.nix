@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "399a70053d065f616ea3b8a4dcc0b8aa5aba278c3e12d60be4dadfffe39dc7eb";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ camera-info-manager image-transport class-loader cv-bridge rclcpp ];
   checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
   propagatedBuildInputs = [ camera-info-manager image-transport class-loader cv-bridge rclcpp ];

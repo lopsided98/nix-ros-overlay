@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "7238fa8bf233b4f674088d5229026c07a0e8de91de6183897e92be1786d86b9a";
   };
 
+  buildType = "ament_python";
   propagatedBuildInputs = [ rqt-gui-py rclpy rqt-gui rqt-msg rqt-py-common python-qt-binding ];
 
   meta = {

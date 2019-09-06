@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "9ce43d432da28490f5420df35d2adcc2486455dd97dac648d209a85d86ffc34c";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ tf2-msgs message-filters tf2 rclcpp std-msgs geometry-msgs ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ tf2-msgs message-filters tf2 rclcpp std-msgs geometry-msgs ];

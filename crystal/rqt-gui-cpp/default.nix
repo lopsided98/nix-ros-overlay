@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "d8138f546878edf1673ed52dc1b4e02ecce8cde383249634a49c4416e0e1a823";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ qt-gui-cpp qt-gui rclcpp qt5.qtbase ];
   propagatedBuildInputs = [ qt-gui-cpp qt-gui rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

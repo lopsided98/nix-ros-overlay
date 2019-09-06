@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "8dd00267aeb79b2c88892c8b6806f55684450b04fd412f3874309f069f23e9e3";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ tf2-msgs rmw-implementation-cmake actionlib-msgs diagnostic-msgs geometry-msgs gazebo-msgs stereo-msgs pkg-config example-interfaces rclcpp builtin-interfaces std-srvs trajectory-msgs python3Packages.pyyaml nav-msgs std-msgs visualization-msgs rcutils shape-msgs sensor-msgs ];
   checkInputs = [ ament-cmake-pytest demo-nodes-cpp ament-lint-common launch diagnostic-msgs ament-lint-auto ros2run ];
-  propagatedBuildInputs = [ builtin-interfaces shape-msgs std-srvs tf2-msgs actionlib-msgs geometry-msgs trajectory-msgs sensor-msgs python3Packages.pyyaml nav-msgs example-interfaces rclcpp std-msgs diagnostic-msgs visualization-msgs rcutils gazebo-msgs stereo-msgs ];
+  propagatedBuildInputs = [ tf2-msgs actionlib-msgs diagnostic-msgs geometry-msgs gazebo-msgs stereo-msgs pkg-config example-interfaces rclcpp builtin-interfaces std-srvs trajectory-msgs python3Packages.pyyaml nav-msgs std-msgs visualization-msgs rcutils shape-msgs sensor-msgs ];
   nativeBuildInputs = [ python3Packages.catkin-pkg ament-cmake rosidl-cmake rosidl-parser ament-index-python ];
 
   meta = {

@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "b35732ce4c7388c40c5038fe73a76a440328b6abe6b1c70be3f4f64e7711336b";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rosidl-generator-cpp rosbag2 pluginlib poco-vendor ament-index-cpp rcutils rmw ];
   checkInputs = [ rosbag2 rmw-fastrtps-dynamic-cpp ament-lint-common rosbag2-test-common test-msgs ament-cmake-gmock ament-lint-auto rcutils ];
   propagatedBuildInputs = [ rosidl-generator-cpp rosbag2 pluginlib poco-vendor ament-index-cpp rcutils rmw ];

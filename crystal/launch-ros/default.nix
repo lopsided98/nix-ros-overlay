@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "480257659d78e901745518c17ae0e35e6def35dbb7bc7a1d5867a3f1f3f08bbb";
   };
 
+  buildType = "ament_python";
   buildInputs = [ osrf-pycommon rclpy launch python3Packages.pyyaml lifecycle-msgs ament-index-python ];
   checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
   propagatedBuildInputs = [ osrf-pycommon rclpy launch python3Packages.pyyaml lifecycle-msgs ament-index-python ];

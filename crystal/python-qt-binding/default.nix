@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "fdf6f093e4849aba0695f6fa8c9bbe628d7da9b9745f7274b0fcc5e004cd0b08";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ python3Packages.pyqt5 qt5.qtbase ];
   checkInputs = [ ament-lint-auto ament-cmake-pytest ament-lint-common ];
   propagatedBuildInputs = [ python3Packages.pyqt5 ];

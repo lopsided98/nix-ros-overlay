@@ -102,6 +102,8 @@ self: super: {
 
  ament-uncrustify = self.callPackage ./ament-uncrustify {};
 
+ ament-xmllint = self.callPackage ./ament-xmllint {};
+
  angles = self.callPackage ./angles {};
 
  apriltag = self.callPackage ./apriltag {};
@@ -131,6 +133,8 @@ self: super: {
  compressed-depth-image-transport = self.callPackage ./compressed-depth-image-transport {};
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
+
+ connext-cmake-module = self.callPackage ./connext-cmake-module {};
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
@@ -350,11 +354,9 @@ self: super: {
 
  message-filters = self.callPackage ./message-filters {};
 
- micro-xrce-dds-agent = self.callPackage ./micro-xrce-dds-agent {};
-
  micro-ros-agent = self.callPackage ./micro-ros-agent {};
 
- microxrcedds-agent-cmake-module = self.callPackage ./microxrcedds-agent-cmake-module {};
+ microxrcedds-agent = self.callPackage ./microxrcedds-agent {};
 
  ml-classifiers = self.callPackage ./ml-classifiers {};
 
@@ -413,6 +415,8 @@ self: super: {
  object-analytics-rviz = self.callPackage ./object-analytics-rviz {};
 
  object-msgs = self.callPackage ./object-msgs {};
+
+ opensplice-cmake-module = self.callPackage ./opensplice-cmake-module {};
 
  orocos-kdl = self.callPackage ./orocos-kdl {};
 
@@ -480,6 +484,10 @@ self: super: {
 
  rmw = self.callPackage ./rmw {};
 
+ rmw-connext-cpp = self.callPackage ./rmw-connext-cpp {};
+
+ rmw-connext-shared-cpp = self.callPackage ./rmw-connext-shared-cpp {};
+
  rmw-fastrtps-cpp = self.callPackage ./rmw-fastrtps-cpp {};
 
  rmw-fastrtps-dynamic-cpp = self.callPackage ./rmw-fastrtps-dynamic-cpp {};
@@ -489,6 +497,8 @@ self: super: {
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
+
+ rmw-opensplice-cpp = self.callPackage ./rmw-opensplice-cpp {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
@@ -572,6 +582,8 @@ self: super: {
 
  rosidl-typesupport-connext-c = self.callPackage ./rosidl-typesupport-connext-c {};
 
+ rosidl-typesupport-connext-cpp = self.callPackage ./rosidl-typesupport-connext-cpp {};
+
  rosidl-typesupport-cpp = self.callPackage ./rosidl-typesupport-cpp {};
 
  rosidl-typesupport-fastrtps-c = self.callPackage ./rosidl-typesupport-fastrtps-c {};
@@ -583,6 +595,10 @@ self: super: {
  rosidl-typesupport-introspection-c = self.callPackage ./rosidl-typesupport-introspection-c {};
 
  rosidl-typesupport-introspection-cpp = self.callPackage ./rosidl-typesupport-introspection-cpp {};
+
+ rosidl-typesupport-opensplice-c = self.callPackage ./rosidl-typesupport-opensplice-c {};
+
+ rosidl-typesupport-opensplice-cpp = self.callPackage ./rosidl-typesupport-opensplice-cpp {};
 
  rqt = self.callPackage ./rqt {};
 

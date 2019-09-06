@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "2c72c61f27599e5d25900d22ad6e70116552e5eea1570e00b519b5b2d730a97e";
   };
 
+  buildType = "ament_python";
   checkInputs = [ ament-flake8 pythonPackages.pytest ament-pep257 ];
 
   meta = {

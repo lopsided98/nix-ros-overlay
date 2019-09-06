@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "8820033c5d07d4acc754b8fe40fb5aee18cdf065b3120e14e7c4fea5115b320c";
   };
 
+  buildType = "cmake";
   buildInputs = [ cairo ceres-solver boost gflags lua5 pythonPackages.sphinx glog eigen protobuf gmock ];
   propagatedBuildInputs = [ cairo ceres-solver boost gflags lua5 glog eigen protobuf ];
   nativeBuildInputs = [ cmake ];

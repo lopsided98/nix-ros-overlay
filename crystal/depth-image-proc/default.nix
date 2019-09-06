@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "ffea92a4b087654cdee1786eda631c4a98b1e7725e9824630a5706a8309b2f58";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ image-transport class-loader sensor-msgs message-filters cv-bridge tf2-ros image-geometry tf2 tf2-eigen stereo-msgs ];
   checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
   propagatedBuildInputs = [ image-transport cv-bridge tf2-ros image-geometry tf2 tf2-eigen ];

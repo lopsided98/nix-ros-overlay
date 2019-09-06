@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "3a7bbe8783baab74faa5bfc7f49cc90e4ffa199f6cde8b83dcdf0146dcc0f5fe";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ std-msgs rmw-fastrtps-cpp rclcpp ];
   checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing launch ament-lint-auto ];
   propagatedBuildInputs = [ std-msgs rmw-fastrtps-cpp rclcpp ];

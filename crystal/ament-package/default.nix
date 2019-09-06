@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "93eb732b8925aa6e1c265ef6c803225354debff818830762cc887729d8e47f6b";
   };
 
+  buildType = "ament_python";
   buildInputs = [ python3Packages.setuptools ];
   checkInputs = [ python3Packages.flake8 pythonPackages.pytest ];
   propagatedBuildInputs = [ python3Packages.setuptools ];

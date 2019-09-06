@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "620d841b5f5db364761592c12a070d998a234a9fb44a94626f6f634486715ccf";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ nav2-dynamic-params std-srvs nav2-tasks launch-ros tf2-geometry-msgs launch-testing sensor-msgs message-filters nav2-util tf2-ros nav2-common tf2 nav-msgs rclcpp geometry-msgs ];
   checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ nav2-dynamic-params std-srvs nav2-tasks launch-ros tf2-geometry-msgs launch-testing sensor-msgs message-filters nav2-util tf2-ros tf2 nav-msgs rclcpp geometry-msgs ];
+  propagatedBuildInputs = [ nav2-dynamic-params std-srvs nav2-tasks tf2-geometry-msgs launch-ros launch-testing sensor-msgs nav2-util message-filters tf2-ros tf2 nav-msgs rclcpp geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

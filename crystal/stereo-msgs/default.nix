@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "02091b01f35da1e96319e42ee309af8aa4d495611b960d775569298133ba3d1b";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ std-msgs sensor-msgs ];
   checkInputs = [ ament-lint-common ];
   propagatedBuildInputs = [ std-msgs sensor-msgs rosidl-default-runtime ];

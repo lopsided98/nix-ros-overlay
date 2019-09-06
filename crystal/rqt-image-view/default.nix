@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "36aaa0d59df2005e1e0b220e15d13e79df9ec027ba28cf1b829e9f05c226c263";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ image-transport sensor-msgs rqt-gui cv-bridge qt5.qtbase qt-gui-cpp rqt-gui-cpp rclcpp geometry-msgs ];
   propagatedBuildInputs = [ image-transport sensor-msgs rqt-gui cv-bridge qt-gui-cpp rqt-gui-cpp rclcpp geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];

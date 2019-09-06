@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "a6ab41c00250033a1aa06e24c40929299dc51bd7842b8488195abdf3dc16fe15";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ fmi-adapter ];
   propagatedBuildInputs = [ launch fmi-adapter launch-ros ];
   nativeBuildInputs = [ ament-cmake ];

@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "d334601046ce22f40bb0abe4f43ec89531f3a21890d4e678e98b4e3289fba330";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ nav2-voxel-grid nav2-common geometry-msgs message-filters nav2-util tf2-sensor-msgs rclcpp nav2-dynamic-params tf2-geometry-msgs tf2-ros nav-msgs std-msgs visualization-msgs laser-geometry pluginlib pcl sensor-msgs nav2-msgs tf2 map-msgs ];
   checkInputs = [ nav2-map-server ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
   propagatedBuildInputs = [ nav2-voxel-grid geometry-msgs message-filters nav2-util tf2-sensor-msgs rclcpp nav2-dynamic-params tf2-geometry-msgs tf2-ros nav-msgs std-msgs visualization-msgs laser-geometry pluginlib pcl sensor-msgs nav2-msgs tf2 map-msgs ];

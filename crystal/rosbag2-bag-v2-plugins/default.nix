@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "4760361587c5fbc1f4003239f3e2b6ce87c755878be0407bb7af5b689c31942b";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rosbag2 pluginlib ros1-rosbag-storage-vendor ros1-bridge rclcpp rosbag2-storage rcutils ];
   checkInputs = [ ament-lint-common ament-cmake-gmock rosbag2-test-common std-msgs ament-lint-auto ];
   propagatedBuildInputs = [ rosbag2 pluginlib ros1-rosbag-storage-vendor ros1-bridge rclcpp rosbag2-storage rcutils ];

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "86db4edda8a8596f4b26e72fb17d9dbe7c48effc1b99a76d46dfd475312c9187";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rviz-rendering pluginlib geometry-msgs qt5.qtbase nav-msgs urdf rclcpp tinyxml-vendor visualization-msgs resource-retriever laser-geometry rviz-common map-msgs ];
   checkInputs = [ ament-cmake-uncrustify ament-cmake-gmock ament-cmake-gtest ament-cmake-cppcheck rviz-rendering-tests ament-cmake-lint-cmake ament-index-cpp rviz-visual-testing-framework ament-cmake-cpplint ];
-  propagatedBuildInputs = [ rviz-rendering pluginlib geometry-msgs qt5.qtbase nav-msgs urdf rclcpp tinyxml-vendor visualization-msgs resource-retriever laser-geometry rviz-common map-msgs ];
+  propagatedBuildInputs = [ rviz-rendering pluginlib geometry-msgs qt5.qtbase laser-geometry nav-msgs urdf resource-retriever tinyxml-vendor rclcpp visualization-msgs rviz-common map-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "4034b2face753bc2960ae7ad0d7b0c009e7f51f14639fafd7f6386397c2340c8";
   };
 
+  buildType = "ament_python";
   buildInputs = [ rclpy ros2cli ];
   checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ rclpy ros2srv ros2topic python3Packages.pyyaml ros2cli ];
+  propagatedBuildInputs = [ rclpy ros2srv python3Packages.pyyaml ros2cli ros2topic ];
 
   meta = {
     description = ''The service command for ROS 2 command line tools.'';

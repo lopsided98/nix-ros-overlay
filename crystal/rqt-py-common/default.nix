@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "9aab24d68ce8ddf28c893ad4e015ee82092f937f456cbf904e8eba4bf7db4fcd";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rclpy qt5.qtbase ];
   checkInputs = [ ament-cmake-pytest ];
   propagatedBuildInputs = [ python-qt-binding rclpy qt5.qtbase qt-gui rosidl-default-runtime ];

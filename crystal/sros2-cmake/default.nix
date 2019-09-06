@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "80042b41404ecbb8cc07a61aa45b2b93fb2c15adfb8e6043fb1e5ef662d4fd7a";
   };
 
+  buildType = "cmake";
   buildInputs = [ ament-cmake-test sros2 ros2cli ];
   checkInputs = [ ament-cmake-lint-cmake ];
   propagatedBuildInputs = [ sros2 ros2cli ];

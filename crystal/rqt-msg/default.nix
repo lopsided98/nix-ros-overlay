@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "60afac52d8e0054ba07516357ddf272edea74802ee7b779ed0c89a9d39cd88fd";
   };
 
+  buildType = "ament_cmake";
   propagatedBuildInputs = [ rqt-gui-py python3Packages.catkin-pkg rclpy rqt-gui rqt-console rqt-py-common python-qt-binding ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "5fc208fcf017a8bfe79594bb62cf434801683c5d01a9785b5b783b558528224a";
   };
 
+  buildType = "ament_python";
   buildInputs = [ osrf-pycommon ];
   checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
   propagatedBuildInputs = [ osrf-pycommon ];

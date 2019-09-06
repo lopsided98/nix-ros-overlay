@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "31adddd619d0be5f1561ae22d965b98da156ee9b5f0bfa0d7f06534c7eb743cc";
   };
 
+  buildType = "ament_cmake";
   propagatedBuildInputs = [ compressed-depth-image-transport theora-image-transport compressed-image-transport ];
   nativeBuildInputs = [ ament-cmake ];
 

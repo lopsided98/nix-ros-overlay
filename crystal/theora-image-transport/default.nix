@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "748543b146e6a8816a560c6ccf5a48c9648c0b1b6a956cd3e7c67390ee4e2d2c";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ builtin-interfaces pluginlib image-transport cv-bridge libogg libtheora rclcpp std-msgs ];
   checkInputs = [ ament-lint-common ];
   propagatedBuildInputs = [ builtin-interfaces pluginlib image-transport cv-bridge libogg libtheora rclcpp std-msgs rosidl-default-runtime ];

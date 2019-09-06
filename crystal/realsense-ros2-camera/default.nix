@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "ccd6585ced405d85548f307ccafaffe130bbcdad898c93a6c447205304b8791d";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ builtin-interfaces realsense-camera-msgs image-transport cv-bridge sensor-msgs tf2-ros rmw-implementation rclcpp eigen std-msgs librealsense2 ];
   checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
   propagatedBuildInputs = [ builtin-interfaces realsense-camera-msgs sensor-msgs cv-bridge tf2-ros rmw-implementation rclcpp std-msgs rosidl-default-runtime librealsense2 ];

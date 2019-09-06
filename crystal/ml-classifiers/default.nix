@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "fe5ced50553b27c4c5ffd272d1d51ccc8264289d8c506eba7600efd82ff9bed8";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib rosidl-default-generators rclcpp eigen std-msgs ];
   checkInputs = [ ament-cmake-uncrustify ament-cmake-cppcheck ament-cmake-xmllint ament-cmake-lint-cmake ament-lint-auto ament-cmake-copyright ament-cmake-cpplint ];
   propagatedBuildInputs = [ pluginlib rclcpp eigen std-msgs rosidl-default-runtime ];

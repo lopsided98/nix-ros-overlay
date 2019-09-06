@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "119e8a57c251ae3979a0481b693f062941796764ee047eb40eff98789183a9aa";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ zeromq ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ zeromq ];

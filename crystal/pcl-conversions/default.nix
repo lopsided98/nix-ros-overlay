@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "10639c7bb949fbb1640fa0c27d8e4d3a98c05ce8d896314a9d68551b9d476c55";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ builtin-interfaces pcl sensor-msgs eigen std-msgs ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ builtin-interfaces pcl sensor-msgs eigen std-msgs ];

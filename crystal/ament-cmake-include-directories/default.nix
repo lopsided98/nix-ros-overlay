@@ -12,6 +12,8 @@ buildRosPackage {
     sha256 = "7d6e34603f43754020726b6674f705ca43703256437c1a2e809b6e159e898c1b";
   };
 
+  buildType = "ament_cmake";
+  propagatedBuildInputs = [ ament-cmake-core ];
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {

@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "0725803da2fd33fcdd3a5c0e78bcea930a93b62cd660bc8c6d327158d357dd46";
   };
 
+  buildType = "ament_python";
   checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
   propagatedBuildInputs = [ builtin-interfaces webots-ros2-universal-robot rclpy std-msgs webots-ros2-core webots-ros2-examples ];
 

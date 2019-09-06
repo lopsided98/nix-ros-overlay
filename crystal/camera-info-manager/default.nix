@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "65a8f9750504734de8a7033629376d64487c7a0467394f8438b92ff98aee89ef";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ camera-calibration-parsers image-transport sensor-msgs rclcpp ];
   checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
   propagatedBuildInputs = [ camera-calibration-parsers image-transport sensor-msgs rclcpp ];

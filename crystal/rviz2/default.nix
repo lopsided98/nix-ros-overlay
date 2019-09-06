@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "152a838d3f477c960cf567c50e70ba0cec5645c2bbb881a0cda952ccb2ddd4b8";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rviz-ogre-vendor qt5.qtbase rviz-common ];
   checkInputs = [ ament-cmake-uncrustify sensor-msgs ament-cmake-cppcheck rclcpp ament-cmake-lint-cmake geometry-msgs ament-cmake-cpplint ];
   propagatedBuildInputs = [ rviz-ogre-vendor rviz-common rviz-default-plugins ];

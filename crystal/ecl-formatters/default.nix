@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "b965714bbb869bbbfe9ecf925fa6e2f6e1275d8ff764f9e8f93110a00609cbe0";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ ecl-converters ecl-build ecl-exceptions ecl-license ecl-config ];
   propagatedBuildInputs = [ ecl-exceptions ecl-converters ecl-license ecl-config ];
   nativeBuildInputs = [ ament-cmake-ros ];

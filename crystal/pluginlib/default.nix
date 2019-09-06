@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "f520bff44d60282657c97f75a9eee211d9e49e0ed605450997a0155f774adbaf";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ class-loader tinyxml2-vendor rcutils ament-index-cpp ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ class-loader tinyxml2-vendor rcutils ament-index-cpp ];

@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "a7820291c149e6e678fe5b6b4076fc4aa4872ad674555d4f8ec3cc072fae6968";
   };
 
+  buildType = "ament_cmake";
   propagatedBuildInputs = [ gazeboSimulator.gazebo9 ];
   nativeBuildInputs = [ ament-cmake ];
 

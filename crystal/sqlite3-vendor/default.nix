@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "243bb62d135e78429dd88a5f21c18293ccf173041cc274b3031c948f0c77c5c6";
   };
 
+  buildType = "cmake";
   buildInputs = [ sqlite ];
   propagatedBuildInputs = [ sqlite ];
   nativeBuildInputs = [ cmake ];

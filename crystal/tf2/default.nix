@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "33f565f29e58c2675896a0b7dc88df83659a0acd09776f7aa40438ef7713b012";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ console-bridge console-bridge-vendor geometry-msgs ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ console-bridge console-bridge-vendor geometry-msgs ];

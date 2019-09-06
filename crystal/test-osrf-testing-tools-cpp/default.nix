@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "1067dd7000f2588b491c497ab81fc7ace0c5e8be01ecb1ec000479e0a9842e8f";
   };
 
+  buildType = "cmake";
   checkInputs = [ osrf-testing-tools-cpp ];
   nativeBuildInputs = [ cmake ];
 

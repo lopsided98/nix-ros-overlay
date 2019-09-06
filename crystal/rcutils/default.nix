@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "0fdb96bde3e98cd975529a326ffaf7ff763f51d523d5fc98fab8c6af6980b407";
   };
 
+  buildType = "ament_cmake";
   checkInputs = [ ament-cmake-pytest ament-lint-common ament-cmake-gmock launch-testing ament-cmake-gtest ament-lint-auto osrf-testing-tools-cpp ];
   nativeBuildInputs = [ python3Packages.empy ament-cmake-ros ];
 

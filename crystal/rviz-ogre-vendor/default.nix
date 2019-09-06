@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "804f35dd8c1bf6183eb37bae744861da954bce63188ed3c11e1ed2bd135aecdb";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ xorg.libXaw pkg-config xorg.xrandr xorg.libX11 libGLU libGL freetype ];
   propagatedBuildInputs = [ xorg.libXaw xorg.xrandr xorg.libX11 libGLU libGL freetype ];
   nativeBuildInputs = [ ament-cmake ];

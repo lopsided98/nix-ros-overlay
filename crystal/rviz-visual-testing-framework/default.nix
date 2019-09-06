@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "70d7d6aa110b2f04368e7c7f90d152b6c43f38f704e6188f19352af1e93372c5";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ ament-cmake-gtest qt5.qtbase rviz-common ];
   checkInputs = [ ament-cmake-uncrustify ament-cmake-gmock ament-cmake-cppcheck ament-cmake-lint-cmake ament-cmake-cpplint ];
   propagatedBuildInputs = [ ament-cmake-gtest rviz-common ];

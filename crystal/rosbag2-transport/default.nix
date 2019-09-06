@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "e32c864241cb17117eae3a7c56b55095ec350968e3e07c96e5baa65c5720df46";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rosbag2 rclcpp rmw shared-queues-vendor ];
   checkInputs = [ ament-lint-common ament-cmake-gmock test-msgs rosbag2-test-common ament-lint-auto ];
   propagatedBuildInputs = [ rosbag2 rclcpp rmw shared-queues-vendor ];

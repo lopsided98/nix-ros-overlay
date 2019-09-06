@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "691566ef964303ee76e1ea3231d1132284f69d09d2a1aaca8f2674e985e27825";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ boost pluginlib pkg-config gpgme console-bridge ros1-bridge openssl bzip2 ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   nativeBuildInputs = [ git ament-cmake ];

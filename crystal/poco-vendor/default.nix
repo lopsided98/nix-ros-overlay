@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "81e48bbd06ea2658b572efa9e854fb233b6e02f7559ef0ab27ff7d93da0a8e1b";
   };
 
+  buildType = "cmake";
   buildInputs = [ zlib poco pcre ];
-  propagatedBuildInputs = [ zlib poco pcre ];
+  propagatedBuildInputs = [ zlib poco pcre cmake ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

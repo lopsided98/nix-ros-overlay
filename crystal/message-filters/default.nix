@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "8fe2f16068afc46bdb688496deda0717a80a87a0ec6730f1c6361c9176f63f9e";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rclpy rclcpp builtin-interfaces ];
   checkInputs = [ ament-cmake-pytest ament-cmake-gtest sensor-msgs std-msgs ament-lint-auto ];
   nativeBuildInputs = [ ament-cmake-python ament-cmake-ros ];

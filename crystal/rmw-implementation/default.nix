@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "fd0cc3de840262b7d7a09f6593a8eb49dd1f2cbde4a0047e77b925a4b009ab91";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ poco rmw-opensplice-cpp rmw-implementation-cmake poco-vendor rmw rmw-fastrtps-cpp rcutils rmw-connext-cpp ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ poco poco-vendor rmw-implementation-cmake ];

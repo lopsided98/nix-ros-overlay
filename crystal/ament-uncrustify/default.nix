@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "4303f28d8848fb7120b71011fbd4288245952a807d4d6f7e95aaf2193f804e78";
   };
 
+  buildType = "ament_python";
   propagatedBuildInputs = [ uncrustify-vendor ];
 
   meta = {

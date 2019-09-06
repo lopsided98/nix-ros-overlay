@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "34a913f20b96c7a81741ede0f5af6b280089f100b273304efc328a9a2d738ae4";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ ecl-license ecl-type-traits ecl-build ];
   checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
   propagatedBuildInputs = [ ecl-license ecl-type-traits ];

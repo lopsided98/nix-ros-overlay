@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "13c70c9ab1a1a243b1e8c6cd77384e9f037ef7e5b0daf94e1d70ffc6dda2ce53";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ python3Packages.numpy opencv3 boost sensor-msgs ];
   checkInputs = [ ament-cmake-pytest python3Packages.opencv3 ament-lint-common ament-cmake-gtest ament-lint-auto ];
   propagatedBuildInputs = [ boost sensor-msgs ament-index-python python3Packages.numpy opencv3 ];

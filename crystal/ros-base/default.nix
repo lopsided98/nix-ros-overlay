@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "f4024e4d573f5137a6c5d7865bdd4ea69875a111db2c4938b7995da59c8d4932";
   };
 
+  buildType = "ament_cmake";
   propagatedBuildInputs = [ kdl-parser tf2-geometry-msgs ros-core tf2-ros tf2 urdf robot-state-publisher tf2-eigen ];
   nativeBuildInputs = [ ament-cmake ];
 

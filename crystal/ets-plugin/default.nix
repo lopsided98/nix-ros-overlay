@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "8287ec4889915a5aa9a8e1db5b55c6b95fefba310f11f31f594ad9e132f0391d";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rmw-implementation-cmake ets-msgs rclcpp std-msgs rcutils rmw ];
   propagatedBuildInputs = [ launch-ros rcutils ets-msgs rclcpp std-msgs rosidl-default-runtime rmw ];
   nativeBuildInputs = [ ament-cmake ];

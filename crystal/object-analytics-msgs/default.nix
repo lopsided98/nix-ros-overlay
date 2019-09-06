@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "cfa7e51f2ab2c6e644bb41065ea62712cd8fc4b20e16741eda5d6512ab9619ae";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ builtin-interfaces rosidl-default-generators sensor-msgs tf2-ros std-msgs object-msgs geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs tf2-ros object-msgs std-msgs rosidl-default-runtime geometry-msgs ];
+  propagatedBuildInputs = [ rosidl-default-runtime sensor-msgs tf2-ros std-msgs object-msgs geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

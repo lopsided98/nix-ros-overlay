@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "66b1e1f2fa567dc199c47dc31ef4c7167dd9c298bcb4758840e18a8a4b63ff2f";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ navigation2 launch-ros nav2-common ];
   checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
   propagatedBuildInputs = [ launch-ros navigation2 ];

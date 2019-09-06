@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "f038de02819aeeb4c26500888db7ac0b56115fc9036e6c0816e62a75ad604dc7";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ unique-identifier-msgs rmw-implementation-cmake rmw-implementation rcl-yaml-param-parser rcl rcutils rcl-action ];
   checkInputs = [ ament-cmake-pytest pythonPackages.pytest rosidl-generator-py ament-lint-common test-msgs rcl-interfaces ament-lint-auto ];
   propagatedBuildInputs = [ unique-identifier-msgs builtin-interfaces rmw-implementation rcl-yaml-param-parser rcl ament-index-python rcl-action ];

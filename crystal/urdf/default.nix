@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "541212cb509c15483e69146739bb03deae092d7a70173b8eda23c33bd391e307";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ urdfdom-headers tinyxml tinyxml-vendor urdfdom ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ urdfdom-headers tinyxml tinyxml-vendor urdfdom ];

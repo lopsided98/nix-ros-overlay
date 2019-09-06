@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "d849ccbb30a8a45c01a4a67ab1c7fbcfa331902a2786e127739eb63182b539a1";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ kdl-parser orocos-kdl sensor-msgs tf2-ros urdfdom-headers urdf rclcpp geometry-msgs ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ kdl-parser orocos-kdl sensor-msgs tf2-ros urdfdom-headers urdf rclcpp geometry-msgs ];

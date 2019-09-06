@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "51a0467974dfe60f044ee9ce790bf66bd17cd0c3c2f342aacc7711bb7673fe8c";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ gazebo-ros tf2-geometry-msgs camera-info-manager image-transport sensor-msgs tf2-ros gazebo-dev nav-msgs rclcpp std-msgs geometry-msgs ];
   checkInputs = [ ament-lint-auto cv-bridge ament-cmake-gtest ament-lint-common ];
   propagatedBuildInputs = [ gazebo-ros tf2-geometry-msgs camera-info-manager image-transport sensor-msgs tf2-ros gazebo-dev nav-msgs rclcpp std-msgs geometry-msgs ];

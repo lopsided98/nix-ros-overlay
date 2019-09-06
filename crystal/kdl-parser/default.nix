@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "9f3e1d9af948522e30fceb48dc27cd55cf2726965b00b6d3f745f205e49c92bf";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ orocos-kdl tinyxml urdfdom-headers urdf tinyxml-vendor ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ orocos-kdl tinyxml urdfdom-headers urdf tinyxml-vendor ];

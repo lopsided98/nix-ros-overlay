@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "f79319429937ec9389ab706816c9e04dbbbb1903073b76317f97be19a61fd4b7";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rosidl-parser ];
   checkInputs = [ ament-lint-auto ament-cmake-pytest pythonPackages.pytest ament-lint-common ];
   propagatedBuildInputs = [ rosidl-parser ];

@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "6ca0be3c8b206bba1c02c67147ac5a3fb36abda8dec3b867d397dfa123ecbe1a";
   };
 
+  buildType = "ament_python";
   propagatedBuildInputs = [ python3Packages.flake8 ];
 
   meta = {

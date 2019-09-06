@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "eb449f54bbf1fe37e38580e83446b523eb5891f4e187acd4fbce4ec3033c0c56";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ poco poco-vendor console-bridge console-bridge-vendor ];
   checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
   propagatedBuildInputs = [ poco poco-vendor console-bridge console-bridge-vendor ];

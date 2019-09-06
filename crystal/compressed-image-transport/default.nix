@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "aa631582dbcb9af820c40dd48c116d705b020b0f9fe5d49e660ba3bb078d87de";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ image-transport cv-bridge ];
   propagatedBuildInputs = [ image-transport cv-bridge ];
   nativeBuildInputs = [ ament-cmake ];

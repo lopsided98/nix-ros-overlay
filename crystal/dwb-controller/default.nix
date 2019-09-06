@@ -12,9 +12,10 @@ buildRosPackage {
     sha256 = "450f6b6b59a11f491adbd99d2ceaf1e150a11f337e4d64b84738e3159dd974d4";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ boost nav2-tasks nav2-msgs nav2-util nav2-common nav-2d-utils rclcpp std-msgs dwb-core nav2-robot nav-2d-msgs ];
   checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ boost nav2-tasks nav2-msgs nav2-util nav-2d-utils rclcpp std-msgs dwb-core nav2-robot nav-2d-msgs ];
+  propagatedBuildInputs = [ nav2-tasks boost nav2-msgs nav2-util nav-2d-utils rclcpp std-msgs dwb-core nav2-robot nav-2d-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

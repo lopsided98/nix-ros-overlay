@@ -12,8 +12,9 @@ buildRosPackage {
     sha256 = "27275c8ea3647c50538c85816341e1de41618345e4b54b9d30314886f9525b89";
   };
 
+  buildType = "cmake";
   buildInputs = [ tinyxml console-bridge-vendor urdfdom-headers console-bridge tinyxml-vendor ];
-  propagatedBuildInputs = [ tinyxml console-bridge-vendor urdfdom-headers console-bridge tinyxml-vendor ];
+  propagatedBuildInputs = [ console-bridge-vendor tinyxml urdfdom-headers console-bridge tinyxml-vendor ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

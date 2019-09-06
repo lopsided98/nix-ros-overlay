@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "e10ccb57fc49fd78c8f892a991f2dbcf10ac160216b751ed3b66b87f26cb5d18";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ rmw-implementation lifecycle-msgs rcl rcutils rosidl-generator-c ];
   checkInputs = [ ament-lint-auto ament-cmake-gtest osrf-testing-tools-cpp ament-lint-common ];
   propagatedBuildInputs = [ rmw-implementation lifecycle-msgs rcl rcutils rosidl-generator-c ];

@@ -12,6 +12,7 @@ buildRosPackage {
     sha256 = "2386ff364ba12b1c7075840d7e70f764f54f2bf2d2c93103fe57ae9703feba7e";
   };
 
+  buildType = "ament_cmake";
   buildInputs = [ costmap-queue dwb-critics dwb-plugins nav-2d-utils dwb-msgs dwb-controller dwb-core nav-2d-msgs ];
   checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
   propagatedBuildInputs = [ costmap-queue dwb-critics dwb-plugins nav-2d-utils dwb-msgs dwb-controller dwb-core nav-2d-msgs ];

@@ -12,6 +12,8 @@ buildRosPackage {
     sha256 = "fdf241071c3f7151841f0ba54be21351e60c17571722644bac8df642587354ca";
   };
 
+  buildType = "ament_cmake";
+  propagatedBuildInputs = [ ament-package python3Packages.catkin-pkg cmake ];
   nativeBuildInputs = [ ament-package python3Packages.catkin-pkg cmake ];
 
   meta = {
