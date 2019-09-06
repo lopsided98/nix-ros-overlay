@@ -56,6 +56,8 @@ self: super: {
 
  ariles-ros = self.callPackage ./ariles-ros {};
 
+ aruco-detect = self.callPackage ./aruco-detect {};
+
  asmach = self.callPackage ./asmach {};
 
  asmach-tutorials = self.callPackage ./asmach-tutorials {};

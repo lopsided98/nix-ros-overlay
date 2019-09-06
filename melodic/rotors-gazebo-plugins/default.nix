@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rotors_gazebo_plugins package'';
-    license = with lib.licenses; [ "ASL 2.0" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

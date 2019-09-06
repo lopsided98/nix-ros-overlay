@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages specific to MAV planning, especially polynomial planning.'';
-    license = with lib.licenses; [ "ASL 2.0" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }
