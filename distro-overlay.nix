@@ -33,6 +33,13 @@ let
   in {
     # ROS package overrides/fixups
 
+    ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({
+      propagatedBuildInputs ? [], ...
+    }: {
+      propagatedBuildInputs = [ self.cmake rosSelf.ament-package ] ++ propagatedBuildInputs;
+      setupHook = ./ament-cmake-core-setup-hook.sh;
+    });
+
     camera-calibration-parsers = rosSuper.camera-calibration-parsers.overrideAttrs ({
       postPatch ? "", ...
     }: {
@@ -97,7 +104,7 @@ let
     }:{
       patches = patches ++ [
         (self.fetchpatch {
-          url = https://github.com/ros-simulation/gazebo_ros_pkgs/commit/b756d784d4bdc45bf33b28ac6c0a01c15563e36c.patch;
+          url = "https://github.com/ros-simulation/gazebo_ros_pkgs/commit/b756d784d4bdc45bf33b28ac6c0a01c15563e36c.patch";
           sha256 = "08lpkcda9yr3vjc2wxy5hzm99g7876d6402snac3mx5j7fa3w5i2";
           stripLen = 1;
         })
@@ -106,6 +113,19 @@ let
 
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
       setupHook = ./gazebo-ros-setup-hook.sh;
+    });
+
+    libyaml-vendor = rosSuper.libyaml-vendor.overrideAttrs ({
+      postPatch ? "", ...
+    }: let
+      libyaml = self.fetchurl {
+        url = "https://github.com/yaml/libyaml/archive/10c907871f1ccd779c7fccf6b81a62762b5c4e7b.zip";
+        sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
+      };
+    in {
+      postPatch = ''
+        sed -i 's#URL [^ ]*$#URL file://${libyaml}#' CMakeLists.txt
+      '' + postPatch;
     });
 
     map-server = rosSuper.map-server.overrideAttrs ({
@@ -142,6 +162,24 @@ let
       '';
     });
 
+    rosidl-default-runtime = rosSuper.rosidl-default-runtime.overrideAttrs ({
+      propagatedBuildInputs ? [], ...
+    }: {
+      propagatedBuildInputs = [ rosSelf.rmw-fastrtps-cpp ] ++ propagatedBuildInputs;
+    });
+
+    rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
+      patches ? [], ...
+    }: {
+       patches = patches ++ [
+        (self.fetchpatch {
+          url = "https://github.com/ros2/rosidl_python/commit/a7ce53c8922963439ba526f7f6c92dc0cc955c5f.patch";
+          sha256 = "0yal5mvhwxwkwzv5rlssfc4czck8zmcm36kwssypfwbkggc2700f";
+          stripLen = 1;
+        })
+      ];
+    });
+
     rviz = rosSuper.rviz.overrideAttrs ({
       nativeBuildInputs ? [],
       postFixup ? "", ...
@@ -164,6 +202,32 @@ let
         wrapProgram $out/bin/rqt \
           --prefix QT_PLUGIN_PATH : "${self.qt5.qtbase.bin}/${self.qt5.qtbase.qtPluginPrefix}"
       '' + postFixup;
+    });
+
+    tinydir-vendor = rosSuper.tinydir-vendor.overrideAttrs ({
+      postPatch ? "", ...
+    }: let
+      tinydir = self.fetchurl {
+        url = "https://github.com/cxong/tinydir/archive/1.2.4.tar.gz";
+        sha256 = "1qjwky7v4b9d9dmxzsybnhiz6xgx94grc67sdyvlp1d4kfkfsl4w";
+      };
+    in {
+      postPatch = ''
+        sed -i 's#URL [^ ]*$#URL file://${tinydir}#' CMakeLists.txt
+      '' + postPatch;
+    });
+
+    uncrustify-vendor = rosSuper.uncrustify-vendor.overrideAttrs ({
+      postPatch ? "", ...
+    }: let
+      uncrustify = self.fetchurl {
+        url = "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.68.1.tar.gz";
+        sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
+      };
+    in {
+      postPatch = ''
+        sed -i 's#URL [^ ]*$#URL file://${uncrustify}#' CMakeLists.txt
+      '' + postPatch;
     });
 
     urdf = rosSuper.urdf.overrideAttrs ({
