@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/network_monitor_udp/1.0.15-0.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/network_monitor_udp/1.0.15-0.tar.gz";
+    name = "1.0.15-0.tar.gz";
     sha256 = "f8d6af3b278da088a1eb3a77ded41253797b55afebe21a4540733f0ce8b6bc4b";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs rospy message-generation actionlib diagnostic-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs rospy message-runtime actionlib diagnostic-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs actionlib message-runtime rospy diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

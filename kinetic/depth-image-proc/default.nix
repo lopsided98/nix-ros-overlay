@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.23";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/depth_image_proc/1.12.23-0.tar.gz;
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/depth_image_proc/1.12.23-0.tar.gz";
+    name = "1.12.23-0.tar.gz";
     sha256 = "3a76ec1ddab6ba17658827778c354189ce176c4e05ffcc60356d9654ca3b4aa5";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost cmake-modules image-transport sensor-msgs cv-bridge message-filters tf2-ros image-geometry tf2 eigen-conversions nodelet stereo-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ boost image-transport cv-bridge tf2-ros image-geometry tf2 eigen-conversions nodelet ];

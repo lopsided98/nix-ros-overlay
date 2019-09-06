@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/ethz-adrl/towr-release/archive/release/kinetic/towr_ros/1.4.1-0.tar.gz;
+    url = "https://github.com/ethz-adrl/towr-release/archive/release/kinetic/towr_ros/1.4.1-0.tar.gz";
+    name = "1.4.1-0.tar.gz";
     sha256 = "d234570a2b4c0b399d520ae66c0e72a8cc07773abfe8829dfb31919d2a5ea4c7";
   };
 
+  buildType = "catkin";
   buildInputs = [ xpp-states xpp-msgs rosbag towr message-generation ncurses visualization-msgs message-runtime std-msgs roscpp ];
-  propagatedBuildInputs = [ xpp-states xpp-msgs xpp-hyq rosbag xterm rqt-bag towr message-generation rviz ncurses visualization-msgs message-runtime std-msgs roscpp ];
+  propagatedBuildInputs = [ xpp-states xpp-msgs xpp-hyq rosbag xterm rqt-bag towr message-generation rviz ncurses message-runtime visualization-msgs std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

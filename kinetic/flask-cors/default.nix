@@ -8,10 +8,12 @@ buildRosPackage {
   version = "3.0.3-r2";
 
   src = fetchurl {
-    url = https://github.com/pyros-dev/flask-cors-rosrelease/archive/release/kinetic/flask_cors/3.0.3-2.tar.gz;
+    url = "https://github.com/pyros-dev/flask-cors-rosrelease/archive/release/kinetic/flask_cors/3.0.3-2.tar.gz";
+    name = "3.0.3-2.tar.gz";
     sha256 = "2735725eb5e55baa6d4bbc719d63dd1898f4c03bcce965488dd8139059fbd285";
   };
 
+  buildType = "catkin";
   buildInputs = [ pythonPackages.flask catkin-pip pythonPackages.six ];
   propagatedBuildInputs = [ pythonPackages.flask pythonPackages.six ];
   nativeBuildInputs = [ catkin ];

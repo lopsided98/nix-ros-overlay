@@ -2,18 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag, genpy, pythonPackages, catkin, std-msgs, genmsg, roslib }:
+{ lib, buildRosPackage, fetchurl, rosbag, catkin, pythonPackages, roslib, std-msgs, genmsg, genpy }:
 buildRosPackage {
   pname = "ros-kinetic-rosmsg";
   version = "1.12.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosmsg/1.12.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosmsg/1.12.14-0.tar.gz";
+    name = "1.12.14-0.tar.gz";
     sha256 = "42a7544df8a19e2d5e36769ff25d9c03ea9fe8db698363f0b39cb06e039f5f86";
   };
 
+  buildType = "catkin";
   checkInputs = [ std-msgs ];
-  propagatedBuildInputs = [ pythonPackages.rospkg rosbag catkin genpy genmsg roslib ];
+  propagatedBuildInputs = [ pythonPackages.rospkg rosbag catkin roslib genmsg genpy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

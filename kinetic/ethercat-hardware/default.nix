@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.18-r1";
 
   src = fetchurl {
-    url = https://github.com/PR2-prime/pr2_ethercat_drivers-release/archive/release/kinetic/ethercat_hardware/1.8.18-1.tar.gz;
+    url = "https://github.com/PR2-prime/pr2_ethercat_drivers-release/archive/release/kinetic/ethercat_hardware/1.8.18-1.tar.gz";
+    name = "1.8.18-1.tar.gz";
     sha256 = "cfeb3b7a7a44fd0c5d617e03fb7b1a5ca49320c94b236fb32bcbf23383963378";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-hardware-interface pluginlib eml realtime-tools diagnostic-updater message-generation diagnostic-msgs pr2-msgs roscpp log4cxx ];
   propagatedBuildInputs = [ pr2-hardware-interface pluginlib eml realtime-tools diagnostic-updater message-runtime diagnostic-msgs pr2-msgs roscpp log4cxx ];
   nativeBuildInputs = [ catkin ];

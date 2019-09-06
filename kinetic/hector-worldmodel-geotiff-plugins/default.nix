@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.4";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_worldmodel-release/archive/release/kinetic/hector_worldmodel_geotiff_plugins/0.3.4-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_worldmodel-release/archive/release/kinetic/hector_worldmodel_geotiff_plugins/0.3.4-0.tar.gz";
+    name = "0.3.4-0.tar.gz";
     sha256 = "68aa6355f7c39c11ad20cdc7ce8129f6c4fb4bf9710105b1e76c2214395701d1";
   };
 
+  buildType = "catkin";
   buildInputs = [ hector-worldmodel-msgs hector-geotiff ];
   propagatedBuildInputs = [ hector-worldmodel-msgs hector-geotiff ];
   nativeBuildInputs = [ catkin ];

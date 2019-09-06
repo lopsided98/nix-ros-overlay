@@ -8,11 +8,13 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/freenect_stack-release/archive/release/kinetic/freenect_launch/0.4.2-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/freenect_stack-release/archive/release/kinetic/freenect_launch/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "c066e806f953b5f3e37aac19086bb8316b20bcf58437d7df63be5562589d669a";
   };
 
-  propagatedBuildInputs = [ freenect-camera nodelet rgbd-launch image-proc tf ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ freenect-camera rgbd-launch nodelet image-proc tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

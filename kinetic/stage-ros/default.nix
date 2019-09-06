@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.7.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/stage_ros-release/archive/release/kinetic/stage_ros/1.7.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/stage_ros-release/archive/release/kinetic/stage_ros/1.7.5-0.tar.gz";
+    name = "1.7.5-0.tar.gz";
     sha256 = "aa282c245ee3f4c0ac0fb9d169f3f5c3c7dbb9ff5d57fe7c69eeec88c2fe4e9f";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs boost sensor-msgs roscpp rostest nav-msgs std-msgs tf stage geometry-msgs ];
   propagatedBuildInputs = [ std-srvs boost sensor-msgs roscpp nav-msgs std-msgs tf stage geometry-msgs ];
   nativeBuildInputs = [ catkin ];

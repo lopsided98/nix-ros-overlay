@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/kobuki_core-release/archive/release/kinetic/kobuki_ftdi/0.7.8-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/kinetic/kobuki_ftdi/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
     sha256 = "c9469f2e65acc68339b7b100eba98e364ed334be32c22519c38e55f1cf5ee4ee";
   };
 
+  buildType = "catkin";
   buildInputs = [ pkg-config ecl-command-line libftdi libusb ];
-  propagatedBuildInputs = [ libusb libftdi ecl-command-line ];
+  propagatedBuildInputs = [ ecl-command-line libftdi libusb ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

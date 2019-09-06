@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_tricycle_controller/0.7.8-1.tar.gz;
+    url = "https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_tricycle_controller/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
     sha256 = "9ca719d4accc7d1d7091b463a298ca2d8de6de7aac6dc007d2186fd0ac73b564";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface std-srvs pluginlib boost cob-base-controller-utils realtime-tools roscpp nav-msgs controller-interface angles tf geometry-msgs ];
-  propagatedBuildInputs = [ hardware-interface std-srvs pluginlib boost cob-base-controller-utils realtime-tools roscpp nav-msgs controller-interface angles tf geometry-msgs ];
+  propagatedBuildInputs = [ hardware-interface std-srvs boost cob-base-controller-utils pluginlib realtime-tools roscpp controller-interface nav-msgs angles tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/agvs_common-release/archive/release/kinetic/agvs_pad/0.1.3-1.tar.gz;
+    url = "https://github.com/RobotnikAutomation/agvs_common-release/archive/release/kinetic/agvs_pad/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
     sha256 = "4d5ed9a41e12e21d86ab4613dcdef0b72171d2f38b610e305c579589e8f6df3a";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs geometry-msgs sensor-msgs robotnik-msgs diagnostic-updater std-msgs diagnostic-msgs ackermann-msgs ];
   propagatedBuildInputs = [ std-srvs geometry-msgs sensor-msgs robotnik-msgs diagnostic-updater std-msgs diagnostic-msgs ackermann-msgs ];
   nativeBuildInputs = [ catkin ];

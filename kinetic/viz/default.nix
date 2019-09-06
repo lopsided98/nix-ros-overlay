@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/viz/1.3.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/viz/1.3.2-0.tar.gz";
+    name = "1.3.2-0.tar.gz";
     sha256 = "14529b13b3f4c475e085bba31c71e55f639788f2bcbb333d9b2813b95bb0b093";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rviz ros-base rqt-common-plugins rqt-robot-plugins ];
   nativeBuildInputs = [ catkin ];
 

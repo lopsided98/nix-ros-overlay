@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.11";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_simulator-release/archive/release/kinetic/pr2_controller_configuration_gazebo/2.0.11-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_simulator-release/archive/release/kinetic/pr2_controller_configuration_gazebo/2.0.11-0.tar.gz";
+    name = "2.0.11-0.tar.gz";
     sha256 = "91c14804efe06595ffb5a60a02c3c77d317ff63e598f6407cfed9491b3c38b45";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pr2-head-action gazeboSimulator.gazebo pr2-gripper-action single-joint-position-action pr2-controller-manager ];
   nativeBuildInputs = [ catkin ];
 

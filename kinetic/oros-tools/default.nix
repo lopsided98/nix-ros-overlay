@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1";
 
   src = fetchurl {
-    url = https://github.com/easymov/oros_tools-release/archive/release/kinetic/oros_tools/0.1.1-0.tar.gz;
+    url = "https://github.com/easymov/oros_tools-release/archive/release/kinetic/oros_tools/0.1.1-0.tar.gz";
+    name = "0.1.1-0.tar.gz";
     sha256 = "aaa2f2bdab754a4324621495f57c36e372b24bebbe1566d65057f3e89ac0d540";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ ros-peerjs log-server rosbridge-suite ];
   nativeBuildInputs = [ catkin ];
 

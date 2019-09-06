@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.2";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/jackal-release/archive/release/kinetic/jackal_description/0.6.2-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/kinetic/jackal_description/0.6.2-0.tar.gz";
+    name = "0.6.2-0.tar.gz";
     sha256 = "4c2d0cbf6fd755476a1a7872639929c7d5277a3e4f258091df26e5c959f8f70c";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ pointgrey-camera-description lms1xx urdf robot-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];

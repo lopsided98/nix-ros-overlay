@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.28";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_navigation-release/archive/release/kinetic/pr2_navigation_teleop/0.1.28-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_navigation-release/archive/release/kinetic/pr2_navigation_teleop/0.1.28-0.tar.gz";
+    name = "0.1.28-0.tar.gz";
     sha256 = "254013859ee8e6e2f76b3ecb0aa5788a413ba47b91071c5ede5fbff6e0d11923";
   };
 
+  buildType = "catkin";
   buildInputs = [ topic-tools pr2-teleop pr2-machine ];
   propagatedBuildInputs = [ topic-tools pr2-teleop pr2-machine ];
   nativeBuildInputs = [ catkin ];

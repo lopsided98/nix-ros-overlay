@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/kobuki_soft-release/archive/release/kinetic/kobuki_soft/0.1.3-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/kobuki_soft-release/archive/release/kinetic/kobuki_soft/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "f2c8ca2da587185a4f6238fd5f2e8d09910eade0ea0dc0dff91f59d01d62f9a7";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ kobuki-softapps kobuki-softnode ];
   nativeBuildInputs = [ catkin ];
 

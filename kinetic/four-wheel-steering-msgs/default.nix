@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/four_wheel_steering_msgs-release/archive/release/kinetic/four_wheel_steering_msgs/1.0.0-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/four_wheel_steering_msgs-release/archive/release/kinetic/four_wheel_steering_msgs/1.0.0-0.tar.gz";
+    name = "1.0.0-0.tar.gz";
     sha256 = "263c1ae8938996b3c43a53b1c6f1d33e3576d32f2bd2258c703341bce6b3eb4e";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

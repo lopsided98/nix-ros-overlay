@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.25.2-r1";
 
   src = fetchurl {
-    url = https://github.com/IntelRealSense/librealsense2-release/archive/release/kinetic/librealsense2/2.25.2-1.tar.gz;
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/kinetic/librealsense2/2.25.2-1.tar.gz";
+    name = "2.25.2-1.tar.gz";
     sha256 = "b171a356c3802b1de33c8deef9001409ffc7d19ae16667c8b60e3b9e56963463";
   };
 
+  buildType = "cmake";
   buildInputs = [ udev pkg-config libusb1 linuxHeaders openssl ];
   propagatedBuildInputs = [ openssl udev libusb1 linuxHeaders ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.0";
 
   src = fetchurl {
-    url = https://github.com/smits/soem-gbp/archive/release/kinetic/soem/1.3.0-0.tar.gz;
+    url = "https://github.com/smits/soem-gbp/archive/release/kinetic/soem/1.3.0-0.tar.gz";
+    name = "1.3.0-0.tar.gz";
     sha256 = "a28a315984ad334a4fe3899dd463570993ca632f3943eb0511daf4734d13d535";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

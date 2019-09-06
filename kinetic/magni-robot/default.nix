@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/UbiquityRobotics-release/magni_robot-release/archive/release/kinetic/magni_robot/0.4.2-0.tar.gz;
+    url = "https://github.com/UbiquityRobotics-release/magni_robot-release/archive/release/kinetic/magni_robot/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "767230ba5af5c961dad535fb18cfc8d30e80c17653e8008f1414d8c58d4b2907";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ magni-nav magni-viz magni-demos magni-teleop magni-description magni-bringup ];
   nativeBuildInputs = [ catkin ];
 

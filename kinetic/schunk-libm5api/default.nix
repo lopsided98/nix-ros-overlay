@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_libm5api/0.6.13-1.tar.gz;
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_libm5api/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
     sha256 = "c1353ab2b1db80d0665c26e7cbab26f4808ffed977112a2f85e755ab9dac536a";
   };
 
+  buildType = "catkin";
   buildInputs = [ libntcan libpcan ];
   propagatedBuildInputs = [ libntcan libpcan ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_robots/0.7.1-1.tar.gz;
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_robots/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
     sha256 = "1483679adedcbfb7353a4a607c0e8dbc27e851939ae747d61047bbed759551a3";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ cob-default-robot-behavior cob-moveit-config cob-hardware-config cob-bringup cob-default-robot-config ];
   nativeBuildInputs = [ catkin ];
 

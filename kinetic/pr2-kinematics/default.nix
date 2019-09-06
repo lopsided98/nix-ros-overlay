@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.9";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_kinematics-release/archive/release/kinetic/pr2_kinematics/1.0.9-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_kinematics-release/archive/release/kinetic/pr2_kinematics/1.0.9-0.tar.gz";
+    name = "1.0.9-0.tar.gz";
     sha256 = "3ec0f330bccd50cf2151890940c17c10d6c6facada7ff6ed1e5eda8b5e2875b6";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pr2-arm-kinematics ];
   nativeBuildInputs = [ catkin ];
 

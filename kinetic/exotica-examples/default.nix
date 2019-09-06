@@ -8,10 +8,12 @@ buildRosPackage {
   version = "5.0.0";
 
   src = fetchurl {
-    url = https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_examples/5.0.0-0.tar.gz;
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_examples/5.0.0-0.tar.gz";
+    name = "5.0.0-0.tar.gz";
     sha256 = "30a9b871c1d2de18ddca98f1f18b469d42c7d2eaa865b98eb201d691eebd012c";
   };
 
+  buildType = "catkin";
   buildInputs = [ exotica-ik-solver sensor-msgs exotica-aico-solver exotica-python exotica-core exotica-core-task-maps ];
   checkInputs = [ rostest exotica-val-description ];
   propagatedBuildInputs = [ exotica-ik-solver geometry-msgs python-orocos-kdl sensor-msgs exotica-time-indexed-rrt-connect-solver exotica-aico-solver exotica-ompl-solver rviz interactive-markers robot-state-publisher visualization-msgs exotica-python exotica-core exotica-core-task-maps exotica-collision-scene-fcl ];

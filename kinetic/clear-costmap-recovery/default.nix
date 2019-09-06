@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/kinetic/clear_costmap_recovery/1.14.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/clear_costmap_recovery/1.14.4-0.tar.gz";
+    name = "1.14.4-0.tar.gz";
     sha256 = "ed33bd27b341aa89479a4fe5bc11027ea41f5363b181ae1d20ddd65ef094ac5e";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d cmake-modules pluginlib nav-core roscpp eigen tf ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ costmap-2d pluginlib nav-core roscpp eigen tf ];

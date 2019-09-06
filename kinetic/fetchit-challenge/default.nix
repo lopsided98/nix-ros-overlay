@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/kinetic/fetchit_challenge/0.8.2-0.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/kinetic/fetchit_challenge/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "f3b2f364d011d27ee4b3be8038fed51b194bbe6baf8190e8b7ea55e7b9b78e63";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros controller-manager robot-state-publisher rospy fetch-gazebo ];
-  propagatedBuildInputs = [ gazebo-ros controller-manager effort-controllers robot-state-publisher rospy fetch-gazebo ];
+  propagatedBuildInputs = [ gazebo-ros controller-manager robot-state-publisher effort-controllers rospy fetch-gazebo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

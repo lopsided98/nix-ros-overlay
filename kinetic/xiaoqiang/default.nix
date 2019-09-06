@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.12";
 
   src = fetchurl {
-    url = https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang/0.0.12-0.tar.gz;
+    url = "https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang/0.0.12-0.tar.gz";
+    name = "0.0.12-0.tar.gz";
     sha256 = "08f88571e97775d1946f73539b78e7f71aae4a93662f77face30127d5e4cc38f";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ xiaoqiang-server xiaoqiang-description xiaoqiang-freenect xiaoqiang-msgs xiaoqiang-driver xiaoqiang-bringup xiaoqiang-controller xiaoqiang-monitor ];
   nativeBuildInputs = [ catkin ];
 

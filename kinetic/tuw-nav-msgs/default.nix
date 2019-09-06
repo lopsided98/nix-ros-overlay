@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.11";
 
   src = fetchurl {
-    url = https://github.com/tuw-robotics/tuw_msgs-release/archive/release/kinetic/tuw_nav_msgs/0.0.11-0.tar.gz;
+    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/kinetic/tuw_nav_msgs/0.0.11-0.tar.gz";
+    name = "0.0.11-0.tar.gz";
     sha256 = "47dfddda81934ed6721d21653f0defed39ca80085357918bffe691239b1b8b08";
   };
 
+  buildType = "catkin";
   buildInputs = [ tuw-geometry-msgs roscpp nav-msgs message-generation rospy std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ tuw-geometry-msgs roscpp nav-msgs message-runtime rospy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

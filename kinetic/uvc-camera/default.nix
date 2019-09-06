@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.5";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/camera_umd-release/archive/release/kinetic/uvc_camera/0.2.5-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/camera_umd-release/archive/release/kinetic/uvc_camera/0.2.5-0.tar.gz";
+    name = "0.2.5-0.tar.gz";
     sha256 = "8030386cedd18de89882da3d7701676d4f9d771a74a2e4db87c1f51133cad395";
   };
 
+  buildType = "catkin";
   buildInputs = [ camera-info-manager image-transport sensor-msgs roscpp libv4l nodelet ];
-  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs roscpp libv4l nodelet ];
+  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs nodelet libv4l roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

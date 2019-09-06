@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/roslisp_utilities/0.2.12-1.tar.gz;
+    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/roslisp_utilities/0.2.12-1.tar.gz";
+    name = "0.2.12-1.tar.gz";
     sha256 = "baca8b7ef4a7ca42ce81aa17ff6df99d2898573439a07849d6d60adb4a58c134";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ roslisp ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/kinetic/dataspeed_pds_can/1.0.2-0.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/kinetic/dataspeed_pds_can/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "ee8427e16bc91b2b6f739d767e473d99ec0a0d5af7b5ee827662130c7e2c7f52";
   };
 
+  buildType = "catkin";
   buildInputs = [ can-msgs message-filters dataspeed-can-msg-filters dataspeed-pds-msgs nodelet roscpp ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ can-msgs message-filters roscpp dataspeed-can-usb dataspeed-pds-msgs roslaunch nodelet ];
+  propagatedBuildInputs = [ can-msgs message-filters dataspeed-can-usb dataspeed-pds-msgs nodelet roslaunch roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

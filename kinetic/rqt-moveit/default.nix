@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_moveit-release/archive/release/kinetic/rqt_moveit/0.5.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_moveit-release/archive/release/kinetic/rqt_moveit/0.5.7-0.tar.gz";
+    name = "0.5.7-0.tar.gz";
     sha256 = "e88db6b5e1b396b14786a0da4eeb62fcfa21b035ad4ae9a112ea566dd0db7c8a";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py rqt-topic sensor-msgs rqt-gui rostopic rospy rqt-py-common python-qt-binding rosnode ];
   nativeBuildInputs = [ catkin ];
 

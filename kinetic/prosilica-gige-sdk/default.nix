@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.26.3";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/prosilica_gige_sdk-release/archive/release/kinetic/prosilica_gige_sdk/1.26.3-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/prosilica_gige_sdk-release/archive/release/kinetic/prosilica_gige_sdk/1.26.3-0.tar.gz";
+    name = "1.26.3-0.tar.gz";
     sha256 = "4be17103b864f0e9979ae2f0af59fe41bac40e172dcba90139ad5fbb30f75d03";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

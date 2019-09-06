@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.2";
 
   src = fetchurl {
-    url = https://github.com/at-wat/mcl_3dl_msgs-release/archive/release/kinetic/mcl_3dl_msgs/0.1.2-0.tar.gz;
+    url = "https://github.com/at-wat/mcl_3dl_msgs-release/archive/release/kinetic/mcl_3dl_msgs/0.1.2-0.tar.gz";
+    name = "0.1.2-0.tar.gz";
     sha256 = "9c81bd8e59eee4a8fd13e46a3f64c094f347d51256450363716ab873720d7526";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

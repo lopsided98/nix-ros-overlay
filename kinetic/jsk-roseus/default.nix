@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.7.4";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/jsk_roseus/1.7.4-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/jsk_roseus/1.7.4-0.tar.gz";
+    name = "1.7.4-0.tar.gz";
     sha256 = "1eb21f949cde7dc400b31d4485dddbafac2b977689ce603f4e490ca527c37f53";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ roseus euslisp geneus ];
   nativeBuildInputs = [ catkin ];
 

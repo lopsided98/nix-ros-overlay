@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/driver_common-release/archive/release/kinetic/timestamp_tools/1.6.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/driver_common-release/archive/release/kinetic/timestamp_tools/1.6.8-0.tar.gz";
+    name = "1.6.8-0.tar.gz";
     sha256 = "62b0c3856b1275b15ec5ae303284165bbdd15ff35a3e3f8304c54817768bc6f4";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslib roscpp ];
   propagatedBuildInputs = [ roslib roscpp ];
   nativeBuildInputs = [ catkin ];

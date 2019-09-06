@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-release/archive/release/kinetic/op3_online_walking_module/0.2.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-release/archive/release/kinetic/op3_online_walking_module/0.2.1-0.tar.gz";
+    name = "0.2.1-0.tar.gz";
     sha256 = "8e2853fb3cd997ed6aa52c1732a1b3314182de7af22ce80e4ae422cb9a91245e";
   };
 
+  buildType = "catkin";
   buildInputs = [ op3-online-walking-module-msgs orocos-kdl boost cmake-modules libyamlcpp geometry-msgs sensor-msgs op3-balance-control roscpp roslib robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
-  propagatedBuildInputs = [ op3-online-walking-module-msgs orocos-kdl boost cmake-modules libyamlcpp geometry-msgs sensor-msgs op3-balance-control roscpp roslib robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
+  propagatedBuildInputs = [ op3-online-walking-module-msgs cmake-modules orocos-kdl boost libyamlcpp geometry-msgs sensor-msgs op3-balance-control roscpp roslib robotis-math eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

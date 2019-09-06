@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_dynamic_reconfigure/2.9.2-1.tar.gz;
+    url = "https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_dynamic_reconfigure/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
     sha256 = "9ad2bfb70fca3383ccd6204b2336857fb254337d6a758b46e40bdb6a1825a6c2";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp rtt-ros dynamic-reconfigure ];
   propagatedBuildInputs = [ rtt-rosnode roscpp rtt-ros dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

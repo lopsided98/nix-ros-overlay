@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_dotgraph/0.3.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_dotgraph/0.3.11-0.tar.gz";
+    name = "0.3.11-0.tar.gz";
     sha256 = "c83704211bff2304481d92d983d7e5c0038e05cb6424470de3f0328455037af6";
   };
 
+  buildType = "catkin";
   checkInputs = [ pythonPackages.pygraphviz ];
   propagatedBuildInputs = [ pythonPackages.pydot python-qt-binding ];
   nativeBuildInputs = [ catkin ];

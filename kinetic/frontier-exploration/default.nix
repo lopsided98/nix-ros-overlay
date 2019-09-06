@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/paulbovbel/frontier_exploration-release/archive/release/kinetic/frontier_exploration/0.3.1-0.tar.gz;
+    url = "https://github.com/paulbovbel/frontier_exploration-release/archive/release/kinetic/frontier_exploration/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "e8a0a4a49987f30897611c7e0d8edc76ab63e82a607db095a6fc5aa2633c4e22";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d actionlib-msgs pcl roscpp move-base-msgs message-generation actionlib visualization-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ costmap-2d actionlib-msgs pcl roscpp move-base-msgs actionlib message-runtime visualization-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ costmap-2d actionlib-msgs pcl roscpp move-base-msgs message-runtime visualization-msgs actionlib std-msgs dynamic-reconfigure tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

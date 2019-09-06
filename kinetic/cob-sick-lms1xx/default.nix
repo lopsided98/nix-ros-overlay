@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_sick_lms1xx/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_sick_lms1xx/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "3eb2a5cecd474dda5229924d7b4a24f7dc77daf13ffb64d59c40f9ddfec6ce65";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-msgs sensor-msgs roscpp boost ];
   propagatedBuildInputs = [ diagnostic-msgs sensor-msgs roscpp boost ];
   nativeBuildInputs = [ catkin ];

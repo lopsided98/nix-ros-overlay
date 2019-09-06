@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.15-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_self_test-release/archive/release/kinetic/joint_qualification_controllers/1.0.15-1.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_self_test-release/archive/release/kinetic/joint_qualification_controllers/1.0.15-1.tar.gz";
+    name = "1.0.15-1.tar.gz";
     sha256 = "5b66fd370c5cfcf229e952f0aff784deb01504e6688e28ea4aaff40c53ab2ba4";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-hardware-interface pluginlib pr2-controller-interface control-toolbox realtime-tools sensor-msgs robot-mechanism-controllers message-generation urdf std-msgs roscpp pr2-mechanism-model ];
-  propagatedBuildInputs = [ pr2-hardware-interface pluginlib pr2-controller-interface control-toolbox realtime-tools sensor-msgs robot-mechanism-controllers urdf message-runtime std-msgs roscpp pr2-mechanism-model ];
+  propagatedBuildInputs = [ pr2-hardware-interface pr2-controller-interface pluginlib control-toolbox realtime-tools sensor-msgs robot-mechanism-controllers urdf message-runtime std-msgs roscpp pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

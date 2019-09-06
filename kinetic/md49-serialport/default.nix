@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.4-r1";
 
   src = fetchurl {
-    url = https://github.com/Scheik/md49_base_controller-release/archive/release/kinetic/md49_serialport/0.1.4-1.tar.gz;
+    url = "https://github.com/Scheik/md49_base_controller-release/archive/release/kinetic/md49_serialport/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
     sha256 = "425eda81e26602414b014624fb3b17f96be8952cbc22f916714ed96237306090";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
   nativeBuildInputs = [ catkin ];

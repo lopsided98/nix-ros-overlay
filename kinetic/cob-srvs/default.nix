@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_common-release/archive/release/kinetic/cob_srvs/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_common-release/archive/release/kinetic/cob_srvs/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "0666d5ed148ad8ec3ecfd190b7b1c6ebb794d3c7e422a1f51b9d38cd0a6971a7";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/message_multiplexing-release/archive/release/kinetic/mm_radio/0.2.4-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/message_multiplexing-release/archive/release/kinetic/mm_radio/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "2536477d5e835d74d9a0c20296b60c960e0deefbefa33e1d852bbac4524f0f20";
   };
 
+  buildType = "catkin";
   buildInputs = [ mm-messages nanomsg ecl-utilities ecl-command-line ecl-threads ecl-exceptions ecl-time ecl-build mm-core-msgs ];
   propagatedBuildInputs = [ mm-messages nanomsg ecl-utilities ecl-command-line ecl-threads ecl-exceptions ecl-time ecl-build mm-core-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.1.25";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_bridge-release/archive/release/kinetic/mrpt_bridge/0.1.25-0.tar.gz;
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_bridge-release/archive/release/kinetic/mrpt_bridge/0.1.25-0.tar.gz";
+    name = "0.1.25-0.tar.gz";
     sha256 = "c53c72d2503e2614ac6b55894170ed2aebe0951b135a2106cf1d418c8a71b3b6";
   };
 
+  buildType = "catkin";
   buildInputs = [ marker-msgs pcl sensor-msgs cv-bridge qt5.qtbase roscpp nav-msgs mrpt-msgs message-generation mrpt1 std-msgs tf pcl-conversions geometry-msgs stereo-msgs ];
   checkInputs = [ gtest rosunit ];
-  propagatedBuildInputs = [ marker-msgs tf sensor-msgs cv-bridge nav-msgs message-generation mrpt-msgs message-runtime mrpt1 std-msgs roscpp geometry-msgs stereo-msgs ];
+  propagatedBuildInputs = [ marker-msgs tf sensor-msgs cv-bridge message-generation mrpt1 message-runtime mrpt-msgs nav-msgs std-msgs roscpp geometry-msgs stereo-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.1";
 
   src = fetchurl {
-    url = https://github.com/astuff/astuff_sensor_msgs-release/archive/release/kinetic/delphi_esr_msgs/2.3.1-0.tar.gz;
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/kinetic/delphi_esr_msgs/2.3.1-0.tar.gz";
+    name = "2.3.1-0.tar.gz";
     sha256 = "261194c642ebc44637c0d1ea9b26ae1150810dfc5082d8be846def7e2d48b82d";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

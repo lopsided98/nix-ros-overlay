@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/danielsnider/simple_drive-release/archive/release/kinetic/simple_drive/0.1.0-0.tar.gz;
+    url = "https://github.com/danielsnider/simple_drive-release/archive/release/kinetic/simple_drive/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "abe34cd8127d63aaca2d44e70634d780cbfdb6cef5b6ae9d8076a01796eaeeca";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs sensor-msgs rospy std-msgs geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs sensor-msgs rospy std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

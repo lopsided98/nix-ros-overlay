@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/ros_canopen/0.7.11-1.tar.gz;
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/ros_canopen/0.7.11-1.tar.gz";
+    name = "0.7.11-1.tar.gz";
     sha256 = "23e0e75cbaa780ee3c5048a1d633b11f510b8bb6c97a19d2c04c6ad331e669c7";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ socketcan-bridge can-msgs canopen-402 canopen-motor-node socketcan-interface canopen-chain-node canopen-master ];
   nativeBuildInputs = [ catkin ];
 

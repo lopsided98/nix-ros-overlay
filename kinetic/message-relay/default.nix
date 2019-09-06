@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/message_relay/0.0.2-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/message_relay/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
     sha256 = "8566fe2cacb0377bb3aa034547ba27bc0b87356f6d14eabccca4ba9d1fff313a";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2-msgs actionlib-msgs robot-localization rosgraph-msgs multimaster-msgs diagnostic-msgs gazebo-msgs stereo-msgs geometry-msgs pythonPackages.cheetah controller-manager-msgs std-srvs trajectory-msgs move-base-msgs nav-msgs std-msgs visualization-msgs roscpp shape-msgs sensor-msgs map-msgs ];
   checkInputs = [ roslaunch roslint ];
   propagatedBuildInputs = [ tf2-msgs actionlib-msgs robot-localization rosgraph-msgs multimaster-msgs diagnostic-msgs geometry-msgs gazebo-msgs stereo-msgs controller-manager-msgs std-srvs trajectory-msgs move-base-msgs nav-msgs std-msgs visualization-msgs roscpp shape-msgs sensor-msgs map-msgs ];

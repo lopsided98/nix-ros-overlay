@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.6.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/laser_geometry-release/archive/release/kinetic/laser_geometry/1.6.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/laser_geometry-release/archive/release/kinetic/laser_geometry/1.6.4-0.tar.gz";
+    name = "1.6.4-0.tar.gz";
     sha256 = "6f825d298f84cc46f325f39d408f9f7710c2de01d26191dbbd902d84b6687734";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules boost sensor-msgs roscpp eigen angles tf ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pythonPackages.numpy boost sensor-msgs roscpp eigen angles tf ];
+  propagatedBuildInputs = [ pythonPackages.numpy boost tf sensor-msgs angles roscpp eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

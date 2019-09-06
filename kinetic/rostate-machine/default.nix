@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/OUXT-Polaris/rostate_machine-release/archive/release/kinetic/rostate_machine/0.0.2-1.tar.gz;
+    url = "https://github.com/OUXT-Polaris/rostate_machine-release/archive/release/kinetic/rostate_machine/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
     sha256 = "57ee3cbded20e661e73ca5e16a46af9282f11978146e6903b8f05043361d27c2";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp rostest message-generation rospy std-msgs roslib ];
-  propagatedBuildInputs = [ roscpp rostest message-runtime rospy std-msgs roslib ];
+  propagatedBuildInputs = [ rostest roslib message-runtime rospy std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

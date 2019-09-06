@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.7.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/filters-release/archive/release/kinetic/filters/1.7.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/filters-release/archive/release/kinetic/filters/1.7.5-0.tar.gz";
+    name = "1.7.5-0.tar.gz";
     sha256 = "e71a4de4b78ed4f14b4ef07a599f1b82c2e71e429ec41fdf4e2e36d160c7e5e2";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole pluginlib rostest roslib roscpp ];
-  propagatedBuildInputs = [ rosconsole roslib pluginlib roscpp ];
+  propagatedBuildInputs = [ roslib rosconsole roscpp pluginlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

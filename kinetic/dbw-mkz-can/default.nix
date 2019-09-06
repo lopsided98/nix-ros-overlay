@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz_can/1.2.3-1.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz_can/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
     sha256 = "2c3aafbd5ac4b620bb5fb476ea6ad33fa785b29422f0a12bc836c9af70df5124";
   };
 
+  buildType = "catkin";
   buildInputs = [ dbw-mkz-msgs sensor-msgs can-msgs dataspeed-can-msg-filters roscpp rospy std-msgs nodelet geometry-msgs ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ dbw-mkz-msgs sensor-msgs can-msgs dbw-mkz-description roscpp dataspeed-can-usb dataspeed-ulc-can rospy std-msgs roslaunch nodelet geometry-msgs ];

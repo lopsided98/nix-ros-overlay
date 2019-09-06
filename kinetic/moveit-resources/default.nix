@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit_resources-release/archive/release/kinetic/moveit_resources/0.6.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/kinetic/moveit_resources/0.6.4-0.tar.gz";
+    name = "0.6.4-0.tar.gz";
     sha256 = "d8792f991f74dd06a2aa700eee464c1d7a560547e15523c0e0d20de700cd85f7";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ joint-state-publisher robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 

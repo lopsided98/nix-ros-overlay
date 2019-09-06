@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.8";
 
   src = fetchurl {
-    url = https://github.com/ros-aldebaran/romeo_moveit_config-release/archive/release/kinetic/romeo_moveit_config/0.2.8-0.tar.gz;
+    url = "https://github.com/ros-aldebaran/romeo_moveit_config-release/archive/release/kinetic/romeo_moveit_config/0.2.8-0.tar.gz";
+    name = "0.2.8-0.tar.gz";
     sha256 = "6f6e1d858123b1d8a774d7957e4d07f4e3cb223f6a7bd7262f6cac1304e984a8";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group romeo-description moveit-simple-controller-manager robot-state-publisher joint-state-publisher xacro moveit-planners-ompl ];
   nativeBuildInputs = [ catkin ];
 

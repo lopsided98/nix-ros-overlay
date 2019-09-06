@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_gazebo/0.3.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_gazebo/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "b5c85d558ce516b295a3760d59b8beffd19c4b3185d4eab7e1de8ee96716e050";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ gazebo-ros controller-manager ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2";
 
   src = fetchurl {
-    url = https://github.com/tork-a/roomblock-release/archive/release/kinetic/roomblock_navigation/0.0.2-0.tar.gz;
+    url = "https://github.com/tork-a/roomblock-release/archive/release/kinetic/roomblock_navigation/0.0.2-0.tar.gz";
+    name = "0.0.2-0.tar.gz";
     sha256 = "9df21260ee4811b03420bf45df2c69e4900b602d7fb8c471c4ab30681970acac";
   };
 
+  buildType = "catkin";
   checkInputs = [ rostest roslaunch ];
   propagatedBuildInputs = [ map-server amcl move-base rviz fake-localization ];
   nativeBuildInputs = [ catkin ];

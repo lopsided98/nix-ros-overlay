@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/wjwwood/serial_utils-release/archive/release/kinetic/serial_utils/0.1.0-0.tar.gz;
+    url = "https://github.com/wjwwood/serial_utils-release/archive/release/kinetic/serial_utils/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "907e265f1c308e7fa0c6c70405ec9b279af540a0213a64707302019845d85256";
   };
 
+  buildType = "catkin";
   buildInputs = [ serial boost ];
   propagatedBuildInputs = [ serial boost ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_assistants/0.6.13-0.tar.gz;
+    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_assistants/0.6.13-0.tar.gz";
+    name = "0.6.13-0.tar.gz";
     sha256 = "6655ea757143bc1ed802ea926118303998955e22232da7e6f219af50012ab834";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf sensor-msgs nav-msgs topic-tools roscpp geometry-msgs ];
   propagatedBuildInputs = [ pythonPackages.numpy geometry-msgs sensor-msgs roscpp nav-msgs rosgraph rostopic visualization-msgs rospy topic-tools tf gazebo-msgs ];
   nativeBuildInputs = [ catkin ];

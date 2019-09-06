@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero/0.2.4-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "884d9217186e536ce0f9b5026b66b7f26d0908c849b2a65f61a70eff239da1d0";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

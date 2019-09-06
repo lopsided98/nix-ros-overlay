@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/peci1/static_transform_mux-release/archive/release/kinetic/static_transform_mux/1.1.0-0.tar.gz;
+    url = "https://github.com/peci1/static_transform_mux-release/archive/release/kinetic/static_transform_mux/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "12c0558a31c905242f62121ed1bf4959091df0b4e301ac25590623d35c4bacd7";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ tf2-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

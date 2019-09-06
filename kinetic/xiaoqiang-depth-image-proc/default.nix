@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.12";
 
   src = fetchurl {
-    url = https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_depth_image_proc/0.0.12-0.tar.gz;
+    url = "https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_depth_image_proc/0.0.12-0.tar.gz";
+    name = "0.0.12-0.tar.gz";
     sha256 = "76d314e6b6de79d52965706fc95142a1d725a9217752477b30581473519a4eec";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost cmake-modules image-transport sensor-msgs cv-bridge message-filters tf2-ros image-geometry tf2 nav-msgs eigen-conversions nodelet stereo-msgs ];
   propagatedBuildInputs = [ boost image-transport cv-bridge tf2-ros image-geometry tf2 eigen-conversions nodelet ];
   nativeBuildInputs = [ catkin ];

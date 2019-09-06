@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/christianrauch/msp-release/archive/release/kinetic/msp/2.2.1-1.tar.gz;
+    url = "https://github.com/christianrauch/msp-release/archive/release/kinetic/msp/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
     sha256 = "aae98cb60d11d1c32809e0f6660157a6af15f5e82767eb180241243df5098ee4";
   };
 
+  buildType = "cmake";
   buildInputs = [ asio ];
   nativeBuildInputs = [ cmake ];
 

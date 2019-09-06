@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.15";
 
   src = fetchurl {
-    url = https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_bringup/2.0.15-0.tar.gz;
+    url = "https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_bringup/2.0.15-0.tar.gz";
+    name = "2.0.15-0.tar.gz";
     sha256 = "39a0f64bc0d30b4fd57b7bd086a138ce5171c1b97ed3cefda84c9370740ea509";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch rospy ];
   propagatedBuildInputs = [ roch-control microstrain-3dmgx2-imu realsense-camera pythonPackages.scipy robot-localization roch-description rplidar-ros rospy zeroconf-avahi tf nmea-navsat-driver rocon-bubble-icons robot-state-publisher rgbd-launch depthimage-to-laserscan imu-filter-madgwick imu-transformer roch-safety-controller freenect-launch tf2-ros roch-capabilities rocon-app-manager openni2-launch astra-launch nodelet diagnostic-aggregator roch-base rocon-app-manager-msgs rocon-interaction-msgs laser-filters roch-sensorpc robot-upstart nmea-comms ];
   nativeBuildInputs = [ catkin ];

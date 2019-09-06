@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.2";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/hrpsys_ros_bridge/1.4.2-0.tar.gz;
+    url = "https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/hrpsys_ros_bridge/1.4.2-0.tar.gz";
+    name = "1.4.2-0.tar.gz";
     sha256 = "5fc34e800e09ca71d1e2613d972034ef0507d7b1bd0713aadc46e9bb02660eca";
   };
 
+  buildType = "catkin";
   buildInputs = [ hrpsys git rqt-gui subversion rqt-robot-monitor actionlib diagnostic-msgs tf geometry-msgs procps collada-urdf euscollada image-transport pkg-config message-generation robot-pose-ekf roslang robot-state-publisher hrpsys-tools angles nettools pr2-msgs rqt-gui-py control-msgs camera-info-manager pythonPackages.rosdep mk rosbuild nav-msgs diagnostic-aggregator roscpp visualization-msgs rosnode hostname sensor-msgs rostest rqt-robot-dashboard dynamic-reconfigure rtmbuild ];
   propagatedBuildInputs = [ hrpsys rqt-gui pythonPackages.ipython rqt-robot-monitor actionlib diagnostic-msgs tf geometry-msgs collada-urdf image-transport robot-pose-ekf robot-state-publisher hrpsys-tools pr2-msgs rqt-gui-py control-msgs camera-info-manager nav-msgs diagnostic-aggregator roscpp visualization-msgs rosnode pythonPackages.psutil sensor-msgs rostest rqt-robot-dashboard dynamic-reconfigure rtmbuild ];
   nativeBuildInputs = [ catkin ];

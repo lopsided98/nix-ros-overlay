@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace-release/archive/release/kinetic/turtlebot3_autorace_control/1.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace-release/archive/release/kinetic/turtlebot3_autorace_control/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "ae60c608b9b7bbecfd6cbd2c4c786c1926a1ed9c2ae724553a78521fbcbb0b01";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.enum34 sensor-msgs nav-msgs rospy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

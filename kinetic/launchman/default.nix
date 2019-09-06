@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.7";
 
   src = fetchurl {
-    url = https://github.com/UNR-RoboticsResearchLab/web_interface-release/archive/release/kinetic/launchman/1.0.7-0.tar.gz;
+    url = "https://github.com/UNR-RoboticsResearchLab/web_interface-release/archive/release/kinetic/launchman/1.0.7-0.tar.gz";
+    name = "1.0.7-0.tar.gz";
     sha256 = "d386f83bb76f20ddd6ee8cafeba89933a5dd69b9854b1bce4c501642587baffc";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs roslaunch rospy ];
   propagatedBuildInputs = [ std-msgs roslaunch rospy ];
   nativeBuildInputs = [ catkin ];

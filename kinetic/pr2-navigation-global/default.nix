@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.28";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_navigation-release/archive/release/kinetic/pr2_navigation_global/0.1.28-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_navigation-release/archive/release/kinetic/pr2_navigation_global/0.1.28-0.tar.gz";
+    name = "0.1.28-0.tar.gz";
     sha256 = "fb5bf2e4615836de39da5c6e093341919e81afa3b69da87f6eb9d1019e34a833";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pr2-navigation-config amcl joint-trajectory-generator topic-tools move-base pr2-move-base pr2-machine pr2-tuck-arms-action ];
   nativeBuildInputs = [ catkin ];
 

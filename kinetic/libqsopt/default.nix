@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libqsopt/0.6.12-0.tar.gz;
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libqsopt/0.6.12-0.tar.gz";
+    name = "0.6.12-0.tar.gz";
     sha256 = "10ebfb329265e6c266c26d6cba8f7e4710bca03fef93b0722bf240654499da57";
   };
 
+  buildType = "catkin";
   buildInputs = [ dpkg ];
   propagatedBuildInputs = [ dpkg ];
   nativeBuildInputs = [ catkin ];

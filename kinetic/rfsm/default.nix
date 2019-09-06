@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rfsm-release/archive/release/kinetic/rfsm/1.0.1-0.tar.gz;
+    url = "https://github.com/orocos-gbp/rfsm-release/archive/release/kinetic/rfsm/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "08a1910297e5fe5347b6b00b62ef7fd708ce3117731d7a75b091279b795d007f";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

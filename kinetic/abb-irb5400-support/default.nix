@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb5400_support/1.3.0-1.tar.gz;
+    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb5400_support/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
     sha256 = "a510749f6ad072d9eb120978f8a78ca37bca1eba3f87dbd5fb0b22f1c700a971";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ abb-resources rviz robot-state-publisher joint-state-publisher abb-driver ];
   nativeBuildInputs = [ catkin ];

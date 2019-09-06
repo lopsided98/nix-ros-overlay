@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.5.2";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/velodyne-release/archive/release/kinetic/velodyne_msgs/1.5.2-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/kinetic/velodyne_msgs/1.5.2-0.tar.gz";
+    name = "1.5.2-0.tar.gz";
     sha256 = "8d559a77e5fdb9bd94d1938644690333665fad616a3dfef0525e29653e3048aa";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/robot/1.3.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/robot/1.3.2-0.tar.gz";
+    name = "1.3.2-0.tar.gz";
     sha256 = "8bb734ff4101270270249ad5f1321fab9062e969e2ac33ac7841ccafa8ea9287";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ robot-model filters ros-base control-msgs executive-smach diagnostics geometry robot-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];
 

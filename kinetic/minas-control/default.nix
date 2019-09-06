@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/minas-release/archive/release/kinetic/minas_control/1.0.10-0.tar.gz;
+    url = "https://github.com/tork-a/minas-release/archive/release/kinetic/minas_control/1.0.10-0.tar.gz";
+    name = "1.0.10-0.tar.gz";
     sha256 = "8c17756f8b1d89c736f04fb45a149ddc3da5e172f4d69198c4c42aa9e751d02c";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager soem hardware-interface trajectory-msgs realtime-tools sensor-msgs joint-limits-interface ethercat-manager tinyxml diagnostic-updater transmission-interface ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ controller-manager hardware-interface trajectory-msgs realtime-tools sensor-msgs joint-limits-interface ethercat-manager tinyxml diagnostic-updater transmission-interface ];
+  propagatedBuildInputs = [ controller-manager hardware-interface realtime-tools sensor-msgs trajectory-msgs joint-limits-interface tinyxml ethercat-manager diagnostic-updater transmission-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

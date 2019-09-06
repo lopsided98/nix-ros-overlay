@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/OSUrobotics/people-release/archive/release/kinetic/leg_detector/1.1.3-1.tar.gz;
+    url = "https://github.com/OSUrobotics/people-release/archive/release/kinetic/leg_detector/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
     sha256 = "4935c2169ea3e899c9d0137c37dcf3d6f9bfb4196c54486cd29f1d90662ab7bd";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs people-tracking-filter people-msgs sensor-msgs bfl message-filters roscpp image-geometry laser-geometry visualization-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs map-laser people-tracking-filter people-msgs sensor-msgs bfl message-filters roscpp image-geometry laser-geometry laser-filters visualization-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs map-laser people-msgs tf sensor-msgs bfl message-filters roscpp image-geometry laser-geometry laser-filters visualization-msgs dynamic-reconfigure std-msgs people-tracking-filter geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/asmach/1.0.15-0.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/asmach/1.0.15-0.tar.gz";
+    name = "1.0.15-0.tar.gz";
     sha256 = "9febdc4cd575ac259dc0cccef0df7d2aee3bc0106f4b206752abc9667115cbbf";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

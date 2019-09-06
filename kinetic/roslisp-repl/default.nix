@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.12";
 
   src = fetchurl {
-    url = https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/kinetic/roslisp_repl/0.4.12-0.tar.gz;
+    url = "https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/kinetic/roslisp_repl/0.4.12-0.tar.gz";
+    name = "0.4.12-0.tar.gz";
     sha256 = "4eec338f5e19d53dbaf34c7403cfab7e253982bca4f367418828e0ec3441dee3";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ slime-wrapper rosemacs roslisp sbcl slime-ros ];
   nativeBuildInputs = [ catkin ];
 

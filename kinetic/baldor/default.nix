@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.2";
 
   src = fetchurl {
-    url = https://github.com/crigroup/baldor-release/archive/release/kinetic/baldor/0.1.2-0.tar.gz;
+    url = "https://github.com/crigroup/baldor-release/archive/release/kinetic/baldor/0.1.2-0.tar.gz";
+    name = "0.1.2-0.tar.gz";
     sha256 = "a0882e84b2588e799f2ef724803b2a6ed22ba8bdb086f807e79f7990048293ab";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.numpy ];
   nativeBuildInputs = [ catkin ];
 

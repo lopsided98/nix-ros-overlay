@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.2";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/barrett_hand_sim-release/archive/release/kinetic/barrett_hand_control/0.1.2-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/barrett_hand_sim-release/archive/release/kinetic/barrett_hand_control/0.1.2-0.tar.gz";
+    name = "0.1.2-0.tar.gz";
     sha256 = "bd38c3e79981551697d1a5688f3187e3b83afbc9531f8530acdff9e98e97ab7d";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

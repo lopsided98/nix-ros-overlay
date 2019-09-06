@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/OUXT-Polaris/nmea_gps_plugin-release/archive/release/kinetic/nmea_gps_plugin/0.0.2-1.tar.gz;
+    url = "https://github.com/OUXT-Polaris/nmea_gps_plugin-release/archive/release/kinetic/nmea_gps_plugin/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
     sha256 = "c20f1eb199a0cae99e3f43c3ad71538ae2d6b172d6d6faae2b9e0e0931a35b19";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros gazeboSimulator.gazebo geographic-msgs geodesy quaternion-operation eigen roscpp nmea-msgs ];
   propagatedBuildInputs = [ gazebo-ros gazeboSimulator.gazebo geographic-msgs geodesy quaternion-operation eigen rosdoc-lite roscpp nmea-msgs ];
   nativeBuildInputs = [ catkin ];

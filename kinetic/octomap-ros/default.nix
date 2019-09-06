@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/octomap_ros-release/archive/release/kinetic/octomap_ros/0.4.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/octomap_ros-release/archive/release/kinetic/octomap_ros/0.4.0-0.tar.gz";
+    name = "0.4.0-0.tar.gz";
     sha256 = "fd2a63942add5b97f2d64aa2396931744efc704d4b4aef4465346aa016005544";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs catkin octomap-msgs octomap tf ];
   propagatedBuildInputs = [ sensor-msgs tf octomap octomap-msgs ];
   nativeBuildInputs = [ catkin ];

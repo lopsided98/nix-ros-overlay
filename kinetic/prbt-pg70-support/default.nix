@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/prbt_grippers-release/archive/release/kinetic/prbt_pg70_support/0.0.4-1.tar.gz;
+    url = "https://github.com/PilzDE/prbt_grippers-release/archive/release/kinetic/prbt_pg70_support/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
     sha256 = "c4e0d3bfa511906cf0e127184787976f68c9d8ce3a55f4bfb61ea0f40e87e73e";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ prbt-support prbt-moveit-config xacro schunk-description prbt-ikfast-manipulator-plugin ];
   nativeBuildInputs = [ catkin ];
 

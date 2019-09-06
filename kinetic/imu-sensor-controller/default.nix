@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/imu_sensor_controller/0.13.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/imu_sensor_controller/0.13.5-0.tar.gz";
+    name = "0.13.5-0.tar.gz";
     sha256 = "0499419cd9f77c00890c12bd32da24c3c82e7b8120d7a0e1f5dbd174b72698fa";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface pluginlib realtime-tools sensor-msgs controller-interface roscpp ];
   propagatedBuildInputs = [ hardware-interface pluginlib realtime-tools sensor-msgs controller-interface roscpp ];
   nativeBuildInputs = [ catkin ];

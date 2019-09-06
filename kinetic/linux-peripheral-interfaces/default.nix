@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/linux_peripheral_interfaces-release/archive/release/kinetic/linux_peripheral_interfaces/0.2.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/linux_peripheral_interfaces-release/archive/release/kinetic/linux_peripheral_interfaces/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "12fea2c1a817a1d9498d81655f98536b8d96515c7909cbcbae5851432d3a68e3";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ laptop-battery-monitor libsensors-monitor ];
   nativeBuildInputs = [ catkin ];
 

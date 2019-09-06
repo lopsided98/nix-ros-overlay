@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.2.9";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/jsk_recognition_utils/1.2.9-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/jsk_recognition_utils/1.2.9-0.tar.gz";
+    name = "1.2.9-0.tar.gz";
     sha256 = "7ec6f134c0afe52f0008c000374cb106cbcb238bc70246430e72e3fd0200b013";
   };
 
+  buildType = "catkin";
   buildInputs = [ pythonPackages.cython tf libyamlcpp sensor-msgs jsk-topic-tools pcl-msgs eigen-conversions image-geometry tf2-ros message-generation tf-conversions jsk-recognition-msgs pcl-ros std-msgs dynamic-reconfigure visualization-msgs geometry-msgs ];
   checkInputs = [ jsk-tools ];
-  propagatedBuildInputs = [ tf libyamlcpp sensor-msgs jsk-topic-tools pcl-msgs eigen-conversions image-geometry tf2-ros pythonPackages.chainer message-runtime jsk-recognition-msgs pcl-ros std-msgs tf-conversions pythonPackages.scikitimage visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ tf-conversions libyamlcpp sensor-msgs jsk-topic-tools tf2-ros image-geometry pythonPackages.chainer message-runtime jsk-recognition-msgs pcl-msgs std-msgs pythonPackages.scikitimage eigen-conversions tf pcl-ros visualization-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

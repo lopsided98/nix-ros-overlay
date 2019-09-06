@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.3";
 
   src = fetchurl {
-    url = https://github.com/srv/srv_tools-release/archive/release/kinetic/tf_tools/0.0.3-0.tar.gz;
+    url = "https://github.com/srv/srv_tools-release/archive/release/kinetic/tf_tools/0.0.3-0.tar.gz";
+    name = "0.0.3-0.tar.gz";
     sha256 = "e3c2f3524ebb86c4063a304e5b89c04d4b12fbbf65ebc1f6f8a816c73e8e9528";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf nav-msgs ];
   propagatedBuildInputs = [ tf nav-msgs ];
   nativeBuildInputs = [ catkin ];

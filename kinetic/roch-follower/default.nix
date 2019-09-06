@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.12";
 
   src = fetchurl {
-    url = https://github.com/SawYerRobotics-release/roch-release/archive/release/kinetic/roch_follower/2.0.12-0.tar.gz;
+    url = "https://github.com/SawYerRobotics-release/roch-release/archive/release/kinetic/roch_follower/2.0.12-0.tar.gz";
+    name = "2.0.12-0.tar.gz";
     sha256 = "53eebac8a0d8c2ad29cc9f861e70e5cc74a335a54723b1d1f7fb4b1c7e758102";
   };
 
+  buildType = "catkin";
   buildInputs = [ depth-image-proc roscpp roch-msgs visualization-msgs dynamic-reconfigure nodelet ];
   propagatedBuildInputs = [ depth-image-proc roch-teleop roch-msgs visualization-msgs dynamic-reconfigure topic-tools nodelet roch-bringup roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/open_karto-release/archive/release/kinetic/open_karto/1.1.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/open_karto-release/archive/release/kinetic/open_karto/1.1.4-0.tar.gz";
+    name = "1.1.4-0.tar.gz";
     sha256 = "0ea5824754feaebb979c76ebe0e352e922b175dd7a5fc0a777e94f2329062f59";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost ];
   propagatedBuildInputs = [ boost ];
   nativeBuildInputs = [ catkin ];

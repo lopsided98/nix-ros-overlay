@@ -2,17 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot3-navigation, catkin, turtlebot3-slam, turtlebot3-description, turtlebot3-bringup, turtlebot3-example, turtlebot3-teleop }:
+{ lib, buildRosPackage, fetchurl, turtlebot3-navigation, catkin, turtlebot3-description, turtlebot3-slam, turtlebot3-bringup, turtlebot3-example, turtlebot3-teleop }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot3";
   version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3/1.2.1-1.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
     sha256 = "126a261fa3d04a6ba09a5af20d707fa8ea501b23120fce7ad9202a10f629ca62";
   };
 
-  propagatedBuildInputs = [ turtlebot3-navigation turtlebot3-description turtlebot3-slam turtlebot3-bringup turtlebot3-example turtlebot3-teleop ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ turtlebot3-navigation turtlebot3-slam turtlebot3-description turtlebot3-bringup turtlebot3-example turtlebot3-teleop ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

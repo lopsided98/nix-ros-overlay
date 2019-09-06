@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.0";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/kinetic/hector_gazebo/0.5.0-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/kinetic/hector_gazebo/0.5.0-0.tar.gz";
+    name = "0.5.0-0.tar.gz";
     sha256 = "be6ee84dc26818499a8270acb80e02fd926874fafc4d6bc7c189ccc7a1f5397e";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ hector-gazebo-thermal-camera hector-gazebo-plugins hector-gazebo-worlds ];
   nativeBuildInputs = [ catkin ];
 

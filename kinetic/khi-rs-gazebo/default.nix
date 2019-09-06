@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs_gazebo/1.1.2-1.tar.gz;
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs_gazebo/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
     sha256 = "20ac49b5b30593e669743da9e1520e57cf71154bcd6895413bf5c0072eb937bb";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros gazebo-ros-control ];
   propagatedBuildInputs = [ gazebo-ros gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];

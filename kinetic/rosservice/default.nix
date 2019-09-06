@@ -2,17 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosmsg, genpy, rosgraph, rospy, roslib }:
+{ lib, buildRosPackage, fetchurl, catkin, rosmsg, roslib, rosgraph, rospy, genpy }:
 buildRosPackage {
   pname = "ros-kinetic-rosservice";
   version = "1.12.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosservice/1.12.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosservice/1.12.14-0.tar.gz";
+    name = "1.12.14-0.tar.gz";
     sha256 = "07e1b9e8ffa899a2765087d0ad6cb7875afc8d56604d29507f2894302eaa1fc9";
   };
 
-  propagatedBuildInputs = [ genpy rosmsg rosgraph rospy roslib ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ rosmsg roslib rosgraph rospy genpy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_python_wifi/0.3.2-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_python_wifi/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
     sha256 = "2ec60de42401432db69b67247a38ae52eff9fc7a3814ee6e00eb26c66cc797d6";
   };
 
+  buildType = "catkin";
   buildInputs = [ pythonPackages.catkin-pkg ];
   nativeBuildInputs = [ catkin ];
 

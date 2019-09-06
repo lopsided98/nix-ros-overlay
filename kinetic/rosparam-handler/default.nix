@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.4";
 
   src = fetchurl {
-    url = https://github.com/cbandera/rosparam_handler-release/archive/release/kinetic/rosparam_handler/0.1.4-0.tar.gz;
+    url = "https://github.com/cbandera/rosparam_handler-release/archive/release/kinetic/rosparam_handler/0.1.4-0.tar.gz";
+    name = "0.1.4-0.tar.gz";
     sha256 = "06fe3ee40f9a9901065ee9bde10fb96f6177fc5bab1fbf40f555f61bb8f51729";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest ];
   checkInputs = [ roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ catkin ];

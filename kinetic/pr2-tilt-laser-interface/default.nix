@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.0.10";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/kinetic/pr2_tilt_laser_interface/0.0.10-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/kinetic/pr2_tilt_laser_interface/0.0.10-0.tar.gz";
+    name = "0.0.10-0.tar.gz";
     sha256 = "3839089ef7938bdb42f51eb747f19310ee1be8dc72a14c2a52d6eb646aed43aa";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs sensor-msgs roscpp message-generation actionlib pcl-ros pr2-msgs laser-geometry pcl-conversions eigen ];
-  propagatedBuildInputs = [ actionlib-msgs sensor-msgs roscpp actionlib message-runtime pcl-ros pr2-msgs laser-geometry pcl-conversions eigen ];
+  propagatedBuildInputs = [ actionlib-msgs sensor-msgs pcl-ros laser-geometry message-runtime actionlib pr2-msgs roscpp pcl-conversions eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

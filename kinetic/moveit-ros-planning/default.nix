@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.9.17-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_planning/0.9.17-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_planning/0.9.17-1.tar.gz";
+    name = "0.9.17-1.tar.gz";
     sha256 = "d048c85d344a24105ee4e4fa81ef0e12e325d96dbc94888a932ab869ee90794a";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib cmake-modules srdfdom message-filters roscpp actionlib moveit-core urdf dynamic-reconfigure moveit-ros-perception moveit-msgs eigen-conversions tf tf-conversions chomp-motion-planner eigen ];
-  propagatedBuildInputs = [ pluginlib message-filters actionlib moveit-core tf-conversions dynamic-reconfigure moveit-ros-perception moveit-msgs eigen-conversions tf chomp-motion-planner ];
+  propagatedBuildInputs = [ pluginlib message-filters eigen-conversions moveit-core tf-conversions actionlib moveit-ros-perception moveit-msgs dynamic-reconfigure tf chomp-motion-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

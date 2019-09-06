@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/generic_throttle/0.6.14-1.tar.gz;
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/generic_throttle/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
     sha256 = "a5c438d170ff589aac32cc111d56ff1ff1b1594e78418ccdceaacbbdcac4b5da";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ cv-bridge rostopic rospy ];
   nativeBuildInputs = [ catkin ];
 

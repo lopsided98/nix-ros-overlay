@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.0-r1";
 
   src = fetchurl {
-    url = https://github.com/vanadiumlabs/arbotix_ros-release/archive/release/kinetic/arbotix_msgs/0.10.0-1.tar.gz;
+    url = "https://github.com/vanadiumlabs/arbotix_ros-release/archive/release/kinetic/arbotix_msgs/0.10.0-1.tar.gz";
+    name = "0.10.0-1.tar.gz";
     sha256 = "d31edaaa1ffaa298241661366f49a4971aa4ff82471f28eb4653e00a97aa06f9";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

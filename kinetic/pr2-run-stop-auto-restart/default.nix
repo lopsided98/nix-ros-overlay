@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.30";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_robot-release/archive/release/kinetic/pr2_run_stop_auto_restart/1.6.30-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_robot-release/archive/release/kinetic/pr2_run_stop_auto_restart/1.6.30-0.tar.gz";
+    name = "1.6.30-0.tar.gz";
     sha256 = "251af90686f2c4c5fc4332b6606fe69e5b993226ae9fe50b214c2c4aafe1f4c9";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-power-board pr2-msgs roscpp std-srvs ];
   propagatedBuildInputs = [ pr2-power-board pr2-msgs roscpp std-srvs ];
   nativeBuildInputs = [ catkin ];

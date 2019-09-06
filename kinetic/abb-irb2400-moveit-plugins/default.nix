@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb2400_moveit_plugins/1.3.0-1.tar.gz;
+    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb2400_moveit_plugins/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
     sha256 = "e52a4bbe761932e7b0c4baf47184b690153aec1457693ad5eb6ee9cced11a70b";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];
   propagatedBuildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];
   nativeBuildInputs = [ catkin ];

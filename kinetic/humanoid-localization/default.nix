@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/humanoid_navigation-release/archive/release/kinetic/humanoid_localization/0.4.2-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/humanoid_navigation-release/archive/release/kinetic/humanoid_localization/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "802b223aa02c760a62d63c31de19f472da76857467906b5fa1ca9347f19e22dc";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs boost cmake-modules sensor-msgs message-filters dynamic-edt-3d octomap-msgs roscpp nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs tf pcl-conversions geometry-msgs eigen ];
-  propagatedBuildInputs = [ std-srvs boost cmake-modules sensor-msgs message-filters dynamic-edt-3d octomap-msgs roscpp nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs tf pcl-conversions geometry-msgs eigen ];
+  propagatedBuildInputs = [ std-srvs cmake-modules boost sensor-msgs message-filters dynamic-edt-3d octomap-msgs roscpp nav-msgs octomap octomap-ros visualization-msgs pcl-ros std-msgs tf pcl-conversions geometry-msgs eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

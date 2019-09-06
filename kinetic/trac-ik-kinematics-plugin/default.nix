@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.5.0";
 
   src = fetchurl {
-    url = https://github.com/traclabs/trac_ik-release/archive/release/kinetic/trac_ik_kinematics_plugin/1.5.0-0.tar.gz;
+    url = "https://github.com/traclabs/trac_ik-release/archive/release/kinetic/trac_ik_kinematics_plugin/1.5.0-0.tar.gz";
+    name = "1.5.0-0.tar.gz";
     sha256 = "d9546126a9f9a68fae95aa0333164b70e194022d8bc2340e947d615717852adc";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib trac-ik-lib moveit-core tf-conversions roscpp ];
   propagatedBuildInputs = [ pluginlib trac-ik-lib moveit-core tf-conversions roscpp ];
   nativeBuildInputs = [ catkin ];

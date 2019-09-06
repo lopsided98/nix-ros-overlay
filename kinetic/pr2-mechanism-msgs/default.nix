@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/pr2_mechanism_msgs-release/archive/release/kinetic/pr2_mechanism_msgs/1.8.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/pr2_mechanism_msgs-release/archive/release/kinetic/pr2_mechanism_msgs/1.8.2-0.tar.gz";
+    name = "1.8.2-0.tar.gz";
     sha256 = "f034abe1732223f8d527dabda8d8a8e2a368c201699aa4f5e8189d5b033ae563";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation actionlib-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime actionlib-msgs ];
   nativeBuildInputs = [ catkin ];

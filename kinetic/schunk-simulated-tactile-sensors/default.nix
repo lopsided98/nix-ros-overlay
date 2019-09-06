@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_simulated_tactile_sensors/0.6.13-1.tar.gz;
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_simulated_tactile_sensors/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
     sha256 = "ed68867f89da961cd3937b8181d2d0d162b258e12a19bd302e0e2c1c95cfdb43";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ schunk-sdh gazebo-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

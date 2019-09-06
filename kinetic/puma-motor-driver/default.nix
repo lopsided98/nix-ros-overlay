@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.2";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/puma_motor_driver-release/archive/release/kinetic/puma_motor_driver/0.1.2-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/puma_motor_driver-release/archive/release/kinetic/puma_motor_driver/0.1.2-0.tar.gz";
+    name = "0.1.2-0.tar.gz";
     sha256 = "75567ed22850d2cb397c2873c85fa10fc30c41e80ef40d7e463005ded8a65968";
   };
 
+  buildType = "catkin";
   buildInputs = [ puma-motor-msgs sensor-msgs serial diagnostic-updater roscpp ];
   checkInputs = [ roslaunch roslint ];
   propagatedBuildInputs = [ puma-motor-msgs sensor-msgs joy serial diagnostic-updater roscpp can-utils ];

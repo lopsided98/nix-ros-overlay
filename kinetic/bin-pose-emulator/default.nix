@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.4";
 
   src = fetchurl {
-    url = https://github.com/durovsky/binpicking_utils-release/archive/release/kinetic/bin_pose_emulator/0.1.4-0.tar.gz;
+    url = "https://github.com/durovsky/binpicking_utils-release/archive/release/kinetic/bin_pose_emulator/0.1.4-0.tar.gz";
+    name = "0.1.4-0.tar.gz";
     sha256 = "28a3761aec2c63b42f99aaca2fea78f9d6b48f155fe07d8635979153b3880dd5";
   };
 
+  buildType = "catkin";
   buildInputs = [ libyamlcpp roscpp visualization-msgs bin-pose-msgs tf ];
   propagatedBuildInputs = [ libyamlcpp roscpp visualization-msgs bin-pose-msgs tf ];
   nativeBuildInputs = [ catkin ];

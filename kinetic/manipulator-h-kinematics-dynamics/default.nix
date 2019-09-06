@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_kinematics_dynamics/0.3.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_kinematics_dynamics/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "8fcb441d3cf47f355dcae92794a0cc8f8c500ff114c8ffcd0e96896153f16ca3";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp cmake-modules robotis-math eigen ];
   propagatedBuildInputs = [ roscpp cmake-modules robotis-math eigen ];
   nativeBuildInputs = [ catkin ];

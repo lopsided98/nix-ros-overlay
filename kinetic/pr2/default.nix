@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.3";
 
   src = fetchurl {
-    url = https://github.com/PR2-prime/pr2_metapackages-release/archive/release/kinetic/pr2/1.1.3-0.tar.gz;
+    url = "https://github.com/PR2-prime/pr2_metapackages-release/archive/release/kinetic/pr2/1.1.3-0.tar.gz";
+    name = "1.1.3-0.tar.gz";
     sha256 = "beb22b2d381bf9e0652282ba8be34ec444855f218c0ed1883b451a4c6aa79327";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ microstrain-3dmgx2-imu urg-node wifi-ddwrt pr2-robot joystick-drivers pr2-navigation-apps pr2-apps pr2-base wge100-driver audio-common pr2-power-drivers linux-networking prosilica-camera pr2-ethercat-drivers ];
   nativeBuildInputs = [ catkin ];
 

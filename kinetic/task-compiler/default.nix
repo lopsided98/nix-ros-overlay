@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_planning-release/archive/release/kinetic/task_compiler/0.1.10-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_planning-release/archive/release/kinetic/task_compiler/0.1.10-0.tar.gz";
+    name = "0.1.10-0.tar.gz";
     sha256 = "2191991cc36b6a91b40d68ce8224f3ace51fa6af0ea14ca07b5271ca471e6052";
   };
 
+  buildType = "catkin";
   buildInputs = [ roseus-smach ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ roseus-smach pddl-planner ];

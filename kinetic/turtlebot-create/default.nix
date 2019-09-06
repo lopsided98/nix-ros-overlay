@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.1";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_create-release/archive/release/kinetic/turtlebot_create/2.3.1-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_create-release/archive/release/kinetic/turtlebot_create/2.3.1-0.tar.gz";
+    name = "2.3.1-0.tar.gz";
     sha256 = "5de6720c110be9b0f441d36039c111fe86fe7b4b77e51d7d0c91df67bb23c342";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ create-driver create-node create-description ];
   nativeBuildInputs = [ catkin ];
 

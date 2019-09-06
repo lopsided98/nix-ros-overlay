@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.0";
 
   src = fetchurl {
-    url = https://github.com/UbiquityRobotics-release/ubiquity_motor-release/archive/release/kinetic/ubiquity_motor/0.9.0-0.tar.gz;
+    url = "https://github.com/UbiquityRobotics-release/ubiquity_motor-release/archive/release/kinetic/ubiquity_motor/0.9.0-0.tar.gz";
+    name = "0.9.0-0.tar.gz";
     sha256 = "9fc2cb0b76cf7f26025527c1ff66f0c7851f216ebbe880bf7791f3e44d2c6fa2";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager hardware-interface tf serial diagnostic-updater nav-msgs dynamic-reconfigure roscpp geometry-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ controller-manager hardware-interface joint-state-controller diff-drive-controller serial diagnostic-updater nav-msgs dynamic-reconfigure pythonPackages.requests tf geometry-msgs ];

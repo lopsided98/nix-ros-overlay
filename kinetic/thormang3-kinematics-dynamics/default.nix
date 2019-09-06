@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_kinematics_dynamics/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_kinematics_dynamics/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "60085ae5fee76c539b7dd620bf0773b563c23c545a1da2dd5e1a01590d957d5e";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp cmake-modules robotis-math eigen ];
   propagatedBuildInputs = [ roscpp cmake-modules robotis-math eigen ];
   nativeBuildInputs = [ catkin ];

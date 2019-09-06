@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.5";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_kinematics/1.2.5-0.tar.gz;
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_kinematics/1.2.5-0.tar.gz";
+    name = "1.2.5-0.tar.gz";
     sha256 = "e40c7d24ab7ecf1e7eabfa39319d47c88d07580e506b700d8f1bacb9e6e42950";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning pluginlib boost moveit-kinematics moveit-core tf-conversions roscpp geometry-msgs ];
   propagatedBuildInputs = [ moveit-ros-planning pluginlib boost moveit-kinematics moveit-core rospy tf-conversions roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

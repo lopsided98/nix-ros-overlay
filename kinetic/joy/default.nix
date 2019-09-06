@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.13.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/joy/1.13.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/kinetic/joy/1.13.0-1.tar.gz";
+    name = "1.13.0-1.tar.gz";
     sha256 = "b2ef51e55668e5e0ae2b618024ccd8848731615d60fc746dd32e122ce9a8e4dd";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-updater linuxConsoleTools sensor-msgs roscpp ];
   checkInputs = [ rosbag ];
-  propagatedBuildInputs = [ diagnostic-updater linuxConsoleTools sensor-msgs roscpp ];
+  propagatedBuildInputs = [ diagnostic-updater sensor-msgs linuxConsoleTools roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

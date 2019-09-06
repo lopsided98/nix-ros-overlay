@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.7";
 
   src = fetchurl {
-    url = https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/kinetic/tuw_ellipses/0.0.7-0.tar.gz;
+    url = "https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/kinetic/tuw_ellipses/0.0.7-0.tar.gz";
+    name = "0.0.7-0.tar.gz";
     sha256 = "e7084fd0b85be3b40470e512d2f14e9db9ef1f75812361e1061dd4b691b10fdd";
   };
 
+  buildType = "catkin";
   buildInputs = [ marker-msgs cmake-modules image-transport cv-bridge roscpp image-geometry nodelet dynamic-reconfigure rospy tf eigen ];
   propagatedBuildInputs = [ marker-msgs tf image-transport cv-bridge image-geometry nodelet dynamic-reconfigure rospy roscpp ];
   nativeBuildInputs = [ catkin ];

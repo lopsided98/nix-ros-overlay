@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.5.15";
 
   src = fetchurl {
-    url = https://github.com/ros-naoqi/nao_robot-release/archive/release/kinetic/nao_apps/0.5.15-0.tar.gz;
+    url = "https://github.com/ros-naoqi/nao_robot-release/archive/release/kinetic/nao_apps/0.5.15-0.tar.gz";
+    name = "0.5.15-0.tar.gz";
     sha256 = "6f2578725ddfbf17c8124bc5e7f85099e934806e63cef3a416eedec6667764f2";
   };
 
+  buildType = "catkin";
   checkInputs = [ trajectory-msgs ];
-  propagatedBuildInputs = [ std-srvs naoqi-pose naoqi-bridge-msgs rospy naoqi-driver-py diagnostic-msgs naoqi-bridge actionlib dynamic-reconfigure std-msgs naoqi-driver humanoid-nav-msgs geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs naoqi-pose rospy naoqi-bridge-msgs naoqi-bridge naoqi-driver-py std-msgs actionlib dynamic-reconfigure diagnostic-msgs naoqi-driver humanoid-nav-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

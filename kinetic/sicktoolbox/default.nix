@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.104-r2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/sicktoolbox-release/archive/release/kinetic/sicktoolbox/1.0.104-2.tar.gz;
+    url = "https://github.com/ros-gbp/sicktoolbox-release/archive/release/kinetic/sicktoolbox/1.0.104-2.tar.gz";
+    name = "1.0.104-2.tar.gz";
     sha256 = "e661e03b02237c5cfa4a52ee2f06a5b0a6f891fe047470e09e19861837b182a0";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.61.17";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_math/0.61.17-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/kinetic/ecl_math/0.61.17-0.tar.gz";
+    name = "0.61.17-0.tar.gz";
     sha256 = "855c4727088c139afe858c21c6b4087f1a6505f6d96b7a41d1e9affb4610fc49";
   };
 
+  buildType = "catkin";
   buildInputs = [ ecl-license ecl-type-traits ];
   propagatedBuildInputs = [ ecl-license ecl-type-traits ];
   nativeBuildInputs = [ catkin ];

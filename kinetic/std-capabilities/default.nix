@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/std_capabilities-release/archive/release/kinetic/std_capabilities/0.1.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/std_capabilities-release/archive/release/kinetic/std_capabilities/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "d8277854e369322931b631d56800492becc7c1e56ce707f2e1124a590cfa7349";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.0";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_status_msgs/0.8.0-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_status_msgs/0.8.0-0.tar.gz";
+    name = "0.8.0-0.tar.gz";
     sha256 = "0503a1823338389bba397c4a000f65ca2c5d8c99c250dd9b9698bab0d89ae632";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

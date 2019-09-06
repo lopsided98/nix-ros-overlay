@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/uji-ros-pkg/underwater_simulation-release/archive/release/kinetic/underwater_sensor_msgs/1.4.1-0.tar.gz;
+    url = "https://github.com/uji-ros-pkg/underwater_simulation-release/archive/release/kinetic/underwater_sensor_msgs/1.4.1-0.tar.gz";
+    name = "1.4.1-0.tar.gz";
     sha256 = "09e79419faaff652910292b12a85e36b44065acd3d2d3148d39d7c2d4b29a16f";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs roscpp message-generation visualization-msgs ];
-  propagatedBuildInputs = [ std-msgs visualization-msgs message-runtime roscpp ];
+  propagatedBuildInputs = [ std-msgs roscpp message-runtime visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

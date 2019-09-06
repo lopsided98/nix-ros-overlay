@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.7";
 
   src = fetchurl {
-    url = https://github.com/UNR-RoboticsResearchLab/web_interface-release/archive/release/kinetic/web_interface/1.0.7-0.tar.gz;
+    url = "https://github.com/UNR-RoboticsResearchLab/web_interface-release/archive/release/kinetic/web_interface/1.0.7-0.tar.gz";
+    name = "1.0.7-0.tar.gz";
     sha256 = "0fb1478945c0504c45bec50ec2ac9ff88902b2453647f711f3b286236bd4caa4";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ webui ros-apache2 image-stream rosjson pyclearsilver web-msgs rosweb launchman ];
   nativeBuildInputs = [ catkin ];
 

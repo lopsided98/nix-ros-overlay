@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/perception_pcl-release/archive/release/kinetic/perception_pcl/1.4.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/kinetic/perception_pcl/1.4.4-0.tar.gz";
+    name = "1.4.4-0.tar.gz";
     sha256 = "dac70ef69f32a1bc70475ce8a2e2f312558d3369ec6687812d661ba83d23fb07";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pcl-conversions pcl-msgs pcl-ros ];
   nativeBuildInputs = [ catkin ];
 

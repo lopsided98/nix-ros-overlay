@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.7";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_calibration/2.3.7-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_calibration/2.3.7-0.tar.gz";
+    name = "2.3.7-0.tar.gz";
     sha256 = "aab0b5257acf1a5eb8c0d4831637a61aed61c688fa0da99b6179f55520234174";
   };
 
+  buildType = "catkin";
   buildInputs = [ python-orocos-kdl sensor-msgs nav-msgs message-generation rospy std-msgs geometry-msgs ];
   propagatedBuildInputs = [ turtlebot-bringup python-orocos-kdl sensor-msgs nav-msgs message-runtime rospy std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

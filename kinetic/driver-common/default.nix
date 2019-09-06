@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/driver_common-release/archive/release/kinetic/driver_common/1.6.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/driver_common-release/archive/release/kinetic/driver_common/1.6.8-0.tar.gz";
+    name = "1.6.8-0.tar.gz";
     sha256 = "12d0ece2164262767b7e62bafa0e13ee8ba949770b1f98ae7578a771c2968ad3";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ driver-base timestamp-tools ];
   nativeBuildInputs = [ catkin ];
 

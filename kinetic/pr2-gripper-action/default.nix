@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.10.14";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/kinetic/pr2_gripper_action/1.10.14-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/kinetic/pr2_gripper_action/1.10.14-0.tar.gz";
+    name = "1.10.14-0.tar.gz";
     sha256 = "46c0b777acdca5d11ebcce78f3bef3c5ef5110d6311c9b3bb905e5eb5532f494";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers actionlib-msgs robot-mechanism-controllers actionlib roscpp pr2-mechanism-model ];
   propagatedBuildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers actionlib-msgs robot-mechanism-controllers actionlib roscpp pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];

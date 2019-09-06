@@ -8,11 +8,13 @@ buildRosPackage {
   version = "0.0.12";
 
   src = fetchurl {
-    url = https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_freenect_launch/0.0.12-0.tar.gz;
+    url = "https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_freenect_launch/0.0.12-0.tar.gz";
+    name = "0.0.12-0.tar.gz";
     sha256 = "8a1a1355d7d2678a75bbc55547046047ffc98770696bd9b47f52bb11705d289b";
   };
 
-  propagatedBuildInputs = [ xiaoqiang-freenect-camera nodelet rgbd-launch image-proc tf ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ xiaoqiang-freenect-camera rgbd-launch nodelet image-proc tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

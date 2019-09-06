@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.11";
 
   src = fetchurl {
-    url = https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release/archive/release/kinetic/dense_laser_assembler/1.0.11-0.tar.gz;
+    url = "https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release/archive/release/kinetic/dense_laser_assembler/1.0.11-0.tar.gz";
+    name = "1.0.11-0.tar.gz";
     sha256 = "ad15290fa35aaef1125beb105db5f63ed42100625eb51d2c2c80b4af717dc2b0";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs settlerlib roscpp-serialization std-msgs roscpp calibration-msgs ];
   propagatedBuildInputs = [ sensor-msgs settlerlib roscpp-serialization std-msgs roscpp calibration-msgs ];
   nativeBuildInputs = [ catkin ];

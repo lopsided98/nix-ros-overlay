@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.3.4-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_bringup/0.3.4-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_bringup/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
     sha256 = "586e3ede9bdc9740e52248469c6522fcfe6d9aabcb28d033be6bbea7fa822b8e";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ microstrain-3dmgx2-imu nmea-navsat-driver husky-control microstrain-mips husky-base pythonPackages.scipy tf2-ros husky-description lms1xx um7 robot-localization robot-upstart um6 tf nmea-comms imu-transformer imu-filter-madgwick ];
+  propagatedBuildInputs = [ nmea-navsat-driver microstrain-3dmgx2-imu husky-control microstrain-mips husky-base pythonPackages.scipy tf2-ros husky-description lms1xx robot-localization nmea-comms robot-upstart um6 tf imu-filter-madgwick imu-transformer um7 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

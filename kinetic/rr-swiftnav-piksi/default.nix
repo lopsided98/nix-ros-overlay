@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/RoverRobotics/rr_swiftnav_piksi-release/archive/release/kinetic/rr_swiftnav_piksi/0.0.1-1.tar.gz;
+    url = "https://github.com/RoverRobotics/rr_swiftnav_piksi-release/archive/release/kinetic/rr_swiftnav_piksi/0.0.1-1.tar.gz";
+    name = "0.0.1-1.tar.gz";
     sha256 = "1582be8a0ff55c255c8d20245c2a2acadc859aba450b3e72b269dde6984b0a84";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs roscpp rospy ];
   propagatedBuildInputs = [ std-msgs roscpp rospy ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/kinetic/dbw_fca_can/1.0.6-1.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/kinetic/dbw_fca_can/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
     sha256 = "53bd2a513e1af517bf5c2226484896c1717304cd27d0b1e1ee031e1b3ed72eb0";
   };
 
+  buildType = "catkin";
   buildInputs = [ dbw-fca-msgs sensor-msgs can-msgs roscpp rospy std-msgs nodelet geometry-msgs ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ dbw-fca-msgs sensor-msgs can-msgs roscpp dataspeed-can-usb dataspeed-ulc-can nodelet rospy std-msgs roslaunch dbw-fca-description geometry-msgs ];

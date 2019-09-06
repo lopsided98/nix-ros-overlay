@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosparam/1.12.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosparam/1.12.14-0.tar.gz";
+    name = "1.12.14-0.tar.gz";
     sha256 = "484b4d6a3516b81a5a7a76cd0398e52ee072880af13d48095a51a611a4af62aa";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rosgraph pythonPackages.pyyaml ];
   nativeBuildInputs = [ catkin ];
 

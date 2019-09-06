@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/message_multiplexing-release/archive/release/kinetic/mm_mux_demux/0.2.4-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/message_multiplexing-release/archive/release/kinetic/mm_mux_demux/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "c5f36a1d98fe03c310dbd833ba3907ae8f733d68eb19eb1149d5eeff2fea0dae";
   };
 
+  buildType = "catkin";
   buildInputs = [ mm-messages nanomsg ecl-formatters ecl-utilities ecl-command-line ecl-build ecl-threads ecl-time ecl-containers mm-core-msgs ];
-  propagatedBuildInputs = [ mm-messages nanomsg ecl-formatters ecl-utilities ecl-command-line ecl-build ecl-threads ecl-time ecl-containers mm-core-msgs ];
+  propagatedBuildInputs = [ mm-messages nanomsg ecl-formatters ecl-utilities ecl-command-line ecl-threads ecl-time ecl-build ecl-containers mm-core-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

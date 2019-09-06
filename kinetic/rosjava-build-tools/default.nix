@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.3.3-r1";
 
   src = fetchurl {
-    url = https://github.com/rosjava-release/rosjava_build_tools-release/archive/release/kinetic/rosjava_build_tools/0.3.3-1.tar.gz;
+    url = "https://github.com/rosjava-release/rosjava_build_tools-release/archive/release/kinetic/rosjava_build_tools/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
     sha256 = "782ea027bff0cf3c868b55e77efbc2d28ccc734abe37efed8da31a1f0b587ea1";
   };
 
+  buildType = "catkin";
   buildInputs = [ openjdk ant ];
-  propagatedBuildInputs = [ openjdk catkin ant ];
+  propagatedBuildInputs = [ catkin openjdk ant ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

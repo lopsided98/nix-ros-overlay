@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.45-r1";
 
   src = fetchurl {
-    url = https://github.com/pal-gbp/talos_robot-release/archive/release/kinetic/talos_description_calibration/1.0.45-1.tar.gz;
+    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/kinetic/talos_description_calibration/1.0.45-1.tar.gz";
+    name = "1.0.45-1.tar.gz";
     sha256 = "47d4656aea8b106044c5a32dfb02c7784c06e54b3c9bf0954f7c78a49ec7ac8a";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];
 

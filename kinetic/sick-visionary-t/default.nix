@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.5";
 
   src = fetchurl {
-    url = https://github.com/SICKAG/sick_visionary_t-release/archive/release/kinetic/sick_visionary_t/0.0.5-0.tar.gz;
+    url = "https://github.com/SICKAG/sick_visionary_t-release/archive/release/kinetic/sick_visionary_t/0.0.5-0.tar.gz";
+    name = "0.0.5-0.tar.gz";
     sha256 = "42fd4384a85fdd640e18660549f37a6a2515735affbf52c79d3f681712a5a523";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ sick-visionary-t-driver ];
   nativeBuildInputs = [ catkin ];
 

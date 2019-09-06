@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz_twist_controller/1.2.3-1.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz_twist_controller/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
     sha256 = "d3bbcbcb57356708ba1f7c7c7c882c7b05a920adc7c87974fc6d07e9c49fef81";
   };
 
+  buildType = "catkin";
   buildInputs = [ dbw-mkz-msgs sensor-msgs dynamic-reconfigure std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ dbw-mkz-msgs sensor-msgs dynamic-reconfigure std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

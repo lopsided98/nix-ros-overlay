@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yaml_cpp_0_3-release/archive/release/kinetic/yaml_cpp_0_3/0.3.1-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yaml_cpp_0_3-release/archive/release/kinetic/yaml_cpp_0_3/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "434e23ecd0af3c87b26327868dfdc51f662cb9eef6b8adfc4cbf191dd2931a36";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

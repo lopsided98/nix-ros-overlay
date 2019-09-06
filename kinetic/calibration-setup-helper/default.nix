@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/calibration-release/archive/release/kinetic/calibration_setup_helper/0.10.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/calibration-release/archive/release/kinetic/calibration_setup_helper/0.10.14-0.tar.gz";
+    name = "0.10.14-0.tar.gz";
     sha256 = "f8fe7b9c86ffdbe13ae1798395eef2b28434443a660769f591930409b59101f5";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ calibration-launch ];
   nativeBuildInputs = [ catkin ];
 

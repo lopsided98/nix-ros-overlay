@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/Terabee/teraranger_array-release/archive/release/kinetic/teraranger_array/2.0.0-1.tar.gz;
+    url = "https://github.com/Terabee/teraranger_array-release/archive/release/kinetic/teraranger_array/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
     sha256 = "67cef9d3e64f2d16a34522cd17429e9829e5342d6f043fcbf2d4126e15326ebf";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs serial rospy message-generation dynamic-reconfigure std-msgs roscpp geometry-msgs ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ sensor-msgs serial rospy message-runtime dynamic-reconfigure std-msgs roscpp geometry-msgs ];

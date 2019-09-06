@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/kinetic/open_manipulator/2.0.1-1.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/kinetic/open_manipulator/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
     sha256 = "21b1ba176222c430894ab1bcd70016e2405f13f0905e1982b8cdd64cd49824a5";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ open-manipulator-control-gui open-manipulator-libs open-manipulator-moveit open-manipulator-teleop open-manipulator-description open-manipulator-controller ];
   nativeBuildInputs = [ catkin ];
 

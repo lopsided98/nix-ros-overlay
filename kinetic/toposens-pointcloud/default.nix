@@ -5,16 +5,18 @@
 { lib, buildRosPackage, fetchurl, tf2-geometry-msgs, catkin, toposens-driver, tf2-ros, roscpp, tf2, rostest, message-runtime, toposens-msgs, pcl-ros, rospy, roslaunch, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-toposens-pointcloud";
-  version = "1.2.2-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_pointcloud/1.2.2-1;
-    sha256 = "ca9e27941b63e36d43dc60f45c1a65d6ee9e84a8a538b7d89b20769faca6fd27";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_pointcloud/1.2.3-1";
+    name = "archive.tar.gz";
+    sha256 = "ca430c3f495bc3294103d126e584e5422ce17c8352643c908e374a71045714e1";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2-geometry-msgs toposens-driver roscpp tf2-ros tf2 message-runtime toposens-msgs pcl-ros rospy visualization-msgs ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ tf2-geometry-msgs toposens-driver roscpp tf2-ros tf2 message-runtime toposens-msgs pcl-ros rospy visualization-msgs ];
+  propagatedBuildInputs = [ tf2-geometry-msgs toposens-driver tf2-ros tf2 message-runtime visualization-msgs rospy toposens-msgs roscpp pcl-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

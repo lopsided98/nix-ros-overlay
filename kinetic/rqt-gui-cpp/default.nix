@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.5.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt-release/archive/release/kinetic/rqt_gui_cpp/0.5.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt-release/archive/release/kinetic/rqt_gui_cpp/0.5.0-0.tar.gz";
+    name = "0.5.0-0.tar.gz";
     sha256 = "7e649bc586f53c1e3d5d997916b7422b4097795580fdc9421898a3b54eae26c6";
   };
 
+  buildType = "catkin";
   buildInputs = [ qt5.qtbase qt-gui-cpp qt-gui nodelet roscpp ];
-  propagatedBuildInputs = [ qt-gui-cpp roscpp qt-gui nodelet ];
+  propagatedBuildInputs = [ qt-gui-cpp nodelet qt-gui roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.3";
 
   src = fetchurl {
-    url = https://github.com/nerian-vision/nerian_sp1-release/archive/release/kinetic/nerian_sp1/1.6.3-0.tar.gz;
+    url = "https://github.com/nerian-vision/nerian_sp1-release/archive/release/kinetic/nerian_sp1/1.6.3-0.tar.gz";
+    name = "1.6.3-0.tar.gz";
     sha256 = "762f0d92554264c1da7e8e398f9d1c37cd04f91d223d84de29c79871393d8d08";
   };
 
+  buildType = "catkin";
   buildInputs = [ SDL boost sensor-msgs cv-bridge message-generation std-msgs roscpp ];
   propagatedBuildInputs = [ SDL boost sensor-msgs cv-bridge message-runtime std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/ridgeback-release/archive/release/kinetic/ridgeback_description/0.2.2-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/kinetic/ridgeback_description/0.2.2-0.tar.gz";
+    name = "0.2.2-0.tar.gz";
     sha256 = "a37e75af1544fc229b6fce54be8e4916f275b7863909d03d66f1037fdf226f93";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ lms1xx urdf xacro robot-state-publisher ];
   nativeBuildInputs = [ catkin ];

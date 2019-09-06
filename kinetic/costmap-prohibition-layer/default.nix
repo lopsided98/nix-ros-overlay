@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.5";
 
   src = fetchurl {
-    url = https://github.com/rst-tu-dortmund/costmap_prohibition_layer-release/archive/release/kinetic/costmap_prohibition_layer/0.0.5-0.tar.gz;
+    url = "https://github.com/rst-tu-dortmund/costmap_prohibition_layer-release/archive/release/kinetic/costmap_prohibition_layer/0.0.5-0.tar.gz";
+    name = "0.0.5-0.tar.gz";
     sha256 = "249a5d7b9bbd812905db2e734dd6ecdf38f35db27d615af06a816734f3ccc4c6";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ costmap-2d roscpp dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

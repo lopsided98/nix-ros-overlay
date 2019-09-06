@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_resources/1.3.0-1.tar.gz;
+    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_resources/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
     sha256 = "26d97f8ab376d314e765b682243f0566d151ab825cdd026ed71d9d12efbdc7ff";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

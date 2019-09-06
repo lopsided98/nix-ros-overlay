@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.14";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_control-release/archive/release/kinetic/eus_qp/0.1.14-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/kinetic/eus_qp/0.1.14-0.tar.gz";
+    name = "0.1.14-0.tar.gz";
     sha256 = "f1c815c2a12315a280fc83c3ae42d405cb710054d785508ae36f56ba64dfea63";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest cmake-modules euslisp eigen ];
   checkInputs = [ eus-qpoases ];
   propagatedBuildInputs = [ euslisp eigen ];

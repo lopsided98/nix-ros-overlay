@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-SENSORs-release/archive/release/kinetic/thormang3_mpc_sensors/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-SENSORs-release/archive/release/kinetic/thormang3_mpc_sensors/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "bfa07c28220662ca36ccadf0c2c7a48345a968981087a27f3e3606e98a97dfdb";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ thormang3-imu-3dm-gx4 ];
   nativeBuildInputs = [ catkin ];
 

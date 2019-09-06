@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_mbed/0.7.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_mbed/0.7.7-0.tar.gz";
+    name = "0.7.7-0.tar.gz";
     sha256 = "db94568438120f6953f926941b3a8d8d12da8202bc1a19bcfcbd7fdce4d1686b";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation ];
   propagatedBuildInputs = [ rospy rosserial-msgs message-runtime rosserial-client ];
   nativeBuildInputs = [ catkin ];

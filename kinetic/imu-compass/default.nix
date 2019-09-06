@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.5";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/imu_compass-release/archive/release/kinetic/imu_compass/0.0.5-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/imu_compass-release/archive/release/kinetic/imu_compass/0.0.5-0.tar.gz";
+    name = "0.0.5-0.tar.gz";
     sha256 = "6cc348641406c6549ccc7e1311e7f53f1dd7e91790f588c081ef43eb199e915a";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs sensor-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs pythonPackages.scipy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.4";
 
   src = fetchurl {
-    url = https://github.com/ksatyaki/wts_driver-release/archive/release/kinetic/wts_driver/1.0.4-0.tar.gz;
+    url = "https://github.com/ksatyaki/wts_driver-release/archive/release/kinetic/wts_driver/1.0.4-0.tar.gz";
+    name = "1.0.4-0.tar.gz";
     sha256 = "8716cd0606b804c50ffe1ff79d1c263e85081535f5efb3606f74d01095576f19";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];

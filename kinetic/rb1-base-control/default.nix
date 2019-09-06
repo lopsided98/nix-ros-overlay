@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/kinetic/rb1_base_control/1.0.2-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/kinetic/rb1_base_control/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "01ebea3b6c6e19181d58e687f0e0d342abf47fcfc2719337fa944da1e35eea30";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ controller-manager twist-mux joint-state-controller diff-drive-controller controller-manager-msgs robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 

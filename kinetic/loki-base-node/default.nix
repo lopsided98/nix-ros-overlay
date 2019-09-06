@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2";
 
   src = fetchurl {
-    url = https://github.com/UbiquityRobotics-release/loki_base_node-release/archive/release/kinetic/loki_base_node/0.2.2-0.tar.gz;
+    url = "https://github.com/UbiquityRobotics-release/loki_base_node-release/archive/release/kinetic/loki_base_node/0.2.2-0.tar.gz";
+    name = "0.2.2-0.tar.gz";
     sha256 = "3a52534217926fe09476948959b9abaf8b5251e0a37f99bbbb5b2dae96c09b8f";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation roscpp rospy ];
   propagatedBuildInputs = [ std-msgs roscpp message-runtime rospy ];
   nativeBuildInputs = [ catkin ];

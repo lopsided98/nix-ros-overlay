@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.12";
 
   src = fetchurl {
-    url = https://github.com/SawYerRobotics-release/roch-release/archive/release/kinetic/roch_rapps/2.0.12-0.tar.gz;
+    url = "https://github.com/SawYerRobotics-release/roch-release/archive/release/kinetic/roch_rapps/2.0.12-0.tar.gz";
+    name = "2.0.12-0.tar.gz";
     sha256 = "5294102b8ff61174379dca8f19f31c86e9497f189eff28c47c28c7496c04e90a";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ world-canvas-server roch-teleop roch-follower robot-pose-publisher roch-bringup nodelet topic-tools warehouse-ros roch-navigation tf compressed-image-transport ];
   nativeBuildInputs = [ catkin ];
 

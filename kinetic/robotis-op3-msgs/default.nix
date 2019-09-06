@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-msgs-release/archive/release/kinetic/robotis_op3_msgs/0.1.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-msgs-release/archive/release/kinetic/robotis_op3_msgs/0.1.1-0.tar.gz";
+    name = "0.1.1-0.tar.gz";
     sha256 = "9a9b24db965ec1dd99e38cd912f7ac784b532c96a05f81425bc797a90283b314";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ op3-online-walking-module-msgs op3-action-module-msgs op3-walking-module-msgs op3-offset-tuner-msgs ];
   nativeBuildInputs = [ catkin ];
 

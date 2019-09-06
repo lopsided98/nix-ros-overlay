@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/tf2_relay/0.0.2-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/kinetic/tf2_relay/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
     sha256 = "cb3226ddf3a151f77c7a139ccfb5b96c1545aae4e04b823ed58426f9ebc35b4e";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp tf2-msgs message-relay ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ tf2-msgs roscpp tf2-ros message-relay tf ];
+  propagatedBuildInputs = [ tf2-msgs tf tf2-ros message-relay roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

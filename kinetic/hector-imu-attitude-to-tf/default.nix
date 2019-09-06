@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.5";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_imu_attitude_to_tf/0.3.5-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_imu_attitude_to_tf/0.3.5-0.tar.gz";
+    name = "0.3.5-0.tar.gz";
     sha256 = "8e463d6db92e2729909345d6a45f2607d455fe0e45f02108a64eb77776c1c9be";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf roscpp ];
   propagatedBuildInputs = [ tf roscpp ];
   nativeBuildInputs = [ catkin ];

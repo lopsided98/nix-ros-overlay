@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/downward/2.1.13-1.tar.gz;
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/downward/2.1.13-1.tar.gz";
+    name = "2.1.13-1.tar.gz";
     sha256 = "0defa3639757c5a7528d52db4ec483544d85262788b3d29fd63a07a1453acf18";
   };
 
+  buildType = "catkin";
   buildInputs = [ python gawk rostest flex cacert time bison ];
   propagatedBuildInputs = [ time gawk ];
   nativeBuildInputs = [ catkin ];

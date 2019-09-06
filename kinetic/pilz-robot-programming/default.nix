@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.8";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_robot_programming/0.3.8-0.tar.gz;
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_robot_programming/0.3.8-0.tar.gz";
+    name = "0.3.8-0.tar.gz";
     sha256 = "3937d905736a4d05521dbbab8796805712e4ce3f73e3b7d42dd1a88310659122";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslint rospy ];
   checkInputs = [ prbt-moveit-config prbt-pg70-support rostest pythonPackages.mock pilz-industrial-motion-testutils pythonPackages.coverage pythonPackages.docopt ];
   propagatedBuildInputs = [ pythonPackages.psutil pilz-msgs moveit-commander rospy tf-conversions tf pilz-trajectory-generation ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.11";
 
   src = fetchurl {
-    url = https://github.com/fzi-forschungszentrum-informatik/fzi_icl_can-release/archive/release/kinetic/fzi_icl_can/1.0.11-0.tar.gz;
+    url = "https://github.com/fzi-forschungszentrum-informatik/fzi_icl_can-release/archive/release/kinetic/fzi_icl_can/1.0.11-0.tar.gz";
+    name = "1.0.11-0.tar.gz";
     sha256 = "20d111da9da0ed8bed825a559b452a15a147ecef9fc113b213125cfcd039840a";
   };
 
+  buildType = "cmake";
   buildInputs = [ fzi-icl-core tinyxml wget libpcan popt ];
   propagatedBuildInputs = [ fzi-icl-core catkin tinyxml linuxHeaders libpcan popt ];
   nativeBuildInputs = [ cmake ];

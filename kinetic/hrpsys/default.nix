@@ -8,10 +8,12 @@ buildRosPackage {
   version = "315.14.0";
 
   src = fetchurl {
-    url = https://github.com/tork-a/hrpsys-release/archive/release/kinetic/hrpsys/315.14.0-0.tar.gz;
+    url = "https://github.com/tork-a/hrpsys-release/archive/release/kinetic/hrpsys/315.14.0-0.tar.gz";
+    name = "315.14.0-0.tar.gz";
     sha256 = "65f8505cf024ffd75186075a5fc6ce8fe8d69454b954fe00548abe9e2757bf12";
   };
 
+  buildType = "cmake";
   buildInputs = [ SDL opencv3 libxml2 pythonPackages.tkinter mk git openhrp3 irrlicht qhull glew doxygen freeglut xorg.libXmu graphviz ];
   propagatedBuildInputs = [ SDL opencv3 libxml2 pythonPackages.tkinter openhrp3 irrlicht qhull freeglut xorg.libXmu ];
   nativeBuildInputs = [ cmake pkg-config ];

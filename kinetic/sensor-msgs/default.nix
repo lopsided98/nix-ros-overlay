@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/sensor_msgs/1.12.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/sensor_msgs/1.12.7-0.tar.gz";
+    name = "1.12.7-0.tar.gz";
     sha256 = "c6dc7550aa24eb95abdd0a98e55de8bc0e20f693648c572f2648fdd7f97cc518";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   checkInputs = [ rosbag rosunit ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];

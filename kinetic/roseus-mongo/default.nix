@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.7.4";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus_mongo/1.7.4-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus_mongo/1.7.4-0.tar.gz";
+    name = "1.7.4-0.tar.gz";
     sha256 = "68f1f20500ddc03780cd89f52fa87f454531e1ec80db8af9a08cd92d7dfe0bd5";
   };
 
+  buildType = "catkin";
   buildInputs = [ roseus mongodb-store-msgs rostest mongodb-store ];
   propagatedBuildInputs = [ roseus mongodb-store-msgs mongodb-store ];
   nativeBuildInputs = [ catkin ];

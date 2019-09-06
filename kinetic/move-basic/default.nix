@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/UbiquityRobotics-release/move_basic-release/archive/release/kinetic/move_basic/0.3.2-0.tar.gz;
+    url = "https://github.com/UbiquityRobotics-release/move_basic-release/archive/release/kinetic/move_basic/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "96b09fbf7dc2104408ebd2042b9008d315dd528525564789aa8c7a5bb5701ee2";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2-geometry-msgs actionlib-msgs sensor-msgs nav-core roscpp tf2-ros move-base-msgs tf2 actionlib std-msgs visualization-msgs geometry-msgs ];
-  propagatedBuildInputs = [ tf2-geometry-msgs actionlib-msgs sensor-msgs nav-core roscpp tf2-ros move-base-msgs tf2 actionlib std-msgs visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ tf2-geometry-msgs actionlib-msgs sensor-msgs nav-core tf2-ros move-base-msgs tf2 visualization-msgs actionlib std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.3.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/urdf_tutorial-release/archive/release/kinetic/urdf_tutorial/0.3.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/urdf_tutorial-release/archive/release/kinetic/urdf_tutorial/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
     sha256 = "89e82ba00a356de1c0279e00ff4f1c4b98600de375d50311b5e898af00c48a00";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ rviz joint-state-publisher xacro robot-state-publisher ];
+  propagatedBuildInputs = [ joint-state-publisher rviz xacro robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

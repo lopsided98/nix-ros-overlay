@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.11";
 
   src = fetchurl {
-    url = https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release/archive/release/kinetic/laser_joint_processor/1.0.11-0.tar.gz;
+    url = "https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release/archive/release/kinetic/laser_joint_processor/1.0.11-0.tar.gz";
+    name = "1.0.11-0.tar.gz";
     sha256 = "70586dfb537b887de968949cbea8ad55c23c966496635d64bfa954fbd99d5b34";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-filters image-geometry joint-states-settler settlerlib geometry-msgs ];
   propagatedBuildInputs = [ message-filters image-geometry joint-states-settler settlerlib geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0";
 
   src = fetchurl {
-    url = https://github.com/easymov/multikey_teleop-release/archive/release/kinetic/multikey_teleop/1.0.0-0.tar.gz;
+    url = "https://github.com/easymov/multikey_teleop-release/archive/release/kinetic/multikey_teleop/1.0.0-0.tar.gz";
+    name = "1.0.0-0.tar.gz";
     sha256 = "801f6571875fe3632ecbefd9496194795f2e6e745824087e8a6fffd20f19c15b";
   };
 
+  buildType = "catkin";
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ std-msgs pythonPackages.xlib geometry-msgs rospy ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/kinetic/rdl_ros_tools/1.1.0-0;
+    url = "https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/kinetic/rdl_ros_tools/1.1.0-0";
+    name = "archive.tar.gz";
     sha256 = "f5855c1044dd86dfaab57dace95580d1838d7e0330a8a21eb0ec2d93d850216f";
   };
 
+  buildType = "catkin";
   buildInputs = [ rdl-msgs rdl-urdfreader sensor-msgs rdl-dynamics rostest nav-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ rdl-msgs rdl-urdfreader sensor-msgs rdl-dynamics rostest nav-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

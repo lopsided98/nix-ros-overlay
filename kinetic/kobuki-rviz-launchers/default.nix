@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.7";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/kobuki_desktop-release/archive/release/kinetic/kobuki_rviz_launchers/0.5.7-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/kobuki_desktop-release/archive/release/kinetic/kobuki_rviz_launchers/0.5.7-0.tar.gz";
+    name = "0.5.7-0.tar.gz";
     sha256 = "e49160d5d3ec08abf5e2be892c8df4554176223eaa5ea1c0d1210c916b60a248";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rviz ];
   nativeBuildInputs = [ catkin ];
 

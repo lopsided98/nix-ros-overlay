@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.5.50";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/kinetic/dynamic_reconfigure/1.5.50-0.tar.gz;
+    url = "https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/kinetic/dynamic_reconfigure/1.5.50-0.tar.gz";
+    name = "1.5.50-0.tar.gz";
     sha256 = "aa70f0eb61e6423e6fa50181098a2ae727559c9a5bcde64f6c0b2a45f5d49f9d";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost rostest message-generation roscpp-serialization std-msgs roscpp ];
   propagatedBuildInputs = [ boost rosservice roslib message-runtime rospy std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

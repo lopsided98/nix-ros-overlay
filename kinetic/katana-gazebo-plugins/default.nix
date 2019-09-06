@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_gazebo_plugins/1.1.2-0.tar.gz;
+    url = "https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_gazebo_plugins/1.1.2-0.tar.gz";
+    name = "1.1.2-0.tar.gz";
     sha256 = "734a02bff32ecf9ea8e2e78f8fc61d5f083dd4a3ba3153e423cf0eac662a9899";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros control-msgs katana-msgs trajectory-msgs sensor-msgs control-toolbox actionlib ];
   propagatedBuildInputs = [ gazebo-ros control-msgs katana-msgs trajectory-msgs sensor-msgs control-toolbox actionlib ];
   nativeBuildInputs = [ catkin ];

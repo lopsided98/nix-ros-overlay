@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/artivis/distance_map-release/archive/release/kinetic/distance_map_opencv/0.1.0-1.tar.gz;
+    url = "https://github.com/artivis/distance_map-release/archive/release/kinetic/distance_map_opencv/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "f12c8bbf72c10e62bf039586d82ff841e08dbf6eb211e93006fc56ea32fc742f";
   };
 
+  buildType = "catkin";
   buildInputs = [ distance-map-core image-geometry ];
   propagatedBuildInputs = [ distance-map-core image-geometry ];
   nativeBuildInputs = [ catkin ];

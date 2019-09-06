@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.6";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/lms1xx-release/archive/release/kinetic/lms1xx/0.1.6-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/lms1xx-release/archive/release/kinetic/lms1xx/0.1.6-0.tar.gz";
+    name = "0.1.6-0.tar.gz";
     sha256 = "c14f2f6e88a9f791ec177ad64ea3a5013d52642ace02c6011c6a490652660abc";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp rosconsole-bridge roscpp-serialization ];
   checkInputs = [ roslaunch rosunit roslint ];
   propagatedBuildInputs = [ sensor-msgs roscpp rosconsole-bridge roscpp-serialization ];

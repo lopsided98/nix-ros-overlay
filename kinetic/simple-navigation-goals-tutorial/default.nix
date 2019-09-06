@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation_tutorials-release/archive/release/kinetic/simple_navigation_goals_tutorial/0.2.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation_tutorials-release/archive/release/kinetic/simple_navigation_goals_tutorial/0.2.3-0.tar.gz";
+    name = "0.2.3-0.tar.gz";
     sha256 = "c10b2a1e98aa617b16dbea9340eb73e50cc8b5184f1bd454884d0b6505a09d9f";
   };
 
+  buildType = "catkin";
   buildInputs = [ move-base-msgs tf roscpp actionlib ];
   propagatedBuildInputs = [ move-base-msgs tf roscpp actionlib ];
   nativeBuildInputs = [ catkin ];

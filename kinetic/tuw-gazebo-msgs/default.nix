@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.11";
 
   src = fetchurl {
-    url = https://github.com/tuw-robotics/tuw_msgs-release/archive/release/kinetic/tuw_gazebo_msgs/0.0.11-0.tar.gz;
+    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/kinetic/tuw_gazebo_msgs/0.0.11-0.tar.gz";
+    name = "0.0.11-0.tar.gz";
     sha256 = "7ddf8cfc75face6c8ff0ec06d205b9b00e5cd512f94dd8322a5cf5928096979f";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs trajectory-msgs sensor-msgs message-generation rospy std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ std-srvs trajectory-msgs sensor-msgs message-runtime rospy std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

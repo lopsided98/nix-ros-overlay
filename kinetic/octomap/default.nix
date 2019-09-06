@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/octomap-release/archive/release/kinetic/octomap/1.8.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/kinetic/octomap/1.8.1-0.tar.gz";
+    name = "1.8.1-0.tar.gz";
     sha256 = "dba38c606483ef59bd981c17a08fb381cef0a9d0a20ddfbba35590a3330ecbe6";
   };
 
+  buildType = "cmake";
   propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 

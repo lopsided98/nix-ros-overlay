@@ -8,16 +8,18 @@ buildRosPackage {
   version = "3.3.2";
 
   src = fetchurl {
-    url = https://github.com/ethz-asl/mav_comm-release/archive/release/kinetic/mav_msgs/3.3.2-0.tar.gz;
+    url = "https://github.com/ethz-asl/mav_comm-release/archive/release/kinetic/mav_msgs/3.3.2-0.tar.gz";
+    name = "3.3.2-0.tar.gz";
     sha256 = "42149201e47154ee860e8ce8f49d51c1160cd159a8ed8a385ffffb6e7dbd3831";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules trajectory-msgs message-generation eigen std-msgs geometry-msgs ];
   propagatedBuildInputs = [ trajectory-msgs message-runtime eigen std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''Package containing messages for communicating with rotary wing MAVs'';
-    license = with lib.licenses; [ "ASL 2.0" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_manipulation_module/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_manipulation_module/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "25407f15de442a1ebc1879bd21e0477fa9f5baa42d2f97a93fdaaa18876b363f";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost cmake-modules geometry-msgs libyamlcpp roscpp thormang3-kinematics-dynamics roslib robotis-math eigen std-msgs robotis-controller-msgs thormang3-manipulation-module-msgs robotis-framework-common ];
-  propagatedBuildInputs = [ boost cmake-modules geometry-msgs libyamlcpp roscpp thormang3-kinematics-dynamics roslib robotis-math eigen std-msgs robotis-controller-msgs thormang3-manipulation-module-msgs robotis-framework-common ];
+  propagatedBuildInputs = [ cmake-modules boost geometry-msgs libyamlcpp roscpp thormang3-kinematics-dynamics roslib robotis-math eigen std-msgs robotis-controller-msgs thormang3-manipulation-module-msgs robotis-framework-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/pose_follower/0.2.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/pose_follower/0.2.1-0.tar.gz";
+    name = "0.2.1-0.tar.gz";
     sha256 = "59c69786e6a77421309a24fb371ef011dfd53a0e58ff9ec5cafff398f6f26bfb";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d pluginlib base-local-planner tf nav-core nav-msgs roscpp ];
-  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner tf nav-core nav-msgs roscpp ];
+  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core roscpp nav-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

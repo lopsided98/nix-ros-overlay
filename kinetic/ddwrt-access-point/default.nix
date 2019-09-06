@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/ddwrt_access_point/1.0.15-0.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/ddwrt_access_point/1.0.15-0.tar.gz";
+    name = "1.0.15-0.tar.gz";
     sha256 = "762f7009b740be0da0a975edeba3521816746d1f3b2faa36ccf42f1844f1c78e";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

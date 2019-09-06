@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.14.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/kinetic/base_local_planner/1.14.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/base_local_planner/1.14.4-0.tar.gz";
+    name = "1.14.4-0.tar.gz";
     sha256 = "5f642b0002e3c932e548ee5fb7f71fc2569f50621885aafe6400796ac320daf7";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d pluginlib cmake-modules tf nav-core rospy voxel-grid message-generation nav-msgs pcl-ros std-msgs angles dynamic-reconfigure roscpp pcl-conversions geometry-msgs eigen ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ costmap-2d pluginlib tf nav-core rospy voxel-grid nav-msgs message-runtime pcl-ros std-msgs angles dynamic-reconfigure roscpp geometry-msgs eigen ];
+  propagatedBuildInputs = [ costmap-2d pluginlib nav-core roscpp voxel-grid nav-msgs message-runtime rospy std-msgs angles dynamic-reconfigure tf pcl-ros geometry-msgs eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

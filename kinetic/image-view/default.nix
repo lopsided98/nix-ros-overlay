@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.23";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_view/1.12.23-0.tar.gz;
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_view/1.12.23-0.tar.gz";
+    name = "1.12.23-0.tar.gz";
     sha256 = "71403d5fcb6ce1d2f777cc9b095e26473a81f548ef8761dd9510fa9270a96511";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs rosconsole camera-calibration-parsers image-transport gtk2 sensor-msgs message-filters cv-bridge message-generation nodelet dynamic-reconfigure roscpp stereo-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ std-srvs rosconsole camera-calibration-parsers image-transport gtk2 cv-bridge message-filters nodelet dynamic-reconfigure roscpp ];

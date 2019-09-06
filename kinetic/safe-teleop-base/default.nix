@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/shared_autonomy_manipulation-release/archive/release/kinetic/safe_teleop_base/0.0.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/shared_autonomy_manipulation-release/archive/release/kinetic/safe_teleop_base/0.0.2-0.tar.gz";
+    name = "0.0.2-0.tar.gz";
     sha256 = "3d166a7bafab0cb5ccb1226b82b6f2fe4b65bfdfc68f4a90000f293531c7f046";
   };
 
+  buildType = "catkin";
   buildInputs = [ pcl roscpp costmap-2d base-local-planner ];
   propagatedBuildInputs = [ pcl roscpp costmap-2d base-local-planner ];
   nativeBuildInputs = [ catkin ];

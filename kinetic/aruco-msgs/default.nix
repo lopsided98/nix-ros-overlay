@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3";
 
   src = fetchurl {
-    url = https://github.com/pal-gbp/aruco_ros-release/archive/release/kinetic/aruco_msgs/0.2.3-0.tar.gz;
+    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/kinetic/aruco_msgs/0.2.3-0.tar.gz";
+    name = "0.2.3-0.tar.gz";
     sha256 = "ca90755d497b4ccfc1ced8b457a1e99bfc1dad143e36aa7318b42ce55209245a";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

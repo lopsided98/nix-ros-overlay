@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.9-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_imu/0.7.9-1.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_imu/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
     sha256 = "94eb73ddd1e44e4887f2938447167510af531e27cb91e3b49611d14b070800da";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs phidgets-api pluginlib sensor-msgs roscpp diagnostic-updater nodelet std-msgs diagnostic-msgs roslaunch tf ];
   propagatedBuildInputs = [ std-srvs phidgets-api pluginlib sensor-msgs roscpp diagnostic-updater nodelet std-msgs diagnostic-msgs tf imu-filter-madgwick diagnostic-aggregator ];
   nativeBuildInputs = [ catkin ];

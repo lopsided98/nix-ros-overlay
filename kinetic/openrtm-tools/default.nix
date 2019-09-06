@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.4.2";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/openrtm_tools/1.4.2-0.tar.gz;
+    url = "https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/openrtm_tools/1.4.2-0.tar.gz";
+    name = "1.4.2-0.tar.gz";
     sha256 = "2357067dfe93be5ed3bdadd4b28e08f39aa6bb5002b7c3aa75090e9e54cb6803";
   };
 
+  buildType = "catkin";
   buildInputs = [ rtshell rosbash rostest openrtm-aist-python openrtm-aist ];
-  propagatedBuildInputs = [ rtshell openrtm-aist-python openrtm-aist rosbash ];
+  propagatedBuildInputs = [ openrtm-aist-python rtshell rosbash openrtm-aist ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

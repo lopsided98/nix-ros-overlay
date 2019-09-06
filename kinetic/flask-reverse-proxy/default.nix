@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/pyros-dev/flask-reverse-proxy-rosrelease/archive/release/kinetic/flask_reverse_proxy/0.2.0-0.tar.gz;
+    url = "https://github.com/pyros-dev/flask-reverse-proxy-rosrelease/archive/release/kinetic/flask_reverse_proxy/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "c3f4fb621008261448d9396b6b2ac22a5fe02fd8c20adc5d1f83e3e7a09a5bc4";
   };
 
+  buildType = "catkin";
   buildInputs = [ catkin-pip ];
   nativeBuildInputs = [ catkin ];
 

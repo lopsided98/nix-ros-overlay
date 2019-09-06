@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.1";
 
   src = fetchurl {
-    url = https://github.com/smits/orocos-kdl-release/archive/release/kinetic/orocos_kdl/1.3.1-0.tar.gz;
+    url = "https://github.com/smits/orocos-kdl-release/archive/release/kinetic/orocos_kdl/1.3.1-0.tar.gz";
+    name = "1.3.1-0.tar.gz";
     sha256 = "7cbda0a837a7025739715ffab17b5f916d671eec8dfeb26a20ba80bfc0463590";
   };
 
+  buildType = "cmake";
   buildInputs = [ eigen ];
   checkInputs = [ cppunit ];
   propagatedBuildInputs = [ catkin pkg-config eigen ];

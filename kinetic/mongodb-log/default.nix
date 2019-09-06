@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.5-r1";
 
   src = fetchurl {
-    url = https://github.com/strands-project-releases/mongodb_store/archive/release/kinetic/mongodb_log/0.4.5-1.tar.gz;
+    url = "https://github.com/strands-project-releases/mongodb_store/archive/release/kinetic/mongodb_log/0.4.5-1.tar.gz";
+    name = "0.4.5-1.tar.gz";
     sha256 = "f172d1720a099dcf02680c52aea645d121ebc8bceeb5571bba54c77b3d201619";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf sensor-msgs libmongocxx-ros rosgraph rostopic mongodb-store rospy openssl roslib ];
   propagatedBuildInputs = [ pythonPackages.pymongo tf sensor-msgs libmongocxx-ros rosgraph rostopic mongodb-store rospy roslib ];
   nativeBuildInputs = [ catkin ];

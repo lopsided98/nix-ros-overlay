@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero_image_transport/0.2.4-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero_image_transport/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "9ed895b2065c4d0a608fb421cdd510e5b6d75f657ce93f6f08858271ce69a66e";
   };
 
+  buildType = "catkin";
   buildInputs = [ image-transport sensor-msgs cv-bridge message-runtime imagezero-ros ];
   propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge message-runtime imagezero-ros ];
   nativeBuildInputs = [ catkin ];

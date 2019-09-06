@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.1";
 
   src = fetchurl {
-    url = https://github.com/youbot-release/youbot_description-release/archive/release/kinetic/youbot_description/0.8.1-0.tar.gz;
+    url = "https://github.com/youbot-release/youbot_description-release/archive/release/kinetic/youbot_description/0.8.1-0.tar.gz";
+    name = "0.8.1-0.tar.gz";
     sha256 = "9b5201f020d399264085c9ea1f0f318149583bd8eb39cbb95c9b28f6008c534f";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

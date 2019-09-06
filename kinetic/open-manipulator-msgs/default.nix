@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/open_manipulator_msgs-release/archive/release/kinetic/open_manipulator_msgs/1.0.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator_msgs-release/archive/release/kinetic/open_manipulator_msgs/1.0.0-0.tar.gz";
+    name = "1.0.0-0.tar.gz";
     sha256 = "56c938f226b1b0f70ca84eab221b463f90deac4719e83ffa60e83d37a55d5dc1";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

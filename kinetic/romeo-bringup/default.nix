@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.5";
 
   src = fetchurl {
-    url = https://github.com/ros-aldebaran/romeo_robot-release/archive/release/kinetic/romeo_bringup/0.1.5-0.tar.gz;
+    url = "https://github.com/ros-aldebaran/romeo_robot-release/archive/release/kinetic/romeo_bringup/0.1.5-0.tar.gz";
+    name = "0.1.5-0.tar.gz";
     sha256 = "fe33b8c54668fc9ccf96dcb224bc6c81d0b733b27730af7a6a374f6d196f01ef";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ naoqi-driver romeo-sensors-py romeo-description ];
   nativeBuildInputs = [ catkin ];
 

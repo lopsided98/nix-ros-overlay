@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/humanoid_navigation-release/archive/release/kinetic/humanoid_navigation/0.4.2-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/humanoid_navigation-release/archive/release/kinetic/humanoid_navigation/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "254f9cc21e82934f0f6519b6a374d6c4f96691411a2c92a9afa5364d75024b7f";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ humanoid-planner-2d gridmap-2d footstep-planner humanoid-localization ];
   nativeBuildInputs = [ catkin ];
 

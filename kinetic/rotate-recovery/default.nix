@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/kinetic/rotate_recovery/1.14.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/rotate_recovery/1.14.4-0.tar.gz";
+    name = "1.14.4-0.tar.gz";
     sha256 = "386854705d6d49072b5fab44eb7e21f3a41b6902fb8f90e8736db0311cf21dee";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d cmake-modules pluginlib base-local-planner tf nav-core eigen roscpp ];
   propagatedBuildInputs = [ costmap-2d pluginlib nav-core roscpp eigen tf ];
   nativeBuildInputs = [ catkin ];

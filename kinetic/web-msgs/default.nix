@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.7";
 
   src = fetchurl {
-    url = https://github.com/UNR-RoboticsResearchLab/web_interface-release/archive/release/kinetic/web_msgs/1.0.7-0.tar.gz;
+    url = "https://github.com/UNR-RoboticsResearchLab/web_interface-release/archive/release/kinetic/web_msgs/1.0.7-0.tar.gz";
+    name = "1.0.7-0.tar.gz";
     sha256 = "9e932958cb92146fcacd9467012c242d8f31b834fa4d8e8c69339afd5c167b8c";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

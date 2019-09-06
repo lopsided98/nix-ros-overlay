@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rsm-msgs";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/MarcoStb1993/robot_statemachine-release/archive/release/kinetic/rsm_msgs/1.1.2-1.tar.gz;
-    sha256 = "8f31de2a7171f3a81c247eee7ad350d873827bb67fceee8f609d8e4ca747fc6d";
+    url = "https://github.com/MarcoStb1993/robot_statemachine-release/archive/release/kinetic/rsm_msgs/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "1aafb9e74806761febf38024c26dd9d1b63bb5eebd587164794b156bda81b194";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation roscpp geometry-msgs ];
   propagatedBuildInputs = [ std-msgs roscpp message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

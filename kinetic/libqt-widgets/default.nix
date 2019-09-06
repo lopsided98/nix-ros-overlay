@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/qt_metapackages-release/archive/release/kinetic/libqt_widgets/1.0.1-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/qt_metapackages-release/archive/release/kinetic/libqt_widgets/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "660467789c16ebd927d610c4afddc84a86ec837d35960893fbc410350d741368";
   };
 
+  buildType = "catkin";
   buildInputs = [ qt5.qtbase ];
   propagatedBuildInputs = [ qt5.qtbase ];
   nativeBuildInputs = [ catkin ];

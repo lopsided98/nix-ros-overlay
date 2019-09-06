@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_driver/1.0.4-1.tar.gz;
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_driver/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "94fd8404a52b48030c960461863968b9a3466122a3f18678e3ac951beeca8869";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch actionlib-msgs geometry-msgs sensor-msgs rospy rospy-message-converter rosgraph-msgs move-base-msgs nav-msgs mir-actions visualization-msgs dynamic-reconfigure std-msgs diagnostic-msgs pythonPackages.websocket_client tf mir-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs geometry-msgs sensor-msgs mir-description rospy rospy-message-converter rosgraph-msgs move-base-msgs nav-msgs mir-actions robot-state-publisher dynamic-reconfigure std-msgs diagnostic-msgs pythonPackages.websocket_client tf visualization-msgs mir-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs geometry-msgs sensor-msgs mir-description mir-actions rosgraph-msgs rospy-message-converter std-msgs nav-msgs move-base-msgs robot-state-publisher dynamic-reconfigure rospy diagnostic-msgs pythonPackages.websocket_client tf visualization-msgs mir-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

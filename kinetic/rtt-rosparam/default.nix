@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_rosparam/2.9.2-1.tar.gz;
+    url = "https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_rosparam/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
     sha256 = "3c9d8518696741768458d10b479a496023d4850370800fcdaf181e1bed9fd4cf";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp rtt-ros eigen ];
   propagatedBuildInputs = [ roscpp rtt-ros eigen ];
   nativeBuildInputs = [ catkin ];

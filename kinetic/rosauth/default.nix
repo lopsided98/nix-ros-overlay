@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.7";
 
   src = fetchurl {
-    url = https://github.com/gt-rail-release/rosauth-release/archive/release/kinetic/rosauth/0.1.7-0.tar.gz;
+    url = "https://github.com/gt-rail-release/rosauth-release/archive/release/kinetic/rosauth/0.1.7-0.tar.gz";
+    name = "0.1.7-0.tar.gz";
     sha256 = "b77263b92aed05aef959a32cefc664967c7d1ac842a92d9ac84820126e41042f";
   };
 
+  buildType = "catkin";
   buildInputs = [ openssl rostest message-generation roscpp ];
   propagatedBuildInputs = [ roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];

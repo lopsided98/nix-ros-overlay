@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.10";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/common_tutorials-release/archive/release/kinetic/pluginlib_tutorials/0.1.10-0.tar.gz;
+    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/kinetic/pluginlib_tutorials/0.1.10-0.tar.gz";
+    name = "0.1.10-0.tar.gz";
     sha256 = "4b968e1a43bc77ad1dc9de30f540f594ad015e46badb49cc66782d9d457c4891";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp pluginlib ];
   propagatedBuildInputs = [ roscpp pluginlib ];
   nativeBuildInputs = [ catkin ];

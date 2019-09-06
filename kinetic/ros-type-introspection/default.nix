@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.3.3-r1";
 
   src = fetchurl {
-    url = https://github.com/facontidavide/ros_type_introspection-release/archive/release/kinetic/ros_type_introspection/1.3.3-1.tar.gz;
+    url = "https://github.com/facontidavide/ros_type_introspection-release/archive/release/kinetic/ros_type_introspection/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
     sha256 = "b63e3ec1785ec13a785f73f4a9ad3e843dc1692e1b515210f044b08ee73df703";
   };
 
+  buildType = "catkin";
   buildInputs = [ abseil-cpp roscpp rostime roscpp-serialization ];
-  propagatedBuildInputs = [ abseil-cpp roscpp rostime roscpp-serialization ];
+  propagatedBuildInputs = [ abseil-cpp rostime roscpp roscpp-serialization ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/diagnostic_msgs/1.12.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/diagnostic_msgs/1.12.7-0.tar.gz";
+    name = "1.12.7-0.tar.gz";
     sha256 = "dfcf6abd7af45818ff4f759e8c2021cea091e836a94272faeb3172abb77df21a";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

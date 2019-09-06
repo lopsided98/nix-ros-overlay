@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.14.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/kinetic/costmap_2d/1.14.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/costmap_2d/1.14.4-0.tar.gz";
+    name = "1.14.4-0.tar.gz";
     sha256 = "4e594e53eb985a25f1a05a6671eb52d535d06e7bc6c6d72c6009f579a7ea8544";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib cmake-modules sensor-msgs message-filters roscpp voxel-grid message-generation nav-msgs laser-geometry visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
   checkInputs = [ rostest rosbag rosunit map-server ];
-  propagatedBuildInputs = [ rosconsole pluginlib sensor-msgs message-filters roscpp voxel-grid nav-msgs laser-geometry message-runtime visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
+  propagatedBuildInputs = [ rosconsole pluginlib sensor-msgs message-filters roscpp pcl-ros nav-msgs laser-geometry message-runtime voxel-grid dynamic-reconfigure std-msgs visualization-msgs tf pcl-conversions geometry-msgs map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

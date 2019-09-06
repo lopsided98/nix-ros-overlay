@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/simulators/1.3.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/simulators/1.3.2-0.tar.gz";
+    name = "1.3.2-0.tar.gz";
     sha256 = "bf590a253108bd3d92ebc59ce7c8036062904ae7e455cc5baff471558dd35e26";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ gazebo-ros-pkgs robot rqt-robot-plugins stage-ros rqt-common-plugins ];
   nativeBuildInputs = [ catkin ];
 

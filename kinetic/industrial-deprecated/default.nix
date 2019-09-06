@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_deprecated/0.7.0-0.tar.gz;
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_deprecated/0.7.0-0.tar.gz";
+    name = "0.7.0-0.tar.gz";
     sha256 = "414aec3215c25f2095b1f30877b7d6268331162456afb5e67396691c4673ae9a";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

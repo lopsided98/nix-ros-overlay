@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.5";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur3_e_moveit_config/1.2.5-0.tar.gz;
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur3_e_moveit_config/1.2.5-0.tar.gz";
+    name = "1.2.5-0.tar.gz";
     sha256 = "95e45f3e3675d648f200a9015b46c4ee1446d8ef832d23705795bef9f0eb96f2";
   };
 
+  buildType = "catkin";
   buildInputs = [ ur-description ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization ur-description moveit-simple-controller-manager robot-state-publisher joint-state-publisher xacro moveit-planners-ompl ];

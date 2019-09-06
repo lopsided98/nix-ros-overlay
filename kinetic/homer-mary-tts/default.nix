@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.18-r1";
 
   src = fetchurl {
-    url = https://gitlab.uni-koblenz.de/robbie/homer_robot_face-release/repository/archive.tar.gz?ref=release/kinetic/homer_mary_tts/1.0.18-1;
+    url = "https://gitlab.uni-koblenz.de/robbie/homer_robot_face-release/repository/archive.tar.gz?ref=release/kinetic/homer_mary_tts/1.0.18-1";
+    name = "archive.tar.gz";
     sha256 = "25077804fdec7a71ac9677c2952107c514ae41d2994e568d08578e36a90d8ed8";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy pythonPackages.catkin-pkg roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy roscpp pythonPackages.pyaudio dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

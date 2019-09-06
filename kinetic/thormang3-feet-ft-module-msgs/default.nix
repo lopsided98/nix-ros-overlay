@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-msgs-release/archive/release/kinetic/thormang3_feet_ft_module_msgs/0.3.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-msgs-release/archive/release/kinetic/thormang3_feet_ft_module_msgs/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "82f99f33b68d526f54fd3ce0947101974e81ae4f1059007100d368e992c1bc07";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

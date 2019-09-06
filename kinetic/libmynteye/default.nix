@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/harjeb/libmynteye-release/archive/release/kinetic/libmynteye/0.1.3-0.tar.gz;
+    url = "https://github.com/harjeb/libmynteye-release/archive/release/kinetic/libmynteye/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "d80fe8ef6765408447ec457fc22e3c84117b639eb592054b7d1ef7c95f796655";
   };
 
+  buildType = "cmake";
   buildInputs = [ opencv3 ];
   nativeBuildInputs = [ catkin ];
 

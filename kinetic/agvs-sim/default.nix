@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/agvs_sim-release/archive/release/kinetic/agvs_sim/0.1.3-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/agvs_sim-release/archive/release/kinetic/agvs_sim/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "a189047dc877a521a3201c2b70ec3e5db2aa6d6bba1b8896a0b5aeb8922ff360";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ agvs-sim-bringup agvs-gazebo agvs-control agvs-robot-control ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-Common-release/archive/release/kinetic/op3_description/0.1.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-Common-release/archive/release/kinetic/op3_description/0.1.1-0.tar.gz";
+    name = "0.1.1-0.tar.gz";
     sha256 = "9b80d00afd5f15797cbbdf640ff6a4ad6db3dff1845c1c0614a55dd24af42134";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rviz joint-state-publisher robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_app_platform-release/archive/release/kinetic/rocon_app_manager/0.9.1-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_app_platform-release/archive/release/kinetic/rocon_app_manager/0.9.1-0.tar.gz";
+    name = "0.9.1-0.tar.gz";
     sha256 = "0a98c3ac6b0c3cc39536fe4249ede6a346966de74ae45468f1289edded4ada22";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest pythonPackages.catkin-pkg roslint ];
   propagatedBuildInputs = [ rocon-console rocon-apps rocon-app-utilities rospy capabilities rocon-gateway-utils rocon-master-info rocon-hub roslib rocon-python-utils rocon-uri rosmaster rocon-interactions rocon-python-comms gateway-msgs std-msgs rocon-app-manager-msgs rocon-gateway rocon-std-msgs ];
   nativeBuildInputs = [ catkin ];

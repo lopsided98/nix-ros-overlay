@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.13";
 
   src = fetchurl {
-    url = https://github.com/AndyZe/lyap_control-release/archive/release/kinetic/lyap_control/0.0.13-0.tar.gz;
+    url = "https://github.com/AndyZe/lyap_control-release/archive/release/kinetic/lyap_control/0.0.13-0.tar.gz";
+    name = "0.0.13-0.tar.gz";
     sha256 = "25df3a7baddd2d233d210a24749f2cb69b94f51c6078d37fafda82e933c32aaa";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation roscpp rospy ];
   propagatedBuildInputs = [ std-msgs roscpp message-runtime rospy ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.1";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_interactions-release/archive/release/kinetic/turtlebot_interactive_markers/2.3.1-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_interactions-release/archive/release/kinetic/turtlebot_interactive_markers/2.3.1-0.tar.gz";
+    name = "2.3.1-0.tar.gz";
     sha256 = "f17cda78e7b855b25d058aab4cf8a6afff1daf9fd9b3dbe5ab61951bedcabfc6";
   };
 
+  buildType = "catkin";
   buildInputs = [ visualization-msgs interactive-markers roscpp ];
   propagatedBuildInputs = [ turtlebot-bringup visualization-msgs interactive-markers roscpp ];
   nativeBuildInputs = [ catkin ];

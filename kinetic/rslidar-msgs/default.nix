@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/CPFL/robosense-release/archive/release/kinetic/rslidar_msgs/1.0.2-0.tar.gz;
+    url = "https://github.com/CPFL/robosense-release/archive/release/kinetic/rslidar_msgs/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "5d281f05f339daa847be5a486a68aa98cf4be9b49a12d1807101cb14cc45be1e";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

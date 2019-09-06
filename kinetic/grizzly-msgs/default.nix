@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/grizzly-release/archive/release/kinetic/grizzly_msgs/0.4.2-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/grizzly-release/archive/release/kinetic/grizzly_msgs/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "a924bd27ee86ebecbc540a12e8b0afb25d44728dc02571b9ee634daa62058172";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

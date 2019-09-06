@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.4-r1";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_common/1.12.4-1.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/kinetic/pr2_common/1.12.4-1.tar.gz";
+    name = "1.12.4-1.tar.gz";
     sha256 = "9225508e8db9e13f977eddd37b41fc776408298b5c04c18037a8621f55efa50a";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pr2-machine pr2-dashboard-aggregator pr2-msgs pr2-description ];
   nativeBuildInputs = [ catkin ];
 

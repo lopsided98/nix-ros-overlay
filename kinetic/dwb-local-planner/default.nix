@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.2.5";
 
   src = fetchurl {
-    url = https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/dwb_local_planner/0.2.5-0.tar.gz;
+    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/dwb_local_planner/0.2.5-0.tar.gz";
+    name = "0.2.5-0.tar.gz";
     sha256 = "8316981fdc61e3713156c8f83ca333a5e5d662aa6859f909bc3c7286584eacb9";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib nav-core2 sensor-msgs roscpp nav-2d-utils nav-msgs dwb-msgs visualization-msgs tf nav-2d-msgs geometry-msgs ];
   checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ pluginlib nav-core2 sensor-msgs roscpp nav-2d-utils nav-msgs dwb-msgs visualization-msgs tf nav-2d-msgs geometry-msgs ];
+  propagatedBuildInputs = [ pluginlib tf sensor-msgs nav-core2 nav-2d-utils nav-msgs dwb-msgs visualization-msgs roscpp nav-2d-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

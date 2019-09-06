@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.1";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_create-release/archive/release/kinetic/create_node/2.3.1-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_create-release/archive/release/kinetic/create_node/2.3.1-0.tar.gz";
+    name = "2.3.1-0.tar.gz";
     sha256 = "0d07fac75280d2c2db2845e8a475a6ecd4cfc19959e578c5c8d20db8e6928e59";
   };
 
+  buildType = "catkin";
   buildInputs = [ create-driver nav-msgs message-generation rospy diagnostic-msgs dynamic-reconfigure tf geometry-msgs ];
   propagatedBuildInputs = [ create-driver python-orocos-kdl nav-msgs message-runtime rospy diagnostic-msgs dynamic-reconfigure tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

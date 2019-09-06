@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.1";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/summit_xl_sim-release/archive/release/kinetic/summit_xl_control/1.1.1-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/summit_xl_sim-release/archive/release/kinetic/summit_xl_control/1.1.1-0.tar.gz";
+    name = "1.1.1-0.tar.gz";
     sha256 = "c397fc2bf83aa6590374475bc27165b34c01537f5331c39a5e5cd3929888b140";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ ros-control summit-xl-pad robot-state-publisher ros-controllers ];
   nativeBuildInputs = [ catkin ];
 

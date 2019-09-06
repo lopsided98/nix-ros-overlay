@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_gazebo/1.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_gazebo/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "7cbb7c8fa92d4145fb3af1aa2ab1abcd37e12f9c5308704ec67c5b1c78d4bd49";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros sensor-msgs roscpp nav-msgs std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ gazebo-ros gazeboSimulator.gazebo sensor-msgs roscpp nav-msgs std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

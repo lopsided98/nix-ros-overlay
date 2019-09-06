@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/swri_console-release/archive/release/kinetic/swri_console/1.1.0-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/swri_console-release/archive/release/kinetic/swri_console/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "bd8e294a9004e09b1eac382037172bc97ff33d703c06f1a5c83c428f26b6c4e9";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosbag-storage boost qt5.qtbase rosgraph-msgs roscpp ];
   propagatedBuildInputs = [ rosbag-storage boost qt5.qtbase rosgraph-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

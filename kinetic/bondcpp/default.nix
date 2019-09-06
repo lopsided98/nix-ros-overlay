@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/bond_core-release/archive/release/kinetic/bondcpp/1.8.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/bond_core-release/archive/release/kinetic/bondcpp/1.8.3-0.tar.gz";
+    name = "1.8.3-0.tar.gz";
     sha256 = "169af3f64acf62ecf5dfbfe9e3d26bdf8f5ad36e921ff5a3821c0bb8bd848a9a";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules boost smclib roscpp utillinux bond ];
   propagatedBuildInputs = [ boost smclib roscpp utillinux bond ];
   nativeBuildInputs = [ catkin ];

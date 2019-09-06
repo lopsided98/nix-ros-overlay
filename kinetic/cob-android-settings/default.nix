@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_android-release/archive/release/kinetic/cob_android_settings/0.1.6-1.tar.gz;
+    url = "https://github.com/ipa320/cob_android-release/archive/release/kinetic/cob_android_settings/0.1.6-1.tar.gz";
+    name = "0.1.6-1.tar.gz";
     sha256 = "05b454c4b123eda69869c9d5c88f88c4915b5dc8fc0886c315f878e5bafe8a3e";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

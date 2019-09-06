@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/gavanderhoorn/industrial_robot_status_controller-release/archive/release/kinetic/industrial_robot_status_interface/0.1.2-1.tar.gz;
+    url = "https://github.com/gavanderhoorn/industrial_robot_status_controller-release/archive/release/kinetic/industrial_robot_status_interface/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
     sha256 = "cfdae0e1db1b9e6390445514bdae4ce1bc559abba85d65a4f5d989b785c4d842";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface ];
   propagatedBuildInputs = [ hardware-interface ];
   nativeBuildInputs = [ catkin ];

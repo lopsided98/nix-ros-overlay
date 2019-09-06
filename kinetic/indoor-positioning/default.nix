@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/metratec/indoor_positioning-release/archive/release/kinetic/indoor_positioning/1.1.0-0.tar.gz;
+    url = "https://github.com/metratec/indoor_positioning-release/archive/release/kinetic/indoor_positioning/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "cc8fde923b77fbd3e67509827ddd6f2c0324af1b85d9f8ce116ae8ac802cc419";
   };
 
+  buildType = "catkin";
   buildInputs = [ pythonPackages.numpy pythonPackages.pyserial pythonPackages.scipy pythonPackages.pyyaml message-generation rospy std-msgs roscpp ];
   propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.pyserial pythonPackages.scipy pythonPackages.pyyaml message-runtime rospy std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

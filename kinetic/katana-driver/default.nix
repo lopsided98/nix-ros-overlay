@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_driver/1.1.2-0.tar.gz;
+    url = "https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_driver/1.1.2-0.tar.gz";
+    name = "1.1.2-0.tar.gz";
     sha256 = "3d5d56cedaa4edeb93f670ce1c9731d86f7d289ffcccac3bc04dcac9ab7975c9";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ katana-gazebo-plugins katana-msgs katana-arm-gazebo katana-tutorials katana-description kni katana-teleop katana-moveit-ikfast-plugin katana ];
   nativeBuildInputs = [ catkin ];
 

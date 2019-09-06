@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/raspberrypigibbon/raspigibbon_ros-release/archive/release/kinetic/raspigibbon_description/0.2.1-0.tar.gz;
+    url = "https://github.com/raspberrypigibbon/raspigibbon_ros-release/archive/release/kinetic/raspigibbon_description/0.2.1-0.tar.gz";
+    name = "0.2.1-0.tar.gz";
     sha256 = "d0423d8dee8204b58b4f489be31397afe876f6d197381f413fa76c2ef2b2b181";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs urdf rospy std-msgs xacro ];
   propagatedBuildInputs = [ sensor-msgs urdf rospy std-msgs xacro ];
   nativeBuildInputs = [ catkin ];

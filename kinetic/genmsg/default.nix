@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/genmsg-release/archive/release/kinetic/genmsg/0.5.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/genmsg-release/archive/release/kinetic/genmsg/0.5.11-0.tar.gz";
+    name = "0.5.11-0.tar.gz";
     sha256 = "24dbb7dc91d8a7c56f0c65129d80b2f05d3847a39ced744e73ccc295897afa42";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ catkin ];
 

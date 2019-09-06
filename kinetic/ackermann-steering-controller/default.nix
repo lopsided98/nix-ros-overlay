@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/ackermann_steering_controller/0.13.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/ackermann_steering_controller/0.13.5-0.tar.gz";
+    name = "0.13.5-0.tar.gz";
     sha256 = "2fcad6fb4a913c7ffcd316f9fc665c3d1e00838b892dad0dce0847e5e8c19dde";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface pluginlib boost diff-drive-controller realtime-tools roscpp nav-msgs urdf controller-interface tf ];
   checkInputs = [ gazebo-ros controller-manager std-srvs rostest std-msgs rosunit xacro geometry-msgs ];
   propagatedBuildInputs = [ hardware-interface pluginlib boost diff-drive-controller realtime-tools roscpp nav-msgs urdf controller-interface tf ];

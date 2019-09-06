@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz_msgs/1.2.3-1.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz_msgs/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
     sha256 = "44a4bee6d1dc7242f7fc5fcfbf4508de3c5f80f1008e4df05243a2a33791252c";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs rosbag-migration-rule message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

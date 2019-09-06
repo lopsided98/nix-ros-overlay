@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.1-r4";
 
   src = fetchurl {
-    url = https://github.com/OUXT-Polaris/cog_publisher-release/archive/release/kinetic/cog_publisher/1.0.1-4.tar.gz;
+    url = "https://github.com/OUXT-Polaris/cog_publisher-release/archive/release/kinetic/cog_publisher/1.0.1-4.tar.gz";
+    name = "1.0.1-4.tar.gz";
     sha256 = "15304f3b223acf45cbc5c8c5f5aaf16343ec71d15c5457134d2d1abe46dfa781";
   };
 
+  buildType = "catkin";
   buildInputs = [ kdl-conversions kdl-parser tf2-geometry-msgs sensor-msgs roscpp tf2-ros tf2 urdf std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ kdl-conversions kdl-parser tf2-geometry-msgs sensor-msgs roscpp tf2-ros tf2 urdf std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

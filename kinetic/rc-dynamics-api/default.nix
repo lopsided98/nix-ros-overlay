@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.0-r1";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_dynamics_api-release/archive/release/kinetic/rc_dynamics_api/0.8.0-1.tar.gz;
+    url = "https://github.com/roboception-gbp/rc_dynamics_api-release/archive/release/kinetic/rc_dynamics_api/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
     sha256 = "69f8eadcfbe28408bf25553c29c0d66ea230708536dfe1afabc39eb883de7d42";
   };
 
+  buildType = "cmake";
   buildInputs = [ protobuf curl ];
   propagatedBuildInputs = [ protobuf catkin curl ];
   nativeBuildInputs = [ cmake ];

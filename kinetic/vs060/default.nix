@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.3";
 
   src = fetchurl {
-    url = https://github.com/start-jsk/denso-release/archive/release/kinetic/vs060/2.0.3-0.tar.gz;
+    url = "https://github.com/start-jsk/denso-release/archive/release/kinetic/vs060/2.0.3-0.tar.gz";
+    name = "2.0.3-0.tar.gz";
     sha256 = "561344bcd209e4de9f51e2ade5eb61f661dfe0af43b472f2729ccda85fcdf6ef";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning roscpp moveit-commander roslang ];
   propagatedBuildInputs = [ moveit-ros-planning roscpp moveit-commander roslang ];
   nativeBuildInputs = [ catkin ];

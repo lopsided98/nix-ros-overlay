@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.7.0";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_msgs/0.7.0-0.tar.gz;
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_msgs/0.7.0-0.tar.gz";
+    name = "0.7.0-0.tar.gz";
     sha256 = "fe5ef1f0258098cba4d21bd0ca50a0b3e8047ace0c0903efe6cd2b8559647a9f";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs genmsg message-generation trajectory-msgs ];
-  propagatedBuildInputs = [ std-msgs genmsg trajectory-msgs message-runtime ];
+  propagatedBuildInputs = [ std-msgs trajectory-msgs genmsg message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/multi_interface_roam/1.0.15-0.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/multi_interface_roam/1.0.15-0.tar.gz";
+    name = "1.0.15-0.tar.gz";
     sha256 = "f7fb1c54b1c27de78c96197d5e9d1bc2af15ba8951225e6bec4c2175f926c8d3";
   };
 
+  buildType = "catkin";
   buildInputs = [ ieee80211-channels network-monitor-udp rospy asmach dynamic-reconfigure std-msgs diagnostic-msgs pr2-msgs ];
   propagatedBuildInputs = [ ieee80211-channels network-monitor-udp rospy asmach dynamic-reconfigure std-msgs diagnostic-msgs pr2-msgs ];
   nativeBuildInputs = [ catkin ];

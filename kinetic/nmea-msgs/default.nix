@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/nmea_msgs-release/archive/release/kinetic/nmea_msgs/1.1.0-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/nmea_msgs-release/archive/release/kinetic/nmea_msgs/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "c4309447901276e86de75e5fb216fc2d9e430fb81df83fed51ec14f42e5ba862";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

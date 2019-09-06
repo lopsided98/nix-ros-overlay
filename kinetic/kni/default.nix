@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/kni/1.1.2-0.tar.gz;
+    url = "https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/kni/1.1.2-0.tar.gz";
+    name = "1.1.2-0.tar.gz";
     sha256 = "728d84330cb0fa9a45a0b62a2aacb3903bbc26bff35cd0baf0e8c3b66bc77a01";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost ];
   propagatedBuildInputs = [ boost ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.23";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_rotate/1.12.23-0.tar.gz;
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/image_rotate/1.12.23-0.tar.gz";
+    name = "1.12.23-0.tar.gz";
     sha256 = "555f20936b6389f00c612a52c9b1b02e437b57694ed3413d26320029ea191fa3";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules tf2-geometry-msgs image-transport cv-bridge tf2-ros tf2 nodelet dynamic-reconfigure roscpp geometry-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ tf2-geometry-msgs image-transport cv-bridge roscpp tf2-ros tf2 dynamic-reconfigure nodelet ];

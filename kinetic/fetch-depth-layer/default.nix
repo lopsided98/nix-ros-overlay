@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.15";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/kinetic/fetch_depth_layer/0.7.15-0.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/kinetic/fetch_depth_layer/0.7.15-0.tar.gz";
+    name = "0.7.15-0.tar.gz";
     sha256 = "3e7fb48e76b64d166572bd6458aa4b38a88c7421e26e6ea245502b216b050b4c";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d opencv-candidate pluginlib image-transport sensor-msgs cv-bridge nav-msgs roscpp ];
   propagatedBuildInputs = [ costmap-2d opencv-candidate pluginlib image-transport sensor-msgs cv-bridge nav-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

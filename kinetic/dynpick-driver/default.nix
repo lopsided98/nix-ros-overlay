@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/tork-a/dynpick_driver-release/archive/release/kinetic/dynpick_driver/0.2.0-0.tar.gz;
+    url = "https://github.com/tork-a/dynpick_driver-release/archive/release/kinetic/dynpick_driver/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "3a78a3fd5ab15c800d3f2fddac1e6e8d50c150d8ffb775d656947e7f2cf4f5b4";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs pythonPackages.catkin-pkg roscpp geometry-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ std-srvs tf rviz robot-state-publisher roscpp xacro geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs roscpp rviz robot-state-publisher tf xacro geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

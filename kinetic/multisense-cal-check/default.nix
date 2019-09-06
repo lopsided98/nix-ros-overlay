@@ -8,10 +8,12 @@ buildRosPackage {
   version = "4.0.0";
 
   src = fetchurl {
-    url = https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense_cal_check/4.0.0-0.tar.gz;
+    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense_cal_check/4.0.0-0.tar.gz";
+    name = "4.0.0-0.tar.gz";
     sha256 = "11831d5cdc2747573293a0125b43a8ced218975c56ef1e8506464816dc061ef7";
   };
 
+  buildType = "catkin";
   buildInputs = [ multisense-ros ];
   propagatedBuildInputs = [ multisense-ros ];
   nativeBuildInputs = [ catkin ];

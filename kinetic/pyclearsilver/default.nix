@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.7";
 
   src = fetchurl {
-    url = https://github.com/UNR-RoboticsResearchLab/web_interface-release/archive/release/kinetic/pyclearsilver/1.0.7-0.tar.gz;
+    url = "https://github.com/UNR-RoboticsResearchLab/web_interface-release/archive/release/kinetic/pyclearsilver/1.0.7-0.tar.gz";
+    name = "1.0.7-0.tar.gz";
     sha256 = "875e4c83d801c10d9fe1ec2e2df07b04a4792854e4aa50fadbdf03e7ec4fcb89";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

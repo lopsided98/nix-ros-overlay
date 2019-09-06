@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/kinetic/rdl_benchmark/1.1.0-0;
+    url = "https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/kinetic/rdl_benchmark/1.1.0-0";
+    name = "archive.tar.gz";
     sha256 = "2fd90df67337deadde23ca02ecf0f683c26c8547fc268d5b9794d784a34c37b4";
   };
 
+  buildType = "catkin";
   buildInputs = [ rdl-cmake rdl-dynamics rdl-urdfreader ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ rdl-cmake rdl-dynamics rdl-urdfreader ];

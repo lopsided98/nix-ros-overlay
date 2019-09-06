@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/HebiRobotics/hebiros-release/archive/release/kinetic/hebiros_description/0.0.4-1.tar.gz;
+    url = "https://github.com/HebiRobotics/hebiros-release/archive/release/kinetic/hebiros_description/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
     sha256 = "e68ce4376b95b40da84bcc1618d8f09635c2988ace6aedf6d50724b5db06086d";
   };
 
+  buildType = "catkin";
   buildInputs = [ urdf transmission-interface ];
   propagatedBuildInputs = [ urdf transmission-interface ];
   nativeBuildInputs = [ catkin ];

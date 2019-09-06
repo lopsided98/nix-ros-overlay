@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0-r2";
 
   src = fetchurl {
-    url = https://github.com/danielsnider/follow_waypoints-release/archive/release/kinetic/follow_waypoints/0.3.0-2.tar.gz;
+    url = "https://github.com/danielsnider/follow_waypoints-release/archive/release/kinetic/follow_waypoints/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
     sha256 = "3a70c85f6a6c6c0e35348b7372e496303e94a8cedaf87da5395077c3add3a329";
   };
 
+  buildType = "catkin";
   buildInputs = [ move-base-msgs actionlib rospy std-msgs smach geometry-msgs ];
   propagatedBuildInputs = [ move-base-msgs actionlib rospy std-msgs smach geometry-msgs ];
   nativeBuildInputs = [ catkin ];

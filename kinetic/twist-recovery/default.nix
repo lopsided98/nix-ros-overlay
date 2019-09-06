@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/twist_recovery/0.2.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/twist_recovery/0.2.1-0.tar.gz";
+    name = "0.2.1-0.tar.gz";
     sha256 = "e1c8aeafc110eacfe1b0c362a7d7ac43b4ffe40761695cd8c353467c6d5e3b7f";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d pluginlib base-local-planner nav-core geometry-msgs ];
   propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core geometry-msgs ];
   nativeBuildInputs = [ catkin ];

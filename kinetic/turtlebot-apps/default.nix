@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.7";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_apps/2.3.7-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_apps/2.3.7-0.tar.gz";
+    name = "2.3.7-0.tar.gz";
     sha256 = "e6f717d30a6035fce7aec2c9c4fa0713f0205d0b0a7ef21c834f4a658f5a79c9";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ turtlebot-actions turtlebot-rapps turtlebot-follower turtlebot-calibration turtlebot-navigation ];
   nativeBuildInputs = [ catkin ];
 

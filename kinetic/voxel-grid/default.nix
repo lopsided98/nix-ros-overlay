@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/kinetic/voxel_grid/1.14.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/voxel_grid/1.14.4-0.tar.gz";
+    name = "1.14.4-0.tar.gz";
     sha256 = "990f24132e8aff1537a142f57a762c4888778fb19068ac94ece15acbe5e1747c";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ roscpp ];

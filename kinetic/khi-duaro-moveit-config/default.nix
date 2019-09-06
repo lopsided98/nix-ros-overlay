@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_duaro_moveit_config/1.1.2-1.tar.gz;
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_duaro_moveit_config/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
     sha256 = "49163da73b919add96090f4f1f290dbd8b941a335ea169937312b75863ec3bbe";
   };
 
+  buildType = "catkin";
   buildInputs = [ khi-duaro-description ];
   checkInputs = [ rostest roslaunch ];
   propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-kinematics moveit-simple-controller-manager rviz robot-state-publisher tf joint-state-publisher xacro khi-duaro-description moveit-planners-ompl ];

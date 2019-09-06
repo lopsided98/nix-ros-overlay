@@ -8,12 +8,14 @@ buildRosPackage {
   version = "2.3.7";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_actions/2.3.7-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_actions/2.3.7-0.tar.gz";
+    name = "2.3.7-0.tar.gz";
     sha256 = "21c14463f4401f75e2bf220cac6211a6de31808dc0d235cfbf07995ea42b951f";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules actionlib-msgs image-transport cv-bridge roscpp image-geometry message-generation actionlib tf geometry-msgs eigen ];
-  propagatedBuildInputs = [ turtlebot-bringup actionlib-msgs image-transport cv-bridge roscpp image-geometry message-runtime actionlib tf geometry-msgs eigen ];
+  propagatedBuildInputs = [ turtlebot-bringup actionlib-msgs tf image-transport cv-bridge image-geometry message-runtime actionlib roscpp geometry-msgs eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

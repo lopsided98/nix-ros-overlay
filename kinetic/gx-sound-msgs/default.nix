@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2";
 
   src = fetchurl {
-    url = https://github.com/groove-x/gx_sound-release/archive/release/kinetic/gx_sound_msgs/0.2.2-0.tar.gz;
+    url = "https://github.com/groove-x/gx_sound-release/archive/release/kinetic/gx_sound_msgs/0.2.2-0.tar.gz";
+    name = "0.2.2-0.tar.gz";
     sha256 = "834fc3c54921a462d9a0be0357dd5bac2de11b3b6583b46cd89cc1109c07242e";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation actionlib-msgs ];
   propagatedBuildInputs = [ actionlib-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/kobuki_core-release/archive/release/kinetic/kobuki_driver/0.7.8-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/kinetic/kobuki_driver/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
     sha256 = "7376a92a141b25ec96cd9080918057e5d2d57f1d612674ff200e98f0aa0a7116";
   };
 
+  buildType = "catkin";
   buildInputs = [ ecl-converters ecl-sigslots ecl-command-line ecl-mobile-robot ecl-geometry ecl-time ecl-build ecl-devices ];
   propagatedBuildInputs = [ ecl-converters ecl-sigslots ecl-command-line ecl-mobile-robot ecl-geometry ecl-time ecl-devices ];
   nativeBuildInputs = [ catkin ];

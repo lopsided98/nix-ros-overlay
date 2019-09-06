@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/octomap-release/archive/release/kinetic/dynamic_edt_3d/1.8.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/kinetic/dynamic_edt_3d/1.8.1-0.tar.gz";
+    name = "1.8.1-0.tar.gz";
     sha256 = "11050cd476d6f3f1ca82e65bbc63caf0565ec6baf633eda978a170930f038a3e";
   };
 
+  buildType = "cmake";
   buildInputs = [ octomap ];
   propagatedBuildInputs = [ catkin octomap ];
   nativeBuildInputs = [ cmake ];

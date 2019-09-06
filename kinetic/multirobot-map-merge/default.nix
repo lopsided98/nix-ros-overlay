@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.1";
 
   src = fetchurl {
-    url = https://github.com/hrnr/m-explore-release/archive/release/kinetic/multirobot_map_merge/2.1.1-0.tar.gz;
+    url = "https://github.com/hrnr/m-explore-release/archive/release/kinetic/multirobot_map_merge/2.1.1-0.tar.gz";
+    name = "2.1.1-0.tar.gz";
     sha256 = "df9d13dc9aeb42feb2562689ce1fc9da1e99c3ace61d92fbe2be10d914bd6bda";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2-geometry-msgs nav-msgs roscpp opencv3 geometry-msgs map-msgs ];
   checkInputs = [ roslaunch rosunit ];
   propagatedBuildInputs = [ tf2-geometry-msgs nav-msgs roscpp opencv3 geometry-msgs map-msgs ];

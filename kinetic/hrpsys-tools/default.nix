@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.2";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/hrpsys_tools/1.4.2-0.tar.gz;
+    url = "https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/hrpsys_tools/1.4.2-0.tar.gz";
+    name = "1.4.2-0.tar.gz";
     sha256 = "b2732c77bfafcf29c26e9a2611de2c7af9ae1b845b9877be9645a1d6055d1327";
   };
 
+  buildType = "catkin";
   buildInputs = [ hrpsys rostest ];
   propagatedBuildInputs = [ hrpsys openrtm-tools ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/rosjava-release/rosjava_messages-release/archive/release/kinetic/rosjava_messages/0.3.0-0.tar.gz;
+    url = "https://github.com/rosjava-release/rosjava_messages-release/archive/release/kinetic/rosjava_messages/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "aa5ca5d61770bf5b1853c10efc5780e74ec0ba19f8d18ba739f707eb7e84a10c";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2-msgs actionlib-msgs ar-track-alvar-msgs rosgraph-msgs rocon-service-pair-msgs rocon-tutorial-msgs world-canvas-msgs scheduler-msgs rocon-device-msgs diagnostic-msgs geometry-msgs stereo-msgs rosjava-build-tools concert-msgs genjava rosjava-test-msgs concert-service-msgs std-srvs trajectory-msgs gateway-msgs yocs-msgs move-base-msgs nav-msgs std-msgs roscpp visualization-msgs shape-msgs sensor-msgs rocon-app-manager-msgs uuid-msgs rocon-interaction-msgs rocon-std-msgs ];
   propagatedBuildInputs = [ rosjava-build-tools genjava ];
   nativeBuildInputs = [ catkin ];

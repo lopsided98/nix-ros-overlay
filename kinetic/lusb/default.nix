@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/lusb-release/archive/release/kinetic/lusb/1.1.0-0.tar.gz;
+    url = "https://github.com/DataspeedInc-release/lusb-release/archive/release/kinetic/lusb/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "f098ecde7d74c29fbef0ea3630945650bef25cffa66363c0c621056e47a44ff4";
   };
 
+  buildType = "catkin";
   buildInputs = [ libusb1 boost ];
   propagatedBuildInputs = [ boost libusb ];
   nativeBuildInputs = [ catkin ];

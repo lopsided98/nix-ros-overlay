@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.3";
 
   src = fetchurl {
-    url = https://github.com/start-jsk/denso-release/archive/release/kinetic/denso_launch/2.0.3-0.tar.gz;
+    url = "https://github.com/start-jsk/denso-release/archive/release/kinetic/denso_launch/2.0.3-0.tar.gz";
+    name = "2.0.3-0.tar.gz";
     sha256 = "72c861a006b57031039c1ab6e17e8750175d161366ace48daaac53fce2bf39fc";
   };
 
+  buildType = "catkin";
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ denso-ros-control vs060-moveit-config checkerboard-detector control-msgs ];
   nativeBuildInputs = [ catkin ];

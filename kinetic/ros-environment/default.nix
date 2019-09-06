@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_environment-release/archive/release/kinetic/ros_environment/1.0.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_environment-release/archive/release/kinetic/ros_environment/1.0.0-0.tar.gz";
+    name = "1.0.0-0.tar.gz";
     sha256 = "47fd8d7f66078612ad69e6f202834ae0273353a66c552f5cfce1dbe16b4a1390";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

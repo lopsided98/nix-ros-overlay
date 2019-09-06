@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.6";
 
   src = fetchurl {
-    url = https://github.com/tuw-robotics/marker_msgs-release/archive/release/kinetic/marker_msgs/0.0.6-0.tar.gz;
+    url = "https://github.com/tuw-robotics/marker_msgs-release/archive/release/kinetic/marker_msgs/0.0.6-0.tar.gz";
+    name = "0.0.6-0.tar.gz";
     sha256 = "5cc07cbb5fb0fcaa6f27a6d9f57cc7207eacb608d533f4bcdc5220e74995e378";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

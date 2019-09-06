@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.6";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/lauv_gazebo-release/archive/release/kinetic/lauv_gazebo/0.1.6-0.tar.gz;
+    url = "https://github.com/uuvsimulator/lauv_gazebo-release/archive/release/kinetic/lauv_gazebo/0.1.6-0.tar.gz";
+    name = "0.1.6-0.tar.gz";
     sha256 = "dde6059edf49f860a8ece6721ff6635ee996b2b875b60f2301241ee5d0edded3";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rosbag lauv-description uuv-control-utils lauv-control ];
   nativeBuildInputs = [ catkin ];
 

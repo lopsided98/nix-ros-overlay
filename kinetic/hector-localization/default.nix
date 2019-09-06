@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/kinetic/hector_localization/0.3.0-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/kinetic/hector_localization/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "e1f772dd62ec1624172c4485d270fb3d92416c5e75af019b61ed6205166abf92";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ message-to-tf hector-pose-estimation-core hector-pose-estimation ];
   nativeBuildInputs = [ catkin ];
 

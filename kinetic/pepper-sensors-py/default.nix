@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.10";
 
   src = fetchurl {
-    url = https://github.com/ros-naoqi/pepper_robot-release/archive/release/kinetic/pepper_sensors_py/0.1.10-0.tar.gz;
+    url = "https://github.com/ros-naoqi/pepper_robot-release/archive/release/kinetic/pepper_sensors_py/0.1.10-0.tar.gz";
+    name = "0.1.10-0.tar.gz";
     sha256 = "97f2eeb21f132febd2c667003232292fab54ca2877ea246fba7ee7dd384b11fc";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ naoqi-sensors-py rospy ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.0";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_sensor_msgs/0.8.0-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_sensor_msgs/0.8.0-0.tar.gz";
+    name = "0.8.0-0.tar.gz";
     sha256 = "98cc0cc965a9112033fbe3fedbaca427d94c4936570c1b60a29568fe0f12e952";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation geometry-msgs ];
   propagatedBuildInputs = [ message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/robotis_op3_tools-release/archive/release/kinetic/op3_navigation/0.2.2-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/robotis_op3_tools-release/archive/release/kinetic/op3_navigation/0.2.2-0.tar.gz";
+    name = "0.2.2-0.tar.gz";
     sha256 = "94f01f62264441cffe4778a5ac591593ad9aa24774b79e4180941381100f101b";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ octomap-server map-server footstep-planner ];
   nativeBuildInputs = [ catkin ];
 

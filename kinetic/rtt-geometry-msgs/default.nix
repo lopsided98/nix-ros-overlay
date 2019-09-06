@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_geometry_msgs/2.9.2-1.tar.gz;
+    url = "https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_geometry_msgs/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
     sha256 = "eb152cbc356d16771ccca804d0eb5381193bb756f407687a54bbc6567082c240";
   };
 
+  buildType = "catkin";
   buildInputs = [ rtt-roscomm rtt-std-msgs geometry-msgs ];
   propagatedBuildInputs = [ rtt-roscomm rtt-std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/gt-rail-release/robot_pose_publisher-release/archive/release/kinetic/robot_pose_publisher/0.2.4-0.tar.gz;
+    url = "https://github.com/gt-rail-release/robot_pose_publisher-release/archive/release/kinetic/robot_pose_publisher/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "f9d05e9dcd841a192caf488678928ffda8553134d3d7335fc2a3a05ee52b7b9e";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf roscpp geometry-msgs ];
-  propagatedBuildInputs = [ tf roscpp geometry-msgs ];
+  propagatedBuildInputs = [ roscpp tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

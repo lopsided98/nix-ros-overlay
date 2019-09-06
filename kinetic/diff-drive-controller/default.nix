@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/diff_drive_controller/0.13.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/diff_drive_controller/0.13.5-0.tar.gz";
+    name = "0.13.5-0.tar.gz";
     sha256 = "ad89d6037ec24fd9d0b324832cb333a637182b98e49d3b5bca66baa5a74ddf0b";
   };
 
+  buildType = "catkin";
   buildInputs = [ realtime-tools nav-msgs urdf controller-interface dynamic-reconfigure tf ];
   checkInputs = [ controller-manager std-srvs rosgraph-msgs rostest xacro ];
   propagatedBuildInputs = [ realtime-tools nav-msgs urdf controller-interface dynamic-reconfigure tf ];

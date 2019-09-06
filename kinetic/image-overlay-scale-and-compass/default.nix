@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/danielsnider/image_overlay_scale_and_compass-release/archive/release/kinetic/image_overlay_scale_and_compass/0.2.1-0.tar.gz;
+    url = "https://github.com/danielsnider/image_overlay_scale_and_compass-release/archive/release/kinetic/image_overlay_scale_and_compass/0.2.1-0.tar.gz";
+    name = "0.2.1-0.tar.gz";
     sha256 = "6cce50c81ea583c78c9e05846e1323493c382b6e367ffe78fd392c27be6f6d68";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs sensor-msgs cv-bridge rospy ];
   propagatedBuildInputs = [ pythonPackages.numpy click sensor-msgs cv-bridge pythonPackages.opencv3 rospy std-msgs ];
   nativeBuildInputs = [ catkin ];

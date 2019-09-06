@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/rosjava-release/rosjava-release/archive/release/kinetic/rosjava/0.3.0-0.tar.gz;
+    url = "https://github.com/rosjava-release/rosjava-release/archive/release/kinetic/rosjava/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "3a67357648da216378519de67fe4a157c69086f4e2209c5c7813a629da9bfbd4";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ zeroconf-jmdns-suite rosjava-build-tools genjava rosjava-messages rosjava-bootstrap rosjava-test-msgs rosjava-extras rosjava-core ];
   nativeBuildInputs = [ catkin ];
 

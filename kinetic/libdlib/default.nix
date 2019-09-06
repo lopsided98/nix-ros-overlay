@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libdlib/0.6.13-1.tar.gz;
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libdlib/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
     sha256 = "2dce81535a4d27c1c631331d24ac1c5ef433d99e1c2aded2e9e169395d8df4cd";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

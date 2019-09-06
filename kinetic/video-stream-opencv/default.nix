@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.5";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers/video_stream_opencv-release/archive/release/kinetic/video_stream_opencv/1.1.5-0.tar.gz;
+    url = "https://github.com/ros-drivers/video_stream_opencv-release/archive/release/kinetic/video_stream_opencv/1.1.5-0.tar.gz";
+    name = "1.1.5-0.tar.gz";
     sha256 = "76b02cb8f5e67c4a53ce1f55bface4333292e0a2d84e710305c32d632bca7415";
   };
 
+  buildType = "catkin";
   buildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge rospy roscpp ];
   propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge rospy roscpp ];
   nativeBuildInputs = [ catkin ];

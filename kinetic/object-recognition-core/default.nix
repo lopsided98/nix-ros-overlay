@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/object_recognition_core-release/archive/release/kinetic/object_recognition_core/0.6.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/object_recognition_core-release/archive/release/kinetic/object_recognition_core/0.6.7-0.tar.gz";
+    name = "0.6.7-0.tar.gz";
     sha256 = "2a1e83129053e512369073abc6bcd08e39d7d4f7887e921af93cfa59c526ff13";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules boost sensor-msgs curl ecto ecto-image-pipeline ];
   checkInputs = [ visualization-msgs ];
   propagatedBuildInputs = [ couchdb boost sensor-msgs curl ecto ecto-image-pipeline ];

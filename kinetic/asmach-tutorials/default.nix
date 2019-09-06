@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/asmach_tutorials/1.0.15-0.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/asmach_tutorials/1.0.15-0.tar.gz";
+    name = "1.0.15-0.tar.gz";
     sha256 = "6f8d206898a3a4c7acb1efd2e357e3aa10708393bf55780fa47685c2a5d916a4";
   };
 
+  buildType = "catkin";
   buildInputs = [ turtlesim actionlib-msgs smach-ros message-generation asmach actionlib rospy ];
   propagatedBuildInputs = [ turtlesim actionlib-msgs smach-ros actionlib asmach rospy ];
   nativeBuildInputs = [ catkin ];

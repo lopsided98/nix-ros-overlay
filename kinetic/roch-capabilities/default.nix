@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.15";
 
   src = fetchurl {
-    url = https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_capabilities/2.0.15-0.tar.gz;
+    url = "https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_capabilities/2.0.15-0.tar.gz";
+    name = "2.0.15-0.tar.gz";
     sha256 = "75f7da91dbfc6c84412daf4ef6968a905f7f5d6f6345750299723ae8bfbc36b4";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ std-capabilities rocon-apps rocon-app-manager nodelet roch-base ];
   nativeBuildInputs = [ catkin ];
 

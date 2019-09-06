@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.5.5";
 
   src = fetchurl {
-    url = https://github.com/ros-naoqi/naoqi_bridge-release/archive/release/kinetic/naoqi_driver_py/0.5.5-0.tar.gz;
+    url = "https://github.com/ros-naoqi/naoqi_bridge-release/archive/release/kinetic/naoqi_driver_py/0.5.5-0.tar.gz";
+    name = "0.5.5-0.tar.gz";
     sha256 = "b783008967efa45958e1b210bf70c2a3fa4f890ef39ed636a25740bd206988f9";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ std-srvs sensor-msgs naoqi-bridge-msgs nav-msgs actionlib dynamic-reconfigure rospy roslaunch humanoid-nav-msgs geometry-msgs ];
+  propagatedBuildInputs = [ roslaunch std-srvs sensor-msgs naoqi-bridge-msgs nav-msgs actionlib rospy dynamic-reconfigure humanoid-nav-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

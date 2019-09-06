@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.11.9";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry-release/archive/release/kinetic/geometry/1.11.9-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/kinetic/geometry/1.11.9-0.tar.gz";
+    name = "1.11.9-0.tar.gz";
     sha256 = "65d56ee2cd5b9a614b33c97035e304671f910432a1c130be7cfb27911d4e5df5";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ kdl-conversions angles tf-conversions eigen-conversions tf ];
   nativeBuildInputs = [ catkin ];
 

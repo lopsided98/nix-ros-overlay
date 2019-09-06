@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.5";
 
   src = fetchurl {
-    url = https://github.com/ros-aldebaran/romeo_robot-release/archive/release/kinetic/romeo_description/0.1.5-0.tar.gz;
+    url = "https://github.com/ros-aldebaran/romeo_robot-release/archive/release/kinetic/romeo_description/0.1.5-0.tar.gz";
+    name = "0.1.5-0.tar.gz";
     sha256 = "0bdfd0b3e21fbc88572fc35d8918e1db00d01930df987f118efec96c63ff4ee0";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs message-filters roscpp urdf tf xacro ];
   propagatedBuildInputs = [ tf sensor-msgs message-filters urdf robot-state-publisher roscpp xacro ];
   nativeBuildInputs = [ catkin ];

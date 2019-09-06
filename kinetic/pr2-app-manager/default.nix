@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.0";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_apps-release/archive/release/kinetic/pr2_app_manager/0.6.0-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_apps-release/archive/release/kinetic/pr2_app_manager/0.6.0-0.tar.gz";
+    name = "0.6.0-0.tar.gz";
     sha256 = "b8d0139219289dc915413d1ebe1c9bf5d3a499f67b55a9ad5751371ee66aaff0";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ app-manager willow-maps ];
   nativeBuildInputs = [ catkin ];
 

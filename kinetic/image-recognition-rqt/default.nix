@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/image_recognition_rqt/0.0.4-0.tar.gz;
+    url = "https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/image_recognition_rqt/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "a56d2d703300accb15861dccee05182931eec249d114560614c9a4d1ef95681c";
   };
 
+  buildType = "catkin";
   buildInputs = [ rqt-gui-py rqt-gui image-recognition-msgs image-recognition-util rospy ];
   propagatedBuildInputs = [ rqt-gui-py rqt-gui image-recognition-msgs image-recognition-util rospy ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.1-r2";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_simulation-release/archive/release/kinetic/cob_gazebo_objects/0.7.1-2.tar.gz;
+    url = "https://github.com/ipa320/cob_simulation-release/archive/release/kinetic/cob_gazebo_objects/0.7.1-2.tar.gz";
+    name = "0.7.1-2.tar.gz";
     sha256 = "b3813a5678b058f740d13df618edb416199c98c2202506322dab1ed5d1c79613";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros roslaunch cob-description ];
   nativeBuildInputs = [ catkin ];

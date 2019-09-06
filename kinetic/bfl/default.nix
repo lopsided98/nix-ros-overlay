@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0-r2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/bfl-release/archive/release/kinetic/bfl/0.7.0-2.tar.gz;
+    url = "https://github.com/ros-gbp/bfl-release/archive/release/kinetic/bfl/0.7.0-2.tar.gz";
+    name = "0.7.0-2.tar.gz";
     sha256 = "54d9c8ae3cd477fa0a413e2100233e5f450760df4ad7dd8f63723889d913cea6";
   };
 
+  buildType = "cmake";
   buildInputs = [ cppunit boost ];
   propagatedBuildInputs = [ cppunit catkin boost ];
   nativeBuildInputs = [ cmake ];

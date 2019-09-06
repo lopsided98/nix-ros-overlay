@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/robot_upstart-release/archive/release/kinetic/robot_upstart/0.3.0-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/kinetic/robot_upstart/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "ec7dae737ea612be27888afd2836acdf4ce2f398afaeddf31a5d27acd687e5dd";
   };
 
+  buildType = "catkin";
   checkInputs = [ rosunit roslint ];
   propagatedBuildInputs = [ roslaunch daemontools xacro ];
   nativeBuildInputs = [ catkin ];

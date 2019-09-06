@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace-release/archive/release/kinetic/turtlebot3_autorace_camera/1.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace-release/archive/release/kinetic/turtlebot3_autorace_camera/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "3a6201e298ecc5c450ed0a77a6f2b161bf9bf4278470d60c119d785f316d6f18";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamic-reconfigure ];
   propagatedBuildInputs = [ pythonPackages.enum34 pythonPackages.numpy sensor-msgs cv-bridge pythonPackages.opencv3 rospy dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

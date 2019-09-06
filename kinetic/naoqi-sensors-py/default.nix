@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.5";
 
   src = fetchurl {
-    url = https://github.com/ros-naoqi/naoqi_bridge-release/archive/release/kinetic/naoqi_sensors_py/0.5.5-0.tar.gz;
+    url = "https://github.com/ros-naoqi/naoqi_bridge-release/archive/release/kinetic/naoqi_sensors_py/0.5.5-0.tar.gz";
+    name = "0.5.5-0.tar.gz";
     sha256 = "7aaa45e944e3dc066d942c9b66e961a3282691e0c83f53c9d5a4709edfaca1a0";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost camera-info-manager octomap-msgs octomap dynamic-reconfigure naoqi-driver-py ];
   propagatedBuildInputs = [ boost camera-info-manager sensor-msgs naoqi-driver-py octomap dynamic-reconfigure rospy camera-info-manager-py ];
   nativeBuildInputs = [ catkin ];

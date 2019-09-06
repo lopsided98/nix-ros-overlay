@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_base_drive_chain/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_base_drive_chain/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "45c04c98d9535f0abf69a1e069819dcb9b94911e4ac287befab149130c74c439";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs control-msgs cob-generic-can cob-canopen-motor sensor-msgs cob-utilities message-generation std-msgs diagnostic-msgs roscpp ];
-  propagatedBuildInputs = [ std-srvs control-msgs cob-generic-can cob-canopen-motor sensor-msgs cob-utilities message-runtime std-msgs diagnostic-msgs roscpp ];
+  propagatedBuildInputs = [ std-srvs control-msgs cob-canopen-motor cob-generic-can sensor-msgs cob-utilities message-runtime std-msgs diagnostic-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

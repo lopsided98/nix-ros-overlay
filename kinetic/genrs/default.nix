@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/adnanademovic/genrs-release/archive/release/kinetic/genrs/0.1.0-1.tar.gz;
+    url = "https://github.com/adnanademovic/genrs-release/archive/release/kinetic/genrs/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "67c1e8dc2db9aa0c8e2f71e3c337bfc86dbc88bc5d752a854267e0aa9df0192e";
   };
 
+  buildType = "catkin";
   buildInputs = [ genmsg ];
   propagatedBuildInputs = [ genmsg ];
   nativeBuildInputs = [ catkin ];

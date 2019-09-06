@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.0.3";
 
   src = fetchurl {
-    url = https://github.com/UbiquityRobotics-release/dnn_detect-release/archive/release/kinetic/dnn_detect/0.0.3-0.tar.gz;
+    url = "https://github.com/UbiquityRobotics-release/dnn_detect-release/archive/release/kinetic/dnn_detect/0.0.3-0.tar.gz";
+    name = "0.0.3-0.tar.gz";
     sha256 = "d137392a11d23204fb54890f99d51af09c80214f8fbdb0cf17063aeba1ed22cd";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2-geometry-msgs image-transport sensor-msgs cv-bridge fiducial-msgs roscpp tf2-ros tf2 dynamic-reconfigure visualization-msgs opencv3 ];
-  propagatedBuildInputs = [ tf2-geometry-msgs image-transport sensor-msgs cv-bridge fiducial-msgs roscpp tf2-ros tf2 dynamic-reconfigure visualization-msgs opencv3 ];
+  propagatedBuildInputs = [ tf2-geometry-msgs image-transport sensor-msgs cv-bridge fiducial-msgs tf2-ros tf2 visualization-msgs dynamic-reconfigure roscpp opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.7";
 
   src = fetchurl {
-    url = https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/kinetic/tuw_aruco/0.0.7-0.tar.gz;
+    url = "https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/kinetic/tuw_aruco/0.0.7-0.tar.gz";
+    name = "0.0.7-0.tar.gz";
     sha256 = "e599b0167ff7524e874fa855fb00781f76d3291bb0518e2308e17d6ab8fdaed4";
   };
 
+  buildType = "catkin";
   buildInputs = [ marker-msgs image-transport cv-bridge roscpp rospy image-geometry dynamic-reconfigure std-msgs tf ];
   propagatedBuildInputs = [ marker-msgs image-transport cv-bridge roscpp rospy image-geometry dynamic-reconfigure std-msgs tf ];
   nativeBuildInputs = [ catkin ];

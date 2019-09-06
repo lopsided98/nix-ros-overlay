@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.2";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/kinetic/robot_controllers_interface/0.5.2-0.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/kinetic/robot_controllers_interface/0.5.2-0.tar.gz";
+    name = "0.5.2-0.tar.gz";
     sha256 = "37bdc1b3cf7957f4c7bd78d10167a51c8f44d887500e4a0936ccb1e7dae18d7e";
   };
 
+  buildType = "catkin";
   buildInputs = [ robot-controllers-msgs roscpp pluginlib actionlib ];
   propagatedBuildInputs = [ robot-controllers-msgs roscpp pluginlib actionlib ];
   nativeBuildInputs = [ catkin ];

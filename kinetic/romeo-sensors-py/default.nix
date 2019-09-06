@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.5";
 
   src = fetchurl {
-    url = https://github.com/ros-aldebaran/romeo_robot-release/archive/release/kinetic/romeo_sensors_py/0.1.5-0.tar.gz;
+    url = "https://github.com/ros-aldebaran/romeo_robot-release/archive/release/kinetic/romeo_sensors_py/0.1.5-0.tar.gz";
+    name = "0.1.5-0.tar.gz";
     sha256 = "fbf33f29191c5afaf2b1f177b95c1762f39031a1feab5f5881fb787a7afdb2f5";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ naoqi-sensors-py cv-bridge rospy ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/slam_karto-release/archive/release/kinetic/slam_karto/0.7.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/slam_karto-release/archive/release/kinetic/slam_karto/0.7.3-0.tar.gz";
+    name = "0.7.3-0.tar.gz";
     sha256 = "d08092e30515f9e20a14e1fdc9827ea479fa8b29c7dd1b25750db95cd0889348";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules rosconsole sensor-msgs message-filters roscpp nav-msgs visualization-msgs eigen sparse-bundle-adjustment tf open-karto ];
   propagatedBuildInputs = [ rosconsole sensor-msgs message-filters roscpp nav-msgs visualization-msgs eigen sparse-bundle-adjustment tf open-karto ];
   nativeBuildInputs = [ catkin ];

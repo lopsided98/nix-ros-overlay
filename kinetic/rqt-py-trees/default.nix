@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/stonier/rqt_py_trees-release/archive/release/kinetic/rqt_py_trees/0.3.1-0.tar.gz;
+    url = "https://github.com/stonier/rqt_py_trees-release/archive/release/kinetic/rqt_py_trees/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "ca85b85d9e28d0276387e15c30811b0eb974f06bafb6290ed6db74c9f79825bb";
   };
 
+  buildType = "catkin";
   buildInputs = [ py-trees-msgs rqt-bag py-trees ];
   checkInputs = [ pythonPackages.mock ];
   propagatedBuildInputs = [ rqt-gui-py unique-id pythonPackages.termcolor pythonPackages.rospkg rqt-gui rqt-graph py-trees-msgs rqt-bag pythonPackages.pygraphviz qt-dotgraph rospy geometry-msgs py-trees ];

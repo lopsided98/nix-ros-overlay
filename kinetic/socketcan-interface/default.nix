@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.11-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/socketcan_interface/0.7.11-1.tar.gz;
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/socketcan_interface/0.7.11-1.tar.gz";
+    name = "0.7.11-1.tar.gz";
     sha256 = "447dcb26ffb9e3bd9059e44f12372d401aa14740cd3aeae1af75c75c9fbb0f35";
   };
 
+  buildType = "catkin";
   buildInputs = [ linuxHeaders class-loader boost ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ linuxHeaders class-loader boost ];

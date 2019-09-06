@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.24";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_local_obstacles/0.1.24-0.tar.gz;
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_local_obstacles/0.1.24-0.tar.gz";
+    name = "0.1.24-0.tar.gz";
     sha256 = "25652c6276091be9db7a0bb623a3945bebaef54e93ea92b199b636416d1f5ac6";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp mrpt1 visualization-msgs dynamic-reconfigure mrpt-bridge tf ];
   propagatedBuildInputs = [ sensor-msgs roscpp mrpt1 visualization-msgs dynamic-reconfigure mrpt-bridge tf ];
   nativeBuildInputs = [ catkin ];

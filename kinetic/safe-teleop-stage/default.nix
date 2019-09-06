@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/shared_autonomy_manipulation-release/archive/release/kinetic/safe_teleop_stage/0.0.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/shared_autonomy_manipulation-release/archive/release/kinetic/safe_teleop_stage/0.0.2-0.tar.gz";
+    name = "0.0.2-0.tar.gz";
     sha256 = "61902ee607a1d1a078a41dd75b371142cdf2dcd8070ae1466197857fc8ef4686";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ joy stage safe-teleop-base ];
   nativeBuildInputs = [ catkin ];
 

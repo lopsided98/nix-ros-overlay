@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_cmd_vel_mux/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_cmd_vel_mux/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "ff197e158bd6a94b4991ccf8d2ae752e41c050dbb13792ac13ade322965a35fa";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib libyamlcpp roscpp dynamic-reconfigure nodelet geometry-msgs ];
   propagatedBuildInputs = [ pluginlib libyamlcpp roscpp dynamic-reconfigure nodelet geometry-msgs ];
   nativeBuildInputs = [ catkin ];

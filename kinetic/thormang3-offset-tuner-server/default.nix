@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-Tools-release/archive/release/kinetic/thormang3_offset_tuner_server/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-Tools-release/archive/release/kinetic/thormang3_offset_tuner_server/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "55295d0916ff373d54812e77783b2561f07bd48cd96aa97b18b4c6e0a0e0878d";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamixel-sdk thormang3-base-module libyamlcpp robotis-controller thormang3-offset-tuner-msgs std-msgs roscpp ];
   propagatedBuildInputs = [ dynamixel-sdk thormang3-base-module libyamlcpp robotis-controller thormang3-offset-tuner-msgs std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

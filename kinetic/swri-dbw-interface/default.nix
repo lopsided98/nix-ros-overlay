@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-swri-dbw-interface";
-  version = "2.9.0-r1";
+  version = "2.10.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_dbw_interface/2.9.0-1.tar.gz;
-    sha256 = "8b9de3a0c4a0a902d32d08639fb555beb582d67e070d8d3b65e685e9cbadf65e";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_dbw_interface/2.10.0-1.tar.gz";
+    name = "2.10.0-1.tar.gz";
+    sha256 = "b3b6a0a014fc4c467a1cf97b5ba2c733345e404b1cb38bfca65e8a012320a3c1";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

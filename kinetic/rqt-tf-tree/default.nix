@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_tf_tree-release/archive/release/kinetic/rqt_tf_tree/0.6.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_tf_tree-release/archive/release/kinetic/rqt_tf_tree/0.6.0-0.tar.gz";
+    name = "0.6.0-0.tar.gz";
     sha256 = "5858a7b99a235833530aae4de167762f1127913d4b8859d1106df3cf7976d690";
   };
 
+  buildType = "catkin";
   checkInputs = [ pythonPackages.mock ];
   propagatedBuildInputs = [ rqt-gui-py tf2-msgs pythonPackages.rospkg rqt-gui rqt-graph tf2-ros tf2 qt-dotgraph rospy python-qt-binding geometry-msgs ];
   nativeBuildInputs = [ catkin ];

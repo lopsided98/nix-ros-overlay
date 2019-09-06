@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-Utility-release/archive/release/kinetic/ros_mpg321_player/0.1.3-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-Utility-release/archive/release/kinetic/ros_mpg321_player/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "8d6783a5578afb7f436d8139c5b72bf8190882905738b9eaf055bc22ca91349a";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

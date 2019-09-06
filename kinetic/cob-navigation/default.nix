@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_navigation/0.6.8-1.tar.gz;
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_navigation/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
     sha256 = "710055b40569e1fe893b460f841111d381abae483107caceeec2048e635043af";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ cob-navigation-global cob-navigation-slam cob-navigation-local cob-mapping-slam cob-map-accessibility-analysis cob-linear-nav cob-navigation-config ];
   nativeBuildInputs = [ catkin ];
 

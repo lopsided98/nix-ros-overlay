@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/audio_common-release/archive/release/kinetic/audio_capture/0.3.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/audio_common-release/archive/release/kinetic/audio_capture/0.3.3-0.tar.gz";
+    name = "0.3.3-0.tar.gz";
     sha256 = "2252342a125f03ac6333387bdbdb03c3cfb59c5f3ea8ee6cb70e42d007f33243";
   };
 
+  buildType = "catkin";
   buildInputs = [ gst_all_1.gst-plugins-base roscpp gst_all_1.gstreamer audio-common-msgs ];
   propagatedBuildInputs = [ gst_all_1.gst-plugins-ugly gst_all_1.gstreamer gst_all_1.gst-plugins-base roscpp audio-common-msgs gst_all_1.gst-plugins-good ];
   nativeBuildInputs = [ catkin ];

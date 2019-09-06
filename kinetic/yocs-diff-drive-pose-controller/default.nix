@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_diff_drive_pose_controller/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_diff_drive_pose_controller/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "c0dc2309fe8032f58be66aad8a7003014bcf30686e74abe2049f3bc692b882b3";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib sensor-msgs yocs-math-toolkit roscpp ecl-threads nodelet std-msgs tf geometry-msgs yocs-controllers ];
   propagatedBuildInputs = [ pluginlib sensor-msgs yocs-math-toolkit roscpp ecl-threads nodelet std-msgs tf geometry-msgs yocs-controllers ];
   nativeBuildInputs = [ catkin ];

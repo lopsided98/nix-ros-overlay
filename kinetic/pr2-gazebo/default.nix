@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.11";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_simulator-release/archive/release/kinetic/pr2_gazebo/2.0.11-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_simulator-release/archive/release/kinetic/pr2_gazebo/2.0.11-0.tar.gz";
+    name = "2.0.11-0.tar.gz";
     sha256 = "3688b169c4f8a8016585fefe2a1c80a2c844e89e0019741e5d4a7b86e9449429";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-gazebo-plugins gazeboSimulator.gazebo gazebo-plugins ];
   propagatedBuildInputs = [ pr2-description gazeboSimulator.gazebo gazebo-plugins fingertip-pressure rospy geometry-msgs pr2-mechanism-controllers pr2-gazebo-plugins robot-pose-ekf pr2-dashboard-aggregator image-proc pr2-msgs xacro pr2-head-action robot-mechanism-controllers tf2-ros std-msgs diagnostic-aggregator pr2-controller-configuration-gazebo stereo-image-proc joint-trajectory-action pr2-gripper-action single-joint-position-action topic-tools ];
   nativeBuildInputs = [ catkin ];

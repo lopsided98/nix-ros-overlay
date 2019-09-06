@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero_ros/0.2.4-0.tar.gz;
+    url = "https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/kinetic/imagezero_ros/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "2bedb8482b007f719ba852a5377de055fd81cb67dbb75e3a7c29ba279d2d56af";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs cv-bridge imagezero message-runtime roscpp ];
   propagatedBuildInputs = [ sensor-msgs cv-bridge message-runtime imagezero ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/roboception-gbp/rc_common_msgs-release/archive/release/kinetic/rc_common_msgs/0.2.1-1.tar.gz;
+    url = "https://github.com/roboception-gbp/rc_common_msgs-release/archive/release/kinetic/rc_common_msgs/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
     sha256 = "9613554e140b10a4db41cbbcf5b00432efebb00d39b0467355bb8f9442a4d05b";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime ];
   nativeBuildInputs = [ catkin ];

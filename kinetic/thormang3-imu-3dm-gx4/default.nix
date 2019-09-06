@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-SENSORs-release/archive/release/kinetic/thormang3_imu_3dm_gx4/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-SENSORs-release/archive/release/kinetic/thormang3_imu_3dm_gx4/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "38f7df44a151ce5072c1de91c4382066ee5b305dd0f572b121065f337acf8e34";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost sensor-msgs diagnostic-updater message-generation std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ boost sensor-msgs diagnostic-updater message-runtime std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

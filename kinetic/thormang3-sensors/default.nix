@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-PPC-release/archive/release/kinetic/thormang3_sensors/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-PPC-release/archive/release/kinetic/thormang3_sensors/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "085916adfb99845fc7dd2004351c71c84d7b26a25340825b82a4343ade995606";
   };
 
+  buildType = "catkin";
   buildInputs = [ laser-assembler pcl sensor-msgs std-msgs roscpp pcl-conversions ];
   propagatedBuildInputs = [ laser-assembler uvc-camera realsense-camera pcl sensor-msgs laser-filters rgbd-launch std-msgs roscpp pcl-conversions ];
   nativeBuildInputs = [ catkin ];

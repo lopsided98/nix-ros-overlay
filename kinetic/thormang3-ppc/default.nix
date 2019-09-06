@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-PPC-release/archive/release/kinetic/thormang3_ppc/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-PPC-release/archive/release/kinetic/thormang3_ppc/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "19f7f9391e4602eb41c428b345db9bd4fe3b3e631c96b484268b86eb645d1891";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ thormang3-sensors thormang3-walking-demo thormang3-manipulation-demo ];
   nativeBuildInputs = [ catkin ];
 

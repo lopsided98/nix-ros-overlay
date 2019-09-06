@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.5";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_trajectory_server/0.3.5-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_trajectory_server/0.3.5-0.tar.gz";
+    name = "0.3.5-0.tar.gz";
     sha256 = "40fb3551ed7f6a9d88e58d08a504962274d439e05515f05ce7a69aebe43ef3c9";
   };
 
+  buildType = "catkin";
   buildInputs = [ hector-map-tools roscpp hector-nav-msgs nav-msgs tf ];
   propagatedBuildInputs = [ hector-map-tools roscpp hector-nav-msgs nav-msgs tf ];
   nativeBuildInputs = [ catkin ];

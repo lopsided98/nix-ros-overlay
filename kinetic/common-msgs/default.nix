@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/common_msgs/1.12.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/common_msgs/1.12.7-0.tar.gz";
+    name = "1.12.7-0.tar.gz";
     sha256 = "d3f95ebbb2236c7deaf64b57c4764fe48e0c667eb6defd5d98c95cd12b50f13d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ shape-msgs actionlib-msgs trajectory-msgs sensor-msgs nav-msgs diagnostic-msgs visualization-msgs geometry-msgs stereo-msgs ];
   nativeBuildInputs = [ catkin ];
 

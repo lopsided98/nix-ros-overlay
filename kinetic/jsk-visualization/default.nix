@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.5";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_visualization/2.1.5-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_visualization/2.1.5-0.tar.gz";
+    name = "2.1.5-0.tar.gz";
     sha256 = "6176c631ecbccbc6cac8ac4c7cff6f49d01b96c0c01bb8a7a674908a125ecfea";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ jsk-rqt-plugins jsk-interactive-test jsk-rviz-plugins jsk-interactive-marker jsk-interactive ];
   nativeBuildInputs = [ catkin ];
 

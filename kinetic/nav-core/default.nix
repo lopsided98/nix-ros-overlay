@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/kinetic/nav_core/1.14.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/nav_core/1.14.4-0.tar.gz";
+    name = "1.14.4-0.tar.gz";
     sha256 = "79a1fb353d602ec3932a6f4e288034ece55f2b2970025c955624320fc96bd589";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs costmap-2d tf geometry-msgs ];
   propagatedBuildInputs = [ std-msgs costmap-2d tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

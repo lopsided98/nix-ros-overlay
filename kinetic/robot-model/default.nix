@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/robot_model-release/archive/release/kinetic/robot_model/1.12.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/robot_model-release/archive/release/kinetic/robot_model/1.12.11-0.tar.gz";
+    name = "1.12.11-0.tar.gz";
     sha256 = "520f64793de633ac49e6457697e098a40a2d2702a7d04123df1495c84356e051";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ kdl-parser collada-urdf urdf-parser-plugin urdfdom urdf collada-parser resource-retriever joint-state-publisher ];
   nativeBuildInputs = [ catkin ];
 

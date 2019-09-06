@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_semantic_version/0.3.2-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_semantic_version/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
     sha256 = "0506b915ccd5d60629a10843b2ed4c93b73b8e0f092e6892701c15be3cd76c10";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

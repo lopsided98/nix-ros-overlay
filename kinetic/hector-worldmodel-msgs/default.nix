@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.4";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_worldmodel-release/archive/release/kinetic/hector_worldmodel_msgs/0.3.4-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_worldmodel-release/archive/release/kinetic/hector_worldmodel_msgs/0.3.4-0.tar.gz";
+    name = "0.3.4-0.tar.gz";
     sha256 = "1ab708070d327862301d048d17a06346ea18b3e72eeacc2bcf756b1060f2da9f";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

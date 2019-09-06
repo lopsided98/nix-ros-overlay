@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/hostapd_access_point/1.0.15-0.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/hostapd_access_point/1.0.15-0.tar.gz";
+    name = "1.0.15-0.tar.gz";
     sha256 = "b19f0b5e51af5d98065ea5d3e639c12e24ba4906fd9964616ae96c868e079b1f";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

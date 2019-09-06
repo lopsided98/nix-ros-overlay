@@ -8,10 +8,12 @@ buildRosPackage {
   version = "3.0.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/twist_mux-release/archive/release/kinetic/twist_mux/3.0.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/twist_mux-release/archive/release/kinetic/twist_mux/3.0.0-0.tar.gz";
+    name = "3.0.0-0.tar.gz";
     sha256 = "dcbf3f46aa024404abaca50eb5fbfdbd47834e16dc274bf479323781818061f8";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp diagnostic-updater rostest std-msgs visualization-msgs geometry-msgs ];
   checkInputs = [ rostopic rospy ];
   propagatedBuildInputs = [ twist-mux-msgs roscpp diagnostic-updater std-msgs visualization-msgs geometry-msgs ];

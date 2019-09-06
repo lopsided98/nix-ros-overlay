@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2015.11.20-r3";
 
   src = fetchurl {
-    url = https://github.com/asmodehn/certifi-rosrelease/archive/release/kinetic/certifi/2015.11.20-3.tar.gz;
+    url = "https://github.com/asmodehn/certifi-rosrelease/archive/release/kinetic/certifi/2015.11.20-3.tar.gz";
+    name = "2015.11.20-3.tar.gz";
     sha256 = "4d532dbb968f6d15afdcbcfd6c0aa92218bdcc09a19fc406b3d582a8068c8d2e";
   };
 
+  buildType = "catkin";
   buildInputs = [ catkin-pip ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.0-r1";
 
   src = fetchurl {
-    url = https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_control/0.6.0-1.tar.gz;
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_control/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
     sha256 = "1eb6aa78aff3ad5c5f617462d21be812931fe5d2bfecc774d8dc0550596d7b8e";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager tf2-msgs pluginlib actionlib-msgs realtime-tools sensor-msgs roscpp message-generation controller-interface franka-msgs actionlib libfranka franka-hw tf geometry-msgs ];
   propagatedBuildInputs = [ franka-description tf2-msgs franka-gripper actionlib-msgs actionlib tf geometry-msgs realtime-tools message-runtime robot-state-publisher franka-hw joint-state-publisher controller-interface franka-msgs roscpp controller-manager pluginlib sensor-msgs libfranka ];
   nativeBuildInputs = [ catkin ];

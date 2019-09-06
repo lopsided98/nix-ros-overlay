@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/open_manipulator_perceptions-release/archive/release/kinetic/open_manipulator_perceptions/1.0.0-1.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator_perceptions-release/archive/release/kinetic/open_manipulator_perceptions/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
     sha256 = "9c4796566c473c1ab2c1672af40475f0cd271793b56f6e863f94eaed93579349";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ open-manipulator-ar-markers ];
   nativeBuildInputs = [ catkin ];
 

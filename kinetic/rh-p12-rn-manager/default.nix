@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/RH-P12-RN-release/archive/release/kinetic/rh_p12_rn_manager/0.1.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/RH-P12-RN-release/archive/release/kinetic/rh_p12_rn_manager/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "2dca3d4c71024aadaa0a5ddcb1edcb45fb300a3fd91b530a9f2c40a15397f0ea";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamixel-sdk cmake-modules robotis-controller roscpp rh-p12-rn-base-module robotis-device robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ dynamixel-sdk cmake-modules robotis-controller roscpp rh-p12-rn-base-module robotis-device robotis-controller-msgs robotis-framework-common ];
   nativeBuildInputs = [ catkin ];

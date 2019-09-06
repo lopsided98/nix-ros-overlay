@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1";
 
   src = fetchurl {
-    url = https://github.com/lgsvl/lgsvl_msgs-release/archive/release/kinetic/lgsvl_msgs/0.0.1-0.tar.gz;
+    url = "https://github.com/lgsvl/lgsvl_msgs-release/archive/release/kinetic/lgsvl_msgs/0.0.1-0.tar.gz";
+    name = "0.0.1-0.tar.gz";
     sha256 = "f46ae4bd92dcb6c432f1f23cc583adf3febfe04f478a15e63b790c003e9c4aa5";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs sensor-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

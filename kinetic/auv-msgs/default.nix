@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/oceansystemslab/auv_msgs-release/archive/release/kinetic/auv_msgs/0.1.0-0.tar.gz;
+    url = "https://github.com/oceansystemslab/auv_msgs-release/archive/release/kinetic/auv_msgs/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "2e110447ae64991a7e8488fd076f2ff5bb7d32e426152d233ba77420041fa619";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs geographic-msgs message-generation std-msgs geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs geographic-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

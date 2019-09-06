@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.11";
 
   src = fetchurl {
-    url = https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release/archive/release/kinetic/pr2_dense_laser_snapshotter/1.0.11-0.tar.gz;
+    url = "https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release/archive/release/kinetic/pr2_dense_laser_snapshotter/1.0.11-0.tar.gz";
+    name = "1.0.11-0.tar.gz";
     sha256 = "2575ada47fc86c87207483c2e467c999f6fc8142b28f93a2f59a455ef1e5f57e";
   };
 
+  buildType = "catkin";
   buildInputs = [ dense-laser-assembler pr2-msgs ];
   propagatedBuildInputs = [ dense-laser-assembler pr2-msgs ];
   nativeBuildInputs = [ catkin ];

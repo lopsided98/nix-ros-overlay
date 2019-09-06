@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, rosbash, catkin, roscpp, rostest, std-msgs, nodelet }:
 buildRosPackage {
   pname = "ros-kinetic-swri-nodelet";
-  version = "2.9.0-r1";
+  version = "2.10.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_nodelet/2.9.0-1.tar.gz;
-    sha256 = "30a030302ee3ee9e4fbba9b79a068e43473c7f708f3a9d3aa2b1130b86a1c9c6";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_nodelet/2.10.0-1.tar.gz";
+    name = "2.10.0-1.tar.gz";
+    sha256 = "a3b729415777431402e30e037d20a9a377f25423593d4982535cd7346ab2501a";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs nodelet roscpp ];
   checkInputs = [ rostest rosbash ];
   propagatedBuildInputs = [ std-msgs nodelet rosbash roscpp ];

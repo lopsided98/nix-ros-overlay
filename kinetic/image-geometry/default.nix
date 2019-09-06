@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vision_opencv-release/archive/release/kinetic/image_geometry/1.12.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/kinetic/image_geometry/1.12.8-0.tar.gz";
+    name = "1.12.8-0.tar.gz";
     sha256 = "ad1a63c29af20a0de51e2759ae1c3e075e168945ae1dcc3d55ef77284ccc7904";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs opencv3 ];
   propagatedBuildInputs = [ sensor-msgs opencv3 ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.6";
 
   src = fetchurl {
-    url = https://github.com/tork-a/openrave_planning-release/archive/release/kinetic/collada_robots/0.0.6-0.tar.gz;
+    url = "https://github.com/tork-a/openrave_planning-release/archive/release/kinetic/collada_robots/0.0.6-0.tar.gz";
+    name = "0.0.6-0.tar.gz";
     sha256 = "a28835c9d60ebe5ccf281fa145ebee872889281e10d10f0e0aff20951cc2d86c";
   };
 
+  buildType = "catkin";
   buildInputs = [ git unzip ];
   nativeBuildInputs = [ catkin ];
 

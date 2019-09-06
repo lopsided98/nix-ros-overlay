@@ -8,11 +8,13 @@ buildRosPackage {
   version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/jsk_3rdparty/2.1.13-1.tar.gz;
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/jsk_3rdparty/2.1.13-1.tar.gz";
+    name = "2.1.13-1.tar.gz";
     sha256 = "63a58fdcc27397e5191a84ac08f390d5aa671c2c26227738043efab7e2b865cd";
   };
 
-  propagatedBuildInputs = [ bayesian-belief-networks voice-text rospatlite libsiftfast libcmt rosping julius julius-ros opt-camera mini-maxwell slic ff pgm-learner ffha assimp-devel downward nlopt ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ bayesian-belief-networks opt-camera rospatlite libcmt julius-ros rosping mini-maxwell libsiftfast julius voice-text slic ff pgm-learner ffha assimp-devel downward nlopt ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

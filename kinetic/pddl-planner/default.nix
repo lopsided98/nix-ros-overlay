@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_planning-release/archive/release/kinetic/pddl_planner/0.1.10-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_planning-release/archive/release/kinetic/pddl_planner/0.1.10-0.tar.gz";
+    name = "0.1.10-0.tar.gz";
     sha256 = "c42e8ab697a8851635ef3341593cb500993611ac22bb55d97094ec92ddc8c08a";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy pddl-msgs actionlib ];
   propagatedBuildInputs = [ lpg-planner pddl-msgs ff ffha actionlib rospy downward time ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/convex_decomposition-release/archive/release/kinetic/convex_decomposition/0.1.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/convex_decomposition-release/archive/release/kinetic/convex_decomposition/0.1.11-0.tar.gz";
+    name = "0.1.11-0.tar.gz";
     sha256 = "990f02bf853c764648a95c2005bb32176728baf03ef691676979bdc45881a0fc";
   };
 
+  buildType = "catkin";
   buildInputs = [ unzip ];
   propagatedBuildInputs = [ unzip ];
   nativeBuildInputs = [ catkin ];

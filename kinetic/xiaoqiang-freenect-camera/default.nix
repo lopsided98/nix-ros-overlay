@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.0.12";
 
   src = fetchurl {
-    url = https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_freenect_camera/0.0.12-0.tar.gz;
+    url = "https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_freenect_camera/0.0.12-0.tar.gz";
+    name = "0.0.12-0.tar.gz";
     sha256 = "e159e48b78634f19fdb4bcac8b0b5299c07456335656bf578b06334f3d3de47b";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib camera-info-manager image-transport sensor-msgs diagnostic-updater libfreenect dynamic-reconfigure nodelet roscpp log4cxx ];
-  propagatedBuildInputs = [ pluginlib camera-info-manager image-transport sensor-msgs diagnostic-updater libfreenect dynamic-reconfigure nodelet roscpp log4cxx ];
+  propagatedBuildInputs = [ pluginlib camera-info-manager image-transport sensor-msgs diagnostic-updater nodelet dynamic-reconfigure libfreenect roscpp log4cxx ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

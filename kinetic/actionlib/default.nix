@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.11.13";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/actionlib-release/archive/release/kinetic/actionlib/1.11.13-0.tar.gz;
+    url = "https://github.com/ros-gbp/actionlib-release/archive/release/kinetic/actionlib/1.11.13-0.tar.gz";
+    name = "1.11.13-0.tar.gz";
     sha256 = "20904f8215d1cc39a6e30fee69a1c964a02dbf4a2f931e56d12fc8850d13d235";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost actionlib-msgs rostest message-generation rospy std-msgs roscpp ];
   checkInputs = [ rosnode ];
   propagatedBuildInputs = [ boost actionlib-msgs pythonPackages.wxPython rostest roslib message-runtime rostopic rospy std-msgs roscpp ];

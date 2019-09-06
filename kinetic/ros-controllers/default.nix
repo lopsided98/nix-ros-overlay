@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/ros_controllers/0.13.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/ros_controllers/0.13.5-0.tar.gz";
+    name = "0.13.5-0.tar.gz";
     sha256 = "8d593d537c640465ba826bac38818ecba4e3bf064b7f89857d1642f7c6c22e9d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ joint-state-controller diff-drive-controller rqt-joint-trajectory-controller force-torque-sensor-controller velocity-controllers joint-trajectory-controller position-controllers ackermann-steering-controller imu-sensor-controller effort-controllers forward-command-controller gripper-action-controller ];
   nativeBuildInputs = [ catkin ];
 

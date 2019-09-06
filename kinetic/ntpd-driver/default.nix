@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/vooon/ntpd_driver-release/archive/release/kinetic/ntpd_driver/1.2.0-0.tar.gz;
+    url = "https://github.com/vooon/ntpd_driver-release/archive/release/kinetic/ntpd_driver/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "11b33d8f2d54be860f745d74c33076899015bd4a36769b2fbe1a1986baf59c93";
   };
 
+  buildType = "catkin";
   buildInputs = [ poco cmake-modules sensor-msgs message-generation message-runtime roscpp ];
   propagatedBuildInputs = [ poco cmake-modules sensor-msgs message-generation message-runtime roscpp ];
   nativeBuildInputs = [ catkin ];

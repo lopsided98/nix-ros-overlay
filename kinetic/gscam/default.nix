@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/gscam-release/archive/release/kinetic/gscam/0.2.0-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/gscam-release/archive/release/kinetic/gscam/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "221166b3df8e0658a96aec05f0da228d79d3dfee2052b463dfcc0fb603c5de0f";
   };
 
+  buildType = "catkin";
   buildInputs = [ camera-calibration-parsers image-transport sensor-msgs camera-info-manager cv-bridge gstreamer roscpp gst-plugins-base nodelet ];
   propagatedBuildInputs = [ camera-calibration-parsers image-transport sensor-msgs camera-info-manager cv-bridge nodelet roscpp ];
   nativeBuildInputs = [ catkin ];

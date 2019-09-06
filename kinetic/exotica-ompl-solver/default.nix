@@ -8,10 +8,12 @@ buildRosPackage {
   version = "5.0.0";
 
   src = fetchurl {
-    url = https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_ompl_solver/5.0.0-0.tar.gz;
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_ompl_solver/5.0.0-0.tar.gz";
+    name = "5.0.0-0.tar.gz";
     sha256 = "31f73a27db8af3a3f662b5fba756411e41397a2e5c51b9260f4e868416a688fe";
   };
 
+  buildType = "catkin";
   buildInputs = [ exotica-python exotica-core ompl ];
   propagatedBuildInputs = [ exotica-python exotica-core ompl ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/kinetic/dynamixel_workbench/2.0.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/kinetic/dynamixel_workbench/2.0.0-0.tar.gz";
+    name = "2.0.0-0.tar.gz";
     sha256 = "3b3076c4de54c9e8088751819d0af9ab14d772b3c5531c611182a7e7cad3d6bf";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ dynamixel-workbench-controllers dynamixel-workbench-single-manager dynamixel-workbench-single-manager-gui dynamixel-workbench-toolbox dynamixel-workbench-operators ];
   nativeBuildInputs = [ catkin ];
 

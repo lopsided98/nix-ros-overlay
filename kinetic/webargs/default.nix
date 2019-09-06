@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.5.3-r1";
 
   src = fetchurl {
-    url = https://github.com/asmodehn/webargs-rosrelease/archive/release/kinetic/webargs/1.5.3-1.tar.gz;
+    url = "https://github.com/asmodehn/webargs-rosrelease/archive/release/kinetic/webargs/1.5.3-1.tar.gz";
+    name = "1.5.3-1.tar.gz";
     sha256 = "d452af802ac66a0791c25c678d45386ffc72c91ee70db7ee44ec6dae0768fbbd";
   };
 
+  buildType = "catkin";
   buildInputs = [ marshmallow catkin-pip ];
   checkInputs = [ pythonPackages.pytest webtest pythonPackages.mock pythonPackages.werkzeug pythonPackages.flask pythonPackages.tornado ];
   propagatedBuildInputs = [ marshmallow ];

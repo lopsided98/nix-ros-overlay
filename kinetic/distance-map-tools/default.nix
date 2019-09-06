@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/artivis/distance_map-release/archive/release/kinetic/distance_map_tools/0.1.0-1.tar.gz;
+    url = "https://github.com/artivis/distance_map-release/archive/release/kinetic/distance_map_tools/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "2229648856e7bb45720c0bb8768c78b025416d06e0185d4d19a38764f072c8ff";
   };
 
+  buildType = "catkin";
   buildInputs = [ distance-map-core visualization-msgs interactive-markers backward-ros ];
-  propagatedBuildInputs = [ distance-map-core visualization-msgs interactive-markers backward-ros ];
+  propagatedBuildInputs = [ distance-map-core interactive-markers visualization-msgs backward-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

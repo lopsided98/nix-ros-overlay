@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace-release/archive/release/kinetic/turtlebot3_autorace_core/1.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace-release/archive/release/kinetic/turtlebot3_autorace_core/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "96b42f85bcbebf50bfb381f5459d49f05d4364d7eeb65fa0aad04c39aa69c4dd";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.enum34 pythonPackages.numpy rospy std-msgs roslaunch ];
   nativeBuildInputs = [ catkin ];
 

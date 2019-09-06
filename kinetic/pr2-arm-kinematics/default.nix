@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.9";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_kinematics-release/archive/release/kinetic/pr2_arm_kinematics/1.0.9-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_kinematics-release/archive/release/kinetic/pr2_arm_kinematics/1.0.9-0.tar.gz";
+    name = "1.0.9-0.tar.gz";
     sha256 = "88d1a012402377004461ca140878175dabb294e03cb464db5d52d2f7c6d9437a";
   };
 
+  buildType = "catkin";
   buildInputs = [ kdl-parser cmake-modules pluginlib urdf moveit-core angles tf-conversions moveit-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ kdl-parser pluginlib urdf moveit-core angles tf-conversions moveit-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.9.17-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_manipulation/0.9.17-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_manipulation/0.9.17-1.tar.gz";
+    name = "0.9.17-1.tar.gz";
     sha256 = "5a4e0ae3d9b8758c1a7d941f663f88d88b4beae9588e161388a65a6e99d58bff";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib rosconsole roscpp actionlib moveit-core dynamic-reconfigure moveit-msgs tf eigen ];
-  propagatedBuildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib rosconsole roscpp actionlib moveit-core dynamic-reconfigure moveit-msgs tf ];
+  propagatedBuildInputs = [ moveit-ros-planning moveit-ros-move-group rosconsole pluginlib roscpp moveit-core actionlib moveit-msgs dynamic-reconfigure tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

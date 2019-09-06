@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.11.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/openni_camera-release/archive/release/kinetic/openni_launch/1.11.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/openni_camera-release/archive/release/kinetic/openni_launch/1.11.0-0.tar.gz";
+    name = "1.11.0-0.tar.gz";
     sha256 = "ec0a07c5239ce3b8d9bf6dd9ec13f481341bf36b1f319f55240e9e101e0ee7d6";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ rgbd-launch nodelet openni-camera ];
   nativeBuildInputs = [ catkin ];

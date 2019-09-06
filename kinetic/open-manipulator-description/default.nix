@@ -8,12 +8,14 @@ buildRosPackage {
   version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/kinetic/open_manipulator_description/2.0.1-1.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator-release/archive/release/kinetic/open_manipulator_description/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
     sha256 = "6b3d3f2a3b7fee138de657deba1388076a8326eb6bf0fc65ee730a8088999f87";
   };
 
+  buildType = "catkin";
   buildInputs = [ urdf joint-state-publisher xacro robot-state-publisher ];
-  propagatedBuildInputs = [ urdf joint-state-publisher xacro robot-state-publisher ];
+  propagatedBuildInputs = [ joint-state-publisher urdf xacro robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

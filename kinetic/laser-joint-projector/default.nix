@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.11";
 
   src = fetchurl {
-    url = https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release/archive/release/kinetic/laser_joint_projector/1.0.11-0.tar.gz;
+    url = "https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release/archive/release/kinetic/laser_joint_projector/1.0.11-0.tar.gz";
+    name = "1.0.11-0.tar.gz";
     sha256 = "62973d13cea88d5a8a267ba68dfe0f8e6c7f0af3d284799bc47afb3ce91d5c2b";
   };
 
+  buildType = "catkin";
   buildInputs = [ kdl-parser cmake-modules orocos-kdl roscpp-serialization roscpp geometry-msgs calibration-msgs ];
   propagatedBuildInputs = [ kdl-parser cmake-modules orocos-kdl roscpp-serialization geometry-msgs calibration-msgs ];
   nativeBuildInputs = [ catkin ];

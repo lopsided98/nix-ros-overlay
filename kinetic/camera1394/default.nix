@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.10.1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/camera1394-release/archive/release/kinetic/camera1394/1.10.1-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/camera1394-release/archive/release/kinetic/camera1394/1.10.1-0.tar.gz";
+    name = "1.10.1-0.tar.gz";
     sha256 = "9fbfc770e7f3b08a5b61afa9ae36b86aaec731f4292a64651266ea1ed97ed3f0";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost camera-info-manager image-transport sensor-msgs libdc1394 roscpp diagnostic-updater rostest message-generation nodelet dynamic-reconfigure tf ];
-  propagatedBuildInputs = [ boost camera-info-manager image-transport sensor-msgs libdc1394 roscpp diagnostic-updater message-runtime nodelet dynamic-reconfigure tf ];
+  propagatedBuildInputs = [ boost tf image-transport sensor-msgs camera-info-manager libdc1394 roscpp diagnostic-updater message-runtime dynamic-reconfigure nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rosconsole_bridge-release/archive/release/kinetic/rosconsole_bridge/0.5.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/rosconsole_bridge-release/archive/release/kinetic/rosconsole_bridge/0.5.2-0.tar.gz";
+    name = "0.5.2-0.tar.gz";
     sha256 = "05008f6da9a95afcf81c771a6482c3fad12eb8e8fc52abed41a7f5d752390472";
   };
 
+  buildType = "catkin";
   buildInputs = [ console-bridge rosconsole ];
   propagatedBuildInputs = [ console-bridge rosconsole ];
   nativeBuildInputs = [ catkin ];

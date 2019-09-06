@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.6.1";
 
   src = fetchurl {
-    url = https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map_loader/1.6.1-0.tar.gz;
+    url = "https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map_loader/1.6.1-0.tar.gz";
+    name = "1.6.1-0.tar.gz";
     sha256 = "063c88f71f25e65653bb56cea1bc43fa7ecdba5fe09f1f67b01917f81339b87d";
   };
 
+  buildType = "catkin";
   buildInputs = [ grid-map-msgs roscpp grid-map-ros ];
-  propagatedBuildInputs = [ grid-map-msgs roscpp grid-map-ros ];
+  propagatedBuildInputs = [ grid-map-msgs grid-map-ros roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

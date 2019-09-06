@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/effort_controllers/0.13.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/effort_controllers/0.13.5-0.tar.gz";
+    name = "0.13.5-0.tar.gz";
     sha256 = "d113b5a066e0db7b84bdfe30a11c7bdb826d1243b2a3329094c4225406c5fd7b";
   };
 
+  buildType = "catkin";
   buildInputs = [ control-msgs control-toolbox realtime-tools controller-interface urdf angles forward-command-controller ];
   propagatedBuildInputs = [ control-msgs control-toolbox realtime-tools controller-interface urdf angles forward-command-controller ];
   nativeBuildInputs = [ catkin ];

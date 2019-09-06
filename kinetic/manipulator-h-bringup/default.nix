@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_bringup/0.3.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-MANIPULATOR-H-release/archive/release/kinetic/manipulator_h_bringup/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "24592685980ded6ae9fe3fe6454c00a858d2ab78a1dee626553239ac421e8bc8";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rviz joint-state-publisher robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 

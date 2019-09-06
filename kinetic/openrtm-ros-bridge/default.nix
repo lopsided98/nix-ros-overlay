@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.2";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/openrtm_ros_bridge/1.4.2-0.tar.gz;
+    url = "https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/openrtm_ros_bridge/1.4.2-0.tar.gz";
+    name = "1.4.2-0.tar.gz";
     sha256 = "bd98d729dfa985d85e8812fec751c9dbf1fba5cbc71a1afb5a31679a1dad2e76";
   };
 
+  buildType = "catkin";
   buildInputs = [ openrtm-tools rostest message-generation std-msgs roscpp rtmbuild ];
   propagatedBuildInputs = [ std-msgs openrtm-tools roscpp ];
   nativeBuildInputs = [ catkin ];

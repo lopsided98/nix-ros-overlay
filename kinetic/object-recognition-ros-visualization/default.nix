@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/object_recognition_ros_visualization-release/archive/release/kinetic/object_recognition_ros_visualization/0.3.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/object_recognition_ros_visualization-release/archive/release/kinetic/object_recognition_ros_visualization/0.3.8-0.tar.gz";
+    name = "0.3.8-0.tar.gz";
     sha256 = "3c5a611d2f1d9504213727daf4671b91a6deaac35210f8f9b1d087d1402461c9";
   };
 
+  buildType = "catkin";
   buildInputs = [ object-recognition-ros pluginlib boost rviz object-recognition-msgs ];
   propagatedBuildInputs = [ object-recognition-ros pluginlib boost rviz object-recognition-msgs ];
   nativeBuildInputs = [ catkin ];

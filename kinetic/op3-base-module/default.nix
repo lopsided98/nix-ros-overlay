@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-release/archive/release/kinetic/op3_base_module/0.2.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-release/archive/release/kinetic/op3_base_module/0.2.1-0.tar.gz";
+    name = "0.2.1-0.tar.gz";
     sha256 = "1fc6ab0e6efe480f8a14a4e7bf9b40144b9750ae1d2475266b5e72d8847a872a";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules boost geometry-msgs libyamlcpp roscpp roslib robotis-math op3-kinematics-dynamics eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ cmake-modules boost geometry-msgs libyamlcpp roscpp roslib robotis-math op3-kinematics-dynamics eigen std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
   nativeBuildInputs = [ catkin ];

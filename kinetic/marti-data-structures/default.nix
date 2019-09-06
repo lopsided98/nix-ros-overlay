@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-marti-data-structures";
-  version = "2.9.0-r1";
+  version = "2.10.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/marti_data_structures/2.9.0-1.tar.gz;
-    sha256 = "a84d8b8a1c5c96121f7ef132c2a412711bdae8b001576fa6c950c3e335336af3";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/marti_data_structures/2.10.0-1.tar.gz";
+    name = "2.10.0-1.tar.gz";
+    sha256 = "8a5a378fd93d00dedf78267c43d7a08676acddd0da81725292b21b28dd92a4ef";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

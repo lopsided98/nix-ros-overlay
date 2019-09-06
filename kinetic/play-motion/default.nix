@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.5";
 
   src = fetchurl {
-    url = https://github.com/pal-gbp/play_motion-release2/archive/release/kinetic/play_motion/0.4.5-0.tar.gz;
+    url = "https://github.com/pal-gbp/play_motion-release2/archive/release/kinetic/play_motion/0.4.5-0.tar.gz";
+    name = "0.4.5-0.tar.gz";
     sha256 = "a44960f689d3696104db4b6260c86aa40cb9107abd7363557973bef8ee96571b";
   };
 
+  buildType = "catkin";
   buildInputs = [ control-msgs play-motion-msgs sensor-msgs diagnostic-updater controller-manager-msgs actionlib diagnostic-msgs roscpp moveit-ros-planning-interface ];
   checkInputs = [ controller-manager hardware-interface joint-state-controller joint-trajectory-controller rostest position-controllers robot-state-publisher xacro ];
   propagatedBuildInputs = [ control-msgs play-motion-msgs sensor-msgs diagnostic-updater controller-manager-msgs actionlib diagnostic-msgs roscpp moveit-ros-planning-interface ];

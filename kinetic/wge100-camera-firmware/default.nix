@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.2";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/wge100_driver-release/archive/release/kinetic/wge100_camera_firmware/1.8.2-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/wge100_driver-release/archive/release/kinetic/wge100_camera_firmware/1.8.2-0.tar.gz";
+    name = "1.8.2-0.tar.gz";
     sha256 = "385de8d290eb6cb443e34d6796534eb49e6ace9fe28e01b71ecf89e03bfc69ad";
   };
 
+  buildType = "catkin";
   buildInputs = [ gforth rospy ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ gforth rospy ];

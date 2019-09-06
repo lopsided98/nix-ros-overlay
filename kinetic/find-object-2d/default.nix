@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.2";
 
   src = fetchurl {
-    url = https://github.com/introlab/find_object_2d-release/archive/release/kinetic/find_object_2d/0.6.2-0.tar.gz;
+    url = "https://github.com/introlab/find_object_2d-release/archive/release/kinetic/find_object_2d/0.6.2-0.tar.gz";
+    name = "0.6.2-0.tar.gz";
     sha256 = "94e39c0827a007fca6392a1b3c6a337c6badcc8c0569c181e483c1147b77154a";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-filters roscpp qt-gui-cpp rospy std-msgs tf ];
   propagatedBuildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-filters roscpp qt-gui-cpp rospy std-msgs tf ];
   nativeBuildInputs = [ genmsg catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.5-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/rtmros_nextage/0.8.5-1.tar.gz;
+    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/rtmros_nextage/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
     sha256 = "062a6a8b5587c95f114e49d6e65a237d641bf4648271951efdfbb0b4e41aca50";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ nextage-gazebo nextage-moveit-config nextage-calibration nextage-ik-plugin nextage-description nextage-ros-bridge ];
   nativeBuildInputs = [ catkin ];
 

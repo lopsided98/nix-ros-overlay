@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.53";
 
   src = fetchurl {
-    url = https://gitlab.uni-koblenz.de/robbie/homer_nav_libs-release/repository/archive.tar.gz?ref=release/kinetic/homer_nav_libs/0.1.53-0;
+    url = "https://gitlab.uni-koblenz.de/robbie/homer_nav_libs-release/repository/archive.tar.gz?ref=release/kinetic/homer_nav_libs/0.1.53-0";
+    name = "archive.tar.gz";
     sha256 = "875763c5d69764aa9dca369f7e743e1c45c59fc52df48915892afdbf22af0cb5";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules tf sensor-msgs nav-msgs eigen roscpp geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs eigen tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

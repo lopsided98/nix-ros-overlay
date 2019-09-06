@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.10";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/kinetic/rqt_reconfigure/0.4.10-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/kinetic/rqt_reconfigure/0.4.10-0.tar.gz";
+    name = "0.4.10-0.tar.gz";
     sha256 = "7ca7f717ec285a41485f3eb19fe82c48550273de55bd72410690d185303621d5";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py rqt-gui rqt-console dynamic-reconfigure rospy rqt-py-common python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 

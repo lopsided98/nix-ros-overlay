@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.12";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libconcorde_tsp_solver/0.6.12-0.tar.gz;
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libconcorde_tsp_solver/0.6.12-0.tar.gz";
+    name = "0.6.12-0.tar.gz";
     sha256 = "6bc33bbe462860121915c9ea60425299a581c8a55ac0e925a0027258652aec61";
   };
 
+  buildType = "catkin";
   buildInputs = [ libqsopt ];
   propagatedBuildInputs = [ libqsopt ];
   nativeBuildInputs = [ catkin ];

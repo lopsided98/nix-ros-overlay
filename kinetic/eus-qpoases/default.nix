@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.14";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_control-release/archive/release/kinetic/eus_qpoases/0.1.14-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/kinetic/eus_qpoases/0.1.14-0.tar.gz";
+    name = "0.1.14-0.tar.gz";
     sha256 = "44e08b2b25f83155361557905ed18ec6f898a22c4aa7b964547f34630866fafa";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest subversion euslisp ];
   propagatedBuildInputs = [ rostest euslisp ];
   nativeBuildInputs = [ catkin ];

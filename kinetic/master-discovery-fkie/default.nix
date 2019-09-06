@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.12";
 
   src = fetchurl {
-    url = https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/master_discovery_fkie/0.8.12-0.tar.gz;
+    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/master_discovery_fkie/0.8.12-0.tar.gz";
+    name = "0.8.12-0.tar.gz";
     sha256 = "20159a2bc121683cf292d75f31645ef5a3008b72b6905ac13eb05f29944630e5";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs multimaster-msgs-fkie ];
   propagatedBuildInputs = [ std-srvs multimaster-msgs-fkie pythonPackages.avahi rosgraph rospy roslib avahi ];
   nativeBuildInputs = [ catkin ];

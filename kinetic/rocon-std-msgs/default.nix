@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.0-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/kinetic/rocon_std_msgs/0.9.0-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/kinetic/rocon_std_msgs/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
     sha256 = "6331f55125bd97a86bae776724a638edbb38db60afaf546a58fa79a45fe717c8";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation rocon-service-pair-msgs ];
   propagatedBuildInputs = [ std-msgs rocon-service-pair-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

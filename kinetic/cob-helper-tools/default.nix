@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_helper_tools/0.6.14-1.tar.gz;
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_helper_tools/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
     sha256 = "4296d985f0b01a60e89fd37fd14e3b7c322cbd841701a9a244d11954cdcf7921";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation dynamic-reconfigure ];
   propagatedBuildInputs = [ dynamic-reconfigure cob-script-server message-runtime visualization-msgs rospy diagnostic-msgs cob-msgs tf ];
   nativeBuildInputs = [ catkin ];

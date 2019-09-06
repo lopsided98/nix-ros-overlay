@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/jackal_desktop-release/archive/release/kinetic/jackal_desktop/0.3.2-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/jackal_desktop-release/archive/release/kinetic/jackal_desktop/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "a31dbd63d298d5abbad59e761860e2d0efdf68c69ebc939866c05f6c58eb84eb";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ jackal-viz jackal-msgs ];
   nativeBuildInputs = [ catkin ];
 

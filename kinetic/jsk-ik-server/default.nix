@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.14";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_control-release/archive/release/kinetic/jsk_ik_server/0.1.14-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/kinetic/jsk_ik_server/0.1.14-0.tar.gz";
+    name = "0.1.14-0.tar.gz";
     sha256 = "ec5f30870a0afead46a6a281ed0a74256873638611b8cc4c15ec4d68b1de8a97";
   };
 
+  buildType = "catkin";
   buildInputs = [ roseus cmake-modules mk rostest moveit-msgs tf ];
   propagatedBuildInputs = [ roseus cmake-modules mk rostest moveit-msgs tf ];
   nativeBuildInputs = [ catkin ];

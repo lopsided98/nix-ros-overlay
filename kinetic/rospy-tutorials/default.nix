@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_tutorials-release/archive/release/kinetic/rospy_tutorials/0.7.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_tutorials-release/archive/release/kinetic/rospy_tutorials/0.7.1-0.tar.gz";
+    name = "0.7.1-0.tar.gz";
     sha256 = "3275210916f09b9291ea3cf694770165eda8c63ca2a44b8e4c28ffde9417cd62";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs rostest message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime rospy ];
   nativeBuildInputs = [ catkin ];

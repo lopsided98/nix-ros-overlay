@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/view_controller_msgs-release/archive/release/kinetic/view_controller_msgs/0.1.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/view_controller_msgs-release/archive/release/kinetic/view_controller_msgs/0.1.2-0.tar.gz";
+    name = "0.1.2-0.tar.gz";
     sha256 = "18c0b2f99090be9199cff68e57ab95df08d90864b67c632f6d93cd9042e76a20";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs genmsg message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

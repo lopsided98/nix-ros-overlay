@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.32.1-r1";
 
   src = fetchurl {
-    url = https://github.com/mavlink/mavros-release/archive/release/kinetic/libmavconn/0.32.1-1.tar.gz;
+    url = "https://github.com/mavlink/mavros-release/archive/release/kinetic/libmavconn/0.32.1-1.tar.gz";
+    name = "0.32.1-1.tar.gz";
     sha256 = "adca26e3808b64c40b80233d1a37660b620108ef627c4faad91b671a27073c03";
   };
 
+  buildType = "catkin";
   buildInputs = [ console-bridge boost mavlink ];
   checkInputs = [ gtest rosunit ];
   propagatedBuildInputs = [ console-bridge boost mavlink ];

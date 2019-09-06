@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/desistek_saga-release/archive/release/kinetic/desistek_saga_description/0.3.2-0.tar.gz;
+    url = "https://github.com/uuvsimulator/desistek_saga-release/archive/release/kinetic/desistek_saga_description/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "48887175109459a43f0c85ff4f74dc43cfc2824f8ef6ddf9f396458360453805";
   };
 
+  buildType = "catkin";
   checkInputs = [ rostest xacro rosunit ];
   propagatedBuildInputs = [ gazebo-ros uuv-gazebo-ros-plugins uuv-sensor-ros-plugins uuv-assistants uuv-descriptions robot-state-publisher ];
   nativeBuildInputs = [ catkin ];

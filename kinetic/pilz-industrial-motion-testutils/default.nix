@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.8";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_industrial_motion_testutils/0.3.8-0.tar.gz;
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_industrial_motion_testutils/0.3.8-0.tar.gz";
+    name = "0.3.8-0.tar.gz";
     sha256 = "27040ab1dc8a0d9736d0bf8bc66f567a38cb175e79fb122b305f782f6e9da93d";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-msgs eigen-conversions pilz-msgs moveit-core ];
   propagatedBuildInputs = [ moveit-msgs pilz-msgs moveit-commander moveit-core ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/combined_robot_hw_tests/0.13.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/combined_robot_hw_tests/0.13.3-0.tar.gz";
+    name = "0.13.3-0.tar.gz";
     sha256 = "e32b1cb024910e272987686faa470d1bdf98860227eb0a2e368415ca3ac9102f";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager hardware-interface combined-robot-hw controller-manager-tests roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ controller-manager hardware-interface combined-robot-hw controller-manager-tests roscpp ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1-r3";
 
   src = fetchurl {
-    url = https://github.com/ACSLaboratory/pheeno_ros-release/archive/release/kinetic/pheeno_ros/0.1.1-3.tar.gz;
+    url = "https://github.com/ACSLaboratory/pheeno_ros-release/archive/release/kinetic/pheeno_ros/0.1.1-3.tar.gz";
+    name = "0.1.1-3.tar.gz";
     sha256 = "9d165abb22eaf98d7893fcaf513823645576ad076115be5b4a285d193febaecc";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs actionlib rospy std-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs actionlib rospy std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

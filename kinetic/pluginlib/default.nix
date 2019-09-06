@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.11.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/pluginlib-release/archive/release/kinetic/pluginlib/1.11.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/pluginlib-release/archive/release/kinetic/pluginlib/1.11.3-0.tar.gz";
+    name = "1.11.3-0.tar.gz";
     sha256 = "6721d4877042f9f9f665f0415841b232cde3ce94f8af1ecb426ebcb292e327ad";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules rosconsole boost class-loader tinyxml-2 roslib ];
   propagatedBuildInputs = [ rosconsole boost class-loader tinyxml-2 roslib ];
   nativeBuildInputs = [ catkin ];

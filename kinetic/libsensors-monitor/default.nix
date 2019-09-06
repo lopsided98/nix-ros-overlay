@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/linux_peripheral_interfaces-release/archive/release/kinetic/libsensors_monitor/0.2.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/linux_peripheral_interfaces-release/archive/release/kinetic/libsensors_monitor/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "aff4a809302d370d75499dccc31136723e8b69293ed6b8bd4de011b88337e749";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-updater roscpp lm_sensors ];
   propagatedBuildInputs = [ diagnostic-updater roscpp lm_sensors ];
   nativeBuildInputs = [ catkin ];

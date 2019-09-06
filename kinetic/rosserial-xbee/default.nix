@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_xbee/0.7.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_xbee/0.7.7-0.tar.gz";
+    name = "0.7.7-0.tar.gz";
     sha256 = "f69d257d4dc44ea72e9a6eaacadb7b9b836f7cd5d7709d43313a3f2ef9389b4e";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.pyserial rosserial-python rosserial-msgs rospy diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];
 

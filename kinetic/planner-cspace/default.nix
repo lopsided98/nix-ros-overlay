@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.4.2-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation-release/archive/release/kinetic/planner_cspace/0.4.2-1.tar.gz;
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/planner_cspace/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
     sha256 = "ad9b9bf3087e47d844ef38478b960d82346fc013d066075d9d8b70657ca6ee76";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs costmap-cspace tf2-geometry-msgs costmap-cspace-msgs trajectory-msgs sensor-msgs tf2-ros diagnostic-updater move-base-msgs tf2 nav-msgs neonavigation-common trajectory-tracker-msgs planner-cspace-msgs actionlib roscpp geometry-msgs ];
   checkInputs = [ map-server roslint rostest trajectory-tracker rosunit ];
-  propagatedBuildInputs = [ std-srvs costmap-cspace tf2-geometry-msgs costmap-cspace-msgs trajectory-msgs sensor-msgs tf2-ros diagnostic-updater move-base-msgs tf2 nav-msgs neonavigation-common trajectory-tracker-msgs planner-cspace-msgs actionlib roscpp geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs costmap-cspace tf2-geometry-msgs costmap-cspace-msgs sensor-msgs trajectory-msgs tf2-ros diagnostic-updater tf2 move-base-msgs nav-msgs neonavigation-common trajectory-tracker-msgs planner-cspace-msgs actionlib roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/smach_msgs/2.0.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/executive_smach-release/archive/release/kinetic/smach_msgs/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
     sha256 = "a631bbe6e98228624f07877ab7581a01c9881c96c69c1a57b757e0a4df5a0c01";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

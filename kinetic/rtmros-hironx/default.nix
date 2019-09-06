@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_hironx-release/archive/release/kinetic/rtmros_hironx/2.1.1-0.tar.gz;
+    url = "https://github.com/tork-a/rtmros_hironx-release/archive/release/kinetic/rtmros_hironx/2.1.1-0.tar.gz";
+    name = "2.1.1-0.tar.gz";
     sha256 = "b397cbea54bf7efe65e5d546a1cca50ca7b37899ad111c6729fd6e8b53abb38f";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ hironx-ros-bridge hironx-calibration hironx-moveit-config ];
   nativeBuildInputs = [ catkin ];
 

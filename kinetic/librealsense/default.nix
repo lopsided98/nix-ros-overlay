@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.1";
 
   src = fetchurl {
-    url = https://github.com/intel-ros/librealsense-release/archive/release/kinetic/librealsense/1.12.1-0.tar.gz;
+    url = "https://github.com/intel-ros/librealsense-release/archive/release/kinetic/librealsense/1.12.1-0.tar.gz";
+    name = "1.12.1-0.tar.gz";
     sha256 = "5a25f39bc13940211cec4fae8d377da4117fa07033d73226a588bce4a9e34129";
   };
 
+  buildType = "catkin";
   buildInputs = [ openssl libusb1 pkg-config linuxHeaders ];
   propagatedBuildInputs = [ openssl libusb1 linuxHeaders ];
   nativeBuildInputs = [ catkin ];

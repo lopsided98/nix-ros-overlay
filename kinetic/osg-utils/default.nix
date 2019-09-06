@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/kinetic/osg_utils/1.0.2-0.tar.gz;
+    url = "https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/kinetic/osg_utils/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "b373910f54cfa60107bc4faf65ef211c4ffd45ebed37bdf539d9b6158cb96266";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf openscenegraph roscpp geometry-msgs ];
-  propagatedBuildInputs = [ tf openscenegraph roscpp geometry-msgs ];
+  propagatedBuildInputs = [ tf roscpp openscenegraph geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

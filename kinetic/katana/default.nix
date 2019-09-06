@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana/1.1.2-0.tar.gz;
+    url = "https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana/1.1.2-0.tar.gz";
+    name = "1.1.2-0.tar.gz";
     sha256 = "040323dee998fc110e0dd8f4016a267e8a12dfd829c7db09d280d258581fcb14";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs armadillo control-msgs katana-msgs trajectory-msgs sensor-msgs roscpp roslib kni urdf actionlib moveit-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ std-srvs armadillo control-msgs katana-msgs trajectory-msgs sensor-msgs roscpp roslib kni urdf actionlib moveit-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

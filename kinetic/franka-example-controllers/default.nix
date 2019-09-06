@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.0-r1";
 
   src = fetchurl {
-    url = https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_example_controllers/0.6.0-1.tar.gz;
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_example_controllers/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
     sha256 = "40806f66dfb7263fd2f893ac44bcbd621b1e124e87e19247aa90b74a55f69b2f";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface pluginlib realtime-tools message-generation controller-interface dynamic-reconfigure libfranka franka-hw roscpp geometry-msgs eigen ];
   propagatedBuildInputs = [ panda-moveit-config hardware-interface franka-description pluginlib realtime-tools franka-control controller-interface message-runtime dynamic-reconfigure rospy franka-hw roscpp libfranka geometry-msgs ];
   nativeBuildInputs = [ catkin ];

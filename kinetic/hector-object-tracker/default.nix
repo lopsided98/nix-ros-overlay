@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.4";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_worldmodel-release/archive/release/kinetic/hector_object_tracker/0.3.4-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_worldmodel-release/archive/release/kinetic/hector_object_tracker/0.3.4-0.tar.gz";
+    name = "0.3.4-0.tar.gz";
     sha256 = "ecd9277505a8ac1f834315da62eaef06597ea2762bfd4593db597517f442c793";
   };
 
+  buildType = "catkin";
   buildInputs = [ hector-marker-drawing roscpp hector-nav-msgs image-geometry hector-worldmodel-msgs tf ];
   propagatedBuildInputs = [ hector-marker-drawing roscpp hector-nav-msgs image-geometry hector-worldmodel-msgs tf ];
   nativeBuildInputs = [ catkin ];

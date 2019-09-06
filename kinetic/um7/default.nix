@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/um7-release/archive/release/kinetic/um7/0.0.4-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/um7-release/archive/release/kinetic/um7/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "96835957db572d596a12aeef84e6319b9f9f2e14876e0251542763a323ae24b4";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp sensor-msgs message-generation serial ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ sensor-msgs roscpp message-runtime serial ];

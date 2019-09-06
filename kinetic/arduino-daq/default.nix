@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/ual-arm-ros-pkg-release/arduino_daq-release/archive/release/kinetic/arduino_daq/1.0.1-0.tar.gz;
+    url = "https://github.com/ual-arm-ros-pkg-release/arduino_daq-release/archive/release/kinetic/arduino_daq/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "7d2d5c27545910fdce8db1eedda18cac315953b6f76396ee73a0ca0a71c65a15";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation roscpp mrpt1 ];
-  propagatedBuildInputs = [ std-msgs message-generation roscpp mrpt1 ];
+  propagatedBuildInputs = [ std-msgs message-generation mrpt1 roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

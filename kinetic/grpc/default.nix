@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.10";
 
   src = fetchurl {
-    url = https://github.com/CogRobRelease/catkin_grpc-release/archive/release/kinetic/grpc/0.0.10-0.tar.gz;
+    url = "https://github.com/CogRobRelease/catkin_grpc-release/archive/release/kinetic/grpc/0.0.10-0.tar.gz";
+    name = "0.0.10-0.tar.gz";
     sha256 = "0cf8a41e16f5b0df5e6a18710cb3e189747ba48c8ce849e5601b987d682ffc4f";
   };
 
+  buildType = "catkin";
   buildInputs = [ autoconf git rsync libtool zlib ];
   nativeBuildInputs = [ catkin ];
 

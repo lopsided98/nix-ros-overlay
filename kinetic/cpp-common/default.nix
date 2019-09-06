@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roscpp_core-release/archive/release/kinetic/cpp_common/0.6.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/kinetic/cpp_common/0.6.11-0.tar.gz";
+    name = "0.6.11-0.tar.gz";
     sha256 = "aa7ac13928f64f5a83e3d1ed935509ed4157730a285043a27802d6006bc12ccc";
   };
 
+  buildType = "catkin";
   buildInputs = [ console-bridge boost ];
   propagatedBuildInputs = [ console-bridge boost ];
   nativeBuildInputs = [ catkin ];

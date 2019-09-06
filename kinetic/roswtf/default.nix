@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roswtf/1.12.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roswtf/1.12.14-0.tar.gz";
+    name = "1.12.14-0.tar.gz";
     sha256 = "0d3d052af6249ebd27dc854ecc4987eaf1fb15ab6b29800c9616bbb89413d721";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest ];
   checkInputs = [ cmake-modules ];
   propagatedBuildInputs = [ pythonPackages.rospkg rosbuild rosservice rosgraph pythonPackages.paramiko roslaunch roslib rosnode ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.4.0-r3";
 
   src = fetchurl {
-    url = https://github.com/ipab-slmc/optpp_catkin-release/archive/release/kinetic/optpp_catkin/2.4.0-3.tar.gz;
+    url = "https://github.com/ipab-slmc/optpp_catkin-release/archive/release/kinetic/optpp_catkin/2.4.0-3.tar.gz";
+    name = "2.4.0-3.tar.gz";
     sha256 = "9af2eb6cb36367547f1ef5a9ae0f9a18ea0b8035a72930fa667bb5b616ac2a9e";
   };
 
+  buildType = "catkin";
   buildInputs = [ autoconf git gfortran ];
   nativeBuildInputs = [ catkin ];
 

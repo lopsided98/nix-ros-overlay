@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.3";
 
   src = fetchurl {
-    url = https://github.com/start-jsk/denso-release/archive/release/kinetic/vs060_moveit_config/2.0.3-0.tar.gz;
+    url = "https://github.com/start-jsk/denso-release/archive/release/kinetic/vs060_moveit_config/2.0.3-0.tar.gz";
+    name = "2.0.3-0.tar.gz";
     sha256 = "18083bd47e95cccd84e417f1c301f3a46362cc1ee305160dd32a1b8122c0c514";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-visualization moveit-ros-move-group moveit-simple-controller-manager robot-state-publisher moveit-planners-ompl ];
   propagatedBuildInputs = [ moveit-ros-move-group moveit-ros-visualization vs060 moveit-simple-controller-manager robot-state-publisher moveit-planners-ompl ];
   nativeBuildInputs = [ catkin ];

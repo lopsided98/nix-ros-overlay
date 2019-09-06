@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.3-r1";
 
   src = fetchurl {
-    url = https://github.com/OSUrobotics/people-release/archive/release/kinetic/face_detector/1.1.3-1.tar.gz;
+    url = "https://github.com/OSUrobotics/people-release/archive/release/kinetic/face_detector/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
     sha256 = "beee8a3d733efcf3121360ea3f3a6c0b73c33f1b988265527c5953eff6addcd0";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs cv-bridge image-geometry actionlib rospy tf geometry-msgs stereo-msgs image-transport message-filters message-generation roslib std-srvs people-msgs rosbag std-msgs roscpp stereo-image-proc sensor-msgs ];
   checkInputs = [ rostest stereo-image-proc ];
   propagatedBuildInputs = [ actionlib-msgs cv-bridge image-geometry actionlib rospy tf geometry-msgs stereo-msgs image-transport message-filters message-runtime roslib std-srvs people-msgs rosbag std-msgs roscpp stereo-image-proc sensor-msgs dynamic-reconfigure ];

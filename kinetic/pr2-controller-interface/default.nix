@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.17";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/kinetic/pr2_controller_interface/1.8.17-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/kinetic/pr2_controller_interface/1.8.17-0.tar.gz";
+    name = "1.8.17-0.tar.gz";
     sha256 = "529432c34b823d416113f8974ec688de4aaac2a8a71fb252bad72106119c7e2b";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-interface pr2-mechanism-model roscpp ];
   propagatedBuildInputs = [ controller-interface pr2-mechanism-model roscpp ];
   nativeBuildInputs = [ catkin ];

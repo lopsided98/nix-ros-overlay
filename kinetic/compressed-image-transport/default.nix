@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_transport_plugins-release/archive/release/kinetic/compressed_image_transport/1.9.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/image_transport_plugins-release/archive/release/kinetic/compressed_image_transport/1.9.5-0.tar.gz";
+    name = "1.9.5-0.tar.gz";
     sha256 = "a5889f67c061753e8971189c93b8da7fa9222c180cd61da7b1b6c473ce957816";
   };
 
+  buildType = "catkin";
   buildInputs = [ image-transport cv-bridge dynamic-reconfigure ];
   propagatedBuildInputs = [ image-transport cv-bridge dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

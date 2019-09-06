@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.8";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_extensions/0.3.8-0.tar.gz;
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_extensions/0.3.8-0.tar.gz";
+    name = "0.3.8-0.tar.gz";
     sha256 = "0574853279e6ad3901da6c088307d7d756599940eb3a5f47e6f56a0ae1f00a39";
   };
 
+  buildType = "catkin";
   buildInputs = [ joint-limits-interface roscpp ];
   checkInputs = [ rostest prbt-support code-coverage rosunit ];
   propagatedBuildInputs = [ joint-limits-interface ];

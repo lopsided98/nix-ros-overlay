@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/um6-release/archive/release/kinetic/um6/1.1.2-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/um6-release/archive/release/kinetic/um6/1.1.2-0.tar.gz";
+    name = "1.1.2-0.tar.gz";
     sha256 = "1b683e0baa0ded774e95c807164fb115d6533f861a54dcc709007a2a4d4cd680";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslint sensor-msgs serial message-generation roscpp ];
   propagatedBuildInputs = [ sensor-msgs serial message-runtime roscpp ];
   nativeBuildInputs = [ catkin ];

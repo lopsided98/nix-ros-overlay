@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.3.5";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_mapping/0.3.5-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_mapping/0.3.5-0.tar.gz";
+    name = "0.3.5-0.tar.gz";
     sha256 = "30d1768ad414151ea1e69f71dd154bb11e6c2ae76537a6cdde3e9fd8bfb4a6bd";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost tf message-filters roscpp nav-msgs message-generation visualization-msgs eigen tf-conversions laser-geometry ];
-  propagatedBuildInputs = [ boost tf message-filters roscpp nav-msgs message-runtime visualization-msgs eigen tf-conversions laser-geometry ];
+  propagatedBuildInputs = [ boost message-filters roscpp laser-geometry nav-msgs message-runtime visualization-msgs eigen tf-conversions tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

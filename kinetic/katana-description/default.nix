@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_description/1.1.2-0.tar.gz;
+    url = "https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_description/1.1.2-0.tar.gz";
+    name = "1.1.2-0.tar.gz";
     sha256 = "94179ff07e5fb626522d3511665d24fa4254b4068be489dabfc410d97a75a771";
   };
 
+  buildType = "catkin";
   buildInputs = [ convex-decomposition urdf transmission-interface ivcon ];
   propagatedBuildInputs = [ urdf transmission-interface ];
   nativeBuildInputs = [ catkin ];

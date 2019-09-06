@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.12";
 
   src = fetchurl {
-    url = https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/addwa_local_planner/0.0.12-0.tar.gz;
+    url = "https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/addwa_local_planner/0.0.12-0.tar.gz";
+    name = "0.0.12-0.tar.gz";
     sha256 = "7acaa3894129b79d41e35dd91729d144609a2ea855fec3c2ddedff35379a2a86";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d cmake-modules pluginlib base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf pcl-conversions eigen ];
   propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf eigen ];
   nativeBuildInputs = [ catkin ];

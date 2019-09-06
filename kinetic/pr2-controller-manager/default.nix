@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.8.17";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/kinetic/pr2_controller_manager/1.8.17-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/kinetic/pr2_controller_manager/1.8.17-0.tar.gz";
+    name = "1.8.17-0.tar.gz";
     sha256 = "d0d577b2683d834e7da013d1e06ec4ea4f5851344215240844a176845b01d688";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-mechanism-msgs pr2-hardware-interface pluginlib cmake-modules pr2-controller-interface pr2-mechanism-diagnostics realtime-tools sensor-msgs pr2-description rostest diagnostic-msgs roscpp pr2-mechanism-model ];
-  propagatedBuildInputs = [ pr2-mechanism-msgs pr2-hardware-interface pluginlib pr2-controller-interface pr2-description pr2-mechanism-diagnostics realtime-tools rosparam sensor-msgs rospy diagnostic-msgs roscpp pr2-mechanism-model ];
+  propagatedBuildInputs = [ pr2-mechanism-msgs pr2-hardware-interface pr2-controller-interface pr2-description pluginlib pr2-mechanism-diagnostics realtime-tools sensor-msgs rosparam rospy diagnostic-msgs roscpp pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-OPC-release/archive/release/kinetic/thormang3_navigation/0.3.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-OPC-release/archive/release/kinetic/thormang3_navigation/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "81d0be82a1d15aa91595d78c027bcbcddb29fa942f8d599fd208a336adac1bb8";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ octomap-server map-server footstep-planner ];
   nativeBuildInputs = [ catkin ];
 

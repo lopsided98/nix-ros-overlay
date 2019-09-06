@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_karto/0.3.2-0.tar.gz;
+    url = "https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_karto/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "e9aaba2fc88c8ffb4abfa03d60bf299e3663da41a5f953ecb65939e5af6677d3";
   };
 
+  buildType = "catkin";
   buildInputs = [ suitesparse nav2d-msgs tf nav2d-localizer tbb nav-msgs visualization-msgs eigen roscpp geometry-msgs ];
-  propagatedBuildInputs = [ suitesparse nav2d-msgs tf nav2d-localizer tbb nav-msgs visualization-msgs eigen roscpp geometry-msgs ];
+  propagatedBuildInputs = [ suitesparse nav2d-msgs roscpp nav2d-localizer tbb nav-msgs visualization-msgs eigen tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

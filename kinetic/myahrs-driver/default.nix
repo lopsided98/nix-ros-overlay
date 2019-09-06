@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.2";
 
   src = fetchurl {
-    url = https://github.com/robotpilot/myahrs_driver-release/archive/release/kinetic/myahrs_driver/0.1.2-0.tar.gz;
+    url = "https://github.com/robotpilot/myahrs_driver-release/archive/release/kinetic/myahrs_driver/0.1.2-0.tar.gz";
+    name = "0.1.2-0.tar.gz";
     sha256 = "4468064f639bf769b565657f3ef92e0962bd14155387437fa7725ec7b1684ba1";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ std-msgs sensor-msgs tf roscpp ];
+  propagatedBuildInputs = [ std-msgs sensor-msgs roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

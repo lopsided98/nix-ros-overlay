@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.5";
 
   src = fetchurl {
-    url = https://github.com/ros-naoqi/naoqi_bridge-release/archive/release/kinetic/naoqi_pose/0.5.5-0.tar.gz;
+    url = "https://github.com/ros-naoqi/naoqi_bridge-release/archive/release/kinetic/naoqi_pose/0.5.5-0.tar.gz";
+    name = "0.5.5-0.tar.gz";
     sha256 = "baffa6449d94b13739ccfcf17cceb9283145ab80974bc10a78088d16be178982";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ std-srvs actionlib-msgs trajectory-msgs sensor-msgs naoqi-bridge-msgs rospy actionlib std-msgs ];
   nativeBuildInputs = [ catkin ];
 

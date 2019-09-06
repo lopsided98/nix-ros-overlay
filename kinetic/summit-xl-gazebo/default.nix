@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.1";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/summit_xl_sim-release/archive/release/kinetic/summit_xl_gazebo/1.1.1-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/summit_xl_sim-release/archive/release/kinetic/summit_xl_gazebo/1.1.1-0.tar.gz";
+    name = "1.1.1-0.tar.gz";
     sha256 = "c884aa197af85170706dadb272925aac0afeaef181c0eb9d9aa5f4b973536801";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros std-srvs summit-xl-robot-control tf summit-xl-description summit-xl-control std-msgs roscpp xacro ];
   propagatedBuildInputs = [ gazebo-ros std-srvs summit-xl-robot-control tf summit-xl-description summit-xl-control std-msgs roscpp xacro ];
   nativeBuildInputs = [ catkin ];

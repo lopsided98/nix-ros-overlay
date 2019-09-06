@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/tork-a/melfa_robot-release/archive/release/kinetic/melfa_description/0.0.4-0.tar.gz;
+    url = "https://github.com/tork-a/melfa_robot-release/archive/release/kinetic/melfa_description/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "0327a6e55458e966641c3467b66ee59515573e3bcfc06a6cb7ddfabc13b72086";
   };
 
+  buildType = "catkin";
   buildInputs = [ rviz xacro ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ rviz joint-state-publisher xacro robot-state-publisher ];
+  propagatedBuildInputs = [ joint-state-publisher rviz xacro robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

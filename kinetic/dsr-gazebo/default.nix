@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.6-r1";
 
   src = fetchurl {
-    url = https://github.com/doosan-robotics/doosan-robot-release/archive/release/kinetic/dsr_gazebo/0.9.6-1.tar.gz;
+    url = "https://github.com/doosan-robotics/doosan-robot-release/archive/release/kinetic/dsr_gazebo/0.9.6-1.tar.gz";
+    name = "0.9.6-1.tar.gz";
     sha256 = "b879567184d980dafee57575a9370906e08672d2fbc8bc174c84bd953bd651b6";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros controller-manager urdf xacro gazebo-ros-control ];
   propagatedBuildInputs = [ gazebo-ros controller-manager urdf xacro gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];

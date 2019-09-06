@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_substitute-release/archive/release/kinetic/cob_safety_controller/0.6.8-1.tar.gz;
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/kinetic/cob_safety_controller/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
     sha256 = "45b1e382f053c35b192e5cad91bc3f5d2e4fb2a56de8a512ecc04d6c41c50c90";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

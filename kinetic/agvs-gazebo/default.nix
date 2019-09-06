@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/agvs_sim-release/archive/release/kinetic/agvs_gazebo/0.1.3-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/agvs_sim-release/archive/release/kinetic/agvs_gazebo/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "6de0127434c711897d57f1bbe5aa0cbf02dc036056ecfd6685602fb364fdcc0e";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros std-srvs joint-state-controller agvs-pad velocity-controllers roscpp agvs-description agvs-robot-control effort-controllers std-msgs tf ];
   propagatedBuildInputs = [ gazebo-ros std-srvs joint-state-controller agvs-pad velocity-controllers roscpp agvs-description agvs-robot-control effort-controllers std-msgs tf ];
   nativeBuildInputs = [ catkin ];

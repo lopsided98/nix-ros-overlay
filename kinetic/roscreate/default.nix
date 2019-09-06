@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/roscreate/1.14.6-1.tar.gz;
+    url = "https://github.com/ros-gbp/ros-release/archive/release/kinetic/roscreate/1.14.6-1.tar.gz";
+    name = "1.14.6-1.tar.gz";
     sha256 = "286727378b5b57e90ef7e9b9f56de9d82110ee08f1ad8ac94c45a982568d5af1";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.rospkg roslib ];
   nativeBuildInputs = [ catkin ];
 

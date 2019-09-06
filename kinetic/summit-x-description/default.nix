@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/summit_x_common-release/archive/release/kinetic/summit_x_description/0.1.0-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/summit_x_common-release/archive/release/kinetic/summit_x_description/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "43a639d5d44313b61f8e731fb9baffb1ba9d71d7b02dbb77e4a53447ca8822cb";
   };
 
+  buildType = "catkin";
   buildInputs = [ robotnik-sensors urdf xacro robot-state-publisher ];
   propagatedBuildInputs = [ robotnik-sensors urdf xacro robot-state-publisher ];
   nativeBuildInputs = [ catkin ];

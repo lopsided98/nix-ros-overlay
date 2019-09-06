@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/openface_ros/0.0.4-0.tar.gz;
+    url = "https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/openface_ros/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "e6475b9491f357caab0b422f7394a467ebbe340332e291e92810974855b2ec33";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy cv-bridge image-recognition-util image-recognition-msgs ];
   propagatedBuildInputs = [ pythonPackages.numpy cv-bridge image-recognition-msgs image-recognition-util rospy ];
   nativeBuildInputs = [ catkin ];

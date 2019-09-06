@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-Utility-release/archive/release/kinetic/robotis_utility/0.1.3-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-Utility-release/archive/release/kinetic/robotis_utility/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "5247743fab258a1a79a71b20ad0b472e757b9d8762faba9c1941e07fb6ff8721";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ ros-madplay-player ros-mpg321-player ];
   nativeBuildInputs = [ catkin ];
 

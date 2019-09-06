@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/urdfdom_py-release/archive/release/kinetic/urdfdom_py/0.3.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/urdfdom_py-release/archive/release/kinetic/urdfdom_py/0.3.3-0.tar.gz";
+    name = "0.3.3-0.tar.gz";
     sha256 = "227ecfa29755182798418037715d3467c7879788669f1c1b8b999b4512e8988d";
   };
 
+  buildType = "catkin";
   buildInputs = [ python ];
   propagatedBuildInputs = [ python catkin pythonPackages.lxml ];
   nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];

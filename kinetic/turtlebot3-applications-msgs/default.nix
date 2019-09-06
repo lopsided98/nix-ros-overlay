@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3_applications_msgs-release/archive/release/kinetic/turtlebot3_applications_msgs/1.0.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_applications_msgs-release/archive/release/kinetic/turtlebot3_applications_msgs/1.0.0-0.tar.gz";
+    name = "1.0.0-0.tar.gz";
     sha256 = "d95bcf3f16e4f51a49a53708b680fe6635f2e50434d8c9282bdc83204ec3b926";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs sensor-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

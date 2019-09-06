@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3";
 
   src = fetchurl {
-    url = https://github.com/pal-gbp/aruco_ros-release/archive/release/kinetic/aruco_ros/0.2.3-0.tar.gz;
+    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/kinetic/aruco_ros/0.2.3-0.tar.gz";
+    name = "0.2.3-0.tar.gz";
     sha256 = "ce8f1625b98d03e73fe10208cf432a0862d72645e1b780a515b050d426d9f51e";
   };
 
+  buildType = "catkin";
   buildInputs = [ image-transport sensor-msgs cv-bridge aruco-msgs roscpp visualization-msgs dynamic-reconfigure tf aruco geometry-msgs ];
   propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge aruco-msgs roscpp visualization-msgs dynamic-reconfigure tf aruco geometry-msgs ];
   nativeBuildInputs = [ catkin ];

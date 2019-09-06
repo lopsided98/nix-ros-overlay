@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/access_point_control/1.0.15-0.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/access_point_control/1.0.15-0.tar.gz";
+    name = "1.0.15-0.tar.gz";
     sha256 = "8373f805c0200dcd6b516082f486463211cafe0494573e578fe6c4c03121849e";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

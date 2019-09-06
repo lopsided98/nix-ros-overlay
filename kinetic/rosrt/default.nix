@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.25";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_realtime-release/archive/release/kinetic/rosrt/1.0.25-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_realtime-release/archive/release/kinetic/rosrt/1.0.25-0.tar.gz";
+    name = "1.0.25-0.tar.gz";
     sha256 = "d059e4e4434e4f0d21069db378ac23798fc644b559ac390b3cfa3886cba5195e";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosatomic allocators roslib std-msgs lockfree roscpp rosunit ];
   propagatedBuildInputs = [ rosatomic allocators roslib std-msgs lockfree roscpp rosunit ];
   nativeBuildInputs = [ catkin ];

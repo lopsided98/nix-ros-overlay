@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.7";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/kobuki_desktop-release/archive/release/kinetic/kobuki_dashboard/0.5.7-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/kobuki_desktop-release/archive/release/kinetic/kobuki_dashboard/0.5.7-0.tar.gz";
+    name = "0.5.7-0.tar.gz";
     sha256 = "82243a29379e1dd189f170afad371c0cbe6b9ace00cafc2d496c6ff857b91c71";
   };
 
+  buildType = "catkin";
   buildInputs = [ rqt-robot-dashboard kobuki-msgs rospy ];
   propagatedBuildInputs = [ rqt-robot-dashboard kobuki-msgs rospy ];
   nativeBuildInputs = [ catkin ];

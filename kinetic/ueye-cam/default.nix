@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.16";
 
   src = fetchurl {
-    url = https://github.com/anqixu/ueye_cam-release/archive/release/kinetic/ueye_cam/1.0.16-0.tar.gz;
+    url = "https://github.com/anqixu/ueye_cam-release/archive/release/kinetic/ueye_cam/1.0.16-0.tar.gz";
+    name = "1.0.16-0.tar.gz";
     sha256 = "b58bc503b7feca34d7d68fe1af42d122635fbef9f5a6263d1d38269f09b18acc";
   };
 
+  buildType = "catkin";
   buildInputs = [ camera-calibration-parsers image-transport sensor-msgs camera-info-manager roscpp dynamic-reconfigure nodelet ];
   propagatedBuildInputs = [ camera-calibration-parsers image-transport sensor-msgs camera-info-manager roscpp dynamic-reconfigure nodelet ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/HebiRobotics/hebi_cpp_api_ros-release/archive/release/kinetic/hebi_cpp_api/2.1.0-1.tar.gz;
+    url = "https://github.com/HebiRobotics/hebi_cpp_api_ros-release/archive/release/kinetic/hebi_cpp_api/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
     sha256 = "fe7ef6423758c42c99f08a47cb95f1cfea0c00d6f599dc3b7a28c291c62a4a10";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules eigen ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/kinetic/dataspeed_pds/1.0.2-0.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/kinetic/dataspeed_pds/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "a8305e9f802481d51089aa023a5cad9e50d08a67e48cfdee9ab87d93bb69bc77";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ dataspeed-pds-msgs dataspeed-pds-scripts dataspeed-pds-can ];
   nativeBuildInputs = [ catkin ];
 

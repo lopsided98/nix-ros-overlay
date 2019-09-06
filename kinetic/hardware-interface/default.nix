@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/hardware_interface/0.13.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/hardware_interface/0.13.3-0.tar.gz";
+    name = "0.13.3-0.tar.gz";
     sha256 = "87d812bfa3d2a03df47ff2cb240d6b8cfeb66511d622dd71453a76185e1b5641";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ roscpp ];

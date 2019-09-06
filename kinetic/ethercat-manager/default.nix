@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/minas-release/archive/release/kinetic/ethercat_manager/1.0.10-0.tar.gz;
+    url = "https://github.com/tork-a/minas-release/archive/release/kinetic/ethercat_manager/1.0.10-0.tar.gz";
+    name = "1.0.10-0.tar.gz";
     sha256 = "7f379c2f576c5952a53fcadb1899a5ab76154d806b4a1712fe9329dca59820c7";
   };
 
+  buildType = "catkin";
   buildInputs = [ soem roscpp ];
   checkInputs = [ rostest roslaunch ];
   propagatedBuildInputs = [ soem roscpp ];

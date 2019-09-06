@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0";
 
   src = fetchurl {
-    url = https://github.com/guykhazma/ftm_msgs-release/archive/release/kinetic/ftm_msgs/1.0.0-0.tar.gz;
+    url = "https://github.com/guykhazma/ftm_msgs-release/archive/release/kinetic/ftm_msgs/1.0.0-0.tar.gz";
+    name = "1.0.0-0.tar.gz";
     sha256 = "ab1a42774b066258b5a581eb339d682667b1c34f56d2ad85bb563331a3534f5b";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation actionlib-msgs rospy ];
   propagatedBuildInputs = [ std-msgs message-runtime rospy ];
   nativeBuildInputs = [ catkin ];

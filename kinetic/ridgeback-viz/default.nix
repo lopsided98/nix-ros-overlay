@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/ridgeback_desktop-release/archive/release/kinetic/ridgeback_viz/0.1.1-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/ridgeback_desktop-release/archive/release/kinetic/ridgeback_viz/0.1.1-0.tar.gz";
+    name = "0.1.1-0.tar.gz";
     sha256 = "81a15a6be2a99b7a78e1e12bed9355c512a2d5e0ee3076c637598796561c4e04";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ rviz joint-state-publisher ridgeback-description ];
+  propagatedBuildInputs = [ joint-state-publisher rviz ridgeback-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

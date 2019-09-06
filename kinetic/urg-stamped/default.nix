@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.3-r1";
 
   src = fetchurl {
-    url = https://github.com/seqsense/urg_stamped-release/archive/release/kinetic/urg_stamped/0.0.3-1.tar.gz;
+    url = "https://github.com/seqsense/urg_stamped-release/archive/release/kinetic/urg_stamped/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
     sha256 = "fae0726c9ba44fbae6d2f2aa659edf7b010288e6bbe8310e86848356a7821dde";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp ];
   checkInputs = [ rostest roslint rosunit ];
   propagatedBuildInputs = [ sensor-msgs roscpp ];

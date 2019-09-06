@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.6.0";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_apps-release/archive/release/kinetic/pr2_position_scripts/0.6.0-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_apps-release/archive/release/kinetic/pr2_position_scripts/0.6.0-0.tar.gz";
+    name = "0.6.0-0.tar.gz";
     sha256 = "f3627395b8df0200b30871a045ad856bc35dad07ca169c5d1eeb29dc72115970";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs tf actionlib rospy ];
-  propagatedBuildInputs = [ pr2-controllers-msgs tf actionlib rospy ];
+  propagatedBuildInputs = [ rospy pr2-controllers-msgs tf actionlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

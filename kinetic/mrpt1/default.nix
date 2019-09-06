@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.5.8";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt1-release/archive/release/kinetic/mrpt1/1.5.8-0.tar.gz;
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt1-release/archive/release/kinetic/mrpt1/1.5.8-0.tar.gz";
+    name = "1.5.8-0.tar.gz";
     sha256 = "7e8dc91a1c2a5802a2658753ab3426b8822795a0546d663af4e204a0a512a363";
   };
 
+  buildType = "cmake";
   buildInputs = [ python wxGTK pythonPackages.numpy suitesparse boost libpcap assimp ffmpeg libusb1 libjpeg octomap eigen zlib freeglut opencv3 libudev ];
-  propagatedBuildInputs = [ python wxGTK pythonPackages.numpy suitesparse boost libpcap catkin assimp ffmpeg libusb1 libjpeg octomap eigen zlib freeglut opencv3 libudev ];
+  propagatedBuildInputs = [ python wxGTK pythonPackages.numpy suitesparse boost libpcap catkin ffmpeg assimp libusb1 octomap libjpeg eigen zlib freeglut opencv3 libudev ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

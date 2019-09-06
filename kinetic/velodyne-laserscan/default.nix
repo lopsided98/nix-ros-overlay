@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.5.2";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/velodyne-release/archive/release/kinetic/velodyne_laserscan/1.5.2-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/kinetic/velodyne_laserscan/1.5.2-0.tar.gz";
+    name = "1.5.2-0.tar.gz";
     sha256 = "652e6f49cef2311e8304b70314c8ec385e3d5db92de206abd24f8644de9d794f";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp nodelet dynamic-reconfigure ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ sensor-msgs roscpp nodelet dynamic-reconfigure ];
+  propagatedBuildInputs = [ sensor-msgs nodelet roscpp dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

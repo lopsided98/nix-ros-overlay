@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.3";
 
   src = fetchurl {
-    url = https://github.com/stonier/cost_map-release/archive/release/kinetic/cost_map_cv/0.3.3-0.tar.gz;
+    url = "https://github.com/stonier/cost_map-release/archive/release/kinetic/cost_map_cv/0.3.3-0.tar.gz";
+    name = "0.3.3-0.tar.gz";
     sha256 = "4cf2d6cb2dec4df41e39e4b8395f0ae3d87abd10703941b5a767de07c7143b4e";
   };
 
+  buildType = "catkin";
   buildInputs = [ libyamlcpp cost-map-core opencv3 boost ];
   propagatedBuildInputs = [ libyamlcpp cost-map-core opencv3 boost ];
   nativeBuildInputs = [ catkin ];

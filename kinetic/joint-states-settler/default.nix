@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/calibration-release/archive/release/kinetic/joint_states_settler/0.10.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/calibration-release/archive/release/kinetic/joint_states_settler/0.10.14-0.tar.gz";
+    name = "0.10.14-0.tar.gz";
     sha256 = "fe19d91ab7814b863b654bf2a6d4b63bbccf0bd98cc86c6379bdfcb7c7c0e9b9";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs roscpp ];
   propagatedBuildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

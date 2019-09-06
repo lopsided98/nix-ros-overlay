@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/urdf_geometry_parser-release/archive/release/kinetic/urdf_geometry_parser/0.0.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/urdf_geometry_parser-release/archive/release/kinetic/urdf_geometry_parser/0.0.3-0.tar.gz";
+    name = "0.0.3-0.tar.gz";
     sha256 = "df59d7a59fda9b319985dc04e146a6dfad289c54bf8898b12a4988b2bd83835b";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2 roscpp urdf ];
   propagatedBuildInputs = [ tf2 roscpp urdf ];
   nativeBuildInputs = [ catkin ];

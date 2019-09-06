@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.3";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_simulator-release/archive/release/kinetic/turtlebot_stdr/2.2.3-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_simulator-release/archive/release/kinetic/turtlebot_stdr/2.2.3-0.tar.gz";
+    name = "2.2.3-0.tar.gz";
     sha256 = "e434f3c0a8a9410c54a97390f256e4ac5a58574713d0eecfcf2f968affa4265e";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ stdr-server turtlebot-bringup stdr-robot yocs-velocity-smoother navigation yocs-virtual-sensor stdr-gui stdr-resources turtlebot-navigation ];
   nativeBuildInputs = [ catkin ];
 

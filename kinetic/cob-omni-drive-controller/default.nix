@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.7.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_omni_drive_controller/0.7.8-1.tar.gz;
+    url = "https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_omni_drive_controller/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
     sha256 = "df512f9e9c823ca15bd27734444f66d9960017b943168223bc4159aa98f0e0ce";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface std-srvs pluginlib boost cob-base-controller-utils realtime-tools sensor-msgs roscpp tf2 message-generation nav-msgs urdf controller-interface dynamic-reconfigure std-msgs angles tf geometry-msgs ];
-  propagatedBuildInputs = [ hardware-interface std-srvs pluginlib boost cob-base-controller-utils realtime-tools sensor-msgs roscpp tf2 nav-msgs urdf controller-interface dynamic-reconfigure std-msgs angles tf geometry-msgs ];
+  propagatedBuildInputs = [ hardware-interface std-srvs boost cob-base-controller-utils pluginlib realtime-tools sensor-msgs roscpp tf2 controller-interface urdf nav-msgs dynamic-reconfigure std-msgs angles tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

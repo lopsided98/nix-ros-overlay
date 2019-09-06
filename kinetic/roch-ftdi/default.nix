@@ -8,12 +8,14 @@ buildRosPackage {
   version = "2.0.15";
 
   src = fetchurl {
-    url = https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_ftdi/2.0.15-0.tar.gz;
+    url = "https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_ftdi/2.0.15-0.tar.gz";
+    name = "2.0.15-0.tar.gz";
     sha256 = "e2bd52557ad5e8645672365013360606387554f12bdc6d8fd73efb3337d0fd64";
   };
 
+  buildType = "catkin";
   buildInputs = [ libusb libftdi ecl-command-line ];
-  propagatedBuildInputs = [ libusb libftdi ecl-command-line ];
+  propagatedBuildInputs = [ ecl-command-line libftdi libusb ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

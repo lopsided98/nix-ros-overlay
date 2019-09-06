@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/humanoid_navigation-release/archive/release/kinetic/humanoid_planner_2d/0.4.2-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/humanoid_navigation-release/archive/release/kinetic/humanoid_planner_2d/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "92eb24ebd3a9ba584aef0cdbccf9043017208b34ad766d4ed98bc350bdf135f4";
   };
 
+  buildType = "catkin";
   buildInputs = [ sbpl gridmap-2d visualization-msgs roscpp geometry-msgs ];
   propagatedBuildInputs = [ sbpl gridmap-2d visualization-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

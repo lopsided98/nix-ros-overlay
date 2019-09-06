@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.6.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/octomap_mapping-release/archive/release/kinetic/octomap_server/0.6.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/octomap_mapping-release/archive/release/kinetic/octomap_server/0.6.1-0.tar.gz";
+    name = "0.6.1-0.tar.gz";
     sha256 = "75b3ad03bcef61e27fb9d19c5ad1efb1ffccb8fc2353c355e58a31b9eb3802b0";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs pcl sensor-msgs roscpp octomap-msgs nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs dynamic-reconfigure nodelet pcl-conversions ];
-  propagatedBuildInputs = [ std-srvs pcl sensor-msgs roscpp octomap-msgs nav-msgs octomap-ros octomap visualization-msgs pcl-ros std-msgs dynamic-reconfigure nodelet pcl-conversions ];
+  propagatedBuildInputs = [ std-srvs pcl sensor-msgs roscpp octomap-msgs pcl-ros nav-msgs octomap octomap-ros visualization-msgs dynamic-reconfigure std-msgs nodelet pcl-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

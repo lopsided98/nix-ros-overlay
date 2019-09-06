@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/message_multiplexing-release/archive/release/kinetic/message_multiplexing/0.2.4-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/message_multiplexing-release/archive/release/kinetic/message_multiplexing/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "a3fee278389d9e261bafbcca25561c1ef2461d6dc5eeda6445805034aa96f8d5";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ mm-messages mm-eigen-msgs mm-mux-demux mm-core-msgs mm-radio ];
   nativeBuildInputs = [ catkin ];
 

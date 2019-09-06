@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-release/archive/release/kinetic/op3_balance_control/0.2.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-release/archive/release/kinetic/op3_balance_control/0.2.1-0.tar.gz";
+    name = "0.2.1-0.tar.gz";
     sha256 = "5acbf20e7b57df2ee6531c91867030170799964eb75e9eb4accfa68f74a2d9c2";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp cmake-modules robotis-math eigen ];
   propagatedBuildInputs = [ roscpp cmake-modules robotis-math eigen ];
   nativeBuildInputs = [ catkin ];

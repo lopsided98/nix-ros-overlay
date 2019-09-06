@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.23";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/camera_calibration/1.12.23-0.tar.gz;
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/kinetic/camera_calibration/1.12.23-0.tar.gz";
+    name = "1.12.23-0.tar.gz";
     sha256 = "c81af01ce1714a1940ffdb3b1f2f29a7ae6a582ffa934286770da36d8ef9a395";
   };
 
+  buildType = "catkin";
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ std-srvs sensor-msgs cv-bridge message-filters image-geometry rospy ];
   nativeBuildInputs = [ catkin ];

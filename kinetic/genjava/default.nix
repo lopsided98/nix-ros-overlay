@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.4";
 
   src = fetchurl {
-    url = https://github.com/rosjava-release/genjava-release/archive/release/kinetic/genjava/0.3.4-0.tar.gz;
+    url = "https://github.com/rosjava-release/genjava-release/archive/release/kinetic/genjava/0.3.4-0.tar.gz";
+    name = "0.3.4-0.tar.gz";
     sha256 = "a19f7d15fbd106a52180a34422c07cfd02e53070dee24380d2ed8c80678207d5";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosjava-build-tools pythonPackages.rospkg rosjava-bootstrap genmsg pythonPackages.catkin-pkg ];
   propagatedBuildInputs = [ rosjava-build-tools pythonPackages.rospkg rosjava-bootstrap genmsg pythonPackages.catkin-pkg ];
   nativeBuildInputs = [ catkin ];

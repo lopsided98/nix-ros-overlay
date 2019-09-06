@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.4";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/image_exposure_msgs/0.13.4-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/image_exposure_msgs/0.13.4-0.tar.gz";
+    name = "0.13.4-0.tar.gz";
     sha256 = "c00581c3619079fa862447f37878201086bbd62a8f65405e68c80af761beba61";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation statistics-msgs ];
   propagatedBuildInputs = [ std-msgs statistics-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

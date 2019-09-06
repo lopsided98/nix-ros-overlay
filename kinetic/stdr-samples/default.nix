@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/stdr-simulator-ros-pkg/stdr_simulator-release/archive/release/kinetic/stdr_samples/0.3.2-0.tar.gz;
+    url = "https://github.com/stdr-simulator-ros-pkg/stdr_simulator-release/archive/release/kinetic/stdr_samples/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "ad1d00afd61790ecd3711da0614f6b85957cc0b117786253eef21e860d833079";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf sensor-msgs roscpp nav-msgs stdr-msgs roslib geometry-msgs ];
-  propagatedBuildInputs = [ tf sensor-msgs roscpp nav-msgs stdr-msgs roslib geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs roscpp roslib nav-msgs stdr-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

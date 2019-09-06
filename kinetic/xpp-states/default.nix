@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/xpp_states/1.0.10-0.tar.gz;
+    url = "https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/xpp_states/1.0.10-0.tar.gz";
+    name = "1.0.10-0.tar.gz";
     sha256 = "a630ba9f899c40baba9de98fda70db4992a1048dc5adabfba02b3feaed13140f";
   };
 
+  buildType = "catkin";
   buildInputs = [ eigen ];
   propagatedBuildInputs = [ eigen ];
   nativeBuildInputs = [ catkin ];

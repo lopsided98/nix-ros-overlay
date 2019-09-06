@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_tutorials/0.3.2-0.tar.gz;
+    url = "https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_tutorials/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "9c66ef5f00925e81fb4a68fd239460790ea767033ef2a4487ff102296dd0906b";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ nav2d-navigator nav2d-remote nav2d-karto nav2d-operator nav2d-msgs nav2d-exploration nav2d-localizer ];
   nativeBuildInputs = [ catkin ];
 

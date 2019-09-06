@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.7.0";
 
   src = fetchurl {
-    url = https://github.com/Slamtec/rplidar_ros-release/archive/release/kinetic/rplidar_ros/1.7.0-0.tar.gz;
+    url = "https://github.com/Slamtec/rplidar_ros-release/archive/release/kinetic/rplidar_ros/1.7.0-0.tar.gz";
+    name = "1.7.0-0.tar.gz";
     sha256 = "fa8714783305f08960ba816ca6188fa7a9f6a9ae28205ffb48ad64baf9005abb";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs sensor-msgs roscpp rosconsole ];
   propagatedBuildInputs = [ std-srvs sensor-msgs roscpp rosconsole ];
   nativeBuildInputs = [ catkin ];

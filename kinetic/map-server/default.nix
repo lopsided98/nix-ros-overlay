@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.4-0.tar.gz";
+    name = "1.14.4-0.tar.gz";
     sha256 = "a5bed8cd6108ec0b57ec9cfb9264695e55978cb946643aa02858b5e99a1b0dca";
   };
 
+  buildType = "catkin";
   buildInputs = [ SDL bullet SDL_image libyamlcpp tf2 nav-msgs roscpp ];
   checkInputs = [ rostest rosunit rospy ];
   propagatedBuildInputs = [ SDL bullet SDL_image libyamlcpp tf2 nav-msgs roscpp ];

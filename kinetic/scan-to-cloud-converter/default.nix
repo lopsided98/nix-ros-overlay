@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/scan_to_cloud_converter/0.3.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/scan_to_cloud_converter/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "bcfa4da677e54989fbe02414166c39ac0f26c6b364d1bd1c81725557c6afc7a5";
   };
 
+  buildType = "catkin";
   buildInputs = [ pcl roscpp pcl-conversions pcl-ros ];
   propagatedBuildInputs = [ pcl roscpp pcl-conversions pcl-ros ];
   nativeBuildInputs = [ catkin ];

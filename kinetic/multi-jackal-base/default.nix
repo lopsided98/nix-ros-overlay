@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.5";
 
   src = fetchurl {
-    url = https://github.com/NicksSimulationsROS/multi_jackal-release/archive/release/kinetic/multi_jackal_base/0.0.5-0.tar.gz;
+    url = "https://github.com/NicksSimulationsROS/multi_jackal-release/archive/release/kinetic/multi_jackal_base/0.0.5-0.tar.gz";
+    name = "0.0.5-0.tar.gz";
     sha256 = "4487f170fc0ea496d1dabce8dce264f730fa4d8b14cc876d6e19e4b08e69c501";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros controller-manager multi-jackal-control multi-jackal-description robot-localization urdf robot-state-publisher interactive-marker-twist-server multi-jackal-nav tf xacro ];
   nativeBuildInputs = [ catkin ];

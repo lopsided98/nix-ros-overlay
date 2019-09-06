@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.0";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_apps-release/archive/release/kinetic/pr2_tuckarm/0.6.0-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_apps-release/archive/release/kinetic/pr2_tuckarm/0.6.0-0.tar.gz";
+    name = "0.6.0-0.tar.gz";
     sha256 = "5e4a04899cb1f09027c550b29a79882d85e7dc2b1736ff2320dce118a201b399";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pr2-mechanism-msgs pr2-tuck-arms-action trajectory-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

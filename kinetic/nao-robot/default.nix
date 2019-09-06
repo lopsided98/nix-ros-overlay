@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.15";
 
   src = fetchurl {
-    url = https://github.com/ros-naoqi/nao_robot-release/archive/release/kinetic/nao_robot/0.5.15-0.tar.gz;
+    url = "https://github.com/ros-naoqi/nao_robot-release/archive/release/kinetic/nao_robot/0.5.15-0.tar.gz";
+    name = "0.5.15-0.tar.gz";
     sha256 = "10a8b3c97e8d2ca7bcd19bb914b28adda7ca7548df448e239958645cf69dd3eb";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ nao-bringup nao-apps nao-description ];
   nativeBuildInputs = [ catkin ];
 

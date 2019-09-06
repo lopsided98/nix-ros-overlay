@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.5";
 
   src = fetchurl {
-    url = https://github.com/anybotics/variant-release/archive/release/kinetic/variant_topic_tools/0.1.5-0.tar.gz;
+    url = "https://github.com/anybotics/variant-release/archive/release/kinetic/variant_topic_tools/0.1.5-0.tar.gz";
+    name = "0.1.5-0.tar.gz";
     sha256 = "482aa06d21a259c8e3fd1e693787ca62ebbf67c949ef88abb8f424d4f7a5a7f9";
   };
 
+  buildType = "catkin";
   buildInputs = [ variant-msgs roslib roscpp ];
-  propagatedBuildInputs = [ variant-msgs roslib roscpp ];
+  propagatedBuildInputs = [ roslib variant-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

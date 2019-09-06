@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.10";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/qt_ros-release/archive/release/kinetic/qt_ros/0.2.10-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/qt_ros-release/archive/release/kinetic/qt_ros/0.2.10-0.tar.gz";
+    name = "0.2.10-0.tar.gz";
     sha256 = "ec79e65c0d984924e42a13a7c3a18ccdd453db019fb315639123eb7b7cd87862";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ qt-tutorials qt-create qt-build ];
   nativeBuildInputs = [ catkin ];
 

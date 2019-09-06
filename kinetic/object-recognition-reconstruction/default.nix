@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.6";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/object_recognition_reconstruction-release/archive/release/kinetic/object_recognition_reconstruction/0.3.6-0.tar.gz;
+    url = "https://github.com/ros-gbp/object_recognition_reconstruction-release/archive/release/kinetic/object_recognition_reconstruction/0.3.6-0.tar.gz";
+    name = "0.3.6-0.tar.gz";
     sha256 = "4f670fb39bcd5753c409b409396a0229669dcf0a82a6ce953f5c3eaaf765cc69";
   };
 
+  buildType = "catkin";
   buildInputs = [ opencv-candidate cmake-modules sensor-msgs ecto-pcl object-recognition-core ecto ecto-image-pipeline ];
   propagatedBuildInputs = [ opencv-candidate meshlab ecto-pcl object-recognition-core ecto ecto-image-pipeline ];
   nativeBuildInputs = [ catkin ];

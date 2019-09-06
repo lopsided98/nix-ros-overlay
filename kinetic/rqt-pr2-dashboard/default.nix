@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_pr2_dashboard-release/archive/release/kinetic/rqt_pr2_dashboard/0.4.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_pr2_dashboard-release/archive/release/kinetic/rqt_pr2_dashboard/0.4.0-0.tar.gz";
+    name = "0.4.0-0.tar.gz";
     sha256 = "61aab14f7a24e9f62720ae7bc389011a9b2140e5c1219497658d7e341592951d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py pr2-power-board std-srvs rqt-gui rqt-robot-dashboard rospy std-msgs diagnostic-msgs pr2-msgs roslib ];
   nativeBuildInputs = [ catkin ];
 

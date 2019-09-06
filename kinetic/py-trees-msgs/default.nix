@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.6";
 
   src = fetchurl {
-    url = https://github.com/stonier/py_trees_msgs-release/archive/release/kinetic/py_trees_msgs/0.3.6-0.tar.gz;
+    url = "https://github.com/stonier/py_trees_msgs-release/archive/release/kinetic/py_trees_msgs/0.3.6-0.tar.gz";
+    name = "0.3.6-0.tar.gz";
     sha256 = "98321ee885da8d5be668962f5d3205adde0d61f4daf749db394412b42cd51945";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs uuid-msgs message-generation dynamic-reconfigure std-msgs ];
   propagatedBuildInputs = [ actionlib-msgs uuid-msgs message-runtime dynamic-reconfigure std-msgs ];
   nativeBuildInputs = [ catkin ];

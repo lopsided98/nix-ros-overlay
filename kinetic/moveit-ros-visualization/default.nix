@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.9.17-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_visualization/0.9.17-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_visualization/0.9.17-1.tar.gz";
+    name = "0.9.17-1.tar.gz";
     sha256 = "93ebd24b176314a3e36d8c0b02aa97dc73f96022cf46d59a1823b848d9076bdb";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole pluginlib moveit-ros-robot-interaction moveit-ros-perception class-loader roscpp moveit-ros-warehouse rviz interactive-markers geometric-shapes object-recognition-msgs rospy eigen-conversions tf moveit-ros-planning-interface eigen ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ pluginlib moveit-ros-perception moveit-ros-robot-interaction moveit-ros-warehouse rviz interactive-markers geometric-shapes object-recognition-msgs rospy roscpp moveit-ros-planning-interface ];
+  propagatedBuildInputs = [ pluginlib moveit-ros-robot-interaction moveit-ros-warehouse rviz interactive-markers geometric-shapes rospy moveit-ros-perception roscpp moveit-ros-planning-interface object-recognition-msgs ];
   nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {

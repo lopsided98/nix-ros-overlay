@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/ros-naoqi/pepper_virtual-release/archive/release/kinetic/pepper_gazebo_plugin/0.0.4-0.tar.gz;
+    url = "https://github.com/ros-naoqi/pepper_virtual-release/archive/release/kinetic/pepper_gazebo_plugin/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "4391f6c61d2932d3a45400773c68390748b28c64d8d5fbc483f4d7175293e78c";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros pepper-description ];
   propagatedBuildInputs = [ gazebo-ros ros-control pepper-description gazebo-plugins pepper-control gazebo-ros-control ros-controllers ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.3";
 
   src = fetchurl {
-    url = https://github.com/srv/srv_tools-release/archive/release/kinetic/pointcloud_tools/0.0.3-0.tar.gz;
+    url = "https://github.com/srv/srv_tools-release/archive/release/kinetic/pointcloud_tools/0.0.3-0.tar.gz";
+    name = "0.0.3-0.tar.gz";
     sha256 = "747fc3d2106b4952cbc9120a73215752e9203421976c6dc3526d21254b6904ce";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs nav-msgs pcl-ros std-msgs vtk roscpp pcl-conversions ];
   propagatedBuildInputs = [ sensor-msgs nav-msgs pcl-ros std-msgs vtk roscpp pcl-conversions ];
   nativeBuildInputs = [ catkin ];

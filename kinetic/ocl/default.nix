@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/ocl-release/archive/release/kinetic/ocl/2.9.2-1.tar.gz;
+    url = "https://github.com/orocos-gbp/ocl-release/archive/release/kinetic/ocl/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
     sha256 = "0dd28beff7593cc5e272f442bde9951a50d6b1ebccd9d576b94e91d6154ae53a";
   };
 
+  buildType = "cmake";
   buildInputs = [ netcdf rtt readline ncurses log4cpp lua ];
   propagatedBuildInputs = [ netcdf rtt readline catkin ncurses log4cpp lua ];
   nativeBuildInputs = [ cmake catkin ];

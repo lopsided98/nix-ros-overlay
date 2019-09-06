@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_srv-release/archive/release/kinetic/rqt_srv/0.4.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_srv-release/archive/release/kinetic/rqt_srv/0.4.8-0.tar.gz";
+    name = "0.4.8-0.tar.gz";
     sha256 = "cb789c7d969ed56335b19a75ca8d20918953ed5bbb1a3f978b593b0900f7e6b9";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py rqt-gui rosmsg rqt-msg rospy ];
   nativeBuildInputs = [ catkin ];
 

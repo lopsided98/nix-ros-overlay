@@ -5,15 +5,17 @@
 { lib, buildRosPackage, fetchurl, swri-math-util, pluginlib, mapviz, catkin, libqt-core, libqt-opengl, roscpp, jsoncpp, qt-qmake, swri-yaml-util, libqt-dev, libqt-opengl-dev, glew, tf, swri-transform-util }:
 buildRosPackage {
   pname = "ros-kinetic-tile-map";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/tile_map/1.1.1-1.tar.gz;
-    sha256 = "b7262404a7c8922ac9a3c7ed5f60ec422a56ba79e69aa2206f6c47f6541774b5";
+    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/tile_map/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "041d6ece56c4323bb5fe5fd76b977b3cfe19541ff39c504927cd2cde06f55d36";
   };
 
+  buildType = "catkin";
   buildInputs = [ swri-math-util pluginlib mapviz glew roscpp swri-yaml-util libqt-dev libqt-opengl-dev jsoncpp tf swri-transform-util ];
-  propagatedBuildInputs = [ swri-math-util pluginlib mapviz libqt-core libqt-opengl roscpp jsoncpp swri-yaml-util glew tf swri-transform-util ];
+  propagatedBuildInputs = [ swri-math-util pluginlib mapviz glew libqt-core libqt-opengl roscpp swri-yaml-util jsoncpp tf swri-transform-util ];
   nativeBuildInputs = [ catkin qt-qmake ];
 
   meta = {

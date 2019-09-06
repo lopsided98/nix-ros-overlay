@@ -8,13 +8,15 @@ buildRosPackage {
   version = "1.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs007n_moveit_config/1.1.2-1.tar.gz;
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs007n_moveit_config/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
     sha256 = "3e6de855e5f31817ccd1cd379ebab47fb9ebda7af634e98dbeed11697c9d7650";
   };
 
+  buildType = "catkin";
   buildInputs = [ khi-rs-description ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-kinematics rviz khi-rs-description robot-state-publisher tf joint-state-publisher xacro moveit-planners-ompl ];
+  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-kinematics moveit-planners-ompl rviz robot-state-publisher tf joint-state-publisher xacro khi-rs-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

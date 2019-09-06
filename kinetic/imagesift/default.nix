@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.9";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/imagesift/1.2.9-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/imagesift/1.2.9-0.tar.gz";
+    name = "1.2.9-0.tar.gz";
     sha256 = "88a9b0e992c9939aca44e9c51adcc04e103e42c00e72e880ac47391f59fccb8c";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules libsiftfast image-transport sensor-msgs cv-bridge posedetection-msgs jsk-topic-tools roscpp jsk-recognition-utils nodelet ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ libsiftfast image-transport sensor-msgs cv-bridge posedetection-msgs jsk-topic-tools roscpp jsk-recognition-utils nodelet ];

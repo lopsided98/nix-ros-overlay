@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.5";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_compressed_map_transport/0.3.5-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_compressed_map_transport/0.3.5-0.tar.gz";
+    name = "0.3.5-0.tar.gz";
     sha256 = "8b0b05a9c93ad57c56e1131b46e24ef8e6a9b6d8e2ec7dfc667a1a029688ce10";
   };
 
+  buildType = "catkin";
   buildInputs = [ image-transport sensor-msgs cv-bridge hector-map-tools nav-msgs eigen geometry-msgs ];
   propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge hector-map-tools nav-msgs eigen geometry-msgs ];
   nativeBuildInputs = [ catkin ];

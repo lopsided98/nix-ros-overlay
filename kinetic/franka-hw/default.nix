@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.0-r1";
 
   src = fetchurl {
-    url = https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_hw/0.6.0-1.tar.gz;
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/kinetic/franka_hw/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
     sha256 = "a949bc19bdcb19900eade604f210bfca6af6cdd2d652f0c834073064a82329ac";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface joint-limits-interface controller-interface urdf libfranka roscpp ];
   checkInputs = [ rostest gtest franka-description ];
   propagatedBuildInputs = [ hardware-interface joint-limits-interface controller-interface urdf libfranka roscpp ];

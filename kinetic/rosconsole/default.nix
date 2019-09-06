@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosconsole/1.12.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosconsole/1.12.14-0.tar.gz";
+    name = "1.12.14-0.tar.gz";
     sha256 = "ae6159a3efce8bdcb74ee15faaf489abb69d99cc16180d21caa9ff0bc518b18c";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost cpp-common apr rostime rosunit log4cxx ];
   propagatedBuildInputs = [ cpp-common apr rosbuild rostime log4cxx ];
   nativeBuildInputs = [ catkin ];

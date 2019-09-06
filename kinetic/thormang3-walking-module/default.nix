@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_walking_module/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_walking_module/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "deb67b0e6fc31b5f942a7355eb17114c249c0317ba76326f23a3c732e692cb76";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost cmake-modules thormang3-walking-module-msgs libyamlcpp geometry-msgs sensor-msgs roscpp thormang3-kinematics-dynamics roslib thormang3-balance-control robotis-math eigen std-msgs eigen-conversions robotis-controller-msgs robotis-framework-common ];
-  propagatedBuildInputs = [ boost cmake-modules thormang3-walking-module-msgs libyamlcpp geometry-msgs sensor-msgs roscpp thormang3-kinematics-dynamics roslib thormang3-balance-control robotis-math eigen std-msgs eigen-conversions robotis-controller-msgs robotis-framework-common ];
+  propagatedBuildInputs = [ cmake-modules boost geometry-msgs libyamlcpp sensor-msgs robotis-framework-common roscpp thormang3-kinematics-dynamics roslib thormang3-balance-control robotis-math eigen std-msgs eigen-conversions robotis-controller-msgs thormang3-walking-module-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.10.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/calibration-release/archive/release/kinetic/interval_intersection/0.10.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/calibration-release/archive/release/kinetic/interval_intersection/0.10.14-0.tar.gz";
+    name = "0.10.14-0.tar.gz";
     sha256 = "1f6b8720392d6300d2980977a8cef0aa50dc837cc346ec56c117829fa98ba2fb";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole boost actionlib-msgs roscpp actionlib roscpp-serialization std-msgs rostime geometry-msgs calibration-msgs ];
-  propagatedBuildInputs = [ rosconsole boost actionlib-msgs roscpp actionlib roscpp-serialization std-msgs rostime geometry-msgs calibration-msgs ];
+  propagatedBuildInputs = [ rosconsole actionlib-msgs boost rostime roscpp-serialization actionlib std-msgs roscpp geometry-msgs calibration-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

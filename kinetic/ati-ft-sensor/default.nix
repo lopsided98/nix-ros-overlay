@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/ati_ft_sensor/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/ati_ft_sensor/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "93bbb0f85950aa050074046de3e5f7e3f136bafddd423034bda56f1ce09fa35b";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules boost libyamlcpp roslib robotis-math eigen roscpp geometry-msgs ];
   propagatedBuildInputs = [ cmake-modules boost libyamlcpp roslib robotis-math eigen roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

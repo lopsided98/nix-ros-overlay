@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, wave-gazebo, joy-teleop, joy, catkin, wamv-gazebo, gazebo-dev, geographic-msgs, message-runtime, std-msgs, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-vrx-gazebo";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vrx-release/archive/release/kinetic/vrx_gazebo/1.2.0-1.tar.gz;
-    sha256 = "d940d0bdcfea30f81803381d7e3b923f0dd7fe6ad1f8c169755e82e7aabe301c";
+    url = "https://github.com/ros-gbp/vrx-release/archive/release/kinetic/vrx_gazebo/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "3efd0b28f0b06a3df5ad73fb3670bfedf96d3589933ffce72f64aeb9f64f1122";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros wave-gazebo joy-teleop joy wamv-gazebo gazebo-dev geographic-msgs message-runtime std-msgs xacro ];
   propagatedBuildInputs = [ gazebo-ros wave-gazebo joy-teleop joy wamv-gazebo gazebo-dev geographic-msgs message-runtime std-msgs xacro ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.17";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/kinetic/pr2_hardware_interface/1.8.17-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/kinetic/pr2_hardware_interface/1.8.17-0.tar.gz";
+    name = "1.8.17-0.tar.gz";
     sha256 = "2325399c2b0e184d68d238fe83eae8eba6ca70c27d7f9a590e3a9e0e4bca3533";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp geometry-msgs ];
   propagatedBuildInputs = [ roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/calibration-release/archive/release/kinetic/calibration/0.10.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/calibration-release/archive/release/kinetic/calibration/0.10.14-0.tar.gz";
+    name = "0.10.14-0.tar.gz";
     sha256 = "c4ae4faade4daaa2c3dae28fea9c2c807547221830fd8d023122dd484fa5df31";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ laser-cb-detector calibration-launch monocam-settler interval-intersection image-cb-detector joint-states-settler settlerlib calibration-estimation calibration-msgs ];
   nativeBuildInputs = [ catkin ];
 

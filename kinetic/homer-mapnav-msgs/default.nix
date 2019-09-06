@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.53";
 
   src = fetchurl {
-    url = https://gitlab.uni-koblenz.de/robbie/homer_mapnav_msgs-release/repository/archive.tar.gz?ref=release/kinetic/homer_mapnav_msgs/0.1.53-0;
+    url = "https://gitlab.uni-koblenz.de/robbie/homer_mapnav_msgs-release/repository/archive.tar.gz?ref=release/kinetic/homer_mapnav_msgs/0.1.53-0";
+    name = "archive.tar.gz";
     sha256 = "12038984195da143f1d65ed613d1a28b8614fa57f0490feb74fe2fa994cdbf53";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs nav-msgs message-generation actionlib genmsg geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs nav-msgs message-runtime actionlib geometry-msgs ];
   nativeBuildInputs = [ catkin ];

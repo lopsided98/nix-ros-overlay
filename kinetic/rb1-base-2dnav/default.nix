@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/kinetic/rb1_base_2dnav/1.0.2-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/kinetic/rb1_base_2dnav/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "1fdaf6fd6270eeb53e261d1c45a17c3c16f6fc2897537606cc5ec059de79833b";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ gmapping map-server amcl move-base robot-pose-ekf rviz message-runtime std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/tensorflow_ros/0.0.4-0.tar.gz;
+    url = "https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/tensorflow_ros/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "7d612340a4abff8cd0f826a38f3b6bdba4eae0569288126c146f39c6158a6046";
   };
 
+  buildType = "catkin";
   buildInputs = [ image-recognition-msgs image-recognition-util rospy ];
   propagatedBuildInputs = [ pythonPackages.numpy image-recognition-msgs image-recognition-util rospy ];
   nativeBuildInputs = [ catkin ];

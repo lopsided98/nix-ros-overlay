@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_operator/0.3.2-0.tar.gz;
+    url = "https://github.com/skasperski/navigation_2d-release/archive/release/kinetic/nav2d_operator/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "3261678917200a28bf0bba2b608fb70aacd15feabf1c0747f1faa4f618083841";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d sensor-msgs roscpp message-generation tf ];
   propagatedBuildInputs = [ costmap-2d sensor-msgs roscpp message-runtime tf ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt-release/archive/release/kinetic/rqt_py_common/0.5.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt-release/archive/release/kinetic/rqt_py_common/0.5.0-0.tar.gz";
+    name = "0.5.0-0.tar.gz";
     sha256 = "c9c4185b52c7945d2edb69634f4b1b41190130762b97fe8791cef56db84b52ba";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs genmsg ];
   propagatedBuildInputs = [ rosbag roslib qt-gui rostopic actionlib rospy genpy python-qt-binding ];
   nativeBuildInputs = [ catkin ];

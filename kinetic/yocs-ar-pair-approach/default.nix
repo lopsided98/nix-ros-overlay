@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_ar_pair_approach/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_ar_pair_approach/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "4c12fa754a0ff4d956825fddcceafffb04f29a893c3706bd94bbe5740b3730bc";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rospy std-msgs dynamic-reconfigure tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

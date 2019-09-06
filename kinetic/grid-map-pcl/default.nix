@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.1";
 
   src = fetchurl {
-    url = https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map_pcl/1.6.1-0.tar.gz;
+    url = "https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map_pcl/1.6.1-0.tar.gz";
+    name = "1.6.1-0.tar.gz";
     sha256 = "4b831fb53f105575293ca195e5131792b38b74a04d7ed3a0d43fa9df168dbd71";
   };
 
+  buildType = "catkin";
   buildInputs = [ grid-map-core pcl-ros ];
   propagatedBuildInputs = [ grid-map-core pcl-ros ];
   nativeBuildInputs = [ catkin ];

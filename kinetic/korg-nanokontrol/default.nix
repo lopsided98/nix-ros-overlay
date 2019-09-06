@@ -8,11 +8,13 @@ buildRosPackage {
   version = "0.1.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/korg_nanokontrol-release/archive/release/kinetic/korg_nanokontrol/0.1.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/korg_nanokontrol-release/archive/release/kinetic/korg_nanokontrol/0.1.2-0.tar.gz";
+    name = "0.1.2-0.tar.gz";
     sha256 = "e69b88fc52d1c76b2b60cb90588e3247ad4725c6229075d5fd539b0ea0962614";
   };
 
-  propagatedBuildInputs = [ rospy sensor-msgs pythonPackages.pygame ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ sensor-msgs pythonPackages.pygame rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

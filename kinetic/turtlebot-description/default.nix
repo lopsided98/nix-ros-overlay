@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.4.2";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot-release/archive/release/kinetic/turtlebot_description/2.4.2-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot-release/archive/release/kinetic/turtlebot_description/2.4.2-0.tar.gz";
+    name = "2.4.2-0.tar.gz";
     sha256 = "f516927f1373ea37fcc1e7f844f5b5799e3c7ab0c14d1e7863576f57bcfdb83f";
   };
 
+  buildType = "catkin";
   buildInputs = [ urdf xacro ];
   propagatedBuildInputs = [ urdf xacro create-description kobuki-description ];
   nativeBuildInputs = [ catkin ];

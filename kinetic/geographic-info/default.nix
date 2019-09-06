@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.2";
 
   src = fetchurl {
-    url = https://github.com/ros-geographic-info/geographic_info-release/archive/release/kinetic/geographic_info/0.5.2-0.tar.gz;
+    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/kinetic/geographic_info/0.5.2-0.tar.gz";
+    name = "0.5.2-0.tar.gz";
     sha256 = "d48283a19ec7929cb22cccbb524dc6dce692f97608e980bf92292179d0411d6c";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ geodesy geographic-msgs ];
   nativeBuildInputs = [ catkin ];
 

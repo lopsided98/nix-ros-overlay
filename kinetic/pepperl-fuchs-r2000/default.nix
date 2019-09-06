@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.3";
 
   src = fetchurl {
-    url = https://github.com/dillenberger/pepperl_fuchs-release/archive/release/kinetic/pepperl_fuchs_r2000/0.1.3-0.tar.gz;
+    url = "https://github.com/dillenberger/pepperl_fuchs-release/archive/release/kinetic/pepperl_fuchs_r2000/0.1.3-0.tar.gz";
+    name = "0.1.3-0.tar.gz";
     sha256 = "9c1393e1aaceeba29b9c28f36cc1fe623397e9aa32ef82de1eefb0103e530680";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs sensor-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs sensor-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

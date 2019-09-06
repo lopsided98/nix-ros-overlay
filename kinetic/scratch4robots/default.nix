@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2";
 
   src = fetchurl {
-    url = https://github.com/JdeRobot/Scratch4Robots-release/archive/release/kinetic/scratch4robots/0.0.2-0.tar.gz;
+    url = "https://github.com/JdeRobot/Scratch4Robots-release/archive/release/kinetic/scratch4robots/0.0.2-0.tar.gz";
+    name = "0.0.2-0.tar.gz";
     sha256 = "06885d6419dad80bc40830296bcb3e6370c48c49256efe8683e60efb62991ec5";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ rospy ];

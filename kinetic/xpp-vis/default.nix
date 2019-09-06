@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/xpp_vis/1.0.10-0.tar.gz;
+    url = "https://github.com/leggedrobotics/xpp-release/archive/release/kinetic/xpp_vis/1.0.10-0.tar.gz";
+    name = "1.0.10-0.tar.gz";
     sha256 = "b1239f90020cc8a51a975511635f1947f5cacb024b4f2a5fe60941f8dc01a2de";
   };
 
+  buildType = "catkin";
   buildInputs = [ xpp-states xpp-msgs kdl-parser tf robot-state-publisher visualization-msgs roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ xpp-states xpp-msgs kdl-parser tf robot-state-publisher visualization-msgs roscpp ];

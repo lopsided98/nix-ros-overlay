@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/stereo_msgs/1.12.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/kinetic/stereo_msgs/1.12.7-0.tar.gz";
+    name = "1.12.7-0.tar.gz";
     sha256 = "4a561f87384d6304051f5ece07e273263760d5227343e22bf857a174e1d4c44c";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs sensor-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

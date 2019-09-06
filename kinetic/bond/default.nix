@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/bond_core-release/archive/release/kinetic/bond/1.8.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/bond_core-release/archive/release/kinetic/bond/1.8.3-0.tar.gz";
+    name = "1.8.3-0.tar.gz";
     sha256 = "58fc4390b61bd4282d935884b30d2b84dfab7803f20528b859976e9b068c1eea";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

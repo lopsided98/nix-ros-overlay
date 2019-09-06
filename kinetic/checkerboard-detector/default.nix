@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.9";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/checkerboard_detector/1.2.9-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/checkerboard_detector/1.2.9-0.tar.gz";
+    name = "1.2.9-0.tar.gz";
     sha256 = "c8097006d40dad1bbb6e1531c6d3aa67947b20c6083c1fa1990ae1deb2d2a9cb";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole sensor-msgs cv-bridge posedetection-msgs message-filters roscpp image-geometry tf2 jsk-recognition-msgs dynamic-reconfigure eigen-conversions tf ];
   propagatedBuildInputs = [ rosconsole sensor-msgs cv-bridge posedetection-msgs message-filters roscpp image-geometry tf2 dynamic-tf-publisher jsk-recognition-msgs dynamic-reconfigure eigen-conversions tf ];
   nativeBuildInputs = [ catkin ];

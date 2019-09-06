@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2-r1";
 
   src = fetchurl {
-    url = https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs_description/1.1.2-1.tar.gz;
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs_description/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
     sha256 = "67217515755eb1c89dac53f8eaa6a122d6641ab5f7f9270b8b9b0cc7f1bfe4e7";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   nativeBuildInputs = [ catkin ];
 

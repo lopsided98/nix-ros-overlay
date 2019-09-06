@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.5";
 
   src = fetchurl {
-    url = https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/dwb_msgs/0.2.5-0.tar.gz;
+    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/dwb_msgs/0.2.5-0.tar.gz";
+    name = "0.2.5-0.tar.gz";
     sha256 = "7d22ff9b120f812928567f20651cfe110c57e473b7c7ba8199cf279b6fc69760";
   };
 
+  buildType = "catkin";
   buildInputs = [ nav-msgs message-generation nav-2d-msgs geometry-msgs ];
-  propagatedBuildInputs = [ nav-msgs message-runtime geometry-msgs nav-2d-msgs ];
+  propagatedBuildInputs = [ nav-msgs nav-2d-msgs geometry-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

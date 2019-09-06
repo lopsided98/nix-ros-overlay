@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-PPC-release/archive/release/kinetic/thormang3_walking_demo/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-PPC-release/archive/release/kinetic/thormang3_walking_demo/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "60b4736ef56b4423262ccdca7f0768eeacb77a3734b58fd17676a0f1cbc8d358";
   };
 
+  buildType = "catkin";
   buildInputs = [ libyamlcpp roscpp roslib std-msgs robotis-controller-msgs thormang3-walking-module-msgs ];
   propagatedBuildInputs = [ libyamlcpp roscpp roslib std-msgs robotis-controller-msgs thormang3-walking-module-msgs ];
   nativeBuildInputs = [ catkin ];

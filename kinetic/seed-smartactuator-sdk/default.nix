@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, boost }:
 buildRosPackage {
   pname = "ros-kinetic-seed-smartactuator-sdk";
-  version = "0.0.3-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/seed-solutions/seed_smartactuator_sdk-release/archive/release/kinetic/seed_smartactuator_sdk/0.0.3-1.tar.gz;
-    sha256 = "d2afcaa440303c4b91344666cfd0359ccca7fa744bd1093829f8ab3a5e0e9cac";
+    url = "https://github.com/seed-solutions/seed_smartactuator_sdk-release/archive/release/kinetic/seed_smartactuator_sdk/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "e929721fb71d738544622d61a33a4947283d215c72b3960d8e5f6d2a1518fb85";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost ];
   propagatedBuildInputs = [ boost ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation-release/archive/release/kinetic/track_odometry/0.4.2-1.tar.gz;
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/track_odometry/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
     sha256 = "0a4d8154f4618596a5186aabae7d021682c136a91b7d065e15c74272dd16f09b";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules tf2-geometry-msgs trajectory-msgs sensor-msgs message-filters tf2-ros tf2 nav-msgs neonavigation-common eigen std-msgs roscpp geometry-msgs ];
   checkInputs = [ rostest roslint rosunit ];
   propagatedBuildInputs = [ cmake-modules tf2-geometry-msgs trajectory-msgs sensor-msgs message-filters tf2-ros tf2 nav-msgs neonavigation-common eigen std-msgs roscpp geometry-msgs ];

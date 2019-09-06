@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.11";
 
   src = fetchurl {
-    url = https://github.com/ros-naoqi/nao_moveit_config-release/archive/release/kinetic/nao_moveit_config/0.0.11-0.tar.gz;
+    url = "https://github.com/ros-naoqi/nao_moveit_config-release/archive/release/kinetic/nao_moveit_config/0.0.11-0.tar.gz";
+    name = "0.0.11-0.tar.gz";
     sha256 = "d16e19059a41c598250059b89c579108bb8aa4ccb02db935eb1d94b9ba03dbad";
   };
 
+  buildType = "catkin";
   buildInputs = [ nao-description ];
   propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-simple-controller-manager nao-description robot-state-publisher joint-state-publisher xacro moveit-planners-ompl ];
   nativeBuildInputs = [ catkin ];

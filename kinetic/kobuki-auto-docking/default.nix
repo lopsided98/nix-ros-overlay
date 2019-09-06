@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.7.6";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_auto_docking/0.7.6-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_auto_docking/0.7.6-0.tar.gz";
+    name = "0.7.6-0.tar.gz";
     sha256 = "de405b3ff1619332f66cdeacc64251da10f72961edce4973f8d414cb9d50aec4";
   };
 
+  buildType = "catkin";
   buildInputs = [ kdl-conversions kobuki-msgs pluginlib actionlib-msgs kobuki-dock-drive message-filters ecl-geometry roscpp ecl-threads rospy nav-msgs actionlib std-msgs nodelet ecl-linear-algebra geometry-msgs ];
-  propagatedBuildInputs = [ kdl-conversions kobuki-msgs pluginlib actionlib-msgs kobuki-dock-drive message-filters ecl-geometry roscpp ecl-threads rospy nav-msgs actionlib ecl-linear-algebra std-msgs yocs-cmd-vel-mux nodelet geometry-msgs ];
+  propagatedBuildInputs = [ kdl-conversions kobuki-msgs pluginlib actionlib-msgs kobuki-dock-drive message-filters ecl-geometry roscpp ecl-threads nav-msgs actionlib rospy std-msgs yocs-cmd-vel-mux nodelet ecl-linear-algebra geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

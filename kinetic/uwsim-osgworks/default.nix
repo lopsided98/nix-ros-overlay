@@ -8,10 +8,12 @@ buildRosPackage {
   version = "3.0.3-r1";
 
   src = fetchurl {
-    url = https://github.com/uji-ros-pkg/uwsim_osgworks-release/archive/release/kinetic/uwsim_osgworks/3.0.3-1.tar.gz;
+    url = "https://github.com/uji-ros-pkg/uwsim_osgworks-release/archive/release/kinetic/uwsim_osgworks/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
     sha256 = "2a509179c47ceaf57e6bf4b620eaf1bb70f5014dde5fe6925c3cd82923e61c68";
   };
 
+  buildType = "cmake";
   buildInputs = [ libGLU libGL openscenegraph boost ];
   propagatedBuildInputs = [ boost catkin openscenegraph libGLU libGL ];
   nativeBuildInputs = [ cmake ];

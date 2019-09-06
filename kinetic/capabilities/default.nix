@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/capabilities-release/archive/release/kinetic/capabilities/0.2.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/capabilities-release/archive/release/kinetic/capabilities/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "0e077da92875d7bec29456cecf7efcd16f42e14bfb8e28ced30e86c6d9d5ff9c";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs rostest message-generation rospy std-msgs roslaunch ];
   checkInputs = [ rosservice pythonPackages.coverage pythonPackages.mock pythonPackages.pep8 geometry-msgs ];
   propagatedBuildInputs = [ std-srvs bondpy pythonPackages.pyyaml message-runtime rospy std-msgs roslaunch nodelet ];

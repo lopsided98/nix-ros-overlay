@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_utilities/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_utilities/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "fb5b1fa89086c9fd40043b0e725d8909ade0e066ffa166b5ffab6918d2263fcc";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

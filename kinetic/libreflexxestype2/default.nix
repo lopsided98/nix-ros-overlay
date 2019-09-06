@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.8";
 
   src = fetchurl {
-    url = https://github.com/KITrobotics/ipr_extern-release/archive/release/kinetic/libreflexxestype2/0.8.8-0.tar.gz;
+    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/kinetic/libreflexxestype2/0.8.8-0.tar.gz";
+    name = "0.8.8-0.tar.gz";
     sha256 = "e19f5d03525f6c8998061a81b632443960778dc6769bb830ac178a6d69cfbe69";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

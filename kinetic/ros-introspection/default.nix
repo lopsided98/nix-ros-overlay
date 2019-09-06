@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/wu-robotics/roscompile-release/archive/release/kinetic/ros_introspection/1.0.1-0.tar.gz;
+    url = "https://github.com/wu-robotics/roscompile-release/archive/release/kinetic/ros_introspection/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "63dedc31de3bbaa2b47341ab8d220120175f509a1d967878a560d4adcd0901da";
   };
 
+  buildType = "catkin";
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ pythonPackages.requests rosmsg ];
   nativeBuildInputs = [ catkin ];

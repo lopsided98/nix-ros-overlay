@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/nodelet_core-release/archive/release/kinetic/nodelet/1.9.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/nodelet_core-release/archive/release/kinetic/nodelet/1.9.14-0.tar.gz";
+    name = "1.9.14-0.tar.gz";
     sha256 = "cc6baa5ffeed8bdb4b9b1be10b0e2dd0ee6759f09e68cb1d6f5d4fb36b7cd66c";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole pluginlib boost bondcpp cmake-modules message-generation std-msgs roscpp utillinux ];
   propagatedBuildInputs = [ rosconsole pluginlib boost bondcpp message-runtime rospy std-msgs roscpp utillinux ];
   nativeBuildInputs = [ catkin ];

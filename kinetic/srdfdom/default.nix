@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/srdfdom-release/archive/release/kinetic/srdfdom/0.4.2-1.tar.gz;
+    url = "https://github.com/ros-gbp/srdfdom-release/archive/release/kinetic/srdfdom/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
     sha256 = "2f7dfc30af56d54c3ca610f648ab68face2697f3d4e135410b749dae0d5d0d80";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules boost tinyxml urdfdom-headers console-bridge urdf urdfdom-py ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ boost tinyxml urdfdom-headers console-bridge urdfdom-py ];

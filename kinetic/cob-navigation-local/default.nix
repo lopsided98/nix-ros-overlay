@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.8-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_navigation_local/0.6.8-1.tar.gz;
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_navigation_local/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
     sha256 = "818967f45971a69616705eaede95699ae263f8f32ae1cab95dd32f9e3653b741";
   };
 
+  buildType = "catkin";
   checkInputs = [ cob-supported-robots roslaunch ];
   propagatedBuildInputs = [ dwa-local-planner cob-navigation-config rviz move-base ];
   nativeBuildInputs = [ catkin ];

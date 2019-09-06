@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.5";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_marker_drawing/0.3.5-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_marker_drawing/0.3.5-0.tar.gz";
+    name = "0.3.5-0.tar.gz";
     sha256 = "f7668e98788044b276c795338e1f59ea346b8c5dbc0bcba540632415d6526cca";
   };
 
+  buildType = "catkin";
   buildInputs = [ visualization-msgs roscpp eigen ];
   propagatedBuildInputs = [ visualization-msgs roscpp eigen ];
   nativeBuildInputs = [ catkin ];

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_costmap_nav/0.2.4-1.tar.gz;
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_costmap_nav/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
     sha256 = "5cf8a8c9ffc3ef95a10a1f164019c5431c0b97b8bad1848cd2d51533d986c1aa";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs mbf-costmap-core pluginlib actionlib-msgs base-local-planner tf mbf-msgs nav-core mbf-utility nav-msgs actionlib dynamic-reconfigure std-msgs roscpp mbf-abstract-nav geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs mbf-costmap-core pluginlib actionlib-msgs base-local-planner tf mbf-msgs nav-core move-base mbf-utility move-base-msgs nav-msgs actionlib dynamic-reconfigure std-msgs roscpp mbf-abstract-nav geometry-msgs ];
+  propagatedBuildInputs = [ std-srvs mbf-costmap-core pluginlib actionlib-msgs base-local-planner tf mbf-msgs nav-core move-base mbf-utility move-base-msgs nav-msgs actionlib std-msgs dynamic-reconfigure roscpp mbf-abstract-nav geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

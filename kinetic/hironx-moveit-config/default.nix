@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_hironx-release/archive/release/kinetic/hironx_moveit_config/2.1.1-0.tar.gz;
+    url = "https://github.com/tork-a/rtmros_hironx-release/archive/release/kinetic/hironx_moveit_config/2.1.1-0.tar.gz";
+    name = "2.1.1-0.tar.gz";
     sha256 = "923ed918a6cfa4713f9a2726c4baef93fdfcddd194c6c1f97f7168831be5fd9d";
   };
 
+  buildType = "catkin";
   buildInputs = [ hironx-ros-bridge moveit-ros-move-group collada-urdf ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ hironx-ros-bridge moveit-simple-controller-manager moveit-planners moveit-ros ];

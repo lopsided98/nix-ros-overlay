@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/JdeRobot/assets-release/archive/release/kinetic/jderobot_assets/0.1.0-1.tar.gz;
+    url = "https://github.com/JdeRobot/assets-release/archive/release/kinetic/jderobot_assets/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "259c30e26e4fadb66c7b8b9f6d9979bb1082c4f114a78c38217e4c7591dd8dd4";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros turtlebot3-gazebo roscpp turtlebot3-description ];
-  propagatedBuildInputs = [ gazebo-ros turtlebot3-gazebo roscpp turtlebot3-description ];
+  propagatedBuildInputs = [ gazebo-ros turtlebot3-gazebo turtlebot3-description roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

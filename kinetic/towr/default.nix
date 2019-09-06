@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/ethz-adrl/towr-release/archive/release/kinetic/towr/1.4.1-0.tar.gz;
+    url = "https://github.com/ethz-adrl/towr-release/archive/release/kinetic/towr/1.4.1-0.tar.gz";
+    name = "1.4.1-0.tar.gz";
     sha256 = "56676dbc1ebbfa3259e500aabed8410028abb1797b63fd4893507bf15eb52175";
   };
 
+  buildType = "cmake";
   buildInputs = [ ifopt eigen ];
   propagatedBuildInputs = [ catkin ifopt eigen ];
   nativeBuildInputs = [ cmake ];

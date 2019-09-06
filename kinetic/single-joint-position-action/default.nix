@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.10.14";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/kinetic/single_joint_position_action/1.10.14-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/kinetic/single_joint_position_action/1.10.14-0.tar.gz";
+    name = "1.10.14-0.tar.gz";
     sha256 = "144af5b4aca93515cfbc20599bd296efd77b8b984e433ef943467d1ada7bb250";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs roscpp actionlib ];
   propagatedBuildInputs = [ pr2-controllers-msgs roscpp actionlib ];
   nativeBuildInputs = [ catkin ];

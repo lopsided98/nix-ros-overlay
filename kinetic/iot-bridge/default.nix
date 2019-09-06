@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/iot_bridge-release/archive/release/kinetic/iot_bridge/0.9.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/iot_bridge-release/archive/release/kinetic/iot_bridge/0.9.0-0.tar.gz";
+    name = "0.9.0-0.tar.gz";
     sha256 = "4a4c794d1f100121b7bee42dcc83688aa0b98a3bf3412c8177ebba1d0345bf8b";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ diagnostic-msgs pythonPackages.requests rostopic rospy ];

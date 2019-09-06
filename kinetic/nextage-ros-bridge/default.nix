@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.5-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_ros_bridge/0.8.5-1.tar.gz;
+    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_ros_bridge/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
     sha256 = "ba25c9b0dcb8c88384ce7bbc8eb4e05be293b7362da7112c035c7b603906c3d1";
   };
 
+  buildType = "catkin";
   buildInputs = [ nextage-description hironx-ros-bridge roslint ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ stereo-image-proc ueye-cam ar-track-alvar hironx-ros-bridge nextage-description ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.5.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/microstrain_3dmgx2_imu-release/archive/release/kinetic/microstrain_3dmgx2_imu/1.5.13-1.tar.gz;
+    url = "https://github.com/ros-gbp/microstrain_3dmgx2_imu-release/archive/release/kinetic/microstrain_3dmgx2_imu/1.5.13-1.tar.gz";
+    name = "1.5.13-1.tar.gz";
     sha256 = "23264bcaebd0f40e5b5e50dd1f14a0965247d498b60476689fe65b81e20163ce";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs self-test sensor-msgs roscpp diagnostic-updater message-generation std-msgs tf log4cxx ];
   propagatedBuildInputs = [ std-srvs self-test sensor-msgs roscpp diagnostic-updater message-runtime std-msgs tf log4cxx ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.5";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_interactive_test/2.1.5-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_interactive_test/2.1.5-0.tar.gz";
+    name = "2.1.5-0.tar.gz";
     sha256 = "737f4c1e45cbce834250e2adc1244b99a01d2e604bb1276859058c6678b50408";
   };
 
+  buildType = "catkin";
   buildInputs = [ mk rosbuild jsk-interactive-marker rospy visualization-msgs jsk-interactive ];
   propagatedBuildInputs = [ rviz jsk-interactive-marker rospy visualization-msgs jsk-interactive ];
   nativeBuildInputs = [ catkin ];

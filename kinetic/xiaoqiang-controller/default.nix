@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.12";
 
   src = fetchurl {
-    url = https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_controller/0.0.12-0.tar.gz;
+    url = "https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_controller/0.0.12-0.tar.gz";
+    name = "0.0.12-0.tar.gz";
     sha256 = "ffb97cd951ccb490d46d778000482b59031d4c931cccdf611038fecbf9aa29aa";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs xiaoqiang-driver message-runtime rospy ];
   propagatedBuildInputs = [ std-msgs xiaoqiang-driver message-runtime rospy ];
   nativeBuildInputs = [ catkin ];

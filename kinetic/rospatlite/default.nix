@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/rospatlite/2.1.13-1.tar.gz;
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/rospatlite/2.1.13-1.tar.gz";
+    name = "2.1.13-1.tar.gz";
     sha256 = "eb062cdacb20e4459695d0129135fa423d6eaa27d3014d2f0cc5fe3bbcac6cf3";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs rospy ];
   propagatedBuildInputs = [ std-msgs rospy ];
   nativeBuildInputs = [ catkin ];

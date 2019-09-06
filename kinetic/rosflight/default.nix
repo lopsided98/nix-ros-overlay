@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight/1.0.0-1.tar.gz;
+    url = "https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
     sha256 = "552f6f958e5b07566c3889f7a535c682d19d876c75bece00c72e656a04ebff77";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs boost libyamlcpp eigen-stl-containers git sensor-msgs pkg-config roscpp eigen std-msgs tf geometry-msgs rosflight-msgs ];
   propagatedBuildInputs = [ std-srvs boost libyamlcpp eigen-stl-containers sensor-msgs roscpp eigen std-msgs tf geometry-msgs rosflight-msgs ];
   nativeBuildInputs = [ catkin ];

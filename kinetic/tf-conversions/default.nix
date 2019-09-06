@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.11.9";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry-release/archive/release/kinetic/tf_conversions/1.11.9-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/kinetic/tf_conversions/1.11.9-0.tar.gz";
+    name = "1.11.9-0.tar.gz";
     sha256 = "8fee2dbf9f0fe32faf00d36aaaebb9a5d311b2ff9838c5ef8a7b409b4d655e86";
   };
 
+  buildType = "catkin";
   buildInputs = [ kdl-conversions cmake-modules orocos-kdl eigen tf geometry-msgs ];
   propagatedBuildInputs = [ kdl-conversions orocos-kdl python-orocos-kdl eigen tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

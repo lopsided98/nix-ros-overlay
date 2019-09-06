@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3_navigation/1.2.1-1.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3_navigation/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
     sha256 = "04aa16b150c741f0e0cf28653e762f904616c635086610fa1dc5f0c743f01769";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ amcl map-server turtlebot3-bringup move-base ];
   nativeBuildInputs = [ catkin ];
 

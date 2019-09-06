@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/robotis_op3_tools-release/archive/release/kinetic/op3_offset_tuner_server/0.2.2-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/robotis_op3_tools-release/archive/release/kinetic/op3_offset_tuner_server/0.2.2-0.tar.gz";
+    name = "0.2.2-0.tar.gz";
     sha256 = "58b43b0685e0d6fe1b2476e39feaaacd7220e146fe5227547e00fa201fb0a602";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamixel-sdk op3-base-module libyamlcpp op3-offset-tuner-msgs robotis-controller std-msgs roscpp ];
   propagatedBuildInputs = [ dynamixel-sdk op3-base-module libyamlcpp op3-offset-tuner-msgs robotis-controller std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

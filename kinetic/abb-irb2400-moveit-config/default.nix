@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb2400_moveit_config/1.3.0-1.tar.gz;
+    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb2400_moveit_config/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
     sha256 = "85bd87058e31b801f3fe09095d227ee7784899d6fb819e97c039d1b3a8ee37b7";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ moveit-ros-move-group industrial-robot-simulator moveit-ros-visualization joint-state-publisher moveit-simple-controller-manager robot-state-publisher abb-irb2400-support abb-irb2400-moveit-plugins xacro moveit-planners-ompl ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_camera_sensors/0.7.0-1.tar.gz;
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_camera_sensors/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
     sha256 = "8f942af892ffb0e1b09602f1098ab84188a81bea36687eff042288ad62019cb6";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost cmake-modules cob-vision-utils image-transport sensor-msgs cv-bridge message-filters polled-camera tinyxml message-generation roscpp opencv3 ];
-  propagatedBuildInputs = [ boost cmake-modules cob-vision-utils image-transport sensor-msgs cv-bridge message-filters polled-camera tinyxml message-runtime rospy roscpp opencv3 ];
+  propagatedBuildInputs = [ cmake-modules boost cob-vision-utils image-transport sensor-msgs cv-bridge message-filters tinyxml polled-camera message-runtime rospy roscpp opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

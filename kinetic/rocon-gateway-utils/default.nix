@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.1-r2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_gateway_utils/0.8.1-2.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_gateway_utils/0.8.1-2.tar.gz";
+    name = "0.8.1-2.tar.gz";
     sha256 = "a9114e4cca859099aef130642d566207f6f75f5192fa3187f7d12c2c958c61b5";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ rocon-python-comms gateway-msgs rosservice rocon-console rosgraph ];

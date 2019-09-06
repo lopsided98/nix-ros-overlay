@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/kinesis_video_streamer-release/archive/release/kinetic/kinesis_video_msgs/2.0.2-1.tar.gz;
+    url = "https://github.com/aws-gbp/kinesis_video_streamer-release/archive/release/kinetic/kinesis_video_msgs/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
     sha256 = "c271018121e60287bea67944a77440562e456bbaf6732bf987c75e4f283986fe";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-msgs message-generation ];
   propagatedBuildInputs = [ diagnostic-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

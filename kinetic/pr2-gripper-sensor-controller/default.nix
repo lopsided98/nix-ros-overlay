@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.10";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_gripper_sensor-release/archive/release/kinetic/pr2_gripper_sensor_controller/1.0.10-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_gripper_sensor-release/archive/release/kinetic/pr2_gripper_sensor_controller/1.0.10-0.tar.gz";
+    name = "1.0.10-0.tar.gz";
     sha256 = "2fa4c1786cac35782374058671e0574802d58b64270c75f16a9fdfb8cef7d836";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2-controllers-msgs std-srvs pluginlib actionlib-msgs pr2-controller-interface realtime-tools roscpp rosrt pr2-gripper-sensor-msgs pr2-controller-manager std-msgs roslib pr2-mechanism-model ];
-  propagatedBuildInputs = [ pr2-controllers-msgs std-srvs pluginlib actionlib-msgs pr2-controller-interface realtime-tools roscpp rosrt pr2-gripper-sensor-msgs pr2-controller-manager std-msgs roslib pr2-mechanism-model ];
+  propagatedBuildInputs = [ pr2-controllers-msgs std-srvs pr2-controller-interface actionlib-msgs pluginlib realtime-tools rosrt pr2-gripper-sensor-msgs roslib pr2-controller-manager std-msgs roscpp pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/message_filters/1.12.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/message_filters/1.12.14-0.tar.gz";
+    name = "1.12.14-0.tar.gz";
     sha256 = "faa45c9fa60f227b7a015a7edc4824d5f823563bb7753a37fffb300472dded96";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole boost rostest xmlrpcpp roscpp rosunit ];
   propagatedBuildInputs = [ roscpp rosconsole xmlrpcpp ];
   nativeBuildInputs = [ catkin ];

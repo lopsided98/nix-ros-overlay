@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_object_detection_visualizer/0.6.14-1.tar.gz;
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_object_detection_visualizer/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
     sha256 = "58aaadb7bd93299f43858c0fb1521159fb046d13f5138ec43f1179888b5224bc";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost cob-object-detection-msgs image-transport sensor-msgs cv-bridge message-filters pcl roscpp pcl-ros eigen-conversions visualization-msgs opencv3 ];
-  propagatedBuildInputs = [ boost cob-object-detection-msgs image-transport sensor-msgs cv-bridge message-filters pcl roscpp pcl-ros eigen-conversions visualization-msgs opencv3 ];
+  propagatedBuildInputs = [ boost cob-object-detection-msgs pcl sensor-msgs image-transport message-filters cv-bridge visualization-msgs pcl-ros eigen-conversions roscpp opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

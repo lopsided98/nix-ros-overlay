@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.6";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_safety_controller/0.7.6-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_safety_controller/0.7.6-0.tar.gz";
+    name = "0.7.6-0.tar.gz";
     sha256 = "8a33921af46704980110c752c39f1b9e0837907951ecd9efa229973f6d215229";
   };
 
+  buildType = "catkin";
   buildInputs = [ kobuki-msgs pluginlib roscpp ecl-threads std-msgs nodelet geometry-msgs yocs-controllers ];
   propagatedBuildInputs = [ kobuki-msgs pluginlib roscpp ecl-threads std-msgs nodelet geometry-msgs yocs-controllers ];
   nativeBuildInputs = [ catkin ];

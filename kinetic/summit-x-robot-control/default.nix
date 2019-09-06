@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.1";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/summit_x_sim-release/archive/release/kinetic/summit_x_robot_control/1.1.1-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/summit_x_sim-release/archive/release/kinetic/summit_x_robot_control/1.1.1-0.tar.gz";
+    name = "1.1.1-0.tar.gz";
     sha256 = "956ff4fcb79a48c86900de082ebaffad54e7ebf32d41cb4503ebca8f2d0ec426";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs robotnik-msgs roscpp diagnostic-updater nav-msgs diagnostic-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs robotnik-msgs roscpp diagnostic-updater nav-msgs diagnostic-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

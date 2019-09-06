@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/image_recognition/0.0.4-0.tar.gz;
+    url = "https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/image_recognition/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "62653fdb62c43a51759a9a20f8541b07682cacd08693a6dd5bf50efc92a239de";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ openface-ros image-recognition-rqt tensorflow-ros-rqt tensorflow-ros image-recognition-util image-recognition-msgs skybiometry-ros ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/kinetic/robot_pose_ekf/1.14.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/robot_pose_ekf/1.14.4-0.tar.gz";
+    name = "1.14.4-0.tar.gz";
     sha256 = "e3b076324d965a16d3c0eb08f001029f2ba24c6841876a8f741145b14c448c51";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp nav-msgs message-generation bfl std-msgs tf geometry-msgs ];
   checkInputs = [ rostest rosbag ];
   propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs message-runtime bfl std-msgs tf geometry-msgs ];

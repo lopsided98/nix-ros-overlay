@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_behavior_engine/1.2.1-1.tar.gz;
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_behavior_engine/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
     sha256 = "352ffb38f57dcc8b92add7c0441621231692810b42d62c069064a4202c742498";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ flexbe-msgs flexbe-mirror flexbe-states flexbe-onboard flexbe-input flexbe-widget flexbe-testing flexbe-core ];
   nativeBuildInputs = [ catkin ];
 

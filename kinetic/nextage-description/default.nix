@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.5-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_description/0.8.5-1.tar.gz;
+    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/kinetic/nextage_description/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
     sha256 = "d2f769d2e613f2da55c6055688f0dee234d2e0800414065f04ce4d01cfb970f8";
   };
 
+  buildType = "catkin";
   buildInputs = [ urdf ];
   propagatedBuildInputs = [ urdf ];
   nativeBuildInputs = [ catkin ];

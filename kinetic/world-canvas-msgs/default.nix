@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/world_canvas_msgs-release/archive/release/kinetic/world_canvas_msgs/0.2.0-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/world_canvas_msgs-release/archive/release/kinetic/world_canvas_msgs/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
     sha256 = "6686832e89831aba0a5ed492d94f3d7fd36481ca58e55b52ce686220fa030afc";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs uuid-msgs message-generation std-msgs geometry-msgs ];
   propagatedBuildInputs = [ std-srvs uuid-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/tork-a/melfa_robot-release/archive/release/kinetic/melfa_robot/0.0.4-0.tar.gz;
+    url = "https://github.com/tork-a/melfa_robot-release/archive/release/kinetic/melfa_robot/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "1efab4205f76db2a0c708c47f7048ec5b04f8e8842ac63efe31fd5e7d7c14138";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ melfa-description rv4fl-moveit-config melfa-driver rv7fl-moveit-config ];
   nativeBuildInputs = [ catkin ];
 

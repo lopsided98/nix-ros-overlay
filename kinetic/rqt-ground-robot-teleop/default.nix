@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/JdeRobot/ground_robots-release/archive/release/kinetic/rqt_ground_robot_teleop/0.0.1-1.tar.gz;
+    url = "https://github.com/JdeRobot/ground_robots-release/archive/release/kinetic/rqt_ground_robot_teleop/0.0.1-1.tar.gz";
+    name = "0.0.1-1.tar.gz";
     sha256 = "e271278468e460ab2bb80ce7692edbe3443c4e50a65d0cb95de061bd29574b80";
   };
 
+  buildType = "catkin";
   buildInputs = [ rqt-gui-py pythonPackages.rospkg sensor-msgs rqt-gui rospy roslib geometry-msgs ];
   propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg sensor-msgs rqt-gui rospy roslib geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0-r2";
 
   src = fetchurl {
-    url = https://github.com/aws-gbp/cloudwatch_common-release/archive/release/kinetic/cloudwatch_logs_common/1.1.0-2.tar.gz;
+    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/kinetic/cloudwatch_logs_common/1.1.0-2.tar.gz";
+    name = "1.1.0-2.tar.gz";
     sha256 = "8819864f2a0a3017184a1e882204609b8582655615063ee36c3c78f5e178a611";
   };
 
+  buildType = "cmake";
   buildInputs = [ dataflow-lite aws-common file-management ];
   checkInputs = [ gtest gmock ];
   propagatedBuildInputs = [ dataflow-lite aws-common file-management ];

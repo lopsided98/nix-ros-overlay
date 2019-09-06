@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/KristofRobot/razor_imu_9dof-release/archive/release/kinetic/razor_imu_9dof/1.2.0-0.tar.gz;
+    url = "https://github.com/KristofRobot/razor_imu_9dof-release/archive/release/kinetic/razor_imu_9dof/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "1ea328c3cd8dcc84de220e721fe4eeac184951c18167ebbeb4fd6702872b224f";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamic-reconfigure ];
   propagatedBuildInputs = [ pythonPackages.pyserial sensor-msgs rospy dynamic-reconfigure tf ];
   nativeBuildInputs = [ catkin ];

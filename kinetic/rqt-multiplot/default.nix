@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.10";
 
   src = fetchurl {
-    url = https://github.com/anybotics/rqt_multiplot_plugin-release/archive/release/kinetic/rqt_multiplot/0.0.10-0.tar.gz;
+    url = "https://github.com/anybotics/rqt_multiplot_plugin-release/archive/release/kinetic/rqt_multiplot/0.0.10-0.tar.gz";
+    name = "0.0.10-0.tar.gz";
     sha256 = "8609de1db057f16d19ba9097a5022e0551f29f20b4e185a154e5fa2b09c3de0e";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosbag rqt-gui qt5.qtbase rqt-gui-cpp qwt6 variant-topic-tools roscpp ];
   propagatedBuildInputs = [ rosbag rqt-gui qt5.qtbase rqt-gui-cpp qwt6 variant-topic-tools roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_hironx-release/archive/release/kinetic/hironx_calibration/2.1.1-0.tar.gz;
+    url = "https://github.com/tork-a/rtmros_hironx-release/archive/release/kinetic/hironx_calibration/2.1.1-0.tar.gz";
+    name = "2.1.1-0.tar.gz";
     sha256 = "ae3d2d0c587722f6a70f855994e01174e539929a9520480c936e6fd0c413d1fe";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ kdl-parser orocos-kdl calibration-launch calibration-estimation openni2-launch ];
   nativeBuildInputs = [ catkin ];
 

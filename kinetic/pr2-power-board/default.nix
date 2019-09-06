@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.7";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/kinetic/pr2_power_board/1.1.7-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/kinetic/pr2_power_board/1.1.7-0.tar.gz";
+    name = "1.1.7-0.tar.gz";
     sha256 = "ddc7a7200607e678b5f3097d563f54e0ab0f645ea7fc06f603ac215d4ebe8341";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-updater message-generation diagnostic-msgs pr2-msgs roscpp log4cxx ];
   propagatedBuildInputs = [ diagnostic-updater message-runtime rospy diagnostic-msgs pr2-msgs roscpp log4cxx ];
   nativeBuildInputs = [ catkin ];

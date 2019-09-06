@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.24";
 
   src = fetchurl {
-    url = https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_tutorials/0.1.24-0.tar.gz;
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_tutorials/0.1.24-0.tar.gz";
+    name = "0.1.24-0.tar.gz";
     sha256 = "77503be354ea6ce0931130935c4b215bb8d68d395b5339014cdd1b39be26e6ce";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ tf teleop-twist-keyboard ];
   nativeBuildInputs = [ catkin ];
 

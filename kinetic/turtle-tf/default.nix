@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry_tutorials-release/archive/release/kinetic/turtle_tf/0.2.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/kinetic/turtle_tf/0.2.2-0.tar.gz";
+    name = "0.2.2-0.tar.gz";
     sha256 = "e5c783340ea80801232163ccb2fa8f949ba900901c97767a3d728a9e7bac15df";
   };
 
+  buildType = "catkin";
   buildInputs = [ turtlesim roscpp rospy std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ turtlesim roscpp rospy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

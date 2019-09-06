@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_msgs/1.0.4-1.tar.gz;
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_msgs/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "c84911a8d749759ba2a64bc4d540d92c67fa6a67b12a1d95509f1899fe2c4b6d";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation geometry-msgs ];
   propagatedBuildInputs = [ message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

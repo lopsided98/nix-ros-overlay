@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.4-r1";
 
   src = fetchurl {
-    url = https://github.com/Scheik/md49_base_controller-release/archive/release/kinetic/md49_messages/0.1.4-1.tar.gz;
+    url = "https://github.com/Scheik/md49_base_controller-release/archive/release/kinetic/md49_messages/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
     sha256 = "49e61cb56b9a3f9cd322d8692107ba9a7f6cfa0182fb7d1923b52cb271092219";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

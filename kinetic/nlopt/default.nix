@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.1.13-r1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/nlopt/2.1.13-1.tar.gz;
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/nlopt/2.1.13-1.tar.gz";
+    name = "2.1.13-1.tar.gz";
     sha256 = "6580914a550c5f89fcf0bdbd304aaf5eb6643b3f6e1e5a1995013d8bd1adf2bd";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospack cmake-modules mk rosbuild libtool ];
   nativeBuildInputs = [ catkin ];
 

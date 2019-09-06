@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.0";
 
   src = fetchurl {
-    url = https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/kinetic/qb_hand_hardware_interface/2.0.0-0.tar.gz;
+    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/kinetic/qb_hand_hardware_interface/2.0.0-0.tar.gz";
+    name = "2.0.0-0.tar.gz";
     sha256 = "ecf31b8cd017a56c0f2c4cb029dc1378a103ba89b26f0d7e7c0b84ca85edf8ef";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface control-toolbox transmission-interface roscpp qb-device-hardware-interface ];
   propagatedBuildInputs = [ hardware-interface control-toolbox transmission-interface roscpp qb-device-hardware-interface ];
   nativeBuildInputs = [ catkin ];

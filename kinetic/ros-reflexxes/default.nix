@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.8";
 
   src = fetchurl {
-    url = https://github.com/KITrobotics/ipr_extern-release/archive/release/kinetic/ros_reflexxes/0.8.8-0.tar.gz;
+    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/kinetic/ros_reflexxes/0.8.8-0.tar.gz";
+    name = "0.8.8-0.tar.gz";
     sha256 = "6fffe8bdbc4b262e0c0c806be94310d9429959403af9a3fea107d4612d6dc858";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp cmake-modules libreflexxestype2 ];
   propagatedBuildInputs = [ roscpp libreflexxestype2 ];
   nativeBuildInputs = [ catkin ];

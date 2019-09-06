@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.7";
 
   src = fetchurl {
-    url = https://github.com/UNR-RoboticsResearchLab/web_interface-release/archive/release/kinetic/image_stream/1.0.7-0.tar.gz;
+    url = "https://github.com/UNR-RoboticsResearchLab/web_interface-release/archive/release/kinetic/image_stream/1.0.7-0.tar.gz";
+    name = "1.0.7-0.tar.gz";
     sha256 = "57c40cb2935de0812d1e5925bdd06a45dae48ce97f28e9eeaa534290c0e4029c";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosweb cv-bridge opencv3 rospy ];
   propagatedBuildInputs = [ rosweb cv-bridge opencv3 rospy ];
   nativeBuildInputs = [ catkin ];

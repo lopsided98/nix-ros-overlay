@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.5.10";
 
   src = fetchurl {
-    url = https://github.com/ros-naoqi/naoqi_driver-release/archive/release/kinetic/naoqi_driver/0.5.10-0.tar.gz;
+    url = "https://github.com/ros-naoqi/naoqi_driver-release/archive/release/kinetic/naoqi_driver/0.5.10-0.tar.gz";
+    name = "0.5.10-0.tar.gz";
     sha256 = "af80e7758de7895ce91aeb71a4f0cf72c678e8f28542a39db55ff83da32ea710";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2-msgs rosconsole cv-bridge naoqi-bridge-msgs rosgraph-msgs diagnostic-msgs geometry-msgs boost image-transport robot-state-publisher rosbag-storage naoqi-libqicore orocos-kdl tf2-geometry-msgs tf2-ros naoqi-libqi kdl-parser sensor-msgs diagnostic-updater ];
-  propagatedBuildInputs = [ rosbag-storage kdl-parser boost rosconsole orocos-kdl naoqi-libqicore image-transport cv-bridge tf2-ros naoqi-bridge-msgs robot-state-publisher naoqi-libqi ];
+  propagatedBuildInputs = [ rosbag-storage naoqi-libqicore orocos-kdl rosconsole boost kdl-parser image-transport cv-bridge tf2-ros naoqi-bridge-msgs robot-state-publisher naoqi-libqi ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

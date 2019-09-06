@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.20";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/geometry2/0.5.20-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/kinetic/geometry2/0.5.20-0.tar.gz";
+    name = "0.5.20-0.tar.gz";
     sha256 = "7ebc9e999526ae2bf3896e0df83e15514034ce63f24018e386aa40c8cf4c6a0a";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ tf2-tools tf2-msgs tf2-geometry-msgs tf2-kdl tf2-ros tf2-sensor-msgs tf2 tf2-eigen tf2-bullet tf2-py ];
   nativeBuildInputs = [ catkin ];
 

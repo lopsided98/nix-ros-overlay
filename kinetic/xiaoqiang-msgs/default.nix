@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.12";
 
   src = fetchurl {
-    url = https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_msgs/0.0.12-0.tar.gz;
+    url = "https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_msgs/0.0.12-0.tar.gz";
+    name = "0.0.12-0.tar.gz";
     sha256 = "6b94b5df5ec1607f7bc391af6640b1f3333df52628ab586461e7a3da53c57488";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation rospy ];
   propagatedBuildInputs = [ std-msgs message-generation rospy ];
   nativeBuildInputs = [ catkin ];

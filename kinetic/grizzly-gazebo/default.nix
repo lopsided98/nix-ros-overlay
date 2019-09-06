@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/grizzly_simulator-release/archive/release/kinetic/grizzly_gazebo/0.3.1-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/grizzly_simulator-release/archive/release/kinetic/grizzly_gazebo/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "619c3c5231906342603d61d46c6e45e0363f046b56428111c114c5f3cc6b1690";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros grizzly-description controller-manager grizzly-control hector-gazebo-plugins gazebo-plugins rostopic gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];

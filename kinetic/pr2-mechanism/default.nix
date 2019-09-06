@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.17";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/kinetic/pr2_mechanism/1.8.17-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/kinetic/pr2_mechanism/1.8.17-0.tar.gz";
+    name = "1.8.17-0.tar.gz";
     sha256 = "2d51c2389e04645a0901e2c3ea7feeaffcf7da597733eb85a2c461f432f2c14c";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pr2-hardware-interface pr2-controller-interface pr2-mechanism-diagnostics pr2-controller-manager pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 

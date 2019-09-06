@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.1";
 
   src = fetchurl {
-    url = https://github.com/AutonomyLab/ardrone_autonomy-release/archive/release/kinetic/ardrone_autonomy/1.4.1-0.tar.gz;
+    url = "https://github.com/AutonomyLab/ardrone_autonomy-release/archive/release/kinetic/ardrone_autonomy/1.4.1-0.tar.gz";
+    name = "1.4.1-0.tar.gz";
     sha256 = "cae1ffbcd105769bb2a301bfcada004820db497d361e3c9ca1835a18fdf95cab";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs SDL roslint libxml2 camera-info-manager image-transport gtk2 git wirelesstools sensor-msgs roscpp message-generation nav-msgs daemontools binutils tf libudev ];
   propagatedBuildInputs = [ std-srvs camera-info-manager image-transport sensor-msgs tf nav-msgs message-runtime roscpp ];
   nativeBuildInputs = [ catkin ];

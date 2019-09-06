@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.30";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_robot-release/archive/release/kinetic/imu_monitor/1.6.30-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_robot-release/archive/release/kinetic/imu_monitor/1.6.30-0.tar.gz";
+    name = "1.6.30-0.tar.gz";
     sha256 = "12ea5bcaec3b7ae9d374995f5a024ea54343c912bead97cc49e2564efc105d06";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pr2-mechanism-controllers python-orocos-kdl sensor-msgs rospy diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];
 

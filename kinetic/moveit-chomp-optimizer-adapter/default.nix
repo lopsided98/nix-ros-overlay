@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.9.17-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_chomp_optimizer_adapter/0.9.17-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_chomp_optimizer_adapter/0.9.17-1.tar.gz";
+    name = "0.9.17-1.tar.gz";
     sha256 = "a556ad4a3f8ef1ab4a68c2676f72832e7a80dfc421a79765c65000acd4e5a301";
   };
 
+  buildType = "catkin";
   buildInputs = [ chomp-motion-planner pluginlib moveit-core ];
-  propagatedBuildInputs = [ chomp-motion-planner pluginlib moveit-core ];
+  propagatedBuildInputs = [ chomp-motion-planner moveit-core pluginlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

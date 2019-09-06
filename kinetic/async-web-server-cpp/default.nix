@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.3";
 
   src = fetchurl {
-    url = https://github.com/gt-rail-release/async_web_server_cpp-release/archive/release/kinetic/async_web_server_cpp/0.0.3-0.tar.gz;
+    url = "https://github.com/gt-rail-release/async_web_server_cpp-release/archive/release/kinetic/async_web_server_cpp/0.0.3-0.tar.gz";
+    name = "0.0.3-0.tar.gz";
     sha256 = "32d6fc632c8c80656899d314fae6ca57e3db01312e82b3735c9ee50bb3f996e7";
   };
 
+  buildType = "catkin";
   buildInputs = [ openssl boost ];
   checkInputs = [ rostest roslib rospy ];
   propagatedBuildInputs = [ openssl boost pythonPackages.websocket_client ];

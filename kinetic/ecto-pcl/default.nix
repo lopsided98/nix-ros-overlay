@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ecto_pcl-release/archive/release/kinetic/ecto_pcl/0.4.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/ecto_pcl-release/archive/release/kinetic/ecto_pcl/0.4.5-0.tar.gz";
+    name = "0.4.5-0.tar.gz";
     sha256 = "2691d2245038c7a7c396b770a090096c80c2734b33318f2ec80b4d823a1b6553";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost sensor-msgs proj pcl-conversions ecto ];
   checkInputs = [ pythonPackages.nose rosunit ];
   propagatedBuildInputs = [ boost sensor-msgs proj pcl-conversions ecto ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.5";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_e_gazebo/1.2.5-0.tar.gz;
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_e_gazebo/1.2.5-0.tar.gz";
+    name = "1.2.5-0.tar.gz";
     sha256 = "4064c437b1fb19dcde89e23e48fbcc63d48300c9493dfa201e00d66f5fac7898";
   };
 
+  buildType = "catkin";
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros controller-manager joint-state-controller ur-e-description joint-trajectory-controller rostopic robot-state-publisher effort-controllers gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];

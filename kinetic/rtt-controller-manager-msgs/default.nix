@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_control-release/archive/release/kinetic/rtt_controller_manager_msgs/0.1.1-0.tar.gz;
+    url = "https://github.com/orocos-gbp/rtt_ros_control-release/archive/release/kinetic/rtt_controller_manager_msgs/0.1.1-0.tar.gz";
+    name = "0.1.1-0.tar.gz";
     sha256 = "36ecb84d9b805f9fb415ccb2e04be67b7f2056e46c40784ac989434051c38b7c";
   };
 
+  buildType = "catkin";
   buildInputs = [ rtt-roscomm rtt-std-msgs controller-manager-msgs ];
   propagatedBuildInputs = [ rtt-roscomm rtt-std-msgs controller-manager-msgs ];
   nativeBuildInputs = [ catkin ];

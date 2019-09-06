@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/world_canvas-release/archive/release/kinetic/world_canvas_server/0.2.0-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/world_canvas-release/archive/release/kinetic/world_canvas_server/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "30992a15d19cf71ce4f49eacc57850671e5065a73d1fd47f0752bafc33ce4c03";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.pymongo world-canvas-utils rostest nav-msgs world-canvas-msgs rospy warehouse-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/kinetic/dataspeed_pds_msgs/1.0.2-0.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/kinetic/dataspeed_pds_msgs/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "004be678fc6c9f32f68246f116c653b8bb36f252c9867e268dda5bdd870b12f9";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs rosbag-migration-rule message-runtime ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.17-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit/0.9.17-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit/0.9.17-1.tar.gz";
+    name = "0.9.17-1.tar.gz";
     sha256 = "d8da29a3f6f60b04504ecfa565e219085a2b63cd52e91bcc378dc50b37677c4e";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ moveit-ros moveit-commander moveit-core moveit-planners moveit-plugins moveit-setup-assistant ];
   nativeBuildInputs = [ catkin ];
 

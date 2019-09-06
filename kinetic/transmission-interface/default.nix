@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/transmission_interface/0.13.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/transmission_interface/0.13.3-0.tar.gz";
+    name = "0.13.3-0.tar.gz";
     sha256 = "5ea69c02ba27cce7d5bb727821595ff1eacfeda4febdb5a56ed243d779dd825d";
   };
 
+  buildType = "catkin";
   buildInputs = [ hardware-interface cmake-modules pluginlib tinyxml roscpp ];
   checkInputs = [ rosunit resource-retriever ];
   propagatedBuildInputs = [ tinyxml roscpp pluginlib ];

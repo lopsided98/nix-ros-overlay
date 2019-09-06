@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.9";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/kinetic/velodyne_description/1.0.9-0.tar.gz;
+    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/kinetic/velodyne_description/1.0.9-0.tar.gz";
+    name = "1.0.9-0.tar.gz";
     sha256 = "349c59a6afaddf330720d754ffd6190e06ddcdcc94abb7ddec43cb832cb34540";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];
 

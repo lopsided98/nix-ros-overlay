@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.0";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/simple_message/0.7.0-0.tar.gz;
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/simple_message/0.7.0-0.tar.gz";
+    name = "0.7.0-0.tar.gz";
     sha256 = "7441b8f0c300d45fd52367d4ccc062a2b904726fc5eccebdf8fdf49d38812cbf";
   };
 
+  buildType = "catkin";
   buildInputs = [ industrial-msgs roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ industrial-msgs roscpp ];

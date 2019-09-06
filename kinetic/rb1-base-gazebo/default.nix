@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/kinetic/rb1_base_gazebo/1.0.2-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/rb1_base_sim-release/archive/release/kinetic/rb1_base_gazebo/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "f2874fcfc9c10fc5ad8d458b5c62a0211c47e0ffdd18660c4af63e4e54784d3c";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ gazebo-ros std-srvs rb1-base-pad rb1-base-control std-msgs tf rb1-base-description gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 

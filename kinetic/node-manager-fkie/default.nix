@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.12";
 
   src = fetchurl {
-    url = https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/node_manager_fkie/0.8.12-0.tar.gz;
+    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/kinetic/node_manager_fkie/0.8.12-0.tar.gz";
+    name = "0.8.12-0.tar.gz";
     sha256 = "bfa6c0a6113f833c6b2d62a088666c584c678003e9494959e8d479dfddcd26ef";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-msgs multimaster-msgs-fkie master-discovery-fkie ];
   propagatedBuildInputs = [ default-cfg-fkie rqt-gui rosservice screen rosgraph rospy pythonPackages.paramiko diagnostic-msgs pythonPackages.docutils rqt-reconfigure xterm roslaunch roslib master-sync-fkie rosmsg python-qt-binding multimaster-msgs-fkie dynamic-reconfigure master-discovery-fkie ];
   nativeBuildInputs = [ catkin ];

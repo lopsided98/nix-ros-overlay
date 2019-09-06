@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/sensor_module_tutorial/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/sensor_module_tutorial/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "10ee406db0188592993202ac6075c720d822e7bd575d9e3a8fe88cb5955c1f0a";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs roscpp boost robotis-framework-common ];
   propagatedBuildInputs = [ std-msgs roscpp boost robotis-framework-common ];
   nativeBuildInputs = [ catkin ];

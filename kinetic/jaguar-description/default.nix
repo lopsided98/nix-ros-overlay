@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/gstavrinos/jaguar-release/archive/release/kinetic/jaguar_description/0.1.0-0.tar.gz;
+    url = "https://github.com/gstavrinos/jaguar-release/archive/release/kinetic/jaguar_description/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "e18b6815a1f4e2bfa9e27f96b7513f23c31a08394fae025f003eb340a51b6b66";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf urdf xacro roscpp ];
-  propagatedBuildInputs = [ tf urdf xacro roscpp ];
+  propagatedBuildInputs = [ tf roscpp urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/teleop_twist_keyboard-release/archive/release/kinetic/teleop_twist_keyboard/0.6.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/teleop_twist_keyboard-release/archive/release/kinetic/teleop_twist_keyboard/0.6.2-0.tar.gz";
+    name = "0.6.2-0.tar.gz";
     sha256 = "7864a5d1a089ac07113e03dedb7467f5f0cada204d96866dc09c2b0ce769a070";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ geometry-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

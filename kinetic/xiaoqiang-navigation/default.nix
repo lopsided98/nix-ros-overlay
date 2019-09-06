@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.12";
 
   src = fetchurl {
-    url = https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_navigation/0.0.12-0.tar.gz;
+    url = "https://github.com/BluewhaleRobot-release/xiaoqiang-release/archive/release/kinetic/xiaoqiang_navigation/0.0.12-0.tar.gz";
+    name = "0.0.12-0.tar.gz";
     sha256 = "b55f26da65cf0baa369a93f5489ee0b249592c990159f31a2daf55bb7d4de6a1";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ xiaoqiang-navigation-example addwa-local-planner ];
   nativeBuildInputs = [ catkin ];
 

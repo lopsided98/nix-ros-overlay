@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/kinetic/message_to_tf/0.3.0-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/kinetic/message_to_tf/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "8074a5e21accd7b79eccb72a80a6d033ed39299d0368d9185b8f2e0d23a65c35";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf sensor-msgs nav-msgs topic-tools roscpp geometry-msgs ];
   propagatedBuildInputs = [ tf sensor-msgs nav-msgs topic-tools roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

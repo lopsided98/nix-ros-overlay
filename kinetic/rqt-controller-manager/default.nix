@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/rqt_controller_manager/0.13.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/rqt_controller_manager/0.13.3-0.tar.gz";
+    name = "0.13.3-0.tar.gz";
     sha256 = "7aadbd43094407f5847c4ee805b04d3bae6134877d2563b8aba9a64d87aa99fc";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ controller-manager rqt-gui ];
   nativeBuildInputs = [ catkin ];
 

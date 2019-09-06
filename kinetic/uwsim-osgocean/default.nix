@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.3";
 
   src = fetchurl {
-    url = https://github.com/uji-ros-pkg/uwsim_osgocean-release/archive/release/kinetic/uwsim_osgocean/1.0.3-0.tar.gz;
+    url = "https://github.com/uji-ros-pkg/uwsim_osgocean-release/archive/release/kinetic/uwsim_osgocean/1.0.3-0.tar.gz";
+    name = "1.0.3-0.tar.gz";
     sha256 = "3c990411b0b339b4072b45f71e1c6669cb188914e9366428b024edbf6f83b579";
   };
 
+  buildType = "cmake";
   buildInputs = [ boost openscenegraph libGLU libGL fftw ];
   propagatedBuildInputs = [ boost catkin openscenegraph libGLU libGL fftw ];
   nativeBuildInputs = [ cmake ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/at-wat/hokuyo3d-release/archive/release/kinetic/hokuyo3d/0.2.0-0.tar.gz;
+    url = "https://github.com/at-wat/hokuyo3d-release/archive/release/kinetic/hokuyo3d/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "0f80bbea913053d898a32926c20df0f24547b10bb843e59b184715cc50168409";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest sensor-msgs roscpp roslint ];
   propagatedBuildInputs = [ sensor-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

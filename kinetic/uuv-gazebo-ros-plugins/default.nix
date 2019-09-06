@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_gazebo_ros_plugins/0.6.13-0.tar.gz;
+    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_gazebo_ros_plugins/0.6.13-0.tar.gz";
+    name = "0.6.13-0.tar.gz";
     sha256 = "d756fb48e75fe9022eb63f471bdc314c507c76dc1c5fb515edd8fb70e1333f10";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp gazebo-dev tf2-ros tf2 uuv-gazebo-ros-plugins-msgs uuv-gazebo-plugins std-msgs visualization-msgs geometry-msgs ];
   checkInputs = [ rostest rosunit xacro ];
-  propagatedBuildInputs = [ sensor-msgs roscpp gazebo-dev tf2-ros tf2 uuv-gazebo-ros-plugins-msgs uuv-gazebo-plugins std-msgs visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs tf2-ros gazebo-dev tf2 uuv-gazebo-ros-plugins-msgs uuv-gazebo-plugins visualization-msgs std-msgs roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

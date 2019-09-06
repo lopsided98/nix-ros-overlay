@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.5";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_geotiff_plugins/0.3.5-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/kinetic/hector_geotiff_plugins/0.3.5-0.tar.gz";
+    name = "0.3.5-0.tar.gz";
     sha256 = "61f68b9f084ee21ddac3e1838d828f6dd24e321816a70f6486fbe19c6f342554";
   };
 
+  buildType = "catkin";
   buildInputs = [ hector-geotiff hector-nav-msgs ];
   propagatedBuildInputs = [ hector-geotiff hector-nav-msgs ];
   nativeBuildInputs = [ catkin ];

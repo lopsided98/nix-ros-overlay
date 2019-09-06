@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/warthog_simulator-release/archive/release/kinetic/warthog_simulator/0.1.0-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/warthog_simulator-release/archive/release/kinetic/warthog_simulator/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "1166245e532598c6b1c52f21a649b31e043bb255283beacfc85f8ed073d9e173";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ warthog-gazebo ];
   nativeBuildInputs = [ catkin ];
 

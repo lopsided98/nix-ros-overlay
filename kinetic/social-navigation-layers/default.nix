@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1-r1";
 
   src = fetchurl {
-    url = https://github.com/wu-robotics/navigation_layers_release/archive/release/kinetic/social_navigation_layers/0.3.1-1.tar.gz;
+    url = "https://github.com/wu-robotics/navigation_layers_release/archive/release/kinetic/social_navigation_layers/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
     sha256 = "b91f57c0dccbe5ca62c5bb704003413904caf8c9ca0ba32c66f8706c12c03016";
   };
 
+  buildType = "catkin";
   buildInputs = [ people-msgs costmap-2d roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ people-msgs costmap-2d roscpp dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

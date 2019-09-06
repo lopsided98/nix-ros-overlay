@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/summit_xl_common-release/archive/release/kinetic/summit_xl_pad/1.1.2-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/summit_xl_common-release/archive/release/kinetic/summit_xl_pad/1.1.2-0.tar.gz";
+    name = "1.1.2-0.tar.gz";
     sha256 = "397414a554081a003547e7225887b5e71ac82e3c8c17817faf6cb456c56a58df";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs robotnik-msgs diagnostic-updater message-generation roscpp geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs robotnik-msgs diagnostic-updater message-runtime roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

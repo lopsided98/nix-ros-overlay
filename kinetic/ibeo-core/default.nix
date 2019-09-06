@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, network-interface, catkin, roslint }:
 buildRosPackage {
   pname = "ros-kinetic-ibeo-core";
-  version = "2.0.2";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/astuff/ibeo_core-release/archive/release/kinetic/ibeo_core/2.0.2-0.tar.gz;
-    sha256 = "c9a9ba008cc63befa85f00182eae4c0d5927f923ebaa7d05137e914919b6736e";
+    url = "https://github.com/astuff/ibeo_core-release/archive/release/kinetic/ibeo_core/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "275bd68821463efc1c08862a53b86ce022dde3cabeb9e11ed830cf87ae58117f";
   };
 
+  buildType = "catkin";
   buildInputs = [ network-interface roslint ];
   propagatedBuildInputs = [ network-interface ];
   nativeBuildInputs = [ catkin ];

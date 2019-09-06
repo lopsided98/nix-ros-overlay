@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.6-r1";
 
   src = fetchurl {
-    url = https://github.com/doosan-robotics/doosan-robot-release/archive/release/kinetic/moveit_config_m1509/0.9.6-1.tar.gz;
+    url = "https://github.com/doosan-robotics/doosan-robot-release/archive/release/kinetic/moveit_config_m1509/0.9.6-1.tar.gz";
+    name = "0.9.6-1.tar.gz";
     sha256 = "e23a0c29c6ab006a2f3bfc6431c9dc999f0f84024c9fa70ef15938b7a0570d9f";
   };
 
+  buildType = "catkin";
   buildInputs = [ dsr-description ];
   propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-kinematics moveit-setup-assistant joint-state-publisher robot-state-publisher dsr-description xacro moveit-planners-ompl ];
   nativeBuildInputs = [ catkin ];

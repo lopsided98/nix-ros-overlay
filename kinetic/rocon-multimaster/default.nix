@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.1-r2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_multimaster/0.8.1-2.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_multimaster/0.8.1-2.tar.gz";
+    name = "0.8.1-2.tar.gz";
     sha256 = "d75d660fbcbf425976978defb7e76ba459e55d460760316ab27907e838fb7fce";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rocon-unreliable-experiments rocon-gateway-utils rocon-hub rocon-test rocon-gateway-tests rocon-gateway rocon-hub-client ];
   nativeBuildInputs = [ catkin ];
 

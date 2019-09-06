@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/csm-release/archive/release/kinetic/csm/1.0.2-1.tar.gz;
+    url = "https://github.com/ros-gbp/csm-release/archive/release/kinetic/csm/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
     sha256 = "39ee77142fe54c5f9913ba6f88aa6a387b71f3331603e638c324f1cd87992688";
   };
 
+  buildType = "catkin";
   buildInputs = [ gsl ];
   propagatedBuildInputs = [ gsl catkin ];
   nativeBuildInputs = [ cmake ];

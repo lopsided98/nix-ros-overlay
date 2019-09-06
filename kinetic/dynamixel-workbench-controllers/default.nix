@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/kinetic/dynamixel_workbench_controllers/2.0.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/kinetic/dynamixel_workbench_controllers/2.0.0-0.tar.gz";
+    name = "2.0.0-0.tar.gz";
     sha256 = "ef893c3483c8ca773e64a6e83b27b670a5adbe0d1f27a61d295b328202ce2807";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules libyamlcpp trajectory-msgs sensor-msgs dynamixel-workbench-msgs dynamixel-workbench-toolbox eigen roscpp geometry-msgs ];
   propagatedBuildInputs = [ cmake-modules libyamlcpp trajectory-msgs sensor-msgs dynamixel-workbench-msgs dynamixel-workbench-toolbox eigen roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];

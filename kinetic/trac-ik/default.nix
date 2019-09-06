@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.5.0";
 
   src = fetchurl {
-    url = https://github.com/traclabs/trac_ik-release/archive/release/kinetic/trac_ik/1.5.0-0.tar.gz;
+    url = "https://github.com/traclabs/trac_ik-release/archive/release/kinetic/trac_ik/1.5.0-0.tar.gz";
+    name = "1.5.0-0.tar.gz";
     sha256 = "520f17235b2676e318335aea4ce7dcd3376c637dd180efc3fa505d81dd121c71";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ trac-ik-lib trac-ik-examples trac-ik-kinematics-plugin trac-ik-python ];
   nativeBuildInputs = [ catkin ];
 

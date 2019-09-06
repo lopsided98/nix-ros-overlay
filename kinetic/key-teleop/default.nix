@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/teleop_tools-release/archive/release/kinetic/key_teleop/0.3.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/kinetic/key_teleop/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "eca757cd4e4ed2427b8c8b00b1827eec8fdfdfe01f5d9b05c82aeb8e2e7f21db";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ geometry-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

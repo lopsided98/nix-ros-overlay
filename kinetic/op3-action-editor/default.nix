@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/robotis_op3_tools-release/archive/release/kinetic/op3_action_editor/0.2.2-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/robotis_op3_tools-release/archive/release/kinetic/op3_action_editor/0.2.2-0.tar.gz";
+    name = "0.2.2-0.tar.gz";
     sha256 = "e62501e2e21b69fddf5d2a3f0b6e9b63c2a1a71070d846029d81efe0d8d5b1f6";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamixel-sdk op3-action-module libyamlcpp robotis-controller ncurses std-msgs robotis-device roscpp ];
   propagatedBuildInputs = [ dynamixel-sdk op3-manager op3-action-module libyamlcpp robotis-controller ncurses std-msgs robotis-device roscpp ros-mpg321-player ];
   nativeBuildInputs = [ catkin ];

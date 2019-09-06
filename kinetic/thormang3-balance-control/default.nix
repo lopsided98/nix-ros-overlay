@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_balance_control/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_balance_control/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "7ef0d95ed8bf11a406fda925cfbf30291cd83763df01ef7322029b5832bb966c";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp cmake-modules robotis-math eigen ];
   propagatedBuildInputs = [ roscpp cmake-modules robotis-math eigen ];
   nativeBuildInputs = [ catkin ];

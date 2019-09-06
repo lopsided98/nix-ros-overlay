@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1";
 
   src = fetchurl {
-    url = https://github.com/raspberrypigibbon/raspigibbon_sim-release/archive/release/kinetic/raspigibbon_control/0.0.1-0.tar.gz;
+    url = "https://github.com/raspberrypigibbon/raspigibbon_sim-release/archive/release/kinetic/raspigibbon_control/0.0.1-0.tar.gz";
+    name = "0.0.1-0.tar.gz";
     sha256 = "36bc3da52cdc538b0e3bebacad479a2bf8718d415b69668a20ea49d30af7e8c6";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager hardware-interface joint-state-controller control-msgs sensor-msgs controller-interface robot-state-publisher rospy std-msgs gazebo-ros-control ];
   propagatedBuildInputs = [ controller-manager hardware-interface joint-state-controller control-msgs sensor-msgs controller-interface robot-state-publisher rospy std-msgs gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.1-r2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_hub_client/0.8.1-2.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_multimaster-release/archive/release/kinetic/rocon_hub_client/0.8.1-2.tar.gz";
+    name = "0.8.1-2.tar.gz";
     sha256 = "9bc3f700681d29505b1755939d9d7a75c81052e6c5748b0d599267917148267c";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rocon-python-redis gateway-msgs rocon-gateway-utils rospy ];
   nativeBuildInputs = [ catkin ];
 

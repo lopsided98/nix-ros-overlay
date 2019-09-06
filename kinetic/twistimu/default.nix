@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0";
 
   src = fetchurl {
-    url = https://github.com/easymov/twistimu-release/archive/release/kinetic/twistimu/1.0.0-0.tar.gz;
+    url = "https://github.com/easymov/twistimu-release/archive/release/kinetic/twistimu/1.0.0-0.tar.gz";
+    name = "1.0.0-0.tar.gz";
     sha256 = "fb44eeb670d3a4f34cb98abeb57833217a69197cc3691a90825713a0e9171995";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy sensor-msgs geometry-msgs dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

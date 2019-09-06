@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.14";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_pr2eus-release/archive/release/kinetic/pr2eus_tutorials/0.3.14-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_pr2eus-release/archive/release/kinetic/pr2eus_tutorials/0.3.14-0.tar.gz";
+    name = "0.3.14-0.tar.gz";
     sha256 = "867b35b55ec034aff412e7bcdc213d318f21cd27682ccda3ddbb282579c41de0";
   };
 
+  buildType = "catkin";
   buildInputs = [ pr2eus jsk-pcl-ros ];
   propagatedBuildInputs = [ pr2eus jsk-pcl-ros jsk-interactive-marker roseus-tutorials ];
   nativeBuildInputs = [ catkin ];

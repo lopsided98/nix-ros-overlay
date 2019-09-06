@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/RH-P12-RN-release/archive/release/kinetic/rh_p12_rn_gui/0.1.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/RH-P12-RN-release/archive/release/kinetic/rh_p12_rn_gui/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "3efd9d6b022c891309e16933aa644d9a55e7282409978d9d5516ed262c0e116e";
   };
 
+  buildType = "catkin";
   buildInputs = [ qt4 rh-p12-rn-base-module-msgs roscpp qt-build robotis-controller-msgs ];
   propagatedBuildInputs = [ qt4 rh-p12-rn-base-module-msgs roscpp qt-build robotis-controller-msgs ];
   nativeBuildInputs = [ catkin ];

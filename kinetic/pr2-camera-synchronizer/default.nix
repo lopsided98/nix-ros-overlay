@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.6.30";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_robot-release/archive/release/kinetic/pr2_camera_synchronizer/1.6.30-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_robot-release/archive/release/kinetic/pr2_camera_synchronizer/1.6.30-0.tar.gz";
+    name = "1.6.30-0.tar.gz";
     sha256 = "4f10b422067733cae30d81d7c3da19eefd20e0e5ec60d0e859230b9070725984";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest dynamic-reconfigure ];
   propagatedBuildInputs = [ ethercat-trigger-controllers wge100-camera rospy diagnostic-msgs dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

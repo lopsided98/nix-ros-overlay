@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.0.4";
 
   src = fetchurl {
-    url = https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/skybiometry_ros/0.0.4-0.tar.gz;
+    url = "https://github.com/tue-robotics/image_recognition-release/archive/release/kinetic/skybiometry_ros/0.0.4-0.tar.gz";
+    name = "0.0.4-0.tar.gz";
     sha256 = "8fa132d77f7684f84d73ff6af23dd416ed52c4985261d7e59968b2f396e18719";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy cv-bridge image-recognition-msgs ];
-  propagatedBuildInputs = [ rospy cv-bridge image-recognition-msgs ];
+  propagatedBuildInputs = [ image-recognition-msgs cv-bridge rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

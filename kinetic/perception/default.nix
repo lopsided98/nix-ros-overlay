@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/perception/1.3.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/perception/1.3.2-0.tar.gz";
+    name = "1.3.2-0.tar.gz";
     sha256 = "f2056efa3e940652e10818c6536a3e318c13a4ab00df8c45251e51f4005e57ce";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ image-pipeline vision-opencv ros-base image-common image-transport-plugins laser-pipeline perception-pcl ];
   nativeBuildInputs = [ catkin ];
 

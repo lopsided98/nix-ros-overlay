@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vision_opencv-release/archive/release/kinetic/vision_opencv/1.12.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/kinetic/vision_opencv/1.12.8-0.tar.gz";
+    name = "1.12.8-0.tar.gz";
     sha256 = "7cdc66ce48358097c9c149d7035e3bb1f95bb6e88e5460e6d6ae0c09ad37bc2d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ cv-bridge image-geometry ];
   nativeBuildInputs = [ catkin ];
 

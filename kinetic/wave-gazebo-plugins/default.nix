@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, catkin, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-wave-gazebo-plugins";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/vrx-release/archive/release/kinetic/wave_gazebo_plugins/1.2.0-1.tar.gz;
-    sha256 = "9ad6c3e89c30c5cba93be9c6891ece818ae2bdd393f73bf18373bf67f6405a0a";
+    url = "https://github.com/ros-gbp/vrx-release/archive/release/kinetic/wave_gazebo_plugins/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "391971795446f00a31b21eb73d1ae844e47b4cd9fa8baf1900ae633f9e4c9a65";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros eigen ];
   propagatedBuildInputs = [ gazebo-ros ];
   nativeBuildInputs = [ catkin ];

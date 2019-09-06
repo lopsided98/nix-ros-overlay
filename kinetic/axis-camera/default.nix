@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/axis_camera-release/archive/release/kinetic/axis_camera/0.3.0-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/axis_camera-release/archive/release/kinetic/axis_camera/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "ae6f8e91ae2ddeacc968cef472235f31a371e4a1f2a2828cd612df1713de3d8e";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs message-generation rospy dynamic-reconfigure tf camera-info-manager-py geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs message-runtime rospy dynamic-reconfigure tf camera-info-manager-py geometry-msgs ];
   nativeBuildInputs = [ catkin ];

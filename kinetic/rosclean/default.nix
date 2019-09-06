@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosclean/1.14.6-1.tar.gz;
+    url = "https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosclean/1.14.6-1.tar.gz";
+    name = "1.14.6-1.tar.gz";
     sha256 = "8d686af0c855858a4ea352a6bb3f733c970c36478358385e4cede44ff1eb825d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.rospkg ];
   nativeBuildInputs = [ catkin ];
 

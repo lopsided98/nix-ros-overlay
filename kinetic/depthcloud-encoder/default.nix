@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/RobotWebTools-release/depthcloud_encoder-release/archive/release/kinetic/depthcloud_encoder/0.1.1-1.tar.gz;
+    url = "https://github.com/RobotWebTools-release/depthcloud_encoder-release/archive/release/kinetic/depthcloud_encoder/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
     sha256 = "4b669d43e8cdf2b73a59be5a20cc02aee61b8160db0f653e3e321ac1d7accfd7";
   };
 
+  buildType = "catkin";
   buildInputs = [ image-transport sensor-msgs cv-bridge message-filters pcl-ros dynamic-reconfigure tf-conversions roscpp pcl-conversions ];
   propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge message-filters pcl-ros dynamic-reconfigure tf-conversions roscpp pcl-conversions ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.7";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/kobuki_desktop-release/archive/release/kinetic/kobuki_gazebo_plugins/0.5.7-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/kobuki_desktop-release/archive/release/kinetic/kobuki_gazebo_plugins/0.5.7-0.tar.gz";
+    name = "0.5.7-0.tar.gz";
     sha256 = "c157ce87feed82ceba296a66a2f37ad4c77508f8e882e77bcd7d9d3149afd499";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros kobuki-msgs boost sensor-msgs roscpp gazebo-plugins nav-msgs std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ gazebo-ros kobuki-msgs boost sensor-msgs roscpp gazebo-plugins nav-msgs std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

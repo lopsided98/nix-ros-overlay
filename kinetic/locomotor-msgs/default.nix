@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.2.5";
 
   src = fetchurl {
-    url = https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/locomotor_msgs/0.2.5-0.tar.gz;
+    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/locomotor_msgs/0.2.5-0.tar.gz";
+    name = "0.2.5-0.tar.gz";
     sha256 = "a795846d40b76f8dd6720c503fef71d1cd509907726831e3aa2bda8858d21e5b";
   };
 
+  buildType = "catkin";
   buildInputs = [ message-generation nav-2d-msgs actionlib-msgs ];
-  propagatedBuildInputs = [ message-runtime actionlib-msgs nav-2d-msgs ];
+  propagatedBuildInputs = [ nav-2d-msgs actionlib-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

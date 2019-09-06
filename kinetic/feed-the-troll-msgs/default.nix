@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1";
 
   src = fetchurl {
-    url = https://github.com/stonier/feed_the_troll_msgs-release/archive/release/kinetic/feed_the_troll_msgs/0.1.1-0.tar.gz;
+    url = "https://github.com/stonier/feed_the_troll_msgs-release/archive/release/kinetic/feed_the_troll_msgs/0.1.1-0.tar.gz";
+    name = "0.1.1-0.tar.gz";
     sha256 = "075cf9581432b2585529375d7e86772a8b3b0690910f9dcf2fa7656f8624f3ba";
   };
 
+  buildType = "catkin";
   buildInputs = [ uuid-msgs message-generation ];
   propagatedBuildInputs = [ uuid-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

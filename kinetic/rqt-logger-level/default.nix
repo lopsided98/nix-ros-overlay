@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_logger_level-release/archive/release/kinetic/rqt_logger_level/0.4.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_logger_level-release/archive/release/kinetic/rqt_logger_level/0.4.8-0.tar.gz";
+    name = "0.4.8-0.tar.gz";
     sha256 = "33884e98688fa012df84177c72c4850ba159bfc6c0cee6b2b595642c3e6d3575";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui rosservice rospy python-qt-binding rosnode ];
   nativeBuildInputs = [ catkin ];
 

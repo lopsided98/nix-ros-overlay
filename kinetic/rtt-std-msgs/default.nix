@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.9.2-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_std_msgs/2.9.2-1.tar.gz;
+    url = "https://github.com/orocos-gbp/rtt_ros_integration-release/archive/release/kinetic/rtt_std_msgs/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
     sha256 = "1ce05a13eb24641313d749af406a79ea0cbc3a60c082445d153f3d5027bd78a9";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs rtt-ros rtt-roscomm ];
   propagatedBuildInputs = [ std-msgs rtt-ros rtt-roscomm ];
   nativeBuildInputs = [ catkin ];

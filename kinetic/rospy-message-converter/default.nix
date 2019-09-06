@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.0";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/rospy_message_converter-release/archive/release/kinetic/rospy_message_converter/0.5.0-0.tar.gz;
+    url = "https://github.com/uos-gbp/rospy_message_converter-release/archive/release/kinetic/rospy_message_converter/0.5.0-0.tar.gz";
+    name = "0.5.0-0.tar.gz";
     sha256 = "48bcd73deec2aa72e1065a58c04e45c4fc1313c48992483a68deb872eddcbd55";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   checkInputs = [ std-srvs rosunit ];
   propagatedBuildInputs = [ std-msgs roslib message-runtime rospy ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.4";
 
   src = fetchurl {
-    url = https://github.com/leggedrobotics/darknet_ros-release/archive/release/kinetic/darknet_ros_msgs/1.1.4-0.tar.gz;
+    url = "https://github.com/leggedrobotics/darknet_ros-release/archive/release/kinetic/darknet_ros_msgs/1.1.4-0.tar.gz";
+    name = "1.1.4-0.tar.gz";
     sha256 = "2088c1b767d52a39c01cf1271de48634287963f13749eec570e9a4521f32986b";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs sensor-msgs message-generation std-msgs geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs sensor-msgs message-runtime std-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.2";
 
   src = fetchurl {
-    url = https://github.com/CPFL/robosense-release/archive/release/kinetic/rslidar/1.0.2-0.tar.gz;
+    url = "https://github.com/CPFL/robosense-release/archive/release/kinetic/rslidar/1.0.2-0.tar.gz";
+    name = "1.0.2-0.tar.gz";
     sha256 = "e7eea0657c14d33daa967e9dbf914083adcb19edbd1e2ed6b125d5b42bd022c4";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rslidar-driver rslidar-msgs rslidar-pointcloud ];
   nativeBuildInputs = [ catkin ];
 

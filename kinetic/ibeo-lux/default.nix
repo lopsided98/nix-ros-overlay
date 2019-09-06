@@ -5,13 +5,15 @@
 { lib, buildRosPackage, fetchurl, network-interface, catkin, ibeo-core, std-msgs, visualization-msgs, pcl-ros, ibeo-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ibeo-lux";
-  version = "2.0.1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/astuff/ibeo_lux-release/archive/release/kinetic/ibeo_lux/2.0.1-0.tar.gz;
-    sha256 = "47bd62ae74a6c76aede8be4ea7b5fe9ea4bfd9cdfd452d6701dc9426ad3139bd";
+    url = "https://github.com/astuff/ibeo_lux-release/archive/release/kinetic/ibeo_lux/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "d31476f9ed41684dcd7b7f8c13cd514873e8fe7ddb7cc1055b53f957478b50dd";
   };
 
+  buildType = "catkin";
   buildInputs = [ network-interface roscpp ibeo-core ibeo-msgs pcl-ros std-msgs visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ network-interface roscpp ibeo-core ibeo-msgs pcl-ros std-msgs visualization-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

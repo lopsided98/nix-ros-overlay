@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.0";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_apps-release/archive/release/kinetic/pr2_apps/0.6.0-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_apps-release/archive/release/kinetic/pr2_apps/0.6.0-0.tar.gz";
+    name = "0.6.0-0.tar.gz";
     sha256 = "d6233efd2dcb06410236f776ba3efbeb215c9db43a9155c452479e6152533be5";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pr2-app-manager pr2-teleop-general pr2-position-scripts pr2-kinematics pr2-mannequin-mode pr2-tuckarm ];
   nativeBuildInputs = [ catkin ];
 

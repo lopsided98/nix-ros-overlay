@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.2";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/rosnode_rtc/1.4.2-0.tar.gz;
+    url = "https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/rosnode_rtc/1.4.2-0.tar.gz";
+    name = "1.4.2-0.tar.gz";
     sha256 = "bb126f1601b1d3d15caeec29ed19a1db359829af3420bfa411828125f6fcba71";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp-tutorials openrtm-tools rostopic rospy ];
   propagatedBuildInputs = [ openrtm-tools ];
   nativeBuildInputs = [ catkin ];

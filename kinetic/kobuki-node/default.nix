@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.6";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_node/0.7.6-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_node/0.7.6-0.tar.gz";
+    name = "0.7.6-0.tar.gz";
     sha256 = "0d7add3be65bb923b7f0d3116a2ba9233514c5c4e7109ebbdd7f5736e76a72f6";
   };
 
+  buildType = "catkin";
   buildInputs = [ ecl-streams kobuki-driver kobuki-msgs ecl-threads ecl-exceptions rospy diagnostic-msgs tf geometry-msgs kobuki-keyop angles ecl-sigslots nav-msgs std-msgs roscpp nodelet kobuki-ftdi pluginlib sensor-msgs kobuki-safety-controller diagnostic-updater ];
   propagatedBuildInputs = [ ecl-streams kobuki-driver kobuki-msgs ecl-threads ecl-exceptions rospy diagnostic-msgs tf geometry-msgs capabilities kobuki-rapps kobuki-keyop angles ecl-sigslots nav-msgs std-msgs diagnostic-aggregator roscpp nodelet kobuki-ftdi pluginlib sensor-msgs kobuki-safety-controller diagnostic-updater ];
   nativeBuildInputs = [ catkin ];

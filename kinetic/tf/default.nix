@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.11.9";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry-release/archive/release/kinetic/tf/1.11.9-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/kinetic/tf/1.11.9-0.tar.gz";
+    name = "1.11.9-0.tar.gz";
     sha256 = "145ad3bd3c5ea0b4b1ff224c39eb03ba5b719f016609f6960589658a9687f53f";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole sensor-msgs message-filters roscpp tf2-ros message-generation angles std-msgs rostime geometry-msgs ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ rosconsole roswtf sensor-msgs message-filters tf2-ros message-runtime std-msgs roscpp graphviz geometry-msgs ];

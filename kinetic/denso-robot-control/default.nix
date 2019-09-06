@@ -8,10 +8,12 @@ buildRosPackage {
   version = "3.0.2-r1";
 
   src = fetchurl {
-    url = https://github.com/DENSORobot/denso_robot_ros-release/archive/release/kinetic/denso_robot_control/3.0.2-1.tar.gz;
+    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/kinetic/denso_robot_control/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
     sha256 = "33b3ba06eb17f5100b0367d092c998bf2aae98054345a8480a9fc81f34b71dbe";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager hardware-interface denso-robot-core joint-limits-interface bcap-core std-msgs bcap-service roscpp transmission-interface ];
   propagatedBuildInputs = [ controller-manager hardware-interface denso-robot-core joint-limits-interface bcap-core std-msgs bcap-service roscpp transmission-interface ];
   nativeBuildInputs = [ catkin ];

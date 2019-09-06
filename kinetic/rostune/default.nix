@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.7";
 
   src = fetchurl {
-    url = https://github.com/roboskel/rostune-release/archive/release/kinetic/rostune/1.0.7-0.tar.gz;
+    url = "https://github.com/roboskel/rostune-release/archive/release/kinetic/rostune/1.0.7-0.tar.gz";
+    name = "1.0.7-0.tar.gz";
     sha256 = "534824c7b7e90a2a392ddb2bd82ac53ee867626be2a781a8fe55438afca1a6a7";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation topic-tools ];
   propagatedBuildInputs = [ std-msgs topic-tools message-runtime ];
   nativeBuildInputs = [ catkin ];

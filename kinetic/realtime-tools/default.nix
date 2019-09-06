@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.11.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/realtime_tools-release/archive/release/kinetic/realtime_tools/1.11.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/realtime_tools-release/archive/release/kinetic/realtime_tools/1.11.1-0.tar.gz";
+    name = "1.11.1-0.tar.gz";
     sha256 = "b8ba7ac211929a3f1e5b7ab0056dab8ae3b93581fcd5280ee16dc0e0a6c056c0";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp rospy ];
   propagatedBuildInputs = [ roscpp rospy ];
   nativeBuildInputs = [ catkin ];

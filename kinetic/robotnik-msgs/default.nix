@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.5";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/robotnik_msgs-release/archive/release/kinetic/robotnik_msgs/0.2.5-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/robotnik_msgs-release/archive/release/kinetic/robotnik_msgs/0.2.5-0.tar.gz";
+    name = "0.2.5-0.tar.gz";
     sha256 = "5997ae3da9ecb371c7c27532319c33b9f8779395bf1e0d5a1891b4265e1fa263";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation actionlib-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime actionlib-msgs ];
   nativeBuildInputs = [ catkin ];

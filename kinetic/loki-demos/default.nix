@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2";
 
   src = fetchurl {
-    url = https://github.com/UbiquityRobotics-release/loki_robot-release/archive/release/kinetic/loki_demos/0.0.2-0.tar.gz;
+    url = "https://github.com/UbiquityRobotics-release/loki_robot-release/archive/release/kinetic/loki_demos/0.0.2-0.tar.gz";
+    name = "0.0.2-0.tar.gz";
     sha256 = "468a0d0094de6d7e2a9b979eeeff6c519bb8eb5e67652c9de83bcb3634e9e2d7";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ loki-nav tf2-web-republisher rosbridge-server loki-teleop loki-bringup ];
   nativeBuildInputs = [ catkin ];
 

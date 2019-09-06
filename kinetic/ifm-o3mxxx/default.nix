@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.1";
 
   src = fetchurl {
-    url = https://github.com/takiaine/ifm_o3mxxx-release/archive/release/kinetic/ifm_o3mxxx/1.0.1-0.tar.gz;
+    url = "https://github.com/takiaine/ifm_o3mxxx-release/archive/release/kinetic/ifm_o3mxxx/1.0.1-0.tar.gz";
+    name = "1.0.1-0.tar.gz";
     sha256 = "1c4b8423548da9b6e19cfdd85a7d4451313efb7c1cc1471b810337042b6509c7";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp message-generation pcl-ros std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs roscpp message-runtime pcl-ros std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

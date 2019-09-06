@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.3";
 
   src = fetchurl {
-    url = https://github.com/stonier/cost_map-release/archive/release/kinetic/cost_map_core/0.3.3-0.tar.gz;
+    url = "https://github.com/stonier/cost_map-release/archive/release/kinetic/cost_map_core/0.3.3-0.tar.gz";
+    name = "0.3.3-0.tar.gz";
     sha256 = "fa31852bacdc0bd6a836516d8c54331b173ab9d29eb821c6a57ca3bc1f63e96c";
   };
 
+  buildType = "catkin";
   buildInputs = [ grid-map-core ecl-eigen ecl-console ecl-build ];
   propagatedBuildInputs = [ grid-map-core ecl-eigen ecl-console ecl-build ];
   nativeBuildInputs = [ catkin ];

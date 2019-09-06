@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.4-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_robot/0.3.4-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_robot/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
     sha256 = "824b3d8a2a74e382332d58f861dc4e9d209d0016d40b9c1ae75eca2ac562dfb5";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ husky-base husky-bringup ];
   nativeBuildInputs = [ catkin ];
 

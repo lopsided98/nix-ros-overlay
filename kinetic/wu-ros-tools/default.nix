@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/wu-robotics/wu_ros_tools/archive/release/kinetic/wu_ros_tools/0.2.4-0.tar.gz;
+    url = "https://github.com/wu-robotics/wu_ros_tools/archive/release/kinetic/wu_ros_tools/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "1af04eed17642d9b3b65758a7693fc3d8df725cc1fa62ee5f04d83040fde532d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ easy-markers joy-listener kalman-filter rosbaglive ];
   nativeBuildInputs = [ catkin ];
 

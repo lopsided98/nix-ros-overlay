@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/laser_ortho_projector/0.3.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/kinetic/laser_ortho_projector/0.3.2-0.tar.gz";
+    name = "0.3.2-0.tar.gz";
     sha256 = "8c946a9d9355a0669979fe7a960d820d3bc68b10b2fae22bc5795bbd25bbba6f";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf pcl sensor-msgs message-filters nodelet pcl-ros roscpp pcl-conversions geometry-msgs ];
   propagatedBuildInputs = [ tf pcl sensor-msgs message-filters nodelet pcl-ros roscpp pcl-conversions geometry-msgs ];
   nativeBuildInputs = [ catkin ];

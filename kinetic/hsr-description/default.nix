@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/ToyotaResearchInstitute/hsr_description-release/archive/release/kinetic/hsr_description/1.1.0-0.tar.gz;
+    url = "https://github.com/ToyotaResearchInstitute/hsr_description-release/archive/release/kinetic/hsr_description/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "0404fdb0e9b922ce077ecead23b4631406e9d24d7dcf7afd48b16818f2e5e138";
   };
 
+  buildType = "catkin";
   buildInputs = [ xacro rosbash ];
   propagatedBuildInputs = [ rosbash hsr-meshes rviz robot-state-publisher joint-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];

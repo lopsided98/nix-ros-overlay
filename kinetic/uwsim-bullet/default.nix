@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.82.1";
 
   src = fetchurl {
-    url = https://github.com/uji-ros-pkg/uwsim_bullet-release/archive/release/kinetic/uwsim_bullet/2.82.1-0.tar.gz;
+    url = "https://github.com/uji-ros-pkg/uwsim_bullet-release/archive/release/kinetic/uwsim_bullet/2.82.1-0.tar.gz";
+    name = "2.82.1-0.tar.gz";
     sha256 = "e753ed61af76cbf466a018d6934e38612072daf902caf500eeb478e3051fb369";
   };
 
+  buildType = "cmake";
   buildInputs = [ freeglut xorg.libXext ];
   propagatedBuildInputs = [ freeglut catkin xorg.libXext ];
   nativeBuildInputs = [ cmake ];

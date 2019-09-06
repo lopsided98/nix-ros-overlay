@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-release/archive/release/kinetic/op3_action_module/0.2.1-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-OP3-release/archive/release/kinetic/op3_action_module/0.2.1-0.tar.gz";
+    name = "0.2.1-0.tar.gz";
     sha256 = "f19338516aa79cb1951aabc477ea97b73ec09cbea91d9d7a849751ccecbaca4f";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost roscpp roslib op3-action-module-msgs std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ boost roscpp roslib op3-action-module-msgs std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
   nativeBuildInputs = [ catkin ];

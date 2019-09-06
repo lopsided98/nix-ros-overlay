@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.1";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_interactions-release/archive/release/kinetic/turtlebot_interactions/2.3.1-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_interactions-release/archive/release/kinetic/turtlebot_interactions/2.3.1-0.tar.gz";
+    name = "2.3.1-0.tar.gz";
     sha256 = "163443fc9b56c33c01d0f76b879a1730fbb903cdd5ef6d53bece3cc38e0fa195";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ turtlebot-dashboard turtlebot-interactive-markers turtlebot-rviz-launchers ];
   nativeBuildInputs = [ catkin ];
 

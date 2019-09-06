@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.2-r1";
 
   src = fetchurl {
-    url = https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/kinetic/rr_openrover_stack/0.7.2-1.tar.gz;
+    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/kinetic/rr_openrover_stack/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
     sha256 = "9fb9c5b8e7305bdb276c43eb5d041b9ebc238b8b58bde2c1107f78c0f72292bc";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rr-control-input-manager rr-openrover-driver rr-openrover-driver-msgs ];
   nativeBuildInputs = [ catkin ];
 

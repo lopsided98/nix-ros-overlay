@@ -8,10 +8,12 @@ buildRosPackage {
   version = "4.3.1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_common_msgs-release/archive/release/kinetic/jsk_hark_msgs/4.3.1-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/kinetic/jsk_hark_msgs/4.3.1-0.tar.gz";
+    name = "4.3.1-0.tar.gz";
     sha256 = "fefb28507bf08df56728f9b54e38174091c1b953d85596b3a04248355b9a266c";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

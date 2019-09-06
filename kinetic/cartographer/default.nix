@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0-r2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/cartographer-release/archive/release/kinetic/cartographer/0.2.0-2.tar.gz;
+    url = "https://github.com/ros-gbp/cartographer-release/archive/release/kinetic/cartographer/0.2.0-2.tar.gz";
+    name = "0.2.0-2.tar.gz";
     sha256 = "83c80c70ec6d580bbd65ab60a08d59470351349e92cacc79c4bc7332becd193b";
   };
 
+  buildType = "cmake";
   buildInputs = [ cairo ceres-solver libwebp boost gflags lua5 pythonPackages.sphinx glog eigen protobuf gmock ];
   propagatedBuildInputs = [ cairo ceres-solver libwebp boost gflags lua5 glog eigen protobuf ];
   nativeBuildInputs = [ catkin ];

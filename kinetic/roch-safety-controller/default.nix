@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.15";
 
   src = fetchurl {
-    url = https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_safety_controller/2.0.15-0.tar.gz;
+    url = "https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_safety_controller/2.0.15-0.tar.gz";
+    name = "2.0.15-0.tar.gz";
     sha256 = "9a0f80ebe4968f668b575fe33869c6cc9b622456930f851e74d58aa25777f63a";
   };
 
+  buildType = "catkin";
   buildInputs = [ ecl-threads roch-msgs std-msgs roscpp geometry-msgs yocs-controllers ];
   propagatedBuildInputs = [ ecl-threads roch-msgs std-msgs roscpp geometry-msgs yocs-controllers ];
   nativeBuildInputs = [ catkin ];

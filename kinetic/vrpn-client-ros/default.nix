@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.2";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/vrpn_client_ros-release/archive/release/kinetic/vrpn_client_ros/0.2.2-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/vrpn_client_ros-release/archive/release/kinetic/vrpn_client_ros/0.2.2-0.tar.gz";
+    name = "0.2.2-0.tar.gz";
     sha256 = "247bd32fbc3a0d7350cd0162a94a2c06dbf8dbcdf41b162fc7d6666d003f231a";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp tf2-ros geometry-msgs vrpn ];
   checkInputs = [ roslaunch roslint ];
   propagatedBuildInputs = [ roscpp tf2-ros geometry-msgs vrpn ];

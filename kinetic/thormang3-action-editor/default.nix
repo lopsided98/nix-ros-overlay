@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-Tools-release/archive/release/kinetic/thormang3_action_editor/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-Tools-release/archive/release/kinetic/thormang3_action_editor/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "fb8e40bccc40b1911fa8a442974d3960ed52f3b8d7758f75376da3cc8a1e8a28";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamixel-sdk libyamlcpp robotis-controller ncurses std-msgs robotis-device roscpp thormang3-action-module ];
   propagatedBuildInputs = [ dynamixel-sdk libyamlcpp robotis-controller thormang3-manager ncurses std-msgs robotis-device roscpp thormang3-action-module ];
   nativeBuildInputs = [ catkin ];

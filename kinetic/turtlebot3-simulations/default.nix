@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_simulations/1.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/kinetic/turtlebot3_simulations/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "2a85c08d06a3de6cb9ee85cdadae592f6e7ee8c3e5bb31b9232ea148977060da";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ turtlebot3-gazebo turtlebot3-fake ];
   nativeBuildInputs = [ catkin ];
 

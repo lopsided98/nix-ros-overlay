@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.6-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosmake/1.14.6-1.tar.gz;
+    url = "https://github.com/ros-gbp/ros-release/archive/release/kinetic/rosmake/1.14.6-1.tar.gz";
+    name = "1.14.6-1.tar.gz";
     sha256 = "4c00046c95cc4876b37acfe86c3cd0dfc3d5887431b1629b33a4e9e1982b0d09";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.rospkg catkin ];
   nativeBuildInputs = [ catkin ];
 

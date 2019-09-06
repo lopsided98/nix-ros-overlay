@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/rbcar_sim-release/archive/release/kinetic/rbcar_robot_control/1.0.4-1.tar.gz;
+    url = "https://github.com/RobotnikAutomation/rbcar_sim-release/archive/release/kinetic/rbcar_robot_control/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "cde4c04a409cb516dc98db02a20f54c8e72222aa28cdf82511125c4757f5cfaa";
   };
 
+  buildType = "catkin";
   buildInputs = [ geometry-msgs sensor-msgs robotnik-msgs roscpp diagnostic-updater nav-msgs diagnostic-msgs tf ackermann-msgs ];
-  propagatedBuildInputs = [ geometry-msgs sensor-msgs robotnik-msgs roscpp nav-msgs tf ackermann-msgs ];
+  propagatedBuildInputs = [ geometry-msgs tf sensor-msgs robotnik-msgs nav-msgs roscpp ackermann-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

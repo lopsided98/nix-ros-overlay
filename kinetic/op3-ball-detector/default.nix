@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/robotis_op3_demo-release/archive/release/kinetic/op3_ball_detector/0.1.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/robotis_op3_demo-release/archive/release/kinetic/op3_ball_detector/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "8bb00a403db528463977ca3d432f4be635d27c91366963b156f37116f1930e86";
   };
 
+  buildType = "catkin";
   buildInputs = [ boost libyamlcpp image-transport sensor-msgs cv-bridge roslib message-generation dynamic-reconfigure std-msgs roscpp opencv3 geometry-msgs ];
-  propagatedBuildInputs = [ boost usb-cam uvc-camera libyamlcpp image-transport sensor-msgs cv-bridge roslib message-runtime dynamic-reconfigure std-msgs roscpp opencv3 geometry-msgs ];
+  propagatedBuildInputs = [ usb-cam boost uvc-camera libyamlcpp image-transport sensor-msgs cv-bridge roslib message-runtime dynamic-reconfigure std-msgs roscpp opencv3 geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

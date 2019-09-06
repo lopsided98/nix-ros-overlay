@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/davetcoleman/moveit_sim_controller-release/archive/release/kinetic/moveit_sim_controller/0.1.0-0.tar.gz;
+    url = "https://github.com/davetcoleman/moveit_sim_controller-release/archive/release/kinetic/moveit_sim_controller/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "c649a1a5f477802dd1d6cefca274a2dcf5c7928823b07658a67e0bed5243486c";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning roslint ros-control-boilerplate moveit-core rosparam-shortcuts roscpp ];
   propagatedBuildInputs = [ moveit-ros-planning ros-control-boilerplate moveit-core rosparam-shortcuts roscpp ];
   nativeBuildInputs = [ catkin ];

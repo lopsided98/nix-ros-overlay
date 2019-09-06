@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2";
 
   src = fetchurl {
-    url = https://github.com/eric-wieser/ros_numpy-release/archive/release/kinetic/ros_numpy/0.0.2-0.tar.gz;
+    url = "https://github.com/eric-wieser/ros_numpy-release/archive/release/kinetic/ros_numpy/0.0.2-0.tar.gz";
+    name = "0.0.2-0.tar.gz";
     sha256 = "90de93f399a745aafbaba926fe30d11de3aa89a5262b536353d84c6a7518e492";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.numpy sensor-msgs nav-msgs rospy tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

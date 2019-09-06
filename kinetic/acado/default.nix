@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.2";
 
   src = fetchurl {
-    url = https://github.com/tud-cor/acado-release/archive/release/kinetic/acado/1.2.2-0.tar.gz;
+    url = "https://github.com/tud-cor/acado-release/archive/release/kinetic/acado/1.2.2-0.tar.gz";
+    name = "1.2.2-0.tar.gz";
     sha256 = "f7903bd7d6ae8f11338f8c905ac5f43b4bb1f7bf9863b6daad99ce1b83f9b6bb";
   };
 
+  buildType = "cmake";
   buildInputs = [ boost ];
   propagatedBuildInputs = [ catkin boost ];
   nativeBuildInputs = [ cmake ];

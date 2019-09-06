@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/bond_core-release/archive/release/kinetic/smclib/1.8.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/bond_core-release/archive/release/kinetic/smclib/1.8.3-0.tar.gz";
+    name = "1.8.3-0.tar.gz";
     sha256 = "f38020bbee2679511005966440e695f4e57f9f559c3e9cb603f2d9daf756dbc4";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.10";
 
   src = fetchurl {
-    url = https://github.com/kmhallen/ueye-release/archive/release/kinetic/ueye/0.0.10-0.tar.gz;
+    url = "https://github.com/kmhallen/ueye-release/archive/release/kinetic/ueye/0.0.10-0.tar.gz";
+    name = "0.0.10-0.tar.gz";
     sha256 = "f1c2687559e090ce3a4e5c4fceb484286894f0e33ff114dda6ccb6b831600b52";
   };
 
+  buildType = "catkin";
   buildInputs = [ camera-calibration-parsers image-transport rostest roslib nodelet dynamic-reconfigure roslaunch roscpp ];
   propagatedBuildInputs = [ camera-calibration-parsers image-transport roslib nodelet dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];

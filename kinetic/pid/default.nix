@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.27";
 
   src = fetchurl {
-    url = https://github.com/AndyZe/pid-release/archive/release/kinetic/pid/0.0.27-0.tar.gz;
+    url = "https://github.com/AndyZe/pid-release/archive/release/kinetic/pid/0.0.27-0.tar.gz";
+    name = "0.0.27-0.tar.gz";
     sha256 = "f0f31bf9f2abca9d6ed2d6e96a9349b50e7a06fbf10c12e4d789657757e07435";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation roscpp dynamic-reconfigure ];
   propagatedBuildInputs = [ std-msgs roscpp message-runtime dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

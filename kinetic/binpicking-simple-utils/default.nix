@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.4";
 
   src = fetchurl {
-    url = https://github.com/durovsky/binpicking_utils-release/archive/release/kinetic/binpicking_simple_utils/0.1.4-0.tar.gz;
+    url = "https://github.com/durovsky/binpicking_utils-release/archive/release/kinetic/binpicking_simple_utils/0.1.4-0.tar.gz";
+    name = "0.1.4-0.tar.gz";
     sha256 = "d1375bd5f7379048fb2c3a67729e4dfe43fb280c6f6744ec0ec4d87065f1a118";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf roscpp geometry-msgs ];
-  propagatedBuildInputs = [ tf roscpp geometry-msgs ];
+  propagatedBuildInputs = [ roscpp tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

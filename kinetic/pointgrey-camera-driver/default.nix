@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.13.4";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/pointgrey_camera_driver/0.13.4-0.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/pointgrey_camera_driver/0.13.4-0.tar.gz";
+    name = "0.13.4-0.tar.gz";
     sha256 = "5071819dbbc690a77113595dba44f1d6ba7baef7cd7ec55c4f120b11ed20e086";
   };
 
+  buildType = "catkin";
   buildInputs = [ camera-info-manager image-transport sensor-msgs libraw1394 roscpp libusb1 diagnostic-updater wfov-camera-msgs image-exposure-msgs curl dynamic-reconfigure nodelet dpkg ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ stereo-image-proc camera-info-manager image-transport sensor-msgs libraw1394 libusb1 diagnostic-updater wfov-camera-msgs image-exposure-msgs nodelet dynamic-reconfigure image-proc roscpp ];
+  propagatedBuildInputs = [ stereo-image-proc camera-info-manager image-transport sensor-msgs libraw1394 libusb1 wfov-camera-msgs diagnostic-updater image-exposure-msgs nodelet dynamic-reconfigure image-proc roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

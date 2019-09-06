@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.15";
 
   src = fetchurl {
-    url = https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_msgs/2.0.15-0.tar.gz;
+    url = "https://github.com/SawYerRobotics-release/roch_robot-release/archive/release/kinetic/roch_msgs/2.0.15-0.tar.gz";
+    name = "2.0.15-0.tar.gz";
     sha256 = "1a0a22982e97d7420ccff601e07108efc51183525e01b34b6a69a6957b39b979";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs actionlib-msgs sensor-msgs message-generation std-msgs ];
   propagatedBuildInputs = [ std-srvs actionlib-msgs sensor-msgs message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];

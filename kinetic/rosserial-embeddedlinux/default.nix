@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_embeddedlinux/0.7.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_embeddedlinux/0.7.7-0.tar.gz";
+    name = "0.7.7-0.tar.gz";
     sha256 = "f9d9bdc6e424e3b54c27aeaf7531e5357031c67dc2a4fa55f431b4bc38d19802";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosserial-client ];
   propagatedBuildInputs = [ rosserial-msgs rospy ];
   nativeBuildInputs = [ catkin ];

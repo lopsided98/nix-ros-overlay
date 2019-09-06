@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit_pr2-release/archive/release/kinetic/pr2_moveit_config/0.7.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/moveit_pr2-release/archive/release/kinetic/pr2_moveit_config/0.7.1-0.tar.gz";
+    name = "0.7.1-0.tar.gz";
     sha256 = "328424c2f9737095f4012c277831b420ab22bed11c4a6dac37c47baa707f585a";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ robot-state-publisher moveit-ros-move-group joint-state-publisher pr2-description ];
   nativeBuildInputs = [ catkin ];
 

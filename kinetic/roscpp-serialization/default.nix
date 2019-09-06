@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roscpp_core-release/archive/release/kinetic/roscpp_serialization/0.6.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/kinetic/roscpp_serialization/0.6.11-0.tar.gz";
+    name = "0.6.11-0.tar.gz";
     sha256 = "59eeea15c98aeb8d50df79c734fdcb99f4b9b64100deb840bf4970bcf2253192";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp-traits rostime cpp-common ];
   propagatedBuildInputs = [ roscpp-traits rostime cpp-common ];
   nativeBuildInputs = [ catkin ];

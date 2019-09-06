@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.3";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/kinetic/ridgeback_simulator/0.0.3-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/kinetic/ridgeback_simulator/0.0.3-0.tar.gz";
+    name = "0.0.3-0.tar.gz";
     sha256 = "268094d7630113ac3ecf5448a614664ba220c5b78ee049c2bdb0908d465f567e";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ ridgeback-gazebo ];
   nativeBuildInputs = [ catkin ];
 

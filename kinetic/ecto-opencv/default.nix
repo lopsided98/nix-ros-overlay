@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.7.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ecto_opencv-release/archive/release/kinetic/ecto_opencv/0.7.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/ecto_opencv-release/archive/release/kinetic/ecto_opencv/0.7.2-0.tar.gz";
+    name = "0.7.2-0.tar.gz";
     sha256 = "006226c8e58af9547e44edf9bac67ba8d1fb3d828accabc9cad227a1e039f810";
   };
 
+  buildType = "catkin";
   buildInputs = [ opencv-candidate ecto boost ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ opencv-candidate ecto boost ];
+  propagatedBuildInputs = [ ecto opencv-candidate boost ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

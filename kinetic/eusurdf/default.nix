@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_model_tools-release/archive/release/kinetic/eusurdf/0.4.2-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/kinetic/eusurdf/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "918ffb3836ea2109887da5f3b0e49ca435efd0a338766e0ffcc5efa252dca3d1";
   };
 
+  buildType = "catkin";
   buildInputs = [ roseus gazebo-ros collada-urdf rostest pythonPackages.lxml ];
   propagatedBuildInputs = [ gazebo-ros rostest collada-urdf pythonPackages.lxml ];
   nativeBuildInputs = [ catkin ];

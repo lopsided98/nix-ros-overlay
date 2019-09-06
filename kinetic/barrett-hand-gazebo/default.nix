@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.2";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/barrett_hand_sim-release/archive/release/kinetic/barrett_hand_gazebo/0.1.2-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/barrett_hand_sim-release/archive/release/kinetic/barrett_hand_gazebo/0.1.2-0.tar.gz";
+    name = "0.1.2-0.tar.gz";
     sha256 = "4b52a48be7bfa7afcf77fc35dcea6980f408094bc4163205fa6168ff51ced16c";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros barrett-hand-description roscpp ];
   propagatedBuildInputs = [ gazebo-ros barrett-hand-description roscpp ];
   nativeBuildInputs = [ catkin ];

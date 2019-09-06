@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jog_control-release/archive/release/kinetic/jog_msgs/0.0.1-0.tar.gz;
+    url = "https://github.com/tork-a/jog_control-release/archive/release/kinetic/jog_msgs/0.0.1-0.tar.gz";
+    name = "0.0.1-0.tar.gz";
     sha256 = "3d5fa80e96a256cb5fd769a0b522562f3e615a9a128b7d5cd8f3f1f26209c470";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

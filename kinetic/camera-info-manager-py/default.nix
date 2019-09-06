@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/camera_info_manager_py-release/archive/release/kinetic/camera_info_manager_py/0.2.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/camera_info_manager_py-release/archive/release/kinetic/camera_info_manager_py/0.2.3-0.tar.gz";
+    name = "0.2.3-0.tar.gz";
     sha256 = "3f698bd22b69737a57ef35e5a26c798defd431511e590b0e0ffeb315397acba6";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest sensor-msgs rospy ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ pythonPackages.rospkg sensor-msgs pythonPackages.pyyaml rospy ];

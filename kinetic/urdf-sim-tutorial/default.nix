@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/urdf_tutorial-release/archive/release/kinetic/urdf_sim_tutorial/0.3.0-1.tar.gz;
+    url = "https://github.com/ros-gbp/urdf_tutorial-release/archive/release/kinetic/urdf_sim_tutorial/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
     sha256 = "edae179c71dd174dfd50f7a85af4e9bfec70c106e1d9b47d73a063d24891a590";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ gazebo-ros controller-manager joint-state-controller diff-drive-controller position-controllers rviz rqt-robot-steering robot-state-publisher urdf-tutorial xacro gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "3.4.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit_visual_tools-release/archive/release/kinetic/moveit_visual_tools/3.4.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/moveit_visual_tools-release/archive/release/kinetic/moveit_visual_tools/3.4.1-0.tar.gz";
+    name = "3.4.1-0.tar.gz";
     sha256 = "fcff31c9a81c3cd874cc91af2dad5c6cc3e1d8995f68ea436f0e3335d967b185";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning roslint cmake-modules trajectory-msgs roscpp rviz-visual-tools moveit-core graph-msgs tf-conversions std-msgs eigen-conversions visualization-msgs geometry-msgs ];
-  propagatedBuildInputs = [ moveit-ros-planning roslint cmake-modules trajectory-msgs roscpp rviz-visual-tools moveit-core graph-msgs tf-conversions std-msgs eigen-conversions visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ moveit-ros-planning cmake-modules roslint trajectory-msgs rviz-visual-tools moveit-core graph-msgs visualization-msgs std-msgs tf-conversions eigen-conversions roscpp geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

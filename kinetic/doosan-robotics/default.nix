@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.6-r1";
 
   src = fetchurl {
-    url = https://github.com/doosan-robotics/doosan-robot-release/archive/release/kinetic/doosan_robotics/0.9.6-1.tar.gz;
+    url = "https://github.com/doosan-robotics/doosan-robot-release/archive/release/kinetic/doosan_robotics/0.9.6-1.tar.gz";
+    name = "0.9.6-1.tar.gz";
     sha256 = "cc2cd045c24827927321f163967b91896498397b313ba80aff9ec0b104d10c36";
   };
 
+  buildType = "catkin";
   buildInputs = [ controller-manager moveit-experimental twist-mux interactive-marker-twist-server moveit-kinematics robot-localization position-controllers lms1xx moveit-core moveit-commander effort-controllers gazebo-ros-control moveit-setup-assistant ];
   propagatedBuildInputs = [ dsr-msgs dsr-control moveit-config-m1013 moveit-config-m0617 dsr-gazebo dsr-example-cpp dsr-example-py moveit-config-m1509 dsr-launcher moveit-config-m0609 dsr-description ];
   nativeBuildInputs = [ catkin ];

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "2.1.1";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_hironx-release/archive/release/kinetic/hironx_ros_bridge/2.1.1-0.tar.gz;
+    url = "https://github.com/tork-a/rtmros_hironx-release/archive/release/kinetic/hironx_ros_bridge/2.1.1-0.tar.gz";
+    name = "2.1.1-0.tar.gz";
     sha256 = "def7a3f70e8008f62b6e115c2e850a0951d6699b0c80f727b7a357bec0eae27d";
   };
 
+  buildType = "catkin";
   buildInputs = [ gnuplot rosbash hrpsys-ros-bridge roslint control-msgs mk rosbuild unzip roslang roslib ];
-  propagatedBuildInputs = [ gnuplot hrpsys-ros-bridge control-msgs rosbash roslib moveit-commander roslang rospy openni2-launch tf ];
+  propagatedBuildInputs = [ gnuplot hrpsys-ros-bridge rosbash control-msgs roslib moveit-commander roslang rospy openni2-launch tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

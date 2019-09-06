@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.5";
 
   src = fetchurl {
-    url = https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/global_planner_tests/0.2.5-0.tar.gz;
+    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/global_planner_tests/0.2.5-0.tar.gz";
+    name = "0.2.5-0.tar.gz";
     sha256 = "2c761414f62dd5d044ab2da756b4ad74babf71d304d5c616f1955e0d5be75615";
   };
 
+  buildType = "catkin";
   buildInputs = [ map-server pluginlib libyamlcpp nav-core2 nav-msgs roscpp ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ map-server pluginlib libyamlcpp nav-core2 nav-msgs roscpp ];

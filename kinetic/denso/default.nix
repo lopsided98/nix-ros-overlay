@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.3";
 
   src = fetchurl {
-    url = https://github.com/start-jsk/denso-release/archive/release/kinetic/denso/2.0.3-0.tar.gz;
+    url = "https://github.com/start-jsk/denso-release/archive/release/kinetic/denso/2.0.3-0.tar.gz";
+    name = "2.0.3-0.tar.gz";
     sha256 = "3a0ed398c1dda0c12c2740b2e2227555a3ebceb8766d43b24ff95388a98aa4c9";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ vs060 vs060-moveit-config denso-ros-control denso-launch vs060-gazebo ];
   nativeBuildInputs = [ catkin ];
 

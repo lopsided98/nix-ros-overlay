@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/octomap_msgs-release/archive/release/kinetic/octomap_msgs/0.3.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/octomap_msgs-release/archive/release/kinetic/octomap_msgs/0.3.3-0.tar.gz";
+    name = "0.3.3-0.tar.gz";
     sha256 = "180382de6115d1c1afc3a009ee35804fe49795d2cd36c67418c68542d3b6f4c1";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

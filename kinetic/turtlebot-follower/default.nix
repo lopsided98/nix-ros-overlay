@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.7";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_follower/2.3.7-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_apps-release/archive/release/kinetic/turtlebot_follower/2.3.7-0.tar.gz";
+    name = "2.3.7-0.tar.gz";
     sha256 = "8e66b61205ec0894fd9743f373afe7a8cc2a28859b322ad5698cf4c0a4341ff4";
   };
 
+  buildType = "catkin";
   buildInputs = [ depth-image-proc turtlebot-msgs roscpp visualization-msgs dynamic-reconfigure nodelet ];
   propagatedBuildInputs = [ turtlebot-bringup depth-image-proc turtlebot-msgs turtlebot-teleop dynamic-reconfigure topic-tools visualization-msgs nodelet roscpp ];
   nativeBuildInputs = [ catkin ];

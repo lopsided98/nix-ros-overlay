@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.6";
 
   src = fetchurl {
-    url = https://github.com/tork-a/openrave_planning-release/archive/release/kinetic/arm_navigation_msgs/0.0.6-0.tar.gz;
+    url = "https://github.com/tork-a/openrave_planning-release/archive/release/kinetic/arm_navigation_msgs/0.0.6-0.tar.gz";
+    name = "0.0.6-0.tar.gz";
     sha256 = "4da8f9b727646dd5d6434e80e074a72c63d572a60c3c4350d7db6eaca6c04847";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs trajectory-msgs sensor-msgs message-generation std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs trajectory-msgs sensor-msgs message-runtime std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

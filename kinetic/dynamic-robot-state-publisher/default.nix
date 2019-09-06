@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.1";
 
   src = fetchurl {
-    url = https://github.com/peci1/dynamic_robot_state_publisher-release/archive/release/kinetic/dynamic_robot_state_publisher/1.1.1-0.tar.gz;
+    url = "https://github.com/peci1/dynamic_robot_state_publisher-release/archive/release/kinetic/dynamic_robot_state_publisher/1.1.1-0.tar.gz";
+    name = "1.1.1-0.tar.gz";
     sha256 = "bc5ce88af6cd8d9fff8b2012e6d309b085deb0d80557148e41dae6b9245b0b62";
   };
 
+  buildType = "catkin";
   buildInputs = [ kdl-parser sensor-msgs robot-state-publisher dynamic-reconfigure roscpp ];
   propagatedBuildInputs = [ kdl-parser sensor-msgs robot-state-publisher dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];

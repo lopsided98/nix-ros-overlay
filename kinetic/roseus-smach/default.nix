@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.7.4";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus_smach/1.7.4-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus_smach/1.7.4-0.tar.gz";
+    name = "1.7.4-0.tar.gz";
     sha256 = "ad4ebbfe69c99fea50f7c5153ed33479ad99eb528224f91d3677b8f428ed0de5";
   };
 
+  buildType = "catkin";
   buildInputs = [ roseus smach-ros rostest message-generation smach-msgs actionlib std-msgs smach actionlib-tutorials ];
   propagatedBuildInputs = [ roseus smach-ros rostest smach-msgs message-runtime actionlib std-msgs smach actionlib-tutorials euslisp ];
   nativeBuildInputs = [ catkin ];

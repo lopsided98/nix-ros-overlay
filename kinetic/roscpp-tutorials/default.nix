@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_tutorials-release/archive/release/kinetic/roscpp_tutorials/0.7.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_tutorials-release/archive/release/kinetic/roscpp_tutorials/0.7.1-0.tar.gz";
+    name = "0.7.1-0.tar.gz";
     sha256 = "f7650f9a85250adc854ef4d01bfd2376cbb4a5778f451fb8aa2ec63481756d95";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole roscpp message-generation roscpp-serialization std-msgs rostime ];
   propagatedBuildInputs = [ rosconsole roscpp message-runtime roscpp-serialization std-msgs rostime ];
   nativeBuildInputs = [ catkin ];

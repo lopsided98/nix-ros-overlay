@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_head_control_module/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-MPC-release/archive/release/kinetic/thormang3_head_control_module/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "a8674655f38ec8dfc935c03c12dcee8afb4ae615d4cb57813b397bcc7462d4a9";
   };
 
+  buildType = "catkin";
   buildInputs = [ thormang3-head-control-module-msgs cmake-modules boost sensor-msgs roscpp robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
   propagatedBuildInputs = [ thormang3-head-control-module-msgs cmake-modules boost sensor-msgs roscpp robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
   nativeBuildInputs = [ catkin ];

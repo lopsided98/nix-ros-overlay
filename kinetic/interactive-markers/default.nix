@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.11.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/interactive_markers-release/archive/release/kinetic/interactive_markers/1.11.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/interactive_markers-release/archive/release/kinetic/interactive_markers/1.11.4-0.tar.gz";
+    name = "1.11.4-0.tar.gz";
     sha256 = "d63c3b1b745d47e2b3e107a00df9ce8b858cb40403866638c04640cbbe990ddb";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosconsole roscpp rostest visualization-msgs rospy std-msgs tf ];
-  propagatedBuildInputs = [ rosconsole roscpp rostest visualization-msgs rospy std-msgs tf ];
+  propagatedBuildInputs = [ rosconsole tf rostest visualization-msgs rospy std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

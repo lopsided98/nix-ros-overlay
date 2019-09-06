@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.3.1";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_create_desktop-release/archive/release/kinetic/create_dashboard/2.3.1-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_create_desktop-release/archive/release/kinetic/create_dashboard/2.3.1-0.tar.gz";
+    name = "2.3.1-0.tar.gz";
     sha256 = "51da3f9990ea493f2626da4186eb7bfc7055a4d0de39959478c09477f0aab9e7";
   };
 
+  buildType = "catkin";
   buildInputs = [ rqt-gui-py create-node rqt-gui rqt-robot-dashboard rospy diagnostic-msgs ];
   propagatedBuildInputs = [ rqt-gui-py create-node rqt-gui rqt-robot-dashboard rospy diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];

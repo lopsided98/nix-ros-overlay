@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_math_toolkit/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_math_toolkit/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "22c8cee256bee0006130e6ee0ca220a336a609e045d48b56df22163d79320e91";
   };
 
+  buildType = "catkin";
   buildInputs = [ ecl-formatters geometry-msgs roscpp ecl-build ecl-exceptions ecl-linear-algebra tf ecl-config ];
   propagatedBuildInputs = [ ecl-formatters geometry-msgs roscpp ecl-build ecl-exceptions ecl-linear-algebra tf ecl-config ];
   nativeBuildInputs = [ catkin ];

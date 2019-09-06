@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.17-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_robot_interaction/0.9.17-1.tar.gz;
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_robot_interaction/0.9.17-1.tar.gz";
+    name = "0.9.17-1.tar.gz";
     sha256 = "aa8380b917a9d5f8083ee45adb8545f6c40f90bb9ad84e9289c0a4903af6e7a7";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning pluginlib tf interactive-markers tf-conversions eigen-conversions roscpp ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ moveit-ros-planning pluginlib tf interactive-markers tf-conversions eigen-conversions roscpp ];

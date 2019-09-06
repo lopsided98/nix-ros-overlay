@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.18-r1";
 
   src = fetchurl {
-    url = https://github.com/asmodehn/webtest-rosrelease/archive/release/kinetic/webtest/2.0.18-1.tar.gz;
+    url = "https://github.com/asmodehn/webtest-rosrelease/archive/release/kinetic/webtest/2.0.18-1.tar.gz";
+    name = "2.0.18-1.tar.gz";
     sha256 = "f57a43cc3fc7bf8ba69b138d475daed20f4d198e81f91ebf32e6d784226a5e0e";
   };
 
+  buildType = "catkin";
   buildInputs = [ pythonPackages.waitress catkin-pip pythonPackages.webob pythonPackages.six pythonPackages.beautifulsoup4 ];
   checkInputs = [ pythonPackages.nose pythonPackages.mock pythonPackages.PasteDeploy pythonPackages.pyquery ];
   propagatedBuildInputs = [ pythonPackages.beautifulsoup4 pythonPackages.webob pythonPackages.six pythonPackages.waitress ];

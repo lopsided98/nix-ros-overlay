@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/praveen-palanisamy/multi_object_tracking_lidar-release/archive/release/kinetic/multi_object_tracking_lidar/1.0.1-1.tar.gz;
+    url = "https://github.com/praveen-palanisamy/multi_object_tracking_lidar-release/archive/release/kinetic/multi_object_tracking_lidar/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
     sha256 = "6347710c907810f24e169eb2bf8b86227ead5ea3a2ae6d1415f1cd0e414f014f";
   };
 
+  buildType = "catkin";
   buildInputs = [ pcl sensor-msgs cv-bridge roscpp pcl-ros visualization-msgs ];
   propagatedBuildInputs = [ pcl sensor-msgs cv-bridge roscpp pcl-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];

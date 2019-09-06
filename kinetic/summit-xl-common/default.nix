@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/summit_xl_common-release/archive/release/kinetic/summit_xl_common/1.1.2-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/summit_xl_common-release/archive/release/kinetic/summit_xl_common/1.1.2-0.tar.gz";
+    name = "1.1.2-0.tar.gz";
     sha256 = "bc9c7652afaddd17c7238d53bb2730cb8dc146d0ea7371079e69b382632ec5b9";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ summit-xl-navigation summit-xl-localization summit-xl-description summit-xl-pad ];
   nativeBuildInputs = [ catkin ];
 

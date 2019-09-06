@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.9.6-r1";
 
   src = fetchurl {
-    url = https://github.com/doosan-robotics/doosan-robot-release/archive/release/kinetic/dsr_example_cpp/0.9.6-1.tar.gz;
+    url = "https://github.com/doosan-robotics/doosan-robot-release/archive/release/kinetic/dsr_example_cpp/0.9.6-1.tar.gz";
+    name = "0.9.6-1.tar.gz";
     sha256 = "88ddffbe84c7e70c399dca817fdd10d1360fdb2689e6a6ffaa4c3fcc22357430";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs dsr-msgs roscpp serial ];
-  propagatedBuildInputs = [ std-msgs dsr-msgs roscpp serial ];
+  propagatedBuildInputs = [ std-msgs dsr-msgs serial roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

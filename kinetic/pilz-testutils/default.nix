@@ -2,17 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, clang, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-testutils";
-  version = "0.4.9-r1";
+  version = "0.4.10-r1";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/pilz_testutils/0.4.9-1.tar.gz;
-    sha256 = "26dba297ca16563076ac3685d1a7ce1cbc263188f730ed831bc741dcc043d903";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/pilz_testutils/0.4.10-1.tar.gz";
+    name = "0.4.10-1.tar.gz";
+    sha256 = "0fedd3eae4a4ca8f42748ce7de359fe45f233a70d83c0ba377f43787f4d3d1e0";
   };
 
-  buildInputs = [ roscpp ];
+  buildType = "catkin";
+  buildInputs = [ roscpp clang ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

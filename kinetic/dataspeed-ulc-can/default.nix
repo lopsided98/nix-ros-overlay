@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/kinetic/dataspeed_ulc_can/0.0.4-1.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/kinetic/dataspeed_ulc_can/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
     sha256 = "943951631781b6f9b57d100ce3d4013bae002620633467ec8558d22b62e9586a";
   };
 
+  buildType = "catkin";
   buildInputs = [ dataspeed-ulc-msgs can-msgs nodelet rospy std-msgs roscpp geometry-msgs ];
   checkInputs = [ rostest roslib ];
-  propagatedBuildInputs = [ dataspeed-ulc-msgs can-msgs nodelet rospy std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ dataspeed-ulc-msgs can-msgs roscpp rospy std-msgs nodelet geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

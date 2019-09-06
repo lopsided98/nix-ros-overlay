@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.10.14";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_controllers-release/archive/release/kinetic/ethercat_trigger_controllers/1.10.14-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/kinetic/ethercat_trigger_controllers/1.10.14-0.tar.gz";
+    name = "1.10.14-0.tar.gz";
     sha256 = "175a1a89e8b7a4d9e17d32b173fa19621baa077d21c46eacff1eec060ac69b6f";
   };
 
+  buildType = "catkin";
   buildInputs = [ pluginlib pr2-controller-interface realtime-tools libtool message-generation std-msgs diagnostic-msgs roscpp ];
   propagatedBuildInputs = [ pluginlib pr2-controller-interface realtime-tools libtool message-runtime rospy std-msgs diagnostic-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

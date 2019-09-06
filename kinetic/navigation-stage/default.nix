@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation_tutorials-release/archive/release/kinetic/navigation_stage/0.2.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation_tutorials-release/archive/release/kinetic/navigation_stage/0.2.3-0.tar.gz";
+    name = "0.2.3-0.tar.gz";
     sha256 = "c6e95bd91459bdc458ce90fc9606838c7c098a4fe61dbcfe25d759bd9b935f0d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ gmapping map-server amcl move-base stage-ros fake-localization ];
   nativeBuildInputs = [ catkin ];
 

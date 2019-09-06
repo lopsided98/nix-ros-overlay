@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.9.3-r1";
 
   src = fetchurl {
-    url = https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kinetic/kdl_typekit/2.9.3-1.tar.gz;
+    url = "https://github.com/orocos-gbp/rtt_geometry-release/archive/release/kinetic/kdl_typekit/2.9.3-1.tar.gz";
+    name = "2.9.3-1.tar.gz";
     sha256 = "598e4216da766c6080ba91ddd511ff371f27f5e1ad8fb1642469571ec50ace6f";
   };
 
+  buildType = "catkin";
   buildInputs = [ ocl orocos-kdl rtt ];
   propagatedBuildInputs = [ ocl orocos-kdl rtt ];
   nativeBuildInputs = [ catkin ];

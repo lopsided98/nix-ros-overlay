@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.1-r2";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_simulation-release/archive/release/kinetic/cob_gazebo/0.7.1-2.tar.gz;
+    url = "https://github.com/ipa320/cob_simulation-release/archive/release/kinetic/cob_gazebo/0.7.1-2.tar.gz";
+    name = "0.7.1-2.tar.gz";
     sha256 = "25c3453a88874c47ff3270f365c7cf9272983c63acf3de314ca58b20fa2a1fe5";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   checkInputs = [ cob-supported-robots ];
   propagatedBuildInputs = [ gazebo-ros control-msgs trajectory-msgs cob-script-server cob-hardware-config gazebo-plugins rostest cob-gazebo-ros-control cob-bringup rospy roslaunch cob-default-robot-config gazebo-ros-control ];

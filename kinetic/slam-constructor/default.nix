@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.9.3";
 
   src = fetchurl {
-    url = https://github.com/OSLL/slam_constructor-release/archive/release/kinetic/slam_constructor/0.9.3-0.tar.gz;
+    url = "https://github.com/OSLL/slam_constructor-release/archive/release/kinetic/slam_constructor/0.9.3-0.tar.gz";
+    name = "0.9.3-0.tar.gz";
     sha256 = "87b75373121fee8d6ecc36e9d3336f948cb16e99bdca089907e1b72c00c83ab2";
   };
 
+  buildType = "catkin";
   buildInputs = [ rosbag-storage sensor-msgs message-filters roscpp nav-msgs std-msgs tf geometry-msgs ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ rosbag-storage sensor-msgs message-filters roscpp nav-msgs std-msgs tf geometry-msgs ];

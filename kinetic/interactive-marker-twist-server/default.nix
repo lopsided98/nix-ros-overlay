@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/interactive_marker_twist_server-release/archive/release/kinetic/interactive_marker_twist_server/1.2.0-0.tar.gz;
+    url = "https://github.com/ros-gbp/interactive_marker_twist_server-release/archive/release/kinetic/interactive_marker_twist_server/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "af453490a78b550877d0ec79593922b0c8810e3716b3bb72d242e10db0e21969";
   };
 
+  buildType = "catkin";
   buildInputs = [ visualization-msgs interactive-markers roscpp ];
   checkInputs = [ roslaunch roslint ];
   propagatedBuildInputs = [ visualization-msgs interactive-markers roscpp ];

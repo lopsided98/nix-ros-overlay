@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.6";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/eca_a9-release/archive/release/kinetic/eca_a9_description/0.1.6-0.tar.gz;
+    url = "https://github.com/uuvsimulator/eca_a9-release/archive/release/kinetic/eca_a9_description/0.1.6-0.tar.gz";
+    name = "0.1.6-0.tar.gz";
     sha256 = "f574b5b5773bf892075d31d18c81762dc0a4296e744e1a004bc2d7c74716bb30";
   };
 
+  buildType = "catkin";
   checkInputs = [ rostest xacro rosunit ];
   propagatedBuildInputs = [ gazebo-ros uuv-gazebo-ros-plugins uuv-sensor-ros-plugins uuv-assistants uuv-descriptions robot-state-publisher ];
   nativeBuildInputs = [ catkin ];

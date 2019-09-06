@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.5";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_driver/1.2.5-0.tar.gz;
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_driver/1.2.5-0.tar.gz";
+    name = "1.2.5-0.tar.gz";
     sha256 = "4cb6d325c05f9535a55afeba7b62a73ed694ba81f846bb438f4ffe18ac98a8cb";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamic-reconfigure ];
   propagatedBuildInputs = [ control-msgs trajectory-msgs sensor-msgs actionlib pythonPackages.lxml ur-msgs rospy dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

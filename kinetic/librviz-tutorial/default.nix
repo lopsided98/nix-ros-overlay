@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/visualization_tutorials-release/archive/release/kinetic/librviz_tutorial/0.10.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/kinetic/librviz_tutorial/0.10.3-0.tar.gz";
+    name = "0.10.3-0.tar.gz";
     sha256 = "b5a720da115f3a9db015b020c78c0b9336a48e77d848fd6aa237f53ef4099d13";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp rviz qt5.qtbase ];
   propagatedBuildInputs = [ roscpp rviz qt5.qtbase ];
   nativeBuildInputs = [ catkin ];

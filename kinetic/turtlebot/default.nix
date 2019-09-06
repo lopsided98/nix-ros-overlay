@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.4.2";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot-release/archive/release/kinetic/turtlebot/2.4.2-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot-release/archive/release/kinetic/turtlebot/2.4.2-0.tar.gz";
+    name = "2.4.2-0.tar.gz";
     sha256 = "f15e3dd5703c00eadd9d6f490031cd87270380214b9e567a181c6a0330f185f9";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ turtlebot-description turtlebot-capabilities turtlebot-teleop turtlebot-bringup ];
   nativeBuildInputs = [ catkin ];
 

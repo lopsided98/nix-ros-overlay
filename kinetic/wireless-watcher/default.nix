@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.7";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/wireless-release/archive/release/kinetic/wireless_watcher/0.0.7-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/kinetic/wireless_watcher/0.0.7-0.tar.gz";
+    name = "0.0.7-0.tar.gz";
     sha256 = "76e7b991c9921a1e911c663ae2aee13644a238ffffc21f77e8f3983adca31de6";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ wireless-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

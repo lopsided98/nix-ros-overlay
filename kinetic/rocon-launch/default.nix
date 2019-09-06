@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.2-r1";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_launch/0.3.2-1.tar.gz;
+    url = "https://github.com/yujinrobot-release/rocon_tools-release/archive/release/kinetic/rocon_launch/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
     sha256 = "f701d7e55980b2995cc26c417de11bd41f465eafdfd4a434e92756b1b99933ff";
   };
 
+  buildType = "catkin";
   buildInputs = [ pythonPackages.catkin-pkg ];
   propagatedBuildInputs = [ rosbash rocon-console rospy roslaunch rocon-python-utils ];
   nativeBuildInputs = [ catkin ];

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.5.2";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/kinetic/robot_controllers/0.5.2-0.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/kinetic/robot_controllers/0.5.2-0.tar.gz";
+    name = "0.5.2-0.tar.gz";
     sha256 = "64f382f72f24426bdc2192019d42a9339b4222a42fc07af2679d604303e161e4";
   };
 
+  buildType = "catkin";
   buildInputs = [ kdl-parser pluginlib actionlib-msgs orocos-kdl control-msgs trajectory-msgs sensor-msgs roscpp nav-msgs robot-controllers-interface tf-conversions urdf actionlib std-msgs angles tf geometry-msgs ];
-  propagatedBuildInputs = [ kdl-parser pluginlib actionlib-msgs orocos-kdl control-msgs trajectory-msgs sensor-msgs roscpp nav-msgs robot-controllers-interface tf-conversions urdf actionlib std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ kdl-parser orocos-kdl actionlib-msgs pluginlib control-msgs trajectory-msgs sensor-msgs roscpp nav-msgs urdf robot-controllers-interface tf-conversions actionlib std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

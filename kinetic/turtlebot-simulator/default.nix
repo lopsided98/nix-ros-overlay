@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.3";
 
   src = fetchurl {
-    url = https://github.com/turtlebot-release/turtlebot_simulator-release/archive/release/kinetic/turtlebot_simulator/2.2.3-0.tar.gz;
+    url = "https://github.com/turtlebot-release/turtlebot_simulator-release/archive/release/kinetic/turtlebot_simulator/2.2.3-0.tar.gz";
+    name = "2.2.3-0.tar.gz";
     sha256 = "85560fb43bae17cb301da06c4c1cb3624f4752d366e75105e741c32f6ece7619";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ turtlebot-stdr turtlebot-stage turtlebot-gazebo ];
   nativeBuildInputs = [ catkin ];
 

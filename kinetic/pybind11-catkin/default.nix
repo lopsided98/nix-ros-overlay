@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.4-r4";
 
   src = fetchurl {
-    url = https://github.com/wxmerkt/pybind11_catkin-release/archive/release/kinetic/pybind11_catkin/2.2.4-4.tar.gz;
+    url = "https://github.com/wxmerkt/pybind11_catkin-release/archive/release/kinetic/pybind11_catkin/2.2.4-4.tar.gz";
+    name = "2.2.4-4.tar.gz";
     sha256 = "e9a32d7fb75912577076fceb2ab0faf53ec7ade8746472f83b567ac1b7b1dbb4";
   };
 
+  buildType = "catkin";
   buildInputs = [ python pythonPackages.numpy rospy eigen ];
   propagatedBuildInputs = [ python pythonPackages.numpy rospy eigen ];
   nativeBuildInputs = [ catkin ];

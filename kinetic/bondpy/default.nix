@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.8.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/bond_core-release/archive/release/kinetic/bondpy/1.8.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/bond_core-release/archive/release/kinetic/bondpy/1.8.3-0.tar.gz";
+    name = "1.8.3-0.tar.gz";
     sha256 = "0aa53cb5fb4da50b9d6a3422ecd25e2bf2a25e33e55080f95349da79eb228fe1";
   };
 
+  buildType = "catkin";
   buildInputs = [ smclib bond rospy ];
   propagatedBuildInputs = [ smclib utillinux rospy ];
   nativeBuildInputs = [ catkin ];

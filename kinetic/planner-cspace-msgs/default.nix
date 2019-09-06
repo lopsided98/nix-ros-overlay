@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation_msgs-release/archive/release/kinetic/planner_cspace_msgs/0.3.1-0.tar.gz;
+    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/kinetic/planner_cspace_msgs/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "c45b2c10dd46ce2021c1f2282859ab5b52364ab7882cac0ea2e3b2337587519b";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

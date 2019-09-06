@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.10-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_environments-release/archive/release/kinetic/cob_environments/0.6.10-1.tar.gz;
+    url = "https://github.com/ipa320/cob_environments-release/archive/release/kinetic/cob_environments/0.6.10-1.tar.gz";
+    name = "0.6.10-1.tar.gz";
     sha256 = "779950ec2c110439dfbb795bea37e96853b34ad9e3d3480c9251e33800531177";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ cob-default-env-config ];
   nativeBuildInputs = [ catkin ];
 

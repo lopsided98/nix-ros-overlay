@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2";
 
   src = fetchurl {
-    url = https://github.com/UbiquityRobotics-release/loki_robot-release/archive/release/kinetic/loki_description/0.0.2-0.tar.gz;
+    url = "https://github.com/UbiquityRobotics-release/loki_robot-release/archive/release/kinetic/loki_description/0.0.2-0.tar.gz";
+    name = "0.0.2-0.tar.gz";
     sha256 = "c92526d38914c347e0ab3e543445d15d12c751184c44cbc972f17d7b974abcb6";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ urdf xacro robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 

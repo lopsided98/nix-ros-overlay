@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.12-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_tf/0.2.12-1.tar.gz;
+    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_tf/0.2.12-1.tar.gz";
+    name = "0.2.12-1.tar.gz";
     sha256 = "a1bd861fd920a0291d8ea88c399ef01a1779d15605633ab3e1cc793cb2c39139";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ tf roslisp cl-transforms cl-transforms-stamped ];
   nativeBuildInputs = [ catkin ];
 

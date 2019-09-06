@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/artivis/distance_map-release/archive/release/kinetic/distance_map_deadreck/0.1.0-1.tar.gz;
+    url = "https://github.com/artivis/distance_map-release/archive/release/kinetic/distance_map_deadreck/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "8b741db7ebf047c6730a6bd2c22f3f88548f0396cf675318ef7b8e9eda7016ea";
   };
 
+  buildType = "catkin";
   buildInputs = [ distance-map-core ];
   propagatedBuildInputs = [ distance-map-core ];
   nativeBuildInputs = [ catkin ];

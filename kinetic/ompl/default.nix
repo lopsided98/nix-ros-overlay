@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.3-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ompl-release/archive/release/kinetic/ompl/1.2.3-1.tar.gz;
+    url = "https://github.com/ros-gbp/ompl-release/archive/release/kinetic/ompl/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
     sha256 = "c2a90683339a8607111609b1c04a168e33f789b550f4d897498bf73211143d4d";
   };
 
+  buildType = "cmake";
   buildInputs = [ cmake boost eigen ];
   propagatedBuildInputs = [ boost eigen ];
   nativeBuildInputs = [ cmake ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.28";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/pr2_navigation-release/archive/release/kinetic/laser_tilt_controller_filter/0.1.28-0.tar.gz;
+    url = "https://github.com/pr2-gbp/pr2_navigation-release/archive/release/kinetic/laser_tilt_controller_filter/0.1.28-0.tar.gz";
+    name = "0.1.28-0.tar.gz";
     sha256 = "d82115e1f02b2a396f1a21b32e61919976689881feebb7c4555acc1cd4b63472";
   };
 
+  buildType = "catkin";
   buildInputs = [ filters pluginlib sensor-msgs pr2-msgs roscpp ];
   propagatedBuildInputs = [ filters pluginlib sensor-msgs pr2-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

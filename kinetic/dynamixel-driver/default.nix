@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.1";
 
   src = fetchurl {
-    url = https://github.com/arebgun/dynamixel_motor-release/archive/release/kinetic/dynamixel_driver/0.4.1-0.tar.gz;
+    url = "https://github.com/arebgun/dynamixel_motor-release/archive/release/kinetic/dynamixel_driver/0.4.1-0.tar.gz";
+    name = "0.4.1-0.tar.gz";
     sha256 = "8066bc94c261d3df45d2d1f3447ecd988917a341dff0e151f92c8839b7ada5b7";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ diagnostic-msgs pythonPackages.pyserial rospy ];
   nativeBuildInputs = [ catkin ];
 

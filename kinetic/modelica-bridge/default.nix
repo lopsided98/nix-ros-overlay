@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1";
 
   src = fetchurl {
-    url = https://github.com/ModROS/modelica_bridge-release/archive/release/kinetic/modelica_bridge/0.1.1-0.tar.gz;
+    url = "https://github.com/ModROS/modelica_bridge-release/archive/release/kinetic/modelica_bridge/0.1.1-0.tar.gz";
+    name = "0.1.1-0.tar.gz";
     sha256 = "67eeaa61f398a4fb22d44e876a0c9a6c50ab644fdf72b1bb80456c39bbaf9a4b";
   };
 
+  buildType = "catkin";
   buildInputs = [ joy message-generation rospy std-msgs roscpp ];
   propagatedBuildInputs = [ joy message-runtime rospy std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

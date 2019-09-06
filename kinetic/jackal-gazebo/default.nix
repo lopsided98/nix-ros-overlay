@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/jackal_simulator-release/archive/release/kinetic/jackal_gazebo/0.3.0-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/jackal_simulator-release/archive/release/kinetic/jackal_gazebo/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "64556e62a587c25fa3afcf3aa67eeba763d0ec233fa8d5db3e922e3621587c6b";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros hector-gazebo-plugins jackal-control gazebo-plugins gazebo-ros-control jackal-description ];
   nativeBuildInputs = [ catkin ];

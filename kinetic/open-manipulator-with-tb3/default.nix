@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/open_manipulator_with_tb3-release/archive/release/kinetic/open_manipulator_with_tb3/1.1.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator_with_tb3-release/archive/release/kinetic/open_manipulator_with_tb3/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "57acd1cca32c03256617b9e31dea3f0fd80383f3b0cdddd865d20dcc2ac7cc00";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ open-manipulator-with-tb3-waffle-moveit open-manipulator-with-tb3-waffle-pi-moveit open-manipulator-with-tb3-tools open-manipulator-with-tb3-description ];
   nativeBuildInputs = [ catkin ];
 

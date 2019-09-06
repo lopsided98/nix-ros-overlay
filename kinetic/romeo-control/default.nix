@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3";
 
   src = fetchurl {
-    url = https://github.com/ros-aldebaran/romeo_virtual-release/archive/release/kinetic/romeo_control/0.2.3-0.tar.gz;
+    url = "https://github.com/ros-aldebaran/romeo_virtual-release/archive/release/kinetic/romeo_control/0.2.3-0.tar.gz";
+    name = "0.2.3-0.tar.gz";
     sha256 = "848e63185fa4e2a33d2dfc121418759f40ab710d81b6bb804cc92fcbc0dbb5d4";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ ros-control robot-state-publisher ros-controllers ];
   nativeBuildInputs = [ catkin ];
 

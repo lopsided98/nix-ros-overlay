@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/sbpl_recovery/0.2.1-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/sbpl_recovery/0.2.1-0.tar.gz";
+    name = "0.2.1-0.tar.gz";
     sha256 = "a115808f76c0af411478169c4de14e809274618006234a4a20cae744d4b38eb0";
   };
 
+  buildType = "catkin";
   buildInputs = [ costmap-2d pluginlib base-local-planner nav-core sbpl-lattice-planner pose-follower roscpp ];
   propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core sbpl-lattice-planner pose-follower roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.1";
 
   src = fetchurl {
-    url = https://github.com/davetcoleman/rosparam_shortcuts-release/archive/release/kinetic/rosparam_shortcuts/0.2.1-0.tar.gz;
+    url = "https://github.com/davetcoleman/rosparam_shortcuts-release/archive/release/kinetic/rosparam_shortcuts/0.2.1-0.tar.gz";
+    name = "0.2.1-0.tar.gz";
     sha256 = "44eb8f5cd6b32e784a2360cdd96e74d1453608661eb083f3275ed4e42390dd92";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules roslint eigen eigen-conversions roscpp ];
   propagatedBuildInputs = [ roscpp eigen ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.2";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_arm_gazebo/1.1.2-0.tar.gz;
+    url = "https://github.com/uos-gbp/katana_driver-release/archive/release/kinetic/katana_arm_gazebo/1.1.2-0.tar.gz";
+    name = "1.1.2-0.tar.gz";
     sha256 = "825f9ad6babb194166708ba91aaeedabb685bef7e0963b0ce9f246d1c6b61b2e";
   };
 
+  buildType = "catkin";
   buildInputs = [ gazebo-ros controller-manager katana-gazebo-plugins katana-description joint-trajectory-controller controller-manager-msgs urdf robot-state-publisher actionlib std-msgs roscpp xacro ];
   propagatedBuildInputs = [ gazebo-ros controller-manager katana-gazebo-plugins katana-description joint-trajectory-controller controller-manager-msgs urdf robot-state-publisher actionlib std-msgs roscpp xacro ];
   nativeBuildInputs = [ catkin ];

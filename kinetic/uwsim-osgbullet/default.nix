@@ -8,10 +8,12 @@ buildRosPackage {
   version = "3.0.1";
 
   src = fetchurl {
-    url = https://github.com/uji-ros-pkg/uwsim_osgbullet-release/archive/release/kinetic/uwsim_osgbullet/3.0.1-0.tar.gz;
+    url = "https://github.com/uji-ros-pkg/uwsim_osgbullet-release/archive/release/kinetic/uwsim_osgbullet/3.0.1-0.tar.gz";
+    name = "3.0.1-0.tar.gz";
     sha256 = "a3b912aa1c36abd61d916a60ae4fb67596cdb5893de4caa5f2ae2ca93368ea6e";
   };
 
+  buildType = "cmake";
   buildInputs = [ uwsim-osgworks openscenegraph boost uwsim-bullet ];
   propagatedBuildInputs = [ boost uwsim-bullet catkin openscenegraph uwsim-osgworks ];
   nativeBuildInputs = [ cmake ];

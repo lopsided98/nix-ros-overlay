@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_dwb_critics/1.0.4-1.tar.gz;
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_dwb_critics/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "eb840e0508e14fe48b12292492d2b03907498f66fd4c52b32b7ce89870552cb5";
   };
 
+  buildType = "catkin";
   buildInputs = [ dwb-local-planner pluginlib nav-core2 costmap-queue sensor-msgs dwb-critics nav-2d-msgs nav-2d-utils angles roscpp nav-grid-iterators geometry-msgs ];
-  propagatedBuildInputs = [ dwb-local-planner pluginlib nav-core2 costmap-queue sensor-msgs dwb-critics nav-2d-msgs nav-2d-utils angles roscpp nav-grid-iterators geometry-msgs ];
+  propagatedBuildInputs = [ dwb-local-planner pluginlib sensor-msgs nav-core2 costmap-queue dwb-critics nav-2d-msgs nav-2d-utils angles roscpp nav-grid-iterators geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

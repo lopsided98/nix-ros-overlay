@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/diagnostics-release/archive/release/kinetic/diagnostic_analysis/1.9.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/kinetic/diagnostic_analysis/1.9.3-0.tar.gz";
+    name = "1.9.3-0.tar.gz";
     sha256 = "f0b897d5c65da2e01d8120922a77804c8de4ad6ea8daf32ec6f117686730d25e";
   };
 
+  buildType = "catkin";
   buildInputs = [ diagnostic-msgs rostest rosbag roslib ];
   propagatedBuildInputs = [ diagnostic-msgs rosbag roslib ];
   nativeBuildInputs = [ catkin ];

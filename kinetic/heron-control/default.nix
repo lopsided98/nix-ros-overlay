@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/heron-release/archive/release/kinetic/heron_control/0.3.1-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/heron-release/archive/release/kinetic/heron_control/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "d6c0ff6da42c06798880f29e435c7ce1b3705fa6cc77e39fb4a0e39e9083cecc";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ robot-localization pythonPackages.numpy sensor-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

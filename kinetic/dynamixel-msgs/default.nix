@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.1";
 
   src = fetchurl {
-    url = https://github.com/arebgun/dynamixel_motor-release/archive/release/kinetic/dynamixel_msgs/0.4.1-0.tar.gz;
+    url = "https://github.com/arebgun/dynamixel_motor-release/archive/release/kinetic/dynamixel_msgs/0.4.1-0.tar.gz";
+    name = "0.4.1-0.tar.gz";
     sha256 = "adc3d35f7f4cbae814fe5f38956b64b1753225b579e4474cbd919a169cdbe8cb";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

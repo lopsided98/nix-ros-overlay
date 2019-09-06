@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1";
 
   src = fetchurl {
-    url = https://github.com/snt-robotics/robot_activity-release/archive/release/kinetic/robot_activity_msgs/0.1.1-0.tar.gz;
+    url = "https://github.com/snt-robotics/robot_activity-release/archive/release/kinetic/robot_activity_msgs/0.1.1-0.tar.gz";
+    name = "0.1.1-0.tar.gz";
     sha256 = "d8e705877189c96bde5c91321476019fcb3181365af90c82b9b6ab60a30c1f5e";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation message-runtime ];
   propagatedBuildInputs = [ std-msgs message-generation message-runtime ];
   nativeBuildInputs = [ catkin ];

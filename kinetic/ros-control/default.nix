@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.13.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/ros_control/0.13.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/ros_control/0.13.3-0.tar.gz";
+    name = "0.13.3-0.tar.gz";
     sha256 = "c7e50173396616ebb092aab1dc0159c2221c2402e0b7bcaaccb4c5d164653f18";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ controller-manager hardware-interface realtime-tools joint-limits-interface combined-robot-hw-tests controller-interface controller-manager-msgs combined-robot-hw controller-manager-tests transmission-interface ];
   nativeBuildInputs = [ catkin ];
 

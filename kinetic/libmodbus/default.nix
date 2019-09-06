@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.8";
 
   src = fetchurl {
-    url = https://github.com/KITrobotics/ipr_extern-release/archive/release/kinetic/libmodbus/0.8.8-0.tar.gz;
+    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/kinetic/libmodbus/0.8.8-0.tar.gz";
+    name = "0.8.8-0.tar.gz";
     sha256 = "2ba6a63a88bb1809ef7743a25530875678171c980b46071933297d91540fe3f4";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules ];
   propagatedBuildInputs = [ cmake-modules ];
   nativeBuildInputs = [ catkin ];

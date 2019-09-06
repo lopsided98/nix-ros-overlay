@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_common-release/archive/release/kinetic/jsk_network_tools/2.2.10-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/kinetic/jsk_network_tools/2.2.10-0.tar.gz";
+    name = "2.2.10-0.tar.gz";
     sha256 = "da8c911f4c5d111716441d6cbbc32b9994a7e83d22ab452a5aab8267742e45f8";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs rospy diagnostic-updater rostest message-generation dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
   propagatedBuildInputs = [ sensor-msgs rospy diagnostic-updater message-runtime dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

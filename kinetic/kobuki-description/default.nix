@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.6";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_description/0.7.6-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/kobuki-release/archive/release/kinetic/kobuki_description/0.7.6-0.tar.gz";
+    name = "0.7.6-0.tar.gz";
     sha256 = "af16d583c7798ed4b9e83e16fcc32898fd12bf8d1dca18b4c1bce7e276acd5f4";
   };
 
+  buildType = "catkin";
   buildInputs = [ urdf xacro ];
   propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];

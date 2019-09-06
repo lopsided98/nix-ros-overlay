@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.14.4";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/1.14.4-0.tar.gz;
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/1.14.4-0.tar.gz";
+    name = "1.14.4-0.tar.gz";
     sha256 = "ff24b933e459a835da6a977d20d4a2aa1cef618fde5549798e371910ddcca3ab";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs rosbag message-filters roscpp nav-msgs dynamic-reconfigure tf ];
   checkInputs = [ rostest map-server ];
   propagatedBuildInputs = [ std-srvs rosbag roscpp nav-msgs dynamic-reconfigure tf ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/shadow-robot/ros_ethercat_eml-release/archive/release/kinetic/ros_ethercat_eml/0.3.1-0.tar.gz;
+    url = "https://github.com/shadow-robot/ros_ethercat_eml-release/archive/release/kinetic/ros_ethercat_eml/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "5590af3202eb4798de1ed2576b0ef47dedf6b56780fecb61b82e34e93edc31bf";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
   nativeBuildInputs = [ catkin ];

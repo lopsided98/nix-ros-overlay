@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/danielsnider/lost_comms_recovery-release/archive/release/kinetic/lost_comms_recovery/0.1.0-0.tar.gz;
+    url = "https://github.com/danielsnider/lost_comms_recovery-release/archive/release/kinetic/lost_comms_recovery/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "faff7f1c50aa083d57a091bb6c229b2522293fda9df8c9a2c78dce4705755623";
   };
 
+  buildType = "catkin";
   buildInputs = [ actionlib-msgs sensor-msgs move-base-msgs actionlib rospy geometry-msgs ];
   propagatedBuildInputs = [ actionlib-msgs sensor-msgs move-base-msgs actionlib rospy geometry-msgs ];
   nativeBuildInputs = [ catkin ];

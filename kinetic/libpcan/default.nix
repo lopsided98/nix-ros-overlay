@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libpcan/0.6.13-1.tar.gz;
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libpcan/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
     sha256 = "64cd98e7f3cc4e44bd03ef69e9255006c760151e1cd005fcb7d683c8c1180c10";
   };
 
+  buildType = "catkin";
   buildInputs = [ linuxHeaders ];
   propagatedBuildInputs = [ linuxHeaders ];
   nativeBuildInputs = [ catkin ];

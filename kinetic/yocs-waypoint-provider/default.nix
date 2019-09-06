@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.8.2";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_waypoint_provider/0.8.2-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/kinetic/yocs_waypoint_provider/0.8.2-0.tar.gz";
+    name = "0.8.2-0.tar.gz";
     sha256 = "dedef537750bbe13bf390abb18260f3c5afad44e88c7247fffeee598ab35e7da";
   };
 
+  buildType = "catkin";
   buildInputs = [ libyamlcpp yocs-msgs roscpp visualization-msgs geometry-msgs ];
   propagatedBuildInputs = [ libyamlcpp yocs-msgs roscpp visualization-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];

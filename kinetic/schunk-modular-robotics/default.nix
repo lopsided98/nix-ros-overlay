@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_modular_robotics/0.6.13-1.tar.gz;
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_modular_robotics/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
     sha256 = "4b11df3b9679a2d5e0f11a19f5c6ade5d2522043cd76a13ba5ecc64c76ffaab4";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ schunk-powercube-chain schunk-libm5api schunk-sdh schunk-description schunk-simulated-tactile-sensors ];
   nativeBuildInputs = [ catkin ];
 

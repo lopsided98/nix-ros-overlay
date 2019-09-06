@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3";
 
   src = fetchurl {
-    url = https://github.com/yujinrobot-release/zeroconf_avahi_suite-release/archive/release/kinetic/zeroconf_avahi/0.2.3-0.tar.gz;
+    url = "https://github.com/yujinrobot-release/zeroconf_avahi_suite-release/archive/release/kinetic/zeroconf_avahi/0.2.3-0.tar.gz";
+    name = "0.2.3-0.tar.gz";
     sha256 = "bf23ee2938a77f7ecbee57ea8f76a542ef82154d831aed726f8120b23f4b2a0b";
   };
 
+  buildType = "catkin";
   buildInputs = [ avahi roscpp rosconsole zeroconf-msgs ];
   propagatedBuildInputs = [ avahi roscpp rosconsole zeroconf-msgs ];
   nativeBuildInputs = [ catkin ];

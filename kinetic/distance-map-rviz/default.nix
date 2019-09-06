@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/artivis/distance_map-release/archive/release/kinetic/distance_map_rviz/0.1.0-1.tar.gz;
+    url = "https://github.com/artivis/distance_map-release/archive/release/kinetic/distance_map_rviz/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "300f694c2596460284c19a916576ed8a9e3fd95fb009d8c196d9e0e0b7d85eaf";
   };
 
+  buildType = "catkin";
   buildInputs = [ distance-map-msgs rviz qt5.qtbase ];
-  propagatedBuildInputs = [ distance-map-msgs rviz qt5.qtbase ];
+  propagatedBuildInputs = [ rviz qt5.qtbase distance-map-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

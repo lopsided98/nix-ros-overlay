@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-Tools-release/archive/release/kinetic/thormang3_tools/0.2.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-Tools-release/archive/release/kinetic/thormang3_tools/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
     sha256 = "55de89f8bbd4038866d2466cd72c1fcd7e8cfb0fe7fa30ec5586c1b88c6513a6";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ thormang3-offset-tuner-server thormang3-action-editor ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,11 +8,13 @@ buildRosPackage {
   version = "0.4.8";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rqt_plot-release/archive/release/kinetic/rqt_plot/0.4.8-0.tar.gz;
+    url = "https://github.com/ros-gbp/rqt_plot-release/archive/release/kinetic/rqt_plot/0.4.8-0.tar.gz";
+    name = "0.4.8-0.tar.gz";
     sha256 = "a5af60dcd95878b5b9cb7c8195cecc9d7ecd88f1666ed22662d6d325acebaf9b";
   };
 
-  propagatedBuildInputs = [ rqt-gui-py pythonPackages.numpy pythonPackages.rospkg qwt-dependency rqt-gui qt-gui-py-common rosgraph rostopic std-msgs rqt-py-common python-qt-binding pythonPackages.matplotlib ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ rqt-gui-py pythonPackages.numpy qwt-dependency pythonPackages.rospkg rqt-gui rosgraph qt-gui-py-common rostopic std-msgs rqt-py-common python-qt-binding pythonPackages.matplotlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.10.14";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/calibration-release/archive/release/kinetic/calibration_msgs/0.10.14-0.tar.gz;
+    url = "https://github.com/ros-gbp/calibration-release/archive/release/kinetic/calibration_msgs/0.10.14-0.tar.gz";
+    name = "0.10.14-0.tar.gz";
     sha256 = "06091916a347322682b045d233b577b718eb339d4cd9c0fb2806346e45f7187d";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs sensor-msgs message-generation geometry-msgs ];
   propagatedBuildInputs = [ std-msgs sensor-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];

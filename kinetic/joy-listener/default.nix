@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.4";
 
   src = fetchurl {
-    url = https://github.com/wu-robotics/wu_ros_tools/archive/release/kinetic/joy_listener/0.2.4-0.tar.gz;
+    url = "https://github.com/wu-robotics/wu_ros_tools/archive/release/kinetic/joy_listener/0.2.4-0.tar.gz";
+    name = "0.2.4-0.tar.gz";
     sha256 = "e9bd30cc98788deb6a8ca51733ee07569d541eec0c261229bd5ca627d87aecdc";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs rospy ];
   propagatedBuildInputs = [ sensor-msgs rospy ];
   nativeBuildInputs = [ catkin ];

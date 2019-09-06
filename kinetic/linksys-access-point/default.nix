@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.15";
 
   src = fetchurl {
-    url = https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/linksys_access_point/1.0.15-0.tar.gz;
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/kinetic/linksys_access_point/1.0.15-0.tar.gz";
+    name = "1.0.15-0.tar.gz";
     sha256 = "4ec4e1aa63b3b62fc96a3ad414acbb1849d2da8f61bab21c4d950de89ad50dd0";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.3.8";
 
   src = fetchurl {
-    url = https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_trajectory_generation/0.3.8-0.tar.gz;
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_trajectory_generation/0.3.8-0.tar.gz";
+    name = "0.3.8-0.tar.gz";
     sha256 = "5e92a2242591885207023758347c6298fbaf419498943750a3f65725b7ed9181";
   };
 
+  buildType = "catkin";
   buildInputs = [ moveit-ros-planning kdl-conversions moveit-ros-move-group orocos-kdl pluginlib tf2-geometry-msgs pilz-extensions roscpp tf2 moveit-core tf2-eigen moveit-msgs eigen-conversions pilz-msgs moveit-ros-planning-interface ];
   checkInputs = [ panda-moveit-config prbt-support cmake-modules prbt-moveit-config pilz-testutils prbt-pg70-support rostest pilz-industrial-motion-testutils abb-irb2400-moveit-config code-coverage rosunit ];
-  propagatedBuildInputs = [ moveit-ros-planning kdl-conversions moveit-ros-move-group orocos-kdl pluginlib tf2-geometry-msgs pilz-extensions roscpp tf2 moveit-core tf2-eigen moveit-msgs eigen-conversions pilz-msgs moveit-ros-planning-interface ];
+  propagatedBuildInputs = [ kdl-conversions moveit-ros-planning moveit-ros-move-group orocos-kdl tf2-geometry-msgs pluginlib pilz-extensions roscpp tf2 moveit-core tf2-eigen moveit-msgs eigen-conversions pilz-msgs moveit-ros-planning-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

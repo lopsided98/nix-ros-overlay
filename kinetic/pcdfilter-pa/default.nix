@@ -8,12 +8,14 @@ buildRosPackage {
   version = "1.2.0";
 
   src = fetchurl {
-    url = https://github.com/tuc-proaut/ros_pcdfilter-release/archive/release/kinetic/pcdfilter_pa/1.2.0-0.tar.gz;
+    url = "https://github.com/tuc-proaut/ros_pcdfilter-release/archive/release/kinetic/pcdfilter_pa/1.2.0-0.tar.gz";
+    name = "1.2.0-0.tar.gz";
     sha256 = "c8cf4c9cda0c57cdfba45f7370f95c5f387ee179be2906551321efc02bfaeac4";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs image-transport parameter-pa sensor-msgs cv-bridge roscpp laser-geometry message-generation pcl-ros std-msgs tf pcl-conversions ];
-  propagatedBuildInputs = [ std-srvs image-transport parameter-pa sensor-msgs cv-bridge roscpp laser-geometry message-runtime pcl-ros std-msgs tf pcl-conversions ];
+  propagatedBuildInputs = [ std-srvs image-transport sensor-msgs parameter-pa cv-bridge roscpp laser-geometry message-runtime pcl-ros std-msgs tf pcl-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

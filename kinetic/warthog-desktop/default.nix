@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/warthog_desktop-release/archive/release/kinetic/warthog_desktop/0.0.1-1.tar.gz;
+    url = "https://github.com/clearpath-gbp/warthog_desktop-release/archive/release/kinetic/warthog_desktop/0.0.1-1.tar.gz";
+    name = "0.0.1-1.tar.gz";
     sha256 = "273215b3b079233d04e99cd8dcc1585dca2708c2111a8af19100e4f8f670b544";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ warthog-msgs warthog-viz ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/usb_cam-release/archive/release/kinetic/usb_cam/0.3.5-0.tar.gz;
+    url = "https://github.com/ros-gbp/usb_cam-release/archive/release/kinetic/usb_cam/0.3.5-0.tar.gz";
+    name = "0.3.5-0.tar.gz";
     sha256 = "43d0e60d5ed77191015411fbf3d0485f34dc2e2f6d3c60fc574f25c587c7c06b";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs camera-info-manager image-transport sensor-msgs ffmpeg std-msgs roscpp ];
   propagatedBuildInputs = [ std-srvs camera-info-manager image-transport sensor-msgs ffmpeg std-msgs roscpp v4l_utils ];
   nativeBuildInputs = [ catkin ];

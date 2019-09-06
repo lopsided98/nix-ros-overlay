@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1";
 
   src = fetchurl {
-    url = https://github.com/benjayah/rodi_robot-release/archive/release/kinetic/rodi_robot/0.0.1-0.tar.gz;
+    url = "https://github.com/benjayah/rodi_robot-release/archive/release/kinetic/rodi_robot/0.0.1-0.tar.gz";
+    name = "0.0.1-0.tar.gz";
     sha256 = "e3eaaad3b8c4551b9d5e5514c06f457f7a15bb15d0eda26338e90df72f0d3618";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roslint geometry-msgs rospy ];
   checkInputs = [ rosunit roslint ];
   propagatedBuildInputs = [ sensor-msgs roslint geometry-msgs rospy ];

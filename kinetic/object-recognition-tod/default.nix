@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.6";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/object_recognition_tod-release/archive/release/kinetic/object_recognition_tod/0.5.6-0.tar.gz;
+    url = "https://github.com/ros-gbp/object_recognition_tod-release/archive/release/kinetic/object_recognition_tod/0.5.6-0.tar.gz";
+    name = "0.5.6-0.tar.gz";
     sha256 = "5dc450600dc5efc57ce501d9e67d3cc5a2520388438264af655f653268f25515";
   };
 
+  buildType = "catkin";
   buildInputs = [ opencv-candidate cmake-modules eigen object-recognition-core ecto ];
   propagatedBuildInputs = [ opencv-candidate object-recognition-core ecto-openni ecto-opencv ecto ];
   nativeBuildInputs = [ catkin ];

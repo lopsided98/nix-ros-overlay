@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.3.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/desktop/1.3.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/desktop/1.3.2-0.tar.gz";
+    name = "1.3.2-0.tar.gz";
     sha256 = "920aabceff3d55b8ba3c0460eb222da72e7969ff11ff76b41197f723b1b26c48";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ visualization-tutorials roslint common-tutorials viz robot geometry-tutorials angles ros-tutorials ];
   nativeBuildInputs = [ catkin ];
 

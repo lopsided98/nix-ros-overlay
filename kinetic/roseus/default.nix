@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.7.4";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus/1.7.4-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/kinetic/roseus/1.7.4-0.tar.gz";
+    name = "1.7.4-0.tar.gz";
     sha256 = "8ab0dcb03250d2298e93e3d05f06e3e539c839b0c116ba8e0521461045e87294";
   };
 
+  buildType = "catkin";
   buildInputs = [ jskeus actionlib-msgs actionlib tf actionlib-tutorials geometry-msgs rosbash message-generation roslang angles coreutils std-srvs rospack mk rosmsg rosbuild tf2-ros std-msgs roscpp visualization-msgs euslisp rosnode geneus sensor-msgs rostest rostopic dynamic-reconfigure ];
   checkInputs = [ xorg.xorgserver ];
   propagatedBuildInputs = [ jskeus actionlib-msgs actionlib dynamic-reconfigure tf actionlib-tutorials geometry-msgs rosbash message-runtime roslang std-srvs rospack rosmsg tf2-ros std-msgs roscpp visualization-msgs euslisp rosnode sensor-msgs rostest geneus ];

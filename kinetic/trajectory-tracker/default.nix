@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2-r1";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation-release/archive/release/kinetic/trajectory_tracker/0.4.2-1.tar.gz;
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/trajectory_tracker/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
     sha256 = "f322efd88d2af2bb93f6ac398eb6fa5533be5c1dc897f0177d2e537b590e5ea3";
   };
 
+  buildType = "catkin";
   buildInputs = [ tf2-geometry-msgs tf2-ros tf2 nav-msgs trajectory-tracker-msgs neonavigation-common interactive-markers eigen roscpp geometry-msgs ];
   checkInputs = [ rostest roslint rosunit ];
   propagatedBuildInputs = [ tf2-geometry-msgs tf2-ros tf2 nav-msgs trajectory-tracker-msgs neonavigation-common interactive-markers eigen roscpp geometry-msgs ];

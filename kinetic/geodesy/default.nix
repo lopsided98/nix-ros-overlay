@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.5.2";
 
   src = fetchurl {
-    url = https://github.com/ros-geographic-info/geographic_info-release/archive/release/kinetic/geodesy/0.5.2-0.tar.gz;
+    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/kinetic/geodesy/0.5.2-0.tar.gz";
+    name = "0.5.2-0.tar.gz";
     sha256 = "c298212d2a77911d60cedfde713372bad057fbcb8307aa5f29eb976e3166ed9f";
   };
 
+  buildType = "catkin";
   buildInputs = [ unique-id sensor-msgs uuid-msgs geographic-msgs angles pythonPackages.catkin-pkg tf geometry-msgs ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ unique-id tf sensor-msgs uuid-msgs geographic-msgs pythonPackages.pyproj geometry-msgs ];

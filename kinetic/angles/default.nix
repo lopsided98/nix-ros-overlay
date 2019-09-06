@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.9.11";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/kinetic/angles/1.9.11-0.tar.gz;
+    url = "https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/kinetic/angles/1.9.11-0.tar.gz";
+    name = "1.9.11-0.tar.gz";
     sha256 = "5937dd2efcb6ed58eb69a1b57c4d76c76dffad86d787f9c9374fd27faed597de";
   };
 
+  buildType = "catkin";
   checkInputs = [ rosunit ];
   nativeBuildInputs = [ catkin ];
 

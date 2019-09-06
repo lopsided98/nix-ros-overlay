@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.9-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_high_speed_encoder/0.7.9-1.tar.gz;
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/kinetic/phidgets_high_speed_encoder/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
     sha256 = "4b312550ad9a97d33c8ebee17973fcfb6d93c1aebe8aa557ab5729c7d41e3768";
   };
 
+  buildType = "catkin";
   buildInputs = [ phidgets-api libphidget21 sensor-msgs message-generation std-msgs roscpp ];
   propagatedBuildInputs = [ phidgets-api libphidget21 sensor-msgs message-runtime std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

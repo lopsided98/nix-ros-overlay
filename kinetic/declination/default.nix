@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.2";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/declination-release/archive/release/kinetic/declination/0.0.2-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/declination-release/archive/release/kinetic/declination/0.0.2-0.tar.gz";
+    name = "0.0.2-0.tar.gz";
     sha256 = "1c37c79dd33b2c2619f179c8a164a97a066b98f95aaa2934d4940ca4438ff51d";
   };
 
+  buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp rospy std-msgs tf geometry-msgs ];
   propagatedBuildInputs = [ sensor-msgs roscpp rospy std-msgs tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];

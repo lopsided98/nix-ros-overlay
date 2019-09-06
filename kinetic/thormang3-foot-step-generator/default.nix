@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-OPC-release/archive/release/kinetic/thormang3_foot_step_generator/0.3.0-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-THORMANG-OPC-release/archive/release/kinetic/thormang3_foot_step_generator/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "4b16dda0ceab0af65050e431a44fe7362c45df60603113bc20b4392d24e00265";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules geometry-msgs robotis-controller-msgs roslib message-generation eigen std-msgs roscpp thormang3-walking-module-msgs ];
   propagatedBuildInputs = [ cmake-modules geometry-msgs roscpp roslib message-runtime eigen std-msgs robotis-controller-msgs thormang3-walking-module-msgs ];
   nativeBuildInputs = [ catkin ];

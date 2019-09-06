@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.1-r1";
 
   src = fetchurl {
-    url = https://github.com/alireza-hosseini/ipcamera_driver-release/archive/release/kinetic/ipcamera_driver/0.1.1-1.tar.gz;
+    url = "https://github.com/alireza-hosseini/ipcamera_driver-release/archive/release/kinetic/ipcamera_driver/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
     sha256 = "db92e85739cb89d365a5e9c331f29bf3efea0160e3287599bc506a6d1014eee4";
   };
 
+  buildType = "catkin";
   buildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge dynamic-reconfigure roscpp ];
   propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.6.14-r1";
 
   src = fetchurl {
-    url = https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_image_flip/0.6.14-1.tar.gz;
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_image_flip/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
     sha256 = "9848793b2e1066452208abc42b997e35c7fac595dedede4898279ff124655f5a";
   };
 
+  buildType = "catkin";
   buildInputs = [ cob-perception-msgs pluginlib boost opencv3 image-transport sensor-msgs cv-bridge roscpp nodelet pcl-ros tf pcl-conversions geometry-msgs stereo-msgs ];
-  propagatedBuildInputs = [ cob-perception-msgs pluginlib boost opencv3 image-transport sensor-msgs cv-bridge roscpp nodelet pcl-ros tf pcl-conversions geometry-msgs stereo-msgs ];
+  propagatedBuildInputs = [ cob-perception-msgs boost pluginlib opencv3 image-transport sensor-msgs cv-bridge roscpp nodelet pcl-ros tf pcl-conversions geometry-msgs stereo-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

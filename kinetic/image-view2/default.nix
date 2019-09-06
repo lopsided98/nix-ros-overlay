@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.2.10";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_common-release/archive/release/kinetic/image_view2/2.2.10-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/kinetic/image_view2/2.2.10-0.tar.gz";
+    name = "2.2.10-0.tar.gz";
     sha256 = "9c473c39749144320448406e22c8ed262cda2c901b9f231b5d749a0bf539d44e";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-filters roscpp image-geometry rostest message-generation image-view pcl-ros std-msgs tf geometry-msgs ];
   checkInputs = [ pythonPackages.numpy pythonPackages.scipy ];
   propagatedBuildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-filters roscpp image-geometry message-runtime image-view pcl-ros std-msgs tf geometry-msgs ];

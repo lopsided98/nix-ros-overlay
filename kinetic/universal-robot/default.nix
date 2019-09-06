@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.5";
 
   src = fetchurl {
-    url = https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/universal_robot/1.2.5-0.tar.gz;
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/universal_robot/1.2.5-0.tar.gz";
+    name = "1.2.5-0.tar.gz";
     sha256 = "1e36ffdabb1bf7c44d5448cecaa7e311f255d0fa4f251827f5a8f0262646b1cd";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ universal-robots ];
   nativeBuildInputs = [ catkin ];
 

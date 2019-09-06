@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/rb1_base_common-release/archive/release/kinetic/rb1_base_common/1.1.0-0.tar.gz;
+    url = "https://github.com/RobotnikAutomation/rb1_base_common-release/archive/release/kinetic/rb1_base_common/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
     sha256 = "f26852f93bf26b4d270a15d4d2f3b67ac6739792855c1cfc9d93cb81071c4c72";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rb1-base-description rb1-base-pad ];
   nativeBuildInputs = [ catkin ];
 

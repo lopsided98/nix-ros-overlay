@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.2.9";
 
   src = fetchurl {
-    url = https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/jsk_recognition/1.2.9-0.tar.gz;
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/jsk_recognition/1.2.9-0.tar.gz";
+    name = "1.2.9-0.tar.gz";
     sha256 = "a3a764b09fdf37eb631803445fa8dd919241b6ee1022f58f4a3d10a28d7eb835";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ jsk-pcl-ros checkerboard-detector resized-image-transport jsk-recognition-msgs jsk-recognition-utils jsk-perception imagesift ];
   nativeBuildInputs = [ catkin ];
 

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.12.12";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/urdf-release/archive/release/kinetic/urdf/1.12.12-0.tar.gz;
+    url = "https://github.com/ros-gbp/urdf-release/archive/release/kinetic/urdf/1.12.12-0.tar.gz";
+    name = "1.12.12-0.tar.gz";
     sha256 = "3ef94e4c96e189e1df3b4e57d0309bd1bd76a7a28a674a5944e26b8fd674cb33";
   };
 
+  buildType = "catkin";
   buildInputs = [ cmake-modules pluginlib rosconsole-bridge tinyxml urdf-parser-plugin urdfdom urdfdom-headers roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ pluginlib rosconsole-bridge tinyxml urdfdom urdfdom-headers roscpp ];

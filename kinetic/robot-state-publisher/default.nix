@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.13.7-r1";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/robot_state_publisher-release/archive/release/kinetic/robot_state_publisher/1.13.7-1.tar.gz;
+    url = "https://github.com/ros-gbp/robot_state_publisher-release/archive/release/kinetic/robot_state_publisher/1.13.7-1.tar.gz";
+    name = "1.13.7-1.tar.gz";
     sha256 = "23ee023d8854b508f0cd7f1ccceac40a5b68d5f4c7bf898db4db065ac6351e57";
   };
 
+  buildType = "catkin";
   buildInputs = [ kdl-parser orocos-kdl rosconsole sensor-msgs tf2-kdl rostime roscpp tf2-ros urdfdom-headers eigen tf ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ kdl-parser orocos-kdl rosconsole sensor-msgs catkin tf2-kdl rostime roscpp tf2-ros eigen tf ];

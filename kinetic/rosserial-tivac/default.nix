@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.7.7";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_tivac/0.7.7-0.tar.gz;
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/kinetic/rosserial_tivac/0.7.7-0.tar.gz";
+    name = "0.7.7-0.tar.gz";
     sha256 = "379b333e6972583e884bd30d5a2d07f5b5cc341a560e6828eb802286c1dea1a8";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rosserial-msgs rosserial-client ];
   nativeBuildInputs = [ catkin ];
 

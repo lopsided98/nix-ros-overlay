@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.9";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/class_loader-release/archive/release/kinetic/class_loader/0.3.9-0.tar.gz;
+    url = "https://github.com/ros-gbp/class_loader-release/archive/release/kinetic/class_loader/0.3.9-0.tar.gz";
+    name = "0.3.9-0.tar.gz";
     sha256 = "5733b84bec8e5a4da05b07d2f4594541a04a6e88d772e9d9a944776429f7d45b";
   };
 
+  buildType = "catkin";
   buildInputs = [ poco console-bridge cmake-modules boost ];
   propagatedBuildInputs = [ poco console-bridge boost ];
   nativeBuildInputs = [ catkin ];

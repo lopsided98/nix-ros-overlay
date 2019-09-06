@@ -8,13 +8,15 @@ buildRosPackage {
   version = "0.7.15";
 
   src = fetchurl {
-    url = https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/kinetic/fetch_moveit_config/0.7.15-0.tar.gz;
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/kinetic/fetch_moveit_config/0.7.15-0.tar.gz";
+    name = "0.7.15-0.tar.gz";
     sha256 = "df15dfe81f4a95716deaa31c1d02aa5e80c44d2cf5f1b02abaef2e004129c5e5";
   };
 
+  buildType = "catkin";
   buildInputs = [ fetch-description ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-python moveit-kinematics fetch-description moveit-simple-controller-manager robot-state-publisher fetch-ikfast-plugin rospy joint-state-publisher xacro moveit-planners-ompl ];
+  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization fetch-ikfast-plugin moveit-python moveit-kinematics moveit-simple-controller-manager robot-state-publisher rospy fetch-description joint-state-publisher xacro moveit-planners-ompl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

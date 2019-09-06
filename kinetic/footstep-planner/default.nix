@@ -8,12 +8,14 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/humanoid_navigation-release/archive/release/kinetic/footstep_planner/0.4.2-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/humanoid_navigation-release/archive/release/kinetic/footstep_planner/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "065d2d1c76650b2d9afaf45a34017adcf54b604c0f33081b60380200f3cc427d";
   };
 
+  buildType = "catkin";
   buildInputs = [ map-server rosconsole sensor-msgs roscpp sbpl gridmap-2d nav-msgs visualization-msgs actionlib rospy angles tf opencv3 humanoid-nav-msgs geometry-msgs ];
-  propagatedBuildInputs = [ map-server rosconsole sensor-msgs roscpp sbpl gridmap-2d nav-msgs visualization-msgs actionlib rospy angles tf opencv3 humanoid-nav-msgs geometry-msgs ];
+  propagatedBuildInputs = [ map-server rosconsole tf sensor-msgs roscpp sbpl nav-msgs visualization-msgs actionlib rospy angles gridmap-2d opencv3 humanoid-nav-msgs geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

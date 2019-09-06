@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.9";
 
   src = fetchurl {
-    url = https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_device/0.2.9-0.tar.gz;
+    url = "https://github.com/ROBOTIS-GIT-release/ROBOTIS-Framework-release/archive/release/kinetic/robotis_device/0.2.9-0.tar.gz";
+    name = "0.2.9-0.tar.gz";
     sha256 = "aa72b1f902c9045bfd34d8baf9ff416f8ffe4af276f82294532523b933739780";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamixel-sdk roscpp ];
   propagatedBuildInputs = [ dynamixel-sdk roscpp ];
   nativeBuildInputs = [ catkin ];

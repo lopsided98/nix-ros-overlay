@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/RobotnikAutomation/rbcar_sim-release/archive/release/kinetic/rbcar_control/1.0.4-1.tar.gz;
+    url = "https://github.com/RobotnikAutomation/rbcar_sim-release/archive/release/kinetic/rbcar_control/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "e217c86778fdb66afbda9fd48792ddb5271ea57e59e1a6bdcd9583753089893c";
   };
 
+  buildType = "catkin";
   buildInputs = [ robot-state-publisher ];
   propagatedBuildInputs = [ robot-state-publisher ];
   nativeBuildInputs = [ catkin ];

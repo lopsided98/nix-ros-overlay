@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.4.2";
 
   src = fetchurl {
-    url = https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models-release/archive/release/kinetic/hector_models/0.4.2-0.tar.gz;
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models-release/archive/release/kinetic/hector_models/0.4.2-0.tar.gz";
+    name = "0.4.2-0.tar.gz";
     sha256 = "beb9f38fbac185a339c775522c6c9387933bcf6237e777189d5056a22aa03a01";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ hector-sensors-description hector-xacro-tools ];
   nativeBuildInputs = [ catkin ];
 

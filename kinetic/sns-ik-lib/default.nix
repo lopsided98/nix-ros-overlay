@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.2.3";
 
   src = fetchurl {
-    url = https://github.com/RethinkRobotics-release/sns_ik-release/archive/release/kinetic/sns_ik_lib/0.2.3-0.tar.gz;
+    url = "https://github.com/RethinkRobotics-release/sns_ik-release/archive/release/kinetic/sns_ik_lib/0.2.3-0.tar.gz";
+    name = "0.2.3-0.tar.gz";
     sha256 = "ea8bfa9c4d66a8f09f3c8ce6ed2a1ac7673bba0f40873a5490c46c9c4b570723";
   };
 
+  buildType = "catkin";
   buildInputs = [ kdl-parser orocos-kdl eigen std-msgs roscpp ];
   propagatedBuildInputs = [ std-msgs roscpp orocos-kdl ];
   nativeBuildInputs = [ catkin ];

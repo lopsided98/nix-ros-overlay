@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0";
 
   src = fetchurl {
-    url = https://github.com/gstavrinos/jaguar-release/archive/release/kinetic/jaguar_msgs/0.1.0-0.tar.gz;
+    url = "https://github.com/gstavrinos/jaguar-release/archive/release/kinetic/jaguar_msgs/0.1.0-0.tar.gz";
+    name = "0.1.0-0.tar.gz";
     sha256 = "deaafb06cb77f01a7557b79cf20f1056487d7340ccd234399c210fe0f423cda0";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

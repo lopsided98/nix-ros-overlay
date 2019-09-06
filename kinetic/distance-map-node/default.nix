@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = https://github.com/artivis/distance_map-release/archive/release/kinetic/distance_map_node/0.1.0-1.tar.gz;
+    url = "https://github.com/artivis/distance_map-release/archive/release/kinetic/distance_map_node/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
     sha256 = "bfa2b0ecd145b590187a5cbb94adc0408ca0113b138dbb9ed52faec89829d36e";
   };
 
+  buildType = "catkin";
   buildInputs = [ distance-map-core pluginlib roscpp ];
   propagatedBuildInputs = [ distance-map-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];

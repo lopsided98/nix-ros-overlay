@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.6-r1";
 
   src = fetchurl {
-    url = https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/kinetic/dbw_fca_description/1.0.6-1.tar.gz;
+    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/kinetic/dbw_fca_description/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
     sha256 = "b14ced68b05aaca8520ed8ffc546e23725e677d21e661ba5ab842e92f49370ca";
   };
 
+  buildType = "catkin";
   checkInputs = [ roslaunch roslib rviz ];
   propagatedBuildInputs = [ roslaunch urdf xacro robot-state-publisher ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_navigation/1.0.4-1.tar.gz;
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_navigation/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
     sha256 = "5c9dc0cc272ba6e26ef3bb3704453d1ec9e9e98c6ec3f05346aefa9264f6ba0c";
   };
 
+  buildType = "catkin";
   buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ map-server nav-core-adapter amcl base-local-planner mir-dwb-critics dwb-critics dwb-plugins sbpl-lattice-planner move-base mir-driver dwb-local-planner ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.0";
 
   src = fetchurl {
-    url = https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/kinetic/trajectory_tracker_rviz_plugins/0.3.0-0.tar.gz;
+    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/kinetic/trajectory_tracker_rviz_plugins/0.3.0-0.tar.gz";
+    name = "0.3.0-0.tar.gz";
     sha256 = "70ed4252d7585b2e1e7f12f71f1f5f50b10e71b004f1e40b4b1120010f3c7284";
   };
 
+  buildType = "catkin";
   buildInputs = [ rviz trajectory-tracker-msgs pluginlib qt5.qtbase ];
   propagatedBuildInputs = [ rviz trajectory-tracker-msgs pluginlib qt5.qtbase ];
   nativeBuildInputs = [ catkin ];

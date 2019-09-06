@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.1";
 
   src = fetchurl {
-    url = https://github.com/pal-gbp/ddynamic_reconfigure_python-release/archive/release/kinetic/ddynamic_reconfigure_python/0.0.1-0.tar.gz;
+    url = "https://github.com/pal-gbp/ddynamic_reconfigure_python-release/archive/release/kinetic/ddynamic_reconfigure_python/0.0.1-0.tar.gz";
+    name = "0.0.1-0.tar.gz";
     sha256 = "1b7445d34e84777b2d5f8f21a12232c48acd6dfd63c9665481517344b3f8eb5a";
   };
 
+  buildType = "catkin";
   buildInputs = [ rospy dynamic-reconfigure ];
   propagatedBuildInputs = [ rospy dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.3.1";
 
   src = fetchurl {
-    url = https://github.com/clearpath-gbp/heron-release/archive/release/kinetic/heron_msgs/0.3.1-0.tar.gz;
+    url = "https://github.com/clearpath-gbp/heron-release/archive/release/kinetic/heron_msgs/0.3.1-0.tar.gz";
+    name = "0.3.1-0.tar.gz";
     sha256 = "2ad5a2ee845261bde8492d547aa7738531de84181eb9a510d7e31d4be1b521d5";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

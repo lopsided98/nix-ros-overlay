@@ -102,6 +102,8 @@ self: super: {
 
  aruco = self.callPackage ./aruco {};
 
+ aruco-detect = self.callPackage ./aruco-detect {};
+
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
  aruco-ros = self.callPackage ./aruco-ros {};
@@ -1272,6 +1274,8 @@ self: super: {
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
+ haros-catkin = self.callPackage ./haros-catkin {};
+
  health-metric-collector = self.callPackage ./health-metric-collector {};
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
@@ -1863,6 +1867,8 @@ self: super: {
  leap-motion = self.callPackage ./leap-motion {};
 
  leg-detector = self.callPackage ./leg-detector {};
+
+ lex-common = self.callPackage ./lex-common {};
 
  lex-common-msgs = self.callPackage ./lex-common-msgs {};
 
@@ -3540,6 +3546,8 @@ self: super: {
 
  ros-mpg321-player = self.callPackage ./ros-mpg321-player {};
 
+ ros-mppt = self.callPackage ./ros-mppt {};
+
  ros-numpy = self.callPackage ./ros-numpy {};
 
  ros-pytest = self.callPackage ./ros-pytest {};
@@ -3974,6 +3982,8 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ rxcpp-vendor = self.callPackage ./rxcpp-vendor {};
+
  safe-teleop-base = self.callPackage ./safe-teleop-base {};
 
  safe-teleop-stage = self.callPackage ./safe-teleop-stage {};
@@ -4017,6 +4027,18 @@ self: super: {
  scratch4robots = self.callPackage ./scratch4robots {};
 
  sdhlibrary-cpp = self.callPackage ./sdhlibrary-cpp {};
+
+ seed-r7-bringup = self.callPackage ./seed-r7-bringup {};
+
+ seed-r7-description = self.callPackage ./seed-r7-description {};
+
+ seed-r7-navigation = self.callPackage ./seed-r7-navigation {};
+
+ seed-r7-robot-interface = self.callPackage ./seed-r7-robot-interface {};
+
+ seed-r7-ros-controller = self.callPackage ./seed-r7-ros-controller {};
+
+ seed-r7-typef-moveit-config = self.callPackage ./seed-r7-typef-moveit-config {};
 
  seed-smartactuator-sdk = self.callPackage ./seed-smartactuator-sdk {};
 

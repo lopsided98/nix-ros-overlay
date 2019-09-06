@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.0";
 
   src = fetchurl {
-    url = https://github.com/Intermodalics/tango_ros-release/archive/release/kinetic/tango_ros_messages/2.0.0-0.tar.gz;
+    url = "https://github.com/Intermodalics/tango_ros-release/archive/release/kinetic/tango_ros_messages/2.0.0-0.tar.gz";
+    name = "2.0.0-0.tar.gz";
     sha256 = "e322c0fbc460a686ba7d31d087414394ead40ef7eb61e62d1c8a1927f67019af";
   };
 
+  buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];

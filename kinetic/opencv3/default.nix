@@ -8,12 +8,14 @@ buildRosPackage {
   version = "3.3.1-r5";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/opencv3-release/archive/release/kinetic/opencv3/3.3.1-5.tar.gz;
+    url = "https://github.com/ros-gbp/opencv3-release/archive/release/kinetic/opencv3/3.3.1-5.tar.gz";
+    name = "3.3.1-5.tar.gz";
     sha256 = "49a1574305a96dd2d2f940948b53d78244d44529369c205c994ae5f6d529599b";
   };
 
+  buildType = "cmake";
   buildInputs = [ python libwebp pythonPackages.numpy libtiff libv4l ffmpeg libjpeg vtkWithQt4 zlib protobuf libpng ];
-  propagatedBuildInputs = [ python libwebp pythonPackages.numpy catkin ffmpeg libjpeg vtkWithQt4 zlib protobuf libpng ];
+  propagatedBuildInputs = [ python pythonPackages.numpy libwebp catkin ffmpeg libjpeg vtkWithQt4 zlib protobuf libpng ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

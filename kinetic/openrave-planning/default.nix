@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.0.6";
 
   src = fetchurl {
-    url = https://github.com/tork-a/openrave_planning-release/archive/release/kinetic/openrave_planning/0.0.6-0.tar.gz;
+    url = "https://github.com/tork-a/openrave_planning-release/archive/release/kinetic/openrave_planning/0.0.6-0.tar.gz";
+    name = "0.0.6-0.tar.gz";
     sha256 = "09ac6ef531304b9d8dcc4724384023b50c3bdd8a031bbea8c475ff491c09b68d";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ openrave collada-robots ];
   nativeBuildInputs = [ catkin ];
 

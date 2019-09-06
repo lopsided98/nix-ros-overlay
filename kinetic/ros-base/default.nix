@@ -8,11 +8,13 @@ buildRosPackage {
   version = "1.3.2";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/ros_base/1.3.2-0.tar.gz;
+    url = "https://github.com/ros-gbp/metapackages-release/archive/release/kinetic/ros_base/1.3.2-0.tar.gz";
+    name = "1.3.2-0.tar.gz";
     sha256 = "708d8c5de4f1692b2b5aa67ede2d4153607642a9efc93c3225844cb27efc4141";
   };
 
-  propagatedBuildInputs = [ pluginlib ros-core class-loader bond-core actionlib dynamic-reconfigure nodelet-core ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ pluginlib ros-core class-loader bond-core actionlib nodelet-core dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "2.0.2";
 
   src = fetchurl {
-    url = https://github.com/jbohren/executive_smach_visualization-release/archive/release/kinetic/smach_viewer/2.0.2-0.tar.gz;
+    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/kinetic/smach_viewer/2.0.2-0.tar.gz";
+    name = "2.0.2-0.tar.gz";
     sha256 = "8473346bc221e0342a8d18c5f42a2fbf0b4f0bdd195bceed01d97bc121d1e26d";
   };
 
+  buildType = "catkin";
   buildInputs = [ rostest ];
   propagatedBuildInputs = [ smach-msgs smach-ros graphviz pythonPackages.wxPython ];
   nativeBuildInputs = [ catkin ];

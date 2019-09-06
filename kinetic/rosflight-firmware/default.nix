@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight_firmware/1.0.0-1.tar.gz;
+    url = "https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight_firmware/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
     sha256 = "f67261299a26a7c6a6b69c245e555ddc8efd3621d422e2f7f23fd29ddee21f54";
   };
 
+  buildType = "catkin";
   buildInputs = [ roscpp ];
   propagatedBuildInputs = [ roscpp ];
   nativeBuildInputs = [ catkin ];

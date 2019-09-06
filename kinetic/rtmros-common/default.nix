@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.4.2";
 
   src = fetchurl {
-    url = https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/rtmros_common/1.4.2-0.tar.gz;
+    url = "https://github.com/tork-a/rtmros_common-release/archive/release/kinetic/rtmros_common/1.4.2-0.tar.gz";
+    name = "1.4.2-0.tar.gz";
     sha256 = "9cd6690acd1914cd304d17c541f0ed1f59627720614b505f223b168e16c38641";
   };
 
+  buildType = "catkin";
   propagatedBuildInputs = [ rtmbuild hrpsys-ros-bridge rosnode-rtc openrtm-tools hrpsys-tools openrtm-ros-bridge ];
   nativeBuildInputs = [ catkin ];
 

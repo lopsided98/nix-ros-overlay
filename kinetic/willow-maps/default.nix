@@ -8,10 +8,12 @@ buildRosPackage {
   version = "1.0.3";
 
   src = fetchurl {
-    url = https://github.com/ros-gbp/willow_maps-release/archive/release/kinetic/willow_maps/1.0.3-0.tar.gz;
+    url = "https://github.com/ros-gbp/willow_maps-release/archive/release/kinetic/willow_maps/1.0.3-0.tar.gz";
+    name = "1.0.3-0.tar.gz";
     sha256 = "afbbd32a5881157a4f22f01d311daa817aeef83896e33da9e4fb65b878be46fc";
   };
 
+  buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -8,10 +8,12 @@ buildRosPackage {
   version = "0.6.13";
 
   src = fetchurl {
-    url = https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_control_cascaded_pid/0.6.13-0.tar.gz;
+    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/kinetic/uuv_control_cascaded_pid/0.6.13-0.tar.gz";
+    name = "0.6.13-0.tar.gz";
     sha256 = "b0cfd7063925d62136d15db64e82d2eeb7c38de170b15018e163d6e68e55650b";
   };
 
+  buildType = "catkin";
   buildInputs = [ dynamic-reconfigure ];
   propagatedBuildInputs = [ pythonPackages.numpy nav-msgs rospy dynamic-reconfigure tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
