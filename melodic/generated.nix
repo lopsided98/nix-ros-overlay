@@ -3024,6 +3024,8 @@ self: super: {
 
  warthog-viz = self.callPackage ./warthog-viz {};
 
+ wave-gazebo = self.callPackage ./wave-gazebo {};
+
  wave-gazebo-plugins = self.callPackage ./wave-gazebo-plugins {};
 
  web-video-server = self.callPackage ./web-video-server {};
