@@ -8,8 +8,8 @@ rosSelf: rosSuper: {
      patches = patches ++ [
       (self.fetchpatch {
         url = "https://github.com/ros-planning/navigation2/commit/b87942a3502af9e4b6ea7d6cf78a510f55539cc1.patch";
-        sha256 = "1xhz0vkam7aka1xz6sin9ggdnqabxk1rcx3zmbrvjpvyp7aq37qj";
-        stripLen = 2;
+        sha256 = "1mqjjywhcg0di7xlhy6jm4apya9m2i9168w4p79ff7fh1f4qn3jg";
+        stripLen = 1;
       })
     ];
   });
