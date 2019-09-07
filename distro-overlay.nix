@@ -142,7 +142,7 @@ let
     }: {
       propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [ rosSelf.pythonPackages.sip ];
       postPatch = ''
-        sed -e "s#'-I', sip_dir,#'-I', '${rosSelf.pythonPackages.pyqt5}/share/sip/PyQt5',#" \
+        sed -e "s#sipconfig\._pkg_config\['default_sip_dir'\]#'${rosSelf.pythonPackages.pyqt5}/share/sip'#" \
             -e "s#qtconfig\['QT_INSTALL_HEADERS'\]#'${self.qt5.qtbase.dev}/include'#g" \
             -i cmake/sip_configure.py
       '' + postPatch;
