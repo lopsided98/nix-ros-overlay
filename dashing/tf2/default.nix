@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, console-bridge-vendor, console-bridge, geometry-msgs }:
 buildRosPackage {
   pname = "ros-dashing-tf2";
-  version = "0.11.4-r1";
+  version = "0.11.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/tf2/0.11.4-1.tar.gz";
-    name = "0.11.4-1.tar.gz";
-    sha256 = "6dd9d0814515357692e378aec9015936319c49ab234d110513d78d90a5c0f797";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/tf2/0.11.5-1.tar.gz";
+    name = "0.11.5-1.tar.gz";
+    sha256 = "bde0efaade476ae3829a0eb091d349f164fb6b7ba1fb1c5ae9e5831aff4f4eb2";
   };
 
   buildType = "ament_cmake";

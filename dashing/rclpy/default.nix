@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rmw-implementation-cmake, rosgraph-msgs, rcl-yaml-param-parser, rcl-action, unique-identifier-msgs, ament-cmake-pytest, rosidl-generator-py, pythonPackages, rmw-implementation, ament-index-python, builtin-interfaces, rcl-interfaces, rcutils, ament-lint-common, test-msgs, python-cmake-module, rcl, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rclpy";
-  version = "0.7.6-r1";
+  version = "0.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/dashing/rclpy/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "1ddb666370028a9f27a631d9bbbca3afb97b23ae83c9c2b79cdc7b73e52b20be";
+    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/dashing/rclpy/0.7.7-1.tar.gz";
+    name = "0.7.7-1.tar.gz";
+    sha256 = "f787e1c321d393ffe82db00fec5dbf9012b087ea5ab1aa439c6bc5ee6b51df3d";
   };
 
   buildType = "ament_cmake";

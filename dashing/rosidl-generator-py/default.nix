@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, rosidl-typesupport-c, ament-cmake, rmw-implementation-cmake, ament-lint-common, rosidl-typesupport-interface, pythonPackages, python3Packages, python-cmake-module, rmw-implementation, rosidl-cmake, rosidl-parser, ament-index-python, ament-lint-auto, rmw, rosidl-generator-c }:
 buildRosPackage {
   pname = "ros-dashing-rosidl-generator-py";
-  version = "0.7.7-r1";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_python-release/archive/release/dashing/rosidl_generator_py/0.7.7-1.tar.gz";
-    name = "0.7.7-1.tar.gz";
-    sha256 = "00f78ac88e78bad7db449ffdeb4be8e2cffea088940c84945718288e3e0dc259";
+    url = "https://github.com/ros2-gbp/rosidl_python-release/archive/release/dashing/rosidl_generator_py/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
+    sha256 = "b305a1999646ac0480f7fd152583abdd9126c0cb759c698809236b4b9b8cf698";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-common, rcl-lifecycle, ament-cmake-gtest, rosidl-typesupport-cpp, rmw-implementation, lifecycle-msgs, rclcpp, ament-cmake-ros, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rclcpp-lifecycle";
-  version = "0.7.7-r1";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/dashing/rclcpp_lifecycle/0.7.7-1.tar.gz";
-    name = "0.7.7-1.tar.gz";
-    sha256 = "d0cf9f34ef2488b8706339c340fc057947a35ba8a36237dd647e7bd64417314f";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/dashing/rclcpp_lifecycle/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
+    sha256 = "ed6ac8b6c412b06ddaf57dd0dbe372e593ae474c327e75bc2353c60e196dd8ad";
   };
 
   buildType = "ament_cmake";

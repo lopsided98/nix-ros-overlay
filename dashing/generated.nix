@@ -134,6 +134,10 @@ self: super: {
 
  autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
 
+ aws-common = self.callPackage ./aws-common {};
+
+ aws-ros2-common = self.callPackage ./aws-ros2-common {};
+
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
@@ -152,6 +156,14 @@ self: super: {
 
  class-loader = self.callPackage ./class-loader {};
 
+ cloudwatch-logger = self.callPackage ./cloudwatch-logger {};
+
+ cloudwatch-logs-common = self.callPackage ./cloudwatch-logs-common {};
+
+ cloudwatch-metrics-collector = self.callPackage ./cloudwatch-metrics-collector {};
+
+ cloudwatch-metrics-common = self.callPackage ./cloudwatch-metrics-common {};
+
  common-interfaces = self.callPackage ./common-interfaces {};
 
  composition = self.callPackage ./composition {};
@@ -166,6 +178,8 @@ self: super: {
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
+ control-msgs = self.callPackage ./control-msgs {};
+
  costmap-queue = self.callPackage ./costmap-queue {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -173,6 +187,8 @@ self: super: {
  cyclonedds = self.callPackage ./cyclonedds {};
 
  cyclonedds-cmake-module = self.callPackage ./cyclonedds-cmake-module {};
+
+ dataflow-lite = self.callPackage ./dataflow-lite {};
 
  demo-nodes-cpp = self.callPackage ./demo-nodes-cpp {};
 
@@ -322,6 +338,8 @@ self: super: {
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
+ file-management = self.callPackage ./file-management {};
+
  fmi-adapter = self.callPackage ./fmi-adapter {};
 
  fmi-adapter-examples = self.callPackage ./fmi-adapter-examples {};
@@ -344,6 +362,12 @@ self: super: {
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
+ h264-encoder-core = self.callPackage ./h264-encoder-core {};
+
+ h264-video-encoder = self.callPackage ./h264-video-encoder {};
+
+ health-metric-collector = self.callPackage ./health-metric-collector {};
+
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hungarian-assigner = self.callPackage ./hungarian-assigner {};
@@ -364,6 +388,12 @@ self: super: {
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
+ kinesis-manager = self.callPackage ./kinesis-manager {};
+
+ kinesis-video-msgs = self.callPackage ./kinesis-video-msgs {};
+
+ kinesis-video-streamer = self.callPackage ./kinesis-video-streamer {};
+
  laser-geometry = self.callPackage ./laser-geometry {};
 
  launch = self.callPackage ./launch {};
@@ -375,6 +405,12 @@ self: super: {
  launch-testing-ament-cmake = self.callPackage ./launch-testing-ament-cmake {};
 
  launch-testing-ros = self.callPackage ./launch-testing-ros {};
+
+ lex-common = self.callPackage ./lex-common {};
+
+ lex-common-msgs = self.callPackage ./lex-common-msgs {};
+
+ lex-node = self.callPackage ./lex-node {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
 
@@ -534,6 +570,8 @@ self: super: {
 
  realsense-ros2-camera = self.callPackage ./realsense-ros2-camera {};
 
+ realtime-tools = self.callPackage ./realtime-tools {};
+
  resource-retriever = self.callPackage ./resource-retriever {};
 
  rmw = self.callPackage ./rmw {};
@@ -601,6 +639,8 @@ self: super: {
  ros-core = self.callPackage ./ros-core {};
 
  ros-environment = self.callPackage ./ros-environment {};
+
+ ros-monitoring-msgs = self.callPackage ./ros-monitoring-msgs {};
 
  ros-testing = self.callPackage ./ros-testing {};
 
@@ -795,6 +835,8 @@ self: super: {
  tracetools-test = self.callPackage ./tracetools-test {};
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
+
+ tts-interfaces = self.callPackage ./tts-interfaces {};
 
  turtlebot3 = self.callPackage ./turtlebot3 {};
 

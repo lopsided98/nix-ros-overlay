@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, sqlite, cmake }:
 buildRosPackage {
   pname = "ros-dashing-sqlite3-vendor";
-  version = "0.1.4-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/sqlite3_vendor/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "a4ca55fdfe80002689d034f52cedd6adc97ed8d27d650e078b97cb043785569a";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/sqlite3_vendor/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "e8298b5c6ce0cfb2eecaca633af20ae881df406918f54f1d9ec28563ac63fa36";
   };
 
   buildType = "cmake";
