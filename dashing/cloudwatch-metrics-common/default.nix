@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, file-management, ament-cmake-gmock, dataflow-lite, ament-cmake-gtest, aws-common, cmake }:
 buildRosPackage {
   pname = "ros-dashing-cloudwatch-metrics-common";
-  version = "1.1.0-r1";
+  version = "1.1.1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/dashing/cloudwatch_metrics_common/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "6e4be9e356ace32eab46d1811e486cb02fff75d35e6af45b21ff2ce4c970afb1";
+    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/dashing/cloudwatch_metrics_common/1.1.1-0.tar.gz";
+    name = "1.1.1-0.tar.gz";
+    sha256 = "30cb38d89cab29d88538f07f4c698e89755b60a71d3e403531806549ddb84c11";
   };
 
   buildType = "cmake";

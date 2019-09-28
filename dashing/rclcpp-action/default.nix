@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rosidl-generator-cpp, ament-cmake, ament-lint-common, test-msgs, rcl-action, ament-cmake-gtest, rclcpp, ament-cmake-ros, action-msgs, ament-lint-auto, rosidl-generator-c }:
 buildRosPackage {
   pname = "ros-dashing-rclcpp-action";
-  version = "0.7.8-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/dashing/rclcpp_action/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "49d50c883cf0057faccc7ed80905eae13b4c39d45cdc74fbca55b85cdbf46ad5";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/dashing/rclcpp_action/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "7114173130ba76483dcb5928e40c3dee8564b3c5f6c4747ad2e66bc9f681195f";
   };
 
   buildType = "ament_cmake";

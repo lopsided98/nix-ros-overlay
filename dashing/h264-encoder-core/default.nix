@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ffmpeg, aws-common, cmake }:
 buildRosPackage {
   pname = "ros-dashing-h264-encoder-core";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/h264_encoder_core-release/archive/release/dashing/h264_encoder_core/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "2a39d34702af1080f41f54517d9ea611a75cc18104a73f05eb33db3ea6af85b2";
+    url = "https://github.com/aws-gbp/h264_encoder_core-release/archive/release/dashing/h264_encoder_core/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "a75dea0c5348288064b2ea0a1c7586d59313b282b8f552e1578c43a175e53078";
   };
 
   buildType = "cmake";

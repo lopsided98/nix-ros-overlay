@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, std-srvs, ament-cmake, launch-ros, ament-lint-common, rclpy, geometry-msgs, sensor-msgs, ament-cmake-gtest, gazebo-dev, rclcpp, tinyxml-vendor, std-msgs, ament-lint-auto, gazebo-msgs }:
 buildRosPackage {
   pname = "ros-dashing-gazebo-ros";
-  version = "3.3.3-r1";
+  version = "3.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/dashing/gazebo_ros/3.3.3-1.tar.gz";
-    name = "3.3.3-1.tar.gz";
-    sha256 = "99cde7de53bc9f82b4b673b63bbf911b4b68e964fd60545b9a8523a864c492f5";
+    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/dashing/gazebo_ros/3.3.4-1.tar.gz";
+    name = "3.3.4-1.tar.gz";
+    sha256 = "709bc65568e54e83980d0c32884fef85f01dd325374ff171df586aae12e70329";
   };
 
   buildType = "ament_cmake";

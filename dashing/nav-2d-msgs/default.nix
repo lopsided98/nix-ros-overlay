@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-testing, rosidl-default-generators, ament-cmake-gtest, launch, std-msgs, ament-lint-auto, rosidl-default-runtime, geometry-msgs }:
 buildRosPackage {
   pname = "ros-dashing-nav-2d-msgs";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav_2d_msgs/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "d80b02bc9e19dab9b6b8f66995458b047d3df7cc0b9914afef604e04fa00bfd5";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav_2d_msgs/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "ca3712d1b2f7731e5fbb600d7bdce3f1c692f7b0de46d77be6f4210983ebf49e";
   };
 
   buildType = "ament_cmake";

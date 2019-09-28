@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, uncrustify-vendor }:
 buildRosPackage {
   pname = "ros-dashing-ament-uncrustify";
-  version = "0.7.9-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_uncrustify/0.7.9-1.tar.gz";
-    name = "0.7.9-1.tar.gz";
-    sha256 = "978491fb61b71ca8e1bd4c4d9619cc29870ce751ed95663c943c3b6ca4bac43a";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_uncrustify/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "f6733ce61f49ebfac0fb2f5ffb0f4b8a0b4b7900588cdc47b4110bf6e7e485fb";
   };
 
   buildType = "ament_python";

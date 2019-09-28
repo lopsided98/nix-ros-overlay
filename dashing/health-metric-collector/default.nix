@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-ros2-common, ament-cmake, launch-ros, ament-cmake-gmock, launch, aws-common, rclcpp, ros-monitoring-msgs }:
 buildRosPackage {
   pname = "ros-dashing-health-metric-collector";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/health_metric_collector-release/archive/release/dashing/health_metric_collector/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "f9032183e052c43465f1a2ed6fd1e9da78ae4486e11e9f015abdf7f6e82276fa";
+    url = "https://github.com/aws-gbp/health_metric_collector-release/archive/release/dashing/health_metric_collector/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "d990ce74d624c58a8cd2be31c27171bb3a867a9aed6449ff1075b1224e940497";
   };
 
   buildType = "ament_cmake";

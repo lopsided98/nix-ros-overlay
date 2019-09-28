@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-common, geometry-msgs, ament-cmake-pytest, ament-cmake-gtest, launch, message-filters, nav2-util, rclcpp, std-srvs, tf2-geometry-msgs, tf2-ros, nav-msgs, launch-ros, ament-lint-common, launch-testing, sensor-msgs, tf2, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-nav2-amcl";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_amcl/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "ac7904356961cf9e9c8eb19a094df70c150678e8112913b40cc59b56acf1f4b1";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_amcl/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "63cd9413e0313edbe59ba5ba198f1147b298e1e6a580600a483512aa5d46a6ee";
   };
 
   buildType = "ament_cmake";
@@ -30,6 +30,6 @@ buildRosPackage {
       This node is derived, with thanks, from Andrew Howard's excellent
       'amcl' Player driver.
     </p>'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ lgpl21 ];
   };
 }

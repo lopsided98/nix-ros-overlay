@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, rosidl-generator-cpp, rosidl-typesupport-c, ament-cmake, rmw-implementation-cmake, ament-cmake-gmock, ament-lint-common, test-msgs, ament-cmake-gtest, rosidl-typesupport-cpp, rosgraph-msgs, rmw-implementation, rcl-yaml-param-parser, rcl-interfaces, ament-cmake-ros, rcl, ament-lint-auto, rmw }:
 buildRosPackage {
   pname = "ros-dashing-rclcpp";
-  version = "0.7.8-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/dashing/rclcpp/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "697b595e7fb6ffaaa3193a4f928657cca12d1c00294f95d12fc077a5a4c2e7cd";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/dashing/rclcpp/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "3782bd7866e5ac4a017a3b09775217d1fbc830ad73a93bbcfcffe9feaa41718c";
   };
 
   buildType = "ament_cmake";

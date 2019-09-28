@@ -122,8 +122,6 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
- autoware-auto-algorithm = self.callPackage ./autoware-auto-algorithm {};
-
  autoware-auto-cmake = self.callPackage ./autoware-auto-cmake {};
 
  autoware-auto-create-pkg = self.callPackage ./autoware-auto-create-pkg {};
@@ -296,10 +294,6 @@ self: super: {
 
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
- euclidean-cluster = self.callPackage ./euclidean-cluster {};
-
- euclidean-cluster-nodes = self.callPackage ./euclidean-cluster-nodes {};
-
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-minimal-action-client = self.callPackage ./examples-rclcpp-minimal-action-client {};
@@ -356,6 +350,12 @@ self: super: {
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
+ geodesy = self.callPackage ./geodesy {};
+
+ geographic-info = self.callPackage ./geographic-info {};
+
+ geographic-msgs = self.callPackage ./geographic-msgs {};
+
  geometry-msgs = self.callPackage ./geometry-msgs {};
 
  gmock-vendor = self.callPackage ./gmock-vendor {};
@@ -370,8 +370,6 @@ self: super: {
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
- hungarian-assigner = self.callPackage ./hungarian-assigner {};
-
  image-geometry = self.callPackage ./image-geometry {};
 
  image-tools = self.callPackage ./image-tools {};
@@ -384,9 +382,11 @@ self: super: {
 
  joy = self.callPackage ./joy {};
 
- kalman-filter = self.callPackage ./kalman-filter {};
+ joy-teleop = self.callPackage ./joy-teleop {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
+
+ key-teleop = self.callPackage ./key-teleop {};
 
  kinesis-manager = self.callPackage ./kinesis-manager {};
 
@@ -418,8 +418,6 @@ self: super: {
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
 
- lidar-utils = self.callPackage ./lidar-utils {};
-
  lifecycle = self.callPackage ./lifecycle {};
 
  lifecycle-msgs = self.callPackage ./lifecycle-msgs {};
@@ -432,7 +430,7 @@ self: super: {
 
  ml-classifiers = self.callPackage ./ml-classifiers {};
 
- motion-model = self.callPackage ./motion-model {};
+ mouse-teleop = self.callPackage ./mouse-teleop {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -508,8 +506,6 @@ self: super: {
 
  poco-vendor = self.callPackage ./poco-vendor {};
 
- point-cloud-fusion = self.callPackage ./point-cloud-fusion {};
-
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
@@ -533,10 +529,6 @@ self: super: {
  quality-of-service-demo-cpp = self.callPackage ./quality-of-service-demo-cpp {};
 
  quality-of-service-demo-py = self.callPackage ./quality-of-service-demo-py {};
-
- ray-ground-classifier = self.callPackage ./ray-ground-classifier {};
-
- ray-ground-classifier-nodes = self.callPackage ./ray-ground-classifier-nodes {};
 
  rcl = self.callPackage ./rcl {};
 
@@ -646,6 +638,10 @@ self: super: {
 
  ros-workspace = self.callPackage ./ros-workspace {};
 
+ rosapi = self.callPackage ./rosapi {};
+
+ rosauth = self.callPackage ./rosauth {};
+
  rosbag2 = self.callPackage ./rosbag2 {};
 
  rosbag2-bag-v2-plugins = self.callPackage ./rosbag2-bag-v2-plugins {};
@@ -661,6 +657,10 @@ self: super: {
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
 
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
+
+ rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
+
+ rosbridge-suite = self.callPackage ./rosbridge-suite {};
 
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
 
@@ -788,6 +788,10 @@ self: super: {
 
  system-modes-examples = self.callPackage ./system-modes-examples {};
 
+ teleop-tools = self.callPackage ./teleop-tools {};
+
+ teleop-tools-msgs = self.callPackage ./teleop-tools-msgs {};
+
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
@@ -858,6 +862,8 @@ self: super: {
 
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
+ turtlesim = self.callPackage ./turtlesim {};
+
  udp-driver = self.callPackage ./udp-driver {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
@@ -872,17 +878,11 @@ self: super: {
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
 
- velodyne-driver = self.callPackage ./velodyne-driver {};
-
- velodyne-node = self.callPackage ./velodyne-node {};
-
  vision-opencv = self.callPackage ./vision-opencv {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
 
- voxel-grid = self.callPackage ./voxel-grid {};
-
- voxel-grid-nodes = self.callPackage ./voxel-grid-nodes {};
+ web-video-server = self.callPackage ./web-video-server {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-testing, nav2-msgs, ament-cmake-gtest, nav2-util, launch, tf2-ros, nav2-common, rclcpp, nav2-costmap-2d, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-nav2-world-model";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_world_model/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "3d8de8985ba21205943cff066251e7dac68909c7408cd34d91ecbfac12df80f9";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_world_model/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "8ae506faf4f951546988500ac0dec6a0098a4ef01927eeb50f42a0a9fe0ce112";
   };
 
   buildType = "ament_cmake";

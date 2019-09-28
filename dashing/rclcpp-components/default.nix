@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rcpputils, ament-lint-common, launch-testing, class-loader, composition-interfaces, ament-cmake-gtest, rclcpp, ament-index-cpp, ament-cmake-ros, std-msgs, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rclcpp-components";
-  version = "0.7.8-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/dashing/rclcpp_components/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "58c4ce95e212f446076f36934915a8afbb65f1e4204759090be2e63c156bc44e";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/dashing/rclcpp_components/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "9e9b541e77a0f1200af78f97fc4b8524ce0fff3dc973a0b0b26dc1bd48813ed1";
   };
 
   buildType = "ament_cmake";

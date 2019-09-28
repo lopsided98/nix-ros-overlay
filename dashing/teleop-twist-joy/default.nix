@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp, ament-cmake, geometry-msgs }:
 buildRosPackage {
   pname = "ros-dashing-teleop-twist-joy";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_twist_joy-release/archive/release/dashing/teleop_twist_joy/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "518d5bae18c69765523dbe827ae3781b3e315b4681c6eeff0d9908c07101c688";
+    url = "https://github.com/ros2-gbp/teleop_twist_joy-release/archive/release/dashing/teleop_twist_joy/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "ab743aae573a0901a61f031d7382b62543ec3e58d6a4e0d037f857797d3d7fb9";
   };
 
   buildType = "ament_cmake";

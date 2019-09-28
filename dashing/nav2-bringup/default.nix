@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-ros, launch-testing, ament-cmake-gtest, launch, nav2-common, navigation2, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-nav2-bringup";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_bringup/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "c079d75ed164f0333b53d450e4297f603df6d9e13a3979c795c872c8851bbd8c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_bringup/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "cf0783e8cf61d5896a415b1ee68a9371581d75a02d9a2954f828103547d421fd";
   };
 
   buildType = "ament_cmake";

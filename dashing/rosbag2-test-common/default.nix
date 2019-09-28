@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rclcpp, ament-lint-auto, rcutils }:
 buildRosPackage {
   pname = "ros-dashing-rosbag2-test-common";
-  version = "0.1.5-r1";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/rosbag2_test_common/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "e07c8ec1349709472912d1f93d63c666583a3ce904c46edb0859918bda09b155";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/rosbag2_test_common/0.1.6-1.tar.gz";
+    name = "0.1.6-1.tar.gz";
+    sha256 = "52678e5af72bec9e535e6477d6693c0bc1348ceb60a2e505c18dc47771064863";
   };
 
   buildType = "ament_cmake";

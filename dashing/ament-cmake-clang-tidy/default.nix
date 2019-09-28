@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, ament-clang-tidy, ament-cmake-lint-cmake, ament-cmake-copyright }:
 buildRosPackage {
   pname = "ros-dashing-ament-cmake-clang-tidy";
-  version = "0.7.9-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_cmake_clang_tidy/0.7.9-1.tar.gz";
-    name = "0.7.9-1.tar.gz";
-    sha256 = "dc5b6f5da45d47172a41d4d4ee2c02eb95c5cde4393a05806a40c8fbd8a92e88";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_cmake_clang_tidy/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "ca1bd2e9ed2ea112eb13f5aa26010de4a4549dbcbda4b791f30e234e616d2a49";
   };
 
   buildType = "ament_cmake";

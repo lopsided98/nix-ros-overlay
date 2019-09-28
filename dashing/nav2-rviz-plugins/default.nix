@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rviz-rendering, ament-cmake, rviz-default-plugins, nav2-lifecycle-manager, rviz-common, geometry-msgs, nav2-util, rclcpp, rclcpp-lifecycle, tf2-geometry-msgs, nav-msgs, resource-retriever, std-msgs, pluginlib, ament-lint-common, nav2-msgs, rviz-ogre-vendor, qt5, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-nav2-rviz-plugins";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_rviz_plugins/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "afabd73104ef09871db45e113d4c6931fb921f4e2e78e1c4e55dcc4128abff34";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_rviz_plugins/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "e1d769580bc7c08e47249a491c4be09a2a9da20faa5ff4f582156c5c7f2168a4";
   };
 
   buildType = "ament_cmake";

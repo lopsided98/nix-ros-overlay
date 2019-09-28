@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, sqlite3-vendor, pluginlib, ament-lint-common, rosbag2-test-common, ament-cmake-gmock, ament-cmake, ament-lint-auto, rosbag2-storage, rcutils }:
 buildRosPackage {
   pname = "ros-dashing-rosbag2-storage-default-plugins";
-  version = "0.1.5-r1";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/rosbag2_storage_default_plugins/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "fbd1a405cad2bd01e8401ecf9c2fd7a22ad95e652599d73bdb6a74dcdec653bb";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/rosbag2_storage_default_plugins/0.1.6-1.tar.gz";
+    name = "0.1.6-1.tar.gz";
+    sha256 = "5f7f7aee55bc0df586f77da7c829edfb048e87d9ddbe44d293a0dead7c3650a3";
   };
 
   buildType = "ament_cmake";

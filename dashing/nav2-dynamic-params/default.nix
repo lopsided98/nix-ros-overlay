@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, rclcpp-lifecycle, ament-lint-common, launch-testing, ament-cmake-gtest, launch, nav2-util, nav2-common, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-nav2-dynamic-params";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_dynamic_params/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "73f5d3ebf6ec6c70816596da7bdd3076bd7ef1b0af3123fdf8feee663a0bf7f7";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_dynamic_params/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "39934c1f3fb5a95c378c8090fb04221ee549e409cc3a85e53a33a008a7a4fdb7";
   };
 
   buildType = "ament_cmake";
