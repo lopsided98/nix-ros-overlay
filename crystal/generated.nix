@@ -354,8 +354,6 @@ self: super: {
 
  message-filters = self.callPackage ./message-filters {};
 
- micro-ros-agent = self.callPackage ./micro-ros-agent {};
-
  microxrcedds-agent = self.callPackage ./microxrcedds-agent {};
 
  ml-classifiers = self.callPackage ./ml-classifiers {};
