@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, nav-core, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-goal-passer";
-  version = "0.3.2";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/goal_passer/0.3.2-0.tar.gz";
-    name = "0.3.2-0.tar.gz";
-    sha256 = "9c648c6dfebf422fd014074cd0a9fc095208ff674436da5729f8f515c4386189";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/goal_passer/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "aa5365192935a8a55a6695d24dfb17b40314c667637c986a03b5e7161cc58951";
   };
 
   buildType = "catkin";

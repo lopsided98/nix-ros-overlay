@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, std-srvs, catkin, message-generation, message-runtime, qb-device-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-qb-device-srvs";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/kinetic/qb_device_srvs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "8a2012bde9e1ab76480d38ab72f6062708f45faa5686cc9dc18e50d377181a1d";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/kinetic/qb_device_srvs/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "2aa24f945de637bb3cf66f3368e587e4c0138ff65c46fdbb6c6f084a7021f1d6";
   };
 
   buildType = "catkin";

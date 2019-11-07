@@ -432,6 +432,8 @@ self: super: {
 
  poco-vendor = self.callPackage ./poco-vendor {};
 
+ px4-msgs = self.callPackage ./px4-msgs {};
+
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
  python-cmake-module = self.callPackage ./python-cmake-module {};
@@ -737,6 +739,8 @@ self: super: {
  webots-ros2-msgs = self.callPackage ./webots-ros2-msgs {};
 
  webots-ros2-universal-robot = self.callPackage ./webots-ros2-universal-robot {};
+
+ xacro = self.callPackage ./xacro {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 

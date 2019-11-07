@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
+{ lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-rc-common-msgs";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_common_msgs-release/archive/release/melodic/rc_common_msgs/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "0510e2724b20be04c132d6218f0e411382934c9ebb5c5f8254b87b8db903f3ce";
+    url = "https://github.com/roboception-gbp/rc_common_msgs-release/archive/release/melodic/rc_common_msgs/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "c1825f1534ee3e8186d61dff3462b0bf7fcd0e54104be8d09180220a5a1cd3c2";
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ message-runtime ];
+  buildInputs = [ std-msgs message-generation ];
+  propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

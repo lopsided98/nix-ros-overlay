@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cpp-common, apr, rosbuild, catkin, rostime, rosunit, log4cxx }:
 buildRosPackage {
   pname = "ros-melodic-rosconsole";
-  version = "1.13.10";
+  version = "1.13.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosconsole-release/archive/release/melodic/rosconsole/1.13.10-0.tar.gz";
-    name = "1.13.10-0.tar.gz";
-    sha256 = "a16be47247f622748425d2165afd1a83abe00a57dbe77ef98e801bc5d64d9595";
+    url = "https://github.com/ros-gbp/rosconsole-release/archive/release/melodic/rosconsole/1.13.11-1.tar.gz";
+    name = "1.13.11-1.tar.gz";
+    sha256 = "a3e3a70918afe751f2ddfeb9c2f5d25986bd0e5fa305bb3c8857349dc1410aea";
   };
 
   buildType = "catkin";

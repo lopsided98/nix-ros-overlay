@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, nav-core, catkin, sbpl, tf2, nav-msgs, message-generation, message-runtime, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-sbpl-lattice-planner";
-  version = "0.2.1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/sbpl_lattice_planner/0.2.1-0.tar.gz";
-    name = "0.2.1-0.tar.gz";
-    sha256 = "9f967def8078ff38d3862a0179fd63528756e373dfde2f10804d3ec9288a1dc4";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/sbpl_lattice_planner/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "885d1730be4d68691dfd0ea3146672b902df50505d9990026c5b0ebfd7acecf6";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, console-bridge, catkin, boost }:
 buildRosPackage {
   pname = "ros-melodic-cpp-common";
-  version = "0.6.12";
+  version = "0.6.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/cpp_common/0.6.12-0.tar.gz";
-    name = "0.6.12-0.tar.gz";
-    sha256 = "af9fef611fcdbaf9296af1f04ee2af940412d36a3bdddc6098cf77a7c795dffa";
+    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/cpp_common/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
+    sha256 = "b33c02fc639806932ec27a2400f896ba379fd1efd36484f0b68cdf547d6f5649";
   };
 
   buildType = "catkin";

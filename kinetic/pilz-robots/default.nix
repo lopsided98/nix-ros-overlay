@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, prbt-support, prbt-ikfast-manipulator-plugin, prbt-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-robots";
-  version = "0.4.10-r1";
+  version = "0.4.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/pilz_robots/0.4.10-1.tar.gz";
-    name = "0.4.10-1.tar.gz";
-    sha256 = "400051e89ffccff4b70e160e07771b585f8f9afdec3917a893a3c94a3c3fbdd3";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/pilz_robots/0.4.11-1.tar.gz";
+    name = "0.4.11-1.tar.gz";
+    sha256 = "767c2bd4c2bcb9dea355b775e95c4a277e24067d950b74ad2c94ddc0781a8845";
   };
 
   buildType = "catkin";

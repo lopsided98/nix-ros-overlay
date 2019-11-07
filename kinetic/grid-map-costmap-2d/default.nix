@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, tf, grid-map-core, catkin, costmap-2d }:
 buildRosPackage {
   pname = "ros-kinetic-grid-map-costmap-2d";
-  version = "1.6.1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map_costmap_2d/1.6.1-0.tar.gz";
-    name = "1.6.1-0.tar.gz";
-    sha256 = "1b0cef78ed381ec06f7a46800aa432dc084edb0ef1fda60f2893f5cf3a585e3e";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map_costmap_2d/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "8c515bff45cf9289ba86c2611589dcf80bbbdff55cdb92fee6b6167bcb4dd4b7";
   };
 
   buildType = "catkin";

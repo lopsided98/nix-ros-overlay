@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rviz, robot-state-publisher, roslaunch, joint-state-publisher, xacro, abb-driver }:
 buildRosPackage {
   pname = "ros-kinetic-abb-irb6640-support";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb6640_support/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "6d57c94b306f0b4e7336addaacc64e932f5c7e85c5ccec7cc97447483045ba35";
+    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb6640_support/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "9cb79bc7c14d1bab1fd0993b3f6493ad99e33536728641a59b7e7adff02d8c03";
   };
 
   buildType = "catkin";

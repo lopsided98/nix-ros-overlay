@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assisted-teleop, catkin, sbpl-lattice-planner, pose-follower, goal-passer, twist-recovery, pose-base-controller, sbpl-recovery }:
 buildRosPackage {
   pname = "ros-melodic-navigation-experimental";
-  version = "0.3.2";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/navigation_experimental/0.3.2-0.tar.gz";
-    name = "0.3.2-0.tar.gz";
-    sha256 = "79834c6c9f70411161eb2604ba1e6b13ecd2d28c89eeefd583530f237a8f851f";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/navigation_experimental/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "dfb18ed3954940c6f6416c2f9e2ab9a38a01327aebe7cb19b8e83cfe53157c0c";
   };
 
   buildType = "catkin";

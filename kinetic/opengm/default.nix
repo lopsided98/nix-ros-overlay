@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-opengm";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/opengm/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "fe0dea2b0d0b4f7a61620d07e93aabc493ebfe9361a217432f696f5c591790e5";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/opengm/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "1b48790841007f83af24c48cdae4122cf4c62fdff326f91fee1ea922f88ba305";
   };
 
   buildType = "catkin";

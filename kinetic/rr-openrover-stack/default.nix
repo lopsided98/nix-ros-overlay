@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rr-control-input-manager, catkin, rr-openrover-driver-msgs, rr-openrover-driver }:
 buildRosPackage {
   pname = "ros-kinetic-rr-openrover-stack";
-  version = "0.7.2-r1";
+  version = "0.7.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/kinetic/rr_openrover_stack/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "9fb9c5b8e7305bdb276c43eb5d041b9ebc238b8b58bde2c1107f78c0f72292bc";
+    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/kinetic/rr_openrover_stack/0.7.3-2.tar.gz";
+    name = "0.7.3-2.tar.gz";
+    sha256 = "6505d3323fdba14cdc6caf56d06a3e02ddb5ff43662d6eff70a14c9bbb3966a8";
   };
 
   buildType = "catkin";

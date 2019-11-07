@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, grid-map-core, catkin, pcl-ros }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-sdf";
-  version = "1.6.1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_sdf/1.6.1-0.tar.gz";
-    name = "1.6.1-0.tar.gz";
-    sha256 = "797729e8328b77ffa6a57b4ac35f26a4d101289619cfa3b555d253d20f9bd560";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_sdf/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "2ba1a46be320ddf71fc6054c315faee0f1aed95608e024e90d0abce7975c602c";
   };
 
   buildType = "catkin";

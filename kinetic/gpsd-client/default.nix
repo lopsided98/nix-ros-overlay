@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, gpsd, pkg-config, gps-common, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-gpsd-client";
-  version = "0.2.0";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/kinetic/gpsd_client/0.2.0-0.tar.gz";
-    name = "0.2.0-0.tar.gz";
-    sha256 = "65374d1b731fbb14f66284e274ed13089439964e40e6f827d8189bd261385eab";
+    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/kinetic/gpsd_client/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "9b5ec2395979832b2005091569a757a07054964ad3e7ab5ed195c2e05a6ca6b5";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rqt-gui-py, rqt-gui, qt-dotgraph, ament-index-python, python-qt-binding }:
 buildRosPackage {
   pname = "ros-dashing-rqt-graph";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/dashing/rqt_graph/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "f86747fbb9735d8381baa0c971b1b01e89c32b8b96649e0b362558fe6551e882";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/dashing/rqt_graph/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "f647e5a76161472a2833f6f7eb4b73d260526bb97e7717242aa6076fd917c186";
   };
 
   buildType = "ament_python";

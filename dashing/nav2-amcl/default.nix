@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-common, geometry-msgs, ament-cmake-pytest, ament-cmake-gtest, launch, message-filters, nav2-util, rclcpp, std-srvs, tf2-geometry-msgs, tf2-ros, nav-msgs, launch-ros, ament-lint-common, launch-testing, sensor-msgs, tf2, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-nav2-amcl";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_amcl/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "63cd9413e0313edbe59ba5ba198f1147b298e1e6a580600a483512aa5d46a6ee";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_amcl/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "db217ced1e3fcc3af4dc1204305c05e192ebb4af17c93f7661fad9b9717d849b";
   };
 
   buildType = "ament_cmake";

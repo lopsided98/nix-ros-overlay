@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rqt-gui-py, ament-cmake, python-qt-binding, rclpy, rqt-gui, python3Packages, std-msgs, rqt-py-common, qt-gui-py-common }:
 buildRosPackage {
   pname = "ros-dashing-rqt-plot";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/dashing/rqt_plot/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "764812900d6b786999e3a4b9300261759734e45094e3d1891421942dc5134b87";
+    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/dashing/rqt_plot/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "91c6e53967a843e09c4401f37a2f84513d73ece27ba1fba2824d868a0feac5dc";
   };
 
   buildType = "ament_cmake";

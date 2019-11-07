@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, readline, catkin, cmake }:
 buildRosPackage {
   pname = "ros-melodic-ypspur";
-  version = "1.16.0-r1";
+  version = "1.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/openspur/yp-spur-release/archive/release/melodic/ypspur/1.16.0-1.tar.gz";
-    name = "1.16.0-1.tar.gz";
-    sha256 = "25896b5bc94699faa2318d80f78b857fa7bdd36444f7941a34947ad970a3f211";
+    url = "https://github.com/openspur/yp-spur-release/archive/release/melodic/ypspur/1.17.0-1.tar.gz";
+    name = "1.17.0-1.tar.gz";
+    sha256 = "205b4d6d1fa49430f94c81c2d4f80c5c0bd1de0be2a2ec112656232f3af9ea8c";
   };
 
   buildType = "cmake";

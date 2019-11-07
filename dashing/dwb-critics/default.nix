@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, costmap-queue, nav2-common, nav-2d-msgs, geometry-msgs, ament-cmake-pytest, ament-cmake-gtest, launch, nav2-util, rclcpp, angles, nav-2d-utils, dwb-core, pluginlib, ament-lint-common, launch-testing, sensor-msgs, nav2-costmap-2d, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-dwb-critics";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/dwb_critics/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "55bf6b91e21bcf05b97064c122cf158e3719229c284831e390b58a5a038e5dd2";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/dwb_critics/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "e06227e217e3dffcb9c9ab25d3b771b90e49bf8d9bfc2e73ca4b492a2653d804";
   };
 
   buildType = "ament_cmake";

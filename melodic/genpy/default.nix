@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, genmsg, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, genmsg, catkin }:
 buildRosPackage {
   pname = "ros-melodic-genpy";
-  version = "0.6.8";
+  version = "0.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/genpy-release/archive/release/melodic/genpy/0.6.8-0.tar.gz";
-    name = "0.6.8-0.tar.gz";
-    sha256 = "22a962f2463d4a60fa0caefe4377195f0f294481af0736f68d50034461648844";
+    url = "https://github.com/ros-gbp/genpy-release/archive/release/melodic/genpy/0.6.9-1.tar.gz";
+    name = "0.6.9-1.tar.gz";
+    sha256 = "c34ac21b89413514766134f7f7c44b2f59902b0f8cc7c0c751455da86696348b";
   };
 
   buildType = "catkin";
   buildInputs = [ genmsg ];
-  propagatedBuildInputs = [ genmsg pythonPackages.pyyaml ];
+  propagatedBuildInputs = [ genmsg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

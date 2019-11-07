@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, moveit-ros-planning, roslint, ros-control-boilerplate, catkin, moveit-core, rosparam-shortcuts, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-moveit-sim-controller";
-  version = "0.1.0";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/moveit_sim_controller-release/archive/release/melodic/moveit_sim_controller/0.1.0-0.tar.gz";
-    name = "0.1.0-0.tar.gz";
-    sha256 = "3d7a3062afc99ff36fa906e8796297a7ac3e1a1dea416d71a06ce22bdbfe18e9";
+    url = "https://github.com/PickNikRobotics/moveit_sim_controller-release/archive/release/melodic/moveit_sim_controller/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "86cfd592c05305bb60387de3f33bcc248b800f29d8e6f7aeba371349da86372e";
   };
 
   buildType = "catkin";

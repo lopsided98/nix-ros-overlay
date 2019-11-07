@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, class-loader, tinyxml2-vendor, ament-index-cpp, rcutils }:
 buildRosPackage {
   pname = "ros-dashing-pluginlib";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/dashing/pluginlib/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "23c7c4eddda0b14bd56479e7996ec6dee25481240ac4d25e8d7cfa068f36c3a2";
+    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/dashing/pluginlib/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "b7baf43313643bfed424b2b26bca2212e630b75f0b8ba435494ec201ac9e9cb7";
   };
 
   buildType = "ament_cmake";

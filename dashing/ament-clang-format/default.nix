@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, clang, ament-flake8, pythonPackages, ament-pep257, python3Packages, ament-copyright }:
 buildRosPackage {
   pname = "ros-dashing-ament-clang-format";
-  version = "0.7.10-r1";
+  version = "0.7.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_clang_format/0.7.10-1.tar.gz";
-    name = "0.7.10-1.tar.gz";
-    sha256 = "52b4284b67572e251b9f415d7aa2d4406ebd078e78f7ec5779b3cb8e771f3ae2";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_clang_format/0.7.11-1.tar.gz";
+    name = "0.7.11-1.tar.gz";
+    sha256 = "6d7a29da79ad1e1ac88a05de27963b0c2b9e302f8aa5d5c513e876f774d541dd";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, industrial-deprecated, industrial-utils, catkin, industrial-robot-client, industrial-msgs, simple-message, industrial-trajectory-filters, industrial-robot-simulator }:
 buildRosPackage {
   pname = "ros-kinetic-industrial-core";
-  version = "0.7.0";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_core/0.7.0-0.tar.gz";
-    name = "0.7.0-0.tar.gz";
-    sha256 = "9a79ccf3401919d0db73124204c9df3c80dfba29c79730c4bee69fa374e89ee1";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_core/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "d186c95618083b6d61d477140f19fcf8f373d0e4c9c1ad56a9d802555d8ab814";
   };
 
   buildType = "catkin";

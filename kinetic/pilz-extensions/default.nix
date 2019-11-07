@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, prbt-support, joint-limits-interface, catkin, rostest, code-coverage, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-extensions";
-  version = "0.3.8";
+  version = "0.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_extensions/0.3.8-0.tar.gz";
-    name = "0.3.8-0.tar.gz";
-    sha256 = "0574853279e6ad3901da6c088307d7d756599940eb3a5f47e6f56a0ae1f00a39";
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_extensions/0.3.10-1.tar.gz";
+    name = "0.3.10-1.tar.gz";
+    sha256 = "b15345cbf6fcc4698bb483c730fc73d63014857f1978d771422ab273662072db";
   };
 
   buildType = "catkin";

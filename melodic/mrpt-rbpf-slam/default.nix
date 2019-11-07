@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, roslaunch, sensor-msgs, catkin, mrpt-rawlog, roscpp, roslib, nav-msgs, mrpt1, rviz, visualization-msgs, dynamic-reconfigure, std-msgs, mrpt-bridge, tf, mvsim }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-rbpf-slam";
-  version = "0.1.9";
+  version = "0.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/melodic/mrpt_rbpf_slam/0.1.9-0.tar.gz";
-    name = "0.1.9-0.tar.gz";
-    sha256 = "ea3e077a2a2f682268bfe6ca88b95f03c26823ef8aa2f9cc50cc7a1c534228c2";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/melodic/mrpt_rbpf_slam/0.1.10-1.tar.gz";
+    name = "0.1.10-1.tar.gz";
+    sha256 = "4926983cae5f3691b438d230ed804f213b05adec5ff71abe23ba48b44ac5332c";
   };
 
   buildType = "catkin";

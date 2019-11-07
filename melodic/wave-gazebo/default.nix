@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, catkin, ruby, xacro, wave-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-wave-gazebo";
-  version = "1.2.1-r1";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/vrx-release/archive/release/melodic/wave_gazebo/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "09060b76941958b0f2693b35f90b6cb6e27df11cc3acf825c90e82ed65f659f3";
+    url = "https://github.com/ros-gbp/vrx-release/archive/release/melodic/wave_gazebo/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "5b09082abbacc16ed5ca3b3f4606b9757554c5e055464c7e45a4a0ac7ecafdea";
   };
 
   buildType = "catkin";

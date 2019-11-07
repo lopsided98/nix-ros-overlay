@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, base-local-planner, tf, nav-core, catkin, nav-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, base-local-planner, tf, nav-core, catkin, nav-msgs, dynamic-reconfigure, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-pose-follower";
-  version = "0.2.1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/pose_follower/0.2.1-0.tar.gz";
-    name = "0.2.1-0.tar.gz";
-    sha256 = "59c69786e6a77421309a24fb371ef011dfd53a0e58ff9ec5cafff398f6f26bfb";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/pose_follower/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "72a612385c42a2f2b85a4e5bf6a878fdf8fea5864cad24bcd265432f1a518f37";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib base-local-planner tf nav-core nav-msgs roscpp ];
-  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core roscpp nav-msgs tf ];
+  buildInputs = [ costmap-2d pluginlib base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf ];
+  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, pythonPackages, ament-pep257, ament-copyright, rosbag2-transport, ros2cli }:
 buildRosPackage {
   pname = "ros-dashing-ros2bag";
-  version = "0.1.6-r1";
+  version = "0.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/ros2bag/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "34860b0a8bfd0196e2decb31ea594a49c9cc5709c5eed6a7316c4c15805e54b5";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/ros2bag/0.1.8-1.tar.gz";
+    name = "0.1.8-1.tar.gz";
+    sha256 = "387ec1ce60283e82c34c8987707f710283ba999c54be36137ec08ef5a6703bc5";
   };
 
   buildType = "ament_python";

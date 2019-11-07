@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, nav-msgs, mrpt-msgs, mrpt1, dynamic-reconfigure, std-msgs, mrpt-bridge, roscpp, pose-cov-ops }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-localization";
-  version = "0.1.24";
+  version = "0.1.26-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_localization/0.1.24-0.tar.gz";
-    name = "0.1.24-0.tar.gz";
-    sha256 = "5775c752a5bf1d2769f09bca7c2105041bfea961a8126752d9f78fdd20eea680";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_localization/0.1.26-1.tar.gz";
+    name = "0.1.26-1.tar.gz";
+    sha256 = "087d02e1a4dc85b9901bf497f98489920b1f7ba2abcc2fb402ab713ba3641ea1";
   };
 
   buildType = "catkin";

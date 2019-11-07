@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-qb-device-bringup";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/kinetic/qb_device_bringup/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "7170df35737f12d4201a5cef8671cd65d5d6020489da2f484b6a2e7b2a64de5e";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/kinetic/qb_device_bringup/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "c83cc00ff2332b16baa7269d255d354b0853048a4e004d776372db65ce63f28f";
   };
 
   buildType = "catkin";

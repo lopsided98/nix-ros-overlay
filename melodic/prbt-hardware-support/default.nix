@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, clang, libmodbus, cmake-modules, pilz-testutils, sensor-msgs, catkin, message-filters, rostest, message-generation, message-runtime, canopen-chain-node, std-msgs, code-coverage, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, pilz-testutils, message-filters, message-generation, message-runtime, std-srvs, tf2-geometry-msgs, catkin, tf2-ros, urdf, canopen-chain-node, std-msgs, roscpp, libmodbus, cmake-modules, sensor-msgs, tf2, rostest, dynamic-reconfigure, code-coverage, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-prbt-hardware-support";
-  version = "0.5.7-r1";
+  version = "0.5.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_hardware_support/0.5.7-1.tar.gz";
-    name = "0.5.7-1.tar.gz";
-    sha256 = "792869b7d011fa3c2cea12bd9cf51fa80ec514d0af78f3023426cb43ae1e2855";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_hardware_support/0.5.10-1.tar.gz";
+    name = "0.5.10-1.tar.gz";
+    sha256 = "34b6e82ba00b42194306e5725e8d2c11cf86961a3d393ad11dbc77049f322167";
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs clang libmodbus sensor-msgs message-filters message-generation canopen-chain-node std-msgs roscpp ];
+  buildInputs = [ std-srvs libmodbus tf2-geometry-msgs sensor-msgs message-filters tf2-ros tf2 message-generation urdf canopen-chain-node dynamic-reconfigure std-msgs roscpp ];
   checkInputs = [ cmake-modules pilz-testutils rostest code-coverage rosunit ];
   propagatedBuildInputs = [ std-srvs sensor-msgs message-runtime std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, image-transport, sensor-msgs, catkin, tf2-ros, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-fkie-message-filters";
-  version = "1.0.0";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fkie-release/message_filters-release/archive/release/melodic/fkie_message_filters/1.0.0-0.tar.gz";
-    name = "1.0.0-0.tar.gz";
-    sha256 = "938b5bff6f2fb9ec9e2fe36b383f0b81828c5147f0870cda2650b2cc863e2652";
+    url = "https://github.com/fkie-release/message_filters-release/archive/release/melodic/fkie_message_filters/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "f74c85e13e3cb79ccc878ea661f148342a3b408ddae95d2d723fa072177f03b4";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, mavros-extras, cmake-modules, control-toolbox, mavros, catkin, tf2-ros, angles, std-msgs, eigen-conversions, roscpp, geometry-msgs, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-test-mavros";
-  version = "0.32.1-r1";
+  version = "0.33.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/kinetic/test_mavros/0.32.1-1.tar.gz";
-    name = "0.32.1-1.tar.gz";
-    sha256 = "8ae1622e86b2ad4b3dc961d27a65e00c8277ec4d6687b2bfc5d48afe3ac14e9d";
+    url = "https://github.com/mavlink/mavros-release/archive/release/kinetic/test_mavros/0.33.0-1.tar.gz";
+    name = "0.33.0-1.tar.gz";
+    sha256 = "39adda610f5b993a92ebed34d5edba7ab40ca3473397b7c5ad21f6fdfcbc0305";
   };
 
   buildType = "catkin";

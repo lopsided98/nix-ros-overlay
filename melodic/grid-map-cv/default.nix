@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, grid-map-core, filters, cv-bridge, catkin }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-cv";
-  version = "1.6.1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_cv/1.6.1-0.tar.gz";
-    name = "1.6.1-0.tar.gz";
-    sha256 = "210414e554f115a4a3f7cfea79893dd64203fed6be95e45a81509e70aac4845e";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_cv/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "7b0ccbb9fe7b0ee3a762998a1f6bb4f7df965f707d214fe7b57914456d5c2d60";
   };
 
   buildType = "catkin";

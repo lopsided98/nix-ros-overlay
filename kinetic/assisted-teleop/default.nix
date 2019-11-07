@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, costmap-2d, filters, pluginlib, base-local-planner, sensor-msgs, catkin, message-filters, roscpp, move-base-msgs, roslib, actionlib, angles, tf, geometry-msgs, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-assisted-teleop";
-  version = "0.2.1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/assisted_teleop/0.2.1-0.tar.gz";
-    name = "0.2.1-0.tar.gz";
-    sha256 = "11de53b07b6815ab2d93730acbc8461d7a91bc74b5f153ed9992ebc6da9cf9d5";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/assisted_teleop/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "f27c85fd3b9fa0f011d1dd8cf32cc7b80b0051e297faf7c0687fb4391acdb702";
   };
 
   buildType = "catkin";

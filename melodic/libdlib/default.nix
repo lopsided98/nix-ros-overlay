@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-libdlib";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libdlib/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "772c8b82fede51aea078f7d3a320dc76d73e9c877479d5715edaf67153886383";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libdlib/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "59af6be6eb20b19841039979092d1c0d586b455712a87b42c92ed75d7ce1506a";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-melodic-wamv-description";
-  version = "1.2.1-r1";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/vrx-release/archive/release/melodic/wamv_description/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "d51914b71bb6d74437f82d657e56e620916c7211f2e368ee62f63b54d9028b2a";
+    url = "https://github.com/ros-gbp/vrx-release/archive/release/melodic/wamv_description/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "bc8a86b9725be627ecc3453e78d119966fb0a443f1167694bfc71715f243250a";
   };
 
   buildType = "catkin";

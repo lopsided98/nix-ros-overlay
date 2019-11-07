@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-cob-utilities";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_utilities/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "6f477f07e09f122c8f09c6aa6410e212b61ab819b6dcba8d8603a0c5bc15febf";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_utilities/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "eda1b8b66c13a03e7bc41d089611085fe8e99e5bd7b0cdc92c2f8902adfdb952";
   };
 
   buildType = "catkin";

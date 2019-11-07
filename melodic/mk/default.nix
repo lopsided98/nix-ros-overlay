@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rospack, rosbuild, catkin }:
 buildRosPackage {
   pname = "ros-melodic-mk";
-  version = "1.14.6";
+  version = "1.14.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/mk/1.14.6-0.tar.gz";
-    name = "1.14.6-0.tar.gz";
-    sha256 = "1382c3d63ce096921a1c157c850962bb220f806dc2fa9ca88c45f3d0017bd5e2";
+    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/mk/1.14.7-1.tar.gz";
+    name = "1.14.7-1.tar.gz";
+    sha256 = "0aeac91aed49a2f29f59e1eedbf005fbe31779b7c39ea2215a125bbb7b83dd2c";
   };
 
   buildType = "catkin";

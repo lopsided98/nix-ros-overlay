@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, grid-map-rviz-plugin, grid-map-core, grid-map-visualization, grid-map-demos, catkin, grid-map-filters, grid-map-ros, grid-map-msgs, grid-map-loader, grid-map-cv }:
 buildRosPackage {
   pname = "ros-kinetic-grid-map";
-  version = "1.6.1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map/1.6.1-0.tar.gz";
-    name = "1.6.1-0.tar.gz";
-    sha256 = "4aa4624730521ecfd83a989ab120499a153d840604dce8b992f29692c290ff64";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "4ae8f96aa5216a00d9fc2bcbfc9d4f5eadbe79d8f677e67151c3fff26f0f2cf9";
   };
 
   buildType = "catkin";

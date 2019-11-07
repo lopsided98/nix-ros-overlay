@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, rosunit, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-industrial-utils";
-  version = "0.7.0";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_utils/0.7.0-0.tar.gz";
-    name = "0.7.0-0.tar.gz";
-    sha256 = "34824a9a2aa860bd9747dc1f57d9a3bad1b38257731d08fd34ee6018eec9738a";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_utils/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "5675376695d424f26a29f4393ddb50820a37027725b1d2bf21234ea79e2a0868";
   };
 
   buildType = "catkin";

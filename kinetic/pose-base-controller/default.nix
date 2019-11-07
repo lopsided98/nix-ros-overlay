@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, move-base-msgs, nav-msgs, actionlib, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pose-base-controller";
-  version = "0.2.1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/pose_base_controller/0.2.1-0.tar.gz";
-    name = "0.2.1-0.tar.gz";
-    sha256 = "96e5a66d4257e8485e31149c922a30b674402a42a4c6260122358573e3bb3f39";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/pose_base_controller/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "a8f228234564c4787b1be0512c73f18d255c4951c2320da260489debbac232be";
   };
 
   buildType = "catkin";

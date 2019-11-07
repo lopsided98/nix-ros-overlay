@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, asio, openssl, fastcdr, tinyxml-2, cmake }:
 buildRosPackage {
   pname = "ros-dashing-fastrtps";
-  version = "1.8.0-r2";
+  version = "1.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/dashing/fastrtps/1.8.0-2.tar.gz";
-    name = "1.8.0-2.tar.gz";
-    sha256 = "3101b12f9fe781c7d9560496a6ab0dd5af95dfbae0d1cf073af18baff8aeac9b";
+    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/dashing/fastrtps/1.8.2-1.tar.gz";
+    name = "1.8.2-1.tar.gz";
+    sha256 = "59077766b9b801862280e898f06dad701d4b54f0fbf88ac387b725e08acc63df";
   };
 
   buildType = "cmake";

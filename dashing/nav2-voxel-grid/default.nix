@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-testing, ament-cmake-gtest, launch, nav2-common, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-nav2-voxel-grid";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_voxel_grid/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "117025364a2f8697eaf46da64b2c589f080c0a0a48ff6fa3ce7ce8594a57fc6c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_voxel_grid/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "f7c42f29f8b6339214c11fd329a51083d6a54a922ec123ee8d147f516c41e202";
   };
 
   buildType = "ament_cmake";

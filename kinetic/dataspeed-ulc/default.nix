@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dataspeed-ulc-can, dataspeed-ulc-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-ulc";
-  version = "0.0.4-r1";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/kinetic/dataspeed_ulc/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "902411ba77f073b251b2483dbd1b080d0fcf721d08934e243a6576de4f1042ec";
+    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/kinetic/dataspeed_ulc/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "1beafc16f183ca5277bca47d9fd028dc60cafe7a7a5eab38add3ef0b88301b9d";
   };
 
   buildType = "catkin";

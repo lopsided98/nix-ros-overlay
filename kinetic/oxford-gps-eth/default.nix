@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, gps-common, rostest, nav-msgs, roslaunch, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, roscpp, gps-common, rostest, nav-msgs, rospy, std-msgs, roslaunch, tf, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-oxford-gps-eth";
-  version = "1.0.0";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/oxford_gps_eth-release/archive/release/kinetic/oxford_gps_eth/1.0.0-0.tar.gz";
-    name = "1.0.0-0.tar.gz";
-    sha256 = "2a79eaef84c7ddb88d06603b096c5e4ce11c2f1fd5ece39e607f1c12c007e743";
+    url = "https://github.com/DataspeedInc-release/oxford_gps_eth-release/archive/release/kinetic/oxford_gps_eth/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "467a0a5ed41975eb74e7a677418bb9c150114ee934f0f51668b18eac1bcff43b";
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp gps-common nav-msgs tf geometry-msgs ];
+  buildInputs = [ sensor-msgs roscpp gps-common nav-msgs rospy std-msgs tf geometry-msgs ];
   checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ tf sensor-msgs gps-common nav-msgs roslaunch roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs roscpp gps-common nav-msgs rospy std-msgs roslaunch tf geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

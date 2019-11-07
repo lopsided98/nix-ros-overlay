@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, prbt-support, prbt-ikfast-manipulator-plugin, prbt-moveit-config }:
 buildRosPackage {
   pname = "ros-melodic-pilz-robots";
-  version = "0.5.7-r1";
+  version = "0.5.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_robots/0.5.7-1.tar.gz";
-    name = "0.5.7-1.tar.gz";
-    sha256 = "bd55030f85378be2ec1236c1c9bd0293f4933f74f58aed32302fb03d17af358f";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_robots/0.5.10-1.tar.gz";
+    name = "0.5.10-1.tar.gz";
+    sha256 = "0cdb62eeb6f773114f8d454c548051821308c0bd32bbfe0054fa25d5df1615f4";
   };
 
   buildType = "catkin";

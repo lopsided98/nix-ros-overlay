@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, gps-common, catkin, gpsd-client }:
 buildRosPackage {
   pname = "ros-melodic-gps-umd";
-  version = "0.2.0";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/melodic/gps_umd/0.2.0-0.tar.gz";
-    name = "0.2.0-0.tar.gz";
-    sha256 = "8a74ec06defb2718bb21ef216302cc99a063ddf7f3cca8fe8b5a836a9aca9cb8";
+    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/melodic/gps_umd/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "b90b7c8cafcf792e3a7be93681d25496754414d8c389e648b023b53336f4a6b2";
   };
 
   buildType = "catkin";

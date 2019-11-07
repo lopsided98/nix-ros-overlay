@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-planner-cspace-msgs";
-  version = "0.3.1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/planner_cspace_msgs/0.3.1-0.tar.gz";
-    name = "0.3.1-0.tar.gz";
-    sha256 = "8dc9117831302c78719153d5a301078e9d9c14f4acf31689516a0164324774fa";
+    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/planner_cspace_msgs/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "97391d287ee4f03c83fd7d6c715039d25da350f32b26b01168b91ff04337c38c";
   };
 
   buildType = "catkin";

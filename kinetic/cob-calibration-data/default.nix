@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cob-supported-robots, catkin, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-cob-calibration-data";
-  version = "0.6.12-r1";
+  version = "0.6.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_calibration_data-release/archive/release/kinetic/cob_calibration_data/0.6.12-1.tar.gz";
-    name = "0.6.12-1.tar.gz";
-    sha256 = "661a960d8fc49641ad7da16fd8d83b8dadbc38279a343607f1b84b643fd41fe5";
+    url = "https://github.com/ipa320/cob_calibration_data-release/archive/release/kinetic/cob_calibration_data/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
+    sha256 = "43cb982b38377c8ab591fc44821c8b48593ca8b30f6fcc12fce474d4a0d51940";
   };
 
   buildType = "catkin";

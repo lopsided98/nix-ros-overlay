@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, moveit-fake-controller-manager, moveit-ros-visualization, moveit-ros-move-group, prbt-support, xacro, moveit-kinematics, catkin, moveit-simple-controller-manager, rviz, robot-state-publisher, roslaunch, joint-state-publisher, prbt-ikfast-manipulator-plugin, moveit-planners-ompl }:
 buildRosPackage {
   pname = "ros-kinetic-prbt-moveit-config";
-  version = "0.4.10-r1";
+  version = "0.4.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/prbt_moveit_config/0.4.10-1.tar.gz";
-    name = "0.4.10-1.tar.gz";
-    sha256 = "868d2750cea21fc3f7f57d968dbc9a67226add34b513c0e1da939ab9cac9c38f";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/prbt_moveit_config/0.4.11-1.tar.gz";
+    name = "0.4.11-1.tar.gz";
+    sha256 = "a1d8773530798179b6efaf8a29a48919bafef364f18ae46008167c04e5fe2170";
   };
 
   buildType = "catkin";

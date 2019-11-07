@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, pythonPackages, python3Packages }:
 buildRosPackage {
   pname = "ros-dashing-ament-package";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/dashing/ament_package/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "d806adfdd9c22e11fb05a770d00102bf9faf29ad047f29004da5e1e8a4dd4fc7";
+    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/dashing/ament_package/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "ea4921612a5985843b6ba1801a7d0bb3462f7644498b8b0b23e35de12b37dbe0";
   };
 
   buildType = "ament_python";

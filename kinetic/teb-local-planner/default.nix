@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, libg2o, tf-conversions, tf, geometry-msgs, message-generation, message-runtime, catkin, nav-msgs, std-msgs, visualization-msgs, roscpp, costmap-2d, pluginlib, cmake-modules, base-local-planner, nav-core, interactive-markers, costmap-converter, dynamic-reconfigure }:
 buildRosPackage {
   pname = "ros-kinetic-teb-local-planner";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/kinetic/teb_local_planner/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "35aaacc63d949f62783fe5e5cb2a3b70aa6a5687c1a4b0a1b72b35105c014fd0";
+    url = "https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/kinetic/teb_local_planner/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "281684f9f49ebaea307092c83898bda40652add551b7e7058ad6621952a60b5e";
   };
 
   buildType = "catkin";

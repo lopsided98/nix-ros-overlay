@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, class-loader, catkin, canopen-master, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-canopen-402";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/canopen_402/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "c0daf1aa2a7d9f3509e9e0e631f7453f58fa8674a00e8471d2241b2ce8fcd5b9";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/canopen_402/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "6292ad50cab1fafeeb44ec195871040a5d694ce80eab76635fa5c15054801da0";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, abb-resources, catkin, abb-irb6640-support, abb-irb4400-support, abb-irb5400-support, abb-irb2400-moveit-config, abb-irb6640-moveit-config, abb-irb6600-support, abb-irb2400-support, abb-irb2400-moveit-plugins, abb-driver }:
 buildRosPackage {
   pname = "ros-kinetic-abb";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "e832daf4d35129929c51a95a4aff60576b130161c32ecaf63a4e55d7f4044c0b";
+    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "172675468ac6d1a0fc84e05458c0e1367df6031fd33c3bec6af95251ac5103ba";
   };
 
   buildType = "catkin";

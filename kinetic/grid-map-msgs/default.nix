@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-grid-map-msgs";
-  version = "1.6.1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map_msgs/1.6.1-0.tar.gz";
-    name = "1.6.1-0.tar.gz";
-    sha256 = "82c732926ce0965e638f2bac463a831946130800b38ce20dd7360e7c1966c823";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map_msgs/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "ebc9b7f7d548a67625f37480fc32c00e436ce7951935e989c9272ffb909b00cf";
   };
 
   buildType = "catkin";

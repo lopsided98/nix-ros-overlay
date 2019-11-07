@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-gtest, sensor-msgs, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-dummy-sensors";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/dummy_sensors/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "711bbfae6e6077889f1d2cd3bfdbb73b9e995ff6cdfe737c9904ad4ae222de79";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/dummy_sensors/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "268800914d1288e0149f3bebef91dbbe9869d4ac1f6259f9e41bd713e19faa0a";
   };
 
   buildType = "ament_cmake";

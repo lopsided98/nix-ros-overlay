@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, marker-msgs, tf, rosbag, catkin, sensor-msgs, nav-msgs, mrpt-msgs, mrpt1, dynamic-reconfigure, std-msgs, mrpt-bridge, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt-rawlog";
-  version = "0.1.24";
+  version = "0.1.26-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_rawlog/0.1.24-0.tar.gz";
-    name = "0.1.24-0.tar.gz";
-    sha256 = "6fa3e4ca11a19d96c8bd9cf7137e27bdb3dcd65f55c0c50aaed4e47d1322bcdb";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/kinetic/mrpt_rawlog/0.1.26-1.tar.gz";
+    name = "0.1.26-1.tar.gz";
+    sha256 = "ccd43ffebe6410969784d57e322863448e42fed4d4ed6b0ed5238f4435f15e6f";
   };
 
   buildType = "catkin";

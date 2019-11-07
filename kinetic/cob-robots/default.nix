@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cob-moveit-config, cob-default-robot-behavior, cob-hardware-config, catkin, cob-bringup, cob-default-robot-config }:
 buildRosPackage {
   pname = "ros-kinetic-cob-robots";
-  version = "0.7.1-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_robots/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "1483679adedcbfb7353a4a607c0e8dbc27e851939ae747d61047bbed759551a3";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_robots/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "716759ee98d528f2366395df34db139c017e1a56e40093f25afc2cd841082f82";
   };
 
   buildType = "catkin";

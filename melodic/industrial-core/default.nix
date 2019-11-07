@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, industrial-deprecated, industrial-utils, catkin, industrial-robot-client, industrial-msgs, simple-message, industrial-trajectory-filters, industrial-robot-simulator }:
 buildRosPackage {
   pname = "ros-melodic-industrial-core";
-  version = "0.7.0";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_core/0.7.0-0.tar.gz";
-    name = "0.7.0-0.tar.gz";
-    sha256 = "bf63fe4b823d57a1ea8970db34788b07979c6b6ac549c0dcf587bee582f9798b";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_core/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "db3b52e778e5cdc9a97854a82b142a6322dd38cb34fce0d57eb16ce208fb4f07";
   };
 
   buildType = "catkin";

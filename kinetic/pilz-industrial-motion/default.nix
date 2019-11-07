@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, pilz-extensions, catkin, pilz-msgs, pilz-trajectory-generation, pilz-robot-programming }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-industrial-motion";
-  version = "0.3.8";
+  version = "0.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_industrial_motion/0.3.8-0.tar.gz";
-    name = "0.3.8-0.tar.gz";
-    sha256 = "220d517169e5790c5561a85f0506a889b079498da4fe3a49d7a3abc76062ed31";
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_industrial_motion/0.3.10-1.tar.gz";
+    name = "0.3.10-1.tar.gz";
+    sha256 = "f6521ad3538c01a6a671fcb86c4db0a04f3febadfab405518109b8ff186740d3";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libusb }:
 buildRosPackage {
   pname = "ros-melodic-libphidgets";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libphidgets/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "f7a17252175d38583ab243496409ca648c02c0b7f2782b7f7db40957096397d1";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libphidgets/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "a34ac46d7679c615ab632f4c7d59472db4794c323677ca94ac4d335527a82d62";
   };
 
   buildType = "catkin";

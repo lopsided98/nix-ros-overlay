@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-filters, nav-msgs, message-generation, message-runtime, rospy, std-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-gps-common";
-  version = "0.2.0";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/kinetic/gps_common/0.2.0-0.tar.gz";
-    name = "0.2.0-0.tar.gz";
-    sha256 = "3827c093987666c0b823d42b095e3d9e7fbb6622333f14b0a62c9f7a54f0e209";
+    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/kinetic/gps_common/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "b51f189ac2581535eada29f83d1e390384620d06a4e0b9c51be055bdf838ec1d";
   };
 
   buildType = "catkin";

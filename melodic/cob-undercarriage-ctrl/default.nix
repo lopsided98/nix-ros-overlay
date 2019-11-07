@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, control-msgs, tf, catkin, cob-utilities, diagnostic-updater, nav-msgs, diagnostic-msgs, cob-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-undercarriage-ctrl";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_undercarriage_ctrl/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "28f92ad439e996cc1ea5544bfad718bce1c35c860475fc0b0d8b6c8069264279";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_undercarriage_ctrl/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "77a417a6b997393d84e3b52e49141f55fd6277815367b3da5fee26e85a40b85e";
   };
 
   buildType = "catkin";

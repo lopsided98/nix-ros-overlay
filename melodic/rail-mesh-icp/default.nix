@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, tf2-ros, message-generation, message-runtime, pcl-ros, std-msgs, roscpp, pcl-conversions, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rail-mesh-icp";
-  version = "0.0.3-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/gt-rail-release/rail_mesh_icp-release/archive/release/melodic/rail_mesh_icp/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "c659160c425be579bfb2984f4c8f46b7798cae82f8ccbbc096f3c41066e5c7b4";
+    url = "https://github.com/gt-rail-release/rail_mesh_icp-release/archive/release/melodic/rail_mesh_icp/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "eecb7c4d0910a7e240f7fa4da616ca4fc3306cea4e0bd2485f417dca3e5ba9a8";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, hardware-interface, tf2-geometry-msgs, control-toolbox, catkin, tf2, interactive-markers, qb-device-hardware-interface, roscpp, transmission-interface }:
 buildRosPackage {
   pname = "ros-kinetic-qb-move-hardware-interface";
-  version = "2.1.2-r1";
+  version = "2.1.3-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/kinetic/qb_move_hardware_interface/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "2e8a458b4f18e17619145fc5b59cbbb43a9dd5f302c4617204fe7077ee7007ec";
+    url = "https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/kinetic/qb_move_hardware_interface/2.1.3-1.tar.gz";
+    name = "2.1.3-1.tar.gz";
+    sha256 = "5cb15bf08b582c8eb92b3bbd8ab3eb960919d2234d35d66ef734c1cbe2167b27";
   };
 
   buildType = "catkin";

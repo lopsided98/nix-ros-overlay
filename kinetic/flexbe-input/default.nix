@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, flexbe-msgs, catkin, smach-ros, actionlib, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-flexbe-input";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_input/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "065afc380474adabbd7dcc187b12cab4ab35081076303921d85c1b276722dc5d";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_input/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "bc6c1045b8caf3a87f19c64637d4bcdb71b1b1246f63c4a5c61c3100b0bc77e1";
   };
 
   buildType = "catkin";

@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, boost, catkin, pythonPackages, curl, roslib }:
+{ lib, buildRosPackage, fetchurl, rosconsole, boost, catkin, curl, roslib }:
 buildRosPackage {
   pname = "ros-melodic-resource-retriever";
-  version = "1.12.4";
+  version = "1.12.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/resource_retriever-release/archive/release/melodic/resource_retriever/1.12.4-0.tar.gz";
-    name = "1.12.4-0.tar.gz";
-    sha256 = "568a6d1f0bd3a0c6e4c26b6e6524bc14a282df35a6b3ea1720e37591aaf024a1";
+    url = "https://github.com/ros-gbp/resource_retriever-release/archive/release/melodic/resource_retriever/1.12.5-1.tar.gz";
+    name = "1.12.5-1.tar.gz";
+    sha256 = "4a1ac42150b348eed92838078929e4ac8ea5123c9d16c39e88412a3724640cce";
   };
 
   buildType = "catkin";
   buildInputs = [ curl roslib rosconsole boost ];
-  propagatedBuildInputs = [ rosconsole boost pythonPackages.rospkg curl roslib ];
+  propagatedBuildInputs = [ curl roslib rosconsole boost ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

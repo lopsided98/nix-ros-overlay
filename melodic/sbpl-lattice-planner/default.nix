@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, nav-core, catkin, sbpl, tf2, nav-msgs, message-generation, message-runtime, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-sbpl-lattice-planner";
-  version = "0.3.2";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/sbpl_lattice_planner/0.3.2-0.tar.gz";
-    name = "0.3.2-0.tar.gz";
-    sha256 = "e78f8dc5ccf4ffb74f314de47656e49eca331b5cb262d6edfb4ea2729eab56c8";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/sbpl_lattice_planner/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "efbfed3e3ac9b17303e77d216eeb675137a63ec6b524088191e4ca06207588c2";
   };
 
   buildType = "catkin";

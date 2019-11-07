@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, libpcan, catkin, libphidgets, opengm, libdlib, libntcan }:
 buildRosPackage {
   pname = "ros-kinetic-cob-extern";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/cob_extern/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "7fcc6f22b2a67222124558b2c7213a871e0865363b35a80c6f91a0694ff29719";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/cob_extern/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "8ff0a45ed0c47bbb09598b59b0bc62c4997a0e99d7d9e5f670bb47fea146e858";
   };
 
   buildType = "catkin";

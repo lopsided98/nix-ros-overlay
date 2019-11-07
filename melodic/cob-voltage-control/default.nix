@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, dynamic-reconfigure, catkin, pythonPackages, cob-phidgets, rospy, std-msgs, cob-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-cob-voltage-control";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_voltage_control/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "7282f78802aa571e8ff6c0ca3b7b0baf8ac62709173adab5c9f5039a92882279";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_voltage_control/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "df3b7cc5459014b546c6a72fe6d974265f8561f86cb54cf2f68aed24b8f6196e";
   };
 
   buildType = "catkin";

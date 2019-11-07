@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-cob-moveit-config";
-  version = "0.7.1-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_moveit_config/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "56ab5c0cb539f6b3a82e47f6968ff4cd194403f7c734a8795e4897e5527105f5";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_moveit_config/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "037f085f37dd59c759f82b4b7e24f855279ccc31e474d7c28e0375abffc5cbc6";
   };
 
   buildType = "catkin";

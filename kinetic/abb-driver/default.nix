@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, industrial-robot-client }:
 buildRosPackage {
   pname = "ros-kinetic-abb-driver";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_driver/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "96d96d288b6c389f94df427ac061ce3eaba78bea0f19559ca45fdc1ce3a6abe8";
+    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_driver/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "6966a5d8d531ba7d06f72d87267f7de73af0d80781f5b25eebe892ccff89dd7f";
   };
 
   buildType = "catkin";

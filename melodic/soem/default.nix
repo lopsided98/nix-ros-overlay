@@ -5,23 +5,21 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-soem";
-  version = "1.3.0";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mgruhler/soem-gbp/archive/release/melodic/soem/1.3.0-0.tar.gz";
-    name = "1.3.0-0.tar.gz";
-    sha256 = "79cdd2124448cb591bcccded0b04a2bc74e0a44c030c84187b1e9aaa6a1ea7cb";
+    url = "https://github.com/mgruhler/soem-gbp/archive/release/melodic/soem/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "cc03d89d73e3fc1a7914451e6f890065a30b74d6aed49983b743f57db73c4a80";
   };
 
   buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''SOEM is an open source EtherCAT master library written in c. Its
-     primary target is Linux but can be adapted to other OS and
-     embedded systems. (http://developer.berlios.de/projects/soem/)
-
-     This package contains the original soem c code provided by the Technische Universiteit Eindhoven.'';
-    license = with lib.licenses; [ gpl1 ];
+    description = ''ROS wrapper for the Simple Open EtherCAT Master SOEM.
+    This is an updated version of the original SOEM wrapper released into ROS now including
+    the upstream Repo as a git subtree.'';
+    license = with lib.licenses; [ gpl2 ];
   };
 }

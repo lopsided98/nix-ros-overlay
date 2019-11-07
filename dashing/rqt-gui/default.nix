@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-common, rclpy, qt-gui, python3Packages, ament-index-python, ament-lint-auto, python-qt-binding }:
 buildRosPackage {
   pname = "ros-dashing-rqt-gui";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_gui/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "0c1110a3651ffd814e428d67f61884af4090d86d24de8cb4a63e6e886b0fb312";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_gui/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "e7efeebc99ec302d1e1a3de86ca474a3434143ba1c5e885c0edec9e3f68611fb";
   };
 
   buildType = "ament_python";

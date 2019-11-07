@@ -5,23 +5,21 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-soem";
-  version = "1.3.0";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/smits/soem-gbp/archive/release/kinetic/soem/1.3.0-0.tar.gz";
-    name = "1.3.0-0.tar.gz";
-    sha256 = "a28a315984ad334a4fe3899dd463570993ca632f3943eb0511daf4734d13d535";
+    url = "https://github.com/mgruhler/soem-gbp/archive/release/kinetic/soem/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "67e40cc25126e41f9cba65b6ff7e342531e893ea6f1e4666a97de09fba5baff4";
   };
 
   buildType = "catkin";
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''SOEM is an open source EtherCAT master library written in c. Its
-     primary target is Linux but can be adapted to other OS and
-     embedded systems. (http://developer.berlios.de/projects/soem/)
-
-     This package contains the original soem c code provided by the Technische Universiteit Eindhoven.'';
-    license = with lib.licenses; [ gpl1 ];
+    description = ''ROS wrapper for the Simple Open EtherCAT Master SOEM.
+    This is an updated version of the original SOEM wrapper released into ROS now including
+    the upstream Repo as a git subtree.'';
+    license = with lib.licenses; [ gpl2 ];
   };
 }

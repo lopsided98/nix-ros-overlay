@@ -86,6 +86,8 @@ self: super: {
 
  ament-cpplint = self.callPackage ./ament-cpplint {};
 
+ ament-download = self.callPackage ./ament-download {};
+
  ament-flake8 = self.callPackage ./ament-flake8 {};
 
  ament-index-cpp = self.callPackage ./ament-index-cpp {};
@@ -122,6 +124,12 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
+
+ automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
+
+ autoware-auto-algorithm = self.callPackage ./autoware-auto-algorithm {};
+
  autoware-auto-cmake = self.callPackage ./autoware-auto-cmake {};
 
  autoware-auto-create-pkg = self.callPackage ./autoware-auto-create-pkg {};
@@ -129,6 +137,8 @@ self: super: {
  autoware-auto-examples = self.callPackage ./autoware-auto-examples {};
 
  autoware-auto-geometry = self.callPackage ./autoware-auto-geometry {};
+
+ autoware-auto-helper-functions = self.callPackage ./autoware-auto-helper-functions {};
 
  autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
 
@@ -145,6 +155,8 @@ self: super: {
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
+
+ can-msgs = self.callPackage ./can-msgs {};
 
  cartographer = self.callPackage ./cartographer {};
 
@@ -180,6 +192,8 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
+ cross-compile = self.callPackage ./cross-compile {};
+
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
@@ -188,6 +202,12 @@ self: super: {
 
  dataflow-lite = self.callPackage ./dataflow-lite {};
 
+ delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
+
+ delphi-mrr-msgs = self.callPackage ./delphi-mrr-msgs {};
+
+ delphi-srr-msgs = self.callPackage ./delphi-srr-msgs {};
+
  demo-nodes-cpp = self.callPackage ./demo-nodes-cpp {};
 
  demo-nodes-cpp-native = self.callPackage ./demo-nodes-cpp-native {};
@@ -195,6 +215,8 @@ self: super: {
  demo-nodes-py = self.callPackage ./demo-nodes-py {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
+
+ derived-object-msgs = self.callPackage ./derived-object-msgs {};
 
  desktop = self.callPackage ./desktop {};
 
@@ -294,6 +316,12 @@ self: super: {
 
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
+ eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
+
+ euclidean-cluster = self.callPackage ./euclidean-cluster {};
+
+ euclidean-cluster-nodes = self.callPackage ./euclidean-cluster-nodes {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-minimal-action-client = self.callPackage ./examples-rclcpp-minimal-action-client {};
@@ -340,6 +368,8 @@ self: super: {
 
  fmilibrary-vendor = self.callPackage ./fmilibrary-vendor {};
 
+ foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
@@ -360,6 +390,14 @@ self: super: {
 
  gmock-vendor = self.callPackage ./gmock-vendor {};
 
+ gps-msgs = self.callPackage ./gps-msgs {};
+
+ gps-tools = self.callPackage ./gps-tools {};
+
+ gps-umd = self.callPackage ./gps-umd {};
+
+ gpsd-client = self.callPackage ./gpsd-client {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  h264-encoder-core = self.callPackage ./h264-encoder-core {};
@@ -369,6 +407,10 @@ self: super: {
  health-metric-collector = self.callPackage ./health-metric-collector {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
+
+ hungarian-assigner = self.callPackage ./hungarian-assigner {};
+
+ ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
  image-geometry = self.callPackage ./image-geometry {};
 
@@ -383,6 +425,10 @@ self: super: {
  joy = self.callPackage ./joy {};
 
  joy-teleop = self.callPackage ./joy-teleop {};
+
+ kalman-filter = self.callPackage ./kalman-filter {};
+
+ kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
@@ -399,6 +445,8 @@ self: super: {
  launch = self.callPackage ./launch {};
 
  launch-ros = self.callPackage ./launch-ros {};
+
+ launch-ros-sandbox = self.callPackage ./launch-ros-sandbox {};
 
  launch-testing = self.callPackage ./launch-testing {};
 
@@ -418,19 +466,45 @@ self: super: {
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
 
+ lidar-utils = self.callPackage ./lidar-utils {};
+
  lifecycle = self.callPackage ./lifecycle {};
 
  lifecycle-msgs = self.callPackage ./lifecycle-msgs {};
+
+ localization-common = self.callPackage ./localization-common {};
+
+ localization-nodes = self.callPackage ./localization-nodes {};
 
  logging-demo = self.callPackage ./logging-demo {};
 
  map-msgs = self.callPackage ./map-msgs {};
 
+ marti-can-msgs = self.callPackage ./marti-can-msgs {};
+
+ marti-common-msgs = self.callPackage ./marti-common-msgs {};
+
+ marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
+
+ marti-perception-msgs = self.callPackage ./marti-perception-msgs {};
+
+ marti-sensor-msgs = self.callPackage ./marti-sensor-msgs {};
+
+ marti-status-msgs = self.callPackage ./marti-status-msgs {};
+
+ marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
+
  message-filters = self.callPackage ./message-filters {};
 
  ml-classifiers = self.callPackage ./ml-classifiers {};
 
+ mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
+
+ motion-model = self.callPackage ./motion-model {};
+
  mouse-teleop = self.callPackage ./mouse-teleop {};
+
+ move-base-msgs = self.callPackage ./move-base-msgs {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -460,6 +534,8 @@ self: super: {
 
  nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
 
+ nav2-system-tests = self.callPackage ./nav2-system-tests {};
+
  nav2-util = self.callPackage ./nav2-util {};
 
  nav2-voxel-grid = self.callPackage ./nav2-voxel-grid {};
@@ -473,6 +549,10 @@ self: super: {
  nav-msgs = self.callPackage ./nav-msgs {};
 
  navigation2 = self.callPackage ./navigation2 {};
+
+ ndt = self.callPackage ./ndt {};
+
+ neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
@@ -488,13 +568,19 @@ self: super: {
 
  opensplice-cmake-module = self.callPackage ./opensplice-cmake-module {};
 
+ optimization = self.callPackage ./optimization {};
+
  orocos-kdl = self.callPackage ./orocos-kdl {};
 
  osrf-pycommon = self.callPackage ./osrf-pycommon {};
 
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
+ pacmod-msgs = self.callPackage ./pacmod-msgs {};
+
  pcl-conversions = self.callPackage ./pcl-conversions {};
+
+ pcl-msgs = self.callPackage ./pcl-msgs {};
 
  pendulum-control = self.callPackage ./pendulum-control {};
 
@@ -505,6 +591,10 @@ self: super: {
  pluginlib = self.callPackage ./pluginlib {};
 
  poco-vendor = self.callPackage ./poco-vendor {};
+
+ point-cloud-fusion = self.callPackage ./point-cloud-fusion {};
+
+ px4-msgs = self.callPackage ./px4-msgs {};
 
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
@@ -529,6 +619,12 @@ self: super: {
  quality-of-service-demo-cpp = self.callPackage ./quality-of-service-demo-cpp {};
 
  quality-of-service-demo-py = self.callPackage ./quality-of-service-demo-py {};
+
+ radar-msgs = self.callPackage ./radar-msgs {};
+
+ ray-ground-classifier = self.callPackage ./ray-ground-classifier {};
+
+ ray-ground-classifier-nodes = self.callPackage ./ray-ground-classifier-nodes {};
 
  rcl = self.callPackage ./rcl {};
 
@@ -626,6 +722,8 @@ self: super: {
 
  ros2trace = self.callPackage ./ros2trace {};
 
+ ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
+
  ros-base = self.callPackage ./ros-base {};
 
  ros-core = self.callPackage ./ros-core {};
@@ -659,6 +757,8 @@ self: super: {
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 
  rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
+
+ rosbridge-server = self.callPackage ./rosbridge-server {};
 
  rosbridge-suite = self.callPackage ./rosbridge-suite {};
 
@@ -766,9 +866,15 @@ self: super: {
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
+ serial-driver = self.callPackage ./serial-driver {};
+
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
+
+ sick-scan2 = self.callPackage ./sick-scan2 {};
+
+ slam-toolbox = self.callPackage ./slam-toolbox {};
 
  sophus = self.callPackage ./sophus {};
 
@@ -878,11 +984,21 @@ self: super: {
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
 
+ velodyne-driver = self.callPackage ./velodyne-driver {};
+
+ velodyne-node = self.callPackage ./velodyne-node {};
+
  vision-opencv = self.callPackage ./vision-opencv {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
 
+ voxel-grid = self.callPackage ./voxel-grid {};
+
+ voxel-grid-nodes = self.callPackage ./voxel-grid-nodes {};
+
  web-video-server = self.callPackage ./web-video-server {};
+
+ xacro = self.callPackage ./xacro {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 

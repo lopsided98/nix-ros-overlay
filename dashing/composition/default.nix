@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, rmw-implementation-cmake, ament-lint-common, launch-ros, ament-cmake, launch-testing, rcutils, launch, launch-testing-ament-cmake, example-interfaces, rclcpp, launch-testing-ros, std-msgs, ament-lint-auto, rclcpp-components }:
 buildRosPackage {
   pname = "ros-dashing-composition";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/composition/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "0219ae0aa14de453f99a41d5d92b752f96606d7234ee638a54d27d5b52510e37";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/composition/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "8a57963cb1120106efcdeff32fdd633767814ce86997bd9896fac762efd4b340";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, flexbe-msgs, catkin, smach-ros, flexbe-widget, rospy, flexbe-core }:
 buildRosPackage {
   pname = "ros-kinetic-flexbe-mirror";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_mirror/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "cafc6ef8f4c9a11c38c02b4180fe563d22778c76ca8266b1acea58432cb97045";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_mirror/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "02940d31bb8d12bacd81128a749d93bf8a5c5f466a3df61b7c4efb6607351dd9";
   };
 
   buildType = "catkin";

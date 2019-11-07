@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cpp-common, roscpp-traits, catkin, roscpp-serialization, rostime }:
 buildRosPackage {
   pname = "ros-melodic-roscpp-core";
-  version = "0.6.12";
+  version = "0.6.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/roscpp_core/0.6.12-0.tar.gz";
-    name = "0.6.12-0.tar.gz";
-    sha256 = "814ea5bddeba2cabb4229baa27006fe21dbc56f0fd51bf3afd5e20a22b4582ec";
+    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/roscpp_core/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
+    sha256 = "34802c1855568443ecadfde7ccaa2e3616101035de9730249804d7acfdfc2046";
   };
 
   buildType = "catkin";

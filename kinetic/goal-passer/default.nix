@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, nav-core, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-goal-passer";
-  version = "0.2.1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/goal_passer/0.2.1-0.tar.gz";
-    name = "0.2.1-0.tar.gz";
-    sha256 = "f20c14ef1bd6e22e3b25dd9f5a1c618dac5a84da0987e85abdef7e9512bcb5a9";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/goal_passer/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "b5e68d5ea6ea39669d10ac3e490f9cabee86b3cfe78f82f0b73349afba7fb600";
   };
 
   buildType = "catkin";

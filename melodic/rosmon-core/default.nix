@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python, rospack, boost, rosbash, cmake-modules, rosfmt, libyamlcpp, catkin, pythonPackages, tinyxml, rostest, roslib, ncurses, catch-ros, std-msgs, diagnostic-msgs, roscpp, rosmon-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosmon-core";
-  version = "2.1.1-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon_core/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "eda6b1f4a31cac71c3f3f46bd154284891ce44f8f406cf165d64a1b008785b2e";
+    url = "https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon_core/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "3aa96849e40110d129d3e2066cf79173bad441585bd87f75e4d9c4c85f8a4084";
   };
 
   buildType = "catkin";

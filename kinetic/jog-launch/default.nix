@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, tra1-moveit-config, nextage-moveit-config, catkin, rostest, ur3-moveit-config, jog-controller, roslaunch, ur5-moveit-config, fake-joint-launch }:
 buildRosPackage {
   pname = "ros-kinetic-jog-launch";
-  version = "0.0.1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jog_control-release/archive/release/kinetic/jog_launch/0.0.1-0.tar.gz";
-    name = "0.0.1-0.tar.gz";
-    sha256 = "9e31871420cdcebc80a7f2420ff4af66f95ad1eed40d7df222837b18eae1ffd7";
+    url = "https://github.com/tork-a/jog_control-release/archive/release/kinetic/jog_launch/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "6be4db38062c350773ac08fa688fbd00f9402b8f98cf6e3812a17f192c6ddd0f";
   };
 
   buildType = "catkin";

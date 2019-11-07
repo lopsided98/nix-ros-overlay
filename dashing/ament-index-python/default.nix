@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, pythonPackages, ament-flake8, ament-pep257 }:
 buildRosPackage {
   pname = "ros-dashing-ament-index-python";
-  version = "0.7.1-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/dashing/ament_index_python/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "d8cd8e19f0ac6fe51d2f9f4c53fe67079450714aeaf16ef64e6e30499b1a44d6";
+    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/dashing/ament_index_python/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "98eafec75f99fb0cf48834b88d6ba0ab6d383dad6753699cb052dab1a9e3003b";
   };
 
   buildType = "ament_python";

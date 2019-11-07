@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, roslaunch, cmake-modules, tf, sensor-msgs, catkin, mrpt-rawlog, roslib, nav-msgs, mrpt1, rviz, visualization-msgs, dynamic-reconfigure, std-msgs, mrpt-bridge, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt-ekf-slam-3d";
-  version = "0.1.9";
+  version = "0.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/kinetic/mrpt_ekf_slam_3d/0.1.9-0.tar.gz";
-    name = "0.1.9-0.tar.gz";
-    sha256 = "3cb8778c27b9f3ea946fddd3963cd558528f3619cfd69c23cf29b1bf9451ca38";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/kinetic/mrpt_ekf_slam_3d/0.1.10-1.tar.gz";
+    name = "0.1.10-1.tar.gz";
+    sha256 = "ec92ee4e34186f8ee4d9aedfa094136fa29acad77ce6cf26be665167d13ad980";
   };
 
   buildType = "catkin";

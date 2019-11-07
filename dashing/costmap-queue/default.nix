@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-testing, ament-cmake-gtest, launch, nav2-common, rclcpp, nav2-costmap-2d, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-costmap-queue";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/costmap_queue/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "8f1500a2f345f2c98a497aabeee908e6f6baa4ee4b98af666b3b69cd83897014";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/costmap_queue/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "d6db7cc63ede71d3cac83a9ba278f33486f7108bf835c5ab0676e0febb53e621";
   };
 
   buildType = "ament_cmake";

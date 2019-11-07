@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, gtest, catkin, ffmpeg, aws-common, cmake, gmock }:
 buildRosPackage {
   pname = "ros-melodic-h264-encoder-core";
-  version = "2.0.1-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/h264_encoder_core-release/archive/release/melodic/h264_encoder_core/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "dbc4f911dc13d008b82e2ecc282975e2579061533d77738d5611e8abff285319";
+    url = "https://github.com/aws-gbp/h264_encoder_core-release/archive/release/melodic/h264_encoder_core/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "19f31cb9992ac20374ee457efcac78772598992ad832d31da4c9c23f02029dad";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rclpy, rosidl-default-generators, action-msgs, ament-lint-auto, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-action-tutorials";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/action_tutorials/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "545ed3eec42b575754a2d3fc6e2a7a3bcd3434a69109943820779082393bb06c";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/action_tutorials/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "0c458dcd080c80a3ba7b72655d35b3c3e8b0694d4777a92a0714b7f3b6538e77";
   };
 
   buildType = "ament_cmake";

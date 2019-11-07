@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, dataspeed-ulc-msgs, catkin, can-msgs, rostest, roslib, nodelet, rospy, std-msgs, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dataspeed-ulc-can";
-  version = "0.0.4-r1";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/melodic/dataspeed_ulc_can/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "c4fc0d6aba845473c5420ee7e3625a5a8fbcdc13925ef38e17a2153c3e427dd0";
+    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/melodic/dataspeed_ulc_can/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "df805e7fffff44a12238fba6da27ca114035d1216e8e7e718beefec2475ac44b";
   };
 
   buildType = "catkin";

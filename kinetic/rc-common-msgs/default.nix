@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
+{ lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-rc-common-msgs";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_common_msgs-release/archive/release/kinetic/rc_common_msgs/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "9613554e140b10a4db41cbbcf5b00432efebb00d39b0467355bb8f9442a4d05b";
+    url = "https://github.com/roboception-gbp/rc_common_msgs-release/archive/release/kinetic/rc_common_msgs/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "32289c9a3bd12165c2dae9d9f4aed89fd1e3d729d8fa42dafe7dd1ee472360ce";
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ message-runtime ];
+  buildInputs = [ std-msgs message-generation ];
+  propagatedBuildInputs = [ std-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

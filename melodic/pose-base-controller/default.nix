@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, tf2-geometry-msgs, catkin, tf2-ros, move-base-msgs, nav-msgs, actionlib, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pose-base-controller";
-  version = "0.3.2";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/pose_base_controller/0.3.2-0.tar.gz";
-    name = "0.3.2-0.tar.gz";
-    sha256 = "92fdd5e9e92e018a8ecbb45cf342f449ad33550922b7b9de82b27c54c131af48";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/pose_base_controller/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "b18cf02ddbaaa806e9f580e6051492c37a21112cf46394a67ecbc3a150278242";
   };
 
   buildType = "catkin";

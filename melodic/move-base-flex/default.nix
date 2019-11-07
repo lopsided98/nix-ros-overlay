@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, mbf-abstract-core, mbf-costmap-core, mbf-msgs, catkin, mbf-simple-nav, mbf-abstract-nav, mbf-costmap-nav }:
 buildRosPackage {
   pname = "ros-melodic-move-base-flex";
-  version = "0.2.4-r1";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/move_base_flex/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "6f91a96d295d1b6e6702e20791a4a70eeffc88d5391da89395791b9670014930";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/move_base_flex/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "69c419020bc835705d5f93b2a1f12cd151577b12d4bbd0bccdbce7e47e29e061";
   };
 
   buildType = "catkin";

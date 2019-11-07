@@ -70,6 +70,18 @@ self: super: {
 
  agvs-sim-bringup = self.callPackage ./agvs-sim-bringup {};
 
+ ainstein-radar = self.callPackage ./ainstein-radar {};
+
+ ainstein-radar-drivers = self.callPackage ./ainstein-radar-drivers {};
+
+ ainstein-radar-filters = self.callPackage ./ainstein-radar-filters {};
+
+ ainstein-radar-gazebo-plugins = self.callPackage ./ainstein-radar-gazebo-plugins {};
+
+ ainstein-radar-msgs = self.callPackage ./ainstein-radar-msgs {};
+
+ ainstein-radar-rviz-plugins = self.callPackage ./ainstein-radar-rviz-plugins {};
+
  allocators = self.callPackage ./allocators {};
 
  amcl = self.callPackage ./amcl {};
@@ -402,6 +414,8 @@ self: super: {
 
  cob-gazebo-ros-control = self.callPackage ./cob-gazebo-ros-control {};
 
+ cob-gazebo-tools = self.callPackage ./cob-gazebo-tools {};
+
  cob-gazebo-worlds = self.callPackage ./cob-gazebo-worlds {};
 
  cob-generic-can = self.callPackage ./cob-generic-can {};
@@ -413,6 +427,8 @@ self: super: {
  cob-hand-bridge = self.callPackage ./cob-hand-bridge {};
 
  cob-hardware-config = self.callPackage ./cob-hardware-config {};
+
+ cob-hardware-emulation = self.callPackage ./cob-hardware-emulation {};
 
  cob-helper-tools = self.callPackage ./cob-helper-tools {};
 
@@ -992,6 +1008,40 @@ self: super: {
 
  fake-localization = self.callPackage ./fake-localization {};
 
+ fanuc-cr35ia-support = self.callPackage ./fanuc-cr35ia-support {};
+
+ fanuc-cr7ia-support = self.callPackage ./fanuc-cr7ia-support {};
+
+ fanuc-driver = self.callPackage ./fanuc-driver {};
+
+ fanuc-lrmate200i-support = self.callPackage ./fanuc-lrmate200i-support {};
+
+ fanuc-lrmate200ib-support = self.callPackage ./fanuc-lrmate200ib-support {};
+
+ fanuc-lrmate200ic-support = self.callPackage ./fanuc-lrmate200ic-support {};
+
+ fanuc-m10ia-support = self.callPackage ./fanuc-m10ia-support {};
+
+ fanuc-m16ib-support = self.callPackage ./fanuc-m16ib-support {};
+
+ fanuc-m20ia-support = self.callPackage ./fanuc-m20ia-support {};
+
+ fanuc-m20ib-support = self.callPackage ./fanuc-m20ib-support {};
+
+ fanuc-m430ia-support = self.callPackage ./fanuc-m430ia-support {};
+
+ fanuc-m6ib-support = self.callPackage ./fanuc-m6ib-support {};
+
+ fanuc-m710ic-support = self.callPackage ./fanuc-m710ic-support {};
+
+ fanuc-m900ia-support = self.callPackage ./fanuc-m900ia-support {};
+
+ fanuc-m900ib-support = self.callPackage ./fanuc-m900ib-support {};
+
+ fanuc-r1000ia-support = self.callPackage ./fanuc-r1000ia-support {};
+
+ fanuc-resources = self.callPackage ./fanuc-resources {};
+
  feed-the-troll = self.callPackage ./feed-the-troll {};
 
  feed-the-troll-msgs = self.callPackage ./feed-the-troll-msgs {};
@@ -1113,6 +1163,20 @@ self: super: {
  freenect-stack = self.callPackage ./freenect-stack {};
 
  frontier-exploration = self.callPackage ./frontier-exploration {};
+
+ fsrobo-r = self.callPackage ./fsrobo-r {};
+
+ fsrobo-r-bringup = self.callPackage ./fsrobo-r-bringup {};
+
+ fsrobo-r-description = self.callPackage ./fsrobo-r-description {};
+
+ fsrobo-r-driver = self.callPackage ./fsrobo-r-driver {};
+
+ fsrobo-r-moveit-config = self.callPackage ./fsrobo-r-moveit-config {};
+
+ fsrobo-r-msgs = self.callPackage ./fsrobo-r-msgs {};
+
+ fsrobo-r-trajectory-filters = self.callPackage ./fsrobo-r-trajectory-filters {};
 
  ftm-msgs = self.callPackage ./ftm-msgs {};
 
@@ -1279,6 +1343,8 @@ self: super: {
  health-metric-collector = self.callPackage ./health-metric-collector {};
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
+
+ hebi-description = self.callPackage ./hebi-description {};
 
  hebiros-description = self.callPackage ./hebiros-description {};
 
@@ -1447,6 +1513,20 @@ self: super: {
  igvc-self-drive-sim = self.callPackage ./igvc-self-drive-sim {};
 
  iirob-filters = self.callPackage ./iirob-filters {};
+
+ iiwa-control = self.callPackage ./iiwa-control {};
+
+ iiwa-description = self.callPackage ./iiwa-description {};
+
+ iiwa-gazebo = self.callPackage ./iiwa-gazebo {};
+
+ iiwa-hw = self.callPackage ./iiwa-hw {};
+
+ iiwa-moveit = self.callPackage ./iiwa-moveit {};
+
+ iiwa-msgs = self.callPackage ./iiwa-msgs {};
+
+ iiwa-ros = self.callPackage ./iiwa-ros {};
 
  image-cb-detector = self.callPackage ./image-cb-detector {};
 
@@ -1895,8 +1975,6 @@ self: super: {
  libmodbus = self.callPackage ./libmodbus {};
 
  libmongocxx-ros = self.callPackage ./libmongocxx-ros {};
-
- libmynteye = self.callPackage ./libmynteye {};
 
  libntcan = self.callPackage ./libntcan {};
 
@@ -2464,6 +2542,8 @@ self: super: {
 
  nerian-stereo = self.callPackage ./nerian-stereo {};
 
+ network-autoconfig = self.callPackage ./network-autoconfig {};
+
  network-control-tests = self.callPackage ./network-control-tests {};
 
  network-detector = self.callPackage ./network-detector {};
@@ -2555,6 +2635,8 @@ self: super: {
  octomap-server = self.callPackage ./octomap-server {};
 
  oculusprime = self.callPackage ./oculusprime {};
+
+ odom-frame-publisher = self.callPackage ./odom-frame-publisher {};
 
  odometry-publisher-tutorial = self.callPackage ./odometry-publisher-tutorial {};
 
@@ -3054,6 +3136,8 @@ self: super: {
 
  puma-motor-msgs = self.callPackage ./puma-motor-msgs {};
 
+ px4-msgs = self.callPackage ./px4-msgs {};
+
  py-trees = self.callPackage ./py-trees {};
 
  py-trees-msgs = self.callPackage ./py-trees-msgs {};
@@ -3352,6 +3436,8 @@ self: super: {
 
  robot-statemachine = self.callPackage ./robot-statemachine {};
 
+ robot-systemd = self.callPackage ./robot-systemd {};
+
  robot-upstart = self.callPackage ./robot-upstart {};
 
  robotis-controller = self.callPackage ./robotis-controller {};
@@ -3548,6 +3634,8 @@ self: super: {
 
  ros-mppt = self.callPackage ./ros-mppt {};
 
+ ros-mynteye = self.callPackage ./ros-mynteye {};
+
  ros-numpy = self.callPackage ./ros-numpy {};
 
  ros-pytest = self.callPackage ./ros-pytest {};
@@ -3569,6 +3657,8 @@ self: super: {
  rosauth = self.callPackage ./rosauth {};
 
  rosbag = self.callPackage ./rosbag {};
+
+ rosbag-editor = self.callPackage ./rosbag-editor {};
 
  rosbag-migration-rule = self.callPackage ./rosbag-migration-rule {};
 
@@ -3928,6 +4018,10 @@ self: super: {
 
  rtt-nav-msgs = self.callPackage ./rtt-nav-msgs {};
 
+ rtt-pcl = self.callPackage ./rtt-pcl {};
+
+ rtt-pcl-ros = self.callPackage ./rtt-pcl-ros {};
+
  rtt-ros = self.callPackage ./rtt-ros {};
 
  rtt-ros-comm = self.callPackage ./rtt-ros-comm {};
@@ -3984,11 +4078,17 @@ self: super: {
 
  rxcpp-vendor = self.callPackage ./rxcpp-vendor {};
 
+ rxros = self.callPackage ./rxros {};
+
+ rxros-tf = self.callPackage ./rxros-tf {};
+
  safe-teleop-base = self.callPackage ./safe-teleop-base {};
 
  safe-teleop-stage = self.callPackage ./safe-teleop-stage {};
 
  safety-limiter = self.callPackage ./safety-limiter {};
+
+ safety-limiter-msgs = self.callPackage ./safety-limiter-msgs {};
 
  sainsmart-relay-usb = self.callPackage ./sainsmart-relay-usb {};
 
@@ -4206,6 +4306,8 @@ self: super: {
 
  summit-xl-sim-bringup = self.callPackage ./summit-xl-sim-bringup {};
 
+ swarm-functions = self.callPackage ./swarm-functions {};
+
  swri-console = self.callPackage ./swri-console {};
 
  swri-console-util = self.callPackage ./swri-console-util {};
@@ -4271,6 +4373,8 @@ self: super: {
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
+
+ tello-driver = self.callPackage ./tello-driver {};
 
  tensorflow-ros = self.callPackage ./tensorflow-ros {};
 
@@ -4531,6 +4635,8 @@ self: super: {
  turtlebot-interactions = self.callPackage ./turtlebot-interactions {};
 
  turtlebot-interactive-markers = self.callPackage ./turtlebot-interactive-markers {};
+
+ turtlebot-loadout-kha1 = self.callPackage ./turtlebot-loadout-kha1 {};
 
  turtlebot-msgs = self.callPackage ./turtlebot-msgs {};
 

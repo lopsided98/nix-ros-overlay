@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cppcheck }:
 buildRosPackage {
   pname = "ros-dashing-ament-cppcheck";
-  version = "0.7.10-r1";
+  version = "0.7.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_cppcheck/0.7.10-1.tar.gz";
-    name = "0.7.10-1.tar.gz";
-    sha256 = "7701d462f1f264ccba4fe5bcb91fd3b0b2159a47163db3f7aff570a9ef7c22a9";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_cppcheck/0.7.11-1.tar.gz";
+    name = "0.7.11-1.tar.gz";
+    sha256 = "69bd84eee65eca753895869aad6b538504c6a5506862eee57a41da48e583b448";
   };
 
   buildType = "ament_python";

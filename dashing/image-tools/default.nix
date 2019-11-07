@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, rmw-implementation-cmake, ament-lint-common, opencv3, launch-testing, sensor-msgs, launch, launch-testing-ament-cmake, rclcpp, std-msgs, ament-lint-auto, launch-testing-ros }:
 buildRosPackage {
   pname = "ros-dashing-image-tools";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/image_tools/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "2ed6f6fb74772f5423fd7751aaaa297b84421be8ce4ad5e7f18ed0ccece9857f";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/image_tools/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "1f42e8e07352df0f430278e8b696fa0016d520b0cf8c6e3d770e46d89e986a07";
   };
 
   buildType = "ament_cmake";

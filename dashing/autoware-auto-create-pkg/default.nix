@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, pythonPackages, ament-flake8, ament-pep257 }:
+{ lib, buildRosPackage, fetchurl, ament-flake8, ament-lint-common, pythonPackages, ament-pep257, ament-copyright, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-autoware-auto-create-pkg";
-  version = "0.0.1-r1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/autoware_auto_create_pkg/0.0.1-1";
+    url = "https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/autoware_auto_create_pkg/0.0.2-1";
     name = "archive.tar.gz";
-    sha256 = "8b06fe3b1d46959c2c3f2c171fb7aefbcdd9146d9bb69d0cfb7a5e73f4d656d4";
+    sha256 = "c8af52d226d50829530ab30c2b5aac85dbce024b9e0fee5e5e557b5e9316ae05";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
+  checkInputs = [ ament-flake8 pythonPackages.pytest ament-lint-common ament-pep257 ament-copyright ament-lint-auto ];
 
   meta = {
     description = ''A command line tool to create a boiler-plate package'';

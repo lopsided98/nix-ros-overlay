@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, libpcan, catkin, libphidgets, opengm, libdlib, libntcan }:
 buildRosPackage {
   pname = "ros-melodic-cob-extern";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/cob_extern/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "58d6df6b77b5a5546ce1641a09b583f1d899c8d250f9eee8cff13f76acc0834f";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/cob_extern/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "fab9731beb0fcf45a6e334bf275249c15cc48945b23f1c637ef6b92271367ebc";
   };
 
   buildType = "catkin";

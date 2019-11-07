@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, serial, message-generation, message-runtime, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-um6";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/um6-release/archive/release/melodic/um6/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "4290d7ad2a7964728372067e79bf4ea48b27b6233ea5a6eb4ecf19ff2868d933";
+    url = "https://github.com/ros-drivers-gbp/um6-release/archive/release/melodic/um6/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "2dab6e1c445eb2ac9fb634a8df474aec4e9f269f5a19832109ba8ba324ffcadd";
   };
 
   buildType = "catkin";

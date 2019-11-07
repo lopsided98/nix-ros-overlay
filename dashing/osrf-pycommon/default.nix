@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl,  }:
 buildRosPackage {
   pname = "ros-dashing-osrf-pycommon";
-  version = "0.1.7-r1";
+  version = "0.1.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/osrf_pycommon-release/archive/release/dashing/osrf_pycommon/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "06f9c203b9061bc5ac69f7f0f82b1aac39ad406353a3f76d86df57dfc28a3b73";
+    url = "https://github.com/ros2-gbp/osrf_pycommon-release/archive/release/dashing/osrf_pycommon/0.1.9-1.tar.gz";
+    name = "0.1.9-1.tar.gz";
+    sha256 = "cfd3e9851ce43c25785bea5b994dddd350307f4456d763fd8648dddc480b2241";
   };
 
   buildType = "ament_python";

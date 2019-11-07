@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pkg-config, cppunit, eigen, cmake }:
 buildRosPackage {
   pname = "ros-kinetic-orocos-kdl";
-  version = "1.3.1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/smits/orocos-kdl-release/archive/release/kinetic/orocos_kdl/1.3.1-0.tar.gz";
-    name = "1.3.1-0.tar.gz";
-    sha256 = "7cbda0a837a7025739715ffab17b5f916d671eec8dfeb26a20ba80bfc0463590";
+    url = "https://github.com/smits/orocos-kdl-release/archive/release/kinetic/orocos_kdl/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "c5fcde3d4ed405b87566a24f7833dd03a5e1fa0eb11ec1831ed91a4448871ab0";
   };
 
   buildType = "cmake";

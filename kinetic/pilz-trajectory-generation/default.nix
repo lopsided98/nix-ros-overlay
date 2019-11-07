@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, moveit-ros-planning, prbt-moveit-config, pilz-msgs, pilz-extensions, pilz-testutils, prbt-pg70-support, pilz-industrial-motion-testutils, moveit-core, eigen-conversions, moveit-ros-planning-interface, kdl-conversions, panda-moveit-config, orocos-kdl, tf2-geometry-msgs, prbt-support, catkin, moveit-msgs, roscpp, moveit-ros-move-group, pluginlib, cmake-modules, tf2, rostest, abb-irb2400-moveit-config, tf2-eigen, code-coverage, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-trajectory-generation";
-  version = "0.3.8";
+  version = "0.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_trajectory_generation/0.3.8-0.tar.gz";
-    name = "0.3.8-0.tar.gz";
-    sha256 = "5e92a2242591885207023758347c6298fbaf419498943750a3f65725b7ed9181";
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_trajectory_generation/0.3.10-1.tar.gz";
+    name = "0.3.10-1.tar.gz";
+    sha256 = "bc5f747041bf0602a84bd776966ad11a8d50aee7181be48bff2c762fe8219def";
   };
 
   buildType = "catkin";

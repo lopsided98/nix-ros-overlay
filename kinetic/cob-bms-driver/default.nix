@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, diagnostic-updater, cob-srvs, socketcan-interface, rospy, std-msgs, diagnostic-msgs, cob-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-cob-bms-driver";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_bms_driver/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "149a596e2364ff7fee9e6649ba5d539e2efe1c86bcbbb7be3b20aa274503901a";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_bms_driver/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "59a0996db74f8e2ac37b2d3d6de75591d8dfd72d8e9c38a565ac6adb089323f0";
   };
 
   buildType = "catkin";

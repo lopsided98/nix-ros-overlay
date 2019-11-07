@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-filters, nav-msgs, message-generation, message-runtime, rospy, std-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-gps-common";
-  version = "0.2.0";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/melodic/gps_common/0.2.0-0.tar.gz";
-    name = "0.2.0-0.tar.gz";
-    sha256 = "ff84f3a082027035d2363ffcda76b01b2ac06432da53ccc6ee73898d3c502a03";
+    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/melodic/gps_common/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "6c93231496ab9c5306b995bab4144a1db30024c62f7247f3cfb6efd96d617b2c";
   };
 
   buildType = "catkin";

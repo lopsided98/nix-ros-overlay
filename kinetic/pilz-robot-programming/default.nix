@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, roslint, prbt-moveit-config, catkin, pythonPackages, pilz-msgs, prbt-pg70-support, rostest, pilz-industrial-motion-testutils, moveit-commander, rospy, tf-conversions, tf, pilz-trajectory-generation }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-robot-programming";
-  version = "0.3.8";
+  version = "0.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_robot_programming/0.3.8-0.tar.gz";
-    name = "0.3.8-0.tar.gz";
-    sha256 = "3937d905736a4d05521dbbab8796805712e4ce3f73e3b7d42dd1a88310659122";
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_robot_programming/0.3.10-1.tar.gz";
+    name = "0.3.10-1.tar.gz";
+    sha256 = "76ee0c89a89b5d782dd825c9dbc3367fc8dc3b7fbf5afedfda01558b3bcfdf61";
   };
 
   buildType = "catkin";

@@ -2,18 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-lint-auto, ament-cmake, ament-lint-common }:
 buildRosPackage {
   pname = "ros-dashing-autoware-auto-examples";
-  version = "0.0.1-r1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/autoware_auto_examples/0.0.1-1";
+    url = "https://gitlab.com/AutowareAuto/AutowareAuto-release/repository/archive.tar.gz?ref=release/dashing/autoware_auto_examples/0.0.2-1";
     name = "archive.tar.gz";
-    sha256 = "42136dabe1fa630284c41d79a742afacdbd5854e52c489b1abe68411cfd63ad5";
+    sha256 = "096311e4ddaad9bd566a3a03b305d3a0bca9d18ea9358399ea42d8e330d4dd9f";
   };
 
   buildType = "ament_cmake";
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

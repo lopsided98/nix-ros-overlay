@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cppzmq, ament-cmake-gtest, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-behaviortree-cpp-v3";
-  version = "3.0.9-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/dashing/behaviortree_cpp_v3/3.0.9-1.tar.gz";
-    name = "3.0.9-1.tar.gz";
-    sha256 = "37949b11be8ce0a62a31ef24c3f5889cd02525bab64638fc9617f369c38c9141";
+    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/dashing/behaviortree_cpp_v3/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "81ed95918328456e1d71e6646f99e33025313518c4f4a9893428b11218a689ca";
   };
 
   buildType = "ament_cmake";

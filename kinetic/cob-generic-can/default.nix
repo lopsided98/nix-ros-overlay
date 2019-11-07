@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, libpcan, catkin, cob-utilities, socketcan-interface, libntcan }:
 buildRosPackage {
   pname = "ros-kinetic-cob-generic-can";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_generic_can/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "be9be898b75c82a0edf79f5d2e656a467c6d7e888013e702ae1434ad2138573c";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_generic_can/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "e43469ce4e10bd8527ff5122d2aa6e08b94639543704590fd13bcd035e287dea";
   };
 
   buildType = "catkin";

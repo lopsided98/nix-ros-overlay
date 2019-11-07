@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, roscpp, grid-map-msgs, catkin, grid-map-ros }:
 buildRosPackage {
   pname = "ros-kinetic-grid-map-loader";
-  version = "1.6.1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map_loader/1.6.1-0.tar.gz";
-    name = "1.6.1-0.tar.gz";
-    sha256 = "063c88f71f25e65653bb56cea1bc43fa7ecdba5fe09f1f67b01917f81339b87d";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/kinetic/grid_map_loader/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "d5c6f226ec84691a75e24c3e7a3b2a73e652e5f0d442805a0c095de043597f85";
   };
 
   buildType = "catkin";

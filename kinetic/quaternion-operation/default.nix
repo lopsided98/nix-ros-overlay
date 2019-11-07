@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rostest, eigen, roscpp, geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-quaternion-operation";
-  version = "0.0.3-r1";
+  version = "0.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/OUXT-Polaris/quaternion_operation-release/archive/release/kinetic/quaternion_operation/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "ac12e571a21a60004fa3980d40e41f791145dee8454d8d85143e156c3643bb44";
+    url = "https://github.com/OUXT-Polaris/quaternion_operation-release/archive/release/kinetic/quaternion_operation/0.0.3-2.tar.gz";
+    name = "0.0.3-2.tar.gz";
+    sha256 = "fe31ff9daa48a1b1549902cc7d2ef5c1321fbae73a0a70e83c2f6deceab07b41";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, tf, grid-map-core, catkin, costmap-2d }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-costmap-2d";
-  version = "1.6.1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_costmap_2d/1.6.1-0.tar.gz";
-    name = "1.6.1-0.tar.gz";
-    sha256 = "540826a6431bd931bdb478756ef566b76e5ddad01b15d84ebc6803048efab182";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_costmap_2d/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "28bb4e0ac05d626c6dc51df229dadf8fa4cc51cdb7d7fae02e252dc6215974c3";
   };
 
   buildType = "catkin";

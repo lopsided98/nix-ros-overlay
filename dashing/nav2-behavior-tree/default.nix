@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-common, behaviortree-cpp, rclcpp-action, lifecycle-msgs, geometry-msgs, ament-cmake-pytest, ament-cmake-gtest, launch, nav2-util, rclcpp, builtin-interfaces, std-srvs, rclcpp-lifecycle, tf2-geometry-msgs, tf2-ros, nav-msgs, std-msgs, ament-lint-common, launch-testing, nav2-msgs, tf2, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-nav2-behavior-tree";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_behavior_tree/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "cddf350a79b49593cf7fa22b1b701b199ea24f672165168129dec30ace39be3e";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_behavior_tree/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "df5dd5481d273c998f710fb5f46393db784d6206b5d8d36cbc54ac0ea94ecd96";
   };
 
   buildType = "ament_cmake";

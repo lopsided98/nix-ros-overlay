@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake-pytest, ament-cmake, rclcpp-lifecycle, ament-lint-common, launch-testing, nav2-msgs, ament-cmake-gtest, nav2-util, launch, tf2-ros, nav2-common, nav-msgs, rclcpp-action, rclcpp, ament-lint-auto, visualization-msgs, geometry-msgs }:
 buildRosPackage {
   pname = "ros-dashing-nav2-navfn-planner";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_navfn_planner/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "67a13fe7a32d24c878601b1da49316b5cfed7033d6dcac4fb02363bd1c6128a2";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_navfn_planner/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "67b0121198596c65c7c5c0b4f60ca00215324593f1891c0c1f3e629c0ef76bf7";
   };
 
   buildType = "ament_cmake";

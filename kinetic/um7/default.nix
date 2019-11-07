@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, serial, message-generation, message-runtime, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-um7";
-  version = "0.0.4";
+  version = "0.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/um7-release/archive/release/kinetic/um7/0.0.4-0.tar.gz";
-    name = "0.0.4-0.tar.gz";
-    sha256 = "96835957db572d596a12aeef84e6319b9f9f2e14876e0251542763a323ae24b4";
+    url = "https://github.com/ros-drivers-gbp/um7-release/archive/release/kinetic/um7/0.0.6-1.tar.gz";
+    name = "0.0.6-1.tar.gz";
+    sha256 = "b5f49ee4c0dcb8f24c678ad52c7443ff3b685633fabaaa1febfc02d1826faa18";
   };
 
   buildType = "catkin";

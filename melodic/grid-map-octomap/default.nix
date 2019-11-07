@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, grid-map-core, catkin, octomap }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-octomap";
-  version = "1.6.1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_octomap/1.6.1-0.tar.gz";
-    name = "1.6.1-0.tar.gz";
-    sha256 = "b21ce231c7f9c9bb20d94c48d608be6b1e0d640067542de8570227eef05cd520";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_octomap/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "6f5113c1b3e4459b22a411ac42ad5d476f786bf914783c5b60c2228fb7121048";
   };
 
   buildType = "catkin";

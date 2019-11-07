@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, pendulum-msgs, rmw-implementation-cmake, ament-lint-common, rttest, ament-cmake, launch-testing, launch, launch-testing-ament-cmake, rclcpp, launch-testing-ros, ament-lint-auto, tlsf-cpp, ros2run }:
 buildRosPackage {
   pname = "ros-dashing-pendulum-control";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/pendulum_control/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "6e40d0fb7334b28f72c27137d9509903465e0aab74aa2657c903f994dc383cc0";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/pendulum_control/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "64ff9a219ff31bdd2f9c4e9c818e03af91d31ff8f63c3249af6d0b6ae0da1fe9";
   };
 
   buildType = "ament_cmake";

@@ -2,21 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, gtest, pythonPackages, cmake, gmock }:
+{ lib, buildRosPackage, fetchurl, gtest, cmake, gmock }:
 buildRosPackage {
   pname = "ros-melodic-catkin";
-  version = "0.7.17";
+  version = "0.7.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/0.7.17-0.tar.gz";
-    name = "0.7.17-0.tar.gz";
-    sha256 = "316178707bc3f0edcb86a77ec2ec174b98b4d2ccf41306162cefe6588b3a9d41";
+    url = "https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/0.7.19-1.tar.gz";
+    name = "0.7.19-1.tar.gz";
+    sha256 = "10d50731008b2ab232a17cd1717d0b81d75d175b6f4b99a2e28ed4acc59df055";
   };
 
   buildType = "catkin";
-  buildInputs = [ python pythonPackages.catkin-pkg pythonPackages.empy ];
-  checkInputs = [ pythonPackages.nose pythonPackages.mock ];
-  propagatedBuildInputs = [ python pythonPackages.nose gtest pythonPackages.catkin-pkg cmake gmock pythonPackages.empy ];
+  propagatedBuildInputs = [ gtest cmake gmock ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

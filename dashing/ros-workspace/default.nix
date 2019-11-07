@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-package, cmake, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-dashing-ros-workspace";
-  version = "0.7.1-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_workspace-release/archive/release/dashing/ros_workspace/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "e278fd04588b7b764a1ecf8889b99930a91ba2a1d66396ce391c92ca0d253d84";
+    url = "https://github.com/ros2-gbp/ros_workspace-release/archive/release/dashing/ros_workspace/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "591b29f43aa835764a290c11483f0a81f54b576f9fe20f61adf9569809ab60ed";
   };
 
   buildType = "cmake";

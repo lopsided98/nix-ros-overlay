@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake-modules, boost, cob-vision-utils, image-transport, sensor-msgs, cv-bridge, message-filters, polled-camera, tinyxml, catkin, message-generation, message-runtime, rospy, roscpp, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-cob-camera-sensors";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_camera_sensors/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "8f942af892ffb0e1b09602f1098ab84188a81bea36687eff042288ad62019cb6";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_camera_sensors/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "bb2f6e100a67a3658fdef4e13f347348934d78132ff348302bb5e8248102e60a";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-commander, moveit-core, moveit-msgs, eigen-conversions, pilz-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-industrial-motion-testutils";
-  version = "0.3.8";
+  version = "0.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_industrial_motion_testutils/0.3.8-0.tar.gz";
-    name = "0.3.8-0.tar.gz";
-    sha256 = "27040ab1dc8a0d9736d0bf8bc66f567a38cb175e79fb122b305f782f6e9da93d";
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/kinetic/pilz_industrial_motion_testutils/0.3.10-1.tar.gz";
+    name = "0.3.10-1.tar.gz";
+    sha256 = "50907af1ea26773568a750578dfd816052d2f6d995d0199445b40fd703cfbefe";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, pluginlib, catkin, liblapack, moveit-core, tf-conversions, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-abb-irb2400-moveit-plugins";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb2400_moveit_plugins/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "e52a4bbe761932e7b0c4baf47184b690153aec1457693ad5eb6ee9cced11a70b";
+    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_irb2400_moveit_plugins/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "716b4c98c3a7b11f3735f10800e64163a4313ab4cd47b7d33cd87cc85996b113";
   };
 
   buildType = "catkin";

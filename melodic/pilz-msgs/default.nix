@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, moveit-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-pilz-msgs";
-  version = "0.4.6-r1";
+  version = "0.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_msgs/0.4.6-1.tar.gz";
-    name = "0.4.6-1.tar.gz";
-    sha256 = "ff226212eb71cdb081310846528a0805568b23429711fd0a63203fcb21c9d463";
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_msgs/0.4.7-1.tar.gz";
+    name = "0.4.7-1.tar.gz";
+    sha256 = "b7a99bbac5d841f029097f50809219cf94f5282565188485c51c907cf33fb469";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, libyamlcpp, catkin, eigen, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-ariles-ros";
-  version = "1.1.5-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/asherikov/ariles-release/archive/release/melodic/ariles_ros/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "754b8f19a0eff587ad0817975739d9e6451007848376ae6171b8a02277c61a2d";
+    url = "https://github.com/asherikov/ariles-release/archive/release/melodic/ariles_ros/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "ba25ae4ed03521009d67be9148fac52f462075a7cf387e4ad30ec34b1276a159";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, actionlib, tf, mbf-abstract-nav, geometry-msgs, std-srvs, mbf-costmap-core, catkin, move-base, move-base-msgs, nav-msgs, std-msgs, roscpp, pluginlib, base-local-planner, mbf-msgs, nav-core, dynamic-reconfigure, mbf-utility }:
 buildRosPackage {
   pname = "ros-melodic-mbf-costmap-nav";
-  version = "0.2.4-r1";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_costmap_nav/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "b528c3ba7d8e6e7690e9513bcfa2a407cad533930b6d1d3003376fe94d11a7a8";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_costmap_nav/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "9bcf5fc8d5fb225a165dca3f2ce12e4a1cea0c875b183ad922cbf63a51ea65ff";
   };
 
   buildType = "catkin";

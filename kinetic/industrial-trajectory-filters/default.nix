@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, moveit-ros-planning, pluginlib, orocos-kdl, trajectory-msgs, catkin, moveit-core }:
 buildRosPackage {
   pname = "ros-kinetic-industrial-trajectory-filters";
-  version = "0.7.0";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_trajectory_filters/0.7.0-0.tar.gz";
-    name = "0.7.0-0.tar.gz";
-    sha256 = "967c02ff7e7e92d017fad6bb74fe4be2bcc3ceb98dcc750c4074bfac27772a8e";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/industrial_trajectory_filters/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "88abedfb278699d5b20ad2fcfdaa2dcfde2a89fc5ce65d6e14d82292dd7dc318";
   };
 
   buildType = "catkin";

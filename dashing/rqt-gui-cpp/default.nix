@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt-gui-cpp, qt-gui, rclcpp, qt5 }:
 buildRosPackage {
   pname = "ros-dashing-rqt-gui-cpp";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_gui_cpp/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "d3badbb1c1c003c02612459c7060cb1e5e4e414666910647af8924307ea2815b";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_gui_cpp/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "74a2928add4281a74a24cda26fa36468a8aeb70348e82de6979b95a57b28bd0e";
   };
 
   buildType = "ament_cmake";

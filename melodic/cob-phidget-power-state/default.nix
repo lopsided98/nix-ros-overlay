@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cob-msgs, catkin, cob-phidgets, rospy }:
 buildRosPackage {
   pname = "ros-melodic-cob-phidget-power-state";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_phidget_power_state/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "d79776bbc3ce0129a4a53b9db3a8035ebc4bdd374107b5bf70e5ae843d6417f6";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_phidget_power_state/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "99b555237b13dbb1a61c2f550491f02a577bdf10892bb1e889eb3c859220e004";
   };
 
   buildType = "catkin";

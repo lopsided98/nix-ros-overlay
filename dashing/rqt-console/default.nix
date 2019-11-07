@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rqt-gui-py, ament-cmake, rclpy, rqt-gui, rcl-interfaces, ament-index-python, rqt-py-common, python-qt-binding }:
 buildRosPackage {
   pname = "ros-dashing-rqt-console";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_console-release/archive/release/dashing/rqt_console/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "124997687ab79baf7eec6ac08c365d1b73763e978e91188fbd6ef33f5949d8f5";
+    url = "https://github.com/ros2-gbp/rqt_console-release/archive/release/dashing/rqt_console/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "76504c7586c5247da4313e82120f11ce83199e1496ec3bd6b46c2a35acdd47bf";
   };
 
   buildType = "ament_cmake";

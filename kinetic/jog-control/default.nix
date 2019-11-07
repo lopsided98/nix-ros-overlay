@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, jog-launch, jog-controller, catkin, jog-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-jog-control";
-  version = "0.0.1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jog_control-release/archive/release/kinetic/jog_control/0.0.1-0.tar.gz";
-    name = "0.0.1-0.tar.gz";
-    sha256 = "12ac8a9904af23778000c4cda9c49a00618c35df3e090da74c7a69b588480cae";
+    url = "https://github.com/tork-a/jog_control-release/archive/release/kinetic/jog_control/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "e2d71ddb6645c4f81b284e8195b79fc5e398620e49f7f8ea60d9e0a8a1bde2c0";
   };
 
   buildType = "catkin";

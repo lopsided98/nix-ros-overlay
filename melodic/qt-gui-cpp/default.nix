@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, pluginlib, cmake-modules, catkin, tinyxml, pkg-config, qt-gui, qt5, python-qt-binding }:
 buildRosPackage {
   pname = "ros-melodic-qt-gui-cpp";
-  version = "0.3.11";
+  version = "0.3.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_cpp/0.3.11-0.tar.gz";
-    name = "0.3.11-0.tar.gz";
-    sha256 = "fbbba01e82d3c63dfeab0fdc9caac8916de97295a8e8c08e715dc965e69dc545";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_cpp/0.3.15-1.tar.gz";
+    name = "0.3.15-1.tar.gz";
+    sha256 = "4cae8a38021b208d44334a954990b4084c480ef3096024310c86a5336997a07a";
   };
 
   buildType = "catkin";

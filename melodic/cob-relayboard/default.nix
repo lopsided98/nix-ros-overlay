@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, std-msgs, cob-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-cob-relayboard";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_relayboard/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "49facd7caf59cfd6491317d2fd7a985e5400552d8582ae7e2f312ef5fc3da760";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_relayboard/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "2912711b9f29411d00dfb918fe30841f958fe23b154d05725d67330784389e1f";
   };
 
   buildType = "catkin";

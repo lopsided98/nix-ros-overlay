@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, roscpp, grid-map-msgs, catkin, grid-map-ros }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-loader";
-  version = "1.6.1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_loader/1.6.1-0.tar.gz";
-    name = "1.6.1-0.tar.gz";
-    sha256 = "933535f2c73fb43bc6502d724b03e684683ccdc476dce5b3b602ed7a4a0e60d1";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_loader/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "9670bfef23a27ede70e0de843882f6b641ce26c13052c1afcd5e1c741fbe6e99";
   };
 
   buildType = "catkin";

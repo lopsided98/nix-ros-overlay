@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, qt5, python3Packages, ament-index-python, ament-lint-auto, python-qt-binding, tango-icon-theme }:
 buildRosPackage {
   pname = "ros-dashing-qt-gui";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/dashing/qt_gui/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "0d6fe5fa482d3814a9c8e425cad7cdf3b003617c0b974e5c854221de48e8d1e5";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/dashing/qt_gui/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "5c89db11d107fc71ba81088b98507b14613d1b28930185d430985813d90b1964";
   };
 
   buildType = "ament_cmake";

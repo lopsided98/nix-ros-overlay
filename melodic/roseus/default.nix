@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, jskeus, actionlib-msgs, actionlib, tf, actionlib-tutorials, geometry-msgs, rosbash, message-generation, roslang, message-runtime, angles, coreutils, std-srvs, rospack, mk, rosmsg, rosbuild, catkin, tf2-ros, xorg, std-msgs, roscpp, visualization-msgs, euslisp, rosnode, geneus, sensor-msgs, rostest, rostopic, dynamic-reconfigure }:
 buildRosPackage {
   pname = "ros-melodic-roseus";
-  version = "1.7.4";
+  version = "1.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/melodic/roseus/1.7.4-0.tar.gz";
-    name = "1.7.4-0.tar.gz";
-    sha256 = "e68ad89c7896f6b30f8a8dea7b8a0216dc5bfad5988cf8f287dd148069f5ccd1";
+    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/melodic/roseus/1.7.4-1.tar.gz";
+    name = "1.7.4-1.tar.gz";
+    sha256 = "02ba052b195e8a7bc3f83807425b5293a11b32283f7d8f5673ad742bc41e8c20";
   };
 
   buildType = "catkin";

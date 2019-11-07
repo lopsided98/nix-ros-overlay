@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, gtest, catkin, ffmpeg, aws-common, cmake, gmock }:
 buildRosPackage {
   pname = "ros-kinetic-h264-encoder-core";
-  version = "2.0.1-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/h264_encoder_core-release/archive/release/kinetic/h264_encoder_core/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "1cd837b1a7368bbc89f71be80f6d0870458d39eedb35d45fc66ee3014a419ba1";
+    url = "https://github.com/aws-gbp/h264_encoder_core-release/archive/release/kinetic/h264_encoder_core/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "d842c9640adea6a8ba3debd7679f3e1bdfd7577434951bac97eb8971b0423b26";
   };
 
   buildType = "cmake";

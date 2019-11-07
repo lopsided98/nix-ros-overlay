@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, qt-gui-app, catkin, qt-gui-cpp, qt-gui, qt-dotgraph, qt-gui-py-common }:
 buildRosPackage {
   pname = "ros-melodic-qt-gui-core";
-  version = "0.3.11";
+  version = "0.3.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_core/0.3.11-0.tar.gz";
-    name = "0.3.11-0.tar.gz";
-    sha256 = "c49816fb690393c749f341c95ac6e0ee7000121701ea3ec5597297712d90aa9a";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_core/0.3.15-1.tar.gz";
+    name = "0.3.15-1.tar.gz";
+    sha256 = "7e88f8db78ec7edc811a35dc989172dedfc4a180813104434a8fab5064cda22e";
   };
 
   buildType = "catkin";

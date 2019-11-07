@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, gazebo-ros, control-msgs, trajectory-msgs, cob-script-server, cob-hardware-config, catkin, gazebo-plugins, rostest, cob-gazebo-ros-control, cob-bringup, rospy, cob-supported-robots, roslaunch, cob-default-robot-config, gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-kinetic-cob-gazebo";
-  version = "0.7.1-r2";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_simulation-release/archive/release/kinetic/cob_gazebo/0.7.1-2.tar.gz";
-    name = "0.7.1-2.tar.gz";
-    sha256 = "25c3453a88874c47ff3270f365c7cf9272983c63acf3de314ca58b20fa2a1fe5";
+    url = "https://github.com/ipa320/cob_simulation-release/archive/release/kinetic/cob_gazebo/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "3a4246e7865887e7acdd67409437e65cb9b7f8c04df8f846074aea641fc83305";
   };
 
   buildType = "catkin";

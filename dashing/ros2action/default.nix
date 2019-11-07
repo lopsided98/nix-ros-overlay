@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-xmllint, ament-flake8, test-msgs, rclpy, rosidl-runtime-py, pythonPackages, ament-pep257, action-msgs, ament-copyright, ament-index-python, ros2cli }:
 buildRosPackage {
   pname = "ros-dashing-ros2action";
-  version = "0.7.4-r1";
+  version = "0.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/dashing/ros2action/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "0bca539febbeeb7d52f9edfc4e2ff445e578f6e698af2bed9346515195dc24db";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/dashing/ros2action/0.7.7-1.tar.gz";
+    name = "0.7.7-1.tar.gz";
+    sha256 = "7c7559cd5b76617d6c0bcbc37392539920f197390640b0ff460f759a3f577c47";
   };
 
   buildType = "ament_python";

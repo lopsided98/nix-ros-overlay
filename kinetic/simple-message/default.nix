@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, industrial-msgs, catkin, rosunit, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-simple-message";
-  version = "0.7.0";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/simple_message/0.7.0-0.tar.gz";
-    name = "0.7.0-0.tar.gz";
-    sha256 = "7441b8f0c300d45fd52367d4ccc062a2b904726fc5eccebdf8fdf49d38812cbf";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/kinetic/simple_message/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "03b10af29cb7c1632ad8fa20490c3244b97db32ad48196a33984110aa0ace63d";
   };
 
   buildType = "catkin";

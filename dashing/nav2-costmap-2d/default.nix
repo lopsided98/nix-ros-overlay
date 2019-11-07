@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-voxel-grid, nav2-common, nav2-lifecycle-manager, geometry-msgs, nav2-map-server, ament-cmake-pytest, ament-cmake-gtest, launch, message-filters, nav2-util, tf2-sensor-msgs, rclcpp, rclcpp-lifecycle, tf2-geometry-msgs, tf2-ros, nav-msgs, std-msgs, laser-geometry, visualization-msgs, pluginlib, ament-lint-common, launch-testing, sensor-msgs, nav2-msgs, tf2, ament-lint-auto, map-msgs }:
 buildRosPackage {
   pname = "ros-dashing-nav2-costmap-2d";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_costmap_2d/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "f263d5651044df1249e07b52d3c0746e605c753883a34eec913f34847ec6997b";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_costmap_2d/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "387faa441ff7f0c98d091c30508c40084dba15991cd1bd5165005d38932afea7";
   };
 
   buildType = "ament_cmake";

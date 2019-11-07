@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assisted-teleop, catkin, sbpl-lattice-planner, pose-follower, goal-passer, twist-recovery, pose-base-controller, sbpl-recovery }:
 buildRosPackage {
   pname = "ros-kinetic-navigation-experimental";
-  version = "0.2.1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/navigation_experimental/0.2.1-0.tar.gz";
-    name = "0.2.1-0.tar.gz";
-    sha256 = "e3b2a48e5b1db6352b25db772b9e721f095b0ab91014c914a53baf107c27f0a1";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/kinetic/navigation_experimental/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "f832c073d3bcc6a0dae7b1d748bbf52ec6a0842eef1aa82be2c8a9f63c690fe3";
   };
 
   buildType = "catkin";

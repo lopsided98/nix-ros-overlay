@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, sensor-msgs, catkin, diagnostic-updater, message-generation, message-runtime, visualization-msgs, pcl-ros, dynamic-reconfigure, roscpp, pcl-conversions }:
 buildRosPackage {
   pname = "ros-melodic-sick-scan";
-  version = "1.3.21";
+  version = "1.3.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_scan-release/archive/release/melodic/sick_scan/1.3.21-0.tar.gz";
-    name = "1.3.21-0.tar.gz";
-    sha256 = "dce691bd294f3051310108f8e5f90b2ecfc6d287f2b86fdfbbbded89f18d68eb";
+    url = "https://github.com/SICKAG/sick_scan-release/archive/release/melodic/sick_scan/1.3.22-1.tar.gz";
+    name = "1.3.22-1.tar.gz";
+    sha256 = "a4e7219090b37c5062afd1195a0569fb7bbf9f9f9214c0df74b7588114ffffe6";
   };
 
   buildType = "catkin";

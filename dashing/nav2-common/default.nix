@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-dashing-nav2-common";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_common/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "748440a2359c2c5c8690fd6a64a07690baf01718e242f4729ed10560be9f9e2c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/dashing/nav2_common/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "7e5ed3e429d4495fd5241b1d8395bd95c1740ac38332f82d94c43182a3bacb98";
   };
 
   buildType = "ament_cmake";

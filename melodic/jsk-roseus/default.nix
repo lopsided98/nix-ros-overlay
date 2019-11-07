@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, roseus, catkin, euslisp, geneus }:
 buildRosPackage {
   pname = "ros-melodic-jsk-roseus";
-  version = "1.7.4";
+  version = "1.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/melodic/jsk_roseus/1.7.4-0.tar.gz";
-    name = "1.7.4-0.tar.gz";
-    sha256 = "c72f89169571ed31e8051108300d8c87d656c9f72df5d91e96bd8ec808c796a4";
+    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/melodic/jsk_roseus/1.7.4-1.tar.gz";
+    name = "1.7.4-1.tar.gz";
+    sha256 = "38497ef160c3e76b0602f2ddf41bb50ce54e8063de8a6ed3bce0984af02c1b09";
   };
 
   buildType = "catkin";

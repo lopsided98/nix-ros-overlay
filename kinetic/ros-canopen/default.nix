@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, socketcan-bridge, can-msgs, catkin, canopen-402, canopen-motor-node, socketcan-interface, canopen-chain-node, canopen-master }:
 buildRosPackage {
   pname = "ros-kinetic-ros-canopen";
-  version = "0.7.11-r1";
+  version = "0.7.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/ros_canopen/0.7.11-1.tar.gz";
-    name = "0.7.11-1.tar.gz";
-    sha256 = "23e0e75cbaa780ee3c5048a1d633b11f510b8bb6c97a19d2c04c6ad331e669c7";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/ros_canopen/0.7.12-1.tar.gz";
+    name = "0.7.12-1.tar.gz";
+    sha256 = "7ddc0dd062ddfaa42416a604d1046020dc26681b802d65ebd6f674991f6dd21d";
   };
 
   buildType = "catkin";

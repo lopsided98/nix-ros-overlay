@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, python-qt-binding, rclpy, rosidl-default-generators, qt-gui, qt5, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, python-qt-binding, rclpy, rosidl-default-generators, python-cmake-module, qt-gui, qt5, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-rqt-py-common";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_py_common/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "2a9557efde2e471bac04ff2eee55db31f2d30ece0b3ab70603622d56e0094c3d";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/dashing/rqt_py_common/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "def9938b7298af79e2e3f9453823327db15138bec526c6495abf5f10839dad0b";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ rclpy qt5.qtbase ];
-  checkInputs = [ ament-cmake-pytest ];
+  checkInputs = [ python-cmake-module ament-cmake-pytest ];
   propagatedBuildInputs = [ python-qt-binding rclpy qt5.qtbase qt-gui rosidl-default-runtime ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 

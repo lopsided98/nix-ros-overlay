@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rclcpp-components, ament-cmake-pytest, ament-cmake, rmw-implementation-cmake, rcutils, ament-lint-common, launch-testing, rosidl-default-generators, launch, launch-testing-ament-cmake, rosidl-cmake, rclcpp, launch-testing-ros, std-msgs, ament-lint-auto, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-logging-demo";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/logging_demo/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "0845feb576850649578921ec7f13697289c1f723a19131cb5e7689229e9dc29f";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/dashing/logging_demo/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "ccb82b032260024a6ee033fb30fb84f9456db7b3f6f4d6d961030089da09c53b";
   };
 
   buildType = "ament_cmake";

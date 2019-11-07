@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, tf, catkin, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-tutorials";
-  version = "0.1.24";
+  version = "0.1.26-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_tutorials/0.1.24-0.tar.gz";
-    name = "0.1.24-0.tar.gz";
-    sha256 = "c5e608015e00a03be1ea0aa3a86e91cab4da37a2ec842f915eaaa2a8930c3e8b";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_tutorials/0.1.26-1.tar.gz";
+    name = "0.1.26-1.tar.gz";
+    sha256 = "056e0a6b2e6f66f064975a5d8df023325bc86ac013f6ed4d179b82a3ff369619";
   };
 
   buildType = "catkin";

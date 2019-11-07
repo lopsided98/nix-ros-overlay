@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rosidl-generator-cpp, pluginlib, ament-lint-common, shared-queues-vendor, ament-cmake-gmock, test-msgs, rosbag2-test-common, ament-cmake, poco-vendor, rosidl-typesupport-cpp, rosidl-typesupport-introspection-cpp, ament-index-cpp, ament-lint-auto, rosbag2-storage, rcutils }:
 buildRosPackage {
   pname = "ros-dashing-rosbag2";
-  version = "0.1.6-r1";
+  version = "0.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/rosbag2/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "2c8dce7f00c1249db23a5f5245917f638c6696291faf8695e2705d8fd798524d";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/dashing/rosbag2/0.1.8-1.tar.gz";
+    name = "0.1.8-1.tar.gz";
+    sha256 = "93d75ae889fc71f5ca3eba7ecb8beed76e457f13e6fe284032e3289f06424f3e";
   };
 
   buildType = "ament_cmake";

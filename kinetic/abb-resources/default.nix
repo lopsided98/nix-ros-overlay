@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-abb-resources";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_resources/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "26d97f8ab376d314e765b682243f0566d151ab825cdd026ed71d9d12efbdc7ff";
+    url = "https://github.com/ros-industrial-release/abb-release/archive/release/kinetic/abb_resources/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "025b8ada36f5b3ab8c0c5c8f44c0ad488881d7c6db860be2f1f9eed56aa4b212";
   };
 
   buildType = "catkin";

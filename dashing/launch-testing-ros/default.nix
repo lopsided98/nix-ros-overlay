@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, launch-ros, rclpy, launch-testing, pythonPackages, demo-nodes-py, ament-pep257, std-msgs, ament-copyright }:
 buildRosPackage {
   pname = "ros-dashing-launch-testing-ros";
-  version = "0.8.6-r1";
+  version = "0.8.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/dashing/launch_testing_ros/0.8.6-1.tar.gz";
-    name = "0.8.6-1.tar.gz";
-    sha256 = "e67b52ccae99649d4f16f3dddcdabf80daad88762a32289735f5c0767e870118";
+    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/dashing/launch_testing_ros/0.8.7-1.tar.gz";
+    name = "0.8.7-1.tar.gz";
+    sha256 = "16acb0261e74aaaedddb08268d9cc835f8b48c5690cb6eddc16edc225de79f2a";
   };
 
   buildType = "ament_python";

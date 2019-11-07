@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, roscpp-serialization, abseil-cpp, rostime }:
+{ lib, buildRosPackage, fetchurl, catkin, rostime, roscpp, roscpp-serialization }:
 buildRosPackage {
   pname = "ros-kinetic-ros-type-introspection";
-  version = "1.3.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/ros_type_introspection-release/archive/release/kinetic/ros_type_introspection/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "b63e3ec1785ec13a785f73f4a9ad3e843dc1692e1b515210f044b08ee73df703";
+    url = "https://github.com/facontidavide/ros_type_introspection-release/archive/release/kinetic/ros_type_introspection/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "89cce6fd04dc0e627da83cd315e957ed2305b278d6d3a35f413833e286a49176";
   };
 
   buildType = "catkin";
-  buildInputs = [ abseil-cpp roscpp rostime roscpp-serialization ];
-  propagatedBuildInputs = [ abseil-cpp rostime roscpp roscpp-serialization ];
+  buildInputs = [ roscpp rostime roscpp-serialization ];
+  propagatedBuildInputs = [ roscpp rostime roscpp-serialization ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

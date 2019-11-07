@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-cob-utilities";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_utilities/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "fb5b1fa89086c9fd40043b0e725d8909ade0e066ffa166b5ffab6918d2263fcc";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_utilities/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "7ff90ea1abde2f545a1e1d5d92ba7c7910a363b507c6eec54b41e85e70682cde";
   };
 
   buildType = "catkin";
