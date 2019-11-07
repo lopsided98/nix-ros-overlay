@@ -174,6 +174,8 @@ self: super: {
 
  connext-cmake-module = self.callPackage ./connext-cmake-module {};
 
+ console-bridge = self.callPackage ./console-bridge {};
+ 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
  control-msgs = self.callPackage ./control-msgs {};
