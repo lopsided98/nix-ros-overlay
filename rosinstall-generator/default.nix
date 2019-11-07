@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "rosinstall_generator";
-  version = "0.1.17";
+  version = "0.1.18";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1h08qwbafba4pnq7c9m7n4nl0b4zvz6jynaab3fpa816x5h2qsif";
+    sha256 = "18n1yyadr88hm0wlqzpr4gbyjm58kbl2i4d61vc8gij6a3fxxknz";
   };
 
   propagatedBuildInputs = [ catkin-pkg rosdistro rospkg pyyaml ];
