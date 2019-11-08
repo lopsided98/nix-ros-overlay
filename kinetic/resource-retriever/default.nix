@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, boost, catkin, curl, roslib }:
+{ lib, buildRosPackage, fetchurl, rosconsole, boost, catkin, pythonPackages, curl, roslib }:
 buildRosPackage {
   pname = "ros-kinetic-resource-retriever";
   version = "1.12.5-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ curl roslib rosconsole boost ];
-  propagatedBuildInputs = [ curl roslib rosconsole boost ];
+  propagatedBuildInputs = [ rosconsole boost pythonPackages.rospkg curl roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

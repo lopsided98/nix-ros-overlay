@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-environment, rospack, boost, catkin, rosmake }:
+{ lib, buildRosPackage, fetchurl, ros-environment, rospack, boost, catkin, pythonPackages, rosmake }:
 buildRosPackage {
   pname = "ros-melodic-roslib";
   version = "1.14.7-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ rospack boost ];
   checkInputs = [ rosmake ];
-  propagatedBuildInputs = [ ros-environment rospack catkin ];
+  propagatedBuildInputs = [ pythonPackages.rospkg ros-environment rospack catkin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

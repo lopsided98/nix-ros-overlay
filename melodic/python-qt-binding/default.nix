@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, qt5, rosbuild }:
+{ lib, buildRosPackage, fetchurl, catkin, rosbuild, pythonPackages, qt5 }:
 buildRosPackage {
   pname = "ros-melodic-python-qt-binding";
   version = "0.3.6-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosbuild qt5.qtbase ];
-  propagatedBuildInputs = [ catkin ];
+  buildInputs = [ pythonPackages.pyqt5 rosbuild qt5.qtbase ];
+  propagatedBuildInputs = [ pythonPackages.pyqt5 catkin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

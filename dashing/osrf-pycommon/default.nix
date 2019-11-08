@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl,  }:
+{ lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-dashing-osrf-pycommon";
   version = "0.1.9-r1";
@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
+  propagatedBuildInputs = [ python3Packages.mock ];
 
   meta = {
     description = ''Commonly needed Python modules, used by Python software developed at OSRF.'';

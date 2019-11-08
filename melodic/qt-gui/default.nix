@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, qt5, tango-icon-theme }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, qt5, python-qt-binding, tango-icon-theme }:
 buildRosPackage {
   pname = "ros-melodic-qt-gui";
   version = "0.3.15-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ qt5.qtbase ];
-  propagatedBuildInputs = [ python-qt-binding tango-icon-theme ];
+  buildInputs = [ pythonPackages.pyqt5 qt5.qtbase ];
+  propagatedBuildInputs = [ pythonPackages.rospkg python-qt-binding tango-icon-theme ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
