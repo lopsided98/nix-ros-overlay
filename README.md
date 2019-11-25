@@ -54,5 +54,5 @@ Prebuilt ROS packages are hosted on my [Hydra build server](https://hydra.benwol
 To use this binary cache, set the following options in `nix.conf`:
 ```
 substituters = https://cache.nixos.org/ https://hydra.benwolsieffer.com/
-trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-cache.benwolsieffer.com-1:fv34TjwD6LKli0BqclR4wRjj21WUry4eaXuaStzvpeI=
+trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= hydra.benwolsieffer.com-1:ppeFHW/O9KtZTQkB7vzpfIOEd4wM0+JZ4SosfqosmOQ=
 ```
