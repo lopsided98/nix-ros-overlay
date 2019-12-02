@@ -28,8 +28,11 @@ _runCatkinEnvHook() {
   [ -n "$1" ] || return 0
   # Causes hooks to look in the wrong place
   unset CATKIN_ENV_HOOK_WORKSPACE
+  # Some hooks assume set +u
+  set +u
   # Some hooks fail in stripped down bash during builds
   source "$1" || true
+  set -u
 }
 
 _runCatkinEnvHooksArray() {
