@@ -66,19 +66,13 @@ let
     }: let
       setupHook = self.callPackage ./catkin-setup-hook { } distro;
     in {
-      propagatedBuildInputs = [ self.cmake ] ++ propagatedBuildInputs;
-      prePhases = prePhases ++ [ "setupPhase" ];
-      # Catkin uses its own setup hook
-      setupPhase = ''
-        source "${setupHook}"
-      '';
+      propagatedBuildInputs = [ self.cmake setupHook ] ++ propagatedBuildInputs;
 
       postPatch = postPatch + ''
         patchShebangs cmake
         substituteInPlace cmake/templates/python_distutils_install.sh.in \
           --replace /usr/bin/env "${self.coreutils}/bin/env"
       '';
-      inherit setupHook;
     });
 
     # Packages that depend on catkin-pip still fail because they try to

@@ -12,7 +12,7 @@ _findCatkinEnvHooks() {
   local pkg="$1"
   local pkgEnvHookDir="$pkg/etc/catkin/profile.d"
   # Deduplicate the packages
-  if [ -z "${_catkinPackagesSeen["$pkg"]}" ] && isCatkinPackage "$pkg" && [ -d "$pkgEnvHookDir" ]; then
+  if [ -z "${_catkinPackagesSeen["$pkg"]:-}" ] && isCatkinPackage "$pkg" && [ -d "$pkgEnvHookDir" ]; then
     while IFS= read -rd '' hook; do
       case "$hook" in
         *.sh) _catkinGenericEnvHooks["$(basename "$hook")"]="$hook" ;; #" (buggy syntax highlighting)
