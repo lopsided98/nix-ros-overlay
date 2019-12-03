@@ -154,6 +154,15 @@ let
       '';
     });
 
+    roscpp = rosSuper.roscpp.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      # Remove unused Boost signals library that was removed in Boost 1.69
+      postPatch = ''
+        sed -i 's/signals//g' CMakeLists.txt
+      '' + postPatch;
+    });
+
     rosidl-default-runtime = rosSuper.rosidl-default-runtime.overrideAttrs ({
       propagatedBuildInputs ? [], ...
     }: {
