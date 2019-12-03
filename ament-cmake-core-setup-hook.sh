@@ -7,7 +7,7 @@ declare -gA _amentPackagesSeen
 _findAmentPackages() {
   local pkg="$1"
   # Deduplicate the packages
-  if [ -z "${_amentPackagesSeen["$pkg"]}" ] && isAmentPackage "$pkg"; then
+  if [ -z "${_amentPackagesSeen["$pkg"]:-}" ] && isAmentPackage "$pkg"; then
     addToSearchPath AMENT_PREFIX_PATH "$pkg"
   fi
   _amentPackagesSeen["$pkg"]=1
