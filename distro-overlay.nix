@@ -43,6 +43,14 @@ let
       sed -Ei CMakeLists.txt \
         -e 's/(Boost [^)]*)python[^ )]*([ )])/\1${pythonLib}\2/'
     '';
+
+    patchBoostSignals = pkg: pkg.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = ''
+        sed -i '/find_package(Boost [^)]*/s/signals//g' CMakeLists.txt
+      '' + postPatch;
+    });
   in {
     # ROS package overrides/fixups
 
@@ -154,14 +162,7 @@ let
       '';
     });
 
-    roscpp = rosSuper.roscpp.overrideAttrs ({
-      postPatch ? "", ...
-    }: {
-      # Remove unused Boost signals library that was removed in Boost 1.69
-      postPatch = ''
-        sed -i 's/signals//g' CMakeLists.txt
-      '' + postPatch;
-    });
+    roscpp = patchBoostSignals rosSuper.roscpp;
 
     rosidl-default-runtime = rosSuper.rosidl-default-runtime.overrideAttrs ({
       propagatedBuildInputs ? [], ...
@@ -218,6 +219,8 @@ let
       url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
       sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
     };
+
+    tf2 = patchBoostSignals rosSuper.tf2;
 
     tinydir-vendor = rosSelf.patchVendorUrl rosSuper.tinydir-vendor {
       url = "https://github.com/cxong/tinydir/archive/1.2.4.tar.gz";
