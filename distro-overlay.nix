@@ -134,6 +134,8 @@ let
       nativeBuildInputs = nativeBuildInputs ++ [ self.pkgconfig ];
     });
 
+    message-filters = patchBoostSignals rosSuper.message-filters;
+
     message-relay = rosSuper.message-relay.overrideAttrs ({
       postPatch ? "", ...
     }: {
