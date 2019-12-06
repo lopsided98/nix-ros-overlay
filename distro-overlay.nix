@@ -1,10 +1,9 @@
 { distro, python }:
 self: super:
-with self.lib;
-with import ./mk-overlay.nix { inherit (self) lib; };
 let
-
   base = rosSelf: rosSuper: {
+    lib = super.lib // import ./lib { inherit self rosSelf; };
+  
     callPackage = self.newScope rosSelf;
 
     buildRosPackage = rosSelf.callPackage ./build-ros-package { };
@@ -20,38 +19,9 @@ let
       python = rosSelf.python;
       enablePython = true;
     };
-
-    patchVendorUrl = pkg: {
-      url, sha256,
-      originalUrl ? url,
-      file ? "CMakeLists.txt"
-    }: pkg.overrideAttrs ({
-      postPatch ? "", ...
-    }: {
-      postPatch = ''
-        substituteInPlace '${file}' \
-          --replace '${originalUrl}' '${self.fetchurl { inherit url sha256; }}'
-      '' + postPatch;
-    });
   };
 
-  overrides = rosSelf: rosSuper: let
-    patchBoostPython = let
-      pythonVersion = rosSelf.python.sourceVersion;
-      pythonLib = "python${pythonVersion.major}${pythonVersion.minor}";
-    in ''
-      sed -Ei CMakeLists.txt \
-        -e 's/(Boost [^)]*)python[^ )]*([ )])/\1${pythonLib}\2/'
-    '';
-
-    patchBoostSignals = pkg: pkg.overrideAttrs ({
-      postPatch ? "", ...
-    }: {
-      postPatch = ''
-        sed -i '/find_package(Boost [^)]*/s/signals//g' CMakeLists.txt
-      '' + postPatch;
-    });
-  in {
+  overrides = rosSelf: rosSuper: with rosSelf.lib; {
     # ROS package overrides/fixups
 
     ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({
@@ -245,7 +215,7 @@ let
       sha256 = "1g45f71mk4gyca550177qf70v5cvavlsalmg7x8bi59j6z6f0mgz";
     };
   };
-in mkOverlay [
+in self.rosPackages.lib.mkOverlay [
   base
   (import (./. + "/${distro}/generated.nix"))
   overrides

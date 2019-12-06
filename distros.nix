@@ -2,6 +2,8 @@
 
 self: super: {
   rosPackages = rec {
+    lib = super.lib // import ./lib { inherit self; };
+
     kinetic = import ./distro-overlay.nix {
       distro = "kinetic";
       python = self.python2;
