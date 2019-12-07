@@ -130,10 +130,10 @@ async function run() {
     const cachixCache = core.getInput('cachix-cache')
     const cachixSigningKey = core.getInput('cachix-signing-key')
 
-    //await cachix.install(nixpkgs)
+    await cachix.install(nixpkgs)
 
     core.startGroup(`Setting up Cachix cache: ${cachixCache}`)
-    //await cachix.use(cachixCache)
+    await cachix.use(cachixCache)
     if (cachixSigningKey !== "") {
       core.exportVariable('CACHIX_SIGNING_KEY', cachixSigningKey)
     }

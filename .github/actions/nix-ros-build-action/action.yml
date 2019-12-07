@@ -10,7 +10,7 @@ inputs:
     default: rosPackages
   nixpkgs:
     description: URL used to download nixpkgs
-    default: https://github.com/lopsided98/nixpkgs/archive/nix-ros.zip
+    default: https://github.com/lopsided98/nixpkgs/archive/nix-ros.tar.gz
   parallelism:
     description: Number of builds to run in parallel
     default: 20
