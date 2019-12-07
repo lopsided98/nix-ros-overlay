@@ -1141,9 +1141,9 @@ function run() {
             const parallelism = core.getInput('parallelism');
             const cachixCache = core.getInput('cachix-cache');
             const cachixSigningKey = core.getInput('cachix-signing-key');
-            //await cachix.install(nixpkgs)
+            yield cachix.install(nixpkgs);
             core.startGroup(`Setting up Cachix cache: ${cachixCache}`);
-            //await cachix.use(cachixCache)
+            yield cachix.use(cachixCache);
             if (cachixSigningKey !== "") {
                 core.exportVariable('CACHIX_SIGNING_KEY', cachixSigningKey);
             }

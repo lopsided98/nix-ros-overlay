@@ -2,11 +2,17 @@ name: "Build"
 on:
   push:
 jobs:
-  tests:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+    matrix:
+      distro:
+        - melodic
+        - dashing
     steps:
     - uses: actions/checkout@v1
     - uses: cachix/install-nix-action@v6
     - uses: ./.github/actions/nix-ros-build-action
       with:
+        root-attribute: '${{ matrix.distro }}'
         cachix-signing-key: '${{ secrets.CACHIX_SIGNING_KEY }}'
