@@ -7,6 +7,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: cachix/install-nix-action@v6
-    - uses: lopsided98/nix-ros-build-action@master
+    - uses: ./.github/actions/nix-ros-build-action
       with:
         cachix-signing-key: '${{ secrets.CACHIX_SIGNING_KEY }}'
