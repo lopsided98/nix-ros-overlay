@@ -5,10 +5,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-    matrix:
-      distro:
-        - melodic
-        - dashing
+      matrix:
+        distro:
+          - melodic
+          - dashing
     steps:
     - uses: actions/checkout@v1
     - uses: cachix/install-nix-action@v6
