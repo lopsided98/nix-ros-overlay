@@ -1,0 +1,41 @@
+{
+  "name": "nix-ros-build-action",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nix ROS overlay build action",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/**/*.ts",
+    "pack": "ncc build",
+    "all": "npm run build && npm run lint && npm run pack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actions/typescript-action.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "author": "Ben Wolsieffer",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/exec": "^1.0.1",
+    "@actions/io": "^1.0.1",
+    "p-limit": "^2.2.1",
+    "node-fetch": "^2.6.0",
+    "@types/node-fetch": "^2.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.12",
+    "@typescript-eslint/parser": "^2.8.0",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@zeit/ncc": "^0.20.5",
+    "eslint": "^5.16.0",
+    "js-yaml": "^3.13.1",
+    "typescript": "^3.7.3"
+  }
+}
