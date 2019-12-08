@@ -31,11 +31,7 @@ let
       setupHook = ./ament-cmake-core-setup-hook.sh;
     });
 
-    camera-calibration-parsers = rosSuper.camera-calibration-parsers.overrideAttrs ({
-      postPatch ? "", ...
-    }: {
-      postPatch = postPatch + patchBoostPython;
-    });
+    camera-calibration-parsers = patchBoostPython rosSuper.camera-calibration-parsers;
 
     catkin = rosSuper.catkin.overrideAttrs ({
       propagatedBuildInputs ? [],
@@ -67,11 +63,9 @@ let
       '';
     });
 
-    cv-bridge = rosSuper.cv-bridge.overrideAttrs ({
-      postPatch ? "",
+    cv-bridge = (patchBoostPython rosSuper.cv-bridge).overrideAttrs ({
       propagatedBuildInputs ? [], ...
     }: {
-      postPatch = postPatch + patchBoostPython;
       propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.pythonPackages.opencv3 ];
     });
 
@@ -206,11 +200,7 @@ let
       sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
     };
 
-    urdf = rosSuper.urdf.overrideAttrs ({
-      postPatch ? "", ...
-    }: {
-      postPatch = postPatch + patchBoostPython;
-    });
+    urdf = patchBoostPython rosSuper.urdf;
 
     yaml-cpp-vendor = patchVendorUrl rosSuper.yaml-cpp-vendor {
       url = "https://github.com/jbeder/yaml-cpp/archive/0f9a586ca1dc29c2ecb8dd715a315b93e3f40f79.zip";

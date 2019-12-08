@@ -16,14 +16,21 @@ with lib;
     '' + postPatch;
   });
 
-  patchBoostPython = let
-    pythonVersion = rosSelf.python.sourceVersion;
-    pythonLib = "python${pythonVersion.major}${pythonVersion.minor}";
-  in ''
-    sed -Ei CMakeLists.txt \
-      -e 's/(Boost [^)]*)python[^ )]*([ )])/\1${pythonLib}\2/'
-  '';
+  patchBoostPython = pkg: pkg.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = let
+      pythonVersion = rosSelf.python.sourceVersion;
+      pythonLib = "python${pythonVersion.major}${pythonVersion.minor}";
+    in ''
+      sed -i CMakeLists.txt \
+        -e '/Boost [^)]*/s/python[^ )]*/${pythonLib}/'
+    '' + postPatch;
+  });
 
+  # Many ROS packages claim to have a dependency on Boost signals when they
+  # really don't or they actually depend on signals2. Boost 1.69 removed
+  # signals causing these packages to fail to build.
   patchBoostSignals = pkg: pkg.overrideAttrs ({
     postPatch ? "", ...
   }: {
