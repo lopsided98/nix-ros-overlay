@@ -160,6 +160,13 @@ async function run() {
       .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
     core.endGroup()
 
+    for (let r of statusResults.get(BuildStatus.SUCCESS)!) {
+      await core.group(
+        `Sucessfully built ${r.attr} (${r.drvPath})`,
+        () => nix.printLog(r.drvPath!).catch(() => undefined)
+      )
+    }
+
     for (let r of statusResults.get(BuildStatus.EVALUATION_FAILURE)!) {
       core.startGroup(`Failed to evaluate ${r.attr}`)
       core.warning(r.message)
