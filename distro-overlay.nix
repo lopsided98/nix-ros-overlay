@@ -192,6 +192,8 @@ let
       sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
     };
 
+    tf = patchBoostSignals rosSuper.tf;
+
     tf2 = patchBoostSignals rosSuper.tf2;
 
     tinydir-vendor = patchVendorUrl rosSuper.tinydir-vendor {
