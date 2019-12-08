@@ -1,0 +1,25 @@
+name: Update overlay using Superflore
+on:
+  schedule:
+    - cron: "0 12 * * FRI"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.x"
+      - name: Install Superflore
+        run: |
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/lopsided98/superflore.git@nixos-support
+      - name: Update overlay
+        env:
+          SUPERFLORE_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          superflore-gen-nix \
+            --tar-archive-dir tar \
+            --output-repository-path . \
+            --all
