@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-cmake, ament-lint-common }:
 buildRosPackage {
   pname = "ros-dashing-connext-cmake-module";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_connext-release/archive/release/dashing/connext_cmake_module/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "4afe4bbacd83e7081914c2dd7e87fe17e3d3d64bb5cc0ce69908cf5ef08c9fdf";
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_connext-release/archive/release/dashing/connext_cmake_module/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "1495eed5b5681b0ec8f8aac28d8b1bfbfc0e4572399429032508fd0c5d4c542c";
   };
 
   buildType = "ament_cmake";

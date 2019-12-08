@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake-pytest, rclpy, ament-cmake-gtest, sensor-msgs, python-cmake-module, std-msgs, rclcpp, ament-cmake-ros, ament-cmake-python, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-message-filters";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/dashing/message_filters/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "53ebd19fcd37731c28833d0c11f6aea1f4b00baecd246044afbf3b05f7d799a4";
+    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/dashing/message_filters/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "0d19c30447f72c1c61abbba87a8b8ebe799a11b105098977df7b30bbe9ead120";
   };
 
   buildType = "ament_cmake";

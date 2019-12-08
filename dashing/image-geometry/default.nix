@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake-gtest, sensor-msgs, ament-cmake-ros, ament-cmake-python, opencv3 }:
 buildRosPackage {
   pname = "ros-dashing-image-geometry";
-  version = "2.1.2-r1";
+  version = "2.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/dashing/image_geometry/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "bfe67d90fad2392c92ffb0cc8afd12b17482259266fc93b0893e9b5c4c04fbf9";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/dashing/image_geometry/2.1.3-1.tar.gz";
+    name = "2.1.3-1.tar.gz";
+    sha256 = "7d8caaf5318b9290ac0649b968fc0c3052d399a05534a481805eed9d95e9ef58";
   };
 
   buildType = "ament_cmake";

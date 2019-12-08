@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-lint-common, ament-cmake-gmock, launch-testing, ament-cmake-gtest, launch, launch-testing-ament-cmake, python3Packages, ament-cmake-ros, ament-lint-auto, osrf-testing-tools-cpp }:
 buildRosPackage {
   pname = "ros-dashing-rcutils";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/dashing/rcutils/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "74d694980d2aa8f36aa8bac7e861d432b37d837e984799860fab2231d7e75fef";
+    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/dashing/rcutils/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "b04e61c7bffe569c664473c320a61e7e6db97e715d83295332fa101daae76c06";
   };
 
   buildType = "ament_cmake";

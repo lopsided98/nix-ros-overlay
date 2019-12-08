@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake-ros, boost, ament-lint-common, sensor-msgs, ament-cmake-gtest, python-cmake-module, python3Packages, ament-index-python, ament-lint-auto, opencv3 }:
 buildRosPackage {
   pname = "ros-dashing-cv-bridge";
-  version = "2.1.2-r1";
+  version = "2.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/dashing/cv_bridge/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "a2ea40ef8b0826917ff9994b9411ab0999302bf1ac025d0bb07e2d8488e62551";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/dashing/cv_bridge/2.1.3-1.tar.gz";
+    name = "2.1.3-1.tar.gz";
+    sha256 = "7d8c362d9df4e63302b346cc187549171afe07d8cae4dd0996750961970e4960";
   };
 
   buildType = "ament_cmake";

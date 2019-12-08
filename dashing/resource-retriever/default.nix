@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, libcurl-vendor, ament-index-cpp, ament-cmake-ros }:
 buildRosPackage {
   pname = "ros-dashing-resource-retriever";
-  version = "2.1.0-r2";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/dashing/resource_retriever/2.1.0-2.tar.gz";
-    name = "2.1.0-2.tar.gz";
-    sha256 = "b1d2f1f2351bd63b1e3cd03be2eaae05456e254083a13c307c918cbdfc713a60";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/dashing/resource_retriever/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "53aec80c0e8de04c3a3665a96c4ad906b6f842a2408ec692851776121ddc5ba9";
   };
 
   buildType = "ament_cmake";

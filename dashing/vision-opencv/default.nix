@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cv-bridge, ament-cmake, image-geometry }:
 buildRosPackage {
   pname = "ros-dashing-vision-opencv";
-  version = "2.1.2-r1";
+  version = "2.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/dashing/vision_opencv/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "5d70f73f3e55ce12e828fc65b58cd3ae99ca485a296f3d29538b943419362c11";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/dashing/vision_opencv/2.1.3-1.tar.gz";
+    name = "2.1.3-1.tar.gz";
+    sha256 = "2e7db741041cfd44315516ce2c705291b2b444a3e4e1f123fd188c013517dc3d";
   };
 
   buildType = "ament_cmake";
