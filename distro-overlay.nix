@@ -78,6 +78,8 @@ let
       '';
     });
 
+    fake-localization = patchBoostSignals rosSuper.fake-localization;
+
     fmilibrary-vendor = patchVendorUrl rosSuper.fmilibrary-vendor {
       url = "https://jmodelica.org/fmil/FMILibrary-2.0.3-src.zip";
       sha256 = "16lx6355zskrb7wgw2bzdzms36pcjyl2ry03wgsac5215jg1zhjc";
