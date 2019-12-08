@@ -21,8 +21,9 @@ Turtlebot 3 simulation in Gazebo:
 nix-shell \
   -I nixpkgs=https://github.com/lopsided98/nixpkgs/archive/nix-ros.tar.gz \
   -I nix-ros-overlay=https://github.com/lopsided98/nix-ros-overlay/archive/master.tar.gz \
-  --option extra-substituters 'https://hydra.benwolsieffer.com/' \
-  --option trusted-public-keys 'nix-cache.benwolsieffer.com-1:fv34TjwD6LKli0BqclR4wRjj21WUry4eaXuaStzvpeI= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=' '<nix-ros-overlay/examples/turtlebot3-gazebo.nix>'
+  --option extra-substituters 'https://ros.cachix.org' \
+  --option trusted-public-keys 'cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= ros.cachix.org-1:dSyZxI8geDCJrwgvCOHDoAfOm5sV1wCPjBkKL+38Rvo=' \
+  '<nix-ros-overlay/examples/turtlebot3-gazebo.nix>'
 export TURTLEBOT3_MODEL=burger
 # If not on NixOS, nixGL (https://github.com/guibou/nixGL) is needed for OpenGL support
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
@@ -46,13 +47,10 @@ What still needs to be done:
 
 ## Configure Binary Cache
 
-Prebuilt ROS packages are hosted on my [Hydra build server](https://hydra.benwolsieffer.com/project/ros). Nix can be configured to download packages from this server, which eliminates the need to build the packages from source.
+Prebuilt ROS packages are hosted on [Cachix](https://ros.cachix.org) and built using GitHub Actions on public infrastructure.
 
-> **Warning:** Adding this binary cache requires you to trust that my build server will not tamper with the prebuilt packages. Also, note that this server also builds packages for all my NixOS systems, so it is possible that some non-ROS related packages will be downloaded from it as well.
-
-
-To use this binary cache, set the following options in `nix.conf`:
+To use this binary cache, either run `cachix use ros` or manually set the following options in `nix.conf`:
 ```
-substituters = https://cache.nixos.org/ https://hydra.benwolsieffer.com/
-trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= hydra.benwolsieffer.com-1:ppeFHW/O9KtZTQkB7vzpfIOEd4wM0+JZ4SosfqosmOQ=
+substituters = https://cache.nixos.org https://ros.cachix.org
+trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= ros.cachix.org-1:dSyZxI8geDCJrwgvCOHDoAfOm5sV1wCPjBkKL+38Rvo=
 ```
