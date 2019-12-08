@@ -86,6 +86,10 @@ let
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
       setupHook = ./gazebo-ros-setup-hook.sh;
     });
+    
+    image-cb-detector = patchBoostSignals rosSuper.image-cb-detector;
+
+    laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
 
     libyaml-vendor = patchVendorUrl rosSuper.libyaml-vendor {
       url = "https://github.com/yaml/libyaml/archive/10c907871f1ccd779c7fccf6b81a62762b5c4e7b.zip";
