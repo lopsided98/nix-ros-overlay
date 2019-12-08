@@ -1066,7 +1066,7 @@ class PackageSet {
                 drvPath = yield nix.instantiate(this.nixFile, attr, this.drvDir);
             }
             catch (e) {
-                core.warning(`${attr} failed to evaluate`);
+                core.debug(`${attr} failed to evaluate`);
                 return {
                     status: 2 /* EVALUATION_FAILURE */,
                     attr, message: e
@@ -1102,7 +1102,7 @@ class PackageSet {
             }
             catch (e) {
                 this.failedPackages.set(drvPath, attr);
-                core.warning(`${attr} (${drvPath}) failed to build`);
+                core.debug(`${attr} (${drvPath}) failed to build`);
                 return {
                     status: 4 /* BUILD_FAILURE */,
                     attr, drvPath,
