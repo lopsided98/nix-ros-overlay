@@ -1,8 +1,8 @@
 # Top level package set
 self:
 # Distro package set
-rosSelf: rosSuper: {
-  aws-common = (rosSelf.patchVendorUrl rosSuper.aws-common {
+rosSelf: rosSuper: with rosSelf.lib; {
+  aws-common = (patchVendorUrl rosSuper.aws-common {
     url = "https://github.com/aws/aws-sdk-cpp/archive/1.6.53.tar.gz";
     originalUrl = "https://github.com/aws/aws-sdk-cpp/archive/\${AWSSDK_VERSION}.tar.gz";
     sha256 = "0va0yxbjxa9sy2dlvfi0nm9d12jvr1d4dlp5vqr7i28jf0fjxjw0";

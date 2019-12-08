@@ -84,7 +84,7 @@ let
       '';
     });
 
-    fmilibrary-vendor = rosSelf.patchVendorUrl rosSuper.fmilibrary-vendor {
+    fmilibrary-vendor = patchVendorUrl rosSuper.fmilibrary-vendor {
       url = "https://jmodelica.org/fmil/FMILibrary-2.0.3-src.zip";
       sha256 = "16lx6355zskrb7wgw2bzdzms36pcjyl2ry03wgsac5215jg1zhjc";
     };
@@ -93,7 +93,7 @@ let
       setupHook = ./gazebo-ros-setup-hook.sh;
     });
 
-    libyaml-vendor = rosSelf.patchVendorUrl rosSuper.libyaml-vendor {
+    libyaml-vendor = patchVendorUrl rosSuper.libyaml-vendor {
       url = "https://github.com/yaml/libyaml/archive/10c907871f1ccd779c7fccf6b81a62762b5c4e7b.zip";
       sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
     };
@@ -166,7 +166,7 @@ let
       '' + postFixup;
     });
 
-    rviz-ogre-vendor = (rosSelf.patchVendorUrl rosSuper.rviz-ogre-vendor {
+    rviz-ogre-vendor = (patchVendorUrl rosSuper.rviz-ogre-vendor {
       url = "https://github.com/OGRECave/ogre/archive/v1.10.12.zip";
       sha256 = "1nafqazv396y97z0rgrn0dmkddq7y4zgfszvmi3aw6hr6zwyrpa3";
     }).overrideAttrs ({
@@ -179,12 +179,12 @@ let
       '' + preFixup;
     });
 
-    rxcpp-vendor = rosSelf.patchVendorUrl rosSuper.rxcpp-vendor {
+    rxcpp-vendor = patchVendorUrl rosSuper.rxcpp-vendor {
       url = "https://github.com/ReactiveX/RxCpp/archive/v4.1.0.tar.gz";
       sha256 = "1smxrcm0s6bz05185dx1i2xjgn47rq7m247pblil6p3bmk3lkfyk";
     };
 
-    shared-queues-vendor = rosSelf.patchVendorUrl (rosSelf.patchVendorUrl rosSuper.shared-queues-vendor {
+    shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
       url = "https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip";
       sha256 = "0cmsmgc87ndd9hiv187xkvjkn8fipn3hsijjc864h2lfcyigbxq1";
     }) {
@@ -194,12 +194,12 @@ let
 
     tf2 = patchBoostSignals rosSuper.tf2;
 
-    tinydir-vendor = rosSelf.patchVendorUrl rosSuper.tinydir-vendor {
+    tinydir-vendor = patchVendorUrl rosSuper.tinydir-vendor {
       url = "https://github.com/cxong/tinydir/archive/1.2.4.tar.gz";
       sha256 = "1qjwky7v4b9d9dmxzsybnhiz6xgx94grc67sdyvlp1d4kfkfsl4w";
     };
 
-    uncrustify-vendor = rosSelf.patchVendorUrl rosSuper.uncrustify-vendor {
+    uncrustify-vendor = patchVendorUrl rosSuper.uncrustify-vendor {
       url = "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.68.1.tar.gz";
       sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
     };
@@ -210,7 +210,7 @@ let
       postPatch = postPatch + patchBoostPython;
     });
 
-    yaml-cpp-vendor = rosSelf.patchVendorUrl rosSuper.yaml-cpp-vendor {
+    yaml-cpp-vendor = patchVendorUrl rosSuper.yaml-cpp-vendor {
       url = "https://github.com/jbeder/yaml-cpp/archive/0f9a586ca1dc29c2ecb8dd715a315b93e3f40f79.zip";
       sha256 = "1g45f71mk4gyca550177qf70v5cvavlsalmg7x8bi59j6z6f0mgz";
     };
