@@ -50,7 +50,7 @@ class PackageSet {
     try {
       drvPath = await nix.instantiate(this.nixFile, attr, this.drvDir)
     } catch (e) {
-      core.warning(`${attr} failed to evaluate`)
+      core.debug(`${attr} failed to evaluate`)
       return {
         status: BuildStatus.EVALUATION_FAILURE,
         attr, message: e
@@ -87,7 +87,7 @@ class PackageSet {
       resultPath = await nix.realize(drvPath, attr, this.resultDir)
     } catch (e) {
       this.failedPackages.set(drvPath, attr)
-      core.warning(`${attr} (${drvPath}) failed to build`)
+      core.debug(`${attr} (${drvPath}) failed to build`)
       return {
         status: BuildStatus.BUILD_FAILURE,
         attr, drvPath,
@@ -159,13 +159,6 @@ async function run() {
     statusResults.get(BuildStatus.CACHED)!
       .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
     core.endGroup()
-
-    for (let r of statusResults.get(BuildStatus.SUCCESS)!) {
-      await core.group(
-        `Sucessfully built ${r.attr} (${r.drvPath})`,
-        () => nix.printLog(r.drvPath!).catch(() => undefined)
-      )
-    }
 
     for (let r of statusResults.get(BuildStatus.EVALUATION_FAILURE)!) {
       core.startGroup(`Failed to evaluate ${r.attr}`)
