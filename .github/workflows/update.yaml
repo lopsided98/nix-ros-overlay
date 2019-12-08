@@ -1,0 +1,39 @@
+name: Update overlay using Superflore
+on:
+  schedule:
+    - cron: "0 12 * * FRI"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.x"
+      - name: Install Superflore
+        run: |
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/lopsided98/superflore.git@nixos-support
+      - name: Update overlay
+        env:
+          SUPERFLORE_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ROSDEP_SOURCE_PATH: rosdep-sources
+        run: |
+          mkdir -p "$ROSDEP_SOURCE_PATH"
+          cat << EOF > "$ROSDEP_SOURCE_PATH/20-sources.list"
+          yaml https://raw.githubusercontent.com/lopsided98/rosdistro/nixos-support/rosdep/base.yaml
+          yaml https://raw.githubusercontent.com/lopsided98/rosdistro/nixos-support/rosdep/python.yaml
+          yaml https://raw.githubusercontent.com/lopsided98/rosdistro/nixos-support/rosdep/ruby.yaml
+          EOF
+          git config --local user.email "superflore@github.com"
+          git config --local user.name "Superflore"
+          git config credential.helper '!
+            f() {
+              echo "username=${GITHUB_ACTOR}"
+              echo "password=${SUPERFLORE_GITHUB_TOKEN}"
+            }; f'
+          superflore-gen-nix \
+            --tar-archive-dir tar \
+            --output-repository-path . \
+            --all
