@@ -38,5 +38,10 @@ self: super: {
       distro = "dashing";
       python = self.python3;
     } self super;
+
+    eloquent = import ./distro-overlay.nix {
+      distro = "eloquent";
+      python = self.python3;
+    } self super;
   };
 }
