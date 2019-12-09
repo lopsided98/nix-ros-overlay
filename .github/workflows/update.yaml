@@ -19,6 +19,7 @@ jobs:
       - name: Update overlay
         env:
           SUPERFLORE_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ROS_OS_OVERRIDE: nixos
           ROSDEP_SOURCE_PATH: rosdep-sources
         run: |
           mkdir -p "$ROSDEP_SOURCE_PATH"
