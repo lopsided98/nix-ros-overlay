@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, uuid-msgs, message-generation, message-runtime, dynamic-reconfigure, std-msgs }:
+{ lib, buildRosPackage, fetchurl, message-runtime, dynamic-reconfigure, std-msgs, catkin, actionlib-msgs, message-generation, uuid-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-py-trees-msgs";
   version = "0.3.6";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs uuid-msgs message-generation dynamic-reconfigure std-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs uuid-msgs message-runtime dynamic-reconfigure std-msgs ];
+  buildInputs = [ dynamic-reconfigure std-msgs actionlib-msgs message-generation uuid-msgs ];
+  propagatedBuildInputs = [ dynamic-reconfigure std-msgs actionlib-msgs message-runtime uuid-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

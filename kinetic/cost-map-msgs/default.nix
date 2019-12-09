@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, grid-map-msgs }:
+{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, catkin, grid-map-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-cost-map-msgs";
   version = "0.3.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs grid-map-msgs message-generation ];
-  propagatedBuildInputs = [ std-msgs grid-map-msgs message-runtime ];
+  buildInputs = [ grid-map-msgs message-generation std-msgs ];
+  propagatedBuildInputs = [ grid-map-msgs message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

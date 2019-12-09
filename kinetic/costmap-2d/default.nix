@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, pcl-ros, tf, pcl-conversions, geometry-msgs, map-server, message-filters, voxel-grid, message-generation, message-runtime, rosbag, catkin, nav-msgs, std-msgs, roscpp, laser-geometry, visualization-msgs, pluginlib, cmake-modules, sensor-msgs, rostest, dynamic-reconfigure, rosunit, map-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, map-msgs, tf, rosunit, nav-msgs, rostest, sensor-msgs, dynamic-reconfigure, cmake-modules, rosbag, rosconsole, pcl-ros, message-filters, std-msgs, catkin, roscpp, voxel-grid, message-generation, map-server, laser-geometry, pcl-conversions, visualization-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-costmap-2d";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/costmap_2d/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "4e594e53eb985a25f1a05a6671eb52d535d06e7bc6c6d72c6009f579a7ea8544";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/costmap_2d/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "b8bda9750d1c8117468d802b0a18c598beb46f4b12418d93c052dc05397eb454";
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib cmake-modules sensor-msgs message-filters roscpp voxel-grid message-generation nav-msgs laser-geometry visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
-  checkInputs = [ rostest rosbag rosunit map-server ];
-  propagatedBuildInputs = [ rosconsole pluginlib sensor-msgs message-filters roscpp pcl-ros nav-msgs laser-geometry message-runtime voxel-grid dynamic-reconfigure std-msgs visualization-msgs tf pcl-conversions geometry-msgs map-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs dynamic-reconfigure pluginlib std-msgs map-msgs tf cmake-modules laser-geometry pcl-conversions visualization-msgs roscpp voxel-grid message-generation nav-msgs ];
+  checkInputs = [ map-server rosbag rostest rosunit ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs dynamic-reconfigure pluginlib std-msgs map-msgs tf laser-geometry pcl-conversions visualization-msgs roscpp voxel-grid message-runtime nav-msgs rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

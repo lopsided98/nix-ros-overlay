@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, control-msgs, schunk-libm5api, trajectory-msgs, sensor-msgs, catkin, linuxHeaders, cob-srvs, libntcan, urdf, std-msgs, diagnostic-msgs, roscpp, libpcan }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, diagnostic-msgs, urdf, libntcan, std-msgs, std-srvs, catkin, schunk-libm5api, libpcan, roscpp, cob-srvs, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-schunk-powercube-chain";
-  version = "0.6.13-r2";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_powercube_chain/0.6.13-2.tar.gz";
-    name = "0.6.13-2.tar.gz";
-    sha256 = "805d6614d5110463ddd7871aea6cff7460d8200a572feaf35f003a31475939c2";
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_powercube_chain/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "3e7774dfbaa500ebffd5a4c7cb63ea881e6941d0a5635e787e1707418bcf94db";
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs control-msgs schunk-libm5api trajectory-msgs sensor-msgs linuxHeaders cob-srvs libntcan urdf std-msgs diagnostic-msgs roscpp libpcan ];
-  propagatedBuildInputs = [ std-srvs control-msgs schunk-libm5api trajectory-msgs sensor-msgs diagnostic-msgs linuxHeaders cob-srvs urdf std-msgs libntcan roscpp libpcan ];
+  buildInputs = [ trajectory-msgs sensor-msgs diagnostic-msgs urdf libntcan std-msgs std-srvs schunk-libm5api libpcan roscpp cob-srvs control-msgs ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs diagnostic-msgs urdf libntcan std-msgs std-srvs schunk-libm5api libpcan roscpp cob-srvs control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

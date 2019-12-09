@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, sensor-msgs, rosidl-default-generators, geographic-msgs, marti-common-msgs, std-msgs, rosidl-default-runtime, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, rosidl-default-runtime, std-msgs, ament-cmake, marti-common-msgs, geographic-msgs, rosidl-default-generators, builtin-interfaces }:
 buildRosPackage {
   pname = "ros-dashing-marti-nav-msgs";
   version = "1.0.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces sensor-msgs geographic-msgs marti-common-msgs std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ builtin-interfaces sensor-msgs geographic-msgs marti-common-msgs std-msgs rosidl-default-runtime geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs marti-common-msgs geographic-msgs builtin-interfaces ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs rosidl-default-runtime std-msgs marti-common-msgs geographic-msgs builtin-interfaces ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, rosserial-msgs, nav-msgs, message-runtime, rospy, std-msgs, rosserial-client, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, rosserial-msgs, sensor-msgs, geometry-msgs, message-runtime, rosserial-client, std-msgs, catkin, rospy, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosserial-windows";
   version = "0.8.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs nav-msgs rosserial-client std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ rospy rosserial-msgs message-runtime rosserial-client ];
+  buildInputs = [ sensor-msgs geometry-msgs rosserial-client std-msgs nav-msgs ];
+  propagatedBuildInputs = [ rosserial-msgs message-runtime rospy rosserial-client ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

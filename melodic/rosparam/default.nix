@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pythonPackages, catkin, rosgraph }:
+{ lib, buildRosPackage, fetchurl, rosgraph, pythonPackages, catkin }:
 buildRosPackage {
   pname = "ros-melodic-rosparam";
   version = "1.14.3";

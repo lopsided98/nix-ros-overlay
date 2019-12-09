@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, tf-conversions, tf, geometry-msgs, roslint, boost, rviz, robot-state-publisher, eigen-conversions, xacro, kdl-conversions, orocos-kdl, cob-control-msgs, trajectory-msgs, catkin, nav-msgs, urdf, cob-frame-tracker, std-msgs, roscpp, visualization-msgs, eigen, kdl-parser, cmake-modules, pluginlib, sensor-msgs, cob-srvs, dynamic-reconfigure, topic-tools }:
+{ lib, buildRosPackage, fetchurl, xacro, geometry-msgs, urdf, eigen-conversions, pluginlib, tf, eigen, cob-srvs, nav-msgs, kdl-parser, sensor-msgs, dynamic-reconfigure, robot-state-publisher, cmake-modules, orocos-kdl, cob-control-msgs, std-msgs, catkin, roscpp, topic-tools, rospy, cob-frame-tracker, kdl-conversions, trajectory-msgs, boost, roslint, rviz, visualization-msgs, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-cob-twist-controller";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf-conversions tf geometry-msgs roslint boost eigen-conversions kdl-conversions orocos-kdl cob-control-msgs trajectory-msgs nav-msgs urdf std-msgs roscpp visualization-msgs eigen kdl-parser cmake-modules pluginlib sensor-msgs cob-srvs dynamic-reconfigure ];
-  propagatedBuildInputs = [ rospy tf-conversions tf geometry-msgs boost rviz robot-state-publisher eigen-conversions xacro kdl-conversions orocos-kdl cob-control-msgs trajectory-msgs nav-msgs urdf cob-frame-tracker std-msgs roscpp visualization-msgs eigen kdl-parser cmake-modules pluginlib sensor-msgs cob-srvs dynamic-reconfigure topic-tools ];
+  buildInputs = [ geometry-msgs urdf eigen-conversions pluginlib tf eigen cob-srvs nav-msgs kdl-parser sensor-msgs dynamic-reconfigure cmake-modules orocos-kdl cob-control-msgs std-msgs roscpp kdl-conversions trajectory-msgs boost roslint visualization-msgs tf-conversions ];
+  propagatedBuildInputs = [ xacro geometry-msgs urdf eigen-conversions pluginlib tf eigen cob-srvs nav-msgs kdl-parser sensor-msgs dynamic-reconfigure robot-state-publisher cmake-modules orocos-kdl cob-control-msgs std-msgs roscpp topic-tools cob-frame-tracker rospy kdl-conversions trajectory-msgs boost rviz visualization-msgs tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

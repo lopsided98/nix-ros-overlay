@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, std-msgs, roscpp, robotis-framework-common }:
+{ lib, buildRosPackage, fetchurl, boost, std-msgs, catkin, robotis-framework-common, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-sensor-module-tutorial";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs roscpp boost robotis-framework-common ];
-  propagatedBuildInputs = [ std-msgs roscpp boost robotis-framework-common ];
+  buildInputs = [ std-msgs boost robotis-framework-common roscpp ];
+  propagatedBuildInputs = [ std-msgs boost robotis-framework-common roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

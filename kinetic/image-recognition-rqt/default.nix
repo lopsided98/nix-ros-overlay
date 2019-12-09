@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, catkin, rqt-gui, image-recognition-msgs, image-recognition-util, rospy }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, catkin, rqt-gui-py, image-recognition-util, image-recognition-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-image-recognition-rqt";
   version = "0.0.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui-py rqt-gui image-recognition-msgs image-recognition-util rospy ];
-  propagatedBuildInputs = [ rqt-gui-py rqt-gui image-recognition-msgs image-recognition-util rospy ];
+  buildInputs = [ rqt-gui rqt-gui-py image-recognition-util image-recognition-msgs rospy ];
+  propagatedBuildInputs = [ rqt-gui rqt-gui-py image-recognition-util image-recognition-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

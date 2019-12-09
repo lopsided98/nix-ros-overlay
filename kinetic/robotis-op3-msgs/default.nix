@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, op3-online-walking-module-msgs, op3-offset-tuner-msgs, catkin, op3-walking-module-msgs, op3-action-module-msgs }:
+{ lib, buildRosPackage, fetchurl, op3-offset-tuner-msgs, op3-online-walking-module-msgs, catkin, op3-walking-module-msgs, op3-action-module-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-robotis-op3-msgs";
   version = "0.1.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ op3-online-walking-module-msgs op3-action-module-msgs op3-walking-module-msgs op3-offset-tuner-msgs ];
+  propagatedBuildInputs = [ op3-online-walking-module-msgs op3-walking-module-msgs op3-action-module-msgs op3-offset-tuner-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

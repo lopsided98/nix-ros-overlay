@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gmapping, map-server, amcl, catkin, move-base, urdf, roslaunch, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, urdf, map-server, catkin, gmapping, move-base, amcl, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-ridgeback-navigation";
   version = "0.2.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gmapping map-server amcl move-base urdf xacro ];
+  propagatedBuildInputs = [ xacro urdf map-server gmapping move-base amcl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

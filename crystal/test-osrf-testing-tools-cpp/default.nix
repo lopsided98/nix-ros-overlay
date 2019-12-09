@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, osrf-testing-tools-cpp }:
+{ lib, buildRosPackage, fetchurl, osrf-testing-tools-cpp, cmake }:
 buildRosPackage {
   pname = "ros-crystal-test-osrf-testing-tools-cpp";
   version = "1.1.0";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rospy, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, message-runtime, std-msgs, catkin, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-loki-base-node";
   version = "0.2.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation roscpp rospy ];
-  propagatedBuildInputs = [ std-msgs roscpp message-runtime rospy ];
+  buildInputs = [ std-msgs rospy message-generation roscpp ];
+  propagatedBuildInputs = [ std-msgs message-runtime rospy roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

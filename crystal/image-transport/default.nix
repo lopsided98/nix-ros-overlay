@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, ament-lint-common, ament-cmake-gtest, sensor-msgs, message-filters, rclcpp, ament-cmake-ros, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, ament-cmake-ros, pluginlib, ament-lint-common, ament-cmake-gtest, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-image-transport";
   version = "2.0.1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ sensor-msgs pluginlib message-filters rclcpp ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ sensor-msgs rclcpp message-filters pluginlib ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs pluginlib message-filters rclcpp ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

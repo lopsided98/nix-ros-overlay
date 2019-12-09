@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, roslib, laser-filters, nav-msgs, rospy, std-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, laser-filters, std-msgs, tf, roslib, catkin, rospy, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-map-laser";
   version = "0.0.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs nav-msgs rospy std-msgs tf ];
-  propagatedBuildInputs = [ tf sensor-msgs laser-filters nav-msgs rospy std-msgs roslib ];
+  buildInputs = [ sensor-msgs std-msgs tf rospy nav-msgs ];
+  propagatedBuildInputs = [ sensor-msgs laser-filters std-msgs tf roslib rospy nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ class-loader canopen-master ];
+  buildInputs = [ canopen-master class-loader ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ class-loader canopen-master ];
+  propagatedBuildInputs = [ canopen-master class-loader ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

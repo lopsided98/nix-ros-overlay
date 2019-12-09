@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-generation, message-runtime, pcl-ros, std-msgs, roscpp, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, std-msgs, catkin, pcl-conversions, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-ouster-driver";
   version = "0.1.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-generation pcl-ros std-msgs roscpp pcl-conversions ];
-  propagatedBuildInputs = [ sensor-msgs message-runtime pcl-ros std-msgs roscpp pcl-conversions ];
+  buildInputs = [ pcl-ros sensor-msgs std-msgs pcl-conversions roscpp message-generation ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs std-msgs pcl-conversions roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, pythonPackages, json-msgs, rostest, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, roslint, json-msgs, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-json-transport";
   version = "0.0.1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ json-msgs roscpp ];
   checkInputs = [ rostest roslint ];
-  propagatedBuildInputs = [ json-msgs roscpp pythonPackages.msgpack ];
+  propagatedBuildInputs = [ pythonPackages.msgpack json-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

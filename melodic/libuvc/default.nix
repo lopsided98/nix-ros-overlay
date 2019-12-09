@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pkg-config, libusb1, libjpeg, cmake }:
+{ lib, buildRosPackage, fetchurl, catkin, libjpeg, libusb1, cmake, pkg-config }:
 buildRosPackage {
   pname = "ros-melodic-libuvc";
   version = "0.0.6";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ libusb1 libjpeg pkg-config ];
-  propagatedBuildInputs = [ libusb1 catkin libjpeg ];
+  buildInputs = [ pkg-config libjpeg libusb1 ];
+  propagatedBuildInputs = [ libusb1 libjpeg catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

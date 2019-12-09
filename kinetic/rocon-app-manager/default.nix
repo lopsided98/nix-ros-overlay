@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-console, rocon-apps, rocon-app-utilities, rospy, capabilities, roslint, rocon-gateway-utils, rocon-master-info, pythonPackages, rocon-hub, rocon-python-utils, roslib, rocon-uri, rosmaster, rocon-interactions, rocon-python-comms, gateway-msgs, catkin, std-msgs, rocon-app-manager-msgs, rostest, rocon-gateway, rocon-std-msgs }:
+{ lib, buildRosPackage, fetchurl, rocon-python-comms, rocon-app-utilities, gateway-msgs, rocon-uri, rostest, rocon-console, rocon-interactions, roslib, capabilities, rocon-app-manager-msgs, rocon-master-info, rocon-gateway-utils, rocon-std-msgs, rocon-gateway, rosmaster, std-msgs, catkin, pythonPackages, rocon-python-utils, rocon-hub, rospy, rocon-apps, roslint }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-app-manager";
   version = "0.9.1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ rostest pythonPackages.catkin-pkg roslint ];
-  propagatedBuildInputs = [ rocon-console rocon-apps rocon-app-utilities rospy capabilities rocon-gateway-utils rocon-master-info rocon-hub roslib rocon-python-utils rocon-uri rosmaster rocon-interactions rocon-python-comms gateway-msgs std-msgs rocon-app-manager-msgs rocon-gateway rocon-std-msgs ];
+  propagatedBuildInputs = [ rocon-python-comms rocon-app-utilities gateway-msgs rocon-uri rocon-console rocon-interactions roslib capabilities rocon-app-manager-msgs rocon-master-info rocon-gateway-utils rocon-std-msgs rocon-gateway rosmaster std-msgs rocon-python-utils rocon-hub rospy rocon-apps ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

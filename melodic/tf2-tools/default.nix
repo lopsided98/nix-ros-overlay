@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2, catkin, tf2-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, tf2-msgs, catkin, tf2-ros, tf2 }:
 buildRosPackage {
   pname = "ros-melodic-tf2-tools";
   version = "0.6.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2 tf2-msgs tf2-ros ];
-  propagatedBuildInputs = [ tf2 tf2-msgs tf2-ros ];
+  buildInputs = [ tf2 tf2-ros tf2-msgs ];
+  propagatedBuildInputs = [ tf2-msgs tf2-ros tf2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

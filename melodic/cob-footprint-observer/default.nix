@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, tf, catkin, message-generation, message-runtime, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, boost, geometry-msgs, std-msgs, tf, catkin, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-cob-footprint-observer";
-  version = "0.8.0-r1";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_footprint_observer/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "e4bb923bb34919eb110cf91ee9c5312ee3bd9fca1e79f1c995baa33c00e27584";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_footprint_observer/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "9bacb5b8aff7810ca1e8dea91ccb400aeaea17a5921bdc7889142212f7e0c143";
   };
 
   buildType = "catkin";
-  buildInputs = [ boost roscpp message-generation std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ boost roscpp message-runtime std-msgs tf geometry-msgs ];
+  buildInputs = [ boost geometry-msgs std-msgs tf roscpp message-generation ];
+  propagatedBuildInputs = [ boost geometry-msgs std-msgs tf roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

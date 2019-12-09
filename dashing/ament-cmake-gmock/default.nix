@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-gtest, ament-cmake-test, gmock-vendor, gmock }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-test, ament-cmake-core, gmock, gmock-vendor, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-ament-cmake-gmock";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_gmock/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "6cc97a96918c313c0e218958b05c99b96322373c24883ae920d7d22c98b835fd";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_gmock/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "3c20dbe22a2991fb46f82c49a9587cad71c698c8e3503b90be0031e44e0630d8";
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ ament-cmake-test ament-cmake-gtest gmock gmock-vendor ];
+  propagatedBuildInputs = [ ament-cmake-test gmock gmock-vendor ament-cmake-gtest ];
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {

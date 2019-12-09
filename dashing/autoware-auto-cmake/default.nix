@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-uncrustify, ament-lint-common, ament-cmake-cppcheck, ament-cmake-lint-cmake, ament-lint-auto, ament-cmake-copyright, ament-cmake-cpplint }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, ament-cmake-cpplint, ament-lint-common, ament-lint-auto, ament-cmake-uncrustify, ament-cmake-core, ament-cmake-cppcheck, ament-cmake-copyright }:
 buildRosPackage {
   pname = "ros-dashing-autoware-auto-cmake";
   version = "0.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common ament-cmake-lint-cmake ];
-  propagatedBuildInputs = [ ament-cmake-uncrustify ament-cmake-core ament-cmake-cppcheck ament-cmake-lint-cmake ament-cmake-copyright ament-cmake-cpplint ];
+  checkInputs = [ ament-cmake-lint-cmake ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ ament-cmake-lint-cmake ament-cmake-cpplint ament-cmake-uncrustify ament-cmake-core ament-cmake-cppcheck ament-cmake-copyright ];
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {

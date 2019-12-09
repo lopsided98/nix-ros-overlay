@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, opencv-candidate, ecto, boost, catkin, rosunit }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, ecto, rosunit, opencv-candidate }:
 buildRosPackage {
   pname = "ros-kinetic-ecto-opencv";
   version = "0.7.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ opencv-candidate ecto boost ];
+  buildInputs = [ boost opencv-candidate ecto ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ ecto opencv-candidate boost ];
+  propagatedBuildInputs = [ boost opencv-candidate ecto ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rsync, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rsync }:
 buildRosPackage {
   pname = "ros-melodic-abseil-cpp";
   version = "0.4.2-r1";

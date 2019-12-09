@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-view, laser-joint-processor, rospy, geometry-msgs, laser-cb-detector, image-cb-detector, message-generation, message-runtime, calibration-msgs, catkin, robot-mechanism-controllers, stereo-image-proc, pr2-dense-laser-snapshotter, kdl-parser, python-orocos-kdl, laser-joint-projector, sensor-msgs, monocam-settler, calibration-launch, pr2-teleop, rostest, calibration-estimation }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, calibration-estimation, rostest, kdl-parser, sensor-msgs, image-cb-detector, pr2-teleop, calibration-msgs, python-orocos-kdl, calibration-launch, laser-joint-processor, stereo-image-proc, catkin, laser-joint-projector, monocam-settler, rospy, message-generation, pr2-dense-laser-snapshotter, robot-mechanism-controllers, image-view, message-runtime, laser-cb-detector }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-calibration-launch";
   version = "1.0.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ laser-joint-processor rospy image-view geometry-msgs laser-cb-detector image-cb-detector message-generation calibration-msgs robot-mechanism-controllers stereo-image-proc pr2-dense-laser-snapshotter kdl-parser python-orocos-kdl laser-joint-projector sensor-msgs monocam-settler calibration-launch pr2-teleop rostest calibration-estimation ];
-  propagatedBuildInputs = [ laser-joint-processor rospy image-view geometry-msgs laser-cb-detector image-cb-detector message-runtime calibration-msgs robot-mechanism-controllers stereo-image-proc pr2-dense-laser-snapshotter kdl-parser python-orocos-kdl laser-joint-projector sensor-msgs monocam-settler calibration-launch pr2-teleop rostest calibration-estimation ];
+  buildInputs = [ geometry-msgs calibration-estimation rostest kdl-parser sensor-msgs image-cb-detector pr2-teleop calibration-msgs python-orocos-kdl calibration-launch laser-joint-processor stereo-image-proc laser-joint-projector message-generation monocam-settler pr2-dense-laser-snapshotter rospy robot-mechanism-controllers image-view laser-cb-detector ];
+  propagatedBuildInputs = [ geometry-msgs calibration-estimation rostest kdl-parser sensor-msgs image-cb-detector pr2-teleop calibration-msgs python-orocos-kdl calibration-launch laser-joint-processor stereo-image-proc laser-joint-projector monocam-settler pr2-dense-laser-snapshotter rospy robot-mechanism-controllers image-view message-runtime laser-cb-detector ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

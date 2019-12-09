@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlesim, actionlib-msgs, catkin, smach-ros, message-generation, asmach, actionlib, rospy }:
+{ lib, buildRosPackage, fetchurl, message-generation, turtlesim, actionlib, catkin, smach-ros, asmach, actionlib-msgs, rospy }:
 buildRosPackage {
   pname = "ros-melodic-asmach-tutorials";
-  version = "1.0.13-r2";
+  version = "1.0.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/asmach_tutorials/1.0.13-2.tar.gz";
-    name = "1.0.13-2.tar.gz";
-    sha256 = "ca0024ddfd9f62f4c76291300d9cf50e15fbc87e64af3823255db33e4285792e";
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/asmach_tutorials/1.0.16-1.tar.gz";
+    name = "1.0.16-1.tar.gz";
+    sha256 = "d4a5d35e1424c9a9e17f9a66b1bbea3de63f71d037df9cc932cf28f62c00f69e";
   };
 
   buildType = "catkin";
-  buildInputs = [ turtlesim actionlib-msgs smach-ros message-generation asmach actionlib rospy ];
-  propagatedBuildInputs = [ turtlesim actionlib-msgs smach-ros actionlib asmach rospy ];
+  buildInputs = [ turtlesim actionlib smach-ros asmach actionlib-msgs rospy message-generation ];
+  propagatedBuildInputs = [ turtlesim actionlib smach-ros asmach actionlib-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, compressed-depth-image-transport, catkin, theora-image-transport, compressed-image-transport }:
+{ lib, buildRosPackage, fetchurl, compressed-depth-image-transport, theora-image-transport, catkin, compressed-image-transport }:
 buildRosPackage {
   pname = "ros-melodic-image-transport-plugins";
   version = "1.9.5";

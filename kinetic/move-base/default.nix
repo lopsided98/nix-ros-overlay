@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rotate-recovery, actionlib, rospy, clear-costmap-recovery, tf, geometry-msgs, message-generation, message-runtime, std-srvs, navfn, catkin, move-base-msgs, nav-msgs, roscpp, costmap-2d, pluginlib, cmake-modules, base-local-planner, nav-core, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, tf, nav-msgs, navfn, dynamic-reconfigure, cmake-modules, rotate-recovery, move-base-msgs, clear-costmap-recovery, std-srvs, catkin, costmap-2d, nav-core, roscpp, message-generation, rospy, actionlib, base-local-planner, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-move-base";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/move_base/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "a6bf46e38971367730cc6d7bd50766c841f486a7dcfb032ba0d89f9bbc3d3b7a";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/move_base/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "42e5d6a18400f4eb4253f2616d09de15705e60a31cc8f6cb92cc2033c7409114";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d std-srvs pluginlib cmake-modules navfn base-local-planner nav-core rotate-recovery roscpp rospy move-base-msgs message-generation nav-msgs actionlib dynamic-reconfigure clear-costmap-recovery tf geometry-msgs ];
-  propagatedBuildInputs = [ costmap-2d std-srvs pluginlib base-local-planner navfn nav-core rotate-recovery roscpp move-base-msgs nav-msgs actionlib message-runtime rospy clear-costmap-recovery dynamic-reconfigure tf geometry-msgs ];
+  buildInputs = [ clear-costmap-recovery geometry-msgs dynamic-reconfigure pluginlib std-srvs actionlib base-local-planner tf cmake-modules costmap-2d nav-core rospy roscpp message-generation nav-msgs navfn rotate-recovery move-base-msgs ];
+  propagatedBuildInputs = [ geometry-msgs clear-costmap-recovery dynamic-reconfigure message-runtime pluginlib std-srvs tf base-local-planner actionlib costmap-2d nav-core roscpp rospy nav-msgs navfn rotate-recovery move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

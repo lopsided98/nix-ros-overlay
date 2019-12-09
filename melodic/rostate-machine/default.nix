@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, roslib, message-generation, message-runtime, rospy, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, std-msgs, catkin, roslib, rospy, roscpp, message-runtime, rostest }:
 buildRosPackage {
   pname = "ros-melodic-rostate-machine";
   version = "0.0.2-r3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp rostest message-generation rospy std-msgs roslib ];
-  propagatedBuildInputs = [ rostest roslib message-runtime rospy std-msgs roscpp ];
+  buildInputs = [ std-msgs roslib rospy roscpp message-generation rostest ];
+  propagatedBuildInputs = [ std-msgs roslib rospy roscpp message-runtime rostest ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, multi-jackal-control, catkin, multi-jackal-description, robot-localization, urdf, robot-state-publisher, interactive-marker-twist-server, multi-jackal-nav, roslaunch, tf, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, controller-manager, urdf, robot-state-publisher, tf, multi-jackal-description, catkin, interactive-marker-twist-server, robot-localization, multi-jackal-nav, gazebo-ros, roslaunch, multi-jackal-control }:
 buildRosPackage {
   pname = "ros-kinetic-multi-jackal-base";
   version = "0.0.5";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros controller-manager multi-jackal-control multi-jackal-description robot-localization urdf robot-state-publisher interactive-marker-twist-server multi-jackal-nav tf xacro ];
+  propagatedBuildInputs = [ xacro controller-manager urdf robot-state-publisher tf multi-jackal-description interactive-marker-twist-server robot-localization multi-jackal-nav gazebo-ros multi-jackal-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

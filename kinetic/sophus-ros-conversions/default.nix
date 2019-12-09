@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, sophus, catkin, ecl-build, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, cmake-modules, tf, catkin, sophus, ecl-build }:
 buildRosPackage {
   pname = "ros-kinetic-sophus-ros-conversions";
   version = "0.1.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules sophus ecl-build tf geometry-msgs ];
-  propagatedBuildInputs = [ cmake-modules sophus ecl-build tf geometry-msgs ];
+  buildInputs = [ geometry-msgs tf cmake-modules sophus ecl-build ];
+  propagatedBuildInputs = [ geometry-msgs tf cmake-modules sophus ecl-build ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

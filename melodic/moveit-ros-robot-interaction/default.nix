@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, tf2-geometry-msgs, catkin, tf2-ros, tf2, interactive-markers, tf2-eigen, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, interactive-markers, catkin, roscpp, rosunit, tf2-eigen, tf2-geometry-msgs, moveit-ros-planning, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-robot-interaction";
   version = "1.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-planning tf2-geometry-msgs tf2-ros tf2 interactive-markers tf2-eigen roscpp ];
+  buildInputs = [ interactive-markers roscpp moveit-ros-planning tf2-eigen tf2-geometry-msgs tf2 tf2-ros ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ moveit-ros-planning tf2-geometry-msgs tf2-ros tf2 interactive-markers tf2-eigen roscpp ];
+  propagatedBuildInputs = [ interactive-markers tf2 moveit-ros-planning tf2-eigen tf2-geometry-msgs roscpp tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

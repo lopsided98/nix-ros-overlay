@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, loki-nav, tf2-web-republisher, catkin, rosbridge-server, loki-teleop, loki-bringup }:
+{ lib, buildRosPackage, fetchurl, catkin, loki-nav, loki-teleop, tf2-web-republisher, loki-bringup, rosbridge-server }:
 buildRosPackage {
   pname = "ros-kinetic-loki-demos";
   version = "0.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ loki-nav tf2-web-republisher rosbridge-server loki-teleop loki-bringup ];
+  propagatedBuildInputs = [ loki-nav loki-teleop tf2-web-republisher loki-bringup rosbridge-server ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, csm, pcl, sensor-msgs, catkin, roscpp, nav-msgs, nodelet, pcl-ros, tf, pcl-conversions, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, geometry-msgs, csm, tf, catkin, pcl, pcl-conversions, nodelet, roscpp, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-laser-scan-matcher";
   version = "0.3.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ csm pcl sensor-msgs roscpp nav-msgs nodelet pcl-ros tf pcl-conversions geometry-msgs ];
-  propagatedBuildInputs = [ csm pcl sensor-msgs roscpp nav-msgs nodelet pcl-ros tf pcl-conversions geometry-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs geometry-msgs csm tf pcl pcl-conversions nodelet roscpp nav-msgs ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs geometry-msgs csm tf pcl pcl-conversions nodelet roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

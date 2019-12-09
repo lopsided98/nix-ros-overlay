@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gmapping, map-server, amcl, base-local-planner, navfn, catkin, move-base, dwa-local-planner, roslaunch }:
+{ lib, buildRosPackage, fetchurl, map-server, catkin, base-local-planner, gmapping, move-base, amcl, roslaunch, navfn, dwa-local-planner }:
 buildRosPackage {
   pname = "ros-kinetic-grizzly-navigation";
   version = "0.4.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gmapping map-server amcl base-local-planner navfn move-base dwa-local-planner ];
+  propagatedBuildInputs = [ map-server base-local-planner gmapping move-base amcl navfn dwa-local-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

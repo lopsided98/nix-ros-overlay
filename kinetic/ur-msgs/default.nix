@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-ur-msgs";
-  version = "1.2.5";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_msgs/1.2.5-0.tar.gz";
-    name = "1.2.5-0.tar.gz";
-    sha256 = "ec785d4ec612d9a67d1a4bdaa38cd2e13320ce7feda22c4fcac1aec61bc632ab";
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_msgs/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "53416400810a21f670e4a9452232a59056105c300d69bd18ce76d3bfd8fce73f";
   };
 
   buildType = "catkin";

@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen }:
+{ lib, buildRosPackage, fetchurl, eigen, cmake-modules, catkin }:
 buildRosPackage {
   pname = "ros-melodic-hebi-cpp-api";
-  version = "2.1.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/HebiRobotics/hebi_cpp_api_ros-release/archive/release/melodic/hebi_cpp_api/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "c322cc89c65900c9357d451a53ec0c9d301954de10bca9ff3c85da20d6c5c5db";
+    url = "https://github.com/HebiRobotics/hebi_cpp_api_ros-release/archive/release/melodic/hebi_cpp_api/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "73ceffbaff6864c606a7d69dbe1557f8de4601c9ae65f4dd1ecc396dcae0ee90";
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules eigen ];
+  buildInputs = [ eigen cmake-modules ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

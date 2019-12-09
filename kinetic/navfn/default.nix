@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, rosconsole, pluginlib, cmake-modules, tf, netpbm, nav-core, catkin, nav-msgs, message-generation, message-runtime, visualization-msgs, pcl-ros, roscpp, pcl-conversions, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, geometry-msgs, message-runtime, pluginlib, tf, catkin, cmake-modules, rosunit, costmap-2d, nav-core, netpbm, pcl-conversions, visualization-msgs, roscpp, message-generation, nav-msgs, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-navfn";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navfn/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "fc2982b4daed5a489be13143ffee1ba9d25f8c2eea9b6fcb9d123474f1c27153";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navfn/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "8f607f68d59f3f3639d85c5f28aeda8d49eee123c3da42ef0d91d35a2c6bbb32";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d rosconsole pluginlib cmake-modules netpbm nav-core roscpp message-generation nav-msgs visualization-msgs pcl-ros tf pcl-conversions geometry-msgs ];
+  buildInputs = [ pcl-ros geometry-msgs pluginlib tf cmake-modules costmap-2d nav-core netpbm pcl-conversions visualization-msgs roscpp message-generation nav-msgs rosconsole ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ costmap-2d rosconsole pluginlib nav-core roscpp nav-msgs message-runtime visualization-msgs pcl-ros tf pcl-conversions geometry-msgs ];
+  propagatedBuildInputs = [ pcl-ros geometry-msgs pluginlib tf costmap-2d nav-core pcl-conversions visualization-msgs roscpp message-runtime nav-msgs rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

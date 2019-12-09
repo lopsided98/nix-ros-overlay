@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, roslint, catkin, nav-msgs, dynamic-reconfigure, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, boost, geometry-msgs, dynamic-reconfigure, std-msgs, catkin, roslint, roscpp, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-base-velocity-smoother";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost roslint nav-msgs dynamic-reconfigure std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ boost roslint nav-msgs dynamic-reconfigure std-msgs roscpp geometry-msgs ];
+  buildInputs = [ boost geometry-msgs dynamic-reconfigure std-msgs roslint roscpp nav-msgs ];
+  propagatedBuildInputs = [ boost geometry-msgs dynamic-reconfigure std-msgs roslint roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

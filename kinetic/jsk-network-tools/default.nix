@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, diagnostic-updater, rostest, message-generation, message-runtime, rospy, std-msgs, diagnostic-msgs, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, diagnostic-msgs, dynamic-reconfigure, std-msgs, catkin, rospy, roscpp, message-runtime, rostest, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-network-tools";
   version = "2.2.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs rospy diagnostic-updater rostest message-generation dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
-  propagatedBuildInputs = [ sensor-msgs rospy diagnostic-updater message-runtime dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
+  buildInputs = [ sensor-msgs diagnostic-msgs dynamic-reconfigure std-msgs rospy roscpp message-generation rostest diagnostic-updater ];
+  propagatedBuildInputs = [ sensor-msgs diagnostic-msgs dynamic-reconfigure std-msgs rospy roscpp message-runtime diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

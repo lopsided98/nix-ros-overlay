@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, fiducial-slam, aruco-detect, move-basic }:
+{ lib, buildRosPackage, fetchurl, aruco-detect, catkin, fiducial-slam, move-basic }:
 buildRosPackage {
   pname = "ros-kinetic-loki-nav";
   version = "0.0.2";

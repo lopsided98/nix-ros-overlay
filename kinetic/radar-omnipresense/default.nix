@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, message-generation, message-runtime, rospy, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, catkin, rospy, roscpp, message-generation, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-radar-omnipresense";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest message-generation rospy std-msgs roscpp ];
-  propagatedBuildInputs = [ message-generation message-runtime rospy std-msgs roscpp ];
+  buildInputs = [ std-msgs rospy roscpp message-generation rostest ];
+  propagatedBuildInputs = [ message-generation message-runtime std-msgs roscpp rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

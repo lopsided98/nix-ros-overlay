@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-msgs, ecl-streams, kobuki-driver, ecl-threads, ecl-exceptions, rospy, diagnostic-msgs, tf, geometry-msgs, capabilities, kobuki-rapps, kobuki-keyop, angles, ecl-sigslots, catkin, nav-msgs, std-msgs, diagnostic-aggregator, roscpp, nodelet, kobuki-ftdi, pluginlib, sensor-msgs, kobuki-safety-controller, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, tf, nodelet, nav-msgs, sensor-msgs, diagnostic-msgs, capabilities, ecl-threads, diagnostic-aggregator, std-msgs, ecl-sigslots, catkin, kobuki-ftdi, ecl-exceptions, roscpp, angles, rospy, ecl-streams, kobuki-safety-controller, kobuki-driver, kobuki-keyop, diagnostic-updater, kobuki-msgs, kobuki-rapps }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-node";
   version = "0.7.6";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-streams kobuki-driver kobuki-msgs ecl-threads ecl-exceptions rospy diagnostic-msgs tf geometry-msgs kobuki-keyop angles ecl-sigslots nav-msgs std-msgs roscpp nodelet kobuki-ftdi pluginlib sensor-msgs kobuki-safety-controller diagnostic-updater ];
-  propagatedBuildInputs = [ ecl-streams kobuki-driver kobuki-msgs ecl-threads ecl-exceptions rospy diagnostic-msgs tf geometry-msgs capabilities kobuki-rapps kobuki-keyop angles ecl-sigslots nav-msgs std-msgs diagnostic-aggregator roscpp nodelet kobuki-ftdi pluginlib sensor-msgs kobuki-safety-controller diagnostic-updater ];
+  buildInputs = [ geometry-msgs pluginlib tf nodelet nav-msgs sensor-msgs diagnostic-msgs ecl-threads std-msgs ecl-sigslots kobuki-ftdi ecl-exceptions roscpp angles rospy ecl-streams kobuki-safety-controller kobuki-driver kobuki-keyop diagnostic-updater kobuki-msgs ];
+  propagatedBuildInputs = [ geometry-msgs pluginlib tf nodelet nav-msgs sensor-msgs diagnostic-msgs capabilities ecl-threads diagnostic-aggregator std-msgs ecl-sigslots kobuki-ftdi ecl-exceptions roscpp angles rospy ecl-streams kobuki-safety-controller kobuki-driver kobuki-keyop diagnostic-updater kobuki-msgs kobuki-rapps ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

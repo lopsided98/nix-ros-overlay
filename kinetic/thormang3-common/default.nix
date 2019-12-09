@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, thormang3-description, catkin, thormang3-gazebo }:
+{ lib, buildRosPackage, fetchurl, thormang3-description, thormang3-gazebo, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-common";
   version = "0.2.0";

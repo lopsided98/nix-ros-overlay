@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-gtest, motion-model, eigen, ament-lint-auto, autoware-auto-cmake, osrf-testing-tools-cpp }:
+{ lib, buildRosPackage, fetchurl, ament-lint-common, motion-model, ament-cmake, autoware-auto-cmake, eigen, ament-cmake-gtest, osrf-testing-tools-cpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-kalman-filter";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ motion-model eigen ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest osrf-testing-tools-cpp ament-lint-common ];
-  propagatedBuildInputs = [ motion-model eigen ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  buildInputs = [ eigen motion-model ];
+  checkInputs = [ ament-lint-auto osrf-testing-tools-cpp ament-cmake-gtest ament-lint-common ];
+  propagatedBuildInputs = [ eigen motion-model ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''an implementation of square root covariance filtering (carlson-schmidt) for probabilistic state estimation'';

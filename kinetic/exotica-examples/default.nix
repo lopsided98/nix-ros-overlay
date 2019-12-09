@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, exotica-val-description, exotica-ik-solver, exotica-collision-scene-fcl, python-orocos-kdl, sensor-msgs, catkin, exotica-time-indexed-rrt-connect-solver, exotica-aico-solver, exotica-ompl-solver, rostest, rviz, interactive-markers, visualization-msgs, robot-state-publisher, exotica-python, exotica-core, exotica-core-task-maps, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, exotica-python, sensor-msgs, geometry-msgs, interactive-markers, robot-state-publisher, exotica-ik-solver, exotica-val-description, exotica-ompl-solver, catkin, exotica-aico-solver, python-orocos-kdl, exotica-time-indexed-rrt-connect-solver, exotica-core-task-maps, visualization-msgs, exotica-core, rviz, exotica-collision-scene-fcl, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-examples";
   version = "5.0.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ exotica-ik-solver sensor-msgs exotica-aico-solver exotica-python exotica-core exotica-core-task-maps ];
-  checkInputs = [ rostest exotica-val-description ];
-  propagatedBuildInputs = [ exotica-ik-solver geometry-msgs python-orocos-kdl sensor-msgs exotica-time-indexed-rrt-connect-solver exotica-aico-solver exotica-ompl-solver rviz interactive-markers robot-state-publisher visualization-msgs exotica-python exotica-core exotica-core-task-maps exotica-collision-scene-fcl ];
+  buildInputs = [ sensor-msgs exotica-core exotica-ik-solver exotica-aico-solver exotica-core-task-maps exotica-python ];
+  checkInputs = [ exotica-val-description rostest ];
+  propagatedBuildInputs = [ exotica-python sensor-msgs geometry-msgs interactive-markers robot-state-publisher exotica-ik-solver exotica-ompl-solver exotica-aico-solver python-orocos-kdl exotica-time-indexed-rrt-connect-solver exotica-core-task-maps visualization-msgs exotica-core rviz exotica-collision-scene-fcl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

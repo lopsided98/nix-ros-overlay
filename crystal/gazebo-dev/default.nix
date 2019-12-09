@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, gazeboSimulator }:
+{ lib, buildRosPackage, fetchurl, gazeboSimulator, ament-cmake }:
 buildRosPackage {
   pname = "ros-crystal-gazebo-dev";
   version = "3.2.0";

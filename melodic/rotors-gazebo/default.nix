@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mav-msgs, sensor-msgs, joy, catkin, gazebo-msgs, roscpp, gazebo-plugins, rotors-gazebo-plugins, xacro, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, joy, sensor-msgs, xacro, geometry-msgs, rotors-gazebo-plugins, catkin, mav-msgs, gazebo-msgs, roscpp, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-rotors-gazebo";
   version = "2.2.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs mav-msgs sensor-msgs joy rotors-gazebo-plugins gazebo-plugins roscpp xacro gazebo-msgs ];
-  propagatedBuildInputs = [ geometry-msgs mav-msgs sensor-msgs joy rotors-gazebo-plugins gazebo-plugins roscpp xacro gazebo-msgs ];
+  buildInputs = [ joy sensor-msgs xacro geometry-msgs rotors-gazebo-plugins mav-msgs gazebo-msgs roscpp gazebo-plugins ];
+  propagatedBuildInputs = [ joy sensor-msgs xacro geometry-msgs rotors-gazebo-plugins mav-msgs gazebo-msgs roscpp gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

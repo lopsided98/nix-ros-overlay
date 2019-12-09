@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tinyxml, console-bridge-vendor, urdfdom-headers, console-bridge, tinyxml-vendor, cmake }:
+{ lib, buildRosPackage, fetchurl, urdfdom-headers, tinyxml-vendor, console-bridge-vendor, cmake, tinyxml, console-bridge }:
 buildRosPackage {
   pname = "ros-crystal-urdfdom";
   version = "2.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ tinyxml console-bridge-vendor urdfdom-headers console-bridge tinyxml-vendor ];
-  propagatedBuildInputs = [ console-bridge-vendor tinyxml urdfdom-headers console-bridge tinyxml-vendor ];
+  buildInputs = [ urdfdom-headers tinyxml-vendor console-bridge-vendor tinyxml console-bridge ];
+  propagatedBuildInputs = [ urdfdom-headers tinyxml-vendor console-bridge-vendor tinyxml console-bridge ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

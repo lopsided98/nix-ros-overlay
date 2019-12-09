@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, tf2-ros, message-generation, message-runtime, pcl-ros, std-msgs, roscpp, pcl-conversions, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, geometry-msgs, std-msgs, catkin, pcl-conversions, roscpp, message-runtime, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-rail-mesh-icp";
   version = "0.0.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs tf2-ros message-generation pcl-ros std-msgs roscpp pcl-conversions geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs tf2-ros message-runtime pcl-ros std-msgs roscpp pcl-conversions geometry-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs geometry-msgs std-msgs pcl-conversions roscpp message-generation tf2-ros ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs geometry-msgs std-msgs pcl-conversions roscpp message-runtime tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

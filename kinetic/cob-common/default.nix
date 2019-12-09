@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, raw-description, catkin, cob-srvs, cob-description, cob-actions, cob-msgs }:
+{ lib, buildRosPackage, fetchurl, cob-msgs, cob-actions, raw-description, catkin, cob-description, cob-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-common";
   version = "0.7.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ raw-description cob-srvs cob-description cob-actions cob-msgs ];
+  propagatedBuildInputs = [ cob-msgs cob-actions raw-description cob-description cob-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

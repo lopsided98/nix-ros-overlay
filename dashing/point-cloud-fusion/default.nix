@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rclcpp-lifecycle, tf2-geometry-msgs, sensor-msgs, ament-cmake-gtest, message-filters, tf2-ros, tf2-sensor-msgs, rclcpp, eigen, ament-lint-auto, autoware-auto-cmake, lidar-utils }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp-lifecycle, message-filters, lidar-utils, tf2-sensor-msgs, ament-lint-common, ament-cmake, autoware-auto-cmake, tf2-geometry-msgs, ament-lint-auto, eigen, ament-cmake-gtest, rclcpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-point-cloud-fusion";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-lifecycle tf2-geometry-msgs sensor-msgs message-filters tf2-ros tf2-sensor-msgs rclcpp eigen lidar-utils ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ rclcpp-lifecycle tf2-geometry-msgs sensor-msgs message-filters tf2-ros tf2-sensor-msgs rclcpp eigen lidar-utils ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  buildInputs = [ rclcpp-lifecycle message-filters sensor-msgs lidar-utils tf2-sensor-msgs tf2-geometry-msgs eigen rclcpp tf2-ros ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ rclcpp-lifecycle message-filters sensor-msgs lidar-utils tf2-sensor-msgs tf2-geometry-msgs eigen rclcpp tf2-ros ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''point cloud fusion'';

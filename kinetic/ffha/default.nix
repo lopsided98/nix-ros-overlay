@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospack, mk, catkin, rosbuild, flex, bison, roslib, gawk }:
+{ lib, buildRosPackage, fetchurl, bison, gawk, catkin, roslib, mk, flex, rosbuild, rospack }:
 buildRosPackage {
   pname = "ros-kinetic-ffha";
-  version = "2.1.13-r1";
+  version = "2.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/ffha/2.1.13-1.tar.gz";
-    name = "2.1.13-1.tar.gz";
-    sha256 = "aa8f9dd43b85f643b539bcb3d0299a2d27f7e455388a1017fe98d11908baa34d";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/ffha/2.1.14-1.tar.gz";
+    name = "2.1.14-1.tar.gz";
+    sha256 = "1e342d35e5a6a2e9a03d02e6856ad9a73ed7c22aaddce73ce3a4a0bbaee524a4";
   };
 
   buildType = "catkin";
-  buildInputs = [ rospack mk rosbuild gawk flex roslib bison ];
+  buildInputs = [ rospack bison gawk roslib flex rosbuild mk ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

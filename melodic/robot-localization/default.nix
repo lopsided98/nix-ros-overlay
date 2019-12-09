@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-msgs, geometry-msgs, roslint, pythonPackages, message-filters, message-generation, message-runtime, eigen-conversions, std-srvs, tf2-geometry-msgs, rosbag, catkin, tf2-ros, nav-msgs, xmlrpcpp, std-msgs, roscpp, nodelet, cmake-modules, libyamlcpp, sensor-msgs, geographic-msgs, diagnostic-updater, tf2, rostest, eigen, rosunit }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, eigen-conversions, rosunit, eigen, nodelet, tf2, nav-msgs, rostest, sensor-msgs, diagnostic-msgs, cmake-modules, libyamlcpp, tf2-geometry-msgs, geographic-msgs, rosbag, xmlrpcpp, tf2-ros, message-filters, std-msgs, std-srvs, catkin, pythonPackages, roscpp, message-generation, roslint, diagnostic-updater, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-robot-localization";
   version = "2.6.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs geometry-msgs roslint message-filters message-generation eigen-conversions std-srvs tf2-geometry-msgs tf2-ros nav-msgs xmlrpcpp std-msgs nodelet roscpp cmake-modules libyamlcpp sensor-msgs geographic-msgs diagnostic-updater tf2 eigen pythonPackages.catkin-pkg ];
-  checkInputs = [ rostest rosbag rosunit ];
-  propagatedBuildInputs = [ diagnostic-msgs geometry-msgs message-filters message-runtime eigen-conversions std-srvs tf2-geometry-msgs tf2-ros nav-msgs xmlrpcpp std-msgs nodelet roscpp cmake-modules libyamlcpp sensor-msgs geographic-msgs diagnostic-updater tf2 eigen ];
+  buildInputs = [ geometry-msgs eigen-conversions eigen pythonPackages.catkin-pkg nodelet tf2 nav-msgs sensor-msgs diagnostic-msgs cmake-modules libyamlcpp tf2-geometry-msgs geographic-msgs xmlrpcpp tf2-ros message-filters std-msgs std-srvs roscpp message-generation roslint diagnostic-updater ];
+  checkInputs = [ rosbag rostest rosunit ];
+  propagatedBuildInputs = [ geometry-msgs eigen-conversions eigen nodelet tf2 nav-msgs sensor-msgs diagnostic-msgs cmake-modules libyamlcpp tf2-geometry-msgs geographic-msgs xmlrpcpp tf2-ros message-filters std-msgs std-srvs roscpp diagnostic-updater message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

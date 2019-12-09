@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, joint-state-controller, tf, diff-drive-controller, serial, catkin, pythonPackages, diagnostic-updater, rostest, nav-msgs, dynamic-reconfigure, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, controller-manager, hardware-interface, std-msgs, serial, tf, catkin, pythonPackages, diff-drive-controller, roscpp, nav-msgs, rostest, joint-state-controller, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-ubiquity-motor";
-  version = "0.9.0";
+  version = "0.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/UbiquityRobotics-release/ubiquity_motor-release/archive/release/kinetic/ubiquity_motor/0.9.0-0.tar.gz";
-    name = "0.9.0-0.tar.gz";
-    sha256 = "9fc2cb0b76cf7f26025527c1ff66f0c7851f216ebbe880bf7791f3e44d2c6fa2";
+    url = "https://github.com/UbiquityRobotics-release/ubiquity_motor-release/archive/release/kinetic/ubiquity_motor/0.10.0-1.tar.gz";
+    name = "0.10.0-1.tar.gz";
+    sha256 = "8239be9d6d3176b304be8141e206623e2642f2a2a963954064863fb3e04d88ac";
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager hardware-interface tf serial diagnostic-updater nav-msgs dynamic-reconfigure roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs controller-manager dynamic-reconfigure hardware-interface std-msgs serial tf roscpp nav-msgs diagnostic-updater ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ controller-manager hardware-interface joint-state-controller diff-drive-controller serial diagnostic-updater nav-msgs dynamic-reconfigure pythonPackages.requests tf geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs controller-manager dynamic-reconfigure hardware-interface std-msgs serial tf pythonPackages.requests diff-drive-controller diagnostic-updater nav-msgs joint-state-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

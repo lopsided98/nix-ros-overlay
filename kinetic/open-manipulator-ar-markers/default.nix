@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ar-track-alvar, image-transport, catkin, ar-track-alvar-msgs, image-proc }:
+{ lib, buildRosPackage, fetchurl, ar-track-alvar, image-proc, catkin, image-transport, ar-track-alvar-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-open-manipulator-ar-markers";
   version = "1.0.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ar-track-alvar image-transport image-proc ar-track-alvar-msgs ];
-  propagatedBuildInputs = [ ar-track-alvar image-transport image-proc ar-track-alvar-msgs ];
+  buildInputs = [ image-transport ar-track-alvar-msgs image-proc ar-track-alvar ];
+  propagatedBuildInputs = [ image-transport ar-track-alvar-msgs image-proc ar-track-alvar ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

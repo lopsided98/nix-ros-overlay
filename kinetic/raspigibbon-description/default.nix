@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, urdf, rospy, std-msgs, xacro }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, xacro, urdf, std-msgs, catkin, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-raspigibbon-description";
   version = "0.2.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs urdf rospy std-msgs xacro ];
-  propagatedBuildInputs = [ sensor-msgs urdf rospy std-msgs xacro ];
+  buildInputs = [ sensor-msgs xacro urdf std-msgs rospy ];
+  propagatedBuildInputs = [ sensor-msgs xacro urdf std-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

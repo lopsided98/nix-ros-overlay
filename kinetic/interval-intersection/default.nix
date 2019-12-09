@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, actionlib-msgs, boost, catkin, roscpp, actionlib, roscpp-serialization, std-msgs, rostime, geometry-msgs, calibration-msgs }:
+{ lib, buildRosPackage, fetchurl, boost, roscpp-serialization, geometry-msgs, std-msgs, actionlib, catkin, calibration-msgs, actionlib-msgs, rostime, roscpp, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-interval-intersection";
   version = "0.10.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole boost actionlib-msgs roscpp actionlib roscpp-serialization std-msgs rostime geometry-msgs calibration-msgs ];
-  propagatedBuildInputs = [ rosconsole actionlib-msgs boost rostime roscpp-serialization actionlib std-msgs roscpp geometry-msgs calibration-msgs ];
+  buildInputs = [ boost geometry-msgs roscpp-serialization std-msgs actionlib calibration-msgs actionlib-msgs rostime roscpp rosconsole ];
+  propagatedBuildInputs = [ boost geometry-msgs roscpp-serialization std-msgs actionlib calibration-msgs actionlib-msgs rostime roscpp rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, openscenegraph, roscpp, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, tf, roscpp, openscenegraph }:
 buildRosPackage {
   pname = "ros-melodic-osg-utils";
-  version = "1.0.2-r1";
+  version = "1.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/melodic/osg_utils/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "998d814e59307447515961ef7d7b5171d1480906c4b7520aa476194008065324";
+    url = "https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/melodic/osg_utils/1.0.2-2.tar.gz";
+    name = "1.0.2-2.tar.gz";
+    sha256 = "44b9e6940bfb07236c1f66596c82406b2ef5d9df2be508248d24b560d31ac7f5";
   };
 
   buildType = "catkin";
-  buildInputs = [ tf openscenegraph roscpp geometry-msgs ];
-  propagatedBuildInputs = [ tf roscpp openscenegraph geometry-msgs ];
+  buildInputs = [ tf geometry-msgs openscenegraph roscpp ];
+  propagatedBuildInputs = [ tf geometry-msgs openscenegraph roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

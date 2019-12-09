@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, catkin, unzip }:
+{ lib, buildRosPackage, fetchurl, unzip, git, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-collada-robots";
   version = "0.0.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ git unzip ];
+  buildInputs = [ unzip git ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-msgs, actionlib-msgs, robot-localization, rosgraph-msgs, multimaster-msgs, diagnostic-msgs, geometry-msgs, gazebo-msgs, stereo-msgs, roslint, pythonPackages, controller-manager-msgs, roslaunch, std-srvs, trajectory-msgs, catkin, move-base-msgs, nav-msgs, std-msgs, roscpp, visualization-msgs, shape-msgs, sensor-msgs, map-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, map-msgs, actionlib-msgs, tf2-msgs, nav-msgs, sensor-msgs, diagnostic-msgs, controller-manager-msgs, shape-msgs, multimaster-msgs, move-base-msgs, std-msgs, std-srvs, pythonPackages, catkin, robot-localization, roscpp, rosgraph-msgs, roslaunch, trajectory-msgs, roslint, gazebo-msgs, stereo-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-message-relay";
   version = "0.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2-msgs actionlib-msgs robot-localization rosgraph-msgs multimaster-msgs diagnostic-msgs gazebo-msgs stereo-msgs geometry-msgs pythonPackages.cheetah controller-manager-msgs std-srvs trajectory-msgs move-base-msgs nav-msgs std-msgs visualization-msgs roscpp shape-msgs sensor-msgs map-msgs ];
+  buildInputs = [ geometry-msgs pythonPackages.cheetah map-msgs actionlib-msgs tf2-msgs nav-msgs sensor-msgs diagnostic-msgs controller-manager-msgs shape-msgs multimaster-msgs move-base-msgs std-msgs std-srvs robot-localization roscpp rosgraph-msgs trajectory-msgs gazebo-msgs stereo-msgs visualization-msgs ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ tf2-msgs actionlib-msgs robot-localization rosgraph-msgs multimaster-msgs diagnostic-msgs geometry-msgs gazebo-msgs stereo-msgs controller-manager-msgs std-srvs trajectory-msgs move-base-msgs nav-msgs std-msgs visualization-msgs roscpp shape-msgs sensor-msgs map-msgs ];
+  propagatedBuildInputs = [ geometry-msgs map-msgs actionlib-msgs tf2-msgs nav-msgs sensor-msgs diagnostic-msgs controller-manager-msgs shape-msgs multimaster-msgs move-base-msgs std-msgs std-srvs robot-localization roscpp rosgraph-msgs trajectory-msgs gazebo-msgs stereo-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

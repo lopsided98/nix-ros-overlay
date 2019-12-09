@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosbridge-server, web-video-server }:
+{ lib, buildRosPackage, fetchurl, web-video-server, catkin, rosbridge-server }:
 buildRosPackage {
   pname = "ros-kinetic-op3-web-setting-tool";
   version = "0.2.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosbridge-server web-video-server ];
+  propagatedBuildInputs = [ web-video-server rosbridge-server ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

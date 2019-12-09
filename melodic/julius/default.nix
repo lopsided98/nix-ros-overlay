@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospack, mk, rsync, catkin, wget, unzip, roslib }:
+{ lib, buildRosPackage, fetchurl, wget, catkin, roslib, rsync, unzip, mk, rospack }:
 buildRosPackage {
   pname = "ros-melodic-julius";
   version = "2.1.13-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospack mk rsync wget unzip roslib ];
-  propagatedBuildInputs = [ rsync unzip wget ];
+  buildInputs = [ wget roslib rsync unzip mk rospack ];
+  propagatedBuildInputs = [ unzip wget rsync ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

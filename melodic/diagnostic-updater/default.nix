@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, std-msgs, diagnostic-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, diagnostic-msgs, std-msgs, catkin, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-diagnostic-updater";
   version = "1.9.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs rostest roscpp std-msgs ];
+  buildInputs = [ std-msgs diagnostic-msgs rostest roscpp ];
   propagatedBuildInputs = [ std-msgs diagnostic-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 

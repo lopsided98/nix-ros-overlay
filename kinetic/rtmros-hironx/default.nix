@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hironx-ros-bridge, catkin, hironx-moveit-config, hironx-calibration }:
+{ lib, buildRosPackage, fetchurl, hironx-ros-bridge, hironx-calibration, catkin, hironx-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-rtmros-hironx";
   version = "2.1.1";

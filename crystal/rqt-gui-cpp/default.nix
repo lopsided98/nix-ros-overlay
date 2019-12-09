@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, qt-gui-cpp, qt-gui, rclcpp, qt5 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, qt-gui-cpp, qt-gui, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-crystal-rqt-gui-cpp";
   version = "1.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ qt-gui-cpp qt-gui rclcpp qt5.qtbase ];
-  propagatedBuildInputs = [ qt-gui-cpp qt-gui rclcpp ];
+  buildInputs = [ rclcpp qt-gui qt-gui-cpp qt5.qtbase ];
+  propagatedBuildInputs = [ rclcpp qt-gui qt-gui-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-msgs, ament-cmake, ament-cmake-gtest, message-filters, tf2, rclcpp, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-filters, geometry-msgs, std-msgs, ament-cmake, tf2-msgs, tf2, rclcpp, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-tf2-ros";
   version = "0.11.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tf2-msgs message-filters tf2 rclcpp std-msgs geometry-msgs ];
+  buildInputs = [ message-filters geometry-msgs std-msgs tf2 tf2-msgs rclcpp ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ tf2-msgs message-filters tf2 rclcpp std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ message-filters geometry-msgs std-msgs tf2 tf2-msgs rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, master-sync-fkie, catkin, message-relay, clock-relay, tf2-relay, master-discovery-fkie, roslaunch }:
+{ lib, buildRosPackage, fetchurl, tf2-relay, message-relay, master-sync-fkie, catkin, clock-relay, master-discovery-fkie, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-multimaster-launch";
   version = "0.0.2-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ master-sync-fkie message-relay clock-relay tf2-relay master-discovery-fkie ];
+  propagatedBuildInputs = [ tf2-relay message-relay master-sync-fkie clock-relay master-discovery-fkie ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

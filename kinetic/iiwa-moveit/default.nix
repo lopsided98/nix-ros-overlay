@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-fake-controller-manager, moveit-ros-visualization, joint-trajectory-controller, position-controllers, moveit-simple-controller-manager, joint-state-controller, moveit-planners-ompl, robot-state-publisher, moveit-ros-planning-interface, joint-state-publisher, xacro, catkin, velocity-controllers, iiwa-description, moveit-ros-move-group, moveit-ros-warehouse, effort-controllers, gazebo-ros-control, moveit-setup-assistant }:
+{ lib, buildRosPackage, fetchurl, effort-controllers, xacro, moveit-ros-visualization, joint-state-controller, moveit-planners-ompl, moveit-ros-warehouse, robot-state-publisher, moveit-simple-controller-manager, position-controllers, gazebo-ros-control, joint-trajectory-controller, joint-state-publisher, moveit-ros-planning-interface, moveit-setup-assistant, catkin, moveit-fake-controller-manager, moveit-ros-move-group, iiwa-description, velocity-controllers }:
 buildRosPackage {
   pname = "ros-kinetic-iiwa-moveit";
   version = "1.4.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ moveit-fake-controller-manager joint-state-controller moveit-ros-move-group iiwa-description moveit-ros-visualization velocity-controllers joint-trajectory-controller moveit-setup-assistant position-controllers moveit-simple-controller-manager moveit-ros-planning-interface moveit-ros-warehouse robot-state-publisher effort-controllers joint-state-publisher xacro gazebo-ros-control moveit-planners-ompl ];
+  propagatedBuildInputs = [ moveit-planners-ompl joint-state-publisher effort-controllers xacro moveit-ros-warehouse robot-state-publisher moveit-setup-assistant position-controllers moveit-ros-move-group moveit-ros-planning-interface moveit-simple-controller-manager velocity-controllers joint-state-controller gazebo-ros-control moveit-ros-visualization joint-trajectory-controller iiwa-description moveit-fake-controller-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

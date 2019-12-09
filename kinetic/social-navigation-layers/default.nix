@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, people-msgs, catkin, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, people-msgs, dynamic-reconfigure, catkin, costmap-2d, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-social-navigation-layers";
   version = "0.3.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ people-msgs costmap-2d roscpp dynamic-reconfigure ];
-  propagatedBuildInputs = [ people-msgs costmap-2d roscpp dynamic-reconfigure ];
+  buildInputs = [ costmap-2d people-msgs dynamic-reconfigure roscpp ];
+  propagatedBuildInputs = [ costmap-2d people-msgs dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

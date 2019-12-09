@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, suitesparse, nav2d-msgs, tf, catkin, nav2d-localizer, tbb, nav-msgs, visualization-msgs, eigen, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, tbb, geometry-msgs, nav2d-localizer, tf, catkin, suitesparse, eigen, visualization-msgs, roscpp, nav-msgs, nav2d-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-nav2d-karto";
   version = "0.3.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ suitesparse nav2d-msgs tf nav2d-localizer tbb nav-msgs visualization-msgs eigen roscpp geometry-msgs ];
-  propagatedBuildInputs = [ suitesparse nav2d-msgs roscpp nav2d-localizer tbb nav-msgs visualization-msgs eigen tf geometry-msgs ];
+  buildInputs = [ tbb geometry-msgs nav2d-localizer tf suitesparse eigen visualization-msgs roscpp nav-msgs nav2d-msgs ];
+  propagatedBuildInputs = [ tbb geometry-msgs nav2d-localizer tf suitesparse eigen visualization-msgs roscpp nav-msgs nav2d-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, std-srvs, moveit-resources, pluginlib, tf, moveit-kinematics, catkin, rostest, moveit-core, actionlib, roscpp }:
+{ lib, buildRosPackage, fetchurl, moveit-core, pluginlib, std-srvs, actionlib, tf, moveit-resources, catkin, moveit-ros-planning, roscpp, moveit-kinematics, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-move-group";
   version = "0.9.17-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-planning std-srvs pluginlib tf moveit-core actionlib roscpp ];
-  checkInputs = [ moveit-resources rostest ];
-  propagatedBuildInputs = [ moveit-ros-planning std-srvs pluginlib tf moveit-kinematics moveit-core actionlib roscpp ];
+  buildInputs = [ moveit-core pluginlib std-srvs tf actionlib moveit-ros-planning roscpp ];
+  checkInputs = [ rostest moveit-resources ];
+  propagatedBuildInputs = [ moveit-core pluginlib std-srvs actionlib tf moveit-ros-planning roscpp moveit-kinematics ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

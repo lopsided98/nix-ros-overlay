@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp, sensor-msgs, catkin, nodelet }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, nodelet, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-laser-scan-splitter";
   version = "0.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp nodelet ];
+  buildInputs = [ sensor-msgs nodelet roscpp ];
   propagatedBuildInputs = [ sensor-msgs nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 

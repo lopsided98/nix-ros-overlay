@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, katana-msgs, sensor-msgs, catkin, actionlib, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, katana-msgs, actionlib, catkin, roscpp, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-katana-teleop";
   version = "1.1.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ control-msgs katana-msgs sensor-msgs actionlib roscpp ];
-  propagatedBuildInputs = [ control-msgs katana-msgs sensor-msgs actionlib roscpp ];
+  buildInputs = [ sensor-msgs katana-msgs actionlib roscpp control-msgs ];
+  propagatedBuildInputs = [ sensor-msgs katana-msgs actionlib roscpp control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

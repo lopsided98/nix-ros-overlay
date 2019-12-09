@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-app-manager, pr2-teleop-general, pr2-position-scripts, pr2-kinematics, pr2-mannequin-mode, catkin, pr2-tuckarm }:
+{ lib, buildRosPackage, fetchurl, pr2-tuckarm, catkin, pr2-mannequin-mode, pr2-kinematics, pr2-teleop-general, pr2-position-scripts, pr2-app-manager }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-apps";
   version = "0.6.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-app-manager pr2-teleop-general pr2-position-scripts pr2-kinematics pr2-mannequin-mode pr2-tuckarm ];
+  propagatedBuildInputs = [ pr2-tuckarm pr2-mannequin-mode pr2-kinematics pr2-teleop-general pr2-position-scripts pr2-app-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

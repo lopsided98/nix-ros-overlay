@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-lpg-planner";
-  version = "2.1.13-r1";
+  version = "2.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/lpg_planner/2.1.13-1.tar.gz";
-    name = "2.1.13-1.tar.gz";
-    sha256 = "032bfe5a820417ec3014e742c7352fe3a59240b048e8f6e7f547d22166b36f3b";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/lpg_planner/2.1.14-1.tar.gz";
+    name = "2.1.14-1.tar.gz";
+    sha256 = "500a2cf29200b10be40d998eb88b6606a978404ca9f8ee1ff3a46127de088420";
   };
 
   buildType = "catkin";

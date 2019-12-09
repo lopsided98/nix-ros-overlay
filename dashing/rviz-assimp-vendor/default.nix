@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, assimp }:
+{ lib, buildRosPackage, fetchurl, assimp, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-rviz-assimp-vendor";
   version = "6.1.4-r1";

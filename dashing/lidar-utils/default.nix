@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, ament-lint-common, ament-cmake-gtest, sensor-msgs, rclcpp, ament-lint-auto, autoware-auto-cmake }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp-lifecycle, ament-lint-common, ament-cmake, autoware-auto-cmake, ament-cmake-gtest, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-lidar-utils";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-lifecycle sensor-msgs rclcpp ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ rclcpp-lifecycle sensor-msgs rclcpp ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  buildInputs = [ sensor-msgs rclcpp rclcpp-lifecycle ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs rclcpp rclcpp-lifecycle ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''Common utility functions and classes for point clouds'';

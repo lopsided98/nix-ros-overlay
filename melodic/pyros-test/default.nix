@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, rostest, message-generation, rostopic, message-runtime, rospy, std-msgs, rosunit }:
+{ lib, buildRosPackage, fetchurl, message-generation, std-msgs, catkin, rostopic, rosunit, roslint, rospy, message-runtime, rostest }:
 buildRosPackage {
   pname = "ros-melodic-pyros-test";
   version = "0.0.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation roslint rospy ];
-  checkInputs = [ rostest rosunit rostopic ];
-  propagatedBuildInputs = [ std-msgs message-runtime rospy ];
+  buildInputs = [ std-msgs rospy message-generation roslint ];
+  checkInputs = [ rostest rostopic rosunit ];
+  propagatedBuildInputs = [ std-msgs rospy message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-filters, tf2-ros, roscpp, tf2-sensor-msgs, tf2, nodelet, topic-tools, roslaunch, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, tf, tf2-sensor-msgs, catkin, roscpp, nodelet, tf2, topic-tools, roslaunch, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-imu-transformer";
   version = "0.2.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters tf2-ros tf2-sensor-msgs tf2 nodelet topic-tools roslaunch roscpp geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs message-filters roscpp tf2-ros tf2-sensor-msgs tf2 nodelet topic-tools roslaunch tf geometry-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs tf2-sensor-msgs roscpp nodelet tf2 topic-tools roslaunch tf2-ros ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs tf tf2 tf2-sensor-msgs nodelet roscpp topic-tools roslaunch tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

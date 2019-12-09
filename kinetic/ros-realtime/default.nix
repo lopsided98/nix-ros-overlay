@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosatomic, catkin, allocators, lockfree, rosrt }:
+{ lib, buildRosPackage, fetchurl, rosatomic, catkin, rosrt, lockfree, allocators }:
 buildRosPackage {
   pname = "ros-kinetic-ros-realtime";
   version = "1.0.25";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ lockfree rosatomic allocators rosrt ];
+  propagatedBuildInputs = [ lockfree rosatomic rosrt allocators ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

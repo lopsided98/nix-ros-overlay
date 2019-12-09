@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, sensor-msgs, catkin, angles, rospy, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, pluginlib, catkin, costmap-2d, roscpp, angles, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-range-sensor-layer";
   version = "0.3.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib sensor-msgs rospy angles roscpp ];
-  propagatedBuildInputs = [ costmap-2d pluginlib sensor-msgs rospy angles roscpp ];
+  buildInputs = [ sensor-msgs pluginlib costmap-2d roscpp angles rospy ];
+  propagatedBuildInputs = [ sensor-msgs pluginlib costmap-2d roscpp angles rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

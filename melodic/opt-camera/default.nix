@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospack, camera-calibration-parsers, sensor-msgs, cv-bridge, catkin, roslang, dynamic-reconfigure, image-proc, compressed-image-transport }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, image-proc, catkin, cv-bridge, roslang, compressed-image-transport, camera-calibration-parsers, rospack }:
 buildRosPackage {
   pname = "ros-melodic-opt-camera";
   version = "2.1.13-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospack camera-calibration-parsers sensor-msgs cv-bridge roslang dynamic-reconfigure image-proc compressed-image-transport ];
-  propagatedBuildInputs = [ rospack camera-calibration-parsers sensor-msgs cv-bridge dynamic-reconfigure image-proc compressed-image-transport ];
+  buildInputs = [ sensor-msgs dynamic-reconfigure image-proc cv-bridge roslang compressed-image-transport camera-calibration-parsers rospack ];
+  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure image-proc cv-bridge compressed-image-transport camera-calibration-parsers rospack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

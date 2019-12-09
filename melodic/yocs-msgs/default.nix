@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, actionlib-msgs, catkin, message-generation, message-runtime, dynamic-reconfigure, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, dynamic-reconfigure, std-msgs, std-srvs, catkin, actionlib-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-yocs-msgs";
   version = "0.7.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs actionlib-msgs message-generation dynamic-reconfigure std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs actionlib-msgs message-runtime dynamic-reconfigure std-msgs geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure std-msgs std-srvs actionlib-msgs message-generation ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure std-msgs std-srvs actionlib-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

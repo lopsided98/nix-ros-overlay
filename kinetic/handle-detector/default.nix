@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, roscpp, liblapack, message-generation, message-runtime, visualization-msgs, tf-conversions, std-msgs, eigen-conversions, tf, pcl-conversions, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, liblapack, eigen-conversions, std-msgs, tf, cmake-modules, catkin, pcl-conversions, visualization-msgs, roscpp, message-runtime, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-handle-detector";
   version = "1.3.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules roscpp liblapack message-generation tf-conversions visualization-msgs std-msgs eigen-conversions tf pcl-conversions geometry-msgs ];
-  propagatedBuildInputs = [ cmake-modules tf liblapack message-runtime visualization-msgs tf-conversions std-msgs eigen-conversions roscpp pcl-conversions geometry-msgs ];
+  buildInputs = [ geometry-msgs liblapack eigen-conversions std-msgs tf cmake-modules pcl-conversions visualization-msgs roscpp message-generation tf-conversions ];
+  propagatedBuildInputs = [ geometry-msgs liblapack eigen-conversions std-msgs tf cmake-modules pcl-conversions visualization-msgs roscpp message-runtime tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

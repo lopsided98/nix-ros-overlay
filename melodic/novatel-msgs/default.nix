@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, nav-msgs, message-generation, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-msgs, catkin, message-generation, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-novatel-msgs";
   version = "1.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation nav-msgs geometry-msgs ];
-  propagatedBuildInputs = [ std-msgs nav-msgs message-runtime geometry-msgs ];
+  buildInputs = [ geometry-msgs message-generation nav-msgs std-msgs ];
+  propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

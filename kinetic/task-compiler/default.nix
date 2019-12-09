@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, catkin, roseus-smach, pddl-planner }:
+{ lib, buildRosPackage, fetchurl, roseus-smach, catkin, rostest, pddl-planner }:
 buildRosPackage {
   pname = "ros-kinetic-task-compiler";
   version = "0.1.10";

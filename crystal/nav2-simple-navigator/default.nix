@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, nav2-tasks, ament-lint-common, launch-testing, nav2-msgs, ament-cmake-gtest, launch, nav2-common, rclcpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, launch, launch-testing, ament-lint-common, ament-cmake, ament-cmake-gtest, nav2-common, ament-cmake-pytest, nav2-tasks, rclcpp, nav2-msgs, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-nav2-simple-navigator";
   version = "0.1.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ nav2-tasks nav2-msgs rclcpp nav2-common ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ nav2-msgs rclcpp nav2-tasks ];
+  buildInputs = [ nav2-tasks rclcpp nav2-msgs nav2-common ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ nav2-tasks rclcpp nav2-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

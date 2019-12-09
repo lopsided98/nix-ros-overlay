@@ -2,22 +2,22 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cv-bridge, swri-yaml-util, rospy, diagnostic-msgs, geos, tf, geometry-msgs, boost, swri-nodelet, pkg-config, gps-common, swri-math-util, catkin, proj, roscpp, nodelet, libyamlcpp, sensor-msgs, geographic-msgs, swri-roscpp, rostest, topic-tools }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, marti-nav-msgs, nodelet, rostest, sensor-msgs, diagnostic-msgs, libyamlcpp, geographic-msgs, swri-yaml-util, gps-common, geos, proj, catkin, swri-nodelet, cv-bridge, roscpp, pkg-config, topic-tools, rospy, swri-roscpp, boost, swri-math-util }:
 buildRosPackage {
   pname = "ros-kinetic-swri-transform-util";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_transform_util/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "8be0e00b1480f64e04eb23f8e96d74f002d6dd8341ec4ca2fb0c09f039e87580";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_transform_util/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "0e68a10423896cb8975264b192f2d8e7f58cb0dbae7c0a7876e4667ecd2116b6";
   };
 
   buildType = "catkin";
-  buildInputs = [ swri-math-util boost libyamlcpp swri-nodelet topic-tools cv-bridge roscpp geographic-msgs gps-common proj swri-roscpp swri-yaml-util rospy diagnostic-msgs nodelet geos tf geometry-msgs ];
+  buildInputs = [ geometry-msgs tf marti-nav-msgs nodelet diagnostic-msgs libyamlcpp geographic-msgs swri-yaml-util geos gps-common proj swri-nodelet cv-bridge roscpp topic-tools rospy swri-roscpp boost swri-math-util ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ cv-bridge swri-yaml-util rospy diagnostic-msgs geos tf geometry-msgs boost swri-nodelet gps-common swri-math-util proj roscpp nodelet libyamlcpp sensor-msgs geographic-msgs swri-roscpp topic-tools ];
-  nativeBuildInputs = [ catkin pkg-config ];
+  propagatedBuildInputs = [ geometry-msgs tf marti-nav-msgs nodelet sensor-msgs diagnostic-msgs libyamlcpp geographic-msgs swri-yaml-util geos gps-common proj swri-nodelet cv-bridge roscpp topic-tools rospy swri-roscpp boost swri-math-util ];
+  nativeBuildInputs = [ pkg-config catkin ];
 
   meta = {
     description = ''The swri_transform_util package contains utility functions and classes for

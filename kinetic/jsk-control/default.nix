@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jsk-ik-server, eus-qpoases, joy-mouse, jsk-teleop-joy, jsk-footstep-controller, catkin, jsk-calibration, jsk-footstep-planner, eus-qp, eus-nlopt }:
+{ lib, buildRosPackage, fetchurl, eus-nlopt, jsk-ik-server, jsk-calibration, joy-mouse, jsk-footstep-controller, catkin, eus-qp, jsk-teleop-joy, jsk-footstep-planner, eus-qpoases }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-control";
   version = "0.1.14";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ jsk-ik-server eus-qpoases joy-mouse jsk-teleop-joy jsk-footstep-controller jsk-calibration jsk-footstep-planner eus-qp eus-nlopt ];
+  propagatedBuildInputs = [ eus-nlopt jsk-ik-server jsk-calibration joy-mouse jsk-footstep-controller eus-qp jsk-teleop-joy jsk-footstep-planner eus-qpoases ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

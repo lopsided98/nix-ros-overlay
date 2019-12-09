@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gps-tools, gps-msgs, ament-cmake, gpsd-client }:
+{ lib, buildRosPackage, fetchurl, gps-tools, gpsd-client, gps-msgs, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-gps-umd";
   version = "1.0.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gps-tools gps-msgs gpsd-client ];
+  propagatedBuildInputs = [ gps-tools gpsd-client gps-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, async-web-server-cpp, image-transport, sensor-msgs, catkin, cv-bridge, ffmpeg, roslib, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, ffmpeg, catkin, roslib, async-web-server-cpp, image-transport, cv-bridge, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-web-video-server";
   version = "0.2.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ async-web-server-cpp image-transport sensor-msgs cv-bridge ffmpeg roslib roscpp ];
-  propagatedBuildInputs = [ async-web-server-cpp image-transport sensor-msgs cv-bridge roscpp ffmpeg roslib ];
+  buildInputs = [ sensor-msgs ffmpeg async-web-server-cpp roslib image-transport cv-bridge roscpp ];
+  propagatedBuildInputs = [ sensor-msgs ffmpeg async-web-server-cpp roslib image-transport cv-bridge roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

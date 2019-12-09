@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-test, ament-lint-cmake, ament-cmake-core }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-test, ament-cmake-core, ament-lint-cmake }:
 buildRosPackage {
   pname = "ros-crystal-ament-cmake-lint-cmake";
   version = "0.6.4";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   propagatedBuildInputs = [ ament-cmake-test ament-lint-cmake ];
-  nativeBuildInputs = [ ament-cmake-test ament-lint-cmake ament-cmake-core ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-lint-cmake ];
 
   meta = {
     description = ''The CMake API for ament_lint_cmake to lint CMake code using cmakelint.'';

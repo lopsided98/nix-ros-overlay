@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport, sensor-msgs, cv-bridge, message-filters, catkin, pcl-ros, tf-conversions, dynamic-reconfigure, roscpp, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, message-filters, dynamic-reconfigure, catkin, image-transport, cv-bridge, pcl-conversions, roscpp, tf-conversions }:
 buildRosPackage {
   pname = "ros-melodic-depthcloud-encoder";
   version = "0.1.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-transport sensor-msgs cv-bridge message-filters pcl-ros dynamic-reconfigure tf-conversions roscpp pcl-conversions ];
-  propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge message-filters pcl-ros dynamic-reconfigure tf-conversions roscpp pcl-conversions ];
+  buildInputs = [ pcl-ros sensor-msgs message-filters dynamic-reconfigure image-transport cv-bridge pcl-conversions roscpp tf-conversions ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs message-filters dynamic-reconfigure image-transport cv-bridge pcl-conversions roscpp tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

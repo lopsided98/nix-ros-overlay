@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, console-bridge, catkin, rosconsole }:
+{ lib, buildRosPackage, fetchurl, catkin, rosconsole, console-bridge }:
 buildRosPackage {
   pname = "ros-kinetic-rosconsole-bridge";
   version = "0.5.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ console-bridge rosconsole ];
-  propagatedBuildInputs = [ console-bridge rosconsole ];
+  buildInputs = [ rosconsole console-bridge ];
+  propagatedBuildInputs = [ rosconsole console-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, omniorb, catkin, libtool, pkg-config, doxygen, automake, cmake, utillinux }:
+{ lib, buildRosPackage, fetchurl, utillinux, omniorb, libtool, catkin, cmake, python, pkg-config, doxygen, automake }:
 buildRosPackage {
   pname = "ros-melodic-openrtm-aist";
   version = "1.1.2-r3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ omniorb utillinux python doxygen ];
-  propagatedBuildInputs = [ omniorb catkin utillinux ];
-  nativeBuildInputs = [ automake cmake libtool pkg-config ];
+  buildInputs = [ utillinux python omniorb doxygen ];
+  propagatedBuildInputs = [ utillinux catkin omniorb ];
+  nativeBuildInputs = [ automake libtool pkg-config cmake ];
 
   meta = {
     description = ''<p>This package represents <a href="http://openrtm.org/">OpenRTM-aist</a> that's built within ROS eco system. Although being ROS-agnostic by itself, you can use this via ROS together with the packages in <a href="http://www.ros.org/wiki/rtmros_common">rtmros_common</a> that bridge between two framework.</p>

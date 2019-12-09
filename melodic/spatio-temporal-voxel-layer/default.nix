@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, pcl-conversions, geometry-msgs, message-filters, tbb, message-generation, openvdb, tf2-geometry-msgs, catkin, tf2-ros, std-msgs, laser-geometry, visualization-msgs, roscpp, costmap-2d, openexr, pluginlib, sensor-msgs, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, tbb, geometry-msgs, pluginlib, openexr, sensor-msgs, dynamic-reconfigure, tf2-geometry-msgs, tf2-ros, pcl-ros, message-filters, std-msgs, catkin, costmap-2d, roscpp, openvdb, message-generation, laser-geometry, pcl-conversions, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-spatio-temporal-voxel-layer";
   version = "1.3.5-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d openexr pluginlib tf2-geometry-msgs sensor-msgs message-filters roscpp tf2-ros tbb message-generation visualization-msgs pcl-ros std-msgs dynamic-reconfigure laser-geometry pcl-conversions geometry-msgs openvdb ];
-  propagatedBuildInputs = [ costmap-2d openexr pluginlib tf2-geometry-msgs sensor-msgs message-filters tf2-ros tbb pcl-ros laser-geometry visualization-msgs dynamic-reconfigure std-msgs roscpp pcl-conversions geometry-msgs openvdb ];
+  buildInputs = [ pcl-ros tbb message-filters geometry-msgs sensor-msgs dynamic-reconfigure pluginlib std-msgs laser-geometry tf2-geometry-msgs costmap-2d openexr pcl-conversions visualization-msgs roscpp openvdb message-generation tf2-ros ];
+  propagatedBuildInputs = [ pcl-ros tbb sensor-msgs geometry-msgs message-filters dynamic-reconfigure pluginlib std-msgs laser-geometry tf2-geometry-msgs costmap-2d openexr pcl-conversions visualization-msgs roscpp openvdb tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

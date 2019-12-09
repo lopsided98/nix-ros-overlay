@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controller-configuration, pr2-bringup, catkin, pr2-run-stop-auto-restart, pr2-computer-monitor, pr2-camera-synchronizer, imu-monitor, pr2-ethercat }:
+{ lib, buildRosPackage, fetchurl, pr2-run-stop-auto-restart, pr2-camera-synchronizer, pr2-bringup, imu-monitor, catkin, pr2-computer-monitor, pr2-controller-configuration, pr2-ethercat }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-robot";
   version = "1.6.30";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-controller-configuration pr2-bringup pr2-run-stop-auto-restart pr2-computer-monitor pr2-camera-synchronizer imu-monitor pr2-ethercat ];
+  propagatedBuildInputs = [ pr2-run-stop-auto-restart pr2-bringup pr2-camera-synchronizer imu-monitor pr2-computer-monitor pr2-controller-configuration pr2-ethercat ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

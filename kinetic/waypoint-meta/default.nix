@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, waypoint-touring, catkin, waypoint-generator }:
+{ lib, buildRosPackage, fetchurl, waypoint-touring, waypoint-generator, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-waypoint-meta";
   version = "0.0.1";

@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, cacert, openssl, cmake, opencv3 }:
+{ lib, buildRosPackage, fetchurl, git, cmake, cacert, openssl, cv-bridge }:
 buildRosPackage {
   pname = "ros-kinetic-libcmt";
-  version = "2.1.13-r1";
+  version = "2.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/libcmt/2.1.13-1.tar.gz";
-    name = "2.1.13-1.tar.gz";
-    sha256 = "fc88273a96f7202d3f0e1a45cbbcb6c891fc8c2240d2a7db90b135b06267e02a";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/libcmt/2.1.14-1.tar.gz";
+    name = "2.1.14-1.tar.gz";
+    sha256 = "cc83273954285ef9ce2393ba5e23a8d77ca7d73db8cc91a8bf7b89feb13eb65d";
   };
 
   buildType = "cmake";
-  buildInputs = [ openssl cacert git opencv3 ];
-  propagatedBuildInputs = [ opencv3 ];
+  buildInputs = [ git openssl cacert cv-bridge ];
+  propagatedBuildInputs = [ cv-bridge ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

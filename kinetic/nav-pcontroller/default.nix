@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, move-base-msgs, roslib, visualization-msgs, actionlib, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, actionlib, tf, roslib, catkin, visualization-msgs, roscpp, move-base-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-nav-pcontroller";
   version = "0.1.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf sensor-msgs roscpp move-base-msgs visualization-msgs actionlib std-msgs roslib geometry-msgs ];
-  propagatedBuildInputs = [ tf sensor-msgs roscpp move-base-msgs visualization-msgs actionlib std-msgs roslib geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs actionlib tf roslib visualization-msgs roscpp move-base-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs actionlib tf roslib visualization-msgs roscpp move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

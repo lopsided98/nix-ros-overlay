@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mrpt-reactivenav2d, catkin, mrpt-tutorials, mrpt-rawlog, mrpt-localization, mrpt-map, mrpt-local-obstacles }:
+{ lib, buildRosPackage, fetchurl, mrpt-map, mrpt-reactivenav2d, mrpt-localization, mrpt-local-obstacles, catkin, mrpt-rawlog, mrpt-tutorials }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt-navigation";
   version = "0.1.26-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ mrpt-reactivenav2d mrpt-tutorials mrpt-localization mrpt-map mrpt-rawlog mrpt-local-obstacles ];
+  propagatedBuildInputs = [ mrpt-map mrpt-reactivenav2d mrpt-localization mrpt-local-obstacles mrpt-rawlog mrpt-tutorials ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

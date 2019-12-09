@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, gazebo-ros-pkgs, tf, catkin, rostest, rviz, robot-state-publisher, rospy, roscpp }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros-pkgs, robot-state-publisher, tf, catkin, rviz, roscpp, gazebo-ros, rospy, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-audibot-gazebo";
   version = "0.1.0";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ gazebo-ros tf roscpp ];
-  checkInputs = [ rostest rospy ];
-  propagatedBuildInputs = [ gazebo-ros gazebo-ros-pkgs tf rviz robot-state-publisher roscpp ];
+  checkInputs = [ rospy rostest ];
+  propagatedBuildInputs = [ gazebo-ros-pkgs robot-state-publisher tf rviz roscpp gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, can-msgs, catkin, rostest, socketcan-interface, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, catkin, roslint, rosunit, socketcan-interface, roscpp, can-msgs, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-socketcan-bridge";
   version = "0.7.12-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ can-msgs roscpp socketcan-interface ];
-  checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ can-msgs roscpp socketcan-interface ];
+  buildInputs = [ can-msgs socketcan-interface roscpp ];
+  checkInputs = [ roslint rostest rosunit ];
+  propagatedBuildInputs = [ can-msgs socketcan-interface roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

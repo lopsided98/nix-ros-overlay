@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, rclpy, pythonPackages, example-interfaces, ament-pep257, std-msgs, ament-copyright }:
+{ lib, buildRosPackage, fetchurl, example-interfaces, ament-copyright, std-msgs, pythonPackages, ament-pep257, rclpy, ament-flake8 }:
 buildRosPackage {
   pname = "ros-dashing-demo-nodes-py";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ rclpy std-msgs example-interfaces ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  propagatedBuildInputs = [ example-interfaces std-msgs rclpy ];
 
   meta = {
     description = ''Python nodes which were previously in the ros2/examples repository but are now just used for demo purposes.'';

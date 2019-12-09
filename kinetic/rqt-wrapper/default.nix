@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, python-qt-binding, catkin, rqt-gui, rqt-reconfigure, rocon-console, rosgraph, rqt-robot-monitor, rqt-plot, rocon-python-utils, qt-gui-py-common }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, rocon-console, rqt-plot, qt-gui-py-common, rosgraph, catkin, rocon-python-utils, rqt-gui-py, rqt-reconfigure, rqt-robot-monitor, python-qt-binding }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-wrapper";
   version = "0.1.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-gui-py rqt-gui rqt-reconfigure rocon-console rosgraph rqt-robot-monitor qt-gui-py-common rqt-plot rocon-python-utils python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui rocon-console rqt-plot qt-gui-py-common rosgraph rocon-python-utils rqt-gui-py rqt-reconfigure rqt-robot-monitor python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

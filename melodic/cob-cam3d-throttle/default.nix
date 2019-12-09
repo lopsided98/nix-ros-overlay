@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, sensor-msgs, catkin, message-filters, nodelet, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, pluginlib, catkin, nodelet, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-cob-cam3d-throttle";
   version = "0.6.14-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib sensor-msgs message-filters nodelet roscpp ];
-  propagatedBuildInputs = [ pluginlib sensor-msgs message-filters nodelet roscpp ];
+  buildInputs = [ sensor-msgs message-filters pluginlib nodelet roscpp ];
+  propagatedBuildInputs = [ sensor-msgs message-filters pluginlib nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

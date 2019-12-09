@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pilz-extensions, catkin, pilz-msgs, pilz-trajectory-generation, pilz-robot-programming }:
+{ lib, buildRosPackage, fetchurl, catkin, pilz-extensions, pilz-trajectory-generation, pilz-robot-programming, pilz-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-industrial-motion";
   version = "0.3.10-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pilz-extensions pilz-msgs pilz-trajectory-generation pilz-robot-programming ];
+  propagatedBuildInputs = [ pilz-trajectory-generation pilz-robot-programming pilz-msgs pilz-extensions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,25 +2,25 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, swri-profiler-msgs, catkin, rosbridge-server, diagnostic-updater, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, swri-profiler-msgs, std-msgs, catkin, roscpp, rospy, rosbridge-server, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-swri-profiler";
-  version = "0.1.0";
+  version = "0.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/swri_profiler-release/archive/release/kinetic/swri_profiler/0.1.0-0.tar.gz";
-    name = "0.1.0-0.tar.gz";
-    sha256 = "71c6d17509b4af8e5213f518c277af04a9d9b0ce046b60baa705f5be60a88be7";
+    url = "https://github.com/swri-robotics-gbp/swri_profiler-release/archive/release/kinetic/swri_profiler/0.2.2-2.tar.gz";
+    name = "0.2.2-2.tar.gz";
+    sha256 = "5d9314277f95b1faebf7950db341206a2dcfa139d8cfa13ef490170c22a90678";
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-updater swri-profiler-msgs roscpp std-msgs ];
-  propagatedBuildInputs = [ swri-profiler-msgs rosbridge-server diagnostic-updater std-msgs roscpp ];
+  buildInputs = [ swri-profiler-msgs std-msgs roscpp diagnostic-updater rospy ];
+  propagatedBuildInputs = [ swri-profiler-msgs std-msgs roscpp rospy rosbridge-server diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
     description = ''swri_profiler provides basic tools for real-time selective
     profiling of ROS C++ nodes.'';
-    license = with lib.licenses; [ "Copyright SwRI" ];
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

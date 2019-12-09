@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, tf2-msgs, rospy }:
+{ lib, buildRosPackage, fetchurl, rospy, catkin, tf2-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-static-transform-mux";
   version = "1.1.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ tf2-msgs rospy ];
+  propagatedBuildInputs = [ rospy tf2-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

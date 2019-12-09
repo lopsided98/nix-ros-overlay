@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, hector-gazebo-plugins, catkin, gazebo-plugins, husky-description, multimaster-launch, rostopic, pointcloud-to-laserscan, roslaunch, husky-control, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, husky-description, pointcloud-to-laserscan, controller-manager, hector-gazebo-plugins, catkin, rostopic, multimaster-launch, husky-control, gazebo-ros-control, gazebo-ros, roslaunch, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-husky-gazebo";
   version = "0.4.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros controller-manager hector-gazebo-plugins gazebo-plugins husky-description multimaster-launch rostopic pointcloud-to-laserscan husky-control gazebo-ros-control ];
+  propagatedBuildInputs = [ husky-description pointcloud-to-laserscan controller-manager hector-gazebo-plugins rostopic multimaster-launch husky-control gazebo-ros-control gazebo-ros gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

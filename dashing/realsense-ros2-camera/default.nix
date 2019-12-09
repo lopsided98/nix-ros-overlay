@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, ament-lint-common, realsense-camera-msgs, image-transport, cv-bridge, sensor-msgs, ament-cmake-gtest, tf2-ros, rosidl-default-generators, rmw-implementation, rclcpp, eigen, std-msgs, ament-lint-auto, rosidl-default-runtime, librealsense2 }:
+{ lib, buildRosPackage, fetchurl, tf2-ros, sensor-msgs, rclcpp, std-msgs, rosidl-default-runtime, ament-lint-common, ament-cmake, image-transport, eigen, cv-bridge, ament-cmake-gtest, librealsense2, rmw-implementation, realsense-camera-msgs, rosidl-default-generators, builtin-interfaces, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-realsense-ros2-camera";
   version = "2.0.4-r2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces realsense-camera-msgs image-transport cv-bridge sensor-msgs tf2-ros rmw-implementation rclcpp eigen std-msgs librealsense2 ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ builtin-interfaces realsense-camera-msgs sensor-msgs cv-bridge tf2-ros rmw-implementation rclcpp std-msgs rosidl-default-runtime librealsense2 ];
+  buildInputs = [ sensor-msgs rclcpp std-msgs image-transport eigen cv-bridge realsense-camera-msgs librealsense2 rmw-implementation builtin-interfaces tf2-ros ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs rclcpp rosidl-default-runtime std-msgs cv-bridge realsense-camera-msgs librealsense2 rmw-implementation builtin-interfaces tf2-ros ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

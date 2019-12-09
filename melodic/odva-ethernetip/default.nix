@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, console-bridge, catkin, rosunit, boost }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, console-bridge, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-odva-ethernetip";
   version = "0.1.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ console-bridge boost ];
+  buildInputs = [ boost console-bridge ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ console-bridge boost ];
+  propagatedBuildInputs = [ boost console-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

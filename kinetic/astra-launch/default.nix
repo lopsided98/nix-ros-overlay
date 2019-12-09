@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, depth-image-proc, catkin, rgbd-launch, nodelet, image-proc, tf, astra-camera }:
+{ lib, buildRosPackage, fetchurl, image-proc, tf, catkin, astra-camera, nodelet, depth-image-proc, rgbd-launch }:
 buildRosPackage {
   pname = "ros-kinetic-astra-launch";
   version = "0.2.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ depth-image-proc rgbd-launch nodelet image-proc tf astra-camera ];
+  propagatedBuildInputs = [ image-proc tf astra-camera nodelet depth-image-proc rgbd-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

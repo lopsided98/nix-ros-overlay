@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rmw-implementation-cmake, rosgraph-msgs, rcl-yaml-param-parser, rcl-action, unique-identifier-msgs, ament-cmake-pytest, rosidl-generator-py, pythonPackages, rmw-implementation, ament-index-python, builtin-interfaces, rcl-interfaces, rcutils, ament-lint-common, test-msgs, python-cmake-module, rcl, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, unique-identifier-msgs, test-msgs, python-cmake-module, rmw-implementation, ament-lint-auto, rcutils, rmw-implementation-cmake, ament-lint-common, rcl-yaml-param-parser, builtin-interfaces, rcl, pythonPackages, rosidl-generator-py, rosgraph-msgs, rcl-interfaces, ament-cmake-pytest, ament-index-python, rcl-action }:
 buildRosPackage {
   pname = "ros-dashing-rclpy";
   version = "0.7.8-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ unique-identifier-msgs rmw-implementation-cmake rmw-implementation rcl-yaml-param-parser rcl rcutils rcl-action ];
-  checkInputs = [ ament-cmake-pytest pythonPackages.pytest rosidl-generator-py ament-lint-common test-msgs rcl-interfaces ament-lint-auto ];
-  propagatedBuildInputs = [ unique-identifier-msgs builtin-interfaces rosgraph-msgs rmw-implementation rcl-yaml-param-parser rcl ament-index-python rcl-action ];
+  buildInputs = [ rcutils rmw-implementation-cmake rcl unique-identifier-msgs rcl-yaml-param-parser rmw-implementation rcl-action ];
+  checkInputs = [ ament-lint-common test-msgs rosidl-generator-py rcl-interfaces ament-cmake-pytest pythonPackages.pytest ament-lint-auto ];
+  propagatedBuildInputs = [ rcl unique-identifier-msgs rcl-yaml-param-parser rmw-implementation builtin-interfaces rosgraph-msgs ament-index-python rcl-action ];
   nativeBuildInputs = [ python-cmake-module ament-cmake ];
 
   meta = {

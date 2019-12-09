@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-hardware-interface, pluginlib, eml, realtime-tools, catkin, diagnostic-updater, message-generation, message-runtime, diagnostic-msgs, pr2-msgs, roscpp, log4cxx }:
+{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, pr2-msgs, pluginlib, catkin, eml, realtime-tools, roscpp, pr2-hardware-interface, message-runtime, log4cxx, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-ethercat-hardware";
   version = "1.8.18-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-hardware-interface pluginlib eml realtime-tools diagnostic-updater message-generation diagnostic-msgs pr2-msgs roscpp log4cxx ];
-  propagatedBuildInputs = [ pr2-hardware-interface pluginlib eml realtime-tools diagnostic-updater message-runtime diagnostic-msgs pr2-msgs roscpp log4cxx ];
+  buildInputs = [ diagnostic-msgs pr2-msgs pluginlib eml realtime-tools roscpp pr2-hardware-interface message-generation log4cxx diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-msgs pr2-msgs pluginlib eml realtime-tools roscpp pr2-hardware-interface message-runtime log4cxx diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

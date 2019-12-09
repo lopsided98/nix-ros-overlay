@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-info-manager, image-transport, sensor-msgs, catkin, nodelet, dynamic-reconfigure, roscpp, libuvc }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, libuvc, camera-info-manager, catkin, image-transport, nodelet, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-libuvc-camera";
   version = "0.0.10-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ camera-info-manager image-transport sensor-msgs roscpp dynamic-reconfigure nodelet libuvc ];
-  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs roscpp dynamic-reconfigure nodelet libuvc ];
+  buildInputs = [ sensor-msgs dynamic-reconfigure libuvc camera-info-manager image-transport nodelet roscpp ];
+  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure libuvc camera-info-manager image-transport nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

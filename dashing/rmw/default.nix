@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gmock, ament-cmake-ros, ament-lint-auto, rcutils, rosidl-generator-c }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rcutils, ament-lint-common, ament-cmake-gmock, rosidl-generator-c, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rmw";
   version = "0.7.2-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ rcutils ];
-  checkInputs = [ ament-lint-auto ament-lint-common ament-cmake-gmock ];
-  propagatedBuildInputs = [ rcutils rosidl-generator-c ];
+  checkInputs = [ ament-cmake-gmock ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ rosidl-generator-c rcutils ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

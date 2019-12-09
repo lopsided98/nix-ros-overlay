@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, catkin, message-generation, message-runtime, qb-device-msgs }:
+{ lib, buildRosPackage, fetchurl, message-runtime, std-srvs, catkin, message-generation, qb-device-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-qb-device-srvs";
   version = "2.1.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs message-generation qb-device-msgs ];
-  propagatedBuildInputs = [ std-srvs message-runtime qb-device-msgs ];
+  buildInputs = [ message-generation std-srvs qb-device-msgs ];
+  propagatedBuildInputs = [ std-srvs qb-device-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

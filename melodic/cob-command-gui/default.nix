@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-script-server, catkin, pythonPackages, rospy, cob-msgs, roslib }:
+{ lib, buildRosPackage, fetchurl, cob-msgs, pythonPackages, roslib, catkin, rospy, cob-script-server }:
 buildRosPackage {
   pname = "ros-melodic-cob-command-gui";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_command_gui/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "3d4b8e12ebc3b6c7f5214e427cd9b7fe3d22a8639fc05a7f8830b7d703d69d3d";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_command_gui/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "21a5bb8f2619868678ef2ba20893b78bcb378393d19b5ebebe034405f510a16d";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-script-server pythonPackages.pygtk pythonPackages.pygraphviz rospy cob-msgs roslib ];
+  propagatedBuildInputs = [ cob-msgs pythonPackages.pygtk roslib pythonPackages.pygraphviz rospy cob-script-server ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, catkin, rviz, robot-state-publisher }:
+{ lib, buildRosPackage, fetchurl, robot-state-publisher, joint-state-publisher, rviz, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-manipulator-h-bringup";
   version = "0.3.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rviz joint-state-publisher robot-state-publisher ];
+  propagatedBuildInputs = [ robot-state-publisher joint-state-publisher rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

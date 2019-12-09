@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, sensor-msgs, catkin, pythonPackages, rostest, rospy, tf, xacro, urdfdom-py }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, xacro, urdfdom-py, std-srvs, pythonPackages, tf, catkin, rospy, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-recordit";
   version = "1.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ rostest xacro ];
-  propagatedBuildInputs = [ std-srvs pythonPackages.enum34 sensor-msgs urdfdom-py rospy tf pythonPackages.simplejson ];
+  checkInputs = [ xacro rostest ];
+  propagatedBuildInputs = [ sensor-msgs pythonPackages.enum34 urdfdom-py std-srvs tf rospy pythonPackages.simplejson ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

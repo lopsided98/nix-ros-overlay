@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-test, ament-copyright, ament-cmake-core, ament-cmake-lint-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-test, ament-cmake-lint-cmake, ament-cmake-core, ament-copyright }:
 buildRosPackage {
   pname = "ros-crystal-ament-cmake-copyright";
   version = "0.6.4";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-lint-cmake ];
   propagatedBuildInputs = [ ament-cmake-test ament-copyright ];
-  nativeBuildInputs = [ ament-cmake-test ament-copyright ament-cmake-core ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-copyright ];
 
   meta = {
     description = ''The CMake API for ament_copyright to check every source file contains copyright reference.'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ridgeback-msgs, catkin, ridgeback-viz }:
+{ lib, buildRosPackage, fetchurl, catkin, ridgeback-viz, ridgeback-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ridgeback-desktop";
   version = "0.1.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ ridgeback-msgs ridgeback-viz ];
+  propagatedBuildInputs = [ ridgeback-viz ridgeback-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

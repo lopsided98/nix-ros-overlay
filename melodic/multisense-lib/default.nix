@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, libpng12 }:
+{ lib, buildRosPackage, fetchurl, libpng12, cv-bridge, catkin }:
 buildRosPackage {
   pname = "ros-melodic-multisense-lib";
   version = "4.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cv-bridge libpng12 ];
-  propagatedBuildInputs = [ cv-bridge libpng12 ];
+  buildInputs = [ libpng12 cv-bridge ];
+  propagatedBuildInputs = [ libpng12 cv-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

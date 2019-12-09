@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, base-local-planner, pcl, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, base-local-planner, pcl, costmap-2d, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-safe-teleop-base";
   version = "0.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl roscpp costmap-2d base-local-planner ];
-  propagatedBuildInputs = [ pcl roscpp costmap-2d base-local-planner ];
+  buildInputs = [ costmap-2d base-local-planner roscpp pcl ];
+  propagatedBuildInputs = [ costmap-2d base-local-planner roscpp pcl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

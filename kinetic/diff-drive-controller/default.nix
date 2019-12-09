@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, std-srvs, realtime-tools, catkin, rosgraph-msgs, rostest, nav-msgs, urdf, controller-interface, dynamic-reconfigure, tf, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, controller-interface, nav-msgs, controller-manager, dynamic-reconfigure, urdf, std-srvs, tf, catkin, realtime-tools, rosgraph-msgs, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-diff-drive-controller";
   version = "0.13.5";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ realtime-tools nav-msgs urdf controller-interface dynamic-reconfigure tf ];
-  checkInputs = [ controller-manager std-srvs rosgraph-msgs rostest xacro ];
-  propagatedBuildInputs = [ realtime-tools nav-msgs urdf controller-interface dynamic-reconfigure tf ];
+  buildInputs = [ controller-interface dynamic-reconfigure urdf tf realtime-tools nav-msgs ];
+  checkInputs = [ xacro controller-manager std-srvs rosgraph-msgs rostest ];
+  propagatedBuildInputs = [ controller-interface dynamic-reconfigure urdf tf realtime-tools nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

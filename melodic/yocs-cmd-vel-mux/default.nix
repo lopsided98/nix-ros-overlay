@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, libyamlcpp, catkin, roscpp, dynamic-reconfigure, nodelet, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, pluginlib, catkin, libyamlcpp, nodelet, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-yocs-cmd-vel-mux";
   version = "0.8.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib libyamlcpp roscpp dynamic-reconfigure nodelet geometry-msgs ];
-  propagatedBuildInputs = [ pluginlib libyamlcpp roscpp dynamic-reconfigure nodelet geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure pluginlib libyamlcpp nodelet roscpp ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure pluginlib libyamlcpp nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

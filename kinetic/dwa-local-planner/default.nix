@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, cmake-modules, base-local-planner, nav-core, catkin, roscpp, nav-msgs, eigen, dynamic-reconfigure, tf, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, pluginlib, cmake-modules, tf, base-local-planner, catkin, costmap-2d, nav-core, eigen, pcl-conversions, roscpp, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dwa-local-planner";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/dwa_local_planner/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "7b552ce10750a1cdd98115344b812f0f213668133226f83cbbcd662af5a27dfc";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/dwa_local_planner/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "7f86aa2ffc55815d90a68c88001f515917ea3e95d33b57ab278051e28f8db12e";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d cmake-modules pluginlib base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf pcl-conversions eigen ];
-  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core roscpp nav-msgs dynamic-reconfigure tf eigen ];
+  buildInputs = [ dynamic-reconfigure pluginlib tf base-local-planner cmake-modules costmap-2d nav-core eigen pcl-conversions roscpp nav-msgs ];
+  propagatedBuildInputs = [ dynamic-reconfigure pluginlib tf base-local-planner costmap-2d nav-core eigen roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

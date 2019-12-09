@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, tf2-geometry-msgs, navfn, nav-core, catkin, tf2-ros, nav-msgs, angles, dynamic-reconfigure, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, pluginlib, catkin, costmap-2d, nav-core, tf2-geometry-msgs, roscpp, angles, nav-msgs, navfn, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-global-planner";
-  version = "1.16.2";
+  version = "1.16.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/global_planner/1.16.2-0.tar.gz";
-    name = "1.16.2-0.tar.gz";
-    sha256 = "78802bdb91c6f0e8f194cbe2cfd7b68dca7a4c394c219aa8aba1b17d31e48c1a";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/global_planner/1.16.3-1.tar.gz";
+    name = "1.16.3-1.tar.gz";
+    sha256 = "5147f1dacb1950240395e7e74e5861264b3a92fb771811327e67a9fa00691127";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib tf2-geometry-msgs navfn nav-core tf2-ros nav-msgs dynamic-reconfigure angles roscpp geometry-msgs ];
-  propagatedBuildInputs = [ costmap-2d pluginlib navfn nav-core tf2-ros nav-msgs dynamic-reconfigure roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure pluginlib tf2-geometry-msgs nav-core costmap-2d roscpp angles nav-msgs navfn tf2-ros ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure pluginlib costmap-2d nav-core roscpp nav-msgs navfn tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

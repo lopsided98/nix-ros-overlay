@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers-msgs, pr2-mechanism-controllers, ethercat-trigger-controllers, pr2-calibration-controllers, pr2-head-action, joint-trajectory-action, control-toolbox, catkin, robot-mechanism-controllers, pr2-gripper-action, single-joint-position-action }:
+{ lib, buildRosPackage, fetchurl, pr2-head-action, ethercat-trigger-controllers, robot-mechanism-controllers, control-toolbox, joint-trajectory-action, catkin, pr2-mechanism-controllers, pr2-calibration-controllers, single-joint-position-action, pr2-controllers-msgs, pr2-gripper-action }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-controllers";
   version = "1.10.14";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-controllers-msgs pr2-mechanism-controllers ethercat-trigger-controllers pr2-calibration-controllers pr2-head-action joint-trajectory-action control-toolbox robot-mechanism-controllers pr2-gripper-action single-joint-position-action ];
+  propagatedBuildInputs = [ pr2-head-action ethercat-trigger-controllers robot-mechanism-controllers control-toolbox joint-trajectory-action pr2-mechanism-controllers pr2-calibration-controllers single-joint-position-action pr2-controllers-msgs pr2-gripper-action ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

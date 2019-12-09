@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, hector-gazebo-plugins, catkin }:
+{ lib, buildRosPackage, fetchurl, hector-gazebo-plugins, gazebo-ros, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-hector-gazebo-worlds";
   version = "0.5.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gazebo-ros hector-gazebo-plugins ];
+  propagatedBuildInputs = [ hector-gazebo-plugins gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

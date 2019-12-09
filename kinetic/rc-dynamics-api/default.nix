@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, protobuf, cmake, curl, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, protobuf, curl, cmake }:
 buildRosPackage {
   pname = "ros-kinetic-rc-dynamics-api";
   version = "0.10.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ protobuf curl ];
-  propagatedBuildInputs = [ protobuf catkin curl ];
+  propagatedBuildInputs = [ protobuf curl catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

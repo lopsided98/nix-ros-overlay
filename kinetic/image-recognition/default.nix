@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, openface-ros, image-recognition-rqt, catkin, tensorflow-ros-rqt, tensorflow-ros, image-recognition-util, image-recognition-msgs, skybiometry-ros }:
+{ lib, buildRosPackage, fetchurl, image-recognition-rqt, tensorflow-ros, openface-ros, catkin, image-recognition-util, image-recognition-msgs, skybiometry-ros, tensorflow-ros-rqt }:
 buildRosPackage {
   pname = "ros-kinetic-image-recognition";
   version = "0.0.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ openface-ros image-recognition-rqt tensorflow-ros-rqt tensorflow-ros image-recognition-util image-recognition-msgs skybiometry-ros ];
+  propagatedBuildInputs = [ image-recognition-rqt tensorflow-ros openface-ros image-recognition-util image-recognition-msgs skybiometry-ros tensorflow-ros-rqt ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

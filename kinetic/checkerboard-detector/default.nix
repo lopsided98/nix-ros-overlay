@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, sensor-msgs, cv-bridge, posedetection-msgs, message-filters, catkin, image-geometry, roscpp, dynamic-tf-publisher, tf2, jsk-recognition-msgs, dynamic-reconfigure, eigen-conversions, tf }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, posedetection-msgs, dynamic-reconfigure, eigen-conversions, dynamic-tf-publisher, tf, jsk-recognition-msgs, catkin, tf2, cv-bridge, roscpp, rosconsole, image-geometry }:
 buildRosPackage {
   pname = "ros-kinetic-checkerboard-detector";
   version = "1.2.9";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole sensor-msgs cv-bridge posedetection-msgs message-filters roscpp image-geometry tf2 jsk-recognition-msgs dynamic-reconfigure eigen-conversions tf ];
-  propagatedBuildInputs = [ rosconsole sensor-msgs cv-bridge posedetection-msgs message-filters roscpp image-geometry tf2 dynamic-tf-publisher jsk-recognition-msgs dynamic-reconfigure eigen-conversions tf ];
+  buildInputs = [ sensor-msgs message-filters posedetection-msgs dynamic-reconfigure eigen-conversions tf jsk-recognition-msgs tf2 cv-bridge roscpp rosconsole image-geometry ];
+  propagatedBuildInputs = [ sensor-msgs message-filters posedetection-msgs dynamic-reconfigure eigen-conversions dynamic-tf-publisher tf jsk-recognition-msgs roscpp cv-bridge tf2 rosconsole image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

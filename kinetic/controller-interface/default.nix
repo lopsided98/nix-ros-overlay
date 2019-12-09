@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, catkin, pluginlib, roscpp }:
+{ lib, buildRosPackage, fetchurl, hardware-interface, pluginlib, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-controller-interface";
   version = "0.13.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface roscpp pluginlib ];
-  propagatedBuildInputs = [ hardware-interface roscpp pluginlib ];
+  buildInputs = [ hardware-interface pluginlib roscpp ];
+  propagatedBuildInputs = [ hardware-interface pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

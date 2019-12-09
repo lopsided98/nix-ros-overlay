@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, exotica-core, catkin, eigen }:
+{ lib, buildRosPackage, fetchurl, eigen, catkin, exotica-core }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-levenberg-marquardt-solver";
   version = "5.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ exotica-core eigen ];
-  propagatedBuildInputs = [ exotica-core eigen ];
+  buildInputs = [ eigen exotica-core ];
+  propagatedBuildInputs = [ eigen exotica-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

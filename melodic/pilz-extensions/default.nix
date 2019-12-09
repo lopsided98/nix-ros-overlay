@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, prbt-support, joint-limits-interface, catkin, rostest, code-coverage, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, joint-limits-interface, code-coverage, catkin, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-pilz-extensions";
-  version = "0.4.7-r1";
+  version = "0.4.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_extensions/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "8a4a37650d021dd3a609260406b591e56569f4286fe35f3e11c4c76a131a52d6";
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_extensions/0.4.10-1.tar.gz";
+    name = "0.4.10-1.tar.gz";
+    sha256 = "73843793e0904c3c122e5c83c23e1f2b00a4661d0a9aff6ed630faeadd67af1f";
   };
 
   buildType = "catkin";
   buildInputs = [ joint-limits-interface roscpp ];
-  checkInputs = [ rostest prbt-support code-coverage rosunit ];
+  checkInputs = [ code-coverage rostest ];
   propagatedBuildInputs = [ joint-limits-interface ];
   nativeBuildInputs = [ catkin ];
 

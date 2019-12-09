@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, cv-bridge, polled-camera, rosgraph-msgs, rospy, tf, gazebo-msgs, geometry-msgs, image-transport, message-generation, message-runtime, angles, std-srvs, camera-info-manager, trajectory-msgs, catkin, tf2-ros, gazebo-dev, nav-msgs, urdf, std-msgs, roscpp, nodelet, sensor-msgs, diagnostic-updater, rostest, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, tf, image-transport, nodelet, nav-msgs, rostest, sensor-msgs, dynamic-reconfigure, message-runtime, camera-info-manager, rosconsole, tf2-ros, std-msgs, std-srvs, catkin, cv-bridge, roscpp, angles, message-generation, rospy, rosgraph-msgs, gazebo-dev, trajectory-msgs, gazebo-msgs, diagnostic-updater, polled-camera }:
 buildRosPackage {
   pname = "ros-melodic-gazebo-plugins";
   version = "2.8.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole cv-bridge polled-camera rosgraph-msgs rospy tf gazebo-msgs geometry-msgs image-transport message-generation angles std-srvs camera-info-manager trajectory-msgs tf2-ros gazebo-dev nav-msgs urdf std-msgs roscpp nodelet sensor-msgs diagnostic-updater dynamic-reconfigure ];
+  buildInputs = [ geometry-msgs urdf tf image-transport nodelet nav-msgs sensor-msgs dynamic-reconfigure camera-info-manager rosconsole tf2-ros std-msgs std-srvs cv-bridge roscpp angles rospy message-generation rosgraph-msgs gazebo-dev trajectory-msgs gazebo-msgs diagnostic-updater polled-camera ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ rosconsole cv-bridge polled-camera rosgraph-msgs rospy tf gazebo-msgs geometry-msgs image-transport message-runtime angles std-srvs camera-info-manager trajectory-msgs tf2-ros gazebo-dev nav-msgs urdf std-msgs roscpp nodelet sensor-msgs diagnostic-updater dynamic-reconfigure ];
+  propagatedBuildInputs = [ geometry-msgs urdf tf image-transport nodelet nav-msgs sensor-msgs dynamic-reconfigure camera-info-manager rosconsole tf2-ros polled-camera std-msgs std-srvs cv-bridge roscpp angles rospy rosgraph-msgs gazebo-dev trajectory-msgs gazebo-msgs diagnostic-updater message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

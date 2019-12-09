@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, pluginlib, realtime-tools, catkin, industrial-msgs, controller-interface, industrial-robot-status-interface }:
+{ lib, buildRosPackage, fetchurl, controller-interface, hardware-interface, pluginlib, catkin, industrial-robot-status-interface, industrial-msgs, realtime-tools }:
 buildRosPackage {
   pname = "ros-kinetic-industrial-robot-status-controller";
   version = "0.1.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface pluginlib realtime-tools industrial-msgs controller-interface industrial-robot-status-interface ];
-  propagatedBuildInputs = [ hardware-interface pluginlib realtime-tools industrial-msgs controller-interface ];
+  buildInputs = [ controller-interface hardware-interface pluginlib industrial-robot-status-interface industrial-msgs realtime-tools ];
+  propagatedBuildInputs = [ controller-interface hardware-interface pluginlib industrial-msgs realtime-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

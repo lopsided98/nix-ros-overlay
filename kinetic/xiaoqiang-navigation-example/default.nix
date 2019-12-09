@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, xiaoqiang-freenect, xiaoqiang-msgs, rospy, std-msgs }:
+{ lib, buildRosPackage, fetchurl, std-msgs, catkin, xiaoqiang-msgs, xiaoqiang-freenect, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-xiaoqiang-navigation-example";
   version = "0.0.12";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs xiaoqiang-msgs rospy xiaoqiang-freenect ];
-  propagatedBuildInputs = [ std-msgs xiaoqiang-msgs xiaoqiang-freenect rospy ];
+  buildInputs = [ xiaoqiang-freenect rospy xiaoqiang-msgs std-msgs ];
+  propagatedBuildInputs = [ std-msgs rospy xiaoqiang-msgs xiaoqiang-freenect ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

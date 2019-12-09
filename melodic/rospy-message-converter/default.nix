@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, catkin, message-generation, message-runtime, rospy, std-msgs, roslib, rosunit }:
+{ lib, buildRosPackage, fetchurl, message-generation, std-msgs, std-srvs, catkin, roslib, rosunit, rospy, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-rospy-message-converter";
   version = "0.5.0";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
   checkInputs = [ std-srvs rosunit ];
-  propagatedBuildInputs = [ std-msgs roslib message-runtime rospy ];
+  propagatedBuildInputs = [ std-msgs message-runtime roslib rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

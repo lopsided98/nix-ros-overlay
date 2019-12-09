@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, trajectory-msgs, sensor-msgs, catkin, pythonPackages, actionlib, ur-msgs, rospy, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, ur-msgs, dynamic-reconfigure, pythonPackages, actionlib, catkin, rospy, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ur-driver";
-  version = "1.2.5";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_driver/1.2.5-0.tar.gz";
-    name = "1.2.5-0.tar.gz";
-    sha256 = "4cb6d325c05f9535a55afeba7b62a73ed694ba81f846bb438f4ffe18ac98a8cb";
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_driver/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "291b344f527d70a57439cc69bda44b234a9cb7990c44c98d0f1d22f160bf514d";
   };
 
   buildType = "catkin";
   buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ control-msgs trajectory-msgs sensor-msgs actionlib pythonPackages.lxml ur-msgs rospy dynamic-reconfigure ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs pythonPackages.lxml dynamic-reconfigure ur-msgs actionlib rospy control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

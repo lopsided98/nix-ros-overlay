@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, can-msgs, message-filters, dataspeed-can-msg-filters, roscpp, dataspeed-can-usb, rostest, dataspeed-pds-msgs, roslaunch, nodelet }:
+{ lib, buildRosPackage, fetchurl, message-filters, catkin, dataspeed-pds-msgs, dataspeed-can-usb, nodelet, roscpp, can-msgs, roslaunch, rostest, dataspeed-can-msg-filters }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-pds-can";
   version = "1.0.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ can-msgs message-filters dataspeed-can-msg-filters dataspeed-pds-msgs nodelet roscpp ];
-  checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ can-msgs message-filters dataspeed-can-usb dataspeed-pds-msgs nodelet roslaunch roscpp ];
+  buildInputs = [ message-filters dataspeed-pds-msgs nodelet roscpp can-msgs dataspeed-can-msg-filters ];
+  checkInputs = [ roslaunch rostest ];
+  propagatedBuildInputs = [ message-filters dataspeed-pds-msgs dataspeed-can-usb nodelet roscpp can-msgs roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tuw-nav-msgs, tuw-geometry-msgs, tuw-airskin-msgs, tuw-vehicle-msgs, tuw-object-msgs, catkin, tuw-gazebo-msgs, tuw-multi-robot-msgs }:
+{ lib, buildRosPackage, fetchurl, tuw-nav-msgs, tuw-geometry-msgs, tuw-airskin-msgs, tuw-object-msgs, tuw-vehicle-msgs, catkin, tuw-multi-robot-msgs, tuw-gazebo-msgs }:
 buildRosPackage {
   pname = "ros-melodic-tuw-msgs";
   version = "0.0.13";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ tuw-nav-msgs tuw-geometry-msgs tuw-airskin-msgs tuw-vehicle-msgs tuw-object-msgs tuw-gazebo-msgs tuw-multi-robot-msgs ];
+  propagatedBuildInputs = [ tuw-nav-msgs tuw-geometry-msgs tuw-airskin-msgs tuw-object-msgs tuw-vehicle-msgs tuw-multi-robot-msgs tuw-gazebo-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

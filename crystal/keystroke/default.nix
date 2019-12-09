@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, launch-ros, ament-lint-common, rclpy, launch, std-msgs, ament-lint-auto, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, launch, std-msgs, launch-ros, ament-lint-common, rclpy, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-keystroke";
   version = "0.3.0-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ launch-ros rclpy launch std-msgs geometry-msgs ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ geometry-msgs launch std-msgs launch-ros rclpy ];
 
   meta = {
     description = ''Capture keyboard input from the local computer and publish it to ROS'';

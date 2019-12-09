@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, slime-wrapper, rosemacs, catkin, roslisp, sbcl }:
+{ lib, buildRosPackage, fetchurl, roslisp, rosemacs, sbcl, catkin, slime-wrapper }:
 buildRosPackage {
   pname = "ros-kinetic-slime-ros";
   version = "0.4.12";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosemacs roslisp slime-wrapper sbcl ];
+  propagatedBuildInputs = [ sbcl slime-wrapper roslisp rosemacs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

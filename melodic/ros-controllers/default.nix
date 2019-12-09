@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-controller, diff-drive-controller, catkin, rqt-joint-trajectory-controller, velocity-controllers, joint-trajectory-controller, position-controllers, ackermann-steering-controller, imu-sensor-controller, effort-controllers, forward-command-controller, force-torque-sensor-controller, gripper-action-controller }:
+{ lib, buildRosPackage, fetchurl, effort-controllers, ackermann-steering-controller, position-controllers, force-torque-sensor-controller, catkin, rqt-joint-trajectory-controller, imu-sensor-controller, diff-drive-controller, gripper-action-controller, joint-trajectory-controller, forward-command-controller, joint-state-controller, velocity-controllers }:
 buildRosPackage {
   pname = "ros-melodic-ros-controllers";
   version = "0.15.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joint-state-controller diff-drive-controller rqt-joint-trajectory-controller force-torque-sensor-controller velocity-controllers joint-trajectory-controller position-controllers ackermann-steering-controller imu-sensor-controller effort-controllers forward-command-controller gripper-action-controller ];
+  propagatedBuildInputs = [ effort-controllers ackermann-steering-controller position-controllers force-torque-sensor-controller rqt-joint-trajectory-controller imu-sensor-controller diff-drive-controller gripper-action-controller joint-trajectory-controller forward-command-controller joint-state-controller velocity-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cv-bridge, tinyxml, ar-track-alvar-msgs, rospy, pcl-ros, tf, pcl-conversions, geometry-msgs, image-transport, message-generation, message-runtime, rosbag, catkin, resource-retriever, std-msgs, visualization-msgs, roscpp, cmake-modules, sensor-msgs, tf2, rostest, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, image-transport, tf2, rostest, sensor-msgs, dynamic-reconfigure, resource-retriever, cmake-modules, rosbag, pcl-ros, std-msgs, catkin, cv-bridge, roscpp, ar-track-alvar-msgs, message-generation, rospy, tinyxml, pcl-conversions, visualization-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-ar-track-alvar";
   version = "0.7.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules image-transport sensor-msgs cv-bridge tinyxml roscpp rospy ar-track-alvar-msgs tf2 message-generation resource-retriever visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs ];
-  checkInputs = [ rostest rosbag ];
-  propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge tinyxml roscpp ar-track-alvar-msgs tf2 pcl-ros resource-retriever message-runtime rospy std-msgs visualization-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs geometry-msgs dynamic-reconfigure resource-retriever std-msgs tf cmake-modules roscpp tinyxml image-transport cv-bridge pcl-conversions visualization-msgs tf2 rospy ar-track-alvar-msgs message-generation ];
+  checkInputs = [ rosbag rostest ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs geometry-msgs dynamic-reconfigure message-runtime resource-retriever std-msgs tf roscpp tinyxml image-transport cv-bridge pcl-conversions visualization-msgs tf2 ar-track-alvar-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

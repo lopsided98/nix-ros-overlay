@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-environment, ament-cmake-cpplint, ament-cmake, pluginlib, ament-cmake-uncrustify, rosidl-default-generators, ament-cmake-cppcheck, ament-cmake-xmllint, rclcpp, ament-cmake-lint-cmake, std-msgs, ament-lint-auto, ament-cmake-copyright, rosidl-default-runtime, eigen }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-xmllint, ament-cmake-lint-cmake, pluginlib, std-msgs, ament-cmake-cpplint, rosidl-default-runtime, ros-environment, ament-cmake, rosidl-default-generators, ament-cmake-uncrustify, ament-lint-auto, eigen, ament-cmake-cppcheck, rclcpp, ament-cmake-copyright }:
 buildRosPackage {
   pname = "ros-crystal-ml-classifiers";
   version = "1.0.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib rosidl-default-generators rclcpp eigen std-msgs ];
-  checkInputs = [ ament-cmake-uncrustify ament-cmake-cppcheck ament-cmake-xmllint ament-cmake-lint-cmake ament-lint-auto ament-cmake-copyright ament-cmake-cpplint ];
-  propagatedBuildInputs = [ pluginlib rclcpp eigen std-msgs rosidl-default-runtime ];
+  buildInputs = [ pluginlib std-msgs eigen rosidl-default-generators rclcpp ];
+  checkInputs = [ ament-cmake-xmllint ament-cmake-lint-cmake ament-cmake-cpplint ament-lint-auto ament-cmake-uncrustify ament-cmake-cppcheck ament-cmake-copyright ];
+  propagatedBuildInputs = [ rosidl-default-runtime pluginlib std-msgs eigen rclcpp ];
   nativeBuildInputs = [ ros-environment ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, imagemagick, hugin, sensor-msgs, cv-bridge, pythonPackages, catkin, enblend-enfuse, image-view, rospy }:
+{ lib, buildRosPackage, fetchurl, hugin, sensor-msgs, std-srvs, pythonPackages, catkin, image-view, cv-bridge, imagemagick, rospy, enblend-enfuse }:
 buildRosPackage {
   pname = "ros-kinetic-hugin-panorama";
   version = "0.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs sensor-msgs cv-bridge image-view rospy ];
-  propagatedBuildInputs = [ std-srvs imagemagick hugin pythonPackages.rospkg sensor-msgs cv-bridge enblend-enfuse pythonPackages.opencv3 image-view rospy ];
+  buildInputs = [ sensor-msgs std-srvs image-view cv-bridge rospy ];
+  propagatedBuildInputs = [ hugin sensor-msgs pythonPackages.opencv3 std-srvs pythonPackages.rospkg image-view cv-bridge imagemagick rospy enblend-enfuse ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

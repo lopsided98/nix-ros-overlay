@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-lint-common, ament-cmake-gmock, launch-testing, ament-cmake-gtest, python3Packages, ament-cmake-ros, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, python3Packages, ament-cmake-ros, launch-testing, ament-lint-common, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-gmock, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-rcl-logging-noop";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-pytest ament-lint-common ament-cmake-gmock launch-testing ament-cmake-gtest ament-lint-auto ];
-  nativeBuildInputs = [ python3Packages.empy ament-cmake-ros ];
+  checkInputs = [ launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-cmake-gmock ament-lint-auto ];
+  nativeBuildInputs = [ ament-cmake-ros python3Packages.empy ];
 
   meta = {
     description = ''An rcl logger implementation that doesn't do anything with log messages.'';

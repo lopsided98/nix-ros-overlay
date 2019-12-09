@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, h264-encoder-core, image-transport, sensor-msgs, gtest, catkin, image-transport-plugins, rostest, message-generation, kinesis-video-msgs, message-runtime, aws-ros1-common, gmock }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, image-transport-plugins, aws-ros1-common, catkin, h264-encoder-core, image-transport, gtest, gmock, message-runtime, rostest, kinesis-video-msgs }:
 buildRosPackage {
   pname = "ros-melodic-h264-video-encoder";
   version = "1.1.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ h264-encoder-core image-transport sensor-msgs message-generation kinesis-video-msgs aws-ros1-common ];
-  checkInputs = [ rostest gtest gmock ];
-  propagatedBuildInputs = [ h264-encoder-core image-transport sensor-msgs image-transport-plugins kinesis-video-msgs message-runtime aws-ros1-common ];
+  buildInputs = [ sensor-msgs aws-ros1-common h264-encoder-core image-transport message-generation kinesis-video-msgs ];
+  checkInputs = [ gtest gmock rostest ];
+  propagatedBuildInputs = [ sensor-msgs image-transport-plugins aws-ros1-common h264-encoder-core image-transport message-runtime kinesis-video-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

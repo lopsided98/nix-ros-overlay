@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-core, catkin, bond-core, actionlib, dynamic-reconfigure, nodelet-core }:
+{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, bond-core, actionlib, catkin, ros-core, nodelet-core }:
 buildRosPackage {
   pname = "ros-melodic-ros-base";
   version = "1.4.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ ros-core bond-core actionlib nodelet-core dynamic-reconfigure ];
+  propagatedBuildInputs = [ bond-core dynamic-reconfigure actionlib ros-core nodelet-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

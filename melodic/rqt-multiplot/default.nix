@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag, rqt-gui, catkin, rqt-gui-cpp, qt5, qwt6, variant-topic-tools, roscpp }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-gui-cpp, catkin, roscpp, variant-topic-tools, qt5, rosbag, qwt6 }:
 buildRosPackage {
   pname = "ros-melodic-rqt-multiplot";
   version = "0.0.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosbag rqt-gui qt5.qtbase rqt-gui-cpp qwt6 variant-topic-tools roscpp ];
-  propagatedBuildInputs = [ rosbag rqt-gui qt5.qtbase rqt-gui-cpp qwt6 variant-topic-tools roscpp ];
+  buildInputs = [ rqt-gui rqt-gui-cpp qt5.qtbase variant-topic-tools roscpp rosbag qwt6 ];
+  propagatedBuildInputs = [ rqt-gui rqt-gui-cpp qt5.qtbase variant-topic-tools roscpp rosbag qwt6 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, sensor-msgs, catkin, cv-bridge, message-filters, image-geometry, rostest, rospy }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, std-srvs, catkin, cv-bridge, rospy, rostest, image-geometry }:
 buildRosPackage {
   pname = "ros-melodic-camera-calibration";
   version = "1.13.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ std-srvs sensor-msgs cv-bridge message-filters image-geometry rospy ];
+  propagatedBuildInputs = [ sensor-msgs message-filters std-srvs cv-bridge rospy image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-converters, ecl-formatters, ecl-eigen, sophus, catkin, ecl-build, ecl-exceptions, ecl-license, ecl-math }:
+{ lib, buildRosPackage, fetchurl, ecl-formatters, ecl-license, catkin, ecl-math, ecl-exceptions, ecl-eigen, sophus, ecl-build, ecl-converters }:
 buildRosPackage {
   pname = "ros-melodic-ecl-linear-algebra";
   version = "0.62.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-converters ecl-eigen ecl-formatters sophus ecl-build ecl-exceptions ecl-license ecl-math ];
-  propagatedBuildInputs = [ ecl-converters ecl-eigen ecl-formatters sophus ecl-build ecl-exceptions ecl-license ecl-math ];
+  buildInputs = [ sophus ecl-formatters ecl-license ecl-exceptions ecl-eigen ecl-math ecl-build ecl-converters ];
+  propagatedBuildInputs = [ sophus ecl-formatters ecl-license ecl-exceptions ecl-eigen ecl-math ecl-build ecl-converters ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

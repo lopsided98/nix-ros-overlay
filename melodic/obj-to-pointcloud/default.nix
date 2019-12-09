@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, pcl, sensor-msgs, catkin, rostest, neonavigation-common, eigen, eigen-conversions, roscpp, pcl-conversions, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, eigen-conversions, catkin, neonavigation-common, pcl, roslint, eigen, pcl-conversions, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-obj-to-pointcloud";
   version = "0.5.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl sensor-msgs neonavigation-common eigen eigen-conversions roscpp pcl-conversions geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs eigen-conversions neonavigation-common pcl eigen pcl-conversions roscpp ];
   checkInputs = [ rostest roslint ];
-  propagatedBuildInputs = [ pcl sensor-msgs neonavigation-common eigen eigen-conversions roscpp pcl-conversions geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs eigen-conversions neonavigation-common pcl eigen pcl-conversions roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

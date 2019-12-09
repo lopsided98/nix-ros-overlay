@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, rclcpp-lifecycle, launch-ros, ament-lint-common, ament-cmake-gmock, launch-testing, ament-cmake-gtest, launch, ament-cmake, rclcpp, std-msgs, ament-lint-auto, rcutils }:
+{ lib, buildRosPackage, fetchurl, rclcpp-lifecycle, rcutils, launch, std-msgs, launch-testing, launch-ros, ament-lint-common, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-gmock, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-fmi-adapter";
   version = "0.1.4-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ std-msgs rclcpp-lifecycle rclcpp ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common ament-cmake-gmock launch-testing ament-cmake-gtest ament-lint-auto rcutils ];
-  propagatedBuildInputs = [ rclcpp-lifecycle launch-ros launch rclcpp std-msgs ];
+  checkInputs = [ rcutils launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-cmake-gmock ament-lint-auto ];
+  propagatedBuildInputs = [ rclcpp-lifecycle launch std-msgs launch-ros rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

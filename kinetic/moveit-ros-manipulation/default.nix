@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, moveit-ros-move-group, pluginlib, rosconsole, catkin, roscpp, moveit-core, actionlib, moveit-msgs, dynamic-reconfigure, tf, eigen }:
+{ lib, buildRosPackage, fetchurl, moveit-core, dynamic-reconfigure, moveit-ros-move-group, pluginlib, tf, actionlib, catkin, moveit-ros-planning, eigen, moveit-msgs, roscpp, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-manipulation";
   version = "0.9.17-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-planning moveit-ros-move-group pluginlib rosconsole roscpp actionlib moveit-core dynamic-reconfigure moveit-msgs tf eigen ];
-  propagatedBuildInputs = [ moveit-ros-planning moveit-ros-move-group rosconsole pluginlib roscpp moveit-core actionlib moveit-msgs dynamic-reconfigure tf ];
+  buildInputs = [ moveit-core dynamic-reconfigure moveit-ros-move-group pluginlib actionlib tf moveit-ros-planning eigen moveit-msgs roscpp rosconsole ];
+  propagatedBuildInputs = [ moveit-core dynamic-reconfigure moveit-ros-move-group pluginlib tf actionlib moveit-ros-planning moveit-msgs roscpp rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

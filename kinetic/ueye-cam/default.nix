@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-info-manager, image-transport, camera-calibration-parsers, catkin, sensor-msgs, nodelet, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, camera-info-manager, catkin, image-transport, nodelet, roscpp, camera-calibration-parsers }:
 buildRosPackage {
   pname = "ros-kinetic-ueye-cam";
   version = "1.0.16";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ camera-calibration-parsers image-transport sensor-msgs camera-info-manager roscpp dynamic-reconfigure nodelet ];
-  propagatedBuildInputs = [ camera-calibration-parsers image-transport sensor-msgs camera-info-manager roscpp dynamic-reconfigure nodelet ];
+  buildInputs = [ sensor-msgs dynamic-reconfigure camera-info-manager image-transport nodelet roscpp camera-calibration-parsers ];
+  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure camera-info-manager image-transport nodelet roscpp camera-calibration-parsers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

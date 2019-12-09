@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, pluginlib, catkin, moveit-core, roscpp }:
+{ lib, buildRosPackage, fetchurl, moveit-core, pluginlib, catkin, roscpp, moveit-ros-planning }:
 buildRosPackage {
   pname = "ros-melodic-moveit-fake-controller-manager";
   version = "1.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib roscpp moveit-core moveit-ros-planning ];
-  propagatedBuildInputs = [ moveit-ros-planning moveit-core pluginlib roscpp ];
+  buildInputs = [ moveit-core pluginlib roscpp moveit-ros-planning ];
+  propagatedBuildInputs = [ moveit-core pluginlib moveit-ros-planning roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

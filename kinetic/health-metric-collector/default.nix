@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-monitoring-msgs, gtest, catkin, rostest, message-generation, aws-common, message-runtime, rospy, std-msgs, aws-ros1-common, roscpp, gmock }:
+{ lib, buildRosPackage, fetchurl, message-generation, std-msgs, aws-ros1-common, catkin, ros-monitoring-msgs, rospy, roscpp, gtest, gmock, message-runtime, aws-common, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-health-metric-collector";
   version = "2.0.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp message-generation aws-common rospy std-msgs aws-ros1-common ros-monitoring-msgs ];
-  checkInputs = [ rostest gtest gmock ];
-  propagatedBuildInputs = [ ros-monitoring-msgs message-generation aws-common message-runtime rospy std-msgs aws-ros1-common roscpp ];
+  buildInputs = [ std-msgs aws-ros1-common ros-monitoring-msgs rospy roscpp message-generation aws-common ];
+  checkInputs = [ gtest gmock rostest ];
+  propagatedBuildInputs = [ message-runtime std-msgs aws-ros1-common ros-monitoring-msgs rospy roscpp message-generation aws-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, tf, sensor-msgs, catkin, nav-msgs, eigen, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, cmake-modules, tf, catkin, eigen, roscpp, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-homer-nav-libs";
   version = "0.1.53";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules tf sensor-msgs nav-msgs eigen roscpp geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs eigen tf geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs tf cmake-modules eigen roscpp nav-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs tf eigen roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

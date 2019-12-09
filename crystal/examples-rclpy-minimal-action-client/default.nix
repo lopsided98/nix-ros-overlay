@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, rclpy, pythonPackages, example-interfaces, ament-pep257, ament-copyright }:
+{ lib, buildRosPackage, fetchurl, example-interfaces, ament-copyright, pythonPackages, ament-pep257, rclpy, ament-flake8 }:
 buildRosPackage {
   pname = "ros-crystal-examples-rclpy-minimal-action-client";
   version = "0.6.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ rclpy example-interfaces ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  propagatedBuildInputs = [ example-interfaces rclpy ];
 
   meta = {
     description = ''Examples of minimal action clients using rclpy.'';

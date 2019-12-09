@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, sensor-msgs, catkin, gazebo-msgs, rosgraph-msgs, rospy, roscpp, geometry-msgs, rosflight-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, rosflight-msgs, std-srvs, catkin, gazebo-msgs, roscpp, rospy, rosgraph-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rosflight-utils";
   version = "1.0.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs geometry-msgs sensor-msgs rosgraph-msgs rospy roscpp gazebo-msgs rosflight-msgs ];
-  propagatedBuildInputs = [ std-srvs geometry-msgs sensor-msgs rosgraph-msgs rospy roscpp gazebo-msgs rosflight-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs rosflight-msgs std-srvs gazebo-msgs roscpp rospy rosgraph-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs rosflight-msgs std-srvs gazebo-msgs roscpp rospy rosgraph-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, python-qt-binding, rclpy, rosidl-default-generators, qt-gui, qt5, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, rosidl-default-runtime, ament-cmake, rclpy, qt-gui, qt5, rosidl-default-generators, python-qt-binding }:
 buildRosPackage {
   pname = "ros-crystal-rqt-py-common";
   version = "1.0.2";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ rclpy qt5.qtbase ];
   checkInputs = [ ament-cmake-pytest ];
-  propagatedBuildInputs = [ python-qt-binding rclpy qt5.qtbase qt-gui rosidl-default-runtime ];
+  propagatedBuildInputs = [ rosidl-default-runtime qt5.qtbase qt-gui rclpy python-qt-binding ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

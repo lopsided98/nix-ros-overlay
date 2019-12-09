@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ecl-mobile-robot }:
+{ lib, buildRosPackage, fetchurl, ecl-mobile-robot, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-ecl-navigation";
   version = "0.60.3";

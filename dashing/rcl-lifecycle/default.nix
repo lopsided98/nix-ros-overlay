@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, rmw-implementation, lifecycle-msgs, ament-cmake-ros, rcl, ament-lint-auto, rcutils, osrf-testing-tools-cpp, rosidl-generator-c }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rcutils, rosidl-generator-c, rcl, ament-lint-common, ament-cmake-gtest, osrf-testing-tools-cpp, lifecycle-msgs, rmw-implementation, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rcl-lifecycle";
   version = "0.7.7-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rmw-implementation lifecycle-msgs rcl rcutils rosidl-generator-c ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest osrf-testing-tools-cpp ament-lint-common ];
-  propagatedBuildInputs = [ rmw-implementation lifecycle-msgs rcl rcutils rosidl-generator-c ];
+  buildInputs = [ rcutils rcl rmw-implementation rosidl-generator-c lifecycle-msgs ];
+  checkInputs = [ ament-lint-auto osrf-testing-tools-cpp ament-cmake-gtest ament-lint-common ];
+  propagatedBuildInputs = [ rcutils rcl rmw-implementation rosidl-generator-c lifecycle-msgs ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

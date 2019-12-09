@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, rostest, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, rosunit, roslint, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-urg-stamped";
   version = "0.0.3-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp ];
-  checkInputs = [ rostest roslint rosunit ];
+  checkInputs = [ roslint rostest rosunit ];
   propagatedBuildInputs = [ sensor-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, rqt-py-common, rqt-gui, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, rqt-py-common, rqt-gui, rqt-gui-py, python-qt-binding }:
 buildRosPackage {
   pname = "ros-crystal-rqt-topic";
   version = "1.0.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  propagatedBuildInputs = [ rqt-gui-py rqt-py-common rqt-gui python-qt-binding ];
+  propagatedBuildInputs = [ rqt-py-common rqt-gui rqt-gui-py python-qt-binding ];
 
   meta = {
     description = ''rqt_topic provides a GUI plugin for displaying debug information about ROS topics including publishers, subscribers, publishing rate, and ROS Messages.'';

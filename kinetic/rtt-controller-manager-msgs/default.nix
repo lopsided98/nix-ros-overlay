@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rtt-roscomm, catkin, controller-manager-msgs, rtt-std-msgs }:
+{ lib, buildRosPackage, fetchurl, controller-manager-msgs, rtt-roscomm, rtt-std-msgs, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-controller-manager-msgs";
   version = "0.1.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rtt-roscomm rtt-std-msgs controller-manager-msgs ];
-  propagatedBuildInputs = [ rtt-roscomm rtt-std-msgs controller-manager-msgs ];
+  buildInputs = [ controller-manager-msgs rtt-roscomm rtt-std-msgs ];
+  propagatedBuildInputs = [ controller-manager-msgs rtt-roscomm rtt-std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

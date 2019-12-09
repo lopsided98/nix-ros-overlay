@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, sensor-msgs, autoware-auto-msgs, autoware-auto-geometry, voxel-grid-nodes, rclcpp, ament-lint-auto, euclidean-cluster, autoware-auto-cmake }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, voxel-grid-nodes, autoware-auto-msgs, ament-lint-common, ament-cmake, autoware-auto-cmake, euclidean-cluster, autoware-auto-geometry, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-euclidean-cluster-nodes";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs autoware-auto-msgs autoware-auto-geometry voxel-grid-nodes rclcpp euclidean-cluster ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ sensor-msgs autoware-auto-msgs autoware-auto-geometry voxel-grid-nodes rclcpp euclidean-cluster ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  buildInputs = [ sensor-msgs voxel-grid-nodes autoware-auto-msgs euclidean-cluster autoware-auto-geometry rclcpp ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs voxel-grid-nodes autoware-auto-msgs euclidean-cluster autoware-auto-geometry rclcpp ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''ROS 2 nodes for various post-processing steps on euclidean clustering. For debugging and to

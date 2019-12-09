@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qt-gui-app, catkin, qt-gui-cpp, qt-gui, qt-dotgraph, qt-gui-py-common }:
+{ lib, buildRosPackage, fetchurl, qt-gui-app, qt-gui-py-common, catkin, qt-gui-cpp, qt-gui, qt-dotgraph }:
 buildRosPackage {
   pname = "ros-kinetic-qt-gui-core";
   version = "0.3.11";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ qt-gui-app qt-gui-cpp qt-gui qt-dotgraph qt-gui-py-common ];
+  propagatedBuildInputs = [ qt-gui-app qt-gui-py-common qt-gui-cpp qt-gui qt-dotgraph ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, libyamlcpp, catkin, cost-map-core, opencv3 }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, libyamlcpp, cost-map-core, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-cost-map-cv";
   version = "0.3.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libyamlcpp cost-map-core opencv3 boost ];
-  propagatedBuildInputs = [ libyamlcpp cost-map-core opencv3 boost ];
+  buildInputs = [ libyamlcpp boost cost-map-core opencv3 ];
+  propagatedBuildInputs = [ libyamlcpp boost cost-map-core opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

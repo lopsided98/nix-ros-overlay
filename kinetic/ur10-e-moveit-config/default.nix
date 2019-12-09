@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-fake-controller-manager, moveit-ros-move-group, moveit-ros-visualization, ur-description, catkin, moveit-simple-controller-manager, robot-state-publisher, roslaunch, joint-state-publisher, xacro, moveit-planners-ompl }:
+{ lib, buildRosPackage, fetchurl, moveit-planners-ompl, joint-state-publisher, xacro, robot-state-publisher, moveit-ros-move-group, moveit-simple-controller-manager, catkin, ur-e-description, moveit-ros-visualization, roslaunch, moveit-fake-controller-manager }:
 buildRosPackage {
   pname = "ros-kinetic-ur10-e-moveit-config";
-  version = "1.2.5";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur10_e_moveit_config/1.2.5-0.tar.gz";
-    name = "1.2.5-0.tar.gz";
-    sha256 = "26195fd9ef4ddde7ebe8e1b00e7291c31ae3328652ab96f7622f9c97164c2d8e";
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur10_e_moveit_config/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "50c03705038bd8f4d718394d2115b7750591c4489cb7742c0d75ebf408649d18";
   };
 
   buildType = "catkin";
-  buildInputs = [ ur-description ];
+  buildInputs = [ ur-e-description ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization ur-description moveit-simple-controller-manager robot-state-publisher joint-state-publisher xacro moveit-planners-ompl ];
+  propagatedBuildInputs = [ moveit-planners-ompl joint-state-publisher xacro robot-state-publisher moveit-ros-move-group moveit-simple-controller-manager ur-e-description moveit-ros-visualization moveit-fake-controller-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

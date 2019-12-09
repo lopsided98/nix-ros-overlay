@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, perception, catkin, desktop, simulators, urdf-tutorial }:
+{ lib, buildRosPackage, fetchurl, desktop, simulators, urdf-tutorial, catkin, perception }:
 buildRosPackage {
   pname = "ros-kinetic-desktop-full";
   version = "1.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ desktop urdf-tutorial perception simulators ];
+  propagatedBuildInputs = [ desktop perception urdf-tutorial simulators ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

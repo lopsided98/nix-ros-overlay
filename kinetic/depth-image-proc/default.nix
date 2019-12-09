@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, boost, image-transport, sensor-msgs, cv-bridge, message-filters, catkin, tf2-ros, image-geometry, tf2, rostest, eigen-conversions, nodelet, stereo-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, message-filters, eigen-conversions, cmake-modules, catkin, image-transport, stereo-msgs, cv-bridge, nodelet, tf2, rostest, tf2-ros, image-geometry }:
 buildRosPackage {
   pname = "ros-kinetic-depth-image-proc";
   version = "1.12.23";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost cmake-modules image-transport sensor-msgs cv-bridge message-filters tf2-ros image-geometry tf2 eigen-conversions nodelet stereo-msgs ];
+  buildInputs = [ boost message-filters sensor-msgs eigen-conversions cmake-modules image-transport stereo-msgs cv-bridge nodelet tf2 tf2-ros image-geometry ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ boost image-transport cv-bridge tf2-ros image-geometry tf2 eigen-conversions nodelet ];
+  propagatedBuildInputs = [ boost eigen-conversions image-transport cv-bridge nodelet tf2 tf2-ros image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

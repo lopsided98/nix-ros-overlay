@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, qt5, rosbuild }:
+{ lib, buildRosPackage, fetchurl, qt5, rosbuild, pythonPackages, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-python-qt-binding";
   version = "0.3.4";

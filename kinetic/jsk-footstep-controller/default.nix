@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf-conversions, diagnostic-msgs, tf, geometry-msgs, jsk-footstep-msgs, message-filters, jsk-topic-tools, sound-play, message-generation, genmsg, kdl-conversions, catkin, urdf, jsk-footstep-planner, std-msgs, kdl-parser, jsk-pcl-ros, sensor-msgs, diagnostic-updater, tf2, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, jsk-pcl-ros, tf, jsk-footstep-msgs, tf2, kdl-parser, sensor-msgs, diagnostic-msgs, dynamic-reconfigure, sound-play, jsk-topic-tools, message-filters, std-msgs, catkin, message-generation, jsk-footstep-planner, kdl-conversions, genmsg, diagnostic-updater, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-footstep-controller";
   version = "0.1.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs tf-conversions tf geometry-msgs jsk-footstep-msgs message-filters jsk-topic-tools message-generation genmsg kdl-conversions urdf jsk-footstep-planner std-msgs kdl-parser jsk-pcl-ros sensor-msgs diagnostic-updater tf2 dynamic-reconfigure ];
-  propagatedBuildInputs = [ diagnostic-msgs tf-conversions tf geometry-msgs jsk-footstep-msgs message-filters jsk-topic-tools sound-play message-generation genmsg kdl-conversions urdf jsk-footstep-planner std-msgs kdl-parser jsk-pcl-ros sensor-msgs diagnostic-updater tf2 dynamic-reconfigure ];
+  buildInputs = [ geometry-msgs urdf jsk-pcl-ros tf jsk-footstep-msgs tf2 kdl-parser sensor-msgs diagnostic-msgs dynamic-reconfigure jsk-topic-tools message-filters std-msgs jsk-footstep-planner message-generation kdl-conversions genmsg diagnostic-updater tf-conversions ];
+  propagatedBuildInputs = [ geometry-msgs urdf jsk-pcl-ros tf jsk-footstep-msgs tf2 kdl-parser sensor-msgs diagnostic-msgs dynamic-reconfigure sound-play jsk-topic-tools message-filters std-msgs jsk-footstep-planner message-generation kdl-conversions genmsg diagnostic-updater tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

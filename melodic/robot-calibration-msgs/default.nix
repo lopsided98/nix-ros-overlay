@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, sensor-msgs, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, message-runtime, std-msgs, catkin, actionlib-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-robot-calibration-msgs";
-  version = "0.6.0";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/melodic/robot_calibration_msgs/0.6.0-0.tar.gz";
-    name = "0.6.0-0.tar.gz";
-    sha256 = "ea0ffb952c39266c63a6a96dea7b3763b0c36c4b28363c08d41171ed1a021097";
+    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/melodic/robot_calibration_msgs/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "aa425371dddddf731cb4c5397cecc801e55a9f3f92c05475834f09a81a095a89";
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs sensor-msgs message-generation std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs sensor-msgs message-runtime std-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs actionlib-msgs message-generation ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs actionlib-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

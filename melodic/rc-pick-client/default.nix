@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, shape-msgs, rc-common-msgs, tf2-geometry-msgs, rcdiscover, catkin, roscpp, message-generation, curl, visualization-msgs, message-runtime, dynamic-reconfigure, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, dynamic-reconfigure, std-srvs, tf, shape-msgs, catkin, rc-common-msgs, tf2-geometry-msgs, rcdiscover, visualization-msgs, roscpp, message-runtime, curl }:
 buildRosPackage {
   pname = "ros-melodic-rc-pick-client";
   version = "2.7.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ shape-msgs std-srvs rc-common-msgs tf2-geometry-msgs rcdiscover roscpp message-generation curl visualization-msgs dynamic-reconfigure tf geometry-msgs ];
-  propagatedBuildInputs = [ shape-msgs std-srvs rc-common-msgs tf2-geometry-msgs rcdiscover roscpp message-runtime curl dynamic-reconfigure visualization-msgs tf geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure std-srvs tf shape-msgs rc-common-msgs tf2-geometry-msgs rcdiscover visualization-msgs roscpp message-generation curl ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure std-srvs tf shape-msgs rc-common-msgs tf2-geometry-msgs rcdiscover visualization-msgs roscpp message-runtime curl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

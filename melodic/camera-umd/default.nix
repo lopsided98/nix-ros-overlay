@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, jpeg-streamer, uvc-camera }:
+{ lib, buildRosPackage, fetchurl, uvc-camera, jpeg-streamer, catkin }:
 buildRosPackage {
   pname = "ros-melodic-camera-umd";
   version = "0.2.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ jpeg-streamer uvc-camera ];
+  propagatedBuildInputs = [ uvc-camera jpeg-streamer ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

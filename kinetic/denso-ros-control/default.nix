@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, joint-state-controller, kdl-parser, joint-limits-interface, catkin, joint-trajectory-controller, position-controllers, urdf, roscpp, transmission-interface }:
+{ lib, buildRosPackage, fetchurl, joint-limits-interface, controller-manager, hardware-interface, urdf, position-controllers, catkin, transmission-interface, roscpp, joint-trajectory-controller, joint-state-controller, kdl-parser }:
 buildRosPackage {
   pname = "ros-kinetic-denso-ros-control";
   version = "2.0.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager hardware-interface joint-state-controller kdl-parser joint-limits-interface joint-trajectory-controller position-controllers urdf roscpp transmission-interface ];
-  propagatedBuildInputs = [ controller-manager hardware-interface joint-state-controller kdl-parser joint-limits-interface joint-trajectory-controller position-controllers urdf roscpp transmission-interface ];
+  buildInputs = [ controller-manager urdf hardware-interface joint-limits-interface position-controllers transmission-interface roscpp joint-trajectory-controller joint-state-controller kdl-parser ];
+  propagatedBuildInputs = [ controller-manager urdf hardware-interface joint-limits-interface position-controllers transmission-interface roscpp joint-trajectory-controller joint-state-controller kdl-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

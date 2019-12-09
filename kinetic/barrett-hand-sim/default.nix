@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, barrett-hand-control, catkin, barrett-hand-gazebo }:
+{ lib, buildRosPackage, fetchurl, catkin, barrett-hand-control, barrett-hand-gazebo }:
 buildRosPackage {
   pname = "ros-kinetic-barrett-hand-sim";
   version = "0.1.2";

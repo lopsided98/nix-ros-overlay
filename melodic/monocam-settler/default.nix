@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, actionlib-msgs, catkin, settlerlib, actionlib, roscpp-serialization, std-msgs }:
+{ lib, buildRosPackage, fetchurl, roscpp-serialization, std-msgs, settlerlib, actionlib, catkin, actionlib-msgs, rosconsole }:
 buildRosPackage {
   pname = "ros-melodic-monocam-settler";
   version = "0.10.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs ];
-  propagatedBuildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs ];
+  buildInputs = [ roscpp-serialization std-msgs settlerlib actionlib actionlib-msgs rosconsole ];
+  propagatedBuildInputs = [ roscpp-serialization std-msgs settlerlib actionlib actionlib-msgs rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

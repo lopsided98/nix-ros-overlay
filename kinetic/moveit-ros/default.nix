@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, moveit-ros-benchmarks, moveit-ros-visualization, moveit-ros-move-group, moveit-ros-robot-interaction, catkin, moveit-ros-manipulation, moveit-ros-warehouse, moveit-ros-perception, moveit-ros-planning-interface }:
+{ lib, buildRosPackage, fetchurl, moveit-ros-benchmarks, moveit-ros-warehouse, moveit-ros-move-group, moveit-ros-robot-interaction, moveit-ros-planning-interface, catkin, moveit-ros-manipulation, moveit-ros-perception, moveit-ros-visualization, moveit-ros-planning }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros";
   version = "0.9.17-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ moveit-ros-planning moveit-ros-benchmarks moveit-ros-move-group moveit-ros-visualization moveit-ros-robot-interaction moveit-ros-manipulation moveit-ros-warehouse moveit-ros-perception moveit-ros-planning-interface ];
+  propagatedBuildInputs = [ moveit-ros-benchmarks moveit-ros-warehouse moveit-ros-move-group moveit-ros-robot-interaction moveit-ros-planning-interface moveit-ros-manipulation moveit-ros-perception moveit-ros-visualization moveit-ros-planning ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

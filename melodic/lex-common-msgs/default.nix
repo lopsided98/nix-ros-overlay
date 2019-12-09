@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, audio-common-msgs }:
+{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, audio-common-msgs, catkin, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-lex-common-msgs";
   version = "2.0.1-r1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geographic-msgs, rostest, geodesy, nav-msgs, dynamic-reconfigure, rospy, roslaunch, visualization-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, nav-msgs, dynamic-reconfigure, catkin, geographic-msgs, visualization-msgs, geodesy, rospy, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-route-network";
   version = "0.2.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geographic-msgs rostest geodesy nav-msgs dynamic-reconfigure rospy visualization-msgs geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure geographic-msgs visualization-msgs geodesy rospy nav-msgs rostest ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ geographic-msgs geodesy nav-msgs rospy dynamic-reconfigure visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure geographic-msgs visualization-msgs geodesy rospy nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

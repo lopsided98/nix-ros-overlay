@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, cv-bridge, pythonPackages, catkin, rospy, move-base-msgs, nav-msgs, dynamic-reconfigure, std-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, dynamic-reconfigure, std-msgs, pythonPackages, tf, catkin, cv-bridge, rospy, nav-msgs, move-base-msgs }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-autorace-detect";
   version = "1.2.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ pythonPackages.enum34 pythonPackages.numpy sensor-msgs cv-bridge pythonPackages.opencv3 rospy move-base-msgs nav-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ pythonPackages.numpy sensor-msgs geometry-msgs pythonPackages.enum34 dynamic-reconfigure pythonPackages.opencv3 std-msgs tf cv-bridge rospy nav-msgs move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, nav-msgs, pcl-ros, std-msgs, vtk, roscpp, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, std-msgs, catkin, vtk, pcl-conversions, roscpp, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pointcloud-tools";
   version = "0.0.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs nav-msgs pcl-ros std-msgs vtk roscpp pcl-conversions ];
-  propagatedBuildInputs = [ sensor-msgs nav-msgs pcl-ros std-msgs vtk roscpp pcl-conversions ];
+  buildInputs = [ pcl-ros sensor-msgs std-msgs vtk pcl-conversions roscpp nav-msgs ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs std-msgs vtk pcl-conversions roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

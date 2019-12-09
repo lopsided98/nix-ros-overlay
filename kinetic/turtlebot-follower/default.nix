@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot-bringup, depth-image-proc, turtlebot-msgs, catkin, nodelet, dynamic-reconfigure, topic-tools, turtlebot-teleop, visualization-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, turtlebot-teleop, dynamic-reconfigure, catkin, depth-image-proc, turtlebot-msgs, roscpp, nodelet, topic-tools, visualization-msgs, turtlebot-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-follower";
   version = "2.3.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ depth-image-proc turtlebot-msgs roscpp visualization-msgs dynamic-reconfigure nodelet ];
-  propagatedBuildInputs = [ turtlebot-bringup depth-image-proc turtlebot-msgs turtlebot-teleop dynamic-reconfigure topic-tools visualization-msgs nodelet roscpp ];
+  buildInputs = [ dynamic-reconfigure roscpp turtlebot-msgs nodelet visualization-msgs depth-image-proc ];
+  propagatedBuildInputs = [ turtlebot-teleop dynamic-reconfigure roscpp depth-image-proc nodelet visualization-msgs turtlebot-msgs topic-tools turtlebot-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, costmap-2d, amcl, base-local-planner, navfn, clear-costmap-recovery, nav-core, catkin, rotate-recovery, move-base, move-base-msgs, dwa-local-planner, voxel-grid, fake-localization, carrot-planner, robot-pose-ekf, global-planner, move-slow-and-clear }:
+{ lib, buildRosPackage, fetchurl, carrot-planner, clear-costmap-recovery, move-slow-and-clear, map-server, catkin, base-local-planner, costmap-2d, nav-core, fake-localization, global-planner, robot-pose-ekf, move-base, voxel-grid, dwa-local-planner, amcl, navfn, rotate-recovery, move-base-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-navigation";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navigation/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "ff980e3a37e75bbaa31a5bacdcbd5e6f27f96e011c2d84f8f0dc1266928d09e0";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navigation/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "6dec46f3b86fd05858e9672cf49203cfb7a8e491fd1a40e628f997f3d1bc333d";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ map-server costmap-2d amcl base-local-planner navfn clear-costmap-recovery nav-core rotate-recovery move-base move-base-msgs dwa-local-planner voxel-grid fake-localization carrot-planner robot-pose-ekf global-planner move-slow-and-clear ];
+  propagatedBuildInputs = [ clear-costmap-recovery carrot-planner move-slow-and-clear map-server base-local-planner costmap-2d nav-core fake-localization global-planner robot-pose-ekf move-base voxel-grid dwa-local-planner amcl navfn rotate-recovery move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

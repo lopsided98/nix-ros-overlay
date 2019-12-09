@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, schunk-sdh, catkin, gazebo-msgs, rospy }:
+{ lib, buildRosPackage, fetchurl, gazebo-msgs, catkin, rospy, schunk-sdh }:
 buildRosPackage {
   pname = "ros-kinetic-schunk-simulated-tactile-sensors";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_simulated_tactile_sensors/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "ed68867f89da961cd3937b8181d2d0d162b258e12a19bd302e0e2c1c95cfdb43";
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_simulated_tactile_sensors/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "2897bf8e63c89363cec8bea4a08bbbdfcfc2fda404d232537f972062005c9297";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ schunk-sdh gazebo-msgs rospy ];
+  propagatedBuildInputs = [ gazebo-msgs rospy schunk-sdh ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclpy, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, rclpy }:
 buildRosPackage {
   pname = "ros-dashing-turtlebot3-teleop";
   version = "2.0.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  propagatedBuildInputs = [ rclpy geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs rclpy ];
 
   meta = {
     description = ''Teleoperation node using keyboard for TurtleBot3.'';

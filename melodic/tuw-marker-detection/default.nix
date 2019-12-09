@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tuw-marker-pose-estimation, tuw-aruco, catkin, tuw-checkerboard, tuw-ellipses }:
+{ lib, buildRosPackage, fetchurl, tuw-marker-pose-estimation, tuw-aruco, tuw-checkerboard, catkin, tuw-ellipses }:
 buildRosPackage {
   pname = "ros-melodic-tuw-marker-detection";
   version = "0.1.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ tuw-marker-pose-estimation tuw-ellipses tuw-checkerboard tuw-aruco ];
+  propagatedBuildInputs = [ tuw-checkerboard tuw-marker-pose-estimation tuw-ellipses tuw-aruco ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

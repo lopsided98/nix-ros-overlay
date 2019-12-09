@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers-msgs, pr2-controller-configuration, catkin, rostest, pr2-self-test-msgs, pr2-controller-manager, actionlib, joint-qualification-controllers, rospy, std-msgs, rosunit }:
+{ lib, buildRosPackage, fetchurl, std-msgs, actionlib, catkin, rosunit, pr2-controller-configuration, pr2-controller-manager, joint-qualification-controllers, pr2-self-test-msgs, pr2-controllers-msgs, rospy, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-counterbalance-check";
   version = "1.0.15-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs pr2-controller-configuration rospy rostest pr2-self-test-msgs pr2-controller-manager joint-qualification-controllers actionlib std-msgs ];
+  buildInputs = [ rostest std-msgs actionlib pr2-controller-configuration joint-qualification-controllers pr2-self-test-msgs pr2-controllers-msgs rospy pr2-controller-manager ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pr2-controllers-msgs pr2-controller-configuration rospy pr2-self-test-msgs pr2-controller-manager joint-qualification-controllers actionlib std-msgs ];
+  propagatedBuildInputs = [ std-msgs actionlib pr2-controller-configuration joint-qualification-controllers pr2-self-test-msgs pr2-controllers-msgs rospy pr2-controller-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

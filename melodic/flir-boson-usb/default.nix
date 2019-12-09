@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, camera-info-manager, image-transport, sensor-msgs, catkin, cv-bridge, nodelet, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, camera-info-manager, catkin, roslint, image-transport, cv-bridge, nodelet, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-flir-boson-usb";
   version = "1.2.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint camera-info-manager image-transport sensor-msgs cv-bridge roscpp nodelet ];
-  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge nodelet roscpp ];
+  buildInputs = [ sensor-msgs camera-info-manager roslint image-transport cv-bridge nodelet roscpp ];
+  propagatedBuildInputs = [ sensor-msgs camera-info-manager image-transport cv-bridge nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

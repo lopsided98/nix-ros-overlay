@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, fiducial-slam, catkin, move-base, move-basic, aruco-detect }:
+{ lib, buildRosPackage, fetchurl, catkin, fiducial-slam, move-base, move-basic, aruco-detect }:
 buildRosPackage {
   pname = "ros-kinetic-magni-nav";
   version = "0.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ aruco-detect fiducial-slam move-base move-basic ];
+  propagatedBuildInputs = [ fiducial-slam aruco-detect move-base move-basic ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

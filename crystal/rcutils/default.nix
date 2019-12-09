@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-lint-common, ament-cmake-gmock, launch-testing, ament-cmake-gtest, python3Packages, ament-cmake-ros, ament-lint-auto, osrf-testing-tools-cpp }:
+{ lib, buildRosPackage, fetchurl, python3Packages, ament-cmake-ros, launch-testing, ament-lint-common, ament-cmake-gtest, osrf-testing-tools-cpp, ament-cmake-pytest, ament-cmake-gmock, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-rcutils";
   version = "0.6.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-pytest ament-lint-common ament-cmake-gmock launch-testing ament-cmake-gtest ament-lint-auto osrf-testing-tools-cpp ];
-  nativeBuildInputs = [ python3Packages.empy ament-cmake-ros ];
+  checkInputs = [ launch-testing ament-lint-common ament-cmake-gtest osrf-testing-tools-cpp ament-cmake-pytest ament-cmake-gmock ament-lint-auto ];
+  nativeBuildInputs = [ ament-cmake-ros python3Packages.empy ];
 
   meta = {
     description = ''Package containing various utility types and functions for C'';

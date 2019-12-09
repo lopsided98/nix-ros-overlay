@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, class-loader, catkin, socketcan-interface, rosunit }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, rosunit, socketcan-interface, class-loader }:
 buildRosPackage {
   pname = "ros-melodic-canopen-master";
   version = "0.8.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ class-loader boost socketcan-interface ];
+  buildInputs = [ socketcan-interface boost class-loader ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ class-loader boost socketcan-interface ];
+  propagatedBuildInputs = [ boost class-loader socketcan-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

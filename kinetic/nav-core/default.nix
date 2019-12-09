@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, catkin, std-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, tf, catkin, costmap-2d }:
 buildRosPackage {
   pname = "ros-kinetic-nav-core";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/nav_core/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "79a1fb353d602ec3932a6f4e288034ece55f2b2970025c955624320fc96bd589";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/nav_core/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "c6a171d4573c9c71a1faf98534a9dfbc4392e1ccec244667b9138dfcd3f021fd";
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs costmap-2d tf geometry-msgs ];
-  propagatedBuildInputs = [ std-msgs costmap-2d tf geometry-msgs ];
+  buildInputs = [ tf std-msgs costmap-2d geometry-msgs ];
+  propagatedBuildInputs = [ tf std-msgs costmap-2d geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

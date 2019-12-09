@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp, catkin, pr2-mechanism-model, controller-interface }:
+{ lib, buildRosPackage, fetchurl, pr2-mechanism-model, catkin, roscpp, controller-interface }:
 buildRosPackage {
   pname = "ros-melodic-pr2-controller-interface";
   version = "1.8.18";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-interface pr2-mechanism-model roscpp ];
-  propagatedBuildInputs = [ controller-interface pr2-mechanism-model roscpp ];
+  buildInputs = [ pr2-mechanism-model controller-interface roscpp ];
+  propagatedBuildInputs = [ pr2-mechanism-model controller-interface roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

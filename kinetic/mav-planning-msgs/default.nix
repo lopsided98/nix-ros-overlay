@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, mav-msgs, trajectory-msgs, sensor-msgs, catkin, message-generation, message-runtime, eigen, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, message-generation, geometry-msgs, std-msgs, cmake-modules, catkin, mav-msgs, eigen, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-mav-planning-msgs";
   version = "3.3.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules mav-msgs trajectory-msgs sensor-msgs message-generation message-runtime eigen std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ cmake-modules mav-msgs trajectory-msgs sensor-msgs message-generation message-runtime eigen std-msgs geometry-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs message-runtime std-msgs cmake-modules mav-msgs eigen message-generation ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs message-runtime std-msgs cmake-modules mav-msgs eigen message-generation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

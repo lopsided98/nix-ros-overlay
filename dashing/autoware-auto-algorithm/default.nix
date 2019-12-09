@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-gtest, ament-lint-auto, autoware-auto-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake, ament-lint-auto, autoware-auto-cmake, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-autoware-auto-algorithm";
   version = "0.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''Generic algorithms like sort'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, mir-gazebo, mir-dwb-critics, mir-description, mir-actions, mir-navigation, mir-driver, mir-msgs }:
+{ lib, buildRosPackage, fetchurl, mir-navigation, mir-dwb-critics, mir-actions, mir-driver, catkin, mir-msgs, mir-description, mir-gazebo }:
 buildRosPackage {
   pname = "ros-kinetic-mir-robot";
   version = "1.0.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ mir-description mir-gazebo mir-dwb-critics mir-actions mir-navigation mir-driver mir-msgs ];
+  propagatedBuildInputs = [ mir-navigation mir-dwb-critics mir-actions mir-driver mir-msgs mir-description mir-gazebo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

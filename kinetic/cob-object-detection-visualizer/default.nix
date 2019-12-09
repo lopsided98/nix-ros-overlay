@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cob-object-detection-msgs, image-transport, sensor-msgs, cv-bridge, pcl, message-filters, catkin, roscpp, pcl-ros, eigen-conversions, visualization-msgs, opencv3 }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, boost, message-filters, sensor-msgs, eigen-conversions, cob-object-detection-msgs, catkin, pcl, image-transport, cv-bridge, visualization-msgs, roscpp, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-cob-object-detection-visualizer";
   version = "0.6.14-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost cob-object-detection-msgs image-transport sensor-msgs cv-bridge message-filters pcl roscpp pcl-ros eigen-conversions visualization-msgs opencv3 ];
-  propagatedBuildInputs = [ boost cob-object-detection-msgs pcl sensor-msgs image-transport message-filters cv-bridge visualization-msgs pcl-ros eigen-conversions roscpp opencv3 ];
+  buildInputs = [ pcl-ros boost message-filters sensor-msgs eigen-conversions cob-object-detection-msgs roscpp pcl image-transport cv-bridge visualization-msgs opencv3 ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs boost message-filters eigen-conversions cob-object-detection-msgs pcl image-transport cv-bridge visualization-msgs roscpp opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

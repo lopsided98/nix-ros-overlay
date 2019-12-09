@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin-pip, pyros-config, pyzmp, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin-pip, catkin, pyros-config, pyzmp }:
 buildRosPackage {
   pname = "ros-kinetic-pyros-common";
   version = "0.5.4";

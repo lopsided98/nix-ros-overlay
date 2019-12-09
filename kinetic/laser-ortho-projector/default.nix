@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl, sensor-msgs, catkin, message-filters, roscpp, nodelet, pcl-ros, tf, pcl-conversions, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, message-filters, geometry-msgs, tf, catkin, pcl, pcl-conversions, nodelet, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-laser-ortho-projector";
   version = "0.3.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf pcl sensor-msgs message-filters nodelet pcl-ros roscpp pcl-conversions geometry-msgs ];
-  propagatedBuildInputs = [ tf pcl sensor-msgs message-filters nodelet pcl-ros roscpp pcl-conversions geometry-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs tf pcl pcl-conversions nodelet roscpp ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs tf pcl pcl-conversions nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

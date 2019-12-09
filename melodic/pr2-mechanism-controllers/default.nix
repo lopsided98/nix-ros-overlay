@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, filters, rosconsole, rospy, diagnostic-msgs, tf, geometry-msgs, realtime-tools, message-generation, message-runtime, angles, pr2-msgs, pr2-controllers-msgs, pr2-mechanism-msgs, catkin, robot-mechanism-controllers, nav-msgs, std-msgs, roscpp, visualization-msgs, pr2-mechanism-model, pr2-controller-interface, pluginlib, control-toolbox, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, control-toolbox, pluginlib, tf, nav-msgs, diagnostic-msgs, pr2-controller-interface, rosconsole, pr2-mechanism-msgs, pr2-mechanism-model, pr2-msgs, std-msgs, filters, catkin, realtime-tools, roscpp, angles, message-generation, rospy, robot-mechanism-controllers, visualization-msgs, diagnostic-updater, pr2-controllers-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-pr2-mechanism-controllers";
   version = "1.10.17-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ filters rosconsole rospy diagnostic-msgs tf geometry-msgs realtime-tools message-generation angles pr2-msgs pr2-controllers-msgs pr2-mechanism-msgs robot-mechanism-controllers nav-msgs std-msgs roscpp visualization-msgs pr2-mechanism-model pr2-controller-interface pluginlib control-toolbox diagnostic-updater ];
-  propagatedBuildInputs = [ filters rosconsole rospy diagnostic-msgs tf geometry-msgs realtime-tools message-runtime angles pr2-msgs pr2-controllers-msgs pr2-mechanism-msgs robot-mechanism-controllers nav-msgs std-msgs roscpp visualization-msgs pr2-mechanism-model pr2-controller-interface pluginlib control-toolbox diagnostic-updater ];
+  buildInputs = [ geometry-msgs control-toolbox pluginlib tf nav-msgs diagnostic-msgs pr2-controller-interface rosconsole pr2-mechanism-msgs pr2-mechanism-model pr2-msgs std-msgs filters realtime-tools roscpp angles rospy message-generation robot-mechanism-controllers visualization-msgs diagnostic-updater pr2-controllers-msgs ];
+  propagatedBuildInputs = [ geometry-msgs control-toolbox pluginlib tf nav-msgs diagnostic-msgs pr2-controller-interface rosconsole pr2-mechanism-msgs pr2-mechanism-model pr2-msgs std-msgs filters realtime-tools roscpp angles rospy robot-mechanism-controllers visualization-msgs diagnostic-updater pr2-controllers-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

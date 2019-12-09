@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, filters, semantic-point-annotator, sensor-msgs, catkin, message-filters, topic-tools, roscpp, laser-tilt-controller-filter, laser-geometry, laser-filters, pcl-ros, pr2-machine, dynamic-reconfigure, tf, pr2-navigation-self-filter, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, message-filters, geometry-msgs, dynamic-reconfigure, laser-filters, pr2-machine, laser-tilt-controller-filter, semantic-point-annotator, tf, filters, pr2-navigation-self-filter, catkin, laser-geometry, roscpp, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-navigation-perception";
   version = "0.1.28";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ filters semantic-point-annotator sensor-msgs topic-tools message-filters roscpp laser-tilt-controller-filter laser-geometry laser-filters pcl-ros pr2-machine dynamic-reconfigure tf pr2-navigation-self-filter geometry-msgs ];
-  propagatedBuildInputs = [ filters semantic-point-annotator sensor-msgs topic-tools message-filters roscpp laser-tilt-controller-filter pcl-ros laser-filters laser-geometry dynamic-reconfigure pr2-machine tf pr2-navigation-self-filter geometry-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs dynamic-reconfigure laser-filters laser-tilt-controller-filter pr2-machine semantic-point-annotator tf laser-geometry filters pr2-navigation-self-filter roscpp topic-tools ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs dynamic-reconfigure laser-filters laser-tilt-controller-filter pr2-machine tf filters laser-geometry semantic-point-annotator pr2-navigation-self-filter roscpp topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

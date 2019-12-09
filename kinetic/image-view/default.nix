@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, rosconsole, camera-calibration-parsers, image-transport, gtk2, cv-bridge, sensor-msgs, message-filters, catkin, rostest, message-generation, nodelet, dynamic-reconfigure, roscpp, stereo-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, rostest, dynamic-reconfigure, std-srvs, catkin, image-transport, stereo-msgs, cv-bridge, gtk2, nodelet, roscpp, message-generation, camera-calibration-parsers, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-image-view";
   version = "1.12.23";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs rosconsole camera-calibration-parsers image-transport gtk2 sensor-msgs message-filters cv-bridge message-generation nodelet dynamic-reconfigure roscpp stereo-msgs ];
+  buildInputs = [ sensor-msgs message-filters dynamic-reconfigure std-srvs image-transport stereo-msgs cv-bridge gtk2 nodelet roscpp message-generation camera-calibration-parsers rosconsole ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ std-srvs rosconsole camera-calibration-parsers image-transport gtk2 cv-bridge message-filters nodelet dynamic-reconfigure roscpp ];
+  propagatedBuildInputs = [ message-filters dynamic-reconfigure std-srvs image-transport cv-bridge gtk2 nodelet roscpp camera-calibration-parsers rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

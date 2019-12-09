@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, roslint, safety-limiter-msgs, pcl, sensor-msgs, catkin, tf2-ros, diagnostic-updater, tf2-sensor-msgs, rostest, nav-msgs, neonavigation-common, xmlrpcpp, eigen, std-msgs, roscpp, pcl-conversions, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, xmlrpcpp, std-msgs, safety-limiter-msgs, catkin, tf2-sensor-msgs, cmake-modules, pcl, neonavigation-common, roslint, eigen, pcl-conversions, roscpp, nav-msgs, rostest, tf2-ros, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-safety-limiter";
   version = "0.5.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules safety-limiter-msgs pcl sensor-msgs tf2-ros diagnostic-updater tf2-sensor-msgs neonavigation-common xmlrpcpp eigen std-msgs roscpp pcl-conversions geometry-msgs ];
-  checkInputs = [ rostest nav-msgs roslint ];
-  propagatedBuildInputs = [ cmake-modules safety-limiter-msgs pcl sensor-msgs tf2-ros diagnostic-updater tf2-sensor-msgs neonavigation-common xmlrpcpp eigen std-msgs roscpp pcl-conversions geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs xmlrpcpp std-msgs cmake-modules tf2-sensor-msgs pcl neonavigation-common eigen pcl-conversions roscpp safety-limiter-msgs tf2-ros diagnostic-updater ];
+  checkInputs = [ nav-msgs rostest roslint ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs xmlrpcpp std-msgs cmake-modules tf2-sensor-msgs neonavigation-common pcl eigen pcl-conversions roscpp safety-limiter-msgs tf2-ros diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

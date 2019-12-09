@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospack, rosboost-cfg, boost, mk, catkin, pythonPackages, subversion, roslib }:
+{ lib, buildRosPackage, fetchurl, boost, rospack, rosboost-cfg, pythonPackages, roslib, catkin, subversion, mk }:
 buildRosPackage {
   pname = "ros-melodic-libsiftfast";
   version = "2.1.13-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.numpy rospack rosboost-cfg boost mk subversion roslib ];
+  buildInputs = [ pythonPackages.numpy boost rosboost-cfg roslib subversion mk rospack ];
   propagatedBuildInputs = [ pythonPackages.numpy boost ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,15 +2,15 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-common, gtest, cmake, gmock }:
+{ lib, buildRosPackage, fetchurl, gtest, gmock, aws-common, cmake }:
 buildRosPackage {
   pname = "ros-melodic-dataflow-lite";
-  version = "1.1.0-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/dataflow_lite/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "db8584ba8c3ad6e409b866429a766cce5a3669849e8243e2edbf451913c7f55f";
+    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/dataflow_lite/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "9d672144635cb6d0ec0bb039f13f5b779c6faae225a2834f8388802e39170855";
   };
 
   buildType = "cmake";

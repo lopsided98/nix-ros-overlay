@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rviz, urdf, robot-state-publisher, roslaunch, roslib, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, urdf, robot-state-publisher, catkin, roslib, rviz, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-mkz-description";
   version = "1.2.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ roslaunch roslib rviz ];
-  propagatedBuildInputs = [ roslaunch urdf xacro robot-state-publisher ];
+  checkInputs = [ rviz roslaunch roslib ];
+  propagatedBuildInputs = [ robot-state-publisher xacro roslaunch urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gtk2, catkin, libtool, pkg-config, libGL, libjpeg, libGLU, fltk, cmake }:
+{ lib, buildRosPackage, fetchurl, libtool, libjpeg, libGLU, catkin, libGL, cmake, gtk2, fltk, pkg-config }:
 buildRosPackage {
   pname = "ros-kinetic-stage";
   version = "4.1.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ gtk2 libtool libjpeg libGLU fltk libGL ];
-  propagatedBuildInputs = [ gtk2 catkin libjpeg libGLU fltk libGL ];
-  nativeBuildInputs = [ cmake pkg-config ];
+  buildInputs = [ libtool libjpeg libGLU libGL gtk2 fltk ];
+  propagatedBuildInputs = [ catkin libjpeg libGLU libGL gtk2 fltk ];
+  nativeBuildInputs = [ pkg-config cmake ];
 
   meta = {
     description = ''Mobile robot simulator http://rtv.github.com/Stage'';

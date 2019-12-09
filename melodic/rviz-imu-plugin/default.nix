@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rviz, qt5, roscpp }:
+{ lib, buildRosPackage, fetchurl, rviz, catkin, roscpp, qt5 }:
 buildRosPackage {
   pname = "ros-melodic-rviz-imu-plugin";
   version = "1.2.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp rviz qt5.qtbase ];
-  propagatedBuildInputs = [ roscpp rviz qt5.qtbase ];
+  buildInputs = [ rviz roscpp qt5.qtbase ];
+  propagatedBuildInputs = [ rviz roscpp qt5.qtbase ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

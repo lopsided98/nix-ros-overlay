@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-xmllint, ament-flake8, pythonPackages, ament-pep257, ament-copyright, tracetools-read }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, tracetools-read, pythonPackages, ament-xmllint, ament-pep257, ament-flake8 }:
 buildRosPackage {
   pname = "ros-dashing-tracetools-analysis";
   version = "0.2.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_python";
   buildInputs = [ tracetools-read ];
-  checkInputs = [ ament-xmllint ament-flake8 pythonPackages.pytest ament-pep257 ament-copyright ];
+  checkInputs = [ ament-copyright ament-xmllint ament-pep257 pythonPackages.pytest ament-flake8 ];
   propagatedBuildInputs = [ tracetools-read ];
 
   meta = {

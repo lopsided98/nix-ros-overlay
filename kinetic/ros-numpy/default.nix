@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, nav-msgs, rospy, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, pythonPackages, tf, catkin, rospy, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ros-numpy";
   version = "0.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pythonPackages.numpy sensor-msgs nav-msgs rospy tf geometry-msgs ];
+  propagatedBuildInputs = [ pythonPackages.numpy sensor-msgs geometry-msgs tf rospy nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

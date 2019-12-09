@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, ament-cmake-pytest, ament-cmake, rmw-implementation-cmake, ament-lint-common, test-msgs, rcl-logging-noop, ament-cmake-gtest, launch, rmw-implementation, rcl-interfaces, ament-cmake-ros, ament-lint-auto, rcutils, osrf-testing-tools-cpp, rmw, rosidl-generator-c }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake-ros, rcutils, rosidl-generator-c, launch, rmw-implementation-cmake, rosidl-default-runtime, ament-lint-common, ament-cmake, ament-lint-auto, test-msgs, ament-cmake-gtest, osrf-testing-tools-cpp, rcl-interfaces, rmw, rmw-implementation, rcl-logging-noop }:
 buildRosPackage {
   pname = "ros-crystal-rcl";
   version = "0.6.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcl-logging-noop rmw-implementation rcl-interfaces rcutils rosidl-generator-c ];
-  checkInputs = [ ament-cmake-pytest rmw-implementation-cmake ament-lint-common test-msgs ament-cmake-gtest launch ament-lint-auto osrf-testing-tools-cpp rmw ];
-  propagatedBuildInputs = [ ament-cmake rcutils rcl-logging-noop rmw-implementation rcl-interfaces rosidl-default-runtime rmw rosidl-generator-c ];
+  buildInputs = [ rosidl-generator-c rcutils rcl-interfaces rmw-implementation rcl-logging-noop ];
+  checkInputs = [ launch rmw-implementation-cmake ament-lint-common test-msgs ament-cmake-gtest osrf-testing-tools-cpp rmw ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ rosidl-generator-c rcutils rosidl-default-runtime ament-cmake rcl-interfaces rmw rmw-implementation rcl-logging-noop ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

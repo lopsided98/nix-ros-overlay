@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosunit, roslint }:
+{ lib, buildRosPackage, fetchurl, rosunit, catkin, roslint }:
 buildRosPackage {
   pname = "ros-kinetic-nav-grid";
   version = "0.2.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ rosunit roslint ];
+  checkInputs = [ roslint rosunit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

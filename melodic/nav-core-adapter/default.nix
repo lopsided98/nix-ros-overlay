@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, nav-grid, roslint, nav-core2, catkin, nav-core, nav-2d-msgs, dwb-plugins, dwb-critics, rostest, nav-2d-utils, nav-msgs, visualization-msgs, tf, dwb-local-planner, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, nav-2d-utils, geometry-msgs, nav-grid, nav-core2, pluginlib, tf, catkin, roslint, costmap-2d, nav-core, dwb-local-planner, visualization-msgs, nav-2d-msgs, dwb-critics, dwb-plugins, nav-msgs, rostest }:
 buildRosPackage {
   pname = "ros-melodic-nav-core-adapter";
   version = "0.2.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib nav-grid tf nav-core2 nav-core nav-2d-utils nav-msgs visualization-msgs nav-2d-msgs geometry-msgs ];
-  checkInputs = [ roslint dwb-critics dwb-plugins rostest dwb-local-planner ];
-  propagatedBuildInputs = [ costmap-2d pluginlib nav-grid nav-core nav-core2 nav-2d-utils nav-msgs visualization-msgs tf nav-2d-msgs geometry-msgs ];
+  buildInputs = [ geometry-msgs nav-grid nav-core2 pluginlib tf costmap-2d nav-core visualization-msgs nav-2d-msgs nav-msgs nav-2d-utils ];
+  checkInputs = [ roslint dwb-local-planner dwb-critics dwb-plugins rostest ];
+  propagatedBuildInputs = [ geometry-msgs nav-grid nav-core2 pluginlib tf costmap-2d nav-core visualization-msgs nav-2d-msgs nav-msgs nav-2d-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

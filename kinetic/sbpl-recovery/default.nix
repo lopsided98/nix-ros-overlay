@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, base-local-planner, nav-core, catkin, sbpl-lattice-planner, pose-follower, roscpp }:
+{ lib, buildRosPackage, fetchurl, pluginlib, catkin, base-local-planner, costmap-2d, nav-core, sbpl-lattice-planner, roscpp, pose-follower }:
 buildRosPackage {
   pname = "ros-kinetic-sbpl-recovery";
   version = "0.2.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib base-local-planner nav-core sbpl-lattice-planner pose-follower roscpp ];
-  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core sbpl-lattice-planner pose-follower roscpp ];
+  buildInputs = [ pluginlib base-local-planner costmap-2d nav-core sbpl-lattice-planner roscpp pose-follower ];
+  propagatedBuildInputs = [ pluginlib base-local-planner costmap-2d nav-core sbpl-lattice-planner roscpp pose-follower ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

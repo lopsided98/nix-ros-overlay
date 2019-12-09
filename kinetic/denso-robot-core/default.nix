@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, bcap-core, actionlib, std-msgs, bcap-service, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, std-msgs, bcap-core, actionlib, bcap-service, catkin, actionlib-msgs, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-denso-robot-core";
   version = "3.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs message-generation bcap-core actionlib std-msgs bcap-service roscpp ];
-  propagatedBuildInputs = [ actionlib-msgs message-runtime bcap-core actionlib std-msgs bcap-service roscpp ];
+  buildInputs = [ std-msgs bcap-core actionlib bcap-service actionlib-msgs roscpp message-generation ];
+  propagatedBuildInputs = [ std-msgs bcap-core actionlib bcap-service actionlib-msgs roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

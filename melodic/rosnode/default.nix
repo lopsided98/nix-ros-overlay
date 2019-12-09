@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, catkin, rosgraph, rostopic }:
+{ lib, buildRosPackage, fetchurl, rosgraph, catkin, rostest, rostopic }:
 buildRosPackage {
   pname = "ros-melodic-rosnode";
   version = "1.14.3";

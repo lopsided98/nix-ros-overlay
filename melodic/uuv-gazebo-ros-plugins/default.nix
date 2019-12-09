@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, tf2-ros, gazebo-dev, roscpp, tf2, rostest, uuv-gazebo-ros-plugins-msgs, uuv-gazebo-plugins, std-msgs, rosunit, visualization-msgs, xacro, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, xacro, geometry-msgs, uuv-gazebo-ros-plugins-msgs, std-msgs, catkin, roscpp, rosunit, gazebo-dev, visualization-msgs, tf2, rostest, tf2-ros, uuv-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-uuv-gazebo-ros-plugins";
   version = "0.6.13";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp gazebo-dev tf2-ros tf2 uuv-gazebo-ros-plugins-msgs uuv-gazebo-plugins std-msgs visualization-msgs geometry-msgs ];
-  checkInputs = [ rostest rosunit xacro ];
-  propagatedBuildInputs = [ sensor-msgs tf2-ros gazebo-dev tf2 uuv-gazebo-ros-plugins-msgs uuv-gazebo-plugins visualization-msgs std-msgs roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs uuv-gazebo-ros-plugins-msgs geometry-msgs std-msgs roscpp gazebo-dev visualization-msgs tf2 tf2-ros uuv-gazebo-plugins ];
+  checkInputs = [ xacro rostest rosunit ];
+  propagatedBuildInputs = [ sensor-msgs uuv-gazebo-ros-plugins-msgs geometry-msgs uuv-gazebo-plugins std-msgs tf2 visualization-msgs roscpp tf2-ros gazebo-dev ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

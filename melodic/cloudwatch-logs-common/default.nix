@@ -2,22 +2,22 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, file-management, dataflow-lite, gtest, catkin, aws-common, cmake, gmock }:
+{ lib, buildRosPackage, fetchurl, file-management, catkin, cmake, gtest, gmock, dataflow-lite, aws-common }:
 buildRosPackage {
   pname = "ros-melodic-cloudwatch-logs-common";
-  version = "1.1.0-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/cloudwatch_logs_common/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "1901327f87e630ea72137860d5dd79b9f1ca0770748aa4915cb8230c34d92f70";
+    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/cloudwatch_logs_common/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "9f5c4824fa5f2c6fb4806a69d2f259ae73f93b74af62b3eac011a8903617c192";
   };
 
   buildType = "cmake";
-  buildInputs = [ dataflow-lite aws-common file-management ];
+  buildInputs = [ file-management dataflow-lite aws-common ];
   checkInputs = [ gtest gmock ];
-  propagatedBuildInputs = [ dataflow-lite aws-common file-management ];
-  nativeBuildInputs = [ cmake catkin ];
+  propagatedBuildInputs = [ dataflow-lite file-management aws-common ];
+  nativeBuildInputs = [ catkin cmake ];
 
   meta = {
     description = ''AWS CloudWatch management library used by ROS1/2 node to publish logs to CloudWatch service'';

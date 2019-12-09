@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rbcar-gazebo, rbcar-sim-bringup, rbcar-control, rbcar-robot-control, rbcar-joystick }:
+{ lib, buildRosPackage, fetchurl, rbcar-sim-bringup, catkin, rbcar-robot-control, rbcar-control, rbcar-gazebo, rbcar-joystick }:
 buildRosPackage {
   pname = "ros-kinetic-rbcar-sim";
   version = "1.0.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rbcar-gazebo rbcar-sim-bringup rbcar-control rbcar-robot-control rbcar-joystick ];
+  propagatedBuildInputs = [ rbcar-sim-bringup rbcar-robot-control rbcar-control rbcar-gazebo rbcar-joystick ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

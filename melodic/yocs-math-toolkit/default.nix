@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-formatters, tf, catkin, ecl-config, ecl-build, ecl-exceptions, ecl-linear-algebra, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, ecl-formatters, tf, catkin, ecl-exceptions, roscpp, ecl-config, ecl-build, ecl-linear-algebra }:
 buildRosPackage {
   pname = "ros-melodic-yocs-math-toolkit";
   version = "0.8.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-formatters geometry-msgs roscpp ecl-build ecl-exceptions ecl-linear-algebra tf ecl-config ];
-  propagatedBuildInputs = [ ecl-formatters geometry-msgs roscpp ecl-build ecl-exceptions ecl-linear-algebra tf ecl-config ];
+  buildInputs = [ geometry-msgs ecl-formatters tf ecl-exceptions roscpp ecl-config ecl-build ecl-linear-algebra ];
+  propagatedBuildInputs = [ geometry-msgs ecl-formatters tf ecl-exceptions roscpp ecl-config ecl-build ecl-linear-algebra ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

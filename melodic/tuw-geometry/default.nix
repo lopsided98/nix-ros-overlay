@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, rospy, std-msgs, roscpp, rosunit, eigen }:
+{ lib, buildRosPackage, fetchurl, boost, std-msgs, catkin, rosunit, eigen, cv-bridge, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-melodic-tuw-geometry";
   version = "0.0.3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost cv-bridge rospy std-msgs roscpp eigen ];
+  buildInputs = [ boost std-msgs eigen cv-bridge roscpp rospy ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ std-msgs cv-bridge roscpp rospy ];
+  propagatedBuildInputs = [ std-msgs rospy cv-bridge roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

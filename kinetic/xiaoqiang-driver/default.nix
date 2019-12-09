@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, setserial, tf, sensor-msgs, catkin, nav-msgs, rospy, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, tf, catkin, setserial, roscpp, rospy, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-xiaoqiang-driver";
   version = "0.0.12";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ setserial sensor-msgs roscpp nav-msgs rospy std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ setserial sensor-msgs roscpp nav-msgs rospy std-msgs tf geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs tf setserial roscpp rospy nav-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs tf setserial roscpp rospy nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

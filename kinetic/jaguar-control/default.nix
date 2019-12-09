@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, twist-mux, joint-state-controller, diff-drive-controller, joy, catkin, joint-trajectory-controller, robot-localization, rostopic, teleop-twist-joy, roslaunch }:
+{ lib, buildRosPackage, fetchurl, joy, teleop-twist-joy, controller-manager, twist-mux, catkin, rostopic, robot-localization, diff-drive-controller, joint-trajectory-controller, roslaunch, joint-state-controller }:
 buildRosPackage {
   pname = "ros-kinetic-jaguar-control";
   version = "0.1.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ controller-manager twist-mux joint-state-controller diff-drive-controller joy joint-trajectory-controller robot-localization rostopic teleop-twist-joy ];
+  propagatedBuildInputs = [ joy teleop-twist-joy controller-manager twist-mux rostopic robot-localization diff-drive-controller joint-trajectory-controller joint-state-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

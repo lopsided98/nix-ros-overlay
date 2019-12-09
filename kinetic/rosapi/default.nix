@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosbridge-library, message-generation, rosgraph, message-runtime, rospy, rosnode }:
+{ lib, buildRosPackage, fetchurl, message-runtime, rosbridge-library, rosgraph, rosnode, catkin, rospy, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-rosapi";
   version = "0.11.3-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ rosbridge-library rosgraph message-runtime rospy rosnode ];
+  propagatedBuildInputs = [ message-runtime rosbridge-library rosnode rosgraph rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

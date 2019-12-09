@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, actionlib, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, actionlib, catkin, actionlib-msgs, roscpp, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-gripper-sensor-msgs";
   version = "1.0.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs message-generation actionlib std-msgs roscpp ];
-  propagatedBuildInputs = [ actionlib-msgs message-runtime actionlib std-msgs roscpp ];
+  buildInputs = [ std-msgs actionlib actionlib-msgs roscpp message-generation ];
+  propagatedBuildInputs = [ std-msgs actionlib actionlib-msgs roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, rostest, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, roslint, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-hokuyo3d";
   version = "0.2.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest sensor-msgs roscpp roslint ];
+  buildInputs = [ sensor-msgs rostest roscpp roslint ];
   propagatedBuildInputs = [ sensor-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 

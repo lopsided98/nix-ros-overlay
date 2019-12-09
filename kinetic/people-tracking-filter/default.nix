@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, people-msgs, tf, sensor-msgs, catkin, message-filters, bfl, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, people-msgs, std-msgs, tf, catkin, bfl, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-people-tracking-filter";
   version = "1.1.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ people-msgs sensor-msgs message-filters roscpp bfl std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ people-msgs sensor-msgs message-filters roscpp bfl std-msgs tf geometry-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs people-msgs std-msgs tf bfl roscpp ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs people-msgs std-msgs tf bfl roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers-msgs, trajectory-msgs, catkin, pr2-controller-manager }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, catkin, pr2-controllers-msgs, pr2-controller-manager }:
 buildRosPackage {
   pname = "ros-melodic-pr2-mannequin-mode";
   version = "0.6.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs trajectory-msgs pr2-controller-manager ];
+  buildInputs = [ trajectory-msgs pr2-controller-manager pr2-controllers-msgs ];
   propagatedBuildInputs = [ pr2-controllers-msgs trajectory-msgs pr2-controller-manager ];
   nativeBuildInputs = [ catkin ];
 

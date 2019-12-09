@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, actionlib, message-runtime, rospy, diagnostic-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, actionlib, catkin, actionlib-msgs, rospy, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-network-monitor-udp";
-  version = "1.0.13-r2";
+  version = "1.0.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_monitor_udp/1.0.13-2.tar.gz";
-    name = "1.0.13-2.tar.gz";
-    sha256 = "d203956bc49ba42bf2f54ef0cb57253ec42fd8278260bd5090fd998765198154";
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_monitor_udp/1.0.16-1.tar.gz";
+    name = "1.0.16-1.tar.gz";
+    sha256 = "6d2e8f5054923d181f20ddee18fe669fefa9bafbc3e39edf2ed77d1b629a5ea4";
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs rospy message-generation actionlib diagnostic-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs actionlib message-runtime rospy diagnostic-msgs ];
+  buildInputs = [ diagnostic-msgs actionlib actionlib-msgs rospy message-generation ];
+  propagatedBuildInputs = [ diagnostic-msgs actionlib actionlib-msgs rospy message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

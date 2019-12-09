@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, cmake-modules, nav-core, catkin, tf2-ros, rostest, eigen, roscpp }:
+{ lib, buildRosPackage, fetchurl, pluginlib, cmake-modules, catkin, costmap-2d, nav-core, eigen, roscpp, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-clear-costmap-recovery";
-  version = "1.16.2";
+  version = "1.16.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/clear_costmap_recovery/1.16.2-0.tar.gz";
-    name = "1.16.2-0.tar.gz";
-    sha256 = "9844494fbe4443e201302dfd5a6fae1246fe452f38432696d0613c2405283572";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/clear_costmap_recovery/1.16.3-1.tar.gz";
+    name = "1.16.3-1.tar.gz";
+    sha256 = "b77ce4cefb9428c90c673f85658a08ff68aee45a2651332720c7c5fa6f212fe1";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d cmake-modules pluginlib nav-core tf2-ros eigen roscpp ];
+  buildInputs = [ pluginlib cmake-modules costmap-2d nav-core eigen roscpp tf2-ros ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ costmap-2d pluginlib nav-core tf2-ros eigen roscpp ];
+  propagatedBuildInputs = [ pluginlib costmap-2d nav-core eigen roscpp tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

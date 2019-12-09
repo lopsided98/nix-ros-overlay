@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, pythonPackages, actionlib, dynamic-reconfigure, rospy, roscpp }:
+{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, actionlib, pythonPackages, catkin, actionlib-msgs, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-homer-tts";
   version = "1.0.29";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure pythonPackages.pyaudio actionlib-msgs actionlib rospy pythonPackages.catkin-pkg roscpp ];
-  propagatedBuildInputs = [ pythonPackages.pyaudio actionlib-msgs actionlib rospy dynamic-reconfigure roscpp ];
+  buildInputs = [ dynamic-reconfigure pythonPackages.pyaudio actionlib actionlib-msgs pythonPackages.catkin-pkg roscpp rospy ];
+  propagatedBuildInputs = [ dynamic-reconfigure pythonPackages.pyaudio actionlib actionlib-msgs roscpp rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

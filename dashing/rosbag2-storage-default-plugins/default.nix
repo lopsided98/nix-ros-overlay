@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sqlite3-vendor, pluginlib, ament-lint-common, rosbag2-test-common, ament-cmake-gmock, ament-cmake, ament-lint-auto, rosbag2-storage, rcutils }:
+{ lib, buildRosPackage, fetchurl, rcutils, pluginlib, sqlite3-vendor, ament-lint-common, ament-cmake, rosbag2-storage, ament-cmake-gmock, rosbag2-test-common, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rosbag2-storage-default-plugins";
   version = "0.1.8-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sqlite3-vendor rosbag2-storage rcutils pluginlib ];
-  checkInputs = [ ament-lint-auto ament-cmake-gmock ament-lint-common rosbag2-test-common ];
-  propagatedBuildInputs = [ sqlite3-vendor rosbag2-storage rcutils pluginlib ];
+  buildInputs = [ pluginlib rosbag2-storage sqlite3-vendor rcutils ];
+  checkInputs = [ ament-cmake-gmock rosbag2-test-common ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ sqlite3-vendor pluginlib rosbag2-storage rcutils ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

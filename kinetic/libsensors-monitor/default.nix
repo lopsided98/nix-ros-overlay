@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-updater, catkin, lm_sensors, roscpp }:
+{ lib, buildRosPackage, fetchurl, roscpp, catkin, lm_sensors, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-libsensors-monitor";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-updater roscpp lm_sensors ];
-  propagatedBuildInputs = [ diagnostic-updater roscpp lm_sensors ];
+  buildInputs = [ roscpp lm_sensors diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-updater lm_sensors roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

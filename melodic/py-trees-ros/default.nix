@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, rospy, actionlib, geometry-msgs, py-trees, pythonPackages, unique-id, rosbag, catkin, move-base-msgs, nav-msgs, std-msgs, python-qt-binding, sensor-msgs, py-trees-msgs, uuid-msgs, rostest, dynamic-reconfigure, rosunit }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, rosunit, py-trees-msgs, actionlib-msgs, uuid-msgs, nav-msgs, rostest, sensor-msgs, dynamic-reconfigure, rosbag, move-base-msgs, unique-id, std-msgs, catkin, pythonPackages, py-trees, rospy, python-qt-binding, actionlib }:
 buildRosPackage {
   pname = "ros-melodic-py-trees-ros";
   version = "0.5.18";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ pythonPackages.setuptools ];
-  checkInputs = [ rostest python-qt-binding rosunit geometry-msgs py-trees ];
-  propagatedBuildInputs = [ unique-id actionlib-msgs pythonPackages.termcolor pythonPackages.rospkg rosbag sensor-msgs py-trees-msgs uuid-msgs move-base-msgs std-msgs actionlib nav-msgs dynamic-reconfigure rospy geometry-msgs py-trees ];
+  checkInputs = [ geometry-msgs rosunit py-trees rostest python-qt-binding ];
+  propagatedBuildInputs = [ pythonPackages.termcolor sensor-msgs geometry-msgs unique-id dynamic-reconfigure nav-msgs std-msgs pythonPackages.rospkg actionlib py-trees-msgs py-trees actionlib-msgs rosbag rospy uuid-msgs move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

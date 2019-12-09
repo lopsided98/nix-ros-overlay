@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-msgs, catkin, cob-phidgets, rospy }:
+{ lib, buildRosPackage, fetchurl, cob-phidgets, rospy, catkin, cob-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-phidget-em-state";
   version = "0.7.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-msgs cob-phidgets rospy ];
+  propagatedBuildInputs = [ cob-phidgets rospy cob-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

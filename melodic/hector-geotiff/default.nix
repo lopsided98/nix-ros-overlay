@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, qt4, catkin, hector-map-tools, hector-nav-msgs, nav-msgs, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, hector-nav-msgs, qt4, pluginlib, std-msgs, catkin, roscpp, hector-map-tools, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-hector-geotiff";
   version = "0.4.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib qt4 hector-map-tools hector-nav-msgs nav-msgs std-msgs roscpp ];
-  propagatedBuildInputs = [ pluginlib qt4 hector-map-tools hector-nav-msgs nav-msgs std-msgs roscpp ];
+  buildInputs = [ hector-nav-msgs pluginlib std-msgs qt4 roscpp hector-map-tools nav-msgs ];
+  propagatedBuildInputs = [ hector-nav-msgs pluginlib std-msgs qt4 roscpp hector-map-tools nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

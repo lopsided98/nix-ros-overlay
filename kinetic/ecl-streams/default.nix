@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-converters, catkin, ecl-concepts, ecl-time, ecl-license, ecl-errors, ecl-type-traits, ecl-devices }:
+{ lib, buildRosPackage, fetchurl, ecl-time, ecl-license, catkin, ecl-type-traits, ecl-errors, ecl-concepts, ecl-devices, ecl-converters }:
 buildRosPackage {
   pname = "ros-kinetic-ecl-streams";
   version = "0.61.17";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-converters ecl-concepts ecl-time ecl-license ecl-errors ecl-type-traits ecl-devices ];
-  propagatedBuildInputs = [ ecl-converters ecl-concepts ecl-time ecl-license ecl-errors ecl-type-traits ecl-devices ];
+  buildInputs = [ ecl-time ecl-license ecl-type-traits ecl-errors ecl-concepts ecl-devices ecl-converters ];
+  propagatedBuildInputs = [ ecl-time ecl-license ecl-type-traits ecl-errors ecl-concepts ecl-devices ecl-converters ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

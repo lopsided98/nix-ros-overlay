@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, poco, cmake-modules, sensor-msgs, catkin, message-generation, message-runtime, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-runtime, poco, cmake-modules, catkin, roscpp, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-ntpd-driver";
   version = "1.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ poco cmake-modules sensor-msgs message-generation message-runtime roscpp ];
-  propagatedBuildInputs = [ poco cmake-modules sensor-msgs message-generation message-runtime roscpp ];
+  buildInputs = [ sensor-msgs message-runtime poco cmake-modules roscpp message-generation ];
+  propagatedBuildInputs = [ sensor-msgs message-runtime poco cmake-modules roscpp message-generation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

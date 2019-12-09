@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nao-bringup, catkin, nao-apps, nao-description }:
+{ lib, buildRosPackage, fetchurl, nao-description, catkin, nao-apps, nao-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-nao-robot";
   version = "0.5.15";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ nao-bringup nao-apps nao-description ];
+  propagatedBuildInputs = [ nao-description nao-bringup nao-apps ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

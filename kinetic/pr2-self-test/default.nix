@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pr2-self-test-msgs, joint-qualification-controllers, pr2-counterbalance-check, pr2-bringup-tests }:
+{ lib, buildRosPackage, fetchurl, pr2-bringup-tests, catkin, pr2-self-test-msgs, joint-qualification-controllers, pr2-counterbalance-check }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-self-test";
   version = "1.0.15-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-self-test-msgs pr2-bringup-tests joint-qualification-controllers pr2-counterbalance-check ];
+  propagatedBuildInputs = [ pr2-self-test-msgs pr2-bringup-tests pr2-counterbalance-check joint-qualification-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

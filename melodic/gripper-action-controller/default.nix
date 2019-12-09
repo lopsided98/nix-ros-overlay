@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, cmake-modules, control-msgs, trajectory-msgs, realtime-tools, control-toolbox, catkin, controller-interface, urdf, actionlib, angles, roscpp, xacro }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, xacro, controller-interface, controller-manager, urdf, control-toolbox, hardware-interface, actionlib, cmake-modules, catkin, realtime-tools, roscpp, angles, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-gripper-action-controller";
   version = "0.15.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager hardware-interface cmake-modules control-msgs trajectory-msgs realtime-tools control-toolbox controller-interface urdf actionlib angles roscpp xacro ];
-  propagatedBuildInputs = [ controller-manager hardware-interface cmake-modules control-msgs control-toolbox realtime-tools trajectory-msgs controller-interface urdf actionlib angles roscpp xacro ];
+  buildInputs = [ trajectory-msgs xacro controller-interface controller-manager urdf hardware-interface control-toolbox actionlib cmake-modules realtime-tools roscpp angles control-msgs ];
+  propagatedBuildInputs = [ trajectory-msgs xacro controller-interface controller-manager urdf hardware-interface control-toolbox cmake-modules actionlib realtime-tools roscpp angles control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

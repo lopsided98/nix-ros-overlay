@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rtt-roscomm, catkin, actionlib-msgs, rtt-std-msgs }:
+{ lib, buildRosPackage, fetchurl, rtt-roscomm, rtt-std-msgs, actionlib-msgs, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-actionlib-msgs";
   version = "2.9.2-r1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-script-server, catkin, moveit-commander, rospy, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, moveit-commander, tf, catkin, rospy, cob-script-server }:
 buildRosPackage {
   pname = "ros-kinetic-cob-moveit-interface";
   version = "0.7.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-script-server moveit-commander rospy tf geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs moveit-commander tf rospy cob-script-server ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

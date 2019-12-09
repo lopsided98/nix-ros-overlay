@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, catkin, roscpp, rospy }:
+{ lib, buildRosPackage, fetchurl, std-msgs, rospy, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-rr-swiftnav-piksi";
   version = "0.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs roscpp rospy ];
-  propagatedBuildInputs = [ std-msgs roscpp rospy ];
+  buildInputs = [ std-msgs rospy roscpp ];
+  propagatedBuildInputs = [ std-msgs rospy roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

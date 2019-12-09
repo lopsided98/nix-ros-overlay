@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, opencv-candidate, cmake-modules, sensor-msgs, catkin, meshlab, ecto-pcl, object-recognition-core, ecto, ecto-image-pipeline }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, ecto-pcl, meshlab, cmake-modules, ecto, catkin, object-recognition-core, opencv-candidate, ecto-image-pipeline }:
 buildRosPackage {
   pname = "ros-kinetic-object-recognition-reconstruction";
   version = "0.3.6";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ opencv-candidate cmake-modules sensor-msgs ecto-pcl object-recognition-core ecto ecto-image-pipeline ];
-  propagatedBuildInputs = [ opencv-candidate meshlab ecto-pcl object-recognition-core ecto ecto-image-pipeline ];
+  buildInputs = [ sensor-msgs cmake-modules ecto object-recognition-core ecto-image-pipeline opencv-candidate ecto-pcl ];
+  propagatedBuildInputs = [ ecto-pcl meshlab ecto object-recognition-core opencv-candidate ecto-image-pipeline ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

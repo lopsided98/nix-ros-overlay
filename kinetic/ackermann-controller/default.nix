@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, control-msgs, tf, realtime-tools, control-toolbox, catkin, nav-msgs, urdf, controller-interface, angles, forward-command-controller, roscpp }:
+{ lib, buildRosPackage, fetchurl, controller-interface, nav-msgs, urdf, control-toolbox, hardware-interface, tf, catkin, realtime-tools, roscpp, angles, forward-command-controller, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ackermann-controller";
   version = "0.1.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface control-msgs tf control-toolbox realtime-tools roscpp nav-msgs urdf controller-interface angles forward-command-controller ];
-  propagatedBuildInputs = [ hardware-interface control-msgs tf control-toolbox realtime-tools controller-interface urdf nav-msgs angles forward-command-controller roscpp ];
+  buildInputs = [ controller-interface nav-msgs urdf control-toolbox hardware-interface tf realtime-tools roscpp angles forward-command-controller control-msgs ];
+  propagatedBuildInputs = [ controller-interface nav-msgs urdf control-toolbox hardware-interface tf realtime-tools roscpp angles forward-command-controller control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

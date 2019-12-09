@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gmapping, cob-navigation-global, catkin, cob-supported-robots, roslaunch }:
+{ lib, buildRosPackage, fetchurl, cob-supported-robots, catkin, gmapping, cob-navigation-global, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-cob-mapping-slam";
   version = "0.6.9-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ cob-supported-robots roslaunch ];
-  propagatedBuildInputs = [ gmapping cob-navigation-global ];
+  propagatedBuildInputs = [ cob-navigation-global gmapping ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

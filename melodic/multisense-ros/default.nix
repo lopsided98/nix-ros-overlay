@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cv-bridge, image-geometry, tf, geometry-msgs, stereo-msgs, image-transport, libjpeg_turbo, message-generation, message-runtime, multisense-lib, angles, genmsg, rosbag, catkin, std-msgs, roscpp, libyamlcpp, sensor-msgs, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, image-transport, sensor-msgs, message-runtime, dynamic-reconfigure, libyamlcpp, multisense-lib, rosbag, std-msgs, catkin, cv-bridge, roscpp, angles, message-generation, image-geometry, genmsg, stereo-msgs, libjpeg_turbo }:
 buildRosPackage {
   pname = "ros-melodic-multisense-ros";
   version = "4.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-transport libjpeg_turbo rosbag sensor-msgs cv-bridge genmsg roscpp image-geometry message-generation message-runtime multisense-lib dynamic-reconfigure std-msgs angles tf geometry-msgs stereo-msgs ];
-  propagatedBuildInputs = [ image-transport rosbag libjpeg_turbo sensor-msgs cv-bridge roscpp genmsg image-geometry message-generation message-runtime multisense-lib dynamic-reconfigure std-msgs angles tf geometry-msgs stereo-msgs ];
+  buildInputs = [ libjpeg_turbo sensor-msgs geometry-msgs message-runtime dynamic-reconfigure genmsg std-msgs rosbag tf image-transport stereo-msgs cv-bridge multisense-lib roscpp angles message-generation image-geometry ];
+  propagatedBuildInputs = [ libjpeg_turbo sensor-msgs geometry-msgs dynamic-reconfigure message-runtime std-msgs genmsg rosbag tf image-transport stereo-msgs cv-bridge multisense-lib roscpp angles message-generation image-geometry ];
   nativeBuildInputs = [ libyamlcpp catkin ];
 
   meta = {

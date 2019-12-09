@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, catkin, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-cartographer-ros-msgs";
   version = "0.2.0";

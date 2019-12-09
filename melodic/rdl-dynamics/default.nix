@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rdl-cmake, gtest, catkin, doxygen, lcov, eigen, graphviz }:
+{ lib, buildRosPackage, fetchurl, graphviz, catkin, eigen, gtest, lcov, doxygen, rdl-cmake }:
 buildRosPackage {
   pname = "ros-melodic-rdl-dynamics";
   version = "3.2.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen graphviz doxygen ];
-  checkInputs = [ lcov gtest rdl-cmake ];
-  propagatedBuildInputs = [ doxygen graphviz eigen ];
+  buildInputs = [ doxygen eigen graphviz ];
+  checkInputs = [ gtest lcov rdl-cmake ];
+  propagatedBuildInputs = [ doxygen eigen graphviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

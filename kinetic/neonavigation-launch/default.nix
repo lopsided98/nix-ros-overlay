@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, costmap-cspace, planner-cspace, trajectory-tracker-rviz-plugins, safety-limiter, catkin, tf2-ros, trajectory-tracker }:
+{ lib, buildRosPackage, fetchurl, planner-cspace, map-server, catkin, safety-limiter, trajectory-tracker, costmap-cspace, tf2-ros, trajectory-tracker-rviz-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-neonavigation-launch";
   version = "0.5.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ map-server costmap-cspace planner-cspace trajectory-tracker-rviz-plugins safety-limiter tf2-ros trajectory-tracker ];
+  propagatedBuildInputs = [ planner-cspace map-server safety-limiter trajectory-tracker costmap-cspace tf2-ros trajectory-tracker-rviz-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

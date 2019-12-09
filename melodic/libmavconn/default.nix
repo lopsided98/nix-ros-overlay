@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, gtest, catkin, console-bridge, rosunit, mavlink }:
+{ lib, buildRosPackage, fetchurl, mavlink, boost, catkin, rosunit, console-bridge, gtest }:
 buildRosPackage {
   pname = "ros-melodic-libmavconn";
-  version = "0.33.0-r1";
+  version = "0.33.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/libmavconn/0.33.0-1.tar.gz";
-    name = "0.33.0-1.tar.gz";
-    sha256 = "a799c13f4fdc90ee18cefa60c4e6da825201b958ff66311a2e0c525792ba8135";
+    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/libmavconn/0.33.3-1.tar.gz";
+    name = "0.33.3-1.tar.gz";
+    sha256 = "6f40274397216a8d4b7b53b4277e8a6423d56c5f4b59698e4d5d0a9504faa7f3";
   };
 
   buildType = "catkin";
-  buildInputs = [ console-bridge boost mavlink ];
+  buildInputs = [ mavlink boost console-bridge ];
   checkInputs = [ gtest rosunit ];
-  propagatedBuildInputs = [ console-bridge boost mavlink ];
+  propagatedBuildInputs = [ mavlink boost console-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

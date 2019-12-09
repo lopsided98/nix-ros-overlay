@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, sensor-msgs, gpsd, pkg-config, gps-msgs, rclcpp, rclcpp-components }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp-components, gps-msgs, ament-cmake, gpsd, pkg-config, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-gpsd-client";
   version = "1.0.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs gpsd pkg-config gps-msgs rclcpp rclcpp-components ];
-  propagatedBuildInputs = [ sensor-msgs gpsd pkg-config gps-msgs rclcpp rclcpp-components ];
+  buildInputs = [ sensor-msgs rclcpp-components gps-msgs gpsd pkg-config rclcpp ];
+  propagatedBuildInputs = [ sensor-msgs rclcpp-components gps-msgs gpsd pkg-config rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

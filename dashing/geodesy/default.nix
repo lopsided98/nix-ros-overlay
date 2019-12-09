@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, unique-identifier-msgs, ament-cmake, sensor-msgs, pythonPackages, geographic-msgs, angles, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, pythonPackages, ament-cmake, unique-identifier-msgs, geographic-msgs, angles }:
 buildRosPackage {
   pname = "ros-dashing-geodesy";
   version = "1.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ unique-identifier-msgs sensor-msgs geographic-msgs angles pythonPackages.catkin-pkg pythonPackages.pyproj geometry-msgs ];
-  propagatedBuildInputs = [ unique-identifier-msgs sensor-msgs geographic-msgs angles pythonPackages.pyproj geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs unique-identifier-msgs geographic-msgs pythonPackages.catkin-pkg pythonPackages.pyproj angles ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs unique-identifier-msgs geographic-msgs pythonPackages.pyproj angles ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

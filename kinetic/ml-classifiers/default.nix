@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-environment, pluginlib, catkin, roslib, message-generation, message-runtime, eigen, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, pluginlib, std-msgs, catkin, roslib, ros-environment, eigen, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-ml-classifiers";
   version = "1.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib roscpp message-generation eigen std-msgs roslib ];
-  propagatedBuildInputs = [ pluginlib roslib message-runtime eigen std-msgs roscpp ];
+  buildInputs = [ pluginlib std-msgs roslib eigen roscpp message-generation ];
+  propagatedBuildInputs = [ pluginlib std-msgs roslib eigen roscpp message-runtime ];
   nativeBuildInputs = [ ros-environment catkin ];
 
   meta = {

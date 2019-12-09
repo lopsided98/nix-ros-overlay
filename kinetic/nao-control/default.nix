@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, joint-state-controller, catkin, joint-trajectory-controller, robot-state-publisher, effort-controllers }:
+{ lib, buildRosPackage, fetchurl, effort-controllers, controller-manager, robot-state-publisher, catkin, joint-trajectory-controller, joint-state-controller }:
 buildRosPackage {
   pname = "ros-kinetic-nao-control";
   version = "0.0.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ controller-manager joint-state-controller joint-trajectory-controller robot-state-publisher effort-controllers ];
+  propagatedBuildInputs = [ effort-controllers controller-manager robot-state-publisher joint-trajectory-controller joint-state-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

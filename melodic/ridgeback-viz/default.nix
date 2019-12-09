@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rviz, roslaunch, joint-state-publisher, ridgeback-description }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, ridgeback-description, catkin, rviz, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-ridgeback-viz";
   version = "0.1.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joint-state-publisher rviz ridgeback-description ];
+  propagatedBuildInputs = [ joint-state-publisher ridgeback-description rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-pipeline, vision-opencv, ros-base, image-common, catkin, image-transport-plugins, laser-pipeline, perception-pcl }:
+{ lib, buildRosPackage, fetchurl, image-transport-plugins, perception-pcl, image-pipeline, catkin, image-common, laser-pipeline, vision-opencv, ros-base }:
 buildRosPackage {
   pname = "ros-melodic-perception";
   version = "1.4.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ image-pipeline vision-opencv ros-base image-common image-transport-plugins laser-pipeline perception-pcl ];
+  propagatedBuildInputs = [ image-transport-plugins perception-pcl image-pipeline image-common laser-pipeline vision-opencv ros-base ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

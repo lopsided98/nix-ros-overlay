@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, pkg-config, xorg, libGLU, libGL, freetype }:
+{ lib, buildRosPackage, fetchurl, xorg, libGLU, ament-cmake, libGL, freetype, pkg-config }:
 buildRosPackage {
   pname = "ros-crystal-rviz-ogre-vendor";
-  version = "5.1.0";
+  version = "5.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_ogre_vendor/5.1.0-0.tar.gz";
-    name = "5.1.0-0.tar.gz";
-    sha256 = "804f35dd8c1bf6183eb37bae744861da954bce63188ed3c11e1ed2bd135aecdb";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_ogre_vendor/5.1.1-1.tar.gz";
+    name = "5.1.1-1.tar.gz";
+    sha256 = "d7dc73fd16c48cd181d0fbafdb3f8b469b3e79e679333ecef3004fd03d00ffa9";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ xorg.libXaw pkg-config xorg.libXrandr xorg.libX11 libGLU libGL freetype ];
-  propagatedBuildInputs = [ xorg.libXaw xorg.libXrandr xorg.libX11 libGLU libGL freetype ];
+  buildInputs = [ xorg.libXaw xorg.libX11 libGLU libGL freetype xorg.libXrandr pkg-config ];
+  propagatedBuildInputs = [ xorg.libXaw xorg.libX11 libGLU libGL freetype xorg.libXrandr ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

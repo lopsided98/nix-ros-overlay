@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gmapping, map-server, amcl, catkin, move-base, robot-pose-ekf, rviz, message-runtime, std-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, map-server, std-msgs, tf, catkin, gmapping, rviz, move-base, robot-pose-ekf, message-runtime, amcl }:
 buildRosPackage {
   pname = "ros-kinetic-rb1-base-2dnav";
   version = "1.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gmapping map-server amcl move-base robot-pose-ekf rviz message-runtime std-msgs tf ];
+  propagatedBuildInputs = [ map-server std-msgs tf gmapping rviz move-base robot-pose-ekf message-runtime amcl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

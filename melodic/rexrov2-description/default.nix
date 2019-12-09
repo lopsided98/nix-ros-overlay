@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, uuv-gazebo-ros-plugins, uuv-sensor-ros-plugins, uuv-assistants, xacro, uuv-descriptions, catkin, rostest, robot-state-publisher, rosunit, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, xacro, uuv-sensor-ros-plugins, uuv-descriptions, robot-state-publisher, uuv-gazebo-ros-plugins, uuv-assistants, catkin, rosunit, gazebo-ros-control, gazebo-ros, rostest }:
 buildRosPackage {
   pname = "ros-melodic-rexrov2-description";
   version = "0.1.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ rostest xacro rosunit ];
-  propagatedBuildInputs = [ gazebo-ros uuv-gazebo-ros-plugins uuv-sensor-ros-plugins uuv-assistants uuv-descriptions robot-state-publisher xacro gazebo-ros-control ];
+  checkInputs = [ xacro rostest rosunit ];
+  propagatedBuildInputs = [ xacro uuv-sensor-ros-plugins uuv-gazebo-ros-plugins robot-state-publisher uuv-descriptions uuv-assistants gazebo-ros-control gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

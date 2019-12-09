@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, pcl-conversions, rslidar-driver, catkin, sensor-msgs, tf2-ros, roscpp, rostest, rslidar-msgs, roslib, nodelet, dynamic-reconfigure, angles, roslaunch, tf, pcl-ros }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, dynamic-reconfigure, pluginlib, roslaunch, tf, catkin, roslib, rslidar-msgs, pcl-conversions, nodelet, roscpp, angles, rslidar-driver, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-rslidar-pointcloud";
   version = "1.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslaunch pluginlib rslidar-driver sensor-msgs roscpp tf2-ros roslib rostest rslidar-msgs nodelet pcl-ros angles dynamic-reconfigure tf pcl-conversions ];
-  propagatedBuildInputs = [ pluginlib rslidar-driver sensor-msgs roscpp roslib rslidar-msgs nodelet dynamic-reconfigure angles tf pcl-ros ];
+  buildInputs = [ pcl-ros sensor-msgs dynamic-reconfigure pluginlib roslaunch tf roslib rslidar-msgs pcl-conversions nodelet roscpp angles rslidar-driver rostest tf2-ros ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs dynamic-reconfigure pluginlib tf roslib rslidar-msgs nodelet roscpp angles rslidar-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

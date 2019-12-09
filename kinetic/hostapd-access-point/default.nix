@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, access-point-control, catkin, ieee80211-channels, rospy, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, ieee80211-channels, catkin, rospy, access-point-control }:
 buildRosPackage {
   pname = "ros-kinetic-hostapd-access-point";
   version = "1.0.15";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
-  propagatedBuildInputs = [ rospy ieee80211-channels access-point-control dynamic-reconfigure ];
+  buildInputs = [ rospy access-point-control ieee80211-channels dynamic-reconfigure ];
+  propagatedBuildInputs = [ rospy access-point-control ieee80211-channels dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

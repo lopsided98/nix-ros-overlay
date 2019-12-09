@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, ament-lint-common, rosidl-default-generators, std-msgs, action-msgs, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, std-msgs, ament-lint-common, ament-cmake, rosidl-default-generators, builtin-interfaces, action-msgs }:
 buildRosPackage {
   pname = "ros-dashing-turtlebot3-msgs";
   version = "2.2.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs action-msgs builtin-interfaces ];
+  buildInputs = [ std-msgs builtin-interfaces action-msgs ];
   checkInputs = [ ament-lint-common ];
-  propagatedBuildInputs = [ std-msgs action-msgs rosidl-default-runtime builtin-interfaces ];
+  propagatedBuildInputs = [ rosidl-default-runtime builtin-interfaces std-msgs action-msgs ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

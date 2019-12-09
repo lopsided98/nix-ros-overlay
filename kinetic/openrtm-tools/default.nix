@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rtshell, rosbash, catkin, rostest, openrtm-aist-python, openrtm-aist }:
+{ lib, buildRosPackage, fetchurl, openrtm-aist-python, catkin, openrtm-aist, rosbash, rtshell, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-openrtm-tools";
   version = "1.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rtshell rosbash rostest openrtm-aist-python openrtm-aist ];
-  propagatedBuildInputs = [ openrtm-aist-python rtshell rosbash openrtm-aist ];
+  buildInputs = [ openrtm-aist-python openrtm-aist rosbash rtshell rostest ];
+  propagatedBuildInputs = [ rosbash rtshell openrtm-aist openrtm-aist-python ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

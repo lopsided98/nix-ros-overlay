@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, catkin, nav-msgs, roscpp, opencv3 }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, nav-msgs, rosconsole, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-gridmap-2d";
   version = "0.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ nav-msgs opencv3 rosconsole roscpp ];
-  propagatedBuildInputs = [ nav-msgs opencv3 rosconsole roscpp ];
+  buildInputs = [ nav-msgs rosconsole roscpp opencv3 ];
+  propagatedBuildInputs = [ nav-msgs rosconsole roscpp opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

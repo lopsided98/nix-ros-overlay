@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, schunk-powercube-chain, schunk-libm5api, schunk-description, schunk-sdh, catkin, schunk-simulated-tactile-sensors }:
+{ lib, buildRosPackage, fetchurl, schunk-description, catkin, schunk-libm5api, schunk-simulated-tactile-sensors, schunk-powercube-chain, schunk-sdh }:
 buildRosPackage {
   pname = "ros-melodic-schunk-modular-robotics";
-  version = "0.6.13-r2";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_modular_robotics/0.6.13-2.tar.gz";
-    name = "0.6.13-2.tar.gz";
-    sha256 = "959d9afc2494f0a20d484eb9719a7d019ffe8d3c1ebe9217d619b2e0b162c55f";
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_modular_robotics/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "5ff696b3e27fafc12fd26ae1f0f013306d65382a9b463a6b7c4c6d9ad9755f03";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ schunk-powercube-chain schunk-libm5api schunk-sdh schunk-description schunk-simulated-tactile-sensors ];
+  propagatedBuildInputs = [ schunk-description schunk-libm5api schunk-simulated-tactile-sensors schunk-powercube-chain schunk-sdh ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, rosconsole, boost, sensor-msgs, catkin, pythonPackages, rostest, opencv3 }:
+{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, rostest, pythonPackages, catkin, python, opencv3, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-cv-bridge";
   version = "1.12.8";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python rosconsole boost sensor-msgs opencv3 ];
-  checkInputs = [ rostest pythonPackages.numpy ];
-  propagatedBuildInputs = [ python rosconsole boost sensor-msgs opencv3 ];
+  buildInputs = [ sensor-msgs boost python opencv3 rosconsole ];
+  checkInputs = [ pythonPackages.numpy rostest ];
+  propagatedBuildInputs = [ sensor-msgs boost python opencv3 rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

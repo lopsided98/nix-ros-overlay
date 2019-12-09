@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, pkg-config, ament-cmake-ros, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-common, ament-lint-auto, pkg-config, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-tracetools";
   version = "0.2.8-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
   nativeBuildInputs = [ pkg-config ament-cmake-ros ];
 
   meta = {

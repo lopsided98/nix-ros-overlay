@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, pcl-ros, tf, pcl-conversions, geometry-msgs, voxel-grid, message-generation, message-runtime, angles, catkin, nav-msgs, std-msgs, roscpp, eigen, costmap-2d, pluginlib, cmake-modules, nav-core, dynamic-reconfigure, rosunit }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, tf, rosunit, eigen, nav-msgs, dynamic-reconfigure, cmake-modules, pcl-ros, std-msgs, catkin, costmap-2d, nav-core, roscpp, voxel-grid, message-generation, angles, rospy, pcl-conversions, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-base-local-planner";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/base_local_planner/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "5f642b0002e3c932e548ee5fb7f71fc2569f50621885aafe6400796ac320daf7";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/base_local_planner/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "728390ded2b54d2846e65a72c557be950be1997963d814ac3052e0d206cd584b";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib cmake-modules tf nav-core rospy voxel-grid message-generation nav-msgs pcl-ros std-msgs angles dynamic-reconfigure roscpp pcl-conversions geometry-msgs eigen ];
+  buildInputs = [ pcl-ros geometry-msgs dynamic-reconfigure pluginlib std-msgs tf cmake-modules costmap-2d nav-core eigen pcl-conversions rospy roscpp angles voxel-grid message-generation nav-msgs ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ costmap-2d pluginlib nav-core roscpp voxel-grid nav-msgs message-runtime rospy std-msgs angles dynamic-reconfigure tf pcl-ros geometry-msgs eigen ];
+  propagatedBuildInputs = [ pcl-ros geometry-msgs dynamic-reconfigure message-runtime pluginlib std-msgs tf costmap-2d nav-core eigen roscpp angles voxel-grid rospy nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

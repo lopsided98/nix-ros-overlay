@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, teleop-twist-joy, catkin, joy }:
+{ lib, buildRosPackage, fetchurl, joy, teleop-twist-joy, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-magni-teleop";
   version = "0.4.2";

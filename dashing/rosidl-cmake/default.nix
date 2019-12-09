@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-adapter, ament-cmake, ament-lint-common, python3Packages, rosidl-parser, ament-cmake-python, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, python3Packages, ament-lint-common, ament-cmake, ament-lint-auto, ament-cmake-python, rosidl-parser, rosidl-adapter }:
 buildRosPackage {
   pname = "ros-dashing-rosidl-cmake";
-  version = "0.7.7-r1";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/dashing/rosidl_cmake/0.7.7-1.tar.gz";
-    name = "0.7.7-1.tar.gz";
-    sha256 = "d2cc0ed0cc8ab87de8d77c24b784febb2b54de408ec3256150c3ebd13a38aa53";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/dashing/rosidl_cmake/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
+    sha256 = "90754adaacb0883fba1a37ea6412e29f520214f050664a0338906c02f7ad1cd7";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ rosidl-adapter ament-cmake python3Packages.empy rosidl-parser ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ rosidl-parser python3Packages.empy ament-cmake rosidl-adapter ];
   nativeBuildInputs = [ ament-cmake-python ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, tf, pcl-conversions, geometry-msgs, message-filters, pcl-msgs, roslib, rosbag, catkin, tf2-ros, std-msgs, roscpp, nodelet, eigen, cmake-modules, pluginlib, pcl, sensor-msgs, nodelet-topic-tools, tf2, rostest, tf2-eigen, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, tf, eigen, nodelet, tf2, rostest, sensor-msgs, dynamic-reconfigure, cmake-modules, roslib, rosbag, rosconsole, tf2-ros, nodelet-topic-tools, message-filters, std-msgs, catkin, pcl, roscpp, pcl-msgs, tf2-eigen, pcl-conversions }:
 buildRosPackage {
   pname = "ros-melodic-pcl-ros";
   version = "1.7.0-r2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole tf pcl-conversions geometry-msgs message-filters pcl-msgs roslib rosbag tf2-ros std-msgs roscpp nodelet eigen cmake-modules pluginlib pcl sensor-msgs nodelet-topic-tools tf2 tf2-eigen dynamic-reconfigure ];
+  buildInputs = [ geometry-msgs pluginlib tf eigen nodelet tf2 sensor-msgs dynamic-reconfigure cmake-modules roslib rosbag rosconsole tf2-ros message-filters nodelet-topic-tools std-msgs pcl roscpp pcl-msgs tf2-eigen pcl-conversions ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ pluginlib pcl rosbag nodelet-topic-tools sensor-msgs message-filters roscpp tf2-ros tf2 nodelet pcl-msgs std-msgs tf2-eigen dynamic-reconfigure tf pcl-conversions geometry-msgs eigen ];
+  propagatedBuildInputs = [ sensor-msgs nodelet-topic-tools geometry-msgs message-filters dynamic-reconfigure pluginlib std-msgs tf pcl-msgs roscpp pcl tf2-eigen eigen pcl-conversions nodelet tf2 rosbag tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

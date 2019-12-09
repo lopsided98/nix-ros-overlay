@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen }:
+{ lib, buildRosPackage, fetchurl, eigen, cmake-modules, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-hebi-cpp-api";
-  version = "2.1.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/HebiRobotics/hebi_cpp_api_ros-release/archive/release/kinetic/hebi_cpp_api/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "fe7ef6423758c42c99f08a47cb95f1cfea0c00d6f599dc3b7a28c291c62a4a10";
+    url = "https://github.com/HebiRobotics/hebi_cpp_api_ros-release/archive/release/kinetic/hebi_cpp_api/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "8965b3f6f4abbc8a97a4fd76b12a80c7fb9d75d6adece10545db7def89a090f8";
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules eigen ];
+  buildInputs = [ eigen cmake-modules ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

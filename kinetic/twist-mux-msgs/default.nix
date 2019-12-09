@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, actionlib }:
+{ lib, buildRosPackage, fetchurl, message-runtime, actionlib, catkin, actionlib-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-twist-mux-msgs";
   version = "2.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation actionlib-msgs actionlib ];
-  propagatedBuildInputs = [ message-runtime actionlib-msgs actionlib ];
+  buildInputs = [ message-generation actionlib actionlib-msgs ];
+  propagatedBuildInputs = [ message-runtime actionlib actionlib-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

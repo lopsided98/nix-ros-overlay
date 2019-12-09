@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-auto, python3, ament-cmake, ament-lint-common }:
+{ lib, buildRosPackage, fetchurl, python3, ament-lint-common, ament-cmake, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-python-cmake-module";
   version = "0.6.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
   propagatedBuildInputs = [ python3 ];
   nativeBuildInputs = [ ament-cmake ];
 

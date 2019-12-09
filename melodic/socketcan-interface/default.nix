@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, class-loader, catkin, linuxHeaders, console-bridge, rosunit }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, rosunit, console-bridge, class-loader, linuxHeaders }:
 buildRosPackage {
   pname = "ros-melodic-socketcan-interface";
   version = "0.8.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ linuxHeaders class-loader console-bridge boost ];
+  buildInputs = [ boost linuxHeaders console-bridge class-loader ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ linuxHeaders class-loader console-bridge boost ];
+  propagatedBuildInputs = [ boost linuxHeaders console-bridge class-loader ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

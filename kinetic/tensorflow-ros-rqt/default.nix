@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, catkin, rqt-gui, tensorflow-ros }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-gui-py, catkin, tensorflow-ros }:
 buildRosPackage {
   pname = "ros-kinetic-tensorflow-ros-rqt";
   version = "0.0.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui-py rqt-gui tensorflow-ros ];
+  buildInputs = [ rqt-gui rqt-gui-py tensorflow-ros ];
   propagatedBuildInputs = [ rqt-gui rqt-gui-py tensorflow-ros ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, camera-calibration-parsers, image-transport, gtest, sensor-msgs, catkin, rostest, roslib, roscpp }:
+{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, catkin, roslib, image-transport, roscpp, gtest, camera-calibration-parsers, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-camera-info-manager";
   version = "1.11.13";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost camera-calibration-parsers image-transport sensor-msgs rostest roslib roscpp ];
+  buildInputs = [ sensor-msgs boost roslib image-transport roscpp camera-calibration-parsers rostest ];
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ boost camera-calibration-parsers image-transport sensor-msgs roslib roscpp ];
+  propagatedBuildInputs = [ boost sensor-msgs roslib image-transport roscpp camera-calibration-parsers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

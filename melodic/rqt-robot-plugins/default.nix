@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-nav-view, rqt-moveit, rqt-rviz, rqt-pose-view, catkin, rqt-tf-tree, rqt-robot-dashboard, rqt-robot-monitor, rqt-robot-steering, rqt-runtime-monitor }:
+{ lib, buildRosPackage, fetchurl, rqt-robot-steering, rqt-runtime-monitor, catkin, rqt-rviz, rqt-robot-dashboard, rqt-pose-view, rqt-tf-tree, rqt-nav-view, rqt-robot-monitor, rqt-moveit }:
 buildRosPackage {
   pname = "ros-melodic-rqt-robot-plugins";
   version = "0.5.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-nav-view rqt-rviz rqt-pose-view rqt-moveit rqt-tf-tree rqt-robot-dashboard rqt-robot-monitor rqt-robot-steering rqt-runtime-monitor ];
+  propagatedBuildInputs = [ rqt-robot-steering rqt-runtime-monitor rqt-rviz rqt-robot-dashboard rqt-pose-view rqt-tf-tree rqt-nav-view rqt-robot-monitor rqt-moveit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

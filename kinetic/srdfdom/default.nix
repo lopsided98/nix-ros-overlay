@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, boost, catkin, tinyxml, rostest, urdfdom-headers, console-bridge, urdf, urdfdom-py }:
+{ lib, buildRosPackage, fetchurl, boost, urdfdom-headers, urdf, urdfdom-py, cmake-modules, catkin, tinyxml, console-bridge, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-srdfdom";
   version = "0.4.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules boost tinyxml urdfdom-headers console-bridge urdf urdfdom-py ];
+  buildInputs = [ boost urdfdom-headers urdf urdfdom-py cmake-modules tinyxml console-bridge ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ boost tinyxml urdfdom-headers console-bridge urdfdom-py ];
+  propagatedBuildInputs = [ boost urdfdom-headers urdfdom-py tinyxml console-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

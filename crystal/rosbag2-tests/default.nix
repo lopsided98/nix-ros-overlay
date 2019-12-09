@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag2, ament-cmake, ament-lint-common, ament-cmake-gmock, rosbag2-converter-default-plugins, test-msgs, rosbag2-bag-v2-plugins, rosbag2-test-common, ros2bag, rosbag2-storage-default-plugins, ros1-bridge, rclcpp, ament-index-cpp, std-msgs, ament-lint-auto, rosbag2-storage }:
+{ lib, buildRosPackage, fetchurl, ros2bag, rosbag2-test-common, rclcpp, std-msgs, rosbag2-bag-v2-plugins, ament-lint-common, ament-cmake, rosbag2, ros1-bridge, test-msgs, rosbag2-storage-default-plugins, rosbag2-converter-default-plugins, ament-cmake-gmock, ament-index-cpp, rosbag2-storage, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-rosbag2-tests";
   version = "0.0.7";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-index-cpp ];
-  checkInputs = [ rosbag2 ament-lint-common rosbag2-converter-default-plugins test-msgs rosbag2-bag-v2-plugins rosbag2-test-common ament-cmake-gmock ros2bag rosbag2-storage-default-plugins ros1-bridge rclcpp std-msgs ament-lint-auto rosbag2-storage ];
+  checkInputs = [ ros2bag rosbag2-test-common std-msgs rosbag2-bag-v2-plugins ament-cmake-gmock ament-lint-common rosbag2 test-msgs rosbag2-storage-default-plugins rosbag2-converter-default-plugins rosbag2-storage ros1-bridge rclcpp ament-lint-auto ];
   propagatedBuildInputs = [ ament-index-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, pendulum-msgs, rmw-implementation-cmake, ament-lint-common, rttest, ament-cmake, launch-testing, launch, launch-testing-ament-cmake, rclcpp, launch-testing-ros, ament-lint-auto, tlsf-cpp, ros2run }:
+{ lib, buildRosPackage, fetchurl, launch-testing-ros, ros2run, tlsf-cpp, rmw-implementation-cmake, launch, launch-testing, rttest, ament-lint-common, ament-cmake, pendulum-msgs, launch-testing-ament-cmake, ament-cmake-pytest, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-pendulum-control";
   version = "0.7.9-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tlsf-cpp rclcpp rttest pendulum-msgs ];
-  checkInputs = [ ament-cmake-pytest rmw-implementation-cmake ament-lint-common launch-testing launch launch-testing-ament-cmake launch-testing-ros ament-lint-auto ros2run ];
-  propagatedBuildInputs = [ tlsf-cpp rclcpp rttest pendulum-msgs ];
+  buildInputs = [ rclcpp pendulum-msgs rttest tlsf-cpp ];
+  checkInputs = [ launch-testing-ros ros2run launch rmw-implementation-cmake launch-testing ament-lint-common launch-testing-ament-cmake ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ rclcpp pendulum-msgs rttest tlsf-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, catkin, nao-interaction-msgs, rospy, std-msgs, roslaunch, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, nao-interaction-msgs, std-msgs, std-srvs, catkin, rospy, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-nao-vision";
   version = "0.1.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ std-srvs nao-interaction-msgs rospy std-msgs roslaunch geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs nao-interaction-msgs std-msgs std-srvs rospy roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

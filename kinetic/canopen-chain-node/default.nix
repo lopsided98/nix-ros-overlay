@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, pluginlib, catkin, roscpp, diagnostic-updater, message-generation, message-runtime, socketcan-interface, std-msgs, roslib, canopen-master }:
+{ lib, buildRosPackage, fetchurl, message-generation, canopen-master, pluginlib, std-msgs, std-srvs, catkin, roslib, socketcan-interface, roscpp, message-runtime, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-canopen-chain-node";
   version = "0.7.12-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs pluginlib diagnostic-updater roslib message-generation socketcan-interface std-msgs roscpp canopen-master ];
-  propagatedBuildInputs = [ std-srvs pluginlib diagnostic-updater roslib message-runtime socketcan-interface std-msgs roscpp canopen-master ];
+  buildInputs = [ canopen-master pluginlib std-msgs std-srvs roslib socketcan-interface roscpp message-generation diagnostic-updater ];
+  propagatedBuildInputs = [ canopen-master pluginlib std-msgs std-srvs roslib socketcan-interface roscpp message-runtime diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

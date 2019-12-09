@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin, rostest, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-dockeros";
   version = "1.0.3";

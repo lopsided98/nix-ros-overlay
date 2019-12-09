@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, boost, cob-vision-utils, image-transport, sensor-msgs, cv-bridge, message-filters, polled-camera, tinyxml, catkin, message-generation, message-runtime, rospy, roscpp, opencv3 }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, boost, message-filters, message-runtime, cmake-modules, catkin, tinyxml, image-transport, cv-bridge, rospy, roscpp, cob-vision-utils, polled-camera, opencv3 }:
 buildRosPackage {
   pname = "ros-melodic-cob-camera-sensors";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost cmake-modules cob-vision-utils image-transport sensor-msgs cv-bridge message-filters polled-camera tinyxml message-generation roscpp opencv3 ];
-  propagatedBuildInputs = [ cmake-modules boost cob-vision-utils image-transport sensor-msgs cv-bridge message-filters tinyxml polled-camera message-runtime rospy roscpp opencv3 ];
+  buildInputs = [ boost message-filters sensor-msgs polled-camera cmake-modules roscpp tinyxml image-transport cv-bridge opencv3 cob-vision-utils message-generation ];
+  propagatedBuildInputs = [ sensor-msgs boost message-filters message-runtime polled-camera cmake-modules tinyxml image-transport cv-bridge roscpp cob-vision-utils rospy opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

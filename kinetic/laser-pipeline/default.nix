@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, laser-assembler, laser-filters, laser-geometry, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, laser-assembler, laser-geometry, laser-filters }:
 buildRosPackage {
   pname = "ros-kinetic-laser-pipeline";
   version = "1.6.2";

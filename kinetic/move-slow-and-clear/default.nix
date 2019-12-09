@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, cmake-modules, nav-core, catkin, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, cmake-modules, catkin, costmap-2d, nav-core, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-move-slow-and-clear";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/move_slow_and_clear/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "4c55a4875c85a1b84a76f53c2b99f10145048df15533a2a4e13d21ec7b196462";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/move_slow_and_clear/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "0095dfefff660fcf940441ed5ef62952ff939c0ecb4d6dd4ac67e6a4b3feaf0f";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d cmake-modules pluginlib nav-core roscpp geometry-msgs ];
-  propagatedBuildInputs = [ costmap-2d pluginlib nav-core roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs pluginlib cmake-modules costmap-2d nav-core roscpp ];
+  propagatedBuildInputs = [ geometry-msgs pluginlib costmap-2d nav-core roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

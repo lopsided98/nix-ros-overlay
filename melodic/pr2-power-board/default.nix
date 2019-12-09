@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, message-generation, message-runtime, rospy, diagnostic-msgs, pr2-msgs, roscpp, log4cxx }:
+{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, pr2-msgs, catkin, rospy, roscpp, message-runtime, log4cxx, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-melodic-pr2-power-board";
   version = "1.1.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-updater message-generation diagnostic-msgs pr2-msgs roscpp log4cxx ];
-  propagatedBuildInputs = [ diagnostic-updater message-runtime rospy diagnostic-msgs pr2-msgs roscpp log4cxx ];
+  buildInputs = [ diagnostic-msgs pr2-msgs roscpp diagnostic-updater message-generation log4cxx ];
+  propagatedBuildInputs = [ diagnostic-msgs pr2-msgs rospy roscpp message-runtime log4cxx diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

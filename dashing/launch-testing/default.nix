@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, launch, pythonPackages, ament-copyright, ament-pep257, python3Packages, ament-index-python }:
+{ lib, buildRosPackage, fetchurl, python3Packages, ament-copyright, launch, pythonPackages, ament-flake8, ament-pep257, ament-index-python }:
 buildRosPackage {
   pname = "ros-dashing-launch-testing";
   version = "0.8.7-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ python3Packages.mock ament-flake8 pythonPackages.pytest launch ament-pep257 ament-copyright ];
+  checkInputs = [ ament-copyright launch ament-pep257 pythonPackages.pytest ament-flake8 python3Packages.mock ];
   propagatedBuildInputs = [ ament-index-python launch ];
 
   meta = {

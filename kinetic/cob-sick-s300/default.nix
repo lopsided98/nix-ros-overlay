@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, catkin, std-msgs, diagnostic-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, diagnostic-msgs, std-msgs, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-cob-sick-s300";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs std-msgs diagnostic-msgs roscpp ];
-  propagatedBuildInputs = [ boost sensor-msgs std-msgs diagnostic-msgs roscpp ];
+  buildInputs = [ sensor-msgs boost diagnostic-msgs std-msgs roscpp ];
+  propagatedBuildInputs = [ sensor-msgs boost diagnostic-msgs std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-generator-c, ament-cmake, ament-lint-common, connext-cmake-module, rosidl-cmake, rosidl-parser, ament-lint-auto, rosidl-typesupport-connext-cpp, rcutils, rmw, rosidl-generator-dds-idl }:
+{ lib, buildRosPackage, fetchurl, rosidl-cmake, rcutils, rosidl-typesupport-connext-cpp, ament-lint-common, ament-cmake, ament-lint-auto, rosidl-generator-dds-idl, rmw, connext-cmake-module, rosidl-generator-c, rosidl-parser }:
 buildRosPackage {
   pname = "ros-crystal-rosidl-typesupport-connext-c";
   version = "0.6.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ rosidl-generator-c ament-cmake connext-cmake-module rosidl-cmake rosidl-parser rosidl-typesupport-connext-cpp rcutils rmw rosidl-generator-dds-idl ];
-  nativeBuildInputs = [ ament-cmake connext-cmake-module rosidl-cmake rosidl-typesupport-connext-cpp rosidl-generator-c ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ rosidl-cmake rcutils rosidl-typesupport-connext-cpp ament-cmake rosidl-generator-dds-idl rmw connext-cmake-module rosidl-generator-c rosidl-parser ];
+  nativeBuildInputs = [ rosidl-cmake rosidl-typesupport-connext-cpp ament-cmake connext-cmake-module rosidl-generator-c ];
 
   meta = {
     description = ''Generate the C interfaces for RTI Connext.'';

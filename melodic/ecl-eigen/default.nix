@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-license, catkin, cmake-modules, eigen }:
+{ lib, buildRosPackage, fetchurl, ecl-license, eigen, cmake-modules, catkin }:
 buildRosPackage {
   pname = "ros-melodic-ecl-eigen";
   version = "0.62.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-license cmake-modules eigen ];
+  buildInputs = [ ecl-license eigen cmake-modules ];
   propagatedBuildInputs = [ ecl-license eigen ];
   nativeBuildInputs = [ catkin ];
 

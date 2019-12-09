@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gps-common, catkin, gpsd-client }:
+{ lib, buildRosPackage, fetchurl, gpsd-client, gps-common, catkin }:
 buildRosPackage {
   pname = "ros-melodic-gps-umd";
   version = "0.3.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gps-common gpsd-client ];
+  propagatedBuildInputs = [ gpsd-client gps-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

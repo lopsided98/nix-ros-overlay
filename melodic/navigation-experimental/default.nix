@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, assisted-teleop, catkin, sbpl-lattice-planner, pose-follower, goal-passer, twist-recovery, pose-base-controller, sbpl-recovery }:
+{ lib, buildRosPackage, fetchurl, assisted-teleop, pose-base-controller, catkin, twist-recovery, goal-passer, sbpl-lattice-planner, sbpl-recovery, pose-follower }:
 buildRosPackage {
   pname = "ros-melodic-navigation-experimental";
   version = "0.3.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pose-base-controller sbpl-lattice-planner pose-follower goal-passer twist-recovery assisted-teleop sbpl-recovery ];
+  propagatedBuildInputs = [ assisted-teleop pose-base-controller twist-recovery goal-passer sbpl-lattice-planner sbpl-recovery pose-follower ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,15 +2,15 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosunit, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-voxel-grid";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/voxel_grid/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "990f24132e8aff1537a142f57a762c4888778fb19068ac94ece15acbe5e1747c";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/voxel_grid/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "7fb2bb109e7d90a4ea87e5b06a0f4b5ea4bcd24ced4889bf6dda890256ec1f4f";
   };
 
   buildType = "catkin";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ros2node, rclpy, rosidl-default-generators, rosbridge-library, ros2param, rcl-interfaces, ament-cmake-ros, ros2pkg, rosidl-default-runtime, ros2service, ros2topic }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rosbridge-library, rosidl-default-runtime, ros2topic, ros2node, ros2param, ros2pkg, ros2service, rcl-interfaces, rclpy, rosidl-default-generators, builtin-interfaces }:
 buildRosPackage {
   pname = "ros-dashing-rosapi";
   version = "1.0.2-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ builtin-interfaces ];
-  propagatedBuildInputs = [ builtin-interfaces ros2node rclpy rosbridge-library ros2param rcl-interfaces ros2pkg rosidl-default-runtime ros2service ros2topic ];
+  propagatedBuildInputs = [ rosbridge-library rosidl-default-runtime ros2topic ros2node ros2param ros2pkg ros2service rcl-interfaces rclpy builtin-interfaces ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake-ros ];
 
   meta = {

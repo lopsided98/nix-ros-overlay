@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libusb1, xorg, freeglut, cmake }:
+{ lib, buildRosPackage, fetchurl, xorg, catkin, cmake, freeglut, libusb1 }:
 buildRosPackage {
   pname = "ros-kinetic-libfreenect";
   version = "0.5.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ libusb1 xorg.libXi freeglut xorg.libXmu ];
-  propagatedBuildInputs = [ catkin libusb1 xorg.libXi freeglut xorg.libXmu ];
+  buildInputs = [ libusb1 freeglut xorg.libXi xorg.libXmu ];
+  propagatedBuildInputs = [ catkin xorg.libXmu xorg.libXi freeglut libusb1 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

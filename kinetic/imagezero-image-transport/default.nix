@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport, sensor-msgs, catkin, cv-bridge, message-runtime, imagezero-ros }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, imagezero-ros, catkin, image-transport, cv-bridge, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-imagezero-image-transport";
   version = "0.2.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-transport sensor-msgs cv-bridge message-runtime imagezero-ros ];
-  propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge message-runtime imagezero-ros ];
+  buildInputs = [ sensor-msgs imagezero-ros image-transport cv-bridge message-runtime ];
+  propagatedBuildInputs = [ sensor-msgs imagezero-ros image-transport cv-bridge message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

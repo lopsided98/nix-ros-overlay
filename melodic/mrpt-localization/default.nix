@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, nav-msgs, mrpt-msgs, mrpt1, dynamic-reconfigure, std-msgs, mrpt-bridge, roscpp, pose-cov-ops }:
+{ lib, buildRosPackage, fetchurl, mrpt1, pose-cov-ops, sensor-msgs, mrpt-msgs, dynamic-reconfigure, std-msgs, tf, catkin, mrpt-bridge, roscpp, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-localization";
   version = "0.1.26-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf sensor-msgs nav-msgs mrpt-msgs mrpt1 dynamic-reconfigure std-msgs mrpt-bridge roscpp pose-cov-ops ];
-  propagatedBuildInputs = [ tf sensor-msgs nav-msgs mrpt1 mrpt-msgs dynamic-reconfigure std-msgs mrpt-bridge roscpp pose-cov-ops ];
+  buildInputs = [ mrpt1 pose-cov-ops sensor-msgs dynamic-reconfigure mrpt-msgs std-msgs tf mrpt-bridge roscpp nav-msgs ];
+  propagatedBuildInputs = [ mrpt1 pose-cov-ops sensor-msgs dynamic-reconfigure mrpt-msgs std-msgs tf mrpt-bridge roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers-msgs, orocos-kdl, joint-trajectory-action, catkin, urdf, actionlib, angles, roscpp }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, urdf, joint-trajectory-action, actionlib, catkin, roscpp, angles, pr2-controllers-msgs }:
 buildRosPackage {
   pname = "ros-melodic-joint-trajectory-generator";
   version = "0.0.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs orocos-kdl joint-trajectory-action urdf actionlib angles roscpp ];
-  propagatedBuildInputs = [ pr2-controllers-msgs orocos-kdl joint-trajectory-action urdf actionlib angles roscpp ];
+  buildInputs = [ orocos-kdl urdf joint-trajectory-action actionlib roscpp angles pr2-controllers-msgs ];
+  propagatedBuildInputs = [ orocos-kdl urdf joint-trajectory-action actionlib roscpp angles pr2-controllers-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cv-bridge, polled-camera, gazebo-plugins, rospy, diagnostic-msgs, tf, geometry-msgs, gazebo-msgs, image-transport, gazeboSimulator, pr2-controller-manager, message-generation, message-runtime, angles, pr2-msgs, gazebo-ros, std-srvs, pr2-hardware-interface, orocos-kdl, catkin, nav-msgs, urdf, std-msgs, roscpp, pr2-mechanism-model, sensor-msgs, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, gazeboSimulator, geometry-msgs, urdf, tf, image-transport, nav-msgs, sensor-msgs, diagnostic-msgs, orocos-kdl, pr2-mechanism-model, pr2-msgs, polled-camera, std-msgs, std-srvs, catkin, cv-bridge, roscpp, gazebo-ros, message-generation, angles, rospy, gazebo-msgs, diagnostic-updater, pr2-hardware-interface, message-runtime, pr2-controller-manager, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-gazebo-plugins";
   version = "2.0.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazeboSimulator.gazebo cv-bridge polled-camera gazebo-plugins rospy diagnostic-msgs tf gazebo-msgs geometry-msgs image-transport pr2-controller-manager message-generation message-runtime angles pr2-msgs std-srvs pr2-hardware-interface orocos-kdl nav-msgs urdf std-msgs roscpp pr2-mechanism-model sensor-msgs diagnostic-updater ];
-  propagatedBuildInputs = [ gazeboSimulator.gazebo cv-bridge polled-camera gazebo-plugins rospy diagnostic-msgs tf gazebo-msgs geometry-msgs image-transport pr2-controller-manager message-generation message-runtime angles pr2-msgs gazebo-ros pr2-hardware-interface orocos-kdl nav-msgs urdf std-msgs roscpp pr2-mechanism-model sensor-msgs diagnostic-updater ];
+  buildInputs = [ geometry-msgs urdf tf image-transport nav-msgs sensor-msgs diagnostic-msgs orocos-kdl pr2-mechanism-model pr2-msgs polled-camera std-msgs std-srvs cv-bridge roscpp angles rospy message-generation gazeboSimulator.gazebo gazebo-msgs diagnostic-updater pr2-hardware-interface message-runtime pr2-controller-manager gazebo-plugins ];
+  propagatedBuildInputs = [ geometry-msgs urdf tf image-transport nav-msgs sensor-msgs diagnostic-msgs orocos-kdl pr2-mechanism-model pr2-msgs polled-camera std-msgs cv-bridge roscpp gazebo-ros rospy angles message-generation gazeboSimulator.gazebo gazebo-msgs diagnostic-updater pr2-hardware-interface message-runtime pr2-controller-manager gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

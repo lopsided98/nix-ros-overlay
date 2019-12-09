@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, base-local-planner, tf, catkin, ecl-build, nav-msgs, ecl-linear-algebra, roscpp }:
+{ lib, buildRosPackage, fetchurl, tf, base-local-planner, catkin, costmap-2d, roscpp, nav-msgs, ecl-build, ecl-linear-algebra }:
 buildRosPackage {
   pname = "ros-kinetic-yocs-navi-toolkit";
   version = "0.8.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d base-local-planner tf ecl-build nav-msgs ecl-linear-algebra roscpp ];
-  propagatedBuildInputs = [ costmap-2d base-local-planner roscpp ecl-build nav-msgs ecl-linear-algebra tf ];
+  buildInputs = [ tf base-local-planner costmap-2d roscpp nav-msgs ecl-build ecl-linear-algebra ];
+  propagatedBuildInputs = [ tf base-local-planner costmap-2d roscpp nav-msgs ecl-build ecl-linear-algebra ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

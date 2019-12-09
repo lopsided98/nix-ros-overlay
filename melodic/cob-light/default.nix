@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, actionlib-msgs, sensor-msgs, catkin, roscpp, message-generation, actionlib, message-runtime, rospy, std-msgs, diagnostic-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, boost, diagnostic-msgs, std-msgs, actionlib, catkin, actionlib-msgs, rospy, roscpp, visualization-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-cob-light";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost actionlib-msgs sensor-msgs roscpp message-generation actionlib std-msgs diagnostic-msgs visualization-msgs ];
-  propagatedBuildInputs = [ boost actionlib-msgs sensor-msgs rospy message-runtime visualization-msgs actionlib std-msgs diagnostic-msgs roscpp ];
+  buildInputs = [ boost sensor-msgs diagnostic-msgs std-msgs actionlib actionlib-msgs visualization-msgs roscpp message-generation ];
+  propagatedBuildInputs = [ boost sensor-msgs diagnostic-msgs std-msgs actionlib actionlib-msgs visualization-msgs roscpp rospy message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

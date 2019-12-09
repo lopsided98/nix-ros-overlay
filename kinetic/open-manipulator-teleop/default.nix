@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, std-msgs, roscpp, open-manipulator-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, std-msgs, catkin, open-manipulator-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-open-manipulator-teleop";
   version = "2.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs sensor-msgs roscpp open-manipulator-msgs ];
-  propagatedBuildInputs = [ std-msgs sensor-msgs roscpp open-manipulator-msgs ];
+  buildInputs = [ std-msgs sensor-msgs open-manipulator-msgs roscpp ];
+  propagatedBuildInputs = [ std-msgs sensor-msgs open-manipulator-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

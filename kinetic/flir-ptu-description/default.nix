@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, catkin, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-flir-ptu-description";
   version = "0.2.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ xacro ];
-  propagatedBuildInputs = [ urdf xacro ];
+  propagatedBuildInputs = [ xacro urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

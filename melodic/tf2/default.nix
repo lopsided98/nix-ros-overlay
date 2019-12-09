@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-msgs, catkin, console-bridge, rostime, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, tf2-msgs, rostime, console-bridge }:
 buildRosPackage {
   pname = "ros-melodic-tf2";
   version = "0.6.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ console-bridge tf2-msgs rostime geometry-msgs ];
-  propagatedBuildInputs = [ console-bridge tf2-msgs rostime geometry-msgs ];
+  buildInputs = [ rostime geometry-msgs console-bridge tf2-msgs ];
+  propagatedBuildInputs = [ rostime geometry-msgs console-bridge tf2-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

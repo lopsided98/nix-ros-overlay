@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, prbt-moveit-config, catkin, pythonPackages, pilz-msgs, prbt-pg70-support, rostest, pilz-industrial-motion-testutils, moveit-commander, rospy, tf-conversions, tf, pilz-trajectory-generation }:
+{ lib, buildRosPackage, fetchurl, rostest, pilz-industrial-motion-testutils, moveit-commander, tf, catkin, pythonPackages, rosunit, roslint, pilz-trajectory-generation, rospy, prbt-moveit-config, tf-conversions, prbt-pg70-support, pilz-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pilz-robot-programming";
-  version = "0.4.7-r1";
+  version = "0.4.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_robot_programming/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "6f6571ca11129efd57d8035771d53ef9609f51f2f840c4dba2c761be788733dd";
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_robot_programming/0.4.10-1.tar.gz";
+    name = "0.4.10-1.tar.gz";
+    sha256 = "8e62a064d692627092b97d2d2c6ccb735468197d97a881df6542b6a2e75ce8a5";
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint rospy ];
-  checkInputs = [ prbt-moveit-config prbt-pg70-support rostest pythonPackages.mock pilz-industrial-motion-testutils pythonPackages.coverage pythonPackages.docopt ];
-  propagatedBuildInputs = [ pythonPackages.psutil pilz-msgs moveit-commander rospy tf-conversions tf pilz-trajectory-generation ];
+  buildInputs = [ rospy roslint ];
+  checkInputs = [ rostest pilz-industrial-motion-testutils pythonPackages.mock pythonPackages.coverage rosunit prbt-moveit-config prbt-pg70-support pythonPackages.docopt ];
+  propagatedBuildInputs = [ moveit-commander tf pilz-trajectory-generation rospy pythonPackages.psutil tf-conversions pilz-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rviz-rendering, ament-cmake, rviz-common, geometry-msgs, ament-cmake-cpplint, ament-cmake-gtest, rclcpp, tinyxml-vendor, rviz-visual-testing-framework, ament-cmake-gmock, nav-msgs, urdf, resource-retriever, rviz-rendering-tests, ament-index-cpp, laser-geometry, visualization-msgs, pluginlib, ament-cmake-uncrustify, ament-cmake-cppcheck, qt5, ament-cmake-lint-cmake, map-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, rviz-visual-testing-framework, tinyxml-vendor, urdf, pluginlib, ament-cmake-cpplint, map-msgs, ament-cmake, ament-cmake-gmock, nav-msgs, resource-retriever, qt5, rclcpp, rviz-rendering, ament-cmake-gtest, rviz-rendering-tests, ament-index-cpp, ament-cmake-lint-cmake, laser-geometry, ament-cmake-uncrustify, rviz-common, visualization-msgs, ament-cmake-cppcheck }:
 buildRosPackage {
   pname = "ros-crystal-rviz-default-plugins";
-  version = "5.1.0";
+  version = "5.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_default_plugins/5.1.0-0.tar.gz";
-    name = "5.1.0-0.tar.gz";
-    sha256 = "86db4edda8a8596f4b26e72fb17d9dbe7c48effc1b99a76d46dfd475312c9187";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_default_plugins/5.1.1-1.tar.gz";
+    name = "5.1.1-1.tar.gz";
+    sha256 = "f04fc9ee845eb82de02164c8703184dcba38eb3e9a2ae31b0df865203558e948";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rviz-rendering pluginlib geometry-msgs qt5.qtbase nav-msgs urdf rclcpp tinyxml-vendor visualization-msgs resource-retriever laser-geometry rviz-common map-msgs ];
-  checkInputs = [ ament-cmake-uncrustify ament-cmake-gmock ament-cmake-gtest ament-cmake-cppcheck rviz-rendering-tests ament-cmake-lint-cmake ament-index-cpp rviz-visual-testing-framework ament-cmake-cpplint ];
-  propagatedBuildInputs = [ rviz-rendering pluginlib geometry-msgs qt5.qtbase laser-geometry nav-msgs urdf resource-retriever tinyxml-vendor rclcpp visualization-msgs rviz-common map-msgs ];
+  buildInputs = [ geometry-msgs tinyxml-vendor urdf resource-retriever pluginlib map-msgs laser-geometry qt5.qtbase rviz-common visualization-msgs rclcpp nav-msgs rviz-rendering ];
+  checkInputs = [ ament-cmake-lint-cmake rviz-visual-testing-framework ament-cmake-cppcheck ament-cmake-cpplint rviz-rendering-tests ament-cmake-uncrustify ament-cmake-gmock ament-index-cpp ament-cmake-gtest ];
+  propagatedBuildInputs = [ geometry-msgs urdf tinyxml-vendor resource-retriever pluginlib map-msgs laser-geometry qt5.qtbase rviz-common visualization-msgs rclcpp nav-msgs rviz-rendering ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, rospy, actionlib, tf, geometry-msgs, boost, roslint, message-generation, rviz, message-runtime, robot-state-publisher, xacro, std-srvs, cob-twist-controller, catkin, cob-frame-tracker, std-msgs, visualization-msgs, roscpp, cob-srvs, topic-tools }:
+{ lib, buildRosPackage, fetchurl, xacro, geometry-msgs, tf, actionlib-msgs, cob-srvs, robot-state-publisher, cob-twist-controller, std-msgs, std-srvs, catkin, roscpp, topic-tools, cob-frame-tracker, rospy, message-generation, boost, actionlib, roslint, rviz, visualization-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-cob-cartesian-controller";
-  version = "0.8.0-r1";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_cartesian_controller/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "b075e089783d55f61a9c72abb5b79e8c0b61b6a04bd970356fc7f82d24b8ba37";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_cartesian_controller/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "676934ceb346e29f9fd3c43c8e12460d7479a56ecdf3608fefd198b201e08e44";
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs boost actionlib-msgs roslint roscpp cob-srvs message-generation visualization-msgs actionlib std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs cob-twist-controller boost actionlib-msgs roscpp rospy cob-srvs std-msgs actionlib message-runtime robot-state-publisher cob-frame-tracker topic-tools rviz visualization-msgs tf xacro geometry-msgs ];
+  buildInputs = [ boost geometry-msgs std-msgs std-srvs actionlib tf roslint actionlib-msgs visualization-msgs roscpp message-generation cob-srvs ];
+  propagatedBuildInputs = [ boost xacro geometry-msgs message-runtime robot-state-publisher std-msgs std-srvs tf actionlib cob-twist-controller rviz rospy actionlib-msgs roscpp visualization-msgs topic-tools cob-frame-tracker cob-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

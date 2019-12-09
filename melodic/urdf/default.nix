@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, cmake-modules, catkin, rosconsole-bridge, tinyxml, urdf-parser-plugin, urdfdom, rostest, urdfdom-headers, tinyxml-2, roscpp }:
+{ lib, buildRosPackage, fetchurl, urdfdom-headers, pluginlib, urdfdom, cmake-modules, catkin, tinyxml, roscpp, urdf-parser-plugin, tinyxml-2, rostest, rosconsole-bridge }:
 buildRosPackage {
   pname = "ros-melodic-urdf";
   version = "1.13.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules pluginlib rosconsole-bridge tinyxml urdf-parser-plugin urdfdom urdfdom-headers tinyxml-2 roscpp ];
+  buildInputs = [ urdfdom-headers pluginlib urdfdom cmake-modules tinyxml roscpp urdf-parser-plugin tinyxml-2 rosconsole-bridge ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ pluginlib rosconsole-bridge tinyxml urdfdom urdfdom-headers tinyxml-2 roscpp ];
+  propagatedBuildInputs = [ urdfdom-headers pluginlib urdfdom tinyxml roscpp tinyxml-2 rosconsole-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

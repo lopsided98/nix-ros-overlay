@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, create-description, urdf, kobuki-description, xacro }:
+{ lib, buildRosPackage, fetchurl, kobuki-description, xacro, urdf, catkin, create-description }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-description";
   version = "2.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ urdf xacro ];
-  propagatedBuildInputs = [ urdf xacro create-description kobuki-description ];
+  buildInputs = [ xacro urdf ];
+  propagatedBuildInputs = [ kobuki-description create-description xacro urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

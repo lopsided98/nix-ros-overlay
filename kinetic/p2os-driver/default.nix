@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kdl-parser, tf, catkin, p2os-msgs, diagnostic-updater, nav-msgs, message-runtime, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, tf, catkin, p2os-msgs, roscpp, diagnostic-updater, message-runtime, nav-msgs, kdl-parser }:
 buildRosPackage {
   pname = "ros-kinetic-p2os-driver";
   version = "2.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kdl-parser roscpp p2os-msgs diagnostic-updater nav-msgs std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ kdl-parser tf p2os-msgs diagnostic-updater nav-msgs message-runtime std-msgs roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs std-msgs tf p2os-msgs kdl-parser roscpp nav-msgs diagnostic-updater ];
+  propagatedBuildInputs = [ geometry-msgs std-msgs tf p2os-msgs kdl-parser roscpp message-runtime nav-msgs diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

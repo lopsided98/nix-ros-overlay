@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, vs060, catkin, denso-ros-control, vs060-moveit-config, denso-launch, vs060-gazebo }:
+{ lib, buildRosPackage, fetchurl, denso-launch, denso-ros-control, catkin, vs060, vs060-gazebo, vs060-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-denso";
   version = "2.0.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ vs060 vs060-moveit-config denso-ros-control denso-launch vs060-gazebo ];
+  propagatedBuildInputs = [ denso-launch denso-ros-control vs060 vs060-gazebo vs060-moveit-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

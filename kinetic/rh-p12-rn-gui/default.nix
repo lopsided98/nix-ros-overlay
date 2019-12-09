@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qt4, rh-p12-rn-base-module-msgs, catkin, roscpp, qt-build, robotis-controller-msgs }:
+{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, qt-build, rh-p12-rn-base-module-msgs, qt4, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-rh-p12-rn-gui";
   version = "0.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ qt4 rh-p12-rn-base-module-msgs roscpp qt-build robotis-controller-msgs ];
-  propagatedBuildInputs = [ qt4 rh-p12-rn-base-module-msgs roscpp qt-build robotis-controller-msgs ];
+  buildInputs = [ robotis-controller-msgs qt-build rh-p12-rn-base-module-msgs qt4 roscpp ];
+  propagatedBuildInputs = [ robotis-controller-msgs qt-build rh-p12-rn-base-module-msgs qt4 roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

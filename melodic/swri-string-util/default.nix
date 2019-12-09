@@ -2,15 +2,15 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rostest }:
 buildRosPackage {
   pname = "ros-melodic-swri-string-util";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_string_util/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "2f57d2124997f42d4f99f0bf88c286b1a39d45d8d7a3bffaba7d5d288c565fa8";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_string_util/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "00e36738c4755b7114ff85bb7af48339443f941681c948079d587e6b859cf9e1";
   };
 
   buildType = "catkin";

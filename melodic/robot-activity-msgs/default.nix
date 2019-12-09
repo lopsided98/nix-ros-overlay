@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
+{ lib, buildRosPackage, fetchurl, std-msgs, message-runtime, message-generation, catkin }:
 buildRosPackage {
   pname = "ros-melodic-robot-activity-msgs";
   version = "0.1.1";

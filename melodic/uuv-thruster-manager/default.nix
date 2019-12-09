@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, uuv-assistants, catkin, pythonPackages, rostest, message-generation, uuv-gazebo-ros-plugins-msgs, message-runtime, robot-state-publisher, rospy, std-msgs, rosunit, tf, joint-state-publisher, xacro, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, message-generation, xacro, geometry-msgs, uuv-gazebo-ros-plugins-msgs, message-runtime, robot-state-publisher, std-msgs, uuv-assistants, pythonPackages, tf, catkin, rosunit, rospy, rostest }:
 buildRosPackage {
   pname = "ros-melodic-uuv-thruster-manager";
   version = "0.6.13";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
-  checkInputs = [ pythonPackages.numpy xacro uuv-assistants rostest robot-state-publisher joint-state-publisher rosunit geometry-msgs ];
-  propagatedBuildInputs = [ uuv-assistants pythonPackages.pyyaml uuv-gazebo-ros-plugins-msgs message-runtime rospy std-msgs tf geometry-msgs ];
+  checkInputs = [ joint-state-publisher pythonPackages.numpy xacro geometry-msgs robot-state-publisher uuv-assistants rosunit rostest ];
+  propagatedBuildInputs = [ pythonPackages.pyyaml geometry-msgs uuv-gazebo-ros-plugins-msgs std-msgs uuv-assistants tf rospy message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

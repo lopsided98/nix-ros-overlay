@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, boost, geometry-msgs, manipulator-h-kinematics-dynamics, libyamlcpp, catkin, roscpp, roslib, robotis-math, manipulator-h-base-module-msgs, eigen, std-msgs, robotis-controller-msgs, robotis-framework-common }:
+{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, boost, geometry-msgs, std-msgs, cmake-modules, roslib, manipulator-h-base-module-msgs, catkin, libyamlcpp, eigen, robotis-framework-common, roscpp, manipulator-h-kinematics-dynamics, robotis-math }:
 buildRosPackage {
   pname = "ros-kinetic-manipulator-h-base-module";
   version = "0.3.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules boost geometry-msgs manipulator-h-kinematics-dynamics libyamlcpp roscpp roslib robotis-math manipulator-h-base-module-msgs eigen std-msgs robotis-controller-msgs robotis-framework-common ];
-  propagatedBuildInputs = [ cmake-modules boost geometry-msgs manipulator-h-kinematics-dynamics libyamlcpp roscpp roslib robotis-math manipulator-h-base-module-msgs eigen std-msgs robotis-controller-msgs robotis-framework-common ];
+  buildInputs = [ robotis-controller-msgs boost geometry-msgs std-msgs cmake-modules roslib manipulator-h-base-module-msgs libyamlcpp eigen robotis-framework-common roscpp manipulator-h-kinematics-dynamics robotis-math ];
+  propagatedBuildInputs = [ robotis-controller-msgs boost geometry-msgs std-msgs cmake-modules roslib manipulator-h-base-module-msgs libyamlcpp eigen robotis-framework-common roscpp manipulator-h-kinematics-dynamics robotis-math ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

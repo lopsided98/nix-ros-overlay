@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, actionlib, rospy, tf, geometry-msgs, boost, roslint, message-generation, message-runtime, kdl-conversions, std-srvs, orocos-kdl, catkin, std-msgs, roscpp, visualization-msgs, kdl-parser, control-toolbox, sensor-msgs, cob-srvs, interactive-markers, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, control-toolbox, interactive-markers, tf, actionlib-msgs, cob-srvs, kdl-parser, sensor-msgs, dynamic-reconfigure, orocos-kdl, std-msgs, std-srvs, catkin, roscpp, rospy, message-generation, kdl-conversions, boost, actionlib, roslint, visualization-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-cob-frame-tracker";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs actionlib tf geometry-msgs boost roslint message-generation kdl-conversions std-srvs orocos-kdl std-msgs roscpp visualization-msgs kdl-parser control-toolbox sensor-msgs cob-srvs interactive-markers dynamic-reconfigure ];
-  propagatedBuildInputs = [ actionlib-msgs actionlib rospy tf geometry-msgs boost roslint message-runtime kdl-conversions std-srvs orocos-kdl std-msgs roscpp visualization-msgs kdl-parser control-toolbox sensor-msgs cob-srvs interactive-markers dynamic-reconfigure ];
+  buildInputs = [ geometry-msgs control-toolbox interactive-markers tf actionlib-msgs cob-srvs kdl-parser sensor-msgs dynamic-reconfigure orocos-kdl std-msgs std-srvs roscpp message-generation kdl-conversions boost actionlib roslint visualization-msgs ];
+  propagatedBuildInputs = [ geometry-msgs control-toolbox interactive-markers tf actionlib-msgs cob-srvs kdl-parser sensor-msgs dynamic-reconfigure orocos-kdl std-msgs std-srvs roscpp rospy kdl-conversions boost actionlib roslint visualization-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

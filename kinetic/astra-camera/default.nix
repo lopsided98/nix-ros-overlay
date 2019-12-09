@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-info-manager, image-transport, git, catkin, sensor-msgs, roscpp, libusb1, message-generation, message-runtime, dynamic-reconfigure, nodelet, libudev }:
+{ lib, buildRosPackage, fetchurl, git, sensor-msgs, message-generation, dynamic-reconfigure, camera-info-manager, catkin, image-transport, nodelet, roscpp, libusb1, message-runtime, libudev }:
 buildRosPackage {
   pname = "ros-kinetic-astra-camera";
   version = "0.2.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ camera-info-manager image-transport git sensor-msgs libusb1 message-generation nodelet dynamic-reconfigure roscpp libudev ];
-  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs roscpp message-runtime dynamic-reconfigure nodelet ];
+  buildInputs = [ git sensor-msgs dynamic-reconfigure camera-info-manager image-transport nodelet roscpp libusb1 message-generation libudev ];
+  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure camera-info-manager image-transport nodelet roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, cmake-modules, tf2-geometry-msgs, roslint, pcl, sensor-msgs, catkin, tf2-ros, tf2, rostest, nav-msgs, map-organizer-msgs, neonavigation-common, eigen, eigen-conversions, roscpp, pcl-conversions, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, eigen-conversions, map-server, catkin, tf2, cmake-modules, neonavigation-common, pcl, roslint, tf2-geometry-msgs, eigen, pcl-conversions, roscpp, map-organizer-msgs, nav-msgs, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-map-organizer";
   version = "0.5.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ map-server cmake-modules tf2-geometry-msgs pcl sensor-msgs tf2-ros tf2 nav-msgs map-organizer-msgs neonavigation-common eigen eigen-conversions roscpp pcl-conversions geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs eigen-conversions map-server cmake-modules roscpp neonavigation-common pcl tf2-geometry-msgs eigen pcl-conversions tf2 map-organizer-msgs nav-msgs tf2-ros ];
   checkInputs = [ rostest roslint ];
-  propagatedBuildInputs = [ map-server cmake-modules tf2-geometry-msgs pcl sensor-msgs tf2-ros tf2 nav-msgs map-organizer-msgs neonavigation-common eigen eigen-conversions roscpp pcl-conversions geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs eigen-conversions map-server cmake-modules roscpp neonavigation-common pcl tf2-geometry-msgs eigen pcl-conversions tf2 map-organizer-msgs nav-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

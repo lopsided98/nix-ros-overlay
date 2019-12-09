@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, rostest, diagnostic-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, diagnostic-msgs, catkin, roscpp, rostest, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-self-test";
   version = "1.9.3";

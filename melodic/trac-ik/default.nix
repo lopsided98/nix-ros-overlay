@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trac-ik-kinematics-plugin, catkin, trac-ik-python, trac-ik-lib, trac-ik-examples }:
+{ lib, buildRosPackage, fetchurl, trac-ik-examples, catkin, trac-ik-kinematics-plugin, trac-ik-lib, trac-ik-python }:
 buildRosPackage {
   pname = "ros-melodic-trac-ik";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/traclabs/trac_ik-release/archive/release/melodic/trac_ik/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "c985213ab2ea13f1d77ffd934d03abb7f1cd6364f98247d8ce9d483161cd6b32";
+    url = "https://github.com/traclabs/trac_ik-release/archive/release/melodic/trac_ik/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "5100591cc6fe9a21062cbd806709226bc0b9bc95ec1aa9f2688af6058b2c3f30";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ trac-ik-lib trac-ik-examples trac-ik-kinematics-plugin trac-ik-python ];
+  propagatedBuildInputs = [ trac-ik-python trac-ik-lib trac-ik-examples trac-ik-kinematics-plugin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

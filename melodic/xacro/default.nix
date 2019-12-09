@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, roslaunch, catkin, roslint }:
+{ lib, buildRosPackage, fetchurl, roslaunch, catkin, rostest, roslint }:
 buildRosPackage {
   pname = "ros-melodic-xacro";
   version = "1.13.4-r1";

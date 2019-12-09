@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rviz, roscpp, marker-msgs }:
+{ lib, buildRosPackage, fetchurl, rviz, catkin, roscpp, marker-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-marker-rviz-plugin";
   version = "0.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp rviz marker-msgs ];
-  propagatedBuildInputs = [ roscpp rviz marker-msgs ];
+  buildInputs = [ rviz roscpp marker-msgs ];
+  propagatedBuildInputs = [ marker-msgs rviz roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

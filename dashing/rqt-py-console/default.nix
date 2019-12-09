@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, ament-cmake, rclpy, rqt-gui, qt-gui, qt-gui-py-common, ament-index-python, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, qt-gui-py-common, ament-cmake, rqt-gui-py, qt-gui, rclpy, ament-index-python, python-qt-binding }:
 buildRosPackage {
   pname = "ros-dashing-rqt-py-console";
   version = "1.0.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ rqt-gui-py python-qt-binding rclpy rqt-gui qt-gui ament-index-python qt-gui-py-common ];
+  propagatedBuildInputs = [ rqt-gui qt-gui-py-common rqt-gui-py qt-gui rclpy ament-index-python python-qt-binding ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-msgs, pluginlib, sensor-msgs, catkin, roscpp, nodelet }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, pluginlib, catkin, nodelet, roscpp, kobuki-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-bumper2pc";
   version = "0.7.6";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kobuki-msgs pluginlib sensor-msgs roscpp nodelet ];
-  propagatedBuildInputs = [ kobuki-msgs pluginlib sensor-msgs nodelet roscpp ];
+  buildInputs = [ sensor-msgs pluginlib nodelet roscpp kobuki-msgs ];
+  propagatedBuildInputs = [ sensor-msgs pluginlib nodelet roscpp kobuki-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

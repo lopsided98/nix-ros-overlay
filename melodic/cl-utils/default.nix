@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, sbcl }:
+{ lib, buildRosPackage, fetchurl, sbcl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-cl-utils";
   version = "0.2.12-r1";

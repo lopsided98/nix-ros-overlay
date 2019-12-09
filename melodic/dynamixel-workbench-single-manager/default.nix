@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamixel-workbench-msgs dynamixel-workbench-toolbox roscpp ];
-  propagatedBuildInputs = [ dynamixel-workbench-msgs dynamixel-workbench-toolbox roscpp ];
+  buildInputs = [ dynamixel-workbench-toolbox dynamixel-workbench-msgs roscpp ];
+  propagatedBuildInputs = [ dynamixel-workbench-toolbox dynamixel-workbench-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

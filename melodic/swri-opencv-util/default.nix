@@ -2,15 +2,15 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, swri-math-util, catkin, cv-bridge }:
+{ lib, buildRosPackage, fetchurl, swri-math-util, cv-bridge, catkin }:
 buildRosPackage {
   pname = "ros-melodic-swri-opencv-util";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_opencv_util/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "7ae64cc51d9fd0407bcd5739c8bd38e9ad16845ea5b969ab7b6a6be500eee91d";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_opencv_util/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "9acd44f81b3cf018deb726d348c7a22ec31bd5d20540aa7ce4597b46eb968d25";
   };
 
   buildType = "catkin";

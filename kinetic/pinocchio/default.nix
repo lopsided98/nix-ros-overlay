@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, boost, git, pythonPackages, doxygen, urdfdom, eigen, eigenpy, cmake }:
+{ lib, buildRosPackage, fetchurl, git, boost, urdfdom, pythonPackages, cmake, eigenpy, python, eigen, doxygen }:
 buildRosPackage {
   pname = "ros-kinetic-pinocchio";
-  version = "2.1.11-r1";
+  version = "2.2.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/kinetic/pinocchio/2.1.11-1.tar.gz";
-    name = "2.1.11-1.tar.gz";
-    sha256 = "6d97900a4557556662d2986cb44df838045f03796821a9a14e4a01aac35d8740";
+    url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/kinetic/pinocchio/2.2.1-2.tar.gz";
+    name = "2.2.1-2.tar.gz";
+    sha256 = "08351666c19195fd8e41675249787ab7fe920dee30f973e8ab9a098ce7c89be9";
   };
 
   buildType = "cmake";
-  buildInputs = [ python pythonPackages.numpy boost git doxygen urdfdom eigen eigenpy ];
-  propagatedBuildInputs = [ python pythonPackages.numpy boost urdfdom eigenpy eigen ];
+  buildInputs = [ git boost pythonPackages.numpy urdfdom eigenpy python eigen doxygen ];
+  propagatedBuildInputs = [ pythonPackages.numpy boost urdfdom eigenpy python eigen ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

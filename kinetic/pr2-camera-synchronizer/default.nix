@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ethercat-trigger-controllers, wge100-camera, catkin, rostest, rospy, diagnostic-msgs, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, diagnostic-msgs, ethercat-trigger-controllers, dynamic-reconfigure, catkin, wge100-camera, rospy, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-camera-synchronizer";
   version = "1.6.30";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ rostest dynamic-reconfigure ];
-  propagatedBuildInputs = [ ethercat-trigger-controllers wge100-camera rospy diagnostic-msgs dynamic-reconfigure ];
+  propagatedBuildInputs = [ ethercat-trigger-controllers diagnostic-msgs dynamic-reconfigure wge100-camera rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

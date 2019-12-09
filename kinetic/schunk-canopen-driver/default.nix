@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, std-srvs, hardware-interface, fzi-icl-core, control-msgs, joint-limits-interface, sensor-msgs, catkin, message-generation, urdf, fzi-icl-can, message-runtime, actionlib, std-msgs, robot-state-publisher, roscpp, xacro, ros-controllers }:
+{ lib, buildRosPackage, fetchurl, message-runtime, sensor-msgs, xacro, fzi-icl-core, joint-limits-interface, controller-manager, urdf, std-msgs, std-srvs, hardware-interface, catkin, robot-state-publisher, fzi-icl-can, actionlib, ros-controllers, roscpp, message-generation, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-schunk-canopen-driver";
   version = "1.0.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager hardware-interface std-srvs fzi-icl-core control-msgs joint-limits-interface sensor-msgs message-generation urdf fzi-icl-can actionlib std-msgs roscpp ];
-  propagatedBuildInputs = [ controller-manager hardware-interface std-srvs fzi-icl-core control-msgs joint-limits-interface sensor-msgs urdf message-runtime robot-state-publisher actionlib std-msgs fzi-icl-can roscpp xacro ros-controllers ];
+  buildInputs = [ sensor-msgs fzi-icl-core controller-manager urdf hardware-interface std-msgs std-srvs fzi-icl-can actionlib joint-limits-interface roscpp message-generation control-msgs ];
+  propagatedBuildInputs = [ sensor-msgs xacro fzi-icl-core controller-manager urdf robot-state-publisher std-msgs std-srvs hardware-interface actionlib fzi-icl-can joint-limits-interface ros-controllers roscpp message-runtime control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

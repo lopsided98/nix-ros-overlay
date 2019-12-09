@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, catkin, ruby, xacro, wave-gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, xacro, catkin, wave-gazebo-plugins, ruby, gazebo-ros }:
 buildRosPackage {
   pname = "ros-kinetic-wave-gazebo";
   version = "1.2.6-r1";

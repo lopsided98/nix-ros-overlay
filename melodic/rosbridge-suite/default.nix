@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbridge-library, rosapi, catkin, rosbridge-server }:
+{ lib, buildRosPackage, fetchurl, rosapi, rosbridge-library, catkin, rosbridge-server }:
 buildRosPackage {
   pname = "ros-melodic-rosbridge-suite";
   version = "0.11.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosbridge-library rosapi rosbridge-server ];
+  propagatedBuildInputs = [ rosapi rosbridge-library rosbridge-server ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

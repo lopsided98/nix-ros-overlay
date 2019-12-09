@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mm-messages, mm-eigen-msgs, catkin, mm-mux-demux, mm-core-msgs, mm-radio }:
+{ lib, buildRosPackage, fetchurl, mm-core-msgs, catkin, mm-radio, mm-eigen-msgs, mm-mux-demux, mm-messages }:
 buildRosPackage {
   pname = "ros-kinetic-message-multiplexing";
   version = "0.2.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ mm-messages mm-eigen-msgs mm-mux-demux mm-core-msgs mm-radio ];
+  propagatedBuildInputs = [ mm-core-msgs mm-radio mm-eigen-msgs mm-mux-demux mm-messages ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, catkin, pythonPackages, multimaster-msgs-fkie, rosgraph, rospy, roslib, avahi }:
+{ lib, buildRosPackage, fetchurl, avahi, std-srvs, rosgraph, catkin, roslib, pythonPackages, multimaster-msgs-fkie, rospy }:
 buildRosPackage {
   pname = "ros-melodic-master-discovery-fkie";
   version = "0.8.12";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs multimaster-msgs-fkie ];
-  propagatedBuildInputs = [ std-srvs multimaster-msgs-fkie pythonPackages.avahi rosgraph rospy roslib avahi ];
+  buildInputs = [ multimaster-msgs-fkie std-srvs ];
+  propagatedBuildInputs = [ avahi std-srvs rosgraph roslib pythonPackages.avahi multimaster-msgs-fkie rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

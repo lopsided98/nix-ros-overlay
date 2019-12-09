@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gmapping, map-server, amcl, catkin, move-base, stage-ros, fake-localization }:
+{ lib, buildRosPackage, fetchurl, map-server, stage-ros, catkin, gmapping, fake-localization, move-base, amcl }:
 buildRosPackage {
   pname = "ros-melodic-navigation-stage";
   version = "0.2.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gmapping map-server amcl move-base stage-ros fake-localization ];
+  propagatedBuildInputs = [ map-server stage-ros gmapping fake-localization move-base amcl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

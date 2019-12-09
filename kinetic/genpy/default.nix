@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, genmsg, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, genmsg, pythonPackages, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-genpy";
   version = "0.6.7";

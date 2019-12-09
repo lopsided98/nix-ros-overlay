@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, rqt-gui, catkin, dataspeed-pds-msgs, rospy, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, catkin, dataspeed-pds-msgs, rqt-gui-py, rospy, python-qt-binding }:
 buildRosPackage {
   pname = "ros-melodic-dataspeed-pds-rqt";
   version = "1.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui-py rqt-gui dataspeed-pds-msgs rospy python-qt-binding ];
-  propagatedBuildInputs = [ rqt-gui-py rqt-gui dataspeed-pds-msgs rospy python-qt-binding ];
+  buildInputs = [ rqt-gui dataspeed-pds-msgs rqt-gui-py rospy python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui dataspeed-pds-msgs rqt-gui-py rospy python-qt-binding ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

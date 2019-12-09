@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, rviz, robot-state-publisher, roslaunch, joint-state-publisher, xacro }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, robot-state-publisher, catkin, rviz, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-melfa-description";
   version = "0.0.4";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ rviz xacro ];
-  checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ joint-state-publisher rviz xacro robot-state-publisher ];
+  checkInputs = [ roslaunch rostest ];
+  propagatedBuildInputs = [ robot-state-publisher joint-state-publisher rviz xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

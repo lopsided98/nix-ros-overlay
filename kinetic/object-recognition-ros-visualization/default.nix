@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, object-recognition-ros, pluginlib, boost, catkin, rviz, object-recognition-msgs }:
+{ lib, buildRosPackage, fetchurl, boost, object-recognition-ros, pluginlib, catkin, rviz, object-recognition-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-object-recognition-ros-visualization";
   version = "0.3.8";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ object-recognition-ros pluginlib boost rviz object-recognition-msgs ];
-  propagatedBuildInputs = [ object-recognition-ros pluginlib boost rviz object-recognition-msgs ];
+  buildInputs = [ boost object-recognition-ros pluginlib rviz object-recognition-msgs ];
+  propagatedBuildInputs = [ boost object-recognition-ros pluginlib rviz object-recognition-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

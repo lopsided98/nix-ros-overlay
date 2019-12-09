@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-xmllint, ament-flake8, launch-ros, launch, pythonPackages, ament-pep257, tracetools-trace, ament-copyright }:
+{ lib, buildRosPackage, fetchurl, tracetools-trace, ament-copyright, launch, launch-ros, pythonPackages, ament-xmllint, ament-pep257, ament-flake8 }:
 buildRosPackage {
   pname = "ros-dashing-tracetools-launch";
   version = "0.2.8-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ tracetools-trace launch launch-ros ];
-  checkInputs = [ ament-xmllint ament-flake8 pythonPackages.pytest ament-pep257 ament-copyright ];
-  propagatedBuildInputs = [ tracetools-trace launch launch-ros ];
+  buildInputs = [ tracetools-trace launch-ros launch ];
+  checkInputs = [ ament-copyright ament-xmllint ament-pep257 pythonPackages.pytest ament-flake8 ];
+  propagatedBuildInputs = [ tracetools-trace launch-ros launch ];
 
   meta = {
     description = ''Launch integration for tracing.'';

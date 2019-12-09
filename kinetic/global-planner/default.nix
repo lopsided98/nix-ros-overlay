@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, navfn, nav-core, catkin, roscpp, nav-msgs, angles, dynamic-reconfigure, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, pluginlib, tf, catkin, costmap-2d, nav-core, roscpp, angles, nav-msgs, navfn }:
 buildRosPackage {
   pname = "ros-kinetic-global-planner";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/global_planner/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "7aade98634a41e69f5a101ce83edc80c0da38b0246f4b95ca5ae881f325fd468";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/global_planner/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "74d043e7c676b27c046324f1549fbdf644c75e5087cdc63f81891ea3cf988026";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib navfn nav-core roscpp nav-msgs dynamic-reconfigure angles tf geometry-msgs ];
-  propagatedBuildInputs = [ costmap-2d pluginlib navfn nav-core roscpp nav-msgs dynamic-reconfigure tf geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure pluginlib tf costmap-2d nav-core roscpp angles nav-msgs navfn ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure pluginlib tf costmap-2d nav-core roscpp nav-msgs navfn ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

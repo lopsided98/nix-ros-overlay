@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, rclcpp-lifecycle, ament-lint-common, rclpy, ament-cmake-gtest, std-msgs, rclcpp, ament-cmake-python, diagnostic-msgs, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, rclcpp-lifecycle, diagnostic-msgs, std-msgs, ament-lint-common, ament-cmake, rclpy, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-diagnostic-updater";
   version = "2.0.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ diagnostic-msgs std-msgs rclpy rclcpp ];
-  checkInputs = [ ament-cmake-pytest rclcpp-lifecycle ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ std-msgs diagnostic-msgs rclpy rclcpp ];
+  buildInputs = [ std-msgs rclcpp diagnostic-msgs rclpy ];
+  checkInputs = [ rclcpp-lifecycle ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ std-msgs rclcpp diagnostic-msgs rclpy ];
   nativeBuildInputs = [ ament-cmake-python ament-cmake ];
 
   meta = {

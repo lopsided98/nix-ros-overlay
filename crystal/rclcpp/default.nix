@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, rosidl-generator-cpp, rosidl-typesupport-c, ament-cmake, rmw-implementation-cmake, ament-cmake-gmock, ament-lint-common, test-msgs, ament-cmake-gtest, rosidl-typesupport-cpp, rosgraph-msgs, rmw-implementation, rcl-yaml-param-parser, rcl-interfaces, ament-cmake-ros, rcl, ament-lint-auto, rmw }:
+{ lib, buildRosPackage, fetchurl, rosidl-generator-cpp, ament-cmake-ros, rosidl-typesupport-c, rmw-implementation-cmake, rcl, ament-lint-common, ament-cmake, rcl-yaml-param-parser, test-msgs, ament-cmake-gtest, rosidl-typesupport-cpp, rcl-interfaces, rmw, ament-cmake-gmock, rmw-implementation, builtin-interfaces, rosgraph-msgs, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-rclcpp";
-  version = "0.6.4";
+  version = "0.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/crystal/rclcpp/0.6.4-0.tar.gz";
-    name = "0.6.4-0.tar.gz";
-    sha256 = "0c2a84291e91f1e32e8d355681bb68a812594951f27203a63a8fc86c32126f87";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/crystal/rclcpp/0.6.5-1.tar.gz";
+    name = "0.6.5-1.tar.gz";
+    sha256 = "1a86339deaa90b5b5c114811d162039993ed98d7967936a35cb08549f815931b";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-generator-cpp builtin-interfaces rosidl-typesupport-c rosidl-typesupport-cpp rosgraph-msgs rmw-implementation rcl-yaml-param-parser rcl-interfaces rcl ];
-  checkInputs = [ rmw-implementation-cmake ament-lint-common ament-cmake-gmock test-msgs ament-cmake-gtest ament-lint-auto rmw ];
-  propagatedBuildInputs = [ rosidl-generator-cpp builtin-interfaces rosidl-typesupport-c ament-cmake rosidl-typesupport-cpp rosgraph-msgs rmw-implementation rcl-yaml-param-parser rcl-interfaces rcl rmw ];
+  buildInputs = [ rosidl-generator-cpp rosidl-typesupport-c rcl rcl-yaml-param-parser rcl-interfaces rosidl-typesupport-cpp rmw-implementation builtin-interfaces rosgraph-msgs ];
+  checkInputs = [ rmw-implementation-cmake ament-lint-common ament-lint-auto test-msgs rmw ament-cmake-gmock ament-cmake-gtest ];
+  propagatedBuildInputs = [ rosidl-generator-cpp rosidl-typesupport-c rcl ament-cmake rcl-yaml-param-parser rcl-interfaces rmw rosidl-typesupport-cpp rmw-implementation builtin-interfaces rosgraph-msgs ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, sensor-msgs, catkin, roscpp, pcl-ros, message-generation, message-runtime, actionlib, pr2-msgs, laser-geometry, pcl-conversions, eigen }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, pr2-msgs, actionlib, catkin, laser-geometry, eigen, actionlib-msgs, pcl-conversions, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-tilt-laser-interface";
   version = "0.0.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs sensor-msgs roscpp message-generation actionlib pcl-ros pr2-msgs laser-geometry pcl-conversions eigen ];
-  propagatedBuildInputs = [ actionlib-msgs sensor-msgs pcl-ros laser-geometry message-runtime actionlib pr2-msgs roscpp pcl-conversions eigen ];
+  buildInputs = [ pcl-ros sensor-msgs pr2-msgs actionlib laser-geometry eigen actionlib-msgs pcl-conversions roscpp message-generation ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs pr2-msgs actionlib laser-geometry eigen pcl-conversions actionlib-msgs roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

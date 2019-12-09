@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, uuid-msgs, catkin, unique-id }:
+{ lib, buildRosPackage, fetchurl, uuid-msgs, unique-id, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-unique-identifier";
   version = "1.0.5";

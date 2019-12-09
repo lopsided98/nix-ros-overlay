@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, ifopt, eigen }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, ifopt, cmake }:
 buildRosPackage {
   pname = "ros-melodic-towr";
   version = "1.4.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ ifopt eigen ];
-  propagatedBuildInputs = [ catkin ifopt eigen ];
+  buildInputs = [ eigen ifopt ];
+  propagatedBuildInputs = [ eigen ifopt catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

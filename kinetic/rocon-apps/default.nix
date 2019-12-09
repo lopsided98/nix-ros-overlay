@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gateway-msgs, rocon-app-manager-msgs, rospy, topic-tools, roslib, rospy-tutorials }:
+{ lib, buildRosPackage, fetchurl, catkin, roslib, rocon-app-manager-msgs, gateway-msgs, topic-tools, rospy, rospy-tutorials }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-apps";
   version = "0.9.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gateway-msgs rocon-app-manager-msgs rospy topic-tools roslib rospy-tutorials ];
+  propagatedBuildInputs = [ roslib rocon-app-manager-msgs gateway-msgs topic-tools rospy rospy-tutorials ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

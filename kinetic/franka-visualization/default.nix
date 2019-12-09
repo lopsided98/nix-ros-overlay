@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, franka-description, sensor-msgs, catkin, libfranka, roscpp, xacro }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, xacro, libfranka, catkin, franka-description, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-franka-visualization";
   version = "0.6.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libfranka sensor-msgs roscpp ];
-  propagatedBuildInputs = [ franka-description sensor-msgs libfranka roscpp xacro ];
+  buildInputs = [ sensor-msgs libfranka roscpp ];
+  propagatedBuildInputs = [ sensor-msgs xacro libfranka franka-description roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

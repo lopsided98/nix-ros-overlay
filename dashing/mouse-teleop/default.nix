@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-xmllint, ament-flake8, rclpy, pythonPackages, ament-pep257, ament-copyright, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-copyright, pythonPackages, ament-xmllint, ament-pep257, rclpy, ament-flake8 }:
 buildRosPackage {
   pname = "ros-dashing-mouse-teleop";
   version = "1.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-xmllint ament-flake8 ament-pep257 ];
-  propagatedBuildInputs = [ rclpy pythonPackages.numpy geometry-msgs pythonPackages.tkinter ];
+  checkInputs = [ ament-xmllint ament-pep257 ament-flake8 ament-copyright ];
+  propagatedBuildInputs = [ pythonPackages.numpy rclpy geometry-msgs pythonPackages.tkinter ];
 
   meta = {
     description = ''A mouse teleop tool for holonomic mobile robots.'';

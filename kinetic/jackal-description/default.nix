@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pointgrey-camera-description, catkin, lms1xx, urdf, robot-state-publisher, roslaunch, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, urdf, pointgrey-camera-description, robot-state-publisher, catkin, roslaunch, lms1xx }:
 buildRosPackage {
   pname = "ros-kinetic-jackal-description";
   version = "0.6.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ pointgrey-camera-description lms1xx urdf robot-state-publisher xacro ];
+  propagatedBuildInputs = [ xacro urdf robot-state-publisher pointgrey-camera-description lms1xx ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rdl-cmake, gtest, catkin, rdl-dynamics, lcov, roslib, urdf, roscpp }:
+{ lib, buildRosPackage, fetchurl, urdf, catkin, roslib, roscpp, gtest, lcov, rdl-dynamics, rdl-cmake }:
 buildRosPackage {
   pname = "ros-kinetic-rdl-urdfreader";
   version = "1.1.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rdl-cmake rdl-dynamics roscpp urdf roslib ];
-  checkInputs = [ lcov gtest ];
-  propagatedBuildInputs = [ rdl-cmake rdl-dynamics roscpp urdf roslib ];
+  buildInputs = [ urdf roslib roscpp rdl-cmake rdl-dynamics ];
+  checkInputs = [ gtest lcov ];
+  propagatedBuildInputs = [ urdf roslib roscpp rdl-cmake rdl-dynamics ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

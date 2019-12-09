@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rtt-ros, actionlib-msgs, catkin, rtt-rosclock, rtt-actionlib-msgs, actionlib, rtt-roscomm, roscpp }:
+{ lib, buildRosPackage, fetchurl, rtt-rosclock, rtt-actionlib-msgs, catkin, actionlib, actionlib-msgs, roscpp, rtt-ros, rtt-roscomm }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-actionlib";
   version = "2.9.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rtt-ros actionlib-msgs rtt-rosclock rtt-actionlib-msgs actionlib rtt-roscomm roscpp ];
-  propagatedBuildInputs = [ rtt-ros actionlib-msgs rtt-rosclock rtt-actionlib-msgs actionlib rtt-roscomm roscpp ];
+  buildInputs = [ rtt-rosclock rtt-actionlib-msgs actionlib actionlib-msgs roscpp rtt-ros rtt-roscomm ];
+  propagatedBuildInputs = [ rtt-rosclock rtt-actionlib-msgs actionlib actionlib-msgs roscpp rtt-ros rtt-roscomm ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

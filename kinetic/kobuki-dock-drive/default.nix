@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ecl-geometry, ecl-build, ecl-threads, ecl-linear-algebra }:
+{ lib, buildRosPackage, fetchurl, ecl-geometry, catkin, ecl-threads, ecl-build, ecl-linear-algebra }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-dock-drive";
   version = "0.7.8-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-build ecl-linear-algebra ecl-geometry ecl-threads ];
-  propagatedBuildInputs = [ ecl-linear-algebra ecl-geometry ecl-threads ];
+  buildInputs = [ ecl-geometry ecl-threads ecl-build ecl-linear-algebra ];
+  propagatedBuildInputs = [ ecl-geometry ecl-threads ecl-linear-algebra ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

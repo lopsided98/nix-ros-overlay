@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-sensors-description, hector-gazebo-plugins, catkin, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, hector-gazebo-plugins, hector-sensors-description, catkin, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-hector-sensors-gazebo";
   version = "0.5.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ hector-sensors-description hector-gazebo-plugins gazebo-plugins ];
+  propagatedBuildInputs = [ hector-gazebo-plugins hector-sensors-description gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, actionlib-msgs, pcl, catkin, roscpp, move-base-msgs, message-generation, message-runtime, visualization-msgs, actionlib, std-msgs, dynamic-reconfigure, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, dynamic-reconfigure, std-msgs, tf, actionlib, catkin, pcl, costmap-2d, actionlib-msgs, visualization-msgs, roscpp, message-runtime, move-base-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-frontier-exploration";
   version = "0.3.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d actionlib-msgs pcl roscpp move-base-msgs message-generation actionlib visualization-msgs dynamic-reconfigure std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ costmap-2d actionlib-msgs pcl roscpp move-base-msgs message-runtime visualization-msgs actionlib std-msgs dynamic-reconfigure tf geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure std-msgs tf actionlib pcl costmap-2d actionlib-msgs visualization-msgs roscpp message-generation move-base-msgs ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure std-msgs tf actionlib pcl costmap-2d actionlib-msgs visualization-msgs roscpp message-runtime move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

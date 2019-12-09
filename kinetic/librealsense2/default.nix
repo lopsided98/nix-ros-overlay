@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, udev, catkin, pkg-config, libusb1, linuxHeaders, openssl }:
+{ lib, buildRosPackage, fetchurl, catkin, libusb1, udev, openssl, pkg-config, linuxHeaders }:
 buildRosPackage {
   pname = "ros-kinetic-librealsense2";
-  version = "2.28.0-r2";
+  version = "2.30.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/kinetic/librealsense2/2.28.0-2.tar.gz";
-    name = "2.28.0-2.tar.gz";
-    sha256 = "4cd9d18cd253d84436e5d2ebe8fb9f437e3e42713df395269e5050e1550954af";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/kinetic/librealsense2/2.30.0-2.tar.gz";
+    name = "2.30.0-2.tar.gz";
+    sha256 = "2aff24d4cb7d1aa4133ffa3ce62783bb6ffed1cb7c0a784f4ba4a096903bcca1";
   };
 
   buildType = "cmake";
-  buildInputs = [ udev pkg-config libusb1 linuxHeaders openssl ];
-  propagatedBuildInputs = [ openssl udev libusb1 linuxHeaders ];
+  buildInputs = [ pkg-config udev openssl libusb1 linuxHeaders ];
+  propagatedBuildInputs = [ libusb1 openssl udev linuxHeaders ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

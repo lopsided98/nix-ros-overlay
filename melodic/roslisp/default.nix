@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, rospack, catkin, sbcl, rosgraph-msgs, roslang }:
+{ lib, buildRosPackage, fetchurl, sbcl, std-srvs, catkin, roslang, rosgraph-msgs, rospack }:
 buildRosPackage {
   pname = "ros-melodic-roslisp";
   version = "1.9.22";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ std-srvs rospack sbcl rosgraph-msgs roslang ];
+  propagatedBuildInputs = [ sbcl std-srvs roslang rosgraph-msgs rospack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

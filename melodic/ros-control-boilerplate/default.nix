@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, cmake-modules, control-msgs, gflags, trajectory-msgs, joint-limits-interface, catkin, control-toolbox, sensor-msgs, urdf, actionlib, std-msgs, rosparam-shortcuts, roscpp, transmission-interface }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, control-toolbox, joint-limits-interface, controller-manager, std-msgs, urdf, hardware-interface, catkin, actionlib, rosparam-shortcuts, cmake-modules, transmission-interface, roscpp, gflags, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ros-control-boilerplate";
   version = "0.5.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager hardware-interface cmake-modules gflags control-msgs trajectory-msgs control-toolbox joint-limits-interface sensor-msgs urdf actionlib std-msgs rosparam-shortcuts roscpp transmission-interface ];
-  propagatedBuildInputs = [ controller-manager hardware-interface control-msgs control-toolbox sensor-msgs trajectory-msgs joint-limits-interface urdf actionlib std-msgs rosparam-shortcuts roscpp transmission-interface ];
+  buildInputs = [ trajectory-msgs sensor-msgs controller-manager urdf hardware-interface std-msgs joint-limits-interface control-toolbox actionlib rosparam-shortcuts cmake-modules transmission-interface roscpp gflags control-msgs ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs controller-manager urdf hardware-interface std-msgs joint-limits-interface control-toolbox actionlib rosparam-shortcuts transmission-interface roscpp control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

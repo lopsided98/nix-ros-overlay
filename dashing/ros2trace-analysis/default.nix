@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-xmllint, ament-flake8, pythonPackages, ament-pep257, ament-copyright, tracetools-analysis, ros2cli }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, pythonPackages, ament-xmllint, ros2cli, ament-pep257, ament-flake8, tracetools-analysis }:
 buildRosPackage {
   pname = "ros-dashing-ros2trace-analysis";
   version = "0.2.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ tracetools-analysis ros2cli ];
-  checkInputs = [ ament-xmllint ament-flake8 pythonPackages.pytest ament-pep257 ament-copyright ];
-  propagatedBuildInputs = [ tracetools-analysis ros2cli ];
+  buildInputs = [ ros2cli tracetools-analysis ];
+  checkInputs = [ ament-copyright ament-xmllint ament-pep257 pythonPackages.pytest ament-flake8 ];
+  propagatedBuildInputs = [ ros2cli tracetools-analysis ];
 
   meta = {
     description = ''The trace analysis command for ROS 2 command line tools.'';

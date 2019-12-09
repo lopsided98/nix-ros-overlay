@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, sicktoolbox, sensor-msgs, catkin, diagnostic-updater, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, sicktoolbox, catkin, roscpp, rosconsole, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-sicktoolbox-wrapper";
   version = "2.5.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole sicktoolbox sensor-msgs diagnostic-updater roscpp ];
-  propagatedBuildInputs = [ rosconsole sicktoolbox sensor-msgs diagnostic-updater roscpp ];
+  buildInputs = [ sensor-msgs sicktoolbox roscpp diagnostic-updater rosconsole ];
+  propagatedBuildInputs = [ sensor-msgs sicktoolbox roscpp diagnostic-updater rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

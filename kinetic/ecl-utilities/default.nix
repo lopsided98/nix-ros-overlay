@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-license, catkin, ecl-concepts, ecl-mpl }:
+{ lib, buildRosPackage, fetchurl, ecl-license, ecl-mpl, ecl-concepts, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-ecl-utilities";
   version = "0.61.17";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-license ecl-concepts ecl-mpl ];
-  propagatedBuildInputs = [ ecl-license ecl-concepts ecl-mpl ];
+  buildInputs = [ ecl-license ecl-mpl ecl-concepts ];
+  propagatedBuildInputs = [ ecl-license ecl-mpl ecl-concepts ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, catkin, urdfdom, rostest, urdf, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, urdf, hardware-interface, urdfdom, catkin, rosunit, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-joint-limits-interface";
   version = "0.15.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface roscpp urdf urdfdom ];
+  buildInputs = [ hardware-interface urdfdom urdf roscpp ];
   checkInputs = [ rostest rosunit ];
-  propagatedBuildInputs = [ hardware-interface roscpp urdf urdfdom ];
+  propagatedBuildInputs = [ hardware-interface urdfdom urdf roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

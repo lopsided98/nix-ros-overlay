@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, rosserial-python, control-msgs, sensor-msgs, catkin, diagnostic-updater, message-generation, message-runtime, actionlib, std-msgs, angles }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, std-msgs, std-srvs, actionlib, catkin, rosserial-python, diagnostic-updater, angles, message-runtime, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-hand-bridge";
   version = "0.6.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs control-msgs sensor-msgs diagnostic-updater message-generation actionlib angles ];
-  propagatedBuildInputs = [ std-srvs rosserial-python control-msgs sensor-msgs diagnostic-updater message-runtime actionlib std-msgs angles ];
+  buildInputs = [ sensor-msgs std-srvs actionlib diagnostic-updater angles message-generation control-msgs ];
+  propagatedBuildInputs = [ sensor-msgs std-msgs std-srvs actionlib rosserial-python diagnostic-updater angles message-runtime control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, dynamic-reconfigure, roscpp, gmock }:
+{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, catkin, roscpp, gmock, rostest }:
 buildRosPackage {
   pname = "ros-melodic-ddynamic-reconfigure";
   version = "0.2.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp dynamic-reconfigure ];
-  checkInputs = [ rostest gmock ];
-  propagatedBuildInputs = [ roscpp dynamic-reconfigure ];
+  buildInputs = [ dynamic-reconfigure roscpp ];
+  checkInputs = [ gmock rostest ];
+  propagatedBuildInputs = [ dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

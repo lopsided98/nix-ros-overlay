@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, common-interfaces, ros-environment, ros2lifecycle, ros2msg, ament-cmake, rcl-lifecycle, class-loader, ament-cmake-auto, ros2param, rosidl-default-runtime, ros2service, ament-cmake-pytest, ament-cmake-gtest, rclcpp, ament-index-python, ros2run, ros2topic, ros2node, rclcpp-lifecycle, ament-cmake-gmock, ros2multicast, ros2launch, ament-index-cpp, ament-cmake-ros, pluginlib, ament-lint-common, rclpy, ros2srv, rosidl-default-generators, ros2pkg, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, pluginlib, ament-index-python, ament-cmake, rcl-lifecycle, class-loader, ament-cmake-gmock, rosidl-default-generators, ament-lint-auto, rclcpp-lifecycle, ament-cmake-ros, ament-lint-common, ros2pkg, ros2lifecycle, ros2msg, rclpy, rclcpp, ament-cmake-gtest, common-interfaces, ros2srv, rosidl-default-runtime, ros2topic, ament-cmake-auto, ros2node, ros-environment, ament-index-cpp, ros2run, ros2multicast, ros2param, ros2service, ament-cmake-pytest, ros2launch }:
 buildRosPackage {
   pname = "ros-crystal-ros-core";
   version = "0.6.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ common-interfaces ros-environment ros2lifecycle ros2msg ament-cmake rcl-lifecycle class-loader ament-cmake-auto ros2param rosidl-default-runtime ros2service ament-cmake-pytest ament-cmake-gtest rclcpp ament-index-python ros2run ros2topic ros2node rclcpp-lifecycle ament-cmake-gmock ros2multicast ros2launch ament-cmake-ros ament-index-cpp pluginlib ament-lint-common rclpy ros2srv rosidl-default-generators ros2pkg ament-lint-auto ];
+  propagatedBuildInputs = [ pluginlib ament-index-python ament-cmake rcl-lifecycle class-loader ament-cmake-gmock rosidl-default-generators ament-lint-auto rclcpp-lifecycle ament-cmake-ros ament-lint-common ros2pkg ros2lifecycle ros2msg rclpy rclcpp ament-cmake-gtest common-interfaces ros2srv rosidl-default-runtime ros2topic ament-cmake-auto ros2node ament-index-cpp ros-environment ros2run ros2multicast ros2param ros2service ament-cmake-pytest ros2launch ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

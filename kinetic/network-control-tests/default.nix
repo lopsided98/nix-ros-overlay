@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, access-point-control, hostapd-access-point, catkin, network-monitor-udp, linksys-access-point, rostest, network-traffic-control, dynamic-reconfigure, ddwrt-access-point }:
+{ lib, buildRosPackage, fetchurl, network-monitor-udp, dynamic-reconfigure, hostapd-access-point, network-traffic-control, catkin, ddwrt-access-point, access-point-control, rostest, linksys-access-point }:
 buildRosPackage {
   pname = "ros-kinetic-network-control-tests";
   version = "1.0.15";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ access-point-control hostapd-access-point network-monitor-udp linksys-access-point rostest network-traffic-control dynamic-reconfigure ddwrt-access-point ];
-  propagatedBuildInputs = [ access-point-control hostapd-access-point network-monitor-udp linksys-access-point rostest network-traffic-control dynamic-reconfigure ddwrt-access-point ];
+  buildInputs = [ network-monitor-udp hostapd-access-point dynamic-reconfigure network-traffic-control ddwrt-access-point access-point-control rostest linksys-access-point ];
+  propagatedBuildInputs = [ network-monitor-udp hostapd-access-point dynamic-reconfigure network-traffic-control ddwrt-access-point access-point-control rostest linksys-access-point ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, urdf, rosunit, roscpp }:
+{ lib, buildRosPackage, fetchurl, roscpp, catkin, urdf, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-industrial-utils";
   version = "0.7.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp urdf ];
+  buildInputs = [ urdf roscpp ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ roscpp urdf ];
+  propagatedBuildInputs = [ urdf roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

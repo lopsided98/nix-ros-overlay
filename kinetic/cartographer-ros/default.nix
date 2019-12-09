@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cartographer, pcl-conversions, geometry-msgs, gflags, pythonPackages, cartographer-ros-msgs, message-runtime, robot-state-publisher, glog, roslaunch, eigen-conversions, roslib, rosbag, catkin, tf2-ros, nav-msgs, urdf, std-msgs, gmock, protobuf, visualization-msgs, roscpp, libyamlcpp, pcl, sensor-msgs, tf2, tf2-eigen, rosunit }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, eigen-conversions, rosunit, tf2, cartographer-ros-msgs, gflags, nav-msgs, sensor-msgs, protobuf, glog, robot-state-publisher, cartographer, roslib, libyamlcpp, rosbag, tf2-ros, std-msgs, catkin, pythonPackages, pcl, roscpp, roslaunch, tf2-eigen, pcl-conversions, visualization-msgs, gmock, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-cartographer-ros";
   version = "0.2.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.sphinx cartographer pcl-conversions geometry-msgs gflags cartographer-ros-msgs message-runtime robot-state-publisher glog roslaunch eigen-conversions roslib rosbag tf2-ros nav-msgs urdf std-msgs protobuf roscpp visualization-msgs libyamlcpp pcl sensor-msgs tf2 tf2-eigen gmock ];
+  buildInputs = [ geometry-msgs urdf eigen-conversions tf2 cartographer-ros-msgs gflags nav-msgs sensor-msgs protobuf glog robot-state-publisher cartographer roslib libyamlcpp rosbag tf2-ros std-msgs pcl roscpp roslaunch tf2-eigen pcl-conversions visualization-msgs pythonPackages.sphinx gmock message-runtime ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ cartographer pcl-conversions geometry-msgs gflags cartographer-ros-msgs message-runtime robot-state-publisher glog roslaunch roslib eigen-conversions rosbag tf2-ros nav-msgs urdf std-msgs roscpp visualization-msgs libyamlcpp pcl sensor-msgs tf2 tf2-eigen ];
+  propagatedBuildInputs = [ geometry-msgs urdf eigen-conversions tf2 cartographer-ros-msgs gflags nav-msgs sensor-msgs glog robot-state-publisher cartographer roslib libyamlcpp rosbag tf2-ros std-msgs pcl roscpp roslaunch tf2-eigen pcl-conversions visualization-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

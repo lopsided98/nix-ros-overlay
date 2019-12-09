@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, tf2-ros, rviz, qt5, eigen, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, qt5, eigen, rviz, roscpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-agni-tf-tools";
   version = "0.1.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2-ros qt5.qtbase rviz eigen roscpp ];
-  propagatedBuildInputs = [ roscpp rviz tf2-ros ];
+  buildInputs = [ qt5.qtbase eigen rviz roscpp tf2-ros ];
+  propagatedBuildInputs = [ rviz tf2-ros roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, actionlib }:
+{ lib, buildRosPackage, fetchurl, message-runtime, actionlib, catkin, actionlib-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-gcloud-speech-msgs";
   version = "0.0.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation actionlib-msgs actionlib ];
+  buildInputs = [ message-generation actionlib actionlib-msgs ];
   propagatedBuildInputs = [ message-runtime ];
   nativeBuildInputs = [ catkin ];
 

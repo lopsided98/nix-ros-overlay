@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, tf2-kdl, liblapack, moveit-core, tf2-eigen, eigen-conversions, roscpp }:
+{ lib, buildRosPackage, fetchurl, moveit-core, liblapack, eigen-conversions, pluginlib, catkin, tf2-eigen, roscpp, tf2-kdl }:
 buildRosPackage {
   pname = "ros-melodic-fetch-ikfast-plugin";
   version = "0.8.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib tf2-kdl liblapack moveit-core tf2-eigen eigen-conversions roscpp ];
-  propagatedBuildInputs = [ pluginlib liblapack moveit-core eigen-conversions roscpp ];
+  buildInputs = [ moveit-core liblapack eigen-conversions pluginlib tf2-eigen roscpp tf2-kdl ];
+  propagatedBuildInputs = [ moveit-core liblapack eigen-conversions pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, openslam-gmapping, tf, catkin, roscpp, rostest, nav-msgs, nodelet }:
+{ lib, buildRosPackage, fetchurl, tf, catkin, openslam-gmapping, nodelet, roscpp, nav-msgs, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-gmapping";
   version = "1.3.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ openslam-gmapping tf roscpp rostest nav-msgs nodelet ];
-  propagatedBuildInputs = [ openslam-gmapping tf roscpp nav-msgs nodelet ];
+  buildInputs = [ tf openslam-gmapping nodelet roscpp nav-msgs rostest ];
+  propagatedBuildInputs = [ tf openslam-gmapping nodelet roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

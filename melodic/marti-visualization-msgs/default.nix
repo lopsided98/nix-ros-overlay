@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-generation, message-runtime, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, message-runtime, catkin, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-marti-visualization-msgs";
   version = "0.8.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-generation geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs message-runtime geometry-msgs ];
+  buildInputs = [ message-generation sensor-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

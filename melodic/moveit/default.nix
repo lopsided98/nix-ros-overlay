@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, moveit-ros, moveit-commander, moveit-core, moveit-planners, moveit-plugins, moveit-setup-assistant }:
+{ lib, buildRosPackage, fetchurl, moveit-core, moveit-commander, moveit-setup-assistant, catkin, moveit-ros, moveit-planners, moveit-plugins }:
 buildRosPackage {
   pname = "ros-melodic-moveit";
   version = "1.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ moveit-ros moveit-core moveit-commander moveit-planners moveit-plugins moveit-setup-assistant ];
+  propagatedBuildInputs = [ moveit-core moveit-commander moveit-setup-assistant moveit-ros moveit-planners moveit-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

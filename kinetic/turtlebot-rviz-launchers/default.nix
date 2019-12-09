@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot-bringup, catkin, rviz, turtlebot-teleop, joint-state-publisher }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, turtlebot-teleop, catkin, rviz, turtlebot-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-rviz-launchers";
   version = "2.3.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ turtlebot-bringup joint-state-publisher rviz turtlebot-teleop ];
+  propagatedBuildInputs = [ turtlebot-teleop joint-state-publisher rviz turtlebot-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, catkin, nav-msgs, controller-manager-msgs, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, geometry-msgs, controller-manager-msgs, std-msgs, catkin, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-jointstick";
   version = "0.9.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs sensor-msgs nav-msgs controller-manager-msgs std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs nav-msgs controller-manager-msgs std-msgs geometry-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs controller-manager-msgs std-msgs nav-msgs ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs controller-manager-msgs std-msgs nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

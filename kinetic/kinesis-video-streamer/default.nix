@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport, gtest, catkin, rostest, aws-common, kinesis-video-msgs, rostopic, kinesis-manager, std-msgs, aws-ros1-common, roscpp, gmock }:
+{ lib, buildRosPackage, fetchurl, kinesis-manager, std-msgs, aws-ros1-common, catkin, rostopic, image-transport, roscpp, gtest, gmock, aws-common, rostest, kinesis-video-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-kinesis-video-streamer";
   version = "2.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-transport aws-common kinesis-video-msgs kinesis-manager std-msgs aws-ros1-common roscpp ];
-  checkInputs = [ rostest gtest gmock rostopic ];
-  propagatedBuildInputs = [ image-transport aws-common kinesis-video-msgs kinesis-manager std-msgs aws-ros1-common roscpp ];
+  buildInputs = [ kinesis-manager std-msgs aws-ros1-common image-transport roscpp aws-common kinesis-video-msgs ];
+  checkInputs = [ gtest gmock rostest rostopic ];
+  propagatedBuildInputs = [ kinesis-manager std-msgs aws-ros1-common image-transport roscpp aws-common kinesis-video-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

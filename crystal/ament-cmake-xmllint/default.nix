@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-xmllint, ament-cmake-core, ament-cmake-test, ament-cmake-lint-cmake, ament-cmake-copyright }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, ament-cmake-test, ament-xmllint, ament-cmake-core, ament-cmake-copyright }:
 buildRosPackage {
   pname = "ros-crystal-ament-cmake-xmllint";
   version = "0.6.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
+  checkInputs = [ ament-cmake-lint-cmake ament-cmake-copyright ];
   propagatedBuildInputs = [ ament-cmake-test ament-xmllint ];
-  nativeBuildInputs = [ ament-cmake-test ament-cmake-core ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 
   meta = {
     description = ''The CMake API for ament_xmllint to check XML file using xmmlint.'';

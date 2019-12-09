@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gtk3, ament-cmake, udev, pkg-config, libusb1, glfw3, linuxHeaders, openssl, libGLU, libGL }:
+{ lib, buildRosPackage, fetchurl, libGLU, udev, libGL, glfw3, ament-cmake, openssl, libusb1, gtk3, pkg-config, linuxHeaders }:
 buildRosPackage {
   pname = "ros-dashing-librealsense2";
   version = "2.16.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ gtk3 udev pkg-config libusb1 glfw3 linuxHeaders openssl libGLU libGL ];
-  propagatedBuildInputs = [ gtk3 udev libusb1 glfw3 linuxHeaders openssl libGLU libGL ];
+  buildInputs = [ pkg-config libGLU udev libGL glfw3 openssl gtk3 libusb1 linuxHeaders ];
+  propagatedBuildInputs = [ libGLU udev libGL glfw3 openssl gtk3 libusb1 linuxHeaders ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

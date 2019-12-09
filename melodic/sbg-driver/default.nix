@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, sensor-msgs, catkin, message-generation, message-runtime, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, std-msgs, std-srvs, catkin, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-sbg-driver";
   version = "1.1.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs sensor-msgs message-generation std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs sensor-msgs message-runtime std-msgs roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs std-srvs roscpp message-generation ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs std-srvs roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

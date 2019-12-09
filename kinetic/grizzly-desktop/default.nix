@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, grizzly-msgs, grizzly-viz }:
+{ lib, buildRosPackage, fetchurl, grizzly-viz, catkin, grizzly-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-grizzly-desktop";
   version = "0.3.2";

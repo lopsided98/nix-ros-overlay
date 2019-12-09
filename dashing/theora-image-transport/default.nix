@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, pluginlib, ament-lint-common, image-transport, rosidl-default-generators, cv-bridge, libogg, std-msgs, rclcpp, libtheora, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, pluginlib, rosidl-default-runtime, std-msgs, ament-lint-common, libogg, ament-cmake, image-transport, libtheora, builtin-interfaces, cv-bridge, rosidl-default-generators, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-theora-image-transport";
   version = "2.1.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces pluginlib image-transport cv-bridge libogg libtheora rclcpp std-msgs ];
+  buildInputs = [ rclcpp pluginlib std-msgs libogg image-transport cv-bridge libtheora builtin-interfaces ];
   checkInputs = [ ament-lint-common ];
-  propagatedBuildInputs = [ builtin-interfaces pluginlib image-transport cv-bridge libogg libtheora rclcpp std-msgs rosidl-default-runtime ];
+  propagatedBuildInputs = [ rclcpp rosidl-default-runtime pluginlib std-msgs libogg image-transport cv-bridge libtheora builtin-interfaces ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

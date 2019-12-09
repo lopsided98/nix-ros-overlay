@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-msgs, rtt-roscomm, catkin, rtt-std-msgs }:
+{ lib, buildRosPackage, fetchurl, diagnostic-msgs, rtt-roscomm, rtt-std-msgs, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-diagnostic-msgs";
   version = "2.9.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs rtt-std-msgs rtt-roscomm ];
-  propagatedBuildInputs = [ diagnostic-msgs rtt-std-msgs rtt-roscomm ];
+  buildInputs = [ rtt-std-msgs rtt-roscomm diagnostic-msgs ];
+  propagatedBuildInputs = [ rtt-std-msgs rtt-roscomm diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

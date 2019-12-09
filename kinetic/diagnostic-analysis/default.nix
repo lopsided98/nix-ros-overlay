@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag, catkin, rostest, diagnostic-msgs, roslib }:
+{ lib, buildRosPackage, fetchurl, diagnostic-msgs, catkin, roslib, rosbag, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-diagnostic-analysis";
   version = "1.9.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs rostest rosbag roslib ];
-  propagatedBuildInputs = [ diagnostic-msgs rosbag roslib ];
+  buildInputs = [ rosbag roslib diagnostic-msgs rostest ];
+  propagatedBuildInputs = [ rosbag diagnostic-msgs roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

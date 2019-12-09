@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, self-test, camera-calibration-parsers, image-transport, sensor-msgs, catkin, driver-base, polled-camera, prosilica-gige-sdk, diagnostic-updater, dynamic-reconfigure, std-msgs, diagnostic-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, prosilica-gige-sdk, diagnostic-msgs, dynamic-reconfigure, std-msgs, catkin, image-transport, self-test, driver-base, roscpp, polled-camera, camera-calibration-parsers, rosconsole, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-prosilica-camera";
   version = "1.9.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole self-test camera-calibration-parsers image-transport sensor-msgs driver-base polled-camera prosilica-gige-sdk diagnostic-updater dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
-  propagatedBuildInputs = [ self-test camera-calibration-parsers image-transport sensor-msgs driver-base polled-camera prosilica-gige-sdk diagnostic-updater dynamic-reconfigure std-msgs diagnostic-msgs roscpp ];
+  buildInputs = [ sensor-msgs prosilica-gige-sdk diagnostic-msgs dynamic-reconfigure std-msgs image-transport self-test driver-base roscpp polled-camera camera-calibration-parsers rosconsole diagnostic-updater ];
+  propagatedBuildInputs = [ sensor-msgs prosilica-gige-sdk diagnostic-msgs dynamic-reconfigure std-msgs image-transport self-test driver-base roscpp polled-camera camera-calibration-parsers diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, self-test, diagnostic-analysis, catkin, diagnostic-common-diagnostics, diagnostic-updater, diagnostic-aggregator }:
+{ lib, buildRosPackage, fetchurl, diagnostic-aggregator, catkin, self-test, diagnostic-common-diagnostics, diagnostic-analysis, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-diagnostics";
   version = "1.9.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ self-test diagnostic-analysis diagnostic-common-diagnostics diagnostic-updater diagnostic-aggregator ];
+  propagatedBuildInputs = [ diagnostic-aggregator self-test diagnostic-common-diagnostics diagnostic-analysis diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, nav2-common, lifecycle-msgs, rclcpp-action, geometry-msgs, ament-cmake-pytest, boost, ament-cmake-gtest, launch, rclcpp, std-srvs, rclcpp-lifecycle, tf2-geometry-msgs, tf2-ros, nav-msgs, SDL, SDL_image, ament-lint-common, test-msgs, launch-testing, nav2-msgs, tf2, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-cmake, test-msgs, tf2, nav2-msgs, nav-msgs, ament-lint-auto, rclcpp-lifecycle, SDL_image, SDL, launch-testing, ament-lint-common, tf2-geometry-msgs, nav2-common, rclcpp, ament-cmake-gtest, tf2-ros, std-srvs, lifecycle-msgs, rclcpp-action, boost, launch, ament-cmake-pytest }:
 buildRosPackage {
   pname = "ros-dashing-nav2-util";
   version = "0.2.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ SDL SDL_image tf2-geometry-msgs rclcpp-lifecycle test-msgs boost nav2-msgs tf2-ros nav2-common tf2 nav-msgs lifecycle-msgs rclcpp-action rclcpp geometry-msgs ];
-  checkInputs = [ std-srvs ament-cmake-pytest rclcpp-lifecycle ament-lint-common test-msgs launch-testing ament-cmake-gtest launch rclcpp-action ament-lint-auto ];
-  propagatedBuildInputs = [ SDL rclcpp-lifecycle SDL_image tf2-geometry-msgs boost test-msgs nav2-msgs tf2-ros nav2-common tf2 nav-msgs lifecycle-msgs rclcpp-action rclcpp geometry-msgs ];
+  buildInputs = [ rclcpp-action rclcpp-lifecycle SDL_image geometry-msgs nav-msgs boost SDL test-msgs tf2-geometry-msgs nav2-common lifecycle-msgs tf2 rclcpp nav2-msgs tf2-ros ];
+  checkInputs = [ rclcpp-action rclcpp-lifecycle launch launch-testing std-srvs ament-lint-common test-msgs ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ tf2-ros boost rclcpp-action geometry-msgs SDL_image nav-msgs rclcpp-lifecycle SDL test-msgs tf2-geometry-msgs nav2-common tf2 rclcpp nav2-msgs lifecycle-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

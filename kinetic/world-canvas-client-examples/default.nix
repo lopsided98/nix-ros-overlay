@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, unique-id, catkin, yocs-msgs, world-canvas-client-py, uuid-msgs, world-canvas-client-cpp, nav-msgs, world-canvas-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, world-canvas-client-cpp, unique-id, world-canvas-client-py, uuid-msgs, catkin, world-canvas-msgs, roscpp, yocs-msgs, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-world-canvas-client-examples";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ unique-id yocs-msgs uuid-msgs world-canvas-client-cpp nav-msgs world-canvas-msgs roscpp ];
-  propagatedBuildInputs = [ unique-id yocs-msgs world-canvas-client-py uuid-msgs world-canvas-client-cpp nav-msgs world-canvas-msgs roscpp ];
+  buildInputs = [ world-canvas-client-cpp unique-id nav-msgs world-canvas-msgs roscpp yocs-msgs uuid-msgs ];
+  propagatedBuildInputs = [ world-canvas-client-cpp unique-id nav-msgs world-canvas-client-py world-canvas-msgs roscpp yocs-msgs uuid-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

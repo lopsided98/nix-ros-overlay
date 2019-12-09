@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, catkin, roscpp, tf2, nav-msgs, urdf, message-generation, message-runtime, rospy, std-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, urdf, std-msgs, std-srvs, tf, catkin, roscpp, rospy, tf2, message-runtime, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-base-controller-utils";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs roscpp tf2 nav-msgs message-generation urdf std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs roscpp tf2 nav-msgs urdf message-runtime rospy std-msgs tf geometry-msgs ];
+  buildInputs = [ geometry-msgs urdf std-msgs std-srvs tf roscpp tf2 message-generation nav-msgs ];
+  propagatedBuildInputs = [ geometry-msgs urdf message-runtime std-msgs std-srvs tf roscpp tf2 rospy nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, simple-grasping, moveit-python, catkin, teleop-twist-keyboard, fetch-moveit-config, moveit-commander, actionlib, fetch-navigation, fetch-gazebo }:
+{ lib, buildRosPackage, fetchurl, fetch-navigation, moveit-commander, moveit-python, actionlib, catkin, fetch-gazebo, teleop-twist-keyboard, fetch-moveit-config, simple-grasping }:
 buildRosPackage {
   pname = "ros-melodic-fetch-gazebo-demo";
   version = "0.9.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ simple-grasping moveit-python teleop-twist-keyboard fetch-moveit-config moveit-commander actionlib fetch-navigation fetch-gazebo ];
+  propagatedBuildInputs = [ fetch-navigation moveit-commander moveit-python actionlib fetch-gazebo teleop-twist-keyboard fetch-moveit-config simple-grasping ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

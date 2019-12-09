@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, actionlib-msgs, trajectory-msgs, sensor-msgs, industrial-utils, catkin, industrial-msgs, simple-message, urdf, robot-state-publisher, actionlib, std-msgs, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, urdf, robot-state-publisher, std-msgs, industrial-utils, actionlib, catkin, rosunit, industrial-msgs, actionlib-msgs, roscpp, simple-message, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-industrial-robot-client";
   version = "0.7.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs control-msgs trajectory-msgs sensor-msgs industrial-utils industrial-msgs simple-message urdf actionlib std-msgs roscpp ];
+  buildInputs = [ trajectory-msgs sensor-msgs urdf std-msgs industrial-utils actionlib industrial-msgs actionlib-msgs roscpp simple-message control-msgs ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ actionlib-msgs control-msgs trajectory-msgs sensor-msgs industrial-utils industrial-msgs simple-message urdf robot-state-publisher actionlib std-msgs roscpp ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs urdf robot-state-publisher std-msgs industrial-utils actionlib industrial-msgs actionlib-msgs roscpp simple-message control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

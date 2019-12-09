@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, robotis-controller-msgs, thormang3-action-module-msgs, roslib, std-msgs, roscpp, robotis-framework-common }:
+{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, boost, thormang3-action-module-msgs, std-msgs, catkin, roslib, robotis-framework-common, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-action-module";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost roscpp thormang3-action-module-msgs roslib std-msgs robotis-controller-msgs robotis-framework-common ];
-  propagatedBuildInputs = [ boost roscpp thormang3-action-module-msgs roslib std-msgs robotis-controller-msgs robotis-framework-common ];
+  buildInputs = [ robotis-controller-msgs boost thormang3-action-module-msgs std-msgs roslib robotis-framework-common roscpp ];
+  propagatedBuildInputs = [ robotis-controller-msgs boost thormang3-action-module-msgs std-msgs roslib robotis-framework-common roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

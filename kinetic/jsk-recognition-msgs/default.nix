@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jsk-footstep-msgs, catkin, sensor-msgs, message-generation, pcl-msgs, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, catkin, pcl-msgs, jsk-footstep-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-recognition-msgs";
   version = "1.2.9";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs jsk-footstep-msgs message-generation pcl-msgs std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs jsk-footstep-msgs message-generation pcl-msgs std-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs pcl-msgs jsk-footstep-msgs message-generation ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs pcl-msgs jsk-footstep-msgs message-generation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

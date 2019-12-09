@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, loki-description, catkin, loki-base-node }:
+{ lib, buildRosPackage, fetchurl, loki-description, loki-base-node, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-loki-bringup";
   version = "0.0.2";

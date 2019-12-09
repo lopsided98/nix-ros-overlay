@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, catkin, mir-description, fake-localization, robot-localization, mir-driver, rostopic, robot-state-publisher, rqt-robot-steering, topic-tools, roslaunch, joint-state-publisher }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, rqt-robot-steering, controller-manager, robot-state-publisher, mir-driver, catkin, gazebo-ros, rostopic, robot-localization, fake-localization, mir-description, topic-tools, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-mir-gazebo";
   version = "1.0.4-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros controller-manager mir-description fake-localization robot-localization mir-driver rostopic robot-state-publisher rqt-robot-steering topic-tools joint-state-publisher ];
+  propagatedBuildInputs = [ joint-state-publisher rqt-robot-steering controller-manager robot-state-publisher mir-driver gazebo-ros rostopic robot-localization fake-localization mir-description topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

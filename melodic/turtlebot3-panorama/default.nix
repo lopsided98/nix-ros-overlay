@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, turtlebot3-applications-msgs, cmake-modules, image-transport, sensor-msgs, cv-bridge, catkin, nav-msgs, turtlebot3-bringup, rospy, std-msgs, roscpp, geometry-msgs, eigen }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, turtlebot3-bringup, geometry-msgs, std-msgs, std-srvs, cmake-modules, catkin, image-transport, eigen, cv-bridge, roscpp, rospy, nav-msgs, turtlebot3-applications-msgs }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-panorama";
   version = "1.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs turtlebot3-applications-msgs cmake-modules image-transport sensor-msgs cv-bridge rospy nav-msgs eigen std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs cmake-modules turtlebot3-applications-msgs image-transport sensor-msgs cv-bridge nav-msgs turtlebot3-bringup rospy std-msgs roscpp geometry-msgs eigen ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs std-srvs cmake-modules image-transport eigen cv-bridge roscpp rospy nav-msgs turtlebot3-applications-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs turtlebot3-bringup std-msgs std-srvs cmake-modules image-transport eigen cv-bridge roscpp rospy nav-msgs turtlebot3-applications-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

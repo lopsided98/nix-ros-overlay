@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, twist-mux, joint-state-controller, diff-drive-controller, joy, catkin, joint-trajectory-controller, robot-localization, rostopic, teleop-twist-joy, interactive-marker-twist-server, yocs-cmd-vel-mux, roslaunch, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, joy, teleop-twist-joy, geometry-msgs, controller-manager, twist-mux, catkin, rostopic, yocs-cmd-vel-mux, interactive-marker-twist-server, robot-localization, diff-drive-controller, roscpp, joint-trajectory-controller, roslaunch, joint-state-controller }:
 buildRosPackage {
   pname = "ros-kinetic-roch-teleop";
   version = "2.0.12";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslaunch roscpp joy geometry-msgs ];
-  propagatedBuildInputs = [ controller-manager twist-mux joint-state-controller diff-drive-controller joy joint-trajectory-controller robot-localization rostopic teleop-twist-joy interactive-marker-twist-server yocs-cmd-vel-mux roscpp geometry-msgs ];
+  buildInputs = [ joy roslaunch geometry-msgs roscpp ];
+  propagatedBuildInputs = [ joy teleop-twist-joy geometry-msgs controller-manager twist-mux rostopic yocs-cmd-vel-mux interactive-marker-twist-server robot-localization diff-drive-controller roscpp joint-trajectory-controller joint-state-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

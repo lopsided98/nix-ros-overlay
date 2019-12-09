@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, cmake-modules, tf, image-transport, sensor-msgs, catkin, cv-bridge, image-geometry, message-generation, apriltag, message-runtime, nodelet, eigen, std-msgs, roscpp, opencv3, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, message-runtime, pluginlib, std-msgs, tf, catkin, cmake-modules, image-transport, eigen, cv-bridge, nodelet, roscpp, apriltag, message-generation, opencv3, image-geometry }:
 buildRosPackage {
   pname = "ros-melodic-apriltag-ros";
   version = "3.1.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib cmake-modules image-transport sensor-msgs cv-bridge roscpp image-geometry message-generation apriltag nodelet eigen std-msgs tf opencv3 geometry-msgs ];
-  propagatedBuildInputs = [ pluginlib tf image-transport sensor-msgs cv-bridge image-geometry apriltag message-runtime nodelet eigen std-msgs roscpp opencv3 geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs pluginlib std-msgs tf cmake-modules roscpp image-transport eigen cv-bridge nodelet opencv3 apriltag message-generation image-geometry ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs pluginlib std-msgs tf image-transport eigen cv-bridge nodelet roscpp apriltag message-runtime opencv3 image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

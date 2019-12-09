@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, uwsim-bullet, catkin, openscenegraph, uwsim-osgworks, cmake }:
+{ lib, buildRosPackage, fetchurl, uwsim-bullet, boost, catkin, cmake, uwsim-osgworks, openscenegraph }:
 buildRosPackage {
   pname = "ros-melodic-uwsim-osgbullet";
-  version = "3.0.1-r1";
+  version = "3.0.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/uji-ros-pkg/uwsim_osgbullet-release/archive/release/melodic/uwsim_osgbullet/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "6674aca98313e69c267c49d5d6df153f12dac2a821540b054e85c2626f2d6012";
+    url = "https://github.com/uji-ros-pkg/uwsim_osgbullet-release/archive/release/melodic/uwsim_osgbullet/3.0.1-3.tar.gz";
+    name = "3.0.1-3.tar.gz";
+    sha256 = "02837902799dfbced008ccff28abccb0b7115e2c3efeb2733496e2246a031582";
   };
 
   buildType = "cmake";
-  buildInputs = [ uwsim-osgworks openscenegraph boost uwsim-bullet ];
-  propagatedBuildInputs = [ boost uwsim-bullet catkin openscenegraph uwsim-osgworks ];
+  buildInputs = [ uwsim-osgworks uwsim-bullet boost openscenegraph ];
+  propagatedBuildInputs = [ uwsim-bullet boost catkin uwsim-osgworks openscenegraph ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

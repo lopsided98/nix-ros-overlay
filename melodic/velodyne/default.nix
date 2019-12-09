@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, velodyne-laserscan, velodyne-driver, catkin, velodyne-pointcloud, velodyne-msgs }:
+{ lib, buildRosPackage, fetchurl, velodyne-driver, catkin, velodyne-pointcloud, velodyne-laserscan, velodyne-msgs }:
 buildRosPackage {
   pname = "ros-melodic-velodyne";
   version = "1.5.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ velodyne-driver velodyne-pointcloud velodyne-laserscan velodyne-msgs ];
+  propagatedBuildInputs = [ velodyne-laserscan velodyne-driver velodyne-pointcloud velodyne-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

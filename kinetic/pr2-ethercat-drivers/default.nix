@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ethercat-hardware, fingertip-pressure }:
+{ lib, buildRosPackage, fetchurl, ethercat-hardware, catkin, fingertip-pressure }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-ethercat-drivers";
   version = "1.8.18-r1";

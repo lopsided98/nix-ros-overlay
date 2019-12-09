@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-mechanism-msgs, rqt-gui-py, ethercat-hardware, pluginlib, pr2-controller-interface, rqt-gui, catkin, rospy, pr2-mechanism-model }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, pr2-mechanism-model, pluginlib, catkin, pr2-controller-interface, ethercat-hardware, rqt-gui-py, rospy, pr2-mechanism-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-motor-diagnostic-tool";
   version = "1.0.15-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-mechanism-msgs rqt-gui-py pluginlib pr2-controller-interface ethercat-hardware rqt-gui rospy pr2-mechanism-model ];
-  propagatedBuildInputs = [ pr2-mechanism-msgs rqt-gui-py pluginlib pr2-controller-interface ethercat-hardware rqt-gui rospy pr2-mechanism-model ];
+  buildInputs = [ rqt-gui pr2-mechanism-model pluginlib pr2-controller-interface ethercat-hardware rqt-gui-py rospy pr2-mechanism-msgs ];
+  propagatedBuildInputs = [ rqt-gui pr2-mechanism-model pluginlib pr2-controller-interface ethercat-hardware rqt-gui-py rospy pr2-mechanism-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

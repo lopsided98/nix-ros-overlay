@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, cmake-modules, boost, geometry-msgs, trajectory-msgs, sensor-msgs, catkin, robotis-manipulator, open-manipulator-libs, moveit-core, std-msgs, moveit-msgs, roscpp, moveit-ros-planning-interface, open-manipulator-msgs }:
+{ lib, buildRosPackage, fetchurl, moveit-core, robotis-manipulator, boost, geometry-msgs, trajectory-msgs, sensor-msgs, std-msgs, moveit-ros-planning-interface, cmake-modules, catkin, moveit-ros-planning, open-manipulator-msgs, moveit-msgs, roscpp, open-manipulator-libs }:
 buildRosPackage {
   pname = "ros-melodic-open-manipulator-controller";
   version = "2.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-planning boost cmake-modules geometry-msgs trajectory-msgs sensor-msgs robotis-manipulator open-manipulator-libs moveit-core std-msgs moveit-msgs roscpp moveit-ros-planning-interface open-manipulator-msgs ];
-  propagatedBuildInputs = [ moveit-ros-planning cmake-modules boost geometry-msgs trajectory-msgs sensor-msgs robotis-manipulator open-manipulator-libs moveit-core std-msgs moveit-msgs roscpp moveit-ros-planning-interface open-manipulator-msgs ];
+  buildInputs = [ trajectory-msgs boost robotis-manipulator geometry-msgs moveit-core sensor-msgs std-msgs moveit-ros-planning-interface cmake-modules moveit-ros-planning open-manipulator-msgs moveit-msgs roscpp open-manipulator-libs ];
+  propagatedBuildInputs = [ robotis-manipulator sensor-msgs boost geometry-msgs moveit-core trajectory-msgs std-msgs moveit-ros-planning-interface cmake-modules moveit-ros-planning open-manipulator-msgs moveit-msgs roscpp open-manipulator-libs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

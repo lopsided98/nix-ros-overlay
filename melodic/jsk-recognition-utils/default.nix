@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-geometry, jsk-tools, pcl-ros, tf-conversions, tf, geometry-msgs, pythonPackages, jsk-topic-tools, message-generation, message-runtime, pcl-msgs, eigen-conversions, catkin, tf2-ros, jsk-recognition-msgs, std-msgs, visualization-msgs, libyamlcpp, sensor-msgs, qt5, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, eigen-conversions, tf, sensor-msgs, dynamic-reconfigure, libyamlcpp, qt5, jsk-tools, tf2-ros, pcl-ros, jsk-topic-tools, std-msgs, jsk-recognition-msgs, catkin, pythonPackages, message-generation, image-geometry, pcl-msgs, visualization-msgs, message-runtime, tf-conversions }:
 buildRosPackage {
   pname = "ros-melodic-jsk-recognition-utils";
   version = "1.2.10";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.cython tf libyamlcpp sensor-msgs jsk-topic-tools pcl-msgs eigen-conversions qt5.qtbase image-geometry tf2-ros message-generation tf-conversions jsk-recognition-msgs pcl-ros std-msgs dynamic-reconfigure visualization-msgs geometry-msgs ];
+  buildInputs = [ pcl-ros jsk-topic-tools sensor-msgs geometry-msgs dynamic-reconfigure eigen-conversions std-msgs tf pcl-msgs jsk-recognition-msgs qt5.qtbase libyamlcpp visualization-msgs pythonPackages.cython message-generation tf-conversions tf2-ros image-geometry ];
   checkInputs = [ jsk-tools ];
-  propagatedBuildInputs = [ tf-conversions libyamlcpp sensor-msgs jsk-topic-tools tf2-ros image-geometry pythonPackages.chainer message-runtime jsk-recognition-msgs pcl-msgs std-msgs pythonPackages.scikitimage eigen-conversions tf pcl-ros visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ pcl-ros jsk-topic-tools sensor-msgs geometry-msgs eigen-conversions std-msgs tf pcl-msgs jsk-recognition-msgs pythonPackages.scikitimage libyamlcpp pythonPackages.chainer visualization-msgs message-runtime tf-conversions tf2-ros image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

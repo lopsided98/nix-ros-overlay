@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, nav-msgs, message-generation, message-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, catkin, message-generation, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-distance-map-msgs";
   version = "0.1.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs nav-msgs message-generation ];
-  propagatedBuildInputs = [ std-msgs nav-msgs message-runtime ];
+  buildInputs = [ std-msgs message-generation nav-msgs ];
+  propagatedBuildInputs = [ std-msgs message-runtime nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

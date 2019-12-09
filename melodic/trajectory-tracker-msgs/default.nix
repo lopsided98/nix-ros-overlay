@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, message-generation, nav-msgs, message-runtime, std-msgs, roscpp, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, std-msgs, catkin, roslint, rosunit, roscpp, message-runtime, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-trajectory-tracker-msgs";
   version = "0.5.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
-  checkInputs = [ rosunit nav-msgs roslint roscpp ];
+  checkInputs = [ rosunit nav-msgs roscpp roslint ];
   propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

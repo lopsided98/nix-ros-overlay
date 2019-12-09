@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, openscenegraph, roscpp, roslib, visualization-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, tf, roslib, catkin, visualization-msgs, roscpp, openscenegraph }:
 buildRosPackage {
   pname = "ros-kinetic-osg-markers";
   version = "1.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ openscenegraph roscpp roslib visualization-msgs tf ];
-  propagatedBuildInputs = [ tf openscenegraph roscpp visualization-msgs roslib ];
+  buildInputs = [ tf roslib visualization-msgs roscpp openscenegraph ];
+  propagatedBuildInputs = [ tf roslib visualization-msgs roscpp openscenegraph ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

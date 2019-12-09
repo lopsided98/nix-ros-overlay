@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-build, ecl-license, ecl-config, ament-cmake-ros }:
+{ lib, buildRosPackage, fetchurl, ecl-license, ecl-config, ecl-build, ament-cmake-ros }:
 buildRosPackage {
   pname = "ros-crystal-ecl-errors";
   version = "1.0.1";

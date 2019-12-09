@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mini-maxwell, libcmt, rosping, ffha, rostwitter, opt-camera, libsiftfast, julius, slic, bayesian-belief-networks, voice-text, rospatlite, catkin, ff, pgm-learner, downward, julius-ros, assimp-devel, nlopt }:
+{ lib, buildRosPackage, fetchurl, libsiftfast, pgm-learner, nlopt, rostwitter, mini-maxwell, julius-ros, julius, ff, assimp-devel, ffha, catkin, rospatlite, slic, downward, rosping, voice-text, opt-camera, libcmt, bayesian-belief-networks }:
 buildRosPackage {
   pname = "ros-melodic-jsk-3rdparty";
   version = "2.1.13-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ bayesian-belief-networks opt-camera rospatlite libcmt julius-ros rosping mini-maxwell libsiftfast julius voice-text slic ff pgm-learner ffha rostwitter assimp-devel downward nlopt ];
+  propagatedBuildInputs = [ ff opt-camera libsiftfast mini-maxwell julius-ros pgm-learner rospatlite nlopt slic downward rostwitter assimp-devel libcmt julius rosping voice-text ffha bayesian-belief-networks ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

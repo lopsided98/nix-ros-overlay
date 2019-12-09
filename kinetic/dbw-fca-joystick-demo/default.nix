@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dbw-fca-msgs, sensor-msgs, joy, catkin, roslib, dbw-fca-can, std-msgs, roslaunch, roscpp }:
+{ lib, buildRosPackage, fetchurl, joy, sensor-msgs, dbw-fca-msgs, std-msgs, catkin, roslib, roscpp, roslaunch, dbw-fca-can }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-fca-joystick-demo";
   version = "1.0.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs sensor-msgs roscpp dbw-fca-msgs ];
+  buildInputs = [ std-msgs sensor-msgs dbw-fca-msgs roscpp ];
   checkInputs = [ roslaunch roslib ];
-  propagatedBuildInputs = [ dbw-fca-msgs sensor-msgs joy dbw-fca-can std-msgs roslaunch roscpp ];
+  propagatedBuildInputs = [ joy sensor-msgs dbw-fca-msgs std-msgs roscpp roslaunch dbw-fca-can ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

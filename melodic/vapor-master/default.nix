@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospack, nodejs, nodePackages, catkin }:
+{ lib, buildRosPackage, fetchurl, nodejs, catkin, nodePackages, rospack }:
 buildRosPackage {
   pname = "ros-melodic-vapor-master";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rospack nodejs ];
-  nativeBuildInputs = [ nodePackages.npm nodejs catkin ];
+  propagatedBuildInputs = [ nodejs rospack ];
+  nativeBuildInputs = [ catkin nodePackages.npm nodejs ];
 
   meta = {
     description = ''high availability ros master'';

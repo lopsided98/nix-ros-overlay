@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pythonPackages, ament-flake8, ament-pep257 }:
+{ lib, buildRosPackage, fetchurl, ament-pep257, pythonPackages, ament-flake8 }:
 buildRosPackage {
   pname = "ros-crystal-ament-index-python";
   version = "0.5.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 pythonPackages.pytest ament-pep257 ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-pep257 ];
 
   meta = {
     description = ''Python API to access the ament resource index.'';

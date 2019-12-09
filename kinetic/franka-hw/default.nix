@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, franka-description, joint-limits-interface, gtest, catkin, rostest, controller-interface, urdf, libfranka, roscpp }:
+{ lib, buildRosPackage, fetchurl, controller-interface, libfranka, joint-limits-interface, urdf, hardware-interface, catkin, franka-description, roscpp, gtest, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-franka-hw";
   version = "0.6.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface joint-limits-interface controller-interface urdf libfranka roscpp ];
-  checkInputs = [ rostest gtest franka-description ];
-  propagatedBuildInputs = [ hardware-interface joint-limits-interface controller-interface urdf libfranka roscpp ];
+  buildInputs = [ controller-interface libfranka urdf joint-limits-interface hardware-interface roscpp ];
+  checkInputs = [ gtest rostest franka-description ];
+  propagatedBuildInputs = [ controller-interface libfranka urdf joint-limits-interface hardware-interface roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

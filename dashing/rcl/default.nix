@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rmw-implementation-cmake, rosidl-default-runtime, rosidl-generator-c, ament-cmake-pytest, ament-cmake-gtest, launch, rmw-implementation, osrf-testing-tools-cpp, rmw, tinydir-vendor, launch-testing-ament-cmake, rcl-interfaces, ament-cmake-ros, rcutils, ament-lint-common, test-msgs, launch-testing, rcl-logging-noop, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, test-msgs, osrf-testing-tools-cpp, rmw-implementation, ament-lint-auto, ament-cmake-ros, rcutils, rmw-implementation-cmake, launch-testing, ament-lint-common, rmw, rosidl-generator-c, tinydir-vendor, ament-cmake-gtest, rosidl-default-runtime, launch-testing-ament-cmake, launch, rcl-interfaces, ament-cmake-pytest, rcl-logging-noop }:
 buildRosPackage {
   pname = "ros-dashing-rcl";
   version = "0.7.7-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tinydir-vendor rcl-logging-noop rmw-implementation rcl-interfaces rcutils rosidl-generator-c ];
-  checkInputs = [ ament-cmake-pytest rmw-implementation-cmake ament-lint-common test-msgs launch-testing ament-cmake-gtest launch launch-testing-ament-cmake ament-lint-auto osrf-testing-tools-cpp rmw ];
-  propagatedBuildInputs = [ rosidl-generator-c ament-cmake rcutils rcl-logging-noop rmw-implementation rcl-interfaces rosidl-default-runtime rmw tinydir-vendor ];
+  buildInputs = [ rosidl-generator-c rcutils rcl-interfaces rmw-implementation tinydir-vendor rcl-logging-noop ];
+  checkInputs = [ launch rmw-implementation-cmake launch-testing ament-lint-common test-msgs ament-cmake-gtest launch-testing-ament-cmake osrf-testing-tools-cpp ament-cmake-pytest rmw ament-lint-auto ];
+  propagatedBuildInputs = [ rosidl-generator-c rcutils rosidl-default-runtime ament-cmake rcl-interfaces rmw rmw-implementation tinydir-vendor rcl-logging-noop ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

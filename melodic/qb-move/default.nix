@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qb-move-description, qb-move-hardware-interface, catkin, qb-move-control }:
+{ lib, buildRosPackage, fetchurl, qb-move-control, catkin, qb-move-description, qb-move-hardware-interface }:
 buildRosPackage {
   pname = "ros-melodic-qb-move";
   version = "2.0.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ qb-move-description qb-move-hardware-interface qb-move-control ];
+  propagatedBuildInputs = [ qb-move-control qb-move-description qb-move-hardware-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

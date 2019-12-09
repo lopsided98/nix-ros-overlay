@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, flir-ptu-description, boost, roslint, sensor-msgs, serial, catkin, roscpp, diagnostic-updater, robot-state-publisher, actionlib, rospy, roslaunch, tf }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, robot-state-publisher, flir-ptu-description, serial, tf, actionlib, catkin, roslint, roscpp, rospy, roslaunch, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-flir-ptu-driver";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost roslint sensor-msgs serial roscpp diagnostic-updater actionlib rospy roslaunch tf ];
-  propagatedBuildInputs = [ sensor-msgs serial roscpp diagnostic-updater robot-state-publisher actionlib rospy flir-ptu-description tf ];
+  buildInputs = [ boost sensor-msgs serial tf actionlib roslint roscpp rospy roslaunch diagnostic-updater ];
+  propagatedBuildInputs = [ sensor-msgs robot-state-publisher flir-ptu-description serial tf actionlib roscpp rospy diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

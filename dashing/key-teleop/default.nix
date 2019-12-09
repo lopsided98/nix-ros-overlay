@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, rclpy, pythonPackages, ament-pep257, ament-copyright, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-copyright, pythonPackages, ament-pep257, rclpy, ament-flake8 }:
 buildRosPackage {
   pname = "ros-dashing-key-teleop";
   version = "1.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ rclpy geometry-msgs ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  propagatedBuildInputs = [ geometry-msgs rclpy ];
 
   meta = {
     description = ''A text-based interface to send a robot movement commands.'';

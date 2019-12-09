@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
-  propagatedBuildInputs = [ roseus std-msgs ];
+  propagatedBuildInputs = [ std-msgs roseus ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

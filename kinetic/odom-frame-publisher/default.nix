@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-msgs, tf2-geometry-msgs, catkin, tf2-ros, tf2, quaternion-operation, eigen, rosdoc-lite, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, rosdoc-lite, catkin, quaternion-operation, roscpp, tf2-geometry-msgs, eigen, tf2-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-odom-frame-publisher";
   version = "0.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2-msgs tf2-geometry-msgs tf2-ros tf2 quaternion-operation eigen roscpp geometry-msgs ];
-  propagatedBuildInputs = [ tf2-msgs tf2-geometry-msgs tf2-ros tf2 quaternion-operation eigen rosdoc-lite roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs tf2 quaternion-operation tf2-geometry-msgs eigen tf2-msgs roscpp tf2-ros ];
+  propagatedBuildInputs = [ geometry-msgs rosdoc-lite tf2 quaternion-operation tf2-geometry-msgs eigen tf2-msgs roscpp tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

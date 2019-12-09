@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, epos2-motor-controller, roscpp, nav-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, tf, catkin, epos2-motor-controller, roscpp, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-volksbot-driver";
   version = "1.0.0-r3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs epos2-motor-controller roscpp nav-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs epos2-motor-controller roscpp nav-msgs tf geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs tf epos2-motor-controller roscpp nav-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs tf epos2-motor-controller roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

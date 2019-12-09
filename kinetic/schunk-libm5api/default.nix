@@ -2,15 +2,15 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libntcan, libpcan }:
+{ lib, buildRosPackage, fetchurl, libntcan, libpcan, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-schunk-libm5api";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_libm5api/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "c1353ab2b1db80d0665c26e7cbab26f4808ffed977112a2f85e755ab9dac536a";
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/kinetic/schunk_libm5api/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "a4abd55a6ae0eb74882939abfdddd95d29e76ab9dc8c5ed30d7e40e20bdac24d";
   };
 
   buildType = "catkin";

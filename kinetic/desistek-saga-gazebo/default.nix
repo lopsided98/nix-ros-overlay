@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, desistek-saga-description, catkin, desistek-saga-control }:
+{ lib, buildRosPackage, fetchurl, desistek-saga-description, desistek-saga-control, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-desistek-saga-gazebo";
   version = "0.3.2";

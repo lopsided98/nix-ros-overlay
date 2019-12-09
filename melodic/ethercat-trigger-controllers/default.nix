@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, pr2-controller-interface, realtime-tools, catkin, libtool, message-generation, message-runtime, rospy, std-msgs, diagnostic-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, pluginlib, std-msgs, libtool, catkin, pr2-controller-interface, realtime-tools, rospy, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-ethercat-trigger-controllers";
   version = "1.10.17-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib pr2-controller-interface realtime-tools libtool message-generation std-msgs diagnostic-msgs roscpp ];
-  propagatedBuildInputs = [ pluginlib pr2-controller-interface realtime-tools libtool message-runtime rospy std-msgs diagnostic-msgs roscpp ];
+  buildInputs = [ diagnostic-msgs pluginlib libtool std-msgs pr2-controller-interface realtime-tools roscpp message-generation ];
+  propagatedBuildInputs = [ diagnostic-msgs pluginlib libtool std-msgs pr2-controller-interface realtime-tools rospy roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

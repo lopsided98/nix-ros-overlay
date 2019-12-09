@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, roslint, catkin, eigen, eigen-conversions, roscpp }:
+{ lib, buildRosPackage, fetchurl, eigen-conversions, cmake-modules, catkin, roslint, eigen, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-rosparam-shortcuts";
   version = "0.3.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules roslint eigen eigen-conversions roscpp ];
-  propagatedBuildInputs = [ eigen-conversions roscpp ];
+  buildInputs = [ eigen-conversions cmake-modules roslint eigen roscpp ];
+  propagatedBuildInputs = [ roscpp eigen-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

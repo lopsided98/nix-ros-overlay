@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-gui-py rqt-gui rqt-gui-cpp ];
+  propagatedBuildInputs = [ rqt-gui rqt-gui-py rqt-gui-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

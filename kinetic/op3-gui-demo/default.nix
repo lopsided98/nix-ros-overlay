@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, op3-online-walking-module-msgs, op3-navigation, qt4, op3-walking-module-msgs, robotis-controller-msgs, geometry-msgs, boost, eigen-conversions, roslib, catkin, qt-build, std-msgs, visualization-msgs, roscpp, cmake-modules, libyamlcpp, sensor-msgs, interactive-markers, eigen, humanoid-nav-msgs }:
+{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, geometry-msgs, interactive-markers, eigen-conversions, qt4, op3-navigation, eigen, sensor-msgs, cmake-modules, roslib, op3-walking-module-msgs, libyamlcpp, std-msgs, catkin, roscpp, boost, qt-build, op3-online-walking-module-msgs, visualization-msgs, humanoid-nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-op3-gui-demo";
   version = "0.2.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ op3-online-walking-module-msgs boost cmake-modules qt4 libyamlcpp sensor-msgs op3-walking-module-msgs roscpp roslib interactive-markers visualization-msgs qt-build std-msgs eigen-conversions robotis-controller-msgs humanoid-nav-msgs geometry-msgs eigen ];
-  propagatedBuildInputs = [ op3-online-walking-module-msgs op3-navigation qt4 op3-walking-module-msgs robotis-controller-msgs geometry-msgs boost eigen-conversions roslib qt-build std-msgs roscpp visualization-msgs cmake-modules libyamlcpp sensor-msgs interactive-markers eigen humanoid-nav-msgs ];
+  buildInputs = [ robotis-controller-msgs boost qt-build geometry-msgs sensor-msgs eigen-conversions op3-online-walking-module-msgs std-msgs qt4 interactive-markers cmake-modules roslib op3-walking-module-msgs libyamlcpp eigen visualization-msgs roscpp humanoid-nav-msgs ];
+  propagatedBuildInputs = [ robotis-controller-msgs geometry-msgs eigen-conversions interactive-markers qt4 op3-navigation eigen sensor-msgs cmake-modules roslib libyamlcpp op3-walking-module-msgs std-msgs roscpp boost qt-build op3-online-walking-module-msgs visualization-msgs humanoid-nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

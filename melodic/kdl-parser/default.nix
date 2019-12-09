@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, rosconsole, orocos-kdl, catkin, tinyxml, rostest, urdfdom-headers, urdf, tinyxml-2, roscpp }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, urdfdom-headers, urdf, cmake-modules, catkin, tinyxml, rosconsole, roscpp, tinyxml-2, rostest }:
 buildRosPackage {
   pname = "ros-melodic-kdl-parser";
   version = "1.13.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl cmake-modules rosconsole tinyxml urdfdom-headers urdf tinyxml-2 ];
+  buildInputs = [ orocos-kdl urdfdom-headers urdf cmake-modules tinyxml tinyxml-2 rosconsole ];
   checkInputs = [ rostest roscpp ];
-  propagatedBuildInputs = [ orocos-kdl rosconsole tinyxml urdfdom-headers urdf tinyxml-2 ];
+  propagatedBuildInputs = [ orocos-kdl urdfdom-headers urdf tinyxml tinyxml-2 rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, capabilities, catkin, std-capabilities }:
+{ lib, buildRosPackage, fetchurl, std-capabilities, capabilities, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-capabilities";
   version = "2.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ capabilities std-capabilities ];
+  propagatedBuildInputs = [ std-capabilities capabilities ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

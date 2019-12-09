@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-runtime, std-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, tf, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-p2os-teleop";
   version = "2.1.1-r3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs sensor-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs message-runtime std-msgs tf geometry-msgs ];
+  buildInputs = [ tf std-msgs sensor-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs tf message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

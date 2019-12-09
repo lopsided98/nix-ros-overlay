@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, ament-lint-common, boost, ament-cmake-gtest, rclcpp, std-msgs, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, boost, rclcpp-lifecycle, std-msgs, ament-lint-common, ament-cmake, ament-cmake-gtest, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-udp-driver";
   version = "0.0.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs rclcpp-lifecycle rclcpp boost ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ std-msgs rclcpp-lifecycle rclcpp boost ];
+  buildInputs = [ std-msgs boost rclcpp rclcpp-lifecycle ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ std-msgs boost rclcpp rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

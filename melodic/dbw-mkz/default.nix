@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dbw-mkz-msgs, catkin, dbw-mkz-description, dbw-mkz-can, dbw-mkz-joystick-demo }:
+{ lib, buildRosPackage, fetchurl, dbw-mkz-joystick-demo, dbw-mkz-description, dbw-mkz-can, catkin, dbw-mkz-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dbw-mkz";
   version = "1.2.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ dbw-mkz-msgs dbw-mkz-description dbw-mkz-can dbw-mkz-joystick-demo ];
+  propagatedBuildInputs = [ dbw-mkz-msgs dbw-mkz-joystick-demo dbw-mkz-description dbw-mkz-can ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gmapping, pr2-navigation-config, joint-trajectory-generator, pr2-machine, catkin, move-base, pr2-move-base, topic-tools, pr2-tuck-arms-action }:
+{ lib, buildRosPackage, fetchurl, pr2-machine, catkin, gmapping, pr2-tuck-arms-action, move-base, pr2-move-base, topic-tools, pr2-navigation-config, joint-trajectory-generator }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-navigation-slam";
   version = "0.1.28";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gmapping pr2-navigation-config joint-trajectory-generator topic-tools move-base pr2-move-base pr2-machine pr2-tuck-arms-action ];
+  propagatedBuildInputs = [ pr2-machine gmapping pr2-tuck-arms-action move-base pr2-move-base topic-tools pr2-navigation-config joint-trajectory-generator ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

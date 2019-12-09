@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, social-navigation-layers, catkin, range-sensor-layer }:
+{ lib, buildRosPackage, fetchurl, range-sensor-layer, social-navigation-layers, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-navigation-layers";
   version = "0.3.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ social-navigation-layers range-sensor-layer ];
+  propagatedBuildInputs = [ range-sensor-layer social-navigation-layers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

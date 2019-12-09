@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, robotis-controller, roscpp, manipulator-h-base-module }:
+{ lib, buildRosPackage, fetchurl, robotis-controller, manipulator-h-base-module, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-manipulator-h-manager";
   version = "0.3.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp robotis-controller manipulator-h-base-module ];
-  propagatedBuildInputs = [ roscpp robotis-controller manipulator-h-base-module ];
+  buildInputs = [ robotis-controller manipulator-h-base-module roscpp ];
+  propagatedBuildInputs = [ manipulator-h-base-module robotis-controller roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

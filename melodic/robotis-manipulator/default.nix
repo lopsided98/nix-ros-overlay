@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, roscpp, eigen }:
+{ lib, buildRosPackage, fetchurl, cmake-modules, eigen, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-robotis-manipulator";
   version = "1.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp cmake-modules eigen ];
-  propagatedBuildInputs = [ roscpp cmake-modules eigen ];
+  buildInputs = [ eigen cmake-modules roscpp ];
+  propagatedBuildInputs = [ eigen cmake-modules roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

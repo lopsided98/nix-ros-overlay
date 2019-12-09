@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bcap-service, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, bcap-service, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-bcap-service-test";
   version = "3.0.2-r1";

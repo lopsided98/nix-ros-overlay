@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, geometry-msgs, sensor-msgs, catkin, robotnik-msgs, roscpp, diagnostic-updater, nav-msgs, message-generation, message-runtime, std-msgs, diagnostic-msgs, tf, ackermann-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, robotnik-msgs, diagnostic-msgs, geometry-msgs, ackermann-msgs, std-msgs, std-srvs, tf, catkin, roscpp, message-runtime, nav-msgs, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-agvs-robot-control";
   version = "0.1.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs geometry-msgs sensor-msgs robotnik-msgs roscpp diagnostic-updater message-generation nav-msgs std-msgs diagnostic-msgs tf ackermann-msgs ];
-  propagatedBuildInputs = [ std-srvs geometry-msgs sensor-msgs robotnik-msgs roscpp diagnostic-updater nav-msgs message-runtime std-msgs diagnostic-msgs tf ackermann-msgs ];
+  buildInputs = [ sensor-msgs robotnik-msgs geometry-msgs diagnostic-msgs ackermann-msgs std-msgs std-srvs tf roscpp message-generation nav-msgs diagnostic-updater ];
+  propagatedBuildInputs = [ sensor-msgs robotnik-msgs geometry-msgs diagnostic-msgs ackermann-msgs std-msgs std-srvs tf roscpp message-runtime nav-msgs diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, roslint, people-msgs, catkin, angles, dynamic-reconfigure, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, people-msgs, dynamic-reconfigure, pluginlib, catkin, roslint, costmap-2d, roscpp, angles }:
 buildRosPackage {
   pname = "ros-melodic-social-navigation-layers";
   version = "0.5.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib people-msgs angles dynamic-reconfigure roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs people-msgs dynamic-reconfigure pluginlib costmap-2d roscpp angles ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ costmap-2d pluginlib people-msgs angles dynamic-reconfigure roscpp geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs people-msgs dynamic-reconfigure pluginlib costmap-2d roscpp angles ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

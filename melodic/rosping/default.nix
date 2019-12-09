@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosboost-cfg, mk, catkin, rosbuild, rostest, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, rosboost-cfg, std-msgs, catkin, roscpp, rosbuild, rostest, mk }:
 buildRosPackage {
   pname = "ros-melodic-rosping";
   version = "2.1.13-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosboost-cfg mk rosbuild rostest std-msgs roscpp ];
+  buildInputs = [ rosboost-cfg std-msgs roscpp rosbuild rostest mk ];
   propagatedBuildInputs = [ std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, joint-state-controller, control-msgs, sensor-msgs, catkin, controller-interface, robot-state-publisher, rospy, std-msgs, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, controller-interface, controller-manager, robot-state-publisher, std-msgs, hardware-interface, catkin, gazebo-ros-control, rospy, joint-state-controller, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-raspigibbon-control";
   version = "0.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager hardware-interface joint-state-controller control-msgs sensor-msgs controller-interface robot-state-publisher rospy std-msgs gazebo-ros-control ];
-  propagatedBuildInputs = [ controller-manager hardware-interface joint-state-controller control-msgs sensor-msgs controller-interface robot-state-publisher rospy std-msgs gazebo-ros-control ];
+  buildInputs = [ sensor-msgs controller-interface controller-manager robot-state-publisher hardware-interface std-msgs gazebo-ros-control rospy joint-state-controller control-msgs ];
+  propagatedBuildInputs = [ sensor-msgs controller-interface controller-manager robot-state-publisher std-msgs hardware-interface gazebo-ros-control rospy joint-state-controller control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, rosidl-default-generators, sensor-msgs, tf2-ros, object-msgs, std-msgs, rosidl-default-runtime, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, rosidl-default-runtime, object-msgs, ament-cmake, rosidl-default-generators, builtin-interfaces, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-object-analytics-msgs";
   version = "0.5.4-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces rosidl-default-generators sensor-msgs tf2-ros std-msgs object-msgs geometry-msgs ];
-  propagatedBuildInputs = [ rosidl-default-runtime sensor-msgs tf2-ros std-msgs object-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs object-msgs rosidl-default-generators builtin-interfaces tf2-ros ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs rosidl-default-runtime std-msgs object-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

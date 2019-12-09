@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, nav-grid, roslint, dlux-global-planner, nav-core2, catkin, rostest, global-planner-tests }:
+{ lib, buildRosPackage, fetchurl, global-planner-tests, nav-grid, pluginlib, nav-core2, catkin, roslint, rostest, dlux-global-planner }:
 buildRosPackage {
   pname = "ros-melodic-dlux-plugins";
   version = "0.2.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dlux-global-planner nav-core2 pluginlib nav-grid ];
-  checkInputs = [ rostest global-planner-tests roslint ];
-  propagatedBuildInputs = [ dlux-global-planner nav-core2 pluginlib nav-grid ];
+  buildInputs = [ nav-grid pluginlib nav-core2 dlux-global-planner ];
+  checkInputs = [ global-planner-tests rostest roslint ];
+  propagatedBuildInputs = [ nav-grid nav-core2 pluginlib dlux-global-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

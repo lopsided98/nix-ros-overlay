@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, open-manipulator-ar-markers, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, open-manipulator-ar-markers }:
 buildRosPackage {
   pname = "ros-kinetic-open-manipulator-perceptions";
   version = "1.0.0-r1";

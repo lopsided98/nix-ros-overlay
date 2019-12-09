@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, actionlib, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, rosunit, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-realtime-tools";
   version = "1.15.0-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roscpp ];
-  checkInputs = [ rostest rosunit actionlib ];
-  propagatedBuildInputs = [ roscpp actionlib ];
+  checkInputs = [ actionlib rostest rosunit ];
+  propagatedBuildInputs = [ actionlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

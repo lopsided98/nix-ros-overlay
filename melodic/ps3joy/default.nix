@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bluez, sensor-msgs, linuxConsoleTools, pythonPackages, catkin, rosgraph, libusb, rospy, diagnostic-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, diagnostic-msgs, rosgraph, libusb, pythonPackages, catkin, bluez, linuxConsoleTools, rospy }:
 buildRosPackage {
   pname = "ros-melodic-ps3joy";
   version = "1.13.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ bluez sensor-msgs linuxConsoleTools pythonPackages.pybluez rosgraph libusb rospy diagnostic-msgs ];
-  propagatedBuildInputs = [ bluez sensor-msgs linuxConsoleTools pythonPackages.pybluez rosgraph libusb rospy diagnostic-msgs ];
+  buildInputs = [ sensor-msgs diagnostic-msgs pythonPackages.pybluez rosgraph libusb bluez linuxConsoleTools rospy ];
+  propagatedBuildInputs = [ sensor-msgs diagnostic-msgs pythonPackages.pybluez rosgraph libusb bluez linuxConsoleTools rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

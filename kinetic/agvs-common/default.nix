@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, agvs-description, catkin, agvs-pad }:
+{ lib, buildRosPackage, fetchurl, agvs-pad, agvs-description, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-agvs-common";
   version = "0.1.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ agvs-description agvs-pad ];
+  propagatedBuildInputs = [ agvs-pad agvs-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

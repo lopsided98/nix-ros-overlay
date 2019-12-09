@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, nav-grid, roslint, nav-core2, catkin, roscpp, nav-2d-msgs, rostest, nav-msgs, xmlrpcpp, std-msgs, tf, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, rostest, geometry-msgs, nav-grid, nav-core2, pluginlib, std-msgs, tf, catkin, roscpp, rosunit, roslint, nav-2d-msgs, nav-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-kinetic-nav-2d-utils";
   version = "0.2.5";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib nav-grid nav-core2 roscpp nav-msgs xmlrpcpp std-msgs tf nav-2d-msgs geometry-msgs ];
-  checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ pluginlib nav-grid tf nav-core2 nav-msgs xmlrpcpp std-msgs roscpp nav-2d-msgs geometry-msgs ];
+  buildInputs = [ geometry-msgs nav-grid nav-core2 pluginlib std-msgs tf roscpp nav-2d-msgs nav-msgs xmlrpcpp ];
+  checkInputs = [ roslint rostest rosunit ];
+  propagatedBuildInputs = [ geometry-msgs nav-grid nav-core2 pluginlib std-msgs tf roscpp nav-2d-msgs nav-msgs xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

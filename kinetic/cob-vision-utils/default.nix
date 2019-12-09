@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, tinyxml, roscpp, visualization-msgs, opencv3 }:
+{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, roscpp, tinyxml, visualization-msgs, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-cob-vision-utils";
   version = "0.6.14-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules tinyxml roscpp visualization-msgs opencv3 ];
-  propagatedBuildInputs = [ cmake-modules tinyxml roscpp visualization-msgs opencv3 ];
+  buildInputs = [ cmake-modules tinyxml visualization-msgs roscpp opencv3 ];
+  propagatedBuildInputs = [ cmake-modules tinyxml visualization-msgs roscpp opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

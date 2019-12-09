@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, cv-bridge, roscpp, zbar, nodelet }:
+{ lib, buildRosPackage, fetchurl, catkin, roslint, cv-bridge, nodelet, roscpp, zbar }:
 buildRosPackage {
   pname = "ros-kinetic-zbar-ros";
   version = "0.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint cv-bridge roscpp zbar nodelet ];
-  propagatedBuildInputs = [ zbar nodelet cv-bridge roscpp ];
+  buildInputs = [ roslint cv-bridge nodelet roscpp zbar ];
+  propagatedBuildInputs = [ roscpp cv-bridge nodelet zbar ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

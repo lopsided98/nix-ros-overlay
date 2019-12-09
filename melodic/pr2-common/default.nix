@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-description, catkin, pr2-machine, pr2-dashboard-aggregator, pr2-msgs }:
+{ lib, buildRosPackage, fetchurl, pr2-msgs, pr2-description, pr2-machine, pr2-dashboard-aggregator, catkin }:
 buildRosPackage {
   pname = "ros-melodic-pr2-common";
   version = "1.12.4-r1";

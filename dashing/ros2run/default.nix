@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-xmllint, ament-flake8, pythonPackages, ament-pep257, ament-copyright, ros2pkg, ros2cli }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, pythonPackages, ros2pkg, ament-xmllint, ros2cli, ament-pep257, ament-flake8 }:
 buildRosPackage {
   pname = "ros-dashing-ros2run";
-  version = "0.7.7-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/dashing/ros2run/0.7.7-1.tar.gz";
-    name = "0.7.7-1.tar.gz";
-    sha256 = "69f445dd7deea23957f9c58fbe0888ef6cee8075f40851e595ae24a0ccbf055a";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/dashing/ros2run/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "ad32899334d8f1732500ad9a13854891db06fd2b3a0d1efb0d2afb058571b54b";
   };
 
   buildType = "ament_python";
   buildInputs = [ ros2cli ];
-  checkInputs = [ ament-xmllint ament-flake8 pythonPackages.pytest ament-pep257 ament-copyright ];
+  checkInputs = [ ament-copyright ament-xmllint ament-pep257 pythonPackages.pytest ament-flake8 ];
   propagatedBuildInputs = [ ros2pkg ros2cli ];
 
   meta = {

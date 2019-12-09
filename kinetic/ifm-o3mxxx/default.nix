@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, roscpp, message-generation, message-runtime, pcl-ros, std-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, geometry-msgs, std-msgs, tf, catkin, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-ifm-o3mxxx";
   version = "1.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp message-generation pcl-ros std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs roscpp message-runtime pcl-ros std-msgs tf geometry-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs geometry-msgs std-msgs tf roscpp message-generation ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs geometry-msgs std-msgs tf roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

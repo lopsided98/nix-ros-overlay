@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, rqt-gui, qt-dotgraph, ament-index-python, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-gui-py, qt-dotgraph, ament-index-python, python-qt-binding }:
 buildRosPackage {
   pname = "ros-crystal-rqt-graph";
   version = "1.0.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  propagatedBuildInputs = [ rqt-gui-py rqt-gui qt-dotgraph ament-index-python python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui rqt-gui-py qt-dotgraph ament-index-python python-qt-binding ];
 
   meta = {
     description = ''rqt_graph provides a GUI plugin for visualizing the ROS

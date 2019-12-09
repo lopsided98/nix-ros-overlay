@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-machine, pr2-teleop, catkin, topic-tools }:
+{ lib, buildRosPackage, fetchurl, topic-tools, pr2-machine, catkin, pr2-teleop }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-navigation-teleop";
   version = "0.1.28";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ topic-tools pr2-teleop pr2-machine ];
-  propagatedBuildInputs = [ topic-tools pr2-teleop pr2-machine ];
+  buildInputs = [ topic-tools pr2-machine pr2-teleop ];
+  propagatedBuildInputs = [ topic-tools pr2-machine pr2-teleop ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

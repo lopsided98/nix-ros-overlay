@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, moveit-resources, pluginlib, orocos-kdl, catkin, tf2-kdl, pythonPackages, urdfdom, tf2, rostest, moveit-core, xmlrpcpp, eigen, roscpp }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, moveit-core, rostest, pluginlib, pythonPackages, urdfdom, moveit-ros-planning, moveit-resources, catkin, roscpp, eigen, tf2, tf2-kdl, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-moveit-kinematics";
   version = "1.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl pluginlib tf2-kdl tf2 moveit-core eigen roscpp ];
-  checkInputs = [ moveit-resources rostest moveit-ros-planning xmlrpcpp ];
-  propagatedBuildInputs = [ orocos-kdl pluginlib tf2-kdl urdfdom tf2 moveit-core pythonPackages.lxml eigen roscpp ];
+  buildInputs = [ moveit-core orocos-kdl pluginlib tf2 eigen roscpp tf2-kdl ];
+  checkInputs = [ xmlrpcpp rostest moveit-resources moveit-ros-planning ];
+  propagatedBuildInputs = [ moveit-core orocos-kdl pythonPackages.lxml pluginlib urdfdom roscpp eigen tf2 tf2-kdl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

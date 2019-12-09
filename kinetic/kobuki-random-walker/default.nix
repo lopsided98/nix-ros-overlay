@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-msgs, pluginlib, catkin, roscpp, ecl-threads, std-msgs, yocs-cmd-vel-mux, nodelet, geometry-msgs, yocs-controllers }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, std-msgs, catkin, yocs-cmd-vel-mux, nodelet, roscpp, kobuki-msgs, ecl-threads, yocs-controllers }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-random-walker";
   version = "0.7.6";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kobuki-msgs pluginlib ecl-threads nodelet std-msgs roscpp geometry-msgs yocs-controllers ];
-  propagatedBuildInputs = [ kobuki-msgs pluginlib ecl-threads nodelet std-msgs yocs-cmd-vel-mux roscpp geometry-msgs yocs-controllers ];
+  buildInputs = [ geometry-msgs pluginlib std-msgs nodelet roscpp kobuki-msgs ecl-threads yocs-controllers ];
+  propagatedBuildInputs = [ geometry-msgs pluginlib std-msgs yocs-cmd-vel-mux nodelet roscpp kobuki-msgs ecl-threads yocs-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

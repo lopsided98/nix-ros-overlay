@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, robotnik-msgs, ackermann-msgs, diagnostic-updater, nav-msgs, diagnostic-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, robotnik-msgs, geometry-msgs, diagnostic-msgs, ackermann-msgs, tf, catkin, roscpp, nav-msgs, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-rbcar-robot-control";
   version = "1.0.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs sensor-msgs robotnik-msgs roscpp diagnostic-updater nav-msgs diagnostic-msgs tf ackermann-msgs ];
-  propagatedBuildInputs = [ geometry-msgs tf sensor-msgs robotnik-msgs nav-msgs roscpp ackermann-msgs ];
+  buildInputs = [ sensor-msgs robotnik-msgs diagnostic-msgs geometry-msgs ackermann-msgs tf roscpp nav-msgs diagnostic-updater ];
+  propagatedBuildInputs = [ sensor-msgs robotnik-msgs geometry-msgs ackermann-msgs tf roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

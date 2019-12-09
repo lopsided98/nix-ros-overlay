@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, console-bridge, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, console-bridge }:
 buildRosPackage {
   pname = "ros-dashing-console-bridge-vendor";
   version = "1.2.0-r1";

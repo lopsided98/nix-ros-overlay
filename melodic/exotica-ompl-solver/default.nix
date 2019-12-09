@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, exotica-python, exotica-core, catkin, ompl }:
+{ lib, buildRosPackage, fetchurl, ompl, catkin, exotica-core, exotica-python }:
 buildRosPackage {
   pname = "ros-melodic-exotica-ompl-solver";
   version = "5.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ exotica-python exotica-core ompl ];
-  propagatedBuildInputs = [ exotica-python exotica-core ompl ];
+  buildInputs = [ exotica-python ompl exotica-core ];
+  propagatedBuildInputs = [ exotica-python ompl exotica-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

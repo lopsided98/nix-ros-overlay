@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, laptop-battery-monitor, libsensors-monitor, catkin }:
+{ lib, buildRosPackage, fetchurl, libsensors-monitor, catkin, laptop-battery-monitor }:
 buildRosPackage {
   pname = "ros-kinetic-linux-peripheral-interfaces";
   version = "0.2.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ laptop-battery-monitor libsensors-monitor ];
+  propagatedBuildInputs = [ libsensors-monitor laptop-battery-monitor ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

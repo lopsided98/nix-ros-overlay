@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, rosconsole, rospy, actionlib, eigenpy, tf-conversions, tf, pythonPackages, eigen-conversions, catkin, moveit-ros-manipulation, moveit-msgs, roscpp, python, moveit-resources, moveit-ros-move-group, rostest, moveit-ros-warehouse, eigen }:
+{ lib, buildRosPackage, fetchurl, eigen-conversions, tf, python, eigen, rostest, moveit-ros-warehouse, eigenpy, rosconsole, catkin, pythonPackages, moveit-ros-manipulation, roscpp, moveit-ros-planning, rospy, moveit-ros-move-group, actionlib, moveit-resources, moveit-msgs, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-planning-interface";
   version = "0.9.17-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python moveit-ros-planning moveit-ros-move-group rosconsole moveit-ros-manipulation eigenpy roscpp moveit-ros-warehouse tf-conversions actionlib rospy moveit-msgs eigen-conversions tf eigen ];
-  checkInputs = [ moveit-resources rostest ];
-  propagatedBuildInputs = [ python moveit-ros-planning moveit-ros-move-group rosconsole moveit-ros-manipulation roscpp moveit-ros-warehouse actionlib tf-conversions rospy eigenpy moveit-msgs eigen-conversions tf ];
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  buildInputs = [ eigen-conversions moveit-ros-move-group moveit-ros-warehouse tf actionlib moveit-ros-manipulation moveit-ros-planning eigenpy python eigen moveit-msgs roscpp rospy tf-conversions rosconsole ];
+  checkInputs = [ rostest moveit-resources ];
+  propagatedBuildInputs = [ eigen-conversions moveit-ros-move-group moveit-ros-warehouse tf actionlib moveit-ros-manipulation moveit-ros-planning eigenpy python moveit-msgs roscpp rospy tf-conversions rosconsole ];
+  nativeBuildInputs = [ catkin pythonPackages.catkin-pkg ];
 
   meta = {
     description = ''Components of MoveIt! that offer simpler interfaces to planning and execution'';

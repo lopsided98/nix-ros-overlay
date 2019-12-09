@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-manipulation, cob-bringup-sim, catkin, cob-navigation }:
+{ lib, buildRosPackage, fetchurl, cob-bringup-sim, catkin, cob-manipulation, cob-navigation }:
 buildRosPackage {
   pname = "ros-kinetic-care-o-bot-simulation";
   version = "0.6.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-manipulation cob-bringup-sim cob-navigation ];
+  propagatedBuildInputs = [ cob-manipulation cob-navigation cob-bringup-sim ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

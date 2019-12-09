@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, rviz, qt5, media-export, jsoncpp }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, jsoncpp, rviz, qt5, media-export }:
 buildRosPackage {
   pname = "ros-melodic-fkie-potree-rviz-plugin";
   version = "1.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ jsoncpp rviz boost qt5.qtbase ];
-  propagatedBuildInputs = [ media-export rviz boost qt5.qtbase ];
+  buildInputs = [ jsoncpp boost rviz qt5.qtbase ];
+  propagatedBuildInputs = [ boost rviz media-export qt5.qtbase ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

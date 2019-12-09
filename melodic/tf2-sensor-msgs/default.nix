@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, python-orocos-kdl, sensor-msgs, catkin, tf2-ros, tf2, rostest, eigen, rospy, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, cmake-modules, catkin, eigen, python-orocos-kdl, tf2, rospy, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-tf2-sensor-msgs";
   version = "0.6.5";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules sensor-msgs tf2-ros tf2 eigen ];
-  checkInputs = [ rostest geometry-msgs ];
-  propagatedBuildInputs = [ python-orocos-kdl sensor-msgs tf2-ros tf2 rospy eigen ];
+  buildInputs = [ sensor-msgs cmake-modules eigen tf2 tf2-ros ];
+  checkInputs = [ geometry-msgs rostest ];
+  propagatedBuildInputs = [ sensor-msgs eigen python-orocos-kdl tf2 rospy tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, catkin, robot-state-publisher }:
+{ lib, buildRosPackage, fetchurl, robot-state-publisher, catkin, controller-manager }:
 buildRosPackage {
   pname = "ros-kinetic-pepper-control";
   version = "0.0.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ controller-manager robot-state-publisher ];
+  propagatedBuildInputs = [ robot-state-publisher controller-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

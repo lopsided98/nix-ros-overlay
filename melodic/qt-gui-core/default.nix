@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qt-gui-app, catkin, qt-gui-cpp, qt-gui, qt-dotgraph, qt-gui-py-common }:
+{ lib, buildRosPackage, fetchurl, qt-gui-app, qt-gui-py-common, catkin, qt-gui-cpp, qt-gui, qt-dotgraph }:
 buildRosPackage {
   pname = "ros-melodic-qt-gui-core";
-  version = "0.3.15-r1";
+  version = "0.3.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_core/0.3.15-1.tar.gz";
-    name = "0.3.15-1.tar.gz";
-    sha256 = "7e88f8db78ec7edc811a35dc989172dedfc4a180813104434a8fab5064cda22e";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_core/0.3.16-1.tar.gz";
+    name = "0.3.16-1.tar.gz";
+    sha256 = "81aa1ec4b74a3b33667c18424980bce76780cc20f134ce32e8e4eb359a5ff842";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ qt-gui-app qt-gui-cpp qt-gui qt-dotgraph qt-gui-py-common ];
+  propagatedBuildInputs = [ qt-gui-app qt-gui-py-common qt-gui-cpp qt-gui qt-dotgraph ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

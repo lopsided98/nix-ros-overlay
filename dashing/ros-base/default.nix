@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kdl-parser, ament-cmake, tf2-geometry-msgs, ros-core, tf2-kdl, tf2-ros, tf2, urdf, robot-state-publisher, tf2-eigen }:
+{ lib, buildRosPackage, fetchurl, urdf, robot-state-publisher, ament-cmake, tf2-eigen, ros-core, tf2-geometry-msgs, tf2, tf2-kdl, tf2-ros, kdl-parser }:
 buildRosPackage {
   pname = "ros-dashing-ros-base";
   version = "0.7.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ kdl-parser tf2-geometry-msgs ros-core tf2-kdl tf2-ros tf2 urdf robot-state-publisher tf2-eigen ];
+  propagatedBuildInputs = [ urdf robot-state-publisher tf2-eigen ros-core tf2-geometry-msgs tf2 tf2-kdl tf2-ros kdl-parser ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

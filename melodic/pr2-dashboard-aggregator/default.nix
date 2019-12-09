@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, pr2-msgs, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, std-msgs, rospy, catkin, pr2-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2-dashboard-aggregator";
   version = "1.12.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ std-msgs pr2-msgs rospy ];
+  propagatedBuildInputs = [ std-msgs rospy pr2-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

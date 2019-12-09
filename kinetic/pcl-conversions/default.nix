@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, pcl, sensor-msgs, catkin, pcl-msgs, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, std-msgs, cmake-modules, catkin, pcl-msgs, pcl, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-pcl-conversions";
   version = "0.2.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules pcl sensor-msgs pcl-msgs std-msgs roscpp ];
-  propagatedBuildInputs = [ pcl sensor-msgs pcl-msgs std-msgs roscpp ];
+  buildInputs = [ sensor-msgs std-msgs cmake-modules pcl-msgs pcl roscpp ];
+  propagatedBuildInputs = [ sensor-msgs std-msgs pcl-msgs pcl roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

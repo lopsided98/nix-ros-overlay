@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, python3Packages, ament-index-python, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, python3Packages, ament-cmake, ament-cmake-pytest, ament-index-python, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-xacro";
   version = "2.0.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-index-python python3Packages.pyyaml ];
-  checkInputs = [ ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ ament-index-python python3Packages.pyyaml ];
+  buildInputs = [ python3Packages.pyyaml ament-index-python ];
+  checkInputs = [ ament-lint-auto ament-cmake-pytest ];
+  propagatedBuildInputs = [ python3Packages.pyyaml ament-index-python ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

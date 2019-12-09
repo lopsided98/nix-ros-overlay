@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, catkin, interactive-markers, visualization-msgs, rospy, roslib, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, interactive-markers, tf, roslib, catkin, visualization-msgs, rospy }:
 buildRosPackage {
   pname = "ros-melodic-easy-markers";
   version = "0.2.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslib interactive-markers visualization-msgs rospy tf geometry-msgs ];
-  propagatedBuildInputs = [ tf interactive-markers visualization-msgs rospy roslib geometry-msgs ];
+  buildInputs = [ geometry-msgs interactive-markers tf roslib visualization-msgs rospy ];
+  propagatedBuildInputs = [ geometry-msgs interactive-markers tf roslib visualization-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

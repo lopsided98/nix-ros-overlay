@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-pr2-hardware-interface";
   version = "1.8.18";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp geometry-msgs ];
-  propagatedBuildInputs = [ roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs roscpp ];
+  propagatedBuildInputs = [ geometry-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

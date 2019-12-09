@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rclcpp, ament-lint-auto, rcutils }:
+{ lib, buildRosPackage, fetchurl, rcutils, ament-lint-common, ament-cmake, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rosbag2-test-common";
   version = "0.1.8-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcutils rclcpp ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ rcutils rclcpp ];
+  buildInputs = [ rclcpp rcutils ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ rclcpp rcutils ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtle-actionlib, nodelet-tutorial-math, catkin, pluginlib-tutorials, actionlib-tutorials }:
+{ lib, buildRosPackage, fetchurl, turtle-actionlib, pluginlib-tutorials, catkin, actionlib-tutorials, nodelet-tutorial-math }:
 buildRosPackage {
   pname = "ros-kinetic-common-tutorials";
   version = "0.1.10";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ nodelet-tutorial-math pluginlib-tutorials actionlib-tutorials turtle-actionlib ];
+  propagatedBuildInputs = [ turtle-actionlib actionlib-tutorials pluginlib-tutorials nodelet-tutorial-math ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

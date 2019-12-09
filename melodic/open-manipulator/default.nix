@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, open-manipulator-description, open-manipulator-libs, open-manipulator-moveit, open-manipulator-teleop, open-manipulator-control-gui, open-manipulator-controller }:
+{ lib, buildRosPackage, fetchurl, open-manipulator-control-gui, open-manipulator-moveit, catkin, open-manipulator-controller, open-manipulator-description, open-manipulator-teleop, open-manipulator-libs }:
 buildRosPackage {
   pname = "ros-melodic-open-manipulator";
   version = "2.0.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ open-manipulator-control-gui open-manipulator-libs open-manipulator-moveit open-manipulator-teleop open-manipulator-description open-manipulator-controller ];
+  propagatedBuildInputs = [ open-manipulator-control-gui open-manipulator-moveit open-manipulator-controller open-manipulator-description open-manipulator-teleop open-manipulator-libs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

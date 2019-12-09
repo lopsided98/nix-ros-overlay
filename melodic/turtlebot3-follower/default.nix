@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, nav-msgs, rospy, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, catkin, rospy, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-follower";
   version = "1.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs nav-msgs rospy std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs nav-msgs rospy std-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs rospy nav-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs rospy nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

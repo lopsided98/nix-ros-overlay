@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, yaml-cpp-vendor, ament-lint-common, ament-cmake-gtest, sensor-msgs, rclcpp, ament-cmake-ros, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, yaml-cpp-vendor, ament-cmake-ros, ament-lint-common, ament-lint-auto, rclcpp, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-crystal-camera-calibration-parsers";
   version = "2.0.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ yaml-cpp-vendor sensor-msgs rclcpp ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ yaml-cpp-vendor sensor-msgs rclcpp ];
+  buildInputs = [ sensor-msgs yaml-cpp-vendor rclcpp ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs yaml-cpp-vendor rclcpp ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

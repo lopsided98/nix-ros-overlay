@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers-msgs, kdl-parser, orocos-kdl, trajectory-msgs, sensor-msgs, catkin, message-filters, roscpp, actionlib, tf-conversions, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, sensor-msgs, message-filters, geometry-msgs, trajectory-msgs, tf, actionlib, catkin, roscpp, pr2-controllers-msgs, tf-conversions, kdl-parser }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-head-action";
   version = "1.10.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs kdl-parser orocos-kdl trajectory-msgs sensor-msgs message-filters roscpp actionlib tf-conversions tf geometry-msgs ];
-  propagatedBuildInputs = [ pr2-controllers-msgs kdl-parser orocos-kdl trajectory-msgs sensor-msgs message-filters roscpp actionlib tf-conversions tf geometry-msgs ];
+  buildInputs = [ orocos-kdl sensor-msgs message-filters geometry-msgs trajectory-msgs tf actionlib roscpp pr2-controllers-msgs tf-conversions kdl-parser ];
+  propagatedBuildInputs = [ orocos-kdl sensor-msgs message-filters geometry-msgs trajectory-msgs tf actionlib roscpp pr2-controllers-msgs tf-conversions kdl-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

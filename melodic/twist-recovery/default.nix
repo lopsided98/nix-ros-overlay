@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, base-local-planner, tf2-geometry-msgs, nav-core, catkin, tf2-ros, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, catkin, base-local-planner, tf2-geometry-msgs, nav-core, costmap-2d, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-twist-recovery";
   version = "0.3.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib base-local-planner tf2-geometry-msgs nav-core tf2-ros geometry-msgs ];
-  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner tf2-geometry-msgs nav-core tf2-ros geometry-msgs ];
+  buildInputs = [ geometry-msgs pluginlib base-local-planner tf2-geometry-msgs nav-core costmap-2d tf2-ros ];
+  propagatedBuildInputs = [ geometry-msgs pluginlib base-local-planner tf2-geometry-msgs nav-core costmap-2d tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

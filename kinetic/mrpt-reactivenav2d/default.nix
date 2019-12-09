@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mrpt-bridge, actionlib-msgs, tf, catkin, mrpt1, visualization-msgs, actionlib, dynamic-reconfigure, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, mrpt1, geometry-msgs, dynamic-reconfigure, tf, actionlib, catkin, actionlib-msgs, visualization-msgs, roscpp, mrpt-bridge }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt-reactivenav2d";
   version = "0.1.26-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs roscpp mrpt1 actionlib visualization-msgs dynamic-reconfigure mrpt-bridge tf geometry-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs roscpp mrpt1 actionlib visualization-msgs dynamic-reconfigure mrpt-bridge tf geometry-msgs ];
+  buildInputs = [ mrpt1 geometry-msgs dynamic-reconfigure actionlib tf roscpp actionlib-msgs visualization-msgs mrpt-bridge ];
+  propagatedBuildInputs = [ mrpt1 geometry-msgs dynamic-reconfigure actionlib tf roscpp actionlib-msgs visualization-msgs mrpt-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

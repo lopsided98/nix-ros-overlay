@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin-pip, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin-pip, pythonPackages, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-pyzmp";
   version = "0.0.17";

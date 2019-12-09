@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, nav-grid, tf2-geometry-msgs, roslint, nav-core2, catkin, tf2-ros, roscpp, rostest, nav-msgs, xmlrpcpp, std-msgs, rosunit, tf, nav-2d-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, xmlrpcpp, nav-grid, nav-core2, pluginlib, std-msgs, tf, catkin, roscpp, rosunit, roslint, tf2-geometry-msgs, nav-2d-msgs, nav-msgs, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-nav-2d-utils";
   version = "0.2.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib tf2-geometry-msgs nav-grid nav-core2 roscpp tf2-ros nav-msgs xmlrpcpp std-msgs tf nav-2d-msgs geometry-msgs ];
-  checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ pluginlib tf2-geometry-msgs nav-grid tf nav-core2 tf2-ros nav-msgs xmlrpcpp std-msgs roscpp nav-2d-msgs geometry-msgs ];
+  buildInputs = [ geometry-msgs nav-grid nav-core2 pluginlib std-msgs tf roscpp tf2-geometry-msgs nav-2d-msgs nav-msgs xmlrpcpp tf2-ros ];
+  checkInputs = [ roslint rostest rosunit ];
+  propagatedBuildInputs = [ geometry-msgs nav-grid nav-core2 pluginlib std-msgs tf roscpp tf2-geometry-msgs nav-2d-msgs nav-msgs xmlrpcpp tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

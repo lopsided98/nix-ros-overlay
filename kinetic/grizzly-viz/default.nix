@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, grizzly-description, catkin, rviz-imu-plugin, rviz, roslaunch, joint-state-publisher }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, catkin, rviz-imu-plugin, rviz, grizzly-description, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-grizzly-viz";
   version = "0.3.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ grizzly-description joint-state-publisher rviz-imu-plugin rviz ];
+  propagatedBuildInputs = [ grizzly-description joint-state-publisher rviz rviz-imu-plugin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

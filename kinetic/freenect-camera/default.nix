@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, camera-info-manager, image-transport, sensor-msgs, catkin, diagnostic-updater, libfreenect, dynamic-reconfigure, nodelet, roscpp, log4cxx }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, pluginlib, camera-info-manager, catkin, image-transport, nodelet, roscpp, libfreenect, log4cxx, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-freenect-camera";
   version = "0.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib camera-info-manager image-transport sensor-msgs diagnostic-updater libfreenect dynamic-reconfigure nodelet roscpp log4cxx ];
-  propagatedBuildInputs = [ pluginlib camera-info-manager image-transport sensor-msgs diagnostic-updater nodelet dynamic-reconfigure libfreenect roscpp log4cxx ];
+  buildInputs = [ sensor-msgs dynamic-reconfigure pluginlib camera-info-manager image-transport nodelet roscpp libfreenect log4cxx diagnostic-updater ];
+  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure pluginlib camera-info-manager image-transport nodelet roscpp libfreenect log4cxx diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

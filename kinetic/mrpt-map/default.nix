@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, roscpp, nav-msgs, mrpt1, std-msgs, mrpt-bridge, tf }:
+{ lib, buildRosPackage, fetchurl, mrpt1, sensor-msgs, std-msgs, tf, catkin, mrpt-bridge, roscpp, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt-map";
   version = "0.1.26-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf sensor-msgs nav-msgs mrpt1 std-msgs mrpt-bridge roscpp ];
-  propagatedBuildInputs = [ tf sensor-msgs nav-msgs mrpt1 std-msgs mrpt-bridge roscpp ];
+  buildInputs = [ mrpt1 sensor-msgs std-msgs tf mrpt-bridge roscpp nav-msgs ];
+  propagatedBuildInputs = [ mrpt1 sensor-msgs std-msgs tf mrpt-bridge roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

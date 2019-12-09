@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, boost, pkg-config, eigen }:
+{ lib, buildRosPackage, fetchurl, pkg-config, boost, eigen, cmake }:
 buildRosPackage {
   pname = "ros-dashing-ompl";
   version = "1.4.2-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake boost pkg-config eigen ];
+  buildInputs = [ pkg-config boost eigen cmake ];
   propagatedBuildInputs = [ boost eigen ];
   nativeBuildInputs = [ cmake ];
 

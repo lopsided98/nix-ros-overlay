@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, class-loader, catkin, linuxHeaders, rosunit }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, rosunit, class-loader, linuxHeaders }:
 buildRosPackage {
   pname = "ros-kinetic-socketcan-interface";
   version = "0.7.12-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ linuxHeaders class-loader boost ];
+  buildInputs = [ boost linuxHeaders class-loader ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ linuxHeaders class-loader boost ];
+  propagatedBuildInputs = [ boost linuxHeaders class-loader ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

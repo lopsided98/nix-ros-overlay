@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, nav-core-adapter, amcl, base-local-planner, catkin, mir-dwb-critics, dwb-critics, dwb-plugins, sbpl-lattice-planner, move-base, mir-driver, roslaunch, dwb-local-planner }:
+{ lib, buildRosPackage, fetchurl, mir-dwb-critics, map-server, mir-driver, catkin, base-local-planner, dwb-local-planner, sbpl-lattice-planner, nav-core-adapter, move-base, amcl, dwb-critics, dwb-plugins, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-mir-navigation";
   version = "1.0.4-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ map-server nav-core-adapter amcl base-local-planner mir-dwb-critics dwb-critics dwb-plugins sbpl-lattice-planner move-base mir-driver dwb-local-planner ];
+  propagatedBuildInputs = [ mir-dwb-critics map-server mir-driver base-local-planner dwb-local-planner sbpl-lattice-planner nav-core-adapter move-base amcl dwb-critics dwb-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

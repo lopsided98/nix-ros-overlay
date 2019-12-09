@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, catkin, vs060-moveit-config, checkerboard-detector, denso-ros-control, rostest }:
+{ lib, buildRosPackage, fetchurl, denso-ros-control, checkerboard-detector, catkin, vs060-moveit-config, rostest, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-denso-launch";
   version = "2.0.3";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ denso-ros-control vs060-moveit-config checkerboard-detector control-msgs ];
+  propagatedBuildInputs = [ control-msgs vs060-moveit-config denso-ros-control checkerboard-detector ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

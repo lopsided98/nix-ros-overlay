@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-ros, launch-testing, ament-cmake-gtest, launch, nav2-common, navigation2, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, launch, launch-testing, launch-ros, navigation2, ament-lint-common, ament-cmake, ament-cmake-gtest, nav2-common, ament-cmake-pytest, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-nav2-bringup";
   version = "0.2.6-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ navigation2 launch-ros nav2-common ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
   propagatedBuildInputs = [ navigation2 launch-ros nav2-common ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospack, cmake-modules, rtt, libxml2, catkin, rostime, rtt-rosgraph-msgs, ocl, roscpp }:
+{ lib, buildRosPackage, fetchurl, rtt-rosgraph-msgs, cmake-modules, catkin, libxml2, rtt, ocl, rostime, roscpp, rospack }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-rosclock";
   version = "2.9.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospack cmake-modules rtt libxml2 roscpp rtt-rosgraph-msgs ocl rostime ];
-  propagatedBuildInputs = [ rospack cmake-modules rtt libxml2 roscpp rtt-rosgraph-msgs ocl rostime ];
+  buildInputs = [ rtt-rosgraph-msgs cmake-modules libxml2 rtt ocl rostime roscpp rospack ];
+  propagatedBuildInputs = [ rtt-rosgraph-msgs cmake-modules libxml2 rtt ocl rostime roscpp rospack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

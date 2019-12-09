@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rospy, std-msgs, diagnostic-msgs, pr2-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, diagnostic-msgs, pr2-msgs, std-msgs, catkin, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-computer-monitor";
   version = "1.6.30";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs pr2-msgs roscpp std-msgs ];
-  propagatedBuildInputs = [ rospy std-msgs diagnostic-msgs pr2-msgs roscpp ];
+  buildInputs = [ std-msgs diagnostic-msgs pr2-msgs roscpp ];
+  propagatedBuildInputs = [ diagnostic-msgs pr2-msgs std-msgs roscpp rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

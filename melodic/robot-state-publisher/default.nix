@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kdl-parser, rosconsole, orocos-kdl, sensor-msgs, catkin, tf2-kdl, rostime, tf2-ros, roscpp, rostest, urdfdom-headers, eigen, tf }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, sensor-msgs, rostest, urdfdom-headers, tf, catkin, eigen, rostime, roscpp, tf2-kdl, rosconsole, tf2-ros, kdl-parser }:
 buildRosPackage {
   pname = "ros-melodic-robot-state-publisher";
   version = "1.14.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kdl-parser orocos-kdl rosconsole sensor-msgs tf2-kdl rostime roscpp tf2-ros urdfdom-headers eigen tf ];
+  buildInputs = [ orocos-kdl sensor-msgs urdfdom-headers tf eigen rostime roscpp tf2-kdl rosconsole tf2-ros kdl-parser ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ kdl-parser orocos-kdl rosconsole sensor-msgs catkin tf2-kdl rostime roscpp tf2-ros eigen tf ];
+  propagatedBuildInputs = [ orocos-kdl sensor-msgs tf catkin eigen rostime roscpp tf2-kdl rosconsole tf2-ros kdl-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

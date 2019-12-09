@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers, geometry2, moveit-pr2, pr2-common-actions, perception, joystick-drivers, pr2-kinematics, catkin, ros-realtime, pr2-apps, pr2-navigation, perception-pcl, pr2-calibration, warehouse-ros, pr2-mechanism, pr2-common, web-interface }:
+{ lib, buildRosPackage, fetchurl, geometry2, perception-pcl, joystick-drivers, ros-realtime, catkin, perception, pr2-mechanism, pr2-apps, warehouse-ros, pr2-kinematics, pr2-calibration, pr2-controllers, web-interface, pr2-common-actions, moveit-pr2, pr2-common, pr2-navigation }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-base";
   version = "1.1.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-controllers geometry2 pr2-common-actions moveit-pr2 perception joystick-drivers pr2-kinematics ros-realtime pr2-navigation pr2-apps perception-pcl pr2-calibration warehouse-ros pr2-mechanism pr2-common web-interface ];
+  propagatedBuildInputs = [ geometry2 perception-pcl joystick-drivers ros-realtime perception pr2-mechanism pr2-apps warehouse-ros pr2-kinematics pr2-calibration pr2-controllers web-interface pr2-common-actions moveit-pr2 pr2-common pr2-navigation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

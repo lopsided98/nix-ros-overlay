@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, naoqi-sensors-py, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, naoqi-sensors-py, rospy, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-pepper-sensors-py";
   version = "0.1.10";

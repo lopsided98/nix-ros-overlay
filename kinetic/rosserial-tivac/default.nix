@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosserial-msgs, rosserial-client }:
+{ lib, buildRosPackage, fetchurl, rosserial-msgs, catkin, rosserial-client }:
 buildRosPackage {
   pname = "ros-kinetic-rosserial-tivac";
   version = "0.7.7";

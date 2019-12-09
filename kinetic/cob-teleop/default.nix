@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, cob-sound, cob-script-server, sensor-msgs, catkin, cob-light, actionlib, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, cob-sound, geometry-msgs, cob-actions, std-msgs, std-srvs, actionlib, catkin, roscpp, cob-light, cob-script-server }:
 buildRosPackage {
   pname = "ros-kinetic-cob-teleop";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_teleop/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "50e25b103f789431c3d0a3ec455d79709b1107e1de6067aba6311f17f99e833a";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_teleop/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "ffb4a3e16c0f1a88af4562d914ab9f619a26c7bed7e8b4a53ee843713d1cac31";
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs cob-sound cob-script-server sensor-msgs cob-light actionlib std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs cob-sound cob-script-server sensor-msgs cob-light actionlib std-msgs roscpp geometry-msgs ];
+  buildInputs = [ cob-sound sensor-msgs geometry-msgs cob-actions std-msgs std-srvs actionlib roscpp cob-light cob-script-server ];
+  propagatedBuildInputs = [ cob-sound sensor-msgs geometry-msgs cob-actions std-msgs std-srvs actionlib roscpp cob-light cob-script-server ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

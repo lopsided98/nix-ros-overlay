@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, thormang3-imu-3dm-gx4 }:
+{ lib, buildRosPackage, fetchurl, thormang3-imu-3dm-gx4, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-mpc-sensors";
   version = "0.2.0";

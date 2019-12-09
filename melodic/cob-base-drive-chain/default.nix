@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, control-msgs, cob-generic-can, cob-canopen-motor, sensor-msgs, catkin, cob-utilities, message-generation, message-runtime, std-msgs, diagnostic-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, diagnostic-msgs, cob-utilities, std-msgs, std-srvs, cob-canopen-motor, catkin, cob-generic-can, roscpp, message-runtime, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-base-drive-chain";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs control-msgs cob-generic-can cob-canopen-motor sensor-msgs cob-utilities message-generation std-msgs diagnostic-msgs roscpp ];
-  propagatedBuildInputs = [ std-srvs control-msgs cob-canopen-motor cob-generic-can sensor-msgs cob-utilities message-runtime std-msgs diagnostic-msgs roscpp ];
+  buildInputs = [ message-generation sensor-msgs diagnostic-msgs cob-utilities std-msgs std-srvs cob-generic-can roscpp cob-canopen-motor control-msgs ];
+  propagatedBuildInputs = [ sensor-msgs diagnostic-msgs message-runtime cob-utilities std-msgs std-srvs cob-generic-can roscpp cob-canopen-motor control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

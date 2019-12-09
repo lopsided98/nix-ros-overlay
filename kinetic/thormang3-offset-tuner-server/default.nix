@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamixel-sdk, libyamlcpp, thormang3-base-module, catkin, robotis-controller, thormang3-offset-tuner-msgs, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, robotis-controller, thormang3-base-module, std-msgs, catkin, libyamlcpp, roscpp, thormang3-offset-tuner-msgs, dynamixel-sdk }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-offset-tuner-server";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamixel-sdk thormang3-base-module libyamlcpp robotis-controller thormang3-offset-tuner-msgs std-msgs roscpp ];
-  propagatedBuildInputs = [ dynamixel-sdk thormang3-base-module libyamlcpp robotis-controller thormang3-offset-tuner-msgs std-msgs roscpp ];
+  buildInputs = [ robotis-controller std-msgs thormang3-base-module libyamlcpp roscpp thormang3-offset-tuner-msgs dynamixel-sdk ];
+  propagatedBuildInputs = [ robotis-controller std-msgs thormang3-base-module libyamlcpp roscpp thormang3-offset-tuner-msgs dynamixel-sdk ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

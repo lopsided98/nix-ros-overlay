@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, std-srvs, tf, catkin, gazeboSimulator, nav-msgs, message-runtime, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, gazeboSimulator, geometry-msgs, std-msgs, std-srvs, tf, catkin, roscpp, gazebo-ros, message-runtime, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ridgeback-gazebo-plugins";
   version = "0.0.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs roscpp nav-msgs std-msgs tf gazeboSimulator.gazebo7 geometry-msgs ];
-  propagatedBuildInputs = [ gazebo-ros gazeboSimulator.gazebo roscpp nav-msgs message-runtime std-msgs tf geometry-msgs ];
+  buildInputs = [ geometry-msgs std-msgs std-srvs tf gazeboSimulator.gazebo7 roscpp nav-msgs ];
+  propagatedBuildInputs = [ geometry-msgs std-msgs gazeboSimulator.gazebo tf roscpp gazebo-ros message-runtime nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

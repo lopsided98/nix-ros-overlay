@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake-ros, boost, ament-lint-common, sensor-msgs, ament-cmake-gtest, python-cmake-module, python3Packages, ament-index-python, ament-lint-auto, opencv3 }:
+{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, ament-cmake-ros, python3Packages, opencv3, ament-lint-common, python-cmake-module, ament-cmake-gtest, ament-cmake-pytest, ament-index-python, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-cv-bridge";
   version = "2.1.0";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ python3Packages.numpy opencv3 boost sensor-msgs ];
-  checkInputs = [ ament-cmake-pytest python3Packages.opencv3 ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ boost sensor-msgs ament-index-python python3Packages.numpy opencv3 ];
-  nativeBuildInputs = [ python-cmake-module ament-cmake-ros ];
+  buildInputs = [ sensor-msgs boost python3Packages.numpy opencv3 ];
+  checkInputs = [ ament-lint-common python3Packages.opencv3 ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs boost python3Packages.numpy opencv3 ament-index-python ];
+  nativeBuildInputs = [ ament-cmake-ros python-cmake-module ];
 
   meta = {
     description = ''This contains CvBridge, which converts between ROS2

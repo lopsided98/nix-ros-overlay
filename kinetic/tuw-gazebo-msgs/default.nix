@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, trajectory-msgs, sensor-msgs, catkin, message-generation, message-runtime, rospy, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, message-generation, geometry-msgs, std-msgs, std-srvs, catkin, rospy, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-tuw-gazebo-msgs";
   version = "0.0.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs trajectory-msgs sensor-msgs message-generation rospy std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs trajectory-msgs sensor-msgs message-runtime rospy std-msgs roscpp geometry-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-msgs std-srvs rospy roscpp message-generation ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-msgs std-srvs rospy roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

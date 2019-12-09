@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, nlopt, cmake-modules, euslisp }:
+{ lib, buildRosPackage, fetchurl, nlopt, cmake-modules, euslisp, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-eus-nlopt";
   version = "0.1.14";

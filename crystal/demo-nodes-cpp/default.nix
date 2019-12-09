@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, launch-ros, rmw-implementation-cmake, ament-lint-common, launch-testing, launch, example-interfaces, rclcpp, std-msgs, ament-lint-auto, rcutils, rmw }:
+{ lib, buildRosPackage, fetchurl, example-interfaces, rcutils, launch, rmw-implementation-cmake, std-msgs, launch-testing, launch-ros, ament-lint-common, ament-cmake, rmw, ament-cmake-pytest, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-demo-nodes-cpp";
   version = "0.6.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rmw-implementation-cmake example-interfaces rclcpp std-msgs rcutils rmw ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing launch ament-lint-auto ];
-  propagatedBuildInputs = [ launch-ros example-interfaces rclcpp std-msgs rcutils rmw ];
+  buildInputs = [ example-interfaces rcutils rmw-implementation-cmake std-msgs rmw rclcpp ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ example-interfaces rcutils std-msgs launch-ros rmw rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

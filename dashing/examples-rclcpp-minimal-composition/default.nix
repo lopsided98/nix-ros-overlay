@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, rclcpp, rclcpp-components, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, std-msgs, rclcpp, ament-cmake, rclcpp-components }:
 buildRosPackage {
   pname = "ros-dashing-examples-rclcpp-minimal-composition";
   version = "0.7.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs rclcpp-components rclcpp ];
-  propagatedBuildInputs = [ std-msgs rclcpp-components rclcpp ];
+  buildInputs = [ std-msgs rclcpp rclcpp-components ];
+  propagatedBuildInputs = [ std-msgs rclcpp rclcpp-components ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cv-bridge, gazebo-plugins, octomap, tf, geometry-msgs, mav-msgs, mavros, gazeboSimulator, octomap-ros, glog, gazebo-ros, std-srvs, rosbag, catkin, octomap-msgs, protobuf, roscpp, cmake-modules, libyamlcpp, rotors-control, rotors-comm }:
+{ lib, buildRosPackage, fetchurl, gazeboSimulator, mavros, geometry-msgs, tf, mav-msgs, protobuf, glog, octomap, cmake-modules, libyamlcpp, rosbag, std-srvs, rotors-control, catkin, cv-bridge, roscpp, gazebo-ros, octomap-msgs, octomap-ros, rotors-comm, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-rotors-gazebo-plugins";
   version = "2.2.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazeboSimulator.gazebo cv-bridge gazebo-plugins octomap tf geometry-msgs mav-msgs mavros octomap-ros glog gazebo-ros std-srvs rosbag octomap-msgs protobuf roscpp cmake-modules libyamlcpp rotors-control rotors-comm ];
-  propagatedBuildInputs = [ gazeboSimulator.gazebo cv-bridge gazebo-plugins octomap tf geometry-msgs mav-msgs mavros octomap-ros glog gazebo-ros std-srvs rosbag octomap-msgs protobuf roscpp cmake-modules libyamlcpp rotors-control rotors-comm ];
+  buildInputs = [ mavros geometry-msgs tf mav-msgs protobuf glog octomap cmake-modules libyamlcpp rosbag std-srvs rotors-control cv-bridge roscpp gazebo-ros gazeboSimulator.gazebo octomap-msgs octomap-ros rotors-comm gazebo-plugins ];
+  propagatedBuildInputs = [ mavros geometry-msgs tf mav-msgs protobuf glog octomap cmake-modules libyamlcpp rosbag std-srvs rotors-control cv-bridge roscpp gazebo-ros gazeboSimulator.gazebo octomap-msgs octomap-ros rotors-comm gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

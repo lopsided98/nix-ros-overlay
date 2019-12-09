@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, localization-common, optimization, lidar-utils, sensor-msgs, ament-cmake-gtest, eigen, ament-lint-auto, autoware-auto-cmake, geometry-msgs, osrf-testing-tools-cpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, optimization, lidar-utils, ament-lint-common, ament-cmake, ament-lint-auto, autoware-auto-cmake, eigen, osrf-testing-tools-cpp, localization-common, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-ndt";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ localization-common optimization geometry-msgs sensor-msgs eigen lidar-utils ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest osrf-testing-tools-cpp ament-lint-common ];
-  propagatedBuildInputs = [ localization-common optimization geometry-msgs sensor-msgs eigen lidar-utils ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  buildInputs = [ sensor-msgs geometry-msgs optimization lidar-utils eigen localization-common ];
+  checkInputs = [ ament-lint-auto osrf-testing-tools-cpp ament-cmake-gtest ament-lint-common ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs optimization lidar-utils eigen localization-common ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''Implementation of ndt localization'';

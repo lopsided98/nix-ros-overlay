@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, roscpp, turtlebot3-bringup, catkin }:
+{ lib, buildRosPackage, fetchurl, turtlebot3-bringup, sensor-msgs, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot3-slam";
   version = "1.2.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ sensor-msgs roscpp ];
-  propagatedBuildInputs = [ sensor-msgs roscpp turtlebot3-bringup ];
+  propagatedBuildInputs = [ sensor-msgs turtlebot3-bringup roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

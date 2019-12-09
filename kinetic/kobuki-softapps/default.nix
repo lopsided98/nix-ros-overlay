@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, catkin, move-base, rviz, fake-localization, kobuki-softnode }:
+{ lib, buildRosPackage, fetchurl, map-server, catkin, rviz, fake-localization, move-base, kobuki-softnode }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-softapps";
   version = "0.1.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ map-server move-base rviz fake-localization kobuki-softnode ];
+  propagatedBuildInputs = [ map-server rviz fake-localization move-base kobuki-softnode ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

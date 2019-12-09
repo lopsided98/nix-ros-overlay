@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, phidgets-api, pluginlib, sensor-msgs, catkin, roscpp, diagnostic-updater, nodelet, std-msgs, diagnostic-msgs, roslaunch, tf, imu-filter-madgwick, diagnostic-aggregator }:
+{ lib, buildRosPackage, fetchurl, diagnostic-aggregator, sensor-msgs, diagnostic-msgs, pluginlib, std-msgs, std-srvs, tf, catkin, roscpp, nodelet, imu-filter-madgwick, phidgets-api, roslaunch, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-melodic-phidgets-imu";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs phidgets-api pluginlib sensor-msgs roscpp diagnostic-updater nodelet std-msgs diagnostic-msgs roslaunch tf ];
-  propagatedBuildInputs = [ std-srvs phidgets-api pluginlib sensor-msgs roscpp diagnostic-updater nodelet std-msgs diagnostic-msgs tf imu-filter-madgwick diagnostic-aggregator ];
+  buildInputs = [ sensor-msgs diagnostic-msgs pluginlib std-msgs std-srvs tf nodelet roscpp phidgets-api roslaunch diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-aggregator sensor-msgs diagnostic-msgs imu-filter-madgwick pluginlib std-srvs std-msgs tf nodelet roscpp phidgets-api diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

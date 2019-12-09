@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag, catkin, pythonPackages, roslib, std-msgs, genmsg, genpy }:
+{ lib, buildRosPackage, fetchurl, std-msgs, genmsg, pythonPackages, roslib, catkin, genpy, rosbag }:
 buildRosPackage {
   pname = "ros-kinetic-rosmsg";
   version = "1.12.14";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ std-msgs ];
-  propagatedBuildInputs = [ pythonPackages.rospkg rosbag catkin roslib genmsg genpy ];
+  propagatedBuildInputs = [ genmsg pythonPackages.rospkg roslib catkin genpy rosbag ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

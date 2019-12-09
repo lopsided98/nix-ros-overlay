@@ -2,15 +2,15 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, pythonPackages, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-swri-prefix-tools";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_prefix_tools/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "1eb9fdf1d3e9739551cc1e8d3efc1993f0f19c6aba9a238d6d8a22437c168a0a";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_prefix_tools/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "e762b1dae0e87496ef9e97a651a37bbeb4682eea1cfb4508b1a02b1b71eca49b";
   };
 
   buildType = "catkin";

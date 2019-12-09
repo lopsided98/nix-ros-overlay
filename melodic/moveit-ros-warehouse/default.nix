@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, rosconsole, catkin, tf2-ros, tf2-eigen, warehouse-ros, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, tf2-eigen, warehouse-ros, moveit-ros-planning, rosconsole, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-warehouse";
   version = "1.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-planning rosconsole tf2-ros tf2-eigen warehouse-ros roscpp ];
-  propagatedBuildInputs = [ moveit-ros-planning rosconsole tf2-ros tf2-eigen warehouse-ros roscpp ];
+  buildInputs = [ roscpp tf2-eigen warehouse-ros moveit-ros-planning rosconsole tf2-ros ];
+  propagatedBuildInputs = [ roscpp tf2-eigen warehouse-ros moveit-ros-planning rosconsole tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

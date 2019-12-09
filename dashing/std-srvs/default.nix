@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-default-generators, rosidl-default-runtime, ament-cmake, ament-lint-common }:
+{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, rosidl-default-generators, ament-lint-common, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-std-srvs";
   version = "0.7.0-r1";

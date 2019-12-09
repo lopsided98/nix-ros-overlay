@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2eus, jsk-pcl-ros, roseus-tutorials, catkin, jsk-interactive-marker }:
+{ lib, buildRosPackage, fetchurl, pr2eus, jsk-pcl-ros, catkin, roseus-tutorials, jsk-interactive-marker }:
 buildRosPackage {
   pname = "ros-kinetic-pr2eus-tutorials";
   version = "0.3.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2eus jsk-pcl-ros ];
-  propagatedBuildInputs = [ pr2eus jsk-pcl-ros jsk-interactive-marker roseus-tutorials ];
+  buildInputs = [ jsk-pcl-ros pr2eus ];
+  propagatedBuildInputs = [ jsk-pcl-ros pr2eus roseus-tutorials jsk-interactive-marker ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ecl-build, ecl-exceptions, ecl-license, ecl-errors, ecl-config }:
+{ lib, buildRosPackage, fetchurl, ecl-license, catkin, ecl-errors, ecl-exceptions, ecl-config, ecl-build }:
 buildRosPackage {
   pname = "ros-melodic-ecl-filesystem";
   version = "0.62.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-build ecl-exceptions ecl-license ecl-errors ecl-config ];
-  propagatedBuildInputs = [ ecl-build ecl-exceptions ecl-license ecl-errors ecl-config ];
+  buildInputs = [ ecl-license ecl-errors ecl-exceptions ecl-config ecl-build ];
+  propagatedBuildInputs = [ ecl-license ecl-errors ecl-exceptions ecl-config ecl-build ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

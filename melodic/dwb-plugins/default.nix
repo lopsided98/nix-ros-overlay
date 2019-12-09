@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, roslint, nav-core2, catkin, nav-2d-msgs, rostest, nav-2d-utils, angles, rosunit, dynamic-reconfigure, roscpp, dwb-local-planner }:
+{ lib, buildRosPackage, fetchurl, rostest, dynamic-reconfigure, nav-core2, pluginlib, catkin, roscpp, rosunit, roslint, dwb-local-planner, nav-2d-msgs, angles, nav-2d-utils }:
 buildRosPackage {
   pname = "ros-melodic-dwb-plugins";
   version = "0.2.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib nav-core2 nav-2d-msgs nav-2d-utils dynamic-reconfigure angles roscpp dwb-local-planner ];
-  checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ pluginlib nav-core2 nav-2d-msgs nav-2d-utils dynamic-reconfigure angles roscpp dwb-local-planner ];
+  buildInputs = [ dynamic-reconfigure nav-core2 pluginlib roscpp dwb-local-planner nav-2d-msgs angles nav-2d-utils ];
+  checkInputs = [ roslint rostest rosunit ];
+  propagatedBuildInputs = [ dynamic-reconfigure nav-core2 pluginlib roscpp dwb-local-planner nav-2d-msgs angles nav-2d-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, costmap-2d, amcl, base-local-planner, navfn, slam-karto, fetch-depth-layer, catkin, rotate-recovery, move-base, move-base-msgs, voxel-grid, clear-costmap-recovery, roslaunch, fetch-maps }:
+{ lib, buildRosPackage, fetchurl, fetch-depth-layer, clear-costmap-recovery, rotate-recovery, map-server, catkin, base-local-planner, slam-karto, costmap-2d, move-base, voxel-grid, amcl, roslaunch, navfn, fetch-maps, move-base-msgs }:
 buildRosPackage {
   pname = "ros-melodic-fetch-navigation";
   version = "0.8.2-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ map-server costmap-2d amcl base-local-planner navfn slam-karto fetch-depth-layer rotate-recovery move-base move-base-msgs voxel-grid clear-costmap-recovery fetch-maps ];
+  propagatedBuildInputs = [ fetch-depth-layer clear-costmap-recovery rotate-recovery map-server base-local-planner slam-karto costmap-2d move-base voxel-grid amcl navfn fetch-maps move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

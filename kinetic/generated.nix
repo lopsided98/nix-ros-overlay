@@ -82,6 +82,8 @@ self: super: {
 
  ainstein-radar-rviz-plugins = self.callPackage ./ainstein-radar-rviz-plugins {};
 
+ ainstein-radar-tools = self.callPackage ./ainstein-radar-tools {};
+
  allocators = self.callPackage ./allocators {};
 
  amcl = self.callPackage ./amcl {};
@@ -109,6 +111,8 @@ self: super: {
  ardrone-autonomy = self.callPackage ./ardrone-autonomy {};
 
  arduino-daq = self.callPackage ./arduino-daq {};
+
+ area-division = self.callPackage ./area-division {};
 
  arm-navigation-msgs = self.callPackage ./arm-navigation-msgs {};
 
@@ -218,6 +222,8 @@ self: super: {
 
  binpicking-utils = self.callPackage ./binpicking-utils {};
 
+ blender-gazebo = self.callPackage ./blender-gazebo {};
+
  bond = self.callPackage ./bond {};
 
  bond-core = self.callPackage ./bond-core {};
@@ -293,6 +299,8 @@ self: super: {
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
  cht10-node = self.callPackage ./cht10-node {};
+
+ cis-camera = self.callPackage ./cis-camera {};
 
  cl-tf = self.callPackage ./cl-tf {};
 
@@ -596,9 +604,13 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
+ coverage-path = self.callPackage ./coverage-path {};
+
  cpp-common = self.callPackage ./cpp-common {};
 
  cpr-multimaster-tools = self.callPackage ./cpr-multimaster-tools {};
+
+ cpswarm-msgs = self.callPackage ./cpswarm-msgs {};
 
  create-dashboard = self.callPackage ./create-dashboard {};
 
@@ -1836,6 +1848,8 @@ self: super: {
 
  khi-rs-ikfast-plugin = self.callPackage ./khi-rs-ikfast-plugin {};
 
+ kinematics-exchanger = self.callPackage ./kinematics-exchanger {};
+
  kinesis-manager = self.callPackage ./kinesis-manager {};
 
  kinesis-video-msgs = self.callPackage ./kinesis-video-msgs {};
@@ -1947,6 +1961,18 @@ self: super: {
  leap-motion = self.callPackage ./leap-motion {};
 
  leg-detector = self.callPackage ./leg-detector {};
+
+ leuze-bringup = self.callPackage ./leuze-bringup {};
+
+ leuze-description = self.callPackage ./leuze-description {};
+
+ leuze-msgs = self.callPackage ./leuze-msgs {};
+
+ leuze-phidget-driver = self.callPackage ./leuze-phidget-driver {};
+
+ leuze-ros-drivers = self.callPackage ./leuze-ros-drivers {};
+
+ leuze-rsl-driver = self.callPackage ./leuze-rsl-driver {};
 
  lex-common = self.callPackage ./lex-common {};
 
@@ -2423,6 +2449,8 @@ self: super: {
  mvsim = self.callPackage ./mvsim {};
 
  myahrs-driver = self.callPackage ./myahrs-driver {};
+
+ mynt-eye-ros-wrapper = self.callPackage ./mynt-eye-ros-wrapper {};
 
  nanomsg = self.callPackage ./nanomsg {};
 
@@ -2919,8 +2947,6 @@ self: super: {
  play-motion-msgs = self.callPackage ./play-motion-msgs {};
 
  plot-tools = self.callPackage ./plot-tools {};
-
- plotjuggler = self.callPackage ./plotjuggler {};
 
  pluginlib = self.callPackage ./pluginlib {};
 
@@ -3634,8 +3660,6 @@ self: super: {
 
  ros-mppt = self.callPackage ./ros-mppt {};
 
- ros-mynteye = self.callPackage ./ros-mynteye {};
-
  ros-numpy = self.callPackage ./ros-numpy {};
 
  ros-pytest = self.callPackage ./ros-pytest {};
@@ -4132,11 +4156,17 @@ self: super: {
 
  seed-r7-description = self.callPackage ./seed-r7-description {};
 
+ seed-r7-moveit-config = self.callPackage ./seed-r7-moveit-config {};
+
  seed-r7-navigation = self.callPackage ./seed-r7-navigation {};
 
  seed-r7-robot-interface = self.callPackage ./seed-r7-robot-interface {};
 
  seed-r7-ros-controller = self.callPackage ./seed-r7-ros-controller {};
+
+ seed-r7-ros-pkg = self.callPackage ./seed-r7-ros-pkg {};
+
+ seed-r7-samples = self.callPackage ./seed-r7-samples {};
 
  seed-r7-typef-moveit-config = self.callPackage ./seed-r7-typef-moveit-config {};
 
@@ -4155,6 +4185,8 @@ self: super: {
  serial-utils = self.callPackage ./serial-utils {};
 
  service-tools = self.callPackage ./service-tools {};
+
+ sesame-ros = self.callPackage ./sesame-ros {};
 
  settlerlib = self.callPackage ./settlerlib {};
 
@@ -4238,6 +4270,8 @@ self: super: {
 
  stage-ros = self.callPackage ./stage-ros {};
 
+ state-exchanger = self.callPackage ./state-exchanger {};
+
  static-tf = self.callPackage ./static-tf {};
 
  static-transform-mux = self.callPackage ./static-transform-mux {};
@@ -4308,6 +4342,8 @@ self: super: {
 
  swarm-functions = self.callPackage ./swarm-functions {};
 
+ swarmros = self.callPackage ./swarmros {};
+
  swri-console = self.callPackage ./swri-console {};
 
  swri-console-util = self.callPackage ./swri-console-util {};
@@ -4357,6 +4393,10 @@ self: super: {
  talos-description-inertial = self.callPackage ./talos-description-inertial {};
 
  tango-ros-messages = self.callPackage ./tango-ros-messages {};
+
+ target-monitor = self.callPackage ./target-monitor {};
+
+ task-allocation = self.callPackage ./task-allocation {};
 
  task-compiler = self.callPackage ./task-compiler {};
 

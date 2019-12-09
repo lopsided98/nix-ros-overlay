@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, pluginlib, camera-info-manager, image-transport, sensor-msgs, cv-bridge, catkin, usb-cam-hardware-interface, controller-interface, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, controller-interface, usb-cam-hardware-interface, controller-manager, pluginlib, camera-info-manager, catkin, image-transport, cv-bridge, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-usb-cam-controllers";
   version = "0.0.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager pluginlib camera-info-manager image-transport sensor-msgs cv-bridge usb-cam-hardware-interface controller-interface roscpp ];
-  propagatedBuildInputs = [ controller-manager pluginlib camera-info-manager image-transport sensor-msgs cv-bridge usb-cam-hardware-interface controller-interface roscpp ];
+  buildInputs = [ sensor-msgs controller-interface usb-cam-hardware-interface controller-manager pluginlib camera-info-manager image-transport cv-bridge roscpp ];
+  propagatedBuildInputs = [ sensor-msgs controller-interface usb-cam-hardware-interface controller-manager pluginlib camera-info-manager image-transport cv-bridge roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

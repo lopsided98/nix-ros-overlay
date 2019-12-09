@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libyamlcpp, catkin, boost, pkg-config }:
+{ lib, buildRosPackage, fetchurl, libyamlcpp, boost, pkg-config, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-swri-yaml-util";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_yaml_util/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "cff78a8351b0062db0720cbb37d157b528a1e00a334f9b274df32bdce6e793f5";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_yaml_util/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "25aec77cecebb52adf5b3d16812b0c8f78c6e2460aac3275662826e8235750ab";
   };
 
   buildType = "catkin";
   buildInputs = [ libyamlcpp boost ];
   propagatedBuildInputs = [ libyamlcpp boost ];
-  nativeBuildInputs = [ catkin pkg-config ];
+  nativeBuildInputs = [ pkg-config catkin ];
 
   meta = {
     description = ''Provides wrappers around the yaml-cpp library for various utility functions

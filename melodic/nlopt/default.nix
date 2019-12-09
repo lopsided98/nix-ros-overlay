@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospack, cmake-modules, mk, catkin, rosbuild, libtool }:
+{ lib, buildRosPackage, fetchurl, libtool, cmake-modules, catkin, mk, rosbuild, rospack }:
 buildRosPackage {
   pname = "ros-melodic-nlopt";
   version = "2.1.13-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospack cmake-modules mk rosbuild libtool ];
+  buildInputs = [ libtool cmake-modules mk rosbuild rospack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

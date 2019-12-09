@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamixel-sdk, cmake-modules, libyamlcpp, sensor-msgs, catkin, roscpp, roslib, std-msgs, robotis-device, robotis-controller-msgs, robotis-framework-common }:
+{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, sensor-msgs, std-msgs, cmake-modules, roslib, robotis-device, catkin, libyamlcpp, robotis-framework-common, roscpp, dynamixel-sdk }:
 buildRosPackage {
   pname = "ros-kinetic-robotis-controller";
   version = "0.2.9";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamixel-sdk cmake-modules libyamlcpp sensor-msgs roscpp roslib std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
-  propagatedBuildInputs = [ dynamixel-sdk cmake-modules libyamlcpp sensor-msgs roscpp roslib std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
+  buildInputs = [ robotis-controller-msgs sensor-msgs std-msgs cmake-modules roslib robotis-device libyamlcpp robotis-framework-common roscpp dynamixel-sdk ];
+  propagatedBuildInputs = [ robotis-controller-msgs sensor-msgs std-msgs cmake-modules roslib robotis-device libyamlcpp robotis-framework-common roscpp dynamixel-sdk ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

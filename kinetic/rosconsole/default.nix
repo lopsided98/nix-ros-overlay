@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cpp-common, apr, rosbuild, catkin, rostime, rosunit, log4cxx }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, apr, rosunit, cpp-common, rostime, rosbuild, log4cxx }:
 buildRosPackage {
   pname = "ros-kinetic-rosconsole";
   version = "1.12.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost cpp-common apr rostime rosunit log4cxx ];
-  propagatedBuildInputs = [ cpp-common apr rosbuild rostime log4cxx ];
+  buildInputs = [ boost apr rosunit cpp-common rostime log4cxx ];
+  propagatedBuildInputs = [ apr cpp-common rostime rosbuild log4cxx ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

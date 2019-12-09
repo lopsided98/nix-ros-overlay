@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-uncrustify, ament-cmake-gmock, sensor-msgs, ament-cmake-gtest, ament-cmake-cppcheck, tf2, rclcpp, ament-cmake-lint-cmake, ament-cmake-cpplint, eigen }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, ament-cmake-lint-cmake, ament-cmake-cpplint, ament-cmake, ament-cmake-uncrustify, eigen, tf2, ament-cmake-gmock, ament-cmake-cppcheck, rclcpp, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-laser-geometry";
   version = "2.0.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tf2 sensor-msgs rclcpp eigen ];
-  checkInputs = [ ament-cmake-uncrustify ament-cmake-gmock ament-cmake-gtest ament-cmake-cppcheck ament-cmake-lint-cmake ament-cmake-cpplint ];
-  propagatedBuildInputs = [ ament-cmake sensor-msgs tf2 rclcpp eigen ];
+  buildInputs = [ sensor-msgs eigen rclcpp tf2 ];
+  checkInputs = [ ament-cmake-lint-cmake ament-cmake-cpplint ament-cmake-uncrustify ament-cmake-gmock ament-cmake-cppcheck ament-cmake-gtest ];
+  propagatedBuildInputs = [ sensor-msgs ament-cmake eigen tf2 rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

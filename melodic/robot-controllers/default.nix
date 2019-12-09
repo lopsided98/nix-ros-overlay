@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kdl-parser, orocos-kdl, control-msgs, actionlib-msgs, tf, trajectory-msgs, pluginlib, catkin, sensor-msgs, nav-msgs, robot-controllers-interface, urdf, std-msgs, actionlib, tf-conversions, angles, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, trajectory-msgs, sensor-msgs, geometry-msgs, urdf, robot-controllers-interface, pluginlib, std-msgs, tf, catkin, actionlib, kdl-parser, actionlib-msgs, roscpp, angles, tf-conversions, nav-msgs, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-robot-controllers";
   version = "0.6.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kdl-parser pluginlib actionlib-msgs orocos-kdl control-msgs trajectory-msgs sensor-msgs roscpp nav-msgs robot-controllers-interface tf-conversions urdf actionlib std-msgs angles tf geometry-msgs ];
-  propagatedBuildInputs = [ kdl-parser orocos-kdl actionlib-msgs pluginlib control-msgs trajectory-msgs sensor-msgs roscpp nav-msgs urdf robot-controllers-interface tf-conversions actionlib std-msgs tf geometry-msgs ];
+  buildInputs = [ orocos-kdl sensor-msgs trajectory-msgs geometry-msgs robot-controllers-interface urdf pluginlib std-msgs actionlib tf actionlib-msgs control-msgs roscpp angles tf-conversions nav-msgs kdl-parser ];
+  propagatedBuildInputs = [ orocos-kdl sensor-msgs trajectory-msgs geometry-msgs urdf robot-controllers-interface pluginlib std-msgs tf actionlib actionlib-msgs control-msgs roscpp tf-conversions nav-msgs kdl-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

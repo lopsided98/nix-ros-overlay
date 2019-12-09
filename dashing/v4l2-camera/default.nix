@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-common, camera-info-manager, image-transport, sensor-msgs, rclcpp, ament-cmake-ros, ament-lint-auto, rclcpp-components }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, ament-cmake-ros, rclcpp-components, camera-info-manager, ament-lint-common, image-transport, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-v4l2-camera";
   version = "0.1.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ camera-info-manager image-transport sensor-msgs rclcpp rclcpp-components ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs rclcpp rclcpp-components ];
+  buildInputs = [ sensor-msgs rclcpp-components camera-info-manager image-transport rclcpp ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs rclcpp-components camera-info-manager image-transport rclcpp ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

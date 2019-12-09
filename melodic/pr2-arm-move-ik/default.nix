@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers-msgs, actionlib-msgs, pr2-common-action-msgs, catkin, roscpp, urdf, actionlib, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, actionlib, tf, catkin, actionlib-msgs, roscpp, pr2-controllers-msgs, pr2-common-action-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2-arm-move-ik";
   version = "0.0.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs actionlib-msgs pr2-common-action-msgs tf urdf actionlib roscpp geometry-msgs ];
-  propagatedBuildInputs = [ pr2-controllers-msgs actionlib-msgs pr2-common-action-msgs tf urdf actionlib roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs urdf actionlib tf actionlib-msgs roscpp pr2-controllers-msgs pr2-common-action-msgs ];
+  propagatedBuildInputs = [ geometry-msgs urdf actionlib tf actionlib-msgs roscpp pr2-controllers-msgs pr2-common-action-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag, catkin, uuv-control-utils, lauv-description, lauv-control }:
+{ lib, buildRosPackage, fetchurl, lauv-control, lauv-description, catkin, uuv-control-utils, rosbag }:
 buildRosPackage {
   pname = "ros-melodic-lauv-gazebo";
   version = "0.1.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosbag lauv-description uuv-control-utils lauv-control ];
+  propagatedBuildInputs = [ rosbag lauv-control uuv-control-utils lauv-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

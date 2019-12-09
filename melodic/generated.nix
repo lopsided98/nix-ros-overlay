@@ -48,6 +48,20 @@ self: super: {
 
  agni-tf-tools = self.callPackage ./agni-tf-tools {};
 
+ ainstein-radar = self.callPackage ./ainstein-radar {};
+
+ ainstein-radar-drivers = self.callPackage ./ainstein-radar-drivers {};
+
+ ainstein-radar-filters = self.callPackage ./ainstein-radar-filters {};
+
+ ainstein-radar-gazebo-plugins = self.callPackage ./ainstein-radar-gazebo-plugins {};
+
+ ainstein-radar-msgs = self.callPackage ./ainstein-radar-msgs {};
+
+ ainstein-radar-rviz-plugins = self.callPackage ./ainstein-radar-rviz-plugins {};
+
+ ainstein-radar-tools = self.callPackage ./ainstein-radar-tools {};
+
  allocators = self.callPackage ./allocators {};
 
  amcl = self.callPackage ./amcl {};
@@ -124,6 +138,8 @@ self: super: {
 
  bagger = self.callPackage ./bagger {};
 
+ baldor = self.callPackage ./baldor {};
+
  base-local-planner = self.callPackage ./base-local-planner {};
 
  bayesian-belief-networks = self.callPackage ./bayesian-belief-networks {};
@@ -133,6 +149,8 @@ self: super: {
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bfl = self.callPackage ./bfl {};
+
+ blender-gazebo = self.callPackage ./blender-gazebo {};
 
  bond = self.callPackage ./bond {};
 
@@ -159,6 +177,8 @@ self: super: {
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
+
+ camera-info-manager-py = self.callPackage ./camera-info-manager-py {};
 
  camera-umd = self.callPackage ./camera-umd {};
 
@@ -195,6 +215,8 @@ self: super: {
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
+
+ cis-camera = self.callPackage ./cis-camera {};
 
  cl-tf = self.callPackage ./cl-tf {};
 
@@ -258,6 +280,8 @@ self: super: {
 
  cob-cartesian-controller = self.callPackage ./cob-cartesian-controller {};
 
+ cob-collision-monitor = self.callPackage ./cob-collision-monitor {};
+
  cob-collision-velocity-filter = self.callPackage ./cob-collision-velocity-filter {};
 
  cob-command-gui = self.callPackage ./cob-command-gui {};
@@ -276,6 +300,10 @@ self: super: {
 
  cob-default-env-config = self.callPackage ./cob-default-env-config {};
 
+ cob-default-robot-behavior = self.callPackage ./cob-default-robot-behavior {};
+
+ cob-default-robot-config = self.callPackage ./cob-default-robot-config {};
+
  cob-description = self.callPackage ./cob-description {};
 
  cob-docker-control = self.callPackage ./cob-docker-control {};
@@ -292,15 +320,27 @@ self: super: {
 
  cob-frame-tracker = self.callPackage ./cob-frame-tracker {};
 
+ cob-gazebo-objects = self.callPackage ./cob-gazebo-objects {};
+
  cob-gazebo-plugins = self.callPackage ./cob-gazebo-plugins {};
 
  cob-gazebo-ros-control = self.callPackage ./cob-gazebo-ros-control {};
 
+ cob-gazebo-tools = self.callPackage ./cob-gazebo-tools {};
+
+ cob-gazebo-worlds = self.callPackage ./cob-gazebo-worlds {};
+
  cob-generic-can = self.callPackage ./cob-generic-can {};
+
+ cob-grasp-generation = self.callPackage ./cob-grasp-generation {};
 
  cob-hand = self.callPackage ./cob-hand {};
 
  cob-hand-bridge = self.callPackage ./cob-hand-bridge {};
+
+ cob-hardware-config = self.callPackage ./cob-hardware-config {};
+
+ cob-hardware-emulation = self.callPackage ./cob-hardware-emulation {};
 
  cob-helper-tools = self.callPackage ./cob-helper-tools {};
 
@@ -312,6 +352,10 @@ self: super: {
 
  cob-linear-nav = self.callPackage ./cob-linear-nav {};
 
+ cob-lookat-action = self.callPackage ./cob-lookat-action {};
+
+ cob-manipulation = self.callPackage ./cob-manipulation {};
+
  cob-map-accessibility-analysis = self.callPackage ./cob-map-accessibility-analysis {};
 
  cob-mapping-slam = self.callPackage ./cob-mapping-slam {};
@@ -319,6 +363,12 @@ self: super: {
  cob-model-identifier = self.callPackage ./cob-model-identifier {};
 
  cob-monitoring = self.callPackage ./cob-monitoring {};
+
+ cob-moveit-bringup = self.callPackage ./cob-moveit-bringup {};
+
+ cob-moveit-config = self.callPackage ./cob-moveit-config {};
+
+ cob-moveit-interface = self.callPackage ./cob-moveit-interface {};
 
  cob-msgs = self.callPackage ./cob-msgs {};
 
@@ -433,6 +483,8 @@ self: super: {
  cpp-common = self.callPackage ./cpp-common {};
 
  cpr-multimaster-tools = self.callPackage ./cpr-multimaster-tools {};
+
+ criutils = self.callPackage ./criutils {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
 
@@ -555,6 +607,8 @@ self: super: {
  dlux-global-planner = self.callPackage ./dlux-global-planner {};
 
  dlux-plugins = self.callPackage ./dlux-plugins {};
+
+ dockeros = self.callPackage ./dockeros {};
 
  downward = self.callPackage ./downward {};
 
@@ -844,6 +898,20 @@ self: super: {
 
  freight-bringup = self.callPackage ./freight-bringup {};
 
+ fsrobo-r = self.callPackage ./fsrobo-r {};
+
+ fsrobo-r-bringup = self.callPackage ./fsrobo-r-bringup {};
+
+ fsrobo-r-description = self.callPackage ./fsrobo-r-description {};
+
+ fsrobo-r-driver = self.callPackage ./fsrobo-r-driver {};
+
+ fsrobo-r-moveit-config = self.callPackage ./fsrobo-r-moveit-config {};
+
+ fsrobo-r-msgs = self.callPackage ./fsrobo-r-msgs {};
+
+ fsrobo-r-trajectory-filters = self.callPackage ./fsrobo-r-trajectory-filters {};
+
  gateway-msgs = self.callPackage ./gateway-msgs {};
 
  gazebo-dev = self.callPackage ./gazebo-dev {};
@@ -947,6 +1015,8 @@ self: super: {
  h264-encoder-core = self.callPackage ./h264-encoder-core {};
 
  h264-video-encoder = self.callPackage ./h264-video-encoder {};
+
+ handeye = self.callPackage ./handeye {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
@@ -1258,6 +1328,8 @@ self: super: {
 
  ksql-airport = self.callPackage ./ksql-airport {};
 
+ laptop-battery-monitor = self.callPackage ./laptop-battery-monitor {};
+
  laser-assembler = self.callPackage ./laser-assembler {};
 
  laser-cb-detector = self.callPackage ./laser-cb-detector {};
@@ -1278,6 +1350,8 @@ self: super: {
 
  laser-scan-publisher-tutorial = self.callPackage ./laser-scan-publisher-tutorial {};
 
+ laser-tilt-controller-filter = self.callPackage ./laser-tilt-controller-filter {};
+
  lauv-control = self.callPackage ./lauv-control {};
 
  lauv-description = self.callPackage ./lauv-description {};
@@ -1285,6 +1359,18 @@ self: super: {
  lauv-gazebo = self.callPackage ./lauv-gazebo {};
 
  leg-detector = self.callPackage ./leg-detector {};
+
+ leuze-bringup = self.callPackage ./leuze-bringup {};
+
+ leuze-description = self.callPackage ./leuze-description {};
+
+ leuze-msgs = self.callPackage ./leuze-msgs {};
+
+ leuze-phidget-driver = self.callPackage ./leuze-phidget-driver {};
+
+ leuze-ros-drivers = self.callPackage ./leuze-ros-drivers {};
+
+ leuze-rsl-driver = self.callPackage ./leuze-rsl-driver {};
 
  lex-common = self.callPackage ./lex-common {};
 
@@ -1338,6 +1424,8 @@ self: super: {
 
  librviz-tutorial = self.callPackage ./librviz-tutorial {};
 
+ libsensors-monitor = self.callPackage ./libsensors-monitor {};
+
  libsiftfast = self.callPackage ./libsiftfast {};
 
  libuvc = self.callPackage ./libuvc {};
@@ -1349,6 +1437,8 @@ self: super: {
  linksys-access-point = self.callPackage ./linksys-access-point {};
 
  linux-networking = self.callPackage ./linux-networking {};
+
+ linux-peripheral-interfaces = self.callPackage ./linux-peripheral-interfaces {};
 
  lms1xx = self.callPackage ./lms1xx {};
 
@@ -1902,13 +1992,13 @@ self: super: {
 
  pilz-trajectory-generation = self.callPackage ./pilz-trajectory-generation {};
 
+ pilz-utils = self.callPackage ./pilz-utils {};
+
  pinocchio = self.callPackage ./pinocchio {};
 
  planner-cspace = self.callPackage ./planner-cspace {};
 
  planner-cspace-msgs = self.callPackage ./planner-cspace-msgs {};
-
- plotjuggler = self.callPackage ./plotjuggler {};
 
  pluginlib = self.callPackage ./pluginlib {};
 
@@ -1992,11 +2082,29 @@ self: super: {
 
  pr2-mechanism-msgs = self.callPackage ./pr2-mechanism-msgs {};
 
+ pr2-move-base = self.callPackage ./pr2-move-base {};
+
  pr2-moveit-config = self.callPackage ./pr2-moveit-config {};
 
  pr2-moveit-plugins = self.callPackage ./pr2-moveit-plugins {};
 
  pr2-msgs = self.callPackage ./pr2-msgs {};
+
+ pr2-navigation = self.callPackage ./pr2-navigation {};
+
+ pr2-navigation-config = self.callPackage ./pr2-navigation-config {};
+
+ pr2-navigation-global = self.callPackage ./pr2-navigation-global {};
+
+ pr2-navigation-local = self.callPackage ./pr2-navigation-local {};
+
+ pr2-navigation-perception = self.callPackage ./pr2-navigation-perception {};
+
+ pr2-navigation-self-filter = self.callPackage ./pr2-navigation-self-filter {};
+
+ pr2-navigation-slam = self.callPackage ./pr2-navigation-slam {};
+
+ pr2-navigation-teleop = self.callPackage ./pr2-navigation-teleop {};
 
  pr2-position-scripts = self.callPackage ./pr2-position-scripts {};
 
@@ -2041,6 +2149,8 @@ self: super: {
  prosilica-gige-sdk = self.callPackage ./prosilica-gige-sdk {};
 
  ps3joy = self.callPackage ./ps3joy {};
+
+ psen-scan = self.callPackage ./psen-scan {};
 
  px4-msgs = self.callPackage ./px4-msgs {};
 
@@ -2658,9 +2768,29 @@ self: super: {
 
  sdhlibrary-cpp = self.callPackage ./sdhlibrary-cpp {};
 
+ seed-r7-bringup = self.callPackage ./seed-r7-bringup {};
+
+ seed-r7-description = self.callPackage ./seed-r7-description {};
+
+ seed-r7-moveit-config = self.callPackage ./seed-r7-moveit-config {};
+
+ seed-r7-navigation = self.callPackage ./seed-r7-navigation {};
+
+ seed-r7-robot-interface = self.callPackage ./seed-r7-robot-interface {};
+
+ seed-r7-ros-controller = self.callPackage ./seed-r7-ros-controller {};
+
+ seed-r7-ros-pkg = self.callPackage ./seed-r7-ros-pkg {};
+
+ seed-r7-samples = self.callPackage ./seed-r7-samples {};
+
+ seed-r7-typef-moveit-config = self.callPackage ./seed-r7-typef-moveit-config {};
+
  seed-smartactuator-sdk = self.callPackage ./seed-smartactuator-sdk {};
 
  self-test = self.callPackage ./self-test {};
+
+ semantic-point-annotator = self.callPackage ./semantic-point-annotator {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
@@ -2763,6 +2893,12 @@ self: super: {
  swri-opencv-util = self.callPackage ./swri-opencv-util {};
 
  swri-prefix-tools = self.callPackage ./swri-prefix-tools {};
+
+ swri-profiler = self.callPackage ./swri-profiler {};
+
+ swri-profiler-msgs = self.callPackage ./swri-profiler-msgs {};
+
+ swri-profiler-tools = self.callPackage ./swri-profiler-tools {};
 
  swri-roscpp = self.callPackage ./swri-roscpp {};
 
@@ -2940,6 +3076,8 @@ self: super: {
 
  turtlesim = self.callPackage ./turtlesim {};
 
+ turtlesim-dash-tutorial = self.callPackage ./turtlesim-dash-tutorial {};
+
  tuw-airskin-msgs = self.callPackage ./tuw-airskin-msgs {};
 
  tuw-aruco = self.callPackage ./tuw-aruco {};
@@ -2974,9 +3112,23 @@ self: super: {
 
  twist-recovery = self.callPackage ./twist-recovery {};
 
+ ubiquity-motor = self.callPackage ./ubiquity-motor {};
+
+ ublox = self.callPackage ./ublox {};
+
+ ublox-gps = self.callPackage ./ublox-gps {};
+
+ ublox-msgs = self.callPackage ./ublox-msgs {};
+
+ ublox-serialization = self.callPackage ./ublox-serialization {};
+
  um6 = self.callPackage ./um6 {};
 
  um7 = self.callPackage ./um7 {};
+
+ underwater-sensor-msgs = self.callPackage ./underwater-sensor-msgs {};
+
+ underwater-vehicle-dynamics = self.callPackage ./underwater-vehicle-dynamics {};
 
  unique-id = self.callPackage ./unique-id {};
 

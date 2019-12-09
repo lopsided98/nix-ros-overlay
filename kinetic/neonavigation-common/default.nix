@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, catkin, roslint, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, rostest, roscpp, roslint }:
 buildRosPackage {
   pname = "ros-kinetic-neonavigation-common";
   version = "0.5.0-r1";

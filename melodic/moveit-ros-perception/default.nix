@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, cv-bridge, freeglut, octomap, image-transport, message-filters, moveit-core, libGL, tf2-geometry-msgs, catkin, tf2-ros, urdf, moveit-msgs, libGLU, roscpp, eigen, pluginlib, sensor-msgs, tf2, tf2-eigen, object-recognition-msgs, glew, rosunit }:
+{ lib, buildRosPackage, fetchurl, urdf, pluginlib, rosunit, image-transport, eigen, tf2, object-recognition-msgs, sensor-msgs, octomap, tf2-geometry-msgs, rosconsole, tf2-ros, moveit-core, message-filters, catkin, cv-bridge, roscpp, libGLU, libGL, tf2-eigen, freeglut, moveit-msgs, glew }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-perception";
   version = "1.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole cv-bridge freeglut octomap image-transport message-filters moveit-core libGL tf2-geometry-msgs tf2-ros urdf libGLU moveit-msgs roscpp eigen pluginlib sensor-msgs tf2 tf2-eigen object-recognition-msgs glew ];
+  buildInputs = [ urdf pluginlib image-transport eigen tf2 object-recognition-msgs sensor-msgs octomap tf2-geometry-msgs rosconsole tf2-ros moveit-core message-filters cv-bridge roscpp libGLU libGL tf2-eigen freeglut moveit-msgs glew ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ rosconsole cv-bridge freeglut octomap image-transport message-filters moveit-core libGL tf2-geometry-msgs tf2-ros urdf libGLU moveit-msgs roscpp pluginlib sensor-msgs tf2 tf2-eigen object-recognition-msgs glew ];
+  propagatedBuildInputs = [ urdf pluginlib image-transport tf2 object-recognition-msgs sensor-msgs octomap tf2-geometry-msgs rosconsole tf2-ros moveit-core message-filters cv-bridge roscpp libGLU libGL tf2-eigen freeglut moveit-msgs glew ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

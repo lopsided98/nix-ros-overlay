@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, pluginlib, catkin, rostest, controller-interface, controller-manager-msgs }:
+{ lib, buildRosPackage, fetchurl, controller-interface, controller-manager-msgs, pluginlib, hardware-interface, catkin, rostest }:
 buildRosPackage {
   pname = "ros-melodic-controller-manager";
   version = "0.15.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface controller-interface controller-manager-msgs pluginlib ];
+  buildInputs = [ controller-manager-msgs pluginlib controller-interface hardware-interface ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ hardware-interface controller-interface controller-manager-msgs pluginlib ];
+  propagatedBuildInputs = [ controller-manager-msgs pluginlib controller-interface hardware-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

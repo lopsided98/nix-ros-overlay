@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, std-srvs, control-msgs, realtime-tools, catkin, rosgraph-msgs, rostest, nav-msgs, urdf, controller-interface, dynamic-reconfigure, tf, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, controller-interface, controller-manager, urdf, dynamic-reconfigure, rosgraph-msgs, std-srvs, tf, catkin, realtime-tools, nav-msgs, rostest, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-diff-drive-controller";
   version = "0.15.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ control-msgs realtime-tools nav-msgs urdf controller-interface dynamic-reconfigure tf ];
-  checkInputs = [ controller-manager std-srvs rosgraph-msgs rostest xacro ];
-  propagatedBuildInputs = [ control-msgs realtime-tools nav-msgs urdf controller-interface dynamic-reconfigure tf ];
+  buildInputs = [ controller-interface dynamic-reconfigure urdf tf realtime-tools nav-msgs control-msgs ];
+  checkInputs = [ xacro controller-manager std-srvs rosgraph-msgs rostest ];
+  propagatedBuildInputs = [ controller-interface dynamic-reconfigure urdf tf realtime-tools nav-msgs control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

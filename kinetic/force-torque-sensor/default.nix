@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, hardware-interface, iirob-filters, cmake-modules, tf2-geometry-msgs, pluginlib, realtime-tools, catkin, tf2-ros, roscpp, tf2, message-runtime, rospy, std-msgs, dynamic-reconfigure, rosparam-handler, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, message-runtime, hardware-interface, pluginlib, std-srvs, rosparam-handler, std-msgs, catkin, tf2, cmake-modules, tf2-geometry-msgs, realtime-tools, iirob-filters, roscpp, rospy, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-force-torque-sensor";
   version = "0.8.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface std-srvs cmake-modules pluginlib tf2-geometry-msgs rosparam-handler realtime-tools tf2-ros rospy roscpp tf2 dynamic-reconfigure std-msgs iirob-filters geometry-msgs ];
-  propagatedBuildInputs = [ hardware-interface iirob-filters std-srvs cmake-modules tf2-geometry-msgs pluginlib rosparam-handler realtime-tools tf2-ros tf2 std-msgs message-runtime dynamic-reconfigure rospy roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure hardware-interface pluginlib std-msgs rosparam-handler std-srvs cmake-modules roscpp tf2-geometry-msgs realtime-tools iirob-filters tf2 rospy tf2-ros ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure message-runtime hardware-interface pluginlib std-srvs rosparam-handler std-msgs cmake-modules roscpp tf2-geometry-msgs realtime-tools iirob-filters tf2 rospy tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

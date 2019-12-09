@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, suitesparse, cmake-modules, catkin, blas, liblapack, eigen }:
+{ lib, buildRosPackage, fetchurl, liblapack, cmake-modules, catkin, suitesparse, blas, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-sparse-bundle-adjustment";
   version = "0.3.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ suitesparse cmake-modules blas liblapack eigen ];
-  propagatedBuildInputs = [ liblapack suitesparse blas ];
+  buildInputs = [ liblapack cmake-modules suitesparse blas eigen ];
+  propagatedBuildInputs = [ suitesparse blas liblapack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, ecl-license, ament-cmake-ros, ament-lint-auto, ecl-config }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-license, ament-lint-common, ament-lint-auto, ecl-config, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-ecl-converters-lite";
   version = "1.0.3-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ecl-license ecl-config ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
   propagatedBuildInputs = [ ecl-license ecl-config ];
   nativeBuildInputs = [ ament-cmake-ros ];
 

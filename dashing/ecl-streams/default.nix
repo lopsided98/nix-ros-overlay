@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-converters, ament-lint-common, ament-cmake-gtest, ecl-concepts, ecl-time, ecl-build, ecl-license, ecl-errors, ecl-type-traits, ecl-devices, ament-cmake-ros, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ecl-time, ament-cmake-ros, ecl-license, ecl-type-traits, ament-lint-common, ecl-errors, ecl-converters, ecl-concepts, ament-cmake-gtest, ecl-devices, ecl-build, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-ecl-streams";
   version = "1.0.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-converters ecl-concepts ecl-time ecl-build ecl-license ecl-errors ecl-type-traits ecl-devices ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ ecl-converters ecl-concepts ecl-time ecl-license ecl-errors ecl-type-traits ecl-devices ];
+  buildInputs = [ ecl-time ecl-license ecl-type-traits ecl-errors ecl-build ecl-concepts ecl-devices ecl-converters ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ ecl-time ecl-license ecl-type-traits ecl-errors ecl-concepts ecl-devices ecl-converters ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

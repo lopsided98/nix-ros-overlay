@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, filters, bullet, tf, sensor-msgs, catkin, assimp, urdf, resource-retriever, visualization-msgs, pcl-ros, roscpp }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, assimp, urdf, resource-retriever, filters, tf, catkin, visualization-msgs, roscpp, bullet }:
 buildRosPackage {
   pname = "ros-kinetic-robot-self-filter";
   version = "0.1.30-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ filters bullet tf sensor-msgs assimp urdf resource-retriever visualization-msgs pcl-ros roscpp ];
-  propagatedBuildInputs = [ filters bullet tf sensor-msgs assimp urdf resource-retriever visualization-msgs pcl-ros roscpp ];
+  buildInputs = [ pcl-ros sensor-msgs assimp urdf resource-retriever filters tf visualization-msgs roscpp bullet ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs assimp urdf resource-retriever tf filters visualization-msgs roscpp bullet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

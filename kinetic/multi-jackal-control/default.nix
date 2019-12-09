@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, joint-state-controller, diff-drive-controller, hector-gazebo-plugins, catkin, roscpp, nav-msgs, urdf, interactive-marker-twist-server, std-msgs, roslaunch, tf, xacro, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, xacro, controller-manager, urdf, hector-gazebo-plugins, std-msgs, roslaunch, tf, catkin, interactive-marker-twist-server, diff-drive-controller, gazebo-ros-control, roscpp, nav-msgs, joint-state-controller }:
 buildRosPackage {
   pname = "ros-kinetic-multi-jackal-control";
   version = "0.0.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager joint-state-controller diff-drive-controller hector-gazebo-plugins roscpp nav-msgs urdf interactive-marker-twist-server std-msgs roslaunch tf xacro gazebo-ros-control ];
-  propagatedBuildInputs = [ controller-manager joint-state-controller diff-drive-controller hector-gazebo-plugins roscpp nav-msgs urdf interactive-marker-twist-server std-msgs tf xacro gazebo-ros-control ];
+  buildInputs = [ xacro controller-manager urdf hector-gazebo-plugins std-msgs roslaunch tf interactive-marker-twist-server diff-drive-controller gazebo-ros-control roscpp nav-msgs joint-state-controller ];
+  propagatedBuildInputs = [ xacro controller-manager urdf hector-gazebo-plugins std-msgs tf interactive-marker-twist-server diff-drive-controller gazebo-ros-control roscpp nav-msgs joint-state-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

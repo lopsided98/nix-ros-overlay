@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gencpp, genlisp, gennodejs, catkin, geneus, genmsg, genpy }:
+{ lib, buildRosPackage, fetchurl, genlisp, genmsg, catkin, gennodejs, genpy, gencpp, geneus }:
 buildRosPackage {
   pname = "ros-melodic-message-generation";
   version = "0.4.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gencpp genlisp gennodejs geneus genmsg genpy ];
+  propagatedBuildInputs = [ genlisp genmsg gennodejs genpy gencpp geneus ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

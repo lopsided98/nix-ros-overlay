@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, tf, catkin, message-filters, roscpp, nav-msgs, message-generation, message-runtime, visualization-msgs, eigen, tf-conversions, laser-geometry }:
+{ lib, buildRosPackage, fetchurl, message-generation, boost, message-filters, tf, catkin, laser-geometry, eigen, visualization-msgs, roscpp, message-runtime, tf-conversions, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-hector-mapping";
   version = "0.4.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost tf message-filters roscpp nav-msgs message-generation visualization-msgs eigen tf-conversions laser-geometry ];
-  propagatedBuildInputs = [ boost message-filters roscpp laser-geometry nav-msgs message-runtime visualization-msgs eigen tf-conversions tf ];
+  buildInputs = [ boost message-filters tf laser-geometry eigen visualization-msgs roscpp message-generation tf-conversions nav-msgs ];
+  propagatedBuildInputs = [ boost message-filters tf laser-geometry eigen visualization-msgs roscpp message-runtime tf-conversions nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, mav-msgs, sensor-msgs, catkin, nav-msgs, dynamic-reconfigure, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, dynamic-reconfigure, cmake-modules, catkin, mav-msgs, roscpp, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rotors-control";
   version = "2.2.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules mav-msgs sensor-msgs nav-msgs dynamic-reconfigure roscpp geometry-msgs ];
-  propagatedBuildInputs = [ cmake-modules mav-msgs sensor-msgs nav-msgs dynamic-reconfigure roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure cmake-modules mav-msgs roscpp nav-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure cmake-modules mav-msgs roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

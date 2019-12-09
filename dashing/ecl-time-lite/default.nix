@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-build, ecl-license, ecl-errors, ament-cmake-ros, ecl-config }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-license, ecl-errors, ecl-config, ecl-build }:
 buildRosPackage {
   pname = "ros-dashing-ecl-time-lite";
   version = "1.0.3-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-license ecl-errors ecl-config ecl-build ];
-  propagatedBuildInputs = [ ecl-license ecl-errors ecl-config ecl-build ];
+  buildInputs = [ ecl-errors ecl-license ecl-config ecl-build ];
+  propagatedBuildInputs = [ ecl-errors ecl-license ecl-config ecl-build ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

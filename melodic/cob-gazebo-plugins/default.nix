@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cob-gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, cob-gazebo-ros-control, catkin }:
 buildRosPackage {
   pname = "ros-melodic-cob-gazebo-plugins";
   version = "0.7.3-r1";

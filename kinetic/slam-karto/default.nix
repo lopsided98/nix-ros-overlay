@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, rosconsole, sensor-msgs, catkin, message-filters, roscpp, nav-msgs, visualization-msgs, eigen, sparse-bundle-adjustment, tf, open-karto }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, nav-msgs, open-karto, cmake-modules, tf, catkin, eigen, visualization-msgs, roscpp, sparse-bundle-adjustment, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-slam-karto";
   version = "0.7.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules rosconsole sensor-msgs message-filters roscpp nav-msgs visualization-msgs eigen sparse-bundle-adjustment tf open-karto ];
-  propagatedBuildInputs = [ rosconsole sensor-msgs message-filters roscpp nav-msgs visualization-msgs eigen sparse-bundle-adjustment tf open-karto ];
+  buildInputs = [ sensor-msgs message-filters nav-msgs open-karto tf cmake-modules eigen visualization-msgs roscpp sparse-bundle-adjustment rosconsole ];
+  propagatedBuildInputs = [ sensor-msgs message-filters nav-msgs open-karto tf eigen visualization-msgs roscpp sparse-bundle-adjustment rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

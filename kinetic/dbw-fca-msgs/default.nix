@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, rosbag-migration-rule, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, std-msgs, catkin, message-runtime, rosbag-migration-rule }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-fca-msgs";
   version = "1.0.6-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
-  propagatedBuildInputs = [ std-msgs rosbag-migration-rule message-runtime geometry-msgs ];
+  propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs rosbag-migration-rule ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

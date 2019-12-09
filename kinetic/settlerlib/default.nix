@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, boost, catkin, rostime, calibration-msgs }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, calibration-msgs, rostime, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-settlerlib";
   version = "0.10.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost rostime rosconsole calibration-msgs ];
-  propagatedBuildInputs = [ calibration-msgs rosconsole rostime boost ];
+  buildInputs = [ calibration-msgs boost rosconsole rostime ];
+  propagatedBuildInputs = [ calibration-msgs boost rosconsole rostime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

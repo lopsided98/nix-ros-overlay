@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, flexbe-msgs, catkin, smach-ros, rospy, diagnostic-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, diagnostic-msgs, tf, catkin, smach-ros, flexbe-msgs, rospy }:
 buildRosPackage {
   pname = "ros-melodic-flexbe-core";
   version = "1.2.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ flexbe-msgs smach-ros rospy diagnostic-msgs tf ];
+  propagatedBuildInputs = [ diagnostic-msgs tf smach-ros flexbe-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

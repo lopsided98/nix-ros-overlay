@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, catkin, message-runtime, std-msgs, tf, robotnik-sensors }:
+{ lib, buildRosPackage, fetchurl, std-msgs, std-srvs, tf, catkin, message-runtime, robotnik-sensors }:
 buildRosPackage {
   pname = "ros-kinetic-rbcar-description";
   version = "1.0.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs std-srvs tf robotnik-sensors ];
-  propagatedBuildInputs = [ std-srvs message-runtime std-msgs tf robotnik-sensors ];
+  buildInputs = [ std-msgs std-srvs robotnik-sensors tf ];
+  propagatedBuildInputs = [ std-msgs std-srvs tf message-runtime robotnik-sensors ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

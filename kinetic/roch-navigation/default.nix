@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslaunch, gmapping, frontier-exploration, map-server, amcl, base-local-planner, navfn, roch-safety-controller, sensor-msgs, catkin, move-base, roscpp, dwa-local-planner, nodelet, yocs-cmd-vel-mux, roch-bringup, tf }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, roch-bringup, frontier-exploration, map-server, roch-safety-controller, tf, catkin, base-local-planner, yocs-cmd-vel-mux, gmapping, nodelet, roscpp, move-base, amcl, roslaunch, navfn, dwa-local-planner }:
 buildRosPackage {
   pname = "ros-kinetic-roch-navigation";
   version = "2.0.12";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslaunch tf sensor-msgs roscpp ];
-  propagatedBuildInputs = [ gmapping frontier-exploration map-server amcl base-local-planner roch-safety-controller navfn tf sensor-msgs move-base dwa-local-planner roch-bringup nodelet yocs-cmd-vel-mux roscpp ];
+  buildInputs = [ sensor-msgs roslaunch tf roscpp ];
+  propagatedBuildInputs = [ sensor-msgs roch-bringup frontier-exploration map-server roch-safety-controller tf base-local-planner yocs-cmd-vel-mux gmapping nodelet roscpp move-base amcl navfn dwa-local-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

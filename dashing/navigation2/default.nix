@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, nav2-voxel-grid, nav2-dwb-controller, nav2-lifecycle-manager, nav2-behavior-tree, nav2-bt-navigator, nav2-amcl, nav2-map-server, ament-cmake-pytest, nav2-navfn-planner, ament-cmake-gtest, launch, nav2-util, nav2-rviz-plugins, nav2-world-model, ament-lint-common, launch-testing, nav2-msgs, nav2-costmap-2d, ament-lint-auto, nav2-recoveries }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, nav2-util, nav2-msgs, ament-lint-auto, launch-testing, nav2-behavior-tree, nav2-recoveries, ament-lint-common, nav2-voxel-grid, nav2-map-server, ament-cmake-gtest, nav2-dwb-controller, nav2-costmap-2d, nav2-world-model, nav2-bt-navigator, launch, nav2-amcl, nav2-lifecycle-manager, nav2-rviz-plugins, ament-cmake-pytest, nav2-navfn-planner }:
 buildRosPackage {
   pname = "ros-dashing-navigation2";
   version = "0.2.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ nav2-map-server nav2-voxel-grid nav2-navfn-planner nav2-msgs nav2-world-model nav2-util nav2-rviz-plugins nav2-dwb-controller nav2-costmap-2d nav2-lifecycle-manager nav2-behavior-tree nav2-bt-navigator nav2-recoveries nav2-amcl ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ nav2-dwb-controller nav2-behavior-tree nav2-recoveries nav2-lifecycle-manager nav2-costmap-2d nav2-world-model nav2-rviz-plugins nav2-voxel-grid nav2-map-server nav2-util nav2-amcl nav2-navfn-planner nav2-msgs nav2-bt-navigator ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

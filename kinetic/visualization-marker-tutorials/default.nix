@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp, catkin, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, visualization-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-visualization-marker-tutorials";
   version = "0.10.3";

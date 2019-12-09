@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, catkin, roscpp, rostest, visualization-msgs, rospy, std-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, std-msgs, tf, catkin, rosconsole, visualization-msgs, roscpp, rospy, rostest }:
 buildRosPackage {
   pname = "ros-melodic-interactive-markers";
   version = "1.11.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole roscpp rostest visualization-msgs rospy std-msgs tf ];
-  propagatedBuildInputs = [ rosconsole tf rostest visualization-msgs rospy std-msgs roscpp ];
+  buildInputs = [ rostest std-msgs tf visualization-msgs roscpp rospy rosconsole ];
+  propagatedBuildInputs = [ rostest std-msgs tf visualization-msgs roscpp rospy rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

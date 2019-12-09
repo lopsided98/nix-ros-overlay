@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, qt-gui, ament-index-python, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake, qt-gui, ament-index-python, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-qt-gui-app";
   version = "1.0.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-index-python qt-gui ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ qt-gui ament-index-python ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

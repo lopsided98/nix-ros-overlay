@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, joint-state-controller, diff-drive-controller, catkin, position-controllers, rviz, rqt-robot-steering, robot-state-publisher, urdf-tutorial, xacro, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, rqt-robot-steering, xacro, controller-manager, robot-state-publisher, urdf-tutorial, position-controllers, catkin, rviz, diff-drive-controller, gazebo-ros-control, gazebo-ros, joint-state-controller }:
 buildRosPackage {
   pname = "ros-melodic-urdf-sim-tutorial";
   version = "0.4.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gazebo-ros controller-manager joint-state-controller diff-drive-controller position-controllers rviz rqt-robot-steering robot-state-publisher urdf-tutorial xacro gazebo-ros-control ];
+  propagatedBuildInputs = [ rqt-robot-steering xacro controller-manager robot-state-publisher urdf-tutorial position-controllers rviz diff-drive-controller gazebo-ros-control gazebo-ros joint-state-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

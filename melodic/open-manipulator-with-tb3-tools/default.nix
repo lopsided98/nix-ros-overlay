@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, smach-ros, ar-track-alvar-msgs, rospy, geometry-msgs, map-server, moveit-core, robot-state-publisher, roslaunch, moveit-ros-planning-interface, joint-state-publisher, smach, trajectory-msgs, catkin, move-base, nav-msgs, std-msgs, moveit-msgs, roscpp, amcl, open-manipulator-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, smach-ros, nav-msgs, robot-state-publisher, amcl, joint-state-publisher, moveit-core, moveit-ros-planning-interface, std-msgs, catkin, smach, moveit-ros-planning, roscpp, ar-track-alvar-msgs, rospy, roslaunch, trajectory-msgs, map-server, open-manipulator-msgs, moveit-msgs, move-base }:
 buildRosPackage {
   pname = "ros-melodic-open-manipulator-with-tb3-tools";
   version = "1.1.0-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-planning geometry-msgs smach trajectory-msgs smach-ros ar-track-alvar-msgs nav-msgs moveit-core rospy std-msgs moveit-msgs roslaunch roscpp moveit-ros-planning-interface open-manipulator-msgs ];
-  propagatedBuildInputs = [ moveit-ros-planning smach-ros ar-track-alvar-msgs rospy geometry-msgs map-server moveit-core robot-state-publisher roslaunch smach moveit-ros-planning-interface joint-state-publisher trajectory-msgs move-base nav-msgs std-msgs moveit-msgs roscpp amcl open-manipulator-msgs ];
+  buildInputs = [ trajectory-msgs moveit-core geometry-msgs std-msgs moveit-ros-planning-interface roslaunch smach roscpp smach-ros open-manipulator-msgs moveit-msgs moveit-ros-planning ar-track-alvar-msgs rospy nav-msgs ];
+  propagatedBuildInputs = [ geometry-msgs smach-ros nav-msgs robot-state-publisher amcl joint-state-publisher moveit-core std-msgs moveit-ros-planning-interface smach roscpp moveit-ros-planning ar-track-alvar-msgs rospy roslaunch trajectory-msgs map-server open-manipulator-msgs move-base moveit-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

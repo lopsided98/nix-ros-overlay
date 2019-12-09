@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, tf2-geometry-msgs, catkin, tf2-ros, tf2, rostest, nav-msgs, trajectory-tracker-msgs, neonavigation-common, interactive-markers, eigen, roscpp, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, interactive-markers, catkin, tf2, neonavigation-common, rosunit, roslint, tf2-geometry-msgs, eigen, trajectory-tracker-msgs, roscpp, nav-msgs, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-trajectory-tracker";
   version = "0.5.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2-geometry-msgs tf2-ros tf2 nav-msgs trajectory-tracker-msgs neonavigation-common interactive-markers eigen roscpp geometry-msgs ];
-  checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ tf2-geometry-msgs tf2-ros tf2 nav-msgs trajectory-tracker-msgs neonavigation-common interactive-markers eigen roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs interactive-markers tf2 neonavigation-common tf2-geometry-msgs eigen trajectory-tracker-msgs roscpp nav-msgs tf2-ros ];
+  checkInputs = [ roslint rostest rosunit ];
+  propagatedBuildInputs = [ geometry-msgs interactive-markers tf2 neonavigation-common tf2-geometry-msgs eigen trajectory-tracker-msgs roscpp nav-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

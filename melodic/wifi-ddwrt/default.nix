@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, catkin, pythonPackages, message-generation, nav-msgs, message-runtime, rospy, std-msgs, pr2-msgs, visualization-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, pr2-msgs, std-msgs, tf, catkin, pythonPackages, rospy, visualization-msgs, message-runtime, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-wifi-ddwrt";
   version = "0.2.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ std-msgs message-generation ];
-  propagatedBuildInputs = [ pythonPackages.mechanize tf nav-msgs message-runtime rospy std-msgs pr2-msgs visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs pr2-msgs std-msgs tf pythonPackages.mechanize rospy visualization-msgs message-runtime nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

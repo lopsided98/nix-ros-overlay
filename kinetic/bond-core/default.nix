@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bondcpp, bondpy, catkin, smclib, bond }:
+{ lib, buildRosPackage, fetchurl, bondcpp, catkin, bond, bondpy, smclib }:
 buildRosPackage {
   pname = "ros-kinetic-bond-core";
   version = "1.8.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ bondcpp bondpy bond smclib ];
+  propagatedBuildInputs = [ bondcpp smclib bond bondpy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

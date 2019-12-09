@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp, ament-cmake, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp, geometry-msgs, ament-cmake }:
 buildRosPackage {
   pname = "ros-crystal-teleop-twist-joy";
   version = "2.1.1";

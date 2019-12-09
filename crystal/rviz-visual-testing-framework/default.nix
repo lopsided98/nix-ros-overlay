@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-uncrustify, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-cppcheck, qt5, ament-cmake-lint-cmake, rviz-common, ament-cmake-cpplint }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, ament-cmake-cpplint, ament-cmake, ament-cmake-uncrustify, rviz-common, qt5, ament-cmake-gmock, ament-cmake-cppcheck, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-crystal-rviz-visual-testing-framework";
-  version = "5.1.0";
+  version = "5.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_visual_testing_framework/5.1.0-0.tar.gz";
-    name = "5.1.0-0.tar.gz";
-    sha256 = "70d7d6aa110b2f04368e7c7f90d152b6c43f38f704e6188f19352af1e93372c5";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_visual_testing_framework/5.1.1-1.tar.gz";
+    name = "5.1.1-1.tar.gz";
+    sha256 = "179a5eaa03c2c17007e33845ca8d82902ffe34d45de7312e89de3ee82c50b215";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-gtest qt5.qtbase rviz-common ];
-  checkInputs = [ ament-cmake-uncrustify ament-cmake-gmock ament-cmake-cppcheck ament-cmake-lint-cmake ament-cmake-cpplint ];
-  propagatedBuildInputs = [ ament-cmake-gtest rviz-common ];
+  buildInputs = [ rviz-common ament-cmake-gtest qt5.qtbase ];
+  checkInputs = [ ament-cmake-lint-cmake ament-cmake-cpplint ament-cmake-uncrustify ament-cmake-gmock ament-cmake-cppcheck ];
+  propagatedBuildInputs = [ rviz-common ament-cmake-gtest ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

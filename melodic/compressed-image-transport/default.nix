@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport, catkin, cv-bridge, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, image-transport, cv-bridge, dynamic-reconfigure, catkin }:
 buildRosPackage {
   pname = "ros-melodic-compressed-image-transport";
   version = "1.9.5";

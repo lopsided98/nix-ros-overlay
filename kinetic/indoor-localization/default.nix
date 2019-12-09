@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, rostest, message-generation, message-runtime, rospy, std-msgs, roscpp, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, std-msgs, catkin, rosunit, roslint, rospy, roscpp, message-runtime, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-indoor-localization";
   version = "1.0.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint rostest message-generation rospy std-msgs roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs std-msgs roslint rospy roscpp message-generation rostest ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ rostest message-generation message-runtime rospy std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime std-msgs rospy roscpp message-generation rostest ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
