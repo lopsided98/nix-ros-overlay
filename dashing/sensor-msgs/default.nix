@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, ament-lint-common, rosidl-default-generators, ament-cmake-gtest, rosidl-cmake, std-msgs, ament-lint-auto, rosidl-default-runtime, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, rosidl-cmake, geometry-msgs, std-msgs, rosidl-default-runtime, ament-lint-common, ament-cmake, ament-cmake-gtest, rosidl-default-generators, builtin-interfaces, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-sensor-msgs";
   version = "0.7.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs geometry-msgs builtin-interfaces ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto rosidl-cmake ament-lint-common ];
-  propagatedBuildInputs = [ builtin-interfaces std-msgs rosidl-default-runtime geometry-msgs ];
+  buildInputs = [ std-msgs builtin-interfaces geometry-msgs ];
+  checkInputs = [ rosidl-cmake ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ std-msgs rosidl-default-runtime builtin-interfaces geometry-msgs ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

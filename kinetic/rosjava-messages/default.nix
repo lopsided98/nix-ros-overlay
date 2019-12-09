@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-msgs, actionlib-msgs, ar-track-alvar-msgs, rosgraph-msgs, rocon-service-pair-msgs, rocon-tutorial-msgs, world-canvas-msgs, scheduler-msgs, rocon-device-msgs, diagnostic-msgs, geometry-msgs, stereo-msgs, rosjava-build-tools, concert-msgs, genjava, rosjava-test-msgs, concert-service-msgs, std-srvs, trajectory-msgs, gateway-msgs, catkin, yocs-msgs, move-base-msgs, nav-msgs, std-msgs, roscpp, visualization-msgs, shape-msgs, sensor-msgs, rocon-app-manager-msgs, uuid-msgs, rocon-interaction-msgs, rocon-std-msgs }:
+{ lib, buildRosPackage, fetchurl, rocon-interaction-msgs, geometry-msgs, actionlib-msgs, rocon-tutorial-msgs, tf2-msgs, gateway-msgs, nav-msgs, uuid-msgs, sensor-msgs, diagnostic-msgs, shape-msgs, rocon-app-manager-msgs, rosjava-build-tools, yocs-msgs, genjava, rocon-std-msgs, move-base-msgs, rosjava-test-msgs, std-msgs, std-srvs, catkin, world-canvas-msgs, roscpp, ar-track-alvar-msgs, rosgraph-msgs, trajectory-msgs, concert-service-msgs, rocon-device-msgs, concert-msgs, scheduler-msgs, stereo-msgs, visualization-msgs, rocon-service-pair-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rosjava-messages";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2-msgs actionlib-msgs ar-track-alvar-msgs rosgraph-msgs rocon-service-pair-msgs rocon-tutorial-msgs world-canvas-msgs scheduler-msgs rocon-device-msgs diagnostic-msgs geometry-msgs stereo-msgs rosjava-build-tools concert-msgs genjava rosjava-test-msgs concert-service-msgs std-srvs trajectory-msgs gateway-msgs yocs-msgs move-base-msgs nav-msgs std-msgs roscpp visualization-msgs shape-msgs sensor-msgs rocon-app-manager-msgs uuid-msgs rocon-interaction-msgs rocon-std-msgs ];
-  propagatedBuildInputs = [ rosjava-build-tools genjava ];
+  buildInputs = [ geometry-msgs rocon-interaction-msgs actionlib-msgs rocon-tutorial-msgs tf2-msgs gateway-msgs uuid-msgs nav-msgs sensor-msgs diagnostic-msgs shape-msgs rocon-app-manager-msgs rosjava-build-tools yocs-msgs genjava rocon-std-msgs rosjava-test-msgs move-base-msgs std-msgs std-srvs world-canvas-msgs roscpp ar-track-alvar-msgs rosgraph-msgs trajectory-msgs concert-service-msgs rocon-device-msgs concert-msgs scheduler-msgs stereo-msgs visualization-msgs rocon-service-pair-msgs ];
+  propagatedBuildInputs = [ genjava rosjava-build-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

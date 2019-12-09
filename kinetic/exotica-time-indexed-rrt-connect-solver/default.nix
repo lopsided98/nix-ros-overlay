@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, exotica-core, catkin, ompl }:
+{ lib, buildRosPackage, fetchurl, catkin, exotica-core, ompl }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-time-indexed-rrt-connect-solver";
   version = "5.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ exotica-core ompl ];
-  propagatedBuildInputs = [ exotica-core ompl ];
+  buildInputs = [ ompl exotica-core ];
+  propagatedBuildInputs = [ ompl exotica-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

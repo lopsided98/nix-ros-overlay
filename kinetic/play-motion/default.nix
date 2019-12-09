@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, joint-state-controller, control-msgs, play-motion-msgs, catkin, sensor-msgs, joint-trajectory-controller, diagnostic-updater, rostest, position-controllers, controller-manager-msgs, robot-state-publisher, actionlib, diagnostic-msgs, roscpp, moveit-ros-planning-interface, xacro }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, xacro, diagnostic-msgs, controller-manager, controller-manager-msgs, moveit-ros-planning-interface, robot-state-publisher, hardware-interface, catkin, position-controllers, actionlib, play-motion-msgs, joint-trajectory-controller, roscpp, diagnostic-updater, rostest, joint-state-controller, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-play-motion";
   version = "0.4.5";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ control-msgs play-motion-msgs sensor-msgs diagnostic-updater controller-manager-msgs actionlib diagnostic-msgs roscpp moveit-ros-planning-interface ];
-  checkInputs = [ controller-manager hardware-interface joint-state-controller joint-trajectory-controller rostest position-controllers robot-state-publisher xacro ];
-  propagatedBuildInputs = [ control-msgs play-motion-msgs sensor-msgs diagnostic-updater controller-manager-msgs actionlib diagnostic-msgs roscpp moveit-ros-planning-interface ];
+  buildInputs = [ sensor-msgs diagnostic-msgs controller-manager-msgs moveit-ros-planning-interface actionlib play-motion-msgs control-msgs roscpp diagnostic-updater ];
+  checkInputs = [ rostest xacro controller-manager robot-state-publisher hardware-interface position-controllers joint-trajectory-controller joint-state-controller ];
+  propagatedBuildInputs = [ sensor-msgs diagnostic-msgs controller-manager-msgs moveit-ros-planning-interface actionlib play-motion-msgs control-msgs roscpp diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

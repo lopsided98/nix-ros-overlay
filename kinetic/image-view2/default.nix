@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, tf, image-transport, sensor-msgs, catkin, cv-bridge, pythonPackages, message-filters, image-geometry, rostest, message-generation, message-runtime, image-view, pcl-ros, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, message-filters, geometry-msgs, message-runtime, std-msgs, std-srvs, pythonPackages, tf, catkin, image-transport, image-view, cv-bridge, roscpp, message-generation, rostest, image-geometry }:
 buildRosPackage {
   pname = "ros-kinetic-image-view2";
   version = "2.2.10";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-filters roscpp image-geometry rostest message-generation image-view pcl-ros std-msgs tf geometry-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs std-msgs std-srvs tf image-view image-transport cv-bridge roscpp message-generation rostest image-geometry ];
   checkInputs = [ pythonPackages.numpy pythonPackages.scipy ];
-  propagatedBuildInputs = [ std-srvs image-transport sensor-msgs cv-bridge message-filters roscpp image-geometry message-runtime image-view pcl-ros std-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs std-msgs std-srvs tf image-view image-transport cv-bridge roscpp message-runtime image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

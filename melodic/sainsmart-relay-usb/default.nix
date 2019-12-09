@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, libftdi, std-msgs, roslib }:
+{ lib, buildRosPackage, fetchurl, std-msgs, catkin, roslib, libftdi, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-sainsmart-relay-usb";
   version = "0.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs roscpp roslib libftdi ];
-  propagatedBuildInputs = [ std-msgs roscpp libftdi ];
+  buildInputs = [ libftdi std-msgs roslib roscpp ];
+  propagatedBuildInputs = [ libftdi std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

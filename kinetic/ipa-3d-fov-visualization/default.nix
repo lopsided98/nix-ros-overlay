@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, cv-bridge, image-geometry, visualization-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, cv-bridge, visualization-msgs, roscpp, image-geometry }:
 buildRosPackage {
   pname = "ros-kinetic-ipa-3d-fov-visualization";
   version = "0.6.14-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs cv-bridge image-geometry visualization-msgs roscpp ];
-  propagatedBuildInputs = [ sensor-msgs cv-bridge image-geometry visualization-msgs roscpp ];
+  buildInputs = [ sensor-msgs cv-bridge visualization-msgs roscpp image-geometry ];
+  propagatedBuildInputs = [ sensor-msgs cv-bridge visualization-msgs roscpp image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

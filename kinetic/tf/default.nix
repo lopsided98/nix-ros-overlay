@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, roswtf, sensor-msgs, catkin, message-filters, rostime, tf2-ros, rostest, message-generation, message-runtime, angles, std-msgs, rosunit, roscpp, graphviz, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, message-runtime, std-msgs, graphviz, catkin, rosunit, roswtf, rosconsole, rostime, roscpp, angles, message-generation, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-tf";
   version = "1.11.9";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole sensor-msgs message-filters roscpp tf2-ros message-generation angles std-msgs rostime geometry-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs rostime roscpp angles message-generation rosconsole tf2-ros ];
   checkInputs = [ rostest rosunit ];
-  propagatedBuildInputs = [ rosconsole roswtf sensor-msgs message-filters tf2-ros message-runtime std-msgs roscpp graphviz geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs graphviz roswtf roscpp message-runtime rosconsole tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

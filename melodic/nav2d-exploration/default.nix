@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav2d-navigator, pluginlib, catkin, roscpp, nav-msgs, visualization-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, tf, catkin, visualization-msgs, roscpp, nav2d-navigator, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-nav2d-exploration";
   version = "0.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ nav2d-navigator pluginlib tf nav-msgs visualization-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ nav2d-navigator pluginlib tf nav-msgs visualization-msgs roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs pluginlib tf visualization-msgs roscpp nav2d-navigator nav-msgs ];
+  propagatedBuildInputs = [ geometry-msgs pluginlib tf visualization-msgs roscpp nav2d-navigator nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

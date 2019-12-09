@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbash, catkin, roscpp, rostest, std-msgs, nodelet }:
+{ lib, buildRosPackage, fetchurl, std-msgs, catkin, rosbash, nodelet, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-swri-nodelet";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_nodelet/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "bf8858c85d44f78fc4a723e3afe185f3791b850dc90c82ec6ca863d1e863d473";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_nodelet/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "466f6f1a465aa241c65c725fdc715220700e95d6451d37d8ae92d30ad4f18d49";
   };
 
   buildType = "catkin";
   buildInputs = [ std-msgs nodelet roscpp ];
-  checkInputs = [ rostest rosbash ];
-  propagatedBuildInputs = [ std-msgs nodelet rosbash roscpp ];
+  checkInputs = [ rosbash rostest ];
+  propagatedBuildInputs = [ rosbash std-msgs nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, geometry-msgs, ament-cmake-gtest, rclcpp, ament-lint-auto, autoware-auto-cmake, lidar-utils }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, lidar-utils, ament-lint-common, ament-cmake, autoware-auto-cmake, ament-cmake-gtest, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-velodyne-driver";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp lidar-utils geometry-msgs ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ rclcpp lidar-utils geometry-msgs ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  buildInputs = [ lidar-utils rclcpp geometry-msgs ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ lidar-utils rclcpp geometry-msgs ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''(Mostly) static memory implementation of a velodyne driver in one process'';

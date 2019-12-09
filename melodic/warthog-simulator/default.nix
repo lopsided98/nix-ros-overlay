@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, warthog-gazebo }:
+{ lib, buildRosPackage, fetchurl, warthog-gazebo, catkin }:
 buildRosPackage {
   pname = "ros-melodic-warthog-simulator";
   version = "0.2.0-r1";

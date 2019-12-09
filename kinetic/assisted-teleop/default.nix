@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, filters, pluginlib, base-local-planner, sensor-msgs, catkin, message-filters, roscpp, move-base-msgs, roslib, actionlib, angles, tf, geometry-msgs, eigen }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, pluginlib, filters, tf, actionlib, base-local-planner, roslib, costmap-2d, catkin, eigen, roscpp, angles, move-base-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-assisted-teleop";
   version = "0.2.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs message-filters roscpp move-base-msgs roslib actionlib angles tf geometry-msgs eigen ];
-  propagatedBuildInputs = [ costmap-2d filters pluginlib base-local-planner sensor-msgs message-filters roscpp move-base-msgs roslib actionlib angles tf geometry-msgs eigen ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs pluginlib actionlib filters base-local-planner roslib tf costmap-2d eigen roscpp angles move-base-msgs ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs pluginlib tf filters base-local-planner actionlib roslib costmap-2d eigen roscpp angles move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

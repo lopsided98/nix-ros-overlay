@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, tf2-geometry-msgs, catkin, rcdiscover, tf2-ros, tf2, message-generation, message-runtime, curl, dynamic-reconfigure, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, dynamic-reconfigure, std-srvs, catkin, roscpp, tf2-geometry-msgs, rcdiscover, tf2, message-runtime, curl, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-rc-hand-eye-calibration-client";
   version = "2.7.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs tf2-geometry-msgs rcdiscover tf2-ros tf2 message-generation message-runtime curl dynamic-reconfigure roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs tf2-geometry-msgs rcdiscover tf2-ros tf2 message-generation message-runtime curl dynamic-reconfigure roscpp geometry-msgs ];
+  buildInputs = [ message-generation geometry-msgs dynamic-reconfigure std-srvs roscpp tf2-geometry-msgs rcdiscover tf2 message-runtime curl tf2-ros ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure message-runtime std-srvs roscpp tf2-geometry-msgs rcdiscover tf2 message-generation curl tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

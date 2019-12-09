@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamixel-sdk, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamixel-sdk, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-robotis-device";
   version = "0.2.9";

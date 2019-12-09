@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-info-manager, image-transport, sensor-msgs, catkin, message-generation, message-runtime, nodelet, dynamic-reconfigure, roscpp, openni2 }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, dynamic-reconfigure, camera-info-manager, catkin, openni2, image-transport, nodelet, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-openni2-camera";
   version = "0.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ camera-info-manager image-transport sensor-msgs roscpp message-generation dynamic-reconfigure nodelet openni2 ];
-  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs message-runtime nodelet dynamic-reconfigure roscpp openni2 ];
+  buildInputs = [ sensor-msgs dynamic-reconfigure camera-info-manager openni2 image-transport nodelet roscpp message-generation ];
+  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure camera-info-manager openni2 image-transport nodelet roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

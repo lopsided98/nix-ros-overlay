@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, emacs, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, emacs }:
 buildRosPackage {
   pname = "ros-kinetic-rosemacs";
   version = "0.4.12";

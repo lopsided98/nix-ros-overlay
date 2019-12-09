@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-visualization, moveit-ros-move-group, catkin, abb-irb6640-support, moveit-simple-controller-manager, moveit-planners-ompl, robot-state-publisher, joint-state-publisher, xacro, industrial-robot-simulator }:
+{ lib, buildRosPackage, fetchurl, abb-irb6640-support, joint-state-publisher, moveit-planners-ompl, xacro, robot-state-publisher, moveit-ros-move-group, moveit-simple-controller-manager, catkin, industrial-robot-simulator, moveit-ros-visualization }:
 buildRosPackage {
   pname = "ros-kinetic-abb-irb6640-moveit-config";
   version = "1.3.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ moveit-ros-move-group moveit-ros-visualization abb-irb6640-support moveit-simple-controller-manager robot-state-publisher industrial-robot-simulator joint-state-publisher xacro moveit-planners-ompl ];
+  propagatedBuildInputs = [ abb-irb6640-support joint-state-publisher moveit-planners-ompl xacro robot-state-publisher moveit-ros-move-group moveit-simple-controller-manager industrial-robot-simulator moveit-ros-visualization ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

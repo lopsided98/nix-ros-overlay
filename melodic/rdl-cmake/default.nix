@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, lcov, cppcheck, catkin, clang }:
+{ lib, buildRosPackage, fetchurl, cppcheck, lcov, clang, catkin }:
 buildRosPackage {
   pname = "ros-melodic-rdl-cmake";
   version = "3.2.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ lcov cppcheck clang ];
+  checkInputs = [ cppcheck lcov clang ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

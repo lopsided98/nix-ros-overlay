@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, driver-base, timestamp-tools }:
+{ lib, buildRosPackage, fetchurl, timestamp-tools, catkin, driver-base }:
 buildRosPackage {
   pname = "ros-melodic-driver-common";
   version = "1.6.8";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ driver-base timestamp-tools ];
+  propagatedBuildInputs = [ timestamp-tools driver-base ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

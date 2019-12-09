@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, track-odometry, costmap-cspace, planner-cspace, safety-limiter, joystick-interrupt, catkin, map-organizer, obj-to-pointcloud, neonavigation-common, trajectory-tracker, neonavigation-launch }:
+{ lib, buildRosPackage, fetchurl, planner-cspace, joystick-interrupt, track-odometry, neonavigation-launch, catkin, map-organizer, neonavigation-common, safety-limiter, trajectory-tracker, costmap-cspace, obj-to-pointcloud }:
 buildRosPackage {
   pname = "ros-melodic-neonavigation";
   version = "0.5.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ track-odometry costmap-cspace planner-cspace safety-limiter joystick-interrupt map-organizer obj-to-pointcloud neonavigation-common trajectory-tracker neonavigation-launch ];
+  propagatedBuildInputs = [ planner-cspace joystick-interrupt track-odometry neonavigation-launch map-organizer neonavigation-common safety-limiter trajectory-tracker costmap-cspace obj-to-pointcloud ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

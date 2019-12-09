@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, map-server, tf, rosbag, catkin, message-filters, rostest, nav-msgs, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-filters, dynamic-reconfigure, map-server, std-srvs, tf, catkin, roscpp, rosbag, nav-msgs, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-amcl";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "ff24b933e459a835da6a977d20d4a2aa1cef618fde5549798e371910ddcca3ab";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "0657fe6cc0c2c31c59edab28305e53991f9db8b72ac333c0e5ed4abfb62200fe";
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs rosbag message-filters roscpp nav-msgs dynamic-reconfigure tf ];
-  checkInputs = [ rostest map-server ];
-  propagatedBuildInputs = [ std-srvs rosbag roscpp nav-msgs dynamic-reconfigure tf ];
+  buildInputs = [ message-filters dynamic-reconfigure std-srvs tf roscpp rosbag nav-msgs ];
+  checkInputs = [ map-server rostest ];
+  propagatedBuildInputs = [ dynamic-reconfigure std-srvs tf roscpp rosbag nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

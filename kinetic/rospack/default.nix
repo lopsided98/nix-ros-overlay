@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, ros-environment, cmake-modules, boost, gtest, catkin, pythonPackages, tinyxml, pkg-config }:
+{ lib, buildRosPackage, fetchurl, boost, cmake-modules, pythonPackages, catkin, tinyxml, python, gtest, pkg-config, ros-environment }:
 buildRosPackage {
   pname = "ros-kinetic-rospack";
   version = "2.4.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python cmake-modules boost gtest tinyxml pkg-config ];
+  buildInputs = [ boost cmake-modules tinyxml python gtest pkg-config ];
   checkInputs = [ pythonPackages.coverage ];
-  propagatedBuildInputs = [ python ros-environment boost pythonPackages.rosdep tinyxml pkg-config pythonPackages.catkin-pkg ];
+  propagatedBuildInputs = [ boost pythonPackages.rosdep tinyxml python pythonPackages.catkin-pkg pkg-config ros-environment ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

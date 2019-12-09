@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, move-base-msgs, actionlib, tf }:
+{ lib, buildRosPackage, fetchurl, tf, actionlib, catkin, roscpp, move-base-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-simple-navigation-goals-tutorial";
   version = "0.2.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ move-base-msgs tf roscpp actionlib ];
-  propagatedBuildInputs = [ move-base-msgs tf roscpp actionlib ];
+  buildInputs = [ actionlib move-base-msgs tf roscpp ];
+  propagatedBuildInputs = [ actionlib tf roscpp move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

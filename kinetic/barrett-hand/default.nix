@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-bhand bhand-controller ];
+  propagatedBuildInputs = [ bhand-controller rqt-bhand ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

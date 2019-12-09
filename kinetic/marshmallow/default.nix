@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin-pip, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin-pip, pythonPackages, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-marshmallow";
   version = "2.9.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin-pip pythonPackages.dateutil pythonPackages.simplejson ];
+  buildInputs = [ pythonPackages.dateutil pythonPackages.simplejson catkin-pip ];
   checkInputs = [ pythonPackages.pytest pythonPackages.pytz ];
-  propagatedBuildInputs = [ pythonPackages.dateutil pythonPackages.simplejson ];
+  propagatedBuildInputs = [ pythonPackages.simplejson pythonPackages.dateutil ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

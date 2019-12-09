@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ecl-threads, roch-msgs, std-msgs, roscpp, geometry-msgs, yocs-controllers }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, catkin, roscpp, ecl-threads, roch-msgs, yocs-controllers }:
 buildRosPackage {
   pname = "ros-kinetic-roch-safety-controller";
   version = "2.0.15";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-threads roch-msgs std-msgs roscpp geometry-msgs yocs-controllers ];
-  propagatedBuildInputs = [ ecl-threads roch-msgs std-msgs roscpp geometry-msgs yocs-controllers ];
+  buildInputs = [ geometry-msgs std-msgs roscpp ecl-threads roch-msgs yocs-controllers ];
+  propagatedBuildInputs = [ geometry-msgs std-msgs roscpp ecl-threads roch-msgs yocs-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

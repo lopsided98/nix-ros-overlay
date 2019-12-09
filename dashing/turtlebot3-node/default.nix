@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamixel-sdk, std-srvs, ament-cmake, sensor-msgs, message-filters, turtlebot3-msgs, tf2-ros, tf2, nav-msgs, rclcpp, std-msgs, rcutils, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, rcutils, turtlebot3-msgs, nav-msgs, std-msgs, std-srvs, ament-cmake, tf2, rclcpp, dynamixel-sdk, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-turtlebot3-node";
   version = "2.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ dynamixel-sdk std-srvs sensor-msgs message-filters turtlebot3-msgs tf2-ros tf2 nav-msgs rclcpp std-msgs rcutils geometry-msgs ];
-  propagatedBuildInputs = [ dynamixel-sdk std-srvs sensor-msgs message-filters turtlebot3-msgs tf2-ros tf2 nav-msgs rclcpp std-msgs rcutils geometry-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs rcutils turtlebot3-msgs nav-msgs std-msgs std-srvs tf2 rclcpp dynamixel-sdk tf2-ros ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs rcutils turtlebot3-msgs nav-msgs std-msgs std-srvs tf2 rclcpp dynamixel-sdk tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

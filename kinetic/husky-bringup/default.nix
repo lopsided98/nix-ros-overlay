@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, microstrain-3dmgx2-imu, husky-description, lms1xx, robot-localization, tf, nmea-navsat-driver, pythonPackages, roslaunch, um6, imu-filter-madgwick, imu-transformer, microstrain-mips, catkin, tf2-ros, nmea-comms, um7, husky-base, robot-upstart, husky-control }:
+{ lib, buildRosPackage, fetchurl, microstrain-3dmgx2-imu, tf, husky-base, robot-upstart, imu-transformer, nmea-navsat-driver, husky-control, imu-filter-madgwick, um7, um6, tf2-ros, catkin, pythonPackages, nmea-comms, robot-localization, roslaunch, lms1xx, microstrain-mips, husky-description }:
 buildRosPackage {
   pname = "ros-kinetic-husky-bringup";
   version = "0.3.4-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ nmea-navsat-driver microstrain-3dmgx2-imu husky-control microstrain-mips husky-base pythonPackages.scipy tf2-ros husky-description lms1xx robot-localization nmea-comms robot-upstart um6 tf imu-filter-madgwick imu-transformer um7 ];
+  propagatedBuildInputs = [ um6 microstrain-3dmgx2-imu pythonPackages.scipy tf husky-base robot-upstart imu-transformer nmea-navsat-driver nmea-comms husky-control robot-localization microstrain-mips imu-filter-madgwick husky-description um7 tf2-ros lms1xx ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

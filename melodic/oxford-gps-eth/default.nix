@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, roscpp, gps-common, rostest, nav-msgs, rospy, std-msgs, roslaunch, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, roslaunch, tf, catkin, roscpp, rospy, gps-common, nav-msgs, rostest }:
 buildRosPackage {
   pname = "ros-melodic-oxford-gps-eth";
   version = "1.1.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp gps-common nav-msgs rospy std-msgs tf geometry-msgs ];
-  checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ sensor-msgs roscpp gps-common nav-msgs rospy std-msgs roslaunch tf geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs tf roscpp rospy gps-common nav-msgs ];
+  checkInputs = [ roslaunch rostest ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs roslaunch tf roscpp rospy gps-common nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

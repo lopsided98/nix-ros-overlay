@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cairo, ceres-solver, boost, gflags, lua5, pythonPackages, glog, eigen, protobuf, cmake, gmock }:
+{ lib, buildRosPackage, fetchurl, boost, protobuf, glog, ceres-solver, lua5, pythonPackages, cmake, cairo, eigen, gmock, gflags }:
 buildRosPackage {
   pname = "ros-dashing-cartographer";
   version = "1.0.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cairo ceres-solver boost gflags lua5 pythonPackages.sphinx glog eigen protobuf gmock ];
-  propagatedBuildInputs = [ cairo ceres-solver boost gflags lua5 glog eigen protobuf ];
+  buildInputs = [ boost protobuf glog ceres-solver lua5 cairo eigen pythonPackages.sphinx gmock gflags ];
+  propagatedBuildInputs = [ boost protobuf glog ceres-solver lua5 cairo eigen gflags ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

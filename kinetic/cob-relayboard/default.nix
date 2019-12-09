@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rospy, std-msgs, cob-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, cob-msgs, std-msgs, catkin, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-cob-relayboard";
   version = "0.7.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ std-msgs cob-msgs roscpp ];
-  propagatedBuildInputs = [ std-msgs cob-msgs roscpp rospy ];
+  propagatedBuildInputs = [ std-msgs rospy cob-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

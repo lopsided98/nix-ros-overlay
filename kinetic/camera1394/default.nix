@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, camera-info-manager, image-transport, sensor-msgs, catkin, libdc1394, roscpp, diagnostic-updater, rostest, message-generation, message-runtime, nodelet, dynamic-reconfigure, tf }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, boost, dynamic-reconfigure, camera-info-manager, tf, catkin, image-transport, nodelet, roscpp, message-runtime, libdc1394, rostest, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-camera1394";
   version = "1.10.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost camera-info-manager image-transport sensor-msgs libdc1394 roscpp diagnostic-updater rostest message-generation nodelet dynamic-reconfigure tf ];
-  propagatedBuildInputs = [ boost tf image-transport sensor-msgs camera-info-manager libdc1394 roscpp diagnostic-updater message-runtime dynamic-reconfigure nodelet ];
+  buildInputs = [ boost sensor-msgs dynamic-reconfigure camera-info-manager tf image-transport nodelet roscpp message-generation libdc1394 rostest diagnostic-updater ];
+  propagatedBuildInputs = [ sensor-msgs boost dynamic-reconfigure camera-info-manager tf image-transport nodelet roscpp message-runtime libdc1394 diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

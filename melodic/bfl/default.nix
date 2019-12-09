@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cppunit, cmake, ros, catkin }:
+{ lib, buildRosPackage, fetchurl, ros, cppunit, catkin, cmake }:
 buildRosPackage {
   pname = "ros-melodic-bfl";
   version = "0.8.0-r1";

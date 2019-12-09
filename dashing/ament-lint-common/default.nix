@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-uncrustify, ament-cmake-flake8, ament-cmake-cppcheck, ament-cmake-pep257, ament-cmake-xmllint, ament-cmake-lint-cmake, ament-cmake-copyright, ament-cmake-export-dependencies, ament-cmake-cpplint }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-xmllint, ament-cmake-lint-cmake, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-export-dependencies, ament-cmake-core, ament-cmake-cppcheck, ament-cmake-copyright }:
 buildRosPackage {
   pname = "ros-dashing-ament-lint-common";
   version = "0.7.11-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ ament-cmake-uncrustify ament-cmake-core ament-cmake-flake8 ament-cmake-cppcheck ament-cmake-pep257 ament-cmake-xmllint ament-cmake-lint-cmake ament-cmake-copyright ament-cmake-cpplint ];
-  nativeBuildInputs = [ ament-cmake-export-dependencies ament-cmake-core ];
+  propagatedBuildInputs = [ ament-cmake-xmllint ament-cmake-lint-cmake ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-uncrustify ament-cmake-core ament-cmake-pep257 ament-cmake-copyright ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-export-dependencies ];
 
   meta = {
     description = ''The list of commonly used linters in the ament buildsytem in CMake.'';

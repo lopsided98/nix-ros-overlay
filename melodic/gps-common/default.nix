@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-filters, nav-msgs, message-generation, message-runtime, rospy, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, message-filters, std-msgs, catkin, rospy, roscpp, message-runtime, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-gps-common";
   version = "0.3.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters nav-msgs message-generation rospy std-msgs roscpp ];
-  propagatedBuildInputs = [ sensor-msgs message-filters nav-msgs message-runtime rospy std-msgs roscpp ];
+  buildInputs = [ sensor-msgs message-filters std-msgs rospy roscpp message-generation nav-msgs ];
+  propagatedBuildInputs = [ sensor-msgs message-filters std-msgs rospy roscpp message-runtime nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

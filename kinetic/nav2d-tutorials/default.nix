@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav2d-karto, nav2d-navigator, nav2d-remote, nav2d-operator, nav2d-msgs, catkin, nav2d-exploration, nav2d-localizer }:
+{ lib, buildRosPackage, fetchurl, nav2d-exploration, nav2d-localizer, catkin, nav2d-remote, nav2d-operator, nav2d-navigator, nav2d-karto, nav2d-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-nav2d-tutorials";
   version = "0.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ nav2d-navigator nav2d-remote nav2d-karto nav2d-operator nav2d-msgs nav2d-exploration nav2d-localizer ];
+  propagatedBuildInputs = [ nav2d-exploration nav2d-localizer nav2d-remote nav2d-operator nav2d-navigator nav2d-karto nav2d-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

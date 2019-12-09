@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-export-link-flags, ament-cmake-export-definitions, ament-cmake-core, ament-cmake-libraries, ament-cmake-export-libraries, ament-cmake-test, ament-cmake-target-dependencies, ament-cmake-export-include-directories, ament-cmake-export-interfaces, ament-cmake-python, cmake, ament-cmake-export-dependencies }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-export-libraries, ament-cmake-target-dependencies, ament-cmake-export-link-flags, ament-cmake-export-interfaces, cmake, ament-cmake-test, ament-cmake-export-dependencies, ament-cmake-export-include-directories, ament-cmake-export-definitions, ament-cmake-core, ament-cmake-libraries, ament-cmake-python }:
 buildRosPackage {
   pname = "ros-crystal-ament-cmake";
   version = "0.6.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-export-dependencies ament-cmake-core ];
-  propagatedBuildInputs = [ ament-cmake-export-link-flags ament-cmake-export-definitions ament-cmake-core ament-cmake-libraries ament-cmake-export-libraries ament-cmake-test ament-cmake-target-dependencies cmake ament-cmake-export-include-directories ament-cmake-python ament-cmake-export-interfaces ament-cmake-export-dependencies ];
+  buildInputs = [ ament-cmake-core ament-cmake-export-dependencies ];
+  propagatedBuildInputs = [ ament-cmake-export-libraries ament-cmake-target-dependencies ament-cmake-export-interfaces ament-cmake-export-link-flags cmake ament-cmake-test ament-cmake-export-dependencies ament-cmake-export-include-directories ament-cmake-export-definitions ament-cmake-core ament-cmake-libraries ament-cmake-python ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

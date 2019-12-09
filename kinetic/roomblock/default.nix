@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roomblock-bringup, roomblock-description, catkin, roomblock-mapping, roomblock-navigation }:
+{ lib, buildRosPackage, fetchurl, catkin, roomblock-mapping, roomblock-description, roomblock-navigation, roomblock-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-roomblock";
   version = "0.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ roomblock-bringup roomblock-mapping roomblock-description roomblock-navigation ];
+  propagatedBuildInputs = [ roomblock-description roomblock-mapping roomblock-navigation roomblock-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

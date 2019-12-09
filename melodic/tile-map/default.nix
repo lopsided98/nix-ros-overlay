@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, swri-math-util, pluginlib, mapviz, catkin, libqt-core, libqt-opengl, roscpp, jsoncpp, qt-qmake, swri-yaml-util, libqt-dev, libqt-opengl-dev, glew, tf, swri-transform-util }:
+{ lib, buildRosPackage, fetchurl, libqt-opengl, qt-qmake, pluginlib, swri-math-util, tf, mapviz, catkin, roscpp, jsoncpp, libqt-dev, libqt-opengl-dev, libqt-core, swri-transform-util, glew, swri-yaml-util }:
 buildRosPackage {
   pname = "ros-melodic-tile-map";
   version = "1.2.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ swri-math-util pluginlib mapviz glew roscpp swri-yaml-util libqt-dev libqt-opengl-dev jsoncpp tf swri-transform-util ];
-  propagatedBuildInputs = [ swri-math-util pluginlib mapviz glew libqt-core libqt-opengl roscpp swri-yaml-util jsoncpp tf swri-transform-util ];
-  nativeBuildInputs = [ catkin qt-qmake ];
+  buildInputs = [ pluginlib swri-math-util tf mapviz roscpp jsoncpp libqt-dev libqt-opengl-dev swri-transform-util glew swri-yaml-util ];
+  propagatedBuildInputs = [ libqt-opengl pluginlib swri-math-util tf mapviz roscpp jsoncpp libqt-core swri-transform-util glew swri-yaml-util ];
+  nativeBuildInputs = [ qt-qmake catkin ];
 
   meta = {
     description = ''Tile map provides a slippy map style interface for visualizing 

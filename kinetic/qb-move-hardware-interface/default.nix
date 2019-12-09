@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, tf2-geometry-msgs, control-toolbox, catkin, tf2, interactive-markers, qb-device-hardware-interface, roscpp, transmission-interface }:
+{ lib, buildRosPackage, fetchurl, control-toolbox, interactive-markers, hardware-interface, catkin, roscpp, tf2-geometry-msgs, transmission-interface, tf2, qb-device-hardware-interface }:
 buildRosPackage {
   pname = "ros-kinetic-qb-move-hardware-interface";
   version = "2.1.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface tf2-geometry-msgs control-toolbox tf2 interactive-markers transmission-interface roscpp qb-device-hardware-interface ];
-  propagatedBuildInputs = [ hardware-interface tf2-geometry-msgs control-toolbox tf2 interactive-markers transmission-interface roscpp qb-device-hardware-interface ];
+  buildInputs = [ control-toolbox interactive-markers hardware-interface tf2 tf2-geometry-msgs transmission-interface roscpp qb-device-hardware-interface ];
+  propagatedBuildInputs = [ control-toolbox interactive-markers hardware-interface tf2 tf2-geometry-msgs transmission-interface roscpp qb-device-hardware-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

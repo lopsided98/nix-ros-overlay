@@ -70,6 +70,8 @@ self: super: {
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
 
+ ament-cmake-virtualenv = self.callPackage ./ament-cmake-virtualenv {};
+
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
 
  ament-copyright = self.callPackage ./ament-copyright {};
@@ -101,6 +103,8 @@ self: super: {
  ament-pyflakes = self.callPackage ./ament-pyflakes {};
 
  ament-uncrustify = self.callPackage ./ament-uncrustify {};
+
+ ament-virtualenv = self.callPackage ./ament-virtualenv {};
 
  ament-xmllint = self.callPackage ./ament-xmllint {};
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, cpp-common, roscpp-traits, catkin, pkg-config, rosgraph-msgs, message-generation, roslang, xmlrpcpp, roscpp-serialization, std-msgs, message-runtime, rostime }:
+{ lib, buildRosPackage, fetchurl, message-generation, roscpp-serialization, xmlrpcpp, std-msgs, catkin, cpp-common, roscpp-traits, rostime, roslang, pkg-config, message-runtime, rosgraph-msgs, rosconsole }:
 buildRosPackage {
   pname = "ros-melodic-roscpp";
   version = "1.14.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole cpp-common roscpp-traits pkg-config rosgraph-msgs message-generation roslang xmlrpcpp roscpp-serialization std-msgs rostime ];
-  propagatedBuildInputs = [ rosconsole cpp-common roscpp-traits rosgraph-msgs message-runtime xmlrpcpp roscpp-serialization std-msgs rostime ];
+  buildInputs = [ roscpp-serialization std-msgs cpp-common roscpp-traits rostime rosconsole roslang pkg-config message-generation rosgraph-msgs xmlrpcpp ];
+  propagatedBuildInputs = [ roscpp-serialization std-msgs cpp-common roscpp-traits rostime rosconsole message-runtime rosgraph-msgs xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

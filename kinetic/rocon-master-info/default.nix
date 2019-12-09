@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-python-comms, catkin, rocon-bubble-icons, pythonPackages, rocon-console, rocon-icons, rospy, rocon-python-utils, rocon-std-msgs, rocon-uri }:
+{ lib, buildRosPackage, fetchurl, rocon-python-comms, rocon-console, pythonPackages, rocon-icons, rocon-python-utils, catkin, rocon-std-msgs, rocon-uri, rospy, rocon-bubble-icons }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-master-info";
   version = "0.3.2-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ pythonPackages.catkin-pkg ];
-  propagatedBuildInputs = [ pythonPackages.rospkg rocon-python-comms rocon-bubble-icons rocon-console rocon-icons rospy rocon-python-utils rocon-std-msgs rocon-uri ];
+  propagatedBuildInputs = [ rocon-console rocon-python-comms pythonPackages.rospkg rocon-icons rocon-python-utils rocon-std-msgs rocon-uri rospy rocon-bubble-icons ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

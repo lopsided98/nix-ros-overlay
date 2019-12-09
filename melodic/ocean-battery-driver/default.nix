@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, diagnostic-msgs, pr2-msgs, roscpp, log4cxx }:
+{ lib, buildRosPackage, fetchurl, diagnostic-msgs, pr2-msgs, catkin, roscpp, log4cxx, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-melodic-ocean-battery-driver";
   version = "1.1.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-updater diagnostic-msgs pr2-msgs roscpp log4cxx ];
-  propagatedBuildInputs = [ diagnostic-updater diagnostic-msgs pr2-msgs roscpp log4cxx ];
+  buildInputs = [ diagnostic-msgs pr2-msgs roscpp diagnostic-updater log4cxx ];
+  propagatedBuildInputs = [ diagnostic-msgs pr2-msgs roscpp diagnostic-updater log4cxx ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

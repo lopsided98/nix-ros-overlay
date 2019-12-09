@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, sensor-msgs, catkin, message-generation, message-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-runtime, std-msgs, std-srvs, catkin, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-msgs";
   version = "2.2.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs std-srvs sensor-msgs message-generation ];
-  propagatedBuildInputs = [ std-msgs std-srvs sensor-msgs message-runtime ];
+  buildInputs = [ sensor-msgs std-msgs std-srvs message-generation ];
+  propagatedBuildInputs = [ sensor-msgs std-msgs message-runtime std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, backward-ros, catkin, distance-map-core, interactive-markers, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, interactive-markers, catkin, distance-map-core, visualization-msgs, backward-ros }:
 buildRosPackage {
   pname = "ros-melodic-distance-map-tools";
   version = "0.1.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ distance-map-core visualization-msgs interactive-markers backward-ros ];
-  propagatedBuildInputs = [ distance-map-core interactive-markers visualization-msgs backward-ros ];
+  buildInputs = [ backward-ros distance-map-core visualization-msgs interactive-markers ];
+  propagatedBuildInputs = [ backward-ros distance-map-core visualization-msgs interactive-markers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

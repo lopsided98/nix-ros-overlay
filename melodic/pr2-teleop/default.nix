@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers-msgs, tf, catkin, rospy, std-msgs, actionlib, topic-tools, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, actionlib, tf, catkin, roscpp, topic-tools, rospy, pr2-controllers-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2-teleop";
   version = "0.6.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs topic-tools roscpp actionlib rospy std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ pr2-controllers-msgs topic-tools roscpp actionlib rospy std-msgs tf geometry-msgs ];
+  buildInputs = [ geometry-msgs std-msgs actionlib tf topic-tools roscpp pr2-controllers-msgs rospy ];
+  propagatedBuildInputs = [ geometry-msgs std-msgs actionlib tf topic-tools roscpp pr2-controllers-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

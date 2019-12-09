@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, hector-gazebo-plugins, catkin, jackal-control, gazebo-plugins, roslaunch, gazebo-ros-control, jackal-description }:
+{ lib, buildRosPackage, fetchurl, jackal-control, jackal-description, hector-gazebo-plugins, catkin, gazebo-ros-control, gazebo-ros, roslaunch, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-jackal-gazebo";
   version = "0.3.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros hector-gazebo-plugins jackal-control gazebo-plugins gazebo-ros-control jackal-description ];
+  propagatedBuildInputs = [ jackal-control jackal-description hector-gazebo-plugins gazebo-ros-control gazebo-ros gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

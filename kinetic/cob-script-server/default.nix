@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, rospy, actionlib, cob-actions, tf, geometry-msgs, cob-sound, cob-mimic, pythonPackages, message-generation, message-runtime, std-srvs, control-msgs, trajectory-msgs, catkin, move-base-msgs, cob-light, std-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, cob-actions, tf, actionlib-msgs, rostest, move-base-msgs, cob-sound, urdfdom-py, std-msgs, std-srvs, pythonPackages, catkin, rospy, message-generation, cob-light, control-msgs, trajectory-msgs, actionlib, message-runtime, cob-mimic }:
 buildRosPackage {
   pname = "ros-kinetic-cob-script-server";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_script_server/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "2f40e33e982ad277ecd0059f7e9635a318f7fb2bf891faf6d40e6b4288d0e61c";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_script_server/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "f2f05c23bf6b5d16281952d0b6464f5df1c57ba920f780a5423b2a29d0abf99e";
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs trajectory-msgs rostest message-generation actionlib ];
-  propagatedBuildInputs = [ std-srvs cob-sound cob-mimic actionlib-msgs control-msgs trajectory-msgs pythonPackages.ipython pythonPackages.pygraphviz move-base-msgs cob-light rostest std-msgs message-runtime actionlib rospy cob-actions tf geometry-msgs ];
+  buildInputs = [ trajectory-msgs actionlib actionlib-msgs message-generation rostest ];
+  propagatedBuildInputs = [ geometry-msgs pythonPackages.ipython cob-actions tf actionlib-msgs rostest move-base-msgs cob-sound urdfdom-py std-msgs std-srvs rospy cob-light control-msgs trajectory-msgs actionlib pythonPackages.pygraphviz message-runtime cob-mimic ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

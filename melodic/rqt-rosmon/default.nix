@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, rqt-gui, rqt-gui-cpp, qt5, roscpp, rosmon-msgs }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-gui-cpp, pluginlib, catkin, qt5, rosmon-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-rqt-rosmon";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/melodic/rqt_rosmon/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "6a2ccef7322bbeac942798d820361f7d17adfd2fad7bbfce6e588e2fa43e672d";
+    url = "https://github.com/xqms/rosmon-release/archive/release/melodic/rqt_rosmon/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "5c36fe953743b65dbd9f9f59ea29f158f62a37316c14afdd6d5dee214f9c35aa";
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib rqt-gui qt5.qtbase rqt-gui-cpp roscpp rosmon-msgs ];
-  propagatedBuildInputs = [ pluginlib rqt-gui rqt-gui-cpp roscpp rosmon-msgs ];
+  buildInputs = [ rqt-gui rqt-gui-cpp pluginlib qt5.qtbase rosmon-msgs roscpp ];
+  propagatedBuildInputs = [ rqt-gui rqt-gui-cpp pluginlib rosmon-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

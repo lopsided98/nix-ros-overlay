@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dr-cmake }:
+{ lib, buildRosPackage, fetchurl, dr-cmake, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-dr-base";
   version = "1.0.0";

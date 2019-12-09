@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, liblapack, moveit-core, tf-conversions, roscpp }:
+{ lib, buildRosPackage, fetchurl, moveit-core, liblapack, pluginlib, catkin, roscpp, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-nextage-ik-plugin";
   version = "0.8.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];
-  propagatedBuildInputs = [ pluginlib liblapack moveit-core tf-conversions roscpp ];
+  buildInputs = [ moveit-core liblapack pluginlib roscpp tf-conversions ];
+  propagatedBuildInputs = [ moveit-core liblapack pluginlib roscpp tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

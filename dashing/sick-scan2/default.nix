@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, boost, ament-lint-common, ament-cmake-gtest, sensor-msgs, diagnostic-updater, rclcpp, std-msgs, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, std-msgs, ament-lint-common, ament-cmake, ament-cmake-gtest, diagnostic-updater, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-sick-scan2";
   version = "0.1.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost sensor-msgs diagnostic-updater rclcpp std-msgs ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ boost sensor-msgs diagnostic-updater rclcpp std-msgs ];
+  buildInputs = [ sensor-msgs boost std-msgs diagnostic-updater rclcpp ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs boost std-msgs diagnostic-updater rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

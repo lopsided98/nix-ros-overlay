@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager }:
 buildRosPackage {
   pname = "ros-kinetic-iiwa-control";
   version = "1.4.1-r1";

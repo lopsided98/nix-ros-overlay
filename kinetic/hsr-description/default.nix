@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbash, catkin, hsr-meshes, rviz, robot-state-publisher, joint-state-publisher, xacro }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, robot-state-publisher, catkin, hsr-meshes, rosbash, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-hsr-description";
   version = "1.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ xacro rosbash ];
-  propagatedBuildInputs = [ rosbash hsr-meshes rviz robot-state-publisher joint-state-publisher xacro ];
+  buildInputs = [ rosbash xacro ];
+  propagatedBuildInputs = [ joint-state-publisher xacro robot-state-publisher hsr-meshes rosbash rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

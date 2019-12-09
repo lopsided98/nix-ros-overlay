@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, SDL, bullet, SDL_image, libyamlcpp, catkin, tf2, rostest, nav-msgs, rospy, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, SDL_image, SDL, catkin, tf2, rosunit, libyamlcpp, roscpp, rospy, bullet, nav-msgs, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-map-server";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "a5bed8cd6108ec0b57ec9cfb9264695e55978cb946643aa02858b5e99a1b0dca";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "e5fb03609a0fdc9f72eda300b47fc2acc5497c3a96d5524667f9154d9bfd6cd7";
   };
 
   buildType = "catkin";
-  buildInputs = [ SDL bullet SDL_image libyamlcpp tf2 nav-msgs roscpp ];
-  checkInputs = [ rostest rosunit rospy ];
-  propagatedBuildInputs = [ SDL bullet SDL_image libyamlcpp tf2 nav-msgs roscpp ];
+  buildInputs = [ SDL_image SDL tf2 libyamlcpp roscpp bullet nav-msgs ];
+  checkInputs = [ rospy rostest rosunit ];
+  propagatedBuildInputs = [ SDL_image SDL roscpp libyamlcpp tf2 bullet nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

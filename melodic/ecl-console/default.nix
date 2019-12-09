@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-license, catkin, ecl-config, ecl-build }:
+{ lib, buildRosPackage, fetchurl, ecl-license, ecl-config, ecl-build, catkin }:
 buildRosPackage {
   pname = "ros-melodic-ecl-console";
   version = "0.61.6";

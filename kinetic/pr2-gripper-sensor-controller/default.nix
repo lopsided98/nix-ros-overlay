@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers-msgs, std-srvs, pluginlib, actionlib-msgs, pr2-controller-interface, realtime-tools, catkin, roscpp, rosrt, pr2-gripper-sensor-msgs, pr2-controller-manager, std-msgs, roslib, pr2-mechanism-model }:
+{ lib, buildRosPackage, fetchurl, pr2-mechanism-model, pr2-gripper-sensor-msgs, pluginlib, std-srvs, std-msgs, catkin, roslib, rosrt, pr2-controller-interface, realtime-tools, actionlib-msgs, roscpp, pr2-controllers-msgs, pr2-controller-manager }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-gripper-sensor-controller";
   version = "1.0.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs std-srvs pluginlib actionlib-msgs pr2-controller-interface realtime-tools roscpp rosrt pr2-gripper-sensor-msgs pr2-controller-manager std-msgs roslib pr2-mechanism-model ];
-  propagatedBuildInputs = [ pr2-controllers-msgs std-srvs pr2-controller-interface actionlib-msgs pluginlib realtime-tools rosrt pr2-gripper-sensor-msgs roslib pr2-controller-manager std-msgs roscpp pr2-mechanism-model ];
+  buildInputs = [ pr2-mechanism-model pr2-gripper-sensor-msgs pluginlib std-msgs std-srvs roslib rosrt pr2-controller-interface realtime-tools actionlib-msgs roscpp pr2-controllers-msgs pr2-controller-manager ];
+  propagatedBuildInputs = [ pr2-mechanism-model pr2-gripper-sensor-msgs pluginlib std-srvs std-msgs roslib rosrt pr2-controller-interface realtime-tools actionlib-msgs roscpp pr2-controllers-msgs pr2-controller-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

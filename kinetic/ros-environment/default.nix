@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-ros-environment";
-  version = "1.0.0";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_environment-release/archive/release/kinetic/ros_environment/1.0.0-0.tar.gz";
-    name = "1.0.0-0.tar.gz";
-    sha256 = "47fd8d7f66078612ad69e6f202834ae0273353a66c552f5cfce1dbe16b4a1390";
+    url = "https://github.com/ros-gbp/ros_environment-release/archive/release/kinetic/ros_environment/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "85712366beb8c51abb1470ef07a460d1ea643d8d320c0f7ad795314c725739b8";
   };
 
   buildType = "catkin";

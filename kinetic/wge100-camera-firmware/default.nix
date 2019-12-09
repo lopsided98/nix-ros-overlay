@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, catkin, gforth, rospy }:
+{ lib, buildRosPackage, fetchurl, gforth, rospy, catkin, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-wge100-camera-firmware";
   version = "1.8.2";

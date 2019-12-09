@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslaunch, catkin, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, roslaunch, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-rc-visard-description";
   version = "2.7.0-r1";

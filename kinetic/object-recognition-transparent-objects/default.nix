@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, proj, ecto-opencv, pcl-ros, object-recognition-core, ecto }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, proj, catkin, ecto, object-recognition-core, ecto-opencv }:
 buildRosPackage {
   pname = "ros-kinetic-object-recognition-transparent-objects";
   version = "0.4.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ proj object-recognition-core ecto pcl-ros ];
-  propagatedBuildInputs = [ object-recognition-core proj pcl-ros ecto-opencv ecto ];
+  buildInputs = [ object-recognition-core proj ecto pcl-ros ];
+  propagatedBuildInputs = [ pcl-ros proj ecto object-recognition-core ecto-opencv ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

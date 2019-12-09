@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, boost, libyamlcpp, sensor-msgs, catkin, roscpp, roslib, robotis-math, eigen, std-msgs, robotis-controller-msgs, robotis-framework-common }:
+{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, sensor-msgs, boost, std-msgs, cmake-modules, roslib, catkin, libyamlcpp, eigen, robotis-framework-common, roscpp, robotis-math }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-gripper-module";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules boost libyamlcpp sensor-msgs roscpp roslib robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
-  propagatedBuildInputs = [ cmake-modules boost libyamlcpp sensor-msgs roscpp roslib robotis-math eigen std-msgs robotis-controller-msgs robotis-framework-common ];
+  buildInputs = [ robotis-controller-msgs boost sensor-msgs std-msgs cmake-modules roslib libyamlcpp eigen robotis-framework-common roscpp robotis-math ];
+  propagatedBuildInputs = [ robotis-controller-msgs sensor-msgs boost std-msgs cmake-modules roslib libyamlcpp eigen robotis-framework-common roscpp robotis-math ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

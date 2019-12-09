@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kdl-conversions, catkin, angles, tf-conversions, eigen-conversions, tf }:
+{ lib, buildRosPackage, fetchurl, eigen-conversions, tf, catkin, angles, tf-conversions, kdl-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-geometry";
   version = "1.11.9";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ kdl-conversions angles tf-conversions eigen-conversions tf ];
+  propagatedBuildInputs = [ eigen-conversions tf angles tf-conversions kdl-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

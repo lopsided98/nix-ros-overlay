@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, libwebp, catkin, pythonPackages, libtiff, ffmpeg, libv4l, libjpeg, vtkWithQt4, zlib, protobuf, cmake, libpng }:
+{ lib, buildRosPackage, fetchurl, protobuf, ffmpeg, pythonPackages, libjpeg, catkin, libwebp, cmake, vtkWithQt4, libtiff, python, libv4l, zlib, libpng }:
 buildRosPackage {
   pname = "ros-kinetic-opencv3";
   version = "3.3.1-r5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ python libwebp pythonPackages.numpy libtiff libv4l ffmpeg libjpeg vtkWithQt4 zlib protobuf libpng ];
-  propagatedBuildInputs = [ python pythonPackages.numpy libwebp catkin ffmpeg libjpeg vtkWithQt4 zlib protobuf libpng ];
+  buildInputs = [ pythonPackages.numpy protobuf ffmpeg libjpeg libwebp vtkWithQt4 libtiff python libv4l zlib libpng ];
+  propagatedBuildInputs = [ pythonPackages.numpy protobuf ffmpeg catkin libjpeg libwebp vtkWithQt4 python zlib libpng ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

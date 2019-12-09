@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, pythonPackages, ament-pep257, ament-copyright, rosbag2-transport, ros2cli }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, rosbag2-transport, pythonPackages, ros2cli, ament-pep257, ament-flake8 }:
 buildRosPackage {
   pname = "ros-crystal-ros2bag";
   version = "0.0.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ rosbag2-transport ros2cli ];
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ rosbag2-transport ros2cli ];
+  buildInputs = [ ros2cli rosbag2-transport ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  propagatedBuildInputs = [ ros2cli rosbag2-transport ];
 
   meta = {
     description = ''Entry point for rosbag in ROS 2'';

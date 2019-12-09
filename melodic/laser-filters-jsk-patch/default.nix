@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, filters, cmake-modules, mk, git, catkin, laser-filters, laser-geometry }:
+{ lib, buildRosPackage, fetchurl, git, laser-filters, cmake-modules, filters, catkin, laser-geometry, mk }:
 buildRosPackage {
   pname = "ros-melodic-laser-filters-jsk-patch";
   version = "2.1.13-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ filters cmake-modules mk git laser-filters laser-geometry ];
+  buildInputs = [ git laser-filters cmake-modules filters laser-geometry mk ];
   propagatedBuildInputs = [ filters laser-filters ];
   nativeBuildInputs = [ catkin ];
 

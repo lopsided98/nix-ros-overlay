@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, can-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, can-msgs, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-can-msg-filters";
   version = "1.0.12";

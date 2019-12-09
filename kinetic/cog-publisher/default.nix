@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kdl-conversions, kdl-parser, tf2-geometry-msgs, sensor-msgs, catkin, tf2-ros, roscpp, tf2, urdf, std-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, urdf, std-msgs, tf, catkin, roscpp, kdl-conversions, tf2-geometry-msgs, tf2, tf2-ros, kdl-parser }:
 buildRosPackage {
   pname = "ros-kinetic-cog-publisher";
   version = "1.0.1-r4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kdl-conversions kdl-parser tf2-geometry-msgs sensor-msgs roscpp tf2-ros tf2 urdf std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ kdl-conversions kdl-parser tf2-geometry-msgs sensor-msgs roscpp tf2-ros tf2 urdf std-msgs tf geometry-msgs ];
+  buildInputs = [ tf2-ros sensor-msgs geometry-msgs urdf std-msgs tf roscpp tf2-geometry-msgs tf2 kdl-conversions kdl-parser ];
+  propagatedBuildInputs = [ tf2-ros sensor-msgs geometry-msgs urdf std-msgs tf roscpp tf2-geometry-msgs tf2 kdl-conversions kdl-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-manipulators, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-manipulators }:
 buildRosPackage {
   pname = "ros-melodic-ecl-manipulation";
   version = "0.60.3";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, urdf, robot-state-publisher, roslaunch, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, urdf, robot-state-publisher, catkin, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-warthog-description";
   version = "0.1.1-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ urdf xacro robot-state-publisher ];
+  propagatedBuildInputs = [ robot-state-publisher xacro urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

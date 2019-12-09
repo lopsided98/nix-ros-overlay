@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, avahi, rocon-python-comms, rocon-python-redis, catkin, rocon-console, rosgraph, redis, rocon-semantic-version, rocon-gateway }:
+{ lib, buildRosPackage, fetchurl, rocon-semantic-version, rocon-python-comms, rocon-console, avahi, rocon-python-redis, rosgraph, std-srvs, catkin, redis, rocon-gateway }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-hub";
   version = "0.8.1-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ std-srvs rocon-python-redis rocon-python-comms rocon-console rosgraph redis rocon-gateway rocon-semantic-version avahi ];
+  propagatedBuildInputs = [ rocon-semantic-version rocon-console rocon-python-comms avahi rocon-python-redis rosgraph std-srvs redis rocon-gateway ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

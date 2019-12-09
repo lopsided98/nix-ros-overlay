@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, tf, sensor-msgs, catkin, tf2-ros, message-generation, message-runtime, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, tf, catkin, costmap-2d, roscpp, message-runtime, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-nav2d-operator";
   version = "0.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d sensor-msgs roscpp tf2-ros message-generation tf ];
-  propagatedBuildInputs = [ costmap-2d sensor-msgs roscpp message-runtime tf ];
+  buildInputs = [ sensor-msgs tf costmap-2d roscpp message-generation tf2-ros ];
+  propagatedBuildInputs = [ sensor-msgs tf costmap-2d roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

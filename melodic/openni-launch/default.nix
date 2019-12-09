@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rgbd-launch, roslaunch, nodelet, openni-camera }:
+{ lib, buildRosPackage, fetchurl, catkin, nodelet, openni-camera, roslaunch, rgbd-launch }:
 buildRosPackage {
   pname = "ros-melodic-openni-launch";
   version = "1.11.1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ rgbd-launch nodelet openni-camera ];
+  propagatedBuildInputs = [ openni-camera nodelet rgbd-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

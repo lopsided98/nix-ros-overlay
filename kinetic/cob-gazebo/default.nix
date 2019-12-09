@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, control-msgs, trajectory-msgs, cob-script-server, cob-hardware-config, catkin, gazebo-plugins, rostest, cob-gazebo-ros-control, cob-bringup, rospy, cob-supported-robots, roslaunch, cob-default-robot-config, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, cob-supported-robots, cob-hardware-config, trajectory-msgs, cob-default-robot-config, roslaunch, catkin, cob-bringup, gazebo-ros-control, rospy, gazebo-ros, cob-gazebo-ros-control, cob-script-server, rostest, gazebo-plugins, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-gazebo";
   version = "0.7.3-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ roslaunch ];
   checkInputs = [ cob-supported-robots ];
-  propagatedBuildInputs = [ gazebo-ros control-msgs trajectory-msgs cob-script-server cob-hardware-config gazebo-plugins rostest cob-gazebo-ros-control cob-bringup rospy roslaunch cob-default-robot-config gazebo-ros-control ];
+  propagatedBuildInputs = [ cob-hardware-config cob-default-robot-config trajectory-msgs roslaunch cob-bringup gazebo-ros-control rospy gazebo-ros cob-gazebo-ros-control cob-script-server rostest gazebo-plugins control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

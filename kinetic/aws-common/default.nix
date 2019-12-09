@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-environment, gtest, catkin, zlib, curl, openssl, cmake, utillinux, gmock }:
+{ lib, buildRosPackage, fetchurl, utillinux, catkin, cmake, openssl, zlib, gtest, gmock, ros-environment, curl }:
 buildRosPackage {
   pname = "ros-kinetic-aws-common";
   version = "2.1.0-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ ros-environment curl openssl utillinux zlib ];
+  buildInputs = [ utillinux openssl zlib ros-environment curl ];
   checkInputs = [ gtest gmock ];
-  propagatedBuildInputs = [ openssl utillinux curl zlib ];
-  nativeBuildInputs = [ cmake catkin ];
+  propagatedBuildInputs = [ utillinux openssl curl zlib ];
+  nativeBuildInputs = [ catkin cmake ];
 
   meta = {
     description = ''Common AWS SDK utilities, intended for use by ROS packages using the AWS SDK'';

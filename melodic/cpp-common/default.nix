@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, console-bridge, catkin, boost }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, console-bridge }:
 buildRosPackage {
   pname = "ros-melodic-cpp-common";
   version = "0.6.13-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ console-bridge boost ];
-  propagatedBuildInputs = [ console-bridge boost ];
+  buildInputs = [ boost console-bridge ];
+  propagatedBuildInputs = [ boost console-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

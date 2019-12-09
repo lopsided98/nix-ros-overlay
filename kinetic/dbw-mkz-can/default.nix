@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dbw-mkz-msgs, sensor-msgs, can-msgs, catkin, dbw-mkz-description, dataspeed-can-msg-filters, roscpp, dataspeed-can-usb, dataspeed-ulc-can, rospy, std-msgs, roslaunch, nodelet, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, dataspeed-ulc-can, std-msgs, dbw-mkz-description, catkin, dbw-mkz-msgs, dataspeed-can-usb, nodelet, roscpp, can-msgs, rospy, roslaunch, dataspeed-can-msg-filters }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-mkz-can";
   version = "1.2.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dbw-mkz-msgs sensor-msgs can-msgs dataspeed-can-msg-filters roscpp rospy std-msgs nodelet geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs dbw-mkz-msgs nodelet roscpp can-msgs rospy dataspeed-can-msg-filters ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ dbw-mkz-msgs sensor-msgs can-msgs dbw-mkz-description roscpp dataspeed-can-usb dataspeed-ulc-can rospy std-msgs roslaunch nodelet geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs dataspeed-ulc-can std-msgs dbw-mkz-description dbw-mkz-msgs dataspeed-can-usb nodelet roscpp can-msgs rospy roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

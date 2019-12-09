@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libyamlcpp, sensor-msgs, catkin, yocs-math-toolkit, ar-track-alvar-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, yocs-math-toolkit, catkin, libyamlcpp, roscpp, ar-track-alvar-msgs }:
 buildRosPackage {
   pname = "ros-melodic-yocs-ar-marker-tracking";
   version = "0.8.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libyamlcpp sensor-msgs yocs-math-toolkit ar-track-alvar-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ libyamlcpp sensor-msgs yocs-math-toolkit ar-track-alvar-msgs roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs yocs-math-toolkit libyamlcpp roscpp ar-track-alvar-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs yocs-math-toolkit libyamlcpp roscpp ar-track-alvar-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, tf2-geometry-msgs, catkin, message-filters, tf2-ros, nav-msgs, angles, rospy, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-filters, geometry-msgs, catkin, tf2-geometry-msgs, roscpp, angles, rospy, nav-msgs, rosconsole, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-fake-localization";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/fake_localization/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "232105963bddfd8f630800213dd0686ea1ea2758dd04df747cdffc46af148d40";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/fake_localization/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "5285fddec54294a69954d90e5ec8f716c26eed2b6cb8f573e0bcda7bfd4b4e40";
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole tf2-geometry-msgs message-filters tf2-ros nav-msgs angles rospy roscpp geometry-msgs ];
-  propagatedBuildInputs = [ rosconsole message-filters tf2-ros nav-msgs rospy roscpp geometry-msgs ];
+  buildInputs = [ message-filters geometry-msgs tf2-geometry-msgs roscpp angles rospy nav-msgs rosconsole tf2-ros ];
+  propagatedBuildInputs = [ message-filters geometry-msgs roscpp rospy nav-msgs rosconsole tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, sensor-msgs, tf2-ros, ament-cmake-auto, tf2, eigen3-cmake-module, eigen }:
+{ lib, buildRosPackage, fetchurl, tf2-ros, sensor-msgs, ament-cmake-auto, eigen3-cmake-module, eigen, tf2, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-tf2-sensor-msgs";
   version = "0.11.5-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tf2 sensor-msgs tf2-ros eigen ];
+  buildInputs = [ sensor-msgs eigen tf2-ros tf2 ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ sensor-msgs tf2-ros tf2 eigen3-cmake-module eigen ];
-  nativeBuildInputs = [ ament-cmake-auto eigen3-cmake-module ];
+  propagatedBuildInputs = [ sensor-msgs eigen3-cmake-module eigen tf2 tf2-ros ];
+  nativeBuildInputs = [ eigen3-cmake-module ament-cmake-auto ];
 
   meta = {
     description = ''Small lib to transform sensor_msgs with tf. Most notably, PointCloud2'';

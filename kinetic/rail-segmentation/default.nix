@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, boost, libyamlcpp, sensor-msgs, catkin, tf2-ros, roscpp, pkg-config, tf2, roslib, rail-manipulation-msgs, message-generation, message-runtime, pcl-ros, tf, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, rail-manipulation-msgs, boost, sensor-msgs, message-runtime, std-srvs, tf, catkin, roscpp, roslib, libyamlcpp, pcl-conversions, tf2, pkg-config, message-generation, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-rail-segmentation";
   version = "0.1.12";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs boost libyamlcpp sensor-msgs pkg-config tf2-ros roscpp roslib tf2 message-generation rail-manipulation-msgs pcl-ros tf pcl-conversions ];
-  propagatedBuildInputs = [ std-srvs boost libyamlcpp sensor-msgs roscpp tf2-ros tf2 roslib rail-manipulation-msgs message-runtime pcl-ros tf pcl-conversions ];
+  buildInputs = [ pcl-ros rail-manipulation-msgs boost sensor-msgs std-srvs tf roslib roscpp libyamlcpp pcl-conversions tf2 pkg-config message-generation tf2-ros ];
+  propagatedBuildInputs = [ pcl-ros rail-manipulation-msgs sensor-msgs boost std-srvs tf roslib roscpp libyamlcpp pcl-conversions tf2 message-runtime tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

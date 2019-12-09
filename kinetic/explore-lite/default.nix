@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, actionlib-msgs, catkin, roscpp, move-base-msgs, nav-msgs, visualization-msgs, actionlib, std-msgs, roslaunch, tf, geometry-msgs, map-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, map-msgs, tf, actionlib, catkin, roslaunch, costmap-2d, actionlib-msgs, visualization-msgs, roscpp, nav-msgs, move-base-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-explore-lite";
   version = "2.1.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d actionlib-msgs roscpp move-base-msgs nav-msgs visualization-msgs actionlib std-msgs tf geometry-msgs map-msgs ];
+  buildInputs = [ geometry-msgs std-msgs map-msgs tf actionlib costmap-2d actionlib-msgs visualization-msgs roscpp nav-msgs move-base-msgs ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ costmap-2d actionlib-msgs tf move-base-msgs nav-msgs visualization-msgs actionlib std-msgs roscpp geometry-msgs map-msgs ];
+  propagatedBuildInputs = [ geometry-msgs std-msgs map-msgs tf actionlib costmap-2d actionlib-msgs visualization-msgs roscpp nav-msgs move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

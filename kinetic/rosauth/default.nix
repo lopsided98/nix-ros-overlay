@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, message-generation, message-runtime, openssl, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-runtime, catkin, openssl, roscpp, message-generation, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-rosauth";
   version = "0.1.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ openssl rostest message-generation roscpp ];
-  propagatedBuildInputs = [ roscpp message-runtime ];
+  buildInputs = [ message-generation openssl rostest roscpp ];
+  propagatedBuildInputs = [ message-runtime roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

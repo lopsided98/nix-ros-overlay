@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, sensor-msgs, catkin, mavros, roscpp, urdf, visualization-msgs, tf2-eigen, std-msgs, tf, mavros-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, mavros, geometry-msgs, urdf, std-msgs, tf, cmake-modules, catkin, tf2-eigen, mavros-msgs, visualization-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-mavros-extras";
-  version = "0.33.0-r1";
+  version = "0.33.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/mavros_extras/0.33.0-1.tar.gz";
-    name = "0.33.0-1.tar.gz";
-    sha256 = "700183bb6b1d1083fdaf0394de912251a60f3c3209a71ab4f412fe9b8760062e";
+    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/mavros_extras/0.33.3-1.tar.gz";
+    name = "0.33.3-1.tar.gz";
+    sha256 = "dc9f17b2c94a1ba600192153a294c20089af28cda7fdc629ae42ffbb67845b22";
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules sensor-msgs mavros roscpp urdf tf2-eigen visualization-msgs std-msgs tf mavros-msgs geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs mavros roscpp urdf tf2-eigen visualization-msgs std-msgs tf mavros-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs mavros geometry-msgs urdf std-msgs tf cmake-modules tf2-eigen mavros-msgs visualization-msgs roscpp ];
+  propagatedBuildInputs = [ sensor-msgs mavros geometry-msgs urdf std-msgs tf tf2-eigen mavros-msgs visualization-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, class-loader, cv-bridge, image-geometry, rosgraph-msgs, rospy, pcl-ros, tf-conversions, tf, pcl-conversions, find-object-2d, geometry-msgs, stereo-msgs, image-transport, message-filters, message-generation, rviz, message-runtime, compressed-depth-image-transport, genmsg, eigen-conversions, std-srvs, rtabmap, catkin, tf2-ros, octomap-msgs, move-base-msgs, nav-msgs, std-msgs, laser-geometry, roscpp, nodelet, visualization-msgs, compressed-image-transport, costmap-2d, pcl, sensor-msgs, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, eigen-conversions, tf, image-transport, nodelet, class-loader, rtabmap, nav-msgs, sensor-msgs, dynamic-reconfigure, message-runtime, compressed-depth-image-transport, tf2-ros, move-base-msgs, pcl-ros, message-filters, std-msgs, std-srvs, catkin, pcl, costmap-2d, cv-bridge, roscpp, message-generation, rospy, rosgraph-msgs, image-geometry, find-object-2d, genmsg, octomap-msgs, laser-geometry, stereo-msgs, rviz, pcl-conversions, visualization-msgs, compressed-image-transport, tf-conversions }:
 buildRosPackage {
   pname = "ros-melodic-rtabmap-ros";
   version = "0.19.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ class-loader cv-bridge image-geometry rosgraph-msgs pcl-ros tf-conversions rospy tf pcl-conversions find-object-2d geometry-msgs stereo-msgs image-transport message-filters message-generation rviz eigen-conversions std-srvs rtabmap tf2-ros octomap-msgs move-base-msgs nav-msgs std-msgs laser-geometry roscpp nodelet visualization-msgs costmap-2d pcl sensor-msgs dynamic-reconfigure ];
-  propagatedBuildInputs = [ class-loader cv-bridge image-geometry rosgraph-msgs pcl-ros tf-conversions rospy tf pcl-conversions find-object-2d geometry-msgs stereo-msgs image-transport message-filters rviz message-runtime compressed-depth-image-transport eigen-conversions std-srvs rtabmap tf2-ros octomap-msgs move-base-msgs nav-msgs std-msgs laser-geometry compressed-image-transport roscpp nodelet visualization-msgs costmap-2d sensor-msgs dynamic-reconfigure ];
+  buildInputs = [ geometry-msgs eigen-conversions tf image-transport nodelet class-loader rtabmap nav-msgs sensor-msgs dynamic-reconfigure tf2-ros move-base-msgs pcl-ros message-filters std-msgs std-srvs pcl costmap-2d cv-bridge roscpp message-generation rospy rosgraph-msgs image-geometry find-object-2d octomap-msgs laser-geometry stereo-msgs rviz pcl-conversions visualization-msgs tf-conversions ];
+  propagatedBuildInputs = [ geometry-msgs eigen-conversions tf image-transport nodelet class-loader rtabmap nav-msgs sensor-msgs dynamic-reconfigure message-runtime compressed-depth-image-transport tf2-ros move-base-msgs pcl-ros message-filters std-msgs std-srvs costmap-2d cv-bridge roscpp rospy rosgraph-msgs image-geometry find-object-2d octomap-msgs laser-geometry stereo-msgs rviz pcl-conversions visualization-msgs compressed-image-transport tf-conversions ];
   nativeBuildInputs = [ genmsg catkin ];
 
   meta = {

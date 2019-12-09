@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslib, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roslib, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-timestamp-tools";
   version = "1.6.8";

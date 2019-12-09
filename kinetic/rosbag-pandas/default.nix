@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag, catkin, pythonPackages, rospy-message-converter, roslib }:
+{ lib, buildRosPackage, fetchurl, pythonPackages, roslib, catkin, rospy-message-converter, rosbag }:
 buildRosPackage {
   pname = "ros-kinetic-rosbag-pandas";
   version = "0.5.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pythonPackages.numpy rosbag rospy-message-converter pythonPackages.pandas roslib pythonPackages.matplotlib ];
+  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.matplotlib roslib rospy-message-converter pythonPackages.pandas rosbag ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

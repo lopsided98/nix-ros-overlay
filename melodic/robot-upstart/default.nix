@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, daemontools, rosunit, roslaunch, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, daemontools, catkin, rosunit, roslint, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-robot-upstart";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ rosunit roslint ];
-  propagatedBuildInputs = [ roslaunch daemontools xacro ];
+  checkInputs = [ roslint rosunit ];
+  propagatedBuildInputs = [ xacro roslaunch daemontools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

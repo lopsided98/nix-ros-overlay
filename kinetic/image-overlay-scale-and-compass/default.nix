@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, click, sensor-msgs, catkin, pythonPackages, cv-bridge, rospy, std-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, std-msgs, pythonPackages, catkin, cv-bridge, rospy, click }:
 buildRosPackage {
   pname = "ros-kinetic-image-overlay-scale-and-compass";
   version = "0.2.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs sensor-msgs cv-bridge rospy ];
-  propagatedBuildInputs = [ pythonPackages.numpy click sensor-msgs cv-bridge pythonPackages.opencv3 rospy std-msgs ];
+  buildInputs = [ sensor-msgs std-msgs rospy cv-bridge ];
+  propagatedBuildInputs = [ pythonPackages.numpy sensor-msgs pythonPackages.opencv3 std-msgs cv-bridge rospy click ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

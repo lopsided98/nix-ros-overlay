@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamixel-sdk, boost, cmake-modules, rh-p12-rn-base-module-msgs, catkin, robotis-controller, roscpp, std-msgs, robotis-device, robotis-controller-msgs, robotis-framework-common }:
+{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, boost, robotis-controller, std-msgs, cmake-modules, robotis-device, catkin, roscpp, robotis-framework-common, rh-p12-rn-base-module-msgs, dynamixel-sdk }:
 buildRosPackage {
   pname = "ros-kinetic-rh-p12-rn-base-module";
   version = "0.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamixel-sdk boost cmake-modules rh-p12-rn-base-module-msgs robotis-controller roscpp std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
-  propagatedBuildInputs = [ dynamixel-sdk cmake-modules boost rh-p12-rn-base-module-msgs robotis-controller roscpp std-msgs robotis-device robotis-controller-msgs robotis-framework-common ];
+  buildInputs = [ robotis-controller-msgs boost robotis-controller std-msgs cmake-modules robotis-device roscpp robotis-framework-common rh-p12-rn-base-module-msgs dynamixel-sdk ];
+  propagatedBuildInputs = [ robotis-controller robotis-controller-msgs boost rh-p12-rn-base-module-msgs std-msgs cmake-modules robotis-device robotis-framework-common roscpp dynamixel-sdk ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

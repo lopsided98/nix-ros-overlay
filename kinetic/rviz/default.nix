@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, tinyxml, rospy, tf, geometry-msgs, image-transport, message-filters, urdfdom-headers, roslib, libGL, std-srvs, ogre1_9, rosbag, catkin, nav-msgs, urdf, resource-retriever, std-msgs, libGLU, laser-geometry, python-qt-binding, roscpp, visualization-msgs, cmake-modules, pluginlib, libyamlcpp, sensor-msgs, assimp, qt5, interactive-markers, eigen, media-export, map-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, interactive-markers, pluginlib, ogre1_9, map-msgs, tf, image-transport, eigen, nav-msgs, sensor-msgs, urdfdom-headers, assimp, resource-retriever, cmake-modules, roslib, libyamlcpp, qt5, rosbag, rosconsole, media-export, message-filters, std-msgs, std-srvs, catkin, roscpp, rospy, python-qt-binding, libGLU, laser-geometry, libGL, tinyxml, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rviz";
   version = "1.12.17";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole tinyxml rospy tf geometry-msgs image-transport message-filters qt5.qtbase urdfdom-headers libGL roslib std-srvs ogre1_9 rosbag nav-msgs urdf resource-retriever std-msgs libGLU laser-geometry python-qt-binding roscpp visualization-msgs cmake-modules pluginlib libyamlcpp sensor-msgs assimp interactive-markers eigen map-msgs ];
-  propagatedBuildInputs = [ rosconsole tinyxml rospy tf geometry-msgs image-transport message-filters qt5.qtbase urdfdom-headers libGL roslib std-srvs ogre1_9 rosbag nav-msgs urdf resource-retriever std-msgs libGLU laser-geometry visualization-msgs python-qt-binding roscpp pluginlib libyamlcpp sensor-msgs assimp interactive-markers eigen media-export map-msgs ];
+  buildInputs = [ geometry-msgs urdf interactive-markers pluginlib ogre1_9 map-msgs tf image-transport eigen nav-msgs sensor-msgs urdfdom-headers assimp resource-retriever cmake-modules roslib libyamlcpp rosbag rosconsole message-filters std-msgs std-srvs roscpp rospy python-qt-binding libGLU laser-geometry qt5.qtbase libGL tinyxml visualization-msgs ];
+  propagatedBuildInputs = [ geometry-msgs urdf interactive-markers pluginlib ogre1_9 map-msgs tf image-transport eigen nav-msgs sensor-msgs urdfdom-headers assimp resource-retriever roslib libyamlcpp rosbag rosconsole media-export message-filters std-msgs std-srvs roscpp rospy python-qt-binding libGLU laser-geometry qt5.qtbase libGL tinyxml visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geodesy, catkin, geographic-msgs }:
+{ lib, buildRosPackage, fetchurl, geodesy, geographic-msgs, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-geographic-info";
   version = "0.5.2";

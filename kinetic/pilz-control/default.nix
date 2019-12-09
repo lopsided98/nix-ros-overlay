@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, std-srvs, cmake-modules, roslint, catkin, joint-trajectory-controller, rostest, controller-interface, code-coverage, roscpp }:
+{ lib, buildRosPackage, fetchurl, controller-interface, controller-manager, code-coverage, std-srvs, cmake-modules, catkin, roslint, roscpp, joint-trajectory-controller, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-control";
   version = "0.4.11-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager std-srvs cmake-modules roslint joint-trajectory-controller controller-interface roscpp ];
-  checkInputs = [ rostest code-coverage ];
-  propagatedBuildInputs = [ controller-manager std-srvs joint-trajectory-controller controller-interface roscpp ];
+  buildInputs = [ controller-interface controller-manager std-srvs cmake-modules roslint roscpp joint-trajectory-controller ];
+  checkInputs = [ code-coverage rostest ];
+  propagatedBuildInputs = [ controller-interface controller-manager std-srvs roscpp joint-trajectory-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

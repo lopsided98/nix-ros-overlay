@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, ridgeback-control, hector-gazebo-plugins, catkin, gazebo-plugins, ridgeback-gazebo-plugins, roslaunch, ridgeback-description, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, ridgeback-control, hector-gazebo-plugins, ridgeback-description, catkin, ridgeback-gazebo-plugins, gazebo-ros-control, gazebo-ros, roslaunch, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-ridgeback-gazebo";
   version = "0.1.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros ridgeback-control hector-gazebo-plugins gazebo-plugins ridgeback-gazebo-plugins ridgeback-description gazebo-ros-control ];
+  propagatedBuildInputs = [ ridgeback-control hector-gazebo-plugins ridgeback-description ridgeback-gazebo-plugins gazebo-ros-control gazebo-ros gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

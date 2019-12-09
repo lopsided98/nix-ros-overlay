@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp, example-interfaces, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, example-interfaces, rclcpp, ament-cmake }:
 buildRosPackage {
   pname = "ros-crystal-examples-rclcpp-minimal-service";
   version = "0.6.3";

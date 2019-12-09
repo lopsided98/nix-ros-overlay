@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, console-bridge-vendor, console-bridge, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, console-bridge-vendor, ament-cmake, console-bridge, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-tf2";
   version = "0.11.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ console-bridge console-bridge-vendor geometry-msgs ];
+  buildInputs = [ geometry-msgs console-bridge console-bridge-vendor ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ console-bridge console-bridge-vendor geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs console-bridge console-bridge-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

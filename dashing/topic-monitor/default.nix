@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, launch-ros, rclpy, launch, pythonPackages, ament-pep257, std-msgs }:
+{ lib, buildRosPackage, fetchurl, launch, std-msgs, pythonPackages, launch-ros, ament-pep257, rclpy, ament-flake8 }:
 buildRosPackage {
   pname = "ros-dashing-topic-monitor";
   version = "0.7.9-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "ament_python";
   buildInputs = [ rclpy ];
-  checkInputs = [ ament-flake8 pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ rclpy launch std-msgs launch-ros ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-pep257 ];
+  propagatedBuildInputs = [ std-msgs launch-ros launch rclpy ];
 
   meta = {
     description = ''Package containing tools for monitoring ROS 2 topics.'';

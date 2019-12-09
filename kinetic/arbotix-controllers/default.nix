@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, arbotix-python, trajectory-msgs, tf, catkin }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, arbotix-python, tf, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-arbotix-controllers";
   version = "0.10.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ arbotix-python trajectory-msgs tf ];
+  propagatedBuildInputs = [ trajectory-msgs arbotix-python tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamixel-tutorials, catkin, dynamixel-driver, dynamixel-controllers, dynamixel-msgs }:
+{ lib, buildRosPackage, fetchurl, dynamixel-controllers, dynamixel-msgs, catkin, dynamixel-driver, dynamixel-tutorials }:
 buildRosPackage {
   pname = "ros-kinetic-dynamixel-motor";
   version = "0.4.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ dynamixel-tutorials dynamixel-controllers dynamixel-msgs dynamixel-driver ];
+  propagatedBuildInputs = [ dynamixel-controllers dynamixel-tutorials dynamixel-msgs dynamixel-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

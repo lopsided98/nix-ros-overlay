@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, boost, catkin, tinyxml, libGL, libGLU, roscpp, opencv3 }:
+{ lib, buildRosPackage, fetchurl, boost, cmake-modules, catkin, libGLU, tinyxml, libGL, roscpp, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-homer-robbie-architecture";
   version = "1.0.2-r3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules boost tinyxml roscpp libGLU libGL opencv3 ];
-  propagatedBuildInputs = [ boost tinyxml roscpp libGLU libGL opencv3 ];
+  buildInputs = [ boost cmake-modules libGLU roscpp tinyxml libGL opencv3 ];
+  propagatedBuildInputs = [ boost libGLU roscpp tinyxml libGL opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

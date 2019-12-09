@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ridgeback-gazebo, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, ridgeback-gazebo }:
 buildRosPackage {
   pname = "ros-kinetic-ridgeback-simulator";
   version = "0.0.3";

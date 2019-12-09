@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, filters, pluginlib, sensor-msgs, catkin, pr2-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, pr2-msgs, pluginlib, filters, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-laser-tilt-controller-filter";
   version = "0.1.28";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ filters pluginlib sensor-msgs pr2-msgs roscpp ];
-  propagatedBuildInputs = [ filters pluginlib sensor-msgs pr2-msgs roscpp ];
+  buildInputs = [ sensor-msgs pr2-msgs pluginlib filters roscpp ];
+  propagatedBuildInputs = [ sensor-msgs pr2-msgs pluginlib filters roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

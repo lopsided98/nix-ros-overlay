@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, pluginlib, actionlib-msgs, rsm-msgs, catkin, roscpp, actionlib, std-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, std-srvs, std-msgs, actionlib, tf, catkin, actionlib-msgs, roscpp, rsm-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rsm-core";
   version = "1.1.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs pluginlib actionlib-msgs tf rsm-msgs actionlib std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs pluginlib actionlib-msgs tf rsm-msgs actionlib std-msgs roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs pluginlib std-msgs std-srvs actionlib tf actionlib-msgs roscpp rsm-msgs ];
+  propagatedBuildInputs = [ geometry-msgs pluginlib std-msgs std-srvs actionlib tf actionlib-msgs roscpp rsm-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

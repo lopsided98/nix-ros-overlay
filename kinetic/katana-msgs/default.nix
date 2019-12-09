@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, sensor-msgs, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-runtime, catkin, actionlib-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-katana-msgs";
   version = "1.1.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-generation actionlib-msgs ];
-  propagatedBuildInputs = [ sensor-msgs message-runtime actionlib-msgs ];
+  buildInputs = [ message-generation sensor-msgs actionlib-msgs ];
+  propagatedBuildInputs = [ sensor-msgs actionlib-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

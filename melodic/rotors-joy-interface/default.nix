@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mav-msgs, trajectory-msgs, sensor-msgs, catkin, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, geometry-msgs, catkin, mav-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-rotors-joy-interface";
   version = "2.2.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mav-msgs trajectory-msgs sensor-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ mav-msgs trajectory-msgs sensor-msgs roscpp geometry-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs mav-msgs roscpp ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs mav-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

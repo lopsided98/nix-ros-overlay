@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, sros2, ament-cmake-test, ament-lint-auto, ros2cli }:
+{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake, sros2, ament-cmake-test, ros2cli, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-sros2-cmake";
   version = "0.7.1-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-test ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ sros2 ros2cli ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ ros2cli sros2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

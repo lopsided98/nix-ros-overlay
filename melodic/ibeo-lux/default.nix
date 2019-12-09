@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, network-interface, catkin, ibeo-core, std-msgs, visualization-msgs, pcl-ros, ibeo-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, geometry-msgs, ibeo-core, network-interface, std-msgs, catkin, visualization-msgs, roscpp, ibeo-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ibeo-lux";
   version = "2.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ network-interface roscpp ibeo-core ibeo-msgs pcl-ros std-msgs visualization-msgs geometry-msgs ];
-  propagatedBuildInputs = [ network-interface roscpp ibeo-core ibeo-msgs pcl-ros std-msgs visualization-msgs geometry-msgs ];
+  buildInputs = [ pcl-ros geometry-msgs ibeo-core std-msgs network-interface visualization-msgs roscpp ibeo-msgs ];
+  propagatedBuildInputs = [ pcl-ros geometry-msgs ibeo-core std-msgs network-interface visualization-msgs roscpp ibeo-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

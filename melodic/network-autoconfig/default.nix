@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, networkmanager, catkin }:
 buildRosPackage {
   pname = "ros-melodic-network-autoconfig";
-  version = "0.1.1-r1";
+  version = "0.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/LucidOne-release/network_autoconfig/archive/release/melodic/network_autoconfig/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "7be2b646f3f35fb4dbb3060150cadf0487a6ece2cb5985650088c22cf6aa1747";
+    url = "https://github.com/LucidOne-release/network_autoconfig/archive/release/melodic/network_autoconfig/0.1.1-2.tar.gz";
+    name = "0.1.1-2.tar.gz";
+    sha256 = "e8c7683b24422a998c5e8f22bdec456f390bfd2ea7726ab051785b80b84907b1";
   };
 
   buildType = "catkin";

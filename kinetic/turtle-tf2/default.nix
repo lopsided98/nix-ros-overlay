@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlesim, catkin, tf2-ros, tf2, rospy, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, turtlesim, geometry-msgs, std-msgs, catkin, roscpp, tf2, rospy, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-turtle-tf2";
   version = "0.2.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ turtlesim tf2-ros tf2 rospy std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ turtlesim tf2-ros tf2 rospy std-msgs roscpp geometry-msgs ];
+  buildInputs = [ turtlesim geometry-msgs std-msgs tf2 roscpp rospy tf2-ros ];
+  propagatedBuildInputs = [ turtlesim geometry-msgs std-msgs roscpp tf2 rospy tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

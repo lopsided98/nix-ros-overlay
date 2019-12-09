@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, nav2-common, behaviortree-cpp, rclcpp-action, lifecycle-msgs, geometry-msgs, ament-cmake-pytest, ament-cmake-gtest, launch, nav2-util, rclcpp, builtin-interfaces, std-srvs, rclcpp-lifecycle, tf2-geometry-msgs, tf2-ros, nav-msgs, std-msgs, ament-lint-common, launch-testing, nav2-msgs, tf2, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-cmake, tf2, nav2-util, nav2-msgs, nav-msgs, ament-lint-auto, rclcpp-lifecycle, launch-testing, ament-lint-common, tf2-geometry-msgs, nav2-common, builtin-interfaces, rclcpp, ament-cmake-gtest, tf2-ros, behaviortree-cpp, std-msgs, std-srvs, lifecycle-msgs, rclcpp-action, launch, ament-cmake-pytest }:
 buildRosPackage {
   pname = "ros-dashing-nav2-behavior-tree";
   version = "0.2.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces std-srvs rclcpp-lifecycle tf2-geometry-msgs nav2-msgs nav2-util tf2-ros nav2-common tf2 nav-msgs behaviortree-cpp rclcpp-action lifecycle-msgs rclcpp std-msgs geometry-msgs ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ builtin-interfaces std-srvs rclcpp-lifecycle tf2-geometry-msgs nav2-msgs nav2-util tf2-ros tf2 nav-msgs behaviortree-cpp rclcpp-action lifecycle-msgs rclcpp std-msgs geometry-msgs ];
+  buildInputs = [ rclcpp-action rclcpp-lifecycle geometry-msgs nav-msgs rclcpp std-msgs std-srvs tf2-geometry-msgs nav2-common lifecycle-msgs tf2 nav2-util builtin-interfaces nav2-msgs tf2-ros behaviortree-cpp ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ rclcpp-action rclcpp-lifecycle geometry-msgs nav-msgs rclcpp std-msgs std-srvs tf2-geometry-msgs lifecycle-msgs tf2 nav2-util builtin-interfaces nav2-msgs tf2-ros behaviortree-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

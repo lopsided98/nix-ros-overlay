@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gencpp, genlisp, ros, rosconsole-bridge, rosgraph-msgs, roscpp-core, gennodejs, message-generation, rosbag-migration-rule, message-runtime, genmsg, ros-comm, rospack, std-srvs, catkin, std-msgs, common-msgs, cmake-modules, roslisp, geneus, genpy }:
+{ lib, buildRosPackage, fetchurl, genlisp, common-msgs, ros, geneus, cmake-modules, roslisp, ros-comm, std-msgs, std-srvs, catkin, gennodejs, genpy, gencpp, message-generation, rosgraph-msgs, rosbag-migration-rule, roscpp-core, genmsg, message-runtime, rosconsole-bridge, rospack }:
 buildRosPackage {
   pname = "ros-kinetic-ros-core";
   version = "1.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gencpp genlisp ros rosconsole-bridge rosgraph-msgs roscpp-core gennodejs message-generation rosbag-migration-rule message-runtime genmsg ros-comm rospack std-srvs catkin std-msgs common-msgs cmake-modules roslisp geneus genpy ];
+  propagatedBuildInputs = [ genlisp common-msgs ros geneus cmake-modules roslisp ros-comm std-msgs std-srvs catkin gennodejs genpy gencpp message-generation rosgraph-msgs rosbag-migration-rule roscpp-core genmsg message-runtime rosconsole-bridge rospack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

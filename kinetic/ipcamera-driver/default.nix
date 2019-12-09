@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-info-manager, image-transport, sensor-msgs, catkin, cv-bridge, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, camera-info-manager, catkin, image-transport, cv-bridge, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-ipcamera-driver";
   version = "0.1.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge dynamic-reconfigure roscpp ];
-  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge dynamic-reconfigure roscpp ];
+  buildInputs = [ sensor-msgs dynamic-reconfigure camera-info-manager image-transport cv-bridge roscpp ];
+  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure camera-info-manager image-transport cv-bridge roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

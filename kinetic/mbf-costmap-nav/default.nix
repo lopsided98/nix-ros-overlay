@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, actionlib, tf, mbf-abstract-nav, geometry-msgs, std-srvs, mbf-costmap-core, catkin, move-base, move-base-msgs, nav-msgs, std-msgs, roscpp, pluginlib, base-local-planner, mbf-msgs, nav-core, dynamic-reconfigure, mbf-utility }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, tf, mbf-utility, actionlib-msgs, nav-msgs, dynamic-reconfigure, move-base-msgs, mbf-abstract-nav, std-msgs, std-srvs, catkin, nav-core, roscpp, mbf-msgs, actionlib, base-local-planner, mbf-costmap-core, move-base }:
 buildRosPackage {
   pname = "ros-kinetic-mbf-costmap-nav";
   version = "0.2.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs mbf-costmap-core pluginlib actionlib-msgs base-local-planner tf mbf-msgs nav-core mbf-utility nav-msgs actionlib dynamic-reconfigure std-msgs roscpp mbf-abstract-nav geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs mbf-costmap-core pluginlib actionlib-msgs base-local-planner tf mbf-msgs nav-core move-base mbf-utility move-base-msgs nav-msgs actionlib std-msgs dynamic-reconfigure roscpp mbf-abstract-nav geometry-msgs ];
+  buildInputs = [ mbf-abstract-nav geometry-msgs dynamic-reconfigure pluginlib std-msgs std-srvs actionlib base-local-planner tf mbf-utility nav-core mbf-costmap-core actionlib-msgs roscpp mbf-msgs nav-msgs ];
+  propagatedBuildInputs = [ mbf-abstract-nav geometry-msgs dynamic-reconfigure pluginlib std-msgs std-srvs tf base-local-planner actionlib mbf-utility nav-core mbf-costmap-core actionlib-msgs move-base roscpp mbf-msgs nav-msgs move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

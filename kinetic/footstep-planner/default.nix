@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, rosconsole, sensor-msgs, catkin, roscpp, sbpl, gridmap-2d, nav-msgs, visualization-msgs, actionlib, rospy, angles, tf, opencv3, humanoid-nav-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, sbpl, map-server, catkin, tf, actionlib, gridmap-2d, rosconsole, visualization-msgs, roscpp, angles, rospy, nav-msgs, humanoid-nav-msgs, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-footstep-planner";
   version = "0.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ map-server rosconsole sensor-msgs roscpp sbpl gridmap-2d nav-msgs visualization-msgs actionlib rospy angles tf opencv3 humanoid-nav-msgs geometry-msgs ];
-  propagatedBuildInputs = [ map-server rosconsole tf sensor-msgs roscpp sbpl nav-msgs visualization-msgs actionlib rospy angles gridmap-2d opencv3 humanoid-nav-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs sbpl map-server actionlib tf gridmap-2d rosconsole visualization-msgs roscpp angles rospy nav-msgs humanoid-nav-msgs opencv3 ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs sbpl map-server tf actionlib gridmap-2d rosconsole visualization-msgs roscpp angles rospy nav-msgs humanoid-nav-msgs opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

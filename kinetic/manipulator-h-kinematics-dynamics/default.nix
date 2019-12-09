@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, robotis-math, eigen, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, roscpp, robotis-math }:
 buildRosPackage {
   pname = "ros-kinetic-manipulator-h-kinematics-dynamics";
   version = "0.3.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp cmake-modules robotis-math eigen ];
-  propagatedBuildInputs = [ roscpp cmake-modules robotis-math eigen ];
+  buildInputs = [ cmake-modules eigen robotis-math roscpp ];
+  propagatedBuildInputs = [ cmake-modules eigen robotis-math roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

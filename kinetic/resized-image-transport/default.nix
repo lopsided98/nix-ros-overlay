@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, image-transport, sensor-msgs, cv-bridge, jsk-topic-tools, catkin, rostest, message-generation, jsk-tools, jsk-recognition-utils, message-runtime, nodelet }:
+{ lib, buildRosPackage, fetchurl, jsk-topic-tools, message-generation, sensor-msgs, std-srvs, catkin, jsk-recognition-utils, image-transport, cv-bridge, nodelet, jsk-tools, message-runtime, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-resized-image-transport";
   version = "1.2.9";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs image-transport sensor-msgs cv-bridge jsk-topic-tools message-generation nodelet ];
-  checkInputs = [ rostest jsk-tools jsk-recognition-utils ];
-  propagatedBuildInputs = [ std-srvs image-transport sensor-msgs cv-bridge jsk-topic-tools message-runtime nodelet ];
+  buildInputs = [ jsk-topic-tools sensor-msgs std-srvs image-transport cv-bridge nodelet message-generation ];
+  checkInputs = [ jsk-tools rostest jsk-recognition-utils ];
+  propagatedBuildInputs = [ jsk-topic-tools sensor-msgs std-srvs image-transport cv-bridge nodelet message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

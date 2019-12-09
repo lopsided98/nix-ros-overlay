@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-swri-profiler-msgs";
-  version = "0.1.0";
+  version = "0.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/swri_profiler-release/archive/release/kinetic/swri_profiler_msgs/0.1.0-0.tar.gz";
-    name = "0.1.0-0.tar.gz";
-    sha256 = "a1036164f098906d31ef4449ae16acb503f93585ee09f6d9eb87eb3ff0e0867d";
+    url = "https://github.com/swri-robotics-gbp/swri_profiler-release/archive/release/kinetic/swri_profiler_msgs/0.2.2-2.tar.gz";
+    name = "0.2.2-2.tar.gz";
+    sha256 = "972c265ff70c1e2cb845333541a3c2ff58435bd5a296b454f0c65586f8390b58";
   };
 
   buildType = "catkin";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for the swri_profiler tool.'';
-    license = with lib.licenses; [ "Copyright SwRI" ];
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

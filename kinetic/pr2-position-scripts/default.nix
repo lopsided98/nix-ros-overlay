@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers-msgs, catkin, actionlib, rospy, tf }:
+{ lib, buildRosPackage, fetchurl, tf, actionlib, catkin, pr2-controllers-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-position-scripts";
   version = "0.6.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs tf actionlib rospy ];
-  propagatedBuildInputs = [ rospy pr2-controllers-msgs tf actionlib ];
+  buildInputs = [ actionlib pr2-controllers-msgs rospy tf ];
+  propagatedBuildInputs = [ actionlib pr2-controllers-msgs rospy tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

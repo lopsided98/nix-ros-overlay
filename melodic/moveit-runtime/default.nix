@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, moveit-ros-move-group, catkin, moveit-ros-manipulation, moveit-ros-warehouse, moveit-core, moveit-ros-perception, moveit-planners, moveit-ros-planning-interface, moveit-plugins }:
+{ lib, buildRosPackage, fetchurl, moveit-core, moveit-ros-warehouse, moveit-ros-move-group, moveit-ros-planning-interface, catkin, moveit-ros-manipulation, moveit-planners, moveit-ros-perception, moveit-ros-planning, moveit-plugins }:
 buildRosPackage {
   pname = "ros-melodic-moveit-runtime";
   version = "1.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ moveit-ros-planning moveit-ros-move-group moveit-ros-manipulation moveit-ros-warehouse moveit-core moveit-ros-perception moveit-planners moveit-ros-planning-interface moveit-plugins ];
+  propagatedBuildInputs = [ moveit-core moveit-ros-warehouse moveit-ros-move-group moveit-ros-planning-interface moveit-ros-manipulation moveit-planners moveit-ros-perception moveit-ros-planning moveit-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

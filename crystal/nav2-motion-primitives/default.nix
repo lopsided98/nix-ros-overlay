@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, nav2-tasks, tf2-geometry-msgs, ament-lint-common, launch-testing, nav2-msgs, ament-cmake-gtest, nav2-util, launch, nav2-common, tf2, nav-msgs, rclcpp, ament-lint-auto, nav2-robot, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, nav2-robot, nav2-msgs, ament-cmake-pytest, geometry-msgs, launch, launch-testing, ament-lint-common, ament-cmake, tf2-geometry-msgs, ament-cmake-gtest, nav2-common, tf2, nav2-tasks, nav2-util, rclcpp, nav-msgs, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-nav2-motion-primitives";
   version = "0.1.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ nav2-tasks tf2-geometry-msgs nav2-msgs nav2-util nav2-common tf2 nav-msgs rclcpp nav2-robot geometry-msgs ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ nav2-tasks nav2-msgs nav-msgs rclcpp geometry-msgs ];
+  buildInputs = [ nav2-robot geometry-msgs nav-msgs tf2-geometry-msgs nav2-common tf2 nav2-tasks nav2-util rclcpp nav2-msgs ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ geometry-msgs nav-msgs nav2-tasks rclcpp nav2-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

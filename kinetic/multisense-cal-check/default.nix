@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, multisense-ros }:
+{ lib, buildRosPackage, fetchurl, multisense-ros, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-multisense-cal-check";
   version = "4.0.0";

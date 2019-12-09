@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, rosbuild, pythonPackages, rosservice, rostest, rosgraph, roslaunch, roslib, rosnode }:
+{ lib, buildRosPackage, fetchurl, rosbuild, rosnode, rosgraph, cmake-modules, pythonPackages, roslib, catkin, rosservice, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-roswtf";
   version = "1.12.14";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ rostest ];
   checkInputs = [ cmake-modules ];
-  propagatedBuildInputs = [ pythonPackages.rospkg rosbuild rosservice rosgraph pythonPackages.paramiko roslaunch roslib rosnode ];
+  propagatedBuildInputs = [ rosbuild rosnode rosgraph pythonPackages.rospkg roslib pythonPackages.paramiko rosservice roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

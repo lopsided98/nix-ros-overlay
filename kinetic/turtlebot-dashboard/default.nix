@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, create-dashboard, catkin, kobuki-dashboard }:
+{ lib, buildRosPackage, fetchurl, kobuki-dashboard, catkin, create-dashboard }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-dashboard";
   version = "2.3.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ create-dashboard kobuki-dashboard ];
+  propagatedBuildInputs = [ kobuki-dashboard create-dashboard ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

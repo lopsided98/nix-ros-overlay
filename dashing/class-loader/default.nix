@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, poco, ament-cmake, ament-lint-common, ament-cmake-gtest, poco-vendor, console-bridge-vendor, console-bridge, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, poco, poco-vendor, console-bridge-vendor, ament-lint-common, ament-cmake, ament-cmake-gtest, console-bridge, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-class-loader";
   version = "1.3.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ poco poco-vendor console-bridge console-bridge-vendor ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ poco poco-vendor console-bridge console-bridge-vendor ];
+  buildInputs = [ poco poco-vendor console-bridge-vendor console-bridge ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ poco poco-vendor console-bridge-vendor console-bridge ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

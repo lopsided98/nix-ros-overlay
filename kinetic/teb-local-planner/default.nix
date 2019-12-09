@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libg2o, tf-conversions, tf, geometry-msgs, message-generation, message-runtime, catkin, nav-msgs, std-msgs, visualization-msgs, roscpp, costmap-2d, pluginlib, cmake-modules, base-local-planner, nav-core, interactive-markers, costmap-converter, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, interactive-markers, pluginlib, tf, nav-msgs, dynamic-reconfigure, cmake-modules, costmap-converter, std-msgs, catkin, costmap-2d, nav-core, roscpp, message-generation, libg2o, base-local-planner, visualization-msgs, message-runtime, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-teb-local-planner";
   version = "0.6.14-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib cmake-modules base-local-planner libg2o nav-core roscpp message-generation nav-msgs interactive-markers costmap-converter dynamic-reconfigure std-msgs tf-conversions visualization-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner libg2o tf nav-core nav-msgs message-runtime costmap-converter dynamic-reconfigure std-msgs interactive-markers visualization-msgs roscpp tf-conversions geometry-msgs ];
+  buildInputs = [ costmap-converter geometry-msgs dynamic-reconfigure interactive-markers pluginlib std-msgs tf base-local-planner cmake-modules costmap-2d nav-core visualization-msgs roscpp message-generation tf-conversions nav-msgs libg2o ];
+  propagatedBuildInputs = [ costmap-converter geometry-msgs dynamic-reconfigure interactive-markers pluginlib std-msgs tf base-local-planner costmap-2d nav-core visualization-msgs roscpp message-runtime tf-conversions nav-msgs libg2o ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

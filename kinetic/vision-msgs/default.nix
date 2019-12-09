@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-generation, message-runtime, std-msgs, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, message-runtime, std-msgs, catkin, rosunit, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-vision-msgs";
   version = "0.0.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs message-runtime std-msgs message-generation ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs message-runtime std-msgs message-generation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

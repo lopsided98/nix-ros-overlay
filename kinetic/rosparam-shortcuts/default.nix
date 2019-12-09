@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, roslint, catkin, eigen, eigen-conversions, roscpp }:
+{ lib, buildRosPackage, fetchurl, eigen-conversions, cmake-modules, catkin, roslint, eigen, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-rosparam-shortcuts";
   version = "0.2.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules roslint eigen eigen-conversions roscpp ];
-  propagatedBuildInputs = [ roscpp eigen ];
+  buildInputs = [ eigen-conversions cmake-modules roslint eigen roscpp ];
+  propagatedBuildInputs = [ eigen roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

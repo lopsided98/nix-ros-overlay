@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, cv-bridge, pythonPackages, catkin, image-geometry, baldor, resource-retriever, rostopic, std-msgs, visualization-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, resource-retriever, std-msgs, baldor, pythonPackages, catkin, rostopic, cv-bridge, visualization-msgs, image-geometry }:
 buildRosPackage {
   pname = "ros-kinetic-criutils";
   version = "0.1.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.termcolor sensor-msgs cv-bridge image-geometry baldor resource-retriever rostopic std-msgs visualization-msgs geometry-msgs ];
+  propagatedBuildInputs = [ pythonPackages.termcolor pythonPackages.numpy sensor-msgs geometry-msgs resource-retriever std-msgs baldor rostopic cv-bridge visualization-msgs image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

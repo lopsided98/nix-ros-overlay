@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, rospy }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, rospy, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-korg-nanokontrol";
   version = "0.1.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ sensor-msgs pythonPackages.pygame rospy ];
+  propagatedBuildInputs = [ sensor-msgs rospy pythonPackages.pygame ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

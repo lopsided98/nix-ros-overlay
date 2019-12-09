@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-geotiff, hector-compressed-map-transport, hector-mapping, hector-trajectory-server, catkin, hector-map-tools, hector-marker-drawing, hector-nav-msgs, hector-slam-launch, hector-imu-attitude-to-tf, hector-geotiff-plugins, hector-map-server }:
+{ lib, buildRosPackage, fetchurl, hector-map-server, hector-marker-drawing, hector-nav-msgs, hector-mapping, hector-imu-attitude-to-tf, hector-slam-launch, catkin, hector-trajectory-server, hector-geotiff-plugins, hector-map-tools, hector-geotiff, hector-compressed-map-transport }:
 buildRosPackage {
   pname = "ros-kinetic-hector-slam";
   version = "0.3.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ hector-geotiff hector-compressed-map-transport hector-mapping hector-trajectory-server hector-map-tools hector-marker-drawing hector-nav-msgs hector-slam-launch hector-imu-attitude-to-tf hector-geotiff-plugins hector-map-server ];
+  propagatedBuildInputs = [ hector-map-server hector-compressed-map-transport hector-nav-msgs hector-mapping hector-imu-attitude-to-tf hector-slam-launch hector-trajectory-server hector-geotiff-plugins hector-map-tools hector-geotiff hector-marker-drawing ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

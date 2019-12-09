@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, urdf, transmission-interface }:
+{ lib, buildRosPackage, fetchurl, transmission-interface, catkin, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-hebiros-description";
   version = "0.0.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ urdf transmission-interface ];
-  propagatedBuildInputs = [ urdf transmission-interface ];
+  buildInputs = [ transmission-interface urdf ];
+  propagatedBuildInputs = [ transmission-interface urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

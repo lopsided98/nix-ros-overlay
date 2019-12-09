@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, catkin, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, std-msgs, geometry-msgs, catkin }:
 buildRosPackage {
   pname = "ros-melodic-mbf-abstract-core";
   version = "0.2.5-r1";

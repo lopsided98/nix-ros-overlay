@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, open-manipulator-with-tb3-description, open-manipulator-with-tb3-waffle-pi-moveit, open-manipulator-with-tb3-waffle-moveit, open-manipulator-with-tb3-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, open-manipulator-with-tb3-tools, open-manipulator-with-tb3-description, open-manipulator-with-tb3-waffle-pi-moveit, open-manipulator-with-tb3-waffle-moveit }:
 buildRosPackage {
   pname = "ros-kinetic-open-manipulator-with-tb3";
   version = "1.1.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ open-manipulator-with-tb3-waffle-moveit open-manipulator-with-tb3-waffle-pi-moveit open-manipulator-with-tb3-tools open-manipulator-with-tb3-description ];
+  propagatedBuildInputs = [ open-manipulator-with-tb3-waffle-pi-moveit open-manipulator-with-tb3-waffle-moveit open-manipulator-with-tb3-tools open-manipulator-with-tb3-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

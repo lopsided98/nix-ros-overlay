@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, fzi-icl-core, catkin, tinyxml, wget, linuxHeaders, cmake, libpcan, popt }:
+{ lib, buildRosPackage, fetchurl, popt, fzi-icl-core, wget, catkin, cmake, tinyxml, libpcan, linuxHeaders }:
 buildRosPackage {
   pname = "ros-kinetic-fzi-icl-can";
   version = "1.0.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ fzi-icl-core tinyxml wget libpcan popt ];
-  propagatedBuildInputs = [ fzi-icl-core catkin tinyxml linuxHeaders libpcan popt ];
+  buildInputs = [ popt fzi-icl-core wget tinyxml libpcan ];
+  propagatedBuildInputs = [ popt fzi-icl-core catkin tinyxml libpcan linuxHeaders ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

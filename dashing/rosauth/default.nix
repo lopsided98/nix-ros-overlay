@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, rosidl-default-generators, rclcpp, ament-cmake-ros, openssl, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rosidl-default-runtime, openssl, rosidl-default-generators, rclcpp, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-rosauth";
   version = "2.0.1-r1";

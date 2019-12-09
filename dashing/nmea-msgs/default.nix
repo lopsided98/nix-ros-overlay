@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, rosidl-default-generators, std-msgs, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, std-msgs, ament-cmake, rosidl-default-generators, builtin-interfaces }:
 buildRosPackage {
   pname = "ros-dashing-nmea-msgs";
   version = "2.0.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ std-msgs rosidl-default-generators builtin-interfaces ];
-  propagatedBuildInputs = [ builtin-interfaces std-msgs rosidl-default-runtime ];
+  propagatedBuildInputs = [ std-msgs builtin-interfaces rosidl-default-runtime ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

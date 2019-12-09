@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, roscpp, catkin }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-laser-scan-publisher-tutorial";
   version = "0.2.3-r1";

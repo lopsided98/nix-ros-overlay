@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, forward-command-controller, controller-interface }:
+{ lib, buildRosPackage, fetchurl, forward-command-controller, controller-interface, catkin }:
 buildRosPackage {
   pname = "ros-melodic-position-controllers";
   version = "0.15.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ forward-command-controller controller-interface ];
-  propagatedBuildInputs = [ forward-command-controller controller-interface ];
+  buildInputs = [ controller-interface forward-command-controller ];
+  propagatedBuildInputs = [ controller-interface forward-command-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

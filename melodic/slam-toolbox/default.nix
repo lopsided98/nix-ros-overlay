@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, libg2o, suitesparse, message-filters, tbb, message-generation, rviz, message-runtime, ceres-solver, std-srvs, tf2-geometry-msgs, catkin, tf2-ros, nav-msgs, std-msgs, sparse-bundle-adjustment, visualization-msgs, roscpp, cmake-modules, pluginlib, sensor-msgs, liblapack, tf2, qt5, interactive-markers, eigen }:
+{ lib, buildRosPackage, fetchurl, tbb, liblapack, interactive-markers, ceres-solver, pluginlib, suitesparse, eigen, tf2, nav-msgs, sensor-msgs, cmake-modules, tf2-geometry-msgs, qt5, rosconsole, tf2-ros, message-filters, std-msgs, std-srvs, catkin, roscpp, message-generation, libg2o, map-server, rviz, visualization-msgs, message-runtime, sparse-bundle-adjustment }:
 buildRosPackage {
   pname = "ros-melodic-slam-toolbox";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/melodic/slam_toolbox/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "9b4ec2b8a1a940e58ae2b4a196b2b1c476cc89c8f1866df328504fa59858d391";
+    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/melodic/slam_toolbox/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "2b3a6f49e98e32b6fffb6e6e7e74b85f1c88b8741f31b1977893c58b22aa20b3";
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole libg2o suitesparse message-filters qt5.qtbase tbb message-generation rviz ceres-solver std-srvs tf2-geometry-msgs tf2-ros nav-msgs sparse-bundle-adjustment std-msgs roscpp visualization-msgs cmake-modules pluginlib sensor-msgs liblapack tf2 interactive-markers eigen ];
-  propagatedBuildInputs = [ rosconsole libg2o suitesparse message-filters qt5.qtbase tbb rviz message-runtime ceres-solver std-srvs tf2-geometry-msgs tf2-ros nav-msgs sparse-bundle-adjustment std-msgs roscpp visualization-msgs pluginlib sensor-msgs liblapack tf2 interactive-markers eigen ];
+  buildInputs = [ tbb liblapack interactive-markers ceres-solver pluginlib suitesparse eigen tf2 nav-msgs sensor-msgs cmake-modules tf2-geometry-msgs rosconsole tf2-ros message-filters std-msgs std-srvs roscpp message-generation libg2o map-server qt5.qtbase rviz visualization-msgs sparse-bundle-adjustment ];
+  propagatedBuildInputs = [ tbb liblapack interactive-markers ceres-solver pluginlib suitesparse eigen tf2 nav-msgs sensor-msgs tf2-geometry-msgs rosconsole tf2-ros message-filters std-msgs std-srvs roscpp libg2o map-server qt5.qtbase rviz visualization-msgs message-runtime sparse-bundle-adjustment ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

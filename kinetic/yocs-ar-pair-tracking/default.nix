@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, yocs-math-toolkit, yocs-msgs, ar-track-alvar-msgs, yocs-ar-marker-tracking, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, yocs-math-toolkit, std-msgs, catkin, roscpp, yocs-msgs, ar-track-alvar-msgs, yocs-ar-marker-tracking }:
 buildRosPackage {
   pname = "ros-kinetic-yocs-ar-pair-tracking";
   version = "0.8.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs yocs-math-toolkit yocs-msgs ar-track-alvar-msgs yocs-ar-marker-tracking std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs yocs-math-toolkit yocs-msgs ar-track-alvar-msgs yocs-ar-marker-tracking std-msgs roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs yocs-math-toolkit std-msgs roscpp yocs-msgs ar-track-alvar-msgs yocs-ar-marker-tracking ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs yocs-math-toolkit std-msgs roscpp yocs-msgs ar-track-alvar-msgs yocs-ar-marker-tracking ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

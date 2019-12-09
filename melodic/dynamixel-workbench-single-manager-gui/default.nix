@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dynamixel-workbench-msgs, dynamixel-workbench-toolbox, qt5, roscpp }:
+{ lib, buildRosPackage, fetchurl, dynamixel-workbench-msgs, catkin, roscpp, qt5, dynamixel-workbench-toolbox }:
 buildRosPackage {
   pname = "ros-melodic-dynamixel-workbench-single-manager-gui";
   version = "2.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp dynamixel-workbench-msgs dynamixel-workbench-toolbox qt5.qtbase ];
-  propagatedBuildInputs = [ roscpp dynamixel-workbench-msgs dynamixel-workbench-toolbox qt5.qtbase ];
+  buildInputs = [ dynamixel-workbench-toolbox dynamixel-workbench-msgs roscpp qt5.qtbase ];
+  propagatedBuildInputs = [ dynamixel-workbench-toolbox dynamixel-workbench-msgs roscpp qt5.qtbase ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

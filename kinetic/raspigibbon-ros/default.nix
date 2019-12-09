@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, raspigibbon-description, catkin, futaba-serial-servo, raspigibbon-bringup, raspigibbon-msgs }:
+{ lib, buildRosPackage, fetchurl, raspigibbon-msgs, futaba-serial-servo, catkin, raspigibbon-description, raspigibbon-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-raspigibbon-ros";
   version = "0.2.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ raspigibbon-msgs raspigibbon-bringup futaba-serial-servo raspigibbon-description ];
+  propagatedBuildInputs = [ raspigibbon-bringup raspigibbon-msgs raspigibbon-description futaba-serial-servo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

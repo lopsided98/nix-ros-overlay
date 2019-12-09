@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, control-msgs, sensor-msgs, catkin, tf2-ros, nav-msgs, tf-conversions, actionlib, rospy }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, std-srvs, actionlib, catkin, rospy, tf-conversions, nav-msgs, tf2-ros, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-hardware-emulation";
   version = "0.7.9-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ std-srvs control-msgs sensor-msgs tf2-ros nav-msgs actionlib rospy tf-conversions ];
+  propagatedBuildInputs = [ sensor-msgs std-srvs actionlib rospy tf-conversions nav-msgs tf2-ros control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

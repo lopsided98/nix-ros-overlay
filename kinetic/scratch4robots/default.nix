@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, catkin, rosunit, rospy }:
+{ lib, buildRosPackage, fetchurl, rospy, catkin, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-scratch4robots";
   version = "0.0.2";

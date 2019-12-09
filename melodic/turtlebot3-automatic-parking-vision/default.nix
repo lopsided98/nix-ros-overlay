@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ar-track-alvar, sensor-msgs, catkin, ar-track-alvar-msgs, nav-msgs, rviz, turtlebot3-bringup, robot-state-publisher, rospy, std-msgs, joint-state-publisher, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, sensor-msgs, geometry-msgs, turtlebot3-bringup, ar-track-alvar, robot-state-publisher, std-msgs, catkin, rviz, ar-track-alvar-msgs, rospy, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-automatic-parking-vision";
   version = "1.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ar-track-alvar sensor-msgs ar-track-alvar-msgs nav-msgs rospy std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ ar-track-alvar sensor-msgs ar-track-alvar-msgs nav-msgs rviz turtlebot3-bringup robot-state-publisher rospy std-msgs joint-state-publisher geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs ar-track-alvar std-msgs ar-track-alvar-msgs rospy nav-msgs ];
+  propagatedBuildInputs = [ joint-state-publisher sensor-msgs geometry-msgs turtlebot3-bringup ar-track-alvar robot-state-publisher std-msgs rviz ar-track-alvar-msgs rospy nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

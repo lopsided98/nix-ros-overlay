@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, catkin, subversion, euslisp }:
+{ lib, buildRosPackage, fetchurl, rostest, catkin, euslisp, subversion }:
 buildRosPackage {
   pname = "ros-kinetic-eus-qpoases";
   version = "0.1.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest subversion euslisp ];
-  propagatedBuildInputs = [ rostest euslisp ];
+  buildInputs = [ euslisp rostest subversion ];
+  propagatedBuildInputs = [ euslisp rostest ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

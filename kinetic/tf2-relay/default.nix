@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-msgs, roslint, catkin, tf2-ros, message-relay, roscpp, roslaunch, tf }:
+{ lib, buildRosPackage, fetchurl, message-relay, tf, catkin, roslint, tf2-msgs, roscpp, roslaunch, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-tf2-relay";
   version = "0.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp tf2-msgs message-relay ];
+  buildInputs = [ message-relay roscpp tf2-msgs ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ tf2-msgs tf tf2-ros message-relay roscpp ];
+  propagatedBuildInputs = [ message-relay tf roscpp tf2-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

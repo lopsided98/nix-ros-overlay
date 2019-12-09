@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, panda-moveit-config, hardware-interface, franka-description, pluginlib, realtime-tools, catkin, franka-control, controller-interface, message-generation, message-runtime, rospy, libfranka, franka-hw, dynamic-reconfigure, roscpp, geometry-msgs, eigen }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, controller-interface, libfranka, dynamic-reconfigure, panda-moveit-config, pluginlib, franka-control, hardware-interface, catkin, franka-hw, message-runtime, franka-description, eigen, realtime-tools, rospy, roscpp, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-franka-example-controllers";
   version = "0.6.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface pluginlib realtime-tools message-generation controller-interface dynamic-reconfigure libfranka franka-hw roscpp geometry-msgs eigen ];
-  propagatedBuildInputs = [ panda-moveit-config hardware-interface franka-description pluginlib realtime-tools franka-control controller-interface message-runtime dynamic-reconfigure rospy franka-hw roscpp libfranka geometry-msgs ];
+  buildInputs = [ geometry-msgs controller-interface libfranka dynamic-reconfigure hardware-interface pluginlib franka-hw eigen realtime-tools roscpp message-generation ];
+  propagatedBuildInputs = [ geometry-msgs controller-interface dynamic-reconfigure libfranka hardware-interface pluginlib message-runtime franka-control franka-hw franka-description realtime-tools rospy roscpp panda-moveit-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

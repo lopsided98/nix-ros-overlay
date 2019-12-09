@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, tf, catkin, cob-utilities, diagnostic-updater, nav-msgs, diagnostic-msgs, cob-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, diagnostic-msgs, cob-msgs, cob-utilities, tf, catkin, roscpp, diagnostic-updater, nav-msgs, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-undercarriage-ctrl";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ control-msgs cob-utilities roscpp diagnostic-updater nav-msgs diagnostic-msgs cob-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ control-msgs cob-utilities roscpp diagnostic-updater nav-msgs diagnostic-msgs cob-msgs tf geometry-msgs ];
+  buildInputs = [ diagnostic-msgs geometry-msgs cob-msgs cob-utilities tf control-msgs roscpp nav-msgs diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-msgs geometry-msgs cob-msgs cob-utilities tf control-msgs roscpp nav-msgs diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

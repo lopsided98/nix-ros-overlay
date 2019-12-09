@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rviz-rendering, ament-cmake, rviz-default-plugins, rviz-common, nav2-map-server, suitesparse, boost, ament-cmake-gtest, launch, message-filters, tbb, tf2-sensor-msgs, rclcpp, builtin-interfaces, std-srvs, ceres-solver, tf2-geometry-msgs, tf2-ros, nav-msgs, std-msgs, visualization-msgs, pluginlib, launch-testing, rosidl-default-generators, sensor-msgs, liblapack, tf2, qt5, eigen }:
+{ lib, buildRosPackage, fetchurl, tbb, liblapack, ceres-solver, pluginlib, tf2-sensor-msgs, ament-cmake, suitesparse, eigen, tf2, rosidl-default-generators, nav-msgs, sensor-msgs, launch-testing, tf2-geometry-msgs, nav2-map-server, qt5, builtin-interfaces, rclcpp, rviz-rendering, tf2-ros, ament-cmake-gtest, message-filters, std-msgs, std-srvs, boost, launch, rviz-default-plugins, rviz-common, visualization-msgs }:
 buildRosPackage {
   pname = "ros-dashing-slam-toolbox";
   version = "2.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rviz-rendering rviz-default-plugins rviz-common nav2-map-server suitesparse boost message-filters qt5.qtbase tbb tf2-sensor-msgs rclcpp builtin-interfaces ceres-solver std-srvs tf2-geometry-msgs tf2-ros nav-msgs std-msgs visualization-msgs pluginlib rosidl-default-generators sensor-msgs liblapack tf2 eigen ];
+  buildInputs = [ tbb liblapack ceres-solver pluginlib tf2-sensor-msgs suitesparse eigen tf2 rosidl-default-generators nav-msgs sensor-msgs tf2-geometry-msgs nav2-map-server builtin-interfaces rclcpp rviz-rendering tf2-ros message-filters std-msgs std-srvs boost qt5.qtbase rviz-default-plugins rviz-common visualization-msgs ];
   checkInputs = [ launch-testing ament-cmake-gtest launch ];
-  propagatedBuildInputs = [ rviz-rendering rviz-default-plugins rviz-common nav2-map-server suitesparse boost message-filters qt5.qtbase tf2-sensor-msgs tbb rclcpp builtin-interfaces ceres-solver std-srvs tf2-geometry-msgs tf2-ros nav-msgs std-msgs visualization-msgs pluginlib rosidl-default-generators sensor-msgs liblapack tf2 eigen ];
+  propagatedBuildInputs = [ tbb liblapack ceres-solver pluginlib tf2-sensor-msgs suitesparse eigen tf2 rosidl-default-generators nav-msgs sensor-msgs tf2-geometry-msgs nav2-map-server builtin-interfaces rclcpp rviz-rendering tf2-ros message-filters std-msgs std-srvs boost qt5.qtbase rviz-default-plugins rviz-common visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

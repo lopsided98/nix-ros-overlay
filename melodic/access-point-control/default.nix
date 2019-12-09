@@ -2,15 +2,15 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, rospy, catkin, dynamic-reconfigure }:
 buildRosPackage {
   pname = "ros-melodic-access-point-control";
-  version = "1.0.13-r2";
+  version = "1.0.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/access_point_control/1.0.13-2.tar.gz";
-    name = "1.0.13-2.tar.gz";
-    sha256 = "39437c7678dd643ca15a57d31c319e44d806e652a955b8f040cda6239366e000";
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/access_point_control/1.0.16-1.tar.gz";
+    name = "1.0.16-1.tar.gz";
+    sha256 = "17dff1b9389eb82ad17d285128dd8039c26ecf8d914810ada5dd86ec99d25a42";
   };
 
   buildType = "catkin";

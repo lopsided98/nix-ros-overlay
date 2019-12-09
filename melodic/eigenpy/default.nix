@@ -2,24 +2,24 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, boost, git, catkin, pythonPackages, eigen }:
+{ lib, buildRosPackage, fetchurl, git, boost, pythonPackages, cmake, eigen, python, doxygen }:
 buildRosPackage {
   pname = "ros-melodic-eigenpy";
-  version = "1.5.1-r2";
+  version = "1.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/melodic/eigenpy/1.5.1-2.tar.gz";
-    name = "1.5.1-2.tar.gz";
-    sha256 = "c8cf3b85343d3d89898496db8b1f5fcdfc1d3c5c43611cafb1871d7594c21a68";
+    url = "https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/melodic/eigenpy/1.6.9-1.tar.gz";
+    name = "1.6.9-1.tar.gz";
+    sha256 = "19c90893ececf5e4b3c5df332d25ece65702a3ef53df0636ee7687db031ba044";
   };
 
-  buildType = "catkin";
-  buildInputs = [ python pythonPackages.numpy boost git eigen ];
+  buildType = "cmake";
+  buildInputs = [ git boost pythonPackages.numpy python eigen doxygen ];
   propagatedBuildInputs = [ python pythonPackages.numpy boost eigen ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Bindings between Numpy and Eigen using Boost.Python - wrapped for catkin.'';
+    description = ''Bindings between Numpy and Eigen using Boost.Python'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

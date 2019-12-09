@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, tf2-geometry-msgs, sensor-msgs, catkin, tf2-ros, tf2, message-generation, message-runtime, actionlib, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, actionlib, catkin, tf2, tf2-geometry-msgs, roscpp, message-runtime, tf2-ros, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-fetch-simple-linear-controller";
   version = "0.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2-geometry-msgs control-msgs sensor-msgs tf2-ros tf2 message-generation actionlib roscpp geometry-msgs ];
-  propagatedBuildInputs = [ tf2-geometry-msgs control-msgs sensor-msgs tf2-ros tf2 message-runtime actionlib roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs actionlib roscpp tf2-geometry-msgs tf2 message-generation tf2-ros control-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs actionlib roscpp tf2-geometry-msgs tf2 message-runtime tf2-ros control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

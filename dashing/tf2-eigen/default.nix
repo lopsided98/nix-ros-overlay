@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, tf2-ros, tf2, eigen3-cmake-module, eigen, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, tf2-ros, geometry-msgs, ament-cmake, eigen3-cmake-module, eigen, tf2, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-tf2-eigen";
   version = "0.11.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tf2 eigen tf2-ros geometry-msgs ];
+  buildInputs = [ eigen geometry-msgs tf2-ros tf2 ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ tf2-ros tf2 eigen3-cmake-module eigen geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs eigen3-cmake-module eigen tf2 tf2-ros ];
   nativeBuildInputs = [ eigen3-cmake-module ament-cmake ];
 
   meta = {

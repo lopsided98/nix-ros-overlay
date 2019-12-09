@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-gazebo-plugins, catkin, wamv-description, gazebo-plugins, robot-localization, usv-gazebo-plugins, velodyne-gazebo-plugins, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, hector-gazebo-plugins, usv-gazebo-plugins, catkin, wamv-description, robot-localization, gazebo-plugins, velodyne-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-wamv-gazebo";
   version = "1.2.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hector-gazebo-plugins wamv-description gazebo-plugins robot-localization usv-gazebo-plugins velodyne-gazebo-plugins xacro ];
-  propagatedBuildInputs = [ hector-gazebo-plugins wamv-description gazebo-plugins robot-localization usv-gazebo-plugins velodyne-gazebo-plugins xacro ];
+  buildInputs = [ xacro hector-gazebo-plugins usv-gazebo-plugins wamv-description robot-localization gazebo-plugins velodyne-gazebo-plugins ];
+  propagatedBuildInputs = [ xacro hector-gazebo-plugins usv-gazebo-plugins wamv-description robot-localization gazebo-plugins velodyne-gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

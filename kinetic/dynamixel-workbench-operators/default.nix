@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, cmake-modules, libyamlcpp, trajectory-msgs, sensor-msgs, catkin, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, geometry-msgs, std-srvs, cmake-modules, catkin, libyamlcpp, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-dynamixel-workbench-operators";
   version = "2.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs cmake-modules libyamlcpp trajectory-msgs sensor-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs cmake-modules libyamlcpp trajectory-msgs sensor-msgs roscpp geometry-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-srvs cmake-modules libyamlcpp roscpp ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-srvs cmake-modules libyamlcpp roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

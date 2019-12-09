@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, costmap-2d, amcl, base-local-planner, navfn, clear-costmap-recovery, nav-core, catkin, rotate-recovery, move-base, move-base-msgs, dwa-local-planner, voxel-grid, fake-localization, carrot-planner, global-planner, move-slow-and-clear }:
+{ lib, buildRosPackage, fetchurl, carrot-planner, clear-costmap-recovery, move-slow-and-clear, map-server, catkin, base-local-planner, costmap-2d, nav-core, fake-localization, global-planner, move-base, dwa-local-planner, voxel-grid, amcl, navfn, rotate-recovery, move-base-msgs }:
 buildRosPackage {
   pname = "ros-melodic-navigation";
-  version = "1.16.2";
+  version = "1.16.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/navigation/1.16.2-0.tar.gz";
-    name = "1.16.2-0.tar.gz";
-    sha256 = "f95e40e466dbf7535ad26e1bc94630a9e75c337b3b6e0730e7576e871f99c3b1";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/navigation/1.16.3-1.tar.gz";
+    name = "1.16.3-1.tar.gz";
+    sha256 = "c55bd433b5ad55822926ea621be0fa6f4695bb9795ecdd4574295ae9372fb203";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ map-server costmap-2d amcl base-local-planner navfn clear-costmap-recovery nav-core rotate-recovery move-base move-base-msgs dwa-local-planner voxel-grid fake-localization carrot-planner global-planner move-slow-and-clear ];
+  propagatedBuildInputs = [ clear-costmap-recovery carrot-planner move-slow-and-clear map-server base-local-planner costmap-2d nav-core fake-localization global-planner move-base dwa-local-planner voxel-grid amcl navfn rotate-recovery move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, laser-assembler, urg-node, cmake-modules, sensor-msgs, catkin, laser-filters, robot-state-publisher, dynamic-reconfigure, tf-conversions, tf }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, laser-filters, robot-state-publisher, laser-assembler, cmake-modules, tf, catkin, tf-conversions, urg-node }:
 buildRosPackage {
   pname = "ros-melodic-jsk-tilt-laser";
   version = "2.2.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ laser-assembler cmake-modules sensor-msgs laser-filters dynamic-reconfigure tf-conversions tf ];
-  propagatedBuildInputs = [ laser-assembler urg-node sensor-msgs laser-filters robot-state-publisher dynamic-reconfigure tf-conversions tf ];
+  buildInputs = [ sensor-msgs dynamic-reconfigure laser-filters tf laser-assembler cmake-modules tf-conversions ];
+  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure laser-filters robot-state-publisher tf laser-assembler tf-conversions urg-node ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, tf2-ros, vrpn, roslaunch, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, vrpn, geometry-msgs, catkin, roslint, roscpp, roslaunch, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-vrpn-client-ros";
   version = "0.2.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp tf2-ros geometry-msgs vrpn ];
+  buildInputs = [ vrpn geometry-msgs tf2-ros roscpp ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ roscpp tf2-ros geometry-msgs vrpn ];
+  propagatedBuildInputs = [ vrpn geometry-msgs tf2-ros roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

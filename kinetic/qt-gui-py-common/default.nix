@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, pythonPackages, python-qt-binding, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-qt-gui-py-common";
   version = "0.3.11";

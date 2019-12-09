@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-mechanism-msgs, pr2-hardware-interface, pluginlib, pr2-description, cmake-modules, pr2-controller-interface, pr2-mechanism-diagnostics, realtime-tools, catkin, sensor-msgs, rosparam, rostest, rospy, diagnostic-msgs, roscpp, pr2-mechanism-model }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, pr2-mechanism-model, diagnostic-msgs, pr2-description, pluginlib, pr2-mechanism-diagnostics, catkin, cmake-modules, rosparam, pr2-controller-interface, realtime-tools, roscpp, pr2-hardware-interface, rospy, rostest, pr2-mechanism-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-controller-manager";
   version = "1.8.17";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-mechanism-msgs pr2-hardware-interface pluginlib cmake-modules pr2-controller-interface pr2-mechanism-diagnostics realtime-tools sensor-msgs pr2-description rostest diagnostic-msgs roscpp pr2-mechanism-model ];
-  propagatedBuildInputs = [ pr2-mechanism-msgs pr2-hardware-interface pr2-controller-interface pr2-description pluginlib pr2-mechanism-diagnostics realtime-tools sensor-msgs rosparam rospy diagnostic-msgs roscpp pr2-mechanism-model ];
+  buildInputs = [ sensor-msgs pr2-mechanism-model diagnostic-msgs pr2-description pluginlib pr2-mechanism-diagnostics cmake-modules pr2-controller-interface realtime-tools roscpp pr2-hardware-interface rostest pr2-mechanism-msgs ];
+  propagatedBuildInputs = [ sensor-msgs pr2-mechanism-model diagnostic-msgs pr2-description pluginlib pr2-mechanism-diagnostics rosparam pr2-controller-interface realtime-tools roscpp pr2-hardware-interface rospy pr2-mechanism-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

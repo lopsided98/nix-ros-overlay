@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-move-group, collada-urdf, hironx-ros-bridge, catkin, moveit-ros, rostest, moveit-simple-controller-manager, moveit-planners }:
+{ lib, buildRosPackage, fetchurl, collada-urdf, moveit-simple-controller-manager, moveit-ros-move-group, catkin, moveit-ros, moveit-planners, hironx-ros-bridge, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-hironx-moveit-config";
   version = "2.1.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hironx-ros-bridge moveit-ros-move-group collada-urdf ];
+  buildInputs = [ hironx-ros-bridge collada-urdf moveit-ros-move-group ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ hironx-ros-bridge moveit-simple-controller-manager moveit-planners moveit-ros ];
+  propagatedBuildInputs = [ hironx-ros-bridge moveit-simple-controller-manager moveit-ros moveit-planners ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

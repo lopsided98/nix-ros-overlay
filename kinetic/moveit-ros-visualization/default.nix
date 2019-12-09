@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, moveit-ros-robot-interaction, class-loader, rospy, moveit-ros-perception, tf, pkg-config, rviz, eigen-conversions, moveit-ros-planning-interface, catkin, roscpp, eigen, pluginlib, rostest, moveit-ros-warehouse, geometric-shapes, interactive-markers, object-recognition-msgs }:
+{ lib, buildRosPackage, fetchurl, interactive-markers, eigen-conversions, pluginlib, tf, eigen, class-loader, rostest, object-recognition-msgs, moveit-ros-warehouse, rosconsole, moveit-ros-planning-interface, moveit-ros-robot-interaction, catkin, geometric-shapes, roscpp, pkg-config, rospy, moveit-ros-perception, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-visualization";
   version = "0.9.17-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole pluginlib moveit-ros-robot-interaction moveit-ros-perception class-loader roscpp moveit-ros-warehouse rviz interactive-markers geometric-shapes object-recognition-msgs rospy eigen-conversions tf moveit-ros-planning-interface eigen ];
+  buildInputs = [ moveit-ros-warehouse eigen-conversions moveit-ros-robot-interaction pluginlib moveit-ros-planning-interface tf interactive-markers roscpp moveit-ros-perception eigen rviz geometric-shapes rosconsole class-loader rospy object-recognition-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ pluginlib moveit-ros-robot-interaction moveit-ros-warehouse rviz interactive-markers geometric-shapes rospy moveit-ros-perception roscpp moveit-ros-planning-interface object-recognition-msgs ];
-  nativeBuildInputs = [ catkin pkg-config ];
+  propagatedBuildInputs = [ interactive-markers moveit-ros-warehouse pluginlib moveit-ros-robot-interaction moveit-ros-planning-interface moveit-ros-perception rviz geometric-shapes roscpp rospy object-recognition-msgs ];
+  nativeBuildInputs = [ pkg-config catkin ];
 
   meta = {
     description = ''Components of MoveIt! that offer visualization'';

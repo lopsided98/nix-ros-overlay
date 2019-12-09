@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, rospy, std-msgs, diagnostic-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, diagnostic-msgs, std-msgs, tf, catkin, pythonPackages, rospy }:
 buildRosPackage {
   pname = "ros-melodic-xsens-driver";
   version = "2.2.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs rospy std-msgs diagnostic-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ pythonPackages.pyserial sensor-msgs rospy std-msgs diagnostic-msgs tf geometry-msgs ];
+  buildInputs = [ sensor-msgs diagnostic-msgs geometry-msgs std-msgs tf rospy ];
+  propagatedBuildInputs = [ sensor-msgs diagnostic-msgs geometry-msgs std-msgs tf pythonPackages.pyserial rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

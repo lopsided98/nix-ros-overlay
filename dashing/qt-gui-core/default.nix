@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qt-gui-app, ament-cmake, qt-gui-cpp, qt-gui, qt-dotgraph, qt-gui-py-common }:
+{ lib, buildRosPackage, fetchurl, qt-gui-app, qt-gui-py-common, ament-cmake, qt-gui-cpp, qt-gui, qt-dotgraph }:
 buildRosPackage {
   pname = "ros-dashing-qt-gui-core";
   version = "1.0.7-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ qt-gui-app qt-gui-cpp qt-gui qt-dotgraph qt-gui-py-common ];
+  propagatedBuildInputs = [ qt-gui-app qt-gui-py-common qt-gui-cpp qt-gui qt-dotgraph ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

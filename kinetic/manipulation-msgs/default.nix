@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, shape-msgs, actionlib-msgs, household-objects-database-msgs, sensor-msgs, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, household-objects-database-msgs, geometry-msgs, std-msgs, catkin, shape-msgs, actionlib-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-manipulation-msgs";
   version = "0.2.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ shape-msgs actionlib-msgs household-objects-database-msgs sensor-msgs message-generation std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ shape-msgs actionlib-msgs household-objects-database-msgs sensor-msgs message-generation message-runtime std-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs household-objects-database-msgs geometry-msgs std-msgs shape-msgs actionlib-msgs message-generation ];
+  propagatedBuildInputs = [ sensor-msgs household-objects-database-msgs geometry-msgs message-runtime std-msgs shape-msgs actionlib-msgs message-generation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

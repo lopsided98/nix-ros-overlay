@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, grid-map-core, geometry-msgs, rosbag, cv-bridge, sensor-msgs, catkin, roscpp, nav-msgs, visualization-msgs, std-msgs, grid-map-msgs, tf, grid-map-cv }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, grid-map-cv, geometry-msgs, nav-msgs, std-msgs, tf, catkin, grid-map-core, cv-bridge, visualization-msgs, roscpp, rosbag, grid-map-msgs }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-ros";
   version = "1.6.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ grid-map-core geometry-msgs rosbag sensor-msgs cv-bridge roscpp nav-msgs visualization-msgs std-msgs grid-map-msgs tf grid-map-cv ];
-  propagatedBuildInputs = [ grid-map-core geometry-msgs tf rosbag sensor-msgs cv-bridge nav-msgs visualization-msgs std-msgs grid-map-msgs roscpp grid-map-cv ];
+  buildInputs = [ grid-map-cv sensor-msgs geometry-msgs std-msgs rosbag tf grid-map-core cv-bridge visualization-msgs roscpp grid-map-msgs nav-msgs ];
+  propagatedBuildInputs = [ sensor-msgs grid-map-cv geometry-msgs std-msgs rosbag tf grid-map-core cv-bridge visualization-msgs roscpp grid-map-msgs nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

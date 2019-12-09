@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, catkin, rosconsole-bridge, diagnostic-updater, odva-ethernetip, roslaunch, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, odva-ethernetip, catkin, rosunit, roscpp, roslaunch, rosconsole-bridge, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-melodic-omron-os32c-driver";
   version = "1.0.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs rosconsole-bridge diagnostic-updater odva-ethernetip roscpp ];
+  buildInputs = [ boost sensor-msgs odva-ethernetip roscpp diagnostic-updater rosconsole-bridge ];
   checkInputs = [ roslaunch rosunit ];
-  propagatedBuildInputs = [ boost sensor-msgs rosconsole-bridge diagnostic-updater odva-ethernetip roscpp ];
+  propagatedBuildInputs = [ boost sensor-msgs odva-ethernetip roscpp diagnostic-updater rosconsole-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-command-line, catkin, pkg-config, libftdi, libusb }:
+{ lib, buildRosPackage, fetchurl, libusb, catkin, libftdi, ecl-command-line, pkg-config }:
 buildRosPackage {
   pname = "ros-melodic-kobuki-ftdi";
   version = "0.7.8";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pkg-config ecl-command-line libftdi libusb ];
-  propagatedBuildInputs = [ ecl-command-line libftdi libusb ];
+  buildInputs = [ libftdi pkg-config ecl-command-line libusb ];
+  propagatedBuildInputs = [ libftdi ecl-command-line libusb ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

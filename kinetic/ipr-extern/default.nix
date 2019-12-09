@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libmodbus, ros-reflexxes, libreflexxestype2 }:
+{ lib, buildRosPackage, fetchurl, ros-reflexxes, libmodbus, catkin, libreflexxestype2 }:
 buildRosPackage {
   pname = "ros-kinetic-ipr-extern";
   version = "0.8.8";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ libmodbus ros-reflexxes libreflexxestype2 ];
+  propagatedBuildInputs = [ ros-reflexxes libmodbus libreflexxestype2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

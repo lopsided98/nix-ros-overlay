@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosflight, rosflight-sim, rosflight-utils, catkin, rosflight-firmware, rosflight-msgs }:
+{ lib, buildRosPackage, fetchurl, rosflight-firmware, rosflight-msgs, catkin, rosflight-utils, rosflight-sim, rosflight }:
 buildRosPackage {
   pname = "ros-kinetic-rosflight-pkgs";
   version = "1.0.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosflight rosflight-sim rosflight-utils rosflight-firmware rosflight-msgs ];
+  propagatedBuildInputs = [ rosflight-firmware rosflight-msgs rosflight-utils rosflight-sim rosflight ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

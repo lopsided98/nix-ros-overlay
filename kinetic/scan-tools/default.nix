@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, laser-scan-splitter, scan-to-cloud-converter, catkin, laser-ortho-projector, ncd-parser, laser-scan-matcher, laser-scan-sparsifier, polar-scan-matcher }:
+{ lib, buildRosPackage, fetchurl, laser-scan-sparsifier, laser-scan-splitter, catkin, scan-to-cloud-converter, laser-ortho-projector, laser-scan-matcher, polar-scan-matcher, ncd-parser }:
 buildRosPackage {
   pname = "ros-kinetic-scan-tools";
   version = "0.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ laser-scan-splitter scan-to-cloud-converter laser-ortho-projector ncd-parser laser-scan-matcher laser-scan-sparsifier polar-scan-matcher ];
+  propagatedBuildInputs = [ laser-scan-sparsifier laser-scan-splitter scan-to-cloud-converter laser-scan-matcher laser-ortho-projector polar-scan-matcher ncd-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

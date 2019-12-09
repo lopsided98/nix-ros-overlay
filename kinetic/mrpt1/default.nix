@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, wxGTK, suitesparse, boost, libpcap, catkin, pythonPackages, ffmpeg, assimp, libusb1, octomap, libjpeg, eigen, zlib, freeglut, cmake, opencv3, libudev }:
+{ lib, buildRosPackage, fetchurl, boost, assimp, ffmpeg, octomap, wxGTK, pythonPackages, catkin, libjpeg, cmake, suitesparse, libpcap, freeglut, eigen, python, zlib, opencv3, libusb1, libudev }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt1";
   version = "1.5.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ python wxGTK pythonPackages.numpy suitesparse boost libpcap assimp ffmpeg libusb1 libjpeg octomap eigen zlib freeglut opencv3 libudev ];
-  propagatedBuildInputs = [ python wxGTK pythonPackages.numpy suitesparse boost libpcap catkin ffmpeg assimp libusb1 octomap libjpeg eigen zlib freeglut opencv3 libudev ];
+  buildInputs = [ pythonPackages.numpy boost assimp ffmpeg octomap wxGTK libjpeg libpcap suitesparse freeglut eigen python zlib opencv3 libusb1 libudev ];
+  propagatedBuildInputs = [ pythonPackages.numpy boost assimp ffmpeg octomap wxGTK catkin libjpeg suitesparse libpcap freeglut eigen python zlib opencv3 libusb1 libudev ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

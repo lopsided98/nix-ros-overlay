@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, aws-common, ament-cmake, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, rclcpp, aws-common, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-aws-ros2-common";
   version = "1.0.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ aws-common rclcpp ];
+  buildInputs = [ rclcpp aws-common ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ aws-common rclcpp ];
+  propagatedBuildInputs = [ rclcpp aws-common ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

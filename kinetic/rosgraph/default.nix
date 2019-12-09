@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, pythonPackages, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-rosgraph";
   version = "1.12.14";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ pythonPackages.mock ];
-  propagatedBuildInputs = [ pythonPackages.rospkg pythonPackages.netifaces ];
+  propagatedBuildInputs = [ pythonPackages.netifaces pythonPackages.rospkg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

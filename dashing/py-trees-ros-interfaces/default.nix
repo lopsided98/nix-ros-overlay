@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, unique-identifier-msgs, ament-cmake, ament-lint-common, rosidl-default-generators, action-msgs, diagnostic-msgs, rosidl-default-runtime, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, diagnostic-msgs, rosidl-default-runtime, ament-lint-common, ament-cmake, unique-identifier-msgs, rosidl-default-generators, action-msgs }:
 buildRosPackage {
   pname = "ros-dashing-py-trees-ros-interfaces";
   version = "1.2.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ unique-identifier-msgs rosidl-default-generators action-msgs diagnostic-msgs geometry-msgs ];
+  buildInputs = [ diagnostic-msgs geometry-msgs unique-identifier-msgs rosidl-default-generators action-msgs ];
   checkInputs = [ ament-lint-common ];
-  propagatedBuildInputs = [ unique-identifier-msgs action-msgs diagnostic-msgs rosidl-default-runtime geometry-msgs ];
+  propagatedBuildInputs = [ diagnostic-msgs geometry-msgs rosidl-default-runtime unique-identifier-msgs action-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

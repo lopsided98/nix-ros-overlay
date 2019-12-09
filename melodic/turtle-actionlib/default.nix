@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlesim, rosconsole, actionlib-msgs, catkin, message-generation, message-runtime, actionlib, std-msgs, angles, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, turtlesim, geometry-msgs, std-msgs, actionlib, catkin, actionlib-msgs, roscpp, angles, message-runtime, rosconsole }:
 buildRosPackage {
   pname = "ros-melodic-turtle-actionlib";
   version = "0.1.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ turtlesim rosconsole actionlib-msgs message-generation actionlib std-msgs angles roscpp geometry-msgs ];
-  propagatedBuildInputs = [ turtlesim rosconsole actionlib-msgs message-runtime actionlib std-msgs angles roscpp geometry-msgs ];
+  buildInputs = [ turtlesim geometry-msgs std-msgs actionlib actionlib-msgs roscpp angles message-generation rosconsole ];
+  propagatedBuildInputs = [ turtlesim geometry-msgs std-msgs actionlib actionlib-msgs roscpp angles message-runtime rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

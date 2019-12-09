@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, boost, catkin, rqt-gui, rviz, rqt-gui-cpp }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, boost, rqt-gui-cpp, pluginlib, catkin, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-rviz";
   version = "0.5.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib boost rqt-gui rviz rqt-gui-cpp ];
-  propagatedBuildInputs = [ pluginlib boost rqt-gui rviz rqt-gui-cpp ];
+  buildInputs = [ rqt-gui boost rqt-gui-cpp pluginlib rviz ];
+  propagatedBuildInputs = [ rqt-gui boost rqt-gui-cpp pluginlib rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

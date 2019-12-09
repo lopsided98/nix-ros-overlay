@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp-action, rclcpp, example-interfaces, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, example-interfaces, rclcpp-action, rclcpp, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-examples-rclcpp-minimal-action-client";
   version = "0.7.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-action example-interfaces rclcpp ];
-  propagatedBuildInputs = [ rclcpp-action example-interfaces rclcpp ];
+  buildInputs = [ example-interfaces rclcpp-action rclcpp ];
+  propagatedBuildInputs = [ example-interfaces rclcpp-action rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

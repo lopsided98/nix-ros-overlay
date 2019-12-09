@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-gtest, eigen, ament-lint-auto, autoware-auto-cmake, osrf-testing-tools-cpp }:
+{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake, ament-lint-auto, autoware-auto-cmake, eigen, osrf-testing-tools-cpp, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-dashing-optimization";
   version = "0.0.2-r1";
@@ -15,9 +15,9 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ eigen ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest osrf-testing-tools-cpp ament-lint-common ];
+  checkInputs = [ ament-lint-auto osrf-testing-tools-cpp ament-cmake-gtest ament-lint-common ];
   propagatedBuildInputs = [ eigen ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''A base interface for defining optimization problems and implementations of common optimizers.'';

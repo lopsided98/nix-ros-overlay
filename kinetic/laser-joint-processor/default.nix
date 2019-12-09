@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-filters, image-geometry, joint-states-settler, settlerlib, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-filters, geometry-msgs, joint-states-settler, settlerlib, catkin, image-geometry }:
 buildRosPackage {
   pname = "ros-kinetic-laser-joint-processor";
   version = "1.0.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-filters image-geometry joint-states-settler settlerlib geometry-msgs ];
-  propagatedBuildInputs = [ message-filters image-geometry joint-states-settler settlerlib geometry-msgs ];
+  buildInputs = [ message-filters geometry-msgs joint-states-settler settlerlib image-geometry ];
+  propagatedBuildInputs = [ message-filters geometry-msgs joint-states-settler settlerlib image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

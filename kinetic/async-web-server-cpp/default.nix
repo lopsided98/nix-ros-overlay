@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, pythonPackages, rostest, rospy, openssl, roslib }:
+{ lib, buildRosPackage, fetchurl, boost, pythonPackages, roslib, catkin, openssl, rospy, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-async-web-server-cpp";
   version = "0.0.3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ openssl boost ];
-  checkInputs = [ rostest roslib rospy ];
-  propagatedBuildInputs = [ openssl boost pythonPackages.websocket_client ];
+  buildInputs = [ boost openssl ];
+  checkInputs = [ rostest rospy roslib ];
+  propagatedBuildInputs = [ boost openssl pythonPackages.websocket_client ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

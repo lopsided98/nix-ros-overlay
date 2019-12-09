@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-kinematics, dsr-example-py, robot-localization, position-controllers, lms1xx, interactive-marker-twist-server, moveit-experimental, moveit-config-m0617, dsr-launcher, moveit-core, moveit-config-m0609, dsr-control, catkin, dsr-gazebo, moveit-commander, dsr-description, controller-manager, twist-mux, dsr-msgs, moveit-config-m1013, dsr-example-cpp, moveit-config-m1509, effort-controllers, gazebo-ros-control, moveit-setup-assistant }:
+{ lib, buildRosPackage, fetchurl, effort-controllers, dsr-example-py, controller-manager, dsr-description, moveit-commander, dsr-msgs, twist-mux, interactive-marker-twist-server, moveit-config-m1013, moveit-config-m0617, dsr-gazebo, position-controllers, gazebo-ros-control, moveit-core, moveit-setup-assistant, moveit-config-m1509, catkin, moveit-experimental, dsr-example-cpp, robot-localization, moveit-kinematics, lms1xx, moveit-config-m0609, dsr-control, dsr-launcher }:
 buildRosPackage {
   pname = "ros-kinetic-doosan-robotics";
   version = "0.9.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager moveit-experimental twist-mux interactive-marker-twist-server moveit-kinematics robot-localization position-controllers lms1xx moveit-core moveit-commander effort-controllers gazebo-ros-control moveit-setup-assistant ];
-  propagatedBuildInputs = [ dsr-msgs dsr-control moveit-config-m1013 moveit-config-m0617 dsr-gazebo dsr-example-cpp dsr-example-py moveit-config-m1509 dsr-launcher moveit-config-m0609 dsr-description ];
+  buildInputs = [ effort-controllers moveit-core controller-manager moveit-commander moveit-setup-assistant position-controllers twist-mux interactive-marker-twist-server moveit-experimental robot-localization gazebo-ros-control moveit-kinematics lms1xx ];
+  propagatedBuildInputs = [ moveit-config-m0609 dsr-example-py moveit-config-m0617 dsr-description dsr-gazebo moveit-config-m1509 dsr-msgs moveit-config-m1013 dsr-example-cpp dsr-control dsr-launcher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

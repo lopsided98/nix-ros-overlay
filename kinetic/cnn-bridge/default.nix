@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rospy, std-msgs, roslaunch, roslib, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, std-msgs, catkin, roslib, rospy, message-runtime, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-cnn-bridge";
   version = "0.8.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation rospy std-msgs roslib geometry-msgs ];
-  propagatedBuildInputs = [ message-generation message-runtime rospy std-msgs roslaunch roslib geometry-msgs ];
+  buildInputs = [ geometry-msgs std-msgs roslib rospy message-generation ];
+  propagatedBuildInputs = [ message-generation geometry-msgs message-runtime std-msgs roslib rospy roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

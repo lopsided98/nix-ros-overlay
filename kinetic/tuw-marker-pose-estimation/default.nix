@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, marker-msgs, cv-bridge, catkin, roscpp, image-geometry, rospy, std-msgs, dynamic-reconfigure, tf }:
+{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, std-msgs, tf, catkin, marker-msgs, cv-bridge, roscpp, rospy, image-geometry }:
 buildRosPackage {
   pname = "ros-kinetic-tuw-marker-pose-estimation";
   version = "0.0.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ marker-msgs tf cv-bridge image-geometry rospy std-msgs dynamic-reconfigure roscpp ];
-  propagatedBuildInputs = [ marker-msgs tf cv-bridge image-geometry rospy std-msgs dynamic-reconfigure roscpp ];
+  buildInputs = [ dynamic-reconfigure std-msgs tf marker-msgs cv-bridge roscpp rospy image-geometry ];
+  propagatedBuildInputs = [ dynamic-reconfigure std-msgs tf marker-msgs cv-bridge roscpp rospy image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

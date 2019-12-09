@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, catkin, actionlib-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-footstep-msgs";
   version = "4.3.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation actionlib-msgs geometry-msgs ];
-  propagatedBuildInputs = [ message-runtime actionlib-msgs geometry-msgs ];
+  buildInputs = [ message-generation geometry-msgs actionlib-msgs ];
+  propagatedBuildInputs = [ message-runtime geometry-msgs actionlib-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

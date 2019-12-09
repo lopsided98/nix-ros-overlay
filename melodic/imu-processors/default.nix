@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, roscpp, nav-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, tf, catkin, roscpp, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-imu-processors";
   version = "0.2.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp nav-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs roscpp nav-msgs tf geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs tf roscpp nav-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs tf roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libdmtx, visp-bridge, sensor-msgs, catkin, message-filters, zbar, visp, visp-tracker, resource-retriever, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, libdmtx, resource-retriever, std-msgs, visp-tracker, catkin, visp, roscpp, visp-bridge, zbar }:
 buildRosPackage {
   pname = "ros-melodic-visp-auto-tracker";
   version = "0.11.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libdmtx visp-bridge sensor-msgs message-filters zbar visp visp-tracker resource-retriever std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ libdmtx visp-bridge sensor-msgs message-filters zbar visp resource-retriever visp-tracker std-msgs roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs libdmtx geometry-msgs message-filters resource-retriever std-msgs visp-tracker visp roscpp visp-bridge zbar ];
+  propagatedBuildInputs = [ sensor-msgs libdmtx geometry-msgs message-filters resource-retriever std-msgs visp-tracker visp roscpp visp-bridge zbar ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

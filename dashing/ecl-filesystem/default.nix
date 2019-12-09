@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, ecl-build, ecl-license, ecl-errors, ament-cmake-ros, ament-lint-auto, ecl-config }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-license, ament-lint-common, ecl-errors, ament-cmake-gtest, ecl-config, ecl-build, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-ecl-filesystem";
   version = "1.0.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-license ecl-errors ecl-config ecl-build ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ ecl-license ecl-errors ecl-config ecl-build ];
+  buildInputs = [ ecl-errors ecl-license ecl-config ecl-build ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ ecl-errors ecl-license ecl-config ecl-build ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

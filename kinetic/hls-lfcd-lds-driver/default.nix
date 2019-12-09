@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, catkin, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, std-msgs, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-hls-lfcd-lds-driver";
   version = "1.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs sensor-msgs roscpp boost ];
-  propagatedBuildInputs = [ std-msgs sensor-msgs roscpp boost ];
+  buildInputs = [ sensor-msgs std-msgs boost roscpp ];
+  propagatedBuildInputs = [ sensor-msgs std-msgs boost roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

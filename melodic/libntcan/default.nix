@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dpkg }:
+{ lib, buildRosPackage, fetchurl, dpkg, catkin }:
 buildRosPackage {
   pname = "ros-melodic-libntcan";
   version = "0.6.14-r1";

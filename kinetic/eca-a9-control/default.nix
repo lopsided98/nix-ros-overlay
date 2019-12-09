@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, uuv-trajectory-control, catkin, uuv-teleop }:
+{ lib, buildRosPackage, fetchurl, uuv-teleop, uuv-trajectory-control, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-eca-a9-control";
   version = "0.1.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ uuv-trajectory-control uuv-teleop ];
+  propagatedBuildInputs = [ uuv-teleop uuv-trajectory-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

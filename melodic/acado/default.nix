@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, boost }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake }:
 buildRosPackage {
   pname = "ros-melodic-acado";
   version = "1.2.3";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ boost ];
-  propagatedBuildInputs = [ catkin boost ];
+  propagatedBuildInputs = [ boost catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

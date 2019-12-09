@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen }:
+{ lib, buildRosPackage, fetchurl, eigen, cmake-modules, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-eigen-stl-containers";
   version = "0.1.8";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules eigen ];
+  buildInputs = [ eigen cmake-modules ];
   propagatedBuildInputs = [ eigen ];
   nativeBuildInputs = [ catkin ];
 

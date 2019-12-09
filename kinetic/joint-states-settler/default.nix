@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, actionlib-msgs, catkin, settlerlib, actionlib, roscpp-serialization, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, roscpp-serialization, std-msgs, settlerlib, actionlib, catkin, actionlib-msgs, roscpp, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-joint-states-settler";
   version = "0.10.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs roscpp ];
-  propagatedBuildInputs = [ rosconsole actionlib-msgs settlerlib actionlib roscpp-serialization std-msgs roscpp ];
+  buildInputs = [ roscpp-serialization std-msgs settlerlib actionlib actionlib-msgs roscpp rosconsole ];
+  propagatedBuildInputs = [ roscpp-serialization std-msgs settlerlib actionlib actionlib-msgs roscpp rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

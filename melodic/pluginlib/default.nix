@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, cmake-modules, boost, class-loader, catkin, tinyxml-2, roslib }:
+{ lib, buildRosPackage, fetchurl, boost, cmake-modules, roslib, catkin, class-loader, tinyxml-2, rosconsole }:
 buildRosPackage {
   pname = "ros-melodic-pluginlib";
   version = "1.12.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules rosconsole boost class-loader tinyxml-2 roslib ];
-  propagatedBuildInputs = [ rosconsole boost class-loader tinyxml-2 roslib ];
+  buildInputs = [ boost cmake-modules roslib class-loader tinyxml-2 rosconsole ];
+  propagatedBuildInputs = [ boost roslib class-loader tinyxml-2 rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

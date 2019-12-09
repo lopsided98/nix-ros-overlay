@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, catkin, effort-controllers, robot-state-publisher, rospy, fetch-gazebo }:
+{ lib, buildRosPackage, fetchurl, effort-controllers, controller-manager, robot-state-publisher, catkin, fetch-gazebo, gazebo-ros, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-fetchit-challenge";
   version = "0.8.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros controller-manager robot-state-publisher rospy fetch-gazebo ];
-  propagatedBuildInputs = [ gazebo-ros controller-manager robot-state-publisher effort-controllers rospy fetch-gazebo ];
+  buildInputs = [ controller-manager robot-state-publisher fetch-gazebo gazebo-ros rospy ];
+  propagatedBuildInputs = [ effort-controllers controller-manager robot-state-publisher fetch-gazebo gazebo-ros rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

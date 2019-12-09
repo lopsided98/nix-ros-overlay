@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jsk-pcl-ros, catkin, checkerboard-detector, resized-image-transport, jsk-recognition-msgs, jsk-recognition-utils, jsk-perception, imagesift }:
+{ lib, buildRosPackage, fetchurl, resized-image-transport, checkerboard-detector, jsk-pcl-ros, catkin, jsk-recognition-msgs, jsk-recognition-utils, imagesift, jsk-perception }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-recognition";
   version = "1.2.9";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ jsk-pcl-ros checkerboard-detector resized-image-transport jsk-recognition-msgs jsk-recognition-utils jsk-perception imagesift ];
+  propagatedBuildInputs = [ resized-image-transport checkerboard-detector jsk-pcl-ros jsk-recognition-msgs jsk-recognition-utils imagesift jsk-perception ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

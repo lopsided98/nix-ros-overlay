@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, multisense-description, multisense-ros, catkin, multisense-cal-check, multisense-bringup, multisense-lib }:
+{ lib, buildRosPackage, fetchurl, multisense-bringup, multisense-description, catkin, multisense-ros, multisense-lib, multisense-cal-check }:
 buildRosPackage {
   pname = "ros-kinetic-multisense";
   version = "4.0.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ multisense-description multisense-ros multisense-cal-check multisense-bringup multisense-lib ];
+  propagatedBuildInputs = [ multisense-bringup multisense-description multisense-ros multisense-lib multisense-cal-check ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

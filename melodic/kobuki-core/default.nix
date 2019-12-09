@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-ftdi, kobuki-dock-drive, kobuki-driver, catkin }:
+{ lib, buildRosPackage, fetchurl, kobuki-driver, catkin, kobuki-ftdi, kobuki-dock-drive }:
 buildRosPackage {
   pname = "ros-melodic-kobuki-core";
   version = "0.7.8";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ kobuki-ftdi kobuki-dock-drive kobuki-driver ];
+  propagatedBuildInputs = [ kobuki-dock-drive kobuki-ftdi kobuki-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

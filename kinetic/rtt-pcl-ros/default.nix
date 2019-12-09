@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rtt-roscomm, rtt-pcl, catkin, pcl-ros }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, rtt-pcl, rtt-roscomm, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-pcl-ros";
   version = "0.1.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rtt-roscomm rtt-pcl pcl-ros ];
-  propagatedBuildInputs = [ rtt-roscomm rtt-pcl pcl-ros ];
+  buildInputs = [ pcl-ros rtt-pcl rtt-roscomm ];
+  propagatedBuildInputs = [ pcl-ros rtt-pcl rtt-roscomm ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

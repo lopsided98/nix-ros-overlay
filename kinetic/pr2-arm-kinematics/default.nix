@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kdl-parser, pluginlib, cmake-modules, catkin, urdf, moveit-core, angles, tf-conversions, moveit-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, moveit-core, geometry-msgs, urdf, pluginlib, cmake-modules, catkin, moveit-msgs, roscpp, angles, tf-conversions, kdl-parser }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-arm-kinematics";
   version = "1.0.9";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kdl-parser cmake-modules pluginlib urdf moveit-core angles tf-conversions moveit-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ kdl-parser pluginlib urdf moveit-core angles tf-conversions moveit-msgs roscpp geometry-msgs ];
+  buildInputs = [ moveit-core geometry-msgs urdf pluginlib cmake-modules moveit-msgs roscpp angles tf-conversions kdl-parser ];
+  propagatedBuildInputs = [ moveit-core geometry-msgs urdf pluginlib moveit-msgs roscpp angles tf-conversions kdl-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

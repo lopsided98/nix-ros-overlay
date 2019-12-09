@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, pythonPackages, roslib, rospy, tf, gazebo-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, pythonPackages, roslib, catkin, gazebo-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-cob-gazebo-tools";
   version = "0.7.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pythonPackages.numpy geometry-msgs roslib rospy tf gazebo-msgs ];
+  propagatedBuildInputs = [ pythonPackages.numpy geometry-msgs tf roslib gazebo-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

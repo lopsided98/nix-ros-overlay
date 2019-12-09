@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, mbf-abstract-core, actionlib-msgs, tf, mbf-msgs, catkin, nav-msgs, std-msgs, xmlrpcpp, actionlib, mbf-utility, dynamic-reconfigure, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, std-msgs, std-srvs, tf, actionlib, catkin, mbf-utility, mbf-abstract-core, actionlib-msgs, roscpp, mbf-msgs, nav-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-mbf-abstract-nav";
   version = "0.2.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs mbf-abstract-core actionlib-msgs tf mbf-msgs mbf-utility nav-msgs actionlib xmlrpcpp dynamic-reconfigure std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs mbf-abstract-core actionlib-msgs tf mbf-msgs mbf-utility nav-msgs xmlrpcpp actionlib std-msgs dynamic-reconfigure roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure std-msgs std-srvs actionlib tf mbf-utility mbf-abstract-core actionlib-msgs roscpp mbf-msgs nav-msgs xmlrpcpp ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure std-msgs std-srvs tf actionlib mbf-utility mbf-abstract-core actionlib-msgs roscpp mbf-msgs nav-msgs xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ros-environment, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, ros-environment, ament-lint-common, ament-cmake, rosidl-default-generators, builtin-interfaces }:
 buildRosPackage {
   pname = "ros-dashing-px4-msgs";
   version = "2.0.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces ros-environment ];
+  buildInputs = [ ros-environment builtin-interfaces ];
   checkInputs = [ ament-lint-common ];
-  propagatedBuildInputs = [ builtin-interfaces ros-environment rosidl-default-runtime ];
+  propagatedBuildInputs = [ rosidl-default-runtime ros-environment builtin-interfaces ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

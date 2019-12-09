@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kalman-filter, people-msgs, catkin, leg-detector, easy-markers, rospy, roslib, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, people-msgs, easy-markers, catkin, roslib, leg-detector, kalman-filter, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-people-velocity-tracker";
   version = "1.1.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kalman-filter people-msgs easy-markers rospy roslib geometry-msgs ];
-  propagatedBuildInputs = [ kalman-filter people-msgs leg-detector easy-markers rospy roslib geometry-msgs ];
+  buildInputs = [ geometry-msgs people-msgs easy-markers roslib kalman-filter rospy ];
+  propagatedBuildInputs = [ geometry-msgs people-msgs easy-markers roslib leg-detector kalman-filter rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

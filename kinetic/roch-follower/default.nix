@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, depth-image-proc, roch-teleop, catkin, roch-msgs, nodelet, dynamic-reconfigure, topic-tools, visualization-msgs, roch-bringup, roscpp }:
+{ lib, buildRosPackage, fetchurl, roch-bringup, dynamic-reconfigure, roch-teleop, catkin, depth-image-proc, nodelet, roscpp, visualization-msgs, topic-tools, roch-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-roch-follower";
   version = "2.0.12";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ depth-image-proc roscpp roch-msgs visualization-msgs dynamic-reconfigure nodelet ];
-  propagatedBuildInputs = [ depth-image-proc roch-teleop roch-msgs visualization-msgs dynamic-reconfigure topic-tools nodelet roch-bringup roscpp ];
+  buildInputs = [ dynamic-reconfigure roscpp nodelet visualization-msgs depth-image-proc roch-msgs ];
+  propagatedBuildInputs = [ roch-bringup dynamic-reconfigure roch-teleop roscpp depth-image-proc visualization-msgs nodelet topic-tools roch-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

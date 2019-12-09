@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, roslint, ros-control-boilerplate, catkin, moveit-core, rosparam-shortcuts, roscpp }:
+{ lib, buildRosPackage, fetchurl, moveit-core, catkin, rosparam-shortcuts, moveit-ros-planning, roslint, ros-control-boilerplate, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-moveit-sim-controller";
   version = "0.2.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-planning roslint ros-control-boilerplate moveit-core rosparam-shortcuts roscpp ];
-  propagatedBuildInputs = [ moveit-ros-planning ros-control-boilerplate moveit-core rosparam-shortcuts roscpp ];
+  buildInputs = [ moveit-core rosparam-shortcuts moveit-ros-planning roslint ros-control-boilerplate roscpp ];
+  propagatedBuildInputs = [ moveit-core rosparam-shortcuts roscpp ros-control-boilerplate moveit-ros-planning ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

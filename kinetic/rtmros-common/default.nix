@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rtmbuild, hrpsys-ros-bridge, rosnode-rtc, openrtm-tools, catkin, hrpsys-tools, openrtm-ros-bridge }:
+{ lib, buildRosPackage, fetchurl, hrpsys-ros-bridge, rtmbuild, catkin, openrtm-ros-bridge, openrtm-tools, rosnode-rtc, hrpsys-tools }:
 buildRosPackage {
   pname = "ros-kinetic-rtmros-common";
   version = "1.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rtmbuild hrpsys-ros-bridge rosnode-rtc openrtm-tools hrpsys-tools openrtm-ros-bridge ];
+  propagatedBuildInputs = [ rtmbuild hrpsys-ros-bridge openrtm-ros-bridge openrtm-tools rosnode-rtc hrpsys-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

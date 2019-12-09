@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kdl-parser, sensor-msgs, catkin, urdf, tf-conversions, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, urdf, catkin, tf-conversions, kdl-parser }:
 buildRosPackage {
   pname = "ros-melodic-virtual-force-publisher";
   version = "2.2.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kdl-parser sensor-msgs urdf tf-conversions geometry-msgs ];
-  propagatedBuildInputs = [ kdl-parser sensor-msgs urdf tf-conversions geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs urdf tf-conversions kdl-parser ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs urdf tf-conversions kdl-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

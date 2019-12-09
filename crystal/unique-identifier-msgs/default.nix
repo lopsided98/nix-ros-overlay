@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-default-generators, rosidl-default-runtime, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, rosidl-default-generators, ament-cmake }:
 buildRosPackage {
   pname = "ros-crystal-unique-identifier-msgs";
   version = "2.0.0";

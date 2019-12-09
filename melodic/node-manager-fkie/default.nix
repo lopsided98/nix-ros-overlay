@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, default-cfg-fkie, rqt-gui, rosservice, screen, rosgraph, rospy, diagnostic-msgs, pythonPackages, rqt-reconfigure, xterm, roslaunch, roslib, master-sync-fkie, rosmsg, catkin, python-qt-binding, multimaster-msgs-fkie, dynamic-reconfigure, master-discovery-fkie }:
+{ lib, buildRosPackage, fetchurl, rosgraph, xterm, screen, multimaster-msgs-fkie, rqt-gui, diagnostic-msgs, dynamic-reconfigure, rosmsg, roslib, master-discovery-fkie, master-sync-fkie, catkin, pythonPackages, rospy, roslaunch, python-qt-binding, default-cfg-fkie, rqt-reconfigure, rosservice }:
 buildRosPackage {
   pname = "ros-melodic-node-manager-fkie";
   version = "0.8.12";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs multimaster-msgs-fkie master-discovery-fkie ];
-  propagatedBuildInputs = [ default-cfg-fkie rqt-gui rosservice screen rosgraph rospy pythonPackages.paramiko diagnostic-msgs pythonPackages.docutils rqt-reconfigure xterm roslaunch roslib master-sync-fkie rosmsg python-qt-binding multimaster-msgs-fkie dynamic-reconfigure master-discovery-fkie ];
+  buildInputs = [ master-discovery-fkie diagnostic-msgs multimaster-msgs-fkie ];
+  propagatedBuildInputs = [ rosgraph xterm pythonPackages.docutils pythonPackages.paramiko screen multimaster-msgs-fkie rqt-gui diagnostic-msgs dynamic-reconfigure rosmsg roslib master-discovery-fkie master-sync-fkie rospy roslaunch python-qt-binding default-cfg-fkie rqt-reconfigure rosservice ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

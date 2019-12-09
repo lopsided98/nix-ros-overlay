@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, key-teleop, joy-teleop, teleop-tools-msgs, catkin }:
+{ lib, buildRosPackage, fetchurl, joy-teleop, catkin, teleop-tools-msgs, key-teleop }:
 buildRosPackage {
   pname = "ros-melodic-teleop-tools";
   version = "0.3.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ key-teleop joy-teleop teleop-tools-msgs ];
+  propagatedBuildInputs = [ joy-teleop teleop-tools-msgs key-teleop ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

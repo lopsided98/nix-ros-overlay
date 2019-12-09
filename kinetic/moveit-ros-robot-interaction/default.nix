@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, pluginlib, tf, catkin, interactive-markers, tf-conversions, eigen-conversions, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, eigen-conversions, interactive-markers, pluginlib, catkin, tf, roscpp, rosunit, moveit-ros-planning, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-robot-interaction";
   version = "0.9.17-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-planning pluginlib tf interactive-markers tf-conversions eigen-conversions roscpp ];
+  buildInputs = [ eigen-conversions interactive-markers pluginlib tf moveit-ros-planning roscpp tf-conversions ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ moveit-ros-planning pluginlib tf interactive-markers tf-conversions eigen-conversions roscpp ];
+  propagatedBuildInputs = [ eigen-conversions interactive-markers pluginlib tf moveit-ros-planning roscpp tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

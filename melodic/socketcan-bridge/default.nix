@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, can-msgs, catkin, rosconsole-bridge, rostest, socketcan-interface, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, catkin, rosunit, roslint, socketcan-interface, roscpp, can-msgs, rostest, rosconsole-bridge }:
 buildRosPackage {
   pname = "ros-melodic-socketcan-bridge";
   version = "0.8.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ can-msgs roscpp rosconsole-bridge socketcan-interface ];
-  checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ can-msgs roscpp rosconsole-bridge socketcan-interface ];
+  buildInputs = [ can-msgs socketcan-interface rosconsole-bridge roscpp ];
+  checkInputs = [ roslint rostest rosunit ];
+  propagatedBuildInputs = [ can-msgs socketcan-interface rosconsole-bridge roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

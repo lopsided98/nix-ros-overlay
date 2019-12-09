@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, laser-filters, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, laser-filters }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-follow-filter";
   version = "1.1.0";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, nav-core, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, pluginlib, catkin, costmap-2d, nav-core, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-goal-passer";
   version = "0.3.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d nav-core roscpp pluginlib ];
-  propagatedBuildInputs = [ costmap-2d nav-core roscpp pluginlib ];
+  buildInputs = [ costmap-2d pluginlib nav-core roscpp ];
+  propagatedBuildInputs = [ costmap-2d pluginlib nav-core roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, move-base, robot-localization, roslaunch, tf }:
+{ lib, buildRosPackage, fetchurl, tf, catkin, robot-localization, move-base, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-multi-jackal-nav";
   version = "0.0.5";

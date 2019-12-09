@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-pipeline, rqt-gui-py, image-view2, mk, rosbuild, pythonPackages, rqt-gui, jsk-gui-msgs, cv-bridge, catkin, rostest, message-generation, resource-retriever, message-runtime, rqt-image-view, rqt-plot, roslaunch, qt-gui-py-common }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-plot, image-pipeline, message-runtime, qt-gui-py-common, resource-retriever, rqt-image-view, pythonPackages, catkin, image-view2, jsk-gui-msgs, rqt-gui-py, cv-bridge, message-generation, rosbuild, roslaunch, rostest, mk }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-rqt-plugins";
   version = "2.1.5";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mk image-view2 message-generation rosbuild ];
-  checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ image-pipeline rqt-gui-py image-view2 pythonPackages.urlgrabber rqt-gui pythonPackages.scikitlearn jsk-gui-msgs cv-bridge resource-retriever message-runtime rqt-image-view rqt-plot qt-gui-py-common ];
+  buildInputs = [ message-generation rosbuild image-view2 mk ];
+  checkInputs = [ roslaunch rostest ];
+  propagatedBuildInputs = [ rqt-gui rqt-plot image-pipeline resource-retriever qt-gui-py-common rqt-image-view pythonPackages.scikitlearn jsk-gui-msgs image-view2 rqt-gui-py cv-bridge pythonPackages.urlgrabber message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

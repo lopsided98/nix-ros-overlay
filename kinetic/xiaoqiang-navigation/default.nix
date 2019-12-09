@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, xiaoqiang-navigation-example, addwa-local-planner }:
+{ lib, buildRosPackage, fetchurl, addwa-local-planner, catkin, xiaoqiang-navigation-example }:
 buildRosPackage {
   pname = "ros-kinetic-xiaoqiang-navigation";
   version = "0.0.12";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ xiaoqiang-navigation-example addwa-local-planner ];
+  propagatedBuildInputs = [ addwa-local-planner xiaoqiang-navigation-example ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

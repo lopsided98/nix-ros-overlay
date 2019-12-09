@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, soem, hardware-interface, trajectory-msgs, joint-limits-interface, realtime-tools, sensor-msgs, tinyxml, ethercat-manager, catkin, diagnostic-updater, rostest, roslaunch, transmission-interface }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, joint-limits-interface, controller-manager, soem, hardware-interface, ethercat-manager, catkin, tinyxml, transmission-interface, realtime-tools, diagnostic-updater, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-minas-control";
   version = "1.0.10";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager soem hardware-interface trajectory-msgs realtime-tools sensor-msgs joint-limits-interface ethercat-manager tinyxml diagnostic-updater transmission-interface ];
-  checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ controller-manager hardware-interface realtime-tools sensor-msgs trajectory-msgs joint-limits-interface tinyxml ethercat-manager diagnostic-updater transmission-interface ];
+  buildInputs = [ trajectory-msgs sensor-msgs controller-manager soem hardware-interface joint-limits-interface ethercat-manager tinyxml transmission-interface realtime-tools diagnostic-updater ];
+  checkInputs = [ roslaunch rostest ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs controller-manager joint-limits-interface hardware-interface ethercat-manager tinyxml transmission-interface realtime-tools diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

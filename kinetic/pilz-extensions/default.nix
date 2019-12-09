@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, prbt-support, joint-limits-interface, catkin, rostest, code-coverage, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, joint-limits-interface, code-coverage, catkin, rosunit, roscpp, prbt-support, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-extensions";
   version = "0.3.10-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ joint-limits-interface roscpp ];
-  checkInputs = [ rostest prbt-support code-coverage rosunit ];
+  checkInputs = [ code-coverage prbt-support rostest rosunit ];
   propagatedBuildInputs = [ joint-limits-interface ];
   nativeBuildInputs = [ catkin ];
 

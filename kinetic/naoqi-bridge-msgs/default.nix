@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, trajectory-msgs, sensor-msgs, catkin, nav-msgs, message-generation, message-runtime, std-msgs, genmsg, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, message-generation, geometry-msgs, genmsg, std-msgs, catkin, actionlib-msgs, message-runtime, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-naoqi-bridge-msgs";
   version = "0.0.8";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs trajectory-msgs sensor-msgs nav-msgs message-generation std-msgs genmsg geometry-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs trajectory-msgs sensor-msgs nav-msgs message-runtime std-msgs genmsg geometry-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs genmsg std-msgs actionlib-msgs message-generation nav-msgs ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs genmsg std-msgs actionlib-msgs message-runtime nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

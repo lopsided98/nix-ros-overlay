@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-gazebo-plugins, catkin, gazebo-plugins, urdf, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, urdf, hector-gazebo-plugins, catkin, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-robotnik-sensors";
   version = "1.1.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hector-gazebo-plugins urdf xacro gazebo-plugins ];
-  propagatedBuildInputs = [ hector-gazebo-plugins urdf xacro gazebo-plugins ];
+  buildInputs = [ hector-gazebo-plugins xacro gazebo-plugins urdf ];
+  propagatedBuildInputs = [ hector-gazebo-plugins gazebo-plugins xacro urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

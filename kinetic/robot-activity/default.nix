@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, roslint, catkin, rostest, robot-activity-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, std-srvs, catkin, roslint, roscpp, rostest, robot-activity-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-robot-activity";
   version = "0.1.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs roscpp robot-activity-msgs roslint ];
+  buildInputs = [ roslint std-srvs robot-activity-msgs roscpp ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ std-srvs roscpp robot-activity-msgs ];
+  propagatedBuildInputs = [ std-srvs robot-activity-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

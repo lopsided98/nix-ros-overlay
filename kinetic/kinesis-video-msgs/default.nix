@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-msgs, message-generation, catkin, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, message-runtime, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-kinesis-video-msgs";
   version = "2.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs message-generation ];
-  propagatedBuildInputs = [ diagnostic-msgs message-runtime ];
+  buildInputs = [ message-generation diagnostic-msgs ];
+  propagatedBuildInputs = [ message-runtime diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

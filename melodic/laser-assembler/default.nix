@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, filters, pluginlib, sensor-msgs, catkin, message-filters, roscpp, rostest, laser-geometry, message-generation, message-runtime, tf }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, message-filters, pluginlib, tf, filters, laser-geometry, catkin, roscpp, message-runtime, rostest }:
 buildRosPackage {
   pname = "ros-melodic-laser-assembler";
   version = "1.7.7-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ filters pluginlib tf sensor-msgs message-filters rostest laser-geometry message-generation roscpp ];
-  propagatedBuildInputs = [ filters pluginlib tf sensor-msgs message-filters laser-geometry message-runtime roscpp ];
+  buildInputs = [ sensor-msgs message-filters pluginlib tf filters laser-geometry roscpp message-generation rostest ];
+  propagatedBuildInputs = [ sensor-msgs message-filters pluginlib filters tf laser-geometry roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python-orocos-kdl, catkin, orocos-kdl }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, python-orocos-kdl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-orocos-kinematics-dynamics";
   version = "1.3.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ python-orocos-kdl orocos-kdl ];
+  propagatedBuildInputs = [ orocos-kdl python-orocos-kdl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

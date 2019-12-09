@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-cob-moveit-config";
   version = "0.7.2-r1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, joy, rostest, roslaunch, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, joy, sensor-msgs, geometry-msgs, catkin, roslint, roscpp, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-melodic-teleop-twist-joy";
   version = "0.1.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint sensor-msgs joy rostest roslaunch roscpp geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs joy roscpp geometry-msgs ];
+  buildInputs = [ joy sensor-msgs geometry-msgs roslint roscpp roslaunch rostest ];
+  propagatedBuildInputs = [ joy sensor-msgs geometry-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cppzmq, ament-cmake-gtest, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake, cppzmq }:
 buildRosPackage {
   pname = "ros-crystal-behaviortree-cpp";
   version = "2.4.3-r1";

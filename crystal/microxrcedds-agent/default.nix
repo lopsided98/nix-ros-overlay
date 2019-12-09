@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, fastcdr, cmake, asio, fastrtps }:
+{ lib, buildRosPackage, fetchurl, fastrtps, fastcdr, asio, cmake }:
 buildRosPackage {
   pname = "ros-crystal-microxrcedds-agent";
   version = "1.0.3-r1";

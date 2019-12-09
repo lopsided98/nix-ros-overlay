@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, actionlib, rospy, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, actionlib, catkin, actionlib-msgs, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-pheeno-ros";
   version = "0.1.1-r3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs actionlib rospy std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs actionlib rospy std-msgs roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs std-msgs actionlib actionlib-msgs roscpp rospy ];
+  propagatedBuildInputs = [ geometry-msgs std-msgs actionlib actionlib-msgs roscpp rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

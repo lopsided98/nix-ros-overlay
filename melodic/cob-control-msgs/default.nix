@@ -2,15 +2,15 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-msgs, catkin, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-cob-control-msgs";
-  version = "0.8.0-r1";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_control_msgs/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "faa2290e9264a914ba18b9d6eac02f383d12cd72c8fb918c2bf7c92d4f694a1d";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_control_msgs/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "9b46e954b2e2e6b8ff110fe67a879280598d2b8153228d3e61febd1ffbfab493";
   };
 
   buildType = "catkin";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, grid-map-core, filters, cv-bridge, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, grid-map-core, filters, cv-bridge }:
 buildRosPackage {
   pname = "ros-kinetic-grid-map-cv";
   version = "1.6.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ grid-map-core filters cv-bridge ];
+  buildInputs = [ filters cv-bridge grid-map-core ];
   propagatedBuildInputs = [ grid-map-core filters cv-bridge ];
   nativeBuildInputs = [ catkin ];
 

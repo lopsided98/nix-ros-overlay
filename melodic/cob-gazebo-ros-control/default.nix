@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, hardware-interface, controller-manager, pluginlib, joint-limits-interface, catkin, urdf, roscpp, transmission-interface, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, joint-limits-interface, controller-manager, hardware-interface, pluginlib, urdf, catkin, transmission-interface, gazebo-ros-control, roscpp, gazebo-ros }:
 buildRosPackage {
   pname = "ros-melodic-cob-gazebo-ros-control";
   version = "0.7.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros hardware-interface controller-manager pluginlib joint-limits-interface urdf roscpp transmission-interface gazebo-ros-control ];
-  propagatedBuildInputs = [ gazebo-ros hardware-interface controller-manager pluginlib joint-limits-interface urdf roscpp transmission-interface gazebo-ros-control ];
+  buildInputs = [ controller-manager urdf hardware-interface pluginlib joint-limits-interface transmission-interface gazebo-ros-control roscpp gazebo-ros ];
+  propagatedBuildInputs = [ controller-manager urdf hardware-interface pluginlib joint-limits-interface transmission-interface gazebo-ros-control roscpp gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

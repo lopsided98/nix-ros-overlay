@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, rocon-service-pair-msgs, message-runtime, rocon-std-msgs }:
+{ lib, buildRosPackage, fetchurl, message-runtime, catkin, rocon-std-msgs, rocon-service-pair-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-concert-service-msgs";
   version = "0.9.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation rocon-service-pair-msgs rocon-std-msgs ];
-  propagatedBuildInputs = [ rocon-service-pair-msgs message-runtime rocon-std-msgs ];
+  buildInputs = [ rocon-std-msgs rocon-service-pair-msgs message-generation ];
+  propagatedBuildInputs = [ rocon-std-msgs rocon-service-pair-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

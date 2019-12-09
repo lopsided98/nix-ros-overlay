@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cartographer-ros, catkin, roscpp, cartographer-ros-msgs, rviz, qt5, message-runtime, cartographer, eigen-conversions, roslib }:
+{ lib, buildRosPackage, fetchurl, cartographer-ros, eigen-conversions, cartographer, catkin, roslib, roscpp, rviz, qt5, cartographer-ros-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-cartographer-rviz";
   version = "1.0.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cartographer-ros qt5.qtbase cartographer-ros-msgs roslib rviz message-runtime cartographer eigen-conversions roscpp ];
-  propagatedBuildInputs = [ cartographer-ros qt5.qtbase cartographer-ros-msgs roslib rviz message-runtime cartographer eigen-conversions roscpp ];
+  buildInputs = [ cartographer-ros eigen-conversions cartographer roslib qt5.qtbase rviz roscpp cartographer-ros-msgs message-runtime ];
+  propagatedBuildInputs = [ cartographer-ros eigen-conversions cartographer roslib qt5.qtbase rviz roscpp cartographer-ros-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

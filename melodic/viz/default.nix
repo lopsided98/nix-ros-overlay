@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-base, catkin, rqt-robot-plugins, rviz, rqt-common-plugins }:
+{ lib, buildRosPackage, fetchurl, rqt-common-plugins, catkin, rviz, rqt-robot-plugins, ros-base }:
 buildRosPackage {
   pname = "ros-melodic-viz";
   version = "1.4.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rviz ros-base rqt-common-plugins rqt-robot-plugins ];
+  propagatedBuildInputs = [ rqt-robot-plugins rviz rqt-common-plugins ros-base ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

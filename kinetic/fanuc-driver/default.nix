@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslaunch, catkin, industrial-robot-client }:
+{ lib, buildRosPackage, fetchurl, industrial-robot-client, roslaunch, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-fanuc-driver";
   version = "0.5.0-r1";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, std-msgs, std-srvs, catkin, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-swri-rospy";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_rospy/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "93858081728704d2de8048913bb9fd8bab80acfbd099779a00bce583749a5000";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_rospy/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "327c29f08169034573724fdbb65b409f41700df6ba8eca39610b518364b7539f";
   };
 
   buildType = "catkin";

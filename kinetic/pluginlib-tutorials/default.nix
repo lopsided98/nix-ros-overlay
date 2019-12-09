@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pluginlib, roscpp }:
+{ lib, buildRosPackage, fetchurl, pluginlib, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-pluginlib-tutorials";
   version = "0.1.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp pluginlib ];
-  propagatedBuildInputs = [ roscpp pluginlib ];
+  buildInputs = [ pluginlib roscpp ];
+  propagatedBuildInputs = [ pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

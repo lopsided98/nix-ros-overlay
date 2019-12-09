@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, marker-msgs, tf, rosbag, catkin, sensor-msgs, nav-msgs, mrpt-msgs, mrpt1, dynamic-reconfigure, std-msgs, mrpt-bridge, roscpp }:
+{ lib, buildRosPackage, fetchurl, mrpt1, sensor-msgs, mrpt-msgs, dynamic-reconfigure, std-msgs, tf, catkin, marker-msgs, mrpt-bridge, roscpp, rosbag, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt-rawlog";
   version = "0.1.26-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ marker-msgs tf rosbag sensor-msgs nav-msgs mrpt-msgs mrpt1 dynamic-reconfigure std-msgs mrpt-bridge roscpp ];
-  propagatedBuildInputs = [ marker-msgs tf rosbag sensor-msgs nav-msgs mrpt1 mrpt-msgs dynamic-reconfigure std-msgs mrpt-bridge roscpp ];
+  buildInputs = [ mrpt1 sensor-msgs dynamic-reconfigure mrpt-msgs std-msgs tf marker-msgs mrpt-bridge roscpp rosbag nav-msgs ];
+  propagatedBuildInputs = [ mrpt1 sensor-msgs dynamic-reconfigure mrpt-msgs std-msgs tf marker-msgs mrpt-bridge roscpp rosbag nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

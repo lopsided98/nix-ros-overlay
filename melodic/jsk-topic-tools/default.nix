@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamic-tf-publisher, diagnostic-msgs, tf, geometry-msgs, roslint, image-transport, pythonPackages, sound-play, message-generation, message-runtime, eigen-conversions, roslaunch, rostime, std-srvs, catkin, std-msgs, roscpp, nodelet, rosnode, roscpp-tutorials, sensor-msgs, diagnostic-updater, rostest, rostopic, dynamic-reconfigure, topic-tools }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, eigen-conversions, tf, image-transport, nodelet, rostest, sensor-msgs, diagnostic-msgs, dynamic-reconfigure, rostopic, roscpp-tutorials, sound-play, std-msgs, dynamic-tf-publisher, std-srvs, pythonPackages, catkin, roscpp, topic-tools, message-generation, roslaunch, rosnode, roslint, rostime, diagnostic-updater, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-jsk-topic-tools";
   version = "2.2.10";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-tf-publisher diagnostic-msgs tf geometry-msgs image-transport message-generation eigen-conversions rostime roslaunch std-srvs std-msgs roscpp nodelet rosnode diagnostic-updater rostest rostopic dynamic-reconfigure topic-tools ];
+  buildInputs = [ geometry-msgs eigen-conversions tf image-transport nodelet rostest diagnostic-msgs dynamic-reconfigure rostopic std-msgs dynamic-tf-publisher std-srvs roscpp topic-tools message-generation roslaunch rosnode rostime diagnostic-updater ];
   checkInputs = [ roscpp-tutorials roslint ];
-  propagatedBuildInputs = [ pythonPackages.scipy dynamic-tf-publisher diagnostic-msgs tf geometry-msgs image-transport sound-play message-runtime roslaunch rostime eigen-conversions std-srvs pythonPackages.numpy pythonPackages.opencv3 std-msgs roscpp nodelet rosnode sensor-msgs diagnostic-updater rostopic dynamic-reconfigure topic-tools ];
+  propagatedBuildInputs = [ geometry-msgs eigen-conversions tf image-transport nodelet sensor-msgs diagnostic-msgs dynamic-reconfigure rostopic sound-play pythonPackages.numpy pythonPackages.opencv3 std-msgs dynamic-tf-publisher std-srvs roscpp topic-tools roslaunch pythonPackages.scipy rosnode rostime diagnostic-updater message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

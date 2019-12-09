@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gtest, cmake, boost, catkin }:
+{ lib, buildRosPackage, fetchurl, gtest, boost, catkin, cmake }:
 buildRosPackage {
   pname = "ros-kinetic-libcreate";
   version = "1.6.1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "cmake";
   buildInputs = [ boost ];
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ catkin boost ];
+  propagatedBuildInputs = [ boost catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

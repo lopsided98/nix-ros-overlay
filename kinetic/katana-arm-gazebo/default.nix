@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, katana-gazebo-plugins, catkin, katana-description, joint-trajectory-controller, urdf, controller-manager-msgs, robot-state-publisher, actionlib, std-msgs, roscpp, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, controller-manager, urdf, robot-state-publisher, std-msgs, controller-manager-msgs, katana-gazebo-plugins, actionlib, catkin, gazebo-ros, katana-description, roscpp, joint-trajectory-controller }:
 buildRosPackage {
   pname = "ros-kinetic-katana-arm-gazebo";
   version = "1.1.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros controller-manager katana-gazebo-plugins katana-description joint-trajectory-controller controller-manager-msgs urdf robot-state-publisher actionlib std-msgs roscpp xacro ];
-  propagatedBuildInputs = [ gazebo-ros controller-manager katana-gazebo-plugins katana-description joint-trajectory-controller controller-manager-msgs urdf robot-state-publisher actionlib std-msgs roscpp xacro ];
+  buildInputs = [ xacro controller-manager urdf robot-state-publisher controller-manager-msgs std-msgs actionlib katana-gazebo-plugins gazebo-ros katana-description roscpp joint-trajectory-controller ];
+  propagatedBuildInputs = [ xacro controller-manager urdf robot-state-publisher controller-manager-msgs std-msgs gazebo-ros actionlib katana-gazebo-plugins katana-description roscpp joint-trajectory-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

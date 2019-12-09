@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, rosservice, roscpp, rostest, message-generation, message-runtime, roscpp-serialization, rospy, std-msgs, roslib }:
+{ lib, buildRosPackage, fetchurl, message-generation, boost, roscpp-serialization, std-msgs, catkin, roslib, rospy, roscpp, message-runtime, rosservice, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-dynamic-reconfigure";
   version = "1.5.50";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost rostest message-generation roscpp-serialization std-msgs roscpp ];
-  propagatedBuildInputs = [ boost rosservice roslib message-runtime rospy std-msgs roscpp ];
+  buildInputs = [ boost roscpp-serialization std-msgs roscpp message-generation rostest ];
+  propagatedBuildInputs = [ boost std-msgs roslib rospy roscpp message-runtime rosservice ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

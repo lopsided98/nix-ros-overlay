@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-dashing-ament-cmake-include-directories";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_include_directories/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "12e713b830d4b1c494f4eda2774528c6970a33d83dd6f4e0df36dee2d1fed29e";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_include_directories/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "0778af87455a25e073d93635146e3d45db28bf44771432cd3abe5e17e83892e1";
   };
 
   buildType = "ament_cmake";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, unique-id, py-trees-msgs, rqt-gui, pythonPackages, rqt-graph, rqt-bag, catkin, qt-dotgraph, rospy, geometry-msgs, py-trees }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, geometry-msgs, unique-id, catkin, pythonPackages, py-trees, py-trees-msgs, rqt-gui-py, rqt-graph, qt-dotgraph, rospy, rqt-bag }:
 buildRosPackage {
   pname = "ros-melodic-rqt-py-trees";
   version = "0.3.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ py-trees-msgs rqt-bag py-trees ];
+  buildInputs = [ py-trees py-trees-msgs rqt-bag ];
   checkInputs = [ pythonPackages.mock ];
-  propagatedBuildInputs = [ rqt-gui-py unique-id pythonPackages.termcolor pythonPackages.rospkg rqt-gui rqt-graph py-trees-msgs rqt-bag pythonPackages.pygraphviz qt-dotgraph rospy geometry-msgs py-trees ];
+  propagatedBuildInputs = [ pythonPackages.termcolor rqt-gui geometry-msgs unique-id pythonPackages.rospkg py-trees-msgs py-trees rqt-gui-py rqt-graph qt-dotgraph pythonPackages.pygraphviz rospy rqt-bag ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

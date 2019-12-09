@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, rosconsole, catkin, rostime, roslib, message-generation, qt5, message-runtime, roscpp-serialization, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, roscpp-serialization, geometry-msgs, std-msgs, std-srvs, catkin, roslib, roscpp, rostime, qt5, message-runtime, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-turtlesim";
   version = "0.7.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs rosconsole rostime qt5.qtbase roscpp message-generation roscpp-serialization std-msgs roslib geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs rosconsole rostime qt5.qtbase roslib message-runtime roscpp-serialization std-msgs roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs roscpp-serialization std-msgs std-srvs roslib qt5.qtbase rostime roscpp message-generation rosconsole ];
+  propagatedBuildInputs = [ geometry-msgs roscpp-serialization std-msgs std-srvs roslib qt5.qtbase rostime roscpp message-runtime rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

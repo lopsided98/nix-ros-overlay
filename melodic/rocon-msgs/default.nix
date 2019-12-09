@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, concert-msgs, rocon-std-msgs, catkin, gateway-msgs, rocon-app-manager-msgs, rocon-interaction-msgs, rocon-service-pair-msgs, rocon-tutorial-msgs, scheduler-msgs, rocon-device-msgs, concert-service-msgs }:
+{ lib, buildRosPackage, fetchurl, concert-service-msgs, rocon-interaction-msgs, catkin, rocon-device-msgs, rocon-app-manager-msgs, rocon-std-msgs, concert-msgs, scheduler-msgs, rocon-tutorial-msgs, gateway-msgs, rocon-service-pair-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rocon-msgs";
   version = "0.9.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ concert-msgs gateway-msgs rocon-app-manager-msgs rocon-interaction-msgs rocon-service-pair-msgs rocon-tutorial-msgs scheduler-msgs rocon-device-msgs concert-service-msgs rocon-std-msgs ];
+  propagatedBuildInputs = [ concert-service-msgs rocon-interaction-msgs gateway-msgs rocon-device-msgs rocon-app-manager-msgs concert-msgs scheduler-msgs rocon-tutorial-msgs rocon-std-msgs rocon-service-pair-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

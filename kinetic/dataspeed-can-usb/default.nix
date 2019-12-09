@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, lusb, can-msgs, catkin, roslib, nodelet, std-msgs, roslaunch, roscpp }:
+{ lib, buildRosPackage, fetchurl, std-msgs, catkin, roslib, nodelet, roscpp, can-msgs, lusb, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-can-usb";
   version = "1.0.12";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ lusb can-msgs roscpp nodelet std-msgs roslib ];
+  buildInputs = [ std-msgs roslib nodelet roscpp can-msgs lusb ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ lusb can-msgs nodelet std-msgs roslaunch roscpp ];
+  propagatedBuildInputs = [ std-msgs nodelet roscpp can-msgs lusb roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

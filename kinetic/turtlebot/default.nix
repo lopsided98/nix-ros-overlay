@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot-bringup, turtlebot-capabilities, catkin, turtlebot-teleop, turtlebot-description }:
+{ lib, buildRosPackage, fetchurl, turtlebot-teleop, catkin, turtlebot-description, turtlebot-capabilities, turtlebot-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot";
   version = "2.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ turtlebot-description turtlebot-capabilities turtlebot-teleop turtlebot-bringup ];
+  propagatedBuildInputs = [ turtlebot-description turtlebot-teleop turtlebot-bringup turtlebot-capabilities ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

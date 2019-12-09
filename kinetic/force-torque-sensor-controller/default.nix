@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, pluginlib, realtime-tools, catkin, controller-interface, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, controller-interface, hardware-interface, pluginlib, catkin, realtime-tools, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-force-torque-sensor-controller";
   version = "0.13.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface pluginlib realtime-tools controller-interface roscpp geometry-msgs ];
-  propagatedBuildInputs = [ hardware-interface pluginlib realtime-tools controller-interface roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs controller-interface hardware-interface pluginlib realtime-tools roscpp ];
+  propagatedBuildInputs = [ geometry-msgs controller-interface hardware-interface pluginlib realtime-tools roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

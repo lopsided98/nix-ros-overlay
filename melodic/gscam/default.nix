@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, image-transport, sensor-msgs, camera-info-manager, cv-bridge, gst_all_1, catkin, nodelet, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, camera-info-manager, catkin, image-transport, gst_all_1, cv-bridge, nodelet, roscpp, camera-calibration-parsers }:
 buildRosPackage {
   pname = "ros-melodic-gscam";
   version = "1.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ camera-calibration-parsers image-transport sensor-msgs camera-info-manager cv-bridge gst_all_1.gstreamer roscpp gst_all_1.gst-plugins-base nodelet ];
-  propagatedBuildInputs = [ camera-calibration-parsers image-transport sensor-msgs camera-info-manager cv-bridge nodelet roscpp ];
+  buildInputs = [ sensor-msgs camera-info-manager gst_all_1.gstreamer image-transport cv-bridge nodelet roscpp gst_all_1.gst-plugins-base camera-calibration-parsers ];
+  propagatedBuildInputs = [ sensor-msgs camera-info-manager image-transport cv-bridge nodelet roscpp camera-calibration-parsers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

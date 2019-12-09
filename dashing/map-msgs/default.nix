@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, sensor-msgs, rosidl-default-generators, nav-msgs, std-msgs, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, rosidl-default-runtime, std-msgs, ament-lint-common, ament-cmake, rosidl-default-generators, nav-msgs }:
 buildRosPackage {
   pname = "ros-dashing-map-msgs";
   version = "2.0.2-r1";

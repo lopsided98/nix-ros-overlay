@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, stereo-image-proc, roslint, ueye-cam, ar-track-alvar, hironx-ros-bridge, catkin, rostest, nextage-description }:
+{ lib, buildRosPackage, fetchurl, ueye-cam, stereo-image-proc, ar-track-alvar, catkin, roslint, hironx-ros-bridge, nextage-description, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-nextage-ros-bridge";
   version = "0.8.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ nextage-description hironx-ros-bridge roslint ];
+  buildInputs = [ hironx-ros-bridge nextage-description roslint ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ stereo-image-proc ueye-cam ar-track-alvar hironx-ros-bridge nextage-description ];
+  propagatedBuildInputs = [ ueye-cam stereo-image-proc ar-track-alvar hironx-ros-bridge nextage-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

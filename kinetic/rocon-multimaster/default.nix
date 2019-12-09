@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-unreliable-experiments, rocon-gateway-utils, catkin, rocon-hub, rocon-test, rocon-gateway-tests, rocon-gateway, rocon-hub-client }:
+{ lib, buildRosPackage, fetchurl, catkin, rocon-hub-client, rocon-gateway, rocon-gateway-utils, rocon-hub, rocon-test, rocon-gateway-tests, rocon-unreliable-experiments }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-multimaster";
   version = "0.8.1-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rocon-unreliable-experiments rocon-gateway-utils rocon-hub rocon-test rocon-gateway-tests rocon-gateway rocon-hub-client ];
+  propagatedBuildInputs = [ rocon-hub-client rocon-gateway rocon-gateway-utils rocon-hub rocon-test rocon-gateway-tests rocon-unreliable-experiments ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, bondcpp, bondpy, catkin, rostest, xmlrpcpp, rospy, diagnostic-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, bondcpp, diagnostic-msgs, bondpy, xmlrpcpp, pluginlib, catkin, roscpp, rospy, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-diagnostic-aggregator";
   version = "1.9.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib bondcpp bondpy rostest xmlrpcpp rospy diagnostic-msgs roscpp ];
-  propagatedBuildInputs = [ pluginlib bondcpp bondpy xmlrpcpp rospy diagnostic-msgs roscpp ];
+  buildInputs = [ bondcpp rostest diagnostic-msgs pluginlib roscpp bondpy rospy xmlrpcpp ];
+  propagatedBuildInputs = [ bondcpp diagnostic-msgs pluginlib roscpp bondpy rospy xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

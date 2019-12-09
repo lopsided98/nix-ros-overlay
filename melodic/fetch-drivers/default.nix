@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, actionlib-msgs, fetch-driver-msgs, robot-controllers-interface, actionlib, diagnostic-msgs, robot-calibration-msgs, boost, rostime, rospack, mk, power-msgs, catkin, nav-msgs, urdf, robot-controllers, roscpp-serialization, roscpp, python, libyamlcpp, sensor-msgs, urdfdom, curl, fetch-auto-dock-msgs }:
+{ lib, buildRosPackage, fetchurl, urdf, python, actionlib-msgs, curl, nav-msgs, sensor-msgs, roscpp-serialization, diagnostic-msgs, fetch-auto-dock-msgs, robot-controllers-interface, robot-calibration-msgs, libyamlcpp, rosconsole, fetch-driver-msgs, catkin, roscpp, mk, boost, urdfdom, actionlib, rostime, power-msgs, robot-controllers, rospack }:
 buildRosPackage {
   pname = "ros-melodic-fetch-drivers";
   version = "0.8.8-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole actionlib-msgs fetch-driver-msgs robot-controllers-interface actionlib diagnostic-msgs robot-calibration-msgs boost rostime rospack mk power-msgs nav-msgs urdf robot-controllers roscpp-serialization roscpp python libyamlcpp sensor-msgs urdfdom curl fetch-auto-dock-msgs ];
-  propagatedBuildInputs = [ rosconsole actionlib-msgs fetch-driver-msgs robot-controllers-interface actionlib diagnostic-msgs robot-calibration-msgs boost rostime power-msgs nav-msgs urdf robot-controllers roscpp-serialization roscpp python libyamlcpp sensor-msgs urdfdom curl fetch-auto-dock-msgs ];
+  buildInputs = [ urdf python actionlib-msgs nav-msgs curl sensor-msgs roscpp-serialization diagnostic-msgs fetch-auto-dock-msgs robot-controllers-interface robot-calibration-msgs libyamlcpp rosconsole fetch-driver-msgs roscpp mk boost urdfdom actionlib rostime power-msgs robot-controllers rospack ];
+  propagatedBuildInputs = [ urdf python actionlib-msgs nav-msgs curl sensor-msgs roscpp-serialization diagnostic-msgs fetch-auto-dock-msgs robot-controllers-interface robot-calibration-msgs libyamlcpp rosconsole fetch-driver-msgs roscpp boost urdfdom actionlib rostime power-msgs robot-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

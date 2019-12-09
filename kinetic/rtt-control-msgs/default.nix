@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rtt-std-msgs, control-msgs, rtt-geometry-msgs, catkin, rtt-actionlib-msgs, rtt-trajectory-msgs, rtt-roscomm }:
+{ lib, buildRosPackage, fetchurl, rtt-actionlib-msgs, catkin, rtt-trajectory-msgs, rtt-geometry-msgs, rtt-roscomm, rtt-std-msgs, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-control-msgs";
   version = "0.1.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rtt-std-msgs control-msgs rtt-geometry-msgs rtt-actionlib-msgs rtt-trajectory-msgs rtt-roscomm ];
-  propagatedBuildInputs = [ rtt-std-msgs control-msgs rtt-geometry-msgs rtt-actionlib-msgs rtt-trajectory-msgs rtt-roscomm ];
+  buildInputs = [ rtt-actionlib-msgs rtt-trajectory-msgs rtt-geometry-msgs rtt-roscomm rtt-std-msgs control-msgs ];
+  propagatedBuildInputs = [ rtt-actionlib-msgs rtt-trajectory-msgs rtt-geometry-msgs rtt-roscomm rtt-std-msgs control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

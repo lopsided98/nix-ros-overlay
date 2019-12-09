@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, localization-common, ament-lint-common, ament-cmake-gtest, tf2, rclcpp, ament-lint-auto, autoware-auto-cmake, osrf-testing-tools-cpp }:
+{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake, autoware-auto-cmake, ament-cmake-gtest, osrf-testing-tools-cpp, tf2, localization-common, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-localization-nodes";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tf2 rclcpp localization-common ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest osrf-testing-tools-cpp ament-lint-common ];
-  propagatedBuildInputs = [ tf2 localization-common rclcpp ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  buildInputs = [ localization-common rclcpp tf2 ];
+  checkInputs = [ ament-lint-auto osrf-testing-tools-cpp ament-cmake-gtest ament-lint-common ];
+  propagatedBuildInputs = [ localization-common rclcpp tf2 ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''Implementation of various localization nodes'';

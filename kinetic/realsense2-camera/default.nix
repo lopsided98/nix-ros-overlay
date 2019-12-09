@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ddynamic-reconfigure, image-transport, sensor-msgs, cv-bridge, catkin, roscpp, diagnostic-updater, nav-msgs, message-runtime, nodelet, std-msgs, genmsg, tf, librealsense2 }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, std-msgs, genmsg, tf, catkin, image-transport, cv-bridge, nodelet, roscpp, librealsense2, message-runtime, nav-msgs, ddynamic-reconfigure, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-realsense2-camera";
   version = "2.2.6-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-transport sensor-msgs cv-bridge genmsg roscpp diagnostic-updater nav-msgs message-runtime nodelet std-msgs ddynamic-reconfigure tf librealsense2 ];
-  propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge genmsg roscpp diagnostic-updater nav-msgs message-runtime nodelet std-msgs ddynamic-reconfigure tf librealsense2 ];
+  buildInputs = [ sensor-msgs genmsg std-msgs tf image-transport cv-bridge nodelet roscpp librealsense2 message-runtime nav-msgs ddynamic-reconfigure diagnostic-updater ];
+  propagatedBuildInputs = [ sensor-msgs std-msgs genmsg tf roscpp image-transport cv-bridge librealsense2 nodelet message-runtime nav-msgs ddynamic-reconfigure diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

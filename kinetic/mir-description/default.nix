@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-controller, diff-drive-controller, catkin, position-controllers, rviz, urdf, robot-state-publisher, roslaunch, joint-state-publisher, xacro, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, urdf, robot-state-publisher, position-controllers, catkin, rviz, diff-drive-controller, gazebo-ros-control, roslaunch, joint-state-controller }:
 buildRosPackage {
   pname = "ros-kinetic-mir-description";
   version = "1.0.4-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joint-state-controller diff-drive-controller position-controllers rviz urdf robot-state-publisher joint-state-publisher xacro gazebo-ros-control ];
+  propagatedBuildInputs = [ joint-state-publisher xacro urdf robot-state-publisher position-controllers rviz diff-drive-controller gazebo-ros-control joint-state-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

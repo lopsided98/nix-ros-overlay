@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, autoconf, git, catkin, rsync, libtool, zlib }:
+{ lib, buildRosPackage, fetchurl, git, libtool, catkin, rsync, autoconf, zlib }:
 buildRosPackage {
   pname = "ros-melodic-grpc";
   version = "0.0.10";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ autoconf git rsync libtool zlib ];
+  buildInputs = [ git libtool rsync autoconf zlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

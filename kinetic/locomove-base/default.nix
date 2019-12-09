@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav-core-adapter, roslint, nav-core, catkin, move-base-msgs, nav-2d-utils, locomotor }:
+{ lib, buildRosPackage, fetchurl, catkin, roslint, locomotor, nav-core, nav-core-adapter, nav-2d-utils, move-base-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-locomove-base";
   version = "0.2.5";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ nav-core-adapter nav-core move-base-msgs nav-2d-utils locomotor ];
+  buildInputs = [ locomotor nav-core nav-core-adapter nav-2d-utils move-base-msgs ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ nav-core-adapter nav-core move-base-msgs nav-2d-utils locomotor ];
+  propagatedBuildInputs = [ locomotor nav-core nav-core-adapter nav-2d-utils move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

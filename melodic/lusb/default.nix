@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libusb1, catkin, boost, libusb }:
+{ lib, buildRosPackage, fetchurl, libusb1, boost, libusb, catkin }:
 buildRosPackage {
   pname = "ros-melodic-lusb";
   version = "1.1.0";

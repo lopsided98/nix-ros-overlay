@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, ament-lint-common, udp-driver, velodyne-driver, sensor-msgs, ament-lint-auto, autoware-auto-cmake, lidar-utils }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, velodyne-driver, rclcpp-lifecycle, udp-driver, lidar-utils, ament-lint-common, ament-cmake, autoware-auto-cmake, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-velodyne-node";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-lifecycle udp-driver velodyne-driver sensor-msgs lidar-utils ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ rclcpp-lifecycle udp-driver velodyne-driver sensor-msgs lidar-utils ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  buildInputs = [ velodyne-driver rclcpp-lifecycle sensor-msgs udp-driver lidar-utils ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs rclcpp-lifecycle velodyne-driver udp-driver lidar-utils ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''(Mostly) static memory implementation of a velodyne driver in one process'';

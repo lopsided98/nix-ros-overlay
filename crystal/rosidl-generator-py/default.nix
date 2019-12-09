@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, rosidl-typesupport-c, ament-cmake, rmw-implementation-cmake, ament-lint-common, rosidl-typesupport-interface, pythonPackages, python-cmake-module, rmw-implementation, rosidl-cmake, rosidl-parser, ament-index-python, ament-lint-auto, rmw, rosidl-generator-c }:
+{ lib, buildRosPackage, fetchurl, rmw-implementation, rosidl-cmake, rosidl-typesupport-interface, rosidl-typesupport-c, rmw-implementation-cmake, pythonPackages, ament-lint-common, ament-cmake, ament-lint-auto, python-cmake-module, rmw, ament-cmake-pytest, rosidl-generator-c, ament-index-python, rosidl-parser }:
 buildRosPackage {
   pname = "ros-crystal-rosidl-generator-py";
   version = "0.6.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-pytest rosidl-typesupport-c pythonPackages.pytest rmw-implementation-cmake ament-lint-common python-cmake-module rmw-implementation rosidl-cmake rosidl-parser ament-index-python ament-lint-auto rmw rosidl-generator-c ];
-  propagatedBuildInputs = [ rosidl-typesupport-c ament-cmake rmw-implementation-cmake rosidl-typesupport-interface python-cmake-module rmw-implementation rosidl-cmake rosidl-parser ament-index-python rmw rosidl-generator-c ];
+  checkInputs = [ rosidl-cmake rosidl-generator-c rosidl-typesupport-c rmw-implementation-cmake ament-lint-common python-cmake-module rosidl-parser ament-cmake-pytest rmw rmw-implementation pythonPackages.pytest ament-index-python ament-lint-auto ];
+  propagatedBuildInputs = [ rosidl-cmake rosidl-typesupport-interface rosidl-generator-c rosidl-typesupport-c rmw-implementation-cmake ament-cmake python-cmake-module rmw rmw-implementation ament-index-python rosidl-parser ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

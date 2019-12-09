@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, actionlib, message-runtime, rospy, diagnostic-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, actionlib, catkin, actionlib-msgs, rospy, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-network-monitor-udp";
   version = "1.0.15";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs rospy message-generation actionlib diagnostic-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs actionlib message-runtime rospy diagnostic-msgs ];
+  buildInputs = [ diagnostic-msgs actionlib actionlib-msgs rospy message-generation ];
+  propagatedBuildInputs = [ diagnostic-msgs actionlib actionlib-msgs rospy message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

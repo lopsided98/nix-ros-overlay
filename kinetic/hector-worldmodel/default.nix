@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-worldmodel-msgs, catkin, hector-object-tracker, hector-worldmodel-geotiff-plugins }:
+{ lib, buildRosPackage, fetchurl, hector-worldmodel-msgs, catkin, hector-worldmodel-geotiff-plugins, hector-object-tracker }:
 buildRosPackage {
   pname = "ros-kinetic-hector-worldmodel";
   version = "0.3.4";

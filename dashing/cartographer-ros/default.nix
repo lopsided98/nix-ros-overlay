@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-msgs, ament-cmake, lua5, libyamlcpp, pcl, sensor-msgs, tf2-ros, cartographer-ros-msgs, tf2, nav-msgs, urdfdom-headers, rclcpp, tf2-eigen, eigen, cartographer, visualization-msgs, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, urdfdom-headers, lua5, cartographer, tf2, ament-cmake, pcl, tf2-eigen, libyamlcpp, eigen, pcl-conversions, visualization-msgs, tf2-msgs, cartographer-ros-msgs, rclcpp, nav-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-cartographer-ros";
   version = "1.0.9000-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tf2-msgs lua5 libyamlcpp pcl sensor-msgs tf2-ros cartographer-ros-msgs tf2 nav-msgs urdfdom-headers rclcpp tf2-eigen eigen cartographer visualization-msgs pcl-conversions ];
-  propagatedBuildInputs = [ tf2-msgs lua5 libyamlcpp pcl sensor-msgs tf2-ros cartographer-ros-msgs tf2 nav-msgs rclcpp cartographer visualization-msgs ];
+  buildInputs = [ sensor-msgs urdfdom-headers cartographer lua5 pcl tf2-eigen libyamlcpp eigen tf2-msgs pcl-conversions visualization-msgs tf2 cartographer-ros-msgs rclcpp nav-msgs tf2-ros ];
+  propagatedBuildInputs = [ sensor-msgs cartographer lua5 tf2 pcl libyamlcpp visualization-msgs tf2-msgs cartographer-ros-msgs rclcpp nav-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

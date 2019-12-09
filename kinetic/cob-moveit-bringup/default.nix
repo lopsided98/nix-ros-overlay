@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-moveit-config, moveit-ros-move-group, moveit-ros-visualization, cob-hardware-config, catkin, moveit-planners-ompl, robot-state-publisher, moveit-ros-perception, tf, joint-state-publisher, moveit-plugins, moveit-setup-assistant }:
+{ lib, buildRosPackage, fetchurl, moveit-planners-ompl, cob-hardware-config, joint-state-publisher, robot-state-publisher, moveit-setup-assistant, moveit-ros-move-group, tf, catkin, moveit-ros-perception, moveit-ros-visualization, cob-moveit-config, moveit-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-cob-moveit-bringup";
   version = "0.7.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ moveit-ros-move-group cob-moveit-config moveit-ros-visualization cob-hardware-config moveit-setup-assistant robot-state-publisher moveit-ros-perception tf joint-state-publisher moveit-plugins moveit-planners-ompl ];
+  propagatedBuildInputs = [ moveit-planners-ompl cob-hardware-config joint-state-publisher robot-state-publisher moveit-setup-assistant moveit-ros-move-group tf moveit-ros-perception moveit-ros-visualization cob-moveit-config moveit-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

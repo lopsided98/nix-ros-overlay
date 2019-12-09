@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ethercat-trigger-controllers, pr2-bringup, pr2-mannequin-mode, catkin, camera-calibration, pr2-controller-manager, image-view }:
+{ lib, buildRosPackage, fetchurl, ethercat-trigger-controllers, pr2-bringup, camera-calibration, catkin, image-view, pr2-mannequin-mode, pr2-controller-manager }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-bringup-tests";
   version = "1.0.15-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ethercat-trigger-controllers pr2-bringup pr2-mannequin-mode camera-calibration pr2-controller-manager image-view ];
-  propagatedBuildInputs = [ ethercat-trigger-controllers pr2-bringup pr2-mannequin-mode camera-calibration pr2-controller-manager image-view ];
+  buildInputs = [ ethercat-trigger-controllers pr2-bringup camera-calibration image-view pr2-mannequin-mode pr2-controller-manager ];
+  propagatedBuildInputs = [ ethercat-trigger-controllers pr2-bringup camera-calibration image-view pr2-mannequin-mode pr2-controller-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

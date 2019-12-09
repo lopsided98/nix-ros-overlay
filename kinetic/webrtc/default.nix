@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pulseaudio, gtk3, gtk2, git, wget, alsaLib, cmake, glib }:
+{ lib, buildRosPackage, fetchurl, git, glib, wget, alsaLib, cmake, pulseaudio, gtk2, gtk3 }:
 buildRosPackage {
   pname = "ros-kinetic-webrtc";
   version = "59.0.3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ pulseaudio gtk3 gtk2 alsaLib glib ];
-  propagatedBuildInputs = [ pulseaudio gtk3 gtk2 alsaLib glib ];
-  nativeBuildInputs = [ git cmake wget ];
+  buildInputs = [ glib alsaLib pulseaudio gtk2 gtk3 ];
+  propagatedBuildInputs = [ glib alsaLib pulseaudio gtk2 gtk3 ];
+  nativeBuildInputs = [ git wget cmake ];
 
   meta = {
     description = ''WebRTC Native API'';

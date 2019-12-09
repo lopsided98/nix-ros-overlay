@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosservice, rospy }:
+{ lib, buildRosPackage, fetchurl, rospy, rosservice, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-service-tools";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/service_tools/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "cd11311af0d299e445c6ba8a27bcd42d830532ad4a2be9bcb6d27fb71dc4c60a";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/service_tools/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "a878c92f7ac4d67adae6b9a411dce65058fb45a969420a260fdf8f6061dfe221";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosservice rospy ];
+  propagatedBuildInputs = [ rospy rosservice ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

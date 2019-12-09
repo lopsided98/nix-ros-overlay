@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, phidgets-api, catkin, phidgets-imu, phidgets-high-speed-encoder, libphidget21 }:
+{ lib, buildRosPackage, fetchurl, phidgets-imu, catkin, libphidget21, phidgets-high-speed-encoder, phidgets-api }:
 buildRosPackage {
   pname = "ros-kinetic-phidgets-drivers";
   version = "0.7.9-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ phidgets-imu phidgets-api libphidget21 phidgets-high-speed-encoder ];
+  propagatedBuildInputs = [ phidgets-api phidgets-imu libphidget21 phidgets-high-speed-encoder ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, exotica-python, exotica-core, catkin, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, exotica-core, exotica-python }:
 buildRosPackage {
   pname = "ros-melodic-exotica-core-task-maps";
   version = "5.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ exotica-python exotica-core geometry-msgs ];
-  propagatedBuildInputs = [ exotica-python exotica-core geometry-msgs ];
+  buildInputs = [ exotica-python geometry-msgs exotica-core ];
+  propagatedBuildInputs = [ exotica-python geometry-msgs exotica-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, zlib, poco, pcre, cmake }:
+{ lib, buildRosPackage, fetchurl, poco, cmake, zlib, pcre }:
 buildRosPackage {
   pname = "ros-dashing-poco-vendor";
   version = "1.2.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ zlib poco pcre ];
-  propagatedBuildInputs = [ zlib poco pcre cmake ];
+  buildInputs = [ poco zlib pcre ];
+  propagatedBuildInputs = [ poco cmake zlib pcre ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

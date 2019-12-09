@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, rostest, rospy, rosunit }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, rosunit, rospy, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-camera-info-manager-py";
   version = "0.2.3";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ rostest sensor-msgs rospy ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pythonPackages.rospkg sensor-msgs pythonPackages.pyyaml rospy ];
+  propagatedBuildInputs = [ sensor-msgs rospy pythonPackages.pyyaml pythonPackages.rospkg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

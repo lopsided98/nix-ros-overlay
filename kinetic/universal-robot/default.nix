@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, universal-robots }:
 buildRosPackage {
   pname = "ros-kinetic-universal-robot";
-  version = "1.2.5";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/universal_robot/1.2.5-0.tar.gz";
-    name = "1.2.5-0.tar.gz";
-    sha256 = "1e36ffdabb1bf7c44d5448cecaa7e311f255d0fa4f251827f5a8f0262646b1cd";
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/universal_robot/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "f6b205055847e84bb8ca23f1f5fc0a199347f0d56d71f232dc234b08c6d99dbd";
   };
 
   buildType = "catkin";

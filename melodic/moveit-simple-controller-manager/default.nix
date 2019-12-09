@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, control-msgs, catkin, moveit-core, actionlib, roscpp }:
+{ lib, buildRosPackage, fetchurl, moveit-core, pluginlib, actionlib, catkin, roscpp, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-moveit-simple-controller-manager";
   version = "1.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib control-msgs moveit-core actionlib roscpp ];
-  propagatedBuildInputs = [ pluginlib control-msgs moveit-core actionlib roscpp ];
+  buildInputs = [ moveit-core pluginlib actionlib roscpp control-msgs ];
+  propagatedBuildInputs = [ moveit-core pluginlib actionlib roscpp control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

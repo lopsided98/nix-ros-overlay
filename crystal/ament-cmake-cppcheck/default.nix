@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, ament-cmake-lint-cmake, ament-cppcheck, ament-cmake-copyright }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, ament-cppcheck, ament-cmake-test, ament-cmake-core, ament-cmake-copyright }:
 buildRosPackage {
   pname = "ros-crystal-ament-cmake-cppcheck";
   version = "0.6.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
-  propagatedBuildInputs = [ ament-cmake-test ament-cppcheck ament-cmake-core ];
-  nativeBuildInputs = [ ament-cmake-test ament-cmake-core ];
+  checkInputs = [ ament-cmake-lint-cmake ament-cmake-copyright ];
+  propagatedBuildInputs = [ ament-cmake-core ament-cppcheck ament-cmake-test ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 
   meta = {
     description = ''The CMake API for ament_cppcheck to perform static code analysis on C/C++

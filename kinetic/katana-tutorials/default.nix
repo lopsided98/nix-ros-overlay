@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, trajectory-msgs, sensor-msgs, catkin, actionlib, roscpp }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, actionlib, catkin, roscpp, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-katana-tutorials";
   version = "1.1.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ control-msgs trajectory-msgs sensor-msgs actionlib roscpp ];
-  propagatedBuildInputs = [ control-msgs trajectory-msgs sensor-msgs actionlib roscpp ];
+  buildInputs = [ trajectory-msgs sensor-msgs actionlib roscpp control-msgs ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs actionlib roscpp control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

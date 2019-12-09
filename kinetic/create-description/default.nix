@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, catkin, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-create-description";
   version = "2.3.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ urdf xacro ];
+  propagatedBuildInputs = [ xacro urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

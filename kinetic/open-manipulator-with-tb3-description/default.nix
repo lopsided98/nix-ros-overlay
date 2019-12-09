@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, urdf, robot-state-publisher, joint-state-publisher, xacro }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, urdf, robot-state-publisher, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-open-manipulator-with-tb3-description";
   version = "1.1.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ urdf joint-state-publisher xacro robot-state-publisher ];
+  propagatedBuildInputs = [ robot-state-publisher joint-state-publisher xacro urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

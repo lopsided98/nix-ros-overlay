@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ op3-gazebo op3-description ];
+  propagatedBuildInputs = [ op3-description op3-gazebo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

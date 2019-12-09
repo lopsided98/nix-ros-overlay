@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag2, ament-lint-common, ament-cmake-gmock, test-msgs, shared-queues-vendor, rosbag2-test-common, rclcpp, ament-cmake-ros, ament-lint-auto, rmw }:
+{ lib, buildRosPackage, fetchurl, shared-queues-vendor, ament-cmake-ros, rclcpp, ament-lint-common, rosbag2, test-msgs, rmw, ament-cmake-gmock, rosbag2-test-common, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-rosbag2-transport";
   version = "0.0.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosbag2 rclcpp rmw shared-queues-vendor ];
-  checkInputs = [ ament-lint-common ament-cmake-gmock test-msgs rosbag2-test-common ament-lint-auto ];
-  propagatedBuildInputs = [ rosbag2 rclcpp rmw shared-queues-vendor ];
+  buildInputs = [ shared-queues-vendor rclcpp rmw rosbag2 ];
+  checkInputs = [ ament-lint-common test-msgs ament-cmake-gmock rosbag2-test-common ament-lint-auto ];
+  propagatedBuildInputs = [ shared-queues-vendor rclcpp rmw rosbag2 ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, twist-mux, tf, sensor-msgs, joy, catkin, nav-msgs, message-generation, rr-openrover-driver-msgs, message-runtime, rospy, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, joy, message-generation, sensor-msgs, geometry-msgs, std-msgs, tf, twist-mux, catkin, rr-openrover-driver-msgs, rospy, roscpp, message-runtime, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rr-openrover-driver";
   version = "0.7.3-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf sensor-msgs nav-msgs message-generation rr-openrover-driver-msgs rospy std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ twist-mux tf sensor-msgs joy nav-msgs rr-openrover-driver-msgs message-runtime rospy std-msgs roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs tf rr-openrover-driver-msgs rospy roscpp message-generation nav-msgs ];
+  propagatedBuildInputs = [ joy sensor-msgs geometry-msgs std-msgs twist-mux tf rr-openrover-driver-msgs rospy roscpp message-runtime nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

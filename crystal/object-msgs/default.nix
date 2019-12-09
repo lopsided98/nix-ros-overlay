@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, sensor-msgs, rosidl-default-generators, std-msgs, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, rosidl-default-runtime, std-msgs, ament-cmake, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-crystal-object-msgs";
   version = "0.3.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs sensor-msgs rosidl-default-generators ];
+  buildInputs = [ sensor-msgs std-msgs rosidl-default-generators ];
   propagatedBuildInputs = [ std-msgs sensor-msgs rosidl-default-runtime ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 

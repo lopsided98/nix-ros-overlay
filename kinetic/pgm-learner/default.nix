@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rostest, message-generation, message-runtime, rospy }:
+{ lib, buildRosPackage, fetchurl, message-runtime, pythonPackages, catkin, rospy, message-generation, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-pgm-learner";
-  version = "2.1.13-r1";
+  version = "2.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/pgm_learner/2.1.13-1.tar.gz";
-    name = "2.1.13-1.tar.gz";
-    sha256 = "fa006afdbb37f17640f481824458c49f7ce8613d024f079cfc530cf1ae44ecfb";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/pgm_learner/2.1.14-1.tar.gz";
+    name = "2.1.14-1.tar.gz";
+    sha256 = "4ea596fa5a756d9397f57e599eec3493595a623dfd06dc12cb59162a90cc8b95";
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.scipy message-generation rospy ];
+  buildInputs = [ message-generation rospy pythonPackages.scipy ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ pythonPackages.scipy message-runtime rospy ];
+  propagatedBuildInputs = [ rospy message-runtime pythonPackages.scipy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, rviz, robot-state-publisher, roslaunch, tf, joint-state-publisher, xacro }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, robot-state-publisher, tf, catkin, rviz, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-tra1-description";
   version = "1.0.10";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ xacro ];
-  checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ rviz robot-state-publisher tf joint-state-publisher xacro ];
+  checkInputs = [ roslaunch rostest ];
+  propagatedBuildInputs = [ joint-state-publisher xacro robot-state-publisher tf rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

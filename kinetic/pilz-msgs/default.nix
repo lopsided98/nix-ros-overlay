@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-msgs, message-generation, catkin, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-generation, message-runtime, catkin, moveit-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-msgs";
   version = "0.3.10-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-msgs message-generation ];
-  propagatedBuildInputs = [ moveit-msgs message-runtime ];
+  buildInputs = [ message-generation moveit-msgs ];
+  propagatedBuildInputs = [ message-runtime moveit-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

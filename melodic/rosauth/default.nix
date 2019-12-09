@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, message-generation, message-runtime, openssl, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-runtime, catkin, openssl, roscpp, message-generation, rostest }:
 buildRosPackage {
   pname = "ros-melodic-rosauth";
   version = "1.0.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ openssl message-generation roscpp ];
+  buildInputs = [ message-generation openssl roscpp ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ roscpp message-runtime ];
+  propagatedBuildInputs = [ message-runtime roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

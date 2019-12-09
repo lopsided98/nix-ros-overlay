@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav-msgs, catkin, tf, roscpp }:
+{ lib, buildRosPackage, fetchurl, tf, catkin, nav-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-odometry-publisher-tutorial";
   version = "0.2.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ nav-msgs tf roscpp ];
+  buildInputs = [ tf nav-msgs roscpp ];
   propagatedBuildInputs = [ tf nav-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, catkin, cv-bridge, rostest, message-generation, message-runtime, dynamic-reconfigure, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, dynamic-reconfigure, pluginlib, std-msgs, catkin, costmap-2d, cv-bridge, roscpp, message-runtime, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-costmap-converter";
-  version = "0.0.11-r1";
+  version = "0.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/kinetic/costmap_converter/0.0.11-1.tar.gz";
-    name = "0.0.11-1.tar.gz";
-    sha256 = "c2167b9e817fe4450c6f354b86441a5b9db400e5c05ee390d5536a6524d5d3f5";
+    url = "https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/kinetic/costmap_converter/0.0.12-1.tar.gz";
+    name = "0.0.12-1.tar.gz";
+    sha256 = "9ee88a53ae04da71aa2a158d55aa0066bb27a0c415678d8ff59bd02b3f1917df";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib cv-bridge message-generation dynamic-reconfigure std-msgs roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure pluginlib std-msgs costmap-2d cv-bridge roscpp message-generation ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ costmap-2d pluginlib cv-bridge message-runtime dynamic-reconfigure std-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure pluginlib std-msgs costmap-2d cv-bridge roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

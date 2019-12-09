@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, tf2-geometry-msgs, sensor-msgs, catkin, message-filters, tf2-ros, roscpp, tf2, dynamic-reconfigure, nodelet, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, dynamic-reconfigure, pluginlib, catkin, tf2, rosunit, tf2-geometry-msgs, nodelet, roscpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-imu-filter-madgwick";
   version = "1.1.7-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib tf2-geometry-msgs sensor-msgs message-filters roscpp tf2-ros tf2 dynamic-reconfigure nodelet geometry-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs dynamic-reconfigure pluginlib tf2 tf2-geometry-msgs nodelet roscpp tf2-ros ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pluginlib tf2-geometry-msgs sensor-msgs message-filters tf2-ros tf2 nodelet dynamic-reconfigure roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs dynamic-reconfigure pluginlib tf2 tf2-geometry-msgs nodelet roscpp tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

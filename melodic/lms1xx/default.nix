@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, rosconsole-bridge, roscpp-serialization, roslaunch, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, roscpp-serialization, catkin, rosunit, roslint, roscpp, roslaunch, rosconsole-bridge }:
 buildRosPackage {
   pname = "ros-melodic-lms1xx";
   version = "0.2.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp rosconsole-bridge roscpp-serialization ];
-  checkInputs = [ roslaunch rosunit roslint ];
-  propagatedBuildInputs = [ sensor-msgs roscpp rosconsole-bridge roscpp-serialization ];
+  buildInputs = [ sensor-msgs roscpp-serialization rosconsole-bridge roscpp ];
+  checkInputs = [ roslint roslaunch rosunit ];
+  propagatedBuildInputs = [ sensor-msgs roscpp-serialization rosconsole-bridge roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

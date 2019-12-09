@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosboost-cfg, boost, mk, git, rosbuild, catkin, cacert, unzip, openssl, zlib }:
+{ lib, buildRosPackage, fetchurl, git, boost, rosboost-cfg, catkin, unzip, cacert, openssl, zlib, rosbuild, mk }:
 buildRosPackage {
   pname = "ros-kinetic-assimp-devel";
-  version = "2.1.13-r1";
+  version = "2.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/assimp_devel/2.1.13-1.tar.gz";
-    name = "2.1.13-1.tar.gz";
-    sha256 = "940210d0c2d6ed8bfdb1e63c8675d928a2359f9391ae3aae9ed4ec06efc2ec66";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/assimp_devel/2.1.14-1.tar.gz";
+    name = "2.1.14-1.tar.gz";
+    sha256 = "d2463baec0806b02f96ccd2444890ebe81fd0503e573c01051e94deb026e1da2";
   };
 
   buildType = "catkin";
-  buildInputs = [ rosboost-cfg boost mk git rosbuild cacert unzip openssl zlib ];
-  propagatedBuildInputs = [ zlib boost ];
+  buildInputs = [ git boost rosboost-cfg unzip cacert openssl zlib rosbuild mk ];
+  propagatedBuildInputs = [ boost zlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

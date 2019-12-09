@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dsr-msgs, actionlib-msgs, catkin, message-generation, message-runtime, actionlib, rospy }:
+{ lib, buildRosPackage, fetchurl, message-generation, dsr-msgs, actionlib, catkin, actionlib-msgs, rospy, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-dsr-example-py";
   version = "0.9.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dsr-msgs actionlib-msgs message-generation actionlib rospy ];
-  propagatedBuildInputs = [ dsr-msgs actionlib-msgs actionlib message-runtime rospy ];
+  buildInputs = [ dsr-msgs actionlib actionlib-msgs rospy message-generation ];
+  propagatedBuildInputs = [ message-runtime dsr-msgs actionlib actionlib-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

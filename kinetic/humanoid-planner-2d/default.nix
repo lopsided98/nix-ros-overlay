@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, sbpl, gridmap-2d, visualization-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, sbpl, catkin, gridmap-2d, visualization-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-humanoid-planner-2d";
   version = "0.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sbpl gridmap-2d visualization-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ sbpl gridmap-2d visualization-msgs roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs sbpl gridmap-2d visualization-msgs roscpp ];
+  propagatedBuildInputs = [ geometry-msgs sbpl gridmap-2d visualization-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

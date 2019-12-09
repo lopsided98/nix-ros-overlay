@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rviz, qt5 }:
+{ lib, buildRosPackage, fetchurl, rviz, catkin, qt5 }:
 buildRosPackage {
   pname = "ros-melodic-rviz-plugin-tutorials";
   version = "0.10.3";

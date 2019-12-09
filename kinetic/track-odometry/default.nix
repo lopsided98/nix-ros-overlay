@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, tf2-geometry-msgs, roslint, trajectory-msgs, sensor-msgs, catkin, message-filters, tf2-ros, tf2, rostest, nav-msgs, neonavigation-common, eigen, std-msgs, roscpp, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, message-filters, geometry-msgs, std-msgs, catkin, tf2, cmake-modules, neonavigation-common, rosunit, roslint, tf2-geometry-msgs, eigen, roscpp, nav-msgs, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-track-odometry";
   version = "0.5.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules tf2-geometry-msgs trajectory-msgs sensor-msgs message-filters tf2-ros tf2 nav-msgs neonavigation-common eigen std-msgs roscpp geometry-msgs ];
-  checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ cmake-modules tf2-geometry-msgs trajectory-msgs sensor-msgs message-filters tf2-ros tf2 nav-msgs neonavigation-common eigen std-msgs roscpp geometry-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs message-filters geometry-msgs std-msgs cmake-modules roscpp neonavigation-common tf2-geometry-msgs eigen tf2 nav-msgs tf2-ros ];
+  checkInputs = [ roslint rostest rosunit ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs message-filters geometry-msgs std-msgs cmake-modules roscpp neonavigation-common tf2-geometry-msgs eigen tf2 nav-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

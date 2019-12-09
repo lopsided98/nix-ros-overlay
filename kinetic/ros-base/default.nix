@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, ros-core, class-loader, catkin, bond-core, actionlib, nodelet-core, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, bond-core, dynamic-reconfigure, pluginlib, actionlib, catkin, ros-core, nodelet-core, class-loader }:
 buildRosPackage {
   pname = "ros-kinetic-ros-base";
   version = "1.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pluginlib ros-core class-loader bond-core actionlib nodelet-core dynamic-reconfigure ];
+  propagatedBuildInputs = [ dynamic-reconfigure bond-core pluginlib actionlib ros-core nodelet-core class-loader ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

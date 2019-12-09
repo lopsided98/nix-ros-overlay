@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, libusb }:
+{ lib, buildRosPackage, fetchurl, catkin, libusb, cmake }:
 buildRosPackage {
   pname = "ros-kinetic-rc-genicam-api";
   version = "2.2.2-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ libusb ];
-  propagatedBuildInputs = [ catkin libusb ];
+  propagatedBuildInputs = [ libusb catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

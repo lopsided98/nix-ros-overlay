@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, libmodbus, cmake-modules, pilz-testutils, sensor-msgs, catkin, message-filters, rostest, message-generation, message-runtime, canopen-chain-node, std-msgs, code-coverage, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, message-generation, libmodbus, sensor-msgs, message-filters, std-msgs, std-srvs, pilz-testutils, code-coverage, cmake-modules, catkin, rosunit, canopen-chain-node, roscpp, message-runtime, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-prbt-hardware-support";
   version = "0.4.11-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs libmodbus sensor-msgs message-filters message-generation canopen-chain-node std-msgs roscpp ];
-  checkInputs = [ cmake-modules pilz-testutils rostest code-coverage rosunit ];
-  propagatedBuildInputs = [ std-srvs sensor-msgs message-runtime std-msgs roscpp ];
+  buildInputs = [ sensor-msgs message-filters libmodbus std-msgs std-srvs canopen-chain-node roscpp message-generation ];
+  checkInputs = [ pilz-testutils code-coverage cmake-modules rosunit rostest ];
+  propagatedBuildInputs = [ sensor-msgs std-msgs std-srvs roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

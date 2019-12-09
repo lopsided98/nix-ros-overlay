@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cairo, ceres-solver, libwebp, boost, gflags, lua5, catkin, pythonPackages, glog, eigen, protobuf, gmock }:
+{ lib, buildRosPackage, fetchurl, boost, protobuf, glog, ceres-solver, lua5, catkin, pythonPackages, libwebp, cairo, eigen, gmock, gflags }:
 buildRosPackage {
   pname = "ros-kinetic-cartographer";
   version = "0.2.0-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cairo ceres-solver libwebp boost gflags lua5 pythonPackages.sphinx glog eigen protobuf gmock ];
-  propagatedBuildInputs = [ cairo ceres-solver libwebp boost gflags lua5 glog eigen protobuf ];
+  buildInputs = [ boost protobuf glog ceres-solver lua5 libwebp cairo eigen pythonPackages.sphinx gmock gflags ];
+  propagatedBuildInputs = [ boost protobuf glog ceres-solver lua5 libwebp cairo eigen gflags ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

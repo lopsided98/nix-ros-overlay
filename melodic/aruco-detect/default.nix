@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-geometry-msgs, image-transport, sensor-msgs, cv-bridge, pythonPackages, fiducial-msgs, catkin, tf2-ros, roscpp, tf2, dynamic-reconfigure, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, fiducial-msgs, sensor-msgs, dynamic-reconfigure, pythonPackages, catkin, tf2, image-transport, tf2-geometry-msgs, cv-bridge, visualization-msgs, roscpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-aruco-detect";
   version = "0.11.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.joblib pythonPackages.cairosvg tf2-geometry-msgs image-transport sensor-msgs cv-bridge fiducial-msgs roscpp tf2-ros tf2 dynamic-reconfigure visualization-msgs ];
-  propagatedBuildInputs = [ pythonPackages.joblib pythonPackages.cairosvg tf2-geometry-msgs image-transport sensor-msgs cv-bridge fiducial-msgs tf2-ros tf2 visualization-msgs dynamic-reconfigure roscpp ];
+  buildInputs = [ fiducial-msgs sensor-msgs pythonPackages.cairosvg dynamic-reconfigure tf2 pythonPackages.joblib image-transport tf2-geometry-msgs cv-bridge visualization-msgs roscpp tf2-ros ];
+  propagatedBuildInputs = [ fiducial-msgs sensor-msgs dynamic-reconfigure pythonPackages.cairosvg roscpp pythonPackages.joblib image-transport tf2-geometry-msgs cv-bridge visualization-msgs tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

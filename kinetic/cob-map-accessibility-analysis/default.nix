@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, tf, image-transport, sensor-msgs, catkin, cv-bridge, pcl, message-filters, nav-msgs, cob-3d-mapping-msgs, message-generation, message-runtime, pcl-ros, rospy, roscpp, opencv3, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, boost, message-filters, geometry-msgs, sensor-msgs, message-runtime, cob-3d-mapping-msgs, tf, catkin, pcl, image-transport, cv-bridge, rospy, roscpp, message-generation, nav-msgs, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-cob-map-accessibility-analysis";
   version = "0.6.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost image-transport sensor-msgs cv-bridge message-filters pcl roscpp message-generation nav-msgs cob-3d-mapping-msgs pcl-ros tf opencv3 geometry-msgs ];
-  propagatedBuildInputs = [ boost opencv3 pcl sensor-msgs image-transport message-filters cv-bridge roscpp cob-3d-mapping-msgs nav-msgs message-runtime rospy tf pcl-ros geometry-msgs ];
+  buildInputs = [ pcl-ros boost message-filters geometry-msgs sensor-msgs tf roscpp pcl image-transport cv-bridge opencv3 message-generation nav-msgs cob-3d-mapping-msgs ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs boost geometry-msgs opencv3 message-runtime message-filters tf pcl image-transport cv-bridge roscpp rospy nav-msgs cob-3d-mapping-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

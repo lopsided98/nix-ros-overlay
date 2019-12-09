@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-power-board, std-srvs, catkin, pr2-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, pr2-msgs, std-srvs, pr2-power-board, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-run-stop-auto-restart";
   version = "1.6.30";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-power-board pr2-msgs roscpp std-srvs ];
-  propagatedBuildInputs = [ pr2-power-board pr2-msgs roscpp std-srvs ];
+  buildInputs = [ std-srvs pr2-power-board pr2-msgs roscpp ];
+  propagatedBuildInputs = [ std-srvs pr2-power-board pr2-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

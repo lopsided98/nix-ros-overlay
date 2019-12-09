@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-tools, catkin, ecl-core, ecl-lite, ecl-manipulation, ecl-navigation }:
+{ lib, buildRosPackage, fetchurl, ecl-manipulation, catkin, ecl-lite, ecl-core, ecl-tools, ecl-navigation }:
 buildRosPackage {
   pname = "ros-kinetic-ecl";
   version = "0.60.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ ecl-tools ecl-core ecl-lite ecl-manipulation ecl-navigation ];
+  propagatedBuildInputs = [ ecl-manipulation ecl-lite ecl-core ecl-tools ecl-navigation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

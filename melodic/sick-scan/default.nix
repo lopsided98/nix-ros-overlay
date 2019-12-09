@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, diagnostic-updater, message-generation, message-runtime, visualization-msgs, pcl-ros, dynamic-reconfigure, roscpp, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, dynamic-reconfigure, catkin, pcl-conversions, visualization-msgs, roscpp, message-runtime, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-melodic-sick-scan";
-  version = "1.3.22-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_scan-release/archive/release/melodic/sick_scan/1.3.22-1.tar.gz";
-    name = "1.3.22-1.tar.gz";
-    sha256 = "a4e7219090b37c5062afd1195a0569fb7bbf9f9f9214c0df74b7588114ffffe6";
+    url = "https://github.com/SICKAG/sick_scan-release/archive/release/melodic/sick_scan/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "652abe26ebf888dc796e5fb5493a11732e3490116caec5ec679cd71d79c4f3d2";
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp diagnostic-updater pcl-ros message-generation dynamic-reconfigure visualization-msgs pcl-conversions ];
-  propagatedBuildInputs = [ sensor-msgs diagnostic-updater pcl-ros message-runtime visualization-msgs dynamic-reconfigure roscpp pcl-conversions ];
+  buildInputs = [ pcl-ros sensor-msgs dynamic-reconfigure pcl-conversions visualization-msgs roscpp message-generation diagnostic-updater ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs dynamic-reconfigure pcl-conversions visualization-msgs roscpp message-runtime diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

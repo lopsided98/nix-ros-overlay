@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, control-msgs, realtime-tools, catkin, tinyxml, message-generation, message-runtime, dynamic-reconfigure, std-msgs, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, message-generation, dynamic-reconfigure, std-msgs, cmake-modules, catkin, tinyxml, rosunit, realtime-tools, roscpp, message-runtime, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-control-toolbox";
   version = "1.17.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules control-msgs realtime-tools tinyxml message-generation dynamic-reconfigure std-msgs roscpp ];
+  buildInputs = [ dynamic-reconfigure std-msgs cmake-modules tinyxml realtime-tools roscpp message-generation control-msgs ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ control-msgs realtime-tools tinyxml message-runtime dynamic-reconfigure std-msgs roscpp ];
+  propagatedBuildInputs = [ dynamic-reconfigure std-msgs tinyxml realtime-tools roscpp message-runtime control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

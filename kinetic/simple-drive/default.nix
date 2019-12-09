@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, sensor-msgs, catkin, rospy, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, catkin, actionlib-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-simple-drive";
   version = "0.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs sensor-msgs rospy std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs sensor-msgs rospy std-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs actionlib-msgs rospy ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs actionlib-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

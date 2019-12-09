@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake, pcl, ament-cmake-gtest, sensor-msgs, eigen, std-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, std-msgs, ament-cmake, pcl, eigen, builtin-interfaces, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-crystal-pcl-conversions";
   version = "2.0.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces pcl sensor-msgs eigen std-msgs ];
+  buildInputs = [ sensor-msgs std-msgs pcl eigen builtin-interfaces ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ builtin-interfaces pcl sensor-msgs eigen std-msgs ];
+  propagatedBuildInputs = [ sensor-msgs std-msgs pcl eigen builtin-interfaces ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

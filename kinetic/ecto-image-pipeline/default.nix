@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, opencv-candidate, cmake-modules, boost, catkin, eigen, rosunit, ecto-opencv, ecto, ecto-ros }:
+{ lib, buildRosPackage, fetchurl, boost, cmake-modules, catkin, ecto, rosunit, eigen, opencv-candidate, ecto-ros, ecto-opencv }:
 buildRosPackage {
   pname = "ros-kinetic-ecto-image-pipeline";
   version = "0.5.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ opencv-candidate cmake-modules boost eigen ecto ];
+  buildInputs = [ boost cmake-modules ecto eigen opencv-candidate ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ opencv-candidate boost eigen ecto-opencv ecto ecto-ros ];
+  propagatedBuildInputs = [ boost ecto opencv-candidate eigen ecto-ros ecto-opencv ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, rostest, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, std-msgs, catkin, rostest, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-fmi-adapter";
   version = "1.0.2";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, tf, catkin, message-generation, message-runtime, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, boost, geometry-msgs, std-msgs, tf, catkin, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-cob-footprint-observer";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost roscpp message-generation std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ boost roscpp message-runtime std-msgs tf geometry-msgs ];
+  buildInputs = [ boost geometry-msgs std-msgs tf roscpp message-generation ];
+  propagatedBuildInputs = [ boost geometry-msgs std-msgs tf roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

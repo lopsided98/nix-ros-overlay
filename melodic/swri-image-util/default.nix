@@ -2,22 +2,22 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cv-bridge, image-geometry, rospy, tf, geometry-msgs, camera-calibration-parsers, image-transport, swri-nodelet, message-filters, pkg-config, swri-opencv-util, swri-math-util, catkin, nav-msgs, std-msgs, swri-geometry-util, nodelet, roscpp, swri-roscpp, rostest, eigen }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, swri-opencv-util, tf, image-transport, eigen, nodelet, nav-msgs, rostest, message-filters, std-msgs, swri-geometry-util, swri-nodelet, catkin, cv-bridge, roscpp, pkg-config, rospy, camera-calibration-parsers, image-geometry, swri-roscpp, swri-math-util }:
 buildRosPackage {
   pname = "ros-melodic-swri-image-util";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_image_util/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "d2b63c1130fc9bc87a1a42dfaf98447907b79151ddefa5c30d9c2e7644b2fa6c";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_image_util/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "186a4786dbd54ee5bb0444651135d352be21d61b27c7bfb642c3451588b5bed1";
   };
 
   buildType = "catkin";
-  buildInputs = [ swri-math-util camera-calibration-parsers image-transport swri-nodelet message-filters cv-bridge roscpp image-geometry swri-roscpp nav-msgs nodelet rospy std-msgs swri-geometry-util tf swri-opencv-util geometry-msgs eigen ];
+  buildInputs = [ message-filters geometry-msgs nav-msgs image-geometry swri-opencv-util std-msgs swri-math-util tf swri-nodelet swri-geometry-util image-transport eigen cv-bridge nodelet roscpp rospy camera-calibration-parsers swri-roscpp ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ swri-math-util camera-calibration-parsers image-transport cv-bridge message-filters roscpp image-geometry swri-roscpp nav-msgs nodelet rospy std-msgs swri-geometry-util tf swri-opencv-util geometry-msgs eigen ];
-  nativeBuildInputs = [ catkin pkg-config ];
+  propagatedBuildInputs = [ message-filters geometry-msgs nav-msgs image-geometry std-msgs swri-opencv-util swri-math-util tf swri-geometry-util image-transport eigen cv-bridge nodelet roscpp rospy camera-calibration-parsers swri-roscpp ];
+  nativeBuildInputs = [ pkg-config catkin ];
 
   meta = {
     description = ''swri_image_util'';

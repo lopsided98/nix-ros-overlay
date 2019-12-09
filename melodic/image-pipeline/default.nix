@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-rotate, stereo-image-proc, depth-image-proc, catkin, camera-calibration, image-view, image-publisher, image-proc }:
+{ lib, buildRosPackage, fetchurl, stereo-image-proc, image-publisher, camera-calibration, image-rotate, image-proc, catkin, image-view, depth-image-proc }:
 buildRosPackage {
   pname = "ros-melodic-image-pipeline";
   version = "1.13.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ image-rotate stereo-image-proc depth-image-proc camera-calibration image-view image-publisher image-proc ];
+  propagatedBuildInputs = [ stereo-image-proc image-publisher camera-calibration image-rotate image-proc image-view depth-image-proc ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

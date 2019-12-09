@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-fake-controller-manager, moveit-ros-move-group, moveit-ros-visualization, catkin, moveit-kinematics, rostest, moveit-simple-controller-manager, rviz, robot-state-publisher, roslaunch, tf, joint-state-publisher, xacro, khi-duaro-description, moveit-planners-ompl }:
+{ lib, buildRosPackage, fetchurl, khi-duaro-description, joint-state-publisher, moveit-planners-ompl, xacro, robot-state-publisher, moveit-ros-move-group, moveit-simple-controller-manager, tf, catkin, rviz, moveit-ros-visualization, moveit-kinematics, roslaunch, rostest, moveit-fake-controller-manager }:
 buildRosPackage {
   pname = "ros-kinetic-khi-duaro-moveit-config";
   version = "1.1.2-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ khi-duaro-description ];
-  checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ moveit-fake-controller-manager moveit-ros-move-group moveit-ros-visualization moveit-kinematics moveit-simple-controller-manager rviz robot-state-publisher tf joint-state-publisher xacro khi-duaro-description moveit-planners-ompl ];
+  checkInputs = [ roslaunch rostest ];
+  propagatedBuildInputs = [ moveit-planners-ompl joint-state-publisher khi-duaro-description xacro robot-state-publisher moveit-ros-move-group moveit-simple-controller-manager tf rviz moveit-ros-visualization moveit-kinematics moveit-fake-controller-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

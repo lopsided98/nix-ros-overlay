@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, geometry-msgs, hardware-interface, boost, realtime-tools, xacro, gazebo-ros, std-srvs, catkin, nav-msgs, urdf, controller-interface, std-msgs, roscpp, controller-manager, pluginlib, diff-drive-controller, rostest, rosunit }:
+{ lib, buildRosPackage, fetchurl, xacro, geometry-msgs, controller-manager, urdf, pluginlib, tf, rosunit, nav-msgs, rostest, diff-drive-controller, std-msgs, std-srvs, catkin, realtime-tools, roscpp, gazebo-ros, boost, controller-interface, hardware-interface }:
 buildRosPackage {
   pname = "ros-kinetic-ackermann-steering-controller";
   version = "0.13.5";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface pluginlib boost diff-drive-controller realtime-tools roscpp nav-msgs urdf controller-interface tf ];
-  checkInputs = [ gazebo-ros controller-manager std-srvs rostest std-msgs rosunit xacro geometry-msgs ];
-  propagatedBuildInputs = [ hardware-interface pluginlib boost diff-drive-controller realtime-tools roscpp nav-msgs urdf controller-interface tf ];
+  buildInputs = [ boost controller-interface urdf hardware-interface pluginlib tf realtime-tools diff-drive-controller roscpp nav-msgs ];
+  checkInputs = [ xacro geometry-msgs controller-manager std-msgs std-srvs rosunit gazebo-ros rostest ];
+  propagatedBuildInputs = [ boost controller-interface urdf hardware-interface pluginlib tf realtime-tools diff-drive-controller roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

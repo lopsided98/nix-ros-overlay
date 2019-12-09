@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav-msgs, catkin, tf }:
+{ lib, buildRosPackage, fetchurl, tf, nav-msgs, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-tf-tools";
   version = "0.0.3";

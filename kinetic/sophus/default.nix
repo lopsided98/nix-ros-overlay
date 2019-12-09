@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, eigen }:
+{ lib, buildRosPackage, fetchurl, eigen, catkin, cmake }:
 buildRosPackage {
   pname = "ros-kinetic-sophus";
   version = "0.9.1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ eigen ];
-  propagatedBuildInputs = [ catkin eigen ];
+  propagatedBuildInputs = [ eigen catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

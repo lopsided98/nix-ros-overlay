@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, git, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, git, python, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-catkin-pip";
   version = "0.2.3-r1";

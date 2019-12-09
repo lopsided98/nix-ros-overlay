@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jskeus, actionlib-msgs, actionlib, tf, actionlib-tutorials, geometry-msgs, rosbash, message-generation, roslang, message-runtime, angles, coreutils, std-srvs, rospack, mk, rosmsg, rosbuild, catkin, tf2-ros, xorg, std-msgs, roscpp, visualization-msgs, euslisp, rosnode, geneus, sensor-msgs, rostest, rostopic, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, rosbash, actionlib-msgs, rosbuild, rostest, geneus, sensor-msgs, dynamic-reconfigure, rosmsg, rostopic, coreutils, actionlib-tutorials, tf2-ros, xorg, std-msgs, std-srvs, catkin, euslisp, roscpp, roslang, angles, message-generation, jskeus, mk, rosnode, actionlib, visualization-msgs, message-runtime, rospack }:
 buildRosPackage {
   pname = "ros-kinetic-roseus";
   version = "1.7.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ jskeus actionlib-msgs actionlib tf actionlib-tutorials geometry-msgs rosbash message-generation roslang angles coreutils std-srvs rospack mk rosmsg rosbuild tf2-ros std-msgs roscpp visualization-msgs euslisp rosnode geneus sensor-msgs rostest rostopic dynamic-reconfigure ];
+  buildInputs = [ geometry-msgs tf rosbash actionlib-msgs rosbuild geneus rostest sensor-msgs dynamic-reconfigure rosmsg rostopic coreutils actionlib-tutorials tf2-ros std-msgs std-srvs euslisp roscpp roslang angles message-generation jskeus mk rosnode actionlib visualization-msgs rospack ];
   checkInputs = [ xorg.xorgserver ];
-  propagatedBuildInputs = [ jskeus actionlib-msgs actionlib dynamic-reconfigure tf actionlib-tutorials geometry-msgs rosbash message-runtime roslang std-srvs rospack rosmsg tf2-ros std-msgs roscpp visualization-msgs euslisp rosnode sensor-msgs rostest geneus ];
+  propagatedBuildInputs = [ geometry-msgs tf rosbash actionlib-msgs geneus rostest sensor-msgs dynamic-reconfigure rosmsg actionlib-tutorials tf2-ros std-msgs std-srvs euslisp roscpp roslang jskeus rosnode actionlib visualization-msgs message-runtime rospack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

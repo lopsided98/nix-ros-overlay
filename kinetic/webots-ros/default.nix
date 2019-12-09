@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, message-generation, message-runtime, rospy, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, std-msgs, tf, catkin, rospy, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-webots-ros";
   version = "2.0.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp message-generation rospy std-msgs tf ];
-  propagatedBuildInputs = [ sensor-msgs roscpp message-runtime rospy std-msgs tf ];
+  buildInputs = [ sensor-msgs std-msgs tf rospy roscpp message-generation ];
+  propagatedBuildInputs = [ sensor-msgs std-msgs tf rospy roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

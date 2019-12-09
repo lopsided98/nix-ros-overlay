@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, ament-lint-common, boost, ament-cmake-gtest, rclcpp, autoware-auto-helper-functions, std-msgs, ament-lint-auto, autoware-auto-cmake }:
+{ lib, buildRosPackage, fetchurl, boost, rclcpp-lifecycle, std-msgs, ament-lint-common, ament-cmake, autoware-auto-helper-functions, autoware-auto-cmake, ament-cmake-gtest, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-serial-driver";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-lifecycle boost rclcpp autoware-auto-helper-functions std-msgs ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ rclcpp-lifecycle boost rclcpp autoware-auto-helper-functions std-msgs ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  buildInputs = [ boost rclcpp-lifecycle std-msgs autoware-auto-helper-functions rclcpp ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ boost rclcpp-lifecycle std-msgs autoware-auto-helper-functions rclcpp ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''A template class and associated utilities which encapsulate basic reading from serial ports'';

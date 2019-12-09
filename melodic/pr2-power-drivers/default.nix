@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-power-board, power-monitor, catkin, ocean-battery-driver }:
+{ lib, buildRosPackage, fetchurl, pr2-power-board, catkin, power-monitor, ocean-battery-driver }:
 buildRosPackage {
   pname = "ros-melodic-pr2-power-drivers";
   version = "1.1.7";

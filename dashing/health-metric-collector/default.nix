@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-ros2-common, ament-cmake, launch-ros, ament-cmake-gmock, launch, aws-common, rclcpp, ros-monitoring-msgs }:
+{ lib, buildRosPackage, fetchurl, aws-ros2-common, launch, launch-ros, ament-cmake, ros-monitoring-msgs, ament-cmake-gmock, rclcpp, aws-common }:
 buildRosPackage {
   pname = "ros-dashing-health-metric-collector";
   version = "3.0.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ aws-common aws-ros2-common rclcpp ros-monitoring-msgs ];
+  buildInputs = [ ros-monitoring-msgs rclcpp aws-common aws-ros2-common ];
   checkInputs = [ ament-cmake-gmock ];
-  propagatedBuildInputs = [ launch-ros launch aws-common rclcpp ros-monitoring-msgs ];
+  propagatedBuildInputs = [ rclcpp launch launch-ros ros-monitoring-msgs aws-common ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, python, pythonPackages, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-urdfdom-py";
   version = "0.3.3";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ python ];
-  propagatedBuildInputs = [ python catkin pythonPackages.lxml ];
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  propagatedBuildInputs = [ pythonPackages.lxml python catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.catkin-pkg ];
 
   meta = {
     description = ''Python implementation of the URDF parser.'';

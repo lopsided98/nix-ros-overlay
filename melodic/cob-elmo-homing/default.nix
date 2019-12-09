@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pluginlib, socketcan-interface, canopen-402 }:
+{ lib, buildRosPackage, fetchurl, pluginlib, socketcan-interface, catkin, canopen-402 }:
 buildRosPackage {
   pname = "ros-melodic-cob-elmo-homing";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib canopen-402 socketcan-interface ];
-  propagatedBuildInputs = [ pluginlib canopen-402 socketcan-interface ];
+  buildInputs = [ pluginlib socketcan-interface canopen-402 ];
+  propagatedBuildInputs = [ pluginlib socketcan-interface canopen-402 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

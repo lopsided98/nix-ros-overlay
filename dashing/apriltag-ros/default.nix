@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, apriltag-msgs, tf2-msgs, ament-cmake, image-transport, sensor-msgs, cv-bridge, apriltag, rclcpp, eigen, rclcpp-components }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp-components, ament-cmake, image-transport, eigen, cv-bridge, tf2-msgs, apriltag, rclcpp, apriltag-msgs }:
 buildRosPackage {
   pname = "ros-dashing-apriltag-ros";
   version = "2.1.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ apriltag-msgs tf2-msgs image-transport sensor-msgs cv-bridge apriltag rclcpp eigen rclcpp-components ];
-  propagatedBuildInputs = [ apriltag-msgs tf2-msgs image-transport sensor-msgs cv-bridge apriltag rclcpp rclcpp-components ];
+  buildInputs = [ sensor-msgs rclcpp-components image-transport eigen cv-bridge tf2-msgs apriltag rclcpp apriltag-msgs ];
+  propagatedBuildInputs = [ sensor-msgs rclcpp-components image-transport cv-bridge tf2-msgs apriltag rclcpp apriltag-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

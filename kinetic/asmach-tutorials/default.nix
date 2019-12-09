@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlesim, actionlib-msgs, catkin, smach-ros, message-generation, asmach, actionlib, rospy }:
+{ lib, buildRosPackage, fetchurl, message-generation, turtlesim, actionlib, catkin, smach-ros, asmach, actionlib-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-asmach-tutorials";
   version = "1.0.15";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ turtlesim actionlib-msgs smach-ros message-generation asmach actionlib rospy ];
-  propagatedBuildInputs = [ turtlesim actionlib-msgs smach-ros actionlib asmach rospy ];
+  buildInputs = [ turtlesim actionlib smach-ros asmach actionlib-msgs rospy message-generation ];
+  propagatedBuildInputs = [ turtlesim actionlib smach-ros asmach actionlib-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

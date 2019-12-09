@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roch-gazebo }:
+{ lib, buildRosPackage, fetchurl, roch-gazebo, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-roch-simulator";
   version = "2.0.12-r5";

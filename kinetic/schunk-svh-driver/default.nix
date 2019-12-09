@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, fzi-icl-core, fzi-icl-comm, sensor-msgs, rqt-gui, catkin, urdf, rospy, std-msgs, dynamic-reconfigure, roscpp, xacro }:
+{ lib, buildRosPackage, fetchurl, fzi-icl-comm, rqt-gui, sensor-msgs, xacro, fzi-icl-core, urdf, dynamic-reconfigure, std-msgs, catkin, rqt-gui-py, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-schunk-svh-driver";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui-py fzi-icl-core fzi-icl-comm sensor-msgs rqt-gui rospy urdf dynamic-reconfigure std-msgs roscpp xacro ];
-  propagatedBuildInputs = [ rqt-gui-py fzi-icl-core fzi-icl-comm sensor-msgs rqt-gui urdf rospy std-msgs dynamic-reconfigure roscpp xacro ];
+  buildInputs = [ fzi-icl-comm rqt-gui sensor-msgs xacro fzi-icl-core urdf dynamic-reconfigure std-msgs rqt-gui-py roscpp rospy ];
+  propagatedBuildInputs = [ fzi-icl-comm rqt-gui sensor-msgs xacro fzi-icl-core urdf dynamic-reconfigure std-msgs rqt-gui-py roscpp rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

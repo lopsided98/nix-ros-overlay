@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mk, catkin, rosbuild, rviz, jsk-interactive-marker, rospy, visualization-msgs, jsk-interactive }:
+{ lib, buildRosPackage, fetchurl, jsk-interactive, catkin, rviz, visualization-msgs, rospy, rosbuild, jsk-interactive-marker, mk }:
 buildRosPackage {
   pname = "ros-melodic-jsk-interactive-test";
   version = "2.1.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mk rosbuild jsk-interactive-marker rospy visualization-msgs jsk-interactive ];
-  propagatedBuildInputs = [ rviz jsk-interactive-marker rospy visualization-msgs jsk-interactive ];
+  buildInputs = [ jsk-interactive visualization-msgs rospy rosbuild jsk-interactive-marker mk ];
+  propagatedBuildInputs = [ jsk-interactive rviz visualization-msgs rospy jsk-interactive-marker ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mbf-abstract-core, mbf-costmap-core, mbf-msgs, catkin, mbf-simple-nav, mbf-abstract-nav, mbf-costmap-nav }:
+{ lib, buildRosPackage, fetchurl, mbf-simple-nav, mbf-abstract-nav, catkin, mbf-abstract-core, mbf-costmap-core, mbf-costmap-nav, mbf-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-move-base-flex";
   version = "0.2.5-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ mbf-abstract-core mbf-costmap-core mbf-msgs mbf-simple-nav mbf-abstract-nav mbf-costmap-nav ];
+  propagatedBuildInputs = [ mbf-simple-nav mbf-abstract-nav mbf-abstract-core mbf-costmap-nav mbf-costmap-core mbf-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

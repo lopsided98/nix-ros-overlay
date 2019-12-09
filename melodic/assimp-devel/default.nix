@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosboost-cfg, boost, mk, git, rosbuild, catkin, cacert, unzip, openssl, zlib }:
+{ lib, buildRosPackage, fetchurl, git, boost, rosboost-cfg, catkin, unzip, cacert, openssl, zlib, rosbuild, mk }:
 buildRosPackage {
   pname = "ros-melodic-assimp-devel";
   version = "2.1.13-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosboost-cfg boost mk git rosbuild cacert unzip openssl zlib ];
-  propagatedBuildInputs = [ zlib boost ];
+  buildInputs = [ git boost rosboost-cfg unzip cacert openssl zlib rosbuild mk ];
+  propagatedBuildInputs = [ boost zlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

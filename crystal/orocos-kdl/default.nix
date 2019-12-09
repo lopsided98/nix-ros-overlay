@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cppunit, cmake, pkg-config, eigen }:
+{ lib, buildRosPackage, fetchurl, pkg-config, cppunit, eigen, cmake }:
 buildRosPackage {
   pname = "ros-crystal-orocos-kdl";
   version = "3.1.0";

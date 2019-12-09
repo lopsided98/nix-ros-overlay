@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, self-test, catkin, diagnostic-updater, message-generation, message-runtime, dynamic-reconfigure, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, dynamic-reconfigure, std-msgs, catkin, self-test, roscpp, message-runtime, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-driver-base";
   version = "1.6.8";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ self-test diagnostic-updater message-generation dynamic-reconfigure std-msgs roscpp ];
-  propagatedBuildInputs = [ self-test diagnostic-updater message-runtime dynamic-reconfigure std-msgs roscpp ];
+  buildInputs = [ dynamic-reconfigure std-msgs self-test roscpp message-generation diagnostic-updater ];
+  propagatedBuildInputs = [ dynamic-reconfigure std-msgs self-test roscpp message-runtime diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

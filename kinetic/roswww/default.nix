@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospack, phantomjs, catkin, pythonPackages, rosbridge-server, rostest, rosgraph }:
+{ lib, buildRosPackage, fetchurl, phantomjs, rosgraph, catkin, pythonPackages, rosbridge-server, rostest, rospack }:
 buildRosPackage {
   pname = "ros-kinetic-roswww";
   version = "0.1.12";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ pythonPackages.catkin-pkg ];
-  checkInputs = [ rostest phantomjs pythonPackages.selenium ];
-  propagatedBuildInputs = [ rosbridge-server rospack rosgraph ];
+  checkInputs = [ pythonPackages.selenium phantomjs rostest ];
+  propagatedBuildInputs = [ rosgraph rosbridge-server rospack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, gazebo-ros-pkgs, hector-models, catkin, hector-gazebo-plugins, robot-state-publisher, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, hector-models, gazebo-ros-pkgs, dynamic-reconfigure, robot-state-publisher, hector-gazebo-plugins, catkin, roscpp, gazebo-ros }:
 buildRosPackage {
   pname = "ros-melodic-igvc-self-drive-gazebo-plugins";
   version = "0.1.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros roscpp dynamic-reconfigure ];
-  propagatedBuildInputs = [ gazebo-ros gazebo-ros-pkgs hector-gazebo-plugins hector-models robot-state-publisher dynamic-reconfigure roscpp ];
+  buildInputs = [ gazebo-ros dynamic-reconfigure roscpp ];
+  propagatedBuildInputs = [ hector-models gazebo-ros-pkgs dynamic-reconfigure robot-state-publisher hector-gazebo-plugins roscpp gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

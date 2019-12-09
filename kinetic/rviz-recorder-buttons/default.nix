@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, pluginlib, class-loader, catkin, rviz, actionlib, roscpp }:
+{ lib, buildRosPackage, fetchurl, class-loader, pluginlib, std-srvs, actionlib, catkin, rviz, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-rviz-recorder-buttons";
   version = "1.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs pluginlib class-loader rviz actionlib roscpp ];
-  propagatedBuildInputs = [ std-srvs pluginlib rviz actionlib roscpp ];
+  buildInputs = [ pluginlib std-srvs actionlib roscpp rviz class-loader ];
+  propagatedBuildInputs = [ pluginlib std-srvs actionlib rviz roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

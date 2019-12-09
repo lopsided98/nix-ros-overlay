@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, trajectory-msgs, sensor-msgs, catkin, ypspur, roscpp, rostest, nav-msgs, std-msgs, diagnostic-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, diagnostic-msgs, geometry-msgs, std-msgs, tf, catkin, roslint, ypspur, roscpp, nav-msgs, rostest }:
 buildRosPackage {
   pname = "ros-melodic-ypspur-ros";
   version = "0.3.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs sensor-msgs ypspur roscpp nav-msgs std-msgs diagnostic-msgs tf geometry-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs diagnostic-msgs geometry-msgs std-msgs tf ypspur roscpp nav-msgs ];
   checkInputs = [ rostest roslint ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs ypspur roscpp nav-msgs std-msgs diagnostic-msgs tf geometry-msgs ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs diagnostic-msgs geometry-msgs std-msgs tf ypspur roscpp nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

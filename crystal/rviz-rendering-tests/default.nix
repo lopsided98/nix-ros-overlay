@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rviz-rendering, ament-cmake, ament-cmake-uncrustify, ament-cmake-gmock, ament-cmake-lint-cmake, ament-cmake-gtest, ament-cmake-cppcheck, qt5, resource-retriever, ament-index-cpp, ament-cmake-cpplint }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, ament-cmake-cppcheck, resource-retriever, ament-cmake-cpplint, ament-cmake, ament-cmake-uncrustify, qt5, ament-cmake-gmock, ament-index-cpp, rviz-rendering, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-crystal-rviz-rendering-tests";
-  version = "5.1.0";
+  version = "5.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_rendering_tests/5.1.0-0.tar.gz";
-    name = "5.1.0-0.tar.gz";
-    sha256 = "a66b2482a4c5c7ab5fd51246a799b42855b7d406643a9c28e1eff45fbadeb3e1";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/crystal/rviz_rendering_tests/5.1.1-1.tar.gz";
+    name = "5.1.1-1.tar.gz";
+    sha256 = "253c5320398e6c7df339ec80b5263cefe1cc4c37c80622e705199a22b7ee8aad";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rviz-rendering resource-retriever qt5.qtbase ];
-  checkInputs = [ ament-cmake-uncrustify ament-cmake-lint-cmake ament-cmake-gmock ament-cmake-gtest ament-cmake-cppcheck ament-index-cpp ament-cmake-cpplint ];
-  propagatedBuildInputs = [ rviz-rendering resource-retriever ];
+  buildInputs = [ resource-retriever rviz-rendering qt5.qtbase ];
+  checkInputs = [ ament-cmake-lint-cmake ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-uncrustify ament-cmake-gmock ament-index-cpp ament-cmake-gtest ];
+  propagatedBuildInputs = [ resource-retriever rviz-rendering ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

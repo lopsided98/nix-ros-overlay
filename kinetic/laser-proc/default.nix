@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, rosconsole, sensor-msgs, catkin, roscpp, nodelet }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, pluginlib, catkin, nodelet, roscpp, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-laser-proc";
   version = "0.1.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole pluginlib sensor-msgs nodelet roscpp ];
-  propagatedBuildInputs = [ rosconsole pluginlib sensor-msgs nodelet roscpp ];
+  buildInputs = [ sensor-msgs pluginlib nodelet roscpp rosconsole ];
+  propagatedBuildInputs = [ sensor-msgs pluginlib nodelet roscpp rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

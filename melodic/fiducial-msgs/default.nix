@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, message-generation, message-runtime, std-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, message-runtime, std-msgs, tf, catkin, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-fiducial-msgs";
   version = "0.11.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-generation std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs message-runtime std-msgs tf geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs tf message-generation ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs tf message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

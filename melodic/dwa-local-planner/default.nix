@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, base-local-planner, cmake-modules, tf2-geometry-msgs, sensor-msgs, nav-core, catkin, tf2-ros, tf2, nav-msgs, angles, dynamic-reconfigure, roscpp, eigen }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, pluginlib, cmake-modules, base-local-planner, catkin, roscpp, costmap-2d, nav-core, eigen, tf2-geometry-msgs, tf2, angles, nav-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-dwa-local-planner";
-  version = "1.16.2";
+  version = "1.16.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/dwa_local_planner/1.16.2-0.tar.gz";
-    name = "1.16.2-0.tar.gz";
-    sha256 = "e142fe402484f27336add5adf42e945d56d2495c629181704c8f2263757c0310";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/dwa_local_planner/1.16.3-1.tar.gz";
+    name = "1.16.3-1.tar.gz";
+    sha256 = "e7b355667efe48acd5fa41e92ec620cda6e5f0e7fb384ccf7f3153daa0625fd7";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d cmake-modules pluginlib tf2-geometry-msgs base-local-planner sensor-msgs nav-core tf2-ros tf2 nav-msgs dynamic-reconfigure angles roscpp eigen ];
-  propagatedBuildInputs = [ costmap-2d pluginlib tf2-geometry-msgs base-local-planner sensor-msgs nav-core tf2-ros tf2 nav-msgs dynamic-reconfigure roscpp eigen ];
+  buildInputs = [ sensor-msgs dynamic-reconfigure pluginlib cmake-modules base-local-planner roscpp tf2-geometry-msgs nav-core eigen costmap-2d tf2 angles nav-msgs tf2-ros ];
+  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure pluginlib base-local-planner roscpp tf2-geometry-msgs nav-core eigen costmap-2d tf2 nav-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

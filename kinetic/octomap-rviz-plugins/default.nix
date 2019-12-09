@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, octomap-msgs, rviz, octomap, roscpp }:
+{ lib, buildRosPackage, fetchurl, octomap, octomap-msgs, catkin, rviz, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-octomap-rviz-plugins";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp rviz octomap octomap-msgs ];
-  propagatedBuildInputs = [ roscpp rviz octomap octomap-msgs ];
+  buildInputs = [ octomap octomap-msgs rviz roscpp ];
+  propagatedBuildInputs = [ octomap octomap-msgs rviz roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

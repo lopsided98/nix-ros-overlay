@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot-bringup, world-canvas-server, warehouse-ros, catkin, robot-pose-publisher, turtlebot-follower, turtlebot-teleop, topic-tools, kobuki-auto-docking, turtlebot-navigation, tf, compressed-image-transport }:
+{ lib, buildRosPackage, fetchurl, turtlebot-teleop, turtlebot-follower, turtlebot-navigation, tf, catkin, kobuki-auto-docking, robot-pose-publisher, warehouse-ros, topic-tools, compressed-image-transport, world-canvas-server, turtlebot-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-rapps";
   version = "2.3.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ turtlebot-bringup world-canvas-server kobuki-auto-docking robot-pose-publisher turtlebot-follower turtlebot-teleop topic-tools warehouse-ros turtlebot-navigation tf compressed-image-transport ];
+  propagatedBuildInputs = [ turtlebot-teleop turtlebot-follower tf turtlebot-navigation kobuki-auto-docking robot-pose-publisher warehouse-ros compressed-image-transport topic-tools world-canvas-server turtlebot-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

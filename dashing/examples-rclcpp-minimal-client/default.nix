@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp, example-interfaces, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, example-interfaces, rclcpp, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-examples-rclcpp-minimal-client";
   version = "0.7.4-r1";

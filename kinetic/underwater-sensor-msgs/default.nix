@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, message-generation, message-runtime, std-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, catkin, visualization-msgs, roscpp, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-underwater-sensor-msgs";
   version = "1.4.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs roscpp message-generation visualization-msgs ];
-  propagatedBuildInputs = [ std-msgs roscpp message-runtime visualization-msgs ];
+  buildInputs = [ std-msgs message-generation visualization-msgs roscpp ];
+  propagatedBuildInputs = [ std-msgs message-runtime visualization-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-controllers-msgs, pr2-mechanism-msgs, kdl-parser, rosconsole, control-msgs, pluginlib, cmake-modules, catkin, roscpp, urdf, moveit-core, actionlib, tf-conversions, angles, eigen-conversions, tf }:
+{ lib, buildRosPackage, fetchurl, moveit-core, urdf, eigen-conversions, pluginlib, tf, catkin, actionlib, cmake-modules, kdl-parser, rosconsole, roscpp, angles, tf-conversions, pr2-controllers-msgs, pr2-mechanism-msgs, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2-moveit-plugins";
   version = "0.7.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs kdl-parser pluginlib rosconsole cmake-modules control-msgs roscpp urdf moveit-core actionlib angles tf-conversions eigen-conversions tf ];
-  propagatedBuildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs kdl-parser rosconsole control-msgs pluginlib roscpp urdf moveit-core actionlib tf-conversions angles eigen-conversions tf ];
+  buildInputs = [ moveit-core urdf eigen-conversions pluginlib tf actionlib cmake-modules kdl-parser roscpp angles pr2-controllers-msgs tf-conversions rosconsole pr2-mechanism-msgs control-msgs ];
+  propagatedBuildInputs = [ moveit-core urdf eigen-conversions pluginlib tf actionlib pr2-controllers-msgs control-msgs roscpp angles tf-conversions rosconsole pr2-mechanism-msgs kdl-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-plot, catkin, fmi-adapter, roscpp }:
+{ lib, buildRosPackage, fetchurl, fmi-adapter, catkin, rqt-plot, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-fmi-adapter-examples";
   version = "1.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-plot roscpp fmi-adapter ];
+  propagatedBuildInputs = [ fmi-adapter rqt-plot roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

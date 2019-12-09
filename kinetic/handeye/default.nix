@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, criutils, catkin, pythonPackages, rostest, message-generation, baldor, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, std-msgs, baldor, pythonPackages, criutils, catkin, message-runtime, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-handeye";
   version = "0.1.1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ criutils pythonPackages.enum34 pythonPackages.numpy pythonPackages.scipy baldor message-runtime std-msgs pythonPackages.matplotlib geometry-msgs ];
+  propagatedBuildInputs = [ pythonPackages.numpy geometry-msgs pythonPackages.matplotlib pythonPackages.enum34 pythonPackages.scipy std-msgs baldor criutils message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-auto, rqt-gui, qt-gui, ament-lint-common }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, qt-gui, ament-lint-common, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rqt-gui-py";
   version = "1.0.5-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_python";
   buildInputs = [ rqt-gui qt-gui ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
   propagatedBuildInputs = [ rqt-gui qt-gui ];
 
   meta = {

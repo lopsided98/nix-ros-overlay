@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, nav-msgs, std-msgs, rospy, tf-conversions, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, tf, catkin, rospy, tf-conversions, nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-underwater-vehicle-dynamics";
   version = "1.4.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs nav-msgs tf-conversions rospy std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs nav-msgs tf-conversions rospy std-msgs tf geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs tf rospy tf-conversions nav-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs tf rospy tf-conversions nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake-gtest, ecl-concepts, ecl-build, ecl-license, ament-cmake-ros, ament-lint-auto, ecl-mpl }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-license, ament-lint-common, ecl-mpl, ecl-concepts, ament-cmake-gtest, ecl-build, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-ecl-utilities";
   version = "1.0.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-build ecl-license ecl-concepts ecl-mpl ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ ecl-license ecl-concepts ecl-mpl ];
+  buildInputs = [ ecl-license ecl-mpl ecl-concepts ecl-build ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ ecl-license ecl-mpl ecl-concepts ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

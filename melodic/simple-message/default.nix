@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, industrial-msgs, catkin, rosunit, roscpp }:
+{ lib, buildRosPackage, fetchurl, industrial-msgs, catkin, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-simple-message";
   version = "0.7.1-r1";

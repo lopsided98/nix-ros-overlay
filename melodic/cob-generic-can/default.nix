@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libpcan, catkin, cob-utilities, socketcan-interface, libntcan }:
+{ lib, buildRosPackage, fetchurl, cob-utilities, libntcan, catkin, socketcan-interface, libpcan }:
 buildRosPackage {
   pname = "ros-melodic-cob-generic-can";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libntcan cob-utilities libpcan socketcan-interface ];
-  propagatedBuildInputs = [ libntcan cob-utilities libpcan socketcan-interface ];
+  buildInputs = [ libntcan cob-utilities socketcan-interface libpcan ];
+  propagatedBuildInputs = [ libntcan cob-utilities socketcan-interface libpcan ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

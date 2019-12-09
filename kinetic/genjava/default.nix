@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosjava-build-tools, catkin, pythonPackages, rosjava-bootstrap, genmsg }:
+{ lib, buildRosPackage, fetchurl, rosjava-bootstrap, genmsg, pythonPackages, catkin, rosjava-build-tools }:
 buildRosPackage {
   pname = "ros-kinetic-genjava";
   version = "0.3.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosjava-build-tools pythonPackages.rospkg rosjava-bootstrap genmsg pythonPackages.catkin-pkg ];
-  propagatedBuildInputs = [ rosjava-build-tools pythonPackages.rospkg rosjava-bootstrap genmsg pythonPackages.catkin-pkg ];
+  buildInputs = [ rosjava-bootstrap genmsg pythonPackages.rospkg rosjava-build-tools pythonPackages.catkin-pkg ];
+  propagatedBuildInputs = [ rosjava-bootstrap genmsg pythonPackages.rospkg rosjava-build-tools pythonPackages.catkin-pkg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

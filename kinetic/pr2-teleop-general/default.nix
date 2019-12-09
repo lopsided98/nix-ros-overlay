@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, polled-camera, actionlib, tf, geometry-msgs, pr2-controller-manager, angles, pr2-msgs, pr2-controllers-msgs, pr2-mechanism-msgs, ps3joy, pr2-common-action-msgs, catkin, urdf, moveit-msgs, roscpp, pr2-arm-kinematics, sensor-msgs, pr2-mannequin-mode, pr2-tuck-arms-action }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, tf, actionlib-msgs, pr2-common-action-msgs, sensor-msgs, pr2-mechanism-msgs, pr2-msgs, catkin, pr2-arm-kinematics, pr2-mannequin-mode, pr2-tuck-arms-action, ps3joy, roscpp, angles, actionlib, moveit-msgs, pr2-controllers-msgs, polled-camera, pr2-controller-manager }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-teleop-general";
   version = "0.6.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs pr2-mechanism-msgs ps3joy angles actionlib-msgs pr2-common-action-msgs sensor-msgs polled-camera roscpp pr2-controller-manager urdf actionlib moveit-msgs pr2-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs polled-camera actionlib tf geometry-msgs pr2-controller-manager angles pr2-msgs pr2-controllers-msgs pr2-mechanism-msgs ps3joy pr2-common-action-msgs urdf moveit-msgs roscpp pr2-arm-kinematics sensor-msgs pr2-mannequin-mode pr2-tuck-arms-action ];
+  buildInputs = [ sensor-msgs geometry-msgs urdf pr2-msgs actionlib tf roscpp pr2-common-action-msgs actionlib-msgs moveit-msgs ps3joy angles pr2-controllers-msgs polled-camera pr2-controller-manager pr2-mechanism-msgs ];
+  propagatedBuildInputs = [ geometry-msgs urdf tf actionlib-msgs pr2-common-action-msgs sensor-msgs pr2-mechanism-msgs pr2-msgs pr2-arm-kinematics pr2-mannequin-mode pr2-tuck-arms-action roscpp ps3joy angles actionlib moveit-msgs pr2-controllers-msgs polled-camera pr2-controller-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

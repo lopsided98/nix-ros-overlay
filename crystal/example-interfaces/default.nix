@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, action-msgs, rosidl-default-generators, rosidl-default-runtime, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, rosidl-default-generators, action-msgs, ament-cmake }:
 buildRosPackage {
   pname = "ros-crystal-example-interfaces";
   version = "0.6.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ action-msgs ];
-  propagatedBuildInputs = [ action-msgs rosidl-default-runtime ];
+  propagatedBuildInputs = [ rosidl-default-runtime action-msgs ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

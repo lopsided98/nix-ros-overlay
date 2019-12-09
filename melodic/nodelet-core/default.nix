@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, nodelet, nodelet-topic-tools }:
+{ lib, buildRosPackage, fetchurl, nodelet-topic-tools, catkin, nodelet }:
 buildRosPackage {
   pname = "ros-melodic-nodelet-core";
   version = "1.9.16";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ nodelet nodelet-topic-tools ];
+  propagatedBuildInputs = [ nodelet-topic-tools nodelet ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

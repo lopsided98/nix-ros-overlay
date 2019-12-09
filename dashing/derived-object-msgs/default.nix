@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, shape-msgs, ament-cmake, ament-lint-common, rosidl-default-generators, radar-msgs, std-msgs, rosidl-default-runtime, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, rosidl-default-runtime, std-msgs, shape-msgs, ament-lint-common, ament-cmake, rosidl-default-generators, builtin-interfaces, radar-msgs }:
 buildRosPackage {
   pname = "ros-dashing-derived-object-msgs";
   version = "3.0.0-r2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces shape-msgs radar-msgs std-msgs geometry-msgs ];
+  buildInputs = [ geometry-msgs std-msgs shape-msgs builtin-interfaces radar-msgs ];
   checkInputs = [ ament-lint-common ];
-  propagatedBuildInputs = [ builtin-interfaces shape-msgs radar-msgs std-msgs rosidl-default-runtime geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs rosidl-default-runtime std-msgs shape-msgs builtin-interfaces radar-msgs ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

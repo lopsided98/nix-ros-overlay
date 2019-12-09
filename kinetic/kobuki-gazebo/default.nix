@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, kobuki-gazebo-plugins, kobuki-random-walker, catkin, kobuki-safety-controller, gazebo-plugins, robot-state-publisher, kobuki-description, yocs-cmd-vel-mux }:
+{ lib, buildRosPackage, fetchurl, kobuki-description, kobuki-random-walker, robot-state-publisher, kobuki-safety-controller, catkin, yocs-cmd-vel-mux, kobuki-gazebo-plugins, gazebo-ros, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-gazebo";
   version = "0.5.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gazebo-ros kobuki-gazebo-plugins kobuki-random-walker kobuki-safety-controller gazebo-plugins robot-state-publisher kobuki-description yocs-cmd-vel-mux ];
+  propagatedBuildInputs = [ kobuki-description robot-state-publisher kobuki-safety-controller gazebo-ros yocs-cmd-vel-mux kobuki-gazebo-plugins kobuki-random-walker gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

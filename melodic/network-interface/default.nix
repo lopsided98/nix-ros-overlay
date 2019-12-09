@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, message-generation, message-runtime, std-msgs, rosunit }:
+{ lib, buildRosPackage, fetchurl, message-generation, std-msgs, catkin, roslint, rosunit, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-network-interface";
   version = "2.1.0";

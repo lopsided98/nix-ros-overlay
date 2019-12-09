@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosmaster, boost, catkin, rosgraph, rospy, roslaunch, rosunit }:
+{ lib, buildRosPackage, fetchurl, boost, rosmaster, rosgraph, catkin, rosunit, rospy, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-rostest";
   version = "1.14.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosunit boost ];
-  propagatedBuildInputs = [ rosmaster boost rosgraph rospy roslaunch rosunit ];
+  buildInputs = [ boost rosunit ];
+  propagatedBuildInputs = [ boost rosmaster rosgraph rosunit rospy roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

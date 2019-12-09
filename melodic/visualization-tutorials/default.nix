@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, librviz-tutorial, visualization-marker-tutorials, catkin, interactive-marker-tutorials, rviz-python-tutorial, rviz-plugin-tutorials }:
+{ lib, buildRosPackage, fetchurl, rviz-plugin-tutorials, visualization-marker-tutorials, catkin, interactive-marker-tutorials, librviz-tutorial, rviz-python-tutorial }:
 buildRosPackage {
   pname = "ros-melodic-visualization-tutorials";
   version = "0.10.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ librviz-tutorial visualization-marker-tutorials interactive-marker-tutorials rviz-python-tutorial rviz-plugin-tutorials ];
+  propagatedBuildInputs = [ rviz-plugin-tutorials visualization-marker-tutorials interactive-marker-tutorials librviz-tutorial rviz-python-tutorial ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

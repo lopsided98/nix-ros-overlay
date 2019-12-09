@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mm-messages, nanomsg, ecl-formatters, ecl-utilities, ecl-command-line, catkin, ecl-threads, ecl-containers, ecl-build, ecl-time, mm-core-msgs }:
+{ lib, buildRosPackage, fetchurl, ecl-time, ecl-formatters, mm-core-msgs, catkin, ecl-utilities, ecl-containers, ecl-command-line, nanomsg, ecl-threads, ecl-build, mm-messages }:
 buildRosPackage {
   pname = "ros-kinetic-mm-mux-demux";
   version = "0.2.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mm-messages nanomsg ecl-formatters ecl-utilities ecl-command-line ecl-build ecl-threads ecl-time ecl-containers mm-core-msgs ];
-  propagatedBuildInputs = [ mm-messages nanomsg ecl-formatters ecl-utilities ecl-command-line ecl-threads ecl-time ecl-build ecl-containers mm-core-msgs ];
+  buildInputs = [ ecl-time ecl-formatters mm-core-msgs ecl-utilities ecl-containers ecl-command-line nanomsg ecl-threads ecl-build mm-messages ];
+  propagatedBuildInputs = [ ecl-time ecl-formatters mm-core-msgs ecl-utilities ecl-containers ecl-command-line nanomsg ecl-threads ecl-build mm-messages ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

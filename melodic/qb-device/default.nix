@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qb-device-bringup, qb-device-description, catkin, qb-device-msgs, qb-device-srvs, qb-device-driver, qb-device-control, qb-device-hardware-interface }:
+{ lib, buildRosPackage, fetchurl, qb-device-control, catkin, qb-device-bringup, qb-device-srvs, qb-device-hardware-interface, qb-device-description, qb-device-msgs, qb-device-driver }:
 buildRosPackage {
   pname = "ros-melodic-qb-device";
   version = "2.0.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ qb-device-bringup qb-device-description qb-device-msgs qb-device-srvs qb-device-driver qb-device-control qb-device-hardware-interface ];
+  propagatedBuildInputs = [ qb-device-driver qb-device-bringup qb-device-srvs qb-device-hardware-interface qb-device-description qb-device-msgs qb-device-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

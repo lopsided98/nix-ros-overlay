@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, ament-cmake, gazebo-plugins, gazebo-dev, gazebo-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, gazebo-msgs, gazebo-ros, gazebo-plugins, gazebo-dev }:
 buildRosPackage {
   pname = "ros-dashing-gazebo-ros-pkgs";
   version = "3.3.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ gazebo-plugins gazebo-ros gazebo-msgs gazebo-dev ];
+  propagatedBuildInputs = [ gazebo-ros gazebo-msgs gazebo-plugins gazebo-dev ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

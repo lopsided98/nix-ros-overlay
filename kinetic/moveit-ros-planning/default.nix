@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, cmake-modules, tf, srdfdom, catkin, message-filters, eigen-conversions, urdf, tf-conversions, moveit-core, actionlib, moveit-ros-perception, moveit-msgs, dynamic-reconfigure, roscpp, chomp-motion-planner, eigen }:
+{ lib, buildRosPackage, fetchurl, moveit-core, message-filters, srdfdom, urdf, eigen-conversions, dynamic-reconfigure, pluginlib, tf, catkin, actionlib, cmake-modules, moveit-ros-perception, eigen, chomp-motion-planner, moveit-msgs, roscpp, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-planning";
   version = "0.9.17-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib cmake-modules srdfdom message-filters roscpp actionlib moveit-core urdf dynamic-reconfigure moveit-ros-perception moveit-msgs eigen-conversions tf tf-conversions chomp-motion-planner eigen ];
-  propagatedBuildInputs = [ pluginlib message-filters eigen-conversions moveit-core tf-conversions actionlib moveit-ros-perception moveit-msgs dynamic-reconfigure tf chomp-motion-planner ];
+  buildInputs = [ moveit-core message-filters srdfdom urdf eigen-conversions dynamic-reconfigure pluginlib actionlib tf cmake-modules moveit-ros-perception eigen chomp-motion-planner moveit-msgs roscpp tf-conversions ];
+  propagatedBuildInputs = [ moveit-core message-filters dynamic-reconfigure eigen-conversions pluginlib actionlib tf moveit-ros-perception chomp-motion-planner moveit-msgs tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

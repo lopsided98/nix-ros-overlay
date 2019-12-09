@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, connext-cmake-module, rosidl-cmake, ament-lint-auto, rcutils, rmw }:
+{ lib, buildRosPackage, fetchurl, rosidl-cmake, rcutils, ament-lint-common, ament-cmake, rmw, connext-cmake-module, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-rmw-connext-shared-cpp";
   version = "0.6.1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ connext-cmake-module rcutils rmw ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
   propagatedBuildInputs = [ connext-cmake-module ament-cmake ];
   nativeBuildInputs = [ rosidl-cmake ament-cmake ];
 

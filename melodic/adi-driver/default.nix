@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, roslint, sensor-msgs, catkin, rostest, rviz-imu-plugin, rviz, rqt-plot, roslaunch, roscpp, imu-filter-madgwick, xacro }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, xacro, rqt-plot, std-srvs, catkin, rviz-imu-plugin, roslint, roscpp, rviz, imu-filter-madgwick, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-melodic-adi-driver";
   version = "1.0.3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs sensor-msgs roscpp roslint ];
-  checkInputs = [ rostest roslaunch ];
-  propagatedBuildInputs = [ std-srvs sensor-msgs rviz-imu-plugin rviz rqt-plot roscpp imu-filter-madgwick xacro ];
+  buildInputs = [ sensor-msgs std-srvs roscpp roslint ];
+  checkInputs = [ roslaunch rostest ];
+  propagatedBuildInputs = [ sensor-msgs xacro rqt-plot imu-filter-madgwick std-srvs rviz-imu-plugin rviz roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

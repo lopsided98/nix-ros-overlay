@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rr-control-input-manager, catkin, rr-openrover-driver-msgs, rr-openrover-driver }:
+{ lib, buildRosPackage, fetchurl, rr-openrover-driver-msgs, rr-control-input-manager, catkin, rr-openrover-driver }:
 buildRosPackage {
   pname = "ros-kinetic-rr-openrover-stack";
   version = "0.7.3-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rr-control-input-manager rr-openrover-driver rr-openrover-driver-msgs ];
+  propagatedBuildInputs = [ rr-openrover-driver-msgs rr-control-input-manager rr-openrover-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

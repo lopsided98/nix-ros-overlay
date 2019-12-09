@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, ros-control, catkin, pepper-description, gazebo-plugins, pepper-control, gazebo-ros-control, ros-controllers }:
+{ lib, buildRosPackage, fetchurl, catkin, ros-control, pepper-control, ros-controllers, gazebo-ros-control, gazebo-ros, pepper-description, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-pepper-gazebo-plugin";
   version = "0.0.4";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ gazebo-ros pepper-description ];
-  propagatedBuildInputs = [ gazebo-ros ros-control pepper-description gazebo-plugins pepper-control gazebo-ros-control ros-controllers ];
+  propagatedBuildInputs = [ ros-control pepper-control gazebo-ros-control ros-controllers gazebo-ros pepper-description gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

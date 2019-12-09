@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, lz4, rclcpp-components, object-analytics-msgs, ament-cmake, ament-lint-common, pcl, class-loader, cv-bridge, sensor-msgs, ament-cmake-gtest, message-filters, object-msgs, rclcpp, std-msgs, ament-index-python, ament-lint-auto, pcl-conversions, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, class-loader, rclcpp-components, std-msgs, ament-lint-common, object-msgs, pcl, ament-cmake, cv-bridge, pcl-conversions, ament-cmake-gtest, object-analytics-msgs, lz4, rclcpp, ament-index-python, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-object-analytics-node";
   version = "0.5.4-r2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ lz4 object-analytics-msgs pcl-conversions class-loader sensor-msgs message-filters cv-bridge pcl object-msgs rclcpp rclcpp-components geometry-msgs ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ lz4 object-analytics-msgs pcl class-loader sensor-msgs message-filters cv-bridge object-msgs rclcpp std-msgs ament-index-python pcl-conversions geometry-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs rclcpp-components object-msgs pcl object-analytics-msgs cv-bridge pcl-conversions class-loader lz4 rclcpp ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs class-loader std-msgs object-msgs pcl cv-bridge pcl-conversions object-analytics-msgs lz4 rclcpp ament-index-python ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-collision-monitor, cob-moveit-bringup, cob-obstacle-distance-moveit, cob-moveit-interface, catkin, cob-pick-place-action, cob-lookat-action, cob-grasp-generation }:
+{ lib, buildRosPackage, fetchurl, cob-lookat-action, cob-collision-monitor, cob-pick-place-action, catkin, cob-moveit-bringup, cob-grasp-generation, cob-obstacle-distance-moveit, cob-moveit-interface }:
 buildRosPackage {
   pname = "ros-kinetic-cob-manipulation";
   version = "0.7.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-collision-monitor cob-moveit-bringup cob-obstacle-distance-moveit cob-moveit-interface cob-pick-place-action cob-lookat-action cob-grasp-generation ];
+  propagatedBuildInputs = [ cob-lookat-action cob-collision-monitor cob-pick-place-action cob-moveit-bringup cob-grasp-generation cob-obstacle-distance-moveit cob-moveit-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

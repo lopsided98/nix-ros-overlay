@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, SDL, ament-cmake, SDL_image, ament-lint-common, launch-testing, nav2-msgs, ament-cmake-gtest, launch, tf2-ros, nav2-common, tf2, nav-msgs, rclcpp, ament-lint-auto, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, tf2-ros, ament-cmake-pytest, geometry-msgs, nav-msgs, SDL_image, launch, SDL, launch-testing, ament-lint-common, ament-cmake, ament-cmake-gtest, nav2-common, tf2, rclcpp, nav2-msgs, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-nav2-util";
   version = "0.1.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ SDL SDL_image nav2-msgs tf2-ros nav2-common tf2 nav-msgs rclcpp geometry-msgs ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ SDL SDL_image nav2-msgs tf2-ros tf2 nav-msgs rclcpp geometry-msgs ];
+  buildInputs = [ SDL_image geometry-msgs nav-msgs SDL nav2-common tf2 rclcpp nav2-msgs tf2-ros ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ SDL_image geometry-msgs nav-msgs SDL tf2 rclcpp nav2-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

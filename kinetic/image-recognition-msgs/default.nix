@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-generation ];
-  propagatedBuildInputs = [ sensor-msgs message-generation ];
+  buildInputs = [ message-generation sensor-msgs ];
+  propagatedBuildInputs = [ message-generation sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-auto-docking, catkin, nodelet, kobuki-random-walker }:
+{ lib, buildRosPackage, fetchurl, kobuki-random-walker, catkin, nodelet, kobuki-auto-docking }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-rapps";
   version = "0.7.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ kobuki-auto-docking nodelet kobuki-random-walker ];
+  propagatedBuildInputs = [ kobuki-random-walker nodelet kobuki-auto-docking ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

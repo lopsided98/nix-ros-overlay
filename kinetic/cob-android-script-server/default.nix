@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-script-server, catkin, cob-android-msgs, rospy }:
+{ lib, buildRosPackage, fetchurl, rospy, cob-script-server, catkin, cob-android-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-android-script-server";
   version = "0.1.6-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-script-server cob-android-msgs rospy ];
+  propagatedBuildInputs = [ rospy cob-script-server cob-android-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

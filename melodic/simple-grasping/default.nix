@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, shape-msgs, cmake-modules, moveit-python, sensor-msgs, catkin, roscpp, message-generation, actionlib, message-runtime, vtkWithQt4, moveit-msgs, tf, pcl-ros, grasping-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, geometry-msgs, moveit-python, tf, actionlib, shape-msgs, grasping-msgs, vtkWithQt4, cmake-modules, catkin, moveit-msgs, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-simple-grasping";
   version = "0.3.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ shape-msgs cmake-modules sensor-msgs roscpp message-generation actionlib vtkWithQt4 moveit-msgs tf pcl-ros grasping-msgs geometry-msgs ];
-  propagatedBuildInputs = [ shape-msgs moveit-python sensor-msgs roscpp vtkWithQt4 message-runtime actionlib moveit-msgs tf pcl-ros grasping-msgs geometry-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs geometry-msgs actionlib shape-msgs tf cmake-modules vtkWithQt4 grasping-msgs moveit-msgs roscpp message-generation ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs geometry-msgs moveit-python tf actionlib shape-msgs grasping-msgs vtkWithQt4 moveit-msgs roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

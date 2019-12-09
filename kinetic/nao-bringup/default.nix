@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, naoqi-pose, naoqi-driver-py, nao-description, robot-state-publisher, naoqi-sensors-py, naoqi-driver, diagnostic-aggregator }:
+{ lib, buildRosPackage, fetchurl, naoqi-sensors-py, diagnostic-aggregator, robot-state-publisher, naoqi-driver-py, catkin, nao-description, naoqi-driver, naoqi-pose }:
 buildRosPackage {
   pname = "ros-kinetic-nao-bringup";
   version = "0.5.15";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ naoqi-pose naoqi-sensors-py nao-description robot-state-publisher naoqi-driver-py naoqi-driver diagnostic-aggregator ];
+  propagatedBuildInputs = [ naoqi-sensors-py diagnostic-aggregator robot-state-publisher naoqi-driver-py nao-description naoqi-driver naoqi-pose ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

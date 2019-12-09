@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, controller-manager, gazebo-ros-control, joint-state-controller, catkin, velocity-controllers, cob-default-env-config, rostest, position-controllers, robot-state-publisher, rospy, std-msgs, roslaunch, tf, joint-state-publisher, xacro, gazebo-msgs }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, controller-manager, robot-state-publisher, std-msgs, cob-default-env-config, position-controllers, tf, catkin, velocity-controllers, gazebo-msgs, gazebo-ros-control, gazebo-ros, rospy, roslaunch, rostest, joint-state-controller }:
 buildRosPackage {
   pname = "ros-kinetic-cob-gazebo-worlds";
   version = "0.7.3-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  checkInputs = [ rostest cob-default-env-config ];
-  propagatedBuildInputs = [ gazebo-ros controller-manager joint-state-controller gazebo-msgs velocity-controllers cob-default-env-config position-controllers robot-state-publisher rospy std-msgs roslaunch tf joint-state-publisher xacro gazebo-ros-control ];
+  checkInputs = [ cob-default-env-config rostest ];
+  propagatedBuildInputs = [ joint-state-publisher xacro controller-manager robot-state-publisher std-msgs position-controllers cob-default-env-config tf gazebo-msgs gazebo-ros-control gazebo-ros rospy roslaunch joint-state-controller velocity-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

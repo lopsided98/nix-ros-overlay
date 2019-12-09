@@ -1,0 +1,26 @@
+
+# Copyright 2019 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, image-transport, cv-bridge, ament-cmake }:
+buildRosPackage {
+  pname = "ros-eloquent-compressed-depth-image-transport";
+  version = "2.2.1-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/eloquent/compressed_depth_image_transport/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "f03566ecd78c02373709564742d2afd9d48feafc5abd01cf78a376517f5da626";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ image-transport cv-bridge ];
+  propagatedBuildInputs = [ image-transport cv-bridge ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = ''Compressed_depth_image_transport provides a plugin to image_transport for transparently sending
+    depth images (raw, floating-point) using PNG compression.'';
+    license = with lib.licenses; [ bsdOriginal ];
+  };
+}

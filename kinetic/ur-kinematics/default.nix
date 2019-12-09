@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, pluginlib, boost, catkin, moveit-kinematics, moveit-core, rospy, tf-conversions, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, moveit-core, boost, geometry-msgs, pluginlib, catkin, roscpp, moveit-ros-planning, moveit-kinematics, rospy, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-ur-kinematics";
-  version = "1.2.5";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_kinematics/1.2.5-0.tar.gz";
-    name = "1.2.5-0.tar.gz";
-    sha256 = "e40c7d24ab7ecf1e7eabfa39319d47c88d07580e506b700d8f1bacb9e6e42950";
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/kinetic/ur_kinematics/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "fdcfda231da8539f5f9703cf7629108bb9de9455d179abc5903a63ebbcfa2464";
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-planning pluginlib boost moveit-kinematics moveit-core tf-conversions roscpp geometry-msgs ];
-  propagatedBuildInputs = [ moveit-ros-planning pluginlib boost moveit-kinematics moveit-core rospy tf-conversions roscpp geometry-msgs ];
+  buildInputs = [ moveit-core boost geometry-msgs pluginlib moveit-ros-planning roscpp moveit-kinematics tf-conversions ];
+  propagatedBuildInputs = [ moveit-core boost geometry-msgs pluginlib moveit-ros-planning roscpp moveit-kinematics rospy tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

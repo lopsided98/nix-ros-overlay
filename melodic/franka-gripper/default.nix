@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, actionlib-msgs, sensor-msgs, catkin, message-generation, message-runtime, xmlrpcpp, actionlib, libfranka, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, libfranka, actionlib, catkin, actionlib-msgs, roscpp, message-runtime, xmlrpcpp, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-franka-gripper";
   version = "0.6.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs control-msgs sensor-msgs message-generation xmlrpcpp actionlib libfranka roscpp ];
-  propagatedBuildInputs = [ actionlib-msgs control-msgs sensor-msgs message-generation message-runtime xmlrpcpp actionlib libfranka roscpp ];
+  buildInputs = [ sensor-msgs libfranka actionlib actionlib-msgs roscpp message-generation xmlrpcpp control-msgs ];
+  propagatedBuildInputs = [ sensor-msgs libfranka message-runtime actionlib actionlib-msgs roscpp message-generation xmlrpcpp control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

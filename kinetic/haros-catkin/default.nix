@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cccc, catkin, catkin-virtualenv, cppcheck }:
+{ lib, buildRosPackage, fetchurl, cppcheck, cccc, catkin, catkin-virtualenv }:
 buildRosPackage {
   pname = "ros-kinetic-haros-catkin";
   version = "0.1.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin-virtualenv ];
-  propagatedBuildInputs = [ cccc cppcheck ];
+  propagatedBuildInputs = [ cppcheck cccc ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

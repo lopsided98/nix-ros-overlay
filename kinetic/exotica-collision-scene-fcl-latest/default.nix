@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, exotica-core, fcl-catkin, geometric-shapes, catkin }:
+{ lib, buildRosPackage, fetchurl, fcl-catkin, catkin, geometric-shapes, exotica-core }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-collision-scene-fcl-latest";
   version = "5.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ exotica-core fcl-catkin geometric-shapes ];
-  propagatedBuildInputs = [ exotica-core fcl-catkin geometric-shapes ];
+  buildInputs = [ fcl-catkin geometric-shapes exotica-core ];
+  propagatedBuildInputs = [ fcl-catkin geometric-shapes exotica-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

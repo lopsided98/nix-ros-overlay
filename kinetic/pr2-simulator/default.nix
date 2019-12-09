@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-gazebo-plugins, pr2-gazebo, catkin, pr2-controller-configuration-gazebo }:
+{ lib, buildRosPackage, fetchurl, pr2-gazebo-plugins, pr2-controller-configuration-gazebo, catkin, pr2-gazebo }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-simulator";
   version = "2.0.11";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-gazebo-plugins pr2-gazebo pr2-controller-configuration-gazebo ];
+  propagatedBuildInputs = [ pr2-gazebo-plugins pr2-controller-configuration-gazebo pr2-gazebo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

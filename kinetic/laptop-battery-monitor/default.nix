@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-msgs, sensor-msgs, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, diagnostic-msgs, rospy, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-laptop-battery-monitor";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs sensor-msgs ];
-  propagatedBuildInputs = [ diagnostic-msgs sensor-msgs rospy ];
+  buildInputs = [ sensor-msgs diagnostic-msgs ];
+  propagatedBuildInputs = [ sensor-msgs rospy diagnostic-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

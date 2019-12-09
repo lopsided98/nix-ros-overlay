@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rcpputils, ament-cmake, ament-lint-common, fastrtps, rmw-fastrtps-shared-cpp, rosidl-typesupport-introspection-c, rosidl-typesupport-fastrtps-c, rosidl-typesupport-introspection-cpp, ament-cmake-ros, rosidl-typesupport-fastrtps-cpp, fastcdr, ament-lint-auto, rcutils, fastrtps-cmake-module, rmw, rosidl-generator-c }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rcutils, fastrtps-cmake-module, rmw-fastrtps-shared-cpp, ament-cmake, ament-lint-common, fastcdr, rcpputils, rosidl-typesupport-introspection-c, rosidl-typesupport-fastrtps-cpp, rosidl-typesupport-introspection-cpp, fastrtps, rmw, rosidl-generator-c, rosidl-typesupport-fastrtps-c, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rmw-fastrtps-dynamic-cpp";
   version = "0.7.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcpputils fastrtps rmw-fastrtps-shared-cpp rosidl-typesupport-introspection-c rosidl-typesupport-fastrtps-c rosidl-typesupport-introspection-cpp rosidl-typesupport-fastrtps-cpp fastcdr rcutils fastrtps-cmake-module rmw rosidl-generator-c ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ rcpputils ament-cmake fastrtps rmw-fastrtps-shared-cpp rosidl-typesupport-introspection-c rosidl-typesupport-fastrtps-c rosidl-typesupport-introspection-cpp rosidl-typesupport-fastrtps-cpp fastcdr rcutils fastrtps-cmake-module rmw rosidl-generator-c ];
+  buildInputs = [ rcutils fastrtps-cmake-module rmw-fastrtps-shared-cpp fastcdr rcpputils rosidl-typesupport-introspection-c rosidl-typesupport-introspection-cpp rmw fastrtps rosidl-typesupport-fastrtps-cpp rosidl-generator-c rosidl-typesupport-fastrtps-c ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ rcutils fastrtps-cmake-module rmw-fastrtps-shared-cpp ament-cmake fastcdr rcpputils rosidl-typesupport-introspection-c rosidl-typesupport-introspection-cpp rmw fastrtps rosidl-typesupport-fastrtps-cpp rosidl-generator-c rosidl-typesupport-fastrtps-c ];
   nativeBuildInputs = [ fastrtps-cmake-module ament-cmake-ros ];
 
   meta = {

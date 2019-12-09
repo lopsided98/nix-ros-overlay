@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, ament-cmake-gtest, autoware-auto-msgs, autoware-auto-helper-functions, ament-lint-auto, autoware-auto-cmake, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, autoware-auto-msgs, ament-lint-common, ament-cmake, autoware-auto-helper-functions, autoware-auto-cmake, ament-cmake-gtest, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-autoware-auto-geometry";
   version = "0.0.2-r1";
@@ -15,9 +15,9 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ autoware-auto-msgs autoware-auto-helper-functions geometry-msgs ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
   propagatedBuildInputs = [ autoware-auto-msgs autoware-auto-helper-functions geometry-msgs ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''Geometry related algorithms'';

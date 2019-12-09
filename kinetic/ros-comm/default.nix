@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, ros, rosout, rosservice, rosgraph-msgs, rosgraph, rospy, message-filters, roslaunch, std-srvs, rosmaster, roswtf, rosbag, rosmsg, catkin, xmlrpcpp, roscpp, rosnode, rosparam, roslisp, rostest, rostopic, topic-tools }:
+{ lib, buildRosPackage, fetchurl, rosgraph, ros, rostest, rosmsg, rostopic, rosparam, roswtf, rosbag, rosconsole, xmlrpcpp, message-filters, roslisp, rosmaster, std-srvs, catkin, roscpp, rosout, topic-tools, rospy, rosgraph-msgs, roslaunch, rosnode, rosservice }:
 buildRosPackage {
   pname = "ros-kinetic-ros-comm";
   version = "1.12.14";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosconsole ros rosout rosservice rosgraph-msgs rosgraph rospy message-filters roslaunch std-srvs rosmaster roswtf rosbag rosmsg xmlrpcpp roscpp rosnode rosparam roslisp rostest rostopic topic-tools ];
+  propagatedBuildInputs = [ rosgraph ros rostest rosmsg rostopic rosparam roswtf rosbag xmlrpcpp rosconsole message-filters roslisp rosmaster std-srvs roscpp rosout topic-tools rospy roslaunch rosgraph-msgs rosnode rosservice ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

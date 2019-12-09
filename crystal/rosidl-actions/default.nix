@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, pythonPackages, rosidl-parser, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, pythonPackages, ament-lint-common, ament-cmake, ament-lint-auto, ament-cmake-pytest, rosidl-parser }:
 buildRosPackage {
   pname = "ros-crystal-rosidl-actions";
   version = "0.6.3";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ rosidl-parser ];
-  checkInputs = [ ament-lint-auto ament-cmake-pytest pythonPackages.pytest ament-lint-common ];
+  checkInputs = [ pythonPackages.pytest ament-lint-common ament-lint-auto ament-cmake-pytest ];
   propagatedBuildInputs = [ rosidl-parser ];
   nativeBuildInputs = [ ament-cmake ];
 

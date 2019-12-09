@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, camera-info-manager, image-transport, sensor-msgs, cv-bridge, catkin, rostest, nodelet, roscpp, opencv3 }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, camera-info-manager, catkin, roslint, image-transport, cv-bridge, nodelet, roscpp, rostest, opencv3 }:
 buildRosPackage {
   pname = "ros-kinetic-cv-camera";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint camera-info-manager image-transport sensor-msgs cv-bridge roscpp rostest nodelet opencv3 ];
-  propagatedBuildInputs = [ camera-info-manager image-transport sensor-msgs cv-bridge nodelet roscpp opencv3 ];
+  buildInputs = [ sensor-msgs camera-info-manager roslint image-transport cv-bridge nodelet roscpp rostest opencv3 ];
+  propagatedBuildInputs = [ sensor-msgs camera-info-manager roscpp image-transport cv-bridge nodelet opencv3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

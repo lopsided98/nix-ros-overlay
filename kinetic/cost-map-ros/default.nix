@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, grid-map-core, costmap-2d, ecl-console, boost, grid-map-visualization, ecl-command-line, libyamlcpp, cost-map-msgs, opencv3, catkin, grid-map-costmap-2d, ecl-build, nav-msgs, grid-map-ros, roslib, cost-map-core }:
+{ lib, buildRosPackage, fetchurl, boost, cost-map-msgs, catkin, roslib, grid-map-ros, costmap-2d, ecl-command-line, grid-map-core, libyamlcpp, cost-map-core, ecl-console, opencv3, grid-map-visualization, grid-map-costmap-2d, nav-msgs, ecl-build }:
 buildRosPackage {
   pname = "ros-kinetic-cost-map-ros";
   version = "0.3.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ grid-map-core ecl-console costmap-2d boost grid-map-visualization ecl-command-line libyamlcpp cost-map-msgs grid-map-costmap-2d ecl-build roslib nav-msgs grid-map-ros cost-map-core opencv3 ];
-  propagatedBuildInputs = [ grid-map-core ecl-console costmap-2d grid-map-visualization boost ecl-command-line libyamlcpp cost-map-msgs grid-map-costmap-2d ecl-build roslib grid-map-ros nav-msgs cost-map-core opencv3 ];
+  buildInputs = [ boost cost-map-msgs roslib grid-map-ros libyamlcpp ecl-command-line grid-map-core ecl-console cost-map-core costmap-2d opencv3 grid-map-visualization grid-map-costmap-2d nav-msgs ecl-build ];
+  propagatedBuildInputs = [ boost cost-map-msgs roslib grid-map-ros libyamlcpp ecl-command-line grid-map-core ecl-console cost-map-core costmap-2d opencv3 grid-map-visualization grid-map-costmap-2d nav-msgs ecl-build ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

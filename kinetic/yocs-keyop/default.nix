@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ecl-time, ecl-exceptions, ecl-threads, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, ecl-time, std-msgs, catkin, ecl-exceptions, roscpp, ecl-threads }:
 buildRosPackage {
   pname = "ros-kinetic-yocs-keyop";
   version = "0.8.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-time ecl-exceptions ecl-threads std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ ecl-time ecl-exceptions ecl-threads std-msgs roscpp geometry-msgs ];
+  buildInputs = [ ecl-time geometry-msgs std-msgs ecl-exceptions roscpp ecl-threads ];
+  propagatedBuildInputs = [ ecl-time geometry-msgs std-msgs ecl-exceptions roscpp ecl-threads ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

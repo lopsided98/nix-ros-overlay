@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, panda-moveit-config, franka-gripper, franka-description, catkin, franka-control, franka-msgs, franka-example-controllers, franka-hw, franka-visualization }:
+{ lib, buildRosPackage, fetchurl, franka-control, franka-gripper, catkin, franka-hw, franka-description, franka-msgs, franka-visualization, panda-moveit-config, franka-example-controllers }:
 buildRosPackage {
   pname = "ros-kinetic-franka-ros";
   version = "0.6.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ panda-moveit-config franka-description franka-gripper franka-control franka-msgs franka-example-controllers franka-hw franka-visualization ];
+  propagatedBuildInputs = [ franka-gripper franka-control franka-hw franka-description franka-msgs franka-visualization panda-moveit-config franka-example-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

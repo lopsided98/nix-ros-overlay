@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, roslaunch, catkin, robot-state-publisher }:
+{ lib, buildRosPackage, fetchurl, robot-state-publisher, gazebo-ros, roslaunch, catkin }:
 buildRosPackage {
   pname = "ros-melodic-igvc-self-drive-gazebo";
   version = "0.1.4-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros robot-state-publisher ];
+  propagatedBuildInputs = [ robot-state-publisher gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

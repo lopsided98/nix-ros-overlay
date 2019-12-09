@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-gazebo-plugins, kobuki-dashboard, kobuki-gazebo, catkin, kobuki-qtestsuite, kobuki-rviz-launchers }:
+{ lib, buildRosPackage, fetchurl, kobuki-dashboard, kobuki-rviz-launchers, catkin, kobuki-gazebo, kobuki-gazebo-plugins, kobuki-qtestsuite }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-desktop";
   version = "0.5.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ kobuki-gazebo-plugins kobuki-dashboard kobuki-gazebo kobuki-qtestsuite kobuki-rviz-launchers ];
+  propagatedBuildInputs = [ kobuki-dashboard kobuki-rviz-launchers kobuki-gazebo kobuki-gazebo-plugins kobuki-qtestsuite ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

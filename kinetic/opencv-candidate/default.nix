@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cv-bridge }:
+{ lib, buildRosPackage, fetchurl, cv-bridge, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-opencv-candidate";
   version = "0.2.5";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, serial, message-generation, message-runtime, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-runtime, serial, catkin, roslint, roscpp, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-um7";
   version = "0.0.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp sensor-msgs message-generation serial ];
+  buildInputs = [ message-generation sensor-msgs serial roscpp ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ sensor-msgs roscpp message-runtime serial ];
+  propagatedBuildInputs = [ sensor-msgs serial message-runtime roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

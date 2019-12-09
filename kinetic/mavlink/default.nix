@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, catkin, cmake, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, cmake, python, pythonPackages, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-mavlink";
-  version = "2019.10.10-r1";
+  version = "2019.11.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2019.10.10-1.tar.gz";
-    name = "2019.10.10-1.tar.gz";
-    sha256 = "9408367d33a7c676b8142376fdf06bab3efce3bc341a8dc48be793e19574bca0";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2019.11.11-1.tar.gz";
+    name = "2019.11.11-1.tar.gz";
+    sha256 = "f92fa26efd2a54744f0950af5ff536968f3ac00f75703696899db70851d25790";
   };
 
   buildType = "cmake";
-  buildInputs = [ pythonPackages.future python pythonPackages.lxml pythonPackages.setuptools ];
+  buildInputs = [ pythonPackages.lxml pythonPackages.future python pythonPackages.setuptools ];
   propagatedBuildInputs = [ python catkin ];
   nativeBuildInputs = [ cmake ];
 

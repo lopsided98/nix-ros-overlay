@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, naoqi-libqicore, sensor-msgs, catkin, roscpp, diagnostic-updater, rospy, std-msgs, diagnostic-msgs, tf, naoqi-libqi, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, diagnostic-msgs, geometry-msgs, controller-manager, hardware-interface, std-msgs, tf, catkin, naoqi-libqi, naoqi-libqicore, roscpp, rospy, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-naoqi-dcm-driver";
   version = "0.0.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager hardware-interface naoqi-libqicore sensor-msgs roscpp diagnostic-updater rospy std-msgs diagnostic-msgs tf naoqi-libqi geometry-msgs ];
-  propagatedBuildInputs = [ controller-manager hardware-interface naoqi-libqicore sensor-msgs roscpp rospy std-msgs tf naoqi-libqi geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs diagnostic-msgs controller-manager hardware-interface std-msgs tf roscpp naoqi-libqi naoqi-libqicore diagnostic-updater rospy ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs controller-manager hardware-interface std-msgs tf naoqi-libqi naoqi-libqicore roscpp rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, sensor-msgs, catkin, visp, std-msgs, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, catkin, visp, roscpp, camera-calibration-parsers }:
 buildRosPackage {
   pname = "ros-melodic-visp-bridge";
   version = "0.11.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ camera-calibration-parsers sensor-msgs visp std-msgs roscpp geometry-msgs ];
-  propagatedBuildInputs = [ camera-calibration-parsers sensor-msgs visp std-msgs roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs visp roscpp camera-calibration-parsers ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs visp roscpp camera-calibration-parsers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

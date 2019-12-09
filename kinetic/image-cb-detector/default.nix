@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, image-transport, sensor-msgs, cv-bridge, message-filters, catkin, message-generation, message-runtime, actionlib, std-msgs, roscpp, geometry-msgs, calibration-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, message-filters, geometry-msgs, std-msgs, actionlib, catkin, image-transport, calibration-msgs, cv-bridge, actionlib-msgs, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-image-cb-detector";
   version = "0.10.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs image-transport sensor-msgs cv-bridge message-filters message-generation actionlib std-msgs roscpp geometry-msgs calibration-msgs ];
-  propagatedBuildInputs = [ actionlib-msgs image-transport sensor-msgs cv-bridge message-filters message-runtime actionlib std-msgs roscpp geometry-msgs calibration-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs actionlib image-transport calibration-msgs cv-bridge actionlib-msgs roscpp message-generation ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs actionlib image-transport calibration-msgs cv-bridge actionlib-msgs roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

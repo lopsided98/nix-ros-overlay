@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, shape-msgs, cmake-modules, moveit-python, sensor-msgs, catkin, roscpp, message-generation, message-runtime, actionlib, moveit-msgs, tf, pcl-ros, grasping-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, geometry-msgs, moveit-python, tf, actionlib, shape-msgs, grasping-msgs, cmake-modules, catkin, moveit-msgs, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-simple-grasping";
   version = "0.2.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ shape-msgs cmake-modules sensor-msgs roscpp message-generation actionlib pcl-ros moveit-msgs tf grasping-msgs geometry-msgs ];
-  propagatedBuildInputs = [ shape-msgs moveit-python sensor-msgs roscpp message-runtime actionlib moveit-msgs tf pcl-ros grasping-msgs geometry-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs geometry-msgs actionlib shape-msgs tf cmake-modules grasping-msgs moveit-msgs roscpp message-generation ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs geometry-msgs moveit-python tf actionlib shape-msgs grasping-msgs moveit-msgs roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

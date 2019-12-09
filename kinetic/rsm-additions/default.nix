@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, pluginlib, actionlib-msgs, rsm-msgs, sensor-msgs, catkin, rsm-core, roscpp, move-base-msgs, visualization-msgs, actionlib, std-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, pluginlib, std-srvs, std-msgs, tf, actionlib, catkin, rsm-core, actionlib-msgs, visualization-msgs, roscpp, rsm-msgs, move-base-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rsm-additions";
   version = "1.1.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs pluginlib actionlib-msgs rsm-msgs sensor-msgs rsm-core roscpp move-base-msgs visualization-msgs actionlib std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs pluginlib actionlib-msgs tf rsm-msgs sensor-msgs rsm-core move-base-msgs visualization-msgs actionlib std-msgs roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs pluginlib std-msgs std-srvs actionlib tf rsm-core actionlib-msgs visualization-msgs roscpp rsm-msgs move-base-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs pluginlib std-srvs std-msgs tf actionlib rsm-core actionlib-msgs visualization-msgs roscpp rsm-msgs move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

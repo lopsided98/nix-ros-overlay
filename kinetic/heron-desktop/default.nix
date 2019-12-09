@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, heron-viz, catkin, heron-msgs }:
+{ lib, buildRosPackage, fetchurl, heron-msgs, heron-viz, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-heron-desktop";
   version = "0.0.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ heron-viz heron-msgs ];
+  propagatedBuildInputs = [ heron-msgs heron-viz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

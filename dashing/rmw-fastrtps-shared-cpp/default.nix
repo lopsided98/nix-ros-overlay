@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rcpputils, ament-cmake, ament-lint-common, fastrtps, ament-cmake-ros, fastcdr, ament-lint-auto, rcutils, fastrtps-cmake-module, rmw }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rcutils, fastrtps-cmake-module, ament-lint-common, ament-cmake, rcpputils, rmw, fastrtps, fastcdr, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rmw-fastrtps-shared-cpp";
   version = "0.7.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcpputils fastrtps fastcdr rcutils fastrtps-cmake-module rmw ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ rcpputils ament-cmake fastrtps fastcdr rcutils fastrtps-cmake-module rmw ];
+  buildInputs = [ rcutils fastrtps-cmake-module rcpputils rmw fastrtps fastcdr ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ rcutils fastrtps-cmake-module ament-cmake rcpputils rmw fastrtps fastcdr ];
   nativeBuildInputs = [ fastrtps-cmake-module ament-cmake-ros ];
 
   meta = {

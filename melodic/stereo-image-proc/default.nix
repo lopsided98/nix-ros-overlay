@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport, sensor-msgs, cv-bridge, message-filters, catkin, image-geometry, rostest, dynamic-reconfigure, image-proc, nodelet, stereo-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, dynamic-reconfigure, image-proc, catkin, image-transport, stereo-msgs, cv-bridge, nodelet, rostest, image-geometry }:
 buildRosPackage {
   pname = "ros-melodic-stereo-image-proc";
   version = "1.13.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-transport sensor-msgs cv-bridge message-filters image-geometry dynamic-reconfigure image-proc nodelet stereo-msgs ];
+  buildInputs = [ sensor-msgs message-filters dynamic-reconfigure image-proc image-transport stereo-msgs cv-bridge nodelet image-geometry ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge message-filters image-geometry dynamic-reconfigure image-proc nodelet stereo-msgs ];
+  propagatedBuildInputs = [ sensor-msgs message-filters dynamic-reconfigure image-proc image-transport stereo-msgs cv-bridge nodelet image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, suitesparse, catkin, blas, liblapack, eigen }:
+{ lib, buildRosPackage, fetchurl, liblapack, catkin, suitesparse, blas, eigen }:
 buildRosPackage {
   pname = "ros-melodic-sparse-bundle-adjustment";
   version = "0.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ liblapack suitesparse blas eigen ];
-  propagatedBuildInputs = [ liblapack suitesparse blas eigen ];
+  buildInputs = [ suitesparse blas liblapack eigen ];
+  propagatedBuildInputs = [ suitesparse blas liblapack eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

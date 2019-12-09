@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-msgs, catkin, actionlib-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-humanoid-nav-msgs";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation actionlib-msgs geometry-msgs ];
-  propagatedBuildInputs = [ std-msgs message-runtime actionlib-msgs geometry-msgs ];
+  buildInputs = [ std-msgs message-generation geometry-msgs actionlib-msgs ];
+  propagatedBuildInputs = [ std-msgs message-runtime geometry-msgs actionlib-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

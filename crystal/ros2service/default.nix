@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, rclpy, ros2srv, pythonPackages, ament-pep257, python3Packages, ament-copyright, ros2cli, ros2topic }:
+{ lib, buildRosPackage, fetchurl, python3Packages, ament-copyright, ros2srv, ros2topic, pythonPackages, ros2cli, ament-pep257, rclpy, ament-flake8 }:
 buildRosPackage {
   pname = "ros-crystal-ros2service";
   version = "0.6.3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ rclpy ros2cli ];
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ rclpy ros2srv python3Packages.pyyaml ros2cli ros2topic ];
+  buildInputs = [ ros2cli rclpy ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  propagatedBuildInputs = [ python3Packages.pyyaml ros2srv ros2topic ros2cli rclpy ];
 
   meta = {
     description = ''The service command for ROS 2 command line tools.'';

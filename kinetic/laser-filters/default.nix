@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, filters, pluginlib, sensor-msgs, catkin, message-filters, roscpp, rostest, laser-geometry, angles, tf }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, pluginlib, tf, filters, laser-geometry, catkin, roscpp, angles, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-laser-filters";
   version = "1.8.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ filters pluginlib tf sensor-msgs message-filters rostest laser-geometry angles roscpp ];
-  propagatedBuildInputs = [ filters pluginlib tf sensor-msgs message-filters laser-geometry angles roscpp ];
+  buildInputs = [ sensor-msgs message-filters pluginlib tf filters laser-geometry roscpp angles rostest ];
+  propagatedBuildInputs = [ sensor-msgs message-filters pluginlib tf filters laser-geometry roscpp angles ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

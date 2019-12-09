@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, rosconsole, sensor-msgs, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, std-srvs, catkin, roscpp, rosconsole }:
 buildRosPackage {
   pname = "ros-melodic-rplidar-ros";
   version = "1.7.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs sensor-msgs roscpp rosconsole ];
-  propagatedBuildInputs = [ std-srvs sensor-msgs roscpp rosconsole ];
+  buildInputs = [ std-srvs sensor-msgs rosconsole roscpp ];
+  propagatedBuildInputs = [ sensor-msgs std-srvs rosconsole roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

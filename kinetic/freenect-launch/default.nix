@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, freenect-camera, catkin, rgbd-launch, image-proc, nodelet }:
+{ lib, buildRosPackage, fetchurl, image-proc, tf, catkin, nodelet, freenect-camera, rgbd-launch }:
 buildRosPackage {
   pname = "ros-kinetic-freenect-launch";
   version = "0.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ freenect-camera rgbd-launch nodelet image-proc tf ];
+  propagatedBuildInputs = [ image-proc tf nodelet freenect-camera rgbd-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, wave-gazebo, joy-teleop, joy, catkin, wamv-gazebo, gazebo-dev, geographic-msgs, message-runtime, std-msgs, protobuf, xacro }:
+{ lib, buildRosPackage, fetchurl, joy, xacro, protobuf, std-msgs, catkin, wamv-gazebo, joy-teleop, geographic-msgs, wave-gazebo, gazebo-ros, message-runtime, gazebo-dev }:
 buildRosPackage {
   pname = "ros-kinetic-vrx-gazebo";
   version = "1.2.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros wave-gazebo joy-teleop joy wamv-gazebo gazebo-dev geographic-msgs message-runtime std-msgs xacro ];
-  propagatedBuildInputs = [ gazebo-ros wave-gazebo joy-teleop joy wamv-gazebo gazebo-dev geographic-msgs message-runtime std-msgs xacro ];
+  buildInputs = [ joy xacro std-msgs wamv-gazebo joy-teleop geographic-msgs wave-gazebo gazebo-ros message-runtime gazebo-dev ];
+  propagatedBuildInputs = [ joy xacro std-msgs wamv-gazebo geographic-msgs joy-teleop wave-gazebo gazebo-ros message-runtime gazebo-dev ];
   nativeBuildInputs = [ protobuf catkin ];
 
   meta = {

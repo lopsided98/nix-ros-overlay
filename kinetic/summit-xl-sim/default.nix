@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, summit-xl-robot-control, catkin, summit-xl-control, summit-xl-sim-bringup, summit-xl-gazebo }:
+{ lib, buildRosPackage, fetchurl, catkin, summit-xl-control, summit-xl-robot-control, summit-xl-sim-bringup, summit-xl-gazebo }:
 buildRosPackage {
   pname = "ros-kinetic-summit-xl-sim";
   version = "1.1.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ summit-xl-gazebo summit-xl-robot-control summit-xl-sim-bringup summit-xl-control ];
+  propagatedBuildInputs = [ summit-xl-robot-control summit-xl-control summit-xl-sim-bringup summit-xl-gazebo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

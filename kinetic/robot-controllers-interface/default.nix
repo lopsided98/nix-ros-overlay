@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, robot-controllers-msgs, catkin, actionlib, roscpp }:
+{ lib, buildRosPackage, fetchurl, pluginlib, catkin, actionlib, robot-controllers-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-robot-controllers-interface";
   version = "0.5.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robot-controllers-msgs roscpp pluginlib actionlib ];
-  propagatedBuildInputs = [ robot-controllers-msgs roscpp pluginlib actionlib ];
+  buildInputs = [ robot-controllers-msgs pluginlib actionlib roscpp ];
+  propagatedBuildInputs = [ robot-controllers-msgs pluginlib actionlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

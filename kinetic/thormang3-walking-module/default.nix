@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake-modules, geometry-msgs, libyamlcpp, sensor-msgs, catkin, robotis-framework-common, thormang3-kinematics-dynamics, robotis-controller-msgs, roslib, robotis-math, thormang3-balance-control, eigen, std-msgs, eigen-conversions, roscpp, thormang3-walking-module-msgs }:
+{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, thormang3-balance-control, boost, geometry-msgs, sensor-msgs, eigen-conversions, std-msgs, thormang3-walking-module-msgs, catkin, cmake-modules, roslib, libyamlcpp, eigen, robotis-framework-common, roscpp, robotis-math, thormang3-kinematics-dynamics }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-walking-module";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost cmake-modules thormang3-walking-module-msgs libyamlcpp geometry-msgs sensor-msgs roscpp thormang3-kinematics-dynamics roslib thormang3-balance-control robotis-math eigen std-msgs eigen-conversions robotis-controller-msgs robotis-framework-common ];
-  propagatedBuildInputs = [ cmake-modules boost geometry-msgs libyamlcpp sensor-msgs robotis-framework-common roscpp thormang3-kinematics-dynamics roslib thormang3-balance-control robotis-math eigen std-msgs eigen-conversions robotis-controller-msgs thormang3-walking-module-msgs ];
+  buildInputs = [ robotis-controller-msgs boost sensor-msgs geometry-msgs eigen-conversions std-msgs thormang3-walking-module-msgs cmake-modules roslib roscpp libyamlcpp eigen robotis-framework-common thormang3-balance-control robotis-math thormang3-kinematics-dynamics ];
+  propagatedBuildInputs = [ robotis-controller-msgs sensor-msgs boost geometry-msgs thormang3-balance-control eigen-conversions std-msgs thormang3-walking-module-msgs cmake-modules roslib libyamlcpp eigen robotis-framework-common roscpp robotis-math thormang3-kinematics-dynamics ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

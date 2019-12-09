@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, dsr-msgs, catkin, serial, roscpp }:
+{ lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, dsr-msgs, serial, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-dsr-control";
   version = "0.9.6-r1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, openscenegraph, libGL, libGLU, cmake }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, libGLU, cmake, libGL, openscenegraph }:
 buildRosPackage {
   pname = "ros-kinetic-uwsim-osgworks";
   version = "3.0.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ libGLU libGL openscenegraph boost ];
-  propagatedBuildInputs = [ boost catkin openscenegraph libGLU libGL ];
+  buildInputs = [ boost openscenegraph libGLU libGL ];
+  propagatedBuildInputs = [ boost catkin libGLU libGL openscenegraph ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

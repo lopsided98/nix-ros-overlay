@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, actionlib-msgs, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, message-runtime, catkin, actionlib-msgs, message-generation, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-teleop-tools-msgs";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation control-msgs actionlib-msgs ];
-  propagatedBuildInputs = [ control-msgs message-runtime actionlib-msgs ];
+  buildInputs = [ message-generation actionlib-msgs control-msgs ];
+  propagatedBuildInputs = [ message-runtime actionlib-msgs control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

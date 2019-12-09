@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, tf2, eigen, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, cmake-modules, eigen, tf2 }:
 buildRosPackage {
   pname = "ros-melodic-tf2-eigen";
   version = "0.6.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2 cmake-modules geometry-msgs eigen ];
-  propagatedBuildInputs = [ tf2 geometry-msgs eigen ];
+  buildInputs = [ geometry-msgs eigen cmake-modules tf2 ];
+  propagatedBuildInputs = [ eigen geometry-msgs tf2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

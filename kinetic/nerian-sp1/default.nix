@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, SDL, boost, sensor-msgs, cv-bridge, catkin, message-generation, message-runtime, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, boost, SDL, std-msgs, catkin, cv-bridge, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-nerian-sp1";
   version = "1.6.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ SDL boost sensor-msgs cv-bridge message-generation std-msgs roscpp ];
-  propagatedBuildInputs = [ SDL boost sensor-msgs cv-bridge message-runtime std-msgs roscpp ];
+  buildInputs = [ boost sensor-msgs std-msgs SDL cv-bridge roscpp message-generation ];
+  propagatedBuildInputs = [ boost sensor-msgs std-msgs SDL cv-bridge roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, roslint, nav-grid-iterators, nav-core2, costmap-queue, sensor-msgs, catkin, nav-2d-msgs, nav-2d-utils, angles, roscpp, dwb-local-planner, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, nav-2d-msgs, nav-core2, pluginlib, catkin, costmap-queue, roscpp, roslint, dwb-local-planner, nav-grid-iterators, angles, nav-2d-utils }:
 buildRosPackage {
   pname = "ros-melodic-dwb-critics";
   version = "0.2.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib nav-grid-iterators nav-core2 costmap-queue sensor-msgs nav-2d-msgs nav-2d-utils angles roscpp dwb-local-planner geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs nav-2d-msgs nav-core2 pluginlib costmap-queue roscpp dwb-local-planner nav-grid-iterators angles nav-2d-utils ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ dwb-local-planner pluginlib sensor-msgs nav-core2 costmap-queue nav-2d-msgs nav-2d-utils angles roscpp nav-grid-iterators geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs nav-grid-iterators geometry-msgs nav-2d-msgs nav-core2 pluginlib costmap-queue dwb-local-planner roscpp angles nav-2d-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, grid-map-core, catkin, pcl-ros }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, grid-map-core, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-grid-map-sdf";
   version = "1.6.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ grid-map-core pcl-ros ];
-  propagatedBuildInputs = [ grid-map-core pcl-ros ];
+  buildInputs = [ pcl-ros grid-map-core ];
+  propagatedBuildInputs = [ pcl-ros grid-map-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

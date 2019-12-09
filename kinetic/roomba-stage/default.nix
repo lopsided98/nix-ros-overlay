@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, catkin, move-base, stage-ros, fake-localization }:
+{ lib, buildRosPackage, fetchurl, map-server, stage-ros, catkin, fake-localization, move-base }:
 buildRosPackage {
   pname = "ros-kinetic-roomba-stage";
   version = "0.2.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ stage-ros map-server fake-localization move-base ];
+  propagatedBuildInputs = [ map-server stage-ros fake-localization move-base ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

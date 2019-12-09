@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, cv-bridge, ffmpeg, rospy, libav, rosbash-params }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, ffmpeg, rosbash-params, pythonPackages, catkin, cv-bridge, libav, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-movie-publisher";
   version = "1.2.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ sensor-msgs cv-bridge ffmpeg pythonPackages.opencv3 rospy libav rosbash-params ];
+  propagatedBuildInputs = [ sensor-msgs ffmpeg pythonPackages.opencv3 rosbash-params cv-bridge libav rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

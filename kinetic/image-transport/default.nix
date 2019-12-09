@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, pluginlib, sensor-msgs, catkin, message-filters, roscpp, roslib }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, pluginlib, catkin, roslib, roscpp, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-image-transport";
   version = "1.11.13";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib rosconsole sensor-msgs message-filters roslib roscpp ];
-  propagatedBuildInputs = [ pluginlib rosconsole sensor-msgs message-filters roslib roscpp ];
+  buildInputs = [ sensor-msgs message-filters pluginlib roslib roscpp rosconsole ];
+  propagatedBuildInputs = [ sensor-msgs message-filters pluginlib roslib roscpp rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

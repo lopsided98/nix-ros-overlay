@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pddl-msgs, pddl-planner-viewer, pddl-planner, task-compiler }:
+{ lib, buildRosPackage, fetchurl, task-compiler, catkin, pddl-msgs, pddl-planner-viewer, pddl-planner }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-planning";
   version = "0.1.10";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pddl-planner-viewer task-compiler pddl-msgs pddl-planner ];
+  propagatedBuildInputs = [ task-compiler pddl-planner-viewer pddl-msgs pddl-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

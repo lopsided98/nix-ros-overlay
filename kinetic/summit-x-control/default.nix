@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-control, summit-x-description, catkin, robot-state-publisher, summit-xl-pad, ros-controllers }:
+{ lib, buildRosPackage, fetchurl, robot-state-publisher, catkin, ros-control, summit-xl-pad, ros-controllers, summit-x-description }:
 buildRosPackage {
   pname = "ros-kinetic-summit-x-control";
   version = "1.1.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ros-control summit-x-description robot-state-publisher summit-xl-pad ros-controllers ];
-  propagatedBuildInputs = [ ros-control summit-x-description robot-state-publisher summit-xl-pad ros-controllers ];
+  buildInputs = [ robot-state-publisher ros-control summit-xl-pad ros-controllers summit-x-description ];
+  propagatedBuildInputs = [ robot-state-publisher ros-control summit-xl-pad ros-controllers summit-x-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, schunk-sdh, catkin, gazebo-msgs, rospy }:
+{ lib, buildRosPackage, fetchurl, gazebo-msgs, catkin, rospy, schunk-sdh }:
 buildRosPackage {
   pname = "ros-melodic-schunk-simulated-tactile-sensors";
-  version = "0.6.13-r2";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_simulated_tactile_sensors/0.6.13-2.tar.gz";
-    name = "0.6.13-2.tar.gz";
-    sha256 = "a637b94b961752d8a81cba8edf7f9eec7ad2f772490f256d25e5ad7be874ca2a";
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_simulated_tactile_sensors/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "9f51c59099e957bbeb3cf7dac8267d3940787b6c6db8d5cb1ef0fbbba1fbdbb4";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ schunk-sdh gazebo-msgs rospy ];
+  propagatedBuildInputs = [ gazebo-msgs rospy schunk-sdh ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

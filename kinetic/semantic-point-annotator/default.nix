@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, eigen, tf, pcl-ros }:
+{ lib, buildRosPackage, fetchurl, pcl-ros, catkin, tf, eigen, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-semantic-point-annotator";
   version = "0.1.28";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf eigen roscpp pcl-ros ];
-  propagatedBuildInputs = [ tf roscpp eigen pcl-ros ];
+  buildInputs = [ pcl-ros eigen tf roscpp ];
+  propagatedBuildInputs = [ pcl-ros eigen tf roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

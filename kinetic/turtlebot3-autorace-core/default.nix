@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy, std-msgs, roslaunch }:
+{ lib, buildRosPackage, fetchurl, std-msgs, pythonPackages, catkin, rospy, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot3-autorace-core";
   version = "1.2.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pythonPackages.enum34 pythonPackages.numpy rospy std-msgs roslaunch ];
+  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.enum34 std-msgs rospy roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

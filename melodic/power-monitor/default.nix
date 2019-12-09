@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, std-msgs, pr2-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, pr2-msgs, std-msgs, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-power-monitor";
   version = "1.1.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs pr2-msgs roscpp dynamic-reconfigure ];
-  propagatedBuildInputs = [ std-msgs pr2-msgs roscpp dynamic-reconfigure ];
+  buildInputs = [ dynamic-reconfigure std-msgs pr2-msgs roscpp ];
+  propagatedBuildInputs = [ dynamic-reconfigure std-msgs pr2-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, robotnik-msgs, diagnostic-updater, message-generation, message-runtime, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, robotnik-msgs, geometry-msgs, catkin, roscpp, message-runtime, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-rb1-base-pad";
   version = "1.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs robotnik-msgs diagnostic-updater message-generation roscpp geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs robotnik-msgs diagnostic-updater message-runtime roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs robotnik-msgs geometry-msgs roscpp diagnostic-updater message-generation ];
+  propagatedBuildInputs = [ sensor-msgs robotnik-msgs geometry-msgs roscpp diagnostic-updater message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

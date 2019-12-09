@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roseus, mongodb-store-msgs, catkin, rostest, mongodb-store }:
+{ lib, buildRosPackage, fetchurl, roseus, catkin, mongodb-store-msgs, rostest, mongodb-store }:
 buildRosPackage {
   pname = "ros-kinetic-roseus-mongo";
   version = "1.7.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roseus mongodb-store-msgs rostest mongodb-store ];
-  propagatedBuildInputs = [ roseus mongodb-store-msgs mongodb-store ];
+  buildInputs = [ mongodb-store-msgs rostest roseus mongodb-store ];
+  propagatedBuildInputs = [ mongodb-store-msgs roseus mongodb-store ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

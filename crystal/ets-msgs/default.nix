@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-default-generators, rosidl-default-runtime, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, rosidl-default-generators, ament-cmake }:
 buildRosPackage {
   pname = "ros-crystal-ets-msgs";
   version = "0.1.2-r2";

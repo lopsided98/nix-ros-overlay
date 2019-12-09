@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rtt-std-msgs, rtt-geometry-msgs, sensor-msgs, catkin, rtt-roscomm }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, rtt-geometry-msgs, rtt-roscomm, rtt-std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-sensor-msgs";
   version = "2.9.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rtt-roscomm rtt-geometry-msgs sensor-msgs rtt-std-msgs ];
-  propagatedBuildInputs = [ rtt-roscomm rtt-geometry-msgs sensor-msgs rtt-std-msgs ];
+  buildInputs = [ sensor-msgs rtt-roscomm rtt-std-msgs rtt-geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs rtt-roscomm rtt-std-msgs rtt-geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, rclpy, rqt-gui, rqt-msg, rqt-py-common, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-py-common, rqt-gui-py, rqt-msg, rclpy, python-qt-binding }:
 buildRosPackage {
   pname = "ros-crystal-rqt-action";
   version = "1.0.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  propagatedBuildInputs = [ rqt-gui-py rclpy rqt-gui rqt-msg rqt-py-common python-qt-binding ];
+  propagatedBuildInputs = [ rqt-gui rqt-py-common rqt-gui-py rqt-msg rclpy python-qt-binding ];
 
   meta = {
     description = ''rqt_action provides a feature to introspect all available ROS

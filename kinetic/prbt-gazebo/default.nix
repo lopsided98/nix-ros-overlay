@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, prbt-support, prbt-moveit-config, trajectory-msgs, catkin, rostest, actionlib, roslaunch, roscpp, xacro, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, xacro, actionlib, catkin, prbt-support, gazebo-ros-control, roscpp, gazebo-ros, prbt-moveit-config, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-prbt-gazebo";
   version = "0.4.11-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ rostest roscpp trajectory-msgs actionlib ];
-  propagatedBuildInputs = [ gazebo-ros prbt-support prbt-moveit-config roslaunch xacro gazebo-ros-control ];
+  checkInputs = [ trajectory-msgs actionlib rostest roscpp ];
+  propagatedBuildInputs = [ xacro prbt-support gazebo-ros-control gazebo-ros prbt-moveit-config roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

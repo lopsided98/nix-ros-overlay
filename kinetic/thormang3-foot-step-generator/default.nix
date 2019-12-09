@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, thormang3-walking-module-msgs, catkin, roscpp, roslib, message-generation, message-runtime, eigen, std-msgs, robotis-controller-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, message-generation, geometry-msgs, std-msgs, thormang3-walking-module-msgs, cmake-modules, roslib, catkin, eigen, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-foot-step-generator";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules geometry-msgs robotis-controller-msgs roslib message-generation eigen std-msgs roscpp thormang3-walking-module-msgs ];
-  propagatedBuildInputs = [ cmake-modules geometry-msgs roscpp roslib message-runtime eigen std-msgs robotis-controller-msgs thormang3-walking-module-msgs ];
+  buildInputs = [ robotis-controller-msgs geometry-msgs std-msgs thormang3-walking-module-msgs cmake-modules roslib eigen roscpp message-generation ];
+  propagatedBuildInputs = [ robotis-controller-msgs geometry-msgs std-msgs thormang3-walking-module-msgs cmake-modules roslib eigen roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

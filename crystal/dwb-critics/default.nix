@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, costmap-queue, nav2-common, nav-2d-msgs, geometry-msgs, ament-cmake-pytest, ament-cmake-gtest, launch, nav2-util, rclcpp, angles, nav-2d-utils, dwb-core, pluginlib, ament-lint-common, launch-testing, sensor-msgs, nav2-costmap-2d, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, costmap-queue, ament-cmake, nav-2d-msgs, nav2-util, nav-2d-utils, ament-lint-auto, sensor-msgs, launch-testing, ament-lint-common, nav2-common, rclcpp, ament-cmake-gtest, nav2-costmap-2d, angles, dwb-core, launch, ament-cmake-pytest }:
 buildRosPackage {
   pname = "ros-crystal-dwb-critics";
   version = "0.1.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ pluginlib sensor-msgs costmap-queue nav2-util nav2-common nav-2d-utils rclcpp nav2-costmap-2d angles dwb-core nav-2d-msgs geometry-msgs ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ pluginlib sensor-msgs costmap-queue nav2-util nav-2d-utils rclcpp nav2-costmap-2d angles dwb-core nav-2d-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs dwb-core pluginlib nav2-costmap-2d costmap-queue nav2-common nav-2d-msgs angles nav2-util rclcpp nav-2d-utils ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs dwb-core pluginlib nav2-costmap-2d costmap-queue nav-2d-msgs angles nav2-util rclcpp nav-2d-utils ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

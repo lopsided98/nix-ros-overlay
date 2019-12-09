@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot-bringup, catkin, joy, yocs-velocity-smoother, kobuki-safety-controller, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, joy, geometry-msgs, kobuki-safety-controller, catkin, roscpp, yocs-velocity-smoother, turtlebot-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-teleop";
   version = "2.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp joy geometry-msgs ];
-  propagatedBuildInputs = [ turtlebot-bringup joy kobuki-safety-controller yocs-velocity-smoother roscpp geometry-msgs ];
+  buildInputs = [ joy geometry-msgs roscpp ];
+  propagatedBuildInputs = [ joy geometry-msgs kobuki-safety-controller yocs-velocity-smoother roscpp turtlebot-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

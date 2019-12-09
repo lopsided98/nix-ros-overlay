@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime, pkg-config }:
+{ lib, buildRosPackage, fetchurl, pkg-config, message-runtime, message-generation, catkin }:
 buildRosPackage {
   pname = "ros-melodic-rosbuild";
   version = "1.14.7-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ pkg-config ];
-  propagatedBuildInputs = [ catkin message-generation message-runtime ];
+  propagatedBuildInputs = [ message-generation catkin message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

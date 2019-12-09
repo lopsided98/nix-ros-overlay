@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, rospy, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, std-msgs, catkin, roscpp, rospy, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-rr-control-input-manager";
   version = "0.7.3-r2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs roscpp rospy ];
+  buildInputs = [ std-msgs rospy roscpp ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ std-msgs roscpp rospy ];
+  propagatedBuildInputs = [ std-msgs rospy roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

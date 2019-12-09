@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, roslib, rosgraph, rostopic, mongodb-store, rospy, openssl, tf }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, rosgraph, tf, roslib, rostopic, pythonPackages, catkin, openssl, rospy, mongodb-store }:
 buildRosPackage {
   pname = "ros-melodic-mongodb-log";
-  version = "0.5.1-r2";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/strands-project-releases/mongodb_store/archive/release/melodic/mongodb_log/0.5.1-2.tar.gz";
-    name = "0.5.1-2.tar.gz";
-    sha256 = "dc56aae114fe58747eb278bc0a61859a81ebc01ff0c8c939464aaf0620732596";
+    url = "https://github.com/strands-project-releases/mongodb_store/archive/release/melodic/mongodb_log/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "0482630592871557d4d9d9dff8bcd61a3c8801c840cc2477f51f4a3806a7453e";
   };
 
   buildType = "catkin";
-  buildInputs = [ tf sensor-msgs rosgraph rostopic mongodb-store rospy openssl roslib ];
-  propagatedBuildInputs = [ pythonPackages.pymongo tf sensor-msgs rosgraph rostopic mongodb-store rospy roslib ];
+  buildInputs = [ sensor-msgs rosgraph tf roslib rostopic openssl rospy mongodb-store ];
+  propagatedBuildInputs = [ sensor-msgs rosgraph tf roslib rostopic pythonPackages.pymongo rospy mongodb-store ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

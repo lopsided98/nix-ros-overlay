@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, stage, safe-teleop-base, joy }:
+{ lib, buildRosPackage, fetchurl, joy, safe-teleop-base, stage, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-safe-teleop-stage";
   version = "0.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joy stage safe-teleop-base ];
+  propagatedBuildInputs = [ joy safe-teleop-base stage ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

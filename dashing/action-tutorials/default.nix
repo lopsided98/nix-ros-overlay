@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rclpy, rosidl-default-generators, action-msgs, ament-lint-auto, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, ament-lint-common, ament-cmake, ament-lint-auto, rclpy, rosidl-default-generators, action-msgs }:
 buildRosPackage {
   pname = "ros-dashing-action-tutorials";
   version = "0.7.9-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ action-msgs ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ rclpy action-msgs rosidl-default-runtime ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ rosidl-default-runtime action-msgs rclpy ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

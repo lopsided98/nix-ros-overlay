@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rexrov2-description, rexrov2-control }:
+{ lib, buildRosPackage, fetchurl, rexrov2-control, rexrov2-description, catkin }:
 buildRosPackage {
   pname = "ros-melodic-rexrov2-gazebo";
   version = "0.1.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rexrov2-description rexrov2-control ];
+  propagatedBuildInputs = [ rexrov2-control rexrov2-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

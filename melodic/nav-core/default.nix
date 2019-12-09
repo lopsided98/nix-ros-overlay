@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, catkin, tf2-ros, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, catkin, costmap-2d, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-nav-core";
-  version = "1.16.2";
+  version = "1.16.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/nav_core/1.16.2-0.tar.gz";
-    name = "1.16.2-0.tar.gz";
-    sha256 = "d598327496621c871e857d4fb92da871e9a7227397d849c94a7e49f993a239c3";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/nav_core/1.16.3-1.tar.gz";
+    name = "1.16.3-1.tar.gz";
+    sha256 = "f14974b275be7674586bcfd98053f489192f5bb62bbe355d0a1bd42e8dc744e1";
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs costmap-2d tf2-ros geometry-msgs ];
-  propagatedBuildInputs = [ std-msgs costmap-2d tf2-ros geometry-msgs ];
+  buildInputs = [ costmap-2d geometry-msgs tf2-ros std-msgs ];
+  propagatedBuildInputs = [ costmap-2d std-msgs geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

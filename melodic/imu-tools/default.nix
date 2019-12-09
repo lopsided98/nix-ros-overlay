@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, imu-complementary-filter, rviz-imu-plugin, catkin, imu-filter-madgwick }:
+{ lib, buildRosPackage, fetchurl, imu-complementary-filter, catkin, rviz-imu-plugin, imu-filter-madgwick }:
 buildRosPackage {
   pname = "ros-melodic-imu-tools";
   version = "1.2.1-r1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-formatters, catkin, ecl-build, ecl-exceptions, ecl-containers, ecl-license, ecl-type-traits, ecl-math, ecl-linear-algebra, ecl-config, ecl-mpl }:
+{ lib, buildRosPackage, fetchurl, ecl-formatters, ecl-license, catkin, ecl-type-traits, ecl-containers, ecl-exceptions, ecl-mpl, ecl-config, ecl-math, ecl-build, ecl-linear-algebra }:
 buildRosPackage {
   pname = "ros-melodic-ecl-geometry";
   version = "0.62.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-formatters ecl-build ecl-exceptions ecl-containers ecl-license ecl-type-traits ecl-math ecl-linear-algebra ecl-config ecl-mpl ];
-  propagatedBuildInputs = [ ecl-formatters ecl-build ecl-exceptions ecl-containers ecl-license ecl-type-traits ecl-math ecl-linear-algebra ecl-config ecl-mpl ];
+  buildInputs = [ ecl-formatters ecl-license ecl-type-traits ecl-containers ecl-exceptions ecl-mpl ecl-config ecl-math ecl-build ecl-linear-algebra ];
+  propagatedBuildInputs = [ ecl-formatters ecl-license ecl-type-traits ecl-containers ecl-mpl ecl-exceptions ecl-config ecl-math ecl-build ecl-linear-algebra ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

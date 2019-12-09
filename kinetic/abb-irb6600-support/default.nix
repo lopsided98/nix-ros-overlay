@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rviz, robot-state-publisher, roslaunch, joint-state-publisher, abb-driver }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, robot-state-publisher, catkin, rviz, abb-driver, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-abb-irb6600-support";
   version = "1.3.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ rviz joint-state-publisher robot-state-publisher abb-driver ];
+  propagatedBuildInputs = [ robot-state-publisher joint-state-publisher rviz abb-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

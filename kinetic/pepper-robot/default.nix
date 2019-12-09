@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pepper-sensors-py, pepper-bringup, catkin, pepper-description }:
+{ lib, buildRosPackage, fetchurl, pepper-description, pepper-bringup, catkin, pepper-sensors-py }:
 buildRosPackage {
   pname = "ros-kinetic-pepper-robot";
   version = "0.1.10";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pepper-sensors-py pepper-bringup pepper-description ];
+  propagatedBuildInputs = [ pepper-bringup pepper-description pepper-sensors-py ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

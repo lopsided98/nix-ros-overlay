@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, tf2-msgs, ament-cmake, orocos-kdl, ament-cmake-gtest, tf2-ros, tf2, rclcpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, geometry-msgs, rclcpp, tf2, ament-cmake, ament-cmake-gtest, tf2-msgs, builtin-interfaces, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-tf2-kdl";
   version = "0.11.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces orocos-kdl tf2-ros tf2 geometry-msgs ];
-  checkInputs = [ ament-cmake-gtest tf2-msgs rclcpp ];
-  propagatedBuildInputs = [ builtin-interfaces orocos-kdl tf2-ros tf2 geometry-msgs ];
+  buildInputs = [ orocos-kdl geometry-msgs tf2 builtin-interfaces tf2-ros ];
+  checkInputs = [ rclcpp ament-cmake-gtest tf2-msgs ];
+  propagatedBuildInputs = [ orocos-kdl geometry-msgs tf2 builtin-interfaces tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

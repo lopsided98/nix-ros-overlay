@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, laser-assembler, uvc-camera, realsense-camera, sensor-msgs, pcl, catkin, laser-filters, rgbd-launch, std-msgs, roscpp, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, realsense-camera, laser-filters, std-msgs, laser-assembler, catkin, pcl, uvc-camera, pcl-conversions, roscpp, rgbd-launch }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-sensors";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ laser-assembler pcl sensor-msgs std-msgs roscpp pcl-conversions ];
-  propagatedBuildInputs = [ laser-assembler uvc-camera realsense-camera pcl sensor-msgs laser-filters rgbd-launch std-msgs roscpp pcl-conversions ];
+  buildInputs = [ sensor-msgs std-msgs laser-assembler pcl pcl-conversions roscpp ];
+  propagatedBuildInputs = [ sensor-msgs realsense-camera laser-filters std-msgs laser-assembler pcl uvc-camera pcl-conversions roscpp rgbd-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

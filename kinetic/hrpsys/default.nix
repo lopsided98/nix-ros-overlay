@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, SDL, libxml2, mk, git, irrlicht, pythonPackages, openhrp3, qhull, pkg-config, doxygen, glew, xorg, freeglut, cmake, opencv3, graphviz }:
+{ lib, buildRosPackage, fetchurl, git, irrlicht, xorg, SDL, glew, pythonPackages, graphviz, libxml2, cmake, freeglut, openhrp3, opencv3, qhull, pkg-config, doxygen, mk }:
 buildRosPackage {
   pname = "ros-kinetic-hrpsys";
   version = "315.14.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ SDL opencv3 libxml2 pythonPackages.tkinter mk git openhrp3 irrlicht qhull glew doxygen freeglut xorg.libXmu graphviz ];
-  propagatedBuildInputs = [ SDL opencv3 libxml2 pythonPackages.tkinter openhrp3 irrlicht qhull freeglut xorg.libXmu ];
-  nativeBuildInputs = [ cmake pkg-config ];
+  buildInputs = [ git irrlicht SDL graphviz xorg.libXmu libxml2 pythonPackages.tkinter freeglut openhrp3 opencv3 qhull glew doxygen mk ];
+  propagatedBuildInputs = [ irrlicht SDL xorg.libXmu libxml2 pythonPackages.tkinter freeglut openhrp3 opencv3 qhull ];
+  nativeBuildInputs = [ pkg-config cmake ];
 
   meta = {
     description = ''<p>An <a href="http://www.openrtm.org/pub/OpenRTM-aist/">OpenRTM-aist</a>-based robot controller. This package is the most tailored for humanoid (dual-arm and/or biped) robots for historical reason.</p>

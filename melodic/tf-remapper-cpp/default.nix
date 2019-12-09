@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-msgs, catkin, roscpp, rostest, xmlrpcpp, tf }:
+{ lib, buildRosPackage, fetchurl, rostest, tf, catkin, tf2-msgs, roscpp, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-tf-remapper-cpp";
   version = "1.1.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp tf2-msgs xmlrpcpp ];
-  checkInputs = [ rostest tf ];
-  propagatedBuildInputs = [ roscpp tf2-msgs xmlrpcpp ];
+  buildInputs = [ xmlrpcpp roscpp tf2-msgs ];
+  checkInputs = [ tf rostest ];
+  propagatedBuildInputs = [ tf2-msgs xmlrpcpp roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

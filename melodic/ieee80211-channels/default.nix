@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-ieee80211-channels";
-  version = "1.0.13-r2";
+  version = "1.0.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/ieee80211_channels/1.0.13-2.tar.gz";
-    name = "1.0.13-2.tar.gz";
-    sha256 = "80f472b6cc80c82eacfbf5b1bdba951fa3d53730041b74aa7261aa56cc2e5ecf";
+    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/ieee80211_channels/1.0.16-1.tar.gz";
+    name = "1.0.16-1.tar.gz";
+    sha256 = "0fdd1c65ca9d698ae50345ae73904b34161753ada49f53ddceec13066f9bd355";
   };
 
   buildType = "catkin";

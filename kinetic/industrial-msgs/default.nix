@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, catkin, message-generation, message-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, message-runtime, std-msgs, catkin, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-industrial-msgs";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs trajectory-msgs message-generation ];
-  propagatedBuildInputs = [ std-msgs trajectory-msgs message-runtime ];
+  buildInputs = [ std-msgs message-generation trajectory-msgs ];
+  propagatedBuildInputs = [ std-msgs message-runtime trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

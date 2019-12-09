@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, realtime-tools, catkin, controller-interface, std-msgs }:
+{ lib, buildRosPackage, fetchurl, controller-interface, hardware-interface, std-msgs, catkin, realtime-tools }:
 buildRosPackage {
   pname = "ros-melodic-forward-command-controller";
   version = "0.15.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs hardware-interface controller-interface realtime-tools ];
-  propagatedBuildInputs = [ std-msgs realtime-tools controller-interface hardware-interface ];
+  buildInputs = [ hardware-interface std-msgs realtime-tools controller-interface ];
+  propagatedBuildInputs = [ hardware-interface std-msgs realtime-tools controller-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, boost, catkin, rostest, xmlrpcpp, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, boost, xmlrpcpp, catkin, roscpp, rosunit, rosconsole, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-message-filters";
   version = "1.12.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole boost rostest xmlrpcpp roscpp rosunit ];
-  propagatedBuildInputs = [ roscpp rosconsole xmlrpcpp ];
+  buildInputs = [ boost rostest xmlrpcpp rosunit roscpp rosconsole ];
+  propagatedBuildInputs = [ rosconsole roscpp xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

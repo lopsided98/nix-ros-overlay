@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, catkin, rostest, flex, cacert, bison, time, gawk }:
+{ lib, buildRosPackage, fetchurl, bison, gawk, catkin, cacert, python, time, flex, rostest }:
 buildRosPackage {
   pname = "ros-melodic-downward";
   version = "2.1.13-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python gawk rostest flex cacert time bison ];
+  buildInputs = [ bison gawk cacert python time flex rostest ];
   propagatedBuildInputs = [ time gawk ];
   nativeBuildInputs = [ catkin ];
 

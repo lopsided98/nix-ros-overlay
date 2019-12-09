@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dbw-fca-msgs, catkin, dbw-fca-joystick-demo, dbw-fca-can, dbw-fca-description }:
+{ lib, buildRosPackage, fetchurl, dbw-fca-msgs, dbw-fca-joystick-demo, dbw-fca-description, catkin, dbw-fca-can }:
 buildRosPackage {
   pname = "ros-melodic-dbw-fca";
   version = "1.0.6-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ dbw-fca-joystick-demo dbw-fca-description dbw-fca-msgs dbw-fca-can ];
+  propagatedBuildInputs = [ dbw-fca-description dbw-fca-msgs dbw-fca-joystick-demo dbw-fca-can ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

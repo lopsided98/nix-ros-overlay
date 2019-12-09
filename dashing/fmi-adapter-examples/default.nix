@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, fmi-adapter, launch, ament-cmake, launch-ros }:
+{ lib, buildRosPackage, fetchurl, fmi-adapter, launch-ros, ament-cmake, launch }:
 buildRosPackage {
   pname = "ros-dashing-fmi-adapter-examples";
   version = "0.1.5-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ fmi-adapter ];
-  propagatedBuildInputs = [ launch fmi-adapter launch-ros ];
+  propagatedBuildInputs = [ fmi-adapter launch-ros launch ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

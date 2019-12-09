@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, roscpp, message-generation, message-runtime, eigen, roslib }:
+{ lib, buildRosPackage, fetchurl, message-runtime, cmake-modules, roslib, catkin, eigen, roscpp, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-parameter-pa";
   version = "1.2.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules roscpp message-generation eigen roslib ];
-  propagatedBuildInputs = [ cmake-modules roslib message-runtime eigen roscpp ];
+  buildInputs = [ cmake-modules roslib eigen roscpp message-generation ];
+  propagatedBuildInputs = [ cmake-modules roslib eigen roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

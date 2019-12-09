@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, vs060, catkin, controller-manager }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros, catkin, vs060, controller-manager }:
 buildRosPackage {
   pname = "ros-kinetic-vs060-gazebo";
   version = "2.0.3";

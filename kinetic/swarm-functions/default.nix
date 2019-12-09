@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, coverage-path, target-monitor, catkin, task-allocation, area-division, state-exchanger, kinematics-exchanger }:
+{ lib, buildRosPackage, fetchurl, coverage-path, kinematics-exchanger, area-division, catkin, target-monitor, state-exchanger, task-allocation }:
 buildRosPackage {
   pname = "ros-kinetic-swarm-functions";
   version = "1.1.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ coverage-path target-monitor task-allocation area-division state-exchanger kinematics-exchanger ];
+  propagatedBuildInputs = [ coverage-path kinematics-exchanger area-division target-monitor state-exchanger task-allocation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

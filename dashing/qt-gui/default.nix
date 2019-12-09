@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, qt5, python3Packages, ament-index-python, ament-lint-auto, python-qt-binding, tango-icon-theme }:
+{ lib, buildRosPackage, fetchurl, python3Packages, ament-lint-common, tango-icon-theme, ament-cmake, ament-lint-auto, qt5, ament-index-python, python-qt-binding }:
 buildRosPackage {
   pname = "ros-dashing-qt-gui";
   version = "1.0.7-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ python3Packages.pyqt5 qt5.qtbase ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-index-python python3Packages.catkin-pkg python-qt-binding tango-icon-theme ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ python3Packages.catkin-pkg python-qt-binding ament-index-python tango-icon-theme ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

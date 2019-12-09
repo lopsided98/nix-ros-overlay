@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, rosbridge-library, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, rosbridge-library, rospy, std-msgs, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-mqtt-bridge";
   version = "0.1.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ std-msgs rosbridge-library rospy ];
+  propagatedBuildInputs = [ rosbridge-library rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

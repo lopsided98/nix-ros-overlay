@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-msgs, python-orocos-kdl, sensor-msgs, catkin, kobuki-node, message-generation, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, kobuki-node, std-msgs, catkin, python-orocos-kdl, kobuki-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-testsuite";
   version = "0.7.6";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kobuki-msgs python-orocos-kdl sensor-msgs kobuki-node message-generation std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ kobuki-msgs python-orocos-kdl sensor-msgs kobuki-node message-runtime std-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs kobuki-node std-msgs python-orocos-kdl kobuki-msgs message-generation ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs kobuki-node std-msgs python-orocos-kdl kobuki-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, gencpp, genlisp, class-loader, ros, rosconsole-bridge, rosgraph-msgs, roscpp-core, gennodejs, message-generation, rosbag-migration-rule, message-runtime, genmsg, ros-comm, rospack, std-srvs, catkin, std-msgs, common-msgs, cmake-modules, pluginlib, roslisp, geneus, genpy }:
+{ lib, buildRosPackage, fetchurl, genlisp, pluginlib, common-msgs, class-loader, ros, geneus, cmake-modules, rosconsole, roslisp, ros-comm, std-msgs, std-srvs, catkin, gennodejs, genpy, gencpp, message-generation, rosgraph-msgs, rosbag-migration-rule, roscpp-core, genmsg, message-runtime, rosconsole-bridge, rospack }:
 buildRosPackage {
   pname = "ros-melodic-ros-core";
   version = "1.4.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosconsole gencpp genlisp class-loader ros rosconsole-bridge rosgraph-msgs roscpp-core gennodejs message-generation rosbag-migration-rule message-runtime genmsg ros-comm rospack std-srvs catkin std-msgs common-msgs cmake-modules pluginlib roslisp geneus genpy ];
+  propagatedBuildInputs = [ genlisp pluginlib common-msgs class-loader ros geneus cmake-modules rosconsole roslisp ros-comm std-msgs std-srvs catkin gennodejs genpy gencpp message-generation rosgraph-msgs rosbag-migration-rule roscpp-core genmsg message-runtime rosconsole-bridge rospack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

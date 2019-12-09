@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, control-msgs, trajectory-msgs, sensor-msgs, catkin, pythonPackages, industrial-robot-client, industrial-msgs, rospy, roslaunch }:
+{ lib, buildRosPackage, fetchurl, industrial-robot-client, sensor-msgs, trajectory-msgs, pythonPackages, catkin, industrial-msgs, rospy, roslaunch, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-industrial-robot-simulator";
   version = "0.7.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ control-msgs pythonPackages.rospkg trajectory-msgs sensor-msgs industrial-robot-client industrial-msgs rospy ];
+  propagatedBuildInputs = [ industrial-robot-client trajectory-msgs sensor-msgs pythonPackages.rospkg industrial-msgs rospy control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

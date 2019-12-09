@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, message-runtime, catkin }:
 buildRosPackage {
   pname = "ros-melodic-mir-msgs";
   version = "1.0.4-r1";

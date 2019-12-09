@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, roslint, nav-core2, sensor-msgs, catkin, roscpp, nav-2d-msgs, rostest, nav-2d-utils, nav-msgs, dwb-msgs, visualization-msgs, tf, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, rostest, geometry-msgs, nav-core2, pluginlib, tf, catkin, roscpp, rosunit, roslint, visualization-msgs, nav-2d-msgs, dwb-msgs, nav-msgs, nav-2d-utils }:
 buildRosPackage {
   pname = "ros-kinetic-dwb-local-planner";
   version = "0.2.5";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib nav-core2 sensor-msgs roscpp nav-2d-utils nav-msgs dwb-msgs visualization-msgs tf nav-2d-msgs geometry-msgs ];
-  checkInputs = [ rostest roslint rosunit ];
-  propagatedBuildInputs = [ pluginlib tf sensor-msgs nav-core2 nav-2d-utils nav-msgs dwb-msgs visualization-msgs roscpp nav-2d-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs nav-core2 pluginlib tf roscpp visualization-msgs nav-2d-msgs dwb-msgs nav-msgs nav-2d-utils ];
+  checkInputs = [ roslint rostest rosunit ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs nav-core2 pluginlib tf roscpp visualization-msgs nav-2d-msgs dwb-msgs nav-msgs nav-2d-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot-stdr, catkin, turtlebot-stage, turtlebot-gazebo }:
+{ lib, buildRosPackage, fetchurl, turtlebot-stage, turtlebot-gazebo, turtlebot-stdr, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-simulator";
   version = "2.2.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ turtlebot-stdr turtlebot-stage turtlebot-gazebo ];
+  propagatedBuildInputs = [ turtlebot-stage turtlebot-gazebo turtlebot-stdr ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

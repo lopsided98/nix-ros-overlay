@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, uuv-trajectory-control, catkin, uuv-thruster-manager, uuv-control-cascaded-pid, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, uuv-control-cascaded-pid, uuv-thruster-manager, catkin, uuv-trajectory-control, gazebo-ros-control, gazebo-ros }:
 buildRosPackage {
   pname = "ros-melodic-rexrov2-control";
   version = "0.1.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gazebo-ros uuv-trajectory-control uuv-thruster-manager uuv-control-cascaded-pid gazebo-ros-control ];
+  propagatedBuildInputs = [ uuv-control-cascaded-pid uuv-thruster-manager uuv-trajectory-control gazebo-ros-control gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

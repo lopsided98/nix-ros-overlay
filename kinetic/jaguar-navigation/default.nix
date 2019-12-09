@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gmapping, frontier-exploration, map-server, amcl, base-local-planner, navfn, catkin, move-base, dwa-local-planner, roslaunch }:
+{ lib, buildRosPackage, fetchurl, frontier-exploration, map-server, catkin, base-local-planner, gmapping, move-base, amcl, roslaunch, navfn, dwa-local-planner }:
 buildRosPackage {
   pname = "ros-kinetic-jaguar-navigation";
   version = "0.1.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gmapping frontier-exploration map-server amcl base-local-planner navfn move-base dwa-local-planner ];
+  propagatedBuildInputs = [ frontier-exploration map-server base-local-planner gmapping move-base amcl navfn dwa-local-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

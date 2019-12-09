@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, swri-math-util, pluginlib, mapviz, cv-bridge, catkin, libqt-core, roscpp, gps-common, qt-qmake, swri-yaml-util, rospy, libqt-dev, libqt-opengl-dev, libqt-opengl, tf, geometry-msgs, swri-transform-util }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, swri-yaml-util, libqt-opengl, qt-qmake, pluginlib, swri-math-util, tf, mapviz, catkin, libqt-dev, cv-bridge, libqt-opengl-dev, libqt-core, roscpp, swri-transform-util, rospy, gps-common }:
 buildRosPackage {
   pname = "ros-melodic-multires-image";
   version = "1.2.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ swri-math-util pluginlib mapviz cv-bridge roscpp gps-common swri-yaml-util libqt-dev libqt-opengl-dev tf geometry-msgs swri-transform-util ];
-  propagatedBuildInputs = [ swri-math-util pluginlib mapviz cv-bridge libqt-core roscpp gps-common swri-yaml-util rospy libqt-opengl tf geometry-msgs swri-transform-util ];
-  nativeBuildInputs = [ catkin qt-qmake ];
+  buildInputs = [ geometry-msgs pluginlib swri-math-util tf mapviz roscpp libqt-dev cv-bridge libqt-opengl-dev swri-transform-util swri-yaml-util gps-common ];
+  propagatedBuildInputs = [ geometry-msgs libqt-opengl pluginlib swri-math-util tf mapviz roscpp libqt-core cv-bridge swri-transform-util rospy swri-yaml-util gps-common ];
+  nativeBuildInputs = [ qt-qmake catkin ];
 
   meta = {
     description = ''multires_image'';

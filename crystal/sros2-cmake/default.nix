@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sros2, ament-cmake-test, ament-cmake-lint-cmake, cmake, ros2cli }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, sros2, ament-cmake-test, cmake, ros2cli }:
 buildRosPackage {
   pname = "ros-crystal-sros2-cmake";
   version = "0.6.3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ ament-cmake-test sros2 ros2cli ];
+  buildInputs = [ ament-cmake-test ros2cli sros2 ];
   checkInputs = [ ament-cmake-lint-cmake ];
-  propagatedBuildInputs = [ sros2 ros2cli ];
+  propagatedBuildInputs = [ ros2cli sros2 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

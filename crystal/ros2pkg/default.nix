@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, pythonPackages, ament-pep257, python3Packages, ament-copyright, ament-index-python, ros2cli }:
+{ lib, buildRosPackage, fetchurl, python3Packages, ament-copyright, pythonPackages, ament-flake8, ros2cli, ament-pep257, ament-index-python }:
 buildRosPackage {
   pname = "ros-crystal-ros2pkg";
   version = "0.6.3";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "ament_python";
   buildInputs = [ ros2cli ];
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ python3Packages.catkin-pkg python3Packages.setuptools ament-index-python python3Packages.empy ros2cli ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  propagatedBuildInputs = [ python3Packages.empy ros2cli python3Packages.catkin-pkg python3Packages.setuptools ament-index-python ];
 
   meta = {
     description = ''The pkg command for ROS 2 command line tools.'';

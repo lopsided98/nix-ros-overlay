@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, rosconsole, pluginlib, cmake-modules, sensor-msgs, catkin, nav-core, tf2-ros, roscpp, nav-msgs, message-generation, message-runtime, visualization-msgs, netpbm, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, message-runtime, pluginlib, catkin, cmake-modules, rosunit, costmap-2d, nav-core, netpbm, visualization-msgs, roscpp, message-generation, nav-msgs, rosconsole, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-navfn";
-  version = "1.16.2";
+  version = "1.16.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/navfn/1.16.2-0.tar.gz";
-    name = "1.16.2-0.tar.gz";
-    sha256 = "d4795ca8a10f1cb8d8ff7a2949637be11bb6e14ca0d2878731cdd82d20acb271";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/navfn/1.16.3-1.tar.gz";
+    name = "1.16.3-1.tar.gz";
+    sha256 = "61844c1e582eecbbfdd7e1c87f3cb1915032a9ce8eb686cd6bcd5ef9206c07dd";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d rosconsole pluginlib cmake-modules sensor-msgs nav-core tf2-ros roscpp nav-msgs message-generation visualization-msgs netpbm geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs pluginlib cmake-modules costmap-2d nav-core netpbm visualization-msgs roscpp message-generation nav-msgs rosconsole tf2-ros ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ costmap-2d rosconsole pluginlib sensor-msgs nav-core tf2-ros nav-msgs message-runtime visualization-msgs roscpp geometry-msgs ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs pluginlib costmap-2d nav-core visualization-msgs roscpp message-runtime nav-msgs rosconsole tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

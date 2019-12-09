@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-move-group, pr2-description, catkin, robot-state-publisher, joint-state-publisher }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, pr2-description, moveit-ros-move-group, robot-state-publisher, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-moveit-config";
   version = "0.7.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ robot-state-publisher moveit-ros-move-group joint-state-publisher pr2-description ];
+  propagatedBuildInputs = [ moveit-ros-move-group joint-state-publisher robot-state-publisher pr2-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, pluginlib, pkg-config, tinyxml2-vendor, qt5, qt-gui, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, tinyxml2-vendor, ament-cmake-pytest, pluginlib, ament-cmake, qt-gui, qt5, pkg-config, python-qt-binding }:
 buildRosPackage {
   pname = "ros-dashing-qt-gui-cpp";
   version = "1.0.7-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ pluginlib qt5.qtbase pkg-config tinyxml2-vendor python-qt-binding ];
+  buildInputs = [ tinyxml2-vendor pluginlib qt5.qtbase pkg-config python-qt-binding ];
   checkInputs = [ ament-cmake-pytest ];
-  propagatedBuildInputs = [ tinyxml2-vendor qt-gui pluginlib ];
+  propagatedBuildInputs = [ pluginlib tinyxml2-vendor qt-gui ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

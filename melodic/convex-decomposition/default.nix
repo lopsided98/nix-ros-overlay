@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, unzip }:
+{ lib, buildRosPackage, fetchurl, unzip, catkin }:
 buildRosPackage {
   pname = "ros-melodic-convex-decomposition";
   version = "0.1.12";

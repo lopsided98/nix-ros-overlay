@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libcap, roscpp }:
+{ lib, buildRosPackage, fetchurl, libcap, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-ethercat-grant";
   version = "0.2.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp libcap ];
-  propagatedBuildInputs = [ roscpp libcap ];
+  buildInputs = [ libcap roscpp ];
+  propagatedBuildInputs = [ libcap roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, message-generation, message-runtime, rospy, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, message-generation, std-msgs, pythonPackages, catkin, rospy, roscpp, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-indoor-positioning";
   version = "1.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.numpy pythonPackages.pyserial pythonPackages.scipy pythonPackages.pyyaml message-generation rospy std-msgs roscpp ];
-  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.pyserial pythonPackages.scipy pythonPackages.pyyaml message-runtime rospy std-msgs roscpp ];
+  buildInputs = [ pythonPackages.numpy pythonPackages.pyyaml pythonPackages.scipy std-msgs rospy roscpp pythonPackages.pyserial message-generation ];
+  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.pyyaml pythonPackages.scipy std-msgs rospy roscpp pythonPackages.pyserial message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

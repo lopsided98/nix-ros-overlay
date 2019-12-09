@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-generation, message-runtime, catkin }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-generation, catkin, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-wfov-camera-msgs";
   version = "0.13.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-generation ];
+  buildInputs = [ message-generation sensor-msgs ];
   propagatedBuildInputs = [ sensor-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 

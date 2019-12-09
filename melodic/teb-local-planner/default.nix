@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libg2o, geometry-msgs, message-generation, message-runtime, mbf-costmap-core, tf2-geometry-msgs, catkin, tf2-ros, nav-msgs, std-msgs, visualization-msgs, roscpp, costmap-2d, cmake-modules, base-local-planner, pluginlib, mbf-msgs, nav-core, tf2, costmap-converter, interactive-markers, dynamic-reconfigure, tf2-eigen }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, interactive-markers, pluginlib, tf2, nav-msgs, dynamic-reconfigure, cmake-modules, tf2-geometry-msgs, tf2-ros, costmap-converter, std-msgs, catkin, costmap-2d, nav-core, roscpp, message-generation, mbf-msgs, libg2o, base-local-planner, tf2-eigen, mbf-costmap-core, visualization-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-teb-local-planner";
-  version = "0.8.3-r1";
+  version = "0.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/melodic/teb_local_planner/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "7fe22efb10e905a9f2787049c7c826c33f2d3273b24e81c12d42812d7b07f7c6";
+    url = "https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/melodic/teb_local_planner/0.8.4-1.tar.gz";
+    name = "0.8.4-1.tar.gz";
+    sha256 = "a1052cfa296cd74da059953a01bf0d5cfea8c24f7ef910117ba998fa12f44ff8";
   };
 
   buildType = "catkin";
-  buildInputs = [ libg2o dynamic-reconfigure geometry-msgs message-generation mbf-costmap-core tf2-geometry-msgs tf2-ros nav-msgs std-msgs roscpp visualization-msgs costmap-2d cmake-modules base-local-planner pluginlib mbf-msgs nav-core tf2 costmap-converter interactive-markers tf2-eigen ];
-  propagatedBuildInputs = [ costmap-2d mbf-costmap-core pluginlib base-local-planner libg2o mbf-msgs nav-core tf2-ros tf2 nav-msgs message-runtime costmap-converter dynamic-reconfigure std-msgs interactive-markers visualization-msgs roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs interactive-markers pluginlib tf2 nav-msgs dynamic-reconfigure cmake-modules tf2-geometry-msgs tf2-ros costmap-converter std-msgs costmap-2d nav-core roscpp message-generation mbf-msgs libg2o base-local-planner tf2-eigen mbf-costmap-core visualization-msgs ];
+  propagatedBuildInputs = [ tf2-ros costmap-converter geometry-msgs dynamic-reconfigure interactive-markers pluginlib std-msgs base-local-planner roscpp costmap-2d nav-core mbf-costmap-core visualization-msgs tf2 message-runtime mbf-msgs nav-msgs libg2o ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

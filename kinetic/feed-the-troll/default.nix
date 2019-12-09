@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, unique-id, catkin, pythonPackages, feed-the-troll-msgs, rocon-console, uuid-msgs, rostest, rosgraph, rospy, dynamic-reconfigure, rocon-python-utils }:
+{ lib, buildRosPackage, fetchurl, rocon-console, unique-id, dynamic-reconfigure, rosgraph, pythonPackages, catkin, rocon-python-utils, rospy, uuid-msgs, rostest, feed-the-troll-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-feed-the-troll";
   version = "0.1.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ unique-id pythonPackages.termcolor uuid-msgs rostest feed-the-troll-msgs rocon-console rosgraph dynamic-reconfigure rospy rocon-python-utils ];
-  propagatedBuildInputs = [ unique-id pythonPackages.termcolor uuid-msgs feed-the-troll-msgs rocon-console rosgraph dynamic-reconfigure rospy rocon-python-utils ];
+  buildInputs = [ pythonPackages.termcolor rocon-console unique-id dynamic-reconfigure rosgraph rocon-python-utils rospy uuid-msgs rostest feed-the-troll-msgs ];
+  propagatedBuildInputs = [ pythonPackages.termcolor rocon-console unique-id dynamic-reconfigure rosgraph rocon-python-utils rospy uuid-msgs feed-the-troll-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

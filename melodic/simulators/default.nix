@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros-pkgs, robot, catkin, rqt-robot-plugins, stage-ros, rqt-common-plugins }:
+{ lib, buildRosPackage, fetchurl, gazebo-ros-pkgs, robot, stage-ros, rqt-common-plugins, catkin, rqt-robot-plugins }:
 buildRosPackage {
   pname = "ros-melodic-simulators";
   version = "1.4.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gazebo-ros-pkgs robot rqt-robot-plugins stage-ros rqt-common-plugins ];
+  propagatedBuildInputs = [ gazebo-ros-pkgs robot stage-ros rqt-common-plugins rqt-robot-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

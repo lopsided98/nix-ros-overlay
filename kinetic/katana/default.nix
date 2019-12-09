@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, armadillo, control-msgs, katana-msgs, trajectory-msgs, sensor-msgs, catkin, roscpp, roslib, kni, urdf, actionlib, moveit-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, geometry-msgs, urdf, katana-msgs, std-srvs, tf, actionlib, roslib, armadillo, catkin, moveit-msgs, roscpp, kni, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-katana";
   version = "1.1.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs armadillo control-msgs katana-msgs trajectory-msgs sensor-msgs roscpp roslib kni urdf actionlib moveit-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs armadillo control-msgs katana-msgs trajectory-msgs sensor-msgs roscpp roslib kni urdf actionlib moveit-msgs tf geometry-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs urdf katana-msgs std-srvs actionlib roslib tf armadillo moveit-msgs roscpp kni control-msgs ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs urdf katana-msgs std-srvs tf actionlib roslib armadillo moveit-msgs roscpp kni control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

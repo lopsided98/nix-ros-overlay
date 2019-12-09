@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport, sensor-msgs, cv-bridge, aruco-msgs, catkin, roscpp, visualization-msgs, dynamic-reconfigure, tf, aruco, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, dynamic-reconfigure, aruco-msgs, tf, catkin, image-transport, cv-bridge, visualization-msgs, roscpp, aruco }:
 buildRosPackage {
   pname = "ros-kinetic-aruco-ros";
   version = "0.2.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-transport sensor-msgs cv-bridge aruco-msgs roscpp visualization-msgs dynamic-reconfigure tf aruco geometry-msgs ];
-  propagatedBuildInputs = [ image-transport sensor-msgs cv-bridge aruco-msgs roscpp visualization-msgs dynamic-reconfigure tf aruco geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure aruco-msgs tf image-transport cv-bridge visualization-msgs roscpp aruco ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs aruco-msgs dynamic-reconfigure tf image-transport cv-bridge visualization-msgs roscpp aruco ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

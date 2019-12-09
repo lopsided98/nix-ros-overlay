@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, roscpp, libreflexxestype2 }:
+{ lib, buildRosPackage, fetchurl, libreflexxestype2, cmake-modules, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-ros-reflexxes";
   version = "0.8.8";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp cmake-modules libreflexxestype2 ];
-  propagatedBuildInputs = [ roscpp libreflexxestype2 ];
+  buildInputs = [ libreflexxestype2 cmake-modules roscpp ];
+  propagatedBuildInputs = [ libreflexxestype2 roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

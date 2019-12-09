@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, rosconsole, orocos-kdl, catkin, tinyxml, rostest, urdfdom-headers, urdf, roscpp }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, rostest, urdfdom-headers, urdf, cmake-modules, catkin, tinyxml, roscpp, rosconsole }:
 buildRosPackage {
   pname = "ros-kinetic-kdl-parser";
   version = "1.12.11";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl cmake-modules rosconsole tinyxml urdfdom-headers urdf ];
+  buildInputs = [ orocos-kdl urdfdom-headers urdf cmake-modules tinyxml rosconsole ];
   checkInputs = [ rostest roscpp ];
-  propagatedBuildInputs = [ orocos-kdl rosconsole tinyxml urdfdom-headers urdf ];
+  propagatedBuildInputs = [ orocos-kdl urdfdom-headers urdf tinyxml rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

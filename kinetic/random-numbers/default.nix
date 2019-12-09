@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, boost }:
+{ lib, buildRosPackage, fetchurl, boost, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-random-numbers";
   version = "0.3.1";

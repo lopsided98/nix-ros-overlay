@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rdl-cmake, rdl-urdfreader, gtest, catkin, rdl-dynamics }:
+{ lib, buildRosPackage, fetchurl, catkin, gtest, rdl-cmake, rdl-dynamics, rdl-urdfreader }:
 buildRosPackage {
   pname = "ros-kinetic-rdl-benchmark";
   version = "1.1.0";

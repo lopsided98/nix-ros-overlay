@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp-components, ament-cmake-pytest, ament-cmake, rmw-implementation-cmake, rcutils, ament-lint-common, launch-testing, rosidl-default-generators, launch, launch-testing-ament-cmake, rosidl-cmake, rclcpp, launch-testing-ros, std-msgs, ament-lint-auto, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, launch-testing-ros, rosidl-cmake, rcutils, rclcpp-components, launch, std-msgs, rosidl-default-runtime, rmw-implementation-cmake, launch-testing, ament-lint-common, ament-cmake, launch-testing-ament-cmake, ament-cmake-pytest, rosidl-default-generators, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-logging-demo";
   version = "0.7.9-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcutils rosidl-cmake rclcpp std-msgs rclcpp-components ];
-  checkInputs = [ ament-cmake-pytest rmw-implementation-cmake ament-lint-common launch-testing launch launch-testing-ament-cmake ament-lint-auto launch-testing-ros ];
-  propagatedBuildInputs = [ rclcpp-components rcutils rclcpp std-msgs rosidl-default-runtime ];
+  buildInputs = [ rosidl-cmake rcutils rclcpp-components std-msgs rclcpp ];
+  checkInputs = [ launch-testing-ros launch rmw-implementation-cmake launch-testing ament-lint-common launch-testing-ament-cmake ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ rcutils rclcpp-components rosidl-default-runtime std-msgs rclcpp ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, nav2-common, geometry-msgs, ament-cmake-pytest, ament-cmake-gtest, launch, message-filters, nav2-util, rclcpp, std-srvs, tf2-geometry-msgs, tf2-ros, nav-msgs, launch-ros, ament-lint-common, launch-testing, sensor-msgs, tf2, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-cmake, tf2, nav2-util, nav-msgs, ament-lint-auto, sensor-msgs, launch-testing, ament-lint-common, tf2-geometry-msgs, nav2-common, rclcpp, tf2-ros, ament-cmake-gtest, message-filters, std-srvs, launch, launch-ros, ament-cmake-pytest }:
 buildRosPackage {
   pname = "ros-dashing-nav2-amcl";
   version = "0.2.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-srvs launch-ros tf2-geometry-msgs launch-testing sensor-msgs message-filters nav2-util tf2-ros nav2-common tf2 nav-msgs rclcpp geometry-msgs ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ std-srvs launch-ros tf2-geometry-msgs launch-testing sensor-msgs message-filters nav2-util tf2-ros tf2 nav-msgs rclcpp geometry-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs launch-testing std-srvs launch-ros tf2-geometry-msgs nav2-common tf2 nav2-util rclcpp nav-msgs tf2-ros ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs launch-testing std-srvs launch-ros tf2-geometry-msgs tf2 nav2-util rclcpp nav-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

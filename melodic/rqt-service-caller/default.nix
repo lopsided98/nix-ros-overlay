@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, rqt-gui, catkin, pythonPackages, rosservice, rqt-py-common }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-py-common, pythonPackages, catkin, rqt-gui-py, rosservice }:
 buildRosPackage {
   pname = "ros-melodic-rqt-service-caller";
   version = "0.4.8";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-gui-py pythonPackages.rospkg rqt-gui rosservice rqt-py-common ];
+  propagatedBuildInputs = [ rqt-gui rqt-py-common pythonPackages.rospkg rqt-gui-py rosservice ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

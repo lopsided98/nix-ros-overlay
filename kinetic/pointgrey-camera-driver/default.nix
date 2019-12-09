@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslaunch, stereo-image-proc, roslint, camera-info-manager, image-transport, sensor-msgs, catkin, libraw1394, libusb1, diagnostic-updater, wfov-camera-msgs, image-exposure-msgs, curl, nodelet, dynamic-reconfigure, image-proc, roscpp, dpkg }:
+{ lib, buildRosPackage, fetchurl, stereo-image-proc, sensor-msgs, libraw1394, dynamic-reconfigure, dpkg, camera-info-manager, image-proc, catkin, curl, libusb1, roslint, image-transport, wfov-camera-msgs, nodelet, roscpp, image-exposure-msgs, roslaunch, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-pointgrey-camera-driver";
   version = "0.13.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ camera-info-manager image-transport sensor-msgs libraw1394 roscpp libusb1 diagnostic-updater wfov-camera-msgs image-exposure-msgs curl dynamic-reconfigure nodelet dpkg ];
+  buildInputs = [ sensor-msgs libraw1394 dynamic-reconfigure dpkg camera-info-manager roscpp wfov-camera-msgs image-transport image-exposure-msgs nodelet diagnostic-updater libusb1 curl ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ stereo-image-proc camera-info-manager image-transport sensor-msgs libraw1394 libusb1 wfov-camera-msgs diagnostic-updater image-exposure-msgs nodelet dynamic-reconfigure image-proc roscpp ];
+  propagatedBuildInputs = [ stereo-image-proc sensor-msgs libraw1394 dynamic-reconfigure camera-info-manager image-proc libusb1 image-transport image-exposure-msgs nodelet roscpp wfov-camera-msgs diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, std-msgs, roslaunch, roscpp }:
+{ lib, buildRosPackage, fetchurl, std-msgs, catkin, roslint, roscpp, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-kvh";
   version = "1.0.3";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, catkin, message-generation, message-runtime, rospy, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-srvs, catkin, rospy, roscpp, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-look-at-pose";
   version = "0.7.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs message-generation rospy roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs message-runtime rospy roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs std-srvs rospy roscpp message-generation ];
+  propagatedBuildInputs = [ geometry-msgs std-srvs rospy roscpp message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

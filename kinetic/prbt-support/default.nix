@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, rosservice, joint-state-controller, prbt-hardware-support, rviz, moveit-core, robot-state-publisher, roslaunch, joint-state-publisher, xacro, pilz-control, catkin, canopen-motor-node, roscpp, controller-manager, cmake-modules, rostest, eigen, topic-tools }:
+{ lib, buildRosPackage, fetchurl, xacro, controller-manager, eigen, rostest, joint-state-controller, prbt-hardware-support, pilz-control, robot-state-publisher, canopen-motor-node, cmake-modules, joint-state-publisher, moveit-core, catkin, roscpp, moveit-ros-planning, topic-tools, roslaunch, rviz, rosservice }:
 buildRosPackage {
   pname = "ros-kinetic-prbt-support";
   version = "0.4.11-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roscpp ];
-  checkInputs = [ moveit-ros-planning cmake-modules prbt-hardware-support rostest rviz moveit-core eigen roslaunch joint-state-publisher ];
-  propagatedBuildInputs = [ controller-manager joint-state-controller pilz-control prbt-hardware-support rosservice canopen-motor-node robot-state-publisher topic-tools roscpp xacro ];
+  checkInputs = [ moveit-core joint-state-publisher prbt-hardware-support cmake-modules rviz eigen moveit-ros-planning roslaunch rostest ];
+  propagatedBuildInputs = [ xacro pilz-control prbt-hardware-support controller-manager robot-state-publisher canopen-motor-node roscpp topic-tools rosservice joint-state-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-mechanism-controllers, pluginlib, pr2-controller-interface, realtime-tools, catkin, robot-mechanism-controllers, std-msgs, roscpp, pr2-mechanism-model }:
+{ lib, buildRosPackage, fetchurl, pr2-mechanism-model, robot-mechanism-controllers, pluginlib, std-msgs, catkin, pr2-mechanism-controllers, pr2-controller-interface, realtime-tools, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-pr2-calibration-controllers";
   version = "1.10.17-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-mechanism-controllers pluginlib pr2-controller-interface realtime-tools robot-mechanism-controllers std-msgs roscpp pr2-mechanism-model ];
-  propagatedBuildInputs = [ pr2-mechanism-controllers pluginlib pr2-controller-interface realtime-tools robot-mechanism-controllers std-msgs roscpp pr2-mechanism-model ];
+  buildInputs = [ pr2-mechanism-model robot-mechanism-controllers pluginlib std-msgs pr2-mechanism-controllers pr2-controller-interface realtime-tools roscpp ];
+  propagatedBuildInputs = [ pr2-mechanism-model robot-mechanism-controllers pluginlib std-msgs pr2-mechanism-controllers pr2-controller-interface realtime-tools roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

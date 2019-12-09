@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, ecl-threads, nav-msgs, nodelet, dynamic-reconfigure, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, pluginlib, catkin, nodelet, roscpp, ecl-threads, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-yocs-velocity-smoother";
   version = "0.8.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib roscpp ecl-threads nav-msgs dynamic-reconfigure nodelet geometry-msgs ];
-  propagatedBuildInputs = [ pluginlib roscpp ecl-threads nav-msgs dynamic-reconfigure nodelet geometry-msgs ];
+  buildInputs = [ geometry-msgs dynamic-reconfigure pluginlib nodelet roscpp ecl-threads nav-msgs ];
+  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure pluginlib nodelet roscpp ecl-threads nav-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

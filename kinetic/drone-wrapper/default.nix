@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, sensor-msgs, mavros, cv-bridge, catkin, rospy, tf, mavros-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, mavros, geometry-msgs, tf, catkin, mavros-msgs, cv-bridge, gazebo-ros, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-drone-wrapper";
   version = "1.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros sensor-msgs mavros cv-bridge rospy tf mavros-msgs geometry-msgs ];
-  propagatedBuildInputs = [ gazebo-ros sensor-msgs mavros cv-bridge rospy tf mavros-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs mavros geometry-msgs tf mavros-msgs cv-bridge gazebo-ros rospy ];
+  propagatedBuildInputs = [ sensor-msgs mavros geometry-msgs tf mavros-msgs cv-bridge gazebo-ros rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roseus, image-view2, uvc-camera, ar-track-alvar, catkin, posedetection-msgs, checkerboard-detector, rostest, jsk-recognition-msgs, image-proc, visualization-msgs, opencv-apps }:
+{ lib, buildRosPackage, fetchurl, posedetection-msgs, roseus, checkerboard-detector, ar-track-alvar, image-proc, opencv-apps, image-view2, jsk-recognition-msgs, catkin, uvc-camera, visualization-msgs, rostest }:
 buildRosPackage {
   pname = "ros-melodic-roseus-tutorials";
   version = "1.7.4-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ roseus ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ image-view2 uvc-camera ar-track-alvar posedetection-msgs checkerboard-detector jsk-recognition-msgs image-proc visualization-msgs opencv-apps ];
+  propagatedBuildInputs = [ posedetection-msgs ar-track-alvar checkerboard-detector image-proc opencv-apps image-view2 jsk-recognition-msgs uvc-camera visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

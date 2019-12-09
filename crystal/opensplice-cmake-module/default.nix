@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-auto, opensplice_6_9, ament-cmake, ament-lint-common }:
+{ lib, buildRosPackage, fetchurl, opensplice_6_9, ament-lint-common, ament-cmake, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-opensplice-cmake-module";
   version = "0.6.3-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ opensplice_6_9 ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, launch-ros, ros2run, ament-cmake-gtest, launch, robot-state-publisher, ament-index-python, ament-lint-auto, dummy-sensors, dummy-map-server }:
+{ lib, buildRosPackage, fetchurl, ros2run, dummy-sensors, robot-state-publisher, launch, launch-ros, ament-lint-common, ament-cmake, dummy-map-server, ament-cmake-gtest, ament-index-python, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-dummy-robot-bringup";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ ros2run launch-ros launch robot-state-publisher ament-index-python dummy-sensors dummy-map-server ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ ros2run launch robot-state-publisher dummy-sensors launch-ros dummy-map-server ament-index-python ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

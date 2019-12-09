@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, shape-msgs, actionlib-msgs, trajectory-msgs, sensor-msgs, catkin, octomap-msgs, message-generation, message-runtime, object-recognition-msgs, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, message-generation, geometry-msgs, std-msgs, octomap-msgs, catkin, shape-msgs, actionlib-msgs, message-runtime, object-recognition-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-msgs";
   version = "0.9.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ shape-msgs actionlib-msgs trajectory-msgs sensor-msgs octomap-msgs message-generation object-recognition-msgs std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ shape-msgs actionlib-msgs trajectory-msgs sensor-msgs octomap-msgs message-runtime object-recognition-msgs std-msgs geometry-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-msgs octomap-msgs shape-msgs actionlib-msgs message-generation object-recognition-msgs ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-msgs octomap-msgs shape-msgs actionlib-msgs message-runtime object-recognition-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

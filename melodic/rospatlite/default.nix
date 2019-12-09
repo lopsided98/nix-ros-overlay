@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, std-msgs, rospy, catkin }:
 buildRosPackage {
   pname = "ros-melodic-rospatlite";
   version = "2.1.13-r1";

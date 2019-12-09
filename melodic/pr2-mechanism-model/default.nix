@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, kdl-parser, pluginlib, pr2-hardware-interface, cmake-modules, catkin, urdfdom, rostest, urdf, angles, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, urdf, hardware-interface, pluginlib, urdfdom, cmake-modules, catkin, rosunit, roscpp, angles, pr2-hardware-interface, rostest, kdl-parser }:
 buildRosPackage {
   pname = "ros-melodic-pr2-mechanism-model";
   version = "1.8.18";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface kdl-parser cmake-modules pluginlib pr2-hardware-interface urdfdom rostest urdf angles roscpp rosunit ];
-  propagatedBuildInputs = [ hardware-interface kdl-parser pluginlib pr2-hardware-interface urdfdom urdf angles roscpp ];
+  buildInputs = [ urdf hardware-interface pluginlib urdfdom cmake-modules rosunit roscpp angles pr2-hardware-interface rostest kdl-parser ];
+  propagatedBuildInputs = [ urdf hardware-interface pluginlib urdfdom roscpp angles pr2-hardware-interface kdl-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

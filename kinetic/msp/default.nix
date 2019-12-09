@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, asio }:
+{ lib, buildRosPackage, fetchurl, asio, cmake }:
 buildRosPackage {
   pname = "ros-kinetic-msp";
   version = "2.2.1-r1";

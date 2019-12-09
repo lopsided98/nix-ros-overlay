@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-navigation-config, catkin, move-base, dwa-local-planner, rviz, cob-supported-robots, roslaunch }:
+{ lib, buildRosPackage, fetchurl, cob-supported-robots, cob-navigation-config, catkin, rviz, move-base, roslaunch, dwa-local-planner }:
 buildRosPackage {
   pname = "ros-kinetic-cob-navigation-local";
   version = "0.6.9-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ cob-supported-robots roslaunch ];
-  propagatedBuildInputs = [ dwa-local-planner cob-navigation-config rviz move-base ];
+  propagatedBuildInputs = [ cob-navigation-config rviz dwa-local-planner move-base ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

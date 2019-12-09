@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-package, cmake, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-package, python3Packages, cmake }:
 buildRosPackage {
   pname = "ros-crystal-ament-cmake-core";
   version = "0.6.1";

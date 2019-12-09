@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, eus-qpoases, catkin, rostest, eigen, euslisp }:
+{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, euslisp, eus-qpoases, eigen, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-eus-qp";
   version = "0.1.14";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest cmake-modules euslisp eigen ];
+  buildInputs = [ eigen cmake-modules rostest euslisp ];
   checkInputs = [ eus-qpoases ];
-  propagatedBuildInputs = [ euslisp eigen ];
+  propagatedBuildInputs = [ eigen euslisp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

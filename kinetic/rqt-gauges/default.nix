@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, roslint, catkin, rqt-gui, rqt-gui-cpp, std-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-gui-cpp, pluginlib, std-msgs, catkin, roslint, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-gauges";
   version = "1.0.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib roslint rqt-gui rqt-gui-cpp std-msgs roscpp ];
-  propagatedBuildInputs = [ pluginlib rqt-gui rqt-gui-cpp std-msgs roscpp ];
+  buildInputs = [ rqt-gui rqt-gui-cpp pluginlib std-msgs roslint roscpp ];
+  propagatedBuildInputs = [ rqt-gui rqt-gui-cpp pluginlib std-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

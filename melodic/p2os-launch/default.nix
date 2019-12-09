@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, p2os-teleop, p2os-driver, p2os-urdf, catkin, p2os-msgs }:
+{ lib, buildRosPackage, fetchurl, p2os-driver, catkin, p2os-msgs, p2os-urdf, p2os-teleop }:
 buildRosPackage {
   pname = "ros-melodic-p2os-launch";
   version = "2.1.1-r3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ p2os-teleop p2os-urdf p2os-driver p2os-msgs ];
+  propagatedBuildInputs = [ p2os-driver p2os-urdf p2os-teleop p2os-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, control-msgs, catkin, combined-robot-hw, actionlib, roscpp, qb-device-hardware-interface, qb-device-utils }:
+{ lib, buildRosPackage, fetchurl, combined-robot-hw, controller-manager, actionlib, catkin, qb-device-utils, roscpp, qb-device-hardware-interface, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-qb-device-control";
   version = "2.1.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager control-msgs combined-robot-hw actionlib qb-device-hardware-interface roscpp qb-device-utils ];
-  propagatedBuildInputs = [ controller-manager control-msgs combined-robot-hw actionlib qb-device-hardware-interface roscpp qb-device-utils ];
+  buildInputs = [ combined-robot-hw controller-manager actionlib qb-device-utils roscpp qb-device-hardware-interface control-msgs ];
+  propagatedBuildInputs = [ combined-robot-hw controller-manager actionlib qb-device-utils roscpp qb-device-hardware-interface control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

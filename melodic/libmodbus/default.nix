@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules }:
+{ lib, buildRosPackage, fetchurl, cmake-modules, catkin }:
 buildRosPackage {
   pname = "ros-melodic-libmodbus";
   version = "0.8.8-r1";

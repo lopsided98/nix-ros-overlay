@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, image-transport, sensor-msgs, rqt-gui, cv-bridge, qt-gui-cpp, qt5, rqt-gui-cpp, rclcpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, sensor-msgs, geometry-msgs, rqt-gui-cpp, ament-cmake, qt-gui-cpp, image-transport, cv-bridge, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-rqt-image-view";
   version = "1.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ image-transport sensor-msgs rqt-gui cv-bridge qt5.qtbase qt-gui-cpp rqt-gui-cpp rclcpp geometry-msgs ];
-  propagatedBuildInputs = [ image-transport sensor-msgs rqt-gui cv-bridge qt-gui-cpp rqt-gui-cpp rclcpp geometry-msgs ];
+  buildInputs = [ rqt-gui sensor-msgs geometry-msgs rqt-gui-cpp qt-gui-cpp qt5.qtbase image-transport cv-bridge rclcpp ];
+  propagatedBuildInputs = [ rqt-gui sensor-msgs geometry-msgs rqt-gui-cpp qt-gui-cpp image-transport cv-bridge rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

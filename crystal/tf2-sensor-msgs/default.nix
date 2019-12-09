@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, sensor-msgs, tf2-ros, ament-cmake-auto, tf2, eigen }:
+{ lib, buildRosPackage, fetchurl, tf2-ros, sensor-msgs, ament-cmake-auto, eigen, tf2, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-crystal-tf2-sensor-msgs";
   version = "0.10.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tf2 sensor-msgs tf2-ros eigen ];
+  buildInputs = [ sensor-msgs eigen tf2-ros tf2 ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ tf2 sensor-msgs tf2-ros eigen ];
+  propagatedBuildInputs = [ sensor-msgs eigen tf2-ros tf2 ];
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {

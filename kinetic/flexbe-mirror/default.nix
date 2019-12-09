@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, flexbe-msgs, catkin, smach-ros, flexbe-widget, rospy, flexbe-core }:
+{ lib, buildRosPackage, fetchurl, flexbe-core, catkin, flexbe-widget, smach-ros, flexbe-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-flexbe-mirror";
   version = "1.2.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ flexbe-msgs smach-ros flexbe-widget rospy flexbe-core ];
+  propagatedBuildInputs = [ flexbe-core flexbe-widget smach-ros flexbe-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

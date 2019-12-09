@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roseus, gazebo-ros, catkin, pythonPackages, rostest, collada-urdf-jsk-patch }:
+{ lib, buildRosPackage, fetchurl, collada-urdf-jsk-patch, roseus, pythonPackages, catkin, gazebo-ros, rostest }:
 buildRosPackage {
   pname = "ros-melodic-eusurdf";
   version = "0.4.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roseus gazebo-ros rostest pythonPackages.lxml collada-urdf-jsk-patch ];
-  propagatedBuildInputs = [ gazebo-ros rostest collada-urdf-jsk-patch pythonPackages.lxml ];
+  buildInputs = [ pythonPackages.lxml collada-urdf-jsk-patch roseus gazebo-ros rostest ];
+  propagatedBuildInputs = [ gazebo-ros pythonPackages.lxml rostest collada-urdf-jsk-patch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

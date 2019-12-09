@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, libusb1, diagnostic-updater, robot-state-publisher, dynamic-reconfigure, roslaunch, roscpp, libusb, xacro }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, xacro, dynamic-reconfigure, robot-state-publisher, libusb, catkin, roscpp, libusb1, roslaunch, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-kinetic-sick-tim";
   version = "0.0.16-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs libusb1 diagnostic-updater dynamic-reconfigure roslaunch roscpp ];
-  propagatedBuildInputs = [ sensor-msgs libusb1 diagnostic-updater robot-state-publisher dynamic-reconfigure roscpp libusb xacro ];
+  buildInputs = [ sensor-msgs dynamic-reconfigure roscpp diagnostic-updater libusb1 roslaunch ];
+  propagatedBuildInputs = [ sensor-msgs xacro dynamic-reconfigure robot-state-publisher libusb roscpp libusb1 diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

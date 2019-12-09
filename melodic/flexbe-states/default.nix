@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, flexbe-msgs, rosbag, catkin, smach-ros, rostest, flexbe-testing, rospy, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, flexbe-testing, catkin, smach-ros, rosbag, rospy, flexbe-msgs, rostest }:
 buildRosPackage {
   pname = "ros-melodic-flexbe-states";
   version = "1.2.2-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ rostest ];
   checkInputs = [ geometry-msgs ];
-  propagatedBuildInputs = [ flexbe-msgs rosbag smach-ros flexbe-testing rospy ];
+  propagatedBuildInputs = [ flexbe-testing rosbag smach-ros flexbe-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

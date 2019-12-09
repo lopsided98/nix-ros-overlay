@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosconsole, pcl-ros, tf, pcl-conversions, geometry-msgs, message-filters, voxel-grid, message-generation, message-runtime, catkin, nav-msgs, std-msgs, laser-geometry, visualization-msgs, roscpp, costmap-2d, pluginlib, cmake-modules, sensor-msgs, dynamic-reconfigure, map-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, map-msgs, tf, nav-msgs, sensor-msgs, dynamic-reconfigure, cmake-modules, rosconsole, pcl-ros, message-filters, std-msgs, catkin, costmap-2d, roscpp, voxel-grid, message-generation, laser-geometry, pcl-conversions, visualization-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-nonpersistent-voxel-layer";
   version = "1.1.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib cmake-modules sensor-msgs message-filters roscpp voxel-grid message-generation nav-msgs laser-geometry visualization-msgs pcl-ros std-msgs dynamic-reconfigure tf pcl-conversions geometry-msgs map-msgs ];
-  propagatedBuildInputs = [ costmap-2d rosconsole pluginlib sensor-msgs message-filters roscpp pcl-ros nav-msgs laser-geometry message-runtime voxel-grid dynamic-reconfigure std-msgs visualization-msgs tf pcl-conversions geometry-msgs map-msgs ];
+  buildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs dynamic-reconfigure pluginlib std-msgs map-msgs tf cmake-modules laser-geometry costmap-2d pcl-conversions visualization-msgs roscpp voxel-grid message-generation nav-msgs ];
+  propagatedBuildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs dynamic-reconfigure pluginlib std-msgs map-msgs tf laser-geometry costmap-2d pcl-conversions visualization-msgs roscpp voxel-grid message-runtime nav-msgs rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

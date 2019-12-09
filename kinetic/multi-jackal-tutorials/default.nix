@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, catkin, multi-jackal-base, rviz, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, rviz, gazebo-ros, roslaunch, multi-jackal-base }:
 buildRosPackage {
   pname = "ros-kinetic-multi-jackal-tutorials";
   version = "0.0.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros roslaunch multi-jackal-base rviz ];
-  propagatedBuildInputs = [ gazebo-ros multi-jackal-base rviz ];
+  buildInputs = [ gazebo-ros rviz roslaunch multi-jackal-base ];
+  propagatedBuildInputs = [ gazebo-ros rviz multi-jackal-base ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

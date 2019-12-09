@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roseus, pr2-mechanism-msgs, pr2-controllers-msgs, control-msgs, pr2-description, euscollada, catkin, sound-play, move-base-msgs, rosgraph-msgs, pr2-gazebo, nav-msgs, rostest, robot-state-publisher, dynamic-reconfigure, pr2-msgs }:
+{ lib, buildRosPackage, fetchurl, nav-msgs, roseus, pr2-msgs, dynamic-reconfigure, pr2-description, robot-state-publisher, move-base-msgs, catkin, pr2-gazebo, sound-play, euscollada, pr2-controllers-msgs, rosgraph-msgs, rostest, pr2-mechanism-msgs, control-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2eus";
   version = "0.3.14-r3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roseus pr2-mechanism-msgs pr2-controllers-msgs control-msgs euscollada pr2-description sound-play move-base-msgs rosgraph-msgs nav-msgs dynamic-reconfigure pr2-msgs ];
-  checkInputs = [ rostest pr2-gazebo robot-state-publisher ];
-  propagatedBuildInputs = [ roseus pr2-mechanism-msgs pr2-controllers-msgs pr2-description euscollada control-msgs sound-play move-base-msgs nav-msgs dynamic-reconfigure pr2-msgs ];
+  buildInputs = [ nav-msgs pr2-msgs roseus pr2-description dynamic-reconfigure sound-play euscollada control-msgs pr2-controllers-msgs rosgraph-msgs pr2-mechanism-msgs move-base-msgs ];
+  checkInputs = [ robot-state-publisher rostest pr2-gazebo ];
+  propagatedBuildInputs = [ dynamic-reconfigure roseus pr2-description pr2-msgs sound-play euscollada control-msgs pr2-controllers-msgs nav-msgs pr2-mechanism-msgs move-base-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

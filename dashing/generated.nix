@@ -78,6 +78,8 @@ self: super: {
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
 
+ ament-cmake-virtualenv = self.callPackage ./ament-cmake-virtualenv {};
+
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
 
  ament-copyright = self.callPackage ./ament-copyright {};
@@ -113,6 +115,8 @@ self: super: {
  ament-pyflakes = self.callPackage ./ament-pyflakes {};
 
  ament-uncrustify = self.callPackage ./ament-uncrustify {};
+
+ ament-virtualenv = self.callPackage ./ament-virtualenv {};
 
  ament-xmllint = self.callPackage ./ament-xmllint {};
 
@@ -192,8 +196,6 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
- cross-compile = self.callPackage ./cross-compile {};
-
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
@@ -239,6 +241,8 @@ self: super: {
  dwb-msgs = self.callPackage ./dwb-msgs {};
 
  dwb-plugins = self.callPackage ./dwb-plugins {};
+
+ dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
@@ -446,8 +450,6 @@ self: super: {
 
  launch-ros = self.callPackage ./launch-ros {};
 
- launch-ros-sandbox = self.callPackage ./launch-ros-sandbox {};
-
  launch-testing = self.callPackage ./launch-testing {};
 
  launch-testing-ament-cmake = self.callPackage ./launch-testing-ament-cmake {};
@@ -461,6 +463,8 @@ self: super: {
  lex-node = self.callPackage ./lex-node {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
+
+ libphidget22 = self.callPackage ./libphidget22 {};
 
  librealsense2 = self.callPackage ./librealsense2 {};
 
@@ -556,6 +560,10 @@ self: super: {
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
+ novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
+
+ novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
+
  object-analytics-msgs = self.callPackage ./object-analytics-msgs {};
 
  object-analytics-node = self.callPackage ./object-analytics-node {};
@@ -563,6 +571,8 @@ self: super: {
  object-analytics-rviz = self.callPackage ./object-analytics-rviz {};
 
  object-msgs = self.callPackage ./object-msgs {};
+
+ octomap = self.callPackage ./octomap {};
 
  ompl = self.callPackage ./ompl {};
 
@@ -587,6 +597,36 @@ self: super: {
  pendulum-msgs = self.callPackage ./pendulum-msgs {};
 
  people-msgs = self.callPackage ./people-msgs {};
+
+ perception-pcl = self.callPackage ./perception-pcl {};
+
+ phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
+
+ phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
+
+ phidgets-api = self.callPackage ./phidgets-api {};
+
+ phidgets-digital-inputs = self.callPackage ./phidgets-digital-inputs {};
+
+ phidgets-digital-outputs = self.callPackage ./phidgets-digital-outputs {};
+
+ phidgets-drivers = self.callPackage ./phidgets-drivers {};
+
+ phidgets-gyroscope = self.callPackage ./phidgets-gyroscope {};
+
+ phidgets-high-speed-encoder = self.callPackage ./phidgets-high-speed-encoder {};
+
+ phidgets-ik = self.callPackage ./phidgets-ik {};
+
+ phidgets-magnetometer = self.callPackage ./phidgets-magnetometer {};
+
+ phidgets-motors = self.callPackage ./phidgets-motors {};
+
+ phidgets-msgs = self.callPackage ./phidgets-msgs {};
+
+ phidgets-spatial = self.callPackage ./phidgets-spatial {};
+
+ phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
  pluginlib = self.callPackage ./pluginlib {};
 
@@ -758,8 +798,6 @@ self: super: {
 
  rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
 
- rosbridge-server = self.callPackage ./rosbridge-server {};
-
  rosbridge-suite = self.callPackage ./rosbridge-suite {};
 
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
@@ -810,6 +848,8 @@ self: super: {
 
  rqt-action = self.callPackage ./rqt-action {};
 
+ rqt-common-plugins = self.callPackage ./rqt-common-plugins {};
+
  rqt-console = self.callPackage ./rqt-console {};
 
  rqt-graph = self.callPackage ./rqt-graph {};
@@ -833,6 +873,8 @@ self: super: {
  rqt-py-console = self.callPackage ./rqt-py-console {};
 
  rqt-reconfigure = self.callPackage ./rqt-reconfigure {};
+
+ rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
 
  rqt-service-caller = self.callPackage ./rqt-service-caller {};
 
@@ -889,6 +931,30 @@ self: super: {
  std-srvs = self.callPackage ./std-srvs {};
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
+
+ swri-console-util = self.callPackage ./swri-console-util {};
+
+ swri-dbw-interface = self.callPackage ./swri-dbw-interface {};
+
+ swri-geometry-util = self.callPackage ./swri-geometry-util {};
+
+ swri-image-util = self.callPackage ./swri-image-util {};
+
+ swri-math-util = self.callPackage ./swri-math-util {};
+
+ swri-opencv-util = self.callPackage ./swri-opencv-util {};
+
+ swri-prefix-tools = self.callPackage ./swri-prefix-tools {};
+
+ swri-roscpp = self.callPackage ./swri-roscpp {};
+
+ swri-route-util = self.callPackage ./swri-route-util {};
+
+ swri-serial-util = self.callPackage ./swri-serial-util {};
+
+ swri-system-util = self.callPackage ./swri-system-util {};
+
+ swri-transform-util = self.callPackage ./swri-transform-util {};
 
  system-modes = self.callPackage ./system-modes {};
 

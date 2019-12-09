@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, rclpy, pythonPackages, ament-pep257, python3Packages, openssl, ament-copyright, ros2cli }:
+{ lib, buildRosPackage, fetchurl, python3Packages, ament-copyright, pythonPackages, openssl, ros2cli, ament-pep257, rclpy, ament-flake8 }:
 buildRosPackage {
   pname = "ros-dashing-sros2";
   version = "0.7.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ rclpy ros2cli ];
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ rclpy openssl python3Packages.lxml ros2cli ];
+  buildInputs = [ ros2cli rclpy ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  propagatedBuildInputs = [ openssl ros2cli python3Packages.lxml rclpy ];
 
   meta = {
     description = ''Command line tools for managing SROS2 keys'';

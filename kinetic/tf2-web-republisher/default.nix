@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, tf2-ros, roscpp, rostest, message-generation, message-runtime, actionlib, rospy, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, actionlib, tf, catkin, actionlib-msgs, rospy, roscpp, message-runtime, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-tf2-web-republisher";
   version = "0.3.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib-msgs tf tf2-ros message-generation actionlib roscpp geometry-msgs ];
-  checkInputs = [ rostest rospy ];
-  propagatedBuildInputs = [ actionlib-msgs roscpp tf2-ros message-runtime actionlib tf geometry-msgs ];
+  buildInputs = [ geometry-msgs actionlib tf actionlib-msgs roscpp message-generation tf2-ros ];
+  checkInputs = [ rospy rostest ];
+  propagatedBuildInputs = [ geometry-msgs actionlib tf actionlib-msgs roscpp message-runtime tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

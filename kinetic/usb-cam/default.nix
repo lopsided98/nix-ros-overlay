@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, camera-info-manager, image-transport, sensor-msgs, catkin, ffmpeg, std-msgs, roscpp, v4l_utils }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, ffmpeg, std-msgs, std-srvs, camera-info-manager, catkin, image-transport, roscpp, v4l_utils }:
 buildRosPackage {
   pname = "ros-kinetic-usb-cam";
   version = "0.3.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs camera-info-manager image-transport sensor-msgs ffmpeg std-msgs roscpp ];
-  propagatedBuildInputs = [ std-srvs camera-info-manager image-transport sensor-msgs ffmpeg std-msgs roscpp v4l_utils ];
+  buildInputs = [ sensor-msgs ffmpeg std-msgs camera-info-manager std-srvs image-transport roscpp ];
+  propagatedBuildInputs = [ sensor-msgs ffmpeg std-msgs camera-info-manager std-srvs image-transport roscpp v4l_utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

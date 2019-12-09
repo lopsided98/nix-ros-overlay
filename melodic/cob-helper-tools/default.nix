@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-script-server, catkin, message-generation, message-runtime, visualization-msgs, dynamic-reconfigure, rospy, diagnostic-msgs, cob-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, cob-msgs, dynamic-reconfigure, tf, catkin, rospy, visualization-msgs, message-runtime, cob-script-server }:
 buildRosPackage {
   pname = "ros-melodic-cob-helper-tools";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_helper_tools/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "c75043752d83abf34bc0d49dc3376d3c64d74c71e7b7c50195c23bca5a3cbfc9";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_helper_tools/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "11cdb917fbbe0c352146a2e282741deaac0fd7eea4bb55cb0eb2b1612e2a7438";
   };
 
   buildType = "catkin";
   buildInputs = [ message-generation dynamic-reconfigure ];
-  propagatedBuildInputs = [ dynamic-reconfigure cob-script-server message-runtime visualization-msgs rospy diagnostic-msgs cob-msgs tf ];
+  propagatedBuildInputs = [ diagnostic-msgs cob-msgs dynamic-reconfigure tf rospy visualization-msgs message-runtime cob-script-server ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

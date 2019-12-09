@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-time-lite, ament-lint-common, ament-cmake-gtest, ecl-threads, ecl-exceptions, ecl-time, ecl-build, ecl-license, ecl-errors, ament-cmake-ros, ament-lint-auto, ecl-config }:
+{ lib, buildRosPackage, fetchurl, ecl-time, ament-cmake-ros, ecl-license, ament-lint-common, ament-lint-auto, ecl-errors, ecl-exceptions, ecl-config, ecl-threads, ecl-time-lite, ecl-build, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-crystal-ecl-ipc";
   version = "1.0.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-time-lite ecl-threads ecl-exceptions ecl-time ecl-license ecl-build ecl-errors ecl-config ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ ecl-time-lite ecl-threads ecl-exceptions ecl-time ecl-license ecl-build ecl-errors ecl-config ];
+  buildInputs = [ ecl-time ecl-license ecl-errors ecl-exceptions ecl-time-lite ecl-threads ecl-config ecl-build ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ ecl-time ecl-license ecl-errors ecl-exceptions ecl-time-lite ecl-threads ecl-config ecl-build ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

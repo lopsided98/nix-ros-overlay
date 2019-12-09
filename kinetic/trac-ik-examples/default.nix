@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, pr2-description, boost, catkin, trac-ik-lib, xacro }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, boost, xacro, catkin, trac-ik-lib }:
 buildRosPackage {
   pname = "ros-kinetic-trac-ik-examples";
-  version = "1.5.0";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/traclabs/trac_ik-release/archive/release/kinetic/trac_ik_examples/1.5.0-0.tar.gz";
-    name = "1.5.0-0.tar.gz";
-    sha256 = "dd8a5a54972e9972f5d8e014f5802e305c42fb5f6ad8eb49caf423a89e6f11a8";
+    url = "https://github.com/traclabs/trac_ik-release/archive/release/kinetic/trac_ik_examples/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "e06f35faf15bdc5430b9a9e1b77f9426e4fc5ff3642862c0b5740fb125614838";
   };
 
   buildType = "catkin";
-  buildInputs = [ trac-ik-lib orocos-kdl boost ];
-  propagatedBuildInputs = [ orocos-kdl boost pr2-description trac-ik-lib xacro ];
+  buildInputs = [ orocos-kdl boost trac-ik-lib ];
+  propagatedBuildInputs = [ orocos-kdl boost xacro trac-ik-lib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, gazebo-msgs, geometry-msgs, image-transport, ament-cmake-gtest, rclcpp, gazebo-ros, std-srvs, tf2-geometry-msgs, camera-info-manager, trajectory-msgs, tf2-ros, gazebo-dev, nav-msgs, std-msgs, ament-lint-common, sensor-msgs, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-cmake, image-transport, nav-msgs, ament-lint-auto, sensor-msgs, camera-info-manager, ament-lint-common, tf2-geometry-msgs, rclcpp, tf2-ros, ament-cmake-gtest, std-msgs, std-srvs, cv-bridge, gazebo-ros, gazebo-dev, trajectory-msgs, gazebo-msgs }:
 buildRosPackage {
   pname = "ros-dashing-gazebo-plugins";
   version = "3.3.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ gazebo-ros std-srvs tf2-geometry-msgs geometry-msgs camera-info-manager trajectory-msgs image-transport sensor-msgs cv-bridge tf2-ros gazebo-dev nav-msgs rclcpp std-msgs gazebo-msgs ];
-  checkInputs = [ ament-lint-auto cv-bridge ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ gazebo-ros std-srvs tf2-geometry-msgs geometry-msgs camera-info-manager trajectory-msgs sensor-msgs image-transport cv-bridge tf2-ros gazebo-dev nav-msgs rclcpp std-msgs gazebo-msgs ];
+  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-msgs camera-info-manager std-srvs image-transport tf2-geometry-msgs gazebo-msgs cv-bridge gazebo-ros rclcpp nav-msgs tf2-ros gazebo-dev ];
+  checkInputs = [ cv-bridge ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-msgs std-srvs camera-info-manager image-transport tf2-geometry-msgs gazebo-msgs cv-bridge gazebo-ros rclcpp nav-msgs tf2-ros gazebo-dev ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

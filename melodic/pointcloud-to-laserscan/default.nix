@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, sensor-msgs, catkin, message-filters, tf2-ros, roscpp, tf2-sensor-msgs, tf2, nodelet, laser-geometry }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, catkin, tf2-sensor-msgs, laser-geometry, roslint, tf2, nodelet, roscpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-pointcloud-to-laserscan";
   version = "1.4.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters tf2-ros tf2-sensor-msgs tf2 laser-geometry nodelet roscpp ];
+  buildInputs = [ sensor-msgs message-filters tf2-sensor-msgs laser-geometry roscpp nodelet tf2 tf2-ros ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ sensor-msgs message-filters tf2-ros tf2-sensor-msgs tf2 laser-geometry nodelet roscpp ];
+  propagatedBuildInputs = [ sensor-msgs message-filters tf2-sensor-msgs laser-geometry roscpp nodelet tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

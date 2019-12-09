@@ -2,15 +2,15 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libntcan, libpcan }:
+{ lib, buildRosPackage, fetchurl, libntcan, libpcan, catkin }:
 buildRosPackage {
   pname = "ros-melodic-schunk-libm5api";
-  version = "0.6.13-r2";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_libm5api/0.6.13-2.tar.gz";
-    name = "0.6.13-2.tar.gz";
-    sha256 = "e343d467eeaa11ed11bdd9940c51aa9a1dd4c1965610423e77b41cb18c5a80a7";
+    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_libm5api/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "b5ff483ea55dee762a82ae1a43b607a331ac9c40b7c88e3c5d8e24552c95052a";
   };
 
   buildType = "catkin";

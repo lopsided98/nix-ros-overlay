@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, object-analytics-msgs, ament-cmake, ament-lint-common, sensor-msgs, cv-bridge, message-filters, rclcpp, std-msgs, ament-lint-auto, visualization-msgs, object-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, std-msgs, ament-lint-common, object-msgs, ament-cmake, cv-bridge, visualization-msgs, object-analytics-msgs, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-object-analytics-rviz";
   version = "0.5.3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ object-analytics-msgs sensor-msgs cv-bridge message-filters rclcpp std-msgs visualization-msgs object-msgs geometry-msgs ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ object-analytics-msgs sensor-msgs cv-bridge message-filters rclcpp std-msgs visualization-msgs object-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs object-msgs cv-bridge visualization-msgs object-analytics-msgs rclcpp ];
+  checkInputs = [ ament-lint-common ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs object-msgs cv-bridge visualization-msgs object-analytics-msgs rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

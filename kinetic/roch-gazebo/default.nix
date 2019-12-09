@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, roch-control, controller-manager, map-server, roslaunch, hector-gazebo-plugins, catkin, gazebo-plugins, roch-description, roch-navigation, robot-state-publisher, rostopic, roch-bringup, pointcloud-to-laserscan, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, roch-navigation, roch-bringup, pointcloud-to-laserscan, controller-manager, robot-state-publisher, hector-gazebo-plugins, map-server, catkin, roch-description, rostopic, gazebo-ros-control, gazebo-ros, roslaunch, roch-control, gazebo-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-roch-gazebo";
   version = "2.0.12-r5";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazebo-ros controller-manager roch-control map-server hector-gazebo-plugins gazebo-plugins roch-description roch-navigation robot-state-publisher rostopic roch-bringup pointcloud-to-laserscan gazebo-ros-control ];
+  propagatedBuildInputs = [ roch-navigation roch-bringup pointcloud-to-laserscan controller-manager robot-state-publisher hector-gazebo-plugins map-server roch-description rostopic gazebo-ros-control gazebo-ros roch-control gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

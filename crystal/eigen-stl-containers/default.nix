@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, eigen }:
+{ lib, buildRosPackage, fetchurl, eigen, ament-cmake }:
 buildRosPackage {
   pname = "ros-crystal-eigen-stl-containers";
   version = "1.0.0";

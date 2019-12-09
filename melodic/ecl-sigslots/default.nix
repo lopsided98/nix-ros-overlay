@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-license, catkin, ecl-config, ecl-threads }:
+{ lib, buildRosPackage, fetchurl, ecl-threads, ecl-license, ecl-config, catkin }:
 buildRosPackage {
   pname = "ros-melodic-ecl-sigslots";
   version = "0.62.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-license ecl-config ecl-threads ];
-  propagatedBuildInputs = [ ecl-license ecl-config ecl-threads ];
+  buildInputs = [ ecl-threads ecl-license ecl-config ];
+  propagatedBuildInputs = [ ecl-threads ecl-license ecl-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

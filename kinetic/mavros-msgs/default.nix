@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, geographic-msgs, message-generation, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, message-runtime, std-msgs, catkin, geographic-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-mavros-msgs";
-  version = "0.33.0-r1";
+  version = "0.33.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/kinetic/mavros_msgs/0.33.0-1.tar.gz";
-    name = "0.33.0-1.tar.gz";
-    sha256 = "c3cc9d21a1968f2ba0ae24cbbd7a7d0e899875f914b9f544cc60290d7965591a";
+    url = "https://github.com/mavlink/mavros-release/archive/release/kinetic/mavros_msgs/0.33.3-1.tar.gz";
+    name = "0.33.3-1.tar.gz";
+    sha256 = "a7dfb08ce91ede68db275535074dc2eee791be330833e885a8e9cf41fe81c62b";
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geographic-msgs message-generation std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geographic-msgs message-runtime std-msgs geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs geographic-msgs message-generation ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs geographic-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

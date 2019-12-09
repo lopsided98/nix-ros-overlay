@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, image-transport, rosbag, cv-bridge, catkin, libogg, message-generation, std-msgs, message-runtime, dynamic-reconfigure, libtheora }:
+{ lib, buildRosPackage, fetchurl, message-generation, dynamic-reconfigure, pluginlib, std-msgs, catkin, libogg, libtheora, image-transport, cv-bridge, rosbag, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-theora-image-transport";
   version = "1.9.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib image-transport rosbag cv-bridge libogg libtheora message-generation dynamic-reconfigure std-msgs ];
-  propagatedBuildInputs = [ pluginlib image-transport rosbag cv-bridge libogg libtheora message-runtime dynamic-reconfigure std-msgs ];
+  buildInputs = [ dynamic-reconfigure pluginlib std-msgs libogg libtheora image-transport cv-bridge rosbag message-generation ];
+  propagatedBuildInputs = [ dynamic-reconfigure pluginlib std-msgs libogg libtheora image-transport cv-bridge rosbag message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

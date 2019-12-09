@@ -2,21 +2,21 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, map-server, tf2-msgs, tf2-geometry-msgs, python-orocos-kdl, rosbag, catkin, sensor-msgs, message-filters, tf2-ros, tf2, rostest, nav-msgs, dynamic-reconfigure, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, dynamic-reconfigure, map-server, std-srvs, catkin, tf2, tf2-geometry-msgs, python-orocos-kdl, tf2-msgs, roscpp, rosbag, nav-msgs, rostest, tf2-ros, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-melodic-amcl";
-  version = "1.16.2";
+  version = "1.16.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/amcl/1.16.2-0.tar.gz";
-    name = "1.16.2-0.tar.gz";
-    sha256 = "01fc59bbf881b23905d1df0d056f0d2a76d1ce4801c70e68f3f6bfb7f2a6c818";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/amcl/1.16.3-1.tar.gz";
+    name = "1.16.3-1.tar.gz";
+    sha256 = "f17f7b2cc6538eb683edca1914a0dc56399c41b1f7ae23dbaaeda2abc0d94503";
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs tf2-msgs tf2-geometry-msgs rosbag sensor-msgs message-filters tf2-ros tf2 nav-msgs dynamic-reconfigure roscpp geometry-msgs ];
-  checkInputs = [ rostest python-orocos-kdl map-server ];
-  propagatedBuildInputs = [ std-srvs tf2-msgs rosbag sensor-msgs tf2-ros tf2 nav-msgs dynamic-reconfigure roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs dynamic-reconfigure std-srvs roscpp tf2-geometry-msgs tf2-msgs tf2 rosbag nav-msgs tf2-ros diagnostic-updater ];
+  checkInputs = [ map-server python-orocos-kdl rostest ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure std-srvs tf2 tf2-msgs roscpp rosbag nav-msgs tf2-ros diagnostic-updater ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, create-driver, create-node, catkin, create-description }:
+{ lib, buildRosPackage, fetchurl, create-node, create-description, catkin, create-driver }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-create";
   version = "2.3.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ create-driver create-node create-description ];
+  propagatedBuildInputs = [ create-description create-node create-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

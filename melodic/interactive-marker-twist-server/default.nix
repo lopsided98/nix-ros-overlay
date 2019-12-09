@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, roscpp, interactive-markers, roslaunch, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, interactive-markers, catkin, roslint, visualization-msgs, roscpp, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-interactive-marker-twist-server";
   version = "1.2.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ visualization-msgs interactive-markers roscpp ];
+  buildInputs = [ roscpp visualization-msgs interactive-markers ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ visualization-msgs interactive-markers roscpp ];
+  propagatedBuildInputs = [ interactive-markers visualization-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

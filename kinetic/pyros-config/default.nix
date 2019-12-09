@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin-pip, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin-pip, pythonPackages, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-pyros-config";
   version = "0.2.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin-pip pythonPackages.pytest pythonPackages.six ];
+  buildInputs = [ pythonPackages.pytest catkin-pip pythonPackages.six ];
   propagatedBuildInputs = [ pythonPackages.pytest pythonPackages.six ];
   nativeBuildInputs = [ catkin ];
 

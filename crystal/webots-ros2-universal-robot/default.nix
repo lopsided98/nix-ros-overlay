@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-flake8, control-msgs, rclpy, trajectory-msgs, sensor-msgs, pythonPackages, ament-copyright, rosgraph-msgs, ament-pep257, std-msgs, webots-ros2-core }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, ament-copyright, std-msgs, pythonPackages, ament-pep257, control-msgs, rclpy, builtin-interfaces, rosgraph-msgs, ament-flake8, webots-ros2-core }:
 buildRosPackage {
   pname = "ros-crystal-webots-ros2-universal-robot";
   version = "0.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ builtin-interfaces control-msgs rclpy trajectory-msgs sensor-msgs rosgraph-msgs std-msgs webots-ros2-core ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  propagatedBuildInputs = [ trajectory-msgs sensor-msgs std-msgs control-msgs rclpy builtin-interfaces rosgraph-msgs webots-ros2-core ];
 
   meta = {
     description = ''Universal Robot ROS2 interface for Webots.'';

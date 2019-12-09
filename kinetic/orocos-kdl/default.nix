@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pkg-config, cppunit, eigen, cmake }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, eigen, pkg-config, cppunit }:
 buildRosPackage {
   pname = "ros-kinetic-orocos-kdl";
   version = "1.3.2-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "cmake";
   buildInputs = [ eigen ];
   checkInputs = [ cppunit ];
-  propagatedBuildInputs = [ catkin pkg-config eigen ];
+  propagatedBuildInputs = [ pkg-config eigen catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

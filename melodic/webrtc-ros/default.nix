@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, async-web-server-cpp, webrtc, image-transport, catkin, cv-bridge, roscpp, nodelet }:
+{ lib, buildRosPackage, fetchurl, webrtc, catkin, async-web-server-cpp, image-transport, cv-bridge, nodelet, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-webrtc-ros";
   version = "59.0.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ async-web-server-cpp webrtc image-transport cv-bridge roscpp nodelet ];
-  propagatedBuildInputs = [ async-web-server-cpp webrtc image-transport cv-bridge nodelet roscpp ];
+  buildInputs = [ webrtc async-web-server-cpp image-transport cv-bridge nodelet roscpp ];
+  propagatedBuildInputs = [ webrtc async-web-server-cpp image-transport cv-bridge nodelet roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

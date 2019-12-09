@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-converters, ecl-formatters, ecl-eigen, ament-lint-common, sophus, ament-cmake-gtest, ecl-build, ecl-exceptions, ecl-license, ecl-math, ament-cmake-ros, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-formatters, ecl-license, ament-lint-common, ament-lint-auto, ecl-build, ecl-exceptions, ament-cmake-gtest, ecl-eigen, ecl-math, sophus, ecl-converters }:
 buildRosPackage {
   pname = "ros-dashing-ecl-linear-algebra";
   version = "1.0.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-converters ecl-eigen ecl-formatters sophus ecl-build ecl-exceptions ecl-license ecl-math ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ ecl-converters ecl-eigen ecl-formatters sophus ecl-build ecl-exceptions ecl-license ecl-math ];
+  buildInputs = [ sophus ecl-formatters ecl-license ecl-exceptions ecl-eigen ecl-math ecl-build ecl-converters ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ sophus ecl-formatters ecl-license ecl-exceptions ecl-eigen ecl-math ecl-build ecl-converters ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

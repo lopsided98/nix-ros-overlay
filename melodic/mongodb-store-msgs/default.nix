@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, actionlib }:
+{ lib, buildRosPackage, fetchurl, message-runtime, actionlib, catkin, actionlib-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-mongodb-store-msgs";
-  version = "0.5.1-r2";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/strands-project-releases/mongodb_store/archive/release/melodic/mongodb_store_msgs/0.5.1-2.tar.gz";
-    name = "0.5.1-2.tar.gz";
-    sha256 = "075b062cafd0ac8994ea0c176b25a8099b419edc548f94e26ef1b5162a2962bf";
+    url = "https://github.com/strands-project-releases/mongodb_store/archive/release/melodic/mongodb_store_msgs/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "9e04a9e03d5d12af73025911fbc85aa0ba7fc03b0e44b3bc6247df1d39fb7526";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation actionlib-msgs actionlib ];
-  propagatedBuildInputs = [ message-generation message-runtime actionlib-msgs actionlib ];
+  buildInputs = [ message-generation actionlib actionlib-msgs catkin ];
+  propagatedBuildInputs = [ message-generation actionlib actionlib-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

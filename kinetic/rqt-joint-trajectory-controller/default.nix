@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, control-msgs, trajectory-msgs, catkin, rqt-gui, controller-manager-msgs, rospy }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, trajectory-msgs, controller-manager-msgs, catkin, rqt-gui-py, rospy, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-joint-trajectory-controller";
   version = "0.13.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-gui-py control-msgs trajectory-msgs rqt-gui controller-manager-msgs rospy ];
+  propagatedBuildInputs = [ rqt-gui trajectory-msgs controller-manager-msgs rqt-gui-py rospy control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

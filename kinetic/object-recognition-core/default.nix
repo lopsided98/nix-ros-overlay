@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, couchdb, cmake-modules, boost, sensor-msgs, catkin, curl, visualization-msgs, ecto, ecto-image-pipeline }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, cmake-modules, catkin, ecto, couchdb, visualization-msgs, ecto-image-pipeline, curl }:
 buildRosPackage {
   pname = "ros-kinetic-object-recognition-core";
   version = "0.6.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules boost sensor-msgs curl ecto ecto-image-pipeline ];
+  buildInputs = [ boost sensor-msgs cmake-modules ecto ecto-image-pipeline curl ];
   checkInputs = [ visualization-msgs ];
-  propagatedBuildInputs = [ couchdb boost sensor-msgs curl ecto ecto-image-pipeline ];
+  propagatedBuildInputs = [ boost sensor-msgs ecto couchdb ecto-image-pipeline curl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

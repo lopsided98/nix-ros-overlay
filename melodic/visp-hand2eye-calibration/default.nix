@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, visp-bridge, sensor-msgs, catkin, message-generation, visp, message-runtime, std-msgs, image-proc, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, std-msgs, image-proc, catkin, visp, roscpp, visp-bridge, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-visp-hand2eye-calibration";
   version = "0.11.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ visp-bridge sensor-msgs message-generation visp std-msgs image-proc roscpp geometry-msgs ];
-  propagatedBuildInputs = [ visp-bridge sensor-msgs message-generation visp message-runtime std-msgs image-proc roscpp geometry-msgs ];
+  buildInputs = [ sensor-msgs geometry-msgs std-msgs image-proc visp roscpp visp-bridge message-generation ];
+  propagatedBuildInputs = [ sensor-msgs geometry-msgs message-runtime std-msgs image-proc visp roscpp visp-bridge message-generation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

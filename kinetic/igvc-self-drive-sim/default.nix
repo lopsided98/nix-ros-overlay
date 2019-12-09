@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, igvc-self-drive-description, igvc-self-drive-gazebo, catkin, igvc-self-drive-gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, igvc-self-drive-description, catkin, igvc-self-drive-gazebo, igvc-self-drive-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-igvc-self-drive-sim";
   version = "0.1.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ igvc-self-drive-description igvc-self-drive-gazebo igvc-self-drive-gazebo-plugins ];
+  propagatedBuildInputs = [ igvc-self-drive-description igvc-self-drive-gazebo-plugins igvc-self-drive-gazebo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

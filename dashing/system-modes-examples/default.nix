@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, boost, system-modes, rclcpp }:
+{ lib, buildRosPackage, fetchurl, system-modes, boost, rclcpp-lifecycle, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-system-modes-examples";
   version = "0.1.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-lifecycle system-modes rclcpp boost ];
+  buildInputs = [ boost system-modes rclcpp-lifecycle rclcpp ];
   checkInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ rclcpp-lifecycle system-modes rclcpp boost ];
+  propagatedBuildInputs = [ boost system-modes rclcpp-lifecycle rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

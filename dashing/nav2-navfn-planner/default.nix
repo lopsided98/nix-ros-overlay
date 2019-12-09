@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-cmake-pytest, ament-cmake, rclcpp-lifecycle, ament-lint-common, launch-testing, nav2-msgs, ament-cmake-gtest, nav2-util, launch, tf2-ros, nav2-common, nav-msgs, rclcpp-action, rclcpp, ament-lint-auto, visualization-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, tf2-ros, nav2-msgs, rclcpp-action, rclcpp-lifecycle, geometry-msgs, rclcpp, launch, launch-testing, ament-lint-common, ament-cmake, ament-cmake-gtest, nav2-common, visualization-msgs, ament-cmake-pytest, nav2-util, builtin-interfaces, nav-msgs, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-nav2-navfn-planner";
   version = "0.2.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces rclcpp-lifecycle nav2-msgs nav2-util tf2-ros nav2-common nav-msgs rclcpp-action rclcpp visualization-msgs geometry-msgs ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing ament-cmake-gtest launch ament-lint-auto ];
-  propagatedBuildInputs = [ builtin-interfaces rclcpp-lifecycle nav2-msgs nav2-util tf2-ros nav-msgs rclcpp-action rclcpp visualization-msgs geometry-msgs ];
+  buildInputs = [ rclcpp-action rclcpp-lifecycle geometry-msgs nav-msgs rclcpp nav2-common visualization-msgs nav2-util builtin-interfaces nav2-msgs tf2-ros ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ rclcpp-action rclcpp-lifecycle geometry-msgs nav-msgs rclcpp visualization-msgs nav2-util builtin-interfaces nav2-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, rosconsole, catkin, roscpp, rostest, roslib }:
+{ lib, buildRosPackage, fetchurl, pluginlib, catkin, roslib, rosconsole, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-filters";
   version = "1.8.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosconsole pluginlib rostest roslib roscpp ];
-  propagatedBuildInputs = [ roslib rosconsole roscpp pluginlib ];
+  buildInputs = [ pluginlib roslib rosconsole roscpp rostest ];
+  propagatedBuildInputs = [ pluginlib rosconsole roslib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

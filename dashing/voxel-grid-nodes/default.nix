@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-lifecycle, ament-lint-common, ament-cmake-gtest, sensor-msgs, voxel-grid, rclcpp, ament-lint-auto, autoware-auto-cmake, lidar-utils }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp-lifecycle, lidar-utils, ament-lint-common, ament-cmake, autoware-auto-cmake, ament-cmake-gtest, voxel-grid, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-voxel-grid-nodes";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-lifecycle sensor-msgs voxel-grid rclcpp lidar-utils ];
-  checkInputs = [ ament-lint-auto ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ rclcpp-lifecycle sensor-msgs voxel-grid rclcpp lidar-utils ];
-  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
+  buildInputs = [ sensor-msgs rclcpp-lifecycle lidar-utils voxel-grid rclcpp ];
+  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  propagatedBuildInputs = [ sensor-msgs rclcpp-lifecycle lidar-utils voxel-grid rclcpp ];
+  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
 
   meta = {
     description = ''voxel grid filters'';

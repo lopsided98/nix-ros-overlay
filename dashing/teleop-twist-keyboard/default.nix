@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, rclpy, ament-pep257, ament-copyright, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-copyright, ament-pep257, rclpy, ament-flake8 }:
 buildRosPackage {
   pname = "ros-dashing-teleop-twist-keyboard";
   version = "2.3.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ];
-  propagatedBuildInputs = [ rclpy geometry-msgs ];
+  checkInputs = [ ament-pep257 ament-flake8 ament-copyright ];
+  propagatedBuildInputs = [ geometry-msgs rclpy ];
 
   meta = {
     description = ''A robot-agnostic teleoperation node to convert keyboard commands to Twist

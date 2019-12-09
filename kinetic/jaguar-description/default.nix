@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, urdf, tf, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, urdf, catkin, tf, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-jaguar-description";
   version = "0.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf urdf xacro roscpp ];
-  propagatedBuildInputs = [ tf roscpp urdf xacro ];
+  buildInputs = [ xacro tf urdf roscpp ];
+  propagatedBuildInputs = [ xacro tf urdf roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

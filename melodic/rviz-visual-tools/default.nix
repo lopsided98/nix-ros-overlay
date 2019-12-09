@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ogre1_9, roslint, trajectory-msgs, eigen-stl-containers, catkin, sensor-msgs, rostest, std-msgs, rviz, qt5, visualization-msgs, graph-msgs, tf-conversions, eigen-conversions, roscpp, rosunit, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, eigen-stl-containers, trajectory-msgs, sensor-msgs, geometry-msgs, eigen-conversions, graph-msgs, std-msgs, ogre1_9, catkin, rosunit, roslint, qt5, rviz, visualization-msgs, roscpp, tf-conversions, rostest }:
 buildRosPackage {
   pname = "ros-melodic-rviz-visual-tools";
   version = "3.8.0-r4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ogre1_9 roslint qt5.qtx11extras trajectory-msgs eigen-stl-containers sensor-msgs roscpp rviz tf-conversions graph-msgs std-msgs eigen-conversions visualization-msgs geometry-msgs ];
+  buildInputs = [ eigen-stl-containers sensor-msgs trajectory-msgs geometry-msgs eigen-conversions graph-msgs std-msgs ogre1_9 roslint rviz visualization-msgs roscpp tf-conversions qt5.qtx11extras ];
   checkInputs = [ rostest rosunit ];
-  propagatedBuildInputs = [ ogre1_9 qt5.qtx11extras roslint trajectory-msgs eigen-stl-containers sensor-msgs rviz tf-conversions graph-msgs visualization-msgs std-msgs eigen-conversions roscpp geometry-msgs ];
+  propagatedBuildInputs = [ eigen-stl-containers sensor-msgs trajectory-msgs geometry-msgs eigen-conversions graph-msgs std-msgs ogre1_9 roslint rviz visualization-msgs roscpp tf-conversions qt5.qtx11extras ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

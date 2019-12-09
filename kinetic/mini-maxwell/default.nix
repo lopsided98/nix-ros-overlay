@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslib, catkin, cmake-modules, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, cmake-modules, roslib, dynamic-reconfigure, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-mini-maxwell";
-  version = "2.1.13-r1";
+  version = "2.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/mini_maxwell/2.1.13-1.tar.gz";
-    name = "2.1.13-1.tar.gz";
-    sha256 = "6042c56a1f8f5417ce2e64fd5afeaa921cb23007d7a5c0b3554e63005cb0d6c4";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/mini_maxwell/2.1.14-1.tar.gz";
+    name = "2.1.14-1.tar.gz";
+    sha256 = "c056847379ff23803dd59df66a4c03501157b059d76ed1bac821347bd2ca0fe6";
   };
 
   buildType = "catkin";
-  buildInputs = [ roslib cmake-modules dynamic-reconfigure ];
+  buildInputs = [ cmake-modules roslib dynamic-reconfigure ];
   propagatedBuildInputs = [ dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 

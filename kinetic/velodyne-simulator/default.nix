@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, velodyne-gazebo-plugins, catkin, velodyne-description }:
+{ lib, buildRosPackage, fetchurl, velodyne-description, catkin, velodyne-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-velodyne-simulator";
   version = "1.0.9";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ velodyne-gazebo-plugins velodyne-description ];
+  propagatedBuildInputs = [ velodyne-description velodyne-gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

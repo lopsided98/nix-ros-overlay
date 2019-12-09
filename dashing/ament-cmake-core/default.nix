@@ -2,15 +2,15 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-package, cmake, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-package, python3Packages, cmake }:
 buildRosPackage {
   pname = "ros-dashing-ament-cmake-core";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_core/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "95f05275a1866da8af17a8b413ad049a9677e0d62f14d900d29c9d1d28dde1c3";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_core/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "d9e308452be90fb2dabc009319fdb70e7137307ea7e643d36b74f8b0221e45f6";
   };
 
   buildType = "ament_cmake";

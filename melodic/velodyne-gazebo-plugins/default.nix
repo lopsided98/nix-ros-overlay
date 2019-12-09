@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, sensor-msgs, catkin, roscpp, tf }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, tf, roscpp, gazebo-ros }:
 buildRosPackage {
   pname = "ros-melodic-velodyne-gazebo-plugins";
   version = "1.0.9";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ gazebo-ros sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ gazebo-ros sensor-msgs roscpp tf ];
+  propagatedBuildInputs = [ gazebo-ros sensor-msgs tf roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

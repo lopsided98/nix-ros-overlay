@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, pluginlib, base-local-planner, tf, nav-core, catkin, eigen, roscpp }:
+{ lib, buildRosPackage, fetchurl, pluginlib, tf, base-local-planner, catkin, costmap-2d, nav-core, eigen, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-carrot-planner";
-  version = "1.14.4";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/carrot_planner/1.14.4-0.tar.gz";
-    name = "1.14.4-0.tar.gz";
-    sha256 = "8b35c17c47ac380c5a0c01b6b9b69c36ac88ec6e4dfea8b3f75e62b31398ca5b";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/carrot_planner/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "be83e77b7f193cd2af491d7f90a2697f9d5f72101fa2b44eb2b85752607f114b";
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d pluginlib base-local-planner tf nav-core eigen roscpp ];
-  propagatedBuildInputs = [ costmap-2d pluginlib base-local-planner nav-core roscpp eigen tf ];
+  buildInputs = [ pluginlib tf base-local-planner costmap-2d nav-core eigen roscpp ];
+  propagatedBuildInputs = [ pluginlib tf base-local-planner costmap-2d nav-core eigen roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

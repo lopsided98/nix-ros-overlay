@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, rviz, interactive-markers, visualization-msgs, std-msgs, tf, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, interactive-markers, std-msgs, tf, catkin, rviz, visualization-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-cob-interactive-teleop";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_interactive_teleop/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "ecf0cc9c8fe2a27d9411f0a08c732d47c57a2bba6261d79d3816fca76e0b4694";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_interactive_teleop/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "783651e0fb9f29a3e11e599d5391db4b7086d95d9a7f15d9a2709d4583d781dd";
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp interactive-markers visualization-msgs std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ tf rviz interactive-markers visualization-msgs std-msgs roscpp geometry-msgs ];
+  buildInputs = [ geometry-msgs interactive-markers std-msgs tf visualization-msgs roscpp ];
+  propagatedBuildInputs = [ geometry-msgs interactive-markers std-msgs tf rviz visualization-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

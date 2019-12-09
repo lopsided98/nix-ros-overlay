@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, mbf-abstract-core, pluginlib, actionlib-msgs, tf, mbf-msgs, catkin, tf2-ros, tf2, nav-msgs, actionlib, std-msgs, dynamic-reconfigure, roscpp, mbf-abstract-nav, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, mbf-abstract-nav, geometry-msgs, dynamic-reconfigure, pluginlib, std-srvs, std-msgs, tf, catkin, roscpp, actionlib, mbf-abstract-core, actionlib-msgs, tf2, mbf-msgs, nav-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-mbf-simple-nav";
   version = "0.2.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs mbf-abstract-core pluginlib actionlib-msgs tf mbf-msgs tf2-ros tf2 nav-msgs actionlib dynamic-reconfigure std-msgs roscpp mbf-abstract-nav geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs mbf-abstract-core pluginlib actionlib-msgs tf mbf-msgs tf2-ros tf2 nav-msgs actionlib std-msgs dynamic-reconfigure roscpp mbf-abstract-nav geometry-msgs ];
+  buildInputs = [ mbf-abstract-nav geometry-msgs dynamic-reconfigure pluginlib std-msgs std-srvs actionlib tf roscpp mbf-abstract-core actionlib-msgs tf2 mbf-msgs nav-msgs tf2-ros ];
+  propagatedBuildInputs = [ mbf-abstract-nav geometry-msgs dynamic-reconfigure pluginlib std-srvs std-msgs tf actionlib roscpp mbf-abstract-core actionlib-msgs tf2 mbf-msgs nav-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rviz, roslaunch, joint-state-publisher, jackal-description }:
+{ lib, buildRosPackage, fetchurl, joint-state-publisher, jackal-description, catkin, rviz, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-jackal-viz";
   version = "0.3.2";

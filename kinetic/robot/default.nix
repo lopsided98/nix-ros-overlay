@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-model, filters, ros-base, control-msgs, executive-smach, catkin, diagnostics, geometry, robot-state-publisher, xacro }:
+{ lib, buildRosPackage, fetchurl, xacro, executive-smach, robot-state-publisher, diagnostics, robot-model, filters, catkin, geometry, ros-base, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-robot";
   version = "1.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ robot-model filters ros-base control-msgs executive-smach diagnostics geometry robot-state-publisher xacro ];
+  propagatedBuildInputs = [ xacro executive-smach robot-state-publisher diagnostics robot-model filters geometry ros-base control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

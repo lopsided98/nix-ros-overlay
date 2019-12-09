@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, ament-flake8, rclpy, sensor-msgs, pythonPackages, ament-copyright, ament-pep257, std-msgs, webots-ros2-core, webots-ros2-msgs }:
+{ lib, buildRosPackage, fetchurl, webots-ros2-msgs, sensor-msgs, ament-copyright, std-msgs, pythonPackages, ament-pep257, rclpy, builtin-interfaces, ament-flake8, webots-ros2-core }:
 buildRosPackage {
   pname = "ros-crystal-webots-ros2-examples";
   version = "0.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ builtin-interfaces rclpy sensor-msgs std-msgs webots-ros2-core webots-ros2-msgs ];
+  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  propagatedBuildInputs = [ webots-ros2-msgs sensor-msgs std-msgs rclpy builtin-interfaces webots-ros2-core ];
 
   meta = {
     description = ''Minimal example showing how to control a robot with ROS2 in Webots.'';

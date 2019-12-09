@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, pendulum-msgs, rmw-implementation-cmake, ament-lint-common, rttest, ament-cmake, launch-testing, launch, rclcpp, ament-lint-auto, tlsf-cpp, ros2run }:
+{ lib, buildRosPackage, fetchurl, ros2run, tlsf-cpp, rmw-implementation-cmake, launch, launch-testing, rttest, ament-lint-common, ament-cmake, pendulum-msgs, ament-cmake-pytest, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-pendulum-control";
   version = "0.6.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tlsf-cpp rclcpp rttest pendulum-msgs ];
-  checkInputs = [ ament-cmake-pytest rmw-implementation-cmake ament-lint-common launch-testing launch ament-lint-auto ros2run ];
-  propagatedBuildInputs = [ tlsf-cpp rclcpp rttest pendulum-msgs ];
+  buildInputs = [ rclcpp pendulum-msgs rttest tlsf-cpp ];
+  checkInputs = [ ros2run launch rmw-implementation-cmake launch-testing ament-lint-common ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ rclcpp pendulum-msgs rttest tlsf-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

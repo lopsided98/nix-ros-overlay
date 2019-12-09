@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hrpsys, git, rqt-gui, subversion, rqt-robot-monitor, actionlib, diagnostic-msgs, tf, geometry-msgs, procps, collada-urdf, euscollada, image-transport, pythonPackages, pkg-config, message-generation, robot-pose-ekf, roslang, robot-state-publisher, hrpsys-tools, angles, nettools, pr2-msgs, rqt-gui-py, control-msgs, camera-info-manager, mk, rosbuild, catkin, nav-msgs, diagnostic-aggregator, roscpp, visualization-msgs, rosnode, hostname, sensor-msgs, rostest, rqt-robot-dashboard, dynamic-reconfigure, rtmbuild }:
+{ lib, buildRosPackage, fetchurl, collada-urdf, geometry-msgs, procps, tf, image-transport, rqt-gui-py, rosbuild, nav-msgs, rostest, rqt-gui, sensor-msgs, diagnostic-msgs, dynamic-reconfigure, robot-state-publisher, camera-info-manager, rqt-robot-dashboard, rqt-robot-monitor, diagnostic-aggregator, rtmbuild, pr2-msgs, hrpsys, pythonPackages, catkin, euscollada, roscpp, roslang, hrpsys-tools, message-generation, pkg-config, angles, control-msgs, git, rosnode, hostname, actionlib, nettools, visualization-msgs, robot-pose-ekf, subversion, mk }:
 buildRosPackage {
   pname = "ros-kinetic-hrpsys-ros-bridge";
   version = "1.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hrpsys git rqt-gui subversion rqt-robot-monitor actionlib diagnostic-msgs tf geometry-msgs procps collada-urdf euscollada image-transport pkg-config message-generation robot-pose-ekf roslang robot-state-publisher hrpsys-tools angles nettools pr2-msgs rqt-gui-py control-msgs camera-info-manager pythonPackages.rosdep mk rosbuild nav-msgs diagnostic-aggregator roscpp visualization-msgs rosnode hostname sensor-msgs rostest rqt-robot-dashboard dynamic-reconfigure rtmbuild ];
-  propagatedBuildInputs = [ hrpsys rqt-gui pythonPackages.ipython rqt-robot-monitor actionlib diagnostic-msgs tf geometry-msgs collada-urdf image-transport robot-pose-ekf robot-state-publisher hrpsys-tools pr2-msgs rqt-gui-py control-msgs camera-info-manager nav-msgs diagnostic-aggregator roscpp visualization-msgs rosnode pythonPackages.psutil sensor-msgs rostest rqt-robot-dashboard dynamic-reconfigure rtmbuild ];
+  buildInputs = [ geometry-msgs collada-urdf procps tf image-transport rqt-gui-py rosbuild nav-msgs rostest rqt-gui sensor-msgs diagnostic-msgs dynamic-reconfigure pythonPackages.rosdep robot-state-publisher camera-info-manager rqt-robot-dashboard rqt-robot-monitor diagnostic-aggregator rtmbuild pr2-msgs hrpsys euscollada roscpp roslang hrpsys-tools message-generation pkg-config angles control-msgs git rosnode hostname actionlib nettools visualization-msgs robot-pose-ekf subversion mk ];
+  propagatedBuildInputs = [ geometry-msgs collada-urdf pythonPackages.ipython tf image-transport rqt-gui-py nav-msgs rostest rqt-gui sensor-msgs diagnostic-msgs dynamic-reconfigure robot-state-publisher camera-info-manager rqt-robot-dashboard rqt-robot-monitor diagnostic-aggregator rtmbuild pr2-msgs hrpsys roscpp hrpsys-tools control-msgs rosnode actionlib visualization-msgs robot-pose-ekf pythonPackages.psutil ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

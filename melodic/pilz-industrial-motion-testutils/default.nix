@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, moveit-commander, moveit-core, moveit-msgs, eigen-conversions, pilz-msgs }:
+{ lib, buildRosPackage, fetchurl, moveit-core, eigen-conversions, moveit-commander, catkin, moveit-msgs, pilz-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pilz-industrial-motion-testutils";
-  version = "0.4.7-r1";
+  version = "0.4.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_industrial_motion_testutils/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "76f0f77c2a79a01e0ab5480eedc5a9acdd398c64a8e5889ccf69d341bdd5594b";
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_industrial_motion_testutils/0.4.10-1.tar.gz";
+    name = "0.4.10-1.tar.gz";
+    sha256 = "fd839ad672afda28b7730b366bbd35df8866b034d39e0de791a0573c168087f8";
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-msgs eigen-conversions pilz-msgs moveit-core ];
-  propagatedBuildInputs = [ moveit-msgs pilz-msgs moveit-commander moveit-core ];
+  buildInputs = [ moveit-core pilz-msgs moveit-msgs eigen-conversions ];
+  propagatedBuildInputs = [ moveit-commander moveit-core pilz-msgs moveit-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

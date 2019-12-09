@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, rospy, actionlib, tf, geometry-msgs, boost, roslint, message-generation, rviz, message-runtime, robot-state-publisher, xacro, std-srvs, cob-twist-controller, catkin, cob-frame-tracker, std-msgs, visualization-msgs, roscpp, cob-srvs, topic-tools }:
+{ lib, buildRosPackage, fetchurl, xacro, geometry-msgs, tf, actionlib-msgs, cob-srvs, robot-state-publisher, cob-twist-controller, std-msgs, std-srvs, catkin, roscpp, topic-tools, cob-frame-tracker, rospy, message-generation, boost, actionlib, roslint, rviz, visualization-msgs, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-cob-cartesian-controller";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs boost actionlib-msgs roslint roscpp cob-srvs message-generation visualization-msgs actionlib std-msgs tf geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs cob-twist-controller boost actionlib-msgs roscpp rospy cob-srvs std-msgs actionlib message-runtime robot-state-publisher cob-frame-tracker topic-tools rviz visualization-msgs tf xacro geometry-msgs ];
+  buildInputs = [ boost geometry-msgs std-msgs std-srvs actionlib tf roslint actionlib-msgs visualization-msgs roscpp message-generation cob-srvs ];
+  propagatedBuildInputs = [ boost xacro geometry-msgs message-runtime robot-state-publisher std-msgs std-srvs tf actionlib cob-twist-controller rviz rospy actionlib-msgs roscpp visualization-msgs topic-tools cob-frame-tracker cob-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

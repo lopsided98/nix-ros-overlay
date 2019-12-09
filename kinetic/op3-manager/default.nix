@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamixel-sdk, op3-online-walking-module-msgs, op3-head-control-module, op3-action-module, op3-walking-module-msgs, op3-balance-control, robotis-controller-msgs, robotis-framework-common, op3-base-module, op3-kinematics-dynamics, op3-direct-control-module, op3-walking-module, catkin, robotis-controller, op3-action-module-msgs, robotis-math, robotis-device, roscpp, op3-online-walking-module, cmake-modules, open-cr-module, op3-localization }:
+{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, op3-online-walking-module, op3-action-module-msgs, robotis-math, op3-head-control-module, robotis-controller, op3-kinematics-dynamics, op3-localization, cmake-modules, op3-walking-module-msgs, op3-base-module, dynamixel-sdk, catkin, op3-action-module, robotis-framework-common, roscpp, op3-walking-module, op3-online-walking-module-msgs, robotis-device, open-cr-module, op3-direct-control-module, op3-balance-control }:
 buildRosPackage {
   pname = "ros-kinetic-op3-manager";
   version = "0.2.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamixel-sdk op3-online-walking-module-msgs op3-action-module op3-head-control-module op3-walking-module-msgs op3-balance-control robotis-controller-msgs robotis-framework-common op3-base-module op3-kinematics-dynamics op3-direct-control-module op3-walking-module robotis-controller op3-action-module-msgs robotis-math robotis-device roscpp op3-online-walking-module cmake-modules open-cr-module ];
-  propagatedBuildInputs = [ dynamixel-sdk op3-online-walking-module-msgs op3-action-module op3-head-control-module op3-walking-module-msgs op3-balance-control robotis-controller-msgs robotis-framework-common op3-base-module op3-kinematics-dynamics op3-direct-control-module op3-walking-module robotis-controller op3-action-module-msgs robotis-math robotis-device roscpp op3-online-walking-module cmake-modules open-cr-module op3-localization ];
+  buildInputs = [ robotis-controller-msgs op3-online-walking-module op3-action-module-msgs robotis-math op3-head-control-module robotis-controller op3-kinematics-dynamics cmake-modules op3-walking-module-msgs op3-base-module dynamixel-sdk op3-action-module robotis-framework-common roscpp op3-walking-module op3-online-walking-module-msgs robotis-device open-cr-module op3-direct-control-module op3-balance-control ];
+  propagatedBuildInputs = [ robotis-controller-msgs op3-online-walking-module op3-action-module-msgs robotis-math op3-head-control-module robotis-controller op3-kinematics-dynamics op3-localization cmake-modules op3-walking-module-msgs op3-base-module dynamixel-sdk op3-action-module robotis-framework-common roscpp op3-walking-module op3-online-walking-module-msgs robotis-device open-cr-module op3-direct-control-module op3-balance-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

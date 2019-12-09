@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, marker-msgs, tf, image-transport, catkin, cv-bridge, image-geometry, rospy, std-msgs, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, std-msgs, tf, catkin, marker-msgs, image-transport, cv-bridge, roscpp, rospy, image-geometry }:
 buildRosPackage {
   pname = "ros-kinetic-tuw-aruco";
   version = "0.0.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ marker-msgs image-transport cv-bridge roscpp rospy image-geometry dynamic-reconfigure std-msgs tf ];
-  propagatedBuildInputs = [ marker-msgs image-transport cv-bridge roscpp rospy image-geometry dynamic-reconfigure std-msgs tf ];
+  buildInputs = [ dynamic-reconfigure std-msgs tf marker-msgs image-transport cv-bridge roscpp rospy image-geometry ];
+  propagatedBuildInputs = [ dynamic-reconfigure std-msgs tf marker-msgs image-transport cv-bridge roscpp rospy image-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

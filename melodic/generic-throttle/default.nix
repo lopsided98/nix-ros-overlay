@@ -2,19 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, rostopic, rospy }:
+{ lib, buildRosPackage, fetchurl, rospy, cv-bridge, rostopic, catkin }:
 buildRosPackage {
   pname = "ros-melodic-generic-throttle";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/generic_throttle/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "f31dd28bb3f853623614e04c3dd970b2e6e2576f61958bb27b61d0c33aea2fe6";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/generic_throttle/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "8f7eb12d899b0852220f99dc0d0271979c3f357b9619d3bf9f80d80e36cad91d";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cv-bridge rostopic rospy ];
+  propagatedBuildInputs = [ rospy cv-bridge rostopic ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

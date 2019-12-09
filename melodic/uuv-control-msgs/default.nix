@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-msgs, catkin, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-uuv-control-msgs";
   version = "0.6.13";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ std-msgs message-generation geometry-msgs ];
-  propagatedBuildInputs = [ std-msgs message-generation message-runtime geometry-msgs ];
+  propagatedBuildInputs = [ std-msgs message-generation geometry-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

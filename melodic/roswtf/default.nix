@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, cmake-modules, rosbag, rosbuild, pythonPackages, catkin, rosservice, rostest, rosgraph, roslaunch, roslib, rosnode }:
+{ lib, buildRosPackage, fetchurl, rosbuild, rosnode, std-srvs, rosgraph, cmake-modules, pythonPackages, roslib, catkin, rosbag, rosservice, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-melodic-roswtf";
   version = "1.14.3";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ rostest ];
-  checkInputs = [ std-srvs rosbag cmake-modules ];
-  propagatedBuildInputs = [ pythonPackages.rospkg rosbuild rosservice rosgraph pythonPackages.paramiko roslaunch roslib rosnode ];
+  checkInputs = [ rosbag std-srvs cmake-modules ];
+  propagatedBuildInputs = [ rosbuild rosnode rosgraph pythonPackages.rospkg roslib pythonPackages.paramiko rosservice roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

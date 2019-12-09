@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py, roslint, control-msgs, trajectory-msgs, rqt-gui, catkin, rostest, rospy, roslaunch }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, trajectory-msgs, catkin, roslint, rqt-gui-py, rospy, roslaunch, rostest, control-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-joint-trajectory-plot";
   version = "0.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui-py roslint rqt-gui rostest rospy roslaunch ];
-  propagatedBuildInputs = [ rqt-gui-py control-msgs trajectory-msgs rqt-gui rospy ];
+  buildInputs = [ rqt-gui roslint rqt-gui-py rospy roslaunch rostest ];
+  propagatedBuildInputs = [ rqt-gui trajectory-msgs rqt-gui-py rospy control-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

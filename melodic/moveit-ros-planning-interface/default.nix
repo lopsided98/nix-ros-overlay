@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, rosconsole, rospy, actionlib, eigenpy, geometry-msgs, pythonPackages, tf2-geometry-msgs, catkin, moveit-ros-manipulation, tf2-ros, moveit-msgs, roscpp, python, moveit-resources, moveit-ros-move-group, tf2, moveit-ros-warehouse, rostest, tf2-eigen, eigen }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, python, eigen, tf2, rostest, moveit-ros-warehouse, tf2-geometry-msgs, eigenpy, rosconsole, tf2-ros, catkin, pythonPackages, moveit-ros-manipulation, moveit-ros-planning, roscpp, rospy, moveit-ros-move-group, actionlib, moveit-resources, tf2-eigen, moveit-msgs }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-planning-interface";
   version = "1.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python moveit-ros-planning moveit-ros-move-group rosconsole tf2-geometry-msgs moveit-ros-manipulation tf2-ros tf2 moveit-ros-warehouse actionlib tf2-eigen eigenpy rospy moveit-msgs roscpp geometry-msgs eigen ];
-  checkInputs = [ moveit-resources rostest ];
-  propagatedBuildInputs = [ python moveit-ros-planning moveit-ros-move-group rosconsole tf2-geometry-msgs eigenpy tf2-ros moveit-ros-manipulation tf2 moveit-ros-warehouse tf2-eigen actionlib rospy moveit-msgs roscpp geometry-msgs ];
-  nativeBuildInputs = [ pythonPackages.catkin-pkg catkin ];
+  buildInputs = [ geometry-msgs moveit-ros-warehouse moveit-ros-move-group actionlib roscpp moveit-ros-manipulation tf2-eigen tf2-geometry-msgs eigenpy eigen python moveit-ros-planning moveit-msgs tf2 rospy rosconsole tf2-ros ];
+  checkInputs = [ rostest moveit-resources ];
+  propagatedBuildInputs = [ geometry-msgs moveit-ros-warehouse moveit-ros-move-group tf2 actionlib moveit-ros-manipulation moveit-ros-planning tf2-eigen tf2-geometry-msgs eigenpy python moveit-msgs roscpp rospy rosconsole tf2-ros ];
+  nativeBuildInputs = [ catkin pythonPackages.catkin-pkg ];
 
   meta = {
     description = ''Components of MoveIt! that offer simpler interfaces to planning and execution'';

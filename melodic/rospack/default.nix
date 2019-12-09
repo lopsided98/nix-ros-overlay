@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, ros-environment, cmake-modules, boost, gtest, catkin, pythonPackages, pkg-config, tinyxml-2 }:
+{ lib, buildRosPackage, fetchurl, tinyxml-2, boost, cmake-modules, pythonPackages, catkin, python, gtest, pkg-config, ros-environment }:
 buildRosPackage {
   pname = "ros-melodic-rospack";
   version = "2.5.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python cmake-modules boost gtest pkg-config tinyxml-2 ];
+  buildInputs = [ boost pkg-config cmake-modules python gtest tinyxml-2 ];
   checkInputs = [ pythonPackages.coverage ];
-  propagatedBuildInputs = [ python ros-environment boost pythonPackages.rosdep pkg-config tinyxml-2 pythonPackages.catkin-pkg ];
+  propagatedBuildInputs = [ boost pkg-config pythonPackages.rosdep python pythonPackages.catkin-pkg tinyxml-2 ros-environment ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

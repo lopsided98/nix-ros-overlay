@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag2, ament-cmake, ament-lint-common, rosbag2-converter-default-plugins, test-msgs, rosbag2-test-common, ament-cmake-gmock, ros2bag, rosbag2-storage-default-plugins, rclcpp, ament-index-cpp, std-msgs, ament-lint-auto, rosbag2-storage }:
+{ lib, buildRosPackage, fetchurl, ros2bag, rosbag2-test-common, std-msgs, ament-lint-common, ament-cmake, rosbag2, test-msgs, rosbag2-storage-default-plugins, rosbag2-converter-default-plugins, rosbag2-storage, ament-cmake-gmock, ament-index-cpp, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-dashing-rosbag2-tests";
   version = "0.1.8-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-index-cpp ];
-  checkInputs = [ rosbag2 ament-lint-common rosbag2-converter-default-plugins test-msgs rosbag2-test-common ament-cmake-gmock ros2bag rosbag2-storage-default-plugins rclcpp std-msgs ament-lint-auto rosbag2-storage ];
+  checkInputs = [ ros2bag rosbag2-test-common std-msgs ament-lint-common rosbag2 test-msgs rosbag2-storage-default-plugins rosbag2-converter-default-plugins rosbag2-storage ament-cmake-gmock rclcpp ament-lint-auto ];
   propagatedBuildInputs = [ ament-index-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 

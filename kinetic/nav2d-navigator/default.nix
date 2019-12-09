@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, pluginlib, actionlib-msgs, nav2d-operator, nav2d-msgs, tf, catkin, message-generation, message-runtime, actionlib, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, pluginlib, std-srvs, tf, actionlib, catkin, roscpp, actionlib-msgs, nav2d-operator, message-runtime, nav2d-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-nav2d-navigator";
   version = "0.3.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs pluginlib actionlib-msgs nav2d-operator nav2d-msgs tf message-generation actionlib roscpp geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs pluginlib actionlib-msgs nav2d-operator nav2d-msgs roscpp message-runtime actionlib tf geometry-msgs ];
+  buildInputs = [ geometry-msgs pluginlib std-srvs actionlib tf roscpp actionlib-msgs nav2d-operator message-generation nav2d-msgs ];
+  propagatedBuildInputs = [ geometry-msgs pluginlib std-srvs tf actionlib nav2d-operator actionlib-msgs roscpp message-runtime nav2d-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

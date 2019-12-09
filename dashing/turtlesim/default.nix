@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, ament-cmake, rosidl-default-generators, std-msgs, rclcpp, qt5, rclcpp-action, ament-index-cpp, rosidl-default-runtime, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, rclcpp-action, geometry-msgs, std-msgs, rosidl-default-runtime, std-srvs, ament-cmake, qt5, ament-index-cpp, rosidl-default-generators, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-turtlesim";
   version = "1.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-srvs qt5.qtbase rclcpp rclcpp-action ament-index-cpp std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ std-srvs qt5.qtbase rclcpp rclcpp-action ament-index-cpp std-msgs rosidl-default-runtime geometry-msgs ];
+  buildInputs = [ rclcpp-action geometry-msgs std-msgs std-srvs qt5.qtbase ament-index-cpp rclcpp ];
+  propagatedBuildInputs = [ rclcpp-action geometry-msgs rosidl-default-runtime std-msgs std-srvs qt5.qtbase ament-index-cpp rclcpp ];
   nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, message-filters, nav-msgs, nodelet, hector-pose-estimation-core, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, tf, catkin, nodelet, nav-msgs, hector-pose-estimation-core }:
 buildRosPackage {
   pname = "ros-kinetic-hector-pose-estimation";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters nav-msgs nodelet tf hector-pose-estimation-core geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs message-filters nav-msgs nodelet tf hector-pose-estimation-core geometry-msgs ];
+  buildInputs = [ sensor-msgs message-filters geometry-msgs tf nodelet nav-msgs hector-pose-estimation-core ];
+  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs tf nodelet nav-msgs hector-pose-estimation-core ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

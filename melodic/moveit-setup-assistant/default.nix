@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-planning, moveit-resources, moveit-ros-visualization, rosconsole, ogre1_9, xacro, libyamlcpp, srdfdom, catkin, urdf, qt5, rviz, moveit-core, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, moveit-core, xacro, srdfdom, urdf, ogre1_9, catkin, moveit-resources, rosunit, moveit-ros-planning, qt5, libyamlcpp, rviz, moveit-ros-visualization, roscpp, rosconsole }:
 buildRosPackage {
   pname = "ros-melodic-moveit-setup-assistant";
   version = "1.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-planning moveit-ros-visualization rosconsole ogre1_9 libyamlcpp srdfdom qt5.qtbase rviz moveit-core urdf roscpp ];
+  buildInputs = [ moveit-core srdfdom urdf ogre1_9 moveit-ros-planning qt5.qtbase libyamlcpp rviz moveit-ros-visualization roscpp rosconsole ];
   checkInputs = [ moveit-resources rosunit ];
-  propagatedBuildInputs = [ moveit-ros-planning moveit-ros-visualization rosconsole libyamlcpp srdfdom urdf moveit-core rviz roscpp xacro ];
+  propagatedBuildInputs = [ moveit-core xacro srdfdom urdf moveit-ros-planning libyamlcpp rviz moveit-ros-visualization roscpp rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

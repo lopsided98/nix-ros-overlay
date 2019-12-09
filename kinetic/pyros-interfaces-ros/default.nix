@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pyros-common, roslint, catkin-pip, catkin, pyros-config, rosservice, pyros-test, rostest, std-msgs, message-generation, rostopic, message-runtime, pyros-utils, rospy, rosunit, pyzmp }:
+{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, catkin, pyros-utils, pyros-config, rosunit, pyros-test, rostopic, roslint, pyzmp, catkin-pip, rospy, message-generation, rosservice, rostest, pyros-common }:
 buildRosPackage {
   pname = "ros-kinetic-pyros-interfaces-ros";
   version = "0.4.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pyros-common roslint catkin-pip pyros-config rospy message-generation pyros-utils std-msgs pyzmp ];
-  checkInputs = [ rosservice rostest rostopic pyros-test rosunit ];
-  propagatedBuildInputs = [ pyros-common pyros-config pyros-utils message-runtime rospy std-msgs pyzmp ];
+  buildInputs = [ std-msgs pyros-config pyros-utils roslint pyzmp catkin-pip rospy message-generation pyros-common ];
+  checkInputs = [ pyros-test rostopic rosunit rosservice rostest ];
+  propagatedBuildInputs = [ std-msgs pyros-config pyros-utils pyzmp rospy message-runtime pyros-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libyamlcpp, tf, catkin, roscpp, bin-pose-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, tf, catkin, libyamlcpp, visualization-msgs, roscpp, bin-pose-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-bin-pose-emulator";
   version = "0.1.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libyamlcpp roscpp visualization-msgs bin-pose-msgs tf ];
-  propagatedBuildInputs = [ libyamlcpp roscpp visualization-msgs bin-pose-msgs tf ];
+  buildInputs = [ tf libyamlcpp visualization-msgs roscpp bin-pose-msgs ];
+  propagatedBuildInputs = [ tf libyamlcpp visualization-msgs roscpp bin-pose-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

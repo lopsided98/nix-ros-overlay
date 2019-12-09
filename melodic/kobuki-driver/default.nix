@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-converters, ecl-sigslots, ecl-mobile-robot, ecl-command-line, catkin, ecl-geometry, ecl-time, ecl-build, ecl-devices }:
+{ lib, buildRosPackage, fetchurl, ecl-time, ecl-geometry, ecl-sigslots, catkin, ecl-command-line, ecl-mobile-robot, ecl-devices, ecl-build, ecl-converters }:
 buildRosPackage {
   pname = "ros-melodic-kobuki-driver";
   version = "0.7.8";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-converters ecl-sigslots ecl-command-line ecl-mobile-robot ecl-geometry ecl-time ecl-build ecl-devices ];
-  propagatedBuildInputs = [ ecl-converters ecl-sigslots ecl-command-line ecl-mobile-robot ecl-geometry ecl-time ecl-devices ];
+  buildInputs = [ ecl-time ecl-geometry ecl-sigslots ecl-build ecl-command-line ecl-mobile-robot ecl-devices ecl-converters ];
+  propagatedBuildInputs = [ ecl-time ecl-geometry ecl-sigslots ecl-command-line ecl-mobile-robot ecl-devices ecl-converters ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

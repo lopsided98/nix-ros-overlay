@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, python-orocos-kdl, catkin, tf2-ros, tf2, rostest, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, orocos-kdl, geometry-msgs, catkin, python-orocos-kdl, tf2, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-tf2-geometry-msgs";
   version = "0.5.20";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl python-orocos-kdl tf2-ros tf2 geometry-msgs ];
+  buildInputs = [ orocos-kdl geometry-msgs python-orocos-kdl tf2 tf2-ros ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ orocos-kdl python-orocos-kdl tf2-ros tf2 geometry-msgs ];
+  propagatedBuildInputs = [ orocos-kdl geometry-msgs python-orocos-kdl tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake, ament-lint-common, launch-testing, launch, rclcpp, std-msgs, rmw-fastrtps-cpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, rmw-fastrtps-cpp, launch, std-msgs, launch-testing, ament-lint-common, ament-cmake, ament-cmake-pytest, rclcpp, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-crystal-demo-nodes-cpp-native";
   version = "0.6.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs rmw-fastrtps-cpp rclcpp ];
-  checkInputs = [ ament-cmake-pytest ament-lint-common launch-testing launch ament-lint-auto ];
-  propagatedBuildInputs = [ std-msgs rmw-fastrtps-cpp rclcpp ];
+  buildInputs = [ std-msgs rclcpp rmw-fastrtps-cpp ];
+  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ std-msgs rclcpp rmw-fastrtps-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

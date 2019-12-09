@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gazebo-msgs, gazebo-dev }:
+{ lib, buildRosPackage, fetchurl, gazebo-msgs, catkin, gazebo-dev }:
 buildRosPackage {
   pname = "ros-melodic-uuv-world-plugins";
   version = "0.6.13";

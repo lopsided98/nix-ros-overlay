@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-tricycle-controller, cob-twist-controller, cob-control-msgs, cob-base-controller-utils, cob-model-identifier, cob-cartesian-controller, catkin, cob-footprint-observer, cob-base-velocity-smoother, cob-collision-velocity-filter, cob-omni-drive-controller, cob-trajectory-controller, cob-control-mode-adapter, cob-frame-tracker, cob-hardware-emulation, cob-obstacle-distance }:
+{ lib, buildRosPackage, fetchurl, cob-collision-velocity-filter, cob-footprint-observer, cob-model-identifier, cob-base-velocity-smoother, cob-control-msgs, cob-base-controller-utils, catkin, cob-tricycle-controller, cob-omni-drive-controller, cob-cartesian-controller, cob-control-mode-adapter, cob-twist-controller, cob-hardware-emulation, cob-trajectory-controller, cob-frame-tracker, cob-obstacle-distance }:
 buildRosPackage {
   pname = "ros-kinetic-cob-control";
   version = "0.7.9-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-tricycle-controller cob-twist-controller cob-control-msgs cob-base-controller-utils cob-model-identifier cob-cartesian-controller cob-base-velocity-smoother cob-footprint-observer cob-collision-velocity-filter cob-trajectory-controller cob-omni-drive-controller cob-control-mode-adapter cob-frame-tracker cob-hardware-emulation cob-obstacle-distance ];
+  propagatedBuildInputs = [ cob-collision-velocity-filter cob-footprint-observer cob-model-identifier cob-base-controller-utils cob-control-msgs cob-base-velocity-smoother cob-tricycle-controller cob-omni-drive-controller cob-cartesian-controller cob-control-mode-adapter cob-twist-controller cob-hardware-emulation cob-trajectory-controller cob-frame-tracker cob-obstacle-distance ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, iiwa-msgs, catkin, cmake-modules, roscpp }:
+{ lib, buildRosPackage, fetchurl, cmake-modules, iiwa-msgs, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-iiwa-ros";
   version = "1.4.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ iiwa-msgs roscpp cmake-modules ];
-  propagatedBuildInputs = [ iiwa-msgs roscpp cmake-modules ];
+  buildInputs = [ iiwa-msgs cmake-modules roscpp ];
+  propagatedBuildInputs = [ iiwa-msgs cmake-modules roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

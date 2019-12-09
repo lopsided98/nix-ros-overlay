@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, octomap-msgs, octomap, tf }:
+{ lib, buildRosPackage, fetchurl, sensor-msgs, octomap, octomap-msgs, tf, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-octomap-ros";
   version = "0.4.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs catkin octomap-msgs octomap tf ];
-  propagatedBuildInputs = [ sensor-msgs tf octomap octomap-msgs ];
+  buildInputs = [ sensor-msgs octomap octomap-msgs tf catkin ];
+  propagatedBuildInputs = [ octomap sensor-msgs octomap-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

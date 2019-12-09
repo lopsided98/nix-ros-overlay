@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  propagatedBuildInputs = [ python3Packages.flake8 ament-lint ];
+  propagatedBuildInputs = [ ament-lint python3Packages.flake8 ];
 
   meta = {
     description = ''The ability to check code for style and syntax conventions with flake8.'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, trajectory-msgs, catkin, message-generation, message-runtime, eigen, std-msgs, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, trajectory-msgs, message-generation, geometry-msgs, std-msgs, cmake-modules, catkin, eigen, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-mav-msgs";
   version = "3.3.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules trajectory-msgs message-generation eigen std-msgs geometry-msgs ];
-  propagatedBuildInputs = [ trajectory-msgs message-runtime eigen std-msgs geometry-msgs ];
+  buildInputs = [ trajectory-msgs geometry-msgs std-msgs cmake-modules eigen message-generation ];
+  propagatedBuildInputs = [ trajectory-msgs geometry-msgs std-msgs eigen message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, twist-mux, summit-x-description, catkin, summit-x-control, summit-xl-pad }:
+{ lib, buildRosPackage, fetchurl, twist-mux, catkin, summit-xl-pad, gazebo-ros, summit-x-description, summit-x-control }:
 buildRosPackage {
   pname = "ros-kinetic-summit-x-sim-bringup";
   version = "1.1.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gazebo-ros twist-mux summit-x-description summit-x-control summit-xl-pad ];
+  propagatedBuildInputs = [ twist-mux summit-xl-pad gazebo-ros summit-x-description summit-x-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
