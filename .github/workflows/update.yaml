@@ -28,6 +28,7 @@ jobs:
           yaml https://raw.githubusercontent.com/lopsided98/rosdistro/nixos-support/rosdep/python.yaml
           yaml https://raw.githubusercontent.com/lopsided98/rosdistro/nixos-support/rosdep/ruby.yaml
           EOF
+          rosdep update
           git config --local user.email "superflore@github.com"
           git config --local user.name "Superflore"
           git config credential.helper '!
