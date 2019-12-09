@@ -2,7 +2,6 @@ name: Update overlay using Superflore
 on:
   schedule:
     - cron: "0 12 * * FRI"
-  push:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +17,10 @@ jobs:
           pip install git+https://github.com/lopsided98/superflore.git@nixos-support
       - name: Update overlay
         env:
-          SUPERFLORE_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Don't use secrets.GITHUB_TOKEN because it prevents the PR from
+          # triggering a build
+          # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#about-workflow-events
+          SUPERFLORE_GITHUB_TOKEN: ${{ secrets.SUPERFLORE_GITHUB_TOKEN }}
           ROS_OS_OVERRIDE: nixos
           ROSDEP_SOURCE_PATH: rosdep-sources
         run: |
@@ -33,10 +35,10 @@ jobs:
           git config --local user.name "Superflore"
           git config credential.helper '!
             f() {
-              echo "username=${GITHUB_ACTOR}"
+              echo "username=lopsided98"
               echo "password=${SUPERFLORE_GITHUB_TOKEN}"
             }; f'
           superflore-gen-nix \
-            --tar-archive-dir tar \
+            --tar-archive-dir "${{ runner.temp }}/tar" \
             --output-repository-path . \
             --all
