@@ -1,7 +1,7 @@
 # Top level package set
 self:
 # Distro package set
-rosSelf: rosSuper: {
+rosSelf: rosSuper: with rosSelf.lib; {
   actionlib = rosSuper.actionlib.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -108,6 +108,12 @@ rosSelf: rosSuper: {
     ];
   });
 
+  realsense-camera = rosSuper.realsense-camera.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ rosSelf.librealsense ];
+  });
+
   rospack = rosSuper.rospack.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -119,10 +125,15 @@ rosSelf: rosSuper: {
     ];
   });
 
-  realsense-camera = rosSuper.realsense-camera.overrideAttrs ({
-    buildInputs ? [], ...
+  rviz = rosSuper.rviz.overrideAttrs ({
+    patches ? [], ...
   }: {
-    buildInputs = buildInputs ++ [ rosSelf.librealsense ];
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://github.com/ros-visualization/rviz/commit/f230eabd2953ede985146f45f707c6563a3387cc.patch";
+        sha256 = "0fh6k5wj74wy1fxz0knkmm6iay2ld42dj0lmj8z2ma5g6ibyn7s5";
+      })
+    ];
   });
 
   stage = rosSuper.stage.overrideAttrs ({
