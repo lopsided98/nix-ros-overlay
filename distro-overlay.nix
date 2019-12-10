@@ -88,10 +88,17 @@ let
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
       setupHook = ./gazebo-ros-setup-hook.sh;
     });
-    
+
+    gmapping = patchBoostSignals rosSuper.gmapping;
+
     image-cb-detector = patchBoostSignals rosSuper.image-cb-detector;
 
     laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
+
+    libphidget21 = patchVendorUrl rosSuper.libphidget21 {
+      url = "https://www.phidgets.com/downloads/phidget21/libraries/linux/libphidget/libphidget_2.1.9.20190409.tar.gz";
+      sha256 = "07w54dmr75vq2imngfy66nk1sxlvkzhl2p6g362q0a02f099jy0f";
+    };
 
     libphidget22 = patchVendorUrl rosSuper.libphidget22 {
       url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.4.20190605.tar.gz";
