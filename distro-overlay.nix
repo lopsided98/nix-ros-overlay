@@ -93,6 +93,11 @@ let
 
     laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
 
+    libphidget22 = patchVendorUrl rosSuper.libphidget22 {
+      url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.4.20190605.tar.gz";
+      sha256 = "1ab4d7ngvx009vajqv3kxw0s77z0hdd9xb8in1mvx86i1l3vndxa";
+    };
+
     libyaml-vendor = patchVendorUrl rosSuper.libyaml-vendor {
       url = "https://github.com/yaml/libyaml/archive/10c907871f1ccd779c7fccf6b81a62762b5c4e7b.zip";
       sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
