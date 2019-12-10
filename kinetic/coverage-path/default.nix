@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf2, catkin, cpswarm-msgs, roscpp, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cpswarm-msgs, geometry-msgs, nav-msgs, roscpp, tf2 }:
 buildRosPackage {
   pname = "ros-kinetic-coverage-path";
   version = "1.1.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs roscpp cpswarm-msgs tf2 nav-msgs ];
-  propagatedBuildInputs = [ geometry-msgs tf2 cpswarm-msgs roscpp nav-msgs ];
+  propagatedBuildInputs = [ cpswarm-msgs geometry-msgs nav-msgs roscpp tf2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

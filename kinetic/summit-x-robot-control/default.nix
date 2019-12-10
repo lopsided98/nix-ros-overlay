@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, robotnik-msgs, geometry-msgs, diagnostic-msgs, tf, catkin, roscpp, nav-msgs, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, diagnostic-updater, geometry-msgs, nav-msgs, robotnik-msgs, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-summit-x-robot-control";
   version = "1.1.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs robotnik-msgs diagnostic-msgs geometry-msgs tf roscpp nav-msgs diagnostic-updater ];
-  propagatedBuildInputs = [ sensor-msgs robotnik-msgs diagnostic-msgs geometry-msgs tf roscpp nav-msgs diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater geometry-msgs nav-msgs robotnik-msgs roscpp sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, cmake }:
+{ lib, buildRosPackage, fetchurl, cmake, git }:
 buildRosPackage {
   pname = "ros-dashing-foonathan-memory-vendor";
   version = "0.3.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   propagatedBuildInputs = [ cmake ];
-  nativeBuildInputs = [ git cmake ];
+  nativeBuildInputs = [ cmake git ];
 
   meta = {
     description = ''Foonathan/memory vendor package for Fast-RTPS.'';

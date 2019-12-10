@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, geometry-msgs, dynamic-reconfigure, interactive-markers, message-runtime, std-msgs, tf, catkin, rqt-gui-py, rospy, visualization-msgs, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, interactive-markers, message-generation, message-runtime, rospy, rqt-gui, rqt-gui-py, std-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-frame-editor";
   version = "1.0.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui geometry-msgs dynamic-reconfigure interactive-markers std-msgs tf rqt-gui-py rospy visualization-msgs message-generation ];
-  propagatedBuildInputs = [ rqt-gui geometry-msgs dynamic-reconfigure interactive-markers message-runtime std-msgs tf rqt-gui-py visualization-msgs rospy ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs interactive-markers message-runtime rospy rqt-gui rqt-gui-py std-msgs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

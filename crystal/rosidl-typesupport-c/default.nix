@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-typesupport-interface, ament-cmake-ros, rosidl-generator-c, poco, rosidl-typesupport-opensplice-c, poco-vendor, ament-lint-common, rosidl-typesupport-introspection-c, ament-cmake-core, rosidl-typesupport-connext-c, rmw-implementation, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-ros, ament-lint-auto, ament-lint-common, poco, poco-vendor, rmw-implementation, rosidl-generator-c, rosidl-typesupport-connext-c, rosidl-typesupport-interface, rosidl-typesupport-introspection-c, rosidl-typesupport-opensplice-c }:
 buildRosPackage {
   pname = "ros-crystal-rosidl-typesupport-c";
   version = "0.6.3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ poco rosidl-typesupport-opensplice-c poco-vendor rosidl-typesupport-introspection-c rosidl-typesupport-connext-c rosidl-generator-c ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ rosidl-typesupport-interface poco poco-vendor rmw-implementation ament-cmake-core rosidl-generator-c ];
+  buildInputs = [ rosidl-typesupport-connext-c rosidl-typesupport-introspection-c rosidl-typesupport-opensplice-c ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ament-cmake-core poco poco-vendor rmw-implementation rosidl-generator-c rosidl-typesupport-interface ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

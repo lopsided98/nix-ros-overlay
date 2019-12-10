@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-supported-robots, xacro, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-supported-robots, xacro }:
 buildRosPackage {
   pname = "ros-melodic-cob-calibration-data";
   version = "0.6.13-r1";

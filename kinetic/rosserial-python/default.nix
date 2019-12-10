@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosserial-msgs, diagnostic-msgs, catkin, pythonPackages, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, pythonPackages, rospy, rosserial-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rosserial-python";
   version = "0.7.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pythonPackages.pyserial rosserial-msgs rospy diagnostic-msgs ];
+  propagatedBuildInputs = [ diagnostic-msgs pythonPackages.pyserial rospy rosserial-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

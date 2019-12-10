@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, cmake-modules, catkin, eigen, tf2, rostest, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, orocos-kdl, rostest, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-tf2-kdl";
   version = "0.5.20";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl cmake-modules eigen tf2 tf2-ros ];
+  buildInputs = [ cmake-modules ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ orocos-kdl eigen tf2-ros tf2 ];
+  propagatedBuildInputs = [ eigen orocos-kdl tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

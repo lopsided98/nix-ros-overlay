@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roseus, tf, cmake-modules, catkin, moveit-msgs, rostest, mk }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, mk, moveit-msgs, roseus, rostest, tf }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-ik-server";
   version = "0.1.14";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roseus cmake-modules tf moveit-msgs rostest mk ];
-  propagatedBuildInputs = [ roseus cmake-modules tf moveit-msgs rostest mk ];
+  propagatedBuildInputs = [ cmake-modules mk moveit-msgs roseus rostest tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

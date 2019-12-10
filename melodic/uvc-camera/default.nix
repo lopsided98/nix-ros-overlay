@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, camera-info-manager, catkin, image-transport, libv4l, nodelet, roscpp }:
+{ lib, buildRosPackage, fetchurl, camera-info-manager, catkin, image-transport, libv4l, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uvc-camera";
   version = "0.2.7";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs camera-info-manager image-transport libv4l nodelet roscpp ];
-  propagatedBuildInputs = [ sensor-msgs camera-info-manager image-transport libv4l nodelet roscpp ];
+  propagatedBuildInputs = [ camera-info-manager image-transport libv4l nodelet roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

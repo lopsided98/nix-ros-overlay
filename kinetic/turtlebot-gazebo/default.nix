@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-aggregator, xacro, turtlebot-bringup, robot-state-publisher, turtlebot-navigation, catkin, yocs-cmd-vel-mux, turtlebot-description, kobuki-gazebo-plugins, robot-pose-ekf, gazebo-ros, depthimage-to-laserscan }:
+{ lib, buildRosPackage, fetchurl, catkin, depthimage-to-laserscan, diagnostic-aggregator, gazebo-ros, kobuki-gazebo-plugins, robot-pose-ekf, robot-state-publisher, turtlebot-bringup, turtlebot-description, turtlebot-navigation, xacro, yocs-cmd-vel-mux }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-gazebo";
   version = "2.2.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ diagnostic-aggregator xacro robot-pose-ekf robot-state-publisher depthimage-to-laserscan turtlebot-navigation yocs-cmd-vel-mux turtlebot-description kobuki-gazebo-plugins gazebo-ros turtlebot-bringup ];
+  propagatedBuildInputs = [ depthimage-to-laserscan diagnostic-aggregator gazebo-ros kobuki-gazebo-plugins robot-pose-ekf robot-state-publisher turtlebot-bringup turtlebot-description turtlebot-navigation xacro yocs-cmd-vel-mux ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

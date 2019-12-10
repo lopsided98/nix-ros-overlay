@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, geometry-msgs, op3-camera-setting-tool, op3-action-module-msgs, eigen, robotis-math, sensor-msgs, cmake-modules, roslib, libyamlcpp, op3-walking-module-msgs, std-msgs, catkin, roscpp, op3-ball-detector, boost, op3-manager, ros-madplay-player, op3-web-setting-tool }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, eigen, geometry-msgs, libyamlcpp, op3-action-module-msgs, op3-ball-detector, op3-camera-setting-tool, op3-manager, op3-walking-module-msgs, op3-web-setting-tool, robotis-controller-msgs, robotis-math, ros-madplay-player, roscpp, roslib, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-op3-demo";
   version = "0.1.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs boost sensor-msgs geometry-msgs std-msgs cmake-modules roslib libyamlcpp op3-walking-module-msgs op3-action-module-msgs eigen roscpp robotis-math op3-ball-detector ];
-  propagatedBuildInputs = [ robotis-controller-msgs sensor-msgs boost geometry-msgs op3-manager ros-madplay-player op3-camera-setting-tool std-msgs op3-web-setting-tool cmake-modules roslib libyamlcpp op3-walking-module-msgs eigen op3-action-module-msgs roscpp robotis-math op3-ball-detector ];
+  propagatedBuildInputs = [ boost cmake-modules eigen geometry-msgs libyamlcpp op3-action-module-msgs op3-ball-detector op3-camera-setting-tool op3-manager op3-walking-module-msgs op3-web-setting-tool robotis-controller-msgs robotis-math ros-madplay-player roscpp roslib sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-bubble-icons, rocon-python-comms, rocon-interaction-msgs, unique-id, rocon-console, std-msgs, pythonPackages, rocon-icons, rocon-python-utils, rosunit, catkin, rocon-app-manager-msgs, roslint, genpy, rocon-std-msgs, rocon-uri, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, genpy, pythonPackages, rocon-app-manager-msgs, rocon-bubble-icons, rocon-console, rocon-icons, rocon-interaction-msgs, rocon-python-comms, rocon-python-utils, rocon-std-msgs, rocon-uri, roslint, rospy, rostest, rosunit, std-msgs, unique-id }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-interactions";
   version = "0.3.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest pythonPackages.catkin-pkg roslint ];
+  buildInputs = [ pythonPackages.catkin-pkg roslint rostest ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ rocon-console rocon-interaction-msgs unique-id rocon-python-comms std-msgs pythonPackages.rospkg rocon-icons rocon-app-manager-msgs rocon-python-utils genpy rocon-std-msgs rocon-uri rospy rocon-bubble-icons ];
+  propagatedBuildInputs = [ genpy pythonPackages.rospkg rocon-app-manager-msgs rocon-bubble-icons rocon-console rocon-icons rocon-interaction-msgs rocon-python-comms rocon-python-utils rocon-std-msgs rocon-uri rospy std-msgs unique-id ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

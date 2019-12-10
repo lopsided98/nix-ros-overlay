@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, thormang3-sensors, catkin, thormang3-walking-demo, thormang3-manipulation-demo }:
+{ lib, buildRosPackage, fetchurl, catkin, thormang3-manipulation-demo, thormang3-sensors, thormang3-walking-demo }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-ppc";
   version = "0.2.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ thormang3-sensors thormang3-walking-demo thormang3-manipulation-demo ];
+  propagatedBuildInputs = [ thormang3-manipulation-demo thormang3-sensors thormang3-walking-demo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

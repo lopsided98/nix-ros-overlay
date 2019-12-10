@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rosmon-msgs";
   version = "2.1.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation ];
-  propagatedBuildInputs = [ std-msgs message-generation ];
+  propagatedBuildInputs = [ message-generation std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, stereo-image-proc, sensor-msgs, libraw1394, dynamic-reconfigure, dpkg, camera-info-manager, image-proc, catkin, curl, libusb1, roslint, image-transport, wfov-camera-msgs, nodelet, roscpp, image-exposure-msgs, roslaunch, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, camera-info-manager, catkin, curl, diagnostic-updater, dpkg, dynamic-reconfigure, image-exposure-msgs, image-proc, image-transport, libraw1394, libusb1, nodelet, roscpp, roslaunch, roslint, sensor-msgs, stereo-image-proc, wfov-camera-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pointgrey-camera-driver";
   version = "0.13.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs libraw1394 dynamic-reconfigure dpkg camera-info-manager roscpp wfov-camera-msgs image-transport image-exposure-msgs nodelet diagnostic-updater libusb1 curl ];
+  buildInputs = [ curl dpkg ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ stereo-image-proc sensor-msgs libraw1394 dynamic-reconfigure camera-info-manager image-proc libusb1 image-transport image-exposure-msgs nodelet roscpp wfov-camera-msgs diagnostic-updater ];
+  propagatedBuildInputs = [ camera-info-manager diagnostic-updater dynamic-reconfigure image-exposure-msgs image-proc image-transport libraw1394 libusb1 nodelet roscpp sensor-msgs stereo-image-proc wfov-camera-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

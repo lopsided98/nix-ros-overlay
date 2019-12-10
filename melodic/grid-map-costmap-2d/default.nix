@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, grid-map-core, tf, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, costmap-2d, grid-map-core, tf }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-costmap-2d";
   version = "1.6.2-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d grid-map-core tf ];
   propagatedBuildInputs = [ costmap-2d grid-map-core tf ];
   nativeBuildInputs = [ catkin ];
 

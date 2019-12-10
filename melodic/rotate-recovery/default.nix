@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, cmake-modules, base-local-planner, catkin, roscpp, costmap-2d, nav-core, eigen, tf2-geometry-msgs, tf2, angles, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, angles, base-local-planner, catkin, cmake-modules, costmap-2d, eigen, geometry-msgs, nav-core, pluginlib, roscpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-rotate-recovery";
   version = "1.16.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs pluginlib cmake-modules base-local-planner roscpp tf2-geometry-msgs nav-core eigen costmap-2d tf2 angles tf2-ros ];
-  propagatedBuildInputs = [ geometry-msgs pluginlib roscpp tf2-geometry-msgs nav-core eigen costmap-2d tf2 tf2-ros ];
+  buildInputs = [ angles base-local-planner cmake-modules ];
+  propagatedBuildInputs = [ costmap-2d eigen geometry-msgs nav-core pluginlib roscpp tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

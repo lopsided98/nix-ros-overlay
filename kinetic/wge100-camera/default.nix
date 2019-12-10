@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, dynamic-reconfigure, std-msgs, timestamp-tools, catkin, image-transport, self-test, driver-base, roscpp, rospy, message-runtime, camera-calibration-parsers, rostest, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, catkin, diagnostic-updater, driver-base, dynamic-reconfigure, image-transport, message-generation, message-runtime, roscpp, rospy, rostest, self-test, sensor-msgs, std-msgs, timestamp-tools }:
 buildRosPackage {
   pname = "ros-kinetic-wge100-camera";
   version = "1.8.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs dynamic-reconfigure std-msgs timestamp-tools roscpp image-transport self-test driver-base rospy message-generation camera-calibration-parsers rostest diagnostic-updater ];
-  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure message-runtime std-msgs timestamp-tools image-transport self-test driver-base roscpp rospy camera-calibration-parsers diagnostic-updater ];
+  buildInputs = [ message-generation rostest ];
+  propagatedBuildInputs = [ camera-calibration-parsers diagnostic-updater driver-base dynamic-reconfigure image-transport message-runtime roscpp rospy self-test sensor-msgs std-msgs timestamp-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-gripper-sensor-controller, message-generation, pr2-mechanism-model, robot-mechanism-controllers, pr2-gripper-sensor-msgs, pr2-machine, actionlib, catkin, pr2-mechanism-controllers, actionlib-msgs, roscpp, pr2-controllers-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, message-generation, message-runtime, pr2-controllers-msgs, pr2-gripper-sensor-controller, pr2-gripper-sensor-msgs, pr2-machine, pr2-mechanism-controllers, pr2-mechanism-model, robot-mechanism-controllers, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-gripper-sensor-action";
   version = "1.0.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-gripper-sensor-controller pr2-mechanism-model robot-mechanism-controllers pr2-gripper-sensor-msgs pr2-machine actionlib pr2-mechanism-controllers actionlib-msgs roscpp pr2-controllers-msgs message-generation ];
-  propagatedBuildInputs = [ pr2-gripper-sensor-controller pr2-mechanism-model robot-mechanism-controllers pr2-gripper-sensor-msgs pr2-machine actionlib pr2-mechanism-controllers actionlib-msgs roscpp pr2-controllers-msgs message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs message-runtime pr2-controllers-msgs pr2-gripper-sensor-controller pr2-gripper-sensor-msgs pr2-machine pr2-mechanism-controllers pr2-mechanism-model robot-mechanism-controllers roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

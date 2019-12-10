@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, assimp, ffmpeg, wxGTK, libjpeg, cmake, suitesparse, libpcap, freeglut, eigen, zlib, opencv3, libusb1, libudev }:
+{ lib, buildRosPackage, fetchurl, assimp, cmake, eigen, ffmpeg, freeglut, libjpeg, libpcap, libudev, libusb1, opencv3, suitesparse, wxGTK, zlib }:
 buildRosPackage {
   pname = "ros-crystal-mrpt2";
   version = "1.9.9";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ assimp ffmpeg wxGTK libjpeg libpcap suitesparse freeglut eigen zlib opencv3 libusb1 libudev ];
-  propagatedBuildInputs = [ assimp ffmpeg wxGTK libjpeg suitesparse libpcap freeglut eigen zlib opencv3 libusb1 libudev ];
+  propagatedBuildInputs = [ assimp eigen ffmpeg freeglut libjpeg libpcap libudev libusb1 opencv3 suitesparse wxGTK zlib ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

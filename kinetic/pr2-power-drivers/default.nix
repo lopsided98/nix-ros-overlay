@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-power-board, catkin, power-monitor, ocean-battery-driver }:
+{ lib, buildRosPackage, fetchurl, catkin, ocean-battery-driver, power-monitor, pr2-power-board }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-power-drivers";
   version = "1.1.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-power-board power-monitor ocean-battery-driver ];
+  propagatedBuildInputs = [ ocean-battery-driver power-monitor pr2-power-board ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

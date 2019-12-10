@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mbf-abstract-nav, geometry-msgs, dynamic-reconfigure, pluginlib, std-srvs, std-msgs, tf, catkin, roscpp, actionlib, mbf-abstract-core, actionlib-msgs, tf2, mbf-msgs, nav-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, dynamic-reconfigure, geometry-msgs, mbf-abstract-core, mbf-abstract-nav, mbf-msgs, nav-msgs, pluginlib, roscpp, std-msgs, std-srvs, tf, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-mbf-simple-nav";
   version = "0.2.5-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mbf-abstract-nav geometry-msgs dynamic-reconfigure pluginlib std-msgs std-srvs actionlib tf roscpp mbf-abstract-core actionlib-msgs tf2 mbf-msgs nav-msgs tf2-ros ];
-  propagatedBuildInputs = [ mbf-abstract-nav geometry-msgs dynamic-reconfigure pluginlib std-srvs std-msgs tf actionlib roscpp mbf-abstract-core actionlib-msgs tf2 mbf-msgs nav-msgs tf2-ros ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs dynamic-reconfigure geometry-msgs mbf-abstract-core mbf-abstract-nav mbf-msgs nav-msgs pluginlib roscpp std-msgs std-srvs tf tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

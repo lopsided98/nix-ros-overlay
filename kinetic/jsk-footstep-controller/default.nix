@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, jsk-pcl-ros, tf, jsk-footstep-msgs, tf2, kdl-parser, sensor-msgs, diagnostic-msgs, dynamic-reconfigure, sound-play, jsk-topic-tools, message-filters, std-msgs, catkin, message-generation, jsk-footstep-planner, kdl-conversions, genmsg, diagnostic-updater, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, diagnostic-updater, dynamic-reconfigure, genmsg, geometry-msgs, jsk-footstep-msgs, jsk-footstep-planner, jsk-pcl-ros, jsk-topic-tools, kdl-conversions, kdl-parser, message-filters, message-generation, sensor-msgs, sound-play, std-msgs, tf, tf-conversions, tf2, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-footstep-controller";
   version = "0.1.14";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs urdf jsk-pcl-ros tf jsk-footstep-msgs tf2 kdl-parser sensor-msgs diagnostic-msgs dynamic-reconfigure jsk-topic-tools message-filters std-msgs jsk-footstep-planner message-generation kdl-conversions genmsg diagnostic-updater tf-conversions ];
-  propagatedBuildInputs = [ geometry-msgs urdf jsk-pcl-ros tf jsk-footstep-msgs tf2 kdl-parser sensor-msgs diagnostic-msgs dynamic-reconfigure sound-play jsk-topic-tools message-filters std-msgs jsk-footstep-planner message-generation kdl-conversions genmsg diagnostic-updater tf-conversions ];
+  propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater dynamic-reconfigure genmsg geometry-msgs jsk-footstep-msgs jsk-footstep-planner jsk-pcl-ros jsk-topic-tools kdl-conversions kdl-parser message-filters message-generation sensor-msgs sound-play std-msgs tf tf-conversions tf2 urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

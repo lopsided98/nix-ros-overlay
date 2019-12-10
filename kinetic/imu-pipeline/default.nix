@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, imu-transformer, imu-processors, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, imu-processors, imu-transformer }:
 buildRosPackage {
   pname = "ros-kinetic-imu-pipeline";
   version = "0.2.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ imu-transformer imu-processors ];
+  propagatedBuildInputs = [ imu-processors imu-transformer ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

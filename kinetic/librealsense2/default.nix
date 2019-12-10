@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libusb1, udev, openssl, pkg-config, linuxHeaders }:
+{ lib, buildRosPackage, fetchurl, catkin, libusb1, linuxHeaders, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-kinetic-librealsense2";
   version = "2.30.0-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ pkg-config udev openssl libusb1 linuxHeaders ];
-  propagatedBuildInputs = [ libusb1 openssl udev linuxHeaders ];
+  buildInputs = [ pkg-config ];
+  propagatedBuildInputs = [ libusb1 linuxHeaders openssl udev ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

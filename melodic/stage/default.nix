@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libtool, libjpeg, libGLU, catkin, libGL, cmake, gtk2, fltk, pkg-config }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, fltk, gtk2, libGL, libGLU, libjpeg, libtool, pkg-config }:
 buildRosPackage {
   pname = "ros-melodic-stage";
   version = "4.3.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ libtool libjpeg libGLU libGL gtk2 fltk ];
-  propagatedBuildInputs = [ catkin libjpeg libGLU libGL gtk2 fltk ];
-  nativeBuildInputs = [ pkg-config cmake ];
+  buildInputs = [ libtool ];
+  propagatedBuildInputs = [ catkin fltk gtk2 libGL libGLU libjpeg ];
+  nativeBuildInputs = [ cmake pkg-config ];
 
   meta = {
     description = ''Mobile robot simulator http://rtv.github.com/Stage'';

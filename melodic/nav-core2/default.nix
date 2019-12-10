@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav-grid, catkin, rosunit, roslint, nav-2d-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, nav-2d-msgs, nav-grid, roslint, rosunit, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-nav-core2";
   version = "0.2.5-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ nav-grid tf2-ros nav-2d-msgs ];
   checkInputs = [ roslint rosunit ];
-  propagatedBuildInputs = [ nav-grid tf2-ros nav-2d-msgs ];
+  propagatedBuildInputs = [ nav-2d-msgs nav-grid tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

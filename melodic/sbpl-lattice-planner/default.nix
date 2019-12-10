@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, sbpl, pluginlib, catkin, tf2, costmap-2d, nav-core, roscpp, message-runtime, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, costmap-2d, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, pluginlib, roscpp, sbpl, tf2 }:
 buildRosPackage {
   pname = "ros-melodic-sbpl-lattice-planner";
   version = "0.3.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs sbpl pluginlib roscpp costmap-2d nav-core tf2 message-generation nav-msgs ];
-  propagatedBuildInputs = [ geometry-msgs sbpl pluginlib roscpp costmap-2d nav-core tf2 message-runtime nav-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ costmap-2d geometry-msgs message-runtime nav-core nav-msgs pluginlib roscpp sbpl tf2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

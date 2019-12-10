@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, gfortran, autoconf, catkin }:
+{ lib, buildRosPackage, fetchurl, autoconf, catkin, gfortran, git }:
 buildRosPackage {
   pname = "ros-melodic-optpp-catkin";
   version = "2.4.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ git gfortran autoconf ];
+  buildInputs = [ autoconf gfortran git ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

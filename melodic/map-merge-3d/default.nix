@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, catkin, rosunit, tf2-eigen, roscpp, roslaunch, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, pcl-ros, roscpp, roslaunch, rosunit, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-map-merge-3d";
   version = "0.1.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2-eigen roscpp tf2-ros pcl-ros ];
   checkInputs = [ roslaunch rosunit ];
-  propagatedBuildInputs = [ pcl-ros tf2-eigen tf2-ros roscpp ];
+  propagatedBuildInputs = [ pcl-ros roscpp tf2-eigen tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

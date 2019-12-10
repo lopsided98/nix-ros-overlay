@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-console, catkin, roscpp-tutorials, rosunit, actionlib-tutorials, rocon-gateway-utils, rocon-hub, gateway-msgs, rocon-gateway, rospy, zeroconf-avahi, rocon-test, rospy-tutorials }:
+{ lib, buildRosPackage, fetchurl, actionlib-tutorials, catkin, gateway-msgs, rocon-console, rocon-gateway, rocon-gateway-utils, rocon-hub, rocon-test, roscpp-tutorials, rospy, rospy-tutorials, rosunit, zeroconf-avahi }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-gateway-tests";
   version = "0.8.1-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ rocon-test ];
-  checkInputs = [ rocon-console rosunit roscpp-tutorials actionlib-tutorials rocon-gateway-utils rocon-hub gateway-msgs rocon-gateway rospy zeroconf-avahi rospy-tutorials ];
+  checkInputs = [ actionlib-tutorials gateway-msgs rocon-console rocon-gateway rocon-gateway-utils rocon-hub roscpp-tutorials rospy rospy-tutorials rosunit zeroconf-avahi ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, actionlib, tf, catkin, roscpp, angles, cob-srvs, nav-msgs, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, angles, catkin, cob-srvs, geometry-msgs, move-base-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-cob-linear-nav";
   version = "0.6.9-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs actionlib tf roscpp angles cob-srvs nav-msgs move-base-msgs ];
-  propagatedBuildInputs = [ geometry-msgs actionlib tf roscpp angles cob-srvs nav-msgs move-base-msgs ];
+  propagatedBuildInputs = [ actionlib angles cob-srvs geometry-msgs move-base-msgs nav-msgs roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

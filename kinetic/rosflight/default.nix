@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eigen-stl-containers, sensor-msgs, boost, geometry-msgs, git, rosflight-msgs, std-msgs, std-srvs, tf, catkin, libyamlcpp, eigen, roscpp, pkg-config }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, eigen, eigen-stl-containers, geometry-msgs, git, libyamlcpp, pkg-config, roscpp, rosflight-msgs, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-rosflight";
   version = "1.0.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ git boost eigen-stl-containers geometry-msgs rosflight-msgs sensor-msgs std-msgs std-srvs tf libyamlcpp eigen roscpp pkg-config ];
-  propagatedBuildInputs = [ eigen-stl-containers sensor-msgs boost geometry-msgs rosflight-msgs std-msgs std-srvs tf libyamlcpp eigen roscpp ];
+  buildInputs = [ git pkg-config ];
+  propagatedBuildInputs = [ boost eigen eigen-stl-containers geometry-msgs libyamlcpp roscpp rosflight-msgs sensor-msgs std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

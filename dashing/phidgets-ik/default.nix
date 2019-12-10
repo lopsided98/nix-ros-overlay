@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, phidgets-digital-outputs, launch, phidgets-digital-inputs, ament-cmake, phidgets-analog-inputs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, launch, phidgets-analog-inputs, phidgets-digital-inputs, phidgets-digital-outputs }:
 buildRosPackage {
   pname = "ros-dashing-phidgets-ik";
   version = "2.0.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ phidgets-analog-inputs phidgets-digital-outputs phidgets-digital-inputs launch ];
+  propagatedBuildInputs = [ launch phidgets-analog-inputs phidgets-digital-inputs phidgets-digital-outputs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

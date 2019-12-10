@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ainstein-radar-msgs, roscpp, gazebo-ros, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, ainstein-radar-msgs, catkin, gazebo-plugins, gazebo-ros, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-ainstein-radar-gazebo-plugins";
   version = "2.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros gazebo-plugins ainstein-radar-msgs roscpp ];
-  propagatedBuildInputs = [ gazebo-ros gazebo-plugins ainstein-radar-msgs roscpp ];
+  propagatedBuildInputs = [ ainstein-radar-msgs gazebo-plugins gazebo-ros roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

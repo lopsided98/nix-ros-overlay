@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dpkg, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, dpkg }:
 buildRosPackage {
   pname = "ros-kinetic-libqsopt";
   version = "0.6.12";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dpkg ];
   propagatedBuildInputs = [ dpkg ];
   nativeBuildInputs = [ catkin ];
 

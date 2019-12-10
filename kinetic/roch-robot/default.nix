@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roch-sensorpc, roch-safety-controller, roch-capabilities, catkin, roch-description, roch-control, roch-base, roch-msgs, roch-ftdi }:
+{ lib, buildRosPackage, fetchurl, catkin, roch-base, roch-capabilities, roch-control, roch-description, roch-ftdi, roch-msgs, roch-safety-controller, roch-sensorpc }:
 buildRosPackage {
   pname = "ros-kinetic-roch-robot";
   version = "2.0.15";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ roch-sensorpc roch-ftdi roch-safety-controller roch-capabilities roch-description roch-base roch-msgs roch-control ];
+  propagatedBuildInputs = [ roch-base roch-capabilities roch-control roch-description roch-ftdi roch-msgs roch-safety-controller roch-sensorpc ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

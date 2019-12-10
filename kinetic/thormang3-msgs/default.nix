@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, thormang3-head-control-module-msgs, thormang3-action-module-msgs, thormang3-walking-module-msgs, catkin, thormang3-feet-ft-module-msgs, thormang3-offset-tuner-msgs, thormang3-manipulation-module-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, thormang3-action-module-msgs, thormang3-feet-ft-module-msgs, thormang3-head-control-module-msgs, thormang3-manipulation-module-msgs, thormang3-offset-tuner-msgs, thormang3-walking-module-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-msgs";
   version = "0.3.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ thormang3-head-control-module-msgs thormang3-action-module-msgs thormang3-walking-module-msgs thormang3-feet-ft-module-msgs thormang3-offset-tuner-msgs thormang3-manipulation-module-msgs ];
+  propagatedBuildInputs = [ thormang3-action-module-msgs thormang3-feet-ft-module-msgs thormang3-head-control-module-msgs thormang3-manipulation-module-msgs thormang3-offset-tuner-msgs thormang3-walking-module-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

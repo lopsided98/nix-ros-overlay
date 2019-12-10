@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-interface, urdf, control-toolbox, catkin, realtime-tools, angles, forward-command-controller, control-msgs }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, control-msgs, control-toolbox, controller-interface, forward-command-controller, realtime-tools, urdf }:
 buildRosPackage {
   pname = "ros-melodic-velocity-controllers";
   version = "0.15.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-interface urdf control-toolbox realtime-tools angles forward-command-controller control-msgs ];
-  propagatedBuildInputs = [ controller-interface urdf control-toolbox realtime-tools angles forward-command-controller control-msgs ];
+  propagatedBuildInputs = [ angles control-msgs control-toolbox controller-interface forward-command-controller realtime-tools urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

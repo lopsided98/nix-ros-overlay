@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, rospy, rostest, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, rospy, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-joint-state-publisher";
   version = "1.12.13";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ sensor-msgs rospy python-qt-binding ];
+  propagatedBuildInputs = [ python-qt-binding rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

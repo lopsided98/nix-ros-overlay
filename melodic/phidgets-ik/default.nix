@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, message-runtime, std-msgs, tf, catkin, phidgets-api, nodelet, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nodelet, phidgets-api, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-phidgets-ik";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation sensor-msgs geometry-msgs std-msgs tf nodelet roscpp phidgets-api ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs message-runtime std-msgs tf nodelet roscpp phidgets-api ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime nodelet phidgets-api roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

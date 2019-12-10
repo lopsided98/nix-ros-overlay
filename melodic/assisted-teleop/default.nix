@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, pluginlib, filters, actionlib, base-local-planner, roslib, catkin, costmap-2d, eigen, roscpp, angles, tf2-ros, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, angles, base-local-planner, catkin, costmap-2d, eigen, filters, geometry-msgs, message-filters, move-base-msgs, pluginlib, roscpp, roslib, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-assisted-teleop";
   version = "0.3.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters geometry-msgs pluginlib actionlib filters base-local-planner roslib costmap-2d eigen roscpp angles tf2-ros move-base-msgs ];
-  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs pluginlib filters base-local-planner actionlib roslib costmap-2d eigen roscpp angles tf2-ros move-base-msgs ];
+  propagatedBuildInputs = [ actionlib angles base-local-planner costmap-2d eigen filters geometry-msgs message-filters move-base-msgs pluginlib roscpp roslib sensor-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, willow-maps, app-manager, catkin }:
+{ lib, buildRosPackage, fetchurl, app-manager, catkin, willow-maps }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-app-manager";
   version = "0.6.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ willow-maps app-manager ];
+  propagatedBuildInputs = [ app-manager willow-maps ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

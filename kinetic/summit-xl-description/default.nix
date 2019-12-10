@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, urdf, robot-state-publisher, catkin, robotnik-sensors, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, robotnik-sensors, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-summit-xl-description";
   version = "1.1.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotnik-sensors xacro roslaunch urdf ];
-  propagatedBuildInputs = [ robot-state-publisher robotnik-sensors xacro urdf ];
+  buildInputs = [ roslaunch ];
+  propagatedBuildInputs = [ robot-state-publisher robotnik-sensors urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

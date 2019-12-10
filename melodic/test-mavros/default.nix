@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mavros, geometry-msgs, control-toolbox, eigen-conversions, std-msgs, cmake-modules, catkin, eigen, roscpp, angles, mavros-extras, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, control-toolbox, eigen, eigen-conversions, geometry-msgs, mavros, mavros-extras, roscpp, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-test-mavros";
   version = "0.33.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mavros geometry-msgs control-toolbox eigen-conversions std-msgs cmake-modules eigen roscpp angles mavros-extras tf2-ros ];
-  propagatedBuildInputs = [ mavros geometry-msgs control-toolbox eigen-conversions std-msgs eigen roscpp mavros-extras tf2-ros ];
+  buildInputs = [ angles cmake-modules ];
+  propagatedBuildInputs = [ control-toolbox eigen eigen-conversions geometry-msgs mavros mavros-extras roscpp std-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

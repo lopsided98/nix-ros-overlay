@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rcutils, rmw-implementation-cmake, rcl, rcl-action, pythonPackages, ament-lint-common, ament-cmake, unique-identifier-msgs, rcl-yaml-param-parser, test-msgs, rosidl-generator-py, python-cmake-module, rcl-interfaces, ament-cmake-pytest, rmw-implementation, builtin-interfaces, ament-index-python, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, python-cmake-module, pythonPackages, rcl, rcl-action, rcl-interfaces, rcl-yaml-param-parser, rcutils, rmw-implementation, rmw-implementation-cmake, rosidl-generator-py, test-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-crystal-rclpy";
   version = "0.6.5-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcutils rmw-implementation-cmake rcl unique-identifier-msgs rcl-yaml-param-parser rmw-implementation rcl-action ];
-  checkInputs = [ ament-lint-common test-msgs rosidl-generator-py rcl-interfaces ament-cmake-pytest pythonPackages.pytest ament-lint-auto ];
-  propagatedBuildInputs = [ rcl unique-identifier-msgs rcl-yaml-param-parser rmw-implementation builtin-interfaces ament-index-python rcl-action ];
-  nativeBuildInputs = [ python-cmake-module ament-cmake ];
+  buildInputs = [ rcutils rmw-implementation-cmake ];
+  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common pythonPackages.pytest rcl-interfaces rosidl-generator-py test-msgs ];
+  propagatedBuildInputs = [ ament-index-python builtin-interfaces rcl rcl-action rcl-yaml-param-parser rmw-implementation unique-identifier-msgs ];
+  nativeBuildInputs = [ ament-cmake python-cmake-module ];
 
   meta = {
     description = ''Package containing the Python client.'';

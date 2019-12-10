@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, geometry-msgs, message-runtime, std-msgs, std-srvs, octomap-msgs, tf, catkin, laser-geometry, pcl, parameter-pa, pcl-conversions, octomap-ros, roscpp, message-generation, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, laser-geometry, message-generation, message-runtime, nav-msgs, octomap-msgs, octomap-ros, parameter-pa, pcl, pcl-conversions, pcl-ros, roscpp, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-octomap-pa";
   version = "1.3.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs geometry-msgs std-msgs std-srvs octomap-msgs tf laser-geometry parameter-pa pcl pcl-conversions octomap-ros roscpp message-generation nav-msgs ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs geometry-msgs std-msgs std-srvs octomap-msgs tf laser-geometry pcl parameter-pa pcl-conversions octomap-ros roscpp message-runtime nav-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ geometry-msgs laser-geometry message-runtime nav-msgs octomap-msgs octomap-ros parameter-pa pcl pcl-conversions pcl-ros roscpp sensor-msgs std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

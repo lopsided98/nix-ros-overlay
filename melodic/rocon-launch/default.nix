@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-console, pythonPackages, catkin, rocon-python-utils, rosbash, rospy, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rocon-console, rocon-python-utils, rosbash, roslaunch, rospy }:
 buildRosPackage {
   pname = "ros-melodic-rocon-launch";
   version = "0.3.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ pythonPackages.catkin-pkg ];
-  propagatedBuildInputs = [ rocon-console rocon-python-utils rosbash rospy roslaunch ];
+  propagatedBuildInputs = [ rocon-console rocon-python-utils rosbash roslaunch rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

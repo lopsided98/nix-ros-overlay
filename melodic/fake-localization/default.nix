@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-filters, geometry-msgs, catkin, tf2-geometry-msgs, roscpp, angles, rospy, nav-msgs, rosconsole, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, geometry-msgs, message-filters, nav-msgs, rosconsole, roscpp, rospy, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-fake-localization";
   version = "1.16.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-filters geometry-msgs tf2-geometry-msgs roscpp angles rospy nav-msgs rosconsole tf2-ros ];
-  propagatedBuildInputs = [ message-filters geometry-msgs roscpp rospy nav-msgs rosconsole tf2-ros ];
+  buildInputs = [ angles tf2-geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs message-filters nav-msgs rosconsole roscpp rospy tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

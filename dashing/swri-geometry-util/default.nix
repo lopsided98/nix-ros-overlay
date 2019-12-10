@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, eigen, cv-bridge, tf2, pkg-config, rclcpp, geos, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cv-bridge, eigen, geos, pkg-config, rclcpp, tf2 }:
 buildRosPackage {
   pname = "ros-dashing-swri-geometry-util";
   version = "3.0.3-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ eigen cv-bridge tf2 rclcpp geos ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ eigen cv-bridge tf2 rclcpp geos ];
-  nativeBuildInputs = [ pkg-config ament-cmake ];
+  propagatedBuildInputs = [ cv-bridge eigen geos rclcpp tf2 ];
+  nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {
     description = ''swri_geometry_util'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, message-runtime, catkin, catkin-virtualenv }:
+{ lib, buildRosPackage, fetchurl, catkin, catkin-virtualenv, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-sesame-ros";
   version = "2.1.14-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation catkin-virtualenv ];
+  buildInputs = [ catkin-virtualenv message-generation ];
   propagatedBuildInputs = [ message-runtime ];
   nativeBuildInputs = [ catkin ];
 

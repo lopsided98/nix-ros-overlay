@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-mechanism-model, pr2-mechanism-diagnostics, catkin, pr2-controller-interface, pr2-hardware-interface, pr2-controller-manager }:
+{ lib, buildRosPackage, fetchurl, catkin, pr2-controller-interface, pr2-controller-manager, pr2-hardware-interface, pr2-mechanism-diagnostics, pr2-mechanism-model }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-mechanism";
   version = "1.8.17";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-mechanism-model pr2-mechanism-diagnostics pr2-controller-interface pr2-hardware-interface pr2-controller-manager ];
+  propagatedBuildInputs = [ pr2-controller-interface pr2-controller-manager pr2-hardware-interface pr2-mechanism-diagnostics pr2-mechanism-model ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2eus, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, pr2eus }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-pr2eus";
   version = "0.3.14";

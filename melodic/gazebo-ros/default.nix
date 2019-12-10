@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, std-msgs, std-srvs, tf, cmake-modules, roslib, tinyxml, catkin, gazebo-msgs, python, roscpp, rosgraph-msgs, gazebo-dev }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, gazebo-dev, gazebo-msgs, geometry-msgs, python, roscpp, rosgraph-msgs, roslib, std-msgs, std-srvs, tf, tinyxml }:
 buildRosPackage {
   pname = "ros-melodic-gazebo-ros";
   version = "2.8.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs dynamic-reconfigure std-msgs std-srvs tf roslib cmake-modules tinyxml gazebo-msgs roscpp rosgraph-msgs gazebo-dev ];
-  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure std-msgs std-srvs tf roslib tinyxml gazebo-msgs python roscpp rosgraph-msgs gazebo-dev ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ dynamic-reconfigure gazebo-dev gazebo-msgs geometry-msgs python roscpp rosgraph-msgs roslib std-msgs std-srvs tf tinyxml ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

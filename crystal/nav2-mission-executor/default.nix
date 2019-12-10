@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, launch, std-msgs, launch-testing, ament-lint-common, ament-cmake, ament-lint-auto, nav2-common, ament-cmake-pytest, nav2-tasks, rclcpp, nav2-msgs, ament-cmake-gtest, behaviortree-cpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, behaviortree-cpp, geometry-msgs, launch, launch-testing, nav2-common, nav2-msgs, nav2-tasks, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-crystal-nav2-mission-executor";
   version = "0.1.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ geometry-msgs std-msgs nav2-common nav2-tasks rclcpp nav2-msgs behaviortree-cpp ];
-  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ geometry-msgs std-msgs nav2-tasks rclcpp nav2-msgs behaviortree-cpp ];
+  buildInputs = [ nav2-common ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing ];
+  propagatedBuildInputs = [ behaviortree-cpp geometry-msgs nav2-msgs nav2-tasks rclcpp std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

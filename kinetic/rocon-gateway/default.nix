@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-python-comms, rosgraph, gateway-msgs, rocon-console, rocon-python-redis, zeroconf-msgs, roslib, rostopic, rosparam, rocon-gateway-utils, zeroconf-avahi, std-srvs, pythonPackages, catkin, rocon-python-utils, rospy, rocon-python-wifi, roslint, rocon-hub-client, rosservice }:
+{ lib, buildRosPackage, fetchurl, catkin, gateway-msgs, pythonPackages, rocon-console, rocon-gateway-utils, rocon-hub-client, rocon-python-comms, rocon-python-redis, rocon-python-utils, rocon-python-wifi, rosgraph, roslib, roslint, rosparam, rospy, rosservice, rostopic, std-srvs, zeroconf-avahi, zeroconf-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-gateway";
   version = "0.8.1-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslint ];
-  propagatedBuildInputs = [ rocon-console rocon-python-comms rocon-python-wifi rocon-python-redis std-srvs zeroconf-msgs rosgraph pythonPackages.pycrypto roslib rocon-hub-client rostopic rosparam rocon-python-utils rocon-gateway-utils gateway-msgs rospy rosservice zeroconf-avahi ];
+  propagatedBuildInputs = [ gateway-msgs pythonPackages.pycrypto rocon-console rocon-gateway-utils rocon-hub-client rocon-python-comms rocon-python-redis rocon-python-utils rocon-python-wifi rosgraph roslib rosparam rospy rosservice rostopic std-srvs zeroconf-avahi zeroconf-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

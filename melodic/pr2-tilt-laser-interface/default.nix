@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, pr2-msgs, actionlib, catkin, laser-geometry, eigen, actionlib-msgs, pcl-conversions, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, eigen, laser-geometry, message-generation, message-runtime, pcl-conversions, pcl-ros, pr2-msgs, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2-tilt-laser-interface";
   version = "0.0.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs pr2-msgs actionlib laser-geometry eigen actionlib-msgs pcl-conversions roscpp message-generation ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs pr2-msgs actionlib laser-geometry eigen pcl-conversions actionlib-msgs roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs eigen laser-geometry message-runtime pcl-conversions pcl-ros pr2-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

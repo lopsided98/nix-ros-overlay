@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, tf, nav-msgs, navfn, dynamic-reconfigure, cmake-modules, rotate-recovery, move-base-msgs, clear-costmap-recovery, std-srvs, catkin, costmap-2d, nav-core, roscpp, message-generation, rospy, actionlib, base-local-planner, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, base-local-planner, catkin, clear-costmap-recovery, cmake-modules, costmap-2d, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, move-base-msgs, nav-core, nav-msgs, navfn, pluginlib, roscpp, rospy, rotate-recovery, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-move-base";
   version = "1.14.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ clear-costmap-recovery geometry-msgs dynamic-reconfigure pluginlib std-srvs actionlib base-local-planner tf cmake-modules costmap-2d nav-core rospy roscpp message-generation nav-msgs navfn rotate-recovery move-base-msgs ];
-  propagatedBuildInputs = [ geometry-msgs clear-costmap-recovery dynamic-reconfigure message-runtime pluginlib std-srvs tf base-local-planner actionlib costmap-2d nav-core roscpp rospy nav-msgs navfn rotate-recovery move-base-msgs ];
+  buildInputs = [ cmake-modules message-generation ];
+  propagatedBuildInputs = [ actionlib base-local-planner clear-costmap-recovery costmap-2d dynamic-reconfigure geometry-msgs message-runtime move-base-msgs nav-core nav-msgs navfn pluginlib roscpp rospy rotate-recovery std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

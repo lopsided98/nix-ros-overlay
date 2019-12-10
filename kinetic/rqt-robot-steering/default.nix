@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, geometry-msgs, pythonPackages, catkin, rostopic, rqt-gui-py, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, python-qt-binding, pythonPackages, rostopic, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-robot-steering";
   version = "0.5.9";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-gui geometry-msgs pythonPackages.rospkg rostopic rqt-gui-py python-qt-binding ];
+  propagatedBuildInputs = [ geometry-msgs python-qt-binding pythonPackages.rospkg rostopic rqt-gui rqt-gui-py ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

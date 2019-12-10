@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-interface, combined-robot-hw, controller-manager, joint-limits-interface, controller-manager-msgs, hardware-interface, catkin, transmission-interface, realtime-tools, controller-manager-tests, combined-robot-hw-tests }:
+{ lib, buildRosPackage, fetchurl, catkin, combined-robot-hw, combined-robot-hw-tests, controller-interface, controller-manager, controller-manager-msgs, controller-manager-tests, hardware-interface, joint-limits-interface, realtime-tools, transmission-interface }:
 buildRosPackage {
   pname = "ros-melodic-ros-control";
   version = "0.15.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ controller-interface combined-robot-hw controller-manager joint-limits-interface controller-manager-msgs hardware-interface transmission-interface realtime-tools controller-manager-tests combined-robot-hw-tests ];
+  propagatedBuildInputs = [ combined-robot-hw combined-robot-hw-tests controller-interface controller-manager controller-manager-msgs controller-manager-tests hardware-interface joint-limits-interface realtime-tools transmission-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

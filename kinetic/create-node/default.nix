@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, diagnostic-msgs, dynamic-reconfigure, tf, catkin, python-orocos-kdl, rospy, create-driver, message-runtime, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, create-driver, diagnostic-msgs, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, nav-msgs, python-orocos-kdl, rospy, tf }:
 buildRosPackage {
   pname = "ros-kinetic-create-node";
   version = "2.3.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs geometry-msgs dynamic-reconfigure tf rospy create-driver message-generation nav-msgs ];
-  propagatedBuildInputs = [ geometry-msgs diagnostic-msgs dynamic-reconfigure tf python-orocos-kdl rospy create-driver message-runtime nav-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ create-driver diagnostic-msgs dynamic-reconfigure geometry-msgs message-runtime nav-msgs python-orocos-kdl rospy tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

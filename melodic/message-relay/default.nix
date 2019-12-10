@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, map-msgs, actionlib-msgs, tf2-msgs, nav-msgs, sensor-msgs, diagnostic-msgs, controller-manager-msgs, shape-msgs, multimaster-msgs, move-base-msgs, std-msgs, std-srvs, pythonPackages, catkin, robot-localization, roscpp, rosgraph-msgs, roslaunch, trajectory-msgs, roslint, gazebo-msgs, stereo-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, controller-manager-msgs, diagnostic-msgs, gazebo-msgs, geometry-msgs, map-msgs, move-base-msgs, multimaster-msgs, nav-msgs, pythonPackages, robot-localization, roscpp, rosgraph-msgs, roslaunch, roslint, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, tf2-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-message-relay";
   version = "0.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs pythonPackages.cheetah map-msgs actionlib-msgs tf2-msgs nav-msgs sensor-msgs diagnostic-msgs controller-manager-msgs shape-msgs multimaster-msgs move-base-msgs std-msgs std-srvs robot-localization roscpp rosgraph-msgs trajectory-msgs gazebo-msgs stereo-msgs visualization-msgs ];
+  buildInputs = [ pythonPackages.cheetah ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ geometry-msgs map-msgs actionlib-msgs tf2-msgs nav-msgs sensor-msgs diagnostic-msgs controller-manager-msgs shape-msgs multimaster-msgs move-base-msgs std-msgs std-srvs robot-localization roscpp rosgraph-msgs trajectory-msgs gazebo-msgs stereo-msgs visualization-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs controller-manager-msgs diagnostic-msgs gazebo-msgs geometry-msgs map-msgs move-base-msgs multimaster-msgs nav-msgs robot-localization roscpp rosgraph-msgs sensor-msgs shape-msgs std-msgs std-srvs stereo-msgs tf2-msgs trajectory-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

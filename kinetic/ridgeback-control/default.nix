@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, teleop-twist-joy, controller-interface, nav-msgs, controller-manager, urdf, tf, catkin, interactive-marker-twist-server, robot-localization, realtime-tools, topic-tools, roslaunch, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, interactive-marker-twist-server, joint-state-controller, joy, nav-msgs, realtime-tools, robot-localization, roslaunch, teleop-twist-joy, tf, topic-tools, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-ridgeback-control";
   version = "0.2.2";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-interface controller-manager urdf tf realtime-tools nav-msgs ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joy teleop-twist-joy controller-interface controller-manager urdf tf interactive-marker-twist-server robot-localization realtime-tools topic-tools nav-msgs joint-state-controller ];
+  propagatedBuildInputs = [ controller-interface controller-manager interactive-marker-twist-server joint-state-controller joy nav-msgs realtime-tools robot-localization teleop-twist-joy tf topic-tools urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

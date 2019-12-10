@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, ament-cmake-cppcheck, resource-retriever, ament-cmake-cpplint, ament-cmake, ament-cmake-uncrustify, qt5, ament-cmake-gmock, ament-index-cpp, rviz-rendering, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-index-cpp, qt5, resource-retriever, rviz-rendering }:
 buildRosPackage {
   pname = "ros-dashing-rviz-rendering-tests";
   version = "6.1.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ resource-retriever rviz-rendering qt5.qtbase ];
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-uncrustify ament-cmake-gmock ament-index-cpp ament-cmake-gtest ];
+  buildInputs = [ qt5.qtbase ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-gmock ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify ament-index-cpp ];
   propagatedBuildInputs = [ resource-retriever rviz-rendering ];
   nativeBuildInputs = [ ament-cmake ];
 

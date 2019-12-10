@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, interactive-markers, wxGTK, tf, shape-msgs, catkin, rc-common-msgs, visualization-msgs, roscpp, message-runtime, rc-pick-client }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, interactive-markers, message-runtime, rc-common-msgs, rc-pick-client, roscpp, shape-msgs, tf, visualization-msgs, wxGTK }:
 buildRosPackage {
   pname = "ros-kinetic-rc-roi-manager-gui";
   version = "2.7.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs interactive-markers wxGTK tf shape-msgs rc-common-msgs visualization-msgs roscpp rc-pick-client ];
-  propagatedBuildInputs = [ geometry-msgs interactive-markers wxGTK tf shape-msgs rc-common-msgs visualization-msgs roscpp message-runtime rc-pick-client ];
+  propagatedBuildInputs = [ geometry-msgs interactive-markers message-runtime rc-common-msgs rc-pick-client roscpp shape-msgs tf visualization-msgs wxGTK ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

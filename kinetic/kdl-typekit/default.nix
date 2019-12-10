@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rtt, orocos-kdl, ocl, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, ocl, orocos-kdl, rtt }:
 buildRosPackage {
   pname = "ros-kinetic-kdl-typekit";
   version = "2.9.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rtt orocos-kdl ocl ];
-  propagatedBuildInputs = [ rtt orocos-kdl ocl ];
+  propagatedBuildInputs = [ ocl orocos-kdl rtt ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

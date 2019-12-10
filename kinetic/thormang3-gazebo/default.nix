@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, std-msgs, catkin, roscpp, gazebo-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, gazebo-ros, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-gazebo";
   version = "0.2.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs roscpp ];
-  propagatedBuildInputs = [ std-msgs gazebo-ros controller-manager roscpp ];
+  propagatedBuildInputs = [ controller-manager gazebo-ros roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

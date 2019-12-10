@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclpy, rosapi, rosbridge-library, rosauth, python3Packages, rosbridge-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, python3Packages, rclpy, rosapi, rosauth, rosbridge-library, rosbridge-msgs }:
 buildRosPackage {
   pname = "ros-dashing-rosbridge-server";
   version = "1.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ rclpy rosapi python3Packages.twisted rosbridge-library python3Packages.tornado rosauth rosbridge-msgs ];
+  propagatedBuildInputs = [ python3Packages.tornado python3Packages.twisted rclpy rosapi rosauth rosbridge-library rosbridge-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

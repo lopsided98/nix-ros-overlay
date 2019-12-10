@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, liblapack, pluginlib, catkin, roscpp, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, catkin, liblapack, moveit-core, pluginlib, roscpp, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-katana-moveit-ikfast-plugin";
   version = "1.1.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core liblapack pluginlib roscpp tf-conversions ];
-  propagatedBuildInputs = [ moveit-core liblapack pluginlib roscpp tf-conversions ];
+  propagatedBuildInputs = [ liblapack moveit-core pluginlib roscpp tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

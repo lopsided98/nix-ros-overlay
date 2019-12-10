@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot3-autorace-camera, catkin, turtlebot3-autorace-core, turtlebot3-autorace-detect, turtlebot3-autorace-control }:
+{ lib, buildRosPackage, fetchurl, catkin, turtlebot3-autorace-camera, turtlebot3-autorace-control, turtlebot3-autorace-core, turtlebot3-autorace-detect }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-autorace";
   version = "1.2.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ turtlebot3-autorace-camera turtlebot3-autorace-core turtlebot3-autorace-detect turtlebot3-autorace-control ];
+  propagatedBuildInputs = [ turtlebot3-autorace-camera turtlebot3-autorace-control turtlebot3-autorace-core turtlebot3-autorace-detect ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

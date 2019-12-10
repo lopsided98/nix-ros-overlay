@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, catkin, visualization-msgs, move-base, rospy, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, move-base, move-base-msgs, rospy, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-waypoint-touring";
   version = "0.0.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy ];
-  propagatedBuildInputs = [ geometry-msgs std-msgs move-base visualization-msgs rospy move-base-msgs ];
+  propagatedBuildInputs = [ geometry-msgs move-base move-base-msgs rospy std-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

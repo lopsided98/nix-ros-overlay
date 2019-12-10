@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, omniorb, liblapack, openrtm-aist-python, std-msgs, cmake-modules, catkin, openrtm-aist, blas, pkg-config, message-runtime, rostest }:
+{ lib, buildRosPackage, fetchurl, blas, catkin, cmake-modules, liblapack, message-generation, message-runtime, omniorb, openrtm-aist, openrtm-aist-python, pkg-config, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rtmbuild";
   version = "1.4.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ omniorb openrtm-aist-python std-msgs cmake-modules openrtm-aist pkg-config message-generation rostest ];
-  propagatedBuildInputs = [ omniorb liblapack message-runtime openrtm-aist-python std-msgs cmake-modules openrtm-aist blas pkg-config message-generation rostest ];
+  propagatedBuildInputs = [ blas cmake-modules liblapack message-generation message-runtime omniorb openrtm-aist openrtm-aist-python pkg-config rostest std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

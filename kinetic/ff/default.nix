@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospack, bison, catkin, roslib, unzip, rosbash, openssl, cacert, flex, rosbuild, mk }:
+{ lib, buildRosPackage, fetchurl, bison, cacert, catkin, flex, mk, openssl, rosbash, rosbuild, roslib, rospack, unzip }:
 buildRosPackage {
   pname = "ros-kinetic-ff";
   version = "2.1.14-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ bison roslib unzip rosbash openssl cacert mk flex rosbuild rospack ];
+  buildInputs = [ bison cacert flex mk openssl rosbash rosbuild roslib rospack unzip ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

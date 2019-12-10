@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, neobotix-usboard-msgs, kartech-linear-actuator-msgs, derived-object-msgs, radar-msgs, delphi-srr-msgs, catkin, delphi-esr-msgs, mobileye-560-660-msgs, pacmod-msgs, ibeo-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, delphi-esr-msgs, delphi-srr-msgs, derived-object-msgs, ibeo-msgs, kartech-linear-actuator-msgs, mobileye-560-660-msgs, neobotix-usboard-msgs, pacmod-msgs, radar-msgs }:
 buildRosPackage {
   pname = "ros-melodic-astuff-sensor-msgs";
   version = "2.3.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ neobotix-usboard-msgs kartech-linear-actuator-msgs derived-object-msgs delphi-srr-msgs ibeo-msgs delphi-esr-msgs mobileye-560-660-msgs pacmod-msgs radar-msgs ];
+  propagatedBuildInputs = [ delphi-esr-msgs delphi-srr-msgs derived-object-msgs ibeo-msgs kartech-linear-actuator-msgs mobileye-560-660-msgs neobotix-usboard-msgs pacmod-msgs radar-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, xacro, controller-interface, controller-manager, urdf, control-toolbox, hardware-interface, actionlib, cmake-modules, catkin, realtime-tools, roscpp, angles, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, angles, catkin, cmake-modules, control-msgs, control-toolbox, controller-interface, controller-manager, hardware-interface, realtime-tools, roscpp, trajectory-msgs, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-gripper-action-controller";
   version = "0.13.5";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs xacro controller-interface controller-manager urdf hardware-interface control-toolbox actionlib cmake-modules realtime-tools roscpp angles control-msgs ];
-  propagatedBuildInputs = [ trajectory-msgs xacro controller-interface controller-manager urdf hardware-interface control-toolbox cmake-modules actionlib realtime-tools roscpp angles control-msgs ];
+  propagatedBuildInputs = [ actionlib angles cmake-modules control-msgs control-toolbox controller-interface controller-manager hardware-interface realtime-tools roscpp trajectory-msgs urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

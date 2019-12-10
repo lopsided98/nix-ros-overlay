@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-state-publisher, fsrobo-r-moveit-config, catkin, fsrobo-r-description, fsrobo-r-driver, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, fsrobo-r-description, fsrobo-r-driver, fsrobo-r-moveit-config, robot-state-publisher, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-fsrobo-r-bringup";
   version = "0.7.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robot-state-publisher fsrobo-r-moveit-config fsrobo-r-description fsrobo-r-driver tf2-ros ];
-  propagatedBuildInputs = [ robot-state-publisher fsrobo-r-moveit-config fsrobo-r-description fsrobo-r-driver tf2-ros ];
+  propagatedBuildInputs = [ fsrobo-r-description fsrobo-r-driver fsrobo-r-moveit-config robot-state-publisher tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

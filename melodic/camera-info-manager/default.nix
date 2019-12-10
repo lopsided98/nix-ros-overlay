@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, catkin, roslib, image-transport, roscpp, gtest, camera-calibration-parsers, rostest }:
+{ lib, buildRosPackage, fetchurl, boost, camera-calibration-parsers, catkin, gtest, image-transport, roscpp, roslib, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-camera-info-manager";
   version = "1.11.13";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs boost roslib image-transport roscpp camera-calibration-parsers rostest ];
+  buildInputs = [ rostest ];
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ boost sensor-msgs roslib image-transport roscpp camera-calibration-parsers ];
+  propagatedBuildInputs = [ boost camera-calibration-parsers image-transport roscpp roslib sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

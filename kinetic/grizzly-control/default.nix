@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, robot-state-publisher, twist-mux, catkin, rostopic, interactive-marker-twist-server, robot-localization, diff-drive-controller, grizzly-description, roslaunch, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, diff-drive-controller, grizzly-description, interactive-marker-twist-server, joint-state-controller, robot-localization, robot-state-publisher, roslaunch, rostopic, twist-mux }:
 buildRosPackage {
   pname = "ros-kinetic-grizzly-control";
   version = "0.4.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ controller-manager robot-state-publisher twist-mux rostopic interactive-marker-twist-server robot-localization diff-drive-controller grizzly-description joint-state-controller ];
+  propagatedBuildInputs = [ controller-manager diff-drive-controller grizzly-description interactive-marker-twist-server joint-state-controller robot-localization robot-state-publisher rostopic twist-mux ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

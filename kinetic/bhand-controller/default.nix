@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, genmsg, std-msgs, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, genmsg, rospy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-bhand-controller";
   version = "0.1.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs genmsg rospy std-msgs ];
-  propagatedBuildInputs = [ sensor-msgs genmsg rospy std-msgs ];
+  propagatedBuildInputs = [ genmsg rospy sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

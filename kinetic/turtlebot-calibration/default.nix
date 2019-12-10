@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, std-msgs, catkin, python-orocos-kdl, rospy, message-runtime, nav-msgs, turtlebot-bringup }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, python-orocos-kdl, rospy, sensor-msgs, std-msgs, turtlebot-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-calibration";
   version = "2.3.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs python-orocos-kdl rospy message-generation nav-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs python-orocos-kdl rospy message-runtime nav-msgs turtlebot-bringup ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime nav-msgs python-orocos-kdl rospy sensor-msgs std-msgs turtlebot-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

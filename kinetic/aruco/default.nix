@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ opencv3 ];
   propagatedBuildInputs = [ opencv3 ];
   nativeBuildInputs = [ catkin ];
 

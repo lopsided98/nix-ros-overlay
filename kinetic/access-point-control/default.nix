@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, catkin, dynamic-reconfigure }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-access-point-control";
   version = "1.0.15";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy dynamic-reconfigure ];
-  propagatedBuildInputs = [ rospy dynamic-reconfigure ];
+  propagatedBuildInputs = [ dynamic-reconfigure rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

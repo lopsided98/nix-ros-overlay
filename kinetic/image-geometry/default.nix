@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, opencv3 }:
+{ lib, buildRosPackage, fetchurl, catkin, opencv3, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-image-geometry";
   version = "1.12.8";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs opencv3 ];
-  propagatedBuildInputs = [ sensor-msgs opencv3 ];
+  propagatedBuildInputs = [ opencv3 sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

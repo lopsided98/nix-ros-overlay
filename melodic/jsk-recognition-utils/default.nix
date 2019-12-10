@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, eigen-conversions, tf, sensor-msgs, dynamic-reconfigure, libyamlcpp, qt5, jsk-tools, tf2-ros, pcl-ros, jsk-topic-tools, std-msgs, jsk-recognition-msgs, catkin, pythonPackages, message-generation, image-geometry, pcl-msgs, visualization-msgs, message-runtime, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, eigen-conversions, geometry-msgs, image-geometry, jsk-recognition-msgs, jsk-tools, jsk-topic-tools, libyamlcpp, message-generation, message-runtime, pcl-msgs, pcl-ros, pythonPackages, qt5, sensor-msgs, std-msgs, tf, tf-conversions, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-jsk-recognition-utils";
   version = "1.2.10";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros jsk-topic-tools sensor-msgs geometry-msgs dynamic-reconfigure eigen-conversions std-msgs tf pcl-msgs jsk-recognition-msgs qt5.qtbase libyamlcpp visualization-msgs pythonPackages.cython message-generation tf-conversions tf2-ros image-geometry ];
+  buildInputs = [ dynamic-reconfigure message-generation pythonPackages.cython qt5.qtbase ];
   checkInputs = [ jsk-tools ];
-  propagatedBuildInputs = [ pcl-ros jsk-topic-tools sensor-msgs geometry-msgs eigen-conversions std-msgs tf pcl-msgs jsk-recognition-msgs pythonPackages.scikitimage libyamlcpp pythonPackages.chainer visualization-msgs message-runtime tf-conversions tf2-ros image-geometry ];
+  propagatedBuildInputs = [ eigen-conversions geometry-msgs image-geometry jsk-recognition-msgs jsk-topic-tools libyamlcpp message-runtime pcl-msgs pcl-ros pythonPackages.chainer pythonPackages.scikitimage sensor-msgs std-msgs tf tf-conversions tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

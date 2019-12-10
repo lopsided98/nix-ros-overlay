@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, schunk-description, catkin, prbt-support, prbt-ikfast-manipulator-plugin, prbt-moveit-config }:
+{ lib, buildRosPackage, fetchurl, catkin, prbt-ikfast-manipulator-plugin, prbt-moveit-config, prbt-support, schunk-description, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-prbt-pg70-support";
   version = "0.0.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ xacro schunk-description prbt-support prbt-ikfast-manipulator-plugin prbt-moveit-config ];
+  propagatedBuildInputs = [ prbt-ikfast-manipulator-plugin prbt-moveit-config prbt-support schunk-description xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

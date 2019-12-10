@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, image-transport, nodelet, nav-msgs, curl, sensor-msgs, protobuf, rc-genicam-api, dynamic-reconfigure, catkin, roscpp, message-generation, rc-common-msgs, stereo-msgs, visualization-msgs, diagnostic-updater, message-runtime, rc-dynamics-api }:
+{ lib, buildRosPackage, fetchurl, catkin, curl, diagnostic-updater, dynamic-reconfigure, geometry-msgs, image-transport, message-generation, message-runtime, nav-msgs, nodelet, protobuf, rc-common-msgs, rc-dynamics-api, rc-genicam-api, roscpp, sensor-msgs, stereo-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rc-visard-driver";
   version = "2.7.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs protobuf geometry-msgs rc-genicam-api dynamic-reconfigure tf curl roscpp rc-common-msgs image-transport stereo-msgs visualization-msgs nodelet message-generation nav-msgs rc-dynamics-api diagnostic-updater ];
-  propagatedBuildInputs = [ sensor-msgs protobuf geometry-msgs rc-genicam-api dynamic-reconfigure nav-msgs tf rc-common-msgs image-transport stereo-msgs nodelet roscpp visualization-msgs message-runtime curl rc-dynamics-api diagnostic-updater ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ curl diagnostic-updater dynamic-reconfigure geometry-msgs image-transport message-runtime nav-msgs nodelet protobuf rc-common-msgs rc-dynamics-api rc-genicam-api roscpp sensor-msgs stereo-msgs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

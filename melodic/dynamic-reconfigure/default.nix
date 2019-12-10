@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, boost, roscpp-serialization, std-msgs, catkin, roslib, cpp-common, rospy, roscpp, message-runtime, rosservice, rostest }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, message-generation, message-runtime, roscpp, roscpp-serialization, roslib, rospy, rosservice, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dynamic-reconfigure";
   version = "1.6.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost roscpp-serialization std-msgs cpp-common roscpp message-generation rostest ];
-  propagatedBuildInputs = [ boost std-msgs roslib rospy roscpp message-runtime rosservice ];
+  buildInputs = [ cpp-common message-generation roscpp-serialization rostest ];
+  propagatedBuildInputs = [ boost message-runtime roscpp roslib rospy rosservice std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

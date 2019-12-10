@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, xacro, controller-interface, urdf, control-toolbox, controller-manager, hardware-interface, actionlib, cmake-modules, catkin, realtime-tools, roscpp, angles, rostest, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, angles, catkin, cmake-modules, control-msgs, control-toolbox, controller-interface, controller-manager, hardware-interface, realtime-tools, roscpp, rostest, trajectory-msgs, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-joint-trajectory-controller";
   version = "0.13.5";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs controller-interface urdf control-toolbox hardware-interface actionlib cmake-modules realtime-tools roscpp angles control-msgs ];
-  checkInputs = [ xacro rostest controller-manager ];
-  propagatedBuildInputs = [ trajectory-msgs controller-interface urdf control-toolbox hardware-interface actionlib realtime-tools roscpp angles control-msgs ];
+  buildInputs = [ cmake-modules ];
+  checkInputs = [ controller-manager rostest xacro ];
+  propagatedBuildInputs = [ actionlib angles control-msgs control-toolbox controller-interface hardware-interface realtime-tools roscpp trajectory-msgs urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

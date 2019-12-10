@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-msgs, std-srvs, catkin, pythonPackages, rospy, nodelet, bondpy, message-generation, rosservice, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, bondpy, catkin, geometry-msgs, message-generation, message-runtime, nodelet, pythonPackages, roslaunch, rospy, rosservice, rostest, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-capabilities";
   version = "0.2.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs std-srvs rospy message-generation roslaunch rostest ];
-  checkInputs = [ geometry-msgs pythonPackages.pep8 pythonPackages.mock pythonPackages.coverage rosservice ];
-  propagatedBuildInputs = [ pythonPackages.pyyaml std-msgs std-srvs rospy nodelet bondpy message-runtime roslaunch ];
+  buildInputs = [ message-generation rostest ];
+  checkInputs = [ geometry-msgs pythonPackages.coverage pythonPackages.mock pythonPackages.pep8 rosservice ];
+  propagatedBuildInputs = [ bondpy message-runtime nodelet pythonPackages.pyyaml roslaunch rospy std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

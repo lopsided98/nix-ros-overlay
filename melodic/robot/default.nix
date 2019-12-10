@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, executive-smach, kdl-parser-py, urdf, robot-state-publisher, diagnostics, filters, catkin, kdl-parser, geometry, urdf-parser-plugin, ros-base, control-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, control-msgs, diagnostics, executive-smach, filters, geometry, joint-state-publisher, kdl-parser, kdl-parser-py, robot-state-publisher, ros-base, urdf, urdf-parser-plugin, xacro }:
 buildRosPackage {
   pname = "ros-melodic-robot";
   version = "1.4.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joint-state-publisher xacro kdl-parser-py executive-smach urdf robot-state-publisher diagnostics filters geometry control-msgs urdf-parser-plugin ros-base kdl-parser ];
+  propagatedBuildInputs = [ control-msgs diagnostics executive-smach filters geometry joint-state-publisher kdl-parser kdl-parser-py robot-state-publisher ros-base urdf urdf-parser-plugin xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

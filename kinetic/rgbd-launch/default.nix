@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-proc, catkin, nodelet, depth-image-proc, rostest, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, depth-image-proc, image-proc, nodelet, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-rgbd-launch";
   version = "2.2.2";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ depth-image-proc image-proc nodelet tf2-ros ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ depth-image-proc image-proc nodelet tf2-ros ];
   nativeBuildInputs = [ catkin ];

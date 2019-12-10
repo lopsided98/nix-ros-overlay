@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rv4fl-moveit-config, rv7fl-moveit-config, catkin, melfa-description, melfa-driver }:
+{ lib, buildRosPackage, fetchurl, catkin, melfa-description, melfa-driver, rv4fl-moveit-config, rv7fl-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-melfa-robot";
   version = "0.0.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rv4fl-moveit-config melfa-driver rv7fl-moveit-config melfa-description ];
+  propagatedBuildInputs = [ melfa-description melfa-driver rv4fl-moveit-config rv7fl-moveit-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

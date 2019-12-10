@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, xacro, geometry-msgs, uuv-gazebo-ros-plugins-msgs, std-msgs, catkin, roscpp, rosunit, gazebo-dev, visualization-msgs, tf2, rostest, tf2-ros, uuv-gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-dev, geometry-msgs, roscpp, rostest, rosunit, sensor-msgs, std-msgs, tf2, tf2-ros, uuv-gazebo-plugins, uuv-gazebo-ros-plugins-msgs, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-melodic-uuv-gazebo-ros-plugins";
   version = "0.6.13";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs uuv-gazebo-ros-plugins-msgs geometry-msgs std-msgs roscpp gazebo-dev visualization-msgs tf2 tf2-ros uuv-gazebo-plugins ];
-  checkInputs = [ xacro rostest rosunit ];
-  propagatedBuildInputs = [ sensor-msgs uuv-gazebo-ros-plugins-msgs geometry-msgs uuv-gazebo-plugins std-msgs tf2 visualization-msgs roscpp tf2-ros gazebo-dev ];
+  checkInputs = [ rostest rosunit xacro ];
+  propagatedBuildInputs = [ gazebo-dev geometry-msgs roscpp sensor-msgs std-msgs tf2 tf2-ros uuv-gazebo-plugins uuv-gazebo-ros-plugins-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

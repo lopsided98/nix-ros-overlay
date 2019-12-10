@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, mavros, geometry-msgs, urdf, std-msgs, tf, cmake-modules, catkin, tf2-eigen, mavros-msgs, visualization-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, mavros, mavros-msgs, roscpp, sensor-msgs, std-msgs, tf, tf2-eigen, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mavros-extras";
   version = "0.33.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs mavros geometry-msgs urdf std-msgs tf cmake-modules tf2-eigen mavros-msgs visualization-msgs roscpp ];
-  propagatedBuildInputs = [ sensor-msgs mavros geometry-msgs urdf std-msgs tf tf2-eigen mavros-msgs visualization-msgs roscpp ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ geometry-msgs mavros mavros-msgs roscpp sensor-msgs std-msgs tf tf2-eigen urdf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

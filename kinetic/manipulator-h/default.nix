@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, manipulator-h-manager, manipulator-h-base-module, catkin, manipulator-h-base-module-msgs, manipulator-h-bringup, manipulator-h-description, manipulator-h-gazebo, manipulator-h-kinematics-dynamics, manipulator-h-gui }:
+{ lib, buildRosPackage, fetchurl, catkin, manipulator-h-base-module, manipulator-h-base-module-msgs, manipulator-h-bringup, manipulator-h-description, manipulator-h-gazebo, manipulator-h-gui, manipulator-h-kinematics-dynamics, manipulator-h-manager }:
 buildRosPackage {
   pname = "ros-kinetic-manipulator-h";
   version = "0.3.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ manipulator-h-manager manipulator-h-base-module manipulator-h-base-module-msgs manipulator-h-bringup manipulator-h-description manipulator-h-gazebo manipulator-h-kinematics-dynamics manipulator-h-gui ];
+  propagatedBuildInputs = [ manipulator-h-base-module manipulator-h-base-module-msgs manipulator-h-bringup manipulator-h-description manipulator-h-gazebo manipulator-h-gui manipulator-h-kinematics-dynamics manipulator-h-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

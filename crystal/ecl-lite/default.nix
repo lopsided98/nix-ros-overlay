@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-converters-lite, ecl-sigslots-lite, ecl-errors, ecl-time-lite, ecl-config, ecl-io }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-config, ecl-converters-lite, ecl-errors, ecl-io, ecl-sigslots-lite, ecl-time-lite }:
 buildRosPackage {
   pname = "ros-crystal-ecl-lite";
   version = "1.0.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ ecl-converters-lite ecl-sigslots-lite ecl-errors ecl-time-lite ecl-config ecl-io ];
+  propagatedBuildInputs = [ ecl-config ecl-converters-lite ecl-errors ecl-io ecl-sigslots-lite ecl-time-lite ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

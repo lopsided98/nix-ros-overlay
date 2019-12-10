@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, ament-cmake-test, ament-pyflakes, ament-cmake-core, ament-cmake-copyright }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-pyflakes }:
 buildRosPackage {
   pname = "ros-dashing-ament-cmake-pyflakes";
   version = "0.7.11-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-copyright ];
+  checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
   propagatedBuildInputs = [ ament-cmake-test ament-pyflakes ];
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 

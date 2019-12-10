@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, hardware-interface, robot-state-publisher, position-controllers, catkin, roslint, roscpp, joint-trajectory-controller, roslaunch, rostest, joint-state-controller, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, diagnostic-updater, hardware-interface, joint-state-controller, joint-trajectory-controller, position-controllers, robot-state-publisher, roscpp, roslaunch, roslint, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-melfa-driver";
   version = "0.0.4";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface roscpp controller-manager diagnostic-updater ];
-  checkInputs = [ roslaunch rostest roslint ];
-  propagatedBuildInputs = [ controller-manager robot-state-publisher hardware-interface position-controllers roscpp joint-trajectory-controller joint-state-controller diagnostic-updater ];
+  checkInputs = [ roslaunch roslint rostest ];
+  propagatedBuildInputs = [ controller-manager diagnostic-updater hardware-interface joint-state-controller joint-trajectory-controller position-controllers robot-state-publisher roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

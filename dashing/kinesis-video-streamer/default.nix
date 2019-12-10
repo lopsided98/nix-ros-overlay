@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kinesis-manager, python3Packages, aws-ros2-common, launch, kinesis-video-msgs, launch-ros, ament-cmake, image-transport, ament-cmake-gmock, rmw-implementation, rclcpp, aws-common, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, aws-common, aws-ros2-common, image-transport, kinesis-manager, kinesis-video-msgs, launch, launch-ros, python3Packages, rclcpp, rmw-implementation }:
 buildRosPackage {
   pname = "ros-dashing-kinesis-video-streamer";
   version = "3.1.0-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ kinesis-manager aws-ros2-common image-transport rmw-implementation rclcpp aws-common kinesis-video-msgs ];
+  buildInputs = [ aws-common aws-ros2-common image-transport kinesis-manager kinesis-video-msgs rclcpp ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest ];
-  propagatedBuildInputs = [ python3Packages.pyyaml rmw-implementation launch-ros launch ];
-  nativeBuildInputs = [ rmw-implementation ament-cmake ];
+  propagatedBuildInputs = [ launch launch-ros python3Packages.pyyaml rmw-implementation ];
+  nativeBuildInputs = [ ament-cmake rmw-implementation ];
 
   meta = {
     description = ''Kinesis Video Streams producer node'';

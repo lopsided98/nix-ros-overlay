@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, husky-viz, husky-msgs, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, husky-msgs, husky-viz }:
 buildRosPackage {
   pname = "ros-kinetic-husky-desktop";
   version = "0.3.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ husky-viz husky-msgs ];
+  propagatedBuildInputs = [ husky-msgs husky-viz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

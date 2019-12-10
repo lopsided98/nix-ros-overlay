@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, warthog-gazebo, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, warthog-gazebo }:
 buildRosPackage {
   pname = "ros-kinetic-warthog-simulator";
   version = "0.1.0-r1";

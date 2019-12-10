@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, xacro, srdfdom, urdf, catkin, moveit-resources, rosunit, moveit-ros-planning, libyamlcpp, rviz, moveit-ros-visualization, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, libyamlcpp, moveit-core, moveit-resources, moveit-ros-planning, moveit-ros-visualization, roscpp, rosunit, rviz, srdfdom, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-setup-assistant";
   version = "0.9.17-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core srdfdom urdf moveit-ros-planning libyamlcpp rviz moveit-ros-visualization roscpp ];
   checkInputs = [ moveit-resources rosunit ];
-  propagatedBuildInputs = [ moveit-core xacro srdfdom urdf moveit-ros-planning libyamlcpp rviz moveit-ros-visualization roscpp ];
+  propagatedBuildInputs = [ libyamlcpp moveit-core moveit-ros-planning moveit-ros-visualization roscpp rviz srdfdom urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

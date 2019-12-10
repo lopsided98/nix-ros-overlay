@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, pluginlib, catkin, image-transport, costmap-2d, cv-bridge, roscpp, nav-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, costmap-2d, cv-bridge, geometry-msgs, image-transport, nav-msgs, pluginlib, roscpp, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-fetch-depth-layer";
   version = "0.8.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs pluginlib image-transport costmap-2d cv-bridge roscpp nav-msgs tf2-ros ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs pluginlib image-transport costmap-2d cv-bridge roscpp nav-msgs tf2-ros ];
+  propagatedBuildInputs = [ costmap-2d cv-bridge geometry-msgs image-transport nav-msgs pluginlib roscpp sensor-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

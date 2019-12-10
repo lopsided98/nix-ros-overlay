@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazeboSimulator, catkin, gazebo-plugins, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-plugins, gazeboSimulator, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-hector-gazebo-thermal-camera";
   version = "0.5.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazeboSimulator.gazebo7 gazebo-plugins roscpp ];
-  propagatedBuildInputs = [ gazeboSimulator.gazebo gazebo-plugins roscpp ];
+  buildInputs = [ gazeboSimulator.gazebo7 ];
+  propagatedBuildInputs = [ gazebo-plugins gazeboSimulator.gazebo roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

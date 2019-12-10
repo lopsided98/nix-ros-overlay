@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, std-msgs, std-srvs, tf, catkin, self-test, roscpp, message-runtime, log4cxx, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, log4cxx, message-generation, message-runtime, roscpp, self-test, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-microstrain-3dmgx2-imu";
   version = "1.5.13-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs std-msgs std-srvs tf self-test roscpp message-generation log4cxx diagnostic-updater ];
-  propagatedBuildInputs = [ sensor-msgs std-msgs std-srvs tf self-test roscpp message-runtime log4cxx diagnostic-updater ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ diagnostic-updater log4cxx message-runtime roscpp self-test sensor-msgs std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, tf, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, rospy, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-innok-heros-driver";
   version = "1.0.4";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf std-msgs rospy geometry-msgs ];
-  propagatedBuildInputs = [ tf std-msgs rospy geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs rospy std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

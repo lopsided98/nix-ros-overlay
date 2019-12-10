@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, fiducial-msgs, aruco-detect, catkin, fiducial-slam }:
+{ lib, buildRosPackage, fetchurl, aruco-detect, catkin, fiducial-msgs, fiducial-slam }:
 buildRosPackage {
   pname = "ros-melodic-fiducials";
   version = "0.11.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ fiducial-msgs fiducial-slam aruco-detect ];
+  propagatedBuildInputs = [ aruco-detect fiducial-msgs fiducial-slam ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

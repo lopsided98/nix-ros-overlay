@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, jsk-recognition-msgs, catkin, ainstein-radar-msgs, tf2-eigen, nodelet, roscpp }:
+{ lib, buildRosPackage, fetchurl, ainstein-radar-msgs, catkin, jsk-recognition-msgs, nodelet, pcl-ros, roscpp, tf2-eigen }:
 buildRosPackage {
   pname = "ros-melodic-ainstein-radar-filters";
   version = "2.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros jsk-recognition-msgs ainstein-radar-msgs tf2-eigen nodelet roscpp ];
-  propagatedBuildInputs = [ pcl-ros jsk-recognition-msgs ainstein-radar-msgs tf2-eigen nodelet roscpp ];
+  propagatedBuildInputs = [ ainstein-radar-msgs jsk-recognition-msgs nodelet pcl-ros roscpp tf2-eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

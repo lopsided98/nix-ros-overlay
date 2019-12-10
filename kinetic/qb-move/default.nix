@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qb-move-control, catkin, qb-move-description, qb-move-hardware-interface }:
+{ lib, buildRosPackage, fetchurl, catkin, qb-move-control, qb-move-description, qb-move-hardware-interface }:
 buildRosPackage {
   pname = "ros-kinetic-qb-move";
   version = "2.1.3-r1";

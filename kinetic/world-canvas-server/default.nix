@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, world-canvas-utils, catkin, world-canvas-msgs, pythonPackages, warehouse-ros, visualization-msgs, rospy, nav-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, nav-msgs, pythonPackages, rospy, rostest, visualization-msgs, warehouse-ros, world-canvas-msgs, world-canvas-utils }:
 buildRosPackage {
   pname = "ros-kinetic-world-canvas-server";
   version = "0.2.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ world-canvas-utils world-canvas-msgs pythonPackages.pymongo warehouse-ros visualization-msgs rospy nav-msgs rostest ];
+  propagatedBuildInputs = [ nav-msgs pythonPackages.pymongo rospy rostest visualization-msgs warehouse-ros world-canvas-msgs world-canvas-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, libtool, catkin, rsync, autoconf, zlib }:
+{ lib, buildRosPackage, fetchurl, autoconf, catkin, git, libtool, rsync, zlib }:
 buildRosPackage {
   pname = "ros-kinetic-grpc";
   version = "0.0.10";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ git libtool rsync autoconf zlib ];
+  buildInputs = [ autoconf git libtool rsync zlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

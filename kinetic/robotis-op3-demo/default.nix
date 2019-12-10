@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, op3-demo, op3-bringup, op3-ball-detector, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, op3-ball-detector, op3-bringup, op3-demo }:
 buildRosPackage {
   pname = "ros-kinetic-robotis-op3-demo";
   version = "0.1.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ op3-demo op3-bringup op3-ball-detector ];
+  propagatedBuildInputs = [ op3-ball-detector op3-bringup op3-demo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

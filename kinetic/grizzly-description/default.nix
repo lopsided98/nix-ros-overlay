@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, urdf, pointgrey-camera-description, catkin, velodyne-description, roslaunch, lms1xx }:
+{ lib, buildRosPackage, fetchurl, catkin, lms1xx, pointgrey-camera-description, roslaunch, urdf, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-grizzly-description";
   version = "0.4.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ xacro urdf pointgrey-camera-description velodyne-description lms1xx ];
+  propagatedBuildInputs = [ lms1xx pointgrey-camera-description urdf velodyne-description xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

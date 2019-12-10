@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, pythonPackages, libxml2, ament-pep257, ament-flake8 }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, libxml2, pythonPackages }:
 buildRosPackage {
   pname = "ros-crystal-ament-xmllint";
   version = "0.6.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
   propagatedBuildInputs = [ libxml2 ];
 
   meta = {

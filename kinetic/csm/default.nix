@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gsl, catkin, cmake }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, gsl }:
 buildRosPackage {
   pname = "ros-kinetic-csm";
   version = "1.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gsl ];
-  propagatedBuildInputs = [ gsl catkin ];
+  propagatedBuildInputs = [ catkin gsl ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

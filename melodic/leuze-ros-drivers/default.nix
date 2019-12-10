@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, leuze-description, leuze-rsl-driver, leuze-msgs, leuze-bringup, catkin, leuze-phidget-driver }:
+{ lib, buildRosPackage, fetchurl, catkin, leuze-bringup, leuze-description, leuze-msgs, leuze-phidget-driver, leuze-rsl-driver }:
 buildRosPackage {
   pname = "ros-melodic-leuze-ros-drivers";
   version = "1.0.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ leuze-description leuze-rsl-driver leuze-msgs leuze-bringup leuze-phidget-driver ];
+  propagatedBuildInputs = [ leuze-bringup leuze-description leuze-msgs leuze-phidget-driver leuze-rsl-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

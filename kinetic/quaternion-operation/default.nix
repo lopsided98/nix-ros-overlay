@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, eigen, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-quaternion-operation";
   version = "0.0.3-r2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen geometry-msgs rostest roscpp ];
-  propagatedBuildInputs = [ eigen geometry-msgs rostest roscpp ];
+  propagatedBuildInputs = [ eigen geometry-msgs roscpp rostest ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, sensor-msgs, geometry-msgs, rqt-gui-cpp, catkin, image-transport, cv-bridge, qt5 }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, image-transport, qt5, rqt-gui, rqt-gui-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-image-view";
   version = "0.4.13";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui sensor-msgs geometry-msgs rqt-gui-cpp qt5.qtbase image-transport cv-bridge ];
-  propagatedBuildInputs = [ rqt-gui sensor-msgs geometry-msgs rqt-gui-cpp image-transport cv-bridge ];
+  buildInputs = [ qt5.qtbase ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs image-transport rqt-gui rqt-gui-cpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

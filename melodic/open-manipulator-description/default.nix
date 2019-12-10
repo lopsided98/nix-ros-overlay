@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, urdf, robot-state-publisher, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, robot-state-publisher, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-open-manipulator-description";
   version = "2.0.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robot-state-publisher joint-state-publisher xacro urdf ];
-  propagatedBuildInputs = [ robot-state-publisher joint-state-publisher xacro urdf ];
+  propagatedBuildInputs = [ joint-state-publisher robot-state-publisher urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, std-srvs, catkin, cv-bridge, rospy, rostest, image-geometry }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-geometry, message-filters, rospy, rostest, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-camera-calibration";
   version = "1.12.23";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ sensor-msgs message-filters std-srvs cv-bridge rospy image-geometry ];
+  propagatedBuildInputs = [ cv-bridge image-geometry message-filters rospy sensor-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

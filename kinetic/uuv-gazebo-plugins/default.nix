@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, protobuf, catkin, rosunit, eigen, gazebo-dev }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, gazebo-dev, protobuf, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-gazebo-plugins";
   version = "0.6.13";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen protobuf gazebo-dev ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ eigen protobuf gazebo-dev ];
+  propagatedBuildInputs = [ eigen gazebo-dev protobuf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

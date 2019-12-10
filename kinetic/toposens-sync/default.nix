@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, toposens-driver, code-coverage, toposens-msgs, catkin, rospy, roscpp, message-runtime, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, code-coverage, message-runtime, roscpp, roslaunch, rospy, rostest, toposens-driver, toposens-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-toposens-sync";
   version = "1.3.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ toposens-driver toposens-msgs rospy roscpp message-runtime ];
   checkInputs = [ code-coverage roslaunch rostest ];
-  propagatedBuildInputs = [ toposens-driver toposens-msgs rospy roscpp message-runtime ];
+  propagatedBuildInputs = [ message-runtime roscpp rospy toposens-driver toposens-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

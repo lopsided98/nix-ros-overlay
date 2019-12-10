@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, networkmanager, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, networkmanager }:
 buildRosPackage {
   pname = "ros-kinetic-network-autoconfig";
   version = "0.1.1-r1";

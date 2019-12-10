@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, file-management, catkin, cmake, gtest, gmock, dataflow-lite, aws-common }:
+{ lib, buildRosPackage, fetchurl, aws-common, catkin, cmake, dataflow-lite, file-management, gmock, gtest }:
 buildRosPackage {
   pname = "ros-kinetic-cloudwatch-metrics-common";
   version = "1.1.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ file-management dataflow-lite aws-common ];
-  checkInputs = [ gtest gmock ];
-  propagatedBuildInputs = [ dataflow-lite file-management aws-common ];
+  checkInputs = [ gmock gtest ];
+  propagatedBuildInputs = [ aws-common dataflow-lite file-management ];
   nativeBuildInputs = [ catkin cmake ];
 
   meta = {

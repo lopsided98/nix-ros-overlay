@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, python3Packages, std-msgs, ros2topic, unique-identifier-msgs, py-trees, rcl-interfaces, rclpy, py-trees-ros-interfaces }:
+{ lib, buildRosPackage, fetchurl, py-trees, py-trees-ros-interfaces, python3Packages, rcl-interfaces, rclpy, ros2topic, sensor-msgs, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-dashing-py-trees-ros";
   version = "1.2.1-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ sensor-msgs std-msgs ros2topic unique-identifier-msgs py-trees rcl-interfaces python3Packages.setuptools rclpy py-trees-ros-interfaces ];
-  propagatedBuildInputs = [ sensor-msgs std-msgs ros2topic unique-identifier-msgs py-trees rcl-interfaces rclpy py-trees-ros-interfaces ];
+  buildInputs = [ python3Packages.setuptools ];
+  propagatedBuildInputs = [ py-trees py-trees-ros-interfaces rcl-interfaces rclpy ros2topic sensor-msgs std-msgs unique-identifier-msgs ];
 
   meta = {
     description = ''ROS2 extensions and behaviours for py_trees.'';

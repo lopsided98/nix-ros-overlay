@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, nav-msgs, actionlib, tf, catkin, stdr-server, nodelet, roscpp, stdr-parser, stdr-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, geometry-msgs, nav-msgs, nodelet, roscpp, sensor-msgs, stdr-msgs, stdr-parser, stdr-server, tf }:
 buildRosPackage {
   pname = "ros-kinetic-stdr-robot";
   version = "0.3.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs nav-msgs actionlib tf nodelet roscpp stdr-parser stdr-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs nav-msgs tf actionlib stdr-server nodelet roscpp stdr-parser stdr-msgs ];
+  propagatedBuildInputs = [ actionlib geometry-msgs nav-msgs nodelet roscpp sensor-msgs stdr-msgs stdr-parser stdr-server tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

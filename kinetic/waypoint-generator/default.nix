@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, geometry-msgs, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-waypoint-generator";
   version = "0.0.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy geometry-msgs ];
-  propagatedBuildInputs = [ rospy geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, nav-msgs, open-karto, cmake-modules, tf, catkin, eigen, visualization-msgs, roscpp, sparse-bundle-adjustment, rosconsole }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, message-filters, nav-msgs, open-karto, rosconsole, roscpp, sensor-msgs, sparse-bundle-adjustment, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-slam-karto";
   version = "0.8.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters nav-msgs open-karto tf cmake-modules eigen visualization-msgs roscpp sparse-bundle-adjustment rosconsole ];
-  propagatedBuildInputs = [ sensor-msgs message-filters nav-msgs open-karto tf eigen visualization-msgs roscpp sparse-bundle-adjustment rosconsole ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ eigen message-filters nav-msgs open-karto rosconsole roscpp sensor-msgs sparse-bundle-adjustment tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

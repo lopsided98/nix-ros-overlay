@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ffmpeg, cmake, ament-cmake-gmock, aws-common, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, aws-common, cmake, ffmpeg }:
 buildRosPackage {
   pname = "ros-dashing-h264-encoder-core";
   version = "2.0.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ ffmpeg aws-common ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest ];
-  propagatedBuildInputs = [ ffmpeg aws-common ];
+  propagatedBuildInputs = [ aws-common ffmpeg ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

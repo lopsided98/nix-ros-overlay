@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp-serialization, catkin, cpp-common, roscpp-traits, rostime }:
+{ lib, buildRosPackage, fetchurl, catkin, cpp-common, roscpp-serialization, roscpp-traits, rostime }:
 buildRosPackage {
   pname = "ros-kinetic-roscpp-core";
   version = "0.6.11";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ roscpp-serialization cpp-common roscpp-traits rostime ];
+  propagatedBuildInputs = [ cpp-common roscpp-serialization roscpp-traits rostime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, uuv-teleop, lauv-description, catkin, uuv-trajectory-control, uuv-control-utils, uuv-auv-control-allocator }:
+{ lib, buildRosPackage, fetchurl, catkin, lauv-description, uuv-auv-control-allocator, uuv-control-utils, uuv-teleop, uuv-trajectory-control }:
 buildRosPackage {
   pname = "ros-kinetic-lauv-control";
   version = "0.1.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ uuv-teleop lauv-description uuv-trajectory-control uuv-control-utils uuv-auv-control-allocator ];
+  propagatedBuildInputs = [ lauv-description uuv-auv-control-allocator uuv-control-utils uuv-teleop uuv-trajectory-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

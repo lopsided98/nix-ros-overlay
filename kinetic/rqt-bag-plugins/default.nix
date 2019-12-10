@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, sensor-msgs, geometry-msgs, rqt-plot, std-msgs, pythonPackages, catkin, roslib, rqt-gui-py, rosbag, rospy, rqt-bag }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, rosbag, roslib, rospy, rqt-bag, rqt-gui, rqt-gui-py, rqt-plot, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-bag-plugins";
   version = "0.4.12";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-gui sensor-msgs geometry-msgs rqt-plot pythonPackages.pycairo std-msgs pythonPackages.pillow roslib rqt-gui-py rosbag rospy rqt-bag ];
+  propagatedBuildInputs = [ geometry-msgs pythonPackages.pillow pythonPackages.pycairo rosbag roslib rospy rqt-bag rqt-gui rqt-gui-py rqt-plot sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

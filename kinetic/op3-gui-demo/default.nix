@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, geometry-msgs, interactive-markers, eigen-conversions, qt4, op3-navigation, eigen, sensor-msgs, cmake-modules, roslib, op3-walking-module-msgs, libyamlcpp, std-msgs, catkin, roscpp, boost, qt-build, op3-online-walking-module-msgs, visualization-msgs, humanoid-nav-msgs }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, eigen, eigen-conversions, geometry-msgs, humanoid-nav-msgs, interactive-markers, libyamlcpp, op3-navigation, op3-online-walking-module-msgs, op3-walking-module-msgs, qt-build, qt4, robotis-controller-msgs, roscpp, roslib, sensor-msgs, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-op3-gui-demo";
   version = "0.2.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs boost qt-build geometry-msgs sensor-msgs eigen-conversions op3-online-walking-module-msgs std-msgs qt4 interactive-markers cmake-modules roslib op3-walking-module-msgs libyamlcpp eigen visualization-msgs roscpp humanoid-nav-msgs ];
-  propagatedBuildInputs = [ robotis-controller-msgs geometry-msgs eigen-conversions interactive-markers qt4 op3-navigation eigen sensor-msgs cmake-modules roslib libyamlcpp op3-walking-module-msgs std-msgs roscpp boost qt-build op3-online-walking-module-msgs visualization-msgs humanoid-nav-msgs ];
+  propagatedBuildInputs = [ boost cmake-modules eigen eigen-conversions geometry-msgs humanoid-nav-msgs interactive-markers libyamlcpp op3-navigation op3-online-walking-module-msgs op3-walking-module-msgs qt-build qt4 robotis-controller-msgs roscpp roslib sensor-msgs std-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

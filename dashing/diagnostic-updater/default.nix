@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp-lifecycle, diagnostic-msgs, std-msgs, ament-lint-common, ament-cmake, rclpy, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, rclcpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, diagnostic-msgs, rclcpp, rclcpp-lifecycle, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-diagnostic-updater";
   version = "2.0.0-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs rclcpp diagnostic-msgs rclpy ];
-  checkInputs = [ rclcpp-lifecycle ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ std-msgs rclcpp diagnostic-msgs rclpy ];
-  nativeBuildInputs = [ ament-cmake-python ament-cmake ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common rclcpp-lifecycle ];
+  propagatedBuildInputs = [ diagnostic-msgs rclcpp rclpy std-msgs ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
     description = ''diagnostic_updater contains tools for easily updating diagnostics. it is commonly used in device drivers to keep track of the status of output topics, device status, etc.'';

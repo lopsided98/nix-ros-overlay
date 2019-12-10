@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, roseus, std-msgs, actionlib, smach, smach-msgs, euslisp, catkin, smach-ros, actionlib-tutorials, message-runtime, rostest }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-tutorials, catkin, euslisp, message-generation, message-runtime, roseus, rostest, smach, smach-msgs, smach-ros, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-roseus-smach";
   version = "1.7.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roseus std-msgs actionlib smach smach-msgs smach-ros actionlib-tutorials message-generation rostest ];
-  propagatedBuildInputs = [ roseus std-msgs actionlib smach euslisp smach-msgs smach-ros actionlib-tutorials message-runtime rostest ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-tutorials euslisp message-runtime roseus rostest smach smach-msgs smach-ros std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

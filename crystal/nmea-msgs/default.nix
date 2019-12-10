@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, std-msgs, ament-cmake, rosidl-default-generators, builtin-interfaces }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-crystal-nmea-msgs";
   version = "2.0.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs rosidl-default-generators builtin-interfaces ];
-  propagatedBuildInputs = [ std-msgs builtin-interfaces rosidl-default-runtime ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
+  buildInputs = [ rosidl-default-generators ];
+  propagatedBuildInputs = [ builtin-interfaces rosidl-default-runtime std-msgs ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = ''The nmea_msgs package contains messages related to data in the NMEA format.'';

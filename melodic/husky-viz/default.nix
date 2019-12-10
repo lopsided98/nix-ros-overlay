@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, robot-state-publisher, catkin, rviz-imu-plugin, rviz, husky-description, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, husky-description, joint-state-publisher, robot-state-publisher, roslaunch, rviz, rviz-imu-plugin }:
 buildRosPackage {
   pname = "ros-melodic-husky-viz";
   version = "0.4.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joint-state-publisher robot-state-publisher rviz-imu-plugin rviz husky-description ];
+  propagatedBuildInputs = [ husky-description joint-state-publisher robot-state-publisher rviz rviz-imu-plugin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

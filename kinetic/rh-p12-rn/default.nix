@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rh-p12-rn-manager, rh-p12-rn-gui, rh-p12-rn-base-module, rh-p12-rn-description, rh-p12-rn-gazebo, rh-p12-rn-base-module-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, rh-p12-rn-base-module, rh-p12-rn-base-module-msgs, rh-p12-rn-description, rh-p12-rn-gazebo, rh-p12-rn-gui, rh-p12-rn-manager }:
 buildRosPackage {
   pname = "ros-kinetic-rh-p12-rn";
   version = "0.1.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rh-p12-rn-base-module-msgs rh-p12-rn-manager rh-p12-rn-base-module rh-p12-rn-description rh-p12-rn-gazebo rh-p12-rn-gui ];
+  propagatedBuildInputs = [ rh-p12-rn-base-module rh-p12-rn-base-module-msgs rh-p12-rn-description rh-p12-rn-gazebo rh-p12-rn-gui rh-p12-rn-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

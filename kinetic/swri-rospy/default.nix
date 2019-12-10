@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, std-srvs, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, rospy, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-swri-rospy";
   version = "2.11.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ std-msgs std-srvs rospy ];
+  propagatedBuildInputs = [ rospy std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

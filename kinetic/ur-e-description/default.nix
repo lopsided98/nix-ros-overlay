@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, urdf, robot-state-publisher, catkin, rviz }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, robot-state-publisher, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-ur-e-description";
   version = "1.2.7-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joint-state-publisher xacro urdf robot-state-publisher rviz ];
+  propagatedBuildInputs = [ joint-state-publisher robot-state-publisher rviz urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

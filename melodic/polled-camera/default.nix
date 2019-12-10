@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-runtime, std-msgs, catkin, image-transport, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, image-transport, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-polled-camera";
   version = "1.11.13";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs std-msgs image-transport roscpp message-generation ];
-  propagatedBuildInputs = [ sensor-msgs std-msgs image-transport roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ image-transport message-runtime roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

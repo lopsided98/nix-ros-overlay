@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-recognition-msgs, rospy, cv-bridge, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-recognition-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-skybiometry-ros";
   version = "0.0.4";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-recognition-msgs rospy cv-bridge ];
-  propagatedBuildInputs = [ image-recognition-msgs rospy cv-bridge ];
+  propagatedBuildInputs = [ cv-bridge image-recognition-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

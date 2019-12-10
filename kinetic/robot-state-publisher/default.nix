@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, sensor-msgs, rostest, urdfdom-headers, tf, catkin, eigen, rostime, roscpp, tf2-kdl, rosconsole, tf2-ros, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, kdl-parser, orocos-kdl, rosconsole, roscpp, rostest, rostime, sensor-msgs, tf, tf2-kdl, tf2-ros, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-kinetic-robot-state-publisher";
   version = "1.13.7-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl sensor-msgs urdfdom-headers tf eigen rostime roscpp tf2-kdl rosconsole tf2-ros kdl-parser ];
+  buildInputs = [ urdfdom-headers ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ orocos-kdl sensor-msgs tf catkin eigen rostime roscpp tf2-kdl rosconsole tf2-ros kdl-parser ];
+  propagatedBuildInputs = [ catkin eigen kdl-parser orocos-kdl rosconsole roscpp rostime sensor-msgs tf tf2-kdl tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

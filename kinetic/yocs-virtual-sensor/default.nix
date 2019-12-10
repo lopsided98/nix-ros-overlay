@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, yocs-math-toolkit, tf, catkin, rospy-message-converter, visualization-msgs, roscpp, yocs-msgs, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp, rospy, rospy-message-converter, sensor-msgs, tf, visualization-msgs, yocs-math-toolkit, yocs-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-yocs-virtual-sensor";
   version = "0.8.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs yocs-math-toolkit tf roscpp yocs-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs yocs-math-toolkit tf rospy-message-converter visualization-msgs roscpp yocs-msgs rospy ];
+  propagatedBuildInputs = [ geometry-msgs roscpp rospy rospy-message-converter sensor-msgs tf visualization-msgs yocs-math-toolkit yocs-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cpswarm-msgs, catkin, smach-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cpswarm-msgs, roscpp, smach-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-state-exchanger";
   version = "1.1.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cpswarm-msgs smach-msgs roscpp ];
-  propagatedBuildInputs = [ cpswarm-msgs smach-msgs roscpp ];
+  propagatedBuildInputs = [ cpswarm-msgs roscpp smach-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, distance-map-msgs, rviz, catkin, qt5 }:
+{ lib, buildRosPackage, fetchurl, catkin, distance-map-msgs, qt5, rviz }:
 buildRosPackage {
   pname = "ros-melodic-distance-map-rviz";
   version = "0.1.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ distance-map-msgs rviz qt5.qtbase ];
-  propagatedBuildInputs = [ distance-map-msgs rviz qt5.qtbase ];
+  propagatedBuildInputs = [ distance-map-msgs qt5.qtbase rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

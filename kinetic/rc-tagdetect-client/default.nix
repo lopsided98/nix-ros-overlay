@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, dynamic-reconfigure, std-srvs, tf, catkin, rc-common-msgs, tf2-geometry-msgs, rcdiscover, visualization-msgs, roscpp, message-runtime, curl }:
+{ lib, buildRosPackage, fetchurl, catkin, curl, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rc-common-msgs, rcdiscover, roscpp, std-srvs, tf, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rc-tagdetect-client";
   version = "2.7.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs dynamic-reconfigure std-srvs tf rc-common-msgs tf2-geometry-msgs rcdiscover visualization-msgs roscpp message-generation curl ];
-  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure std-srvs tf rc-common-msgs tf2-geometry-msgs rcdiscover visualization-msgs roscpp message-runtime curl ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ curl dynamic-reconfigure geometry-msgs message-runtime rc-common-msgs rcdiscover roscpp std-srvs tf tf2-geometry-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

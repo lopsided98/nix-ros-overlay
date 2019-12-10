@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rcutils, rmw-implementation-cmake, std-msgs, rosidl-default-runtime, launch-ros, ament-cmake, ets-msgs, rmw, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ets-msgs, launch-ros, rclcpp, rcutils, rmw, rmw-implementation-cmake, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-crystal-ets-cpp-client";
   version = "0.1.2-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcutils rmw-implementation-cmake std-msgs ets-msgs rmw rclcpp ];
-  propagatedBuildInputs = [ rcutils rosidl-default-runtime std-msgs launch-ros ets-msgs rmw rclcpp ];
+  buildInputs = [ rmw-implementation-cmake ];
+  propagatedBuildInputs = [ ets-msgs launch-ros rclcpp rcutils rmw rosidl-default-runtime std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, eigen-conversions, tf, image-transport, nodelet, class-loader, rtabmap, nav-msgs, sensor-msgs, dynamic-reconfigure, message-runtime, compressed-depth-image-transport, tf2-ros, move-base-msgs, pcl-ros, message-filters, std-msgs, std-srvs, catkin, pcl, costmap-2d, cv-bridge, roscpp, message-generation, rospy, rosgraph-msgs, image-geometry, find-object-2d, genmsg, octomap-msgs, laser-geometry, stereo-msgs, rviz, pcl-conversions, visualization-msgs, compressed-image-transport, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, catkin, class-loader, compressed-depth-image-transport, compressed-image-transport, costmap-2d, cv-bridge, dynamic-reconfigure, eigen-conversions, find-object-2d, genmsg, geometry-msgs, image-geometry, image-transport, laser-geometry, message-filters, message-generation, message-runtime, move-base-msgs, nav-msgs, nodelet, octomap-msgs, pcl, pcl-conversions, pcl-ros, roscpp, rosgraph-msgs, rospy, rtabmap, rviz, sensor-msgs, std-msgs, std-srvs, stereo-msgs, tf, tf-conversions, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rtabmap-ros";
   version = "0.19.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs eigen-conversions tf image-transport nodelet class-loader rtabmap nav-msgs sensor-msgs dynamic-reconfigure tf2-ros move-base-msgs pcl-ros message-filters std-msgs std-srvs pcl costmap-2d cv-bridge roscpp message-generation rospy rosgraph-msgs image-geometry find-object-2d octomap-msgs laser-geometry stereo-msgs rviz pcl-conversions visualization-msgs tf-conversions ];
-  propagatedBuildInputs = [ geometry-msgs eigen-conversions tf image-transport nodelet class-loader rtabmap nav-msgs sensor-msgs dynamic-reconfigure message-runtime compressed-depth-image-transport tf2-ros move-base-msgs pcl-ros message-filters std-msgs std-srvs costmap-2d cv-bridge roscpp rospy rosgraph-msgs image-geometry find-object-2d octomap-msgs laser-geometry stereo-msgs rviz pcl-conversions visualization-msgs compressed-image-transport tf-conversions ];
-  nativeBuildInputs = [ genmsg catkin ];
+  buildInputs = [ message-generation pcl ];
+  propagatedBuildInputs = [ class-loader compressed-depth-image-transport compressed-image-transport costmap-2d cv-bridge dynamic-reconfigure eigen-conversions find-object-2d geometry-msgs image-geometry image-transport laser-geometry message-filters message-runtime move-base-msgs nav-msgs nodelet octomap-msgs pcl-conversions pcl-ros roscpp rosgraph-msgs rospy rtabmap rviz sensor-msgs std-msgs std-srvs stereo-msgs tf tf-conversions tf2-ros visualization-msgs ];
+  nativeBuildInputs = [ catkin genmsg ];
 
   meta = {
     description = ''RTAB-Map's ros-pkg. RTAB-Map is a RGB-D SLAM approach with real-time constraints.'';

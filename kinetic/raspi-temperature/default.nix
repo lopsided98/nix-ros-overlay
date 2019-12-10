@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-raspi-temperature";
   version = "0.1.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs rospy ];
-  propagatedBuildInputs = [ sensor-msgs rospy ];
+  propagatedBuildInputs = [ rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

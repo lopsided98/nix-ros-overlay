@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, dynamic-reconfigure, octomap, std-msgs, std-srvs, octomap-msgs, catkin, pcl, pcl-conversions, nodelet, roscpp, visualization-msgs, octomap-ros, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, nav-msgs, nodelet, octomap, octomap-msgs, octomap-ros, pcl, pcl-conversions, pcl-ros, roscpp, sensor-msgs, std-msgs, std-srvs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-octomap-server";
   version = "0.6.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs dynamic-reconfigure octomap std-msgs std-srvs octomap-msgs roscpp pcl pcl-conversions visualization-msgs octomap-ros nodelet nav-msgs ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs dynamic-reconfigure octomap std-msgs std-srvs octomap-msgs pcl pcl-conversions nodelet roscpp octomap-ros visualization-msgs nav-msgs ];
+  propagatedBuildInputs = [ dynamic-reconfigure nav-msgs nodelet octomap octomap-msgs octomap-ros pcl pcl-conversions pcl-ros roscpp sensor-msgs std-msgs std-srvs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

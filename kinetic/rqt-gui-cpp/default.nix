@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, qt-gui-cpp, qt-gui, nodelet, qt5 }:
+{ lib, buildRosPackage, fetchurl, catkin, nodelet, qt-gui, qt-gui-cpp, qt5, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-gui-cpp";
   version = "0.5.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ qt5.qtbase qt-gui-cpp qt-gui nodelet roscpp ];
-  propagatedBuildInputs = [ roscpp qt-gui nodelet qt-gui-cpp ];
+  buildInputs = [ qt5.qtbase ];
+  propagatedBuildInputs = [ nodelet qt-gui qt-gui-cpp roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

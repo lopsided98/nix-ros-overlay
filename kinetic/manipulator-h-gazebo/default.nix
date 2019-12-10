@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, catkin, controller-manager }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, gazebo-ros }:
 buildRosPackage {
   pname = "ros-kinetic-manipulator-h-gazebo";
   version = "0.3.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gazebo-ros controller-manager ];
+  propagatedBuildInputs = [ controller-manager gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

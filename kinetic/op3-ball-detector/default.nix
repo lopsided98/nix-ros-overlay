@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, geometry-msgs, dynamic-reconfigure, message-runtime, std-msgs, usb-cam, catkin, roslib, image-transport, libyamlcpp, uvc-camera, cv-bridge, roscpp, message-generation, opencv3 }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, dynamic-reconfigure, geometry-msgs, image-transport, libyamlcpp, message-generation, message-runtime, opencv3, roscpp, roslib, sensor-msgs, std-msgs, usb-cam, uvc-camera }:
 buildRosPackage {
   pname = "ros-kinetic-op3-ball-detector";
   version = "0.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs geometry-msgs dynamic-reconfigure std-msgs roslib image-transport libyamlcpp cv-bridge roscpp message-generation opencv3 ];
-  propagatedBuildInputs = [ sensor-msgs boost geometry-msgs dynamic-reconfigure std-msgs usb-cam roslib image-transport libyamlcpp uvc-camera cv-bridge roscpp message-runtime opencv3 ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ boost cv-bridge dynamic-reconfigure geometry-msgs image-transport libyamlcpp message-runtime opencv3 roscpp roslib sensor-msgs std-msgs usb-cam uvc-camera ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

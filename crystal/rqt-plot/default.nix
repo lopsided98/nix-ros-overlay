@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, python3Packages, qt-gui-py-common, rqt-py-common, std-msgs, ament-cmake, rqt-gui-py, rclpy, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, python-qt-binding, python3Packages, qt-gui-py-common, rclpy, rqt-gui, rqt-gui-py, rqt-py-common, std-msgs }:
 buildRosPackage {
   pname = "ros-crystal-rqt-plot";
   version = "1.0.6-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ python3Packages.matplotlib rqt-gui qt-gui-py-common std-msgs rqt-py-common rqt-gui-py python3Packages.numpy rclpy python3Packages.catkin-pkg python-qt-binding ];
+  propagatedBuildInputs = [ python-qt-binding python3Packages.catkin-pkg python3Packages.matplotlib python3Packages.numpy qt-gui-py-common rclpy rqt-gui rqt-gui-py rqt-py-common std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

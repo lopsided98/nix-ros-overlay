@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qb-device-control, catkin, qb-device-bringup, qb-device-srvs, qb-device-utils, qb-device-hardware-interface, qb-device-description, qb-device-msgs, qb-device-driver }:
+{ lib, buildRosPackage, fetchurl, catkin, qb-device-bringup, qb-device-control, qb-device-description, qb-device-driver, qb-device-hardware-interface, qb-device-msgs, qb-device-srvs, qb-device-utils }:
 buildRosPackage {
   pname = "ros-kinetic-qb-device";
   version = "2.1.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ qb-device-driver qb-device-bringup qb-device-srvs qb-device-utils qb-device-hardware-interface qb-device-description qb-device-msgs qb-device-control ];
+  propagatedBuildInputs = [ qb-device-bringup qb-device-control qb-device-description qb-device-driver qb-device-hardware-interface qb-device-msgs qb-device-srvs qb-device-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

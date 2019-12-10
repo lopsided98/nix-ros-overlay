@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jog-controller, ur3-moveit-config, fake-joint-launch, nextage-moveit-config, catkin, tra1-moveit-config, ur5-moveit-config, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, fake-joint-launch, jog-controller, nextage-moveit-config, roslaunch, rostest, tra1-moveit-config, ur3-moveit-config, ur5-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-jog-launch";
   version = "0.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest fake-joint-launch roslaunch jog-controller ];
-  propagatedBuildInputs = [ jog-controller ur3-moveit-config fake-joint-launch nextage-moveit-config tra1-moveit-config ur5-moveit-config roslaunch rostest ];
+  propagatedBuildInputs = [ fake-joint-launch jog-controller nextage-moveit-config roslaunch rostest tra1-moveit-config ur3-moveit-config ur5-moveit-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

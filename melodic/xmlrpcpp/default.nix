@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cpp-common, catkin, rostime }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, rostime }:
 buildRosPackage {
   pname = "ros-melodic-xmlrpcpp";
   version = "1.14.3";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cpp-common rostime ];
   checkInputs = [ boost ];
   propagatedBuildInputs = [ cpp-common rostime ];
   nativeBuildInputs = [ catkin ];

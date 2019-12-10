@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rospy }:
 buildRosPackage {
   pname = "ros-melodic-kalman-filter";
   version = "0.2.4";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy ];
   propagatedBuildInputs = [ rospy ];
   nativeBuildInputs = [ catkin ];
 

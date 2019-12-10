@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, tf, catkin, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-runtime, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-p2os-teleop";
   version = "2.1.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs tf message-runtime ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

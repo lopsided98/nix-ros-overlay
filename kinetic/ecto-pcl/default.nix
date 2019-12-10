@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, proj, catkin, pythonPackages, ecto, rosunit, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, ecto, pcl-conversions, proj, pythonPackages, rosunit, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ecto-pcl";
   version = "0.4.5";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs boost proj ecto pcl-conversions ];
   checkInputs = [ pythonPackages.nose rosunit ];
-  propagatedBuildInputs = [ sensor-msgs boost proj ecto pcl-conversions ];
+  propagatedBuildInputs = [ boost ecto pcl-conversions proj sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

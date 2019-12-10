@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, urdf-geometry-parser, controller-interface, nav-msgs, controller-manager, std-srvs, tf, catkin, realtime-tools, four-wheel-steering-msgs, rosgraph-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, four-wheel-steering-msgs, nav-msgs, realtime-tools, rosgraph-msgs, rostest, std-srvs, tf, urdf-geometry-parser }:
 buildRosPackage {
   pname = "ros-melodic-four-wheel-steering-controller";
   version = "0.15.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ urdf-geometry-parser controller-interface tf realtime-tools four-wheel-steering-msgs nav-msgs ];
-  checkInputs = [ std-srvs rosgraph-msgs rostest controller-manager ];
-  propagatedBuildInputs = [ urdf-geometry-parser controller-interface tf realtime-tools four-wheel-steering-msgs nav-msgs ];
+  checkInputs = [ controller-manager rosgraph-msgs rostest std-srvs ];
+  propagatedBuildInputs = [ controller-interface four-wheel-steering-msgs nav-msgs realtime-tools tf urdf-geometry-parser ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

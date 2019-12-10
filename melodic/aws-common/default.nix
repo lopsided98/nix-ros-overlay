@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, utillinux, catkin, cmake, openssl, zlib, gtest, gmock, ros-environment, curl }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, curl, gmock, gtest, openssl, ros-environment, utillinux, zlib }:
 buildRosPackage {
   pname = "ros-melodic-aws-common";
   version = "2.1.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ utillinux openssl zlib ros-environment curl ];
-  checkInputs = [ gtest gmock ];
-  propagatedBuildInputs = [ utillinux openssl curl zlib ];
+  buildInputs = [ ros-environment ];
+  checkInputs = [ gmock gtest ];
+  propagatedBuildInputs = [ curl openssl utillinux zlib ];
   nativeBuildInputs = [ catkin cmake ];
 
   meta = {

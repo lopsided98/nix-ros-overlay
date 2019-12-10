@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, catkin, python, rospy, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, python, rospy, tf, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-static-tf";
   version = "0.0.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf rospy geometry-msgs tf2-ros ];
-  propagatedBuildInputs = [ geometry-msgs tf python rospy tf2-ros ];
+  propagatedBuildInputs = [ geometry-msgs python rospy tf tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

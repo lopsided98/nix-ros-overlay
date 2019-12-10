@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-description, xacro, urdf, urdfdom, catkin, turtlebot-description, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, kobuki-description, rostest, turtlebot-description, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-openni-description";
   version = "1.11.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ turtlebot-description kobuki-description urdfdom rostest ];
-  propagatedBuildInputs = [ xacro urdf ];
+  checkInputs = [ kobuki-description rostest turtlebot-description urdfdom ];
+  propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

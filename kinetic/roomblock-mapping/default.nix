@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-mapping, robot-state-publisher, map-server, catkin, slam-karto, gmapping, rviz, rosbag, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, gmapping, hector-mapping, map-server, robot-state-publisher, rosbag, roslaunch, rostest, rviz, slam-karto }:
 buildRosPackage {
   pname = "ros-kinetic-roomblock-mapping";
   version = "0.0.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ hector-mapping robot-state-publisher map-server slam-karto gmapping rviz rosbag ];
+  propagatedBuildInputs = [ gmapping hector-mapping map-server robot-state-publisher rosbag rviz slam-karto ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

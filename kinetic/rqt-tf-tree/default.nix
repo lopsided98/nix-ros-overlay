@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-ros, rqt-gui, geometry-msgs, catkin, pythonPackages, tf2, rqt-gui-py, rqt-graph, qt-dotgraph, tf2-msgs, rospy, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, python-qt-binding, pythonPackages, qt-dotgraph, rospy, rqt-graph, rqt-gui, rqt-gui-py, tf2, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-tf-tree";
   version = "0.6.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ pythonPackages.mock ];
-  propagatedBuildInputs = [ tf2-ros rqt-gui geometry-msgs tf2 pythonPackages.rospkg rqt-gui-py rqt-graph qt-dotgraph tf2-msgs rospy python-qt-binding ];
+  propagatedBuildInputs = [ geometry-msgs python-qt-binding pythonPackages.rospkg qt-dotgraph rospy rqt-graph rqt-gui rqt-gui-py tf2 tf2-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

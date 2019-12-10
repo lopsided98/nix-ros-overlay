@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, geometry-msgs, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, orocos-kdl }:
 buildRosPackage {
   pname = "ros-melodic-kdl-conversions";
   version = "1.12.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl geometry-msgs ];
-  propagatedBuildInputs = [ orocos-kdl geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs orocos-kdl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

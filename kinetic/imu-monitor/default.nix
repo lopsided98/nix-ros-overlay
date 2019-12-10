@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, diagnostic-msgs, catkin, pr2-mechanism-controllers, python-orocos-kdl, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, pr2-mechanism-controllers, python-orocos-kdl, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-imu-monitor";
   version = "1.6.30";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ sensor-msgs diagnostic-msgs pr2-mechanism-controllers python-orocos-kdl rospy ];
+  propagatedBuildInputs = [ diagnostic-msgs pr2-mechanism-controllers python-orocos-kdl rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, catkin, roscpp, can-msgs, pacmod-msgs }:
+{ lib, buildRosPackage, fetchurl, can-msgs, catkin, pacmod-msgs, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pacmod3";
   version = "1.2.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ can-msgs std-msgs pacmod-msgs roscpp ];
-  propagatedBuildInputs = [ can-msgs std-msgs pacmod-msgs roscpp ];
+  propagatedBuildInputs = [ can-msgs pacmod-msgs roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

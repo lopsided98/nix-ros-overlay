@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tinyxml2-vendor, rcutils, ament-cmake, class-loader, ament-index-cpp, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, class-loader, rcutils, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-crystal-pluginlib";
   version = "2.2.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-index-cpp tinyxml2-vendor rcutils class-loader ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ ament-index-cpp tinyxml2-vendor rcutils class-loader ];
+  propagatedBuildInputs = [ ament-index-cpp class-loader rcutils tinyxml2-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

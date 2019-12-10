@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, urdf-test, talos-description-calibration, talos-description-inertial, catkin, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, rostest, talos-description-calibration, talos-description-inertial, urdf-test }:
 buildRosPackage {
   pname = "ros-kinetic-talos-description";
   version = "1.0.45-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ urdf-test rostest ];
-  propagatedBuildInputs = [ talos-description-inertial talos-description-calibration ];
+  checkInputs = [ rostest urdf-test ];
+  propagatedBuildInputs = [ talos-description-calibration talos-description-inertial ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

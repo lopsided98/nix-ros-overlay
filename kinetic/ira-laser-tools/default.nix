@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, std-msgs, tf, catkin, laser-geometry, pcl, vtkWithQt4, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, laser-geometry, pcl, pcl-ros, roscpp, sensor-msgs, std-msgs, tf, vtkWithQt4 }:
 buildRosPackage {
   pname = "ros-kinetic-ira-laser-tools";
   version = "1.0.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs std-msgs tf laser-geometry pcl vtkWithQt4 roscpp ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs std-msgs tf laser-geometry pcl vtkWithQt4 roscpp ];
+  propagatedBuildInputs = [ laser-geometry pcl pcl-ros roscpp sensor-msgs std-msgs tf vtkWithQt4 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

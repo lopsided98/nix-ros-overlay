@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, rosmsg, std-msgs, cmake-modules, catkin, ecto, eigen, cv-bridge, roscpp, rosbag, message-runtime, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, cv-bridge, ecto, eigen, geometry-msgs, message-generation, message-runtime, nav-msgs, rosbag, roscpp, rosmsg, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ecto-ros";
   version = "0.4.8";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs rosmsg std-msgs cmake-modules ecto eigen cv-bridge roscpp rosbag message-generation nav-msgs ];
-  propagatedBuildInputs = [ geometry-msgs message-runtime std-msgs ecto eigen cv-bridge roscpp rosbag message-generation ];
+  buildInputs = [ cmake-modules nav-msgs rosmsg sensor-msgs ];
+  propagatedBuildInputs = [ cv-bridge ecto eigen geometry-msgs message-generation message-runtime rosbag roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

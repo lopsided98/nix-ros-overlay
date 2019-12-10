@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, launch-testing, ament-cmake-test, python-cmake-module, ament-cmake-pytest, ament-cmake-core }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-pytest, ament-cmake-test, ament-copyright, launch-testing, python-cmake-module }:
 buildRosPackage {
   pname = "ros-dashing-launch-testing-ament-cmake";
   version = "0.8.7-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-copyright ament-cmake-pytest ];
+  checkInputs = [ ament-cmake-pytest ament-copyright ];
   propagatedBuildInputs = [ ament-cmake-test launch-testing python-cmake-module ];
   nativeBuildInputs = [ ament-cmake-core ];
 

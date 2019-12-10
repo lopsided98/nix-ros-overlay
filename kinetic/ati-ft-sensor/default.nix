@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, geometry-msgs, cmake-modules, roslib, catkin, libyamlcpp, eigen, roscpp, robotis-math }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, eigen, geometry-msgs, libyamlcpp, robotis-math, roscpp, roslib }:
 buildRosPackage {
   pname = "ros-kinetic-ati-ft-sensor";
   version = "0.2.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost geometry-msgs cmake-modules roslib libyamlcpp eigen roscpp robotis-math ];
-  propagatedBuildInputs = [ boost geometry-msgs cmake-modules roslib libyamlcpp eigen roscpp robotis-math ];
+  propagatedBuildInputs = [ boost cmake-modules eigen geometry-msgs libyamlcpp robotis-math roscpp roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

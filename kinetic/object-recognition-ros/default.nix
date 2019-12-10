@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, rostest, pluginlib, cmake-modules, actionlib, ecto, rostopic, object-recognition-core, catkin, geometric-shapes, visualization-msgs, ecto-ros, ecto-image-pipeline, object-recognition-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, boost, catkin, cmake-modules, ecto, ecto-image-pipeline, ecto-ros, geometric-shapes, object-recognition-core, object-recognition-msgs, pluginlib, rostest, rostopic, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-object-recognition-ros";
   version = "0.3.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost pluginlib actionlib cmake-modules ecto object-recognition-core geometric-shapes ecto-ros ecto-image-pipeline object-recognition-msgs ];
+  buildInputs = [ cmake-modules ];
   checkInputs = [ rostest visualization-msgs ];
-  propagatedBuildInputs = [ boost pluginlib actionlib ecto rostopic object-recognition-core geometric-shapes ecto-ros ecto-image-pipeline object-recognition-msgs ];
+  propagatedBuildInputs = [ actionlib boost ecto ecto-image-pipeline ecto-ros geometric-shapes object-recognition-core object-recognition-msgs pluginlib rostopic ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

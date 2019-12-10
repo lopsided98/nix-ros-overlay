@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, boost, assimp, octomap, catkin, eigen }:
+{ lib, buildRosPackage, fetchurl, assimp, boost, catkin, eigen, git, octomap }:
 buildRosPackage {
   pname = "ros-kinetic-hpp-fcl";
   version = "1.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ git boost assimp octomap eigen ];
-  propagatedBuildInputs = [ octomap boost eigen assimp ];
+  buildInputs = [ git ];
+  propagatedBuildInputs = [ assimp boost eigen octomap ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

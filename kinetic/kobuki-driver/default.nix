@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-time, ecl-geometry, ecl-sigslots, catkin, ecl-command-line, ecl-mobile-robot, ecl-devices, ecl-build, ecl-converters }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-build, ecl-command-line, ecl-converters, ecl-devices, ecl-geometry, ecl-mobile-robot, ecl-sigslots, ecl-time }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-driver";
   version = "0.7.8-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-time ecl-geometry ecl-sigslots ecl-build ecl-command-line ecl-mobile-robot ecl-devices ecl-converters ];
-  propagatedBuildInputs = [ ecl-time ecl-geometry ecl-sigslots ecl-command-line ecl-mobile-robot ecl-devices ecl-converters ];
+  buildInputs = [ ecl-build ];
+  propagatedBuildInputs = [ ecl-command-line ecl-converters ecl-devices ecl-geometry ecl-mobile-robot ecl-sigslots ecl-time ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

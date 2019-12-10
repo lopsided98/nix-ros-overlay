@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, utillinux, boost, catkin, cmake-modules, bond, roscpp, smclib }:
+{ lib, buildRosPackage, fetchurl, bond, boost, catkin, cmake-modules, roscpp, smclib, utillinux }:
 buildRosPackage {
   pname = "ros-melodic-bondcpp";
   version = "1.8.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost utillinux cmake-modules bond roscpp smclib ];
-  propagatedBuildInputs = [ boost utillinux bond roscpp smclib ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ bond boost roscpp smclib utillinux ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

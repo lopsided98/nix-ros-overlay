@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, fetch-depth-layer, fetch-navigation, fetch-maps, catkin, fetch-calibration, fetch-ikfast-plugin, fetch-teleop, fetch-description, fetch-moveit-config }:
+{ lib, buildRosPackage, fetchurl, catkin, fetch-calibration, fetch-depth-layer, fetch-description, fetch-ikfast-plugin, fetch-maps, fetch-moveit-config, fetch-navigation, fetch-teleop }:
 buildRosPackage {
   pname = "ros-kinetic-fetch-ros";
   version = "0.7.15";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ fetch-depth-layer fetch-navigation fetch-calibration fetch-moveit-config fetch-ikfast-plugin fetch-teleop fetch-description fetch-maps ];
+  propagatedBuildInputs = [ fetch-calibration fetch-depth-layer fetch-description fetch-ikfast-plugin fetch-maps fetch-moveit-config fetch-navigation fetch-teleop ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

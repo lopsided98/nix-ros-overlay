@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libcap, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, libcap, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-ethercat-grant";
   version = "0.2.1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libcap roscpp ];
   propagatedBuildInputs = [ libcap roscpp ];
   nativeBuildInputs = [ catkin ];
 

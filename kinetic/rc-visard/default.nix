@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rc-visard-driver, rc-tagdetect-client, rc-visard-description, rc-hand-eye-calibration-client, catkin, rc-pick-client, rc-roi-manager-gui }:
+{ lib, buildRosPackage, fetchurl, catkin, rc-hand-eye-calibration-client, rc-pick-client, rc-roi-manager-gui, rc-tagdetect-client, rc-visard-description, rc-visard-driver }:
 buildRosPackage {
   pname = "ros-kinetic-rc-visard";
   version = "2.7.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rc-visard-driver rc-tagdetect-client rc-hand-eye-calibration-client rc-visard-description rc-pick-client rc-roi-manager-gui ];
+  propagatedBuildInputs = [ rc-hand-eye-calibration-client rc-pick-client rc-roi-manager-gui rc-tagdetect-client rc-visard-description rc-visard-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

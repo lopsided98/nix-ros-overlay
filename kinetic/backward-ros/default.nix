@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, elfutils, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, elfutils, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-backward-ros";
   version = "0.1.7";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ elfutils roscpp ];
   propagatedBuildInputs = [ elfutils roscpp ];
   nativeBuildInputs = [ catkin ];
 

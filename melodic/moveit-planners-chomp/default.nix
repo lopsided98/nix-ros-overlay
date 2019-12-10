@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, moveit-ros-planning-interface, pluginlib, catkin, chomp-motion-planner, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, chomp-motion-planner, moveit-core, moveit-ros-planning-interface, pluginlib, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-moveit-planners-chomp";
   version = "1.0.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core pluginlib chomp-motion-planner roscpp ];
   checkInputs = [ moveit-ros-planning-interface rostest ];
-  propagatedBuildInputs = [ moveit-core pluginlib chomp-motion-planner roscpp ];
+  propagatedBuildInputs = [ chomp-motion-planner moveit-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

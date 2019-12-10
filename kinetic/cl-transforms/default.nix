@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sbcl, cl-utils, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cl-utils, sbcl }:
 buildRosPackage {
   pname = "ros-kinetic-cl-transforms";
   version = "0.2.12-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ sbcl cl-utils ];
+  propagatedBuildInputs = [ cl-utils sbcl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

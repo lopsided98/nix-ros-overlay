@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, eigen-conversions, moveit-commander, catkin, moveit-msgs, pilz-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen-conversions, moveit-commander, moveit-core, moveit-msgs, pilz-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-industrial-motion-testutils";
   version = "0.3.10-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core pilz-msgs moveit-msgs eigen-conversions ];
-  propagatedBuildInputs = [ moveit-commander moveit-core pilz-msgs moveit-msgs ];
+  buildInputs = [ eigen-conversions ];
+  propagatedBuildInputs = [ moveit-commander moveit-core moveit-msgs pilz-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

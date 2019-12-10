@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav2d-exploration, nav2d-localizer, nav2d-tutorials, catkin, nav2d-remote, nav2d-operator, nav2d-navigator, nav2d-karto, nav2d-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, nav2d-exploration, nav2d-karto, nav2d-localizer, nav2d-msgs, nav2d-navigator, nav2d-operator, nav2d-remote, nav2d-tutorials }:
 buildRosPackage {
   pname = "ros-melodic-nav2d";
   version = "0.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ nav2d-exploration nav2d-localizer nav2d-tutorials nav2d-remote nav2d-operator nav2d-navigator nav2d-karto nav2d-msgs ];
+  propagatedBuildInputs = [ nav2d-exploration nav2d-karto nav2d-localizer nav2d-msgs nav2d-navigator nav2d-operator nav2d-remote nav2d-tutorials ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

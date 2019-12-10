@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, boost, op3-kinematics-dynamics, sensor-msgs, eigen-conversions, std-msgs, catkin, cmake-modules, roslib, robotis-device, libyamlcpp, op3-walking-module-msgs, eigen, robotis-framework-common, roscpp, robotis-math }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, eigen, eigen-conversions, libyamlcpp, op3-kinematics-dynamics, op3-walking-module-msgs, robotis-controller-msgs, robotis-device, robotis-framework-common, robotis-math, roscpp, roslib, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-op3-walking-module";
   version = "0.2.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs boost op3-kinematics-dynamics sensor-msgs eigen-conversions std-msgs cmake-modules roslib robotis-device libyamlcpp op3-walking-module-msgs eigen robotis-framework-common roscpp robotis-math ];
-  propagatedBuildInputs = [ robotis-controller-msgs sensor-msgs op3-kinematics-dynamics boost eigen-conversions std-msgs cmake-modules roslib robotis-device libyamlcpp op3-walking-module-msgs eigen robotis-framework-common roscpp robotis-math ];
+  propagatedBuildInputs = [ boost cmake-modules eigen eigen-conversions libyamlcpp op3-kinematics-dynamics op3-walking-module-msgs robotis-controller-msgs robotis-device robotis-framework-common robotis-math roscpp roslib sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

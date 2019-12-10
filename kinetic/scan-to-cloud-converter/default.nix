@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, catkin, pcl, pcl-conversions, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, pcl, pcl-conversions, pcl-ros, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-scan-to-cloud-converter";
   version = "0.3.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros pcl-conversions roscpp pcl ];
-  propagatedBuildInputs = [ pcl-ros pcl-conversions pcl roscpp ];
+  propagatedBuildInputs = [ pcl pcl-conversions pcl-ros roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libphidgets, opengm, libdlib, libntcan, catkin, libpcan }:
+{ lib, buildRosPackage, fetchurl, catkin, libdlib, libntcan, libpcan, libphidgets, opengm }:
 buildRosPackage {
   pname = "ros-kinetic-cob-extern";
   version = "0.6.14-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ libphidgets opengm libdlib libntcan libpcan ];
+  propagatedBuildInputs = [ libdlib libntcan libpcan libphidgets opengm ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

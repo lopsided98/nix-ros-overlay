@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, controller-interface, geometry-msgs, cob-base-controller-utils, hardware-interface, pluginlib, std-srvs, tf, catkin, realtime-tools, roscpp, angles, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, angles, boost, catkin, cob-base-controller-utils, controller-interface, geometry-msgs, hardware-interface, nav-msgs, pluginlib, realtime-tools, roscpp, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-melodic-cob-tricycle-controller";
   version = "0.8.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost controller-interface geometry-msgs cob-base-controller-utils hardware-interface pluginlib std-srvs tf realtime-tools roscpp angles nav-msgs ];
-  propagatedBuildInputs = [ boost geometry-msgs controller-interface cob-base-controller-utils hardware-interface pluginlib std-srvs tf realtime-tools roscpp angles nav-msgs ];
+  propagatedBuildInputs = [ angles boost cob-base-controller-utils controller-interface geometry-msgs hardware-interface nav-msgs pluginlib realtime-tools roscpp std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

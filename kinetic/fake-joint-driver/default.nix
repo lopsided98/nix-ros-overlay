@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, controller-manager, urdf, hardware-interface, robot-state-publisher, position-controllers, catkin, roslint, roscpp, joint-trajectory-controller, roslaunch, rostest, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, hardware-interface, joint-state-controller, joint-trajectory-controller, position-controllers, robot-state-publisher, roscpp, roslaunch, roslint, rostest, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-fake-joint-driver";
   version = "0.0.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ xacro controller-manager urdf hardware-interface roscpp roslaunch ];
-  checkInputs = [ rostest roslint ];
-  propagatedBuildInputs = [ xacro controller-manager urdf robot-state-publisher hardware-interface position-controllers roscpp joint-trajectory-controller roslaunch joint-state-controller ];
+  checkInputs = [ roslint rostest ];
+  propagatedBuildInputs = [ controller-manager hardware-interface joint-state-controller joint-trajectory-controller position-controllers robot-state-publisher roscpp roslaunch urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

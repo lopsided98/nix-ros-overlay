@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, message-runtime, std-msgs, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ros-mppt";
   version = "0.1.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs rospy message-generation ];
-  propagatedBuildInputs = [ std-msgs rospy message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ message-runtime rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, carrot-planner, clear-costmap-recovery, move-slow-and-clear, map-server, catkin, base-local-planner, costmap-2d, nav-core, fake-localization, global-planner, move-base, dwa-local-planner, voxel-grid, amcl, navfn, rotate-recovery, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, amcl, base-local-planner, carrot-planner, catkin, clear-costmap-recovery, costmap-2d, dwa-local-planner, fake-localization, global-planner, map-server, move-base, move-base-msgs, move-slow-and-clear, nav-core, navfn, rotate-recovery, voxel-grid }:
 buildRosPackage {
   pname = "ros-melodic-navigation";
   version = "1.16.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ clear-costmap-recovery carrot-planner move-slow-and-clear map-server base-local-planner costmap-2d nav-core fake-localization global-planner move-base dwa-local-planner voxel-grid amcl navfn rotate-recovery move-base-msgs ];
+  propagatedBuildInputs = [ amcl base-local-planner carrot-planner clear-costmap-recovery costmap-2d dwa-local-planner fake-localization global-planner map-server move-base move-base-msgs move-slow-and-clear nav-core navfn rotate-recovery voxel-grid ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

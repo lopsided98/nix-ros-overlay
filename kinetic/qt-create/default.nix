@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qt-build, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, qt-build }:
 buildRosPackage {
   pname = "ros-kinetic-qt-create";
   version = "0.2.10";

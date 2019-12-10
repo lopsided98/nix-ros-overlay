@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-run-stop-auto-restart, pr2-head-action, microstrain-3dmgx2-imu, pr2-machine, pr2-dashboard-aggregator, wge100-camera, ocean-battery-driver, pr2-gripper-action, rostest, pr2-camera-synchronizer, ethercat-trigger-controllers, pr2-description, robot-state-publisher, joint-trajectory-action, sound-play, pr2-controller-configuration, pr2-calibration-controllers, power-monitor, wifi-ddwrt, single-joint-position-action, rosbag, pr2-ethercat, tf2-ros, diagnostic-aggregator, joy, stereo-image-proc, std-srvs, pr2-power-board, catkin, pr2-computer-monitor, prosilica-camera, urg-node, robot-mechanism-controllers, robot-pose-ekf, pr2-controller-manager }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-aggregator, ethercat-trigger-controllers, joint-trajectory-action, joy, microstrain-3dmgx2-imu, ocean-battery-driver, power-monitor, pr2-calibration-controllers, pr2-camera-synchronizer, pr2-computer-monitor, pr2-controller-configuration, pr2-controller-manager, pr2-dashboard-aggregator, pr2-description, pr2-ethercat, pr2-gripper-action, pr2-head-action, pr2-machine, pr2-power-board, pr2-run-stop-auto-restart, prosilica-camera, robot-mechanism-controllers, robot-pose-ekf, robot-state-publisher, rosbag, rostest, single-joint-position-action, sound-play, std-srvs, stereo-image-proc, tf2-ros, urg-node, wge100-camera, wifi-ddwrt }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-bringup";
   version = "1.6.30";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ rostest ];
-  propagatedBuildInputs = [ pr2-run-stop-auto-restart pr2-head-action microstrain-3dmgx2-imu pr2-machine pr2-dashboard-aggregator wge100-camera ocean-battery-driver pr2-gripper-action pr2-camera-synchronizer ethercat-trigger-controllers pr2-description robot-state-publisher joint-trajectory-action sound-play pr2-controller-configuration pr2-calibration-controllers power-monitor wifi-ddwrt single-joint-position-action rosbag pr2-ethercat tf2-ros diagnostic-aggregator joy stereo-image-proc std-srvs pr2-power-board pr2-computer-monitor prosilica-camera urg-node robot-mechanism-controllers robot-pose-ekf pr2-controller-manager ];
+  propagatedBuildInputs = [ diagnostic-aggregator ethercat-trigger-controllers joint-trajectory-action joy microstrain-3dmgx2-imu ocean-battery-driver power-monitor pr2-calibration-controllers pr2-camera-synchronizer pr2-computer-monitor pr2-controller-configuration pr2-controller-manager pr2-dashboard-aggregator pr2-description pr2-ethercat pr2-gripper-action pr2-head-action pr2-machine pr2-power-board pr2-run-stop-auto-restart prosilica-camera robot-mechanism-controllers robot-pose-ekf robot-state-publisher rosbag single-joint-position-action sound-play std-srvs stereo-image-proc tf2-ros urg-node wge100-camera wifi-ddwrt ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

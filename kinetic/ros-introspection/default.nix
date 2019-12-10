@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslint, catkin, rosmsg, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, roslint, rosmsg }:
 buildRosPackage {
   pname = "ros-kinetic-ros-introspection";
   version = "1.0.1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ rosmsg pythonPackages.requests ];
+  propagatedBuildInputs = [ pythonPackages.requests rosmsg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

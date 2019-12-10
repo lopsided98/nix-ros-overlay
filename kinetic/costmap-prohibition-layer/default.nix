@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-2d, catkin, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, costmap-2d, dynamic-reconfigure, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-costmap-prohibition-layer";
   version = "0.0.5";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-2d dynamic-reconfigure roscpp ];
   propagatedBuildInputs = [ costmap-2d dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 

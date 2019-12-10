@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, catkin, message-generation, rosbag-migration-rule }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rosbag-migration-rule, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-pds-msgs";
   version = "1.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation ];
-  propagatedBuildInputs = [ std-msgs message-runtime rosbag-migration-rule ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ message-runtime rosbag-migration-rule std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

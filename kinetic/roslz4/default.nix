@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, lz4, catkin, rosunit }:
+{ lib, buildRosPackage, fetchurl, catkin, lz4, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-roslz4";
   version = "1.12.14";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ lz4 ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ lz4 ];
   nativeBuildInputs = [ catkin ];

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, laser-filters, robot-state-publisher, tf, laser-assembler, cmake-modules, catkin, multisense-lib, tf-conversions, urg-node }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, laser-assembler, laser-filters, multisense-lib, robot-state-publisher, sensor-msgs, tf, tf-conversions, urg-node }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-tilt-laser";
   version = "2.2.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs dynamic-reconfigure laser-filters tf laser-assembler cmake-modules multisense-lib tf-conversions ];
-  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure laser-filters robot-state-publisher tf laser-assembler multisense-lib tf-conversions urg-node ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ dynamic-reconfigure laser-assembler laser-filters multisense-lib robot-state-publisher sensor-msgs tf tf-conversions urg-node ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

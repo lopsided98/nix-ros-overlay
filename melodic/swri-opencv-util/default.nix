@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, swri-math-util, cv-bridge, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, swri-math-util }:
 buildRosPackage {
   pname = "ros-melodic-swri-opencv-util";
   version = "2.11.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ swri-math-util cv-bridge ];
-  propagatedBuildInputs = [ swri-math-util cv-bridge ];
+  propagatedBuildInputs = [ cv-bridge swri-math-util ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

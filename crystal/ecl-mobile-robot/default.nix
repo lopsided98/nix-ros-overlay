@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-linear-algebra, ecl-formatters, ecl-geometry, ecl-license, ament-lint-common, ecl-errors, ament-cmake-gtest, ecl-math, ecl-build, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-errors, ecl-formatters, ecl-geometry, ecl-license, ecl-linear-algebra, ecl-math }:
 buildRosPackage {
   pname = "ros-crystal-ecl-mobile-robot";
   version = "1.0.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-formatters ecl-geometry ecl-license ecl-errors ecl-math ecl-build ecl-linear-algebra ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ ecl-formatters ecl-license ecl-geometry ecl-errors ecl-math ecl-build ecl-linear-algebra ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ecl-build ecl-errors ecl-formatters ecl-geometry ecl-license ecl-linear-algebra ecl-math ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

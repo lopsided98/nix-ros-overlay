@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, industrial-robot-client, sensor-msgs, trajectory-msgs, pythonPackages, catkin, industrial-msgs, rospy, roslaunch, control-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, control-msgs, industrial-msgs, industrial-robot-client, pythonPackages, roslaunch, rospy, sensor-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-industrial-robot-simulator";
   version = "0.7.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ industrial-robot-client trajectory-msgs sensor-msgs pythonPackages.rospkg industrial-msgs rospy control-msgs ];
+  propagatedBuildInputs = [ control-msgs industrial-msgs industrial-robot-client pythonPackages.rospkg rospy sensor-msgs trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

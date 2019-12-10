@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, poco, cmake-modules, catkin, console-bridge }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, console-bridge, poco }:
 buildRosPackage {
   pname = "ros-kinetic-class-loader";
   version = "0.3.9";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ poco boost cmake-modules console-bridge ];
-  propagatedBuildInputs = [ poco boost console-bridge ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ boost console-bridge poco ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

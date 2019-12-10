@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, ntp, diagnostic-msgs, cob-msgs, ifstat-legacy, std-msgs, ipmitool, catkin, pythonPackages, actionlib, rostopic, sysstat, roscpp, topic-tools, rospy, cob-light, cob-script-server, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, cob-light, cob-msgs, cob-script-server, diagnostic-msgs, diagnostic-updater, ifstat-legacy, ipmitool, ntp, pythonPackages, roscpp, rospy, rostopic, sensor-msgs, std-msgs, sysstat, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-cob-monitoring";
   version = "0.6.15-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ topic-tools roscpp diagnostic-updater ];
-  propagatedBuildInputs = [ cob-msgs pythonPackages.mechanize pythonPackages.paramiko sensor-msgs diagnostic-msgs rostopic ntp std-msgs roscpp topic-tools rospy cob-light cob-script-server ifstat-legacy ipmitool actionlib pythonPackages.requests sysstat diagnostic-updater pythonPackages.psutil ];
+  propagatedBuildInputs = [ actionlib cob-light cob-msgs cob-script-server diagnostic-msgs diagnostic-updater ifstat-legacy ipmitool ntp pythonPackages.mechanize pythonPackages.paramiko pythonPackages.psutil pythonPackages.requests roscpp rospy rostopic sensor-msgs std-msgs sysstat topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

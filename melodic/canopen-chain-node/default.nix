@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, canopen-master, pluginlib, std-msgs, std-srvs, catkin, roslib, socketcan-interface, roscpp, message-runtime, rosconsole-bridge, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, canopen-master, catkin, diagnostic-updater, message-generation, message-runtime, pluginlib, rosconsole-bridge, roscpp, roslib, socketcan-interface, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-canopen-chain-node";
   version = "0.8.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ canopen-master pluginlib std-msgs std-srvs roslib socketcan-interface roscpp message-generation rosconsole-bridge diagnostic-updater ];
-  propagatedBuildInputs = [ canopen-master pluginlib std-srvs std-msgs roslib socketcan-interface roscpp message-runtime rosconsole-bridge diagnostic-updater ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ canopen-master diagnostic-updater message-runtime pluginlib rosconsole-bridge roscpp roslib socketcan-interface std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

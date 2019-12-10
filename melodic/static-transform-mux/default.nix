@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, catkin, tf2-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, rospy, tf2-msgs }:
 buildRosPackage {
   pname = "ros-melodic-static-transform-mux";
   version = "1.1.0";

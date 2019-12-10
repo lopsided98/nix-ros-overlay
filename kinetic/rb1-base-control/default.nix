@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, controller-manager-msgs, robot-state-publisher, twist-mux, catkin, diff-drive-controller, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, controller-manager-msgs, diff-drive-controller, joint-state-controller, robot-state-publisher, twist-mux }:
 buildRosPackage {
   pname = "ros-kinetic-rb1-base-control";
   version = "1.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ controller-manager robot-state-publisher controller-manager-msgs twist-mux diff-drive-controller joint-state-controller ];
+  propagatedBuildInputs = [ controller-manager controller-manager-msgs diff-drive-controller joint-state-controller robot-state-publisher twist-mux ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, cob-msgs, dynamic-reconfigure, tf, catkin, rospy, visualization-msgs, message-runtime, cob-script-server }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-script-server, diagnostic-msgs, dynamic-reconfigure, message-generation, message-runtime, rospy, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-helper-tools";
   version = "0.6.15-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation dynamic-reconfigure ];
-  propagatedBuildInputs = [ diagnostic-msgs cob-msgs dynamic-reconfigure tf rospy visualization-msgs message-runtime cob-script-server ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ cob-msgs cob-script-server diagnostic-msgs dynamic-reconfigure message-runtime rospy tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, roscpp, cpswarm-msgs, tf2 }:
+{ lib, buildRosPackage, fetchurl, catkin, cpswarm-msgs, geometry-msgs, roscpp, tf2 }:
 buildRosPackage {
   pname = "ros-kinetic-kinematics-exchanger";
   version = "1.1.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cpswarm-msgs geometry-msgs roscpp tf2 ];
-  propagatedBuildInputs = [ cpswarm-msgs tf2 geometry-msgs roscpp ];
+  propagatedBuildInputs = [ cpswarm-msgs geometry-msgs roscpp tf2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

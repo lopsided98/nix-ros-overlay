@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp-tutorials, turtlesim, catkin, rospy-tutorials }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp-tutorials, rospy-tutorials, turtlesim }:
 buildRosPackage {
   pname = "ros-melodic-ros-tutorials";
   version = "0.9.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rospy-tutorials turtlesim roscpp-tutorials ];
+  propagatedBuildInputs = [ roscpp-tutorials rospy-tutorials turtlesim ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

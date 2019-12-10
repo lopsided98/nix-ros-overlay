@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xiaoqiang-monitor, xiaoqiang-bringup, xiaoqiang-driver, xiaoqiang-server, catkin, xiaoqiang-msgs, xiaoqiang-controller, xiaoqiang-description, xiaoqiang-freenect }:
+{ lib, buildRosPackage, fetchurl, catkin, xiaoqiang-bringup, xiaoqiang-controller, xiaoqiang-description, xiaoqiang-driver, xiaoqiang-freenect, xiaoqiang-monitor, xiaoqiang-msgs, xiaoqiang-server }:
 buildRosPackage {
   pname = "ros-kinetic-xiaoqiang";
   version = "0.0.12";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ xiaoqiang-monitor xiaoqiang-bringup xiaoqiang-driver xiaoqiang-server xiaoqiang-msgs xiaoqiang-controller xiaoqiang-description xiaoqiang-freenect ];
+  propagatedBuildInputs = [ xiaoqiang-bringup xiaoqiang-controller xiaoqiang-description xiaoqiang-driver xiaoqiang-freenect xiaoqiang-monitor xiaoqiang-msgs xiaoqiang-server ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

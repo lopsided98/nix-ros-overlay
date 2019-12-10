@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-aggregator, husky-description, sensor-msgs, geometry-msgs, diagnostic-msgs, controller-manager, hardware-interface, catkin, roslint, husky-control, diff-drive-controller, roscpp, topic-tools, husky-msgs, roslaunch, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, diff-drive-controller, geometry-msgs, hardware-interface, husky-control, husky-description, husky-msgs, roscpp, roslaunch, roslint, sensor-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-husky-base";
   version = "0.4.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs diagnostic-msgs controller-manager hardware-interface roslint roscpp husky-msgs roslaunch diagnostic-updater ];
-  propagatedBuildInputs = [ diagnostic-aggregator husky-description sensor-msgs diagnostic-msgs geometry-msgs controller-manager hardware-interface husky-control diff-drive-controller roscpp topic-tools husky-msgs diagnostic-updater ];
+  buildInputs = [ roslaunch roslint ];
+  propagatedBuildInputs = [ controller-manager diagnostic-aggregator diagnostic-msgs diagnostic-updater diff-drive-controller geometry-msgs hardware-interface husky-control husky-description husky-msgs roscpp sensor-msgs topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

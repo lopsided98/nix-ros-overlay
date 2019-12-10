@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, cv-bridge, rostopic, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, rospy, rostopic }:
 buildRosPackage {
   pname = "ros-kinetic-generic-throttle";
   version = "0.6.15-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rospy cv-bridge rostopic ];
+  propagatedBuildInputs = [ cv-bridge rospy rostopic ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gx-sound-msgs, rospy, vorbis-tools, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, gx-sound-msgs, rospy, vorbis-tools }:
 buildRosPackage {
   pname = "ros-kinetic-gx-sound-player";
   version = "0.2.2";

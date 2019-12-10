@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python3Packages, composition-interfaces, ament-copyright, launch, osrf-pycommon, ament-index-python, pythonPackages, ament-pep257, rclpy, ament-flake8, lifecycle-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, composition-interfaces, launch, lifecycle-msgs, osrf-pycommon, python3Packages, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-dashing-launch-ros";
   version = "0.8.7-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ python3Packages.pyyaml composition-interfaces launch osrf-pycommon rclpy ament-index-python lifecycle-msgs ];
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
-  propagatedBuildInputs = [ python3Packages.pyyaml composition-interfaces launch osrf-pycommon rclpy ament-index-python lifecycle-msgs ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  propagatedBuildInputs = [ ament-index-python composition-interfaces launch lifecycle-msgs osrf-pycommon python3Packages.pyyaml rclpy ];
 
   meta = {
     description = ''ROS specific extensions to the launch tool.'';

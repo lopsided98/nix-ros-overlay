@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, controller-manager-msgs, std-msgs, catkin, roslint, roscpp }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, controller-manager-msgs, roscpp, roslint, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-control-mode-adapter";
   version = "0.7.9-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost controller-manager-msgs std-msgs roslint roscpp ];
-  propagatedBuildInputs = [ boost controller-manager-msgs std-msgs roslint roscpp ];
+  propagatedBuildInputs = [ boost controller-manager-msgs roscpp roslint std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

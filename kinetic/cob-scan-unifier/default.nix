@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, tf, laser-geometry, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, laser-geometry, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-cob-scan-unifier";
   version = "0.7.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs tf laser-geometry roscpp ];
-  propagatedBuildInputs = [ sensor-msgs tf laser-geometry roscpp ];
+  propagatedBuildInputs = [ laser-geometry roscpp sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

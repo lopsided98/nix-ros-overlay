@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, catkin, roscpp, xpp-vis }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, xacro, xpp-vis }:
 buildRosPackage {
   pname = "ros-kinetic-xpp-hyq";
   version = "1.0.10";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ xacro roscpp xpp-vis ];
-  propagatedBuildInputs = [ xacro xpp-vis roscpp ];
+  propagatedBuildInputs = [ roscpp xacro xpp-vis ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

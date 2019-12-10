@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, uncrustify, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, uncrustify }:
 buildRosPackage {
   pname = "ros-crystal-uncrustify-vendor";
   version = "1.1.0";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ uncrustify ];
   propagatedBuildInputs = [ uncrustify ];
   nativeBuildInputs = [ ament-cmake ];
 

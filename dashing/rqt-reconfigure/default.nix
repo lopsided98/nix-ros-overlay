@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, python3Packages, ament-copyright, qt-gui-py-common, rqt-py-common, rqt-console, ament-flake8, ament-xmllint, rqt-gui-py, rclpy, ament-index-python, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-xmllint, python-qt-binding, python3Packages, qt-gui-py-common, rclpy, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-dashing-rqt-reconfigure";
   version = "1.0.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-xmllint ament-flake8 ament-copyright ];
-  propagatedBuildInputs = [ python3Packages.pyyaml rqt-gui qt-gui-py-common rqt-py-common rqt-console rqt-gui-py rclpy ament-index-python python-qt-binding ];
+  checkInputs = [ ament-copyright ament-flake8 ament-xmllint ];
+  propagatedBuildInputs = [ ament-index-python python-qt-binding python3Packages.pyyaml qt-gui-py-common rclpy rqt-console rqt-gui rqt-gui-py rqt-py-common ];
 
   meta = {
     description = ''This rqt plugin provides a way to view and edit parameters on nodes.'';

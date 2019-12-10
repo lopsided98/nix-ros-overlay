@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, cmake-modules, tf, catkin, eigen, geographic-msgs, rostime, roscpp, nav-msgs, rosconsole }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, geographic-msgs, geometry-msgs, nav-msgs, rosconsole, roscpp, rostime, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-hector-pose-estimation-core";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs tf cmake-modules eigen geographic-msgs rostime roscpp nav-msgs rosconsole ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs tf eigen geographic-msgs rostime roscpp nav-msgs rosconsole ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ eigen geographic-msgs geometry-msgs nav-msgs rosconsole roscpp rostime sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, topic-tools, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-rosthrottle";
   version = "1.2.0-r3";

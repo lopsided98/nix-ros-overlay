@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, boost, pythonPackages, cmake, eigen, python, doxygen }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-eigenpy";
   version = "1.6.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ git boost pythonPackages.numpy python eigen doxygen ];
-  propagatedBuildInputs = [ python pythonPackages.numpy boost eigen ];
+  buildInputs = [ doxygen git ];
+  propagatedBuildInputs = [ boost eigen python pythonPackages.numpy ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

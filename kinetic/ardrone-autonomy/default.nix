@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, image-transport, nav-msgs, sensor-msgs, daemontools, SDL, camera-info-manager, libxml2, std-srvs, catkin, wirelesstools, roscpp, message-generation, binutils, git, roslint, gtk2, message-runtime, libudev }:
+{ lib, buildRosPackage, fetchurl, SDL, binutils, camera-info-manager, catkin, daemontools, git, gtk2, image-transport, libudev, libxml2, message-generation, message-runtime, nav-msgs, roscpp, roslint, sensor-msgs, std-srvs, tf, wirelesstools }:
 buildRosPackage {
   pname = "ros-kinetic-ardrone-autonomy";
   version = "1.4.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ git binutils sensor-msgs daemontools SDL camera-info-manager std-srvs tf libxml2 roslint image-transport wirelesstools gtk2 roscpp message-generation nav-msgs libudev ];
-  propagatedBuildInputs = [ sensor-msgs std-srvs camera-info-manager tf image-transport roscpp message-runtime nav-msgs ];
+  buildInputs = [ SDL binutils daemontools git gtk2 libudev libxml2 message-generation roslint wirelesstools ];
+  propagatedBuildInputs = [ camera-info-manager image-transport message-runtime nav-msgs roscpp sensor-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

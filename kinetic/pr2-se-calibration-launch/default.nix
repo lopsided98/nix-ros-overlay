@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-calibration-launch, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, pr2-calibration-launch }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-se-calibration-launch";
   version = "1.0.11";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-calibration-launch ];
   propagatedBuildInputs = [ pr2-calibration-launch ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, tf2, pkg-config, bullet }:
+{ lib, buildRosPackage, fetchurl, bullet, catkin, geometry-msgs, pkg-config, tf2 }:
 buildRosPackage {
   pname = "ros-kinetic-tf2-bullet";
   version = "0.5.20";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ bullet geometry-msgs tf2 ];
   propagatedBuildInputs = [ bullet geometry-msgs tf2 ];
-  nativeBuildInputs = [ pkg-config catkin ];
+  nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''tf2_bullet'';

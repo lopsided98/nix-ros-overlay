@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-kinetic-cartographer-ros-msgs";
   version = "0.2.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation geometry-msgs ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

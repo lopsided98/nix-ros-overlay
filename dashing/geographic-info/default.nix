@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geodesy, geographic-msgs, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, geodesy, geographic-msgs }:
 buildRosPackage {
   pname = "ros-dashing-geographic-info";
   version = "1.0.1-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geodesy geographic-msgs ];
   propagatedBuildInputs = [ geodesy geographic-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

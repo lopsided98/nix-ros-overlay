@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, geometry-msgs, nav-msgs, launch, launch-testing, tf2, ament-lint-common, ament-cmake, ament-lint-auto, tf2-geometry-msgs, nav2-common, nav-2d-msgs, nav2-util, nav2-msgs, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, geometry-msgs, launch, launch-testing, nav-2d-msgs, nav-msgs, nav2-common, nav2-msgs, nav2-util, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-dashing-nav-2d-utils";
   version = "0.2.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ geometry-msgs nav-msgs tf2 tf2-geometry-msgs nav2-common nav-2d-msgs nav2-util nav2-msgs ];
-  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ geometry-msgs nav-msgs tf2 tf2-geometry-msgs nav-2d-msgs nav2-util nav2-msgs ];
+  buildInputs = [ nav2-common ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing ];
+  propagatedBuildInputs = [ geometry-msgs nav-2d-msgs nav-msgs nav2-msgs nav2-util tf2 tf2-geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

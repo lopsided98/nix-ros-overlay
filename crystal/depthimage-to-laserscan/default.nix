@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, ament-cmake-ros, opencv3, rclcpp, ament-cmake-gtest, image-geometry }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, image-geometry, opencv3, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-crystal-depthimage-to-laserscan";
   version = "2.2.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs rclcpp opencv3 image-geometry ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ sensor-msgs rclcpp image-geometry opencv3 ];
+  propagatedBuildInputs = [ image-geometry opencv3 rclcpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

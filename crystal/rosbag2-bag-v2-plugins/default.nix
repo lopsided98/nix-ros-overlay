@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag2-test-common, rcutils, pluginlib, std-msgs, ament-lint-common, ament-cmake, rosbag2, ament-cmake-gmock, rosbag2-storage, ros1-bridge, rclcpp, ament-lint-auto, ros1-rosbag-storage-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, pluginlib, rclcpp, rcutils, ros1-bridge, ros1-rosbag-storage-vendor, rosbag2, rosbag2-storage, rosbag2-test-common, std-msgs }:
 buildRosPackage {
   pname = "ros-crystal-rosbag2-bag-v2-plugins";
   version = "0.0.7";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcutils pluginlib rosbag2 rosbag2-storage ros1-bridge rclcpp ros1-rosbag-storage-vendor ];
-  checkInputs = [ std-msgs ament-lint-common ament-cmake-gmock rosbag2-test-common ament-lint-auto ];
-  propagatedBuildInputs = [ rcutils pluginlib rosbag2 rosbag2-storage ros1-bridge rclcpp ros1-rosbag-storage-vendor ];
+  checkInputs = [ ament-cmake-gmock ament-lint-auto ament-lint-common rosbag2-test-common std-msgs ];
+  propagatedBuildInputs = [ pluginlib rclcpp rcutils ros1-bridge ros1-rosbag-storage-vendor rosbag2 rosbag2-storage ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

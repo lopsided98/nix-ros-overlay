@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, geometry-msgs, message-runtime, catkin, actionlib-msgs, message-generation }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2-controllers-msgs";
   version = "1.10.17-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs message-generation geometry-msgs actionlib-msgs ];
-  propagatedBuildInputs = [ trajectory-msgs message-runtime geometry-msgs actionlib-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib-msgs geometry-msgs message-runtime trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

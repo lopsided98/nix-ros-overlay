@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, sensor-msgs, geometry-msgs, pythonPackages, roslib, catkin, rqt-gui-py, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, roslib, rospy, rqt-gui, rqt-gui-py, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-drone-teleop";
   version = "1.0.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui sensor-msgs geometry-msgs pythonPackages.rospkg roslib rqt-gui-py rospy ];
-  propagatedBuildInputs = [ rqt-gui sensor-msgs geometry-msgs pythonPackages.rospkg roslib rqt-gui-py rospy ];
+  propagatedBuildInputs = [ geometry-msgs pythonPackages.rospkg roslib rospy rqt-gui rqt-gui-py sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

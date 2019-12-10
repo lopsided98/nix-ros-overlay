@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, exotica-collision-scene-fcl-latest, exotica-core, exotica-ik-solver, exotica-ompl-solver, catkin, exotica-aico-solver, exotica-time-indexed-rrt-connect-solver, exotica-core-task-maps, exotica-python, exotica-levenberg-marquardt-solver, exotica-collision-scene-fcl }:
+{ lib, buildRosPackage, fetchurl, catkin, exotica-aico-solver, exotica-collision-scene-fcl, exotica-collision-scene-fcl-latest, exotica-core, exotica-core-task-maps, exotica-ik-solver, exotica-levenberg-marquardt-solver, exotica-ompl-solver, exotica-python, exotica-time-indexed-rrt-connect-solver }:
 buildRosPackage {
   pname = "ros-melodic-exotica";
   version = "5.0.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ exotica-python exotica-collision-scene-fcl-latest exotica-ik-solver exotica-ompl-solver exotica-aico-solver exotica-time-indexed-rrt-connect-solver exotica-core-task-maps exotica-core exotica-levenberg-marquardt-solver exotica-collision-scene-fcl ];
+  propagatedBuildInputs = [ exotica-aico-solver exotica-collision-scene-fcl exotica-collision-scene-fcl-latest exotica-core exotica-core-task-maps exotica-ik-solver exotica-levenberg-marquardt-solver exotica-ompl-solver exotica-python exotica-time-indexed-rrt-connect-solver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

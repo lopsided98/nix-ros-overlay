@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-gui-cpp, pluginlib, catkin, qt5, rosmon-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, pluginlib, qt5, roscpp, rosmon-msgs, rqt-gui, rqt-gui-cpp }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-rosmon";
   version = "2.1.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui rqt-gui-cpp pluginlib qt5.qtbase rosmon-msgs roscpp ];
-  propagatedBuildInputs = [ rqt-gui rqt-gui-cpp pluginlib rosmon-msgs roscpp ];
+  buildInputs = [ qt5.qtbase ];
+  propagatedBuildInputs = [ pluginlib roscpp rosmon-msgs rqt-gui rqt-gui-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

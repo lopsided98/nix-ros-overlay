@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, sensor-msgs, robot-state-publisher, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, robot-state-publisher, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rh-p12-rn-description";
   version = "0.1.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp ];
-  propagatedBuildInputs = [ robot-state-publisher joint-state-publisher sensor-msgs roscpp ];
+  propagatedBuildInputs = [ joint-state-publisher robot-state-publisher roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

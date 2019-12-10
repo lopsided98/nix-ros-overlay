@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, rospy, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-joy-mouse";
   version = "0.1.14";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs rospy pythonPackages.pyudev ];
-  propagatedBuildInputs = [ sensor-msgs rospy pythonPackages.pyudev ];
+  propagatedBuildInputs = [ pythonPackages.pyudev rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

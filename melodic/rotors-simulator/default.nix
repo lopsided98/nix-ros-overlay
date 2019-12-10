@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rotors-gazebo-plugins, rotors-joy-interface, rqt-rotors, rotors-description, rotors-control, catkin, rotors-gazebo, rotors-evaluation, rotors-hil-interface, rotors-comm }:
+{ lib, buildRosPackage, fetchurl, catkin, rotors-comm, rotors-control, rotors-description, rotors-evaluation, rotors-gazebo, rotors-gazebo-plugins, rotors-hil-interface, rotors-joy-interface, rqt-rotors }:
 buildRosPackage {
   pname = "ros-melodic-rotors-simulator";
   version = "2.2.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rotors-gazebo-plugins rotors-joy-interface rqt-rotors rotors-description rotors-control rotors-gazebo rotors-evaluation rotors-hil-interface rotors-comm ];
+  propagatedBuildInputs = [ rotors-comm rotors-control rotors-description rotors-evaluation rotors-gazebo rotors-gazebo-plugins rotors-hil-interface rotors-joy-interface rqt-rotors ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

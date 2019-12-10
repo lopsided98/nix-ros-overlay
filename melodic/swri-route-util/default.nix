@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, swri-math-util, swri-geometry-util, marti-nav-msgs, catkin, marti-common-msgs, visualization-msgs, roscpp, swri-transform-util }:
+{ lib, buildRosPackage, fetchurl, catkin, marti-common-msgs, marti-nav-msgs, roscpp, swri-geometry-util, swri-math-util, swri-transform-util, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-swri-route-util";
   version = "2.11.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ swri-math-util swri-geometry-util marti-nav-msgs roscpp marti-common-msgs visualization-msgs swri-transform-util ];
-  propagatedBuildInputs = [ swri-math-util swri-geometry-util marti-nav-msgs marti-common-msgs visualization-msgs roscpp swri-transform-util ];
+  propagatedBuildInputs = [ marti-common-msgs marti-nav-msgs roscpp swri-geometry-util swri-math-util swri-transform-util visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

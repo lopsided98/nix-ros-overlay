@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, message-filters, geometry-msgs, message-runtime, std-msgs, std-srvs, pythonPackages, tf, catkin, image-transport, image-view, cv-bridge, roscpp, message-generation, rostest, image-geometry }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, image-geometry, image-transport, image-view, message-filters, message-generation, message-runtime, pcl-ros, pythonPackages, roscpp, rostest, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-image-view2";
   version = "2.2.10";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs std-msgs std-srvs tf image-view image-transport cv-bridge roscpp message-generation rostest image-geometry ];
+  buildInputs = [ message-generation rostest ];
   checkInputs = [ pythonPackages.numpy pythonPackages.scipy ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs message-filters geometry-msgs std-msgs std-srvs tf image-view image-transport cv-bridge roscpp message-runtime image-geometry ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs image-geometry image-transport image-view message-filters message-runtime pcl-ros roscpp sensor-msgs std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

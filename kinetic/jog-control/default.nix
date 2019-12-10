@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jog-msgs, catkin, jog-controller, jog-launch }:
+{ lib, buildRosPackage, fetchurl, catkin, jog-controller, jog-launch, jog-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-jog-control";
   version = "0.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ jog-msgs jog-controller jog-launch ];
+  propagatedBuildInputs = [ jog-controller jog-launch jog-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

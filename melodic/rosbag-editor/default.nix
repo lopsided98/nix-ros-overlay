@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag-storage, catkin, tf, qt5, tf2-msgs, roscpp, rosbag }:
+{ lib, buildRosPackage, fetchurl, catkin, qt5, rosbag, rosbag-storage, roscpp, tf, tf2-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosbag-editor";
   version = "0.4.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosbag-storage tf roscpp qt5.qtbase tf2-msgs rosbag ];
-  propagatedBuildInputs = [ rosbag-storage tf roscpp qt5.qtbase tf2-msgs rosbag ];
+  propagatedBuildInputs = [ qt5.qtbase rosbag rosbag-storage roscpp tf tf2-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

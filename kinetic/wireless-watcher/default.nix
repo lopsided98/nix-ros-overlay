@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, wireless-msgs, rospy, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rospy, wireless-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-wireless-watcher";
   version = "0.0.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ wireless-msgs rospy ];
+  propagatedBuildInputs = [ rospy wireless-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

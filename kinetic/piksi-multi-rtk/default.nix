@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, piksi-rtk-msgs, catkin, roslib, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, piksi-rtk-msgs, roslib, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-piksi-multi-rtk";
   version = "1.8.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs piksi-rtk-msgs roslib rospy ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs piksi-rtk-msgs roslib rospy ];
+  propagatedBuildInputs = [ geometry-msgs piksi-rtk-msgs roslib rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

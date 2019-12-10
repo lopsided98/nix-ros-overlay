@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, catkin, iiwa-description }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros, iiwa-description }:
 buildRosPackage {
   pname = "ros-kinetic-iiwa-gazebo";
   version = "1.4.1-r1";

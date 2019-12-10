@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, nav2d-operator, roscpp, nav2d-navigator }:
+{ lib, buildRosPackage, fetchurl, catkin, nav2d-navigator, nav2d-operator, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-nav2d-remote";
   version = "0.4.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs nav2d-operator nav2d-navigator roscpp ];
-  propagatedBuildInputs = [ sensor-msgs nav2d-navigator roscpp nav2d-operator ];
+  propagatedBuildInputs = [ nav2d-navigator nav2d-operator roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

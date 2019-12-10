@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, urdf, urdfdom, catkin, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, rostest, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-melodic-openni-description";
   version = "1.11.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ urdfdom rostest ];
-  propagatedBuildInputs = [ xacro urdf ];
+  checkInputs = [ rostest urdfdom ];
+  propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, rclcpp, ament-cmake, class-loader }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, class-loader, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-crystal-examples-rclcpp-minimal-composition";
   version = "0.6.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs rclcpp class-loader ];
-  propagatedBuildInputs = [ std-msgs rclcpp class-loader ];
+  propagatedBuildInputs = [ class-loader rclcpp std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

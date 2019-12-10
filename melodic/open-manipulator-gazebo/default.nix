@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, controller-manager, urdf, std-msgs, catkin, gazebo-ros-control, roscpp, gazebo-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, gazebo-ros, gazebo-ros-control, roscpp, std-msgs, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-open-manipulator-gazebo";
   version = "1.1.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ xacro controller-manager urdf std-msgs gazebo-ros-control roscpp gazebo-ros ];
-  propagatedBuildInputs = [ xacro controller-manager urdf std-msgs gazebo-ros-control roscpp gazebo-ros ];
+  propagatedBuildInputs = [ controller-manager gazebo-ros gazebo-ros-control roscpp std-msgs urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

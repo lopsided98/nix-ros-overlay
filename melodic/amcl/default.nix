@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, dynamic-reconfigure, map-server, std-srvs, catkin, tf2, tf2-geometry-msgs, python-orocos-kdl, tf2-msgs, roscpp, rosbag, nav-msgs, rostest, tf2-ros, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, geometry-msgs, map-server, message-filters, nav-msgs, python-orocos-kdl, rosbag, roscpp, rostest, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-amcl";
   version = "1.16.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters geometry-msgs dynamic-reconfigure std-srvs roscpp tf2-geometry-msgs tf2-msgs tf2 rosbag nav-msgs tf2-ros diagnostic-updater ];
+  buildInputs = [ message-filters tf2-geometry-msgs ];
   checkInputs = [ map-server python-orocos-kdl rostest ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure std-srvs tf2 tf2-msgs roscpp rosbag nav-msgs tf2-ros diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure geometry-msgs nav-msgs rosbag roscpp sensor-msgs std-srvs tf2 tf2-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

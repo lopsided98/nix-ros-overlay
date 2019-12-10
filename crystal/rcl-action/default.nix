@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rcutils, rcl, ament-lint-common, test-msgs, ament-cmake-gtest, osrf-testing-tools-cpp, rmw, rosidl-generator-c, action-msgs, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp, rcl, rcutils, rmw, rosidl-generator-c, test-msgs }:
 buildRosPackage {
   pname = "ros-crystal-rcl-action";
   version = "0.6.6-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcutils rcl rmw rosidl-generator-c action-msgs ];
-  checkInputs = [ ament-lint-common ament-lint-auto test-msgs osrf-testing-tools-cpp ament-cmake-gtest ];
-  propagatedBuildInputs = [ rcutils rcl rmw rosidl-generator-c action-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common osrf-testing-tools-cpp test-msgs ];
+  propagatedBuildInputs = [ action-msgs rcl rcutils rmw rosidl-generator-c ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

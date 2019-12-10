@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hironx-ros-bridge, hironx-calibration, catkin, hironx-moveit-config }:
+{ lib, buildRosPackage, fetchurl, catkin, hironx-calibration, hironx-moveit-config, hironx-ros-bridge }:
 buildRosPackage {
   pname = "ros-kinetic-rtmros-hironx";
   version = "2.1.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ hironx-ros-bridge hironx-calibration hironx-moveit-config ];
+  propagatedBuildInputs = [ hironx-calibration hironx-moveit-config hironx-ros-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, pluginlib, tf, base-local-planner, catkin, costmap-2d, nav-core, roscpp, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, dynamic-reconfigure, nav-core, nav-msgs, pluginlib, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-pose-follower";
   version = "0.2.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure pluginlib tf base-local-planner costmap-2d nav-core roscpp nav-msgs ];
-  propagatedBuildInputs = [ dynamic-reconfigure pluginlib tf base-local-planner costmap-2d nav-core roscpp nav-msgs ];
+  propagatedBuildInputs = [ base-local-planner costmap-2d dynamic-reconfigure nav-core nav-msgs pluginlib roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

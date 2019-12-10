@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, test-interface-files, rosidl-default-runtime, ament-lint-common, ament-cmake, ament-lint-auto, ament-cmake-gtest, rosidl-default-generators, builtin-interfaces, action-msgs }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, test-interface-files }:
 buildRosPackage {
   pname = "ros-dashing-test-msgs";
   version = "0.7.4-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ test-interface-files builtin-interfaces action-msgs ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ rosidl-default-runtime builtin-interfaces action-msgs ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
+  buildInputs = [ test-interface-files ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ action-msgs builtin-interfaces rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = ''A package containing message definitions and fixtures used exclusively for testing purposes.'';

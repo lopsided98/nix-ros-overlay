@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-cmake, tf2, rosidl-default-generators, nav2-msgs, ament-lint-auto, launch-testing, ament-lint-common, tf2-geometry-msgs, nav2-common, rclcpp, builtin-interfaces, ament-cmake-gtest, behaviortree-cpp, std-msgs, std-srvs, rosidl-default-runtime, nav2-robot, launch, ament-cmake-pytest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, behaviortree-cpp, builtin-interfaces, geometry-msgs, launch, launch-testing, nav2-common, nav2-msgs, nav2-robot, rclcpp, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-crystal-nav2-tasks";
   version = "0.1.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ nav2-robot geometry-msgs rclcpp std-msgs std-srvs tf2-geometry-msgs nav2-common tf2 rosidl-default-generators builtin-interfaces nav2-msgs behaviortree-cpp ];
-  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ geometry-msgs rclcpp rosidl-default-runtime std-msgs tf2-geometry-msgs tf2 builtin-interfaces nav2-msgs behaviortree-cpp ];
+  buildInputs = [ nav2-common nav2-robot rosidl-default-generators std-srvs ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing ];
+  propagatedBuildInputs = [ behaviortree-cpp builtin-interfaces geometry-msgs nav2-msgs rclcpp rosidl-default-runtime std-msgs tf2 tf2-geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

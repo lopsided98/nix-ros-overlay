@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, catkin, roslint, rosunit, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roslint, rospy, rosunit, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rodi-robot";
   version = "0.0.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs rospy roslint ];
   checkInputs = [ roslint rosunit ];
-  propagatedBuildInputs = [ sensor-msgs rospy geometry-msgs roslint ];
+  propagatedBuildInputs = [ geometry-msgs roslint rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

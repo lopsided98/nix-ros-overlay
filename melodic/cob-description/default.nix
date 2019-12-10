@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, catkin, rosunit, rosbash, gazebo-ros, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros, rosbash, rospy, rosunit, xacro }:
 buildRosPackage {
   pname = "ros-melodic-cob-description";
   version = "0.7.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ xacro rosunit rosbash gazebo-ros rospy ];
+  propagatedBuildInputs = [ gazebo-ros rosbash rospy rosunit xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

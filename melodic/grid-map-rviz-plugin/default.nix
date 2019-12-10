@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rviz, qt5, grid-map-msgs, grid-map-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, grid-map-msgs, grid-map-ros, qt5, rviz }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-rviz-plugin";
   version = "1.6.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ grid-map-ros grid-map-msgs rviz qt5.qtbase ];
-  propagatedBuildInputs = [ grid-map-msgs grid-map-ros rviz qt5.qtbase ];
+  propagatedBuildInputs = [ grid-map-msgs grid-map-ros qt5.qtbase rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

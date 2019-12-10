@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bison, gawk, catkin, roslib, mk, flex, rosbuild, rospack }:
+{ lib, buildRosPackage, fetchurl, bison, catkin, flex, gawk, mk, rosbuild, roslib, rospack }:
 buildRosPackage {
   pname = "ros-melodic-ffha";
   version = "2.1.13-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospack bison gawk roslib flex rosbuild mk ];
+  buildInputs = [ bison flex gawk mk rosbuild roslib rospack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

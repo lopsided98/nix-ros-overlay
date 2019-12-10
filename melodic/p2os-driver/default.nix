@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, tf, catkin, p2os-msgs, roscpp, diagnostic-updater, message-runtime, nav-msgs, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, geometry-msgs, kdl-parser, message-runtime, nav-msgs, p2os-msgs, roscpp, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-p2os-driver";
   version = "2.1.1-r3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs std-msgs tf p2os-msgs kdl-parser roscpp nav-msgs diagnostic-updater ];
-  propagatedBuildInputs = [ geometry-msgs std-msgs tf p2os-msgs kdl-parser roscpp message-runtime nav-msgs diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-updater geometry-msgs kdl-parser message-runtime nav-msgs p2os-msgs roscpp std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

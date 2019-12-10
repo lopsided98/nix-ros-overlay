@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, rosunit, eigen, tf2, nav-msgs, sensor-msgs, dynamic-reconfigure, cmake-modules, tf2-geometry-msgs, rosconsole, tf2-ros, std-msgs, catkin, costmap-2d, nav-core, roscpp, voxel-grid, message-generation, angles, rospy, visualization-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, costmap-2d, dynamic-reconfigure, eigen, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, pluginlib, rosconsole, roscpp, rospy, rosunit, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs, voxel-grid }:
 buildRosPackage {
   pname = "ros-melodic-base-local-planner";
   version = "1.16.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs pluginlib eigen tf2 nav-msgs sensor-msgs dynamic-reconfigure cmake-modules tf2-geometry-msgs rosconsole tf2-ros std-msgs costmap-2d nav-core roscpp angles rospy voxel-grid message-generation visualization-msgs ];
+  buildInputs = [ cmake-modules message-generation tf2-geometry-msgs ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure message-runtime pluginlib std-msgs roscpp costmap-2d nav-core eigen visualization-msgs tf2 angles voxel-grid rospy nav-msgs rosconsole tf2-ros ];
+  propagatedBuildInputs = [ angles costmap-2d dynamic-reconfigure eigen geometry-msgs message-runtime nav-core nav-msgs pluginlib rosconsole roscpp rospy sensor-msgs std-msgs tf2 tf2-ros visualization-msgs voxel-grid ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

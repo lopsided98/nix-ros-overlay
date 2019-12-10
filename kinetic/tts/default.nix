@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, std-msgs, pythonPackages, catkin, rosunit, sound-play, actionlib-msgs, rospy, message-runtime, rostest }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, pythonPackages, rospy, rostest, rosunit, sound-play, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-tts";
   version = "1.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.boto3 std-msgs rosunit sound-play actionlib-msgs rospy message-generation rostest ];
-  checkInputs = [ pythonPackages.mock rostest rosunit ];
-  propagatedBuildInputs = [ pythonPackages.boto3 std-msgs sound-play actionlib-msgs rospy message-runtime ];
+  buildInputs = [ message-generation rostest rosunit ];
+  checkInputs = [ pythonPackages.mock ];
+  propagatedBuildInputs = [ actionlib-msgs message-runtime pythonPackages.boto3 rospy sound-play std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

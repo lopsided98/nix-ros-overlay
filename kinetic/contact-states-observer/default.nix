@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, message-generation, catkin, roseus }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, roseus, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-contact-states-observer";
   version = "0.1.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation ];
-  propagatedBuildInputs = [ std-msgs roseus ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ roseus std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

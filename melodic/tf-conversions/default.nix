@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, geometry-msgs, tf, catkin, eigen, python-orocos-kdl, kdl-conversions }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, kdl-conversions, orocos-kdl, python-orocos-kdl, tf }:
 buildRosPackage {
   pname = "ros-melodic-tf-conversions";
   version = "1.12.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl geometry-msgs tf eigen kdl-conversions ];
-  propagatedBuildInputs = [ orocos-kdl geometry-msgs tf eigen python-orocos-kdl kdl-conversions ];
+  propagatedBuildInputs = [ eigen geometry-msgs kdl-conversions orocos-kdl python-orocos-kdl tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

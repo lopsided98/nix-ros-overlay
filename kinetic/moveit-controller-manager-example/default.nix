@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, sensor-msgs, pluginlib, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, moveit-core, pluginlib, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-controller-manager-example";
   version = "0.9.17-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core pluginlib sensor-msgs roscpp ];
-  propagatedBuildInputs = [ moveit-core pluginlib sensor-msgs roscpp ];
+  propagatedBuildInputs = [ moveit-core pluginlib roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

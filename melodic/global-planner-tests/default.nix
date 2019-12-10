@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, pluginlib, nav-core2, catkin, roslint, libyamlcpp, roscpp, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, libyamlcpp, map-server, nav-core2, nav-msgs, pluginlib, roscpp, roslint }:
 buildRosPackage {
   pname = "ros-melodic-global-planner-tests";
   version = "0.2.5-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ map-server nav-core2 pluginlib libyamlcpp roscpp nav-msgs ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ map-server nav-core2 pluginlib libyamlcpp roscpp nav-msgs ];
+  propagatedBuildInputs = [ libyamlcpp map-server nav-core2 nav-msgs pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

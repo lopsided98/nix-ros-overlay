@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, std-msgs, catkin, open-manipulator-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, open-manipulator-msgs, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-open-manipulator-teleop";
   version = "2.0.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs sensor-msgs open-manipulator-msgs roscpp ];
-  propagatedBuildInputs = [ std-msgs sensor-msgs open-manipulator-msgs roscpp ];
+  propagatedBuildInputs = [ open-manipulator-msgs roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-planners-ompl, joint-state-publisher, xacro, robot-state-publisher, moveit-ros-move-group, catkin, franka-description, moveit-ros-visualization, moveit-kinematics, topic-tools, moveit-fake-controller-manager }:
+{ lib, buildRosPackage, fetchurl, catkin, franka-description, joint-state-publisher, moveit-fake-controller-manager, moveit-kinematics, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-visualization, robot-state-publisher, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-melodic-panda-moveit-config";
   version = "0.7.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ franka-description ];
-  propagatedBuildInputs = [ moveit-planners-ompl joint-state-publisher xacro robot-state-publisher moveit-ros-move-group franka-description moveit-ros-visualization moveit-kinematics topic-tools moveit-fake-controller-manager ];
+  propagatedBuildInputs = [ franka-description joint-state-publisher moveit-fake-controller-manager moveit-kinematics moveit-planners-ompl moveit-ros-move-group moveit-ros-visualization robot-state-publisher topic-tools xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

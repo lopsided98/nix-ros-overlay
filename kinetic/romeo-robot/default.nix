@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, romeo-sensors-py, catkin, romeo-description, romeo-bringup }:
+{ lib, buildRosPackage, fetchurl, catkin, romeo-bringup, romeo-description, romeo-sensors-py }:
 buildRosPackage {
   pname = "ros-kinetic-romeo-robot";
   version = "0.1.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ romeo-sensors-py romeo-description romeo-bringup ];
+  propagatedBuildInputs = [ romeo-bringup romeo-description romeo-sensors-py ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

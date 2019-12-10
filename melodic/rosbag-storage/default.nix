@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, gpgme, roscpp-serialization, pluginlib, catkin, bzip2, openssl, cpp-common, roscpp-traits, console-bridge, rostime, rostest, roslz4 }:
+{ lib, buildRosPackage, fetchurl, boost, bzip2, catkin, console-bridge, cpp-common, gpgme, openssl, pluginlib, roscpp-serialization, roscpp-traits, roslz4, rostest, rostime }:
 buildRosPackage {
   pname = "ros-melodic-rosbag-storage";
   version = "1.14.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost gpgme roscpp-serialization pluginlib bzip2 openssl cpp-common roscpp-traits console-bridge rostime rostest roslz4 ];
-  propagatedBuildInputs = [ boost gpgme roscpp-serialization pluginlib bzip2 openssl cpp-common roscpp-traits console-bridge rostime roslz4 ];
+  buildInputs = [ rostest ];
+  propagatedBuildInputs = [ boost bzip2 console-bridge cpp-common gpgme openssl pluginlib roscpp-serialization roscpp-traits roslz4 rostime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

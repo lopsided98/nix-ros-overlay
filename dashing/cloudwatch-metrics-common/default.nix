@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, ament-cmake-gmock, file-management, dataflow-lite, aws-common, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, aws-common, cmake, dataflow-lite, file-management }:
 buildRosPackage {
   pname = "ros-dashing-cloudwatch-metrics-common";
   version = "1.1.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ file-management dataflow-lite aws-common ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest ];
-  propagatedBuildInputs = [ dataflow-lite file-management aws-common ];
+  propagatedBuildInputs = [ aws-common dataflow-lite file-management ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

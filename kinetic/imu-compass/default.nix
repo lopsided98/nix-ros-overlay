@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, tf, pythonPackages, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-imu-compass";
   version = "0.0.5";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf std-msgs sensor-msgs geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs pythonPackages.scipy std-msgs tf ];
+  propagatedBuildInputs = [ geometry-msgs pythonPackages.scipy sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

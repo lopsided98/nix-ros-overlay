@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nao-vision, nao-interaction-msgs, nao-audio, catkin, nao-interaction-launchers }:
+{ lib, buildRosPackage, fetchurl, catkin, nao-audio, nao-interaction-launchers, nao-interaction-msgs, nao-vision }:
 buildRosPackage {
   pname = "ros-kinetic-nao-interaction";
   version = "0.1.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ nao-audio nao-vision nao-interaction-msgs nao-interaction-launchers ];
+  propagatedBuildInputs = [ nao-audio nao-interaction-launchers nao-interaction-msgs nao-vision ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

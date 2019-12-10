@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosserial-msgs, rospy, catkin, rosserial-client }:
+{ lib, buildRosPackage, fetchurl, catkin, rospy, rosserial-client, rosserial-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosserial-embeddedlinux";
   version = "0.8.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ rosserial-client ];
-  propagatedBuildInputs = [ rosserial-msgs rospy ];
+  propagatedBuildInputs = [ rospy rosserial-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

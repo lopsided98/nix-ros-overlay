@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, soem, catkin, roscpp, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, roslaunch, rostest, soem }:
 buildRosPackage {
   pname = "ros-kinetic-ethercat-manager";
   version = "1.0.10";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp soem ];
   checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ roscpp soem ];
   nativeBuildInputs = [ catkin ];

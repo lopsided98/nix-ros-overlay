@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, std-msgs, tf, catkin, bfl, roscpp, rosbag, message-runtime, nav-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, bfl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, rosbag, roscpp, rostest, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-robot-pose-ekf";
   version = "1.14.5";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs tf bfl roscpp message-generation nav-msgs ];
+  buildInputs = [ message-generation ];
   checkInputs = [ rosbag rostest ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs tf bfl roscpp message-runtime nav-msgs ];
+  propagatedBuildInputs = [ bfl geometry-msgs message-runtime nav-msgs roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

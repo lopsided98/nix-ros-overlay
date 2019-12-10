@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, std-msgs, catkin, libgphoto2, self-test, roscpp, message-runtime, opencv3 }:
+{ lib, buildRosPackage, fetchurl, catkin, libgphoto2, message-generation, message-runtime, opencv3, roscpp, self-test, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-photo";
   version = "1.0.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs std-msgs roscpp libgphoto2 self-test opencv3 message-generation ];
-  propagatedBuildInputs = [ sensor-msgs std-msgs roscpp libgphoto2 self-test opencv3 message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ libgphoto2 message-runtime opencv3 roscpp self-test sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

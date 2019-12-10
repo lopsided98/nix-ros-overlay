@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, tf, catkin, tf2-msgs, roscpp, xmlrpcpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, rostest, tf, tf2-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-kinetic-tf-remapper-cpp";
   version = "1.1.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ xmlrpcpp roscpp tf2-msgs ];
-  checkInputs = [ tf rostest ];
-  propagatedBuildInputs = [ tf2-msgs xmlrpcpp roscpp ];
+  checkInputs = [ rostest tf ];
+  propagatedBuildInputs = [ roscpp tf2-msgs xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

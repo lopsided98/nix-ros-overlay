@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, eigen-conversions, pluginlib, code-coverage, catkin, roscpp, rosunit, tf2-eigen, moveit-ros-planning, tf2-kdl, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, code-coverage, eigen-conversions, moveit-core, moveit-ros-planning, pluginlib, roscpp, rostest, rosunit, tf2-eigen, tf2-kdl }:
 buildRosPackage {
   pname = "ros-melodic-prbt-ikfast-manipulator-plugin";
   version = "0.5.13-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core eigen-conversions pluginlib tf2-eigen roscpp tf2-kdl ];
-  checkInputs = [ rosunit code-coverage rostest moveit-ros-planning ];
-  propagatedBuildInputs = [ moveit-core eigen-conversions pluginlib roscpp tf2-kdl ];
+  buildInputs = [ tf2-eigen ];
+  checkInputs = [ code-coverage moveit-ros-planning rostest rosunit ];
+  propagatedBuildInputs = [ eigen-conversions moveit-core pluginlib roscpp tf2-kdl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

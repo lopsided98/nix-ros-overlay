@@ -2948,6 +2948,8 @@ self: super: {
 
  plot-tools = self.callPackage ./plot-tools {};
 
+ plotjuggler = self.callPackage ./plotjuggler {};
+
  pluginlib = self.callPackage ./pluginlib {};
 
  pluginlib-tutorials = self.callPackage ./pluginlib-tutorials {};

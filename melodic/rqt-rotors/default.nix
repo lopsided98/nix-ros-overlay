@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, catkin, mavros-msgs, rqt-gui-py, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, mavros-msgs, rospy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-melodic-rqt-rotors";
   version = "2.2.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui rospy mavros-msgs rqt-gui-py ];
-  propagatedBuildInputs = [ rqt-gui mavros-msgs rospy rqt-gui-py ];
+  propagatedBuildInputs = [ mavros-msgs rospy rqt-gui rqt-gui-py ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

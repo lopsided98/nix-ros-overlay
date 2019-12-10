@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-py-common, ament-cmake, rqt-gui-py, rcl-interfaces, rclpy, ament-index-python, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, python-qt-binding, rcl-interfaces, rclpy, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-crystal-rqt-console";
   version = "1.0.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ rqt-gui rqt-py-common rqt-gui-py rcl-interfaces rclpy ament-index-python python-qt-binding ];
+  propagatedBuildInputs = [ ament-index-python python-qt-binding rcl-interfaces rclpy rqt-gui rqt-gui-py rqt-py-common ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, stereo-image-proc, sensor-msgs, message-filters, dynamic-reconfigure, image-geometry, std-msgs, camera-info-manager, image-proc, catkin, image-transport, nodelet, roscpp, polled-camera, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, camera-info-manager, catkin, diagnostic-updater, dynamic-reconfigure, image-geometry, image-proc, image-transport, message-filters, nodelet, polled-camera, roscpp, sensor-msgs, std-msgs, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-kinetic-avt-vimba-camera";
   version = "0.0.11-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters dynamic-reconfigure std-msgs camera-info-manager roscpp image-transport nodelet diagnostic-updater polled-camera image-geometry ];
-  propagatedBuildInputs = [ stereo-image-proc sensor-msgs message-filters dynamic-reconfigure std-msgs camera-info-manager image-proc image-transport nodelet roscpp diagnostic-updater polled-camera image-geometry ];
+  propagatedBuildInputs = [ camera-info-manager diagnostic-updater dynamic-reconfigure image-geometry image-proc image-transport message-filters nodelet polled-camera roscpp sensor-msgs std-msgs stereo-image-proc ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

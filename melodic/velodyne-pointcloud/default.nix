@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, tf, rosunit, nodelet, velodyne-laserscan, velodyne-msgs, rostest, sensor-msgs, dynamic-reconfigure, roslib, libyamlcpp, tf2-ros, pcl-ros, velodyne-driver, catkin, roscpp, angles, roslaunch, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, dynamic-reconfigure, libyamlcpp, nodelet, pcl-conversions, pcl-ros, pluginlib, roscpp, roslaunch, roslib, rostest, rosunit, sensor-msgs, tf, tf2-ros, velodyne-driver, velodyne-laserscan, velodyne-msgs }:
 buildRosPackage {
   pname = "ros-melodic-velodyne-pointcloud";
   version = "1.5.2";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros velodyne-driver sensor-msgs dynamic-reconfigure pluginlib tf roslib libyamlcpp pcl-conversions nodelet roscpp angles velodyne-msgs ];
-  checkInputs = [ roslaunch rostest tf2-ros rosunit ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs velodyne-driver dynamic-reconfigure pluginlib tf roslib libyamlcpp pcl-conversions nodelet roscpp velodyne-laserscan angles velodyne-msgs ];
+  checkInputs = [ roslaunch rostest rosunit tf2-ros ];
+  propagatedBuildInputs = [ angles dynamic-reconfigure libyamlcpp nodelet pcl-conversions pcl-ros pluginlib roscpp roslib sensor-msgs tf velodyne-driver velodyne-laserscan velodyne-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

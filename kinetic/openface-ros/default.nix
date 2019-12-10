@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pythonPackages, catkin, cv-bridge, image-recognition-util, image-recognition-msgs, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-recognition-msgs, image-recognition-util, pythonPackages, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-openface-ros";
   version = "0.0.4";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-recognition-msgs rospy cv-bridge image-recognition-util ];
-  propagatedBuildInputs = [ pythonPackages.numpy cv-bridge image-recognition-util image-recognition-msgs rospy ];
+  propagatedBuildInputs = [ cv-bridge image-recognition-msgs image-recognition-util pythonPackages.numpy rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

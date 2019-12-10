@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-common, rcl-lifecycle, lifecycle-msgs, ament-cmake-gtest, rclpy, rosidl-typesupport-cpp, rmw-implementation, rclcpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, lifecycle-msgs, rcl-lifecycle, rclcpp, rclpy, rmw-implementation, rosidl-typesupport-cpp }:
 buildRosPackage {
   pname = "ros-crystal-rclcpp-lifecycle";
   version = "0.6.5-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcl-lifecycle rosidl-typesupport-cpp rmw-implementation rclcpp lifecycle-msgs ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ rcl-lifecycle rclpy rosidl-typesupport-cpp rmw-implementation rclcpp lifecycle-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ lifecycle-msgs rcl-lifecycle rclcpp rclpy rmw-implementation rosidl-typesupport-cpp ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

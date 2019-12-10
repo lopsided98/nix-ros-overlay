@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, naoqi-libqi, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, naoqi-libqi }:
 buildRosPackage {
   pname = "ros-kinetic-naoqi-libqicore";
   version = "2.3.1-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ naoqi-libqi ];
   propagatedBuildInputs = [ naoqi-libqi ];
   nativeBuildInputs = [ catkin ];
 

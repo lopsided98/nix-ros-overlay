@@ -2000,6 +2000,8 @@ self: super: {
 
  planner-cspace-msgs = self.callPackage ./planner-cspace-msgs {};
 
+ plotjuggler = self.callPackage ./plotjuggler {};
+
  pluginlib = self.callPackage ./pluginlib {};
 
  pluginlib-tutorials = self.callPackage ./pluginlib-tutorials {};

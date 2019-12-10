@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-plot, rqt-py-console, rqt-console, rqt-msg, rqt-srv, rqt-action, rqt-service-caller, rqt-shell, rqt-bag, rqt-dep, rqt-py-common, rqt-image-view, rqt-top, rqt-graph, rqt-topic, rqt-launch, catkin, rqt-publisher, rqt-logger-level, rqt-web, rqt-reconfigure, rqt-bag-plugins }:
+{ lib, buildRosPackage, fetchurl, catkin, rqt-action, rqt-bag, rqt-bag-plugins, rqt-console, rqt-dep, rqt-graph, rqt-image-view, rqt-launch, rqt-logger-level, rqt-msg, rqt-plot, rqt-publisher, rqt-py-common, rqt-py-console, rqt-reconfigure, rqt-service-caller, rqt-shell, rqt-srv, rqt-top, rqt-topic, rqt-web }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-common-plugins";
   version = "0.4.8";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-plot rqt-py-console rqt-console rqt-msg rqt-srv rqt-action rqt-service-caller rqt-shell rqt-bag rqt-dep rqt-py-common rqt-image-view rqt-top rqt-graph rqt-topic rqt-launch rqt-publisher rqt-web rqt-logger-level rqt-reconfigure rqt-bag-plugins ];
+  propagatedBuildInputs = [ rqt-action rqt-bag rqt-bag-plugins rqt-console rqt-dep rqt-graph rqt-image-view rqt-launch rqt-logger-level rqt-msg rqt-plot rqt-publisher rqt-py-common rqt-py-console rqt-reconfigure rqt-service-caller rqt-shell rqt-srv rqt-top rqt-topic rqt-web ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

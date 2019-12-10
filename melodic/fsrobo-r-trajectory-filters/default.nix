@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, moveit-core, trajectory-msgs, pluginlib, catkin, moveit-ros-planning }:
+{ lib, buildRosPackage, fetchurl, catkin, moveit-core, moveit-ros-planning, orocos-kdl, pluginlib, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-fsrobo-r-trajectory-filters";
   version = "0.7.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core trajectory-msgs orocos-kdl pluginlib moveit-ros-planning ];
-  propagatedBuildInputs = [ moveit-core trajectory-msgs orocos-kdl pluginlib moveit-ros-planning ];
+  propagatedBuildInputs = [ moveit-core moveit-ros-planning orocos-kdl pluginlib trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

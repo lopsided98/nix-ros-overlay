@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, pythonPackages, tf, catkin, rospy, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, nav-msgs, pythonPackages, rospy, tf }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-control-cascaded-pid";
   version = "0.6.13";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ pythonPackages.numpy geometry-msgs dynamic-reconfigure tf rospy nav-msgs ];
+  propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs nav-msgs pythonPackages.numpy rospy tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

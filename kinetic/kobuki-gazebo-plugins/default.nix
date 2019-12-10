@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, geometry-msgs, std-msgs, tf, catkin, roscpp, kobuki-msgs, gazebo-ros, nav-msgs, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, gazebo-plugins, gazebo-ros, geometry-msgs, kobuki-msgs, nav-msgs, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-gazebo-plugins";
   version = "0.5.7";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs geometry-msgs std-msgs tf roscpp kobuki-msgs gazebo-ros nav-msgs gazebo-plugins ];
-  propagatedBuildInputs = [ sensor-msgs boost geometry-msgs std-msgs tf roscpp kobuki-msgs gazebo-ros nav-msgs gazebo-plugins ];
+  propagatedBuildInputs = [ boost gazebo-plugins gazebo-ros geometry-msgs kobuki-msgs nav-msgs roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

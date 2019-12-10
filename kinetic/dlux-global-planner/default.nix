@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, geometry-msgs, nav-grid, nav-core2, pluginlib, catkin, nav-grid-pub-sub, roscpp, rosunit, roslint, visualization-msgs, nav-2d-msgs, nav-msgs, nav-2d-utils }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav-core2, nav-grid, nav-grid-pub-sub, nav-msgs, pluginlib, roscpp, roslint, rostest, rosunit, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dlux-global-planner";
   version = "0.2.5";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs nav-grid nav-core2 pluginlib nav-grid-pub-sub roscpp visualization-msgs nav-2d-msgs nav-msgs nav-2d-utils ];
   checkInputs = [ roslint rostest rosunit ];
-  propagatedBuildInputs = [ geometry-msgs nav-2d-msgs nav-core2 pluginlib nav-grid nav-grid-pub-sub visualization-msgs roscpp nav-msgs nav-2d-utils ];
+  propagatedBuildInputs = [ geometry-msgs nav-2d-msgs nav-2d-utils nav-core2 nav-grid nav-grid-pub-sub nav-msgs pluginlib roscpp visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

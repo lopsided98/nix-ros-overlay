@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-msgs, camera-info-manager, catkin, roslib, image-transport, rospy, visualization-msgs, roscpp, message-generation, camera-calibration-parsers, rostest, rospack }:
+{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, camera-info-manager, catkin, geometry-msgs, image-transport, message-generation, message-runtime, roscpp, roslib, rospack, rospy, rostest, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-leap-motion";
   version = "0.0.11";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs std-msgs camera-info-manager roslib image-transport rospy visualization-msgs roscpp message-generation camera-calibration-parsers rospack ];
+  buildInputs = [ message-generation ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ geometry-msgs message-runtime std-msgs camera-info-manager roslib image-transport visualization-msgs roscpp rospy camera-calibration-parsers rospack ];
+  propagatedBuildInputs = [ camera-calibration-parsers camera-info-manager geometry-msgs image-transport message-runtime roscpp roslib rospack rospy std-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

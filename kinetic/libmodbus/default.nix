@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules }:
 buildRosPackage {
   pname = "ros-kinetic-libmodbus";
   version = "0.8.8";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules ];
   propagatedBuildInputs = [ cmake-modules ];
   nativeBuildInputs = [ catkin ];
 

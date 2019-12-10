@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, prbt-hardware-support, pilz-control, catkin, prbt-support, prbt-ikfast-manipulator-plugin, prbt-moveit-config }:
+{ lib, buildRosPackage, fetchurl, catkin, pilz-control, prbt-hardware-support, prbt-ikfast-manipulator-plugin, prbt-moveit-config, prbt-support }:
 buildRosPackage {
   pname = "ros-melodic-pilz-robots";
   version = "0.5.13-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ prbt-hardware-support pilz-control prbt-support prbt-ikfast-manipulator-plugin prbt-moveit-config ];
+  propagatedBuildInputs = [ pilz-control prbt-hardware-support prbt-ikfast-manipulator-plugin prbt-moveit-config prbt-support ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

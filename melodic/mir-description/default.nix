@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, urdf, robot-state-publisher, position-controllers, catkin, rviz, diff-drive-controller, gazebo-ros-control, roslaunch, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, diff-drive-controller, gazebo-ros-control, joint-state-controller, joint-state-publisher, position-controllers, robot-state-publisher, roslaunch, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-mir-description";
   version = "1.0.4-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joint-state-publisher xacro urdf robot-state-publisher position-controllers rviz diff-drive-controller gazebo-ros-control joint-state-controller ];
+  propagatedBuildInputs = [ diff-drive-controller gazebo-ros-control joint-state-controller joint-state-publisher position-controllers robot-state-publisher rviz urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

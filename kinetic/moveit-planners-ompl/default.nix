@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, dynamic-reconfigure, ompl, eigen-conversions, pluginlib, tf, catkin, moveit-resources, rosunit, moveit-ros-planning, roscpp, rosconsole }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, eigen-conversions, moveit-core, moveit-resources, moveit-ros-planning, ompl, pluginlib, rosconsole, roscpp, rosunit, tf }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-planners-ompl";
   version = "0.9.17-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core dynamic-reconfigure eigen-conversions ompl pluginlib tf moveit-ros-planning roscpp rosconsole ];
+  buildInputs = [ rosconsole ];
   checkInputs = [ moveit-resources rosunit ];
-  propagatedBuildInputs = [ moveit-core dynamic-reconfigure eigen-conversions ompl pluginlib tf moveit-ros-planning roscpp ];
+  propagatedBuildInputs = [ dynamic-reconfigure eigen-conversions moveit-core moveit-ros-planning ompl pluginlib roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

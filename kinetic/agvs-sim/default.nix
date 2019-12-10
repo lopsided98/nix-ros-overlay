@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, agvs-robot-control, agvs-gazebo, catkin, agvs-control, agvs-sim-bringup }:
+{ lib, buildRosPackage, fetchurl, agvs-control, agvs-gazebo, agvs-robot-control, agvs-sim-bringup, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-agvs-sim";
   version = "0.1.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ agvs-robot-control agvs-gazebo agvs-sim-bringup agvs-control ];
+  propagatedBuildInputs = [ agvs-control agvs-gazebo agvs-robot-control agvs-sim-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

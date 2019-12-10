@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, log4cplus, boost, cmake, openssl, ament-cmake-gmock, pkg-config, aws-common, curl, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, aws-common, boost, cmake, curl, log4cplus, openssl, pkg-config }:
 buildRosPackage {
   pname = "ros-dashing-kinesis-manager";
   version = "2.0.1-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ log4cplus boost openssl aws-common curl ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest ];
-  propagatedBuildInputs = [ log4cplus boost openssl aws-common curl ];
-  nativeBuildInputs = [ pkg-config cmake ];
+  propagatedBuildInputs = [ aws-common boost curl log4cplus openssl ];
+  nativeBuildInputs = [ cmake pkg-config ];
 
   meta = {
     description = ''AWS Kinesis stream management library intended for use with the Kinesis Video Producer SDK'';

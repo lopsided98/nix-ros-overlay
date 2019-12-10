@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosemacs, catkin, slime-ros, roslisp-repl, slime-wrapper }:
+{ lib, buildRosPackage, fetchurl, catkin, rosemacs, roslisp-repl, slime-ros, slime-wrapper }:
 buildRosPackage {
   pname = "ros-melodic-ros-emacs-utils";
   version = "0.4.13";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ roslisp-repl slime-ros slime-wrapper rosemacs ];
+  propagatedBuildInputs = [ rosemacs roslisp-repl slime-ros slime-wrapper ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

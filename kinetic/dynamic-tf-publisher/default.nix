@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, dynamic-reconfigure, tf, catkin, rospy, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rospy, tf }:
 buildRosPackage {
   pname = "ros-kinetic-dynamic-tf-publisher";
   version = "2.2.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs dynamic-reconfigure tf rospy message-generation ];
-  propagatedBuildInputs = [ tf message-runtime geometry-msgs rospy ];
+  buildInputs = [ dynamic-reconfigure message-generation ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime rospy tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

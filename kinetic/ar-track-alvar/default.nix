@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, image-transport, tf2, rostest, sensor-msgs, dynamic-reconfigure, resource-retriever, cmake-modules, rosbag, pcl-ros, std-msgs, catkin, cv-bridge, roscpp, ar-track-alvar-msgs, message-generation, rospy, tinyxml, pcl-conversions, visualization-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, ar-track-alvar-msgs, catkin, cmake-modules, cv-bridge, dynamic-reconfigure, geometry-msgs, image-transport, message-generation, message-runtime, pcl-conversions, pcl-ros, resource-retriever, rosbag, roscpp, rospy, rostest, sensor-msgs, std-msgs, tf, tf2, tinyxml, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ar-track-alvar";
   version = "0.7.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs geometry-msgs dynamic-reconfigure resource-retriever std-msgs tf cmake-modules roscpp tinyxml image-transport cv-bridge pcl-conversions visualization-msgs tf2 rospy ar-track-alvar-msgs message-generation ];
+  buildInputs = [ cmake-modules message-generation ];
   checkInputs = [ rosbag rostest ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs geometry-msgs dynamic-reconfigure message-runtime resource-retriever std-msgs tf roscpp tinyxml image-transport cv-bridge pcl-conversions visualization-msgs tf2 ar-track-alvar-msgs rospy ];
+  propagatedBuildInputs = [ ar-track-alvar-msgs cv-bridge dynamic-reconfigure geometry-msgs image-transport message-runtime pcl-conversions pcl-ros resource-retriever roscpp rospy sensor-msgs std-msgs tf tf2 tinyxml visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

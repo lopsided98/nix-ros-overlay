@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-limits-interface, controller-manager, hardware-interface, std-msgs, denso-robot-core, bcap-core, bcap-service, catkin, transmission-interface, roscpp }:
+{ lib, buildRosPackage, fetchurl, bcap-core, bcap-service, catkin, controller-manager, denso-robot-core, hardware-interface, joint-limits-interface, roscpp, std-msgs, transmission-interface }:
 buildRosPackage {
   pname = "ros-kinetic-denso-robot-control";
   version = "3.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager joint-limits-interface hardware-interface std-msgs denso-robot-core bcap-core bcap-service transmission-interface roscpp ];
-  propagatedBuildInputs = [ controller-manager joint-limits-interface hardware-interface std-msgs denso-robot-core bcap-core bcap-service transmission-interface roscpp ];
+  propagatedBuildInputs = [ bcap-core bcap-service controller-manager denso-robot-core hardware-interface joint-limits-interface roscpp std-msgs transmission-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

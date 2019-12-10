@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gtest-vendor, cmake }:
+{ lib, buildRosPackage, fetchurl, cmake, gtest-vendor }:
 buildRosPackage {
   pname = "ros-crystal-gmock-vendor";
   version = "1.8.0";

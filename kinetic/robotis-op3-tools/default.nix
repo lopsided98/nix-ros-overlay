@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, op3-camera-setting-tool, op3-gui-demo, op3-web-setting-tool, op3-navigation, catkin, op3-offset-tuner-server, op3-offset-tuner-client, op3-action-editor }:
+{ lib, buildRosPackage, fetchurl, catkin, op3-action-editor, op3-camera-setting-tool, op3-gui-demo, op3-navigation, op3-offset-tuner-client, op3-offset-tuner-server, op3-web-setting-tool }:
 buildRosPackage {
   pname = "ros-kinetic-robotis-op3-tools";
   version = "0.2.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ op3-camera-setting-tool op3-gui-demo op3-web-setting-tool op3-navigation op3-offset-tuner-server op3-offset-tuner-client op3-action-editor ];
+  propagatedBuildInputs = [ op3-action-editor op3-camera-setting-tool op3-gui-demo op3-navigation op3-offset-tuner-client op3-offset-tuner-server op3-web-setting-tool ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

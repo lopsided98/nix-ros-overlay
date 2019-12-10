@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, python, eigen, tf2, rostest, moveit-ros-warehouse, tf2-geometry-msgs, eigenpy, rosconsole, tf2-ros, catkin, pythonPackages, moveit-ros-manipulation, moveit-ros-planning, roscpp, rospy, moveit-ros-move-group, actionlib, moveit-resources, tf2-eigen, moveit-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, eigen, eigenpy, geometry-msgs, moveit-msgs, moveit-resources, moveit-ros-manipulation, moveit-ros-move-group, moveit-ros-planning, moveit-ros-warehouse, python, pythonPackages, rosconsole, roscpp, rospy, rostest, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-planning-interface";
   version = "1.0.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs moveit-ros-warehouse moveit-ros-move-group actionlib roscpp moveit-ros-manipulation tf2-eigen tf2-geometry-msgs eigenpy eigen python moveit-ros-planning moveit-msgs tf2 rospy rosconsole tf2-ros ];
-  checkInputs = [ rostest moveit-resources ];
-  propagatedBuildInputs = [ geometry-msgs moveit-ros-warehouse moveit-ros-move-group tf2 actionlib moveit-ros-manipulation moveit-ros-planning tf2-eigen tf2-geometry-msgs eigenpy python moveit-msgs roscpp rospy rosconsole tf2-ros ];
+  buildInputs = [ eigen ];
+  checkInputs = [ moveit-resources rostest ];
+  propagatedBuildInputs = [ actionlib eigenpy geometry-msgs moveit-msgs moveit-ros-manipulation moveit-ros-move-group moveit-ros-planning moveit-ros-warehouse python rosconsole roscpp rospy tf2 tf2-eigen tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin pythonPackages.catkin-pkg ];
 
   meta = {

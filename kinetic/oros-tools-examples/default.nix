@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot-navigation, catkin, turtlebot-stage, turtlebot, oros-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, oros-tools, turtlebot, turtlebot-navigation, turtlebot-stage }:
 buildRosPackage {
   pname = "ros-kinetic-oros-tools-examples";
   version = "0.1.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ turtlebot-stage turtlebot-navigation turtlebot oros-tools ];
+  propagatedBuildInputs = [ oros-tools turtlebot turtlebot-navigation turtlebot-stage ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

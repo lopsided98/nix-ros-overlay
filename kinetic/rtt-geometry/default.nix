@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, kdl-typekit, eigen-typekit }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen-typekit, kdl-typekit }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-geometry";
   version = "2.9.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ kdl-typekit eigen-typekit ];
+  propagatedBuildInputs = [ eigen-typekit kdl-typekit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

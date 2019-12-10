@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mrpt1, std-msgs, catkin, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, mrpt1, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-arduino-daq";
   version = "1.0.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mrpt1 std-msgs message-generation roscpp ];
-  propagatedBuildInputs = [ mrpt1 std-msgs message-generation roscpp ];
+  propagatedBuildInputs = [ message-generation mrpt1 roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

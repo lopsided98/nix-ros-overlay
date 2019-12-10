@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rosbridge-library, rosidl-default-runtime, ros2topic, ros2node, ros2param, ros2pkg, ros2service, rcl-interfaces, rclpy, rosidl-default-generators, builtin-interfaces }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, builtin-interfaces, rcl-interfaces, rclpy, ros2node, ros2param, ros2pkg, ros2service, ros2topic, rosbridge-library, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-rosapi";
   version = "1.0.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces ];
-  propagatedBuildInputs = [ rosbridge-library rosidl-default-runtime ros2topic ros2node ros2param ros2pkg ros2service rcl-interfaces rclpy builtin-interfaces ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake-ros ];
+  propagatedBuildInputs = [ builtin-interfaces rcl-interfaces rclpy ros2node ros2param ros2pkg ros2service ros2topic rosbridge-library rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake-ros rosidl-default-generators ];
 
   meta = {
     description = ''Provides service calls for getting ros meta-information, like list of

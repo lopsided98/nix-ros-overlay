@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-state-publisher, joint-state-publisher, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, robot-state-publisher }:
 buildRosPackage {
   pname = "ros-melodic-moveit-resources";
   version = "0.6.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ robot-state-publisher joint-state-publisher ];
+  propagatedBuildInputs = [ joint-state-publisher robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

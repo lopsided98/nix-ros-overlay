@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-generator-cpp, rcutils, pluginlib, poco-vendor, rmw-fastrtps-dynamic-cpp, ament-lint-common, ament-cmake, rosbag2, test-msgs, rmw, ament-cmake-gmock, ament-index-cpp, rosbag2-test-common, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-index-cpp, ament-lint-auto, ament-lint-common, pluginlib, poco-vendor, rcutils, rmw, rmw-fastrtps-dynamic-cpp, rosbag2, rosbag2-test-common, rosidl-generator-cpp, test-msgs }:
 buildRosPackage {
   pname = "ros-crystal-rosbag2-converter-default-plugins";
   version = "0.0.7";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-generator-cpp rcutils pluginlib poco-vendor rosbag2 rmw ament-index-cpp ];
-  checkInputs = [ rcutils rmw-fastrtps-dynamic-cpp ament-lint-common rosbag2 test-msgs ament-cmake-gmock rosbag2-test-common ament-lint-auto ];
-  propagatedBuildInputs = [ rosidl-generator-cpp rcutils pluginlib poco-vendor rosbag2 rmw ament-index-cpp ];
+  checkInputs = [ ament-cmake-gmock ament-lint-auto ament-lint-common rcutils rmw-fastrtps-dynamic-cpp rosbag2 rosbag2-test-common test-msgs ];
+  propagatedBuildInputs = [ ament-index-cpp pluginlib poco-vendor rcutils rmw rosbag2 rosidl-generator-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

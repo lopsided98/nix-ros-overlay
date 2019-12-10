@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, costmap-cspace-msgs, planner-cspace-msgs, catkin, trajectory-tracker-msgs, map-organizer-msgs, safety-limiter-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, costmap-cspace-msgs, map-organizer-msgs, planner-cspace-msgs, safety-limiter-msgs, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-melodic-neonavigation-msgs";
   version = "0.5.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ costmap-cspace-msgs planner-cspace-msgs trajectory-tracker-msgs map-organizer-msgs safety-limiter-msgs ];
+  propagatedBuildInputs = [ costmap-cspace-msgs map-organizer-msgs planner-cspace-msgs safety-limiter-msgs trajectory-tracker-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

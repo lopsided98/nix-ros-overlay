@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gmplot, catkin, gmplot-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, gmplot, gmplot-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-gmplot-ros";
   version = "1.0.1";

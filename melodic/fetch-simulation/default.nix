@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, fetch-gazebo-demo, catkin, fetchit-challenge, fetch-gazebo }:
+{ lib, buildRosPackage, fetchurl, catkin, fetch-gazebo, fetch-gazebo-demo, fetchit-challenge }:
 buildRosPackage {
   pname = "ros-melodic-fetch-simulation";
   version = "0.9.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ fetch-gazebo-demo fetchit-challenge fetch-gazebo ];
+  propagatedBuildInputs = [ fetch-gazebo fetch-gazebo-demo fetchit-challenge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

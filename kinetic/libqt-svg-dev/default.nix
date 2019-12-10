@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ qt5.qtsvg ];
   propagatedBuildInputs = [ qt5.qtsvg ];
   nativeBuildInputs = [ catkin ];
 

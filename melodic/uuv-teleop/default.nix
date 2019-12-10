@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, sensor-msgs, uuv-gazebo-ros-plugins-msgs, geometry-msgs, std-msgs, uuv-thruster-manager, pythonPackages, tf, catkin, joy-teleop, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, joy, joy-teleop, pythonPackages, rospy, sensor-msgs, std-msgs, tf, uuv-gazebo-ros-plugins-msgs, uuv-thruster-manager }:
 buildRosPackage {
   pname = "ros-melodic-uuv-teleop";
   version = "0.6.13";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joy pythonPackages.numpy sensor-msgs uuv-gazebo-ros-plugins-msgs geometry-msgs std-msgs uuv-thruster-manager tf joy-teleop rospy ];
+  propagatedBuildInputs = [ geometry-msgs joy joy-teleop pythonPackages.numpy rospy sensor-msgs std-msgs tf uuv-gazebo-ros-plugins-msgs uuv-thruster-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, urdf, libusb, cob-srvs, sensor-msgs, diagnostic-msgs, libntcan, dpkg, std-srvs, std-msgs, catkin, libpcan, roscpp, message-generation, control-msgs, trajectory-msgs, boost, actionlib, roslint, sdhlibrary-cpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, boost, catkin, cob-srvs, control-msgs, diagnostic-msgs, dpkg, libntcan, libpcan, libusb, message-generation, message-runtime, roscpp, roslint, sdhlibrary-cpp, sensor-msgs, std-msgs, std-srvs, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-schunk-sdh";
   version = "0.6.14-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs boost sensor-msgs diagnostic-msgs urdf libntcan dpkg std-msgs std-srvs actionlib libusb roslint sdhlibrary-cpp libpcan roscpp message-generation cob-srvs control-msgs ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs boost diagnostic-msgs urdf libntcan dpkg std-srvs std-msgs actionlib libusb sdhlibrary-cpp libpcan roscpp message-runtime cob-srvs control-msgs ];
+  buildInputs = [ message-generation roslint ];
+  propagatedBuildInputs = [ actionlib boost cob-srvs control-msgs diagnostic-msgs dpkg libntcan libpcan libusb message-runtime roscpp sdhlibrary-cpp sensor-msgs std-msgs std-srvs trajectory-msgs urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

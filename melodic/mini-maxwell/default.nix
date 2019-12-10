@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, roslib, dynamic-reconfigure, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, roslib }:
 buildRosPackage {
   pname = "ros-melodic-mini-maxwell";
   version = "2.1.13-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules roslib dynamic-reconfigure ];
+  buildInputs = [ cmake-modules roslib ];
   propagatedBuildInputs = [ dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, std-msgs, tf, catkin, image-transport, cv-bridge, nodelet, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, image-transport, message-generation, message-runtime, nodelet, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-mynt-eye-ros-wrapper";
   version = "0.2.8-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs tf image-transport cv-bridge nodelet roscpp message-generation ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs tf image-transport cv-bridge nodelet roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs image-transport message-runtime nodelet roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, control-toolbox, pluginlib, tf, nav-msgs, diagnostic-msgs, pr2-controller-interface, rosconsole, pr2-mechanism-msgs, pr2-mechanism-model, pr2-msgs, std-msgs, filters, catkin, realtime-tools, roscpp, angles, message-generation, rospy, robot-mechanism-controllers, visualization-msgs, diagnostic-updater, pr2-controllers-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, control-toolbox, diagnostic-msgs, diagnostic-updater, filters, geometry-msgs, message-generation, message-runtime, nav-msgs, pluginlib, pr2-controller-interface, pr2-controllers-msgs, pr2-mechanism-model, pr2-mechanism-msgs, pr2-msgs, realtime-tools, robot-mechanism-controllers, rosconsole, roscpp, rospy, std-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-mechanism-controllers";
   version = "1.10.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs control-toolbox pluginlib tf nav-msgs diagnostic-msgs pr2-controller-interface rosconsole pr2-mechanism-msgs pr2-mechanism-model pr2-msgs std-msgs filters realtime-tools roscpp angles rospy message-generation robot-mechanism-controllers visualization-msgs diagnostic-updater pr2-controllers-msgs ];
-  propagatedBuildInputs = [ geometry-msgs control-toolbox pluginlib tf nav-msgs diagnostic-msgs pr2-controller-interface rosconsole pr2-mechanism-msgs pr2-mechanism-model pr2-msgs std-msgs filters realtime-tools roscpp angles rospy robot-mechanism-controllers visualization-msgs diagnostic-updater pr2-controllers-msgs message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ angles control-toolbox diagnostic-msgs diagnostic-updater filters geometry-msgs message-runtime nav-msgs pluginlib pr2-controller-interface pr2-controllers-msgs pr2-mechanism-model pr2-mechanism-msgs pr2-msgs realtime-tools robot-mechanism-controllers rosconsole roscpp rospy std-msgs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

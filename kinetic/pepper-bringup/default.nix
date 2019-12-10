@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, naoqi-sensors-py, naoqi-driver-py, roslaunch, catkin, naoqi-driver, pepper-sensors-py, naoqi-pose, pepper-description, rostest, rgbd-launch }:
+{ lib, buildRosPackage, fetchurl, catkin, naoqi-driver, naoqi-driver-py, naoqi-pose, naoqi-sensors-py, pepper-description, pepper-sensors-py, rgbd-launch, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-pepper-bringup";
   version = "0.1.10";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ naoqi-sensors-py naoqi-driver-py naoqi-driver pepper-sensors-py naoqi-pose pepper-description rgbd-launch ];
+  propagatedBuildInputs = [ naoqi-driver naoqi-driver-py naoqi-pose naoqi-sensors-py pepper-description pepper-sensors-py rgbd-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

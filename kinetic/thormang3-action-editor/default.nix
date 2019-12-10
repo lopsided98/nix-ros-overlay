@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ncurses, robotis-controller, thormang3-action-module, std-msgs, catkin, robotis-device, thormang3-manager, libyamlcpp, roscpp, dynamixel-sdk }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamixel-sdk, libyamlcpp, ncurses, robotis-controller, robotis-device, roscpp, std-msgs, thormang3-action-module, thormang3-manager }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-action-editor";
   version = "0.2.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ncurses robotis-controller thormang3-action-module std-msgs robotis-device libyamlcpp roscpp dynamixel-sdk ];
-  propagatedBuildInputs = [ ncurses robotis-controller thormang3-action-module std-msgs robotis-device thormang3-manager libyamlcpp roscpp dynamixel-sdk ];
+  propagatedBuildInputs = [ dynamixel-sdk libyamlcpp ncurses robotis-controller robotis-device roscpp std-msgs thormang3-action-module thormang3-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

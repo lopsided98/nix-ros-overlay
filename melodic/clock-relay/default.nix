@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-relay, catkin, roslint, roscpp, rosgraph-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, message-relay, roscpp, rosgraph-msgs, roslint }:
 buildRosPackage {
   pname = "ros-melodic-clock-relay";
   version = "0.0.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-relay rosgraph-msgs roscpp ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ message-relay rosgraph-msgs roscpp ];
+  propagatedBuildInputs = [ message-relay roscpp rosgraph-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, euslisp, catkin, geneus, roseus }:
+{ lib, buildRosPackage, fetchurl, catkin, euslisp, geneus, roseus }:
 buildRosPackage {
   pname = "ros-melodic-jsk-roseus";
   version = "1.7.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ geneus euslisp roseus ];
+  propagatedBuildInputs = [ euslisp geneus roseus ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

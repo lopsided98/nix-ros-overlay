@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, collada-robots, openrave, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, collada-robots, openrave }:
 buildRosPackage {
   pname = "ros-kinetic-openrave-planning";
   version = "0.0.6";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-planners-ompl, joint-state-publisher, xacro, robot-state-publisher, moveit-ros-move-group, tf, catkin, rviz, moveit-ros-visualization, moveit-kinematics, roslaunch, rostest, moveit-fake-controller-manager, khi-rs-description }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, khi-rs-description, moveit-fake-controller-manager, moveit-kinematics, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-visualization, robot-state-publisher, roslaunch, rostest, rviz, tf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-khi-rs007n-moveit-config";
   version = "1.1.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ khi-rs-description ];
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ moveit-planners-ompl joint-state-publisher xacro robot-state-publisher moveit-ros-move-group tf rviz moveit-ros-visualization moveit-kinematics moveit-fake-controller-manager khi-rs-description ];
+  propagatedBuildInputs = [ joint-state-publisher khi-rs-description moveit-fake-controller-manager moveit-kinematics moveit-planners-ompl moveit-ros-move-group moveit-ros-visualization robot-state-publisher rviz tf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

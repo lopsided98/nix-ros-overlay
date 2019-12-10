@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xiaoqiang-msgs, rospy, std-msgs, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rospy, std-msgs, xiaoqiang-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-xiaoqiang-server";
   version = "0.0.12";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs rospy xiaoqiang-msgs ];
-  propagatedBuildInputs = [ xiaoqiang-msgs rospy std-msgs ];
+  propagatedBuildInputs = [ rospy std-msgs xiaoqiang-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

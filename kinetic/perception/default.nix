@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport-plugins, perception-pcl, image-pipeline, catkin, image-common, laser-pipeline, vision-opencv, ros-base }:
+{ lib, buildRosPackage, fetchurl, catkin, image-common, image-pipeline, image-transport-plugins, laser-pipeline, perception-pcl, ros-base, vision-opencv }:
 buildRosPackage {
   pname = "ros-kinetic-perception";
   version = "1.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ image-transport-plugins perception-pcl image-pipeline image-common laser-pipeline vision-opencv ros-base ];
+  propagatedBuildInputs = [ image-common image-pipeline image-transport-plugins laser-pipeline perception-pcl ros-base vision-opencv ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

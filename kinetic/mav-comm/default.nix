@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mav-msgs, catkin, mav-planning-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, mav-msgs, mav-planning-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mav-comm";
   version = "3.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ mav-planning-msgs mav-msgs ];
+  propagatedBuildInputs = [ mav-msgs mav-planning-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

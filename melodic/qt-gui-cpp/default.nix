@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, cmake-modules, catkin, tinyxml, qt-gui, qt5, pkg-config, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, tinyxml }:
 buildRosPackage {
   pname = "ros-melodic-qt-gui-cpp";
   version = "0.3.16-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib cmake-modules qt5.qtbase tinyxml pkg-config python-qt-binding ];
+  buildInputs = [ cmake-modules pkg-config python-qt-binding qt5.qtbase ];
   propagatedBuildInputs = [ pluginlib qt-gui tinyxml ];
   nativeBuildInputs = [ catkin ];
 

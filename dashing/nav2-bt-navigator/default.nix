@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-cmake, nav2-util, nav2-msgs, nav-msgs, ament-lint-auto, rclcpp-lifecycle, launch-testing, nav2-behavior-tree, ament-lint-common, nav2-common, rclcpp, tf2-ros, ament-cmake-gtest, behaviortree-cpp, std-msgs, std-srvs, rclcpp-action, launch, ament-cmake-pytest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, behaviortree-cpp, geometry-msgs, launch, launch-testing, nav-msgs, nav2-behavior-tree, nav2-common, nav2-msgs, nav2-util, rclcpp, rclcpp-action, rclcpp-lifecycle, std-msgs, std-srvs, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-nav2-bt-navigator";
   version = "0.2.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-action rclcpp-lifecycle geometry-msgs nav-msgs std-msgs std-srvs nav2-behavior-tree nav2-common nav2-util rclcpp nav2-msgs tf2-ros behaviortree-cpp ];
-  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ rclcpp-action rclcpp-lifecycle geometry-msgs nav-msgs std-msgs nav2-behavior-tree nav2-util rclcpp nav2-msgs tf2-ros behaviortree-cpp ];
+  buildInputs = [ nav2-common std-srvs ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing ];
+  propagatedBuildInputs = [ behaviortree-cpp geometry-msgs nav-msgs nav2-behavior-tree nav2-msgs nav2-util rclcpp rclcpp-action rclcpp-lifecycle std-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, naoqi-sensors-py, naoqi-apps, naoqi-driver-py, catkin, naoqi-driver, naoqi-bridge-msgs, naoqi-tools, naoqi-pose }:
+{ lib, buildRosPackage, fetchurl, catkin, naoqi-apps, naoqi-bridge-msgs, naoqi-driver, naoqi-driver-py, naoqi-pose, naoqi-sensors-py, naoqi-tools }:
 buildRosPackage {
   pname = "ros-kinetic-naoqi-bridge";
   version = "0.5.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ naoqi-sensors-py naoqi-apps naoqi-driver-py naoqi-driver naoqi-bridge-msgs naoqi-tools naoqi-pose ];
+  propagatedBuildInputs = [ naoqi-apps naoqi-bridge-msgs naoqi-driver naoqi-driver-py naoqi-pose naoqi-sensors-py naoqi-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

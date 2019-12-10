@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, geometry-msgs, std-msgs, std-srvs, mcl-3dl-msgs, catkin, tf2-sensor-msgs, tf2, rosunit, roslint, tf2-geometry-msgs, eigen, visualization-msgs, roscpp, nav-msgs, rostest, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, mcl-3dl-msgs, nav-msgs, pcl-ros, roscpp, roslint, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mcl-3dl";
   version = "0.1.6-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs geometry-msgs mcl-3dl-msgs std-msgs std-srvs tf2-sensor-msgs roscpp tf2-geometry-msgs eigen visualization-msgs tf2 nav-msgs tf2-ros ];
   checkInputs = [ roslint rostest rosunit ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs geometry-msgs std-msgs std-srvs mcl-3dl-msgs tf2-sensor-msgs roscpp tf2-geometry-msgs eigen visualization-msgs tf2 nav-msgs tf2-ros ];
+  propagatedBuildInputs = [ eigen geometry-msgs mcl-3dl-msgs nav-msgs pcl-ros roscpp sensor-msgs std-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros tf2-sensor-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

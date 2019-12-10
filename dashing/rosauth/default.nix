@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rosidl-default-runtime, openssl, rosidl-default-generators, rclcpp, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, openssl, rclcpp, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-rosauth";
   version = "2.0.1-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ openssl rclcpp ];
+  buildInputs = [ openssl ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ rosidl-default-runtime rclcpp ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake-ros ];
+  propagatedBuildInputs = [ rclcpp rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake-ros rosidl-default-generators ];
 
   meta = {
     description = ''Server Side tools for Authorization and Authentication of ROS Clients'';

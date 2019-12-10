@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot3-bringup, map-server, catkin, move-base, amcl }:
+{ lib, buildRosPackage, fetchurl, amcl, catkin, map-server, move-base, turtlebot3-bringup }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-navigation";
   version = "1.2.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ map-server amcl turtlebot3-bringup move-base ];
+  propagatedBuildInputs = [ amcl map-server move-base turtlebot3-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

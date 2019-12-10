@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, sensor-msgs, robot-state-publisher, catkin, rviz, roscpp, urg-node }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, robot-state-publisher, roscpp, rviz, sensor-msgs, urg-node }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-description";
   version = "0.2.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp ];
-  propagatedBuildInputs = [ joint-state-publisher sensor-msgs robot-state-publisher rviz roscpp urg-node ];
+  propagatedBuildInputs = [ joint-state-publisher robot-state-publisher roscpp rviz sensor-msgs urg-node ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

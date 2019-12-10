@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tuw-ellipses, tuw-marker-pose-estimation, catkin, tuw-aruco }:
+{ lib, buildRosPackage, fetchurl, catkin, tuw-aruco, tuw-ellipses, tuw-marker-pose-estimation }:
 buildRosPackage {
   pname = "ros-kinetic-tuw-marker-detection";
   version = "0.0.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ tuw-marker-pose-estimation tuw-ellipses tuw-aruco ];
+  propagatedBuildInputs = [ tuw-aruco tuw-ellipses tuw-marker-pose-estimation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

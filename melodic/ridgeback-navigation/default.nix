@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, urdf, map-server, catkin, gmapping, move-base, amcl, roslaunch }:
+{ lib, buildRosPackage, fetchurl, amcl, catkin, gmapping, map-server, move-base, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-ridgeback-navigation";
   version = "0.2.2-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ xacro urdf map-server gmapping move-base amcl ];
+  propagatedBuildInputs = [ amcl gmapping map-server move-base urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

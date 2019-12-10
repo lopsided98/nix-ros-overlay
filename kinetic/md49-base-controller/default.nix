@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, md49-serialport, std-msgs, md49-messages, catkin, rospy, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, md49-messages, md49-serialport, message-generation, message-runtime, roscpp, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-md49-base-controller";
   version = "0.1.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs md49-serialport std-msgs md49-messages rospy roscpp message-generation ];
-  propagatedBuildInputs = [ geometry-msgs md49-serialport std-msgs md49-messages rospy roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ geometry-msgs md49-messages md49-serialport message-runtime roscpp rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

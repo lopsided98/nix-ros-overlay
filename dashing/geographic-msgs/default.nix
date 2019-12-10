@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, rosidl-default-runtime, std-msgs, ament-cmake, unique-identifier-msgs, rosidl-default-generators }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-dashing-geographic-msgs";
   version = "1.0.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs rosidl-default-generators geometry-msgs unique-identifier-msgs ];
-  propagatedBuildInputs = [ rosidl-default-runtime geometry-msgs std-msgs unique-identifier-msgs ];
+  buildInputs = [ rosidl-default-generators ];
+  propagatedBuildInputs = [ geometry-msgs rosidl-default-runtime std-msgs unique-identifier-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

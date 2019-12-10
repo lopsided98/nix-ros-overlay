@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, std-srvs, catkin, rospy, cob-light, cob-script-server }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-light, cob-script-server, rospy, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-cob-default-robot-behavior";
   version = "0.7.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ std-msgs std-srvs rospy cob-light cob-script-server ];
+  propagatedBuildInputs = [ cob-light cob-script-server rospy std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

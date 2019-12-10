@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, controller-interface, hardware-interface, pluginlib, catkin, realtime-tools, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-interface, hardware-interface, pluginlib, realtime-tools, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-joint-state-controller";
   version = "0.13.5";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs controller-interface hardware-interface pluginlib realtime-tools roscpp ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ sensor-msgs controller-interface hardware-interface pluginlib realtime-tools roscpp ];
+  propagatedBuildInputs = [ controller-interface hardware-interface pluginlib realtime-tools roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

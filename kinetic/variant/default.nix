@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, variant-topic-test, variant-msgs, variant-topic-tools, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, variant-msgs, variant-topic-test, variant-topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-variant";
   version = "0.1.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ variant-topic-test variant-msgs variant-topic-tools ];
+  propagatedBuildInputs = [ variant-msgs variant-topic-test variant-topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

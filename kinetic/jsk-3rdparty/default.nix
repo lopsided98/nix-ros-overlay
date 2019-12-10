@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libsiftfast, pgm-learner, nlopt, mini-maxwell, julius-ros, julius, ff, assimp-devel, ffha, catkin, rospatlite, slic, downward, sesame-ros, rosping, voice-text, opt-camera, libcmt, bayesian-belief-networks }:
+{ lib, buildRosPackage, fetchurl, assimp-devel, bayesian-belief-networks, catkin, downward, ff, ffha, julius, julius-ros, libcmt, libsiftfast, mini-maxwell, nlopt, opt-camera, pgm-learner, rospatlite, rosping, sesame-ros, slic, voice-text }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-3rdparty";
   version = "2.1.14-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ ff opt-camera libsiftfast mini-maxwell julius-ros pgm-learner rospatlite nlopt slic downward sesame-ros assimp-devel libcmt julius rosping voice-text ffha bayesian-belief-networks ];
+  propagatedBuildInputs = [ assimp-devel bayesian-belief-networks downward ff ffha julius julius-ros libcmt libsiftfast mini-maxwell nlopt opt-camera pgm-learner rospatlite rosping sesame-ros slic voice-text ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

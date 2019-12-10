@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, cob-sound, geometry-msgs, cob-actions, std-msgs, std-srvs, actionlib, catkin, roscpp, cob-light, cob-script-server }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, cob-actions, cob-light, cob-script-server, cob-sound, geometry-msgs, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-teleop";
   version = "0.6.15-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cob-sound sensor-msgs geometry-msgs cob-actions std-msgs std-srvs actionlib roscpp cob-light cob-script-server ];
-  propagatedBuildInputs = [ cob-sound sensor-msgs geometry-msgs cob-actions std-msgs std-srvs actionlib roscpp cob-light cob-script-server ];
+  propagatedBuildInputs = [ actionlib cob-actions cob-light cob-script-server cob-sound geometry-msgs roscpp sensor-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, gazeboSimulator, geometry-msgs, std-msgs, tf, catkin, roscpp, gazebo-ros, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros, gazeboSimulator, geometry-msgs, nav-msgs, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-gazebo";
   version = "1.2.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs tf roscpp gazebo-ros nav-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs gazeboSimulator.gazebo tf roscpp gazebo-ros nav-msgs ];
+  propagatedBuildInputs = [ gazebo-ros gazeboSimulator.gazebo geometry-msgs nav-msgs roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

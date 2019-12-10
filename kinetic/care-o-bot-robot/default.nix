@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, vim, htop, catkin, robot-upstart, cob-manipulation, tree, pythonPackages, cob-bringup, cob-navigation, tmux, openssh }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-bringup, cob-manipulation, cob-navigation, htop, openssh, pythonPackages, robot-upstart, tmux, tree, vim }:
 buildRosPackage {
   pname = "ros-kinetic-care-o-bot-robot";
   version = "0.6.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ vim htop robot-upstart cob-manipulation tree pythonPackages.wstool cob-bringup cob-navigation tmux openssh ];
+  propagatedBuildInputs = [ cob-bringup cob-manipulation cob-navigation htop openssh pythonPackages.wstool robot-upstart tmux tree vim ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

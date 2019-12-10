@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eca-a9-description, catkin, eca-a9-control }:
+{ lib, buildRosPackage, fetchurl, catkin, eca-a9-control, eca-a9-description }:
 buildRosPackage {
   pname = "ros-kinetic-eca-a9-gazebo";
   version = "0.1.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ eca-a9-description eca-a9-control ];
+  propagatedBuildInputs = [ eca-a9-control eca-a9-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

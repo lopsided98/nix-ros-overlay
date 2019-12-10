@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ncurses, avahi, ffmpeg, nasm, libtool, catkin, curl, unzip, autoconf, zlib, automake, yasm }:
+{ lib, buildRosPackage, fetchurl, autoconf, automake, avahi, catkin, curl, ffmpeg, libtool, nasm, ncurses, unzip, yasm, zlib }:
 buildRosPackage {
   pname = "ros-kinetic-parrot-arsdk";
   version = "3.14.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ncurses avahi ffmpeg nasm libtool unzip autoconf zlib automake yasm curl ];
+  buildInputs = [ autoconf automake avahi curl ffmpeg libtool nasm ncurses unzip yasm zlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

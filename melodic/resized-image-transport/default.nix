@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jsk-topic-tools, message-generation, sensor-msgs, std-srvs, catkin, jsk-recognition-utils, image-transport, cv-bridge, nodelet, jsk-tools, message-runtime, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-transport, jsk-recognition-utils, jsk-tools, jsk-topic-tools, message-generation, message-runtime, nodelet, rostest, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-resized-image-transport";
   version = "1.2.10";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ jsk-topic-tools sensor-msgs std-srvs image-transport cv-bridge nodelet message-generation ];
-  checkInputs = [ jsk-tools rostest jsk-recognition-utils ];
-  propagatedBuildInputs = [ jsk-topic-tools sensor-msgs std-srvs image-transport cv-bridge nodelet message-runtime ];
+  buildInputs = [ message-generation ];
+  checkInputs = [ jsk-recognition-utils jsk-tools rostest ];
+  propagatedBuildInputs = [ cv-bridge image-transport jsk-topic-tools message-runtime nodelet sensor-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

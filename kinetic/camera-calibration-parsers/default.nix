@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, roscpp-serialization, catkin, rosunit, rosbash, libyamlcpp, roscpp, pkg-config, rosconsole }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, libyamlcpp, pkg-config, rosbash, rosconsole, roscpp, roscpp-serialization, rosunit, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-camera-calibration-parsers";
   version = "1.11.13";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs roscpp-serialization libyamlcpp roscpp pkg-config rosconsole ];
+  buildInputs = [ pkg-config rosconsole ];
   checkInputs = [ rosbash rosunit ];
-  propagatedBuildInputs = [ sensor-msgs boost roscpp-serialization libyamlcpp roscpp ];
+  propagatedBuildInputs = [ boost libyamlcpp roscpp roscpp-serialization sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

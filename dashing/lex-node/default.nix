@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, lex-common, python3Packages, aws-ros2-common, launch, lex-common-msgs, launch-ros, ament-lint-common, ament-cmake, ament-cmake-gmock, rclcpp, aws-common, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, aws-common, aws-ros2-common, launch, launch-ros, lex-common, lex-common-msgs, python3Packages, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-lex-node";
   version = "3.1.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ lex-common aws-ros2-common rclcpp aws-common lex-common-msgs ];
-  checkInputs = [ ament-cmake-gmock ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ python3Packages.pyyaml lex-common aws-ros2-common rclcpp launch launch-ros aws-common lex-common-msgs ];
+  checkInputs = [ ament-cmake-gmock ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ aws-common aws-ros2-common launch launch-ros lex-common lex-common-msgs python3Packages.pyyaml rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

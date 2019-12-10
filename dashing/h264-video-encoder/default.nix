@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, aws-ros2-common, launch, kinesis-video-msgs, launch-ros, h264-encoder-core, ament-cmake, image-transport, rmw-implementation, rclcpp, aws-common, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, aws-common, aws-ros2-common, h264-encoder-core, image-transport, kinesis-video-msgs, launch, launch-ros, rclcpp, rmw-implementation, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-h264-video-encoder";
   version = "2.0.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs aws-ros2-common h264-encoder-core image-transport rmw-implementation rclcpp aws-common kinesis-video-msgs ];
+  buildInputs = [ h264-encoder-core rclcpp ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ sensor-msgs aws-ros2-common launch launch-ros image-transport rmw-implementation aws-common kinesis-video-msgs ];
+  propagatedBuildInputs = [ aws-common aws-ros2-common image-transport kinesis-video-msgs launch launch-ros rmw-implementation sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

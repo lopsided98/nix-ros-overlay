@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, geometry-msgs, interactive-markers, eigen-conversions, qt4, thormang3-walking-module-msgs, eigen, thormang3-foot-step-generator, thormang3-navigation, sensor-msgs, cmake-modules, roslib, thormang3-feet-ft-module-msgs, libyamlcpp, thormang3-manipulation-module-msgs, std-msgs, catkin, roscpp, boost, qt-build, thormang3-action-script-player, visualization-msgs, humanoid-nav-msgs }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, eigen, eigen-conversions, geometry-msgs, humanoid-nav-msgs, interactive-markers, libyamlcpp, qt-build, qt4, robotis-controller-msgs, roscpp, roslib, sensor-msgs, std-msgs, thormang3-action-script-player, thormang3-feet-ft-module-msgs, thormang3-foot-step-generator, thormang3-manipulation-module-msgs, thormang3-navigation, thormang3-walking-module-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-demo";
   version = "0.3.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs geometry-msgs eigen-conversions interactive-markers qt4 thormang3-walking-module-msgs eigen thormang3-foot-step-generator sensor-msgs cmake-modules roslib thormang3-feet-ft-module-msgs libyamlcpp thormang3-manipulation-module-msgs std-msgs roscpp boost qt-build visualization-msgs humanoid-nav-msgs ];
-  propagatedBuildInputs = [ robotis-controller-msgs geometry-msgs eigen-conversions interactive-markers qt4 thormang3-walking-module-msgs eigen thormang3-foot-step-generator thormang3-navigation sensor-msgs cmake-modules roslib thormang3-feet-ft-module-msgs libyamlcpp thormang3-manipulation-module-msgs std-msgs roscpp boost qt-build thormang3-action-script-player visualization-msgs humanoid-nav-msgs ];
+  propagatedBuildInputs = [ boost cmake-modules eigen eigen-conversions geometry-msgs humanoid-nav-msgs interactive-markers libyamlcpp qt-build qt4 robotis-controller-msgs roscpp roslib sensor-msgs std-msgs thormang3-action-script-player thormang3-feet-ft-module-msgs thormang3-foot-step-generator thormang3-manipulation-module-msgs thormang3-navigation thormang3-walking-module-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

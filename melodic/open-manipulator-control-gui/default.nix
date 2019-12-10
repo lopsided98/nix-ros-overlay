@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, std-msgs, cmake-modules, catkin, roscpp, eigen, open-manipulator-msgs, qt5 }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, open-manipulator-msgs, qt5, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-open-manipulator-control-gui";
   version = "2.0.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs std-msgs cmake-modules qt5.qtbase eigen open-manipulator-msgs roscpp ];
-  propagatedBuildInputs = [ sensor-msgs std-msgs cmake-modules qt5.qtbase eigen open-manipulator-msgs roscpp ];
+  propagatedBuildInputs = [ cmake-modules eigen open-manipulator-msgs qt5.qtbase roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

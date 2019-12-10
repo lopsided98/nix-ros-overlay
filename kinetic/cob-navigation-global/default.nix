@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-supported-robots, cob-navigation-config, cob-scan-unifier, cob-default-env-config, map-server, catkin, rviz, move-base, topic-tools, amcl, roslaunch, dwa-local-planner, cob-linear-nav }:
+{ lib, buildRosPackage, fetchurl, amcl, catkin, cob-default-env-config, cob-linear-nav, cob-navigation-config, cob-scan-unifier, cob-supported-robots, dwa-local-planner, map-server, move-base, roslaunch, rviz, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-cob-navigation-global";
   version = "0.6.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ cob-supported-robots cob-default-env-config roslaunch ];
-  propagatedBuildInputs = [ cob-navigation-config cob-scan-unifier map-server cob-default-env-config rviz move-base topic-tools amcl dwa-local-planner cob-linear-nav ];
+  checkInputs = [ cob-default-env-config cob-supported-robots roslaunch ];
+  propagatedBuildInputs = [ amcl cob-default-env-config cob-linear-nav cob-navigation-config cob-scan-unifier dwa-local-planner map-server move-base rviz topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

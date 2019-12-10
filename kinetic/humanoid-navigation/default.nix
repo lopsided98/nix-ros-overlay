@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, humanoid-localization, catkin, humanoid-planner-2d, gridmap-2d, footstep-planner }:
+{ lib, buildRosPackage, fetchurl, catkin, footstep-planner, gridmap-2d, humanoid-localization, humanoid-planner-2d }:
 buildRosPackage {
   pname = "ros-kinetic-humanoid-navigation";
   version = "0.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ humanoid-planner-2d gridmap-2d humanoid-localization footstep-planner ];
+  propagatedBuildInputs = [ footstep-planner gridmap-2d humanoid-localization humanoid-planner-2d ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

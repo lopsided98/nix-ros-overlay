@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, catkin, actionlib, actionlib-msgs, rospy, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, geometry-msgs, move-base-msgs, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-lost-comms-recovery";
   version = "0.1.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs actionlib actionlib-msgs rospy move-base-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs actionlib actionlib-msgs rospy move-base-msgs ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs geometry-msgs move-base-msgs rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

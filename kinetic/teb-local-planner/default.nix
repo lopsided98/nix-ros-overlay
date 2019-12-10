@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, interactive-markers, pluginlib, tf, nav-msgs, dynamic-reconfigure, cmake-modules, costmap-converter, std-msgs, catkin, costmap-2d, nav-core, roscpp, message-generation, libg2o, base-local-planner, visualization-msgs, message-runtime, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, base-local-planner, catkin, cmake-modules, costmap-2d, costmap-converter, dynamic-reconfigure, geometry-msgs, interactive-markers, libg2o, message-generation, message-runtime, nav-core, nav-msgs, pluginlib, roscpp, std-msgs, tf, tf-conversions, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-teb-local-planner";
   version = "0.6.14-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ costmap-converter geometry-msgs dynamic-reconfigure interactive-markers pluginlib std-msgs tf base-local-planner cmake-modules costmap-2d nav-core visualization-msgs roscpp message-generation tf-conversions nav-msgs libg2o ];
-  propagatedBuildInputs = [ costmap-converter geometry-msgs dynamic-reconfigure interactive-markers pluginlib std-msgs tf base-local-planner costmap-2d nav-core visualization-msgs roscpp message-runtime tf-conversions nav-msgs libg2o ];
+  buildInputs = [ cmake-modules message-generation ];
+  propagatedBuildInputs = [ base-local-planner costmap-2d costmap-converter dynamic-reconfigure geometry-msgs interactive-markers libg2o message-runtime nav-core nav-msgs pluginlib roscpp std-msgs tf tf-conversions visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

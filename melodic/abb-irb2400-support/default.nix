@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, robot-state-publisher, catkin, rviz, abb-driver, abb-resources, roslaunch }:
+{ lib, buildRosPackage, fetchurl, abb-driver, abb-resources, catkin, joint-state-publisher, robot-state-publisher, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-melodic-abb-irb2400-support";
   version = "1.3.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joint-state-publisher robot-state-publisher rviz abb-driver abb-resources ];
+  propagatedBuildInputs = [ abb-driver abb-resources joint-state-publisher robot-state-publisher rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

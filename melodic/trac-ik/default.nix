@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trac-ik-examples, catkin, trac-ik-kinematics-plugin, trac-ik-lib, trac-ik-python }:
+{ lib, buildRosPackage, fetchurl, catkin, trac-ik-examples, trac-ik-kinematics-plugin, trac-ik-lib, trac-ik-python }:
 buildRosPackage {
   pname = "ros-melodic-trac-ik";
   version = "1.5.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ trac-ik-python trac-ik-lib trac-ik-examples trac-ik-kinematics-plugin ];
+  propagatedBuildInputs = [ trac-ik-examples trac-ik-kinematics-plugin trac-ik-lib trac-ik-python ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

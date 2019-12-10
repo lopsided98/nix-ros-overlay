@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, tf, rosunit, eigen, nav-msgs, dynamic-reconfigure, cmake-modules, pcl-ros, std-msgs, catkin, costmap-2d, nav-core, roscpp, voxel-grid, message-generation, angles, rospy, pcl-conversions, message-runtime }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, costmap-2d, dynamic-reconfigure, eigen, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, pcl-conversions, pcl-ros, pluginlib, roscpp, rospy, rosunit, std-msgs, tf, voxel-grid }:
 buildRosPackage {
   pname = "ros-kinetic-base-local-planner";
   version = "1.14.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros geometry-msgs dynamic-reconfigure pluginlib std-msgs tf cmake-modules costmap-2d nav-core eigen pcl-conversions rospy roscpp angles voxel-grid message-generation nav-msgs ];
+  buildInputs = [ cmake-modules message-generation pcl-conversions ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pcl-ros geometry-msgs dynamic-reconfigure message-runtime pluginlib std-msgs tf costmap-2d nav-core eigen roscpp angles voxel-grid rospy nav-msgs ];
+  propagatedBuildInputs = [ angles costmap-2d dynamic-reconfigure eigen geometry-msgs message-runtime nav-core nav-msgs pcl-ros pluginlib roscpp rospy std-msgs tf voxel-grid ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

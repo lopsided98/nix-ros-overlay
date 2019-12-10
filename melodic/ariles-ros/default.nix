@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, libyamlcpp, eigen, roscpp }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, eigen, libyamlcpp, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-ariles-ros";
   version = "1.3.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ libyamlcpp boost eigen roscpp ];
-  propagatedBuildInputs = [ libyamlcpp boost eigen roscpp ];
+  propagatedBuildInputs = [ boost eigen libyamlcpp roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

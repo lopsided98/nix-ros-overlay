@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot3-gazebo, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, turtlebot3-gazebo }:
 buildRosPackage {
   pname = "ros-dashing-turtlebot3-simulations";
   version = "2.0.1-r1";

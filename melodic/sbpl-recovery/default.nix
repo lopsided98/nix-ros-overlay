@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, base-local-planner, costmap-2d, nav-core, sbpl-lattice-planner, roscpp, pose-follower, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, nav-core, pluginlib, pose-follower, roscpp, sbpl-lattice-planner, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-sbpl-recovery";
   version = "0.3.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib base-local-planner costmap-2d nav-core sbpl-lattice-planner roscpp pose-follower tf2-ros ];
-  propagatedBuildInputs = [ pluginlib base-local-planner costmap-2d nav-core sbpl-lattice-planner roscpp pose-follower tf2-ros ];
+  propagatedBuildInputs = [ base-local-planner costmap-2d nav-core pluginlib pose-follower roscpp sbpl-lattice-planner tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

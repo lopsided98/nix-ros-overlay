@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, dynamic-reconfigure, std-msgs, catkin, dbw-mkz-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, dbw-mkz-msgs, dynamic-reconfigure, geometry-msgs, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dbw-mkz-twist-controller";
   version = "1.2.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure std-msgs dbw-mkz-msgs roscpp ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure std-msgs dbw-mkz-msgs roscpp ];
+  propagatedBuildInputs = [ dbw-mkz-msgs dynamic-reconfigure geometry-msgs roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

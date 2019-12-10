@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, diagnostic-msgs, catkin, pythonPackages, rqt-gui-py, qt-gui, rospy, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, python-qt-binding, pythonPackages, qt-gui, rospy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-melodic-rqt-runtime-monitor";
   version = "0.5.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-gui diagnostic-msgs pythonPackages.rospkg rqt-gui-py qt-gui rospy python-qt-binding ];
+  propagatedBuildInputs = [ diagnostic-msgs python-qt-binding pythonPackages.rospkg qt-gui rospy rqt-gui rqt-gui-py ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

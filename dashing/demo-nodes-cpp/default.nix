@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, launch-testing-ros, example-interfaces, rcutils, launch, rmw-implementation-cmake, std-msgs, launch-testing, launch-ros, ament-lint-common, ament-cmake, launch-testing-ament-cmake, rmw, ament-cmake-pytest, rclcpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rcutils, rmw, rmw-implementation-cmake, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-demo-nodes-cpp";
   version = "0.7.9-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ example-interfaces rcutils rmw-implementation-cmake std-msgs rmw rclcpp ];
-  checkInputs = [ launch-testing-ros launch launch-testing ament-lint-common launch-testing-ament-cmake ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ example-interfaces rcutils std-msgs launch-ros rmw rclcpp ];
+  buildInputs = [ rmw-implementation-cmake ];
+  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake launch-testing-ros ];
+  propagatedBuildInputs = [ example-interfaces launch-ros rclcpp rcutils rmw std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

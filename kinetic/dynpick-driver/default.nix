@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, geometry-msgs, robot-state-publisher, std-srvs, tf, catkin, pythonPackages, rviz, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, robot-state-publisher, roscpp, rostest, rviz, std-srvs, tf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-dynpick-driver";
   version = "0.2.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs geometry-msgs pythonPackages.catkin-pkg roscpp ];
+  buildInputs = [ pythonPackages.catkin-pkg ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ xacro geometry-msgs robot-state-publisher std-srvs tf rviz roscpp ];
+  propagatedBuildInputs = [ geometry-msgs robot-state-publisher roscpp rviz std-srvs tf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

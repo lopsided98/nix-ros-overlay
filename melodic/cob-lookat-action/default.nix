@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, actionlib-msgs, kdl-parser, sensor-msgs, tf2-ros, move-base-msgs, orocos-kdl, catkin, roscpp, angles, rospy, message-generation, kdl-conversions, control-msgs, trajectory-msgs, actionlib, message-runtime, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, angles, catkin, control-msgs, geometry-msgs, kdl-conversions, kdl-parser, message-generation, message-runtime, move-base-msgs, orocos-kdl, roscpp, rospy, sensor-msgs, tf, tf-conversions, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-lookat-action";
   version = "0.7.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2-ros orocos-kdl sensor-msgs trajectory-msgs geometry-msgs actionlib tf kdl-parser actionlib-msgs control-msgs roscpp angles message-generation tf-conversions kdl-conversions move-base-msgs ];
-  propagatedBuildInputs = [ tf2-ros orocos-kdl sensor-msgs trajectory-msgs geometry-msgs message-runtime move-base-msgs tf actionlib actionlib-msgs control-msgs roscpp angles rospy tf-conversions kdl-conversions kdl-parser ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs angles control-msgs geometry-msgs kdl-conversions kdl-parser message-runtime move-base-msgs orocos-kdl roscpp rospy sensor-msgs tf tf-conversions tf2-ros trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

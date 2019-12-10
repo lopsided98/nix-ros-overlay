@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, std-msgs, cob-object-detection-msgs, actionlib, catkin, actionlib-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, cob-object-detection-msgs, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-3d-mapping-msgs";
   version = "0.6.14-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs cob-object-detection-msgs actionlib actionlib-msgs message-generation ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs cob-object-detection-msgs actionlib actionlib-msgs message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs cob-object-detection-msgs geometry-msgs message-runtime sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, message-generation, std-msgs, actionlib, tf, catkin, dccomms-ros-msgs, actionlib-msgs, rospy, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, dccomms-ros-msgs, git, message-generation, message-runtime, roscpp, rospy, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-dccomms-ros";
   version = "0.0.2-r3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ git std-msgs actionlib tf dccomms-ros-msgs actionlib-msgs rospy roscpp message-generation ];
-  propagatedBuildInputs = [ git std-msgs actionlib tf dccomms-ros-msgs actionlib-msgs rospy roscpp message-runtime ];
-  nativeBuildInputs = [ git catkin ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs dccomms-ros-msgs git message-runtime roscpp rospy std-msgs tf ];
+  nativeBuildInputs = [ catkin git ];
 
   meta = {
     description = ''The dccomms_ros package'';

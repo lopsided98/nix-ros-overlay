@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, unique-id, tf, catkin, pythonPackages, rosunit, geographic-msgs, angles, uuid-msgs }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, geographic-msgs, geometry-msgs, pythonPackages, rosunit, sensor-msgs, tf, unique-id, uuid-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-geodesy";
   version = "0.5.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs unique-id tf geographic-msgs pythonPackages.catkin-pkg angles uuid-msgs ];
+  buildInputs = [ angles pythonPackages.catkin-pkg ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs unique-id tf geographic-msgs pythonPackages.pyproj uuid-msgs ];
+  propagatedBuildInputs = [ geographic-msgs geometry-msgs pythonPackages.pyproj sensor-msgs tf unique-id uuid-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

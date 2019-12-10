@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, automotive-platform-msgs, catkin, automotive-navigation-msgs }:
+{ lib, buildRosPackage, fetchurl, automotive-navigation-msgs, automotive-platform-msgs, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-automotive-autonomy-msgs";
   version = "2.0.3";

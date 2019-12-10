@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, catkin, base-local-planner, gmapping, move-base, amcl, roslaunch, navfn, dwa-local-planner }:
+{ lib, buildRosPackage, fetchurl, amcl, base-local-planner, catkin, dwa-local-planner, gmapping, map-server, move-base, navfn, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-husky-navigation";
   version = "0.4.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ map-server base-local-planner gmapping move-base amcl navfn dwa-local-planner ];
+  propagatedBuildInputs = [ amcl base-local-planner dwa-local-planner gmapping map-server move-base navfn ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

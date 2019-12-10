@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-state-publisher, xacro, catkin, urdf }:
+{ lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-loki-description";
   version = "0.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ robot-state-publisher xacro urdf ];
+  propagatedBuildInputs = [ robot-state-publisher urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

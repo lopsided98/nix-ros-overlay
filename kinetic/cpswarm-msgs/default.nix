@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, std-msgs, catkin, actionlib-msgs, message-runtime, swarmros }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs, swarmros }:
 buildRosPackage {
   pname = "ros-kinetic-cpswarm-msgs";
   version = "1.1.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs actionlib-msgs message-generation swarmros ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs actionlib-msgs message-runtime swarmros ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib-msgs geometry-msgs message-runtime sensor-msgs std-msgs swarmros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

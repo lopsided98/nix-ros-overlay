@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gtest, gmock, aws-common, cmake }:
+{ lib, buildRosPackage, fetchurl, aws-common, cmake, gmock, gtest }:
 buildRosPackage {
   pname = "ros-kinetic-dataflow-lite";
   version = "1.1.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ aws-common ];
-  checkInputs = [ gtest gmock ];
+  checkInputs = [ gmock gtest ];
   propagatedBuildInputs = [ aws-common ];
   nativeBuildInputs = [ cmake ];
 

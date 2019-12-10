@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, fsrobo-r-trajectory-filters, fsrobo-r-moveit-config, catkin, fsrobo-r-msgs, fsrobo-r-bringup, fsrobo-r-description, fsrobo-r-driver }:
+{ lib, buildRosPackage, fetchurl, catkin, fsrobo-r-bringup, fsrobo-r-description, fsrobo-r-driver, fsrobo-r-moveit-config, fsrobo-r-msgs, fsrobo-r-trajectory-filters }:
 buildRosPackage {
   pname = "ros-kinetic-fsrobo-r";
   version = "0.7.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ fsrobo-r-trajectory-filters fsrobo-r-moveit-config fsrobo-r-msgs fsrobo-r-description fsrobo-r-bringup fsrobo-r-driver ];
-  propagatedBuildInputs = [ fsrobo-r-trajectory-filters fsrobo-r-moveit-config fsrobo-r-msgs fsrobo-r-description fsrobo-r-bringup fsrobo-r-driver ];
+  propagatedBuildInputs = [ fsrobo-r-bringup fsrobo-r-description fsrobo-r-driver fsrobo-r-moveit-config fsrobo-r-msgs fsrobo-r-trajectory-filters ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rb1-base-pad, std-msgs, std-srvs, tf, rb1-base-control, catkin, gazebo-ros-control, rb1-base-description, gazebo-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros, gazebo-ros-control, rb1-base-control, rb1-base-description, rb1-base-pad, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-rb1-base-gazebo";
   version = "1.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rb1-base-pad std-msgs std-srvs tf rb1-base-control gazebo-ros-control rb1-base-description gazebo-ros ];
+  propagatedBuildInputs = [ gazebo-ros gazebo-ros-control rb1-base-control rb1-base-description rb1-base-pad std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, summit-x-description, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, summit-x-description }:
 buildRosPackage {
   pname = "ros-kinetic-summit-x-common";
   version = "0.1.0";

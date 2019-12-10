@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, camera-info-manager, catkin, roslint, image-transport, cv-bridge, nodelet, roscpp, rostest, opencv3 }:
+{ lib, buildRosPackage, fetchurl, camera-info-manager, catkin, cv-bridge, image-transport, nodelet, opencv3, roscpp, roslint, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cv-camera";
   version = "0.4.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs camera-info-manager roscpp roslint image-transport cv-bridge nodelet opencv3 rostest ];
-  propagatedBuildInputs = [ sensor-msgs camera-info-manager image-transport cv-bridge nodelet roscpp opencv3 ];
+  buildInputs = [ roslint rostest ];
+  propagatedBuildInputs = [ camera-info-manager cv-bridge image-transport nodelet opencv3 roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

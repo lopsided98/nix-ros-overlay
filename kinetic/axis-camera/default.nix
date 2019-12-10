@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, dynamic-reconfigure, tf, catkin, camera-info-manager-py, rospy, message-runtime }:
+{ lib, buildRosPackage, fetchurl, camera-info-manager-py, catkin, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rospy, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-axis-camera";
   version = "0.3.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure tf camera-info-manager-py rospy message-generation ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure tf camera-info-manager-py rospy message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ camera-info-manager-py dynamic-reconfigure geometry-msgs message-runtime rospy sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

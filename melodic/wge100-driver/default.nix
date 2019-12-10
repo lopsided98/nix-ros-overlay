@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, wge100-camera-firmware, catkin, wge100-camera }:
+{ lib, buildRosPackage, fetchurl, catkin, wge100-camera, wge100-camera-firmware }:
 buildRosPackage {
   pname = "ros-melodic-wge100-driver";
   version = "1.8.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ wge100-camera-firmware wge100-camera ];
+  propagatedBuildInputs = [ wge100-camera wge100-camera-firmware ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

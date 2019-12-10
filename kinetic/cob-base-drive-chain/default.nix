@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, diagnostic-msgs, cob-utilities, std-msgs, std-srvs, cob-canopen-motor, catkin, cob-generic-can, roscpp, message-runtime, control-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-canopen-motor, cob-generic-can, cob-utilities, control-msgs, diagnostic-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-base-drive-chain";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation sensor-msgs diagnostic-msgs cob-utilities std-msgs std-srvs cob-generic-can roscpp cob-canopen-motor control-msgs ];
-  propagatedBuildInputs = [ sensor-msgs diagnostic-msgs message-runtime cob-utilities std-msgs std-srvs cob-generic-can roscpp cob-canopen-motor control-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ cob-canopen-motor cob-generic-can cob-utilities control-msgs diagnostic-msgs message-runtime roscpp sensor-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

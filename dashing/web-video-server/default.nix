@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, ament-cmake-ros, ffmpeg, async-web-server-cpp, image-transport, cv-bridge, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, async-web-server-cpp, cv-bridge, ffmpeg, image-transport, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-web-video-server";
   version = "1.0.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs ffmpeg async-web-server-cpp image-transport cv-bridge rclcpp ];
-  propagatedBuildInputs = [ sensor-msgs ffmpeg async-web-server-cpp image-transport cv-bridge rclcpp ];
+  propagatedBuildInputs = [ async-web-server-cpp cv-bridge ffmpeg image-transport rclcpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

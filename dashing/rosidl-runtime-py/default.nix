@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python3Packages, ament-copyright, pythonPackages, test-msgs, ament-xmllint, ament-pep257, ament-flake8, rosidl-parser }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, pythonPackages, rosidl-parser, test-msgs }:
 buildRosPackage {
   pname = "ros-dashing-rosidl-runtime-py";
   version = "0.7.10-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright test-msgs ament-xmllint ament-pep257 pythonPackages.pytest ament-flake8 ];
-  propagatedBuildInputs = [ python3Packages.pyyaml python3Packages.numpy rosidl-parser ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest test-msgs ];
+  propagatedBuildInputs = [ python3Packages.numpy python3Packages.pyyaml rosidl-parser ];
 
   meta = {
     description = ''Runtime utilities for working with generated ROS interfaces in Python.'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, pluginlib, catkin, trac-ik-lib, roscpp, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, catkin, moveit-core, pluginlib, roscpp, tf-conversions, trac-ik-lib }:
 buildRosPackage {
   pname = "ros-kinetic-trac-ik-kinematics-plugin";
   version = "1.5.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core pluginlib trac-ik-lib roscpp tf-conversions ];
-  propagatedBuildInputs = [ moveit-core pluginlib trac-ik-lib roscpp tf-conversions ];
+  propagatedBuildInputs = [ moveit-core pluginlib roscpp tf-conversions trac-ik-lib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

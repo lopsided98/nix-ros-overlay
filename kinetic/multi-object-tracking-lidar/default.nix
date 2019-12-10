@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, catkin, pcl, cv-bridge, visualization-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, pcl, pcl-ros, roscpp, sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-multi-object-tracking-lidar";
   version = "1.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs pcl cv-bridge visualization-msgs roscpp ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs pcl cv-bridge visualization-msgs roscpp ];
+  propagatedBuildInputs = [ cv-bridge pcl pcl-ros roscpp sensor-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

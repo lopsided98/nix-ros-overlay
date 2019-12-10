@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot-follower, turtlebot-navigation, catkin, turtlebot-rapps, turtlebot-actions, turtlebot-calibration }:
+{ lib, buildRosPackage, fetchurl, catkin, turtlebot-actions, turtlebot-calibration, turtlebot-follower, turtlebot-navigation, turtlebot-rapps }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-apps";
   version = "2.3.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ turtlebot-follower turtlebot-navigation turtlebot-rapps turtlebot-actions turtlebot-calibration ];
+  propagatedBuildInputs = [ turtlebot-actions turtlebot-calibration turtlebot-follower turtlebot-navigation turtlebot-rapps ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

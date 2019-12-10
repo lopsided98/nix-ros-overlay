@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, eigen, nav-msgs, sensor-msgs, octomap, cmake-modules, pcl-ros, message-filters, std-msgs, std-srvs, dynamic-edt-3d, catkin, roscpp, boost, octomap-msgs, pcl-conversions, visualization-msgs, octomap-ros }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, dynamic-edt-3d, eigen, geometry-msgs, message-filters, nav-msgs, octomap, octomap-msgs, octomap-ros, pcl-conversions, pcl-ros, roscpp, sensor-msgs, std-msgs, std-srvs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-humanoid-localization";
   version = "0.4.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros boost message-filters geometry-msgs sensor-msgs octomap std-msgs std-srvs dynamic-edt-3d tf octomap-msgs roscpp cmake-modules eigen pcl-conversions visualization-msgs octomap-ros nav-msgs ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs boost geometry-msgs message-filters octomap std-msgs std-srvs octomap-msgs tf dynamic-edt-3d cmake-modules eigen pcl-conversions octomap-ros roscpp visualization-msgs nav-msgs ];
+  propagatedBuildInputs = [ boost cmake-modules dynamic-edt-3d eigen geometry-msgs message-filters nav-msgs octomap octomap-msgs octomap-ros pcl-conversions pcl-ros roscpp sensor-msgs std-msgs std-srvs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

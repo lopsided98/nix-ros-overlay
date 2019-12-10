@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, yocs-math-toolkit, yocs-rapps, yocs-safety-controller, catkin, yocs-joyop, yocs-cmd-vel-mux, yocs-virtual-sensor, yocs-diff-drive-pose-controller, yocs-velocity-smoother, yocs-keyop, yocs-waypoints-navi, yocs-controllers }:
+{ lib, buildRosPackage, fetchurl, catkin, yocs-cmd-vel-mux, yocs-controllers, yocs-diff-drive-pose-controller, yocs-joyop, yocs-keyop, yocs-math-toolkit, yocs-rapps, yocs-safety-controller, yocs-velocity-smoother, yocs-virtual-sensor, yocs-waypoints-navi }:
 buildRosPackage {
   pname = "ros-kinetic-yujin-ocs";
   version = "0.8.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ yocs-math-toolkit yocs-rapps yocs-safety-controller yocs-joyop yocs-cmd-vel-mux yocs-virtual-sensor yocs-diff-drive-pose-controller yocs-velocity-smoother yocs-keyop yocs-waypoints-navi yocs-controllers ];
+  propagatedBuildInputs = [ yocs-cmd-vel-mux yocs-controllers yocs-diff-drive-pose-controller yocs-joyop yocs-keyop yocs-math-toolkit yocs-rapps yocs-safety-controller yocs-velocity-smoother yocs-virtual-sensor yocs-waypoints-navi ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

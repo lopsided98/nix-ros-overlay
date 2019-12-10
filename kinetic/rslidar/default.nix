@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rslidar-msgs, rslidar-pointcloud, rslidar-driver, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rslidar-driver, rslidar-msgs, rslidar-pointcloud }:
 buildRosPackage {
   pname = "ros-kinetic-rslidar";
   version = "1.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rslidar-msgs rslidar-pointcloud rslidar-driver ];
+  propagatedBuildInputs = [ rslidar-driver rslidar-msgs rslidar-pointcloud ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

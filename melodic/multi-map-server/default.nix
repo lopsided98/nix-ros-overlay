@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, SDL_image, map-server, tf, pythonPackages, catkin, rosmake, libyamlcpp, roscpp, jsk-tools, rospy, nav-msgs, rosconsole }:
+{ lib, buildRosPackage, fetchurl, SDL_image, catkin, jsk-tools, libyamlcpp, map-server, nav-msgs, pythonPackages, rosconsole, roscpp, rosmake, rospy, tf }:
 buildRosPackage {
   pname = "ros-melodic-multi-map-server";
   version = "2.2.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.pyyaml SDL_image map-server pythonPackages.pillow tf rosmake libyamlcpp roscpp jsk-tools rospy nav-msgs rosconsole ];
-  propagatedBuildInputs = [ SDL_image map-server tf libyamlcpp roscpp rospy nav-msgs rosconsole ];
+  buildInputs = [ jsk-tools pythonPackages.pillow pythonPackages.pyyaml rosmake ];
+  propagatedBuildInputs = [ SDL_image libyamlcpp map-server nav-msgs rosconsole roscpp rospy tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

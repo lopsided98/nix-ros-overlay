@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, ieee80211-channels, catkin, rospy, access-point-control }:
+{ lib, buildRosPackage, fetchurl, access-point-control, catkin, dynamic-reconfigure, ieee80211-channels, rospy }:
 buildRosPackage {
   pname = "ros-melodic-ddwrt-access-point";
   version = "1.0.16-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy access-point-control ieee80211-channels dynamic-reconfigure ];
-  propagatedBuildInputs = [ rospy access-point-control ieee80211-channels dynamic-reconfigure ];
+  propagatedBuildInputs = [ access-point-control dynamic-reconfigure ieee80211-channels rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

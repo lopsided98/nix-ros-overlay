@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, thormang3-walking-module, motion-module-tutorial, thormang3-action-module, thormang3-gripper-module, thormang3-base-module, catkin, thormang3-manager, thormang3-feet-ft-module, sensor-module-tutorial, ati-ft-sensor, thormang3-head-control-module, thormang3-balance-control, thormang3-manipulation-module, thormang3-kinematics-dynamics }:
+{ lib, buildRosPackage, fetchurl, ati-ft-sensor, catkin, motion-module-tutorial, sensor-module-tutorial, thormang3-action-module, thormang3-balance-control, thormang3-base-module, thormang3-feet-ft-module, thormang3-gripper-module, thormang3-head-control-module, thormang3-kinematics-dynamics, thormang3-manager, thormang3-manipulation-module, thormang3-walking-module }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-mpc";
   version = "0.2.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ thormang3-walking-module motion-module-tutorial thormang3-action-module thormang3-gripper-module thormang3-base-module thormang3-manager thormang3-feet-ft-module sensor-module-tutorial ati-ft-sensor thormang3-head-control-module thormang3-balance-control thormang3-manipulation-module thormang3-kinematics-dynamics ];
+  propagatedBuildInputs = [ ati-ft-sensor motion-module-tutorial sensor-module-tutorial thormang3-action-module thormang3-balance-control thormang3-base-module thormang3-feet-ft-module thormang3-gripper-module thormang3-head-control-module thormang3-kinematics-dynamics thormang3-manager thormang3-manipulation-module thormang3-walking-module ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-formatters, ecl-license, catkin, ecl-type-traits, ecl-containers, ecl-exceptions, ecl-mpl, ecl-config, ecl-math, ecl-build, ecl-linear-algebra }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-build, ecl-config, ecl-containers, ecl-exceptions, ecl-formatters, ecl-license, ecl-linear-algebra, ecl-math, ecl-mpl, ecl-type-traits }:
 buildRosPackage {
   pname = "ros-kinetic-ecl-geometry";
   version = "0.61.17";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-formatters ecl-license ecl-type-traits ecl-containers ecl-exceptions ecl-mpl ecl-config ecl-math ecl-build ecl-linear-algebra ];
-  propagatedBuildInputs = [ ecl-formatters ecl-license ecl-type-traits ecl-containers ecl-mpl ecl-exceptions ecl-config ecl-math ecl-build ecl-linear-algebra ];
+  propagatedBuildInputs = [ ecl-build ecl-config ecl-containers ecl-exceptions ecl-formatters ecl-license ecl-linear-algebra ecl-math ecl-mpl ecl-type-traits ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, boost, sensor-msgs, geometry-msgs, pluginlib, tf, catkin, image-transport, stereo-msgs, cob-perception-msgs, cv-bridge, pcl-conversions, nodelet, roscpp, opencv3 }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cob-perception-msgs, cv-bridge, geometry-msgs, image-transport, nodelet, opencv3, pcl-conversions, pcl-ros, pluginlib, roscpp, sensor-msgs, stereo-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-cob-image-flip";
   version = "0.6.14-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros boost sensor-msgs geometry-msgs pluginlib tf roscpp image-transport stereo-msgs cob-perception-msgs cv-bridge pcl-conversions nodelet opencv3 ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs boost geometry-msgs pluginlib tf image-transport cob-perception-msgs stereo-msgs cv-bridge pcl-conversions nodelet roscpp opencv3 ];
+  propagatedBuildInputs = [ boost cob-perception-msgs cv-bridge geometry-msgs image-transport nodelet opencv3 pcl-conversions pcl-ros pluginlib roscpp sensor-msgs stereo-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

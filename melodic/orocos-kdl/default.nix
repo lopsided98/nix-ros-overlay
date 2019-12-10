@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, eigen, pkg-config, cppunit }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, cppunit, eigen, pkg-config }:
 buildRosPackage {
   pname = "ros-melodic-orocos-kdl";
   version = "1.4.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ eigen ];
   checkInputs = [ cppunit ];
-  propagatedBuildInputs = [ pkg-config eigen catkin ];
+  propagatedBuildInputs = [ catkin eigen pkg-config ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

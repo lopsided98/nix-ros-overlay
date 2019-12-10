@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, tf, eigen, nodelet, rostest, sensor-msgs, dynamic-reconfigure, cmake-modules, roslib, rosbag, rosconsole, nodelet-topic-tools, message-filters, std-msgs, catkin, pcl, roscpp, genmsg, pcl-msgs, tf2-eigen, pcl-conversions }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, eigen, genmsg, message-filters, nodelet, nodelet-topic-tools, pcl, pcl-conversions, pcl-msgs, pluginlib, rosbag, rosconsole, roscpp, roslib, rostest, sensor-msgs, std-msgs, tf, tf2-eigen }:
 buildRosPackage {
   pname = "ros-kinetic-pcl-ros";
   version = "1.4.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib tf eigen nodelet sensor-msgs dynamic-reconfigure cmake-modules roslib rosbag rosconsole message-filters nodelet-topic-tools std-msgs pcl roscpp genmsg pcl-msgs tf2-eigen pcl-conversions ];
+  buildInputs = [ cmake-modules genmsg rosconsole roslib ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ sensor-msgs nodelet-topic-tools message-filters dynamic-reconfigure pluginlib std-msgs tf pcl-msgs pcl tf2-eigen eigen pcl-conversions nodelet roscpp rosbag ];
+  propagatedBuildInputs = [ dynamic-reconfigure eigen message-filters nodelet nodelet-topic-tools pcl pcl-conversions pcl-msgs pluginlib rosbag roscpp sensor-msgs std-msgs tf tf2-eigen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

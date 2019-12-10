@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, laser-assembler, laser-geometry, laser-filters }:
+{ lib, buildRosPackage, fetchurl, catkin, laser-assembler, laser-filters, laser-geometry }:
 buildRosPackage {
   pname = "ros-melodic-laser-pipeline";
   version = "1.6.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ laser-assembler laser-geometry laser-filters ];
+  propagatedBuildInputs = [ laser-assembler laser-filters laser-geometry ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

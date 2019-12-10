@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, message-generation, sensor-msgs, geometry-msgs, std-msgs, tf, catkin, rospy, roscpp, message-runtime, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, joy, message-generation, message-runtime, nav-msgs, roscpp, rospy, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-rr-openrover-basic";
   version = "0.7.1-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs tf rospy roscpp message-generation nav-msgs ];
-  propagatedBuildInputs = [ joy sensor-msgs geometry-msgs std-msgs tf rospy roscpp message-runtime nav-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ geometry-msgs joy message-runtime nav-msgs roscpp rospy sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

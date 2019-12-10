@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, stage-ros, catkin, move-base, amcl, teb-local-planner }:
+{ lib, buildRosPackage, fetchurl, amcl, catkin, map-server, move-base, stage-ros, teb-local-planner }:
 buildRosPackage {
   pname = "ros-melodic-teb-local-planner-tutorials";
   version = "0.2.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ map-server stage-ros move-base amcl teb-local-planner ];
+  propagatedBuildInputs = [ amcl map-server move-base stage-ros teb-local-planner ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

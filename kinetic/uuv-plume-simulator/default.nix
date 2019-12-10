@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, uuv-plume-msgs, std-msgs, pythonPackages, catkin, visualization-msgs, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, rospy, sensor-msgs, std-msgs, uuv-plume-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-plume-simulator";
   version = "0.3.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.numpy sensor-msgs geometry-msgs uuv-plume-msgs std-msgs visualization-msgs rospy ];
-  propagatedBuildInputs = [ pythonPackages.numpy sensor-msgs geometry-msgs uuv-plume-msgs std-msgs visualization-msgs rospy ];
+  propagatedBuildInputs = [ geometry-msgs pythonPackages.numpy rospy sensor-msgs std-msgs uuv-plume-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

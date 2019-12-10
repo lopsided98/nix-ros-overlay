@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, message-filters, srdfdom, urdf, eigen-conversions, dynamic-reconfigure, pluginlib, tf, catkin, actionlib, cmake-modules, moveit-ros-perception, eigen, chomp-motion-planner, moveit-msgs, roscpp, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, chomp-motion-planner, cmake-modules, dynamic-reconfigure, eigen, eigen-conversions, message-filters, moveit-core, moveit-msgs, moveit-ros-perception, pluginlib, roscpp, srdfdom, tf, tf-conversions, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-planning";
   version = "0.9.17-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core message-filters srdfdom urdf eigen-conversions dynamic-reconfigure pluginlib actionlib tf cmake-modules moveit-ros-perception eigen chomp-motion-planner moveit-msgs roscpp tf-conversions ];
-  propagatedBuildInputs = [ moveit-core message-filters dynamic-reconfigure eigen-conversions pluginlib actionlib tf moveit-ros-perception chomp-motion-planner moveit-msgs tf-conversions ];
+  buildInputs = [ cmake-modules eigen roscpp srdfdom urdf ];
+  propagatedBuildInputs = [ actionlib chomp-motion-planner dynamic-reconfigure eigen-conversions message-filters moveit-core moveit-msgs moveit-ros-perception pluginlib tf tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

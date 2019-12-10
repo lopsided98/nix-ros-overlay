@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, nextage-gazebo, urdf, checkerboard-detector, robot-state-publisher, dynamic-tf-publisher, freenect-stack, tf, catkin, turtlebot-description, openni2-launch, gazebo-ros, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, catkin, checkerboard-detector, dynamic-tf-publisher, freenect-stack, gazebo-plugins, gazebo-ros, joint-state-publisher, nextage-gazebo, openni2-launch, robot-state-publisher, tf, turtlebot-description, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-nextage-calibration";
   version = "0.8.5-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ nextage-gazebo ];
-  propagatedBuildInputs = [ joint-state-publisher urdf checkerboard-detector robot-state-publisher dynamic-tf-publisher freenect-stack tf turtlebot-description openni2-launch gazebo-ros gazebo-plugins ];
+  propagatedBuildInputs = [ checkerboard-detector dynamic-tf-publisher freenect-stack gazebo-plugins gazebo-ros joint-state-publisher openni2-launch robot-state-publisher tf turtlebot-description urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

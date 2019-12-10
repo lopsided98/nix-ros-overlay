@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-cmake, tf2, sensor-msgs, diagnostic-msgs, rclcpp-components, gps-msgs, libyamlcpp, tf2-geometry-msgs, geographic-msgs, rclpy, rclcpp, geos, tf2-ros, proj, cv-bridge, pkg-config, ament-cmake-python, swri-roscpp, boost, swri-math-util, rcl-interfaces }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, boost, cv-bridge, diagnostic-msgs, geographic-msgs, geometry-msgs, geos, gps-msgs, libyamlcpp, pkg-config, proj, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-swri-transform-util";
   version = "3.0.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost geometry-msgs proj diagnostic-msgs rclcpp-components swri-math-util gps-msgs libyamlcpp tf2-geometry-msgs geographic-msgs rclpy rcl-interfaces cv-bridge tf2 rclcpp geos tf2-ros swri-roscpp ];
-  propagatedBuildInputs = [ geometry-msgs tf2 sensor-msgs diagnostic-msgs rclcpp-components gps-msgs libyamlcpp tf2-geometry-msgs geographic-msgs rclpy rclcpp geos tf2-ros proj cv-bridge swri-roscpp boost swri-math-util rcl-interfaces ];
-  nativeBuildInputs = [ pkg-config ament-cmake ament-cmake-python ];
+  propagatedBuildInputs = [ boost cv-bridge diagnostic-msgs geographic-msgs geometry-msgs geos gps-msgs libyamlcpp proj rcl-interfaces rclcpp rclcpp-components rclpy sensor-msgs swri-math-util swri-roscpp tf2 tf2-geometry-msgs tf2-ros ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python pkg-config ];
 
   meta = {
     description = ''The swri_transform_util package contains utility functions and classes for

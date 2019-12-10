@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, tf, pythonPackages, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, pythonPackages, rospy, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-razor-imu-9dof";
   version = "1.2.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure tf pythonPackages.pyserial rospy ];
+  propagatedBuildInputs = [ dynamic-reconfigure pythonPackages.pyserial rospy sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

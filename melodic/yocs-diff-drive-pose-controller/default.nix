@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, yocs-math-toolkit, pluginlib, std-msgs, tf, catkin, nodelet, roscpp, ecl-threads, yocs-controllers }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-threads, geometry-msgs, nodelet, pluginlib, roscpp, sensor-msgs, std-msgs, tf, yocs-controllers, yocs-math-toolkit }:
 buildRosPackage {
   pname = "ros-melodic-yocs-diff-drive-pose-controller";
   version = "0.8.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs yocs-math-toolkit pluginlib std-msgs tf nodelet roscpp ecl-threads yocs-controllers ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs yocs-math-toolkit pluginlib std-msgs tf nodelet roscpp ecl-threads yocs-controllers ];
+  propagatedBuildInputs = [ ecl-threads geometry-msgs nodelet pluginlib roscpp sensor-msgs std-msgs tf yocs-controllers yocs-math-toolkit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

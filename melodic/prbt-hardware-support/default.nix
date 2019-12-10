@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, urdf, pilz-testutils, rosunit, tf2, rostest, sensor-msgs, dynamic-reconfigure, cmake-modules, tf2-geometry-msgs, tf2-ros, libmodbus, message-filters, std-msgs, std-srvs, catkin, canopen-chain-node, roscpp, pilz-utils, message-generation, code-coverage, message-runtime, pilz-msgs }:
+{ lib, buildRosPackage, fetchurl, canopen-chain-node, catkin, cmake-modules, code-coverage, dynamic-reconfigure, libmodbus, message-filters, message-generation, message-runtime, pilz-msgs, pilz-testutils, pilz-utils, roscpp, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-melodic-prbt-hardware-support";
   version = "0.5.13-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters libmodbus urdf dynamic-reconfigure std-msgs std-srvs roscpp tf2-geometry-msgs canopen-chain-node tf2 pilz-utils message-generation pilz-msgs tf2-ros ];
-  checkInputs = [ pilz-testutils code-coverage cmake-modules rosunit rostest ];
-  propagatedBuildInputs = [ sensor-msgs std-msgs std-srvs roscpp message-runtime pilz-msgs ];
+  buildInputs = [ canopen-chain-node dynamic-reconfigure libmodbus message-filters message-generation pilz-utils tf2 tf2-geometry-msgs tf2-ros urdf ];
+  checkInputs = [ cmake-modules code-coverage pilz-testutils rostest rosunit ];
+  propagatedBuildInputs = [ message-runtime pilz-msgs roscpp sensor-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

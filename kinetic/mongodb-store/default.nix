@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, std-srvs, catkin, pythonPackages, openssl, mongodb-store-msgs, rospy, roscpp, topic-tools, message-generation, libmongocxx-ros, mongodb, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, libmongocxx-ros, message-generation, mongodb, mongodb-store-msgs, openssl, pythonPackages, roscpp, rospy, rostest, std-msgs, std-srvs, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-mongodb-store";
   version = "0.4.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs std-msgs std-srvs openssl pythonPackages.catkin-pkg rospy roscpp mongodb-store-msgs topic-tools message-generation libmongocxx-ros mongodb rostest ];
-  propagatedBuildInputs = [ geometry-msgs std-msgs std-srvs pythonPackages.pymongo mongodb-store-msgs roscpp topic-tools rospy libmongocxx-ros mongodb ];
+  buildInputs = [ message-generation openssl pythonPackages.catkin-pkg rostest ];
+  propagatedBuildInputs = [ geometry-msgs libmongocxx-ros mongodb mongodb-store-msgs pythonPackages.pymongo roscpp rospy std-msgs std-srvs topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

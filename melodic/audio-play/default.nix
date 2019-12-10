@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gst_all_1, audio-common-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, audio-common-msgs, catkin, gst_all_1, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-audio-play";
   version = "0.3.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gst_all_1.gst-plugins-base audio-common-msgs gst_all_1.gstreamer roscpp ];
-  propagatedBuildInputs = [ gst_all_1.gst-plugins-good audio-common-msgs gst_all_1.gstreamer gst_all_1.gst-plugins-ugly roscpp gst_all_1.gst-plugins-base ];
+  propagatedBuildInputs = [ audio-common-msgs gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-ugly gst_all_1.gstreamer roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

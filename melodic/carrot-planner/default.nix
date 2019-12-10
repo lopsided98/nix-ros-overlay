@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, base-local-planner, tf2, tf2-geometry-msgs, nav-core, eigen, costmap-2d, roscpp, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, eigen, nav-core, pluginlib, roscpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-carrot-planner";
   version = "1.16.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib base-local-planner roscpp tf2-geometry-msgs nav-core eigen costmap-2d tf2 tf2-ros ];
-  propagatedBuildInputs = [ pluginlib base-local-planner roscpp costmap-2d nav-core eigen tf2 tf2-ros ];
+  buildInputs = [ tf2-geometry-msgs ];
+  propagatedBuildInputs = [ base-local-planner costmap-2d eigen nav-core pluginlib roscpp tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

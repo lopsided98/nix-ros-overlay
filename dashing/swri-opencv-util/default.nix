@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, swri-math-util, cv-bridge, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, swri-math-util }:
 buildRosPackage {
   pname = "ros-dashing-swri-opencv-util";
   version = "3.0.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost swri-math-util cv-bridge ];
-  propagatedBuildInputs = [ boost swri-math-util cv-bridge ];
+  propagatedBuildInputs = [ boost cv-bridge swri-math-util ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

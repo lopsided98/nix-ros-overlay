@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, rosgraph, tf, pythonPackages, catkin, rostopic, gazebo-msgs, visualization-msgs, roscpp, topic-tools, rospy, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-msgs, geometry-msgs, nav-msgs, pythonPackages, roscpp, rosgraph, rospy, rostopic, sensor-msgs, tf, topic-tools, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-assistants";
   version = "0.6.13";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs tf roscpp topic-tools nav-msgs ];
-  propagatedBuildInputs = [ pythonPackages.numpy sensor-msgs geometry-msgs rosgraph tf rostopic gazebo-msgs visualization-msgs roscpp topic-tools rospy nav-msgs ];
+  propagatedBuildInputs = [ gazebo-msgs geometry-msgs nav-msgs pythonPackages.numpy roscpp rosgraph rospy rostopic sensor-msgs tf topic-tools visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

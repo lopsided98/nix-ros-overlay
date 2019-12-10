@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, nav-msgs, catkin, rdl-msgs, roscpp, rdl-dynamics, rdl-urdfreader, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-msgs, rdl-dynamics, rdl-msgs, rdl-urdfreader, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rdl-ros-tools";
   version = "3.2.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs rdl-urdfreader rdl-msgs roscpp rdl-dynamics nav-msgs rostest ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs rdl-urdfreader rdl-msgs roscpp rdl-dynamics nav-msgs rostest ];
+  propagatedBuildInputs = [ geometry-msgs nav-msgs rdl-dynamics rdl-msgs rdl-urdfreader roscpp rostest sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

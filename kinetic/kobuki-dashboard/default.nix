@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-msgs, rospy, catkin, rqt-robot-dashboard }:
+{ lib, buildRosPackage, fetchurl, catkin, kobuki-msgs, rospy, rqt-robot-dashboard }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-dashboard";
   version = "0.5.7";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ kobuki-msgs rospy rqt-robot-dashboard ];
   propagatedBuildInputs = [ kobuki-msgs rospy rqt-robot-dashboard ];
   nativeBuildInputs = [ catkin ];
 

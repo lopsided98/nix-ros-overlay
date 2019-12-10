@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, prbt-moveit-config, prbt-ikfast-manipulator-plugin, catkin, prbt-support }:
+{ lib, buildRosPackage, fetchurl, catkin, prbt-ikfast-manipulator-plugin, prbt-moveit-config, prbt-support }:
 buildRosPackage {
   pname = "ros-kinetic-pilz-robots";
   version = "0.4.11-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ prbt-moveit-config prbt-ikfast-manipulator-plugin prbt-support ];
+  propagatedBuildInputs = [ prbt-ikfast-manipulator-plugin prbt-moveit-config prbt-support ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

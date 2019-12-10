@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, libGLU, cmake, suitesparse, libGL, eigen }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake, eigen, libGL, libGLU, suitesparse }:
 buildRosPackage {
   pname = "ros-melodic-libg2o";
   version = "2018.3.25";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ boost libGLU libGL suitesparse eigen ];
-  propagatedBuildInputs = [ boost catkin libGLU libGL suitesparse eigen ];
+  propagatedBuildInputs = [ boost catkin eigen libGL libGLU suitesparse ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rviz-recorder-buttons, catkin, recordit }:
+{ lib, buildRosPackage, fetchurl, catkin, recordit, rviz-recorder-buttons }:
 buildRosPackage {
   pname = "ros-kinetic-robot-recorder";
   version = "1.0.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rviz-recorder-buttons recordit ];
+  propagatedBuildInputs = [ recordit rviz-recorder-buttons ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

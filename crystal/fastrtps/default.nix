@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, asio, cmake, openssl, tinyxml-2, fastcdr }:
+{ lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, openssl, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-crystal-fastrtps";
   version = "1.7.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ tinyxml-2 fastcdr asio ];
-  propagatedBuildInputs = [ tinyxml-2 openssl fastcdr ];
+  buildInputs = [ asio ];
+  propagatedBuildInputs = [ fastcdr openssl tinyxml-2 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

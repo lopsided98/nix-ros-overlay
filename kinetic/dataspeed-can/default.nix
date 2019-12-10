@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dataspeed-can-usb, dataspeed-can-tools, dataspeed-can-msg-filters }:
+{ lib, buildRosPackage, fetchurl, catkin, dataspeed-can-msg-filters, dataspeed-can-tools, dataspeed-can-usb }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-can";
   version = "1.0.12";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ dataspeed-can-usb dataspeed-can-tools dataspeed-can-msg-filters ];
+  propagatedBuildInputs = [ dataspeed-can-msg-filters dataspeed-can-tools dataspeed-can-usb ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

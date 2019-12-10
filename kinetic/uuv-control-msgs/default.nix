@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-msgs, catkin, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-control-msgs";
   version = "0.6.13";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation geometry-msgs ];
-  propagatedBuildInputs = [ std-msgs message-generation geometry-msgs message-runtime ];
+  propagatedBuildInputs = [ geometry-msgs message-generation message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

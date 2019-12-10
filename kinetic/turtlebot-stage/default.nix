@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, navigation, stage-ros, turtlebot-navigation, catkin, yocs-virtual-sensor, yocs-velocity-smoother, turtlebot-bringup }:
+{ lib, buildRosPackage, fetchurl, catkin, navigation, stage-ros, turtlebot-bringup, turtlebot-navigation, yocs-velocity-smoother, yocs-virtual-sensor }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-stage";
   version = "2.2.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ navigation stage-ros turtlebot-navigation yocs-virtual-sensor yocs-velocity-smoother turtlebot-bringup ];
+  propagatedBuildInputs = [ navigation stage-ros turtlebot-bringup turtlebot-navigation yocs-velocity-smoother yocs-virtual-sensor ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

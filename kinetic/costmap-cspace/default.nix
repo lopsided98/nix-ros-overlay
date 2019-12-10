@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, rostest, geometry-msgs, costmap-cspace-msgs, catkin, tf2-sensor-msgs, laser-geometry, neonavigation-common, rosunit, roslint, tf2-geometry-msgs, roscpp, nav-msgs, xmlrpcpp, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, costmap-cspace-msgs, geometry-msgs, laser-geometry, nav-msgs, neonavigation-common, roscpp, roslint, rostest, rosunit, sensor-msgs, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-kinetic-costmap-cspace";
   version = "0.5.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs costmap-cspace-msgs tf2-sensor-msgs laser-geometry neonavigation-common tf2-geometry-msgs roscpp nav-msgs xmlrpcpp tf2-ros ];
   checkInputs = [ roslint rostest rosunit ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs costmap-cspace-msgs tf2-sensor-msgs laser-geometry neonavigation-common tf2-geometry-msgs roscpp nav-msgs xmlrpcpp tf2-ros ];
+  propagatedBuildInputs = [ costmap-cspace-msgs geometry-msgs laser-geometry nav-msgs neonavigation-common roscpp sensor-msgs tf2-geometry-msgs tf2-ros tf2-sensor-msgs xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, rosidl-default-generators, builtin-interfaces, ament-cmake-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-rosbridge-msgs";
   version = "1.0.2-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ builtin-interfaces ];
   propagatedBuildInputs = [ rosidl-default-runtime ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake-ros ];
+  nativeBuildInputs = [ ament-cmake-ros rosidl-default-generators ];
 
   meta = {
     description = ''Package containing message files'';

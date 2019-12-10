@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, eigen-conversions, interactive-markers, tf, laser-assembler, openni-launch, image-transport, jsk-footstep-msgs, nodelet, nav-msgs, rostest, kdl-parser, sensor-msgs, diagnostic-msgs, rosboost-cfg, dynamic-reconfigure, octomap, image-view2, roscpp-tutorials, libyamlcpp, openni2-launch, octomap-server, jsk-tools, jsk-perception, tf2-ros, jsk-topic-tools, stereo-image-proc, moveit-core, pcl-ros, resized-image-transport, checkerboard-detector, std-msgs, std-srvs, jsk-pcl-ros-utils, pythonPackages, jsk-recognition-msgs, catkin, jsk-data, jsk-recognition-utils, robot-self-filter, cv-bridge, topic-tools, roslaunch, kdl-conversions, image-geometry, boost, pcl-msgs, moveit-ros-perception, stereo-msgs, pcl-conversions, visualization-msgs, diagnostic-updater, tf-conversions, jsk-interactive-marker }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, checkerboard-detector, cv-bridge, diagnostic-msgs, diagnostic-updater, dynamic-reconfigure, eigen-conversions, geometry-msgs, image-geometry, image-transport, image-view2, interactive-markers, jsk-data, jsk-footstep-msgs, jsk-interactive-marker, jsk-pcl-ros-utils, jsk-perception, jsk-recognition-msgs, jsk-recognition-utils, jsk-tools, jsk-topic-tools, kdl-conversions, kdl-parser, laser-assembler, libyamlcpp, moveit-core, moveit-ros-perception, nav-msgs, nodelet, octomap, octomap-server, openni-launch, openni2-launch, pcl-conversions, pcl-msgs, pcl-ros, pythonPackages, resized-image-transport, robot-self-filter, rosboost-cfg, roscpp-tutorials, roslaunch, rostest, sensor-msgs, std-msgs, std-srvs, stereo-image-proc, stereo-msgs, tf, tf-conversions, tf2-ros, topic-tools, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-jsk-pcl-ros";
   version = "1.2.10";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ jsk-topic-tools pcl-ros interactive-markers jsk-pcl-ros-utils tf laser-assembler jsk-recognition-utils jsk-data pcl-msgs libyamlcpp moveit-ros-perception octomap-server cv-bridge tf-conversions image-geometry ];
-  checkInputs = [ jsk-tools roslaunch rostest jsk-perception ];
-  propagatedBuildInputs = [ geometry-msgs eigen-conversions interactive-markers tf laser-assembler openni-launch image-transport jsk-footstep-msgs nodelet nav-msgs kdl-parser sensor-msgs diagnostic-msgs rosboost-cfg dynamic-reconfigure octomap image-view2 roscpp-tutorials libyamlcpp openni2-launch octomap-server tf2-ros jsk-topic-tools pcl-ros stereo-image-proc moveit-core resized-image-transport checkerboard-detector pythonPackages.scikitlearn std-msgs std-srvs jsk-pcl-ros-utils jsk-recognition-msgs jsk-recognition-utils jsk-data robot-self-filter cv-bridge topic-tools kdl-conversions image-geometry boost pcl-msgs stereo-msgs moveit-ros-perception pcl-conversions visualization-msgs diagnostic-updater tf-conversions jsk-interactive-marker ];
+  checkInputs = [ jsk-perception jsk-tools roslaunch rostest ];
+  propagatedBuildInputs = [ boost checkerboard-detector cv-bridge diagnostic-msgs diagnostic-updater dynamic-reconfigure eigen-conversions geometry-msgs image-geometry image-transport image-view2 interactive-markers jsk-data jsk-footstep-msgs jsk-interactive-marker jsk-pcl-ros-utils jsk-recognition-msgs jsk-recognition-utils jsk-topic-tools kdl-conversions kdl-parser laser-assembler libyamlcpp moveit-core moveit-ros-perception nav-msgs nodelet octomap octomap-server openni-launch openni2-launch pcl-conversions pcl-msgs pcl-ros pythonPackages.scikitlearn resized-image-transport robot-self-filter rosboost-cfg roscpp-tutorials sensor-msgs std-msgs std-srvs stereo-image-proc stereo-msgs tf tf-conversions tf2-ros topic-tools visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

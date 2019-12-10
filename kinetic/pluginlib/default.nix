@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake-modules, roslib, catkin, class-loader, tinyxml-2, rosconsole }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, class-loader, cmake-modules, rosconsole, roslib, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-kinetic-pluginlib";
   version = "1.11.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost cmake-modules roslib class-loader tinyxml-2 rosconsole ];
-  propagatedBuildInputs = [ boost roslib class-loader tinyxml-2 rosconsole ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ boost class-loader rosconsole roslib tinyxml-2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

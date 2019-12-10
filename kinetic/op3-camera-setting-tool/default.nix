@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, boost, dynamic-reconfigure, std-msgs, catkin, roslib, libyamlcpp, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, dynamic-reconfigure, libyamlcpp, message-generation, message-runtime, roscpp, roslib, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-op3-camera-setting-tool";
   version = "0.2.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost dynamic-reconfigure std-msgs roslib libyamlcpp roscpp message-generation ];
-  propagatedBuildInputs = [ boost dynamic-reconfigure std-msgs roslib libyamlcpp roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ boost dynamic-reconfigure libyamlcpp message-runtime roscpp roslib std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

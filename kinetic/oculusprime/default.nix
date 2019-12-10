@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, dynamic-reconfigure, map-server, std-msgs, catkin, gmapping, openni2-launch, nodelet, roscpp, visualization-msgs, move-base, rospy, amcl, openni2-camera, dwa-local-planner, depthimage-to-laserscan }:
+{ lib, buildRosPackage, fetchurl, amcl, catkin, depthimage-to-laserscan, dwa-local-planner, dynamic-reconfigure, gmapping, map-server, move-base, nodelet, openni2-camera, openni2-launch, pcl-ros, roscpp, rospy, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-oculusprime";
   version = "0.1.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros dynamic-reconfigure std-msgs roscpp nodelet visualization-msgs rospy ];
-  propagatedBuildInputs = [ pcl-ros dynamic-reconfigure map-server std-msgs gmapping openni2-launch nodelet roscpp visualization-msgs move-base rospy amcl openni2-camera dwa-local-planner depthimage-to-laserscan ];
+  propagatedBuildInputs = [ amcl depthimage-to-laserscan dwa-local-planner dynamic-reconfigure gmapping map-server move-base nodelet openni2-camera openni2-launch pcl-ros roscpp rospy std-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

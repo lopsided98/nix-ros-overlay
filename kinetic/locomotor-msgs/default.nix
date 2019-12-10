@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-runtime, catkin, actionlib-msgs, nav-2d-msgs, message-generation }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, nav-2d-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-locomotor-msgs";
   version = "0.2.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation actionlib-msgs nav-2d-msgs ];
-  propagatedBuildInputs = [ message-runtime actionlib-msgs nav-2d-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib-msgs message-runtime nav-2d-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

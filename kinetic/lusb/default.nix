@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libusb1, boost, libusb, catkin }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, libusb, libusb1 }:
 buildRosPackage {
   pname = "ros-kinetic-lusb";
   version = "1.1.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libusb1 boost ];
+  buildInputs = [ libusb1 ];
   propagatedBuildInputs = [ boost libusb ];
   nativeBuildInputs = [ catkin ];
 

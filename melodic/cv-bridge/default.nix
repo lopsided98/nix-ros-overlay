@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, rostest, pythonPackages, catkin, python, opencv3, rosconsole }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, opencv3, python, pythonPackages, rosconsole, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cv-bridge";
   version = "1.13.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs boost pythonPackages.opencv3 python opencv3 rosconsole ];
   checkInputs = [ pythonPackages.numpy rostest ];
-  propagatedBuildInputs = [ sensor-msgs boost pythonPackages.opencv3 python opencv3 rosconsole ];
+  propagatedBuildInputs = [ boost opencv3 python pythonPackages.opencv3 rosconsole sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

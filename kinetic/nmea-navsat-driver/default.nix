@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, catkin, pythonPackages, roslint, rospy, nmea-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nmea-msgs, pythonPackages, roslint, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-nmea-navsat-driver";
   version = "0.5.1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs pythonPackages.pyserial rospy nmea-msgs ];
+  propagatedBuildInputs = [ geometry-msgs nmea-msgs pythonPackages.pyserial rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

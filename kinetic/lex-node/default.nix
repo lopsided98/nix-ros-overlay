@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, aws-ros1-common, catkin, roscpp, gtest, gmock, aws-common, rostest, lex-common-msgs }:
+{ lib, buildRosPackage, fetchurl, aws-common, aws-ros1-common, catkin, gmock, gtest, lex-common-msgs, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-lex-node";
   version = "2.0.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs aws-ros1-common roscpp aws-common lex-common-msgs ];
-  checkInputs = [ gtest gmock rostest ];
-  propagatedBuildInputs = [ std-msgs aws-ros1-common roscpp aws-common lex-common-msgs ];
+  checkInputs = [ gmock gtest rostest ];
+  propagatedBuildInputs = [ aws-common aws-ros1-common lex-common-msgs roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, diagnostic-msgs, create-node, catkin, rqt-gui-py, rqt-robot-dashboard, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, create-node, diagnostic-msgs, rospy, rqt-gui, rqt-gui-py, rqt-robot-dashboard }:
 buildRosPackage {
   pname = "ros-kinetic-create-dashboard";
   version = "2.3.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui diagnostic-msgs create-node rqt-gui-py rqt-robot-dashboard rospy ];
-  propagatedBuildInputs = [ rqt-gui diagnostic-msgs create-node rqt-gui-py rqt-robot-dashboard rospy ];
+  propagatedBuildInputs = [ create-node diagnostic-msgs rospy rqt-gui rqt-gui-py rqt-robot-dashboard ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

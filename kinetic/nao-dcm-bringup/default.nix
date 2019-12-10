@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, catkin, nao-control, naoqi-dcm-driver }:
+{ lib, buildRosPackage, fetchurl, catkin, nao-control, naoqi-dcm-driver, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-nao-dcm-bringup";
   version = "0.0.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rospy nao-control naoqi-dcm-driver ];
+  propagatedBuildInputs = [ nao-control naoqi-dcm-driver rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

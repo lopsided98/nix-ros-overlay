@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, image-transport, actionlib-msgs, rostest, sensor-msgs, dynamic-reconfigure, roslib, rosbag, stereo-image-proc, message-filters, std-msgs, std-srvs, catkin, cv-bridge, roscpp, message-generation, rospy, image-geometry, people-msgs, actionlib, stereo-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, cv-bridge, dynamic-reconfigure, geometry-msgs, image-geometry, image-transport, message-filters, message-generation, message-runtime, people-msgs, rosbag, roscpp, roslib, rospy, rostest, sensor-msgs, std-msgs, std-srvs, stereo-image-proc, stereo-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-face-detector";
   version = "1.1.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs tf image-transport actionlib-msgs sensor-msgs roslib rosbag stereo-image-proc message-filters std-msgs std-srvs cv-bridge roscpp rospy message-generation image-geometry people-msgs actionlib stereo-msgs ];
-  checkInputs = [ stereo-image-proc rostest ];
-  propagatedBuildInputs = [ geometry-msgs tf image-transport actionlib-msgs sensor-msgs dynamic-reconfigure roslib rosbag stereo-image-proc message-filters std-msgs std-srvs cv-bridge roscpp rospy image-geometry people-msgs actionlib stereo-msgs message-runtime ];
+  buildInputs = [ message-generation ];
+  checkInputs = [ rostest stereo-image-proc ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs cv-bridge dynamic-reconfigure geometry-msgs image-geometry image-transport message-filters message-runtime people-msgs rosbag roscpp roslib rospy sensor-msgs std-msgs std-srvs stereo-image-proc stereo-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

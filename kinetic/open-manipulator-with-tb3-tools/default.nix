@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, smach-ros, nav-msgs, robot-state-publisher, amcl, joint-state-publisher, moveit-core, moveit-ros-planning-interface, std-msgs, catkin, smach, moveit-ros-planning, roscpp, ar-track-alvar-msgs, rospy, roslaunch, trajectory-msgs, map-server, open-manipulator-msgs, moveit-msgs, move-base }:
+{ lib, buildRosPackage, fetchurl, amcl, ar-track-alvar-msgs, catkin, geometry-msgs, joint-state-publisher, map-server, move-base, moveit-core, moveit-msgs, moveit-ros-planning, moveit-ros-planning-interface, nav-msgs, open-manipulator-msgs, robot-state-publisher, roscpp, roslaunch, rospy, smach, smach-ros, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-open-manipulator-with-tb3-tools";
   version = "1.1.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs moveit-core geometry-msgs std-msgs moveit-ros-planning-interface roslaunch smach roscpp smach-ros open-manipulator-msgs moveit-msgs moveit-ros-planning ar-track-alvar-msgs rospy nav-msgs ];
-  propagatedBuildInputs = [ geometry-msgs smach-ros nav-msgs robot-state-publisher amcl joint-state-publisher moveit-core std-msgs moveit-ros-planning-interface smach roscpp moveit-ros-planning ar-track-alvar-msgs rospy roslaunch trajectory-msgs map-server open-manipulator-msgs move-base moveit-msgs ];
+  propagatedBuildInputs = [ amcl ar-track-alvar-msgs geometry-msgs joint-state-publisher map-server move-base moveit-core moveit-msgs moveit-ros-planning moveit-ros-planning-interface nav-msgs open-manipulator-msgs robot-state-publisher roscpp roslaunch rospy smach smach-ros std-msgs trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

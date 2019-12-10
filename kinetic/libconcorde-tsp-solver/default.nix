@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libqsopt, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, libqsopt }:
 buildRosPackage {
   pname = "ros-kinetic-libconcorde-tsp-solver";
   version = "0.6.12";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libqsopt ];
   propagatedBuildInputs = [ libqsopt ];
   nativeBuildInputs = [ catkin ];
 

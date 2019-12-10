@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-msgs, catkin, rospy, schunk-sdh }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-msgs, rospy, schunk-sdh }:
 buildRosPackage {
   pname = "ros-melodic-schunk-simulated-tactile-sensors";
   version = "0.6.14-r1";

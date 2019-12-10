@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ros-type-introspection, roscpp, topic-tools, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, ros-type-introspection, roscpp, rospy, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-topic-switch";
   version = "0.0.1-r2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ topic-tools rospy ros-type-introspection roscpp ];
-  propagatedBuildInputs = [ topic-tools rospy ros-type-introspection roscpp ];
+  propagatedBuildInputs = [ ros-type-introspection roscpp rospy topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, roscpp-serialization, geometry-msgs, std-msgs, actionlib, catkin, calibration-msgs, actionlib-msgs, rostime, roscpp, rosconsole }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, calibration-msgs, catkin, geometry-msgs, rosconsole, roscpp, roscpp-serialization, rostime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-interval-intersection";
   version = "0.10.14";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost geometry-msgs roscpp-serialization std-msgs actionlib calibration-msgs actionlib-msgs rostime roscpp rosconsole ];
-  propagatedBuildInputs = [ boost geometry-msgs roscpp-serialization std-msgs actionlib calibration-msgs actionlib-msgs rostime roscpp rosconsole ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs boost calibration-msgs geometry-msgs rosconsole roscpp roscpp-serialization rostime std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

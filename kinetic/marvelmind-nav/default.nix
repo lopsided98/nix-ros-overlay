@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, catkin, rospy, visualization-msgs, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, roscpp, rospy, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-marvelmind-nav";
   version = "1.0.8";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs rospy visualization-msgs roscpp message-generation ];
-  propagatedBuildInputs = [ std-msgs rospy visualization-msgs roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ message-runtime roscpp rospy std-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

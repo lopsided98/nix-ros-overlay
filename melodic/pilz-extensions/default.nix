@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-limits-interface, code-coverage, catkin, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, code-coverage, joint-limits-interface, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-pilz-extensions";
   version = "0.4.10-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ joint-limits-interface roscpp ];
+  buildInputs = [ roscpp ];
   checkInputs = [ code-coverage rostest ];
   propagatedBuildInputs = [ joint-limits-interface ];
   nativeBuildInputs = [ catkin ];

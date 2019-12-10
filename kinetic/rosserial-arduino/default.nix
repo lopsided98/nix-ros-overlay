@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosserial-msgs, message-generation, message-runtime, arduino, rosserial-client, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, arduino, catkin, message-generation, message-runtime, rospy, rosserial-client, rosserial-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rosserial-arduino";
   version = "0.7.7";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ rosserial-msgs arduino rosserial-client rospy message-runtime ];
+  propagatedBuildInputs = [ arduino message-runtime rospy rosserial-client rosserial-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, tf, catkin, grid-map-core, visualization-msgs, roscpp, grid-map-msgs, grid-map-ros, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, grid-map-core, grid-map-msgs, grid-map-ros, nav-msgs, roscpp, sensor-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-grid-map-visualization";
   version = "1.6.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs tf grid-map-core visualization-msgs roscpp grid-map-msgs grid-map-ros nav-msgs ];
-  propagatedBuildInputs = [ sensor-msgs tf grid-map-core visualization-msgs roscpp grid-map-msgs grid-map-ros nav-msgs ];
+  propagatedBuildInputs = [ grid-map-core grid-map-msgs grid-map-ros nav-msgs roscpp sensor-msgs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

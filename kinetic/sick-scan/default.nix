@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, dynamic-reconfigure, catkin, pcl-conversions, visualization-msgs, roscpp, message-runtime, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, message-generation, message-runtime, pcl-conversions, pcl-ros, roscpp, sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-sick-scan";
   version = "1.4.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs dynamic-reconfigure pcl-conversions visualization-msgs roscpp message-generation diagnostic-updater ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs dynamic-reconfigure pcl-conversions visualization-msgs roscpp message-runtime diagnostic-updater ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure message-runtime pcl-conversions pcl-ros roscpp sensor-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

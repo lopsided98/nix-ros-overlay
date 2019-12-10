@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp-action, ament-cmake, test-msgs, ament-cmake-gmock, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, rclcpp, rclcpp-action, test-msgs }:
 buildRosPackage {
   pname = "ros-dashing-realtime-tools";
   version = "2.0.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-action rclcpp ];
-  checkInputs = [ ament-cmake-gmock test-msgs rclcpp-action ];
-  propagatedBuildInputs = [ rclcpp-action rclcpp ament-cmake ];
+  checkInputs = [ ament-cmake-gmock rclcpp-action test-msgs ];
+  propagatedBuildInputs = [ ament-cmake rclcpp rclcpp-action ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

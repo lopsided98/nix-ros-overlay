@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eigen, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-robotis-math";
   version = "0.2.6";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen roscpp ];
   propagatedBuildInputs = [ eigen roscpp ];
   nativeBuildInputs = [ catkin ];
 

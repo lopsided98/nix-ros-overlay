@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, message-generation, geometry-msgs, interactive-markers, moveit-ros-planning-interface, tf, catkin, tf2-geometry-msgs, eigen, visualization-msgs, roscpp, message-runtime, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, interactive-markers, message-generation, message-runtime, move-base-msgs, moveit-core, moveit-ros-planning-interface, roscpp, tf, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-move-base-to-manip";
   version = "1.0.18-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core geometry-msgs message-runtime interactive-markers moveit-ros-planning-interface tf tf2-geometry-msgs eigen visualization-msgs roscpp message-generation move-base-msgs ];
-  propagatedBuildInputs = [ moveit-core geometry-msgs message-runtime interactive-markers moveit-ros-planning-interface tf tf2-geometry-msgs eigen visualization-msgs roscpp message-generation move-base-msgs ];
+  propagatedBuildInputs = [ eigen geometry-msgs interactive-markers message-generation message-runtime move-base-msgs moveit-core moveit-ros-planning-interface roscpp tf tf2-geometry-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

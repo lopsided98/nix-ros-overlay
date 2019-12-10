@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, people-msgs, catkin, face-detector, people-tracking-filter, leg-detector, people-velocity-tracker }:
+{ lib, buildRosPackage, fetchurl, catkin, face-detector, leg-detector, people-msgs, people-tracking-filter, people-velocity-tracker }:
 buildRosPackage {
   pname = "ros-melodic-people";
   version = "1.2.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ people-msgs face-detector people-tracking-filter leg-detector people-velocity-tracker ];
+  propagatedBuildInputs = [ face-detector leg-detector people-msgs people-tracking-filter people-velocity-tracker ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

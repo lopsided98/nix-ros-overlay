@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ncurses, boost, diagnostic-msgs, std-msgs, pythonPackages, catkin, cmake-modules, roslib, rosbash, tinyxml, rosfmt, python, libyamlcpp, rosmon-msgs, catch-ros, roscpp, rostest, rospack }:
+{ lib, buildRosPackage, fetchurl, boost, catch-ros, catkin, cmake-modules, diagnostic-msgs, libyamlcpp, ncurses, python, pythonPackages, rosbash, roscpp, rosfmt, roslib, rosmon-msgs, rospack, rostest, std-msgs, tinyxml }:
 buildRosPackage {
   pname = "ros-kinetic-rosmon-core";
   version = "2.1.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ncurses boost diagnostic-msgs std-msgs cmake-modules roslib tinyxml rosbash libyamlcpp rosmon-msgs python roscpp rosfmt rospack ];
+  buildInputs = [ python ];
   checkInputs = [ catch-ros pythonPackages.rospkg rostest ];
-  propagatedBuildInputs = [ ncurses boost diagnostic-msgs std-msgs cmake-modules roslib tinyxml rosbash libyamlcpp rosmon-msgs roscpp rosfmt rospack ];
+  propagatedBuildInputs = [ boost cmake-modules diagnostic-msgs libyamlcpp ncurses rosbash roscpp rosfmt roslib rosmon-msgs rospack std-msgs tinyxml ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

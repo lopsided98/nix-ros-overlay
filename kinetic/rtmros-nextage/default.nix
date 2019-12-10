@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nextage-gazebo, nextage-ros-bridge, nextage-moveit-config, catkin, nextage-calibration, nextage-description, nextage-ik-plugin }:
+{ lib, buildRosPackage, fetchurl, catkin, nextage-calibration, nextage-description, nextage-gazebo, nextage-ik-plugin, nextage-moveit-config, nextage-ros-bridge }:
 buildRosPackage {
   pname = "ros-kinetic-rtmros-nextage";
   version = "0.8.5-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ nextage-gazebo nextage-ros-bridge nextage-moveit-config nextage-calibration nextage-description nextage-ik-plugin ];
+  propagatedBuildInputs = [ nextage-calibration nextage-description nextage-gazebo nextage-ik-plugin nextage-moveit-config nextage-ros-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

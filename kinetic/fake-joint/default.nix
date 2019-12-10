@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, fake-joint-launch, catkin, fake-joint-driver }:
+{ lib, buildRosPackage, fetchurl, catkin, fake-joint-driver, fake-joint-launch }:
 buildRosPackage {
   pname = "ros-kinetic-fake-joint";
   version = "0.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ fake-joint-launch fake-joint-driver ];
+  propagatedBuildInputs = [ fake-joint-driver fake-joint-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

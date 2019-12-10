@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, roscpp, tinyxml, visualization-msgs, opencv3 }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, opencv3, roscpp, tinyxml, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-vision-utils";
   version = "0.6.14-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules tinyxml visualization-msgs roscpp opencv3 ];
-  propagatedBuildInputs = [ cmake-modules tinyxml visualization-msgs roscpp opencv3 ];
+  propagatedBuildInputs = [ cmake-modules opencv3 roscpp tinyxml visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

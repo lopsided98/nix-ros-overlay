@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin-pip, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, catkin-pip }:
 buildRosPackage {
   pname = "ros-kinetic-tblib";
   version = "1.2.0-r2";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, actionlib, robot-controllers-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, pluginlib, robot-controllers-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-robot-controllers-interface";
   version = "0.6.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robot-controllers-msgs pluginlib actionlib roscpp ];
-  propagatedBuildInputs = [ robot-controllers-msgs pluginlib actionlib roscpp ];
+  propagatedBuildInputs = [ actionlib pluginlib robot-controllers-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

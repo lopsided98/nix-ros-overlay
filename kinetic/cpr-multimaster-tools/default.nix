@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-relay, message-relay, catkin, clock-relay, multimaster-launch, multimaster-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, clock-relay, message-relay, multimaster-launch, multimaster-msgs, tf2-relay }:
 buildRosPackage {
   pname = "ros-kinetic-cpr-multimaster-tools";
   version = "0.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ tf2-relay message-relay clock-relay multimaster-launch multimaster-msgs ];
+  propagatedBuildInputs = [ clock-relay message-relay multimaster-launch multimaster-msgs tf2-relay ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

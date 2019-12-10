@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rospy }:
 buildRosPackage {
   pname = "ros-melodic-cob-android-resource-server";
   version = "0.1.6-r1";

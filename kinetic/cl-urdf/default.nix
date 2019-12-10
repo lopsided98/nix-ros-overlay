@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cl-transforms, catkin, roslisp }:
+{ lib, buildRosPackage, fetchurl, catkin, cl-transforms, roslisp }:
 buildRosPackage {
   pname = "ros-kinetic-cl-urdf";
   version = "0.2.12-r1";

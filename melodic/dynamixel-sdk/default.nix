@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-melodic-dynamixel-sdk";
   version = "3.7.21-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy roscpp ];
-  propagatedBuildInputs = [ rospy roscpp ];
+  propagatedBuildInputs = [ roscpp rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

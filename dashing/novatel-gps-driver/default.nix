@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, swri-serial-util, ament-cmake, tf2, nav-msgs, ament-lint-auto, sensor-msgs, diagnostic-msgs, rclcpp-components, gps-msgs, tf2-geometry-msgs, rclcpp, ament-cmake-gtest, std-msgs, ament-index-cpp, novatel-gps-msgs, swri-roscpp, boost, swri-math-util, libpcap, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, boost, diagnostic-msgs, diagnostic-updater, gps-msgs, libpcap, nav-msgs, novatel-gps-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs, swri-math-util, swri-roscpp, swri-serial-util, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-dashing-novatel-gps-driver";
   version = "4.0.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost sensor-msgs diagnostic-msgs rclcpp-components std-msgs swri-serial-util swri-math-util gps-msgs libpcap tf2-geometry-msgs tf2 diagnostic-updater rclcpp nav-msgs novatel-gps-msgs swri-roscpp ];
-  checkInputs = [ ament-index-cpp ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ sensor-msgs boost diagnostic-msgs rclcpp-components std-msgs swri-serial-util swri-math-util gps-msgs libpcap tf2-geometry-msgs tf2 diagnostic-updater rclcpp nav-msgs novatel-gps-msgs swri-roscpp ];
+  checkInputs = [ ament-cmake-gtest ament-index-cpp ament-lint-auto ];
+  propagatedBuildInputs = [ boost diagnostic-msgs diagnostic-updater gps-msgs libpcap nav-msgs novatel-gps-msgs rclcpp rclcpp-components sensor-msgs std-msgs swri-math-util swri-roscpp swri-serial-util tf2 tf2-geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

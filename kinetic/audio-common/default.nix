@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, audio-play, audio-common-msgs, catkin, sound-play, audio-capture }:
+{ lib, buildRosPackage, fetchurl, audio-capture, audio-common-msgs, audio-play, catkin, sound-play }:
 buildRosPackage {
   pname = "ros-kinetic-audio-common";
   version = "0.3.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ audio-play audio-common-msgs audio-capture sound-play ];
+  propagatedBuildInputs = [ audio-capture audio-common-msgs audio-play sound-play ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

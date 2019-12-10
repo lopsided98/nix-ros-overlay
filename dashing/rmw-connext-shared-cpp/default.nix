@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-cmake, rcutils, ament-lint-common, ament-cmake, rmw, connext-cmake-module, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, connext-cmake-module, rcutils, rmw, rosidl-cmake }:
 buildRosPackage {
   pname = "ros-dashing-rmw-connext-shared-cpp";
   version = "0.7.3-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ connext-cmake-module rcutils rmw ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ connext-cmake-module ament-cmake ];
-  nativeBuildInputs = [ rosidl-cmake ament-cmake ];
+  buildInputs = [ rcutils rmw ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ament-cmake connext-cmake-module ];
+  nativeBuildInputs = [ ament-cmake rosidl-cmake ];
 
   meta = {
     description = ''C++ types and functions shared by the ROS middleware interface to RTI Connext Static and RTI Connext Dynamic.'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, catkin, openslam-gmapping, nodelet, roscpp, nav-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, nav-msgs, nodelet, openslam-gmapping, roscpp, rostest, tf }:
 buildRosPackage {
   pname = "ros-melodic-gmapping";
   version = "1.4.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf openslam-gmapping nodelet roscpp nav-msgs rostest ];
-  propagatedBuildInputs = [ tf openslam-gmapping nodelet roscpp nav-msgs ];
+  buildInputs = [ rostest ];
+  propagatedBuildInputs = [ nav-msgs nodelet openslam-gmapping roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, warthog-msgs, catkin, warthog-viz }:
+{ lib, buildRosPackage, fetchurl, catkin, warthog-msgs, warthog-viz }:
 buildRosPackage {
   pname = "ros-melodic-warthog-desktop";
   version = "0.0.1-r1";

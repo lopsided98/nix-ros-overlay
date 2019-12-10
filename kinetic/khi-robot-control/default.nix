@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, joint-limits-interface, controller-manager, hardware-interface, khi-robot-msgs, position-controllers, catkin, transmission-interface, realtime-tools, diagnostic-updater, joint-trajectory-controller, rostest, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, diagnostic-updater, hardware-interface, joint-limits-interface, joint-state-controller, joint-trajectory-controller, khi-robot-msgs, position-controllers, realtime-tools, rostest, trajectory-msgs, transmission-interface }:
 buildRosPackage {
   pname = "ros-kinetic-khi-robot-control";
   version = "1.1.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs controller-manager joint-limits-interface hardware-interface khi-robot-msgs transmission-interface realtime-tools diagnostic-updater ];
+  buildInputs = [ realtime-tools ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ trajectory-msgs controller-manager joint-limits-interface hardware-interface khi-robot-msgs position-controllers transmission-interface diagnostic-updater joint-trajectory-controller joint-state-controller ];
+  propagatedBuildInputs = [ controller-manager diagnostic-updater hardware-interface joint-limits-interface joint-state-controller joint-trajectory-controller khi-robot-msgs position-controllers trajectory-msgs transmission-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

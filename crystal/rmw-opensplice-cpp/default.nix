@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-typesupport-opensplice-cpp, rosidl-cmake, rosidl-generator-cpp, rcutils, opensplice_6_9, rosidl-typesupport-opensplice-c, ament-lint-common, ament-cmake, opensplice-cmake-module, rosidl-generator-dds-idl, rmw, rosidl-generator-c, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, opensplice-cmake-module, opensplice_6_9, rcutils, rmw, rosidl-cmake, rosidl-generator-c, rosidl-generator-cpp, rosidl-generator-dds-idl, rosidl-typesupport-opensplice-c, rosidl-typesupport-opensplice-cpp }:
 buildRosPackage {
   pname = "ros-crystal-rmw-opensplice-cpp";
   version = "0.6.3";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-typesupport-opensplice-cpp rosidl-generator-cpp rcutils opensplice_6_9 rosidl-typesupport-opensplice-c rosidl-generator-dds-idl rmw rosidl-generator-c ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ rosidl-typesupport-opensplice-cpp rosidl-cmake rosidl-generator-cpp opensplice_6_9 rosidl-typesupport-opensplice-c ament-cmake opensplice-cmake-module rmw rosidl-generator-c ];
-  nativeBuildInputs = [ rosidl-cmake opensplice-cmake-module ament-cmake ];
+  buildInputs = [ rcutils rosidl-generator-dds-idl ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ament-cmake opensplice-cmake-module opensplice_6_9 rmw rosidl-cmake rosidl-generator-c rosidl-generator-cpp rosidl-typesupport-opensplice-c rosidl-typesupport-opensplice-cpp ];
+  nativeBuildInputs = [ ament-cmake opensplice-cmake-module rosidl-cmake ];
 
   meta = {
     description = ''Implement the ROS middleware interface using PrismTech OpenSplice static code generation in C++.'';

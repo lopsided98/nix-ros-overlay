@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, velodyne-msgs, dynamic-reconfigure, pluginlib, tf, catkin, libpcap, nodelet, roscpp, roslaunch, rostest, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, libpcap, nodelet, pluginlib, roscpp, roslaunch, rostest, tf, velodyne-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-velodyne-driver";
   version = "1.5.2";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure pluginlib tf libpcap nodelet roscpp velodyne-msgs diagnostic-updater ];
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ dynamic-reconfigure pluginlib tf libpcap nodelet roscpp velodyne-msgs diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure libpcap nodelet pluginlib roscpp tf velodyne-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

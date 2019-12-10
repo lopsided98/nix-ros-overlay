@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-gazebo-worlds";
   version = "0.6.13";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros ];
   propagatedBuildInputs = [ gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 

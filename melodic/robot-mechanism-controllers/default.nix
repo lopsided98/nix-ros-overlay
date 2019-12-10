@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, control-toolbox, eigen-conversions, pluginlib, libtool, tf, kdl-parser, diagnostic-msgs, pr2-controller-interface, message-filters, pr2-mechanism-model, std-msgs, filters, catkin, realtime-tools, roscpp, angles, rospy, message-generation, control-msgs, trajectory-msgs, actionlib, pr2-controllers-msgs, message-runtime, tf-conversions, pr2-controller-manager }:
+{ lib, buildRosPackage, fetchurl, actionlib, angles, catkin, control-msgs, control-toolbox, diagnostic-msgs, eigen-conversions, filters, geometry-msgs, kdl-parser, libtool, message-filters, message-generation, message-runtime, pluginlib, pr2-controller-interface, pr2-controller-manager, pr2-controllers-msgs, pr2-mechanism-model, realtime-tools, roscpp, rospy, std-msgs, tf, tf-conversions, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-robot-mechanism-controllers";
   version = "1.10.17-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs control-toolbox eigen-conversions pluginlib libtool tf kdl-parser diagnostic-msgs pr2-controller-interface pr2-mechanism-model message-filters std-msgs filters realtime-tools roscpp angles message-generation control-msgs trajectory-msgs actionlib pr2-controllers-msgs tf-conversions pr2-controller-manager ];
-  propagatedBuildInputs = [ geometry-msgs control-toolbox eigen-conversions pluginlib libtool tf kdl-parser diagnostic-msgs pr2-controller-interface pr2-mechanism-model message-filters std-msgs filters realtime-tools roscpp angles rospy control-msgs trajectory-msgs actionlib pr2-controllers-msgs message-runtime tf-conversions pr2-controller-manager ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib angles control-msgs control-toolbox diagnostic-msgs eigen-conversions filters geometry-msgs kdl-parser libtool message-filters message-runtime pluginlib pr2-controller-interface pr2-controller-manager pr2-controllers-msgs pr2-mechanism-model realtime-tools roscpp rospy std-msgs tf tf-conversions trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

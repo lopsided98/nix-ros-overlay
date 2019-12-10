@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, diagnostic-aggregator, fetch-navigation, sick-tim, robot-state-publisher, fetch-open-auto-dock, catkin, fetch-drivers, ps3joy, graft, fetch-teleop, fetch-description }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-aggregator, fetch-description, fetch-drivers, fetch-navigation, fetch-open-auto-dock, fetch-teleop, graft, joy, ps3joy, robot-state-publisher, sick-tim }:
 buildRosPackage {
   pname = "ros-melodic-freight-bringup";
   version = "0.8.8-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joy diagnostic-aggregator fetch-navigation sick-tim robot-state-publisher fetch-open-auto-dock fetch-drivers ps3joy graft fetch-teleop fetch-description ];
+  propagatedBuildInputs = [ diagnostic-aggregator fetch-description fetch-drivers fetch-navigation fetch-open-auto-dock fetch-teleop graft joy ps3joy robot-state-publisher sick-tim ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

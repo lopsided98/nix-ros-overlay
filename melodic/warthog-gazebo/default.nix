@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, warthog-description, hector-gazebo-plugins, warthog-control, catkin, gazebo-ros-control, roscpp, gazebo-ros, roslaunch, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-plugins, gazebo-ros, gazebo-ros-control, hector-gazebo-plugins, joint-state-publisher, roscpp, roslaunch, warthog-control, warthog-description }:
 buildRosPackage {
   pname = "ros-melodic-warthog-gazebo";
   version = "0.2.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros roslaunch roscpp ];
-  propagatedBuildInputs = [ joint-state-publisher warthog-description hector-gazebo-plugins warthog-control gazebo-ros-control roscpp gazebo-ros gazebo-plugins ];
+  buildInputs = [ roslaunch ];
+  propagatedBuildInputs = [ gazebo-plugins gazebo-ros gazebo-ros-control hector-gazebo-plugins joint-state-publisher roscpp warthog-control warthog-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

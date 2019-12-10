@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rtmbuild, openrtm-tools, std-msgs, catkin, roscpp, message-generation, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, openrtm-tools, roscpp, rostest, rtmbuild, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-openrtm-ros-bridge";
   version = "1.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rtmbuild openrtm-tools std-msgs roscpp message-generation rostest ];
-  propagatedBuildInputs = [ std-msgs openrtm-tools roscpp ];
+  buildInputs = [ message-generation rostest rtmbuild ];
+  propagatedBuildInputs = [ openrtm-tools roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

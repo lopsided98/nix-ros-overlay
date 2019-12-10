@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eigen-conversions, cartographer, catkin, roslib, roscpp, rviz, qt5, cartographer-ros-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, cartographer, cartographer-ros-msgs, catkin, eigen-conversions, message-runtime, qt5, roscpp, roslib, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-cartographer-rviz";
   version = "0.2.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen-conversions cartographer roslib qt5.qtbase rviz roscpp cartographer-ros-msgs message-runtime ];
-  propagatedBuildInputs = [ eigen-conversions cartographer roslib qt5.qtbase rviz roscpp cartographer-ros-msgs message-runtime ];
+  propagatedBuildInputs = [ cartographer cartographer-ros-msgs eigen-conversions message-runtime qt5.qtbase roscpp roslib rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

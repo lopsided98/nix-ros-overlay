@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, message-runtime, std-msgs, catkin, rospy, message-generation, mk }:
+{ lib, buildRosPackage, fetchurl, catkin, git, message-generation, message-runtime, mk, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-bayesian-belief-networks";
   version = "2.1.13-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ git std-msgs rospy message-generation mk ];
-  propagatedBuildInputs = [ std-msgs rospy message-runtime ];
+  buildInputs = [ git message-generation mk ];
+  propagatedBuildInputs = [ message-runtime rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

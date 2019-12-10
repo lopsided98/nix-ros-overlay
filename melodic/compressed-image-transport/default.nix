@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport, cv-bridge, dynamic-reconfigure, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, image-transport }:
 buildRosPackage {
   pname = "ros-melodic-compressed-image-transport";
   version = "1.9.5";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-transport cv-bridge dynamic-reconfigure ];
-  propagatedBuildInputs = [ image-transport cv-bridge dynamic-reconfigure ];
+  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-transport ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

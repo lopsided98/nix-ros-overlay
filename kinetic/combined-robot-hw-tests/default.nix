@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, combined-robot-hw, controller-manager, hardware-interface, catkin, controller-manager-tests, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, combined-robot-hw, controller-manager, controller-manager-tests, hardware-interface, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-combined-robot-hw-tests";
   version = "0.13.3";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ combined-robot-hw controller-manager hardware-interface controller-manager-tests roscpp ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ combined-robot-hw controller-manager hardware-interface controller-manager-tests roscpp ];
+  propagatedBuildInputs = [ combined-robot-hw controller-manager controller-manager-tests hardware-interface roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

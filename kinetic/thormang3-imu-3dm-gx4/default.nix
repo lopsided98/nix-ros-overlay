@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, boost, geometry-msgs, std-msgs, catkin, roscpp, message-runtime, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, diagnostic-updater, geometry-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-imu-3dm-gx4";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs geometry-msgs std-msgs roscpp message-generation diagnostic-updater ];
-  propagatedBuildInputs = [ boost sensor-msgs geometry-msgs std-msgs roscpp message-runtime diagnostic-updater ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ boost diagnostic-updater geometry-msgs message-runtime roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, katana-msgs, control-toolbox, catkin, actionlib, gazebo-ros, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, control-msgs, control-toolbox, gazebo-ros, katana-msgs, sensor-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-katana-gazebo-plugins";
   version = "1.1.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs sensor-msgs katana-msgs control-toolbox actionlib gazebo-ros control-msgs ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs katana-msgs control-toolbox actionlib gazebo-ros control-msgs ];
+  propagatedBuildInputs = [ actionlib control-msgs control-toolbox gazebo-ros katana-msgs sensor-msgs trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

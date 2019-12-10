@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, yocs-math-toolkit, tf, actionlib, catkin, roscpp, yocs-msgs, rospy, nav-msgs, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, move-base-msgs, nav-msgs, roscpp, rospy, tf, yocs-math-toolkit, yocs-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-yocs-navigator";
   version = "0.8.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ yocs-math-toolkit actionlib tf roscpp yocs-msgs rospy nav-msgs move-base-msgs ];
-  propagatedBuildInputs = [ yocs-math-toolkit actionlib tf roscpp yocs-msgs rospy nav-msgs move-base-msgs ];
+  propagatedBuildInputs = [ actionlib move-base-msgs nav-msgs roscpp rospy tf yocs-math-toolkit yocs-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eigen, ament-cmake-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, eigen }:
 buildRosPackage {
   pname = "ros-crystal-ecl-eigen";
   version = "1.0.1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ eigen ];
   propagatedBuildInputs = [ eigen ];
   nativeBuildInputs = [ ament-cmake-ros ];
 

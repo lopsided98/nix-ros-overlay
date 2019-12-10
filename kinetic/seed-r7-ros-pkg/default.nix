@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, seed-r7-bringup, catkin, seed-r7-moveit-config, seed-r7-robot-interface, seed-r7-navigation, seed-r7-ros-controller, seed-r7-description, seed-r7-typef-moveit-config, seed-r7-samples }:
+{ lib, buildRosPackage, fetchurl, catkin, seed-r7-bringup, seed-r7-description, seed-r7-moveit-config, seed-r7-navigation, seed-r7-robot-interface, seed-r7-ros-controller, seed-r7-samples, seed-r7-typef-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-seed-r7-ros-pkg";
   version = "0.3.3-r2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ seed-r7-bringup seed-r7-moveit-config seed-r7-robot-interface seed-r7-navigation seed-r7-ros-controller seed-r7-description seed-r7-typef-moveit-config seed-r7-samples ];
-  propagatedBuildInputs = [ seed-r7-bringup seed-r7-moveit-config seed-r7-robot-interface seed-r7-navigation seed-r7-ros-controller seed-r7-description seed-r7-typef-moveit-config seed-r7-samples ];
+  propagatedBuildInputs = [ seed-r7-bringup seed-r7-description seed-r7-moveit-config seed-r7-navigation seed-r7-robot-interface seed-r7-ros-controller seed-r7-samples seed-r7-typef-moveit-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

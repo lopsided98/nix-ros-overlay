@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, rosidl-default-generators, diagnostic-msgs, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, diagnostic-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-kinesis-video-msgs";
   version = "3.1.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ diagnostic-msgs ];
-  propagatedBuildInputs = [ rosidl-default-runtime diagnostic-msgs ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
+  propagatedBuildInputs = [ diagnostic-msgs rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = ''Messages for transmitting video frames to Kinesis Video Streams.'';

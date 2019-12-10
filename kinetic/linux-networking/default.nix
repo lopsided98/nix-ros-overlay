@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, asmach-tutorials, network-monitor-udp, network-control-tests, hostapd-access-point, network-detector, network-traffic-control, ieee80211-channels, catkin, asmach, ddwrt-access-point, multi-interface-roam, access-point-control, linksys-access-point }:
+{ lib, buildRosPackage, fetchurl, access-point-control, asmach, asmach-tutorials, catkin, ddwrt-access-point, hostapd-access-point, ieee80211-channels, linksys-access-point, multi-interface-roam, network-control-tests, network-detector, network-monitor-udp, network-traffic-control }:
 buildRosPackage {
   pname = "ros-kinetic-linux-networking";
   version = "1.0.15";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ asmach-tutorials network-monitor-udp network-control-tests hostapd-access-point network-detector network-traffic-control ieee80211-channels asmach ddwrt-access-point multi-interface-roam access-point-control linksys-access-point ];
+  propagatedBuildInputs = [ access-point-control asmach asmach-tutorials ddwrt-access-point hostapd-access-point ieee80211-channels linksys-access-point multi-interface-roam network-control-tests network-detector network-monitor-udp network-traffic-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

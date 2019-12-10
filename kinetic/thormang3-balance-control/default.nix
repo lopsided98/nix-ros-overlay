@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, roscpp, robotis-math }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, robotis-math, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-balance-control";
   version = "0.2.0";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-math eigen cmake-modules roscpp ];
   propagatedBuildInputs = [ cmake-modules eigen robotis-math roscpp ];
   nativeBuildInputs = [ catkin ];
 

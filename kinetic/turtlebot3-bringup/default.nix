@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, sensor-msgs, diagnostic-msgs, turtlebot3-description, turtlebot3-msgs, turtlebot3-teleop, robot-state-publisher, std-msgs, catkin, rosserial-python, hls-lfcd-lds-driver, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, hls-lfcd-lds-driver, joint-state-publisher, robot-state-publisher, roscpp, rosserial-python, sensor-msgs, std-msgs, turtlebot3-description, turtlebot3-msgs, turtlebot3-teleop }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot3-bringup";
   version = "1.2.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs diagnostic-msgs turtlebot3-msgs std-msgs roscpp ];
-  propagatedBuildInputs = [ joint-state-publisher sensor-msgs diagnostic-msgs turtlebot3-description turtlebot3-msgs turtlebot3-teleop robot-state-publisher std-msgs rosserial-python hls-lfcd-lds-driver roscpp ];
+  propagatedBuildInputs = [ diagnostic-msgs hls-lfcd-lds-driver joint-state-publisher robot-state-publisher roscpp rosserial-python sensor-msgs std-msgs turtlebot3-description turtlebot3-msgs turtlebot3-teleop ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

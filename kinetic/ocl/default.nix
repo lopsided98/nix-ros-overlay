@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ncurses, lua, log4cpp, catkin, readline, cmake, rtt, netcdf }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, log4cpp, lua, ncurses, netcdf, readline, rtt }:
 buildRosPackage {
   pname = "ros-kinetic-ocl";
   version = "2.9.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ ncurses lua log4cpp readline rtt netcdf ];
-  propagatedBuildInputs = [ ncurses lua log4cpp catkin readline rtt netcdf ];
+  propagatedBuildInputs = [ catkin log4cpp lua ncurses netcdf readline rtt ];
   nativeBuildInputs = [ catkin cmake ];
 
   meta = {

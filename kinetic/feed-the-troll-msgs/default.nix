@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, uuid-msgs, message-runtime, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, uuid-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-feed-the-troll-msgs";
   version = "0.1.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation uuid-msgs ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime uuid-msgs ];
   nativeBuildInputs = [ catkin ];
 

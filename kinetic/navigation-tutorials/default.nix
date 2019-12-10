@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-setup-tf-tutorial, simple-navigation-goals-tutorial, point-cloud-publisher-tutorial, laser-scan-publisher-tutorial, catkin, roomba-stage, odometry-publisher-tutorial, navigation-stage }:
+{ lib, buildRosPackage, fetchurl, catkin, laser-scan-publisher-tutorial, navigation-stage, odometry-publisher-tutorial, point-cloud-publisher-tutorial, robot-setup-tf-tutorial, roomba-stage, simple-navigation-goals-tutorial }:
 buildRosPackage {
   pname = "ros-kinetic-navigation-tutorials";
   version = "0.2.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ robot-setup-tf-tutorial simple-navigation-goals-tutorial point-cloud-publisher-tutorial laser-scan-publisher-tutorial roomba-stage odometry-publisher-tutorial navigation-stage ];
+  propagatedBuildInputs = [ laser-scan-publisher-tutorial navigation-stage odometry-publisher-tutorial point-cloud-publisher-tutorial robot-setup-tf-tutorial roomba-stage simple-navigation-goals-tutorial ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

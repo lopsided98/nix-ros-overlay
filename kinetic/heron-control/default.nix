@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, pythonPackages, catkin, robot-localization }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, robot-localization, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-heron-control";
   version = "0.3.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pythonPackages.numpy sensor-msgs geometry-msgs robot-localization ];
+  propagatedBuildInputs = [ geometry-msgs pythonPackages.numpy robot-localization sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-nav-msgs, tf, catkin, roscpp, hector-map-tools, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, hector-map-tools, hector-nav-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-melodic-hector-trajectory-server";
   version = "0.4.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hector-nav-msgs tf roscpp hector-map-tools nav-msgs ];
-  propagatedBuildInputs = [ hector-nav-msgs tf roscpp hector-map-tools nav-msgs ];
+  propagatedBuildInputs = [ hector-map-tools hector-nav-msgs nav-msgs roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

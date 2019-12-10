@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, rosunit, image-transport, roscpp, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, image-transport, roscpp, rosunit, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-fkie-message-filters";
   version = "1.0.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-transport sensor-msgs tf2-ros roscpp ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ image-transport sensor-msgs tf2-ros roscpp ];
+  propagatedBuildInputs = [ image-transport roscpp sensor-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, actionlib, catkin, tf2, tf2-geometry-msgs, nav-core, actionlib-msgs, visualization-msgs, roscpp, tf2-ros, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, geometry-msgs, move-base-msgs, nav-core, roscpp, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-move-basic";
   version = "0.3.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs actionlib tf2 tf2-geometry-msgs nav-core actionlib-msgs visualization-msgs roscpp tf2-ros move-base-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs actionlib roscpp tf2-geometry-msgs nav-core actionlib-msgs visualization-msgs tf2 tf2-ros move-base-msgs ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs geometry-msgs move-base-msgs nav-core roscpp sensor-msgs std-msgs tf2 tf2-geometry-msgs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

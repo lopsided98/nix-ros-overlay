@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, pluginlib, chomp-motion-planner, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, chomp-motion-planner, moveit-core, pluginlib }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-chomp-optimizer-adapter";
   version = "0.9.17-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core pluginlib chomp-motion-planner ];
-  propagatedBuildInputs = [ moveit-core pluginlib chomp-motion-planner ];
+  propagatedBuildInputs = [ chomp-motion-planner moveit-core pluginlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

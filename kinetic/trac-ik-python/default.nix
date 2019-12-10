@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, catkin, swig, trac-ik-lib, rospy, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, catkin, rospy, swig, tf, tf-conversions, trac-ik-lib }:
 buildRosPackage {
   pname = "ros-kinetic-trac-ik-python";
   version = "1.5.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ swig rospy tf-conversions trac-ik-lib ];
-  propagatedBuildInputs = [ tf swig trac-ik-lib rospy tf-conversions ];
+  propagatedBuildInputs = [ rospy swig tf tf-conversions trac-ik-lib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

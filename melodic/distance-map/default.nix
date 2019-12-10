@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, distance-map-msgs, distance-map-rviz, catkin, distance-map-deadreck, distance-map-node, distance-map-core, distance-map-opencv, distance-map-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, distance-map-core, distance-map-deadreck, distance-map-msgs, distance-map-node, distance-map-opencv, distance-map-rviz, distance-map-tools }:
 buildRosPackage {
   pname = "ros-melodic-distance-map";
   version = "0.1.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ distance-map-msgs distance-map-rviz distance-map-deadreck distance-map-node distance-map-core distance-map-opencv distance-map-tools ];
+  propagatedBuildInputs = [ distance-map-core distance-map-deadreck distance-map-msgs distance-map-node distance-map-opencv distance-map-rviz distance-map-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

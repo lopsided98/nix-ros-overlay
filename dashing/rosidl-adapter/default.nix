@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python3Packages, ament-lint-common, ament-cmake, ament-cmake-pytest, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3Packages }:
 buildRosPackage {
   pname = "ros-dashing-rosidl-adapter";
   version = "0.7.8-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-common ament-lint-auto ament-cmake-pytest ];
+  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ python3Packages.empy ];
 
   meta = {

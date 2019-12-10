@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, ament-cmake, nav-2d-msgs, nav2-util, nav-msgs, nav-2d-utils, ament-lint-auto, sensor-msgs, launch-testing, ament-lint-common, nav2-common, dwb-msgs, rclcpp, ament-cmake-gtest, tf2-ros, std-msgs, nav2-costmap-2d, launch, visualization-msgs, ament-cmake-pytest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, dwb-msgs, geometry-msgs, launch, launch-testing, nav-2d-msgs, nav-2d-utils, nav-msgs, nav2-common, nav2-costmap-2d, nav2-util, pluginlib, rclcpp, sensor-msgs, std-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-dashing-dwb-core";
   version = "0.2.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs geometry-msgs pluginlib std-msgs nav2-costmap-2d nav2-common visualization-msgs nav-2d-msgs nav2-util dwb-msgs rclcpp nav-msgs nav-2d-utils tf2-ros ];
-  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ geometry-msgs std-msgs pluginlib nav2-costmap-2d nav2-util dwb-msgs rclcpp nav-msgs nav-2d-utils tf2-ros ];
+  buildInputs = [ nav-2d-msgs nav2-common sensor-msgs visualization-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing ];
+  propagatedBuildInputs = [ dwb-msgs geometry-msgs nav-2d-utils nav-msgs nav2-costmap-2d nav2-util pluginlib rclcpp std-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

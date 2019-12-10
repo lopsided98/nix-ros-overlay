@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav2-robot, boost, ament-cmake-pytest, dwb-core, launch, std-msgs, launch-testing, ament-lint-common, ament-cmake, ament-cmake-gtest, nav2-common, nav-2d-msgs, nav2-tasks, nav2-util, rclcpp, nav2-msgs, nav-2d-utils, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, boost, dwb-core, launch, launch-testing, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-msgs, nav2-robot, nav2-tasks, nav2-util, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-crystal-dwb-controller";
   version = "0.1.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ nav2-robot boost dwb-core std-msgs nav2-common nav-2d-msgs nav2-tasks nav2-util rclcpp nav2-msgs nav-2d-utils ];
-  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ nav2-robot boost dwb-core std-msgs nav-2d-msgs nav2-tasks nav2-util rclcpp nav2-msgs nav-2d-utils ];
+  buildInputs = [ nav2-common ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing ];
+  propagatedBuildInputs = [ boost dwb-core nav-2d-msgs nav-2d-utils nav2-msgs nav2-robot nav2-tasks nav2-util rclcpp std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

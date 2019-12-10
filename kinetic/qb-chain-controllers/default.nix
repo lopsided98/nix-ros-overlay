@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, controller-interface, geometry-msgs, interactive-markers, catkin, tf2, tf2-geometry-msgs, roscpp, tf2-ros, control-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, control-msgs, controller-interface, geometry-msgs, interactive-markers, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-qb-chain-controllers";
   version = "2.1.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs controller-interface interactive-markers roscpp tf2-geometry-msgs tf2 tf2-ros control-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs controller-interface interactive-markers roscpp tf2-geometry-msgs tf2 tf2-ros control-msgs ];
+  propagatedBuildInputs = [ control-msgs controller-interface geometry-msgs interactive-markers roscpp sensor-msgs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

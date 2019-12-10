@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, rosbag-storage, catkin, qt5, roscpp, rosgraph-msgs }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, qt5, rosbag-storage, roscpp, rosgraph-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-swri-console";
   version = "1.1.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost rosbag-storage qt5.qtbase roscpp rosgraph-msgs ];
-  propagatedBuildInputs = [ boost rosbag-storage qt5.qtbase roscpp rosgraph-msgs ];
+  propagatedBuildInputs = [ boost qt5.qtbase rosbag-storage roscpp rosgraph-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

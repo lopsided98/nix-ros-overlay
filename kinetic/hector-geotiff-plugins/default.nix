@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-geotiff, catkin, hector-nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, hector-geotiff, hector-nav-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-hector-geotiff-plugins";
   version = "0.3.5";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hector-geotiff hector-nav-msgs ];
   propagatedBuildInputs = [ hector-geotiff hector-nav-msgs ];
   nativeBuildInputs = [ catkin ];
 

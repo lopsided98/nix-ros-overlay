@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, interactive-markers, std-msgs, tf, catkin, rviz, visualization-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, interactive-markers, roscpp, rviz, std-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-interactive-teleop";
   version = "0.6.15-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs interactive-markers std-msgs tf visualization-msgs roscpp ];
-  propagatedBuildInputs = [ geometry-msgs interactive-markers std-msgs tf rviz visualization-msgs roscpp ];
+  propagatedBuildInputs = [ geometry-msgs interactive-markers roscpp rviz std-msgs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

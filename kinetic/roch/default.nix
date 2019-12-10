@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roch-navigation, roch-teleop, roch-follower, catkin, roch-rapps }:
+{ lib, buildRosPackage, fetchurl, catkin, roch-follower, roch-navigation, roch-rapps, roch-teleop }:
 buildRosPackage {
   pname = "ros-kinetic-roch";
   version = "2.0.12";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ roch-rapps roch-navigation roch-follower roch-teleop ];
+  propagatedBuildInputs = [ roch-follower roch-navigation roch-rapps roch-teleop ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

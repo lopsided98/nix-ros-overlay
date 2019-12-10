@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, pluginlib, std-msgs, catkin, roslib, ros-environment, eigen, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, message-generation, message-runtime, pluginlib, ros-environment, roscpp, roslib, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ml-classifiers";
   version = "1.0.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib std-msgs roslib eigen roscpp message-generation ];
-  propagatedBuildInputs = [ pluginlib std-msgs roslib eigen roscpp message-runtime ];
-  nativeBuildInputs = [ ros-environment catkin ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ eigen message-runtime pluginlib roscpp roslib std-msgs ];
+  nativeBuildInputs = [ catkin ros-environment ];
 
   meta = {
     description = ''ml_classifiers'';

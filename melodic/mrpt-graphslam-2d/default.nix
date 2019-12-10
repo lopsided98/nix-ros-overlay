@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mrpt1, sensor-msgs, geometry-msgs, mrpt-msgs, std-msgs, tf, catkin, roscpp, mrpt-bridge, tf2, multimaster-msgs-fkie, rospy, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, mrpt-bridge, mrpt-msgs, mrpt1, multimaster-msgs-fkie, nav-msgs, roscpp, rospy, sensor-msgs, std-msgs, tf, tf2 }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-graphslam-2d";
   version = "0.1.10-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mrpt1 sensor-msgs geometry-msgs mrpt-msgs std-msgs tf roscpp mrpt-bridge tf2 multimaster-msgs-fkie rospy nav-msgs ];
-  propagatedBuildInputs = [ mrpt1 sensor-msgs geometry-msgs mrpt-msgs std-msgs tf tf2 mrpt-bridge roscpp multimaster-msgs-fkie rospy nav-msgs ];
+  propagatedBuildInputs = [ geometry-msgs mrpt-bridge mrpt-msgs mrpt1 multimaster-msgs-fkie nav-msgs roscpp rospy sensor-msgs std-msgs tf tf2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

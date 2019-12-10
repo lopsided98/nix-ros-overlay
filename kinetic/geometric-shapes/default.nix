@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eigen-stl-containers, boost, random-numbers, assimp, resource-retriever, octomap, catkin, shape-msgs, rosunit, eigen, console-bridge, visualization-msgs, qhull, pkg-config }:
+{ lib, buildRosPackage, fetchurl, assimp, boost, catkin, console-bridge, eigen, eigen-stl-containers, octomap, pkg-config, qhull, random-numbers, resource-retriever, rosunit, shape-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-geometric-shapes";
   version = "0.5.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen-stl-containers boost random-numbers assimp resource-retriever octomap shape-msgs eigen visualization-msgs console-bridge qhull pkg-config ];
+  buildInputs = [ pkg-config ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ eigen-stl-containers boost random-numbers assimp resource-retriever octomap shape-msgs eigen visualization-msgs console-bridge qhull ];
+  propagatedBuildInputs = [ assimp boost console-bridge eigen eigen-stl-containers octomap qhull random-numbers resource-retriever shape-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, catkin, rosbridge-server }:
+{ lib, buildRosPackage, fetchurl, catkin, rosbridge-server, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-ros-explorer";
   version = "0.1.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rospy rosbridge-server ];
+  propagatedBuildInputs = [ rosbridge-server rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

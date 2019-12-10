@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, roscpp-serialization, std-msgs, settlerlib, catkin, calibration-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, calibration-msgs, catkin, roscpp, roscpp-serialization, sensor-msgs, settlerlib, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dense-laser-assembler";
   version = "1.0.11";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp-serialization std-msgs settlerlib calibration-msgs roscpp ];
-  propagatedBuildInputs = [ sensor-msgs roscpp-serialization std-msgs settlerlib calibration-msgs roscpp ];
+  propagatedBuildInputs = [ calibration-msgs roscpp roscpp-serialization sensor-msgs settlerlib std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

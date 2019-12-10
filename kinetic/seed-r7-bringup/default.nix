@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, robot-state-publisher, catkin, seed-r7-ros-controller, seed-r7-typef-moveit-config }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, robot-state-publisher, seed-r7-ros-controller, seed-r7-typef-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-seed-r7-bringup";
   version = "0.3.3-r2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robot-state-publisher seed-r7-typef-moveit-config controller-manager seed-r7-ros-controller ];
-  propagatedBuildInputs = [ robot-state-publisher seed-r7-typef-moveit-config seed-r7-ros-controller controller-manager ];
+  propagatedBuildInputs = [ controller-manager robot-state-publisher seed-r7-ros-controller seed-r7-typef-moveit-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

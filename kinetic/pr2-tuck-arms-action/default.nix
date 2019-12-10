@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, actionlib, catkin, actionlib-msgs, pr2-controllers-msgs, rospy, pr2-common-action-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, pr2-common-action-msgs, pr2-controllers-msgs, rospy, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-tuck-arms-action";
   version = "0.0.10";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs actionlib actionlib-msgs pr2-controllers-msgs rospy pr2-common-action-msgs ];
-  propagatedBuildInputs = [ trajectory-msgs actionlib actionlib-msgs pr2-controllers-msgs rospy pr2-common-action-msgs ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs pr2-common-action-msgs pr2-controllers-msgs rospy trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

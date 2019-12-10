@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-aggregator, sensor-msgs, kobuki-description, geometry-msgs, robot-state-publisher, tf, catkin, nodelet, roscpp, kobuki-msgs, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-aggregator, geometry-msgs, kobuki-description, kobuki-msgs, nav-msgs, nodelet, robot-state-publisher, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-softnode";
   version = "0.1.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs tf nodelet roscpp kobuki-msgs nav-msgs ];
-  propagatedBuildInputs = [ diagnostic-aggregator sensor-msgs kobuki-description geometry-msgs robot-state-publisher tf nodelet roscpp kobuki-msgs nav-msgs ];
+  propagatedBuildInputs = [ diagnostic-aggregator geometry-msgs kobuki-description kobuki-msgs nav-msgs nodelet robot-state-publisher roscpp sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, lkh-solver }:
+{ lib, buildRosPackage, fetchurl, catkin, lkh-solver, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-glkh-solver";
   version = "0.1.1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ lkh-solver roscpp ];
   propagatedBuildInputs = [ lkh-solver roscpp ];
   nativeBuildInputs = [ catkin ];
 

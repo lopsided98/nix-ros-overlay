@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, dynamic-reconfigure, octomap, naoqi-driver-py, camera-info-manager, octomap-msgs, catkin, camera-info-manager-py, rospy }:
+{ lib, buildRosPackage, fetchurl, boost, camera-info-manager, camera-info-manager-py, catkin, dynamic-reconfigure, naoqi-driver-py, octomap, octomap-msgs, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-naoqi-sensors-py";
   version = "0.5.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost dynamic-reconfigure octomap camera-info-manager octomap-msgs naoqi-driver-py ];
-  propagatedBuildInputs = [ boost sensor-msgs dynamic-reconfigure octomap camera-info-manager naoqi-driver-py camera-info-manager-py rospy ];
+  buildInputs = [ octomap-msgs ];
+  propagatedBuildInputs = [ boost camera-info-manager camera-info-manager-py dynamic-reconfigure naoqi-driver-py octomap rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

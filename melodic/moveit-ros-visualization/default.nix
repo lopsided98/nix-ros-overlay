@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, interactive-markers, pluginlib, ogre1_9, eigen, class-loader, rostest, object-recognition-msgs, moveit-ros-warehouse, qt5, rosconsole, moveit-ros-planning-interface, moveit-ros-robot-interaction, catkin, geometric-shapes, roscpp, pkg-config, rospy, tf2-eigen, moveit-ros-perception, rviz }:
+{ lib, buildRosPackage, fetchurl, catkin, class-loader, eigen, geometric-shapes, interactive-markers, moveit-ros-perception, moveit-ros-planning-interface, moveit-ros-robot-interaction, moveit-ros-warehouse, object-recognition-msgs, ogre1_9, pkg-config, pluginlib, qt5, rosconsole, roscpp, rospy, rostest, rviz, tf2-eigen }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-visualization";
   version = "1.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-warehouse interactive-markers moveit-ros-robot-interaction pluginlib ogre1_9 moveit-ros-planning-interface roscpp qt5.qtbase tf2-eigen moveit-ros-perception eigen rviz geometric-shapes rosconsole class-loader rospy object-recognition-msgs ];
+  buildInputs = [ class-loader eigen ogre1_9 qt5.qtbase ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ interactive-markers moveit-ros-warehouse pluginlib moveit-ros-robot-interaction moveit-ros-planning-interface tf2-eigen moveit-ros-perception rviz rosconsole geometric-shapes roscpp rospy object-recognition-msgs ];
-  nativeBuildInputs = [ pkg-config catkin ];
+  propagatedBuildInputs = [ geometric-shapes interactive-markers moveit-ros-perception moveit-ros-planning-interface moveit-ros-robot-interaction moveit-ros-warehouse object-recognition-msgs pluginlib rosconsole roscpp rospy rviz tf2-eigen ];
+  nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''Components of MoveIt! that offer visualization'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, control-toolbox, pluginlib, tf, cmake-modules, base-local-planner, catkin, costmap-2d, nav-core, roscpp, tf-conversions, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, base-local-planner, catkin, cmake-modules, control-toolbox, costmap-2d, geometry-msgs, nav-core, nav-msgs, pluginlib, roscpp, tf, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-eband-local-planner";
   version = "0.3.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs control-toolbox pluginlib tf base-local-planner cmake-modules costmap-2d nav-core roscpp tf-conversions nav-msgs ];
-  propagatedBuildInputs = [ geometry-msgs control-toolbox pluginlib tf base-local-planner costmap-2d nav-core roscpp tf-conversions nav-msgs ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ base-local-planner control-toolbox costmap-2d geometry-msgs nav-core nav-msgs pluginlib roscpp tf tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

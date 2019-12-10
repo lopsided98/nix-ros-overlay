@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, uuv-teleop, uuv-trajectory-control, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, uuv-teleop, uuv-trajectory-control }:
 buildRosPackage {
   pname = "ros-melodic-eca-a9-control";
   version = "0.1.6";

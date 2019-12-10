@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-head-action, robot-mechanism-controllers, pr2-machine, catkin, single-joint-position-action, pr2-gripper-action, roslaunch, pr2-controller-manager }:
+{ lib, buildRosPackage, fetchurl, catkin, pr2-controller-manager, pr2-gripper-action, pr2-head-action, pr2-machine, robot-mechanism-controllers, roslaunch, single-joint-position-action }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-controller-configuration";
   version = "1.6.30";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ pr2-head-action robot-mechanism-controllers pr2-machine single-joint-position-action pr2-gripper-action pr2-controller-manager ];
+  propagatedBuildInputs = [ pr2-controller-manager pr2-gripper-action pr2-head-action pr2-machine robot-mechanism-controllers single-joint-position-action ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

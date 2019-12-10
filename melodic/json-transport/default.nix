@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rosunit, roslint, json-msgs, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, json-msgs, pythonPackages, roscpp, roslint, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-json-transport";
   version = "0.0.3";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ json-msgs roscpp ];
   checkInputs = [ roslint rostest rosunit ];
-  propagatedBuildInputs = [ pythonPackages.msgpack json-msgs roscpp ];
+  propagatedBuildInputs = [ json-msgs pythonPackages.msgpack roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

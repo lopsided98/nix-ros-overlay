@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, std-msgs, serial, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, roscpp, sensor-msgs, serial, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-teraranger";
   version = "2.1.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs dynamic-reconfigure std-msgs serial roscpp ];
-  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure std-msgs serial roscpp ];
+  propagatedBuildInputs = [ dynamic-reconfigure roscpp sensor-msgs serial std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

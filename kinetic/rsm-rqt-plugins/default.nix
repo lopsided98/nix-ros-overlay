@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-gui-cpp, std-msgs, std-srvs, cmake-modules, catkin, roscpp, rsm-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, roscpp, rqt-gui, rqt-gui-cpp, rsm-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-rsm-rqt-plugins";
   version = "1.1.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui rqt-gui-cpp std-msgs std-srvs cmake-modules roscpp rsm-msgs ];
-  propagatedBuildInputs = [ rqt-gui rqt-gui-cpp std-msgs std-srvs cmake-modules roscpp rsm-msgs ];
+  propagatedBuildInputs = [ cmake-modules roscpp rqt-gui rqt-gui-cpp rsm-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

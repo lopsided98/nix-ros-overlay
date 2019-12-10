@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosapi, pluginlib, qt-qmake, tf, image-transport, libqt-dev, swri-transform-util, rqt-gui, rqt-gui-cpp, swri-yaml-util, xorg, std-srvs, catkin, marti-common-msgs, cv-bridge, roscpp, pkg-config, message-generation, libqt-opengl, freeglut, libqt-opengl-dev, libqt-core, glew, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, freeglut, glew, image-transport, libqt-core, libqt-dev, libqt-opengl, libqt-opengl-dev, marti-common-msgs, message-generation, message-runtime, pkg-config, pluginlib, qt-qmake, rosapi, roscpp, rqt-gui, rqt-gui-cpp, std-srvs, swri-transform-util, swri-yaml-util, tf, xorg }:
 buildRosPackage {
   pname = "ros-kinetic-mapviz";
   version = "1.2.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosapi pluginlib tf xorg.libXmu image-transport libqt-dev swri-transform-util rqt-gui rqt-gui-cpp swri-yaml-util std-srvs xorg.libXi marti-common-msgs cv-bridge roscpp message-generation freeglut libqt-opengl-dev glew ];
-  propagatedBuildInputs = [ rosapi pluginlib tf xorg.libXmu image-transport swri-transform-util rqt-gui rqt-gui-cpp swri-yaml-util std-srvs xorg.libXi marti-common-msgs cv-bridge roscpp libqt-opengl freeglut libqt-core glew message-runtime ];
-  nativeBuildInputs = [ qt-qmake pkg-config catkin ];
+  buildInputs = [ libqt-dev libqt-opengl-dev message-generation ];
+  propagatedBuildInputs = [ cv-bridge freeglut glew image-transport libqt-core libqt-opengl marti-common-msgs message-runtime pluginlib rosapi roscpp rqt-gui rqt-gui-cpp std-srvs swri-transform-util swri-yaml-util tf xorg.libXi xorg.libXmu ];
+  nativeBuildInputs = [ catkin pkg-config qt-qmake ];
 
   meta = {
     description = ''mapviz'';

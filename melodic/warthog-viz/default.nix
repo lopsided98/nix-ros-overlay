@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, warthog-description, catkin, rviz, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, roslaunch, rviz, warthog-description }:
 buildRosPackage {
   pname = "ros-melodic-warthog-viz";
   version = "0.0.1-r1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-machine, catkin, pr2-navigation-slam, pr2-navigation-teleop, pr2-navigation-perception }:
+{ lib, buildRosPackage, fetchurl, catkin, pr2-machine, pr2-navigation-perception, pr2-navigation-slam, pr2-navigation-teleop }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-2dnav-slam";
   version = "1.0.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-navigation-perception pr2-machine pr2-navigation-teleop pr2-navigation-slam ];
-  propagatedBuildInputs = [ pr2-navigation-perception pr2-machine pr2-navigation-teleop pr2-navigation-slam ];
+  propagatedBuildInputs = [ pr2-machine pr2-navigation-perception pr2-navigation-slam pr2-navigation-teleop ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-filters, image-cb-detector, std-msgs, settlerlib, actionlib, catkin, cv-bridge, actionlib-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, cv-bridge, image-cb-detector, message-filters, roscpp, settlerlib, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-laser-cb-detector";
   version = "0.10.14";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-filters image-cb-detector std-msgs settlerlib actionlib cv-bridge actionlib-msgs roscpp ];
-  propagatedBuildInputs = [ message-filters image-cb-detector std-msgs settlerlib actionlib cv-bridge actionlib-msgs roscpp ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs cv-bridge image-cb-detector message-filters roscpp settlerlib std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

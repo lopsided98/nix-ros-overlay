@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-to-tf, catkin, hector-pose-estimation-core, hector-pose-estimation }:
+{ lib, buildRosPackage, fetchurl, catkin, hector-pose-estimation, hector-pose-estimation-core, message-to-tf }:
 buildRosPackage {
   pname = "ros-kinetic-hector-localization";
   version = "0.3.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ message-to-tf hector-pose-estimation-core hector-pose-estimation ];
+  propagatedBuildInputs = [ hector-pose-estimation hector-pose-estimation-core message-to-tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

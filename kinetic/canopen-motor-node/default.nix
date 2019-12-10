@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, canopen-master, joint-limits-interface, controller-manager, controller-manager-msgs, urdf, hardware-interface, filters, muparser, catkin, rosunit, canopen-chain-node, roscpp, canopen-402 }:
+{ lib, buildRosPackage, fetchurl, canopen-402, canopen-chain-node, canopen-master, catkin, controller-manager, controller-manager-msgs, filters, hardware-interface, joint-limits-interface, muparser, roscpp, rosunit, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-canopen-motor-node";
   version = "0.7.12-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ canopen-master controller-manager urdf controller-manager-msgs hardware-interface joint-limits-interface filters muparser roscpp canopen-chain-node canopen-402 ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ canopen-master controller-manager urdf controller-manager-msgs hardware-interface joint-limits-interface filters muparser canopen-chain-node roscpp canopen-402 ];
+  propagatedBuildInputs = [ canopen-402 canopen-chain-node canopen-master controller-manager controller-manager-msgs filters hardware-interface joint-limits-interface muparser roscpp urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

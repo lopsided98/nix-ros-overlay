@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, op3-manager, robot-state-publisher, usb-cam, catkin, op3-description, rviz }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, op3-description, op3-manager, robot-state-publisher, rviz, usb-cam }:
 buildRosPackage {
   pname = "ros-kinetic-op3-bringup";
   version = "0.1.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joint-state-publisher op3-manager robot-state-publisher usb-cam op3-description rviz ];
+  propagatedBuildInputs = [ joint-state-publisher op3-description op3-manager robot-state-publisher rviz usb-cam ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

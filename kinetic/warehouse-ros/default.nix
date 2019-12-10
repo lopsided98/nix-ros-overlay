@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, geometry-msgs, pluginlib, std-msgs, tf, catkin, rostime, roscpp, gtest, rostest }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, geometry-msgs, gtest, pluginlib, roscpp, rostest, rostime, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-warehouse-ros";
   version = "0.9.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs pluginlib std-msgs tf rostime roscpp ];
   checkInputs = [ gtest rostest ];
-  propagatedBuildInputs = [ boost geometry-msgs pluginlib std-msgs tf rostime roscpp ];
+  propagatedBuildInputs = [ boost geometry-msgs pluginlib roscpp rostime std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

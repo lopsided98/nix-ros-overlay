@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, octomap-server, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, octomap-server }:
 buildRosPackage {
   pname = "ros-kinetic-octomap-mapping";
   version = "0.6.1";

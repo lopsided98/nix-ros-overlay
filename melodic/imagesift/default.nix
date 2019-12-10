@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jsk-topic-tools, sensor-msgs, posedetection-msgs, libsiftfast, cmake-modules, catkin, jsk-recognition-utils, image-transport, cv-bridge, nodelet, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, cv-bridge, image-transport, jsk-recognition-utils, jsk-topic-tools, libsiftfast, nodelet, posedetection-msgs, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-imagesift";
   version = "1.2.10";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ jsk-topic-tools sensor-msgs posedetection-msgs libsiftfast cmake-modules jsk-recognition-utils image-transport cv-bridge nodelet roscpp ];
+  buildInputs = [ cmake-modules ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ jsk-topic-tools sensor-msgs posedetection-msgs libsiftfast jsk-recognition-utils image-transport cv-bridge nodelet roscpp ];
+  propagatedBuildInputs = [ cv-bridge image-transport jsk-recognition-utils jsk-topic-tools libsiftfast nodelet posedetection-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

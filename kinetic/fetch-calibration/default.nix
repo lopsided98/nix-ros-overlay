@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-calibration, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, robot-calibration }:
 buildRosPackage {
   pname = "ros-kinetic-fetch-calibration";
   version = "0.7.15";

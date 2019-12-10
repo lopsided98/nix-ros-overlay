@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, assimp, ffmpeg, octomap, wxGTK, pythonPackages, catkin, libjpeg, cmake, suitesparse, libpcap, freeglut, eigen, python, zlib, opencv3, libusb1, libudev }:
+{ lib, buildRosPackage, fetchurl, assimp, boost, catkin, cmake, eigen, ffmpeg, freeglut, libjpeg, libpcap, libudev, libusb1, octomap, opencv3, python, pythonPackages, suitesparse, wxGTK, zlib }:
 buildRosPackage {
   pname = "ros-melodic-mrpt1";
   version = "1.5.9-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ pythonPackages.numpy boost assimp ffmpeg octomap wxGTK libjpeg libpcap suitesparse freeglut eigen python zlib opencv3 libusb1 libudev ];
-  propagatedBuildInputs = [ pythonPackages.numpy boost assimp ffmpeg octomap wxGTK catkin libjpeg suitesparse libpcap freeglut eigen python zlib opencv3 libusb1 libudev ];
+  propagatedBuildInputs = [ assimp boost catkin eigen ffmpeg freeglut libjpeg libpcap libudev libusb1 octomap opencv3 python pythonPackages.numpy suitesparse wxGTK zlib ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

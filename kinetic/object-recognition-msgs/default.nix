@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, std-msgs, catkin, shape-msgs, actionlib-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-object-recognition-msgs";
   version = "0.4.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs shape-msgs actionlib-msgs message-generation ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs shape-msgs actionlib-msgs message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib-msgs geometry-msgs message-runtime sensor-msgs shape-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

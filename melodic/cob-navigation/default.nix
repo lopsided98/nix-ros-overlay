@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-navigation-config, catkin, cob-navigation-slam, cob-map-accessibility-analysis, cob-navigation-global, cob-navigation-local, cob-mapping-slam, cob-linear-nav }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-linear-nav, cob-map-accessibility-analysis, cob-mapping-slam, cob-navigation-config, cob-navigation-global, cob-navigation-local, cob-navigation-slam }:
 buildRosPackage {
   pname = "ros-melodic-cob-navigation";
   version = "0.6.9-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-navigation-config cob-navigation-slam cob-map-accessibility-analysis cob-navigation-global cob-navigation-local cob-mapping-slam cob-linear-nav ];
+  propagatedBuildInputs = [ cob-linear-nav cob-map-accessibility-analysis cob-mapping-slam cob-navigation-config cob-navigation-global cob-navigation-local cob-navigation-slam ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

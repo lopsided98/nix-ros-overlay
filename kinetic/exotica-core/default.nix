@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, geometry-msgs, eigen-conversions, pluginlib, std-msgs, tf, cmake-modules, catkin, moveit-ros-planning, moveit-msgs, roscpp, tinyxml-2, message-runtime, tf-conversions, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen-conversions, geometry-msgs, kdl-parser, message-runtime, moveit-core, moveit-msgs, moveit-ros-planning, pluginlib, roscpp, std-msgs, tf, tf-conversions, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-core";
   version = "5.0.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core geometry-msgs eigen-conversions pluginlib std-msgs tf cmake-modules moveit-ros-planning moveit-msgs roscpp tinyxml-2 message-runtime tf-conversions kdl-parser ];
-  propagatedBuildInputs = [ moveit-core geometry-msgs eigen-conversions pluginlib std-msgs tf moveit-ros-planning moveit-msgs roscpp tinyxml-2 message-runtime tf-conversions kdl-parser ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ eigen-conversions geometry-msgs kdl-parser message-runtime moveit-core moveit-msgs moveit-ros-planning pluginlib roscpp std-msgs tf tf-conversions tinyxml-2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

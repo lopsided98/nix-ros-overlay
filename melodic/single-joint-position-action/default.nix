@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib, pr2-controllers-msgs, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, pr2-controllers-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-single-joint-position-action";
   version = "1.10.17-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-controllers-msgs actionlib roscpp ];
-  propagatedBuildInputs = [ pr2-controllers-msgs actionlib roscpp ];
+  propagatedBuildInputs = [ actionlib pr2-controllers-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

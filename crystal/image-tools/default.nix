@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, launch, rmw-implementation-cmake, std-msgs, launch-testing, ament-lint-common, ament-cmake, ament-lint-auto, ament-cmake-pytest, rclcpp, opencv3 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, opencv3, rclcpp, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-crystal-image-tools";
   version = "0.6.2";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs sensor-msgs rclcpp opencv3 ];
-  checkInputs = [ launch rmw-implementation-cmake launch-testing ament-lint-common ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ std-msgs sensor-msgs rclcpp opencv3 ];
+  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing rmw-implementation-cmake ];
+  propagatedBuildInputs = [ opencv3 rclcpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

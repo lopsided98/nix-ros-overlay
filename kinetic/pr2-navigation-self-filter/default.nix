@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, assimp, urdf, resource-retriever, filters, tf, catkin, visualization-msgs, roscpp, bullet }:
+{ lib, buildRosPackage, fetchurl, assimp, bullet, catkin, filters, pcl-ros, resource-retriever, roscpp, sensor-msgs, tf, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-navigation-self-filter";
   version = "0.1.28";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs assimp urdf resource-retriever filters tf visualization-msgs roscpp bullet ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs assimp urdf resource-retriever tf filters visualization-msgs roscpp bullet ];
+  propagatedBuildInputs = [ assimp bullet filters pcl-ros resource-retriever roscpp sensor-msgs tf urdf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, cmake, cacert, openssl, opencv3 }:
+{ lib, buildRosPackage, fetchurl, cacert, cmake, git, opencv3, openssl }:
 buildRosPackage {
   pname = "ros-melodic-libcmt";
   version = "2.1.13-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ git openssl cacert opencv3 ];
+  buildInputs = [ cacert git openssl ];
   propagatedBuildInputs = [ opencv3 ];
   nativeBuildInputs = [ cmake ];
 

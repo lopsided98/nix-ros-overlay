@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, rosbag-storage, image-transport, tf2-msgs, kdl-parser, sensor-msgs, diagnostic-msgs, robot-state-publisher, naoqi-libqi, tf2-geometry-msgs, naoqi-libqicore, naoqi-bridge-msgs, rosconsole, tf2-ros, orocos-kdl, catkin, cv-bridge, rosgraph-msgs, boost, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, diagnostic-msgs, diagnostic-updater, geometry-msgs, image-transport, kdl-parser, naoqi-bridge-msgs, naoqi-libqi, naoqi-libqicore, orocos-kdl, robot-state-publisher, rosbag-storage, rosconsole, rosgraph-msgs, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-naoqi-driver";
   version = "0.5.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs rosbag-storage image-transport tf2-msgs kdl-parser sensor-msgs diagnostic-msgs robot-state-publisher naoqi-libqi tf2-geometry-msgs naoqi-libqicore naoqi-bridge-msgs rosconsole tf2-ros orocos-kdl cv-bridge rosgraph-msgs boost diagnostic-updater ];
-  propagatedBuildInputs = [ orocos-kdl boost robot-state-publisher rosbag-storage image-transport naoqi-libqi naoqi-libqicore cv-bridge naoqi-bridge-msgs rosconsole tf2-ros kdl-parser ];
+  buildInputs = [ diagnostic-msgs diagnostic-updater geometry-msgs rosgraph-msgs sensor-msgs tf2-geometry-msgs tf2-msgs ];
+  propagatedBuildInputs = [ boost cv-bridge image-transport kdl-parser naoqi-bridge-msgs naoqi-libqi naoqi-libqicore orocos-kdl robot-state-publisher rosbag-storage rosconsole tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, cmake-modules, catkin, costmap-2d, nav-core, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, geometry-msgs, nav-core, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-move-slow-and-clear";
   version = "1.16.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs pluginlib cmake-modules costmap-2d nav-core roscpp ];
-  propagatedBuildInputs = [ geometry-msgs pluginlib costmap-2d nav-core roscpp ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ costmap-2d geometry-msgs nav-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

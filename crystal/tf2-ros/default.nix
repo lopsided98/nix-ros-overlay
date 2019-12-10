@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-filters, geometry-msgs, std-msgs, ament-cmake, tf2-msgs, tf2, rclcpp, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, geometry-msgs, message-filters, rclcpp, std-msgs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-crystal-tf2-ros";
   version = "0.10.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ message-filters geometry-msgs std-msgs tf2 tf2-msgs rclcpp ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ message-filters geometry-msgs std-msgs tf2 tf2-msgs rclcpp ];
+  propagatedBuildInputs = [ geometry-msgs message-filters rclcpp std-msgs tf2 tf2-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

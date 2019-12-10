@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, std-msgs, baldor, pythonPackages, criutils, catkin, message-runtime, rostest }:
+{ lib, buildRosPackage, fetchurl, baldor, catkin, criutils, geometry-msgs, message-generation, message-runtime, pythonPackages, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-handeye";
   version = "0.1.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation geometry-msgs ];
+  buildInputs = [ message-generation ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ pythonPackages.numpy geometry-msgs pythonPackages.matplotlib pythonPackages.enum34 pythonPackages.scipy std-msgs baldor criutils message-runtime ];
+  propagatedBuildInputs = [ baldor criutils geometry-msgs message-runtime pythonPackages.enum34 pythonPackages.matplotlib pythonPackages.numpy pythonPackages.scipy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

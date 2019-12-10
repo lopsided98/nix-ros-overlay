@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-utilities, catkin, cob-generic-can, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-generic-can, cob-utilities, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-cob-canopen-motor";
   version = "0.7.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cob-utilities cob-generic-can roscpp ];
-  propagatedBuildInputs = [ cob-utilities cob-generic-can roscpp ];
+  propagatedBuildInputs = [ cob-generic-can cob-utilities roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

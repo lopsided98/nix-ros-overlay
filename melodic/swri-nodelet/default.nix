@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, catkin, rosbash, nodelet, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, nodelet, rosbash, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-swri-nodelet";
   version = "2.11.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs nodelet roscpp ];
   checkInputs = [ rosbash rostest ];
-  propagatedBuildInputs = [ rosbash std-msgs nodelet roscpp ];
+  propagatedBuildInputs = [ nodelet rosbash roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

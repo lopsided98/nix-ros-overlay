@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, denso-robot-descriptions, denso-robot-moveit-config, denso-robot-gazebo, denso-robot-core, bcap-core, bcap-service, catkin, denso-robot-core-test, denso-robot-bringup, bcap-service-test, denso-robot-control }:
+{ lib, buildRosPackage, fetchurl, bcap-core, bcap-service, bcap-service-test, catkin, denso-robot-bringup, denso-robot-control, denso-robot-core, denso-robot-core-test, denso-robot-descriptions, denso-robot-gazebo, denso-robot-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-denso-robot-ros";
   version = "3.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ denso-robot-descriptions denso-robot-moveit-config denso-robot-gazebo denso-robot-core bcap-core bcap-service denso-robot-core-test denso-robot-bringup bcap-service-test denso-robot-control ];
+  propagatedBuildInputs = [ bcap-core bcap-service bcap-service-test denso-robot-bringup denso-robot-control denso-robot-core denso-robot-core-test denso-robot-descriptions denso-robot-gazebo denso-robot-moveit-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

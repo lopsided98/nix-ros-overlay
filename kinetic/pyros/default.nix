@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, pyros-interfaces-ros, catkin-pip, pyros-common }:
+{ lib, buildRosPackage, fetchurl, catkin, catkin-pip, pyros-common, pyros-interfaces-ros, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-pyros";
   version = "0.4.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.mock catkin-pip pyros-common pyros-interfaces-ros ];
-  propagatedBuildInputs = [ pythonPackages.mock pyros-common pyros-interfaces-ros ];
+  buildInputs = [ catkin-pip ];
+  propagatedBuildInputs = [ pyros-common pyros-interfaces-ros pythonPackages.mock ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

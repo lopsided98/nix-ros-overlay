@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot3-automatic-parking-vision, catkin, turtlebot3-automatic-parking, turtlebot3-follow-filter, turtlebot3-follower, turtlebot3-panorama }:
+{ lib, buildRosPackage, fetchurl, catkin, turtlebot3-automatic-parking, turtlebot3-automatic-parking-vision, turtlebot3-follow-filter, turtlebot3-follower, turtlebot3-panorama }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-applications";
   version = "1.1.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ turtlebot3-automatic-parking-vision turtlebot3-automatic-parking turtlebot3-follow-filter turtlebot3-follower turtlebot3-panorama ];
+  propagatedBuildInputs = [ turtlebot3-automatic-parking turtlebot3-automatic-parking-vision turtlebot3-follow-filter turtlebot3-follower turtlebot3-panorama ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

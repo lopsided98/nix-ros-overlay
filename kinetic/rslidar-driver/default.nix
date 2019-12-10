@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, tf, nodelet, rostest, sensor-msgs, dynamic-reconfigure, roslib, tf2-ros, pcl-ros, std-msgs, catkin, pcl, roscpp, angles, message-generation, rospy, roslaunch, libpcap, rslidar-msgs, pcl-conversions, diagnostic-updater, message-runtime }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, diagnostic-updater, dynamic-reconfigure, libpcap, message-generation, message-runtime, nodelet, pcl, pcl-conversions, pcl-ros, pluginlib, roscpp, roslaunch, roslib, rospy, rostest, rslidar-msgs, sensor-msgs, std-msgs, tf, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-rslidar-driver";
   version = "1.0.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib tf nodelet rostest sensor-msgs dynamic-reconfigure roslib tf2-ros pcl-ros std-msgs pcl roscpp angles rospy message-generation roslaunch libpcap rslidar-msgs pcl-conversions diagnostic-updater ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs dynamic-reconfigure message-runtime pluginlib std-msgs tf roslib pcl rslidar-msgs pcl-conversions nodelet roscpp angles rospy diagnostic-updater ];
+  buildInputs = [ libpcap message-generation roslaunch rostest tf2-ros ];
+  propagatedBuildInputs = [ angles diagnostic-updater dynamic-reconfigure message-runtime nodelet pcl pcl-conversions pcl-ros pluginlib roscpp roslib rospy rslidar-msgs sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, sensor-msgs, can-utils, serial, catkin, roslint, roscpp, puma-motor-msgs, roslaunch, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, can-utils, catkin, diagnostic-updater, joy, puma-motor-msgs, roscpp, roslaunch, roslint, sensor-msgs, serial }:
 buildRosPackage {
   pname = "ros-kinetic-puma-motor-driver";
   version = "0.1.2";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs serial roscpp diagnostic-updater puma-motor-msgs ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ joy sensor-msgs can-utils serial roscpp puma-motor-msgs diagnostic-updater ];
+  propagatedBuildInputs = [ can-utils diagnostic-updater joy puma-motor-msgs roscpp sensor-msgs serial ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

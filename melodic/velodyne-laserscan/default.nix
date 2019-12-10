@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, catkin, nodelet, roscpp, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, nodelet, roscpp, roslaunch, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-velodyne-laserscan";
   version = "1.5.2";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs nodelet dynamic-reconfigure roscpp ];
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ sensor-msgs nodelet dynamic-reconfigure roscpp ];
+  propagatedBuildInputs = [ dynamic-reconfigure nodelet roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

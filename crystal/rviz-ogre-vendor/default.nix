@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xorg, libGLU, ament-cmake, libGL, freetype, pkg-config }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, freetype, libGL, libGLU, pkg-config, xorg }:
 buildRosPackage {
   pname = "ros-crystal-rviz-ogre-vendor";
   version = "5.1.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ xorg.libXaw xorg.libX11 libGLU libGL freetype xorg.libXrandr pkg-config ];
-  propagatedBuildInputs = [ xorg.libXaw xorg.libX11 libGLU libGL freetype xorg.libXrandr ];
+  buildInputs = [ pkg-config ];
+  propagatedBuildInputs = [ freetype libGL libGLU xorg.libX11 xorg.libXaw xorg.libXrandr ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

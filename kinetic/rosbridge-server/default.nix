@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosapi, rosbridge-library, catkin, pythonPackages, rosbridge-msgs, rosauth, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rosapi, rosauth, rosbridge-library, rosbridge-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-rosbridge-server";
   version = "0.11.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosapi rosbridge-library rosbridge-msgs rosauth pythonPackages.tornado pythonPackages.twisted rospy pythonPackages.backports_ssl_match_hostname ];
+  propagatedBuildInputs = [ pythonPackages.backports_ssl_match_hostname pythonPackages.tornado pythonPackages.twisted rosapi rosauth rosbridge-library rosbridge-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

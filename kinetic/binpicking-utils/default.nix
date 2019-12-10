@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bin-pose-emulator, catkin, bin-pose-msgs }:
+{ lib, buildRosPackage, fetchurl, bin-pose-emulator, bin-pose-msgs, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-binpicking-utils";
   version = "0.1.4";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-calibration, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, robot-calibration }:
 buildRosPackage {
   pname = "ros-melodic-fetch-calibration";
   version = "0.8.2-r1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, rclcpp, ament-cmake-gtest, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-swri-math-util";
   version = "3.0.3-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost rclcpp ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ boost rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

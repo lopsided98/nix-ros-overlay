@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roslib, pythonPackages, rosunit, rocon-std-msgs, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rocon-std-msgs, roslib, rospy, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-python-utils";
   version = "0.3.2-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest pythonPackages.catkin-pkg ];
+  buildInputs = [ rostest ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pythonPackages.rospkg roslib pythonPackages.catkin-pkg rocon-std-msgs rospy ];
+  propagatedBuildInputs = [ pythonPackages.catkin-pkg pythonPackages.rospkg rocon-std-msgs roslib rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pkg-config, cppunit, eigen, cmake }:
+{ lib, buildRosPackage, fetchurl, cmake, cppunit, eigen, pkg-config }:
 buildRosPackage {
   pname = "ros-dashing-orocos-kdl";
   version = "3.2.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ eigen ];
   checkInputs = [ cppunit ];
-  propagatedBuildInputs = [ pkg-config eigen ];
+  propagatedBuildInputs = [ eigen pkg-config ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

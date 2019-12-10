@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, class-loader, ament-cmake, eigen, tf2-msgs, apriltag, rclcpp, apriltag-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, apriltag, apriltag-msgs, class-loader, eigen, rclcpp, sensor-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-crystal-apriltag2-node";
   version = "1.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs class-loader eigen tf2-msgs apriltag rclcpp apriltag-msgs ];
-  propagatedBuildInputs = [ sensor-msgs class-loader tf2-msgs apriltag rclcpp apriltag-msgs ];
+  buildInputs = [ eigen ];
+  propagatedBuildInputs = [ apriltag apriltag-msgs class-loader rclcpp sensor-msgs tf2-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

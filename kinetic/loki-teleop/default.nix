@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, teleop-twist-keyboard, catkin, teleop-twist-joy }:
+{ lib, buildRosPackage, fetchurl, catkin, joy, teleop-twist-joy, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-kinetic-loki-teleop";
   version = "0.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joy teleop-twist-keyboard teleop-twist-joy ];
+  propagatedBuildInputs = [ joy teleop-twist-joy teleop-twist-keyboard ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

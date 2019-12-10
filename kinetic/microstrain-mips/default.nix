@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-aggregator, message-generation, sensor-msgs, geometry-msgs, std-msgs, std-srvs, cmake-modules, catkin, roscpp, roslint, tf2, message-runtime, nav-msgs, tf2-ros, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, diagnostic-aggregator, diagnostic-updater, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, roslint, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-microstrain-mips";
   version = "0.0.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs std-srvs cmake-modules roscpp roslint tf2 message-generation nav-msgs tf2-ros diagnostic-updater ];
-  propagatedBuildInputs = [ diagnostic-aggregator sensor-msgs geometry-msgs std-msgs std-srvs tf2 cmake-modules roscpp message-runtime nav-msgs tf2-ros diagnostic-updater ];
+  buildInputs = [ message-generation roslint ];
+  propagatedBuildInputs = [ cmake-modules diagnostic-aggregator diagnostic-updater geometry-msgs message-runtime nav-msgs roscpp sensor-msgs std-msgs std-srvs tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

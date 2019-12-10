@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, std-msgs, actionlib, catkin, actionlib-msgs, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, message-generation, message-runtime, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-actionlib-tutorials";
   version = "0.1.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs actionlib actionlib-msgs roscpp message-generation ];
-  propagatedBuildInputs = [ message-runtime actionlib roscpp ];
+  buildInputs = [ actionlib-msgs message-generation std-msgs ];
+  propagatedBuildInputs = [ actionlib message-runtime roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

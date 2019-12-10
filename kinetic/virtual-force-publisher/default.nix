@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, urdf, catkin, tf-conversions, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, kdl-parser, sensor-msgs, tf-conversions, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-virtual-force-publisher";
   version = "2.2.10";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs urdf tf-conversions kdl-parser ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs urdf tf-conversions kdl-parser ];
+  propagatedBuildInputs = [ geometry-msgs kdl-parser sensor-msgs tf-conversions urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

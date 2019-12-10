@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rb1-base-purepursuit, rb1-base-gazebo, catkin, rb1-base-control, rb1-base-2dnav }:
+{ lib, buildRosPackage, fetchurl, catkin, rb1-base-2dnav, rb1-base-control, rb1-base-gazebo, rb1-base-purepursuit }:
 buildRosPackage {
   pname = "ros-kinetic-rb1-base-sim";
   version = "1.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rb1-base-2dnav rb1-base-control rb1-base-purepursuit rb1-base-gazebo ];
+  propagatedBuildInputs = [ rb1-base-2dnav rb1-base-control rb1-base-gazebo rb1-base-purepursuit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

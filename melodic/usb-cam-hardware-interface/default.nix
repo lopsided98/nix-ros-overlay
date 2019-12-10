@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hardware-interface, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, hardware-interface, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-usb-cam-hardware-interface";
   version = "0.0.4";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface roscpp ];
   propagatedBuildInputs = [ hardware-interface roscpp ];
   nativeBuildInputs = [ catkin ];
 

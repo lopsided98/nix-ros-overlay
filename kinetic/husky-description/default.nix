@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, urdf, catkin, roslaunch, lms1xx }:
+{ lib, buildRosPackage, fetchurl, catkin, lms1xx, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-husky-description";
   version = "0.3.4-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ xacro urdf lms1xx ];
+  propagatedBuildInputs = [ lms1xx urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

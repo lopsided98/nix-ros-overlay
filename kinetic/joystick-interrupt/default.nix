@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, catkin, rosunit, roslint, neonavigation-common, roscpp, topic-tools, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, neonavigation-common, roscpp, roslint, rostest, rosunit, sensor-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-joystick-interrupt";
   version = "0.5.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs neonavigation-common roscpp topic-tools ];
   checkInputs = [ roslint rostest rosunit ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs neonavigation-common roscpp topic-tools ];
+  propagatedBuildInputs = [ geometry-msgs neonavigation-common roscpp sensor-msgs topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

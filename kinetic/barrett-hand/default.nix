@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bhand-controller, rqt-bhand, catkin }:
+{ lib, buildRosPackage, fetchurl, bhand-controller, catkin, rqt-bhand }:
 buildRosPackage {
   pname = "ros-kinetic-barrett-hand";
   version = "0.1.2";

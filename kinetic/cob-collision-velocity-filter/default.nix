@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-footprint-observer, boost, geometry-msgs, dynamic-reconfigure, tf, catkin, costmap-2d, visualization-msgs, roscpp, nav-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cob-footprint-observer, costmap-2d, dynamic-reconfigure, geometry-msgs, nav-msgs, roscpp, tf, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-collision-velocity-filter";
   version = "0.7.9-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cob-footprint-observer boost geometry-msgs dynamic-reconfigure tf costmap-2d visualization-msgs roscpp nav-msgs tf2-ros ];
-  propagatedBuildInputs = [ cob-footprint-observer boost geometry-msgs dynamic-reconfigure tf costmap-2d visualization-msgs roscpp nav-msgs tf2-ros ];
+  propagatedBuildInputs = [ boost cob-footprint-observer costmap-2d dynamic-reconfigure geometry-msgs nav-msgs roscpp tf tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

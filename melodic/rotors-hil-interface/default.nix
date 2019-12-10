@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, mavros, geometry-msgs, cmake-modules, catkin, mav-msgs, mavros-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, mav-msgs, mavros, mavros-msgs, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rotors-hil-interface";
   version = "2.2.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs mavros geometry-msgs cmake-modules mav-msgs mavros-msgs roscpp ];
-  propagatedBuildInputs = [ sensor-msgs mavros geometry-msgs mav-msgs mavros-msgs roscpp ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ geometry-msgs mav-msgs mavros mavros-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

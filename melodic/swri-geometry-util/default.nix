@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, tf, catkin, eigen, cv-bridge, roscpp, pkg-config, geos, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, cv-bridge, eigen, geos, pkg-config, roscpp, rostest, tf }:
 buildRosPackage {
   pname = "ros-melodic-swri-geometry-util";
   version = "2.11.0-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf cmake-modules eigen cv-bridge roscpp geos ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ tf cmake-modules eigen cv-bridge roscpp geos ];
-  nativeBuildInputs = [ pkg-config catkin ];
+  propagatedBuildInputs = [ cmake-modules cv-bridge eigen geos roscpp tf ];
+  nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''swri_geometry_util'';

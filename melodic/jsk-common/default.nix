@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jsk-topic-tools, multi-map-server, virtual-force-publisher, dynamic-tf-publisher, catkin, image-view2, jsk-network-tools, jsk-tools, jsk-tilt-laser }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-tf-publisher, image-view2, jsk-network-tools, jsk-tilt-laser, jsk-tools, jsk-topic-tools, multi-map-server, virtual-force-publisher }:
 buildRosPackage {
   pname = "ros-melodic-jsk-common";
   version = "2.2.10";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ jsk-topic-tools multi-map-server virtual-force-publisher dynamic-tf-publisher image-view2 jsk-network-tools jsk-tools jsk-tilt-laser ];
+  propagatedBuildInputs = [ dynamic-tf-publisher image-view2 jsk-network-tools jsk-tilt-laser jsk-tools jsk-topic-tools multi-map-server virtual-force-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

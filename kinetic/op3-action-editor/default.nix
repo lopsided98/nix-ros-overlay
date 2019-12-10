@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ncurses, robotis-controller, op3-manager, ros-mpg321-player, std-msgs, catkin, robotis-device, op3-action-module, libyamlcpp, roscpp, dynamixel-sdk }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamixel-sdk, libyamlcpp, ncurses, op3-action-module, op3-manager, robotis-controller, robotis-device, ros-mpg321-player, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-op3-action-editor";
   version = "0.2.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ncurses robotis-controller std-msgs robotis-device op3-action-module libyamlcpp roscpp dynamixel-sdk ];
-  propagatedBuildInputs = [ ncurses robotis-controller op3-manager ros-mpg321-player std-msgs robotis-device op3-action-module libyamlcpp roscpp dynamixel-sdk ];
+  propagatedBuildInputs = [ dynamixel-sdk libyamlcpp ncurses op3-action-module op3-manager robotis-controller robotis-device ros-mpg321-player roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

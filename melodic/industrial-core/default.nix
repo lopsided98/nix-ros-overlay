@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, industrial-robot-client, industrial-deprecated, industrial-utils, industrial-trajectory-filters, catkin, industrial-robot-simulator, industrial-msgs, simple-message }:
+{ lib, buildRosPackage, fetchurl, catkin, industrial-deprecated, industrial-msgs, industrial-robot-client, industrial-robot-simulator, industrial-trajectory-filters, industrial-utils, simple-message }:
 buildRosPackage {
   pname = "ros-melodic-industrial-core";
   version = "0.7.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ industrial-robot-client industrial-deprecated industrial-trajectory-filters industrial-utils industrial-robot-simulator industrial-msgs simple-message ];
+  propagatedBuildInputs = [ industrial-deprecated industrial-msgs industrial-robot-client industrial-robot-simulator industrial-trajectory-filters industrial-utils simple-message ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tinyxml, cmake }:
+{ lib, buildRosPackage, fetchurl, cmake, tinyxml }:
 buildRosPackage {
   pname = "ros-dashing-tinyxml-vendor";
   version = "0.7.0-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ tinyxml ];
   propagatedBuildInputs = [ tinyxml ];
   nativeBuildInputs = [ cmake ];
 

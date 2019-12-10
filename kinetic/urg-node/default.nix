@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, message-runtime, urg-c, std-msgs, std-srvs, laser-proc, tf, catkin, roslint, nodelet, roscpp, message-generation, roslaunch, rosconsole, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, laser-proc, message-generation, message-runtime, nodelet, rosconsole, roscpp, roslaunch, roslint, sensor-msgs, std-msgs, std-srvs, tf, urg-c }:
 buildRosPackage {
   pname = "ros-kinetic-urg-node";
   version = "0.1.11";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs dynamic-reconfigure urg-c std-msgs std-srvs laser-proc tf nodelet roscpp message-generation rosconsole diagnostic-updater ];
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure message-runtime urg-c std-msgs std-srvs laser-proc tf nodelet roscpp message-generation rosconsole diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure laser-proc message-generation message-runtime nodelet rosconsole roscpp sensor-msgs std-msgs std-srvs tf urg-c ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

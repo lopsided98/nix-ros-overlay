@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, sensor-msgs, geometry-msgs, moveit-ros-move-group, moveit-ros-planning-interface, tf, cmake-modules, moveit-ros-manipulation, catkin, roscpp, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, joy, moveit-ros-manipulation, moveit-ros-move-group, moveit-ros-planning-interface, roscpp, rospy, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-jog-arm";
   version = "0.0.3-r2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ joy sensor-msgs geometry-msgs moveit-ros-move-group moveit-ros-planning-interface tf cmake-modules moveit-ros-manipulation roscpp rospy ];
-  propagatedBuildInputs = [ joy sensor-msgs geometry-msgs moveit-ros-move-group moveit-ros-planning-interface tf cmake-modules moveit-ros-manipulation roscpp rospy ];
+  propagatedBuildInputs = [ cmake-modules geometry-msgs joy moveit-ros-manipulation moveit-ros-move-group moveit-ros-planning-interface roscpp rospy sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

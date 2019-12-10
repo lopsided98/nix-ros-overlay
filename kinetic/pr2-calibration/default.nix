@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-calibration-launch, dense-laser-assembler, catkin, pr2-se-calibration-launch, laser-joint-processor, laser-joint-projector, pr2-dense-laser-snapshotter }:
+{ lib, buildRosPackage, fetchurl, catkin, dense-laser-assembler, laser-joint-processor, laser-joint-projector, pr2-calibration-launch, pr2-dense-laser-snapshotter, pr2-se-calibration-launch }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-calibration";
   version = "1.0.11";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-calibration-launch dense-laser-assembler pr2-se-calibration-launch laser-joint-processor laser-joint-projector pr2-dense-laser-snapshotter ];
+  propagatedBuildInputs = [ dense-laser-assembler laser-joint-processor laser-joint-projector pr2-calibration-launch pr2-dense-laser-snapshotter pr2-se-calibration-launch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

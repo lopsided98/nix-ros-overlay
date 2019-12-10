@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, denso-launch, denso-ros-control, catkin, vs060, vs060-gazebo, vs060-moveit-config }:
+{ lib, buildRosPackage, fetchurl, catkin, denso-launch, denso-ros-control, vs060, vs060-gazebo, vs060-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-denso";
   version = "2.0.3";

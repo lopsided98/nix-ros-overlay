@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, lidar-utils, ament-lint-common, ament-cmake, ament-lint-auto, autoware-auto-cmake, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, autoware-auto-cmake, geometry-msgs, lidar-utils }:
 buildRosPackage {
   pname = "ros-dashing-voxel-grid";
   version = "0.0.2-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ lidar-utils geometry-msgs ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ lidar-utils geometry-msgs ];
-  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ geometry-msgs lidar-utils ];
+  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
 
   meta = {
     description = ''voxel grid filters'';

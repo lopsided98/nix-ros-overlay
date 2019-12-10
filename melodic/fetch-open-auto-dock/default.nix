@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, fetch-driver-msgs, geometry-msgs, fetch-auto-dock-msgs, std-msgs, tf, actionlib, roslib, catkin, eigen, roscpp, angles, rospy, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, angles, catkin, eigen, fetch-auto-dock-msgs, fetch-driver-msgs, geometry-msgs, nav-msgs, roscpp, roslib, rospy, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-fetch-open-auto-dock";
   version = "0.1.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs fetch-driver-msgs geometry-msgs fetch-auto-dock-msgs std-msgs actionlib tf roslib eigen roscpp angles rospy nav-msgs ];
-  propagatedBuildInputs = [ sensor-msgs fetch-driver-msgs geometry-msgs fetch-auto-dock-msgs std-msgs tf actionlib roslib eigen roscpp rospy nav-msgs ];
+  buildInputs = [ angles ];
+  propagatedBuildInputs = [ actionlib eigen fetch-auto-dock-msgs fetch-driver-msgs geometry-msgs nav-msgs roscpp roslib rospy sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

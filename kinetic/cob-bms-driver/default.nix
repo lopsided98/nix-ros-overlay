@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-msgs, cob-msgs, std-msgs, pythonPackages, catkin, socketcan-interface, roscpp, rospy, cob-srvs, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-srvs, diagnostic-msgs, diagnostic-updater, pythonPackages, roscpp, rospy, socketcan-interface, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-bms-driver";
   version = "0.7.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs std-msgs roscpp socketcan-interface diagnostic-updater ];
-  propagatedBuildInputs = [ pythonPackages.numpy diagnostic-msgs cob-msgs std-msgs roscpp socketcan-interface diagnostic-updater rospy cob-srvs ];
+  propagatedBuildInputs = [ cob-msgs cob-srvs diagnostic-msgs diagnostic-updater pythonPackages.numpy roscpp rospy socketcan-interface std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

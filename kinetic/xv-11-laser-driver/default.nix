@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-xv-11-laser-driver";
   version = "0.3.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp ];
+  buildInputs = [ roscpp sensor-msgs ];
   propagatedBuildInputs = [ boost ];
   nativeBuildInputs = [ catkin ];
 

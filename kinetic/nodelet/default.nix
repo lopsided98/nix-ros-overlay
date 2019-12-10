@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bondcpp, message-generation, utillinux, boost, pluginlib, std-msgs, cmake-modules, catkin, rospy, roscpp, message-runtime, rosconsole }:
+{ lib, buildRosPackage, fetchurl, bondcpp, boost, catkin, cmake-modules, message-generation, message-runtime, pluginlib, rosconsole, roscpp, rospy, std-msgs, utillinux }:
 buildRosPackage {
   pname = "ros-kinetic-nodelet";
   version = "1.9.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ bondcpp utillinux boost pluginlib std-msgs cmake-modules roscpp message-generation rosconsole ];
-  propagatedBuildInputs = [ bondcpp utillinux boost pluginlib std-msgs rospy roscpp message-runtime rosconsole ];
+  buildInputs = [ cmake-modules message-generation ];
+  propagatedBuildInputs = [ bondcpp boost message-runtime pluginlib rosconsole roscpp rospy std-msgs utillinux ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

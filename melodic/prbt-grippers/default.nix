@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, prbt-pg70-support, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, prbt-pg70-support }:
 buildRosPackage {
   pname = "ros-melodic-prbt-grippers";
   version = "0.0.4-r1";

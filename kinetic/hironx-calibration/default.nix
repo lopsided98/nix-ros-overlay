@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, calibration-estimation, catkin, openni2-launch, calibration-launch, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, calibration-estimation, calibration-launch, catkin, kdl-parser, openni2-launch, orocos-kdl }:
 buildRosPackage {
   pname = "ros-kinetic-hironx-calibration";
   version = "2.1.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ orocos-kdl calibration-estimation openni2-launch calibration-launch kdl-parser ];
+  propagatedBuildInputs = [ calibration-estimation calibration-launch kdl-parser openni2-launch orocos-kdl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

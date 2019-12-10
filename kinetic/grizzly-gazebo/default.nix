@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, hector-gazebo-plugins, catkin, gazebo-ros, rostopic, grizzly-control, gazebo-ros-control, grizzly-description, roslaunch, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, gazebo-plugins, gazebo-ros, gazebo-ros-control, grizzly-control, grizzly-description, hector-gazebo-plugins, roslaunch, rostopic }:
 buildRosPackage {
   pname = "ros-kinetic-grizzly-gazebo";
   version = "0.3.1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ controller-manager hector-gazebo-plugins gazebo-ros rostopic grizzly-control gazebo-ros-control grizzly-description gazebo-plugins ];
+  propagatedBuildInputs = [ controller-manager gazebo-plugins gazebo-ros gazebo-ros-control grizzly-control grizzly-description hector-gazebo-plugins rostopic ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, arbotix-msgs, sensor-msgs, diagnostic-msgs, geometry-msgs, tf, actionlib, catkin, pythonPackages, rospy, nav-msgs, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, arbotix-msgs, catkin, control-msgs, diagnostic-msgs, geometry-msgs, nav-msgs, pythonPackages, rospy, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-arbotix-python";
   version = "0.10.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ arbotix-msgs sensor-msgs diagnostic-msgs geometry-msgs tf actionlib pythonPackages.pyserial rospy nav-msgs control-msgs ];
+  propagatedBuildInputs = [ actionlib arbotix-msgs control-msgs diagnostic-msgs geometry-msgs nav-msgs pythonPackages.pyserial rospy sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

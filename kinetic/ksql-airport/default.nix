@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros }:
 buildRosPackage {
   pname = "ros-kinetic-ksql-airport";
   version = "0.0.1-r1";

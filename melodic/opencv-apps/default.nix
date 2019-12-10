@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport, nodelet, rostest, sensor-msgs, dynamic-reconfigure, image-proc, rostopic, rosbag, std-msgs, std-srvs, catkin, cv-bridge, roscpp, topic-tools, message-generation, roslaunch, image-view, compressed-image-transport, message-runtime, rosservice }:
+{ lib, buildRosPackage, fetchurl, catkin, compressed-image-transport, cv-bridge, dynamic-reconfigure, image-proc, image-transport, image-view, message-generation, message-runtime, nodelet, rosbag, roscpp, roslaunch, rosservice, rostest, rostopic, sensor-msgs, std-msgs, std-srvs, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-opencv-apps";
   version = "2.0.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs dynamic-reconfigure std-msgs std-srvs image-transport cv-bridge nodelet roscpp message-generation ];
-  checkInputs = [ image-proc rosbag rostopic image-view topic-tools compressed-image-transport rosservice roslaunch rostest ];
-  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure std-msgs std-srvs image-transport cv-bridge nodelet roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  checkInputs = [ compressed-image-transport image-proc image-view rosbag roslaunch rosservice rostest rostopic topic-tools ];
+  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-transport message-runtime nodelet roscpp sensor-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

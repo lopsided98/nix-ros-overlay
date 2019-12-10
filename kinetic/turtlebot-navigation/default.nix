@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, map-server, tf, catkin, gmapping, move-base, roscpp, dwa-local-planner, amcl, turtlebot-bringup }:
+{ lib, buildRosPackage, fetchurl, amcl, catkin, dwa-local-planner, gmapping, map-server, move-base, roscpp, sensor-msgs, tf, turtlebot-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-navigation";
   version = "2.3.7";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ sensor-msgs map-server tf gmapping move-base roscpp dwa-local-planner amcl turtlebot-bringup ];
+  propagatedBuildInputs = [ amcl dwa-local-planner gmapping map-server move-base roscpp sensor-msgs tf turtlebot-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

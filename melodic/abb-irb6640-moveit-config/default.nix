@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, abb-irb6640-support, joint-state-publisher, moveit-planners-ompl, xacro, robot-state-publisher, moveit-ros-move-group, moveit-simple-controller-manager, catkin, industrial-robot-simulator, moveit-ros-visualization }:
+{ lib, buildRosPackage, fetchurl, abb-irb6640-support, catkin, industrial-robot-simulator, joint-state-publisher, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-visualization, moveit-simple-controller-manager, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-melodic-abb-irb6640-moveit-config";
   version = "1.3.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ abb-irb6640-support joint-state-publisher moveit-planners-ompl xacro robot-state-publisher moveit-ros-move-group moveit-simple-controller-manager industrial-robot-simulator moveit-ros-visualization ];
+  propagatedBuildInputs = [ abb-irb6640-support industrial-robot-simulator joint-state-publisher moveit-planners-ompl moveit-ros-move-group moveit-ros-visualization moveit-simple-controller-manager robot-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

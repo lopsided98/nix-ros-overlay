@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, genmsg, std-msgs, catkin, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, genmsg, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-bin-pose-msgs";
   version = "0.1.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ genmsg message-generation geometry-msgs std-msgs ];
-  propagatedBuildInputs = [ genmsg message-runtime geometry-msgs std-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ genmsg geometry-msgs message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

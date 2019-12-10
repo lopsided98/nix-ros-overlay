@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jackal-msgs, jackal-viz, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, jackal-msgs, jackal-viz }:
 buildRosPackage {
   pname = "ros-kinetic-jackal-desktop";
   version = "0.3.2";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, message-runtime, std-msgs, catkin, rospy, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, joy, message-generation, message-runtime, roscpp, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-modelica-bridge";
   version = "0.1.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ joy std-msgs rospy roscpp message-generation ];
-  propagatedBuildInputs = [ joy std-msgs rospy roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ joy message-runtime roscpp rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

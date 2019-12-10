@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, abb-irb6640-support, abb-irb4400-support, abb-irb5400-support, catkin, abb-irb2400-moveit-plugins, abb-irb2400-support, abb-irb6640-moveit-config, abb-driver, abb-irb2400-moveit-config, abb-resources, abb-irb6600-support }:
+{ lib, buildRosPackage, fetchurl, abb-driver, abb-irb2400-moveit-config, abb-irb2400-moveit-plugins, abb-irb2400-support, abb-irb4400-support, abb-irb5400-support, abb-irb6600-support, abb-irb6640-moveit-config, abb-irb6640-support, abb-resources, catkin }:
 buildRosPackage {
   pname = "ros-melodic-abb";
   version = "1.3.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ abb-irb6640-support abb-irb4400-support abb-irb5400-support abb-irb2400-moveit-plugins abb-irb2400-support abb-irb6640-moveit-config abb-driver abb-irb2400-moveit-config abb-resources abb-irb6600-support ];
+  propagatedBuildInputs = [ abb-driver abb-irb2400-moveit-config abb-irb2400-moveit-plugins abb-irb2400-support abb-irb4400-support abb-irb5400-support abb-irb6600-support abb-irb6640-moveit-config abb-irb6640-support abb-resources ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

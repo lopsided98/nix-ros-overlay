@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, uuv-world-plugins, geometry-msgs, uuv-world-ros-plugins-msgs, catkin, gazebo-msgs, roscpp, gazebo-dev }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-dev, gazebo-msgs, geometry-msgs, roscpp, uuv-world-plugins, uuv-world-ros-plugins-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uuv-world-ros-plugins";
   version = "0.6.13";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ uuv-world-plugins geometry-msgs uuv-world-ros-plugins-msgs gazebo-msgs roscpp gazebo-dev ];
-  propagatedBuildInputs = [ uuv-world-plugins geometry-msgs uuv-world-ros-plugins-msgs gazebo-msgs roscpp gazebo-dev ];
+  propagatedBuildInputs = [ gazebo-dev gazebo-msgs geometry-msgs roscpp uuv-world-plugins uuv-world-ros-plugins-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

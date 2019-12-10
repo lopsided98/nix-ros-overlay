@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, message-runtime, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-kinesis-video-msgs";
   version = "2.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation diagnostic-msgs ];
-  propagatedBuildInputs = [ message-runtime diagnostic-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ diagnostic-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

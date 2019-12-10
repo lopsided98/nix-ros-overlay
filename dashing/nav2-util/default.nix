@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-cmake, test-msgs, tf2, nav2-msgs, nav-msgs, ament-lint-auto, rclcpp-lifecycle, SDL_image, SDL, launch-testing, ament-lint-common, tf2-geometry-msgs, nav2-common, rclcpp, ament-cmake-gtest, tf2-ros, std-srvs, lifecycle-msgs, rclcpp-action, boost, launch, ament-cmake-pytest }:
+{ lib, buildRosPackage, fetchurl, SDL, SDL_image, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, boost, geometry-msgs, launch, launch-testing, lifecycle-msgs, nav-msgs, nav2-common, nav2-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, std-srvs, test-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-nav2-util";
   version = "0.2.6-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-action rclcpp-lifecycle SDL_image geometry-msgs nav-msgs boost SDL test-msgs tf2-geometry-msgs nav2-common lifecycle-msgs tf2 rclcpp nav2-msgs tf2-ros ];
-  checkInputs = [ rclcpp-action rclcpp-lifecycle launch launch-testing std-srvs ament-lint-common test-msgs ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ tf2-ros boost rclcpp-action geometry-msgs SDL_image nav-msgs rclcpp-lifecycle SDL test-msgs tf2-geometry-msgs nav2-common tf2 rclcpp nav2-msgs lifecycle-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing rclcpp-action rclcpp-lifecycle std-srvs test-msgs ];
+  propagatedBuildInputs = [ SDL SDL_image boost geometry-msgs lifecycle-msgs nav-msgs nav2-common nav2-msgs rclcpp rclcpp-action rclcpp-lifecycle test-msgs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

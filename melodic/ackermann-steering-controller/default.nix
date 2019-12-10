@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, geometry-msgs, controller-manager, urdf, pluginlib, tf, rosunit, nav-msgs, rostest, diff-drive-controller, std-msgs, std-srvs, catkin, realtime-tools, roscpp, gazebo-ros, boost, controller-interface, hardware-interface }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, controller-interface, controller-manager, diff-drive-controller, gazebo-ros, geometry-msgs, hardware-interface, nav-msgs, pluginlib, realtime-tools, roscpp, rostest, rosunit, std-msgs, std-srvs, tf, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-ackermann-steering-controller";
   version = "0.15.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost controller-interface urdf hardware-interface pluginlib tf realtime-tools diff-drive-controller roscpp nav-msgs ];
-  checkInputs = [ xacro geometry-msgs controller-manager std-msgs std-srvs rosunit gazebo-ros rostest ];
-  propagatedBuildInputs = [ boost controller-interface urdf hardware-interface pluginlib tf realtime-tools diff-drive-controller roscpp nav-msgs ];
+  checkInputs = [ controller-manager gazebo-ros geometry-msgs rostest rosunit std-msgs std-srvs xacro ];
+  propagatedBuildInputs = [ boost controller-interface diff-drive-controller hardware-interface nav-msgs pluginlib realtime-tools roscpp tf urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

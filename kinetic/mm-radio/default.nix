@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-time, mm-core-msgs, catkin, ecl-utilities, ecl-command-line, ecl-exceptions, nanomsg, ecl-threads, ecl-build, mm-messages }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-build, ecl-command-line, ecl-exceptions, ecl-threads, ecl-time, ecl-utilities, mm-core-msgs, mm-messages, nanomsg }:
 buildRosPackage {
   pname = "ros-kinetic-mm-radio";
   version = "0.2.4";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-time mm-core-msgs ecl-utilities ecl-command-line ecl-exceptions nanomsg ecl-threads ecl-build mm-messages ];
-  propagatedBuildInputs = [ ecl-time mm-core-msgs ecl-utilities ecl-command-line ecl-exceptions nanomsg ecl-threads ecl-build mm-messages ];
+  propagatedBuildInputs = [ ecl-build ecl-command-line ecl-exceptions ecl-threads ecl-time ecl-utilities mm-core-msgs mm-messages nanomsg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

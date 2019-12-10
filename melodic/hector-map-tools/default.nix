@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eigen, nav-msgs, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-hector-map-tools";
   version = "0.4.0-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen nav-msgs ];
   propagatedBuildInputs = [ eigen nav-msgs ];
   nativeBuildInputs = [ catkin ];
 

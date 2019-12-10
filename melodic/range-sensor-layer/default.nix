@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, dynamic-reconfigure, pluginlib, catkin, roslint, costmap-2d, roscpp, angles, rospy }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, costmap-2d, dynamic-reconfigure, geometry-msgs, pluginlib, roscpp, roslint, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-range-sensor-layer";
   version = "0.5.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure pluginlib costmap-2d roscpp angles rospy ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure pluginlib costmap-2d roscpp angles rospy ];
+  propagatedBuildInputs = [ angles costmap-2d dynamic-reconfigure geometry-msgs pluginlib roscpp rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, pythonPackages, rosunit, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy, rostest, rosunit, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-camera-info-manager-py";
   version = "0.2.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest sensor-msgs rospy ];
+  buildInputs = [ rostest ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ sensor-msgs rospy pythonPackages.pyyaml pythonPackages.rospkg ];
+  propagatedBuildInputs = [ pythonPackages.pyyaml pythonPackages.rospkg rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

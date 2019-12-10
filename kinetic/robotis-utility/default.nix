@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-madplay-player, ros-mpg321-player, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, ros-madplay-player, ros-mpg321-player }:
 buildRosPackage {
   pname = "ros-kinetic-robotis-utility";
   version = "0.1.3";

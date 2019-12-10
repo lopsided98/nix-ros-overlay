@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, rosidl-cmake, std-msgs, std-srvs, rosidl-default-runtime, ament-cmake, marti-common-msgs, diagnostic-updater, gtest, rosidl-default-generators, rclcpp, nav-msgs, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, diagnostic-updater, gtest, marti-common-msgs, nav-msgs, rclcpp, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-dashing-swri-roscpp";
   version = "3.0.3-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost rosidl-cmake std-msgs std-srvs marti-common-msgs diagnostic-updater rclcpp nav-msgs ];
-  checkInputs = [ gtest ament-cmake-gtest ];
-  propagatedBuildInputs = [ boost rosidl-default-runtime std-msgs std-srvs marti-common-msgs diagnostic-updater rclcpp nav-msgs ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
+  buildInputs = [ rosidl-cmake ];
+  checkInputs = [ ament-cmake-gtest gtest ];
+  propagatedBuildInputs = [ boost diagnostic-updater marti-common-msgs nav-msgs rclcpp rosidl-default-runtime std-msgs std-srvs ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = ''swri_roscpp'';

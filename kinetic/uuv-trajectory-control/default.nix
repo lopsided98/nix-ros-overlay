@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, uuv-assistants, tf, pythonPackages, catkin, rosunit, roslib, uuv-control-msgs, visualization-msgs, rospy, nav-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-msgs, pythonPackages, roslib, rospy, rostest, rosunit, std-msgs, tf, uuv-assistants, uuv-control-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-uuv-trajectory-control";
   version = "0.6.13";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ rostest rosunit ];
-  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.pyyaml geometry-msgs pythonPackages.matplotlib pythonPackages.scipy std-msgs uuv-assistants tf roslib uuv-control-msgs visualization-msgs rospy nav-msgs ];
+  propagatedBuildInputs = [ geometry-msgs nav-msgs pythonPackages.matplotlib pythonPackages.numpy pythonPackages.pyyaml pythonPackages.scipy roslib rospy std-msgs tf uuv-assistants uuv-control-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

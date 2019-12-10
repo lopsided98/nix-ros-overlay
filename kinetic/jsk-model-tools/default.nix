@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, euscollada, eus-assimp, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, eus-assimp, euscollada }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-model-tools";
   version = "0.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ euscollada eus-assimp ];
+  propagatedBuildInputs = [ eus-assimp euscollada ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

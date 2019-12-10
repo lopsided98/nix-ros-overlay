@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cpp-common, catkin, rostime }:
+{ lib, buildRosPackage, fetchurl, catkin, cpp-common, rostime }:
 buildRosPackage {
   pname = "ros-melodic-roscpp-traits";
   version = "0.6.13-r1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, SDL_image, SDL, catkin, tf2, rosunit, libyamlcpp, roscpp, rospy, bullet, nav-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, SDL, SDL_image, bullet, catkin, libyamlcpp, nav-msgs, roscpp, rospy, rostest, rosunit, tf2 }:
 buildRosPackage {
   pname = "ros-kinetic-map-server";
   version = "1.14.5-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ SDL_image SDL tf2 libyamlcpp roscpp bullet nav-msgs ];
   checkInputs = [ rospy rostest rosunit ];
-  propagatedBuildInputs = [ SDL_image SDL roscpp libyamlcpp tf2 bullet nav-msgs ];
+  propagatedBuildInputs = [ SDL SDL_image bullet libyamlcpp nav-msgs roscpp tf2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

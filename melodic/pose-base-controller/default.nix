@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, actionlib, catkin, tf2-geometry-msgs, roscpp, nav-msgs, tf2-ros, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, geometry-msgs, move-base-msgs, nav-msgs, roscpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-pose-base-controller";
   version = "0.3.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs actionlib tf2-geometry-msgs roscpp nav-msgs tf2-ros move-base-msgs ];
-  propagatedBuildInputs = [ geometry-msgs actionlib tf2-geometry-msgs roscpp nav-msgs tf2-ros move-base-msgs ];
+  propagatedBuildInputs = [ actionlib geometry-msgs move-base-msgs nav-msgs roscpp tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

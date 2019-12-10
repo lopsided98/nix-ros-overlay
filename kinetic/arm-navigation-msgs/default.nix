@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, message-generation, geometry-msgs, std-msgs, tf, catkin, actionlib-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs, tf, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-arm-navigation-msgs";
   version = "0.0.6";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-msgs tf actionlib-msgs message-generation ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-msgs tf actionlib-msgs message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib-msgs geometry-msgs message-runtime sensor-msgs std-msgs tf trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

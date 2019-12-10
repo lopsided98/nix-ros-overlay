@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, interactive-markers, pluginlib, std-srvs, std-msgs, tf, cmake-modules, catkin, rviz, visualization-msgs, roscpp, rsm-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, interactive-markers, pluginlib, roscpp, rsm-msgs, rviz, std-msgs, std-srvs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rsm-rviz-plugins";
   version = "1.1.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ interactive-markers pluginlib std-msgs std-srvs tf cmake-modules rviz visualization-msgs roscpp rsm-msgs ];
-  propagatedBuildInputs = [ interactive-markers pluginlib std-srvs std-msgs tf cmake-modules rviz visualization-msgs roscpp rsm-msgs ];
+  propagatedBuildInputs = [ cmake-modules interactive-markers pluginlib roscpp rsm-msgs rviz std-msgs std-srvs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

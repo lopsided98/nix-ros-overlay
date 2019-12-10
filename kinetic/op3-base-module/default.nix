@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, boost, op3-kinematics-dynamics, geometry-msgs, std-msgs, cmake-modules, roslib, robotis-device, catkin, libyamlcpp, eigen, robotis-framework-common, roscpp, robotis-math }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, eigen, geometry-msgs, libyamlcpp, op3-kinematics-dynamics, robotis-controller-msgs, robotis-device, robotis-framework-common, robotis-math, roscpp, roslib, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-op3-base-module";
   version = "0.2.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs boost op3-kinematics-dynamics geometry-msgs std-msgs cmake-modules roslib robotis-device libyamlcpp eigen robotis-framework-common roscpp robotis-math ];
-  propagatedBuildInputs = [ robotis-controller-msgs boost op3-kinematics-dynamics geometry-msgs std-msgs cmake-modules roslib robotis-device libyamlcpp eigen robotis-framework-common roscpp robotis-math ];
+  propagatedBuildInputs = [ boost cmake-modules eigen geometry-msgs libyamlcpp op3-kinematics-dynamics robotis-controller-msgs robotis-device robotis-framework-common robotis-math roscpp roslib std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

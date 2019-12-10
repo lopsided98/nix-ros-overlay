@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, std-msgs, master-sync-fkie, catkin, master-discovery-fkie, roscpp, message-runtime, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, master-discovery-fkie, master-sync-fkie, message-generation, message-runtime, roscpp, roslaunch, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-sync-params";
   version = "1.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-runtime std-msgs master-sync-fkie master-discovery-fkie roscpp message-generation roslaunch ];
-  propagatedBuildInputs = [ message-runtime std-msgs master-sync-fkie master-discovery-fkie roscpp message-generation ];
+  buildInputs = [ roslaunch ];
+  propagatedBuildInputs = [ master-discovery-fkie master-sync-fkie message-generation message-runtime roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

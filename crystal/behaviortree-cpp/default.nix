@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake, cppzmq }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cppzmq }:
 buildRosPackage {
   pname = "ros-crystal-behaviortree-cpp";
   version = "2.4.3-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ cppzmq ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ cppzmq ];
   nativeBuildInputs = [ ament-cmake ];

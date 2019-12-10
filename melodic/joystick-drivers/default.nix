@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, spacenav-node, catkin, wiimote, ps3joy }:
+{ lib, buildRosPackage, fetchurl, catkin, joy, ps3joy, spacenav-node, wiimote }:
 buildRosPackage {
   pname = "ros-melodic-joystick-drivers";
   version = "1.13.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joy spacenav-node wiimote ps3joy ];
+  propagatedBuildInputs = [ joy ps3joy spacenav-node wiimote ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

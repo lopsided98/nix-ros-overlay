@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-runtime, pythonPackages, catkin, rospy, message-generation, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, pythonPackages, rospy, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-pgm-learner";
   version = "2.1.14-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation rospy pythonPackages.scipy ];
+  buildInputs = [ message-generation ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ rospy message-runtime pythonPackages.scipy ];
+  propagatedBuildInputs = [ message-runtime pythonPackages.scipy rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

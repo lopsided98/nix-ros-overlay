@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, nav-msgs, navfn, dynamic-reconfigure, cmake-modules, tf2-geometry-msgs, tf2-ros, rotate-recovery, move-base-msgs, clear-costmap-recovery, std-srvs, catkin, costmap-2d, nav-core, roscpp, message-generation, rospy, actionlib, base-local-planner, visualization-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, base-local-planner, catkin, clear-costmap-recovery, cmake-modules, costmap-2d, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, move-base-msgs, nav-core, nav-msgs, navfn, pluginlib, roscpp, rospy, rotate-recovery, std-srvs, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-move-base";
   version = "1.16.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs pluginlib nav-msgs navfn dynamic-reconfigure cmake-modules tf2-geometry-msgs tf2-ros rotate-recovery move-base-msgs clear-costmap-recovery std-srvs costmap-2d nav-core roscpp rospy message-generation actionlib base-local-planner visualization-msgs ];
-  propagatedBuildInputs = [ tf2-ros clear-costmap-recovery geometry-msgs dynamic-reconfigure message-runtime pluginlib std-srvs actionlib base-local-planner costmap-2d nav-core visualization-msgs roscpp rospy nav-msgs navfn rotate-recovery move-base-msgs ];
+  buildInputs = [ cmake-modules message-generation tf2-geometry-msgs ];
+  propagatedBuildInputs = [ actionlib base-local-planner clear-costmap-recovery costmap-2d dynamic-reconfigure geometry-msgs message-runtime move-base-msgs nav-core nav-msgs navfn pluginlib roscpp rospy rotate-recovery std-srvs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

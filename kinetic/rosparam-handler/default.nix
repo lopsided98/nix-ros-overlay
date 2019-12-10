@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-rosparam-handler";
   version = "0.1.4";

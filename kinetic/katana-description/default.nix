@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, convex-decomposition, ivcon, urdf, catkin, transmission-interface }:
+{ lib, buildRosPackage, fetchurl, catkin, convex-decomposition, ivcon, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-katana-description";
   version = "1.1.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ convex-decomposition ivcon transmission-interface urdf ];
+  buildInputs = [ convex-decomposition ivcon ];
   propagatedBuildInputs = [ transmission-interface urdf ];
   nativeBuildInputs = [ catkin ];
 

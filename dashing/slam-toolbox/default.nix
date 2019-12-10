@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tbb, liblapack, ceres-solver, pluginlib, tf2-sensor-msgs, ament-cmake, suitesparse, eigen, tf2, rosidl-default-generators, nav-msgs, sensor-msgs, launch-testing, tf2-geometry-msgs, nav2-map-server, qt5, builtin-interfaces, rclcpp, rviz-rendering, tf2-ros, ament-cmake-gtest, message-filters, std-msgs, std-srvs, boost, launch, rviz-default-plugins, rviz-common, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, builtin-interfaces, ceres-solver, eigen, launch, launch-testing, liblapack, message-filters, nav-msgs, nav2-map-server, pluginlib, qt5, rclcpp, rosidl-default-generators, rviz-common, rviz-default-plugins, rviz-rendering, sensor-msgs, std-msgs, std-srvs, suitesparse, tbb, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-dashing-slam-toolbox";
   version = "2.0.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tbb liblapack ceres-solver pluginlib tf2-sensor-msgs suitesparse eigen tf2 rosidl-default-generators nav-msgs sensor-msgs tf2-geometry-msgs nav2-map-server builtin-interfaces rclcpp rviz-rendering tf2-ros message-filters std-msgs std-srvs boost qt5.qtbase rviz-default-plugins rviz-common visualization-msgs ];
-  checkInputs = [ launch-testing ament-cmake-gtest launch ];
-  propagatedBuildInputs = [ tbb liblapack ceres-solver pluginlib tf2-sensor-msgs suitesparse eigen tf2 rosidl-default-generators nav-msgs sensor-msgs tf2-geometry-msgs nav2-map-server builtin-interfaces rclcpp rviz-rendering tf2-ros message-filters std-msgs std-srvs boost qt5.qtbase rviz-default-plugins rviz-common visualization-msgs ];
+  checkInputs = [ ament-cmake-gtest launch launch-testing ];
+  propagatedBuildInputs = [ boost builtin-interfaces ceres-solver eigen liblapack message-filters nav-msgs nav2-map-server pluginlib qt5.qtbase rclcpp rosidl-default-generators rviz-common rviz-default-plugins rviz-rendering sensor-msgs std-msgs std-srvs suitesparse tbb tf2 tf2-geometry-msgs tf2-ros tf2-sensor-msgs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

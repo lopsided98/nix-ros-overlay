@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, navigation, catkin, gmapping }:
+{ lib, buildRosPackage, fetchurl, catkin, gmapping, navigation }:
 buildRosPackage {
   pname = "ros-kinetic-summit-xl-navigation";
   version = "1.1.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ navigation gmapping ];
+  propagatedBuildInputs = [ gmapping navigation ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

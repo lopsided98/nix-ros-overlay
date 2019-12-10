@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, dynamic-reconfigure, std-msgs, std-srvs, actionlib, catkin, roscpp, cob-srvs, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, cob-srvs, control-msgs, dynamic-reconfigure, roscpp, sensor-msgs, std-msgs, std-srvs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-trajectory-controller";
   version = "0.8.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs sensor-msgs dynamic-reconfigure std-msgs std-srvs actionlib roscpp cob-srvs control-msgs ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs dynamic-reconfigure std-msgs std-srvs actionlib roscpp cob-srvs control-msgs ];
+  propagatedBuildInputs = [ actionlib cob-srvs control-msgs dynamic-reconfigure roscpp sensor-msgs std-msgs std-srvs trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

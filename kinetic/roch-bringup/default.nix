@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-interaction-msgs, microstrain-3dmgx2-imu, tf, robot-upstart, roch-description, imu-transformer, nmea-navsat-driver, nodelet, imu-filter-madgwick, rocon-bubble-icons, freenect-launch, realsense-camera, rocon-app-manager, robot-state-publisher, laser-filters, roch-capabilities, roch-control, rocon-app-manager-msgs, openni2-launch, zeroconf-avahi, tf2-ros, diagnostic-aggregator, catkin, pythonPackages, nmea-comms, roch-base, robot-localization, rospy, roslaunch, depthimage-to-laserscan, rgbd-launch, roch-sensorpc, roch-safety-controller, rplidar-ros, astra-launch }:
+{ lib, buildRosPackage, fetchurl, astra-launch, catkin, depthimage-to-laserscan, diagnostic-aggregator, freenect-launch, imu-filter-madgwick, imu-transformer, laser-filters, microstrain-3dmgx2-imu, nmea-comms, nmea-navsat-driver, nodelet, openni2-launch, pythonPackages, realsense-camera, rgbd-launch, robot-localization, robot-state-publisher, robot-upstart, roch-base, roch-capabilities, roch-control, roch-description, roch-safety-controller, roch-sensorpc, rocon-app-manager, rocon-app-manager-msgs, rocon-bubble-icons, rocon-interaction-msgs, roslaunch, rospy, rplidar-ros, tf, tf2-ros, zeroconf-avahi }:
 buildRosPackage {
   pname = "ros-kinetic-roch-bringup";
   version = "2.0.15";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy roslaunch ];
-  propagatedBuildInputs = [ microstrain-3dmgx2-imu rocon-interaction-msgs tf robot-upstart roch-description imu-transformer nmea-navsat-driver nodelet imu-filter-madgwick rocon-bubble-icons freenect-launch realsense-camera rocon-app-manager robot-state-publisher laser-filters roch-capabilities roch-control rocon-app-manager-msgs openni2-launch zeroconf-avahi tf2-ros diagnostic-aggregator nmea-comms roch-base robot-localization rospy depthimage-to-laserscan rgbd-launch roch-sensorpc pythonPackages.scipy roch-safety-controller rplidar-ros astra-launch ];
+  buildInputs = [ roslaunch ];
+  propagatedBuildInputs = [ astra-launch depthimage-to-laserscan diagnostic-aggregator freenect-launch imu-filter-madgwick imu-transformer laser-filters microstrain-3dmgx2-imu nmea-comms nmea-navsat-driver nodelet openni2-launch pythonPackages.scipy realsense-camera rgbd-launch robot-localization robot-state-publisher robot-upstart roch-base roch-capabilities roch-control roch-description roch-safety-controller roch-sensorpc rocon-app-manager rocon-app-manager-msgs rocon-bubble-icons rocon-interaction-msgs rospy rplidar-ros tf tf2-ros zeroconf-avahi ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

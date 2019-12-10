@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, catkin, actionlib, roscpp, pr2-controllers-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, pr2-controllers-msgs, roscpp, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-joint-trajectory-action";
   version = "1.10.14";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs actionlib pr2-controllers-msgs roscpp ];
-  propagatedBuildInputs = [ pr2-controllers-msgs actionlib trajectory-msgs roscpp ];
+  propagatedBuildInputs = [ actionlib pr2-controllers-msgs roscpp trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

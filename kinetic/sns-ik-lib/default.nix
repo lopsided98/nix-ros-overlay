@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, std-msgs, catkin, eigen, roscpp, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, kdl-parser, orocos-kdl, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-sns-ik-lib";
   version = "0.2.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl std-msgs eigen roscpp kdl-parser ];
-  propagatedBuildInputs = [ orocos-kdl std-msgs roscpp ];
+  buildInputs = [ eigen kdl-parser ];
+  propagatedBuildInputs = [ orocos-kdl roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, tinyxml-vendor, pluginlib, ament-cmake-cpplint, ament-cmake, tf2, ament-cmake-gmock, sensor-msgs, rviz-ogre-vendor, resource-retriever, tf2-geometry-msgs, qt5, rclcpp, rviz-assimp-vendor, rviz-rendering, tf2-ros, ament-cmake-gtest, std-msgs, yaml-cpp-vendor, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-cppcheck }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, geometry-msgs, pluginlib, qt5, rclcpp, resource-retriever, rviz-assimp-vendor, rviz-ogre-vendor, rviz-rendering, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tinyxml-vendor, urdf, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-crystal-rviz-common";
   version = "5.1.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ yaml-cpp-vendor sensor-msgs geometry-msgs rclcpp urdf tinyxml-vendor resource-retriever pluginlib std-msgs rviz-ogre-vendor qt5.qtbase tf2-geometry-msgs tf2 rviz-assimp-vendor rviz-rendering tf2-ros ];
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-cpplint ament-cmake-uncrustify ament-cmake-gmock ament-cmake-cppcheck ament-cmake-gtest ];
-  propagatedBuildInputs = [ yaml-cpp-vendor sensor-msgs geometry-msgs rclcpp urdf tinyxml-vendor resource-retriever pluginlib std-msgs rviz-ogre-vendor qt5.qtbase tf2-geometry-msgs tf2 rviz-assimp-vendor rviz-rendering tf2-ros ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-gmock ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify ];
+  propagatedBuildInputs = [ geometry-msgs pluginlib qt5.qtbase rclcpp resource-retriever rviz-assimp-vendor rviz-ogre-vendor rviz-rendering sensor-msgs std-msgs tf2 tf2-geometry-msgs tf2-ros tinyxml-vendor urdf yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

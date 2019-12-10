@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-msgs, dynamic-reconfigure, std-msgs, catkin, pythonPackages, roscpp, cob-phidgets, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-phidgets, dynamic-reconfigure, pythonPackages, roscpp, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-voltage-control";
   version = "0.7.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cob-msgs dynamic-reconfigure std-msgs roscpp cob-phidgets ];
-  propagatedBuildInputs = [ cob-msgs dynamic-reconfigure std-msgs pythonPackages.tkinter roscpp cob-phidgets rospy ];
+  propagatedBuildInputs = [ cob-msgs cob-phidgets dynamic-reconfigure pythonPackages.tkinter roscpp rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

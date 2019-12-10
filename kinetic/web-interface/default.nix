@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-stream, rosweb, catkin, ros-apache2, launchman, pyclearsilver, rosjson, web-msgs, webui }:
+{ lib, buildRosPackage, fetchurl, catkin, image-stream, launchman, pyclearsilver, ros-apache2, rosjson, rosweb, web-msgs, webui }:
 buildRosPackage {
   pname = "ros-kinetic-web-interface";
   version = "1.0.7";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ image-stream rosweb ros-apache2 launchman pyclearsilver rosjson web-msgs webui ];
+  propagatedBuildInputs = [ image-stream launchman pyclearsilver ros-apache2 rosjson rosweb web-msgs webui ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslisp, actionlib-lisp, catkin, cl-transforms-stamped, tf2-msgs, cl-utils }:
+{ lib, buildRosPackage, fetchurl, actionlib-lisp, catkin, cl-transforms-stamped, cl-utils, roslisp, tf2-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cl-tf2";
   version = "0.2.12-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ roslisp actionlib-lisp cl-transforms-stamped tf2-msgs cl-utils ];
+  propagatedBuildInputs = [ actionlib-lisp cl-transforms-stamped cl-utils roslisp tf2-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

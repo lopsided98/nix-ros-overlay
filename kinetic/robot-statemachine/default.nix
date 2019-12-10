@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rsm-rqt-plugins, catkin, rsm-rviz-plugins, rsm-core, rsm-msgs, rsm-additions }:
+{ lib, buildRosPackage, fetchurl, catkin, rsm-additions, rsm-core, rsm-msgs, rsm-rqt-plugins, rsm-rviz-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-robot-statemachine";
   version = "1.1.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rsm-rqt-plugins rsm-rviz-plugins rsm-core rsm-msgs rsm-additions ];
+  propagatedBuildInputs = [ rsm-additions rsm-core rsm-msgs rsm-rqt-plugins rsm-rviz-plugins ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosnode, rosgraph, pyros-test, catkin, roslint, rosunit, catkin-pip, rospy, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, catkin-pip, pyros-test, rosgraph, roslaunch, roslint, rosnode, rospy, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-pyros-utils";
   version = "0.1.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosgraph roslint catkin-pip rospy roslaunch rostest ];
-  checkInputs = [ rosnode pyros-test rosunit ];
-  propagatedBuildInputs = [ rostest rosgraph roslaunch rospy ];
+  buildInputs = [ catkin-pip roslint ];
+  checkInputs = [ pyros-test rosnode rosunit ];
+  propagatedBuildInputs = [ rosgraph roslaunch rospy rostest ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

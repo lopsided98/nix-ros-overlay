@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libusb1, libusb, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, libusb, libusb1 }:
 buildRosPackage {
   pname = "ros-dashing-libphidget22";
   version = "2.0.1-r1";

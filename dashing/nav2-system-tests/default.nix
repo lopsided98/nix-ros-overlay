@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-cmake, nav2-bringup, nav2-util, nav2-msgs, nav-msgs, ament-lint-auto, ament-cmake-pytest, robot-state-publisher, launch-testing, ament-lint-common, tf2-geometry-msgs, nav2-common, rclpy, rclcpp, ament-cmake-gtest, std-msgs, navigation2, lcov, gazebo-ros-pkgs, launch, nav2-lifecycle-manager, launch-ros, visualization-msgs, nav2-amcl }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, gazebo-ros-pkgs, geometry-msgs, launch, launch-ros, launch-testing, lcov, nav-msgs, nav2-amcl, nav2-bringup, nav2-common, nav2-lifecycle-manager, nav2-msgs, nav2-util, navigation2, rclcpp, rclpy, robot-state-publisher, std-msgs, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-dashing-nav2-system-tests";
   version = "0.2.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ gazebo-ros-pkgs geometry-msgs nav-msgs launch-testing std-msgs nav2-lifecycle-manager launch-ros tf2-geometry-msgs rclpy nav2-common visualization-msgs nav2-amcl nav2-util rclcpp nav2-msgs ];
-  checkInputs = [ launch launch-testing launch-ros ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ gazebo-ros-pkgs geometry-msgs lcov nav-msgs robot-state-publisher std-msgs launch-testing nav2-lifecycle-manager launch-ros navigation2 tf2-geometry-msgs rclpy visualization-msgs nav2-amcl nav2-bringup nav2-util rclcpp nav2-msgs ];
+  buildInputs = [ nav2-common ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-ros launch-testing ];
+  propagatedBuildInputs = [ gazebo-ros-pkgs geometry-msgs launch-ros launch-testing lcov nav-msgs nav2-amcl nav2-bringup nav2-lifecycle-manager nav2-msgs nav2-util navigation2 rclcpp rclpy robot-state-publisher std-msgs tf2-geometry-msgs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-safety-controller, cob-reflector-referencing, catkin, cob-docker-control }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-docker-control, cob-reflector-referencing, cob-safety-controller }:
 buildRosPackage {
   pname = "ros-kinetic-cob-substitute";
   version = "0.6.8-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-safety-controller cob-reflector-referencing cob-docker-control ];
+  propagatedBuildInputs = [ cob-docker-control cob-reflector-referencing cob-safety-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-runtime, rosgraph, catkin, rosunit, rospy, message-generation, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rosgraph, roslaunch, rospy, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-app-manager";
   version = "1.0.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosgraph rosunit rospy message-generation roslaunch ];
-  propagatedBuildInputs = [ message-runtime rosgraph rosunit rospy roslaunch ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ message-runtime rosgraph roslaunch rospy rosunit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, robot-state-publisher, catkin, ubiquity-motor, diff-drive-controller, chrony, magni-description, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, chrony, controller-manager, diff-drive-controller, joint-state-controller, magni-description, robot-state-publisher, ubiquity-motor }:
 buildRosPackage {
   pname = "ros-kinetic-magni-bringup";
   version = "0.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ controller-manager robot-state-publisher ubiquity-motor magni-description diff-drive-controller chrony joint-state-controller ];
+  propagatedBuildInputs = [ chrony controller-manager diff-drive-controller joint-state-controller magni-description robot-state-publisher ubiquity-motor ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

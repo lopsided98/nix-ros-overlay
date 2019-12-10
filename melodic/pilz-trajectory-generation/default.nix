@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pilz-industrial-motion-testutils, eigen-conversions, pluginlib, pilz-testutils, prbt-support, rosunit, tf2, rostest, cmake-modules, tf2-geometry-msgs, orocos-kdl, moveit-core, moveit-ros-planning-interface, catkin, pilz-extensions, roscpp, moveit-ros-planning, prbt-pg70-support, kdl-conversions, moveit-ros-move-group, code-coverage, tf2-eigen, moveit-msgs, prbt-moveit-config, pilz-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, code-coverage, eigen-conversions, kdl-conversions, moveit-core, moveit-msgs, moveit-ros-move-group, moveit-ros-planning, moveit-ros-planning-interface, orocos-kdl, pilz-extensions, pilz-industrial-motion-testutils, pilz-msgs, pilz-testutils, pluginlib, prbt-moveit-config, prbt-pg70-support, prbt-support, roscpp, rostest, rosunit, tf2, tf2-eigen, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pilz-trajectory-generation";
   version = "0.4.10-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core orocos-kdl eigen-conversions moveit-ros-move-group pluginlib moveit-ros-planning-interface pilz-extensions roscpp moveit-ros-planning tf2-eigen tf2-geometry-msgs moveit-msgs tf2 pilz-msgs kdl-conversions ];
-  checkInputs = [ pilz-industrial-motion-testutils pilz-testutils code-coverage cmake-modules prbt-support rosunit prbt-moveit-config prbt-pg70-support rostest ];
-  propagatedBuildInputs = [ moveit-core orocos-kdl eigen-conversions moveit-ros-move-group pluginlib moveit-ros-planning-interface pilz-extensions roscpp moveit-ros-planning tf2-eigen tf2-geometry-msgs moveit-msgs tf2 pilz-msgs kdl-conversions ];
+  checkInputs = [ cmake-modules code-coverage pilz-industrial-motion-testutils pilz-testutils prbt-moveit-config prbt-pg70-support prbt-support rostest rosunit ];
+  propagatedBuildInputs = [ eigen-conversions kdl-conversions moveit-core moveit-msgs moveit-ros-move-group moveit-ros-planning moveit-ros-planning-interface orocos-kdl pilz-extensions pilz-msgs pluginlib roscpp tf2 tf2-eigen tf2-geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

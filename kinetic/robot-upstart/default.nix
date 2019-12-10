@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, daemontools, catkin, rosunit, roslint, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, daemontools, roslaunch, roslint, rosunit, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-robot-upstart";
   version = "0.3.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslint rosunit ];
-  propagatedBuildInputs = [ xacro roslaunch daemontools ];
+  propagatedBuildInputs = [ daemontools roslaunch xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

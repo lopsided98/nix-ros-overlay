@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libjpeg, libusb1, cmake, pkg-config }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, libjpeg, libusb1, pkg-config }:
 buildRosPackage {
   pname = "ros-kinetic-libuvc";
   version = "0.0.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ pkg-config libjpeg libusb1 ];
-  propagatedBuildInputs = [ libusb1 libjpeg catkin ];
+  buildInputs = [ pkg-config ];
+  propagatedBuildInputs = [ catkin libjpeg libusb1 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

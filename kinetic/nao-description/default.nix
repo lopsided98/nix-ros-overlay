@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, xacro, urdf, robot-state-publisher, tf, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, message-filters, robot-state-publisher, roscpp, sensor-msgs, tf, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-nao-description";
   version = "0.5.15";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters xacro urdf tf roscpp ];
-  propagatedBuildInputs = [ sensor-msgs xacro message-filters urdf robot-state-publisher tf roscpp ];
+  propagatedBuildInputs = [ message-filters robot-state-publisher roscpp sensor-msgs tf urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

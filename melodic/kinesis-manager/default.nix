@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, log4cplus, boost, gmock, catkin, cmake, openssl, gtest, pkg-config, aws-common, curl }:
+{ lib, buildRosPackage, fetchurl, aws-common, boost, catkin, cmake, curl, gmock, gtest, log4cplus, openssl, pkg-config }:
 buildRosPackage {
   pname = "ros-melodic-kinesis-manager";
   version = "2.0.1-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ log4cplus boost openssl aws-common curl ];
-  checkInputs = [ gtest gmock ];
-  propagatedBuildInputs = [ log4cplus boost openssl aws-common curl ];
-  nativeBuildInputs = [ pkg-config catkin cmake ];
+  checkInputs = [ gmock gtest ];
+  propagatedBuildInputs = [ aws-common boost curl log4cplus openssl ];
+  nativeBuildInputs = [ catkin cmake pkg-config ];
 
   meta = {
     description = ''AWS Kinesis stream management library intended for use with the Kinesis Video Producer SDK'';

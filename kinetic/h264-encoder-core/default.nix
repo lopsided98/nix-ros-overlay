@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ffmpeg, catkin, cmake, gtest, gmock, aws-common }:
+{ lib, buildRosPackage, fetchurl, aws-common, catkin, cmake, ffmpeg, gmock, gtest }:
 buildRosPackage {
   pname = "ros-kinetic-h264-encoder-core";
   version = "2.0.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ ffmpeg aws-common ];
-  checkInputs = [ gtest gmock ];
-  propagatedBuildInputs = [ ffmpeg aws-common ];
+  checkInputs = [ gmock gtest ];
+  propagatedBuildInputs = [ aws-common ffmpeg ];
   nativeBuildInputs = [ catkin cmake ];
 
   meta = {

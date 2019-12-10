@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, robot-state-publisher, catkin, roch-description, rviz-imu-plugin, rviz, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, robot-state-publisher, roch-description, roslaunch, rviz, rviz-imu-plugin }:
 buildRosPackage {
   pname = "ros-kinetic-roch-viz";
   version = "2.0.10";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joint-state-publisher robot-state-publisher roch-description rviz-imu-plugin rviz ];
+  propagatedBuildInputs = [ joint-state-publisher robot-state-publisher roch-description rviz rviz-imu-plugin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

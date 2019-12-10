@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, launch, ament-index-python, launch-ros, pythonPackages, ros2pkg, ros2cli, ament-pep257, ament-flake8 }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch, launch-ros, pythonPackages, ros2cli, ros2pkg }:
 buildRosPackage {
   pname = "ros-crystal-ros2launch";
   version = "0.7.4";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ launch launch-ros ros2pkg ros2cli ament-index-python ];
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
-  propagatedBuildInputs = [ launch launch-ros ros2pkg ros2cli ament-index-python ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  propagatedBuildInputs = [ ament-index-python launch launch-ros ros2cli ros2pkg ];
 
   meta = {
     description = ''The launch command for ROS 2 command line tools.'';

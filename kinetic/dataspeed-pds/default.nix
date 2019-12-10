@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dataspeed-pds-msgs, dataspeed-pds-scripts, catkin, dataspeed-pds-can }:
+{ lib, buildRosPackage, fetchurl, catkin, dataspeed-pds-can, dataspeed-pds-msgs, dataspeed-pds-scripts }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-pds";
   version = "1.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ dataspeed-pds-msgs dataspeed-pds-can dataspeed-pds-scripts ];
+  propagatedBuildInputs = [ dataspeed-pds-can dataspeed-pds-msgs dataspeed-pds-scripts ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

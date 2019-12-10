@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, diagnostic-msgs, urdf, libntcan, std-msgs, std-srvs, catkin, schunk-libm5api, libpcan, roscpp, cob-srvs, control-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-srvs, control-msgs, diagnostic-msgs, libntcan, libpcan, roscpp, schunk-libm5api, sensor-msgs, std-msgs, std-srvs, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-melodic-schunk-powercube-chain";
   version = "0.6.14-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs sensor-msgs diagnostic-msgs urdf libntcan std-msgs std-srvs schunk-libm5api libpcan roscpp cob-srvs control-msgs ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs diagnostic-msgs urdf libntcan std-msgs std-srvs schunk-libm5api libpcan roscpp cob-srvs control-msgs ];
+  propagatedBuildInputs = [ cob-srvs control-msgs diagnostic-msgs libntcan libpcan roscpp schunk-libm5api sensor-msgs std-msgs std-srvs trajectory-msgs urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

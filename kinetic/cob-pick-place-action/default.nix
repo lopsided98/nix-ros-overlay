@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, message-runtime, moveit-ros-move-group, moveit-ros-planning-interface, std-msgs, tf, catkin, actionlib, actionlib-msgs, geometric-shapes, roscpp, moveit-msgs, rospy, cob-grasp-generation, cob-moveit-interface }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, cob-grasp-generation, cob-moveit-interface, geometric-shapes, geometry-msgs, message-generation, message-runtime, moveit-msgs, moveit-ros-move-group, moveit-ros-planning-interface, roscpp, rospy, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-cob-pick-place-action";
   version = "0.7.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs moveit-ros-move-group std-msgs moveit-ros-planning-interface actionlib tf actionlib-msgs geometric-shapes roscpp moveit-msgs message-generation cob-grasp-generation cob-moveit-interface ];
-  propagatedBuildInputs = [ geometry-msgs message-runtime moveit-ros-move-group std-msgs moveit-ros-planning-interface tf actionlib actionlib-msgs geometric-shapes roscpp moveit-msgs rospy cob-grasp-generation cob-moveit-interface ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs cob-grasp-generation cob-moveit-interface geometric-shapes geometry-msgs message-runtime moveit-msgs moveit-ros-move-group moveit-ros-planning-interface roscpp rospy std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

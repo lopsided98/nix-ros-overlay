@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, toposens-driver, toposens-markers, toposens-msgs, catkin, toposens-pointcloud, toposens-description, toposens-sync }:
+{ lib, buildRosPackage, fetchurl, catkin, toposens-description, toposens-driver, toposens-markers, toposens-msgs, toposens-pointcloud, toposens-sync }:
 buildRosPackage {
   pname = "ros-melodic-toposens";
   version = "1.3.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ toposens-driver toposens-markers toposens-msgs toposens-pointcloud toposens-description toposens-sync ];
+  propagatedBuildInputs = [ toposens-description toposens-driver toposens-markers toposens-msgs toposens-pointcloud toposens-sync ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

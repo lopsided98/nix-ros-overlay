@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, fanuc-driver, xacro, robot-state-publisher, catkin, rviz, fanuc-resources, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, fanuc-driver, fanuc-resources, joint-state-publisher, robot-state-publisher, roslaunch, rviz, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-fanuc-cr35ia-support";
   version = "0.5.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joint-state-publisher fanuc-driver xacro robot-state-publisher rviz fanuc-resources ];
+  propagatedBuildInputs = [ fanuc-driver fanuc-resources joint-state-publisher robot-state-publisher rviz xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

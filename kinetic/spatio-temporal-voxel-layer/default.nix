@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, tbb, message-filters, geometry-msgs, sensor-msgs, dynamic-reconfigure, pluginlib, std-msgs, tf, catkin, laser-geometry, costmap-2d, openexr, pcl-conversions, visualization-msgs, roscpp, openvdb, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, costmap-2d, dynamic-reconfigure, geometry-msgs, laser-geometry, message-filters, message-generation, openexr, openvdb, pcl-conversions, pcl-ros, pluginlib, roscpp, sensor-msgs, std-msgs, tbb, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-spatio-temporal-voxel-layer";
   version = "1.2.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros tbb message-filters geometry-msgs sensor-msgs dynamic-reconfigure pluginlib std-msgs tf laser-geometry costmap-2d openexr pcl-conversions visualization-msgs roscpp openvdb message-generation ];
-  propagatedBuildInputs = [ pcl-ros tbb sensor-msgs geometry-msgs message-filters dynamic-reconfigure pluginlib std-msgs tf laser-geometry costmap-2d openexr pcl-conversions visualization-msgs roscpp openvdb ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ costmap-2d dynamic-reconfigure geometry-msgs laser-geometry message-filters openexr openvdb pcl-conversions pcl-ros pluginlib roscpp sensor-msgs std-msgs tbb tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

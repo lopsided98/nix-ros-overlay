@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pkg-config, curl, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, curl, pkg-config }:
 buildRosPackage {
   pname = "ros-dashing-libcurl-vendor";
   version = "2.1.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ curl ];
-  propagatedBuildInputs = [ pkg-config curl ];
+  propagatedBuildInputs = [ curl pkg-config ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

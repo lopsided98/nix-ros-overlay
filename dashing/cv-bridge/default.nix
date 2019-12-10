@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, ament-cmake-ros, python3Packages, opencv3, ament-lint-common, python-cmake-module, ament-cmake-gtest, ament-cmake-pytest, ament-index-python, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-python, ament-lint-auto, ament-lint-common, boost, opencv3, python-cmake-module, python3Packages, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-cv-bridge";
   version = "2.1.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs boost python3Packages.numpy opencv3 ];
-  checkInputs = [ ament-lint-common python3Packages.opencv3 ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ sensor-msgs boost python3Packages.numpy opencv3 ament-index-python ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common python3Packages.opencv3 ];
+  propagatedBuildInputs = [ ament-index-python boost opencv3 python3Packages.numpy sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-ros python-cmake-module ];
 
   meta = {

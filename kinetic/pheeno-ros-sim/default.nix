@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, geometry-msgs, urdf, tf, image-transport, actionlib-msgs, nav-msgs, sensor-msgs, gazebo-ros-control, std-msgs, catkin, roscpp, gazebo-ros, message-generation, rospy, actionlib, gazebo-msgs, rviz, message-runtime, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, gazebo-msgs, gazebo-plugins, gazebo-ros, gazebo-ros-control, geometry-msgs, image-transport, message-generation, message-runtime, nav-msgs, roscpp, rospy, rviz, sensor-msgs, std-msgs, tf, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-pheeno-ros-sim";
   version = "0.1.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs xacro geometry-msgs urdf std-msgs actionlib tf image-transport gazebo-msgs rviz actionlib-msgs gazebo-ros-control roscpp rospy gazebo-ros message-generation nav-msgs gazebo-plugins ];
-  propagatedBuildInputs = [ sensor-msgs xacro geometry-msgs urdf message-runtime std-msgs tf actionlib image-transport gazebo-msgs rviz actionlib-msgs gazebo-ros-control roscpp gazebo-ros rospy nav-msgs gazebo-plugins ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs gazebo-msgs gazebo-plugins gazebo-ros gazebo-ros-control geometry-msgs image-transport message-runtime nav-msgs roscpp rospy rviz sensor-msgs std-msgs tf urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

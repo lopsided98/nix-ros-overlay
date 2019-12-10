@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-license, catkin, ecl-exceptions, ecl-config, ecl-converters }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-config, ecl-converters, ecl-exceptions, ecl-license }:
 buildRosPackage {
   pname = "ros-melodic-ecl-formatters";
   version = "0.62.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-license ecl-exceptions ecl-config ecl-converters ];
-  propagatedBuildInputs = [ ecl-license ecl-exceptions ecl-config ecl-converters ];
+  propagatedBuildInputs = [ ecl-config ecl-converters ecl-exceptions ecl-license ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

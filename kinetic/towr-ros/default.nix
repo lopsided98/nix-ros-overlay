@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ncurses, message-generation, std-msgs, catkin, towr, xterm, xpp-msgs, rviz, visualization-msgs, roscpp, rosbag, message-runtime, xpp-states, xpp-hyq, rqt-bag }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, ncurses, rosbag, roscpp, rqt-bag, rviz, std-msgs, towr, visualization-msgs, xpp-hyq, xpp-msgs, xpp-states, xterm }:
 buildRosPackage {
   pname = "ros-kinetic-towr-ros";
   version = "1.4.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ncurses message-runtime std-msgs xpp-msgs visualization-msgs roscpp rosbag message-generation xpp-states towr ];
-  propagatedBuildInputs = [ ncurses message-runtime std-msgs towr xterm xpp-msgs rviz visualization-msgs roscpp rosbag message-generation xpp-states xpp-hyq rqt-bag ];
+  propagatedBuildInputs = [ message-generation message-runtime ncurses rosbag roscpp rqt-bag rviz std-msgs towr visualization-msgs xpp-hyq xpp-msgs xpp-states xterm ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, rviz, roslaunch, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-dsr-launcher";
   version = "0.9.6-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros rviz roslaunch ];
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ gazebo-ros rviz ];
   nativeBuildInputs = [ catkin ];
 

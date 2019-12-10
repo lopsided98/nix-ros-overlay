@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, catkin, controller-manager }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, rqt-gui }:
 buildRosPackage {
   pname = "ros-melodic-rqt-controller-manager";
   version = "0.15.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-gui controller-manager ];
+  propagatedBuildInputs = [ controller-manager rqt-gui ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, roslib, rosconsole, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, pluginlib, rosconsole, roscpp, roslib, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-filters";
   version = "1.7.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib roslib rosconsole roscpp rostest ];
-  propagatedBuildInputs = [ pluginlib rosconsole roslib roscpp ];
+  buildInputs = [ rostest ];
+  propagatedBuildInputs = [ pluginlib rosconsole roscpp roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

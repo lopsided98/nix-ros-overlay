@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cost-map-visualisations, tf, catkin, costmap-2d, rviz, ecl-console, cost-map-ros, roscpp, nav-msgs, ecl-build }:
+{ lib, buildRosPackage, fetchurl, catkin, cost-map-ros, cost-map-visualisations, costmap-2d, ecl-build, ecl-console, nav-msgs, roscpp, rviz, tf }:
 buildRosPackage {
   pname = "ros-kinetic-cost-map-demos";
   version = "0.3.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cost-map-visualisations tf costmap-2d ecl-console cost-map-ros roscpp nav-msgs ecl-build ];
-  propagatedBuildInputs = [ cost-map-visualisations tf costmap-2d rviz ecl-console cost-map-ros roscpp nav-msgs ecl-build ];
+  propagatedBuildInputs = [ cost-map-ros cost-map-visualisations costmap-2d ecl-build ecl-console nav-msgs roscpp rviz tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

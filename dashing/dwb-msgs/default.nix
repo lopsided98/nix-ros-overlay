@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, launch, nav-2d-msgs, rosidl-default-runtime, std-msgs, launch-testing, ament-lint-common, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, builtin-interfaces, nav-msgs, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, launch, launch-testing, nav-2d-msgs, nav-msgs, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-dwb-msgs";
   version = "0.2.6-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ geometry-msgs rosidl-default-runtime std-msgs nav-2d-msgs builtin-interfaces nav-msgs ];
-  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ geometry-msgs rosidl-default-runtime std-msgs nav-2d-msgs builtin-interfaces nav-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing ];
+  propagatedBuildInputs = [ builtin-interfaces geometry-msgs nav-2d-msgs nav-msgs rosidl-default-runtime std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

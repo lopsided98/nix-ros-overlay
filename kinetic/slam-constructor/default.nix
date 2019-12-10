@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, std-msgs, rosbag-storage, tf, catkin, roscpp, gtest, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, gtest, message-filters, nav-msgs, rosbag-storage, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-slam-constructor";
   version = "0.9.3";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs rosbag-storage tf roscpp nav-msgs ];
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs rosbag-storage tf roscpp nav-msgs ];
+  propagatedBuildInputs = [ geometry-msgs message-filters nav-msgs rosbag-storage roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

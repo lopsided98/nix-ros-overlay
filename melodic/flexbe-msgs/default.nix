@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-runtime, actionlib, catkin, smach-ros, actionlib-msgs, rospy, message-generation }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, message-generation, message-runtime, rospy, smach-ros }:
 buildRosPackage {
   pname = "ros-melodic-flexbe-msgs";
   version = "1.2.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation actionlib actionlib-msgs ];
-  propagatedBuildInputs = [ actionlib smach-ros actionlib-msgs rospy message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs message-runtime rospy smach-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

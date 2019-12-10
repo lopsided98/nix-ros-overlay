@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, dynamic-reconfigure, tf, cmake-modules, catkin, eigen, roscpp, message-runtime, nav-msgs, rosconsole }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, eigen, geometry-msgs, message-generation, message-runtime, nav-msgs, rosconsole, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-graft";
   version = "0.2.3-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs tf cmake-modules eigen roscpp message-generation nav-msgs rosconsole ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure tf roscpp message-runtime nav-msgs rosconsole ];
+  buildInputs = [ cmake-modules eigen message-generation ];
+  propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs message-runtime nav-msgs rosconsole roscpp sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

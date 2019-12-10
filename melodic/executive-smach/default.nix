@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, smach, smach-ros, catkin, smach-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, smach, smach-msgs, smach-ros }:
 buildRosPackage {
   pname = "ros-melodic-executive-smach";
   version = "2.0.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ smach-ros smach-msgs smach ];
+  propagatedBuildInputs = [ smach smach-msgs smach-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

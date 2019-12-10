@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pythonPackages, python-qt-binding, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-qt-dotgraph";
   version = "0.3.11";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ pythonPackages.pygraphviz ];
-  propagatedBuildInputs = [ pythonPackages.pydot python-qt-binding ];
+  propagatedBuildInputs = [ python-qt-binding pythonPackages.pydot ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

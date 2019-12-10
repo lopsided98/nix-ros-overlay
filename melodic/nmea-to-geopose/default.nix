@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, glog, catkin, quaternion-operation, eigen, geographic-msgs, roscpp, geodesy, nmea-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, geodesy, geographic-msgs, glog, nmea-msgs, quaternion-operation, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-nmea-to-geopose";
   version = "0.0.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ glog quaternion-operation geographic-msgs eigen roscpp geodesy nmea-msgs ];
-  propagatedBuildInputs = [ glog quaternion-operation geographic-msgs eigen roscpp geodesy nmea-msgs ];
+  propagatedBuildInputs = [ eigen geodesy geographic-msgs glog nmea-msgs quaternion-operation roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

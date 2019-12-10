@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qt-build, op3-offset-tuner-msgs, qt4, std-msgs, catkin, roslib, op3-offset-tuner-server, libyamlcpp, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, libyamlcpp, op3-offset-tuner-msgs, op3-offset-tuner-server, qt-build, qt4, roscpp, roslib, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-op3-offset-tuner-client";
   version = "0.2.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ qt-build op3-offset-tuner-msgs std-msgs qt4 roslib libyamlcpp roscpp ];
-  propagatedBuildInputs = [ qt-build op3-offset-tuner-msgs std-msgs qt4 roslib op3-offset-tuner-server libyamlcpp roscpp ];
+  propagatedBuildInputs = [ libyamlcpp op3-offset-tuner-msgs op3-offset-tuner-server qt-build qt4 roscpp roslib std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

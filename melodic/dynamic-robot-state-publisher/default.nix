@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, robot-state-publisher, catkin, roscpp, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, kdl-parser, robot-state-publisher, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dynamic-robot-state-publisher";
   version = "1.1.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs dynamic-reconfigure robot-state-publisher roscpp kdl-parser ];
-  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure robot-state-publisher roscpp kdl-parser ];
+  propagatedBuildInputs = [ dynamic-reconfigure kdl-parser robot-state-publisher roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

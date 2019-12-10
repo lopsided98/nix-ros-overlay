@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, leuze-msgs, catkin, rosunit, roscpp, angles, rostest }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, leuze-msgs, roscpp, rostest, rosunit, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-leuze-rsl-driver";
   version = "1.0.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs angles leuze-msgs roscpp ];
   checkInputs = [ rostest rosunit ];
-  propagatedBuildInputs = [ sensor-msgs angles leuze-msgs roscpp ];
+  propagatedBuildInputs = [ angles leuze-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

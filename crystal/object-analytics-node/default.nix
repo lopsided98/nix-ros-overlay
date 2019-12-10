@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, geometry-msgs, class-loader, std-msgs, ament-lint-common, object-msgs, pcl, ament-cmake, cv-bridge, pcl-conversions, ament-cmake-gtest, object-analytics-msgs, ament-index-cpp, rclcpp, ament-index-python, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-index-python, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, geometry-msgs, message-filters, object-analytics-msgs, object-msgs, pcl, pcl-conversions, rclcpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-crystal-object-analytics-node";
   version = "0.5.3";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs message-filters geometry-msgs object-msgs pcl object-analytics-msgs cv-bridge pcl-conversions class-loader ament-index-cpp rclcpp ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs class-loader std-msgs object-msgs pcl cv-bridge pcl-conversions object-analytics-msgs ament-index-cpp rclcpp ament-index-python ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ament-index-cpp ament-index-python class-loader cv-bridge geometry-msgs message-filters object-analytics-msgs object-msgs pcl pcl-conversions rclcpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

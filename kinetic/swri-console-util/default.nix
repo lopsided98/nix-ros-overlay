@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, swri-math-util, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, swri-math-util }:
 buildRosPackage {
   pname = "ros-kinetic-swri-console-util";
   version = "2.11.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ swri-math-util roscpp ];
-  propagatedBuildInputs = [ swri-math-util roscpp ];
+  propagatedBuildInputs = [ roscpp swri-math-util ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

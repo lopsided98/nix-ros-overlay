@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, pythonPackages, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-futaba-serial-servo";
   version = "0.2.1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.pyserial rospy ];
   propagatedBuildInputs = [ pythonPackages.pyserial rospy ];
   nativeBuildInputs = [ catkin ];
 

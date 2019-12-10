@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, microstrain-3dmgx2-imu, joystick-drivers, pr2-power-drivers, catkin, wge100-driver, audio-common, prosilica-camera, pr2-apps, linux-networking, wifi-ddwrt, pr2-robot, pr2-base, pr2-ethercat-drivers, pr2-navigation-apps, urg-node }:
+{ lib, buildRosPackage, fetchurl, audio-common, catkin, joystick-drivers, linux-networking, microstrain-3dmgx2-imu, pr2-apps, pr2-base, pr2-ethercat-drivers, pr2-navigation-apps, pr2-power-drivers, pr2-robot, prosilica-camera, urg-node, wge100-driver, wifi-ddwrt }:
 buildRosPackage {
   pname = "ros-kinetic-pr2";
   version = "1.1.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ microstrain-3dmgx2-imu joystick-drivers pr2-power-drivers wge100-driver audio-common prosilica-camera pr2-apps linux-networking wifi-ddwrt pr2-robot pr2-base pr2-ethercat-drivers pr2-navigation-apps urg-node ];
+  propagatedBuildInputs = [ audio-common joystick-drivers linux-networking microstrain-3dmgx2-imu pr2-apps pr2-base pr2-ethercat-drivers pr2-navigation-apps pr2-power-drivers pr2-robot prosilica-camera urg-node wge100-driver wifi-ddwrt ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

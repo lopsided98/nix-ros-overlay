@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, roslib, tinyxml, libyamlcpp, roscpp, stdr-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, libyamlcpp, roscpp, roslib, stdr-msgs, tinyxml }:
 buildRosPackage {
   pname = "ros-kinetic-stdr-parser";
   version = "0.3.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules roslib tinyxml libyamlcpp roscpp stdr-msgs ];
-  propagatedBuildInputs = [ roslib tinyxml libyamlcpp roscpp stdr-msgs ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ libyamlcpp roscpp roslib stdr-msgs tinyxml ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

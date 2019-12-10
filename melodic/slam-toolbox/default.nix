@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tbb, liblapack, interactive-markers, ceres-solver, pluginlib, suitesparse, eigen, tf2, nav-msgs, sensor-msgs, cmake-modules, tf2-geometry-msgs, qt5, rosconsole, tf2-ros, message-filters, std-msgs, std-srvs, catkin, roscpp, message-generation, libg2o, map-server, rviz, visualization-msgs, message-runtime, sparse-bundle-adjustment }:
+{ lib, buildRosPackage, fetchurl, catkin, ceres-solver, cmake-modules, eigen, interactive-markers, libg2o, liblapack, map-server, message-filters, message-generation, message-runtime, nav-msgs, pluginlib, qt5, rosconsole, roscpp, rviz, sensor-msgs, sparse-bundle-adjustment, std-msgs, std-srvs, suitesparse, tbb, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-slam-toolbox";
   version = "1.1.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tbb liblapack interactive-markers ceres-solver pluginlib suitesparse eigen tf2 nav-msgs sensor-msgs cmake-modules tf2-geometry-msgs rosconsole tf2-ros message-filters std-msgs std-srvs roscpp message-generation libg2o map-server qt5.qtbase rviz visualization-msgs sparse-bundle-adjustment ];
-  propagatedBuildInputs = [ tbb liblapack interactive-markers ceres-solver pluginlib suitesparse eigen tf2 nav-msgs sensor-msgs tf2-geometry-msgs rosconsole tf2-ros message-filters std-msgs std-srvs roscpp libg2o map-server qt5.qtbase rviz visualization-msgs message-runtime sparse-bundle-adjustment ];
+  buildInputs = [ cmake-modules message-generation ];
+  propagatedBuildInputs = [ ceres-solver eigen interactive-markers libg2o liblapack map-server message-filters message-runtime nav-msgs pluginlib qt5.qtbase rosconsole roscpp rviz sensor-msgs sparse-bundle-adjustment std-msgs std-srvs suitesparse tbb tf2 tf2-geometry-msgs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

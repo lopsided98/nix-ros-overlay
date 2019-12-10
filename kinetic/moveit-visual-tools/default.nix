@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, trajectory-msgs, geometry-msgs, graph-msgs, eigen-conversions, std-msgs, cmake-modules, catkin, moveit-ros-planning, roslint, visualization-msgs, roscpp, rviz-visual-tools, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen-conversions, geometry-msgs, graph-msgs, moveit-core, moveit-ros-planning, roscpp, roslint, rviz-visual-tools, std-msgs, tf-conversions, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-visual-tools";
   version = "3.4.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core trajectory-msgs geometry-msgs eigen-conversions graph-msgs std-msgs cmake-modules moveit-ros-planning roslint visualization-msgs roscpp rviz-visual-tools tf-conversions ];
-  propagatedBuildInputs = [ moveit-core trajectory-msgs geometry-msgs graph-msgs eigen-conversions std-msgs cmake-modules moveit-ros-planning roslint visualization-msgs roscpp rviz-visual-tools tf-conversions ];
+  propagatedBuildInputs = [ cmake-modules eigen-conversions geometry-msgs graph-msgs moveit-core moveit-ros-planning roscpp roslint rviz-visual-tools std-msgs tf-conversions trajectory-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

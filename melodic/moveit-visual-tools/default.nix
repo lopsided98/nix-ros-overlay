@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, trajectory-msgs, geometry-msgs, graph-msgs, std-msgs, cmake-modules, catkin, moveit-ros-planning, roslint, tf2-eigen, visualization-msgs, roscpp, rviz-visual-tools, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, graph-msgs, moveit-core, moveit-ros-planning, roscpp, roslint, rviz-visual-tools, std-msgs, tf2-eigen, tf2-ros, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-moveit-visual-tools";
   version = "3.5.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core trajectory-msgs geometry-msgs graph-msgs std-msgs cmake-modules moveit-ros-planning roslint tf2-eigen visualization-msgs roscpp rviz-visual-tools tf2-ros ];
-  propagatedBuildInputs = [ moveit-core trajectory-msgs geometry-msgs graph-msgs std-msgs cmake-modules moveit-ros-planning roslint tf2-eigen visualization-msgs roscpp rviz-visual-tools tf2-ros ];
+  propagatedBuildInputs = [ cmake-modules geometry-msgs graph-msgs moveit-core moveit-ros-planning roscpp roslint rviz-visual-tools std-msgs tf2-eigen tf2-ros trajectory-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

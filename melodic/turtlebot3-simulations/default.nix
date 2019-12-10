@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot3-fake, catkin, turtlebot3-gazebo }:
+{ lib, buildRosPackage, fetchurl, catkin, turtlebot3-fake, turtlebot3-gazebo }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-simulations";
   version = "1.2.0";

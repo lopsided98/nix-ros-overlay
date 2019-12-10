@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, pcl-conversions, catkin, pcl-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, pcl-conversions, pcl-msgs, pcl-ros }:
 buildRosPackage {
   pname = "ros-melodic-perception-pcl";
   version = "1.7.0-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pcl-ros pcl-msgs pcl-conversions ];
+  propagatedBuildInputs = [ pcl-conversions pcl-msgs pcl-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

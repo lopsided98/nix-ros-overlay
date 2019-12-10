@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, qt-build, eigen-conversions, qt4, cmake-modules, catkin, manipulator-h-base-module-msgs, eigen, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, eigen-conversions, manipulator-h-base-module-msgs, qt-build, qt4, robotis-controller-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-manipulator-h-gui";
   version = "0.3.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs qt-build eigen-conversions qt4 cmake-modules manipulator-h-base-module-msgs eigen roscpp ];
-  propagatedBuildInputs = [ robotis-controller-msgs qt-build eigen-conversions qt4 cmake-modules manipulator-h-base-module-msgs eigen roscpp ];
+  propagatedBuildInputs = [ cmake-modules eigen eigen-conversions manipulator-h-base-module-msgs qt-build qt4 robotis-controller-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

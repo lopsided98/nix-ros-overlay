@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, catkin, tf, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-polar-scan-matcher";
   version = "0.3.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf sensor-msgs geometry-msgs roscpp ];
-  propagatedBuildInputs = [ tf sensor-msgs geometry-msgs roscpp ];
+  propagatedBuildInputs = [ geometry-msgs roscpp sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, sensor-msgs, std-msgs, catkin, roscpp, pacmod-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, joy, pacmod-msgs, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pacmod-game-control";
   version = "2.3.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ joy sensor-msgs std-msgs roscpp pacmod-msgs ];
-  propagatedBuildInputs = [ joy sensor-msgs std-msgs roscpp pacmod-msgs ];
+  propagatedBuildInputs = [ joy pacmod-msgs roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

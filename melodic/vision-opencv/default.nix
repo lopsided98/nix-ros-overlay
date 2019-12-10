@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, image-geometry, cv-bridge }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-geometry }:
 buildRosPackage {
   pname = "ros-melodic-vision-opencv";
   version = "1.13.0";

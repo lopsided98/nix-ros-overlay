@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geodesy, geographic-msgs, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, geodesy, geographic-msgs }:
 buildRosPackage {
   pname = "ros-melodic-geographic-info";
   version = "0.5.3";

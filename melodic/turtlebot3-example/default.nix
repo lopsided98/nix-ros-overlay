@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, turtlebot3-bringup, geometry-msgs, turtlebot3-msgs, interactive-markers, message-runtime, std-msgs, actionlib, catkin, actionlib-msgs, visualization-msgs, rospy, message-generation, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, geometry-msgs, interactive-markers, message-generation, message-runtime, nav-msgs, rospy, sensor-msgs, std-msgs, turtlebot3-bringup, turtlebot3-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-example";
   version = "1.2.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs turtlebot3-msgs interactive-markers std-msgs actionlib actionlib-msgs visualization-msgs rospy message-generation nav-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs turtlebot3-bringup turtlebot3-msgs interactive-markers message-runtime std-msgs actionlib actionlib-msgs visualization-msgs rospy nav-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs geometry-msgs interactive-markers message-runtime nav-msgs rospy sensor-msgs std-msgs turtlebot3-bringup turtlebot3-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, boost, gpgme, pluginlib, bzip2, ament-lint-common, ament-cmake, openssl, console-bridge, ros1-bridge, pkg-config, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, boost, bzip2, console-bridge, git, gpgme, openssl, pkg-config, pluginlib, ros1-bridge }:
 buildRosPackage {
   pname = "ros-dashing-ros1-rosbag-storage-vendor";
   version = "0.0.6-r2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost gpgme pluginlib bzip2 openssl console-bridge ros1-bridge pkg-config ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  nativeBuildInputs = [ git ament-cmake ];
+  buildInputs = [ boost bzip2 console-bridge gpgme openssl pkg-config pluginlib ros1-bridge ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
     description = ''Vendor package for rosbag_storage of ROS1'';

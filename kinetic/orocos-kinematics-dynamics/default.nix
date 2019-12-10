@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, python-orocos-kdl, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, orocos-kdl, python-orocos-kdl }:
 buildRosPackage {
   pname = "ros-kinetic-orocos-kinematics-dynamics";
   version = "1.3.2-r1";

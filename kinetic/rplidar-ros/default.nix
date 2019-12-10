@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, std-srvs, catkin, roscpp, rosconsole }:
+{ lib, buildRosPackage, fetchurl, catkin, rosconsole, roscpp, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-rplidar-ros";
   version = "1.7.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs sensor-msgs rosconsole roscpp ];
-  propagatedBuildInputs = [ sensor-msgs std-srvs rosconsole roscpp ];
+  propagatedBuildInputs = [ rosconsole roscpp sensor-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

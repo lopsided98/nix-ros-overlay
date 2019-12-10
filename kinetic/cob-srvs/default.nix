@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, catkin, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-cob-srvs";
   version = "0.7.1-r1";

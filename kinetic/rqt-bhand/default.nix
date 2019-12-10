@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, sensor-msgs, bhand-controller, pythonPackages, catkin, rostopic, rqt-gui-py }:
+{ lib, buildRosPackage, fetchurl, bhand-controller, catkin, pythonPackages, rostopic, rqt-gui, rqt-gui-py, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-bhand";
   version = "0.1.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-gui sensor-msgs bhand-controller pythonPackages.rospkg rostopic rqt-gui-py ];
+  propagatedBuildInputs = [ bhand-controller pythonPackages.rospkg rostopic rqt-gui rqt-gui-py sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

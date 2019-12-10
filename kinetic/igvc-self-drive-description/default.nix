@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-gazebo-plugins, xacro, catkin, urdf }:
+{ lib, buildRosPackage, fetchurl, catkin, hector-gazebo-plugins, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-igvc-self-drive-description";
   version = "0.1.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ hector-gazebo-plugins xacro urdf ];
+  propagatedBuildInputs = [ hector-gazebo-plugins urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

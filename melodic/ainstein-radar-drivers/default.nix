@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, socketcan-bridge, catkin, ainstein-radar-msgs, nodelet, roscpp, can-msgs }:
+{ lib, buildRosPackage, fetchurl, ainstein-radar-msgs, can-msgs, catkin, nodelet, pcl-ros, roscpp, socketcan-bridge }:
 buildRosPackage {
   pname = "ros-melodic-ainstein-radar-drivers";
   version = "2.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros socketcan-bridge ainstein-radar-msgs nodelet roscpp can-msgs ];
-  propagatedBuildInputs = [ pcl-ros socketcan-bridge ainstein-radar-msgs nodelet roscpp can-msgs ];
+  propagatedBuildInputs = [ ainstein-radar-msgs can-msgs nodelet pcl-ros roscpp socketcan-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

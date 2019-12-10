@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, doosan-robotics, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, doosan-robotics }:
 buildRosPackage {
   pname = "ros-kinetic-doosan-robot";
   version = "0.9.6-r1";

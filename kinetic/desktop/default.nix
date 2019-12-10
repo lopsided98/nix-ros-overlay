@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-tutorials, robot, geometry-tutorials, common-tutorials, viz, catkin, roslint, visualization-tutorials, angles }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, common-tutorials, geometry-tutorials, robot, ros-tutorials, roslint, visualization-tutorials, viz }:
 buildRosPackage {
   pname = "ros-kinetic-desktop";
   version = "1.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ ros-tutorials robot geometry-tutorials viz common-tutorials roslint visualization-tutorials angles ];
+  propagatedBuildInputs = [ angles common-tutorials geometry-tutorials robot ros-tutorials roslint visualization-tutorials viz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

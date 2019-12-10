@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp-serialization, ublox-msgs, catkin, tf, ublox-serialization, roscpp, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, roscpp, roscpp-serialization, tf, ublox-msgs, ublox-serialization }:
 buildRosPackage {
   pname = "ros-melodic-ublox-gps";
   version = "1.2.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp-serialization ublox-msgs tf ublox-serialization roscpp diagnostic-updater ];
-  propagatedBuildInputs = [ roscpp-serialization ublox-msgs tf ublox-serialization roscpp diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-updater roscpp roscpp-serialization tf ublox-msgs ublox-serialization ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

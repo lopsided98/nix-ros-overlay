@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, ament-cmake, nav2-util, nav2-msgs, nav-msgs, ament-lint-auto, rclcpp-lifecycle, rviz-ogre-vendor, resource-retriever, ament-lint-common, tf2-geometry-msgs, qt5, rclcpp, rviz-rendering, std-msgs, nav2-lifecycle-manager, rviz-default-plugins, rviz-common }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, nav2-lifecycle-manager, nav2-msgs, nav2-util, pluginlib, qt5, rclcpp, rclcpp-lifecycle, resource-retriever, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-dashing-nav2-rviz-plugins";
   version = "0.2.6-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-lifecycle geometry-msgs nav-msgs rviz-ogre-vendor resource-retriever pluginlib std-msgs nav2-lifecycle-manager rviz-default-plugins qt5.qtbase tf2-geometry-msgs rviz-common nav2-util rclcpp nav2-msgs rviz-rendering ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ rclcpp-lifecycle geometry-msgs nav-msgs rviz-ogre-vendor resource-retriever pluginlib std-msgs nav2-lifecycle-manager qt5.qtbase rviz-default-plugins tf2-geometry-msgs rviz-common nav2-util rclcpp nav2-msgs rviz-rendering ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ geometry-msgs nav-msgs nav2-lifecycle-manager nav2-msgs nav2-util pluginlib qt5.qtbase rclcpp rclcpp-lifecycle resource-retriever rviz-common rviz-default-plugins rviz-ogre-vendor rviz-rendering std-msgs tf2-geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

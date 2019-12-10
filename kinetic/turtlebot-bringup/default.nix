@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, create-node, yocs-cmd-vel-mux, rocon-bubble-icons, freenect-launch, realsense-camera, kobuki-node, rocon-app-manager, robot-state-publisher, kobuki-bumper2pc, laptop-battery-monitor, turtlebot-description, openni2-launch, turtlebot-capabilities, zeroconf-avahi, diagnostic-aggregator, catkin, depthimage-to-laserscan, kobuki-capabilities, kobuki-safety-controller, robot-pose-ekf, astra-launch }:
+{ lib, buildRosPackage, fetchurl, astra-launch, catkin, create-node, depthimage-to-laserscan, diagnostic-aggregator, freenect-launch, kobuki-bumper2pc, kobuki-capabilities, kobuki-node, kobuki-safety-controller, laptop-battery-monitor, openni2-launch, realsense-camera, robot-pose-ekf, robot-state-publisher, rocon-app-manager, rocon-bubble-icons, turtlebot-capabilities, turtlebot-description, yocs-cmd-vel-mux, zeroconf-avahi }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-bringup";
   version = "2.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ create-node yocs-cmd-vel-mux rocon-bubble-icons freenect-launch realsense-camera kobuki-node rocon-app-manager robot-state-publisher kobuki-bumper2pc laptop-battery-monitor turtlebot-description openni2-launch turtlebot-capabilities zeroconf-avahi diagnostic-aggregator depthimage-to-laserscan kobuki-capabilities kobuki-safety-controller robot-pose-ekf astra-launch ];
+  propagatedBuildInputs = [ astra-launch create-node depthimage-to-laserscan diagnostic-aggregator freenect-launch kobuki-bumper2pc kobuki-capabilities kobuki-node kobuki-safety-controller laptop-battery-monitor openni2-launch realsense-camera robot-pose-ekf robot-state-publisher rocon-app-manager rocon-bubble-icons turtlebot-capabilities turtlebot-description yocs-cmd-vel-mux zeroconf-avahi ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

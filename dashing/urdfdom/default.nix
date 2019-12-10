@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, urdfdom-headers, tinyxml-vendor, console-bridge-vendor, cmake, tinyxml, console-bridge }:
+{ lib, buildRosPackage, fetchurl, cmake, console-bridge, console-bridge-vendor, tinyxml, tinyxml-vendor, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-dashing-urdfdom";
   version = "2.2.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ urdfdom-headers tinyxml-vendor console-bridge-vendor tinyxml console-bridge ];
-  propagatedBuildInputs = [ urdfdom-headers tinyxml-vendor console-bridge-vendor tinyxml console-bridge ];
+  propagatedBuildInputs = [ console-bridge console-bridge-vendor tinyxml tinyxml-vendor urdfdom-headers ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

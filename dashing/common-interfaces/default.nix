@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, diagnostic-msgs, geometry-msgs, std-msgs, std-srvs, shape-msgs, ament-cmake, stereo-msgs, actionlib-msgs, visualization-msgs, builtin-interfaces, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, ament-cmake, builtin-interfaces, diagnostic-msgs, geometry-msgs, nav-msgs, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-dashing-common-interfaces";
   version = "0.7.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs diagnostic-msgs std-msgs std-srvs shape-msgs stereo-msgs actionlib-msgs visualization-msgs builtin-interfaces nav-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs builtin-interfaces diagnostic-msgs geometry-msgs nav-msgs sensor-msgs shape-msgs std-msgs std-srvs stereo-msgs trajectory-msgs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

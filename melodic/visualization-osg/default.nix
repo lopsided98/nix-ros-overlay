@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, osg-interactive-markers, catkin, osg-markers, osg-utils }:
+{ lib, buildRosPackage, fetchurl, catkin, osg-interactive-markers, osg-markers, osg-utils }:
 buildRosPackage {
   pname = "ros-melodic-visualization-osg";
   version = "1.0.2-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ osg-utils osg-markers osg-interactive-markers ];
+  propagatedBuildInputs = [ osg-interactive-markers osg-markers osg-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

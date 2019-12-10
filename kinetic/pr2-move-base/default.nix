@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, pr2-msgs, actionlib, catkin, actionlib-msgs, pr2-controllers-msgs, rospy, pr2-common-action-msgs, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, dynamic-reconfigure, move-base-msgs, pr2-common-action-msgs, pr2-controllers-msgs, pr2-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-move-base";
   version = "0.1.28";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-msgs dynamic-reconfigure actionlib actionlib-msgs pr2-controllers-msgs rospy pr2-common-action-msgs move-base-msgs ];
-  propagatedBuildInputs = [ pr2-msgs dynamic-reconfigure actionlib actionlib-msgs pr2-controllers-msgs rospy pr2-common-action-msgs move-base-msgs ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs dynamic-reconfigure move-base-msgs pr2-common-action-msgs pr2-controllers-msgs pr2-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-msgs, catkin, rospy, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, roscpp, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-tuw-vehicle-msgs";
   version = "0.0.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs std-msgs rospy roscpp message-generation ];
-  propagatedBuildInputs = [ geometry-msgs message-runtime std-msgs roscpp rospy ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime roscpp rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

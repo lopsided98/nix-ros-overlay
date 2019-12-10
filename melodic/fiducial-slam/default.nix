@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, fiducial-msgs, sensor-msgs, dynamic-reconfigure, catkin, tf2, image-transport, tf2-geometry-msgs, cv-bridge, visualization-msgs, roscpp, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, fiducial-msgs, image-transport, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-fiducial-slam";
   version = "0.11.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ fiducial-msgs sensor-msgs dynamic-reconfigure tf2 image-transport tf2-geometry-msgs cv-bridge visualization-msgs roscpp tf2-ros ];
-  propagatedBuildInputs = [ fiducial-msgs sensor-msgs dynamic-reconfigure roscpp image-transport tf2-geometry-msgs cv-bridge visualization-msgs tf2 tf2-ros ];
+  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure fiducial-msgs image-transport roscpp sensor-msgs tf2 tf2-geometry-msgs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

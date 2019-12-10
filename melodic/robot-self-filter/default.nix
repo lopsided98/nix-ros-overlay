@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, assimp, urdf, resource-retriever, filters, tf, cmake-modules, tinyxml, catkin, visualization-msgs, roscpp, bullet }:
+{ lib, buildRosPackage, fetchurl, assimp, bullet, catkin, cmake-modules, filters, pcl-ros, resource-retriever, roscpp, sensor-msgs, tf, tinyxml, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-robot-self-filter";
   version = "0.1.31";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs assimp urdf resource-retriever filters tf cmake-modules tinyxml visualization-msgs roscpp bullet ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs assimp urdf resource-retriever tf filters tinyxml visualization-msgs roscpp bullet ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ assimp bullet filters pcl-ros resource-retriever roscpp sensor-msgs tf tinyxml urdf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

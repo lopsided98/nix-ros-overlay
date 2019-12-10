@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, eigen, cmake }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-ompl";
   version = "1.2.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ boost eigen cmake ];
+  buildInputs = [ cmake ];
   propagatedBuildInputs = [ boost eigen ];
   nativeBuildInputs = [ cmake ];
 

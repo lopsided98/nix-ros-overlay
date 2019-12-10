@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, launch-ros, launch, pythonPackages, ament-pep257, python3Packages, ament-copyright }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch, launch-ros, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-dashing-launch-ros-sandbox";
   version = "0.0.2-r4";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ python3Packages.docker launch launch-ros ];
-  checkInputs = [ ament-flake8 ament-copyright pythonPackages.pytest ament-pep257 ];
-  propagatedBuildInputs = [ python3Packages.docker launch launch-ros ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  propagatedBuildInputs = [ launch launch-ros python3Packages.docker ];
 
   meta = {
     description = ''Extension to launch_ros to provide the ability to run nodes in sandboxed environments.'';

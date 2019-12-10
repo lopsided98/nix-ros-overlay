@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-state-publisher, catkin, ur-driver, ur-description, roslaunch, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, roslaunch, tf2-ros, ur-description, ur-driver }:
 buildRosPackage {
   pname = "ros-kinetic-ur-bringup";
   version = "1.2.7-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ robot-state-publisher ur-driver tf2-ros ur-description ];
+  propagatedBuildInputs = [ robot-state-publisher tf2-ros ur-description ur-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

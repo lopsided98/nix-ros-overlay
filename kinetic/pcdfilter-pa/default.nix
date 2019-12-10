@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, std-msgs, std-srvs, tf, catkin, laser-geometry, parameter-pa, image-transport, cv-bridge, pcl-conversions, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-transport, laser-geometry, message-generation, message-runtime, parameter-pa, pcl-conversions, pcl-ros, roscpp, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-pcdfilter-pa";
   version = "1.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs std-msgs std-srvs tf laser-geometry parameter-pa image-transport cv-bridge pcl-conversions roscpp message-generation ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs std-msgs std-srvs tf laser-geometry parameter-pa image-transport cv-bridge pcl-conversions roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ cv-bridge image-transport laser-geometry message-runtime parameter-pa pcl-conversions pcl-ros roscpp sensor-msgs std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

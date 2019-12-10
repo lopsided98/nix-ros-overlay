@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libyamlcpp, boost, pkg-config, catkin }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, libyamlcpp, pkg-config }:
 buildRosPackage {
   pname = "ros-kinetic-swri-yaml-util";
   version = "2.11.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libyamlcpp boost ];
-  propagatedBuildInputs = [ libyamlcpp boost ];
-  nativeBuildInputs = [ pkg-config catkin ];
+  propagatedBuildInputs = [ boost libyamlcpp ];
+  nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''Provides wrappers around the yaml-cpp library for various utility functions

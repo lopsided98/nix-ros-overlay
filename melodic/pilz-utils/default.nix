@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, clang, code-coverage, cmake-modules, catkin, rosunit, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, clang, cmake-modules, code-coverage, roscpp, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-pilz-utils";
   version = "0.5.13-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ clang roscpp ];
-  checkInputs = [ code-coverage cmake-modules rostest rosunit ];
+  checkInputs = [ cmake-modules code-coverage rostest rosunit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jsk-rviz-plugins, libuvc, pluginlib, tf, image-transport, nodelet, rostest, sensor-msgs, dynamic-reconfigure, camera-info-manager, pcl-ros, catkin, cv-bridge, roscpp, roslaunch, rgbd-launch, rviz, rqt-reconfigure, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, camera-info-manager, catkin, cv-bridge, dynamic-reconfigure, image-transport, jsk-rviz-plugins, libuvc, nodelet, pcl-ros, pluginlib, rgbd-launch, roscpp, roslaunch, rostest, rqt-reconfigure, rviz, sensor-msgs, tf, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-cis-camera";
   version = "0.0.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs dynamic-reconfigure libuvc camera-info-manager pluginlib tf image-transport cv-bridge nodelet roscpp tf-conversions rostest ];
-  checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ pcl-ros jsk-rviz-plugins sensor-msgs dynamic-reconfigure libuvc pluginlib camera-info-manager tf image-transport rviz cv-bridge rqt-reconfigure nodelet roscpp tf-conversions rgbd-launch ];
+  buildInputs = [ rostest ];
+  checkInputs = [ roslaunch ];
+  propagatedBuildInputs = [ camera-info-manager cv-bridge dynamic-reconfigure image-transport jsk-rviz-plugins libuvc nodelet pcl-ros pluginlib rgbd-launch roscpp rqt-reconfigure rviz sensor-msgs tf tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

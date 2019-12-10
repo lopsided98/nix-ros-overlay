@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, sensor-msgs, diagnostic-msgs, swri-string-util, std-msgs, swri-serial-util, tf, swri-nodelet, catkin, swri-math-util, libpcap, nodelet, roscpp, diagnostic-updater, gps-common, nav-msgs, novatel-gps-msgs, swri-roscpp }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, diagnostic-msgs, diagnostic-updater, gps-common, libpcap, nav-msgs, nodelet, novatel-gps-msgs, roscpp, sensor-msgs, std-msgs, swri-math-util, swri-nodelet, swri-roscpp, swri-serial-util, swri-string-util, tf }:
 buildRosPackage {
   pname = "ros-melodic-novatel-gps-driver";
   version = "3.9.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs diagnostic-msgs swri-string-util std-msgs swri-serial-util tf swri-nodelet swri-math-util libpcap nodelet roscpp diagnostic-updater gps-common nav-msgs novatel-gps-msgs swri-roscpp ];
-  propagatedBuildInputs = [ sensor-msgs boost diagnostic-msgs swri-string-util std-msgs swri-serial-util tf swri-nodelet roscpp swri-math-util libpcap nodelet diagnostic-updater gps-common nav-msgs novatel-gps-msgs swri-roscpp ];
+  propagatedBuildInputs = [ boost diagnostic-msgs diagnostic-updater gps-common libpcap nav-msgs nodelet novatel-gps-msgs roscpp sensor-msgs std-msgs swri-math-util swri-nodelet swri-roscpp swri-serial-util swri-string-util tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

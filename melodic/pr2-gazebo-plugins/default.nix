@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, tf, image-transport, nav-msgs, sensor-msgs, diagnostic-msgs, orocos-kdl, pr2-mechanism-model, pr2-msgs, polled-camera, std-msgs, std-srvs, catkin, cv-bridge, roscpp, gazebo-ros, message-generation, angles, rospy, gazebo-msgs, diagnostic-updater, pr2-hardware-interface, message-runtime, pr2-controller-manager, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, cv-bridge, diagnostic-msgs, diagnostic-updater, gazebo-msgs, gazebo-plugins, gazebo-ros, geometry-msgs, image-transport, message-generation, message-runtime, nav-msgs, orocos-kdl, polled-camera, pr2-controller-manager, pr2-hardware-interface, pr2-mechanism-model, pr2-msgs, roscpp, rospy, sensor-msgs, std-msgs, std-srvs, tf, urdf }:
 buildRosPackage {
   pname = "ros-melodic-pr2-gazebo-plugins";
   version = "2.0.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs urdf tf image-transport nav-msgs sensor-msgs diagnostic-msgs orocos-kdl pr2-mechanism-model pr2-msgs polled-camera std-msgs std-srvs cv-bridge roscpp angles rospy message-generation gazebo-msgs diagnostic-updater pr2-hardware-interface message-runtime pr2-controller-manager gazebo-plugins ];
-  propagatedBuildInputs = [ geometry-msgs urdf tf image-transport nav-msgs sensor-msgs diagnostic-msgs orocos-kdl pr2-mechanism-model pr2-msgs polled-camera std-msgs cv-bridge roscpp gazebo-ros rospy angles message-generation gazebo-msgs diagnostic-updater pr2-hardware-interface message-runtime pr2-controller-manager gazebo-plugins ];
+  buildInputs = [ std-srvs ];
+  propagatedBuildInputs = [ angles cv-bridge diagnostic-msgs diagnostic-updater gazebo-msgs gazebo-plugins gazebo-ros geometry-msgs image-transport message-generation message-runtime nav-msgs orocos-kdl polled-camera pr2-controller-manager pr2-hardware-interface pr2-mechanism-model pr2-msgs roscpp rospy sensor-msgs std-msgs tf urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

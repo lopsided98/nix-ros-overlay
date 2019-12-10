@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, geometry-msgs, std-msgs, std-srvs, tf, catkin, roscpp, stage, nav-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, geometry-msgs, nav-msgs, roscpp, rostest, sensor-msgs, stage, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-melodic-stage-ros";
   version = "1.8.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs geometry-msgs std-msgs std-srvs tf roscpp stage nav-msgs rostest ];
-  propagatedBuildInputs = [ boost sensor-msgs geometry-msgs std-msgs std-srvs tf roscpp stage nav-msgs ];
+  buildInputs = [ rostest ];
+  propagatedBuildInputs = [ boost geometry-msgs nav-msgs roscpp sensor-msgs stage std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

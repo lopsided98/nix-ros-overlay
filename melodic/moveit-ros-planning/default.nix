@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, message-filters, srdfdom, urdf, dynamic-reconfigure, pluginlib, catkin, tf2, actionlib, tf2-eigen, tf2-geometry-msgs, moveit-ros-perception, eigen, tf2-msgs, moveit-msgs, roscpp, rosconsole, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, dynamic-reconfigure, eigen, message-filters, moveit-core, moveit-msgs, moveit-ros-perception, pluginlib, rosconsole, roscpp, srdfdom, tf2, tf2-eigen, tf2-geometry-msgs, tf2-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-planning";
   version = "1.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core message-filters srdfdom urdf dynamic-reconfigure pluginlib actionlib roscpp tf2-eigen tf2-geometry-msgs moveit-ros-perception eigen tf2-msgs moveit-msgs tf2 rosconsole tf2-ros ];
-  propagatedBuildInputs = [ moveit-core message-filters srdfdom dynamic-reconfigure urdf pluginlib actionlib roscpp tf2-eigen tf2-geometry-msgs moveit-ros-perception tf2-msgs moveit-msgs tf2 rosconsole tf2-ros ];
+  buildInputs = [ eigen ];
+  propagatedBuildInputs = [ actionlib dynamic-reconfigure message-filters moveit-core moveit-msgs moveit-ros-perception pluginlib rosconsole roscpp srdfdom tf2 tf2-eigen tf2-geometry-msgs tf2-msgs tf2-ros urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

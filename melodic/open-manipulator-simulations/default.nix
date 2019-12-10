@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, open-manipulator-gazebo, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, open-manipulator-gazebo }:
 buildRosPackage {
   pname = "ros-melodic-open-manipulator-simulations";
   version = "1.1.0-r1";

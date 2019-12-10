@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-tf-publisher, actionlib, catkin, visualization-msgs, rospy, rosbuild, jsk-interactive-marker, mk }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, dynamic-tf-publisher, geometry-msgs, jsk-interactive-marker, mk, rosbuild, rospy, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-jsk-interactive";
   version = "2.1.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs dynamic-tf-publisher actionlib visualization-msgs rospy rosbuild jsk-interactive-marker mk ];
-  propagatedBuildInputs = [ geometry-msgs dynamic-tf-publisher actionlib visualization-msgs rospy jsk-interactive-marker ];
+  buildInputs = [ mk rosbuild ];
+  propagatedBuildInputs = [ actionlib dynamic-tf-publisher geometry-msgs jsk-interactive-marker rospy visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

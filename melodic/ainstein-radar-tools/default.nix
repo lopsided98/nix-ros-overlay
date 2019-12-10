@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, std-msgs, ainstein-radar-filters, catkin, ainstein-radar-msgs, image-transport, vision-msgs, cv-bridge, roscpp, image-geometry }:
+{ lib, buildRosPackage, fetchurl, ainstein-radar-filters, ainstein-radar-msgs, catkin, cv-bridge, image-geometry, image-transport, pcl-ros, roscpp, sensor-msgs, std-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ainstein-radar-tools";
   version = "2.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs std-msgs ainstein-radar-filters ainstein-radar-msgs image-transport vision-msgs cv-bridge roscpp image-geometry ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs std-msgs ainstein-radar-filters ainstein-radar-msgs image-transport vision-msgs cv-bridge roscpp image-geometry ];
+  propagatedBuildInputs = [ ainstein-radar-filters ainstein-radar-msgs cv-bridge image-geometry image-transport pcl-ros roscpp sensor-msgs std-msgs vision-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

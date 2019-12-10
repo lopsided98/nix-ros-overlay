@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, interactive-markers, pluginlib, ogre1_9, map-msgs, tf, image-transport, eigen, nav-msgs, sensor-msgs, urdfdom-headers, assimp, resource-retriever, cmake-modules, roslib, libyamlcpp, qt5, rosbag, rosconsole, media-export, message-filters, std-msgs, std-srvs, catkin, roscpp, rospy, python-qt-binding, libGLU, laser-geometry, libGL, tinyxml, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, assimp, catkin, cmake-modules, eigen, geometry-msgs, image-transport, interactive-markers, laser-geometry, libGL, libGLU, libyamlcpp, map-msgs, media-export, message-filters, nav-msgs, ogre1_9, pluginlib, python-qt-binding, qt5, resource-retriever, rosbag, rosconsole, roscpp, roslib, rospy, sensor-msgs, std-msgs, std-srvs, tf, tinyxml, urdf, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rviz";
   version = "1.12.17";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs urdf interactive-markers pluginlib ogre1_9 map-msgs tf image-transport eigen nav-msgs sensor-msgs urdfdom-headers assimp resource-retriever cmake-modules roslib libyamlcpp rosbag rosconsole message-filters std-msgs std-srvs roscpp rospy python-qt-binding libGLU laser-geometry qt5.qtbase libGL tinyxml visualization-msgs ];
-  propagatedBuildInputs = [ geometry-msgs urdf interactive-markers pluginlib ogre1_9 map-msgs tf image-transport eigen nav-msgs sensor-msgs urdfdom-headers assimp resource-retriever roslib libyamlcpp rosbag rosconsole media-export message-filters std-msgs std-srvs roscpp rospy python-qt-binding libGLU laser-geometry qt5.qtbase libGL tinyxml visualization-msgs ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ assimp eigen geometry-msgs image-transport interactive-markers laser-geometry libGL libGLU libyamlcpp map-msgs media-export message-filters nav-msgs ogre1_9 pluginlib python-qt-binding qt5.qtbase resource-retriever rosbag rosconsole roscpp roslib rospy sensor-msgs std-msgs std-srvs tf tinyxml urdf urdfdom-headers visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

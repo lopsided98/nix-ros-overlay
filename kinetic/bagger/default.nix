@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, std-msgs, catkin, roslint, rospy, roscpp, rosbag, message-runtime, nav-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, rosbag, roscpp, roslint, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-bagger";
   version = "0.1.3-r2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs roslint roscpp message-generation rostest ];
+  buildInputs = [ message-generation roslint ];
   checkInputs = [ geometry-msgs nav-msgs ];
-  propagatedBuildInputs = [ std-msgs rospy roscpp rosbag message-runtime rostest ];
+  propagatedBuildInputs = [ message-runtime rosbag roscpp rospy rostest std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

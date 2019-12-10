@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, cob-actions, tf, actionlib-msgs, rostest, move-base-msgs, cob-sound, urdfdom-py, std-msgs, std-srvs, pythonPackages, catkin, rospy, message-generation, cob-light, control-msgs, trajectory-msgs, actionlib, message-runtime, cob-mimic }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, cob-actions, cob-light, cob-mimic, cob-sound, control-msgs, geometry-msgs, message-generation, message-runtime, move-base-msgs, pythonPackages, rospy, rostest, std-msgs, std-srvs, tf, trajectory-msgs, urdfdom-py }:
 buildRosPackage {
   pname = "ros-melodic-cob-script-server";
   version = "0.6.15-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs actionlib actionlib-msgs message-generation rostest ];
-  propagatedBuildInputs = [ geometry-msgs pythonPackages.ipython cob-actions tf actionlib-msgs rostest move-base-msgs cob-sound urdfdom-py std-msgs std-srvs rospy cob-light control-msgs trajectory-msgs actionlib pythonPackages.pygraphviz message-runtime cob-mimic ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs cob-actions cob-light cob-mimic cob-sound control-msgs geometry-msgs message-runtime move-base-msgs pythonPackages.ipython pythonPackages.pygraphviz rospy rostest std-msgs std-srvs tf trajectory-msgs urdfdom-py ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

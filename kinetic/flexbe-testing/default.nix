@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, flexbe-core, std-msgs, catkin, rosunit, smach-ros, flexbe-msgs, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, flexbe-core, flexbe-msgs, rospy, rostest, rosunit, smach-ros, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-flexbe-testing";
   version = "1.2.2-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ rostest ];
-  checkInputs = [ std-msgs rosunit ];
-  propagatedBuildInputs = [ flexbe-msgs rospy smach-ros flexbe-core ];
+  checkInputs = [ rosunit std-msgs ];
+  propagatedBuildInputs = [ flexbe-core flexbe-msgs rospy smach-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

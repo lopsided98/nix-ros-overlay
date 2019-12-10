@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rviz, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-rviz-launchers";
   version = "0.5.7";

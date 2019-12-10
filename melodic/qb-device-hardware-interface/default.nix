@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-limits-interface, urdf, hardware-interface, catkin, qb-device-srvs, transmission-interface, roscpp, qb-device-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, hardware-interface, joint-limits-interface, qb-device-msgs, qb-device-srvs, roscpp, rostest, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-melodic-qb-device-hardware-interface";
   version = "2.0.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ urdf joint-limits-interface hardware-interface qb-device-srvs transmission-interface roscpp qb-device-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ urdf joint-limits-interface hardware-interface qb-device-srvs transmission-interface roscpp qb-device-msgs ];
+  propagatedBuildInputs = [ hardware-interface joint-limits-interface qb-device-msgs qb-device-srvs roscpp transmission-interface urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roslib, multimaster-msgs-fkie, rospy, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, multimaster-msgs-fkie, roslaunch, roslib, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-default-cfg-fkie";
   version = "0.8.12";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ multimaster-msgs-fkie ];
-  propagatedBuildInputs = [ multimaster-msgs-fkie rospy roslaunch roslib ];
+  propagatedBuildInputs = [ multimaster-msgs-fkie roslaunch roslib rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

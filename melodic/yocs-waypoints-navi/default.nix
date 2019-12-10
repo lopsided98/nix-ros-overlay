@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, yocs-math-toolkit, actionlib, tf, catkin, actionlib-msgs, visualization-msgs, roscpp, yocs-msgs, nav-msgs, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, geometry-msgs, move-base-msgs, nav-msgs, roscpp, tf, visualization-msgs, yocs-math-toolkit, yocs-msgs }:
 buildRosPackage {
   pname = "ros-melodic-yocs-waypoints-navi";
   version = "0.8.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs yocs-math-toolkit actionlib tf actionlib-msgs visualization-msgs roscpp yocs-msgs nav-msgs move-base-msgs ];
-  propagatedBuildInputs = [ geometry-msgs yocs-math-toolkit tf actionlib actionlib-msgs visualization-msgs roscpp yocs-msgs nav-msgs move-base-msgs ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs geometry-msgs move-base-msgs nav-msgs roscpp tf visualization-msgs yocs-math-toolkit yocs-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

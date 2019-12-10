@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosapi, rosbridge-library, rosbridge-server, ament-cmake-core }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-core, rosapi, rosbridge-library, rosbridge-server }:
 buildRosPackage {
   pname = "ros-dashing-rosbridge-suite";
   version = "1.0.2-r1";

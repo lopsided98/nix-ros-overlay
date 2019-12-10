@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, cpswarm-msgs, roscpp, nav-msgs, swarmros }:
+{ lib, buildRosPackage, fetchurl, catkin, cpswarm-msgs, geometry-msgs, nav-msgs, roscpp, swarmros }:
 buildRosPackage {
   pname = "ros-kinetic-area-division";
   version = "1.1.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs cpswarm-msgs roscpp nav-msgs swarmros ];
-  propagatedBuildInputs = [ geometry-msgs cpswarm-msgs roscpp nav-msgs swarmros ];
+  propagatedBuildInputs = [ cpswarm-msgs geometry-msgs nav-msgs roscpp swarmros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

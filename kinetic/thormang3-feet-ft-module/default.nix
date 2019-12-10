@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, boost, std-msgs, cmake-modules, catkin, thormang3-feet-ft-module-msgs, libyamlcpp, eigen, ati-ft-sensor, robotis-framework-common, roscpp, robotis-math, thormang3-kinematics-dynamics }:
+{ lib, buildRosPackage, fetchurl, ati-ft-sensor, boost, catkin, cmake-modules, eigen, libyamlcpp, robotis-controller-msgs, robotis-framework-common, robotis-math, roscpp, std-msgs, thormang3-feet-ft-module-msgs, thormang3-kinematics-dynamics }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-feet-ft-module";
   version = "0.2.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs boost std-msgs cmake-modules thormang3-feet-ft-module-msgs libyamlcpp ati-ft-sensor eigen robotis-framework-common roscpp robotis-math thormang3-kinematics-dynamics ];
-  propagatedBuildInputs = [ robotis-controller-msgs boost std-msgs cmake-modules thormang3-feet-ft-module-msgs libyamlcpp eigen ati-ft-sensor robotis-framework-common roscpp robotis-math thormang3-kinematics-dynamics ];
+  propagatedBuildInputs = [ ati-ft-sensor boost cmake-modules eigen libyamlcpp robotis-controller-msgs robotis-framework-common robotis-math roscpp std-msgs thormang3-feet-ft-module-msgs thormang3-kinematics-dynamics ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

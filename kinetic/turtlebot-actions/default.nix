@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, actionlib, tf, cmake-modules, catkin, image-transport, eigen, cv-bridge, actionlib-msgs, roscpp, message-runtime, turtlebot-bringup, image-geometry }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, cmake-modules, cv-bridge, eigen, geometry-msgs, image-geometry, image-transport, message-generation, message-runtime, roscpp, tf, turtlebot-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-actions";
   version = "2.3.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs actionlib tf cmake-modules image-transport eigen cv-bridge actionlib-msgs roscpp message-generation image-geometry ];
-  propagatedBuildInputs = [ geometry-msgs tf actionlib image-transport eigen cv-bridge actionlib-msgs roscpp message-runtime turtlebot-bringup image-geometry ];
+  buildInputs = [ cmake-modules message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs cv-bridge eigen geometry-msgs image-geometry image-transport message-runtime roscpp tf turtlebot-bringup ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

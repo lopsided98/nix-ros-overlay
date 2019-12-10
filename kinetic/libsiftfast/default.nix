@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, rospack, rosboost-cfg, pythonPackages, roslib, catkin, subversion, mk }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, mk, pythonPackages, rosboost-cfg, roslib, rospack, subversion }:
 buildRosPackage {
   pname = "ros-kinetic-libsiftfast";
   version = "2.1.14-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.numpy boost rosboost-cfg roslib subversion mk rospack ];
-  propagatedBuildInputs = [ pythonPackages.numpy boost ];
+  buildInputs = [ mk rosboost-cfg roslib rospack subversion ];
+  propagatedBuildInputs = [ boost pythonPackages.numpy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

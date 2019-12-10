@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, network-interface, catkin, roslint }:
+{ lib, buildRosPackage, fetchurl, catkin, network-interface, roslint }:
 buildRosPackage {
   pname = "ros-melodic-ibeo-core";
   version = "2.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ network-interface roslint ];
+  buildInputs = [ roslint ];
   propagatedBuildInputs = [ network-interface ];
   nativeBuildInputs = [ catkin ];
 

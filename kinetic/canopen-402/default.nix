@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, class-loader, catkin, canopen-master, rosunit }:
+{ lib, buildRosPackage, fetchurl, canopen-master, catkin, class-loader, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-canopen-402";
   version = "0.7.12-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ canopen-master class-loader ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ canopen-master class-loader ];
   nativeBuildInputs = [ catkin ];

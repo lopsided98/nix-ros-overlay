@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, rosidl-default-generators, builtin-interfaces, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-crystal-pendulum-msgs";
   version = "0.6.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-default-generators builtin-interfaces ];
-  propagatedBuildInputs = [ rosidl-default-runtime builtin-interfaces ];
+  buildInputs = [ rosidl-default-generators ];
+  propagatedBuildInputs = [ builtin-interfaces rosidl-default-runtime ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

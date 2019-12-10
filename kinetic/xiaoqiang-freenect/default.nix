@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xiaoqiang-freenect-camera, catkin, xiaoqiang-freenect-launch }:
+{ lib, buildRosPackage, fetchurl, catkin, xiaoqiang-freenect-camera, xiaoqiang-freenect-launch }:
 buildRosPackage {
   pname = "ros-kinetic-xiaoqiang-freenect";
   version = "0.0.12";

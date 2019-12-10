@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, dynamic-reconfigure, msp, std-msgs, catkin, mavros-msgs, eigen, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, eigen, geometry-msgs, mavros-msgs, message-generation, message-runtime, msp, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-multiwii";
   version = "2.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs msp dynamic-reconfigure std-msgs mavros-msgs eigen roscpp message-generation ];
-  propagatedBuildInputs = [ message-runtime msp dynamic-reconfigure roscpp ];
+  buildInputs = [ eigen geometry-msgs mavros-msgs message-generation sensor-msgs std-msgs ];
+  propagatedBuildInputs = [ dynamic-reconfigure message-runtime msp roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

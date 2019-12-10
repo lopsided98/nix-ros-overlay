@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, message-generation, sensor-msgs, std-msgs, catkin, pcl-conversions, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, pcl-conversions, pcl-ros, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ouster-driver";
   version = "0.1.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs std-msgs pcl-conversions roscpp message-generation ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs std-msgs pcl-conversions roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ message-runtime pcl-conversions pcl-ros roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

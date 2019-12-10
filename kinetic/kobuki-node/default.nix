@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, tf, nodelet, nav-msgs, sensor-msgs, diagnostic-msgs, capabilities, ecl-threads, diagnostic-aggregator, std-msgs, ecl-sigslots, catkin, kobuki-ftdi, ecl-exceptions, roscpp, angles, rospy, ecl-streams, kobuki-safety-controller, kobuki-driver, kobuki-keyop, diagnostic-updater, kobuki-msgs, kobuki-rapps }:
+{ lib, buildRosPackage, fetchurl, angles, capabilities, catkin, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, ecl-exceptions, ecl-sigslots, ecl-streams, ecl-threads, geometry-msgs, kobuki-driver, kobuki-ftdi, kobuki-keyop, kobuki-msgs, kobuki-rapps, kobuki-safety-controller, nav-msgs, nodelet, pluginlib, roscpp, rospy, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-node";
   version = "0.7.6";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs pluginlib tf nodelet nav-msgs sensor-msgs diagnostic-msgs ecl-threads std-msgs ecl-sigslots kobuki-ftdi ecl-exceptions roscpp angles rospy ecl-streams kobuki-safety-controller kobuki-driver kobuki-keyop diagnostic-updater kobuki-msgs ];
-  propagatedBuildInputs = [ geometry-msgs pluginlib tf nodelet nav-msgs sensor-msgs diagnostic-msgs capabilities ecl-threads diagnostic-aggregator std-msgs ecl-sigslots kobuki-ftdi ecl-exceptions roscpp angles rospy ecl-streams kobuki-safety-controller kobuki-driver kobuki-keyop diagnostic-updater kobuki-msgs kobuki-rapps ];
+  propagatedBuildInputs = [ angles capabilities diagnostic-aggregator diagnostic-msgs diagnostic-updater ecl-exceptions ecl-sigslots ecl-streams ecl-threads geometry-msgs kobuki-driver kobuki-ftdi kobuki-keyop kobuki-msgs kobuki-rapps kobuki-safety-controller nav-msgs nodelet pluginlib roscpp rospy sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

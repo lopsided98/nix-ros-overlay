@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, image-transport, sensor-msgs, message-runtime, dynamic-reconfigure, libyamlcpp, multisense-lib, rosbag, std-msgs, catkin, cv-bridge, roscpp, angles, message-generation, image-geometry, genmsg, stereo-msgs, libjpeg_turbo }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, cv-bridge, dynamic-reconfigure, genmsg, geometry-msgs, image-geometry, image-transport, libjpeg_turbo, libyamlcpp, message-generation, message-runtime, multisense-lib, rosbag, roscpp, sensor-msgs, std-msgs, stereo-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-multisense-ros";
   version = "4.0.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libjpeg_turbo sensor-msgs geometry-msgs message-runtime dynamic-reconfigure genmsg std-msgs rosbag tf image-transport stereo-msgs cv-bridge multisense-lib roscpp angles message-generation image-geometry ];
-  propagatedBuildInputs = [ libjpeg_turbo sensor-msgs geometry-msgs dynamic-reconfigure message-runtime std-msgs genmsg rosbag tf image-transport stereo-msgs cv-bridge multisense-lib roscpp angles message-generation image-geometry ];
-  nativeBuildInputs = [ libyamlcpp catkin ];
+  propagatedBuildInputs = [ angles cv-bridge dynamic-reconfigure genmsg geometry-msgs image-geometry image-transport libjpeg_turbo message-generation message-runtime multisense-lib rosbag roscpp sensor-msgs std-msgs stereo-msgs tf ];
+  nativeBuildInputs = [ catkin libyamlcpp ];
 
   meta = {
     description = ''multisense_ros'';

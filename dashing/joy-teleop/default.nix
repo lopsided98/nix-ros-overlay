@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, ament-copyright, teleop-tools-msgs, ament-xmllint, ament-pep257, rclpy, ament-flake8, control-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, control-msgs, rclpy, sensor-msgs, teleop-tools-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-dashing-joy-teleop";
   version = "1.0.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-xmllint ament-pep257 ament-flake8 ament-copyright ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs teleop-tools-msgs rclpy control-msgs ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint ];
+  propagatedBuildInputs = [ control-msgs rclpy sensor-msgs teleop-tools-msgs trajectory-msgs ];
 
   meta = {
     description = ''A (to be) generic joystick interface to control a robot'';

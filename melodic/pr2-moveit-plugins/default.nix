@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, urdf, eigen-conversions, pluginlib, tf, catkin, actionlib, cmake-modules, kdl-parser, rosconsole, roscpp, angles, tf-conversions, pr2-controllers-msgs, pr2-mechanism-msgs, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, angles, catkin, cmake-modules, control-msgs, eigen-conversions, kdl-parser, moveit-core, pluginlib, pr2-controllers-msgs, pr2-mechanism-msgs, rosconsole, roscpp, tf, tf-conversions, urdf }:
 buildRosPackage {
   pname = "ros-melodic-pr2-moveit-plugins";
   version = "0.7.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core urdf eigen-conversions pluginlib tf actionlib cmake-modules kdl-parser roscpp angles pr2-controllers-msgs tf-conversions rosconsole pr2-mechanism-msgs control-msgs ];
-  propagatedBuildInputs = [ moveit-core urdf eigen-conversions pluginlib tf actionlib pr2-controllers-msgs control-msgs roscpp angles tf-conversions rosconsole pr2-mechanism-msgs kdl-parser ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ actionlib angles control-msgs eigen-conversions kdl-parser moveit-core pluginlib pr2-controllers-msgs pr2-mechanism-msgs rosconsole roscpp tf tf-conversions urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, std-msgs, catkin, pcl-msgs, pcl, eigen, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, pcl, pcl-msgs, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pcl-conversions";
   version = "1.7.0-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ sensor-msgs std-msgs pcl-msgs pcl eigen roscpp ];
-  propagatedBuildInputs = [ sensor-msgs std-msgs pcl-msgs pcl eigen roscpp ];
+  checkInputs = [ eigen pcl pcl-msgs roscpp sensor-msgs std-msgs ];
+  propagatedBuildInputs = [ eigen pcl pcl-msgs roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

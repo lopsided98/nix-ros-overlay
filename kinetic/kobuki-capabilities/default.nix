@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-capabilities, rocon-apps, kobuki-node, rocon-app-manager, catkin, nodelet }:
+{ lib, buildRosPackage, fetchurl, catkin, kobuki-node, nodelet, rocon-app-manager, rocon-apps, std-capabilities }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-capabilities";
   version = "0.7.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rocon-apps std-capabilities kobuki-node rocon-app-manager nodelet ];
+  propagatedBuildInputs = [ kobuki-node nodelet rocon-app-manager rocon-apps std-capabilities ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

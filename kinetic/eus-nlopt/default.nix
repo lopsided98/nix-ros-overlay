@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nlopt, cmake-modules, euslisp, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, euslisp, nlopt }:
 buildRosPackage {
   pname = "ros-kinetic-eus-nlopt";
   version = "0.1.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ nlopt cmake-modules ];
-  propagatedBuildInputs = [ nlopt euslisp ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ euslisp nlopt ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

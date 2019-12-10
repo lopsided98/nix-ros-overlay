@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python3Packages, ament-pep8, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, ament-pep8, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-dashing-ament-pyflakes";
   version = "0.7.11-r1";

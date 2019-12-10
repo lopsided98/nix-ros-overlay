@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-console, unique-id, rosnode, rosgraph, pythonPackages, catkin, roslib, rosunit, rostopic, genpy, rocon-service-pair-msgs, rospy, rosservice, uuid-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, genpy, pythonPackages, rocon-console, rocon-service-pair-msgs, rosgraph, roslib, rosnode, rospy, rosservice, rostest, rostopic, rosunit, unique-id, uuid-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rocon-python-comms";
   version = "0.3.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest pythonPackages.catkin-pkg ];
+  buildInputs = [ pythonPackages.catkin-pkg rostest ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pythonPackages.pyyaml rocon-console unique-id rosnode rosgraph roslib rostopic genpy rocon-service-pair-msgs rospy rosservice uuid-msgs ];
+  propagatedBuildInputs = [ genpy pythonPackages.pyyaml rocon-console rocon-service-pair-msgs rosgraph roslib rosnode rospy rosservice rostopic unique-id uuid-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

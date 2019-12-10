@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-interface, control-toolbox, joint-limits-interface, controller-manager, urdf, hardware-interface, tf, cmake-modules, catkin, iiwa-msgs, realtime-tools, iiwa-ros, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, control-toolbox, controller-interface, controller-manager, hardware-interface, iiwa-msgs, iiwa-ros, joint-limits-interface, realtime-tools, roscpp, tf, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-iiwa-hw";
   version = "1.4.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-interface controller-manager urdf hardware-interface joint-limits-interface control-toolbox tf cmake-modules iiwa-msgs iiwa-ros realtime-tools roscpp ];
-  propagatedBuildInputs = [ controller-interface controller-manager urdf hardware-interface joint-limits-interface control-toolbox cmake-modules tf iiwa-msgs iiwa-ros realtime-tools roscpp ];
+  propagatedBuildInputs = [ cmake-modules control-toolbox controller-interface controller-manager hardware-interface iiwa-msgs iiwa-ros joint-limits-interface realtime-tools roscpp tf urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

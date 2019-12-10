@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rospy, pythonPackages, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy }:
 buildRosPackage {
   pname = "ros-melodic-urdfdom-py";
   version = "0.4.1-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ pythonPackages.mock ];
-  propagatedBuildInputs = [ pythonPackages.pyyaml rospy pythonPackages.lxml ];
+  propagatedBuildInputs = [ pythonPackages.lxml pythonPackages.pyyaml rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

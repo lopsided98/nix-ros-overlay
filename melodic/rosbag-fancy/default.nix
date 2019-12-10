@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ncurses, boost, rosbag-storage, catkin, roscpp, topic-tools, rosfmt }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, ncurses, rosbag-storage, roscpp, rosfmt, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-rosbag-fancy";
   version = "0.1.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ncurses boost rosbag-storage roscpp topic-tools rosfmt ];
-  propagatedBuildInputs = [ ncurses boost rosbag-storage roscpp topic-tools rosfmt ];
+  propagatedBuildInputs = [ boost ncurses rosbag-storage roscpp rosfmt topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

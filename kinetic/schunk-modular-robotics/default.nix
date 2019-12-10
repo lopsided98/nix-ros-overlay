@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, schunk-description, catkin, schunk-libm5api, schunk-simulated-tactile-sensors, schunk-powercube-chain, schunk-sdh }:
+{ lib, buildRosPackage, fetchurl, catkin, schunk-description, schunk-libm5api, schunk-powercube-chain, schunk-sdh, schunk-simulated-tactile-sensors }:
 buildRosPackage {
   pname = "ros-kinetic-schunk-modular-robotics";
   version = "0.6.14-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ schunk-description schunk-libm5api schunk-simulated-tactile-sensors schunk-powercube-chain schunk-sdh ];
+  propagatedBuildInputs = [ schunk-description schunk-libm5api schunk-powercube-chain schunk-sdh schunk-simulated-tactile-sensors ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

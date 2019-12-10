@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, message-filters, dynamic-reconfigure, pluginlib, catkin, nodelet, roscpp }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, dynamic-reconfigure, message-filters, nodelet, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-nodelet-topic-tools";
   version = "1.9.14";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost dynamic-reconfigure ];
-  propagatedBuildInputs = [ boost message-filters dynamic-reconfigure pluginlib nodelet roscpp ];
+  propagatedBuildInputs = [ boost dynamic-reconfigure message-filters nodelet pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

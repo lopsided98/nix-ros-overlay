@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, raspigibbon-control, raspigibbon-gazebo, catkin, raspigibbon-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, raspigibbon-control, raspigibbon-gazebo, raspigibbon-ros }:
 buildRosPackage {
   pname = "ros-kinetic-raspigibbon-sim";
   version = "0.0.1";

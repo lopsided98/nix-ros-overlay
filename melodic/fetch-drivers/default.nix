@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, urdf, python, actionlib-msgs, curl, nav-msgs, sensor-msgs, roscpp-serialization, diagnostic-msgs, fetch-auto-dock-msgs, robot-controllers-interface, robot-calibration-msgs, libyamlcpp, rosconsole, fetch-driver-msgs, catkin, roscpp, mk, boost, urdfdom, actionlib, rostime, power-msgs, robot-controllers, rospack }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, catkin, curl, diagnostic-msgs, fetch-auto-dock-msgs, fetch-driver-msgs, libyamlcpp, mk, nav-msgs, power-msgs, python, robot-calibration-msgs, robot-controllers, robot-controllers-interface, rosconsole, roscpp, roscpp-serialization, rospack, rostime, sensor-msgs, urdf, urdfdom }:
 buildRosPackage {
   pname = "ros-melodic-fetch-drivers";
   version = "0.8.8-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ urdf python actionlib-msgs nav-msgs curl sensor-msgs roscpp-serialization diagnostic-msgs fetch-auto-dock-msgs robot-controllers-interface robot-calibration-msgs libyamlcpp rosconsole fetch-driver-msgs roscpp mk boost urdfdom actionlib rostime power-msgs robot-controllers rospack ];
-  propagatedBuildInputs = [ urdf python actionlib-msgs nav-msgs curl sensor-msgs roscpp-serialization diagnostic-msgs fetch-auto-dock-msgs robot-controllers-interface robot-calibration-msgs libyamlcpp rosconsole fetch-driver-msgs roscpp boost urdfdom actionlib rostime power-msgs robot-controllers ];
+  buildInputs = [ mk rospack ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs boost curl diagnostic-msgs fetch-auto-dock-msgs fetch-driver-msgs libyamlcpp nav-msgs power-msgs python robot-calibration-msgs robot-controllers robot-controllers-interface rosconsole roscpp roscpp-serialization rostime sensor-msgs urdf urdfdom ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

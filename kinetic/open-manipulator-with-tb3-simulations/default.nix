@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, open-manipulator-with-tb3-gazebo, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, open-manipulator-with-tb3-gazebo }:
 buildRosPackage {
   pname = "ros-kinetic-open-manipulator-with-tb3-simulations";
   version = "1.1.0";

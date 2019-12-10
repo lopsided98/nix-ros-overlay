@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gpsd-client, gps-common, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, gps-common, gpsd-client }:
 buildRosPackage {
   pname = "ros-kinetic-gps-umd";
   version = "0.3.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gpsd-client gps-common ];
+  propagatedBuildInputs = [ gps-common gpsd-client ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

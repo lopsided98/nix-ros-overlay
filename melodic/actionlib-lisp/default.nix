@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslisp, catkin, actionlib-msgs, message-runtime, cl-utils }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, cl-utils, message-runtime, roslisp }:
 buildRosPackage {
   pname = "ros-melodic-actionlib-lisp";
   version = "0.2.12-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ roslisp message-runtime cl-utils actionlib-msgs ];
+  propagatedBuildInputs = [ actionlib-msgs cl-utils message-runtime roslisp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

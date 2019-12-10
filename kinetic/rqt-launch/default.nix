@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-py-common, catkin, rqt-console, rqt-gui-py, rospy, roslaunch, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, roslaunch, rospy, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-launch";
   version = "0.4.8";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-py-common ];
-  propagatedBuildInputs = [ rqt-gui rqt-py-common rqt-console rqt-gui-py rospy roslaunch python-qt-binding ];
+  propagatedBuildInputs = [ python-qt-binding roslaunch rospy rqt-console rqt-gui rqt-gui-py rqt-py-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

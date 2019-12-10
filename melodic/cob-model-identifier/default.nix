@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, sensor-msgs, boost, geometry-msgs, std-srvs, tf, cmake-modules, catkin, roslint, roscpp, rospy, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, geometry-msgs, kdl-parser, orocos-kdl, roscpp, roslint, rospy, sensor-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-melodic-cob-model-identifier";
   version = "0.8.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl boost sensor-msgs geometry-msgs std-srvs tf cmake-modules roslint roscpp kdl-parser ];
-  propagatedBuildInputs = [ orocos-kdl sensor-msgs boost geometry-msgs std-srvs tf cmake-modules roslint roscpp rospy kdl-parser ];
+  propagatedBuildInputs = [ boost cmake-modules geometry-msgs kdl-parser orocos-kdl roscpp roslint rospy sensor-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

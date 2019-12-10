@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport, sensor-msgs, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, image-transport, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-jpeg-streamer";
   version = "0.2.7";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ image-transport sensor-msgs roscpp ];
-  propagatedBuildInputs = [ image-transport sensor-msgs roscpp ];
+  propagatedBuildInputs = [ image-transport roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

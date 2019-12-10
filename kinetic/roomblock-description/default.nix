@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, xacro, urdf, robot-state-publisher, catkin, create-description, rviz, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, create-description, joint-state-publisher, robot-state-publisher, roslaunch, rostest, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-roomblock-description";
   version = "0.0.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ joint-state-publisher xacro urdf robot-state-publisher create-description rviz ];
+  propagatedBuildInputs = [ create-description joint-state-publisher robot-state-publisher rviz urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

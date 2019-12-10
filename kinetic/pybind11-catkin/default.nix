@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pythonPackages, catkin, python, eigen, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, python, pythonPackages, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-pybind11-catkin";
   version = "2.2.4-r4";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python pythonPackages.numpy rospy eigen ];
-  propagatedBuildInputs = [ python pythonPackages.numpy rospy eigen ];
+  propagatedBuildInputs = [ eigen python pythonPackages.numpy rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

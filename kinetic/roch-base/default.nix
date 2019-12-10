@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, controller-manager, tf, roch-description, nodelet, sensor-msgs, diagnostic-msgs, diff-drive-controller, roch-msgs, diagnostic-aggregator, std-msgs, catkin, roscpp, topic-tools, angles, roslaunch, hardware-interface, roslint, diagnostic-updater, roch-control }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, controller-manager, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, diff-drive-controller, geometry-msgs, hardware-interface, nodelet, roch-control, roch-description, roch-msgs, roscpp, roslaunch, roslint, sensor-msgs, std-msgs, tf, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-roch-base";
   version = "2.0.15";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs diagnostic-msgs controller-manager hardware-interface std-msgs roslaunch tf roslint roscpp angles roch-msgs diagnostic-updater ];
-  propagatedBuildInputs = [ diagnostic-aggregator sensor-msgs geometry-msgs diagnostic-msgs controller-manager hardware-interface std-msgs tf roch-description topic-tools diff-drive-controller nodelet roscpp angles roch-msgs roch-control diagnostic-updater ];
+  buildInputs = [ roslaunch roslint ];
+  propagatedBuildInputs = [ angles controller-manager diagnostic-aggregator diagnostic-msgs diagnostic-updater diff-drive-controller geometry-msgs hardware-interface nodelet roch-control roch-description roch-msgs roscpp sensor-msgs std-msgs tf topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

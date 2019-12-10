@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, rviz, trajectory-tracker-msgs, qt5 }:
+{ lib, buildRosPackage, fetchurl, catkin, pluginlib, qt5, rviz, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-melodic-trajectory-tracker-rviz-plugins";
   version = "0.3.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib rviz trajectory-tracker-msgs qt5.qtbase ];
-  propagatedBuildInputs = [ pluginlib rviz trajectory-tracker-msgs qt5.qtbase ];
+  propagatedBuildInputs = [ pluginlib qt5.qtbase rviz trajectory-tracker-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

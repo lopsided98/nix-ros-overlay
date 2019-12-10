@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, twist-mux-msgs, std-msgs, catkin, rostopic, visualization-msgs, roscpp, rospy, rostest, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, geometry-msgs, roscpp, rospy, rostest, rostopic, std-msgs, twist-mux-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-twist-mux";
   version = "3.0.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs std-msgs roscpp visualization-msgs diagnostic-updater rostest ];
+  buildInputs = [ rostest ];
   checkInputs = [ rospy rostopic ];
-  propagatedBuildInputs = [ geometry-msgs twist-mux-msgs std-msgs visualization-msgs roscpp diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-updater geometry-msgs roscpp std-msgs twist-mux-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

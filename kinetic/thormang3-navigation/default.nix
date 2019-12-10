@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, octomap-server, catkin, footstep-planner }:
+{ lib, buildRosPackage, fetchurl, catkin, footstep-planner, map-server, octomap-server }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-navigation";
   version = "0.3.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ map-server octomap-server footstep-planner ];
+  propagatedBuildInputs = [ footstep-planner map-server octomap-server ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

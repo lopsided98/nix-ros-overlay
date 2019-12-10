@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, industrial-robot-client, urdf, catkin, fsrobo-r-msgs, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, fsrobo-r-msgs, industrial-robot-client, roslaunch, rostest, urdf }:
 buildRosPackage {
   pname = "ros-melodic-fsrobo-r-driver";
   version = "0.7.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ industrial-robot-client fsrobo-r-msgs urdf ];
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ industrial-robot-client fsrobo-r-msgs urdf ];
+  propagatedBuildInputs = [ fsrobo-r-msgs industrial-robot-client urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

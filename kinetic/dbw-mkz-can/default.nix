@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, dataspeed-ulc-can, std-msgs, dbw-mkz-description, catkin, dbw-mkz-msgs, dataspeed-can-usb, nodelet, roscpp, can-msgs, rospy, roslaunch, dataspeed-can-msg-filters }:
+{ lib, buildRosPackage, fetchurl, can-msgs, catkin, dataspeed-can-msg-filters, dataspeed-can-usb, dataspeed-ulc-can, dbw-mkz-description, dbw-mkz-msgs, geometry-msgs, nodelet, roscpp, roslaunch, rospy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-mkz-can";
   version = "1.2.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs dbw-mkz-msgs nodelet roscpp can-msgs rospy dataspeed-can-msg-filters ];
+  buildInputs = [ dataspeed-can-msg-filters ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs dataspeed-ulc-can std-msgs dbw-mkz-description dbw-mkz-msgs dataspeed-can-usb nodelet roscpp can-msgs rospy roslaunch ];
+  propagatedBuildInputs = [ can-msgs dataspeed-can-usb dataspeed-ulc-can dbw-mkz-description dbw-mkz-msgs geometry-msgs nodelet roscpp roslaunch rospy sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

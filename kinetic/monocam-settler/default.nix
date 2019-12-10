@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp-serialization, std-msgs, settlerlib, actionlib, catkin, actionlib-msgs, rosconsole }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, rosconsole, roscpp-serialization, settlerlib, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-monocam-settler";
   version = "0.10.14";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp-serialization std-msgs settlerlib actionlib actionlib-msgs rosconsole ];
-  propagatedBuildInputs = [ roscpp-serialization std-msgs settlerlib actionlib actionlib-msgs rosconsole ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs rosconsole roscpp-serialization settlerlib std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

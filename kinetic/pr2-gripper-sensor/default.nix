@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-gripper-sensor-msgs, pr2-gripper-sensor-controller, catkin, pr2-gripper-sensor-action }:
+{ lib, buildRosPackage, fetchurl, catkin, pr2-gripper-sensor-action, pr2-gripper-sensor-controller, pr2-gripper-sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-gripper-sensor";
   version = "1.0.10";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-gripper-sensor-msgs pr2-gripper-sensor-controller pr2-gripper-sensor-action ];
+  propagatedBuildInputs = [ pr2-gripper-sensor-action pr2-gripper-sensor-controller pr2-gripper-sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

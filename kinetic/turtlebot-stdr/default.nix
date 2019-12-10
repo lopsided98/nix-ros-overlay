@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, navigation, stdr-robot, stdr-resources, turtlebot-navigation, catkin, yocs-virtual-sensor, stdr-server, yocs-velocity-smoother, turtlebot-bringup, stdr-gui }:
+{ lib, buildRosPackage, fetchurl, catkin, navigation, stdr-gui, stdr-resources, stdr-robot, stdr-server, turtlebot-bringup, turtlebot-navigation, yocs-velocity-smoother, yocs-virtual-sensor }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-stdr";
   version = "2.2.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ navigation stdr-robot stdr-resources turtlebot-navigation yocs-virtual-sensor stdr-server yocs-velocity-smoother turtlebot-bringup stdr-gui ];
+  propagatedBuildInputs = [ navigation stdr-gui stdr-resources stdr-robot stdr-server turtlebot-bringup turtlebot-navigation yocs-velocity-smoother yocs-virtual-sensor ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

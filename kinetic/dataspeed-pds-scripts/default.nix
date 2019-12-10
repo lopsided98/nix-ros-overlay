@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dataspeed-pds-msgs, rospy, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, dataspeed-pds-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-pds-scripts";
   version = "1.0.2";

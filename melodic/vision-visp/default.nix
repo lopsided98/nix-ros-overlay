@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, visp-auto-tracker, visp-tracker, visp-hand2eye-calibration, catkin, visp-camera-calibration, visp-bridge }:
+{ lib, buildRosPackage, fetchurl, catkin, visp-auto-tracker, visp-bridge, visp-camera-calibration, visp-hand2eye-calibration, visp-tracker }:
 buildRosPackage {
   pname = "ros-melodic-vision-visp";
   version = "0.11.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ visp-auto-tracker visp-tracker visp-hand2eye-calibration visp-camera-calibration visp-bridge ];
+  propagatedBuildInputs = [ visp-auto-tracker visp-bridge visp-camera-calibration visp-hand2eye-calibration visp-tracker ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

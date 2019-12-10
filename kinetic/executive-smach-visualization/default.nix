@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, smach-viewer, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, smach-viewer }:
 buildRosPackage {
   pname = "ros-kinetic-executive-smach-visualization";
   version = "2.0.2";

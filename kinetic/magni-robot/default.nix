@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, magni-viz, magni-demos, catkin, magni-bringup, magni-description, magni-teleop, magni-nav }:
+{ lib, buildRosPackage, fetchurl, catkin, magni-bringup, magni-demos, magni-description, magni-nav, magni-teleop, magni-viz }:
 buildRosPackage {
   pname = "ros-kinetic-magni-robot";
   version = "0.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ magni-viz magni-demos magni-bringup magni-description magni-teleop magni-nav ];
+  propagatedBuildInputs = [ magni-bringup magni-demos magni-description magni-nav magni-teleop magni-viz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

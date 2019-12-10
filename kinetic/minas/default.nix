@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tra1-bringup, tra1-description, ethercat-manager, catkin, tra1-moveit-config, minas-control }:
+{ lib, buildRosPackage, fetchurl, catkin, ethercat-manager, minas-control, tra1-bringup, tra1-description, tra1-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-minas";
   version = "1.0.10";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ tra1-bringup tra1-description ethercat-manager tra1-moveit-config minas-control ];
+  propagatedBuildInputs = [ ethercat-manager minas-control tra1-bringup tra1-description tra1-moveit-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

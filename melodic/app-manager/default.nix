@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, std-srvs, rosgraph, catkin, rosunit, rospy, message-runtime, roslaunch, rospack }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rosgraph, roslaunch, rospack, rospy, rosunit, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-app-manager";
   version = "1.1.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosgraph rosunit rospy message-generation roslaunch ];
-  propagatedBuildInputs = [ message-runtime std-srvs rosgraph rosunit rospy roslaunch rospack ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ message-runtime rosgraph roslaunch rospack rospy rosunit std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

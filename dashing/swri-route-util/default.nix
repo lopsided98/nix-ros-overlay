@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, swri-math-util, swri-geometry-util, marti-nav-msgs, ament-cmake, marti-common-msgs, visualization-msgs, swri-transform-util, rclcpp, swri-roscpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, boost, marti-common-msgs, marti-nav-msgs, rclcpp, swri-geometry-util, swri-math-util, swri-roscpp, swri-transform-util, visualization-msgs }:
 buildRosPackage {
   pname = "ros-dashing-swri-route-util";
   version = "3.0.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost swri-math-util swri-geometry-util marti-nav-msgs marti-common-msgs visualization-msgs swri-transform-util rclcpp swri-roscpp ];
-  propagatedBuildInputs = [ boost swri-math-util swri-geometry-util marti-nav-msgs marti-common-msgs visualization-msgs swri-transform-util rclcpp swri-roscpp ];
+  propagatedBuildInputs = [ boost marti-common-msgs marti-nav-msgs rclcpp swri-geometry-util swri-math-util swri-roscpp swri-transform-util visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

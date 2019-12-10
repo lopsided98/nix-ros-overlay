@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, tf, base-local-planner, catkin, costmap-2d, nav-core, eigen, roscpp }:
+{ lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, eigen, nav-core, pluginlib, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-carrot-planner";
   version = "1.14.5-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib tf base-local-planner costmap-2d nav-core eigen roscpp ];
-  propagatedBuildInputs = [ pluginlib tf base-local-planner costmap-2d nav-core eigen roscpp ];
+  propagatedBuildInputs = [ base-local-planner costmap-2d eigen nav-core pluginlib roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

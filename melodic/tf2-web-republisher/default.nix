@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, actionlib, tf, catkin, actionlib-msgs, rospy, roscpp, message-runtime, rostest, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, roscpp, rospy, rostest, tf, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-tf2-web-republisher";
   version = "0.3.2";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs actionlib tf actionlib-msgs roscpp message-generation tf2-ros ];
+  buildInputs = [ message-generation ];
   checkInputs = [ rospy rostest ];
-  propagatedBuildInputs = [ geometry-msgs actionlib tf actionlib-msgs roscpp message-runtime tf2-ros ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs geometry-msgs message-runtime roscpp tf tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

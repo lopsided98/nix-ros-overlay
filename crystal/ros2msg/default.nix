@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, std-msgs, std-srvs, pythonPackages, ament-flake8, ros2cli, ament-pep257, ament-index-python }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, pythonPackages, ros2cli, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-crystal-ros2msg";
   version = "0.6.3";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ ros2cli ];
-  checkInputs = [ ament-copyright std-msgs std-srvs ament-pep257 pythonPackages.pytest ament-flake8 ];
-  propagatedBuildInputs = [ ros2cli ament-index-python ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest std-msgs std-srvs ];
+  propagatedBuildInputs = [ ament-index-python ros2cli ];
 
   meta = {
     description = ''The msg command for ROS 2 command line tools.'';

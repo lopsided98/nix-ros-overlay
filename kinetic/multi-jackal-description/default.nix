@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, urdf, robot-state-publisher, pointgrey-camera-description, roslaunch, tf, catkin, pointgrey-camera-driver, gazebo-ros, nav-msgs, lms1xx }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros, lms1xx, nav-msgs, pointgrey-camera-description, pointgrey-camera-driver, robot-state-publisher, roslaunch, tf, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-multi-jackal-description";
   version = "0.0.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ xacro urdf robot-state-publisher pointgrey-camera-description roslaunch tf pointgrey-camera-driver gazebo-ros nav-msgs lms1xx ];
-  propagatedBuildInputs = [ xacro urdf robot-state-publisher pointgrey-camera-description tf pointgrey-camera-driver gazebo-ros nav-msgs lms1xx ];
+  buildInputs = [ roslaunch ];
+  propagatedBuildInputs = [ gazebo-ros lms1xx nav-msgs pointgrey-camera-description pointgrey-camera-driver robot-state-publisher tf urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, interactive-markers, pluginlib, tf2, nav-msgs, dynamic-reconfigure, cmake-modules, tf2-geometry-msgs, tf2-ros, costmap-converter, std-msgs, catkin, costmap-2d, nav-core, roscpp, message-generation, mbf-msgs, libg2o, base-local-planner, tf2-eigen, mbf-costmap-core, visualization-msgs, message-runtime }:
+{ lib, buildRosPackage, fetchurl, base-local-planner, catkin, cmake-modules, costmap-2d, costmap-converter, dynamic-reconfigure, geometry-msgs, interactive-markers, libg2o, mbf-costmap-core, mbf-msgs, message-generation, message-runtime, nav-core, nav-msgs, pluginlib, roscpp, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-teb-local-planner";
   version = "0.8.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs interactive-markers pluginlib tf2 nav-msgs dynamic-reconfigure cmake-modules tf2-geometry-msgs tf2-ros costmap-converter std-msgs costmap-2d nav-core roscpp message-generation mbf-msgs libg2o base-local-planner tf2-eigen mbf-costmap-core visualization-msgs ];
-  propagatedBuildInputs = [ tf2-ros costmap-converter geometry-msgs dynamic-reconfigure interactive-markers pluginlib std-msgs base-local-planner roscpp costmap-2d nav-core mbf-costmap-core visualization-msgs tf2 message-runtime mbf-msgs nav-msgs libg2o ];
+  buildInputs = [ cmake-modules message-generation tf2-eigen tf2-geometry-msgs ];
+  propagatedBuildInputs = [ base-local-planner costmap-2d costmap-converter dynamic-reconfigure geometry-msgs interactive-markers libg2o mbf-costmap-core mbf-msgs message-runtime nav-core nav-msgs pluginlib roscpp std-msgs tf2 tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

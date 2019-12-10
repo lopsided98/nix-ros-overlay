@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, actionlib, catkin, roscpp, topic-tools, nav-msgs, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, control-msgs, geometry-msgs, nav-msgs, roscpp, sensor-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-fetch-teleop";
   version = "0.7.15";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs actionlib roscpp topic-tools nav-msgs control-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs actionlib roscpp topic-tools nav-msgs control-msgs ];
+  propagatedBuildInputs = [ actionlib control-msgs geometry-msgs nav-msgs roscpp sensor-msgs topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

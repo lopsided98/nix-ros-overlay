@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, freeglut, catkin, xorg }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, freeglut, xorg }:
 buildRosPackage {
   pname = "ros-kinetic-uwsim-bullet";
   version = "2.82.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ freeglut xorg.libXext ];
-  propagatedBuildInputs = [ freeglut catkin xorg.libXext ];
+  propagatedBuildInputs = [ catkin freeglut xorg.libXext ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

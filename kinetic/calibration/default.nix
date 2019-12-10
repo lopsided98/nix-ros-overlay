@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, interval-intersection, calibration-estimation, image-cb-detector, joint-states-settler, calibration-launch, settlerlib, catkin, calibration-msgs, monocam-settler, laser-cb-detector }:
+{ lib, buildRosPackage, fetchurl, calibration-estimation, calibration-launch, calibration-msgs, catkin, image-cb-detector, interval-intersection, joint-states-settler, laser-cb-detector, monocam-settler, settlerlib }:
 buildRosPackage {
   pname = "ros-kinetic-calibration";
   version = "0.10.14";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ interval-intersection calibration-estimation image-cb-detector joint-states-settler settlerlib monocam-settler calibration-msgs calibration-launch laser-cb-detector ];
+  propagatedBuildInputs = [ calibration-estimation calibration-launch calibration-msgs image-cb-detector interval-intersection joint-states-settler laser-cb-detector monocam-settler settlerlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

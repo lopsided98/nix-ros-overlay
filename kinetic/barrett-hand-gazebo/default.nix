@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, barrett-hand-description, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, barrett-hand-description, catkin, gazebo-ros, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-barrett-hand-gazebo";
   version = "0.1.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros barrett-hand-description roscpp ];
-  propagatedBuildInputs = [ gazebo-ros barrett-hand-description roscpp ];
+  propagatedBuildInputs = [ barrett-hand-description gazebo-ros roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

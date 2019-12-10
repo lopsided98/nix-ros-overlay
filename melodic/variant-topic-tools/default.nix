@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roslib, variant-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, roslib, variant-msgs }:
 buildRosPackage {
   pname = "ros-melodic-variant-topic-tools";
   version = "0.1.5";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ variant-msgs roslib roscpp ];
-  propagatedBuildInputs = [ variant-msgs roslib roscpp ];
+  propagatedBuildInputs = [ roscpp roslib variant-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-runtime, std-msgs, catkin, ublox-serialization, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, sensor-msgs, std-msgs, ublox-serialization }:
 buildRosPackage {
   pname = "ros-melodic-ublox-msgs";
   version = "1.2.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs sensor-msgs ublox-serialization ];
-  propagatedBuildInputs = [ sensor-msgs std-msgs message-runtime ublox-serialization ];
-  nativeBuildInputs = [ message-generation catkin ];
+  propagatedBuildInputs = [ message-runtime sensor-msgs std-msgs ublox-serialization ];
+  nativeBuildInputs = [ catkin message-generation ];
 
   meta = {
     description = ''ublox_msgs contains raw messages for u-blox GNSS devices.'';

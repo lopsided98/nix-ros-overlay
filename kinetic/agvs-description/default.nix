@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, std-srvs, tf, catkin, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, message-runtime, roscpp, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-agvs-description";
   version = "0.1.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs std-srvs tf roscpp ];
-  propagatedBuildInputs = [ std-msgs std-srvs tf roscpp message-runtime ];
+  propagatedBuildInputs = [ message-runtime roscpp std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

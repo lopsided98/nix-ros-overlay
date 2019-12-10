@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, gst-plugins-base, camera-info-manager, catkin, image-transport, cv-bridge, nodelet, roscpp, gstreamer, camera-calibration-parsers }:
+{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, camera-info-manager, catkin, cv-bridge, gst-plugins-base, gstreamer, image-transport, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-gscam";
   version = "0.2.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs gst-plugins-base camera-info-manager image-transport cv-bridge nodelet roscpp gstreamer camera-calibration-parsers ];
-  propagatedBuildInputs = [ sensor-msgs camera-info-manager image-transport cv-bridge nodelet roscpp camera-calibration-parsers ];
+  buildInputs = [ gst-plugins-base gstreamer ];
+  propagatedBuildInputs = [ camera-calibration-parsers camera-info-manager cv-bridge image-transport nodelet roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

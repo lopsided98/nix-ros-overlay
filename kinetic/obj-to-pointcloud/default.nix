@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, eigen-conversions, catkin, neonavigation-common, pcl, roslint, eigen, pcl-conversions, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, eigen-conversions, geometry-msgs, neonavigation-common, pcl, pcl-conversions, roscpp, roslint, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-obj-to-pointcloud";
   version = "0.5.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs eigen-conversions neonavigation-common pcl eigen pcl-conversions roscpp ];
-  checkInputs = [ rostest roslint ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs eigen-conversions neonavigation-common pcl eigen pcl-conversions roscpp ];
+  checkInputs = [ roslint rostest ];
+  propagatedBuildInputs = [ eigen eigen-conversions geometry-msgs neonavigation-common pcl pcl-conversions roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

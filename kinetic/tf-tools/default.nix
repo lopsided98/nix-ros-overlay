@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, nav-msgs, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, nav-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-tf-tools";
   version = "0.0.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf nav-msgs ];
-  propagatedBuildInputs = [ tf nav-msgs ];
+  propagatedBuildInputs = [ nav-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

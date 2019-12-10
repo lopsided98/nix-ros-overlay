@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, naoqi-sensors-py, rospy, cv-bridge, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, naoqi-sensors-py, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-romeo-sensors-py";
   version = "0.1.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ naoqi-sensors-py rospy cv-bridge ];
+  propagatedBuildInputs = [ cv-bridge naoqi-sensors-py rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

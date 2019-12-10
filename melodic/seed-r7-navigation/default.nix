@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, teleop-twist-joy, map-server, catkin, gmapping, move-base, urg-node, rospy, amcl, nav-msgs, teb-local-planner, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, amcl, catkin, gmapping, joy, map-server, move-base, move-base-msgs, nav-msgs, rospy, teb-local-planner, teleop-twist-joy, urg-node }:
 buildRosPackage {
   pname = "ros-melodic-seed-r7-navigation";
   version = "0.3.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ joy teleop-twist-joy map-server gmapping move-base urg-node rospy amcl nav-msgs teb-local-planner move-base-msgs ];
-  propagatedBuildInputs = [ joy teb-local-planner teleop-twist-joy map-server gmapping move-base rospy amcl nav-msgs urg-node move-base-msgs ];
+  propagatedBuildInputs = [ amcl gmapping joy map-server move-base move-base-msgs nav-msgs rospy teb-local-planner teleop-twist-joy urg-node ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

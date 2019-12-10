@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, stage-ros, catkin, gmapping, fake-localization, move-base, amcl }:
+{ lib, buildRosPackage, fetchurl, amcl, catkin, fake-localization, gmapping, map-server, move-base, stage-ros }:
 buildRosPackage {
   pname = "ros-kinetic-navigation-stage";
   version = "0.2.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ map-server stage-ros gmapping fake-localization move-base amcl ];
+  propagatedBuildInputs = [ amcl fake-localization gmapping map-server move-base stage-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

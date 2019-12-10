@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, class-loader, ament-lint-common, ament-cmake, ament-lint-auto, image-transport, tf2-eigen, stereo-msgs, cv-bridge, ament-cmake-gtest, tf2, tf2-ros, image-geometry }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, image-geometry, image-transport, message-filters, sensor-msgs, stereo-msgs, tf2, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-crystal-depth-image-proc";
   version = "2.0.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs message-filters class-loader tf2-eigen image-transport stereo-msgs cv-bridge tf2 tf2-ros image-geometry ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ image-transport tf2-eigen cv-bridge tf2 tf2-ros image-geometry ];
+  buildInputs = [ class-loader message-filters sensor-msgs stereo-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ cv-bridge image-geometry image-transport tf2 tf2-eigen tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

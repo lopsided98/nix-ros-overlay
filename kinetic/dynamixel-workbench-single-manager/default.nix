@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamixel-workbench-toolbox, dynamixel-workbench-msgs, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamixel-workbench-msgs, dynamixel-workbench-toolbox, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-dynamixel-workbench-single-manager";
   version = "2.0.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamixel-workbench-toolbox dynamixel-workbench-msgs roscpp ];
-  propagatedBuildInputs = [ dynamixel-workbench-toolbox dynamixel-workbench-msgs roscpp ];
+  propagatedBuildInputs = [ dynamixel-workbench-msgs dynamixel-workbench-toolbox roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

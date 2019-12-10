@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libqt-opengl, qt-qmake, pluginlib, swri-math-util, tf, mapviz, catkin, roscpp, jsoncpp, libqt-dev, libqt-opengl-dev, libqt-core, swri-transform-util, glew, swri-yaml-util }:
+{ lib, buildRosPackage, fetchurl, catkin, glew, jsoncpp, libqt-core, libqt-dev, libqt-opengl, libqt-opengl-dev, mapviz, pluginlib, qt-qmake, roscpp, swri-math-util, swri-transform-util, swri-yaml-util, tf }:
 buildRosPackage {
   pname = "ros-kinetic-tile-map";
   version = "1.2.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib swri-math-util tf mapviz roscpp jsoncpp libqt-dev libqt-opengl-dev swri-transform-util glew swri-yaml-util ];
-  propagatedBuildInputs = [ libqt-opengl pluginlib swri-math-util tf mapviz roscpp jsoncpp libqt-core swri-transform-util glew swri-yaml-util ];
-  nativeBuildInputs = [ qt-qmake catkin ];
+  buildInputs = [ libqt-dev libqt-opengl-dev ];
+  propagatedBuildInputs = [ glew jsoncpp libqt-core libqt-opengl mapviz pluginlib roscpp swri-math-util swri-transform-util swri-yaml-util tf ];
+  nativeBuildInputs = [ catkin qt-qmake ];
 
   meta = {
     description = ''Tile map provides a slippy map style interface for visualizing 

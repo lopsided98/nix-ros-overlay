@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, example-interfaces, rclcpp, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, example-interfaces, rclcpp }:
 buildRosPackage {
   pname = "ros-crystal-examples-rclcpp-minimal-client";
   version = "0.6.3";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ example-interfaces rclcpp ];
   propagatedBuildInputs = [ example-interfaces rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 

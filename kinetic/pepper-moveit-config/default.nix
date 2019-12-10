@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-planners-ompl, joint-state-publisher, xacro, robot-state-publisher, moveit-ros-move-group, moveit-simple-controller-manager, catkin, pepper-description, moveit-fake-controller-manager }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, moveit-fake-controller-manager, moveit-planners-ompl, moveit-ros-move-group, moveit-simple-controller-manager, pepper-description, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-pepper-moveit-config";
   version = "0.0.8";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ moveit-planners-ompl joint-state-publisher xacro robot-state-publisher moveit-ros-move-group moveit-simple-controller-manager pepper-description moveit-fake-controller-manager ];
+  propagatedBuildInputs = [ joint-state-publisher moveit-fake-controller-manager moveit-planners-ompl moveit-ros-move-group moveit-simple-controller-manager pepper-description robot-state-publisher xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, leuze-description, robot-state-publisher, leuze-rsl-driver, catkin, phidgets-ik, leuze-phidget-driver, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, leuze-description, leuze-phidget-driver, leuze-rsl-driver, phidgets-ik, robot-state-publisher, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-leuze-bringup";
   version = "1.0.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ leuze-description robot-state-publisher leuze-rsl-driver phidgets-ik leuze-phidget-driver ];
+  propagatedBuildInputs = [ leuze-description leuze-phidget-driver leuze-rsl-driver phidgets-ik robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, boost, sensor-msgs, dynamic-reconfigure, message-runtime, std-msgs, camera-info-manager, tf, catkin, roslint, image-transport, cv-bridge, nodelet, roscpp, message-generation, rostest, librealsense, rgbd-launch }:
+{ lib, buildRosPackage, fetchurl, boost, camera-info-manager, catkin, cv-bridge, dynamic-reconfigure, image-transport, librealsense, message-generation, message-runtime, nodelet, pcl-ros, rgbd-launch, roscpp, roslint, rostest, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-realsense-camera";
   version = "1.8.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros boost sensor-msgs dynamic-reconfigure std-msgs camera-info-manager tf roslint image-transport cv-bridge nodelet roscpp message-generation rostest librealsense ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs boost dynamic-reconfigure message-runtime std-msgs camera-info-manager tf image-transport cv-bridge nodelet roscpp message-generation rostest librealsense rgbd-launch ];
+  buildInputs = [ roslint ];
+  propagatedBuildInputs = [ boost camera-info-manager cv-bridge dynamic-reconfigure image-transport librealsense message-generation message-runtime nodelet pcl-ros rgbd-launch roscpp rostest sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

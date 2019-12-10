@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, zeroconf-avahi, avahi }:
+{ lib, buildRosPackage, fetchurl, avahi, catkin, zeroconf-avahi }:
 buildRosPackage {
   pname = "ros-kinetic-zeroconf-avahi-demos";
   version = "0.2.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ zeroconf-avahi ];
-  propagatedBuildInputs = [ zeroconf-avahi avahi ];
+  propagatedBuildInputs = [ avahi zeroconf-avahi ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

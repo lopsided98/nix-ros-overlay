@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-sound, cob-relayboard, cob-undercarriage-ctrl, cob-bms-driver, cob-utilities, cob-voltage-control, cob-scan-unifier, cob-elmo-homing, catkin, cob-sick-lms1xx, cob-sick-s300, cob-generic-can, cob-base-drive-chain, cob-phidgets, cob-canopen-motor, cob-light, cob-mimic, cob-camera-sensors }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-base-drive-chain, cob-bms-driver, cob-camera-sensors, cob-canopen-motor, cob-elmo-homing, cob-generic-can, cob-light, cob-mimic, cob-phidgets, cob-relayboard, cob-scan-unifier, cob-sick-lms1xx, cob-sick-s300, cob-sound, cob-undercarriage-ctrl, cob-utilities, cob-voltage-control }:
 buildRosPackage {
   pname = "ros-melodic-cob-driver";
   version = "0.7.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-sound cob-relayboard cob-light cob-undercarriage-ctrl cob-bms-driver cob-voltage-control cob-scan-unifier cob-elmo-homing cob-utilities cob-sick-lms1xx cob-generic-can cob-base-drive-chain cob-phidgets cob-canopen-motor cob-sick-s300 cob-mimic cob-camera-sensors ];
+  propagatedBuildInputs = [ cob-base-drive-chain cob-bms-driver cob-camera-sensors cob-canopen-motor cob-elmo-homing cob-generic-can cob-light cob-mimic cob-phidgets cob-relayboard cob-scan-unifier cob-sick-lms1xx cob-sick-s300 cob-sound cob-undercarriage-ctrl cob-utilities cob-voltage-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

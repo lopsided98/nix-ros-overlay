@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, octomap-msgs, cmake-modules, catkin, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, message-generation, message-runtime, octomap-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rotors-comm";
   version = "2.2.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs message-runtime octomap-msgs cmake-modules message-generation ];
-  propagatedBuildInputs = [ geometry-msgs message-runtime octomap-msgs cmake-modules message-generation ];
+  propagatedBuildInputs = [ cmake-modules geometry-msgs message-generation message-runtime octomap-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

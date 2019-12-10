@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp, catkin, urdf, rosunit }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, rosunit, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-industrial-utils";
   version = "0.7.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ urdf roscpp ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ urdf roscpp ];
+  propagatedBuildInputs = [ roscpp urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

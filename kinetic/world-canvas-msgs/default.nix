@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-msgs, std-srvs, catkin, message-generation, uuid-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs, std-srvs, uuid-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-world-canvas-msgs";
   version = "0.2.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs std-msgs std-srvs message-generation uuid-msgs ];
-  propagatedBuildInputs = [ geometry-msgs std-msgs std-srvs message-runtime uuid-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime std-msgs std-srvs uuid-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

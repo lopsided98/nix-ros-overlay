@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, std-msgs, tf, catkin, roscpp, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp, rospy, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-declination";
   version = "0.0.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs tf roscpp rospy ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs tf roscpp rospy ];
+  propagatedBuildInputs = [ geometry-msgs roscpp rospy sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pythonPackages, smach-msgs, graphviz, catkin, smach-ros, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, graphviz, pythonPackages, rostest, smach-msgs, smach-ros }:
 buildRosPackage {
   pname = "ros-kinetic-smach-viewer";
   version = "2.0.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ rostest ];
-  propagatedBuildInputs = [ smach-ros pythonPackages.wxPython graphviz smach-msgs ];
+  propagatedBuildInputs = [ graphviz pythonPackages.wxPython smach-msgs smach-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

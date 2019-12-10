@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, boost, dynamic-reconfigure, std-msgs, catkin, cv-bridge, nodelet, roscpp, message-runtime, curl }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, curl, cv-bridge, dynamic-reconfigure, message-generation, message-runtime, nodelet, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-nerian-stereo";
   version = "3.6.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs dynamic-reconfigure std-msgs cv-bridge nodelet roscpp message-generation ];
-  propagatedBuildInputs = [ boost sensor-msgs dynamic-reconfigure std-msgs cv-bridge nodelet roscpp message-runtime curl ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ boost curl cv-bridge dynamic-reconfigure message-runtime nodelet roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

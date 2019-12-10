@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-default-robot-config, cob-hardware-config, catkin, cob-default-robot-behavior, cob-bringup, cob-moveit-config }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-bringup, cob-default-robot-behavior, cob-default-robot-config, cob-hardware-config, cob-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-cob-robots";
   version = "0.7.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-default-robot-config cob-hardware-config cob-default-robot-behavior cob-bringup cob-moveit-config ];
+  propagatedBuildInputs = [ cob-bringup cob-default-robot-behavior cob-default-robot-config cob-hardware-config cob-moveit-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eigen-conversions, tf, python, eigen, rostest, moveit-ros-warehouse, eigenpy, rosconsole, catkin, pythonPackages, moveit-ros-manipulation, roscpp, moveit-ros-planning, rospy, moveit-ros-move-group, actionlib, moveit-resources, moveit-msgs, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, eigen, eigen-conversions, eigenpy, moveit-msgs, moveit-resources, moveit-ros-manipulation, moveit-ros-move-group, moveit-ros-planning, moveit-ros-warehouse, python, pythonPackages, rosconsole, roscpp, rospy, rostest, tf, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-planning-interface";
   version = "0.9.17-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen-conversions moveit-ros-move-group moveit-ros-warehouse tf actionlib moveit-ros-manipulation moveit-ros-planning eigenpy python eigen moveit-msgs roscpp rospy tf-conversions rosconsole ];
-  checkInputs = [ rostest moveit-resources ];
-  propagatedBuildInputs = [ eigen-conversions moveit-ros-move-group moveit-ros-warehouse tf actionlib moveit-ros-manipulation moveit-ros-planning eigenpy python moveit-msgs roscpp rospy tf-conversions rosconsole ];
+  buildInputs = [ eigen ];
+  checkInputs = [ moveit-resources rostest ];
+  propagatedBuildInputs = [ actionlib eigen-conversions eigenpy moveit-msgs moveit-ros-manipulation moveit-ros-move-group moveit-ros-planning moveit-ros-warehouse python rosconsole roscpp rospy tf tf-conversions ];
   nativeBuildInputs = [ catkin pythonPackages.catkin-pkg ];
 
   meta = {

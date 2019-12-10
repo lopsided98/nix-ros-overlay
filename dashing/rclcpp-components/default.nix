@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, composition-interfaces, ament-cmake-ros, launch-testing, std-msgs, ament-lint-common, ament-lint-auto, rcpputils, class-loader, ament-index-cpp, rclcpp, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, class-loader, composition-interfaces, launch-testing, rclcpp, rcpputils, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-rclcpp-components";
   version = "0.7.12-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ composition-interfaces rcpputils class-loader ament-index-cpp rclcpp ];
-  checkInputs = [ launch-testing std-msgs ament-lint-common ament-lint-auto ament-cmake-gtest ];
-  propagatedBuildInputs = [ ament-index-cpp rclcpp composition-interfaces class-loader ];
+  buildInputs = [ rcpputils ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common launch-testing std-msgs ];
+  propagatedBuildInputs = [ ament-index-cpp class-loader composition-interfaces rclcpp ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

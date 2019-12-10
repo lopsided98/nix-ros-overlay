@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pythonPackages, roslib, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, roslib }:
 buildRosPackage {
   pname = "ros-melodic-roscreate";
   version = "1.14.7-r1";

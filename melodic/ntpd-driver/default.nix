@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-runtime, poco, cmake-modules, catkin, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, message-generation, message-runtime, poco, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ntpd-driver";
   version = "1.2.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-runtime poco cmake-modules roscpp message-generation ];
-  propagatedBuildInputs = [ sensor-msgs message-runtime poco cmake-modules roscpp message-generation ];
+  propagatedBuildInputs = [ cmake-modules message-generation message-runtime poco roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nodejs, catkin, nodePackages, rospack }:
+{ lib, buildRosPackage, fetchurl, catkin, nodePackages, nodejs, rospack }:
 buildRosPackage {
   pname = "ros-melodic-vapor-master";
   version = "0.3.0";

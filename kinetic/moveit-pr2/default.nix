@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-moveit-config, pr2-moveit-plugins, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, pr2-moveit-config, pr2-moveit-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-pr2";
   version = "0.7.1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, std-msgs, cmake-modules, tf, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, message-filters, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-imu-complementary-filter";
   version = "1.1.7-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters std-msgs cmake-modules tf roscpp ];
-  propagatedBuildInputs = [ sensor-msgs message-filters std-msgs tf roscpp ];
+  buildInputs = [ cmake-modules ];
+  propagatedBuildInputs = [ message-filters roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

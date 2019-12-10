@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-sensors-description, xacro, catkin, hector-xacro-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, hector-sensors-description, hector-xacro-tools, xacro }:
 buildRosPackage {
   pname = "ros-melodic-hector-components-description";
   version = "0.5.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ hector-sensors-description xacro hector-xacro-tools ];
+  propagatedBuildInputs = [ hector-sensors-description hector-xacro-tools xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

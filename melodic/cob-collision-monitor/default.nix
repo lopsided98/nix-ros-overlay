@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-move-group, pluginlib, std-msgs, tf, catkin, moveit-ros-planning, cob-moveit-config, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-moveit-config, moveit-ros-move-group, moveit-ros-planning, pluginlib, std-msgs, tf, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-cob-collision-monitor";
   version = "0.7.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-ros-move-group pluginlib std-msgs tf moveit-ros-planning tf2-ros ];
-  propagatedBuildInputs = [ moveit-ros-move-group pluginlib std-msgs tf moveit-ros-planning cob-moveit-config tf2-ros ];
+  propagatedBuildInputs = [ cob-moveit-config moveit-ros-move-group moveit-ros-planning pluginlib std-msgs tf tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

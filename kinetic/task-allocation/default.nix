@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, actionlib, cpswarm-msgs, actionlib-msgs, roscpp }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, cpswarm-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-task-allocation";
   version = "1.1.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cpswarm-msgs actionlib actionlib-msgs roscpp ];
-  propagatedBuildInputs = [ cpswarm-msgs actionlib actionlib-msgs roscpp ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs cpswarm-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

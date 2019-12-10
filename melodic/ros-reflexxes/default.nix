@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libreflexxestype2, cmake-modules, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, libreflexxestype2, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-ros-reflexxes";
   version = "0.8.8-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libreflexxestype2 cmake-modules roscpp ];
+  buildInputs = [ cmake-modules ];
   propagatedBuildInputs = [ libreflexxestype2 roscpp ];
   nativeBuildInputs = [ catkin ];
 

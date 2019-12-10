@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libphidgets, message-generation, sensor-msgs, std-msgs, catkin, rospy, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, libphidgets, message-generation, message-runtime, roscpp, rospy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-phidgets";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libphidgets sensor-msgs std-msgs roscpp message-generation ];
-  propagatedBuildInputs = [ libphidgets sensor-msgs std-msgs rospy roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ libphidgets message-runtime roscpp rospy sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

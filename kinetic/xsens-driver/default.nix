@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, diagnostic-msgs, std-msgs, tf, catkin, pythonPackages, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, geometry-msgs, pythonPackages, rospy, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-xsens-driver";
   version = "2.2.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs diagnostic-msgs geometry-msgs std-msgs tf rospy ];
-  propagatedBuildInputs = [ sensor-msgs diagnostic-msgs geometry-msgs std-msgs tf pythonPackages.pyserial rospy ];
+  propagatedBuildInputs = [ diagnostic-msgs geometry-msgs pythonPackages.pyserial rospy sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

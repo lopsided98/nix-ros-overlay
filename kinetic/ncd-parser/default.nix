@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, sensor-msgs, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-ncd-parser";
   version = "0.3.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ sensor-msgs tf roscpp ];
+  propagatedBuildInputs = [ roscpp sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

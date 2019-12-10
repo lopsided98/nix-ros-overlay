@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-license, catkin, ecl-errors, ecl-exceptions, ecl-time-lite, ecl-config, ecl-build }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-build, ecl-config, ecl-errors, ecl-exceptions, ecl-license, ecl-time-lite }:
 buildRosPackage {
   pname = "ros-kinetic-ecl-time";
   version = "0.61.17";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-license ecl-errors ecl-exceptions ecl-time-lite ecl-config ecl-build ];
-  propagatedBuildInputs = [ ecl-license ecl-errors ecl-exceptions ecl-time-lite ecl-config ecl-build ];
+  propagatedBuildInputs = [ ecl-build ecl-config ecl-errors ecl-exceptions ecl-license ecl-time-lite ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

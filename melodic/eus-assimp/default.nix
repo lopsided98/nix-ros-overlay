@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roseus, catkin, euslisp, assimp-devel, pkg-config }:
+{ lib, buildRosPackage, fetchurl, assimp-devel, catkin, euslisp, pkg-config, roseus }:
 buildRosPackage {
   pname = "ros-melodic-eus-assimp";
   version = "0.4.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ assimp-devel pkg-config euslisp ];
+  buildInputs = [ euslisp pkg-config ];
   propagatedBuildInputs = [ assimp-devel roseus ];
   nativeBuildInputs = [ catkin ];
 

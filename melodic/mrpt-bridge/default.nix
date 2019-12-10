@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, marker-msgs, rosunit, nav-msgs, mrpt1, sensor-msgs, qt5, std-msgs, catkin, pcl, cv-bridge, roscpp, message-generation, mrpt-msgs, stereo-msgs, pcl-conversions, gtest, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, gtest, marker-msgs, message-generation, message-runtime, mrpt-msgs, mrpt1, nav-msgs, pcl, pcl-conversions, qt5, roscpp, rosunit, sensor-msgs, std-msgs, stereo-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-bridge";
   version = "0.1.25";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mrpt1 sensor-msgs geometry-msgs mrpt-msgs std-msgs tf marker-msgs qt5.qtbase pcl stereo-msgs cv-bridge pcl-conversions roscpp message-generation nav-msgs ];
+  buildInputs = [ pcl pcl-conversions qt5.qtbase ];
   checkInputs = [ gtest rosunit ];
-  propagatedBuildInputs = [ mrpt1 sensor-msgs geometry-msgs message-runtime mrpt-msgs std-msgs tf marker-msgs stereo-msgs cv-bridge roscpp message-generation nav-msgs ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs marker-msgs message-generation message-runtime mrpt-msgs mrpt1 nav-msgs roscpp sensor-msgs std-msgs stereo-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

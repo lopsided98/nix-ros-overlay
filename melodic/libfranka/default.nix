@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, poco, eigen, catkin, cmake }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, eigen, poco }:
 buildRosPackage {
   pname = "ros-melodic-libfranka";
   version = "0.7.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ poco eigen ];
-  propagatedBuildInputs = [ poco catkin ];
+  buildInputs = [ eigen ];
+  propagatedBuildInputs = [ catkin poco ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, catkin, roscpp, rtt-ros, rtt-rosnode }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, roscpp, rtt-ros, rtt-rosnode }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-dynamic-reconfigure";
   version = "2.9.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rtt-ros dynamic-reconfigure roscpp ];
-  propagatedBuildInputs = [ rtt-ros rtt-rosnode dynamic-reconfigure roscpp ];
+  propagatedBuildInputs = [ dynamic-reconfigure roscpp rtt-ros rtt-rosnode ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

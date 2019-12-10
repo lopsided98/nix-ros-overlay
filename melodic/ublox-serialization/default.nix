@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp-serialization, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, roscpp-serialization }:
 buildRosPackage {
   pname = "ros-melodic-ublox-serialization";
   version = "1.2.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp-serialization roscpp ];
-  propagatedBuildInputs = [ roscpp-serialization roscpp ];
+  propagatedBuildInputs = [ roscpp roscpp-serialization ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

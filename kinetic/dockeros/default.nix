@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-dockeros";
   version = "1.0.3";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.docker ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ pythonPackages.docker ];
   nativeBuildInputs = [ catkin ];

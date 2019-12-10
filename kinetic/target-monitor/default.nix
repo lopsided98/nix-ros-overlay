@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, tf2, cpswarm-msgs, roscpp, swarmros }:
+{ lib, buildRosPackage, fetchurl, catkin, cpswarm-msgs, geometry-msgs, roscpp, swarmros, tf2 }:
 buildRosPackage {
   pname = "ros-kinetic-target-monitor";
   version = "1.1.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs roscpp cpswarm-msgs tf2 swarmros ];
-  propagatedBuildInputs = [ geometry-msgs tf2 cpswarm-msgs roscpp swarmros ];
+  propagatedBuildInputs = [ cpswarm-msgs geometry-msgs roscpp swarmros tf2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

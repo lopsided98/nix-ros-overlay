@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, protobuf, glog, ceres-solver, lua5, pythonPackages, cmake, cairo, eigen, gmock, gflags }:
+{ lib, buildRosPackage, fetchurl, boost, cairo, ceres-solver, cmake, eigen, gflags, glog, gmock, lua5, protobuf, pythonPackages }:
 buildRosPackage {
   pname = "ros-crystal-cartographer";
   version = "1.0.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ boost protobuf glog ceres-solver lua5 cairo eigen pythonPackages.sphinx gmock gflags ];
-  propagatedBuildInputs = [ boost protobuf glog ceres-solver lua5 cairo eigen gflags ];
+  buildInputs = [ gmock pythonPackages.sphinx ];
+  propagatedBuildInputs = [ boost cairo ceres-solver eigen gflags glog lua5 protobuf ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

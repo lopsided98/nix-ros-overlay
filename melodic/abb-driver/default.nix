@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, industrial-robot-client, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, industrial-robot-client }:
 buildRosPackage {
   pname = "ros-melodic-abb-driver";
   version = "1.3.1-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ industrial-robot-client ];
   propagatedBuildInputs = [ industrial-robot-client ];
   nativeBuildInputs = [ catkin ];
 

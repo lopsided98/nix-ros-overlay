@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, stdr-robot, stdr-resources, catkin, stdr-server, stdr-samples, stdr-launchers, stdr-gui, stdr-parser, stdr-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, stdr-gui, stdr-launchers, stdr-msgs, stdr-parser, stdr-resources, stdr-robot, stdr-samples, stdr-server }:
 buildRosPackage {
   pname = "ros-kinetic-stdr-simulator";
   version = "0.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ stdr-robot stdr-resources stdr-server stdr-samples stdr-launchers stdr-gui stdr-parser stdr-msgs ];
+  propagatedBuildInputs = [ stdr-gui stdr-launchers stdr-msgs stdr-parser stdr-resources stdr-robot stdr-samples stdr-server ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

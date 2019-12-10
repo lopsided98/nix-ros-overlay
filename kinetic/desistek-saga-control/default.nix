@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, desistek-saga-description, uuv-thruster-manager, catkin, uuv-control-cascaded-pid }:
+{ lib, buildRosPackage, fetchurl, catkin, desistek-saga-description, uuv-control-cascaded-pid, uuv-thruster-manager }:
 buildRosPackage {
   pname = "ros-kinetic-desistek-saga-control";
   version = "0.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ desistek-saga-description uuv-thruster-manager uuv-control-cascaded-pid ];
+  propagatedBuildInputs = [ desistek-saga-description uuv-control-cascaded-pid uuv-thruster-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

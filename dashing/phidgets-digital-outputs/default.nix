@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rclcpp-components, phidgets-msgs, std-msgs, launch, phidgets-api, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, phidgets-msgs, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-phidgets-digital-outputs";
   version = "2.0.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-components phidgets-msgs std-msgs phidgets-api rclcpp ];
-  propagatedBuildInputs = [ rclcpp-components launch std-msgs phidgets-msgs phidgets-api rclcpp ];
+  propagatedBuildInputs = [ launch phidgets-api phidgets-msgs rclcpp rclcpp-components std-msgs ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

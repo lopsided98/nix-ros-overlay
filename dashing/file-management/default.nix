@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, ament-cmake-gmock, dataflow-lite, aws-common, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, aws-common, cmake, dataflow-lite }:
 buildRosPackage {
   pname = "ros-dashing-file-management";
   version = "1.1.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ dataflow-lite aws-common ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest ];
-  propagatedBuildInputs = [ dataflow-lite aws-common ];
+  propagatedBuildInputs = [ aws-common dataflow-lite ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, pythonPackages, catkin, hddtemp, diagnostic-updater, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, hddtemp, pythonPackages, rospy, rostest, tf }:
 buildRosPackage {
   pname = "ros-melodic-diagnostic-common-diagnostics";
   version = "1.9.3";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy rostest diagnostic-updater ];
-  propagatedBuildInputs = [ tf hddtemp rospy diagnostic-updater pythonPackages.psutil ];
+  buildInputs = [ rostest ];
+  propagatedBuildInputs = [ diagnostic-updater hddtemp pythonPackages.psutil rospy tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

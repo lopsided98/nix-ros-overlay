@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, geometry-msgs, eigen-conversions, std-msgs, tf, cmake-modules, catkin, eigen, roscpp, robotis-math }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, eigen, eigen-conversions, geometry-msgs, robotis-math, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-op3-localization";
   version = "0.2.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs geometry-msgs eigen-conversions std-msgs tf cmake-modules eigen roscpp robotis-math ];
-  propagatedBuildInputs = [ sensor-msgs boost geometry-msgs eigen-conversions std-msgs tf cmake-modules eigen roscpp robotis-math ];
+  propagatedBuildInputs = [ boost cmake-modules eigen eigen-conversions geometry-msgs robotis-math roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

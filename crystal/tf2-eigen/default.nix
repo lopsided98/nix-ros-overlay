@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-ros, geometry-msgs, ament-cmake, eigen, tf2, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, geometry-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-crystal-tf2-eigen";
   version = "0.10.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ eigen geometry-msgs tf2-ros tf2 ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ eigen geometry-msgs tf2-ros tf2 ];
+  propagatedBuildInputs = [ eigen geometry-msgs tf2 tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

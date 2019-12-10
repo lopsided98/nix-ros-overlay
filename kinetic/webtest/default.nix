@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin-pip, pythonPackages, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, catkin-pip, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-webtest";
   version = "2.0.18-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.webob pythonPackages.waitress pythonPackages.beautifulsoup4 catkin-pip pythonPackages.six ];
-  checkInputs = [ pythonPackages.mock pythonPackages.nose pythonPackages.PasteDeploy pythonPackages.pyquery ];
-  propagatedBuildInputs = [ pythonPackages.waitress pythonPackages.beautifulsoup4 pythonPackages.six pythonPackages.webob ];
+  buildInputs = [ catkin-pip ];
+  checkInputs = [ pythonPackages.PasteDeploy pythonPackages.mock pythonPackages.nose pythonPackages.pyquery ];
+  propagatedBuildInputs = [ pythonPackages.beautifulsoup4 pythonPackages.six pythonPackages.waitress pythonPackages.webob ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

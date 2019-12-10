@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-ros2-common, launch, std-msgs, cloudwatch-metrics-common, std-srvs, launch-ros, ament-cmake, ros-monitoring-msgs, ament-cmake-gmock, rmw-implementation, rclcpp, aws-common }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, aws-common, aws-ros2-common, cloudwatch-metrics-common, launch, launch-ros, rclcpp, rmw-implementation, ros-monitoring-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-dashing-cloudwatch-metrics-collector";
   version = "3.0.0-r2";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ aws-ros2-common rclcpp std-msgs std-srvs cloudwatch-metrics-common ros-monitoring-msgs rmw-implementation aws-common ];
   checkInputs = [ ament-cmake-gmock ];
-  propagatedBuildInputs = [ aws-ros2-common rclcpp launch std-msgs std-srvs cloudwatch-metrics-common launch-ros ros-monitoring-msgs rmw-implementation aws-common ];
+  propagatedBuildInputs = [ aws-common aws-ros2-common cloudwatch-metrics-common launch launch-ros rclcpp rmw-implementation ros-monitoring-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

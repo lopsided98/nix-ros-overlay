@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python, pythonPackages, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-urdfdom-py";
   version = "0.3.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python ];
-  propagatedBuildInputs = [ pythonPackages.lxml python catkin ];
+  propagatedBuildInputs = [ catkin python pythonPackages.lxml ];
   nativeBuildInputs = [ catkin pythonPackages.catkin-pkg ];
 
   meta = {

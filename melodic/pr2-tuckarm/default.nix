@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, catkin, pr2-tuck-arms-action, rospy, pr2-mechanism-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, pr2-mechanism-msgs, pr2-tuck-arms-action, rospy, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pr2-tuckarm";
   version = "0.6.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ trajectory-msgs rospy pr2-tuck-arms-action pr2-mechanism-msgs ];
+  propagatedBuildInputs = [ pr2-mechanism-msgs pr2-tuck-arms-action rospy trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

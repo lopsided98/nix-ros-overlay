@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, liblapack, pluginlib, code-coverage, catkin, rosunit, roscpp, tf2-kdl, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, code-coverage, liblapack, moveit-core, pluginlib, roscpp, rostest, rosunit, tf2-kdl }:
 buildRosPackage {
   pname = "ros-kinetic-prbt-ikfast-manipulator-plugin";
   version = "0.4.11-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core liblapack pluginlib roscpp tf2-kdl ];
   checkInputs = [ code-coverage rostest rosunit ];
-  propagatedBuildInputs = [ moveit-core liblapack pluginlib roscpp tf2-kdl ];
+  propagatedBuildInputs = [ liblapack moveit-core pluginlib roscpp tf2-kdl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

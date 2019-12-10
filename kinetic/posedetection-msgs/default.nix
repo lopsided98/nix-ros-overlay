@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, message-filters, geometry-msgs, std-msgs, catkin, cv-bridge, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, message-filters, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-posedetection-msgs";
   version = "4.3.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs cv-bridge roscpp message-generation ];
-  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs cv-bridge roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs message-filters message-runtime roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

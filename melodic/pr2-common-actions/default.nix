@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-tilt-laser-interface, catkin, pr2-arm-move-ik, joint-trajectory-action-tools, pr2-common-action-msgs, pr2-tuck-arms-action, joint-trajectory-generator }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-trajectory-action-tools, joint-trajectory-generator, pr2-arm-move-ik, pr2-common-action-msgs, pr2-tilt-laser-interface, pr2-tuck-arms-action }:
 buildRosPackage {
   pname = "ros-melodic-pr2-common-actions";
   version = "0.0.11";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pr2-tilt-laser-interface joint-trajectory-action-tools pr2-arm-move-ik joint-trajectory-generator pr2-tuck-arms-action pr2-common-action-msgs ];
+  propagatedBuildInputs = [ joint-trajectory-action-tools joint-trajectory-generator pr2-arm-move-ik pr2-common-action-msgs pr2-tilt-laser-interface pr2-tuck-arms-action ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eigen-conversions, tf, catkin, angles, tf-conversions, kdl-conversions }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, eigen-conversions, kdl-conversions, tf, tf-conversions }:
 buildRosPackage {
   pname = "ros-melodic-geometry";
   version = "1.12.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ eigen-conversions tf angles tf-conversions kdl-conversions ];
+  propagatedBuildInputs = [ angles eigen-conversions kdl-conversions tf tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

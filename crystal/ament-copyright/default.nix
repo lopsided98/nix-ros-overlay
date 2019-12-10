@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-pep257, pythonPackages, ament-flake8 }:
+{ lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-crystal-ament-copyright";
   version = "0.6.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-pep257 ];
+  checkInputs = [ ament-flake8 ament-pep257 pythonPackages.pytest ];
 
   meta = {
     description = ''The ability to check source files for copyright and license

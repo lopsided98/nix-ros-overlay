@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-app-utilities, rocon-app-manager, catkin, rocon-apps }:
+{ lib, buildRosPackage, fetchurl, catkin, rocon-app-manager, rocon-app-utilities, rocon-apps }:
 buildRosPackage {
   pname = "ros-kinetic-rocon-app-platform";
   version = "0.9.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rocon-app-utilities rocon-apps rocon-app-manager ];
+  propagatedBuildInputs = [ rocon-app-manager rocon-app-utilities rocon-apps ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

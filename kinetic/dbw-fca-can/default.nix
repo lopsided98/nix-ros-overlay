@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, dbw-fca-msgs, geometry-msgs, dataspeed-ulc-can, dbw-fca-description, std-msgs, catkin, dataspeed-can-usb, nodelet, roscpp, can-msgs, rospy, roslaunch }:
+{ lib, buildRosPackage, fetchurl, can-msgs, catkin, dataspeed-can-usb, dataspeed-ulc-can, dbw-fca-description, dbw-fca-msgs, geometry-msgs, nodelet, roscpp, roslaunch, rospy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-fca-can";
   version = "1.0.6-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs dbw-fca-msgs geometry-msgs std-msgs nodelet roscpp can-msgs rospy ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ sensor-msgs dbw-fca-msgs geometry-msgs dataspeed-ulc-can dbw-fca-description std-msgs dataspeed-can-usb nodelet roscpp can-msgs rospy roslaunch ];
+  propagatedBuildInputs = [ can-msgs dataspeed-can-usb dataspeed-ulc-can dbw-fca-description dbw-fca-msgs geometry-msgs nodelet roscpp roslaunch rospy sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

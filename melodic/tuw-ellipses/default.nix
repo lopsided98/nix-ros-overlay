@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, cmake-modules, tf, catkin, marker-msgs, image-transport, eigen, cv-bridge, nodelet, roscpp, rospy, image-geometry }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, cv-bridge, dynamic-reconfigure, eigen, image-geometry, image-transport, marker-msgs, nodelet, roscpp, rospy, tf }:
 buildRosPackage {
   pname = "ros-melodic-tuw-ellipses";
   version = "0.1.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure tf cmake-modules marker-msgs image-transport eigen cv-bridge nodelet roscpp rospy image-geometry ];
-  propagatedBuildInputs = [ dynamic-reconfigure tf marker-msgs image-transport cv-bridge nodelet roscpp rospy image-geometry ];
+  buildInputs = [ cmake-modules eigen ];
+  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-geometry image-transport marker-msgs nodelet roscpp rospy tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

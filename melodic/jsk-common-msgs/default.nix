@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, posedetection-msgs, jsk-hark-msgs, speech-recognition-msgs, jsk-gui-msgs, catkin, jsk-footstep-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, jsk-footstep-msgs, jsk-gui-msgs, jsk-hark-msgs, posedetection-msgs, speech-recognition-msgs }:
 buildRosPackage {
   pname = "ros-melodic-jsk-common-msgs";
   version = "4.3.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ posedetection-msgs jsk-hark-msgs speech-recognition-msgs jsk-gui-msgs jsk-footstep-msgs ];
+  propagatedBuildInputs = [ jsk-footstep-msgs jsk-gui-msgs jsk-hark-msgs posedetection-msgs speech-recognition-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

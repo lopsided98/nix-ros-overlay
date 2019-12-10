@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, ament-cmake-test, ament-clang-format, ament-cmake-core, ament-cmake-copyright }:
+{ lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test }:
 buildRosPackage {
   pname = "ros-dashing-ament-cmake-clang-format";
   version = "0.7.11-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-copyright ];
-  propagatedBuildInputs = [ ament-cmake-test ament-clang-format ];
+  checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
+  propagatedBuildInputs = [ ament-clang-format ament-cmake-test ];
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 
   meta = {

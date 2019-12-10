@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, piksi-rtk-msgs, catkin, piksi-multi-rtk }:
+{ lib, buildRosPackage, fetchurl, catkin, piksi-multi-rtk, piksi-rtk-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-earth-rover-piksi";
   version = "1.8.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ piksi-rtk-msgs piksi-multi-rtk ];
+  propagatedBuildInputs = [ piksi-multi-rtk piksi-rtk-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

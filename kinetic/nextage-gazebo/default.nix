@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nextage-moveit-config, catkin, nextage-description, ros-controllers, gazebo-ros-control, gazebo-ros, rostest, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-plugins, gazebo-ros, gazebo-ros-control, nextage-description, nextage-moveit-config, ros-controllers, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-nextage-gazebo";
   version = "0.8.5-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ nextage-moveit-config ros-controllers gazebo-ros-control nextage-description gazebo-ros gazebo-plugins ];
+  propagatedBuildInputs = [ gazebo-plugins gazebo-ros gazebo-ros-control nextage-description nextage-moveit-config ros-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ python3Packages.setuptools ];
   checkInputs = [ python3Packages.flake8 pythonPackages.pytest ];
   propagatedBuildInputs = [ python3Packages.setuptools ];
 

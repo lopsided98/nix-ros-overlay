@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-package, python3Packages, cmake }:
+{ lib, buildRosPackage, fetchurl, ament-package, cmake, python3Packages }:
 buildRosPackage {
   pname = "ros-crystal-ament-cmake-core";
   version = "0.6.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ ament-package python3Packages.catkin-pkg cmake ];
-  nativeBuildInputs = [ ament-package python3Packages.catkin-pkg cmake ];
+  propagatedBuildInputs = [ ament-package cmake python3Packages.catkin-pkg ];
+  nativeBuildInputs = [ ament-package cmake python3Packages.catkin-pkg ];
 
   meta = {
     description = ''The core of the ament buildsystem in CMake.

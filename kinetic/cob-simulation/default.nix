@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-gazebo-objects, catkin, cob-bringup-sim, cob-gazebo-tools, cob-gazebo-worlds, cob-gazebo }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-bringup-sim, cob-gazebo, cob-gazebo-objects, cob-gazebo-tools, cob-gazebo-worlds }:
 buildRosPackage {
   pname = "ros-kinetic-cob-simulation";
   version = "0.7.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-gazebo-objects cob-bringup-sim cob-gazebo-worlds cob-gazebo-tools cob-gazebo ];
+  propagatedBuildInputs = [ cob-bringup-sim cob-gazebo cob-gazebo-objects cob-gazebo-tools cob-gazebo-worlds ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

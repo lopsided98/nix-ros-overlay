@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-state-publisher, tf, catkin, rosunit, xpp-msgs, visualization-msgs, roscpp, xpp-states, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, catkin, kdl-parser, robot-state-publisher, roscpp, rosunit, tf, visualization-msgs, xpp-msgs, xpp-states }:
 buildRosPackage {
   pname = "ros-kinetic-xpp-vis";
   version = "1.0.10";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robot-state-publisher tf xpp-msgs visualization-msgs roscpp xpp-states kdl-parser ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ robot-state-publisher tf xpp-msgs visualization-msgs roscpp xpp-states kdl-parser ];
+  propagatedBuildInputs = [ kdl-parser robot-state-publisher roscpp tf visualization-msgs xpp-msgs xpp-states ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

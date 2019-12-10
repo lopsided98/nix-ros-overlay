@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, uuid-msgs, unique-id, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, unique-id, uuid-msgs }:
 buildRosPackage {
   pname = "ros-melodic-unique-identifier";
   version = "1.0.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ uuid-msgs unique-id ];
+  propagatedBuildInputs = [ unique-id uuid-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

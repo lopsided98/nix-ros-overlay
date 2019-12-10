@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, usbutils, image-proc, roslaunch, catkin, tf, pythonPackages, roswtf, nodelet, depth-image-proc, rospy, openni2-camera, rgbd-launch }:
+{ lib, buildRosPackage, fetchurl, catkin, depth-image-proc, image-proc, nodelet, openni2-camera, pythonPackages, rgbd-launch, roslaunch, rospy, roswtf, tf, usbutils }:
 buildRosPackage {
   pname = "ros-melodic-openni2-launch";
   version = "0.4.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslaunch pythonPackages.catkin-pkg ];
-  propagatedBuildInputs = [ usbutils image-proc tf roswtf nodelet depth-image-proc rospy openni2-camera rgbd-launch ];
+  buildInputs = [ pythonPackages.catkin-pkg roslaunch ];
+  propagatedBuildInputs = [ depth-image-proc image-proc nodelet openni2-camera rgbd-launch rospy roswtf tf usbutils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, urdf, urdfdom-py, pythonPackages, catkin, python-orocos-kdl, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, orocos-kdl, python-orocos-kdl, pythonPackages, rostest, urdf, urdfdom-py }:
 buildRosPackage {
   pname = "ros-kinetic-kdl-parser-py";
   version = "1.12.11";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl urdf ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ orocos-kdl urdfdom-py python-orocos-kdl urdf ];
+  propagatedBuildInputs = [ orocos-kdl python-orocos-kdl urdf urdfdom-py ];
   nativeBuildInputs = [ catkin pythonPackages.catkin-pkg ];
 
   meta = {

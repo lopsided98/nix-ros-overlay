@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, openjdk, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, openjdk }:
 buildRosPackage {
   pname = "ros-kinetic-pepper-meshes";
   version = "0.2.3-r2";

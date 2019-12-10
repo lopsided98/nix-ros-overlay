@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, pluginlib, std-msgs, libtool, catkin, pr2-controller-interface, realtime-tools, rospy, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, libtool, message-generation, message-runtime, pluginlib, pr2-controller-interface, realtime-tools, roscpp, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ethercat-trigger-controllers";
   version = "1.10.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs pluginlib libtool std-msgs pr2-controller-interface realtime-tools roscpp message-generation ];
-  propagatedBuildInputs = [ diagnostic-msgs pluginlib libtool std-msgs pr2-controller-interface realtime-tools rospy roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ diagnostic-msgs libtool message-runtime pluginlib pr2-controller-interface realtime-tools roscpp rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

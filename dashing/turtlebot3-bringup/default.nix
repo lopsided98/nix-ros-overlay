@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot3-description, robot-state-publisher, turtlebot3-node, ament-cmake, rviz2, hls-lfcd-lds-driver }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, hls-lfcd-lds-driver, robot-state-publisher, rviz2, turtlebot3-description, turtlebot3-node }:
 buildRosPackage {
   pname = "ros-dashing-turtlebot3-bringup";
   version = "2.0.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ turtlebot3-description robot-state-publisher turtlebot3-node rviz2 hls-lfcd-lds-driver ];
+  propagatedBuildInputs = [ hls-lfcd-lds-driver robot-state-publisher rviz2 turtlebot3-description turtlebot3-node ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

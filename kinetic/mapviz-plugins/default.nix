@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qt-qmake, pluginlib, map-msgs, tf, mapviz, marti-nav-msgs, image-transport, libqt-dev, swri-transform-util, nav-msgs, sensor-msgs, swri-yaml-util, gps-common, move-base-msgs, std-msgs, catkin, marti-common-msgs, cv-bridge, roscpp, libqt-opengl, swri-math-util, actionlib, stereo-msgs, marti-visualization-msgs, libqt-opengl-dev, visualization-msgs, libqt-core, swri-route-util, swri-image-util }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, cv-bridge, gps-common, image-transport, libqt-core, libqt-dev, libqt-opengl, libqt-opengl-dev, map-msgs, mapviz, marti-common-msgs, marti-nav-msgs, marti-visualization-msgs, move-base-msgs, nav-msgs, pluginlib, qt-qmake, roscpp, sensor-msgs, std-msgs, stereo-msgs, swri-image-util, swri-math-util, swri-route-util, swri-transform-util, swri-yaml-util, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mapviz-plugins";
   version = "1.2.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib map-msgs tf mapviz marti-nav-msgs image-transport libqt-dev swri-transform-util nav-msgs sensor-msgs swri-yaml-util gps-common move-base-msgs std-msgs marti-common-msgs cv-bridge roscpp swri-math-util actionlib stereo-msgs marti-visualization-msgs libqt-opengl-dev visualization-msgs swri-route-util swri-image-util ];
-  propagatedBuildInputs = [ pluginlib map-msgs tf mapviz marti-nav-msgs image-transport swri-transform-util nav-msgs sensor-msgs swri-yaml-util gps-common move-base-msgs std-msgs marti-common-msgs cv-bridge roscpp libqt-opengl swri-math-util actionlib stereo-msgs marti-visualization-msgs visualization-msgs libqt-core swri-route-util swri-image-util ];
-  nativeBuildInputs = [ qt-qmake catkin ];
+  buildInputs = [ libqt-dev libqt-opengl-dev ];
+  propagatedBuildInputs = [ actionlib cv-bridge gps-common image-transport libqt-core libqt-opengl map-msgs mapviz marti-common-msgs marti-nav-msgs marti-visualization-msgs move-base-msgs nav-msgs pluginlib roscpp sensor-msgs std-msgs stereo-msgs swri-image-util swri-math-util swri-route-util swri-transform-util swri-yaml-util tf visualization-msgs ];
+  nativeBuildInputs = [ catkin qt-qmake ];
 
   meta = {
     description = ''Common plugins for the Mapviz visualization tool'';

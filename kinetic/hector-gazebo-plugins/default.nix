@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, gazeboSimulator, geometry-msgs, dynamic-reconfigure, std-msgs, std-srvs, tf, catkin, roscpp, gazebo-ros, message-runtime, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, gazebo-ros, gazeboSimulator, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-hector-gazebo-plugins";
   version = "0.5.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs dynamic-reconfigure std-msgs std-srvs tf gazeboSimulator.gazebo7 roscpp message-generation nav-msgs ];
-  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure std-msgs std-srvs gazeboSimulator.gazebo tf roscpp gazebo-ros message-runtime nav-msgs ];
+  buildInputs = [ gazeboSimulator.gazebo7 message-generation ];
+  propagatedBuildInputs = [ dynamic-reconfigure gazebo-ros gazeboSimulator.gazebo geometry-msgs message-runtime nav-msgs roscpp std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

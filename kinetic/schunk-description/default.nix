@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gtest, xacro, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, gtest, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-schunk-description";
   version = "0.6.14-r1";

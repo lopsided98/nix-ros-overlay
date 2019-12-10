@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-msgs, catkin, pythonPackages, rostopic, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, pythonPackages, rospy, rostest, rostopic }:
 buildRosPackage {
   pname = "ros-kinetic-iot-bridge";
   version = "0.9.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ rospy diagnostic-msgs rostopic pythonPackages.requests ];
+  propagatedBuildInputs = [ diagnostic-msgs pythonPackages.requests rospy rostopic ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

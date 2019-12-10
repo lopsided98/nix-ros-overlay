@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, std-msgs, std-srvs, actionlib, catkin, actionlib-msgs, naoqi-bridge-msgs, rospy }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, naoqi-bridge-msgs, rospy, sensor-msgs, std-msgs, std-srvs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-naoqi-pose";
   version = "0.5.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs std-msgs std-srvs actionlib actionlib-msgs naoqi-bridge-msgs rospy ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs naoqi-bridge-msgs rospy sensor-msgs std-msgs std-srvs trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

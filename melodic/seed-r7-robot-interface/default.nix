@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, seed-r7-ros-controller, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, seed-r7-ros-controller }:
 buildRosPackage {
   pname = "ros-melodic-seed-r7-robot-interface";
   version = "0.3.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ seed-r7-ros-controller roscpp ];
-  propagatedBuildInputs = [ seed-r7-ros-controller roscpp ];
+  propagatedBuildInputs = [ roscpp seed-r7-ros-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

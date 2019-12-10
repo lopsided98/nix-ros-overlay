@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rviz, catkin, qt5 }:
+{ lib, buildRosPackage, fetchurl, catkin, qt5, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-rviz-plugin-tutorials";
   version = "0.10.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rviz qt5.qtbase ];
-  propagatedBuildInputs = [ rviz qt5.qtbase ];
+  propagatedBuildInputs = [ qt5.qtbase rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

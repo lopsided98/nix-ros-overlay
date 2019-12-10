@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, rclcpp, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-hls-lfcd-lds-driver";
   version = "2.0.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs boost rclcpp ];
-  propagatedBuildInputs = [ sensor-msgs boost rclcpp ];
+  propagatedBuildInputs = [ boost rclcpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

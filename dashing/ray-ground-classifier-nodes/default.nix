@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp-lifecycle, ray-ground-classifier, ament-lint-common, ament-cmake, autoware-auto-cmake, rclcpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, autoware-auto-cmake, ray-ground-classifier, rclcpp, rclcpp-lifecycle, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-ray-ground-classifier-nodes";
   version = "0.0.2-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs rclcpp rclcpp-lifecycle ray-ground-classifier ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ sensor-msgs rclcpp-lifecycle rclcpp ray-ground-classifier ];
-  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ray-ground-classifier rclcpp rclcpp-lifecycle sensor-msgs ];
+  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
 
   meta = {
     description = ''Boilerplate ROS 2 node wrappers around ray_ground_classifier'';

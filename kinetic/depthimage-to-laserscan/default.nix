@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, dynamic-reconfigure, catkin, image-transport, nodelet, roscpp, gtest, image-geometry }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, gtest, image-geometry, image-transport, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-depthimage-to-laserscan";
   version = "1.0.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs dynamic-reconfigure image-transport nodelet roscpp gtest image-geometry ];
-  propagatedBuildInputs = [ sensor-msgs dynamic-reconfigure image-transport nodelet roscpp image-geometry ];
+  buildInputs = [ gtest ];
+  propagatedBuildInputs = [ dynamic-reconfigure image-geometry image-transport nodelet roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

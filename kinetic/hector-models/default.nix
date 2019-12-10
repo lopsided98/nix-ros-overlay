@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-sensors-description, catkin, hector-xacro-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, hector-sensors-description, hector-xacro-tools }:
 buildRosPackage {
   pname = "ros-kinetic-hector-models";
   version = "0.4.2";

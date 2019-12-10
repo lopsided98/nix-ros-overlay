@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, actionlib, catkin, actionlib-msgs, rospy, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, diagnostic-msgs, message-generation, message-runtime, rospy }:
 buildRosPackage {
   pname = "ros-melodic-network-monitor-udp";
   version = "1.0.16-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs actionlib actionlib-msgs rospy message-generation ];
-  propagatedBuildInputs = [ diagnostic-msgs actionlib actionlib-msgs rospy message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs diagnostic-msgs message-runtime rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

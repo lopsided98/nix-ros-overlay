@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, actionlib-msgs, nav-msgs, sensor-msgs, diagnostic-msgs, mir-actions, dynamic-reconfigure, robot-state-publisher, rospy-message-converter, mir-msgs, move-base-msgs, std-msgs, catkin, pythonPackages, rospy, rosgraph-msgs, roslaunch, mir-description, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, diagnostic-msgs, dynamic-reconfigure, geometry-msgs, mir-actions, mir-description, mir-msgs, move-base-msgs, nav-msgs, pythonPackages, robot-state-publisher, rosgraph-msgs, roslaunch, rospy, rospy-message-converter, sensor-msgs, std-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mir-driver";
   version = "1.0.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs diagnostic-msgs mir-actions dynamic-reconfigure nav-msgs std-msgs roslaunch tf pythonPackages.websocket_client rospy-message-converter mir-msgs actionlib-msgs visualization-msgs rospy rosgraph-msgs move-base-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs diagnostic-msgs dynamic-reconfigure nav-msgs robot-state-publisher std-msgs mir-actions tf pythonPackages.websocket_client rospy-message-converter mir-msgs mir-description actionlib-msgs visualization-msgs rospy rosgraph-msgs move-base-msgs ];
+  buildInputs = [ roslaunch ];
+  propagatedBuildInputs = [ actionlib-msgs diagnostic-msgs dynamic-reconfigure geometry-msgs mir-actions mir-description mir-msgs move-base-msgs nav-msgs pythonPackages.websocket_client robot-state-publisher rosgraph-msgs rospy rospy-message-converter sensor-msgs std-msgs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

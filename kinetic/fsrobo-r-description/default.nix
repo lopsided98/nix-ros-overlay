@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, gazeboSimulator, robot-state-publisher, catkin, rviz, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, gazeboSimulator, joint-state-publisher, robot-state-publisher, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-fsrobo-r-description";
   version = "0.7.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ robot-state-publisher joint-state-publisher gazeboSimulator.gazebo rviz ];
+  propagatedBuildInputs = [ gazeboSimulator.gazebo joint-state-publisher robot-state-publisher rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, diagnostic-aggregator, fetch-navigation, sensor-msgs, sick-tim, fetch-open-auto-dock, robot-state-publisher, image-proc, catkin, depth-image-proc, openni2-launch, fetch-drivers, ps3joy, graft, fetch-teleop, fetch-description, fetch-moveit-config }:
+{ lib, buildRosPackage, fetchurl, catkin, depth-image-proc, diagnostic-aggregator, fetch-description, fetch-drivers, fetch-moveit-config, fetch-navigation, fetch-open-auto-dock, fetch-teleop, graft, image-proc, joy, openni2-launch, ps3joy, robot-state-publisher, sensor-msgs, sick-tim }:
 buildRosPackage {
   pname = "ros-melodic-fetch-bringup";
   version = "0.8.8-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joy diagnostic-aggregator fetch-navigation sensor-msgs sick-tim robot-state-publisher fetch-open-auto-dock image-proc depth-image-proc openni2-launch fetch-drivers ps3joy graft fetch-teleop fetch-description fetch-moveit-config ];
+  propagatedBuildInputs = [ depth-image-proc diagnostic-aggregator fetch-description fetch-drivers fetch-moveit-config fetch-navigation fetch-open-auto-dock fetch-teleop graft image-proc joy openni2-launch ps3joy robot-state-publisher sensor-msgs sick-tim ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

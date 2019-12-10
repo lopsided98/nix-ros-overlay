@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-supported-robots, cob-default-robot-config, cob-default-env-config, catkin, cob-gazebo-worlds, cob-gazebo, gazebo-ros, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-default-env-config, cob-default-robot-config, cob-gazebo, cob-gazebo-worlds, cob-supported-robots, gazebo-ros, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-cob-bringup-sim";
   version = "0.7.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslaunch ];
-  checkInputs = [ cob-supported-robots cob-default-env-config ];
-  propagatedBuildInputs = [ cob-default-robot-config cob-default-env-config cob-gazebo-worlds cob-gazebo gazebo-ros roslaunch ];
+  checkInputs = [ cob-default-env-config cob-supported-robots ];
+  propagatedBuildInputs = [ cob-default-env-config cob-default-robot-config cob-gazebo cob-gazebo-worlds gazebo-ros roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

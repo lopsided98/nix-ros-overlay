@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libphidget22, ament-cmake-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, libphidget22 }:
 buildRosPackage {
   pname = "ros-dashing-phidgets-api";
   version = "2.0.1-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ libphidget22 ];
   propagatedBuildInputs = [ libphidget22 ];
   nativeBuildInputs = [ ament-cmake-ros ];
 

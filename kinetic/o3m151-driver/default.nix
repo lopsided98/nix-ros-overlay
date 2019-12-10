@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, sensor-msgs, pluginlib, tf, roslib, catkin, libpcap, pcl-conversions, nodelet, roscpp, roslaunch, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, libpcap, nodelet, pcl-conversions, pcl-ros, pluginlib, roscpp, roslaunch, roslib, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-o3m151-driver";
   version = "1.2.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros sensor-msgs pluginlib tf roslib libpcap pcl-conversions nodelet roscpp diagnostic-updater ];
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ pcl-ros sensor-msgs pluginlib tf roslib libpcap pcl-conversions nodelet roscpp diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-updater libpcap nodelet pcl-conversions pcl-ros pluginlib roscpp roslib sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

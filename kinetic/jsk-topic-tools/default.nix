@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, eigen-conversions, tf, image-transport, nodelet, rostest, sensor-msgs, diagnostic-msgs, dynamic-reconfigure, rostopic, roscpp-tutorials, sound-play, std-msgs, dynamic-tf-publisher, std-srvs, pythonPackages, catkin, roscpp, topic-tools, message-generation, roslaunch, rosnode, roslint, rostime, diagnostic-updater, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, diagnostic-updater, dynamic-reconfigure, dynamic-tf-publisher, eigen-conversions, geometry-msgs, image-transport, message-generation, message-runtime, nodelet, pythonPackages, roscpp, roscpp-tutorials, roslaunch, roslint, rosnode, rostest, rostime, rostopic, sensor-msgs, sound-play, std-msgs, std-srvs, tf, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-topic-tools";
   version = "2.2.10";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs eigen-conversions tf image-transport nodelet rostest diagnostic-msgs dynamic-reconfigure rostopic std-msgs dynamic-tf-publisher std-srvs roscpp topic-tools message-generation roslaunch rosnode rostime diagnostic-updater ];
+  buildInputs = [ message-generation rostest ];
   checkInputs = [ roscpp-tutorials roslint ];
-  propagatedBuildInputs = [ geometry-msgs eigen-conversions tf image-transport nodelet sensor-msgs diagnostic-msgs dynamic-reconfigure rostopic sound-play pythonPackages.numpy pythonPackages.opencv3 std-msgs dynamic-tf-publisher std-srvs roscpp topic-tools roslaunch pythonPackages.scipy rosnode rostime diagnostic-updater message-runtime ];
+  propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater dynamic-reconfigure dynamic-tf-publisher eigen-conversions geometry-msgs image-transport message-runtime nodelet pythonPackages.numpy pythonPackages.opencv3 pythonPackages.scipy roscpp roslaunch rosnode rostime rostopic sensor-msgs sound-play std-msgs std-srvs tf topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

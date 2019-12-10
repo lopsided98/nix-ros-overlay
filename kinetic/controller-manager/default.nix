@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-interface, controller-manager-msgs, pluginlib, hardware-interface, catkin, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager-msgs, hardware-interface, pluginlib, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-controller-manager";
   version = "0.13.3";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-manager-msgs pluginlib controller-interface hardware-interface ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ controller-manager-msgs pluginlib controller-interface hardware-interface ];
+  propagatedBuildInputs = [ controller-interface controller-manager-msgs hardware-interface pluginlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

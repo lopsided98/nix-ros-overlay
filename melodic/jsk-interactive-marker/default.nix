@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jsk-rviz-plugins, geometry-msgs, urdf, eigen-conversions, interactive-markers, tf, jsk-footstep-msgs, rosbuild, sensor-msgs, dynamic-reconfigure, cmake-modules, roslib, libyamlcpp, jsk-topic-tools, message-filters, roseus, dynamic-tf-publisher, jsk-recognition-msgs, catkin, jsk-recognition-utils, roscpp, message-generation, actionlib, tinyxml, rviz, moveit-msgs, visualization-msgs, message-runtime, tf-conversions, mk }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, cmake-modules, dynamic-reconfigure, dynamic-tf-publisher, eigen-conversions, geometry-msgs, interactive-markers, jsk-footstep-msgs, jsk-recognition-msgs, jsk-recognition-utils, jsk-rviz-plugins, jsk-topic-tools, libyamlcpp, message-filters, message-generation, message-runtime, mk, moveit-msgs, rosbuild, roscpp, roseus, roslib, rviz, sensor-msgs, tf, tf-conversions, tinyxml, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-jsk-interactive-marker";
   version = "2.1.5";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ jsk-rviz-plugins geometry-msgs urdf eigen-conversions interactive-markers tf jsk-footstep-msgs rosbuild sensor-msgs dynamic-reconfigure cmake-modules roslib libyamlcpp jsk-topic-tools message-filters roseus dynamic-tf-publisher jsk-recognition-msgs jsk-recognition-utils roscpp message-generation actionlib tinyxml rviz moveit-msgs visualization-msgs tf-conversions mk ];
-  propagatedBuildInputs = [ jsk-rviz-plugins geometry-msgs urdf eigen-conversions interactive-markers tf jsk-footstep-msgs sensor-msgs dynamic-reconfigure roslib libyamlcpp jsk-topic-tools message-filters roseus dynamic-tf-publisher jsk-recognition-msgs jsk-recognition-utils roscpp actionlib tinyxml rviz moveit-msgs visualization-msgs message-runtime tf-conversions ];
+  buildInputs = [ cmake-modules message-generation mk rosbuild ];
+  propagatedBuildInputs = [ actionlib dynamic-reconfigure dynamic-tf-publisher eigen-conversions geometry-msgs interactive-markers jsk-footstep-msgs jsk-recognition-msgs jsk-recognition-utils jsk-rviz-plugins jsk-topic-tools libyamlcpp message-filters message-runtime moveit-msgs roscpp roseus roslib rviz sensor-msgs tf tf-conversions tinyxml urdf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

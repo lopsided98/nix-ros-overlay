@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, robotis-controller, catkin, cmake-modules, robotis-device, rh-p12-rn-base-module, robotis-framework-common, roscpp, dynamixel-sdk }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamixel-sdk, rh-p12-rn-base-module, robotis-controller, robotis-controller-msgs, robotis-device, robotis-framework-common, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-rh-p12-rn-manager";
   version = "0.1.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs robotis-controller cmake-modules robotis-device rh-p12-rn-base-module robotis-framework-common roscpp dynamixel-sdk ];
-  propagatedBuildInputs = [ robotis-controller-msgs robotis-controller cmake-modules robotis-device rh-p12-rn-base-module robotis-framework-common roscpp dynamixel-sdk ];
+  propagatedBuildInputs = [ cmake-modules dynamixel-sdk rh-p12-rn-base-module robotis-controller robotis-controller-msgs robotis-device robotis-framework-common roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

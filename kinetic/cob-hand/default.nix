@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-hand-bridge, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-hand-bridge }:
 buildRosPackage {
   pname = "ros-kinetic-cob-hand";
   version = "0.6.6-r1";

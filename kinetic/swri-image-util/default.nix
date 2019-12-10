@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, swri-opencv-util, tf, image-transport, eigen, nodelet, nav-msgs, rostest, message-filters, std-msgs, swri-geometry-util, swri-nodelet, catkin, cv-bridge, roscpp, pkg-config, rospy, camera-calibration-parsers, image-geometry, swri-roscpp, swri-math-util }:
+{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, catkin, cv-bridge, eigen, geometry-msgs, image-geometry, image-transport, message-filters, nav-msgs, nodelet, pkg-config, roscpp, rospy, rostest, std-msgs, swri-geometry-util, swri-math-util, swri-nodelet, swri-opencv-util, swri-roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-swri-image-util";
   version = "2.11.0-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-filters geometry-msgs nav-msgs image-geometry swri-opencv-util std-msgs swri-math-util tf swri-nodelet swri-geometry-util image-transport eigen cv-bridge nodelet roscpp rospy camera-calibration-parsers swri-roscpp ];
+  buildInputs = [ swri-nodelet ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ message-filters geometry-msgs nav-msgs image-geometry std-msgs swri-opencv-util swri-math-util tf swri-geometry-util image-transport eigen cv-bridge nodelet roscpp rospy camera-calibration-parsers swri-roscpp ];
-  nativeBuildInputs = [ pkg-config catkin ];
+  propagatedBuildInputs = [ camera-calibration-parsers cv-bridge eigen geometry-msgs image-geometry image-transport message-filters nav-msgs nodelet roscpp rospy std-msgs swri-geometry-util swri-math-util swri-opencv-util swri-roscpp tf ];
+  nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''swri_image_util'';

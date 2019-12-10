@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-nav-msgs, image-geometry, catkin, tf, roscpp, hector-worldmodel-msgs, hector-marker-drawing }:
+{ lib, buildRosPackage, fetchurl, catkin, hector-marker-drawing, hector-nav-msgs, hector-worldmodel-msgs, image-geometry, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-hector-object-tracker";
   version = "0.3.4";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hector-nav-msgs image-geometry tf roscpp hector-worldmodel-msgs hector-marker-drawing ];
-  propagatedBuildInputs = [ hector-nav-msgs image-geometry tf roscpp hector-worldmodel-msgs hector-marker-drawing ];
+  propagatedBuildInputs = [ hector-marker-drawing hector-nav-msgs hector-worldmodel-msgs image-geometry roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-core, moveit-commander, moveit-setup-assistant, catkin, moveit-ros, moveit-planners, moveit-plugins }:
+{ lib, buildRosPackage, fetchurl, catkin, moveit-commander, moveit-core, moveit-planners, moveit-plugins, moveit-ros, moveit-setup-assistant }:
 buildRosPackage {
   pname = "ros-kinetic-moveit";
   version = "0.9.17-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ moveit-core moveit-commander moveit-setup-assistant moveit-ros moveit-planners moveit-plugins ];
+  propagatedBuildInputs = [ moveit-commander moveit-core moveit-planners moveit-plugins moveit-ros moveit-setup-assistant ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

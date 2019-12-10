@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, network-monitor-udp, diagnostic-msgs, pr2-msgs, dynamic-reconfigure, std-msgs, ieee80211-channels, catkin, pythonPackages, asmach, rospy }:
+{ lib, buildRosPackage, fetchurl, asmach, catkin, diagnostic-msgs, dynamic-reconfigure, ieee80211-channels, network-monitor-udp, pr2-msgs, pythonPackages, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-multi-interface-roam";
   version = "1.0.16-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ network-monitor-udp diagnostic-msgs dynamic-reconfigure pr2-msgs std-msgs ieee80211-channels asmach rospy ];
-  propagatedBuildInputs = [ network-monitor-udp diagnostic-msgs pr2-msgs dynamic-reconfigure std-msgs ieee80211-channels asmach pythonPackages.twisted rospy ];
+  propagatedBuildInputs = [ asmach diagnostic-msgs dynamic-reconfigure ieee80211-channels network-monitor-udp pr2-msgs pythonPackages.twisted rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

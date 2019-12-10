@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, urdfdom-py, pythonPackages, catkin, calibration-msgs, python-orocos-kdl, visualization-msgs, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, calibration-msgs, catkin, python-orocos-kdl, pythonPackages, rospy, rostest, sensor-msgs, urdfdom-py, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-calibration-estimation";
   version = "0.10.14";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ sensor-msgs pythonPackages.matplotlib pythonPackages.scipy urdfdom-py calibration-msgs python-orocos-kdl visualization-msgs rospy rostest ];
+  propagatedBuildInputs = [ calibration-msgs python-orocos-kdl pythonPackages.matplotlib pythonPackages.scipy rospy rostest sensor-msgs urdfdom-py visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, code-coverage, catkin, rosunit, rviz, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, code-coverage, roscpp, rostest, rosunit, rviz, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-psen-scan";
   version = "1.0.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roscpp ];
   checkInputs = [ code-coverage rostest rosunit ];
-  propagatedBuildInputs = [ sensor-msgs rviz roscpp ];
+  propagatedBuildInputs = [ roscpp rviz sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

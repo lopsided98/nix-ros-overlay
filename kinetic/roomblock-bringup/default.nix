@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, teleop-twist-joy, create-node, controller-manager, robot-state-publisher, roslaunch, catkin, pythonPackages, image-transport, roomblock-description, rviz, robot-pose-ekf, rplidar-ros, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, create-node, image-transport, joy, pythonPackages, robot-pose-ekf, robot-state-publisher, roomblock-description, roslaunch, rostest, rplidar-ros, rviz, teleop-twist-joy }:
 buildRosPackage {
   pname = "ros-kinetic-roomblock-bringup";
   version = "0.0.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ joy teleop-twist-joy create-node controller-manager robot-state-publisher image-transport roomblock-description rviz robot-pose-ekf pythonPackages.pyserial rplidar-ros ];
+  propagatedBuildInputs = [ controller-manager create-node image-transport joy pythonPackages.pyserial robot-pose-ekf robot-state-publisher roomblock-description rplidar-ros rviz teleop-twist-joy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

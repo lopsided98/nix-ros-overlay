@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, katana-moveit-ikfast-plugin, katana-arm-gazebo, katana-msgs, katana-teleop, catkin, katana-gazebo-plugins, katana-description, katana, kni, katana-tutorials }:
+{ lib, buildRosPackage, fetchurl, catkin, katana, katana-arm-gazebo, katana-description, katana-gazebo-plugins, katana-moveit-ikfast-plugin, katana-msgs, katana-teleop, katana-tutorials, kni }:
 buildRosPackage {
   pname = "ros-kinetic-katana-driver";
   version = "1.1.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ katana-arm-gazebo katana-msgs katana-teleop katana-gazebo-plugins katana-description katana kni katana-tutorials katana-moveit-ikfast-plugin ];
+  propagatedBuildInputs = [ katana katana-arm-gazebo katana-description katana-gazebo-plugins katana-moveit-ikfast-plugin katana-msgs katana-teleop katana-tutorials kni ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

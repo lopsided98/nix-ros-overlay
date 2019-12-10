@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav-msgs, map-server, actionlib, tf, catkin, libyamlcpp, nodelet, roscpp, visualization-msgs, stdr-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, libyamlcpp, map-server, nav-msgs, nodelet, roscpp, rostest, stdr-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-stdr-server";
   version = "0.3.2";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ nav-msgs map-server actionlib tf roscpp libyamlcpp visualization-msgs nodelet stdr-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ nav-msgs map-server actionlib tf roscpp libyamlcpp visualization-msgs nodelet stdr-msgs ];
+  propagatedBuildInputs = [ actionlib libyamlcpp map-server nav-msgs nodelet roscpp stdr-msgs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

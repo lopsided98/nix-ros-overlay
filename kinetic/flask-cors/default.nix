@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin-pip, pythonPackages, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, catkin-pip, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-flask-cors";
   version = "3.0.3-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.flask catkin-pip pythonPackages.six ];
+  buildInputs = [ catkin-pip ];
   propagatedBuildInputs = [ pythonPackages.flask pythonPackages.six ];
   nativeBuildInputs = [ catkin ];
 

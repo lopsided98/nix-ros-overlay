@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-filters, dynamic-reconfigure, map-server, std-srvs, tf, catkin, roscpp, rosbag, nav-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, map-server, message-filters, nav-msgs, rosbag, roscpp, rostest, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-amcl";
   version = "1.14.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-filters dynamic-reconfigure std-srvs tf roscpp rosbag nav-msgs ];
+  buildInputs = [ message-filters ];
   checkInputs = [ map-server rostest ];
-  propagatedBuildInputs = [ dynamic-reconfigure std-srvs tf roscpp rosbag nav-msgs ];
+  propagatedBuildInputs = [ dynamic-reconfigure nav-msgs rosbag roscpp std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

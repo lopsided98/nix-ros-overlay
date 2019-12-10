@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, diagnostic-msgs, pr2-msgs, catkin, rospy, roscpp, message-runtime, log4cxx, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, diagnostic-updater, log4cxx, message-generation, message-runtime, pr2-msgs, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-power-board";
   version = "1.1.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs pr2-msgs roscpp diagnostic-updater message-generation log4cxx ];
-  propagatedBuildInputs = [ diagnostic-msgs pr2-msgs rospy roscpp message-runtime log4cxx diagnostic-updater ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater log4cxx message-runtime pr2-msgs roscpp rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

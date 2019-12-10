@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, summit-xl-navigation, summit-xl-localization, catkin, summit-xl-description, summit-xl-pad }:
+{ lib, buildRosPackage, fetchurl, catkin, summit-xl-description, summit-xl-localization, summit-xl-navigation, summit-xl-pad }:
 buildRosPackage {
   pname = "ros-kinetic-summit-xl-common";
   version = "1.1.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ summit-xl-description summit-xl-localization summit-xl-pad summit-xl-navigation ];
+  propagatedBuildInputs = [ summit-xl-description summit-xl-localization summit-xl-navigation summit-xl-pad ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

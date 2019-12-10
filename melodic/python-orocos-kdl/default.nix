@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, cmake, pythonPackages, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, orocos-kdl, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-python-orocos-kdl";
   version = "1.4.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ orocos-kdl pythonPackages.sip ];
-  propagatedBuildInputs = [ orocos-kdl pythonPackages.sip catkin ];
+  propagatedBuildInputs = [ catkin orocos-kdl pythonPackages.sip ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

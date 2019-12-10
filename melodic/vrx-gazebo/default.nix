@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, xacro, protobuf, std-msgs, catkin, wamv-gazebo, joy-teleop, geographic-msgs, wave-gazebo, gazebo-ros, message-runtime, gazebo-dev }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-dev, gazebo-ros, geographic-msgs, joy, joy-teleop, message-runtime, protobuf, std-msgs, wamv-gazebo, wave-gazebo, xacro }:
 buildRosPackage {
   pname = "ros-melodic-vrx-gazebo";
   version = "1.2.6-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ joy xacro std-msgs wamv-gazebo joy-teleop geographic-msgs wave-gazebo gazebo-ros message-runtime gazebo-dev ];
-  propagatedBuildInputs = [ joy xacro std-msgs wamv-gazebo geographic-msgs joy-teleop wave-gazebo gazebo-ros message-runtime gazebo-dev ];
-  nativeBuildInputs = [ protobuf catkin ];
+  propagatedBuildInputs = [ gazebo-dev gazebo-ros geographic-msgs joy joy-teleop message-runtime std-msgs wamv-gazebo wave-gazebo xacro ];
+  nativeBuildInputs = [ catkin protobuf ];
 
   meta = {
     description = ''The ROS package for the RobotX competition running in Gazebo.'';

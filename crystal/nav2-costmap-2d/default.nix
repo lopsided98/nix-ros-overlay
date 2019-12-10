@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, map-msgs, tf2-sensor-msgs, ament-cmake, nav2-dynamic-params, tf2, nav2-util, nav2-msgs, nav-msgs, ament-lint-auto, sensor-msgs, launch-testing, ament-lint-common, nav2-voxel-grid, tf2-geometry-msgs, nav2-map-server, nav2-common, rclcpp, tf2-ros, ament-cmake-gtest, message-filters, std-msgs, pcl, launch, laser-geometry, visualization-msgs, ament-cmake-pytest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, geometry-msgs, laser-geometry, launch, launch-testing, map-msgs, message-filters, nav-msgs, nav2-common, nav2-dynamic-params, nav2-map-server, nav2-msgs, nav2-util, nav2-voxel-grid, pcl, pluginlib, rclcpp, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-crystal-nav2-costmap-2d";
   version = "0.1.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ geometry-msgs pluginlib map-msgs tf2-sensor-msgs nav2-dynamic-params tf2 nav2-util nav-msgs nav2-msgs sensor-msgs nav2-voxel-grid tf2-geometry-msgs nav2-common rclcpp tf2-ros message-filters std-msgs pcl laser-geometry visualization-msgs ];
-  checkInputs = [ launch launch-testing ament-lint-common nav2-map-server ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ geometry-msgs pluginlib map-msgs tf2-sensor-msgs nav2-dynamic-params tf2 nav2-util nav-msgs nav2-msgs sensor-msgs nav2-voxel-grid tf2-geometry-msgs rclcpp tf2-ros message-filters std-msgs pcl laser-geometry visualization-msgs ];
+  buildInputs = [ nav2-common ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing nav2-map-server ];
+  propagatedBuildInputs = [ geometry-msgs laser-geometry map-msgs message-filters nav-msgs nav2-dynamic-params nav2-msgs nav2-util nav2-voxel-grid pcl pluginlib rclcpp sensor-msgs std-msgs tf2 tf2-geometry-msgs tf2-ros tf2-sensor-msgs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

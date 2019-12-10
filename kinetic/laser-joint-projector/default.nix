@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, roscpp-serialization, geometry-msgs, catkin, cmake-modules, calibration-msgs, roscpp, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, calibration-msgs, catkin, cmake-modules, geometry-msgs, kdl-parser, orocos-kdl, roscpp, roscpp-serialization }:
 buildRosPackage {
   pname = "ros-kinetic-laser-joint-projector";
   version = "1.0.11";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ orocos-kdl roscpp-serialization geometry-msgs cmake-modules calibration-msgs roscpp kdl-parser ];
-  propagatedBuildInputs = [ orocos-kdl roscpp-serialization geometry-msgs cmake-modules calibration-msgs kdl-parser ];
+  buildInputs = [ roscpp ];
+  propagatedBuildInputs = [ calibration-msgs cmake-modules geometry-msgs kdl-parser orocos-kdl roscpp-serialization ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

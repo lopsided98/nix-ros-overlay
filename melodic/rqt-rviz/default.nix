@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, boost, rqt-gui-cpp, pluginlib, catkin, rviz, qt5 }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, pluginlib, qt5, rqt-gui, rqt-gui-cpp, rviz }:
 buildRosPackage {
   pname = "ros-melodic-rqt-rviz";
   version = "0.6.0";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-gui boost rqt-gui-cpp pluginlib qt5.qtbase rviz ];
-  propagatedBuildInputs = [ rqt-gui boost rqt-gui-cpp pluginlib rviz ];
+  buildInputs = [ qt5.qtbase ];
+  propagatedBuildInputs = [ boost pluginlib rqt-gui rqt-gui-cpp rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

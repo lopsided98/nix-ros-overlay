@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, flask-cors, webargs, click, pythonPackages, catkin, rosunit, pyros-interfaces-ros, tblib, flask-reverse-proxy, roslint, catkin-pip, pyros, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, catkin-pip, click, flask-cors, flask-reverse-proxy, pyros, pyros-interfaces-ros, pythonPackages, roslint, rospy, rostest, rosunit, tblib, webargs }:
 buildRosPackage {
   pname = "ros-kinetic-rostful";
   version = "0.2.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.flask flask-cors rostest pythonPackages.pyyaml webargs roslint flask-reverse-proxy tblib pythonPackages.flask-restful pyros catkin-pip pythonPackages.catkin-pkg pythonPackages.tornado pyros-interfaces-ros rospy pythonPackages.simplejson click ];
+  buildInputs = [ catkin-pip pythonPackages.catkin-pkg roslint rostest ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pythonPackages.flask flask-cors pythonPackages.pyyaml webargs click pythonPackages.flask-restful pyros-interfaces-ros tblib pyros pythonPackages.tornado rospy pythonPackages.simplejson flask-reverse-proxy ];
+  propagatedBuildInputs = [ click flask-cors flask-reverse-proxy pyros pyros-interfaces-ros pythonPackages.flask pythonPackages.flask-restful pythonPackages.pyyaml pythonPackages.simplejson pythonPackages.tornado rospy tblib webargs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

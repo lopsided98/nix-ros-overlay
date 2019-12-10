@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, dynamic-reconfigure, resource-retriever, std-msgs, image-proc, tf, catkin, image-transport, rospy, nodelet, roscpp, visp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, image-proc, image-transport, message-generation, message-runtime, nodelet, resource-retriever, roscpp, rospy, sensor-msgs, std-msgs, tf, visp }:
 buildRosPackage {
   pname = "ros-melodic-visp-tracker";
   version = "0.11.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure resource-retriever std-msgs image-proc tf image-transport rospy nodelet roscpp visp message-generation ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure message-runtime resource-retriever std-msgs image-proc tf image-transport rospy nodelet roscpp visp message-generation ];
+  propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs image-proc image-transport message-generation message-runtime nodelet resource-retriever roscpp rospy sensor-msgs std-msgs tf visp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

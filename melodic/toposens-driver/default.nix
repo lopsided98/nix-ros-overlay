@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, code-coverage, toposens-msgs, catkin, rospy, roscpp, message-runtime, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, code-coverage, dynamic-reconfigure, message-runtime, roscpp, roslaunch, rospy, rostest, toposens-msgs }:
 buildRosPackage {
   pname = "ros-melodic-toposens-driver";
   version = "1.3.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure toposens-msgs rospy roscpp message-runtime ];
   checkInputs = [ code-coverage roslaunch rostest ];
-  propagatedBuildInputs = [ dynamic-reconfigure toposens-msgs rospy roscpp message-runtime ];
+  propagatedBuildInputs = [ dynamic-reconfigure message-runtime roscpp rospy toposens-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

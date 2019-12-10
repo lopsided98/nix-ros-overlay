@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, urdfdom-headers, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-melodic-urdf-parser-plugin";
   version = "1.13.1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ urdfdom-headers ];
   propagatedBuildInputs = [ urdfdom-headers ];
   nativeBuildInputs = [ catkin ];
 

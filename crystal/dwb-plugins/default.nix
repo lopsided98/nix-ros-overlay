@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, dwb-core, launch, pluginlib, launch-testing, ament-lint-common, ament-cmake, ament-lint-auto, ament-cmake-gtest, nav2-common, nav2-dynamic-params, nav-2d-msgs, angles, rclcpp, nav-2d-utils, nav2-util }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, angles, dwb-core, launch, launch-testing, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-dynamic-params, nav2-util, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-crystal-dwb-plugins";
   version = "0.1.7";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ dwb-core pluginlib nav2-common nav2-dynamic-params nav-2d-msgs angles nav2-util rclcpp nav-2d-utils ];
-  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ dwb-core pluginlib nav2-dynamic-params nav-2d-msgs angles nav2-util rclcpp nav-2d-utils ];
+  buildInputs = [ nav2-common ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing ];
+  propagatedBuildInputs = [ angles dwb-core nav-2d-msgs nav-2d-utils nav2-dynamic-params nav2-util pluginlib rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

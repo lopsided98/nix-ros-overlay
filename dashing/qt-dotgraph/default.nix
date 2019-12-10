@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python3Packages, ament-lint-common, ament-cmake, ament-lint-auto, ament-cmake-pytest, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages }:
 buildRosPackage {
   pname = "ros-dashing-qt-dotgraph";
   version = "1.0.7-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common python3Packages.pygraphviz ament-cmake-pytest ];
-  propagatedBuildInputs = [ python3Packages.pydot python-qt-binding ];
+  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common python3Packages.pygraphviz ];
+  propagatedBuildInputs = [ python-qt-binding python3Packages.pydot ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, teleop-twist-keyboard, tf, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, teleop-twist-keyboard, tf }:
 buildRosPackage {
   pname = "ros-kinetic-mrpt-tutorials";
   version = "0.1.26-r1";

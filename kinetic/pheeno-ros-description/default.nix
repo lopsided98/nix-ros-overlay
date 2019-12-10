@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, catkin, urdf }:
+{ lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-pheeno-ros-description";
   version = "0.1.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ xacro urdf ];
-  propagatedBuildInputs = [ xacro urdf ];
+  propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

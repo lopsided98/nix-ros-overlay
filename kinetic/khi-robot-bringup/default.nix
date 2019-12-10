@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, khi-duaro-description, controller-manager, robot-state-publisher, khi-duaro-moveit-config, position-controllers, tf, catkin, joint-trajectory-controller, khi-robot-control, roslaunch, rostest, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, joint-state-controller, joint-trajectory-controller, khi-duaro-description, khi-duaro-moveit-config, khi-robot-control, position-controllers, robot-state-publisher, roslaunch, rostest, tf }:
 buildRosPackage {
   pname = "ros-kinetic-khi-robot-bringup";
   version = "1.1.2-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ khi-duaro-description controller-manager robot-state-publisher khi-duaro-moveit-config position-controllers tf joint-trajectory-controller khi-robot-control joint-state-controller ];
+  propagatedBuildInputs = [ controller-manager joint-state-controller joint-trajectory-controller khi-duaro-description khi-duaro-moveit-config khi-robot-control position-controllers robot-state-publisher tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

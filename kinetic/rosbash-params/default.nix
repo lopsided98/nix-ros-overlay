@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbash, rospy, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rosbash, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-rosbash-params";
   version = "1.0.2";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, pythonPackages, ros2node, ros2cli, rcl-interfaces, ament-pep257, rclpy, ament-flake8 }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages, rcl-interfaces, rclpy, ros2cli, ros2node }:
 buildRosPackage {
   pname = "ros-crystal-ros2param";
   version = "0.6.3";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ ros2cli rcl-interfaces rclpy ];
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
-  propagatedBuildInputs = [ ros2node ros2cli rcl-interfaces rclpy ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  propagatedBuildInputs = [ rcl-interfaces rclpy ros2cli ros2node ];
 
   meta = {
     description = ''The param command for ROS 2 command line tools.'';

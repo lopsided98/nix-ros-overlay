@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mrpt1, geometry-msgs, catkin, rosunit, mrpt-bridge, roscpp, gtest }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, gtest, mrpt-bridge, mrpt1, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-pose-cov-ops";
   version = "0.2.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mrpt1 geometry-msgs mrpt-bridge roscpp ];
   checkInputs = [ gtest rosunit ];
-  propagatedBuildInputs = [ mrpt1 geometry-msgs mrpt-bridge roscpp ];
+  propagatedBuildInputs = [ geometry-msgs mrpt-bridge mrpt1 roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

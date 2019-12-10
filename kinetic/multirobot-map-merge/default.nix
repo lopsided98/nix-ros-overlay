@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, map-msgs, catkin, roslaunch, rosunit, tf2-geometry-msgs, roscpp, nav-msgs, opencv3 }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, map-msgs, nav-msgs, opencv3, roscpp, roslaunch, rosunit, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-multirobot-map-merge";
   version = "2.1.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs map-msgs roscpp tf2-geometry-msgs opencv3 nav-msgs ];
   checkInputs = [ roslaunch rosunit ];
-  propagatedBuildInputs = [ geometry-msgs map-msgs tf2-geometry-msgs roscpp nav-msgs opencv3 ];
+  propagatedBuildInputs = [ geometry-msgs map-msgs nav-msgs opencv3 roscpp tf2-geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

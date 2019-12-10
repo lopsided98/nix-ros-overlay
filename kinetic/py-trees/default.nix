@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pythonPackages, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-py-trees";
   version = "0.5.12";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ pythonPackages.setuptools ];
-  propagatedBuildInputs = [ pythonPackages.pydot pythonPackages.enum34 ];
+  propagatedBuildInputs = [ pythonPackages.enum34 pythonPackages.pydot ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

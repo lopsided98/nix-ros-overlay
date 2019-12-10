@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, autoware-auto-msgs, lidar-utils, ament-lint-common, ament-cmake, autoware-auto-cmake, ament-cmake-gtest, autoware-auto-geometry, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, autoware-auto-cmake, autoware-auto-geometry, autoware-auto-msgs, lidar-utils }:
 buildRosPackage {
   pname = "ros-dashing-euclidean-cluster";
   version = "0.0.2-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ autoware-auto-msgs autoware-auto-geometry lidar-utils ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ autoware-auto-msgs autoware-auto-geometry ];
-  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
+  buildInputs = [ lidar-utils ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ autoware-auto-geometry autoware-auto-msgs ];
+  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
 
   meta = {
     description = ''implementation of euclidean clustering'';

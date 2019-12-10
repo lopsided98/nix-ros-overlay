@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, rosbash, actionlib-msgs, rosbuild, rostest, geneus, sensor-msgs, dynamic-reconfigure, rosmsg, rostopic, coreutils, actionlib-tutorials, tf2-ros, xorg, std-msgs, std-srvs, catkin, euslisp, roscpp, roslang, angles, message-generation, jskeus, mk, rosnode, actionlib, visualization-msgs, message-runtime, rospack }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, actionlib-tutorials, angles, catkin, coreutils, dynamic-reconfigure, euslisp, geneus, geometry-msgs, jskeus, message-generation, message-runtime, mk, rosbash, rosbuild, roscpp, roslang, rosmsg, rosnode, rospack, rostest, rostopic, sensor-msgs, std-msgs, std-srvs, tf, tf2-ros, visualization-msgs, xorg }:
 buildRosPackage {
   pname = "ros-melodic-roseus";
   version = "1.7.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs tf rosbash actionlib-msgs rosbuild geneus rostest sensor-msgs dynamic-reconfigure rosmsg rostopic coreutils actionlib-tutorials tf2-ros std-msgs std-srvs euslisp roscpp roslang angles message-generation jskeus mk rosnode actionlib visualization-msgs rospack ];
+  buildInputs = [ angles coreutils message-generation mk rosbuild rostopic ];
   checkInputs = [ xorg.xorgserver ];
-  propagatedBuildInputs = [ geometry-msgs tf rosbash actionlib-msgs geneus rostest sensor-msgs dynamic-reconfigure rosmsg actionlib-tutorials tf2-ros std-msgs std-srvs euslisp roscpp roslang jskeus rosnode actionlib visualization-msgs message-runtime rospack ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs actionlib-tutorials dynamic-reconfigure euslisp geneus geometry-msgs jskeus message-runtime rosbash roscpp roslang rosmsg rosnode rospack rostest sensor-msgs std-msgs std-srvs tf tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

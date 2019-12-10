@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, catkin, nodelet, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, nodelet, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-nodelet-tutorial-math";
   version = "0.1.11";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs nodelet roscpp ];
-  propagatedBuildInputs = [ std-msgs nodelet roscpp ];
+  propagatedBuildInputs = [ nodelet roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

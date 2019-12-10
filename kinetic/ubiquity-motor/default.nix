@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, controller-manager, hardware-interface, std-msgs, serial, tf, catkin, pythonPackages, diff-drive-controller, roscpp, nav-msgs, rostest, joint-state-controller, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, diagnostic-updater, diff-drive-controller, dynamic-reconfigure, geometry-msgs, hardware-interface, joint-state-controller, nav-msgs, pythonPackages, roscpp, rostest, serial, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-ubiquity-motor";
   version = "0.10.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs controller-manager dynamic-reconfigure hardware-interface std-msgs serial tf roscpp nav-msgs diagnostic-updater ];
+  buildInputs = [ roscpp ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ geometry-msgs controller-manager dynamic-reconfigure hardware-interface std-msgs serial tf pythonPackages.requests diff-drive-controller diagnostic-updater nav-msgs joint-state-controller ];
+  propagatedBuildInputs = [ controller-manager diagnostic-updater diff-drive-controller dynamic-reconfigure geometry-msgs hardware-interface joint-state-controller nav-msgs pythonPackages.requests serial std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

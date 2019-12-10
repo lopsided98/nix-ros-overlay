@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, openslam-gmapping, catkin, gmapping }:
+{ lib, buildRosPackage, fetchurl, catkin, gmapping, openslam-gmapping }:
 buildRosPackage {
   pname = "ros-kinetic-slam-gmapping";
   version = "1.3.10";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ openslam-gmapping gmapping ];
+  propagatedBuildInputs = [ gmapping openslam-gmapping ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

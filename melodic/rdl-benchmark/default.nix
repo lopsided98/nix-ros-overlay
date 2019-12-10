@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rdl-cmake rdl-dynamics rdl-urdfreader ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ rdl-cmake rdl-dynamics rdl-urdfreader ];
   nativeBuildInputs = [ catkin ];

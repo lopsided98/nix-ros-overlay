@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, camera-info-manager, catkin, image-transport, cv-bridge, roscpp, rospy }:
+{ lib, buildRosPackage, fetchurl, camera-info-manager, catkin, cv-bridge, image-transport, roscpp, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-video-stream-opencv";
   version = "1.1.5";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs camera-info-manager image-transport cv-bridge roscpp rospy ];
-  propagatedBuildInputs = [ sensor-msgs camera-info-manager image-transport cv-bridge roscpp rospy ];
+  propagatedBuildInputs = [ camera-info-manager cv-bridge image-transport roscpp rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, octomap, octomap-msgs, catkin, qt5, rviz, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, octomap, octomap-msgs, qt5, roscpp, rviz }:
 buildRosPackage {
   pname = "ros-melodic-octomap-rviz-plugins";
   version = "0.2.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ octomap octomap-msgs qt5.qtbase rviz roscpp ];
-  propagatedBuildInputs = [ octomap octomap-msgs qt5.qtbase rviz roscpp ];
+  propagatedBuildInputs = [ octomap octomap-msgs qt5.qtbase roscpp rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

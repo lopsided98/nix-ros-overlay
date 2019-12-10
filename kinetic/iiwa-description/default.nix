@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, force-torque-sensor-controller, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, force-torque-sensor-controller }:
 buildRosPackage {
   pname = "ros-kinetic-iiwa-description";
   version = "1.4.1-r1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, std-msgs, std-srvs, actionlib, catkin, rosserial-python, diagnostic-updater, angles, message-runtime, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, angles, catkin, control-msgs, diagnostic-updater, message-generation, message-runtime, rosserial-python, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-hand-bridge";
   version = "0.6.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs std-srvs actionlib diagnostic-updater angles message-generation control-msgs ];
-  propagatedBuildInputs = [ sensor-msgs std-msgs std-srvs actionlib rosserial-python diagnostic-updater angles message-runtime control-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib angles control-msgs diagnostic-updater message-runtime rosserial-python sensor-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

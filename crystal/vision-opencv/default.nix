@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cv-bridge, ament-cmake, image-geometry }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, image-geometry }:
 buildRosPackage {
   pname = "ros-crystal-vision-opencv";
   version = "2.1.0";

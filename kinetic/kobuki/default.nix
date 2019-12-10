@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, kobuki-capabilities, kobuki-description, kobuki-node, kobuki-testsuite, kobuki-bumper2pc, kobuki-safety-controller, catkin, kobuki-keyop, kobuki-auto-docking, kobuki-controller-tutorial, kobuki-random-walker, kobuki-rapps }:
+{ lib, buildRosPackage, fetchurl, catkin, kobuki-auto-docking, kobuki-bumper2pc, kobuki-capabilities, kobuki-controller-tutorial, kobuki-description, kobuki-keyop, kobuki-node, kobuki-random-walker, kobuki-rapps, kobuki-safety-controller, kobuki-testsuite }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki";
   version = "0.7.6";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ kobuki-capabilities kobuki-description kobuki-node kobuki-testsuite kobuki-bumper2pc kobuki-safety-controller kobuki-keyop kobuki-auto-docking kobuki-controller-tutorial kobuki-random-walker kobuki-rapps ];
+  propagatedBuildInputs = [ kobuki-auto-docking kobuki-bumper2pc kobuki-capabilities kobuki-controller-tutorial kobuki-description kobuki-keyop kobuki-node kobuki-random-walker kobuki-rapps kobuki-safety-controller kobuki-testsuite ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

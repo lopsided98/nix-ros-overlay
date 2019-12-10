@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, tf, cmake-modules, catkin, costmap-2d, nav-core, eigen, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, eigen, nav-core, pluginlib, roscpp, rostest, tf }:
 buildRosPackage {
   pname = "ros-kinetic-clear-costmap-recovery";
   version = "1.14.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib tf cmake-modules costmap-2d nav-core eigen roscpp ];
+  buildInputs = [ cmake-modules ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ pluginlib tf costmap-2d nav-core eigen roscpp ];
+  propagatedBuildInputs = [ costmap-2d eigen nav-core pluginlib roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

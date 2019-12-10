@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, effort-controllers, controller-manager, robot-state-publisher, position-controllers, catkin, gazebo-ros, rostopic, gazebo-ros-control, ur-description, joint-trajectory-controller, roslaunch, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, effort-controllers, gazebo-ros, gazebo-ros-control, joint-state-controller, joint-trajectory-controller, position-controllers, robot-state-publisher, roslaunch, rostopic, ur-description }:
 buildRosPackage {
   pname = "ros-kinetic-ur-gazebo";
   version = "1.2.7-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ effort-controllers controller-manager robot-state-publisher position-controllers gazebo-ros rostopic gazebo-ros-control ur-description joint-trajectory-controller joint-state-controller ];
+  propagatedBuildInputs = [ controller-manager effort-controllers gazebo-ros gazebo-ros-control joint-state-controller joint-trajectory-controller position-controllers robot-state-publisher rostopic ur-description ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

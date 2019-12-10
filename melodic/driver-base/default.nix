@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, dynamic-reconfigure, std-msgs, catkin, self-test, roscpp, message-runtime, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, message-generation, message-runtime, roscpp, self-test, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-driver-base";
   version = "1.6.8";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure std-msgs self-test roscpp message-generation diagnostic-updater ];
-  propagatedBuildInputs = [ dynamic-reconfigure std-msgs self-test roscpp message-runtime diagnostic-updater ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure message-runtime roscpp self-test std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

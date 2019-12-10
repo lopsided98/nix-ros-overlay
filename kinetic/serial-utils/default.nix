@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, serial, catkin }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, serial }:
 buildRosPackage {
   pname = "ros-kinetic-serial-utils";
   version = "0.1.0";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost serial ];
   propagatedBuildInputs = [ boost serial ];
   nativeBuildInputs = [ catkin ];
 

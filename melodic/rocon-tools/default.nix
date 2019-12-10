@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rocon-semantic-version, rocon-python-comms, rocon-console, rocon-ebnf, rocon-python-wifi, rocon-python-redis, rocon-interactions, rocon-launch, catkin, rocon-python-utils, rocon-master-info, rocon-uri }:
+{ lib, buildRosPackage, fetchurl, catkin, rocon-console, rocon-ebnf, rocon-interactions, rocon-launch, rocon-master-info, rocon-python-comms, rocon-python-redis, rocon-python-utils, rocon-python-wifi, rocon-semantic-version, rocon-uri }:
 buildRosPackage {
   pname = "ros-melodic-rocon-tools";
   version = "0.3.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rocon-semantic-version rocon-console rocon-python-comms rocon-ebnf rocon-python-wifi rocon-python-redis rocon-interactions rocon-launch rocon-python-utils rocon-master-info rocon-uri ];
+  propagatedBuildInputs = [ rocon-console rocon-ebnf rocon-interactions rocon-launch rocon-master-info rocon-python-comms rocon-python-redis rocon-python-utils rocon-python-wifi rocon-semantic-version rocon-uri ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

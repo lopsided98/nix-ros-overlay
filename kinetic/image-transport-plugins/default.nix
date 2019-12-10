@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, compressed-depth-image-transport, theora-image-transport, catkin, compressed-image-transport }:
+{ lib, buildRosPackage, fetchurl, catkin, compressed-depth-image-transport, compressed-image-transport, theora-image-transport }:
 buildRosPackage {
   pname = "ros-kinetic-image-transport-plugins";
   version = "1.9.5";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ compressed-depth-image-transport theora-image-transport compressed-image-transport ];
+  propagatedBuildInputs = [ compressed-depth-image-transport compressed-image-transport theora-image-transport ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

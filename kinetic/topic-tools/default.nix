@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, xmlrpcpp, std-msgs, catkin, rosunit, cpp-common, rosconsole, rostime, roscpp, message-runtime, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, cpp-common, message-generation, message-runtime, rosconsole, roscpp, rostest, rostime, rosunit, std-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-kinetic-topic-tools";
   version = "1.12.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest std-msgs roscpp rosunit cpp-common rostime rosconsole message-generation xmlrpcpp ];
-  propagatedBuildInputs = [ std-msgs rosconsole rostime roscpp message-runtime xmlrpcpp ];
+  buildInputs = [ cpp-common message-generation rostest rosunit ];
+  propagatedBuildInputs = [ message-runtime rosconsole roscpp rostime std-msgs xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

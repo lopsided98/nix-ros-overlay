@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hrpsys, catkin, rostest, openrtm-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, hrpsys, openrtm-tools, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-hrpsys-tools";
   version = "1.4.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hrpsys rostest ];
+  buildInputs = [ rostest ];
   propagatedBuildInputs = [ hrpsys openrtm-tools ];
   nativeBuildInputs = [ catkin ];
 

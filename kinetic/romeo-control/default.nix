@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-state-publisher, catkin, ros-controllers, ros-control }:
+{ lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, ros-control, ros-controllers }:
 buildRosPackage {
   pname = "ros-kinetic-romeo-control";
   version = "0.2.3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ robot-state-publisher ros-controllers ros-control ];
+  propagatedBuildInputs = [ robot-state-publisher ros-control ros-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

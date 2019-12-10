@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosflight-firmware, gazeboSimulator, geometry-msgs, rosflight-msgs, catkin, eigen, roscpp, gazebo-ros, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, gazebo-plugins, gazebo-ros, gazeboSimulator, geometry-msgs, roscpp, rosflight-firmware, rosflight-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rosflight-sim";
   version = "1.0.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosflight-firmware geometry-msgs rosflight-msgs gazeboSimulator.gazebo eigen roscpp gazebo-ros gazebo-plugins ];
-  propagatedBuildInputs = [ rosflight-firmware geometry-msgs rosflight-msgs gazeboSimulator.gazebo eigen roscpp gazebo-ros gazebo-plugins ];
+  propagatedBuildInputs = [ eigen gazebo-plugins gazebo-ros gazeboSimulator.gazebo geometry-msgs roscpp rosflight-firmware rosflight-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

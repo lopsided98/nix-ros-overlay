@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hector-gazebo-thermal-camera, hector-gazebo-plugins, hector-gazebo-worlds, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, hector-gazebo-plugins, hector-gazebo-thermal-camera, hector-gazebo-worlds }:
 buildRosPackage {
   pname = "ros-melodic-hector-gazebo";
   version = "0.5.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ hector-gazebo-thermal-camera hector-gazebo-plugins hector-gazebo-worlds ];
+  propagatedBuildInputs = [ hector-gazebo-plugins hector-gazebo-thermal-camera hector-gazebo-worlds ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

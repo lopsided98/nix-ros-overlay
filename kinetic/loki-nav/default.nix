@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ fiducial-slam aruco-detect move-basic ];
+  propagatedBuildInputs = [ aruco-detect fiducial-slam move-basic ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

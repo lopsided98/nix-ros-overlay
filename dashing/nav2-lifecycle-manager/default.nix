@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp-action, rclcpp-lifecycle, geometry-msgs, std-msgs, std-srvs, ament-lint-common, ament-cmake, ament-lint-auto, tf2-geometry-msgs, nav2-common, nav2-util, nav2-msgs, lifecycle-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, lifecycle-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp-action, rclcpp-lifecycle, std-msgs, std-srvs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-dashing-nav2-lifecycle-manager";
   version = "0.2.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-action rclcpp-lifecycle geometry-msgs std-msgs std-srvs tf2-geometry-msgs nav2-common nav2-util nav2-msgs lifecycle-msgs ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ rclcpp-action rclcpp-lifecycle geometry-msgs std-msgs std-srvs tf2-geometry-msgs nav2-util nav2-msgs lifecycle-msgs ];
+  buildInputs = [ nav2-common ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ geometry-msgs lifecycle-msgs nav2-msgs nav2-util rclcpp-action rclcpp-lifecycle std-msgs std-srvs tf2-geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

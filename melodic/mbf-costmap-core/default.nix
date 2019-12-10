@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, tf, catkin, mbf-utility, mbf-abstract-core, costmap-2d, nav-core }:
+{ lib, buildRosPackage, fetchurl, catkin, costmap-2d, geometry-msgs, mbf-abstract-core, mbf-utility, nav-core, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-mbf-costmap-core";
   version = "0.2.5-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs std-msgs tf mbf-utility mbf-abstract-core costmap-2d nav-core ];
-  propagatedBuildInputs = [ geometry-msgs std-msgs tf mbf-utility mbf-abstract-core costmap-2d nav-core ];
+  propagatedBuildInputs = [ costmap-2d geometry-msgs mbf-abstract-core mbf-utility nav-core std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

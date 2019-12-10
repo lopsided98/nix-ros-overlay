@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, pluginlib, std-msgs, catkin, nodelet, roscpp, ecl-threads }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-threads, nodelet, pluginlib, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cht10-node";
   version = "0.0.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs pluginlib std-msgs nodelet roscpp ecl-threads ];
-  propagatedBuildInputs = [ sensor-msgs pluginlib std-msgs nodelet roscpp ecl-threads ];
+  propagatedBuildInputs = [ ecl-threads nodelet pluginlib roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

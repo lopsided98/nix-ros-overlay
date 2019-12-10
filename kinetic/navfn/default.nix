@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, geometry-msgs, message-runtime, pluginlib, tf, catkin, cmake-modules, rosunit, costmap-2d, nav-core, netpbm, pcl-conversions, visualization-msgs, roscpp, message-generation, nav-msgs, rosconsole }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, netpbm, pcl-conversions, pcl-ros, pluginlib, rosconsole, roscpp, rosunit, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-navfn";
   version = "1.14.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros geometry-msgs pluginlib tf cmake-modules costmap-2d nav-core netpbm pcl-conversions visualization-msgs roscpp message-generation nav-msgs rosconsole ];
+  buildInputs = [ cmake-modules message-generation netpbm ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pcl-ros geometry-msgs pluginlib tf costmap-2d nav-core pcl-conversions visualization-msgs roscpp message-runtime nav-msgs rosconsole ];
+  propagatedBuildInputs = [ costmap-2d geometry-msgs message-runtime nav-core nav-msgs pcl-conversions pcl-ros pluginlib rosconsole roscpp tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

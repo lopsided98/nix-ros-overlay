@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, dynamic-reconfigure, std-msgs, serial, catkin, rosunit, rospy, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, roscpp, rospy, rosunit, sensor-msgs, serial, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-teraranger-array";
   version = "2.0.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure std-msgs serial rospy roscpp message-generation ];
+  buildInputs = [ message-generation ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure std-msgs serial rospy roscpp message-runtime ];
+  propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs message-runtime roscpp rospy sensor-msgs serial std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

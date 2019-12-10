@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-tutorials, robot, urdf-tutorial, geometry-tutorials, viz, common-tutorials, catkin, roslint, visualization-tutorials, angles }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, common-tutorials, geometry-tutorials, robot, ros-tutorials, roslint, urdf-tutorial, visualization-tutorials, viz }:
 buildRosPackage {
   pname = "ros-melodic-desktop";
   version = "1.4.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ ros-tutorials robot geometry-tutorials urdf-tutorial viz common-tutorials roslint visualization-tutorials angles ];
+  propagatedBuildInputs = [ angles common-tutorials geometry-tutorials robot ros-tutorials roslint urdf-tutorial visualization-tutorials viz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

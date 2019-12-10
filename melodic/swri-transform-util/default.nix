@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, tf, marti-nav-msgs, nodelet, rostest, sensor-msgs, diagnostic-msgs, libyamlcpp, geographic-msgs, swri-yaml-util, gps-common, geos, proj, catkin, swri-nodelet, cv-bridge, roscpp, pkg-config, topic-tools, rospy, swri-roscpp, boost, swri-math-util }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, diagnostic-msgs, geographic-msgs, geometry-msgs, geos, gps-common, libyamlcpp, marti-nav-msgs, nodelet, pkg-config, proj, roscpp, rospy, rostest, sensor-msgs, swri-math-util, swri-nodelet, swri-roscpp, swri-yaml-util, tf, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-swri-transform-util";
   version = "2.11.0-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs tf marti-nav-msgs nodelet diagnostic-msgs libyamlcpp geographic-msgs swri-yaml-util geos gps-common proj swri-nodelet cv-bridge roscpp topic-tools rospy swri-roscpp boost swri-math-util ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ geometry-msgs tf marti-nav-msgs nodelet sensor-msgs diagnostic-msgs libyamlcpp geographic-msgs swri-yaml-util geos gps-common proj swri-nodelet cv-bridge roscpp topic-tools rospy swri-roscpp boost swri-math-util ];
-  nativeBuildInputs = [ pkg-config catkin ];
+  propagatedBuildInputs = [ boost cv-bridge diagnostic-msgs geographic-msgs geometry-msgs geos gps-common libyamlcpp marti-nav-msgs nodelet proj roscpp rospy sensor-msgs swri-math-util swri-nodelet swri-roscpp swri-yaml-util tf topic-tools ];
+  nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
     description = ''The swri_transform_util package contains utility functions and classes for

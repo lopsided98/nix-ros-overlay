@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, log-server, rosbridge-suite, catkin, ros-peerjs }:
+{ lib, buildRosPackage, fetchurl, catkin, log-server, ros-peerjs, rosbridge-suite }:
 buildRosPackage {
   pname = "ros-kinetic-oros-tools";
   version = "0.1.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ log-server rosbridge-suite ros-peerjs ];
+  propagatedBuildInputs = [ log-server ros-peerjs rosbridge-suite ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

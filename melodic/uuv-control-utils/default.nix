@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, uuv-gazebo-ros-plugins-msgs, geometry-msgs, uuv-world-ros-plugins-msgs, std-msgs, pythonPackages, catkin, uuv-control-msgs, uuv-trajectory-control, gazebo-msgs, visualization-msgs, rospy, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-msgs, geometry-msgs, nav-msgs, pythonPackages, rospy, std-msgs, uuv-control-msgs, uuv-gazebo-ros-plugins-msgs, uuv-trajectory-control, uuv-world-ros-plugins-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uuv-control-utils";
   version = "0.6.13";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pythonPackages.numpy pythonPackages.pyyaml geometry-msgs uuv-gazebo-ros-plugins-msgs uuv-world-ros-plugins-msgs std-msgs uuv-control-msgs uuv-trajectory-control gazebo-msgs visualization-msgs rospy nav-msgs ];
+  propagatedBuildInputs = [ gazebo-msgs geometry-msgs nav-msgs pythonPackages.numpy pythonPackages.pyyaml rospy std-msgs uuv-control-msgs uuv-gazebo-ros-plugins-msgs uuv-trajectory-control uuv-world-ros-plugins-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

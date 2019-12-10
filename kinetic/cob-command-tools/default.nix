@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-monitoring, cob-teleop, cob-dashboard, catkin, cob-helper-tools, cob-interactive-teleop, cob-command-gui, cob-script-server }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-command-gui, cob-dashboard, cob-helper-tools, cob-interactive-teleop, cob-monitoring, cob-script-server, cob-teleop }:
 buildRosPackage {
   pname = "ros-kinetic-cob-command-tools";
   version = "0.6.15-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-monitoring cob-teleop cob-dashboard cob-helper-tools cob-interactive-teleop cob-command-gui cob-script-server ];
+  propagatedBuildInputs = [ cob-command-gui cob-dashboard cob-helper-tools cob-interactive-teleop cob-monitoring cob-script-server cob-teleop ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

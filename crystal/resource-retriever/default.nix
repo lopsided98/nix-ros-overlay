@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-index-cpp, libcurl-vendor, ament-cmake-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-index-cpp, libcurl-vendor }:
 buildRosPackage {
   pname = "ros-crystal-resource-retriever";
   version = "2.1.0";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-index-cpp libcurl-vendor ];
   propagatedBuildInputs = [ ament-index-cpp libcurl-vendor ];
   nativeBuildInputs = [ ament-cmake-ros ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, robot-state-publisher, flir-ptu-description, catkin, rviz, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, flir-ptu-description, joint-state-publisher, robot-state-publisher, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-flir-ptu-viz";
   version = "0.2.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ robot-state-publisher joint-state-publisher rviz flir-ptu-description ];
+  propagatedBuildInputs = [ flir-ptu-description joint-state-publisher robot-state-publisher rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-msgs, std-srvs, catkin, ethercat-hardware, realtime-tools, roscpp, pr2-controller-manager, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, diagnostic-updater, ethercat-hardware, pr2-controller-manager, realtime-tools, roscpp, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-ethercat";
   version = "1.6.30";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs std-srvs roscpp ethercat-hardware realtime-tools diagnostic-updater pr2-controller-manager ];
-  propagatedBuildInputs = [ diagnostic-msgs std-srvs roscpp ethercat-hardware realtime-tools diagnostic-updater pr2-controller-manager ];
+  propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater ethercat-hardware pr2-controller-manager realtime-tools roscpp std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

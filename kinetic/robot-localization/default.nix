@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, eigen-conversions, rosunit, eigen, tf2, nav-msgs, rostest, sensor-msgs, diagnostic-msgs, cmake-modules, libyamlcpp, tf2-geometry-msgs, geographic-msgs, rosbag, xmlrpcpp, tf2-ros, message-filters, std-msgs, std-srvs, catkin, pythonPackages, roscpp, message-generation, roslint, diagnostic-updater, message-runtime }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, diagnostic-msgs, diagnostic-updater, eigen, eigen-conversions, geographic-msgs, geometry-msgs, libyamlcpp, message-filters, message-generation, message-runtime, nav-msgs, pythonPackages, rosbag, roscpp, roslint, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-kinetic-robot-localization";
   version = "2.4.8-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs eigen-conversions eigen pythonPackages.catkin-pkg tf2 nav-msgs sensor-msgs diagnostic-msgs cmake-modules libyamlcpp tf2-geometry-msgs geographic-msgs xmlrpcpp tf2-ros message-filters std-msgs std-srvs roscpp message-generation roslint diagnostic-updater ];
+  buildInputs = [ message-generation pythonPackages.catkin-pkg roslint ];
   checkInputs = [ rosbag rostest rosunit ];
-  propagatedBuildInputs = [ geometry-msgs eigen-conversions eigen tf2 nav-msgs sensor-msgs diagnostic-msgs cmake-modules libyamlcpp tf2-geometry-msgs geographic-msgs xmlrpcpp tf2-ros message-filters std-msgs std-srvs roscpp diagnostic-updater message-runtime ];
+  propagatedBuildInputs = [ cmake-modules diagnostic-msgs diagnostic-updater eigen eigen-conversions geographic-msgs geometry-msgs libyamlcpp message-filters message-runtime nav-msgs roscpp sensor-msgs std-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, gazeboSimulator, xacro, geometry-msgs, control-toolbox, robot-controllers-interface, robot-controllers, image-proc, catkin, gazebo-ros, actionlib, depth-image-proc, nodelet, angles, fetch-description, gazebo-plugins, rgbd-launch }:
+{ lib, buildRosPackage, fetchurl, actionlib, angles, catkin, control-toolbox, depth-image-proc, fetch-description, gazebo-plugins, gazebo-ros, gazeboSimulator, geometry-msgs, image-proc, nodelet, rgbd-launch, robot-controllers, robot-controllers-interface, trajectory-msgs, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-fetch-gazebo";
   version = "0.8.2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robot-controllers-interface control-toolbox gazebo-ros gazeboSimulator.gazebo7 angles robot-controllers ];
-  propagatedBuildInputs = [ trajectory-msgs xacro geometry-msgs robot-controllers-interface control-toolbox gazeboSimulator.gazebo image-proc actionlib depth-image-proc fetch-description nodelet gazebo-ros robot-controllers gazebo-plugins rgbd-launch ];
+  buildInputs = [ angles gazeboSimulator.gazebo7 ];
+  propagatedBuildInputs = [ actionlib control-toolbox depth-image-proc fetch-description gazebo-plugins gazebo-ros gazeboSimulator.gazebo geometry-msgs image-proc nodelet rgbd-launch robot-controllers robot-controllers-interface trajectory-msgs xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

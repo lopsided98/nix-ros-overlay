@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, pluginlib, catkin, image-transport, costmap-2d, opencv-candidate, cv-bridge, roscpp, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, costmap-2d, cv-bridge, image-transport, nav-msgs, opencv-candidate, pluginlib, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-fetch-depth-layer";
   version = "0.7.15";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs pluginlib image-transport costmap-2d opencv-candidate cv-bridge roscpp nav-msgs ];
-  propagatedBuildInputs = [ sensor-msgs pluginlib image-transport costmap-2d opencv-candidate cv-bridge roscpp nav-msgs ];
+  propagatedBuildInputs = [ costmap-2d cv-bridge image-transport nav-msgs opencv-candidate pluginlib roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

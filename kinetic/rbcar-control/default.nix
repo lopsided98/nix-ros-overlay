@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robot-state-publisher, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, robot-state-publisher }:
 buildRosPackage {
   pname = "ros-kinetic-rbcar-control";
   version = "1.0.4-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robot-state-publisher ];
   propagatedBuildInputs = [ robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 

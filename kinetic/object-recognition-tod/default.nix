@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake-modules, catkin, ecto, object-recognition-core, ecto-openni, opencv-candidate, eigen, ecto-opencv }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, ecto, ecto-opencv, ecto-openni, eigen, object-recognition-core, opencv-candidate }:
 buildRosPackage {
   pname = "ros-kinetic-object-recognition-tod";
   version = "0.5.6";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules ecto object-recognition-core opencv-candidate eigen ];
-  propagatedBuildInputs = [ ecto object-recognition-core ecto-openni opencv-candidate ecto-opencv ];
+  buildInputs = [ cmake-modules eigen ];
+  propagatedBuildInputs = [ ecto ecto-opencv ecto-openni object-recognition-core opencv-candidate ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

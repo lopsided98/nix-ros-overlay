@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, collada-urdf, urdf, resource-retriever, urdfdom, catkin, collada-parser, urdf-parser-plugin, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, catkin, collada-parser, collada-urdf, joint-state-publisher, kdl-parser, resource-retriever, urdf, urdf-parser-plugin, urdfdom }:
 buildRosPackage {
   pname = "ros-kinetic-robot-model";
   version = "1.12.11";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joint-state-publisher collada-urdf urdf resource-retriever urdfdom collada-parser urdf-parser-plugin kdl-parser ];
+  propagatedBuildInputs = [ collada-parser collada-urdf joint-state-publisher kdl-parser resource-retriever urdf urdf-parser-plugin urdfdom ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

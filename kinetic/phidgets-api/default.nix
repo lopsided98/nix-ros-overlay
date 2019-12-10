@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libusb1, libusb, libphidget21, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, libphidget21, libusb, libusb1 }:
 buildRosPackage {
   pname = "ros-kinetic-phidgets-api";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libusb1 libphidget21 ];
-  propagatedBuildInputs = [ libusb libphidget21 ];
+  buildInputs = [ libusb1 ];
+  propagatedBuildInputs = [ libphidget21 libusb ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

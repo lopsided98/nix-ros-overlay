@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, image-transport, cv-bridge, roscpp, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-transport, roscpp, roslaunch, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-sick-visionary-t-driver";
   version = "0.0.5";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs image-transport cv-bridge roscpp roslaunch ];
-  propagatedBuildInputs = [ sensor-msgs image-transport cv-bridge roscpp roslaunch ];
+  propagatedBuildInputs = [ cv-bridge image-transport roscpp roslaunch sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

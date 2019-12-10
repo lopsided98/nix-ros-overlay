@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-runtime, actionlib, catkin, actionlib-msgs, message-generation }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-mongodb-store-msgs";
   version = "0.4.5-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation actionlib actionlib-msgs catkin ];
-  propagatedBuildInputs = [ message-generation actionlib actionlib-msgs message-runtime ];
+  buildInputs = [ catkin ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs message-generation message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

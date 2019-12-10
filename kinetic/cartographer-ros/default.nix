@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, eigen-conversions, rosunit, tf2, cartographer-ros-msgs, gflags, nav-msgs, sensor-msgs, protobuf, glog, robot-state-publisher, cartographer, roslib, libyamlcpp, rosbag, tf2-ros, std-msgs, catkin, pythonPackages, pcl, roscpp, roslaunch, tf2-eigen, pcl-conversions, visualization-msgs, gmock, message-runtime }:
+{ lib, buildRosPackage, fetchurl, cartographer, cartographer-ros-msgs, catkin, eigen-conversions, geometry-msgs, gflags, glog, gmock, libyamlcpp, message-runtime, nav-msgs, pcl, pcl-conversions, protobuf, pythonPackages, robot-state-publisher, rosbag, roscpp, roslaunch, roslib, rosunit, sensor-msgs, std-msgs, tf2, tf2-eigen, tf2-ros, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cartographer-ros";
   version = "0.2.0";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs urdf eigen-conversions tf2 cartographer-ros-msgs gflags nav-msgs sensor-msgs protobuf glog robot-state-publisher cartographer roslib libyamlcpp rosbag tf2-ros std-msgs pcl roscpp roslaunch tf2-eigen pcl-conversions visualization-msgs pythonPackages.sphinx gmock message-runtime ];
+  buildInputs = [ gmock protobuf pythonPackages.sphinx ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ geometry-msgs urdf eigen-conversions tf2 cartographer-ros-msgs gflags nav-msgs sensor-msgs glog robot-state-publisher cartographer roslib libyamlcpp rosbag tf2-ros std-msgs pcl roscpp roslaunch tf2-eigen pcl-conversions visualization-msgs message-runtime ];
+  propagatedBuildInputs = [ cartographer cartographer-ros-msgs eigen-conversions geometry-msgs gflags glog libyamlcpp message-runtime nav-msgs pcl pcl-conversions robot-state-publisher rosbag roscpp roslaunch roslib sensor-msgs std-msgs tf2 tf2-eigen tf2-ros urdf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

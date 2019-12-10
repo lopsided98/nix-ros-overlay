@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, op3-kinematics-dynamics, op3-manager, op3-localization, catkin, op3-online-walking-module, op3-action-module, open-cr-module, op3-direct-control-module, op3-base-module, op3-balance-control, op3-walking-module, cm-740-module, op3-head-control-module }:
+{ lib, buildRosPackage, fetchurl, catkin, cm-740-module, op3-action-module, op3-balance-control, op3-base-module, op3-direct-control-module, op3-head-control-module, op3-kinematics-dynamics, op3-localization, op3-manager, op3-online-walking-module, op3-walking-module, open-cr-module }:
 buildRosPackage {
   pname = "ros-kinetic-robotis-op3";
   version = "0.2.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ op3-kinematics-dynamics op3-manager op3-localization op3-online-walking-module op3-action-module open-cr-module op3-direct-control-module op3-base-module op3-balance-control op3-walking-module cm-740-module op3-head-control-module ];
+  propagatedBuildInputs = [ cm-740-module op3-action-module op3-balance-control op3-base-module op3-direct-control-module op3-head-control-module op3-kinematics-dynamics op3-localization op3-manager op3-online-walking-module op3-walking-module open-cr-module ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

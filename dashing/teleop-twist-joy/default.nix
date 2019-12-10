@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp, geometry-msgs, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-teleop-twist-joy";
   version = "2.2.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs rclcpp geometry-msgs ];
-  propagatedBuildInputs = [ sensor-msgs rclcpp geometry-msgs ];
+  propagatedBuildInputs = [ geometry-msgs rclcpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

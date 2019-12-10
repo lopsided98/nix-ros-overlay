@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, catkin, image-transport, eigen, cv-bridge, hector-map-tools, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, eigen, geometry-msgs, hector-map-tools, image-transport, nav-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-hector-compressed-map-transport";
   version = "0.3.5";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs image-transport eigen cv-bridge hector-map-tools nav-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs image-transport eigen cv-bridge hector-map-tools nav-msgs ];
+  propagatedBuildInputs = [ cv-bridge eigen geometry-msgs hector-map-tools image-transport nav-msgs sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

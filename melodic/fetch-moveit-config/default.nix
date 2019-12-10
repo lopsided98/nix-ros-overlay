@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-planners-ompl, joint-state-publisher, xacro, robot-state-publisher, moveit-ros-move-group, moveit-simple-controller-manager, moveit-python, catkin, moveit-ros-visualization, fetch-description, fetch-ikfast-plugin, rospy, moveit-kinematics, rostest, moveit-fake-controller-manager }:
+{ lib, buildRosPackage, fetchurl, catkin, fetch-description, fetch-ikfast-plugin, joint-state-publisher, moveit-fake-controller-manager, moveit-kinematics, moveit-planners-ompl, moveit-python, moveit-ros-move-group, moveit-ros-visualization, moveit-simple-controller-manager, robot-state-publisher, rospy, rostest, xacro }:
 buildRosPackage {
   pname = "ros-melodic-fetch-moveit-config";
   version = "0.8.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ fetch-description ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ moveit-planners-ompl joint-state-publisher moveit-kinematics xacro robot-state-publisher moveit-ros-move-group moveit-simple-controller-manager moveit-python moveit-ros-visualization fetch-ikfast-plugin rospy fetch-description moveit-fake-controller-manager ];
+  propagatedBuildInputs = [ fetch-description fetch-ikfast-plugin joint-state-publisher moveit-fake-controller-manager moveit-kinematics moveit-planners-ompl moveit-python moveit-ros-move-group moveit-ros-visualization moveit-simple-controller-manager robot-state-publisher rospy xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

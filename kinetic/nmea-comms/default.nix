@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roslint, roscpp, roslaunch, rostest, nmea-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, nmea-msgs, roscpp, roslaunch, roslint, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-nmea-comms";
   version = "1.1.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint roscpp roslaunch rostest nmea-msgs ];
+  buildInputs = [ roslaunch roslint rostest ];
   propagatedBuildInputs = [ nmea-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-info-manager, ament-lint-common, ament-cmake, image-transport, cv-bridge, ament-cmake-gtest, class-loader, rclcpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, camera-info-manager, class-loader, cv-bridge, image-transport, rclcpp }:
 buildRosPackage {
   pname = "ros-crystal-image-publisher";
   version = "2.0.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ camera-info-manager image-transport cv-bridge class-loader rclcpp ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ camera-info-manager image-transport cv-bridge class-loader rclcpp ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ camera-info-manager class-loader cv-bridge image-transport rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

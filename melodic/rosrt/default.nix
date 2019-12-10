@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosatomic, std-msgs, catkin, roslib, rosunit, roscpp, lockfree, allocators }:
+{ lib, buildRosPackage, fetchurl, allocators, catkin, lockfree, rosatomic, roscpp, roslib, rosunit, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosrt";
   version = "1.0.25";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosatomic std-msgs roslib rosunit roscpp lockfree allocators ];
-  propagatedBuildInputs = [ rosatomic std-msgs roslib rosunit roscpp lockfree allocators ];
+  propagatedBuildInputs = [ allocators lockfree rosatomic roscpp roslib rosunit std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

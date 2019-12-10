@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-ros, toposens-driver, toposens-msgs, catkin, tf2, tf2-geometry-msgs, toposens-description, rospy, roscpp, message-runtime, roslaunch, rostest, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, message-runtime, pcl-ros, roscpp, roslaunch, rospy, rostest, tf2, tf2-geometry-msgs, tf2-ros, toposens-description, toposens-driver, toposens-msgs }:
 buildRosPackage {
   pname = "ros-melodic-toposens-pointcloud";
   version = "1.3.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-ros toposens-driver toposens-msgs tf2 tf2-geometry-msgs rospy roscpp message-runtime tf2-ros ];
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ pcl-ros toposens-driver message-runtime toposens-msgs roscpp tf2-geometry-msgs toposens-description tf2 rospy tf2-ros ];
+  propagatedBuildInputs = [ message-runtime pcl-ros roscpp rospy tf2 tf2-geometry-msgs tf2-ros toposens-description toposens-driver toposens-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

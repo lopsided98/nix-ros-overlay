@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joint-state-publisher, jackal-description, catkin, rviz, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, jackal-description, joint-state-publisher, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-melodic-jackal-viz";
   version = "0.3.2-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joint-state-publisher rviz jackal-description ];
+  propagatedBuildInputs = [ jackal-description joint-state-publisher rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pluginlib, catkin, base-local-planner, costmap-2d, nav-core }:
+{ lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, geometry-msgs, nav-core, pluginlib }:
 buildRosPackage {
   pname = "ros-kinetic-twist-recovery";
   version = "0.2.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs pluginlib base-local-planner costmap-2d nav-core ];
-  propagatedBuildInputs = [ geometry-msgs pluginlib base-local-planner costmap-2d nav-core ];
+  propagatedBuildInputs = [ base-local-planner costmap-2d geometry-msgs nav-core pluginlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

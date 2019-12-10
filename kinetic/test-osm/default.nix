@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, route-network, osm-cartography, catkin, geographic-msgs, geodesy }:
+{ lib, buildRosPackage, fetchurl, catkin, geodesy, geographic-msgs, osm-cartography, route-network }:
 buildRosPackage {
   pname = "ros-kinetic-test-osm";
   version = "0.2.4";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geodesy osm-cartography route-network geographic-msgs ];
-  propagatedBuildInputs = [ geodesy osm-cartography route-network geographic-msgs ];
+  propagatedBuildInputs = [ geodesy geographic-msgs osm-cartography route-network ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

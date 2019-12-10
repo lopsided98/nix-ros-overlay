@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, serial, dsr-msgs, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, dsr-msgs, roscpp, serial, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dsr-example-cpp";
   version = "0.9.6-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dsr-msgs std-msgs serial roscpp ];
-  propagatedBuildInputs = [ dsr-msgs std-msgs serial roscpp ];
+  propagatedBuildInputs = [ dsr-msgs roscpp serial std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

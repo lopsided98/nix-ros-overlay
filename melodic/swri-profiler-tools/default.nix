@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, swri-profiler-msgs, std-msgs, catkin, roscpp, qt5 }:
+{ lib, buildRosPackage, fetchurl, catkin, qt5, roscpp, std-msgs, swri-profiler-msgs }:
 buildRosPackage {
   pname = "ros-melodic-swri-profiler-tools";
   version = "0.2.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs swri-profiler-msgs roscpp qt5.qtbase ];
-  propagatedBuildInputs = [ std-msgs swri-profiler-msgs roscpp qt5.qtbase ];
+  propagatedBuildInputs = [ qt5.qtbase roscpp std-msgs swri-profiler-msgs ];
   nativeBuildInputs = [ catkin qt5.qtbase ];
 
   meta = {

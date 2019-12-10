@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rostest, pilz-industrial-motion-testutils, moveit-commander, tf, catkin, pythonPackages, rosunit, roslint, pilz-trajectory-generation, rospy, prbt-moveit-config, tf-conversions, prbt-pg70-support, pilz-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, moveit-commander, pilz-industrial-motion-testutils, pilz-msgs, pilz-trajectory-generation, prbt-moveit-config, prbt-pg70-support, pythonPackages, roslint, rospy, rostest, rosunit, tf, tf-conversions }:
 buildRosPackage {
   pname = "ros-melodic-pilz-robot-programming";
   version = "0.4.10-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy roslint ];
-  checkInputs = [ rostest pilz-industrial-motion-testutils pythonPackages.mock pythonPackages.coverage rosunit prbt-moveit-config prbt-pg70-support pythonPackages.docopt ];
-  propagatedBuildInputs = [ moveit-commander tf pilz-trajectory-generation rospy pythonPackages.psutil tf-conversions pilz-msgs ];
+  buildInputs = [ roslint ];
+  checkInputs = [ pilz-industrial-motion-testutils prbt-moveit-config prbt-pg70-support pythonPackages.coverage pythonPackages.docopt pythonPackages.mock rostest rosunit ];
+  propagatedBuildInputs = [ moveit-commander pilz-msgs pilz-trajectory-generation pythonPackages.psutil rospy tf tf-conversions ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

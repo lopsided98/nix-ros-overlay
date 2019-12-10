@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, glib, wget, alsaLib, cmake, pulseaudio, gtk2, gtk3 }:
+{ lib, buildRosPackage, fetchurl, alsaLib, cmake, git, glib, gtk2, gtk3, pulseaudio, wget }:
 buildRosPackage {
   pname = "ros-melodic-webrtc";
   version = "59.0.3";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ glib alsaLib pulseaudio gtk2 gtk3 ];
-  propagatedBuildInputs = [ glib alsaLib pulseaudio gtk2 gtk3 ];
-  nativeBuildInputs = [ git wget cmake ];
+  propagatedBuildInputs = [ alsaLib glib gtk2 gtk3 pulseaudio ];
+  nativeBuildInputs = [ cmake git wget ];
 
   meta = {
     description = ''WebRTC Native API'';

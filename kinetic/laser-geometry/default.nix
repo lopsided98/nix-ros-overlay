@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, tf, pythonPackages, cmake-modules, catkin, rosunit, eigen, roscpp, angles }:
+{ lib, buildRosPackage, fetchurl, angles, boost, catkin, cmake-modules, eigen, pythonPackages, roscpp, rosunit, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-laser-geometry";
   version = "1.6.4";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs tf cmake-modules eigen roscpp angles ];
+  buildInputs = [ cmake-modules ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ pythonPackages.numpy boost sensor-msgs tf eigen roscpp angles ];
+  propagatedBuildInputs = [ angles boost eigen pythonPackages.numpy roscpp sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

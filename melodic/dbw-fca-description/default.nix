@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, urdf, robot-state-publisher, catkin, roslib, rviz, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, roslaunch, roslib, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-dbw-fca-description";
   version = "1.0.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ rviz roslaunch roslib ];
-  propagatedBuildInputs = [ robot-state-publisher xacro roslaunch urdf ];
+  checkInputs = [ roslaunch roslib rviz ];
+  propagatedBuildInputs = [ robot-state-publisher roslaunch urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

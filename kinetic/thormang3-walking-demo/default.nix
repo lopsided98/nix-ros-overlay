@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, std-msgs, thormang3-walking-module-msgs, catkin, roslib, libyamlcpp, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, libyamlcpp, robotis-controller-msgs, roscpp, roslib, std-msgs, thormang3-walking-module-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-walking-demo";
   version = "0.2.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs std-msgs thormang3-walking-module-msgs roslib libyamlcpp roscpp ];
-  propagatedBuildInputs = [ robotis-controller-msgs std-msgs thormang3-walking-module-msgs roslib libyamlcpp roscpp ];
+  propagatedBuildInputs = [ libyamlcpp robotis-controller-msgs roscpp roslib std-msgs thormang3-walking-module-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

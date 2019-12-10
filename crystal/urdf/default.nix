@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, urdfdom-headers, ament-cmake-ros, tinyxml-vendor, urdfdom, ament-lint-common, tinyxml, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, tinyxml, tinyxml-vendor, urdfdom, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-crystal-urdf";
   version = "2.2.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ urdfdom urdfdom-headers tinyxml-vendor tinyxml ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ urdfdom-headers urdfdom tinyxml-vendor tinyxml ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ tinyxml tinyxml-vendor urdfdom urdfdom-headers ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

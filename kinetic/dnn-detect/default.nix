@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-ros, fiducial-msgs, sensor-msgs, dynamic-reconfigure, catkin, roscpp, image-transport, tf2-geometry-msgs, cv-bridge, visualization-msgs, tf2, opencv3 }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, fiducial-msgs, image-transport, opencv3, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dnn-detect";
   version = "0.0.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ fiducial-msgs sensor-msgs opencv3 dynamic-reconfigure tf2 image-transport tf2-geometry-msgs cv-bridge visualization-msgs roscpp tf2-ros ];
-  propagatedBuildInputs = [ tf2-ros fiducial-msgs sensor-msgs dynamic-reconfigure roscpp image-transport tf2-geometry-msgs cv-bridge visualization-msgs tf2 opencv3 ];
+  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure fiducial-msgs image-transport opencv3 roscpp sensor-msgs tf2 tf2-geometry-msgs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

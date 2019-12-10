@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtle-actionlib, pluginlib-tutorials, catkin, actionlib-tutorials, nodelet-tutorial-math }:
+{ lib, buildRosPackage, fetchurl, actionlib-tutorials, catkin, nodelet-tutorial-math, pluginlib-tutorials, turtle-actionlib }:
 buildRosPackage {
   pname = "ros-melodic-common-tutorials";
   version = "0.1.11";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ turtle-actionlib actionlib-tutorials pluginlib-tutorials nodelet-tutorial-math ];
+  propagatedBuildInputs = [ actionlib-tutorials nodelet-tutorial-math pluginlib-tutorials turtle-actionlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

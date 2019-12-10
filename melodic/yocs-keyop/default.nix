@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, ecl-time, std-msgs, catkin, ecl-exceptions, roscpp, ecl-threads }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-exceptions, ecl-threads, ecl-time, geometry-msgs, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-yocs-keyop";
   version = "0.8.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-time geometry-msgs std-msgs ecl-exceptions roscpp ecl-threads ];
-  propagatedBuildInputs = [ ecl-time geometry-msgs std-msgs ecl-exceptions roscpp ecl-threads ];
+  propagatedBuildInputs = [ ecl-exceptions ecl-threads ecl-time geometry-msgs roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

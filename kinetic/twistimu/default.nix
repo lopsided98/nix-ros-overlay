@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, dynamic-reconfigure, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-twistimu";
   version = "1.0.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure ];
-  propagatedBuildInputs = [ sensor-msgs rospy geometry-msgs dynamic-reconfigure ];
+  propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

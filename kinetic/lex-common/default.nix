@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, gtest, gmock, ros-environment, aws-common }:
+{ lib, buildRosPackage, fetchurl, aws-common, catkin, cmake, gmock, gtest, ros-environment }:
 buildRosPackage {
   pname = "ros-kinetic-lex-common";
   version = "1.0.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ ros-environment aws-common catkin ];
-  checkInputs = [ gtest gmock ];
+  buildInputs = [ catkin ros-environment ];
+  checkInputs = [ gmock gtest ];
   propagatedBuildInputs = [ aws-common ];
   nativeBuildInputs = [ cmake ];
 

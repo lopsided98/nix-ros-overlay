@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ainstein-radar-msgs, pcl, rviz, qt5 }:
+{ lib, buildRosPackage, fetchurl, ainstein-radar-msgs, catkin, pcl, qt5, rviz }:
 buildRosPackage {
   pname = "ros-melodic-ainstein-radar-rviz-plugins";
   version = "2.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rviz ainstein-radar-msgs qt5.qtbase ];
-  propagatedBuildInputs = [ rviz pcl ainstein-radar-msgs qt5.qtbase ];
+  propagatedBuildInputs = [ ainstein-radar-msgs pcl qt5.qtbase rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

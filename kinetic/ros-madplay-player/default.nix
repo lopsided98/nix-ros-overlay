@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ros-madplay-player";
   version = "0.1.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs roscpp ];
-  propagatedBuildInputs = [ std-msgs roscpp ];
+  propagatedBuildInputs = [ roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

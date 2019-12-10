@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, dynamic-reconfigure, pluginlib, std-msgs, catkin, costmap-2d, cv-bridge, roscpp, message-runtime, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, costmap-2d, cv-bridge, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, pluginlib, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-costmap-converter";
   version = "0.0.12-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs dynamic-reconfigure pluginlib std-msgs costmap-2d cv-bridge roscpp message-generation ];
+  buildInputs = [ message-generation ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure pluginlib std-msgs costmap-2d cv-bridge roscpp message-runtime ];
+  propagatedBuildInputs = [ costmap-2d cv-bridge dynamic-reconfigure geometry-msgs message-runtime pluginlib roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

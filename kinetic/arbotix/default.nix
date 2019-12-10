@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, arbotix-msgs, catkin, arbotix-firmware, arbotix-sensors, arbotix-python, arbotix-controllers }:
+{ lib, buildRosPackage, fetchurl, arbotix-controllers, arbotix-firmware, arbotix-msgs, arbotix-python, arbotix-sensors, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-arbotix";
   version = "0.10.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ arbotix-msgs arbotix-firmware arbotix-sensors arbotix-python arbotix-controllers ];
+  propagatedBuildInputs = [ arbotix-controllers arbotix-firmware arbotix-msgs arbotix-python arbotix-sensors ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

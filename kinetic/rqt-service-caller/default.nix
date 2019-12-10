@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-py-common, pythonPackages, catkin, rqt-gui-py, rosservice }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rosservice, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-service-caller";
   version = "0.4.8";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rqt-gui rqt-py-common pythonPackages.rospkg rqt-gui-py rosservice ];
+  propagatedBuildInputs = [ pythonPackages.rospkg rosservice rqt-gui rqt-gui-py rqt-py-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

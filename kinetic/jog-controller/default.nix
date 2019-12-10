@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, joy, moveit-core, spacenav-node, actionlib, catkin, roscpp, moveit-visual-tools, rviz, moveit-msgs, moveit-ros-planning, jog-msgs, roslaunch, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, control-msgs, jog-msgs, joy, moveit-core, moveit-msgs, moveit-ros-planning, moveit-visual-tools, roscpp, roslaunch, rviz, spacenav-node }:
 buildRosPackage {
   pname = "ros-kinetic-jog-controller";
   version = "0.0.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core actionlib roscpp moveit-visual-tools rviz moveit-msgs moveit-ros-planning jog-msgs roslaunch control-msgs ];
-  propagatedBuildInputs = [ joy moveit-core spacenav-node actionlib moveit-ros-planning moveit-visual-tools rviz moveit-msgs roscpp jog-msgs control-msgs ];
+  buildInputs = [ roslaunch ];
+  propagatedBuildInputs = [ actionlib control-msgs jog-msgs joy moveit-core moveit-msgs moveit-ros-planning moveit-visual-tools roscpp rviz spacenav-node ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

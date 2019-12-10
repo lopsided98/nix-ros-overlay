@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2-ros, orocos-kdl, sensor-msgs, urdfdom-headers, geometry-msgs, urdf, ament-lint-common, ament-cmake, rclcpp, ament-lint-auto, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, kdl-parser, orocos-kdl, rclcpp, sensor-msgs, tf2-ros, urdf, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-crystal-robot-state-publisher";
   version = "2.1.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ orocos-kdl sensor-msgs geometry-msgs urdfdom-headers urdf rclcpp tf2-ros kdl-parser ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ orocos-kdl sensor-msgs geometry-msgs urdfdom-headers urdf rclcpp tf2-ros kdl-parser ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ geometry-msgs kdl-parser orocos-kdl rclcpp sensor-msgs tf2-ros urdf urdfdom-headers ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui, dynamic-reconfigure, rqt-py-common, pythonPackages, catkin, roslint, rqt-console, rqt-gui-py, rospy, rostest, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, python-qt-binding, pythonPackages, roslint, rospy, rostest, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-melodic-rqt-reconfigure";
   version = "0.5.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ roslint ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ rqt-gui pythonPackages.pyyaml dynamic-reconfigure rqt-py-common rqt-console rqt-gui-py rospy python-qt-binding ];
+  propagatedBuildInputs = [ dynamic-reconfigure python-qt-binding pythonPackages.pyyaml rospy rqt-console rqt-gui rqt-gui-py rqt-py-common ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

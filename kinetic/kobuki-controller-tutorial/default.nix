@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, std-msgs, catkin, nodelet, roscpp, kobuki-msgs, yocs-controllers }:
+{ lib, buildRosPackage, fetchurl, catkin, kobuki-msgs, nodelet, pluginlib, roscpp, std-msgs, yocs-controllers }:
 buildRosPackage {
   pname = "ros-kinetic-kobuki-controller-tutorial";
   version = "0.7.6";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib std-msgs nodelet roscpp kobuki-msgs yocs-controllers ];
-  propagatedBuildInputs = [ pluginlib std-msgs nodelet roscpp kobuki-msgs yocs-controllers ];
+  propagatedBuildInputs = [ kobuki-msgs nodelet pluginlib roscpp std-msgs yocs-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, hrpsys-ros-bridge, moveit-commander, tf, roslib, catkin, roslint, rosbash, unzip, openni2-launch, control-msgs, gnuplot, roslang, rospy, rosbuild, mk }:
+{ lib, buildRosPackage, fetchurl, catkin, control-msgs, gnuplot, hrpsys-ros-bridge, mk, moveit-commander, openni2-launch, rosbash, rosbuild, roslang, roslib, roslint, rospy, tf, unzip }:
 buildRosPackage {
   pname = "ros-kinetic-hironx-ros-bridge";
   version = "2.1.1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hrpsys-ros-bridge mk roslib roslint rosbash unzip gnuplot roslang rosbuild control-msgs ];
-  propagatedBuildInputs = [ hrpsys-ros-bridge moveit-commander tf roslib rosbash openni2-launch gnuplot roslang rospy control-msgs ];
+  buildInputs = [ mk rosbuild roslint unzip ];
+  propagatedBuildInputs = [ control-msgs gnuplot hrpsys-ros-bridge moveit-commander openni2-launch rosbash roslang roslib rospy tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

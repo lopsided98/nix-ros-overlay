@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rostest, roscpp, rosunit }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-hardware-interface";
   version = "0.15.1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -196,6 +196,8 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
+ cross-compile = self.callPackage ./cross-compile {};
+
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
@@ -449,6 +451,8 @@ self: super: {
  launch = self.callPackage ./launch {};
 
  launch-ros = self.callPackage ./launch-ros {};
+
+ launch-ros-sandbox = self.callPackage ./launch-ros-sandbox {};
 
  launch-testing = self.callPackage ./launch-testing {};
 
@@ -797,6 +801,8 @@ self: super: {
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 
  rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
+
+ rosbridge-server = self.callPackage ./rosbridge-server {};
 
  rosbridge-suite = self.callPackage ./rosbridge-suite {};
 

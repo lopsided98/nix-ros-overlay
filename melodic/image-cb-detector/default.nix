@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, message-filters, geometry-msgs, std-msgs, actionlib, catkin, image-transport, calibration-msgs, cv-bridge, actionlib-msgs, roscpp, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, calibration-msgs, catkin, cv-bridge, geometry-msgs, image-transport, message-filters, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-image-cb-detector";
   version = "0.10.14";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs actionlib image-transport calibration-msgs cv-bridge actionlib-msgs roscpp message-generation ];
-  propagatedBuildInputs = [ sensor-msgs message-filters geometry-msgs std-msgs actionlib image-transport calibration-msgs cv-bridge actionlib-msgs roscpp message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs calibration-msgs cv-bridge geometry-msgs image-transport message-filters message-runtime roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tracetools-read, std-srvs, std-msgs, launch-ros, ament-lint-common, ament-cmake, pythonPackages, tracetools-launch, tracetools, ament-cmake-pytest, pkg-config, rclcpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch-ros, pkg-config, pythonPackages, rclcpp, std-msgs, std-srvs, tracetools, tracetools-launch, tracetools-read }:
 buildRosPackage {
   pname = "ros-dashing-tracetools-test";
   version = "0.2.8-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs std-srvs rclcpp ];
-  checkInputs = [ tracetools-read launch-ros ament-lint-common tracetools ament-cmake-pytest tracetools-launch pythonPackages.pytest ament-lint-auto ];
-  propagatedBuildInputs = [ std-msgs std-srvs rclcpp ];
-  nativeBuildInputs = [ pkg-config ament-cmake ];
+  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common launch-ros pythonPackages.pytest tracetools tracetools-launch tracetools-read ];
+  propagatedBuildInputs = [ rclcpp std-msgs std-srvs ];
+  nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {
     description = ''Testing utilities and tests for the tracetools package.'';

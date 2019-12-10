@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-interface, hardware-interface, pluginlib, catkin, industrial-robot-status-interface, industrial-msgs, realtime-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-interface, hardware-interface, industrial-msgs, industrial-robot-status-interface, pluginlib, realtime-tools }:
 buildRosPackage {
   pname = "ros-melodic-industrial-robot-status-controller";
   version = "0.1.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ controller-interface hardware-interface pluginlib industrial-robot-status-interface industrial-msgs realtime-tools ];
-  propagatedBuildInputs = [ controller-interface hardware-interface pluginlib industrial-msgs realtime-tools ];
+  buildInputs = [ industrial-robot-status-interface ];
+  propagatedBuildInputs = [ controller-interface hardware-interface industrial-msgs pluginlib realtime-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

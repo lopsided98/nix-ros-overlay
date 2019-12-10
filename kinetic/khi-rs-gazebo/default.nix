@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros, catkin, gazebo-ros-control }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros, gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-kinetic-khi-rs-gazebo";
   version = "1.1.2-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros gazebo-ros-control ];
   propagatedBuildInputs = [ gazebo-ros gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 

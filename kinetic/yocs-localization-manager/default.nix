@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, ar-track-alvar, std-msgs, actionlib, tf, catkin, roslint, yocs-msgs, ar-track-alvar-msgs, rospy }:
+{ lib, buildRosPackage, fetchurl, actionlib, ar-track-alvar, ar-track-alvar-msgs, catkin, dynamic-reconfigure, geometry-msgs, roslint, rospy, std-msgs, tf, yocs-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-yocs-localization-manager";
   version = "0.8.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslint ];
-  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure ar-track-alvar std-msgs actionlib tf yocs-msgs ar-track-alvar-msgs rospy ];
+  propagatedBuildInputs = [ actionlib ar-track-alvar ar-track-alvar-msgs dynamic-reconfigure geometry-msgs rospy std-msgs tf yocs-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosunit, catkin, roslint }:
+{ lib, buildRosPackage, fetchurl, catkin, roslint, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-nav-grid";
   version = "0.2.5-r1";

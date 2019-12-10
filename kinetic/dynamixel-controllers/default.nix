@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, message-generation, diagnostic-msgs, dynamixel-msgs, std-msgs, actionlib, catkin, dynamixel-driver, rospy, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, control-msgs, diagnostic-msgs, dynamixel-driver, dynamixel-msgs, message-generation, rospy, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dynamixel-controllers";
   version = "0.4.1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ trajectory-msgs diagnostic-msgs dynamixel-msgs std-msgs actionlib dynamixel-driver rospy control-msgs ];
+  propagatedBuildInputs = [ actionlib control-msgs diagnostic-msgs dynamixel-driver dynamixel-msgs rospy std-msgs trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

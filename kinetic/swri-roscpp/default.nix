@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, dynamic-reconfigure, std-msgs, std-srvs, catkin, rosunit, marti-common-msgs, roscpp, gtest, message-runtime, nav-msgs, rostest, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, gtest, marti-common-msgs, message-generation, message-runtime, nav-msgs, roscpp, rostest, rosunit, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-swri-roscpp";
   version = "2.11.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure std-msgs std-srvs marti-common-msgs roscpp nav-msgs diagnostic-updater ];
-  checkInputs = [ message-runtime rosunit gtest message-generation rostest ];
-  propagatedBuildInputs = [ dynamic-reconfigure std-msgs std-srvs marti-common-msgs roscpp nav-msgs diagnostic-updater ];
+  checkInputs = [ gtest message-generation message-runtime rostest rosunit ];
+  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure marti-common-msgs nav-msgs roscpp std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

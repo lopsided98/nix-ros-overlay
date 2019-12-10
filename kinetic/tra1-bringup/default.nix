@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, controller-manager, tra1-description, robot-state-publisher, position-controllers, tf, catkin, tra1-moveit-config, joint-trajectory-controller, minas-control, roslaunch, rostest, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager, joint-state-controller, joint-trajectory-controller, minas-control, position-controllers, robot-state-publisher, roslaunch, rostest, tf, tra1-description, tra1-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-tra1-bringup";
   version = "1.0.10";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ tra1-description controller-manager robot-state-publisher position-controllers tf tra1-moveit-config joint-trajectory-controller minas-control joint-state-controller ];
+  propagatedBuildInputs = [ controller-manager joint-state-controller joint-trajectory-controller minas-control position-controllers robot-state-publisher tf tra1-description tra1-moveit-config ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

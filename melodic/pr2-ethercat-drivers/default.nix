@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ethercat-hardware, catkin, fingertip-pressure }:
+{ lib, buildRosPackage, fetchurl, catkin, ethercat-hardware, fingertip-pressure }:
 buildRosPackage {
   pname = "ros-melodic-pr2-ethercat-drivers";
   version = "1.8.19-r1";

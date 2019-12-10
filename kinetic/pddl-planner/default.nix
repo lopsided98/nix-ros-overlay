@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, actionlib, time, pddl-msgs, ff, downward, rospy, lpg-planner, ffha }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, downward, ff, ffha, lpg-planner, pddl-msgs, rospy, time }:
 buildRosPackage {
   pname = "ros-kinetic-pddl-planner";
   version = "0.1.10";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy actionlib pddl-msgs ];
-  propagatedBuildInputs = [ actionlib time downward ff pddl-msgs rospy lpg-planner ffha ];
+  propagatedBuildInputs = [ actionlib downward ff ffha lpg-planner pddl-msgs rospy time ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

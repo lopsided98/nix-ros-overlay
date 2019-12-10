@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, boost, nodelet-topic-tools, dynamic-reconfigure, catkin, image-transport, cv-bridge, nodelet, roscpp, camera-calibration-parsers, rostest, image-geometry }:
+{ lib, buildRosPackage, fetchurl, boost, camera-calibration-parsers, catkin, cv-bridge, dynamic-reconfigure, image-geometry, image-transport, nodelet, nodelet-topic-tools, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-image-proc";
   version = "1.12.23";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost nodelet-topic-tools sensor-msgs dynamic-reconfigure image-transport cv-bridge nodelet roscpp image-geometry ];
+  buildInputs = [ boost ];
   checkInputs = [ camera-calibration-parsers rostest ];
-  propagatedBuildInputs = [ sensor-msgs nodelet-topic-tools dynamic-reconfigure image-transport cv-bridge nodelet roscpp image-geometry ];
+  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-geometry image-transport nodelet nodelet-topic-tools roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

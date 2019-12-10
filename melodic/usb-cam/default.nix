@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, ffmpeg, std-msgs, std-srvs, camera-info-manager, catkin, image-transport, roscpp, v4l_utils }:
+{ lib, buildRosPackage, fetchurl, camera-info-manager, catkin, ffmpeg, image-transport, roscpp, sensor-msgs, std-msgs, std-srvs, v4l_utils }:
 buildRosPackage {
   pname = "ros-melodic-usb-cam";
   version = "0.3.6";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs ffmpeg std-msgs camera-info-manager std-srvs image-transport roscpp ];
-  propagatedBuildInputs = [ sensor-msgs ffmpeg std-msgs camera-info-manager std-srvs image-transport roscpp v4l_utils ];
+  propagatedBuildInputs = [ camera-info-manager ffmpeg image-transport roscpp sensor-msgs std-msgs std-srvs v4l_utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

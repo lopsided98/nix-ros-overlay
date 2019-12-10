@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, urdf, pluginlib, tf, rosunit, image-transport, eigen, object-recognition-msgs, sensor-msgs, octomap, rosconsole, moveit-core, message-filters, catkin, cv-bridge, roscpp, libGLU, libGL, freeglut, moveit-msgs, glew, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, eigen, freeglut, glew, image-transport, libGL, libGLU, message-filters, moveit-core, moveit-msgs, object-recognition-msgs, octomap, pluginlib, rosconsole, roscpp, rosunit, sensor-msgs, tf, tf-conversions, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-perception";
   version = "0.9.17-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ urdf pluginlib tf image-transport eigen object-recognition-msgs sensor-msgs octomap rosconsole moveit-core message-filters cv-bridge roscpp libGLU libGL freeglut moveit-msgs glew tf-conversions ];
+  buildInputs = [ eigen object-recognition-msgs ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ moveit-core sensor-msgs message-filters urdf octomap pluginlib tf libGLU libGL image-transport freeglut cv-bridge moveit-msgs roscpp glew tf-conversions rosconsole ];
+  propagatedBuildInputs = [ cv-bridge freeglut glew image-transport libGL libGLU message-filters moveit-core moveit-msgs octomap pluginlib rosconsole roscpp sensor-msgs tf tf-conversions urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-planners-ompl, pr2eus, roseus, pr2-moveit-config, catkin, pr2-gazebo, pr2-moveit-plugins, moveit-msgs, rostest, control-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, control-msgs, moveit-msgs, moveit-planners-ompl, pr2-gazebo, pr2-moveit-config, pr2-moveit-plugins, pr2eus, roseus, rostest }:
 buildRosPackage {
   pname = "ros-melodic-pr2eus-moveit";
   version = "0.3.14-r3";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2eus moveit-msgs roseus control-msgs ];
-  checkInputs = [ moveit-planners-ompl pr2-moveit-config pr2-gazebo pr2-moveit-plugins rostest ];
-  propagatedBuildInputs = [ pr2eus moveit-msgs roseus control-msgs ];
+  checkInputs = [ moveit-planners-ompl pr2-gazebo pr2-moveit-config pr2-moveit-plugins rostest ];
+  propagatedBuildInputs = [ control-msgs moveit-msgs pr2eus roseus ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

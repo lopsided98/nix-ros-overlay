@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, raw-description, cob-calibration-data, rostest, joint-state-controller, laser-filters, robot-state-publisher, position-controllers, joint-trajectory-controller, cob-supported-robots, joint-state-publisher, diagnostic-aggregator, catkin, costmap-2d, roslaunch, cob-omni-drive-controller, rviz, cob-description, velocity-controllers }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-calibration-data, cob-description, cob-omni-drive-controller, cob-supported-robots, costmap-2d, diagnostic-aggregator, joint-state-controller, joint-state-publisher, joint-trajectory-controller, laser-filters, position-controllers, raw-description, robot-state-publisher, roslaunch, rostest, rviz, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-melodic-cob-hardware-config";
   version = "0.7.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cob-supported-robots roslaunch rostest ];
-  propagatedBuildInputs = [ diagnostic-aggregator joint-state-publisher xacro laser-filters robot-state-publisher raw-description position-controllers velocity-controllers cob-omni-drive-controller cob-calibration-data costmap-2d rviz cob-description joint-trajectory-controller roslaunch rostest joint-state-controller ];
+  buildInputs = [ cob-supported-robots ];
+  propagatedBuildInputs = [ cob-calibration-data cob-description cob-omni-drive-controller costmap-2d diagnostic-aggregator joint-state-controller joint-state-publisher joint-trajectory-controller laser-filters position-controllers raw-description robot-state-publisher roslaunch rostest rviz velocity-controllers xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

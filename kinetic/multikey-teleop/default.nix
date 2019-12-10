@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, pythonPackages, catkin, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-multikey-teleop";
   version = "1.0.0";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ pythonPackages.xlib rospy geometry-msgs std-msgs ];
+  propagatedBuildInputs = [ geometry-msgs pythonPackages.xlib rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

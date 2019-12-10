@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, urdf, pluginlib, tf, tf2, nav-msgs, sensor-msgs, cob-base-controller-utils, dynamic-reconfigure, std-msgs, std-srvs, catkin, realtime-tools, roscpp, angles, message-generation, boost, controller-interface, hardware-interface }:
+{ lib, buildRosPackage, fetchurl, angles, boost, catkin, cob-base-controller-utils, controller-interface, dynamic-reconfigure, geometry-msgs, hardware-interface, message-generation, nav-msgs, pluginlib, realtime-tools, roscpp, sensor-msgs, std-msgs, std-srvs, tf, tf2, urdf }:
 buildRosPackage {
   pname = "ros-melodic-cob-omni-drive-controller";
   version = "0.8.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs geometry-msgs controller-interface urdf cob-base-controller-utils hardware-interface pluginlib std-msgs std-srvs tf dynamic-reconfigure roscpp realtime-tools tf2 angles message-generation nav-msgs ];
-  propagatedBuildInputs = [ sensor-msgs boost geometry-msgs controller-interface urdf dynamic-reconfigure hardware-interface pluginlib std-msgs std-srvs tf cob-base-controller-utils roscpp realtime-tools tf2 angles nav-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ angles boost cob-base-controller-utils controller-interface dynamic-reconfigure geometry-msgs hardware-interface nav-msgs pluginlib realtime-tools roscpp sensor-msgs std-msgs std-srvs tf tf2 urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

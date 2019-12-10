@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtle-tf, turtle-tf2, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, turtle-tf, turtle-tf2 }:
 buildRosPackage {
   pname = "ros-melodic-geometry-tutorials";
   version = "0.2.2";

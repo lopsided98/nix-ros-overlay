@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, flexbe-input, flexbe-core, flexbe-testing, flexbe-mirror, catkin, flexbe-widget, flexbe-states, flexbe-msgs, flexbe-onboard }:
+{ lib, buildRosPackage, fetchurl, catkin, flexbe-core, flexbe-input, flexbe-mirror, flexbe-msgs, flexbe-onboard, flexbe-states, flexbe-testing, flexbe-widget }:
 buildRosPackage {
   pname = "ros-kinetic-flexbe-behavior-engine";
   version = "1.2.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ flexbe-input flexbe-core flexbe-testing flexbe-mirror flexbe-widget flexbe-states flexbe-msgs flexbe-onboard ];
+  propagatedBuildInputs = [ flexbe-core flexbe-input flexbe-mirror flexbe-msgs flexbe-onboard flexbe-states flexbe-testing flexbe-widget ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

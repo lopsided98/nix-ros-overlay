@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, sensor-msgs, geometry-msgs, dynamic-reconfigure, std-msgs, catkin, camera-info-manager-py, image-transport, codec-image-transport, cv-bridge, rospy, message-runtime, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, camera-info-manager-py, catkin, codec-image-transport, cv-bridge, dynamic-reconfigure, geometry-msgs, image-transport, message-generation, message-runtime, nav-msgs, rospy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-tello-driver";
   version = "0.3.1-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure std-msgs camera-info-manager-py codec-image-transport image-transport cv-bridge rospy message-generation nav-msgs ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs dynamic-reconfigure std-msgs camera-info-manager-py codec-image-transport image-transport cv-bridge rospy message-runtime nav-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ camera-info-manager-py codec-image-transport cv-bridge dynamic-reconfigure geometry-msgs image-transport message-runtime nav-msgs rospy sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

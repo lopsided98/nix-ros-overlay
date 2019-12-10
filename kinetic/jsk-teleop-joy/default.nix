@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, jsk-rviz-plugins, diagnostic-msgs, interactive-markers, joy-mouse, pythonPackages, tf, view-controller-msgs, image-view2, catkin, jsk-footstep-msgs, visualization-msgs, ps3joy, jsk-interactive-marker, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, diagnostic-updater, image-view2, interactive-markers, joy-mouse, jsk-footstep-msgs, jsk-interactive-marker, jsk-rviz-plugins, ps3joy, pythonPackages, tf, view-controller-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-teleop-joy";
   version = "0.1.14";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ jsk-rviz-plugins diagnostic-msgs interactive-markers view-controller-msgs tf joy-mouse jsk-footstep-msgs visualization-msgs ps3joy jsk-interactive-marker diagnostic-updater ];
-  propagatedBuildInputs = [ jsk-rviz-plugins diagnostic-msgs pythonPackages.pygame interactive-markers view-controller-msgs tf image-view2 joy-mouse jsk-footstep-msgs visualization-msgs ps3joy jsk-interactive-marker diagnostic-updater ];
+  propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater image-view2 interactive-markers joy-mouse jsk-footstep-msgs jsk-interactive-marker jsk-rviz-plugins ps3joy pythonPackages.pygame tf view-controller-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

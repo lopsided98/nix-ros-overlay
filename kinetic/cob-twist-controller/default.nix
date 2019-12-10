@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, geometry-msgs, urdf, eigen-conversions, pluginlib, tf, eigen, cob-srvs, nav-msgs, kdl-parser, sensor-msgs, dynamic-reconfigure, robot-state-publisher, cmake-modules, orocos-kdl, cob-control-msgs, std-msgs, catkin, roscpp, topic-tools, rospy, cob-frame-tracker, kdl-conversions, trajectory-msgs, boost, roslint, rviz, visualization-msgs, tf-conversions }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, cob-control-msgs, cob-frame-tracker, cob-srvs, dynamic-reconfigure, eigen, eigen-conversions, geometry-msgs, kdl-conversions, kdl-parser, nav-msgs, orocos-kdl, pluginlib, robot-state-publisher, roscpp, roslint, rospy, rviz, sensor-msgs, std-msgs, tf, tf-conversions, topic-tools, trajectory-msgs, urdf, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-cob-twist-controller";
   version = "0.7.9-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs urdf eigen-conversions pluginlib tf eigen cob-srvs nav-msgs kdl-parser sensor-msgs dynamic-reconfigure cmake-modules orocos-kdl cob-control-msgs std-msgs roscpp kdl-conversions trajectory-msgs boost roslint visualization-msgs tf-conversions ];
-  propagatedBuildInputs = [ xacro geometry-msgs urdf eigen-conversions pluginlib tf eigen cob-srvs nav-msgs kdl-parser sensor-msgs dynamic-reconfigure robot-state-publisher cmake-modules orocos-kdl cob-control-msgs std-msgs roscpp topic-tools cob-frame-tracker rospy kdl-conversions trajectory-msgs boost rviz visualization-msgs tf-conversions ];
+  buildInputs = [ roslint ];
+  propagatedBuildInputs = [ boost cmake-modules cob-control-msgs cob-frame-tracker cob-srvs dynamic-reconfigure eigen eigen-conversions geometry-msgs kdl-conversions kdl-parser nav-msgs orocos-kdl pluginlib robot-state-publisher roscpp rospy rviz sensor-msgs std-msgs tf tf-conversions topic-tools trajectory-msgs urdf visualization-msgs xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

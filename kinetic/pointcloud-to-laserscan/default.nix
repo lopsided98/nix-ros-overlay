@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, catkin, tf2-sensor-msgs, tf2, nodelet, roscpp, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, message-filters, nodelet, roscpp, sensor-msgs, tf2, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pointcloud-to-laserscan";
   version = "1.3.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters tf2-sensor-msgs roscpp nodelet tf2 tf2-ros ];
-  propagatedBuildInputs = [ sensor-msgs message-filters tf2 tf2-sensor-msgs nodelet roscpp tf2-ros ];
+  propagatedBuildInputs = [ message-filters nodelet roscpp sensor-msgs tf2 tf2-ros tf2-sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

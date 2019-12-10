@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, moveit-ros-warehouse, pluginlib, catkin, roscpp, moveit-ros-planning }:
+{ lib, buildRosPackage, fetchurl, catkin, moveit-ros-planning, moveit-ros-warehouse, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-benchmarks";
   version = "0.9.17-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib moveit-ros-warehouse roscpp moveit-ros-planning ];
-  propagatedBuildInputs = [ pluginlib moveit-ros-planning roscpp moveit-ros-warehouse ];
+  propagatedBuildInputs = [ moveit-ros-planning moveit-ros-warehouse pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

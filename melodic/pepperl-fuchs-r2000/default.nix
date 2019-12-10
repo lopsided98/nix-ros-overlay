@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, sensor-msgs, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pepperl-fuchs-r2000";
   version = "0.1.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs sensor-msgs roscpp ];
-  propagatedBuildInputs = [ std-msgs sensor-msgs roscpp ];
+  propagatedBuildInputs = [ roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

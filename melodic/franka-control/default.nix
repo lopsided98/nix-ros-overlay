@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, controller-manager, pluginlib, franka-gripper, tf, franka-hw, actionlib-msgs, tf2-msgs, sensor-msgs, libfranka, robot-state-publisher, franka-msgs, joint-state-publisher, catkin, realtime-tools, roscpp, message-generation, controller-interface, actionlib, franka-description, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, controller-interface, controller-manager, franka-description, franka-gripper, franka-hw, franka-msgs, geometry-msgs, joint-state-publisher, libfranka, message-generation, message-runtime, pluginlib, realtime-tools, robot-state-publisher, roscpp, sensor-msgs, tf, tf2-msgs }:
 buildRosPackage {
   pname = "ros-melodic-franka-control";
   version = "0.6.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs controller-interface controller-manager libfranka pluginlib actionlib tf franka-hw realtime-tools tf2-msgs actionlib-msgs franka-msgs roscpp message-generation ];
-  propagatedBuildInputs = [ geometry-msgs controller-manager pluginlib franka-gripper tf franka-hw actionlib-msgs tf2-msgs sensor-msgs libfranka robot-state-publisher franka-msgs joint-state-publisher realtime-tools roscpp controller-interface actionlib franka-description message-runtime ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs controller-interface controller-manager franka-description franka-gripper franka-hw franka-msgs geometry-msgs joint-state-publisher libfranka message-runtime pluginlib realtime-tools robot-state-publisher roscpp sensor-msgs tf tf2-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

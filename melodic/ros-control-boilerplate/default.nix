@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, trajectory-msgs, sensor-msgs, control-toolbox, joint-limits-interface, controller-manager, std-msgs, urdf, hardware-interface, catkin, actionlib, rosparam-shortcuts, cmake-modules, transmission-interface, roscpp, gflags, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, cmake-modules, control-msgs, control-toolbox, controller-manager, gflags, hardware-interface, joint-limits-interface, roscpp, rosparam-shortcuts, sensor-msgs, std-msgs, trajectory-msgs, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-melodic-ros-control-boilerplate";
   version = "0.5.0-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs sensor-msgs controller-manager urdf hardware-interface std-msgs joint-limits-interface control-toolbox actionlib rosparam-shortcuts cmake-modules transmission-interface roscpp gflags control-msgs ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs controller-manager urdf hardware-interface std-msgs joint-limits-interface control-toolbox actionlib rosparam-shortcuts transmission-interface roscpp control-msgs ];
+  buildInputs = [ cmake-modules gflags ];
+  propagatedBuildInputs = [ actionlib control-msgs control-toolbox controller-manager hardware-interface joint-limits-interface roscpp rosparam-shortcuts sensor-msgs std-msgs trajectory-msgs transmission-interface urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

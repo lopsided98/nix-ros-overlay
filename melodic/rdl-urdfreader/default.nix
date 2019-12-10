@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, urdf, catkin, roslib, roscpp, gtest, lcov, rdl-dynamics, rdl-cmake }:
+{ lib, buildRosPackage, fetchurl, catkin, gtest, lcov, rdl-cmake, rdl-dynamics, roscpp, roslib, urdf }:
 buildRosPackage {
   pname = "ros-melodic-rdl-urdfreader";
   version = "3.2.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ urdf roslib roscpp rdl-cmake rdl-dynamics ];
   checkInputs = [ gtest lcov ];
-  propagatedBuildInputs = [ urdf roslib roscpp rdl-cmake rdl-dynamics ];
+  propagatedBuildInputs = [ rdl-cmake rdl-dynamics roscpp roslib urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

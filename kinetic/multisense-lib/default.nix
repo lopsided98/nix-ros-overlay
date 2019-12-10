@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libpng12, cv-bridge, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, libpng12 }:
 buildRosPackage {
   pname = "ros-kinetic-multisense-lib";
   version = "4.0.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libpng12 cv-bridge ];
-  propagatedBuildInputs = [ libpng12 cv-bridge ];
+  propagatedBuildInputs = [ cv-bridge libpng12 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

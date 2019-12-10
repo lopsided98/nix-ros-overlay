@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, tf, rtt, rtt-geometry-msgs, rtt-roscomm }:
+{ lib, buildRosPackage, fetchurl, catkin, rtt, rtt-geometry-msgs, rtt-roscomm, tf }:
 buildRosPackage {
   pname = "ros-kinetic-rtt-tf";
   version = "2.9.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rtt rtt-roscomm tf rtt-geometry-msgs ];
-  propagatedBuildInputs = [ rtt rtt-roscomm tf rtt-geometry-msgs ];
+  propagatedBuildInputs = [ rtt rtt-geometry-msgs rtt-roscomm tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, turtlesim, geometry-msgs, std-msgs, actionlib, catkin, actionlib-msgs, roscpp, angles, message-runtime, rosconsole }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, angles, catkin, geometry-msgs, message-generation, message-runtime, rosconsole, roscpp, std-msgs, turtlesim }:
 buildRosPackage {
   pname = "ros-kinetic-turtle-actionlib";
   version = "0.1.10";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ turtlesim geometry-msgs std-msgs actionlib actionlib-msgs roscpp angles message-generation rosconsole ];
-  propagatedBuildInputs = [ turtlesim geometry-msgs std-msgs actionlib actionlib-msgs roscpp angles message-runtime rosconsole ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs angles geometry-msgs message-runtime rosconsole roscpp std-msgs turtlesim ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

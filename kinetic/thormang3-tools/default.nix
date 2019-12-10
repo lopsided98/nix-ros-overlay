@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, thormang3-action-editor, thormang3-offset-tuner-server, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, thormang3-action-editor, thormang3-offset-tuner-server }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-tools";
   version = "0.2.0";

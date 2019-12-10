@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, key-teleop, joy-teleop, teleop-tools-msgs, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, joy-teleop, key-teleop, teleop-tools-msgs }:
 buildRosPackage {
   pname = "ros-dashing-teleop-tools";
   version = "1.0.1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ joy-teleop teleop-tools-msgs key-teleop ];
+  propagatedBuildInputs = [ joy-teleop key-teleop teleop-tools-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

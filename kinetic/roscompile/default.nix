@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-introspection, geometry-msgs, pluginlib, tf, catkin, roslint }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pluginlib, ros-introspection, roslint, tf }:
 buildRosPackage {
   pname = "ros-kinetic-roscompile";
   version = "1.0.1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ros-introspection catkin ];
-  checkInputs = [ tf pluginlib geometry-msgs roslint ];
-  propagatedBuildInputs = [ ros-introspection catkin ];
+  checkInputs = [ geometry-msgs pluginlib roslint tf ];
+  propagatedBuildInputs = [ catkin ros-introspection ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

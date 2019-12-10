@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, loki-demos, catkin, loki-nav, loki-teleop, loki-bringup, loki-description }:
+{ lib, buildRosPackage, fetchurl, catkin, loki-bringup, loki-demos, loki-description, loki-nav, loki-teleop }:
 buildRosPackage {
   pname = "ros-kinetic-loki-robot";
   version = "0.0.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ loki-demos loki-nav loki-teleop loki-bringup loki-description ];
+  propagatedBuildInputs = [ loki-bringup loki-demos loki-description loki-nav loki-teleop ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

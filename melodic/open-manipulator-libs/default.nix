@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-manipulator, cmake-modules, catkin, eigen, roscpp, dynamixel-workbench-toolbox }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamixel-workbench-toolbox, eigen, robotis-manipulator, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-open-manipulator-libs";
   version = "2.0.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-manipulator cmake-modules eigen roscpp dynamixel-workbench-toolbox ];
-  propagatedBuildInputs = [ robotis-manipulator cmake-modules eigen roscpp dynamixel-workbench-toolbox ];
+  propagatedBuildInputs = [ cmake-modules dynamixel-workbench-toolbox eigen robotis-manipulator roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

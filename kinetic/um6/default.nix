@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-runtime, serial, catkin, roslint, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, roscpp, roslint, sensor-msgs, serial }:
 buildRosPackage {
   pname = "ros-kinetic-um6";
   version = "1.1.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs serial roslint roscpp message-generation ];
-  propagatedBuildInputs = [ sensor-msgs message-runtime serial roscpp ];
+  buildInputs = [ message-generation roslint ];
+  propagatedBuildInputs = [ message-runtime roscpp sensor-msgs serial ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

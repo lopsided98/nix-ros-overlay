@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, git, boost, catkin, cacert, openssl, scons, roscpp }:
+{ lib, buildRosPackage, fetchurl, boost, cacert, catkin, git, openssl, roscpp, scons }:
 buildRosPackage {
   pname = "ros-kinetic-libmongocxx-ros";
   version = "0.4.5-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ git boost cacert openssl roscpp ];
+  buildInputs = [ cacert git ];
   propagatedBuildInputs = [ boost openssl roscpp ];
-  nativeBuildInputs = [ scons catkin ];
+  nativeBuildInputs = [ catkin scons ];
 
   meta = {
     description = ''A wrapper for the libmongocxx for mongodb_store'';

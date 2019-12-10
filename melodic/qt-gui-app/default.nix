@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qt-gui, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, qt-gui }:
 buildRosPackage {
   pname = "ros-melodic-qt-gui-app";
   version = "0.3.16-r1";

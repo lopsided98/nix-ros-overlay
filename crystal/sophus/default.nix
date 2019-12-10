@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eigen, cmake }:
+{ lib, buildRosPackage, fetchurl, cmake, eigen }:
 buildRosPackage {
   pname = "ros-crystal-sophus";
   version = "1.0.2";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ eigen ];
   propagatedBuildInputs = [ eigen ];
   nativeBuildInputs = [ cmake ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, ament-cmake-lint-cmake, geometry-msgs, rviz-ogre-vendor, ament-cmake-cpplint, ament-cmake, rviz-default-plugins, ament-cmake-uncrustify, rviz-common, qt5, ament-cmake-cppcheck, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-lint-cmake, ament-cmake-uncrustify, geometry-msgs, qt5, rclcpp, rviz-common, rviz-default-plugins, rviz-ogre-vendor, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-rviz2";
   version = "6.1.4-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ qt5.qtbase rviz-common rviz-ogre-vendor ];
-  checkInputs = [ sensor-msgs ament-cmake-lint-cmake geometry-msgs ament-cmake-cpplint ament-cmake-uncrustify ament-cmake-cppcheck rclcpp ];
-  propagatedBuildInputs = [ rviz-default-plugins rviz-common rviz-ogre-vendor ];
+  buildInputs = [ qt5.qtbase ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-lint-cmake ament-cmake-uncrustify geometry-msgs rclcpp sensor-msgs ];
+  propagatedBuildInputs = [ rviz-common rviz-default-plugins rviz-ogre-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

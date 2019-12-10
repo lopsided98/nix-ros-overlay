@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-mechanism-model, robot-mechanism-controllers, actionlib, catkin, pr2-mechanism-controllers, actionlib-msgs, roscpp, pr2-controllers-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, pr2-controllers-msgs, pr2-mechanism-controllers, pr2-mechanism-model, robot-mechanism-controllers, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-pr2-gripper-action";
   version = "1.10.17-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-mechanism-model robot-mechanism-controllers actionlib pr2-mechanism-controllers actionlib-msgs roscpp pr2-controllers-msgs ];
-  propagatedBuildInputs = [ pr2-mechanism-model robot-mechanism-controllers actionlib pr2-mechanism-controllers actionlib-msgs roscpp pr2-controllers-msgs ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs pr2-controllers-msgs pr2-mechanism-controllers pr2-mechanism-model robot-mechanism-controllers roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

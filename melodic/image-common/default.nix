@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-info-manager, catkin, image-transport, polled-camera, camera-calibration-parsers }:
+{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, camera-info-manager, catkin, image-transport, polled-camera }:
 buildRosPackage {
   pname = "ros-melodic-image-common";
   version = "1.11.13";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ image-transport camera-info-manager camera-calibration-parsers polled-camera ];
+  propagatedBuildInputs = [ camera-calibration-parsers camera-info-manager image-transport polled-camera ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-generation, geometry-msgs, pr2-msgs, std-msgs, catkin, rospy, visualization-msgs, message-runtime, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, pr2-msgs, rospy, rostest, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-fingertip-pressure";
   version = "1.8.18-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation geometry-msgs rostest ];
-  propagatedBuildInputs = [ geometry-msgs pr2-msgs std-msgs rospy visualization-msgs message-runtime ];
+  buildInputs = [ message-generation rostest ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime pr2-msgs rospy std-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

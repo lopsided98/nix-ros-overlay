@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, rosbag, catkin, roslib, roscpp, can-msgs, rostest }:
+{ lib, buildRosPackage, fetchurl, can-msgs, catkin, rosbag, roscpp, roslib, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dataspeed-can-tools";
   version = "1.0.12";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs rosbag roslib roscpp can-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ std-msgs rosbag roslib roscpp can-msgs ];
+  propagatedBuildInputs = [ can-msgs rosbag roscpp roslib std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

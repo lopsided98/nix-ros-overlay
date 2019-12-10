@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost console-bridge ];
   propagatedBuildInputs = [ boost console-bridge ];
   nativeBuildInputs = [ catkin ];
 

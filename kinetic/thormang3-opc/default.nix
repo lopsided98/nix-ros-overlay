@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, thormang3-navigation, catkin, thormang3-action-script-player, thormang3-demo, thormang3-foot-step-generator, thormang3-offset-tuner-client }:
+{ lib, buildRosPackage, fetchurl, catkin, thormang3-action-script-player, thormang3-demo, thormang3-foot-step-generator, thormang3-navigation, thormang3-offset-tuner-client }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-opc";
   version = "0.3.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ thormang3-navigation thormang3-action-script-player thormang3-demo thormang3-foot-step-generator thormang3-offset-tuner-client ];
+  propagatedBuildInputs = [ thormang3-action-script-player thormang3-demo thormang3-foot-step-generator thormang3-navigation thormang3-offset-tuner-client ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

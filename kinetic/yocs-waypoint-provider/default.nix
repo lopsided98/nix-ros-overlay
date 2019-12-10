@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, libyamlcpp, visualization-msgs, roscpp, yocs-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, libyamlcpp, roscpp, visualization-msgs, yocs-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-yocs-waypoint-provider";
   version = "0.8.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs libyamlcpp visualization-msgs roscpp yocs-msgs ];
-  propagatedBuildInputs = [ geometry-msgs libyamlcpp visualization-msgs roscpp yocs-msgs ];
+  propagatedBuildInputs = [ geometry-msgs libyamlcpp roscpp visualization-msgs yocs-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

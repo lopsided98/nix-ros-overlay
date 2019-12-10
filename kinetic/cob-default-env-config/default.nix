@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roslaunch, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-cob-default-env-config";
   version = "0.6.10-r1";

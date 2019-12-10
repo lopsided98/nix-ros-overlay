@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazeboSimulator, rosdoc-lite, catkin, quaternion-operation, geographic-msgs, eigen, roscpp, geodesy, gazebo-ros, nmea-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, gazebo-ros, gazeboSimulator, geodesy, geographic-msgs, nmea-msgs, quaternion-operation, roscpp, rosdoc-lite }:
 buildRosPackage {
   pname = "ros-kinetic-nmea-gps-plugin";
   version = "0.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazeboSimulator.gazebo quaternion-operation geographic-msgs eigen roscpp geodesy gazebo-ros nmea-msgs ];
-  propagatedBuildInputs = [ rosdoc-lite gazeboSimulator.gazebo quaternion-operation geographic-msgs eigen roscpp geodesy gazebo-ros nmea-msgs ];
+  propagatedBuildInputs = [ eigen gazebo-ros gazeboSimulator.gazebo geodesy geographic-msgs nmea-msgs quaternion-operation roscpp rosdoc-lite ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

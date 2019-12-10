@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, catkin, roscpp, geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-robot-pose-publisher";
   version = "0.2.4";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf geometry-msgs roscpp ];
-  propagatedBuildInputs = [ tf geometry-msgs roscpp ];
+  propagatedBuildInputs = [ geometry-msgs roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ecl-utilities, ecl-containers, nanomsg, ecl-build }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-build, ecl-containers, ecl-utilities, nanomsg }:
 buildRosPackage {
   pname = "ros-kinetic-mm-messages";
   version = "0.2.4";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-utilities ecl-containers nanomsg ecl-build ];
-  propagatedBuildInputs = [ ecl-utilities ecl-containers nanomsg ecl-build ];
+  propagatedBuildInputs = [ ecl-build ecl-containers ecl-utilities nanomsg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

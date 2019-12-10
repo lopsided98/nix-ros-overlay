@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, nodelet, roscpp, roch-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, nodelet, roch-msgs, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-roch-sensorpc";
   version = "2.0.15";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs roch-msgs nodelet roscpp ];
-  propagatedBuildInputs = [ sensor-msgs roch-msgs nodelet roscpp ];
+  propagatedBuildInputs = [ nodelet roch-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

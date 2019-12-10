@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pr2-mechanism-model, diagnostic-msgs, urdf, std-msgs, std-srvs, catkin, roscpp, angles, rospy, rostest, pr2-mechanism-msgs, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, diagnostic-msgs, diagnostic-updater, pr2-mechanism-model, pr2-mechanism-msgs, roscpp, rospy, rostest, std-msgs, std-srvs, urdf }:
 buildRosPackage {
   pname = "ros-melodic-pr2-mechanism-diagnostics";
   version = "1.8.18";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pr2-mechanism-model diagnostic-msgs urdf std-msgs std-srvs roscpp angles rostest pr2-mechanism-msgs diagnostic-updater ];
-  propagatedBuildInputs = [ pr2-mechanism-model diagnostic-msgs urdf std-msgs std-srvs roscpp angles rospy pr2-mechanism-msgs diagnostic-updater ];
+  buildInputs = [ rostest ];
+  propagatedBuildInputs = [ angles diagnostic-msgs diagnostic-updater pr2-mechanism-model pr2-mechanism-msgs roscpp rospy std-msgs std-srvs urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

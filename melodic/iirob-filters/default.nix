@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, eigen-conversions, pluginlib, rosparam-handler, filters, cmake-modules, catkin, roscpp, rostest, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, eigen-conversions, filters, geometry-msgs, pluginlib, roscpp, rosparam-handler, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-iirob-filters";
   version = "0.8.1-r2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs dynamic-reconfigure eigen-conversions pluginlib rosparam-handler filters cmake-modules roscpp rostest tf2-ros ];
-  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure eigen-conversions pluginlib rosparam-handler filters cmake-modules roscpp rostest tf2-ros ];
+  propagatedBuildInputs = [ cmake-modules dynamic-reconfigure eigen-conversions filters geometry-msgs pluginlib roscpp rosparam-handler rostest tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

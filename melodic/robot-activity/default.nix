@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-srvs, catkin, roslint, roscpp, rostest, robot-activity-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, robot-activity-msgs, roscpp, roslint, rostest, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-robot-activity";
   version = "0.1.1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint std-srvs robot-activity-msgs roscpp ];
+  buildInputs = [ roslint ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ std-srvs robot-activity-msgs roscpp ];
+  propagatedBuildInputs = [ robot-activity-msgs roscpp std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

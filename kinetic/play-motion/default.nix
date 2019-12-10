@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, xacro, diagnostic-msgs, controller-manager, controller-manager-msgs, moveit-ros-planning-interface, robot-state-publisher, hardware-interface, catkin, position-controllers, actionlib, play-motion-msgs, joint-trajectory-controller, roscpp, diagnostic-updater, rostest, joint-state-controller, control-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, control-msgs, controller-manager, controller-manager-msgs, diagnostic-msgs, diagnostic-updater, hardware-interface, joint-state-controller, joint-trajectory-controller, moveit-ros-planning-interface, play-motion-msgs, position-controllers, robot-state-publisher, roscpp, rostest, sensor-msgs, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-play-motion";
   version = "0.4.5";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs diagnostic-msgs controller-manager-msgs moveit-ros-planning-interface actionlib play-motion-msgs control-msgs roscpp diagnostic-updater ];
-  checkInputs = [ rostest xacro controller-manager robot-state-publisher hardware-interface position-controllers joint-trajectory-controller joint-state-controller ];
-  propagatedBuildInputs = [ sensor-msgs diagnostic-msgs controller-manager-msgs moveit-ros-planning-interface actionlib play-motion-msgs control-msgs roscpp diagnostic-updater ];
+  checkInputs = [ controller-manager hardware-interface joint-state-controller joint-trajectory-controller position-controllers robot-state-publisher rostest xacro ];
+  propagatedBuildInputs = [ actionlib control-msgs controller-manager-msgs diagnostic-msgs diagnostic-updater moveit-ros-planning-interface play-motion-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

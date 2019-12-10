@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libuvc-camera, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, libuvc-camera }:
 buildRosPackage {
   pname = "ros-melodic-libuvc-ros";
   version = "0.0.10-r1";

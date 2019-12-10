@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, std-msgs, catkin, tf, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-myahrs-driver";
   version = "0.1.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs sensor-msgs tf roscpp ];
-  propagatedBuildInputs = [ std-msgs sensor-msgs tf roscpp ];
+  propagatedBuildInputs = [ roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, catkin, statistics-msgs, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, statistics-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-image-exposure-msgs";
   version = "0.13.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ statistics-msgs message-generation std-msgs ];
-  propagatedBuildInputs = [ statistics-msgs message-runtime std-msgs ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ message-runtime statistics-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

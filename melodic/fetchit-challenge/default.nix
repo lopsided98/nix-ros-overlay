@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, effort-controllers, controller-manager, robot-state-publisher, actionlib, catkin, fetch-gazebo, actionlib-msgs, gazebo-ros-control, gazebo-ros, rospy }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, controller-manager, effort-controllers, fetch-gazebo, gazebo-ros, gazebo-ros-control, robot-state-publisher, rospy }:
 buildRosPackage {
   pname = "ros-melodic-fetchit-challenge";
   version = "0.9.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ actionlib actionlib-msgs ];
-  propagatedBuildInputs = [ effort-controllers controller-manager robot-state-publisher actionlib fetch-gazebo actionlib-msgs gazebo-ros-control gazebo-ros rospy ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs controller-manager effort-controllers fetch-gazebo gazebo-ros gazebo-ros-control robot-state-publisher rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

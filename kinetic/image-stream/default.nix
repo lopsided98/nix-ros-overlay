@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosweb, catkin, cv-bridge, opencv3, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, opencv3, rospy, rosweb }:
 buildRosPackage {
   pname = "ros-kinetic-image-stream";
   version = "1.0.7";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rospy rosweb cv-bridge opencv3 ];
-  propagatedBuildInputs = [ rospy rosweb cv-bridge opencv3 ];
+  propagatedBuildInputs = [ cv-bridge opencv3 rospy rosweb ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

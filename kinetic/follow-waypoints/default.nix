@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, std-msgs, actionlib, catkin, smach, rospy, move-base-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, geometry-msgs, move-base-msgs, rospy, smach, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-follow-waypoints";
   version = "0.3.0-r2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs std-msgs actionlib smach rospy move-base-msgs ];
-  propagatedBuildInputs = [ geometry-msgs std-msgs actionlib smach rospy move-base-msgs ];
+  propagatedBuildInputs = [ actionlib geometry-msgs move-base-msgs rospy smach std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

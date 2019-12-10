@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, rviz-ogre-vendor, resource-retriever, ament-cmake-cpplint, ament-cmake, ament-cmake-uncrustify, eigen3-cmake-module, eigen, qt5, ament-cmake-gmock, ament-index-cpp, ament-cmake-cppcheck, rviz-assimp-vendor, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-index-cpp, eigen, eigen3-cmake-module, qt5, resource-retriever, rviz-assimp-vendor, rviz-ogre-vendor }:
 buildRosPackage {
   pname = "ros-dashing-rviz-rendering";
   version = "6.1.4-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rviz-ogre-vendor resource-retriever qt5.qtbase eigen ament-index-cpp rviz-assimp-vendor ];
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-cpplint ament-cmake-uncrustify ament-cmake-gmock ament-cmake-cppcheck rviz-assimp-vendor ament-cmake-gtest ];
-  propagatedBuildInputs = [ rviz-ogre-vendor resource-retriever qt5.qtbase eigen3-cmake-module eigen ament-index-cpp rviz-assimp-vendor ];
-  nativeBuildInputs = [ eigen3-cmake-module ament-cmake ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-gmock ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify rviz-assimp-vendor ];
+  propagatedBuildInputs = [ ament-index-cpp eigen eigen3-cmake-module qt5.qtbase resource-retriever rviz-assimp-vendor rviz-ogre-vendor ];
+  nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
     description = ''Library which provides the 3D rendering functionality in rviz.'';

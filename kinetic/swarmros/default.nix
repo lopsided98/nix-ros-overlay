@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, catkin, roslib, roscpp, rosconsole }:
+{ lib, buildRosPackage, fetchurl, catkin, rosconsole, roscpp, roslib, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-swarmros";
   version = "0.3.1-r2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs roslib rosconsole roscpp ];
-  propagatedBuildInputs = [ std-msgs rosconsole roslib roscpp ];
+  propagatedBuildInputs = [ rosconsole roscpp roslib std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

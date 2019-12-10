@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, autoware-auto-algorithm, lidar-utils, ament-lint-common, ament-cmake, ament-lint-auto, autoware-auto-cmake, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, autoware-auto-algorithm, autoware-auto-cmake, lidar-utils }:
 buildRosPackage {
   pname = "ros-dashing-ray-ground-classifier";
   version = "0.0.2-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ autoware-auto-algorithm lidar-utils ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ autoware-auto-algorithm lidar-utils ];
-  nativeBuildInputs = [ autoware-auto-cmake ament-cmake ];
+  nativeBuildInputs = [ ament-cmake autoware-auto-cmake ];
 
   meta = {
     description = ''an implementation of a ray ground filter'';

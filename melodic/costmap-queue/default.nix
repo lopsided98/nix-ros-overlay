@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav-core2, catkin, rosunit, roslint, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, nav-core2, roscpp, roslint, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-costmap-queue";
   version = "0.2.5-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ nav-core2 roscpp ];
   checkInputs = [ roslint rosunit ];
   propagatedBuildInputs = [ nav-core2 roscpp ];
   nativeBuildInputs = [ catkin ];

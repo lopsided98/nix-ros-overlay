@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-device roscpp ];
   propagatedBuildInputs = [ robotis-device roscpp ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, eigen, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-core";
   version = "1.6.2-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen ];
   propagatedBuildInputs = [ eigen ];
   nativeBuildInputs = [ catkin ];
 

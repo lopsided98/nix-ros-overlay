@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-copyright, ament-pep257, rclpy, ament-flake8 }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, rclpy }:
 buildRosPackage {
   pname = "ros-crystal-teleop-twist-keyboard";
   version = "2.2.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-pep257 ament-flake8 ament-copyright ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ];
   propagatedBuildInputs = [ geometry-msgs rclpy ];
 
   meta = {

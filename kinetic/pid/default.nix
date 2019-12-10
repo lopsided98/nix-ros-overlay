@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-runtime, dynamic-reconfigure, std-msgs, catkin, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, message-generation, message-runtime, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pid";
   version = "0.0.27";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation dynamic-reconfigure roscpp ];
-  propagatedBuildInputs = [ std-msgs message-runtime dynamic-reconfigure roscpp ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ dynamic-reconfigure message-runtime roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

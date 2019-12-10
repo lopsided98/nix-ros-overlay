@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, std-msgs, std-srvs, genmsg, tf, catkin, qt-gui-cpp, image-transport, cv-bridge, roscpp, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, genmsg, image-transport, message-filters, qt-gui-cpp, roscpp, rospy, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-find-object-2d";
   version = "0.6.2";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs message-filters std-msgs std-srvs tf qt-gui-cpp image-transport cv-bridge roscpp rospy ];
-  propagatedBuildInputs = [ sensor-msgs message-filters std-msgs std-srvs tf qt-gui-cpp image-transport cv-bridge roscpp rospy ];
-  nativeBuildInputs = [ genmsg catkin ];
+  propagatedBuildInputs = [ cv-bridge image-transport message-filters qt-gui-cpp roscpp rospy sensor-msgs std-msgs std-srvs tf ];
+  nativeBuildInputs = [ catkin genmsg ];
 
   meta = {
     description = ''The find_object_2d package'';

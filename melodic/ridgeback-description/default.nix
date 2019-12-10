@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, xacro, urdf, robot-state-publisher, catkin, roslaunch, lms1xx }:
+{ lib, buildRosPackage, fetchurl, catkin, lms1xx, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-ridgeback-description";
   version = "0.2.2-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ robot-state-publisher xacro urdf lms1xx ];
+  propagatedBuildInputs = [ lms1xx robot-state-publisher urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

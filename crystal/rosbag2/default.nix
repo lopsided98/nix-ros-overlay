@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosbag2-test-common, shared-queues-vendor, rosidl-generator-cpp, rcutils, pluginlib, poco-vendor, ament-lint-common, ament-cmake, ament-cmake-gmock, test-msgs, rosidl-typesupport-introspection-cpp, rosidl-typesupport-cpp, ament-index-cpp, rosbag2-storage, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-index-cpp, ament-lint-auto, ament-lint-common, pluginlib, poco-vendor, rcutils, rosbag2-storage, rosbag2-test-common, rosidl-generator-cpp, rosidl-typesupport-cpp, rosidl-typesupport-introspection-cpp, shared-queues-vendor, test-msgs }:
 buildRosPackage {
   pname = "ros-crystal-rosbag2";
   version = "0.0.7";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ shared-queues-vendor rosidl-generator-cpp rcutils pluginlib poco-vendor rosidl-typesupport-introspection-cpp rosidl-typesupport-cpp ament-index-cpp rosbag2-storage ];
-  checkInputs = [ ament-lint-common test-msgs ament-cmake-gmock rosbag2-test-common ament-lint-auto ];
-  propagatedBuildInputs = [ shared-queues-vendor rosidl-generator-cpp rcutils pluginlib poco-vendor rosidl-typesupport-introspection-cpp rosidl-typesupport-cpp ament-index-cpp rosbag2-storage ];
+  checkInputs = [ ament-cmake-gmock ament-lint-auto ament-lint-common rosbag2-test-common test-msgs ];
+  propagatedBuildInputs = [ ament-index-cpp pluginlib poco-vendor rcutils rosbag2-storage rosidl-generator-cpp rosidl-typesupport-cpp rosidl-typesupport-introspection-cpp shared-queues-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

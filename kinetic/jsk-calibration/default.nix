@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roseus pr2-msgs ];
-  propagatedBuildInputs = [ roseus pr2-msgs ];
+  propagatedBuildInputs = [ pr2-msgs roseus ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

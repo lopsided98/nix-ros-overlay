@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rexrov2-control, rexrov2-description, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rexrov2-control, rexrov2-description }:
 buildRosPackage {
   pname = "ros-kinetic-rexrov2-gazebo";
   version = "0.1.3";

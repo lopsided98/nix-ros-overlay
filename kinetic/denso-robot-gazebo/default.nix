@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazebo-ros-pkgs, catkin, gazebo-ros-control, joint-trajectory-controller, joint-state-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros-control, gazebo-ros-pkgs, joint-state-controller, joint-trajectory-controller }:
 buildRosPackage {
   pname = "ros-kinetic-denso-robot-gazebo";
   version = "3.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ joint-trajectory-controller gazebo-ros-pkgs gazebo-ros-control joint-state-controller ];
+  propagatedBuildInputs = [ gazebo-ros-control gazebo-ros-pkgs joint-state-controller joint-trajectory-controller ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

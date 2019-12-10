@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-supported-robots, roslaunch, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-supported-robots, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-cob-default-robot-config";
   version = "0.7.2-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cob-supported-robots roslaunch ];
   propagatedBuildInputs = [ cob-supported-robots roslaunch ];
   nativeBuildInputs = [ catkin ];
 

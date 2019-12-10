@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, catkin, linuxConsoleTools, roscpp, rosbag, diagnostic-updater }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, linuxConsoleTools, rosbag, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-joy";
   version = "1.13.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs linuxConsoleTools roscpp diagnostic-updater ];
   checkInputs = [ rosbag ];
-  propagatedBuildInputs = [ diagnostic-updater sensor-msgs linuxConsoleTools roscpp ];
+  propagatedBuildInputs = [ diagnostic-updater linuxConsoleTools roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-object-detection-visualizer, cob-image-flip, cob-cam3d-throttle, cob-object-detection-msgs, catkin, cob-perception-msgs, cob-vision-utils, cob-3d-mapping-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-3d-mapping-msgs, cob-cam3d-throttle, cob-image-flip, cob-object-detection-msgs, cob-object-detection-visualizer, cob-perception-msgs, cob-vision-utils }:
 buildRosPackage {
   pname = "ros-melodic-cob-perception-common";
   version = "0.6.14-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-object-detection-visualizer cob-image-flip cob-cam3d-throttle cob-object-detection-msgs cob-perception-msgs cob-vision-utils cob-3d-mapping-msgs ];
+  propagatedBuildInputs = [ cob-3d-mapping-msgs cob-cam3d-throttle cob-image-flip cob-object-detection-msgs cob-object-detection-visualizer cob-perception-msgs cob-vision-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, mavlink, boost, catkin, rosunit, console-bridge, gtest }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, console-bridge, gtest, mavlink, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-libmavconn";
   version = "0.33.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mavlink boost console-bridge ];
   checkInputs = [ gtest rosunit ];
-  propagatedBuildInputs = [ mavlink boost console-bridge ];
+  propagatedBuildInputs = [ boost console-bridge mavlink ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

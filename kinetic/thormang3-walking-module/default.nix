@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, robotis-controller-msgs, thormang3-balance-control, boost, geometry-msgs, sensor-msgs, eigen-conversions, std-msgs, thormang3-walking-module-msgs, catkin, cmake-modules, roslib, libyamlcpp, eigen, robotis-framework-common, roscpp, robotis-math, thormang3-kinematics-dynamics }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, eigen, eigen-conversions, geometry-msgs, libyamlcpp, robotis-controller-msgs, robotis-framework-common, robotis-math, roscpp, roslib, sensor-msgs, std-msgs, thormang3-balance-control, thormang3-kinematics-dynamics, thormang3-walking-module-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-thormang3-walking-module";
   version = "0.2.0";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs boost sensor-msgs geometry-msgs eigen-conversions std-msgs thormang3-walking-module-msgs cmake-modules roslib roscpp libyamlcpp eigen robotis-framework-common thormang3-balance-control robotis-math thormang3-kinematics-dynamics ];
-  propagatedBuildInputs = [ robotis-controller-msgs sensor-msgs boost geometry-msgs thormang3-balance-control eigen-conversions std-msgs thormang3-walking-module-msgs cmake-modules roslib libyamlcpp eigen robotis-framework-common roscpp robotis-math thormang3-kinematics-dynamics ];
+  propagatedBuildInputs = [ boost cmake-modules eigen eigen-conversions geometry-msgs libyamlcpp robotis-controller-msgs robotis-framework-common robotis-math roscpp roslib sensor-msgs std-msgs thormang3-balance-control thormang3-kinematics-dynamics thormang3-walking-module-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

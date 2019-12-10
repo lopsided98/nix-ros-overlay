@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, robotis-controller-msgs, boost, geometry-msgs, sensor-msgs, op3-online-walking-module-msgs, std-msgs, catkin, cmake-modules, roslib, robotis-device, libyamlcpp, eigen, robotis-framework-common, roscpp, op3-balance-control, robotis-math }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, eigen, geometry-msgs, libyamlcpp, op3-balance-control, op3-online-walking-module-msgs, orocos-kdl, robotis-controller-msgs, robotis-device, robotis-framework-common, robotis-math, roscpp, roslib, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-op3-online-walking-module";
   version = "0.2.1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ robotis-controller-msgs boost orocos-kdl geometry-msgs sensor-msgs op3-online-walking-module-msgs std-msgs cmake-modules roslib robotis-device libyamlcpp eigen robotis-framework-common roscpp op3-balance-control robotis-math ];
-  propagatedBuildInputs = [ robotis-controller-msgs sensor-msgs boost geometry-msgs orocos-kdl op3-online-walking-module-msgs std-msgs cmake-modules roslib robotis-device libyamlcpp eigen robotis-framework-common roscpp op3-balance-control robotis-math ];
+  propagatedBuildInputs = [ boost cmake-modules eigen geometry-msgs libyamlcpp op3-balance-control op3-online-walking-module-msgs orocos-kdl robotis-controller-msgs robotis-device robotis-framework-common robotis-math roscpp roslib sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, catkin, dynamic-reconfigure, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-cmd-vel-smoother";
   version = "0.1.14";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs dynamic-reconfigure roscpp ];
-  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure roscpp ];
+  propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

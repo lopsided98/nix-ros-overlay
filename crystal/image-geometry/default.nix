@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, ament-cmake-ros, opencv3, ament-cmake-pytest, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, opencv3, sensor-msgs }:
 buildRosPackage {
   pname = "ros-crystal-image-geometry";
   version = "2.1.0";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs opencv3 ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
-  propagatedBuildInputs = [ sensor-msgs opencv3 ];
+  propagatedBuildInputs = [ opencv3 sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pluginlib, catkin, distance-map-core, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, distance-map-core, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-distance-map-node";
   version = "0.1.0-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib distance-map-core roscpp ];
-  propagatedBuildInputs = [ pluginlib distance-map-core roscpp ];
+  propagatedBuildInputs = [ distance-map-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

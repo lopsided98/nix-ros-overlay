@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rcutils, rmw-fastrtps-cpp, rmw-implementation-cmake, poco, poco-vendor, ament-lint-common, ament-cmake, rmw-connext-cpp, rmw, rmw-opensplice-cpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, poco, poco-vendor, rcutils, rmw, rmw-connext-cpp, rmw-fastrtps-cpp, rmw-implementation-cmake, rmw-opensplice-cpp }:
 buildRosPackage {
   pname = "ros-dashing-rmw-implementation";
   version = "0.7.1-r2";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcutils rmw-fastrtps-cpp rmw-implementation-cmake poco poco-vendor rmw-connext-cpp rmw rmw-opensplice-cpp ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
+  buildInputs = [ rcutils rmw rmw-connext-cpp rmw-fastrtps-cpp rmw-opensplice-cpp ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ poco poco-vendor rmw-implementation-cmake ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ainstein-radar-filters, catkin, ainstein-radar-msgs, ainstein-radar-rviz-plugins, ainstein-radar-gazebo-plugins, ainstein-radar-tools, ainstein-radar-drivers }:
+{ lib, buildRosPackage, fetchurl, ainstein-radar-drivers, ainstein-radar-filters, ainstein-radar-gazebo-plugins, ainstein-radar-msgs, ainstein-radar-rviz-plugins, ainstein-radar-tools, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-ainstein-radar";
   version = "2.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ ainstein-radar-filters ainstein-radar-msgs ainstein-radar-rviz-plugins ainstein-radar-gazebo-plugins ainstein-radar-tools ainstein-radar-drivers ];
+  propagatedBuildInputs = [ ainstein-radar-drivers ainstein-radar-filters ainstein-radar-gazebo-plugins ainstein-radar-msgs ainstein-radar-rviz-plugins ainstein-radar-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, costmap-cspace-msgs, rosunit, tf2, nav-msgs, rostest, sensor-msgs, planner-cspace-msgs, tf2-geometry-msgs, trajectory-tracker-msgs, trajectory-tracker, tf2-ros, move-base-msgs, std-srvs, catkin, neonavigation-common, roscpp, trajectory-msgs, map-server, actionlib, roslint, diagnostic-updater, costmap-cspace }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, costmap-cspace, costmap-cspace-msgs, diagnostic-updater, geometry-msgs, map-server, move-base-msgs, nav-msgs, neonavigation-common, planner-cspace-msgs, roscpp, roslint, rostest, rosunit, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs, trajectory-tracker, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-planner-cspace";
   version = "0.5.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-srvs costmap-cspace-msgs actionlib planner-cspace-msgs roscpp neonavigation-common tf2-geometry-msgs trajectory-tracker-msgs tf2 diagnostic-updater nav-msgs costmap-cspace tf2-ros move-base-msgs ];
-  checkInputs = [ map-server roslint rosunit trajectory-tracker rostest ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs geometry-msgs std-srvs costmap-cspace-msgs planner-cspace-msgs actionlib roscpp neonavigation-common tf2-geometry-msgs trajectory-tracker-msgs tf2 diagnostic-updater nav-msgs costmap-cspace tf2-ros move-base-msgs ];
+  checkInputs = [ map-server roslint rostest rosunit trajectory-tracker ];
+  propagatedBuildInputs = [ actionlib costmap-cspace costmap-cspace-msgs diagnostic-updater geometry-msgs move-base-msgs nav-msgs neonavigation-common planner-cspace-msgs roscpp sensor-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros trajectory-msgs trajectory-tracker-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

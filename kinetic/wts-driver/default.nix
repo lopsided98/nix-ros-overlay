@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, message-runtime, std-msgs, catkin, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-wts-driver";
   version = "1.0.4";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation roscpp ];
-  propagatedBuildInputs = [ std-msgs message-runtime roscpp ];
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ message-runtime roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

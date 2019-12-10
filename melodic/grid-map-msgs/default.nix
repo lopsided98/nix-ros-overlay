@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, message-runtime, std-msgs, catkin, roscpp, message-generation }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-msgs";
   version = "1.6.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-msgs message-generation geometry-msgs roscpp ];
-  propagatedBuildInputs = [ geometry-msgs message-runtime std-msgs roscpp message-generation ];
+  propagatedBuildInputs = [ geometry-msgs message-generation message-runtime roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

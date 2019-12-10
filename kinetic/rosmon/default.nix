@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-rosmon, rosmon-core, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, rosmon-core, rqt-rosmon }:
 buildRosPackage {
   pname = "ros-kinetic-rosmon";
   version = "2.1.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rqt-rosmon rosmon-core ];
-  propagatedBuildInputs = [ rqt-rosmon rosmon-core ];
+  propagatedBuildInputs = [ rosmon-core rqt-rosmon ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

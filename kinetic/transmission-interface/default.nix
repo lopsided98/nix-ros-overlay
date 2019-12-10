@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, resource-retriever, pluginlib, hardware-interface, cmake-modules, catkin, tinyxml, rosunit, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, hardware-interface, pluginlib, resource-retriever, roscpp, rosunit, tinyxml }:
 buildRosPackage {
   pname = "ros-kinetic-transmission-interface";
   version = "0.13.3";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ hardware-interface pluginlib cmake-modules tinyxml roscpp ];
+  buildInputs = [ cmake-modules hardware-interface ];
   checkInputs = [ resource-retriever rosunit ];
-  propagatedBuildInputs = [ pluginlib tinyxml roscpp ];
+  propagatedBuildInputs = [ pluginlib roscpp tinyxml ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

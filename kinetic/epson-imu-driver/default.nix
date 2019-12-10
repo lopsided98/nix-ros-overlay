@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, std-msgs, catkin, roscpp, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, rospy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-epson-imu-driver";
   version = "0.0.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs std-msgs rospy roscpp ];
-  propagatedBuildInputs = [ sensor-msgs std-msgs rospy roscpp ];
+  propagatedBuildInputs = [ roscpp rospy sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, easy-markers, rosbaglive, catkin, joy-listener, kalman-filter }:
+{ lib, buildRosPackage, fetchurl, catkin, easy-markers, joy-listener, kalman-filter, rosbaglive }:
 buildRosPackage {
   pname = "ros-melodic-wu-ros-tools";
   version = "0.2.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosbaglive kalman-filter joy-listener easy-markers ];
+  propagatedBuildInputs = [ easy-markers joy-listener kalman-filter rosbaglive ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

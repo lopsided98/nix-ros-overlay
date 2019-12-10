@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, web-video-server, xiaoqiang-monitor, std-msgs, usb-cam, xiaoqiang-driver, robot-upstart, catkin, rospy, xiaoqiang-description, message-runtime, rplidar-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, message-runtime, robot-upstart, rospy, rplidar-ros, std-msgs, usb-cam, web-video-server, xiaoqiang-description, xiaoqiang-driver, xiaoqiang-monitor }:
 buildRosPackage {
   pname = "ros-kinetic-xiaoqiang-bringup";
   version = "0.0.12";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ web-video-server xiaoqiang-monitor std-msgs usb-cam xiaoqiang-driver robot-upstart rospy xiaoqiang-description message-runtime rplidar-ros ];
-  propagatedBuildInputs = [ web-video-server xiaoqiang-monitor message-runtime std-msgs usb-cam xiaoqiang-driver robot-upstart xiaoqiang-description rospy rplidar-ros ];
+  propagatedBuildInputs = [ message-runtime robot-upstart rospy rplidar-ros std-msgs usb-cam web-video-server xiaoqiang-description xiaoqiang-driver xiaoqiang-monitor ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

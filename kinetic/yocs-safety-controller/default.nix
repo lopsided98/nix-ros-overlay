@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, pluginlib, std-msgs, catkin, nodelet, roscpp, ecl-threads, yocs-controllers }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-threads, geometry-msgs, nodelet, pluginlib, roscpp, sensor-msgs, std-msgs, yocs-controllers }:
 buildRosPackage {
   pname = "ros-kinetic-yocs-safety-controller";
   version = "0.8.2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ sensor-msgs geometry-msgs pluginlib std-msgs nodelet roscpp ecl-threads yocs-controllers ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs pluginlib std-msgs nodelet roscpp ecl-threads yocs-controllers ];
+  propagatedBuildInputs = [ ecl-threads geometry-msgs nodelet pluginlib roscpp sensor-msgs std-msgs yocs-controllers ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

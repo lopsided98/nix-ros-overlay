@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libftdi, ecl-command-line, libusb, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-command-line, libftdi, libusb }:
 buildRosPackage {
   pname = "ros-kinetic-roch-ftdi";
   version = "2.0.15";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libftdi ecl-command-line libusb ];
-  propagatedBuildInputs = [ libftdi ecl-command-line libusb ];
+  propagatedBuildInputs = [ ecl-command-line libftdi libusb ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

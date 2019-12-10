@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, rviz-visual-testing-framework, tinyxml-vendor, urdf, pluginlib, ament-cmake-cpplint, map-msgs, ament-cmake, ament-cmake-gmock, nav-msgs, resource-retriever, qt5, rclcpp, rviz-rendering, ament-cmake-gtest, rviz-rendering-tests, ament-index-cpp, ament-cmake-lint-cmake, laser-geometry, ament-cmake-uncrustify, rviz-common, visualization-msgs, ament-cmake-cppcheck }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-index-cpp, geometry-msgs, laser-geometry, map-msgs, nav-msgs, pluginlib, qt5, rclcpp, resource-retriever, rviz-common, rviz-rendering, rviz-rendering-tests, rviz-visual-testing-framework, tinyxml-vendor, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-crystal-rviz-default-plugins";
   version = "5.1.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ geometry-msgs tinyxml-vendor urdf resource-retriever pluginlib map-msgs laser-geometry qt5.qtbase rviz-common visualization-msgs rclcpp nav-msgs rviz-rendering ];
-  checkInputs = [ ament-cmake-lint-cmake rviz-visual-testing-framework ament-cmake-cppcheck ament-cmake-cpplint rviz-rendering-tests ament-cmake-uncrustify ament-cmake-gmock ament-index-cpp ament-cmake-gtest ];
-  propagatedBuildInputs = [ geometry-msgs urdf tinyxml-vendor resource-retriever pluginlib map-msgs laser-geometry qt5.qtbase rviz-common visualization-msgs rclcpp nav-msgs rviz-rendering ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-gmock ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify ament-index-cpp rviz-rendering-tests rviz-visual-testing-framework ];
+  propagatedBuildInputs = [ geometry-msgs laser-geometry map-msgs nav-msgs pluginlib qt5.qtbase rclcpp resource-retriever rviz-common rviz-rendering tinyxml-vendor urdf visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

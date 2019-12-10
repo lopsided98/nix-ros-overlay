@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, pythonPackages, ros2node, ros2service, ros2cli, ament-pep257, rclpy, ament-flake8, lifecycle-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, lifecycle-msgs, pythonPackages, rclpy, ros2cli, ros2node, ros2service }:
 buildRosPackage {
   pname = "ros-crystal-ros2lifecycle";
   version = "0.6.3";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ ros2cli rclpy ];
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
-  propagatedBuildInputs = [ ros2node ros2service ros2cli rclpy lifecycle-msgs ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  propagatedBuildInputs = [ lifecycle-msgs rclpy ros2cli ros2node ros2service ];
 
   meta = {
     description = ''The lifecycle command for ROS 2 command line tools.'';

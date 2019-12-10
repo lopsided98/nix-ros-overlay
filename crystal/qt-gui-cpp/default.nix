@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tinyxml2-vendor, ament-cmake-pytest, pluginlib, ament-cmake, qt-gui, qt5, pkg-config, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-crystal-qt-gui-cpp";
   version = "1.0.6-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tinyxml2-vendor pluginlib qt5.qtbase pkg-config python-qt-binding ];
+  buildInputs = [ pkg-config python-qt-binding qt5.qtbase ];
   checkInputs = [ ament-cmake-pytest ];
-  propagatedBuildInputs = [ pluginlib tinyxml2-vendor qt-gui ];
+  propagatedBuildInputs = [ pluginlib qt-gui tinyxml2-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

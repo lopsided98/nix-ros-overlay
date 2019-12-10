@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, dynamic-reconfigure, std-msgs, tf, catkin, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, rospy, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-yocs-ar-pair-approach";
   version = "0.8.2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ geometry-msgs dynamic-reconfigure std-msgs tf rospy ];
+  propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs rospy std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

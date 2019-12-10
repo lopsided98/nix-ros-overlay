@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, launch, pythonPackages, ament-flake8, ament-pep257, ament-index-python }:
+{ lib, buildRosPackage, fetchurl, ament-flake8, ament-index-python, ament-pep257, launch, pythonPackages }:
 buildRosPackage {
   pname = "ros-crystal-launch-testing";
   version = "0.7.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ pythonPackages.pytest ament-pep257 ament-flake8 launch ];
+  checkInputs = [ ament-flake8 ament-pep257 launch pythonPackages.pytest ];
   propagatedBuildInputs = [ ament-index-python launch ];
 
   meta = {

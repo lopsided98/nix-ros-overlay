@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rmw-implementation-cmake, std-msgs, ament-lint-common, ament-cmake, tlsf, ament-lint-auto, rmw, rclcpp, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, rmw, rmw-implementation-cmake, std-msgs, tlsf }:
 buildRosPackage {
   pname = "ros-dashing-tlsf-cpp";
   version = "0.7.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs ament-cmake tlsf rmw rclcpp ];
-  checkInputs = [ ament-lint-auto ament-lint-common ament-cmake-gtest rmw-implementation-cmake ];
-  propagatedBuildInputs = [ std-msgs tlsf ament-cmake rmw rclcpp ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rmw-implementation-cmake ];
+  propagatedBuildInputs = [ ament-cmake rclcpp rmw std-msgs tlsf ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, qb-hand-control, qb-hand-hardware-interface, catkin, qb-hand-description }:
+{ lib, buildRosPackage, fetchurl, catkin, qb-hand-control, qb-hand-description, qb-hand-hardware-interface }:
 buildRosPackage {
   pname = "ros-kinetic-qb-hand";
   version = "2.0.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ qb-hand-control qb-hand-hardware-interface qb-hand-description ];
+  propagatedBuildInputs = [ qb-hand-control qb-hand-description qb-hand-hardware-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

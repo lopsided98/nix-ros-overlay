@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, nav2-mission-executor, ament-cmake, nav2-dynamic-params, nav2-tasks, nav2-util, nav2-msgs, ament-lint-auto, ament-cmake-pytest, launch-testing, ament-lint-common, nav2-simple-navigator, nav2-voxel-grid, nav2-map-server, ament-cmake-gtest, nav2-dwb-controller, nav2-motion-primitives, nav2-costmap-2d, nav2-world-model, nav2-bt-navigator, nav2-robot, launch, nav2-amcl, nav2-navfn-planner }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, nav2-amcl, nav2-bt-navigator, nav2-costmap-2d, nav2-dwb-controller, nav2-dynamic-params, nav2-map-server, nav2-mission-executor, nav2-motion-primitives, nav2-msgs, nav2-navfn-planner, nav2-robot, nav2-simple-navigator, nav2-tasks, nav2-util, nav2-voxel-grid, nav2-world-model }:
 buildRosPackage {
   pname = "ros-crystal-navigation2";
   version = "0.1.7";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ nav2-robot nav2-dwb-controller nav2-amcl nav2-navfn-planner nav2-mission-executor nav2-costmap-2d nav2-simple-navigator nav2-motion-primitives nav2-voxel-grid nav2-map-server nav2-dynamic-params nav2-world-model nav2-tasks nav2-util nav2-msgs nav2-bt-navigator ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing ];
+  propagatedBuildInputs = [ nav2-amcl nav2-bt-navigator nav2-costmap-2d nav2-dwb-controller nav2-dynamic-params nav2-map-server nav2-mission-executor nav2-motion-primitives nav2-msgs nav2-navfn-planner nav2-robot nav2-simple-navigator nav2-tasks nav2-util nav2-voxel-grid nav2-world-model ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

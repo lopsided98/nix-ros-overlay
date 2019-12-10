@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosmaster, catkin, pythonPackages, roslib, rosunit, rosparam, rosclean, rosout, rosbuild, rosgraph-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rosbuild, rosclean, rosgraph-msgs, roslib, rosmaster, rosout, rosparam, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-roslaunch";
   version = "1.12.14";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ rosbuild ];
-  propagatedBuildInputs = [ pythonPackages.pyyaml rosmaster pythonPackages.rospkg roslib rosunit rosparam pythonPackages.paramiko rosclean rosout rosgraph-msgs ];
+  propagatedBuildInputs = [ pythonPackages.paramiko pythonPackages.pyyaml pythonPackages.rospkg rosclean rosgraph-msgs roslib rosmaster rosout rosparam rosunit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

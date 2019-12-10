@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-plot, rqt-py-common, rqt-topic, rqt-py-console, rqt-image-view, rqt-top, ament-cmake, rqt-console, rqt-msg, rqt-srv, rqt-graph, rqt-publisher, rqt-action, rqt-reconfigure, rqt-service-caller, rqt-shell }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, rqt-action, rqt-console, rqt-graph, rqt-image-view, rqt-msg, rqt-plot, rqt-publisher, rqt-py-common, rqt-py-console, rqt-reconfigure, rqt-service-caller, rqt-shell, rqt-srv, rqt-top, rqt-topic }:
 buildRosPackage {
   pname = "ros-dashing-rqt-common-plugins";
   version = "1.0.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ rqt-plot rqt-py-common rqt-topic rqt-image-view rqt-py-console rqt-top rqt-console rqt-graph rqt-msg rqt-reconfigure rqt-publisher rqt-srv rqt-action rqt-service-caller rqt-shell ];
+  propagatedBuildInputs = [ rqt-action rqt-console rqt-graph rqt-image-view rqt-msg rqt-plot rqt-publisher rqt-py-common rqt-py-console rqt-reconfigure rqt-service-caller rqt-shell rqt-srv rqt-top rqt-topic ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

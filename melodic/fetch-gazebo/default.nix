@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazeboSimulator, xacro, control-toolbox, nodelet, sensor-msgs, robot-controllers-interface, image-proc, depth-image-proc, fetch-description, catkin, angles, gazebo-ros, control-msgs, rgbd-launch, trajectory-msgs, boost, gazebo-dev, actionlib, robot-controllers, gazebo-plugins }:
+{ lib, buildRosPackage, fetchurl, actionlib, angles, boost, catkin, control-msgs, control-toolbox, depth-image-proc, fetch-description, gazebo-dev, gazebo-plugins, gazebo-ros, gazeboSimulator, image-proc, nodelet, rgbd-launch, robot-controllers, robot-controllers-interface, sensor-msgs, trajectory-msgs, xacro }:
 buildRosPackage {
   pname = "ros-melodic-fetch-gazebo";
   version = "0.9.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost sensor-msgs robot-controllers-interface control-toolbox gazebo-ros angles robot-controllers gazebo-plugins gazebo-dev ];
-  propagatedBuildInputs = [ trajectory-msgs sensor-msgs xacro boost robot-controllers-interface control-toolbox gazeboSimulator.gazebo image-proc actionlib depth-image-proc fetch-description nodelet control-msgs gazebo-ros robot-controllers gazebo-plugins rgbd-launch ];
+  buildInputs = [ angles gazebo-dev ];
+  propagatedBuildInputs = [ actionlib boost control-msgs control-toolbox depth-image-proc fetch-description gazebo-plugins gazebo-ros gazeboSimulator.gazebo image-proc nodelet rgbd-launch robot-controllers robot-controllers-interface sensor-msgs trajectory-msgs xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

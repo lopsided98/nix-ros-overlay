@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dataspeed-ulc-msgs, catkin, dataspeed-ulc-can }:
+{ lib, buildRosPackage, fetchurl, catkin, dataspeed-ulc-can, dataspeed-ulc-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dataspeed-ulc";
   version = "0.0.5-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ dataspeed-ulc-msgs dataspeed-ulc-can ];
+  propagatedBuildInputs = [ dataspeed-ulc-can dataspeed-ulc-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

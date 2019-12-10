@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, map-server, catkin, rviz, fake-localization, move-base, amcl, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, amcl, catkin, fake-localization, map-server, move-base, roslaunch, rostest, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-roomblock-navigation";
   version = "0.0.2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ map-server rviz fake-localization move-base amcl ];
+  propagatedBuildInputs = [ amcl fake-localization map-server move-base rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

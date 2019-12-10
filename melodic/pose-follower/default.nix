@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, dynamic-reconfigure, pluginlib, catkin, base-local-planner, tf2-geometry-msgs, nav-core, costmap-2d, roscpp, nav-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, dynamic-reconfigure, nav-core, nav-msgs, pluginlib, roscpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-pose-follower";
   version = "0.3.3-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure pluginlib base-local-planner tf2-geometry-msgs nav-core costmap-2d roscpp nav-msgs tf2-ros ];
-  propagatedBuildInputs = [ dynamic-reconfigure pluginlib base-local-planner tf2-geometry-msgs nav-core costmap-2d roscpp nav-msgs tf2-ros ];
+  propagatedBuildInputs = [ base-local-planner costmap-2d dynamic-reconfigure nav-core nav-msgs pluginlib roscpp tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

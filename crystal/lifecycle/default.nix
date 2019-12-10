@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros2run, rclcpp-lifecycle, std-msgs, ament-lint-common, ament-cmake, ament-lint-auto, lifecycle-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, lifecycle-msgs, rclcpp-lifecycle, ros2run, std-msgs }:
 buildRosPackage {
   pname = "ros-crystal-lifecycle";
   version = "0.6.2";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs rclcpp-lifecycle lifecycle-msgs ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ ros2run rclcpp-lifecycle std-msgs lifecycle-msgs ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ lifecycle-msgs rclcpp-lifecycle ros2run std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

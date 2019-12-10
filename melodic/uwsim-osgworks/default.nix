@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, libGLU, cmake, libGL, openscenegraph }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake, libGL, libGLU, openscenegraph }:
 buildRosPackage {
   pname = "ros-melodic-uwsim-osgworks";
   version = "3.0.3-r2";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ boost openscenegraph libGLU libGL ];
-  propagatedBuildInputs = [ boost catkin libGLU libGL openscenegraph ];
+  propagatedBuildInputs = [ boost catkin libGL libGLU openscenegraph ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

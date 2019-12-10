@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cob-supported-robots, catkin, gmapping, cob-navigation-global, roslaunch }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-navigation-global, cob-supported-robots, gmapping, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-cob-mapping-slam";
   version = "0.6.9-r1";

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pr2-msgs, dense-laser-assembler }:
+{ lib, buildRosPackage, fetchurl, catkin, dense-laser-assembler, pr2-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-dense-laser-snapshotter";
   version = "1.0.11";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dense-laser-assembler pr2-msgs ];
   propagatedBuildInputs = [ dense-laser-assembler pr2-msgs ];
   nativeBuildInputs = [ catkin ];
 

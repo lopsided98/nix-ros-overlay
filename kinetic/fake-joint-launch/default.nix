@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, denso-ros-control, tra1-description, robot-state-publisher, controller-manager, pr2-description, catkin, vs060, fake-joint-driver, abb-irb2400-support, rviz, nextage-description, ur-description, roslaunch, rostest }:
+{ lib, buildRosPackage, fetchurl, abb-irb2400-support, catkin, controller-manager, denso-ros-control, fake-joint-driver, nextage-description, pr2-description, robot-state-publisher, roslaunch, rostest, rviz, tra1-description, ur-description, vs060 }:
 buildRosPackage {
   pname = "ros-kinetic-fake-joint-launch";
   version = "0.0.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslaunch rostest fake-joint-driver ];
-  propagatedBuildInputs = [ tra1-description pr2-description robot-state-publisher controller-manager denso-ros-control vs060 abb-irb2400-support fake-joint-driver rviz nextage-description ur-description roslaunch rostest ];
+  propagatedBuildInputs = [ abb-irb2400-support controller-manager denso-ros-control fake-joint-driver nextage-description pr2-description robot-state-publisher roslaunch rostest rviz tra1-description ur-description vs060 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

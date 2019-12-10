@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf, catkin, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-hector-imu-attitude-to-tf";
   version = "0.3.5";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf roscpp ];
-  propagatedBuildInputs = [ tf roscpp ];
+  propagatedBuildInputs = [ roscpp tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

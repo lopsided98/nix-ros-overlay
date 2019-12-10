@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, roscpp, catkin, urdf, tf2 }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, tf2, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-urdf-geometry-parser";
   version = "0.0.3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp urdf tf2 ];
-  propagatedBuildInputs = [ roscpp urdf tf2 ];
+  propagatedBuildInputs = [ roscpp tf2 urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

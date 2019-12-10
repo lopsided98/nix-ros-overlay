@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, turtlebot-dashboard, catkin, turtlebot-interactive-markers, turtlebot-rviz-launchers }:
+{ lib, buildRosPackage, fetchurl, catkin, turtlebot-dashboard, turtlebot-interactive-markers, turtlebot-rviz-launchers }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot-interactions";
   version = "2.3.1";
