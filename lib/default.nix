@@ -16,6 +16,20 @@ with lib;
     '' + postPatch;
   });
 
+  patchVendorGit = pkg: {
+    url, sha256,
+    file ? "CMakeLists.txt",
+    fetchgitArgs ? {}
+  }: pkg.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = ''
+      sed -i '\|GIT_REPOSITORY\s.*${escapeShellArg url}|c\
+        URL "${self.fetchgit ({ inherit url sha256; } // fetchgitArgs)}"' \
+        '${file}'
+    '' + postPatch;
+  });
+
   patchBoostPython = pkg: pkg.overrideAttrs ({
     postPatch ? "", ...
   }: {

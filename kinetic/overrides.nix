@@ -13,7 +13,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
-  # If anyone actually needs this package, its your problem to get it to
+  # If anyone actually needs this package, it's your problem to get it to
   # compile.
   astra-camera = null;
 
