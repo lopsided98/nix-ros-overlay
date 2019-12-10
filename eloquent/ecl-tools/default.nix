@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-license, ecl-build, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ecl-build, ecl-license }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-tools";
   version = "1.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ ecl-license ecl-build ];
+  propagatedBuildInputs = [ ecl-build ecl-license ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, ament-cmake, demo-nodes-cpp, actionlib-msgs, tf2-msgs, nav-msgs, ament-lint-auto, action-msgs, sensor-msgs, diagnostic-msgs, rcutils, rmw-implementation-cmake, launch-testing, shape-msgs, ament-lint-common, rclcpp, builtin-interfaces, launch-testing-ros, rosidl-cmake, std-msgs, std-srvs, launch-testing-ament-cmake, pkg-config, example-interfaces, trajectory-msgs, ros2run, python3Packages, launch, gazebo-msgs, stereo-msgs, visualization-msgs, ament-index-python, rosidl-parser }:
+{ lib, buildRosPackage, fetchurl, action-msgs, actionlib-msgs, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, demo-nodes-cpp, diagnostic-msgs, example-interfaces, gazebo-msgs, geometry-msgs, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, nav-msgs, pkg-config, python3Packages, rclcpp, rcutils, rmw-implementation-cmake, ros2run, rosidl-cmake, rosidl-parser, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, tf2-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-ros1-bridge";
   version = "0.8.1-r4";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ geometry-msgs actionlib-msgs tf2-msgs nav-msgs action-msgs sensor-msgs diagnostic-msgs rcutils rmw-implementation-cmake shape-msgs builtin-interfaces rclcpp python3Packages.pyyaml std-msgs std-srvs pkg-config example-interfaces trajectory-msgs gazebo-msgs stereo-msgs visualization-msgs ];
-  checkInputs = [ launch-testing-ros ros2run diagnostic-msgs launch launch-testing ament-lint-common demo-nodes-cpp launch-testing-ament-cmake ament-lint-auto ];
-  propagatedBuildInputs = [ geometry-msgs actionlib-msgs tf2-msgs nav-msgs action-msgs sensor-msgs diagnostic-msgs rcutils shape-msgs rclcpp builtin-interfaces python3Packages.pyyaml std-msgs std-srvs pkg-config example-interfaces trajectory-msgs gazebo-msgs stereo-msgs visualization-msgs ];
-  nativeBuildInputs = [ rosidl-cmake ament-cmake python3Packages.catkin-pkg ament-index-python rosidl-parser ];
+  buildInputs = [ rmw-implementation-cmake ];
+  checkInputs = [ ament-lint-auto ament-lint-common demo-nodes-cpp diagnostic-msgs launch launch-testing launch-testing-ament-cmake launch-testing-ros ros2run ];
+  propagatedBuildInputs = [ action-msgs actionlib-msgs builtin-interfaces diagnostic-msgs example-interfaces gazebo-msgs geometry-msgs nav-msgs pkg-config python3Packages.pyyaml rclcpp rcutils sensor-msgs shape-msgs std-msgs std-srvs stereo-msgs tf2-msgs trajectory-msgs visualization-msgs ];
+  nativeBuildInputs = [ ament-cmake ament-index-python python3Packages.catkin-pkg rosidl-cmake rosidl-parser ];
 
   meta = {
     description = ''A simple bridge between ROS 1 and ROS 2'';

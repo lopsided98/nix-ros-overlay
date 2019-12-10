@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, std-msgs, pythonPackages, ament-pep257, rclpy, ament-flake8 }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-examples-rclpy-executors";
   version = "0.8.2-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
-  propagatedBuildInputs = [ std-msgs rclpy ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  propagatedBuildInputs = [ rclpy std-msgs ];
 
   meta = {
     description = ''Examples of creating and using exectors to run multiple nodes in the same process'';

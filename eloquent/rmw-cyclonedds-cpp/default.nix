@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rcutils, ament-lint-common, ament-cmake, cyclonedds, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp, rmw, rosidl-generator-c, cyclonedds-cmake-module, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, cyclonedds, cyclonedds-cmake-module, rcutils, rmw, rosidl-generator-c, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp }:
 buildRosPackage {
   pname = "ros-eloquent-rmw-cyclonedds-cpp";
   version = "0.4.4-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcutils cyclonedds rosidl-typesupport-introspection-c rosidl-typesupport-introspection-cpp rmw rosidl-generator-c cyclonedds-cmake-module ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ rcutils ament-cmake cyclonedds rosidl-typesupport-introspection-c rosidl-typesupport-introspection-cpp rmw rosidl-generator-c cyclonedds-cmake-module ];
-  nativeBuildInputs = [ cyclonedds-cmake-module ament-cmake-ros ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ament-cmake cyclonedds cyclonedds-cmake-module rcutils rmw rosidl-generator-c rosidl-typesupport-introspection-c rosidl-typesupport-introspection-cpp ];
+  nativeBuildInputs = [ ament-cmake-ros cyclonedds-cmake-module ];
 
   meta = {
     description = ''Implement the ROS middleware interface using Eclipse CycloneDDS in C++.'';

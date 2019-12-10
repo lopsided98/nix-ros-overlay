@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python3Packages, ament-copyright, osrf-pycommon, pythonPackages, ament-flake8, ament-pep257, ament-index-python }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, osrf-pycommon, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-eloquent-launch";
   version = "0.9.5-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ osrf-pycommon ];
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
-  propagatedBuildInputs = [ osrf-pycommon python3Packages.lark-parser ament-index-python ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  propagatedBuildInputs = [ ament-index-python osrf-pycommon python3Packages.lark-parser ];
 
   meta = {
     description = ''The ROS launch tool.'';

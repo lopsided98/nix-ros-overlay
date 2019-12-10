@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, openssl, cunit, cmake }:
+{ lib, buildRosPackage, fetchurl, cmake, cunit, openssl }:
 buildRosPackage {
   pname = "ros-eloquent-cyclonedds";
   version = "0.1.0-r7";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ openssl ];
   checkInputs = [ cunit ];
   propagatedBuildInputs = [ openssl ];
   nativeBuildInputs = [ cmake ];

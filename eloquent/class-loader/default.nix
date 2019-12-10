@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, poco, poco-vendor, console-bridge-vendor, ament-lint-common, ament-cmake, ament-cmake-gtest, console-bridge, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, poco, poco-vendor }:
 buildRosPackage {
   pname = "ros-eloquent-class-loader";
   version = "1.4.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ poco poco-vendor console-bridge-vendor console-bridge ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ poco poco-vendor console-bridge-vendor console-bridge ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ console-bridge console-bridge-vendor poco poco-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

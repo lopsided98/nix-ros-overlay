@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry2, urdf, robot-state-publisher, ament-cmake, ros-core, kdl-parser }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, geometry2, kdl-parser, robot-state-publisher, ros-core, urdf }:
 buildRosPackage {
   pname = "ros-eloquent-ros-base";
   version = "0.8.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ geometry2 urdf robot-state-publisher ros-core kdl-parser ];
+  propagatedBuildInputs = [ geometry2 kdl-parser robot-state-publisher ros-core urdf ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

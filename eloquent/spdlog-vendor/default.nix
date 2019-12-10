@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, spdlog, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, spdlog }:
 buildRosPackage {
   pname = "ros-eloquent-spdlog-vendor";
   version = "1.0.1-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ spdlog ];
   propagatedBuildInputs = [ spdlog ];
   nativeBuildInputs = [ ament-cmake ];
 

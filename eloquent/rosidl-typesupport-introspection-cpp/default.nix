@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-cmake, rosidl-typesupport-interface, rosidl-generator-cpp, ament-cmake-ros, ament-lint-common, ament-cmake, ament-lint-auto, rosidl-typesupport-introspection-c, rosidl-generator-c, rosidl-parser }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, rosidl-cmake, rosidl-generator-c, rosidl-generator-cpp, rosidl-parser, rosidl-typesupport-interface, rosidl-typesupport-introspection-c }:
 buildRosPackage {
   pname = "ros-eloquent-rosidl-typesupport-introspection-cpp";
   version = "0.8.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-typesupport-introspection-c ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ rosidl-cmake rosidl-typesupport-interface rosidl-generator-cpp ament-cmake rosidl-typesupport-introspection-c rosidl-generator-c rosidl-parser ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ament-cmake rosidl-cmake rosidl-generator-c rosidl-generator-cpp rosidl-parser rosidl-typesupport-interface rosidl-typesupport-introspection-c ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, image-transport, cv-bridge, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, image-transport }:
 buildRosPackage {
   pname = "ros-eloquent-compressed-depth-image-transport";
   version = "2.2.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ image-transport cv-bridge ];
-  propagatedBuildInputs = [ image-transport cv-bridge ];
+  propagatedBuildInputs = [ cv-bridge image-transport ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

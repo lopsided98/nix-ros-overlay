@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ console-bridge ];
   propagatedBuildInputs = [ console-bridge ];
   nativeBuildInputs = [ ament-cmake ];
 

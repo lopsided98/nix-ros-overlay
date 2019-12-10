@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, launch-ros, pythonPackages, ament-pep257, ament-flake8, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch-ros, pythonPackages, tf2-ros }:
 buildRosPackage {
   pname = "ros-eloquent-examples-tf2-py";
   version = "0.12.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
   propagatedBuildInputs = [ launch-ros tf2-ros ];
 
   meta = {

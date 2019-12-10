@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, ament-cmake-ros, opencv3, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, opencv3, sensor-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-image-geometry";
   version = "2.1.3-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs opencv3 ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
-  propagatedBuildInputs = [ sensor-msgs opencv3 ];
-  nativeBuildInputs = [ ament-cmake-ros ament-cmake-python ];
+  propagatedBuildInputs = [ opencv3 sensor-msgs ];
+  nativeBuildInputs = [ ament-cmake-python ament-cmake-ros ];
 
   meta = {
     description = ''`image_geometry` contains C++ and Python libraries for interpreting images

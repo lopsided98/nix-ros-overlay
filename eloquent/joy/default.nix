@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, rclcpp, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-joy";
   version = "2.3.2-r3";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs rclcpp ];
-  propagatedBuildInputs = [ sensor-msgs rclcpp ];
+  propagatedBuildInputs = [ rclcpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

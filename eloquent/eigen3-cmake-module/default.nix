@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake }:
 buildRosPackage {
   pname = "ros-eloquent-eigen3-cmake-module";
   version = "0.1.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-copyright ];
+  checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

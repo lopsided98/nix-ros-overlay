@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, test-msgs, osrf-testing-tools-cpp, rmw-implementation, ament-lint-auto, ament-cmake-ros, rcutils, rmw-implementation-cmake, launch-testing, ament-lint-common, rcl-yaml-param-parser, rcpputils, rmw, rosidl-generator-c, tinydir-vendor, ament-cmake-gtest, launch-testing-ament-cmake, rcl-logging-spdlog, launch, tracetools, rcl-interfaces, ament-cmake-pytest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, osrf-testing-tools-cpp, rcl-interfaces, rcl-logging-spdlog, rcl-yaml-param-parser, rcpputils, rcutils, rmw, rmw-implementation, rmw-implementation-cmake, rosidl-generator-c, test-msgs, tinydir-vendor, tracetools }:
 buildRosPackage {
   pname = "ros-eloquent-rcl";
   version = "0.8.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-generator-c rcutils rcl-logging-spdlog rcl-yaml-param-parser tracetools rcl-interfaces rmw-implementation tinydir-vendor ];
-  checkInputs = [ launch rmw-implementation-cmake launch-testing ament-lint-common test-msgs rcpputils ament-cmake-gtest launch-testing-ament-cmake osrf-testing-tools-cpp ament-cmake-pytest rmw ament-lint-auto ];
-  propagatedBuildInputs = [ rosidl-generator-c rcutils rcl-logging-spdlog rcl-yaml-param-parser tracetools rcl-interfaces rmw rmw-implementation tinydir-vendor ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake osrf-testing-tools-cpp rcpputils rmw rmw-implementation-cmake test-msgs ];
+  propagatedBuildInputs = [ rcl-interfaces rcl-logging-spdlog rcl-yaml-param-parser rcutils rmw rmw-implementation rosidl-generator-c tinydir-vendor tracetools ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

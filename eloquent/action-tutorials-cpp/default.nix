@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp-action, rclcpp-components, ament-lint-common, ament-cmake, action-tutorials-interfaces, rclcpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, action-tutorials-interfaces, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-action, rclcpp-components }:
 buildRosPackage {
   pname = "ros-eloquent-action-tutorials-cpp";
   version = "0.8.4-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-action rclcpp action-tutorials-interfaces rclcpp-components ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ rclcpp-action rclcpp action-tutorials-interfaces rclcpp-components ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ action-tutorials-interfaces rclcpp rclcpp-action rclcpp-components ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

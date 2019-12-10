@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, ament-lint-common, ament-cmake, ament-lint-auto, rosidl-default-generators, action-msgs }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-eloquent-teleop-tools-msgs";
   version = "1.0.1-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ action-msgs ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ rosidl-default-runtime action-msgs ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ action-msgs rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = ''The teleop_tools_msgs package'';

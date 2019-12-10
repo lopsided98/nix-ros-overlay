@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, asio, foonathan-memory-vendor, cmake, openssl, tinyxml-2, fastcdr }:
+{ lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-eloquent-fastrtps";
   version = "1.9.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ tinyxml-2 fastcdr asio foonathan-memory-vendor ];
-  propagatedBuildInputs = [ tinyxml-2 openssl fastcdr foonathan-memory-vendor ];
+  buildInputs = [ asio ];
+  propagatedBuildInputs = [ fastcdr foonathan-memory-vendor openssl tinyxml-2 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

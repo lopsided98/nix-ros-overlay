@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gtest, gtest-vendor, ament-cmake-test, ament-cmake-core }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, gtest, gtest-vendor }:
 buildRosPackage {
   pname = "ros-eloquent-ament-cmake-gtest";
   version = "0.8.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ gtest gtest-vendor ament-cmake-test ];
+  propagatedBuildInputs = [ ament-cmake-test gtest gtest-vendor ];
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pcl-conversions, pcl-msgs, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, pcl-conversions, pcl-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-perception-pcl";
   version = "2.1.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ pcl-msgs pcl-conversions ];
+  propagatedBuildInputs = [ pcl-conversions pcl-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

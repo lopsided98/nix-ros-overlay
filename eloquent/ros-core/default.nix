@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros2action, ros2interface, pluginlib, ament-index-python, ament-cmake, sros2, rcl-lifecycle, class-loader, ament-cmake-gmock, rosidl-default-generators, ament-lint-auto, rclcpp-lifecycle, ros2doctor, ament-cmake-ros, ament-lint-common, ros2component, ros2pkg, ros2lifecycle, ros2msg, rclpy, rclcpp, ament-cmake-gtest, common-interfaces, rosidl-default-runtime, ros2srv, ros2topic, sros2-cmake, ament-cmake-auto, ros2node, ament-index-cpp, ros-environment, ros2run, ros2multicast, ros2param, ros2service, ament-cmake-pytest, ros2launch }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-cpp, ament-index-python, ament-lint-auto, ament-lint-common, class-loader, common-interfaces, pluginlib, rcl-lifecycle, rclcpp, rclcpp-lifecycle, rclpy, ros-environment, ros2action, ros2component, ros2doctor, ros2interface, ros2launch, ros2lifecycle, ros2msg, ros2multicast, ros2node, ros2param, ros2pkg, ros2run, ros2service, ros2srv, ros2topic, rosidl-default-generators, rosidl-default-runtime, sros2, sros2-cmake }:
 buildRosPackage {
   pname = "ros-eloquent-ros-core";
   version = "0.8.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ ros2action ros2interface pluginlib ament-cmake sros2 rcl-lifecycle class-loader ament-cmake-gmock rosidl-default-generators ament-lint-auto rclcpp-lifecycle ros2doctor ament-cmake-ros ament-lint-common ros2component ros2pkg ros2lifecycle ros2msg rclpy rclcpp ament-cmake-gtest common-interfaces rosidl-default-runtime ros2srv ros2topic sros2-cmake ament-cmake-auto ros2node ament-index-cpp ros-environment ros2run ros2launch ros2multicast ros2param ros2service ament-cmake-pytest ament-index-python ];
+  propagatedBuildInputs = [ ament-cmake ament-cmake-auto ament-cmake-gmock ament-cmake-gtest ament-cmake-pytest ament-cmake-ros ament-index-cpp ament-index-python ament-lint-auto ament-lint-common class-loader common-interfaces pluginlib rcl-lifecycle rclcpp rclcpp-lifecycle rclpy ros-environment ros2action ros2component ros2doctor ros2interface ros2launch ros2lifecycle ros2msg ros2multicast ros2node ros2param ros2pkg ros2run ros2service ros2srv ros2topic rosidl-default-generators rosidl-default-runtime sros2 sros2-cmake ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

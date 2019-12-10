@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, rclcpp, tinyxml-vendor, std-msgs, rcl, std-srvs, launch-ros, ament-lint-common, ament-cmake, gazebo-msgs, ament-cmake-gtest, rclpy, builtin-interfaces, ament-lint-auto, gazebo-dev }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, gazebo-dev, gazebo-msgs, geometry-msgs, launch-ros, rcl, rclcpp, rclpy, sensor-msgs, std-msgs, std-srvs, tinyxml-vendor }:
 buildRosPackage {
   pname = "ros-eloquent-gazebo-ros";
   version = "3.4.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp tinyxml-vendor rcl std-srvs gazebo-msgs rclpy builtin-interfaces gazebo-dev ];
-  checkInputs = [ sensor-msgs geometry-msgs std-msgs ament-lint-common ament-lint-auto ament-cmake-gtest ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs rclcpp tinyxml-vendor rcl std-srvs launch-ros gazebo-msgs rclpy builtin-interfaces gazebo-dev ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common geometry-msgs sensor-msgs std-msgs ];
+  propagatedBuildInputs = [ builtin-interfaces gazebo-dev gazebo-msgs geometry-msgs launch-ros rcl rclcpp rclpy sensor-msgs std-srvs tinyxml-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

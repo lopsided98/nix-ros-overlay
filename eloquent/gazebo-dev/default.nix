@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, gazeboSimulator, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, gazeboSimulator }:
 buildRosPackage {
   pname = "ros-eloquent-gazebo-dev";
   version = "3.4.2-r1";

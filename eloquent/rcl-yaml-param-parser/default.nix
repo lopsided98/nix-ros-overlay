@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rcutils, ament-lint-common, libyaml, libyaml-vendor, ament-cmake-gtest, osrf-testing-tools-cpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, libyaml, libyaml-vendor, osrf-testing-tools-cpp, rcutils }:
 buildRosPackage {
   pname = "ros-eloquent-rcl-yaml-param-parser";
   version = "0.8.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ libyaml-vendor rcutils libyaml ];
-  checkInputs = [ ament-lint-auto osrf-testing-tools-cpp ament-cmake-gtest ament-lint-common ];
-  propagatedBuildInputs = [ libyaml-vendor libyaml ];
+  buildInputs = [ rcutils ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common osrf-testing-tools-cpp ];
+  propagatedBuildInputs = [ libyaml libyaml-vendor ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

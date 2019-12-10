@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, compressed-depth-image-transport, theora-image-transport, ament-cmake, compressed-image-transport }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, compressed-depth-image-transport, compressed-image-transport, theora-image-transport }:
 buildRosPackage {
   pname = "ros-eloquent-image-transport-plugins";
   version = "2.2.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ compressed-depth-image-transport theora-image-transport compressed-image-transport ];
+  propagatedBuildInputs = [ compressed-depth-image-transport compressed-image-transport theora-image-transport ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

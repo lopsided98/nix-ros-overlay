@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, launch, std-msgs, pythonPackages, launch-ros, ament-pep257, rclpy, ament-flake8 }:
+{ lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, launch, launch-ros, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-topic-monitor";
   version = "0.8.4-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ rclpy ];
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-pep257 ];
-  propagatedBuildInputs = [ std-msgs launch-ros launch rclpy ];
+  checkInputs = [ ament-flake8 ament-pep257 pythonPackages.pytest ];
+  propagatedBuildInputs = [ launch launch-ros rclpy std-msgs ];
 
   meta = {
     description = ''Package containing tools for monitoring ROS 2 topics.'';

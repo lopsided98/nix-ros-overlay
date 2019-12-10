@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-examples-rclcpp-minimal-timer";
   version = "0.8.2-r1";
@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp ];
   propagatedBuildInputs = [ rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 

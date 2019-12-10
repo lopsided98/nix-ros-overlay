@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-pep257, pythonPackages, ament-flake8, ament-copyright }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-eloquent-domain-coordinator";
   version = "0.8.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ pythonPackages.pytest ament-flake8 ament-copyright ament-pep257 ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
 
   meta = {
     description = ''A tool to coordinate unique ROS_DOMAIN_IDs across multiple processes'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, orocos-kdl, urdfdom-headers, ament-cmake-ros, tinyxml-vendor, urdf, ament-lint-common, tinyxml, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, orocos-kdl, tinyxml, tinyxml-vendor, urdf, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-eloquent-kdl-parser";
   version = "2.2.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ orocos-kdl urdfdom-headers urdf tinyxml-vendor tinyxml ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ orocos-kdl urdfdom-headers urdf tinyxml-vendor tinyxml ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ orocos-kdl tinyxml tinyxml-vendor urdf urdfdom-headers ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

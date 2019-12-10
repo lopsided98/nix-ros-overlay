@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-py-common, rqt-gui, rqt-gui-py, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-eloquent-rqt-service-caller";
   version = "1.0.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ rqt-py-common rqt-gui rqt-gui-py ];
+  propagatedBuildInputs = [ rqt-gui rqt-gui-py rqt-py-common ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

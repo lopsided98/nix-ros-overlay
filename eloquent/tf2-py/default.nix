@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, geometry-msgs, ament-cmake, rclpy, python-cmake-module, tf2, builtin-interfaces, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, builtin-interfaces, geometry-msgs, python-cmake-module, rclpy, tf2 }:
 buildRosPackage {
   pname = "ros-eloquent-tf2-py";
   version = "0.12.4-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ geometry-msgs tf2 ];
-  checkInputs = [ ament-lint-auto ament-cmake-pytest ];
-  propagatedBuildInputs = [ tf2 builtin-interfaces geometry-msgs rclpy ];
-  nativeBuildInputs = [ python-cmake-module ament-cmake ];
+  checkInputs = [ ament-cmake-pytest ament-lint-auto ];
+  propagatedBuildInputs = [ builtin-interfaces geometry-msgs rclpy tf2 ];
+  nativeBuildInputs = [ ament-cmake python-cmake-module ];
 
   meta = {
     description = ''The tf2_py package'';

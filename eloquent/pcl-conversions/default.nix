@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, message-filters, std-msgs, pcl-msgs, ament-cmake, pcl, eigen, rclcpp, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, message-filters, pcl, pcl-msgs, rclcpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-pcl-conversions";
   version = "2.1.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs message-filters std-msgs pcl-msgs pcl eigen rclcpp ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ sensor-msgs message-filters std-msgs pcl-msgs pcl eigen rclcpp ];
+  propagatedBuildInputs = [ eigen message-filters pcl pcl-msgs rclcpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-pytest, rosidl-default-runtime, ament-cmake, rclpy, python-cmake-module, qt-gui, qt5, rosidl-default-generators, python-qt-binding }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, python-cmake-module, python-qt-binding, qt-gui, qt5, rclpy, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-eloquent-rqt-py-common";
   version = "1.0.5-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclpy qt5.qtbase ];
-  checkInputs = [ python-cmake-module ament-cmake-pytest ];
-  propagatedBuildInputs = [ rosidl-default-runtime qt5.qtbase qt-gui rclpy python-qt-binding ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
+  checkInputs = [ ament-cmake-pytest python-cmake-module ];
+  propagatedBuildInputs = [ python-qt-binding qt-gui qt5.qtbase rclpy rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = ''rqt_py_common provides common functionality for rqt plugins written in Python.

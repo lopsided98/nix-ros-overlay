@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-export-libraries, ament-cmake-core }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-export-libraries }:
 buildRosPackage {
   pname = "ros-eloquent-ament-cmake-export-interfaces";
   version = "0.8.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ ament-cmake-export-libraries ament-cmake-core ];
+  propagatedBuildInputs = [ ament-cmake-core ament-cmake-export-libraries ];
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {

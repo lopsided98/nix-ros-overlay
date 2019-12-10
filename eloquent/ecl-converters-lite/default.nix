@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-license, ament-lint-common, ament-lint-auto, ecl-config, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-config, ecl-license }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-converters-lite";
   version = "1.0.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-license ecl-config ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ ecl-license ecl-config ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ecl-config ecl-license ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

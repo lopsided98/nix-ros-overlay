@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-py-common, rqt-gui, rqt-gui-py, rqt-gui-cpp }:
+{ lib, buildRosPackage, fetchurl, rqt-gui, rqt-gui-cpp, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-eloquent-rqt";
   version = "1.0.5-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  propagatedBuildInputs = [ rqt-py-common rqt-gui rqt-gui-py rqt-gui-cpp ];
+  propagatedBuildInputs = [ rqt-gui rqt-gui-cpp rqt-gui-py rqt-py-common ];
 
   meta = {
     description = ''rqt is a Qt-based framework for GUI development for ROS. It consists of three parts/metapackages<br/>

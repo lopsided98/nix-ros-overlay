@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-testing, ament-copyright, std-msgs, std-srvs, rosidl-runtime-py, pythonPackages, ament-flake8, test-msgs, ament-xmllint, ros2cli, ament-pep257, ament-index-python }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, pythonPackages, ros-testing, ros2cli, rosidl-runtime-py, std-msgs, std-srvs, test-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-ros2interface";
   version = "0.8.6-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ ros2cli ];
-  checkInputs = [ ament-copyright ros-testing std-msgs std-srvs test-msgs ament-xmllint ament-pep257 pythonPackages.pytest ament-flake8 ];
-  propagatedBuildInputs = [ rosidl-runtime-py ros2cli ament-index-python ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ros-testing std-msgs std-srvs test-msgs ];
+  propagatedBuildInputs = [ ament-index-python ros2cli rosidl-runtime-py ];
 
   meta = {
     description = ''The interface command for ROS 2 command line tools'';

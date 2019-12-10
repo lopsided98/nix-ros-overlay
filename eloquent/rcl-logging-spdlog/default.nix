@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rcutils, spdlog, ament-lint-common, spdlog-vendor, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcutils, spdlog, spdlog-vendor }:
 buildRosPackage {
   pname = "ros-eloquent-rcl-logging-spdlog";
   version = "0.3.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ spdlog rcutils spdlog-vendor ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
+  buildInputs = [ spdlog spdlog-vendor ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ rcutils ];
   nativeBuildInputs = [ ament-cmake-ros ];
 

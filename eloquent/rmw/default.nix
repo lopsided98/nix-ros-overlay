@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rcutils, ament-lint-common, ament-cmake-gmock, rosidl-generator-c, ament-cmake-version, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-ros, ament-cmake-version, ament-lint-auto, ament-lint-common, rcutils, rosidl-generator-c }:
 buildRosPackage {
   pname = "ros-eloquent-rmw";
   version = "0.8.1-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcutils ];
-  checkInputs = [ ament-cmake-gmock ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ rosidl-generator-c rcutils ];
-  nativeBuildInputs = [ ament-cmake-version ament-cmake-ros ];
+  checkInputs = [ ament-cmake-gmock ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ rcutils rosidl-generator-c ];
+  nativeBuildInputs = [ ament-cmake-ros ament-cmake-version ];
 
   meta = {
     description = ''Contains the ROS middleware API.'';

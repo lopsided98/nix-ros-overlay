@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-generator-cpp, ament-cmake-ros, ament-lint-common, ament-cmake, ament-lint-auto, action-msgs, test-msgs, ament-cmake-gtest, rosidl-generator-c, rclcpp, rcl-action }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcl-action, rclcpp, rosidl-generator-c, rosidl-generator-cpp, test-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-rclcpp-action";
   version = "0.8.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-generator-cpp rcl-action ament-cmake rosidl-generator-c rclcpp action-msgs ];
-  checkInputs = [ test-msgs ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ rosidl-generator-cpp rcl-action ament-cmake rosidl-generator-c rclcpp action-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common test-msgs ];
+  propagatedBuildInputs = [ action-msgs ament-cmake rcl-action rclcpp rosidl-generator-c rosidl-generator-cpp ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

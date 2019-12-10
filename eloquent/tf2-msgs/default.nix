@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, rosidl-default-runtime, ament-cmake, rosidl-default-generators, builtin-interfaces, action-msgs }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-eloquent-tf2-msgs";
   version = "0.12.4-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces geometry-msgs action-msgs ];
-  propagatedBuildInputs = [ rosidl-default-runtime builtin-interfaces geometry-msgs action-msgs ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
+  propagatedBuildInputs = [ action-msgs builtin-interfaces geometry-msgs rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = ''tf2_msgs'';

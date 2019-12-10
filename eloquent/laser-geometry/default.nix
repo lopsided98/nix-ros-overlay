@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, ament-cmake-lint-cmake, ament-cmake-cpplint, ament-cmake, ament-cmake-uncrustify, eigen3-cmake-module, eigen, tf2, ament-cmake-gmock, ament-cmake-cppcheck, rclcpp, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, eigen, eigen3-cmake-module, rclcpp, sensor-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-eloquent-laser-geometry";
   version = "2.1.0-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs eigen rclcpp tf2 ];
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-cpplint ament-cmake-uncrustify ament-cmake-gmock ament-cmake-cppcheck ament-cmake-gtest ];
-  propagatedBuildInputs = [ sensor-msgs ament-cmake eigen3-cmake-module eigen tf2 rclcpp ];
-  nativeBuildInputs = [ eigen3-cmake-module ament-cmake ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-gmock ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify ];
+  propagatedBuildInputs = [ ament-cmake eigen eigen3-cmake-module rclcpp sensor-msgs tf2 ];
+  nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
     description = ''This package contains a class for converting from a 2D laser scan as defined by

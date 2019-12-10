@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, system-modes, boost, rclcpp-lifecycle, ament-cmake, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, rclcpp-lifecycle, system-modes }:
 buildRosPackage {
   pname = "ros-eloquent-system-modes-examples";
   version = "0.1.5-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost system-modes rclcpp-lifecycle rclcpp ];
   checkInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ boost system-modes rclcpp-lifecycle rclcpp ];
+  propagatedBuildInputs = [ boost rclcpp rclcpp-lifecycle system-modes ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclpy, ament-lint-common, ament-lint-auto, action-tutorials-interfaces }:
+{ lib, buildRosPackage, fetchurl, action-tutorials-interfaces, ament-lint-auto, ament-lint-common, rclpy }:
 buildRosPackage {
   pname = "ros-eloquent-action-tutorials-py";
   version = "0.8.4-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ action-tutorials-interfaces ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ action-tutorials-interfaces rclpy ];
 
   meta = {

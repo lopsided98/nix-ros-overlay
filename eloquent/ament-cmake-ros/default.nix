@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake, ament-lint-auto, domain-coordinator, ament-cmake-pytest, ament-cmake-gmock, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, domain-coordinator }:
 buildRosPackage {
   pname = "ros-eloquent-ament-cmake-ros";
   version = "0.8.0-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ domain-coordinator ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ ament-cmake domain-coordinator ament-cmake-pytest ament-cmake-gmock ament-cmake-gtest ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest ament-cmake-pytest domain-coordinator ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

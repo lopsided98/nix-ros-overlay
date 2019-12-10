@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rcutils, rmw-fastrtps-cpp, rmw-implementation-cmake, poco, poco-vendor, ament-lint-common, ament-cmake, ament-lint-auto, rmw-connext-cpp, rmw, rmw-opensplice-cpp, rmw-cyclonedds-cpp, ament-index-python, ament-cmake-python }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-python, ament-lint-auto, ament-lint-common, poco, poco-vendor, rcutils, rmw, rmw-connext-cpp, rmw-cyclonedds-cpp, rmw-fastrtps-cpp, rmw-implementation-cmake, rmw-opensplice-cpp }:
 buildRosPackage {
   pname = "ros-eloquent-rmw-implementation";
   version = "0.8.2-r2";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcutils rmw-fastrtps-cpp rmw-implementation-cmake poco poco-vendor rmw-connext-cpp rmw rmw-opensplice-cpp rmw-cyclonedds-cpp ];
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ poco poco-vendor ament-index-python rmw-implementation-cmake ];
-  nativeBuildInputs = [ ament-cmake-python ament-cmake ];
+  buildInputs = [ rcutils rmw rmw-connext-cpp rmw-cyclonedds-cpp rmw-fastrtps-cpp rmw-opensplice-cpp ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ament-index-python poco poco-vendor rmw-implementation-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
     description = ''The decision which ROS middleware implementation should be used for C++.'';

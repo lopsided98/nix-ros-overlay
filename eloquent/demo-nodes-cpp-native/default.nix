@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, launch-testing-ros, rmw-fastrtps-cpp, launch, rclcpp-components, std-msgs, launch-testing, ament-lint-common, ament-cmake, launch-testing-ament-cmake, ament-cmake-pytest, rclcpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rmw-fastrtps-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-demo-nodes-cpp-native";
   version = "0.8.4-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs rclcpp rmw-fastrtps-cpp rclcpp-components ];
-  checkInputs = [ launch-testing-ros launch launch-testing ament-lint-common launch-testing-ament-cmake ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ std-msgs rclcpp rmw-fastrtps-cpp rclcpp-components ];
+  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake launch-testing-ros ];
+  propagatedBuildInputs = [ rclcpp rclcpp-components rmw-fastrtps-cpp std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

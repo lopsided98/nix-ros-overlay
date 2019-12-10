@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, phidgets-digital-outputs, phidgets-temperature, phidgets-msgs, phidgets-magnetometer, phidgets-ik, phidgets-gyroscope, phidgets-digital-inputs, phidgets-accelerometer, phidgets-analog-inputs, ament-cmake, libphidget22, phidgets-api, phidgets-high-speed-encoder, phidgets-motors, phidgets-spatial }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, libphidget22, phidgets-accelerometer, phidgets-analog-inputs, phidgets-api, phidgets-digital-inputs, phidgets-digital-outputs, phidgets-gyroscope, phidgets-high-speed-encoder, phidgets-ik, phidgets-magnetometer, phidgets-motors, phidgets-msgs, phidgets-spatial, phidgets-temperature }:
 buildRosPackage {
   pname = "ros-eloquent-phidgets-drivers";
   version = "2.0.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ phidgets-digital-outputs phidgets-temperature phidgets-msgs phidgets-magnetometer phidgets-ik phidgets-gyroscope phidgets-digital-inputs phidgets-accelerometer phidgets-analog-inputs libphidget22 phidgets-motors phidgets-high-speed-encoder phidgets-api phidgets-spatial ];
+  propagatedBuildInputs = [ libphidget22 phidgets-accelerometer phidgets-analog-inputs phidgets-api phidgets-digital-inputs phidgets-digital-outputs phidgets-gyroscope phidgets-high-speed-encoder phidgets-ik phidgets-magnetometer phidgets-motors phidgets-msgs phidgets-spatial phidgets-temperature ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

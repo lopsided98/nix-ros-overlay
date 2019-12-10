@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, rosidl-default-runtime, std-msgs, ament-lint-common, ament-cmake, rosidl-default-generators }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-pcl-msgs";
   version = "1.0.0-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs sensor-msgs ];
   checkInputs = [ ament-lint-common ];
-  propagatedBuildInputs = [ std-msgs sensor-msgs rosidl-default-runtime ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
+  propagatedBuildInputs = [ rosidl-default-runtime sensor-msgs std-msgs ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = ''Package containing PCL (Point Cloud Library)-related ROS messages.'';

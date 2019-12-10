@@ -2,20 +2,19 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pkg-config, curl, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, curl, pkg-config }:
 buildRosPackage {
   pname = "ros-eloquent-libcurl-vendor";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/eloquent/libcurl_vendor/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "e08a18ca05bbffebb2a16b4d6bf876720784456a6b17a054e6964fe078fe95af";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/eloquent/libcurl_vendor/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "deec8c7d7ccd382f27d47adb8f22d17190ff41f179f20b7567a10b1ac4d016b3";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ curl ];
-  propagatedBuildInputs = [ pkg-config curl ];
+  propagatedBuildInputs = [ curl pkg-config ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

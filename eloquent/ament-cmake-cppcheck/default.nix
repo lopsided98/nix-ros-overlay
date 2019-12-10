@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, ament-cppcheck, ament-cmake-test, ament-cmake-core, ament-cmake-copyright }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cppcheck }:
 buildRosPackage {
   pname = "ros-eloquent-ament-cmake-cppcheck";
   version = "0.8.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-copyright ];
-  propagatedBuildInputs = [ ament-cmake-core ament-cppcheck ament-cmake-test ];
+  checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
+  propagatedBuildInputs = [ ament-cmake-core ament-cmake-test ament-cppcheck ];
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 
   meta = {

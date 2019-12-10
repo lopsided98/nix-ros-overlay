@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, rviz-visual-testing-framework, tinyxml-vendor, interactive-markers, urdf, pluginlib, ament-cmake-cpplint, map-msgs, ament-cmake, tf2, ament-cmake-gmock, nav-msgs, resource-retriever, tf2-geometry-msgs, qt5, rclcpp, rviz-rendering, tf2-ros, ament-cmake-gtest, rviz-rendering-tests, ament-index-cpp, ament-cmake-lint-cmake, laser-geometry, ament-cmake-uncrustify, rviz-common, visualization-msgs, ament-cmake-cppcheck }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-index-cpp, geometry-msgs, interactive-markers, laser-geometry, map-msgs, nav-msgs, pluginlib, qt5, rclcpp, resource-retriever, rviz-common, rviz-rendering, rviz-rendering-tests, rviz-visual-testing-framework, tf2, tf2-geometry-msgs, tf2-ros, tinyxml-vendor, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-rviz-default-plugins";
   version = "7.0.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ geometry-msgs tinyxml-vendor urdf resource-retriever pluginlib interactive-markers map-msgs laser-geometry qt5.qtbase tf2-geometry-msgs rviz-common visualization-msgs tf2 rclcpp nav-msgs rviz-rendering tf2-ros ];
-  checkInputs = [ ament-cmake-lint-cmake rviz-visual-testing-framework ament-cmake-cppcheck ament-cmake-cpplint rviz-rendering-tests ament-cmake-uncrustify ament-cmake-gmock ament-index-cpp ament-cmake-gtest ];
-  propagatedBuildInputs = [ geometry-msgs urdf interactive-markers resource-retriever pluginlib tinyxml-vendor map-msgs laser-geometry qt5.qtbase tf2-geometry-msgs rviz-common visualization-msgs tf2 rclcpp nav-msgs rviz-rendering tf2-ros ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-gmock ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify ament-index-cpp rviz-rendering-tests rviz-visual-testing-framework ];
+  propagatedBuildInputs = [ geometry-msgs interactive-markers laser-geometry map-msgs nav-msgs pluginlib qt5.qtbase rclcpp resource-retriever rviz-common rviz-rendering tf2 tf2-geometry-msgs tf2-ros tinyxml-vendor urdf visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

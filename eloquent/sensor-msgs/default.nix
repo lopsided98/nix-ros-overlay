@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-cmake, geometry-msgs, std-msgs, rosidl-default-runtime, ament-lint-common, ament-cmake, ament-cmake-gtest, rosidl-default-generators, builtin-interfaces, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-sensor-msgs";
   version = "0.8.1-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs builtin-interfaces geometry-msgs ];
-  checkInputs = [ rosidl-cmake ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ std-msgs rosidl-default-runtime builtin-interfaces geometry-msgs ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rosidl-cmake ];
+  propagatedBuildInputs = [ builtin-interfaces geometry-msgs rosidl-default-runtime std-msgs ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = ''A package containing some sensor data related message and service definitions.'';

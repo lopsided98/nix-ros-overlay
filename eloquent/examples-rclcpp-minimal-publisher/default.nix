@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, std-msgs, rclcpp, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-examples-rclcpp-minimal-publisher";
   version = "0.8.2-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ std-msgs rclcpp ];
-  propagatedBuildInputs = [ std-msgs rclcpp ];
+  propagatedBuildInputs = [ rclcpp std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

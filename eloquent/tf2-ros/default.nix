@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp-action, message-filters, geometry-msgs, std-msgs, tf2, ament-cmake, tf2-py, rclpy, tf2-msgs, python-cmake-module, ament-cmake-gtest, ament-cmake-pytest, rclcpp, ament-cmake-python }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, geometry-msgs, message-filters, python-cmake-module, rclcpp, rclcpp-action, rclpy, std-msgs, tf2, tf2-msgs, tf2-py }:
 buildRosPackage {
   pname = "ros-eloquent-tf2-ros";
   version = "0.12.4-r1";
@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp-action message-filters geometry-msgs std-msgs tf2-py rclpy tf2-msgs tf2 rclcpp ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
-  propagatedBuildInputs = [ rclcpp-action message-filters geometry-msgs std-msgs tf2-py rclpy tf2-msgs tf2 rclcpp ];
-  nativeBuildInputs = [ ament-cmake-python python-cmake-module ament-cmake ];
+  propagatedBuildInputs = [ geometry-msgs message-filters rclcpp rclcpp-action rclpy std-msgs tf2 tf2-msgs tf2-py ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python python-cmake-module ];
 
   meta = {
     description = ''This package contains the ROS bindings for the tf2 library, for both Python and C++.'';

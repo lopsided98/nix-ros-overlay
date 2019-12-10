@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, launch-testing-ros, sensor-msgs, rclcpp-components, launch, std-msgs, rmw-implementation-cmake, launch-testing, launch-ros, ament-lint-common, ament-cmake, ament-lint-auto, launch-testing-ament-cmake, ament-cmake-pytest, rclcpp, opencv3 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv3, rclcpp, rclcpp-components, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-image-tools";
   version = "0.8.4-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs rclcpp-components std-msgs opencv3 rclcpp ];
-  checkInputs = [ launch-testing-ros launch rmw-implementation-cmake launch-testing launch-ros ament-lint-common launch-testing-ament-cmake ament-cmake-pytest ament-lint-auto ];
-  propagatedBuildInputs = [ sensor-msgs rclcpp-components std-msgs opencv3 rclcpp ];
+  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-ros launch-testing launch-testing-ament-cmake launch-testing-ros rmw-implementation-cmake ];
+  propagatedBuildInputs = [ opencv3 rclcpp rclcpp-components sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

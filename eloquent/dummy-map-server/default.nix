@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-common, ament-cmake, ament-lint-auto, rclcpp, nav-msgs, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-dummy-map-server";
   version = "0.8.4-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp nav-msgs ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ rclcpp nav-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ nav-msgs rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

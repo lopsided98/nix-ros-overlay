@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, composition-interfaces, ament-copyright, rclcpp-components, pythonPackages, ament-flake8, ros2node, ros2param, ament-xmllint, ros2pkg, ros2cli, ament-pep257, rcl-interfaces, rclpy, ament-index-python }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, composition-interfaces, pythonPackages, rcl-interfaces, rclcpp-components, rclpy, ros2cli, ros2node, ros2param, ros2pkg }:
 buildRosPackage {
   pname = "ros-eloquent-ros2component";
   version = "0.8.6-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-xmllint ament-pep257 pythonPackages.pytest ament-flake8 ];
-  propagatedBuildInputs = [ composition-interfaces rclcpp-components ros2node ros2param ros2pkg ros2cli rcl-interfaces rclpy ament-index-python ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ];
+  propagatedBuildInputs = [ ament-index-python composition-interfaces rcl-interfaces rclcpp-components rclpy ros2cli ros2node ros2param ros2pkg ];
 
   meta = {
     description = ''The component command for ROS 2 command line tools.'';

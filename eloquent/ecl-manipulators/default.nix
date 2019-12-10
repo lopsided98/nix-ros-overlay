@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-formatters, ecl-geometry, ecl-license, ament-lint-common, ecl-exceptions, ament-cmake-gtest, ecl-build, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-exceptions, ecl-formatters, ecl-geometry, ecl-license }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-manipulators";
   version = "1.0.4-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-formatters ecl-license ecl-geometry ecl-exceptions ecl-build ];
-  checkInputs = [ ament-lint-common ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ ecl-formatters ecl-license ecl-geometry ecl-exceptions ecl-build ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ecl-build ecl-exceptions ecl-formatters ecl-geometry ecl-license ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

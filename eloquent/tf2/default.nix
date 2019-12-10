@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, console-bridge-vendor, ament-cmake, console-bridge, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, console-bridge, console-bridge-vendor, geometry-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-tf2";
   version = "0.12.4-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ geometry-msgs console-bridge console-bridge-vendor ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ geometry-msgs console-bridge console-bridge-vendor ];
+  propagatedBuildInputs = [ console-bridge console-bridge-vendor geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

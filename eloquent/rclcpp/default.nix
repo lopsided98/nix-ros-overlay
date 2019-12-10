@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, test-msgs, rosidl-typesupport-cpp, ament-cmake-gmock, rmw-implementation, ament-lint-auto, ament-cmake-ros, rmw-implementation-cmake, ament-lint-common, rcl-yaml-param-parser, rcpputils, rmw, builtin-interfaces, ament-cmake-gtest, rcl, rosgraph-msgs, rosidl-generator-cpp, rosidl-typesupport-c, tracetools, rcl-interfaces }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, builtin-interfaces, rcl, rcl-interfaces, rcl-yaml-param-parser, rcpputils, rmw, rmw-implementation, rmw-implementation-cmake, rosgraph-msgs, rosidl-generator-cpp, rosidl-typesupport-c, rosidl-typesupport-cpp, test-msgs, tracetools }:
 buildRosPackage {
   pname = "ros-eloquent-rclcpp";
   version = "0.8.3-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-generator-cpp rosidl-typesupport-c rcl rcl-yaml-param-parser rcpputils tracetools rcl-interfaces rosidl-typesupport-cpp rmw-implementation builtin-interfaces rosgraph-msgs ];
-  checkInputs = [ rmw-implementation-cmake ament-lint-common ament-lint-auto test-msgs rmw ament-cmake-gmock ament-cmake-gtest ];
-  propagatedBuildInputs = [ rosidl-generator-cpp rosidl-typesupport-c rcl ament-cmake rcl-yaml-param-parser rcpputils tracetools rcl-interfaces rmw rosidl-typesupport-cpp rmw-implementation builtin-interfaces rosgraph-msgs ];
+  checkInputs = [ ament-cmake-gmock ament-cmake-gtest ament-lint-auto ament-lint-common rmw rmw-implementation-cmake test-msgs ];
+  propagatedBuildInputs = [ ament-cmake builtin-interfaces rcl rcl-interfaces rcl-yaml-param-parser rcpputils rmw rmw-implementation rosgraph-msgs rosidl-generator-cpp rosidl-typesupport-c rosidl-typesupport-cpp tracetools ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

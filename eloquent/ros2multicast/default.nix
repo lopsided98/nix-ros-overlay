@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, pythonPackages, ament-xmllint, ros2cli, ament-pep257, ament-flake8 }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, pythonPackages, ros2cli }:
 buildRosPackage {
   pname = "ros-eloquent-ros2multicast";
   version = "0.8.6-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ ros2cli ];
-  checkInputs = [ ament-copyright ament-xmllint ament-pep257 pythonPackages.pytest ament-flake8 ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ];
   propagatedBuildInputs = [ ros2cli ];
 
   meta = {

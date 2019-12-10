@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, launch-testing-ros, joy, sensor-msgs, geometry-msgs, rclcpp-components, launch-ros, ament-lint-common, ament-cmake, launch-testing-ament-cmake, rclcpp, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, joy, launch-ros, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-teleop-twist-joy";
   version = "2.2.2-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs rclcpp geometry-msgs rclcpp-components ];
-  checkInputs = [ launch-testing-ros launch-ros ament-lint-common launch-testing-ament-cmake ament-lint-auto ];
-  propagatedBuildInputs = [ joy sensor-msgs geometry-msgs rclcpp-components rclcpp ];
+  checkInputs = [ ament-lint-auto ament-lint-common launch-ros launch-testing-ament-cmake launch-testing-ros ];
+  propagatedBuildInputs = [ geometry-msgs joy rclcpp rclcpp-components sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

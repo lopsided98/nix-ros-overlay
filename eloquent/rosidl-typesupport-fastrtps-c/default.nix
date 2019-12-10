@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-cmake, rosidl-typesupport-interface, fastrtps-cmake-module, ament-lint-common, ament-cmake, ament-lint-auto, rosidl-typesupport-fastrtps-cpp, rmw, fastrtps, rosidl-generator-c, fastcdr, rosidl-parser }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, fastcdr, fastrtps, fastrtps-cmake-module, rmw, rosidl-cmake, rosidl-generator-c, rosidl-parser, rosidl-typesupport-fastrtps-cpp, rosidl-typesupport-interface }:
 buildRosPackage {
   pname = "ros-eloquent-rosidl-typesupport-fastrtps-c";
   version = "0.8.0-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-common ament-lint-auto ];
-  propagatedBuildInputs = [ rosidl-cmake rosidl-typesupport-interface fastrtps-cmake-module ament-cmake rosidl-typesupport-fastrtps-cpp rmw fastrtps rosidl-generator-c fastcdr rosidl-parser ];
-  nativeBuildInputs = [ rosidl-cmake fastrtps-cmake-module ament-cmake rosidl-typesupport-fastrtps-cpp fastrtps rosidl-generator-c fastcdr ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ament-cmake fastcdr fastrtps fastrtps-cmake-module rmw rosidl-cmake rosidl-generator-c rosidl-parser rosidl-typesupport-fastrtps-cpp rosidl-typesupport-interface ];
+  nativeBuildInputs = [ ament-cmake fastcdr fastrtps fastrtps-cmake-module rosidl-cmake rosidl-generator-c rosidl-typesupport-fastrtps-cpp ];
 
   meta = {
     description = ''Generate the C interfaces for eProsima FastRTPS.'';

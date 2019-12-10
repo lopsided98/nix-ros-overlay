@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-core, ament-clang-tidy, ament-cmake-copyright }:
+{ lib, buildRosPackage, fetchurl, ament-clang-tidy, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test }:
 buildRosPackage {
   pname = "ros-eloquent-ament-cmake-clang-tidy";
   version = "0.8.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-copyright ];
-  propagatedBuildInputs = [ ament-cmake-test ament-clang-tidy ];
+  checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
+  propagatedBuildInputs = [ ament-clang-tidy ament-cmake-test ];
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 
   meta = {

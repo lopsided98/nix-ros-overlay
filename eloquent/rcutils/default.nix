@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python3Packages, ament-cmake-ros, launch, launch-testing, ament-lint-common, ament-lint-auto, launch-testing-ament-cmake, osrf-testing-tools-cpp, ament-cmake-pytest, ament-cmake-gmock, ament-cmake-gtest }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, osrf-testing-tools-cpp, python3Packages }:
 buildRosPackage {
   pname = "ros-eloquent-rcutils";
   version = "0.8.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ launch launch-testing ament-lint-common ament-cmake-gtest launch-testing-ament-cmake osrf-testing-tools-cpp ament-cmake-pytest ament-cmake-gmock ament-lint-auto ];
+  checkInputs = [ ament-cmake-gmock ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake osrf-testing-tools-cpp ];
   nativeBuildInputs = [ ament-cmake-ros python3Packages.empy ];
 
   meta = {

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ros-testing, ament-copyright, rosidl-runtime-py, pythonPackages, ament-flake8, test-msgs, ament-xmllint, ros2cli, ament-pep257, rclpy, ament-index-python, action-msgs }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, pythonPackages, rclpy, ros-testing, ros2cli, rosidl-runtime-py, test-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-ros2action";
   version = "0.8.6-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ ros2cli rclpy ];
-  checkInputs = [ ament-copyright ros-testing test-msgs ament-xmllint ament-pep257 pythonPackages.pytest ament-flake8 ];
-  propagatedBuildInputs = [ rosidl-runtime-py ros2cli rclpy ament-index-python action-msgs ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ros-testing test-msgs ];
+  propagatedBuildInputs = [ action-msgs ament-index-python rclpy ros2cli rosidl-runtime-py ];
 
   meta = {
     description = ''The action command for ROS 2 command line tools.'';

@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ecl-license, ecl-config, ecl-build, ament-cmake-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-config, ecl-license }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-errors";
   version = "1.0.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-license ecl-config ecl-build ];
-  propagatedBuildInputs = [ ecl-license ecl-config ];
+  buildInputs = [ ecl-build ];
+  propagatedBuildInputs = [ ecl-config ecl-license ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

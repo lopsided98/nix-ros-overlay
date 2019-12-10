@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rosidl-default-runtime, rosidl-default-generators, action-msgs, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-eloquent-example-interfaces";
   version = "0.7.1-r1";
@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ action-msgs ];
-  propagatedBuildInputs = [ rosidl-default-runtime action-msgs ];
-  nativeBuildInputs = [ rosidl-default-generators ament-cmake ];
+  propagatedBuildInputs = [ action-msgs rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = ''Contains message and service definitions used by the examples.'';

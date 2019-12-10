@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, ament-cmake-ros, launch, rclcpp-components, std-msgs, std-srvs, phidgets-api, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-eloquent-phidgets-gyroscope";
   version = "2.0.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ sensor-msgs rclcpp-components std-msgs std-srvs phidgets-api rclcpp ];
-  propagatedBuildInputs = [ sensor-msgs rclcpp-components launch std-msgs std-srvs phidgets-api rclcpp ];
+  propagatedBuildInputs = [ launch phidgets-api rclcpp rclcpp-components sensor-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

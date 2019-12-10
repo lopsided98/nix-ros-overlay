@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, ament-cmake-ros, rclcpp, std-msgs, rclpy, python-cmake-module, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, builtin-interfaces, ament-lint-auto }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, builtin-interfaces, python-cmake-module, rclcpp, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-message-filters";
   version = "3.2.3-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rclcpp builtin-interfaces rclpy ];
-  checkInputs = [ sensor-msgs std-msgs ament-cmake-gtest ament-cmake-pytest ament-lint-auto ];
-  nativeBuildInputs = [ ament-cmake-ros python-cmake-module ament-cmake-python ];
+  buildInputs = [ builtin-interfaces rclcpp rclpy ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto sensor-msgs std-msgs ];
+  nativeBuildInputs = [ ament-cmake-python ament-cmake-ros python-cmake-module ];
 
   meta = {
     description = ''A set of ROS2 message filters which take in messages and may output those messages at a later time, based on the conditions that filter needs met.'';

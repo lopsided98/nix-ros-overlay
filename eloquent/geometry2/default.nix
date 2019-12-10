@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tf2, tf2-sensor-msgs, ament-cmake, tf2-py, tf2-geometry-msgs, tf2-eigen, tf2-msgs, tf2-kdl, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, tf2-msgs, tf2-py, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-geometry2";
   version = "0.12.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ tf2-sensor-msgs tf2-py tf2-geometry-msgs tf2-eigen tf2-msgs tf2 tf2-kdl tf2-ros ];
+  propagatedBuildInputs = [ tf2 tf2-eigen tf2-geometry-msgs tf2-kdl tf2-msgs tf2-py tf2-ros tf2-sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

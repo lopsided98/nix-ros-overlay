@@ -2,7 +2,7 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, sensor-msgs, geometry-msgs, python3Packages, std-msgs, ros2topic, pythonPackages, unique-identifier-msgs, py-trees, rcl-interfaces, rclpy, py-trees-ros-interfaces, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, py-trees, py-trees-ros-interfaces, python3Packages, pythonPackages, rcl-interfaces, rclpy, ros2topic, sensor-msgs, std-msgs, tf2-ros, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-py-trees-ros";
   version = "2.0.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ sensor-msgs geometry-msgs std-msgs ros2topic unique-identifier-msgs py-trees rcl-interfaces python3Packages.setuptools rclpy py-trees-ros-interfaces tf2-ros ];
+  buildInputs = [ python3Packages.setuptools ];
   checkInputs = [ pythonPackages.pytest ];
-  propagatedBuildInputs = [ sensor-msgs geometry-msgs std-msgs ros2topic unique-identifier-msgs py-trees rcl-interfaces rclpy py-trees-ros-interfaces tf2-ros ];
+  propagatedBuildInputs = [ geometry-msgs py-trees py-trees-ros-interfaces rcl-interfaces rclpy ros2topic sensor-msgs std-msgs tf2-ros unique-identifier-msgs ];
 
   meta = {
     description = ''ROS2 extensions and behaviours for py_trees.'';
