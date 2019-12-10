@@ -1,7 +1,7 @@
 # Top level package set
 self:
 # Distro package set
-rosSelf: rosSuper: {
+rosSelf: rosSuper: with rosSelf.lib; {
   amcl = rosSuper.amcl.overrideAttrs ({
     patches ? [], ...
   }: {

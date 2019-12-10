@@ -42,4 +42,9 @@ rosSelf: rosSuper: with rosSelf.lib; {
       })
     ];
   });
+
+  rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
+    url = "https://github.com/OGRECave/ogre/archive/v1.10.12.zip";
+    sha256 = "1nafqazv396y97z0rgrn0dmkddq7y4zgfszvmi3aw6hr6zwyrpa3";
+  };
 }
