@@ -2,6 +2,14 @@
 self:
 # Distro package set
 rosSelf: rosSuper: with rosSelf.lib; {
+  cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    # This is specified in colcon.pkg. We will probably eventually need to start
+    # using colcon...
+    cmakeFlags = [ "-DBUILD_IDLC=AUTO" ];
+  });
+
   # This build system contains fractal levels of stupidity
   foonathan-memory-vendor = patchVendorGit rosSuper.foonathan-memory-vendor {
     url = "https://github.com/foonathan/memory.git";
