@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, builtin-interfaces, geometry-msgs, orocos-kdl, rclcpp, tf2, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-tf2-kdl";
-  version = "0.11.5-r1";
+  version = "0.11.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/tf2_kdl/0.11.5-1.tar.gz";
-    name = "0.11.5-1.tar.gz";
-    sha256 = "ceed23b5a676c34754796015e56f46948d75b0424c2fe574c0db34fb70c5c141";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/tf2_kdl/0.11.6-1.tar.gz";
+    name = "0.11.6-1.tar.gz";
+    sha256 = "5033e84327908f0be58198482885c5e16207229c8af7749277c728403576f59f";
   };
 
   buildType = "ament_cmake";

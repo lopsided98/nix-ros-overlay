@@ -888,6 +888,8 @@ self: super: {
 
  rqt-srv = self.callPackage ./rqt-srv {};
 
+ rqt-tf-tree = self.callPackage ./rqt-tf-tree {};
+
  rqt-top = self.callPackage ./rqt-top {};
 
  rqt-topic = self.callPackage ./rqt-topic {};

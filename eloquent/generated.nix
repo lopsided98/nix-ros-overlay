@@ -106,6 +106,8 @@ self: super: {
 
  ament-lint-common = self.callPackage ./ament-lint-common {};
 
+ ament-mypy = self.callPackage ./ament-mypy {};
+
  ament-package = self.callPackage ./ament-package {};
 
  ament-pclint = self.callPackage ./ament-pclint {};
@@ -174,6 +176,8 @@ self: super: {
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
+ diagnostic-updater = self.callPackage ./diagnostic-updater {};
+
  domain-coordinator = self.callPackage ./domain-coordinator {};
 
  dummy-map-server = self.callPackage ./dummy-map-server {};
@@ -181,6 +185,8 @@ self: super: {
  dummy-robot-bringup = self.callPackage ./dummy-robot-bringup {};
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
+
+ dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
@@ -392,6 +398,8 @@ self: super: {
 
  nav-msgs = self.callPackage ./nav-msgs {};
 
+ octomap = self.callPackage ./octomap {};
+
  opensplice-cmake-module = self.callPackage ./opensplice-cmake-module {};
 
  orocos-kdl = self.callPackage ./orocos-kdl {};
@@ -529,6 +537,8 @@ self: super: {
  ros2action = self.callPackage ./ros2action {};
 
  ros2bag = self.callPackage ./ros2bag {};
+
+ ros2cli = self.callPackage ./ros2cli {};
 
  ros2component = self.callPackage ./ros2component {};
 
@@ -672,6 +682,8 @@ self: super: {
 
  rqt-srv = self.callPackage ./rqt-srv {};
 
+ rqt-tf-tree = self.callPackage ./rqt-tf-tree {};
+
  rqt-top = self.callPackage ./rqt-top {};
 
  rqt-topic = self.callPackage ./rqt-topic {};
@@ -694,6 +706,8 @@ self: super: {
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
+ self-test = self.callPackage ./self-test {};
+
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  shape-msgs = self.callPackage ./shape-msgs {};
@@ -705,6 +719,8 @@ self: super: {
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
+
+ sros2 = self.callPackage ./sros2 {};
 
  sros2-cmake = self.callPackage ./sros2-cmake {};
 

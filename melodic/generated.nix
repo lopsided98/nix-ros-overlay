@@ -212,6 +212,8 @@ self: super: {
 
  catkin-pip = self.callPackage ./catkin-pip {};
 
+ catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
+
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
@@ -360,6 +362,8 @@ self: super: {
 
  cob-mapping-slam = self.callPackage ./cob-mapping-slam {};
 
+ cob-mimic = self.callPackage ./cob-mimic {};
+
  cob-model-identifier = self.callPackage ./cob-model-identifier {};
 
  cob-monitoring = self.callPackage ./cob-monitoring {};
@@ -411,6 +415,8 @@ self: super: {
  cob-sick-lms1xx = self.callPackage ./cob-sick-lms1xx {};
 
  cob-sick-s300 = self.callPackage ./cob-sick-s300 {};
+
+ cob-sound = self.callPackage ./cob-sound {};
 
  cob-srvs = self.callPackage ./cob-srvs {};
 
@@ -753,6 +759,8 @@ self: super: {
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
  eus-assimp = self.callPackage ./eus-assimp {};
+
+ euslisp = self.callPackage ./euslisp {};
 
  eusurdf = self.callPackage ./eusurdf {};
 

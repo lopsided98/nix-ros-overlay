@@ -292,6 +292,8 @@ self: super: {
 
  catkin-pip = self.callPackage ./catkin-pip {};
 
+ catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
+
  certifi = self.callPackage ./certifi {};
 
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
@@ -456,6 +458,8 @@ self: super: {
 
  cob-mapping-slam = self.callPackage ./cob-mapping-slam {};
 
+ cob-mimic = self.callPackage ./cob-mimic {};
+
  cob-model-identifier = self.callPackage ./cob-model-identifier {};
 
  cob-monitoring = self.callPackage ./cob-monitoring {};
@@ -513,6 +517,8 @@ self: super: {
  cob-sick-s300 = self.callPackage ./cob-sick-s300 {};
 
  cob-simulation = self.callPackage ./cob-simulation {};
+
+ cob-sound = self.callPackage ./cob-sound {};
 
  cob-srvs = self.callPackage ./cob-srvs {};
 
@@ -977,6 +983,8 @@ self: super: {
  eus-qp = self.callPackage ./eus-qp {};
 
  eus-qpoases = self.callPackage ./eus-qpoases {};
+
+ euslisp = self.callPackage ./euslisp {};
 
  eusurdf = self.callPackage ./eusurdf {};
 

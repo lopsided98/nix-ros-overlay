@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, launch, launch-ros, pythonPackages, tracetools-trace }:
 buildRosPackage {
   pname = "ros-eloquent-tracetools-launch";
-  version = "0.2.10-r1";
+  version = "0.2.12-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/tracetools_launch/0.2.10-1";
+    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/tracetools_launch/0.2.12-1";
     name = "archive.tar.gz";
-    sha256 = "59eedf380da87624a56a4c1eb6884c6c4bf5c450a1fd44a8c406db196b44a02f";
+    sha256 = "0a2037162f7f02bc0e4a77b5e5f722af8f7c60a13367cf70fbca2f7bf15ffc80";
   };
 
   buildType = "ament_python";

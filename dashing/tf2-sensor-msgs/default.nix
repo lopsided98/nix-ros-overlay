@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, eigen, eigen3-cmake-module, sensor-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-tf2-sensor-msgs";
-  version = "0.11.5-r1";
+  version = "0.11.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/tf2_sensor_msgs/0.11.5-1.tar.gz";
-    name = "0.11.5-1.tar.gz";
-    sha256 = "3dfbac1e98b1a45ac96f6638137d14b3480642c5587883d9f5ec35d2778f5775";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/tf2_sensor_msgs/0.11.6-1.tar.gz";
+    name = "0.11.6-1.tar.gz";
+    sha256 = "fec49970a85aba89ad7f1f3261e2be173a4fe40ea059a9b23d2670fb8130953e";
   };
 
   buildType = "ament_cmake";

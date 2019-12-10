@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, geometry-msgs, message-filters, rclcpp, std-msgs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-dashing-tf2-ros";
-  version = "0.11.5-r1";
+  version = "0.11.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/tf2_ros/0.11.5-1.tar.gz";
-    name = "0.11.5-1.tar.gz";
-    sha256 = "a423173e22bc3aa0e6217c9004f7865b07ec0f8fab59a417767231572d2bfac7";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/dashing/tf2_ros/0.11.6-1.tar.gz";
+    name = "0.11.6-1.tar.gz";
+    sha256 = "6b8f4ec9ea0f207445137b131e4349b7da1c4ea075e3b1bdb9a8897207cfc6b6";
   };
 
   buildType = "ament_cmake";

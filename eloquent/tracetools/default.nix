@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, pkg-config }:
 buildRosPackage {
   pname = "ros-eloquent-tracetools";
-  version = "0.2.10-r1";
+  version = "0.2.12-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/tracetools/0.2.10-1";
+    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/tracetools/0.2.12-1";
     name = "archive.tar.gz";
-    sha256 = "c7b1e68bf052ea98755782d49e90497a36e26a1dfc62ce8340e3703087b6851b";
+    sha256 = "09af757a97c6608849fbd211f17d50718a73a27c34dc8351669e48673b4786e5";
   };
 
   buildType = "ament_cmake";
