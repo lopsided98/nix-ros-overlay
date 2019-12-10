@@ -85,6 +85,25 @@ let
       sha256 = "16lx6355zskrb7wgw2bzdzms36pcjyl2ry03wgsac5215jg1zhjc";
     };
 
+    # This build system contains fractal levels of stupidity
+    foonathan-memory-vendor = patchVendorGit rosSuper.foonathan-memory-vendor {
+      url = "https://github.com/foonathan/memory.git";
+      sha256 = "1n7xxi61wzpixb3kldnl826syb4yml613q4i38d0cciydhy1gwzl";
+      fetchgitArgs = {
+        # Needed by the postFetch, then removed there
+        leaveDotGit = true;
+        # Prevent the build system from trying to download random files
+        postFetch = ''
+          cd "$out/cmake/comp"
+          git fetch https://github.com/foonathan/compatibility.git
+          git checkout -f cf13bff238397aab0d8c49b7f6263233cf8a2396
+          sed -i 's|\(set(COMP_REMOTE_URL\s\).*|\1"file://''${CMAKE_CURRENT_LIST_DIR}/")|' \
+            comp_base.cmake
+          rm -rf "$out/.git"
+        '';
+      };
+    };
+
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
       setupHook = ./gazebo-ros-setup-hook.sh;
     });
