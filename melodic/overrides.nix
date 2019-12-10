@@ -25,4 +25,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
       })
     ];
   });
+
+  gazeboSimulator = self.gazeboSimulator // {
+    gazebo = self.gazeboSimulator.gazebo9;
+  };
 }
