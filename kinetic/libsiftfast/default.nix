@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, mk, pythonPackages, rosboost-cfg, roslib, rospack, subversion }:
 buildRosPackage {
   pname = "ros-kinetic-libsiftfast";
-  version = "2.1.14-r1";
+  version = "2.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/libsiftfast/2.1.14-1.tar.gz";
-    name = "2.1.14-1.tar.gz";
-    sha256 = "edc3538c35c0ea357405807b40006c6afc9df91530ccc3ace0ef192664ba49f9";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/libsiftfast/2.1.15-1.tar.gz";
+    name = "2.1.15-1.tar.gz";
+    sha256 = "517d18b4401171f6ed1ec048cfa350168013a2bcdfe0ec15ceb716e5743258e1";
   };
 
   buildType = "catkin";

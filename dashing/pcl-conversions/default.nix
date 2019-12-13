@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/dashing/pcl_conversions/2.0.0-1.tar.gz";
     name = "2.0.0-1.tar.gz";
-    sha256 = "1dee570593be56530a89248cd15ba13a1eb72daad1c1a4d452ed7b396db8a134";
+    sha256 = "7e5a799ac5e1a196d385a9247cffabe2b8589c554b22a4a1cb10896ff3bfcb07";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, husky-msgs, husky-viz }:
 buildRosPackage {
   pname = "ros-melodic-husky-desktop";
-  version = "0.4.1-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_desktop/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "f0f545eb9930687278ea4f5e93c89858fa430187d80c27567c26513a9cc33aea";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_desktop/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "b5332794b91af65a13ba560e935f1b0008e9703de67598175ddfd4e2eeb3518a";
   };
 
   buildType = "catkin";

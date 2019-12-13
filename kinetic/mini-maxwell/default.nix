@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, roslib }:
 buildRosPackage {
   pname = "ros-kinetic-mini-maxwell";
-  version = "2.1.14-r1";
+  version = "2.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/mini_maxwell/2.1.14-1.tar.gz";
-    name = "2.1.14-1.tar.gz";
-    sha256 = "c056847379ff23803dd59df66a4c03501157b059d76ed1bac821347bd2ca0fe6";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/mini_maxwell/2.1.15-1.tar.gz";
+    name = "2.1.15-1.tar.gz";
+    sha256 = "d4e8525af88bbf73fde054c1e93d4f3ca1bf0e4d6f1690f4167b05f5a4e67eef";
   };
 
   buildType = "catkin";

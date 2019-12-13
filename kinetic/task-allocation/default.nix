@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/cpswarm/swarm_functions-release/archive/release/kinetic/task_allocation/1.1.0-1.tar.gz";
     name = "1.1.0-1.tar.gz";
-    sha256 = "cc059f8347be9d0f24d6135dcd1e763e44fea2e63a82c9d3b9d9a4f61dd854ff";
+    sha256 = "235436d8e702b5ccc43a1471b7fb4865949acf1048e56699299bad91794a0c10";
   };
 
   buildType = "catkin";

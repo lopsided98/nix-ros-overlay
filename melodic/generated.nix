@@ -2846,8 +2846,6 @@ self: super: {
 
  smach-ros = self.callPackage ./smach-ros {};
 
- smach-viewer = self.callPackage ./smach-viewer {};
-
  smclib = self.callPackage ./smclib {};
 
  social-navigation-layers = self.callPackage ./social-navigation-layers {};

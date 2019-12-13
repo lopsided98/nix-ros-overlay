@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/cpswarm/swarm_functions-release/archive/release/kinetic/kinematics_exchanger/1.1.0-1.tar.gz";
     name = "1.1.0-1.tar.gz";
-    sha256 = "3eee44d062a9f3d98ac8b203cbf7d9d1ab115621fe991160cf79d49289853f2b";
+    sha256 = "02baec3d78be0b19ae340d3e1dd2f2a8798ea284ec36109f74253e1c2a3bb1fc";
   };
 
   buildType = "catkin";
