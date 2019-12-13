@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cacert, catkin, git, mk, openssl, rosboost-cfg, rosbuild, unzip, zlib }:
 buildRosPackage {
   pname = "ros-kinetic-assimp-devel";
-  version = "2.1.14-r1";
+  version = "2.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/assimp_devel/2.1.14-1.tar.gz";
-    name = "2.1.14-1.tar.gz";
-    sha256 = "d2463baec0806b02f96ccd2444890ebe81fd0503e573c01051e94deb026e1da2";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/assimp_devel/2.1.15-1.tar.gz";
+    name = "2.1.15-1.tar.gz";
+    sha256 = "afdb80c7c69753f5fd371a86bcc0ab74f41a1d96a369e926b2291833b4aab5ef";
   };
 
   buildType = "catkin";

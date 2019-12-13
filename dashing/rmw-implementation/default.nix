@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, poco, poco-vendor, rcutils, rmw, rmw-connext-cpp, rmw-fastrtps-cpp, rmw-implementation-cmake, rmw-opensplice-cpp }:
 buildRosPackage {
   pname = "ros-dashing-rmw-implementation";
-  version = "0.7.1-r2";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/dashing/rmw_implementation/0.7.1-2.tar.gz";
-    name = "0.7.1-2.tar.gz";
-    sha256 = "d5ffa073fa3d8741f654aa0abd3f893f1a6c4923db292e28c8c416a9995eebb3";
+    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/dashing/rmw_implementation/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "69859dfd18ad79681ce7e76be437cedc989c689002bace7c1febc8b864d5dbc8";
   };
 
   buildType = "ament_cmake";

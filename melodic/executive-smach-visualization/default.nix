@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, smach-viewer }:
 buildRosPackage {
   pname = "ros-melodic-executive-smach-visualization";
-  version = "2.0.2";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/melodic/executive_smach_visualization/2.0.2-0.tar.gz";
-    name = "2.0.2-0.tar.gz";
-    sha256 = "75b50684f1fcbe42e1b5307402ff4ac6f5b598d2f2ff67acc3c746af9e83b2c8";
+    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/melodic/executive_smach_visualization/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "ee755a0a534f5e577f3b6bd6a5af3eb30a8056f2e2a7544d0cf50455ad60a73a";
   };
 
   buildType = "catkin";

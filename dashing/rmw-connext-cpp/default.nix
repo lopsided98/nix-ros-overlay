@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, connext-cmake-module, rcutils, rmw, rmw-connext-shared-cpp, rosidl-cmake, rosidl-generator-c, rosidl-generator-cpp, rosidl-generator-dds-idl, rosidl-typesupport-connext-c, rosidl-typesupport-connext-cpp }:
 buildRosPackage {
   pname = "ros-dashing-rmw-connext-cpp";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_connext-release/archive/release/dashing/rmw_connext_cpp/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "ae092ccf840be05132e3eff8979faa4d2e1c93820c36e798e87dd327e2088d9e";
+    url = "https://github.com/ros2-gbp/rmw_connext-release/archive/release/dashing/rmw_connext_cpp/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "e93e9082d98e287fb1e91d43aa7b018ea5db1399beaf32d039219b1ffd2b59d5";
   };
 
   buildType = "ament_cmake";

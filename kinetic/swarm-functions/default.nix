@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/cpswarm/swarm_functions-release/archive/release/kinetic/swarm_functions/1.1.0-1.tar.gz";
     name = "1.1.0-1.tar.gz";
-    sha256 = "4fe3f0bdb2e77fc5523bc763d26edbf2b5e85ca70255f29bd8d43a5c8d4140dd";
+    sha256 = "ec6006a233b0691e3400dfc342cc3f13f424441c6d4b547db9306af7f87fed74";
   };
 
   buildType = "catkin";
