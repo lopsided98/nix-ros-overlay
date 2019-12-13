@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros }:
 buildRosPackage {
   pname = "ros-melodic-blender-gazebo";
-  version = "0.0.3-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/david0429-gbp/blender_gazebo_gbp/archive/release/melodic/blender_gazebo/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "0dda68ea5dfd6579742c047ffedbeff449bd31f319aa1e47ae263cbac7ac3e1e";
+    url = "https://github.com/david0429-gbp/blender_gazebo_gbp/archive/release/melodic/blender_gazebo/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "ca41a7b8fbb299e647314ea3aefbca8b162617487784140646726df92a8909f3";
   };
 
   buildType = "catkin";

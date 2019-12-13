@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/cpswarm/swarm_functions-release/archive/release/kinetic/target_monitor/1.1.0-1.tar.gz";
     name = "1.1.0-1.tar.gz";
-    sha256 = "543537106fa90939a2c368947fec9b62db886b170d82e2ecf007a1b319ef9468";
+    sha256 = "6c77992ee6e908a2d3885704b4e05fdcdb7453ffb9046b02a1c5e2deac89f3ae";
   };
 
   buildType = "catkin";

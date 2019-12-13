@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/cpswarm/swarm_functions-release/archive/release/kinetic/area_division/1.1.0-1.tar.gz";
     name = "1.1.0-1.tar.gz";
-    sha256 = "08224e207a79a56651930a2653d25bb2c87aff83975cb05614b67fc5be6297f3";
+    sha256 = "705892330f17a4eaba1e6483bece0282f2e1cb0ed94b684ade002ae1d1127ed5";
   };
 
   buildType = "catkin";

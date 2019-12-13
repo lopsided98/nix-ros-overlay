@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/cpswarm/swarm_functions-release/archive/release/kinetic/coverage_path/1.1.0-1.tar.gz";
     name = "1.1.0-1.tar.gz";
-    sha256 = "a67ebc957c654908124170d240c75382d86734be4d813a48b57644155a0fac17";
+    sha256 = "357eb5b7ac47f29f5fa009322f0f06184d30e7a63179e3d91ab604aac10ebab5";
   };
 
   buildType = "catkin";

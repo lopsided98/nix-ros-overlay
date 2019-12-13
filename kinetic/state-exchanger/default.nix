@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/cpswarm/swarm_functions-release/archive/release/kinetic/state_exchanger/1.1.0-1.tar.gz";
     name = "1.1.0-1.tar.gz";
-    sha256 = "6ccdd3c450b331704b4700c8346a92eaf66806fb44d7914cee25cf377f5940ac";
+    sha256 = "8217d057f69a883ecef8385f234358d46d09c9aae5a4612513e80f9d680da8bd";
   };
 
   buildType = "catkin";

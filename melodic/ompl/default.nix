@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, pkg-config }:
 buildRosPackage {
   pname = "ros-melodic-ompl";
-  version = "1.4.2-r3";
+  version = "1.4.2-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ompl-release/archive/release/melodic/ompl/1.4.2-3.tar.gz";
-    name = "1.4.2-3.tar.gz";
-    sha256 = "74c8448f36a36f6fae0f8eeb78fc259a4d9e3b1a6b7a51b190a113039324e77e";
+    url = "https://github.com/ros-gbp/ompl-release/archive/release/melodic/ompl/1.4.2-5.tar.gz";
+    name = "1.4.2-5.tar.gz";
+    sha256 = "9d948c9a1b3172665a402240eaa980066db8ce1ca27a5d1646d1798d083c518f";
   };
 
   buildType = "cmake";

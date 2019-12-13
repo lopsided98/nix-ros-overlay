@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/cpswarm/cpswarm_msgs-release/archive/release/kinetic/cpswarm_msgs/1.1.0-1.tar.gz";
     name = "1.1.0-1.tar.gz";
-    sha256 = "560f72b50d8da37e4fb4afaa35511a692f58991f1a3bf5f892d2b7f6f29b1fc4";
+    sha256 = "c8e0320357d7ffc4c72eefcfab586308d90df226473b3b7cf7139ee163aea39a";
   };
 
   buildType = "catkin";

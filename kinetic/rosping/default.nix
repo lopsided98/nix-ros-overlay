@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mk, rosboost-cfg, rosbuild, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rosping";
-  version = "2.1.14-r1";
+  version = "2.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/rosping/2.1.14-1.tar.gz";
-    name = "2.1.14-1.tar.gz";
-    sha256 = "cc26b6cb500d078bb7068e815b57cde51a3669c25575dc438082e1ec3703c679";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/rosping/2.1.15-1.tar.gz";
+    name = "2.1.15-1.tar.gz";
+    sha256 = "65f42f9f9e929b6f7612472f010fcad2b16d2dbd0735ffe930db7cae24d71bd7";
   };
 
   buildType = "catkin";
