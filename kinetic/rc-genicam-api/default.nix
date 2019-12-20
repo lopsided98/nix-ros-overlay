@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, libusb }:
 buildRosPackage {
   pname = "ros-kinetic-rc-genicam-api";
-  version = "2.2.2-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/kinetic/rc_genicam_api/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "f5711d2a2637481dd12524c5c65c9703a3a5dfba7c582e375e9fce68f243defc";
+    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/kinetic/rc_genicam_api/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "122f4c42b5a0e84d0c2560388a9c494456cf082fab861a3065a51a8a625adecd";
   };
 
   buildType = "cmake";

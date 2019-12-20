@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, baldor, catkin, cv-bridge, geometry-msgs, image-geometry, pythonPackages, resource-retriever, rostopic, sensor-msgs, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-criutils";
-  version = "0.1.3-r1";
+  version = "0.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/crigroup/criutils-release/archive/release/melodic/criutils/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "f888e13e68028b41ad7e64fb9e2430184b96fca5118ff59486331a07ce6dd119";
+    url = "https://github.com/crigroup/criutils-release/archive/release/melodic/criutils/0.1.3-2.tar.gz";
+    name = "0.1.3-2.tar.gz";
+    sha256 = "f6cd15555a09722265c91234ab0c3e46c501a052cce3979a5fde66d86f0a0c51";
   };
 
   buildType = "catkin";

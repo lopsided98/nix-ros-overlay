@@ -498,8 +498,6 @@ self: super: {
 
  cob-phidgets = self.callPackage ./cob-phidgets {};
 
- cob-pick-place-action = self.callPackage ./cob-pick-place-action {};
-
  cob-reflector-referencing = self.callPackage ./cob-reflector-referencing {};
 
  cob-relayboard = self.callPackage ./cob-relayboard {};
@@ -2289,6 +2287,16 @@ self: super: {
  mongodb-store-msgs = self.callPackage ./mongodb-store-msgs {};
 
  monocam-settler = self.callPackage ./monocam-settler {};
+
+ moose-control = self.callPackage ./moose-control {};
+
+ moose-description = self.callPackage ./moose-description {};
+
+ moose-desktop = self.callPackage ./moose-desktop {};
+
+ moose-msgs = self.callPackage ./moose-msgs {};
+
+ moose-viz = self.callPackage ./moose-viz {};
 
  motion-module-tutorial = self.callPackage ./motion-module-tutorial {};
 
@@ -4865,6 +4873,8 @@ self: super: {
  uuv-world-ros-plugins-msgs = self.callPackage ./uuv-world-ros-plugins-msgs {};
 
  uvc-camera = self.callPackage ./uvc-camera {};
+
+ uwb-hardware-driver = self.callPackage ./uwb-hardware-driver {};
 
  uwsim-bullet = self.callPackage ./uwsim-bullet {};
 

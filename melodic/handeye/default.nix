@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, baldor, catkin, criutils, geometry-msgs, message-generation, message-runtime, pythonPackages, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-handeye";
-  version = "0.1.1-r1";
+  version = "0.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/crigroup/handeye-release/archive/release/melodic/handeye/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "f403b5d7be7027acc714c76657bdf3b40beb68cb5cda8792c7224312bb9088f4";
+    url = "https://github.com/crigroup/handeye-release/archive/release/melodic/handeye/0.1.1-2.tar.gz";
+    name = "0.1.1-2.tar.gz";
+    sha256 = "63c728c534746bdf434c25d972de02ad713dda6dcb45463c1688c2ec3cd704e4";
   };
 
   buildType = "catkin";

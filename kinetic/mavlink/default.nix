@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-mavlink";
-  version = "2019.11.11-r1";
+  version = "2019.12.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2019.11.11-1.tar.gz";
-    name = "2019.11.11-1.tar.gz";
-    sha256 = "f92fa26efd2a54744f0950af5ff536968f3ac00f75703696899db70851d25790";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2019.12.12-1.tar.gz";
+    name = "2019.12.12-1.tar.gz";
+    sha256 = "33694a829649bd10f4d0e469e382f2ab36e72b8fa8c25d5bd5bab5011e1df1bc";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, seed-r7-bringup, seed-r7-description, seed-r7-moveit-config, seed-r7-navigation, seed-r7-robot-interface, seed-r7-ros-controller, seed-r7-samples, seed-r7-typef-moveit-config }:
 buildRosPackage {
   pname = "ros-kinetic-seed-r7-ros-pkg";
-  version = "0.3.3-r2";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/seed-solutions/seed_r7_ros_pkg-release/archive/release/kinetic/seed_r7_ros_pkg/0.3.3-2.tar.gz";
-    name = "0.3.3-2.tar.gz";
-    sha256 = "70c928534a5e2dea0d24a9eaf1edec28d9a2f7c29dea03378a8cba2c7bc9b460";
+    url = "https://github.com/seed-solutions/seed_r7_ros_pkg-release/archive/release/kinetic/seed_r7_ros_pkg/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "ff174dbf508512dbdbe02ddbb31b719aa1702c9668854b622293ccf93dd2de39";
   };
 
   buildType = "catkin";

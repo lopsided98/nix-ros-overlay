@@ -128,6 +128,8 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
+
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
@@ -564,6 +566,8 @@ self: super: {
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
+ nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
+
  novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
 
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
@@ -927,6 +931,8 @@ self: super: {
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
  sophus = self.callPackage ./sophus {};
+
+ spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
 

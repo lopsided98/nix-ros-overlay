@@ -2,20 +2,20 @@
 # Copyright 2019 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, rosbag-migration-rule, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-automotive-navigation-msgs";
-  version = "2.0.3";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/automotive_autonomy_msgs-release/archive/release/melodic/automotive_navigation_msgs/2.0.3-0.tar.gz";
-    name = "2.0.3-0.tar.gz";
-    sha256 = "c47b3746216db63830a678b6d220f7f39bacebe9980d4fa40aeb106012873da1";
+    url = "https://github.com/astuff/automotive_autonomy_msgs-release/archive/release/melodic/automotive_navigation_msgs/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "c393cc69f861c8a3990cece3e41a5da5c61e2a0bc9b4f52565816eded524bdcd";
   };
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ geometry-msgs message-runtime std-msgs ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime rosbag-migration-rule std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

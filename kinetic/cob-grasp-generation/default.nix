@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, cob-description, geometry-msgs, message-generation, message-runtime, moveit-msgs, pythonPackages, robot-state-publisher, roslib, rospy, rviz, schunk-description, sensor-msgs, std-msgs, tf, tf2-ros, trajectory-msgs, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-cob-grasp-generation";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_grasp_generation/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "9bec75db188d073b1516659886f0c227255ca45e0e410d4f97fcd607b45bd66e";
+    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_grasp_generation/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "7f082dc3966d5fd976a432676bf85ea36365c5f2a66d4cfa336489e48fd23e5a";
   };
 
   buildType = "catkin";

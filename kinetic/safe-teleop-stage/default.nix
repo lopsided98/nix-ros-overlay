@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joy, safe-teleop-base, stage }:
 buildRosPackage {
   pname = "ros-kinetic-safe-teleop-stage";
-  version = "0.0.2";
+  version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/shared_autonomy_manipulation-release/archive/release/kinetic/safe_teleop_stage/0.0.2-0.tar.gz";
-    name = "0.0.2-0.tar.gz";
-    sha256 = "61902ee607a1d1a078a41dd75b371142cdf2dcd8070ae1466197857fc8ef4686";
+    url = "https://github.com/ros-gbp/shared_autonomy_manipulation-release/archive/release/kinetic/safe_teleop_stage/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
+    sha256 = "2d822c77e30d754df6817fb0aa8160a0c34a4825af0a6c87f496e6304d70d7d3";
   };
 
   buildType = "catkin";

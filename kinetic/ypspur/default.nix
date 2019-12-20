@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, readline }:
 buildRosPackage {
   pname = "ros-kinetic-ypspur";
-  version = "1.17.0-r1";
+  version = "1.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/openspur/yp-spur-release/archive/release/kinetic/ypspur/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "4a39d21cfd4b58e3cae0b8e1b76483e22e411a67dbe7f5d63a9719b87784e17c";
+    url = "https://github.com/openspur/yp-spur-release/archive/release/kinetic/ypspur/1.17.1-1.tar.gz";
+    name = "1.17.1-1.tar.gz";
+    sha256 = "33c4b9377998a8eafead5c6f1e15603c0c1ed0ebb5f19e257b010223eb7c0cd6";
   };
 
   buildType = "cmake";
