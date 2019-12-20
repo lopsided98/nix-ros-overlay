@@ -792,6 +792,12 @@ self: super: {
 
  face-detector = self.callPackage ./face-detector {};
 
+ fake-joint = self.callPackage ./fake-joint {};
+
+ fake-joint-driver = self.callPackage ./fake-joint-driver {};
+
+ fake-joint-launch = self.callPackage ./fake-joint-launch {};
+
  fake-localization = self.callPackage ./fake-localization {};
 
  fetch-auto-dock-msgs = self.callPackage ./fetch-auto-dock-msgs {};
@@ -1717,6 +1723,8 @@ self: super: {
  mvsim = self.callPackage ./mvsim {};
 
  nanomsg = self.callPackage ./nanomsg {};
+
+ naoqi-libqi = self.callPackage ./naoqi-libqi {};
 
  nav2d = self.callPackage ./nav2d {};
 
@@ -2746,6 +2754,12 @@ self: super: {
 
  rxros-tf = self.callPackage ./rxros-tf {};
 
+ safe-teleop-base = self.callPackage ./safe-teleop-base {};
+
+ safe-teleop-pr2 = self.callPackage ./safe-teleop-pr2 {};
+
+ safe-teleop-stage = self.callPackage ./safe-teleop-stage {};
+
  safety-limiter = self.callPackage ./safety-limiter {};
 
  safety-limiter-msgs = self.callPackage ./safety-limiter-msgs {};
@@ -2845,6 +2859,8 @@ self: super: {
  smach-msgs = self.callPackage ./smach-msgs {};
 
  smach-ros = self.callPackage ./smach-ros {};
+
+ smach-viewer = self.callPackage ./smach-viewer {};
 
  smclib = self.callPackage ./smclib {};
 

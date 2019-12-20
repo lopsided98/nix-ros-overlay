@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros }:
 buildRosPackage {
   pname = "ros-kinetic-blender-gazebo";
-  version = "0.0.3-r2";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/david0429-gbp/blender_gazebo_gbp/archive/release/kinetic/blender_gazebo/0.0.3-2.tar.gz";
-    name = "0.0.3-2.tar.gz";
-    sha256 = "a110946d0b213c28bf10c246623a0722da3280892f1e2fe7f3907af7bf11e8ad";
+    url = "https://github.com/david0429-gbp/blender_gazebo_gbp/archive/release/kinetic/blender_gazebo/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "8108a1e3473ab3955868df7186eb670e389c417409d396ffeaf24c68bffef31d";
   };
 
   buildType = "catkin";

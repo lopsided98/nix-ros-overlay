@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-husky-description";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_description/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "e1327ddd716d11540d247289a69ac44f0d2c09c683626ab5ec25683059301750";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_description/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "fedf90617d9fb41b2d5f2df85a59667c98886c991f4ffdcc8dd16a3e060aeb9b";
   };
 
   buildType = "catkin";

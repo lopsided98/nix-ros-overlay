@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, message-generation, message-runtime, roscpp, rqt-reconfigure, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-sick-safetyscanners";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners-release/archive/release/kinetic/sick_safetyscanners/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "6a37d396bc361e2351027762515601307b1fccb12ad3ff8b3fe0cab38edb8ac8";
+    url = "https://github.com/SICKAG/sick_safetyscanners-release/archive/release/kinetic/sick_safetyscanners/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "8529eb3a84bcdb79a11d4156bff66470bb0f9876b38ad4c7555c0e171e08c857";
   };
 
   buildType = "catkin";

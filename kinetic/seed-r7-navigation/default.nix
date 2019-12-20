@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, catkin, gmapping, joy, map-server, move-base, move-base-msgs, nav-msgs, rospy, teb-local-planner, teleop-twist-joy, urg-node }:
 buildRosPackage {
   pname = "ros-kinetic-seed-r7-navigation";
-  version = "0.3.3-r2";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/seed-solutions/seed_r7_ros_pkg-release/archive/release/kinetic/seed_r7_navigation/0.3.3-2.tar.gz";
-    name = "0.3.3-2.tar.gz";
-    sha256 = "f83b7792381fe9b6d85f0010678ee6cc4f7709d6110e252da279853565a898b7";
+    url = "https://github.com/seed-solutions/seed_r7_ros_pkg-release/archive/release/kinetic/seed_r7_navigation/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "2c3e8effa191e252c8ec204c154e4caeaeaefed04b8b948c9e1c88b5fc4c659e";
   };
 
   buildType = "catkin";

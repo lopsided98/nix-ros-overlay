@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, seed-r7-ros-controller }:
 buildRosPackage {
   pname = "ros-kinetic-seed-r7-robot-interface";
-  version = "0.3.3-r2";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/seed-solutions/seed_r7_ros_pkg-release/archive/release/kinetic/seed_r7_robot_interface/0.3.3-2.tar.gz";
-    name = "0.3.3-2.tar.gz";
-    sha256 = "22cfb94f6d403cd8e879e23747a4b8b84b298400d0ed488e5562a0620242549b";
+    url = "https://github.com/seed-solutions/seed_r7_ros_pkg-release/archive/release/kinetic/seed_r7_robot_interface/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "6d3e974a6ee2f28bad0bd6c637351960a5bf6d65a0cd06733a9ee7c95092d1de";
   };
 
   buildType = "catkin";

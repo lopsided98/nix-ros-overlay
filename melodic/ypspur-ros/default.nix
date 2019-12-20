@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, geometry-msgs, nav-msgs, roscpp, roslint, rostest, sensor-msgs, std-msgs, tf, trajectory-msgs, ypspur }:
 buildRosPackage {
   pname = "ros-melodic-ypspur-ros";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/openspur/ypspur_ros-release/archive/release/melodic/ypspur_ros/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "58b894206e18dfa8c85d4c3a067cb2c5f3b0bba75bc66e9d9dffb40833bb26f5";
+    url = "https://github.com/openspur/ypspur_ros-release/archive/release/melodic/ypspur_ros/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "4684c1bf3511a0da7e1af9dac8d34ae309d5be0ab80e205f3ed93feeae647794";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-automotive-platform-msgs";
-  version = "2.0.3";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/automotive_autonomy_msgs-release/archive/release/kinetic/automotive_platform_msgs/2.0.3-0.tar.gz";
-    name = "2.0.3-0.tar.gz";
-    sha256 = "63c1a1ecf12184be1954ffa38860b918033dc4f169dda552791abb1443452528";
+    url = "https://github.com/astuff/automotive_autonomy_msgs-release/archive/release/kinetic/automotive_platform_msgs/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "1154e7bc68b22890f5baf29e3699c4deb20ab3aefc2e9ce98d17245c137e59be";
   };
 
   buildType = "catkin";
