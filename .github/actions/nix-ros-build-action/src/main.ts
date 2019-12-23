@@ -155,27 +155,18 @@ async function run() {
     ])
     results.forEach(r => statusResults.get(r.status)!.push(r))
 
-    core.startGroup("Already built packages")
-    statusResults.get(BuildStatus.CACHED)!
-      .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
+    core.startGroup("Results")
+    core.info(`Successes: ${statusResults.get(BuildStatus.SUCCESS)!.length}`)
+    core.info(`Cached: ${statusResults.get(BuildStatus.CACHED)!.length}`)
+    core.info(`Evaluation failures: ${statusResults.get(BuildStatus.EVALUATION_FAILURE)!.length}`)
+    core.info(`Dependency failures: ${statusResults.get(BuildStatus.DEPENDENCY_FAILURE)!.length}`)
+    core.info(`Build failures: ${statusResults.get(BuildStatus.BUILD_FAILURE)!.length}`)
+    core.info(`Unknown errors: ${statusResults.get(BuildStatus.ERROR)!.length}`)
     core.endGroup()
 
-    for (let r of statusResults.get(BuildStatus.SUCCESS)!) {
-      await core.group(
-        `Sucessfully built ${r.attr} (${r.drvPath})`,
-        () => nix.printLog(r.drvPath!).catch(() => undefined)
-      )
-    }
-
-    for (let r of statusResults.get(BuildStatus.EVALUATION_FAILURE)!) {
-      core.startGroup(`Failed to evaluate ${r.attr}`)
-      core.warning(r.message)
-      core.endGroup()
-    }
-
-    for (let r of statusResults.get(BuildStatus.DEPENDENCY_FAILURE)!) {
-      core.startGroup(`Dependency of ${r.attr} (${r.drvPath}) failed to build`)
-      core.warning(r.message)
+    for (let r of statusResults.get(BuildStatus.ERROR)!) {
+      core.startGroup(`Unknown error building ${r.attr} (${r.drvPath})`)
+      core.error(r.message)
       core.endGroup()
     }
 
@@ -186,19 +177,28 @@ async function run() {
       )
     }
 
-    for (let r of statusResults.get(BuildStatus.ERROR)!) {
-      core.startGroup(`Unknown error building ${r.attr} (${r.drvPath})`)
-      core.error(r.message)
+    for (let r of statusResults.get(BuildStatus.DEPENDENCY_FAILURE)!) {
+      core.startGroup(`Dependency of ${r.attr} (${r.drvPath}) failed to build`)
+      core.warning(r.message)
       core.endGroup()
     }
 
-    core.startGroup("Results")
-    core.info(`Successes: ${statusResults.get(BuildStatus.SUCCESS)!.length}`)
-    core.info(`Cached: ${statusResults.get(BuildStatus.CACHED)!.length}`)
-    core.info(`Evaluation failures: ${statusResults.get(BuildStatus.EVALUATION_FAILURE)!.length}`)
-    core.info(`Dependency failures: ${statusResults.get(BuildStatus.DEPENDENCY_FAILURE)!.length}`)
-    core.info(`Build failures: ${statusResults.get(BuildStatus.BUILD_FAILURE)!.length}`)
-    core.info(`Unknown errors: ${statusResults.get(BuildStatus.ERROR)!.length}`)
+    for (let r of statusResults.get(BuildStatus.EVALUATION_FAILURE)!) {
+      core.startGroup(`Failed to evaluate ${r.attr}`)
+      core.warning(r.message)
+      core.endGroup()
+    }
+
+    for (let r of statusResults.get(BuildStatus.SUCCESS)!) {
+      await core.group(
+        `Sucessfully built ${r.attr} (${r.drvPath})`,
+        () => nix.printLog(r.drvPath!).catch(() => undefined)
+      )
+    }
+
+    core.startGroup("Already built packages")
+    statusResults.get(BuildStatus.CACHED)!
+      .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
     core.endGroup()
   } catch (error) {
     core.setFailed(error.message)

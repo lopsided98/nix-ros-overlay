@@ -358,6 +358,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const os = __webpack_require__(87);
 const events = __webpack_require__(614);
 const child = __webpack_require__(129);
+const path = __webpack_require__(622);
+const io = __webpack_require__(1);
+const ioUtil = __webpack_require__(672);
 /* eslint-disable @typescript-eslint/unbound-method */
 const IS_WINDOWS = process.platform === 'win32';
 /*
@@ -703,6 +706,16 @@ class ToolRunner extends events.EventEmitter {
      */
     exec() {
         return __awaiter(this, void 0, void 0, function* () {
+            // root the tool path if it is unrooted and contains relative pathing
+            if (!ioUtil.isRooted(this.toolPath) &&
+                (this.toolPath.includes('/') ||
+                    (IS_WINDOWS && this.toolPath.includes('\\')))) {
+                // prefer options.cwd if it is specified, however options.cwd may also need to be rooted
+                this.toolPath = path.resolve(process.cwd(), this.options.cwd || process.cwd(), this.toolPath);
+            }
+            // if the tool is only a file name, then resolve it from the PATH
+            // otherwise verify it exists (add extension on Windows if necessary)
+            this.toolPath = yield io.which(this.toolPath, true);
             return new Promise((resolve, reject) => {
                 this._debug(`exec tool: ${this.toolPath}`);
                 this._debug('arguments:');
@@ -1160,31 +1173,6 @@ function run() {
                 [5 /* ERROR */, []],
             ]);
             results.forEach(r => statusResults.get(r.status).push(r));
-            core.startGroup("Already built packages");
-            statusResults.get(1 /* CACHED */)
-                .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
-            core.endGroup();
-            for (let r of statusResults.get(0 /* SUCCESS */)) {
-                yield core.group(`Sucessfully built ${r.attr} (${r.drvPath})`, () => nix.printLog(r.drvPath).catch(() => undefined));
-            }
-            for (let r of statusResults.get(2 /* EVALUATION_FAILURE */)) {
-                core.startGroup(`Failed to evaluate ${r.attr}`);
-                core.warning(r.message);
-                core.endGroup();
-            }
-            for (let r of statusResults.get(3 /* DEPENDENCY_FAILURE */)) {
-                core.startGroup(`Dependency of ${r.attr} (${r.drvPath}) failed to build`);
-                core.warning(r.message);
-                core.endGroup();
-            }
-            for (let r of statusResults.get(4 /* BUILD_FAILURE */)) {
-                yield core.group(`Failed to build ${r.attr} (${r.drvPath})`, () => nix.printLog(r.drvPath).catch(() => undefined));
-            }
-            for (let r of statusResults.get(5 /* ERROR */)) {
-                core.startGroup(`Unknown error building ${r.attr} (${r.drvPath})`);
-                core.error(r.message);
-                core.endGroup();
-            }
             core.startGroup("Results");
             core.info(`Successes: ${statusResults.get(0 /* SUCCESS */).length}`);
             core.info(`Cached: ${statusResults.get(1 /* CACHED */).length}`);
@@ -1192,6 +1180,31 @@ function run() {
             core.info(`Dependency failures: ${statusResults.get(3 /* DEPENDENCY_FAILURE */).length}`);
             core.info(`Build failures: ${statusResults.get(4 /* BUILD_FAILURE */).length}`);
             core.info(`Unknown errors: ${statusResults.get(5 /* ERROR */).length}`);
+            core.endGroup();
+            for (let r of statusResults.get(5 /* ERROR */)) {
+                core.startGroup(`Unknown error building ${r.attr} (${r.drvPath})`);
+                core.error(r.message);
+                core.endGroup();
+            }
+            for (let r of statusResults.get(4 /* BUILD_FAILURE */)) {
+                yield core.group(`Failed to build ${r.attr} (${r.drvPath})`, () => nix.printLog(r.drvPath).catch(() => undefined));
+            }
+            for (let r of statusResults.get(3 /* DEPENDENCY_FAILURE */)) {
+                core.startGroup(`Dependency of ${r.attr} (${r.drvPath}) failed to build`);
+                core.warning(r.message);
+                core.endGroup();
+            }
+            for (let r of statusResults.get(2 /* EVALUATION_FAILURE */)) {
+                core.startGroup(`Failed to evaluate ${r.attr}`);
+                core.warning(r.message);
+                core.endGroup();
+            }
+            for (let r of statusResults.get(0 /* SUCCESS */)) {
+                yield core.group(`Sucessfully built ${r.attr} (${r.drvPath})`, () => nix.printLog(r.drvPath).catch(() => undefined));
+            }
+            core.startGroup("Already built packages");
+            statusResults.get(1 /* CACHED */)
+                .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
             core.endGroup();
         }
         catch (error) {
