@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -127,6 +127,8 @@ self: super: {
  asmach = self.callPackage ./asmach {};
 
  asmach-tutorials = self.callPackage ./asmach-tutorials {};
+
+ asr-msgs = self.callPackage ./asr-msgs {};
 
  assimp-devel = self.callPackage ./assimp-devel {};
 
@@ -2294,7 +2296,11 @@ self: super: {
 
  moose-desktop = self.callPackage ./moose-desktop {};
 
+ moose-gazebo = self.callPackage ./moose-gazebo {};
+
  moose-msgs = self.callPackage ./moose-msgs {};
+
+ moose-simulator = self.callPackage ./moose-simulator {};
 
  moose-viz = self.callPackage ./moose-viz {};
 

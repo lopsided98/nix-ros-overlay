@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, eigen, gazebo-ros }:
 buildRosPackage {
   pname = "ros-melodic-wave-gazebo-plugins";
-  version = "1.2.6-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/vrx-release/archive/release/melodic/wave_gazebo_plugins/1.2.6-1.tar.gz";
-    name = "1.2.6-1.tar.gz";
-    sha256 = "cdb3a57bf812db78c4cd630f0f2608a667d7d8103b7d55570eb3cefbb5b0ac0f";
+    url = "https://github.com/ros-gbp/vrx-release/archive/release/melodic/wave_gazebo_plugins/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "2e377ffb712c23f3e9f3a3affbd5d43bc4663197e358327fbf54822ffb00983a";
   };
 
   buildType = "catkin";

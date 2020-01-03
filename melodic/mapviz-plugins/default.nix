@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cv-bridge, gps-common, image-transport, libqt-core, libqt-dev, libqt-opengl, libqt-opengl-dev, map-msgs, mapviz, marti-common-msgs, marti-nav-msgs, marti-visualization-msgs, move-base-msgs, nav-msgs, pluginlib, qt-qmake, roscpp, sensor-msgs, std-msgs, stereo-msgs, swri-image-util, swri-math-util, swri-route-util, swri-transform-util, swri-yaml-util, tf, visualization-msgs }:

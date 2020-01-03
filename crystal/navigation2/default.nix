@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, nav2-amcl, nav2-bt-navigator, nav2-costmap-2d, nav2-dwb-controller, nav2-dynamic-params, nav2-map-server, nav2-mission-executor, nav2-motion-primitives, nav2-msgs, nav2-navfn-planner, nav2-robot, nav2-simple-navigator, nav2-tasks, nav2-util, nav2-voxel-grid, nav2-world-model }:

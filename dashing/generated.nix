@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -919,8 +919,6 @@ self: super: {
  self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
-
- serial-driver = self.callPackage ./serial-driver {};
 
  shape-msgs = self.callPackage ./shape-msgs {};
 

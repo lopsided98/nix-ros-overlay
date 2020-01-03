@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros, lms1xx, nav-msgs, pointgrey-camera-description, pointgrey-camera-driver, robot-state-publisher, roslaunch, tf, urdf, xacro }:

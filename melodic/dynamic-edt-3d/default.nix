@@ -1,20 +1,20 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, octomap }:
+{ lib, buildRosPackage, fetchurl, cmake, octomap }:
 buildRosPackage {
   pname = "ros-melodic-dynamic-edt-3d";
-  version = "1.9.0-r1";
+  version = "1.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/melodic/dynamic_edt_3d/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "b3da422d3baebaea5aa422558b878f02058f7695617e5b116ee7bdf1723c12cc";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/melodic/dynamic_edt_3d/1.9.3-1.tar.gz";
+    name = "1.9.3-1.tar.gz";
+    sha256 = "68d2bd30f42d15be91cc632bf371c179d454a00c96eb2719496644cb4620944f";
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ catkin octomap ];
+  propagatedBuildInputs = [ octomap ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

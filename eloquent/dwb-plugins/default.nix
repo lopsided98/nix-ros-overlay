@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, dwb-core, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-util, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-dwb-plugins";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/dwb_plugins/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "eab9306b619bb2a6e092b8f170605fbb8436ddb1aa43a641fd89dd3b1d26f093";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/dwb_plugins/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "7aec81b8693b2d58fa5c9575385e9bca82a9d167b15434ad0a65ea5271335797";
   };
 
   buildType = "ament_cmake";

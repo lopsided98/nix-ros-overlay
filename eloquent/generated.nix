@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -462,6 +462,10 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
+ nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
+
+ ntpd-driver = self.callPackage ./ntpd-driver {};
+
  octomap = self.callPackage ./octomap {};
 
  opensplice-cmake-module = self.callPackage ./opensplice-cmake-module {};
@@ -513,8 +517,6 @@ self: super: {
  pluginlib = self.callPackage ./pluginlib {};
 
  poco-vendor = self.callPackage ./poco-vendor {};
-
- popf = self.callPackage ./popf {};
 
  px4-msgs = self.callPackage ./px4-msgs {};
 
@@ -782,6 +784,8 @@ self: super: {
 
  sophus = self.callPackage ./sophus {};
 
+ spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
+
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
@@ -865,6 +869,8 @@ self: super: {
  urdfdom = self.callPackage ./urdfdom {};
 
  urdfdom-headers = self.callPackage ./urdfdom-headers {};
+
+ v4l2-camera = self.callPackage ./v4l2-camera {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

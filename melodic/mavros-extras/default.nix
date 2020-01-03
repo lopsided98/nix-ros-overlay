@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, mavros, mavros-msgs, roscpp, sensor-msgs, std-msgs, tf, tf2-eigen, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mavros-extras";
-  version = "0.33.4-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/mavros_extras/0.33.4-1.tar.gz";
-    name = "0.33.4-1.tar.gz";
-    sha256 = "4e570368999aa52b0783de10865e85602c53f5a90e6a600da509e146985c3242";
+    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/mavros_extras/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "42999fea44535a5d86f78b2d208f0ede58a4eb1495d61fbaadaafb6cf01585dd";
   };
 
   buildType = "catkin";

@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -1724,6 +1724,8 @@ self: super: {
 
  nanomsg = self.callPackage ./nanomsg {};
 
+ naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
+
  naoqi-libqi = self.callPackage ./naoqi-libqi {};
 
  nav2d = self.callPackage ./nav2d {};
@@ -2227,6 +2229,8 @@ self: super: {
  qb-move-description = self.callPackage ./qb-move-description {};
 
  qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
+
+ qpmad = self.callPackage ./qpmad {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
 
