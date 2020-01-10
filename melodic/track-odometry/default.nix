@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, geometry-msgs, message-filters, nav-msgs, neonavigation-common, roscpp, roslint, rostest, rosunit, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-track-odometry";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/track_odometry/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "c940bc976d54c2b889facc8658a78df2180bff46a8125187f4588accf6ff8de3";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/track_odometry/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "76782a69a652a1d29056580692484fd5d4aacea5ff424f5045d5ccf995c8f9d0";
   };
 
   buildType = "catkin";

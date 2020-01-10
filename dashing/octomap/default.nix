@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-dashing-octomap";
-  version = "1.9.2-r1";
+  version = "1.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/dashing/octomap/1.9.2-1.tar.gz";
-    name = "1.9.2-1.tar.gz";
-    sha256 = "cf0eca9afa4bddd48b97b95848fcb12848f47fb3ca4331a0b3b4818ba88d9249";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/dashing/octomap/1.9.3-1.tar.gz";
+    name = "1.9.3-1.tar.gz";
+    sha256 = "fd6e90df56fbdf2317c577b539c317c95d8a9b9d8ab6693acb50e4e6b6663ca0";
   };
 
   buildType = "cmake";

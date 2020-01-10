@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, dsr-control, dsr-description, dsr-example-cpp, dsr-example-py, dsr-gazebo, dsr-launcher, dsr-msgs, effort-controllers, gazebo-ros-control, interactive-marker-twist-server, lms1xx, moveit-commander, moveit-config-m0609, moveit-config-m0617, moveit-config-m1013, moveit-config-m1509, moveit-core, moveit-experimental, moveit-kinematics, moveit-setup-assistant, position-controllers, robot-localization, twist-mux }:

@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, boost, bzip2, console-bridge, git, gpgme, openssl, pkg-config, pluginlib, ros1-bridge }:
 buildRosPackage {
   pname = "ros-eloquent-ros1-rosbag-storage-vendor";
-  version = "0.0.7-r1";
+  version = "0.0.7-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_bag_v2-release/archive/release/eloquent/ros1_rosbag_storage_vendor/0.0.7-1.tar.gz";
-    name = "0.0.7-1.tar.gz";
-    sha256 = "05d7a7a80dfcfa601f0ba9f1d1c25f81ab205265b75073f8c652b782130f262c";
+    url = "https://github.com/ros2-gbp/rosbag2_bag_v2-release/archive/release/eloquent/ros1_rosbag_storage_vendor/0.0.7-4.tar.gz";
+    name = "0.0.7-4.tar.gz";
+    sha256 = "f0364a32acc1d459e8a85759664c2a96ae64040162c00581b756728c22f36fae";
   };
 
   buildType = "ament_cmake";

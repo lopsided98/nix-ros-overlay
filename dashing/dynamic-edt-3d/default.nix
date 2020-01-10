@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, octomap }:
 buildRosPackage {
   pname = "ros-dashing-dynamic-edt-3d";
-  version = "1.9.2-r1";
+  version = "1.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/dashing/dynamic_edt_3d/1.9.2-1.tar.gz";
-    name = "1.9.2-1.tar.gz";
-    sha256 = "e364c405c00d4b2366997b78bfd4f0be73a42c8b123d39c58c6379a317bcf79c";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/dashing/dynamic_edt_3d/1.9.3-1.tar.gz";
+    name = "1.9.3-1.tar.gz";
+    sha256 = "ad7b613dd428b6f0b1322e06959ceef7d3fa907528e296481a7e93a9dedd61f8";
   };
 
   buildType = "cmake";

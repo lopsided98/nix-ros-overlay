@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, gazeboSimulator, pr2-controller-manager, pr2-gripper-action, pr2-head-action, single-joint-position-action }:

@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, area-division, catkin, coverage-path, kinematics-exchanger, state-exchanger, target-monitor, task-allocation }:

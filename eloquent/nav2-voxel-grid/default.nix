@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-voxel-grid";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_voxel_grid/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "c10661aac17855fac9d55e24c5926305fa994c50c8c684528b5818a959b7f9aa";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_voxel_grid/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "d46ef75f83c7e90ccbcd161d4fd4f704db0c89586975d7f8e1292c88baa74d58";
   };
 
   buildType = "ament_cmake";

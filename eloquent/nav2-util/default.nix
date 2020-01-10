@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, SDL, SDL_image, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, geometry-msgs, lifecycle-msgs, nav-msgs, nav2-common, nav2-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, std-srvs, test-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-util";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_util/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "4947b07997b5d873dc4670c5903b8282ec5892358041eca96491aa76017eb085";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_util/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "6fb04134977f4496711ee332794fd0b84e101267175c0906175a8d92ba83232d";
   };
 
   buildType = "ament_cmake";

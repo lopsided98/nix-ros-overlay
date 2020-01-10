@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, cob-object-detection-msgs, cv-bridge, eigen-conversions, image-transport, message-filters, opencv3, pcl, pcl-ros, roscpp, sensor-msgs, visualization-msgs }:

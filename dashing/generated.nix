@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -229,6 +229,12 @@ self: super: {
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
+
+ dolly = self.callPackage ./dolly {};
+
+ dolly-follow = self.callPackage ./dolly-follow {};
+
+ dolly-gazebo = self.callPackage ./dolly-gazebo {};
 
  dummy-map-server = self.callPackage ./dummy-map-server {};
 
@@ -594,6 +600,8 @@ self: super: {
 
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
+ ouster-msgs = self.callPackage ./ouster-msgs {};
+
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
@@ -735,6 +743,8 @@ self: super: {
  ros1-bridge = self.callPackage ./ros1-bridge {};
 
  ros1-rosbag-storage-vendor = self.callPackage ./ros1-rosbag-storage-vendor {};
+
+ ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2action = self.callPackage ./ros2action {};
 
@@ -919,8 +929,6 @@ self: super: {
  self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
-
- serial-driver = self.callPackage ./serial-driver {};
 
  shape-msgs = self.callPackage ./shape-msgs {};
 

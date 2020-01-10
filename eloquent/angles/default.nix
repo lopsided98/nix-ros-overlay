@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-eloquent-angles";
-  version = "1.12.1-r1";
+  version = "1.12.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/angles-release/archive/release/eloquent/angles/1.12.1-1.tar.gz";
-    name = "1.12.1-1.tar.gz";
-    sha256 = "f73b36124a3b58a700e4a3909a9949e1492d2c5a99f0452d889e64d35ae404a0";
+    url = "https://github.com/ros2-gbp/angles-release/archive/release/eloquent/angles/1.12.2-1.tar.gz";
+    name = "1.12.2-1.tar.gz";
+    sha256 = "d2a9ed9bb51e9579f29ec4d6ecc18d0ce6ea56d4701f46886ea2bd565625a06d";
   };
 
   buildType = "ament_cmake";

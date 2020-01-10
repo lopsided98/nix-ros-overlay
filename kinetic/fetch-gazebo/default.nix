@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, angles, catkin, control-toolbox, depth-image-proc, fetch-description, gazebo-plugins, gazebo-ros, gazeboSimulator, geometry-msgs, image-proc, nodelet, rgbd-launch, robot-controllers, robot-controllers-interface, trajectory-msgs, xacro }:

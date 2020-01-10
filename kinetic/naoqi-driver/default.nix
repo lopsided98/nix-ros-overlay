@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, diagnostic-msgs, diagnostic-updater, geometry-msgs, image-transport, kdl-parser, naoqi-bridge-msgs, naoqi-libqi, naoqi-libqicore, orocos-kdl, robot-state-publisher, rosbag-storage, rosconsole, rosgraph-msgs, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-naoqi-driver";
-  version = "0.5.10";
+  version = "0.5.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-naoqi/naoqi_driver-release/archive/release/kinetic/naoqi_driver/0.5.10-0.tar.gz";
-    name = "0.5.10-0.tar.gz";
-    sha256 = "af80e7758de7895ce91aeb71a4f0cf72c678e8f28542a39db55ff83da32ea710";
+    url = "https://github.com/ros-naoqi/naoqi_driver-release/archive/release/kinetic/naoqi_driver/0.5.11-1.tar.gz";
+    name = "0.5.11-1.tar.gz";
+    sha256 = "5c28a37ba3c0225fcb6d472177019256cffc4ada18a7ca64c5fd0da95a16f97b";
   };
 
   buildType = "catkin";

@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, eigen, gazebo-ros }:
 buildRosPackage {
   pname = "ros-kinetic-wave-gazebo-plugins";
-  version = "1.2.6-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/vrx-release/archive/release/kinetic/wave_gazebo_plugins/1.2.6-1.tar.gz";
-    name = "1.2.6-1.tar.gz";
-    sha256 = "988ec12e5baa25f3fdf77fb78b0343bdf861e35fff9e70fab62d6e57653d9afe";
+    url = "https://github.com/ros-gbp/vrx-release/archive/release/kinetic/wave_gazebo_plugins/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "8ab134cf0cfd2b96c0b1aebf7bcfa427eb19968dd29c913d6918d0b0d9082440";
   };
 
   buildType = "catkin";

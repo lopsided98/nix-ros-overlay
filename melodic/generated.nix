@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -97,6 +97,8 @@ self: super: {
  asmach = self.callPackage ./asmach {};
 
  asmach-tutorials = self.callPackage ./asmach-tutorials {};
+
+ asr-msgs = self.callPackage ./asr-msgs {};
 
  assimp-devel = self.callPackage ./assimp-devel {};
 
@@ -1434,6 +1436,8 @@ self: super: {
 
  libqt-widgets = self.callPackage ./libqt-widgets {};
 
+ librealsense2 = self.callPackage ./librealsense2 {};
+
  libreflexxestype2 = self.callPackage ./libreflexxestype2 {};
 
  librviz-tutorial = self.callPackage ./librviz-tutorial {};
@@ -1724,7 +1728,15 @@ self: super: {
 
  nanomsg = self.callPackage ./nanomsg {};
 
+ nao-meshes = self.callPackage ./nao-meshes {};
+
+ naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
+
+ naoqi-driver = self.callPackage ./naoqi-driver {};
+
  naoqi-libqi = self.callPackage ./naoqi-libqi {};
+
+ naoqi-libqicore = self.callPackage ./naoqi-libqicore {};
 
  nav2d = self.callPackage ./nav2d {};
 
@@ -1967,6 +1979,8 @@ self: super: {
  people-tracking-filter = self.callPackage ./people-tracking-filter {};
 
  people-velocity-tracker = self.callPackage ./people-velocity-tracker {};
+
+ pepper-meshes = self.callPackage ./pepper-meshes {};
 
  pepperl-fuchs-r2000 = self.callPackage ./pepperl-fuchs-r2000 {};
 
@@ -2228,6 +2242,8 @@ self: super: {
 
  qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
 
+ qpmad = self.callPackage ./qpmad {};
+
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
 
  qt-gui = self.callPackage ./qt-gui {};
@@ -2299,6 +2315,10 @@ self: super: {
  rdl-ros-tools = self.callPackage ./rdl-ros-tools {};
 
  rdl-urdfreader = self.callPackage ./rdl-urdfreader {};
+
+ realsense2-camera = self.callPackage ./realsense2-camera {};
+
+ realsense2-description = self.callPackage ./realsense2-description {};
 
  realtime-tools = self.callPackage ./realtime-tools {};
 

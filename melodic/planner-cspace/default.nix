@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, catkin, costmap-cspace, costmap-cspace-msgs, diagnostic-updater, geometry-msgs, map-server, move-base-msgs, nav-msgs, neonavigation-common, planner-cspace-msgs, roscpp, roslint, rostest, rosunit, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs, trajectory-tracker, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-melodic-planner-cspace";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/planner_cspace/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "e7d41fc10fca03382470ea9b0f951df27eb1f40e51823c64f1b67cd1328f4927";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/planner_cspace/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "7c644d3731fe4d60d29eba882776481384dfa6087ae764d06dd025a156ef379c";
   };
 
   buildType = "catkin";

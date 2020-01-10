@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, binutils, catkin, diagnostic-msgs, nav-msgs, qt5, ros-type-introspection, rosbag, rosbag-storage, roscpp, roscpp-serialization, rostime, tf, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-plotjuggler";
-  version = "2.4.3-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/melodic/plotjuggler/2.4.3-1.tar.gz";
-    name = "2.4.3-1.tar.gz";
-    sha256 = "cfe9959fc9a2ba72e3d67ee6940800812cac6af6dec94c451a727a03c5e109cb";
+    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/melodic/plotjuggler/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "0ca20598fffdf4b6148c9099e058959326e9f5a504b5b530927b03773cf68bd9";
   };
 
   buildType = "catkin";

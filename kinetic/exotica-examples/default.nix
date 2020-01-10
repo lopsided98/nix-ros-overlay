@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, exotica-aico-solver, exotica-collision-scene-fcl, exotica-core, exotica-core-task-maps, exotica-ik-solver, exotica-ompl-solver, exotica-python, exotica-time-indexed-rrt-connect-solver, exotica-val-description, geometry-msgs, interactive-markers, python-orocos-kdl, robot-state-publisher, rostest, rviz, sensor-msgs, visualization-msgs }:
