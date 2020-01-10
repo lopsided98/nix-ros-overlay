@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-nav-2d-msgs";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav_2d_msgs/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "34351151c32a97bae03a9139053000930102cbc0381a47477ef5eeebf8891fcc";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav_2d_msgs/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "73429f1885e327d21741a4f224461b8d2872f78f1b5a0ee68f4a5bd2ae46bff3";
   };
 
   buildType = "ament_cmake";

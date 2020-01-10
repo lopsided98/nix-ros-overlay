@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diff-drive-controller, gazebo-ros-control, hector-gazebo-plugins, interactive-marker-twist-server, joint-state-controller, nav-msgs, roscpp, roslaunch, std-msgs, tf, urdf, xacro }:

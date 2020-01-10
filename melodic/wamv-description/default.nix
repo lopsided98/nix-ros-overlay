@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-melodic-wamv-description";
-  version = "1.2.6-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/vrx-release/archive/release/melodic/wamv_description/1.2.6-1.tar.gz";
-    name = "1.2.6-1.tar.gz";
-    sha256 = "bc8a86b9725be627ecc3453e78d119966fb0a443f1167694bfc71715f243250a";
+    url = "https://github.com/ros-gbp/vrx-release/archive/release/melodic/wamv_description/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "69652845bda9556aaf54f825c7f0554ed7a0d0270cd521bd50d5f6299250318b";
   };
 
   buildType = "catkin";

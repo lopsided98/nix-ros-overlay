@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-index-python, python-qt-binding, qt-dotgraph, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-dashing-rqt-graph";
-  version = "1.0.2-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/dashing/rqt_graph/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "f647e5a76161472a2833f6f7eb4b73d260526bb97e7717242aa6076fd917c186";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/dashing/rqt_graph/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "45ad8af7efd9bac672bfb78e64cc27eb16290d490bff767588821341016f4a15";
   };
 
   buildType = "ament_python";

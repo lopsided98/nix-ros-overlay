@@ -1,20 +1,19 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake }:
+{ lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-melodic-octomap";
-  version = "1.9.0-r1";
+  version = "1.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/melodic/octomap/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "20a5bb7d159129053c2b25f7c02a76ad4ffec83c31e2fb4486753c88115caee6";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/melodic/octomap/1.9.3-1.tar.gz";
+    name = "1.9.3-1.tar.gz";
+    sha256 = "1904321f8d5f643d9636cc7c3a2aaaac07838a3db3a78bbbd08c5f6c40c428ac";
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

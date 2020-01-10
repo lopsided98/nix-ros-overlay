@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, neonavigation-common, roscpp, roslint, rostest, rosunit, sensor-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-joystick-interrupt";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/joystick_interrupt/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "684bf1d56a69668ad3f60be796d16d0859b569c4bf7fa60084fcad89cd3db8f8";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/joystick_interrupt/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "770e71b2407281590eb579f33a218920f957529ba637b4230309b09f00d5f8c7";
   };
 
   buildType = "catkin";

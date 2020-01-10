@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen-conversions, geometry-msgs, kdl-parser, message-runtime, moveit-core, moveit-msgs, moveit-ros-planning, pluginlib, roscpp, std-msgs, tf, tf-conversions, tinyxml-2 }:

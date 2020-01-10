@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-angles";
-  version = "1.12.1-r1";
+  version = "1.12.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/angles-release/archive/release/dashing/angles/1.12.1-1.tar.gz";
-    name = "1.12.1-1.tar.gz";
-    sha256 = "d22738620d82b2705a32abef7f58c958161304b329bc9b3fd51d0f099a98d138";
+    url = "https://github.com/ros2-gbp/angles-release/archive/release/dashing/angles/1.12.2-1.tar.gz";
+    name = "1.12.2-1.tar.gz";
+    sha256 = "2b98f7906ae2da83adc879796f9f21021d5568d9f09fd86c95ff400b19eef92d";
   };
 
   buildType = "ament_cmake";

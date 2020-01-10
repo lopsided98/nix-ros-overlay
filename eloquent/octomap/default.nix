@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-eloquent-octomap";
-  version = "1.9.2-r1";
+  version = "1.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/eloquent/octomap/1.9.2-1.tar.gz";
-    name = "1.9.2-1.tar.gz";
-    sha256 = "4da04effed7b5f918a13a0639757e5fa46d59e4ea35b4dd9696fdd4cde12b75f";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/eloquent/octomap/1.9.3-1.tar.gz";
+    name = "1.9.3-1.tar.gz";
+    sha256 = "d02f556880e4c1a4910c697f52b5de78b9f971324c9e60389eb112617c985ce2";
   };
 
   buildType = "cmake";

@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -127,6 +127,8 @@ self: super: {
  asmach = self.callPackage ./asmach {};
 
  asmach-tutorials = self.callPackage ./asmach-tutorials {};
+
+ asr-msgs = self.callPackage ./asr-msgs {};
 
  assimp-devel = self.callPackage ./assimp-devel {};
 
@@ -1444,6 +1446,8 @@ self: super: {
 
  hokuyo3d = self.callPackage ./hokuyo3d {};
 
+ homer-map-manager = self.callPackage ./homer-map-manager {};
+
  homer-mapnav-msgs = self.callPackage ./homer-mapnav-msgs {};
 
  homer-mapping = self.callPackage ./homer-mapping {};
@@ -2294,7 +2298,11 @@ self: super: {
 
  moose-desktop = self.callPackage ./moose-desktop {};
 
+ moose-gazebo = self.callPackage ./moose-gazebo {};
+
  moose-msgs = self.callPackage ./moose-msgs {};
+
+ moose-simulator = self.callPackage ./moose-simulator {};
 
  moose-viz = self.callPackage ./moose-viz {};
 
@@ -3284,6 +3292,10 @@ self: super: {
 
  radar-omnipresense = self.callPackage ./radar-omnipresense {};
 
+ radar-pa = self.callPackage ./radar-pa {};
+
+ radar-pa-msgs = self.callPackage ./radar-pa-msgs {};
+
  rail-manipulation-msgs = self.callPackage ./rail-manipulation-msgs {};
 
  rail-segmentation = self.callPackage ./rail-segmentation {};
@@ -4260,6 +4272,10 @@ self: super: {
 
  smach-viewer = self.callPackage ./smach-viewer {};
 
+ smacha = self.callPackage ./smacha {};
+
+ smacha-ros = self.callPackage ./smacha-ros {};
+
  smclib = self.callPackage ./smclib {};
 
  sns-ik-lib = self.callPackage ./sns-ik-lib {};
@@ -4358,6 +4374,12 @@ self: super: {
 
  summit-xl-sim-bringup = self.callPackage ./summit-xl-sim-bringup {};
 
+ swarm-behaviors = self.callPackage ./swarm-behaviors {};
+
+ swarm-behaviors-position = self.callPackage ./swarm-behaviors-position {};
+
+ swarm-behaviors-velocity = self.callPackage ./swarm-behaviors-velocity {};
+
  swarm-functions = self.callPackage ./swarm-functions {};
 
  swarmros = self.callPackage ./swarmros {};
@@ -4419,6 +4441,8 @@ self: super: {
  task-compiler = self.callPackage ./task-compiler {};
 
  tblib = self.callPackage ./tblib {};
+
+ tdk-robokit = self.callPackage ./tdk-robokit {};
 
  teb-local-planner = self.callPackage ./teb-local-planner {};
 
@@ -4746,11 +4770,21 @@ self: super: {
 
  twistimu = self.callPackage ./twistimu {};
 
+ uav-local-coverage = self.callPackage ./uav-local-coverage {};
+
+ uav-optimal-coverage = self.callPackage ./uav-optimal-coverage {};
+
+ uav-random-direction = self.callPackage ./uav-random-direction {};
+
+ uav-simple-tracking = self.callPackage ./uav-simple-tracking {};
+
  ubiquity-motor = self.callPackage ./ubiquity-motor {};
 
  ueye = self.callPackage ./ueye {};
 
  ueye-cam = self.callPackage ./ueye-cam {};
+
+ ugv-random-walk = self.callPackage ./ugv-random-walk {};
 
  um6 = self.callPackage ./um6 {};
 
@@ -4977,6 +5011,8 @@ self: super: {
  warthog-simulator = self.callPackage ./warthog-simulator {};
 
  warthog-viz = self.callPackage ./warthog-viz {};
+
+ watson-ins = self.callPackage ./watson-ins {};
 
  wave-gazebo = self.callPackage ./wave-gazebo {};
 

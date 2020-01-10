@@ -1,16 +1,16 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-wamv-description";
-  version = "1.2.6-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/vrx-release/archive/release/kinetic/wamv_description/1.2.6-1.tar.gz";
-    name = "1.2.6-1.tar.gz";
-    sha256 = "0f4f1ccd8b571399ae424297bd5597944478e48dfa2d4eeb6d5922abf25ceb69";
+    url = "https://github.com/ros-gbp/vrx-release/archive/release/kinetic/wamv_description/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "cd8b5123b7938ad55a72d817475cded2e2a5e52314a9f162ad420fd5f6c232ae";
   };
 
   buildType = "catkin";

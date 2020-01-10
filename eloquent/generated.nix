@@ -1,5 +1,5 @@
 
-# Copyright 2019 Open Source Robotics Foundation
+# Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -166,6 +166,8 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
+ cross-compile = self.callPackage ./cross-compile {};
+
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
@@ -185,6 +187,12 @@ self: super: {
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
+
+ dolly = self.callPackage ./dolly {};
+
+ dolly-follow = self.callPackage ./dolly-follow {};
+
+ dolly-gazebo = self.callPackage ./dolly-gazebo {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
 
@@ -376,6 +384,16 @@ self: super: {
 
  key-teleop = self.callPackage ./key-teleop {};
 
+ kobuki-core = self.callPackage ./kobuki-core {};
+
+ kobuki-dock-drive = self.callPackage ./kobuki-dock-drive {};
+
+ kobuki-driver = self.callPackage ./kobuki-driver {};
+
+ kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
+
+ kobuki-msgs = self.callPackage ./kobuki-msgs {};
+
  laser-geometry = self.callPackage ./laser-geometry {};
 
  launch = self.callPackage ./launch {};
@@ -462,6 +480,10 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
+ nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
+
+ ntpd-driver = self.callPackage ./ntpd-driver {};
+
  octomap = self.callPackage ./octomap {};
 
  opensplice-cmake-module = self.callPackage ./opensplice-cmake-module {};
@@ -471,6 +493,8 @@ self: super: {
  osrf-pycommon = self.callPackage ./osrf-pycommon {};
 
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
+
+ ouster-msgs = self.callPackage ./ouster-msgs {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
@@ -510,11 +534,31 @@ self: super: {
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
+ plansys2-bringup = self.callPackage ./plansys2-bringup {};
+
+ plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
+
+ plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
+
+ plansys2-msgs = self.callPackage ./plansys2-msgs {};
+
+ plansys2-patrol-navigation-example = self.callPackage ./plansys2-patrol-navigation-example {};
+
+ plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
+
+ plansys2-planner = self.callPackage ./plansys2-planner {};
+
+ plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
+
+ plansys2-simple-example = self.callPackage ./plansys2-simple-example {};
+
+ plansys2-terminal = self.callPackage ./plansys2-terminal {};
+
  pluginlib = self.callPackage ./pluginlib {};
 
  poco-vendor = self.callPackage ./poco-vendor {};
-
- popf = self.callPackage ./popf {};
 
  px4-msgs = self.callPackage ./px4-msgs {};
 
@@ -599,6 +643,8 @@ self: super: {
  ros1-bridge = self.callPackage ./ros1-bridge {};
 
  ros1-rosbag-storage-vendor = self.callPackage ./ros1-rosbag-storage-vendor {};
+
+ ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2action = self.callPackage ./ros2action {};
 
@@ -782,6 +828,8 @@ self: super: {
 
  sophus = self.callPackage ./sophus {};
 
+ spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
+
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
@@ -865,6 +913,8 @@ self: super: {
  urdfdom = self.callPackage ./urdfdom {};
 
  urdfdom-headers = self.callPackage ./urdfdom-headers {};
+
+ v4l2-camera = self.callPackage ./v4l2-camera {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 
