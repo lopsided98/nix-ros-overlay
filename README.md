@@ -11,7 +11,7 @@ Want to use ROS, but don't want to run Ubuntu? This project uses the power of [N
 ## Setup
 
 1. Install Nix: https://nixos.org/nix/download.html
-2. (Optional) [configure Nix to use my ROS binary cache](#configure-binary-cache)
+2. (Optional) [configure Nix to use ROS Cachix binary cache](#configure-binary-cache)
 3. Try one of the [examples](#examples)
 
 ## Examples
@@ -39,9 +39,8 @@ What works:
 3. Automated generation of Nix package definitions using standard ROS tools ([superflore](https://github.com/lopsided98/superflore))
 
 What still needs to be done:
-1. Automatically update packages on a regular basis
-2. Upstream changes to nixpkgs and ROS tools
-3. Test on more Linux distributions
+1. Upstream changes to nixpkgs and ROS tools
+2. Test on more Linux distributions
 3. aarch64 binary cache
 4. macOS support
 
