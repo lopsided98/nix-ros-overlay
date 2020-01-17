@@ -5,17 +5,18 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-virtualenv }:
 buildRosPackage {
   pname = "ros-dashing-ament-cmake-virtualenv";
-  version = "0.0.4-r1";
+  version = "0.0.5-r5";
 
   src = fetchurl {
-    url = "https://github.com/esol-community/ament_virtualenv-release/archive/release/dashing/ament_cmake_virtualenv/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "a3a196f666f855847864da400ccadf73434aaaf514f788b7e75174e6bdeb9815";
+    url = "https://github.com/esol-community/ament_virtualenv-release/archive/release/dashing/ament_cmake_virtualenv/0.0.5-5.tar.gz";
+    name = "0.0.5-5.tar.gz";
+    sha256 = "3de5000f59569b6e3770a576a2a7199e5a043b2a8091cec1a3e0b840470ce87c";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
-  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-virtualenv ];
+  propagatedBuildInputs = [ ament-virtualenv ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 
   meta = {
     description = ''Bundle python requirements in a ament package via virtualenv.'';

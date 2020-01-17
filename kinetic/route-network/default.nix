@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geodesy, geographic-msgs, geometry-msgs, nav-msgs, roslaunch, rospy, rostest, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-route-network";
-  version = "0.2.4";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-geographic-info/open_street_map-release/archive/release/kinetic/route_network/0.2.4-0.tar.gz";
-    name = "0.2.4-0.tar.gz";
-    sha256 = "8aa80c3077576ce20a1b468ced79a0cd74b98c2d21aa8cce04f124b7719e7232";
+    url = "https://github.com/ros-geographic-info/open_street_map-release/archive/release/kinetic/route_network/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "6eb0ef1b5f46619843f436f4e7fae9b7dd5f738239be6a491e5aa988ad05565f";
   };
 
   buildType = "catkin";

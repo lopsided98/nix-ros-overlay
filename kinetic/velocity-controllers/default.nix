@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, control-msgs, control-toolbox, controller-interface, forward-command-controller, realtime-tools, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-velocity-controllers";
-  version = "0.13.5";
+  version = "0.13.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/velocity_controllers/0.13.5-0.tar.gz";
-    name = "0.13.5-0.tar.gz";
-    sha256 = "b31a0c50e6842d6121644581506f5455a8c25f45fcd173fcbca8f702f54a5952";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/velocity_controllers/0.13.6-1.tar.gz";
+    name = "0.13.6-1.tar.gz";
+    sha256 = "8b1ec59295221c870c9ec1f21cb8768fbbf5e670bf8d3501287995144c9f292b";
   };
 
   buildType = "catkin";

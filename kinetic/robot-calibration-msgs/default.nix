@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-robot-calibration-msgs";
-  version = "0.6.1-r1";
+  version = "0.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/kinetic/robot_calibration_msgs/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "80d6f8cd645f0be2c22fb50486018451453c634f6f149abea05aa1364bd9d10f";
+    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/kinetic/robot_calibration_msgs/0.6.2-1.tar.gz";
+    name = "0.6.2-1.tar.gz";
+    sha256 = "6d5a257a5fdb203d09db0235dfa25f5ac1c665ab66ca489e82085cf2a45a7d41";
   };
 
   buildType = "catkin";

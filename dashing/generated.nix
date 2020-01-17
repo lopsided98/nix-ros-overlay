@@ -116,8 +116,6 @@ self: super: {
 
  ament-uncrustify = self.callPackage ./ament-uncrustify {};
 
- ament-virtualenv = self.callPackage ./ament-virtualenv {};
-
  ament-xmllint = self.callPackage ./ament-xmllint {};
 
  angles = self.callPackage ./angles {};
@@ -902,8 +900,6 @@ self: super: {
 
  rqt-srv = self.callPackage ./rqt-srv {};
 
- rqt-tf-tree = self.callPackage ./rqt-tf-tree {};
-
  rqt-top = self.callPackage ./rqt-top {};
 
  rqt-topic = self.callPackage ./rqt-topic {};
@@ -929,6 +925,8 @@ self: super: {
  self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
+
+ serial-driver = self.callPackage ./serial-driver {};
 
  shape-msgs = self.callPackage ./shape-msgs {};
 

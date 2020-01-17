@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-runtime, pcl-ros, roscpp, roslaunch, rospy, rostest, tf2, tf2-geometry-msgs, tf2-ros, toposens-description, toposens-driver, toposens-msgs }:
 buildRosPackage {
   pname = "ros-melodic-toposens-pointcloud";
-  version = "1.3.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_pointcloud/1.3.0-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_pointcloud/2.0.0-1";
     name = "archive.tar.gz";
-    sha256 = "63768a1d8acd5eadfa7352cb5a37b77edc960fab76f3def796c2b788f1254754";
+    sha256 = "4211f8fd0f4d0430de1ddf254337f0d3a1d6f33b6cf4764087db990dd2e20613";
   };
 
   buildType = "catkin";

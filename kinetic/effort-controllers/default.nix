@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, control-msgs, control-toolbox, controller-interface, forward-command-controller, realtime-tools, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-effort-controllers";
-  version = "0.13.5";
+  version = "0.13.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/effort_controllers/0.13.5-0.tar.gz";
-    name = "0.13.5-0.tar.gz";
-    sha256 = "d113b5a066e0db7b84bdfe30a11c7bdb826d1243b2a3329094c4225406c5fd7b";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/effort_controllers/0.13.6-1.tar.gz";
+    name = "0.13.6-1.tar.gz";
+    sha256 = "4c89d8dcc2f9fb685023aa50e6a8d2148c7bd3a4fda12703753e5a05dd49afbf";
   };
 
   buildType = "catkin";

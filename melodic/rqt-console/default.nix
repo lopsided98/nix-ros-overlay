@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages, roslib, rospy, rqt-gui, rqt-gui-py, rqt-logger-level, rqt-py-common }:
 buildRosPackage {
   pname = "ros-melodic-rqt-console";
-  version = "0.4.8";
+  version = "0.4.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_console-release/archive/release/melodic/rqt_console/0.4.8-0.tar.gz";
-    name = "0.4.8-0.tar.gz";
-    sha256 = "bd66d6c711910fb8db8804b403bf5cedcce83ecfc82eaa4c12afb5e035a6eeb3";
+    url = "https://github.com/ros-gbp/rqt_console-release/archive/release/melodic/rqt_console/0.4.9-1.tar.gz";
+    name = "0.4.9-1.tar.gz";
+    sha256 = "e01cb923bec977383fddbb9ee64baf50ceb167645989b018c4fa47acf43db003";
   };
 
   buildType = "catkin";

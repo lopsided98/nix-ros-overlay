@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-config, ecl-license, ecl-threads }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-sigslots";
-  version = "1.0.4-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/eloquent/ecl_sigslots/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "09b209c2ff2499d94173b7c855544139693d4435b2059c2b92c2f053c1d34f0f";
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/eloquent/ecl_sigslots/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "6c083e5df6db828c49804ece4b9b68bd78463c881bb7ca241d94bc6ac964b661";
   };
 
   buildType = "ament_cmake";

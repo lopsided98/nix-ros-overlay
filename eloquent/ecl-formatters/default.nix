@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-config, ecl-converters, ecl-exceptions, ecl-license }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-formatters";
-  version = "1.0.4-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/eloquent/ecl_formatters/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "f2d5367ed88d799d423494f1ff86fba1ab607206cdbb906d29c2dc703d2749fe";
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/eloquent/ecl_formatters/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "422d4452c2d5ad36b25b84c7ca2cddcc5c713074cd07d8709e1df80023459497";
   };
 
   buildType = "ament_cmake";

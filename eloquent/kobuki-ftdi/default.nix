@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-command-line, libftdi, libusb, pkg-config }:
 buildRosPackage {
   pname = "ros-eloquent-kobuki-ftdi";
-  version = "0.8.1-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/eloquent/kobuki_ftdi/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "6282082eaca2a2328c354ad988cfb624b84d254e37957268cf9bea9a656ac50c";
+    url = "https://github.com/stonier/kobuki_ftdi-release/archive/release/eloquent/kobuki_ftdi/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "192a6be15b73bf34295390a3adb9a55b96ff0007513771e44c285a072bff0992";
   };
 
   buildType = "ament_cmake";

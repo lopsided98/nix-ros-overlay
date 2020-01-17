@@ -1938,6 +1938,8 @@ self: super: {
 
  osg-utils = self.callPackage ./osg-utils {};
 
+ osm-cartography = self.callPackage ./osm-cartography {};
+
  ouster-driver = self.callPackage ./ouster-driver {};
 
  oxford-gps-eth = self.callPackage ./oxford-gps-eth {};
@@ -2658,6 +2660,8 @@ self: super: {
 
  rotors-simulator = self.callPackage ./rotors-simulator {};
 
+ route-network = self.callPackage ./route-network {};
+
  rplidar-ros = self.callPackage ./rplidar-ros {};
 
  rqt = self.callPackage ./rqt {};
@@ -2985,6 +2989,8 @@ self: super: {
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
 
  test-mavros = self.callPackage ./test-mavros {};
+
+ test-osm = self.callPackage ./test-osm {};
 
  tf = self.callPackage ./tf {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-config, ecl-errors, ecl-license }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-time-lite";
-  version = "1.0.3-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/eloquent/ecl_time_lite/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "95324e631bc37b28e8f0d3663684b5deb324a581dc99403d579ad9de73225dcb";
+    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/eloquent/ecl_time_lite/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "641638e37aa2855735d8aefee7dc905fa7ac9682b881bea3d811e1371e988361";
   };
 
   buildType = "ament_cmake";

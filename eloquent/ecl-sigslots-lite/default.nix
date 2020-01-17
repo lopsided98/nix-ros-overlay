@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-config, ecl-errors, ecl-license }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-sigslots-lite";
-  version = "1.0.3-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/eloquent/ecl_sigslots_lite/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "a5bc6e5196e774a12156b24d61eaf993df3e4d0bb301569698cc16868323294c";
+    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/eloquent/ecl_sigslots_lite/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "542a1012fd149126354f7a58100698b538843b3e4e544b84ad6f4953d98db0c9";
   };
 
   buildType = "ament_cmake";

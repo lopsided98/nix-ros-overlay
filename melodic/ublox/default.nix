@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-ublox";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/KumarRobotics/ublox-release/archive/release/melodic/ublox/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "bfd357e219781c9b45616712b6e7004b8e0d4204852df3789fbff9a2cbf431c9";
+    url = "https://github.com/KumarRobotics/ublox-release/archive/release/melodic/ublox/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "b51feba373e616f8bb6f28d93cc61aa6738645d5587d671e6911ed19ade5bbf6";
   };
 
   buildType = "catkin";

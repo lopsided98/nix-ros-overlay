@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hardware-interface, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-controller-interface";
-  version = "0.13.3";
+  version = "0.13.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/controller_interface/0.13.3-0.tar.gz";
-    name = "0.13.3-0.tar.gz";
-    sha256 = "5db8ab2db8d3bdfbaa79743ec62a1932d3763d016812652cc145b674cb58ea8c";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/controller_interface/0.13.4-1.tar.gz";
+    name = "0.13.4-1.tar.gz";
+    sha256 = "f18d88901d6e04e1001f85041f93aaafb8f3b569a1b666b060bb37753b15f7a3";
   };
 
   buildType = "catkin";

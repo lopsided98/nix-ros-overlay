@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geodesy, geographic-msgs, osm-cartography, route-network }:
 buildRosPackage {
   pname = "ros-kinetic-test-osm";
-  version = "0.2.4";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-geographic-info/open_street_map-release/archive/release/kinetic/test_osm/0.2.4-0.tar.gz";
-    name = "0.2.4-0.tar.gz";
-    sha256 = "7fd6af55b0a2548b5d501882bcac1429f7ad9039be66bc07a5049b6229cdeb17";
+    url = "https://github.com/ros-geographic-info/open_street_map-release/archive/release/kinetic/test_osm/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "b77fcee167eb3d7b08205c42585aaa191e60585fb3fce3b389c733855292894e";
   };
 
   buildType = "catkin";

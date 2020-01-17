@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-hardware-interface";
-  version = "0.13.3";
+  version = "0.13.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/hardware_interface/0.13.3-0.tar.gz";
-    name = "0.13.3-0.tar.gz";
-    sha256 = "87d812bfa3d2a03df47ff2cb240d6b8cfeb66511d622dd71453a76185e1b5641";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/hardware_interface/0.13.4-1.tar.gz";
+    name = "0.13.4-1.tar.gz";
+    sha256 = "575a20e649c9b44fbad6362ed6f2acb2810a738b778ff520ba70c8e67e70bd1b";
   };
 
   buildType = "catkin";

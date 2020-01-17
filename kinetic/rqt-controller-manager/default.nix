@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, rqt-gui }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-controller-manager";
-  version = "0.13.3";
+  version = "0.13.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/rqt_controller_manager/0.13.3-0.tar.gz";
-    name = "0.13.3-0.tar.gz";
-    sha256 = "7aadbd43094407f5847c4ee805b04d3bae6134877d2563b8aba9a64d87aa99fc";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/rqt_controller_manager/0.13.4-1.tar.gz";
+    name = "0.13.4-1.tar.gz";
+    sha256 = "cff3814b9b0010aa55c60b1dc2b773dc71bffbf91c9df9ef2892f1f7178e49b4";
   };
 
   buildType = "catkin";

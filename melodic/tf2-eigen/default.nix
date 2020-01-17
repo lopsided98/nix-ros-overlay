@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, geometry-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-melodic-tf2-eigen";
-  version = "0.6.5";
+  version = "0.6.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_eigen/0.6.5-0.tar.gz";
-    name = "0.6.5-0.tar.gz";
-    sha256 = "0097c690bd551d83154cc551b7d50439d86e8acda2bc4ebc307d1157cdf8c24d";
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_eigen/0.6.6-1.tar.gz";
+    name = "0.6.6-1.tar.gz";
+    sha256 = "635b0400d430496ff935616aba342c9d1481ff6c01689d8b07f4e8c7837ddddc";
   };
 
   buildType = "catkin";
