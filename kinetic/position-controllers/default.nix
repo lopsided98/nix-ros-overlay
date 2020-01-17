@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, forward-command-controller }:
 buildRosPackage {
   pname = "ros-kinetic-position-controllers";
-  version = "0.13.5";
+  version = "0.13.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/position_controllers/0.13.5-0.tar.gz";
-    name = "0.13.5-0.tar.gz";
-    sha256 = "47b5e54e19a9ada4e0d4355f4c1ff1e0eeb9a58c2d09bc9474c23848bf718de3";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/position_controllers/0.13.6-1.tar.gz";
+    name = "0.13.6-1.tar.gz";
+    sha256 = "e4faa483453aff3e02ed4ca7d00bd93b9b5db3ef6852eccdcf0c1b13f221b0b8";
   };
 
   buildType = "catkin";

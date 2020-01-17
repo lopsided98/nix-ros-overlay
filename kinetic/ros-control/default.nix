@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, combined-robot-hw, combined-robot-hw-tests, controller-interface, controller-manager, controller-manager-msgs, controller-manager-tests, hardware-interface, joint-limits-interface, realtime-tools, transmission-interface }:
 buildRosPackage {
   pname = "ros-kinetic-ros-control";
-  version = "0.13.3";
+  version = "0.13.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/ros_control/0.13.3-0.tar.gz";
-    name = "0.13.3-0.tar.gz";
-    sha256 = "c7e50173396616ebb092aab1dc0159c2221c2402e0b7bcaaccb4c5d164653f18";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/ros_control/0.13.4-1.tar.gz";
+    name = "0.13.4-1.tar.gz";
+    sha256 = "77df478bf9b1d047065ae307a396ee325143bd260ce89011c90e0faf86c2fcf7";
   };
 
   buildType = "catkin";

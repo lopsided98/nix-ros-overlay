@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, sensor-msgs, std-msgs, ublox-serialization }:
 buildRosPackage {
   pname = "ros-melodic-ublox-msgs";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/KumarRobotics/ublox-release/archive/release/melodic/ublox_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "71cc141fd9777fae71ac599811dc414d4cc1f393d8aa7dbcca29cec3a72a417b";
+    url = "https://github.com/KumarRobotics/ublox-release/archive/release/melodic/ublox_msgs/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "512c2afd61e324fb5dc06e9e90ee3403389a9d6ba4b0f858217b3a0a8ba575e6";
   };
 
   buildType = "catkin";

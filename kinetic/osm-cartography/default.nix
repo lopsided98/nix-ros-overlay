@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geodesy, geographic-msgs, geometry-msgs, roslaunch, rospy, route-network, rviz, std-msgs, tf, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geodesy, geographic-msgs, geometry-msgs, roslaunch, rospy, route-network, std-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-osm-cartography";
-  version = "0.2.4";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-geographic-info/open_street_map-release/archive/release/kinetic/osm_cartography/0.2.4-0.tar.gz";
-    name = "0.2.4-0.tar.gz";
-    sha256 = "b7b44c6d2025f65348f479c1c748e9dc56d9bb6fbda5c6f37fac01de6c428f40";
+    url = "https://github.com/ros-geographic-info/open_street_map-release/archive/release/kinetic/osm_cartography/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "3ec12db5c5af5db9918c1badff1817c29278daa405a71afe6dd3c09fd2b9b484";
   };
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ dynamic-reconfigure geodesy geographic-msgs geometry-msgs rospy route-network rviz std-msgs tf visualization-msgs ];
+  propagatedBuildInputs = [ dynamic-reconfigure geodesy geographic-msgs geometry-msgs rospy route-network std-msgs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

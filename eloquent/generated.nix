@@ -392,7 +392,7 @@ self: super: {
 
  kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
 
- kobuki-msgs = self.callPackage ./kobuki-msgs {};
+ kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
@@ -544,6 +544,8 @@ self: super: {
 
  plansys2-msgs = self.callPackage ./plansys2-msgs {};
 
+ plansys2-multidomain-example = self.callPackage ./plansys2-multidomain-example {};
+
  plansys2-patrol-navigation-example = self.callPackage ./plansys2-patrol-navigation-example {};
 
  plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
@@ -615,6 +617,8 @@ self: super: {
  rcpputils = self.callPackage ./rcpputils {};
 
  rcutils = self.callPackage ./rcutils {};
+
+ realtime-tools = self.callPackage ./realtime-tools {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
 

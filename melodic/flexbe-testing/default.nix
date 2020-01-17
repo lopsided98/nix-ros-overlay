@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, flexbe-core, flexbe-msgs, rospy, rostest, rosunit, smach-ros, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-flexbe-testing";
-  version = "1.2.2-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_testing/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "e19a18bd897d936a6fe6c199124ea3faf232f435c5588a91301973575838825d";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_testing/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "3f5035bec2c92dddbddc06dbb982657f6f01ff04a7bfa82139aaf0c8f2824d9c";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-robot-calibration-msgs";
-  version = "0.6.1-r1";
+  version = "0.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/melodic/robot_calibration_msgs/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "aa425371dddddf731cb4c5397cecc801e55a9f3f92c05475834f09a81a095a89";
+    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/melodic/robot_calibration_msgs/0.6.2-1.tar.gz";
+    name = "0.6.2-1.tar.gz";
+    sha256 = "4a07a06b1397c6eea1a2c2bf954b3e896e7c862cd74f93108b28cf7164249e7e";
   };
 
   buildType = "catkin";

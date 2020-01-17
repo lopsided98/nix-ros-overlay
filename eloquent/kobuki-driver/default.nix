@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-command-line, ecl-config, ecl-converters, ecl-devices, ecl-geometry, ecl-mobile-robot, ecl-sigslots, ecl-threads, ecl-time }:
 buildRosPackage {
   pname = "ros-eloquent-kobuki-driver";
-  version = "0.8.1-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/eloquent/kobuki_driver/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "9f435ac33085bf92940595750beea6c27b60261b18f63349e2c29f098a78feb7";
+    url = "https://github.com/stonier/kobuki_core-release/archive/release/eloquent/kobuki_driver/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "4816469367b534f5502a9fe3d1021d9ca0a9578c577b8bd239f4a4f00b52fa11";
   };
 
   buildType = "ament_cmake";

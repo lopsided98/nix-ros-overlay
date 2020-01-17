@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, hardware-interface, pluginlib, realtime-tools, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-joint-state-controller";
-  version = "0.13.5";
+  version = "0.13.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/joint_state_controller/0.13.5-0.tar.gz";
-    name = "0.13.5-0.tar.gz";
-    sha256 = "50d0f2fa818edd65260c974843e584e7556fecc7ca3058950d6f9aef30162951";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/joint_state_controller/0.13.6-1.tar.gz";
+    name = "0.13.6-1.tar.gz";
+    sha256 = "61c6b90e92c4f6a8aab7d04b3f69caafd4c6b0428305a8af0267b5a489b5c583";
   };
 
   buildType = "catkin";

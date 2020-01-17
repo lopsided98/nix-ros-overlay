@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, console-bridge, geometry-msgs, rostime, tf2-msgs }:
 buildRosPackage {
   pname = "ros-melodic-tf2";
-  version = "0.6.5";
+  version = "0.6.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2/0.6.5-0.tar.gz";
-    name = "0.6.5-0.tar.gz";
-    sha256 = "f6776b600f397998cef387bfa57b6ad3e1e396f7a0015521ba7389ce2ca211c4";
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2/0.6.6-1.tar.gz";
+    name = "0.6.6-1.tar.gz";
+    sha256 = "dce6877a97b38551633d530e72b90ed18a3db6701e4e90ca93673c8e7336b16c";
   };
 
   buildType = "catkin";

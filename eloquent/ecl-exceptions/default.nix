@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-config, ecl-errors, ecl-license }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-exceptions";
-  version = "1.0.4-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/eloquent/ecl_exceptions/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "ba32d707e2fe52162c9342bb4bde49911550f76beda6697805b12774daa0acd9";
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/eloquent/ecl_exceptions/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "185084a09c7aedb5dbbecb5ff3cabfa48068e04226fec2e09d6fc689f5c75aa9";
   };
 
   buildType = "ament_cmake";

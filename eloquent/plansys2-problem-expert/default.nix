@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, rclcpp, rclcpp-action, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-eloquent-plansys2-problem-expert";
-  version = "0.0.4-r1";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/eloquent/plansys2_problem_expert/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "a7399eebd38ad0f66a9d3e0778c21a9a3e29a1ace468d35e7aecc914da329caf";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/eloquent/plansys2_problem_expert/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "8803f3c271c074536df573671c1717a40350a690162b39a956aa552cd24ebc13";
   };
 
   buildType = "ament_cmake";

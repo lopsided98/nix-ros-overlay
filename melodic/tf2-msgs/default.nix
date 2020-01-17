@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation }:
 buildRosPackage {
   pname = "ros-melodic-tf2-msgs";
-  version = "0.6.5";
+  version = "0.6.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_msgs/0.6.5-0.tar.gz";
-    name = "0.6.5-0.tar.gz";
-    sha256 = "27ecf00eef462615bab0dd0ff5232f6aaad8712e79bbf5912c008705f27c1d5d";
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_msgs/0.6.6-1.tar.gz";
+    name = "0.6.6-1.tar.gz";
+    sha256 = "e688a6782f1f34bbd114c600c6cf3f569cebf04e0175981ce07546a5d3f1fc0e";
   };
 
   buildType = "catkin";

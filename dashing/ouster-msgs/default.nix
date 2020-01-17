@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-ouster-msgs";
-  version = "0.0.0-r1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/ros2_ouster_drivers-release/archive/release/dashing/ouster_msgs/0.0.0-1.tar.gz";
-    name = "0.0.0-1.tar.gz";
-    sha256 = "9ef066ac669030c800af120ab7359e8314b9fc9042087b869f87146559fd64d5";
+    url = "https://github.com/SteveMacenski/ros2_ouster_drivers-release/archive/release/dashing/ouster_msgs/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "ea52e9a43127705ef30229b632db93893b3335f9cbfd9cd03569951b69801166";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-geometry, ecl-linear-algebra, ecl-threads }:
 buildRosPackage {
   pname = "ros-eloquent-kobuki-dock-drive";
-  version = "0.8.1-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/eloquent/kobuki_dock_drive/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "c145fea1cfb08789908978bca29de6bcd91f89bd0e91d388bc2b1fd94b59470f";
+    url = "https://github.com/stonier/kobuki_core-release/archive/release/eloquent/kobuki_dock_drive/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "7e3d8225fb246bdb5cf0416eb6c3b116cc7dca20c9a375000f0e2f4020e6d554";
   };
 
   buildType = "ament_cmake";

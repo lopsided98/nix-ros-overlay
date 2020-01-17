@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, image-transport, qt5, rqt-gui, rqt-gui-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rqt-image-view";
-  version = "0.4.13";
+  version = "0.4.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_image_view-release/archive/release/melodic/rqt_image_view/0.4.13-0.tar.gz";
-    name = "0.4.13-0.tar.gz";
-    sha256 = "adbd60be7c1f3517942285d3bcb166f838d362e88a910192bdaa35dc193126e3";
+    url = "https://github.com/ros-gbp/rqt_image_view-release/archive/release/melodic/rqt_image_view/0.4.14-1.tar.gz";
+    name = "0.4.14-1.tar.gz";
+    sha256 = "aa8786eb047273139cba8c1a2fe4ea2214060385494e743ee777b41ff155fd26";
   };
 
   buildType = "catkin";

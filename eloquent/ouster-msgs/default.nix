@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-ouster-msgs";
-  version = "0.0.1-r1";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/ros2_ouster_drivers-release/archive/release/eloquent/ouster_msgs/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "86320ecd5a669b6a2799d065fb03eed7128ec384f634fc54f5a621be912e5efb";
+    url = "https://github.com/SteveMacenski/ros2_ouster_drivers-release/archive/release/eloquent/ouster_msgs/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "c6ea53cb98ef2653d9fd9abb79156afa3a54135d5d6999e6c4183451ca1c756a";
   };
 
   buildType = "ament_cmake";

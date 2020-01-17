@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, four-wheel-steering-msgs, nav-msgs, realtime-tools, rosgraph-msgs, rostest, std-srvs, tf, urdf-geometry-parser }:
 buildRosPackage {
   pname = "ros-kinetic-four-wheel-steering-controller";
-  version = "0.13.5";
+  version = "0.13.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/four_wheel_steering_controller/0.13.5-0.tar.gz";
-    name = "0.13.5-0.tar.gz";
-    sha256 = "79f36288c0a3bebd6987b95033f450c70564980ce68ba8e3bf5bd27b85c14df4";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/kinetic/four_wheel_steering_controller/0.13.6-1.tar.gz";
+    name = "0.13.6-1.tar.gz";
+    sha256 = "2fe02add9f752db43a4074d1da59fdec72bf82686f7a32c152ed5b965d6cbb86";
   };
 
   buildType = "catkin";

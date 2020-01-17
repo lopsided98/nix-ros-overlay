@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-toposens-description";
-  version = "1.3.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_description/1.3.0-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_description/2.0.0-1";
     name = "archive.tar.gz";
-    sha256 = "a73cf14def24b3dfea243ff4f64635861f402212dcf71f211a1bd18695d6812c";
+    sha256 = "230a1079f3670501c9d1882cde91caed576760d81e0999f53cbcb9024c5184b4";
   };
 
   buildType = "catkin";
