@@ -2,7 +2,7 @@
 self: super:
 let
   base = rosSelf: rosSuper: {
-    lib = super.lib // import ./lib { inherit self rosSelf; };
+    lib = super.lib // import ../lib { inherit self rosSelf; };
   
     callPackage = self.newScope rosSelf;
 
