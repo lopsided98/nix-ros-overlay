@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, image-geometry }:
 buildRosPackage {
   pname = "ros-eloquent-vision-opencv";
-  version = "2.1.3-r1";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/eloquent/vision_opencv/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "ffa2b7372b86cbb83a780c0d0c0c064537b8c82bc71265073c90ea9ae9ea1e33";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/eloquent/vision_opencv/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "75dbfadf38eef8d9b2c6d9c00cc32fd9d79751bdc608632dcf168b19eb265a9c";
   };
 
   buildType = "ament_cmake";

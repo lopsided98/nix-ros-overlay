@@ -112,8 +112,6 @@ self: super: {
 
  arduino-daq = self.callPackage ./arduino-daq {};
 
- area-division = self.callPackage ./area-division {};
-
  arm-navigation-msgs = self.callPackage ./arm-navigation-msgs {};
 
  aruco = self.callPackage ./aruco {};
@@ -339,8 +337,6 @@ self: super: {
  cmake-modules = self.callPackage ./cmake-modules {};
 
  cmd-vel-smoother = self.callPackage ./cmd-vel-smoother {};
-
- cnn-bridge = self.callPackage ./cnn-bridge {};
 
  cob-3d-mapping-msgs = self.callPackage ./cob-3d-mapping-msgs {};
 
@@ -616,8 +612,6 @@ self: super: {
 
  cpr-multimaster-tools = self.callPackage ./cpr-multimaster-tools {};
 
- cpswarm-msgs = self.callPackage ./cpswarm-msgs {};
-
  create-dashboard = self.callPackage ./create-dashboard {};
 
  create-description = self.callPackage ./create-description {};
@@ -780,10 +774,6 @@ self: super: {
 
  dockeros = self.callPackage ./dockeros {};
 
- doosan-robot = self.callPackage ./doosan-robot {};
-
- doosan-robotics = self.callPackage ./doosan-robotics {};
-
  downward = self.callPackage ./downward {};
 
  dr-base = self.callPackage ./dr-base {};
@@ -796,11 +786,7 @@ self: super: {
 
  drone-wrapper = self.callPackage ./drone-wrapper {};
 
- dsr-control = self.callPackage ./dsr-control {};
-
  dsr-description = self.callPackage ./dsr-description {};
-
- dsr-example-cpp = self.callPackage ./dsr-example-cpp {};
 
  dsr-example-py = self.callPackage ./dsr-example-py {};
 
@@ -855,6 +841,8 @@ self: super: {
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
  dynpick-driver = self.callPackage ./dynpick-driver {};
+
+ earth-rover-localization = self.callPackage ./earth-rover-localization {};
 
  earth-rover-piksi = self.callPackage ./earth-rover-piksi {};
 
@@ -1426,8 +1414,6 @@ self: super: {
 
  hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
 
- heron-control = self.callPackage ./heron-control {};
-
  heron-description = self.callPackage ./heron-description {};
 
  heron-desktop = self.callPackage ./heron-desktop {};
@@ -1704,6 +1690,8 @@ self: super: {
 
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
 
+ joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
+
  joint-states-settler = self.callPackage ./joint-states-settler {};
 
  joint-trajectory-action = self.callPackage ./joint-trajectory-action {};
@@ -1923,6 +1911,14 @@ self: super: {
  ksql-airport = self.callPackage ./ksql-airport {};
 
  kvh = self.callPackage ./kvh {};
+
+ kvh-geo-fog-3d = self.callPackage ./kvh-geo-fog-3d {};
+
+ kvh-geo-fog-3d-driver = self.callPackage ./kvh-geo-fog-3d-driver {};
+
+ kvh-geo-fog-3d-msgs = self.callPackage ./kvh-geo-fog-3d-msgs {};
+
+ kvh-geo-fog-3d-rviz = self.callPackage ./kvh-geo-fog-3d-rviz {};
 
  laptop-battery-monitor = self.callPackage ./laptop-battery-monitor {};
 
@@ -2188,6 +2184,8 @@ self: super: {
 
  mavlink = self.callPackage ./mavlink {};
 
+ mavros = self.callPackage ./mavros {};
+
  mavros-extras = self.callPackage ./mavros-extras {};
 
  mavros-msgs = self.callPackage ./mavros-msgs {};
@@ -2324,8 +2322,6 @@ self: super: {
 
  moveit = self.callPackage ./moveit {};
 
- moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
-
  moveit-config-m0609 = self.callPackage ./moveit-config-m0609 {};
 
  moveit-config-m0617 = self.callPackage ./moveit-config-m0617 {};
@@ -2431,8 +2427,6 @@ self: super: {
  multi-jackal-base = self.callPackage ./multi-jackal-base {};
 
  multi-jackal-control = self.callPackage ./multi-jackal-control {};
-
- multi-jackal-description = self.callPackage ./multi-jackal-description {};
 
  multi-jackal-nav = self.callPackage ./multi-jackal-nav {};
 
@@ -2985,8 +2979,6 @@ self: super: {
  pointcloud-tools = self.callPackage ./pointcloud-tools {};
 
  pointgrey-camera-description = self.callPackage ./pointgrey-camera-description {};
-
- pointgrey-camera-driver = self.callPackage ./pointgrey-camera-driver {};
 
  polar-scan-matcher = self.callPackage ./polar-scan-matcher {};
 
@@ -4014,11 +4006,7 @@ self: super: {
 
  rr-openrover-basic = self.callPackage ./rr-openrover-basic {};
 
- rr-openrover-driver = self.callPackage ./rr-openrover-driver {};
-
  rr-openrover-driver-msgs = self.callPackage ./rr-openrover-driver-msgs {};
-
- rr-openrover-stack = self.callPackage ./rr-openrover-stack {};
 
  rr-swiftnav-piksi = self.callPackage ./rr-swiftnav-piksi {};
 
@@ -4071,10 +4059,6 @@ self: super: {
  rtt-kdl-conversions = self.callPackage ./rtt-kdl-conversions {};
 
  rtt-nav-msgs = self.callPackage ./rtt-nav-msgs {};
-
- rtt-pcl = self.callPackage ./rtt-pcl {};
-
- rtt-pcl-ros = self.callPackage ./rtt-pcl-ros {};
 
  rtt-ros = self.callPackage ./rtt-ros {};
 
@@ -4382,8 +4366,6 @@ self: super: {
 
  swarm-functions = self.callPackage ./swarm-functions {};
 
- swarmros = self.callPackage ./swarmros {};
-
  swri-console = self.callPackage ./swri-console {};
 
  swri-console-util = self.callPackage ./swri-console-util {};
@@ -4433,8 +4415,6 @@ self: super: {
  talos-description-inertial = self.callPackage ./talos-description-inertial {};
 
  tango-ros-messages = self.callPackage ./tango-ros-messages {};
-
- target-monitor = self.callPackage ./target-monitor {};
 
  task-allocation = self.callPackage ./task-allocation {};
 
@@ -4871,6 +4851,8 @@ self: super: {
  uuv-control-msgs = self.callPackage ./uuv-control-msgs {};
 
  uuv-control-utils = self.callPackage ./uuv-control-utils {};
+
+ uuv-cpc-sensor = self.callPackage ./uuv-cpc-sensor {};
 
  uuv-descriptions = self.callPackage ./uuv-descriptions {};
 

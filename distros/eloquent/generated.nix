@@ -84,6 +84,8 @@ self: super: {
 
  ament-cmake-version = self.callPackage ./ament-cmake-version {};
 
+ ament-cmake-virtualenv = self.callPackage ./ament-cmake-virtualenv {};
+
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
 
  ament-copyright = self.callPackage ./ament-copyright {};
@@ -391,6 +393,8 @@ self: super: {
  kobuki-driver = self.callPackage ./kobuki-driver {};
 
  kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
+
+ kobuki-ros = self.callPackage ./kobuki-ros {};
 
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 

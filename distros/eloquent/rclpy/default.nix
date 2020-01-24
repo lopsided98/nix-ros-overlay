@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, python-cmake-module, pythonPackages, rcl, rcl-action, rcl-interfaces, rcl-yaml-param-parser, rcutils, rmw-implementation, rmw-implementation-cmake, rosgraph-msgs, rosidl-generator-py, test-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-rclpy";
-  version = "0.8.3-r1";
+  version = "0.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/eloquent/rclpy/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "5fb74c29e3b4d252691b63069099b3a0c6802b0f5dc1ebaeee9ff09c9b4bb551";
+    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/eloquent/rclpy/0.8.4-1.tar.gz";
+    name = "0.8.4-1.tar.gz";
+    sha256 = "917d70d094a0ff49fff59f3cac06e76411af5e10241e875a20fd906adb43f899";
   };
 
   buildType = "ament_cmake";

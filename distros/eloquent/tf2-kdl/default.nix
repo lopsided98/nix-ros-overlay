@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, builtin-interfaces, geometry-msgs, orocos-kdl, rclcpp, tf2, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-eloquent-tf2-kdl";
-  version = "0.12.4-r1";
+  version = "0.12.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/eloquent/tf2_kdl/0.12.4-1.tar.gz";
-    name = "0.12.4-1.tar.gz";
-    sha256 = "f78df24cb16a242bfe42106a1e4199862aa3b8fdce9ef0806827267f98b77b43";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/eloquent/tf2_kdl/0.12.5-1.tar.gz";
+    name = "0.12.5-1.tar.gz";
+    sha256 = "79cbe846f53f3fc42a9adb04d670eeadaed54e3c3b10e79f31060f618cc7556e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, pythonPackages, ros-testing, ros2cli, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-eloquent-ros2srv";
-  version = "0.8.6-r1";
+  version = "0.8.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/eloquent/ros2srv/0.8.6-1.tar.gz";
-    name = "0.8.6-1.tar.gz";
-    sha256 = "53baf91357d032c70e0ff6e0084b3c4d23010c0f338f966938aa3df490e446ac";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/eloquent/ros2srv/0.8.7-1.tar.gz";
+    name = "0.8.7-1.tar.gz";
+    sha256 = "630d0dd2801579739e130f71c876689e97b6d4cc92049d5a8b6d3494c4c4970b";
   };
 
   buildType = "ament_python";

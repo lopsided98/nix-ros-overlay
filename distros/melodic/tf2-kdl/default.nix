@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, orocos-kdl, ros-environment, rostest, tf2, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, orocos-kdl, rostest, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-tf2-kdl";
-  version = "0.6.6-r1";
+  version = "0.6.5";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_kdl/0.6.6-1.tar.gz";
-    name = "0.6.6-1.tar.gz";
-    sha256 = "092567486d57feaad61f7b83432dcbd0b3450b189fcc74ec121d71cb57f1edbc";
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_kdl/0.6.5-0.tar.gz";
+    name = "0.6.5-0.tar.gz";
+    sha256 = "af0a21267f7ff0d435f5b54a3b55575e399daaf75ed8e01f09906e1b9af018cf";
   };
 
   buildType = "catkin";
   buildInputs = [ cmake-modules ];
-  checkInputs = [ ros-environment rostest ];
+  checkInputs = [ rostest ];
   propagatedBuildInputs = [ eigen orocos-kdl tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

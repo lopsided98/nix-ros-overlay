@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, osrf-testing-tools-cpp, rcl-interfaces, rcl-logging-spdlog, rcl-yaml-param-parser, rcpputils, rcutils, rmw, rmw-implementation, rmw-implementation-cmake, rosidl-generator-c, test-msgs, tinydir-vendor, tracetools }:
 buildRosPackage {
   pname = "ros-eloquent-rcl";
-  version = "0.8.3-r1";
+  version = "0.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/eloquent/rcl/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "9d9f78172efa7946dac63b610d9b0fdb4b2a9a63d1511a4522a8eefc7323cab3";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/eloquent/rcl/0.8.4-1.tar.gz";
+    name = "0.8.4-1.tar.gz";
+    sha256 = "c9ccad382d5150db3fb31cd21ff7e618ec1572113e4aaea69b63701bcc67da1e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, poco, poco-vendor }:
 buildRosPackage {
   pname = "ros-eloquent-class-loader";
-  version = "1.4.0-r1";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/eloquent/class_loader/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "79177401ea6ace156ebba466796cff3ee598e291b0b04ee8e329d8e9f4ca6205";
+    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/eloquent/class_loader/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "2f7ac281b03aaf3846010225098a22714810f738270f08e662fbf5f0df30d10a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, freetype, git, libGL, libGLU, pkg-config, xorg }:
 buildRosPackage {
   pname = "ros-eloquent-rviz-ogre-vendor";
-  version = "7.0.3-r1";
+  version = "7.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/eloquent/rviz_ogre_vendor/7.0.3-1.tar.gz";
-    name = "7.0.3-1.tar.gz";
-    sha256 = "93036f39643946e6325533c7758160b87cce754464984c00aa1af01a258297cc";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/eloquent/rviz_ogre_vendor/7.0.4-1.tar.gz";
+    name = "7.0.4-1.tar.gz";
+    sha256 = "f42ca396f8109f5f4e12f89cde74cd7d0740c7b422a61b59d509a972a2a8ab69";
   };
 
   buildType = "ament_cmake";

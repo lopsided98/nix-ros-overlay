@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, radar-msgs, shape-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, radar-msgs, ros-environment, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-derived-object-msgs";
-  version = "2.3.1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/derived_object_msgs/2.3.1-0.tar.gz";
-    name = "2.3.1-0.tar.gz";
-    sha256 = "5b5450bf1c0968aa5b7f6190cb26b07b11563d0041e410d322ceff66567b5a23";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/derived_object_msgs/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "56782e3b607e2f56060747ae3328ca771620484e361386a58328aff21e97c420";
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ message-generation ros-environment ];
   propagatedBuildInputs = [ geometry-msgs message-runtime radar-msgs shape-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 

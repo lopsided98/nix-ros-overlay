@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-common, aws-ros1-common, catkin, gmock, gtest, lex-common-msgs, roscpp, rostest, std-msgs }:
+{ lib, buildRosPackage, fetchurl, aws-common, aws-ros1-common, catkin, gmock, gtest, lex-common, lex-common-msgs, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-lex-node";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/lex_node-release/archive/release/melodic/lex_node/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "117cf4ce5de564b0b5bded63277f07ee0a9da28df13fb8750181640ccd1a358e";
+    url = "https://github.com/aws-gbp/lex_node-release/archive/release/melodic/lex_node/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "24375a02bbf5b57fa1fb9765d43c4cbcf76f7c14e3f250369a738f023ab773e6";
   };
 
   buildType = "catkin";
   checkInputs = [ gmock gtest rostest ];
-  propagatedBuildInputs = [ aws-common aws-ros1-common lex-common-msgs roscpp std-msgs ];
+  propagatedBuildInputs = [ aws-common aws-ros1-common lex-common lex-common-msgs roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

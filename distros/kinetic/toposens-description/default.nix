@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-toposens-description";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_description/2.0.0-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_description/2.0.1-1";
     name = "archive.tar.gz";
-    sha256 = "7514e02924b8b431b2a8bd54da65e63e3716ae8b2cb83a7ab2a019ef8a25168e";
+    sha256 = "08965d97b9d26caf879bad0fe9cc1ad6d99b333073ba68854fc5b2cdcb4c2292";
   };
 
   buildType = "catkin";
