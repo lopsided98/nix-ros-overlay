@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, actionlib-msgs, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, demo-nodes-cpp, diagnostic-msgs, example-interfaces, gazebo-msgs, geometry-msgs, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, nav-msgs, pkg-config, python3Packages, rclcpp, rcutils, rmw-implementation-cmake, ros2run, rosidl-cmake, rosidl-parser, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, tf2-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-ros1-bridge";
-  version = "0.8.1-r4";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros1_bridge-release/archive/release/eloquent/ros1_bridge/0.8.1-4.tar.gz";
-    name = "0.8.1-4.tar.gz";
-    sha256 = "002822dcb1f9778f4efaf05d607712a693a574cd4bbbac9a26fb0e786601f1d2";
+    url = "https://github.com/ros2-gbp/ros1_bridge-release/archive/release/eloquent/ros1_bridge/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "f0551caec51081fecd30e826e4f2e4d1742103e2065f51479219ff20213cc6dd";
   };
 
   buildType = "ament_cmake";

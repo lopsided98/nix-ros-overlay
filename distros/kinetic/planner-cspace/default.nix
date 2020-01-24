@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, costmap-cspace, costmap-cspace-msgs, diagnostic-updater, geometry-msgs, map-server, move-base-msgs, nav-msgs, neonavigation-common, planner-cspace-msgs, roscpp, roslint, rostest, rosunit, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs, trajectory-tracker, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-planner-cspace";
-  version = "0.5.1-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/planner_cspace/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "6e24b06bff42661b787af0327aa37c35ffca9d63815847327666d8cc8bb144c9";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/planner_cspace/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "df4acbef4a90fa9adc43059f8ae1d8672584e63c8bf69a4dea9ac5a3120cdfc9";
   };
 
   buildType = "catkin";

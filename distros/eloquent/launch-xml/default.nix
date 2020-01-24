@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch, pythonPackages }:
 buildRosPackage {
   pname = "ros-eloquent-launch-xml";
-  version = "0.9.5-r1";
+  version = "0.9.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/eloquent/launch_xml/0.9.5-1.tar.gz";
-    name = "0.9.5-1.tar.gz";
-    sha256 = "b0ea48c11ba3c5c1f3345bb5fa0c4fd4f7546878f32ac25f1a9bc453f932c272";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/eloquent/launch_xml/0.9.6-1.tar.gz";
+    name = "0.9.6-1.tar.gz";
+    sha256 = "c4dda11423cc023fb4eab4739250f096c3fbb49d84b49e1d6d6980122759cce0";
   };
 
   buildType = "ament_python";

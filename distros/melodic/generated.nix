@@ -136,6 +136,8 @@ self: super: {
 
  aws-ros1-common = self.callPackage ./aws-ros1-common {};
 
+ axis-camera = self.callPackage ./axis-camera {};
+
  backward-ros = self.callPackage ./backward-ros {};
 
  bagger = self.callPackage ./bagger {};
@@ -623,6 +625,8 @@ self: super: {
  driver-base = self.callPackage ./driver-base {};
 
  driver-common = self.callPackage ./driver-common {};
+
+ drone-wrapper = self.callPackage ./drone-wrapper {};
 
  dwa-local-planner = self.callPackage ./dwa-local-planner {};
 
@@ -1236,6 +1240,8 @@ self: super: {
 
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
 
+ joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
+
  joint-states-settler = self.callPackage ./joint-states-settler {};
 
  joint-trajectory-action = self.callPackage ./joint-trajectory-action {};
@@ -1517,6 +1523,8 @@ self: super: {
  mav-planning-msgs = self.callPackage ./mav-planning-msgs {};
 
  mavlink = self.callPackage ./mavlink {};
+
+ mavros = self.callPackage ./mavros {};
 
  mavros-extras = self.callPackage ./mavros-extras {};
 
@@ -2680,6 +2688,8 @@ self: super: {
 
  rqt-dep = self.callPackage ./rqt-dep {};
 
+ rqt-drone-teleop = self.callPackage ./rqt-drone-teleop {};
+
  rqt-ez-publisher = self.callPackage ./rqt-ez-publisher {};
 
  rqt-graph = self.callPackage ./rqt-graph {};
@@ -3014,6 +3024,8 @@ self: super: {
 
  tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
+ tf2-server = self.callPackage ./tf2-server {};
+
  tf2-tools = self.callPackage ./tf2-tools {};
 
  tf2-web-republisher = self.callPackage ./tf2-web-republisher {};
@@ -3257,6 +3269,8 @@ self: super: {
  uuv-world-ros-plugins-msgs = self.callPackage ./uuv-world-ros-plugins-msgs {};
 
  uvc-camera = self.callPackage ./uvc-camera {};
+
+ uwsim = self.callPackage ./uwsim {};
 
  uwsim-bullet = self.callPackage ./uwsim-bullet {};
 

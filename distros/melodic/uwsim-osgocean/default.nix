@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, cmake, fftw, libGL, libGLU, openscenegraph }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake, fftw, fftwSinglePrec, libGL, libGLU, openscenegraph }:
 buildRosPackage {
   pname = "ros-melodic-uwsim-osgocean";
   version = "1.0.4-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ boost catkin fftw libGL libGLU openscenegraph ];
+  propagatedBuildInputs = [ boost catkin fftw fftwSinglePrec libGL libGLU openscenegraph ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

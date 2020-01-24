@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, python3Packages, pythonPackages, rclpy, ros-testing, ros2cli, rosidl-runtime-py, std-msgs, test-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-ros2topic";
-  version = "0.8.6-r1";
+  version = "0.8.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/eloquent/ros2topic/0.8.6-1.tar.gz";
-    name = "0.8.6-1.tar.gz";
-    sha256 = "c5cb6ad3ba81a772a5b66a09188176be402282aace4158bb2a8e82fd52cf33aa";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/eloquent/ros2topic/0.8.7-1.tar.gz";
+    name = "0.8.7-1.tar.gz";
+    sha256 = "fe924ce8778794808a4f5e5828d7587047cf2ad0c92e5670c1ca09eaf08d7277";
   };
 
   buildType = "ament_python";

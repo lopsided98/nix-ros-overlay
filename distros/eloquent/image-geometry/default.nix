@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, opencv3, sensor-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-image-geometry";
-  version = "2.1.3-r1";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/eloquent/image_geometry/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "3a40c79700b3efdfee78bcff30e7853ca751531f6ba94ca5102010a7006683a3";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/eloquent/image_geometry/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "327376f160f8acdc50ca82385d2861f0b2cbd2b82ab0d001692320f00ef29f8e";
   };
 
   buildType = "ament_cmake";

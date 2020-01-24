@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rosidl-cmake, rosidl-parser, rosidl-typesupport-interface, test-interface-files }:
 buildRosPackage {
   pname = "ros-eloquent-rosidl-generator-c";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_generator_c/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "c045090a47172b3c9806fcf7b8ecb1d7dce83ff72d833ef923975a5e332f67df";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_generator_c/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "2a5992b8447081c93e262cfaeb2a8f7b7cba8079f4ef83c027cc8c9d74553526";
   };
 
   buildType = "ament_cmake";

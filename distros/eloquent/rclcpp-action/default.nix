@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcl-action, rclcpp, rosidl-generator-c, rosidl-generator-cpp, test-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-rclcpp-action";
-  version = "0.8.3-r1";
+  version = "0.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/eloquent/rclcpp_action/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "48c76f55e1ec0749d46bca475f5f7f9beb17d7c25dd6a1c1bb5f2054fa113b83";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/eloquent/rclcpp_action/0.8.4-1.tar.gz";
+    name = "0.8.4-1.tar.gz";
+    sha256 = "3cfa4adde6aa9c3eff9c652de5ec3f2cbbdfed030b22f8df87b84e0302ac8d51";
   };
 
   buildType = "ament_cmake";

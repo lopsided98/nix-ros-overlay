@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-python, ament-lint-auto, ament-lint-common, boost, opencv3, python-cmake-module, python3Packages, sensor-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-cv-bridge";
-  version = "2.1.3-r1";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/eloquent/cv_bridge/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "2556666f3b3a83fba7c394b38bd9fba97a6a52b00eba3696d90b7d73ed57ff8d";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/eloquent/cv_bridge/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "c8b997e4e437cf2341fd4cea03dd14ac0f8f22464e1949798bf2ebc04c58d48d";
   };
 
   buildType = "ament_cmake";

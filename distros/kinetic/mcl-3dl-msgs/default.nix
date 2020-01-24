@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mcl-3dl-msgs";
-  version = "0.1.2";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/mcl_3dl_msgs-release/archive/release/kinetic/mcl_3dl_msgs/0.1.2-0.tar.gz";
-    name = "0.1.2-0.tar.gz";
-    sha256 = "9c81bd8e59eee4a8fd13e46a3f64c094f347d51256450363716ab873720d7526";
+    url = "https://github.com/at-wat/mcl_3dl_msgs-release/archive/release/kinetic/mcl_3dl_msgs/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "d6a213691f7fa4a1723ae1780d481d6fff067769d8765ffc145fbc903c07cec8";
   };
 
   buildType = "catkin";

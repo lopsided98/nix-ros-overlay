@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, console-bridge, console-bridge-vendor, geometry-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-tf2";
-  version = "0.12.4-r1";
+  version = "0.12.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/eloquent/tf2/0.12.4-1.tar.gz";
-    name = "0.12.4-1.tar.gz";
-    sha256 = "0e8a360acb1d79d2909528b63680b33d50587846547332339cdb475a18e9b9a0";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/eloquent/tf2/0.12.5-1.tar.gz";
+    name = "0.12.5-1.tar.gz";
+    sha256 = "4fde6f8cc51601b65c79fd13002c4262a890654941bee16bb837836ab32476b1";
   };
 
   buildType = "ament_cmake";
