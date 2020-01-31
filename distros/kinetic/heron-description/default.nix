@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-heron-description";
-  version = "0.3.1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/heron-release/archive/release/kinetic/heron_description/0.3.1-0.tar.gz";
-    name = "0.3.1-0.tar.gz";
-    sha256 = "d566ac820693cbcce3ddf64a4ed8520f0f44dd31ac3491b565d5f39429e32269";
+    url = "https://github.com/clearpath-gbp/heron-release/archive/release/kinetic/heron_description/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "819c01bc20489d1aa9f75516729f5aca7a34a52f53dced0f562c1fb676c8715e";
   };
 
   buildType = "catkin";

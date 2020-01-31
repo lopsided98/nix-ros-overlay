@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, ros-environment, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-neobotix-usboard-msgs";
-  version = "2.3.1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/kinetic/neobotix_usboard_msgs/2.3.1-0.tar.gz";
-    name = "2.3.1-0.tar.gz";
-    sha256 = "ee1798c33b1876a8d936e8aead4a4960adffac76955c53bfda44647ad969116f";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/kinetic/neobotix_usboard_msgs/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "136c1043955d35a99c3a89450db4dbf8c5f615ee34ff09b2ebbef24bcd701986";
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ message-generation ros-environment ];
   propagatedBuildInputs = [ message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 

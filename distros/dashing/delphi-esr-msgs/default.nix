@@ -2,21 +2,22 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-delphi-esr-msgs";
-  version = "3.0.0-r2";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/dashing/delphi_esr_msgs/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "c5fbeeae3284d8d4ca013b1dafd1579ddd24c85b1e938b81914d85c6a33e116c";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/dashing/delphi_esr_msgs/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "1578811e78ecebdded1dbb09eda1259d1e20ca320964e3574e6d4299d0a5bb3d";
   };
 
-  buildType = "ament_cmake";
-  checkInputs = [ ament-lint-common ];
+  buildType = "catkin";
+  buildInputs = [ ros-environment rosidl-default-generators ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ builtin-interfaces rosidl-default-runtime std-msgs ];
-  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''Message definitions for the Delphi ESR'';

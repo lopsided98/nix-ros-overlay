@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fmi-adapter, launch, launch-ros }:
 buildRosPackage {
   pname = "ros-eloquent-fmi-adapter-examples";
-  version = "0.1.6-r1";
+  version = "0.1.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/boschresearch/fmi_adapter_ros2-release/archive/release/eloquent/fmi_adapter_examples/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "0f333698c39e374f1f44c6746747a68cfe81a3201ef25ea21f0a656c757aeb72";
+    url = "https://github.com/boschresearch/fmi_adapter_ros2-release/archive/release/eloquent/fmi_adapter_examples/0.1.7-2.tar.gz";
+    name = "0.1.7-2.tar.gz";
+    sha256 = "1b7d09db16f2083ec7f5e5f9bbf44267d88f65a4e2f22fb38b63a3daf1f0d4b9";
   };
 
   buildType = "ament_cmake";

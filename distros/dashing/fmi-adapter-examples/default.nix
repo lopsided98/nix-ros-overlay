@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fmi-adapter, launch, launch-ros }:
 buildRosPackage {
   pname = "ros-dashing-fmi-adapter-examples";
-  version = "0.1.5-r1";
+  version = "0.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/boschresearch/fmi_adapter_ros2-release/archive/release/dashing/fmi_adapter_examples/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "99fa8c81d94ca01518c54b89bac3592b76b0f88592b983ef57750409d8b59a44";
+    url = "https://github.com/boschresearch/fmi_adapter_ros2-release/archive/release/dashing/fmi_adapter_examples/0.1.7-1.tar.gz";
+    name = "0.1.7-1.tar.gz";
+    sha256 = "a108d330b317cf8ae495245e3c0cfd79ccb92d30cf3a6efe294e4943882a9efd";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-core, moveit-planners, moveit-plugins, moveit-ros-manipulation, moveit-ros-move-group, moveit-ros-perception, moveit-ros-planning, moveit-ros-planning-interface, moveit-ros-warehouse }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-runtime";
-  version = "0.9.17-r1";
+  version = "0.9.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_runtime/0.9.17-1.tar.gz";
-    name = "0.9.17-1.tar.gz";
-    sha256 = "6004e647a10993c09e522a008bbfd44f9957b3c4d89ce7553d512599cb0fe9a1";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_runtime/0.9.18-1.tar.gz";
+    name = "0.9.18-1.tar.gz";
+    sha256 = "292cb8fe2e256f491ea2759a9b27f8d83d43a954132d5a161358196700a23502";
   };
 
   buildType = "catkin";

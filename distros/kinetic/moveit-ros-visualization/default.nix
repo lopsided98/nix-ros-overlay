@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, class-loader, eigen, eigen-conversions, geometric-shapes, interactive-markers, moveit-ros-perception, moveit-ros-planning-interface, moveit-ros-robot-interaction, moveit-ros-warehouse, object-recognition-msgs, pkg-config, pluginlib, rosconsole, roscpp, rospy, rostest, rviz, tf }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-visualization";
-  version = "0.9.17-r1";
+  version = "0.9.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_visualization/0.9.17-1.tar.gz";
-    name = "0.9.17-1.tar.gz";
-    sha256 = "93ebd24b176314a3e36d8c0b02aa97dc73f96022cf46d59a1823b848d9076bdb";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_visualization/0.9.18-1.tar.gz";
+    name = "0.9.18-1.tar.gz";
+    sha256 = "8e45cda205e236762679376a679b03d161415403c1b30298645d33d0df8121a6";
   };
 
   buildType = "catkin";

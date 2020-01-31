@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-experimental";
-  version = "0.9.17-r1";
+  version = "0.9.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_experimental/0.9.17-1.tar.gz";
-    name = "0.9.17-1.tar.gz";
-    sha256 = "efb3b0d7a04e28dda419582e8ec4ab046471ce7bba381613e0e3baafbe9b8ebc";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_experimental/0.9.18-1.tar.gz";
+    name = "0.9.18-1.tar.gz";
+    sha256 = "98059d942d39177b0ea180c292d68c1a4881c09d4c1613ccc906b8d1258443c8";
   };
 
   buildType = "catkin";

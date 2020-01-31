@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, eigen, eigen-conversions, eigenpy, moveit-msgs, moveit-resources, moveit-ros-manipulation, moveit-ros-move-group, moveit-ros-planning, moveit-ros-warehouse, python, pythonPackages, rosconsole, roscpp, rospy, rostest, tf, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-planning-interface";
-  version = "0.9.17-r1";
+  version = "0.9.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_planning_interface/0.9.17-1.tar.gz";
-    name = "0.9.17-1.tar.gz";
-    sha256 = "f87fa2d2113bc9deabc3fb3d8875ae52d2d63bbcbd6cd174980c956874253178";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_planning_interface/0.9.18-1.tar.gz";
+    name = "0.9.18-1.tar.gz";
+    sha256 = "ccedbb78ed6b763555be0fb5f05b1711f85f4f2dcba5785c95b4883230e0062c";
   };
 
   buildType = "catkin";

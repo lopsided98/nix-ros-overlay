@@ -166,6 +166,10 @@ self: super: {
 
  control-msgs = self.callPackage ./control-msgs {};
 
+ costmap-converter = self.callPackage ./costmap-converter {};
+
+ costmap-converter-msgs = self.callPackage ./costmap-converter-msgs {};
+
  costmap-queue = self.callPackage ./costmap-queue {};
 
  cross-compile = self.callPackage ./cross-compile {};
@@ -415,6 +419,8 @@ self: super: {
  launch-yaml = self.callPackage ./launch-yaml {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
+
+ libg2o = self.callPackage ./libg2o {};
 
  libphidget22 = self.callPackage ./libphidget22 {};
 
@@ -923,6 +929,8 @@ self: super: {
  urdfdom-headers = self.callPackage ./urdfdom-headers {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
+
+ velocity-smoother = self.callPackage ./velocity-smoother {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

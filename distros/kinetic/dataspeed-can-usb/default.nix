@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, can-msgs, catkin, lusb, nodelet, roscpp, roslaunch, roslib, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-can-usb";
-  version = "1.0.14-r1";
+  version = "1.0.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/kinetic/dataspeed_can_usb/1.0.14-1.tar.gz";
-    name = "1.0.14-1.tar.gz";
-    sha256 = "dd8e538187735309aca85d346ea24b818f342782325c7f9a0ab57c593c62c3ec";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/kinetic/dataspeed_can_usb/1.0.15-1.tar.gz";
+    name = "1.0.15-1.tar.gz";
+    sha256 = "81ee8019c72050458123c0491f199f42df0864668e76aa1a74733dacbd9ac647";
   };
 
   buildType = "catkin";

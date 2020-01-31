@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, fmilibrary-vendor, launch, launch-ros, launch-testing, rcl-interfaces, rclcpp, rclcpp-components, rclcpp-lifecycle, rcutils, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-fmi-adapter";
-  version = "0.1.6-r1";
+  version = "0.1.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/boschresearch/fmi_adapter_ros2-release/archive/release/eloquent/fmi_adapter/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "8d1de4e0a2eb1c8a82d574c31e75f72518aeb1febf1479839d192e1195fa12a4";
+    url = "https://github.com/boschresearch/fmi_adapter_ros2-release/archive/release/eloquent/fmi_adapter/0.1.7-2.tar.gz";
+    name = "0.1.7-2.tar.gz";
+    sha256 = "a5107a3807736f1460f26bc6f9f6836fd118e408af1db09d59a49e792026a7aa";
   };
 
   buildType = "ament_cmake";
