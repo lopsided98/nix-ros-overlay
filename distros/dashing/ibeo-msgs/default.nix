@@ -2,24 +2,25 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-ibeo-msgs";
-  version = "3.0.0-r2";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/dashing/ibeo_msgs/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "f3fc4ba83c4a42f47af165ba9f8d4df9bff547817358a1ce6126ca5490f18b52";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/dashing/ibeo_msgs/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "5bfb598dfc065b64788fc1af91fb167fcb882e7b5a0deff06d6c4013a6364e44";
   };
 
-  buildType = "ament_cmake";
-  checkInputs = [ ament-lint-common ];
+  buildType = "catkin";
+  buildInputs = [ ros-environment rosidl-default-generators ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ builtin-interfaces rosidl-default-runtime std-msgs ];
-  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package containing messages for Ibeo sensors.'';
+    description = ''The ibeo_msgs package'';
     license = with lib.licenses; [ mit ];
   };
 }

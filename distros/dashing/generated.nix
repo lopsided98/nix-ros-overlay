@@ -126,6 +126,8 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -193,6 +195,10 @@ self: super: {
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
  control-msgs = self.callPackage ./control-msgs {};
+
+ costmap-converter = self.callPackage ./costmap-converter {};
+
+ costmap-converter-msgs = self.callPackage ./costmap-converter-msgs {};
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
@@ -599,6 +605,8 @@ self: super: {
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
  ouster-msgs = self.callPackage ./ouster-msgs {};
+
+ pacmod3 = self.callPackage ./pacmod3 {};
 
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 

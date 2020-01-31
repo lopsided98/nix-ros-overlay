@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-tts-interfaces";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/tts-release/archive/release/dashing/tts_interfaces/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "ea2c475744c13bacdbcb227bec310950d235c971ba87c5330b64ac20cf49e1fa";
+    url = "https://github.com/aws-gbp/tts-release/archive/release/dashing/tts_interfaces/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "278759225665de9c9d1cc5e9aa2e9fc33b99ab78051590704ed3a0b13af532ab";
   };
 
   buildType = "ament_cmake";

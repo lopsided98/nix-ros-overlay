@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, controller-manager-msgs, moveit-core, moveit-simple-controller-manager, pluginlib, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-moveit-ros-control-interface";
-  version = "0.9.17-r1";
+  version = "0.9.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_control_interface/0.9.17-1.tar.gz";
-    name = "0.9.17-1.tar.gz";
-    sha256 = "0592af36d9c8add86a1d73a18056616153244497d9b81e08b917e3d944d40baf";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/kinetic/moveit_ros_control_interface/0.9.18-1.tar.gz";
+    name = "0.9.18-1.tar.gz";
+    sha256 = "180aed196b60704bebc39aa23b4917e7562dd17306dd09fd900651028bb9c440";
   };
 
   buildType = "catkin";

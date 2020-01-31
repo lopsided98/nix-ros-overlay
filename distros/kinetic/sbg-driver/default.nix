@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-sbg-driver";
-  version = "1.1.7";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SBG-Systems/sbg_ros_driver-release/archive/release/kinetic/sbg_driver/1.1.7-0.tar.gz";
-    name = "1.1.7-0.tar.gz";
-    sha256 = "6ed1e97b68eef62f702922cbeb80dad354ae1fb1f173884be4b2bb427f8f054b";
+    url = "https://github.com/SBG-Systems/sbg_ros_driver-release/archive/release/kinetic/sbg_driver/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "bc497f55a096a2509cd28ebf1c6ef12a4901d64903df32a3692abe7593c1c7dd";
   };
 
   buildType = "catkin";

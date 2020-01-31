@@ -2,18 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, git }:
 buildRosPackage {
   pname = "ros-eloquent-fmilibrary-vendor";
-  version = "0.1.1-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/boschresearch/fmilibrary_vendor-release/archive/release/eloquent/fmilibrary_vendor/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "3a6d01e743422b77756190a507e1f41e6133ebe591935cf97cbadf6cdd66b0bf";
+    url = "https://github.com/boschresearch/fmilibrary_vendor-release/archive/release/eloquent/fmilibrary_vendor/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "ca71005d9da2532676622d5194fbf8d1922458e9ce8677f17a57552ffc9d354f";
   };
 
   buildType = "catkin";
+  buildInputs = [ git ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

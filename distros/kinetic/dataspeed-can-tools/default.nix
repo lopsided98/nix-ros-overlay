@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, can-msgs, catkin, rosbag, roscpp, roslib, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-can-tools";
-  version = "1.0.14-r1";
+  version = "1.0.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/kinetic/dataspeed_can_tools/1.0.14-1.tar.gz";
-    name = "1.0.14-1.tar.gz";
-    sha256 = "1add1a92e88108a628f0760e7b4de9b0823c5ef803662980f3d7bf0069236083";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/kinetic/dataspeed_can_tools/1.0.15-1.tar.gz";
+    name = "1.0.15-1.tar.gz";
+    sha256 = "2856ed287059e3419b3ce5f6cb58b7a4f37658ea40a7356625e245b345360c93";
   };
 
   buildType = "catkin";

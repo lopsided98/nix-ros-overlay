@@ -606,8 +606,6 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
- coverage-path = self.callPackage ./coverage-path {};
-
  cpp-common = self.callPackage ./cpp-common {};
 
  cpr-multimaster-tools = self.callPackage ./cpr-multimaster-tools {};
@@ -1330,6 +1328,14 @@ self: super: {
 
  gscam = self.callPackage ./gscam {};
 
+ gundam-robot = self.callPackage ./gundam-robot {};
+
+ gundam-rx78-control = self.callPackage ./gundam-rx78-control {};
+
+ gundam-rx78-description = self.callPackage ./gundam-rx78-description {};
+
+ gundam-rx78-gazebo = self.callPackage ./gundam-rx78-gazebo {};
+
  gx-sound = self.callPackage ./gx-sound {};
 
  gx-sound-msgs = self.callPackage ./gx-sound-msgs {};
@@ -1413,6 +1419,8 @@ self: super: {
  hector-worldmodel-msgs = self.callPackage ./hector-worldmodel-msgs {};
 
  hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
+
+ heron-control = self.callPackage ./heron-control {};
 
  heron-description = self.callPackage ./heron-description {};
 
@@ -1845,8 +1853,6 @@ self: super: {
  khi-rs-gazebo = self.callPackage ./khi-rs-gazebo {};
 
  khi-rs-ikfast-plugin = self.callPackage ./khi-rs-ikfast-plugin {};
-
- kinematics-exchanger = self.callPackage ./kinematics-exchanger {};
 
  kinesis-manager = self.callPackage ./kinesis-manager {};
 
@@ -2322,6 +2328,8 @@ self: super: {
 
  moveit = self.callPackage ./moveit {};
 
+ moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
+
  moveit-config-m0609 = self.callPackage ./moveit-config-m0609 {};
 
  moveit-config-m0617 = self.callPackage ./moveit-config-m0617 {};
@@ -2423,14 +2431,6 @@ self: super: {
  msp = self.callPackage ./msp {};
 
  multi-interface-roam = self.callPackage ./multi-interface-roam {};
-
- multi-jackal-base = self.callPackage ./multi-jackal-base {};
-
- multi-jackal-control = self.callPackage ./multi-jackal-control {};
-
- multi-jackal-nav = self.callPackage ./multi-jackal-nav {};
-
- multi-jackal-tutorials = self.callPackage ./multi-jackal-tutorials {};
 
  multi-map-server = self.callPackage ./multi-map-server {};
 
@@ -4060,6 +4060,8 @@ self: super: {
 
  rtt-nav-msgs = self.callPackage ./rtt-nav-msgs {};
 
+ rtt-pcl = self.callPackage ./rtt-pcl {};
+
  rtt-ros = self.callPackage ./rtt-ros {};
 
  rtt-ros-comm = self.callPackage ./rtt-ros-comm {};
@@ -4288,8 +4290,6 @@ self: super: {
 
  stage-ros = self.callPackage ./stage-ros {};
 
- state-exchanger = self.callPackage ./state-exchanger {};
-
  static-tf = self.callPackage ./static-tf {};
 
  static-transform-mux = self.callPackage ./static-transform-mux {};
@@ -4358,14 +4358,6 @@ self: super: {
 
  summit-xl-sim-bringup = self.callPackage ./summit-xl-sim-bringup {};
 
- swarm-behaviors = self.callPackage ./swarm-behaviors {};
-
- swarm-behaviors-position = self.callPackage ./swarm-behaviors-position {};
-
- swarm-behaviors-velocity = self.callPackage ./swarm-behaviors-velocity {};
-
- swarm-functions = self.callPackage ./swarm-functions {};
-
  swri-console = self.callPackage ./swri-console {};
 
  swri-console-util = self.callPackage ./swri-console-util {};
@@ -4415,8 +4407,6 @@ self: super: {
  talos-description-inertial = self.callPackage ./talos-description-inertial {};
 
  tango-ros-messages = self.callPackage ./tango-ros-messages {};
-
- task-allocation = self.callPackage ./task-allocation {};
 
  task-compiler = self.callPackage ./task-compiler {};
 
@@ -4750,21 +4740,11 @@ self: super: {
 
  twistimu = self.callPackage ./twistimu {};
 
- uav-local-coverage = self.callPackage ./uav-local-coverage {};
-
- uav-optimal-coverage = self.callPackage ./uav-optimal-coverage {};
-
- uav-random-direction = self.callPackage ./uav-random-direction {};
-
- uav-simple-tracking = self.callPackage ./uav-simple-tracking {};
-
  ubiquity-motor = self.callPackage ./ubiquity-motor {};
 
  ueye = self.callPackage ./ueye {};
 
  ueye-cam = self.callPackage ./ueye-cam {};
-
- ugv-random-walk = self.callPackage ./ugv-random-walk {};
 
  um6 = self.callPackage ./um6 {};
 

@@ -252,8 +252,6 @@ self: super: {
 
  cmake-modules = self.callPackage ./cmake-modules {};
 
- cnn-bridge = self.callPackage ./cnn-bridge {};
-
  cob-3d-mapping-msgs = self.callPackage ./cob-3d-mapping-msgs {};
 
  cob-actions = self.callPackage ./cob-actions {};
@@ -1032,6 +1030,14 @@ self: super: {
 
  gscam = self.callPackage ./gscam {};
 
+ gundam-robot = self.callPackage ./gundam-robot {};
+
+ gundam-rx78-control = self.callPackage ./gundam-rx78-control {};
+
+ gundam-rx78-description = self.callPackage ./gundam-rx78-description {};
+
+ gundam-rx78-gazebo = self.callPackage ./gundam-rx78-gazebo {};
+
  h264-encoder-core = self.callPackage ./h264-encoder-core {};
 
  h264-video-encoder = self.callPackage ./h264-video-encoder {};
@@ -1234,6 +1240,8 @@ self: super: {
 
  jackal-viz = self.callPackage ./jackal-viz {};
 
+ jderobot-assets = self.callPackage ./jderobot-assets {};
+
  joint-limits-interface = self.callPackage ./joint-limits-interface {};
 
  joint-state-controller = self.callPackage ./joint-state-controller {};
@@ -1349,6 +1357,14 @@ self: super: {
  kobuki-msgs = self.callPackage ./kobuki-msgs {};
 
  ksql-airport = self.callPackage ./ksql-airport {};
+
+ kvh-geo-fog-3d = self.callPackage ./kvh-geo-fog-3d {};
+
+ kvh-geo-fog-3d-driver = self.callPackage ./kvh-geo-fog-3d-driver {};
+
+ kvh-geo-fog-3d-msgs = self.callPackage ./kvh-geo-fog-3d-msgs {};
+
+ kvh-geo-fog-3d-rviz = self.callPackage ./kvh-geo-fog-3d-rviz {};
 
  laptop-battery-monitor = self.callPackage ./laptop-battery-monitor {};
 

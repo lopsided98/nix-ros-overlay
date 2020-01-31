@@ -2,21 +2,22 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-mobileye-560-660-msgs";
-  version = "3.0.0-r2";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/dashing/mobileye_560_660_msgs/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "a79ff1bbbaa2429bf8d7745ee55aa0c42410fdaf31a3d05a37afd6d94be536ac";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/dashing/mobileye_560_660_msgs/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "5425246ee90b523b6ba6435851b0222aed375d50bf75eec47e0ac2a48de36ce9";
   };
 
-  buildType = "ament_cmake";
-  checkInputs = [ ament-lint-common ];
+  buildType = "catkin";
+  buildInputs = [ ros-environment rosidl-default-generators ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ builtin-interfaces rosidl-default-runtime std-msgs ];
-  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''Message definitions for the Mobileye 560/660'';
