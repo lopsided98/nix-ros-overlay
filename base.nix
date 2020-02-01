@@ -43,6 +43,8 @@ in {
     colcon-ros
   ];
 
+  geographiclib = self.callPackage ./geographiclib { };
+
   openni2 = self.callPackage ./openni2 { };
 
   opensplice = self.opensplice_6_9;
