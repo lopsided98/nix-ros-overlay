@@ -82,16 +82,19 @@ let
 
     fake-localization = patchBoostSignals rosSuper.fake-localization;
 
-    fmilibrary-vendor = patchVendorUrl rosSuper.fmilibrary-vendor {
-      url = "https://jmodelica.org/fmil/FMILibrary-2.0.3-src.zip";
-      sha256 = "16lx6355zskrb7wgw2bzdzms36pcjyl2ry03wgsac5215jg1zhjc";
+    fmilibrary-vendor = patchVendorGit rosSuper.fmilibrary-vendor {
+      url = "https://github.com/modelon-community/fmi-library.git";
+      fetchgitArgs = {
+        rev = "2.1";
+        sha256 = "177rlw1ba1y0ahi8qfpg0sflh8mjdl6fmffwjg2a5vxyxwdwrjvh";
+      };
     };
 
     # This build system contains fractal levels of stupidity
     foonathan-memory-vendor = patchVendorGit rosSuper.foonathan-memory-vendor {
       url = "https://github.com/foonathan/memory.git";
-      sha256 = "1n7xxi61wzpixb3kldnl826syb4yml613q4i38d0cciydhy1gwzl";
       fetchgitArgs = {
+        sha256 = "1n7xxi61wzpixb3kldnl826syb4yml613q4i38d0cciydhy1gwzl";
         # Needed by the postFetch, then removed there
         leaveDotGit = true;
         # Prevent the build system from trying to download random files

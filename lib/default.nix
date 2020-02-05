@@ -17,7 +17,7 @@ with lib;
   });
 
   patchVendorGit = pkg: {
-    url, sha256,
+    url,
     file ? "CMakeLists.txt",
     fetchgitArgs ? {}
   }: pkg.overrideAttrs ({
@@ -25,7 +25,7 @@ with lib;
   }: {
     postPatch = ''
       sed -i '\|GIT_REPOSITORY\s.*${escapeShellArg url}|c\
-        URL "${self.fetchgit ({ inherit url sha256; } // fetchgitArgs)}"' \
+        URL "${self.fetchgit ({ inherit url; } // fetchgitArgs)}"' \
         '${file}'
     '' + postPatch;
   });
