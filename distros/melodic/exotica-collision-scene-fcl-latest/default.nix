@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, fcl-catkin, geometric-shapes }:
 buildRosPackage {
   pname = "ros-melodic-exotica-collision-scene-fcl-latest";
-  version = "5.0.0";
+  version = "5.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_collision_scene_fcl_latest/5.0.0-0.tar.gz";
-    name = "5.0.0-0.tar.gz";
-    sha256 = "3272a80421da42c672c81733bc649c88783104d945c886f589acf5fd90d97294";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_collision_scene_fcl_latest/5.1.0-1.tar.gz";
+    name = "5.1.0-1.tar.gz";
+    sha256 = "b78f6882b598153128b9a3eeb8c26359a3e136b0412bb9f169c37b72be044d60";
   };
 
   buildType = "catkin";

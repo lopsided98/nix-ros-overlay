@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ainstein-radar-msgs";
-  version = "2.0.2-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_msgs/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "0b7dcd915b866597f9457ac0f1e15188bcb4309b7043f932378d041830f261d5";
+    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_msgs/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "4f1489ed65070103851d5ea569cffee0d73fbd8156090bea184478d18ae4c432";
   };
 
   buildType = "catkin";

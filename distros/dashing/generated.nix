@@ -196,6 +196,12 @@ self: super: {
 
  control-msgs = self.callPackage ./control-msgs {};
 
+ controller-interface = self.callPackage ./controller-interface {};
+
+ controller-manager = self.callPackage ./controller-manager {};
+
+ controller-parameter-server = self.callPackage ./controller-parameter-server {};
+
  costmap-converter = self.callPackage ./costmap-converter {};
 
  costmap-converter-msgs = self.callPackage ./costmap-converter-msgs {};
@@ -421,6 +427,8 @@ self: super: {
  h264-encoder-core = self.callPackage ./h264-encoder-core {};
 
  h264-video-encoder = self.callPackage ./h264-video-encoder {};
+
+ hardware-interface = self.callPackage ./hardware-interface {};
 
  health-metric-collector = self.callPackage ./health-metric-collector {};
 
@@ -750,6 +758,8 @@ self: super: {
 
  ros1-rosbag-storage-vendor = self.callPackage ./ros1-rosbag-storage-vendor {};
 
+ ros2-control = self.callPackage ./ros2-control {};
+
  ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2action = self.callPackage ./ros2action {};
@@ -789,6 +799,8 @@ self: super: {
  ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
 
  ros-base = self.callPackage ./ros-base {};
+
+ ros-controllers = self.callPackage ./ros-controllers {};
 
  ros-core = self.callPackage ./ros-core {};
 
@@ -944,6 +956,8 @@ self: super: {
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
+ slide-show = self.callPackage ./slide-show {};
+
  sophus = self.callPackage ./sophus {};
 
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
@@ -1001,6 +1015,8 @@ self: super: {
  test-msgs = self.callPackage ./test-msgs {};
 
  test-osrf-testing-tools-cpp = self.callPackage ./test-osrf-testing-tools-cpp {};
+
+ test-robot-hardware = self.callPackage ./test-robot-hardware {};
 
  tf2 = self.callPackage ./tf2 {};
 

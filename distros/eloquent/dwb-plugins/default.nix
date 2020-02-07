@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, dwb-core, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-util, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-dwb-plugins";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/dwb_plugins/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "7aec81b8693b2d58fa5c9575385e9bca82a9d167b15434ad0a65ea5271335797";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/dwb_plugins/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "175b75223d4f83bd4bee608d287cd1b7806e0ad2cf57235c8801ea900d430e9b";
   };
 
   buildType = "ament_cmake";

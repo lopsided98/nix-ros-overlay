@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, behaviortree-cpp-v3, geometry-msgs, nav-msgs, nav2-behavior-tree, nav2-common, nav2-msgs, nav2-util, rclcpp, rclcpp-action, rclcpp-lifecycle, std-msgs, std-srvs, tf2-ros }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-bt-navigator";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_bt_navigator/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "03afcebbe873e09052ce8c03865a975133eb50e3e30c72cbd8761eebfd52e81d";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_bt_navigator/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "6e74ca9884e2cee9695a701bc8582828ae0f6c60b8974eedfe8d8622dd1d6afc";
   };
 
   buildType = "ament_cmake";

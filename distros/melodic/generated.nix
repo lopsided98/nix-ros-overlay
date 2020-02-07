@@ -776,19 +776,41 @@ self: super: {
 
  exotica-aico-solver = self.callPackage ./exotica-aico-solver {};
 
+ exotica-cartpole-dynamics-solver = self.callPackage ./exotica-cartpole-dynamics-solver {};
+
  exotica-collision-scene-fcl-latest = self.callPackage ./exotica-collision-scene-fcl-latest {};
 
  exotica-core = self.callPackage ./exotica-core {};
 
  exotica-core-task-maps = self.callPackage ./exotica-core-task-maps {};
 
+ exotica-ddp-solver = self.callPackage ./exotica-ddp-solver {};
+
+ exotica-double-integrator-dynamics-solver = self.callPackage ./exotica-double-integrator-dynamics-solver {};
+
+ exotica-dynamics-solvers = self.callPackage ./exotica-dynamics-solvers {};
+
  exotica-examples = self.callPackage ./exotica-examples {};
 
  exotica-ik-solver = self.callPackage ./exotica-ik-solver {};
 
+ exotica-ilqg-solver = self.callPackage ./exotica-ilqg-solver {};
+
+ exotica-ilqr-solver = self.callPackage ./exotica-ilqr-solver {};
+
  exotica-levenberg-marquardt-solver = self.callPackage ./exotica-levenberg-marquardt-solver {};
 
+ exotica-ompl-control-solver = self.callPackage ./exotica-ompl-control-solver {};
+
  exotica-ompl-solver = self.callPackage ./exotica-ompl-solver {};
+
+ exotica-pendulum-dynamics-solver = self.callPackage ./exotica-pendulum-dynamics-solver {};
+
+ exotica-pinocchio-dynamics-solver = self.callPackage ./exotica-pinocchio-dynamics-solver {};
+
+ exotica-quadrotor-dynamics-solver = self.callPackage ./exotica-quadrotor-dynamics-solver {};
+
+ exotica-scipy-solver = self.callPackage ./exotica-scipy-solver {};
 
  exotica-time-indexed-rrt-connect-solver = self.callPackage ./exotica-time-indexed-rrt-connect-solver {};
 

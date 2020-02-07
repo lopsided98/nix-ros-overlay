@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, qt-dotgraph, rclpy, rqt-graph, rqt-gui, rqt-gui-py, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-eloquent-rqt-tf-tree";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_tf_tree-release/archive/release/eloquent/rqt_tf_tree/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "cca82385b50c00b8ea77549e413b507889f87bacba33fd77ac8e85f821da87c4";
+    url = "https://github.com/ros2-gbp/rqt_tf_tree-release/archive/release/eloquent/rqt_tf_tree/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "fa73a2983b7fd72d3db406030be982ac91dbbfea86880ef7997858b9a1b79e48";
   };
 
   buildType = "ament_python";

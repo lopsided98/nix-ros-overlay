@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-cartographer-ros-msgs";
-  version = "1.0.9000-r1";
+  version = "1.0.9001-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/eloquent/cartographer_ros_msgs/1.0.9000-1.tar.gz";
-    name = "1.0.9000-1.tar.gz";
-    sha256 = "56c121a252d5ca068edfc8cfd9ac8599f178c07399414f951970484cdb7d11fd";
+    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/eloquent/cartographer_ros_msgs/1.0.9001-1.tar.gz";
+    name = "1.0.9001-1.tar.gz";
+    sha256 = "ff8c2cc070244499224f06ef178087fc8b2d02221218544fe895ad9f6cab274b";
   };
 
   buildType = "ament_cmake";

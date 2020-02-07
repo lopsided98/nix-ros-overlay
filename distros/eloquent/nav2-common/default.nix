@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-python, launch, launch-ros, osrf-pycommon, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-common";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_common/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "ada9db384d35d0c86a376834bca29c7ec7d3ca1216a5ddd6c90951e6c4f99f98";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_common/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "76549f364d7260fcdc72cc2c1d65832db2a1e02320e429276a48325ad50286b0";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-aico-solver, exotica-collision-scene-fcl, exotica-collision-scene-fcl-latest, exotica-core, exotica-core-task-maps, exotica-ik-solver, exotica-levenberg-marquardt-solver, exotica-ompl-solver, exotica-python, exotica-time-indexed-rrt-connect-solver }:
 buildRosPackage {
   pname = "ros-melodic-exotica";
-  version = "5.0.0";
+  version = "5.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica/5.0.0-0.tar.gz";
-    name = "5.0.0-0.tar.gz";
-    sha256 = "c765e57dd0796114cc5b4bdaaeb8f8f55dd9311bbcc7320273be1fc4d6dc0d52";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica/5.1.0-1.tar.gz";
+    name = "5.1.0-1.tar.gz";
+    sha256 = "e921c0149d23d8f74fa0f68dec4086bd7afed803e6b0481df84edbc2cf28d92d";
   };
 
   buildType = "catkin";

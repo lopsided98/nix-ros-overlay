@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core }:
 buildRosPackage {
   pname = "ros-melodic-exotica-aico-solver";
-  version = "5.0.0";
+  version = "5.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_aico_solver/5.0.0-0.tar.gz";
-    name = "5.0.0-0.tar.gz";
-    sha256 = "9c25ea0be3ab138229ba6c7dd74b518c2b317a642168a6f277e46092b9eeae35";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_aico_solver/5.1.0-1.tar.gz";
+    name = "5.1.0-1.tar.gz";
+    sha256 = "fd9d5e9f071ac3cb9c545b59a1409c53cfc2b92e0844cd2c847fdb1d05c6732a";
   };
 
   buildType = "catkin";

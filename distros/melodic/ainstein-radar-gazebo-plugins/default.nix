@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ainstein-radar-msgs, catkin, gazebo-plugins, gazebo-ros, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-ainstein-radar-gazebo-plugins";
-  version = "2.0.2-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_gazebo_plugins/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "a9b7e22b72584d76cf0e62c37ea5f3723f3e36faaf81151d27ddc38e7b4b64a8";
+    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_gazebo_plugins/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "dd2a4a646e14ce84ea9b08f7d52e3807b514079b555e8ad2704eb83d9926bb13";
   };
 
   buildType = "catkin";
