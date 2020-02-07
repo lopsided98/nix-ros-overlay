@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, neonavigation-common, roscpp, roslint, rostest, rosunit, sensor-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-joystick-interrupt";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/joystick_interrupt/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "e261a0b3130a08fd316a996741ce1351c5b07234360fd0ddc1c79356caa19368";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/joystick_interrupt/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "25759be926372c6ce8fa63c6aff229f5e0b1e11cc170feb8184261f88a982f98";
   };
 
   buildType = "catkin";

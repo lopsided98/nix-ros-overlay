@@ -840,6 +840,8 @@ self: super: {
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
+ slide-show = self.callPackage ./slide-show {};
+
  sophus = self.callPackage ./sophus {};
 
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
@@ -931,6 +933,8 @@ self: super: {
  v4l2-camera = self.callPackage ./v4l2-camera {};
 
  velocity-smoother = self.callPackage ./velocity-smoother {};
+
+ vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

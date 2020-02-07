@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-voxel-grid";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_voxel_grid/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "d46ef75f83c7e90ccbcd161d4fd4f704db0c89586975d7f8e1292c88baa74d58";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_voxel_grid/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "6d5fb02916a63c84c1f786eb009899c7066428d8e2df9e73d82d91874d828002";
   };
 
   buildType = "ament_cmake";

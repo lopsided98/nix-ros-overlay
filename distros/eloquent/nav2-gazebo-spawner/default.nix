@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-lint-auto, ament-lint-common, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-gazebo-spawner";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_gazebo_spawner/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "c292e241c735a3520ee9038c2ca97748c37d78504007bb149e1b03f19bdaf303";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_gazebo_spawner/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "e405c02184ca08edcce6e3d672312c6b572f8467ede0ee9bb5233ca3304d2fa1";
   };
 
   buildType = "ament_python";

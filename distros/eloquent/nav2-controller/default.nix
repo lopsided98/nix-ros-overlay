@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-core, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-controller";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_controller/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "3975a459858b09f901e507e4079151272e7a5314b829dd4b53260bfcf5bb39cc";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_controller/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "3644735a1a92ac4793a2b18e9f9b9b93c6547965cc5f5d84d5641915ec1d71ab";
   };
 
   buildType = "ament_cmake";

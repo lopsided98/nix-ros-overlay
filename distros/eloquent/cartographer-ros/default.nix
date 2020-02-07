@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cartographer, cartographer-ros-msgs, eigen, libyamlcpp, lua5, nav-msgs, pcl, pcl-conversions, rclcpp, sensor-msgs, tf2, tf2-eigen, tf2-msgs, tf2-ros, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-cartographer-ros";
-  version = "1.0.9000-r1";
+  version = "1.0.9001-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/eloquent/cartographer_ros/1.0.9000-1.tar.gz";
-    name = "1.0.9000-1.tar.gz";
-    sha256 = "ea1fe9fe0f851c817759dbc306e953af0f4cdf4488444b5a7ebdb67299a8cd3c";
+    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/eloquent/cartographer_ros/1.0.9001-1.tar.gz";
+    name = "1.0.9001-1.tar.gz";
+    sha256 = "d4f1f7e844aef28e6fb2e31ec554d305913d20f2da1c5e741fd1de8e52cf3b8c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-safety-limiter-msgs";
-  version = "0.5.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/safety_limiter_msgs/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "ce604a0c0ea91871e7e2a7949b792e751fadde6e2570ab4091eb5c63806e9703";
+    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/safety_limiter_msgs/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "407f671b4c31ccc36c54b5957ad6069ffbb385bf0e4a6284f6bd87ec69cd875c";
   };
 
   buildType = "catkin";

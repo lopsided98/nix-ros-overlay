@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake }:
 buildRosPackage {
   pname = "ros-kinetic-rcdiscover";
-  version = "1.0.0-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rcdiscover-release/archive/release/kinetic/rcdiscover/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "b2209e39f2944eadd36d0aece80cbc376c8073b2f6cf8431464291c12bd280b6";
+    url = "https://github.com/roboception-gbp/rcdiscover-release/archive/release/kinetic/rcdiscover/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "749bb27b2f58cf8a281b590ec23df315090f46fc98764ad2c765bf3b1196b0fa";
   };
 
   buildType = "cmake";

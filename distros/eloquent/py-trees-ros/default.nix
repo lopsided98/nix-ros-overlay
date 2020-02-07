@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, py-trees, py-trees-ros-interfaces, python3Packages, pythonPackages, rcl-interfaces, rclpy, ros2topic, sensor-msgs, std-msgs, tf2-ros, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-py-trees-ros";
-  version = "2.0.4-r1";
+  version = "2.0.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/stonier/py_trees_ros-release/archive/release/eloquent/py_trees_ros/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "2986733a2084bbfcf595eae3c968cdf8ba11d085f05d81a808c8e623aaa88b85";
+    url = "https://github.com/stonier/py_trees_ros-release/archive/release/eloquent/py_trees_ros/2.0.6-2.tar.gz";
+    name = "2.0.6-2.tar.gz";
+    sha256 = "1205e3a498238974e4466607ec477026afcc713deae6a90679e6a1c3e5a441db";
   };
 
   buildType = "ament_python";

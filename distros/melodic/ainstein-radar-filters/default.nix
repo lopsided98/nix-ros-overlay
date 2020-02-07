@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ainstein-radar-msgs, catkin, jsk-recognition-msgs, nodelet, pcl-ros, roscpp, tf2-eigen }:
 buildRosPackage {
   pname = "ros-melodic-ainstein-radar-filters";
-  version = "2.0.2-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_filters/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "6924545d6ca9563ea3035d935a4614287718e1989ff412f1f09656e30e18abbd";
+    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_filters/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "53a831c1b7e0b011a093bbafb87d18e42a4fddeb0bc5986edb3596dcd508de97";
   };
 
   buildType = "catkin";
