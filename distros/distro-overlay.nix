@@ -146,13 +146,8 @@ let
     });
 
     mavlink = rosSuper.mavlink.overrideAttrs ({
-      patches ? [], postPatch ? "", ...
+      postPatch ? "", ...
     }: {
-      patches = patches ++ [ (self.fetchpatch {
-        url = "https://github.com/mavlink/mavlink-gbp-release/commit/026cc233ede704a9ef6a662df09f567325994e4e.patch";
-        sha256 = "1570pspscpi94fx4slx6vgyzy51q0jdndr7g8gl381zirb2i1zmj";
-        stripLen = 1;
-      }) ];
       postPatch = postPatch + ''
         substituteInPlace CMakeLists.txt --replace /usr/bin/env '${self.coreutils}/bin/env'
         patchShebangs pymavlink/tools/mavgen.py
