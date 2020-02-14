@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ainstein-radar-drivers, ainstein-radar-filters, ainstein-radar-gazebo-plugins, ainstein-radar-msgs, ainstein-radar-rviz-plugins, ainstein-radar-tools, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-ainstein-radar";
-  version = "2.0.2-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/kinetic/ainstein_radar/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "e58ad4a1f7a07b24d62a33d9d64e5d8c229ac86bdd8b1b769e0b847544ecab3d";
+    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/kinetic/ainstein_radar/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "071300d08b705ac987d189ec37d2298667d90fa009482b6a63ecfd0b7841eb5a";
   };
 
   buildType = "catkin";

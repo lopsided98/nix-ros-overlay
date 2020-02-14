@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosconsole, roscpp, roslib, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-swarmros";
-  version = "0.3.1-r2";
+  version = "0.3.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/amilankovich-slab/swarmros-release/archive/release/kinetic/swarmros/0.3.1-2.tar.gz";
-    name = "0.3.1-2.tar.gz";
-    sha256 = "a1e94dfe9d1f24d4e0e69dbb3707ff9294d1f522ba0e50c71a13ba60f91e538c";
+    url = "https://github.com/amilankovich-slab/swarmros-release/archive/release/kinetic/swarmros/0.3.1-4.tar.gz";
+    name = "0.3.1-4.tar.gz";
+    sha256 = "31cac1fff0c41da3450230da45bbc752d537e0b4917991e1a46ff9def1453ae9";
   };
 
   buildType = "catkin";

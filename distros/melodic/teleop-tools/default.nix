@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joy-teleop, key-teleop, teleop-tools-msgs }:
 buildRosPackage {
   pname = "ros-melodic-teleop-tools";
-  version = "0.3.0";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/melodic/teleop_tools/0.3.0-0.tar.gz";
-    name = "0.3.0-0.tar.gz";
-    sha256 = "13fa3947b654ea8548445a755c14e39bd83c9aa2e5df261d75febda38d013594";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/melodic/teleop_tools/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "d45ea282f8d899d5213a3f616d5c09e37779e81bc5f8b5a9a2fa53896a039ff8";
   };
 
   buildType = "catkin";

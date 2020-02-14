@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, exotica-python }:
 buildRosPackage {
   pname = "ros-melodic-exotica-ddp-solver";
-  version = "5.1.0-r1";
+  version = "5.1.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_ddp_solver/5.1.0-1.tar.gz";
-    name = "5.1.0-1.tar.gz";
-    sha256 = "e1f666bb01595a4c0cc01ea7c10d184361d00c44b22e443d2141a902597514c1";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_ddp_solver/5.1.3-3.tar.gz";
+    name = "5.1.3-3.tar.gz";
+    sha256 = "1fcf2a9fb9871aaf86e29a4cf1ba2981a780d3ba9cdb6cb1406f29e12ead952a";
   };
 
   buildType = "catkin";

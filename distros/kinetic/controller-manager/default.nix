@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager-msgs, hardware-interface, pluginlib, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-controller-manager";
-  version = "0.13.4-r1";
+  version = "0.13.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/controller_manager/0.13.4-1.tar.gz";
-    name = "0.13.4-1.tar.gz";
-    sha256 = "e2e4d37d8f4b682b825caca7fe740e8991e9a7d1db3d2103235ab04f19946d75";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/controller_manager/0.13.5-1.tar.gz";
+    name = "0.13.5-1.tar.gz";
+    sha256 = "50fe6cfc05ab3de17340660ead08a660343e33e75fef8433e1d0acd387af1df9";
   };
 
   buildType = "catkin";

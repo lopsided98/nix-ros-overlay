@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen-conversions, exotica-core, exotica-python, geometry-msgs, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-exotica-core-task-maps";
-  version = "5.1.0-r1";
+  version = "5.1.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_core_task_maps/5.1.0-1.tar.gz";
-    name = "5.1.0-1.tar.gz";
-    sha256 = "69ad78f397ed4ca35cf13e7b06e5672e4dc537a4325c4313953fa2b36ca42180";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_core_task_maps/5.1.3-3.tar.gz";
+    name = "5.1.3-3.tar.gz";
+    sha256 = "cb9230100c4a7a2f0ccb68b713bc5cecf570beb887025b18943353fac54515db";
   };
 
   buildType = "catkin";

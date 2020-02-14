@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-exotica-double-integrator-dynamics-solver";
-  version = "5.1.0-r1";
+  version = "5.1.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_double_integrator_dynamics_solver/5.1.0-1.tar.gz";
-    name = "5.1.0-1.tar.gz";
-    sha256 = "5e363275f4f6d3416e8c3f70120f2ab929b1e93d1111dd20326f6377ce940f24";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_double_integrator_dynamics_solver/5.1.3-3.tar.gz";
+    name = "5.1.3-3.tar.gz";
+    sha256 = "78ca9fe0345fbb35ebd6a2d5579c9c8ab518d58d2f92ba0ee4d779c887f30f01";
   };
 
   buildType = "catkin";

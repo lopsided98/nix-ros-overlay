@@ -752,6 +752,8 @@ self: super: {
 
  rmw-opensplice-cpp = self.callPackage ./rmw-opensplice-cpp {};
 
+ robot-localization = self.callPackage ./robot-localization {};
+
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
  ros1-bridge = self.callPackage ./ros1-bridge {};

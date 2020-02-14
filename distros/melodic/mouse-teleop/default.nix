@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, rospy }:
 buildRosPackage {
   pname = "ros-melodic-mouse-teleop";
-  version = "0.3.0";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/melodic/mouse_teleop/0.3.0-0.tar.gz";
-    name = "0.3.0-0.tar.gz";
-    sha256 = "ccf8af493ba91d2a7dee432444454286025cc9bafb30105a1e5ec46ab744cb05";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/melodic/mouse_teleop/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "c87ffb687d83e3ac8b63d82ec3ff641b77b085e2f6379d2bc0a01c7cd8607e20";
   };
 
   buildType = "catkin";

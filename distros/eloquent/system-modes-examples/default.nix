@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, rclcpp-lifecycle, system-modes }:
 buildRosPackage {
   pname = "ros-eloquent-system-modes-examples";
-  version = "0.1.5-r1";
+  version = "0.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/eloquent/system_modes_examples/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "a5b8ba166e181e91f6c9a6dc869e13c847449864960baa872998ceb5ab78aa78";
+    url = "https://github.com/microROS/system_modes-release/archive/release/eloquent/system_modes_examples/0.2.0-2.tar.gz";
+    name = "0.2.0-2.tar.gz";
+    sha256 = "ea38bacfa97d0c748694d4e341e01e95598d86c415110a91617580a24bf8c4a9";
   };
 
   buildType = "ament_cmake";
