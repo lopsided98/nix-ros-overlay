@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-teleop-tools-msgs";
-  version = "1.0.1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/teleop_tools_msgs/1.0.1-0.tar.gz";
-    name = "1.0.1-0.tar.gz";
-    sha256 = "525574e5ad6dc449341d69a948dc2006ec2e42a0a87780ba98f832962adefbf9";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/teleop_tools_msgs/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "6a16f3d22cd21a42dfe0c8261d0a6b192aa7471e418f973df28b4a22723f0248";
   };
 
   buildType = "ament_cmake";

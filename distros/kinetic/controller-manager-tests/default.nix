@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, rosbash, rosnode, rosservice, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-controller-manager-tests";
-  version = "0.13.4-r1";
+  version = "0.13.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/controller_manager_tests/0.13.4-1.tar.gz";
-    name = "0.13.4-1.tar.gz";
-    sha256 = "98db7d491de2f2ffa7d08866f6c276920ff5ce7ed6da6412b46267e24230c60a";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/kinetic/controller_manager_tests/0.13.5-1.tar.gz";
+    name = "0.13.5-1.tar.gz";
+    sha256 = "15b9230f00066024310438a7438ada24ecc30dd952323f5ea4f43d31ea3c494b";
   };
 
   buildType = "catkin";

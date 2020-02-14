@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ainstein-radar-msgs, can-msgs, catkin, nodelet, pcl-ros, roscpp, socketcan-bridge }:
 buildRosPackage {
   pname = "ros-melodic-ainstein-radar-drivers";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_drivers/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "5dfb5737907fd231491d05a5c871243e3869cde93146a2d28c5185eaef5d2cb9";
+    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_drivers/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "50ab65173d2825aebc4cd3f988ec172e811aafef86c6fdb813c58d66873e2622";
   };
 
   buildType = "catkin";

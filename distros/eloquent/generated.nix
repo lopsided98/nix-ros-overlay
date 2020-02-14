@@ -572,6 +572,8 @@ self: super: {
 
  poco-vendor = self.callPackage ./poco-vendor {};
 
+ pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
+
  px4-msgs = self.callPackage ./px4-msgs {};
 
  py-trees-ros = self.callPackage ./py-trees-ros {};

@@ -3664,6 +3664,8 @@ self: super: {
 
  ros-core = self.callPackage ./ros-core {};
 
+ ros-cvb-camera-driver = self.callPackage ./ros-cvb-camera-driver {};
+
  ros-emacs-utils = self.callPackage ./ros-emacs-utils {};
 
  ros-environment = self.callPackage ./ros-environment {};
@@ -4357,6 +4359,8 @@ self: super: {
  summit-xl-sim = self.callPackage ./summit-xl-sim {};
 
  summit-xl-sim-bringup = self.callPackage ./summit-xl-sim-bringup {};
+
+ swarmros = self.callPackage ./swarmros {};
 
  swri-console = self.callPackage ./swri-console {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ainstein-radar-msgs, catkin, pcl, qt5, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-ainstein-radar-rviz-plugins";
-  version = "2.0.2-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/kinetic/ainstein_radar_rviz_plugins/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "cb85b1326a0ea194aeb4ccf005c010becb1774ad64dfd035a766abf953e649bb";
+    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/kinetic/ainstein_radar_rviz_plugins/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "93d55af3cc6dddb8778692cc4c5cb9171da6344c64f8788b50db3bef7aa1ba61";
   };
 
   buildType = "catkin";

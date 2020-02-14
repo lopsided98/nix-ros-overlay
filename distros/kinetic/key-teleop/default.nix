@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-key-teleop";
-  version = "0.3.0";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/kinetic/key_teleop/0.3.0-0.tar.gz";
-    name = "0.3.0-0.tar.gz";
-    sha256 = "eca757cd4e4ed2427b8c8b00b1827eec8fdfdfe01f5d9b05c82aeb8e2e7f21db";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/kinetic/key_teleop/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "86db7fa7f0390f4eef0baf57a011e55860aac0dbe8159e45b6df45be1861c530";
   };
 
   buildType = "catkin";

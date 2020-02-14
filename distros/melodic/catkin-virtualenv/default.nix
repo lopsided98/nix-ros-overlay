@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3, python3Packages, pythonPackages, rosbash, roslint }:
 buildRosPackage {
   pname = "ros-melodic-catkin-virtualenv";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/locusrobotics/catkin_virtualenv-release/archive/release/melodic/catkin_virtualenv/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "af870d6acef78e77b5703742a94ac73334e81a0ef916b5a41d2e0c9fba263d7c";
+    url = "https://github.com/locusrobotics/catkin_virtualenv-release/archive/release/melodic/catkin_virtualenv/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "a2deb0b6f5fa198765c367ae19f3caf5503a0a4710642adbc7e04e0d5a768f2d";
   };
 
   buildType = "catkin";

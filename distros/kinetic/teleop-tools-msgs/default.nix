@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, control-msgs, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-teleop-tools-msgs";
-  version = "0.3.0";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/kinetic/teleop_tools_msgs/0.3.0-0.tar.gz";
-    name = "0.3.0-0.tar.gz";
-    sha256 = "3ef2838d7479e42fc83ac6737bc0df2fd33809dc3c4f87fc8022c1b7545bcbb1";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/kinetic/teleop_tools_msgs/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "bff68979e77c5765181dc380bd501b32bc91fb2e98c5bc236278f8cf604ca8e1";
   };
 
   buildType = "catkin";

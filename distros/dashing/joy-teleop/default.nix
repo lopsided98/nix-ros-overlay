@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, control-msgs, rclpy, sensor-msgs, teleop-tools-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-dashing-joy-teleop";
-  version = "1.0.1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/joy_teleop/1.0.1-0.tar.gz";
-    name = "1.0.1-0.tar.gz";
-    sha256 = "e6a6750721cacab7e348bc219676b6007b1abba1cdbbd6181bb185284b3bea5a";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/joy_teleop/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "ae20e98e28091af8ad97150e4b84f1626195f0b30ef97ada9244294be390d5e6";
   };
 
   buildType = "ament_python";

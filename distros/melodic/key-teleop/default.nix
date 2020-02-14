@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, rospy }:
 buildRosPackage {
   pname = "ros-melodic-key-teleop";
-  version = "0.3.0";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/melodic/key_teleop/0.3.0-0.tar.gz";
-    name = "0.3.0-0.tar.gz";
-    sha256 = "06f164a11e5deeab452048a9d404d302ac6b82f351df562da48abaf604019286";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/melodic/key_teleop/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "798313243d19edcf979363cd0a1d3e28d4a4a93393ece7c5148924021adb067e";
   };
 
   buildType = "catkin";

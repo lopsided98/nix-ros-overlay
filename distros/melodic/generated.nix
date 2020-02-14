@@ -1242,6 +1242,8 @@ self: super: {
 
  ipr-extern = self.callPackage ./ipr-extern {};
 
+ ira-laser-tools = self.callPackage ./ira-laser-tools {};
+
  ivcon = self.callPackage ./ivcon {};
 
  jackal-control = self.callPackage ./jackal-control {};
@@ -1609,6 +1611,8 @@ self: super: {
  microstrain-3dmgx2-imu = self.callPackage ./microstrain-3dmgx2-imu {};
 
  microstrain-mips = self.callPackage ./microstrain-mips {};
+
+ mikrotik-swos-tools = self.callPackage ./mikrotik-swos-tools {};
 
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
@@ -2001,6 +2005,8 @@ self: super: {
  p2os-teleop = self.callPackage ./p2os-teleop {};
 
  p2os-urdf = self.callPackage ./p2os-urdf {};
+
+ pacmod = self.callPackage ./pacmod {};
 
  pacmod3 = self.callPackage ./pacmod3 {};
 
@@ -2731,6 +2737,8 @@ self: super: {
  rqt-ez-publisher = self.callPackage ./rqt-ez-publisher {};
 
  rqt-graph = self.callPackage ./rqt-graph {};
+
+ rqt-ground-robot-teleop = self.callPackage ./rqt-ground-robot-teleop {};
 
  rqt-gui = self.callPackage ./rqt-gui {};
 

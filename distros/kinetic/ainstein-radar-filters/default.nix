@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ainstein-radar-msgs, catkin, jsk-recognition-msgs, nodelet, pcl-ros, roscpp, tf2-eigen }:
+{ lib, buildRosPackage, fetchurl, ainstein-radar-msgs, catkin, jsk-recognition-msgs, nodelet, pcl-ros, roscpp, tf2-eigen, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ainstein-radar-filters";
-  version = "2.0.2-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/kinetic/ainstein_radar_filters/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "779da5a6c95af8b75eba3d941d2649f70af4742fe371759153d2a2de888228f2";
+    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/kinetic/ainstein_radar_filters/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "681d99f0bbe1decc0aa2bc0170c45b866fd194365c8a4e795e802ca18547523b";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ ainstein-radar-msgs jsk-recognition-msgs nodelet pcl-ros roscpp tf2-eigen ];
+  propagatedBuildInputs = [ ainstein-radar-msgs jsk-recognition-msgs nodelet pcl-ros roscpp tf2-eigen tf2-sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
