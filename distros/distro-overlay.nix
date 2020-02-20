@@ -134,6 +134,17 @@ let
       sha256 = "0lpaskqxpklm05050wwvdqwhw30f2hpzss8sgyvczdpvvqzjg4vk";
     };
 
+    librealsense = rosSuper.librealsense.overrideAttrs ({
+      patches ? [], ...
+    }: {
+      patches = patches ++ [
+        (self.fetchpatch {
+          url = "https://github.com/IntelRealSense/librealsense/commit/86e434c86096b91a722f22bd039c2b6eeb8174ab.patch";
+          sha256 = "1kcvm32cx9zzd56k9yglnyxizmfgar3a6cybjdwpyf6ljrxjlpp5";
+        })
+      ];
+    });
+
     libyaml-vendor = patchVendorUrl rosSuper.libyaml-vendor {
       url = "https://github.com/yaml/libyaml/archive/10c907871f1ccd779c7fccf6b81a62762b5c4e7b.zip";
       sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
