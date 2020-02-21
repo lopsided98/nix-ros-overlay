@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, libGL, libGLU, libjpeg, libpng, mk, postgresql, xorg }:
 buildRosPackage {
   pname = "ros-kinetic-euslisp";
-  version = "9.26.0-r1";
+  version = "9.27.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/euslisp-release/archive/release/kinetic/euslisp/9.26.0-1.tar.gz";
-    name = "9.26.0-1.tar.gz";
-    sha256 = "9344f724cc7072808a06697ae1401ce338e37153e9bc41c29508f39a9ae90f90";
+    url = "https://github.com/tork-a/euslisp-release/archive/release/kinetic/euslisp/9.27.0-1.tar.gz";
+    name = "9.27.0-1.tar.gz";
+    sha256 = "010d088f47b03f875d773a61304bbe0da401a3ddacea2adec37359970795a660";
   };
 
   buildType = "cmake";

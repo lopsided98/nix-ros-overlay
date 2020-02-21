@@ -544,8 +544,6 @@ self: super: {
 
  dbw-mkz-msgs = self.callPackage ./dbw-mkz-msgs {};
 
- dbw-mkz-twist-controller = self.callPackage ./dbw-mkz-twist-controller {};
-
  dccomms-ros = self.callPackage ./dccomms-ros {};
 
  dccomms-ros-msgs = self.callPackage ./dccomms-ros-msgs {};
@@ -661,6 +659,8 @@ self: super: {
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
  easy-markers = self.callPackage ./easy-markers {};
+
+ eband-local-planner = self.callPackage ./eband-local-planner {};
 
  eca-a9-control = self.callPackage ./eca-a9-control {};
 
@@ -1265,6 +1265,8 @@ self: super: {
  jackal-viz = self.callPackage ./jackal-viz {};
 
  jderobot-assets = self.callPackage ./jderobot-assets {};
+
+ jderobot-drones = self.callPackage ./jderobot-drones {};
 
  joint-limits-interface = self.callPackage ./joint-limits-interface {};
 
@@ -3229,6 +3231,8 @@ self: super: {
  ublox-msgs = self.callPackage ./ublox-msgs {};
 
  ublox-serialization = self.callPackage ./ublox-serialization {};
+
+ ubnt-airos-tools = self.callPackage ./ubnt-airos-tools {};
 
  um6 = self.callPackage ./um6 {};
 

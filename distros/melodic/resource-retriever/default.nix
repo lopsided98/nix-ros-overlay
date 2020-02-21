@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, curl, pythonPackages, rosconsole, roslib }:
 buildRosPackage {
   pname = "ros-melodic-resource-retriever";
-  version = "1.12.5-r1";
+  version = "1.12.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/resource_retriever-release/archive/release/melodic/resource_retriever/1.12.5-1.tar.gz";
-    name = "1.12.5-1.tar.gz";
-    sha256 = "4a1ac42150b348eed92838078929e4ac8ea5123c9d16c39e88412a3724640cce";
+    url = "https://github.com/ros-gbp/resource_retriever-release/archive/release/melodic/resource_retriever/1.12.6-1.tar.gz";
+    name = "1.12.6-1.tar.gz";
+    sha256 = "083fd42894f66c1d08379c5ed963d6cf008c326709bfb70f21690560df17fc67";
   };
 
   buildType = "catkin";

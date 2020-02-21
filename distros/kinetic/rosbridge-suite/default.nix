@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosapi, rosbridge-library, rosbridge-server }:
 buildRosPackage {
   pname = "ros-kinetic-rosbridge-suite";
-  version = "0.11.3-r1";
+  version = "0.11.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosbridge_suite/0.11.3-1.tar.gz";
-    name = "0.11.3-1.tar.gz";
-    sha256 = "626b4080bcfb8523d8a1472b1ae09a11898a82ad9c512d85161d91cb794db548";
+    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/kinetic/rosbridge_suite/0.11.4-1.tar.gz";
+    name = "0.11.4-1.tar.gz";
+    sha256 = "4adecf14b696f7e8fbb0b41362053ed9c7d5ed92b3791937543b0348f454976f";
   };
 
   buildType = "catkin";

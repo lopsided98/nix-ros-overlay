@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, roslaunch, roslib, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-dbw-fca-description";
-  version = "1.0.6-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca_description/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "9ceafbf5bdce281b0423fdb9a4c50810fd443490315897c8f789cc0be28c86ee";
+    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca_description/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "6ba589ca001f5f73c2479525cbadb50c8a17d045e526d4d4481c104028c6b87f";
   };
 
   buildType = "catkin";
