@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosgraph-msgs, roslang, rospack, sbcl, std-srvs }:
+{ lib, buildRosPackage, fetchurl, catkin, ros-environment, rosgraph-msgs, roslang, rospack, sbcl, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-roslisp";
-  version = "1.9.21";
+  version = "1.9.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp-release/archive/release/kinetic/roslisp/1.9.21-0.tar.gz";
-    name = "1.9.21-0.tar.gz";
-    sha256 = "7c1461d993cfbadccec208f5d806d10c146c9387ebfa15c5d8427b89261b92c7";
+    url = "https://github.com/ros-gbp/roslisp-release/archive/release/kinetic/roslisp/1.9.23-1.tar.gz";
+    name = "1.9.23-1.tar.gz";
+    sha256 = "e87b1ece09a86e140c6a4f65df89589c4535f97f1b52975dfca36638513a8b9f";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rosgraph-msgs roslang rospack sbcl std-srvs ];
+  propagatedBuildInputs = [ ros-environment rosgraph-msgs roslang rospack sbcl std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

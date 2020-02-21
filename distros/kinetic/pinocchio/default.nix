@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, eigenpy, git, python, pythonPackages, urdfdom }:
 buildRosPackage {
   pname = "ros-kinetic-pinocchio";
-  version = "2.2.1-r2";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/kinetic/pinocchio/2.2.1-2.tar.gz";
-    name = "2.2.1-2.tar.gz";
-    sha256 = "08351666c19195fd8e41675249787ab7fe920dee30f973e8ab9a098ce7c89be9";
+    url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/kinetic/pinocchio/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "440f8326ce3ed76af6e18e04670748349654190e0245aa121e3cbc459407ab2a";
   };
 
   buildType = "cmake";

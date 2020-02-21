@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, eigen-conversions, filters, geometry-msgs, pluginlib, roscpp, rosparam-handler, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-iirob-filters";
-  version = "0.8.1-r3";
+  version = "0.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/KITrobotics/iirob_filters-release/archive/release/kinetic/iirob_filters/0.8.1-3.tar.gz";
-    name = "0.8.1-3.tar.gz";
-    sha256 = "f083c70688f848452c3c68ac030b5ecf36bd7899a36331eadf1f6132954dca79";
+    url = "https://github.com/KITrobotics/iirob_filters-release/archive/release/kinetic/iirob_filters/0.8.4-1.tar.gz";
+    name = "0.8.4-1.tar.gz";
+    sha256 = "49b6825ee4eb633d00d726efcad2378d28b58befc09408c68a58f424ea78e4af";
   };
 
   buildType = "catkin";

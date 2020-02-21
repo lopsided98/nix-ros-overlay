@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, curl, pythonPackages, rosconsole, roslib }:
 buildRosPackage {
   pname = "ros-kinetic-resource-retriever";
-  version = "1.12.5-r1";
+  version = "1.12.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/resource_retriever-release/archive/release/kinetic/resource_retriever/1.12.5-1.tar.gz";
-    name = "1.12.5-1.tar.gz";
-    sha256 = "16a6290bd8670c961329a737c8a992385ff8557eec9ef546feb31c942a1928e7";
+    url = "https://github.com/ros-gbp/resource_retriever-release/archive/release/kinetic/resource_retriever/1.12.6-1.tar.gz";
+    name = "1.12.6-1.tar.gz";
+    sha256 = "20fa51672b8c050c6054e49b081cfacd270f58683705bde6cd6f8edb82d5974c";
   };
 
   buildType = "catkin";

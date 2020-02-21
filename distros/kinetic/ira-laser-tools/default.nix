@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, laser-geometry, pcl, pcl-ros, roscpp, sensor-msgs, std-msgs, tf, vtkWithQt4 }:
 buildRosPackage {
   pname = "ros-kinetic-ira-laser-tools";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/iralabdisco/ira_laser_tools-release/archive/release/kinetic/ira_laser_tools/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "68a56b260c6b1063c03305d2cea284da424d86f7d30b970a77ae735f57813bde";
+    url = "https://github.com/iralabdisco/ira_laser_tools-release/archive/release/kinetic/ira_laser_tools/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "0ee756f6f202edc1a82a439a0e0fff65e610f0e9631e19685591acf393f8bf77";
   };
 
   buildType = "catkin";

@@ -842,6 +842,8 @@ self: super: {
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
+ sick-scan2 = self.callPackage ./sick-scan2 {};
+
  slide-show = self.callPackage ./slide-show {};
 
  sophus = self.callPackage ./sophus {};

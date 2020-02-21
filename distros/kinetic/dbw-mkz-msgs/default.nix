@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, rosbag-migration-rule, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-dbw-mkz-msgs";
-  version = "1.2.3-r1";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz_msgs/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "44a4bee6d1dc7242f7fc5fcfbf4508de3c5f80f1008e4df05243a2a33791252c";
+    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/kinetic/dbw_mkz_msgs/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "426cb3a3b8a9b498defb4f103da5a844964c9eded8b6a1e59e6fd799e96e4a40";
   };
 
   buildType = "catkin";

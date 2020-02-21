@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-eloquent-fastrtps";
-  version = "1.9.3-r1";
+  version = "1.9.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/eloquent/fastrtps/1.9.3-1.tar.gz";
-    name = "1.9.3-1.tar.gz";
-    sha256 = "b16b1f0223f73d7dea2219235f8d9de66549c7a5fdd59db39878a679fc2bf861";
+    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/eloquent/fastrtps/1.9.3-2.tar.gz";
+    name = "1.9.3-2.tar.gz";
+    sha256 = "467fc5509c30ff9c1328ef57f9a582008e3cf5d8a4c5bf77949609fb47e722cb";
   };
 
   buildType = "cmake";
