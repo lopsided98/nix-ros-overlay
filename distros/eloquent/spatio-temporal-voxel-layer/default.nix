@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, builtin-interfaces, geometry-msgs, laser-geometry, message-filters, nav2-costmap-2d, openexr, openvdb, pcl, pcl-conversions, pluginlib, rclcpp, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tbb, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-spatio-temporal-voxel-layer";
-  version = "2.1.2-r2";
+  version = "2.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/spatio_temporal_voxel_layer-release/archive/release/eloquent/spatio_temporal_voxel_layer/2.1.2-2.tar.gz";
-    name = "2.1.2-2.tar.gz";
-    sha256 = "0be31caba7e291f424b112cdf26f1fff711a952a6836c1457a080c6ac1664860";
+    url = "https://github.com/SteveMacenski/spatio_temporal_voxel_layer-release/archive/release/eloquent/spatio_temporal_voxel_layer/2.1.3-1.tar.gz";
+    name = "2.1.3-1.tar.gz";
+    sha256 = "acfbd3487c3703f84bc49ca0361234d834312ca0a1e723d32c7010968c045116";
   };
 
   buildType = "ament_cmake";

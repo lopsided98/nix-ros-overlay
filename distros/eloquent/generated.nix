@@ -126,6 +126,8 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
+ apex-test-tools = self.callPackage ./apex-test-tools {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -489,6 +491,8 @@ self: super: {
  nav-msgs = self.callPackage ./nav-msgs {};
 
  navigation2 = self.callPackage ./navigation2 {};
+
+ nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
 
@@ -875,6 +879,8 @@ self: super: {
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
+
+ test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ainstein-radar-filters, ainstein-radar-msgs, catkin, cv-bridge, image-geometry, image-transport, pcl-ros, roscpp, sensor-msgs, std-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ainstein-radar-tools";
-  version = "3.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_tools/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "fbb4ccb20a888ce31f3a19e97e8ee05fb71f791f3cab227b9befeea211aed91e";
+    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_tools/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "edd663b4d4fccb71e7ed6e87fe55f0847752f09e5923b6f89551d5b944223626";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, curl, cv-bridge, dynamic-reconfigure, message-generation, message-runtime, nodelet, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-nerian-stereo";
-  version = "3.6.0-r1";
+  version = "3.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/nerian-vision/nerian_stereo-release/archive/release/kinetic/nerian_stereo/3.6.0-1.tar.gz";
-    name = "3.6.0-1.tar.gz";
-    sha256 = "6989933355e16b6f44e3ab24d105c36dba12ef0b5f70684b563d69cc96082915";
+    url = "https://github.com/nerian-vision/nerian_stereo-release/archive/release/kinetic/nerian_stereo/3.7.0-1.tar.gz";
+    name = "3.7.0-1.tar.gz";
+    sha256 = "9fe08f5e7bd220a41c55676a2de00c2d1b4e0dd3f4063a1687a6be982969b750";
   };
 
   buildType = "catkin";

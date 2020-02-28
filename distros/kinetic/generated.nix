@@ -1538,6 +1538,8 @@ self: super: {
 
  ieee80211-channels = self.callPackage ./ieee80211-channels {};
 
+ ifm3d = self.callPackage ./ifm3d {};
+
  ifm-o3mxxx = self.callPackage ./ifm-o3mxxx {};
 
  igvc-self-drive-description = self.callPackage ./igvc-self-drive-description {};

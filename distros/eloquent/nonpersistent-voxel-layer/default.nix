@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, geometry-msgs, laser-geometry, map-msgs, nav-msgs, nav2-costmap-2d, nav2-msgs, nav2-voxel-grid, pcl, pcl-conversions, pluginlib, rclcpp, sensor-msgs, std-msgs, tf2, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-nonpersistent-voxel-layer";
-  version = "2.1.0-r2";
+  version = "2.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/nonpersistent_voxel_layer-release/archive/release/eloquent/nonpersistent_voxel_layer/2.1.0-2.tar.gz";
-    name = "2.1.0-2.tar.gz";
-    sha256 = "35298293b1514e3e4365905f951ccffb4fe63bd0c5d879c6a8b26d0596d34f0a";
+    url = "https://github.com/SteveMacenski/nonpersistent_voxel_layer-release/archive/release/eloquent/nonpersistent_voxel_layer/2.1.1-2.tar.gz";
+    name = "2.1.1-2.tar.gz";
+    sha256 = "0ff37107693cfad069c80e424c8c4a3e21738886378182a94fb05d28bbc7b940";
   };
 
   buildType = "ament_cmake";
