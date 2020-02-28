@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, binutils, catkin, diagnostic-msgs, nav-msgs, qt5, ros-type-introspection, rosbag, rosbag-storage, roscpp, roscpp-serialization, rostime, tf, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-plotjuggler";
-  version = "2.5.1-r2";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/kinetic/plotjuggler/2.5.1-2.tar.gz";
-    name = "2.5.1-2.tar.gz";
-    sha256 = "a5152333f0d3519502bf09d9c4b11128a56cd2bae03b76be7f3de9bae2933e67";
+    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/kinetic/plotjuggler/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "b07fc355d97f2948b1150c15dad003e551836e1af9ae4f100e88b439d5600e03";
   };
 
   buildType = "catkin";

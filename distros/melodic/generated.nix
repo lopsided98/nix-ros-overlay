@@ -110,6 +110,8 @@ self: super: {
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
+ ati-force-torque = self.callPackage ./ati-force-torque {};
+
  audibot = self.callPackage ./audibot {};
 
  audibot-description = self.callPackage ./audibot-description {};
@@ -912,6 +914,8 @@ self: super: {
 
  fmi-adapter-examples = self.callPackage ./fmi-adapter-examples {};
 
+ force-torque-sensor = self.callPackage ./force-torque-sensor {};
+
  force-torque-sensor-controller = self.callPackage ./force-torque-sensor-controller {};
 
  forward-command-controller = self.callPackage ./forward-command-controller {};
@@ -1155,6 +1159,8 @@ self: super: {
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
  ieee80211-channels = self.callPackage ./ieee80211-channels {};
+
+ ifm3d = self.callPackage ./ifm3d {};
 
  igvc-self-drive-description = self.callPackage ./igvc-self-drive-description {};
 
@@ -1715,6 +1721,12 @@ self: super: {
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  movie-publisher = self.callPackage ./movie-publisher {};
+
+ mpc-local-planner = self.callPackage ./mpc-local-planner {};
+
+ mpc-local-planner-examples = self.callPackage ./mpc-local-planner-examples {};
+
+ mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
 
  mrpt1 = self.callPackage ./mrpt1 {};
 

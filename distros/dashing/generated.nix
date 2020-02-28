@@ -120,6 +120,10 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
+ apex-containers = self.callPackage ./apex-containers {};
+
+ apex-test-tools = self.callPackage ./apex-test-tools {};
+
  apriltag = self.callPackage ./apriltag {};
 
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
@@ -1011,6 +1015,8 @@ self: super: {
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
+
+ test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
 
