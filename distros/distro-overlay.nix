@@ -119,6 +119,11 @@ let
 
     laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
 
+    libpcan = patchVendorUrl rosSuper.libpcan {
+      url = "http://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.3.tar.gz";
+      sha256 = "0f6v3vjszyg1xp99jx48hyv8p32iyq4j18a4ir4x5p6f3b0z3r34";
+    };
+
     libphidget21 = patchVendorUrl rosSuper.libphidget21 {
       url = "https://www.phidgets.com/downloads/phidget21/libraries/linux/libphidget/libphidget_2.1.9.20190409.tar.gz";
       sha256 = "07w54dmr75vq2imngfy66nk1sxlvkzhl2p6g362q0a02f099jy0f";
