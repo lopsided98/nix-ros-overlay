@@ -150,6 +150,14 @@ let
       ];
     });
 
+    libuvc-camera = rosSuper.libuvc-camera.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+        substituteInPlace cfg/UVCCamera.cfg --replace python2 python
+      '';
+    });
+
     libyaml-vendor = patchVendorUrl rosSuper.libyaml-vendor {
       url = "https://github.com/yaml/libyaml/archive/10c907871f1ccd779c7fccf6b81a62762b5c4e7b.zip";
       sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
