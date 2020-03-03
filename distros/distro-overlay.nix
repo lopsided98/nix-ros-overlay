@@ -66,8 +66,14 @@ let
     cob-light = patchBoostSignals rosSuper.cob-light;
 
     cv-bridge = (patchBoostPython rosSuper.cv-bridge).overrideAttrs ({
+      patches ? [],
       propagatedBuildInputs ? [], ...
     }: {
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/ros-perception/vision_opencv/commit/fbfb25303bd77db6a5943043cc4303d0c0b835c9.patch";
+        sha256 = "0pznlbqp99f6bzql3q1sjy9sqk2746wgp7qdqj790j5z0vb2v2r6";
+        stripLen = 1;
+      }) ];
       propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.pythonPackages.opencv3 ];
     });
 
@@ -142,12 +148,10 @@ let
     librealsense = rosSuper.librealsense.overrideAttrs ({
       patches ? [], ...
     }: {
-      patches = patches ++ [
-        (self.fetchpatch {
-          url = "https://github.com/IntelRealSense/librealsense/commit/86e434c86096b91a722f22bd039c2b6eeb8174ab.patch";
-          sha256 = "1kcvm32cx9zzd56k9yglnyxizmfgar3a6cybjdwpyf6ljrxjlpp5";
-        })
-      ];
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/IntelRealSense/librealsense/commit/86e434c86096b91a722f22bd039c2b6eeb8174ab.patch";
+        sha256 = "1kcvm32cx9zzd56k9yglnyxizmfgar3a6cybjdwpyf6ljrxjlpp5";
+      }) ];
     });
 
     libuvc-camera = rosSuper.libuvc-camera.overrideAttrs ({
