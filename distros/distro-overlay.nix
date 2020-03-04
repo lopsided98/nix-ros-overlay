@@ -223,27 +223,15 @@ let
     });
 
     rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
-      nativeBuildInputs ? [],
-      postFixup ? "", ...
+      nativeBuildInputs ? [], ...
     }: {
-      nativeBuildInputs = nativeBuildInputs ++ [ self.makeWrapper ];
-
-      postFixup = ''
-        wrapProgram $out/bin/rqt \
-          --prefix QT_PLUGIN_PATH : "${self.qt5.qtbase.bin}/${self.qt5.qtbase.qtPluginPrefix}"
-      '' + postFixup;
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     });
 
     rviz = rosSuper.rviz.overrideAttrs ({
-      nativeBuildInputs ? [],
-      postFixup ? "", ...
+      nativeBuildInputs ? [], ...
     }: {
-      nativeBuildInputs = nativeBuildInputs ++ [ self.makeWrapper ];
-
-      postFixup = ''
-        wrapProgram $out/bin/rviz \
-          --prefix QT_PLUGIN_PATH : "${self.qt5.qtbase.bin}/${self.qt5.qtbase.qtPluginPrefix}"
-      '' + postFixup;
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     });
 
     rviz-ogre-vendor = rosSuper.rviz-ogre-vendor.overrideAttrs ({
