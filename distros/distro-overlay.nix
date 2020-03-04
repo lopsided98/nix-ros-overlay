@@ -38,7 +38,7 @@ let
       prePhases ? [],
       postPatch ? "", ...
     }: let
-      setupHook = self.callPackage ./catkin-setup-hook { } distro;
+      setupHook = self.callPackage ./catkin-setup-hook { };
     in {
       propagatedBuildInputs = [ self.cmake setupHook ] ++ propagatedBuildInputs;
 

@@ -18,8 +18,6 @@ else stdenv.mkDerivation) (args // {
   passthru = passthru // {
     rosPackage = true;
   };
-} // (if buildType == "ament_python" then {
+} // lib.optionalAttrs (buildType == "ament_python") {
   dontUseCmakeConfigure = true;
-} else {
-  nativeBuildInputs = [ pythonPackages.wrapPython ] ++ nativeBuildInputs;
-}))
+})
