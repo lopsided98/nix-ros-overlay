@@ -40,7 +40,11 @@ let
     }: let
       setupHook = self.callPackage ./catkin-setup-hook { };
     in {
-      propagatedBuildInputs = [ self.cmake setupHook ] ++ propagatedBuildInputs;
+      propagatedBuildInputs = [
+        self.cmake
+        rosSelf.pythonPackages.wrapPython
+        setupHook
+      ] ++ propagatedBuildInputs;
 
       postPatch = postPatch + ''
         patchShebangs cmake

@@ -75,4 +75,10 @@ _catkinPostInstallHook() {
 }
 postInstallHooks+=(_catkinPostInstallHook)
 
+_catkinWrapperHook() {
+  makeWrapperArgs+=(--prefix ROS_PACKAGE_PATH : "${out}:${ROS_PACKAGE_PATH}")
+  wrapPythonPrograms
+}
+postFixupHooks+=(_catkinWrapperHook)
+
 export CATKIN_SHELL=bash
