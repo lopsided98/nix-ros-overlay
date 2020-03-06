@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, graphicsmagick, launch, launch-ros, launch-testing, nav-msgs, nav2-common, nav2-util, rclcpp, rclcpp-lifecycle, std-msgs, tf2, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-map-server";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_map_server/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "4e75e368dbcd3ab032675e4ddeab8b8d9d5d67289f403bfa7acfec7c2742c83a";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_map_server/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "dd5d2c57278679caa3361a83274a49f1b4f010058b1b7e16b942ea6051896512";
   };
 
   buildType = "ament_cmake";

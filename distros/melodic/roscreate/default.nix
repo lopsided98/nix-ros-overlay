@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, roslib }:
 buildRosPackage {
   pname = "ros-melodic-roscreate";
-  version = "1.14.7-r1";
+  version = "1.14.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/roscreate/1.14.7-1.tar.gz";
-    name = "1.14.7-1.tar.gz";
-    sha256 = "784ad70a36afb22b533a74fec2158e5494c083ae4348aec48e5889435e71af5c";
+    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/roscreate/1.14.8-1.tar.gz";
+    name = "1.14.8-1.tar.gz";
+    sha256 = "4e7344a5f38437c4e6f498b97404b8b0194965edb877536b6d9c5c0c5a4bbfc5";
   };
 
   buildType = "catkin";
   propagatedBuildInputs = [ pythonPackages.rospkg roslib ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''roscreate contains a tool that assists in the creation of ROS filesystem resources.

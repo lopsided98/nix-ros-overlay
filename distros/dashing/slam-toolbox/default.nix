@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, builtin-interfaces, ceres-solver, eigen, launch, launch-testing, liblapack, message-filters, nav-msgs, nav2-map-server, pluginlib, qt5, rclcpp, rosidl-default-generators, rviz-common, rviz-default-plugins, rviz-rendering, sensor-msgs, std-msgs, std-srvs, suitesparse, tbb, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-dashing-slam-toolbox";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/dashing/slam_toolbox/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "6aa9203f51296f2fd199bbf5e0b87b7b6ee9603d23e13ec88b85b749bc3c6ee2";
+    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/dashing/slam_toolbox/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "756cda804b1dcf1e0a9a3f659f841fa45a899a19152c6c2b8ca49893099c115f";
   };
 
   buildType = "ament_cmake";

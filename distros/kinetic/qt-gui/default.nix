@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages, qt5, tango-icon-theme }:
 buildRosPackage {
   pname = "ros-kinetic-qt-gui";
-  version = "0.3.11";
+  version = "0.3.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui/0.3.11-0.tar.gz";
-    name = "0.3.11-0.tar.gz";
-    sha256 = "48c6cd5dae43672949a1d97f639bec05eb5cb58e9fe6c2f09d80f6c70e2542bd";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui/0.3.17-1.tar.gz";
+    name = "0.3.17-1.tar.gz";
+    sha256 = "5fc655e7739a03accac34205366f3d76cc8f4e1ff62c197dd335815435099450";
   };
 
   buildType = "catkin";

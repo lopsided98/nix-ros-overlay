@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-costmap-cspace-msgs";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/costmap_cspace_msgs/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "e6524cf78fe5a9feacaeced8de9c2f82699bf1f9bc74c6483a2356c9dd9c8573";
+    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/costmap_cspace_msgs/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "da79ed874b003e9f707cfa3973fe724b22fb2e11e893e96ae4c73bbc99278c40";
   };
 
   buildType = "catkin";

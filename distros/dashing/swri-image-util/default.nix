@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, camera-calibration-parsers, cv-bridge, eigen, geometry-msgs, image-geometry, image-transport, message-filters, nav-msgs, pkg-config, rclcpp, rclcpp-components, rclpy, std-msgs, swri-geometry-util, swri-math-util, swri-opencv-util, swri-roscpp, tf2 }:
 buildRosPackage {
   pname = "ros-dashing-swri-image-util";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_image_util/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "8cc96bb11206671f37255affa38c11e8bfafb37c7d8c86bffc71b9109698cb89";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_image_util/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "efa42cb49dfea66b874a82ba27bc4e0c24779b10d23653f9bbcb0d54440b0db4";
   };
 
   buildType = "ament_cmake";

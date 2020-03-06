@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, qt-dotgraph, qt-gui, qt-gui-app, qt-gui-cpp, qt-gui-py-common }:
 buildRosPackage {
   pname = "ros-kinetic-qt-gui-core";
-  version = "0.3.11";
+  version = "0.3.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_core/0.3.11-0.tar.gz";
-    name = "0.3.11-0.tar.gz";
-    sha256 = "454f89e0b49282fa15037b4b074dbe573178add390e71c014905c64f36eb0e55";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_core/0.3.17-1.tar.gz";
+    name = "0.3.17-1.tar.gz";
+    sha256 = "7efbafad8cab624542f91de8b400c85fb7960921f3606d55d136a4f3bcc7c981";
   };
 
   buildType = "catkin";

@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, cmake, gmock, gtest, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-catkin";
-  version = "0.7.20-r1";
+  version = "0.7.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/0.7.20-1.tar.gz";
-    name = "0.7.20-1.tar.gz";
-    sha256 = "24e182f20635f79f4980ecc56d2f5baad8000b02f7201f690c1feab92f4c8651";
+    url = "https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/0.7.23-1.tar.gz";
+    name = "0.7.23-1.tar.gz";
+    sha256 = "038975826eb49cf92a07fb7d35622da90b1ccb9ebbf0894d87ca6bd4dee53238";
   };
 
   buildType = "catkin";
   checkInputs = [ pythonPackages.mock pythonPackages.nose ];
   propagatedBuildInputs = [ cmake gmock gtest python pythonPackages.catkin-pkg pythonPackages.empy pythonPackages.nose ];
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [ cmake pythonPackages.setuptools ];
 
   meta = {
     description = ''Low-level build system macros and infrastructure for ROS.'';

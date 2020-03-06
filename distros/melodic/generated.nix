@@ -200,6 +200,8 @@ self: super: {
 
  capabilities = self.callPackage ./capabilities {};
 
+ carla-msgs = self.callPackage ./carla-msgs {};
+
  carrot-planner = self.callPackage ./carrot-planner {};
 
  cartesian-msgs = self.callPackage ./cartesian-msgs {};
@@ -1134,6 +1136,8 @@ self: super: {
 
  husky-bringup = self.callPackage ./husky-bringup {};
 
+ husky-cartographer-navigation = self.callPackage ./husky-cartographer-navigation {};
+
  husky-control = self.callPackage ./husky-control {};
 
  husky-description = self.callPackage ./husky-description {};
@@ -1252,6 +1256,8 @@ self: super: {
 
  ivcon = self.callPackage ./ivcon {};
 
+ jackal-cartographer-navigation = self.callPackage ./jackal-cartographer-navigation {};
+
  jackal-control = self.callPackage ./jackal-control {};
 
  jackal-description = self.callPackage ./jackal-description {};
@@ -1271,6 +1277,8 @@ self: super: {
  jackal-viz = self.callPackage ./jackal-viz {};
 
  jderobot-assets = self.callPackage ./jderobot-assets {};
+
+ jderobot-color-tuner = self.callPackage ./jderobot-color-tuner {};
 
  jderobot-drones = self.callPackage ./jderobot-drones {};
 
@@ -1759,6 +1767,8 @@ self: super: {
  mrpt-slam = self.callPackage ./mrpt-slam {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
+
+ mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multi-interface-roam = self.callPackage ./multi-interface-roam {};
 
@@ -2402,6 +2412,8 @@ self: super: {
 
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
+ ridgeback-cartographer-navigation = self.callPackage ./ridgeback-cartographer-navigation {};
+
  ridgeback-control = self.callPackage ./ridgeback-control {};
 
  ridgeback-description = self.callPackage ./ridgeback-description {};
@@ -2526,6 +2538,8 @@ self: super: {
 
  ros-monitoring-msgs = self.callPackage ./ros-monitoring-msgs {};
 
+ ros-numpy = self.callPackage ./ros-numpy {};
+
  ros-pytest = self.callPackage ./ros-pytest {};
 
  ros-realtime = self.callPackage ./ros-realtime {};
@@ -2541,8 +2555,6 @@ self: super: {
  rosatomic = self.callPackage ./rosatomic {};
 
  rosauth = self.callPackage ./rosauth {};
-
- rosbag = self.callPackage ./rosbag {};
 
  rosbag-editor = self.callPackage ./rosbag-editor {};
 
@@ -2586,8 +2598,6 @@ self: super: {
 
  roscpp-traits = self.callPackage ./roscpp-traits {};
 
- roscpp-tutorials = self.callPackage ./roscpp-tutorials {};
-
  roscreate = self.callPackage ./roscreate {};
 
  rosdiagnostic = self.callPackage ./rosdiagnostic {};
@@ -2611,8 +2621,6 @@ self: super: {
  roslang = self.callPackage ./roslang {};
 
  roslaunch = self.callPackage ./roslaunch {};
-
- roslib = self.callPackage ./roslib {};
 
  roslint = self.callPackage ./roslint {};
 
@@ -2641,8 +2649,6 @@ self: super: {
  rosnode = self.callPackage ./rosnode {};
 
  rosout = self.callPackage ./rosout {};
-
- rospack = self.callPackage ./rospack {};
 
  rosparam = self.callPackage ./rosparam {};
 
@@ -2941,6 +2947,8 @@ self: super: {
  slam-karto = self.callPackage ./slam-karto {};
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
+
+ slam-toolbox-msgs = self.callPackage ./slam-toolbox-msgs {};
 
  slic = self.callPackage ./slic {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, code-coverage, message-runtime, roscpp, roslaunch, rospy, rostest, toposens-driver, toposens-msgs }:
 buildRosPackage {
   pname = "ros-melodic-toposens-sync";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_sync/2.0.1-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_sync/2.0.2-1";
     name = "archive.tar.gz";
-    sha256 = "ba70fa2b4f8eacbd469632169a474161a9fed3b61ec9ce88796ca65376e748bb";
+    sha256 = "8a14d4c3a6b7950a6cc8bb64c91c7d3211c38142b793aa9bdc4ec2bd04d97f03";
   };
 
   buildType = "catkin";

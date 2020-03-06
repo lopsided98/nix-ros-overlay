@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, qt-gui }:
 buildRosPackage {
   pname = "ros-kinetic-qt-gui-app";
-  version = "0.3.11";
+  version = "0.3.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_app/0.3.11-0.tar.gz";
-    name = "0.3.11-0.tar.gz";
-    sha256 = "038f8dfadb1c99a20607a2133611f3aa0d8790fafb1d8958c72b98e30bce034e";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_app/0.3.17-1.tar.gz";
+    name = "0.3.17-1.tar.gz";
+    sha256 = "ea14ae686d0c5a700b02b2043f353879e05abec636344615b53941bbce326a88";
   };
 
   buildType = "catkin";

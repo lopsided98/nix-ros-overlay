@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, eigen, nav-core, pluginlib, roscpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-carrot-planner";
-  version = "1.16.3-r1";
+  version = "1.16.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/carrot_planner/1.16.3-1.tar.gz";
-    name = "1.16.3-1.tar.gz";
-    sha256 = "8038414031acedc20a1d217d274302609006ef887fd7938d8163aa5015756608";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/carrot_planner/1.16.4-1.tar.gz";
+    name = "1.16.4-1.tar.gz";
+    sha256 = "46bd430ab5278ca20b0da0b68e29af2d0307392270ca5508627c7098be6f2786";
   };
 
   buildType = "catkin";

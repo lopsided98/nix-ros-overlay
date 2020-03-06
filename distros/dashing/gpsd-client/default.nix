@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gpsd, pkg-config, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-gpsd-client";
-  version = "1.0.0-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/dashing/gpsd_client/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "0d2fe2ce52f10a1817af2fb79898855a5991467198a449e2b7f0481fd9f1fa1a";
+    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/dashing/gpsd_client/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "e4c96508e2741827a1fd232860893aa0732f6450917ee3bbea3baee59b086998";
   };
 
   buildType = "ament_cmake";
