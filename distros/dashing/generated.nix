@@ -138,20 +138,6 @@ self: super: {
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
 
- autoware-auto-algorithm = self.callPackage ./autoware-auto-algorithm {};
-
- autoware-auto-cmake = self.callPackage ./autoware-auto-cmake {};
-
- autoware-auto-create-pkg = self.callPackage ./autoware-auto-create-pkg {};
-
- autoware-auto-examples = self.callPackage ./autoware-auto-examples {};
-
- autoware-auto-geometry = self.callPackage ./autoware-auto-geometry {};
-
- autoware-auto-helper-functions = self.callPackage ./autoware-auto-helper-functions {};
-
- autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
-
  aws-common = self.callPackage ./aws-common {};
 
  aws-ros2-common = self.callPackage ./aws-ros2-common {};
@@ -346,10 +332,6 @@ self: super: {
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
- euclidean-cluster = self.callPackage ./euclidean-cluster {};
-
- euclidean-cluster-nodes = self.callPackage ./euclidean-cluster-nodes {};
-
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-minimal-action-client = self.callPackage ./examples-rclcpp-minimal-action-client {};
@@ -438,8 +420,6 @@ self: super: {
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
- hungarian-assigner = self.callPackage ./hungarian-assigner {};
-
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
  image-geometry = self.callPackage ./image-geometry {};
@@ -455,8 +435,6 @@ self: super: {
  joy = self.callPackage ./joy {};
 
  joy-teleop = self.callPackage ./joy-teleop {};
-
- kalman-filter = self.callPackage ./kalman-filter {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -498,15 +476,9 @@ self: super: {
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
 
- lidar-utils = self.callPackage ./lidar-utils {};
-
  lifecycle = self.callPackage ./lifecycle {};
 
  lifecycle-msgs = self.callPackage ./lifecycle-msgs {};
-
- localization-common = self.callPackage ./localization-common {};
-
- localization-nodes = self.callPackage ./localization-nodes {};
 
  logging-demo = self.callPackage ./logging-demo {};
 
@@ -531,8 +503,6 @@ self: super: {
  ml-classifiers = self.callPackage ./ml-classifiers {};
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
-
- motion-model = self.callPackage ./motion-model {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
@@ -582,8 +552,6 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
- ndt = self.callPackage ./ndt {};
-
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
@@ -607,8 +575,6 @@ self: super: {
  ompl = self.callPackage ./ompl {};
 
  opensplice-cmake-module = self.callPackage ./opensplice-cmake-module {};
-
- optimization = self.callPackage ./optimization {};
 
  orocos-kdl = self.callPackage ./orocos-kdl {};
 
@@ -666,8 +632,6 @@ self: super: {
 
  poco-vendor = self.callPackage ./poco-vendor {};
 
- point-cloud-fusion = self.callPackage ./point-cloud-fusion {};
-
  px4-msgs = self.callPackage ./px4-msgs {};
 
  py-trees-ros = self.callPackage ./py-trees-ros {};
@@ -695,10 +659,6 @@ self: super: {
  quality-of-service-demo-py = self.callPackage ./quality-of-service-demo-py {};
 
  radar-msgs = self.callPackage ./radar-msgs {};
-
- ray-ground-classifier = self.callPackage ./ray-ground-classifier {};
-
- ray-ground-classifier-nodes = self.callPackage ./ray-ground-classifier-nodes {};
 
  rcl = self.callPackage ./rcl {};
 
@@ -952,8 +912,6 @@ self: super: {
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
- serial-driver = self.callPackage ./serial-driver {};
-
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
@@ -1102,17 +1060,9 @@ self: super: {
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
 
- velodyne-driver = self.callPackage ./velodyne-driver {};
-
- velodyne-node = self.callPackage ./velodyne-node {};
-
  vision-opencv = self.callPackage ./vision-opencv {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
-
- voxel-grid = self.callPackage ./voxel-grid {};
-
- voxel-grid-nodes = self.callPackage ./voxel-grid-nodes {};
 
  web-video-server = self.callPackage ./web-video-server {};
 

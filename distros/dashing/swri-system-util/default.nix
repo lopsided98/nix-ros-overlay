@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-swri-system-util";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_system_util/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "c0651f257c3b58556bd38cfac53b79b834acb05f1da28d58f66e95782d31c45a";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_system_util/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "48359f72cb2deae5d6cfcb58280c77690dea11ea1cce8665b19c0af81fa35039";
   };
 
   buildType = "ament_cmake";

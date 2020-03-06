@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, message-generation, message-runtime, roscpp, roscpp-serialization, roslib, rospy, rosservice, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dynamic-reconfigure";
-  version = "1.6.0";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/melodic/dynamic_reconfigure/1.6.0-0.tar.gz";
-    name = "1.6.0-0.tar.gz";
-    sha256 = "00811c7ff7a43ff5dc2d22ce9bb493e55728d403f49c359606e173b687872151";
+    url = "https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/melodic/dynamic_reconfigure/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "3c95ad978ea8c1aa62ebecba8eb2ec65581bad745eca98aa0142cc070c54d6d6";
   };
 
   buildType = "catkin";
@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This unary stack contains the dynamic_reconfigure package which provides a means to change
-    node parameters at any time without having to restart the node.'';
+    description = ''The dynamic_reconfigure package provides a means to update parameters
+    at runtime without having to restart the node.'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

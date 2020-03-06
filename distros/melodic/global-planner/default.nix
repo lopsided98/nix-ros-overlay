@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, costmap-2d, dynamic-reconfigure, geometry-msgs, nav-core, nav-msgs, navfn, pluginlib, roscpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-global-planner";
-  version = "1.16.3-r1";
+  version = "1.16.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/global_planner/1.16.3-1.tar.gz";
-    name = "1.16.3-1.tar.gz";
-    sha256 = "5147f1dacb1950240395e7e74e5861264b3a92fb771811327e67a9fa00691127";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/global_planner/1.16.4-1.tar.gz";
+    name = "1.16.4-1.tar.gz";
+    sha256 = "82880b6eec784f800278406caa3cad623752012c411667bdcf7df3600dffc4d4";
   };
 
   buildType = "catkin";

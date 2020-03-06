@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-swri-math-util";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_math_util/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "38634ebcd805107fe7cb33b6c5bf3a4cc73faf3f3a94c577aaa9863fa1473e9d";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_math_util/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "873b92d99bb026adfad728416d63cbf92d316b39ea5a0f594b67163298797bfc";
   };
 
   buildType = "ament_cmake";

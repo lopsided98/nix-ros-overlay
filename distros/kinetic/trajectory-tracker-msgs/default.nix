@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, roslint, rosunit, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-trajectory-tracker-msgs";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/kinetic/trajectory_tracker_msgs/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "954c926e8c36651789cdcdd6a4bf99ee68a406fdc61105d5309006d1c10e70ee";
+    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/kinetic/trajectory_tracker_msgs/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "aa1debb47f9b0f32c28e350a3f8525c5327490d844b9ae04bbdf45e136d468d8";
   };
 
   buildType = "catkin";

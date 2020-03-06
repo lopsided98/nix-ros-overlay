@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, qt5, rosbuild }:
 buildRosPackage {
   pname = "ros-kinetic-python-qt-binding";
-  version = "0.3.4";
+  version = "0.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/python_qt_binding-release/archive/release/kinetic/python_qt_binding/0.3.4-0.tar.gz";
-    name = "0.3.4-0.tar.gz";
-    sha256 = "ea6943351d48918e37d30db52637c7063caef9a9a9e72cd128fa6f3b84ab35cb";
+    url = "https://github.com/ros-gbp/python_qt_binding-release/archive/release/kinetic/python_qt_binding/0.3.7-1.tar.gz";
+    name = "0.3.7-1.tar.gz";
+    sha256 = "e4060d7a7505e6c017d93215d6a27df94d1fdf0767b57e80b07be39f296af07b";
   };
 
   buildType = "catkin";
   buildInputs = [ qt5.qtbase rosbuild ];
-  propagatedBuildInputs = [ pythonPackages.pyqt5 ];
+  propagatedBuildInputs = [ catkin pythonPackages.pyqt5 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

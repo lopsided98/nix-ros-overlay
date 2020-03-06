@@ -2,19 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cpp-common, message-generation, message-runtime, rosconsole, roscpp, rostest, rostime, rosunit, std-msgs, xmlrpcpp }:
+{ lib, buildRosPackage, fetchurl, catkin, cpp-common, message-generation, message-runtime, rosbash, rosconsole, roscpp, rostest, rostime, rosunit, std-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-topic-tools";
-  version = "1.14.3";
+  version = "1.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/topic_tools/1.14.3-0.tar.gz";
-    name = "1.14.3-0.tar.gz";
-    sha256 = "11737ac9aee93efcde7615891fd0342a8151e09b03435b1a173ddedef6c91f18";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/topic_tools/1.14.4-1.tar.gz";
+    name = "1.14.4-1.tar.gz";
+    sha256 = "a58944808a07e43acbfdfe7817719e0654621fd6c699fefdb71e0689755dbfb7";
   };
 
   buildType = "catkin";
   buildInputs = [ cpp-common message-generation rostest rosunit ];
+  checkInputs = [ rosbash ];
   propagatedBuildInputs = [ message-runtime rosconsole roscpp rostime std-msgs xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 

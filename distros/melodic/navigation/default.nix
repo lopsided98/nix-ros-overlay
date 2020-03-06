@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, base-local-planner, carrot-planner, catkin, clear-costmap-recovery, costmap-2d, dwa-local-planner, fake-localization, global-planner, map-server, move-base, move-base-msgs, move-slow-and-clear, nav-core, navfn, rotate-recovery, voxel-grid }:
 buildRosPackage {
   pname = "ros-melodic-navigation";
-  version = "1.16.3-r1";
+  version = "1.16.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/navigation/1.16.3-1.tar.gz";
-    name = "1.16.3-1.tar.gz";
-    sha256 = "c55bd433b5ad55822926ea621be0fa6f4695bb9795ecdd4574295ae9372fb203";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/navigation/1.16.4-1.tar.gz";
+    name = "1.16.4-1.tar.gz";
+    sha256 = "dd0a7c55c307fece0764881bbaed395e1a6052bf680ed13a2d918c6c02d1f72c";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, swri-math-util }:
 buildRosPackage {
   pname = "ros-dashing-swri-opencv-util";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_opencv_util/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "f894ccdb0c7829a4bb1c1d97bb2469a3d10d93a6154ccfe845ae5b3bd277e436";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_opencv_util/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "1ddc25b6ccce5ae943d951613cde3db07aa6223a3bd9c17406c202b006c6707c";
   };
 
   buildType = "ament_cmake";

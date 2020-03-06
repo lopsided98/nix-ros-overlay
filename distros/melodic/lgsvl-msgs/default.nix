@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-lgsvl-msgs";
-  version = "0.0.1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/lgsvl/lgsvl_msgs-release/archive/release/melodic/lgsvl_msgs/0.0.1-0.tar.gz";
-    name = "0.0.1-0.tar.gz";
-    sha256 = "2269c8659cbed4f904a98824cb128ee15b954efeb3b47bdb0152a61e2e69eba6";
+    url = "https://github.com/lgsvl/lgsvl_msgs-release/archive/release/melodic/lgsvl_msgs/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "7e1a65d3443fa3de6cd21ff95f163ed74b9bf315eb322b2c55c0219dad523d20";
   };
 
   buildType = "catkin";

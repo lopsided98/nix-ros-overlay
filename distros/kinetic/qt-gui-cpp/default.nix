@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, tinyxml }:
 buildRosPackage {
   pname = "ros-kinetic-qt-gui-cpp";
-  version = "0.3.11";
+  version = "0.3.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_cpp/0.3.11-0.tar.gz";
-    name = "0.3.11-0.tar.gz";
-    sha256 = "e2236b66c4d047093b3a30c6e2c169d307b322ce87e178a4237f6ac30e8a3cac";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/kinetic/qt_gui_cpp/0.3.17-1.tar.gz";
+    name = "0.3.17-1.tar.gz";
+    sha256 = "9ad6c29dd7b32ce7937f6a13026a875f17395a75bf00459f057809cda032fbd3";
   };
 
   buildType = "catkin";

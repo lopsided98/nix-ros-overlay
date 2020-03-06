@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genmsg, genpy, pythonPackages, rosbag, roslib, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosmsg";
-  version = "1.14.3";
+  version = "1.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosmsg/1.14.3-0.tar.gz";
-    name = "1.14.3-0.tar.gz";
-    sha256 = "d6b76ae3f2df2b92e423f03b57ddd325f928e6d16b1fbcac2939fd173ce3195d";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosmsg/1.14.4-1.tar.gz";
+    name = "1.14.4-1.tar.gz";
+    sha256 = "c689588adce5b0a32480530998def90c1467bdce019c88ca6b5f8ef0ab9b5bca";
   };
 
   buildType = "catkin";
@@ -21,9 +21,9 @@ buildRosPackage {
   meta = {
     description = ''rosmsg contains two command-line tools: <tt>rosmsg</tt> and
     <tt>rossrv</tt>. <tt>rosmsg</tt> is a command-line tool for
-    displaying information about <a href="http://www.ros.org/wiki/msg">ROS Message
+    displaying information about <a href="http://wiki.ros.org/msg">ROS Message
     types</a>. <tt>rossrv</tt> is a command-line tool for displaying
-    information about <a href="http://www.ros.org/wiki/srv">ROS
+    information about <a href="http://wiki.ros.org/srv">ROS
     Service types</a>.'';
     license = with lib.licenses; [ bsdOriginal ];
   };

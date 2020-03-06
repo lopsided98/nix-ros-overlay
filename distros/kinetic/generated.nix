@@ -142,6 +142,8 @@ self: super: {
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
+ ati-force-torque = self.callPackage ./ati-force-torque {};
+
  ati-ft-sensor = self.callPackage ./ati-ft-sensor {};
 
  audibot = self.callPackage ./audibot {};
@@ -4387,8 +4389,6 @@ self: super: {
  summit-xl-sim = self.callPackage ./summit-xl-sim {};
 
  summit-xl-sim-bringup = self.callPackage ./summit-xl-sim-bringup {};
-
- swarmros = self.callPackage ./swarmros {};
 
  swri-console = self.callPackage ./swri-console {};
 

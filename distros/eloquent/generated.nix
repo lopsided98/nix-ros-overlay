@@ -126,6 +126,8 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
+ apex-containers = self.callPackage ./apex-containers {};
+
  apex-test-tools = self.callPackage ./apex-test-tools {};
 
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
@@ -368,6 +370,14 @@ self: super: {
 
  gmock-vendor = self.callPackage ./gmock-vendor {};
 
+ gps-msgs = self.callPackage ./gps-msgs {};
+
+ gps-tools = self.callPackage ./gps-tools {};
+
+ gps-umd = self.callPackage ./gps-umd {};
+
+ gpsd-client = self.callPackage ./gpsd-client {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  image-common = self.callPackage ./image-common {};
@@ -435,6 +445,20 @@ self: super: {
  logging-demo = self.callPackage ./logging-demo {};
 
  map-msgs = self.callPackage ./map-msgs {};
+
+ marti-can-msgs = self.callPackage ./marti-can-msgs {};
+
+ marti-common-msgs = self.callPackage ./marti-common-msgs {};
+
+ marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
+
+ marti-perception-msgs = self.callPackage ./marti-perception-msgs {};
+
+ marti-sensor-msgs = self.callPackage ./marti-sensor-msgs {};
+
+ marti-status-msgs = self.callPackage ./marti-status-msgs {};
+
+ marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
 
  message-filters = self.callPackage ./message-filters {};
 
@@ -847,6 +871,8 @@ self: super: {
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
  sick-scan2 = self.callPackage ./sick-scan2 {};
+
+ slam-toolbox = self.callPackage ./slam-toolbox {};
 
  slide-show = self.callPackage ./slide-show {};
 
