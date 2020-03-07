@@ -5,19 +5,19 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, pythonPackages, ros-environment, rosmake, rospack }:
 buildRosPackage {
   pname = "ros-melodic-roslib";
-  version = "1.14.7-r1";
+  version = "1.14.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/roslib/1.14.7-1.tar.gz";
-    name = "1.14.7-1.tar.gz";
-    sha256 = "68b6b424fda14f327baa17aa1a2417616b783851150561af13670b03e0f8e51d";
+    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/roslib/1.14.8-1.tar.gz";
+    name = "1.14.8-1.tar.gz";
+    sha256 = "b85d1a9f33ec7618c04a419d0402895cd7d2472e41243d231f1c6bde45ad4ea8";
   };
 
   buildType = "catkin";
   buildInputs = [ boost ];
   checkInputs = [ rosmake ];
   propagatedBuildInputs = [ catkin pythonPackages.rospkg ros-environment rospack ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''Base dependencies and support libraries for ROS.

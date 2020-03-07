@@ -2598,6 +2598,8 @@ self: super: {
 
  roscpp-traits = self.callPackage ./roscpp-traits {};
 
+ roscpp-tutorials = self.callPackage ./roscpp-tutorials {};
+
  roscreate = self.callPackage ./roscreate {};
 
  rosdiagnostic = self.callPackage ./rosdiagnostic {};
@@ -2621,6 +2623,8 @@ self: super: {
  roslang = self.callPackage ./roslang {};
 
  roslaunch = self.callPackage ./roslaunch {};
+
+ roslib = self.callPackage ./roslib {};
 
  roslint = self.callPackage ./roslint {};
 

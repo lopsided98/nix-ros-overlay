@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/boschresearch/ros1-tracetools-release/archive/release/kinetic/tracetools/0.2.1-0.tar.gz";
     name = "0.2.1-0.tar.gz";
-    sha256 = "0c51e131b0461a9aeb8822e368147433d331bbf9c972062f775d9f4e73a0636e";
+    sha256 = "59ed304f0ac9078e5b0875444b5594170921f29d35ba304a7f60f17eadd54f57";
   };
 
   buildType = "catkin";
