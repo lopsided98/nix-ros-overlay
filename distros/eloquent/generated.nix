@@ -122,6 +122,8 @@ self: super: {
 
  ament-uncrustify = self.callPackage ./ament-uncrustify {};
 
+ ament-virtualenv = self.callPackage ./ament-virtualenv {};
+
  ament-xmllint = self.callPackage ./ament-xmllint {};
 
  angles = self.callPackage ./angles {};

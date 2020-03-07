@@ -4,13 +4,13 @@
 
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages }:
 buildRosPackage {
-  pname = "ros-dashing-ament-virtualenv";
-  version = "0.0.5-r5";
+  pname = "ros-eloquent-ament-virtualenv";
+  version = "0.0.5-r6";
 
   src = fetchurl {
-    url = "https://github.com/esol-community/ament_virtualenv-release/archive/release/dashing/ament_virtualenv/0.0.5-5.tar.gz";
-    name = "0.0.5-5.tar.gz";
-    sha256 = "207b5fd15d46bfbf8d09f2c6600da42670307235202dc44cedddc7a13f9e7f9e";
+    url = "https://github.com/esol-community/ament_virtualenv-release/archive/release/eloquent/ament_virtualenv/0.0.5-6.tar.gz";
+    name = "0.0.5-6.tar.gz";
+    sha256 = "bc0bb431ff3059a5c8b0b7941880f70b0e54f3971cbbad59e58ed8f375678464";
   };
 
   buildType = "ament_python";
