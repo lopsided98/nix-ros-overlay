@@ -2556,6 +2556,8 @@ self: super: {
 
  rosauth = self.callPackage ./rosauth {};
 
+ rosbag = self.callPackage ./rosbag {};
+
  rosbag-editor = self.callPackage ./rosbag-editor {};
 
  rosbag-fancy = self.callPackage ./rosbag-fancy {};
@@ -2653,6 +2655,8 @@ self: super: {
  rosnode = self.callPackage ./rosnode {};
 
  rosout = self.callPackage ./rosout {};
+
+ rospack = self.callPackage ./rospack {};
 
  rosparam = self.callPackage ./rosparam {};
 
