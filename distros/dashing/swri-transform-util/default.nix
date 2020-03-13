@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, boost, cv-bridge, diagnostic-msgs, geographic-msgs, geometry-msgs, geos, gps-msgs, libyamlcpp, marti-nav-msgs, pkg-config, proj, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-swri-transform-util";
-  version = "3.0.4-r1";
+  version = "3.0.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_transform_util/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "859b4df313187c93fdef49a5bf89cb6c7a4b7ff85ba983872d18f4085ff6ce6e";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_transform_util/3.0.5-2.tar.gz";
+    name = "3.0.5-2.tar.gz";
+    sha256 = "316d4b56c77b7bb86c37f241a8048c466d93458acde86224175ec7b475bb9e68";
   };
 
   buildType = "ament_cmake";

@@ -276,6 +276,8 @@ self: super: {
 
  care-o-bot-simulation = self.callPackage ./care-o-bot-simulation {};
 
+ carla-msgs = self.callPackage ./carla-msgs {};
+
  carrot-planner = self.callPackage ./carrot-planner {};
 
  cartesian-msgs = self.callPackage ./cartesian-msgs {};
@@ -3215,6 +3217,8 @@ self: super: {
  pybind11-catkin = self.callPackage ./pybind11-catkin {};
 
  pyclearsilver = self.callPackage ./pyclearsilver {};
+
+ pyquaternion = self.callPackage ./pyquaternion {};
 
  pyros = self.callPackage ./pyros {};
 

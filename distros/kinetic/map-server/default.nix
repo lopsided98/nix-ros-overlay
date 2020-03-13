@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL, SDL_image, bullet, catkin, libyamlcpp, nav-msgs, roscpp, rospy, rostest, rosunit, tf2 }:
 buildRosPackage {
   pname = "ros-kinetic-map-server";
-  version = "1.14.5-r1";
+  version = "1.14.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.5-1.tar.gz";
-    name = "1.14.5-1.tar.gz";
-    sha256 = "e5fb03609a0fdc9f72eda300b47fc2acc5497c3a96d5524667f9154d9bfd6cd7";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.7-1.tar.gz";
+    name = "1.14.7-1.tar.gz";
+    sha256 = "10572b096dc4c4a9a799869593eaa8fb475020b9b883d69e2a9d756f70dae089";
   };
 
   buildType = "catkin";

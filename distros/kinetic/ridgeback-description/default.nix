@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-ridgeback-description";
-  version = "0.2.2";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/kinetic/ridgeback_description/0.2.2-0.tar.gz";
-    name = "0.2.2-0.tar.gz";
-    sha256 = "a37e75af1544fc229b6fce54be8e4916f275b7863909d03d66f1037fdf226f93";
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/kinetic/ridgeback_description/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "8ef0d000ef23e350b0a50674f7c6cfa5b76d2ac4e2c356ff9d98f809f718cd4c";
   };
 
   buildType = "catkin";

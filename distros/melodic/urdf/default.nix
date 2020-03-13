@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, pluginlib, rosconsole-bridge, roscpp, rostest, tinyxml, tinyxml-2, urdf-parser-plugin, urdfdom, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-melodic-urdf";
-  version = "1.13.1";
+  version = "1.13.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/urdf-release/archive/release/melodic/urdf/1.13.1-0.tar.gz";
-    name = "1.13.1-0.tar.gz";
-    sha256 = "2d16536bc8a59e01339b034539828f411245a3b170abc65d8e1f99f1305ae4f0";
+    url = "https://github.com/ros-gbp/urdf-release/archive/release/melodic/urdf/1.13.2-1.tar.gz";
+    name = "1.13.2-1.tar.gz";
+    sha256 = "476b4598a2a6d84da0a60fe3436d7f0b7fc8270c977b70eca24201f37529dbc3";
   };
 
   buildType = "catkin";

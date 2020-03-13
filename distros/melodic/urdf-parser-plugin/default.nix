@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-melodic-urdf-parser-plugin";
-  version = "1.13.1";
+  version = "1.13.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/urdf-release/archive/release/melodic/urdf_parser_plugin/1.13.1-0.tar.gz";
-    name = "1.13.1-0.tar.gz";
-    sha256 = "7031baf19ed479dcc35455fc5090a740ccc28592c8fd565154ea6556aa80f747";
+    url = "https://github.com/ros-gbp/urdf-release/archive/release/melodic/urdf_parser_plugin/1.13.2-1.tar.gz";
+    name = "1.13.2-1.tar.gz";
+    sha256 = "292e3a8dd2aa7672ef77ca49f1ef9ebc753f521c524f5fa6b4cfea324a2be13f";
   };
 
   buildType = "catkin";

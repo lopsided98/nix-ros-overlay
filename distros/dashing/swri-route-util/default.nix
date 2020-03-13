@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, marti-common-msgs, marti-nav-msgs, rclcpp, swri-geometry-util, swri-math-util, swri-roscpp, swri-transform-util, visualization-msgs }:
 buildRosPackage {
   pname = "ros-dashing-swri-route-util";
-  version = "3.0.4-r1";
+  version = "3.0.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_route_util/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "7a7f1f03e7312d3ca8d08bbaf727ad68842d180f0383d052b6240948f8d10d93";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_route_util/3.0.5-2.tar.gz";
+    name = "3.0.5-2.tar.gz";
+    sha256 = "5330ea2c8509c8aa64b02ed68d8ef61c9b31ae1fca5890e97ea95d2b44a10edd";
   };
 
   buildType = "ament_cmake";

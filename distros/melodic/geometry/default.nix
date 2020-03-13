@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, eigen-conversions, kdl-conversions, tf, tf-conversions }:
 buildRosPackage {
   pname = "ros-melodic-geometry";
-  version = "1.12.0";
+  version = "1.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/melodic/geometry/1.12.0-0.tar.gz";
-    name = "1.12.0-0.tar.gz";
-    sha256 = "6e5e79d8157d16ce6c27bc7b8f1e8411f0fea3a01698f69962746ec4af80e44d";
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/melodic/geometry/1.12.1-1.tar.gz";
+    name = "1.12.1-1.tar.gz";
+    sha256 = "6c8b032a8095842fb79e21e2c07aa440e71193130702a637dd46ea02e34166a4";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, geometry-msgs, hardware-interface, pluginlib, realtime-tools, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-force-torque-sensor-controller";
-  version = "0.15.0";
+  version = "0.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/force_torque_sensor_controller/0.15.0-0.tar.gz";
-    name = "0.15.0-0.tar.gz";
-    sha256 = "5d2aede75983ca4789ab54a5b688500a58decd441e38582bc0d80999ee595786";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/force_torque_sensor_controller/0.15.1-1.tar.gz";
+    name = "0.15.1-1.tar.gz";
+    sha256 = "0d79ee174d2afda41b87f1a13683d7d1b31c1e6671162cdc351d381f19d74414";
   };
 
   buildType = "catkin";

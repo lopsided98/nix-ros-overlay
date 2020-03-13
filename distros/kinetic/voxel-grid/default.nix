@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-voxel-grid";
-  version = "1.14.5-r1";
+  version = "1.14.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/voxel_grid/1.14.5-1.tar.gz";
-    name = "1.14.5-1.tar.gz";
-    sha256 = "7fb2bb109e7d90a4ea87e5b06a0f4b5ea4bcd24ced4889bf6dda890256ec1f4f";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/voxel_grid/1.14.7-1.tar.gz";
+    name = "1.14.7-1.tar.gz";
+    sha256 = "196d4dd37ddc4324010f8421244edaf619626843a0e70b967c8a84a0fa785b51";
   };
 
   buildType = "catkin";

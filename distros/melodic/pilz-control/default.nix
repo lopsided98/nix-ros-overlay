@@ -2,21 +2,21 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, code-coverage, controller-interface, controller-manager, joint-trajectory-controller, roscpp, roslint, rostest, std-srvs }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, code-coverage, controller-interface, controller-manager, joint-trajectory-controller, pilz-utils, roscpp, roslint, rostest, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-pilz-control";
-  version = "0.5.13-r1";
+  version = "0.5.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_control/0.5.13-1.tar.gz";
-    name = "0.5.13-1.tar.gz";
-    sha256 = "40dcf2a7df405b67e00744e0126579b9039d327de55401f69e2448649e3021b9";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_control/0.5.14-1.tar.gz";
+    name = "0.5.14-1.tar.gz";
+    sha256 = "d6c277a94b8bd6a12f2b867829cdaaebc8bf177bc5cb5f019e93ba6aae2bafa7";
   };
 
   buildType = "catkin";
   buildInputs = [ cmake-modules roslint ];
   checkInputs = [ code-coverage rostest ];
-  propagatedBuildInputs = [ controller-interface controller-manager joint-trajectory-controller roscpp std-srvs ];
+  propagatedBuildInputs = [ controller-interface controller-manager joint-trajectory-controller pilz-utils roscpp std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

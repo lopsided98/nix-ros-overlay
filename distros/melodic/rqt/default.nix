@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rqt-gui, rqt-gui-cpp, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-melodic-rqt";
-  version = "0.5.0";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt-release/archive/release/melodic/rqt/0.5.0-0.tar.gz";
-    name = "0.5.0-0.tar.gz";
-    sha256 = "0838063390001fcb552096bd5a6827aae9bb3105855cbdf0c2a3105a25851e67";
+    url = "https://github.com/ros-gbp/rqt-release/archive/release/melodic/rqt/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "1ed513439e34e85c1e1753637fcf442f9a9b605dc307f6655815246afbe64cb9";
   };
 
   buildType = "catkin";

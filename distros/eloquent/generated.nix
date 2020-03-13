@@ -396,6 +396,10 @@ self: super: {
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
+ joint-state-publisher = self.callPackage ./joint-state-publisher {};
+
+ joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
+
  joy = self.callPackage ./joy {};
 
  joy-teleop = self.callPackage ./joy-teleop {};
@@ -896,6 +900,30 @@ self: super: {
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
 
+ swri-console-util = self.callPackage ./swri-console-util {};
+
+ swri-dbw-interface = self.callPackage ./swri-dbw-interface {};
+
+ swri-geometry-util = self.callPackage ./swri-geometry-util {};
+
+ swri-image-util = self.callPackage ./swri-image-util {};
+
+ swri-math-util = self.callPackage ./swri-math-util {};
+
+ swri-opencv-util = self.callPackage ./swri-opencv-util {};
+
+ swri-prefix-tools = self.callPackage ./swri-prefix-tools {};
+
+ swri-roscpp = self.callPackage ./swri-roscpp {};
+
+ swri-route-util = self.callPackage ./swri-route-util {};
+
+ swri-serial-util = self.callPackage ./swri-serial-util {};
+
+ swri-system-util = self.callPackage ./swri-system-util {};
+
+ swri-transform-util = self.callPackage ./swri-transform-util {};
+
  system-modes = self.callPackage ./system-modes {};
 
  system-modes-examples = self.callPackage ./system-modes-examples {};
@@ -967,6 +995,8 @@ self: super: {
  urdfdom = self.callPackage ./urdfdom {};
 
  urdfdom-headers = self.callPackage ./urdfdom-headers {};
+
+ urdfdom-py = self.callPackage ./urdfdom-py {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
 

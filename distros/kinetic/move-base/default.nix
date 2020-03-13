@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, base-local-planner, catkin, clear-costmap-recovery, cmake-modules, costmap-2d, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, move-base-msgs, nav-core, nav-msgs, navfn, pluginlib, roscpp, rospy, rotate-recovery, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-move-base";
-  version = "1.14.5-r1";
+  version = "1.14.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/move_base/1.14.5-1.tar.gz";
-    name = "1.14.5-1.tar.gz";
-    sha256 = "42e5d6a18400f4eb4253f2616d09de15705e60a31cc8f6cb92cc2033c7409114";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/move_base/1.14.7-1.tar.gz";
+    name = "1.14.7-1.tar.gz";
+    sha256 = "d42486eb340811edaac1ef1df4b3daf49d9b36dfd59f5e450ee36030bdacee90";
   };
 
   buildType = "catkin";

@@ -2096,6 +2096,8 @@ self: super: {
 
  pilz-robots = self.callPackage ./pilz-robots {};
 
+ pilz-status-indicator-rqt = self.callPackage ./pilz-status-indicator-rqt {};
+
  pilz-testutils = self.callPackage ./pilz-testutils {};
 
  pilz-trajectory-generation = self.callPackage ./pilz-trajectory-generation {};
@@ -2322,6 +2324,10 @@ self: super: {
 
  qpmad = self.callPackage ./qpmad {};
 
+ qt-build = self.callPackage ./qt-build {};
+
+ qt-create = self.callPackage ./qt-create {};
+
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
 
  qt-gui = self.callPackage ./qt-gui {};
@@ -2335,6 +2341,10 @@ self: super: {
  qt-gui-py-common = self.callPackage ./qt-gui-py-common {};
 
  qt-qmake = self.callPackage ./qt-qmake {};
+
+ qt-ros = self.callPackage ./qt-ros {};
+
+ qt-tutorials = self.callPackage ./qt-tutorials {};
 
  quaternion-operation = self.callPackage ./quaternion-operation {};
 
@@ -2777,6 +2787,8 @@ self: super: {
  rqt-image-view = self.callPackage ./rqt-image-view {};
 
  rqt-joint-trajectory-controller = self.callPackage ./rqt-joint-trajectory-controller {};
+
+ rqt-joint-trajectory-plot = self.callPackage ./rqt-joint-trajectory-plot {};
 
  rqt-launch = self.callPackage ./rqt-launch {};
 

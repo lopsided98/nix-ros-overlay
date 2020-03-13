@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, libusb }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, libpng, libusb }:
 buildRosPackage {
   pname = "ros-kinetic-rc-genicam-api";
-  version = "2.2.3-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/kinetic/rc_genicam_api/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "122f4c42b5a0e84d0c2560388a9c494456cf082fab861a3065a51a8a625adecd";
+    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/kinetic/rc_genicam_api/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "8f84ab4363271afc4a164a9327ce64d2429b03561a75c77c262f607fc4d2c758";
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ catkin libusb ];
+  propagatedBuildInputs = [ catkin libpng libusb ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
