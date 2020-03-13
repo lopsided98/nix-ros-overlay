@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, netpbm, pcl-conversions, pcl-ros, pluginlib, rosconsole, roscpp, rosunit, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-navfn";
-  version = "1.14.5-r1";
+  version = "1.14.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navfn/1.14.5-1.tar.gz";
-    name = "1.14.5-1.tar.gz";
-    sha256 = "8f607f68d59f3f3639d85c5f28aeda8d49eee123c3da42ef0d91d35a2c6bbb32";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navfn/1.14.7-1.tar.gz";
+    name = "1.14.7-1.tar.gz";
+    sha256 = "578ac9c4199111b36c901acdf713ed687b0bcab49e71038970ae0c10196f3bfd";
   };
 
   buildType = "catkin";

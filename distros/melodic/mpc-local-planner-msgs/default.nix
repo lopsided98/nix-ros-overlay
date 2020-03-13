@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mpc-local-planner-msgs";
-  version = "0.0.1-r2";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/mpc_local_planner-release/archive/release/melodic/mpc_local_planner_msgs/0.0.1-2.tar.gz";
-    name = "0.0.1-2.tar.gz";
-    sha256 = "2589b79d0482d0214b7fa7d90f191f554a11a120319588ac8c875b678890a85c";
+    url = "https://github.com/rst-tu-dortmund/mpc_local_planner-release/archive/release/melodic/mpc_local_planner_msgs/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "ee9966e8bd7b011c4f2f44d7aaf71bb61cf781fcb76b04b694c95b8063758823";
   };
 
   buildType = "catkin";

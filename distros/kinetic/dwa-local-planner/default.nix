@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, cmake-modules, costmap-2d, dynamic-reconfigure, eigen, nav-core, nav-msgs, pcl-conversions, pluginlib, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-dwa-local-planner";
-  version = "1.14.5-r1";
+  version = "1.14.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/dwa_local_planner/1.14.5-1.tar.gz";
-    name = "1.14.5-1.tar.gz";
-    sha256 = "7f86aa2ffc55815d90a68c88001f515917ea3e95d33b57ab278051e28f8db12e";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/dwa_local_planner/1.14.7-1.tar.gz";
+    name = "1.14.7-1.tar.gz";
+    sha256 = "454f2fb9179db45dfda1b492f6427b8df66ff4b960034b03eb197af7ecaa6ab7";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, geometry-msgs, graphviz, message-filters, message-generation, message-runtime, rosconsole, roscpp, rostest, rostime, rosunit, roswtf, sensor-msgs, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-tf";
-  version = "1.12.0";
+  version = "1.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/melodic/tf/1.12.0-0.tar.gz";
-    name = "1.12.0-0.tar.gz";
-    sha256 = "00d706fa94be4c4348556e8985dae8be407e76aae3f767e92dbd35e206f5ab03";
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/melodic/tf/1.12.1-1.tar.gz";
+    name = "1.12.1-1.tar.gz";
+    sha256 = "49b7cc26908b03a7d035a88b238b11a86d31648559e488fbfae09d3a0696efbe";
   };
 
   buildType = "catkin";

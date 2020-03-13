@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, geometry-msgs, nav-core, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-move-slow-and-clear";
-  version = "1.14.5-r1";
+  version = "1.14.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/move_slow_and_clear/1.14.5-1.tar.gz";
-    name = "1.14.5-1.tar.gz";
-    sha256 = "0095dfefff660fcf940441ed5ef62952ff939c0ecb4d6dd4ac67e6a4b3feaf0f";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/move_slow_and_clear/1.14.7-1.tar.gz";
+    name = "1.14.7-1.tar.gz";
+    sha256 = "0a2e9e5d13ec5dc7229380eab292aa452912897b52b88bdcff7e65fecac3f9fd";
   };
 
   buildType = "catkin";

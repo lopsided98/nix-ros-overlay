@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, catkin, gmapping, map-server, move-base, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-ridgeback-navigation";
-  version = "0.2.2";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/kinetic/ridgeback_navigation/0.2.2-0.tar.gz";
-    name = "0.2.2-0.tar.gz";
-    sha256 = "2f8b096bdb890d3ebe3b4dc31039075bd226a65530ba3f0b83c49192ddf8dbf3";
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/kinetic/ridgeback_navigation/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "18273e840f81adf57ee604a903ad385130ce4fdc4fa0683fad54e50659f8092a";
   };
 
   buildType = "catkin";

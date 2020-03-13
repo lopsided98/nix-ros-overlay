@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, ifm3d-core, image-transport, message-generation, nodelet, pcl-ros, roscpp, rospy, rostest, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-ifm3d";
-  version = "0.6.2-r1";
+  version = "0.6.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ifm/ifm3d-ros-release/archive/release/kinetic/ifm3d/0.6.2-1.tar.gz";
-    name = "0.6.2-1.tar.gz";
-    sha256 = "00f12ec49d8d480b19b46b5c4d5ef8cc8246b5f347d6220ed3f265fe0ee30de4";
+    url = "https://github.com/ifm/ifm3d-ros-release/archive/release/kinetic/ifm3d/0.6.2-2.tar.gz";
+    name = "0.6.2-2.tar.gz";
+    sha256 = "267cdb74a0407c2b0e27a4ff91d596023579fa2d241ef2bdb04e294d88fa8f82";
   };
 
   buildType = "catkin";

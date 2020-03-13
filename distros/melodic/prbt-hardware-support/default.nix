@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, canopen-chain-node, catkin, cmake-modules, code-coverage, dynamic-reconfigure, libmodbus, message-filters, message-generation, message-runtime, pilz-msgs, pilz-testutils, pilz-utils, roscpp, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-melodic-prbt-hardware-support";
-  version = "0.5.13-r1";
+  version = "0.5.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_hardware_support/0.5.13-1.tar.gz";
-    name = "0.5.13-1.tar.gz";
-    sha256 = "bb949d904d7bd6ec6a352b6db288d598f49ad60dd7d1a2ae3bf061df5c53518b";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_hardware_support/0.5.14-1.tar.gz";
+    name = "0.5.14-1.tar.gz";
+    sha256 = "d726c347c6a26e1fd16d2a1518f19daf16779b15faf21a277d9f09aec3ad013f";
   };
 
   buildType = "catkin";

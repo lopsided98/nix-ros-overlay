@@ -434,6 +434,10 @@ self: super: {
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
+ joint-state-publisher = self.callPackage ./joint-state-publisher {};
+
+ joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
+
  joy = self.callPackage ./joy {};
 
  joy-teleop = self.callPackage ./joy-teleop {};
@@ -1059,6 +1063,8 @@ self: super: {
  urdfdom = self.callPackage ./urdfdom {};
 
  urdfdom-headers = self.callPackage ./urdfdom-headers {};
+
+ urdfdom-py = self.callPackage ./urdfdom-py {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
 

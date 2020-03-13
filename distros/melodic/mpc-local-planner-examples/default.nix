@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, amcl, catkin, map-server, move-base, mpc-local-planner, stage-ros }:
+{ lib, buildRosPackage, fetchurl, amcl, catkin, map-server, move-base, mpc-local-planner, mpc-local-planner-msgs, stage-ros }:
 buildRosPackage {
   pname = "ros-melodic-mpc-local-planner-examples";
-  version = "0.0.1-r2";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/mpc_local_planner-release/archive/release/melodic/mpc_local_planner_examples/0.0.1-2.tar.gz";
-    name = "0.0.1-2.tar.gz";
-    sha256 = "b9f4eac97f3a645144e828e8e1f7fd8a3c127562b1f9ab4320dfa25dec8fab2f";
+    url = "https://github.com/rst-tu-dortmund/mpc_local_planner-release/archive/release/melodic/mpc_local_planner_examples/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "cd714dbefccd4740cc76657dc09776e1a243664df04c01f46b7434f4abc5aaaf";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ amcl map-server move-base mpc-local-planner stage-ros ];
+  propagatedBuildInputs = [ amcl map-server move-base mpc-local-planner mpc-local-planner-msgs stage-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

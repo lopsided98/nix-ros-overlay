@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, control-box-rst, costmap-2d, costmap-converter, dynamic-reconfigure, eigen, geometry-msgs, interactive-markers, mbf-costmap-core, mbf-msgs, mpc-local-planner-msgs, nav-core, nav-msgs, pluginlib, roscpp, std-msgs, teb-local-planner, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mpc-local-planner";
-  version = "0.0.1-r2";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/mpc_local_planner-release/archive/release/melodic/mpc_local_planner/0.0.1-2.tar.gz";
-    name = "0.0.1-2.tar.gz";
-    sha256 = "412bcbb02d2232ba66f7a7049196f8f9c2f31356c6e4282b5f72535edf5066ba";
+    url = "https://github.com/rst-tu-dortmund/mpc_local_planner-release/archive/release/melodic/mpc_local_planner/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "3bd8496e1c349125dbdc73f1db4c3003d2d294f3387cc369944f502ed6621e45";
   };
 
   buildType = "catkin";

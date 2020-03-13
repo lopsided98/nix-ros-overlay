@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-swri-console-util";
-  version = "3.0.4-r1";
+  version = "3.0.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_console_util/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "6142cc9246f94e547bdadfa4caba870ffbbee81799554fe13773be7682f8d60a";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_console_util/3.0.5-2.tar.gz";
+    name = "3.0.5-2.tar.gz";
+    sha256 = "cfbc0c6cdfd5bab294fbd579b026011c22820b648690330e58e5de7ca9dae754";
   };
 
   buildType = "ament_cmake";

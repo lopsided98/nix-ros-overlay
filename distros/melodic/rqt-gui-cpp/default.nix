@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, qt-gui, qt-gui-cpp, qt5, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-rqt-gui-cpp";
-  version = "0.5.0";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt-release/archive/release/melodic/rqt_gui_cpp/0.5.0-0.tar.gz";
-    name = "0.5.0-0.tar.gz";
-    sha256 = "29dd122311b73050bde2957210a6523688298a3c1993833b78ef18b80a671603";
+    url = "https://github.com/ros-gbp/rqt-release/archive/release/melodic/rqt_gui_cpp/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "87b9fca3c031833debaa4a04e27c2470d34e242ff919198a34956ba5810052d5";
   };
 
   buildType = "catkin";
