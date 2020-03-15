@@ -22,20 +22,20 @@
   "author": "Ben Wolsieffer",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/exec": "^1.0.1",
-    "@actions/io": "^1.0.1",
-    "p-limit": "^2.2.1",
+    "@actions/core": "^1.2.3",
+    "@actions/exec": "^1.0.3",
+    "@actions/io": "^1.0.2",
+    "@types/node-fetch": "^2.5.5",
     "node-fetch": "^2.6.0",
-    "@types/node-fetch": "^2.5.4"
+    "p-limit": "^2.2.2"
   },
   "devDependencies": {
-    "@types/node": "^12.7.12",
-    "@typescript-eslint/parser": "^2.8.0",
-    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@types/node": "^12.12.30",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
     "@zeit/ncc": "^0.20.5",
     "eslint": "^5.16.0",
     "js-yaml": "^3.13.1",
-    "typescript": "^3.7.3"
+    "typescript": "^3.8.3"
   }
 }
