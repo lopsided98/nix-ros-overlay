@@ -1074,9 +1074,9 @@ class PackageSet {
     buildPackage(attr) {
         return __awaiter(this, void 0, void 0, function* () {
             core.debug(`Instantiating ${attr}`);
-            let drvPath;
+            let drvPaths;
             try {
-                drvPath = yield nix.instantiate(this.nixFile, attr, this.drvDir);
+                drvPaths = yield nix.instantiate(this.nixFile, attr, this.drvDir);
             }
             catch (e) {
                 core.debug(`${attr} failed to evaluate`);
@@ -1085,7 +1085,13 @@ class PackageSet {
                     attr, message: e
                 };
             }
-            drvPath = yield fs.promises.realpath(drvPath);
+            if (drvPaths.length != 1) {
+                return {
+                    status: 2 /* EVALUATION_FAILURE */,
+                    attr, message: `Attribute evaluated to ${drvPaths.length} derivations`
+                };
+            }
+            let drvPath = yield fs.promises.realpath(drvPaths[0]);
             const requisites = yield nix.getRequisites(drvPath);
             const failedRequisiteAttrs = requisites
                 .map(d => this.failedPackages.get(d))
@@ -1313,11 +1319,11 @@ exports.printLog = printLog;
 function instantiate(file, attribute, drvDir) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const { stdout: drvPath } = yield execFile('nix-instantiate', [
+            const { stdout: drvPaths } = yield execFile('nix-instantiate', [
                 file, '-A', attribute,
                 '--add-root', path.join(drvDir, attribute), '--indirect'
             ]);
-            return drvPath.trim();
+            return parseLines(drvPaths);
         }
         catch (e) {
             throw e.stderr;

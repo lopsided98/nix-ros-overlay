@@ -1,7 +1,6 @@
 import * as path from 'path'
 import * as fs from 'fs'
 import * as core from '@actions/core'
-import * as exec from '@actions/exec'
 import * as io from '@actions/io'
 import * as pLimit from 'p-limit'
 import * as nix from './nix'
@@ -46,9 +45,9 @@ class PackageSet {
 
   private async buildPackage(attr: string): Promise<BuildResult> {
     core.debug(`Instantiating ${attr}`)
-    let drvPath: string
+    let drvPaths: Array<string>
     try {
-      drvPath = await nix.instantiate(this.nixFile, attr, this.drvDir)
+      drvPaths = await nix.instantiate(this.nixFile, attr, this.drvDir)
     } catch (e) {
       core.debug(`${attr} failed to evaluate`)
       return {
@@ -56,7 +55,13 @@ class PackageSet {
         attr, message: e
       }
     }
-    drvPath = await fs.promises.realpath(drvPath)
+    if (drvPaths.length != 1) {
+      return {
+        status: BuildStatus.EVALUATION_FAILURE,
+        attr, message: `Attribute evaluated to ${drvPaths.length} derivations`
+      }
+    }
+    let drvPath = await fs.promises.realpath(drvPaths[0])
 
     const requisites = await nix.getRequisites(drvPath)
     const failedRequisiteAttrs = requisites

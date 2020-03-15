@@ -74,13 +74,13 @@ export async function instantiate(
   file: string,
   attribute: string,
   drvDir: string
-): Promise<string> {
+): Promise<Array<string>> {
   try {
-    const { stdout: drvPath } = await execFile('nix-instantiate', [
+    const { stdout: drvPaths } = await execFile('nix-instantiate', [
       file, '-A', attribute,
       '--add-root', path.join(drvDir, attribute), '--indirect'
     ])
-    return drvPath.trim()
+    return parseLines(drvPaths)
   } catch (e) {
     throw e.stderr
   }
