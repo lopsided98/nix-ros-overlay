@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cob-perception-msgs, cv-bridge, geometry-msgs, image-transport, nodelet, opencv3, pcl-conversions, pcl-ros, pluginlib, roscpp, sensor-msgs, stereo-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-cob-image-flip";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_image_flip/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "a75ea8e5dfca1653e7b14e9df4be8714858decb9898bc20059a68b85eadf8cc0";
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_image_flip/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "24d907e7083a5b2ee4a371925916f47eb003126769cd4541f0a78474df057c49";
   };
 
   buildType = "catkin";

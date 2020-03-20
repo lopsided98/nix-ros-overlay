@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-libreflexxestype2";
-  version = "0.9.0-r1";
+  version = "0.8.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/melodic/libreflexxestype2/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "feda77d853652f9dff5e1e0e2df972c45916ade312570696cf789d1c6ec02a6c";
+    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/melodic/libreflexxestype2/0.8.8-1.tar.gz";
+    name = "0.8.8-1.tar.gz";
+    sha256 = "ff69ec96c35d48bc4b768dc25812ea2dbece052f25a8d3de96f5460296eb0ccf";
   };
 
   buildType = "catkin";

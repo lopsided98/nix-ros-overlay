@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cob-actions, cob-light, cob-script-server, cob-sound, geometry-msgs, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-cob-teleop";
-  version = "0.6.15-r1";
+  version = "0.6.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_teleop/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "47c3e837841c74f8c931e2ec96410a6fb3a0e4233a1028570b0401a27d59d598";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_teleop/0.6.16-1.tar.gz";
+    name = "0.6.16-1.tar.gz";
+    sha256 = "6d732c435142eeacd23a80acd230566100acddc4d063b23ed6a9e1f751340b8e";
   };
 
   buildType = "catkin";

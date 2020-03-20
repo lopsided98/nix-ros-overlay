@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, base-local-planner, catkin, cmake-modules, costmap-2d, eigen, geometry-msgs, nav-core, pluginlib, roscpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-rotate-recovery";
-  version = "1.16.4-r1";
+  version = "1.16.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/rotate_recovery/1.16.4-1.tar.gz";
-    name = "1.16.4-1.tar.gz";
-    sha256 = "c3ebcc10979748845b2040068e39e88066c03f86aaab42ba9cd7112d1c4b2c03";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/rotate_recovery/1.16.5-1.tar.gz";
+    name = "1.16.5-1.tar.gz";
+    sha256 = "7d71affe33fe0698ca2ef2eac6b7184ae1444df0f691a45613b274a20be04df6";
   };
 
   buildType = "catkin";

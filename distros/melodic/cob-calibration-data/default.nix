@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-supported-robots, xacro }:
 buildRosPackage {
   pname = "ros-melodic-cob-calibration-data";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_calibration_data-release/archive/release/melodic/cob_calibration_data/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "9af7547788449e0127ace2c0c938cfba0efcc3cb874d28769e3864d59f0e9838";
+    url = "https://github.com/ipa320/cob_calibration_data-release/archive/release/melodic/cob_calibration_data/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "69c652f79ead3069950b9f9ad46a70362ff79682853b65962c652914c1d16a3b";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, geometry-msgs, map-server, message-filters, nav-msgs, python-orocos-kdl, rosbag, roscpp, rostest, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-amcl";
-  version = "1.16.4-r1";
+  version = "1.16.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/amcl/1.16.4-1.tar.gz";
-    name = "1.16.4-1.tar.gz";
-    sha256 = "d03da5a74803e6f6c7968e1358074891637da8946e2208898097bdec44a19b37";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/amcl/1.16.5-1.tar.gz";
+    name = "1.16.5-1.tar.gz";
+    sha256 = "31ed6f2fa24e842e9db6d4860e5cfa280d86466c3eb429462b9b361ca0e3c6a6";
   };
 
   buildType = "catkin";

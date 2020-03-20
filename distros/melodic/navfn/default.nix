@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, netpbm, pluginlib, rosconsole, roscpp, rosunit, sensor-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-navfn";
-  version = "1.16.4-r1";
+  version = "1.16.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/navfn/1.16.4-1.tar.gz";
-    name = "1.16.4-1.tar.gz";
-    sha256 = "8ca907d6880447afde6555eb906b0b2c2d99b97ca3460a945b71e642b0e2ea0c";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/navfn/1.16.5-1.tar.gz";
+    name = "1.16.5-1.tar.gz";
+    sha256 = "624d80b13e17898bfff8ca0e9776fa8f0ebe0fd80d9f4040667e944d60fd62b2";
   };
 
   buildType = "catkin";

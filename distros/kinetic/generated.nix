@@ -3490,6 +3490,8 @@ self: super: {
 
  robot-controllers-msgs = self.callPackage ./robot-controllers-msgs {};
 
+ robot-indicator = self.callPackage ./robot-indicator {};
+
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-mechanism-controllers = self.callPackage ./robot-mechanism-controllers {};

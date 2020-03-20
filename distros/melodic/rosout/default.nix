@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rosgraph-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosout";
-  version = "1.14.4-r1";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosout/1.14.4-1.tar.gz";
-    name = "1.14.4-1.tar.gz";
-    sha256 = "798e3dbfec8d074158bc178e527234ac2f8caa21524f6c7ed25670d0a514a44a";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosout/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "364440c03fbc6835577b9dc710a7e9eacd246bc11424ecbe75ac2d8c8db605e5";
   };
 
   buildType = "catkin";

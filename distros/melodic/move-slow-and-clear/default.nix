@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, geometry-msgs, nav-core, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-move-slow-and-clear";
-  version = "1.16.4-r1";
+  version = "1.16.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/move_slow_and_clear/1.16.4-1.tar.gz";
-    name = "1.16.4-1.tar.gz";
-    sha256 = "c7d3b70b5e4b7819281982f5002090f2d8c3910079c32c23d8ab52faa31c8596";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/move_slow_and_clear/1.16.5-1.tar.gz";
+    name = "1.16.5-1.tar.gz";
+    sha256 = "729fb7ba60cc55cdb265843e46d3d821ef9a3f74290051df79b0dbffcdf44ecc";
   };
 
   buildType = "catkin";

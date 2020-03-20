@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, base-local-planner, catkin, clear-costmap-recovery, cmake-modules, costmap-2d, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, move-base-msgs, nav-core, nav-msgs, navfn, pluginlib, roscpp, rospy, rotate-recovery, std-srvs, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-move-base";
-  version = "1.16.4-r1";
+  version = "1.16.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/move_base/1.16.4-1.tar.gz";
-    name = "1.16.4-1.tar.gz";
-    sha256 = "bcbd72e91c8fa918793de71abd05348116a0971f835b5878ca1becb6634f791c";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/move_base/1.16.5-1.tar.gz";
+    name = "1.16.5-1.tar.gz";
+    sha256 = "bcbf22ee17a865bbed322c6849a243f02460468cdbbfc99434b13dac3bee5584";
   };
 
   buildType = "catkin";

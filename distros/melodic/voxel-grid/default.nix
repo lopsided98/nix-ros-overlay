@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-voxel-grid";
-  version = "1.16.4-r1";
+  version = "1.16.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/voxel_grid/1.16.4-1.tar.gz";
-    name = "1.16.4-1.tar.gz";
-    sha256 = "fc8932c039bd8e1f25461510504ae536da91256634d0b3bd31881dca0aa9afdc";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/voxel_grid/1.16.5-1.tar.gz";
+    name = "1.16.5-1.tar.gz";
+    sha256 = "6dcf7076c4175966170938ecf8bf1c1650c8ce95d897aa9a9255ea5aa7c354aa";
   };
 
   buildType = "catkin";

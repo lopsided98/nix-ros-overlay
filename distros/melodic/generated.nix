@@ -368,6 +368,8 @@ self: super: {
 
  cob-mapping-slam = self.callPackage ./cob-mapping-slam {};
 
+ cob-mecanum-controller = self.callPackage ./cob-mecanum-controller {};
+
  cob-mimic = self.callPackage ./cob-mimic {};
 
  cob-model-identifier = self.callPackage ./cob-model-identifier {};
@@ -1277,6 +1279,8 @@ self: super: {
  jackal-viz = self.callPackage ./jackal-viz {};
 
  jderobot-assets = self.callPackage ./jderobot-assets {};
+
+ jderobot-camviz = self.callPackage ./jderobot-camviz {};
 
  jderobot-color-tuner = self.callPackage ./jderobot-color-tuner {};
 
@@ -2895,6 +2899,8 @@ self: super: {
  sbpl-lattice-planner = self.callPackage ./sbpl-lattice-planner {};
 
  sbpl-recovery = self.callPackage ./sbpl-recovery {};
+
+ scenario-test-tools = self.callPackage ./scenario-test-tools {};
 
  scheduler-msgs = self.callPackage ./scheduler-msgs {};
 

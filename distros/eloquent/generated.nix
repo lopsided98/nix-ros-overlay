@@ -998,6 +998,8 @@ self: super: {
 
  urdfdom-py = self.callPackage ./urdfdom-py {};
 
+ urg-node-msgs = self.callPackage ./urg-node-msgs {};
+
  v4l2-camera = self.callPackage ./v4l2-camera {};
 
  velocity-smoother = self.callPackage ./velocity-smoother {};

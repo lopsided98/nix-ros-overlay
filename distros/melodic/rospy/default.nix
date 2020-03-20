@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genpy, pythonPackages, roscpp, rosgraph, rosgraph-msgs, roslib, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rospy";
-  version = "1.14.4-r1";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rospy/1.14.4-1.tar.gz";
-    name = "1.14.4-1.tar.gz";
-    sha256 = "e0bf020cc8a6e4e55c9fb5cd0f427d9d89800ebb8129e0e30831c6452eb80f12";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rospy/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "1d4ffc44a7a048e2df92a40675a89ec597c5d98c6d4f5ddb34763f0bdd8953c1";
   };
 
   buildType = "catkin";

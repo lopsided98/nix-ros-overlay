@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, python3Packages, rosidl-adapter, rosidl-parser }:
 buildRosPackage {
   pname = "ros-dashing-rosidl-cmake";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/dashing/rosidl_cmake/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "90754adaacb0883fba1a37ea6412e29f520214f050664a0338906c02f7ad1cd7";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/dashing/rosidl_cmake/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "4487d4f50642cd260d17b0c84807ca1fe9ce48f756e2277e833786983332e806";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gmapping, openslam-gmapping }:
 buildRosPackage {
   pname = "ros-melodic-slam-gmapping";
-  version = "1.4.0-r1";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/slam_gmapping-release/archive/release/melodic/slam_gmapping/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "4adbd05d0930a653589ec957ec87bc93075f2372e08fc8c4b2514b88423fad0b";
+    url = "https://github.com/ros-gbp/slam_gmapping-release/archive/release/melodic/slam_gmapping/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "8ed5a534e68076a909ce36d5ba2f351e362738ab42d433e00a4ac8ffc1aaadb6";
   };
 
   buildType = "catkin";

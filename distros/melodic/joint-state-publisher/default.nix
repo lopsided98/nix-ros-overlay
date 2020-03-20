@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-joint-state-publisher";
-  version = "1.12.14-r1";
+  version = "1.12.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/joint_state_publisher-release/archive/release/melodic/joint_state_publisher/1.12.14-1.tar.gz";
-    name = "1.12.14-1.tar.gz";
-    sha256 = "b2c30af5afd1e6796feb427ae60526e4485a3dfc565502814bed9bdf73a71e14";
+    url = "https://github.com/ros-gbp/joint_state_publisher-release/archive/release/melodic/joint_state_publisher/1.12.15-1.tar.gz";
+    name = "1.12.15-1.tar.gz";
+    sha256 = "623eb3bb3613bfd2a6b61ab1a631e6927450b41ef2a4871b044925b7c60aeaf3";
   };
 
   buildType = "catkin";

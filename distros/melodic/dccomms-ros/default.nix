@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, dccomms-ros-msgs, git, message-generation, message-runtime, roscpp, rospy, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-dccomms-ros";
-  version = "0.0.2-r3";
+  version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/dcentelles/dccomms_ros_pkgs-release/archive/release/melodic/dccomms_ros/0.0.2-3.tar.gz";
-    name = "0.0.2-3.tar.gz";
-    sha256 = "21186c2bbba1b93a960a28d092b9f9cf3a0a678bffde2fa2c673ed1b51fd1ff1";
+    url = "https://github.com/dcentelles/dccomms_ros_pkgs-release/archive/release/melodic/dccomms_ros/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
+    sha256 = "9c82b3dcef96d0211f6267f3c6f9bdc87c0d127a2607240f102c17cd65f5a010";
   };
 
   buildType = "catkin";

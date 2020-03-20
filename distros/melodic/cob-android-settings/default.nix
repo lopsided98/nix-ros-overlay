@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-cob-android-settings";
-  version = "0.1.6-r1";
+  version = "0.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_android-release/archive/release/melodic/cob_android_settings/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "59602692b35e9a17cc5379696012c86046d51533d3f7900e822ef5b1316336e5";
+    url = "https://github.com/ipa320/cob_android-release/archive/release/melodic/cob_android_settings/0.1.7-1.tar.gz";
+    name = "0.1.7-1.tar.gz";
+    sha256 = "34afaa2a6946c228340eafa3515b36c4dbbd2593c3cd19781086ee1471414cff";
   };
 
   buildType = "catkin";
