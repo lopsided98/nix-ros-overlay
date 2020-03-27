@@ -3760,6 +3760,8 @@ self: super: {
 
  rosboost-cfg = self.callPackage ./rosboost-cfg {};
 
+ rosbridge-library = self.callPackage ./rosbridge-library {};
+
  rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
 
  rosbridge-server = self.callPackage ./rosbridge-server {};

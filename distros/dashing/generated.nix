@@ -806,6 +806,8 @@ self: super: {
 
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 
+ rosbridge-library = self.callPackage ./rosbridge-library {};
+
  rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
 
  rosbridge-server = self.callPackage ./rosbridge-server {};

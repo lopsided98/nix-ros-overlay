@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, lifecycle-msgs, rclcpp, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-eloquent-cascade-lifecycle-msgs";
-  version = "0.0.3-r2";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/fmrico/cascade_lifecycle-release/archive/release/eloquent/cascade_lifecycle_msgs/0.0.3-2.tar.gz";
-    name = "0.0.3-2.tar.gz";
-    sha256 = "0417eeebcca8bdb2cce8f89860900c4058621a452a27c697a6f4b32d46aea7b8";
+    url = "https://github.com/fmrico/cascade_lifecycle-release/archive/release/eloquent/cascade_lifecycle_msgs/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "9cbfdd80ad4f64ba04d117d20d477a95ad927fc30372f47f13adca7ea51c18a7";
   };
 
   buildType = "ament_cmake";

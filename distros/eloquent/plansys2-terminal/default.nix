@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-domain-expert, plansys2-executor, plansys2-msgs, plansys2-planner, plansys2-problem-expert, rclcpp, rclcpp-action, rclcpp-lifecycle, readline }:
 buildRosPackage {
   pname = "ros-eloquent-plansys2-terminal";
-  version = "0.0.6-r1";
+  version = "0.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/eloquent/plansys2_terminal/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "70490e27784dcfcf2e3da0a2510fd0570d1a2a72e695f42256bde94cc30bf7d2";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/eloquent/plansys2_terminal/0.0.7-1.tar.gz";
+    name = "0.0.7-1.tar.gz";
+    sha256 = "5e2a94cba08f40d14e7ac09e3a7f47fd87742b347a3f784af42d0fd77b68535e";
   };
 
   buildType = "ament_cmake";

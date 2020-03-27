@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, control-msgs, dynamic-reconfigure, message-generation, message-runtime, realtime-tools, roscpp, rosunit, std-msgs, tinyxml }:
 buildRosPackage {
   pname = "ros-melodic-control-toolbox";
-  version = "1.17.0";
+  version = "1.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/control_toolbox-release/archive/release/melodic/control_toolbox/1.17.0-0.tar.gz";
-    name = "1.17.0-0.tar.gz";
-    sha256 = "87d87fd3110630b61fba232464add3e10dca4f7e6a080cf4900827cccf711c56";
+    url = "https://github.com/ros-gbp/control_toolbox-release/archive/release/melodic/control_toolbox/1.18.0-1.tar.gz";
+    name = "1.18.0-1.tar.gz";
+    sha256 = "ad00adfd593adb29204950fe83ae50e9fedd279851b6fa37b2a281c6fbb7b345";
   };
 
   buildType = "catkin";

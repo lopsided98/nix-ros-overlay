@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-config, ecl-license }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-console";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/eloquent/ecl_console/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "f2fa32ecff2ac3444b2c88b1dc15ab5987acf49fffa56909a29e3b1fc18e5dbe";
+    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/eloquent/ecl_console/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "06e53d556a8d4a0dda1060670abd0d2738af9401f23cc8ab237212bac369999e";
   };
 
   buildType = "ament_cmake";
