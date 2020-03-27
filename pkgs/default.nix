@@ -57,6 +57,6 @@ in {
   opensplice_6_9 = self.callPackage ./opensplice { };
 
   python27 = pythonOverridesFor super.python27;
-  python36 = pythonOverridesFor super.python36;
   python37 = pythonOverridesFor super.python37;
+  python38 = pythonOverridesFor super.python38;
 }
