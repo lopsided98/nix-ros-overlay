@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libmodbus, libreflexxestype2, ros-reflexxes }:
 buildRosPackage {
   pname = "ros-kinetic-ipr-extern";
-  version = "0.9.0-r1";
+  version = "0.8.8";
 
   src = fetchurl {
-    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/kinetic/ipr_extern/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "d9a11c9df9a4577801f4d3e061b54ed192f349e4b72663dc9db2fca4f3dba67c";
+    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/kinetic/ipr_extern/0.8.8-0.tar.gz";
+    name = "0.8.8-0.tar.gz";
+    sha256 = "d7e37fb86212a48bfdfba21e29cca5541aaf7e1e950e4415fbf1a08191079b6a";
   };
 
   buildType = "catkin";

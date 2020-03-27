@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, diagnostic-msgs, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-sick-lms1xx";
-  version = "0.7.1-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_sick_lms1xx/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "0c2054e38db44f7a88ce386dbbf6c54344213061edef7c08eb56f8538edd168c";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_sick_lms1xx/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "8f1e2330a099b28cc4a44effbccc950478ad73a3886c386669bf2f849ff8e4e4";
   };
 
   buildType = "catkin";

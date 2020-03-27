@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, controller-manager-msgs, roscpp, roslint, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-control-mode-adapter";
-  version = "0.8.1-r1";
+  version = "0.8.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_control_mode_adapter/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "e9f645239ae0f8c11405e5417b45d85db5aa2da90a8903d4c6b9a876b59fa713";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_control_mode_adapter/0.8.11-1.tar.gz";
+    name = "0.8.11-1.tar.gz";
+    sha256 = "40067b2e28752226655bed76571549ecb90b1c813f80c4917a12e8143a0083ca";
   };
 
   buildType = "catkin";
@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_control_mode_adapter package'';
+    description = ''The cob_control_mode_adapter package provides a node that automatically loads respective ros_controllers depending on required control mode.'';
     license = with lib.licenses; [ asl20 ];
   };
 }

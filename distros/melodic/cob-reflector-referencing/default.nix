@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-cob-reflector-referencing";
-  version = "0.6.8-r1";
+  version = "0.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_reflector_referencing/0.6.8-1.tar.gz";
-    name = "0.6.8-1.tar.gz";
-    sha256 = "f6fd5812a4814bf65b6281e10f2c1af67c42c1404dede7bdec68a9f7a62924ba";
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_reflector_referencing/0.6.9-1.tar.gz";
+    name = "0.6.9-1.tar.gz";
+    sha256 = "140585c4be261ea1aff6d9cf607ce3d6e31f2d168c21cda87daedbdea1b543c2";
   };
 
   buildType = "catkin";

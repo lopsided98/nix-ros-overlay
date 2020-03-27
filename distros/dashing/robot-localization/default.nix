@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, diagnostic-msgs, diagnostic-updater, eigen, geographic-msgs, geometry-msgs, launch-ros, launch-testing-ament-cmake, libyamlcpp, nav-msgs, rclcpp, rmw-implementation, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-dashing-robot-localization";
-  version = "3.0.2-r1";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/cra-ros-pkg/robot_localization-release/archive/release/dashing/robot_localization/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "a6f38b7b1f2dad61db87b55d50b3e372552e4403b4d2aeba03ec05568dcd37ba";
+    url = "https://github.com/cra-ros-pkg/robot_localization-release/archive/release/dashing/robot_localization/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "642a46ea8b98a26752052c2dde54b60e324df8f7d82a9ec0c2bd19ecbe47e4d0";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common builtin-interfaces launch-testing-ament-cmake ];
-  propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater eigen geographic-msgs geometry-msgs launch-ros libyamlcpp nav-msgs rclcpp rmw-implementation rosidl-default-runtime sensor-msgs std-msgs std-srvs tf2 tf2-eigen tf2-geometry-msgs tf2-ros ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common builtin-interfaces launch-ros launch-testing-ament-cmake ];
+  propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater eigen geographic-msgs geometry-msgs libyamlcpp nav-msgs rclcpp rmw-implementation rosidl-default-runtime sensor-msgs std-msgs std-srvs tf2 tf2-eigen tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake builtin-interfaces rosidl-default-generators ];
 
   meta = {

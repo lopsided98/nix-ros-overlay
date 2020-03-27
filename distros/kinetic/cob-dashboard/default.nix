@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, roslib, rospy, rqt-gui, rqt-robot-dashboard }:
 buildRosPackage {
   pname = "ros-kinetic-cob-dashboard";
-  version = "0.6.15-r1";
+  version = "0.6.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_dashboard/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "57002c95f78f2b42769390ba2a2042909ae9349c8d68e0b33d7e086d76a4bd03";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_dashboard/0.6.16-1.tar.gz";
+    name = "0.6.16-1.tar.gz";
+    sha256 = "c610abd9f98e7fd55755ed9c080cbc04839109686fc038ccdc40b870d754e96e";
   };
 
   buildType = "catkin";

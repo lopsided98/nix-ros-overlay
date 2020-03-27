@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-cob-reflector-referencing";
-  version = "0.6.8-r1";
+  version = "0.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/kinetic/cob_reflector_referencing/0.6.8-1.tar.gz";
-    name = "0.6.8-1.tar.gz";
-    sha256 = "4e695f216b91e4874af25464f87b1dc3fe337b75441789599efa0f724f520ea0";
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/kinetic/cob_reflector_referencing/0.6.9-1.tar.gz";
+    name = "0.6.9-1.tar.gz";
+    sha256 = "aa67c3414a46bdb57e187664b5f69fac0083cd7e06d985704942b8b7d955cb80";
   };
 
   buildType = "catkin";

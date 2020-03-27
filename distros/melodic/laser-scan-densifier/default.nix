@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-laser-scan-densifier";
-  version = "0.7.1-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/laser_scan_densifier/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "01ba3aadc514a2280e928f203ee249467992b0b7bbae708aa4f27a0e09df6bdd";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/laser_scan_densifier/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "b5574e9228da66c2eddfd8cf838006dfabcff3d19cc0cb7f560fae6725fccf70";
   };
 
   buildType = "catkin";

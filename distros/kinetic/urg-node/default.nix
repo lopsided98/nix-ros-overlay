@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, laser-proc, message-generation, message-runtime, nodelet, rosconsole, roscpp, roslaunch, roslint, sensor-msgs, std-msgs, std-srvs, tf, urg-c }:
 buildRosPackage {
   pname = "ros-kinetic-urg-node";
-  version = "0.1.11";
+  version = "0.1.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/urg_node-release/archive/release/kinetic/urg_node/0.1.11-0.tar.gz";
-    name = "0.1.11-0.tar.gz";
-    sha256 = "8e3154c0e0e1c02a4aa54733d79a4bc78c74108b258de57b2908bd3c976464b0";
+    url = "https://github.com/ros-gbp/urg_node-release/archive/release/kinetic/urg_node/0.1.12-1.tar.gz";
+    name = "0.1.12-1.tar.gz";
+    sha256 = "7e8b6fa6f623347a42fc45c34cd36bc12b41998dbcdbc1753e1dabc52c8e4c04";
   };
 
   buildType = "catkin";

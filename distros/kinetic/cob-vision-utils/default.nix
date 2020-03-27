@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, opencv3, roscpp, tinyxml, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-vision-utils";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_vision_utils/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "34dc18f3163f53d698ffda477d6cd3e4967ac86346fe5d3081e51df7b8b87874";
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_vision_utils/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "605682cbb42de0cd740c6f82c3365358b097c5b178fe6149872da60fa4603b4b";
   };
 
   buildType = "catkin";

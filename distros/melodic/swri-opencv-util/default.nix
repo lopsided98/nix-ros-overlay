@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, swri-math-util }:
 buildRosPackage {
   pname = "ros-melodic-swri-opencv-util";
-  version = "2.11.0-r1";
+  version = "2.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_opencv_util/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "9acd44f81b3cf018deb726d348c7a22ec31bd5d20540aa7ce4597b46eb968d25";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_opencv_util/2.12.0-1.tar.gz";
+    name = "2.12.0-1.tar.gz";
+    sha256 = "f24e7b464318322a06016cd2716b86ef11f62345da35fde98b4b6a5e437a386e";
   };
 
   buildType = "catkin";

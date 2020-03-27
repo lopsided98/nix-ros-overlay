@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-cob-android-msgs";
-  version = "0.1.6-r1";
+  version = "0.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_android-release/archive/release/melodic/cob_android_msgs/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "506bb55d787b9cfc23d15fbf27abbe8bfa6d5c57e24b137e47e80c7dbe4287db";
+    url = "https://github.com/ipa320/cob_android-release/archive/release/melodic/cob_android_msgs/0.1.7-1.tar.gz";
+    name = "0.1.7-1.tar.gz";
+    sha256 = "433dceb954125d4eae4fdf222e7886305b3690946e647c929eef4adc8fbe4d6a";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL, SDL_image, bullet, catkin, libyamlcpp, nav-msgs, roscpp, rospy, rostest, rosunit, tf2 }:
 buildRosPackage {
   pname = "ros-melodic-map-server";
-  version = "1.16.4-r1";
+  version = "1.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/map_server/1.16.4-1.tar.gz";
-    name = "1.16.4-1.tar.gz";
-    sha256 = "14b8e2d84c29498d56176af12b405792f0900a434fcd8d2152ec903729976cb7";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/map_server/1.16.6-1.tar.gz";
+    name = "1.16.6-1.tar.gz";
+    sha256 = "3bc98415e7f8470368d6c3141adaa636308537a0655d35a348db48c8c37dcdd8";
   };
 
   buildType = "catkin";

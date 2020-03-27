@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, bzip2, catkin, console-bridge, cpp-common, gpgme, openssl, pluginlib, roscpp-serialization, roscpp-traits, roslz4, rostest, rostime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosbag-storage";
-  version = "1.14.4-r1";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosbag_storage/1.14.4-1.tar.gz";
-    name = "1.14.4-1.tar.gz";
-    sha256 = "156f2616e58d3c1b67926880965b651ac469c5a9677cb8947841e1d1f085350e";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosbag_storage/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "e64d43dd0f9f4e2fab0d6eb6df1cd4b6dedec6bf934063474b8b9d64579e6410";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, roslib, rospy, rqt-gui, rqt-robot-dashboard }:
 buildRosPackage {
   pname = "ros-melodic-cob-dashboard";
-  version = "0.6.15-r1";
+  version = "0.6.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_dashboard/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "2a34b89fda4cc72d128bf661db6d259658942ae505f3a78d010cc9d44c9bcb25";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_dashboard/0.6.16-1.tar.gz";
+    name = "0.6.16-1.tar.gz";
+    sha256 = "482845721bc87b574dc175ab0679994923bd6b8a386ff2045c34e91d01ad1d42";
   };
 
   buildType = "catkin";

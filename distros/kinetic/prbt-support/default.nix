@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, canopen-motor-node, catkin, cmake-modules, controller-manager, eigen, joint-state-controller, joint-state-publisher, moveit-core, moveit-ros-planning, pilz-control, prbt-hardware-support, robot-state-publisher, roscpp, roslaunch, rosservice, rostest, rviz, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-prbt-support";
-  version = "0.4.11-r1";
+  version = "0.4.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/prbt_support/0.4.11-1.tar.gz";
-    name = "0.4.11-1.tar.gz";
-    sha256 = "9adab5bcb36f2740debe22a6a23905e7901fb96c8e3bd13c24a0aa4b8ba8cde4";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/kinetic/prbt_support/0.4.12-1.tar.gz";
+    name = "0.4.12-1.tar.gz";
+    sha256 = "47c5c1b013c10eaf489a22e592e349e501078c7b4e54a7cf2257ccac3e3f1fd4";
   };
 
   buildType = "catkin";

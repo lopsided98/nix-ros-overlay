@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-cob-default-env-config";
-  version = "0.6.10-r1";
+  version = "0.6.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_environments-release/archive/release/kinetic/cob_default_env_config/0.6.10-1.tar.gz";
-    name = "0.6.10-1.tar.gz";
-    sha256 = "7d36d8979e07502fc18b94c837941a79f101a0fceca7b958e9e72616a725d47c";
+    url = "https://github.com/ipa320/cob_environments-release/archive/release/kinetic/cob_default_env_config/0.6.11-1.tar.gz";
+    name = "0.6.11-1.tar.gz";
+    sha256 = "29db66450b6527af6462b9ae788891ebbf50882545d8e97800b44b359b1803f9";
   };
 
   buildType = "catkin";

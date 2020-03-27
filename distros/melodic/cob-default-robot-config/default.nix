@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-supported-robots, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-cob-default-robot-config";
-  version = "0.7.2-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/melodic/cob_default_robot_config/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "5109f04c5fed185e903c9e5f45b1e30aee30c32622f47e2359162106ed9f2939";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/melodic/cob_default_robot_config/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "d0d1c1b1c156d11c1dab8ec05e9d8bb80847d21d99dd89e54547abf86e997287";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-supported-robots roslaunch ];
+  checkInputs = [ cob-supported-robots roslaunch ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

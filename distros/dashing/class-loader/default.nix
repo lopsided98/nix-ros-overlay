@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, poco, poco-vendor }:
 buildRosPackage {
   pname = "ros-dashing-class-loader";
-  version = "1.3.2-r1";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/dashing/class_loader/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "548cefc198d57f9d46e471c195ef961d8513a8e57caed0ded81806f1d3ab43f5";
+    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/dashing/class_loader/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
+    sha256 = "64ca57310bf7a5786199773f61d8ffe55c11bccf03ea0569681f34891d9d53f8";
   };
 
   buildType = "ament_cmake";

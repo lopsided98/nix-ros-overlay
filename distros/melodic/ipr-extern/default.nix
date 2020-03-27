@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libmodbus, libreflexxestype2, ros-reflexxes }:
 buildRosPackage {
   pname = "ros-melodic-ipr-extern";
-  version = "0.9.0-r1";
+  version = "0.8.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/melodic/ipr_extern/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "e3884879277729178b8a6de7ff1de7916eaec4f6489a1adbad72568bce0de1fb";
+    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/melodic/ipr_extern/0.8.8-1.tar.gz";
+    name = "0.8.8-1.tar.gz";
+    sha256 = "a117475704fac421bb5f283eb775ab4339944f6ea148c2c996c0fb7642bb0fe8";
   };
 
   buildType = "catkin";

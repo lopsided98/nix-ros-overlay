@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake }:
 buildRosPackage {
   pname = "ros-kinetic-async-comm";
-  version = "0.1.1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/dpkoch/async_comm-release/archive/release/kinetic/async_comm/0.1.1-0.tar.gz";
-    name = "0.1.1-0.tar.gz";
-    sha256 = "2178321d845dac075d6f96084f02438f8a60cbf7ef119ca7988fad78bc18c244";
+    url = "https://github.com/dpkoch/async_comm-release/archive/release/kinetic/async_comm/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "83a1e27066268408f24d54f213701b538c1f722c2c5f6b36c7e6addbddbbd21a";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, libyamlcpp, pkg-config }:
 buildRosPackage {
   pname = "ros-kinetic-swri-yaml-util";
-  version = "2.11.0-r1";
+  version = "2.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_yaml_util/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "25aec77cecebb52adf5b3d16812b0c8f78c6e2460aac3275662826e8235750ab";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_yaml_util/2.12.0-1.tar.gz";
+    name = "2.12.0-1.tar.gz";
+    sha256 = "98c1e7358d7563be5409d7e1faa4143ae81acf87c1819c400e3dd4ae4e723073";
   };
 
   buildType = "catkin";

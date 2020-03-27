@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-phidgets, rospy }:
 buildRosPackage {
   pname = "ros-melodic-cob-phidget-em-state";
-  version = "0.7.1-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_phidget_em_state/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "1626f7bce8a701f167fea0972781950c434ef87a3301d667b89df1f7ad3454a2";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_phidget_em_state/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "6a36e2834db47a408130e9d94a17b6774100f5088e46ba7d3000162c28deda70";
   };
 
   buildType = "catkin";
@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_phidget_em_state package'';
+    description = ''The cob_phidget_em_state package publishes emergency state based on phidgets signals.'';
     license = with lib.licenses; [ asl20 ];
   };
 }

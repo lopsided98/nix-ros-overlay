@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-script-server, pythonPackages, roslib, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-cob-command-gui";
-  version = "0.6.15-r1";
+  version = "0.6.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_command_gui/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "efb2cecf45c6a306d568f581e922cb0107b449084e3aafbc3087f3d2bfb3c271";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_command_gui/0.6.16-1.tar.gz";
+    name = "0.6.16-1.tar.gz";
+    sha256 = "c14935b6f21ff300690ff26feb86146305d1681df36b72e43cd0649bbf20d47e";
   };
 
   buildType = "catkin";

@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib, catkin, flexbe-msgs, rospy, smach-ros }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, flexbe-msgs, pythonPackages, rospy, smach-ros }:
 buildRosPackage {
   pname = "ros-melodic-flexbe-input";
-  version = "1.2.3-r1";
+  version = "1.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_input/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "f67450ffc384ded4721851e15457b372481df29f1fea066cd6ea496f1d49f4ed";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_input/1.2.4-1.tar.gz";
+    name = "1.2.4-1.tar.gz";
+    sha256 = "ecf39da99d20decf8d7af6ec3e940de931ef29cee581316f7b36a341b5479536";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ actionlib flexbe-msgs rospy smach-ros ];
+  propagatedBuildInputs = [ actionlib flexbe-msgs pythonPackages.six rospy smach-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

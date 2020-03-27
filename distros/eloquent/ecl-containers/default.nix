@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-config, ecl-converters, ecl-errors, ecl-exceptions, ecl-formatters, ecl-license, ecl-mpl, ecl-type-traits, ecl-utilities }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-containers";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/eloquent/ecl_containers/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "696bb5ed02993e0e3f314630eeff21410f2b3aaccf7e3a7f5ee98d14dc38f7a5";
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/eloquent/ecl_containers/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "dd30065e2fffa8c87bb87fab6f33617ba838aba41e5de974560b4c532e328e8f";
   };
 
   buildType = "ament_cmake";
