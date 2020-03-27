@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, cob-object-detection-msgs, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-3d-mapping-msgs";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_3d_mapping_msgs/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "8efeb75129ad677ff76f1f42626d9fbc6cfa16b8854d349707765936e97e2d43";
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_3d_mapping_msgs/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "263177d023bf7be849cc0cf2aae30dcd68dfe852e33271bf393f7881dd5194ac";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-utilities, libntcan, libpcan, socketcan-interface }:
 buildRosPackage {
   pname = "ros-melodic-cob-generic-can";
-  version = "0.7.1-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_generic_can/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "dafbd06ad919ad96e639e1861fe59ffc33ae31e8f57c69f88ad5a3c58729b59a";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_generic_can/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "d3f17295e842dd4452d4ad9deb0442963048ca080971213e0d9a27f6ac0091f1";
   };
 
   buildType = "catkin";

@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cob-calibration-data, cob-description, cob-omni-drive-controller, cob-supported-robots, costmap-2d, diagnostic-aggregator, joint-state-controller, joint-state-publisher, joint-trajectory-controller, laser-filters, position-controllers, raw-description, robot-state-publisher, roslaunch, rostest, rviz, velocity-controllers, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-calibration-data, cob-description, cob-omni-drive-controller, cob-supported-robots, costmap-2d, diagnostic-aggregator, joint-state-controller, joint-state-publisher, joint-state-publisher-gui, joint-trajectory-controller, laser-filters, position-controllers, raw-description, robot-state-publisher, roslaunch, rostest, rviz, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-cob-hardware-config";
-  version = "0.7.2-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_hardware_config/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "969c9f9ccc79d038be2060d3114df9fa7339849228adc3bd57bc239aa291c258";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_hardware_config/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "9f3be4cb74f9fa2d63b09b56f48d31defa5866b8b5f2d2ad490f29b0b51a578c";
   };
 
   buildType = "catkin";
-  buildInputs = [ cob-supported-robots ];
-  propagatedBuildInputs = [ cob-calibration-data cob-description cob-omni-drive-controller costmap-2d diagnostic-aggregator joint-state-controller joint-state-publisher joint-trajectory-controller laser-filters position-controllers raw-description robot-state-publisher roslaunch rostest rviz velocity-controllers xacro ];
+  checkInputs = [ cob-supported-robots roslaunch rostest ];
+  propagatedBuildInputs = [ cob-calibration-data cob-description cob-omni-drive-controller costmap-2d diagnostic-aggregator joint-state-controller joint-state-publisher joint-state-publisher-gui joint-trajectory-controller laser-filters position-controllers raw-description robot-state-publisher rviz velocity-controllers xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

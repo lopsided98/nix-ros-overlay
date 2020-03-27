@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-hand-bridge }:
 buildRosPackage {
   pname = "ros-melodic-cob-hand";
-  version = "0.6.6-r1";
+  version = "0.6.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_hand-release/archive/release/melodic/cob_hand/0.6.6-1.tar.gz";
-    name = "0.6.6-1.tar.gz";
-    sha256 = "e4e8632020fc767a075cf34ce674e510adf6594f7c167d0c2d6a31053bba240a";
+    url = "https://github.com/ipa320/cob_hand-release/archive/release/melodic/cob_hand/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
+    sha256 = "a88eef3cb068fb5c48a652a027e37400494ec0551e160652ba5c432316607bba";
   };
 
   buildType = "catkin";

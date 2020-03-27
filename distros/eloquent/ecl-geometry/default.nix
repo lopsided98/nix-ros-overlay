@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-config, ecl-containers, ecl-exceptions, ecl-formatters, ecl-license, ecl-linear-algebra, ecl-math, ecl-mpl, ecl-type-traits }:
 buildRosPackage {
   pname = "ros-eloquent-ecl-geometry";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/eloquent/ecl_geometry/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "0b86d75bd1ebbab8381900d95e643853e7603df37ad28cc2db65d5953de1fe41";
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/eloquent/ecl_geometry/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "0b843df09ad92e200353e8775c4b1aa44db9bba4c62937b74fdcd0ac807807f6";
   };
 
   buildType = "ament_cmake";

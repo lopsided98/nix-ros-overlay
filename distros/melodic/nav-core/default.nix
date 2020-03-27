@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, geometry-msgs, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-nav-core";
-  version = "1.16.4-r1";
+  version = "1.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/nav_core/1.16.4-1.tar.gz";
-    name = "1.16.4-1.tar.gz";
-    sha256 = "e8d636295cb999749982295ead8e6a6031fc634d23b0bb8a1c7dd347606031b3";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/nav_core/1.16.6-1.tar.gz";
+    name = "1.16.6-1.tar.gz";
+    sha256 = "e6cafd54154d38c72fccda29feb6f46bc4899f5276ccd32fa587cf5dbf1cb945";
   };
 
   buildType = "catkin";

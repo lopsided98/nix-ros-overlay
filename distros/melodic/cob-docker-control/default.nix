@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-cob-docker-control";
-  version = "0.6.8-r1";
+  version = "0.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_docker_control/0.6.8-1.tar.gz";
-    name = "0.6.8-1.tar.gz";
-    sha256 = "1082dfa38de002e21fee734a6e8f2606d35ed961e990897ae4de27aa4e352413";
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_docker_control/0.6.9-1.tar.gz";
+    name = "0.6.9-1.tar.gz";
+    sha256 = "9b202926dab21ab34206f93c371c540ef70fb0a7c0cc998703a8414e163c74da";
   };
 
   buildType = "catkin";

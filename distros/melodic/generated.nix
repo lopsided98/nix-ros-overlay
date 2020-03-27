@@ -368,6 +368,8 @@ self: super: {
 
  cob-mapping-slam = self.callPackage ./cob-mapping-slam {};
 
+ cob-mecanum-controller = self.callPackage ./cob-mecanum-controller {};
+
  cob-mimic = self.callPackage ./cob-mimic {};
 
  cob-model-identifier = self.callPackage ./cob-model-identifier {};
@@ -942,6 +944,12 @@ self: super: {
 
  franka-visualization = self.callPackage ./franka-visualization {};
 
+ freenect-camera = self.callPackage ./freenect-camera {};
+
+ freenect-launch = self.callPackage ./freenect-launch {};
+
+ freenect-stack = self.callPackage ./freenect-stack {};
+
  freight-bringup = self.callPackage ./freight-bringup {};
 
  fsrobo-r = self.callPackage ./fsrobo-r {};
@@ -1278,6 +1286,8 @@ self: super: {
 
  jderobot-assets = self.callPackage ./jderobot-assets {};
 
+ jderobot-camviz = self.callPackage ./jderobot-camviz {};
+
  jderobot-color-tuner = self.callPackage ./jderobot-color-tuner {};
 
  jderobot-drones = self.callPackage ./jderobot-drones {};
@@ -1405,6 +1415,24 @@ self: super: {
  kvh-geo-fog-3d-msgs = self.callPackage ./kvh-geo-fog-3d-msgs {};
 
  kvh-geo-fog-3d-rviz = self.callPackage ./kvh-geo-fog-3d-rviz {};
+
+ lanelet2 = self.callPackage ./lanelet2 {};
+
+ lanelet2-core = self.callPackage ./lanelet2-core {};
+
+ lanelet2-examples = self.callPackage ./lanelet2-examples {};
+
+ lanelet2-maps = self.callPackage ./lanelet2-maps {};
+
+ lanelet2-projection = self.callPackage ./lanelet2-projection {};
+
+ lanelet2-python = self.callPackage ./lanelet2-python {};
+
+ lanelet2-routing = self.callPackage ./lanelet2-routing {};
+
+ lanelet2-traffic-rules = self.callPackage ./lanelet2-traffic-rules {};
+
+ lanelet2-validation = self.callPackage ./lanelet2-validation {};
 
  laptop-battery-monitor = self.callPackage ./laptop-battery-monitor {};
 
@@ -2410,6 +2438,8 @@ self: super: {
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
+ remote-rosbag-record = self.callPackage ./remote-rosbag-record {};
+
  resized-image-transport = self.callPackage ./resized-image-transport {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
@@ -2526,6 +2556,10 @@ self: super: {
 
  ros = self.callPackage ./ros {};
 
+ ros-babel-fish = self.callPackage ./ros-babel-fish {};
+
+ ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
+
  ros-base = self.callPackage ./ros-base {};
 
  ros-canopen = self.callPackage ./ros-canopen {};
@@ -2625,6 +2659,18 @@ self: super: {
  roseus-smach = self.callPackage ./roseus-smach {};
 
  roseus-tutorials = self.callPackage ./roseus-tutorials {};
+
+ rosflight = self.callPackage ./rosflight {};
+
+ rosflight-firmware = self.callPackage ./rosflight-firmware {};
+
+ rosflight-msgs = self.callPackage ./rosflight-msgs {};
+
+ rosflight-pkgs = self.callPackage ./rosflight-pkgs {};
+
+ rosflight-sim = self.callPackage ./rosflight-sim {};
+
+ rosflight-utils = self.callPackage ./rosflight-utils {};
 
  rosfmt = self.callPackage ./rosfmt {};
 
@@ -2895,6 +2941,8 @@ self: super: {
  sbpl-lattice-planner = self.callPackage ./sbpl-lattice-planner {};
 
  sbpl-recovery = self.callPackage ./sbpl-recovery {};
+
+ scenario-test-tools = self.callPackage ./scenario-test-tools {};
 
  scheduler-msgs = self.callPackage ./scheduler-msgs {};
 

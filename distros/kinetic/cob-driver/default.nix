@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-base-drive-chain, cob-bms-driver, cob-camera-sensors, cob-canopen-motor, cob-elmo-homing, cob-generic-can, cob-light, cob-mimic, cob-phidgets, cob-relayboard, cob-scan-unifier, cob-sick-lms1xx, cob-sick-s300, cob-sound, cob-undercarriage-ctrl, cob-utilities, cob-voltage-control }:
 buildRosPackage {
   pname = "ros-kinetic-cob-driver";
-  version = "0.7.1-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_driver/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "a475416401fe24d0ea194e81d8ee2243b0d27f7ae9d8ca318c0aabda6d755888";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_driver/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "f1b47cfc606a4e069817568624ac51e835da4f5ee26f92500f783bf685d202d3";
   };
 
   buildType = "catkin";

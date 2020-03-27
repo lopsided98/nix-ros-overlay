@@ -154,6 +154,8 @@ self: super: {
 
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
+ cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
+
  class-loader = self.callPackage ./class-loader {};
 
  common-interfaces = self.callPackage ./common-interfaces {};
@@ -422,6 +424,8 @@ self: super: {
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
+ laser-proc = self.callPackage ./laser-proc {};
+
  launch = self.callPackage ./launch {};
 
  launch-ros = self.callPackage ./launch-ros {};
@@ -588,17 +592,11 @@ self: super: {
 
  plansys2-msgs = self.callPackage ./plansys2-msgs {};
 
- plansys2-multidomain-example = self.callPackage ./plansys2-multidomain-example {};
-
- plansys2-patrol-navigation-example = self.callPackage ./plansys2-patrol-navigation-example {};
-
  plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
 
  plansys2-planner = self.callPackage ./plansys2-planner {};
 
  plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
-
- plansys2-simple-example = self.callPackage ./plansys2-simple-example {};
 
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
 
@@ -653,6 +651,8 @@ self: super: {
  rclcpp = self.callPackage ./rclcpp {};
 
  rclcpp-action = self.callPackage ./rclcpp-action {};
+
+ rclcpp-cascade-lifecycle = self.callPackage ./rclcpp-cascade-lifecycle {};
 
  rclcpp-components = self.callPackage ./rclcpp-components {};
 
@@ -997,6 +997,12 @@ self: super: {
  urdfdom-headers = self.callPackage ./urdfdom-headers {};
 
  urdfdom-py = self.callPackage ./urdfdom-py {};
+
+ urg-c = self.callPackage ./urg-c {};
+
+ urg-node = self.callPackage ./urg-node {};
+
+ urg-node-msgs = self.callPackage ./urg-node-msgs {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
 

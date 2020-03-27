@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, catkin, diagnostic-msgs, message-generation, message-runtime, roscpp, rospy, sensor-msgs, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-light";
-  version = "0.7.1-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_light/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "75368168bfa1edf2bac15690b7979c1008f7f1081e39eafa45113f88b2d498da";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_light/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "963e89704f8a27f56decadabf12b8d7373cd36cc985f6d3c17a28bc395a11583";
   };
 
   buildType = "catkin";

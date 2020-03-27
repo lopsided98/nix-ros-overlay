@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-android-msgs, cob-script-server, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-cob-android-script-server";
-  version = "0.1.6-r1";
+  version = "0.1.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_android-release/archive/release/kinetic/cob_android_script_server/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "600c0d1983f6aec0edeadaf6fba5f3764853b86796cff0526b15f6cc3546441b";
+    url = "https://github.com/ipa320/cob_android-release/archive/release/kinetic/cob_android_script_server/0.1.7-2.tar.gz";
+    name = "0.1.7-2.tar.gz";
+    sha256 = "86ac38427da31f4c042fcdbb2cdfe5f317e1500da5c07003627f9b9e1b6fc6b2";
   };
 
   buildType = "catkin";

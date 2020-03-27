@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-navigation-global, cob-supported-robots, gmapping, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-cob-mapping-slam";
-  version = "0.6.9-r1";
+  version = "0.6.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_mapping_slam/0.6.9-1.tar.gz";
-    name = "0.6.9-1.tar.gz";
-    sha256 = "2dc56b9ae16a580743055d150f450f15c646fc390d7a61e7c0d0f7513105a50e";
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_mapping_slam/0.6.10-1.tar.gz";
+    name = "0.6.10-1.tar.gz";
+    sha256 = "4c9728989cfbc2913bca5d0360c42dd40ce5dec6d0c5930a24ec3323a0b902e2";
   };
 
   buildType = "catkin";

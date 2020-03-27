@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cob-object-detection-msgs, cv-bridge, eigen-conversions, image-transport, message-filters, opencv3, pcl, pcl-ros, roscpp, sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-object-detection-visualizer";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_object_detection_visualizer/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "58aaadb7bd93299f43858c0fb1521159fb046d13f5138ec43f1179888b5224bc";
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_object_detection_visualizer/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "4024bbc081c92e40bc3cbe361b6c944b6c2f2a70eb5942810c1515175581f955";
   };
 
   buildType = "catkin";
@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_object_detection_visualizer package'';
+    description = ''The cob_object_detection_visualizer package visualizes the object detection result.'';
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-cob-docker-control";
-  version = "0.6.8-r1";
+  version = "0.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/kinetic/cob_docker_control/0.6.8-1.tar.gz";
-    name = "0.6.8-1.tar.gz";
-    sha256 = "ed3b9976ae565dbe95fa90f03c3aa875ae7f6ce8755f38c89a02a03af2947967";
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/kinetic/cob_docker_control/0.6.9-1.tar.gz";
+    name = "0.6.9-1.tar.gz";
+    sha256 = "3a67048bed576802485198118e09d80a687bd62422669325ef816b6151b9faa5";
   };
 
   buildType = "catkin";

@@ -460,6 +460,8 @@ self: super: {
 
  cob-mapping-slam = self.callPackage ./cob-mapping-slam {};
 
+ cob-mecanum-controller = self.callPackage ./cob-mecanum-controller {};
+
  cob-mimic = self.callPackage ./cob-mimic {};
 
  cob-model-identifier = self.callPackage ./cob-model-identifier {};
@@ -2976,9 +2978,13 @@ self: super: {
 
  pilz-robots = self.callPackage ./pilz-robots {};
 
+ pilz-status-indicator-rqt = self.callPackage ./pilz-status-indicator-rqt {};
+
  pilz-testutils = self.callPackage ./pilz-testutils {};
 
  pilz-trajectory-generation = self.callPackage ./pilz-trajectory-generation {};
+
+ pilz-utils = self.callPackage ./pilz-utils {};
 
  pinocchio = self.callPackage ./pinocchio {};
 
@@ -3426,6 +3432,8 @@ self: super: {
 
  recordit = self.callPackage ./recordit {};
 
+ remote-rosbag-record = self.callPackage ./remote-rosbag-record {};
+
  resized-image-transport = self.callPackage ./resized-image-transport {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
@@ -3489,6 +3497,8 @@ self: super: {
  robot-controllers-interface = self.callPackage ./robot-controllers-interface {};
 
  robot-controllers-msgs = self.callPackage ./robot-controllers-msgs {};
+
+ robot-indicator = self.callPackage ./robot-indicator {};
 
  robot-localization = self.callPackage ./robot-localization {};
 
@@ -4044,6 +4054,8 @@ self: super: {
 
  rr-openrover-stack = self.callPackage ./rr-openrover-stack {};
 
+ rr-rover-zero-driver = self.callPackage ./rr-rover-zero-driver {};
+
  rr-swiftnav-piksi = self.callPackage ./rr-swiftnav-piksi {};
 
  rslidar = self.callPackage ./rslidar {};
@@ -4181,6 +4193,8 @@ self: super: {
  scan-to-cloud-converter = self.callPackage ./scan-to-cloud-converter {};
 
  scan-tools = self.callPackage ./scan-tools {};
+
+ scenario-test-tools = self.callPackage ./scenario-test-tools {};
 
  scheduler-msgs = self.callPackage ./scheduler-msgs {};
 

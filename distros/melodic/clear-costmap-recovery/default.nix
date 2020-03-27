@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, eigen, nav-core, pluginlib, roscpp, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-clear-costmap-recovery";
-  version = "1.16.4-r1";
+  version = "1.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/clear_costmap_recovery/1.16.4-1.tar.gz";
-    name = "1.16.4-1.tar.gz";
-    sha256 = "4132cb3ed50b823bed0bc38f7dd7bef039123c4f3c2556be019f76ddd98de031";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/clear_costmap_recovery/1.16.6-1.tar.gz";
+    name = "1.16.6-1.tar.gz";
+    sha256 = "3d4da9a09d689ca4851673e246953dc1b5bde5264aacc68dfd079040660248b2";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libphidgets, message-generation, message-runtime, roscpp, rospy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-phidgets";
-  version = "0.7.1-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_phidgets/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "8b0223f8f93a58d2c702abb0733ac88b6d18528014a1b89fc9c52ee7cbf77f81";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_phidgets/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "0a6e966d4015744568047db454363a359298ad1aa20c279513bc8290b770a24e";
   };
 
   buildType = "catkin";

@@ -456,6 +456,8 @@ self: super: {
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
+ laser-proc = self.callPackage ./laser-proc {};
+
  launch = self.callPackage ./launch {};
 
  launch-ros = self.callPackage ./launch-ros {};
@@ -1065,6 +1067,12 @@ self: super: {
  urdfdom-headers = self.callPackage ./urdfdom-headers {};
 
  urdfdom-py = self.callPackage ./urdfdom-py {};
+
+ urg-c = self.callPackage ./urg-c {};
+
+ urg-node = self.callPackage ./urg-node {};
+
+ urg-node-msgs = self.callPackage ./urg-node-msgs {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
 

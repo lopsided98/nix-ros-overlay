@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake }:
 buildRosPackage {
   pname = "ros-melodic-async-comm";
-  version = "0.1.1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/dpkoch/async_comm-release/archive/release/melodic/async_comm/0.1.1-0.tar.gz";
-    name = "0.1.1-0.tar.gz";
-    sha256 = "9a87d3e8db68cf7c7fc3c318f1d31d6660dd5ca39172d0f78efdf6330de49bcc";
+    url = "https://github.com/dpkoch/async_comm-release/archive/release/melodic/async_comm/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "657753a9f478d51187d61862ab11deea0eaa38b107bc599084c6a2d49addfb2f";
   };
 
   buildType = "cmake";

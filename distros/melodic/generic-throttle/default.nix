@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, rospy, rostopic }:
 buildRosPackage {
   pname = "ros-melodic-generic-throttle";
-  version = "0.6.15-r1";
+  version = "0.6.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/generic_throttle/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "8f7eb12d899b0852220f99dc0d0271979c3f357b9619d3bf9f80d80e36cad91d";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/generic_throttle/0.6.16-1.tar.gz";
+    name = "0.6.16-1.tar.gz";
+    sha256 = "4f83ae889cde213636d3036fbf0185ce7c2856a4e229efdde1b3a0c2ef69f94e";
   };
 
   buildType = "catkin";

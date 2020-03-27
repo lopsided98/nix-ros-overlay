@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libusb }:
 buildRosPackage {
   pname = "ros-kinetic-libphidgets";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libphidgets/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "85cd0289c7064fbc8f17cac73444bf084d83b04823ca00141062b02c37542a3f";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libphidgets/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "2cd686076b1b2de0d7aca96d7f7bbcef9d05956e6758dd405f98f88e26942b2d";
   };
 
   buildType = "catkin";
