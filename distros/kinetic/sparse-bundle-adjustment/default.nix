@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, blas, catkin, cmake-modules, eigen, liblapack, suitesparse }:
 buildRosPackage {
   pname = "ros-kinetic-sparse-bundle-adjustment";
-  version = "0.3.2";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/sparse_bundle_adjustment-release/archive/release/kinetic/sparse_bundle_adjustment/0.3.2-0.tar.gz";
-    name = "0.3.2-0.tar.gz";
-    sha256 = "5135a9ad619561403a733ba7d1405364d417963f4863d32229e3f19a3e5dbccd";
+    url = "https://github.com/ros-gbp/sparse_bundle_adjustment-release/archive/release/kinetic/sparse_bundle_adjustment/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "8af8b44d522cb5351316d3f11fb3dd553228ea1bb3c29dac1596b280e987bd4c";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-common, cmake, gmock, gtest }:
 buildRosPackage {
   pname = "ros-melodic-dataflow-lite";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/dataflow_lite/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "9d672144635cb6d0ec0bb039f13f5b779c6faae225a2834f8388802e39170855";
+    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/dataflow_lite/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "1a3dc4ccb5db55082bdb0a2ad25ed9ec8442b1d889e48969b142ad8839c7a938";
   };
 
   buildType = "cmake";

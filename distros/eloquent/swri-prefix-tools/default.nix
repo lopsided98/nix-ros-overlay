@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pythonPackages }:
 buildRosPackage {
   pname = "ros-eloquent-swri-prefix-tools";
-  version = "3.0.5-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_prefix_tools/3.0.5-1.tar.gz";
-    name = "3.0.5-1.tar.gz";
-    sha256 = "9a1465d6cd9fd94aeadf9508e6f6d35e02abaf35ac00a5f098f51b419a5da117";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_prefix_tools/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "fb223f1fee5e79da4b746bff3bc9930bae203e4e805db8613c1836c918fc374c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rosflight-msgs";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "6d5830b7aac38099b27c8624b510b3874ab2f641f58fea539b2db3353402a7a6";
+    url = "https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight_msgs/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "39a35c0520ec1d118148930ce07752cca3e9155fd1a10fed789d7f48cec6f9af";
   };
 
   buildType = "catkin";

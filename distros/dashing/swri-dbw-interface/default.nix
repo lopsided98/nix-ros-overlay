@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-swri-dbw-interface";
-  version = "3.0.5-r2";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_dbw_interface/3.0.5-2.tar.gz";
-    name = "3.0.5-2.tar.gz";
-    sha256 = "fae8828419a7a45b97df0f7605adf9cb94c0cec06edf6877b43f7b029bef7320";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_dbw_interface/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "15277bba230a37b49087285ae17538617137b8562c078f1449c6fcac7449d0f0";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, eigen, geometry-msgs, message-filters, nodelet, nodelet-topic-tools, pcl, pcl-conversions, pcl-msgs, pluginlib, rosbag, rosconsole, roscpp, roslib, rostest, sensor-msgs, std-msgs, tf, tf2, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-pcl-ros";
-  version = "1.7.0-r2";
+  version = "1.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/melodic/pcl_ros/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "ada9b2af2498d10817c956af471f2c36e6cb1a088a5daeb74188746b7177acd6";
+    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/melodic/pcl_ros/1.7.1-1.tar.gz";
+    name = "1.7.1-1.tar.gz";
+    sha256 = "1cc711667ed0aa93dae9e7b33c1a2cf91a194af1377031d0118232b3e3a13a80";
   };
 
   buildType = "catkin";

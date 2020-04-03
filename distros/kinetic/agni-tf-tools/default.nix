@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, qt5, roscpp, rviz, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-agni-tf-tools";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ubi-agni-gbp/agni_tf_tools-release/archive/release/kinetic/agni_tf_tools/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "1cc9302bdd66eaaa569b4de93b923c9ee04625e896f55af22912d7481b8305a5";
+    url = "https://github.com/ubi-agni-gbp/agni_tf_tools-release/archive/release/kinetic/agni_tf_tools/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "690ffbece3374b5ed1d4321c3e4bfd9e619676d184ee67406610af006584a545";
   };
 
   buildType = "catkin";

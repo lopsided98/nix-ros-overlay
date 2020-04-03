@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosflight-msgs";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/rosflight/rosflight-release/archive/release/melodic/rosflight_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "bd8462701427e321d59c399e8f0038390ef6f843cf470313afd05de6ecabff8a";
+    url = "https://github.com/rosflight/rosflight-release/archive/release/melodic/rosflight_msgs/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "52d7c9becbc24bb69b7cda495f0d7b85ca368607ab545a90f28248773e343a48";
   };
 
   buildType = "catkin";

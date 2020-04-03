@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-common, catkin, gtest, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-aws-ros1-common";
-  version = "2.0.1-r1";
+  version = "2.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/aws_ros1_common-release/archive/release/melodic/aws_ros1_common/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "c4a4208d835285e1c0301cc0269f3915962c6fc14631b6fcb8cc8dd08a83ba07";
+    url = "https://github.com/aws-gbp/aws_ros1_common-release/archive/release/melodic/aws_ros1_common/2.0.1-2.tar.gz";
+    name = "2.0.1-2.tar.gz";
+    sha256 = "6ce3c5da6d51c25b2c8453af0a780dbeaa94561baf086346a2fdc2b3ed27caac";
   };
 
   buildType = "catkin";
