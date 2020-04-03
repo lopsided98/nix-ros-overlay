@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-msgs, geometry-msgs, rosbag, roscpp, rosflight, rosflight-firmware, rosflight-msgs, rosflight-sim, rosgraph-msgs, rospy, sensor-msgs, std-srvs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rosflight-utils";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight_utils/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "33856ab4a6949c5ac259da3cdf89f1b7d42154a53da392749426fd626a158a61";
+    url = "https://github.com/rosflight/rosflight-release/archive/release/kinetic/rosflight_utils/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "dc06084a4c23a4df3a8b1f63547a42909c53c3a846d46ce5835c541865cc3a63";
   };
 
   buildType = "catkin";

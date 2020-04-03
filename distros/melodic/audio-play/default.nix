@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, audio-common-msgs, catkin, gst_all_1, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-audio-play";
-  version = "0.3.3";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/audio_common-release/archive/release/melodic/audio_play/0.3.3-0.tar.gz";
-    name = "0.3.3-0.tar.gz";
-    sha256 = "a3c3715c6c4d70959103aa529c2e2cdcf46e6a07d500ed262146038ecdcb07c5";
+    url = "https://github.com/ros-gbp/audio_common-release/archive/release/melodic/audio_play/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "8cb68e5ddd9a5c689952f33b40f187a2edc7dfac7f0539dfe46879ea846ecd6e";
   };
 
   buildType = "catkin";

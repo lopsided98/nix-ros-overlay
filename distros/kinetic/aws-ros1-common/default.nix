@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-common, catkin, gtest, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-aws-ros1-common";
-  version = "2.0.1-r1";
+  version = "2.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/aws_ros1_common-release/archive/release/kinetic/aws_ros1_common/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "a6809dc8925f253335963fe069c7043ecc8d4143f21fc60aca776655afb2f132";
+    url = "https://github.com/aws-gbp/aws_ros1_common-release/archive/release/kinetic/aws_ros1_common/2.0.1-2.tar.gz";
+    name = "2.0.1-2.tar.gz";
+    sha256 = "89e0fd46b76fe14eb2ab4f00b77cb554fa1b8c1ed81dc9259d5eaefe32625f4c";
   };
 
   buildType = "catkin";

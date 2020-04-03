@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, kdl-parser, orocos-kdl, rosconsole, roscpp, rostest, rostime, sensor-msgs, tf, tf2-kdl, tf2-ros, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-melodic-robot-state-publisher";
-  version = "1.14.0-r1";
+  version = "1.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/robot_state_publisher-release/archive/release/melodic/robot_state_publisher/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "e80bd4391f22b6a8817f78c36ecfa37cf9e2161a9909f027a6516bcd7a6be10a";
+    url = "https://github.com/ros-gbp/robot_state_publisher-release/archive/release/melodic/robot_state_publisher/1.14.1-1.tar.gz";
+    name = "1.14.1-1.tar.gz";
+    sha256 = "76dca47e16db4a89542e6f14ecbb5a1211b8948acd00ae6554a2f6a4e100ce48";
   };
 
   buildType = "catkin";

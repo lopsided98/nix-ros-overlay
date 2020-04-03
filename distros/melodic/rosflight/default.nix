@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, eigen, eigen-stl-containers, geometry-msgs, git, libyamlcpp, pkg-config, roscpp, rosflight-msgs, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-melodic-rosflight";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/rosflight/rosflight-release/archive/release/melodic/rosflight/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "3a4fce88ea7aadaa17da9a58951fd8335899e14e1c927951d7dad2544916278e";
+    url = "https://github.com/rosflight/rosflight-release/archive/release/melodic/rosflight/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "39677cf16d92770db360bc6aada7d212a62d80aa96c40b1027b34c327cd488d6";
   };
 
   buildType = "catkin";

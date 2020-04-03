@@ -1350,6 +1350,8 @@ self: super: {
 
  jsk-pcl-ros-utils = self.callPackage ./jsk-pcl-ros-utils {};
 
+ jsk-planning = self.callPackage ./jsk-planning {};
+
  jsk-pr2eus = self.callPackage ./jsk-pr2eus {};
 
  jsk-recognition = self.callPackage ./jsk-recognition {};
@@ -2078,6 +2080,12 @@ self: super: {
 
  pcl-ros = self.callPackage ./pcl-ros {};
 
+ pddl-msgs = self.callPackage ./pddl-msgs {};
+
+ pddl-planner = self.callPackage ./pddl-planner {};
+
+ pddl-planner-viewer = self.callPackage ./pddl-planner-viewer {};
+
  people = self.callPackage ./people {};
 
  people-msgs = self.callPackage ./people-msgs {};
@@ -2202,6 +2210,14 @@ self: super: {
 
  pr2-gripper-action = self.callPackage ./pr2-gripper-action {};
 
+ pr2-gripper-sensor = self.callPackage ./pr2-gripper-sensor {};
+
+ pr2-gripper-sensor-action = self.callPackage ./pr2-gripper-sensor-action {};
+
+ pr2-gripper-sensor-controller = self.callPackage ./pr2-gripper-sensor-controller {};
+
+ pr2-gripper-sensor-msgs = self.callPackage ./pr2-gripper-sensor-msgs {};
+
  pr2-hardware-interface = self.callPackage ./pr2-hardware-interface {};
 
  pr2-head-action = self.callPackage ./pr2-head-action {};
@@ -2301,6 +2317,8 @@ self: super: {
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
  pybind11-catkin = self.callPackage ./pybind11-catkin {};
+
+ pyquaternion = self.callPackage ./pyquaternion {};
 
  pyros-test = self.callPackage ./pyros-test {};
 
@@ -3117,6 +3135,8 @@ self: super: {
  talos-description-calibration = self.callPackage ./talos-description-calibration {};
 
  talos-description-inertial = self.callPackage ./talos-description-inertial {};
+
+ task-compiler = self.callPackage ./task-compiler {};
 
  teb-local-planner = self.callPackage ./teb-local-planner {};
 

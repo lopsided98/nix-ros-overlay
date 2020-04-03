@@ -900,6 +900,8 @@ self: super: {
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
 
+ swri-console = self.callPackage ./swri-console {};
+
  swri-console-util = self.callPackage ./swri-console-util {};
 
  swri-dbw-interface = self.callPackage ./swri-dbw-interface {};

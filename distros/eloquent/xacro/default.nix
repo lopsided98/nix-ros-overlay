@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-index-python, ament-lint-auto, python3Packages }:
 buildRosPackage {
   pname = "ros-eloquent-xacro";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/xacro-release/archive/release/eloquent/xacro/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "01bc661553bdb5c16ad426d47c5896c934cd7dd6cfdd2be179396d1bf41a8e98";
+    url = "https://github.com/ros-gbp/xacro-release/archive/release/eloquent/xacro/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "dd56e630bd27996cba0ab40b65cf49e8a67193733d14ee2e54ce6a97c571cd47";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, aws-common, aws-ros2-common, cloudwatch-logs-common, launch, launch-ros, rcl-interfaces, rclcpp, std-srvs }:
 buildRosPackage {
   pname = "ros-dashing-cloudwatch-logger";
-  version = "3.0.0-r2";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_logger-release/archive/release/dashing/cloudwatch_logger/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "2bc69c3139f5bd23ed2a69807c040b880871a171aa344b244ad4ff8dac82be65";
+    url = "https://github.com/aws-gbp/cloudwatch_logger-release/archive/release/dashing/cloudwatch_logger/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "75a541dfb583d5f056a7e8f2042313984f625ec66c549e0753a408a2088dfc19";
   };
 
   buildType = "ament_cmake";
