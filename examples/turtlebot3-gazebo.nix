@@ -3,7 +3,7 @@
 # roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
 with import ../. {};
-with rosPackages.kinetic;
+with rosPackages.melodic;
 with pythonPackages;
 
 mkShell {
