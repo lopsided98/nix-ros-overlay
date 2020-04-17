@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3, python3Packages, pythonPackages, rosbash, roslint }:
 buildRosPackage {
   pname = "ros-kinetic-catkin-virtualenv";
-  version = "0.4.1-r2";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/locusrobotics/catkin_virtualenv-release/archive/release/kinetic/catkin_virtualenv/0.4.1-2.tar.gz";
-    name = "0.4.1-2.tar.gz";
-    sha256 = "0c94219f3da044a049f8847ce47e17318537a8ccc1dd82a277dc06f2d7609b64";
+    url = "https://github.com/locusrobotics/catkin_virtualenv-release/archive/release/kinetic/catkin_virtualenv/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "f94de708a4043f700868e47b864bb7d3b28be9d72989a71bd68e7d6fb7786d93";
   };
 
   buildType = "catkin";

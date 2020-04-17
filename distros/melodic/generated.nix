@@ -770,6 +770,8 @@ self: super: {
 
  eus-assimp = self.callPackage ./eus-assimp {};
 
+ euslime = self.callPackage ./euslime {};
+
  euslisp = self.callPackage ./euslisp {};
 
  eusurdf = self.callPackage ./eusurdf {};
@@ -1110,6 +1112,8 @@ self: super: {
 
  hector-imu-tools = self.callPackage ./hector-imu-tools {};
 
+ hector-localization = self.callPackage ./hector-localization {};
+
  hector-map-server = self.callPackage ./hector-map-server {};
 
  hector-map-tools = self.callPackage ./hector-map-tools {};
@@ -1121,6 +1125,10 @@ self: super: {
  hector-models = self.callPackage ./hector-models {};
 
  hector-nav-msgs = self.callPackage ./hector-nav-msgs {};
+
+ hector-pose-estimation = self.callPackage ./hector-pose-estimation {};
+
+ hector-pose-estimation-core = self.callPackage ./hector-pose-estimation-core {};
 
  hector-sensors-description = self.callPackage ./hector-sensors-description {};
 
@@ -1136,9 +1144,13 @@ self: super: {
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
+ hokuyo3d = self.callPackage ./hokuyo3d {};
+
  hostapd-access-point = self.callPackage ./hostapd-access-point {};
 
  hpp-fcl = self.callPackage ./hpp-fcl {};
+
+ hrpsys = self.callPackage ./hrpsys {};
 
  husky-base = self.callPackage ./husky-base {};
 
@@ -1188,6 +1200,8 @@ self: super: {
 
  image-common = self.callPackage ./image-common {};
 
+ image-exposure-msgs = self.callPackage ./image-exposure-msgs {};
+
  image-geometry = self.callPackage ./image-geometry {};
 
  image-pipeline = self.callPackage ./image-pipeline {};
@@ -1217,6 +1231,8 @@ self: super: {
  imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
+
+ imu-monitor = self.callPackage ./imu-monitor {};
 
  imu-pipeline = self.callPackage ./imu-pipeline {};
 
@@ -1653,6 +1669,8 @@ self: super: {
  message-relay = self.callPackage ./message-relay {};
 
  message-runtime = self.callPackage ./message-runtime {};
+
+ message-to-tf = self.callPackage ./message-to-tf {};
 
  microstrain-3dmgx2-imu = self.callPackage ./microstrain-3dmgx2-imu {};
 
@@ -2156,6 +2174,10 @@ self: super: {
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
+ pointgrey-camera-description = self.callPackage ./pointgrey-camera-description {};
+
+ pointgrey-camera-driver = self.callPackage ./pointgrey-camera-driver {};
+
  polled-camera = self.callPackage ./polled-camera {};
 
  pose-base-controller = self.callPackage ./pose-base-controller {};
@@ -2180,13 +2202,21 @@ self: super: {
 
  pr2-arm-move-ik = self.callPackage ./pr2-arm-move-ik {};
 
+ pr2-bringup = self.callPackage ./pr2-bringup {};
+
  pr2-calibration-controllers = self.callPackage ./pr2-calibration-controllers {};
+
+ pr2-camera-synchronizer = self.callPackage ./pr2-camera-synchronizer {};
 
  pr2-common = self.callPackage ./pr2-common {};
 
  pr2-common-action-msgs = self.callPackage ./pr2-common-action-msgs {};
 
  pr2-common-actions = self.callPackage ./pr2-common-actions {};
+
+ pr2-computer-monitor = self.callPackage ./pr2-computer-monitor {};
+
+ pr2-controller-configuration = self.callPackage ./pr2-controller-configuration {};
 
  pr2-controller-configuration-gazebo = self.callPackage ./pr2-controller-configuration-gazebo {};
 
@@ -2201,6 +2231,8 @@ self: super: {
  pr2-dashboard-aggregator = self.callPackage ./pr2-dashboard-aggregator {};
 
  pr2-description = self.callPackage ./pr2-description {};
+
+ pr2-ethercat = self.callPackage ./pr2-ethercat {};
 
  pr2-ethercat-drivers = self.callPackage ./pr2-ethercat-drivers {};
 
@@ -2267,6 +2299,10 @@ self: super: {
  pr2-power-board = self.callPackage ./pr2-power-board {};
 
  pr2-power-drivers = self.callPackage ./pr2-power-drivers {};
+
+ pr2-robot = self.callPackage ./pr2-robot {};
+
+ pr2-run-stop-auto-restart = self.callPackage ./pr2-run-stop-auto-restart {};
 
  pr2-simulator = self.callPackage ./pr2-simulator {};
 
@@ -2489,6 +2525,12 @@ self: super: {
  ridgeback-simulator = self.callPackage ./ridgeback-simulator {};
 
  ridgeback-viz = self.callPackage ./ridgeback-viz {};
+
+ robosense-description = self.callPackage ./robosense-description {};
+
+ robosense-gazebo-plugins = self.callPackage ./robosense-gazebo-plugins {};
+
+ robosense-simulator = self.callPackage ./robosense-simulator {};
 
  robot = self.callPackage ./robot {};
 
@@ -3010,6 +3052,8 @@ self: super: {
 
  service-tools = self.callPackage ./service-tools {};
 
+ sesame-ros = self.callPackage ./sesame-ros {};
+
  settlerlib = self.callPackage ./settlerlib {};
 
  shape-msgs = self.callPackage ./shape-msgs {};
@@ -3079,6 +3123,8 @@ self: super: {
  static-tf = self.callPackage ./static-tf {};
 
  static-transform-mux = self.callPackage ./static-transform-mux {};
+
+ statistics-msgs = self.callPackage ./statistics-msgs {};
 
  std-capabilities = self.callPackage ./std-capabilities {};
 
@@ -3545,6 +3591,8 @@ self: super: {
  webrtc = self.callPackage ./webrtc {};
 
  webrtc-ros = self.callPackage ./webrtc-ros {};
+
+ wfov-camera-msgs = self.callPackage ./wfov-camera-msgs {};
 
  wge100-camera = self.callPackage ./wge100-camera {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rosgraph, roslaunch, rospack, rospy, rosunit, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-app-manager";
-  version = "1.1.0";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/app_manager-release/archive/release/melodic/app_manager/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "1b206bd525d456027f4dcf75e78671fe6cbae7b78ebacc3707eb1d611636452c";
+    url = "https://github.com/ros-gbp/app_manager-release/archive/release/melodic/app_manager/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "9dc26bb5d17e3c5cbc39e09d60faf429bda20287f206ec43327ea5d22717f7a8";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, eigenpy, git, python, pythonPackages, urdfdom }:
 buildRosPackage {
   pname = "ros-melodic-pinocchio";
-  version = "2.3.1-r1";
+  version = "2.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/melodic/pinocchio/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "7b7935e8fcab51283582505aee0b17a367bdacb90fbf0529c8ae4c2efac6a2fd";
+    url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/melodic/pinocchio/2.4.0-2.tar.gz";
+    name = "2.4.0-2.tar.gz";
+    sha256 = "5758cc693407113362d721eeb5f981e1b699187ef009ad1ddedd61487d0f9774";
   };
 
   buildType = "cmake";

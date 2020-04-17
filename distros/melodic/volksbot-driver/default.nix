@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, epos2-motor-controller, geometry-msgs, nav-msgs, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-volksbot-driver";
-  version = "1.0.0-r3";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/volksbot_driver-release/archive/release/melodic/volksbot_driver/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "a46e4b3d0321766d6cae107019a7d3aecfd3babf0e4b767c316e489e45ae2cef";
+    url = "https://github.com/uos-gbp/volksbot_driver-release/archive/release/melodic/volksbot_driver/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "e6e0fa49a8ba75f9f7f8e784d53250f53779337d0fd4bda5274433bb54dfc271";
   };
 
   buildType = "catkin";

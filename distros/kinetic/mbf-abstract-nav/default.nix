@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, dynamic-reconfigure, geometry-msgs, mbf-abstract-core, mbf-msgs, mbf-utility, nav-msgs, roscpp, std-msgs, std-srvs, tf, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-kinetic-mbf-abstract-nav";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_abstract_nav/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "bae3becf8a73e6ad179daeb0884f5fcbf305468d97e2efced356b822a6118354";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_abstract_nav/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "ff1357be2ac361cf2228055d9535e38e7cd35291d6e261c34e843f161c4f5fc6";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, filters, git, laser-filters, laser-geometry, mk }:
 buildRosPackage {
   pname = "ros-kinetic-laser-filters-jsk-patch";
-  version = "2.1.15-r1";
+  version = "2.1.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/laser_filters_jsk_patch/2.1.15-1.tar.gz";
-    name = "2.1.15-1.tar.gz";
-    sha256 = "40624aebdb09812424bbb20c11f6d86d5f202fd1d4aefd3c15052de153122d8c";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/laser_filters_jsk_patch/2.1.17-1.tar.gz";
+    name = "2.1.17-1.tar.gz";
+    sha256 = "ce1b5726962ea3438e6a1f5a436886c04f208f9d288e79950fa95df3ffe3b5f5";
   };
 
   buildType = "catkin";

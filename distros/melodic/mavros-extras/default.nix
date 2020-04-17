@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, mavros, mavros-msgs, roscpp, sensor-msgs, std-msgs, tf, tf2-eigen, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mavros-extras";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/mavros_extras/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "42999fea44535a5d86f78b2d208f0ede58a4eb1495d61fbaadaafb6cf01585dd";
+    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/mavros_extras/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "9af73145e49a232d0be1dea547292d294d385403fb8fc851c7bf4078667af3fa";
   };
 
   buildType = "catkin";

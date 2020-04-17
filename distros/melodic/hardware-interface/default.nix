@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-hardware-interface";
-  version = "0.17.0-r1";
+  version = "0.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/hardware_interface/0.17.0-1.tar.gz";
-    name = "0.17.0-1.tar.gz";
-    sha256 = "68e96e4c41c7d733e4680b424b7bed6efeb695b077f4225edc3c8d92a45c2a3a";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/hardware_interface/0.18.0-1.tar.gz";
+    name = "0.18.0-1.tar.gz";
+    sha256 = "82eddb1b8967713da82a2a4cd3c3a9a128d8c83b78d3de46cde7b1708a07031a";
   };
 
   buildType = "catkin";

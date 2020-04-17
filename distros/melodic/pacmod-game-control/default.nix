@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joy, pacmod-msgs, roscpp, roslint, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pacmod-game-control";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/pacmod_game_control-release/archive/release/melodic/pacmod_game_control/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "d6dcf815bd4eeb07f8f36532359eb8dd0bb5bae2942df2a54a36eb2bad16611f";
+    url = "https://github.com/astuff/pacmod_game_control-release/archive/release/melodic/pacmod_game_control/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "7ac2b341575d857379b9cec72b934042fc3832bab2d608857aab922236ba3820";
   };
 
   buildType = "catkin";

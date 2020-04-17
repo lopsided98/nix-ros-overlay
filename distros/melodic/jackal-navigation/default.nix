@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, catkin, gmapping, map-server, move-base, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-jackal-navigation";
-  version = "0.6.4-r1";
+  version = "0.6.4-r3";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_navigation/0.6.4-1.tar.gz";
-    name = "0.6.4-1.tar.gz";
-    sha256 = "971b0edeee26b8dbcbe9c38c94d10098e9914e1110a5c29a9b500fa01bece0b3";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_navigation/0.6.4-3.tar.gz";
+    name = "0.6.4-3.tar.gz";
+    sha256 = "ded7d60ecc878baa0ee210543a9815814bc84f38bc7e3ac260b69179fc23f868";
   };
 
   buildType = "catkin";

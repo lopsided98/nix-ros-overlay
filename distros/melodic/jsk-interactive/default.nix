@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, dynamic-tf-publisher, geometry-msgs, jsk-interactive-marker, mk, rosbuild, rospy, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-jsk-interactive";
-  version = "2.1.5";
+  version = "2.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_interactive/2.1.5-0.tar.gz";
-    name = "2.1.5-0.tar.gz";
-    sha256 = "739be630c6e56f915493551f092539377bfc8a224ddc9952b517e223952af8eb";
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_interactive/2.1.6-1.tar.gz";
+    name = "2.1.6-1.tar.gz";
+    sha256 = "c3652d221932e391e6f157fd1a7b6cff1be77c730290e62bfa8f53272e117297";
   };
 
   buildType = "catkin";

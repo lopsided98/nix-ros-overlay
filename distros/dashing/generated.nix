@@ -668,6 +668,12 @@ self: super: {
 
  radar-msgs = self.callPackage ./radar-msgs {};
 
+ rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
+
+ rc-genicam-api = self.callPackage ./rc-genicam-api {};
+
+ rcdiscover = self.callPackage ./rcdiscover {};
+
  rcl = self.callPackage ./rcl {};
 
  rcl-action = self.callPackage ./rcl-action {};

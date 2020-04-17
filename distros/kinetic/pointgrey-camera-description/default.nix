@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-pointgrey-camera-description";
-  version = "0.13.4";
+  version = "0.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/pointgrey_camera_description/0.13.4-0.tar.gz";
-    name = "0.13.4-0.tar.gz";
-    sha256 = "2ff3a538c01ad77963c50eec9f566ed2079501d5150fad367a9f6f629e338a7e";
+    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/pointgrey_camera_description/0.14.0-1.tar.gz";
+    name = "0.14.0-1.tar.gz";
+    sha256 = "8364b94b089dd0a1feb2fd0c2928320969d86f898154349a8de4ce4d4d7af38e";
   };
 
   buildType = "catkin";

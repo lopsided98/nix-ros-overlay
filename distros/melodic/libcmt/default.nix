@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cacert, cmake, git, opencv3, openssl }:
+{ lib, buildRosPackage, fetchurl, cacert, cmake, cv-bridge, git, openssl }:
 buildRosPackage {
   pname = "ros-melodic-libcmt";
-  version = "2.1.13-r1";
+  version = "2.1.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/libcmt/2.1.13-1.tar.gz";
-    name = "2.1.13-1.tar.gz";
-    sha256 = "0c326290029afbb6e1a1772ce64ec363360b2996f06a0a21616ccc2c121ac164";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/libcmt/2.1.17-1.tar.gz";
+    name = "2.1.17-1.tar.gz";
+    sha256 = "998020b2bca631332fbcfb9a00306de506d8865f684ec0d658562dac03b8a564";
   };
 
   buildType = "cmake";
   buildInputs = [ cacert git openssl ];
-  propagatedBuildInputs = [ opencv3 ];
+  propagatedBuildInputs = [ cv-bridge ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

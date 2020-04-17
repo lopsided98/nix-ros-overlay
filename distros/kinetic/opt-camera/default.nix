@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-calibration-parsers, catkin, compressed-image-transport, cv-bridge, dynamic-reconfigure, image-proc, roslang, rospack, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-opt-camera";
-  version = "2.1.15-r1";
+  version = "2.1.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/opt_camera/2.1.15-1.tar.gz";
-    name = "2.1.15-1.tar.gz";
-    sha256 = "72e0a4898deedde17cdea3f62645debd9601b517c19ac10cbfc8074f4c063499";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/opt_camera/2.1.17-1.tar.gz";
+    name = "2.1.17-1.tar.gz";
+    sha256 = "85e7265d5d0ee4c41130cee67e6aca591b4313e4f30ad2ffcca16c3c511c2463";
   };
 
   buildType = "catkin";

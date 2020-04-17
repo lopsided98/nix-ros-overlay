@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cmake-modules, dynamic-reconfigure, dynamic-tf-publisher, eigen-conversions, geometry-msgs, interactive-markers, jsk-footstep-msgs, jsk-recognition-msgs, jsk-recognition-utils, jsk-rviz-plugins, jsk-topic-tools, libyamlcpp, message-filters, message-generation, message-runtime, mk, moveit-msgs, rosbuild, roscpp, roseus, roslib, rviz, sensor-msgs, tf, tf-conversions, tinyxml, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-interactive-marker";
-  version = "2.1.5";
+  version = "2.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_interactive_marker/2.1.5-0.tar.gz";
-    name = "2.1.5-0.tar.gz";
-    sha256 = "197551b92f6e7efa5966f1261631f8a73709fecac74f0bd64c00b3793ab2844d";
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_interactive_marker/2.1.6-1.tar.gz";
+    name = "2.1.6-1.tar.gz";
+    sha256 = "54302e82dcdad10864853a0dde08b25bf08273590c523077c5d2174b43b025c4";
   };
 
   buildType = "catkin";

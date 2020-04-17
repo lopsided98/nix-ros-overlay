@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roslint, rostest, rosunit, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-urg-stamped";
-  version = "0.0.4-r1";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/seqsense/urg_stamped-release/archive/release/kinetic/urg_stamped/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "97f3b496fbcdc7e1f954d9f19e1549d00be21e5f7953541620b90effc04965a0";
+    url = "https://github.com/seqsense/urg_stamped-release/archive/release/kinetic/urg_stamped/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "d803529a50f64c8291d82296a7675a6a7457f650059839534bd2cfe9cd897d43";
   };
 
   buildType = "catkin";

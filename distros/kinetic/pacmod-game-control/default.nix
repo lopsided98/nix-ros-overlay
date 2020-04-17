@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joy, pacmod-msgs, roscpp, roslint, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-pacmod-game-control";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/pacmod_game_control-release/archive/release/kinetic/pacmod_game_control/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "d5d6e476b8f0ba42a1eeef98c5a7fafccd3fc7c5eaa5157a5fcf6cc4fb823dfc";
+    url = "https://github.com/astuff/pacmod_game_control-release/archive/release/kinetic/pacmod_game_control/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "afabe33a0e96ede8c1796c57cf9181dda69b7b9f1de2f5245b7aa8a53f4e7434";
   };
 
   buildType = "catkin";

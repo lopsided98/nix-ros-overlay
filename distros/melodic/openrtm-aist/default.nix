@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, automake, catkin, cmake, doxygen, libtool, omniorb, pkg-config, python, utillinux }:
 buildRosPackage {
   pname = "ros-melodic-openrtm-aist";
-  version = "1.1.2-r3";
+  version = "1.1.2-r7";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/openrtm_aist-release/archive/release/melodic/openrtm_aist/1.1.2-3.tar.gz";
-    name = "1.1.2-3.tar.gz";
-    sha256 = "9e3839327b8c0851e91d541cbaf85d0fec16a95bd32522deeed45deb3e404320";
+    url = "https://github.com/tork-a/openrtm_aist-release/archive/release/melodic/openrtm_aist/1.1.2-7.tar.gz";
+    name = "1.1.2-7.tar.gz";
+    sha256 = "8de78280affbdc5fdf3537a0be8de962d0743e3674a89f879526c614f8c78acc";
   };
 
   buildType = "cmake";

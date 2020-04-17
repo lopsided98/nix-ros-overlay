@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp, tf, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-mbf-utility";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_utility/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "7bdace7fd313f586812b8e8e3e0dbc77a26a0712c18029bb6abb1e3e0a262b99";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_utility/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "c016dc236c1d06d59fb056b35398ead39fca8d7942bc98e8751c6f0d0bc0777c";
   };
 
   buildType = "catkin";

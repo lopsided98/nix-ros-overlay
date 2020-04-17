@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hardware-interface, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-combined-robot-hw";
-  version = "0.17.0-r1";
+  version = "0.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/combined_robot_hw/0.17.0-1.tar.gz";
-    name = "0.17.0-1.tar.gz";
-    sha256 = "6227a48754f5d70d1fbca5d568b1789f2c6d4ad23d4e962d7585d961b2eb2644";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/combined_robot_hw/0.18.0-1.tar.gz";
+    name = "0.18.0-1.tar.gz";
+    sha256 = "7149f18ac583fd00c215de80cd593c8f530165c5218de95ee349ae4f7ee0e3cb";
   };
 
   buildType = "catkin";

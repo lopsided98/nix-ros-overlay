@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cunit, openssl }:
 buildRosPackage {
   pname = "ros-eloquent-cyclonedds";
-  version = "0.1.0-r7";
+  version = "0.5.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/eloquent/cyclonedds/0.1.0-7.tar.gz";
-    name = "0.1.0-7.tar.gz";
-    sha256 = "c5706981e4ba74e1240241f979fee6cc022dac5174f616463df29e699bb39f88";
+    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/eloquent/cyclonedds/0.5.1-2.tar.gz";
+    name = "0.5.1-2.tar.gz";
+    sha256 = "7377c71cbb406f7aeb8fcdf5678f79197ab00984a30851b2ab37e813e1e9ed5f";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, jsk-interactive, jsk-interactive-marker, jsk-interactive-test, jsk-rqt-plugins, jsk-rviz-plugins }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-visualization";
-  version = "2.1.5";
+  version = "2.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_visualization/2.1.5-0.tar.gz";
-    name = "2.1.5-0.tar.gz";
-    sha256 = "6176c631ecbccbc6cac8ac4c7cff6f49d01b96c0c01bb8a7a674908a125ecfea";
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_visualization/2.1.6-1.tar.gz";
+    name = "2.1.6-1.tar.gz";
+    sha256 = "3ba0811f9f450f08f4adbbe4174e211bfc036d12af98dca6d568eec5f61414c6";
   };
 
   buildType = "catkin";

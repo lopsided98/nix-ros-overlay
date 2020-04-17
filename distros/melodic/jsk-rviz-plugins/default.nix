@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, diagnostic-msgs, dynamic-reconfigure, geometry-msgs, image-geometry, image-publisher, jsk-footstep-msgs, jsk-gui-msgs, jsk-hark-msgs, jsk-recognition-msgs, jsk-recognition-utils, jsk-topic-tools, message-generation, mk, people-msgs, posedetection-msgs, pythonPackages, rosbuild, rviz, std-msgs, urdfdom-py, view-controller-msgs }:
 buildRosPackage {
   pname = "ros-melodic-jsk-rviz-plugins";
-  version = "2.1.5";
+  version = "2.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_rviz_plugins/2.1.5-0.tar.gz";
-    name = "2.1.5-0.tar.gz";
-    sha256 = "c1c50044f24196bb50fc782cb407e7ed9c8540a7525c6f305b0ec44641d74f27";
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_rviz_plugins/2.1.6-1.tar.gz";
+    name = "2.1.6-1.tar.gz";
+    sha256 = "10e64c0348b86e4a06e28acccd1abcdaea8b09ddaf8f7bbe62de2a7e5c49dce8";
   };
 
   buildType = "catkin";

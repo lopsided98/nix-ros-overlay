@@ -3012,6 +3012,8 @@ self: super: {
 
  pointgrey-camera-description = self.callPackage ./pointgrey-camera-description {};
 
+ pointgrey-camera-driver = self.callPackage ./pointgrey-camera-driver {};
+
  polar-scan-matcher = self.callPackage ./polar-scan-matcher {};
 
  polled-camera = self.callPackage ./polled-camera {};

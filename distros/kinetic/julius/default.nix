@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mk, roslib, rospack, rsync, unzip, wget }:
 buildRosPackage {
   pname = "ros-kinetic-julius";
-  version = "2.1.15-r1";
+  version = "2.1.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/julius/2.1.15-1.tar.gz";
-    name = "2.1.15-1.tar.gz";
-    sha256 = "43d731d49103582f6c0bfaabfb4e23a93585b8ca9b2ad42fb893d9d301a8761a";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/julius/2.1.17-1.tar.gz";
+    name = "2.1.17-1.tar.gz";
+    sha256 = "5153c506a93332bf398dc288016bb0ff6c666e570bb131968f00e8619ac2ca48";
   };
 
   buildType = "catkin";

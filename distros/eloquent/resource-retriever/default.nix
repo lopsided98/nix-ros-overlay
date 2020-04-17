@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-index-cpp, libcurl-vendor }:
 buildRosPackage {
   pname = "ros-eloquent-resource-retriever";
-  version = "2.2.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/eloquent/resource_retriever/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "7cb31b32b706d3238597b382f61911839a38fda9e13d3a1c52992bfbe452a577";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/eloquent/resource_retriever/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "199be21d205c464bd4842465b957938589f4f6d1273ae779006d7c55a3fbd7be";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, catkin-virtualenv, libffi, message-generation, message-runtime, openssl }:
 buildRosPackage {
   pname = "ros-kinetic-sesame-ros";
-  version = "2.1.15-r1";
+  version = "2.1.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/sesame_ros/2.1.15-1.tar.gz";
-    name = "2.1.15-1.tar.gz";
-    sha256 = "d0a1f9f06363343c52fef3c4e2f6972ca4cbc56987bbac6fa759abd71f73dfd2";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/sesame_ros/2.1.17-1.tar.gz";
+    name = "2.1.17-1.tar.gz";
+    sha256 = "a58eabf5e48c81225ec5926792614351f508a42a2a356fc0fd0fe3474b42570c";
   };
 
   buildType = "catkin";

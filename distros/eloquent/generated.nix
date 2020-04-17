@@ -632,6 +632,12 @@ self: super: {
 
  quality-of-service-demo-py = self.callPackage ./quality-of-service-demo-py {};
 
+ rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
+
+ rc-genicam-api = self.callPackage ./rc-genicam-api {};
+
+ rcdiscover = self.callPackage ./rcdiscover {};
+
  rcl = self.callPackage ./rcl {};
 
  rcl-action = self.callPackage ./rcl-action {};

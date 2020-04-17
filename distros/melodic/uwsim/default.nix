@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, dccomms-ros, fftw, fftwSinglePrec, geographiclib, geometry-msgs, image-transport, interactive-markers, kdl-parser, libGL, libGLU, libxmlxx, muparser, nav-msgs, openscenegraph, osg-interactive-markers, osg-markers, osg-utils, pcl-ros, pluginlib, resource-retriever, robot-state-publisher, roscpp, sensor-msgs, tf, underwater-sensor-msgs, urdf, uwsim-bullet, uwsim-osgbullet, uwsim-osgocean, uwsim-osgworks, xacro }:
 buildRosPackage {
   pname = "ros-melodic-uwsim";
-  version = "1.4.2-r2";
+  version = "1.4.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/uji-ros-pkg/underwater_simulation-release/archive/release/melodic/uwsim/1.4.2-2.tar.gz";
-    name = "1.4.2-2.tar.gz";
-    sha256 = "92afdf72aa7141f92f121e15c367606f35a72dce8ed3382aed7b11e4183c598a";
+    url = "https://github.com/uji-ros-pkg/underwater_simulation-release/archive/release/melodic/uwsim/1.4.2-3.tar.gz";
+    name = "1.4.2-3.tar.gz";
+    sha256 = "c1ca2ee772888d4cc33f58ee5399ad49b0b9fb36362c009236bebd82ecf091ac";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rospatlite";
-  version = "2.1.15-r1";
+  version = "2.1.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/rospatlite/2.1.15-1.tar.gz";
-    name = "2.1.15-1.tar.gz";
-    sha256 = "6c54f7eb9670f320fbe4777ea27f751ecce68b652573ac73b61b99c7e48de105";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/kinetic/rospatlite/2.1.17-1.tar.gz";
+    name = "2.1.17-1.tar.gz";
+    sha256 = "6b8d563933bc14e1e069bc06a8aeb30e0436dd7544c804a61d68777a19539f92";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cunit, openssl }:
 buildRosPackage {
   pname = "ros-dashing-cyclonedds";
-  version = "0.1.0-r3";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/dashing/cyclonedds/0.1.0-3.tar.gz";
-    name = "0.1.0-3.tar.gz";
-    sha256 = "2a26e433b8c56a1003cc745e8612d7d3551a49ed25d63a7a092e002ce507139d";
+    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/dashing/cyclonedds/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "afbb1cd60046ac3513b78d22f26af23317414074cf00fe612708d56d1babe03e";
   };
 
   buildType = "cmake";
