@@ -173,6 +173,16 @@ let
       nativeBuildInputs = nativeBuildInputs ++ [ self.pkgconfig ];
     });
 
+    mapviz = rosSuper.mapviz.overrideAttrs ({
+      nativeBuildInputs ? [],
+      postFixup ? "", ...
+    }: {
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      postFixup = postFixup + ''
+        wrapQtApp "$out/lib/mapviz/mapviz"
+      '';
+    });
+
     mavlink = rosSuper.mavlink.overrideAttrs ({
       postPatch ? "", ...
     }: {
@@ -257,9 +267,53 @@ let
       sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
     };
 
+    swri-geometry-util = rosSuper.swri-geometry-util.overrideAttrs ({
+      patches ? [], ...
+    }: {
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/swri-robotics/marti_common/commit/a8253120b0eb1b3dbba97616dc0c1acce407f5c8.patch";
+        stripLen = 1;
+        sha256 = "0jnn9npqyiqwp6if29nxx0dyalc9bnaaqhymxlwkh2x71gf5armb";
+      }) ];
+    });
+
+    swri-opencv-util = rosSuper.swri-opencv-util.overrideAttrs ({
+      patches ? [], ...
+    }: {
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/swri-robotics/marti_common/commit/b8414d4bc39e689a93582b246b0ba6eaf14feac6.patch";
+        stripLen = 1;
+        includes = [ "src/show.cpp" ];
+        sha256 = "0n1akps47rgbij7gbylxhxdndzlmzmax09axqdlygx81db6zh1qc";
+      }) ];
+    });
+
+    swri-transform-util = rosSuper.swri-transform-util.overrideAttrs ({
+      patches ? [],
+      CXXFLAGS ? "", ...
+    }: {
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/swri-robotics/marti_common/commit/b8414d4bc39e689a93582b246b0ba6eaf14feac6.patch";
+        stripLen = 1;
+        includes = [ "include/swri_transform_util/utm_util.h" ];
+        sha256 = "1j23rxx6087g844dfkm9vxci29pykka4nmy6660h9nsxarcg327h";
+      }) ];
+      CXXFLAGS = CXXFLAGS + " -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H";
+    });
+
     tf = patchBoostSignals rosSuper.tf;
 
     tf2 = patchBoostSignals rosSuper.tf2;
+
+    tile-map = rosSuper.tile-map.overrideAttrs ({
+      patches ? [], ...
+    }: {
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/swri-robotics/mapviz/commit/1600eaab695b4047fbf690e356362b4376cfecfd.patch";
+        stripLen = 1;
+        sha256 = "1g2kw3pz3amzj99a13r398r8cxbpi6ganqlhz2qgd22raw8qnrxx";
+      }) ];
+    });
 
     tinydir-vendor = patchVendorUrl rosSuper.tinydir-vendor {
       url = "https://github.com/cxong/tinydir/archive/1.2.4.tar.gz";
