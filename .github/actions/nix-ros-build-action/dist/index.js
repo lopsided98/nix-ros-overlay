@@ -3368,6 +3368,11 @@ const pLimit = concurrency => {
 		},
 		pendingCount: {
 			get: () => queue.length
+		},
+		clearQueue: {
+			value: () => {
+				queue.length = 0;
+			}
 		}
 	});
 
