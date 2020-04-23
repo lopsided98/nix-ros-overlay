@@ -9,6 +9,7 @@ jobs:
         distro:
           - kinetic
           - melodic
+          - melodicPython3
           - crystal
           - dashing
           - eloquent
