@@ -15,6 +15,10 @@ else stdenv.mkDerivation) (args // {
   # FIXME: figure out a way to avoid this to eventually allow cross-compiling
   strictDeps = false;
 
+  # Disable warnings that cause "Log limit exceeded" errors on Hydra in lots of
+  # packages that use Eigen
+  CXXFLAGS = [ "-Wno-deprecated-declarations" ];
+
   passthru = passthru // {
     rosPackage = true;
   };
