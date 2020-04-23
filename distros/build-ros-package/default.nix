@@ -17,7 +17,7 @@ else stdenv.mkDerivation) (args // {
 
   # Disable warnings that cause "Log limit exceeded" errors on Hydra in lots of
   # packages that use Eigen
-  CXXFLAGS = "-Wno-deprecated-declarations";
+  CXXFLAGS = "-Wno-deprecated-declarations -Wno-deprecated-copy";
 
   passthru = passthru // {
     rosPackage = true;
