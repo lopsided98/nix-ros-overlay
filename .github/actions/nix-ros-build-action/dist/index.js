@@ -1151,7 +1151,8 @@ class PackageSet {
                 attr, message: e
             })))));
             try {
-                fs.promises.writeFile(this.failedBuildsCacheFile, JSON.stringify(this.failedPackages.keys()));
+                yield fs.promises.mkdir(path.dirname(this.failedBuildsCacheFile), { recursive: true });
+                yield fs.promises.writeFile(this.failedBuildsCacheFile, JSON.stringify(this.failedPackages.keys()));
             }
             catch (e) {
                 core.warning(`Failed to write failed builds cache: ${e}`);
