@@ -15,8 +15,18 @@ jobs:
           - eloquent
     steps:
     - uses: actions/checkout@v1
-    - uses: cachix/install-nix-action@v6
+    - uses: cachix/install-nix-action@v8
+    - uses: cachix/cachix-action@v6
+      with:
+        name: ros
+        signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
+        skipPush: true
+    - name: Cache Failed Builds
+      id: cache-failed-builds
+      uses: actions/cache@v1
+      with:
+        path: failed-builds
+        key: ${{ matrix.distro }}-failed-builds
     - uses: ./.github/actions/nix-ros-build-action
       with:
         root-attribute: '${{ matrix.distro }}'
-        cachix-signing-key: '${{ secrets.CACHIX_SIGNING_KEY }}'
