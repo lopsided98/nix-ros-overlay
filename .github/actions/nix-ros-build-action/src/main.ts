@@ -9,6 +9,7 @@ import * as cachix from './cachix'
 const enum BuildStatus {
   SUCCESS,
   CACHED,
+  CACHED_FAILURE,
   EVALUATION_FAILURE,
   DEPENDENCY_FAILURE,
   BUILD_FAILURE,
@@ -28,6 +29,8 @@ class PackageSet {
   private cachixCache: string
   private drvDir: string
   private resultDir: string
+  private failedBuildsCacheFile: string
+  private failedBuildsCache: Set<string>
   private failedPackages = new Map<string, string>()
 
   public constructor(
@@ -35,12 +38,21 @@ class PackageSet {
     rootAttribute: string,
     cachixCache: string,
     buildDir = "build",
+    failedBuildsCacheFile = 'failed-builds/failed-builds.json'
   ) {
     this.nixFile = nixFile
     this.rootAttribute = rootAttribute
     this.cachixCache = cachixCache
     this.drvDir = path.join(buildDir, 'drvs')
     this.resultDir = path.join(buildDir, 'results')
+    this.failedBuildsCacheFile = failedBuildsCacheFile
+    try {
+      this.failedBuildsCache =
+        new Set(JSON.parse(fs.readFileSync('failed-builds/failed-builds.json', 'utf-8')))
+    } catch (e) {
+      core.warning(`Failed to load failed builds cache: ${e}`)
+      this.failedBuildsCache = new Set()
+    }
   }
 
   private async buildPackage(attr: string): Promise<BuildResult> {
@@ -75,6 +87,7 @@ class PackageSet {
           failedRequisiteAttrs.join(", ")
       }
     }
+
     // Don't build if there is already a copy in the cache
     // This avoids downloading more than necessary from the cache
     if (await cachix.query(this.cachixCache, drvPath)) {
@@ -83,6 +96,16 @@ class PackageSet {
         status: BuildStatus.CACHED,
         attr, drvPath,
         message: 'Derivation is available on Cachix.'
+      }
+    }
+
+    if (this.failedBuildsCache.has(drvPath)) {
+      this.failedPackages.set(drvPath, attr)
+      core.debug(`${attr} (${drvPath}) failed to build (cached)`)
+      return {
+        status: BuildStatus.CACHED_FAILURE,
+        attr, drvPath,
+        message: 'Cached build failure'
       }
     }
 
@@ -116,13 +139,21 @@ class PackageSet {
     await io.mkdirP(this.resultDir)
     const attrs = await nix.listAttrs(this.nixFile, this.rootAttribute)
 
-    return await Promise.all(attrs.map(attr => buildLimit(() =>
+    const result = await Promise.all(attrs.map(attr => buildLimit(() =>
       this.buildPackage(attr)
         .catch(e => <BuildResult>({
           status: BuildStatus.ERROR,
           attr, message: e
         })))
     ))
+
+    try {
+      fs.promises.writeFile(this.failedBuildsCacheFile, JSON.stringify(this.failedPackages.keys()))
+    } catch (e) {
+      core.warning(`Failed to write failed builds cache: ${e}`)
+    }
+
+    return result
   }
 }
 
@@ -131,18 +162,19 @@ async function run() {
     const nixFile = core.getInput('nix-file')
     const rootAttribute = core.getInput('root-attribute')
     const nixpkgs = core.getInput('nixpkgs')
-    const parallelism = core.getInput('parallelism')
+    const parallelism = parseInt(core.getInput('parallelism'))
     const cachixCache = core.getInput('cachix-cache')
 
     core.exportVariable('NIX_PATH', `nixpkgs=${nixpkgs}`)
 
     const packageSet = new PackageSet(nixFile, rootAttribute, cachixCache)
 
-    let results = await packageSet.build()
+    let results = await packageSet.build(parallelism)
 
     const statusResults = new Map<BuildStatus, Array<BuildResult>>([
       [BuildStatus.SUCCESS, []],
       [BuildStatus.CACHED, []],
+      [BuildStatus.CACHED_FAILURE, []],
       [BuildStatus.EVALUATION_FAILURE, []],
       [BuildStatus.DEPENDENCY_FAILURE, []],
       [BuildStatus.BUILD_FAILURE, []],
@@ -153,6 +185,7 @@ async function run() {
     core.startGroup("Results")
     core.info(`Successes: ${statusResults.get(BuildStatus.SUCCESS)!.length}`)
     core.info(`Cached: ${statusResults.get(BuildStatus.CACHED)!.length}`)
+    core.info(`Cached failures: ${statusResults.get(BuildStatus.CACHED_FAILURE)!.length}`)
     core.info(`Evaluation failures: ${statusResults.get(BuildStatus.EVALUATION_FAILURE)!.length}`)
     core.info(`Dependency failures: ${statusResults.get(BuildStatus.DEPENDENCY_FAILURE)!.length}`)
     core.info(`Build failures: ${statusResults.get(BuildStatus.BUILD_FAILURE)!.length}`)
@@ -183,6 +216,11 @@ async function run() {
       core.warning(r.message)
       core.endGroup()
     }
+
+    core.startGroup("Cached build failures")
+    statusResults.get(BuildStatus.CACHED_FAILURE)!
+      .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
+    core.endGroup()
 
     for (let r of statusResults.get(BuildStatus.SUCCESS)!) {
       await core.group(

@@ -1047,13 +1047,22 @@ const pLimit = __importStar(__webpack_require__(523));
 const nix = __importStar(__webpack_require__(253));
 const cachix = __importStar(__webpack_require__(163));
 class PackageSet {
-    constructor(nixFile, rootAttribute, cachixCache, buildDir = "build") {
+    constructor(nixFile, rootAttribute, cachixCache, buildDir = "build", failedBuildsCacheFile = 'failed-builds/failed-builds.json') {
         this.failedPackages = new Map();
         this.nixFile = nixFile;
         this.rootAttribute = rootAttribute;
         this.cachixCache = cachixCache;
         this.drvDir = path.join(buildDir, 'drvs');
         this.resultDir = path.join(buildDir, 'results');
+        this.failedBuildsCacheFile = failedBuildsCacheFile;
+        try {
+            this.failedBuildsCache =
+                new Set(JSON.parse(fs.readFileSync('failed-builds/failed-builds.json', 'utf-8')));
+        }
+        catch (e) {
+            core.warning(`Failed to load failed builds cache: ${e}`);
+            this.failedBuildsCache = new Set();
+        }
     }
     buildPackage(attr) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -1065,13 +1074,13 @@ class PackageSet {
             catch (e) {
                 core.debug(`${attr} failed to evaluate`);
                 return {
-                    status: 2 /* EVALUATION_FAILURE */,
+                    status: 3 /* EVALUATION_FAILURE */,
                     attr, message: e
                 };
             }
             if (drvPaths.length != 1) {
                 return {
-                    status: 2 /* EVALUATION_FAILURE */,
+                    status: 3 /* EVALUATION_FAILURE */,
                     attr, message: `Attribute evaluated to ${drvPaths.length} derivations`
                 };
             }
@@ -1082,7 +1091,7 @@ class PackageSet {
                 .filter(a => a !== undefined);
             if (failedRequisiteAttrs.length) {
                 return {
-                    status: 3 /* DEPENDENCY_FAILURE */,
+                    status: 4 /* DEPENDENCY_FAILURE */,
                     attr, drvPath,
                     message: `The following dependencies of '${attr}' failed to build: ` +
                         failedRequisiteAttrs.join(", ")
@@ -1098,6 +1107,15 @@ class PackageSet {
                     message: 'Derivation is available on Cachix.'
                 };
             }
+            if (this.failedBuildsCache.has(drvPath)) {
+                this.failedPackages.set(drvPath, attr);
+                core.debug(`${attr} (${drvPath}) failed to build (cached)`);
+                return {
+                    status: 2 /* CACHED_FAILURE */,
+                    attr, drvPath,
+                    message: 'Cached build failure'
+                };
+            }
             core.debug(`Building ${attr} (${drvPath})`);
             let resultPath;
             try {
@@ -1107,7 +1125,7 @@ class PackageSet {
                 this.failedPackages.set(drvPath, attr);
                 core.debug(`${attr} (${drvPath}) failed to build`);
                 return {
-                    status: 4 /* BUILD_FAILURE */,
+                    status: 5 /* BUILD_FAILURE */,
                     attr, drvPath,
                     message: e
                 };
@@ -1127,11 +1145,18 @@ class PackageSet {
             yield io.mkdirP(this.resultDir);
             yield io.mkdirP(this.resultDir);
             const attrs = yield nix.listAttrs(this.nixFile, this.rootAttribute);
-            return yield Promise.all(attrs.map(attr => buildLimit(() => this.buildPackage(attr)
+            const result = yield Promise.all(attrs.map(attr => buildLimit(() => this.buildPackage(attr)
                 .catch(e => ({
-                status: 5 /* ERROR */,
+                status: 6 /* ERROR */,
                 attr, message: e
             })))));
+            try {
+                fs.promises.writeFile(this.failedBuildsCacheFile, JSON.stringify(this.failedPackages.keys()));
+            }
+            catch (e) {
+                core.warning(`Failed to write failed builds cache: ${e}`);
+            }
+            return result;
         });
     }
 }
@@ -1141,46 +1166,52 @@ function run() {
             const nixFile = core.getInput('nix-file');
             const rootAttribute = core.getInput('root-attribute');
             const nixpkgs = core.getInput('nixpkgs');
-            const parallelism = core.getInput('parallelism');
+            const parallelism = parseInt(core.getInput('parallelism'));
             const cachixCache = core.getInput('cachix-cache');
             core.exportVariable('NIX_PATH', `nixpkgs=${nixpkgs}`);
             const packageSet = new PackageSet(nixFile, rootAttribute, cachixCache);
-            let results = yield packageSet.build();
+            let results = yield packageSet.build(parallelism);
             const statusResults = new Map([
                 [0 /* SUCCESS */, []],
                 [1 /* CACHED */, []],
-                [2 /* EVALUATION_FAILURE */, []],
-                [3 /* DEPENDENCY_FAILURE */, []],
-                [4 /* BUILD_FAILURE */, []],
-                [5 /* ERROR */, []],
+                [2 /* CACHED_FAILURE */, []],
+                [3 /* EVALUATION_FAILURE */, []],
+                [4 /* DEPENDENCY_FAILURE */, []],
+                [5 /* BUILD_FAILURE */, []],
+                [6 /* ERROR */, []],
             ]);
             results.forEach(r => statusResults.get(r.status).push(r));
             core.startGroup("Results");
             core.info(`Successes: ${statusResults.get(0 /* SUCCESS */).length}`);
             core.info(`Cached: ${statusResults.get(1 /* CACHED */).length}`);
-            core.info(`Evaluation failures: ${statusResults.get(2 /* EVALUATION_FAILURE */).length}`);
-            core.info(`Dependency failures: ${statusResults.get(3 /* DEPENDENCY_FAILURE */).length}`);
-            core.info(`Build failures: ${statusResults.get(4 /* BUILD_FAILURE */).length}`);
-            core.info(`Unknown errors: ${statusResults.get(5 /* ERROR */).length}`);
+            core.info(`Cached failures: ${statusResults.get(2 /* CACHED_FAILURE */).length}`);
+            core.info(`Evaluation failures: ${statusResults.get(3 /* EVALUATION_FAILURE */).length}`);
+            core.info(`Dependency failures: ${statusResults.get(4 /* DEPENDENCY_FAILURE */).length}`);
+            core.info(`Build failures: ${statusResults.get(5 /* BUILD_FAILURE */).length}`);
+            core.info(`Unknown errors: ${statusResults.get(6 /* ERROR */).length}`);
             core.endGroup();
-            for (let r of statusResults.get(5 /* ERROR */)) {
+            for (let r of statusResults.get(6 /* ERROR */)) {
                 core.startGroup(`Unknown error building ${r.attr} (${r.drvPath})`);
                 core.error(r.message);
                 core.endGroup();
             }
-            for (let r of statusResults.get(4 /* BUILD_FAILURE */)) {
+            for (let r of statusResults.get(5 /* BUILD_FAILURE */)) {
                 yield core.group(`Failed to build ${r.attr} (${r.drvPath})`, () => nix.printLog(r.drvPath).catch(() => undefined));
             }
-            for (let r of statusResults.get(3 /* DEPENDENCY_FAILURE */)) {
+            for (let r of statusResults.get(4 /* DEPENDENCY_FAILURE */)) {
                 core.startGroup(`Dependency of ${r.attr} (${r.drvPath}) failed to build`);
                 core.warning(r.message);
                 core.endGroup();
             }
-            for (let r of statusResults.get(2 /* EVALUATION_FAILURE */)) {
+            for (let r of statusResults.get(3 /* EVALUATION_FAILURE */)) {
                 core.startGroup(`Failed to evaluate ${r.attr}`);
                 core.warning(r.message);
                 core.endGroup();
             }
+            core.startGroup("Cached build failures");
+            statusResults.get(2 /* CACHED_FAILURE */)
+                .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
+            core.endGroup();
             for (let r of statusResults.get(0 /* SUCCESS */)) {
                 yield core.group(`Sucessfully built ${r.attr} (${r.drvPath})`, () => nix.printLog(r.drvPath).catch(() => undefined));
             }

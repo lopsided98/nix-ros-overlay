@@ -13,7 +13,7 @@ inputs:
     default: https://github.com/lopsided98/nixpkgs/archive/nix-ros.tar.gz
   parallelism:
     description: Number of builds to run in parallel
-    default: 20
+    default: '20'
   cachix-cache:
     description: Name of the Cachix cache to use
     default: ros
