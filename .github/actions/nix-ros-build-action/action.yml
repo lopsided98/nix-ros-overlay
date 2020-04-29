@@ -17,9 +17,6 @@ inputs:
   cachix-cache:
     description: Name of the Cachix cache to use
     default: ros
-  cachix-signing-key:
-    description: Key to use to sign builds
-    required: true
 
 runs:
   using: node12

@@ -4,7 +4,6 @@ import * as util from 'util'
 import * as path from 'path'
 import * as exec from '@actions/exec'
 import fetch from 'node-fetch'
-import { defaultCoreCipherList } from 'constants'
 
 // Don't use @actions/exec because we don't want these commands to be printed
 // to the log

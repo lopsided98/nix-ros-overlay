@@ -997,26 +997,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const childProcess = __importStar(__webpack_require__(129));
 const util = __importStar(__webpack_require__(669));
-const core = __importStar(__webpack_require__(470));
-const exec = __importStar(__webpack_require__(986));
 const nix = __importStar(__webpack_require__(253));
 // Use instead of @actions/exec when we don't want to write the output to the
 // log
 const execFile = util.promisify(childProcess.execFile);
-function install(nixpkgs = "channel:nixpkgs-unstable") {
-    return __awaiter(this, void 0, void 0, function* () {
-        core.startGroup('Installing Cachix');
-        yield exec.exec('nix-env', ['-iA', 'cachix', '-f', nixpkgs]);
-        core.endGroup();
-    });
-}
-exports.install = install;
-function use(name) {
-    return __awaiter(this, void 0, void 0, function* () {
-        yield exec.exec('cachix', ['use', name]);
-    });
-}
-exports.use = use;
 function query(name, drvPath) {
     return __awaiter(this, void 0, void 0, function* () {
         return nix.isValidBinaryCachePath(drvPath, `https://${name}.cachix.org`);
@@ -1159,14 +1143,6 @@ function run() {
             const nixpkgs = core.getInput('nixpkgs');
             const parallelism = core.getInput('parallelism');
             const cachixCache = core.getInput('cachix-cache');
-            const cachixSigningKey = core.getInput('cachix-signing-key');
-            yield cachix.install(nixpkgs);
-            core.startGroup(`Setting up Cachix cache: ${cachixCache}`);
-            yield cachix.use(cachixCache);
-            if (cachixSigningKey !== "") {
-                core.exportVariable('CACHIX_SIGNING_KEY', cachixSigningKey);
-            }
-            core.endGroup();
             core.exportVariable('NIX_PATH', `nixpkgs=${nixpkgs}`);
             const packageSet = new PackageSet(nixFile, rootAttribute, cachixCache);
             let results = yield packageSet.build();
