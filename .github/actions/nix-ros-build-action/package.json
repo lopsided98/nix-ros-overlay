@@ -23,16 +23,16 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.3",
-    "@actions/exec": "^1.0.3",
+    "@actions/exec": "^1.0.4",
     "@actions/io": "^1.0.2",
-    "@types/node-fetch": "^2.5.6",
+    "@types/node-fetch": "^2.5.7",
     "node-fetch": "^2.6.0",
     "p-limit": "^2.3.0"
   },
   "devDependencies": {
-    "@types/node": "^12.12.35",
-    "@typescript-eslint/eslint-plugin": "^2.28.0",
-    "@typescript-eslint/parser": "^2.28.0",
+    "@types/node": "^12.12.37",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
     "@zeit/ncc": "^0.20.5",
     "eslint": "^5.16.0",
     "js-yaml": "^3.13.1",
