@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, diff-drive-controller, geometry-msgs, hardware-interface, husky-control, husky-description, husky-msgs, roscpp, roslaunch, roslint, sensor-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-husky-base";
-  version = "0.4.2-r1";
+  version = "0.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_base/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "563aa35de332fa99821c0756f900c27bf44185757f9d745d20842c321457d1f7";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_base/0.4.3-1.tar.gz";
+    name = "0.4.3-1.tar.gz";
+    sha256 = "b7c4233e073c95588cdbecf98e25eabf3776c866f397e8f5117f48a00e40a8f5";
   };
 
   buildType = "catkin";

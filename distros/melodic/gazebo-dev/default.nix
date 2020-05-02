@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazeboSimulator }:
 buildRosPackage {
   pname = "ros-melodic-gazebo-dev";
-  version = "2.8.6-r1";
+  version = "2.8.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/gazebo_dev/2.8.6-1.tar.gz";
-    name = "2.8.6-1.tar.gz";
-    sha256 = "8d841ef18dab02cf584a0b7d85226cf6b5f529aaf8ee3597dac4206fd3472aeb";
+    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/gazebo_dev/2.8.7-1.tar.gz";
+    name = "2.8.7-1.tar.gz";
+    sha256 = "6f4a77811479925460c669ec6b9bd8c883c0e932a848affadaa81c9aac8f6b41";
   };
 
   buildType = "catkin";

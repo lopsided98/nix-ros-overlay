@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ridgeback-msgs, ridgeback-viz }:
 buildRosPackage {
   pname = "ros-melodic-ridgeback-desktop";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback_desktop-release/archive/release/melodic/ridgeback_desktop/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "fa60a97d87f148815a154f6790fbf49f532669678b7ff381326cbf2797ee00f1";
+    url = "https://github.com/clearpath-gbp/ridgeback_desktop-release/archive/release/melodic/ridgeback_desktop/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "5c7eeeaf0246b33c3f906ea00a4a525686eade472f858b50e81cf0cfcb111b5f";
   };
 
   buildType = "catkin";

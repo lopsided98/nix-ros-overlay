@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-dashing-mouse-teleop";
-  version = "1.0.2-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/mouse_teleop/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "babea784bc146a28073dbea6b81db017798770ff11791fa8d777a2bd31ee8013";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/mouse_teleop/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "c722d4681e47885a171854765c73df62dd119b49ea8dc344e7adc915058122f7";
   };
 
   buildType = "ament_python";

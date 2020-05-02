@@ -2668,6 +2668,10 @@ self: super: {
 
  novatel-msgs = self.callPackage ./novatel-msgs {};
 
+ novatel-oem7-driver = self.callPackage ./novatel-oem7-driver {};
+
+ novatel-oem7-msgs = self.callPackage ./novatel-oem7-msgs {};
+
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  o3m151-driver = self.callPackage ./o3m151-driver {};
@@ -2715,6 +2719,8 @@ self: super: {
  odometry-publisher-tutorial = self.callPackage ./odometry-publisher-tutorial {};
 
  odva-ethernetip = self.callPackage ./odva-ethernetip {};
+
+ oled-display-node = self.callPackage ./oled-display-node {};
 
  ompl = self.callPackage ./ompl {};
 
@@ -3409,20 +3415,6 @@ self: super: {
  rc-visard-driver = self.callPackage ./rc-visard-driver {};
 
  rcdiscover = self.callPackage ./rcdiscover {};
-
- rdl = self.callPackage ./rdl {};
-
- rdl-benchmark = self.callPackage ./rdl-benchmark {};
-
- rdl-cmake = self.callPackage ./rdl-cmake {};
-
- rdl-dynamics = self.callPackage ./rdl-dynamics {};
-
- rdl-msgs = self.callPackage ./rdl-msgs {};
-
- rdl-ros-tools = self.callPackage ./rdl-ros-tools {};
-
- rdl-urdfreader = self.callPackage ./rdl-urdfreader {};
 
  realsense2-camera = self.callPackage ./realsense2-camera {};
 
@@ -4616,20 +4608,6 @@ self: super: {
 
  topic-tools = self.callPackage ./topic-tools {};
 
- toposens = self.callPackage ./toposens {};
-
- toposens-description = self.callPackage ./toposens-description {};
-
- toposens-driver = self.callPackage ./toposens-driver {};
-
- toposens-markers = self.callPackage ./toposens-markers {};
-
- toposens-msgs = self.callPackage ./toposens-msgs {};
-
- toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
-
- toposens-sync = self.callPackage ./toposens-sync {};
-
  towr = self.callPackage ./towr {};
 
  towr-ros = self.callPackage ./towr-ros {};
@@ -4815,6 +4793,18 @@ self: super: {
  universal-robot = self.callPackage ./universal-robot {};
 
  universal-robots = self.callPackage ./universal-robots {};
+
+ uos-common-urdf = self.callPackage ./uos-common-urdf {};
+
+ uos-diffdrive-teleop = self.callPackage ./uos-diffdrive-teleop {};
+
+ uos-freespace = self.callPackage ./uos-freespace {};
+
+ uos-gazebo-worlds = self.callPackage ./uos-gazebo-worlds {};
+
+ uos-maps = self.callPackage ./uos-maps {};
+
+ uos-tools = self.callPackage ./uos-tools {};
 
  ur10-e-moveit-config = self.callPackage ./ur10-e-moveit-config {};
 

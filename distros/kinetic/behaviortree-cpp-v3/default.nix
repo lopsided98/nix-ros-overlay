@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cppzmq, roslib }:
+{ lib, buildRosPackage, fetchurl, catkin, cppzmq, ncurses, roslib }:
 buildRosPackage {
   pname = "ros-kinetic-behaviortree-cpp-v3";
-  version = "3.1.0-r3";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/kinetic/behaviortree_cpp_v3/3.1.0-3.tar.gz";
-    name = "3.1.0-3.tar.gz";
-    sha256 = "6cebfa97ecdd80f3df387d2793bac8d99d69a9a73de102d207dda917deb287d3";
+    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/kinetic/behaviortree_cpp_v3/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "9beeb6883bf81e441fa7a746e1597a078cf508361120ea4d7cb39f5a2cceca18";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cppzmq roslib ];
+  propagatedBuildInputs = [ cppzmq ncurses roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

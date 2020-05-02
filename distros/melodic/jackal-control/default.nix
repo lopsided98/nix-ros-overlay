@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diff-drive-controller, interactive-marker-twist-server, joint-state-controller, joy, robot-localization, roslaunch, teleop-twist-joy, topic-tools, twist-mux }:
 buildRosPackage {
   pname = "ros-melodic-jackal-control";
-  version = "0.6.4-r3";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_control/0.6.4-3.tar.gz";
-    name = "0.6.4-3.tar.gz";
-    sha256 = "e3cca2cc1ace4e6c7ab89462c917dc7459b2d2c03dd8717c8f90a8394485f9c3";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_control/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "b87aedff58d263b73ec2f59b1841fc320d7d5cbb661db4f6ad9290a2a9b0c46d";
   };
 
   buildType = "catkin";

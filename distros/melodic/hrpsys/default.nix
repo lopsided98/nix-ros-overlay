@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL, cmake, doxygen, freeglut, git, glew, graphviz, irrlicht, libxml2, mk, opencv3, openhrp3, pkg-config, pythonPackages, qhull, xorg }:
 buildRosPackage {
   pname = "ros-melodic-hrpsys";
-  version = "315.15.0-r2";
+  version = "315.15.0-r6";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/hrpsys-release/archive/release/melodic/hrpsys/315.15.0-2.tar.gz";
-    name = "315.15.0-2.tar.gz";
-    sha256 = "f269e0d246394a0ba686759946bffb35754748b3d6d8bd9ea7c3119374cffd25";
+    url = "https://github.com/tork-a/hrpsys-release/archive/release/melodic/hrpsys/315.15.0-6.tar.gz";
+    name = "315.15.0-6.tar.gz";
+    sha256 = "0d9b09484ec3842dec6080ff782e6f6da298cf12df140c0764cb4d45d301a1f7";
   };
 
   buildType = "cmake";

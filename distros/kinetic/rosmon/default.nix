@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosmon-core, rqt-rosmon }:
 buildRosPackage {
   pname = "ros-kinetic-rosmon";
-  version = "2.1.1-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/kinetic/rosmon/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "ae51f9e2f84a9eb57fd295877efbfd402facbe0af9abab95723ebfcd49804265";
+    url = "https://github.com/xqms/rosmon-release/archive/release/kinetic/rosmon/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "7cb39cba789a7701528375fd6f7687afd391fad222d1f61ebd5e66565e6158bc";
   };
 
   buildType = "catkin";

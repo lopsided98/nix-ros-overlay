@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, octomap, octomap-msgs, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-octomap-ros";
-  version = "0.4.0";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap_ros-release/archive/release/melodic/octomap_ros/0.4.0-0.tar.gz";
-    name = "0.4.0-0.tar.gz";
-    sha256 = "50dca555a5c7883b74068ae676db17671fa15da854f2985ed4999feff70089fd";
+    url = "https://github.com/ros-gbp/octomap_ros-release/archive/release/melodic/octomap_ros/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "e66f9ef8bd86b238099ae4a3188262a92cabfc7e4a1294d2b843b548b0f69eb1";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ octomap octomap-msgs sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

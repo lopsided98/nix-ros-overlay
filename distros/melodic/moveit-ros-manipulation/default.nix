@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, dynamic-reconfigure, eigen, moveit-core, moveit-msgs, moveit-ros-move-group, moveit-ros-planning, pluginlib, rosconsole, roscpp, tf2-eigen }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-manipulation";
-  version = "1.0.2-r1";
+  version = "1.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_manipulation/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "156ae51dac52174c5702fd6c73088fe6b3cb36da1a202e8eddb5a4b02e843b51";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_manipulation/1.0.3-2.tar.gz";
+    name = "1.0.3-2.tar.gz";
+    sha256 = "b294d0dce3b01473b2a38a28fd41fa4ded0f8da5abcdb44e35f63cb44dd53449";
   };
 
   buildType = "catkin";

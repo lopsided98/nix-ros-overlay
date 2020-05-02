@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, controller-manager-msgs, rospy, rqt-gui, rqt-gui-py, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rqt-joint-trajectory-controller";
-  version = "0.15.1-r1";
+  version = "0.16.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/rqt_joint_trajectory_controller/0.15.1-1.tar.gz";
-    name = "0.15.1-1.tar.gz";
-    sha256 = "45a2846b2dd5700ada8d6505e4018f5e6ad7c07f14e8ce4b9d744f6220d6c178";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/rqt_joint_trajectory_controller/0.16.1-1.tar.gz";
+    name = "0.16.1-1.tar.gz";
+    sha256 = "c48c4ed42551f04f47eb98d21bb8b028869a97a9ab466f2db8c210f7b3872372";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosdoc-lite }:
 buildRosPackage {
   pname = "ros-kinetic-jackal-tutorials";
-  version = "0.6.4-r1";
+  version = "0.6.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/kinetic/jackal_tutorials/0.6.4-1.tar.gz";
-    name = "0.6.4-1.tar.gz";
-    sha256 = "593bb5d76d07caad934a721f6ee62da170a83d2f8104723394f5dc89347e4a44";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/kinetic/jackal_tutorials/0.6.5-2.tar.gz";
+    name = "0.6.5-2.tar.gz";
+    sha256 = "4fcfae07f72acc2baa8ca5e3965bf6d736d2e9d7c6d2cc9ad654a76a731aad1b";
   };
 
   buildType = "catkin";

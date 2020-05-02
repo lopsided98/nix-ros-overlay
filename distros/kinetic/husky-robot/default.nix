@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, husky-base, husky-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-husky-robot";
-  version = "0.3.5-r1";
+  version = "0.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_robot/0.3.5-1.tar.gz";
-    name = "0.3.5-1.tar.gz";
-    sha256 = "ad06c547f123ce4a535e1ffb1920d75376dc86e7edc7675c76cf534f211de95f";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_robot/0.3.6-1.tar.gz";
+    name = "0.3.6-1.tar.gz";
+    sha256 = "bd50c77fe1eb71020a6ce9ebdede158e6f81e33028647e4ec636d7dbc8309cc5";
   };
 
   buildType = "catkin";

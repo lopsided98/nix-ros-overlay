@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rosmon-msgs";
-  version = "2.1.1-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/kinetic/rosmon_msgs/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "3a60194e864a62dc02f2f0a36002c431cf23c12d978a621149056946c73b060b";
+    url = "https://github.com/xqms/rosmon-release/archive/release/kinetic/rosmon_msgs/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "50247fbf2a2658613a2805a0acf89198a7b5aebff583fa8ba75a7bafc61eb89e";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, control-toolbox, controller-manager, gazebo-dev, gazebo-ros, hardware-interface, joint-limits-interface, pluginlib, roscpp, std-msgs, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-melodic-gazebo-ros-control";
-  version = "2.8.6-r1";
+  version = "2.8.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/gazebo_ros_control/2.8.6-1.tar.gz";
-    name = "2.8.6-1.tar.gz";
-    sha256 = "92e01882d9f3e1a454bc6b728d9699564759d37b52f0faf4fbe1a28ddd58ecb8";
+    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/gazebo_ros_control/2.8.7-1.tar.gz";
+    name = "2.8.7-1.tar.gz";
+    sha256 = "ecdf8af43115ba2e33784fc929f2a3db6c686ab9b5536e6276939ba846fd6b3e";
   };
 
   buildType = "catkin";
