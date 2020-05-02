@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, moveit-core, moveit-resources, moveit-ros-planning, orocos-kdl, pluginlib, pythonPackages, roscpp, rostest, tf2, tf2-kdl, urdfdom, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-moveit-kinematics";
-  version = "1.0.2-r1";
+  version = "1.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_kinematics/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "5b691b09f0e6b7560ab0971ee94fb84a351142b5619dab071b3c1924a6766c13";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_kinematics/1.0.3-2.tar.gz";
+    name = "1.0.3-2.tar.gz";
+    sha256 = "cd987af131360fdc327814593634712222a737c98fc86962ce68e9e44d8636d8";
   };
 
   buildType = "catkin";

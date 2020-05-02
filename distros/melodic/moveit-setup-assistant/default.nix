@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libyamlcpp, moveit-core, moveit-resources, moveit-ros-planning, moveit-ros-visualization, ogre1_9, qt5, rosconsole, roscpp, rosunit, rviz, srdfdom, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-moveit-setup-assistant";
-  version = "1.0.2-r1";
+  version = "1.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_setup_assistant/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "02f195ff7a606823dccf0c07cc5a77f1abff255ed1849b796a6faa8d97b6ac2d";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_setup_assistant/1.0.3-2.tar.gz";
+    name = "1.0.3-2.tar.gz";
+    sha256 = "ad91800be3f51848a367d9b79b91476ee58b56dbca39fbc6428bd5f978b9c70b";
   };
 
   buildType = "catkin";

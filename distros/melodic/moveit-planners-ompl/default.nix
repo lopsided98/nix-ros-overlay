@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, moveit-core, moveit-resources, moveit-ros-planning, ompl, pluginlib, rosconsole, roscpp, rosunit, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-moveit-planners-ompl";
-  version = "1.0.2-r1";
+  version = "1.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_planners_ompl/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "57dbd0aaf20ebe0619ed16d10a7835fee61df22ad5438da662dcbe71c670bdce";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_planners_ompl/1.0.3-2.tar.gz";
+    name = "1.0.3-2.tar.gz";
+    sha256 = "d227e3d845246b39a128d484459933a3ab94de35cd45bf3cf318f68dc0ae1fac";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-moveit-experimental";
-  version = "1.0.2-r1";
+  version = "1.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_experimental/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "ef4bbc171b72dcaf152c7695ee588e443636c85cd2ab2b67bbd2faa05d96a285";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_experimental/1.0.3-2.tar.gz";
+    name = "1.0.3-2.tar.gz";
+    sha256 = "e190eb9b55f5c626a308d5666f0fb668fa4db91ca965eb81f71f71f0b0f257e0";
   };
 
   buildType = "catkin";

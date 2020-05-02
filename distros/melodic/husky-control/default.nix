@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diff-drive-controller, husky-description, interactive-marker-twist-server, joint-state-controller, joint-trajectory-controller, joy, multimaster-launch, robot-localization, robot-state-publisher, roslaunch, rostopic, teleop-twist-joy, twist-mux }:
 buildRosPackage {
   pname = "ros-melodic-husky-control";
-  version = "0.4.2-r1";
+  version = "0.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_control/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "bceb125b2585ee266ec050570247422ad633aa859e42377140f3d20d28929425";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_control/0.4.3-1.tar.gz";
+    name = "0.4.3-1.tar.gz";
+    sha256 = "654e57a7a237122883f45ec6606bb664496ec8c1e4298f0e6bbe4743971cf3f7";
   };
 
   buildType = "catkin";

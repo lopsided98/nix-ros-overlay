@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-dashing-key-teleop";
-  version = "1.0.2-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/key_teleop/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "45f8e4c06f88eaceac3f7d60a9094294a524d5f8085f5121f58cc5569df57977";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/dashing/key_teleop/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "be0f8d71f65a9eda2c40580a0b5517d93afc6dcf361871f9767b2491e395d451";
   };
 
   buildType = "ament_python";

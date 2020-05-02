@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, octomap-server }:
 buildRosPackage {
   pname = "ros-melodic-octomap-mapping";
-  version = "0.6.4-r1";
+  version = "0.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap_mapping-release/archive/release/melodic/octomap_mapping/0.6.4-1.tar.gz";
-    name = "0.6.4-1.tar.gz";
-    sha256 = "3127fd19d50255f4cbf65da0504e92bd95058ea6a1a744326d88422012fbca0c";
+    url = "https://github.com/ros-gbp/octomap_mapping-release/archive/release/melodic/octomap_mapping/0.6.5-1.tar.gz";
+    name = "0.6.5-1.tar.gz";
+    sha256 = "f1f29ddb95c6b2ff8a93fa7f3fa91cbc1fce4c0a8901bcce4bc45cb1b6eb3b0a";
   };
 
   buildType = "catkin";

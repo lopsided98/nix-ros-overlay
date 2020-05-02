@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, alsaLib, cmake, git, glib, gtk2, gtk3, pulseaudio, wget }:
 buildRosPackage {
   pname = "ros-melodic-webrtc";
-  version = "59.0.3";
+  version = "59.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/webrtc_ros-release/archive/release/melodic/webrtc/59.0.3-0.tar.gz";
-    name = "59.0.3-0.tar.gz";
-    sha256 = "bdc2b6651bda28702a87bdc1cb9a53dbcd5a47dc7363d71bd81ea87dc0271e77";
+    url = "https://github.com/RobotWebTools-release/webrtc_ros-release/archive/release/melodic/webrtc/59.0.4-1.tar.gz";
+    name = "59.0.4-1.tar.gz";
+    sha256 = "2889d9f998f589846868676e8bed291496807b9bb8e8f88bbdbf97b8ab5223a6";
   };
 
   buildType = "cmake";

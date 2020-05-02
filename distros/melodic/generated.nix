@@ -1086,6 +1086,8 @@ self: super: {
 
  haros-catkin = self.callPackage ./haros-catkin {};
 
+ hdf5-map-io = self.callPackage ./hdf5-map-io {};
+
  health-metric-collector = self.callPackage ./health-metric-collector {};
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
@@ -1151,6 +1153,10 @@ self: super: {
  hpp-fcl = self.callPackage ./hpp-fcl {};
 
  hrpsys = self.callPackage ./hrpsys {};
+
+ hrpsys-ros-bridge = self.callPackage ./hrpsys-ros-bridge {};
+
+ hrpsys-tools = self.callPackage ./hrpsys-tools {};
 
  husky-base = self.callPackage ./husky-base {};
 
@@ -1434,6 +1440,8 @@ self: super: {
 
  kvh-geo-fog-3d-rviz = self.callPackage ./kvh-geo-fog-3d-rviz {};
 
+ label-manager = self.callPackage ./label-manager {};
+
  lanelet2 = self.callPackage ./lanelet2 {};
 
  lanelet2-core = self.callPackage ./lanelet2-core {};
@@ -1642,6 +1650,8 @@ self: super: {
 
  mbf-msgs = self.callPackage ./mbf-msgs {};
 
+ mbf-recovery-behaviors = self.callPackage ./mbf-recovery-behaviors {};
+
  mbf-simple-nav = self.callPackage ./mbf-simple-nav {};
 
  mbf-utility = self.callPackage ./mbf-utility {};
@@ -1661,6 +1671,14 @@ self: super: {
  mecanum-gazebo-plugin = self.callPackage ./mecanum-gazebo-plugin {};
 
  media-export = self.callPackage ./media-export {};
+
+ mesh-msgs = self.callPackage ./mesh-msgs {};
+
+ mesh-msgs-hdf5 = self.callPackage ./mesh-msgs-hdf5 {};
+
+ mesh-msgs-transform = self.callPackage ./mesh-msgs-transform {};
+
+ mesh-tools = self.callPackage ./mesh-tools {};
 
  message-filters = self.callPackage ./message-filters {};
 
@@ -1718,6 +1736,8 @@ self: super: {
 
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
+ moveback-recovery = self.callPackage ./moveback-recovery {};
+
  moveit = self.callPackage ./moveit {};
 
  moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
@@ -1753,6 +1773,8 @@ self: super: {
  moveit-ros-manipulation = self.callPackage ./moveit-ros-manipulation {};
 
  moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
+
+ moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
 
  moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
 
@@ -1964,6 +1986,10 @@ self: super: {
 
  novatel-msgs = self.callPackage ./novatel-msgs {};
 
+ novatel-oem7-driver = self.callPackage ./novatel-oem7-driver {};
+
+ novatel-oem7-msgs = self.callPackage ./novatel-oem7-msgs {};
+
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  obj-to-pointcloud = self.callPackage ./obj-to-pointcloud {};
@@ -2043,6 +2069,10 @@ self: super: {
  openni-launch = self.callPackage ./openni-launch {};
 
  openrtm-aist = self.callPackage ./openrtm-aist {};
+
+ openrtm-ros-bridge = self.callPackage ./openrtm-ros-bridge {};
+
+ openrtm-tools = self.callPackage ./openrtm-tools {};
 
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
 
@@ -2472,20 +2502,6 @@ self: super: {
 
  rcdiscover = self.callPackage ./rcdiscover {};
 
- rdl = self.callPackage ./rdl {};
-
- rdl-benchmark = self.callPackage ./rdl-benchmark {};
-
- rdl-cmake = self.callPackage ./rdl-cmake {};
-
- rdl-dynamics = self.callPackage ./rdl-dynamics {};
-
- rdl-msgs = self.callPackage ./rdl-msgs {};
-
- rdl-ros-tools = self.callPackage ./rdl-ros-tools {};
-
- rdl-urdfreader = self.callPackage ./rdl-urdfreader {};
-
  realsense2-camera = self.callPackage ./realsense2-camera {};
 
  realsense2-description = self.callPackage ./realsense2-description {};
@@ -2772,6 +2788,8 @@ self: super: {
 
  rosnode = self.callPackage ./rosnode {};
 
+ rosnode-rtc = self.callPackage ./rosnode-rtc {};
+
  rosout = self.callPackage ./rosout {};
 
  rospack = self.callPackage ./rospack {};
@@ -2966,9 +2984,15 @@ self: super: {
 
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
+ rtmbuild = self.callPackage ./rtmbuild {};
+
+ rtmros-common = self.callPackage ./rtmros-common {};
+
  rviz = self.callPackage ./rviz {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
+
+ rviz-mesh-plugin = self.callPackage ./rviz-mesh-plugin {};
 
  rviz-plugin-tutorials = self.callPackage ./rviz-plugin-tutorials {};
 
@@ -3242,23 +3266,11 @@ self: super: {
 
  tile-map = self.callPackage ./tile-map {};
 
+ timed-roslaunch = self.callPackage ./timed-roslaunch {};
+
  timestamp-tools = self.callPackage ./timestamp-tools {};
 
  topic-tools = self.callPackage ./topic-tools {};
-
- toposens = self.callPackage ./toposens {};
-
- toposens-description = self.callPackage ./toposens-description {};
-
- toposens-driver = self.callPackage ./toposens-driver {};
-
- toposens-markers = self.callPackage ./toposens-markers {};
-
- toposens-msgs = self.callPackage ./toposens-msgs {};
-
- toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
-
- toposens-sync = self.callPackage ./toposens-sync {};
 
  towr = self.callPackage ./towr {};
 
@@ -3401,6 +3413,18 @@ self: super: {
  unique-id = self.callPackage ./unique-id {};
 
  unique-identifier = self.callPackage ./unique-identifier {};
+
+ uos-common-urdf = self.callPackage ./uos-common-urdf {};
+
+ uos-diffdrive-teleop = self.callPackage ./uos-diffdrive-teleop {};
+
+ uos-freespace = self.callPackage ./uos-freespace {};
+
+ uos-gazebo-worlds = self.callPackage ./uos-gazebo-worlds {};
+
+ uos-maps = self.callPackage ./uos-maps {};
+
+ uos-tools = self.callPackage ./uos-tools {};
 
  urdf = self.callPackage ./urdf {};
 
