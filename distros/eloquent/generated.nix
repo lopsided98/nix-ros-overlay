@@ -128,6 +128,10 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
+ apex-containers = self.callPackage ./apex-containers {};
+
+ apex-test-tools = self.callPackage ./apex-test-tools {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -734,6 +738,10 @@ self: super: {
 
  ros2topic = self.callPackage ./ros2topic {};
 
+ ros2trace = self.callPackage ./ros2trace {};
+
+ ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
+
  ros-base = self.callPackage ./ros-base {};
 
  ros-core = self.callPackage ./ros-core {};
@@ -936,6 +944,8 @@ self: super: {
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
+ test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
+
  test-interface-files = self.callPackage ./test-interface-files {};
 
  test-msgs = self.callPackage ./test-msgs {};
@@ -972,6 +982,14 @@ self: super: {
 
  topic-monitor = self.callPackage ./topic-monitor {};
 
+ tracetools = self.callPackage ./tracetools {};
+
+ tracetools-analysis = self.callPackage ./tracetools-analysis {};
+
+ tracetools-launch = self.callPackage ./tracetools-launch {};
+
+ tracetools-test = self.callPackage ./tracetools-test {};
+
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
  turtlesim = self.callPackage ./turtlesim {};
@@ -993,6 +1011,8 @@ self: super: {
  urg-node = self.callPackage ./urg-node {};
 
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
+
+ v4l2-camera = self.callPackage ./v4l2-camera {};
 
  velocity-smoother = self.callPackage ./velocity-smoother {};
 

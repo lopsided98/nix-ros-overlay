@@ -3416,6 +3416,20 @@ self: super: {
 
  rcdiscover = self.callPackage ./rcdiscover {};
 
+ rdl = self.callPackage ./rdl {};
+
+ rdl-benchmark = self.callPackage ./rdl-benchmark {};
+
+ rdl-cmake = self.callPackage ./rdl-cmake {};
+
+ rdl-dynamics = self.callPackage ./rdl-dynamics {};
+
+ rdl-msgs = self.callPackage ./rdl-msgs {};
+
+ rdl-ros-tools = self.callPackage ./rdl-ros-tools {};
+
+ rdl-urdfreader = self.callPackage ./rdl-urdfreader {};
+
  realsense2-camera = self.callPackage ./realsense2-camera {};
 
  realsense2-description = self.callPackage ./realsense2-description {};
@@ -4607,6 +4621,20 @@ self: super: {
  topic-switch = self.callPackage ./topic-switch {};
 
  topic-tools = self.callPackage ./topic-tools {};
+
+ toposens = self.callPackage ./toposens {};
+
+ toposens-description = self.callPackage ./toposens-description {};
+
+ toposens-driver = self.callPackage ./toposens-driver {};
+
+ toposens-markers = self.callPackage ./toposens-markers {};
+
+ toposens-msgs = self.callPackage ./toposens-msgs {};
+
+ toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
+
+ toposens-sync = self.callPackage ./toposens-sync {};
 
  towr = self.callPackage ./towr {};
 
