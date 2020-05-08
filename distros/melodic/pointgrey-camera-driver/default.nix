@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, curl, diagnostic-updater, dpkg, dynamic-reconfigure, image-exposure-msgs, image-proc, image-transport, libraw1394, libusb1, nodelet, roscpp, roslaunch, roslint, sensor-msgs, stereo-image-proc, wfov-camera-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pointgrey-camera-driver";
-  version = "0.14.0-r1";
+  version = "0.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/melodic/pointgrey_camera_driver/0.14.0-1.tar.gz";
-    name = "0.14.0-1.tar.gz";
-    sha256 = "1ef68ed1ed47f135db7f0c03150932994a800be88c783e3bcd54906dcf6a3670";
+    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/melodic/pointgrey_camera_driver/0.14.1-1.tar.gz";
+    name = "0.14.1-1.tar.gz";
+    sha256 = "a548c8bab220b708ada9bfb8410c7ac17137e9bc1862d294a164b9cf5d733109";
   };
 
   buildType = "catkin";

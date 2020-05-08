@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lcov, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-code-coverage";
-  version = "0.4.0-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/mikeferguson/code_coverage-gbp/archive/release/kinetic/code_coverage/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "7536df4e4a072ea93e0a0dac89b5bc235f0ad28b8ffbb95143e03b207c1a5f1b";
+    url = "https://github.com/mikeferguson/code_coverage-gbp/archive/release/kinetic/code_coverage/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "3da97df4d465ae25f17378ffdd930cc272acbec10fc56358ce68fe4311909227";
   };
 
   buildType = "catkin";

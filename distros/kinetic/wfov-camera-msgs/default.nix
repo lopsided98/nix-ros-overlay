@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-wfov-camera-msgs";
-  version = "0.14.0-r1";
+  version = "0.14.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/wfov_camera_msgs/0.14.0-1.tar.gz";
-    name = "0.14.0-1.tar.gz";
-    sha256 = "e9c34cd8b18724bed7b9c50dc22bee4f2c994fdb3cbdfe6f80e864f5024fbff3";
+    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/wfov_camera_msgs/0.14.1-2.tar.gz";
+    name = "0.14.1-2.tar.gz";
+    sha256 = "a1d8cebe477d3cd00d27310b8f3798902b9adab74048547e3e6078486df84143";
   };
 
   buildType = "catkin";

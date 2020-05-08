@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, code-coverage, eigen-conversions, moveit-core, moveit-ros-planning, pluginlib, roscpp, rostest, rosunit, tf2-eigen, tf2-kdl }:
 buildRosPackage {
   pname = "ros-melodic-prbt-ikfast-manipulator-plugin";
-  version = "0.5.14-r1";
+  version = "0.5.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_ikfast_manipulator_plugin/0.5.14-1.tar.gz";
-    name = "0.5.14-1.tar.gz";
-    sha256 = "dfd8dbab410bf1a26f89085d3bc843e0bf910ca8c4c97a226f16bce72a6a7f5a";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_ikfast_manipulator_plugin/0.5.15-1.tar.gz";
+    name = "0.5.15-1.tar.gz";
+    sha256 = "c16cb9410266cbc8b36dbeeabd110c57e3f510386223a9b5d80ad9a105a3b1bf";
   };
 
   buildType = "catkin";

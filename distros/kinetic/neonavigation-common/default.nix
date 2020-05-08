@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roslint, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-neonavigation-common";
-  version = "0.8.3-r1";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/neonavigation_common/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "3c88335b2465e532902a12cdb6ea7114a4c0776ebf6220708a6bb3f5498054ad";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/neonavigation_common/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
+    sha256 = "12c94443a7215e1f95c59de71314117e8a992c04adbd126036805f49170c5007";
   };
 
   buildType = "catkin";

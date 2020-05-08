@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib, catkin, costmap-cspace, costmap-cspace-msgs, diagnostic-updater, geometry-msgs, map-server, move-base-msgs, nav-msgs, neonavigation-common, planner-cspace-msgs, roscpp, roslint, rostest, rosunit, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs, trajectory-tracker, trajectory-tracker-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, costmap-cspace, costmap-cspace-msgs, diagnostic-updater, geometry-msgs, map-server, move-base-msgs, nav-msgs, neonavigation-common, planner-cspace-msgs, roscpp, roslint, rostest, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs, trajectory-tracker, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-planner-cspace";
-  version = "0.8.3-r1";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/planner_cspace/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "a54d77ba4327fcba01cfe34c8decd47e084a9a37ee7c3728fa97e7c68d914d8b";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/planner_cspace/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
+    sha256 = "591fa2fc7427bcfd45770c327c13d9f7393162aa5a0d7602d06d7036dd637266";
   };
 
   buildType = "catkin";
-  checkInputs = [ map-server roslint rostest rosunit trajectory-tracker ];
+  checkInputs = [ map-server roslint rostest trajectory-tracker ];
   propagatedBuildInputs = [ actionlib costmap-cspace costmap-cspace-msgs diagnostic-updater geometry-msgs move-base-msgs nav-msgs neonavigation-common planner-cspace-msgs roscpp sensor-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros trajectory-msgs trajectory-tracker-msgs ];
   nativeBuildInputs = [ catkin ];
 

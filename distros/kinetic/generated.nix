@@ -4226,6 +4226,8 @@ self: super: {
 
  scratch4robots = self.callPackage ./scratch4robots {};
 
+ sdc21x0 = self.callPackage ./sdc21x0 {};
+
  sdhlibrary-cpp = self.callPackage ./sdhlibrary-cpp {};
 
  seed-r7-bringup = self.callPackage ./seed-r7-bringup {};

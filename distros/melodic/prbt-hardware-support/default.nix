@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, canopen-chain-node, catkin, cmake-modules, code-coverage, dynamic-reconfigure, libmodbus, message-filters, message-generation, message-runtime, pilz-msgs, pilz-testutils, pilz-utils, roscpp, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-melodic-prbt-hardware-support";
-  version = "0.5.14-r1";
+  version = "0.5.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_hardware_support/0.5.14-1.tar.gz";
-    name = "0.5.14-1.tar.gz";
-    sha256 = "d726c347c6a26e1fd16d2a1518f19daf16779b15faf21a277d9f09aec3ad013f";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_hardware_support/0.5.15-1.tar.gz";
+    name = "0.5.15-1.tar.gz";
+    sha256 = "6c9329a0b1d218e9d9aed5a13c96d111409303ab2ed66f8e2461567d4e0fcf0f";
   };
 
   buildType = "catkin";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Control hardware functions of the PRBT manipulator like STO for Stop1 functionality.'';
+    description = ''Control hardware functions of the PRBT manipulator like RUN_PERMITTED for Stop1 functionality.'';
     license = with lib.licenses; [ lgpl2 ];
   };
 }

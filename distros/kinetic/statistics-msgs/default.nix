@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-statistics-msgs";
-  version = "0.14.0-r1";
+  version = "0.14.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/statistics_msgs/0.14.0-1.tar.gz";
-    name = "0.14.0-1.tar.gz";
-    sha256 = "23e1c4ff8273d4ffed6626792c00f56af216bdac19dc18f0e39ddd09b6739e0a";
+    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/kinetic/statistics_msgs/0.14.1-2.tar.gz";
+    name = "0.14.1-2.tar.gz";
+    sha256 = "7f305ef5f02d05607329c730bef9157f69142db1610365e8ae10f7097f55a3e1";
   };
 
   buildType = "catkin";

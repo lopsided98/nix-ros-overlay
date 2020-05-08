@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, gazebo-ros, geometry-msgs, mavros, mavros-msgs, rospy, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-drone-wrapper";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/drone_wrapper/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "d86c729dcfeb36890fe7bd4f7825e856e77dda955452debffdd1468a32cef4c8";
+    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/drone_wrapper/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "252ea35894a5aec19ce5a1e26a6012eb788a722a22881a19148d13a89500932c";
   };
 
   buildType = "catkin";
