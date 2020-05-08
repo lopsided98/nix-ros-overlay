@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-pilz-testutils";
-  version = "0.5.14-r1";
+  version = "0.5.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_testutils/0.5.14-1.tar.gz";
-    name = "0.5.14-1.tar.gz";
-    sha256 = "c67d04bf22b08aee5f9d8932bd3372d4ee7630daea6b721995ddbbea6718cda4";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_testutils/0.5.15-1.tar.gz";
+    name = "0.5.15-1.tar.gz";
+    sha256 = "a0c9b4e1bf638806c8ff5b10180badf4b4a287c8c497b63718018dcaa65e11a2";
   };
 
   buildType = "catkin";

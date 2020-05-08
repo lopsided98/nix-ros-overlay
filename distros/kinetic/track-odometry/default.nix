@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, geometry-msgs, message-filters, nav-msgs, neonavigation-common, roscpp, roslint, rostest, rosunit, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, message-filters, nav-msgs, neonavigation-common, roscpp, roslint, rostest, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-track-odometry";
-  version = "0.8.3-r1";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/track_odometry/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "00f4e2fc6c0a6c21ff594ee06cc8780402c0726743d35b222300d3dd7b0553d1";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/track_odometry/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
+    sha256 = "e6a9de4b1d2263be9691b4be35430734c04d86a611e09044dccb4b48cd3641f2";
   };
 
   buildType = "catkin";
-  checkInputs = [ roslint rostest rosunit ];
-  propagatedBuildInputs = [ cmake-modules eigen geometry-msgs message-filters nav-msgs neonavigation-common roscpp sensor-msgs std-msgs tf2 tf2-geometry-msgs tf2-ros trajectory-msgs ];
+  checkInputs = [ roslint rostest ];
+  propagatedBuildInputs = [ eigen geometry-msgs message-filters nav-msgs neonavigation-common roscpp sensor-msgs std-msgs tf2 tf2-geometry-msgs tf2-ros trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -3058,6 +3058,8 @@ self: super: {
 
  schunk-simulated-tactile-sensors = self.callPackage ./schunk-simulated-tactile-sensors {};
 
+ sdc21x0 = self.callPackage ./sdc21x0 {};
+
  sdhlibrary-cpp = self.callPackage ./sdhlibrary-cpp {};
 
  seed-r7-bringup = self.callPackage ./seed-r7-bringup {};

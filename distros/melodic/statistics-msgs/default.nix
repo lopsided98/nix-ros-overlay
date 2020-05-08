@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-statistics-msgs";
-  version = "0.14.0-r1";
+  version = "0.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/melodic/statistics_msgs/0.14.0-1.tar.gz";
-    name = "0.14.0-1.tar.gz";
-    sha256 = "e9924391df2cb9f0f51eef44229a150307f8073b644c0c299f197f31ea330eac";
+    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/melodic/statistics_msgs/0.14.1-1.tar.gz";
+    name = "0.14.1-1.tar.gz";
+    sha256 = "db97291f1aa312ba3d199b22c2b70e0c1309200445779cf7c74f8d812a117057";
   };
 
   buildType = "catkin";

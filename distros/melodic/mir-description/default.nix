@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diff-drive-controller, gazebo-ros-control, joint-state-controller, joint-state-publisher, position-controllers, robot-state-publisher, roslaunch, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-mir-description";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_description/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "75e85e0254228274ed31f3f39461d07ea16571e44b55b5714ed2d5c4257c81be";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_description/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "3cf57c7254bd9a345aeeea4f6a4e4f6a3b3ba2c3d32c3760c89f0eb24d6222f9";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mir-actions";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_actions/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "aaf73d32129e1084e5460ae1c6279641d6ee78931c8d05e89aa943836d79807c";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_actions/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "ed6913d1fc7c8fe102bc7e31ba0dc1f05c81442dc80d8dedaa1c36dd62b9a055";
   };
 
   buildType = "catkin";

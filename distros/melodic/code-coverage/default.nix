@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lcov, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-code-coverage";
-  version = "0.4.0-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/mikeferguson/code_coverage-gbp/archive/release/melodic/code_coverage/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "0c4bba84a8d48c83e42344871f6889429f3e24317fa3dfc3368437d6d86a0255";
+    url = "https://github.com/mikeferguson/code_coverage-gbp/archive/release/melodic/code_coverage/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "8e1eb481b08b7d162e0cd7c9863661b260536f8806f92da44b56a19f2957782a";
   };
 
   buildType = "catkin";
