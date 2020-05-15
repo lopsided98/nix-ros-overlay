@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-bond";
-  version = "1.8.3";
+  version = "1.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/bond_core-release/archive/release/melodic/bond/1.8.3-0.tar.gz";
-    name = "1.8.3-0.tar.gz";
-    sha256 = "6a9f5fb5b44ce6285800177903b4364061521de47bda8cd8902814405aac83f4";
+    url = "https://github.com/ros-gbp/bond_core-release/archive/release/melodic/bond/1.8.5-1.tar.gz";
+    name = "1.8.5-1.tar.gz";
+    sha256 = "00cca5d8b5846117fbee1ea21357699472208d690f6acbb1510500c7a4980af7";
   };
 
   buildType = "catkin";

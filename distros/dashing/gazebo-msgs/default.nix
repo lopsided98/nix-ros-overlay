@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-dashing-gazebo-msgs";
-  version = "3.3.4-r1";
+  version = "3.3.5-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/dashing/gazebo_msgs/3.3.4-1.tar.gz";
-    name = "3.3.4-1.tar.gz";
-    sha256 = "48c7f58224085863d77f161ed0b329ff8218fecb43808ecc7f007903219b46f0";
+    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/dashing/gazebo_msgs/3.3.5-3.tar.gz";
+    name = "3.3.5-3.tar.gz";
+    sha256 = "764fcdbcc887963748b39818638b7e6355cd958e6274e7f8e98d538f060b9c65";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, hardware-interface, pluginlib, resource-retriever, roscpp, tinyxml }:
 buildRosPackage {
   pname = "ros-melodic-transmission-interface";
-  version = "0.18.0-r1";
+  version = "0.18.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/transmission_interface/0.18.0-1.tar.gz";
-    name = "0.18.0-1.tar.gz";
-    sha256 = "5ad61a28a7a3e8e5d3d8faa51d69f9958c1054318aac2e9d4a492ea2be831764";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/transmission_interface/0.18.1-1.tar.gz";
+    name = "0.18.1-1.tar.gz";
+    sha256 = "c2b08fefbb6e05f830ecc8a4011db38ae1053da6ef47979b8734ce87e0a3c0eb";
   };
 
   buildType = "catkin";

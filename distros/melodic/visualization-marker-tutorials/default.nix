@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-visualization-marker-tutorials";
-  version = "0.10.3";
+  version = "0.10.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/melodic/visualization_marker_tutorials/0.10.3-0.tar.gz";
-    name = "0.10.3-0.tar.gz";
-    sha256 = "2e5bc745ab400757dee1666b765a9aef01a4d9b5f062d837827aee336bdbb68d";
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/melodic/visualization_marker_tutorials/0.10.5-1.tar.gz";
+    name = "0.10.5-1.tar.gz";
+    sha256 = "8ca12243a96785409c4d590d8eadc711d6b0ac0fe94cef2fb188ed8d36e10eec";
   };
 
   buildType = "catkin";

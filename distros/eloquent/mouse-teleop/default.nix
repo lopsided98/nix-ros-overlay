@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-eloquent-mouse-teleop";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/eloquent/mouse_teleop/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "1c7b98a8cf594d8fb77e9f153fc78eca772f070642223f1abcdca7e206313c12";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/eloquent/mouse_teleop/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "cbbe265244a29107715821429467d22d7eb6102f3503f3938b15096bd0846c22";
   };
 
   buildType = "ament_python";

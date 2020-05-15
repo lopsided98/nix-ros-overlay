@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, gazebo-dev, gazebo-msgs, geometry-msgs, launch-ros, launch-testing-ament-cmake, rcl, rclcpp, rclpy, ros2run, sensor-msgs, std-msgs, std-srvs, tinyxml-vendor }:
 buildRosPackage {
   pname = "ros-eloquent-gazebo-ros";
-  version = "3.4.3-r1";
+  version = "3.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/eloquent/gazebo_ros/3.4.3-1.tar.gz";
-    name = "3.4.3-1.tar.gz";
-    sha256 = "61d9c061fa7dcb8ebc27e11675bbcb6452f60a23295debfbc9a8a8cc321d134f";
+    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/eloquent/gazebo_ros/3.4.4-1.tar.gz";
+    name = "3.4.4-1.tar.gz";
+    sha256 = "37a16a4679f821236d55606604a38a133a95a250a9925bf70af5f2b0d54e1b45";
   };
 
   buildType = "ament_cmake";

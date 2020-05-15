@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, interactive-marker-tutorials, librviz-tutorial, rviz-plugin-tutorials, rviz-python-tutorial, visualization-marker-tutorials }:
 buildRosPackage {
   pname = "ros-melodic-visualization-tutorials";
-  version = "0.10.3";
+  version = "0.10.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/melodic/visualization_tutorials/0.10.3-0.tar.gz";
-    name = "0.10.3-0.tar.gz";
-    sha256 = "5f67b564a5f87b4d7113b97de74e987a956d3985dac7639204b4ba697a056007";
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/melodic/visualization_tutorials/0.10.5-1.tar.gz";
+    name = "0.10.5-1.tar.gz";
+    sha256 = "dbec72a547b5fda75d087ce1801cd563c298831f206450a48fd24cbce0c75b12";
   };
 
   buildType = "catkin";

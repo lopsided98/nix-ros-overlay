@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rcdiscover, roscpp, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-rc-hand-eye-calibration-client";
-  version = "2.7.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_hand_eye_calibration_client/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "fde416e77743beb474834e6ae02a47c4d1346f953985c650f1789c9bb3fdc23c";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_hand_eye_calibration_client/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "e58f9f2530de4fa598002d0705550339332fd527d3a6610863ca32d6b65edafb";
   };
 
   buildType = "catkin";

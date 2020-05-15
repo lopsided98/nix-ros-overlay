@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-eloquent-key-teleop";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/eloquent/key_teleop/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "0e2148736f2c1e31128e1877292b7741025e6bac56a590f502aa4f48060eb887";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/eloquent/key_teleop/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "8729e9add7674e2b8f11a1b12c2b7de99b647baf90342ba0586f867d2b2fc79d";
   };
 
   buildType = "ament_python";

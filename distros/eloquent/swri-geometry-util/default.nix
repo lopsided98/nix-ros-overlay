@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cv-bridge, eigen, geos, pkg-config, rclcpp, tf2 }:
 buildRosPackage {
   pname = "ros-eloquent-swri-geometry-util";
-  version = "3.1.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_geometry_util/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "c7c23c5650319144acdba54ef8786137f58110460692bb3f061409b72d7f50b2";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_geometry_util/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "30c2412d61475f1fb0107660e7ecc6d3ba0527bf938302e1f85d3c186263d8e9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rc-common-msgs, rcdiscover, roscpp, shape-msgs, std-srvs, tf, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rc-pick-client";
-  version = "2.7.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_pick_client/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "34fd5d1bedaded50d02cb0d18eca55fd321b2cf905101dc982402be3b908941e";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_pick_client/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "a395adce5cf683838d75ba7f5dc90e5670b22285def28918f08f5b28103dfbec";
   };
 
   buildType = "catkin";

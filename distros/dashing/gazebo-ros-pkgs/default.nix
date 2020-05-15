@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gazebo-dev, gazebo-msgs, gazebo-plugins, gazebo-ros }:
 buildRosPackage {
   pname = "ros-dashing-gazebo-ros-pkgs";
-  version = "3.3.4-r1";
+  version = "3.3.5-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/dashing/gazebo_ros_pkgs/3.3.4-1.tar.gz";
-    name = "3.3.4-1.tar.gz";
-    sha256 = "f9511e73e2bbfcce88cd916d414939a695f0c197e51269a5620e71e2c2aa06c5";
+    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/dashing/gazebo_ros_pkgs/3.3.5-3.tar.gz";
+    name = "3.3.5-3.tar.gz";
+    sha256 = "a53287ba35d1ae1554406df0dd90288e5a40694f1ebb234838e964700b3d93fe";
   };
 
   buildType = "ament_cmake";
