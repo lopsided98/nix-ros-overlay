@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, can-msgs, catkin, rosconsole-bridge, roscpp, roslint, rostest, rosunit, socketcan-interface }:
 buildRosPackage {
   pname = "ros-melodic-socketcan-bridge";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/socketcan_bridge/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "b757ed9a8e2e7bce9c8834e356e00263d786ac163229b6846db205638f941174";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/socketcan_bridge/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "a4534df50ca62cc92831db09e212f25fefa5833e94d651a1cd1ae0e4b28b90d2";
   };
 
   buildType = "catkin";

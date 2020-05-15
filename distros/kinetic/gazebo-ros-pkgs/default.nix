@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-dev, gazebo-msgs, gazebo-plugins, gazebo-ros }:
 buildRosPackage {
   pname = "ros-kinetic-gazebo-ros-pkgs";
-  version = "2.5.19-r1";
+  version = "2.5.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_ros_pkgs/2.5.19-1.tar.gz";
-    name = "2.5.19-1.tar.gz";
-    sha256 = "f58f378fc8c5792eb42e4a348252276e0a39fd84521a97118ce2bb4766f68062";
+    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_ros_pkgs/2.5.20-1.tar.gz";
+    name = "2.5.20-1.tar.gz";
+    sha256 = "72ab7fe3515649242820fc1035fe63b1725e83526a11ed5da883f2553de94328";
   };
 
   buildType = "catkin";

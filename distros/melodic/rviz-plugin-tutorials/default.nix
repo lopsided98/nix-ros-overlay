@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, qt5, rviz }:
 buildRosPackage {
   pname = "ros-melodic-rviz-plugin-tutorials";
-  version = "0.10.3";
+  version = "0.10.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/melodic/rviz_plugin_tutorials/0.10.3-0.tar.gz";
-    name = "0.10.3-0.tar.gz";
-    sha256 = "88f1ec8a199451ff130c3c4a4375c5c82f2989e6cffec0986ce980e3f25335e0";
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/melodic/rviz_plugin_tutorials/0.10.5-1.tar.gz";
+    name = "0.10.5-1.tar.gz";
+    sha256 = "56b0a158213319f1580c03cb98af5450debd18f7ed1d4888c0a4868d67ecdc3a";
   };
 
   buildType = "catkin";

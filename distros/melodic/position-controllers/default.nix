@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, forward-command-controller, pluginlib }:
 buildRosPackage {
   pname = "ros-melodic-position-controllers";
-  version = "0.16.1-r1";
+  version = "0.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/position_controllers/0.16.1-1.tar.gz";
-    name = "0.16.1-1.tar.gz";
-    sha256 = "99e5a31cfeacf9bbb3676680a31610836d9b3d7eaca5af206f7425a34003cbf0";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/position_controllers/0.17.0-1.tar.gz";
+    name = "0.17.0-1.tar.gz";
+    sha256 = "506a5b2292c50936eba60e1fcd1c6910469d0986af44f78182d2b8debf972c9a";
   };
 
   buildType = "catkin";

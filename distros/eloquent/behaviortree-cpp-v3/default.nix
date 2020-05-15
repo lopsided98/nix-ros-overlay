@@ -2,20 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cppzmq }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, cppzmq, ncurses, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-behaviortree-cpp-v3";
-  version = "3.1.1-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/eloquent/behaviortree_cpp_v3/3.1.1-1.tar.gz";
-    name = "3.1.1-1.tar.gz";
-    sha256 = "b49d34d31c78a071ca48fc13ee2a0b07ec17956c55a5bf4cafd693b5306bcf7c";
+    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/eloquent/behaviortree_cpp_v3/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "9f85d3b92b116badb013e199a90b42380d2a04d37844b0a2da947618f04c0207";
   };
 
-  buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ cppzmq ];
+  buildType = "catkin";
+  propagatedBuildInputs = [ cppzmq ncurses rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

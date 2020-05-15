@@ -492,6 +492,12 @@ self: super: {
 
  map-msgs = self.callPackage ./map-msgs {};
 
+ mapviz = self.callPackage ./mapviz {};
+
+ mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
+
+ mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
@@ -515,6 +521,8 @@ self: super: {
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
+
+ multires-image = self.callPackage ./multires-image {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -687,6 +695,10 @@ self: super: {
  rcl-logging-noop = self.callPackage ./rcl-logging-noop {};
 
  rcl-yaml-param-parser = self.callPackage ./rcl-yaml-param-parser {};
+
+ rclc = self.callPackage ./rclc {};
+
+ rclc-examples = self.callPackage ./rclc-examples {};
 
  rclcpp = self.callPackage ./rclcpp {};
 
@@ -1017,6 +1029,8 @@ self: super: {
  tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
+
+ tile-map = self.callPackage ./tile-map {};
 
  tinydir-vendor = self.callPackage ./tinydir-vendor {};
 

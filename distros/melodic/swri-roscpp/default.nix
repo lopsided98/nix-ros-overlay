@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, diagnostic-updater, dynamic-reconfigure, gtest, libyamlcpp, marti-common-msgs, message-generation, message-runtime, nav-msgs, pkg-config, roscpp, rostest, rosunit, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-swri-roscpp";
-  version = "2.12.0-r1";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_roscpp/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "d7c92a34c98125e7a16affe5107c83bb2a05d32b52fc4126aec8487aa53dfab5";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_roscpp/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "66c165c60c667b5d81d8ac12cfa49bfa3ad5e1e750d10b83eea786d23dc5208f";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bond, bondcpp, bondpy, catkin, smclib }:
 buildRosPackage {
   pname = "ros-melodic-bond-core";
-  version = "1.8.3";
+  version = "1.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/bond_core-release/archive/release/melodic/bond_core/1.8.3-0.tar.gz";
-    name = "1.8.3-0.tar.gz";
-    sha256 = "c295706b5def3265868e81d63c1ee31e622e6f286cfde31a8a6c8ce43f9a07b5";
+    url = "https://github.com/ros-gbp/bond_core-release/archive/release/melodic/bond_core/1.8.5-1.tar.gz";
+    name = "1.8.5-1.tar.gz";
+    sha256 = "83964bcfc9dc0c3d10b95142fb6b6d41792c74178704380bf7ea76c0eb130751";
   };
 
   buildType = "catkin";

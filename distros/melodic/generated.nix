@@ -770,8 +770,6 @@ self: super: {
 
  eus-assimp = self.callPackage ./eus-assimp {};
 
- euslime = self.callPackage ./euslime {};
-
  euslisp = self.callPackage ./euslisp {};
 
  eusurdf = self.callPackage ./eusurdf {};
@@ -1144,6 +1142,12 @@ self: super: {
 
  hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
 
+ hironx-calibration = self.callPackage ./hironx-calibration {};
+
+ hironx-moveit-config = self.callPackage ./hironx-moveit-config {};
+
+ hironx-ros-bridge = self.callPackage ./hironx-ros-bridge {};
+
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hokuyo3d = self.callPackage ./hokuyo3d {};
@@ -1283,6 +1287,8 @@ self: super: {
  ipr-extern = self.callPackage ./ipr-extern {};
 
  ira-laser-tools = self.callPackage ./ira-laser-tools {};
+
+ iris-lama = self.callPackage ./iris-lama {};
 
  ivcon = self.callPackage ./ivcon {};
 
@@ -2196,6 +2202,8 @@ self: super: {
 
  plotjuggler = self.callPackage ./plotjuggler {};
 
+ plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
+
  pluginlib = self.callPackage ./pluginlib {};
 
  pluginlib-tutorials = self.callPackage ./pluginlib-tutorials {};
@@ -2492,6 +2500,8 @@ self: super: {
 
  rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
 
+ rc-silhouettematch-client = self.callPackage ./rc-silhouettematch-client {};
+
  rc-tagdetect-client = self.callPackage ./rc-tagdetect-client {};
 
  rc-visard = self.callPackage ./rc-visard {};
@@ -2667,6 +2677,8 @@ self: super: {
  ros-emacs-utils = self.callPackage ./ros-emacs-utils {};
 
  ros-environment = self.callPackage ./ros-environment {};
+
+ ros-ethercat-eml = self.callPackage ./ros-ethercat-eml {};
 
  ros-introspection = self.callPackage ./ros-introspection {};
 
@@ -2986,6 +2998,8 @@ self: super: {
 
  rqt-topic = self.callPackage ./rqt-topic {};
 
+ rqt-virtual-joy = self.callPackage ./rqt-virtual-joy {};
+
  rqt-web = self.callPackage ./rqt-web {};
 
  rslidar = self.callPackage ./rslidar {};
@@ -3001,6 +3015,8 @@ self: super: {
  rtmbuild = self.callPackage ./rtmbuild {};
 
  rtmros-common = self.callPackage ./rtmros-common {};
+
+ rtmros-hironx = self.callPackage ./rtmros-hironx {};
 
  rviz = self.callPackage ./rviz {};
 

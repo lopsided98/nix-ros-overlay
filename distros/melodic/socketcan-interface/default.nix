@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, class-loader, console-bridge, linuxHeaders, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-socketcan-interface";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/socketcan_interface/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "e59e02fb68b878c51ee9adbad6008109f85495608d31fd2a139a2dcfef55e572";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/socketcan_interface/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "fecfc21a5d06f63ea469751d7f8cf16e3192846749786ecb9e5843102946e963";
   };
 
   buildType = "catkin";

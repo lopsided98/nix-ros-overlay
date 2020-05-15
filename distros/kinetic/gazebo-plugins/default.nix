@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, camera-info-manager, catkin, cv-bridge, diagnostic-updater, dynamic-reconfigure, gazebo-dev, gazebo-msgs, geometry-msgs, image-transport, message-generation, message-runtime, nav-msgs, nodelet, polled-camera, rosconsole, roscpp, rosgraph-msgs, rospy, rostest, sensor-msgs, std-msgs, std-srvs, tf, tf2-ros, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-gazebo-plugins";
-  version = "2.5.19-r1";
+  version = "2.5.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_plugins/2.5.19-1.tar.gz";
-    name = "2.5.19-1.tar.gz";
-    sha256 = "4e5ed837dba669577700f66f5ba281e46c1d9143fe1cc17f65d25b5d425b0f60";
+    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_plugins/2.5.20-1.tar.gz";
+    name = "2.5.20-1.tar.gz";
+    sha256 = "2258b11e82967e88ffb391e304725015cdb2eef2be675c20c097df40f3dad040";
   };
 
   buildType = "catkin";

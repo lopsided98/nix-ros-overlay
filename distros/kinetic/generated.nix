@@ -3006,6 +3006,8 @@ self: super: {
 
  plotjuggler = self.callPackage ./plotjuggler {};
 
+ plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
+
  pluginlib = self.callPackage ./pluginlib {};
 
  pluginlib-tutorials = self.callPackage ./pluginlib-tutorials {};

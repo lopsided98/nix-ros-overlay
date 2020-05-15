@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-smclib";
-  version = "1.8.3";
+  version = "1.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/bond_core-release/archive/release/melodic/smclib/1.8.3-0.tar.gz";
-    name = "1.8.3-0.tar.gz";
-    sha256 = "a367091ee777853d4a769c98d193b054d176ce84d36a628756970d4495e4d1c0";
+    url = "https://github.com/ros-gbp/bond_core-release/archive/release/melodic/smclib/1.8.5-1.tar.gz";
+    name = "1.8.5-1.tar.gz";
+    sha256 = "7048853d548eef1c934bf174c172b5afa93bdbe089a55667d045863feb40919f";
   };
 
   buildType = "catkin";
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''The State Machine Compiler (SMC) from http://smc.sourceforge.net/
