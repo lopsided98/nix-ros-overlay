@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hector-geotiff, hector-nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-hector-geotiff-plugins";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/melodic/hector_geotiff_plugins/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "a99af08c43131cca5c839e5680e3957315ecff893934b89d1b9da98bb8971ad0";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/melodic/hector_geotiff_plugins/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "bad8710701ff02823d3cb1f85bf510bb986c55a91ecb498576dbdbbd931444f0";
   };
 
   buildType = "catkin";

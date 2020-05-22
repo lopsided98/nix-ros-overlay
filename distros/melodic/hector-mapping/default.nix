@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, eigen, laser-geometry, message-filters, message-generation, message-runtime, nav-msgs, roscpp, tf, tf-conversions, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-hector-mapping";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/melodic/hector_mapping/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "bc94afaf1df68b038253dca063f76b3afac667c9b0929cb648f888c147dcc81c";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/melodic/hector_mapping/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "fc1af9c95dcce587f5d5f72025ccf8b487dba26ad2d6b1158a53b5de79d5b1d8";
   };
 
   buildType = "catkin";

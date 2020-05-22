@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-geometry, message-filters, rospy, rostest, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-camera-calibration";
-  version = "1.14.0-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/camera_calibration/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "95993469bff9fc345dc7571a24f041567125700df8ea75906cd4e7d45f67d18a";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/camera_calibration/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "184268a2b78b1373289cf8c047e3f2069911dff625cfeb36ae34a19dc241ba5f";
   };
 
   buildType = "catkin";

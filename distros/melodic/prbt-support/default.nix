@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, canopen-chain-node, canopen-motor-node, catkin, cmake-modules, code-coverage, controller-manager, eigen, joint-state-controller, joint-state-publisher, moveit-core, moveit-ros-planning, pilz-control, pilz-status-indicator-rqt, pilz-testutils, pilz-utils, prbt-hardware-support, robot-state-publisher, roscpp, roslaunch, rosservice, rostest, rosunit, rviz, sensor-msgs, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-melodic-prbt-support";
-  version = "0.5.15-r1";
+  version = "0.5.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_support/0.5.15-1.tar.gz";
-    name = "0.5.15-1.tar.gz";
-    sha256 = "552ba9cbbd81bc2f05cf531750e773974f8e37a0628fca27d0e209e7bee8f5ed";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_support/0.5.16-1.tar.gz";
+    name = "0.5.16-1.tar.gz";
+    sha256 = "5f3bd2b67eb3718c7a7df383f9c2fab880dfaab612dba9dbd567a2c0a173b610";
   };
 
   buildType = "catkin";

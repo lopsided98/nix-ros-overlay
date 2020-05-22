@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-calibration, catkin, depth-image-proc, image-proc, image-publisher, image-rotate, image-view, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-melodic-image-pipeline";
-  version = "1.14.0-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_pipeline/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "34c43d0ef5669dbc9727277b88207348a12155fe30033e2e5d3f033dbfa56729";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_pipeline/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "5101a0cae0545e8384888172b1b7a4bd870a221d7c741e128a1bc89186ef4c76";
   };
 
   buildType = "catkin";

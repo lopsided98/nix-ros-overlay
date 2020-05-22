@@ -1758,6 +1758,8 @@ self: super: {
 
  moveit-msgs = self.callPackage ./moveit-msgs {};
 
+ moveit-opw-kinematics-plugin = self.callPackage ./moveit-opw-kinematics-plugin {};
+
  moveit-planners = self.callPackage ./moveit-planners {};
 
  moveit-planners-chomp = self.callPackage ./moveit-planners-chomp {};
@@ -3287,6 +3289,8 @@ self: super: {
  tf2-server = self.callPackage ./tf2-server {};
 
  tf2-tools = self.callPackage ./tf2-tools {};
+
+ tf2-urdf = self.callPackage ./tf2-urdf {};
 
  tf2-web-republisher = self.callPackage ./tf2-web-republisher {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ridgeback-msgs";
-  version = "0.2.3-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_msgs/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "d00c2942895f19cb719d0957acc15950ea99066d4ed324dd68e66dac0c1bbe10";
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_msgs/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "08adb29db070e70fcee3c3821b6e6f96f384af7a9611074fd3417cb5e107d696";
   };
 
   buildType = "catkin";

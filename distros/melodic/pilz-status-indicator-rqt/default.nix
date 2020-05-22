@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, prbt-hardware-support, pythonPackages, rospy, rostest, rosunit, rqt-gui, rqt-gui-py, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pilz-status-indicator-rqt";
-  version = "0.5.15-r1";
+  version = "0.5.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_status_indicator_rqt/0.5.15-1.tar.gz";
-    name = "0.5.15-1.tar.gz";
-    sha256 = "847b44e7eb7467166a0b3ad3120ec832c61b8d605a15ee226486f9befe1ccef1";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_status_indicator_rqt/0.5.16-1.tar.gz";
+    name = "0.5.16-1.tar.gz";
+    sha256 = "0f3be1b7a4827a19a1d94ebace29d24561799b7fe0aa8264e64cb8662f6f13d9";
   };
 
   buildType = "catkin";

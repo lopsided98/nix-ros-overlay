@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rc-common-msgs";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_common_msgs-release/archive/release/kinetic/rc_common_msgs/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "396a499a59bef9bd7a45960ca7258f934c6e908cf41248965321fbb079d45fee";
+    url = "https://github.com/roboception-gbp/rc_common_msgs-release/archive/release/kinetic/rc_common_msgs/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "7b620577c4bdda1766e820a35e16288c3b840e9fc838505662b6651cc0f800dd";
   };
 
   buildType = "catkin";

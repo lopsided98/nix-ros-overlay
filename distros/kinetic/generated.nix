@@ -2376,6 +2376,8 @@ self: super: {
 
  moveit-msgs = self.callPackage ./moveit-msgs {};
 
+ moveit-opw-kinematics-plugin = self.callPackage ./moveit-opw-kinematics-plugin {};
+
  moveit-planners = self.callPackage ./moveit-planners {};
 
  moveit-planners-chomp = self.callPackage ./moveit-planners-chomp {};
@@ -3407,6 +3409,8 @@ self: super: {
  rc-pick-client = self.callPackage ./rc-pick-client {};
 
  rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
+
+ rc-silhouettematch-client = self.callPackage ./rc-silhouettematch-client {};
 
  rc-tagdetect-client = self.callPackage ./rc-tagdetect-client {};
 
