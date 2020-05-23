@@ -267,27 +267,6 @@ let
       sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
     };
 
-    swri-geometry-util = rosSuper.swri-geometry-util.overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = patches ++ [ (self.fetchpatch {
-        url = "https://github.com/swri-robotics/marti_common/commit/a8253120b0eb1b3dbba97616dc0c1acce407f5c8.patch";
-        stripLen = 1;
-        sha256 = "0jnn9npqyiqwp6if29nxx0dyalc9bnaaqhymxlwkh2x71gf5armb";
-      }) ];
-    });
-
-    swri-opencv-util = rosSuper.swri-opencv-util.overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = patches ++ [ (self.fetchpatch {
-        url = "https://github.com/swri-robotics/marti_common/commit/b8414d4bc39e689a93582b246b0ba6eaf14feac6.patch";
-        stripLen = 1;
-        includes = [ "src/show.cpp" ];
-        sha256 = "0n1akps47rgbij7gbylxhxdndzlmzmax09axqdlygx81db6zh1qc";
-      }) ];
-    });
-
     swri-transform-util = rosSuper.swri-transform-util.overrideAttrs ({
       CXXFLAGS ? "", ...
     }: {
