@@ -1,0 +1,29 @@
+
+# Copyright 2020 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
+buildRosPackage {
+  pname = "ros-noetic-visualization-msgs";
+  version = "1.13.0-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/visualization_msgs/1.13.0-1.tar.gz";
+    name = "1.13.0-1.tar.gz";
+    sha256 = "96d222c8ee8c4bc1cdca0b75e004d33933c3a7f73e5357f59d1cbe64f4bf9cd2";
+  };
+
+  buildType = "catkin";
+  buildInputs = [ message-generation ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime std-msgs ];
+  nativeBuildInputs = [ catkin ];
+
+  meta = {
+    description = ''visualization_msgs is a set of messages used by higher level packages, such as <a href="/wiki/rviz">rviz</a>, that deal in visualization-specific data.
+
+    The main messages in visualization_msgs is <tt>visualization_msgs/Marker</tt>.
+    The marker message is used to send visualization &quot;markers&quot; such as boxes, spheres, arrows, lines, etc. to a visualization environment such as <a href="http:///www.ros.org/wiki/rviz">rviz</a>.
+    See the rviz tutorial <a href="http://www.ros.org/wiki/rviz/Tutorials">rviz tutorials</a> for more information.'';
+    license = with lib.licenses; [ bsdOriginal ];
+  };
+}

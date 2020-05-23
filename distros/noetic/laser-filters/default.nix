@@ -1,0 +1,26 @@
+
+# Copyright 2020 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, angles, catkin, dynamic-reconfigure, filters, laser-geometry, message-filters, pluginlib, roscpp, rostest, sensor-msgs, tf }:
+buildRosPackage {
+  pname = "ros-noetic-laser-filters";
+  version = "1.8.9-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros-gbp/laser_filters-release/archive/release/noetic/laser_filters/1.8.9-1.tar.gz";
+    name = "1.8.9-1.tar.gz";
+    sha256 = "811dc73c7509a59a545bc8e2d417634a10ff1e3e9cbc7501894074265ed5f5d0";
+  };
+
+  buildType = "catkin";
+  buildInputs = [ rostest ];
+  propagatedBuildInputs = [ angles dynamic-reconfigure filters laser-geometry message-filters pluginlib roscpp sensor-msgs tf ];
+  nativeBuildInputs = [ catkin ];
+
+  meta = {
+    description = ''Assorted filters designed to operate on 2D planar laser scanners,
+    which use the sensor_msgs/LaserScan type.'';
+    license = with lib.licenses; [ bsdOriginal ];
+  };
+}
