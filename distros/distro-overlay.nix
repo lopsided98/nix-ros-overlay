@@ -289,15 +289,8 @@ let
     });
 
     swri-transform-util = rosSuper.swri-transform-util.overrideAttrs ({
-      patches ? [],
       CXXFLAGS ? "", ...
     }: {
-      patches = patches ++ [ (self.fetchpatch {
-        url = "https://github.com/swri-robotics/marti_common/commit/b8414d4bc39e689a93582b246b0ba6eaf14feac6.patch";
-        stripLen = 1;
-        includes = [ "include/swri_transform_util/utm_util.h" ];
-        sha256 = "1j23rxx6087g844dfkm9vxci29pykka4nmy6660h9nsxarcg327h";
-      }) ];
       CXXFLAGS = CXXFLAGS + " -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H";
     });
 
