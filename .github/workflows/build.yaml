@@ -10,6 +10,7 @@ jobs:
           - kinetic
           - melodic
           - melodicPython3
+          - noetic
           - crystal
           - dashing
           - eloquent
