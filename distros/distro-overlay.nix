@@ -277,16 +277,6 @@ let
 
     tf2 = patchBoostSignals rosSuper.tf2;
 
-    tile-map = rosSuper.tile-map.overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = patches ++ [ (self.fetchpatch {
-        url = "https://github.com/swri-robotics/mapviz/commit/1600eaab695b4047fbf690e356362b4376cfecfd.patch";
-        stripLen = 1;
-        sha256 = "1g2kw3pz3amzj99a13r398r8cxbpi6ganqlhz2qgd22raw8qnrxx";
-      }) ];
-    });
-
     tinydir-vendor = patchVendorUrl rosSuper.tinydir-vendor {
       url = "https://github.com/cxong/tinydir/archive/1.2.4.tar.gz";
       sha256 = "1qjwky7v4b9d9dmxzsybnhiz6xgx94grc67sdyvlp1d4kfkfsl4w";
