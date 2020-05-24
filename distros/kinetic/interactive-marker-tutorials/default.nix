@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, interactive-markers, roscpp, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-interactive-marker-tutorials";
-  version = "0.10.3";
+  version = "0.10.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/kinetic/interactive_marker_tutorials/0.10.3-0.tar.gz";
-    name = "0.10.3-0.tar.gz";
-    sha256 = "538c214100b3c57362642b43903a64528777f92d038462d88dc6ca297afde123";
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/kinetic/interactive_marker_tutorials/0.10.5-1.tar.gz";
+    name = "0.10.5-1.tar.gz";
+    sha256 = "b788374e8a3b3b9b429e4548f5b264d51fe953f915c58f7f4c332577dc23beb5";
   };
 
   buildType = "catkin";

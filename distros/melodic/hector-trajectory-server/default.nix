@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hector-map-tools, hector-nav-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-melodic-hector-trajectory-server";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/melodic/hector_trajectory_server/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "39aca0f4b342351570b3940a8570985e9be7ca0a11b5ebd081d8a05cd7ac112b";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/melodic/hector_trajectory_server/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "f7babbe07541363e5593fd7e7145b8c7be41e224f25242e11e462d7222901f44";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, rcl, rclc, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-rclc-examples";
-  version = "0.1.1-r1";
+  version = "0.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/micro-ROS/rclc-release/archive/release/dashing/rclc_examples/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "348de05554e376d6ae9e8189e6282a92eb1c462f50cbf636eda8dbd797125311";
+    url = "https://github.com/micro-ROS/rclc-release/archive/release/dashing/rclc_examples/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
+    sha256 = "e8a178fb546277476529284265f9e1127577cffa05cb2b7a1be2c74bdfd7bc6b";
   };
 
   buildType = "ament_cmake";

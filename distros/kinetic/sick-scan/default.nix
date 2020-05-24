@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, message-generation, message-runtime, pcl-conversions, pcl-ros, roscpp, sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-sick-scan";
-  version = "1.4.2-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_scan-release/archive/release/kinetic/sick_scan/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "1156e52208690cce3b765d90131e6303dd52182b0cae339f5307a7bb613663ec";
+    url = "https://github.com/SICKAG/sick_scan-release/archive/release/kinetic/sick_scan/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "f88728990fc8d21ea6106cc0483812ac53bc177888a10eda782769ea24e8444d";
   };
 
   buildType = "catkin";

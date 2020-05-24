@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin }:
 buildRosPackage {
   pname = "ros-melodic-swri-serial-util";
-  version = "2.13.0-r1";
+  version = "2.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_serial_util/2.13.0-1.tar.gz";
-    name = "2.13.0-1.tar.gz";
-    sha256 = "c3b5d626029c923fa6b01d54269a34ef0ba5246c95f7198b2c1804e1964bdfd2";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_serial_util/2.13.1-1.tar.gz";
+    name = "2.13.1-1.tar.gz";
+    sha256 = "bc2e8b95b8cd1b9cfde037857b3ed5ad1ab6fb0c4434b09685fac17923fc4b79";
   };
 
   buildType = "catkin";

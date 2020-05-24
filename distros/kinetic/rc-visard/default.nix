@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rc-hand-eye-calibration-client, rc-pick-client, rc-roi-manager-gui, rc-tagdetect-client, rc-visard-description, rc-visard-driver }:
+{ lib, buildRosPackage, fetchurl, catkin, rc-hand-eye-calibration-client, rc-pick-client, rc-roi-manager-gui, rc-silhouettematch-client, rc-tagdetect-client, rc-visard-description, rc-visard-driver }:
 buildRosPackage {
   pname = "ros-kinetic-rc-visard";
-  version = "2.7.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_visard/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "f14ee03711355119b717ecc3a5eaba69deffed9476f4e1b2e529bc36530b843e";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_visard/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "60149b8c4a531a3b334bba36ca5c4e2070b8340a74aae07a5a12664bd677ab33";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rc-hand-eye-calibration-client rc-pick-client rc-roi-manager-gui rc-tagdetect-client rc-visard-description rc-visard-driver ];
+  propagatedBuildInputs = [ rc-hand-eye-calibration-client rc-pick-client rc-roi-manager-gui rc-silhouettematch-client rc-tagdetect-client rc-visard-description rc-visard-driver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

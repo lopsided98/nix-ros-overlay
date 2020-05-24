@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, boost, catkin, cmake-modules, diagnostic-msgs, diagnostic-updater, eigen, eigen-conversions, geographic-msgs, geographiclib, geometry-msgs, gtest, libmavconn, mavlink, mavros-msgs, message-runtime, nav-msgs, pluginlib, rosconsole-bridge, roscpp, rospy, rosunit, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mavros";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/kinetic/mavros/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "f02269260551538fbedf2c2f10847820a2475552e9f032786be4bfd9d19d6eee";
+    url = "https://github.com/mavlink/mavros-release/archive/release/kinetic/mavros/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "6167c6c338f0e11cef9a97863f3607d64680bd3ec2cb9c9a1d0a5fb012deb34a";
   };
 
   buildType = "catkin";

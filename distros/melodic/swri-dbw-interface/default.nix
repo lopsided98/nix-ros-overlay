@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-swri-dbw-interface";
-  version = "2.13.0-r1";
+  version = "2.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_dbw_interface/2.13.0-1.tar.gz";
-    name = "2.13.0-1.tar.gz";
-    sha256 = "0b93132435560c7cb04aa560a4dad8aa86b3329f44663003afa868b80647d723";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_dbw_interface/2.13.1-1.tar.gz";
+    name = "2.13.1-1.tar.gz";
+    sha256 = "29782b7145e4ae7e059b6de8e96d2c75c618ad296b6d8850fe0de3da950d7d93";
   };
 
   buildType = "catkin";

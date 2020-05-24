@@ -1290,6 +1290,8 @@ self: super: {
 
  iris-lama = self.callPackage ./iris-lama {};
 
+ iris-lama-ros = self.callPackage ./iris-lama-ros {};
+
  ivcon = self.callPackage ./ivcon {};
 
  jackal-cartographer-navigation = self.callPackage ./jackal-cartographer-navigation {};
@@ -1758,6 +1760,8 @@ self: super: {
 
  moveit-msgs = self.callPackage ./moveit-msgs {};
 
+ moveit-opw-kinematics-plugin = self.callPackage ./moveit-opw-kinematics-plugin {};
+
  moveit-planners = self.callPackage ./moveit-planners {};
 
  moveit-planners-chomp = self.callPackage ./moveit-planners-chomp {};
@@ -1813,6 +1817,8 @@ self: super: {
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
 
  mrpt1 = self.callPackage ./mrpt1 {};
+
+ mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-bridge = self.callPackage ./mrpt-bridge {};
 
@@ -3287,6 +3293,8 @@ self: super: {
  tf2-server = self.callPackage ./tf2-server {};
 
  tf2-tools = self.callPackage ./tf2-tools {};
+
+ tf2-urdf = self.callPackage ./tf2-urdf {};
 
  tf2-web-republisher = self.callPackage ./tf2-web-republisher {};
 

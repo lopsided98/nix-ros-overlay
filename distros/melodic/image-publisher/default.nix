@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, cv-bridge, dynamic-reconfigure, image-transport, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-image-publisher";
-  version = "1.14.0-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_publisher/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "c9869c11a9829621393af0ce79d2530accfe38cfec200aadb5c826d9c19c3c1d";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_publisher/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "3117e0d51d6395341b07f4292606dee9bd69ebbfeb0327504e249e4ad5a61228";
   };
 
   buildType = "catkin";

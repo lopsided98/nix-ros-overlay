@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-xmllint, launch-testing, launch-testing-ros, pythonPackages, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-joint-state-publisher";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/eloquent/joint_state_publisher/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "bef59b518cb96eafbf5d9aeffe2b3edcfc18532489e44da9c9e5717d47fd1148";
+    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/eloquent/joint_state_publisher/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "d947f33d2048dbca636131783ae83828e888dbc513562d2b238d9a8a3abf6cac";
   };
 
   buildType = "ament_python";

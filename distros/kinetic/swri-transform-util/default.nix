@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, diagnostic-msgs, geographic-msgs, geometry-msgs, geos, gps-common, libyamlcpp, marti-nav-msgs, nodelet, pkg-config, proj, roscpp, rospy, rostest, sensor-msgs, swri-math-util, swri-nodelet, swri-roscpp, swri-yaml-util, tf, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-swri-transform-util";
-  version = "2.12.0-r1";
+  version = "2.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_transform_util/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "e38d88f259cf4d93992d857c5dae5513e01d3bd5b0dd9a46ced3a3cfee7b2f28";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_transform_util/2.13.1-1.tar.gz";
+    name = "2.13.1-1.tar.gz";
+    sha256 = "19eac7d22587b19e27842071ea6522d75c8af6078e193fe5d9bb0c8b8286da02";
   };
 
   buildType = "catkin";

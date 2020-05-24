@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, interactive-marker-tutorials, librviz-tutorial, rviz-plugin-tutorials, rviz-python-tutorial, visualization-marker-tutorials }:
 buildRosPackage {
   pname = "ros-kinetic-visualization-tutorials";
-  version = "0.10.3";
+  version = "0.10.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/kinetic/visualization_tutorials/0.10.3-0.tar.gz";
-    name = "0.10.3-0.tar.gz";
-    sha256 = "a801eaedfd07578c2e80ea595caf484306812b50a0758a34821348a0b1d403a1";
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/kinetic/visualization_tutorials/0.10.5-1.tar.gz";
+    name = "0.10.5-1.tar.gz";
+    sha256 = "b9861b11940d4b13bb74d1b8f5948a0364043ad8887fc93dd2faee63f864cb80";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, swri-math-util }:
 buildRosPackage {
   pname = "ros-kinetic-swri-opencv-util";
-  version = "2.12.0-r1";
+  version = "2.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_opencv_util/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "3d79c030de02d8dd54d50835d15225a4f8f0d6c294eec999ea039d26a6d761f2";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_opencv_util/2.13.1-1.tar.gz";
+    name = "2.13.1-1.tar.gz";
+    sha256 = "fd925dcfb07729467e62401547b58d2e1a68b87c701956fbecfd731996aa260f";
   };
 
   buildType = "catkin";

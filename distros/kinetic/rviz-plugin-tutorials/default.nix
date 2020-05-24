@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, qt5, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-rviz-plugin-tutorials";
-  version = "0.10.3";
+  version = "0.10.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/kinetic/rviz_plugin_tutorials/0.10.3-0.tar.gz";
-    name = "0.10.3-0.tar.gz";
-    sha256 = "76998d671893d077f5fe8a074f9c8bcef142956e81a5902250509a4d061d598a";
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/kinetic/rviz_plugin_tutorials/0.10.5-1.tar.gz";
+    name = "0.10.5-1.tar.gz";
+    sha256 = "c5473143e9c8b4674397e415525c2505b4282e413ed1d870c23cec9f385de36a";
   };
 
   buildType = "catkin";

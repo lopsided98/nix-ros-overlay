@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, neonavigation-common, roscpp, roslint, rostest, sensor-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-joystick-interrupt";
-  version = "0.8.5-r1";
+  version = "0.8.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/joystick_interrupt/0.8.5-1.tar.gz";
-    name = "0.8.5-1.tar.gz";
-    sha256 = "f23d095400f4772b9439af38452fdd08798a27e499112caa030c6fb81bf372c1";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/joystick_interrupt/0.8.7-1.tar.gz";
+    name = "0.8.7-1.tar.gz";
+    sha256 = "7c299e40ae649e9d51d3a0216a836ba8362573a3a460225a06a8e3f36f55073f";
   };
 
   buildType = "catkin";

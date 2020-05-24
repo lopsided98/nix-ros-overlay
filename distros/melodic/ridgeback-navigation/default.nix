@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, catkin, gmapping, map-server, move-base, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-ridgeback-navigation";
-  version = "0.2.3-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_navigation/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "393e37f9ec09f48df8d195e6b76485cdf66c1388eafad37feda78b9fd3f2c31a";
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_navigation/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "0516173ca1c373695c5d9eecfc9e97ee99e26eff1f8e5d9587e2edcf486dcdf1";
   };
 
   buildType = "catkin";
