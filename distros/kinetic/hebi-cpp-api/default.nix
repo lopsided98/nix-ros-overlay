@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen }:
 buildRosPackage {
   pname = "ros-kinetic-hebi-cpp-api";
-  version = "3.2.0-r1";
+  version = "3.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/HebiRobotics/hebi_cpp_api_ros-release/archive/release/kinetic/hebi_cpp_api/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "18e02a9e08359f8c085da9c01970533fb81e932c27b48adb00b42ffc7ee96e3f";
+    url = "https://github.com/HebiRobotics/hebi_cpp_api_ros-release/archive/release/kinetic/hebi_cpp_api/3.2.0-2.tar.gz";
+    name = "3.2.0-2.tar.gz";
+    sha256 = "da06c66ce1d7708ad33aafb8846b2aa3e59351beb5d54f2c826c6c7e9e82f1c7";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, geometry-msgs, mbf-abstract-core, mbf-utility, nav-core, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-mbf-costmap-core";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_costmap_core/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "ad971c5af6a065696b0017f7cd79c54a43eb93bc31d73f40da861c29ccab49e9";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_costmap_core/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "ab6a7064b0169cfe4c61611dc36bc0c7f887fe232819872ea3547c0746496d62";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dpkg }:
 buildRosPackage {
   pname = "ros-melodic-libntcan";
-  version = "0.6.15-r1";
+  version = "0.6.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libntcan/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "c0ded6c692f2ad8240eedcdf1ba1fb36c53ff9ce0b43e79455127cd0a048170e";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libntcan/0.6.17-1.tar.gz";
+    name = "0.6.17-1.tar.gz";
+    sha256 = "a54efc92a7411aaef217c0af73fa61b85d5a516c021912c383094236703b3e33";
   };
 
   buildType = "catkin";

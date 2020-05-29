@@ -418,6 +418,8 @@ self: super: {
 
  kobuki-driver = self.callPackage ./kobuki-driver {};
 
+ kobuki-firmware = self.callPackage ./kobuki-firmware {};
+
  kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
 
  kobuki-ros = self.callPackage ./kobuki-ros {};

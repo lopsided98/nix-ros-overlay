@@ -824,6 +824,10 @@ self: super: {
 
  face-detector = self.callPackage ./face-detector {};
 
+ fadecandy-driver = self.callPackage ./fadecandy-driver {};
+
+ fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
+
  fake-joint = self.callPackage ./fake-joint {};
 
  fake-joint-driver = self.callPackage ./fake-joint-driver {};

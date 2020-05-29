@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, diagnostic-msgs, geometry-msgs, message-generation, message-runtime, nav-msgs, pythonPackages, roscpp, rosgraph, rospy, rospy-tutorials, rosservice, rostest, rostopic, sensor-msgs, std-msgs, std-srvs, stereo-msgs, tf2-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosbridge-library";
-  version = "0.11.8-r1";
+  version = "0.11.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_library/0.11.8-1.tar.gz";
-    name = "0.11.8-1.tar.gz";
-    sha256 = "0d1428dbd1c2bbc7c653af4766645d7216a6857cb70239c0d30ca4b52a824a7d";
+    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_library/0.11.9-1.tar.gz";
+    name = "0.11.9-1.tar.gz";
+    sha256 = "6315402e431cb5ae50153ce2c70dcc41f2ac92d6eea7609dac59f9d5934800c8";
   };
 
   buildType = "catkin";

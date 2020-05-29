@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, emacs }:
 buildRosPackage {
   pname = "ros-melodic-rosemacs";
-  version = "0.4.13";
+  version = "0.4.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/melodic/rosemacs/0.4.13-0.tar.gz";
-    name = "0.4.13-0.tar.gz";
-    sha256 = "80a2911c8cf86b70a771060e8304d9234b375b2f221fb42e63bfe5bfbf8f36a1";
+    url = "https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/melodic/rosemacs/0.4.14-1.tar.gz";
+    name = "0.4.14-1.tar.gz";
+    sha256 = "2a2cb471fbfaebdf764ed4472dbed5ce2de28e2b33e6ce35db052d86ecc0d345";
   };
 
   buildType = "catkin";
