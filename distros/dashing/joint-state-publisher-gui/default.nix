@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, joint-state-publisher, python-qt-binding, rclpy }:
 buildRosPackage {
   pname = "ros-dashing-joint-state-publisher-gui";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/dashing/joint_state_publisher_gui/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "fdc9c350e4bc32ecf23b87f1c6231e5eb90b6884f6a635fdb0abe6883e2b1af1";
+    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/dashing/joint_state_publisher_gui/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "75831c47196ff1d6ef0d8968d015ad94ae76602d9089ca372d431ca66f01a05f";
   };
 
   buildType = "ament_python";

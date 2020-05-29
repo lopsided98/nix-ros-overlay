@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-opengm";
-  version = "0.6.15-r1";
+  version = "0.6.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/opengm/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "415765b68cc4a5d744bd6488e4eecd71d72fcfd2de9b20f36c308336a02c3bca";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/opengm/0.6.17-1.tar.gz";
+    name = "0.6.17-1.tar.gz";
+    sha256 = "e97abb94a52a22d31e3dc253e1e4865d414989200b861141ef481e28e7b60fce";
   };
 
   buildType = "catkin";

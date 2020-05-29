@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, message-filters, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-imu-complementary-filter";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/melodic/imu_complementary_filter/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "a039e20b6d977288ca1672bb3a48cca17ee24935e497174cacea40a94f04ecb5";
+    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/melodic/imu_complementary_filter/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "5a0386e57b5a89f5c6e0c4dd93ee25dddd8a80a8477c869e912cb37cdf35af6d";
   };
 
   buildType = "catkin";

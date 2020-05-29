@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, message-filters, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-imu-complementary-filter";
-  version = "1.1.7-r1";
+  version = "1.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/imu_complementary_filter/1.1.7-1.tar.gz";
-    name = "1.1.7-1.tar.gz";
-    sha256 = "6df5f7b9dd5f341ce6fda5376a9723a6d8586a1b68951d9a382a97056b2426c7";
+    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/imu_complementary_filter/1.1.8-1.tar.gz";
+    name = "1.1.8-1.tar.gz";
+    sha256 = "6497688201a3530c6fb45490152340ba0709eaca73db85cf07a484bdb3022291";
   };
 
   buildType = "catkin";

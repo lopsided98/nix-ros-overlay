@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dpkg }:
 buildRosPackage {
   pname = "ros-kinetic-libntcan";
-  version = "0.6.15-r1";
+  version = "0.6.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libntcan/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "597a0fdeea57a0893317523807c28e131f92653c120ae97cb5c002e0833b91ad";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/kinetic/libntcan/0.6.17-1.tar.gz";
+    name = "0.6.17-1.tar.gz";
+    sha256 = "b6fb1d92265d70a55c1967371ff53576360ee096327efece14d21b347e53d10e";
   };
 
   buildType = "catkin";

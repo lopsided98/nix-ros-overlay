@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, qt5, roscpp, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-rviz-imu-plugin";
-  version = "1.1.7-r1";
+  version = "1.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/rviz_imu_plugin/1.1.7-1.tar.gz";
-    name = "1.1.7-1.tar.gz";
-    sha256 = "451718edd552558e2ca746a9083c8b393a823ae5124fa61a7cd88fdb5f92ff5f";
+    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/kinetic/rviz_imu_plugin/1.1.8-1.tar.gz";
+    name = "1.1.8-1.tar.gz";
+    sha256 = "d1209a3afc8f7ed7dfa99176583cc85e43e0505445688fe5ff2f65d27bb1cd49";
   };
 
   buildType = "catkin";

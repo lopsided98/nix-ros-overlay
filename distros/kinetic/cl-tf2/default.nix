@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-lisp, catkin, cl-transforms-stamped, cl-utils, roslisp, tf2-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cl-tf2";
-  version = "0.2.12-r1";
+  version = "0.2.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_tf2/0.2.12-1.tar.gz";
-    name = "0.2.12-1.tar.gz";
-    sha256 = "1caf596a067313c1a43dfb5f289e6dec64a468ed37f3f08ba05edaaf16983a8d";
+    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/cl_tf2/0.2.13-1.tar.gz";
+    name = "0.2.13-1.tar.gz";
+    sha256 = "80c9b127e593ffd96e76927cc0d8fd2e4c029e35d9f465fc8f2e98c27a09427e";
   };
 
   buildType = "catkin";

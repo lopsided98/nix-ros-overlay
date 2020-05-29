@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, base-local-planner, catkin, dynamic-reconfigure, geometry-msgs, mbf-abstract-nav, mbf-costmap-core, mbf-msgs, mbf-utility, move-base, move-base-msgs, nav-core, nav-msgs, pluginlib, roscpp, std-msgs, std-srvs, tf }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, costmap-2d, dynamic-reconfigure, geometry-msgs, mbf-abstract-nav, mbf-costmap-core, mbf-msgs, mbf-utility, move-base, move-base-msgs, nav-core, nav-msgs, pluginlib, roscpp, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-melodic-mbf-costmap-nav";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_costmap_nav/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "a8bd99dcca879d1cd4e805374650262ca41ceb139165f9bad2419e4753e6ccb2";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_costmap_nav/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "0605b881744f00116a3fe4c1a2a8d4620288e2229bc492c1fee448f3df56e05f";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ actionlib actionlib-msgs base-local-planner dynamic-reconfigure geometry-msgs mbf-abstract-nav mbf-costmap-core mbf-msgs mbf-utility move-base move-base-msgs nav-core nav-msgs pluginlib roscpp std-msgs std-srvs tf ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs costmap-2d dynamic-reconfigure geometry-msgs mbf-abstract-nav mbf-costmap-core mbf-msgs mbf-utility move-base move-base-msgs nav-core nav-msgs pluginlib roscpp std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

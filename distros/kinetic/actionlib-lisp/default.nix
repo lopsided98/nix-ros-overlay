@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, cl-utils, message-runtime, roslisp }:
 buildRosPackage {
   pname = "ros-kinetic-actionlib-lisp";
-  version = "0.2.12-r1";
+  version = "0.2.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/actionlib_lisp/0.2.12-1.tar.gz";
-    name = "0.2.12-1.tar.gz";
-    sha256 = "944509127f9f9bcb3feec5235c98617635f3ed829cb0a86416ba92e71af2abe0";
+    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/kinetic/actionlib_lisp/0.2.13-1.tar.gz";
+    name = "0.2.13-1.tar.gz";
+    sha256 = "f8cf0b2aa6507254ba07dc32ed65a95798af11fe4fd7ef3ff96a749ccf3306e7";
   };
 
   buildType = "catkin";

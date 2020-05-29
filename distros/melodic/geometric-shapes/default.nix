@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, catkin, console-bridge, eigen, eigen-stl-containers, octomap, pkg-config, qhull, random-numbers, resource-retriever, rosunit, shape-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-geometric-shapes";
-  version = "0.6.2-r1";
+  version = "0.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometric_shapes-release/archive/release/melodic/geometric_shapes/0.6.2-1.tar.gz";
-    name = "0.6.2-1.tar.gz";
-    sha256 = "33763d4b3dca7e34f84d7fe2973c7386a9f662861f13c0c66f20a53bdfd9e383";
+    url = "https://github.com/ros-gbp/geometric_shapes-release/archive/release/melodic/geometric_shapes/0.6.3-1.tar.gz";
+    name = "0.6.3-1.tar.gz";
+    sha256 = "bb058b1f9ae91e5c03d79a1fb85368a1dad5ab10fc85f173da5498d10a1c9257";
   };
 
   buildType = "catkin";
