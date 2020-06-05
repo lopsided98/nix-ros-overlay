@@ -156,8 +156,6 @@ self: super: {
 
  can-msgs = self.callPackage ./can-msgs {};
 
- cartographer = self.callPackage ./cartographer {};
-
  cartographer-ros = self.callPackage ./cartographer-ros {};
 
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
@@ -475,6 +473,8 @@ self: super: {
  lex-common-msgs = self.callPackage ./lex-common-msgs {};
 
  lex-node = self.callPackage ./lex-node {};
+
+ lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosgraph, rostest, rostopic }:
 buildRosPackage {
   pname = "ros-melodic-rosnode";
-  version = "1.14.5-r1";
+  version = "1.14.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosnode/1.14.5-1.tar.gz";
-    name = "1.14.5-1.tar.gz";
-    sha256 = "0ff95b420d2206c246092bf9f776a3cf02e3b91c29bd77d44ea0bf5297e20240";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosnode/1.14.6-1.tar.gz";
+    name = "1.14.6-1.tar.gz";
+    sha256 = "65ab957fe9895a78ac50c27d5cdc5f736f88aa24599edcc6f4629366fb363e59";
   };
 
   buildType = "catkin";

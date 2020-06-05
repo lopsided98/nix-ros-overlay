@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-qt-dotgraph";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_dotgraph/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "4de129ca721b664fa79136c817abbb2f8186a65b5eb5535fdffd9db00f6b4fff";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_dotgraph/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "527e75497946fd166abe67941bfd0ce7959fbd15d014b1ee2647b1f013e32d07";
   };
 
   buildType = "catkin";
   checkInputs = [ pythonPackages.pygraphviz ];
   propagatedBuildInputs = [ python-qt-binding pythonPackages.pydot ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''qt_dotgraph provides helpers to work with dot graphs.'';

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-phidgets-accelerometer";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/dashing/phidgets_accelerometer/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "32b61cba5750fd07baa2d0a08e43b7e9fc3f642091c5d2cfdb48487beae87733";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/dashing/phidgets_accelerometer/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "45f6902446f68e48746440ba393019a6f556abc2d2a7b95372369fd6ab1aa703";
   };
 
   buildType = "ament_cmake";

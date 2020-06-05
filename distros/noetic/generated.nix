@@ -28,6 +28,8 @@ self: super: {
 
  base-local-planner = self.callPackage ./base-local-planner {};
 
+ behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
+
  bond = self.callPackage ./bond {};
 
  bond-core = self.callPackage ./bond-core {};
@@ -56,6 +58,10 @@ self: super: {
 
  carrot-planner = self.callPackage ./carrot-planner {};
 
+ cartesian-msgs = self.callPackage ./cartesian-msgs {};
+
+ catch-ros = self.callPackage ./catch-ros {};
+
  catkin = self.callPackage ./catkin {};
 
  class-loader = self.callPackage ./class-loader {};
@@ -63,6 +69,8 @@ self: super: {
  clear-costmap-recovery = self.callPackage ./clear-costmap-recovery {};
 
  cmake-modules = self.callPackage ./cmake-modules {};
+
+ cob-extern = self.callPackage ./cob-extern {};
 
  code-coverage = self.callPackage ./code-coverage {};
 
@@ -100,7 +108,15 @@ self: super: {
 
  costmap-cspace-msgs = self.callPackage ./costmap-cspace-msgs {};
 
+ costmap-queue = self.callPackage ./costmap-queue {};
+
  cpp-common = self.callPackage ./cpp-common {};
+
+ csm = self.callPackage ./csm {};
+
+ cv-camera = self.callPackage ./cv-camera {};
+
+ ddynamic-reconfigure = self.callPackage ./ddynamic-reconfigure {};
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
@@ -122,11 +138,33 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
+ dlux-global-planner = self.callPackage ./dlux-global-planner {};
+
+ dlux-plugins = self.callPackage ./dlux-plugins {};
+
+ dual-quaternions = self.callPackage ./dual-quaternions {};
+
+ dual-quaternions-ros = self.callPackage ./dual-quaternions-ros {};
+
  dwa-local-planner = self.callPackage ./dwa-local-planner {};
+
+ dwb-critics = self.callPackage ./dwb-critics {};
+
+ dwb-local-planner = self.callPackage ./dwb-local-planner {};
+
+ dwb-msgs = self.callPackage ./dwb-msgs {};
+
+ dwb-plugins = self.callPackage ./dwb-plugins {};
 
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamic-reconfigure = self.callPackage ./dynamic-reconfigure {};
+
+ ecl-build = self.callPackage ./ecl-build {};
+
+ ecl-license = self.callPackage ./ecl-license {};
+
+ ecl-tools = self.callPackage ./ecl-tools {};
 
  effort-controllers = self.callPackage ./effort-controllers {};
 
@@ -136,9 +174,17 @@ self: super: {
 
  executive-smach = self.callPackage ./executive-smach {};
 
+ exotica-val-description = self.callPackage ./exotica-val-description {};
+
+ fadecandy-driver = self.callPackage ./fadecandy-driver {};
+
+ fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
+
  fake-localization = self.callPackage ./fake-localization {};
 
  filters = self.callPackage ./filters {};
+
+ find-object-2d = self.callPackage ./find-object-2d {};
 
  fkie-message-filters = self.callPackage ./fkie-message-filters {};
 
@@ -182,6 +228,8 @@ self: super: {
 
  geographic-msgs = self.callPackage ./geographic-msgs {};
 
+ geometric-shapes = self.callPackage ./geometric-shapes {};
+
  geometry = self.callPackage ./geometry {};
 
  geometry2 = self.callPackage ./geometry2 {};
@@ -194,11 +242,23 @@ self: super: {
 
  global-planner = self.callPackage ./global-planner {};
 
+ global-planner-tests = self.callPackage ./global-planner-tests {};
+
+ gps-common = self.callPackage ./gps-common {};
+
+ gps-umd = self.callPackage ./gps-umd {};
+
+ gpsd-client = self.callPackage ./gpsd-client {};
+
  gripper-action-controller = self.callPackage ./gripper-action-controller {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
+ hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
+
  hokuyo3d = self.callPackage ./hokuyo3d {};
+
+ ifm3d = self.callPackage ./ifm3d {};
 
  image-common = self.callPackage ./image-common {};
 
@@ -218,13 +278,21 @@ self: super: {
 
  image-view = self.callPackage ./image-view {};
 
+ imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
+
+ imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
+
  imu-sensor-controller = self.callPackage ./imu-sensor-controller {};
+
+ imu-tools = self.callPackage ./imu-tools {};
 
  interactive-marker-tutorials = self.callPackage ./interactive-marker-tutorials {};
 
  interactive-markers = self.callPackage ./interactive-markers {};
 
  ivcon = self.callPackage ./ivcon {};
+
+ jderobot-assets = self.callPackage ./jderobot-assets {};
 
  joint-limits-interface = self.callPackage ./joint-limits-interface {};
 
@@ -258,9 +326,29 @@ self: super: {
 
  laser-proc = self.callPackage ./laser-proc {};
 
+ lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
+
+ libdlib = self.callPackage ./libdlib {};
+
  libg2o = self.callPackage ./libg2o {};
 
+ libmavconn = self.callPackage ./libmavconn {};
+
+ libntcan = self.callPackage ./libntcan {};
+
+ libpcan = self.callPackage ./libpcan {};
+
+ libphidget22 = self.callPackage ./libphidget22 {};
+
+ libphidgets = self.callPackage ./libphidgets {};
+
  librviz-tutorial = self.callPackage ./librviz-tutorial {};
+
+ locomotor = self.callPackage ./locomotor {};
+
+ locomotor-msgs = self.callPackage ./locomotor-msgs {};
+
+ locomove-base = self.callPackage ./locomove-base {};
 
  map-laser = self.callPackage ./map-laser {};
 
@@ -272,7 +360,43 @@ self: super: {
 
  map-server = self.callPackage ./map-server {};
 
+ marti-can-msgs = self.callPackage ./marti-can-msgs {};
+
+ marti-common-msgs = self.callPackage ./marti-common-msgs {};
+
+ marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
+
+ marti-perception-msgs = self.callPackage ./marti-perception-msgs {};
+
+ marti-sensor-msgs = self.callPackage ./marti-sensor-msgs {};
+
+ marti-status-msgs = self.callPackage ./marti-status-msgs {};
+
+ marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
+
+ marvelmind-nav = self.callPackage ./marvelmind-nav {};
+
  mavlink = self.callPackage ./mavlink {};
+
+ mavros = self.callPackage ./mavros {};
+
+ mavros-extras = self.callPackage ./mavros-extras {};
+
+ mavros-msgs = self.callPackage ./mavros-msgs {};
+
+ mbf-abstract-core = self.callPackage ./mbf-abstract-core {};
+
+ mbf-abstract-nav = self.callPackage ./mbf-abstract-nav {};
+
+ mbf-costmap-core = self.callPackage ./mbf-costmap-core {};
+
+ mbf-costmap-nav = self.callPackage ./mbf-costmap-nav {};
+
+ mbf-msgs = self.callPackage ./mbf-msgs {};
+
+ mbf-simple-nav = self.callPackage ./mbf-simple-nav {};
+
+ mbf-utility = self.callPackage ./mbf-utility {};
 
  mcl-3dl = self.callPackage ./mcl-3dl {};
 
@@ -290,13 +414,31 @@ self: super: {
 
  move-base = self.callPackage ./move-base {};
 
+ move-base-flex = self.callPackage ./move-base-flex {};
+
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
+ mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ nav-2d-msgs = self.callPackage ./nav-2d-msgs {};
+
+ nav-2d-utils = self.callPackage ./nav-2d-utils {};
+
  nav-core = self.callPackage ./nav-core {};
+
+ nav-core2 = self.callPackage ./nav-core2 {};
+
+ nav-core-adapter = self.callPackage ./nav-core-adapter {};
+
+ nav-grid = self.callPackage ./nav-grid {};
+
+ nav-grid-iterators = self.callPackage ./nav-grid-iterators {};
+
+ nav-grid-pub-sub = self.callPackage ./nav-grid-pub-sub {};
 
  nav-msgs = self.callPackage ./nav-msgs {};
 
@@ -338,6 +480,8 @@ self: super: {
 
  open-karto = self.callPackage ./open-karto {};
 
+ opengm = self.callPackage ./opengm {};
+
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
@@ -350,9 +494,43 @@ self: super: {
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
+ phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
+
+ phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
+
+ phidgets-api = self.callPackage ./phidgets-api {};
+
+ phidgets-digital-inputs = self.callPackage ./phidgets-digital-inputs {};
+
+ phidgets-digital-outputs = self.callPackage ./phidgets-digital-outputs {};
+
+ phidgets-drivers = self.callPackage ./phidgets-drivers {};
+
+ phidgets-gyroscope = self.callPackage ./phidgets-gyroscope {};
+
+ phidgets-high-speed-encoder = self.callPackage ./phidgets-high-speed-encoder {};
+
+ phidgets-ik = self.callPackage ./phidgets-ik {};
+
+ phidgets-magnetometer = self.callPackage ./phidgets-magnetometer {};
+
+ phidgets-motors = self.callPackage ./phidgets-motors {};
+
+ phidgets-msgs = self.callPackage ./phidgets-msgs {};
+
+ phidgets-spatial = self.callPackage ./phidgets-spatial {};
+
+ phidgets-temperature = self.callPackage ./phidgets-temperature {};
+
+ pinocchio = self.callPackage ./pinocchio {};
+
  planner-cspace = self.callPackage ./planner-cspace {};
 
  planner-cspace-msgs = self.callPackage ./planner-cspace-msgs {};
+
+ plotjuggler = self.callPackage ./plotjuggler {};
+
+ plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
 
  pluginlib = self.callPackage ./pluginlib {};
 
@@ -363,6 +541,8 @@ self: super: {
  posedetection-msgs = self.callPackage ./posedetection-msgs {};
 
  position-controllers = self.callPackage ./position-controllers {};
+
+ pybind11-catkin = self.callPackage ./pybind11-catkin {};
 
  pyquaternion = self.callPackage ./pyquaternion {};
 
@@ -394,9 +574,17 @@ self: super: {
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
+ remote-rosbag-record = self.callPackage ./remote-rosbag-record {};
+
  resource-retriever = self.callPackage ./resource-retriever {};
 
+ rgbd-launch = self.callPackage ./rgbd-launch {};
+
  robot = self.callPackage ./robot {};
+
+ robot-localization = self.callPackage ./robot-localization {};
+
+ robot-navigation = self.callPackage ./robot-navigation {};
 
  ros = self.callPackage ./ros {};
 
@@ -412,9 +600,13 @@ self: super: {
 
  ros-core = self.callPackage ./ros-core {};
 
+ ros-emacs-utils = self.callPackage ./ros-emacs-utils {};
+
  ros-environment = self.callPackage ./ros-environment {};
 
  ros-tutorials = self.callPackage ./ros-tutorials {};
+
+ rosapi = self.callPackage ./rosapi {};
 
  rosauth = self.callPackage ./rosauth {};
 
@@ -427,6 +619,14 @@ self: super: {
  rosbash = self.callPackage ./rosbash {};
 
  rosboost-cfg = self.callPackage ./rosboost-cfg {};
+
+ rosbridge-library = self.callPackage ./rosbridge-library {};
+
+ rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
+
+ rosbridge-server = self.callPackage ./rosbridge-server {};
+
+ rosbridge-suite = self.callPackage ./rosbridge-suite {};
 
  rosbuild = self.callPackage ./rosbuild {};
 
@@ -450,6 +650,10 @@ self: super: {
 
  rosdiagnostic = self.callPackage ./rosdiagnostic {};
 
+ rosemacs = self.callPackage ./rosemacs {};
+
+ rosfmt = self.callPackage ./rosfmt {};
+
  rosgraph = self.callPackage ./rosgraph {};
 
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
@@ -464,11 +668,19 @@ self: super: {
 
  roslisp = self.callPackage ./roslisp {};
 
+ roslisp-repl = self.callPackage ./roslisp-repl {};
+
  roslz4 = self.callPackage ./roslz4 {};
 
  rosmake = self.callPackage ./rosmake {};
 
  rosmaster = self.callPackage ./rosmaster {};
+
+ rosmon = self.callPackage ./rosmon {};
+
+ rosmon-core = self.callPackage ./rosmon-core {};
+
+ rosmon-msgs = self.callPackage ./rosmon-msgs {};
 
  rosmsg = self.callPackage ./rosmsg {};
 
@@ -480,7 +692,11 @@ self: super: {
 
  rosparam = self.callPackage ./rosparam {};
 
+ rosparam-shortcuts = self.callPackage ./rosparam-shortcuts {};
+
  rospy = self.callPackage ./rospy {};
+
+ rospy-message-converter = self.callPackage ./rospy-message-converter {};
 
  rospy-tutorials = self.callPackage ./rospy-tutorials {};
 
@@ -554,6 +770,8 @@ self: super: {
 
  rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
 
+ rqt-rosmon = self.callPackage ./rqt-rosmon {};
+
  rqt-runtime-monitor = self.callPackage ./rqt-runtime-monitor {};
 
  rqt-rviz = self.callPackage ./rqt-rviz {};
@@ -572,7 +790,11 @@ self: super: {
 
  rqt-web = self.callPackage ./rqt-web {};
 
+ rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
  rviz = self.callPackage ./rviz {};
+
+ rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 
  rviz-plugin-tutorials = self.callPackage ./rviz-plugin-tutorials {};
 
@@ -588,9 +810,15 @@ self: super: {
 
  shape-msgs = self.callPackage ./shape-msgs {};
 
+ sick-tim = self.callPackage ./sick-tim {};
+
  simulators = self.callPackage ./simulators {};
 
  slam-karto = self.callPackage ./slam-karto {};
+
+ slime-ros = self.callPackage ./slime-ros {};
+
+ slime-wrapper = self.callPackage ./slime-wrapper {};
 
  smach = self.callPackage ./smach {};
 
@@ -620,7 +848,13 @@ self: super: {
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
 
+ swri-console = self.callPackage ./swri-console {};
+
+ teb-local-planner = self.callPackage ./teb-local-planner {};
+
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
+
+ test-mavros = self.callPackage ./test-mavros {};
 
  tf = self.callPackage ./tf {};
 
@@ -662,6 +896,18 @@ self: super: {
 
  turtlesim = self.callPackage ./turtlesim {};
 
+ twist-mux = self.callPackage ./twist-mux {};
+
+ twist-mux-msgs = self.callPackage ./twist-mux-msgs {};
+
+ ublox = self.callPackage ./ublox {};
+
+ ublox-gps = self.callPackage ./ublox-gps {};
+
+ ublox-msgs = self.callPackage ./ublox-msgs {};
+
+ ublox-serialization = self.callPackage ./ublox-serialization {};
+
  unique-id = self.callPackage ./unique-id {};
 
  unique-identifier = self.callPackage ./unique-identifier {};
@@ -678,7 +924,11 @@ self: super: {
 
  urdfdom-py = self.callPackage ./urdfdom-py {};
 
+ urg-c = self.callPackage ./urg-c {};
+
  urg-stamped = self.callPackage ./urg-stamped {};
+
+ usb-cam = self.callPackage ./usb-cam {};
 
  uuid-msgs = self.callPackage ./uuid-msgs {};
 

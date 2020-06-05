@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cpp-common, roscpp-traits, rostime }:
 buildRosPackage {
   pname = "ros-noetic-roscpp-serialization";
-  version = "0.7.1-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/noetic/roscpp_serialization/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "96b3cf1eb1c300973acfe4948b859b31e5c4bab973237cb089a6f00d68c71b24";
+    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/noetic/roscpp_serialization/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "ddbc65e42b525bdb29ec8795e05470984cec6c90839d16d577e6b752017e355a";
   };
 
   buildType = "catkin";

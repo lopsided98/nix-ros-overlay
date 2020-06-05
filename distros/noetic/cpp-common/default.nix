@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, console-bridge }:
 buildRosPackage {
   pname = "ros-noetic-cpp-common";
-  version = "0.7.1-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/noetic/cpp_common/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "381fc00674f632f524c062a68efb3bae210229f46b759fb63b598c649ab9a686";
+    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/noetic/cpp_common/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "28a7892680c8c40eb4e77cd9c962abd22a0459fa9e69d73730ed3ebe3be5b9b7";
   };
 
   buildType = "catkin";

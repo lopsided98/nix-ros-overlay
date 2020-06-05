@@ -500,6 +500,8 @@ self: super: {
 
  criutils = self.callPackage ./criutils {};
 
+ csm = self.callPackage ./csm {};
+
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cv-camera = self.callPackage ./cv-camera {};
@@ -1634,6 +1636,8 @@ self: super: {
 
  marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
 
+ marvelmind-nav = self.callPackage ./marvelmind-nav {};
+
  master-discovery-fkie = self.callPackage ./master-discovery-fkie {};
 
  master-sync-fkie = self.callPackage ./master-sync-fkie {};
@@ -2177,6 +2181,8 @@ self: super: {
  phidgets-ik = self.callPackage ./phidgets-ik {};
 
  phidgets-imu = self.callPackage ./phidgets-imu {};
+
+ phidgets-msgs = self.callPackage ./phidgets-msgs {};
 
  photo = self.callPackage ./photo {};
 

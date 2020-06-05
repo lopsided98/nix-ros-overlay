@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cpp-common, lz4, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-roslz4";
-  version = "1.15.6-r1";
+  version = "1.15.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roslz4/1.15.6-1.tar.gz";
-    name = "1.15.6-1.tar.gz";
-    sha256 = "d2f700006232a663a1add55254dd7c8c909552f18188891335e15cae9ce74676";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roslz4/1.15.7-1.tar.gz";
+    name = "1.15.7-1.tar.gz";
+    sha256 = "1826944df6726d437c62a53bfeee216e21b98cbc078e43d0fcde65f2f7d17879";
   };
 
   buildType = "catkin";

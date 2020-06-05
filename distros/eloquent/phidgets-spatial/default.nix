@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-eloquent-phidgets-spatial";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/eloquent/phidgets_spatial/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "abe1818d7490cac3dc27e3ae221c8951bd83c78d67556b89fd9dd2bddbbb2238";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/eloquent/phidgets_spatial/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "bb2baa1c767565f3de6052f58f27ba861e64beb6249423d75d58b86cd059c603";
   };
 
   buildType = "ament_cmake";

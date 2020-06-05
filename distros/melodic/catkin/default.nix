@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gmock, gtest, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-catkin";
-  version = "0.7.23-r1";
+  version = "0.7.26-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/0.7.23-1.tar.gz";
-    name = "0.7.23-1.tar.gz";
-    sha256 = "038975826eb49cf92a07fb7d35622da90b1ccb9ebbf0894d87ca6bd4dee53238";
+    url = "https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/0.7.26-1.tar.gz";
+    name = "0.7.26-1.tar.gz";
+    sha256 = "745b4763eb6d20b5474fe58211d24ce3530fdc106175afc9c22697a87eac75d3";
   };
 
   buildType = "catkin";

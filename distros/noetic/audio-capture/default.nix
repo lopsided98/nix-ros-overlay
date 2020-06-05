@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, audio-common-msgs, catkin, gst_all_1, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-audio-capture";
-  version = "0.3.5-r1";
+  version = "0.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/audio_common-release/archive/release/noetic/audio_capture/0.3.5-1.tar.gz";
-    name = "0.3.5-1.tar.gz";
-    sha256 = "746f069448936c7a1544d05990d40a75c3a44dcbccd85dc7062e8bd4e93d8ea8";
+    url = "https://github.com/ros-gbp/audio_common-release/archive/release/noetic/audio_capture/0.3.6-1.tar.gz";
+    name = "0.3.6-1.tar.gz";
+    sha256 = "ba3fa2ff00ff59ce5e840c284020c5b00a17315a483834e5689926c1537a5269";
   };
 
   buildType = "catkin";

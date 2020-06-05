@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-ros-planning, rosconsole, roscpp, tf2-eigen, tf2-ros, warehouse-ros }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-warehouse";
-  version = "1.0.3-r2";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_warehouse/1.0.3-2.tar.gz";
-    name = "1.0.3-2.tar.gz";
-    sha256 = "4ade914f0a1261e8b0326bd6ff96b89acad5a1b774887661b41311bea8a67765";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_warehouse/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "7af8a9eb7715671578a06554c6c02ae3ad5a9c315fd12d354257a0c6873774c6";
   };
 
   buildType = "catkin";

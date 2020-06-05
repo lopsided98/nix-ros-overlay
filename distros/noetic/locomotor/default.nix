@@ -1,0 +1,25 @@
+
+# Copyright 2020 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, geometry-msgs, locomotor-msgs, nav-2d-msgs, nav-2d-utils, nav-core2, nav-msgs, pluginlib, roscpp, roslint, rospy }:
+buildRosPackage {
+  pname = "ros-noetic-locomotor";
+  version = "0.2.6-r1";
+
+  src = fetchurl {
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/locomotor/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "e0e82b68112e782b5dc8dd76f386db72bd94fc55bfed500ae21b38eb06b8f174";
+  };
+
+  buildType = "catkin";
+  checkInputs = [ roslint ];
+  propagatedBuildInputs = [ actionlib geometry-msgs locomotor-msgs nav-2d-msgs nav-2d-utils nav-core2 nav-msgs pluginlib roscpp rospy ];
+  nativeBuildInputs = [ catkin ];
+
+  meta = {
+    description = ''Locomotor is an extensible path planning coordination engine that replaces move_base. The goal is to provide a mechanism for controlling what happens when the global and local planners succeed and fail. It leverages ROS callback queues to coordinate multiple threads.'';
+    license = with lib.licenses; [ bsdOriginal ];
+  };
+}

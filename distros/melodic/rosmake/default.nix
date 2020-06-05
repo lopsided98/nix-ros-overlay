@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-rosmake";
-  version = "1.14.8-r1";
+  version = "1.14.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/rosmake/1.14.8-1.tar.gz";
-    name = "1.14.8-1.tar.gz";
-    sha256 = "3eb943466e1858f81e9be26b741d6035c65f8c45b29f45d165e75102ccf66de6";
+    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/rosmake/1.14.9-1.tar.gz";
+    name = "1.14.9-1.tar.gz";
+    sha256 = "a67c86505fa7edb380511dfb3e9021f6bbab44a11835af67117aa980af88e35a";
   };
 
   buildType = "catkin";
