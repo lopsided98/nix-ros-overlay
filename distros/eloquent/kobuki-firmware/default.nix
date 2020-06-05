@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros }:
 buildRosPackage {
   pname = "ros-eloquent-kobuki-firmware";
-  version = "1.2.0-r2";
+  version = "1.2.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/stonier/kobuki_firmware-release/archive/release/eloquent/kobuki_firmware/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "c485bd3d61f7e81af7e2d73969b8d8fdc7a6e2963231d12aa3988e2b77a38a16";
+    url = "https://github.com/stonier/kobuki_firmware-release/archive/release/eloquent/kobuki_firmware/1.2.0-3.tar.gz";
+    name = "1.2.0-3.tar.gz";
+    sha256 = "741d43d789454761689a26697b4f4e96df693201e155f64100e3903e05cf9e84";
   };
 
   buildType = "ament_cmake";

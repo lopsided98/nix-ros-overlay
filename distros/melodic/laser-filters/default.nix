@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, dynamic-reconfigure, filters, laser-geometry, message-filters, pluginlib, roscpp, rostest, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-laser-filters";
-  version = "1.8.10-r1";
+  version = "1.8.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/laser_filters-release/archive/release/melodic/laser_filters/1.8.10-1.tar.gz";
-    name = "1.8.10-1.tar.gz";
-    sha256 = "ba6f7fb5e189985d2762f35b8806a6ec29c44da06ba3554437d34c11b6262ec9";
+    url = "https://github.com/ros-gbp/laser_filters-release/archive/release/melodic/laser_filters/1.8.11-1.tar.gz";
+    name = "1.8.11-1.tar.gz";
+    sha256 = "c04a129db4b21ae1524e819d9f080826d7410449f843a4f3b915a62b4a72e970";
   };
 
   buildType = "catkin";

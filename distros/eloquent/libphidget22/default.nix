@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb, libusb1 }:
 buildRosPackage {
   pname = "ros-eloquent-libphidget22";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/eloquent/libphidget22/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "f59ffeedfd7a92c71f2acf37d660f3be468ceca87aceaa23409fa31f3d2d67fe";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/eloquent/libphidget22/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "f6d4e1bdc3a4952506a399afec09b6e51ae0b2abebfb27d707f1e4ff7147b9e8";
   };
 
   buildType = "ament_cmake";

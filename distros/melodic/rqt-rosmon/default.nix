@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pluginlib, qt5, roscpp, rosmon-msgs, rqt-gui, rqt-gui-cpp }:
 buildRosPackage {
   pname = "ros-melodic-rqt-rosmon";
-  version = "2.2.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/melodic/rqt_rosmon/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "5c36fe953743b65dbd9f9f59ea29f158f62a37316c14afdd6d5dee214f9c35aa";
+    url = "https://github.com/xqms/rosmon-release/archive/release/melodic/rqt_rosmon/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "9769d8e7d864db419856c498157f0bb6d41913049802afbc22f7bc229f173ec5";
   };
 
   buildType = "catkin";

@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages, qt5, tango-icon-theme }:
 buildRosPackage {
   pname = "ros-noetic-qt-gui";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/noetic/qt_gui/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "d5020bbb2db4c674cf9b9d153f50d3c5727f8dc4b34c37e73d9bb2064da2184d";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/noetic/qt_gui/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "a9d64ebc5adde5d914b9019cac696a7e337246f5e275e139a501d91d9e90a4c7";
   };
 
   buildType = "catkin";
   buildInputs = [ pythonPackages.pyqt5 qt5.qtbase ];
   propagatedBuildInputs = [ python-qt-binding pythonPackages.rospkg tango-icon-theme ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''qt_gui provides the infrastructure for an integrated graphical user interface based on Qt.

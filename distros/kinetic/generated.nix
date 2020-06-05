@@ -2966,6 +2966,8 @@ self: super: {
 
  phidgets-imu = self.callPackage ./phidgets-imu {};
 
+ phidgets-msgs = self.callPackage ./phidgets-msgs {};
+
  pid = self.callPackage ./pid {};
 
  piksi-multi-rtk = self.callPackage ./piksi-multi-rtk {};

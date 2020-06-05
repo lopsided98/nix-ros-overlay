@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb, libusb1 }:
 buildRosPackage {
   pname = "ros-dashing-libphidget22";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/dashing/libphidget22/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "24f2c220738f1468bad2072dfcaab8471fc5fd9ca12d3fb8180ad294335ddb37";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/dashing/libphidget22/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "54c1005187ec33ed78736b756fc9ab37ff0b8b900e99932c700a65ba89573a1d";
   };
 
   buildType = "ament_cmake";

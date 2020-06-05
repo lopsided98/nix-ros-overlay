@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-rosboost-cfg";
-  version = "1.14.8-r1";
+  version = "1.14.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/rosboost_cfg/1.14.8-1.tar.gz";
-    name = "1.14.8-1.tar.gz";
-    sha256 = "18805bb70e204afa454230063143482757097a80e2f4efc009a9c34e7d2c3bf8";
+    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/rosboost_cfg/1.14.9-1.tar.gz";
+    name = "1.14.9-1.tar.gz";
+    sha256 = "042fd5681840c37a41a7642ebdea54882c0c49dbbd71c241760f5eea71175b92";
   };
 
   buildType = "catkin";

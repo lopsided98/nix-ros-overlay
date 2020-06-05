@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, pythonPackages, rosbag, rosbuild, rosgraph, roslang, roslaunch, roslib, rosnode, rosservice, rostest, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-roswtf";
-  version = "1.15.6-r1";
+  version = "1.15.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roswtf/1.15.6-1.tar.gz";
-    name = "1.15.6-1.tar.gz";
-    sha256 = "02bb579466258fe706a207818457debfc3d9f11896a1d2a47eb0cb32881e4ef2";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roswtf/1.15.7-1.tar.gz";
+    name = "1.15.7-1.tar.gz";
+    sha256 = "f5177fdbda944e73e015f20f4385c8f1b478d3638b2bc85f6cc4b9cf7605c983";
   };
 
   buildType = "catkin";

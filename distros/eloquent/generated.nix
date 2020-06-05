@@ -148,8 +148,6 @@ self: super: {
 
  can-msgs = self.callPackage ./can-msgs {};
 
- cartographer = self.callPackage ./cartographer {};
-
  cartographer-ros = self.callPackage ./cartographer-ros {};
 
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
@@ -444,6 +442,8 @@ self: super: {
 
  launch-yaml = self.callPackage ./launch-yaml {};
 
+ lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
+
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
 
  libg2o = self.callPackage ./libg2o {};
@@ -541,6 +541,10 @@ self: super: {
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
+
+ novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
+
+ novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
 
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
@@ -847,6 +851,8 @@ self: super: {
  rqt-gui-py = self.callPackage ./rqt-gui-py {};
 
  rqt-image-view = self.callPackage ./rqt-image-view {};
+
+ rqt-moveit = self.callPackage ./rqt-moveit {};
 
  rqt-msg = self.callPackage ./rqt-msg {};
 

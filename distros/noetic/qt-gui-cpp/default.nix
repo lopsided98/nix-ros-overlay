@@ -2,21 +2,21 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, tinyxml }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, pkg-config, pluginlib, python-qt-binding, pythonPackages, qt-gui, qt5, tinyxml }:
 buildRosPackage {
   pname = "ros-noetic-qt-gui-cpp";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/noetic/qt_gui_cpp/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "c253b6dd2fa58f5bb6a0d2bf7544dc3047c8460ec56e1d5df48e9adb8cb4bdca";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/noetic/qt_gui_cpp/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "806e9096994b81cc881e0a8bfded1d829573dfdc56c0a2cb8cd6e30fb43948f5";
   };
 
   buildType = "catkin";
   buildInputs = [ cmake-modules pkg-config python-qt-binding qt5.qtbase ];
   propagatedBuildInputs = [ pluginlib qt-gui tinyxml ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''qt_gui_cpp provides the foundation for C++-bindings for qt_gui and creates bindings for every generator available.
