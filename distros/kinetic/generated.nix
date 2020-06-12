@@ -2196,6 +2196,8 @@ self: super: {
 
  marti-data-structures = self.callPackage ./marti-data-structures {};
 
+ marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
+
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 
  marti-perception-msgs = self.callPackage ./marti-perception-msgs {};

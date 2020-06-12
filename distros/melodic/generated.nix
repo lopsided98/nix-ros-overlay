@@ -632,6 +632,8 @@ self: super: {
 
  drone-wrapper = self.callPackage ./drone-wrapper {};
 
+ dual-quaternions = self.callPackage ./dual-quaternions {};
+
  dwa-local-planner = self.callPackage ./dwa-local-planner {};
 
  dwb-critics = self.callPackage ./dwb-critics {};
@@ -1623,6 +1625,8 @@ self: super: {
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
 
  marti-data-structures = self.callPackage ./marti-data-structures {};
+
+ marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
 
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 

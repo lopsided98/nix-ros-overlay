@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-graph-msgs";
-  version = "0.1.0";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/davetcoleman/graph_msgs-release/archive/release/melodic/graph_msgs/0.1.0-0.tar.gz";
-    name = "0.1.0-0.tar.gz";
-    sha256 = "90eea30842973033f2e20449457a89b871d1a66249113b2a423da84f45b4ff0a";
+    url = "https://github.com/PickNikRobotics/graph_msgs-release/archive/release/melodic/graph_msgs/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "39e497e03412353c16417a98db50aba5508d4bba0f36e50385a2c1b7954a6997";
   };
 
   buildType = "catkin";

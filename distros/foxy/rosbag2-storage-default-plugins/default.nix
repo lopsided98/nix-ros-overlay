@@ -1,0 +1,25 @@
+
+# Copyright 2020 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, pluginlib, rcpputils, rcutils, rosbag2-storage, rosbag2-test-common, sqlite3-vendor }:
+buildRosPackage {
+  pname = "ros-foxy-rosbag2-storage-default-plugins";
+  version = "0.3.2-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_storage_default_plugins/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "999ba055d2a369f1acf2f5a398ed129c0a174124905cb0e8695f2cf1ce69d70d";
+  };
+
+  buildType = "ament_cmake";
+  checkInputs = [ ament-cmake-gmock ament-lint-auto ament-lint-common rosbag2-test-common ];
+  propagatedBuildInputs = [ pluginlib rcpputils rcutils rosbag2-storage sqlite3-vendor ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = ''ROSBag2 SQLite3 storage plugin'';
+    license = with lib.licenses; [ asl20 ];
+  };
+}

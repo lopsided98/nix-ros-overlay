@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geographic-msgs, geometry-msgs, marti-common-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-marti-nav-msgs";
-  version = "0.8.0";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_nav_msgs/0.8.0-0.tar.gz";
-    name = "0.8.0-0.tar.gz";
-    sha256 = "6ff8ffceb82bf7632fb7abcea09207abc5036b1ef85801340f25621bc8a61173";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_nav_msgs/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "8a6fac040223a4d032ee52de0e95f334c6352b4e427164e5dd142e9a12838f4c";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-marti-can-msgs";
-  version = "0.8.0";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/melodic/marti_can_msgs/0.8.0-0.tar.gz";
-    name = "0.8.0-0.tar.gz";
-    sha256 = "7b3911514a817dc446751e19aac37c1bcda4e6c4abb47db837c0e77c0d422a53";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/melodic/marti_can_msgs/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "e75354fee0e9dd6bc0ff62410d7bbcb0db8e217468ea3b34a08b279043de4c2d";
   };
 
   buildType = "catkin";

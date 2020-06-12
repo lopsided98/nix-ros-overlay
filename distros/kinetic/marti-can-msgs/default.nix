@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-marti-can-msgs";
-  version = "0.8.0";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_can_msgs/0.8.0-0.tar.gz";
-    name = "0.8.0-0.tar.gz";
-    sha256 = "6971570a1b849b2df76f089bf7cd30389afafa8d2af6925704f3a4062032b8ec";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/kinetic/marti_can_msgs/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "a363704713353b216256bae9bc626291b659cc896d2359e6fef693c3b700a3d7";
   };
 
   buildType = "catkin";

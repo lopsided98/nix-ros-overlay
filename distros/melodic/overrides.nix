@@ -5,7 +5,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   gazeboSimulator = self.gazeboSimulator // {
     gazebo = self.gazeboSimulator.gazebo9;
   };
-  
+
   pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
     patches ? [], ...
   }: {
