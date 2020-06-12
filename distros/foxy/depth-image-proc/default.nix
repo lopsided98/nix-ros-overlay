@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, image-geometry, image-transport, message-filters, sensor-msgs, stereo-msgs, tf2, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-depth-image-proc";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/depth_image_proc/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "9104c4531ba18ae307203c6eb1fcbea113b8498016d0741871d475b2b6bf766b";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/depth_image_proc/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "f6b62ea5348803c3f5efba86db67d838270ff95eaada78fd3f287375d183b38e";
   };
 
   buildType = "ament_cmake";

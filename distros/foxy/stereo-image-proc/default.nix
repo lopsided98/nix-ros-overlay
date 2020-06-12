@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, cv-bridge, image-geometry, image-proc, image-transport, launch, launch-ros, launch-testing, launch-testing-ament-cmake, message-filters, python-cmake-module, python3Packages, rclcpp, rclcpp-components, rclpy, sensor-msgs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-foxy-stereo-image-proc";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/stereo_image_proc/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "95edca5a28b386877b54ee7f30d47c45ad0bd44149521d11f68557dbf0aad076";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/stereo_image_proc/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "4817db61784be6d53e0bb62d50b4aaa61bda3f14abb2e4648178a598db444254";
   };
 
   buildType = "ament_cmake";

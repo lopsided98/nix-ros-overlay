@@ -484,6 +484,8 @@ self: super: {
 
  marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
 
+ mavlink = self.callPackage ./mavlink {};
+
  message-filters = self.callPackage ./message-filters {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};

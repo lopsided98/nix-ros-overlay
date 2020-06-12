@@ -130,9 +130,13 @@ self: super: {
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
+ camera-calibration = self.callPackage ./camera-calibration {};
+
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
+
+ cartographer = self.callPackage ./cartographer {};
 
  cartographer-ros = self.callPackage ./cartographer-ros {};
 
@@ -520,6 +524,8 @@ self: super: {
 
  ros2node = self.callPackage ./ros2node {};
 
+ ros2nodl = self.callPackage ./ros2nodl {};
+
  ros2param = self.callPackage ./ros2param {};
 
  ros2pkg = self.callPackage ./ros2pkg {};
@@ -773,6 +779,8 @@ self: super: {
  tracetools = self.callPackage ./tracetools {};
 
  tracetools-launch = self.callPackage ./tracetools-launch {};
+
+ tracetools-test = self.callPackage ./tracetools-test {};
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 

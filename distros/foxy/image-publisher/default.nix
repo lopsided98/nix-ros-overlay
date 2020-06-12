@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, camera-info-manager, class-loader, cv-bridge, image-geometry, image-transport, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-foxy-image-publisher";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_publisher/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "9d0eb9b5298354d1abd03c9f3fec86c294dbc520c4fca45e7dd5e18b40ebd1c2";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_publisher/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "abc6501557928178c747f15a1b17174083b3be52eb7d6fb9203c90f2b0bc1bfa";
   };
 
   buildType = "ament_cmake";

@@ -116,6 +116,8 @@ self: super: {
 
  csm = self.callPackage ./csm {};
 
+ cv-bridge = self.callPackage ./cv-bridge {};
+
  cv-camera = self.callPackage ./cv-camera {};
 
  dataspeed-ulc = self.callPackage ./dataspeed-ulc {};
@@ -525,6 +527,8 @@ self: super: {
  octomap-ros = self.callPackage ./octomap-ros {};
 
  octomap-server = self.callPackage ./octomap-server {};
+
+ octovis = self.callPackage ./octovis {};
 
  ompl = self.callPackage ./ompl {};
 

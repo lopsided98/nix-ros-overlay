@@ -4,13 +4,13 @@
 
 { lib, buildRosPackage, fetchurl, boost, cairo, ceres-solver, cmake, eigen, gflags, glog, gmock, gtest, lua5, protobuf, python3Packages }:
 buildRosPackage {
-  pname = "ros-dashing-cartographer";
+  pname = "ros-foxy-cartographer";
   version = "1.0.9001-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer-release/archive/release/dashing/cartographer/1.0.9001-1.tar.gz";
+    url = "https://github.com/ros2-gbp/cartographer-release/archive/release/foxy/cartographer/1.0.9001-1.tar.gz";
     name = "1.0.9001-1.tar.gz";
-    sha256 = "8e5faaee7ae58f27e472a4156570c537fc8170ae3c9c47882e164817c4c7d232";
+    sha256 = "4bc1c5c13c3f150d839764d3ed7a1db6563f82316e8c32ebad686a512e7209c6";
   };
 
   buildType = "cmake";
