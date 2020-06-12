@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, phidgets-api, roscpp, roslaunch, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-phidgets-magnetometer";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_magnetometer/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "83af2e0fb01bdc88b0107f169aaa9e74c66eb1f09dc6bbcd1d2f5fe3eeea1784";
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_magnetometer/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "959e23d3cfa5768dab4dfb1a5ba4440585354dbc4dda2a823a4691f4ec8dbb9c";
   };
 
   buildType = "catkin";

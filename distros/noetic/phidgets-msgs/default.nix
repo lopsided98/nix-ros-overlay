@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-phidgets-msgs";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "ca943bb50346e7b31dec9dece76eae2abd584bd2f5d724b91b11225261899bbc";
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_msgs/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "0c1ee6ed6227df2236e1fd0bfa0fe3df314e87a7be3fcdc8ac5b529c9876c4aa";
   };
 
   buildType = "catkin";

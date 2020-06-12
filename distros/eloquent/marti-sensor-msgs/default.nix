@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-eloquent-marti-sensor-msgs";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/eloquent/marti_sensor_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "fed9127a9a8758bd8943d801346d46fee0825f78b8f88bc98039c74674cd8324";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/eloquent/marti_sensor_msgs/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "40755705f8f1f0ded4d5523dc15fb6ad7e224259861835ae9903a39f0654b233";
   };
 
   buildType = "ament_cmake";
