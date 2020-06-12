@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, dynamic-reconfigure, filters, laser-geometry, message-filters, pluginlib, roscpp, rostest, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-laser-filters";
-  version = "1.8.9-r1";
+  version = "1.8.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/laser_filters-release/archive/release/noetic/laser_filters/1.8.9-1.tar.gz";
-    name = "1.8.9-1.tar.gz";
-    sha256 = "811dc73c7509a59a545bc8e2d417634a10ff1e3e9cbc7501894074265ed5f5d0";
+    url = "https://github.com/ros-gbp/laser_filters-release/archive/release/noetic/laser_filters/1.8.11-1.tar.gz";
+    name = "1.8.11-1.tar.gz";
+    sha256 = "d23908e302de876e438f93ae7cd6e770080a2d49a2194f48698865285f213353";
   };
 
   buildType = "catkin";

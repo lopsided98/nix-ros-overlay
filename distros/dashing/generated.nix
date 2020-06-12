@@ -676,6 +676,10 @@ self: super: {
 
  radar-msgs = self.callPackage ./radar-msgs {};
 
+ raspimouse = self.callPackage ./raspimouse {};
+
+ raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
+
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
@@ -905,6 +909,8 @@ self: super: {
  rqt-py-console = self.callPackage ./rqt-py-console {};
 
  rqt-reconfigure = self.callPackage ./rqt-reconfigure {};
+
+ rqt-robot-monitor = self.callPackage ./rqt-robot-monitor {};
 
  rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
 

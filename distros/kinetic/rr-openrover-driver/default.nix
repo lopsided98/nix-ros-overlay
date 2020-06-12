@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, joy, message-generation, message-runtime, nav-msgs, roscpp, rospy, rr-openrover-driver-msgs, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, twist-mux }:
 buildRosPackage {
   pname = "ros-kinetic-rr-openrover-driver";
-  version = "0.8.0-r1";
+  version = "1.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/kinetic/rr_openrover_driver/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "d719aad57bf8aba8211724164ded8c049546763b6a30e41fefdf238017eb7d41";
+    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/kinetic/rr_openrover_driver/1.0.0-3.tar.gz";
+    name = "1.0.0-3.tar.gz";
+    sha256 = "fde6c2041b88a10025bfaaec0622a0d3f9f88dc6802b1159ae3c1d377fc6e2a7";
   };
 
   buildType = "catkin";

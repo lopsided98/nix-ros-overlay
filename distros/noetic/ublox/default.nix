@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ublox-gps, ublox-msgs, ublox-serialization }:
 buildRosPackage {
   pname = "ros-noetic-ublox";
-  version = "1.4.0-r1";
+  version = "1.4.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/KumarRobotics/ublox-release/archive/release/noetic/ublox/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "89816ed65b672b6513617166e6c264a54de40ad662e028177af280fa379aec6a";
+    url = "https://github.com/KumarRobotics/ublox-release/archive/release/noetic/ublox/1.4.1-2.tar.gz";
+    name = "1.4.1-2.tar.gz";
+    sha256 = "5a4fed44385f67d457cc2bc6d2cc352cc59efc83e646fe1238ffb2dfe6088953";
   };
 
   buildType = "catkin";

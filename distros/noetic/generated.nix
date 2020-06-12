@@ -26,6 +26,8 @@ self: super: {
 
  audio-play = self.callPackage ./audio-play {};
 
+ avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
+
  base-local-planner = self.callPackage ./base-local-planner {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
@@ -116,6 +118,12 @@ self: super: {
 
  cv-camera = self.callPackage ./cv-camera {};
 
+ dataspeed-ulc = self.callPackage ./dataspeed-ulc {};
+
+ dataspeed-ulc-can = self.callPackage ./dataspeed-ulc-can {};
+
+ dataspeed-ulc-msgs = self.callPackage ./dataspeed-ulc-msgs {};
+
  ddynamic-reconfigure = self.callPackage ./ddynamic-reconfigure {};
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
@@ -162,7 +170,23 @@ self: super: {
 
  ecl-build = self.callPackage ./ecl-build {};
 
+ ecl-config = self.callPackage ./ecl-config {};
+
+ ecl-console = self.callPackage ./ecl-console {};
+
+ ecl-converters-lite = self.callPackage ./ecl-converters-lite {};
+
+ ecl-errors = self.callPackage ./ecl-errors {};
+
+ ecl-io = self.callPackage ./ecl-io {};
+
  ecl-license = self.callPackage ./ecl-license {};
+
+ ecl-lite = self.callPackage ./ecl-lite {};
+
+ ecl-sigslots-lite = self.callPackage ./ecl-sigslots-lite {};
+
+ ecl-time-lite = self.callPackage ./ecl-time-lite {};
 
  ecl-tools = self.callPackage ./ecl-tools {};
 
@@ -250,6 +274,8 @@ self: super: {
 
  gpsd-client = self.callPackage ./gpsd-client {};
 
+ graph-msgs = self.callPackage ./graph-msgs {};
+
  gripper-action-controller = self.callPackage ./gripper-action-controller {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
@@ -282,9 +308,15 @@ self: super: {
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
 
+ imu-pipeline = self.callPackage ./imu-pipeline {};
+
+ imu-processors = self.callPackage ./imu-processors {};
+
  imu-sensor-controller = self.callPackage ./imu-sensor-controller {};
 
  imu-tools = self.callPackage ./imu-tools {};
+
+ imu-transformer = self.callPackage ./imu-transformer {};
 
  interactive-marker-tutorials = self.callPackage ./interactive-marker-tutorials {};
 
@@ -304,6 +336,8 @@ self: super: {
 
  joint-trajectory-controller = self.callPackage ./joint-trajectory-controller {};
 
+ joy-teleop = self.callPackage ./joy-teleop {};
+
  joystick-interrupt = self.callPackage ./joystick-interrupt {};
 
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
@@ -313,6 +347,8 @@ self: super: {
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ key-teleop = self.callPackage ./key-teleop {};
 
  laser-assembler = self.callPackage ./laser-assembler {};
 
@@ -350,6 +386,8 @@ self: super: {
 
  locomove-base = self.callPackage ./locomove-base {};
 
+ lusb = self.callPackage ./lusb {};
+
  map-laser = self.callPackage ./map-laser {};
 
  map-msgs = self.callPackage ./map-msgs {};
@@ -363,6 +401,8 @@ self: super: {
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
+
+ marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
 
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 
@@ -412,6 +452,8 @@ self: super: {
 
  mk = self.callPackage ./mk {};
 
+ mouse-teleop = self.callPackage ./mouse-teleop {};
+
  move-base = self.callPackage ./move-base {};
 
  move-base-flex = self.callPackage ./move-base-flex {};
@@ -419,6 +461,12 @@ self: super: {
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
+
+ mpc-local-planner = self.callPackage ./mpc-local-planner {};
+
+ mpc-local-planner-examples = self.callPackage ./mpc-local-planner-examples {};
+
+ mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
@@ -478,9 +526,15 @@ self: super: {
 
  octomap-server = self.callPackage ./octomap-server {};
 
+ ompl = self.callPackage ./ompl {};
+
  open-karto = self.callPackage ./open-karto {};
 
  opengm = self.callPackage ./opengm {};
+
+ openni2-camera = self.callPackage ./openni2-camera {};
+
+ openni2-launch = self.callPackage ./openni2-launch {};
 
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
 
@@ -535,6 +589,8 @@ self: super: {
  pluginlib = self.callPackage ./pluginlib {};
 
  pluginlib-tutorials = self.callPackage ./pluginlib-tutorials {};
+
+ pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
  polled-camera = self.callPackage ./polled-camera {};
 
@@ -810,11 +866,19 @@ self: super: {
 
  shape-msgs = self.callPackage ./shape-msgs {};
 
+ sick-scan = self.callPackage ./sick-scan {};
+
  sick-tim = self.callPackage ./sick-tim {};
 
  simulators = self.callPackage ./simulators {};
 
  slam-karto = self.callPackage ./slam-karto {};
+
+ slam-toolbox = self.callPackage ./slam-toolbox {};
+
+ slam-toolbox-msgs = self.callPackage ./slam-toolbox-msgs {};
+
+ slam-toolbox-rviz = self.callPackage ./slam-toolbox-rviz {};
 
  slime-ros = self.callPackage ./slime-ros {};
 
@@ -831,6 +895,8 @@ self: super: {
  socketcan-bridge = self.callPackage ./socketcan-bridge {};
 
  socketcan-interface = self.callPackage ./socketcan-interface {};
+
+ sophus = self.callPackage ./sophus {};
 
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 
@@ -851,6 +917,10 @@ self: super: {
  swri-console = self.callPackage ./swri-console {};
 
  teb-local-planner = self.callPackage ./teb-local-planner {};
+
+ teleop-tools = self.callPackage ./teleop-tools {};
+
+ teleop-tools-msgs = self.callPackage ./teleop-tools-msgs {};
 
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
 

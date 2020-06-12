@@ -798,6 +798,8 @@ self: super: {
 
  dsr-msgs = self.callPackage ./dsr-msgs {};
 
+ dual-quaternions = self.callPackage ./dual-quaternions {};
+
  dwa-local-planner = self.callPackage ./dwa-local-planner {};
 
  dwb-critics = self.callPackage ./dwb-critics {};
@@ -4069,6 +4071,8 @@ self: super: {
  rr-openrover-driver = self.callPackage ./rr-openrover-driver {};
 
  rr-openrover-driver-msgs = self.callPackage ./rr-openrover-driver-msgs {};
+
+ rr-openrover-simulation = self.callPackage ./rr-openrover-simulation {};
 
  rr-openrover-stack = self.callPackage ./rr-openrover-stack {};
 

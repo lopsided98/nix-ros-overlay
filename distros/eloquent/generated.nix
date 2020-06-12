@@ -470,6 +470,8 @@ self: super: {
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
 
+ marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
+
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 
  marti-perception-msgs = self.callPackage ./marti-perception-msgs {};

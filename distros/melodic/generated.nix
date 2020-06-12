@@ -1324,8 +1324,6 @@ self: super: {
 
  jderobot-camviz = self.callPackage ./jderobot-camviz {};
 
- jderobot-color-tuner = self.callPackage ./jderobot-color-tuner {};
-
  jderobot-drones = self.callPackage ./jderobot-drones {};
 
  joint-limits-interface = self.callPackage ./joint-limits-interface {};
@@ -3017,6 +3015,20 @@ self: super: {
  rqt-virtual-joy = self.callPackage ./rqt-virtual-joy {};
 
  rqt-web = self.callPackage ./rqt-web {};
+
+ rr-control-input-manager = self.callPackage ./rr-control-input-manager {};
+
+ rr-openrover-description = self.callPackage ./rr-openrover-description {};
+
+ rr-openrover-driver = self.callPackage ./rr-openrover-driver {};
+
+ rr-openrover-driver-msgs = self.callPackage ./rr-openrover-driver-msgs {};
+
+ rr-openrover-simulation = self.callPackage ./rr-openrover-simulation {};
+
+ rr-openrover-stack = self.callPackage ./rr-openrover-stack {};
+
+ rr-rover-zero-driver = self.callPackage ./rr-rover-zero-driver {};
 
  rslidar = self.callPackage ./rslidar {};
 
