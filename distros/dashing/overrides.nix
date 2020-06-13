@@ -43,6 +43,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.pythonPackages.opencv3 ];
   });
 
+  libphidget22 = patchVendorUrl rosSuper.libphidget22 {
+    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.4.20190605.tar.gz";
+    sha256 = "1ab4d7ngvx009vajqv3kxw0s77z0hdd9xb8in1mvx86i1l3vndxa";
+  };
+
   nav2-util = rosSuper.nav2-util.overrideAttrs ({
     patches ? [], ...
   }: {
