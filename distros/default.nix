@@ -29,11 +29,6 @@ self: super: {
       python = self.python3;
     } self super;
 
-    crystal = import ./distro-overlay.nix {
-      distro = "crystal";
-      python = self.python3;
-    } self super;
-
     dashing = import ./distro-overlay.nix {
       distro = "dashing";
       python = self.python3;
