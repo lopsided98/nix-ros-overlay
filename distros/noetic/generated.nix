@@ -62,6 +62,8 @@ self: super: {
 
  catch-ros = self.callPackage ./catch-ros {};
 
+ catkin = self.callPackage ./catkin {};
+
  class-loader = self.callPackage ./class-loader {};
 
  clear-costmap-recovery = self.callPackage ./clear-costmap-recovery {};
@@ -528,6 +530,8 @@ self: super: {
 
  openni2-camera = self.callPackage ./openni2-camera {};
 
+ openni2-launch = self.callPackage ./openni2-launch {};
+
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
@@ -629,6 +633,8 @@ self: super: {
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
  robot = self.callPackage ./robot {};
+
+ robot-localization = self.callPackage ./robot-localization {};
 
  robot-navigation = self.callPackage ./robot-navigation {};
 
@@ -767,6 +773,8 @@ self: super: {
  rqt-controller-manager = self.callPackage ./rqt-controller-manager {};
 
  rqt-dep = self.callPackage ./rqt-dep {};
+
+ rqt-ez-publisher = self.callPackage ./rqt-ez-publisher {};
 
  rqt-graph = self.callPackage ./rqt-graph {};
 

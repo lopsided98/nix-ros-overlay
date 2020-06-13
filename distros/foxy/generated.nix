@@ -246,6 +246,8 @@ self: super: {
 
  foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
 
+ geodesy = self.callPackage ./geodesy {};
+
  geographic-info = self.callPackage ./geographic-info {};
 
  geographic-msgs = self.callPackage ./geographic-msgs {};
