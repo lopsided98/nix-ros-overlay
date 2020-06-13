@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, pythonPackages, ros-environment, rosmake, rospack }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, python3Packages, ros-environment, rosmake, rospack }:
 buildRosPackage {
   pname = "ros-noetic-roslib";
   version = "1.15.4-r1";
@@ -16,8 +16,8 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ boost ];
   checkInputs = [ rosmake ];
-  propagatedBuildInputs = [ catkin pythonPackages.rospkg ros-environment rospack ];
-  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
+  propagatedBuildInputs = [ catkin python3Packages.rospkg ros-environment rospack ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = ''Base dependencies and support libraries for ROS.

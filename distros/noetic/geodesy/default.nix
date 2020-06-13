@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, angles, catkin, geographic-msgs, geometry-msgs, pythonPackages, rosunit, sensor-msgs, tf, unique-id, uuid-msgs }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, geographic-msgs, geometry-msgs, python3Packages, rosunit, sensor-msgs, tf, unique-id, uuid-msgs }:
 buildRosPackage {
   pname = "ros-noetic-geodesy";
   version = "0.5.5-r1";
@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles pythonPackages.catkin-pkg ];
+  buildInputs = [ angles python3Packages.catkin-pkg ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ geographic-msgs geometry-msgs pythonPackages.pyproj sensor-msgs tf unique-id uuid-msgs ];
-  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
+  propagatedBuildInputs = [ geographic-msgs geometry-msgs python3Packages.pyproj sensor-msgs tf unique-id uuid-msgs ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = ''Python and C++ interfaces for manipulating geodetic coordinates.'';

@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-eigenpy";
   version = "2.4.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ doxygen git ];
-  propagatedBuildInputs = [ boost eigen python pythonPackages.numpy ];
+  propagatedBuildInputs = [ boost eigen python3 python3Packages.numpy ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
