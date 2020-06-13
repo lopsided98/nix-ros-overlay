@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, qt-gui }:
+{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, python3Packages, qt-gui, rospy }:
 buildRosPackage {
   pname = "ros-noetic-rqt-gui";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt-release/archive/release/noetic/rqt_gui/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "093b1dc485e6bddf4a6749ba56e475bb1ab0731d96091344967ffa60f379b662";
+    url = "https://github.com/ros-gbp/rqt-release/archive/release/noetic/rqt_gui/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "a4ca503112f96154465456c8f816b517eee69606417c48325dffd5edfb1c3399";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ catkin qt-gui ];
+  propagatedBuildInputs = [ python-qt-binding python3Packages.rospkg qt-gui rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

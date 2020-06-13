@@ -56,6 +56,8 @@ self: super: {
 
  canopen-motor-node = self.callPackage ./canopen-motor-node {};
 
+ capabilities = self.callPackage ./capabilities {};
+
  carrot-planner = self.callPackage ./carrot-planner {};
 
  cartesian-msgs = self.callPackage ./cartesian-msgs {};
@@ -71,6 +73,8 @@ self: super: {
  cmake-modules = self.callPackage ./cmake-modules {};
 
  cob-extern = self.callPackage ./cob-extern {};
+
+ code-coverage = self.callPackage ./code-coverage {};
 
  combined-robot-hw = self.callPackage ./combined-robot-hw {};
 
@@ -260,6 +264,8 @@ self: super: {
 
  geometry-tutorials = self.callPackage ./geometry-tutorials {};
 
+ gl-dependency = self.callPackage ./gl-dependency {};
+
  global-planner = self.callPackage ./global-planner {};
 
  global-planner-tests = self.callPackage ./global-planner-tests {};
@@ -447,6 +453,8 @@ self: super: {
  message-runtime = self.callPackage ./message-runtime {};
 
  mk = self.callPackage ./mk {};
+
+ mouse-teleop = self.callPackage ./mouse-teleop {};
 
  move-base = self.callPackage ./move-base {};
 
@@ -662,6 +670,8 @@ self: super: {
 
  rosauth = self.callPackage ./rosauth {};
 
+ rosbag = self.callPackage ./rosbag {};
+
  rosbag-migration-rule = self.callPackage ./rosbag-migration-rule {};
 
  rosbag-storage = self.callPackage ./rosbag-storage {};
@@ -712,6 +722,8 @@ self: super: {
 
  roslang = self.callPackage ./roslang {};
 
+ roslaunch = self.callPackage ./roslaunch {};
+
  roslib = self.callPackage ./roslib {};
 
  roslint = self.callPackage ./roslint {};
@@ -736,6 +748,8 @@ self: super: {
 
  rosout = self.callPackage ./rosout {};
 
+ rospack = self.callPackage ./rospack {};
+
  rosparam = self.callPackage ./rosparam {};
 
  rosparam-shortcuts = self.callPackage ./rosparam-shortcuts {};
@@ -755,6 +769,8 @@ self: super: {
  rostopic = self.callPackage ./rostopic {};
 
  rosunit = self.callPackage ./rosunit {};
+
+ roswtf = self.callPackage ./roswtf {};
 
  rotate-recovery = self.callPackage ./rotate-recovery {};
 
@@ -799,6 +815,8 @@ self: super: {
  rqt-nav-view = self.callPackage ./rqt-nav-view {};
 
  rqt-plot = self.callPackage ./rqt-plot {};
+
+ rqt-pose-view = self.callPackage ./rqt-pose-view {};
 
  rqt-publisher = self.callPackage ./rqt-publisher {};
 

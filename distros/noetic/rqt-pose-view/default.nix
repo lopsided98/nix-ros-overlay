@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, gl-dependency, python-qt-binding, pythonPackages, rospy, rostopic, rqt-gui, rqt-gui-py, rqt-py-common, tf }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, gl-dependency, python-qt-binding, python3Packages, rospy, rostopic, rqt-gui, rqt-gui-py, rqt-py-common, tf }:
 buildRosPackage {
   pname = "ros-noetic-rqt-pose-view";
   version = "0.5.10-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ geometry-msgs gl-dependency python-qt-binding pythonPackages.pyopengl pythonPackages.rospkg rospy rostopic rqt-gui rqt-gui-py rqt-py-common tf ];
+  propagatedBuildInputs = [ geometry-msgs gl-dependency python-qt-binding python3Packages.pyopengl python3Packages.rospkg rospy rostopic rqt-gui rqt-gui-py rqt-py-common tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
