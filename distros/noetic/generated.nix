@@ -736,6 +736,8 @@ self: super: {
 
  rosmake = self.callPackage ./rosmake {};
 
+ rosmaster = self.callPackage ./rosmaster {};
+
  rosmon = self.callPackage ./rosmon {};
 
  rosmon-core = self.callPackage ./rosmon-core {};
