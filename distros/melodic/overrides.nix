@@ -30,4 +30,9 @@ rosSelf: rosSuper: with rosSelf.lib; {
       })
     ];
   });
+
+  rosfmt = patchVendorUrl rosSuper.rosfmt {
+    url = "https://github.com/fmtlib/fmt/releases/download/6.0.0/fmt-6.0.0.zip";
+    sha256 = "0h148anbaqgch6n69pxsvs1c9wmykgd052wmzgdia7qpz8w6p8dl";
+  };
 }

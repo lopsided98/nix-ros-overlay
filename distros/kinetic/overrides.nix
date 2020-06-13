@@ -115,6 +115,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     buildInputs = buildInputs ++ [ rosSelf.librealsense ];
   });
 
+  rosfmt = patchVendorUrl rosSuper.rosfmt {
+    url = "https://github.com/fmtlib/fmt/releases/download/5.2.1/fmt-5.2.1.zip";
+    sha256 = "1kdnzwlxnvdydnq4apdrhvx331014gy4w0m84gjwj7snzsw4m2a3";
+  };
+
   rospack = rosSuper.rospack.overrideAttrs ({
     patches ? [], ...
   }: {
