@@ -43,5 +43,10 @@ self: super: {
       distro = "eloquent";
       python = self.python3;
     } self super;
+
+    foxy = import ./distro-overlay.nix {
+      distro = "foxy";
+      python = self.python3;
+    } self super;
   };
 }
