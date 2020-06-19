@@ -800,6 +800,8 @@ self: super: {
 
  dual-quaternions = self.callPackage ./dual-quaternions {};
 
+ dual-quaternions-ros = self.callPackage ./dual-quaternions-ros {};
+
  dwa-local-planner = self.callPackage ./dwa-local-planner {};
 
  dwb-critics = self.callPackage ./dwb-critics {};
@@ -2003,6 +2005,10 @@ self: super: {
  leap-motion = self.callPackage ./leap-motion {};
 
  leg-detector = self.callPackage ./leg-detector {};
+
+ leo-description = self.callPackage ./leo-description {};
+
+ leo-viz = self.callPackage ./leo-viz {};
 
  leuze-bringup = self.callPackage ./leuze-bringup {};
 
@@ -3769,6 +3775,10 @@ self: super: {
  rosbag-migration-rule = self.callPackage ./rosbag-migration-rule {};
 
  rosbag-pandas = self.callPackage ./rosbag-pandas {};
+
+ rosbag-snapshot = self.callPackage ./rosbag-snapshot {};
+
+ rosbag-snapshot-msgs = self.callPackage ./rosbag-snapshot-msgs {};
 
  rosbag-storage = self.callPackage ./rosbag-storage {};
 

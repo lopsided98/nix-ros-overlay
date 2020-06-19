@@ -5,19 +5,19 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, python-qt-binding, pythonPackages, roslint, rospy, rostest, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-reconfigure";
-  version = "0.5.1-r1";
+  version = "0.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/kinetic/rqt_reconfigure/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "4d4ddccaba198e1867fd7283c27654fda2f7c8c783440c2fe16bf056bd6e5b4f";
+    url = "https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/kinetic/rqt_reconfigure/0.5.3-1.tar.gz";
+    name = "0.5.3-1.tar.gz";
+    sha256 = "b07430674732837553702a73032da73f3c4744d03186c73e9401bea3083526f1";
   };
 
   buildType = "catkin";
   buildInputs = [ roslint ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ dynamic-reconfigure python-qt-binding pythonPackages.pyyaml rospy rqt-console rqt-gui rqt-gui-py rqt-py-common ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''This rqt plugin succeeds former dynamic_reconfigure's GUI

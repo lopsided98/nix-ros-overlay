@@ -2,22 +2,22 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, python-qt-binding, python3Packages, roslint, rospy, rostest, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, python-qt-binding, pythonPackages, roslint, rospy, rostest, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-noetic-rqt-reconfigure";
-  version = "0.5.2-r1";
+  version = "0.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/noetic/rqt_reconfigure/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "15b5d740bc62ac0e3838f02598bf1d97c455dc367ce228da9e4401605576dc47";
+    url = "https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/noetic/rqt_reconfigure/0.5.3-1.tar.gz";
+    name = "0.5.3-1.tar.gz";
+    sha256 = "53f478c46f7b0948ec5e1a5d55b441584016e31e51e76d8c2dc69132aa143c60";
   };
 
   buildType = "catkin";
   buildInputs = [ roslint ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ dynamic-reconfigure python-qt-binding python3Packages.pyyaml rospy rqt-console rqt-gui rqt-gui-py rqt-py-common ];
-  nativeBuildInputs = [ catkin python3Packages.setuptools ];
+  propagatedBuildInputs = [ dynamic-reconfigure python-qt-binding pythonPackages.pyyaml rospy rqt-console rqt-gui rqt-gui-py rqt-py-common ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''This rqt plugin succeeds former dynamic_reconfigure's GUI

@@ -18,6 +18,8 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
+ apriltag = self.callPackage ./apriltag {};
+
  audio-capture = self.callPackage ./audio-capture {};
 
  audio-common = self.callPackage ./audio-common {};
@@ -404,6 +406,8 @@ self: super: {
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
 
+ marti-data-structures = self.callPackage ./marti-data-structures {};
+
  marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
 
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
@@ -505,6 +509,8 @@ self: super: {
  neonavigation-msgs = self.callPackage ./neonavigation-msgs {};
 
  neonavigation-rviz-plugins = self.callPackage ./neonavigation-rviz-plugins {};
+
+ nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nodelet = self.callPackage ./nodelet {};
 
@@ -656,6 +662,8 @@ self: super: {
 
  ros-control = self.callPackage ./ros-control {};
 
+ ros-control-boilerplate = self.callPackage ./ros-control-boilerplate {};
+
  ros-controllers = self.callPackage ./ros-controllers {};
 
  ros-core = self.callPackage ./ros-core {};
@@ -709,8 +717,6 @@ self: super: {
  roscreate = self.callPackage ./roscreate {};
 
  rosdiagnostic = self.callPackage ./rosdiagnostic {};
-
- rosdoc-lite = self.callPackage ./rosdoc-lite {};
 
  rosemacs = self.callPackage ./rosemacs {};
 
@@ -796,8 +802,6 @@ self: super: {
 
  rqt-graph = self.callPackage ./rqt-graph {};
 
- rqt-gui = self.callPackage ./rqt-gui {};
-
  rqt-gui-cpp = self.callPackage ./rqt-gui-cpp {};
 
  rqt-gui-py = self.callPackage ./rqt-gui-py {};
@@ -829,8 +833,6 @@ self: super: {
  rqt-reconfigure = self.callPackage ./rqt-reconfigure {};
 
  rqt-robot-dashboard = self.callPackage ./rqt-robot-dashboard {};
-
- rqt-robot-monitor = self.callPackage ./rqt-robot-monitor {};
 
  rqt-robot-plugins = self.callPackage ./rqt-robot-plugins {};
 
@@ -866,15 +868,21 @@ self: super: {
 
  rviz-python-tutorial = self.callPackage ./rviz-python-tutorial {};
 
+ rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
+
  safety-limiter = self.callPackage ./safety-limiter {};
 
  safety-limiter-msgs = self.callPackage ./safety-limiter-msgs {};
+
+ sbpl = self.callPackage ./sbpl {};
 
  self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  shape-msgs = self.callPackage ./shape-msgs {};
+
+ sick-safetyscanners = self.callPackage ./sick-safetyscanners {};
 
  sick-scan = self.callPackage ./sick-scan {};
 
@@ -926,11 +934,45 @@ self: super: {
 
  swri-console = self.callPackage ./swri-console {};
 
+ swri-console-util = self.callPackage ./swri-console-util {};
+
+ swri-dbw-interface = self.callPackage ./swri-dbw-interface {};
+
+ swri-geometry-util = self.callPackage ./swri-geometry-util {};
+
+ swri-image-util = self.callPackage ./swri-image-util {};
+
+ swri-math-util = self.callPackage ./swri-math-util {};
+
+ swri-nodelet = self.callPackage ./swri-nodelet {};
+
+ swri-opencv-util = self.callPackage ./swri-opencv-util {};
+
+ swri-prefix-tools = self.callPackage ./swri-prefix-tools {};
+
+ swri-roscpp = self.callPackage ./swri-roscpp {};
+
+ swri-rospy = self.callPackage ./swri-rospy {};
+
+ swri-route-util = self.callPackage ./swri-route-util {};
+
+ swri-serial-util = self.callPackage ./swri-serial-util {};
+
+ swri-string-util = self.callPackage ./swri-string-util {};
+
+ swri-system-util = self.callPackage ./swri-system-util {};
+
+ swri-transform-util = self.callPackage ./swri-transform-util {};
+
+ swri-yaml-util = self.callPackage ./swri-yaml-util {};
+
  teb-local-planner = self.callPackage ./teb-local-planner {};
 
  teleop-tools = self.callPackage ./teleop-tools {};
 
  teleop-tools-msgs = self.callPackage ./teleop-tools-msgs {};
+
+ teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
 
@@ -1006,6 +1048,8 @@ self: super: {
 
  urg-c = self.callPackage ./urg-c {};
 
+ urg-node = self.callPackage ./urg-node {};
+
  urg-stamped = self.callPackage ./urg-stamped {};
 
  usb-cam = self.callPackage ./usb-cam {};
@@ -1027,6 +1071,8 @@ self: super: {
  voxel-grid = self.callPackage ./voxel-grid {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ webkit-dependency = self.callPackage ./webkit-dependency {};
 
  xacro = self.callPackage ./xacro {};
 

@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, python3Packages, rosbag, rosunit, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, pythonPackages, rosbag, rosunit, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-sensor-msgs";
   version = "1.13.0-r1";
@@ -17,7 +17,7 @@ buildRosPackage {
   buildInputs = [ message-generation ];
   checkInputs = [ rosbag rosunit ];
   propagatedBuildInputs = [ geometry-msgs message-runtime std-msgs ];
-  nativeBuildInputs = [ catkin python3Packages.setuptools ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''This package defines messages for commonly used sensors, including

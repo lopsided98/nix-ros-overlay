@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, python3Packages }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-noetic-smclib";
   version = "1.8.5-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  nativeBuildInputs = [ catkin python3Packages.setuptools ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''The State Machine Compiler (SMC) from http://smc.sourceforge.net/

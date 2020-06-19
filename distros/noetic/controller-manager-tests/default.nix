@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, pluginlib, python3Packages, rosbash, roscpp, rosnode, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, pluginlib, pythonPackages, rosbash, roscpp, rosnode, rospy, rostest }:
 buildRosPackage {
   pname = "ros-noetic-controller-manager-tests";
   version = "0.19.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   checkInputs = [ rosbash rosnode rostest ];
   propagatedBuildInputs = [ controller-interface controller-manager controller-manager-msgs hardware-interface pluginlib roscpp rospy ];
-  nativeBuildInputs = [ catkin python3Packages.setuptools ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''Tests for the controller manager.'';

@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, angles, boost, catkin, eigen, python3Packages, roscpp, rosunit, sensor-msgs, tf, tf2 }:
+{ lib, buildRosPackage, fetchurl, angles, boost, catkin, eigen, pythonPackages, roscpp, rosunit, sensor-msgs, tf, tf2 }:
 buildRosPackage {
   pname = "ros-noetic-laser-geometry";
   version = "1.6.5-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ angles boost eigen python3Packages.numpy roscpp sensor-msgs tf tf2 ];
+  propagatedBuildInputs = [ angles boost eigen pythonPackages.numpy roscpp sensor-msgs tf tf2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

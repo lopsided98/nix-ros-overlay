@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-test, ament-lint-auto, ament-lint-common, ros2cli, sros2 }:
 buildRosPackage {
   pname = "ros-eloquent-sros2-cmake";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sros2-release/archive/release/eloquent/sros2_cmake/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "200e5f0b960bd1ee7457e92dc6ad50d24553d28d0aed39c2961ebb38d0967ef8";
+    url = "https://github.com/ros2-gbp/sros2-release/archive/release/eloquent/sros2_cmake/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "5bfc16a8300023d607b648d29c7b8eb2c81cab27bb6edcdff7f761ecd3dd6510";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Cmake macros to configure security for nodes'';
+    description = ''CMake macros to configure security for nodes'';
     license = with lib.licenses; [ asl20 ];
   };
 }

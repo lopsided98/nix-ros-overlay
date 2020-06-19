@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, genmsg, genpy, python3Packages, rosbag-storage, rosconsole, roscpp, roscpp-serialization, roslib, rospy, std-srvs, topic-tools, xmlrpcpp }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, genmsg, genpy, pythonPackages, rosbag-storage, rosconsole, roscpp, roscpp-serialization, roslib, rospy, std-srvs, topic-tools, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-rosbag";
   version = "1.15.7-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cpp-common python3Packages.pillow roscpp-serialization ];
-  propagatedBuildInputs = [ boost genmsg genpy python3Packages.pycryptodomex python3Packages.python-gnupg python3Packages.rospkg rosbag-storage rosconsole roscpp roslib rospy std-srvs topic-tools xmlrpcpp ];
+  buildInputs = [ cpp-common pythonPackages.pillow roscpp-serialization ];
+  propagatedBuildInputs = [ boost genmsg genpy pythonPackages.pycryptodomex pythonPackages.python-gnupg pythonPackages.rospkg rosbag-storage rosconsole roscpp roslib rospy std-srvs topic-tools xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

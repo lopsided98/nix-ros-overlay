@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, controller-manager-msgs, python3Packages, rospy, rqt-gui, rqt-gui-py }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-manager-msgs, pythonPackages, rospy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-noetic-rqt-controller-manager";
   version = "0.19.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   propagatedBuildInputs = [ controller-manager-msgs rospy rqt-gui rqt-gui-py ];
-  nativeBuildInputs = [ catkin python3Packages.setuptools ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''Graphical frontend for interacting with the controller manager.'';

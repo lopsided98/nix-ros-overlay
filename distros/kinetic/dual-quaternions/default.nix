@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pyquaternion }:
 buildRosPackage {
   pname = "ros-kinetic-dual-quaternions";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/Achllle/dual_quaternions-release/archive/release/kinetic/dual_quaternions/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "75c484d00dffea7bd617ff271800da2955d80e364a49937d9973c4386e87ecfa";
+    url = "https://github.com/Achllle/dual_quaternions-release/archive/release/kinetic/dual_quaternions/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "392aaa2d3efbedc9d378f0ef673db93fb0a8f4fe83448ed933b9623574e5ccf6";
   };
 
   buildType = "catkin";

@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, python3Packages, qt5, rosbuild }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, qt5, rosbuild }:
 buildRosPackage {
   pname = "ros-noetic-python-qt-binding";
   version = "0.4.3-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ qt5.qtbase rosbuild ];
-  propagatedBuildInputs = [ catkin python3Packages.pyqt5 ];
+  propagatedBuildInputs = [ catkin pythonPackages.pyqt5 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

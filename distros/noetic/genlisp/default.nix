@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, genmsg, python3Packages }:
+{ lib, buildRosPackage, fetchurl, catkin, genmsg, pythonPackages }:
 buildRosPackage {
   pname = "ros-noetic-genlisp";
   version = "0.4.18-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   propagatedBuildInputs = [ genmsg ];
-  nativeBuildInputs = [ catkin python3Packages.setuptools ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''Common-Lisp ROS message and service generators.'';
