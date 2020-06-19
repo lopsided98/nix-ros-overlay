@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, lcov, python3Packages }:
+{ lib, buildRosPackage, fetchurl, catkin, lcov, pythonPackages }:
 buildRosPackage {
   pname = "ros-noetic-mrt-cmake-modules";
   version = "1.0.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ lcov python3Packages.pyyaml python3Packages.rospkg python3Packages.setuptools ];
-  nativeBuildInputs = [ catkin python3Packages.pyyaml python3Packages.rospkg python3Packages.setuptools ];
+  propagatedBuildInputs = [ lcov pythonPackages.pyyaml pythonPackages.rospkg pythonPackages.setuptools ];
+  nativeBuildInputs = [ catkin pythonPackages.pyyaml pythonPackages.rospkg pythonPackages.setuptools ];
 
   meta = {
     description = ''CMake Functions and Modules for automating CMake'';

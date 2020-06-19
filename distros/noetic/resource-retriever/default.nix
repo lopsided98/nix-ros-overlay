@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, curl, python3Packages, rosconsole, roslib }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, curl, pythonPackages, rosconsole, roslib }:
 buildRosPackage {
   pname = "ros-noetic-resource-retriever";
   version = "1.12.6-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ boost curl python3Packages.rospkg rosconsole roslib ];
+  propagatedBuildInputs = [ boost curl pythonPackages.rospkg rosconsole roslib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

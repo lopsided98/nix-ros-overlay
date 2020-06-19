@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-msgs, gazebo-plugins, gazebo-ros, gazebo-ros-control, gazebo-ros-pkgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rr-openrover-simulation";
-  version = "1.0.0-r3";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/kinetic/rr_openrover_simulation/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "19d32ca6996f2d77edee8c07f56fb492e86011e876d36faf54bb48a7fac0bd04";
+    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/kinetic/rr_openrover_simulation/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "0baaa3a6fa47db7c904983de95a0f4825feb4bf7f2b19fc6cdf67d19b3a3df06";
   };
 
   buildType = "catkin";
@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rr_openrover_simulation package'';
-    license = with lib.licenses; [ "TODO" ];
+    license = with lib.licenses; [ bsdOriginal ];
   };
 }

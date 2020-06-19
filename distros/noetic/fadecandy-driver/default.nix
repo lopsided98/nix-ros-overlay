@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, fadecandy-msgs, python3Packages, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, fadecandy-msgs, pythonPackages, rospy }:
 buildRosPackage {
   pname = "ros-noetic-fadecandy-driver";
   version = "0.1.1-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ diagnostic-updater fadecandy-msgs python3Packages.pyusb rospy ];
+  propagatedBuildInputs = [ diagnostic-updater fadecandy-msgs pythonPackages.pyusb rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

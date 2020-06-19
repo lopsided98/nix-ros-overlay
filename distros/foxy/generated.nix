@@ -126,6 +126,8 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
+ apriltag = self.callPackage ./apriltag {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
@@ -650,6 +652,8 @@ self: super: {
 
  rqt-reconfigure = self.callPackage ./rqt-reconfigure {};
 
+ rqt-robot-monitor = self.callPackage ./rqt-robot-monitor {};
+
  rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
 
  rqt-service-caller = self.callPackage ./rqt-service-caller {};
@@ -811,6 +815,26 @@ self: super: {
  vision-opencv = self.callPackage ./vision-opencv {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
+
+ webots-ros2 = self.callPackage ./webots-ros2 {};
+
+ webots-ros2-abb = self.callPackage ./webots-ros2-abb {};
+
+ webots-ros2-demos = self.callPackage ./webots-ros2-demos {};
+
+ webots-ros2-desktop = self.callPackage ./webots-ros2-desktop {};
+
+ webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
+
+ webots-ros2-examples = self.callPackage ./webots-ros2-examples {};
+
+ webots-ros2-msgs = self.callPackage ./webots-ros2-msgs {};
+
+ webots-ros2-tiago = self.callPackage ./webots-ros2-tiago {};
+
+ webots-ros2-universal-robot = self.callPackage ./webots-ros2-universal-robot {};
+
+ webots-ros2-ur-e-description = self.callPackage ./webots-ros2-ur-e-description {};
 
  xacro = self.callPackage ./xacro {};
 

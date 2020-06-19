@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, eigen, python3, python3Packages }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-noetic-pybind11-catkin";
   version = "2.5.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ eigen python3 python3Packages.numpy ];
+  propagatedBuildInputs = [ eigen python pythonPackages.numpy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

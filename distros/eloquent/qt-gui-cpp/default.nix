@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-eloquent-qt-gui-cpp";
-  version = "1.0.7-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/eloquent/qt_gui_cpp/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "d893e98420d1ab751478aa4a260472ae456e157a329c21d891124f8b2c57e928";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/eloquent/qt_gui_cpp/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "7023ae86ebcabf61279871ad1adfd7fd2a7b39ef222c09b676f1807dcd446194";
   };
 
   buildType = "ament_cmake";

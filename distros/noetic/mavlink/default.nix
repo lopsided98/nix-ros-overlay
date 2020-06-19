@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, python3, python3Packages }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-noetic-mavlink";
   version = "2020.6.6-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ python3 python3Packages.future python3Packages.lxml ];
+  buildInputs = [ python pythonPackages.future pythonPackages.lxml ];
   propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 

@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, python3Packages }:
+{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages }:
 buildRosPackage {
   pname = "ros-noetic-qt-gui-py-common";
   version = "0.4.1-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ python-qt-binding python3Packages.rospkg ];
-  nativeBuildInputs = [ catkin python3Packages.setuptools ];
+  propagatedBuildInputs = [ python-qt-binding pythonPackages.rospkg ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''qt_gui_py_common provides common functionality for GUI plugins written in Python.'';

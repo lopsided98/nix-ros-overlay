@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, python3Packages, qt5, tango-icon-theme }:
+{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages, qt5, tango-icon-theme }:
 buildRosPackage {
   pname = "ros-noetic-qt-gui";
   version = "0.4.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python3Packages.pyqt5 qt5.qtbase ];
-  propagatedBuildInputs = [ python-qt-binding python3Packages.rospkg tango-icon-theme ];
-  nativeBuildInputs = [ catkin python3Packages.setuptools ];
+  buildInputs = [ pythonPackages.pyqt5 qt5.qtbase ];
+  propagatedBuildInputs = [ python-qt-binding pythonPackages.rospkg tango-icon-theme ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''qt_gui provides the infrastructure for an integrated graphical user interface based on Qt.

@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, python3Packages }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-noetic-rosgraph";
   version = "1.15.7-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ python3Packages.mock ];
-  propagatedBuildInputs = [ python3Packages.netifaces python3Packages.pyyaml python3Packages.rospkg ];
+  checkInputs = [ pythonPackages.mock ];
+  propagatedBuildInputs = [ pythonPackages.netifaces pythonPackages.pyyaml pythonPackages.rospkg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

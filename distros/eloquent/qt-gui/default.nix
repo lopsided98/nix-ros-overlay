@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages, qt5, tango-icon-theme }:
 buildRosPackage {
   pname = "ros-eloquent-qt-gui";
-  version = "1.0.7-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/eloquent/qt_gui/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "91c20b73850e0ac407f3e73448560f5161cd3097bebe3b7c49c8203a18627f24";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/eloquent/qt_gui/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "62cb2eb745c6b5f260728c62fb15babd113120c2cf7aec9c5649777f43e0c64a";
   };
 
   buildType = "ament_cmake";

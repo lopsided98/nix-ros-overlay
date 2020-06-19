@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rr-control-input-manager";
-  version = "1.0.0-r3";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/kinetic/rr_control_input_manager/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "d074f1819b190341a0566c9d9b25cdaf5ea3ab77d9fda674c91a431c877c7de7";
+    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/kinetic/rr_control_input_manager/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "986e24afe587fc86dc3562d42b98f14c453df9c85369fff9e05fa01160fe8fe5";
   };
 
   buildType = "catkin";

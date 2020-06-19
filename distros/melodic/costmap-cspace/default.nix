@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-cspace-msgs, geometry-msgs, laser-geometry, nav-msgs, neonavigation-common, roscpp, roslint, rostest, sensor-msgs, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-costmap-cspace";
-  version = "0.8.7-r1";
+  version = "0.8.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/costmap_cspace/0.8.7-1.tar.gz";
-    name = "0.8.7-1.tar.gz";
-    sha256 = "c1b24185483c132c5e9cf11fe81e27ecca5bb51dd93c24b64728dc1ffc6a2472";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/costmap_cspace/0.8.8-1.tar.gz";
+    name = "0.8.8-1.tar.gz";
+    sha256 = "de5c85ab68b8bfdc4b97e6ed0353ed8c3ea4b076cd61d445d62f505f1dc5e78b";
   };
 
   buildType = "catkin";

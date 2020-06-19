@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, message-generation, message-runtime, roscpp, rqt-reconfigure, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, message-generation, message-runtime, roscpp, rqt-reconfigure, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-sick-safetyscanners";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners-release/archive/release/melodic/sick_safetyscanners/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "8da30184c80f0d43c3ad4657d63f3bda46087d165e8e8f6b00011be4dfe8660e";
+    url = "https://github.com/SICKAG/sick_safetyscanners-release/archive/release/melodic/sick_safetyscanners/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "6a68c960289587db1874f30044b13bf6b436b49c14f901185c0d55865ba6b48f";
   };
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ dynamic-reconfigure message-runtime roscpp rqt-reconfigure sensor-msgs std-msgs ];
+  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure message-runtime roscpp rqt-reconfigure sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

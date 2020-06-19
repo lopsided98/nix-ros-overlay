@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-dashing-qt-gui-cpp";
-  version = "1.0.7-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/dashing/qt_gui_cpp/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "0ec9a0be0a8a8705cd6bd8d2b0b8c018b204ecd537510479f37a8f497cbd84c1";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/dashing/qt_gui_cpp/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "43c1b4ddb8022b6fac87de0ebd0324b95e61ce4b67dc50fdd9987495eca1a6e6";
   };
 
   buildType = "ament_cmake";

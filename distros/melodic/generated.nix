@@ -532,6 +532,8 @@ self: super: {
 
  dataspeed-ulc-msgs = self.callPackage ./dataspeed-ulc-msgs {};
 
+ datmo = self.callPackage ./datmo {};
+
  dbw-fca = self.callPackage ./dbw-fca {};
 
  dbw-fca-can = self.callPackage ./dbw-fca-can {};
@@ -633,6 +635,8 @@ self: super: {
  drone-wrapper = self.callPackage ./drone-wrapper {};
 
  dual-quaternions = self.callPackage ./dual-quaternions {};
+
+ dual-quaternions-ros = self.callPackage ./dual-quaternions-ros {};
 
  dwa-local-planner = self.callPackage ./dwa-local-planner {};
 
@@ -1506,6 +1510,10 @@ self: super: {
 
  leg-detector = self.callPackage ./leg-detector {};
 
+ leo-description = self.callPackage ./leo-description {};
+
+ leo-viz = self.callPackage ./leo-viz {};
+
  leuze-bringup = self.callPackage ./leuze-bringup {};
 
  leuze-description = self.callPackage ./leuze-description {};
@@ -1977,6 +1985,14 @@ self: super: {
  network-monitor-udp = self.callPackage ./network-monitor-udp {};
 
  network-traffic-control = self.callPackage ./network-traffic-control {};
+
+ nextage-description = self.callPackage ./nextage-description {};
+
+ nextage-gazebo = self.callPackage ./nextage-gazebo {};
+
+ nextage-ik-plugin = self.callPackage ./nextage-ik-plugin {};
+
+ nextage-moveit-config = self.callPackage ./nextage-moveit-config {};
 
  nlopt = self.callPackage ./nlopt {};
 
@@ -2948,8 +2964,6 @@ self: super: {
 
  rqt-ground-robot-teleop = self.callPackage ./rqt-ground-robot-teleop {};
 
- rqt-gui = self.callPackage ./rqt-gui {};
-
  rqt-gui-cpp = self.callPackage ./rqt-gui-cpp {};
 
  rqt-gui-py = self.callPackage ./rqt-gui-py {};
@@ -3049,6 +3063,8 @@ self: super: {
  rtmros-common = self.callPackage ./rtmros-common {};
 
  rtmros-hironx = self.callPackage ./rtmros-hironx {};
+
+ rtmros-nextage = self.callPackage ./rtmros-nextage {};
 
  rviz = self.callPackage ./rviz {};
 

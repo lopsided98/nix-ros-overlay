@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, flexbe-msgs, pythonPackages, rospy, smach-ros }:
 buildRosPackage {
   pname = "ros-melodic-flexbe-input";
-  version = "1.2.4-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_input/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "ecf39da99d20decf8d7af6ec3e940de931ef29cee581316f7b36a341b5479536";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_input/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "39042d3ccf5c5a7bc479a6798d6bc3f7b16af6a2af8d980c6fddc734d576f4a8";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, costmap-cspace, costmap-cspace-msgs, diagnostic-updater, geometry-msgs, map-server, move-base-msgs, nav-msgs, neonavigation-common, planner-cspace-msgs, roscpp, roslint, rostest, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs, trajectory-tracker, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-melodic-planner-cspace";
-  version = "0.8.7-r1";
+  version = "0.8.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/planner_cspace/0.8.7-1.tar.gz";
-    name = "0.8.7-1.tar.gz";
-    sha256 = "a427becff0aef722b77b224b801f07b046504c757144766b78b4b1d2d6bc2ed6";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/planner_cspace/0.8.8-1.tar.gz";
+    name = "0.8.8-1.tar.gz";
+    sha256 = "6b159dcc73d268a38490e42ce63101671198fca706dd9a3af25ec844b678ffd8";
   };
 
   buildType = "catkin";

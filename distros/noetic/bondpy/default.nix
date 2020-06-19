@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bond, catkin, python3Packages, rospy, smclib, utillinux }:
+{ lib, buildRosPackage, fetchurl, bond, catkin, pythonPackages, rospy, smclib, utillinux }:
 buildRosPackage {
   pname = "ros-noetic-bondpy";
   version = "1.8.5-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ bond ];
   propagatedBuildInputs = [ rospy smclib utillinux ];
-  nativeBuildInputs = [ catkin python3Packages.setuptools ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''Python implementation of bond, a mechanism for checking when

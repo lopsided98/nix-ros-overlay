@@ -872,6 +872,8 @@ self: super: {
 
  rqt-reconfigure = self.callPackage ./rqt-reconfigure {};
 
+ rqt-robot-monitor = self.callPackage ./rqt-robot-monitor {};
+
  rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
 
  rqt-service-caller = self.callPackage ./rqt-service-caller {};
