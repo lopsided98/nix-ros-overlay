@@ -65,6 +65,13 @@ let
 
     cob-light = patchBoostSignals rosSuper.cob-light;
 
+    cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
+      cmakeFlags ? [], ...
+    }: {
+      # Tries to download something with maven
+      cmakeFlags = [ "-DBUILD_IDLC=OFF" ];
+    });
+
     dynamic-reconfigure = rosSuper.dynamic-reconfigure.overrideAttrs ({
       postPatch ? "", ...
     }: {
@@ -220,7 +227,7 @@ let
 
     roscpp = patchBoostSignals rosSuper.roscpp;
 
-    rosidl-default-runtime = rosSuper.rosidl-default-runtime.overrideAttrs ({
+    rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
       propagatedBuildInputs ? [], ...
     }: {
       propagatedBuildInputs = [ rosSelf.rmw-fastrtps-cpp ] ++ propagatedBuildInputs;
