@@ -20,6 +20,10 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ assisted-teleop = self.callPackage ./assisted-teleop {};
+
+ astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
+
  audio-capture = self.callPackage ./audio-capture {};
 
  audio-common = self.callPackage ./audio-common {};
@@ -130,7 +134,15 @@ self: super: {
 
  ddynamic-reconfigure = self.callPackage ./ddynamic-reconfigure {};
 
+ delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
+
+ delphi-mrr-msgs = self.callPackage ./delphi-mrr-msgs {};
+
+ delphi-srr-msgs = self.callPackage ./delphi-srr-msgs {};
+
  depth-image-proc = self.callPackage ./depth-image-proc {};
+
+ derived-object-msgs = self.callPackage ./derived-object-msgs {};
 
  desktop = self.callPackage ./desktop {};
 
@@ -272,6 +284,8 @@ self: super: {
 
  global-planner-tests = self.callPackage ./global-planner-tests {};
 
+ goal-passer = self.callPackage ./goal-passer {};
+
  gps-common = self.callPackage ./gps-common {};
 
  gps-umd = self.callPackage ./gps-umd {};
@@ -287,6 +301,8 @@ self: super: {
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
 
  hokuyo3d = self.callPackage ./hokuyo3d {};
+
+ ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
  ifm3d = self.callPackage ./ifm3d {};
 
@@ -351,6 +367,8 @@ self: super: {
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  key-teleop = self.callPackage ./key-teleop {};
 
@@ -458,6 +476,8 @@ self: super: {
 
  mk = self.callPackage ./mk {};
 
+ mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
+
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  move-base = self.callPackage ./move-base {};
@@ -473,8 +493,6 @@ self: super: {
  mpc-local-planner-examples = self.callPackage ./mpc-local-planner-examples {};
 
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
-
- mrpt2 = self.callPackage ./mrpt2 {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -499,6 +517,10 @@ self: super: {
  navfn = self.callPackage ./navfn {};
 
  navigation = self.callPackage ./navigation {};
+
+ navigation-experimental = self.callPackage ./navigation-experimental {};
+
+ neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
  neonavigation = self.callPackage ./neonavigation {};
 
@@ -547,6 +569,20 @@ self: super: {
  openni2-launch = self.callPackage ./openni2-launch {};
 
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
+
+ p2os-doc = self.callPackage ./p2os-doc {};
+
+ p2os-driver = self.callPackage ./p2os-driver {};
+
+ p2os-launch = self.callPackage ./p2os-launch {};
+
+ p2os-msgs = self.callPackage ./p2os-msgs {};
+
+ p2os-teleop = self.callPackage ./p2os-teleop {};
+
+ p2os-urdf = self.callPackage ./p2os-urdf {};
+
+ pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
@@ -603,6 +639,10 @@ self: super: {
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
  polled-camera = self.callPackage ./polled-camera {};
+
+ pose-base-controller = self.callPackage ./pose-base-controller {};
+
+ pose-follower = self.callPackage ./pose-follower {};
 
  posedetection-msgs = self.callPackage ./posedetection-msgs {};
 
@@ -718,6 +758,8 @@ self: super: {
 
  rosdiagnostic = self.callPackage ./rosdiagnostic {};
 
+ rosdoc-lite = self.callPackage ./rosdoc-lite {};
+
  rosemacs = self.callPackage ./rosemacs {};
 
  rosfmt = self.callPackage ./rosfmt {};
@@ -802,6 +844,8 @@ self: super: {
 
  rqt-graph = self.callPackage ./rqt-graph {};
 
+ rqt-gui = self.callPackage ./rqt-gui {};
+
  rqt-gui-cpp = self.callPackage ./rqt-gui-cpp {};
 
  rqt-gui-py = self.callPackage ./rqt-gui-py {};
@@ -833,6 +877,8 @@ self: super: {
  rqt-reconfigure = self.callPackage ./rqt-reconfigure {};
 
  rqt-robot-dashboard = self.callPackage ./rqt-robot-dashboard {};
+
+ rqt-robot-monitor = self.callPackage ./rqt-robot-monitor {};
 
  rqt-robot-plugins = self.callPackage ./rqt-robot-plugins {};
 
@@ -876,6 +922,10 @@ self: super: {
 
  sbpl = self.callPackage ./sbpl {};
 
+ sbpl-lattice-planner = self.callPackage ./sbpl-lattice-planner {};
+
+ sbpl-recovery = self.callPackage ./sbpl-recovery {};
+
  self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
@@ -913,6 +963,8 @@ self: super: {
  socketcan-bridge = self.callPackage ./socketcan-bridge {};
 
  socketcan-interface = self.callPackage ./socketcan-interface {};
+
+ soem = self.callPackage ./soem {};
 
  sophus = self.callPackage ./sophus {};
 
@@ -1022,6 +1074,8 @@ self: super: {
 
  twist-mux-msgs = self.callPackage ./twist-mux-msgs {};
 
+ twist-recovery = self.callPackage ./twist-recovery {};
+
  ublox = self.callPackage ./ublox {};
 
  ublox-gps = self.callPackage ./ublox-gps {};
@@ -1071,8 +1125,6 @@ self: super: {
  voxel-grid = self.callPackage ./voxel-grid {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
-
- webkit-dependency = self.callPackage ./webkit-dependency {};
 
  xacro = self.callPackage ./xacro {};
 

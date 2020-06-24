@@ -2,21 +2,21 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, code-coverage, controller-interface, controller-manager, joint-trajectory-controller, pilz-utils, roscpp, roslint, rostest, std-srvs }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, code-coverage, controller-interface, controller-manager, geometry-msgs, joint-trajectory-controller, moveit-core, moveit-ros-planning, pilz-msgs, pilz-testutils, pilz-utils, roscpp, roslint, rostest, rosunit, std-srvs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pilz-control";
-  version = "0.5.16-r1";
+  version = "0.5.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_control/0.5.16-1.tar.gz";
-    name = "0.5.16-1.tar.gz";
-    sha256 = "d1f3fd4be9ebdb6a5fbc8c74391a942283c3a9013f3d2116f27f170187ab92fe";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_control/0.5.17-1.tar.gz";
+    name = "0.5.17-1.tar.gz";
+    sha256 = "1b5b2f55fcf78f8d6395d58e011dfbd8fd5da3872bf787424c0e7956d131687b";
   };
 
   buildType = "catkin";
   buildInputs = [ cmake-modules roslint ];
-  checkInputs = [ code-coverage rostest ];
-  propagatedBuildInputs = [ controller-interface controller-manager joint-trajectory-controller pilz-utils roscpp std-srvs ];
+  checkInputs = [ code-coverage geometry-msgs pilz-testutils pilz-utils rostest rosunit tf2 tf2-geometry-msgs ];
+  propagatedBuildInputs = [ controller-interface controller-manager joint-trajectory-controller moveit-core moveit-ros-planning pilz-msgs roscpp std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

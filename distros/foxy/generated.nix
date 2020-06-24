@@ -118,6 +118,8 @@ self: super: {
 
  ament-pep257 = self.callPackage ./ament-pep257 {};
 
+ ament-pycodestyle = self.callPackage ./ament-pycodestyle {};
+
  ament-pyflakes = self.callPackage ./ament-pyflakes {};
 
  ament-uncrustify = self.callPackage ./ament-uncrustify {};
@@ -248,6 +250,14 @@ self: super: {
 
  foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
 
+ gazebo-msgs = self.callPackage ./gazebo-msgs {};
+
+ gazebo-plugins = self.callPackage ./gazebo-plugins {};
+
+ gazebo-ros = self.callPackage ./gazebo-ros {};
+
+ gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
+
  geodesy = self.callPackage ./geodesy {};
 
  geographic-info = self.callPackage ./geographic-info {};
@@ -367,6 +377,8 @@ self: super: {
  nav-msgs = self.callPackage ./nav-msgs {};
 
  nodl-python = self.callPackage ./nodl-python {};
+
+ ompl = self.callPackage ./ompl {};
 
  orocos-kdl = self.callPackage ./orocos-kdl {};
 
@@ -789,6 +801,8 @@ self: super: {
  tracetools-test = self.callPackage ./tracetools-test {};
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
+
+ turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlesim = self.callPackage ./turtlesim {};
 

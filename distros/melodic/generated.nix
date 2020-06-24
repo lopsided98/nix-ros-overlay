@@ -1330,6 +1330,10 @@ self: super: {
 
  jderobot-camviz = self.callPackage ./jderobot-camviz {};
 
+ jderobot-carviz = self.callPackage ./jderobot-carviz {};
+
+ jderobot-color-tuner = self.callPackage ./jderobot-color-tuner {};
+
  jderobot-drones = self.callPackage ./jderobot-drones {};
 
  joint-limits-interface = self.callPackage ./joint-limits-interface {};
@@ -1835,8 +1839,6 @@ self: super: {
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
 
  mrpt1 = self.callPackage ./mrpt1 {};
-
- mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-bridge = self.callPackage ./mrpt-bridge {};
 
@@ -2746,6 +2748,10 @@ self: super: {
 
  rosbag-pandas = self.callPackage ./rosbag-pandas {};
 
+ rosbag-snapshot = self.callPackage ./rosbag-snapshot {};
+
+ rosbag-snapshot-msgs = self.callPackage ./rosbag-snapshot-msgs {};
+
  rosbag-storage = self.callPackage ./rosbag-storage {};
 
  rosbaglive = self.callPackage ./rosbaglive {};
@@ -2963,6 +2969,8 @@ self: super: {
  rqt-graph = self.callPackage ./rqt-graph {};
 
  rqt-ground-robot-teleop = self.callPackage ./rqt-ground-robot-teleop {};
+
+ rqt-gui = self.callPackage ./rqt-gui {};
 
  rqt-gui-cpp = self.callPackage ./rqt-gui-cpp {};
 
@@ -3378,6 +3386,8 @@ self: super: {
 
  trac-ik-kinematics-plugin = self.callPackage ./trac-ik-kinematics-plugin {};
 
+ trac-ik-lib = self.callPackage ./trac-ik-lib {};
+
  trac-ik-python = self.callPackage ./trac-ik-python {};
 
  tracetools = self.callPackage ./tracetools {};
@@ -3521,6 +3531,8 @@ self: super: {
  uos-maps = self.callPackage ./uos-maps {};
 
  uos-tools = self.callPackage ./uos-tools {};
+
+ ur-msgs = self.callPackage ./ur-msgs {};
 
  urdf = self.callPackage ./urdf {};
 

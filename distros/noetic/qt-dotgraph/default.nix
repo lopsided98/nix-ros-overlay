@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin, python-qt-binding, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-qt-dotgraph";
   version = "0.4.1-r1";
@@ -14,9 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ pythonPackages.pygraphviz ];
-  propagatedBuildInputs = [ python-qt-binding pythonPackages.pydot ];
-  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
+  checkInputs = [ python3Packages.pygraphviz ];
+  propagatedBuildInputs = [ python-qt-binding python3Packages.pydot ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = ''qt_dotgraph provides helpers to work with dot graphs.'';

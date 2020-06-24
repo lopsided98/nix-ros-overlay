@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-noetic-swri-math-util";
-  version = "2.13.5-r1";
+  version = "2.13.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_math_util/2.13.5-1.tar.gz";
-    name = "2.13.5-1.tar.gz";
-    sha256 = "18cf33c15222382ecff6679202bdb3bef77c6441fbaabec589312ff1e389535d";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_math_util/2.13.6-1.tar.gz";
+    name = "2.13.6-1.tar.gz";
+    sha256 = "82dc11ddb17d4691684276a182f4abd26833c7d5f5684e2aad23b0e0d0e66b88";
   };
 
   buildType = "catkin";
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ roscpp ];
+  propagatedBuildInputs = [ boost roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

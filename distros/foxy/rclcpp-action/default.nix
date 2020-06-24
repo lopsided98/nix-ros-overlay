@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcl-action, rclcpp, rosidl-runtime-c, test-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rclcpp-action";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/foxy/rclcpp_action/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "06043d2ec46921f69d9ff8d12e0a3cf58d452cc4099fbbf727e67fc217b5abb9";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/foxy/rclcpp_action/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "55030395a014f664156110c0cdf04dded4834f4bcfffef6265a9713c307e9dca";
   };
 
   buildType = "ament_cmake";

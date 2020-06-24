@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, example-interfaces, rclcpp, rclcpp-action }:
 buildRosPackage {
   pname = "ros-foxy-examples-rclcpp-minimal-action-client";
-  version = "0.9.2-r1";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/foxy/examples_rclcpp_minimal_action_client/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "89124b53a10d2233b9dd2db820130c2634e0030f239a01901533c9a068a1cc3d";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/foxy/examples_rclcpp_minimal_action_client/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "2f044345662ad649d87de1207c5d269896a68a9073c853ebcec19bd486049a3c";
   };
 
   buildType = "ament_cmake";

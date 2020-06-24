@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, pythonPackages, rospy, rosservice, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, python3Packages, rospy, rosservice, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-controller-manager-msgs";
   version = "0.19.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime rospy rosservice std-msgs ];
-  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = ''Messages and services for the controller manager.'';

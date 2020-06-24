@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-rosmake";
   version = "1.15.4-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ catkin pythonPackages.rospkg ];
-  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
+  propagatedBuildInputs = [ catkin python3Packages.rospkg ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = ''rosmake is a ros dependency aware build tool which can be used to

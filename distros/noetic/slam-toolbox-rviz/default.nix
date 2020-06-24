@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rviz, slam-toolbox-msgs }:
 buildRosPackage {
   pname = "ros-noetic-slam-toolbox-rviz";
-  version = "1.5.1-r1";
+  version = "1.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/noetic/slam_toolbox_rviz/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "f7429c87f5352b5aa19a9a89c231a5b33a9170276573135055639ff1a2b90787";
+    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/noetic/slam_toolbox_rviz/1.5.3-1.tar.gz";
+    name = "1.5.3-1.tar.gz";
+    sha256 = "ee278ab9ab183c27156fa0197d972704e97188e42af78d78d9bb906c1ca5d424";
   };
 
   buildType = "catkin";

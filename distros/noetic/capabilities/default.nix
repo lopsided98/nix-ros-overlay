@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bondpy, catkin, geometry-msgs, message-generation, message-runtime, nodelet, pythonPackages, roslaunch, rospy, rosservice, rostest, std-msgs, std-srvs }:
+{ lib, buildRosPackage, fetchurl, bondpy, catkin, geometry-msgs, message-generation, message-runtime, nodelet, python3Packages, roslaunch, rospy, rosservice, rostest, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-capabilities";
   version = "0.3.1-r1";
@@ -15,8 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ message-generation rostest ];
-  checkInputs = [ geometry-msgs pythonPackages.coverage pythonPackages.mock pythonPackages.pep8 rosservice ];
-  propagatedBuildInputs = [ bondpy message-runtime nodelet pythonPackages.pyyaml roslaunch rospy std-msgs std-srvs ];
+  checkInputs = [ geometry-msgs python3Packages.coverage python3Packages.mock python3Packages.pep8 rosservice ];
+  propagatedBuildInputs = [ bondpy message-runtime nodelet python3Packages.pyyaml roslaunch rospy std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

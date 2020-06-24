@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, example-interfaces, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-foxy-examples-rclpy-minimal-action-client";
-  version = "0.9.2-r1";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/foxy/examples_rclpy_minimal_action_client/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "5fb794aa5448ef241dff84145923db23f2902e6253467684aeb3b21c3a00774d";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/foxy/examples_rclpy_minimal_action_client/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "9d7c7130746a7ff71bd5a4e281c6d199a7f3b79c6832caf249dd024242976c44";
   };
 
   buildType = "ament_python";

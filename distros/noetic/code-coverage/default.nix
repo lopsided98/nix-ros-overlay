@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, lcov, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin, lcov, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-code-coverage";
   version = "0.4.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ lcov pythonPackages.coverage ];
+  propagatedBuildInputs = [ lcov python3Packages.coverage ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -1026,6 +1026,8 @@ self: super: {
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
+ turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
+
  turtlesim = self.callPackage ./turtlesim {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};

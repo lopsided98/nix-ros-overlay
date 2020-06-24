@@ -4678,6 +4678,8 @@ self: super: {
 
  trac-ik-kinematics-plugin = self.callPackage ./trac-ik-kinematics-plugin {};
 
+ trac-ik-lib = self.callPackage ./trac-ik-lib {};
+
  trac-ik-python = self.callPackage ./trac-ik-python {};
 
  tracetools = self.callPackage ./tracetools {};

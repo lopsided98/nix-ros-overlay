@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosbridge-library, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mqtt-bridge";
-  version = "0.1.6";
+  version = "0.1.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/groove-x/mqtt_bridge-release/archive/release/kinetic/mqtt_bridge/0.1.6-0.tar.gz";
-    name = "0.1.6-0.tar.gz";
-    sha256 = "46a3a798c11f7784b46d7d6c3e950603c31b0ad4ed501ed42104e433f2cfd19c";
+    url = "https://github.com/groove-x/mqtt_bridge-release/archive/release/kinetic/mqtt_bridge/0.1.7-2.tar.gz";
+    name = "0.1.7-2.tar.gz";
+    sha256 = "fbadcaa377c7fa104eef246bfe9323be2109b74583b80ae49b28c2f09e127217";
   };
 
   buildType = "catkin";

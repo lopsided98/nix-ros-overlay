@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-examples-rclcpp-minimal-publisher";
-  version = "0.9.2-r1";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/foxy/examples_rclcpp_minimal_publisher/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "13feec90078161e153e96ab58809c541eb66ed03668a5da05d09a714f5da2574";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/foxy/examples_rclcpp_minimal_publisher/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "54ecc2ba1f25082bfb38b5b1bddab1c8925b9e7ea81709cc1345ecedb319f012";
   };
 
   buildType = "ament_cmake";
