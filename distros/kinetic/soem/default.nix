@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-soem";
-  version = "1.4.0-r1";
+  version = "1.4.1000-r1";
 
   src = fetchurl {
-    url = "https://github.com/mgruhler/soem-gbp/archive/release/kinetic/soem/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "67e40cc25126e41f9cba65b6ff7e342531e893ea6f1e4666a97de09fba5baff4";
+    url = "https://github.com/mgruhler/soem-gbp/archive/release/kinetic/soem/1.4.1000-1.tar.gz";
+    name = "1.4.1000-1.tar.gz";
+    sha256 = "95fd563d3325a03a62544bf7b975f5df7225b7e98e463acf1df5977507b51104";
   };
 
   buildType = "catkin";

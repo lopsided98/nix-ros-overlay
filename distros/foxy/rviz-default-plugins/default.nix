@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-index-cpp, geometry-msgs, interactive-markers, laser-geometry, map-msgs, nav-msgs, pluginlib, qt5, rclcpp, resource-retriever, rviz-common, rviz-ogre-vendor, rviz-rendering, rviz-rendering-tests, rviz-visual-testing-framework, tf2, tf2-geometry-msgs, tf2-ros, tinyxml-vendor, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rviz-default-plugins";
-  version = "8.1.1-r1";
+  version = "8.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz_default_plugins/8.1.1-1.tar.gz";
-    name = "8.1.1-1.tar.gz";
-    sha256 = "dbb2da2cd98fde947c6b01f28a80d4de651cb8c1b0a2f6f16ad9e13f3e164310";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz_default_plugins/8.2.0-1.tar.gz";
+    name = "8.2.0-1.tar.gz";
+    sha256 = "53566b6fc8a687fb4f023cc7613fac23676242dee98429e82e351a4f272377c1";
   };
 
   buildType = "ament_cmake";

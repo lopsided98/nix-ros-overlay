@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-soem";
-  version = "1.4.0-r1";
+  version = "1.4.1002-r1";
 
   src = fetchurl {
-    url = "https://github.com/mgruhler/soem-gbp/archive/release/melodic/soem/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "cc03d89d73e3fc1a7914451e6f890065a30b74d6aed49983b743f57db73c4a80";
+    url = "https://github.com/mgruhler/soem-gbp/archive/release/melodic/soem/1.4.1002-1.tar.gz";
+    name = "1.4.1002-1.tar.gz";
+    sha256 = "1f9dcfda3ff941a9d8d5a346fe03c8b880f6aae2f50d23ea5bb57e1233d7b1c2";
   };
 
   buildType = "catkin";
