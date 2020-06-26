@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-soem";
-  version = "1.4.1001-r1";
+  version = "1.4.1002-r1";
 
   src = fetchurl {
-    url = "https://github.com/mgruhler/soem-gbp/archive/release/noetic/soem/1.4.1001-1.tar.gz";
-    name = "1.4.1001-1.tar.gz";
-    sha256 = "18a758a4886a013161dbb0a874c3ecfb151fc6ca0cc39156545d9aa5d3be77f4";
+    url = "https://github.com/mgruhler/soem-gbp/archive/release/noetic/soem/1.4.1002-1.tar.gz";
+    name = "1.4.1002-1.tar.gz";
+    sha256 = "5fab12cec09557010dead08ba8985f5bc6d8c6e8b5d02bac3ff05138a20f82ed";
   };
 
   buildType = "catkin";
