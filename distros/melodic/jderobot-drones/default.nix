@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, drone-wrapper, rqt-drone-teleop, rqt-ground-robot-teleop }:
 buildRosPackage {
   pname = "ros-melodic-jderobot-drones";
-  version = "1.3.2-r3";
+  version = "1.3.2-r5";
 
   src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/jderobot_drones/1.3.2-3.tar.gz";
-    name = "1.3.2-3.tar.gz";
-    sha256 = "aa752635ff53090311ba9e5d88d790fe6b0e2b6a75d8b621b6d5c1dc0c740aa1";
+    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/jderobot_drones/1.3.2-5.tar.gz";
+    name = "1.3.2-5.tar.gz";
+    sha256 = "dd483027035e50dd872c64eb8a33505e9d1118022f5671b297f0869ca6b205fd";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-marti-data-structures";
-  version = "2.13.1-r1";
+  version = "2.13.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/marti_data_structures/2.13.1-1.tar.gz";
-    name = "2.13.1-1.tar.gz";
-    sha256 = "3e4afe4c2c090e8bf612db191c61bc8d92938ad29ecc6b8756bed384dbdcd07c";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/marti_data_structures/2.13.7-1.tar.gz";
+    name = "2.13.7-1.tar.gz";
+    sha256 = "e27860dddee53b9e385be3b5a67b64bfc18f5b154cdfc4bd73b98a32436db3a5";
   };
 
   buildType = "catkin";

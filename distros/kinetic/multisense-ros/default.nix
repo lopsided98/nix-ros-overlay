@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, cv-bridge, dynamic-reconfigure, genmsg, geometry-msgs, image-geometry, image-transport, libjpeg_turbo, libyamlcpp, message-generation, message-runtime, multisense-lib, rosbag, roscpp, sensor-msgs, std-msgs, stereo-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-multisense-ros";
-  version = "4.0.0";
+  version = "4.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense_ros/4.0.0-0.tar.gz";
-    name = "4.0.0-0.tar.gz";
-    sha256 = "64dbfe1a34999ec414c8caec8f7b9d34baf10c08e74584ace80cab60122ce0d5";
+    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense_ros/4.0.4-1.tar.gz";
+    name = "4.0.4-1.tar.gz";
+    sha256 = "45de6d3e472f3023bd39a6b949f3d0a5f6ee79db30fac7e0b5e350adc466c12c";
   };
 
   buildType = "catkin";

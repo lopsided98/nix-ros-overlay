@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, nav2-lifecycle-manager, nav2-msgs, nav2-util, pluginlib, qt5, rclcpp, rclcpp-lifecycle, resource-retriever, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-rviz-plugins";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_rviz_plugins/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "569eb2da865f3c571f2a5e9fccb58f8d70f3eab1207de6620e95910fbcdfd5b0";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_rviz_plugins/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "f3b46820a08aac1b7584a1e175b4e143a9df5cf28d1f41091523ca48115926c4";
   };
 
   buildType = "ament_cmake";

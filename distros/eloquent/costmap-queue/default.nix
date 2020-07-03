@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, nav2-costmap-2d, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-costmap-queue";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/costmap_queue/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "026447a0f929ad8bbac4199ee2e81df3d1a6ddce19acedaa750a2b73e9bdc4e7";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/costmap_queue/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "7fd16784a8a1f67f8cc1bf4ec465503ba4aac4717c8f3e876b59edbb3a867af3";
   };
 
   buildType = "ament_cmake";

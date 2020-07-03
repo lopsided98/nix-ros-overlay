@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, plansys2-domain-expert, plansys2-executor, plansys2-lifecycle-manager, plansys2-planner, plansys2-problem-expert, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-plansys2-bringup";
-  version = "0.0.7-r1";
+  version = "0.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/eloquent/plansys2_bringup/0.0.7-1.tar.gz";
-    name = "0.0.7-1.tar.gz";
-    sha256 = "c0a1f88a318b1c5a1c0fdb01cf1cb8c448dcf16d746594d37c9d05937de53592";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/eloquent/plansys2_bringup/0.0.8-1.tar.gz";
+    name = "0.0.8-1.tar.gz";
+    sha256 = "3658724d47117dceac8d53de25e0448685fe3ff51db06f50abb2063bfd8b3cc8";
   };
 
   buildType = "ament_cmake";

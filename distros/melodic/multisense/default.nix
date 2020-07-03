@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, multisense-bringup, multisense-cal-check, multisense-description, multisense-lib, multisense-ros }:
 buildRosPackage {
   pname = "ros-melodic-multisense";
-  version = "4.0.3-r1";
+  version = "4.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/melodic/multisense/4.0.3-1.tar.gz";
-    name = "4.0.3-1.tar.gz";
-    sha256 = "7f63ad1458aaa5d7d1c07490b256ae3417943013dd5948cf7ecbfbf6d798a179";
+    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/melodic/multisense/4.0.4-1.tar.gz";
+    name = "4.0.4-1.tar.gz";
+    sha256 = "1b947a09139d5a7d36abbf0fae0bf58cd911427da914f6e37277d08bd2d4b127";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, cv-bridge, eigen, geos, pkg-config, roscpp, rostest, tf }:
 buildRosPackage {
   pname = "ros-noetic-swri-geometry-util";
-  version = "2.13.6-r1";
+  version = "2.13.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_geometry_util/2.13.6-1.tar.gz";
-    name = "2.13.6-1.tar.gz";
-    sha256 = "ed2305aa567211073655ed9436ea5f1ecbd68521d2ee9a37ed799758d435484c";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_geometry_util/2.13.7-1.tar.gz";
+    name = "2.13.7-1.tar.gz";
+    sha256 = "04fe5f3a7adf58a5779f2a7ce54c55af4aaa1235fd6f82550f25693acf1c2f1b";
   };
 
   buildType = "catkin";

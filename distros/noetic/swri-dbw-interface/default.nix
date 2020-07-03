@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-swri-dbw-interface";
-  version = "2.13.6-r1";
+  version = "2.13.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_dbw_interface/2.13.6-1.tar.gz";
-    name = "2.13.6-1.tar.gz";
-    sha256 = "bcf58e9bfd6a0b8aea25c3b33166cfbb4415464bf5d4b2453dc113fc8f2055fe";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_dbw_interface/2.13.7-1.tar.gz";
+    name = "2.13.7-1.tar.gz";
+    sha256 = "2fdcaaceebdc1bc419fc206d6cc812507e4f29e8c210001cbe8d612be9b270e2";
   };
 
   buildType = "catkin";

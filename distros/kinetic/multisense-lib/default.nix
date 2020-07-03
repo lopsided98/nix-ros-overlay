@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, libpng12 }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, libpng }:
 buildRosPackage {
   pname = "ros-kinetic-multisense-lib";
-  version = "4.0.0";
+  version = "4.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense_lib/4.0.0-0.tar.gz";
-    name = "4.0.0-0.tar.gz";
-    sha256 = "61612458f72d81d91f80bd87186b457a672a1ed8039a4732c151c6d507d4a539";
+    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense_lib/4.0.4-1.tar.gz";
+    name = "4.0.4-1.tar.gz";
+    sha256 = "c7453273fdb3f37ad3d71b5656641e1117b1e401d10efcdbc0602e4c3ab7168d";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cv-bridge libpng12 ];
+  propagatedBuildInputs = [ cv-bridge libpng ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

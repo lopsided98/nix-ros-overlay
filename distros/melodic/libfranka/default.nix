@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, eigen, poco }:
 buildRosPackage {
   pname = "ros-melodic-libfranka";
-  version = "0.7.1-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/libfranka-release/archive/release/melodic/libfranka/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "1494bbb0fa5f713ad3895f519abb23cf2bbb6a6fddd95cfbf88e7319a1e4688e";
+    url = "https://github.com/frankaemika/libfranka-release/archive/release/melodic/libfranka/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "cd81ede59824257d1e44276b53d2c7282e5b60b904f8fe3fe7b4548dfff01c4e";
   };
 
   buildType = "cmake";

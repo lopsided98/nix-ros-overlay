@@ -1120,6 +1120,8 @@ self: super: {
 
  file-management = self.callPackage ./file-management {};
 
+ file-uploader-msgs = self.callPackage ./file-uploader-msgs {};
+
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
@@ -3456,6 +3458,8 @@ self: super: {
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
+ recorder-msgs = self.callPackage ./recorder-msgs {};
+
  recordit = self.callPackage ./recordit {};
 
  remote-rosbag-record = self.callPackage ./remote-rosbag-record {};
@@ -3769,6 +3773,8 @@ self: super: {
  rosauth = self.callPackage ./rosauth {};
 
  rosbag = self.callPackage ./rosbag {};
+
+ rosbag-cloud-recorders = self.callPackage ./rosbag-cloud-recorders {};
 
  rosbag-editor = self.callPackage ./rosbag-editor {};
 
@@ -4203,6 +4209,10 @@ self: super: {
  rxros = self.callPackage ./rxros {};
 
  rxros-tf = self.callPackage ./rxros-tf {};
+
+ s3-common = self.callPackage ./s3-common {};
+
+ s3-file-uploader = self.callPackage ./s3-file-uploader {};
 
  safe-teleop-base = self.callPackage ./safe-teleop-base {};
 

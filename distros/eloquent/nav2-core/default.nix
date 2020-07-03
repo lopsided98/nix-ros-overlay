@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, geometry-msgs, launch, launch-testing, nav-msgs, nav2-common, nav2-costmap-2d, nav2-util, pluginlib, rclcpp, rclcpp-lifecycle, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-core";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_core/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "ec7cc91310be3e9d3b56fd8fecb32284b965c7ac6dd3e905ed7335a19771baa3";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_core/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "8b994b9651bcfd1990dcf8d79920665ffa93336e417277c17edaf2714b3696b6";
   };
 
   buildType = "ament_cmake";
