@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-sdc21x0";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/sdc21x0/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "7c13abb1e3f9012598ddfebe3731916e71c453340276da1f545e8ac90e1b2a76";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/sdc21x0/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "dd101ef9cfa4334695bb16dd98b092d0feeade99931a5988244a785ee210fe92";
   };
 
   buildType = "catkin";

@@ -82,6 +82,8 @@ self: super: {
 
  code-coverage = self.callPackage ./code-coverage {};
 
+ codec-image-transport = self.callPackage ./codec-image-transport {};
+
  combined-robot-hw = self.callPackage ./combined-robot-hw {};
 
  combined-robot-hw-tests = self.callPackage ./combined-robot-hw-tests {};
@@ -474,6 +476,20 @@ self: super: {
 
  message-runtime = self.callPackage ./message-runtime {};
 
+ mir-actions = self.callPackage ./mir-actions {};
+
+ mir-description = self.callPackage ./mir-description {};
+
+ mir-dwb-critics = self.callPackage ./mir-dwb-critics {};
+
+ mir-gazebo = self.callPackage ./mir-gazebo {};
+
+ mir-msgs = self.callPackage ./mir-msgs {};
+
+ mir-navigation = self.callPackage ./mir-navigation {};
+
+ mir-robot = self.callPackage ./mir-robot {};
+
  mk = self.callPackage ./mk {};
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
@@ -495,6 +511,20 @@ self: super: {
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ multi-object-tracking-lidar = self.callPackage ./multi-object-tracking-lidar {};
+
+ multisense = self.callPackage ./multisense {};
+
+ multisense-bringup = self.callPackage ./multisense-bringup {};
+
+ multisense-cal-check = self.callPackage ./multisense-cal-check {};
+
+ multisense-description = self.callPackage ./multisense-description {};
+
+ multisense-lib = self.callPackage ./multisense-lib {};
+
+ multisense-ros = self.callPackage ./multisense-ros {};
 
  nav-2d-msgs = self.callPackage ./nav-2d-msgs {};
 
@@ -722,6 +752,10 @@ self: super: {
 
  rosbag-migration-rule = self.callPackage ./rosbag-migration-rule {};
 
+ rosbag-snapshot = self.callPackage ./rosbag-snapshot {};
+
+ rosbag-snapshot-msgs = self.callPackage ./rosbag-snapshot-msgs {};
+
  rosbag-storage = self.callPackage ./rosbag-storage {};
 
  rosbash = self.callPackage ./rosbash {};
@@ -926,6 +960,8 @@ self: super: {
 
  sbpl-recovery = self.callPackage ./sbpl-recovery {};
 
+ sdc21x0 = self.callPackage ./sdc21x0 {};
+
  self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
@@ -1107,6 +1143,12 @@ self: super: {
  urg-stamped = self.callPackage ./urg-stamped {};
 
  usb-cam = self.callPackage ./usb-cam {};
+
+ usb-cam-controllers = self.callPackage ./usb-cam-controllers {};
+
+ usb-cam-hardware = self.callPackage ./usb-cam-hardware {};
+
+ usb-cam-hardware-interface = self.callPackage ./usb-cam-hardware-interface {};
 
  uuid-msgs = self.callPackage ./uuid-msgs {};
 

@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-swri-system-util";
-  version = "2.13.1-r1";
+  version = "2.13.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_system_util/2.13.1-1.tar.gz";
-    name = "2.13.1-1.tar.gz";
-    sha256 = "2a2f3b9dda9aca9e4d026da1808b8509bd10630e90ab4cbb785e5a11a85ed603";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_system_util/2.13.7-1.tar.gz";
+    name = "2.13.7-1.tar.gz";
+    sha256 = "9c7199344d3f653d1dfa72ba96ed6345a4f4f6a6cd56476a3107f70f34b46900";
   };
 
   buildType = "catkin";
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ roscpp ];
+  propagatedBuildInputs = [ boost roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

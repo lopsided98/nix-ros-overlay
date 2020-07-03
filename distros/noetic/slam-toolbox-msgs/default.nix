@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-slam-toolbox-msgs";
-  version = "1.5.3-r1";
+  version = "1.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/noetic/slam_toolbox_msgs/1.5.3-1.tar.gz";
-    name = "1.5.3-1.tar.gz";
-    sha256 = "48a71d8509fa47b8024729655f3d5b57f53d9489563a0f1cea1740ce03258f87";
+    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/noetic/slam_toolbox_msgs/1.5.4-1.tar.gz";
+    name = "1.5.4-1.tar.gz";
+    sha256 = "80f5a3a302f97f8ee2fea7811f2219aa0133a6fc380889e7c01ee544a4036fe8";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, eigen, poco }:
 buildRosPackage {
   pname = "ros-kinetic-libfranka";
-  version = "0.7.1-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/libfranka-release/archive/release/kinetic/libfranka/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "9d5b667fcc4238a81e88ca0ec116d1bfcb167f4967a23ac03e374abce7903fd7";
+    url = "https://github.com/frankaemika/libfranka-release/archive/release/kinetic/libfranka/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "b3163c8d21ac6b05c865b761556608b2f8c3b4b6fdb5a1a2a72fe49473d99e04";
   };
 
   buildType = "cmake";

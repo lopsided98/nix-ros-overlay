@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-swri-prefix-tools";
-  version = "2.13.1-r1";
+  version = "2.13.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_prefix_tools/2.13.1-1.tar.gz";
-    name = "2.13.1-1.tar.gz";
-    sha256 = "93b3efcdf995e45d2fb78fa58bfca24229f3051ed3a59f803b78cc27a56a0f2b";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_prefix_tools/2.13.7-1.tar.gz";
+    name = "2.13.7-1.tar.gz";
+    sha256 = "2c16aa6654d707868a2e25e6f013244ae0b4c9efe6e589f77abec2744da146ea";
   };
 
   buildType = "catkin";

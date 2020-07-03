@@ -894,6 +894,8 @@ self: super: {
 
  file-management = self.callPackage ./file-management {};
 
+ file-uploader-msgs = self.callPackage ./file-uploader-msgs {};
+
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
@@ -1748,6 +1750,8 @@ self: super: {
 
  ml-classifiers = self.callPackage ./ml-classifiers {};
 
+ mobile-robot-simulator = self.callPackage ./mobile-robot-simulator {};
+
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
  mongodb-log = self.callPackage ./mongodb-log {};
@@ -1995,6 +1999,8 @@ self: super: {
  nextage-ik-plugin = self.callPackage ./nextage-ik-plugin {};
 
  nextage-moveit-config = self.callPackage ./nextage-moveit-config {};
+
+ nextage-ros-bridge = self.callPackage ./nextage-ros-bridge {};
 
  nlopt = self.callPackage ./nlopt {};
 
@@ -2568,6 +2574,8 @@ self: super: {
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
+ recorder-msgs = self.callPackage ./recorder-msgs {};
+
  remote-rosbag-record = self.callPackage ./remote-rosbag-record {};
 
  resized-image-transport = self.callPackage ./resized-image-transport {};
@@ -2739,6 +2747,8 @@ self: super: {
  rosauth = self.callPackage ./rosauth {};
 
  rosbag = self.callPackage ./rosbag {};
+
+ rosbag-cloud-recorders = self.callPackage ./rosbag-cloud-recorders {};
 
  rosbag-editor = self.callPackage ./rosbag-editor {};
 
@@ -3072,8 +3082,6 @@ self: super: {
 
  rtmros-hironx = self.callPackage ./rtmros-hironx {};
 
- rtmros-nextage = self.callPackage ./rtmros-nextage {};
-
  rviz = self.callPackage ./rviz {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
@@ -3091,6 +3099,10 @@ self: super: {
  rxros = self.callPackage ./rxros {};
 
  rxros-tf = self.callPackage ./rxros-tf {};
+
+ s3-common = self.callPackage ./s3-common {};
+
+ s3-file-uploader = self.callPackage ./s3-file-uploader {};
 
  safe-teleop-base = self.callPackage ./safe-teleop-base {};
 

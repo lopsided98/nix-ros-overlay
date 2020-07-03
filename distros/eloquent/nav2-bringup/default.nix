@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, nav2-common, navigation2 }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-bringup";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_bringup/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "63903baf593f701f2763a7411b29e7ff9e388f7c04902454b3261b186348ea4e";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_bringup/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "7937bf137c40a687dafbb53ef72099e2043353951365a40a523c8d13e64d25d2";
   };
 
   buildType = "ament_cmake";

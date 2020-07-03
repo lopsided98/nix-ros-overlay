@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, multisense-description, multisense-ros }:
 buildRosPackage {
   pname = "ros-kinetic-multisense-bringup";
-  version = "4.0.0";
+  version = "4.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense_bringup/4.0.0-0.tar.gz";
-    name = "4.0.0-0.tar.gz";
-    sha256 = "8f0fae550f766fe3a38e5acf3e2041322daab141d4b9b663b64bf47a4c02ff85";
+    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/kinetic/multisense_bringup/4.0.4-1.tar.gz";
+    name = "4.0.4-1.tar.gz";
+    sha256 = "1db805a192df284554dc84a66ecb41d73acfd64c2ab85987a2f6285d2e08d129";
   };
 
   buildType = "catkin";

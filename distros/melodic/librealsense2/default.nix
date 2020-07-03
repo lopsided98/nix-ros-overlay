@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libusb1, linuxHeaders, openssl, pkg-config, udev }:
+{ lib, buildRosPackage, fetchurl, catkin, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-melodic-librealsense2";
-  version = "2.33.1-r2";
+  version = "2.35.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/melodic/librealsense2/2.33.1-2.tar.gz";
-    name = "2.33.1-2.tar.gz";
-    sha256 = "d68e4e9abc03a53eafba043b0cda4a945a677daa021bda28442d79d01d62574b";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/melodic/librealsense2/2.35.2-2.tar.gz";
+    name = "2.35.2-2.tar.gz";
+    sha256 = "7e72c4cc5911111e6c2c37ba2b433f98f139386fc78a066db25f7255c82a86fc";
   };
 
   buildType = "cmake";
   buildInputs = [ pkg-config ];
-  propagatedBuildInputs = [ libusb1 linuxHeaders openssl udev ];
+  propagatedBuildInputs = [ libusb1 openssl udev ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

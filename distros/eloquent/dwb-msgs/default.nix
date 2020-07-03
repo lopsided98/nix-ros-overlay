@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, nav-2d-msgs, nav-msgs, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-dwb-msgs";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/dwb_msgs/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "231d9f977af0b8a8def6b30ad90282c8a786c69e4b9ad3a8c1ce75d7c61a4ca6";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/dwb_msgs/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "4a1d497a219c7460ab31be9836294bf8b4c123e5e8518dd5176032bfe0e6589e";
   };
 
   buildType = "ament_cmake";

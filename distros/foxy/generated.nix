@@ -164,6 +164,8 @@ self: super: {
 
  control-msgs = self.callPackage ./control-msgs {};
 
+ costmap-queue = self.callPackage ./costmap-queue {};
+
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
@@ -193,6 +195,16 @@ self: super: {
  dummy-robot-bringup = self.callPackage ./dummy-robot-bringup {};
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
+
+ dwb-core = self.callPackage ./dwb-core {};
+
+ dwb-critics = self.callPackage ./dwb-critics {};
+
+ dwb-msgs = self.callPackage ./dwb-msgs {};
+
+ dwb-plugins = self.callPackage ./dwb-plugins {};
+
+ dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
@@ -374,9 +386,63 @@ self: super: {
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
+ nav2-amcl = self.callPackage ./nav2-amcl {};
+
+ nav2-behavior-tree = self.callPackage ./nav2-behavior-tree {};
+
+ nav2-bringup = self.callPackage ./nav2-bringup {};
+
+ nav2-bt-navigator = self.callPackage ./nav2-bt-navigator {};
+
+ nav2-common = self.callPackage ./nav2-common {};
+
+ nav2-controller = self.callPackage ./nav2-controller {};
+
+ nav2-core = self.callPackage ./nav2-core {};
+
+ nav2-costmap-2d = self.callPackage ./nav2-costmap-2d {};
+
+ nav2-dwb-controller = self.callPackage ./nav2-dwb-controller {};
+
+ nav2-gazebo-spawner = self.callPackage ./nav2-gazebo-spawner {};
+
+ nav2-lifecycle-manager = self.callPackage ./nav2-lifecycle-manager {};
+
+ nav2-map-server = self.callPackage ./nav2-map-server {};
+
+ nav2-msgs = self.callPackage ./nav2-msgs {};
+
+ nav2-navfn-planner = self.callPackage ./nav2-navfn-planner {};
+
+ nav2-planner = self.callPackage ./nav2-planner {};
+
+ nav2-recoveries = self.callPackage ./nav2-recoveries {};
+
+ nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
+
+ nav2-system-tests = self.callPackage ./nav2-system-tests {};
+
+ nav2-util = self.callPackage ./nav2-util {};
+
+ nav2-voxel-grid = self.callPackage ./nav2-voxel-grid {};
+
+ nav2-waypoint-follower = self.callPackage ./nav2-waypoint-follower {};
+
+ nav-2d-msgs = self.callPackage ./nav-2d-msgs {};
+
+ nav-2d-utils = self.callPackage ./nav-2d-utils {};
+
  nav-msgs = self.callPackage ./nav-msgs {};
 
+ navigation2 = self.callPackage ./navigation2 {};
+
  nodl-python = self.callPackage ./nodl-python {};
+
+ octomap = self.callPackage ./octomap {};
+
+ octomap-msgs = self.callPackage ./octomap-msgs {};
+
+ octovis = self.callPackage ./octovis {};
 
  ompl = self.callPackage ./ompl {};
 

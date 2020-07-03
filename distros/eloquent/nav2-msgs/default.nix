@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, nav-msgs, nav2-common, rclcpp, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-nav2-msgs";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_msgs/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "d06bf3ddcba2bfa56d213bb4a0c33d93527eda3a9ab7f20e85a3245f4cb5b30d";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav2_msgs/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "c69f01e0f11d8a1b1378385275606bb94573be8333bd85a9a174a5a20912aa8e";
   };
 
   buildType = "ament_cmake";

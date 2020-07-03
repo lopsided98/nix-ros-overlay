@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav-2d-msgs, nav-msgs, nav2-common, nav2-msgs, nav2-util, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-nav-2d-utils";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav_2d_utils/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "dc69354427a334af1224a7dd46f3548ca81d61325dae98f326cc7107fa8ed199";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/eloquent/nav_2d_utils/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "2affec991c1bc8a62bad2b5019bd82067a45d8ff59ceae8e92ea17465d8ac8f0";
   };
 
   buildType = "ament_cmake";
