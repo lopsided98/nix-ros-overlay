@@ -49,14 +49,68 @@ in {
     colcon-ros
   ];
 
+  console-bridge = self.callPackage ./console-bridge { };
+
+  gazebo_7 = self.callPackage ./gazebo/7.nix { };
+  gazebo_9 = self.libsForQt5.callPackage ./gazebo/9.nix { };
+  gazebo_11 = self.libsForQt5.callPackage ./gazebo { };
+  gazebo = self.gazebo_11;
+
   geographiclib = self.callPackage ./geographiclib { };
+
+  ignition = {
+    cmake0 = self.callPackage ./ignition/cmake/0.nix { };
+    cmake2 = self.callPackage ./ignition/cmake { };
+    cmake = self.ignition.cmake2;
+
+    common1 = self.callPackage ./ignition/common/1.nix { };
+    common3 = self.callPackage ./ignition/common { };
+    common = self.ignition.common3;
+
+    fuel-tools1 = self.callPackage ./ignition/fuel-tools/1.nix { };
+    fuel-tools4 = self.callPackage ./ignition/fuel-tools { };
+    fuel-tools = self.ignition.fuel-tools4;
+
+    math2 = self.callPackage ./ignition/math/2.nix { };
+    math4 = self.callPackage ./ignition/math/4.nix { };
+    math6 = self.callPackage ./ignition/math { };
+    math = self.ignition.math6;
+
+    msgs0 = self.callPackage ./ignition/msgs/0.nix { };
+    msgs1 = self.callPackage ./ignition/msgs/1.nix { };
+    msgs5 = self.callPackage ./ignition/msgs { };
+    msgs = self.ignition.msgs5;
+
+    tools = self.callPackage ./ignition/tools { };
+
+    transport2 = self.callPackage ./ignition/transport/2.nix { };
+    transport4 = self.callPackage ./ignition/transport/4.nix { };
+    transport8 = self.callPackage ./ignition/transport { };
+    transport = self.ignition.transport8;
+  };
+
+  jsoncpp = super.jsoncpp.overrideAttrs ({ patches ? [], ... }: {
+    # Fix generated pkg-config file
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/lopsided98/jsoncpp/commit/b05a21342a646a986b11c28ba6b19665756d21d2.patch";
+      sha256 = "0dn4cvvkcp9mnxbzyaqb49z6bv5yqsx1wlf1lyki1n2rni2hn63p";
+    }) ];
+  });
 
   openni2 = self.callPackage ./openni2 { };
 
-  opensplice = self.opensplice_6_9;
   opensplice_6_9 = self.callPackage ./opensplice { };
+  opensplice = self.opensplice_6_9;
 
   python27 = pythonOverridesFor super.python27;
   python37 = pythonOverridesFor super.python37;
   python38 = pythonOverridesFor super.python38;
+
+  sdformat_4 = self.callPackage ./sdformat/4.nix { };
+  sdformat_6 = self.callPackage ./sdformat/6.nix { };
+  sdformat_9 = self.callPackage ./sdformat { };
+  sdformat = self.sdformat_9;
+
+  urdfdom = self.callPackage ./urdfdom { };
+  urdfdom-headers = self.callPackage ./urdfdom-headers { };
 }

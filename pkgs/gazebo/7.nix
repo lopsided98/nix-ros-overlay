@@ -1,0 +1,71 @@
+{ lib, stdenv, fetchurl, fetchpatch, cmake, pkgconfig, ronn, freeimage, libGL
+, openal, hdf5, curl, tinyxml, tinyxml-2, libtar, tbb, ogre1_9, ffmpeg, gts
+, libusb1, qt4, boost, gdal, libuuid, graphviz, sdformat_4, protobuf, ignition
+
+, bullet, withBulletEngineSupport ? false
+}: with lib;
+
+stdenv.mkDerivation rec {
+  pname = "gazebo";
+  version = "7.16.0";
+
+  src = fetchurl {
+    url = "https://osrf-distributions.s3.amazonaws.com/gazebo/releases/${pname}-${version}.tar.bz2";
+    sha256 = "0kyg2rkxy5fw4b53msjxi5cichy5d5w5ckfk5nh9897skdxz5rf6";
+  };
+
+  patches = [
+    # Fix CMake relative path assumptions (https://github.com/osrf/gazebo/pull/2780)
+    (fetchpatch {
+      url = "https://github.com/lopsided98/gazebo/commit/dd21431c1c158a1375527c585369f1862d4e8a4e.patch";
+      sha256 = "0qjlijvavbrp0mc7bslc0r70l585b2dk3md3g4jgwfkarrbzd1yf";
+    })
+  ];
+
+  enableParallelBuilding = true;
+
+  cmakeFlags = [
+    "-DCMAKE_INSTALL_LIBDIR=lib"
+    "-DCMAKE_INSTALL_INCLUDEDIR=include"
+    "-DUSE_HOST_CFLAGS=False"
+    "-DENABLE_TESTS_COMPILATION=False"
+  ];
+
+  nativeBuildInputs = [ cmake pkgconfig ronn ];
+
+  buildInputs = [
+    freeimage
+    libGL
+    openal
+    hdf5
+    curl
+    tinyxml
+    tinyxml-2
+    libtar
+    tbb
+    ogre1_9
+    ffmpeg
+    gts
+    libusb1
+    qt4
+    boost
+    gdal
+    libuuid
+    graphviz
+    ignition.transport2
+  ] ++ optional withBulletEngineSupport bullet;
+
+  propagatedBuildInputs = [
+    sdformat_4
+    protobuf
+    ignition.math2
+  ];
+
+  meta = {
+    homepage = "http://gazebosim.org/";
+    description = "Multi-robot simulator for outdoor environments";
+    license = licenses.asl20;
+    maintainers = with maintainers; [ lopsided98 ];
+    platforms = platforms.unix;
+  };
+}

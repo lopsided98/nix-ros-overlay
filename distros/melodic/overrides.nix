@@ -14,9 +14,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.pythonPackages.opencv3 ];
   });
 
-  gazeboSimulator = self.gazeboSimulator // {
-    gazebo = self.gazeboSimulator.gazebo9;
-  };
+  gazebo = self.gazebo_9;
 
   pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
     patches ? [], ...

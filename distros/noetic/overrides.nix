@@ -2,9 +2,7 @@
 self:
 # Distro package set
 rosSelf: rosSuper: with rosSelf.lib; {
-  gazeboSimulator = self.gazeboSimulator // {
-    gazebo = self.gazeboSimulator.gazebo11;
-  };
+  gazebo = self.gazebo_11;
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.6.20200417.tar.gz";

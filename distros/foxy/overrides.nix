@@ -7,6 +7,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "0c7ivb99jjfimxb28chlc3pjnmzdz88f5abkh83x846m5k461bf4";
   };
 
+  gazebo = self.gazebo_11;
+
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.4.20190605.tar.gz";
     sha256 = "1ab4d7ngvx009vajqv3kxw0s77z0hdd9xb8in1mvx86i1l3vndxa";

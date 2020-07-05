@@ -53,9 +53,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
-  gazeboSimulator = self.gazeboSimulator // {
-    gazebo = self.gazeboSimulator.gazebo7;
-  };
+  gazebo = self.gazebo_7;
 
   joint-trajectory-generator = rosSuper.joint-trajectory-generator.overrideAttrs ({
     patches ? [], ...
