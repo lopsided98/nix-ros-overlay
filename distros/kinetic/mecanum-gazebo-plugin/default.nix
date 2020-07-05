@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gazeboSimulator, rosconsole, roslint }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo, rosconsole, roslint }:
 buildRosPackage {
   pname = "ros-kinetic-mecanum-gazebo-plugin";
   version = "0.0.3";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslint ];
-  propagatedBuildInputs = [ gazeboSimulator.gazebo rosconsole ];
+  propagatedBuildInputs = [ gazebo rosconsole ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

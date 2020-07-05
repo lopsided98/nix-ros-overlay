@@ -262,6 +262,8 @@ self: super: {
 
  foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
 
+ gazebo-dev = self.callPackage ./gazebo-dev {};
+
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
 
  gazebo-plugins = self.callPackage ./gazebo-plugins {};

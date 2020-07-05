@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gazeboSimulator, joint-state-publisher, robot-state-publisher, roslaunch, rviz }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo, joint-state-publisher, robot-state-publisher, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-melodic-fsrobo-r-description";
   version = "0.7.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ gazeboSimulator.gazebo joint-state-publisher robot-state-publisher rviz ];
+  propagatedBuildInputs = [ gazebo joint-state-publisher robot-state-publisher rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

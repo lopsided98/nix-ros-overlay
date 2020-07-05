@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, diagnostic-aggregator, fingertip-pressure, gazebo-plugins, gazebo-ros, gazeboSimulator, geometry-msgs, image-proc, joint-trajectory-action, pr2-controller-configuration-gazebo, pr2-controller-manager, pr2-dashboard-aggregator, pr2-description, pr2-gazebo-plugins, pr2-gripper-action, pr2-head-action, pr2-machine, pr2-mechanism-controllers, pr2-msgs, pr2-tuckarm, robot-mechanism-controllers, robot-pose-ekf, robot-state-publisher, rospy, rostest, rostopic, single-joint-position-action, std-msgs, stereo-image-proc, tf2-ros, topic-tools, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-aggregator, fingertip-pressure, gazebo, gazebo-plugins, gazebo-ros, geometry-msgs, image-proc, joint-trajectory-action, pr2-controller-configuration-gazebo, pr2-controller-manager, pr2-dashboard-aggregator, pr2-description, pr2-gazebo-plugins, pr2-gripper-action, pr2-head-action, pr2-machine, pr2-mechanism-controllers, pr2-msgs, pr2-tuckarm, robot-mechanism-controllers, robot-pose-ekf, robot-state-publisher, rospy, rostest, rostopic, single-joint-position-action, std-msgs, stereo-image-proc, tf2-ros, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-melodic-pr2-gazebo";
   version = "2.0.14";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ pr2-machine pr2-tuckarm rostest ];
-  propagatedBuildInputs = [ diagnostic-aggregator fingertip-pressure gazebo-plugins gazebo-ros gazeboSimulator.gazebo geometry-msgs image-proc joint-trajectory-action pr2-controller-configuration-gazebo pr2-controller-manager pr2-dashboard-aggregator pr2-description pr2-gazebo-plugins pr2-gripper-action pr2-head-action pr2-mechanism-controllers pr2-msgs robot-mechanism-controllers robot-pose-ekf robot-state-publisher rospy rostopic single-joint-position-action std-msgs stereo-image-proc tf2-ros topic-tools xacro ];
+  propagatedBuildInputs = [ diagnostic-aggregator fingertip-pressure gazebo gazebo-plugins gazebo-ros geometry-msgs image-proc joint-trajectory-action pr2-controller-configuration-gazebo pr2-controller-manager pr2-dashboard-aggregator pr2-description pr2-gazebo-plugins pr2-gripper-action pr2-head-action pr2-mechanism-controllers pr2-msgs robot-mechanism-controllers robot-pose-ekf robot-state-publisher rospy rostopic single-joint-position-action std-msgs stereo-image-proc tf2-ros topic-tools xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

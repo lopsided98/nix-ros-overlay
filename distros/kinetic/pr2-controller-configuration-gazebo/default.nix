@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gazeboSimulator, pr2-controller-manager, pr2-gripper-action, pr2-head-action, single-joint-position-action }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo, pr2-controller-manager, pr2-gripper-action, pr2-head-action, single-joint-position-action }:
 buildRosPackage {
   pname = "ros-kinetic-pr2-controller-configuration-gazebo";
   version = "2.0.11";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gazeboSimulator.gazebo pr2-controller-manager pr2-gripper-action pr2-head-action single-joint-position-action ];
+  propagatedBuildInputs = [ gazebo pr2-controller-manager pr2-gripper-action pr2-head-action single-joint-position-action ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

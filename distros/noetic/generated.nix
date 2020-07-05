@@ -242,6 +242,8 @@ self: super: {
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
+ gazebo-dev = self.callPackage ./gazebo-dev {};
+
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
 
  gazebo-plugins = self.callPackage ./gazebo-plugins {};

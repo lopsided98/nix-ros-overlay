@@ -2,7 +2,7 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gazeboSimulator }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo_9 }:
 buildRosPackage {
   pname = "ros-melodic-gazebo-dev";
   version = "2.8.7-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ gazeboSimulator.gazebo9 ];
+  propagatedBuildInputs = [ gazebo_9 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

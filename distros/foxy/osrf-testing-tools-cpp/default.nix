@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/osrf_testings_tools_cpp-release/archive/release/foxy/osrf_testing_tools_cpp/1.3.2-1.tar.gz";
     name = "1.3.2-1.tar.gz";
-    sha256 = "32179f190ed329ba1a47ba412c2762f047973a85a4baa25d69d1d530a8bdbafa";
+    sha256 = "e45c6bfaaf2feb2cd5fdad1a85efc2219d7621db4adaaf8344ab69e9f292b8b3";
   };
 
   buildType = "cmake";
