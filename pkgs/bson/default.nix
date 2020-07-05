@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "bson";
-  version = "0.5.9";
+  version = "0.5.10";
   
   src = fetchPypi {
     inherit pname version;
-    sha256 = "0n01axc6vnszmbz1mx64d2blrb78hbcvlnl4v4a5h39mzb8nv844";
+    sha256 = "14355m3dchz446fl54ym78bn4wi20hddx1614f8rl4sin0m1nlfn";
   };
 
   propagatedBuildInputs = [ dateutil ];
