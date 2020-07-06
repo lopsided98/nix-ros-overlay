@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ cmake ];
-  propagatedBuildInputs = [ ignition-cmake ];
+  propagatedNativeBuildInputs = [ ignition-cmake ];
 
   cmakeFlags = [
     "-DCMAKE_INSTALL_INCLUDEDIR:PATH=include"

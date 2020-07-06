@@ -17,12 +17,13 @@ stdenv.mkDerivation rec {
     sha256 = srcSha256;
   };
 
-  nativeBuildInputs = [ cmake pkgconfig ];
+  nativeBuildInputs = [ cmake ];
+  propagatedNativeBuildInputs = [ ignition-cmake ];
   buildInputs = [ ignition-math tinyxml-2 ]
     ++ lib.optionals (lib.versionAtLeast version "3")
       [ ignition-math gts freeimage ffmpeg ];
-  propagatedBuildInputs = [ ignition-cmake libuuid ]
-    ++ lib.optionals (lib.versionOlder version "3") 
+  propagatedBuildInputs = [ libuuid ]
+    ++ lib.optionals (lib.versionOlder version "3")
       [ ignition-math gts freeimage ffmpeg ];
 
   meta = with lib; {

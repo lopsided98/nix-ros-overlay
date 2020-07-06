@@ -1,6 +1,6 @@
-{ stdenv, fetchFromGitHub, cmake, pkgconfig, ignition
-, ignition-cmake ? ignition.cmake, ignition-math ? ignition.math
-, ignition-msgs ? ignition.msgs, protobuf, libuuid, sqlite, cppzmq, zeromq
+{ stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
+, ignition-math ? ignition.math, ignition-msgs ? ignition.msgs, protobuf
+, libuuid, sqlite, cppzmq, zeromq
 , majorVersion ? "8"
 , version ? "8.0.0"
 , srcSha256 ? "01paq94l3xnh6zzanllis3yzxylzrd1dax8q9i9dv5qab58723ia"
@@ -17,10 +17,10 @@ stdenv.mkDerivation rec {
     sha256 = srcSha256;
   };
 
-  nativeBuildInputs = [ cmake pkgconfig ];
+  nativeBuildInputs = [ cmake ];
+  propagatedNativeBuildInputs = [ ignition-cmake ];
   buildInputs = [ ignition-math sqlite ];
-  propagatedBuildInputs = [ ignition-cmake protobuf cppzmq zeromq libuuid
-    ignition-msgs ];
+  propagatedBuildInputs = [ protobuf cppzmq zeromq libuuid ignition-msgs ];
 
   cmakeFlags= [
     "-DCMAKE_INSTALL_INCLUDEDIR:PATH=include"

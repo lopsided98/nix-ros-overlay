@@ -17,7 +17,8 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ cmake ];
-  propagatedBuildInputs = [ ignition-cmake protobuf ignition-math ]
+  propagatedNativeBuildInputs = [ ignition-cmake ];
+  propagatedBuildInputs = [ protobuf ignition-math ]
     ++ lib.optional (lib.versionAtLeast version "5") tinyxml-2;
 
   meta = with lib; {

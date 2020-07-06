@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, cmake
+{ stdenv, fetchFromGitHub, cmake, pkg-config
 , majorVersion ? "2"
 , version ? "2.2.0"
 , srcSha256 ? "0ddhczq4pn89j9i5c1pqxdph8fy5s3ahfpc7hhaz4s2xz0zs1pg2"
@@ -16,6 +16,8 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ cmake ];
+  # pkg-config is needed to use some CMake modules in this package
+  propagatedBuildInputs = [ pkg-config ];
 
   meta = with stdenv.lib; {
     homepage = "https://ignitionrobotics.org/libs/cmake";

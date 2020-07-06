@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchFromGitHub, cmake, pkgconfig, ignition
+{ stdenv, lib, fetchFromGitHub, cmake, ignition
 , ignition-cmake ? ignition.cmake, ignition-common ? ignition.common, tinyxml-2
 , curl, jsoncpp, libyaml, libzip
 , majorVersion ? "4"
@@ -17,9 +17,10 @@ stdenv.mkDerivation rec {
     sha256 = srcSha256;
   };
 
-  nativeBuildInputs = [ cmake pkgconfig ];
-  propagatedBuildInputs = [ ignition-cmake ignition-common tinyxml-2 curl 
-    jsoncpp libyaml libzip ]
+  nativeBuildInputs = [ cmake ];
+  propagatedNativeBuildInputs = [ ignition-cmake ];
+  propagatedBuildInputs = [ ignition-common tinyxml-2 curl jsoncpp libyaml
+    libzip ]
     ++ lib.optional (lib.versionAtLeast version "4") ignition.msgs;
 
   meta = with lib; {
