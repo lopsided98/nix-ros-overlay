@@ -106,6 +106,13 @@ in {
   python37 = pythonOverridesFor super.python37;
   python38 = pythonOverridesFor super.python38;
 
+  qwt6 = super.qwt6.overrideAttrs ({ postInstall ? "", ... }: {
+    # Some packages expect headers to be in subdirectory
+    postInstall = postInstall + ''
+      ln -s "$out/include" "$out/include/qwt"
+    '';
+  });
+
   sdformat_4 = self.callPackage ./sdformat/4.nix { };
   sdformat_6 = self.callPackage ./sdformat/6.nix { };
   sdformat_9 = self.callPackage ./sdformat { };
