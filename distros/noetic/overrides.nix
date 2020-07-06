@@ -2,6 +2,8 @@
 self:
 # Distro package set
 rosSelf: rosSuper: with rosSelf.lib; {
+  cv-bridge = patchBoostPython rosSuper.cv-bridge;
+
   gazebo = self.gazebo_11;
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
