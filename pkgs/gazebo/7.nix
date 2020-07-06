@@ -1,6 +1,6 @@
 { lib, stdenv, fetchurl, fetchpatch, cmake, pkgconfig, ronn, freeimage, libGL
-, openal, hdf5, curl, tinyxml, tinyxml-2, libtar, tbb, ogre1_9, ffmpeg, gts
-, libusb1, qt4, boost, gdal, libuuid, graphviz, sdformat_4, protobuf, ignition
+, openal, hdf5, curl, tinyxml, tinyxml-2, libtar, tbb, ffmpeg, gts, libusb1
+, qt4, gdal, libuuid, graphviz, boost, protobuf, sdformat_4, ogre1_9, ignition
 
 , bullet, withBulletEngineSupport ? false
 }: with lib;
@@ -43,12 +43,10 @@ stdenv.mkDerivation rec {
     tinyxml-2
     libtar
     tbb
-    ogre1_9
     ffmpeg
     gts
     libusb1
     qt4
-    boost
     gdal
     libuuid
     graphviz
@@ -56,8 +54,10 @@ stdenv.mkDerivation rec {
   ] ++ optional withBulletEngineSupport bullet;
 
   propagatedBuildInputs = [
-    sdformat_4
+    boost
     protobuf
+    sdformat_4
+    ogre1_9
     ignition.math2
   ];
 
