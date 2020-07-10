@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, lifecycle-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp-action, rclcpp-lifecycle, std-msgs, std-srvs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-foxy-nav2-lifecycle-manager";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_lifecycle_manager/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "5e139fb6882685aefb05903d845355cb1d319ba473c50890a2072a8573ee30dc";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_lifecycle_manager/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "e40f763e2f005fe735263b15320b09717710ea386b7bb06e4c79e4cea236ec69";
   };
 
   buildType = "ament_cmake";

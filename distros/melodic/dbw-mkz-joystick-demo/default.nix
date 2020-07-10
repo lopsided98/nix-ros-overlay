@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dbw-mkz-can, dbw-mkz-msgs, joy, roscpp, roslaunch, roslib, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dbw-mkz-joystick-demo";
-  version = "1.2.7-r1";
+  version = "1.2.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_joystick_demo/1.2.7-1.tar.gz";
-    name = "1.2.7-1.tar.gz";
-    sha256 = "0c3270baaa8cdf5487c144cddc68547edc375229fd5419dd3de2b24b7798cf7d";
+    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_joystick_demo/1.2.9-1.tar.gz";
+    name = "1.2.9-1.tar.gz";
+    sha256 = "4cc9f1d8308d7a8b0a53b1c9cdb5bf07820d88888ce8ec27ba0dabeb70bff911";
   };
 
   buildType = "catkin";

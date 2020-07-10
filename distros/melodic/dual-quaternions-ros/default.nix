@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dual-quaternions, geometry-msgs, rospy }:
 buildRosPackage {
   pname = "ros-melodic-dual-quaternions-ros";
-  version = "0.1.3-r1";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/Achllle/dual_quaternions_ros-release/archive/release/melodic/dual_quaternions_ros/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "93084d18038c68680ace921c976e5ea15f86072c59c40e1a0f61fb978a69c1ee";
+    url = "https://github.com/Achllle/dual_quaternions_ros-release/archive/release/melodic/dual_quaternions_ros/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "66a4e3cebb3779e92bd153e90a2dc8b3bdc93e9276faebc39e46812390ffa21b";
   };
 
   buildType = "catkin";

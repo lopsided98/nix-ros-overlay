@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry2, kdl-parser, robot-state-publisher, ros-core, rosbag2, urdf }:
 buildRosPackage {
   pname = "ros-foxy-ros-base";
-  version = "0.9.1-r1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/variants-release/archive/release/foxy/ros_base/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "307b0bae688ee0546174a4d142f5cea8a2c4852b6a59a4776d69010303719be6";
+    url = "https://github.com/ros2-gbp/variants-release/archive/release/foxy/ros_base/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "17b2a81b60bdf088408d1a349ca4c558ea69f70a90f30598dde5daae74786f23";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dataspeed-can-msg-filters, dataspeed-can-tools, dataspeed-can-usb }:
 buildRosPackage {
   pname = "ros-melodic-dataspeed-can";
-  version = "1.0.15-r1";
+  version = "1.0.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/melodic/dataspeed_can/1.0.15-1.tar.gz";
-    name = "1.0.15-1.tar.gz";
-    sha256 = "2a5a118b55ac5200022941673a73e6e58bcaae063d379377fece35ebaa9b818f";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/melodic/dataspeed_can/1.0.16-1.tar.gz";
+    name = "1.0.16-1.tar.gz";
+    sha256 = "8015e12e78f9d3b328e1e9615ec32a986134c4ed429f6678e3fb82379feefbed";
   };
 
   buildType = "catkin";

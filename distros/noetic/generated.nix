@@ -32,6 +32,8 @@ self: super: {
 
  audio-play = self.callPackage ./audio-play {};
 
+ auv-msgs = self.callPackage ./auv-msgs {};
+
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
  base-local-planner = self.callPackage ./base-local-planner {};
@@ -127,6 +129,14 @@ self: super: {
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cv-camera = self.callPackage ./cv-camera {};
+
+ dataspeed-can = self.callPackage ./dataspeed-can {};
+
+ dataspeed-can-msg-filters = self.callPackage ./dataspeed-can-msg-filters {};
+
+ dataspeed-can-tools = self.callPackage ./dataspeed-can-tools {};
+
+ dataspeed-can-usb = self.callPackage ./dataspeed-can-usb {};
 
  dataspeed-ulc = self.callPackage ./dataspeed-ulc {};
 
@@ -360,7 +370,11 @@ self: super: {
 
  joint-trajectory-controller = self.callPackage ./joint-trajectory-controller {};
 
+ joy = self.callPackage ./joy {};
+
  joy-teleop = self.callPackage ./joy-teleop {};
+
+ joystick-drivers = self.callPackage ./joystick-drivers {};
 
  joystick-interrupt = self.callPackage ./joystick-interrupt {};
 
@@ -494,6 +508,8 @@ self: super: {
 
  mk = self.callPackage ./mk {};
 
+ mobile-robot-simulator = self.callPackage ./mobile-robot-simulator {};
+
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
@@ -574,6 +590,8 @@ self: super: {
 
  nodelet-tutorial-math = self.callPackage ./nodelet-tutorial-math {};
 
+ nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
+
  obj-to-pointcloud = self.callPackage ./obj-to-pointcloud {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
@@ -601,6 +619,8 @@ self: super: {
  openni2-launch = self.callPackage ./openni2-launch {};
 
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
+
+ oxford-gps-eth = self.callPackage ./oxford-gps-eth {};
 
  p2os-doc = self.callPackage ./p2os-doc {};
 
@@ -654,6 +674,8 @@ self: super: {
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
+ pid = self.callPackage ./pid {};
+
  pinocchio = self.callPackage ./pinocchio {};
 
  planner-cspace = self.callPackage ./planner-cspace {};
@@ -679,6 +701,10 @@ self: super: {
  posedetection-msgs = self.callPackage ./posedetection-msgs {};
 
  position-controllers = self.callPackage ./position-controllers {};
+
+ power-msgs = self.callPackage ./power-msgs {};
+
+ ps3joy = self.callPackage ./ps3joy {};
 
  pybind11-catkin = self.callPackage ./pybind11-catkin {};
 
@@ -1156,6 +1182,20 @@ self: super: {
 
  velocity-controllers = self.callPackage ./velocity-controllers {};
 
+ velodyne = self.callPackage ./velodyne {};
+
+ velodyne-driver = self.callPackage ./velodyne-driver {};
+
+ velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
+
+ velodyne-msgs = self.callPackage ./velodyne-msgs {};
+
+ velodyne-pcl = self.callPackage ./velodyne-pcl {};
+
+ velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
+ vision-msgs = self.callPackage ./vision-msgs {};
+
  vision-opencv = self.callPackage ./vision-opencv {};
 
  visualization-marker-tutorials = self.callPackage ./visualization-marker-tutorials {};
@@ -1170,9 +1210,13 @@ self: super: {
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
 
+ wiimote = self.callPackage ./wiimote {};
+
  xacro = self.callPackage ./xacro {};
 
  xmlrpcpp = self.callPackage ./xmlrpcpp {};
+
+ xv-11-laser-driver = self.callPackage ./xv-11-laser-driver {};
 
  ypspur = self.callPackage ./ypspur {};
 

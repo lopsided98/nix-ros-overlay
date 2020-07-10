@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joy, ps3joy, spacenav-node, wiimote }:
 buildRosPackage {
   pname = "ros-melodic-joystick-drivers";
-  version = "1.13.0-r1";
+  version = "1.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/melodic/joystick_drivers/1.13.0-1.tar.gz";
-    name = "1.13.0-1.tar.gz";
-    sha256 = "40f5d279303bcca1d36d8c540ebb8b57a67269d7bca43fe7db89c400f3edb9b8";
+    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/melodic/joystick_drivers/1.14.0-1.tar.gz";
+    name = "1.14.0-1.tar.gz";
+    sha256 = "f0454955c9262422916a88ff9e2751d21c26c631ccd08b6224a57c83c6909550";
   };
 
   buildType = "catkin";

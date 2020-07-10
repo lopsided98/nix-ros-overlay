@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-plansys2-pddl-parser";
-  version = "0.0.8-r1";
+  version = "0.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/eloquent/plansys2_pddl_parser/0.0.8-1.tar.gz";
-    name = "0.0.8-1.tar.gz";
-    sha256 = "3025da371b62b657884a238503e37daf422079e6d5b9931dba56f1d15007384c";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/eloquent/plansys2_pddl_parser/0.0.9-1.tar.gz";
+    name = "0.0.9-1.tar.gz";
+    sha256 = "425ac3f46c65940ff68934fd3baa12889002f0d99b213112859044b4093ebbe5";
   };
 
   buildType = "ament_cmake";

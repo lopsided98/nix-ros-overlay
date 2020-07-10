@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, controller-interface, controller-manager, cv-bridge, image-transport, pluginlib, roscpp, sensor-msgs, usb-cam-hardware-interface }:
 buildRosPackage {
   pname = "ros-noetic-usb-cam-controllers";
-  version = "0.0.5-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/yoshito-n-students/usb_cam_hardware-release/archive/release/noetic/usb_cam_controllers/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "43433c266d8afe634fecb5efeb00e7808d503091075f2daf555227f5b51ece43";
+    url = "https://github.com/yoshito-n-students/usb_cam_hardware-release/archive/release/noetic/usb_cam_controllers/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "d03a18132591acb321d86163fae2362d7477e9c6a7a33e6faad6f7cc385065af";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosemacs, roslisp, sbcl, slime-ros, slime-wrapper }:
 buildRosPackage {
   pname = "ros-melodic-roslisp-repl";
-  version = "0.4.14-r1";
+  version = "0.4.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/melodic/roslisp_repl/0.4.14-1.tar.gz";
-    name = "0.4.14-1.tar.gz";
-    sha256 = "cefb6b7478f0354353b231bd85e2c31fa82dc803833acebb4038f4521e67507f";
+    url = "https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/melodic/roslisp_repl/0.4.16-1.tar.gz";
+    name = "0.4.16-1.tar.gz";
+    sha256 = "e61ec7c039072709e4635378db091237d9d7eaa4d961557237497e006aa7152b";
   };
 
   buildType = "catkin";

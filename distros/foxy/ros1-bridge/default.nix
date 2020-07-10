@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, demo-nodes-cpp, diagnostic-msgs, example-interfaces, geometry-msgs, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, nav-msgs, pkg-config, python3Packages, rclcpp, rcutils, rmw-implementation-cmake, ros2run, rosidl-cmake, rosidl-parser, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, tf2-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-foxy-ros1-bridge";
-  version = "0.9.2-r1";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros1_bridge-release/archive/release/foxy/ros1_bridge/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "d70611190cb1c2642368e7d5b581fe3a1d5ba66633302c8c4a9f6df4bbbcca17";
+    url = "https://github.com/ros2-gbp/ros1_bridge-release/archive/release/foxy/ros1_bridge/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "26dae33cdf282bdb52187e20702ed326a2acd3552748ca038606cfec32cdb922";
   };
 
   buildType = "ament_cmake";

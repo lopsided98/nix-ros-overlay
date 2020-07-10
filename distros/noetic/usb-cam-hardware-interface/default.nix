@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hardware-interface, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-usb-cam-hardware-interface";
-  version = "0.0.5-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/yoshito-n-students/usb_cam_hardware-release/archive/release/noetic/usb_cam_hardware_interface/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "cbc06c6cab14d3f075992784930cf1d21463788f5c0330e340603d6ea3e251d6";
+    url = "https://github.com/yoshito-n-students/usb_cam_hardware-release/archive/release/noetic/usb_cam_hardware_interface/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "84813dd3d8819a31ffb19ccde2f66513203667ced7f254addb2cd9f75e4a9930";
   };
 
   buildType = "catkin";
