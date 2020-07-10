@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-lint-auto, ament-lint-common, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-nav2-gazebo-spawner";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_gazebo_spawner/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "52f8dbbe1c1dba622358e9890496239d7ec219d133b7455e1e581fe82014c6a6";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_gazebo_spawner/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "2e1ff29286fd05db374d5cf7669f6bbeaddf9585ce6b0a9384ff8e28b35fd644";
   };
 
   buildType = "ament_python";

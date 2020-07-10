@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, fadecandy-msgs, pythonPackages, rospy }:
 buildRosPackage {
   pname = "ros-melodic-fadecandy-driver";
-  version = "0.1.0-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/iron-ox/fadecandy_ros-release/archive/release/melodic/fadecandy_driver/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "cbce3658bbde18eedfe14719b2ce4e8d4c4f52068f6405314d3c87d0e1c73e74";
+    url = "https://github.com/iron-ox/fadecandy_ros-release/archive/release/melodic/fadecandy_driver/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "750fbb51252fba2e6705d6a180fde509cf1907cc9770898ba61172e7f9275614";
   };
 
   buildType = "catkin";

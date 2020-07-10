@@ -132,6 +132,8 @@ self: super: {
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
 
+ auv-msgs = self.callPackage ./auv-msgs {};
+
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
  aws-common = self.callPackage ./aws-common {};
@@ -647,6 +649,8 @@ self: super: {
  dwb-msgs = self.callPackage ./dwb-msgs {};
 
  dwb-plugins = self.callPackage ./dwb-plugins {};
+
+ dynamic-graph = self.callPackage ./dynamic-graph {};
 
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
@@ -2003,6 +2007,8 @@ self: super: {
  nextage-ros-bridge = self.callPackage ./nextage-ros-bridge {};
 
  nlopt = self.callPackage ./nlopt {};
+
+ nmc-nlp-lite = self.callPackage ./nmc-nlp-lite {};
 
  nmea-comms = self.callPackage ./nmea-comms {};
 

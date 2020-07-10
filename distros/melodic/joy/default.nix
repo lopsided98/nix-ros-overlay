@@ -2,18 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, linuxConsoleTools, rosbag, roscpp, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, linuxConsoleTools, rosbag, roscpp, roslint, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-joy";
-  version = "1.13.0-r1";
+  version = "1.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/melodic/joy/1.13.0-1.tar.gz";
-    name = "1.13.0-1.tar.gz";
-    sha256 = "369447b7b00655bd9ff8e267b40084009a5bafedaf748f5265b3fa7a8ac27fa6";
+    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/melodic/joy/1.14.0-1.tar.gz";
+    name = "1.14.0-1.tar.gz";
+    sha256 = "05eef45382fb49c008a833290b4b842da049b2f3bcfeae505751edb40ac50e21";
   };
 
   buildType = "catkin";
+  buildInputs = [ roslint ];
   checkInputs = [ rosbag ];
   propagatedBuildInputs = [ diagnostic-updater linuxConsoleTools roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];

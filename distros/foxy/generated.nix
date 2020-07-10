@@ -558,6 +558,8 @@ self: super: {
 
  realsense-ros = self.callPackage ./realsense-ros {};
 
+ realtime-tools = self.callPackage ./realtime-tools {};
+
  resource-retriever = self.callPackage ./resource-retriever {};
 
  rmw = self.callPackage ./rmw {};
@@ -820,6 +822,8 @@ self: super: {
 
  system-modes-examples = self.callPackage ./system-modes-examples {};
 
+ tango-icons-vendor = self.callPackage ./tango-icons-vendor {};
+
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
@@ -902,6 +906,8 @@ self: super: {
 
  webots-ros2-abb = self.callPackage ./webots-ros2-abb {};
 
+ webots-ros2-core = self.callPackage ./webots-ros2-core {};
+
  webots-ros2-demos = self.callPackage ./webots-ros2-demos {};
 
  webots-ros2-desktop = self.callPackage ./webots-ros2-desktop {};
@@ -909,6 +915,8 @@ self: super: {
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
 
  webots-ros2-examples = self.callPackage ./webots-ros2-examples {};
+
+ webots-ros2-importer = self.callPackage ./webots-ros2-importer {};
 
  webots-ros2-msgs = self.callPackage ./webots-ros2-msgs {};
 

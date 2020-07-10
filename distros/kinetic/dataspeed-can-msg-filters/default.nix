@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, can-msgs, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-dataspeed-can-msg-filters";
-  version = "1.0.15-r1";
+  version = "1.0.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/kinetic/dataspeed_can_msg_filters/1.0.15-1.tar.gz";
-    name = "1.0.15-1.tar.gz";
-    sha256 = "a5c03ec73256b4998b53a84268e767a3d29e7798a9a87b87698b2cc02d6bf918";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/kinetic/dataspeed_can_msg_filters/1.0.16-1.tar.gz";
+    name = "1.0.16-1.tar.gz";
+    sha256 = "f0bd3fac873a161c3598f72f0655760df8ff59f29137f20cf1aa09ed8dfadcae";
   };
 
   buildType = "catkin";
