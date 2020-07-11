@@ -237,6 +237,9 @@ let
       nativeBuildInputs ? [], ...
     }: {
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      postFixup = ''
+        wrapQtApp "$out/bin/rqt"
+      '';
     });
 
     rviz = rosSuper.rviz.overrideAttrs ({
