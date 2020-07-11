@@ -49,8 +49,6 @@ in {
     colcon-ros
   ];
 
-  console-bridge = self.callPackage ./console-bridge { };
-
   gazebo_7 = self.callPackage ./gazebo/7.nix { };
   gazebo_9 = self.libsForQt5.callPackage ./gazebo/9.nix { };
   gazebo_11 = self.libsForQt5.callPackage ./gazebo { };
@@ -89,14 +87,6 @@ in {
     transport = self.ignition.transport8;
   };
 
-  jsoncpp = super.jsoncpp.overrideAttrs ({ patches ? [], ... }: {
-    # Fix generated pkg-config file
-    patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/lopsided98/jsoncpp/commit/b05a21342a646a986b11c28ba6b19665756d21d2.patch";
-      sha256 = "0dn4cvvkcp9mnxbzyaqb49z6bv5yqsx1wlf1lyki1n2rni2hn63p";
-    }) ];
-  });
-
   openni2 = self.callPackage ./openni2 { };
 
   opensplice_6_9 = self.callPackage ./opensplice { };
@@ -117,7 +107,4 @@ in {
   sdformat_6 = self.callPackage ./sdformat/6.nix { };
   sdformat_9 = self.callPackage ./sdformat { };
   sdformat = self.sdformat_9;
-
-  urdfdom = self.callPackage ./urdfdom { };
-  urdfdom-headers = self.callPackage ./urdfdom-headers { };
 }
