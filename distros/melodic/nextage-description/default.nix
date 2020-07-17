@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf }:
 buildRosPackage {
   pname = "ros-melodic-nextage-description";
-  version = "0.8.6-r2";
+  version = "0.8.6-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_description/0.8.6-2.tar.gz";
-    name = "0.8.6-2.tar.gz";
-    sha256 = "c06c664de39850b480423fb108db95240ffc80ee76ce0e359e0f1258350961d8";
+    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_description/0.8.6-3.tar.gz";
+    name = "0.8.6-3.tar.gz";
+    sha256 = "fc5de78839960234d82b28541e497fba5ed8f85d81e6edaaeb6da0a4acb6db43";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-swri-prefix-tools";
-  version = "2.13.7-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_prefix_tools/2.13.7-1.tar.gz";
-    name = "2.13.7-1.tar.gz";
-    sha256 = "ce9e9b764d4c1177e9f6da484f289eeb7fb7cc25da943461ada9a595f8d2ccaf";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_prefix_tools/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "28022e478c8cbce5ff3f27fa88928608e66d21d2431d2ec1a1a42e748c7e9af7";
   };
 
   buildType = "catkin";

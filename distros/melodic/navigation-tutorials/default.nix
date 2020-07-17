@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, laser-scan-publisher-tutorial, navigation-stage, odometry-publisher-tutorial, point-cloud-publisher-tutorial, robot-setup-tf-tutorial, roomba-stage, simple-navigation-goals-tutorial }:
 buildRosPackage {
   pname = "ros-melodic-navigation-tutorials";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_tutorials-release/archive/release/melodic/navigation_tutorials/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "0dc79f75fcfaff0dd5de61b32502b6e657d2e5d2994252bd974989e8a1848793";
+    url = "https://github.com/ros-gbp/navigation_tutorials-release/archive/release/melodic/navigation_tutorials/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "c6c2d22bc24f5e224dbb15758e735708f490409a2318427b00d7ac673a4bf32d";
   };
 
   buildType = "catkin";

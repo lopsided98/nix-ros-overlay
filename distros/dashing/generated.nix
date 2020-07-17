@@ -476,6 +476,8 @@ self: super: {
 
  lex-node = self.callPackage ./lex-node {};
 
+ lgsvl-bridge = self.callPackage ./lgsvl-bridge {};
+
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
@@ -1107,6 +1109,16 @@ self: super: {
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
+
+ velodyne = self.callPackage ./velodyne {};
+
+ velodyne-driver = self.callPackage ./velodyne-driver {};
+
+ velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
+
+ velodyne-msgs = self.callPackage ./velodyne-msgs {};
+
+ velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

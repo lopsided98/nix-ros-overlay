@@ -1782,8 +1782,6 @@ self: super: {
 
  moveit-controller-manager-example = self.callPackage ./moveit-controller-manager-example {};
 
- moveit-experimental = self.callPackage ./moveit-experimental {};
-
  moveit-fake-controller-manager = self.callPackage ./moveit-fake-controller-manager {};
 
  moveit-kinematics = self.callPackage ./moveit-kinematics {};
@@ -1830,6 +1828,8 @@ self: super: {
 
  moveit-runtime = self.callPackage ./moveit-runtime {};
 
+ moveit-servo = self.callPackage ./moveit-servo {};
+
  moveit-setup-assistant = self.callPackage ./moveit-setup-assistant {};
 
  moveit-sim-controller = self.callPackage ./moveit-sim-controller {};
@@ -1845,6 +1845,8 @@ self: super: {
  mpc-local-planner-examples = self.callPackage ./mpc-local-planner-examples {};
 
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
+
+ mqtt-bridge = self.callPackage ./mqtt-bridge {};
 
  mrpt1 = self.callPackage ./mrpt1 {};
 
@@ -2235,6 +2237,8 @@ self: super: {
  pilz-robots = self.callPackage ./pilz-robots {};
 
  pilz-status-indicator-rqt = self.callPackage ./pilz-status-indicator-rqt {};
+
+ pilz-store-positions = self.callPackage ./pilz-store-positions {};
 
  pilz-testutils = self.callPackage ./pilz-testutils {};
 
@@ -3087,6 +3091,8 @@ self: super: {
  rtmros-common = self.callPackage ./rtmros-common {};
 
  rtmros-hironx = self.callPackage ./rtmros-hironx {};
+
+ rtmros-nextage = self.callPackage ./rtmros-nextage {};
 
  rviz = self.callPackage ./rviz {};
 

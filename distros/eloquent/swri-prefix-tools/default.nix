@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, python3Packages }:
 buildRosPackage {
   pname = "ros-eloquent-swri-prefix-tools";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_prefix_tools/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "831a9f4fa4eb6c0d84c345f04d4b97e9dc5469d5f172ec4945d142a1feadf81c";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_prefix_tools/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "1e9cb68af9cec6c0b815342c3116bb73ebd995479c573a33cfb5e37153559e63";
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ pythonPackages.psutil ];
+  propagatedBuildInputs = [ python3Packages.psutil ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

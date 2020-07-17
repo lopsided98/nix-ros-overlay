@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-kinetic-librealsense2";
-  version = "2.35.2-r2";
+  version = "2.36.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/kinetic/librealsense2/2.35.2-2.tar.gz";
-    name = "2.35.2-2.tar.gz";
-    sha256 = "87a3e6ee46cada6c2122abc5ff71fa52811ea34c69b6f35c78453e45515d66c2";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/kinetic/librealsense2/2.36.0-1.tar.gz";
+    name = "2.36.0-1.tar.gz";
+    sha256 = "17227090c8b22b3ba3b6017a99b3d3b2d86d488229f7839ab9c2edf00fca63a9";
   };
 
   buildType = "cmake";

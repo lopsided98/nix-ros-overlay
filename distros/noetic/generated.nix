@@ -20,6 +20,8 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ apriltag-ros = self.callPackage ./apriltag-ros {};
+
  assisted-teleop = self.callPackage ./assisted-teleop {};
 
  astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
@@ -138,11 +140,41 @@ self: super: {
 
  dataspeed-can-usb = self.callPackage ./dataspeed-can-usb {};
 
+ dataspeed-pds = self.callPackage ./dataspeed-pds {};
+
+ dataspeed-pds-can = self.callPackage ./dataspeed-pds-can {};
+
+ dataspeed-pds-msgs = self.callPackage ./dataspeed-pds-msgs {};
+
+ dataspeed-pds-rqt = self.callPackage ./dataspeed-pds-rqt {};
+
+ dataspeed-pds-scripts = self.callPackage ./dataspeed-pds-scripts {};
+
  dataspeed-ulc = self.callPackage ./dataspeed-ulc {};
 
  dataspeed-ulc-can = self.callPackage ./dataspeed-ulc-can {};
 
  dataspeed-ulc-msgs = self.callPackage ./dataspeed-ulc-msgs {};
+
+ dbw-fca = self.callPackage ./dbw-fca {};
+
+ dbw-fca-can = self.callPackage ./dbw-fca-can {};
+
+ dbw-fca-description = self.callPackage ./dbw-fca-description {};
+
+ dbw-fca-joystick-demo = self.callPackage ./dbw-fca-joystick-demo {};
+
+ dbw-fca-msgs = self.callPackage ./dbw-fca-msgs {};
+
+ dbw-mkz = self.callPackage ./dbw-mkz {};
+
+ dbw-mkz-can = self.callPackage ./dbw-mkz-can {};
+
+ dbw-mkz-description = self.callPackage ./dbw-mkz-description {};
+
+ dbw-mkz-joystick-demo = self.callPackage ./dbw-mkz-joystick-demo {};
+
+ dbw-mkz-msgs = self.callPackage ./dbw-mkz-msgs {};
 
  ddynamic-reconfigure = self.callPackage ./ddynamic-reconfigure {};
 
@@ -195,6 +227,8 @@ self: super: {
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamic-reconfigure = self.callPackage ./dynamic-reconfigure {};
+
+ dynamic-tf-publisher = self.callPackage ./dynamic-tf-publisher {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
@@ -314,6 +348,8 @@ self: super: {
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
 
+ hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
+
  hokuyo3d = self.callPackage ./hokuyo3d {};
 
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
@@ -337,6 +373,8 @@ self: super: {
  image-transport-plugins = self.callPackage ./image-transport-plugins {};
 
  image-view = self.callPackage ./image-view {};
+
+ image-view2 = self.callPackage ./image-view2 {};
 
  imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
 
@@ -378,6 +416,8 @@ self: super: {
 
  joystick-interrupt = self.callPackage ./joystick-interrupt {};
 
+ jsk-common = self.callPackage ./jsk-common {};
+
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
 
  jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
@@ -385,6 +425,12 @@ self: super: {
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ jsk-network-tools = self.callPackage ./jsk-network-tools {};
+
+ jsk-tilt-laser = self.callPackage ./jsk-tilt-laser {};
+
+ jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -405,6 +451,8 @@ self: super: {
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
  libdlib = self.callPackage ./libdlib {};
+
+ libfranka = self.callPackage ./libfranka {};
 
  libg2o = self.callPackage ./libg2o {};
 
@@ -529,6 +577,8 @@ self: super: {
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ multi-map-server = self.callPackage ./multi-map-server {};
 
  multi-object-tracking-lidar = self.callPackage ./multi-object-tracking-lidar {};
 
@@ -982,6 +1032,8 @@ self: super: {
 
  safety-limiter-msgs = self.callPackage ./safety-limiter-msgs {};
 
+ sainsmart-relay-usb = self.callPackage ./sainsmart-relay-usb {};
+
  sbpl = self.callPackage ./sbpl {};
 
  sbpl-lattice-planner = self.callPackage ./sbpl-lattice-planner {};
@@ -1132,6 +1184,8 @@ self: super: {
 
  turtle-tf2 = self.callPackage ./turtle-tf2 {};
 
+ turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
+
  turtlesim = self.callPackage ./turtlesim {};
 
  twist-mux = self.callPackage ./twist-mux {};
@@ -1193,6 +1247,8 @@ self: super: {
  velodyne-pcl = self.callPackage ./velodyne-pcl {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
+ virtual-force-publisher = self.callPackage ./virtual-force-publisher {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
 

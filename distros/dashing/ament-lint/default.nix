@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl,  }:
 buildRosPackage {
   pname = "ros-dashing-ament-lint";
-  version = "0.7.11-r1";
+  version = "0.7.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_lint/0.7.11-1.tar.gz";
-    name = "0.7.11-1.tar.gz";
-    sha256 = "cefed9626afc2ab9fe66e668ba900b812addddffbd321accf5340293b5c3d7ae";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/dashing/ament_lint/0.7.12-1.tar.gz";
+    name = "0.7.12-1.tar.gz";
+    sha256 = "e2dc547f24c5373a37dfca3d01dba2f7fcc11dd2dff503b6c63ee32ff2cb148c";
   };
 
   buildType = "ament_python";

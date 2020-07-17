@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, liblapack, moveit-core, pluginlib, roscpp, tf-conversions }:
 buildRosPackage {
   pname = "ros-melodic-nextage-ik-plugin";
-  version = "0.8.6-r2";
+  version = "0.8.6-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_ik_plugin/0.8.6-2.tar.gz";
-    name = "0.8.6-2.tar.gz";
-    sha256 = "3b0cc08f63314cf443553181e6482f742c30fb74b18750c213a8d62ea0fce0a3";
+    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_ik_plugin/0.8.6-3.tar.gz";
+    name = "0.8.6-3.tar.gz";
+    sha256 = "fc2949716c46013dfd7fd58720b47bfda645c0854145e72126d0366e201a0be6";
   };
 
   buildType = "catkin";

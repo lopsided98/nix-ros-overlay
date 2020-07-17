@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-swri-console-util";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_console_util/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "fb300214d4e942ca600e802335223813dc92b075f9a3d0e880b73c7403ea87d9";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_console_util/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "e5511f26b1da8afc02de460a8a6fc0c8bf0522a0b504837b0474d372d06f15f7";
   };
 
   buildType = "ament_cmake";

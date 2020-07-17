@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, fake-localization, map-server, move-base, stage-ros }:
 buildRosPackage {
   pname = "ros-melodic-roomba-stage";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_tutorials-release/archive/release/melodic/roomba_stage/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "3eb6f70b0f7abdfe001d4ca9ce4c387b8604bbd788a4c11ccd2d8a4c3a79e433";
+    url = "https://github.com/ros-gbp/navigation_tutorials-release/archive/release/melodic/roomba_stage/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "36ce4d4177e886417214af1136d05abf9c665f404b3ae0037020b0b2675693ea";
   };
 
   buildType = "catkin";
