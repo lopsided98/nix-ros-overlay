@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, moveit-core, moveit-kinematics, moveit-resources, moveit-ros-planning, pluginlib, roscpp, rostest, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-moveit-ros-move-group";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_move_group/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "dc44ae4e8f512f3d32e4bc83f4cac096b414a2d1d142edb3c51998bd9d26357e";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_move_group/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "ad99cd0211741773b9576f1bb236883c07b6ecdc9b8e905be3d754f98dac3ae0";
   };
 
   buildType = "catkin";

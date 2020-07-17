@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hironx-moveit-config, joint-state-publisher, moveit-planners, moveit-ros, moveit-ros-move-group, moveit-ros-planning-interface, moveit-ros-visualization, moveit-simple-controller-manager, nextage-ros-bridge, robot-state-publisher, rostest, trac-ik-kinematics-plugin }:
 buildRosPackage {
   pname = "ros-melodic-nextage-moveit-config";
-  version = "0.8.6-r2";
+  version = "0.8.6-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_moveit_config/0.8.6-2.tar.gz";
-    name = "0.8.6-2.tar.gz";
-    sha256 = "5a07e0b4721870aeff7a976dc04db078aad81a5faa0d69dad7959ebf59bf621b";
+    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_moveit_config/0.8.6-3.tar.gz";
+    name = "0.8.6-3.tar.gz";
+    sha256 = "f788c840073dd3e24b8bd1fe72976ff35ae5885b88439ece7c649af799f4ee80";
   };
 
   buildType = "catkin";

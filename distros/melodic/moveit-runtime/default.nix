@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-core, moveit-planners, moveit-plugins, moveit-ros-manipulation, moveit-ros-move-group, moveit-ros-perception, moveit-ros-planning, moveit-ros-planning-interface, moveit-ros-warehouse }:
 buildRosPackage {
   pname = "ros-melodic-moveit-runtime";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_runtime/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "85c5f93107c37e8a97659bd43e92a7e2587801168fce0e99c16d4ddab74abb6f";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_runtime/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "3340248ffc0695fe80a93d7ec9d5b2fdaee6cb96d279205a51bc07e7c7edfcfb";
   };
 
   buildType = "catkin";

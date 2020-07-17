@@ -54,6 +54,8 @@ self: super: {
 
  agni-tf-tools = self.callPackage ./agni-tf-tools {};
 
+ agv-msgs = self.callPackage ./agv-msgs {};
+
  agvs-common = self.callPackage ./agvs-common {};
 
  agvs-control = self.callPackage ./agvs-control {};
@@ -2979,6 +2981,18 @@ self: super: {
  phidgets-imu = self.callPackage ./phidgets-imu {};
 
  phidgets-msgs = self.callPackage ./phidgets-msgs {};
+
+ phm-hazard-rate-calculation = self.callPackage ./phm-hazard-rate-calculation {};
+
+ phm-msgs = self.callPackage ./phm-msgs {};
+
+ phm-reliability-calculation = self.callPackage ./phm-reliability-calculation {};
+
+ phm-robot-task-completion = self.callPackage ./phm-robot-task-completion {};
+
+ phm-start = self.callPackage ./phm-start {};
+
+ phm-tools = self.callPackage ./phm-tools {};
 
  pid = self.callPackage ./pid {};
 

@@ -294,6 +294,8 @@ self: super: {
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
+ hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
+
  image-common = self.callPackage ./image-common {};
 
  image-geometry = self.callPackage ./image-geometry {};
@@ -345,6 +347,8 @@ self: super: {
  launch-xml = self.callPackage ./launch-xml {};
 
  launch-yaml = self.callPackage ./launch-yaml {};
+
+ lgsvl-bridge = self.callPackage ./lgsvl-bridge {};
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
@@ -440,6 +444,8 @@ self: super: {
 
  nodl-python = self.callPackage ./nodl-python {};
 
+ nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
+
  octomap = self.callPackage ./octomap {};
 
  octomap-msgs = self.callPackage ./octomap-msgs {};
@@ -496,6 +502,8 @@ self: super: {
 
  pluginlib = self.callPackage ./pluginlib {};
 
+ py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
+
  python-cmake-module = self.callPackage ./python-cmake-module {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
@@ -515,6 +523,8 @@ self: super: {
  quality-of-service-demo-cpp = self.callPackage ./quality-of-service-demo-cpp {};
 
  quality-of-service-demo-py = self.callPackage ./quality-of-service-demo-py {};
+
+ random-numbers = self.callPackage ./random-numbers {};
 
  rcl = self.callPackage ./rcl {};
 
@@ -595,6 +605,8 @@ self: super: {
  ros2bag = self.callPackage ./ros2bag {};
 
  ros2cli = self.callPackage ./ros2cli {};
+
+ ros2cli-common-extensions = self.callPackage ./ros2cli-common-extensions {};
 
  ros2component = self.callPackage ./ros2component {};
 
@@ -766,6 +778,8 @@ self: super: {
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
+ sbg-driver = self.callPackage ./sbg-driver {};
+
  sdl2-vendor = self.callPackage ./sdl2-vendor {};
 
  self-test = self.callPackage ./self-test {};
@@ -775,6 +789,10 @@ self: super: {
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
+
+ slam-toolbox = self.callPackage ./slam-toolbox {};
+
+ sophus = self.callPackage ./sophus {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
@@ -897,6 +915,16 @@ self: super: {
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
+
+ velodyne = self.callPackage ./velodyne {};
+
+ velodyne-driver = self.callPackage ./velodyne-driver {};
+
+ velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
+
+ velodyne-msgs = self.callPackage ./velodyne-msgs {};
+
+ velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

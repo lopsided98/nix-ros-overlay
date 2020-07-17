@@ -444,6 +444,8 @@ self: super: {
 
  launch-yaml = self.callPackage ./launch-yaml {};
 
+ lgsvl-bridge = self.callPackage ./lgsvl-bridge {};
+
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
@@ -1051,6 +1053,16 @@ self: super: {
  v4l2-camera = self.callPackage ./v4l2-camera {};
 
  velocity-smoother = self.callPackage ./velocity-smoother {};
+
+ velodyne = self.callPackage ./velodyne {};
+
+ velodyne-driver = self.callPackage ./velodyne-driver {};
+
+ velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
+
+ velodyne-msgs = self.callPackage ./velodyne-msgs {};
+
+ velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
 

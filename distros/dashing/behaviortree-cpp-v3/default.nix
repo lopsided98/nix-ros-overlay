@@ -2,19 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, cppzmq, ncurses, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cppzmq }:
 buildRosPackage {
   pname = "ros-dashing-behaviortree-cpp-v3";
-  version = "3.5.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/dashing/behaviortree_cpp_v3/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "05db4b874a44dcbdf1d5014edea6dcb648ffad20eb91a079cc319de4ce836833";
+    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/dashing/behaviortree_cpp_v3/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "55902e5c1e718b02a0abcfa40dc5278485bc59a1a14da9d2f466767ae1c84a2f";
   };
 
-  buildType = "catkin";
-  propagatedBuildInputs = [ cppzmq ncurses rclcpp ];
+  buildType = "ament_cmake";
+  checkInputs = [ ament-cmake-gtest ];
+  propagatedBuildInputs = [ cppzmq ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

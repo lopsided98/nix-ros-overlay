@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, diagnostic-msgs, geographic-msgs, geometry-msgs, geos, gps-common, libyamlcpp, marti-nav-msgs, nodelet, pkg-config, proj, pythonPackages, roscpp, rospy, rostest, sensor-msgs, swri-math-util, swri-nodelet, swri-roscpp, swri-yaml-util, tf, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-swri-transform-util";
-  version = "2.13.7-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_transform_util/2.13.7-1.tar.gz";
-    name = "2.13.7-1.tar.gz";
-    sha256 = "56015990a895a067705e62289be7010c0ea17f2b8723592d57722eee35b60429";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_transform_util/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "df210c6721b8727eecf474e09e03656ed82e484d78bd3d942e7c4b983b653283";
   };
 
   buildType = "catkin";
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ boost cv-bridge diagnostic-msgs geographic-msgs geometry-msgs geos gps-common libyamlcpp marti-nav-msgs nodelet proj roscpp rospy sensor-msgs swri-math-util swri-nodelet swri-roscpp swri-yaml-util tf topic-tools ];
+  propagatedBuildInputs = [ boost cv-bridge diagnostic-msgs geographic-msgs geometry-msgs geos gps-common libyamlcpp marti-nav-msgs nodelet proj pythonPackages.numpy roscpp rospy sensor-msgs swri-math-util swri-nodelet swri-roscpp swri-yaml-util tf topic-tools ];
   nativeBuildInputs = [ catkin pkg-config pythonPackages.setuptools ];
 
   meta = {

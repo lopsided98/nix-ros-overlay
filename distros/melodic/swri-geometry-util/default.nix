@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, cv-bridge, eigen, geos, pkg-config, roscpp, rostest, tf }:
 buildRosPackage {
   pname = "ros-melodic-swri-geometry-util";
-  version = "2.13.7-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_geometry_util/2.13.7-1.tar.gz";
-    name = "2.13.7-1.tar.gz";
-    sha256 = "9b42120111aa3dd5c48efe01113e4f5298650c3abc125f3c34a480d1e6e00892";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_geometry_util/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "b70981370edbefe2dcae962223447cb0daea17b531b1d29f2fe48331c15f6fee";
   };
 
   buildType = "catkin";

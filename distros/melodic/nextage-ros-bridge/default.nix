@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ar-track-alvar, catkin, hironx-ros-bridge, nextage-description, roslint, rostest, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-melodic-nextage-ros-bridge";
-  version = "0.8.6-r2";
+  version = "0.8.6-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_ros_bridge/0.8.6-2.tar.gz";
-    name = "0.8.6-2.tar.gz";
-    sha256 = "5014d98f0b9d5cf399ba28e4d5e6ad295fa53a27f0c33513fe8db544e9661d3c";
+    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_ros_bridge/0.8.6-3.tar.gz";
+    name = "0.8.6-3.tar.gz";
+    sha256 = "f727161636ea80db90488a1fd7d46ace9735585285f3af2cd6a8dd4fdf846f2f";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, code-coverage, eigen-conversions, kdl-conversions, moveit-core, moveit-msgs, moveit-ros-move-group, moveit-ros-planning, moveit-ros-planning-interface, orocos-kdl, pilz-extensions, pilz-industrial-motion-testutils, pilz-msgs, pilz-testutils, pluginlib, prbt-moveit-config, prbt-pg70-support, prbt-support, roscpp, rostest, rosunit, tf2, tf2-eigen, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pilz-trajectory-generation";
-  version = "0.4.10-r1";
+  version = "0.4.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_trajectory_generation/0.4.10-1.tar.gz";
-    name = "0.4.10-1.tar.gz";
-    sha256 = "2ed5cdd473ec158b703757562794c8981cdf6a44c290f776d6307a6b807dc42c";
+    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_trajectory_generation/0.4.11-1.tar.gz";
+    name = "0.4.11-1.tar.gz";
+    sha256 = "dd9eb39d48554378c2a80e3e15a00106fcdb3356dfed82b85b2e364189276711";
   };
 
   buildType = "catkin";
