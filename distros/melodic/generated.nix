@@ -3532,6 +3532,8 @@ self: super: {
 
  ubnt-airos-tools = self.callPackage ./ubnt-airos-tools {};
 
+ udp-com = self.callPackage ./udp-com {};
+
  um6 = self.callPackage ./um6 {};
 
  um7 = self.callPackage ./um7 {};

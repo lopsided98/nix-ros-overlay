@@ -3746,8 +3746,6 @@ self: super: {
 
  ros-core = self.callPackage ./ros-core {};
 
- ros-cvb-camera-driver = self.callPackage ./ros-cvb-camera-driver {};
-
  ros-emacs-utils = self.callPackage ./ros-emacs-utils {};
 
  ros-environment = self.callPackage ./ros-environment {};
@@ -3795,8 +3793,6 @@ self: super: {
  rosbag-migration-rule = self.callPackage ./rosbag-migration-rule {};
 
  rosbag-pandas = self.callPackage ./rosbag-pandas {};
-
- rosbag-snapshot = self.callPackage ./rosbag-snapshot {};
 
  rosbag-snapshot-msgs = self.callPackage ./rosbag-snapshot-msgs {};
 
@@ -4329,8 +4325,6 @@ self: super: {
  sick-visionary-t-driver = self.callPackage ./sick-visionary-t-driver {};
 
  sicktoolbox = self.callPackage ./sicktoolbox {};
-
- sicktoolbox-wrapper = self.callPackage ./sicktoolbox-wrapper {};
 
  simple-arm = self.callPackage ./simple-arm {};
 

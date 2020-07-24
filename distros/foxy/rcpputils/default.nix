@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcutils }:
 buildRosPackage {
   pname = "ros-foxy-rcpputils";
-  version = "1.1.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/foxy/rcpputils/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "6ba6b5beacc1778a3381d391f5c36100f93477e9897159dd774c81e06247e1c0";
+    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/foxy/rcpputils/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "35d1f87ccc910299f08243f4bdc75daebeb8c8101a983a05d421d4f58643a00e";
   };
 
   buildType = "ament_cmake";

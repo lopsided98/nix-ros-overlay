@@ -226,6 +226,8 @@ self: super: {
 
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
+ dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
+
  ecl-build = self.callPackage ./ecl-build {};
 
  ecl-command-line = self.callPackage ./ecl-command-line {};
@@ -385,6 +387,8 @@ self: super: {
  gpsd-client = self.callPackage ./gpsd-client {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
+
+ hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  image-common = self.callPackage ./image-common {};
 

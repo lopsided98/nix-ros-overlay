@@ -76,6 +76,8 @@ self: super: {
 
  catkin = self.callPackage ./catkin {};
 
+ catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
+
  class-loader = self.callPackage ./class-loader {};
 
  clear-costmap-recovery = self.callPackage ./clear-costmap-recovery {};
@@ -229,6 +231,8 @@ self: super: {
  dynamic-reconfigure = self.callPackage ./dynamic-reconfigure {};
 
  dynamic-tf-publisher = self.callPackage ./dynamic-tf-publisher {};
+
+ dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
@@ -755,6 +759,8 @@ self: super: {
  power-msgs = self.callPackage ./power-msgs {};
 
  ps3joy = self.callPackage ./ps3joy {};
+
+ py-trees-msgs = self.callPackage ./py-trees-msgs {};
 
  pybind11-catkin = self.callPackage ./pybind11-catkin {};
 
