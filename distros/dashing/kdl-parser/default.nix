@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, orocos-kdl, tinyxml, tinyxml-vendor, urdf, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-dashing-kdl-parser";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kdl_parser-release/archive/release/dashing/kdl_parser/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "d232172cd462fe64bd4ce7fd2a63782f25914f50f4fcb73dbe597e0bf7fbc758";
+    url = "https://github.com/ros2-gbp/kdl_parser-release/archive/release/dashing/kdl_parser/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "e72ec0c0999c1a7ea6cca23d256eff1b960d929aad2b4b197ee82d18c4730cc4";
   };
 
   buildType = "ament_cmake";

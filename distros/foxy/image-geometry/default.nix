@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, opencv3, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-image-geometry";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/foxy/image_geometry/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "c11672af3abc4911d5ccf24cbee2ed5501163946b54bc89ceadc26fc7ec9dba6";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/foxy/image_geometry/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "d0937df243548f57c6c68f3f753a0f4e72c9371d1ad6b772ad43664dd4a04156";
   };
 
   buildType = "ament_cmake";

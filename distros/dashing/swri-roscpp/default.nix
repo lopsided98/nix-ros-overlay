@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, diagnostic-updater, gtest, marti-common-msgs, nav-msgs, rclcpp, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-dashing-swri-roscpp";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_roscpp/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "896655e4463e21399e53f139427d2379a561ad49c283938c134bc841b3924748";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_roscpp/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "96e96b7a3653f4da4a24ab6ba93aef6683801f9404b1dac8955b0df6968dbd4b";
   };
 
   buildType = "ament_cmake";

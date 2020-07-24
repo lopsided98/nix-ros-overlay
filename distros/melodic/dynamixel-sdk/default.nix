@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-melodic-dynamixel-sdk";
-  version = "3.7.21-r1";
+  version = "3.7.31-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/DynamixelSDK-release/archive/release/melodic/dynamixel_sdk/3.7.21-1.tar.gz";
-    name = "3.7.21-1.tar.gz";
-    sha256 = "6298842f665570ec035fbe27e02900b4018a4ff25185b73645c7143a87dee50a";
+    url = "https://github.com/ROBOTIS-GIT-release/DynamixelSDK-release/archive/release/melodic/dynamixel_sdk/3.7.31-1.tar.gz";
+    name = "3.7.31-1.tar.gz";
+    sha256 = "949d7eca39b060ec04eb87a2d52e892b4eee48a6e90bcbb204cb2fd935f7771d";
   };
 
   buildType = "catkin";

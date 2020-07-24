@@ -950,6 +950,8 @@ self: super: {
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
+ serial-driver = self.callPackage ./serial-driver {};
+
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};

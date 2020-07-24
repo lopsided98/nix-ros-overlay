@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-dynamixel-sdk";
-  version = "3.7.21-r1";
+  version = "3.7.31-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/DynamixelSDK-release/archive/release/kinetic/dynamixel_sdk/3.7.21-1.tar.gz";
-    name = "3.7.21-1.tar.gz";
-    sha256 = "aac70fdfbf914d7d74ac03b05d27cddd234666f0b763338bb2595d6b40c7c131";
+    url = "https://github.com/ROBOTIS-GIT-release/DynamixelSDK-release/archive/release/kinetic/dynamixel_sdk/3.7.31-1.tar.gz";
+    name = "3.7.31-1.tar.gz";
+    sha256 = "b999544df975f9e0e0df3719c6fd0f6b7cbb6d91347461f725055f5bb0a0f289";
   };
 
   buildType = "catkin";

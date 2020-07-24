@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-dynamixel-sdk";
-  version = "3.7.20-r1";
+  version = "3.7.30-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/dynamixel_sdk-release/archive/release/dashing/dynamixel_sdk/3.7.20-1.tar.gz";
-    name = "3.7.20-1.tar.gz";
-    sha256 = "3414e7a3a2f70fdd8b1e2d64a1befd58c9cc9df73834579b41024c80536bb078";
+    url = "https://github.com/robotis-ros2-release/dynamixel_sdk-release/archive/release/dashing/dynamixel_sdk/3.7.30-1.tar.gz";
+    name = "3.7.30-1.tar.gz";
+    sha256 = "66cbfa21ac459da1c83a344434d1b6d5791298c80bbee2fe320f91b5aee5bb9a";
   };
 
   buildType = "ament_cmake";

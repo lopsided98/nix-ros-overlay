@@ -146,6 +146,8 @@ self: super: {
 
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
+ cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
+
  class-loader = self.callPackage ./class-loader {};
 
  common-interfaces = self.callPackage ./common-interfaces {};
@@ -205,6 +207,30 @@ self: super: {
  dwb-plugins = self.callPackage ./dwb-plugins {};
 
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
+
+ dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
+
+ ecl-build = self.callPackage ./ecl-build {};
+
+ ecl-config = self.callPackage ./ecl-config {};
+
+ ecl-console = self.callPackage ./ecl-console {};
+
+ ecl-converters-lite = self.callPackage ./ecl-converters-lite {};
+
+ ecl-errors = self.callPackage ./ecl-errors {};
+
+ ecl-io = self.callPackage ./ecl-io {};
+
+ ecl-license = self.callPackage ./ecl-license {};
+
+ ecl-lite = self.callPackage ./ecl-lite {};
+
+ ecl-sigslots-lite = self.callPackage ./ecl-sigslots-lite {};
+
+ ecl-time-lite = self.callPackage ./ecl-time-lite {};
+
+ ecl-tools = self.callPackage ./ecl-tools {};
 
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
@@ -358,8 +384,6 @@ self: super: {
 
  libphidget22 = self.callPackage ./libphidget22 {};
 
- librealsense2 = self.callPackage ./librealsense2 {};
-
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
@@ -502,6 +526,10 @@ self: super: {
 
  pluginlib = self.callPackage ./pluginlib {};
 
+ pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
+
+ py-trees-ros = self.callPackage ./py-trees-ros {};
+
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
  python-cmake-module = self.callPackage ./python-cmake-module {};
@@ -550,6 +578,8 @@ self: super: {
 
  rclcpp-action = self.callPackage ./rclcpp-action {};
 
+ rclcpp-cascade-lifecycle = self.callPackage ./rclcpp-cascade-lifecycle {};
+
  rclcpp-components = self.callPackage ./rclcpp-components {};
 
  rclcpp-lifecycle = self.callPackage ./rclcpp-lifecycle {};
@@ -559,14 +589,6 @@ self: super: {
  rcpputils = self.callPackage ./rcpputils {};
 
  rcutils = self.callPackage ./rcutils {};
-
- realsense-examples = self.callPackage ./realsense-examples {};
-
- realsense-msgs = self.callPackage ./realsense-msgs {};
-
- realsense-node = self.callPackage ./realsense-node {};
-
- realsense-ros = self.callPackage ./realsense-ros {};
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
@@ -591,6 +613,8 @@ self: super: {
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
+
+ robot-localization = self.callPackage ./robot-localization {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
@@ -645,6 +669,8 @@ self: super: {
  ros-core = self.callPackage ./ros-core {};
 
  ros-environment = self.callPackage ./ros-environment {};
+
+ ros-ign = self.callPackage ./ros-ign {};
 
  ros-testing = self.callPackage ./ros-testing {};
 
@@ -713,6 +739,8 @@ self: super: {
  rosidl-typesupport-introspection-c = self.callPackage ./rosidl-typesupport-introspection-c {};
 
  rosidl-typesupport-introspection-cpp = self.callPackage ./rosidl-typesupport-introspection-cpp {};
+
+ rplidar-ros = self.callPackage ./rplidar-ros {};
 
  rpyutils = self.callPackage ./rpyutils {};
 

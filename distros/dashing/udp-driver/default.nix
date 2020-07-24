@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, rclcpp, rclcpp-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-udp-driver";
-  version = "0.0.4-r3";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/transport_drivers-release/archive/release/dashing/udp_driver/0.0.4-3.tar.gz";
-    name = "0.0.4-3.tar.gz";
-    sha256 = "150a7a7a507281fe163b5a2b4fa01bb1fc3da7719b75fabbf1036d78e3b9e76b";
+    url = "https://github.com/ros-drivers-gbp/transport_drivers-release/archive/release/dashing/udp_driver/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "3088da3d61a32e08496698a38c082a3f6c217f2a31db1cdc753f2cdb5601e4f5";
   };
 
   buildType = "ament_cmake";

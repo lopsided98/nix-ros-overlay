@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, rclcpp-lifecycle, system-modes }:
 buildRosPackage {
   pname = "ros-foxy-system-modes-examples";
-  version = "0.2.1-r2";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes_examples/0.2.1-2.tar.gz";
-    name = "0.2.1-2.tar.gz";
-    sha256 = "dcf3193e9aa441a03471fd578a30beb92fa3409ff92fd0c6487cdb9f5bfdc137";
+    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes_examples/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "2d6a22e7700346923b22021d6295bbeb5be28e9400c98d9e417e48de9023514d";
   };
 
   buildType = "ament_cmake";
