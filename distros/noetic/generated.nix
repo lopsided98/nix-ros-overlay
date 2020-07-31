@@ -26,6 +26,12 @@ self: super: {
 
  astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
 
+ audibot = self.callPackage ./audibot {};
+
+ audibot-description = self.callPackage ./audibot-description {};
+
+ audibot-gazebo = self.callPackage ./audibot-gazebo {};
+
  audio-capture = self.callPackage ./audio-capture {};
 
  audio-common = self.callPackage ./audio-common {};
@@ -226,6 +232,10 @@ self: super: {
 
  dwb-plugins = self.callPackage ./dwb-plugins {};
 
+ dynamic-graph = self.callPackage ./dynamic-graph {};
+
+ dynamic-graph-python = self.callPackage ./dynamic-graph-python {};
+
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamic-reconfigure = self.callPackage ./dynamic-reconfigure {};
@@ -236,25 +246,71 @@ self: super: {
 
  ecl-build = self.callPackage ./ecl-build {};
 
+ ecl-command-line = self.callPackage ./ecl-command-line {};
+
+ ecl-concepts = self.callPackage ./ecl-concepts {};
+
  ecl-config = self.callPackage ./ecl-config {};
 
  ecl-console = self.callPackage ./ecl-console {};
 
+ ecl-containers = self.callPackage ./ecl-containers {};
+
+ ecl-converters = self.callPackage ./ecl-converters {};
+
  ecl-converters-lite = self.callPackage ./ecl-converters-lite {};
+
+ ecl-core = self.callPackage ./ecl-core {};
+
+ ecl-core-apps = self.callPackage ./ecl-core-apps {};
+
+ ecl-devices = self.callPackage ./ecl-devices {};
+
+ ecl-eigen = self.callPackage ./ecl-eigen {};
 
  ecl-errors = self.callPackage ./ecl-errors {};
 
+ ecl-exceptions = self.callPackage ./ecl-exceptions {};
+
+ ecl-filesystem = self.callPackage ./ecl-filesystem {};
+
+ ecl-formatters = self.callPackage ./ecl-formatters {};
+
+ ecl-geometry = self.callPackage ./ecl-geometry {};
+
  ecl-io = self.callPackage ./ecl-io {};
+
+ ecl-ipc = self.callPackage ./ecl-ipc {};
 
  ecl-license = self.callPackage ./ecl-license {};
 
+ ecl-linear-algebra = self.callPackage ./ecl-linear-algebra {};
+
  ecl-lite = self.callPackage ./ecl-lite {};
 
+ ecl-math = self.callPackage ./ecl-math {};
+
+ ecl-mpl = self.callPackage ./ecl-mpl {};
+
+ ecl-sigslots = self.callPackage ./ecl-sigslots {};
+
  ecl-sigslots-lite = self.callPackage ./ecl-sigslots-lite {};
+
+ ecl-statistics = self.callPackage ./ecl-statistics {};
+
+ ecl-streams = self.callPackage ./ecl-streams {};
+
+ ecl-threads = self.callPackage ./ecl-threads {};
+
+ ecl-time = self.callPackage ./ecl-time {};
 
  ecl-time-lite = self.callPackage ./ecl-time-lite {};
 
  ecl-tools = self.callPackage ./ecl-tools {};
+
+ ecl-type-traits = self.callPackage ./ecl-type-traits {};
+
+ ecl-utilities = self.callPackage ./ecl-utilities {};
 
  effort-controllers = self.callPackage ./effort-controllers {};
 
@@ -276,7 +332,13 @@ self: super: {
 
  find-object-2d = self.callPackage ./find-object-2d {};
 
+ fkie-master-discovery = self.callPackage ./fkie-master-discovery {};
+
+ fkie-master-sync = self.callPackage ./fkie-master-sync {};
+
  fkie-message-filters = self.callPackage ./fkie-message-filters {};
+
+ fkie-multimaster = self.callPackage ./fkie-multimaster {};
 
  fmi-adapter = self.callPackage ./fmi-adapter {};
 
@@ -490,6 +552,10 @@ self: super: {
 
  map-server = self.callPackage ./map-server {};
 
+ mapviz = self.callPackage ./mapviz {};
+
+ mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
@@ -586,6 +652,8 @@ self: super: {
 
  multi-object-tracking-lidar = self.callPackage ./multi-object-tracking-lidar {};
 
+ multires-image = self.callPackage ./multires-image {};
+
  multisense = self.callPackage ./multisense {};
 
  multisense-bringup = self.callPackage ./multisense-bringup {};
@@ -634,6 +702,8 @@ self: super: {
 
  neonavigation-rviz-plugins = self.callPackage ./neonavigation-rviz-plugins {};
 
+ nerian-stereo = self.callPackage ./nerian-stereo {};
+
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nodelet = self.callPackage ./nodelet {};
@@ -663,6 +733,8 @@ self: super: {
  octovis = self.callPackage ./octovis {};
 
  ompl = self.callPackage ./ompl {};
+
+ open3d-conversions = self.callPackage ./open3d-conversions {};
 
  open-karto = self.callPackage ./open-karto {};
 
@@ -760,6 +832,8 @@ self: super: {
 
  ps3joy = self.callPackage ./ps3joy {};
 
+ py-trees = self.callPackage ./py-trees {};
+
  py-trees-msgs = self.callPackage ./py-trees-msgs {};
 
  pybind11-catkin = self.callPackage ./pybind11-catkin {};
@@ -825,6 +899,8 @@ self: super: {
  ros-emacs-utils = self.callPackage ./ros-emacs-utils {};
 
  ros-environment = self.callPackage ./ros-environment {};
+
+ ros-ign = self.callPackage ./ros-ign {};
 
  ros-tutorials = self.callPackage ./ros-tutorials {};
 
@@ -1169,6 +1245,8 @@ self: super: {
  tf2-tools = self.callPackage ./tf2-tools {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
+
+ tile-map = self.callPackage ./tile-map {};
 
  topic-tools = self.callPackage ./topic-tools {};
 

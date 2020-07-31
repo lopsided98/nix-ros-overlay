@@ -150,6 +150,8 @@ self: super: {
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
+ camera-calibration = self.callPackage ./camera-calibration {};
+
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
@@ -221,6 +223,8 @@ self: super: {
  demo-nodes-cpp-native = self.callPackage ./demo-nodes-cpp-native {};
 
  demo-nodes-py = self.callPackage ./demo-nodes-py {};
+
+ depth-image-proc = self.callPackage ./depth-image-proc {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
@@ -426,11 +430,21 @@ self: super: {
 
  image-geometry = self.callPackage ./image-geometry {};
 
+ image-pipeline = self.callPackage ./image-pipeline {};
+
+ image-proc = self.callPackage ./image-proc {};
+
+ image-publisher = self.callPackage ./image-publisher {};
+
+ image-rotate = self.callPackage ./image-rotate {};
+
  image-tools = self.callPackage ./image-tools {};
 
  image-transport = self.callPackage ./image-transport {};
 
  image-transport-plugins = self.callPackage ./image-transport-plugins {};
+
+ image-view = self.callPackage ./image-view {};
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
@@ -975,6 +989,8 @@ self: super: {
  std-msgs = self.callPackage ./std-msgs {};
 
  std-srvs = self.callPackage ./std-srvs {};
+
+ stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
 

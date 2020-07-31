@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, cv-bridge, image-geometry, message-filters, python3Packages, pythonPackages, rclpy, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-foxy-camera-calibration";
-  version = "2.1.1-r1";
+  version = "2.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/camera_calibration/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "9d6cd1f240821c8e135e6eeb9c171d1507fe43c3c481225e17e28c1cba477f99";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/camera_calibration/2.2.0-2.tar.gz";
+    name = "2.2.0-2.tar.gz";
+    sha256 = "026126168e71465ea03c2c8234f9d3791f510c949ebb0b42b262e62f0650ebf1";
   };
 
   buildType = "ament_python";
