@@ -64,6 +64,8 @@ postPatchHooks+=(_catkinPostPatchHook)
 
 _catkinPreConfigureHook() {
   cmakeFlags+=" -DCATKIN_ENABLE_TESTING=${doCheck:-OFF}"
+  # Don't try to detect Debian/Ubuntu when sandbox is disabled
+  cmakeFlags+=" -DSETUPTOOLS_DEB_LAYOUT=OFF"
 }
 preConfigureHooks+=(_catkinPreConfigureHook)
 
