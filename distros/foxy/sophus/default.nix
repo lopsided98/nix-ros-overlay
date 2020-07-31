@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen }:
 buildRosPackage {
   pname = "ros-foxy-sophus";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/sophus-release/archive/release/foxy/sophus/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "a89b3dcf9f6149d18062537ecd7bbfa48573b73c7d912bc43c12e0beff173f28";
+    url = "https://github.com/yujinrobot-release/sophus-release/archive/release/foxy/sophus/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "99781189c8556ca3e7e369b588103964bc1866e55a875b26aac9efb311f1b880";
   };
 
   buildType = "cmake";

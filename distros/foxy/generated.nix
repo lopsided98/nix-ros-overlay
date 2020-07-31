@@ -166,6 +166,8 @@ self: super: {
 
  control-msgs = self.callPackage ./control-msgs {};
 
+ control-toolbox = self.callPackage ./control-toolbox {};
+
  costmap-queue = self.callPackage ./costmap-queue {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -206,31 +208,83 @@ self: super: {
 
  dwb-plugins = self.callPackage ./dwb-plugins {};
 
+ dynamic-graph = self.callPackage ./dynamic-graph {};
+
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
+ ecl-command-line = self.callPackage ./ecl-command-line {};
+
+ ecl-concepts = self.callPackage ./ecl-concepts {};
+
  ecl-config = self.callPackage ./ecl-config {};
 
  ecl-console = self.callPackage ./ecl-console {};
 
+ ecl-containers = self.callPackage ./ecl-containers {};
+
+ ecl-converters = self.callPackage ./ecl-converters {};
+
  ecl-converters-lite = self.callPackage ./ecl-converters-lite {};
+
+ ecl-core = self.callPackage ./ecl-core {};
+
+ ecl-core-apps = self.callPackage ./ecl-core-apps {};
+
+ ecl-devices = self.callPackage ./ecl-devices {};
+
+ ecl-eigen = self.callPackage ./ecl-eigen {};
 
  ecl-errors = self.callPackage ./ecl-errors {};
 
+ ecl-exceptions = self.callPackage ./ecl-exceptions {};
+
+ ecl-filesystem = self.callPackage ./ecl-filesystem {};
+
+ ecl-formatters = self.callPackage ./ecl-formatters {};
+
+ ecl-geometry = self.callPackage ./ecl-geometry {};
+
  ecl-io = self.callPackage ./ecl-io {};
+
+ ecl-ipc = self.callPackage ./ecl-ipc {};
 
  ecl-license = self.callPackage ./ecl-license {};
 
+ ecl-linear-algebra = self.callPackage ./ecl-linear-algebra {};
+
  ecl-lite = self.callPackage ./ecl-lite {};
 
+ ecl-manipulators = self.callPackage ./ecl-manipulators {};
+
+ ecl-math = self.callPackage ./ecl-math {};
+
+ ecl-mobile-robot = self.callPackage ./ecl-mobile-robot {};
+
+ ecl-mpl = self.callPackage ./ecl-mpl {};
+
+ ecl-sigslots = self.callPackage ./ecl-sigslots {};
+
  ecl-sigslots-lite = self.callPackage ./ecl-sigslots-lite {};
+
+ ecl-statistics = self.callPackage ./ecl-statistics {};
+
+ ecl-streams = self.callPackage ./ecl-streams {};
+
+ ecl-threads = self.callPackage ./ecl-threads {};
+
+ ecl-time = self.callPackage ./ecl-time {};
 
  ecl-time-lite = self.callPackage ./ecl-time-lite {};
 
  ecl-tools = self.callPackage ./ecl-tools {};
+
+ ecl-type-traits = self.callPackage ./ecl-type-traits {};
+
+ ecl-utilities = self.callPackage ./ecl-utilities {};
 
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
@@ -384,6 +438,8 @@ self: super: {
 
  libphidget22 = self.callPackage ./libphidget22 {};
 
+ librealsense2 = self.callPackage ./librealsense2 {};
+
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
@@ -469,6 +525,8 @@ self: super: {
  nodl-python = self.callPackage ./nodl-python {};
 
  nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
+
+ object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
  octomap = self.callPackage ./octomap {};
 
@@ -589,6 +647,14 @@ self: super: {
  rcpputils = self.callPackage ./rcpputils {};
 
  rcutils = self.callPackage ./rcutils {};
+
+ realsense-examples = self.callPackage ./realsense-examples {};
+
+ realsense-msgs = self.callPackage ./realsense-msgs {};
+
+ realsense-node = self.callPackage ./realsense-node {};
+
+ realsense-ros = self.callPackage ./realsense-ros {};
 
  realtime-tools = self.callPackage ./realtime-tools {};
 

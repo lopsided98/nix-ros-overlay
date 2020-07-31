@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, glfw3, gtk3, libGL, libGLU, libusb1, linuxHeaders, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-foxy-librealsense2";
-  version = "2.34.0-r1";
+  version = "2.34.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/librealsense-release/archive/release/foxy/librealsense2/2.34.0-1.tar.gz";
-    name = "2.34.0-1.tar.gz";
-    sha256 = "503027762eade3b295496ed35c3fd9c2076f06fa4ed3d763a40bc71c83a1cab9";
+    url = "https://github.com/ros2-gbp/librealsense-release/archive/release/foxy/librealsense2/2.34.0-3.tar.gz";
+    name = "2.34.0-3.tar.gz";
+    sha256 = "3fb5217dd0bdbecce6dfd3db2bbcce25b843280cf7fc3b6ef2479d9222591d07";
   };
 
   buildType = "ament_cmake";

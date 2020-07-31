@@ -652,6 +652,8 @@ self: super: {
 
  dynamic-graph = self.callPackage ./dynamic-graph {};
 
+ dynamic-graph-python = self.callPackage ./dynamic-graph-python {};
+
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamic-reconfigure = self.callPackage ./dynamic-reconfigure {};
@@ -2069,6 +2071,12 @@ self: super: {
  odometry-publisher-tutorial = self.callPackage ./odometry-publisher-tutorial {};
 
  odva-ethernetip = self.callPackage ./odva-ethernetip {};
+
+ omnibase-control = self.callPackage ./omnibase-control {};
+
+ omnibase-description = self.callPackage ./omnibase-description {};
+
+ omnibase-gazebo = self.callPackage ./omnibase-gazebo {};
 
  ompl = self.callPackage ./ompl {};
 

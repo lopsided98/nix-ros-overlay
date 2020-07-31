@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, can-msgs, catkin, dataspeed-can-msg-filters, dataspeed-can-usb, dataspeed-pds-msgs, message-filters, nodelet, roscpp, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-melodic-dataspeed-pds-can";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_can/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "c8bcdd70d393ceb84e5f3c87580f1faf3ecbde3b5ef3bee1806582e1d2389e5b";
+    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_can/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "d4030fa958f78ced46d62ca11f471a888c4c30cb4415cfa1470110c3b270891c";
   };
 
   buildType = "catkin";

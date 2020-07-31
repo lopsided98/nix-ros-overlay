@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gmock, gtest, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-catkin";
-  version = "0.8.6-r1";
+  version = "0.8.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/catkin-release/archive/release/noetic/catkin/0.8.6-1.tar.gz";
-    name = "0.8.6-1.tar.gz";
-    sha256 = "2f1a36f2666c735509055696b4cf81b4b7256270b445008a91d6ff6c0caff572";
+    url = "https://github.com/ros-gbp/catkin-release/archive/release/noetic/catkin/0.8.8-1.tar.gz";
+    name = "0.8.8-1.tar.gz";
+    sha256 = "4379b18382c6d1576d31c7ed1e9f373d746a148b1d95fa7daf1a710fb1bfe3b2";
   };
 
   buildType = "catkin";

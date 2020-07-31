@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen }:
 buildRosPackage {
   pname = "ros-noetic-sophus";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/sophus-release/archive/release/noetic/sophus/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "91e49d8613c81936a3ffcc4121e6b02b8101bcdf23c59afcd063c24c0b078770";
+    url = "https://github.com/yujinrobot-release/sophus-release/archive/release/noetic/sophus/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "ef6951ab8dbffc56d6898d916e5421f44195bc7dce4fe4982f26796d790c72c0";
   };
 
   buildType = "cmake";

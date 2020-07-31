@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dataspeed-pds-msgs, python-qt-binding, python3Packages, rospy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-noetic-dataspeed-pds-rqt";
-  version = "1.0.3-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/noetic/dataspeed_pds_rqt/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "ae6f0ce9ca65ad851a6536101d44c739c94d07f9454acaa5915b35a093ef49db";
+    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/noetic/dataspeed_pds_rqt/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "bc67fb5fe19b991e962442a5b325ad78985a126d938a292cd099cc8d69380d87";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dataspeed-pds-msgs, rospy }:
 buildRosPackage {
   pname = "ros-noetic-dataspeed-pds-scripts";
-  version = "1.0.3-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/noetic/dataspeed_pds_scripts/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "fd1fbfd1288fc1ed5c629f21bbbdb0c160e68f2d4235da349c22f8616af1667e";
+    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/noetic/dataspeed_pds_scripts/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "6cc2ce71d6e5d433c53c5bef9b841f43f125b135a468972a4daeda8d9929a596";
   };
 
   buildType = "catkin";

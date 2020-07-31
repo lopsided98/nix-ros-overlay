@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, qt-gui }:
 buildRosPackage {
   pname = "ros-noetic-qt-gui-app";
-  version = "0.4.1-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/noetic/qt_gui_app/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "0f1e6ba6eca18e5e5084ca6d34756af91baf3cfacb4247d7861abb87479f2303";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/noetic/qt_gui_app/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "ac27afd75d8effd07b6654b7b6e6d71eba0c4b8d171f01516db07cbccee5f5a7";
   };
 
   buildType = "catkin";
