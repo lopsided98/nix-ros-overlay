@@ -3,7 +3,7 @@ self: super:
 let
   base = rosSelf: rosSuper: {
     lib = super.lib // import ../lib { inherit self rosSelf; };
-  
+
     callPackage = self.newScope rosSelf;
 
     buildRosPackage = rosSelf.callPackage ./build-ros-package { };
@@ -38,7 +38,7 @@ let
       prePhases ? [],
       postPatch ? "", ...
     }: let
-      setupHook = self.callPackage ./catkin-setup-hook { };
+      setupHook = rosSelf.callPackage ./catkin-setup-hook { };
     in {
       propagatedBuildInputs = [ self.cmake setupHook ] ++ propagatedBuildInputs;
 
@@ -298,9 +298,9 @@ let
       sha256 = "1g45f71mk4gyca550177qf70v5cvavlsalmg7x8bi59j6z6f0mgz";
     };
   };
-in self.rosPackages.lib.mkOverlay [
+in self.lib.makeExtensible (rosSelf: self.rosPackages.lib.mergeOverlays [
   base
   (import (./. + "/${distro}/generated.nix"))
   overrides
   (import (./. + "/${distro}/overrides.nix") self)
-]
+] rosSelf {})

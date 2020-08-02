@@ -1,3 +1,7 @@
+# Include guard to prevent running hooks more than once
+if [ -n "${_catkin_setup_hook_loaded:-}" ]; then return; fi
+_catkin_setup_hook_loaded=1
+
 isCatkinPackage() {
   [ -f "$1/.catkin" ]
 }
@@ -15,8 +19,8 @@ _findCatkinEnvHooks() {
   if [ -z "${_catkinPackagesSeen["$pkg"]:-}" ] && isCatkinPackage "$pkg" && [ -d "$pkgEnvHookDir" ]; then
     while IFS= read -rd '' hook; do
       case "$hook" in
-        *.sh) _catkinGenericEnvHooks["$(basename "$hook")"]="$hook" ;; #" (buggy syntax highlighting)
-        *) _catkinSpecificEnvHooks["$(basename "$hook")"]="$hook" ;; #"
+        *.sh) _catkinGenericEnvHooks["$(basename "$hook")"]="$hook" ;;
+        *) _catkinSpecificEnvHooks["$(basename "$hook")"]="$hook" ;;
       esac
     done < <(find "$pkgEnvHookDir" \( -name "*.sh" -o -name "*.$CATKIN_SHELL" \) -print0)
   fi
@@ -76,5 +80,10 @@ _catkinPostInstallHook() {
   popd
 }
 postInstallHooks+=(_catkinPostInstallHook)
+
+_catkinWrapperHook() {
+  wrapPythonPrograms
+}
+postFixupHooks+=(_catkinWrapperHook)
 
 export CATKIN_SHELL=bash
