@@ -3,6 +3,12 @@
 , rosSelf ? null }:
 with lib;
 {
+  mergeOverlays = foldr composeExtensions (_: _: {});
+
+  mkOverlay = overlays: let
+    s = mergeOverlays overlays s {};
+  in s;
+
   patchVendorUrl = pkg: {
     url, sha256,
     originalUrl ? url,
@@ -52,4 +58,4 @@ with lib;
       sed -i '/find_package(Boost [^)]*/s/signals//g' CMakeLists.txt
     '' + postPatch;
   });
-} // (import ./mk-overlay.nix { inherit lib; })
+}

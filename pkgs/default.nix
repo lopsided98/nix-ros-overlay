@@ -3,7 +3,7 @@ self: super: with super.lib; let
   pythonOverridesFor = python: python.override (old: {
     packageOverrides = pySelf: pySuper: {
       bson = pySelf.callPackage ./bson { };
-    
+
       catkin-pkg = pySelf.callPackage ./catkin-pkg { };
 
       colcon-cmake = pySelf.callPackage ./colcon/cmake.nix { };
