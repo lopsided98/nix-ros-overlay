@@ -1,6 +1,6 @@
 self: super:
 with import ./lib/mk-overlay.nix { inherit (super) lib; };
-applyOverlays self super [
+mergeOverlays [
   (import ./pkgs)
   (import ./distros)
-]
+] self super
