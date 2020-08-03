@@ -48,18 +48,20 @@ let
     postBuild = ''
       "${buildPackages.perl}/bin/perl" "${./setup-hook-builder.pl}"
     '' + optionalString wrapPrograms ''
-      find -L "$out/bin" -executable -type f -xtype l -print0 | \
-      while IFS= read -r -d "" link; do
-        file="$(readlink "$link")"
-        rm "$link"
-        # Remove unwrapped versions of binaries
-        if [[ "$(basename "$link")" == .*-wrapped ]]; then continue; fi
+      if [ -d "$out/bin" ]; then
+        find -L "$out/bin" -executable -type f -xtype l -print0 | \
+        while IFS= read -r -d "" link; do
+          file="$(readlink "$link")"
+          rm "$link"
+          # Remove unwrapped versions of binaries
+          if [[ "$(basename "$link")" == .*-wrapped ]]; then continue; fi
 
-        makeWrapper "$file" "$link" \
-          --prefix PATH : "$out/bin" \
-          --prefix CMAKE_PREFIX_PATH : "$out" \
-          --prefix ROS_PACKAGE_PATH : "$out/share"
-      done
+          makeWrapper "$file" "$link" \
+            --prefix PATH : "$out/bin" \
+            --prefix CMAKE_PREFIX_PATH : "$out" \
+            --prefix ROS_PACKAGE_PATH : "$out/share"
+        done
+      fi
     '';
 
     passthru.env = stdenv.mkDerivation {
