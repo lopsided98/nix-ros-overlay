@@ -91,22 +91,13 @@ let
       };
     };
 
-    # This build system contains fractal levels of stupidity
+    # This is a newer version than the build system tries to download, but this
+    # version doesn't try to download tons of random files during build.
     foonathan-memory-vendor = patchVendorGit rosSuper.foonathan-memory-vendor {
       url = "https://github.com/foonathan/memory.git";
       fetchgitArgs = {
-        sha256 = "1n7xxi61wzpixb3kldnl826syb4yml613q4i38d0cciydhy1gwzl";
-        # Needed by the postFetch, then removed there
-        leaveDotGit = true;
-        # Prevent the build system from trying to download random files
-        postFetch = ''
-          cd "$out/cmake/comp"
-          git fetch https://github.com/foonathan/compatibility.git
-          git checkout -f cf13bff238397aab0d8c49b7f6263233cf8a2396
-          sed -i 's|\(set(COMP_REMOTE_URL\s\).*|\1"file://''${CMAKE_CURRENT_LIST_DIR}/")|' \
-            comp_base.cmake
-          rm -rf "$out/.git"
-        '';
+        rev = "293f88d3a7cc49b25ffd4e9f27b1e4a8e14ee0d7";
+        sha256 = "0nr74xv1ajvblvnl070l83zsr69nc1ws7fl2fvfjdq90kvwrz7in";
       };
     };
 
