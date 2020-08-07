@@ -63,67 +63,13 @@ in {
       '';
     };
 
-    nodes = mkOption {
-      type = types.attrsOf (types.submodule ({ name, config, ... }: {
-        options = {
-          package = mkOption {
-            type = types.str;
-            description = ''
-              ROS package name containing this node. This is the ROS name for
-              the package, rather than the attribute name, meaning it uses
-              underscores rather than dashes.
-            '';
-          };
-
-          node = mkOption {
-            type = types.str;
-            description = ''
-              Name of the node to launch.
-            '';
-          };
-
-          args = mkOption {
-            type = types.listOf types.str;
-            default = [];
-            description = ''
-              Arguments to pass to the node.
-            '';
-          };
-
-          paths = mkOption {
-            type = types.listOf types.package;
-            description = ''
-              Additional paths to add to the environment of this node. The
-              <option>package</option> option will be turned into an attribute
-              name and automatically added to this option if valid.
-            '';
-          };
-
-          env = mkOption {
-            type = types.package;
-            description = ''
-              Environment created with the ROS specific buildEnv function for
-              this node.
-            '';
-          };
-        };
-
-        config = {
-          # Try to convert package name to attribute and add it to the
-          # environment
-          paths = [ cfg.pkgs.rosbash ] ++ (let
-            packageAttr = replaceStrings ["_"] ["-"] config.package;
-          in optional (hasAttr packageAttr cfg.pkgs) cfg.pkgs."${packageAttr}");
-
-          env = mkDefault (cfg.pkgs.buildEnv {
-            name = "ros-node-${name}-env";
-            inherit (config) paths;
-          });
-        };
-      }));
-      default = {};
+    systemPackages = mkOption {
+      default = p: [];
+      example = literalExample "p: with p; [ roslaunch ]";
       description = ''
-        ROS nodes to launch at boot as systemd services.
+        Packages to add to a ROS environment that will be added to the system
+        PATH. The provided function will be passed the package set configured by
+        <option>services.ros.pkgs</option>.
       '';
     };
   };
@@ -148,6 +94,13 @@ in {
       ROS_MASTER_URI = cfg.masterUri;
     };
 
+    environment.systemPackages = let
+      paths = cfg.systemPackages cfg.pkgs;
+    in mkIf (length paths != 0) [ (cfg.pkgs.buildEnv {
+      name = "ros-system-env";
+      inherit paths;
+    }) ];
+
     users = {
       users.ros = {
         group = "ros";
@@ -155,21 +108,5 @@ in {
       };
       groups.ros = { };
     };
-
-    systemd.services = mapAttrs' (name: config: nameValuePair name {
-      serviceConfig = {
-        Type = "exec";
-        StateDirectory = "ros";
-        User = "ros";
-        Group = "ros";
-        ExecStart = escapeShellArgs ([ "${config.env}/bin/rosrun" config.package config.node ] ++ config.args);
-      };
-      wantedBy = [ "multi-user.target" ];
-      environment = {
-        ROS_HOSTNAME = cfg.hostname;
-        ROS_MASTER_URI = cfg.masterUri;
-        ROS_HOME = "/var/lib/ros";
-      };
-    }) cfg.nodes;
   };
 }

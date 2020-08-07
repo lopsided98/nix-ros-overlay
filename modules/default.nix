@@ -1,6 +1,7 @@
 { ... }: {
   imports = [
-    ./ros.nix
     ./core.nix
+    ./ros.nix
+    ./nodes.nix
   ];
 }

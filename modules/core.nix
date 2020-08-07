@@ -9,10 +9,8 @@ in {
   # Interface
 
   options.services.ros.core = {
-    enable = mkEnableOption "roscore";
-
     port = mkOption {
-      type = types.ints.unsigned;
+      type = types.port;
       default = 11311;
       description = ''
         Port the ROS master will bind to.
@@ -22,7 +20,7 @@ in {
 
   # Implementation
 
-  config = mkIf cfg.enable {
+  config = mkIf rosCfg.enable {
     systemd.services.roscore = {
       description = "ROS core";
       serviceConfig = {
