@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rc-common-msgs, rcdiscover, roscpp, shape-msgs, std-srvs, tf, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rc-pick-client";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_pick_client/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "f6e8c0060d4ffd1ee0b77ff1abbe4d426eea0cf605ada7379d5d128f240f132d";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_pick_client/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "718f66a086ec704ce617d01bc99ce5aaa56a4b41c7258a1fa02dcd53011b88e4";
   };
 
   buildType = "catkin";

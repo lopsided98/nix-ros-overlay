@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, console-bridge, gtest, mavlink, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-libmavconn";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/kinetic/libmavconn/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "1d0ee40bf2b0b60580d4d1749579b06caac38014d352db2428b32d32e18f9371";
+    url = "https://github.com/mavlink/mavros-release/archive/release/kinetic/libmavconn/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "c16a531401669ac29e10f95f0a70e05aeb118bb975f1919395b5c50ddb05ef0b";
   };
 
   buildType = "catkin";

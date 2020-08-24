@@ -496,6 +496,8 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
+ costmap-tf-layer = self.callPackage ./costmap-tf-layer {};
+
  cpp-common = self.callPackage ./cpp-common {};
 
  cpr-multimaster-tools = self.callPackage ./cpr-multimaster-tools {};
@@ -605,6 +607,22 @@ self: super: {
  diagnostics = self.callPackage ./diagnostics {};
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
+
+ dingo-control = self.callPackage ./dingo-control {};
+
+ dingo-description = self.callPackage ./dingo-description {};
+
+ dingo-desktop = self.callPackage ./dingo-desktop {};
+
+ dingo-gazebo = self.callPackage ./dingo-gazebo {};
+
+ dingo-msgs = self.callPackage ./dingo-msgs {};
+
+ dingo-navigation = self.callPackage ./dingo-navigation {};
+
+ dingo-simulator = self.callPackage ./dingo-simulator {};
+
+ dingo-viz = self.callPackage ./dingo-viz {};
 
  distance-map = self.callPackage ./distance-map {};
 
@@ -1804,6 +1822,16 @@ self: super: {
 
  moveit-resources = self.callPackage ./moveit-resources {};
 
+ moveit-resources-fanuc-description = self.callPackage ./moveit-resources-fanuc-description {};
+
+ moveit-resources-fanuc-moveit-config = self.callPackage ./moveit-resources-fanuc-moveit-config {};
+
+ moveit-resources-panda-description = self.callPackage ./moveit-resources-panda-description {};
+
+ moveit-resources-panda-moveit-config = self.callPackage ./moveit-resources-panda-moveit-config {};
+
+ moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
+
  moveit-ros = self.callPackage ./moveit-ros {};
 
  moveit-ros-benchmarks = self.callPackage ./moveit-ros-benchmarks {};
@@ -1973,6 +2001,8 @@ self: super: {
  navigation-stage = self.callPackage ./navigation-stage {};
 
  navigation-tutorials = self.callPackage ./navigation-tutorials {};
+
+ neo-local-planner = self.callPackage ./neo-local-planner {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
@@ -2533,6 +2563,18 @@ self: super: {
  radar-msgs = self.callPackage ./radar-msgs {};
 
  radar-omnipresense = self.callPackage ./radar-omnipresense {};
+
+ radial-menu = self.callPackage ./radial-menu {};
+
+ radial-menu-backend = self.callPackage ./radial-menu-backend {};
+
+ radial-menu-example = self.callPackage ./radial-menu-example {};
+
+ radial-menu-model = self.callPackage ./radial-menu-model {};
+
+ radial-menu-msgs = self.callPackage ./radial-menu-msgs {};
+
+ radial-menu-rviz = self.callPackage ./radial-menu-rviz {};
 
  rail-manipulation-msgs = self.callPackage ./rail-manipulation-msgs {};
 
@@ -3439,6 +3481,8 @@ self: super: {
  tts = self.callPackage ./tts {};
 
  turtle-actionlib = self.callPackage ./turtle-actionlib {};
+
+ turtle-teleop-multi-key = self.callPackage ./turtle-teleop-multi-key {};
 
  turtle-tf = self.callPackage ./turtle-tf {};
 

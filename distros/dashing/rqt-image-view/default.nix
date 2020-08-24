@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, geometry-msgs, image-transport, qt-gui-cpp, qt5, rclcpp, rqt-gui, rqt-gui-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-rqt-image-view";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_image_view-release/archive/release/dashing/rqt_image_view/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "2f97dedbebbc02fe2e1c6a0addf1302eee96551adedc3e2b9ac32fe8b7698e1e";
+    url = "https://github.com/ros2-gbp/rqt_image_view-release/archive/release/dashing/rqt_image_view/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "e70cc789a85fe800f47271d1964d0d45a5218dcea642a0d101a053b34de28b83";
   };
 
   buildType = "ament_cmake";

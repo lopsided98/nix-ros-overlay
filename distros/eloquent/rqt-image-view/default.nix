@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, geometry-msgs, image-transport, qt-gui-cpp, qt5, rclcpp, rqt-gui, rqt-gui-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-rqt-image-view";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_image_view-release/archive/release/eloquent/rqt_image_view/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "eb07ef4833f4fcf8d227e9a2ef3aa802df3e81cca176fe4b4d835682f9fe9156";
+    url = "https://github.com/ros2-gbp/rqt_image_view-release/archive/release/eloquent/rqt_image_view/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "2a9fdeef09780aa5abcf09e9b09dfe6fc29d06a275a5a2ced35e282e60f97dc2";
   };
 
   buildType = "ament_cmake";

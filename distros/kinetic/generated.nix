@@ -3266,13 +3266,9 @@ self: super: {
 
  pyquaternion = self.callPackage ./pyquaternion {};
 
- pyros = self.callPackage ./pyros {};
-
  pyros-common = self.callPackage ./pyros-common {};
 
  pyros-config = self.callPackage ./pyros-config {};
-
- pyros-interfaces-ros = self.callPackage ./pyros-interfaces-ros {};
 
  pyros-test = self.callPackage ./pyros-test {};
 
@@ -3794,6 +3790,8 @@ self: super: {
 
  rosbag-pandas = self.callPackage ./rosbag-pandas {};
 
+ rosbag-snapshot = self.callPackage ./rosbag-snapshot {};
+
  rosbag-snapshot-msgs = self.callPackage ./rosbag-snapshot-msgs {};
 
  rosbag-storage = self.callPackage ./rosbag-storage {};
@@ -3967,8 +3965,6 @@ self: super: {
  rostate-machine = self.callPackage ./rostate-machine {};
 
  rostest = self.callPackage ./rostest {};
-
- rostful = self.callPackage ./rostful {};
 
  rostime = self.callPackage ./rostime {};
 
@@ -4847,6 +4843,8 @@ self: super: {
  twistimu = self.callPackage ./twistimu {};
 
  ubiquity-motor = self.callPackage ./ubiquity-motor {};
+
+ udp-com = self.callPackage ./udp-com {};
 
  ueye = self.callPackage ./ueye {};
 

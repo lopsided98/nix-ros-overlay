@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, boost, catkin, message-generation, message-runtime, pythonPackages, roscpp, roslib, rosnode, rospy, rostest, rostopic, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-actionlib";
-  version = "1.12.0-r1";
+  version = "1.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/actionlib-release/archive/release/melodic/actionlib/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "cf5019b5b23a1aa16c1ad5afc47ce10630a512cdc621c926bc1920803dac9ca5";
+    url = "https://github.com/ros-gbp/actionlib-release/archive/release/melodic/actionlib/1.12.1-1.tar.gz";
+    name = "1.12.1-1.tar.gz";
+    sha256 = "1c564f0186928a554d30a74c1bdffcbc52292ff93d7a5c8140ec4bce342ae020";
   };
 
   buildType = "catkin";

@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, message-generation, message-runtime, perception-pcl, roscpp, sensor-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, message-generation, message-runtime, perception-pcl, roscpp, rospy, sensor-msgs, tf, tf2, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-sick-scan";
-  version = "1.7.6-r2";
+  version = "1.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_scan-release/archive/release/kinetic/sick_scan/1.7.6-2.tar.gz";
-    name = "1.7.6-2.tar.gz";
-    sha256 = "ba1e597058eb274c5d5a975b6a907d2b7c10b40132a794b40492ae6250fce699";
+    url = "https://github.com/SICKAG/sick_scan-release/archive/release/kinetic/sick_scan/1.7.7-1.tar.gz";
+    name = "1.7.7-1.tar.gz";
+    sha256 = "4d4c7a69e5cf7e27a7be1f03d2e826badef1e87a36a991e3eabb1e9f25a0759f";
   };
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure message-runtime perception-pcl roscpp sensor-msgs visualization-msgs ];
+  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure message-runtime perception-pcl roscpp rospy sensor-msgs tf tf2 visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

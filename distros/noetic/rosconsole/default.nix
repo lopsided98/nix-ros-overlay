@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, apr, boost, catkin, cpp-common, log4cxx, rosbuild, rostime, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-rosconsole";
-  version = "1.14.1-r1";
+  version = "1.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosconsole-release/archive/release/noetic/rosconsole/1.14.1-1.tar.gz";
-    name = "1.14.1-1.tar.gz";
-    sha256 = "18c193f21df62bac1d3eae551f4735a4c17481054dff8fa1ff4ef0ef65d89470";
+    url = "https://github.com/ros-gbp/rosconsole-release/archive/release/noetic/rosconsole/1.14.2-1.tar.gz";
+    name = "1.14.2-1.tar.gz";
+    sha256 = "83fe859de24fab7a87198c767fb0e54c309b1e2addfb5d59e6cb9fab3f80840c";
   };
 
   buildType = "catkin";

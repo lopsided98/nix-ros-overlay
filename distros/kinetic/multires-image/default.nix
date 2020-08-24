@@ -2,21 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, gps-common, libqt-core, libqt-dev, libqt-opengl, libqt-opengl-dev, mapviz, pluginlib, qt-qmake, roscpp, rospy, swri-math-util, swri-transform-util, swri-yaml-util, tf }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, gps-common, mapviz, pluginlib, qt5, roscpp, rospy, swri-math-util, swri-transform-util, swri-yaml-util, tf }:
 buildRosPackage {
   pname = "ros-kinetic-multires-image";
-  version = "1.3.0-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/multires_image/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "b2e71689028550637415ca94f4ab23de6ce253d68cd7b5edd10fbfcd08c36cca";
+    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/kinetic/multires_image/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "b8ae0b4939a4759742fc4e92a67dbaa7786d294826d1cda226b809a0069c1a4a";
   };
 
   buildType = "catkin";
-  buildInputs = [ libqt-dev libqt-opengl-dev ];
-  propagatedBuildInputs = [ cv-bridge geometry-msgs gps-common libqt-core libqt-opengl mapviz pluginlib roscpp rospy swri-math-util swri-transform-util swri-yaml-util tf ];
-  nativeBuildInputs = [ catkin qt-qmake ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs gps-common mapviz pluginlib qt5.qtbase roscpp rospy swri-math-util swri-transform-util swri-yaml-util tf ];
+  nativeBuildInputs = [ catkin qt5.qtbase ];
 
   meta = {
     description = ''multires_image'';

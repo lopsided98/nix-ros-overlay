@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, ddynamic-reconfigure, diagnostic-updater, eigen, genmsg, image-transport, librealsense2, message-runtime, nav-msgs, nodelet, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-realsense2-camera";
-  version = "2.2.15-r1";
+  version = "2.2.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/kinetic/realsense2_camera/2.2.15-1.tar.gz";
-    name = "2.2.15-1.tar.gz";
-    sha256 = "6668dd0063bf75bc1f3185d3b1f068093672c09f2d185724323c5964373ee6fe";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/kinetic/realsense2_camera/2.2.16-1.tar.gz";
+    name = "2.2.16-1.tar.gz";
+    sha256 = "29d660f869acb57879b24b307f26f45ee171846e545603c9eda6f999873ee463";
   };
 
   buildType = "catkin";

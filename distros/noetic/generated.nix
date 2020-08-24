@@ -22,6 +22,8 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ assimp-devel = self.callPackage ./assimp-devel {};
+
  assisted-teleop = self.callPackage ./assisted-teleop {};
 
  astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
@@ -45,6 +47,8 @@ self: super: {
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
  base-local-planner = self.callPackage ./base-local-planner {};
+
+ bayesian-belief-networks = self.callPackage ./bayesian-belief-networks {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
@@ -218,6 +222,8 @@ self: super: {
 
  dlux-plugins = self.callPackage ./dlux-plugins {};
 
+ downward = self.callPackage ./downward {};
+
  dual-quaternions = self.callPackage ./dual-quaternions {};
 
  dual-quaternions-ros = self.callPackage ./dual-quaternions-ros {};
@@ -290,7 +296,11 @@ self: super: {
 
  ecl-math = self.callPackage ./ecl-math {};
 
+ ecl-mobile-robot = self.callPackage ./ecl-mobile-robot {};
+
  ecl-mpl = self.callPackage ./ecl-mpl {};
+
+ ecl-navigation = self.callPackage ./ecl-navigation {};
 
  ecl-sigslots = self.callPackage ./ecl-sigslots {};
 
@@ -328,6 +338,10 @@ self: super: {
 
  fake-localization = self.callPackage ./fake-localization {};
 
+ ff = self.callPackage ./ff {};
+
+ ffha = self.callPackage ./ffha {};
+
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
@@ -363,6 +377,8 @@ self: super: {
  gazebo-ros-control = self.callPackage ./gazebo-ros-control {};
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
+
+ gazebo-video-monitor-plugins = self.callPackage ./gazebo-video-monitor-plugins {};
 
  gencpp = self.callPackage ./gencpp {};
 
@@ -482,6 +498,8 @@ self: super: {
 
  joystick-interrupt = self.callPackage ./joystick-interrupt {};
 
+ jsk-3rdparty = self.callPackage ./jsk-3rdparty {};
+
  jsk-common = self.callPackage ./jsk-common {};
 
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
@@ -498,15 +516,21 @@ self: super: {
 
  jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
 
+ julius = self.callPackage ./julius {};
+
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  key-teleop = self.callPackage ./key-teleop {};
+
+ kobuki-msgs = self.callPackage ./kobuki-msgs {};
 
  laser-assembler = self.callPackage ./laser-assembler {};
 
  laser-filtering = self.callPackage ./laser-filtering {};
 
  laser-filters = self.callPackage ./laser-filters {};
+
+ laser-filters-jsk-patch = self.callPackage ./laser-filters-jsk-patch {};
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
@@ -515,6 +539,8 @@ self: super: {
  laser-proc = self.callPackage ./laser-proc {};
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
+
+ libcmt = self.callPackage ./libcmt {};
 
  libdlib = self.callPackage ./libdlib {};
 
@@ -534,11 +560,15 @@ self: super: {
 
  librviz-tutorial = self.callPackage ./librviz-tutorial {};
 
+ libsiftfast = self.callPackage ./libsiftfast {};
+
  locomotor = self.callPackage ./locomotor {};
 
  locomotor-msgs = self.callPackage ./locomotor-msgs {};
 
  locomove-base = self.callPackage ./locomove-base {};
+
+ lpg-planner = self.callPackage ./lpg-planner {};
 
  lusb = self.callPackage ./lusb {};
 
@@ -610,6 +640,8 @@ self: super: {
 
  message-runtime = self.callPackage ./message-runtime {};
 
+ mini-maxwell = self.callPackage ./mini-maxwell {};
+
  mir-actions = self.callPackage ./mir-actions {};
 
  mir-description = self.callPackage ./mir-description {};
@@ -639,6 +671,20 @@ self: super: {
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
+
+ moveit-msgs = self.callPackage ./moveit-msgs {};
+
+ moveit-resources = self.callPackage ./moveit-resources {};
+
+ moveit-resources-fanuc-description = self.callPackage ./moveit-resources-fanuc-description {};
+
+ moveit-resources-fanuc-moveit-config = self.callPackage ./moveit-resources-fanuc-moveit-config {};
+
+ moveit-resources-panda-description = self.callPackage ./moveit-resources-panda-description {};
+
+ moveit-resources-panda-moveit-config = self.callPackage ./moveit-resources-panda-moveit-config {};
+
+ moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
 
  mpc-local-planner = self.callPackage ./mpc-local-planner {};
 
@@ -704,6 +750,8 @@ self: super: {
 
  nerian-stereo = self.callPackage ./nerian-stereo {};
 
+ nlopt = self.callPackage ./nlopt {};
+
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nodelet = self.callPackage ./nodelet {};
@@ -734,9 +782,9 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
- open3d-conversions = self.callPackage ./open3d-conversions {};
-
  open-karto = self.callPackage ./open-karto {};
+
+ opencv-apps = self.callPackage ./opencv-apps {};
 
  opengm = self.callPackage ./opengm {};
 
@@ -745,6 +793,8 @@ self: super: {
  openni2-launch = self.callPackage ./openni2-launch {};
 
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
+
+ opt-camera = self.callPackage ./opt-camera {};
 
  oxford-gps-eth = self.callPackage ./oxford-gps-eth {};
 
@@ -830,6 +880,18 @@ self: super: {
 
  power-msgs = self.callPackage ./power-msgs {};
 
+ pr2-common = self.callPackage ./pr2-common {};
+
+ pr2-dashboard-aggregator = self.callPackage ./pr2-dashboard-aggregator {};
+
+ pr2-description = self.callPackage ./pr2-description {};
+
+ pr2-machine = self.callPackage ./pr2-machine {};
+
+ pr2-mechanism-msgs = self.callPackage ./pr2-mechanism-msgs {};
+
+ pr2-msgs = self.callPackage ./pr2-msgs {};
+
  ps3joy = self.callPackage ./ps3joy {};
 
  py-trees = self.callPackage ./py-trees {};
@@ -864,6 +926,22 @@ self: super: {
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
 
+ rc-hand-eye-calibration-client = self.callPackage ./rc-hand-eye-calibration-client {};
+
+ rc-pick-client = self.callPackage ./rc-pick-client {};
+
+ rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
+
+ rc-silhouettematch-client = self.callPackage ./rc-silhouettematch-client {};
+
+ rc-tagdetect-client = self.callPackage ./rc-tagdetect-client {};
+
+ rc-visard = self.callPackage ./rc-visard {};
+
+ rc-visard-description = self.callPackage ./rc-visard-description {};
+
+ rc-visard-driver = self.callPackage ./rc-visard-driver {};
+
  rcdiscover = self.callPackage ./rcdiscover {};
 
  realtime-tools = self.callPackage ./realtime-tools {};
@@ -879,6 +957,10 @@ self: super: {
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-navigation = self.callPackage ./robot-navigation {};
+
+ robot-self-filter = self.callPackage ./robot-self-filter {};
+
+ roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
 
  ros = self.callPackage ./ros {};
 
@@ -901,6 +983,8 @@ self: super: {
  ros-environment = self.callPackage ./ros-environment {};
 
  ros-ign = self.callPackage ./ros-ign {};
+
+ ros-pytest = self.callPackage ./ros-pytest {};
 
  ros-tutorials = self.callPackage ./ros-tutorials {};
 
@@ -997,6 +1081,10 @@ self: super: {
  rosparam = self.callPackage ./rosparam {};
 
  rosparam-shortcuts = self.callPackage ./rosparam-shortcuts {};
+
+ rospatlite = self.callPackage ./rospatlite {};
+
+ rosping = self.callPackage ./rosping {};
 
  rospy = self.callPackage ./rospy {};
 
@@ -1128,6 +1216,8 @@ self: super: {
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
+ sesame-ros = self.callPackage ./sesame-ros {};
+
  shape-msgs = self.callPackage ./shape-msgs {};
 
  sick-safetyscanners = self.callPackage ./sick-safetyscanners {};
@@ -1145,6 +1235,8 @@ self: super: {
  slam-toolbox-msgs = self.callPackage ./slam-toolbox-msgs {};
 
  slam-toolbox-rviz = self.callPackage ./slam-toolbox-rviz {};
+
+ slic = self.callPackage ./slic {};
 
  slime-ros = self.callPackage ./slime-ros {};
 
@@ -1169,6 +1261,8 @@ self: super: {
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 
  speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
+
+ srdfdom = self.callPackage ./srdfdom {};
 
  stage = self.callPackage ./stage {};
 
@@ -1286,6 +1380,8 @@ self: super: {
 
  ublox-serialization = self.callPackage ./ublox-serialization {};
 
+ udp-com = self.callPackage ./udp-com {};
+
  unique-id = self.callPackage ./unique-id {};
 
  unique-identifier = self.callPackage ./unique-identifier {};
@@ -1322,7 +1418,11 @@ self: super: {
 
  velodyne = self.callPackage ./velodyne {};
 
+ velodyne-description = self.callPackage ./velodyne-description {};
+
  velodyne-driver = self.callPackage ./velodyne-driver {};
+
+ velodyne-gazebo-plugins = self.callPackage ./velodyne-gazebo-plugins {};
 
  velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
 
@@ -1331,6 +1431,8 @@ self: super: {
  velodyne-pcl = self.callPackage ./velodyne-pcl {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
+ velodyne-simulator = self.callPackage ./velodyne-simulator {};
 
  virtual-force-publisher = self.callPackage ./virtual-force-publisher {};
 
@@ -1346,9 +1448,13 @@ self: super: {
 
  viz = self.callPackage ./viz {};
 
+ voice-text = self.callPackage ./voice-text {};
+
  voxel-grid = self.callPackage ./voxel-grid {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ webots-ros = self.callPackage ./webots-ros {};
 
  wiimote = self.callPackage ./wiimote {};
 

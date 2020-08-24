@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hardware-interface, roscpp, rostest, urdf }:
 buildRosPackage {
   pname = "ros-melodic-joint-limits-interface";
-  version = "0.18.1-r1";
+  version = "0.18.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/joint_limits_interface/0.18.1-1.tar.gz";
-    name = "0.18.1-1.tar.gz";
-    sha256 = "eb48a3a13bd20eef4563c9ff725264d4dec8a4fe4ab5293b5bcd143a11c47108";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/joint_limits_interface/0.18.2-1.tar.gz";
+    name = "0.18.2-1.tar.gz";
+    sha256 = "1ecd95580fafe806510d8f793a6407c72212b224d82e41e649bbe99a75d4f975";
   };
 
   buildType = "catkin";

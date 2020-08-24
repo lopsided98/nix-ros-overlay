@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-py-trees";
-  version = "0.7.1-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/stonier/py_trees-release/archive/release/noetic/py_trees/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "38bb008c75532924f7fad5a2f6662b413727dcca8a1ea9087baee4746fcf46ad";
+    url = "https://github.com/stonier/py_trees-release/archive/release/noetic/py_trees/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "d87be5859962edd36fb396df2a71008893f72386ae16b902c64229115fd1b822";
   };
 
   buildType = "catkin";

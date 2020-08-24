@@ -414,6 +414,8 @@ self: super: {
 
  gpsd-client = self.callPackage ./gpsd-client {};
 
+ grbl-ros = self.callPackage ./grbl-ros {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  h264-encoder-core = self.callPackage ./h264-encoder-core {};
@@ -1137,6 +1139,8 @@ self: super: {
  velodyne-msgs = self.callPackage ./velodyne-msgs {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
+ vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

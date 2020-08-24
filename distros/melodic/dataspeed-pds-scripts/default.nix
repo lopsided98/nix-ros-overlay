@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dataspeed-pds-msgs, rospy }:
 buildRosPackage {
   pname = "ros-melodic-dataspeed-pds-scripts";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_scripts/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "586e2fdece998d4cb65e503d85e9deca0e7109f10552fbd4e905aeed411e56eb";
+    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_scripts/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "6cfcb7335515928b72d166d9713846d5c8f3637f976b3b854215a15e3f11b7dc";
   };
 
   buildType = "catkin";

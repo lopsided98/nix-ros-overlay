@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, zstd }:
 buildRosPackage {
   pname = "ros-foxy-zstd-vendor";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/zstd_vendor/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "2ec8b542fccfd3dbcb8370c40da3b29a473a23ef33cd31c40986e7843b43cfbd";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/zstd_vendor/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "95e1691901e63c004bc544b905d52a9bdf6b91b86c2a1fd1df7de25177bbb305";
   };
 
   buildType = "ament_cmake";

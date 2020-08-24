@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages, rosbag, rosgraph-msgs, roslib, rosnode, rospy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-melodic-rqt-bag";
-  version = "0.4.12";
+  version = "0.4.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_bag-release/archive/release/melodic/rqt_bag/0.4.12-0.tar.gz";
-    name = "0.4.12-0.tar.gz";
-    sha256 = "53a48d67f5cedf54b58b26b33350958952bac0c27f38160918c6ba0f4aa5014f";
+    url = "https://github.com/ros-gbp/rqt_bag-release/archive/release/melodic/rqt_bag/0.4.14-1.tar.gz";
+    name = "0.4.14-1.tar.gz";
+    sha256 = "b146c934f19f079f1fa759457d9a244f86c7af2092d57b54972be4e3db572be0";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, interactive-markers, message-runtime, rc-common-msgs, rc-pick-client, roscpp, shape-msgs, tf, visualization-msgs, wxGTK }:
 buildRosPackage {
   pname = "ros-kinetic-rc-roi-manager-gui";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_roi_manager_gui/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "cda593d4ee247a407c8c29fb7c828362428a48d1b78797bd79d333eee8396fbf";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_roi_manager_gui/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "a9a5f862152bcade468bb926caa9e631a5e468f2f9b35a0f0a68a803e817222f";
   };
 
   buildType = "catkin";

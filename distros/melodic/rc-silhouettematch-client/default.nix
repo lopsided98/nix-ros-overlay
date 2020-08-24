@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rc-common-msgs, rcdiscover, roscpp, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rc-silhouettematch-client";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_silhouettematch_client/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "d75e8acbaa194ee77aad0161b057bf4674e1b26f1dc79875a7e77b6b95e2271f";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_silhouettematch_client/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "d627a3d243a69af5394a56efc268150b797ebe6b4d3440379a2b4626bd184b73";
   };
 
   buildType = "catkin";

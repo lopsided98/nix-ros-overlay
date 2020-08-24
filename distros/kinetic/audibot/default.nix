@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, audibot-description, audibot-gazebo, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-audibot";
-  version = "0.1.0";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/robustify/audibot-release/archive/release/kinetic/audibot/0.1.0-0.tar.gz";
-    name = "0.1.0-0.tar.gz";
-    sha256 = "e600b42d2a23b5b5a28a3f11ce7058a962f0bfa67bcfaea31e1aa8f570c2090a";
+    url = "https://github.com/robustify/audibot-release/archive/release/kinetic/audibot/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "4b4f8bc4614dd60fe8ff4df02f415149efaa4875def2133b5105056edb1d954a";
   };
 
   buildType = "catkin";

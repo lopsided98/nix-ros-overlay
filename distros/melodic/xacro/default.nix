@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslaunch, roslint, rostest }:
 buildRosPackage {
   pname = "ros-melodic-xacro";
-  version = "1.13.6-r1";
+  version = "1.13.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/xacro-release/archive/release/melodic/xacro/1.13.6-1.tar.gz";
-    name = "1.13.6-1.tar.gz";
-    sha256 = "bd891b5fe7f3326b616f39b39b56cc961d2ddf8f088eecd836be19b068e55fdd";
+    url = "https://github.com/ros-gbp/xacro-release/archive/release/melodic/xacro/1.13.7-1.tar.gz";
+    name = "1.13.7-1.tar.gz";
+    sha256 = "e7b3c2e008e4d3c14c9f08c43348a967e27667b406ac8e8304b04470a7b9232f";
   };
 
   buildType = "catkin";

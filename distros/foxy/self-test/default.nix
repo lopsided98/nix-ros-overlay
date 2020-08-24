@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp }:
 buildRosPackage {
   pname = "ros-foxy-self-test";
-  version = "2.0.3-r1";
+  version = "2.0.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/foxy/self_test/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "9a400908ef62c936ea1c5fcf685d5cf80481b631151906f6831dcf23d90624b6";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/foxy/self_test/2.0.4-2.tar.gz";
+    name = "2.0.4-2.tar.gz";
+    sha256 = "cd3daef98b8005abbc458fadab885d95142d417b162632ddb2d4516d3ca98fe6";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-cspace, map-server, planner-cspace, safety-limiter, tf2-ros, trajectory-tracker, trajectory-tracker-rviz-plugins }:
 buildRosPackage {
   pname = "ros-melodic-neonavigation-launch";
-  version = "0.9.1-r1";
+  version = "0.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/neonavigation_launch/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "bd1af0cefd7ac7685b87cb120a5edfa7c40d7633d528dfd834d0dbcb3b0679c4";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/neonavigation_launch/0.10.0-1.tar.gz";
+    name = "0.10.0-1.tar.gz";
+    sha256 = "c2524375826ebdc99bbc5022f9067a3ff1956cbb2c963666233ddc570ce9bc3e";
   };
 
   buildType = "catkin";

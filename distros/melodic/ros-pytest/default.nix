@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy, rostest }:
 buildRosPackage {
   pname = "ros-melodic-ros-pytest";
-  version = "0.1.2-r2";
+  version = "0.2.0";
 
   src = fetchurl {
-    url = "https://github.com/machinekoder/ros_pytest-release/archive/release/melodic/ros_pytest/0.1.2-2.tar.gz";
-    name = "0.1.2-2.tar.gz";
-    sha256 = "8204f445e165a048869660415c84fa1f478c1d1ecf8dabd79dd9a1187b95048e";
+    url = "https://github.com/machinekoder/ros_pytest-release/archive/release/melodic/ros_pytest/0.2.0-0.tar.gz";
+    name = "0.2.0-0.tar.gz";
+    sha256 = "ba602e2fda979ab6f3097bfdad4c9cc589a7f0781f784cd46a1462de3636dc84";
   };
 
   buildType = "catkin";

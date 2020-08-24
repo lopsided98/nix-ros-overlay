@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-lint-auto, boost, builtin-interfaces, rclcpp, rclcpp-lifecycle, rosidl-default-generators, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-lint-auto, builtin-interfaces, rclcpp, rclcpp-lifecycle, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-system-modes";
-  version = "0.2.1-r7";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/dashing/system_modes/0.2.1-7.tar.gz";
-    name = "0.2.1-7.tar.gz";
-    sha256 = "bde3b4e6e9a2dbe37c51ff40d13568786f410b7dc9e681c3ed9650a76c18b197";
+    url = "https://github.com/microROS/system_modes-release/archive/release/dashing/system_modes/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "0f5e1f0a4ad6d104f3cc03ffa1c8c115e7992b72f3344816bbcc76a6c0582ad2";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-gmock ament-cmake-gtest ament-cmake-pep257 ament-cmake-uncrustify ament-lint-auto ];
-  propagatedBuildInputs = [ boost builtin-interfaces rclcpp rclcpp-lifecycle rosidl-default-generators std-msgs ];
+  propagatedBuildInputs = [ builtin-interfaces rclcpp rclcpp-lifecycle rosidl-default-generators std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, chomp-motion-planner, moveit-core, moveit-ros-planning-interface, pluginlib, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-moveit-planners-chomp";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_planners_chomp/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "93e1fad681a0a8c4d23f0e7a81b9eefa7da776d3a07fd5d839373b3ef2377aab";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_planners_chomp/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "e4a6d6db148987014952f1316969f24e29b54a74842c11e1d95e6ed1686089a3";
   };
 
   buildType = "catkin";

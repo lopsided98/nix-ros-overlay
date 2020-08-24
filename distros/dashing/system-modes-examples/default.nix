@@ -2,19 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, rclcpp-lifecycle, system-modes }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-lint-auto, rclcpp, rclcpp-lifecycle, system-modes }:
 buildRosPackage {
   pname = "ros-dashing-system-modes-examples";
-  version = "0.2.1-r7";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/dashing/system_modes_examples/0.2.1-7.tar.gz";
-    name = "0.2.1-7.tar.gz";
-    sha256 = "b90d7cf3c6c1a52e25c3d5b4acb6d0f1e8d3e794c0531885b2a928afb8fd2b72";
+    url = "https://github.com/microROS/system_modes-release/archive/release/dashing/system_modes_examples/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "33e47e08892e3f6688057af8f509cb0589d487e0f434f7a60aa68db1ede4f0c8";
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ boost rclcpp rclcpp-lifecycle system-modes ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-gmock ament-cmake-gtest ament-cmake-pep257 ament-cmake-uncrustify ament-lint-auto ];
+  propagatedBuildInputs = [ rclcpp rclcpp-lifecycle system-modes ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

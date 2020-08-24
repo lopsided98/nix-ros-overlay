@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-foxy-connext-cmake-module";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_connext-release/archive/release/foxy/connext_cmake_module/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "dd962f303eb537fd47fb6118b70d3fae1177c6f82524a7c4d638ff77a5b39797";
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_connext-release/archive/release/foxy/connext_cmake_module/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "2982747903e83aced835bc90d59d9aa3d3c54867b0aedf98b65e4b15fa13015c";
   };
 
   buildType = "ament_cmake";

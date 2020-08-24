@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rclcpp, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-plansys2-msgs";
-  version = "0.0.10-r1";
+  version = "0.0.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/eloquent/plansys2_msgs/0.0.10-1.tar.gz";
-    name = "0.0.10-1.tar.gz";
-    sha256 = "6954a2aedf57ec80c3af1cb1ac856ffc031c0d40a33abdbb8d4fee8a2b17f950";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/eloquent/plansys2_msgs/0.0.17-1.tar.gz";
+    name = "0.0.17-1.tar.gz";
+    sha256 = "9de50f9be66b19551b9e5c964da72416fadaab01c45d13334b569a36fea2d34b";
   };
 
   buildType = "ament_cmake";

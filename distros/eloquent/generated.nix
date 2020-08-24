@@ -224,6 +224,8 @@ self: super: {
 
  dwb-plugins = self.callPackage ./dwb-plugins {};
 
+ dynamic-graph = self.callPackage ./dynamic-graph {};
+
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
@@ -385,6 +387,8 @@ self: super: {
  gps-umd = self.callPackage ./gps-umd {};
 
  gpsd-client = self.callPackage ./gpsd-client {};
+
+ grbl-ros = self.callPackage ./grbl-ros {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
 

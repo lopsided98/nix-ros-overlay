@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hardware-interface, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-combined-robot-hw";
-  version = "0.19.1-r1";
+  version = "0.19.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/combined_robot_hw/0.19.1-1.tar.gz";
-    name = "0.19.1-1.tar.gz";
-    sha256 = "09b4727c8fdd2710d7bea72b51a730cd327b59519aa1e74776bfd612c737b292";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/combined_robot_hw/0.19.2-1.tar.gz";
+    name = "0.19.2-1.tar.gz";
+    sha256 = "14145a224ce7c9089ee9f4bfd8731ea56382e5060db6530b3f874f7a5f090bf1";
   };
 
   buildType = "catkin";

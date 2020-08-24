@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, message-generation, message-runtime, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-actionlib-tutorials";
-  version = "0.1.12-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/noetic/actionlib_tutorials/0.1.12-1.tar.gz";
-    name = "0.1.12-1.tar.gz";
-    sha256 = "28273e58e2d14c96dbdf0d62e882223c483fb633d2001866b39370086d3b837f";
+    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/noetic/actionlib_tutorials/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "ed23df795555dc2032041aaaf30d85adc0856aef3e5a02fbaa3010229eb2b200";
   };
 
   buildType = "catkin";

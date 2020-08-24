@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, gazebo-plugins, gazebo-ros, gazebo-ros-control, hector-gazebo-plugins, husky-control, husky-description, multimaster-launch, pointcloud-to-laserscan, roslaunch, rostopic }:
 buildRosPackage {
   pname = "ros-melodic-husky-gazebo";
-  version = "0.4.3-r1";
+  version = "0.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_gazebo/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "764f523cad40ac87cf73f32d3ab12ed80f848fc74e2db3fcf716b2fcf2b1da4e";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_gazebo/0.4.4-1.tar.gz";
+    name = "0.4.4-1.tar.gz";
+    sha256 = "0832fc2795e82ba670ebd349412d525eace474bf17c4ef49fd1ead9fd5065c4a";
   };
 
   buildType = "catkin";

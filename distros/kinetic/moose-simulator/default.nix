@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moose-gazebo }:
 buildRosPackage {
   pname = "ros-kinetic-moose-simulator";
-  version = "0.1.1-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/moose_simulator-release/archive/release/kinetic/moose_simulator/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "0bbb6bb1bc90931e2bf1fc1b0b6000d4521384611ce09acd52c4d526451625e6";
+    url = "https://github.com/clearpath-gbp/moose_simulator-release/archive/release/kinetic/moose_simulator/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "33c6d056ffbe7781b9d46dc1deb0e63544eb1a05179074b3eb056584d9c52664";
   };
 
   buildType = "catkin";

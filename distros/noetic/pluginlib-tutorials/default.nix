@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-pluginlib-tutorials";
-  version = "0.1.12-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/noetic/pluginlib_tutorials/0.1.12-1.tar.gz";
-    name = "0.1.12-1.tar.gz";
-    sha256 = "d5632ace1e8b9379f74c20adfad09d3c730af3a595ae9009a2bf199e400757de";
+    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/noetic/pluginlib_tutorials/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "7ab5def4de3d6de1478cb73dad4610ae045d327076ef56c4815b5836faf684ba";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, pluginlib, rosbash, roscpp, rosnode, rospy, rostest }:
 buildRosPackage {
   pname = "ros-melodic-controller-manager-tests";
-  version = "0.18.1-r1";
+  version = "0.18.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/controller_manager_tests/0.18.1-1.tar.gz";
-    name = "0.18.1-1.tar.gz";
-    sha256 = "08c6dfb27003c9fcd6449e6629fb308e89f07888e48a98eda358fd1c17aa8d2f";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/controller_manager_tests/0.18.2-1.tar.gz";
+    name = "0.18.2-1.tar.gz";
+    sha256 = "c400eed2bb08b14f858687c6274cc907187606877f2ea55ceae1b092969f125a";
   };
 
   buildType = "catkin";

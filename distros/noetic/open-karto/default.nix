@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin }:
 buildRosPackage {
   pname = "ros-noetic-open-karto";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/open_karto-release/archive/release/noetic/open_karto/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "30b93197b5cd2a50f5e82a04a19f6ba3b36e045bd41fb23277c47bcbd6952afd";
+    url = "https://github.com/ros-gbp/open_karto-release/archive/release/noetic/open_karto/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "10049b93fa17eadee4f7ef7ee4a4ecbaf6550e390a76417ebb4bbef161fd44f0";
   };
 
   buildType = "catkin";

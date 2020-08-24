@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost }:
 buildRosPackage {
   pname = "ros-eloquent-swri-serial-util";
-  version = "3.3.0-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_serial_util/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "466dcabfa483a3086f5bba78143262cde4e41070077a167e8338c0b15c20214b";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_serial_util/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "a93a9eeea7a2e288fa222a527fdfad685c28350e810d002a2e9bcbbcaa2709d0";
   };
 
   buildType = "ament_cmake";

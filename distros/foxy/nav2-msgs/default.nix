@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, nav-msgs, nav2-common, rclcpp, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-nav2-msgs";
-  version = "0.4.1-r1";
+  version = "0.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_msgs/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "9610bb5b0b1b329d61e5b142f802c37659333f248d4b243349cf51ef28870891";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_msgs/0.4.3-1.tar.gz";
+    name = "0.4.3-1.tar.gz";
+    sha256 = "c79a891e10fb45734d3433a95bc459ba797d6b89cb9b2b22ec529dd65fbbe113";
   };
 
   buildType = "ament_cmake";

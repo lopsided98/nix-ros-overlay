@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, gps-msgs, nav-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-gps-tools";
-  version = "1.0.2-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/eloquent/gps_tools/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "82bb2364bc54a765977f3d3c7f46da38f876ec1074eaad36f735047d46bc15c2";
+    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/eloquent/gps_tools/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "d44c60133d71a24024d974ad55ec54920f1a8ee8eb8a73c06463e7a91c09e41c";
   };
 
   buildType = "ament_cmake";

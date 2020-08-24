@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages, qt5, tango-icon-theme }:
 buildRosPackage {
   pname = "ros-melodic-qt-gui";
-  version = "0.4.1-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "5a3d2a1b4ce728bd94af6e0562f6a91439d9f0ebd0141277a8df67976d2dd796";
+    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "25f883aaa0621d629cabdd188d4f00845aa749127c104dbaf58b3b617f04fa70";
   };
 
   buildType = "catkin";

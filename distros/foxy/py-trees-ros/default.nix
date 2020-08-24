@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, py-trees, py-trees-ros-interfaces, python3Packages, pythonPackages, rcl-interfaces, rclpy, ros2topic, sensor-msgs, std-msgs, tf2-ros, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-foxy-py-trees-ros";
-  version = "2.0.11-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/stonier/py_trees_ros-release/archive/release/foxy/py_trees_ros/2.0.11-1.tar.gz";
-    name = "2.0.11-1.tar.gz";
-    sha256 = "b59bbf7efb689db67853a793fe3ea3aab76be32aa5033e1146ab16bb38f2e371";
+    url = "https://github.com/stonier/py_trees_ros-release/archive/release/foxy/py_trees_ros/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "60ce57d3f63b22e7a60e9c9672b968196474706827afa6f175a6b4fa8e3c2c04";
   };
 
   buildType = "ament_python";

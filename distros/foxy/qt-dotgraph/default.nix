@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages }:
 buildRosPackage {
   pname = "ros-foxy-qt-dotgraph";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/foxy/qt_dotgraph/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "94408f52e8307efe0933ddd768cd011c8783da1d69903324c9c0f34c98b46143";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/foxy/qt_dotgraph/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "6508a1a5a3cb338f6968c74d3c5cd85a88da97aed9f698062c54920ae86d8f9f";
   };
 
   buildType = "ament_cmake";

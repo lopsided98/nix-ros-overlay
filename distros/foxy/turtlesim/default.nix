@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, geometry-msgs, qt5, rclcpp, rclcpp-action, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-foxy-turtlesim";
-  version = "1.2.4-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/foxy/turtlesim/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "289d7d0565490d255ba88cbf7a88ecfaaeb153b4f69c5e24be19c7db2eae3b6f";
+    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/foxy/turtlesim/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "3249a3dc938596b17f2a809dec6fef5a2a2d05d363d0e1a84ed1a0136a62284d";
   };
 
   buildType = "ament_cmake";

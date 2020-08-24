@@ -140,6 +140,8 @@ self: super: {
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
 
+ can-msgs = self.callPackage ./can-msgs {};
+
  cartographer = self.callPackage ./cartographer {};
 
  cartographer-ros = self.callPackage ./cartographer-ros {};
@@ -191,6 +193,14 @@ self: super: {
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
+
+ dolly = self.callPackage ./dolly {};
+
+ dolly-follow = self.callPackage ./dolly-follow {};
+
+ dolly-gazebo = self.callPackage ./dolly-gazebo {};
+
+ dolly-ignition = self.callPackage ./dolly-ignition {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
 
@@ -372,6 +382,8 @@ self: super: {
 
  gpsd-client = self.callPackage ./gpsd-client {};
 
+ grbl-ros = self.callPackage ./grbl-ros {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
@@ -409,6 +421,12 @@ self: super: {
  joy-linux = self.callPackage ./joy-linux {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
+
+ kobuki-dock-drive = self.callPackage ./kobuki-dock-drive {};
+
+ kobuki-driver = self.callPackage ./kobuki-driver {};
+
+ kobuki-firmware = self.callPackage ./kobuki-firmware {};
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
@@ -467,6 +485,8 @@ self: super: {
  marti-status-msgs = self.callPackage ./marti-status-msgs {};
 
  marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
+
+ mavlink = self.callPackage ./mavlink {};
 
  message-filters = self.callPackage ./message-filters {};
 
@@ -581,6 +601,8 @@ self: super: {
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
+
+ plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
 
  pluginlib = self.callPackage ./pluginlib {};
 
@@ -930,6 +952,8 @@ self: super: {
 
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
+ system-metrics-collector = self.callPackage ./system-metrics-collector {};
+
  system-modes = self.callPackage ./system-modes {};
 
  system-modes-examples = self.callPackage ./system-modes-examples {};
@@ -1019,6 +1043,8 @@ self: super: {
  velodyne-msgs = self.callPackage ./velodyne-msgs {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
+ vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

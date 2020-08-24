@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rosgraph }:
 buildRosPackage {
   pname = "ros-kinetic-rosmaster";
-  version = "1.12.14";
+  version = "1.12.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosmaster/1.12.14-0.tar.gz";
-    name = "1.12.14-0.tar.gz";
-    sha256 = "bec0eaa1d2bac16babf2b109cc419c4c7d8352fd7c077cf1ada6a96809d80dec";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosmaster/1.12.15-1.tar.gz";
+    name = "1.12.15-1.tar.gz";
+    sha256 = "69bd21ac1e8fb2f885297093552d49a07311f6ea647e2efa4e44a7e0c50a2a18";
   };
 
   buildType = "catkin";

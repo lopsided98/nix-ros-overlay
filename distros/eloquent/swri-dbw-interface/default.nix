@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-eloquent-swri-dbw-interface";
-  version = "3.3.0-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_dbw_interface/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "f706897cf65196c0a3fdcb1f53900aeaa926813298f8e3707574f3ef8e1519b3";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_dbw_interface/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "c5a5675023bfb11062cae99dd6605c69bbdf6253506e2e885128fafd07233ba9";
   };
 
   buildType = "ament_cmake";

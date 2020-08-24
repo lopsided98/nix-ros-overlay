@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-concepts, ecl-license, ecl-mpl }:
 buildRosPackage {
   pname = "ros-foxy-ecl-utilities";
-  version = "1.0.8-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/foxy/ecl_utilities/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "468ab6afcdeacbd001fe87c11bed1f3d5212f4e085864807727d89c9a198f6dc";
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/foxy/ecl_utilities/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "0c7d421d8d2b3ee1800df34a16b89ec08a128632391f731ab8e395f38a495280";
   };
 
   buildType = "ament_cmake";

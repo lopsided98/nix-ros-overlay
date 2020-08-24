@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, diagnostic-updater, gtest, marti-common-msgs, nav-msgs, rclcpp, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-eloquent-swri-roscpp";
-  version = "3.3.0-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_roscpp/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "6fa7df93bb773dfc54facc30186f88599b4602af4b33fd6f72d1c8eba8f6893f";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_roscpp/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "2f7145c20e5c5d302d51f9d239371e9eee428cd3c89376b9c8fff8953aed84ce";
   };
 
   buildType = "ament_cmake";
