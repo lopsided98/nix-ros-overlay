@@ -180,8 +180,6 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
- cross-compile = self.callPackage ./cross-compile {};
-
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
@@ -305,6 +303,8 @@ self: super: {
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
+
+ eigenpy = self.callPackage ./eigenpy {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
 
@@ -501,6 +501,8 @@ self: super: {
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
+
+ mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multires-image = self.callPackage ./multires-image {};
 
@@ -1077,6 +1079,30 @@ self: super: {
  vision-opencv = self.callPackage ./vision-opencv {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
+
+ webots-ros2 = self.callPackage ./webots-ros2 {};
+
+ webots-ros2-abb = self.callPackage ./webots-ros2-abb {};
+
+ webots-ros2-core = self.callPackage ./webots-ros2-core {};
+
+ webots-ros2-demos = self.callPackage ./webots-ros2-demos {};
+
+ webots-ros2-desktop = self.callPackage ./webots-ros2-desktop {};
+
+ webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
+
+ webots-ros2-examples = self.callPackage ./webots-ros2-examples {};
+
+ webots-ros2-importer = self.callPackage ./webots-ros2-importer {};
+
+ webots-ros2-msgs = self.callPackage ./webots-ros2-msgs {};
+
+ webots-ros2-tiago = self.callPackage ./webots-ros2-tiago {};
+
+ webots-ros2-universal-robot = self.callPackage ./webots-ros2-universal-robot {};
+
+ webots-ros2-ur-e-description = self.callPackage ./webots-ros2-ur-e-description {};
 
  xacro = self.callPackage ./xacro {};
 

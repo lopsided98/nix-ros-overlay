@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ridgeback-gazebo }:
 buildRosPackage {
   pname = "ros-kinetic-ridgeback-simulator";
-  version = "0.0.3";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/kinetic/ridgeback_simulator/0.0.3-0.tar.gz";
-    name = "0.0.3-0.tar.gz";
-    sha256 = "268094d7630113ac3ecf5448a614664ba220c5b78ee049c2bdb0908d465f567e";
+    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/kinetic/ridgeback_simulator/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "73ae7414480e7f26f06aa25bcdca0d3f18406c65627c9d89d921fd9a9c0ad32d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, jackal-gazebo }:
 buildRosPackage {
   pname = "ros-melodic-jackal-simulator";
-  version = "0.3.0-r1";
+  version = "0.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal_simulator-release/archive/release/melodic/jackal_simulator/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "54d03ef799f70826356e17989b437e8eb28de08fdb9cff40d7ed275e63fc263b";
+    url = "https://github.com/clearpath-gbp/jackal_simulator-release/archive/release/melodic/jackal_simulator/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
+    sha256 = "e9e14150e70e7c51cd6fa674af8c0bae82aedd156e8bf0019774448d6b1a915a";
   };
 
   buildType = "catkin";

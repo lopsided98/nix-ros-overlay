@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosgraph, rostest, rostopic }:
 buildRosPackage {
   pname = "ros-kinetic-rosnode";
-  version = "1.12.15-r1";
+  version = "1.12.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosnode/1.12.15-1.tar.gz";
-    name = "1.12.15-1.tar.gz";
-    sha256 = "ba0ffdac66ac3b48b60e16d10725788d5066e9c2559f2943c3e9930c73814e80";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosnode/1.12.16-1.tar.gz";
+    name = "1.12.16-1.tar.gz";
+    sha256 = "22cda46d4b51c01b9b2cc5031c8fec64fded6d31b42714cad976139790730c80";
   };
 
   buildType = "catkin";

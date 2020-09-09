@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, costmap-2d, dynamic-reconfigure, eigen, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, pluginlib, rosconsole, roscpp, rospy, rosunit, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs, voxel-grid }:
 buildRosPackage {
   pname = "ros-melodic-base-local-planner";
-  version = "1.16.6-r1";
+  version = "1.16.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/base_local_planner/1.16.6-1.tar.gz";
-    name = "1.16.6-1.tar.gz";
-    sha256 = "6663114d5a8bb3b02c81f46931250e2497ae3acce993b161b27b6b4b3b77aedb";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/base_local_planner/1.16.7-1.tar.gz";
+    name = "1.16.7-1.tar.gz";
+    sha256 = "51ee2f7a40c5041648f1bb6735562a801b986e7f01f6a0fd7a600aa73c56c6b6";
   };
 
   buildType = "catkin";

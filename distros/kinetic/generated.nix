@@ -168,6 +168,18 @@ self: super: {
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
 
+ autoware-can-msgs = self.callPackage ./autoware-can-msgs {};
+
+ autoware-config-msgs = self.callPackage ./autoware-config-msgs {};
+
+ autoware-external-msgs = self.callPackage ./autoware-external-msgs {};
+
+ autoware-map-msgs = self.callPackage ./autoware-map-msgs {};
+
+ autoware-msgs = self.callPackage ./autoware-msgs {};
+
+ autoware-system-msgs = self.callPackage ./autoware-system-msgs {};
+
  auv-msgs = self.callPackage ./auv-msgs {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
@@ -297,8 +309,6 @@ self: super: {
  catkin = self.callPackage ./catkin {};
 
  catkin-pip = self.callPackage ./catkin-pip {};
-
- catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
 
  certifi = self.callPackage ./certifi {};
 
@@ -1464,6 +1474,8 @@ self: super: {
 
  heron-viz = self.callPackage ./heron-viz {};
 
+ hfl-driver = self.callPackage ./hfl-driver {};
+
  hironx-calibration = self.callPackage ./hironx-calibration {};
 
  hironx-moveit-config = self.callPackage ./hironx-moveit-config {};
@@ -1687,6 +1699,8 @@ self: super: {
  ira-laser-tools = self.callPackage ./ira-laser-tools {};
 
  ivcon = self.callPackage ./ivcon {};
+
+ ixblue-stdbin-decoder = self.callPackage ./ixblue-stdbin-decoder {};
 
  jackal-control = self.callPackage ./jackal-control {};
 
@@ -3566,6 +3580,8 @@ self: super: {
 
  robot-upstart = self.callPackage ./robot-upstart {};
 
+ roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
+
  robotis-controller = self.callPackage ./robotis-controller {};
 
  robotis-controller-msgs = self.callPackage ./robotis-controller-msgs {};
@@ -4122,6 +4138,8 @@ self: super: {
 
  rsm-rviz-plugins = self.callPackage ./rsm-rviz-plugins {};
 
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
+
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
  rtmbuild = self.callPackage ./rtmbuild {};
@@ -4499,6 +4517,8 @@ self: super: {
  swri-yaml-util = self.callPackage ./swri-yaml-util {};
 
  sync-params = self.callPackage ./sync-params {};
+
+ tablet-socket-msgs = self.callPackage ./tablet-socket-msgs {};
 
  talos-description = self.callPackage ./talos-description {};
 
@@ -5003,6 +5023,8 @@ self: super: {
  variant-topic-test = self.callPackage ./variant-topic-test {};
 
  variant-topic-tools = self.callPackage ./variant-topic-tools {};
+
+ vector-map-msgs = self.callPackage ./vector-map-msgs {};
 
  velocity-controllers = self.callPackage ./velocity-controllers {};
 

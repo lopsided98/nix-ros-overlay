@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, geometry-msgs, laser-geometry, map-msgs, map-server, message-filters, message-generation, message-runtime, nav-msgs, pluginlib, rosbag, rosconsole, roscpp, rostest, rosunit, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs, voxel-grid }:
 buildRosPackage {
   pname = "ros-noetic-costmap-2d";
-  version = "1.17.0-r1";
+  version = "1.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/costmap_2d/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "4198a0d80640c7b0d0cfb1d8a68671232fa839d39e66fa17042ce3e0cae23df3";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/costmap_2d/1.17.1-1.tar.gz";
+    name = "1.17.1-1.tar.gz";
+    sha256 = "41e3539a9e75d2ac7ed492e115128f999bf108a7ea29a7c60ac26426c7edd537";
   };
 
   buildType = "catkin";

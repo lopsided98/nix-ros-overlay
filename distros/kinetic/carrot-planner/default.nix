@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, eigen, nav-core, pluginlib, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-carrot-planner";
-  version = "1.14.7-r1";
+  version = "1.14.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/carrot_planner/1.14.7-1.tar.gz";
-    name = "1.14.7-1.tar.gz";
-    sha256 = "b6ab22cd97eb038e683cd9de9504bc8adf27ca1060afee18ecef7e4c20cf5f2a";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/carrot_planner/1.14.8-1.tar.gz";
+    name = "1.14.8-1.tar.gz";
+    sha256 = "86584643f11e5d9556fc1a549405318aa07d24d12ce7a5786afc8d8c08a24090";
   };
 
   buildType = "catkin";

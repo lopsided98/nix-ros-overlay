@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, geometry-msgs, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-nav-core";
-  version = "1.17.0-r1";
+  version = "1.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/nav_core/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "7273052575ba514abd581c31793bfd2d95375de0012f0d67905ab0cddcd76ded";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/nav_core/1.17.1-1.tar.gz";
+    name = "1.17.1-1.tar.gz";
+    sha256 = "f735e3cace9b61e0810a288235ddfe9c98c999a1aa854c365b08076057c9b1a0";
   };
 
   buildType = "catkin";

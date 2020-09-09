@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-msgs";
-  version = "0.0.4-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_msgs/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "a456a598507af6d27c441ac9023336dca5214c5ec1787af594853610646c53f2";
+    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_msgs/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "0c534d411bb05f79acef2eb67f2ac6fb7adef7990bff1dceda12ab2d9fab1d03";
   };
 
   buildType = "ament_cmake";

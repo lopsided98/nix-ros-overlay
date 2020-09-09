@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, filters, git, laser-filters, laser-geometry, mk }:
 buildRosPackage {
   pname = "ros-noetic-laser-filters-jsk-patch";
-  version = "2.1.20-r1";
+  version = "2.1.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/laser_filters_jsk_patch/2.1.20-1.tar.gz";
-    name = "2.1.20-1.tar.gz";
-    sha256 = "6572abf644e3162c110b20571a9a5cd923c235191494c48fb0793537e0cebfdd";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/laser_filters_jsk_patch/2.1.21-1.tar.gz";
+    name = "2.1.21-1.tar.gz";
+    sha256 = "c5fcf6809092377e6b10c73f258b4098af90b339c83b7b2530239ba64a500f90";
   };
 
   buildType = "catkin";

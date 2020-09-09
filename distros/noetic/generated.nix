@@ -12,8 +12,6 @@ self: super: {
 
  actionlib-msgs = self.callPackage ./actionlib-msgs {};
 
- actionlib-tools = self.callPackage ./actionlib-tools {};
-
  actionlib-tutorials = self.callPackage ./actionlib-tutorials {};
 
  angles = self.callPackage ./angles {};
@@ -86,7 +84,7 @@ self: super: {
 
  catkin = self.callPackage ./catkin {};
 
- catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
+ chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
  class-loader = self.callPackage ./class-loader {};
 
@@ -242,6 +240,8 @@ self: super: {
 
  dynamic-graph-python = self.callPackage ./dynamic-graph-python {};
 
+ dynamic-graph-tutorial = self.callPackage ./dynamic-graph-tutorial {};
+
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamic-reconfigure = self.callPackage ./dynamic-reconfigure {};
@@ -330,6 +330,8 @@ self: super: {
 
  executive-smach = self.callPackage ./executive-smach {};
 
+ executive-smach-visualization = self.callPackage ./executive-smach-visualization {};
+
  exotica-val-description = self.callPackage ./exotica-val-description {};
 
  fadecandy-driver = self.callPackage ./fadecandy-driver {};
@@ -365,6 +367,18 @@ self: super: {
  four-wheel-steering-controller = self.callPackage ./four-wheel-steering-controller {};
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
+
+ franka-control = self.callPackage ./franka-control {};
+
+ franka-description = self.callPackage ./franka-description {};
+
+ franka-gripper = self.callPackage ./franka-gripper {};
+
+ franka-hw = self.callPackage ./franka-hw {};
+
+ franka-msgs = self.callPackage ./franka-msgs {};
+
+ franka-visualization = self.callPackage ./franka-visualization {};
 
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
@@ -430,6 +444,8 @@ self: super: {
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
 
+ hfl-driver = self.callPackage ./hfl-driver {};
+
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hokuyo3d = self.callPackage ./hokuyo3d {};
@@ -478,6 +494,14 @@ self: super: {
 
  ivcon = self.callPackage ./ivcon {};
 
+ ixblue-ins = self.callPackage ./ixblue-ins {};
+
+ ixblue-ins-driver = self.callPackage ./ixblue-ins-driver {};
+
+ ixblue-ins-msgs = self.callPackage ./ixblue-ins-msgs {};
+
+ ixblue-stdbin-decoder = self.callPackage ./ixblue-stdbin-decoder {};
+
  jderobot-assets = self.callPackage ./jderobot-assets {};
 
  joint-limits-interface = self.callPackage ./joint-limits-interface {};
@@ -523,6 +547,24 @@ self: super: {
  key-teleop = self.callPackage ./key-teleop {};
 
  kobuki-msgs = self.callPackage ./kobuki-msgs {};
+
+ lanelet2 = self.callPackage ./lanelet2 {};
+
+ lanelet2-core = self.callPackage ./lanelet2-core {};
+
+ lanelet2-examples = self.callPackage ./lanelet2-examples {};
+
+ lanelet2-maps = self.callPackage ./lanelet2-maps {};
+
+ lanelet2-projection = self.callPackage ./lanelet2-projection {};
+
+ lanelet2-python = self.callPackage ./lanelet2-python {};
+
+ lanelet2-routing = self.callPackage ./lanelet2-routing {};
+
+ lanelet2-traffic-rules = self.callPackage ./lanelet2-traffic-rules {};
+
+ lanelet2-validation = self.callPackage ./lanelet2-validation {};
 
  laser-assembler = self.callPackage ./laser-assembler {};
 
@@ -672,7 +714,21 @@ self: super: {
 
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
+ moveit = self.callPackage ./moveit {};
+
+ moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
+
+ moveit-fake-controller-manager = self.callPackage ./moveit-fake-controller-manager {};
+
  moveit-msgs = self.callPackage ./moveit-msgs {};
+
+ moveit-planners = self.callPackage ./moveit-planners {};
+
+ moveit-planners-chomp = self.callPackage ./moveit-planners-chomp {};
+
+ moveit-planners-ompl = self.callPackage ./moveit-planners-ompl {};
+
+ moveit-plugins = self.callPackage ./moveit-plugins {};
 
  moveit-resources = self.callPackage ./moveit-resources {};
 
@@ -686,11 +742,45 @@ self: super: {
 
  moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
 
+ moveit-ros = self.callPackage ./moveit-ros {};
+
+ moveit-ros-benchmarks = self.callPackage ./moveit-ros-benchmarks {};
+
+ moveit-ros-control-interface = self.callPackage ./moveit-ros-control-interface {};
+
+ moveit-ros-manipulation = self.callPackage ./moveit-ros-manipulation {};
+
+ moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
+
+ moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
+
+ moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
+
+ moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
+
+ moveit-ros-planning-interface = self.callPackage ./moveit-ros-planning-interface {};
+
+ moveit-ros-robot-interaction = self.callPackage ./moveit-ros-robot-interaction {};
+
+ moveit-ros-visualization = self.callPackage ./moveit-ros-visualization {};
+
+ moveit-ros-warehouse = self.callPackage ./moveit-ros-warehouse {};
+
+ moveit-runtime = self.callPackage ./moveit-runtime {};
+
+ moveit-servo = self.callPackage ./moveit-servo {};
+
+ moveit-setup-assistant = self.callPackage ./moveit-setup-assistant {};
+
+ moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
+
  mpc-local-planner = self.callPackage ./mpc-local-planner {};
 
  mpc-local-planner-examples = self.callPackage ./mpc-local-planner-examples {};
 
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
+
+ mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -988,6 +1078,8 @@ self: super: {
 
  ros-tutorials = self.callPackage ./ros-tutorials {};
 
+ ros-type-introspection = self.callPackage ./ros-type-introspection {};
+
  rosapi = self.callPackage ./rosapi {};
 
  rosauth = self.callPackage ./rosauth {};
@@ -995,6 +1087,8 @@ self: super: {
  rosbag = self.callPackage ./rosbag {};
 
  rosbag-migration-rule = self.callPackage ./rosbag-migration-rule {};
+
+ rosbag-pandas = self.callPackage ./rosbag-pandas {};
 
  rosbag-snapshot = self.callPackage ./rosbag-snapshot {};
 
@@ -1091,6 +1185,34 @@ self: super: {
  rospy-message-converter = self.callPackage ./rospy-message-converter {};
 
  rospy-tutorials = self.callPackage ./rospy-tutorials {};
+
+ rosserial = self.callPackage ./rosserial {};
+
+ rosserial-arduino = self.callPackage ./rosserial-arduino {};
+
+ rosserial-chibios = self.callPackage ./rosserial-chibios {};
+
+ rosserial-client = self.callPackage ./rosserial-client {};
+
+ rosserial-embeddedlinux = self.callPackage ./rosserial-embeddedlinux {};
+
+ rosserial-mbed = self.callPackage ./rosserial-mbed {};
+
+ rosserial-msgs = self.callPackage ./rosserial-msgs {};
+
+ rosserial-python = self.callPackage ./rosserial-python {};
+
+ rosserial-server = self.callPackage ./rosserial-server {};
+
+ rosserial-tivac = self.callPackage ./rosserial-tivac {};
+
+ rosserial-vex-cortex = self.callPackage ./rosserial-vex-cortex {};
+
+ rosserial-vex-v5 = self.callPackage ./rosserial-vex-v5 {};
+
+ rosserial-windows = self.callPackage ./rosserial-windows {};
+
+ rosserial-xbee = self.callPackage ./rosserial-xbee {};
 
  rosservice = self.callPackage ./rosservice {};
 
@@ -1248,6 +1370,8 @@ self: super: {
 
  smach-ros = self.callPackage ./smach-ros {};
 
+ smach-viewer = self.callPackage ./smach-viewer {};
+
  smclib = self.callPackage ./smclib {};
 
  socketcan-bridge = self.callPackage ./socketcan-bridge {};
@@ -1293,6 +1417,12 @@ self: super: {
  swri-opencv-util = self.callPackage ./swri-opencv-util {};
 
  swri-prefix-tools = self.callPackage ./swri-prefix-tools {};
+
+ swri-profiler = self.callPackage ./swri-profiler {};
+
+ swri-profiler-msgs = self.callPackage ./swri-profiler-msgs {};
+
+ swri-profiler-tools = self.callPackage ./swri-profiler-tools {};
 
  swri-roscpp = self.callPackage ./swri-roscpp {};
 

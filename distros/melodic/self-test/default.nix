@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, diagnostic-updater, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-self-test";
-  version = "1.9.5-r1";
+  version = "1.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/self_test/1.9.5-1.tar.gz";
-    name = "1.9.5-1.tar.gz";
-    sha256 = "976fe8f43ed72ac95cdc86cc728fd67b29fa1827cd593db5b3a237c03bb08336";
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/self_test/1.9.7-1.tar.gz";
+    name = "1.9.7-1.tar.gz";
+    sha256 = "8003bc9a5dcc8daae483cced14c86f3a413161871cd48d7d5e9e1277148c8f56";
   };
 
   buildType = "catkin";

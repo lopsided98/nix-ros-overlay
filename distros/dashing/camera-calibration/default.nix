@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, cv-bridge, image-geometry, message-filters, python3Packages, pythonPackages, rclpy, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-dashing-camera-calibration";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/dashing/camera_calibration/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "ca755e0c2c63fd3c14dbbdd41b27e8a32ddc0def5399f63c7053d73f6ad8732d";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/dashing/camera_calibration/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "fbd18da037f2252911cdd00d69256a5833b8a9cebe81d72657b4bce6e34f1735";
   };
 
   buildType = "ament_python";

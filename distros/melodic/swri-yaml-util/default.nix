@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, libyamlcpp, pkg-config }:
 buildRosPackage {
   pname = "ros-melodic-swri-yaml-util";
-  version = "2.14.0-r1";
+  version = "2.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_yaml_util/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "31694538caf69f051d66b9189890e6a0ca0bf57bead3b3fef78d3c39f03e36d8";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_yaml_util/2.14.1-1.tar.gz";
+    name = "2.14.1-1.tar.gz";
+    sha256 = "740997bb995eedca85b49ec4a46494b5d5692da45d2a562787567bccb038df46";
   };
 
   buildType = "catkin";

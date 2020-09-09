@@ -2,19 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, camera-calibration, depth-image-proc, image-proc, image-publisher, image-rotate }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, camera-calibration, depth-image-proc, image-proc, image-publisher, image-rotate, image-view, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-foxy-image-pipeline";
-  version = "2.2.0-r2";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_pipeline/2.2.0-2.tar.gz";
-    name = "2.2.0-2.tar.gz";
-    sha256 = "7353eb75b68c576b7057d1362c94f072f0100eaa2755f932ac84a5f99dd1f210";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_pipeline/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "1002187b1cf134e6d0c1ee263bd53b5af9875479d0d34e098d4d20ec90983077";
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ camera-calibration depth-image-proc image-proc image-publisher image-rotate ];
+  checkInputs = [ ament-cmake-lint-cmake ament-cmake-xmllint ament-lint-auto ];
+  propagatedBuildInputs = [ camera-calibration depth-image-proc image-proc image-publisher image-rotate image-view stereo-image-proc ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

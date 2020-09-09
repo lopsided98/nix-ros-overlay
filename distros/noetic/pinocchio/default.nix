@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, eigenpy, git, python3, python3Packages, urdfdom }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigen, eigenpy, git, python3, python3Packages, urdfdom }:
 buildRosPackage {
   pname = "ros-noetic-pinocchio";
-  version = "2.4.5-r5";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/noetic/pinocchio/2.4.5-5.tar.gz";
-    name = "2.4.5-5.tar.gz";
-    sha256 = "9c5ddbf173290c34c4c9fdbee34428648200f7658ebb893c00eb91d7aaddbab8";
+    url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/noetic/pinocchio/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "e5166246bd99af2348f277870f44fc81c6ffa9662aa41a3c40544227e9b2f35a";
   };
 
   buildType = "cmake";
   buildInputs = [ doxygen git ];
-  propagatedBuildInputs = [ boost eigen eigenpy python3 python3Packages.numpy urdfdom ];
+  propagatedBuildInputs = [ boost catkin eigen eigenpy python3 python3Packages.numpy urdfdom ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

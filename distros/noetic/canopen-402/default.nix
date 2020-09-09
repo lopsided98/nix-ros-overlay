@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, canopen-master, catkin, class-loader, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-canopen-402";
-  version = "0.8.3-r1";
+  version = "0.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/noetic/canopen_402/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "86d4f54157ff281c6f8c129303c2756d98954c638e597fbd13f736706d2aa11f";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/noetic/canopen_402/0.8.4-1.tar.gz";
+    name = "0.8.4-1.tar.gz";
+    sha256 = "8cf52616a9b20aa72c4349489bd7138384ec01e407d5f131e8b6e4e98ebec3b0";
   };
 
   buildType = "catkin";

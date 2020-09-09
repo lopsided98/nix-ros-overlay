@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, pythonPackages, rclpy, std-msgs, webots-ros2-abb, webots-ros2-core, webots-ros2-universal-robot }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-demos";
-  version = "0.0.4-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_demos/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "826924dedfa09347b96f698a3b2a7dbb8075a7668e4dde5d55f9e1f463a01048";
+    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_demos/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "eda9b8f9d6e4ee8b70d55ea6c8f0db0b9a67a5aa03db16db3c7d0b55acd5278a";
   };
 
   buildType = "ament_python";

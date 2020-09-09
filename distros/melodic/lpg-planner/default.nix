@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-lpg-planner";
-  version = "2.1.21-r2";
+  version = "2.1.21-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/lpg_planner/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "e6bd80a8b905c841fe176232c3fb805848442477c6abb42955f9cc8d0c5196d2";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/lpg_planner/2.1.21-3.tar.gz";
+    name = "2.1.21-3.tar.gz";
+    sha256 = "36bbbab7b76409e1995490b8da7e7137c51189b5ae6a18271c0c94c095df9004";
   };
 
   buildType = "catkin";

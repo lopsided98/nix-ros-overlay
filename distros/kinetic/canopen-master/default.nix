@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, class-loader, rosunit, socketcan-interface }:
 buildRosPackage {
   pname = "ros-kinetic-canopen-master";
-  version = "0.7.12-r1";
+  version = "0.7.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/canopen_master/0.7.12-1.tar.gz";
-    name = "0.7.12-1.tar.gz";
-    sha256 = "396f28accb120c67582c9bcd54fce1722c23fdb09b367c52846a9e631f397c55";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/canopen_master/0.7.13-1.tar.gz";
+    name = "0.7.13-1.tar.gz";
+    sha256 = "d0f4e690516b1b294d5091aedc7f35bd79295909c95a944e826fd07f9ea7c214";
   };
 
   buildType = "catkin";

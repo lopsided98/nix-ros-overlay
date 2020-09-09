@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, demo-nodes-cpp, libstatistics-collector, lifecycle-msgs, message-filters, python3Packages, rcl, rclcpp, rclcpp-components, rclcpp-lifecycle, rclpy, rcpputils, rcutils, ros2launch, ros2lifecycle, ros2topic, rosidl-default-generators, rosidl-default-runtime, statistics-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-system-metrics-collector";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-tooling/system_metrics_collector-release/archive/release/foxy/system_metrics_collector/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "41a20cdbcd754e2719c2e08ff5deab17157ad27080e353679784567727b4de08";
+    url = "https://github.com/ros-tooling/system_metrics_collector-release/archive/release/foxy/system_metrics_collector/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "1b781a5d922279744556fd6bad6c48db88dae8ce17ed21d5abf8c70ad17f590a";
   };
 
   buildType = "ament_cmake";

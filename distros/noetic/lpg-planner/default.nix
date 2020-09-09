@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-lpg-planner";
-  version = "2.1.20-r1";
+  version = "2.1.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/lpg_planner/2.1.20-1.tar.gz";
-    name = "2.1.20-1.tar.gz";
-    sha256 = "02e75708d6e61f74d11e965a3cd0c09b101f50b76af10946a21f9246457c0a0a";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/lpg_planner/2.1.21-1.tar.gz";
+    name = "2.1.21-1.tar.gz";
+    sha256 = "8ca8a8c8725e597a3ba1db0a2a1d59b09af1af30f707c0ddac3414caa3bc2392";
   };
 
   buildType = "catkin";

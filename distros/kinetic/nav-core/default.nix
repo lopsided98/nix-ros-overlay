@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, geometry-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-nav-core";
-  version = "1.14.7-r1";
+  version = "1.14.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/nav_core/1.14.7-1.tar.gz";
-    name = "1.14.7-1.tar.gz";
-    sha256 = "d5f07cdc88c4b865a48dd6c5d3bfd0f3cb8f29fac37e26bc714a59022f660a75";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/nav_core/1.14.8-1.tar.gz";
+    name = "1.14.8-1.tar.gz";
+    sha256 = "b120f5f884dcea79e6f5cfe98142b4f98d7fe18dcfdff5d25595dd79ad0a9e4b";
   };
 
   buildType = "catkin";

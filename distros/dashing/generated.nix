@@ -188,6 +188,8 @@ self: super: {
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
+ contracts-lite-vendor = self.callPackage ./contracts-lite-vendor {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  controller-interface = self.callPackage ./controller-interface {};
@@ -201,8 +203,6 @@ self: super: {
  costmap-converter-msgs = self.callPackage ./costmap-converter-msgs {};
 
  costmap-queue = self.callPackage ./costmap-queue {};
-
- cross-compile = self.callPackage ./cross-compile {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, geometry-msgs, nav-core, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-move-slow-and-clear";
-  version = "1.17.0-r1";
+  version = "1.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/move_slow_and_clear/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "74eb81465481fecc2a5b797484596e189b656fade5c80069f467984ad882be44";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/move_slow_and_clear/1.17.1-1.tar.gz";
+    name = "1.17.1-1.tar.gz";
+    sha256 = "0b838414f4c7d8a9bf703ad2839bc84f683c3f30f94e9ad1b103714ee8c39013";
   };
 
   buildType = "catkin";

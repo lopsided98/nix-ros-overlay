@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lz4, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-roslz4";
-  version = "1.12.15-r1";
+  version = "1.12.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roslz4/1.12.15-1.tar.gz";
-    name = "1.12.15-1.tar.gz";
-    sha256 = "06d97e1214073471e9b900bed509d062c54e8958729600c4a62108ac3cb6592d";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roslz4/1.12.16-1.tar.gz";
+    name = "1.12.16-1.tar.gz";
+    sha256 = "f4fd030bfd5bf613e39effa52042f4c8f615a22b84b2df515c3b4873c96f5e41";
   };
 
   buildType = "catkin";

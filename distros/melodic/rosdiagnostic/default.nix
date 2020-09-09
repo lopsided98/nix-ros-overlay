@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, rospy }:
 buildRosPackage {
   pname = "ros-melodic-rosdiagnostic";
-  version = "1.9.5-r1";
+  version = "1.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/rosdiagnostic/1.9.5-1.tar.gz";
-    name = "1.9.5-1.tar.gz";
-    sha256 = "5734993b4a0922b9a7c9bc538d9c4797c4956696f3d6db170cf6b7e60dcba70c";
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/rosdiagnostic/1.9.7-1.tar.gz";
+    name = "1.9.7-1.tar.gz";
+    sha256 = "82844fa5c5ea517247d21e6276b7ebd9047b1ded877206ac3c0a027b176b5bcf";
   };
 
   buildType = "catkin";

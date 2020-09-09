@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cunit, maven, openjdk, openssl }:
 buildRosPackage {
   pname = "ros-foxy-cyclonedds";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/foxy/cyclonedds/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "df843df67155e09abfff76236dffbc3424ee6bccc021487f8b818aea13157a6d";
+    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/foxy/cyclonedds/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "36b41936eec3ba0d2dd36650da408d4ab9728d377b099d34b113a0a608b675e6";
   };
 
   buildType = "cmake";

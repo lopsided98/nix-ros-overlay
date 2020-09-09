@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mk, rosboost-cfg, rosbuild, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosping";
-  version = "2.1.21-r2";
+  version = "2.1.21-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/rosping/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "50b578773a82cdfe68bd763b3ca4ecfec845a0fb0b2ab07b9c7a922c8af2d748";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/rosping/2.1.21-3.tar.gz";
+    name = "2.1.21-3.tar.gz";
+    sha256 = "ad6542e6c227d8ccdec1a8f45f97d73bedc09477bab243f2eaf7e15acbfc2b3c";
   };
 
   buildType = "catkin";

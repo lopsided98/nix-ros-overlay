@@ -128,6 +128,10 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
+ apex-containers = self.callPackage ./apex-containers {};
+
+ apex-test-tools = self.callPackage ./apex-test-tools {};
+
  apriltag = self.callPackage ./apriltag {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
@@ -149,6 +153,22 @@ self: super: {
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
+
+ chiconybot-bringup = self.callPackage ./chiconybot-bringup {};
+
+ chiconybot-cartographer = self.callPackage ./chiconybot-cartographer {};
+
+ chiconybot-description = self.callPackage ./chiconybot-description {};
+
+ chiconybot-gazebo = self.callPackage ./chiconybot-gazebo {};
+
+ chiconybot-msgs = self.callPackage ./chiconybot-msgs {};
+
+ chiconybot-navigation2 = self.callPackage ./chiconybot-navigation2 {};
+
+ chiconybot-node = self.callPackage ./chiconybot-node {};
+
+ chiconybot-teleop = self.callPackage ./chiconybot-teleop {};
 
  class-loader = self.callPackage ./class-loader {};
 
@@ -300,6 +320,8 @@ self: super: {
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
+ eigenpy = self.callPackage ./eigenpy {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-minimal-action-client = self.callPackage ./examples-rclcpp-minimal-action-client {};
@@ -422,11 +444,11 @@ self: super: {
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
- kobuki-dock-drive = self.callPackage ./kobuki-dock-drive {};
-
- kobuki-driver = self.callPackage ./kobuki-driver {};
+ kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-firmware = self.callPackage ./kobuki-firmware {};
+
+ kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
@@ -542,6 +564,8 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
+ nmea-msgs = self.callPackage ./nmea-msgs {};
+
  nodl-python = self.callPackage ./nodl-python {};
 
  nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
@@ -601,6 +625,8 @@ self: super: {
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
+
+ plotjuggler = self.callPackage ./plotjuggler {};
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
 
@@ -902,6 +928,8 @@ self: super: {
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
+ serial-driver = self.callPackage ./serial-driver {};
+
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
@@ -964,6 +992,8 @@ self: super: {
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
+ test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
+
  test-interface-files = self.callPackage ./test-interface-files {};
 
  test-msgs = self.callPackage ./test-msgs {};
@@ -1013,6 +1043,8 @@ self: super: {
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlesim = self.callPackage ./turtlesim {};
+
+ udp-driver = self.callPackage ./udp-driver {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 

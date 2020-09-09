@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, python-qt-binding, pythonPackages, qt-gui, qt-gui-py-common, rospy, rqt-bag, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-robot-monitor";
-  version = "0.5.8-r1";
+  version = "0.5.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_robot_monitor-release/archive/release/kinetic/rqt_robot_monitor/0.5.8-1.tar.gz";
-    name = "0.5.8-1.tar.gz";
-    sha256 = "abb088688732aad7354f37f7deecd3350ce535017c82cbb033c25c19a27a5303";
+    url = "https://github.com/ros-gbp/rqt_robot_monitor-release/archive/release/kinetic/rqt_robot_monitor/0.5.13-1.tar.gz";
+    name = "0.5.13-1.tar.gz";
+    sha256 = "ab40af74033f56f11923d49caf076f413aba2b1d2786db4a210baaa56d5c6459";
   };
 
   buildType = "catkin";
   propagatedBuildInputs = [ diagnostic-msgs python-qt-binding pythonPackages.rospkg qt-gui qt-gui-py-common rospy rqt-bag rqt-gui rqt-gui-py rqt-py-common ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''rqt_robot_monitor displays diagnostics_agg topics messages that

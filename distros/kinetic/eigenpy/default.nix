@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigen, git, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-eigenpy";
-  version = "2.3.1-r3";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/kinetic/eigenpy/2.3.1-3.tar.gz";
-    name = "2.3.1-3.tar.gz";
-    sha256 = "6abed4a066bfbd0c6a4576338824d8a4428509e5935b468f10045eb19a9ecfd7";
+    url = "https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/kinetic/eigenpy/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "011fbec0f00ea14c583a76ef1e2e9411e494736bf1ff0c276f597b1dca651e6e";
   };
 
   buildType = "cmake";
   buildInputs = [ doxygen git ];
-  propagatedBuildInputs = [ boost eigen python pythonPackages.numpy ];
+  propagatedBuildInputs = [ boost catkin eigen python pythonPackages.numpy ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

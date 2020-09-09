@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rospatlite";
-  version = "2.1.21-r2";
+  version = "2.1.21-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/rospatlite/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "a7d5f230d3f05c932805f58fbd60b0c47f74410950da2122ad34a63c4f1fa185";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/rospatlite/2.1.21-3.tar.gz";
+    name = "2.1.21-3.tar.gz";
+    sha256 = "848a6da4df6cf977bdd2c5f626b40391258d7f30df00f181144491844006eeed";
   };
 
   buildType = "catkin";

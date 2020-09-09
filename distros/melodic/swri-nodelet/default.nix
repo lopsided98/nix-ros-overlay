@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, nodelet, rosbash, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-swri-nodelet";
-  version = "2.14.0-r1";
+  version = "2.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_nodelet/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "8b519aa6336cc2d02e9fec51959b9aa6837562f345e183cdbeab2ded9ceec2e9";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_nodelet/2.14.1-1.tar.gz";
+    name = "2.14.1-1.tar.gz";
+    sha256 = "482fde0491c05e1d9f98d47cbaa4853c66d7062fc570221466e251d55f665493";
   };
 
   buildType = "catkin";

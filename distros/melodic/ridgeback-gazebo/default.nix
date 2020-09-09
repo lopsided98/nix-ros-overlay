@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-plugins, gazebo-ros, gazebo-ros-control, hector-gazebo-plugins, ridgeback-control, ridgeback-description, ridgeback-gazebo-plugins, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-ridgeback-gazebo";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/melodic/ridgeback_gazebo/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "566ee423e7937ce8e5d92f7d12151a0fe4d5b11aa903d5d738522a65ac1ccb0c";
+    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/melodic/ridgeback_gazebo/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "cf6027f7ce85fff3e7b09d773138d47f26010b4b0b832a37a10a93d157b8abdc";
   };
 
   buildType = "catkin";

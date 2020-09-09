@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-common, aws-ros1-common, catkin, gmock, gtest, image-transport, kinesis-manager, kinesis-video-msgs, roscpp, rostest, rostopic, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-kinesis-video-streamer";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/kinesis_video_streamer-release/archive/release/melodic/kinesis_video_streamer/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "70c0ba5487f08625f2680233635e3b347579820d3129e1af5a695d429d86d636";
+    url = "https://github.com/aws-gbp/kinesis_video_streamer-release/archive/release/melodic/kinesis_video_streamer/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "c9d21edf29f27e1896e428ecabe75be86a821ecb7caa07ff4fd3ffd45c4c1385";
   };
 
   buildType = "catkin";

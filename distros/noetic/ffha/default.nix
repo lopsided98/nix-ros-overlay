@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bison, catkin, flex, gawk, mk, rosbuild, roslib, rospack }:
 buildRosPackage {
   pname = "ros-noetic-ffha";
-  version = "2.1.20-r1";
+  version = "2.1.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/ffha/2.1.20-1.tar.gz";
-    name = "2.1.20-1.tar.gz";
-    sha256 = "c40fdb17572c6a94c59454d39bd51329635d6f39ac31b5231e56cf8263f9ca18";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/ffha/2.1.21-1.tar.gz";
+    name = "2.1.21-1.tar.gz";
+    sha256 = "5e5e22c5eeb9a80bc89a4b5518ce07aef687a4c7a3dc81528a581a27d7f0f8d2";
   };
 
   buildType = "catkin";

@@ -2,18 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-dashing-grbl-ros";
-  version = "0.0.2-r1";
+  version = "0.0.12-r3";
 
   src = fetchurl {
-    url = "https://github.com/flynneva/grbl_ros-release/archive/release/dashing/grbl_ros/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "5f2e1fd0675dd8803ce783e524bbc2eed064ea5fac2fbd6bb4464e5b0c8ba0ee";
+    url = "https://github.com/flynneva/grbl_ros-release/archive/release/dashing/grbl_ros/0.0.12-3.tar.gz";
+    name = "0.0.12-3.tar.gz";
+    sha256 = "580daaa4b6f9f5c16d10b2d0c6af175052022f6ce0292bdb21e5bd999e859db4";
   };
 
   buildType = "ament_python";
+  buildInputs = [ python3Packages.pyserial ];
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
 
   meta = {

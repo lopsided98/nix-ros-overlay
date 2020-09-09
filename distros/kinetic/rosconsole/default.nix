@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, apr, boost, catkin, cpp-common, log4cxx, rosbuild, rostime, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-rosconsole";
-  version = "1.12.15-r1";
+  version = "1.12.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosconsole/1.12.15-1.tar.gz";
-    name = "1.12.15-1.tar.gz";
-    sha256 = "9a721bc174629519d0c11ebb80206b1279fc7cfdc966aba33fab2b74e0dfbac4";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosconsole/1.12.16-1.tar.gz";
+    name = "1.12.16-1.tar.gz";
+    sha256 = "ed0057e2c129ee74a997b5a517ace606bdf47de19e3170a41ad562cd9c57c5dd";
   };
 
   buildType = "catkin";

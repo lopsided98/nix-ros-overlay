@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, python-cmake-module, rclcpp, rmw, rmw-implementation-cmake, rosbag2-compression, rosbag2-cpp, rosbag2-storage, rosbag2-test-common, rpyutils, shared-queues-vendor, test-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-foxy-rosbag2-transport";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_transport/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "25e351efa9e57d0814985db0c60113bcd0f8cfa3b3c58a035708319bb6d90284";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_transport/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "29c3275d3412b90ecfa3a3b45f748036759ccf8dc516d207bf2c0fb14843abba";
   };
 
   buildType = "ament_cmake";

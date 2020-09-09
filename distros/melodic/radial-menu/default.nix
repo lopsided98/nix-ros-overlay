@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, radial-menu-backend, radial-menu-model, radial-menu-msgs, radial-menu-rviz }:
 buildRosPackage {
   pname = "ros-melodic-radial-menu";
-  version = "0.3.4-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/yoshito-n-students/radial_menu_ros-release/archive/release/melodic/radial_menu/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "c37f2ec05780e8c534b82d2214883a09a189f993ff8c0f6db67b5c5778cf07b7";
+    url = "https://github.com/yoshito-n-students/radial_menu_ros-release/archive/release/melodic/radial_menu/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "4df8cfccfbe84a0dfd2158c4497254f5face7eee36ad1ca80a23322ea143432f";
   };
 
   buildType = "catkin";

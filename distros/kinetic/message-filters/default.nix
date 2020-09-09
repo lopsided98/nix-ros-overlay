@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, rosconsole, roscpp, rostest, rosunit, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-kinetic-message-filters";
-  version = "1.12.15-r1";
+  version = "1.12.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/message_filters/1.12.15-1.tar.gz";
-    name = "1.12.15-1.tar.gz";
-    sha256 = "e95a88e4174937c1c50e34704519cc4006aa218a516d1f9cec160a00446b5cb6";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/message_filters/1.12.16-1.tar.gz";
+    name = "1.12.16-1.tar.gz";
+    sha256 = "b663a931c219870a481fbe9b48b1eacc993ade635f29b94b61b5d0cb82545639";
   };
 
   buildType = "catkin";

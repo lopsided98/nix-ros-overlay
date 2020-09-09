@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ecl-build, ecl-geometry, ecl-linear-algebra, ecl-threads }:
 buildRosPackage {
   pname = "ros-melodic-kobuki-dock-drive";
-  version = "0.7.8";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/melodic/kobuki_dock_drive/0.7.8-0.tar.gz";
-    name = "0.7.8-0.tar.gz";
-    sha256 = "4dfca7766cb632cb77dd853c714c4da273b373cb549f891a71533fd0ea36d437";
+    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/melodic/kobuki_dock_drive/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "2385bb482dfb73b115422ccd2d03f79a88ea1204dd266e6055581954051a6d8c";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, image-geometry, image-transport, image-view, message-filters, message-generation, message-runtime, pcl-ros, pythonPackages, roscpp, rostest, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-image-view2";
-  version = "2.2.10";
+  version = "2.2.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/kinetic/image_view2/2.2.10-0.tar.gz";
-    name = "2.2.10-0.tar.gz";
-    sha256 = "9c473c39749144320448406e22c8ed262cda2c901b9f231b5d749a0bf539d44e";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/kinetic/image_view2/2.2.11-1.tar.gz";
+    name = "2.2.11-1.tar.gz";
+    sha256 = "064ef7e2685e2b1168d3334a0867eb96ba53748c85e400faec8eca789daae446";
   };
 
   buildType = "catkin";

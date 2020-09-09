@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cpp-common, rostime }:
 buildRosPackage {
   pname = "ros-kinetic-xmlrpcpp";
-  version = "1.12.15-r1";
+  version = "1.12.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/xmlrpcpp/1.12.15-1.tar.gz";
-    name = "1.12.15-1.tar.gz";
-    sha256 = "ff7e55aec8f701adfb922cc64afd8d26ce795d0b298fd280759514d925f73861";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/xmlrpcpp/1.12.16-1.tar.gz";
+    name = "1.12.16-1.tar.gz";
+    sha256 = "fb662c176ae22ba7aba147004f7586b4233afad433d3b3e9906624da9dadd835";
   };
 
   buildType = "catkin";

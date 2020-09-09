@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, rospy }:
 buildRosPackage {
   pname = "ros-melodic-turtle-teleop-multi-key";
-  version = "0.0.3-r1";
+  version = "0.0.4-r3";
 
   src = fetchurl {
-    url = "https://github.com/EngHyu/turtle_teleop_multi_key-release/archive/release/melodic/turtle_teleop_multi_key/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "5036ff086408e0a3b9239c50ad6462e78e3e49a9f454c48a7528df103b7d3611";
+    url = "https://github.com/EngHyu/turtle_teleop_multi_key-release/archive/release/melodic/turtle_teleop_multi_key/0.0.4-3.tar.gz";
+    name = "0.0.4-3.tar.gz";
+    sha256 = "fbb81a963e9695912038087e72a8bc3323f67022afb17184213fd38d4556b1bc";
   };
 
   buildType = "catkin";

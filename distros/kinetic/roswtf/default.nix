@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, pythonPackages, rosbuild, rosgraph, roslaunch, roslib, rosnode, rosservice, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-roswtf";
-  version = "1.12.15-r1";
+  version = "1.12.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roswtf/1.12.15-1.tar.gz";
-    name = "1.12.15-1.tar.gz";
-    sha256 = "af4ae5ca4dc1b8c693f9aeac325d5890c01142e8c8f6d414084716a6c085e3eb";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roswtf/1.12.16-1.tar.gz";
+    name = "1.12.16-1.tar.gz";
+    sha256 = "cefe1aeb678d9c0447a33c062a253164ec6e4c09f49470a5f37409d81454e1d3";
   };
 
   buildType = "catkin";

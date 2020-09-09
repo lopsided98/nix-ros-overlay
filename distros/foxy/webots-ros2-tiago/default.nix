@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, geometry-msgs, pythonPackages, rclpy, rviz2, webots-ros2-core }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-tiago";
-  version = "0.0.4-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_tiago/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "a50145dec7dbb338cbb95b76a3ce4055a944d7b5727dccd748c3257838bcb353";
+    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_tiago/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "9531168f40a4284e1277babd2853a9df601da55332c55ddccf82d9b6d5f93bda";
   };
 
   buildType = "ament_python";
