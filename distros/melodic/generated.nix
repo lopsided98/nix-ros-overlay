@@ -236,6 +236,8 @@ self: super: {
 
  catkin-pip = self.callPackage ./catkin-pip {};
 
+ catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
+
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};

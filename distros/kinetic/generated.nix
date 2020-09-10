@@ -310,6 +310,8 @@ self: super: {
 
  catkin-pip = self.callPackage ./catkin-pip {};
 
+ catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
+
  certifi = self.callPackage ./certifi {};
 
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
@@ -1311,6 +1313,8 @@ self: super: {
  goal-passer = self.callPackage ./goal-passer {};
 
  gps-common = self.callPackage ./gps-common {};
+
+ gps-goal = self.callPackage ./gps-goal {};
 
  gps-umd = self.callPackage ./gps-umd {};
 

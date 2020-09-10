@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, python3, python3Packages, pythonPackages, rosbash, roslint }:
 buildRosPackage {
   pname = "ros-noetic-catkin-virtualenv";
-  version = "0.6.0-r1";
+  version = "0.6.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/locusrobotics/catkin_virtualenv-release/archive/release/noetic/catkin_virtualenv/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "625ce599f1b78253e9a31fec7b9257bede986d4e713993fe8a331805e3f78a1f";
+    url = "https://github.com/locusrobotics/catkin_virtualenv-release/archive/release/noetic/catkin_virtualenv/0.6.1-2.tar.gz";
+    name = "0.6.1-2.tar.gz";
+    sha256 = "a64e2bee1b82cb22c0ff35aea995ade6e9ab4b4f65a56bea61e928bd27acc608";
   };
 
   buildType = "catkin";
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ python3 python3Packages.nose python3Packages.rospkg python3Packages.virtualenv pythonPackages.virtualenv rosbash ];
+  propagatedBuildInputs = [ python3 python3Packages.nose python3Packages.rospkg python3Packages.virtualenv pythonPackages.python rosbash ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

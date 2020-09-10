@@ -12,6 +12,8 @@ self: super: {
 
  actionlib-msgs = self.callPackage ./actionlib-msgs {};
 
+ actionlib-tools = self.callPackage ./actionlib-tools {};
+
  actionlib-tutorials = self.callPackage ./actionlib-tutorials {};
 
  angles = self.callPackage ./angles {};
@@ -83,6 +85,8 @@ self: super: {
  catch-ros = self.callPackage ./catch-ros {};
 
  catkin = self.callPackage ./catkin {};
+
+ catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
@@ -355,6 +359,10 @@ self: super: {
  fkie-message-filters = self.callPackage ./fkie-message-filters {};
 
  fkie-multimaster = self.callPackage ./fkie-multimaster {};
+
+ fkie-node-manager = self.callPackage ./fkie-node-manager {};
+
+ fkie-node-manager-daemon = self.callPackage ./fkie-node-manager-daemon {};
 
  fmi-adapter = self.callPackage ./fmi-adapter {};
 
@@ -1073,6 +1081,10 @@ self: super: {
  ros-environment = self.callPackage ./ros-environment {};
 
  ros-ign = self.callPackage ./ros-ign {};
+
+ ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
+
+ ros-ign-image = self.callPackage ./ros-ign-image {};
 
  ros-pytest = self.callPackage ./ros-pytest {};
 

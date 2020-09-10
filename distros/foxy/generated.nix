@@ -786,6 +786,12 @@ self: super: {
 
  ros-ign = self.callPackage ./ros-ign {};
 
+ ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
+
+ ros-ign-gazebo = self.callPackage ./ros-ign-gazebo {};
+
+ ros-ign-image = self.callPackage ./ros-ign-image {};
+
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
