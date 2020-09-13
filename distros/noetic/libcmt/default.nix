@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cacert, cmake, cv-bridge, git, openssl }:
 buildRosPackage {
   pname = "ros-noetic-libcmt";
-  version = "2.1.21-r1";
+  version = "2.1.21-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/libcmt/2.1.21-1.tar.gz";
-    name = "2.1.21-1.tar.gz";
-    sha256 = "168a8a530f900a9654605d00b3a6d31d4c310223cdf2851745e3064aeff36224";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/libcmt/2.1.21-2.tar.gz";
+    name = "2.1.21-2.tar.gz";
+    sha256 = "5460174b56e8eedb403a1f24883e4da4ba5f86e50d57cc0fa95e18084694c092";
   };
 
   buildType = "cmake";

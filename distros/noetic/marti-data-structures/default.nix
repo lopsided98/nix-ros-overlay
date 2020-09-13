@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-marti-data-structures";
-  version = "2.14.1-r1";
+  version = "2.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/marti_data_structures/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "1689cfedbb900dadf0f60b6f06c7e9e6daafdb76922407540acd247c5f200cfe";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/marti_data_structures/2.14.2-1.tar.gz";
+    name = "2.14.2-1.tar.gz";
+    sha256 = "72b00832577d69b06140a31b64fc718176bbdbf67501abdb3b1af1a2a4c5414a";
   };
 
   buildType = "catkin";

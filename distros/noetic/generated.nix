@@ -530,8 +530,6 @@ self: super: {
 
  joystick-interrupt = self.callPackage ./joystick-interrupt {};
 
- jsk-3rdparty = self.callPackage ./jsk-3rdparty {};
-
  jsk-common = self.callPackage ./jsk-common {};
 
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
@@ -847,8 +845,6 @@ self: super: {
  neonavigation-rviz-plugins = self.callPackage ./neonavigation-rviz-plugins {};
 
  nerian-stereo = self.callPackage ./nerian-stereo {};
-
- nlopt = self.callPackage ./nlopt {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
 

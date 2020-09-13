@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, message-generation, message-runtime, nkf, roscpp, sound-play }:
 buildRosPackage {
   pname = "ros-noetic-voice-text";
-  version = "2.1.21-r1";
+  version = "2.1.21-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/voice_text/2.1.21-1.tar.gz";
-    name = "2.1.21-1.tar.gz";
-    sha256 = "3246408d1a147cad89421da0449904b0db4a1fa48303697acb0a6a0cbf4055e1";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/voice_text/2.1.21-2.tar.gz";
+    name = "2.1.21-2.tar.gz";
+    sha256 = "05ae739b61950cd2321e45c980c4308fa4f8c9d8cee4a7e8bea67256ace289cc";
   };
 
   buildType = "catkin";

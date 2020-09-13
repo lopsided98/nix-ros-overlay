@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, marti-common-msgs, marti-nav-msgs, roscpp, swri-geometry-util, swri-math-util, swri-transform-util, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-swri-route-util";
-  version = "2.14.1-r1";
+  version = "2.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_route_util/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "00d235df27c9b8e78561d73ff43fe44c8ad278d28b0070d6b6d5d5f8fba16e9e";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_route_util/2.14.2-1.tar.gz";
+    name = "2.14.2-1.tar.gz";
+    sha256 = "bfa0ab7ccec7918e9afc5e98f5633d6e40b80d1b948a977eb4408ddf8c64cca6";
   };
 
   buildType = "catkin";

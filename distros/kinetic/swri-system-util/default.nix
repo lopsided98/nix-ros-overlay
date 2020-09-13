@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-swri-system-util";
-  version = "2.14.0-r1";
+  version = "2.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_system_util/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "0f1f0e29e0d5eb2ca4489d20e369476b23441be8b92b9dee66fc9537a18a9385";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_system_util/2.14.2-1.tar.gz";
+    name = "2.14.2-1.tar.gz";
+    sha256 = "ac68d68d69648a96c65cbe6192ad4d9ed811f6fae72e7800bc3c1c9c5e27aa6b";
   };
 
   buildType = "catkin";

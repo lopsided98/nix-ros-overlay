@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, rosbag, roslib, rostest }:
 buildRosPackage {
   pname = "ros-noetic-diagnostic-analysis";
-  version = "1.10.2-r1";
+  version = "1.10.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/noetic/diagnostic_analysis/1.10.2-1.tar.gz";
-    name = "1.10.2-1.tar.gz";
-    sha256 = "cef2f58af9a69d12794178be483812a684b18b3d7e9773889ba2ec5cdfab8b23";
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/noetic/diagnostic_analysis/1.10.2-3.tar.gz";
+    name = "1.10.2-3.tar.gz";
+    sha256 = "822d00a854cf159f2da2abbc1f87be23befd9a7943d0a2ddf78cf0f6196a13ce";
   };
 
   buildType = "catkin";

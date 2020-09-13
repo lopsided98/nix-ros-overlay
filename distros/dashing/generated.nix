@@ -944,6 +944,8 @@ self: super: {
 
  rqt-topic = self.callPackage ./rqt-topic {};
 
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
+
  rttest = self.callPackage ./rttest {};
 
  rviz2 = self.callPackage ./rviz2 {};

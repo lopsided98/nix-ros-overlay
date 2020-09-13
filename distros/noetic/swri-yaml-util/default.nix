@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, libyamlcpp, pkg-config }:
 buildRosPackage {
   pname = "ros-noetic-swri-yaml-util";
-  version = "2.14.1-r1";
+  version = "2.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_yaml_util/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "b51c651773bd1625600bee4cc3e647f64b5a11bba6d31625f397ef92b56cd7c0";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_yaml_util/2.14.2-1.tar.gz";
+    name = "2.14.2-1.tar.gz";
+    sha256 = "bd31252ddf73f39ebe6c7171e779c242505a18bc239df2beb334e051056f7206";
   };
 
   buildType = "catkin";

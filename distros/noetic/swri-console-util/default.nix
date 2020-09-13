@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, swri-math-util }:
 buildRosPackage {
   pname = "ros-noetic-swri-console-util";
-  version = "2.14.1-r1";
+  version = "2.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_console_util/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "380d25affc540a0dcf52a4e5b88c9cd88e2c04a4c61e64f93bc9bf2667faae98";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_console_util/2.14.2-1.tar.gz";
+    name = "2.14.2-1.tar.gz";
+    sha256 = "ae6d2d8bd0e0b5fc768da211ed8410ab6c71171750439dae5e6248c4df79d353";
   };
 
   buildType = "catkin";

@@ -186,6 +186,8 @@ self: super: {
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
+ contracts-lite-vendor = self.callPackage ./contracts-lite-vendor {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
