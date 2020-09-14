@@ -16,6 +16,8 @@ self: super: {
 
  actionlib-tutorials = self.callPackage ./actionlib-tutorials {};
 
+ amcl = self.callPackage ./amcl {};
+
  angles = self.callPackage ./angles {};
 
  apriltag = self.callPackage ./apriltag {};
@@ -549,6 +551,8 @@ self: super: {
  julius = self.callPackage ./julius {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
+
+ kdl-parser-py = self.callPackage ./kdl-parser-py {};
 
  key-teleop = self.callPackage ./key-teleop {};
 
@@ -1473,6 +1477,8 @@ self: super: {
  tf2-py = self.callPackage ./tf2-py {};
 
  tf2-ros = self.callPackage ./tf2-ros {};
+
+ tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
  tf2-tools = self.callPackage ./tf2-tools {};
 
