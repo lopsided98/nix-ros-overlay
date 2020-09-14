@@ -84,6 +84,14 @@ in {
               Arguments to pass to the node.
             '';
           };
+
+          params = mkOption {
+            type = types.attrsOf types.str;
+            default = {};
+            description = ''
+              Key-value parameters to pass to the node.
+            '';
+          };
         };
 
         config = mkMerge [
@@ -141,9 +149,11 @@ in {
 
   config = mkIf cfg.enable {
     systemd.services = mkMerge [
-      (serviceGenerator (config:
-        escapeShellArgs ([ "${config.env}/bin/rosrun" config.package config.node ] ++ config.args)
-      ) cfg.nodes)
+      (serviceGenerator (config: escapeShellArgs (
+        [ "${config.env}/bin/rosrun" config.package config.node ] ++
+        (mapAttrsToList (n: v: "${n}:=${v}") config.params) ++
+        config.args
+      )) cfg.nodes)
       (serviceGenerator (config: escapeShellArgs (
         [ "${config.env}/bin/roslaunch" "--wait" ] ++ 
         config.roslaunchArgs ++ 
