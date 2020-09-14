@@ -330,6 +330,8 @@ self: super: {
 
  effort-controllers = self.callPackage ./effort-controllers {};
 
+ eigen-conversions = self.callPackage ./eigen-conversions {};
+
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
  eigenpy = self.callPackage ./eigenpy {};
@@ -552,6 +554,10 @@ self: super: {
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
+ kdl-conversions = self.callPackage ./kdl-conversions {};
+
+ kdl-parser = self.callPackage ./kdl-parser {};
+
  kdl-parser-py = self.callPackage ./kdl-parser-py {};
 
  key-teleop = self.callPackage ./key-teleop {};
@@ -729,6 +735,8 @@ self: super: {
  moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
 
  moveit-fake-controller-manager = self.callPackage ./moveit-fake-controller-manager {};
+
+ moveit-kinematics = self.callPackage ./moveit-kinematics {};
 
  moveit-msgs = self.callPackage ./moveit-msgs {};
 
@@ -1057,6 +1065,8 @@ self: super: {
  robot-navigation = self.callPackage ./robot-navigation {};
 
  robot-self-filter = self.callPackage ./robot-self-filter {};
+
+ robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
  roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
 
@@ -1472,6 +1482,10 @@ self: super: {
 
  tf2-eigen = self.callPackage ./tf2-eigen {};
 
+ tf2-geometry-msgs = self.callPackage ./tf2-geometry-msgs {};
+
+ tf2-kdl = self.callPackage ./tf2-kdl {};
+
  tf2-msgs = self.callPackage ./tf2-msgs {};
 
  tf2-py = self.callPackage ./tf2-py {};
@@ -1481,6 +1495,8 @@ self: super: {
  tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
  tf2-tools = self.callPackage ./tf2-tools {};
+
+ tf-conversions = self.callPackage ./tf-conversions {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
 
