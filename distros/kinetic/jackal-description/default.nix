@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, pointgrey-camera-description, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-jackal-description";
-  version = "0.6.5-r2";
+  version = "0.6.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/kinetic/jackal_description/0.6.5-2.tar.gz";
-    name = "0.6.5-2.tar.gz";
-    sha256 = "0d7b5e317d400bdce94acc32d4c1a34aea12ed72759e9c2eabc9676c418090fa";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/kinetic/jackal_description/0.6.6-1.tar.gz";
+    name = "0.6.6-1.tar.gz";
+    sha256 = "5aaf31264641ec491dcc786cf5242234ba87ac84e4a59973a13f4b7366a5c75f";
   };
 
   buildType = "catkin";

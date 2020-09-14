@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common }:
 buildRosPackage {
   pname = "ros-melodic-rostime";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/rostime/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "0aedc8397fb212ed0e019f63d739508a0b009e1a22943a86f8e4be20769b5157";
+    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/rostime/0.6.14-1.tar.gz";
+    name = "0.6.14-1.tar.gz";
+    sha256 = "f6f308e9a4fdd5823498141e265bbe03b46f5a2233eab8ede343c3dc6eb2aee8";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rospy, rosservice, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-controller-manager-msgs";
-  version = "0.18.1-r1";
+  version = "0.18.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/controller_manager_msgs/0.18.1-1.tar.gz";
-    name = "0.18.1-1.tar.gz";
-    sha256 = "9955c3f8207bc629e72fb7739b308f008f076eb2b6062a347a3f9c172fe6889f";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/controller_manager_msgs/0.18.2-1.tar.gz";
+    name = "0.18.2-1.tar.gz";
+    sha256 = "32ec4da75641ff8f2fdea1ddd2e01b830818d12b764789730d63af5a09934ceb";
   };
 
   buildType = "catkin";

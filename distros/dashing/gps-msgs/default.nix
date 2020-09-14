@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-gps-msgs";
-  version = "1.0.2-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/dashing/gps_msgs/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "e4935f076ff1c8c7fbfb8dbd2b25f60794901cc9e8476129e821a44d9ff931a4";
+    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/dashing/gps_msgs/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "7091d54e4322a4a011265290490820112a29a24fb8c7e9d69c2bb682e3f2f3c2";
   };
 
   buildType = "ament_cmake";

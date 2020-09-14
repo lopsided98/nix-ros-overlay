@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosdoc-lite }:
 buildRosPackage {
   pname = "ros-melodic-jackal-tutorials";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_tutorials/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "83d78cc8d4181f497dc7d4b527863b22068c2ee387a1ca11bd760adf28eedef4";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_tutorials/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "64d8c8203c20fdbbba99ef0740e38e1050c14706ab467bf538482a8a2b93b189";
   };
 
   buildType = "catkin";

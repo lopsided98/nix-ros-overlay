@@ -2,22 +2,22 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, image-transport, rclcpp, rclcpp-components, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, image-transport, rclcpp, rclcpp-components, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-image-rotate";
-  version = "2.2.0-r2";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_rotate/2.2.0-2.tar.gz";
-    name = "2.2.0-2.tar.gz";
-    sha256 = "3c792340b6a2b35517904daddb2db95919039b32b2c00816c6c5ff3bd72c7512";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_rotate/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "74584400f00adfe197fc1bc3beb19a2653f6898233e0341c343eedaacfe443e5";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ class-loader ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ cv-bridge image-transport rclcpp rclcpp-components tf2 tf2-geometry-msgs tf2-ros ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
     description = ''<p>

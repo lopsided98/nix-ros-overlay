@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, geometry-msgs, laser-geometry, map-msgs, map-server, message-filters, message-generation, message-runtime, nav-msgs, pcl-conversions, pcl-ros, pluginlib, rosbag, rosconsole, roscpp, rostest, rosunit, sensor-msgs, std-msgs, tf, visualization-msgs, voxel-grid }:
 buildRosPackage {
   pname = "ros-kinetic-costmap-2d";
-  version = "1.14.7-r1";
+  version = "1.14.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/costmap_2d/1.14.7-1.tar.gz";
-    name = "1.14.7-1.tar.gz";
-    sha256 = "f819d5d8f5a9541ece4125b5e77f854fb38dacd6791c8e1022eb6af89f294147";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/costmap_2d/1.14.8-1.tar.gz";
+    name = "1.14.8-1.tar.gz";
+    sha256 = "97162c30e70745494ab1ba38ab4833c7e1a561a9babc10aa897e7dc1fea48212";
   };
 
   buildType = "catkin";

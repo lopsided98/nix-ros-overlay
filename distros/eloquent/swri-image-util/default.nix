@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, camera-calibration-parsers, cv-bridge, eigen, geometry-msgs, image-geometry, image-transport, message-filters, nav-msgs, pkg-config, rclcpp, rclcpp-components, rclpy, std-msgs, swri-geometry-util, swri-math-util, swri-opencv-util, swri-roscpp, tf2 }:
 buildRosPackage {
   pname = "ros-eloquent-swri-image-util";
-  version = "3.3.0-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_image_util/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "a5c1d649c7e9cf8530ad943a1b73e63188b46ea514344639b15bf546baaa8996";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_image_util/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "0d7b23a92f3f444c4d8f551543c63fb816263ce7b3079d982936aeb7cbb5832f";
   };
 
   buildType = "ament_cmake";

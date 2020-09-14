@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python3, python3Packages }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-eigenpy";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/noetic/eigenpy/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "6d817f9c91c3b1727c3b9b733d461407bce4887af28fdc8837bc76f0c001a044";
+    url = "https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/noetic/eigenpy/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "0413b69d033d9a26b7088475df82662fe6bfb57cb80be44607847b5ef80279cb";
   };
 
   buildType = "cmake";
   buildInputs = [ doxygen git ];
-  propagatedBuildInputs = [ boost eigen python3 python3Packages.numpy ];
+  propagatedBuildInputs = [ boost catkin eigen python3 python3Packages.numpy ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

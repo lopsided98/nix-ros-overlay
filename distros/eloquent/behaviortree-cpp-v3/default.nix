@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cppzmq, ncurses, rclcpp }:
 buildRosPackage {
   pname = "ros-eloquent-behaviortree-cpp-v3";
-  version = "3.5.1-r1";
+  version = "3.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/eloquent/behaviortree_cpp_v3/3.5.1-1.tar.gz";
-    name = "3.5.1-1.tar.gz";
-    sha256 = "9df335c6a7574b7cb4efc7d3781764f72e9a33e91b7bfaf0c80a37e969061db4";
+    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/eloquent/behaviortree_cpp_v3/3.5.2-1.tar.gz";
+    name = "3.5.2-1.tar.gz";
+    sha256 = "dab79690d78b1ddc80245154919d3470c51ab824bcb5d90e05a624c7a5feedd6";
   };
 
   buildType = "catkin";

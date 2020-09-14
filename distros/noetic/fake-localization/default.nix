@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, geometry-msgs, message-filters, nav-msgs, rosconsole, roscpp, rospy, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-fake-localization";
-  version = "1.17.0-r1";
+  version = "1.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/fake_localization/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "eddcef07d62b56694b7a5b202f0670020887df212fbf9cb763bd2e664e270b60";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/fake_localization/1.17.1-1.tar.gz";
+    name = "1.17.1-1.tar.gz";
+    sha256 = "5b385408855c4d724fd7f63b76bea87f4f792a1e87814c175bd305556e1db6fd";
   };
 
   buildType = "catkin";

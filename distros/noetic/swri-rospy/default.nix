@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, rospy, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-swri-rospy";
-  version = "2.14.0-r1";
+  version = "2.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_rospy/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "c8eb7399bdf0e39d6f06708baec0c8a3330d2c85ac8ceb1190d19db587ab3dbd";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_rospy/2.14.2-1.tar.gz";
+    name = "2.14.2-1.tar.gz";
+    sha256 = "62017d2ce986bc5b269ed391201136b5a04e02873e2c142086e53c818c1b2d81";
   };
 
   buildType = "catkin";

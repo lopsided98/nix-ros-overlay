@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, angles, costmap-queue, dwb-core, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-costmap-2d, nav2-util, pluginlib, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-dwb-critics";
-  version = "0.4.1-r1";
+  version = "0.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/dwb_critics/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "3c145a436e66f254f5aa3728df875ef0aeafa957b38cc14aa4a6f08c3a30495c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/dwb_critics/0.4.3-1.tar.gz";
+    name = "0.4.3-1.tar.gz";
+    sha256 = "2628e42f3a0cf285d96007380e1817c58592a8f872e5552c98b8dadff23b07e0";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, costmap-queue, dwb-core, dwb-critics, dwb-msgs, dwb-plugins, nav-2d-msgs, nav-2d-utils }:
 buildRosPackage {
   pname = "ros-foxy-nav2-dwb-controller";
-  version = "0.4.1-r1";
+  version = "0.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_dwb_controller/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "619abb9815a64a663cc575e217286a983a7f33a78f61d00539d2a0e847f287c1";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_dwb_controller/0.4.3-1.tar.gz";
+    name = "0.4.3-1.tar.gz";
+    sha256 = "67b2001e7330ca110137228f57056742e890eef1d5906f33c00ad7010cdbc588";
   };
 
   buildType = "ament_cmake";

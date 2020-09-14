@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-swri-rospy";
-  version = "2.14.0-r1";
+  version = "2.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_rospy/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "e319c33b4b05ca2a9bd8d142c54603bbf7cb2b6308f6571ec6f77e5f347bb496";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_rospy/2.14.2-1.tar.gz";
+    name = "2.14.2-1.tar.gz";
+    sha256 = "46d86109dd3bbb2b2c8e79bc4a872377840c48666ac42a4717f33bbc945aea77";
   };
 
   buildType = "catkin";

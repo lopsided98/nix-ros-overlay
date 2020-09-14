@@ -188,6 +188,8 @@ self: super: {
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
+ contracts-lite-vendor = self.callPackage ./contracts-lite-vendor {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  controller-interface = self.callPackage ./controller-interface {};
@@ -201,8 +203,6 @@ self: super: {
  costmap-converter-msgs = self.callPackage ./costmap-converter-msgs {};
 
  costmap-queue = self.callPackage ./costmap-queue {};
-
- cross-compile = self.callPackage ./cross-compile {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
 
@@ -413,6 +413,8 @@ self: super: {
  gps-umd = self.callPackage ./gps-umd {};
 
  gpsd-client = self.callPackage ./gpsd-client {};
+
+ grbl-ros = self.callPackage ./grbl-ros {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
@@ -942,6 +944,8 @@ self: super: {
 
  rqt-topic = self.callPackage ./rqt-topic {};
 
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
+
  rttest = self.callPackage ./rttest {};
 
  rviz2 = self.callPackage ./rviz2 {};
@@ -1137,6 +1141,8 @@ self: super: {
  velodyne-msgs = self.callPackage ./velodyne-msgs {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
+ vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

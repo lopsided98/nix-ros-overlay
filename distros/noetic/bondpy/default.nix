@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bond, catkin, python3Packages, rospy, smclib, utillinux }:
 buildRosPackage {
   pname = "ros-noetic-bondpy";
-  version = "1.8.5-r1";
+  version = "1.8.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/bond_core-release/archive/release/noetic/bondpy/1.8.5-1.tar.gz";
-    name = "1.8.5-1.tar.gz";
-    sha256 = "8cc92ec3a0514a803fdb422d0b23d4188c937499386126846ef53df4ab7eac31";
+    url = "https://github.com/ros-gbp/bond_core-release/archive/release/noetic/bondpy/1.8.6-1.tar.gz";
+    name = "1.8.6-1.tar.gz";
+    sha256 = "392cc88d81ede0d5902f36458a88cefe3c66213f4def1cb972d4c4fe80af693b";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, kdl-parser, sensor-msgs, tf-conversions, urdf }:
 buildRosPackage {
   pname = "ros-melodic-virtual-force-publisher";
-  version = "2.2.10";
+  version = "2.2.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/virtual_force_publisher/2.2.10-0.tar.gz";
-    name = "2.2.10-0.tar.gz";
-    sha256 = "12b7dd32a18a6b444d59d0dacd15781a6ea157a23924c04dc1aa7ca176de8a20";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/virtual_force_publisher/2.2.11-1.tar.gz";
+    name = "2.2.11-1.tar.gz";
+    sha256 = "acf17f3b26ba0800c37b449fb40068f5bc1b3debb65b71d0f2e633f1a4eb19cf";
   };
 
   buildType = "catkin";

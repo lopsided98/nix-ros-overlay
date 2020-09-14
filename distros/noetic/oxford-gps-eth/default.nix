@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, gps-common, nav-msgs, python3Packages, roscpp, roslaunch, rospy, rostest, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-oxford-gps-eth";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/oxford_gps_eth-release/archive/release/noetic/oxford_gps_eth/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "5fe9b8de57e1db9acb31d159525360b63c417df60299228a5a765f20fc03f659";
+    url = "https://github.com/DataspeedInc-release/oxford_gps_eth-release/archive/release/noetic/oxford_gps_eth/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "c8b0e11dc06be0c20400031bde92ffa566bde872b1027a9430c935379f5b1cdc";
   };
 
   buildType = "catkin";

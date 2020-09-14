@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL_image, catkin, jsk-tools, libyamlcpp, map-server, nav-msgs, pythonPackages, rosconsole, roscpp, rosmake, rospy, tf }:
 buildRosPackage {
   pname = "ros-kinetic-multi-map-server";
-  version = "2.2.10";
+  version = "2.2.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/kinetic/multi_map_server/2.2.10-0.tar.gz";
-    name = "2.2.10-0.tar.gz";
-    sha256 = "b205d2c0a42e4f80b89c13b61522efcce0929adb7d86a87558bdb19895364d38";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/kinetic/multi_map_server/2.2.11-1.tar.gz";
+    name = "2.2.11-1.tar.gz";
+    sha256 = "e92180a70217be12bbb15e4f6827dd3abff591e68c41a3426d9038b21fdf8e73";
   };
 
   buildType = "catkin";

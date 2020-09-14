@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, message-generation, message-runtime, roscpp, roscpp-serialization, roslib, rospy, rosservice, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-dynamic-reconfigure";
-  version = "1.7.0-r1";
+  version = "1.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/noetic/dynamic_reconfigure/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "1d819cef438c55862e79f5a5f489e336c79722464a403488aa6b9a3ea3320e72";
+    url = "https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/noetic/dynamic_reconfigure/1.7.1-1.tar.gz";
+    name = "1.7.1-1.tar.gz";
+    sha256 = "2b12e46831d83a9f60234510f89d8d2fbd7ac131143402009c2a482dfb419bba";
   };
 
   buildType = "catkin";

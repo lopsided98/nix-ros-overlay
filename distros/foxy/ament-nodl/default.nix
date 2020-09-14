@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/canonical/ament_nodl-release/archive/release/foxy/ament_nodl/0.1.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/ament_nodl-release/archive/release/foxy/ament_nodl/0.1.0-1.tar.gz";
     name = "0.1.0-1.tar.gz";
     sha256 = "9e05e775640cf8b78f1b83a2f08ffa7ee451b1cb41d44b0a7e9ef84fdbe7a80e";
   };

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, diagnostic-updater, dynamic-reconfigure, gtest, libyamlcpp, marti-common-msgs, message-generation, message-runtime, nav-msgs, pkg-config, roscpp, rostest, rosunit, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-swri-roscpp";
-  version = "2.14.0-r1";
+  version = "2.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_roscpp/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "b3c40eebcefb29b939935b44ceeea02eb3e53845194ab71d42d31e7491d2d7ff";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_roscpp/2.14.2-1.tar.gz";
+    name = "2.14.2-1.tar.gz";
+    sha256 = "31d2b6529a54af0dafb18275bbfde3c30a0013ea64affb6c4ff6b187ba093226";
   };
 
   buildType = "catkin";

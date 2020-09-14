@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-multisense-description";
-  version = "4.0.4-r1";
+  version = "4.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/noetic/multisense_description/4.0.4-1.tar.gz";
-    name = "4.0.4-1.tar.gz";
-    sha256 = "c5c2419300c50756d53f0e203013bb45bbc09fbb13942099e3668a1649fbde71";
+    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/noetic/multisense_description/4.0.5-1.tar.gz";
+    name = "4.0.5-1.tar.gz";
+    sha256 = "ccb4694552f4a0e3798a127357f42357415abcce5c6d3e18dde20cb494f9f7c6";
   };
 
   buildType = "catkin";

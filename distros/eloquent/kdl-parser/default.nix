@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, orocos-kdl, tinyxml, tinyxml-vendor, urdf, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-eloquent-kdl-parser";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kdl_parser-release/archive/release/eloquent/kdl_parser/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "69da41f6a6398772e8b79e4fe8d327aa4eb8692a066e16a6548bdc0622ccddb9";
+    url = "https://github.com/ros2-gbp/kdl_parser-release/archive/release/eloquent/kdl_parser/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "d5238a72d6a6ac3b7cada5f24fc26fd74324153f6b9747fe8f61cfaee2bf69c1";
   };
 
   buildType = "ament_cmake";

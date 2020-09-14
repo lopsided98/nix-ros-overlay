@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL, SDL_image, bullet, catkin, libyamlcpp, nav-msgs, roscpp, rospy, rostest, rosunit, tf2 }:
 buildRosPackage {
   pname = "ros-noetic-map-server";
-  version = "1.17.0-r1";
+  version = "1.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/map_server/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "1aeba7900ae2b9a749cb8c440906b353ce772cdd01fe560200268b147c0aa2cc";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/map_server/1.17.1-1.tar.gz";
+    name = "1.17.1-1.tar.gz";
+    sha256 = "273158150e0511c75e0e4896d68fc99eeb314c87c9d5923d441a47a450340f8d";
   };
 
   buildType = "catkin";

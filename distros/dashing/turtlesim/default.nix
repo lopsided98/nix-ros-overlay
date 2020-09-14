@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, geometry-msgs, qt5, rclcpp, rclcpp-action, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-dashing-turtlesim";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/dashing/turtlesim/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "f59ebbaa9e1231fa556f89581ec504119c91b1c2397695ebaf88d0bd02217b7a";
+    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/dashing/turtlesim/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "ecc72cf008bc6a95d645026c4d0a664e586e7310968d70e9659237cc54b231e2";
   };
 
   buildType = "ament_cmake";

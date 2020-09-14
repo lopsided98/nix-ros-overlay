@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, roscpp-tutorials, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rospy-tutorials";
-  version = "0.10.1-r1";
+  version = "0.10.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_tutorials-release/archive/release/noetic/rospy_tutorials/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "d15418f7a0d10d01c6668baec56923dc0d6bfe2c309c06dfb6a0558b420dacfc";
+    url = "https://github.com/ros-gbp/ros_tutorials-release/archive/release/noetic/rospy_tutorials/0.10.2-1.tar.gz";
+    name = "0.10.2-1.tar.gz";
+    sha256 = "2f1bd789def2a6591abe28b2497304681f1ccba3748b2044cf724e6552fcd11b";
   };
 
   buildType = "catkin";

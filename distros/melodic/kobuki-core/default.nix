@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, kobuki-dock-drive, kobuki-driver, kobuki-ftdi }:
 buildRosPackage {
   pname = "ros-melodic-kobuki-core";
-  version = "0.7.8";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/melodic/kobuki_core/0.7.8-0.tar.gz";
-    name = "0.7.8-0.tar.gz";
-    sha256 = "56089bc142fb63afa805b19d543123c28f51feee8e17bdd730908310345ac292";
+    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/melodic/kobuki_core/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "3a031a59846cf1caadee72cf9631f2af8da773fb8cfedee28d06c1b523e9e6ee";
   };
 
   buildType = "catkin";

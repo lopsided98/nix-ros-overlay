@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hardware-interface, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-controller-interface";
-  version = "0.19.1-r1";
+  version = "0.19.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/controller_interface/0.19.1-1.tar.gz";
-    name = "0.19.1-1.tar.gz";
-    sha256 = "3ce1fe17e4fad5cfcee82ed0da0baa6aca6adf79a459abc15fe895b0e8e5f141";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/controller_interface/0.19.2-1.tar.gz";
+    name = "0.19.2-1.tar.gz";
+    sha256 = "10a4550453e6d958a2621c88ec848b68796df94c7f3de513b22bd8c1cb3f2f8a";
   };
 
   buildType = "catkin";

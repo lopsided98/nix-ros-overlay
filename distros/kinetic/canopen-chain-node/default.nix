@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, canopen-master, catkin, diagnostic-updater, message-generation, message-runtime, pluginlib, roscpp, roslib, socketcan-interface, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-canopen-chain-node";
-  version = "0.7.12-r1";
+  version = "0.7.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/canopen_chain_node/0.7.12-1.tar.gz";
-    name = "0.7.12-1.tar.gz";
-    sha256 = "0544a6b94833ebf4ae24d9d4fe0954dddec974ccbbcce39c926123f5197ee79e";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/canopen_chain_node/0.7.13-1.tar.gz";
+    name = "0.7.13-1.tar.gz";
+    sha256 = "be5a71b21bebe322b446ac3e1981cedc8be87076b2fb0b615844f3e714e831f5";
   };
 
   buildType = "catkin";

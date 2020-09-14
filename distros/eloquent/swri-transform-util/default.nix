@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, boost, cv-bridge, diagnostic-msgs, geographic-msgs, geometry-msgs, geos, gps-msgs, launch-xml, libyamlcpp, marti-nav-msgs, pkg-config, proj, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-py, tf2-ros }:
 buildRosPackage {
   pname = "ros-eloquent-swri-transform-util";
-  version = "3.3.0-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_transform_util/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "8187d44c8b4b51ab024e0044c140359deb65df4a7ba888c96531a11fd82af2f1";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_transform_util/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "21c281b45b90f3efc998f6a70ef75806c7ee058c858af6b098ca89bcb5413495";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, python3Packages, rospy, rosservice, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-controller-manager-msgs";
-  version = "0.19.1-r1";
+  version = "0.19.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/controller_manager_msgs/0.19.1-1.tar.gz";
-    name = "0.19.1-1.tar.gz";
-    sha256 = "3236788a50472c9e36f99794152bba69b1135559e16db419a8083200a5446628";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/controller_manager_msgs/0.19.2-1.tar.gz";
+    name = "0.19.2-1.tar.gz";
+    sha256 = "d6e017a977779b6dff4340d3f4050acaf0522ca1985164ffcf7608fab0a6382c";
   };
 
   buildType = "catkin";

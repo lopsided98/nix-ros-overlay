@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, cv-bridge, eigen, geos, pkg-config, roscpp, rostest, tf }:
 buildRosPackage {
   pname = "ros-kinetic-swri-geometry-util";
-  version = "2.14.0-r1";
+  version = "2.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_geometry_util/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "cce7347f08b3adfa9a6edc2a2be4c528a63b71a0560ee34742f322785240f642";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_geometry_util/2.14.2-1.tar.gz";
+    name = "2.14.2-1.tar.gz";
+    sha256 = "8d5cbe65e6eb226fe72ebb2945bada6681913bbcab060afee848759524925ea4";
   };
 
   buildType = "catkin";

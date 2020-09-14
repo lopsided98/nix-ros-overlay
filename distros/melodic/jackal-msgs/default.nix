@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-jackal-msgs";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_msgs/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "f9115648d7b2cb878751d3a793f5eac53954c24b603360f1165ac78b2edb588d";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_msgs/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "f198bdaddf8417af8228ba420018c319c900c538f3c9ae5c9440c22a80325e16";
   };
 
   buildType = "catkin";

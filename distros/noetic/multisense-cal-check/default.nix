@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, multisense-ros }:
 buildRosPackage {
   pname = "ros-noetic-multisense-cal-check";
-  version = "4.0.4-r1";
+  version = "4.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/noetic/multisense_cal_check/4.0.4-1.tar.gz";
-    name = "4.0.4-1.tar.gz";
-    sha256 = "2453f97eabe3be6502dc7a6ffc1db33f7747081e76d6f468e4098fac499af90c";
+    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/noetic/multisense_cal_check/4.0.5-1.tar.gz";
+    name = "4.0.5-1.tar.gz";
+    sha256 = "c7104fe9adc7061663442052ade41c5d83f0583a208bca3f996631c7212b324a";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-foxy-qt-gui-cpp";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/foxy/qt_gui_cpp/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "587351d242c5aabf9a02ad47932f427c11533bdad99713194e2f3b776e8a9f64";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/foxy/qt_gui_cpp/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "174db1ed2991b958a7a1223560ad9bec73be40b3f06edc695c747d7ba5a15c47";
   };
 
   buildType = "ament_cmake";

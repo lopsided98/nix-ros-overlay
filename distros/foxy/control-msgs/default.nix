@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-foxy-control-msgs";
-  version = "2.4.0-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/control_msgs-release/archive/release/foxy/control_msgs/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "451027f891a840b4fb503d23472ffeec82aa40a0fd3ea609508d99e6c6afb9f4";
+    url = "https://github.com/ros-gbp/control_msgs-release/archive/release/foxy/control_msgs/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "e9b01671cf82c2e6367c14055fcd3c531b4924782384faf7092e0b32690942df";
   };
 
   buildType = "ament_cmake";

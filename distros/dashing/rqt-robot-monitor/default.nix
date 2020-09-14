@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, diagnostic-msgs, python-qt-binding, python3Packages, qt-gui, qt-gui-py-common, rclpy, rosidl-default-generators, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-dashing-rqt-robot-monitor";
-  version = "1.0.1-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_robot_monitor-release/archive/release/dashing/rqt_robot_monitor/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "ec45e643620df143ff22a8a0bb7ded41eb9f4cf3106f7aa4732974aba1cc91a9";
+    url = "https://github.com/ros2-gbp/rqt_robot_monitor-release/archive/release/dashing/rqt_robot_monitor/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "e050a8492a53309b84068ff84b801937f8b7417111db09137239095328655f6c";
   };
 
   buildType = "ament_python";

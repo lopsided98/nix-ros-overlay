@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, bzip2, catkin, console-bridge, cpp-common, roscpp-serialization, roscpp-traits, roslz4, rostime }:
 buildRosPackage {
   pname = "ros-kinetic-rosbag-storage";
-  version = "1.12.14";
+  version = "1.12.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosbag_storage/1.12.14-0.tar.gz";
-    name = "1.12.14-0.tar.gz";
-    sha256 = "c5ed28a7a0b47e1d42cff90d89cc271d9ac01dfe771f1503c8a88bdc31397c8f";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosbag_storage/1.12.16-1.tar.gz";
+    name = "1.12.16-1.tar.gz";
+    sha256 = "376c9d66af3591aa514a400c7a53b2197bafcc41be754e350d951359145b69f3";
   };
 
   buildType = "catkin";

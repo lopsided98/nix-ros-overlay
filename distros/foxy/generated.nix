@@ -128,6 +128,10 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
+ apex-containers = self.callPackage ./apex-containers {};
+
+ apex-test-tools = self.callPackage ./apex-test-tools {};
+
  apriltag = self.callPackage ./apriltag {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
@@ -140,6 +144,8 @@ self: super: {
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
 
+ can-msgs = self.callPackage ./can-msgs {};
+
  cartographer = self.callPackage ./cartographer {};
 
  cartographer-ros = self.callPackage ./cartographer-ros {};
@@ -147,6 +153,22 @@ self: super: {
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
+
+ chiconybot-bringup = self.callPackage ./chiconybot-bringup {};
+
+ chiconybot-cartographer = self.callPackage ./chiconybot-cartographer {};
+
+ chiconybot-description = self.callPackage ./chiconybot-description {};
+
+ chiconybot-gazebo = self.callPackage ./chiconybot-gazebo {};
+
+ chiconybot-msgs = self.callPackage ./chiconybot-msgs {};
+
+ chiconybot-navigation2 = self.callPackage ./chiconybot-navigation2 {};
+
+ chiconybot-node = self.callPackage ./chiconybot-node {};
+
+ chiconybot-teleop = self.callPackage ./chiconybot-teleop {};
 
  class-loader = self.callPackage ./class-loader {};
 
@@ -163,6 +185,8 @@ self: super: {
  connext-cmake-module = self.callPackage ./connext-cmake-module {};
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
+
+ contracts-lite-vendor = self.callPackage ./contracts-lite-vendor {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -191,6 +215,14 @@ self: super: {
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
+
+ dolly = self.callPackage ./dolly {};
+
+ dolly-follow = self.callPackage ./dolly-follow {};
+
+ dolly-gazebo = self.callPackage ./dolly-gazebo {};
+
+ dolly-ignition = self.callPackage ./dolly-ignition {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
 
@@ -290,6 +322,8 @@ self: super: {
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
+ eigenpy = self.callPackage ./eigenpy {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-minimal-action-client = self.callPackage ./examples-rclcpp-minimal-action-client {};
@@ -372,6 +406,8 @@ self: super: {
 
  gpsd-client = self.callPackage ./gpsd-client {};
 
+ grbl-ros = self.callPackage ./grbl-ros {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
@@ -409,6 +445,12 @@ self: super: {
  joy-linux = self.callPackage ./joy-linux {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
+
+ kobuki-core = self.callPackage ./kobuki-core {};
+
+ kobuki-firmware = self.callPackage ./kobuki-firmware {};
+
+ kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
@@ -468,6 +510,8 @@ self: super: {
 
  marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
 
+ mavlink = self.callPackage ./mavlink {};
+
  message-filters = self.callPackage ./message-filters {};
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
@@ -521,6 +565,8 @@ self: super: {
  nav-msgs = self.callPackage ./nav-msgs {};
 
  navigation2 = self.callPackage ./navigation2 {};
+
+ nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nodl-python = self.callPackage ./nodl-python {};
 
@@ -581,6 +627,10 @@ self: super: {
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
+
+ plotjuggler = self.callPackage ./plotjuggler {};
+
+ plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
 
  pluginlib = self.callPackage ./pluginlib {};
 
@@ -738,6 +788,12 @@ self: super: {
 
  ros-ign = self.callPackage ./ros-ign {};
 
+ ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
+
+ ros-ign-gazebo = self.callPackage ./ros-ign-gazebo {};
+
+ ros-ign-image = self.callPackage ./ros-ign-image {};
+
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
@@ -880,6 +936,8 @@ self: super: {
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
+ serial-driver = self.callPackage ./serial-driver {};
+
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
@@ -930,6 +988,8 @@ self: super: {
 
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
+ system-metrics-collector = self.callPackage ./system-metrics-collector {};
+
  system-modes = self.callPackage ./system-modes {};
 
  system-modes-examples = self.callPackage ./system-modes-examples {};
@@ -939,6 +999,8 @@ self: super: {
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
+
+ test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
 
@@ -990,6 +1052,8 @@ self: super: {
 
  turtlesim = self.callPackage ./turtlesim {};
 
+ udp-driver = self.callPackage ./udp-driver {};
+
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
@@ -1019,6 +1083,8 @@ self: super: {
  velodyne-msgs = self.callPackage ./velodyne-msgs {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
+ vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

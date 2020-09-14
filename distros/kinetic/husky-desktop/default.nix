@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, husky-msgs, husky-viz }:
 buildRosPackage {
   pname = "ros-kinetic-husky-desktop";
-  version = "0.3.6-r1";
+  version = "0.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_desktop/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "a1f42c978c9e60f01c1592aef95ff988359d0cbaadb532aa8e46c2e561c36e27";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_desktop/0.3.7-1.tar.gz";
+    name = "0.3.7-1.tar.gz";
+    sha256 = "75c980e294afefb4757431245994ce405fb81a002ca2a12289597a31e7a208c8";
   };
 
   buildType = "catkin";

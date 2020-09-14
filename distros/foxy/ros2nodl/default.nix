@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-index-python, ament-lint-auto, ament-lint-common, ament-mypy, nodl-python, python3Packages, pythonPackages, ros2cli, ros2pkg, ros2run }:
 buildRosPackage {
   pname = "ros-foxy-ros2nodl";
-  version = "0.2.0-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/canonical/nodl-release/archive/release/foxy/ros2nodl/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "40d0c23516d8fc3ad239f2eb318178f8128648029a792ec28ae893a3dc3df6ac";
+    url = "https://github.com/ros2-gbp/nodl-release/archive/release/foxy/ros2nodl/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "1795ce9dfaafc7c82bedbeaa542909cb7c0c893ca4d9458d028528e993dac7ad";
   };
 
   buildType = "ament_python";

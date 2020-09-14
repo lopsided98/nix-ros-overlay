@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, geometry-msgs, laser-geometry, map-msgs, map-server, message-filters, message-generation, message-runtime, nav-msgs, pluginlib, rosbag, rosconsole, roscpp, rostest, rosunit, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs, voxel-grid }:
 buildRosPackage {
   pname = "ros-melodic-costmap-2d";
-  version = "1.16.6-r1";
+  version = "1.16.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/costmap_2d/1.16.6-1.tar.gz";
-    name = "1.16.6-1.tar.gz";
-    sha256 = "7a89ec6153214e454d8e7f5e7dd7c1d93c24add89a47a2506ad35626aca2c686";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/costmap_2d/1.16.7-1.tar.gz";
+    name = "1.16.7-1.tar.gz";
+    sha256 = "f32520730c2e9e45aa53325293431ae9909245bf7531902355e2713f54199780";
   };
 
   buildType = "catkin";

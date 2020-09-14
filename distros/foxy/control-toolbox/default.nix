@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, control-msgs, rclcpp, rclcpp-lifecycle, realtime-tools }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, control-msgs, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools }:
 buildRosPackage {
   pname = "ros-foxy-control-toolbox";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/control_toolbox-release/archive/release/foxy/control_toolbox/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "2023bb22a3f9d0c4a8c6761922b62f456a323b89ab88c49bf1a81dc6ee22da28";
+    url = "https://github.com/ros-gbp/control_toolbox-release/archive/release/foxy/control_toolbox/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "8ddf13fb64a4259acb9a9bc609e8b411aa77e12765f5c7673ac6ca574fb5073d";
   };
 
-  buildType = "catkin";
+  buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest ament-lint-auto ament-lint-common rclcpp-lifecycle ];
-  propagatedBuildInputs = [ control-msgs rclcpp realtime-tools ];
+  propagatedBuildInputs = [ control-msgs rclcpp rcutils realtime-tools ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

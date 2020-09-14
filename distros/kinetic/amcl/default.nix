@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, map-server, message-filters, nav-msgs, rosbag, roscpp, rostest, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-amcl";
-  version = "1.14.7-r1";
+  version = "1.14.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/1.14.7-1.tar.gz";
-    name = "1.14.7-1.tar.gz";
-    sha256 = "126fc4299e663c1c8e38f73dc27ce4245a96e3d9dd2336abdbb300067b3bfa70";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/1.14.8-1.tar.gz";
+    name = "1.14.8-1.tar.gz";
+    sha256 = "42a5d882ecbd3195bc5ac3096e0668f8ac79f85bd9170a33c14a4abd434e8084";
   };
 
   buildType = "catkin";

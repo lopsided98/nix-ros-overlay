@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, class-loader, linuxHeaders, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-socketcan-interface";
-  version = "0.7.12-r1";
+  version = "0.7.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/socketcan_interface/0.7.12-1.tar.gz";
-    name = "0.7.12-1.tar.gz";
-    sha256 = "5ee3dde540dab533fef4f0e5371139651cd870b638285b8a72d3e52d009027ad";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/kinetic/socketcan_interface/0.7.13-1.tar.gz";
+    name = "0.7.13-1.tar.gz";
+    sha256 = "68f1f7042f644cb95de44a6f8fe8c4797918d49f365fb15fbbbd5ab11da5e6ab";
   };
 
   buildType = "catkin";

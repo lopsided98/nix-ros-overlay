@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, rosidl-cmake, rosidl-parser, rosidl-runtime-c }:
 buildRosPackage {
   pname = "ros-foxy-rosidl-typesupport-introspection-c";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/foxy/rosidl_typesupport_introspection_c/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "3916ae05e31eb47f917cb56e3f358afd90a75adb89d8007bbed9311ef1d34a30";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/foxy/rosidl_typesupport_introspection_c/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "27159620d3bc123703e50d7ab5472062c81c868257480f0f8f4d98c5861933ad";
   };
 
   buildType = "ament_cmake";

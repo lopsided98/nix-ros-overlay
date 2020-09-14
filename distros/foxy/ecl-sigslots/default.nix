@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-config, ecl-license, ecl-threads }:
 buildRosPackage {
   pname = "ros-foxy-ecl-sigslots";
-  version = "1.0.8-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/foxy/ecl_sigslots/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "8707009ab6a7db085d70f7e48ebce52a67b0bd462722e7a18c77b079a3b66025";
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/foxy/ecl_sigslots/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "bb8a2ef038e16a6189fd4feb5696ba383979e15cc63e2cb94b3d178cea4c0d8b";
   };
 
   buildType = "ament_cmake";

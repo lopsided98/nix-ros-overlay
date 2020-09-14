@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-aggregator, diagnostic-analysis, diagnostic-common-diagnostics, diagnostic-updater, self-test }:
 buildRosPackage {
   pname = "ros-noetic-diagnostics";
-  version = "1.9.4-r1";
+  version = "1.10.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/noetic/diagnostics/1.9.4-1.tar.gz";
-    name = "1.9.4-1.tar.gz";
-    sha256 = "0ec167c2b04698a4f4e80dd8ca1329fe974380275d06f3d023ef84b1477d5934";
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/noetic/diagnostics/1.10.2-3.tar.gz";
+    name = "1.10.2-3.tar.gz";
+    sha256 = "4cdcf3035aea5b6250be8d79257cbeafa9f22e4506af57fe9dad07222374bab7";
   };
 
   buildType = "catkin";

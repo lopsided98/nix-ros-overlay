@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosunit, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-realsense2-description";
-  version = "2.2.15-r1";
+  version = "2.2.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/kinetic/realsense2_description/2.2.15-1.tar.gz";
-    name = "2.2.15-1.tar.gz";
-    sha256 = "2f45a4014448a2fd760a70bdbba34c961159f580242d3e78b7e6d94b8d943275";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/kinetic/realsense2_description/2.2.17-1.tar.gz";
+    name = "2.2.17-1.tar.gz";
+    sha256 = "f77cef755431a5d3d59af21aea4cc9172d1f45d982da002c2871ef1fe30f676f";
   };
 
   buildType = "catkin";

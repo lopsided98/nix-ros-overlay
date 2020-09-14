@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-tf-publisher, image-view2, jsk-network-tools, jsk-tilt-laser, jsk-tools, jsk-topic-tools, multi-map-server, virtual-force-publisher }:
 buildRosPackage {
   pname = "ros-melodic-jsk-common";
-  version = "2.2.10";
+  version = "2.2.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/jsk_common/2.2.10-0.tar.gz";
-    name = "2.2.10-0.tar.gz";
-    sha256 = "f199dfa0fec8ff6d0e253344ab11deb511b0d1f300f4473845803b2a1c54db2f";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/jsk_common/2.2.11-1.tar.gz";
+    name = "2.2.11-1.tar.gz";
+    sha256 = "fab4710db180680688fb575c9342af30f6ecda7ae5e95932c5bbac132687e849";
   };
 
   buildType = "catkin";

@@ -174,16 +174,6 @@ let
       ROS_PYTHON_VERSION = if rosSelf.python.isPy3k then 3 else 2;
     });
 
-    mavros = rosSuper.mavros.overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = patches ++ [ (self.fetchpatch {
-        url = "https://github.com/mavlink/mavros/commit/0196418f3b2f84b8a57e94bb29e28ec7ad2e3e5d.patch";
-        sha256 = "097y3qfk2xyr34y7n801cilc2fv3l4zyfcdhkz4wp1q4ijcy33iq";
-        stripLen = 1;
-      }) ];
-    });
-
     message-filters = patchBoostSignals rosSuper.message-filters;
 
     message-relay = rosSuper.message-relay.overrideAttrs ({

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ecl-command-line, libftdi, libusb, pkg-config }:
 buildRosPackage {
   pname = "ros-melodic-kobuki-ftdi";
-  version = "0.7.8";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/melodic/kobuki_ftdi/0.7.8-0.tar.gz";
-    name = "0.7.8-0.tar.gz";
-    sha256 = "e1c6ba8e7d1fbd11de09faca56c7dd845fb12aa44432909e2ae0df6867296828";
+    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/melodic/kobuki_ftdi/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "321412cb348ed15d949d2c861d4c0d3514921185bf8cad86cba5946b5e985bdb";
   };
 
   buildType = "catkin";

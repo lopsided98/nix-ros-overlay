@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, python3Packages }:
 buildRosPackage {
   pname = "ros-dashing-swri-prefix-tools";
-  version = "3.3.0-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_prefix_tools/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "be977e65baa077cc5fd6cb6be4e07c62eceb3744228a503846f9a3a5ea34e360";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_prefix_tools/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "ee4a93df805b27b5e87f5efc10e0623ccb06fac777212166fb4ce127c4063556";
   };
 
   buildType = "ament_cmake";

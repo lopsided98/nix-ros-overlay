@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, marti-common-msgs, marti-nav-msgs, roscpp, swri-geometry-util, swri-math-util, swri-transform-util, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-swri-route-util";
-  version = "2.14.0-r1";
+  version = "2.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_route_util/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "81c56f954f14801a3d7c1a4c81ab34d8170f40f7d5a1fa859f6cdfcb033cb66d";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/kinetic/swri_route_util/2.14.2-1.tar.gz";
+    name = "2.14.2-1.tar.gz";
+    sha256 = "9840fbe97fca41cc66a8ea70dde1929cf52e66b79f31a0314cddfd5de3d8bc52";
   };
 
   buildType = "catkin";

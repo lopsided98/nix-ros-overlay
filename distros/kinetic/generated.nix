@@ -168,6 +168,18 @@ self: super: {
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
 
+ autoware-can-msgs = self.callPackage ./autoware-can-msgs {};
+
+ autoware-config-msgs = self.callPackage ./autoware-config-msgs {};
+
+ autoware-external-msgs = self.callPackage ./autoware-external-msgs {};
+
+ autoware-map-msgs = self.callPackage ./autoware-map-msgs {};
+
+ autoware-msgs = self.callPackage ./autoware-msgs {};
+
+ autoware-system-msgs = self.callPackage ./autoware-system-msgs {};
+
  auv-msgs = self.callPackage ./auv-msgs {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
@@ -1302,6 +1314,8 @@ self: super: {
 
  gps-common = self.callPackage ./gps-common {};
 
+ gps-goal = self.callPackage ./gps-goal {};
+
  gps-umd = self.callPackage ./gps-umd {};
 
  gpsd-client = self.callPackage ./gpsd-client {};
@@ -1463,6 +1477,8 @@ self: super: {
  heron-msgs = self.callPackage ./heron-msgs {};
 
  heron-viz = self.callPackage ./heron-viz {};
+
+ hfl-driver = self.callPackage ./hfl-driver {};
 
  hironx-calibration = self.callPackage ./hironx-calibration {};
 
@@ -1687,6 +1703,8 @@ self: super: {
  ira-laser-tools = self.callPackage ./ira-laser-tools {};
 
  ivcon = self.callPackage ./ivcon {};
+
+ ixblue-stdbin-decoder = self.callPackage ./ixblue-stdbin-decoder {};
 
  jackal-control = self.callPackage ./jackal-control {};
 
@@ -3266,13 +3284,9 @@ self: super: {
 
  pyquaternion = self.callPackage ./pyquaternion {};
 
- pyros = self.callPackage ./pyros {};
-
  pyros-common = self.callPackage ./pyros-common {};
 
  pyros-config = self.callPackage ./pyros-config {};
-
- pyros-interfaces-ros = self.callPackage ./pyros-interfaces-ros {};
 
  pyros-test = self.callPackage ./pyros-test {};
 
@@ -3570,6 +3584,8 @@ self: super: {
 
  robot-upstart = self.callPackage ./robot-upstart {};
 
+ roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
+
  robotis-controller = self.callPackage ./robotis-controller {};
 
  robotis-controller-msgs = self.callPackage ./robotis-controller-msgs {};
@@ -3794,6 +3810,8 @@ self: super: {
 
  rosbag-pandas = self.callPackage ./rosbag-pandas {};
 
+ rosbag-snapshot = self.callPackage ./rosbag-snapshot {};
+
  rosbag-snapshot-msgs = self.callPackage ./rosbag-snapshot-msgs {};
 
  rosbag-storage = self.callPackage ./rosbag-storage {};
@@ -3968,8 +3986,6 @@ self: super: {
 
  rostest = self.callPackage ./rostest {};
 
- rostful = self.callPackage ./rostful {};
-
  rostime = self.callPackage ./rostime {};
 
  rostopic = self.callPackage ./rostopic {};
@@ -4125,6 +4141,8 @@ self: super: {
  rsm-rqt-plugins = self.callPackage ./rsm-rqt-plugins {};
 
  rsm-rviz-plugins = self.callPackage ./rsm-rviz-plugins {};
+
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
@@ -4504,6 +4522,8 @@ self: super: {
 
  sync-params = self.callPackage ./sync-params {};
 
+ tablet-socket-msgs = self.callPackage ./tablet-socket-msgs {};
+
  talos-description = self.callPackage ./talos-description {};
 
  talos-description-calibration = self.callPackage ./talos-description-calibration {};
@@ -4848,6 +4868,8 @@ self: super: {
 
  ubiquity-motor = self.callPackage ./ubiquity-motor {};
 
+ udp-com = self.callPackage ./udp-com {};
+
  ueye = self.callPackage ./ueye {};
 
  ueye-cam = self.callPackage ./ueye-cam {};
@@ -5005,6 +5027,8 @@ self: super: {
  variant-topic-test = self.callPackage ./variant-topic-test {};
 
  variant-topic-tools = self.callPackage ./variant-topic-tools {};
+
+ vector-map-msgs = self.callPackage ./vector-map-msgs {};
 
  velocity-controllers = self.callPackage ./velocity-controllers {};
 

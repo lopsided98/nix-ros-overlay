@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-plugins, gazebo-ros, gazebo-ros-control, hector-gazebo-plugins, ridgeback-control, ridgeback-description, ridgeback-gazebo-plugins, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-ridgeback-gazebo";
-  version = "0.0.3";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/kinetic/ridgeback_gazebo/0.0.3-0.tar.gz";
-    name = "0.0.3-0.tar.gz";
-    sha256 = "5c40ad99149fb2e2c8847afac406a8d21dfefc99f2749bc9a6d3b4005645d2f4";
+    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/kinetic/ridgeback_gazebo/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "1763ea31823f0ae07e68f2b9e00771e07bc5942368d1947d33cf43b4d42fa3dc";
   };
 
   buildType = "catkin";

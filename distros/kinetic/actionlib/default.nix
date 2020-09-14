@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, boost, catkin, message-generation, message-runtime, pythonPackages, roscpp, roslib, rosnode, rospy, rostest, rostopic, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-actionlib";
-  version = "1.11.13";
+  version = "1.11.16-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/actionlib-release/archive/release/kinetic/actionlib/1.11.13-0.tar.gz";
-    name = "1.11.13-0.tar.gz";
-    sha256 = "20904f8215d1cc39a6e30fee69a1c964a02dbf4a2f931e56d12fc8850d13d235";
+    url = "https://github.com/ros-gbp/actionlib-release/archive/release/kinetic/actionlib/1.11.16-2.tar.gz";
+    name = "1.11.16-2.tar.gz";
+    sha256 = "0ff39842bcee2355f1c662945e59ef26a1f69fcace289f8d6ff856e0893f63b5";
   };
 
   buildType = "catkin";

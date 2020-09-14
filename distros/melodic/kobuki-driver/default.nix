@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ecl-build, ecl-command-line, ecl-converters, ecl-devices, ecl-geometry, ecl-mobile-robot, ecl-sigslots, ecl-time }:
 buildRosPackage {
   pname = "ros-melodic-kobuki-driver";
-  version = "0.7.8";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/melodic/kobuki_driver/0.7.8-0.tar.gz";
-    name = "0.7.8-0.tar.gz";
-    sha256 = "7cfcc4b9309c4a352fa54c9a6cb0fb0b53a5da43a0243aa13556670ec97bd34e";
+    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/melodic/kobuki_driver/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "143fee86362ab50f8330b45d973314d596da894543aa03e829a4f0448dc6b629";
   };
 
   buildType = "catkin";

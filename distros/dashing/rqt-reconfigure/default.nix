@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-xmllint, python-qt-binding, python3Packages, qt-gui-py-common, rclpy, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-dashing-rqt-reconfigure";
-  version = "1.0.4-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_reconfigure-release/archive/release/dashing/rqt_reconfigure/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "d80e45536bbb564a3c5246056446beccff64770183b1801243fc20f3ffe07616";
+    url = "https://github.com/ros2-gbp/rqt_reconfigure-release/archive/release/dashing/rqt_reconfigure/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "49bf8bf8e7406d4e8f696328d02412132105e33cdc1fe7f09a055e73f30d35c5";
   };
 
   buildType = "ament_python";

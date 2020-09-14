@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-xmllint, python-qt-binding, python3Packages, qt-gui-py-common, rclpy, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-eloquent-rqt-reconfigure";
-  version = "1.0.4-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_reconfigure-release/archive/release/eloquent/rqt_reconfigure/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "72533cbbb86ea7a0e00575262232a4bd327461169b27c0df307c205ac1d4b6e2";
+    url = "https://github.com/ros2-gbp/rqt_reconfigure-release/archive/release/eloquent/rqt_reconfigure/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "d9427dfd6ae7ad38ea7f83c776531e330fa1943899d3b4df08418a31fad0c297";
   };
 
   buildType = "ament_python";

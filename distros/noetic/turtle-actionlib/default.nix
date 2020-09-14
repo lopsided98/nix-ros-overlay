@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, angles, catkin, geometry-msgs, message-generation, message-runtime, rosconsole, roscpp, std-msgs, turtlesim }:
 buildRosPackage {
   pname = "ros-noetic-turtle-actionlib";
-  version = "0.1.12-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/noetic/turtle_actionlib/0.1.12-1.tar.gz";
-    name = "0.1.12-1.tar.gz";
-    sha256 = "277d52eec8e3732c1a482911d3648ed4737bf1ef81beffc2658ae43e46d4d50d";
+    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/noetic/turtle_actionlib/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "80636aed6293e6c3fc13678ebf58bce00b1b8f2f7f067d9252e2e1f227bb4781";
   };
 
   buildType = "catkin";

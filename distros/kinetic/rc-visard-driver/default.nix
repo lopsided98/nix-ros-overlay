@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, diagnostic-updater, dynamic-reconfigure, geometry-msgs, image-transport, message-generation, message-runtime, nav-msgs, nodelet, protobuf, rc-common-msgs, rc-dynamics-api, rc-genicam-api, roscpp, sensor-msgs, stereo-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rc-visard-driver";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_visard_driver/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "e9dc2341b59e512fe5c83837f5e9f8e4382f152ee5c452db78473505c182f78e";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_visard_driver/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "5ee69f95747060e14e0f138ff1a2959caf7a92cf7989175770c8a7f7662f8ff6";
   };
 
   buildType = "catkin";

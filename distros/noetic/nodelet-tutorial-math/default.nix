@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-nodelet-tutorial-math";
-  version = "0.1.12-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/noetic/nodelet_tutorial_math/0.1.12-1.tar.gz";
-    name = "0.1.12-1.tar.gz";
-    sha256 = "df013dea7a120a5c6a9c48997232f6d69a153c224c93c516db9330a598bbc6e9";
+    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/noetic/nodelet_tutorial_math/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "25a9f22b34a0cfdaded3e8e79ebcacde173689d9e05c4751cd033a759d441089";
   };
 
   buildType = "catkin";

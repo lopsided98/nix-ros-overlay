@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, rosbag, roslib, rostest }:
 buildRosPackage {
   pname = "ros-melodic-diagnostic-analysis";
-  version = "1.9.3";
+  version = "1.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/diagnostic_analysis/1.9.3-0.tar.gz";
-    name = "1.9.3-0.tar.gz";
-    sha256 = "72eb7b968b92d97d5c95a15a4e9e573c9f025158e2a4e4375ad18b744858093f";
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/diagnostic_analysis/1.9.7-1.tar.gz";
+    name = "1.9.7-1.tar.gz";
+    sha256 = "e38eb20f984ae213806289f7c7ee095f6af5acb8b4163aecfc20b9cf668e043f";
   };
 
   buildType = "catkin";

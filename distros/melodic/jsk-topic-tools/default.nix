@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, diagnostic-updater, dynamic-reconfigure, dynamic-tf-publisher, eigen-conversions, geometry-msgs, image-transport, message-generation, message-runtime, nodelet, pythonPackages, roscpp, roscpp-tutorials, roslaunch, roslint, rosnode, rostest, rostime, rostopic, sensor-msgs, sound-play, std-msgs, std-srvs, tf, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-jsk-topic-tools";
-  version = "2.2.10";
+  version = "2.2.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/jsk_topic_tools/2.2.10-0.tar.gz";
-    name = "2.2.10-0.tar.gz";
-    sha256 = "d2f76dd70a0b02a05b56658211cc0c8441dca5bea008d0ea45694d3c4cefa5e7";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/jsk_topic_tools/2.2.11-1.tar.gz";
+    name = "2.2.11-1.tar.gz";
+    sha256 = "3a62a5dec26eb3aa8de5043dcc0f5318e95f1f7886e8d547e0d39883542b169c";
   };
 
   buildType = "catkin";

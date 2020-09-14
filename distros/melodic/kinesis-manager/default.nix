@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-common, boost, catkin, cmake, curl, gmock, gtest, log4cplus, openssl, pkg-config }:
 buildRosPackage {
   pname = "ros-melodic-kinesis-manager";
-  version = "2.0.1-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/kinesis_manager-release/archive/release/melodic/kinesis_manager/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "72f3249e68e58cec6b9adcb8d66d73f2effa3386bfef0a41c8734a8041a3d057";
+    url = "https://github.com/aws-gbp/kinesis_manager-release/archive/release/melodic/kinesis_manager/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "6db7c90ac6fb345ff10ec737c2f37f5cc6a0f6a6aebf038c852375afd2fb40e2";
   };
 
   buildType = "cmake";
