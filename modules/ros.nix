@@ -104,6 +104,7 @@ in {
     in mkIf (length paths != 0) [ (cfg.pkgs.buildEnv {
       name = "ros-system-env";
       inherit paths;
+      extraOutputsToInstall = optional config.environment.enableDebugInfo "debug";
     }) ];
 
     users = {
