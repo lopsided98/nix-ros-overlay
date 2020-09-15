@@ -38,7 +38,9 @@ jobs:
               echo "username=lopsided98"
               echo "password=${SUPERFLORE_GITHUB_TOKEN}"
             }; f'
+          # cross_compile repo is broken: https://github.com/ros-tooling/cross_compile/issues/248
           superflore-gen-nix \
             --tar-archive-dir "${{ runner.temp }}/tar" \
             --output-repository-path . \
+            --skip cross_compile \
             --all
