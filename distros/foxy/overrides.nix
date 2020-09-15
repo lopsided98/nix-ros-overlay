@@ -14,16 +14,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "1ab4d7ngvx009vajqv3kxw0s77z0hdd9xb8in1mvx86i1l3vndxa";
   };
 
-  rosidl-generator-c = rosSuper.rosidl-generator-c.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/ros2/rosidl/commit/47a64c1bc490175e11edd75f33c61b54fea8eb76.patch";
-      sha256 = "108m5mr6cnw5l50djscx95zshn9cba0hrp8r3kjsch481r4iwwwg";
-      stripLen = 1;
-    }) ];
-  });
-
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";

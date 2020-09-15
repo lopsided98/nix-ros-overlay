@@ -89,6 +89,11 @@ in {
       masterUri = mkDefault "http://${cfg.hostname}:11311/";
     };
 
+    environment.etc."ros/rosdep/sources.list.d/20-default.list".source = pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/ros/rosdistro/225c14be89fdf7ecf028b4cf85fa82032f7728e1/rosdep/sources.list.d/20-default.list";
+      sha256 = "0kxknc42y01pci8fxzhg84ybhgqyxqimycck27vb4b282lqfkzj7";
+    };
+
     environment.variables = {
       ROS_HOSTNAME = cfg.hostname;
       ROS_MASTER_URI = cfg.masterUri;
@@ -99,6 +104,7 @@ in {
     in mkIf (length paths != 0) [ (cfg.pkgs.buildEnv {
       name = "ros-system-env";
       inherit paths;
+      extraOutputsToInstall = optional config.environment.enableDebugInfo "debug";
     }) ];
 
     users = {
