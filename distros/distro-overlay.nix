@@ -211,7 +211,15 @@ let
     rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
       propagatedBuildInputs ? [], ...
     }: {
-      propagatedBuildInputs = [ rosSelf.rmw-fastrtps-cpp ] ++ propagatedBuildInputs;
+      # Make sure all supported implementations are available to dependent
+      # packages. They are already part of the closure, so we might as well
+      # support them. This package could also be overriden to only support a
+      # single implementation to reduce closure size.
+      propagatedBuildInputs = with rosSelf; [
+        rmw-connext-cpp
+        rmw-cyclonedds-cpp
+        rmw-fastrtps-cpp
+      ] ++ propagatedBuildInputs;
     });
 
     rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
