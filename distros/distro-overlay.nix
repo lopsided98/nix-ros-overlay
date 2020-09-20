@@ -111,6 +111,14 @@ let
 
     laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
 
+    libfranka = rosSuper.libfranka.overrideAttrs ({
+      cmakeFlags ? [], ...
+    }: {
+      # Uses custom flag to disable tests. Attempts to download GTest without
+      # this.
+      cmakeFlags = cmakeFlags ++ [ "-DBUILD_TESTS=OFF" ];
+    });
+
     libpcan = patchVendorUrl rosSuper.libpcan {
       url = "http://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.3.tar.gz";
       sha256 = "0f6v3vjszyg1xp99jx48hyv8p32iyq4j18a4ir4x5p6f3b0z3r34";
