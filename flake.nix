@@ -17,5 +17,6 @@
       packages = pkgs.rosPackages;
     }) // {
       overlay = import ./overlay.nix;
+      nixosModule = import ./modules;
     };
 }
