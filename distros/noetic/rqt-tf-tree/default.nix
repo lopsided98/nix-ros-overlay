@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, python3Packages, qt-dotgraph, rospy, rqt-graph, rqt-gui, rqt-gui-py, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-rqt-tf-tree";
-  version = "0.6.1-r1";
+  version = "0.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_tf_tree-release/archive/release/noetic/rqt_tf_tree/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "e1652831152be7540779724aa2882dc7bbd3bd6ccbda58c99a8710cef889eeaf";
+    url = "https://github.com/ros-gbp/rqt_tf_tree-release/archive/release/noetic/rqt_tf_tree/0.6.2-1.tar.gz";
+    name = "0.6.2-1.tar.gz";
+    sha256 = "db171b666480146b4ae5978f86eaa4f07c498367b04b860ab0d1cf78766d9d32";
   };
 
   buildType = "catkin";

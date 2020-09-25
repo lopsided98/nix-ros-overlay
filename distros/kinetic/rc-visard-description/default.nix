@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslaunch, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-rc-visard-description";
-  version = "3.0.2-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_visard_description/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "8d3b7ef4bb35c3f019eeffae55475e47f6922a634f499171a69ffcf86c718d84";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_visard_description/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "3815b22655e87e2e6aee2d05568a6a35dd037fae7aedf916d811682ab04a093e";
   };
 
   buildType = "catkin";

@@ -578,6 +578,8 @@ self: super: {
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
+ computer-status-msgs = self.callPackage ./computer-status-msgs {};
+
  concert-msgs = self.callPackage ./concert-msgs {};
 
  concert-service-msgs = self.callPackage ./concert-service-msgs {};
@@ -1474,7 +1476,11 @@ self: super: {
 
  heron-desktop = self.callPackage ./heron-desktop {};
 
+ heron-gazebo = self.callPackage ./heron-gazebo {};
+
  heron-msgs = self.callPackage ./heron-msgs {};
+
+ heron-simulator = self.callPackage ./heron-simulator {};
 
  heron-viz = self.callPackage ./heron-viz {};
 
@@ -4915,6 +4921,8 @@ self: super: {
  ur5-moveit-config = self.callPackage ./ur5-moveit-config {};
 
  ur-bringup = self.callPackage ./ur-bringup {};
+
+ ur-client-library = self.callPackage ./ur-client-library {};
 
  ur-description = self.callPackage ./ur-description {};
 

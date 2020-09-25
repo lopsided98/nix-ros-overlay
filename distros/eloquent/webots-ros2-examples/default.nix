@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, geometry-msgs, pythonPackages, rclpy, sensor-msgs, std-msgs, webots-ros2-core, webots-ros2-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-webots-ros2-examples";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/eloquent/webots_ros2_examples/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "7dc2ca7e3d2dd4ad69099108b0e4c2bb647eeb026867f2852c35dbf03be5328f";
+    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/eloquent/webots_ros2_examples/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "8936d440bb3fdb0ea7b2723ea170483f8948ddc74cf41b2cd88e995ba41c1d3a";
   };
 
   buildType = "ament_python";

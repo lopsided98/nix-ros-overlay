@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-eloquent-webots-ros2-msgs";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/eloquent/webots_ros2_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "86ee0722b7a53f7846006d43e55d71bb73bfbca26520adf9db5f969c186834dd";
+    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/eloquent/webots_ros2_msgs/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "538a17b2929ba96d8cd73bfeceedf49f7c13010fb76e745e171f50da5379e763";
   };
 
   buildType = "ament_cmake";

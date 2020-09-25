@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosserial-client }:
 buildRosPackage {
   pname = "ros-noetic-rosserial-chibios";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_chibios/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "c96d6f7f31804561faedf88c99404decdb48217065a7d55fa521ea173eb81ae0";
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_chibios/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "77e1de5169a9ef37f9e99f849b9a2079922c0f79f14220b77531e0312685c737";
   };
 
   buildType = "catkin";

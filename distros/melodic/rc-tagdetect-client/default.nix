@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rc-common-msgs, rcdiscover, roscpp, std-srvs, tf, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rc-tagdetect-client";
-  version = "3.0.2-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_tagdetect_client/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "08aa73dfe702468ffbe8cee9d775e5e42c6d31147f31644700dfdc4d1a3bc954";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_tagdetect_client/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "f747d0f59d881cc8458bfdd333a6304a46a98feb3270e7ac4c2a5432e2ae49d9";
   };
 
   buildType = "catkin";

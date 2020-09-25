@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python-qt-binding, qt-dotgraph, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-foxy-rqt-graph";
-  version = "1.0.4-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/foxy/rqt_graph/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "2901e671dbb7c19680a90137515761a1de4c09271c4f044eca1963de0cb93b93";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/foxy/rqt_graph/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "b33331acc6e063a8236b324209946d3772011bcffdf822b6697ac5bcab95c7ae";
   };
 
   buildType = "ament_python";

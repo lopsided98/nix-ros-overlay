@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, can-msgs, catkin, rosconsole-bridge, roscpp, roslint, rostest, rosunit, socketcan-interface }:
 buildRosPackage {
   pname = "ros-noetic-socketcan-bridge";
-  version = "0.8.4-r1";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/noetic/socketcan_bridge/0.8.4-1.tar.gz";
-    name = "0.8.4-1.tar.gz";
-    sha256 = "382552a95541c1804b75890f07f4ec86ca093b28ddf810b7391aa0ebfc42c504";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/noetic/socketcan_bridge/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
+    sha256 = "2cd955e1bc167097328167d7d7c82c47ef382feec380bfd483bd0910860e0dc7";
   };
 
   buildType = "catkin";

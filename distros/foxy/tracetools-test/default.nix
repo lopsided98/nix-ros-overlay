@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-mypy, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch-ros, pkg-config, python3Packages, pythonPackages, rclcpp, std-msgs, std-srvs, tracetools, tracetools-launch, tracetools-read }:
 buildRosPackage {
   pname = "ros-foxy-tracetools-test";
-  version = "1.0.2-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/tracetools_test/1.0.2-1";
+    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/tracetools_test/1.0.4-1";
     name = "archive.tar.gz";
-    sha256 = "36bb1722a4c11bb6fedc3dab647524cdd4751e1fb28df176a57b319d988aaf16";
+    sha256 = "755824ceeb41282fadfbb8d1c347c43987674950c9253193294e067626d880dd";
   };
 
   buildType = "ament_cmake";

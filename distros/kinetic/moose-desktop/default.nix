@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moose-msgs, moose-viz }:
 buildRosPackage {
   pname = "ros-kinetic-moose-desktop";
-  version = "0.1.0-r3";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/moose_desktop-release/archive/release/kinetic/moose_desktop/0.1.0-3.tar.gz";
-    name = "0.1.0-3.tar.gz";
-    sha256 = "36b65aac7523bba7f9d70fcd0b28213d7a4c8d3b1593cd5beb1b5225aa634cc1";
+    url = "https://github.com/clearpath-gbp/moose_desktop-release/archive/release/kinetic/moose_desktop/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "ecab6f912991b1541897082ca2a6bd12ac094296f02265eb0bf0a95513d7a1b0";
   };
 
   buildType = "catkin";

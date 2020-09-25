@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libpng, libusb }:
 buildRosPackage {
   pname = "ros-eloquent-rc-genicam-api";
-  version = "2.3.5-r1";
+  version = "2.4.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/eloquent/rc_genicam_api/2.3.5-1.tar.gz";
-    name = "2.3.5-1.tar.gz";
-    sha256 = "75d788f5cf687f7759f24fb4810e08bd78cd137517aec0ddc9ac596f2b5c352e";
+    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/eloquent/rc_genicam_api/2.4.1-2.tar.gz";
+    name = "2.4.1-2.tar.gz";
+    sha256 = "07327a64970963325c8c2e60745a274f7c305568654426a9c9577d99612b75e1";
   };
 
   buildType = "cmake";

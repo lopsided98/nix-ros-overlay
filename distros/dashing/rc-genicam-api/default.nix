@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libpng, libusb }:
 buildRosPackage {
   pname = "ros-dashing-rc-genicam-api";
-  version = "2.3.5-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/dashing/rc_genicam_api/2.3.5-1.tar.gz";
-    name = "2.3.5-1.tar.gz";
-    sha256 = "9415354936db0a98410885487b1ac9b3d8f6a541f50aa8dc4afb2a0e36a6993a";
+    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/dashing/rc_genicam_api/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "1368107b46ae35bca57fea8995366b5b8b97f24fd0edb1fd15ca3ada557f297d";
   };
 
   buildType = "cmake";

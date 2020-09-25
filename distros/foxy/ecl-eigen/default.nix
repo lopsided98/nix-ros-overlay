@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, eigen }:
 buildRosPackage {
   pname = "ros-foxy-ecl-eigen";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/foxy/ecl_eigen/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "51a398c190d2df73d0274c1c10c2cd7959bc63baddeab9613d3ae4507afeda3a";
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/foxy/ecl_eigen/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "960edf2adc81126db762501aaf7f1f8441901d89f66cefe45deeb745caa6c5f3";
   };
 
   buildType = "ament_cmake";

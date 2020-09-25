@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-can-msgs";
-  version = "0.8.4-r1";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/can_msgs/0.8.4-1.tar.gz";
-    name = "0.8.4-1.tar.gz";
-    sha256 = "447ba0d6ed4b62a6ed516bc4fc65a621ec6f6519373bf0e5d8acd39f551ea474";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/can_msgs/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
+    sha256 = "f5066e557bf533243631fef24b5e63c507eb24b44bb883b77017c674cb4f2d90";
   };
 
   buildType = "catkin";

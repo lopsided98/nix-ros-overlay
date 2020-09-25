@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rc-common-msgs, rcdiscover, roscpp, shape-msgs, std-srvs, tf, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rc-pick-client";
-  version = "3.0.2-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_pick_client/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "94723ff9a4d1dbacf32aa8f52c5a0158412c794a3e221d6fe97eaa944d905041";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_pick_client/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "a545bc438b103de27cdcf1e71db510abb507de9ac58442f76adddab5af05c4f3";
   };
 
   buildType = "catkin";

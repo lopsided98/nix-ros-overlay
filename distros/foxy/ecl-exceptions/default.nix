@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-config, ecl-errors, ecl-license }:
 buildRosPackage {
   pname = "ros-foxy-ecl-exceptions";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/foxy/ecl_exceptions/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "9745fcaa5479c10b413856a6ad8bdeafe5f0fae46bfeb14e1bf0a9e2c8defb4e";
+    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/foxy/ecl_exceptions/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "e7eb483073cf86cff916206e50071e201d0c044acaca0860150d39a68e5ea884";
   };
 
   buildType = "ament_cmake";

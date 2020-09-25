@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt-dotgraph, qt-gui, qt-gui-app, qt-gui-cpp, qt-gui-py-common }:
 buildRosPackage {
   pname = "ros-foxy-qt-gui-core";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/foxy/qt_gui_core/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "c17e25432d61e64fb2cc5a35388ef5ca0f95b128532d451bca8d22bd837a2b9d";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/foxy/qt_gui_core/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "e24ef1a3c8e91225fac465220608ff8d642dfb28c14d12755bcff2594d186ed4";
   };
 
   buildType = "ament_cmake";

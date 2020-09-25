@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, pkg-config }:
 buildRosPackage {
   pname = "ros-foxy-tracetools";
-  version = "1.0.2-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/tracetools/1.0.2-1";
+    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/tracetools/1.0.4-1";
     name = "archive.tar.gz";
-    sha256 = "73a8b19cca5d14cabbc8a1f72f2c1a245867e99042821ca1943d2af87d639540";
+    sha256 = "ece75c3c589cd1c1401f7a9d2ec8c90093a493e4ea3954a89174660caebc1991";
   };
 
   buildType = "ament_cmake";

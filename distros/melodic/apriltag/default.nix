@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-melodic-apriltag";
-  version = "3.1.1-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/AprilRobotics/apriltag-release/archive/release/melodic/apriltag/3.1.1-1.tar.gz";
-    name = "3.1.1-1.tar.gz";
-    sha256 = "99dbed4dcbf548582e54acc506bf55f4918c2fdf3a0682716b4a400074cb533c";
+    url = "https://github.com/AprilRobotics/apriltag-release/archive/release/melodic/apriltag/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "edeca6ffd2d5da48a525fd278afb41a43d2cf3e0290dadf71bce62620f4ebf9d";
   };
 
   buildType = "cmake";

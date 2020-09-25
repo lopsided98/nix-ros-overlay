@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, moose-description, roslaunch, rviz }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher-gui, moose-description, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-moose-viz";
-  version = "0.1.0-r3";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/moose_desktop-release/archive/release/kinetic/moose_viz/0.1.0-3.tar.gz";
-    name = "0.1.0-3.tar.gz";
-    sha256 = "42df5fe707b9fe28fa313400712458cf3d4c1bbb9418725371646d93d6240670";
+    url = "https://github.com/clearpath-gbp/moose_desktop-release/archive/release/kinetic/moose_viz/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "91271bed33ba95d9a6bed08b3d6bff77cd38b6a1203e520fc70c129cf670e1f6";
   };
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ joint-state-publisher moose-description rviz ];
+  propagatedBuildInputs = [ joint-state-publisher-gui moose-description rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

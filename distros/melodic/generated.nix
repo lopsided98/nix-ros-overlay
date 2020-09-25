@@ -92,7 +92,13 @@ self: super: {
 
  ariles-ros = self.callPackage ./ariles-ros {};
 
+ aruco = self.callPackage ./aruco {};
+
  aruco-detect = self.callPackage ./aruco-detect {};
+
+ aruco-msgs = self.callPackage ./aruco-msgs {};
+
+ aruco-ros = self.callPackage ./aruco-ros {};
 
  asmach = self.callPackage ./asmach {};
 
@@ -480,6 +486,8 @@ self: super: {
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
+ computer-status-msgs = self.callPackage ./computer-status-msgs {};
+
  concert-msgs = self.callPackage ./concert-msgs {};
 
  concert-service-msgs = self.callPackage ./concert-service-msgs {};
@@ -589,6 +597,8 @@ self: super: {
  delphi-mrr-msgs = self.callPackage ./delphi-mrr-msgs {};
 
  delphi-srr-msgs = self.callPackage ./delphi-srr-msgs {};
+
+ dense-laser-assembler = self.callPackage ./dense-laser-assembler {};
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
@@ -807,6 +817,8 @@ self: super: {
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
  eigenpy = self.callPackage ./eigenpy {};
+
+ eiquadprog = self.callPackage ./eiquadprog {};
 
  eml = self.callPackage ./eml {};
 
@@ -1200,13 +1212,15 @@ self: super: {
 
  hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
 
- heifu-bringup = self.callPackage ./heifu-bringup {};
+ heron-control = self.callPackage ./heron-control {};
 
- heifu-description = self.callPackage ./heifu-description {};
+ heron-description = self.callPackage ./heron-description {};
 
- heifu-msgs = self.callPackage ./heifu-msgs {};
+ heron-gazebo = self.callPackage ./heron-gazebo {};
 
- heifu-tools = self.callPackage ./heifu-tools {};
+ heron-msgs = self.callPackage ./heron-msgs {};
+
+ heron-simulator = self.callPackage ./heron-simulator {};
 
  hfl-driver = self.callPackage ./hfl-driver {};
 
@@ -1402,6 +1416,8 @@ self: super: {
 
  joint-limits-interface = self.callPackage ./joint-limits-interface {};
 
+ joint-qualification-controllers = self.callPackage ./joint-qualification-controllers {};
+
  joint-state-controller = self.callPackage ./joint-state-controller {};
 
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
@@ -1560,6 +1576,10 @@ self: super: {
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
+ laser-joint-processor = self.callPackage ./laser-joint-processor {};
+
+ laser-joint-projector = self.callPackage ./laser-joint-projector {};
+
  laser-pipeline = self.callPackage ./laser-pipeline {};
 
  laser-proc = self.callPackage ./laser-proc {};
@@ -1579,6 +1599,8 @@ self: super: {
  leg-detector = self.callPackage ./leg-detector {};
 
  leo-description = self.callPackage ./leo-description {};
+
+ leo-gazebo = self.callPackage ./leo-gazebo {};
 
  leo-viz = self.callPackage ./leo-viz {};
 
@@ -1826,7 +1848,15 @@ self: super: {
 
  moose-description = self.callPackage ./moose-description {};
 
+ moose-desktop = self.callPackage ./moose-desktop {};
+
+ moose-gazebo = self.callPackage ./moose-gazebo {};
+
  moose-msgs = self.callPackage ./moose-msgs {};
+
+ moose-simulator = self.callPackage ./moose-simulator {};
+
+ moose-viz = self.callPackage ./moose-viz {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
@@ -1921,6 +1951,20 @@ self: super: {
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
 
  mqtt-bridge = self.callPackage ./mqtt-bridge {};
+
+ mrp2-common = self.callPackage ./mrp2-common {};
+
+ mrp2-description = self.callPackage ./mrp2-description {};
+
+ mrp2-gazebo = self.callPackage ./mrp2-gazebo {};
+
+ mrp2-navigation = self.callPackage ./mrp2-navigation {};
+
+ mrp2-simulator = self.callPackage ./mrp2-simulator {};
+
+ mrp2-slam = self.callPackage ./mrp2-slam {};
+
+ mrp2-teleop = self.callPackage ./mrp2-teleop {};
 
  mrpt1 = self.callPackage ./mrpt1 {};
 
@@ -2212,6 +2256,8 @@ self: super: {
 
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
 
+ openzen-sensor = self.callPackage ./openzen-sensor {};
+
  opt-camera = self.callPackage ./opt-camera {};
 
  optpp-catkin = self.callPackage ./optpp-catkin {};
@@ -2378,7 +2424,13 @@ self: super: {
 
  pr2-bringup = self.callPackage ./pr2-bringup {};
 
+ pr2-bringup-tests = self.callPackage ./pr2-bringup-tests {};
+
+ pr2-calibration = self.callPackage ./pr2-calibration {};
+
  pr2-calibration-controllers = self.callPackage ./pr2-calibration-controllers {};
+
+ pr2-calibration-launch = self.callPackage ./pr2-calibration-launch {};
 
  pr2-camera-synchronizer = self.callPackage ./pr2-camera-synchronizer {};
 
@@ -2402,7 +2454,11 @@ self: super: {
 
  pr2-controllers-msgs = self.callPackage ./pr2-controllers-msgs {};
 
+ pr2-counterbalance-check = self.callPackage ./pr2-counterbalance-check {};
+
  pr2-dashboard-aggregator = self.callPackage ./pr2-dashboard-aggregator {};
+
+ pr2-dense-laser-snapshotter = self.callPackage ./pr2-dense-laser-snapshotter {};
 
  pr2-description = self.callPackage ./pr2-description {};
 
@@ -2444,6 +2500,8 @@ self: super: {
 
  pr2-mechanism-msgs = self.callPackage ./pr2-mechanism-msgs {};
 
+ pr2-motor-diagnostic-tool = self.callPackage ./pr2-motor-diagnostic-tool {};
+
  pr2-move-base = self.callPackage ./pr2-move-base {};
 
  pr2-moveit-config = self.callPackage ./pr2-moveit-config {};
@@ -2477,6 +2535,12 @@ self: super: {
  pr2-robot = self.callPackage ./pr2-robot {};
 
  pr2-run-stop-auto-restart = self.callPackage ./pr2-run-stop-auto-restart {};
+
+ pr2-se-calibration-launch = self.callPackage ./pr2-se-calibration-launch {};
+
+ pr2-self-test = self.callPackage ./pr2-self-test {};
+
+ pr2-self-test-msgs = self.callPackage ./pr2-self-test-msgs {};
 
  pr2-simulator = self.callPackage ./pr2-simulator {};
 
@@ -3184,6 +3248,8 @@ self: super: {
 
  rslidar-pointcloud = self.callPackage ./rslidar-pointcloud {};
 
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
+
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
  rtmbuild = self.callPackage ./rtmbuild {};
@@ -3663,6 +3729,8 @@ self: super: {
  uos-maps = self.callPackage ./uos-maps {};
 
  uos-tools = self.callPackage ./uos-tools {};
+
+ ur-client-library = self.callPackage ./ur-client-library {};
 
  ur-msgs = self.callPackage ./ur-msgs {};
 

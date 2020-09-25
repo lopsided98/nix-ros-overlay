@@ -116,6 +116,8 @@ self: super: {
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
+ computer-status-msgs = self.callPackage ./computer-status-msgs {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -226,6 +228,8 @@ self: super: {
 
  dlux-plugins = self.callPackage ./dlux-plugins {};
 
+ dnn-detect = self.callPackage ./dnn-detect {};
+
  downward = self.callPackage ./downward {};
 
  dual-quaternions = self.callPackage ./dual-quaternions {};
@@ -255,6 +259,8 @@ self: super: {
  dynamic-tf-publisher = self.callPackage ./dynamic-tf-publisher {};
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
+
+ easy-markers = self.callPackage ./easy-markers {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
@@ -335,6 +341,8 @@ self: super: {
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
  eigenpy = self.callPackage ./eigenpy {};
+
+ eiquadprog = self.callPackage ./eiquadprog {};
 
  executive-smach = self.callPackage ./executive-smach {};
 
@@ -528,6 +536,8 @@ self: super: {
 
  joy = self.callPackage ./joy {};
 
+ joy-listener = self.callPackage ./joy-listener {};
+
  joy-teleop = self.callPackage ./joy-teleop {};
 
  joystick-drivers = self.callPackage ./joystick-drivers {};
@@ -552,6 +562,8 @@ self: super: {
 
  julius = self.callPackage ./julius {};
 
+ kalman-filter = self.callPackage ./kalman-filter {};
+
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-conversions = self.callPackage ./kdl-conversions {};
@@ -561,6 +573,14 @@ self: super: {
  kdl-parser-py = self.callPackage ./kdl-parser-py {};
 
  key-teleop = self.callPackage ./key-teleop {};
+
+ kobuki-core = self.callPackage ./kobuki-core {};
+
+ kobuki-dock-drive = self.callPackage ./kobuki-dock-drive {};
+
+ kobuki-driver = self.callPackage ./kobuki-driver {};
+
+ kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
 
  kobuki-msgs = self.callPackage ./kobuki-msgs {};
 
@@ -924,6 +944,12 @@ self: super: {
 
  pcl-ros = self.callPackage ./pcl-ros {};
 
+ people = self.callPackage ./people {};
+
+ people-msgs = self.callPackage ./people-msgs {};
+
+ people-velocity-tracker = self.callPackage ./people-velocity-tracker {};
+
  perception = self.callPackage ./perception {};
 
  perception-pcl = self.callPackage ./perception-pcl {};
@@ -1117,6 +1143,8 @@ self: super: {
  rosbag-snapshot-msgs = self.callPackage ./rosbag-snapshot-msgs {};
 
  rosbag-storage = self.callPackage ./rosbag-storage {};
+
+ rosbaglive = self.callPackage ./rosbaglive {};
 
  rosbash = self.callPackage ./rosbash {};
 
@@ -1356,6 +1384,8 @@ self: super: {
 
  sdc21x0 = self.callPackage ./sdc21x0 {};
 
+ sdhlibrary-cpp = self.callPackage ./sdhlibrary-cpp {};
+
  self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
@@ -1468,6 +1498,8 @@ self: super: {
 
  teleop-tools-msgs = self.callPackage ./teleop-tools-msgs {};
 
+ teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
+
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
@@ -1546,6 +1578,8 @@ self: super: {
 
  unique-identifier = self.callPackage ./unique-identifier {};
 
+ ur-client-library = self.callPackage ./ur-client-library {};
+
  urdf = self.callPackage ./urdf {};
 
  urdf-geometry-parser = self.callPackage ./urdf-geometry-parser {};
@@ -1618,9 +1652,25 @@ self: super: {
 
  wiimote = self.callPackage ./wiimote {};
 
+ wu-ros-tools = self.callPackage ./wu-ros-tools {};
+
  xacro = self.callPackage ./xacro {};
 
  xmlrpcpp = self.callPackage ./xmlrpcpp {};
+
+ xpp = self.callPackage ./xpp {};
+
+ xpp-examples = self.callPackage ./xpp-examples {};
+
+ xpp-hyq = self.callPackage ./xpp-hyq {};
+
+ xpp-msgs = self.callPackage ./xpp-msgs {};
+
+ xpp-quadrotor = self.callPackage ./xpp-quadrotor {};
+
+ xpp-states = self.callPackage ./xpp-states {};
+
+ xpp-vis = self.callPackage ./xpp-vis {};
 
  xv-11-laser-driver = self.callPackage ./xv-11-laser-driver {};
 

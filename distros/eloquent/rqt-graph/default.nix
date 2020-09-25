@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python-qt-binding, qt-dotgraph, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-eloquent-rqt-graph";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/eloquent/rqt_graph/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "ae3942035af522fc2cf003737676d600a0001db3138e11dd8a2db44f3cc6dd15";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/eloquent/rqt_graph/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "faab88c9561803ec7df7cc8bc84b474d4177d4b4d04ac6ddfc501039d7db8d0f";
   };
 
   buildType = "ament_python";
