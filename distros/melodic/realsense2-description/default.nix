@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosunit, xacro }:
 buildRosPackage {
   pname = "ros-melodic-realsense2-description";
-  version = "2.2.16-r1";
+  version = "2.2.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/melodic/realsense2_description/2.2.16-1.tar.gz";
-    name = "2.2.16-1.tar.gz";
-    sha256 = "4e294c827ceec86e15bf343c634bcdd65dfb033667418be41807daa2815678e4";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/melodic/realsense2_description/2.2.17-1.tar.gz";
+    name = "2.2.17-1.tar.gz";
+    sha256 = "e7487e9e50ae12e097716363ccd2e99661de8c4ecc9a1c61ddf3a5afaf473bb5";
   };
 
   buildType = "catkin";

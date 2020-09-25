@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake, python3, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-eloquent-mavlink";
-  version = "2020.8.8-r1";
+  version = "2020.9.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/eloquent/mavlink/2020.8.8-1.tar.gz";
-    name = "2020.8.8-1.tar.gz";
-    sha256 = "afdfa86b6b0a8ed034b71b028a90f2bf16508b7bdc26b4559f41723a4a6513ca";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/eloquent/mavlink/2020.9.10-1.tar.gz";
+    name = "2020.9.10-1.tar.gz";
+    sha256 = "6932b55aea9e0557705c22e578135c53b60b9580dd47454eb01bec09998d4df3";
   };
 
   buildType = "cmake";

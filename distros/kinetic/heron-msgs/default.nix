@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-heron-msgs";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/heron-release/archive/release/kinetic/heron_msgs/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "581f3578b85d11b73b7b8c62f42f6830b3827e5cfa2bcff4bec493f613e393e0";
+    url = "https://github.com/clearpath-gbp/heron-release/archive/release/kinetic/heron_msgs/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "5a1c10d556e227adaaa649d6f1fdddd211eea0f65cbb15253b391131de244a07";
   };
 
   buildType = "catkin";

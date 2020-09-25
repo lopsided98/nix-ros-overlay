@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, warthog-msgs, warthog-viz }:
 buildRosPackage {
   pname = "ros-melodic-warthog-desktop";
-  version = "0.0.1-r1";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog_desktop-release/archive/release/melodic/warthog_desktop/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "3b839c59095be96b5f39a0473d13467834a3f7ef43d4bcbd7e53befb569025c8";
+    url = "https://github.com/clearpath-gbp/warthog_desktop-release/archive/release/melodic/warthog_desktop/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "dd9cb05569510461e865eb51fb6dda99cdf8a2a4a9536d67804ba94575100b6a";
   };
 
   buildType = "catkin";

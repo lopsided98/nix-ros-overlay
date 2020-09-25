@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, git, gtest }:
 buildRosPackage {
   pname = "ros-kinetic-ixblue-stdbin-decoder";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ixblue/ixblue_stdbin_decoder-release/archive/release/kinetic/ixblue_stdbin_decoder/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "f81abdb1f70c7020f195f7e857aeb5a0a2159e18b669ab57b5bcefc55a6efff0";
+    url = "https://github.com/ixblue/ixblue_stdbin_decoder-release/archive/release/kinetic/ixblue_stdbin_decoder/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "2ce0952fb15f8fdd681e6cd1a1c3facbacbc3774bf8d2cb21683506df0ad881c";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-can-msgs";
-  version = "0.8.4-r1";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/noetic/can_msgs/0.8.4-1.tar.gz";
-    name = "0.8.4-1.tar.gz";
-    sha256 = "290db2a16c91ffaf44f2ad8156d7380bde0a7493a60cab076f84b6e8c4d993c9";
+    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/noetic/can_msgs/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
+    sha256 = "8b92a29487f697d796327b534a499e7021afd7ad5c6a0a86987d3af9371eb41d";
   };
 
   buildType = "catkin";

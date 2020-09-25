@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-dashing-contracts-lite-vendor";
-  version = "0.3.1-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/MaplessAI/external/contracts_lite_vendor-release/repository/archive.tar.gz?ref=release/dashing/contracts_lite_vendor/0.3.1-1";
-    name = "archive.tar.gz";
-    sha256 = "4a61a25d586ab45b89aced21b5575d5b0fdd064090b9ba8b339ede10f97c7f70";
+    url = "https://github.com/ros-safety/contracts_lite_vendor-release/archive/release/dashing/contracts_lite_vendor/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "53b27e165b2437a0a9eb021edaf6d5e698b0de0fd78593aebbad54ad7b102751";
   };
 
   buildType = "ament_cmake";

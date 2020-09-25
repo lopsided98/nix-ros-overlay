@@ -134,6 +134,14 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
+
+ automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
+
+ automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
+
+ automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
@@ -153,22 +161,6 @@ self: super: {
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
-
- chiconybot-bringup = self.callPackage ./chiconybot-bringup {};
-
- chiconybot-cartographer = self.callPackage ./chiconybot-cartographer {};
-
- chiconybot-description = self.callPackage ./chiconybot-description {};
-
- chiconybot-gazebo = self.callPackage ./chiconybot-gazebo {};
-
- chiconybot-msgs = self.callPackage ./chiconybot-msgs {};
-
- chiconybot-navigation2 = self.callPackage ./chiconybot-navigation2 {};
-
- chiconybot-node = self.callPackage ./chiconybot-node {};
-
- chiconybot-teleop = self.callPackage ./chiconybot-teleop {};
 
  class-loader = self.callPackage ./class-loader {};
 
@@ -198,6 +190,12 @@ self: super: {
 
  cyclonedds = self.callPackage ./cyclonedds {};
 
+ delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
+
+ delphi-mrr-msgs = self.callPackage ./delphi-mrr-msgs {};
+
+ delphi-srr-msgs = self.callPackage ./delphi-srr-msgs {};
+
  demo-nodes-cpp = self.callPackage ./demo-nodes-cpp {};
 
  demo-nodes-cpp-native = self.callPackage ./demo-nodes-cpp-native {};
@@ -207,6 +205,8 @@ self: super: {
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
+
+ derived-object-msgs = self.callPackage ./derived-object-msgs {};
 
  desktop = self.callPackage ./desktop {};
 
@@ -324,6 +324,8 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ eiquadprog = self.callPackage ./eiquadprog {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-minimal-action-client = self.callPackage ./examples-rclcpp-minimal-action-client {};
@@ -412,6 +414,8 @@ self: super: {
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
+ ibeo-msgs = self.callPackage ./ibeo-msgs {};
+
  image-common = self.callPackage ./image-common {};
 
  image-geometry = self.callPackage ./image-geometry {};
@@ -443,6 +447,8 @@ self: super: {
  joy = self.callPackage ./joy {};
 
  joy-linux = self.callPackage ./joy-linux {};
+
+ kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
@@ -514,6 +520,8 @@ self: super: {
 
  message-filters = self.callPackage ./message-filters {};
 
+ mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
+
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
@@ -566,6 +574,8 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
+ neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
+
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nodl-python = self.callPackage ./nodl-python {};
@@ -589,6 +599,8 @@ self: super: {
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
  ouster-msgs = self.callPackage ./ouster-msgs {};
+
+ pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
@@ -661,6 +673,10 @@ self: super: {
  quality-of-service-demo-py = self.callPackage ./quality-of-service-demo-py {};
 
  random-numbers = self.callPackage ./random-numbers {};
+
+ rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
+
+ rc-genicam-api = self.callPackage ./rc-genicam-api {};
 
  rcl = self.callPackage ./rcl {};
 
@@ -1097,8 +1113,6 @@ self: super: {
  webots-ros2-core = self.callPackage ./webots-ros2-core {};
 
  webots-ros2-demos = self.callPackage ./webots-ros2-demos {};
-
- webots-ros2-desktop = self.callPackage ./webots-ros2-desktop {};
 
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
 

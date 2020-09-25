@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rospy, rosserial-client, rosserial-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rosserial-mbed";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_mbed/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "2134c783bbe3d0a92b2641ebc732761c34e40f5d1247e91b076c748cce0979cf";
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_mbed/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "2a66e27104b82ac52289b841cb4fade83190a88235643811638a8bdff4456214";
   };
 
   buildType = "catkin";

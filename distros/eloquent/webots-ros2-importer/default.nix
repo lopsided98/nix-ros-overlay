@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, pythonPackages, xacro }:
 buildRosPackage {
   pname = "ros-eloquent-webots-ros2-importer";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/eloquent/webots_ros2_importer/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "74bb8f5c7c0fb0a5936dda58a9fec965797398b10e85f78b2ef950248f91c4a5";
+    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/eloquent/webots_ros2_importer/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "ee76ac44952e57c1d1b970fa891d4414b8d3e01354868e1499f43fec5e7ded16";
   };
 
   buildType = "ament_python";

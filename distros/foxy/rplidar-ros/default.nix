@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, rclcpp, rclcpp-components, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-foxy-rplidar-ros";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/allenh1/rplidar_ros-release/archive/release/foxy/rplidar_ros/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "416d8802542ddfe6fb35e1416cf117a04098fac0c1ca8ff4205815ca765d0d48";
+    url = "https://github.com/allenh1/rplidar_ros-release/archive/release/foxy/rplidar_ros/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "c7a3bec30392a9d849ba2f957aa56361b9d6de2f7a402d06767fdfbfe9262b12";
   };
 
   buildType = "ament_cmake";
