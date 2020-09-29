@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
   patches = [
     # Fix CMake relative path assumptions (https://github.com/osrf/gazebo/pull/2780)
     (fetchpatch {
-      url = "https://github.com/lopsided98/gazebo/commit/dd21431c1c158a1375527c585369f1862d4e8a4e.patch";
+      url = "https://github.com/osrf/gazebo/commit/dd21431c1c158a1375527c585369f1862d4e8a4e.patch";
       sha256 = "0qjlijvavbrp0mc7bslc0r70l585b2dk3md3g4jgwfkarrbzd1yf";
     })
   ];

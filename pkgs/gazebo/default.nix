@@ -24,11 +24,11 @@ mkDerivation rec {
     # Fix CMake relative path assumptions
     (fetchpatch (if lib.versionAtLeast version "11" then {
       # https://github.com/osrf/gazebo/pull/2778
-      url = "https://github.com/lopsided98/gazebo/commit/6d1ef09243326fd4ef837b4638671dd707f77ca4.patch";
+      url = "https://github.com/osrf/gazebo/commit/6d1ef09243326fd4ef837b4638671dd707f77ca4.patch";
       sha256 = "0s0wyg0fd0y5mxn6kq1b2y5a6agrvplnpcx3x9bzmhz0ffn8xkw5";
     } else {
       # https://github.com/osrf/gazebo/pull/2779
-      url = "https://github.com/lopsided98/gazebo/commit/8d8dcff5c0c92c5903883f3215236c6bf6ff1a5f.patch";
+      url = "https://github.com/osrf/gazebo/commit/8d8dcff5c0c92c5903883f3215236c6bf6ff1a5f.patch";
       sha256 = "1q13cfscf02qkkp0wq03phdakl4i0qzlibiw0k76p50dygw2z864";
     }))
   ];
