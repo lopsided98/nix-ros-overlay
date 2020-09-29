@@ -2,18 +2,6 @@
 self:
 # Distro package set
 rosSelf: rosSuper: with rosSelf.lib; {
-  apriltag = rosSuper.apriltag.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix assumption that CMAKE_INSTALL_INCLUDEDIR is relative
-      (self.fetchpatch {
-        url = "https://github.com/lopsided98/apriltag/commit/a6a5da0c834f5091f141c2088c1985876d0f9faa.patch";
-        sha256 = "0pjfp6qk2rsvy36gzag1ny511cl52l80r76blckn2p1rpi78i68a";
-      })
-    ];
-  });
-
   cv-bridge = (patchBoostPython rosSuper.cv-bridge).overrideAttrs ({
     patches ? [],
     propagatedBuildInputs ? [], ...
