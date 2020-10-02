@@ -524,6 +524,8 @@ self: super: {
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
+ mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
  nav2-behavior-tree = self.callPackage ./nav2-behavior-tree {};

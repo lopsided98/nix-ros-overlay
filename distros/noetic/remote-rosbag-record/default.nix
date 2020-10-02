@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosbag, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-remote-rosbag-record";
-  version = "0.0.2-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/yoshito-n-students/remote_rosbag_record-release/archive/release/noetic/remote_rosbag_record/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "2ee39861317e8d326b59c9c5e9df703ba2b648e2b49269690c603e509c1ee49b";
+    url = "https://github.com/yoshito-n-students/remote_rosbag_record-release/archive/release/noetic/remote_rosbag_record/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "2368a9fc7e072bf4aced606034a3cc0fe54c94e6fb09f522ac242fe7fbadc271";
   };
 
   buildType = "catkin";

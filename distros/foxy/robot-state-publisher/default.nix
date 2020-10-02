@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, kdl-parser, launch-ros, launch-testing-ament-cmake, orocos-kdl, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2-ros, urdf, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-foxy-robot-state-publisher";
-  version = "2.4.0-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/foxy/robot_state_publisher/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "2c88049844b9cc529f81f808228c4d0d701ffb69ca02b0ad98805a3e8b982a31";
+    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/foxy/robot_state_publisher/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "9ddc81f216689e36e8b5cb0814fdd05b9e6fa5f67e4422a02dd8ef64f065f544";
   };
 
   buildType = "ament_cmake";

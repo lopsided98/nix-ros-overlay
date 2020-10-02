@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamixel-workbench-msgs, dynamixel-workbench-toolbox, eigen, geometry-msgs, libyamlcpp, roscpp, sensor-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dynamixel-workbench-controllers";
-  version = "2.0.0";
+  version = "2.2.0";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/melodic/dynamixel_workbench_controllers/2.0.0-0.tar.gz";
-    name = "2.0.0-0.tar.gz";
-    sha256 = "6a689760da538561f5481b327ee0f0c43fc49f3bc152b3fcfa51b406819ff40f";
+    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/melodic/dynamixel_workbench_controllers/2.2.0-0.tar.gz";
+    name = "2.2.0-0.tar.gz";
+    sha256 = "ee8de0278f4e337efe849f3bbf7347151e0f53d1b1e386d9bdb36811337ac062";
   };
 
   buildType = "catkin";

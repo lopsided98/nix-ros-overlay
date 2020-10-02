@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, boost, rcl, rcutils }:
 buildRosPackage {
   pname = "ros-foxy-lgsvl-bridge";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/lgsvl/ros2-lgsvl-bridge-release/archive/release/foxy/lgsvl_bridge/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "eae3bee5eca6b86a46d892976c80561fbc47bd62e0012f722822a4b1e4928768";
+    url = "https://github.com/lgsvl/ros2-lgsvl-bridge-release/archive/release/foxy/lgsvl_bridge/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "291baea07b5e9f149ea70ee4d8393b9b6b9ec720b4cf43c582c170fda5525661";
   };
 
   buildType = "ament_cmake";

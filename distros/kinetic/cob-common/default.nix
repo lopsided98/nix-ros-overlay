@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-actions, cob-description, cob-msgs, cob-srvs, raw-description }:
 buildRosPackage {
   pname = "ros-kinetic-cob-common";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_common-release/archive/release/kinetic/cob_common/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "cc740253d93b48a7b7187216787e2e03cde842fa5dbb76dbdc45fc684585698f";
+    url = "https://github.com/ipa320/cob_common-release/archive/release/kinetic/cob_common/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "356d0a638963ffb6bc751bbace1a2a89b0ad164d01a378c326a885301f673929";
   };
 
   buildType = "catkin";

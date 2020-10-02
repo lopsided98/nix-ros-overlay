@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosbag, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-remote-rosbag-record";
-  version = "0.0.2-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/yoshito-n-students/remote_rosbag_record-release/archive/release/kinetic/remote_rosbag_record/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "e698fc6d26845d7cd2cdf5653eab92cba5853271260eaad95d3c8ef9a6195e33";
+    url = "https://github.com/yoshito-n-students/remote_rosbag_record-release/archive/release/kinetic/remote_rosbag_record/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "3444e36ea651cd331b5b149e5161377c42a26a7f9c18ea8ceb413453f8a8c933";
   };
 
   buildType = "catkin";

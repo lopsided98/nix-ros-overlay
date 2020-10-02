@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros, libyamlcpp, message-generation, message-runtime, opencv3, roscpp, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-gazebo-video-monitor-plugins";
-  version = "0.4.2-r1";
+  version = "0.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/nlamprian/gazebo_video_monitor_plugins-release/archive/release/melodic/gazebo_video_monitor_plugins/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "a776e5f3a7a45e1a2796d124057e86e722d305826f5d225729ceb15570e72eee";
+    url = "https://github.com/nlamprian/gazebo_video_monitor_plugins-release/archive/release/melodic/gazebo_video_monitor_plugins/0.5.0-2.tar.gz";
+    name = "0.5.0-2.tar.gz";
+    sha256 = "181d2df71aab8de8603e287de380d92d38ae97dfd55aa6ce1e69da37cbfd74bc";
   };
 
   buildType = "catkin";

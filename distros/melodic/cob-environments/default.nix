@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-default-env-config }:
 buildRosPackage {
   pname = "ros-melodic-cob-environments";
-  version = "0.6.11-r1";
+  version = "0.6.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_environments-release/archive/release/melodic/cob_environments/0.6.11-1.tar.gz";
-    name = "0.6.11-1.tar.gz";
-    sha256 = "b02a6060eb21ff68a0c881971f71fe8e99b6b1ba34964792947a8e4ffa5a2021";
+    url = "https://github.com/ipa320/cob_environments-release/archive/release/melodic/cob_environments/0.6.12-1.tar.gz";
+    name = "0.6.12-1.tar.gz";
+    sha256 = "ba9245a590fe7f3804ca97a203c4c23ab1ad46064c6f382f1f0d0cee72766e2a";
   };
 
   buildType = "catkin";

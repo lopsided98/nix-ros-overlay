@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-kinetic-cob-actions";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_common-release/archive/release/kinetic/cob_actions/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "71196b570d2e5790c8a9d065c608d552573bf2fbd0379bf58831d5232d2ba718";
+    url = "https://github.com/ipa320/cob_common-release/archive/release/kinetic/cob_actions/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "52350a5b00706f937db15beeb657dd48e84a8dc2957171f79582e209a52a8ddd";
   };
 
   buildType = "catkin";

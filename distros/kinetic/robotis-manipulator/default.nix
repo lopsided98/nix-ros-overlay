@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-robotis-manipulator";
-  version = "1.0.0";
+  version = "1.1.0";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/robotis_manipulator-release/archive/release/kinetic/robotis_manipulator/1.0.0-0.tar.gz";
-    name = "1.0.0-0.tar.gz";
-    sha256 = "473e954835e1ff720a6e7e95d402039ac435ea13d121a8df7bf1061b1bb9ffcb";
+    url = "https://github.com/ROBOTIS-GIT-release/robotis_manipulator-release/archive/release/kinetic/robotis_manipulator/1.1.0-0.tar.gz";
+    name = "1.1.0-0.tar.gz";
+    sha256 = "ac35dcb7b7d8bcb1d11aba5f1edd0e131727409fd335b3a7f32fc5bdd24a470c";
   };
 
   buildType = "catkin";

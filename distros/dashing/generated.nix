@@ -542,6 +542,8 @@ self: super: {
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
+ mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
  multires-image = self.callPackage ./multires-image {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};

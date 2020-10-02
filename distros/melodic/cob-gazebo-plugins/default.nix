@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-gazebo-ros-control }:
 buildRosPackage {
   pname = "ros-melodic-cob-gazebo-plugins";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_gazebo_plugins-release/archive/release/melodic/cob_gazebo_plugins/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "d1b7bd521adfd41fd0232ba9ec0b63107f979236c7d933c3545da5e80c11455d";
+    url = "https://github.com/ipa320/cob_gazebo_plugins-release/archive/release/melodic/cob_gazebo_plugins/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "3fd936371180f27deb11d052aac705b5173f85c13d30599e70c0e1a6533f20ea";
   };
 
   buildType = "catkin";

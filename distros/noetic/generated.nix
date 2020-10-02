@@ -98,7 +98,27 @@ self: super: {
 
  cmake-modules = self.callPackage ./cmake-modules {};
 
+ cob-actions = self.callPackage ./cob-actions {};
+
+ cob-common = self.callPackage ./cob-common {};
+
+ cob-default-env-config = self.callPackage ./cob-default-env-config {};
+
+ cob-description = self.callPackage ./cob-description {};
+
+ cob-environments = self.callPackage ./cob-environments {};
+
  cob-extern = self.callPackage ./cob-extern {};
+
+ cob-gazebo-plugins = self.callPackage ./cob-gazebo-plugins {};
+
+ cob-gazebo-ros-control = self.callPackage ./cob-gazebo-ros-control {};
+
+ cob-msgs = self.callPackage ./cob-msgs {};
+
+ cob-srvs = self.callPackage ./cob-srvs {};
+
+ cob-supported-robots = self.callPackage ./cob-supported-robots {};
 
  code-coverage = self.callPackage ./code-coverage {};
 
@@ -664,6 +684,8 @@ self: super: {
 
  mapviz-plugins = self.callPackage ./mapviz-plugins {};
 
+ marker-msgs = self.callPackage ./marker-msgs {};
+
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
@@ -880,6 +902,8 @@ self: super: {
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
+ nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
+
  nodelet = self.callPackage ./nodelet {};
 
  nodelet-core = self.callPackage ./nodelet-core {};
@@ -1051,6 +1075,8 @@ self: super: {
  qwt-dependency = self.callPackage ./qwt-dependency {};
 
  random-numbers = self.callPackage ./random-numbers {};
+
+ raw-description = self.callPackage ./raw-description {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -1382,6 +1408,18 @@ self: super: {
 
  sbpl-recovery = self.callPackage ./sbpl-recovery {};
 
+ schunk-description = self.callPackage ./schunk-description {};
+
+ schunk-libm5api = self.callPackage ./schunk-libm5api {};
+
+ schunk-modular-robotics = self.callPackage ./schunk-modular-robotics {};
+
+ schunk-powercube-chain = self.callPackage ./schunk-powercube-chain {};
+
+ schunk-sdh = self.callPackage ./schunk-sdh {};
+
+ schunk-simulated-tactile-sensors = self.callPackage ./schunk-simulated-tactile-sensors {};
+
  sdc21x0 = self.callPackage ./sdc21x0 {};
 
  sdhlibrary-cpp = self.callPackage ./sdhlibrary-cpp {};
@@ -1547,6 +1585,8 @@ self: super: {
  trajectory-tracker-rviz-plugins = self.callPackage ./trajectory-tracker-rviz-plugins {};
 
  transmission-interface = self.callPackage ./transmission-interface {};
+
+ tsid = self.callPackage ./tsid {};
 
  turtle-actionlib = self.callPackage ./turtle-actionlib {};
 

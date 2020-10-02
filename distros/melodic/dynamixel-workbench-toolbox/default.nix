@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamixel-sdk, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-dynamixel-workbench-toolbox";
-  version = "2.0.0";
+  version = "2.2.0";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/melodic/dynamixel_workbench_toolbox/2.0.0-0.tar.gz";
-    name = "2.0.0-0.tar.gz";
-    sha256 = "98a009c214814fb2ed6fe1b09590dab9503cd3e9fc6b5a9c5942ea7da8efcefb";
+    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/melodic/dynamixel_workbench_toolbox/2.2.0-0.tar.gz";
+    name = "2.2.0-0.tar.gz";
+    sha256 = "53f4f6fd40d99a4559a67bacfc26e637d546ad455128380596ef8464ba639c70";
   };
 
   buildType = "catkin";
