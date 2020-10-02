@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, aws-common, cmake, dataflow-lite }:
 buildRosPackage {
   pname = "ros-dashing-file-management";
-  version = "1.1.3-r1";
+  version = "1.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/dashing/file_management/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "592aea742ec6c451eac6c91ba77c0c46de3b6f0bfc9637c7110281a705e9c766";
+    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/dashing/file_management/1.1.4-1.tar.gz";
+    name = "1.1.4-1.tar.gz";
+    sha256 = "ec609930010579466648cbceefd45512567a310738e3981a72dba33fcd41b9a4";
   };
 
   buildType = "cmake";

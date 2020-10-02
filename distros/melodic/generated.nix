@@ -716,10 +716,6 @@ self: super: {
 
  dynamixel-workbench-operators = self.callPackage ./dynamixel-workbench-operators {};
 
- dynamixel-workbench-single-manager = self.callPackage ./dynamixel-workbench-single-manager {};
-
- dynamixel-workbench-single-manager-gui = self.callPackage ./dynamixel-workbench-single-manager-gui {};
-
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
  easy-markers = self.callPackage ./easy-markers {};
@@ -829,6 +825,8 @@ self: super: {
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
  eus-assimp = self.callPackage ./eus-assimp {};
+
+ euslime = self.callPackage ./euslime {};
 
  euslisp = self.callPackage ./euslisp {};
 
@@ -3416,6 +3414,8 @@ self: super: {
 
  speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
 
+ sr-hand-detector = self.callPackage ./sr-hand-detector {};
+
  srdfdom = self.callPackage ./srdfdom {};
 
  stage = self.callPackage ./stage {};
@@ -3595,6 +3595,8 @@ self: super: {
  trajectory-tracker-rviz-plugins = self.callPackage ./trajectory-tracker-rviz-plugins {};
 
  transmission-interface = self.callPackage ./transmission-interface {};
+
+ tsid = self.callPackage ./tsid {};
 
  tts = self.callPackage ./tts {};
 

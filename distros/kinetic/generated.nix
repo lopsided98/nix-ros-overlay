@@ -856,10 +856,6 @@ self: super: {
 
  dynamixel-workbench-operators = self.callPackage ./dynamixel-workbench-operators {};
 
- dynamixel-workbench-single-manager = self.callPackage ./dynamixel-workbench-single-manager {};
-
- dynamixel-workbench-single-manager-gui = self.callPackage ./dynamixel-workbench-single-manager-gui {};
-
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
  dynpick-driver = self.callPackage ./dynpick-driver {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-rosmake";
-  version = "1.15.6-r1";
+  version = "1.15.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/noetic/rosmake/1.15.6-1.tar.gz";
-    name = "1.15.6-1.tar.gz";
-    sha256 = "9514440419b8559d52e985f991009c96227b1e7148f07af5c502cea93663fbf0";
+    url = "https://github.com/ros-gbp/ros-release/archive/release/noetic/rosmake/1.15.7-1.tar.gz";
+    name = "1.15.7-1.tar.gz";
+    sha256 = "ccf86e352c39bdf203c0465e1a154021e06d8f3b4face37269b1b01e3cba521e";
   };
 
   buildType = "catkin";

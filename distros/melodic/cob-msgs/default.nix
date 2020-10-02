@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-msgs";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_common-release/archive/release/melodic/cob_msgs/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "99d31afe431ee18434d8febaa177e820594ea4348455cd59a6ce1f568f764e25";
+    url = "https://github.com/ipa320/cob_common-release/archive/release/melodic/cob_msgs/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "fd2c39b071420db58fa3e818cda734db600553b50fc6d867d633d6c87d83153a";
   };
 
   buildType = "catkin";

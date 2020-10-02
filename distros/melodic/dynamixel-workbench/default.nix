@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dynamixel-workbench-controllers, dynamixel-workbench-operators, dynamixel-workbench-single-manager, dynamixel-workbench-single-manager-gui, dynamixel-workbench-toolbox }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamixel-workbench-controllers, dynamixel-workbench-operators, dynamixel-workbench-toolbox }:
 buildRosPackage {
   pname = "ros-melodic-dynamixel-workbench";
-  version = "2.0.0";
+  version = "2.2.0";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/melodic/dynamixel_workbench/2.0.0-0.tar.gz";
-    name = "2.0.0-0.tar.gz";
-    sha256 = "00841253629ace29288f09f2eaeedc1d86eee69657d4b0ac32824b4561f5d574";
+    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/melodic/dynamixel_workbench/2.2.0-0.tar.gz";
+    name = "2.2.0-0.tar.gz";
+    sha256 = "4b6b839b6a403bb7d8e8a8a3f7943d05c71c624b08d2089f53b91ca782fba7d9";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ dynamixel-workbench-controllers dynamixel-workbench-operators dynamixel-workbench-single-manager dynamixel-workbench-single-manager-gui dynamixel-workbench-toolbox ];
+  propagatedBuildInputs = [ dynamixel-workbench-controllers dynamixel-workbench-operators dynamixel-workbench-toolbox ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
