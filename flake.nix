@@ -15,6 +15,7 @@
       };
     in {
       packages = pkgs.rosPackages;
+      devShell = import ./examples/turtlebot3-gazebo-shell.nix { inherit pkgs; rosPackages = pkgs.rosPackages;};
     }) // {
       overlay = import ./overlay.nix;
       nixosModule = import ./modules;
