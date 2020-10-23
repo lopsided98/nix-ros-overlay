@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-3d-mapping-msgs, cob-cam3d-throttle, cob-image-flip, cob-object-detection-msgs, cob-object-detection-visualizer, cob-perception-msgs, cob-vision-utils }:
 buildRosPackage {
   pname = "ros-kinetic-cob-perception-common";
-  version = "0.6.15-r1";
+  version = "0.6.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_perception_common/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "551845274bfdd975d30fd819b7c57aba19e90dc2c8865423c26f241b6fee7209";
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/kinetic/cob_perception_common/0.6.17-1.tar.gz";
+    name = "0.6.17-1.tar.gz";
+    sha256 = "ef446b22b857414d876734db04ff6409a82f9c080d043b704d5af7c57ce1e51f";
   };
 
   buildType = "catkin";

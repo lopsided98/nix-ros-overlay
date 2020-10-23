@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, combined-robot-hw, controller-manager, controller-manager-msgs, controller-manager-tests, hardware-interface, pluginlib, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-noetic-combined-robot-hw-tests";
-  version = "0.19.2-r1";
+  version = "0.19.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/combined_robot_hw_tests/0.19.2-1.tar.gz";
-    name = "0.19.2-1.tar.gz";
-    sha256 = "4e8f9760523dc4f6f92d86096531a2a1761153553acdeb0d78122557778ef625";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/combined_robot_hw_tests/0.19.3-2.tar.gz";
+    name = "0.19.3-2.tar.gz";
+    sha256 = "5f87289aa9ced0b0e330057ffc545ef63bc02f8c535851d388420168c9580500";
   };
 
   buildType = "catkin";

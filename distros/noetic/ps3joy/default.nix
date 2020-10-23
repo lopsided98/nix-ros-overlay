@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bluez, catkin, diagnostic-msgs, libusb, linuxConsoleTools, pythonPackages, rosgraph, roslint, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-ps3joy";
-  version = "1.14.0-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/noetic/ps3joy/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "bbbf4ebf7783fe4b00de19a2449903b5144c66497bc95800b931ddd6752837cc";
+    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/noetic/ps3joy/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "5cd39f8b2f80d432900096143b2b7aab9f29f66dcdb69591b8076ace1783c982";
   };
 
   buildType = "catkin";

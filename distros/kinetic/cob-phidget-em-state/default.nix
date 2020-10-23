@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-phidgets, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-cob-phidget-em-state";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_phidget_em_state/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "3ef083fe1cecc4305717eaa13260bdaff8ff4869d9b5d848a74944daac375c64";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_phidget_em_state/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "17f7e51c1633f0bbaf5f5c0951b440d487b19fbe74731eba8faa1ac74ce65308";
   };
 
   buildType = "catkin";

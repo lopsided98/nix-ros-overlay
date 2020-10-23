@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-docker-control, cob-reflector-referencing, cob-safety-controller }:
 buildRosPackage {
   pname = "ros-melodic-cob-substitute";
-  version = "0.6.9-r1";
+  version = "0.6.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_substitute/0.6.9-1.tar.gz";
-    name = "0.6.9-1.tar.gz";
-    sha256 = "fdefa29b8dff0b7d7c6649d2501d359f4fa28bb85557685137d918f59631dbab";
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_substitute/0.6.10-1.tar.gz";
+    name = "0.6.10-1.tar.gz";
+    sha256 = "c280eb7a66e9e9070755652adf36fb7e38e15bfcdc7e99fc1b2b94ae79705448";
   };
 
   buildType = "catkin";

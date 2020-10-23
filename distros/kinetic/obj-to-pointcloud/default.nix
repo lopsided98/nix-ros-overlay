@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, neonavigation-common, pcl, pcl-conversions, roscpp, roslint, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-obj-to-pointcloud";
-  version = "0.10.1-r1";
+  version = "0.10.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/obj_to_pointcloud/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "ff4eadd57d3fb4d95d50f2a9a232b6377fa555cec73500e3fb8fd6d8582ed951";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/obj_to_pointcloud/0.10.3-1.tar.gz";
+    name = "0.10.3-1.tar.gz";
+    sha256 = "871b805291b5e3fd831ddd7aa5c00e955779db6fa8d9826398fcdd8d7300f291";
   };
 
   buildType = "catkin";

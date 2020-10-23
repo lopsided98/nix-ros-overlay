@@ -132,6 +132,8 @@ self: super: {
 
  audio-play = self.callPackage ./audio-play {};
 
+ audio-to-spectrogram = self.callPackage ./audio-to-spectrogram {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -187,6 +189,10 @@ self: super: {
  bondcpp = self.callPackage ./bondcpp {};
 
  bondpy = self.callPackage ./bondpy {};
+
+ boost-sml = self.callPackage ./boost-sml {};
+
+ bota-driver = self.callPackage ./bota-driver {};
 
  brics-actuator = self.callPackage ./brics-actuator {};
 
@@ -303,8 +309,6 @@ self: super: {
  cob-calibration-data = self.callPackage ./cob-calibration-data {};
 
  cob-cam3d-throttle = self.callPackage ./cob-cam3d-throttle {};
-
- cob-camera-sensors = self.callPackage ./cob-camera-sensors {};
 
  cob-canopen-motor = self.callPackage ./cob-canopen-motor {};
 
@@ -579,6 +583,16 @@ self: super: {
  dbw-mkz-joystick-demo = self.callPackage ./dbw-mkz-joystick-demo {};
 
  dbw-mkz-msgs = self.callPackage ./dbw-mkz-msgs {};
+
+ dbw-polaris = self.callPackage ./dbw-polaris {};
+
+ dbw-polaris-can = self.callPackage ./dbw-polaris-can {};
+
+ dbw-polaris-description = self.callPackage ./dbw-polaris-description {};
+
+ dbw-polaris-joystick-demo = self.callPackage ./dbw-polaris-joystick-demo {};
+
+ dbw-polaris-msgs = self.callPackage ./dbw-polaris-msgs {};
 
  dccomms-ros = self.callPackage ./dccomms-ros {};
 
@@ -1596,9 +1610,21 @@ self: super: {
 
  leg-detector = self.callPackage ./leg-detector {};
 
+ leo = self.callPackage ./leo {};
+
+ leo-bringup = self.callPackage ./leo-bringup {};
+
  leo-description = self.callPackage ./leo-description {};
 
+ leo-desktop = self.callPackage ./leo-desktop {};
+
  leo-gazebo = self.callPackage ./leo-gazebo {};
+
+ leo-robot = self.callPackage ./leo-robot {};
+
+ leo-simulator = self.callPackage ./leo-simulator {};
+
+ leo-teleop = self.callPackage ./leo-teleop {};
 
  leo-viz = self.callPackage ./leo-viz {};
 
@@ -1950,19 +1976,31 @@ self: super: {
 
  mqtt-bridge = self.callPackage ./mqtt-bridge {};
 
+ mrp2-bringup = self.callPackage ./mrp2-bringup {};
+
  mrp2-common = self.callPackage ./mrp2-common {};
 
  mrp2-description = self.callPackage ./mrp2-description {};
 
+ mrp2-desktop = self.callPackage ./mrp2-desktop {};
+
+ mrp2-display = self.callPackage ./mrp2-display {};
+
  mrp2-gazebo = self.callPackage ./mrp2-gazebo {};
 
+ mrp2-hardware = self.callPackage ./mrp2-hardware {};
+
  mrp2-navigation = self.callPackage ./mrp2-navigation {};
+
+ mrp2-robot = self.callPackage ./mrp2-robot {};
 
  mrp2-simulator = self.callPackage ./mrp2-simulator {};
 
  mrp2-slam = self.callPackage ./mrp2-slam {};
 
  mrp2-teleop = self.callPackage ./mrp2-teleop {};
+
+ mrp2-viz = self.callPackage ./mrp2-viz {};
 
  mrpt1 = self.callPackage ./mrpt1 {};
 
@@ -2216,6 +2254,22 @@ self: super: {
 
  open-manipulator-msgs = self.callPackage ./open-manipulator-msgs {};
 
+ open-manipulator-p = self.callPackage ./open-manipulator-p {};
+
+ open-manipulator-p-control-gui = self.callPackage ./open-manipulator-p-control-gui {};
+
+ open-manipulator-p-controller = self.callPackage ./open-manipulator-p-controller {};
+
+ open-manipulator-p-description = self.callPackage ./open-manipulator-p-description {};
+
+ open-manipulator-p-gazebo = self.callPackage ./open-manipulator-p-gazebo {};
+
+ open-manipulator-p-libs = self.callPackage ./open-manipulator-p-libs {};
+
+ open-manipulator-p-simulations = self.callPackage ./open-manipulator-p-simulations {};
+
+ open-manipulator-p-teleop = self.callPackage ./open-manipulator-p-teleop {};
+
  open-manipulator-simulations = self.callPackage ./open-manipulator-simulations {};
 
  open-manipulator-teleop = self.callPackage ./open-manipulator-teleop {};
@@ -2377,6 +2431,14 @@ self: super: {
  planner-cspace = self.callPackage ./planner-cspace {};
 
  planner-cspace-msgs = self.callPackage ./planner-cspace-msgs {};
+
+ play-motion = self.callPackage ./play-motion {};
+
+ play-motion-builder = self.callPackage ./play-motion-builder {};
+
+ play-motion-builder-msgs = self.callPackage ./play-motion-builder-msgs {};
+
+ play-motion-msgs = self.callPackage ./play-motion-msgs {};
 
  plotjuggler = self.callPackage ./plotjuggler {};
 
@@ -2580,6 +2642,8 @@ self: super: {
 
  psen-scan = self.callPackage ./psen-scan {};
 
+ psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
+
  px4-msgs = self.callPackage ./px4-msgs {};
 
  py-trees = self.callPackage ./py-trees {};
@@ -2705,6 +2769,8 @@ self: super: {
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
+
+ rc-genicam-driver = self.callPackage ./rc-genicam-driver {};
 
  rc-hand-eye-calibration-client = self.callPackage ./rc-hand-eye-calibration-client {};
 
@@ -2867,6 +2933,22 @@ self: super: {
  rocon-tutorial-msgs = self.callPackage ./rocon-tutorial-msgs {};
 
  rocon-uri = self.callPackage ./rocon-uri {};
+
+ rokubimini = self.callPackage ./rokubimini {};
+
+ rokubimini-bus-manager = self.callPackage ./rokubimini-bus-manager {};
+
+ rokubimini-description = self.callPackage ./rokubimini-description {};
+
+ rokubimini-ethercat = self.callPackage ./rokubimini-ethercat {};
+
+ rokubimini-examples = self.callPackage ./rokubimini-examples {};
+
+ rokubimini-factory = self.callPackage ./rokubimini-factory {};
+
+ rokubimini-msgs = self.callPackage ./rokubimini-msgs {};
+
+ rokubimini-serial = self.callPackage ./rokubimini-serial {};
 
  roomba-stage = self.callPackage ./roomba-stage {};
 
@@ -3178,6 +3260,8 @@ self: super: {
 
  rqt-nav-view = self.callPackage ./rqt-nav-view {};
 
+ rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
+
  rqt-plot = self.callPackage ./rqt-plot {};
 
  rqt-pose-view = self.callPackage ./rqt-pose-view {};
@@ -3348,6 +3432,8 @@ self: super: {
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
+ septentrio-gnss-driver = self.callPackage ./septentrio-gnss-driver {};
+
  serial = self.callPackage ./serial {};
 
  service-tools = self.callPackage ./service-tools {};
@@ -3407,6 +3493,8 @@ self: super: {
  soem = self.callPackage ./soem {};
 
  sophus = self.callPackage ./sophus {};
+
+ sot-core = self.callPackage ./sot-core {};
 
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 
@@ -3939,6 +4027,10 @@ self: super: {
  wifi-ddwrt = self.callPackage ./wifi-ddwrt {};
 
  willow-maps = self.callPackage ./willow-maps {};
+
+ wireless-msgs = self.callPackage ./wireless-msgs {};
+
+ wireless-watcher = self.callPackage ./wireless-watcher {};
 
  wu-ros-tools = self.callPackage ./wu-ros-tools {};
 

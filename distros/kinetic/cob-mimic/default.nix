@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, catkin, diagnostic-msgs, diagnostic-updater, message-generation, message-runtime, roscpp, roslib, rospy, vlc }:
 buildRosPackage {
   pname = "ros-kinetic-cob-mimic";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_mimic/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "8f8598b4860b1e77621cdfeafeaffb8e102307290357a53e0777a09e8dafe966";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_mimic/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "5513fdd6e2117c36a260d75bc31949da51f52ea43ac741979e974e8ab5797c5f";
   };
 
   buildType = "catkin";

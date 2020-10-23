@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, geometry-msgs, pythonPackages, rclpy, rviz2, webots-ros2-core }:
 buildRosPackage {
   pname = "ros-eloquent-webots-ros2-tiago";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/eloquent/webots_ros2_tiago/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "a5120827bee95cee920a0f7371d8836a8dca31990bf6d05fd54f9afca69f1907";
+    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/eloquent/webots_ros2_tiago/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "2fccc29da56fb625d3c3455429b8a101dcd48ef70df5425d8909bed340d7e97e";
   };
 
   buildType = "ament_python";

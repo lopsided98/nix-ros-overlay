@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, eigen, geometry-msgs, message-filters, nodelet, nodelet-topic-tools, pcl, pcl-conversions, pcl-msgs, pluginlib, rosbag, rosconsole, roscpp, roslib, rostest, sensor-msgs, std-msgs, tf, tf2, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-pcl-ros";
-  version = "1.7.1-r1";
+  version = "1.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/noetic/pcl_ros/1.7.1-1.tar.gz";
-    name = "1.7.1-1.tar.gz";
-    sha256 = "e2fe9b281261b32f4b1be221c37f93bd0cc41a492d6928cf9f549932baa389b2";
+    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/noetic/pcl_ros/1.7.2-1.tar.gz";
+    name = "1.7.2-1.tar.gz";
+    sha256 = "d05206b80c354286b36abee9a33d466b25215787e3807cd45c4eb42e83f64a0c";
   };
 
   buildType = "catkin";

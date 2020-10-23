@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, hls-lfcd-lds-driver, joint-state-publisher, robot-state-publisher, roscpp, rosserial-python, sensor-msgs, std-msgs, turtlebot3-description, turtlebot3-msgs, turtlebot3-teleop }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-bringup";
-  version = "1.2.2-r1";
+  version = "1.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_bringup/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "fd37a6185328f5fcf0bcc9be075363a81f04bd19df71eae40c10afad01517336";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_bringup/1.2.4-1.tar.gz";
+    name = "1.2.4-1.tar.gz";
+    sha256 = "a5a6930532a969616bffc09a8abbf4107ef41f2a927d6ca20ce752345dd2e4f9";
   };
 
   buildType = "catkin";

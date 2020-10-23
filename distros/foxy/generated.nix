@@ -4,6 +4,8 @@
 
 self: super: {
 
+ ackermann-msgs = self.callPackage ./ackermann-msgs {};
+
  action-msgs = self.callPackage ./action-msgs {};
 
  action-tutorials-cpp = self.callPackage ./action-tutorials-cpp {};
@@ -51,6 +53,8 @@ self: super: {
  ament-cmake-flake8 = self.callPackage ./ament-cmake-flake8 {};
 
  ament-cmake-gmock = self.callPackage ./ament-cmake-gmock {};
+
+ ament-cmake-google-benchmark = self.callPackage ./ament-cmake-google-benchmark {};
 
  ament-cmake-gtest = self.callPackage ./ament-cmake-gtest {};
 
@@ -378,6 +382,8 @@ self: super: {
 
  foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
 
+ four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
@@ -407,6 +413,8 @@ self: super: {
  gps-umd = self.callPackage ./gps-umd {};
 
  gpsd-client = self.callPackage ./gpsd-client {};
+
+ grbl-msgs = self.callPackage ./grbl-msgs {};
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
@@ -448,15 +456,37 @@ self: super: {
 
  joy-linux = self.callPackage ./joy-linux {};
 
+ joy-teleop = self.callPackage ./joy-teleop {};
+
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
+
+ key-teleop = self.callPackage ./key-teleop {};
 
  kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-firmware = self.callPackage ./kobuki-firmware {};
 
  kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
+
+ lanelet2 = self.callPackage ./lanelet2 {};
+
+ lanelet2-core = self.callPackage ./lanelet2-core {};
+
+ lanelet2-examples = self.callPackage ./lanelet2-examples {};
+
+ lanelet2-maps = self.callPackage ./lanelet2-maps {};
+
+ lanelet2-projection = self.callPackage ./lanelet2-projection {};
+
+ lanelet2-python = self.callPackage ./lanelet2-python {};
+
+ lanelet2-routing = self.callPackage ./lanelet2-routing {};
+
+ lanelet2-traffic-rules = self.callPackage ./lanelet2-traffic-rules {};
+
+ lanelet2-validation = self.callPackage ./lanelet2-validation {};
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
@@ -500,6 +530,12 @@ self: super: {
 
  map-msgs = self.callPackage ./map-msgs {};
 
+ mapviz = self.callPackage ./mapviz {};
+
+ mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
+
+ mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
@@ -520,11 +556,17 @@ self: super: {
 
  message-filters = self.callPackage ./message-filters {};
 
+ mimick-vendor = self.callPackage ./mimick-vendor {};
+
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
+
+ mouse-teleop = self.callPackage ./mouse-teleop {};
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ multires-image = self.callPackage ./multires-image {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -584,6 +626,10 @@ self: super: {
 
  nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
 
+ novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
+
+ novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
+
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
  octomap = self.callPackage ./octomap {};
@@ -595,6 +641,8 @@ self: super: {
  ompl = self.callPackage ./ompl {};
 
  orocos-kdl = self.callPackage ./orocos-kdl {};
+
+ osqp-vendor = self.callPackage ./osqp-vendor {};
 
  osrf-pycommon = self.callPackage ./osrf-pycommon {};
 
@@ -613,6 +661,8 @@ self: super: {
  pendulum-msgs = self.callPackage ./pendulum-msgs {};
 
  perception-pcl = self.callPackage ./perception-pcl {};
+
+ performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
@@ -675,6 +725,8 @@ self: super: {
  quality-of-service-demo-py = self.callPackage ./quality-of-service-demo-py {};
 
  random-numbers = self.callPackage ./random-numbers {};
+
+ rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
@@ -880,6 +932,22 @@ self: super: {
 
  rosidl-typesupport-introspection-cpp = self.callPackage ./rosidl-typesupport-introspection-cpp {};
 
+ rover-bringup = self.callPackage ./rover-bringup {};
+
+ rover-description = self.callPackage ./rover-description {};
+
+ rover-driver = self.callPackage ./rover-driver {};
+
+ rover-msgs = self.callPackage ./rover-msgs {};
+
+ rover-navigation = self.callPackage ./rover-navigation {};
+
+ rover-simulation = self.callPackage ./rover-simulation {};
+
+ rover-teleop = self.callPackage ./rover-teleop {};
+
+ roverrobotics-ros2 = self.callPackage ./roverrobotics-ros2 {};
+
  rplidar-ros = self.callPackage ./rplidar-ros {};
 
  rpyutils = self.callPackage ./rpyutils {};
@@ -960,6 +1028,8 @@ self: super: {
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
+ sick-scan2 = self.callPackage ./sick-scan2 {};
+
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
  sophus = self.callPackage ./sophus {};
@@ -1014,6 +1084,10 @@ self: super: {
 
  tango-icons-vendor = self.callPackage ./tango-icons-vendor {};
 
+ teleop-tools = self.callPackage ./teleop-tools {};
+
+ teleop-tools-msgs = self.callPackage ./teleop-tools-msgs {};
+
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
@@ -1048,6 +1122,8 @@ self: super: {
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
 
+ tile-map = self.callPackage ./tile-map {};
+
  tinyxml2-vendor = self.callPackage ./tinyxml2-vendor {};
 
  tinyxml-vendor = self.callPackage ./tinyxml-vendor {};
@@ -1066,11 +1142,37 @@ self: super: {
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
+ turtlebot3 = self.callPackage ./turtlebot3 {};
+
+ turtlebot3-bringup = self.callPackage ./turtlebot3-bringup {};
+
+ turtlebot3-cartographer = self.callPackage ./turtlebot3-cartographer {};
+
+ turtlebot3-description = self.callPackage ./turtlebot3-description {};
+
+ turtlebot3-example = self.callPackage ./turtlebot3-example {};
+
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
+
+ turtlebot3-navigation2 = self.callPackage ./turtlebot3-navigation2 {};
+
+ turtlebot3-node = self.callPackage ./turtlebot3-node {};
+
+ turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
 
+ ublox = self.callPackage ./ublox {};
+
+ ublox-gps = self.callPackage ./ublox-gps {};
+
+ ublox-msgs = self.callPackage ./ublox-msgs {};
+
+ ublox-serialization = self.callPackage ./ublox-serialization {};
+
  udp-driver = self.callPackage ./udp-driver {};
+
+ udp-msgs = self.callPackage ./udp-msgs {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 

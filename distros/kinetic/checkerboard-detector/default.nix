@@ -2,19 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, dynamic-tf-publisher, eigen-conversions, image-geometry, jsk-recognition-msgs, message-filters, posedetection-msgs, rosconsole, roscpp, sensor-msgs, tf, tf2 }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, dynamic-tf-publisher, eigen-conversions, image-geometry, image-publisher, jsk-recognition-msgs, jsk-tools, jsk-topic-tools, message-filters, posedetection-msgs, rosconsole, roscpp, rostest, sensor-msgs, tf, tf2 }:
 buildRosPackage {
   pname = "ros-kinetic-checkerboard-detector";
-  version = "1.2.9";
+  version = "1.2.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/checkerboard_detector/1.2.9-0.tar.gz";
-    name = "1.2.9-0.tar.gz";
-    sha256 = "c8097006d40dad1bbb6e1531c6d3aa67947b20c6083c1fa1990ae1deb2d2a9cb";
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/checkerboard_detector/1.2.15-1.tar.gz";
+    name = "1.2.15-1.tar.gz";
+    sha256 = "b29f4c41600bb7bc455576593816fb92e89c6a77ff1bbc327b3c1a3c1c87ab4a";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure dynamic-tf-publisher eigen-conversions image-geometry jsk-recognition-msgs message-filters posedetection-msgs rosconsole roscpp sensor-msgs tf tf2 ];
+  checkInputs = [ jsk-tools jsk-topic-tools rostest ];
+  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure dynamic-tf-publisher eigen-conversions image-geometry image-publisher jsk-recognition-msgs message-filters posedetection-msgs rosconsole roscpp sensor-msgs tf tf2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

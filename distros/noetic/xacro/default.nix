@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslaunch, roslint, rostest }:
 buildRosPackage {
   pname = "ros-noetic-xacro";
-  version = "1.14.4-r1";
+  version = "1.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/xacro-release/archive/release/noetic/xacro/1.14.4-1.tar.gz";
-    name = "1.14.4-1.tar.gz";
-    sha256 = "28ef8e69575c5624ec10a2103430b5f3a750c0db94f9064f0a89f5712b1d01d1";
+    url = "https://github.com/ros-gbp/xacro-release/archive/release/noetic/xacro/1.14.5-1.tar.gz";
+    name = "1.14.5-1.tar.gz";
+    sha256 = "fb0c7fae5f85a4544d594d3c6470b6c37f1484ecf6c846e0895c4c594265dddb";
   };
 
   buildType = "catkin";

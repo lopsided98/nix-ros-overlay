@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, glew, jsoncpp, libyamlcpp, mapviz, pluginlib, qt5, rclcpp, swri-math-util, swri-transform-util, tf2 }:
 buildRosPackage {
   pname = "ros-eloquent-tile-map";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/eloquent/tile_map/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "43171afc18e19574a7a43e94e35cba1ead9631d673d7cd83c305ea2be3d1b8e4";
+    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/eloquent/tile_map/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "40b759109a19edb6f804d548690e0622532e03669f361a0bbc50c6ecaee5f44e";
   };
 
   buildType = "ament_cmake";

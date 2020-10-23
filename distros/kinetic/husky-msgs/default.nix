@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-husky-msgs";
-  version = "0.3.7-r1";
+  version = "0.3.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_msgs/0.3.7-1.tar.gz";
-    name = "0.3.7-1.tar.gz";
-    sha256 = "b06f71dad3c4378bef070a04dd90035cffe572e23584aba542ba7f71201763c3";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/kinetic/husky_msgs/0.3.8-1.tar.gz";
+    name = "0.3.8-1.tar.gz";
+    sha256 = "bfe7153592af812da6b19aa363de73a626806bca5f8ebd4125d72c9ce05e408d";
   };
 
   buildType = "catkin";

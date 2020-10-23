@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-foxy-ament-index-python";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/foxy/ament_index_python/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "64ffefa83b213bdcd5f741f7291775db481a9a3983baf4af4ebeda63761b8d14";
+    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/foxy/ament_index_python/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "e10be3bd22652636b47c97f29f741952a024ba3d0c23d73c6c0a80b9e2b11643";
   };
 
   buildType = "ament_python";

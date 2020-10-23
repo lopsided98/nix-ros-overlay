@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-toposens-msgs";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_msgs/2.0.3-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_msgs/2.0.4-1";
     name = "archive.tar.gz";
-    sha256 = "b7912a2fa2a74639118e2bbb45b8f47147c9db4af19842329ee36929dd78fe92";
+    sha256 = "77964b3ea4262c128f14a4f6ffb5e0fbb525f0e15bd73cb598471daa9b9640a4";
   };
 
   buildType = "catkin";

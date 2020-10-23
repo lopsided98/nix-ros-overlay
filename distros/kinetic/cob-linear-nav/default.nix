@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, angles, catkin, cob-srvs, geometry-msgs, move-base-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-cob-linear-nav";
-  version = "0.6.10-r1";
+  version = "0.6.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_linear_nav/0.6.10-1.tar.gz";
-    name = "0.6.10-1.tar.gz";
-    sha256 = "9485d9e75fdeaa431e7aa4bd1ef7e3df483e7f3d76fb8d4a53125752dbb95aaf";
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_linear_nav/0.6.11-1.tar.gz";
+    name = "0.6.11-1.tar.gz";
+    sha256 = "7fa93ad6cea27287bd4cd351bd45b00d977878a69d80d31d6cb7e0cc601aaadb";
   };
 
   buildType = "catkin";

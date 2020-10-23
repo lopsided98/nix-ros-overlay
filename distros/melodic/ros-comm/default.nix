@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-filters, ros, rosbag, rosconsole, roscpp, rosgraph, rosgraph-msgs, roslaunch, roslisp, rosmaster, rosmsg, rosnode, rosout, rosparam, rospy, rosservice, rostest, rostopic, roswtf, std-srvs, topic-tools, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-ros-comm";
-  version = "1.14.9-r1";
+  version = "1.14.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/ros_comm/1.14.9-1.tar.gz";
-    name = "1.14.9-1.tar.gz";
-    sha256 = "c4f1ec44f57947575ba47f23613d50697cf481f941a602f2a53590531700db6c";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/ros_comm/1.14.10-1.tar.gz";
+    name = "1.14.10-1.tar.gz";
+    sha256 = "5b35d02244f71e41e342408baabe29ed8697b3c7e5506b13c7dd88fc2ee2230a";
   };
 
   buildType = "catkin";

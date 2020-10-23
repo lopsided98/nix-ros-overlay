@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, rospy, std-msgs, std-srvs, tf, tf2, urdf }:
 buildRosPackage {
   pname = "ros-melodic-cob-base-controller-utils";
-  version = "0.8.11-r1";
+  version = "0.8.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_base_controller_utils/0.8.11-1.tar.gz";
-    name = "0.8.11-1.tar.gz";
-    sha256 = "111849cba30866f59e2041cb847a48543492cb63ce8044cd049d86820577bdab";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_base_controller_utils/0.8.12-1.tar.gz";
+    name = "0.8.12-1.tar.gz";
+    sha256 = "b37d260e4cd882bb0caa72e0c73f1d9fc25869c0e91e2f046a79b1141cd29ab6";
   };
 
   buildType = "catkin";

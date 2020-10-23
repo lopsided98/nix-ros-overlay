@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, orocos-kdl, tinyxml, tinyxml-vendor, urdf, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-foxy-kdl-parser";
-  version = "2.4.1-r1";
+  version = "2.4.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kdl_parser-release/archive/release/foxy/kdl_parser/2.4.1-1.tar.gz";
-    name = "2.4.1-1.tar.gz";
-    sha256 = "67d510821fa7a5642b696ba4146842a60af67acb565fb89ac792c3979a1a937a";
+    url = "https://github.com/ros2-gbp/kdl_parser-release/archive/release/foxy/kdl_parser/2.4.1-2.tar.gz";
+    name = "2.4.1-2.tar.gz";
+    sha256 = "0b71cd7f018ca1ff7a088d37b83ce476d87d7c17001edc8bcde023817c1fadd4";
   };
 
   buildType = "ament_cmake";

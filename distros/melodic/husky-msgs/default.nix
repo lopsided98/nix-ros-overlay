@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-husky-msgs";
-  version = "0.4.4-r1";
+  version = "0.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_msgs/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "cffd0ac926c1a763de6d10f9d20ae3c42a9fd3b9a573bc717736671c0a5c5148";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_msgs/0.4.5-1.tar.gz";
+    name = "0.4.5-1.tar.gz";
+    sha256 = "cf1e24c63d7b0b85922ab4b04e6b8d5dcbf7f951adc52a9c77fe7c3640b10741";
   };
 
   buildType = "catkin";

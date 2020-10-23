@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.2.12-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/ros2trace/0.2.12-1";
+    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/ros2trace/0.2.12-1";
     name = "archive.tar.gz";
     sha256 = "53b7fd634c98c0ad3d8ce76a3ef0c869c178815a95fb826600c4b58875b4cfc5";
   };

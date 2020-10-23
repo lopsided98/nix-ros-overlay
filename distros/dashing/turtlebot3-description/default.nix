@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, urdf }:
 buildRosPackage {
   pname = "ros-dashing-turtlebot3-description";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/dashing/turtlebot3_description/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "3f561bba775ec4993d7d6be216d9bcd755f9252c7ebdd2894561edffe5036f0c";
+    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/dashing/turtlebot3_description/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "d29a730ae7bdfc78b91679ba6b4c0f8acd00787894fefd2445b8aa2b8eefa9d4";
   };
 
   buildType = "ament_cmake";

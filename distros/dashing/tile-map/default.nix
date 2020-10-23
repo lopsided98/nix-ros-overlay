@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, glew, jsoncpp, libyamlcpp, mapviz, pluginlib, qt5, rclcpp, swri-math-util, swri-transform-util, tf2 }:
 buildRosPackage {
   pname = "ros-dashing-tile-map";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/dashing/tile_map/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "84bca991354bc19d51bb4802f7333809db24c5917c6e0f2063f9e5e57234a45e";
+    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/dashing/tile_map/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "5f0a33d80492ff9ac71da13f2e3e3b82719c1168a3c1bf4d138b59303a636af5";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-novatel-gps-msgs";
-  version = "4.0.3-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/dashing/novatel_gps_msgs/4.0.3-1.tar.gz";
-    name = "4.0.3-1.tar.gz";
-    sha256 = "a45e2dff554df37d445daaabc241eb6afa33007828527f19240c80cb959ad2fc";
+    url = "https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/dashing/novatel_gps_msgs/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "4b0a32cda1dde0716d7dc85968eac4ca03b3fcf917eadab36a3f57522bd8525e";
   };
 
   buildType = "ament_cmake";

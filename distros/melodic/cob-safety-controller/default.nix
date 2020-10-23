@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-cob-safety-controller";
-  version = "0.6.9-r1";
+  version = "0.6.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_safety_controller/0.6.9-1.tar.gz";
-    name = "0.6.9-1.tar.gz";
-    sha256 = "411e9149ab894d95a59f321b5dfbc7f9810bb9b863459b98eae62b0ab5cea84f";
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_safety_controller/0.6.10-1.tar.gz";
+    name = "0.6.10-1.tar.gz";
+    sha256 = "872949bbd94f84f82e69b83d52faed8dc58fec7732e85e846a39e7a1f14ddb13";
   };
 
   buildType = "catkin";

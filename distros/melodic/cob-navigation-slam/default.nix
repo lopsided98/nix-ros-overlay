@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-mapping-slam, cob-navigation-config, cob-navigation-global, cob-supported-robots, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-melodic-cob-navigation-slam";
-  version = "0.6.10-r1";
+  version = "0.6.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_navigation_slam/0.6.10-1.tar.gz";
-    name = "0.6.10-1.tar.gz";
-    sha256 = "cf2cc0c81ed43f76cd6dbc74e7f7cf38ddd3df28e3d0348d4e99fa12f4185abf";
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_navigation_slam/0.6.11-1.tar.gz";
+    name = "0.6.11-1.tar.gz";
+    sha256 = "e96ad95d7167f0e1c1a07ca019eb4b7a7813d562629793f6cd709dfeb43eaae2";
   };
 
   buildType = "catkin";

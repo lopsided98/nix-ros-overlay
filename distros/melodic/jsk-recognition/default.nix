@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, checkerboard-detector, imagesift, jsk-pcl-ros, jsk-perception, jsk-recognition-msgs, jsk-recognition-utils, resized-image-transport }:
 buildRosPackage {
   pname = "ros-melodic-jsk-recognition";
-  version = "1.2.10";
+  version = "1.2.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/jsk_recognition/1.2.10-0.tar.gz";
-    name = "1.2.10-0.tar.gz";
-    sha256 = "abcd88e0a0d3f5f13a04503b9910baa644e4f6044ba3987b0026eac7c198a88d";
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/jsk_recognition/1.2.15-1.tar.gz";
+    name = "1.2.15-1.tar.gz";
+    sha256 = "518fcc5c7479143dafb6eca60cc31833e3e27ee43115e8a9ab7eb894640fb6c4";
   };
 
   buildType = "catkin";

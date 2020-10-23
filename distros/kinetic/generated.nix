@@ -162,6 +162,8 @@ self: super: {
 
  audio-play = self.callPackage ./audio-play {};
 
+ audio-to-spectrogram = self.callPackage ./audio-to-spectrogram {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -385,8 +387,6 @@ self: super: {
  cob-calibration-data = self.callPackage ./cob-calibration-data {};
 
  cob-cam3d-throttle = self.callPackage ./cob-cam3d-throttle {};
-
- cob-camera-sensors = self.callPackage ./cob-camera-sensors {};
 
  cob-canopen-motor = self.callPackage ./cob-canopen-motor {};
 
@@ -2030,7 +2030,13 @@ self: super: {
 
  leg-detector = self.callPackage ./leg-detector {};
 
+ leo = self.callPackage ./leo {};
+
  leo-description = self.callPackage ./leo-description {};
+
+ leo-desktop = self.callPackage ./leo-desktop {};
+
+ leo-teleop = self.callPackage ./leo-teleop {};
 
  leo-viz = self.callPackage ./leo-viz {};
 
@@ -2836,6 +2842,22 @@ self: super: {
 
  open-manipulator-msgs = self.callPackage ./open-manipulator-msgs {};
 
+ open-manipulator-p = self.callPackage ./open-manipulator-p {};
+
+ open-manipulator-p-control-gui = self.callPackage ./open-manipulator-p-control-gui {};
+
+ open-manipulator-p-controller = self.callPackage ./open-manipulator-p-controller {};
+
+ open-manipulator-p-description = self.callPackage ./open-manipulator-p-description {};
+
+ open-manipulator-p-gazebo = self.callPackage ./open-manipulator-p-gazebo {};
+
+ open-manipulator-p-libs = self.callPackage ./open-manipulator-p-libs {};
+
+ open-manipulator-p-simulations = self.callPackage ./open-manipulator-p-simulations {};
+
+ open-manipulator-p-teleop = self.callPackage ./open-manipulator-p-teleop {};
+
  open-manipulator-perceptions = self.callPackage ./open-manipulator-perceptions {};
 
  open-manipulator-simulations = self.callPackage ./open-manipulator-simulations {};
@@ -3447,6 +3469,8 @@ self: super: {
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
+
+ rc-genicam-driver = self.callPackage ./rc-genicam-driver {};
 
  rc-hand-eye-calibration-client = self.callPackage ./rc-hand-eye-calibration-client {};
 

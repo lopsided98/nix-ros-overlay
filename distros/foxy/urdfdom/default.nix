@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, console-bridge, console-bridge-vendor, tinyxml, tinyxml-vendor, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-foxy-urdfdom";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdfdom-release/archive/release/foxy/urdfdom/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "a5f317b2330ddea284f0c00a93f0210eb908a11d19ae9cb0aa177fe57104d733";
+    url = "https://github.com/ros2-gbp/urdfdom-release/archive/release/foxy/urdfdom/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "8d07feb6325247a03f364bb574f7879fa1cfa8dc6a7e279aafb31166be240767";
   };
 
   buildType = "cmake";

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/tracetools/1.0.4-1";
+    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/tracetools/1.0.4-1";
     name = "archive.tar.gz";
     sha256 = "ece75c3c589cd1c1401f7a9d2ec8c90093a493e4ea3954a89174660caebc1991";
   };

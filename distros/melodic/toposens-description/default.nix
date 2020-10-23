@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, robot-state-publisher, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-toposens-description";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_description/2.0.3-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/melodic/toposens_description/2.0.4-1";
     name = "archive.tar.gz";
-    sha256 = "b336e5b9f08a61b9c00ec175d24f819048f58be1f8927c397cad44b4477071e5";
+    sha256 = "9449bf971c63000bcf088ece79703def3d1cd7189b4c19e4b872e56556389000";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ urdf xacro ];
+  propagatedBuildInputs = [ joint-state-publisher robot-state-publisher rviz urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

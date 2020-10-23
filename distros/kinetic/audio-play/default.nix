@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, audio-common-msgs, catkin, gst_all_1, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-audio-play";
-  version = "0.3.8-r1";
+  version = "0.3.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/audio_common-release/archive/release/kinetic/audio_play/0.3.8-1.tar.gz";
-    name = "0.3.8-1.tar.gz";
-    sha256 = "c21f29c225cbc16dc894c5d7b5c6064bcf0e03c2f5bc8532d5e0e80f37bc535c";
+    url = "https://github.com/ros-gbp/audio_common-release/archive/release/kinetic/audio_play/0.3.9-1.tar.gz";
+    name = "0.3.9-1.tar.gz";
+    sha256 = "881ae124272e68b8a23daa9edd566346c4fa755598d650e21df97d28ff95389d";
   };
 
   buildType = "catkin";

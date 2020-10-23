@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, gmock, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-ddynamic-reconfigure";
-  version = "0.2.0";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/ddynamic_reconfigure/archive/release/melodic/ddynamic_reconfigure/0.2.0-0.tar.gz";
-    name = "0.2.0-0.tar.gz";
-    sha256 = "194f34df00a51dd68668b927cac684ff36f863e931a2559c76f1e0ed92c6a957";
+    url = "https://github.com/pal-gbp/ddynamic_reconfigure/archive/release/melodic/ddynamic_reconfigure/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "3e3de53b73c044195de287a8c5472cf36779a4017201d30fb47cef65a89123c3";
   };
 
   buildType = "catkin";

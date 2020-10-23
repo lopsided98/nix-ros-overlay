@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, control-msgs, libfranka, message-generation, message-runtime, roscpp, sensor-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-franka-gripper";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_gripper/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "48114af0ac46189f54ab5aa3ad52a1c8bc46e7a566cebf6d1995ee4b72cba11b";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_gripper/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "592caa47c0c316c63b2cff3cf80be6a9764f6539afb6c5c0c65ecd385b5d278d";
   };
 
   buildType = "catkin";

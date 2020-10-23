@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, gps-common, mapviz, pluginlib, qt5, roscpp, rospy, swri-math-util, swri-transform-util, swri-yaml-util, tf }:
 buildRosPackage {
   pname = "ros-noetic-multires-image";
-  version = "1.4.0-r1";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/noetic/multires_image/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "5b6565618d831d5c13c745e6cff2c8b3049965c73a895564fbf02738df32be4c";
+    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/noetic/multires_image/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "c64d7a3cb3e7b2ab4185cb3c3a7f54bced783b309d818a1ce322b435644aa39d";
   };
 
   buildType = "catkin";

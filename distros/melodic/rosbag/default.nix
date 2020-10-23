@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, genmsg, genpy, pythonPackages, rosbag-storage, rosconsole, roscpp, roscpp-serialization, roslib, rospy, std-srvs, topic-tools, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-rosbag";
-  version = "1.14.9-r1";
+  version = "1.14.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosbag/1.14.9-1.tar.gz";
-    name = "1.14.9-1.tar.gz";
-    sha256 = "e3b4797e9a4542c1ee31b26a2bef4e67bbedfc66992b361fe0da93e7bec3e088";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosbag/1.14.10-1.tar.gz";
+    name = "1.14.10-1.tar.gz";
+    sha256 = "cf787728793a54adddb8cc479d8ae31d9e3e952fea6b7950a3f3b487991d1929";
   };
 
   buildType = "catkin";

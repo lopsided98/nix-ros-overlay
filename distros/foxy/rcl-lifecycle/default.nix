@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, lifecycle-msgs, osrf-testing-tools-cpp, rcl, rcutils, rmw, rosidl-runtime-c }:
 buildRosPackage {
   pname = "ros-foxy-rcl-lifecycle";
-  version = "1.1.7-r1";
+  version = "1.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/foxy/rcl_lifecycle/1.1.7-1.tar.gz";
-    name = "1.1.7-1.tar.gz";
-    sha256 = "147d6bede589fee0bc4c2cc85a224169d518af6414331680231caf512844d761";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/foxy/rcl_lifecycle/1.1.8-1.tar.gz";
+    name = "1.1.8-1.tar.gz";
+    sha256 = "89b5dfdb457e200aa033b712b72ee03600c1991fa036f1409569c32cba2aaaae";
   };
 
   buildType = "ament_cmake";

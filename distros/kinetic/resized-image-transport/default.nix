@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-transport, jsk-recognition-utils, jsk-tools, jsk-topic-tools, message-generation, message-runtime, nodelet, rostest, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-resized-image-transport";
-  version = "1.2.9";
+  version = "1.2.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/resized_image_transport/1.2.9-0.tar.gz";
-    name = "1.2.9-0.tar.gz";
-    sha256 = "704a8ef7a8c12812cf816b9a2f29ef1e6e69c9bfbd06936e153f2b07db3abee0";
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/kinetic/resized_image_transport/1.2.15-1.tar.gz";
+    name = "1.2.15-1.tar.gz";
+    sha256 = "5069084cc1484d0ac0a57f844fa7ce8360071d6e9e7f9d56afb47039884faf7f";
   };
 
   buildType = "catkin";

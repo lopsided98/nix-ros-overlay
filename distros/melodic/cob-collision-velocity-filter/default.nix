@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cob-footprint-observer, costmap-2d, dynamic-reconfigure, geometry-msgs, nav-msgs, roscpp, tf, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-collision-velocity-filter";
-  version = "0.8.11-r1";
+  version = "0.8.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_collision_velocity_filter/0.8.11-1.tar.gz";
-    name = "0.8.11-1.tar.gz";
-    sha256 = "9b46239d204aeb88d1079aa6ed3e0b98ffdffcf6aa238d2c96067d656c0b324f";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_collision_velocity_filter/0.8.12-1.tar.gz";
+    name = "0.8.12-1.tar.gz";
+    sha256 = "fc77a971c82992d0922169e348e563f09242860032d8981d67c42c3463d12fd6";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, jsoncpp, media-export, qt5, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-fkie-potree-rviz-plugin";
-  version = "1.0.0";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fkie-release/potree_rviz_plugin-release/archive/release/kinetic/fkie_potree_rviz_plugin/1.0.0-0.tar.gz";
-    name = "1.0.0-0.tar.gz";
-    sha256 = "8795c8fd8547cf1ec43993e2e5a61f22a2b45e11068acec3fa05380b31ea3f42";
+    url = "https://github.com/fkie-release/potree_rviz_plugin-release/archive/release/kinetic/fkie_potree_rviz_plugin/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "44d19e97245bc2264a21e1ca7b8ee96a4b9a7565bb08a0c837a56f25bf84d0da";
   };
 
   buildType = "catkin";

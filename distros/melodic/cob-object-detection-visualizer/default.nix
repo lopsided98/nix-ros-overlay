@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, cob-object-detection-msgs, cv-bridge, eigen-conversions, image-transport, message-filters, opencv3, pcl, pcl-ros, roscpp, sensor-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-object-detection-msgs, cv-bridge, eigen-conversions, image-transport, message-filters, pcl-ros, roscpp, sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-object-detection-visualizer";
-  version = "0.6.15-r1";
+  version = "0.6.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_object_detection_visualizer/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "08226e1ae1acda5a369fb8b06e8a6ee9f0e542c6a06a2779d19079838126825e";
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_object_detection_visualizer/0.6.17-1.tar.gz";
+    name = "0.6.17-1.tar.gz";
+    sha256 = "b616a544cbaabd629714203815df751738be745aa3196887288e2a9e4396fa48";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ boost cob-object-detection-msgs cv-bridge eigen-conversions image-transport message-filters opencv3 pcl pcl-ros roscpp sensor-msgs visualization-msgs ];
+  propagatedBuildInputs = [ cob-object-detection-msgs cv-bridge eigen-conversions image-transport message-filters pcl-ros roscpp sensor-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

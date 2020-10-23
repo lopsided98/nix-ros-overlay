@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, franka-description, franka-gripper, franka-hw, franka-msgs, geometry-msgs, joint-state-publisher, libfranka, pluginlib, realtime-tools, robot-state-publisher, roscpp, sensor-msgs, tf, tf2-msgs }:
 buildRosPackage {
   pname = "ros-noetic-franka-control";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_control/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "c928b37af53e17d3a5a6ee81e4c1ba7481f0c1bdc56cd231af96a79dc2b621d9";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_control/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "028db7c1b56ec1a70d2b3ce2ad068fa4fa3e3cebbf734c677fb384f9b6935a93";
   };
 
   buildType = "catkin";

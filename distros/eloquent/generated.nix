@@ -400,6 +400,8 @@ self: super: {
 
  gpsd-client = self.callPackage ./gpsd-client {};
 
+ grbl-msgs = self.callPackage ./grbl-msgs {};
+
  grbl-ros = self.callPackage ./grbl-ros {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
@@ -495,6 +497,8 @@ self: super: {
  libg2o = self.callPackage ./libg2o {};
 
  libphidget22 = self.callPackage ./libphidget22 {};
+
+ librealsense2 = self.callPackage ./librealsense2 {};
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
 
@@ -707,6 +711,8 @@ self: super: {
  quality-of-service-demo-cpp = self.callPackage ./quality-of-service-demo-cpp {};
 
  quality-of-service-demo-py = self.callPackage ./quality-of-service-demo-py {};
+
+ rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
@@ -1084,9 +1090,27 @@ self: super: {
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
+ turtlebot3 = self.callPackage ./turtlebot3 {};
+
+ turtlebot3-bringup = self.callPackage ./turtlebot3-bringup {};
+
+ turtlebot3-cartographer = self.callPackage ./turtlebot3-cartographer {};
+
+ turtlebot3-description = self.callPackage ./turtlebot3-description {};
+
+ turtlebot3-example = self.callPackage ./turtlebot3-example {};
+
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
+ turtlebot3-navigation2 = self.callPackage ./turtlebot3-navigation2 {};
+
+ turtlebot3-node = self.callPackage ./turtlebot3-node {};
+
+ turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
+
  turtlesim = self.callPackage ./turtlesim {};
+
+ udp-msgs = self.callPackage ./udp-msgs {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 

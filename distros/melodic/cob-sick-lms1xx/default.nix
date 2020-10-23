@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, diagnostic-msgs, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-sick-lms1xx";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_sick_lms1xx/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "8df71ca46588436e2601cf93467e36a9a88a6b73c32824e53011213d41201cb7";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_sick_lms1xx/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "cb563dc4bd92e5eb48a853b39c20fd700e3f8a0f1f8059cb6eb58a39ea8d500a";
   };
 
   buildType = "catkin";
