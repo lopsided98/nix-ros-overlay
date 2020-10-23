@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-canopen-motor, cob-generic-can, cob-utilities, control-msgs, diagnostic-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-cob-base-drive-chain";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_base_drive_chain/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "8df07f248e0bd8cca9c6d6aa146412e2602058b6e3059b689ee44ee3fc2ed075";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_base_drive_chain/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "1d5a3b1bbd6a839847b365076bbaf0d24f03c19c20f35d6eb9b1619e6ec3f661";
   };
 
   buildType = "catkin";

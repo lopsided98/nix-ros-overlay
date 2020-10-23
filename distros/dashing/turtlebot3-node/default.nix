@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dynamixel-sdk, geometry-msgs, message-filters, nav-msgs, rclcpp, rcutils, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros, turtlebot3-msgs }:
 buildRosPackage {
   pname = "ros-dashing-turtlebot3-node";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/dashing/turtlebot3_node/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "1c0903f21dada488e85be0c4701687141f680ea4e3273448a3591b745dedaf76";
+    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/dashing/turtlebot3_node/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "8e5b923d76ecf0deb54473d4bae77d6acd8beb9216e0b2574619d23be6c4e0fc";
   };
 
   buildType = "ament_cmake";

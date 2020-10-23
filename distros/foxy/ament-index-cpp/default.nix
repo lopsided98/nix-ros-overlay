@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-foxy-ament-index-cpp";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/foxy/ament_index_cpp/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "9e04ed68d8889c5024f15886430818b405d7b5bc08498c1898371643556624f0";
+    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/foxy/ament_index_cpp/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "2599a4693285fe34beb3026dada280d06da38b968ae87848c2f428e7cf042997";
   };
 
   buildType = "ament_cmake";

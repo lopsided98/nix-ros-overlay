@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, fastcdr, fastrtps, fastrtps-cmake-module, osrf-testing-tools-cpp, rcpputils, rcutils, rmw, rmw-dds-common }:
 buildRosPackage {
   pname = "ros-foxy-rmw-fastrtps-shared-cpp";
-  version = "1.2.0-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/foxy/rmw_fastrtps_shared_cpp/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "b7f2c1491048fc74a05d4be7dbf7b6a36e8cd487107696252f09f386d36565a5";
+    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/foxy/rmw_fastrtps_shared_cpp/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "7845541976c2305f23feaf907c260ba8671e6f8956b1dafb656ee26a7b483393";
   };
 
   buildType = "ament_cmake";

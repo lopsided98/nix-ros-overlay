@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot3-description";
-  version = "1.2.1-r1";
+  version = "1.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3_description/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "673598e3b7793b42fb31210bc594f6d2518310ed581ddc22ae063138d5c47489";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3_description/1.2.4-1.tar.gz";
+    name = "1.2.4-1.tar.gz";
+    sha256 = "e26c2b9e87c9fad8e1296029e4a97da15923f90323cb307d7039d89b4f890cca";
   };
 
   buildType = "catkin";

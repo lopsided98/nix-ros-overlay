@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, eigen, geometry-msgs, interactive-markers, nav-msgs, neonavigation-common, roscpp, roslint, rostest, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-trajectory-tracker";
-  version = "0.10.1-r1";
+  version = "0.10.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/trajectory_tracker/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "d57c944feebfbd01a4cbd6f482967ad7e808a4b65946725a31b4052687e7cfa8";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/trajectory_tracker/0.10.3-1.tar.gz";
+    name = "0.10.3-1.tar.gz";
+    sha256 = "1f4f2a2e99f2fc41998e370442c41ca9614e281dd532f7e84f329bb5b6912387";
   };
 
   buildType = "catkin";

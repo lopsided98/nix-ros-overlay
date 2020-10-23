@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, linuxConsoleTools, rosbag, roscpp, roslint, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-joy";
-  version = "1.14.0-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/noetic/joy/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "8a0d5118f416ecf37c66b55bf5618475e8ea6305190ac71271fd42a6b909b9ae";
+    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/noetic/joy/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "95bd49cd5852d9a20d15d9dbd78ea46eed67a5b51b092b5bb053e74b920ca5bb";
   };
 
   buildType = "catkin";

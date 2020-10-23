@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, geometry-msgs, gps-msgs, mapviz, pluginlib, qt5, rclcpp, rclpy, swri-math-util, swri-transform-util, tf2 }:
 buildRosPackage {
   pname = "ros-eloquent-multires-image";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/eloquent/multires_image/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "b51548b73a5f86a2715a8e4a47e719198cb4af56200566e38efb300d6b33e8d8";
+    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/eloquent/multires_image/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "668bfb374f1d36a318514d2960513a48bb80b9a28f5332bcd0a443222d1326c4";
   };
 
   buildType = "ament_cmake";

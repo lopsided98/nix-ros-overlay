@@ -414,6 +414,8 @@ self: super: {
 
  gpsd-client = self.callPackage ./gpsd-client {};
 
+ grbl-msgs = self.callPackage ./grbl-msgs {};
+
  grbl-ros = self.callPackage ./grbl-ros {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
@@ -469,6 +471,24 @@ self: super: {
  kinesis-video-msgs = self.callPackage ./kinesis-video-msgs {};
 
  kinesis-video-streamer = self.callPackage ./kinesis-video-streamer {};
+
+ lanelet2 = self.callPackage ./lanelet2 {};
+
+ lanelet2-core = self.callPackage ./lanelet2-core {};
+
+ lanelet2-examples = self.callPackage ./lanelet2-examples {};
+
+ lanelet2-maps = self.callPackage ./lanelet2-maps {};
+
+ lanelet2-projection = self.callPackage ./lanelet2-projection {};
+
+ lanelet2-python = self.callPackage ./lanelet2-python {};
+
+ lanelet2-routing = self.callPackage ./lanelet2-routing {};
+
+ lanelet2-traffic-rules = self.callPackage ./lanelet2-traffic-rules {};
+
+ lanelet2-validation = self.callPackage ./lanelet2-validation {};
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
@@ -670,6 +690,8 @@ self: super: {
 
  poco-vendor = self.callPackage ./poco-vendor {};
 
+ proj = self.callPackage ./proj {};
+
  px4-msgs = self.callPackage ./px4-msgs {};
 
  py-trees-ros = self.callPackage ./py-trees-ros {};
@@ -701,6 +723,8 @@ self: super: {
  raspimouse = self.callPackage ./raspimouse {};
 
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
+
+ rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
@@ -1098,6 +1122,8 @@ self: super: {
 
  turtlebot3-description = self.callPackage ./turtlebot3-description {};
 
+ turtlebot3-example = self.callPackage ./turtlebot3-example {};
+
  turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
 
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
@@ -1113,6 +1139,8 @@ self: super: {
  turtlesim = self.callPackage ./turtlesim {};
 
  udp-driver = self.callPackage ./udp-driver {};
+
+ udp-msgs = self.callPackage ./udp-msgs {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 

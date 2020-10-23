@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-srvs, diagnostic-msgs, diagnostic-updater, pythonPackages, roscpp, rospy, socketcan-interface, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-bms-driver";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_bms_driver/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "0621da42ce9a962548e2fb4d0634005a7316147ece4cd2de95f4262022e5df86";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_bms_driver/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "3003906b6a8e7225ecae4ae4ccfd47aee13252303f34f1c7fd7571def6f1a95a";
   };
 
   buildType = "catkin";

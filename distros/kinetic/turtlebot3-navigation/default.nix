@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, catkin, map-server, move-base, turtlebot3-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot3-navigation";
-  version = "1.2.1-r1";
+  version = "1.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3_navigation/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "04aa16b150c741f0e0cf28653e762f904616c635086610fa1dc5f0c743f01769";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3_navigation/1.2.4-1.tar.gz";
+    name = "1.2.4-1.tar.gz";
+    sha256 = "8907d803336ab5653fd75c0e54436c8b36989920f064dd21ccc44e5749ac21b4";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, catkin, cmake-modules, eigen, geometry-msgs, image-transport, interactive-markers, laser-geometry, libGL, libGLU, libyamlcpp, map-msgs, media-export, message-filters, message-generation, message-runtime, nav-msgs, ogre1_9, pluginlib, python-qt-binding, qt5, resource-retriever, rosbag, rosconsole, roscpp, roslib, rospy, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-ros, tinyxml-2, urdf, urdfdom, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rviz";
-  version = "1.14.1-r1";
+  version = "1.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rviz-release/archive/release/noetic/rviz/1.14.1-1.tar.gz";
-    name = "1.14.1-1.tar.gz";
-    sha256 = "409240cebbf10ef14bc053a374b245998785190717211422d14a6b685bd06ba1";
+    url = "https://github.com/ros-gbp/rviz-release/archive/release/noetic/rviz/1.14.3-1.tar.gz";
+    name = "1.14.3-1.tar.gz";
+    sha256 = "5375cdc1804c5a8cd42608596089f24b8addc13123c506fa4422aa0d7af4f2fe";
   };
 
   buildType = "catkin";

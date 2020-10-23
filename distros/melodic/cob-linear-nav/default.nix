@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, angles, catkin, cob-srvs, geometry-msgs, move-base-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-melodic-cob-linear-nav";
-  version = "0.6.10-r1";
+  version = "0.6.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_linear_nav/0.6.10-1.tar.gz";
-    name = "0.6.10-1.tar.gz";
-    sha256 = "4e8c98e4f4d1ede57dde80e27876116f81cfd4466b377d44ebe3e1ba5f6ed3da";
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_linear_nav/0.6.11-1.tar.gz";
+    name = "0.6.11-1.tar.gz";
+    sha256 = "c034ee13d9b2ef122e599e79b7056e8e2f6de33b1705808ac6ec08d747033e2c";
   };
 
   buildType = "catkin";

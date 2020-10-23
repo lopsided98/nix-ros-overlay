@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, catkin, cob-srvs, control-toolbox, dynamic-reconfigure, geometry-msgs, interactive-markers, kdl-conversions, kdl-parser, message-generation, message-runtime, orocos-kdl, roscpp, roslint, rospy, sensor-msgs, std-msgs, std-srvs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-frame-tracker";
-  version = "0.7.11-r1";
+  version = "0.7.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_frame_tracker/0.7.11-1.tar.gz";
-    name = "0.7.11-1.tar.gz";
-    sha256 = "a2dacdd0dc800d802addcd9c645aa4b5450b6290140866bbd212aa99b68efabf";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_frame_tracker/0.7.12-1.tar.gz";
+    name = "0.7.12-1.tar.gz";
+    sha256 = "c869eca90d3934aa072a13ed7c3fa7275fcb28935bbb54477450fe24fdb87523";
   };
 
   buildType = "catkin";

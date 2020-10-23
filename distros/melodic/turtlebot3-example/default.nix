@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, geometry-msgs, interactive-markers, message-generation, message-runtime, nav-msgs, rospy, sensor-msgs, std-msgs, turtlebot3-bringup, turtlebot3-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-example";
-  version = "1.2.2-r1";
+  version = "1.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_example/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "1de1310a4dbd92674f1c841be20ea0fb6d8e504d65459178a873d2b5bd2330bb";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_example/1.2.4-1.tar.gz";
+    name = "1.2.4-1.tar.gz";
+    sha256 = "31141aa6005d8ab9deaf6cf04fdde51e8efcce2b37ec76bf16895c7987bcd31d";
   };
 
   buildType = "catkin";

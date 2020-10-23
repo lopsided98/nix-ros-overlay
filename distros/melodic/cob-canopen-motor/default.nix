@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-generic-can, cob-utilities, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-cob-canopen-motor";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_canopen_motor/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "96638cd0004178b657e01630b9334a521d52c19129652801f05bbbedf8329cab";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_canopen_motor/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "6ce9cd2b162e853b67b70b9ef1dece0b6586b026eaffb40e6704c1563dd0c027";
   };
 
   buildType = "catkin";

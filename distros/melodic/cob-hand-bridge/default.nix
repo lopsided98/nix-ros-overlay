@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, angles, catkin, control-msgs, diagnostic-updater, message-generation, message-runtime, rosserial-python, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-cob-hand-bridge";
-  version = "0.6.8-r1";
+  version = "0.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_hand-release/archive/release/melodic/cob_hand_bridge/0.6.8-1.tar.gz";
-    name = "0.6.8-1.tar.gz";
-    sha256 = "98bca9054834c6dce9280a71d4eac377c66f38428fc9b68744f227ab4a721c53";
+    url = "https://github.com/ipa320/cob_hand-release/archive/release/melodic/cob_hand_bridge/0.6.9-1.tar.gz";
+    name = "0.6.9-1.tar.gz";
+    sha256 = "8cb176ebb7ab1009ba7c56332b74c2e5d09b01aed47696935d908262ba06f0dc";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, tinyxml, tinyxml-vendor, urdfdom, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-foxy-urdf";
-  version = "2.4.0-r1";
+  version = "2.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdf-release/archive/release/foxy/urdf/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "9d45dc6f02ec7fbda45bab02d3f26dde5be8d1de1e712700a9787196d15c233d";
+    url = "https://github.com/ros2-gbp/urdf-release/archive/release/foxy/urdf/2.4.0-2.tar.gz";
+    name = "2.4.0-2.tar.gz";
+    sha256 = "bf569f43cb821cad9d1bc0ef7d51ed9a00180ab67afe4d7b9e8ac64b82d3550d";
   };
 
   buildType = "ament_cmake";

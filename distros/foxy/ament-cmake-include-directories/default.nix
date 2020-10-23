@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-foxy-ament-cmake-include-directories";
-  version = "0.9.6-r1";
+  version = "0.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/foxy/ament_cmake_include_directories/0.9.6-1.tar.gz";
-    name = "0.9.6-1.tar.gz";
-    sha256 = "b060a67ba7f223ac2f6d230e3ae4522c233b74d97389acbe273b9c36241ac786";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/foxy/ament_cmake_include_directories/0.9.7-1.tar.gz";
+    name = "0.9.7-1.tar.gz";
+    sha256 = "74c8c2591dd41ae5db26deeb04da4579804885df3477fc9fbf52ea71f385177d";
   };
 
   buildType = "ament_cmake";

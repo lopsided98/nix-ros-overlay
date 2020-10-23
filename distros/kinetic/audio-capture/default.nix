@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, audio-common-msgs, catkin, gst_all_1, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-audio-capture";
-  version = "0.3.8-r1";
+  version = "0.3.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/audio_common-release/archive/release/kinetic/audio_capture/0.3.8-1.tar.gz";
-    name = "0.3.8-1.tar.gz";
-    sha256 = "2e00d6603f8570e0f302a70defc2116415c6ce728926a9203b780f831d662173";
+    url = "https://github.com/ros-gbp/audio_common-release/archive/release/kinetic/audio_capture/0.3.9-1.tar.gz";
+    name = "0.3.9-1.tar.gz";
+    sha256 = "78cdf1ed0a0b977d7410045a9374f37e6a4a60287b946080e2f0e2a021511775";
   };
 
   buildType = "catkin";

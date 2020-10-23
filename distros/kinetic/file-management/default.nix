@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-common, cmake, dataflow-lite, gmock, gtest }:
 buildRosPackage {
   pname = "ros-kinetic-file-management";
-  version = "1.1.3-r1";
+  version = "1.1.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/kinetic/file_management/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "1fba4345287d982c011cecf8069852e5b1aa40d59e71cfc1492d6642deac45bb";
+    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/kinetic/file_management/1.1.5-2.tar.gz";
+    name = "1.1.5-2.tar.gz";
+    sha256 = "99aecb1dfc74753c75cf6157042eddc2718bf9e57c2fe53559260d1398863d64";
   };
 
   buildType = "cmake";

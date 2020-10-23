@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, geometry-msgs, nav-msgs, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-mecanum-controller";
-  version = "0.8.11-r1";
+  version = "0.8.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_mecanum_controller/0.8.11-1.tar.gz";
-    name = "0.8.11-1.tar.gz";
-    sha256 = "852c590bf3a1682d74f292beb165bc3cec30c2c8d26d559530895b18302f38c6";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_mecanum_controller/0.8.12-1.tar.gz";
+    name = "0.8.12-1.tar.gz";
+    sha256 = "ab44a926e2dcda6cd6f79a0748a1954ced404f32c83a170f64e42a8e4888aaf5";
   };
 
   buildType = "catkin";

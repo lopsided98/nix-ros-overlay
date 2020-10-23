@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.2.8-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/dashing/tracetools_test/0.2.8-1";
+    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/dashing/tracetools_test/0.2.8-1";
     name = "archive.tar.gz";
     sha256 = "a9450bbafff2fa4e1f269e4168418831dfad4a8cdca940ea2fc1fd998730acb4";
   };

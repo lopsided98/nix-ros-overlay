@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, laser-geometry, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-cob-scan-unifier";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_scan_unifier/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "0dc13eab97c35b0eb15851aa5054e007eb541e46e553730c7d3b211a4a41c724";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_scan_unifier/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "41bca060537e0874148a4b2b195f8575cfa80c19ed0f5be0e3fed816c5bcf956";
   };
 
   buildType = "catkin";

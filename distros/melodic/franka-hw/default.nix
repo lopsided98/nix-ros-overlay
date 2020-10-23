@@ -2,20 +2,21 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, controller-interface, franka-description, gtest, hardware-interface, joint-limits-interface, libfranka, roscpp, rostest, urdf }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, combined-robot-hw, controller-interface, franka-description, franka-msgs, gtest, hardware-interface, joint-limits-interface, libfranka, message-generation, pluginlib, roscpp, rostest, urdf }:
 buildRosPackage {
   pname = "ros-melodic-franka-hw";
-  version = "0.6.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_hw/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "33ab406de975e57944c4df7879a3e9cc3015e3e44e6acccf5df49bd79220d5aa";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_hw/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "9d5e7b500096de8c99d98d528c46e570fc8a48dee4913a703e8a7f8d8c7f64ce";
   };
 
   buildType = "catkin";
+  buildInputs = [ message-generation ];
   checkInputs = [ franka-description gtest rostest ];
-  propagatedBuildInputs = [ controller-interface hardware-interface joint-limits-interface libfranka roscpp urdf ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs combined-robot-hw controller-interface franka-msgs hardware-interface joint-limits-interface libfranka pluginlib roscpp urdf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

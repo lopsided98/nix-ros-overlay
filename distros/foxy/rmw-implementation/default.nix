@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rcpputils, rcutils, rmw, rmw-connext-cpp, rmw-cyclonedds-cpp, rmw-fastrtps-cpp, rmw-implementation-cmake }:
 buildRosPackage {
   pname = "ros-foxy-rmw-implementation";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/foxy/rmw_implementation/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "1754447464844d994e8dda2f2577ec923e69d533b84b59a350cfc53af7d3ebea";
+    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/foxy/rmw_implementation/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "dd5165ddb35d4ed682b1e2a1a8a21016cba16b16b411cf3cbb53dee5af66690f";
   };
 
   buildType = "ament_cmake";

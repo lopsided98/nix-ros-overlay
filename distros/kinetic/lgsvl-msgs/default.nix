@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, message-generation, message-runtime, ros-environment, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-lgsvl-msgs";
-  version = "0.0.3-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/lgsvl/lgsvl_msgs-release/archive/release/kinetic/lgsvl_msgs/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "d9698108249845d93e3354402e02db811b80324ec224e5bc2eedcabf149a3968";
+    url = "https://github.com/lgsvl/lgsvl_msgs-release/archive/release/kinetic/lgsvl_msgs/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "ce4a318b64c6687124e620023597eecb35045c9af4e2f4d0e5c787a70870cb0f";
   };
 
   buildType = "catkin";
@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs message-runtime sensor-msgs std-msgs ];
 
   meta = {
-    description = ''The lgsvl_msgs package for ground truth data.'';
+    description = ''Message definitions for interfacing with the LGSVL Simulator for ROS and ROS 2.'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

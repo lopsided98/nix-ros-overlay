@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-common, cmake, gmock, gtest }:
 buildRosPackage {
   pname = "ros-kinetic-dataflow-lite";
-  version = "1.1.3-r1";
+  version = "1.1.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/kinetic/dataflow_lite/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "73748fc97027f95437fee9118357f2875670f516c06aee31060fc5fab7aa9f22";
+    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/kinetic/dataflow_lite/1.1.5-2.tar.gz";
+    name = "1.1.5-2.tar.gz";
+    sha256 = "60d3b771ee23b01d4831555da90c52aa80362adae5f596a2d7c8c0eb8d6a6517";
   };
 
   buildType = "cmake";

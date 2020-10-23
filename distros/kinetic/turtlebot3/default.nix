@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, turtlebot3-bringup, turtlebot3-description, turtlebot3-example, turtlebot3-navigation, turtlebot3-slam, turtlebot3-teleop }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot3";
-  version = "1.2.1-r1";
+  version = "1.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "126a261fa3d04a6ba09a5af20d707fa8ea501b23120fce7ad9202a10f629ca62";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3/1.2.4-1.tar.gz";
+    name = "1.2.4-1.tar.gz";
+    sha256 = "60965a71da79d657a11ab9354af51e0d3923b6bd3310fa5d68a20d76a9ca507f";
   };
 
   buildType = "catkin";

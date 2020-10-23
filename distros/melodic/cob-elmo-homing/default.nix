@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, canopen-402, catkin, pluginlib, socketcan-interface }:
 buildRosPackage {
   pname = "ros-melodic-cob-elmo-homing";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_elmo_homing/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "99c303cdde509f54250a14be726e6a439bdc0b964eecc85f2ebcd66a0c8d58b7";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_elmo_homing/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "4b22a0fdcea4126557b430ed56076a6eafab834a22115483f983912457e7f5e3";
   };
 
   buildType = "catkin";

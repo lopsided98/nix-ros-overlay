@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, joint-state-publisher-gui, leo-description, robot-state-publisher, rviz }:
 buildRosPackage {
   pname = "ros-kinetic-leo-viz";
-  version = "0.2.0-r1";
+  version = "0.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_viz-release/archive/release/kinetic/leo_viz/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "9d7ffab6b802d5fe3a7e8117781312832647efcb438c33fb361217be258c3e94";
+    url = "https://github.com/fictionlab-gbp/leo_desktop-release/archive/release/kinetic/leo_viz/0.2.2-2.tar.gz";
+    name = "0.2.2-2.tar.gz";
+    sha256 = "548232bff77cb36a6dfe84798010e0f299b66219324ceb92a58a7a9a04caa580";
   };
 
   buildType = "catkin";

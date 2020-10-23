@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cwiid, geometry-msgs, message-generation, message-runtime, python3Packages, roscpp, roslib, roslint, rospy, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-wiimote";
-  version = "1.14.0-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/noetic/wiimote/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "bf6fdba87cacab7e95950de557af599926c155133f26871432782fab7898a072";
+    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/noetic/wiimote/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "957ffb8e043a21fd583e014a3178cc838297ecc58eec886fbf79dd1167670c05";
   };
 
   buildType = "catkin";

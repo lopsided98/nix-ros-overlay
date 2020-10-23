@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-mavlink";
-  version = "2020.9.10-r1";
+  version = "2020.10.11-r2";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/noetic/mavlink/2020.9.10-1.tar.gz";
-    name = "2020.9.10-1.tar.gz";
-    sha256 = "323b8b1f1d6c2aeedd675e31dfe227f3e468326ec1c61570a0902ff7068a72c4";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/noetic/mavlink/2020.10.11-2.tar.gz";
+    name = "2020.10.11-2.tar.gz";
+    sha256 = "ad8387ddda42bcdfd77d35d65f27ec5795d3990ed3014a6ab7f39a511a751d3f";
   };
 
   buildType = "cmake";

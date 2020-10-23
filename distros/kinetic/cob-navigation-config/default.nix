@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-cob-navigation-config";
-  version = "0.6.10-r1";
+  version = "0.6.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_navigation_config/0.6.10-1.tar.gz";
-    name = "0.6.10-1.tar.gz";
-    sha256 = "4408cda65048545cefe12c2595c67f9ed03a9fd2b06eefea19ee15811ad79087";
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/kinetic/cob_navigation_config/0.6.11-1.tar.gz";
+    name = "0.6.11-1.tar.gz";
+    sha256 = "df4ac6ca8c5f15efd71fcbb905977a90d713c9b68b0ac85e7555754127123c3b";
   };
 
   buildType = "catkin";

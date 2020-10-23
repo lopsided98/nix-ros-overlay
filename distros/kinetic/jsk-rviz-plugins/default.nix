@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, diagnostic-msgs, dynamic-reconfigure, geometry-msgs, image-geometry, image-publisher, jsk-footstep-msgs, jsk-gui-msgs, jsk-hark-msgs, jsk-recognition-msgs, jsk-recognition-utils, jsk-topic-tools, message-generation, mk, people-msgs, posedetection-msgs, pythonPackages, rosbuild, rviz, std-msgs, urdfdom-py, view-controller-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-rviz-plugins";
-  version = "2.1.6-r1";
+  version = "2.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_rviz_plugins/2.1.6-1.tar.gz";
-    name = "2.1.6-1.tar.gz";
-    sha256 = "3c7fe74bcc1934f8e5717fb8f8ebb2fe690b3d1dcfd6372ad78e1f60236951ab";
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_rviz_plugins/2.1.7-1.tar.gz";
+    name = "2.1.7-1.tar.gz";
+    sha256 = "76568fb8d11b828926bae3190b794a1ea5186162c0456c98cfd794b87f026d05";
   };
 
   buildType = "catkin";
