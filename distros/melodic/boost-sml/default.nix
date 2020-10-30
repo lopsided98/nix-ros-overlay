@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roslint, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-boost-sml";
-  version = "0.1.0-r2";
+  version = "0.1.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/boost_sml-release/archive/release/melodic/boost_sml/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "bc312f3caea5cf88e0c2b8ade1231eda35e695a513dcac61e520835a107aacca";
+    url = "https://github.com/PickNikRobotics/boost_sml-release/archive/release/melodic/boost_sml/0.1.0-3.tar.gz";
+    name = "0.1.0-3.tar.gz";
+    sha256 = "5684c6e8c9430035a4b172f16ba480cb9cc2fd7db95f72253b291dd35e660f57";
   };
 
   buildType = "catkin";

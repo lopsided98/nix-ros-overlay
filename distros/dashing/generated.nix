@@ -690,8 +690,6 @@ self: super: {
 
  poco-vendor = self.callPackage ./poco-vendor {};
 
- proj = self.callPackage ./proj {};
-
  px4-msgs = self.callPackage ./px4-msgs {};
 
  py-trees-ros = self.callPackage ./py-trees-ros {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp }:
 buildRosPackage {
   pname = "ros-eloquent-rviz-assimp-vendor";
-  version = "7.0.5-r1";
+  version = "7.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/eloquent/rviz_assimp_vendor/7.0.5-1.tar.gz";
-    name = "7.0.5-1.tar.gz";
-    sha256 = "cef94b0a93d522f94574cdd51b93d4425f83686fb32f46e307ed08c37d6e88e4";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/eloquent/rviz_assimp_vendor/7.0.6-1.tar.gz";
+    name = "7.0.6-1.tar.gz";
+    sha256 = "b7e4d5e8b9664516ee675080f3d38e59fc7e0c315033c4173ee9ca0885a23ca3";
   };
 
   buildType = "ament_cmake";

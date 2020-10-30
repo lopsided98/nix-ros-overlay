@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rc-common-msgs, rcdiscover, roscpp, std-srvs, tf, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rc-tagdetect-client";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_tagdetect_client/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "d7cddec267d6469dba8d989f9280d3dcd793a3feb0210a1a1a31d7cec5d509fe";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_tagdetect_client/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "653047d53f5a452444fc13fe4cb5a6feb440c5bee70c1510a8073aac5897dc1d";
   };
 
   buildType = "catkin";

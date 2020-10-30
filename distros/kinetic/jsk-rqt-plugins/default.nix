@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-publisher, image-view2, jsk-gui-msgs, message-generation, message-runtime, mk, pythonPackages, qt-gui-py-common, resource-retriever, rosbuild, roslaunch, rostest, rqt-gui, rqt-gui-py, rqt-image-view, rqt-plot }:
 buildRosPackage {
   pname = "ros-kinetic-jsk-rqt-plugins";
-  version = "2.1.7-r1";
+  version = "2.1.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_rqt_plugins/2.1.7-1.tar.gz";
-    name = "2.1.7-1.tar.gz";
-    sha256 = "065a6919232f9b5b3f0f4c92686f96cbb46b0c6640872786102a23d5a0527a27";
+    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/kinetic/jsk_rqt_plugins/2.1.7-2.tar.gz";
+    name = "2.1.7-2.tar.gz";
+    sha256 = "ff03e8d5800ae6e604a15f871653d8cf3195b4d27b4b1e4c045b78d5329902f4";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ixblue-ins-driver, ixblue-ins-msgs }:
 buildRosPackage {
   pname = "ros-noetic-ixblue-ins";
-  version = "0.1.3-r1";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ixblue/ixblue_ins_stdbin_driver-release/archive/release/noetic/ixblue_ins/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "249e093028b5387781517e6e1e1a9dd18ad1e4f9986af03e44a51e898cae4747";
+    url = "https://github.com/ixblue/ixblue_ins_stdbin_driver-release/archive/release/noetic/ixblue_ins/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "b3556595467ee028c39e2e1500bfce3fbb7a9d7e0804fefde04a79d812f0c812";
   };
 
   buildType = "catkin";

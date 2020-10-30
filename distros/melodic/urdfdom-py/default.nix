@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy }:
 buildRosPackage {
   pname = "ros-melodic-urdfdom-py";
-  version = "0.4.3-r1";
+  version = "0.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/urdfdom_py-release/archive/release/melodic/urdfdom_py/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "fa17c8b80a42f70c63b37729a6dfc6b71930cdb3f25df0aee577cd76a43936d9";
+    url = "https://github.com/ros-gbp/urdfdom_py-release/archive/release/melodic/urdfdom_py/0.4.4-1.tar.gz";
+    name = "0.4.4-1.tar.gz";
+    sha256 = "333a2983d6cc779348c5874acb39b3a6912b862e8807eddbf9407739adb86291";
   };
 
   buildType = "catkin";

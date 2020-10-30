@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, gmock, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-noetic-ddynamic-reconfigure";
-  version = "0.3.0-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/ddynamic_reconfigure/archive/release/noetic/ddynamic_reconfigure/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "68e903ec0a816737a7c736bdc833be8a06861d4fe3f9c2aab818ec1c6fac82c0";
+    url = "https://github.com/pal-gbp/ddynamic_reconfigure/archive/release/noetic/ddynamic_reconfigure/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "1eb2ca206bff8c11dfc8522a25051d2f0ada8e36779e7c7f6f517ca3ac49a593";
   };
 
   buildType = "catkin";

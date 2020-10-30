@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rc-hand-eye-calibration-client, rc-pick-client, rc-roi-manager-gui, rc-silhouettematch-client, rc-tagdetect-client, rc-visard-description, rc-visard-driver }:
 buildRosPackage {
   pname = "ros-melodic-rc-visard";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_visard/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "c7cf55a9679306b4b2719ffaff0fc2f1d38d4a619f06f923301a5656b7805ea1";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_visard/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "c611df05465018a27cfe05966980f6df42aa13f3affcd61ae532a7cc964ee216";
   };
 
   buildType = "catkin";

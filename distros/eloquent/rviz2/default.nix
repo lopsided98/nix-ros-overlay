@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-lint-cmake, ament-cmake-uncrustify, geometry-msgs, qt5, rclcpp, rviz-common, rviz-default-plugins, rviz-ogre-vendor, sensor-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-rviz2";
-  version = "7.0.5-r1";
+  version = "7.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/eloquent/rviz2/7.0.5-1.tar.gz";
-    name = "7.0.5-1.tar.gz";
-    sha256 = "18b0ad21c1cc2d8d2c95e6f4a1b3f88d334712d6ea5bffb85234a6b5ee3e7d42";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/eloquent/rviz2/7.0.6-1.tar.gz";
+    name = "7.0.6-1.tar.gz";
+    sha256 = "4c71cccd603e93ce6b3c88412296f323abeeed91832fcd65de671af8990667f1";
   };
 
   buildType = "ament_cmake";

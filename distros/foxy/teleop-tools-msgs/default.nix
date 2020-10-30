@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-teleop-tools-msgs";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/foxy/teleop_tools_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "5bc5a3ef81f5083f1f2c42e32b4abee6094dadf6b56e7a9ea51bd6858bac9fd8";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/foxy/teleop_tools_msgs/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "7f2c3d627e3322119313cf3ec62df6f5b285592c39d1261bcc7730c5d60ad2a3";
   };
 
   buildType = "ament_cmake";
