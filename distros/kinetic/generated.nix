@@ -1706,6 +1706,12 @@ self: super: {
 
  ivcon = self.callPackage ./ivcon {};
 
+ ixblue-ins = self.callPackage ./ixblue-ins {};
+
+ ixblue-ins-driver = self.callPackage ./ixblue-ins-driver {};
+
+ ixblue-ins-msgs = self.callPackage ./ixblue-ins-msgs {};
+
  ixblue-stdbin-decoder = self.callPackage ./ixblue-stdbin-decoder {};
 
  jackal-control = self.callPackage ./jackal-control {};

@@ -192,7 +192,15 @@ self: super: {
 
  boost-sml = self.callPackage ./boost-sml {};
 
+ bota-device-driver = self.callPackage ./bota-device-driver {};
+
  bota-driver = self.callPackage ./bota-driver {};
+
+ bota-node = self.callPackage ./bota-node {};
+
+ bota-signal-handler = self.callPackage ./bota-signal-handler {};
+
+ bota-worker = self.callPackage ./bota-worker {};
 
  brics-actuator = self.callPackage ./brics-actuator {};
 
@@ -2945,6 +2953,8 @@ self: super: {
  rokubimini-examples = self.callPackage ./rokubimini-examples {};
 
  rokubimini-factory = self.callPackage ./rokubimini-factory {};
+
+ rokubimini-manager = self.callPackage ./rokubimini-manager {};
 
  rokubimini-msgs = self.callPackage ./rokubimini-msgs {};
 

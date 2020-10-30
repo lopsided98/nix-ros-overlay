@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, rospy }:
 buildRosPackage {
   pname = "ros-noetic-urdfdom-py";
-  version = "0.4.3-r1";
+  version = "0.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/urdfdom_py-release/archive/release/noetic/urdfdom_py/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "b73b5c60376573171de75888399835d6845d07bbd70f4d7065b93d30fb994ef1";
+    url = "https://github.com/ros-gbp/urdfdom_py-release/archive/release/noetic/urdfdom_py/0.4.4-1.tar.gz";
+    name = "0.4.4-1.tar.gz";
+    sha256 = "a6cfbfeea0b5bc7d96c4e29dd63e46da12f43799f5bb737fe3f2e0f1166a5233";
   };
 
   buildType = "catkin";

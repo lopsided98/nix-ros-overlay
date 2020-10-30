@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, automotive-navigation-msgs, automotive-platform-msgs, catkin, ros-environment }:
 buildRosPackage {
   pname = "ros-melodic-automotive-autonomy-msgs";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/automotive_autonomy_msgs-release/archive/release/melodic/automotive_autonomy_msgs/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "e072ea7261f06ecc8c8b495647b72cf1dea3f2b9daabfc5082f35d500b52b838";
+    url = "https://github.com/astuff/automotive_autonomy_msgs-release/archive/release/melodic/automotive_autonomy_msgs/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "2899316eab20c57ab7bcc0d5d8bdb46da42c9a66d94200376ead64b7ca74d6b5";
   };
 
   buildType = "catkin";

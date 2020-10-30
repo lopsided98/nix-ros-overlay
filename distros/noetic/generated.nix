@@ -46,9 +46,17 @@ self: super: {
 
  audio-to-spectrogram = self.callPackage ./audio-to-spectrogram {};
 
+ automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
+
+ automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
+
+ automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
+
  auv-msgs = self.callPackage ./auv-msgs {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
+
+ baldor = self.callPackage ./baldor {};
 
  base-local-planner = self.callPackage ./base-local-planner {};
 
@@ -626,6 +634,8 @@ self: super: {
 
  gripper-action-controller = self.callPackage ./gripper-action-controller {};
 
+ handeye = self.callPackage ./handeye {};
+
  hardware-interface = self.callPackage ./hardware-interface {};
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
@@ -724,6 +734,12 @@ self: super: {
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
 
+ jsk-interactive = self.callPackage ./jsk-interactive {};
+
+ jsk-interactive-marker = self.callPackage ./jsk-interactive-marker {};
+
+ jsk-interactive-test = self.callPackage ./jsk-interactive-test {};
+
  jsk-network-tools = self.callPackage ./jsk-network-tools {};
 
  jsk-recognition = self.callPackage ./jsk-recognition {};
@@ -732,9 +748,15 @@ self: super: {
 
  jsk-recognition-utils = self.callPackage ./jsk-recognition-utils {};
 
+ jsk-rqt-plugins = self.callPackage ./jsk-rqt-plugins {};
+
+ jsk-rviz-plugins = self.callPackage ./jsk-rviz-plugins {};
+
  jsk-tilt-laser = self.callPackage ./jsk-tilt-laser {};
 
  jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
+
+ jsk-visualization = self.callPackage ./jsk-visualization {};
 
  julius = self.callPackage ./julius {};
 
@@ -1301,6 +1323,10 @@ self: super: {
  roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
 
  ros = self.callPackage ./ros {};
+
+ ros-babel-fish = self.callPackage ./ros-babel-fish {};
+
+ ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
 
  ros-base = self.callPackage ./ros-base {};
 

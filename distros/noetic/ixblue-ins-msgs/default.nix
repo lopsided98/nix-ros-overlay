@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-ixblue-ins-msgs";
-  version = "0.1.3-r1";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ixblue/ixblue_ins_stdbin_driver-release/archive/release/noetic/ixblue_ins_msgs/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "35ba474ae9b7fc24cc895e17221d7c3dc5d4d6dfde29347a0d18949daebe3b88";
+    url = "https://github.com/ixblue/ixblue_ins_stdbin_driver-release/archive/release/noetic/ixblue_ins_msgs/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "539788d59cfcc1e8262dbb1c49d18825b59fa4224bc260293830e7a59664a6ca";
   };
 
   buildType = "catkin";

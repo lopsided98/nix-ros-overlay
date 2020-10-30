@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rokubimini, rokubimini-manager }:
 buildRosPackage {
   pname = "ros-melodic-rokubimini-examples";
-  version = "0.5.0-r6";
+  version = "0.5.2-r2";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/melodic/rokubimini_examples/0.5.0-6";
+    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/melodic/rokubimini_examples/0.5.2-2";
     name = "archive.tar.gz";
-    sha256 = "8572e65a62049c23465d7555d7bb89e522140b26ba3a6d609fc6b49222aa5b2f";
+    sha256 = "ece58bf00b38d219cbf07b66a9573d29298e3277ee4e81d46fca595076273e37";
   };
 
   buildType = "catkin";
