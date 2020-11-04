@@ -192,6 +192,16 @@ let
       '';
     });
 
+    python-orocos-kdl = rosSuper.python-orocos-kdl.overrideAttrs ({
+      patches ? [], ...
+    }: {
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/orocos/orocos_kinematics_dynamics/commit/d8d087ad0e1c41f3489d1a255ebfa27b5695196b.patch";
+        sha256 = "0qyskqxv4a982kidzzyh34xj2iiw791ipbbl29jg4qb4l21xwqlg";
+        stripLen = 1;
+      }) ];
+    });
+
     pr2-tilt-laser-interface = patchBoostSignals rosSuper.pr2-tilt-laser-interface;
 
     python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
