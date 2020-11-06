@@ -250,6 +250,16 @@ self: super: {
 
  bondpy = self.callPackage ./bondpy {};
 
+ bota-device-driver = self.callPackage ./bota-device-driver {};
+
+ bota-driver = self.callPackage ./bota-driver {};
+
+ bota-node = self.callPackage ./bota-node {};
+
+ bota-signal-handler = self.callPackage ./bota-signal-handler {};
+
+ bota-worker = self.callPackage ./bota-worker {};
+
  brics-actuator = self.callPackage ./brics-actuator {};
 
  calibration = self.callPackage ./calibration {};
@@ -3751,6 +3761,24 @@ self: super: {
  rocon-uri = self.callPackage ./rocon-uri {};
 
  rodi-robot = self.callPackage ./rodi-robot {};
+
+ rokubimini = self.callPackage ./rokubimini {};
+
+ rokubimini-bus-manager = self.callPackage ./rokubimini-bus-manager {};
+
+ rokubimini-description = self.callPackage ./rokubimini-description {};
+
+ rokubimini-ethercat = self.callPackage ./rokubimini-ethercat {};
+
+ rokubimini-examples = self.callPackage ./rokubimini-examples {};
+
+ rokubimini-factory = self.callPackage ./rokubimini-factory {};
+
+ rokubimini-manager = self.callPackage ./rokubimini-manager {};
+
+ rokubimini-msgs = self.callPackage ./rokubimini-msgs {};
+
+ rokubimini-serial = self.callPackage ./rokubimini-serial {};
 
  romeo-bringup = self.callPackage ./romeo-bringup {};
 

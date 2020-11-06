@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-foxy-osqp-vendor";
-  version = "0.0.1-r3";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tier4/osqp_vendor-release/archive/release/foxy/osqp_vendor/0.0.1-3.tar.gz";
-    name = "0.0.1-3.tar.gz";
-    sha256 = "7603e1c8ef7cb2b492ed69a2f084e65978b63e4c365ae4dccb1abbdbbccf800b";
+    url = "https://github.com/tier4/osqp_vendor-release/archive/release/foxy/osqp_vendor/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "3b2a5e43a76c801a4709775861a65858de2141916dcef28804affad39b58b89b";
   };
 
   buildType = "ament_cmake";

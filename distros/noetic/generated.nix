@@ -52,6 +52,20 @@ self: super: {
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
 
+ autoware-can-msgs = self.callPackage ./autoware-can-msgs {};
+
+ autoware-config-msgs = self.callPackage ./autoware-config-msgs {};
+
+ autoware-external-msgs = self.callPackage ./autoware-external-msgs {};
+
+ autoware-lanelet2-msgs = self.callPackage ./autoware-lanelet2-msgs {};
+
+ autoware-map-msgs = self.callPackage ./autoware-map-msgs {};
+
+ autoware-msgs = self.callPackage ./autoware-msgs {};
+
+ autoware-system-msgs = self.callPackage ./autoware-system-msgs {};
+
  auv-msgs = self.callPackage ./auv-msgs {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
@@ -73,6 +87,16 @@ self: super: {
  bondpy = self.callPackage ./bondpy {};
 
  boost-sml = self.callPackage ./boost-sml {};
+
+ bota-device-driver = self.callPackage ./bota-device-driver {};
+
+ bota-driver = self.callPackage ./bota-driver {};
+
+ bota-node = self.callPackage ./bota-node {};
+
+ bota-signal-handler = self.callPackage ./bota-signal-handler {};
+
+ bota-worker = self.callPackage ./bota-worker {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
 
@@ -364,6 +388,8 @@ self: super: {
 
  ddynamic-reconfigure = self.callPackage ./ddynamic-reconfigure {};
 
+ ddynamic-reconfigure-python = self.callPackage ./ddynamic-reconfigure-python {};
+
  delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
 
  delphi-mrr-msgs = self.callPackage ./delphi-mrr-msgs {};
@@ -632,6 +658,8 @@ self: super: {
 
  graph-msgs = self.callPackage ./graph-msgs {};
 
+ grasping-msgs = self.callPackage ./grasping-msgs {};
+
  gripper-action-controller = self.callPackage ./gripper-action-controller {};
 
  handeye = self.callPackage ./handeye {};
@@ -685,6 +713,12 @@ self: super: {
  imu-tools = self.callPackage ./imu-tools {};
 
  imu-transformer = self.callPackage ./imu-transformer {};
+
+ industrial-msgs = self.callPackage ./industrial-msgs {};
+
+ industrial-robot-status-controller = self.callPackage ./industrial-robot-status-controller {};
+
+ industrial-robot-status-interface = self.callPackage ./industrial-robot-status-interface {};
 
  interactive-marker-tutorials = self.callPackage ./interactive-marker-tutorials {};
 
@@ -1110,6 +1144,10 @@ self: super: {
 
  nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
 
+ novatel-oem7-driver = self.callPackage ./novatel-oem7-driver {};
+
+ novatel-oem7-msgs = self.callPackage ./novatel-oem7-msgs {};
+
  obj-to-pointcloud = self.callPackage ./obj-to-pointcloud {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
@@ -1312,6 +1350,10 @@ self: super: {
 
  robot = self.callPackage ./robot {};
 
+ robot-calibration = self.callPackage ./robot-calibration {};
+
+ robot-calibration-msgs = self.callPackage ./robot-calibration-msgs {};
+
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-navigation = self.callPackage ./robot-navigation {};
@@ -1321,6 +1363,24 @@ self: super: {
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
  roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
+
+ rokubimini = self.callPackage ./rokubimini {};
+
+ rokubimini-bus-manager = self.callPackage ./rokubimini-bus-manager {};
+
+ rokubimini-description = self.callPackage ./rokubimini-description {};
+
+ rokubimini-ethercat = self.callPackage ./rokubimini-ethercat {};
+
+ rokubimini-examples = self.callPackage ./rokubimini-examples {};
+
+ rokubimini-factory = self.callPackage ./rokubimini-factory {};
+
+ rokubimini-manager = self.callPackage ./rokubimini-manager {};
+
+ rokubimini-msgs = self.callPackage ./rokubimini-msgs {};
+
+ rokubimini-serial = self.callPackage ./rokubimini-serial {};
 
  ros = self.callPackage ./ros {};
 
@@ -1746,6 +1806,8 @@ self: super: {
 
  swri-yaml-util = self.callPackage ./swri-yaml-util {};
 
+ tablet-socket-msgs = self.callPackage ./tablet-socket-msgs {};
+
  teb-local-planner = self.callPackage ./teb-local-planner {};
 
  teleop-tools = self.callPackage ./teleop-tools {};
@@ -1877,6 +1939,8 @@ self: super: {
  usb-cam-hardware-interface = self.callPackage ./usb-cam-hardware-interface {};
 
  uuid-msgs = self.callPackage ./uuid-msgs {};
+
+ vector-map-msgs = self.callPackage ./vector-map-msgs {};
 
  velocity-controllers = self.callPackage ./velocity-controllers {};
 

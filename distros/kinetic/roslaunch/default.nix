@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rosbuild, rosclean, rosgraph-msgs, roslib, rosmaster, rosout, rosparam, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-roslaunch";
-  version = "1.12.16-r1";
+  version = "1.12.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roslaunch/1.12.16-1.tar.gz";
-    name = "1.12.16-1.tar.gz";
-    sha256 = "41a3913f4871c4c647c57cee5fb652a42a8fc81ca2af83b89321300284f5a35e";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/roslaunch/1.12.17-1.tar.gz";
+    name = "1.12.17-1.tar.gz";
+    sha256 = "0e0f9367d3c13023fdd21bb26657fc5beeb09513a4c0b5462c9110c5cd9fc9d0";
   };
 
   buildType = "catkin";
