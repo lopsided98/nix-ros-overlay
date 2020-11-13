@@ -148,6 +148,12 @@ self: super: {
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
+ bond = self.callPackage ./bond {};
+
+ bond-core = self.callPackage ./bond-core {};
+
+ bondcpp = self.callPackage ./bondcpp {};
+
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
@@ -1004,6 +1010,8 @@ self: super: {
 
  slide-show = self.callPackage ./slide-show {};
 
+ smclib = self.callPackage ./smclib {};
+
  sophus = self.callPackage ./sophus {};
 
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
@@ -1061,6 +1069,8 @@ self: super: {
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
  test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
+
+ test-bond = self.callPackage ./test-bond {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
 

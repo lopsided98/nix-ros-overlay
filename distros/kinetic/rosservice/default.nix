@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genpy, rosgraph, roslib, rosmsg, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-rosservice";
-  version = "1.12.16-r1";
+  version = "1.12.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosservice/1.12.16-1.tar.gz";
-    name = "1.12.16-1.tar.gz";
-    sha256 = "f51d308e5ad0688f4b4e631745811b1306d1ced1d2a6386460f7d18fac108b44";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/kinetic/rosservice/1.12.17-1.tar.gz";
+    name = "1.12.17-1.tar.gz";
+    sha256 = "854047e943366c00b162f55342c562daa82bb1f7f5f5ada34ff89929e929c252";
   };
 
   buildType = "catkin";

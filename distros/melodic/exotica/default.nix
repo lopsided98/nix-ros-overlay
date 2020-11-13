@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, exotica-aico-solver, exotica-collision-scene-fcl, exotica-collision-scene-fcl-latest, exotica-core, exotica-core-task-maps, exotica-ik-solver, exotica-levenberg-marquardt-solver, exotica-ompl-solver, exotica-python, exotica-time-indexed-rrt-connect-solver }:
+{ lib, buildRosPackage, fetchurl, catkin, exotica-aico-solver, exotica-collision-scene-fcl-latest, exotica-core, exotica-core-task-maps, exotica-ik-solver, exotica-levenberg-marquardt-solver, exotica-ompl-solver, exotica-python, exotica-time-indexed-rrt-connect-solver }:
 buildRosPackage {
   pname = "ros-melodic-exotica";
-  version = "5.1.3-r3";
+  version = "6.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica/5.1.3-3.tar.gz";
-    name = "5.1.3-3.tar.gz";
-    sha256 = "a743c4a29edc8eb2f269cf4f39b7a0795998a58ba971e512610ea87c0a3b5efa";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica/6.0.0-1.tar.gz";
+    name = "6.0.0-1.tar.gz";
+    sha256 = "51329f641b9ab7dfa9be74dc0b943aa7d7cde16198ab78a8ccb28e6a7ca13f34";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ exotica-aico-solver exotica-collision-scene-fcl exotica-collision-scene-fcl-latest exotica-core exotica-core-task-maps exotica-ik-solver exotica-levenberg-marquardt-solver exotica-ompl-solver exotica-python exotica-time-indexed-rrt-connect-solver ];
+  propagatedBuildInputs = [ exotica-aico-solver exotica-collision-scene-fcl-latest exotica-core exotica-core-task-maps exotica-ik-solver exotica-levenberg-marquardt-solver exotica-ompl-solver exotica-python exotica-time-indexed-rrt-connect-solver ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
