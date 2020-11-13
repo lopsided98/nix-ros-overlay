@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-velodyne-msgs";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_msgs/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "563078f455430be8e3aad7225c51d74994d12c72b259d6f7c79b585378b269ea";
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_msgs/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "fb3b32e45e68234f8e01121aeee2e8d33966379c3a5ce4c2365e3751ee284e2f";
   };
 
   buildType = "catkin";

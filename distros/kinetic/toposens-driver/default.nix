@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, code-coverage, dynamic-reconfigure, message-runtime, roscpp, roslaunch, rospy, rostest, toposens-msgs, turtlebot3-bringup }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, message-runtime, roscpp, roslaunch, rostest, toposens-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-toposens-driver";
-  version = "2.0.4-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_driver/2.0.4-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_driver/2.1.0-1";
     name = "archive.tar.gz";
-    sha256 = "cb5fe3da603f34d57d1f69150f255490e0a86ed64af9e85ef22965544a06328b";
+    sha256 = "91ba54fcbf9cbdf7485b5c99cf7d448a139365f4835616629019f8578cf26fc5";
   };
 
   buildType = "catkin";
-  checkInputs = [ code-coverage roslaunch rostest ];
-  propagatedBuildInputs = [ dynamic-reconfigure message-runtime roscpp rospy toposens-msgs turtlebot3-bringup ];
+  checkInputs = [ roslaunch rostest ];
+  propagatedBuildInputs = [ dynamic-reconfigure message-runtime roscpp toposens-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

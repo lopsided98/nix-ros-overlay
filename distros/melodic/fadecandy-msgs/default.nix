@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-fadecandy-msgs";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/iron-ox/fadecandy_ros-release/archive/release/melodic/fadecandy_msgs/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "0a3d7a6220a9fcfecdf31ce7463934bc8515a1bc4fc307dc811369d9e76b3a84";
+    url = "https://github.com/iron-ox/fadecandy_ros-release/archive/release/melodic/fadecandy_msgs/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "b765c7e0ec121d981ac2f6a9b91599cad5db173b9d8ad6d64b50f1a53f559d59";
   };
 
   buildType = "catkin";

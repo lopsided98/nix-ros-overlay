@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, nav-msgs, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-map-msgs";
-  version = "1.13.0";
+  version = "1.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_msgs-release/archive/release/kinetic/map_msgs/1.13.0-0.tar.gz";
-    name = "1.13.0-0.tar.gz";
-    sha256 = "d64d8011c9286a5ca31e055bbf201d5fee118e79851feade72e3b6c2faa1b20a";
+    url = "https://github.com/ros-gbp/navigation_msgs-release/archive/release/kinetic/map_msgs/1.14.1-1.tar.gz";
+    name = "1.14.1-1.tar.gz";
+    sha256 = "1c72c777862d13074551becfefdbfb3a7dfcc01f49d548693652fe25e139ec9a";
   };
 
   buildType = "catkin";

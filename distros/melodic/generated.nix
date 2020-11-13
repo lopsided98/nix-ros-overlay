@@ -902,6 +902,8 @@ self: super: {
 
  exotica-val-description = self.callPackage ./exotica-val-description {};
 
+ extest = self.callPackage ./extest {};
+
  face-detector = self.callPackage ./face-detector {};
 
  fadecandy-driver = self.callPackage ./fadecandy-driver {};
@@ -2900,6 +2902,8 @@ self: super: {
 
  robotis-manipulator = self.callPackage ./robotis-manipulator {};
 
+ robotont-description = self.callPackage ./robotont-description {};
+
  rocon-app-manager-msgs = self.callPackage ./rocon-app-manager-msgs {};
 
  rocon-bubble-icons = self.callPackage ./rocon-bubble-icons {};
@@ -3183,6 +3187,8 @@ self: super: {
  rostate-machine = self.callPackage ./rostate-machine {};
 
  rostest = self.callPackage ./rostest {};
+
+ rostest-node-interface-validation = self.callPackage ./rostest-node-interface-validation {};
 
  rosthrottle = self.callPackage ./rosthrottle {};
 
@@ -3653,6 +3659,8 @@ self: super: {
  topic-tools = self.callPackage ./topic-tools {};
 
  toposens = self.callPackage ./toposens {};
+
+ toposens-bringup = self.callPackage ./toposens-bringup {};
 
  toposens-description = self.callPackage ./toposens-description {};
 

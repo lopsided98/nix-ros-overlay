@@ -148,6 +148,12 @@ self: super: {
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
+ bond = self.callPackage ./bond {};
+
+ bond-core = self.callPackage ./bond-core {};
+
+ bondcpp = self.callPackage ./bondcpp {};
+
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
@@ -229,6 +235,10 @@ self: super: {
  dolly-ignition = self.callPackage ./dolly-ignition {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
+
+ dsr-description2 = self.callPackage ./dsr-description2 {};
+
+ dsr-msgs2 = self.callPackage ./dsr-msgs2 {};
 
  dummy-map-server = self.callPackage ./dummy-map-server {};
 
@@ -1032,6 +1042,10 @@ self: super: {
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
+ smac-planner = self.callPackage ./smac-planner {};
+
+ smclib = self.callPackage ./smclib {};
+
  sophus = self.callPackage ./sophus {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
@@ -1093,6 +1107,8 @@ self: super: {
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
  test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
+
+ test-bond = self.callPackage ./test-bond {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
 

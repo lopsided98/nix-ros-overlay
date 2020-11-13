@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-exotica-quadrotor-dynamics-solver";
-  version = "5.1.3-r3";
+  version = "6.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_quadrotor_dynamics_solver/5.1.3-3.tar.gz";
-    name = "5.1.3-3.tar.gz";
-    sha256 = "542fde5cde5a4465137774f6cf527950109d670672971d690e89fbf4e65ccf9f";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_quadrotor_dynamics_solver/6.0.0-1.tar.gz";
+    name = "6.0.0-1.tar.gz";
+    sha256 = "dc8d2df841550cde9237f892004ad4182595c64b9eb142d5329176c5f0102509";
   };
 
   buildType = "catkin";

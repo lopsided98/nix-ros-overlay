@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, exotica-core }:
 buildRosPackage {
   pname = "ros-melodic-exotica-levenberg-marquardt-solver";
-  version = "5.1.3-r3";
+  version = "6.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_levenberg_marquardt_solver/5.1.3-3.tar.gz";
-    name = "5.1.3-3.tar.gz";
-    sha256 = "2782ec425a5659acb31d3492e8999a765fd7654e35b2fd41361018e0e58587c6";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_levenberg_marquardt_solver/6.0.0-1.tar.gz";
+    name = "6.0.0-1.tar.gz";
+    sha256 = "b13b9c12f8257e8df3b5f27987bb429b7f8cf40e408a39009ea2b3a91b6d246f";
   };
 
   buildType = "catkin";
