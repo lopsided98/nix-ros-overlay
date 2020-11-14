@@ -19,18 +19,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '' + postPatch;
   });
 
-  aws-ros2-common = rosSuper.aws-ros2-common.overrideAttrs ({
-    patches ? [], ...
-  }: {
-     patches = patches ++ [
-      (self.fetchpatch {
-        url = "https://github.com/aws-robotics/utils-ros2/commit/d782a734e5937134397592f9b5aa757353659362.patch";
-        sha256 = "01bgkd8wbnkcnhz9p88lhnpk0wdxg4lw8m48bplb7gv15pyahp1d";
-        stripLen = 1;
-      })
-    ];
-  });
-
   cv-bridge = (patchBoostPython rosSuper.cv-bridge).overrideAttrs ({
     patches ? [],
     propagatedBuildInputs ? [], ...
