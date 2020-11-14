@@ -66,10 +66,16 @@ let
     cob-light = patchBoostSignals rosSuper.cob-light;
 
     cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
-      cmakeFlags ? [], ...
+      cmakeFlags ? [], preConfigure ? "", ...
     }: {
       # Tries to download something with maven
       cmakeFlags = [ "-DBUILD_IDLC=OFF" ];
+
+      # Fix running ddsconf from within the build directory (probably an RPATH
+      # issue)
+      preConfigure = preConfigure + ''
+        export LD_LIBRARY_PATH="$(pwd)/build/lib"
+      '';
     });
 
     dynamic-reconfigure = rosSuper.dynamic-reconfigure.overrideAttrs ({

@@ -7,14 +7,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "0c7ivb99jjfimxb28chlc3pjnmzdz88f5abkh83x846m5k461bf4";
   };
 
-  cyclonedds = rosSuper.cyclonedds.overrideAttrs ({ preConfigure ? "", ... }: {
-    # Fix running ddsconf from within the build directory (probably an RPATH
-    # issue)
-    preConfigure = preConfigure + ''
-      export LD_LIBRARY_PATH="$(pwd)/build/lib"
-    '';
-  });
-
   gazebo = self.gazebo_11;
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
