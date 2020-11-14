@@ -29,6 +29,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  python-orocos-kdl = rosSuper.python-orocos-kdl.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/orocos/orocos_kinematics_dynamics/commit/d8d087ad0e1c41f3489d1a255ebfa27b5695196b.patch";
+      sha256 = "0qyskqxv4a982kidzzyh34xj2iiw791ipbbl29jg4qb4l21xwqlg";
+      stripLen = 1;
+    }) ];
+  });
+
   rosfmt = patchVendorUrl rosSuper.rosfmt {
     url = "https://github.com/fmtlib/fmt/releases/download/6.0.0/fmt-6.0.0.zip";
     sha256 = "0h148anbaqgch6n69pxsvs1c9wmykgd052wmzgdia7qpz8w6p8dl";

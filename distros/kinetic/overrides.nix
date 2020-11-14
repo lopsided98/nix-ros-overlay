@@ -96,6 +96,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
   # Ubuntu versions did not have one. We don't need to use this.
   inherit (self) opencv3;
 
+  python-orocos-kdl = rosSuper.python-orocos-kdl.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/orocos/orocos_kinematics_dynamics/commit/25c264c759bd29a0a5c78f1b1ab02645543ddccb.patch";
+      sha256 = "0gl9ynicblfbjc656i5xvcvg40zhn20m2k3yxdajrg16z568b3zs";
+      stripLen = 1;
+    }) ];
+  });
+
   realsense-camera = rosSuper.realsense-camera.overrideAttrs ({
     buildInputs ? [], ...
   }: {
