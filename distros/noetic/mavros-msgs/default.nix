@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geographic-msgs, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mavros-msgs";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/mavros_msgs/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "4e2bea6d3309a4294fd1a651af3efe20d1b0f5cb136d098fe4f424ff2205cb58";
+    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/mavros_msgs/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "919987160b2f1ec66d982a1896fcc57e4b048d2e6d0d74d63f40d62494dea966";
   };
 
   buildType = "catkin";

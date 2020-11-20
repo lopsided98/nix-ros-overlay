@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, pythonPackages, roslib, rospy, rosunit, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-rospy-message-converter";
-  version = "0.5.4-r1";
+  version = "0.5.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/rospy_message_converter-release/archive/release/kinetic/rospy_message_converter/0.5.4-1.tar.gz";
-    name = "0.5.4-1.tar.gz";
-    sha256 = "8b0bca7ee697ad4812e674546407c24f07aed5f99566a9099b8b54df596cb352";
+    url = "https://github.com/uos-gbp/rospy_message_converter-release/archive/release/kinetic/rospy_message_converter/0.5.5-1.tar.gz";
+    name = "0.5.5-1.tar.gz";
+    sha256 = "b408446cb6167cb0c3d83ea8cec046971ac82ad84a81baa55057d3f12c094661";
   };
 
   buildType = "catkin";

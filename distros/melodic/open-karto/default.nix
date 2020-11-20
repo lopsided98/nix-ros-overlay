@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin }:
 buildRosPackage {
   pname = "ros-melodic-open-karto";
-  version = "1.2.2-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/open_karto-release/archive/release/melodic/open_karto/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "1e6c4eb4da8553c8f14b62ec29b1fa0ec2eaf88edce2b75c668ebda566e6e27c";
+    url = "https://github.com/ros-gbp/open_karto-release/archive/release/melodic/open_karto/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "9441edebe6265db0419ca9fca4e85578413ff700953145d4d22fe8d2202a0c92";
   };
 
   buildType = "catkin";

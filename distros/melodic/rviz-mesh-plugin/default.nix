@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mesh-msgs, qt5, roscpp, rviz, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-rviz-mesh-plugin";
-  version = "1.0.0-r2";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/rviz_mesh_plugin/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "1ac3536d778bcff8100d72b5038947172f31cc12c6e88026f9f2acf06f289ed0";
+    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/rviz_mesh_plugin/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "b033a57f17fdb501834a309610e3cfffc834892a78b9715f6e4127831afe2fe7";
   };
 
   buildType = "catkin";

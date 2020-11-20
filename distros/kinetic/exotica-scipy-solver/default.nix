@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-scipy-solver";
-  version = "5.1.3-r1";
+  version = "6.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_scipy_solver/5.1.3-1.tar.gz";
-    name = "5.1.3-1.tar.gz";
-    sha256 = "16aefbee63612dcae3bf9f777d50ff9aa94983289a9eec850b3072e572ab8096";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_scipy_solver/6.0.1-1.tar.gz";
+    name = "6.0.1-1.tar.gz";
+    sha256 = "d706e19b9ecc4ee0dff144b5d214916ed6e89b03205d4789c9e0e99a0a9d73da";
   };
 
   buildType = "catkin";

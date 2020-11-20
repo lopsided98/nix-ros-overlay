@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-ik-solver";
-  version = "5.1.3-r1";
+  version = "6.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_ik_solver/5.1.3-1.tar.gz";
-    name = "5.1.3-1.tar.gz";
-    sha256 = "6c98b087038486b89e7c314bac2bd996a5aea42be7cd547d833d511a6274e305";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_ik_solver/6.0.1-1.tar.gz";
+    name = "6.0.1-1.tar.gz";
+    sha256 = "6190b27a782b7ee3879907e4d384c7d72e5eab1cd235b66881219070fa8b6bec";
   };
 
   buildType = "catkin";
@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Pseudo-inverse unconstrained end-pose solver'';
+    description = ''Regularised and weighted pseudo-inverse unconstrained end-pose solver'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

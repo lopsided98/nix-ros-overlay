@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, nav2-common, navigation2, slam-toolbox }:
 buildRosPackage {
   pname = "ros-foxy-nav2-bringup";
-  version = "0.4.3-r1";
+  version = "0.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_bringup/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "07ecfe7c326dc04a43a9e618e88547f5511850e45f74450cf6ae33d316e3d2b7";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_bringup/0.4.5-1.tar.gz";
+    name = "0.4.5-1.tar.gz";
+    sha256 = "6b5d1f7479ce8951e3a38bb7ee37f3de81d81d0886636558c33247d44ffa1c51";
   };
 
   buildType = "ament_cmake";

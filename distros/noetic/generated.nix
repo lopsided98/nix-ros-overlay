@@ -52,9 +52,27 @@ self: super: {
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
 
+ autoware-can-msgs = self.callPackage ./autoware-can-msgs {};
+
+ autoware-config-msgs = self.callPackage ./autoware-config-msgs {};
+
+ autoware-external-msgs = self.callPackage ./autoware-external-msgs {};
+
+ autoware-lanelet2-msgs = self.callPackage ./autoware-lanelet2-msgs {};
+
+ autoware-map-msgs = self.callPackage ./autoware-map-msgs {};
+
+ autoware-msgs = self.callPackage ./autoware-msgs {};
+
+ autoware-system-msgs = self.callPackage ./autoware-system-msgs {};
+
  auv-msgs = self.callPackage ./auv-msgs {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
+
+ backward-ros = self.callPackage ./backward-ros {};
+
+ bagger = self.callPackage ./bagger {};
 
  baldor = self.callPackage ./baldor {};
 
@@ -73,6 +91,16 @@ self: super: {
  bondpy = self.callPackage ./bondpy {};
 
  boost-sml = self.callPackage ./boost-sml {};
+
+ bota-device-driver = self.callPackage ./bota-device-driver {};
+
+ bota-driver = self.callPackage ./bota-driver {};
+
+ bota-node = self.callPackage ./bota-node {};
+
+ bota-signal-handler = self.callPackage ./bota-signal-handler {};
+
+ bota-worker = self.callPackage ./bota-worker {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
 
@@ -364,6 +392,8 @@ self: super: {
 
  ddynamic-reconfigure = self.callPackage ./ddynamic-reconfigure {};
 
+ ddynamic-reconfigure-python = self.callPackage ./ddynamic-reconfigure-python {};
+
  delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
 
  delphi-mrr-msgs = self.callPackage ./delphi-mrr-msgs {};
@@ -516,6 +546,48 @@ self: super: {
 
  executive-smach-visualization = self.callPackage ./executive-smach-visualization {};
 
+ exotica = self.callPackage ./exotica {};
+
+ exotica-aico-solver = self.callPackage ./exotica-aico-solver {};
+
+ exotica-cartpole-dynamics-solver = self.callPackage ./exotica-cartpole-dynamics-solver {};
+
+ exotica-collision-scene-fcl-latest = self.callPackage ./exotica-collision-scene-fcl-latest {};
+
+ exotica-core = self.callPackage ./exotica-core {};
+
+ exotica-core-task-maps = self.callPackage ./exotica-core-task-maps {};
+
+ exotica-ddp-solver = self.callPackage ./exotica-ddp-solver {};
+
+ exotica-double-integrator-dynamics-solver = self.callPackage ./exotica-double-integrator-dynamics-solver {};
+
+ exotica-dynamics-solvers = self.callPackage ./exotica-dynamics-solvers {};
+
+ exotica-examples = self.callPackage ./exotica-examples {};
+
+ exotica-ik-solver = self.callPackage ./exotica-ik-solver {};
+
+ exotica-ilqg-solver = self.callPackage ./exotica-ilqg-solver {};
+
+ exotica-ilqr-solver = self.callPackage ./exotica-ilqr-solver {};
+
+ exotica-levenberg-marquardt-solver = self.callPackage ./exotica-levenberg-marquardt-solver {};
+
+ exotica-ompl-control-solver = self.callPackage ./exotica-ompl-control-solver {};
+
+ exotica-ompl-solver = self.callPackage ./exotica-ompl-solver {};
+
+ exotica-pendulum-dynamics-solver = self.callPackage ./exotica-pendulum-dynamics-solver {};
+
+ exotica-pinocchio-dynamics-solver = self.callPackage ./exotica-pinocchio-dynamics-solver {};
+
+ exotica-quadrotor-dynamics-solver = self.callPackage ./exotica-quadrotor-dynamics-solver {};
+
+ exotica-scipy-solver = self.callPackage ./exotica-scipy-solver {};
+
+ exotica-time-indexed-rrt-connect-solver = self.callPackage ./exotica-time-indexed-rrt-connect-solver {};
+
  exotica-val-description = self.callPackage ./exotica-val-description {};
 
  fadecandy-driver = self.callPackage ./fadecandy-driver {};
@@ -632,6 +704,8 @@ self: super: {
 
  graph-msgs = self.callPackage ./graph-msgs {};
 
+ grasping-msgs = self.callPackage ./grasping-msgs {};
+
  gripper-action-controller = self.callPackage ./gripper-action-controller {};
 
  handeye = self.callPackage ./handeye {};
@@ -651,6 +725,8 @@ self: super: {
  ifm3d = self.callPackage ./ifm3d {};
 
  image-common = self.callPackage ./image-common {};
+
+ image-exposure-msgs = self.callPackage ./image-exposure-msgs {};
 
  image-geometry = self.callPackage ./image-geometry {};
 
@@ -685,6 +761,12 @@ self: super: {
  imu-tools = self.callPackage ./imu-tools {};
 
  imu-transformer = self.callPackage ./imu-transformer {};
+
+ industrial-msgs = self.callPackage ./industrial-msgs {};
+
+ industrial-robot-status-controller = self.callPackage ./industrial-robot-status-controller {};
+
+ industrial-robot-status-interface = self.callPackage ./industrial-robot-status-interface {};
 
  interactive-marker-tutorials = self.callPackage ./interactive-marker-tutorials {};
 
@@ -1110,6 +1192,10 @@ self: super: {
 
  nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
 
+ novatel-oem7-driver = self.callPackage ./novatel-oem7-driver {};
+
+ novatel-oem7-msgs = self.callPackage ./novatel-oem7-msgs {};
+
  obj-to-pointcloud = self.callPackage ./obj-to-pointcloud {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
@@ -1220,6 +1306,12 @@ self: super: {
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
+ pointgrey-camera-description = self.callPackage ./pointgrey-camera-description {};
+
+ pointgrey-camera-driver = self.callPackage ./pointgrey-camera-driver {};
+
+ points-preprocessor = self.callPackage ./points-preprocessor {};
+
  polled-camera = self.callPackage ./polled-camera {};
 
  pose-base-controller = self.callPackage ./pose-base-controller {};
@@ -1312,6 +1404,10 @@ self: super: {
 
  robot = self.callPackage ./robot {};
 
+ robot-calibration = self.callPackage ./robot-calibration {};
+
+ robot-calibration-msgs = self.callPackage ./robot-calibration-msgs {};
+
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-navigation = self.callPackage ./robot-navigation {};
@@ -1321,6 +1417,24 @@ self: super: {
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
  roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
+
+ rokubimini = self.callPackage ./rokubimini {};
+
+ rokubimini-bus-manager = self.callPackage ./rokubimini-bus-manager {};
+
+ rokubimini-description = self.callPackage ./rokubimini-description {};
+
+ rokubimini-ethercat = self.callPackage ./rokubimini-ethercat {};
+
+ rokubimini-examples = self.callPackage ./rokubimini-examples {};
+
+ rokubimini-factory = self.callPackage ./rokubimini-factory {};
+
+ rokubimini-manager = self.callPackage ./rokubimini-manager {};
+
+ rokubimini-msgs = self.callPackage ./rokubimini-msgs {};
+
+ rokubimini-serial = self.callPackage ./rokubimini-serial {};
 
  ros = self.callPackage ./ros {};
 
@@ -1698,6 +1812,8 @@ self: super: {
 
  stage-ros = self.callPackage ./stage-ros {};
 
+ statistics-msgs = self.callPackage ./statistics-msgs {};
+
  std-msgs = self.callPackage ./std-msgs {};
 
  std-srvs = self.callPackage ./std-srvs {};
@@ -1746,6 +1862,8 @@ self: super: {
 
  swri-yaml-util = self.callPackage ./swri-yaml-util {};
 
+ tablet-socket-msgs = self.callPackage ./tablet-socket-msgs {};
+
  teb-local-planner = self.callPackage ./teb-local-planner {};
 
  teleop-tools = self.callPackage ./teleop-tools {};
@@ -1789,6 +1907,22 @@ self: super: {
  tile-map = self.callPackage ./tile-map {};
 
  topic-tools = self.callPackage ./topic-tools {};
+
+ toposens = self.callPackage ./toposens {};
+
+ toposens-bringup = self.callPackage ./toposens-bringup {};
+
+ toposens-description = self.callPackage ./toposens-description {};
+
+ toposens-driver = self.callPackage ./toposens-driver {};
+
+ toposens-markers = self.callPackage ./toposens-markers {};
+
+ toposens-msgs = self.callPackage ./toposens-msgs {};
+
+ toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
+
+ toposens-sync = self.callPackage ./toposens-sync {};
 
  track-odometry = self.callPackage ./track-odometry {};
 
@@ -1878,6 +2012,8 @@ self: super: {
 
  uuid-msgs = self.callPackage ./uuid-msgs {};
 
+ vector-map-msgs = self.callPackage ./vector-map-msgs {};
+
  velocity-controllers = self.callPackage ./velocity-controllers {};
 
  velodyne = self.callPackage ./velodyne {};
@@ -1921,6 +2057,8 @@ self: super: {
  warehouse-ros = self.callPackage ./warehouse-ros {};
 
  webots-ros = self.callPackage ./webots-ros {};
+
+ wfov-camera-msgs = self.callPackage ./wfov-camera-msgs {};
 
  wiimote = self.callPackage ./wiimote {};
 

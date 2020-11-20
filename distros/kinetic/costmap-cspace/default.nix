@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-cspace-msgs, geometry-msgs, laser-geometry, nav-msgs, neonavigation-common, roscpp, roslint, rostest, sensor-msgs, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-kinetic-costmap-cspace";
-  version = "0.10.3-r1";
+  version = "0.10.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/costmap_cspace/0.10.3-1.tar.gz";
-    name = "0.10.3-1.tar.gz";
-    sha256 = "170ee897d6538d08cdb47cb25443b288d61d4c832b80996ab15bba16204e097c";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/kinetic/costmap_cspace/0.10.4-1.tar.gz";
+    name = "0.10.4-1.tar.gz";
+    sha256 = "802ab3af878158fc817fcadc001ddb2026871bf0fe8c9dfdc9ad60d9f48eb095";
   };
 
   buildType = "catkin";

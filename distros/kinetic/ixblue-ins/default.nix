@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ixblue-ins-driver, ixblue-ins-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ixblue-ins";
-  version = "0.1.4-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ixblue/ixblue_ins_stdbin_driver-release/archive/release/kinetic/ixblue_ins/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "20b054a6ead40117a92e189b3e2e003a0357870bc5d8e68ca2f8d42d0de68d86";
+    url = "https://github.com/ixblue/ixblue_ins_stdbin_driver-release/archive/release/kinetic/ixblue_ins/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "9a07840d6689ad23623fa8665ef092a1b1246ae8a96dd499cf21b18bac68e4d2";
   };
 
   buildType = "catkin";

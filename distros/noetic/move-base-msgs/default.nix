@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-noetic-move-base-msgs";
-  version = "1.14.0-r1";
+  version = "1.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_msgs-release/archive/release/noetic/move_base_msgs/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "f7778f0c15c1e93642f7f3b52abb03a9072bece78530660576a93bc2a354671c";
+    url = "https://github.com/ros-gbp/navigation_msgs-release/archive/release/noetic/move_base_msgs/1.14.1-1.tar.gz";
+    name = "1.14.1-1.tar.gz";
+    sha256 = "a3cfcbeed9a83959c3a7b12abf8737062bee94c627d1a961be4ff589a4c4ad7a";
   };
 
   buildType = "catkin";

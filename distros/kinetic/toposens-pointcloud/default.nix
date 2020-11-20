@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-runtime, pcl-ros, robot-state-publisher, roscpp, roslaunch, rospy, rostest, rviz, tf2, tf2-geometry-msgs, tf2-ros, toposens-description, toposens-driver, toposens-msgs, turtlebot3-teleop, visualization-msgs, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-runtime, pcl-ros, roscpp, roslaunch, rostest, tf2, tf2-geometry-msgs, toposens-driver, toposens-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-toposens-pointcloud";
-  version = "2.0.4-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_pointcloud/2.0.4-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_pointcloud/2.1.0-1";
     name = "archive.tar.gz";
-    sha256 = "f8d0e200492ef0209a9b61ed19b370dbcdf34c75ed9e32f22b4b020f309007d3";
+    sha256 = "740c24224e2254fddfb065089704c834ed42867a6e60286debd82eb811df9e54";
   };
 
   buildType = "catkin";
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ geometry-msgs message-runtime pcl-ros robot-state-publisher roscpp rospy rviz tf2 tf2-geometry-msgs tf2-ros toposens-description toposens-driver toposens-msgs turtlebot3-teleop visualization-msgs xacro ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime pcl-ros roscpp tf2 tf2-geometry-msgs toposens-driver toposens-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

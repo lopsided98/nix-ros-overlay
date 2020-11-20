@@ -160,6 +160,8 @@ self: super: {
 
  aws-common = self.callPackage ./aws-common {};
 
+ aws-robomaker-simulation-ros-pkgs = self.callPackage ./aws-robomaker-simulation-ros-pkgs {};
+
  aws-ros1-common = self.callPackage ./aws-ros1-common {};
 
  axis-camera = self.callPackage ./axis-camera {};
@@ -1822,6 +1824,8 @@ self: super: {
 
  mesh-msgs = self.callPackage ./mesh-msgs {};
 
+ mesh-msgs-conversions = self.callPackage ./mesh-msgs-conversions {};
+
  mesh-msgs-hdf5 = self.callPackage ./mesh-msgs-hdf5 {};
 
  mesh-msgs-transform = self.callPackage ./mesh-msgs-transform {};
@@ -2358,6 +2362,12 @@ self: super: {
 
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
+ pal-carbon-collector = self.callPackage ./pal-carbon-collector {};
+
+ pal-statistics = self.callPackage ./pal-statistics {};
+
+ pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
+
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
 
  parameter-assertions = self.callPackage ./parameter-assertions {};
@@ -2854,6 +2864,8 @@ self: super: {
 
  ridgeback-viz = self.callPackage ./ridgeback-viz {};
 
+ robomaker-simulation-msgs = self.callPackage ./robomaker-simulation-msgs {};
+
  robosense-description = self.callPackage ./robosense-description {};
 
  robosense-gazebo-plugins = self.callPackage ./robosense-gazebo-plugins {};
@@ -2894,11 +2906,15 @@ self: super: {
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
+ robot-statemachine = self.callPackage ./robot-statemachine {};
+
  robot-upstart = self.callPackage ./robot-upstart {};
 
  roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
 
  robotis-manipulator = self.callPackage ./robotis-manipulator {};
+
+ robotont-description = self.callPackage ./robotont-description {};
 
  rocon-app-manager-msgs = self.callPackage ./rocon-app-manager-msgs {};
 
@@ -3184,6 +3200,8 @@ self: super: {
 
  rostest = self.callPackage ./rostest {};
 
+ rostest-node-interface-validation = self.callPackage ./rostest-node-interface-validation {};
+
  rosthrottle = self.callPackage ./rosthrottle {};
 
  rostime = self.callPackage ./rostime {};
@@ -3339,6 +3357,16 @@ self: super: {
  rslidar-msgs = self.callPackage ./rslidar-msgs {};
 
  rslidar-pointcloud = self.callPackage ./rslidar-pointcloud {};
+
+ rsm-additions = self.callPackage ./rsm-additions {};
+
+ rsm-core = self.callPackage ./rsm-core {};
+
+ rsm-msgs = self.callPackage ./rsm-msgs {};
+
+ rsm-rqt-plugins = self.callPackage ./rsm-rqt-plugins {};
+
+ rsm-rviz-plugins = self.callPackage ./rsm-rviz-plugins {};
 
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
@@ -3653,6 +3681,8 @@ self: super: {
  topic-tools = self.callPackage ./topic-tools {};
 
  toposens = self.callPackage ./toposens {};
+
+ toposens-bringup = self.callPackage ./toposens-bringup {};
 
  toposens-description = self.callPackage ./toposens-description {};
 
