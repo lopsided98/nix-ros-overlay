@@ -22,15 +22,15 @@
   "author": "Ben Wolsieffer",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^1.2.6",
     "@actions/exec": "^1.0.4",
     "@actions/io": "^1.0.2",
     "@types/node-fetch": "^2.5.7",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "p-limit": "^2.3.0"
   },
   "devDependencies": {
-    "@types/node": "^12.12.53",
+    "@types/node": "^12.19.6",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "@zeit/ncc": "^0.20.5",
