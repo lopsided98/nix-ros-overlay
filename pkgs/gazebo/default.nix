@@ -4,11 +4,11 @@
 , ffmpeg, ignition, ignition-cmake ? ignition.cmake0
 , ignition-common ? ignition.common, ignition-math ? ignition.math4
 , ignition-transport ? ignition.transport, ignition-msgs ? ignition.msgs
-, ignition-fuel-tools ? ignition.fuel-tools
+, ignition-fuel-tools ? ignition.fuel-tools, breakpointHook
 
 , bullet, withBulletEngineSupport ? false
-, version ? "11.0.0"
-, srcSha256 ? "1xc631ba57xnvivf769vvr6k7ib06krybb9ycqirmxzvsqz3x0iw"
+, version ? "11.1.0"
+, srcSha256 ? "1gj1apryvlnr0wn950r57019k5379ixkqagwp8igd5k7ld1p6a1f"
 , ... }: with lib;
 
 mkDerivation rec {
@@ -37,7 +37,7 @@ mkDerivation rec {
 
   cmakeFlags = [ "-DUSE_HOST_CFLAGS=False" ];
 
-  nativeBuildInputs = [ cmake pkgconfig ronn ];
+  nativeBuildInputs = [ cmake pkgconfig ronn breakpointHook ];
 
   buildInputs = [
     libGL
