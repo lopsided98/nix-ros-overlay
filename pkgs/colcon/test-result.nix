@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "colcon-test-result";
-  version = "0.3.6";
+  version = "0.3.8";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "0l7cfl77fb7cv79f0b5xx1qw527yrb70qcgda3z7sx4npdlb0i7l";
+    sha256 = "1lvfqd3yfqnbjc3hgpc6ikphs5823r7s1rr1ywfrzpavd9qjalma";
   };
 
   propagatedBuildInputs = [ colcon-core ];
