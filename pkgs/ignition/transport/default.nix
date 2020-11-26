@@ -2,8 +2,8 @@
 , ignition-math ? ignition.math, ignition-msgs ? ignition.msgs, protobuf
 , libuuid, sqlite, cppzmq, zeromq
 , majorVersion ? "8"
-, version ? "8.0.0"
-, srcSha256 ? "01paq94l3xnh6zzanllis3yzxylzrd1dax8q9i9dv5qab58723ia"
+, version ? "8.1.0"
+, srcSha256 ? "124zdc5mvryjkafc2iq3xmsiagv8mlgyknhwzmi3i7g5abmr58bk"
 , ... }:
 
 stdenv.mkDerivation rec {
