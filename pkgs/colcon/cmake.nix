@@ -3,11 +3,11 @@
 
 buildPythonPackage rec {
   pname = "colcon-cmake";
-  version = "0.2.13";
+  version = "0.2.26";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1xslh52d91zs0vsa10himckjh2frq54awxq6n68k6jv7h6yiyb7m";
+    sha256 = "17rl4jsxc43kjri3kdsyqbl73xchj6zj3j4m73yfasvn2bl7y8js";
   };
 
   postPatch = ''
