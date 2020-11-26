@@ -2,8 +2,8 @@
 , ignition-cmake ? ignition.cmake, ignition-common ? ignition.common, tinyxml-2
 , curl, jsoncpp, libyaml, libzip
 , majorVersion ? "4"
-, version ? "4.1.0"
-, srcSha256 ? "081chdfk00md2p24kzp5isi9hqhf13hm87pf7d2341bjylf1949v"
+, version ? "4.2.1"
+, srcSha256 ? "1nkkg70z2b7b8aa5sk9hd0ggm0rymrynzn8rfkv82866nkkxc83i"
 , ... }:
 
 stdenv.mkDerivation rec {
