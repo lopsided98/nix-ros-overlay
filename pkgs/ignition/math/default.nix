@@ -1,7 +1,7 @@
 { stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
 , majorVersion ? "6"
-, version ? "6.4.0"
-, srcSha256 ? "0fms3rl9lcyfjlqkrwkzv3zabmpvbwjnab79pa9hvrfarh255bb8"
+, version ? "6.7.0"
+, srcSha256 ? "0hyhlqgjx3yrmk1fgp1brgq2lk8l26sihn8yfmm0garbxi70zspb"
 , ... }:
 
 stdenv.mkDerivation rec {
