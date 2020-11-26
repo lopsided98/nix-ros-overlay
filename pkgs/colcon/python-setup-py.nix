@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "colcon-python-setup-py";
-  version = "0.2.2";
+  version = "0.2.7";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1a9x6rm5icwcx0k4i36vfc3b8sl6hsd2d98j23di4yz0fcdb4dx6";
+    sha256 = "0ba1vq5sm2rbddasl85qx5mi7chcz8s1drnr0rvpj0a3bh497hpf";
   };
 
   propagatedBuildInputs = [ colcon-core setuptools ];
