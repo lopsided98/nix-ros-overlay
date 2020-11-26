@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, rcl, rclc, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, lifecycle-msgs, rcl, rclc, rclc-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-rclc-examples";
-  version = "0.1.2-r2";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/micro-ROS/rclc-release/archive/release/dashing/rclc_examples/0.1.2-2.tar.gz";
-    name = "0.1.2-2.tar.gz";
-    sha256 = "e8a178fb546277476529284265f9e1127577cffa05cb2b7a1be2c74bdfd7bc6b";
+    url = "https://github.com/micro-ROS/rclc-release/archive/release/dashing/rclc_examples/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "9b3c74254f496e3874189f8322c98054c3f5112cf12a600cb4b5203a996f649f";
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ rcl rclc std-msgs ];
+  propagatedBuildInputs = [ lifecycle-msgs rcl rclc rclc-lifecycle std-msgs ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

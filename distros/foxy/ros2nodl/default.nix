@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-index-python, ament-lint-auto, ament-lint-common, ament-mypy, nodl-python, python3Packages, pythonPackages, ros2cli, ros2pkg, ros2run }:
 buildRosPackage {
   pname = "ros-foxy-ros2nodl";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nodl-release/archive/release/foxy/ros2nodl/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "1795ce9dfaafc7c82bedbeaa542909cb7c0c893ca4d9458d028528e993dac7ad";
+    url = "https://github.com/ros2-gbp/nodl-release/archive/release/foxy/ros2nodl/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "f500f0c85d048581b793e1cec2162f4fe2be349dacc67aef364fa4048bf8ff65";
   };
 
   buildType = "ament_python";
@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''CLI tools for NoDL files.'';
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

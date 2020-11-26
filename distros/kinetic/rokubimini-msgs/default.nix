@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rokubimini-msgs";
-  version = "0.5.6-r1";
+  version = "0.5.8-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/kinetic/rokubimini_msgs/0.5.6-1";
+    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/kinetic/rokubimini_msgs/0.5.8-1";
     name = "archive.tar.gz";
-    sha256 = "6c5ed68eafad7c83b775ef91a7e20e1d8c24910a9c9924b63d7ff01abba33906";
+    sha256 = "3d46f9b7af38013a92652422d43c399609c2c13f12209cd2d785bd3f0fde4bce";
   };
 
   buildType = "catkin";

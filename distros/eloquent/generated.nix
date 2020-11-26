@@ -740,6 +740,8 @@ self: super: {
 
  rclc-examples = self.callPackage ./rclc-examples {};
 
+ rclc-lifecycle = self.callPackage ./rclc-lifecycle {};
+
  rclcpp = self.callPackage ./rclcpp {};
 
  rclcpp-action = self.callPackage ./rclcpp-action {};

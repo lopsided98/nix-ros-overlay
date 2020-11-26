@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, python3Packages }:
 buildRosPackage {
   pname = "ros-dashing-ament-cmake-nose";
-  version = "0.7.5-r1";
+  version = "0.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_nose/0.7.5-1.tar.gz";
-    name = "0.7.5-1.tar.gz";
-    sha256 = "476e7e71dfe6381172ff6df3df7097ce48ce6f44788ea4b2991f4a31d15855f9";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/dashing/ament_cmake_nose/0.7.6-1.tar.gz";
+    name = "0.7.6-1.tar.gz";
+    sha256 = "08616a6e0395543dc95a9707fd58129fc6b7393123036765617b3e5d40845c87";
   };
 
   buildType = "ament_cmake";

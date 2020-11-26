@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, hdf5 }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, lvr2 }:
 buildRosPackage {
   pname = "ros-melodic-hdf5-map-io";
-  version = "1.0.0-r2";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/hdf5_map_io/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "4b25fc9823b115e2ffddf5f274ec81719b69c4b1761564c11072e0cdde9514fd";
+    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/hdf5_map_io/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "5805cfb79152f8350b95260d2eec609ac0292fe571e89f62cdc656454d84f819";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ boost hdf5 ];
+  propagatedBuildInputs = [ boost lvr2 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

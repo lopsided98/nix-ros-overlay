@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-test, ament-lint-auto, ament-lint-common, ros2cli, sros2 }:
 buildRosPackage {
   pname = "ros-foxy-sros2-cmake";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sros2-release/archive/release/foxy/sros2_cmake/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "be19a8c14f292ae8f121abeecb64339cdebfbcfb8e9d618827a74b8556c29568";
+    url = "https://github.com/ros2-gbp/sros2-release/archive/release/foxy/sros2_cmake/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "438eda96901566a1a9cdb98acb7405951aa00685792c0c820e7ca0fd0c4cc6c6";
   };
 
   buildType = "ament_cmake";

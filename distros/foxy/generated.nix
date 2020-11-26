@@ -762,6 +762,8 @@ self: super: {
 
  rclc-examples = self.callPackage ./rclc-examples {};
 
+ rclc-lifecycle = self.callPackage ./rclc-lifecycle {};
+
  rclcpp = self.callPackage ./rclcpp {};
 
  rclcpp-action = self.callPackage ./rclcpp-action {};
@@ -1225,6 +1227,10 @@ self: super: {
  vision-opencv = self.callPackage ./vision-opencv {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
+
+ vrxperience-bridge = self.callPackage ./vrxperience-bridge {};
+
+ vrxperience-msgs = self.callPackage ./vrxperience-msgs {};
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 

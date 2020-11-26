@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rc-common-msgs, rcdiscover, roscpp, std-srvs, tf, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rc-tagdetect-client";
-  version = "3.0.5-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_tagdetect_client/3.0.5-1.tar.gz";
-    name = "3.0.5-1.tar.gz";
-    sha256 = "c30bbc806b4f8ca80a37c58d99842db1207f7ef4e0b7925138dfd92ad97ce151";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_tagdetect_client/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "01658df957798517f7c61a86fcf103509c65b051187f84dd70bc9139850c7444";
   };
 
   buildType = "catkin";

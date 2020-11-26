@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-exotica-scipy-solver";
-  version = "6.0.0-r1";
+  version = "6.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_scipy_solver/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "62180a4a1169e70c6cfed7dd5879776b423cf47c15914d4309a4c6ed564ab43c";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_scipy_solver/6.0.2-1.tar.gz";
+    name = "6.0.2-1.tar.gz";
+    sha256 = "d536d90050bee919a48926bed1aa91d232cff74737ce5cff9856b3937464c179";
   };
 
   buildType = "catkin";

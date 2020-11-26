@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, ompl }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-time-indexed-rrt-connect-solver";
-  version = "6.0.0-r1";
+  version = "6.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_time_indexed_rrt_connect_solver/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "c57108c094022f9296535dd067ebfeb1706fcf70e169e2d8fbcbf681ca0d2890";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_time_indexed_rrt_connect_solver/6.0.1-1.tar.gz";
+    name = "6.0.1-1.tar.gz";
+    sha256 = "6851e01c9ab97b9145822eb5f3e612320f9ccfe20a50057c973aad8d9b107227";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-aico-solver, exotica-collision-scene-fcl-latest, exotica-core, exotica-core-task-maps, exotica-ik-solver, exotica-levenberg-marquardt-solver, exotica-ompl-solver, exotica-python, exotica-time-indexed-rrt-connect-solver }:
 buildRosPackage {
   pname = "ros-noetic-exotica";
-  version = "6.0.0-r1";
+  version = "6.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "6eba3dc9fbbbd6ed0f89385945fdc16c107684407e56d10be5a38b34b5d5d814";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica/6.0.1-1.tar.gz";
+    name = "6.0.1-1.tar.gz";
+    sha256 = "f04853e1ec12ae92362f79549ab3c1bde482f8c685cd417f89e8549b114bf6c8";
   };
 
   buildType = "catkin";

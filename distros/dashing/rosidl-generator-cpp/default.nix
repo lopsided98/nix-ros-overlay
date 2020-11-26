@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rosidl-cmake, rosidl-generator-c, rosidl-parser }:
 buildRosPackage {
   pname = "ros-dashing-rosidl-generator-cpp";
-  version = "0.7.9-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/dashing/rosidl_generator_cpp/0.7.9-1.tar.gz";
-    name = "0.7.9-1.tar.gz";
-    sha256 = "261c07c539a46171c157aba8104b2e69db274b2cd9527261f34e59a4c8b4d75a";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/dashing/rosidl_generator_cpp/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "06e8172fcce97ec7b1896cb3ded888a1ad4ae45574fd52c0ed054de40593ddad";
   };
 
   buildType = "ament_cmake";

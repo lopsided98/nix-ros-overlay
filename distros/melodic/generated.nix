@@ -160,6 +160,8 @@ self: super: {
 
  aws-common = self.callPackage ./aws-common {};
 
+ aws-robomaker-simulation-ros-pkgs = self.callPackage ./aws-robomaker-simulation-ros-pkgs {};
+
  aws-ros1-common = self.callPackage ./aws-ros1-common {};
 
  axis-camera = self.callPackage ./axis-camera {};
@@ -902,8 +904,6 @@ self: super: {
 
  exotica-val-description = self.callPackage ./exotica-val-description {};
 
- extest = self.callPackage ./extest {};
-
  face-detector = self.callPackage ./face-detector {};
 
  fadecandy-driver = self.callPackage ./fadecandy-driver {};
@@ -1628,6 +1628,8 @@ self: super: {
 
  leo-desktop = self.callPackage ./leo-desktop {};
 
+ leo-fw = self.callPackage ./leo-fw {};
+
  leo-gazebo = self.callPackage ./leo-gazebo {};
 
  leo-robot = self.callPackage ./leo-robot {};
@@ -1730,6 +1732,8 @@ self: super: {
 
  locomove-base = self.callPackage ./locomove-base {};
 
+ log-view = self.callPackage ./log-view {};
+
  lpg-planner = self.callPackage ./lpg-planner {};
 
  lusb = self.callPackage ./lusb {};
@@ -1823,6 +1827,8 @@ self: super: {
  media-export = self.callPackage ./media-export {};
 
  mesh-msgs = self.callPackage ./mesh-msgs {};
+
+ mesh-msgs-conversions = self.callPackage ./mesh-msgs-conversions {};
 
  mesh-msgs-hdf5 = self.callPackage ./mesh-msgs-hdf5 {};
 
@@ -2360,6 +2366,12 @@ self: super: {
 
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
+ pal-carbon-collector = self.callPackage ./pal-carbon-collector {};
+
+ pal-statistics = self.callPackage ./pal-statistics {};
+
+ pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
+
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
 
  parameter-assertions = self.callPackage ./parameter-assertions {};
@@ -2450,9 +2462,9 @@ self: super: {
 
  play-motion-msgs = self.callPackage ./play-motion-msgs {};
 
- plotjuggler = self.callPackage ./plotjuggler {};
-
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
+
+ plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
 
  pluginlib = self.callPackage ./pluginlib {};
 
@@ -2856,6 +2868,8 @@ self: super: {
 
  ridgeback-viz = self.callPackage ./ridgeback-viz {};
 
+ robomaker-simulation-msgs = self.callPackage ./robomaker-simulation-msgs {};
+
  robosense-description = self.callPackage ./robosense-description {};
 
  robosense-gazebo-plugins = self.callPackage ./robosense-gazebo-plugins {};
@@ -2896,6 +2910,8 @@ self: super: {
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
+ robot-statemachine = self.callPackage ./robot-statemachine {};
+
  robot-upstart = self.callPackage ./robot-upstart {};
 
  roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
@@ -2903,6 +2919,8 @@ self: super: {
  robotis-manipulator = self.callPackage ./robotis-manipulator {};
 
  robotont-description = self.callPackage ./robotont-description {};
+
+ robotont-nuc-description = self.callPackage ./robotont-nuc-description {};
 
  rocon-app-manager-msgs = self.callPackage ./rocon-app-manager-msgs {};
 
@@ -3345,6 +3363,16 @@ self: super: {
  rslidar-msgs = self.callPackage ./rslidar-msgs {};
 
  rslidar-pointcloud = self.callPackage ./rslidar-pointcloud {};
+
+ rsm-additions = self.callPackage ./rsm-additions {};
+
+ rsm-core = self.callPackage ./rsm-core {};
+
+ rsm-msgs = self.callPackage ./rsm-msgs {};
+
+ rsm-rqt-plugins = self.callPackage ./rsm-rqt-plugins {};
+
+ rsm-rviz-plugins = self.callPackage ./rsm-rviz-plugins {};
 
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
@@ -3792,6 +3820,8 @@ self: super: {
 
  tuw-vehicle-msgs = self.callPackage ./tuw-vehicle-msgs {};
 
+ tvm-vendor = self.callPackage ./tvm-vendor {};
+
  twist-mux = self.callPackage ./twist-mux {};
 
  twist-mux-msgs = self.callPackage ./twist-mux-msgs {};
@@ -3991,6 +4021,24 @@ self: super: {
  voice-text = self.callPackage ./voice-text {};
 
  volksbot-driver = self.callPackage ./volksbot-driver {};
+
+ volta-base = self.callPackage ./volta-base {};
+
+ volta-control = self.callPackage ./volta-control {};
+
+ volta-description = self.callPackage ./volta-description {};
+
+ volta-localization = self.callPackage ./volta-localization {};
+
+ volta-msgs = self.callPackage ./volta-msgs {};
+
+ volta-navigation = self.callPackage ./volta-navigation {};
+
+ volta-rules = self.callPackage ./volta-rules {};
+
+ volta-simulation = self.callPackage ./volta-simulation {};
+
+ volta-teleoperator = self.callPackage ./volta-teleoperator {};
 
  voxel-grid = self.callPackage ./voxel-grid {};
 

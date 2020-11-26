@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pluginlib, pluginlib-tutorials, python, pythonPackages, ros-introspection, roslint, stereo-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-roscompile";
-  version = "1.0.3-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/wu-robotics/roscompile-release/archive/release/melodic/roscompile/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "c5f8fb99e38f6cbe0002f5d07d153fbc11baf8d8e29cf1f46b57bc345ccbfc16";
+    url = "https://github.com/wu-robotics/roscompile-release/archive/release/melodic/roscompile/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "1ed3be1fad8e15ddef14e38faab5719c88280d727f16ed778a99bef5e53244aa";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, robot-state-publisher, rqt-reconfigure, rviz, socketcan-bridge, toposens-description, toposens-driver, toposens-markers, toposens-pointcloud, turtlebot3-bringup, turtlebot3-teleop, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-toposens-bringup";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_bringup/2.1.0-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_bringup/2.1.1-1";
     name = "archive.tar.gz";
-    sha256 = "8c4b5e2c9388accb1f26364fd706db0ece583098e4460025b8d78a2957c74e03";
+    sha256 = "0796fb4f42ece88a3dd0647c73251f088ab912687969f2fef13d742968dda5ed";
   };
 
   buildType = "catkin";

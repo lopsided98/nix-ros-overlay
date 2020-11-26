@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch-testing, osrf-testing-tools-cpp, rcl, rcutils, rosidl-generator-c, rosidl-typesupport-c, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-rclc";
-  version = "0.1.2-r2";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/micro-ROS/rclc-release/archive/release/dashing/rclc/0.1.2-2.tar.gz";
-    name = "0.1.2-2.tar.gz";
-    sha256 = "da67d7e01c93ebd960cfafd43a3de3e89bde2196f5a32b0f2765a8b3a70319a9";
+    url = "https://github.com/micro-ROS/rclc-release/archive/release/dashing/rclc/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "a0decdaf6a2765ab06c4dd75d9daa6a03420b221b52c2f9ac4236d7192d675b0";
   };
 
   buildType = "ament_cmake";

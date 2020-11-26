@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-marti-status-msgs";
-  version = "1.0.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/dashing/marti_status_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "a12f1abd31c6257cbed5da8605f3302b52f8a748744a764d20b5a4b954904b14";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/dashing/marti_status_msgs/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "37e624b74dee894a8446442a9fa851bc07deef221d6c724cb49d2906f203ae00";
   };
 
   buildType = "ament_cmake";

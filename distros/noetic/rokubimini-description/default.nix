@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, sensor-msgs, std-msgs, xacro }:
 buildRosPackage {
   pname = "ros-noetic-rokubimini-description";
-  version = "0.5.7-r1";
+  version = "0.5.8-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/noetic/rokubimini_description/0.5.7-1";
+    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/noetic/rokubimini_description/0.5.8-1";
     name = "archive.tar.gz";
-    sha256 = "9e767c63e25c31eea0596d82b493f23edb4fc3cd1e3f6cc2833cff2cea9c16d4";
+    sha256 = "4ee26763d78c841b0620a8674829e0eb065fa3a262a409b3207f3863a40285cf";
   };
 
   buildType = "catkin";

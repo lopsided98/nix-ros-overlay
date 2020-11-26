@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-marti-sensor-msgs";
-  version = "1.0.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/dashing/marti_sensor_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "7faea5580cdc57fda947eee6cf3151e87c89a9a97e27b789b38e5cb3e94be1a6";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/dashing/marti_sensor_msgs/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "a1b125db8a086ecaf822ba2389d3bf637a4a21f6bf6f15b4437bd151b2ba04ba";
   };
 
   buildType = "ament_cmake";

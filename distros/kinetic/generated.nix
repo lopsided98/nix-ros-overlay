@@ -188,6 +188,8 @@ self: super: {
 
  aws-common = self.callPackage ./aws-common {};
 
+ aws-robomaker-simulation-ros-pkgs = self.callPackage ./aws-robomaker-simulation-ros-pkgs {};
+
  aws-ros1-common = self.callPackage ./aws-ros1-common {};
 
  axcli = self.callPackage ./axcli {};
@@ -2164,6 +2166,8 @@ self: super: {
 
  log4cpp = self.callPackage ./log4cpp {};
 
+ log-view = self.callPackage ./log-view {};
+
  loki-base-node = self.callPackage ./loki-base-node {};
 
  loki-bringup = self.callPackage ./loki-bringup {};
@@ -3579,6 +3583,8 @@ self: super: {
  ridgeback-simulator = self.callPackage ./ridgeback-simulator {};
 
  ridgeback-viz = self.callPackage ./ridgeback-viz {};
+
+ robomaker-simulation-msgs = self.callPackage ./robomaker-simulation-msgs {};
 
  robot = self.callPackage ./robot {};
 
@@ -5145,6 +5151,24 @@ self: super: {
  viz = self.callPackage ./viz {};
 
  voice-text = self.callPackage ./voice-text {};
+
+ volta-base = self.callPackage ./volta-base {};
+
+ volta-control = self.callPackage ./volta-control {};
+
+ volta-description = self.callPackage ./volta-description {};
+
+ volta-localization = self.callPackage ./volta-localization {};
+
+ volta-msgs = self.callPackage ./volta-msgs {};
+
+ volta-navigation = self.callPackage ./volta-navigation {};
+
+ volta-rules = self.callPackage ./volta-rules {};
+
+ volta-simulation = self.callPackage ./volta-simulation {};
+
+ volta-teleoperator = self.callPackage ./volta-teleoperator {};
 
  voxel-grid = self.callPackage ./voxel-grid {};
 

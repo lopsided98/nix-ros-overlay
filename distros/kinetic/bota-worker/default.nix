@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gtest, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-bota-worker";
-  version = "0.5.6-r1";
+  version = "0.5.8-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/kinetic/bota_worker/0.5.6-1";
+    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/kinetic/bota_worker/0.5.8-1";
     name = "archive.tar.gz";
-    sha256 = "c35b6236b22e7bff081834041c30854fd51372cb18fa6e546c114eb9b69be688";
+    sha256 = "b801775322a6da4a59d61eaf814c5fa4ae3f9fa3ef6e442b382d754d459d300a";
   };
 
   buildType = "catkin";

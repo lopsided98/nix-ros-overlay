@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libyamlcpp, rokubimini, rokubimini-bus-manager, rokubimini-ethercat, rokubimini-serial }:
 buildRosPackage {
   pname = "ros-noetic-rokubimini-factory";
-  version = "0.5.7-r1";
+  version = "0.5.8-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/noetic/rokubimini_factory/0.5.7-1";
+    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/noetic/rokubimini_factory/0.5.8-1";
     name = "archive.tar.gz";
-    sha256 = "52910f670debb88126bf4b016398815fe1d5e8685345770f5b83a0ee424d6d31";
+    sha256 = "2d3a99e4b97a4d476873d6c2f44e312e67ada31d73fe0ea785cf5fe0bd9ec02f";
   };
 
   buildType = "catkin";

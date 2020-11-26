@@ -142,6 +142,8 @@ self: super: {
 
  aws-common = self.callPackage ./aws-common {};
 
+ aws-robomaker-simulation-ros-pkgs = self.callPackage ./aws-robomaker-simulation-ros-pkgs {};
+
  aws-ros2-common = self.callPackage ./aws-ros2-common {};
 
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
@@ -548,6 +550,8 @@ self: super: {
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
 
+ marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
+
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 
  marti-perception-msgs = self.callPackage ./marti-perception-msgs {};
@@ -754,6 +758,8 @@ self: super: {
 
  rclc-examples = self.callPackage ./rclc-examples {};
 
+ rclc-lifecycle = self.callPackage ./rclc-lifecycle {};
+
  rclcpp = self.callPackage ./rclcpp {};
 
  rclcpp-action = self.callPackage ./rclcpp-action {};
@@ -795,6 +801,8 @@ self: super: {
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
 
  rmw-opensplice-cpp = self.callPackage ./rmw-opensplice-cpp {};
+
+ robomaker-simulation-msgs = self.callPackage ./robomaker-simulation-msgs {};
 
  robot-localization = self.callPackage ./robot-localization {};
 
@@ -1145,6 +1153,8 @@ self: super: {
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
+
+ tvm-vendor = self.callPackage ./tvm-vendor {};
 
  udp-driver = self.callPackage ./udp-driver {};
 

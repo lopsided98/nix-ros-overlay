@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, exotica-python }:
 buildRosPackage {
   pname = "ros-noetic-exotica-ddp-solver";
-  version = "6.0.0-r1";
+  version = "6.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_ddp_solver/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "752cd837531b317dbea29065f8a1f2f4fbac7e294ada4f3a3e649c3f72f3d869";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_ddp_solver/6.0.1-1.tar.gz";
+    name = "6.0.1-1.tar.gz";
+    sha256 = "6431c9036b08c4a8eabe37f2fbbe37394970e6b9e85b88d32fe451ac443fd44b";
   };
 
   buildType = "catkin";

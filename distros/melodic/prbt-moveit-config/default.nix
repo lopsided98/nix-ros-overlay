@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, moveit-core, moveit-fake-controller-manager, moveit-kinematics, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-planning, moveit-ros-visualization, moveit-simple-controller-manager, pluginlib, prbt-hardware-support, prbt-ikfast-manipulator-plugin, prbt-support, robot-state-publisher, roscpp, roslaunch, rostest, rosunit, rviz, xacro }:
 buildRosPackage {
   pname = "ros-melodic-prbt-moveit-config";
-  version = "0.5.19-r1";
+  version = "0.5.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_moveit_config/0.5.19-1.tar.gz";
-    name = "0.5.19-1.tar.gz";
-    sha256 = "067103e6535894f6678e3427d7583d402b7451beb0c7489013d2e883e13f5422";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_moveit_config/0.5.21-1.tar.gz";
+    name = "0.5.21-1.tar.gz";
+    sha256 = "634605197400d4950fd7c9214f7f5ee041f5a241ad673cf25779ff66d2a6593c";
   };
 
   buildType = "catkin";

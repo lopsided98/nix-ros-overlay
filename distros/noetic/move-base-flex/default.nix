@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, mbf-abstract-core, mbf-abstract-nav, mbf-costmap-core, mbf-costmap-nav, mbf-msgs, mbf-simple-nav }:
+{ lib, buildRosPackage, fetchurl, catkin, mbf-abstract-core, mbf-abstract-nav, mbf-costmap-core, mbf-costmap-nav, mbf-msgs, mbf-simple-nav, mbf-utility }:
 buildRosPackage {
   pname = "ros-noetic-move-base-flex";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/move_base_flex/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "81a8e991123c9157df111b97b276dcbde653c927bfc622b2da7c58c5d24d549c";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/move_base_flex/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "c15f04dcb7db97c16cc3a3032d2c1ba504dfa3a36b59090f6bacd4762a30d3dc";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ mbf-abstract-core mbf-abstract-nav mbf-costmap-core mbf-costmap-nav mbf-msgs mbf-simple-nav ];
+  propagatedBuildInputs = [ mbf-abstract-core mbf-abstract-nav mbf-costmap-core mbf-costmap-nav mbf-msgs mbf-simple-nav mbf-utility ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
