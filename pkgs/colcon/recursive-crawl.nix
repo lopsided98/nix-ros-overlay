@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "colcon-recursive-crawl";
-  version = "0.2.0";
+  version = "0.2.1";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1g27r4ca6y08rby1jgvfnwpkklmg66m5dx59mmpz4pjwqlp5r5fw";
+    sha256 = "15hvvav0dgzdvbhql5v1q1abpr7z60lmd6vy33sayq1r40x1p8c0";
   };
 
   propagatedBuildInputs = [ colcon-core ];
