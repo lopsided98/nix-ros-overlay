@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, freetype, libGL, libGLU, pkg-config, xorg }:
 buildRosPackage {
   pname = "ros-dashing-rviz-ogre-vendor";
-  version = "6.1.6-r1";
+  version = "6.1.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_ogre_vendor/6.1.6-1.tar.gz";
-    name = "6.1.6-1.tar.gz";
-    sha256 = "b60cc9018effb2e6bf18fac6b8e20aa17d46eed3248c1e0c7b95de074474f5b6";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_ogre_vendor/6.1.7-2.tar.gz";
+    name = "6.1.7-2.tar.gz";
+    sha256 = "a923f7915c696b52fa79d277645556a5a7fd4e12b657932f4a4a1bbde38831d6";
   };
 
   buildType = "ament_cmake";

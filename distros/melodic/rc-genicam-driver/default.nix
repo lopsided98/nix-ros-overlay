@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, diagnostic-updater, dynamic-reconfigure, geometry-msgs, image-transport, message-generation, message-runtime, nodelet, protobuf, rc-common-msgs, rc-genicam-api, roscpp, sensor-msgs, stereo-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-rc-genicam-driver";
-  version = "0.2.0-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_driver_ros-release/archive/release/melodic/rc_genicam_driver/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "4fb0b1cb6de177033130774f78bdc979a2a4c100bf23726d85e671ea0ecf3880";
+    url = "https://github.com/roboception-gbp/rc_genicam_driver_ros-release/archive/release/melodic/rc_genicam_driver/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "64cbf993f6a22b2517029d7e564008fd3b0c2b56189033245dbd206c0eb00c18";
   };
 
   buildType = "catkin";

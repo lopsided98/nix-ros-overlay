@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cartographer, cartographer-ros-msgs, eigen, libyamlcpp, lua5, nav-msgs, pcl, pcl-conversions, rclcpp, sensor-msgs, tf2, tf2-eigen, tf2-msgs, tf2-ros, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-foxy-cartographer-ros";
-  version = "1.0.9001-r1";
+  version = "1.0.9002-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/foxy/cartographer_ros/1.0.9001-1.tar.gz";
-    name = "1.0.9001-1.tar.gz";
-    sha256 = "f408e0d891a311d1dfeab930b1807e007e4c0da3a9cac1dd208a904b496174d8";
+    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/foxy/cartographer_ros/1.0.9002-1.tar.gz";
+    name = "1.0.9002-1.tar.gz";
+    sha256 = "cb23d500a2659e1661b8d0c6f7f1a3e2c5d2434416f34ae68068bf31169fa708";
   };
 
   buildType = "ament_cmake";

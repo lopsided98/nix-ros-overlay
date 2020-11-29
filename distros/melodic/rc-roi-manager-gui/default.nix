@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, interactive-markers, message-runtime, rc-common-msgs, rc-pick-client, roscpp, shape-msgs, tf, visualization-msgs, wxGTK }:
 buildRosPackage {
   pname = "ros-melodic-rc-roi-manager-gui";
-  version = "3.0.5-r1";
+  version = "3.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_roi_manager_gui/3.0.5-1.tar.gz";
-    name = "3.0.5-1.tar.gz";
-    sha256 = "4d9cf7a12b68a75401c4e95fed1cfe10fa067863857b51eb95b1325be94f4c36";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_roi_manager_gui/3.1.0-2.tar.gz";
+    name = "3.1.0-2.tar.gz";
+    sha256 = "41cd87e85fc7a816883ab645631bdca1c29e2c5357eb01b42611110aa2ba5323";
   };
 
   buildType = "catkin";

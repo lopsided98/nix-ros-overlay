@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, nav-msgs, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-map-msgs";
-  version = "1.13.0";
+  version = "1.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_msgs-release/archive/release/melodic/map_msgs/1.13.0-0.tar.gz";
-    name = "1.13.0-0.tar.gz";
-    sha256 = "a0b7044c2fd59448eb714ce14d60c5ff2d0073962e011e6549c7dd99fc916ffc";
+    url = "https://github.com/ros-gbp/navigation_msgs-release/archive/release/melodic/map_msgs/1.14.1-1.tar.gz";
+    name = "1.14.1-1.tar.gz";
+    sha256 = "f9258be961e164b60e94b10e2965dc703d8614d360645717d099b40c2ea71de0";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, dynamic-graph, dynamic-graph-python, pinocchio }:
 buildRosPackage {
   pname = "ros-noetic-sot-core";
-  version = "4.10.1-r5";
+  version = "4.11.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/sot-core-ros-release/archive/release/noetic/sot-core/4.10.1-5.tar.gz";
-    name = "4.10.1-5.tar.gz";
-    sha256 = "7df2ec65a3746fcb3ffdaa60a650c14d67215e4c1f78d8884fa2592990a9e3fa";
+    url = "https://github.com/stack-of-tasks/sot-core-ros-release/archive/release/noetic/sot-core/4.11.2-3.tar.gz";
+    name = "4.11.2-3.tar.gz";
+    sha256 = "cb2310a9d43db5e37d06970002df60fcf0096457b9c0b1c4d2c2281bff9ac32c";
   };
 
   buildType = "cmake";

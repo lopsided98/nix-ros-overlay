@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, libpcap, nodelet, roscpp, roslaunch, roslint, rostest, tf, velodyne-msgs }:
 buildRosPackage {
   pname = "ros-noetic-velodyne-driver";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_driver/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "a81f0c6824c1ac06ee5d2f5abd7cf48d2d5661a93dc5e08381df8eff9c220c59";
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_driver/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "d0ac953f3a48c3e13e60a94fb9ed768ea22699004bc7c62a638785dc37f1ffea";
   };
 
   buildType = "catkin";

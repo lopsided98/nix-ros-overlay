@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-eloquent-cyclonedds-cmake-module";
-  version = "0.5.1-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/eloquent/cyclonedds_cmake_module/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "6db8546cb9579bdf6d29f02e8e172a371b695a50f73d94eb50ab8ea31300be65";
+    url = "https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/eloquent/cyclonedds_cmake_module/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "dc4d7ab18637edfc0589913bb07a38d40577d70624f47058baa0f28c89692f26";
   };
 
   buildType = "ament_cmake";

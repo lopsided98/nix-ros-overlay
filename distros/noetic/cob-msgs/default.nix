@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-msgs";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_common-release/archive/release/noetic/cob_msgs/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "f26d24ed18d504e15454b2f8fd856cd1f83e80cc703556594bb7eac60ccaf613";
+    url = "https://github.com/ipa320/cob_common-release/archive/release/noetic/cob_msgs/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "b561c1344e5d5bdc79cd91c873ff9aed5d67307f902fa8cdc06ba2378fce78fe";
   };
 
   buildType = "catkin";

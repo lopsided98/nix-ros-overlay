@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-index-cpp, geometry-msgs, laser-geometry, map-msgs, nav-msgs, pluginlib, qt5, rclcpp, resource-retriever, rviz-common, rviz-rendering, rviz-rendering-tests, rviz-visual-testing-framework, tinyxml-vendor, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-dashing-rviz-default-plugins";
-  version = "6.1.6-r1";
+  version = "6.1.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_default_plugins/6.1.6-1.tar.gz";
-    name = "6.1.6-1.tar.gz";
-    sha256 = "eaff175387959833dc3b78e962134a19064b58650e6c7a835dd70b695bee0036";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_default_plugins/6.1.7-2.tar.gz";
+    name = "6.1.7-2.tar.gz";
+    sha256 = "7a0a130b5a5ee6d568c1b6f5ab2575c8ec26a0865bbe486acf9148ac0438af3d";
   };
 
   buildType = "ament_cmake";

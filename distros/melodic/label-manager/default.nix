@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, genmsg, mesh-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-label-manager";
-  version = "1.0.0-r2";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/label_manager/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "97b371fb101be7bf59209d81b3c9780abe22d1a78eeb2555a86a320e754c03b7";
+    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/label_manager/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "774bbccc5440c62f0a98678e812e4dc07ec909d0d5345cb4d56f867ca2d985b7";
   };
 
   buildType = "catkin";

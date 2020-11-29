@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-cartpole-dynamics-solver, exotica-double-integrator-dynamics-solver, exotica-pendulum-dynamics-solver, exotica-pinocchio-dynamics-solver, exotica-quadrotor-dynamics-solver }:
 buildRosPackage {
   pname = "ros-melodic-exotica-dynamics-solvers";
-  version = "5.1.3-r3";
+  version = "6.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_dynamics_solvers/5.1.3-3.tar.gz";
-    name = "5.1.3-3.tar.gz";
-    sha256 = "9df5028b2245caf4045ae4f1da68b3eaf2582b6df67417a1b6f0226290814b4a";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_dynamics_solvers/6.0.2-1.tar.gz";
+    name = "6.0.2-1.tar.gz";
+    sha256 = "9cb64bbe70341f47f3a8db34792cdfe3f2ce8cc128ce6e554be62f8b175fc9bb";
   };
 
   buildType = "catkin";

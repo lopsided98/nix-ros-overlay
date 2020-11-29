@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mbf-abstract-core";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/mbf_abstract_core/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "b53606d12bd6f5e4c761882d24185902d80d891225b8c2b7a9927a4ff99e8b45";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/mbf_abstract_core/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "9e116b9e7cc2132960124634b4be1ba64dd9798b4f1349fd76ffae62f705a330";
   };
 
   buildType = "catkin";

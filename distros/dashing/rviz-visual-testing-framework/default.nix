@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, qt5, rviz-common }:
 buildRosPackage {
   pname = "ros-dashing-rviz-visual-testing-framework";
-  version = "6.1.6-r1";
+  version = "6.1.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_visual_testing_framework/6.1.6-1.tar.gz";
-    name = "6.1.6-1.tar.gz";
-    sha256 = "b6ac3827f3b791fe4e15dbe1dcbd28de43d050f26321192fd4290deb8e1f653f";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_visual_testing_framework/6.1.7-2.tar.gz";
+    name = "6.1.7-2.tar.gz";
+    sha256 = "ac8e4d21f9b5ff9317b360ded3f79868d1c06cdc521c233d5d88b29133c19bda";
   };
 
   buildType = "ament_cmake";

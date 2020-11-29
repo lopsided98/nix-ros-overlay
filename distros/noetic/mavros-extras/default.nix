@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, mavros, mavros-msgs, roscpp, sensor-msgs, std-msgs, tf, tf2-eigen, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mavros-extras";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/mavros_extras/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "8e28909f31fa9dfae3e6ea7f0cb961d6fb5cfa9bc4604a8cdad5f0f0aaa16b3b";
+    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/mavros_extras/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "3880a7af536340f0458026793baa466a9fa193db80bbb854e7266d5b2040e2d0";
   };
 
   buildType = "catkin";

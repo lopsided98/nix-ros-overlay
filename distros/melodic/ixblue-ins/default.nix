@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ixblue-ins-driver, ixblue-ins-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ixblue-ins";
-  version = "0.1.4-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ixblue/ixblue_ins_stdbin_driver-release/archive/release/melodic/ixblue_ins/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "a38ae8f03e93e071b2091e8335866b82ec60501ddefd0cd2df5d0fe8a51b7268";
+    url = "https://github.com/ixblue/ixblue_ins_stdbin_driver-release/archive/release/melodic/ixblue_ins/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "69760d7da2a07f7d39257f057ce47e0ced915cc333912737f046931d708a98ec";
   };
 
   buildType = "catkin";

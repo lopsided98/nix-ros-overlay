@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rcdiscover, roscpp, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kinetic-rc-hand-eye-calibration-client";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_hand_eye_calibration_client/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "47511b12228e4b9f3db3d4cc3403b47438e8f9c1b8d0eb5682f401356c73b132";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/kinetic/rc_hand_eye_calibration_client/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "ceb35629fbeb4373fbf6e0a40a769f857194858ab504ab301c725ab6de327ab9";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-marti-can-msgs";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/eloquent/marti_can_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "ccedfc8964ef08fa5062f3514aaacdf431855f61c9fe62e9a2ed8da9f72d2bb1";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/eloquent/marti_can_msgs/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "78942e20eca38f06121acb1bd2349def2fa4feae2d675eb50aea45c883671f77";
   };
 
   buildType = "ament_cmake";

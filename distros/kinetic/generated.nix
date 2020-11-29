@@ -188,6 +188,8 @@ self: super: {
 
  aws-common = self.callPackage ./aws-common {};
 
+ aws-robomaker-simulation-ros-pkgs = self.callPackage ./aws-robomaker-simulation-ros-pkgs {};
+
  aws-ros1-common = self.callPackage ./aws-ros1-common {};
 
  axcli = self.callPackage ./axcli {};
@@ -249,6 +251,16 @@ self: super: {
  bondcpp = self.callPackage ./bondcpp {};
 
  bondpy = self.callPackage ./bondpy {};
+
+ bota-device-driver = self.callPackage ./bota-device-driver {};
+
+ bota-driver = self.callPackage ./bota-driver {};
+
+ bota-node = self.callPackage ./bota-node {};
+
+ bota-signal-handler = self.callPackage ./bota-signal-handler {};
+
+ bota-worker = self.callPackage ./bota-worker {};
 
  brics-actuator = self.callPackage ./brics-actuator {};
 
@@ -2154,6 +2166,8 @@ self: super: {
 
  log4cpp = self.callPackage ./log4cpp {};
 
+ log-view = self.callPackage ./log-view {};
+
  loki-base-node = self.callPackage ./loki-base-node {};
 
  loki-bringup = self.callPackage ./loki-bringup {};
@@ -3570,6 +3584,8 @@ self: super: {
 
  ridgeback-viz = self.callPackage ./ridgeback-viz {};
 
+ robomaker-simulation-msgs = self.callPackage ./robomaker-simulation-msgs {};
+
  robot = self.callPackage ./robot {};
 
  robot-activity = self.callPackage ./robot-activity {};
@@ -3751,6 +3767,24 @@ self: super: {
  rocon-uri = self.callPackage ./rocon-uri {};
 
  rodi-robot = self.callPackage ./rodi-robot {};
+
+ rokubimini = self.callPackage ./rokubimini {};
+
+ rokubimini-bus-manager = self.callPackage ./rokubimini-bus-manager {};
+
+ rokubimini-description = self.callPackage ./rokubimini-description {};
+
+ rokubimini-ethercat = self.callPackage ./rokubimini-ethercat {};
+
+ rokubimini-examples = self.callPackage ./rokubimini-examples {};
+
+ rokubimini-factory = self.callPackage ./rokubimini-factory {};
+
+ rokubimini-manager = self.callPackage ./rokubimini-manager {};
+
+ rokubimini-msgs = self.callPackage ./rokubimini-msgs {};
+
+ rokubimini-serial = self.callPackage ./rokubimini-serial {};
 
  romeo-bringup = self.callPackage ./romeo-bringup {};
 
@@ -4720,6 +4754,8 @@ self: super: {
 
  toposens = self.callPackage ./toposens {};
 
+ toposens-bringup = self.callPackage ./toposens-bringup {};
+
  toposens-description = self.callPackage ./toposens-description {};
 
  toposens-driver = self.callPackage ./toposens-driver {};
@@ -5115,6 +5151,24 @@ self: super: {
  viz = self.callPackage ./viz {};
 
  voice-text = self.callPackage ./voice-text {};
+
+ volta-base = self.callPackage ./volta-base {};
+
+ volta-control = self.callPackage ./volta-control {};
+
+ volta-description = self.callPackage ./volta-description {};
+
+ volta-localization = self.callPackage ./volta-localization {};
+
+ volta-msgs = self.callPackage ./volta-msgs {};
+
+ volta-navigation = self.callPackage ./volta-navigation {};
+
+ volta-rules = self.callPackage ./volta-rules {};
+
+ volta-simulation = self.callPackage ./volta-simulation {};
+
+ volta-teleoperator = self.callPackage ./volta-teleoperator {};
 
  voxel-grid = self.callPackage ./voxel-grid {};
 

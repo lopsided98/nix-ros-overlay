@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, pythonPackages, rosidl-parser, test-msgs }:
 buildRosPackage {
   pname = "ros-dashing-rosidl-runtime-py";
-  version = "0.7.10-r1";
+  version = "0.7.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_python-release/archive/release/dashing/rosidl_runtime_py/0.7.10-1.tar.gz";
-    name = "0.7.10-1.tar.gz";
-    sha256 = "6684a827307046043fa61a0807c8b57dc0e52c6fc9a45ab877ce92f92b701dff";
+    url = "https://github.com/ros2-gbp/rosidl_python-release/archive/release/dashing/rosidl_runtime_py/0.7.11-1.tar.gz";
+    name = "0.7.11-1.tar.gz";
+    sha256 = "22ef7c579580fa0a082578edd2e289e7607ae3e72e8b8a7464d235b8ec39f7cf";
   };
 
   buildType = "ament_python";

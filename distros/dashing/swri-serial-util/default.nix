@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost }:
 buildRosPackage {
   pname = "ros-dashing-swri-serial-util";
-  version = "3.3.1-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_serial_util/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "661c118466250300a086a33b856fc75af7d1c9df168607d1f617d19f6604e8da";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/dashing/swri_serial_util/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "08f5ec37a835cceefcc887b4cc714c868ac6174c50d9d68748053dee51887941";
   };
 
   buildType = "ament_cmake";

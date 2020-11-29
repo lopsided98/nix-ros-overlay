@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-examples-rclpy-minimal-publisher";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/dashing/examples_rclpy_minimal_publisher/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "08eacbbe87b41a7ca4af9516bdcfe025632a3855fd530f6056ca8650a4940d84";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/dashing/examples_rclpy_minimal_publisher/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "7d52dc1d8154b72f8c68c75e791a97008762d6254c0646335b76a3b7c92d8f8c";
   };
 
   buildType = "ament_python";

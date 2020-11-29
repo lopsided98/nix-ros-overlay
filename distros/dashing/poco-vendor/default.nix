@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, pcre, poco, zlib }:
 buildRosPackage {
   pname = "ros-dashing-poco-vendor";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/poco_vendor-release/archive/release/dashing/poco_vendor/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "ac61c044b172c2cd144fb22df5a466afefff5b980abfb5e245de67b24d867ed9";
+    url = "https://github.com/ros2-gbp/poco_vendor-release/archive/release/dashing/poco_vendor/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "819a7815ce83c61e41ec8c0966c62e3e63733c2d0d8f59a705e26682697d0ec2";
   };
 
   buildType = "cmake";

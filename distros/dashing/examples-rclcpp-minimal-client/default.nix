@@ -2,18 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, example-interfaces, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp }:
 buildRosPackage {
   pname = "ros-dashing-examples-rclcpp-minimal-client";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/dashing/examples_rclcpp_minimal_client/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "9b6db218f8b2203918c8a855b6e0e9fdaa828d68c46e36fbe09cf9da5cf32c49";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/dashing/examples_rclcpp_minimal_client/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "a8af175e35a42233233667517624aeb28cfbc5f4c7976e30399fc017110a895b";
   };
 
   buildType = "ament_cmake";
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ example-interfaces rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 

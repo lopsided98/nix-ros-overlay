@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, code-coverage, controller-interface, controller-manager, geometry-msgs, joint-trajectory-controller, moveit-core, moveit-ros-planning, pilz-msgs, pilz-testutils, pilz-utils, roscpp, roslint, rostest, rosunit, std-srvs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pilz-control";
-  version = "0.5.19-r1";
+  version = "0.5.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_control/0.5.19-1.tar.gz";
-    name = "0.5.19-1.tar.gz";
-    sha256 = "2d7bec2f7e49fcf3f9b756a0bf92db2d9ec081f72d669f134202ac92b5a22906";
+    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_control/0.5.21-1.tar.gz";
+    name = "0.5.21-1.tar.gz";
+    sha256 = "acfb911d647d5da6c87d8978a750cacb69d5a8c8a254a79d5da4c7874c9603af";
   };
 
   buildType = "catkin";

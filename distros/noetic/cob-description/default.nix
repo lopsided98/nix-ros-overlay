@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros, rosbash, rospy, rosunit, xacro }:
 buildRosPackage {
   pname = "ros-noetic-cob-description";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_common-release/archive/release/noetic/cob_description/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "03382166f5c2c2872fd0ec7846299517f3453b24cd2ebd84f4458c86fe932bf6";
+    url = "https://github.com/ipa320/cob_common-release/archive/release/noetic/cob_description/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "ddde9202db6ddfa49950d323af70dcd6e62a065a6f10d71d38578a5c468b78ce";
   };
 
   buildType = "catkin";

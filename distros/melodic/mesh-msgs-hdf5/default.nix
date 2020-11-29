@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hdf5-map-io, label-manager, mesh-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mesh-msgs-hdf5";
-  version = "1.0.0-r2";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/mesh_msgs_hdf5/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "d405f421ec7bff3d7b22d58e86d613174332b3fadbffff4f04b402413fbf6dc6";
+    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/mesh_msgs_hdf5/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "b1cef484da7c668517763d575498a79ac83ab91031385970f8c036c91327a12c";
   };
 
   buildType = "catkin";

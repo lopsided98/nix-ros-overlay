@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roslaunch, rostest, sensor-msgs, std-msgs, std-srvs, tf, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-openzen-sensor";
-  version = "1.0.1-r2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/lp-research/openzen_sensor-release/archive/release/melodic/openzen_sensor/1.0.1-2.tar.gz";
-    name = "1.0.1-2.tar.gz";
-    sha256 = "9d07fc38d2fc20c47f7359a03771201cfb511af5494ea8112b16f6bf5a83bffb";
+    url = "https://github.com/lp-research/openzen_sensor-release/archive/release/melodic/openzen_sensor/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "40f8a14c1626135d573751bb79540c429028d462378b39a691d2dcd7e6daec94";
   };
 
   buildType = "catkin";

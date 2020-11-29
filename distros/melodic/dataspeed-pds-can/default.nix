@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, can-msgs, catkin, dataspeed-can-msg-filters, dataspeed-can-usb, dataspeed-pds-msgs, message-filters, nodelet, roscpp, roslaunch, rostest }:
 buildRosPackage {
   pname = "ros-melodic-dataspeed-pds-can";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_can/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "d943dd26424108c58985aa8bbe67ada3a8a4e5129665cae3eb42e6802be650fb";
+    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_can/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "b42f60bb65943a05e8c78a89fd67db3cd2fe7641cf3a29e52300dffa71b34965";
   };
 
   buildType = "catkin";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Interface to the Dataspeed Inc. Power Distribution System (PDS) via CAN'';
+    description = ''Interface to the Dataspeed Inc. Intelligent Power Distribution System (iPDS) via CAN'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

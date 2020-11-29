@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-marti-common-msgs";
-  version = "1.0.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/dashing/marti_common_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "9b95a5c46576c2f56e60489b0a3fec052127124f86739c3cfcc46335e8f53427";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/dashing/marti_common_msgs/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "8b2cbe0f16d6581366bfbdebd6e9b61bd22e19a5572bfa0272d351e9b1438d6c";
   };
 
   buildType = "ament_cmake";

@@ -142,11 +142,19 @@ self: super: {
 
  aws-common = self.callPackage ./aws-common {};
 
+ aws-robomaker-simulation-ros-pkgs = self.callPackage ./aws-robomaker-simulation-ros-pkgs {};
+
  aws-ros2-common = self.callPackage ./aws-ros2-common {};
 
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
+
+ bond = self.callPackage ./bond {};
+
+ bond-core = self.callPackage ./bond-core {};
+
+ bondcpp = self.callPackage ./bondcpp {};
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
@@ -542,6 +550,8 @@ self: super: {
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
 
+ marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
+
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 
  marti-perception-msgs = self.callPackage ./marti-perception-msgs {};
@@ -748,6 +758,8 @@ self: super: {
 
  rclc-examples = self.callPackage ./rclc-examples {};
 
+ rclc-lifecycle = self.callPackage ./rclc-lifecycle {};
+
  rclcpp = self.callPackage ./rclcpp {};
 
  rclcpp-action = self.callPackage ./rclcpp-action {};
@@ -789,6 +801,8 @@ self: super: {
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
 
  rmw-opensplice-cpp = self.callPackage ./rmw-opensplice-cpp {};
+
+ robomaker-simulation-msgs = self.callPackage ./robomaker-simulation-msgs {};
 
  robot-localization = self.callPackage ./robot-localization {};
 
@@ -1004,6 +1018,8 @@ self: super: {
 
  slide-show = self.callPackage ./slide-show {};
 
+ smclib = self.callPackage ./smclib {};
+
  sophus = self.callPackage ./sophus {};
 
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
@@ -1061,6 +1077,8 @@ self: super: {
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
  test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
+
+ test-bond = self.callPackage ./test-bond {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
 
@@ -1135,6 +1153,8 @@ self: super: {
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
+
+ tvm-vendor = self.callPackage ./tvm-vendor {};
 
  udp-driver = self.callPackage ./udp-driver {};
 

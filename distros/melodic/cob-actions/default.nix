@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime }:
+{ lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-cob-actions";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_common-release/archive/release/melodic/cob_actions/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "2013c1a7e3d3b98c3bbb34eaa553d847a258363b9a2b6bc5c8b8415a6f92e8f4";
+    url = "https://github.com/ipa320/cob_common-release/archive/release/melodic/cob_actions/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "10baa556f3b7c8487b811b66d0bd41bccabdaad26002ec03517dc5a48b9adb5b";
   };
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ actionlib-msgs message-runtime ];
+  propagatedBuildInputs = [ actionlib-msgs geometry-msgs message-runtime ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

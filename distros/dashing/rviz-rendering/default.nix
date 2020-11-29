@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-index-cpp, eigen, eigen3-cmake-module, qt5, resource-retriever, rviz-assimp-vendor, rviz-ogre-vendor }:
 buildRosPackage {
   pname = "ros-dashing-rviz-rendering";
-  version = "6.1.6-r1";
+  version = "6.1.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_rendering/6.1.6-1.tar.gz";
-    name = "6.1.6-1.tar.gz";
-    sha256 = "d8b2e265c2eac4d119f60270edd93fb7e232f0cb74726364c8893164a12f203e";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/dashing/rviz_rendering/6.1.7-2.tar.gz";
+    name = "6.1.7-2.tar.gz";
+    sha256 = "3673b0482b0c394f0b6a98b03ac64dcbb8edf81ad82747a4eacd0766b9106b0f";
   };
 
   buildType = "ament_cmake";

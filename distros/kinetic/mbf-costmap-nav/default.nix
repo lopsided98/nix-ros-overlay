@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, costmap-2d, dynamic-reconfigure, geometry-msgs, mbf-abstract-nav, mbf-costmap-core, mbf-msgs, mbf-utility, move-base, move-base-msgs, nav-core, nav-msgs, pluginlib, roscpp, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-mbf-costmap-nav";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_costmap_nav/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "a62d70772cc423caf139795d0d59937af0f8bc0cb4c01c828872a4eab13b42ee";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_costmap_nav/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "c82132225cab0a9261894e10900b6b787d831e473b39d84b1bfc45800ea6c0e7";
   };
 
   buildType = "catkin";

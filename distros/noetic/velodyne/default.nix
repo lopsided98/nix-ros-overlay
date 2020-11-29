@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, velodyne-driver, velodyne-laserscan, velodyne-msgs, velodyne-pointcloud }:
 buildRosPackage {
   pname = "ros-noetic-velodyne";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "c8f5e8a30661b80796005171875f1db08536c6e6562680c419ea7b23a18920c0";
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "20968c2bc112c14694268e3b421517184a68bec969904cb167c7c14ab11b415a";
   };
 
   buildType = "catkin";
