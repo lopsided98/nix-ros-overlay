@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ncurses, roscpp, xclip }:
 buildRosPackage {
   pname = "ros-kinetic-log-view";
-  version = "0.1.0-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/hatchbed/log_view-release/archive/release/kinetic/log_view/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "b56d3694da2743a51e069b99e20eafdef203ec6526f5a4334e6c7d53054ef96d";
+    url = "https://github.com/hatchbed/log_view-release/archive/release/kinetic/log_view/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "97fb07d1fa563d28b4535e6b2f7c43b7818a800885cb36796cb6d780a99145e8";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslaunch, xacro }:
 buildRosPackage {
   pname = "ros-noetic-rc-visard-description";
-  version = "3.0.5-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_visard_description/3.0.5-1.tar.gz";
-    name = "3.0.5-1.tar.gz";
-    sha256 = "c8c9037f4b9f26a4d0ee6b12eca367f2d61c35efe826b7b840b9b017dc22fe61";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_visard_description/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "cf9291e64dcb56d0c03e73b0e4d6abe48830494f9ecfdf44a08b86900bac42e9";
   };
 
   buildType = "catkin";

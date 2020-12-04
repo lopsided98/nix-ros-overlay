@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, python3Packages, roslib, rospy, rqt-gui, rqt-robot-dashboard }:
 buildRosPackage {
   pname = "ros-noetic-cob-dashboard";
-  version = "0.6.18-r1";
+  version = "0.6.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/cob_dashboard/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "0f314004de192152eddd7731dc4b2cda7759015bb1d833b308fb22c4214836de";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/cob_dashboard/0.6.19-1.tar.gz";
+    name = "0.6.19-1.tar.gz";
+    sha256 = "79b81a3a383261a367f0b05bb4f5c2cc97dc66eaa5ca236231bb3ae9b5893f3a";
   };
 
   buildType = "catkin";

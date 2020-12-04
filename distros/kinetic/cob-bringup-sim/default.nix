@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-default-env-config, cob-default-robot-config, cob-gazebo, cob-gazebo-worlds, cob-supported-robots, gazebo-ros, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-cob-bringup-sim";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_simulation-release/archive/release/kinetic/cob_bringup_sim/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "dd4c8ff8cd97f5bc4dca170de42ba19456c6e694a526a9af43282596f04fa8d6";
+    url = "https://github.com/ipa320/cob_simulation-release/archive/release/kinetic/cob_bringup_sim/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "fd4f5c964bfdd3da1303afb2181c0afcd61a89dd6e5f44fde3f1fd661533eda7";
   };
 
   buildType = "catkin";

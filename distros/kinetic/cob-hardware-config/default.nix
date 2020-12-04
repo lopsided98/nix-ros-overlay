@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-calibration-data, cob-description, cob-omni-drive-controller, cob-supported-robots, costmap-2d, diagnostic-aggregator, joint-state-controller, joint-state-publisher, joint-state-publisher-gui, joint-trajectory-controller, laser-filters, position-controllers, raw-description, robot-state-publisher, roslaunch, rostest, rviz, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-cob-hardware-config";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_hardware_config/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "9f3be4cb74f9fa2d63b09b56f48d31defa5866b8b5f2d2ad490f29b0b51a578c";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_hardware_config/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "8c738e719d4b62a1cad8a4d0396567c9d36b5da4d54a3b5f14d66ace63c0042f";
   };
 
   buildType = "catkin";

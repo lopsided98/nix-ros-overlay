@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigenpy, eiquadprog, git, graphviz, pinocchio }:
 buildRosPackage {
   pname = "ros-melodic-tsid";
-  version = "1.4.1-r3";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/tsid-ros-release/archive/release/melodic/tsid/1.4.1-3.tar.gz";
-    name = "1.4.1-3.tar.gz";
-    sha256 = "04d008ab13e848c7d9c40ffb86d8b58d08c8bda30158bd3d505c1d08958f187e";
+    url = "https://github.com/stack-of-tasks/tsid-ros-release/archive/release/melodic/tsid/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "5c757f23d9f4576cf244cc4db868a28bb58ac83e49084eadbd6f7ab61ad4f5c3";
   };
 
   buildType = "cmake";

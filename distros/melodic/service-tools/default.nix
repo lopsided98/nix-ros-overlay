@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, rosservice }:
 buildRosPackage {
   pname = "ros-melodic-service-tools";
-  version = "0.6.18-r1";
+  version = "0.6.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/service_tools/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "7310279340b3f287ef5ca12b6a6a1700b1a3d35a5ae6dbee64b83c5c1f5e646d";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/service_tools/0.6.19-1.tar.gz";
+    name = "0.6.19-1.tar.gz";
+    sha256 = "3fa381f92d6e447262a0daaed32c670d6e301329bd0f7ad88432bc526c8a6d5a";
   };
 
   buildType = "catkin";

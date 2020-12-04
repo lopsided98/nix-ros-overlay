@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, fkie-master-discovery, fkie-multimaster-msgs, python3Packages, roslaunch, rospy, rostest, screen }:
 buildRosPackage {
   pname = "ros-noetic-fkie-node-manager-daemon";
-  version = "1.2.3-r1";
+  version = "1.2.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_node_manager_daemon/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "a090f241441194fb73e5cb7d0810ee5a8e795f9d9b1889a390442fada14e48d2";
+    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_node_manager_daemon/1.2.5-2.tar.gz";
+    name = "1.2.5-2.tar.gz";
+    sha256 = "8d383e3e6f87eecaed1b889cd85bdd2595efa64b41404cec3c79621e3fda5c0f";
   };
 
   buildType = "catkin";

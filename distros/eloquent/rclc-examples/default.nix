@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, lifecycle-msgs, rcl, rclc, rclc-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-rclc-examples";
-  version = "0.1.3-r1";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/micro-ROS/rclc-release/archive/release/eloquent/rclc_examples/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "6d8d5fb327f848022a11a0a07fcfd7f17db6737b58557d6871d35322bf9bd278";
+    url = "https://github.com/micro-ROS/rclc-release/archive/release/eloquent/rclc_examples/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "29261dfa6df331d20bfacfd316f486fb607d7a7741adfd8c8a9c17062a33cb4c";
   };
 
   buildType = "ament_cmake";

@@ -410,6 +410,8 @@ self: super: {
 
  geographic-msgs = self.callPackage ./geographic-msgs {};
 
+ geometric-shapes = self.callPackage ./geometric-shapes {};
+
  geometry2 = self.callPackage ./geometry2 {};
 
  geometry-msgs = self.callPackage ./geometry-msgs {};
@@ -574,6 +576,18 @@ self: super: {
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
+ moveit-resources = self.callPackage ./moveit-resources {};
+
+ moveit-resources-fanuc-description = self.callPackage ./moveit-resources-fanuc-description {};
+
+ moveit-resources-fanuc-moveit-config = self.callPackage ./moveit-resources-fanuc-moveit-config {};
+
+ moveit-resources-panda-description = self.callPackage ./moveit-resources-panda-description {};
+
+ moveit-resources-panda-moveit-config = self.callPackage ./moveit-resources-panda-moveit-config {};
+
+ moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
+
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multires-image = self.callPackage ./multires-image {};
@@ -706,6 +720,8 @@ self: super: {
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
 
+ plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
+
  pluginlib = self.callPackage ./pluginlib {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
@@ -811,6 +827,12 @@ self: super: {
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
+
+ robot-controllers = self.callPackage ./robot-controllers {};
+
+ robot-controllers-interface = self.callPackage ./robot-controllers-interface {};
+
+ robot-controllers-msgs = self.callPackage ./robot-controllers-msgs {};
 
  robot-localization = self.callPackage ./robot-localization {};
 
@@ -1008,6 +1030,8 @@ self: super: {
 
  rqt-topic = self.callPackage ./rqt-topic {};
 
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
+
  rttest = self.callPackage ./rttest {};
 
  rviz2 = self.callPackage ./rviz2 {};
@@ -1053,6 +1077,8 @@ self: super: {
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
+
+ srdfdom = self.callPackage ./srdfdom {};
 
  sros2 = self.callPackage ./sros2 {};
 
@@ -1232,6 +1258,8 @@ self: super: {
 
  vrxperience-msgs = self.callPackage ./vrxperience-msgs {};
 
+ warehouse-ros = self.callPackage ./warehouse-ros {};
+
  webots-ros2 = self.callPackage ./webots-ros2 {};
 
  webots-ros2-abb = self.callPackage ./webots-ros2-abb {};
@@ -1244,11 +1272,13 @@ self: super: {
 
  webots-ros2-examples = self.callPackage ./webots-ros2-examples {};
 
- webots-ros2-importer = self.callPackage ./webots-ros2-importer {};
-
  webots-ros2-msgs = self.callPackage ./webots-ros2-msgs {};
 
  webots-ros2-tiago = self.callPackage ./webots-ros2-tiago {};
+
+ webots-ros2-turtlebot = self.callPackage ./webots-ros2-turtlebot {};
+
+ webots-ros2-tutorials = self.callPackage ./webots-ros2-tutorials {};
 
  webots-ros2-universal-robot = self.callPackage ./webots-ros2-universal-robot {};
 

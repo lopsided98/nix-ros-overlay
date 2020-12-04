@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-default-env-config, controller-manager, gazebo-msgs, gazebo-ros, gazebo-ros-control, joint-state-controller, joint-state-publisher, position-controllers, robot-state-publisher, roslaunch, rospy, rostest, std-msgs, tf, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-melodic-cob-gazebo-worlds";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_simulation-release/archive/release/melodic/cob_gazebo_worlds/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "e73c726f58e47d75d86ead72845c4a1bbdeb0519c4247cc8ec75c2330efa99c0";
+    url = "https://github.com/ipa320/cob_simulation-release/archive/release/melodic/cob_gazebo_worlds/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "5c5456aaf0d831da9a530b08077d577c92bee86d343d84694ace70d3b3c90744";
   };
 
   buildType = "catkin";

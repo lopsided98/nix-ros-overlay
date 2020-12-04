@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-aico-solver, exotica-cartpole-dynamics-solver, exotica-collision-scene-fcl-latest, exotica-core, exotica-core-task-maps, exotica-ddp-solver, exotica-double-integrator-dynamics-solver, exotica-ik-solver, exotica-ilqg-solver, exotica-ilqr-solver, exotica-levenberg-marquardt-solver, exotica-ompl-control-solver, exotica-ompl-solver, exotica-pendulum-dynamics-solver, exotica-pinocchio-dynamics-solver, exotica-python, exotica-quadrotor-dynamics-solver, exotica-scipy-solver, exotica-time-indexed-rrt-connect-solver, exotica-val-description, geometry-msgs, interactive-markers, robot-state-publisher, rostest, rosunit, rviz, sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-examples";
-  version = "6.0.1-r1";
+  version = "6.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_examples/6.0.1-1.tar.gz";
-    name = "6.0.1-1.tar.gz";
-    sha256 = "708d97481c852453a74be91f57df9ab2907f068694b3d621ef4c2f47f9b53712";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_examples/6.0.2-1.tar.gz";
+    name = "6.0.2-1.tar.gz";
+    sha256 = "71d5e9eab259c26c5dae5a07eb1364f2024de5da7fc11aaff1fb78cf3209a944";
   };
 
   buildType = "catkin";

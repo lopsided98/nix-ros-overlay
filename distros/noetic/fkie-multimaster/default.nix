@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, fkie-master-discovery, fkie-master-sync, fkie-multimaster-msgs, fkie-node-manager, fkie-node-manager-daemon }:
 buildRosPackage {
   pname = "ros-noetic-fkie-multimaster";
-  version = "1.2.3-r1";
+  version = "1.2.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_multimaster/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "60415831978d6eef651fa1dd8e24735a384eed64ede56aa3d09ba5f0b5516a22";
+    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_multimaster/1.2.5-2.tar.gz";
+    name = "1.2.5-2.tar.gz";
+    sha256 = "fefeb71fe19e5cf4fb799cd4ca8be0413da2aecb722b2b0323dc77c9ac94b79d";
   };
 
   buildType = "catkin";

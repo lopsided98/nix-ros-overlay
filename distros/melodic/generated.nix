@@ -2462,6 +2462,8 @@ self: super: {
 
  play-motion-msgs = self.callPackage ./play-motion-msgs {};
 
+ plotjuggler = self.callPackage ./plotjuggler {};
+
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
 
  plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
@@ -3540,6 +3542,8 @@ self: super: {
 
  sot-core = self.callPackage ./sot-core {};
 
+ sot-tools = self.callPackage ./sot-tools {};
+
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
@@ -3819,8 +3823,6 @@ self: super: {
  tuw-object-msgs = self.callPackage ./tuw-object-msgs {};
 
  tuw-vehicle-msgs = self.callPackage ./tuw-vehicle-msgs {};
-
- tvm-vendor = self.callPackage ./tvm-vendor {};
 
  twist-mux = self.callPackage ./twist-mux {};
 

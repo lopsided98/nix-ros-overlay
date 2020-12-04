@@ -1154,8 +1154,6 @@ self: super: {
 
  turtlesim = self.callPackage ./turtlesim {};
 
- tvm-vendor = self.callPackage ./tvm-vendor {};
-
  udp-driver = self.callPackage ./udp-driver {};
 
  udp-msgs = self.callPackage ./udp-msgs {};

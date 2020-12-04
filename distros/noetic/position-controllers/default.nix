@@ -2,19 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, controller-interface, forward-command-controller, pluginlib }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-interface, forward-command-controller, hardware-interface, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-position-controllers";
-  version = "0.17.0-r1";
+  version = "0.18.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/position_controllers/0.17.0-1.tar.gz";
-    name = "0.17.0-1.tar.gz";
-    sha256 = "795d5c8a8bd9dd265568a5773df120fc4ad189b76546eb8dd36e240d5ef61e3a";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/position_controllers/0.18.1-1.tar.gz";
+    name = "0.18.1-1.tar.gz";
+    sha256 = "83af262bfff6d1100f9f0bfd2b0938dbd8cb9ae3645efd7260c878650189ee88";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ controller-interface forward-command-controller pluginlib ];
+  buildInputs = [ pluginlib ];
+  propagatedBuildInputs = [ controller-interface forward-command-controller hardware-interface roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

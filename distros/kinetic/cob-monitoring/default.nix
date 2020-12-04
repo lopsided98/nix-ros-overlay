@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cob-light, cob-msgs, cob-script-server, diagnostic-msgs, diagnostic-updater, ifstat-legacy, ipmitool, ntp, pythonPackages, roscpp, rospy, rostopic, sensor-msgs, std-msgs, sysstat, topic-tools }:
 buildRosPackage {
   pname = "ros-kinetic-cob-monitoring";
-  version = "0.6.18-r1";
+  version = "0.6.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_monitoring/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "f7c4a80bd4d6cd1e8cb022884b6630d4e6f1b10b7bab398961023f4f0133ae97";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/cob_monitoring/0.6.19-1.tar.gz";
+    name = "0.6.19-1.tar.gz";
+    sha256 = "744ecaaad6db561f3d676b4d233ade76727995fb1695e89c23b9503c90e19df9";
   };
 
   buildType = "catkin";

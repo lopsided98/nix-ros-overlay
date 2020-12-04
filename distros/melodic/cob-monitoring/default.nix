@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cob-light, cob-msgs, cob-script-server, diagnostic-msgs, diagnostic-updater, ifstat-legacy, ipmitool, ntp, pythonPackages, roscpp, rospy, rostopic, sensor-msgs, std-msgs, sysstat, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-cob-monitoring";
-  version = "0.6.18-r1";
+  version = "0.6.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_monitoring/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "37335ea3272eaf671e279bc520a5ce0fd4606bd3cddd0fb92a39f652b9df8a5b";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_monitoring/0.6.19-1.tar.gz";
+    name = "0.6.19-1.tar.gz";
+    sha256 = "18bbc3984c4a485a6e2d723bc0c6202d1afd71437928b6b5d3941f8c956cab0c";
   };
 
   buildType = "catkin";

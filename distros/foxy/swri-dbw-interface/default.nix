@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-foxy-swri-dbw-interface";
-  version = "3.3.1-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_dbw_interface/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "e6e9445d974c509f0592aa02bd25ec753722b901985467105950596c079427da";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_dbw_interface/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "0f93f6fb73b91bc0b387ee73296ae30fa283afbaf6e8ddf95363f9ad8031d8a1";
   };
 
   buildType = "ament_cmake";

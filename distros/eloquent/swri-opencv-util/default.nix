@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, swri-math-util }:
 buildRosPackage {
   pname = "ros-eloquent-swri-opencv-util";
-  version = "3.3.1-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_opencv_util/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "f66b6d21c7bef4e95adac3c482d6ed419cb4a8eeff4ce1bcb6eef5a219496ce2";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_opencv_util/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "4a4db4416a801c6f980fb249eceee0019051bec89a7e0eb586ba6f3229711864";
   };
 
   buildType = "ament_cmake";
