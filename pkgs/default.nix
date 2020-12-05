@@ -98,7 +98,7 @@ in {
   python38 = pythonOverridesFor super.python38;
 
   qwt6 = super.qwt6.overrideAttrs ({ postInstall ? "", ... }: {
-    # Some packages expect headers to be in subdirectory
+    # Gazebo 9 expects headers to be in subdirectory
     postInstall = postInstall + ''
       ln -s "$out/include" "$out/include/qwt"
     '';
