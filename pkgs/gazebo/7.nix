@@ -7,11 +7,11 @@
 
 stdenv.mkDerivation rec {
   pname = "gazebo";
-  version = "7.16.0";
+  version = "7.16.1";
 
   src = fetchurl {
     url = "https://osrf-distributions.s3.amazonaws.com/gazebo/releases/${pname}-${version}.tar.bz2";
-    sha256 = "0kyg2rkxy5fw4b53msjxi5cichy5d5w5ckfk5nh9897skdxz5rf6";
+    sha256 = "0xb6lrrwv9q279vanvj91ksyra9j26sgkcb2is2fys37f0v2f9hq";
   };
 
   patches = [
