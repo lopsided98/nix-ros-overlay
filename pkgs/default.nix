@@ -33,8 +33,6 @@ self: super: with super.lib; let
       rosinstall-generator = pySelf.callPackage ./rosinstall-generator { };
 
       rospkg = pySelf.callPackage ./rospkg { };
-
-      vcstools = pySelf.callPackage ./vcstools { };
     } // optionalAttrs pySuper.isPy3k {
       # This has to be done here (rather than in rosPackages) because
       # packageOverrides doesn't compose
