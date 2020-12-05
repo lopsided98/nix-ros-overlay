@@ -30,8 +30,6 @@ self: super: with super.lib; let
 
       rosdistro = pySelf.callPackage ./rosdistro { };
 
-      rosinstall = pySelf.callPackage ./rosinstall { };
-
       rosinstall-generator = pySelf.callPackage ./rosinstall-generator { };
 
       rospkg = pySelf.callPackage ./rospkg { };
