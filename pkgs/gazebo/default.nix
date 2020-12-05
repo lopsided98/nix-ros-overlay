@@ -20,15 +20,6 @@ mkDerivation rec {
     sha256 = srcSha256;
   };
 
-  patches = [
-    # Fix CMake relative path assumptions
-    (optional (lib.versionOlder version "11") (fetchpatch {
-      # https://github.com/osrf/gazebo/pull/2779
-      url = "https://github.com/osrf/gazebo/commit/8d8dcff5c0c92c5903883f3215236c6bf6ff1a5f.patch";
-      sha256 = "1q13cfscf02qkkp0wq03phdakl4i0qzlibiw0k76p50dygw2z864";
-    }))
-  ];
-
   enableParallelBuilding = true;
 
   cmakeFlags = [ "-DUSE_HOST_CFLAGS=False" ];
