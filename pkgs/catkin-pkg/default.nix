@@ -3,11 +3,11 @@
 
 buildPythonPackage rec {
   pname = "catkin_pkg";
-  version = "0.4.14";
+  version = "0.4.23";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "0d5jchqxvg68ry0nzw54vh38a4sfp5kqnxgrvcwqfa7wvki5lbpw";
+    sha256 = "1l6k3hcyxqqnb5m10z5clmf4gqcpibsm2wrrz6mhlz42r8f1ivi8";
   };
 
   propagatedBuildInputs = [ python-dateutil docutils pyparsing ];
