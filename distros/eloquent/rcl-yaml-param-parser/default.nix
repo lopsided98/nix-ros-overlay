@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, libyaml, libyaml-vendor, osrf-testing-tools-cpp, rcutils }:
 buildRosPackage {
   pname = "ros-eloquent-rcl-yaml-param-parser";
-  version = "0.8.4-r1";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/eloquent/rcl_yaml_param_parser/0.8.4-1.tar.gz";
-    name = "0.8.4-1.tar.gz";
-    sha256 = "db67177cbc1b228643030e431011c89ada235b40744ae156e0e18d7f320258ef";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/eloquent/rcl_yaml_param_parser/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
+    sha256 = "b8d8380d4b85b63139c458eb199f8bb6f5691cf96c49ac0df393ef5fc733965c";
   };
 
   buildType = "ament_cmake";

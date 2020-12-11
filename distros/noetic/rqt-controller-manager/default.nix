@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager-msgs, python3Packages, rospy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-noetic-rqt-controller-manager";
-  version = "0.19.3-r2";
+  version = "0.19.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/rqt_controller_manager/0.19.3-2.tar.gz";
-    name = "0.19.3-2.tar.gz";
-    sha256 = "19b31ac8c281564f2b58207810ad0f694044ca5b8fe0d90d29de597a9d3f1c21";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/rqt_controller_manager/0.19.4-1.tar.gz";
+    name = "0.19.4-1.tar.gz";
+    sha256 = "941fbec8959a2369d0caf97c6604a1ce13fb0b4ffbbb1d241cdcbb4a2c439920";
   };
 
   buildType = "catkin";

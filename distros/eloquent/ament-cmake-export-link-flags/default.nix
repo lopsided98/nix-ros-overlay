@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-eloquent-ament-cmake-export-link-flags";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_link_flags/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "cdc98206174c244ac90ddec87c2438dd587f0a02426207044f6fe031f7d1c16a";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_link_flags/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "0b94e0a81223a7df80a2f8f17d62c6eb201870c8fe8fdf6b444f9981d34707a2";
   };
 
   buildType = "ament_cmake";

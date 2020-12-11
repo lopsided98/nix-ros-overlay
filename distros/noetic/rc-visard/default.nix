@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rc-hand-eye-calibration-client, rc-pick-client, rc-roi-manager-gui, rc-silhouettematch-client, rc-tagdetect-client, rc-visard-description, rc-visard-driver }:
 buildRosPackage {
   pname = "ros-noetic-rc-visard";
-  version = "3.0.5-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_visard/3.0.5-1.tar.gz";
-    name = "3.0.5-1.tar.gz";
-    sha256 = "d545a811d092cf0129896ebaea7278929a8acc67d1a9292d32a17dc93a13f5ae";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_visard/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "6e8b12775994b606dd3e41dfababb5b667b110455ae41b6b647ce797360fef88";
   };
 
   buildType = "catkin";

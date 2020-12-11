@@ -120,6 +120,8 @@ self: super: {
 
  capabilities = self.callPackage ./capabilities {};
 
+ carla-msgs = self.callPackage ./carla-msgs {};
+
  carrot-planner = self.callPackage ./carrot-planner {};
 
  cartesian-msgs = self.callPackage ./cartesian-msgs {};
@@ -139,6 +141,8 @@ self: super: {
  clear-costmap-recovery = self.callPackage ./clear-costmap-recovery {};
 
  cmake-modules = self.callPackage ./cmake-modules {};
+
+ cnpy = self.callPackage ./cnpy {};
 
  cob-3d-mapping-msgs = self.callPackage ./cob-3d-mapping-msgs {};
 
@@ -172,6 +176,10 @@ self: super: {
 
  cob-collision-velocity-filter = self.callPackage ./cob-collision-velocity-filter {};
 
+ cob-command-gui = self.callPackage ./cob-command-gui {};
+
+ cob-command-tools = self.callPackage ./cob-command-tools {};
+
  cob-common = self.callPackage ./cob-common {};
 
  cob-control = self.callPackage ./cob-control {};
@@ -183,6 +191,10 @@ self: super: {
  cob-dashboard = self.callPackage ./cob-dashboard {};
 
  cob-default-env-config = self.callPackage ./cob-default-env-config {};
+
+ cob-default-robot-behavior = self.callPackage ./cob-default-robot-behavior {};
+
+ cob-default-robot-config = self.callPackage ./cob-default-robot-config {};
 
  cob-description = self.callPackage ./cob-description {};
 
@@ -200,15 +212,23 @@ self: super: {
 
  cob-frame-tracker = self.callPackage ./cob-frame-tracker {};
 
+ cob-gazebo-objects = self.callPackage ./cob-gazebo-objects {};
+
  cob-gazebo-plugins = self.callPackage ./cob-gazebo-plugins {};
 
  cob-gazebo-ros-control = self.callPackage ./cob-gazebo-ros-control {};
+
+ cob-gazebo-tools = self.callPackage ./cob-gazebo-tools {};
+
+ cob-gazebo-worlds = self.callPackage ./cob-gazebo-worlds {};
 
  cob-generic-can = self.callPackage ./cob-generic-can {};
 
  cob-hand = self.callPackage ./cob-hand {};
 
  cob-hand-bridge = self.callPackage ./cob-hand-bridge {};
+
+ cob-hardware-config = self.callPackage ./cob-hardware-config {};
 
  cob-hardware-emulation = self.callPackage ./cob-hardware-emulation {};
 
@@ -233,6 +253,8 @@ self: super: {
  cob-model-identifier = self.callPackage ./cob-model-identifier {};
 
  cob-monitoring = self.callPackage ./cob-monitoring {};
+
+ cob-moveit-config = self.callPackage ./cob-moveit-config {};
 
  cob-msgs = self.callPackage ./cob-msgs {};
 
@@ -624,11 +646,27 @@ self: super: {
 
  fkie-multimaster = self.callPackage ./fkie-multimaster {};
 
- fkie-node-manager = self.callPackage ./fkie-node-manager {};
-
  fkie-node-manager-daemon = self.callPackage ./fkie-node-manager-daemon {};
 
  fkie-potree-rviz-plugin = self.callPackage ./fkie-potree-rviz-plugin {};
+
+ flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
+
+ flexbe-core = self.callPackage ./flexbe-core {};
+
+ flexbe-input = self.callPackage ./flexbe-input {};
+
+ flexbe-mirror = self.callPackage ./flexbe-mirror {};
+
+ flexbe-msgs = self.callPackage ./flexbe-msgs {};
+
+ flexbe-onboard = self.callPackage ./flexbe-onboard {};
+
+ flexbe-states = self.callPackage ./flexbe-states {};
+
+ flexbe-testing = self.callPackage ./flexbe-testing {};
+
+ flexbe-widget = self.callPackage ./flexbe-widget {};
 
  fmi-adapter = self.callPackage ./fmi-adapter {};
 
@@ -946,6 +984,8 @@ self: super: {
 
  libphidgets = self.callPackage ./libphidgets {};
 
+ librealsense2 = self.callPackage ./librealsense2 {};
+
  librviz-tutorial = self.callPackage ./librviz-tutorial {};
 
  libsiftfast = self.callPackage ./libsiftfast {};
@@ -955,6 +995,8 @@ self: super: {
  locomotor-msgs = self.callPackage ./locomotor-msgs {};
 
  locomove-base = self.callPackage ./locomove-base {};
+
+ log-view = self.callPackage ./log-view {};
 
  lpg-planner = self.callPackage ./lpg-planner {};
 
@@ -1228,7 +1270,11 @@ self: super: {
 
  octovis = self.callPackage ./octovis {};
 
+ odva-ethernetip = self.callPackage ./odva-ethernetip {};
+
  ompl = self.callPackage ./ompl {};
+
+ omron-os32c-driver = self.callPackage ./omron-os32c-driver {};
 
  open-karto = self.callPackage ./open-karto {};
 
@@ -1306,13 +1352,25 @@ self: super: {
 
  pid = self.callPackage ./pid {};
 
+ pilz-industrial-motion-testutils = self.callPackage ./pilz-industrial-motion-testutils {};
+
+ pilz-msgs = self.callPackage ./pilz-msgs {};
+
+ pilz-testutils = self.callPackage ./pilz-testutils {};
+
+ pilz-utils = self.callPackage ./pilz-utils {};
+
  pinocchio = self.callPackage ./pinocchio {};
 
  planner-cspace = self.callPackage ./planner-cspace {};
 
  planner-cspace-msgs = self.callPackage ./planner-cspace-msgs {};
 
+ plotjuggler = self.callPackage ./plotjuggler {};
+
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
+
+ plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
 
  pluginlib = self.callPackage ./pluginlib {};
 
@@ -1340,11 +1398,23 @@ self: super: {
 
  pr2-common = self.callPackage ./pr2-common {};
 
+ pr2-controller-interface = self.callPackage ./pr2-controller-interface {};
+
+ pr2-controller-manager = self.callPackage ./pr2-controller-manager {};
+
  pr2-dashboard-aggregator = self.callPackage ./pr2-dashboard-aggregator {};
 
  pr2-description = self.callPackage ./pr2-description {};
 
+ pr2-hardware-interface = self.callPackage ./pr2-hardware-interface {};
+
  pr2-machine = self.callPackage ./pr2-machine {};
+
+ pr2-mechanism = self.callPackage ./pr2-mechanism {};
+
+ pr2-mechanism-diagnostics = self.callPackage ./pr2-mechanism-diagnostics {};
+
+ pr2-mechanism-model = self.callPackage ./pr2-mechanism-model {};
 
  pr2-mechanism-msgs = self.callPackage ./pr2-mechanism-msgs {};
 
@@ -1405,6 +1475,10 @@ self: super: {
  rc-visard-driver = self.callPackage ./rc-visard-driver {};
 
  rcdiscover = self.callPackage ./rcdiscover {};
+
+ realsense2-camera = self.callPackage ./realsense2-camera {};
+
+ realsense2-description = self.callPackage ./realsense2-description {};
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
@@ -1810,6 +1884,8 @@ self: super: {
 
  smclib = self.callPackage ./smclib {};
 
+ sob-layer = self.callPackage ./sob-layer {};
+
  socketcan-bridge = self.callPackage ./socketcan-bridge {};
 
  socketcan-interface = self.callPackage ./socketcan-interface {};
@@ -1825,6 +1901,8 @@ self: super: {
  speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
 
  srdfdom = self.callPackage ./srdfdom {};
+
+ stag-ros = self.callPackage ./stag-ros {};
 
  stage = self.callPackage ./stage {};
 
@@ -2051,6 +2129,8 @@ self: super: {
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
+
+ video-stream-opencv = self.callPackage ./video-stream-opencv {};
 
  view-controller-msgs = self.callPackage ./view-controller-msgs {};
 

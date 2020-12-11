@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, combined-robot-hw, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-limits-interface, realtime-tools, transmission-interface }:
 buildRosPackage {
   pname = "ros-melodic-ros-control";
-  version = "0.18.2-r1";
+  version = "0.18.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/ros_control/0.18.2-1.tar.gz";
-    name = "0.18.2-1.tar.gz";
-    sha256 = "8098d2e6d7776ff63d197593fbee6f6189dffccdf57b50723984c3405075b690";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/ros_control/0.18.3-1.tar.gz";
+    name = "0.18.3-1.tar.gz";
+    sha256 = "a5cacff3ae3536a9afa3e224d5299160bf545a7e6ae866ea4319abe63e91aca7";
   };
 
   buildType = "catkin";

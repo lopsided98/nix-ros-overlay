@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, control-msgs, moveit-core, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-moveit-simple-controller-manager";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_simple_controller_manager/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "c557de55cd3afb3d583c78bd669ef643d364428c1b30ab4d0e0f12a862b15228";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_simple_controller_manager/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "f4561e321015eb7b065ea9baba054aa00d4678c7c265a5734a8f82e7df779d74";
   };
 
   buildType = "catkin";

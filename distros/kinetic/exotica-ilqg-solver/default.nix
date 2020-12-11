@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, exotica-python }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-ilqg-solver";
-  version = "6.0.1-r1";
+  version = "6.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_ilqg_solver/6.0.1-1.tar.gz";
-    name = "6.0.1-1.tar.gz";
-    sha256 = "9cb08f8f5c5ccea85c5842c33977bcf31e9bab0e96f881b956ecd8f6d2412e02";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_ilqg_solver/6.0.2-1.tar.gz";
+    name = "6.0.2-1.tar.gz";
+    sha256 = "8d9d2bda42f10e8940fa767601de0699233ee402d7270504628961a9dbef97b6";
   };
 
   buildType = "catkin";

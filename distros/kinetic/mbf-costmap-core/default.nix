@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, geometry-msgs, mbf-abstract-core, mbf-utility, nav-core, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-mbf-costmap-core";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_costmap_core/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "535cb2c281a9fa2054ecf2d3958e9bcebfe68aa4ec888e4a619d7ad9ee5d94bf";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/kinetic/mbf_costmap_core/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "503039bf2b401ab4185191d703f5a02c4a4e67df1772626cf5300de39353bddb";
   };
 
   buildType = "catkin";

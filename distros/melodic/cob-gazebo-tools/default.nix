@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-msgs, geometry-msgs, pythonPackages, roslib, rospy, tf }:
 buildRosPackage {
   pname = "ros-melodic-cob-gazebo-tools";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_simulation-release/archive/release/melodic/cob_gazebo_tools/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "ac13aa05cc3e8efbdebb690cdad1462775d85d285d0966084d76deaa235ee064";
+    url = "https://github.com/ipa320/cob_simulation-release/archive/release/melodic/cob_gazebo_tools/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "aafbd2b79973119b34e683196ae40bb5b41a6cbb1ff74a8816e892fa868f24fc";
   };
 
   buildType = "catkin";

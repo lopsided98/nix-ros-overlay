@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, marti-common-msgs, marti-nav-msgs, rclcpp, swri-geometry-util, swri-math-util, swri-roscpp, swri-transform-util, visualization-msgs }:
 buildRosPackage {
   pname = "ros-foxy-swri-route-util";
-  version = "3.3.1-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_route_util/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "1dd4e1077c50249c922d403215f7547ddc2ad62b47da679798037ae76191f6f8";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_route_util/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "7213702ae36fc9d1a5ea398d3e26915c5d80af1ca51bf6c4441b29d10cd99215";
   };
 
   buildType = "ament_cmake";

@@ -2,18 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-examples-rclcpp-minimal-publisher";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/eloquent/examples_rclcpp_minimal_publisher/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "44e89bf81e4075cb56c97969abaa8e0df7d5417f26ab68fc3d1d05a930693dba";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/eloquent/examples_rclcpp_minimal_publisher/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "c168dd35c5a0e255e963a8f0445bb18da9871f1916526949a7bda42c26c028ac";
   };
 
   buildType = "ament_cmake";
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ rclcpp std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

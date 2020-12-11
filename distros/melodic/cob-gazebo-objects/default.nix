@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-description, gazebo-ros }:
 buildRosPackage {
   pname = "ros-melodic-cob-gazebo-objects";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_simulation-release/archive/release/melodic/cob_gazebo_objects/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "f20fafbb384f5bd544d09104bfae886e42d1689f9c4382946b6678d44c59c17e";
+    url = "https://github.com/ipa320/cob_simulation-release/archive/release/melodic/cob_gazebo_objects/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "445dea4e7fe1c1759edb0ac2263788cfc15c6ebe775f03f8de913917af503629";
   };
 
   buildType = "catkin";

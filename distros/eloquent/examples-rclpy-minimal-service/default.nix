@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, example-interfaces, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-examples-rclpy-minimal-service";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/eloquent/examples_rclpy_minimal_service/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "ade2d850a854e20f0abfb33cd184009c2eb0f4993a326efad1e73b9236159839";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/eloquent/examples_rclpy_minimal_service/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "875dc701f92e531fe8c43bc1c3e36de8527dd82877de6c2588e1dd057eea7e5f";
   };
 
   buildType = "ament_python";

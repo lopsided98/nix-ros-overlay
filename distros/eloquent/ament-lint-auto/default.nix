@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test }:
 buildRosPackage {
   pname = "ros-eloquent-ament-lint-auto";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_lint_auto/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "99095a80af5d9c9f5071bf6b5517d42e3a77a5bfa6c973d9fef5c882982ba7df";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_lint_auto/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "b2ef8dc4f3b1c74107d6a3438c8c717b7a3fb19aadd28d6bf4e69cad2ce821bc";
   };
 
   buildType = "ament_cmake";

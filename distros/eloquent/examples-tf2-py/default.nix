@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch-ros, pythonPackages, tf2-ros }:
 buildRosPackage {
   pname = "ros-eloquent-examples-tf2-py";
-  version = "0.12.5-r1";
+  version = "0.12.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/eloquent/examples_tf2_py/0.12.5-1.tar.gz";
-    name = "0.12.5-1.tar.gz";
-    sha256 = "23a0d1fa54e9dcbadaa1e50b616a3bdd4a3307505b3521cc9e562b59168105dd";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/eloquent/examples_tf2_py/0.12.6-1.tar.gz";
+    name = "0.12.6-1.tar.gz";
+    sha256 = "3dc1c882f07f65f7aea4a76ee4bff47e2a6b5aa0c028b30407e1ce14ab6a6761";
   };
 
   buildType = "ament_python";

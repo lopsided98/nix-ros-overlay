@@ -5118,6 +5118,14 @@ self: super: {
 
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
 
+ vesc = self.callPackage ./vesc {};
+
+ vesc-ackermann = self.callPackage ./vesc-ackermann {};
+
+ vesc-driver = self.callPackage ./vesc-driver {};
+
+ vesc-msgs = self.callPackage ./vesc-msgs {};
+
  video-stream-opencv = self.callPackage ./video-stream-opencv {};
 
  view-controller-msgs = self.callPackage ./view-controller-msgs {};

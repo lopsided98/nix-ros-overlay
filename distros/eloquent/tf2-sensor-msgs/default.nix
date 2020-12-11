@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, eigen, eigen3-cmake-module, sensor-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-eloquent-tf2-sensor-msgs";
-  version = "0.12.5-r1";
+  version = "0.12.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/eloquent/tf2_sensor_msgs/0.12.5-1.tar.gz";
-    name = "0.12.5-1.tar.gz";
-    sha256 = "a75c527bf971f642ffa18ab5ff511f5957b4d10ea08db6e10ce7167eebe310a0";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/eloquent/tf2_sensor_msgs/0.12.6-1.tar.gz";
+    name = "0.12.6-1.tar.gz";
+    sha256 = "4c2789b8b7afadcd10618ebdc8ff864c19070a66ce24b58fcc779477a5dc395e";
   };
 
   buildType = "ament_cmake";

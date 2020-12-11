@@ -294,6 +294,8 @@ self: super: {
 
  cmake-modules = self.callPackage ./cmake-modules {};
 
+ cmd-vel-smoother = self.callPackage ./cmd-vel-smoother {};
+
  cob-3d-mapping-msgs = self.callPackage ./cob-3d-mapping-msgs {};
 
  cob-actions = self.callPackage ./cob-actions {};
@@ -507,6 +509,8 @@ self: super: {
  concert-service-msgs = self.callPackage ./concert-service-msgs {};
 
  concert-workflow-engine-msgs = self.callPackage ./concert-workflow-engine-msgs {};
+
+ contact-states-observer = self.callPackage ./contact-states-observer {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -849,6 +853,12 @@ self: super: {
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
  eus-assimp = self.callPackage ./eus-assimp {};
+
+ eus-nlopt = self.callPackage ./eus-nlopt {};
+
+ eus-qp = self.callPackage ./eus-qp {};
+
+ eus-qpoases = self.callPackage ./eus-qpoases {};
 
  euslime = self.callPackage ./euslime {};
 
@@ -1462,6 +1472,8 @@ self: super: {
 
  joy-listener = self.callPackage ./joy-listener {};
 
+ joy-mouse = self.callPackage ./joy-mouse {};
+
  joy-teleop = self.callPackage ./joy-teleop {};
 
  joystick-drivers = self.callPackage ./joystick-drivers {};
@@ -1472,15 +1484,25 @@ self: super: {
 
  jsk-3rdparty = self.callPackage ./jsk-3rdparty {};
 
+ jsk-calibration = self.callPackage ./jsk-calibration {};
+
  jsk-common = self.callPackage ./jsk-common {};
 
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
 
+ jsk-control = self.callPackage ./jsk-control {};
+
+ jsk-footstep-controller = self.callPackage ./jsk-footstep-controller {};
+
  jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
+
+ jsk-footstep-planner = self.callPackage ./jsk-footstep-planner {};
 
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ jsk-ik-server = self.callPackage ./jsk-ik-server {};
 
  jsk-interactive = self.callPackage ./jsk-interactive {};
 
@@ -1511,6 +1533,8 @@ self: super: {
  jsk-rqt-plugins = self.callPackage ./jsk-rqt-plugins {};
 
  jsk-rviz-plugins = self.callPackage ./jsk-rviz-plugins {};
+
+ jsk-teleop-joy = self.callPackage ./jsk-teleop-joy {};
 
  jsk-tilt-laser = self.callPackage ./jsk-tilt-laser {};
 
@@ -1957,8 +1981,6 @@ self: super: {
  moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
-
- moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
 
  moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
 
@@ -2462,6 +2484,8 @@ self: super: {
 
  play-motion-msgs = self.callPackage ./play-motion-msgs {};
 
+ plotjuggler = self.callPackage ./plotjuggler {};
+
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
 
  plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
@@ -2663,8 +2687,6 @@ self: super: {
  ps3joy = self.callPackage ./ps3joy {};
 
  psen-scan = self.callPackage ./psen-scan {};
-
- psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
 
  px4-msgs = self.callPackage ./px4-msgs {};
 
@@ -3540,6 +3562,8 @@ self: super: {
 
  sot-core = self.callPackage ./sot-core {};
 
+ sot-tools = self.callPackage ./sot-tools {};
+
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
@@ -3985,6 +4009,14 @@ self: super: {
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
+
+ vesc = self.callPackage ./vesc {};
+
+ vesc-ackermann = self.callPackage ./vesc-ackermann {};
+
+ vesc-driver = self.callPackage ./vesc-driver {};
+
+ vesc-msgs = self.callPackage ./vesc-msgs {};
 
  video-stream-opencv = self.callPackage ./video-stream-opencv {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3Packages }:
 buildRosPackage {
   pname = "ros-eloquent-rosidl-adapter";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_adapter/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "0a8b4d5a803c95cb5b9401b80601eb2b0e61ba311dc274372721a8417aa117a7";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_adapter/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "2e752ee373bdb6483ad031fd349a234e8ec088d3ab4db69e18998bf4c87c1a63";
   };
 
   buildType = "ament_cmake";
