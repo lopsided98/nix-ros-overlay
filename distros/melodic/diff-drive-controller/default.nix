@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, controller-interface, controller-manager, dynamic-reconfigure, nav-msgs, pluginlib, realtime-tools, rosgraph-msgs, rostest, std-srvs, tf, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-diff-drive-controller";
-  version = "0.17.0-r1";
+  version = "0.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/diff_drive_controller/0.17.0-1.tar.gz";
-    name = "0.17.0-1.tar.gz";
-    sha256 = "eda9dc5aa8421b9800b46c927b7688faa7f7e71e409e5924a0b4d36521793aa5";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/diff_drive_controller/0.17.1-1.tar.gz";
+    name = "0.17.1-1.tar.gz";
+    sha256 = "c2f3c44e0f1df1407cc52478542ef8f0822b05dd7c3909c0a88311a4d9d21e3d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, dynamic-reconfigure, geometry-msgs, mbf-abstract-core, mbf-abstract-nav, mbf-msgs, nav-msgs, pluginlib, roscpp, std-msgs, std-srvs, tf, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-mbf-simple-nav";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_simple_nav/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "49f7277cbc1dd9285a0ddf36689b2d0230c101e9cd8822aef40d8eb5e837c810";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_simple_nav/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "d221ca58ceb852c9307cc22301863fe9570a1bba0d23ccde0e8b398227d17fea";
   };
 
   buildType = "catkin";

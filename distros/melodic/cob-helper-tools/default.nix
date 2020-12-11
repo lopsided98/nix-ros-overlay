@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-script-server, diagnostic-msgs, dynamic-reconfigure, message-generation, message-runtime, rospy, std-srvs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-cob-helper-tools";
-  version = "0.6.18-r1";
+  version = "0.6.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_helper_tools/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "68453e28fd256f29c023a0b140aeb2d118febfa49c27e032ea822f4f68a04e99";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_helper_tools/0.6.19-1.tar.gz";
+    name = "0.6.19-1.tar.gz";
+    sha256 = "d48b5faa1b1aee73e0895f2db42161713b77fcd770b316c6d423297c6d2db24f";
   };
 
   buildType = "catkin";

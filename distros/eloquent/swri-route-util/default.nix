@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, marti-common-msgs, marti-nav-msgs, rclcpp, swri-geometry-util, swri-math-util, swri-roscpp, swri-transform-util, visualization-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-swri-route-util";
-  version = "3.3.1-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_route_util/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "82b2ed28172fa509294472307e00e1aad35219ea2950efb29731470a6a5b9b63";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/eloquent/swri_route_util/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "1519f76c8e019aad1ef33eb06289d31628dfb1d13451458ac29b054077ee6937";
   };
 
   buildType = "ament_cmake";

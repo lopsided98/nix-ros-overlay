@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, dynamic-reconfigure, geometry-msgs, mbf-abstract-core, mbf-msgs, mbf-utility, nav-msgs, roscpp, std-msgs, std-srvs, tf, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-mbf-abstract-nav";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/mbf_abstract_nav/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "aa56023690a79abd5b9dcce1beef94d4d323d056b2e40961ef40b16ef5963a13";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/mbf_abstract_nav/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "648bbe062e7497cf737554a59fd7653f6aa74dd91da0af49a83ca6ebdf17242d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, qt5, rviz-common }:
 buildRosPackage {
   pname = "ros-eloquent-rviz-visual-testing-framework";
-  version = "7.0.6-r1";
+  version = "7.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/eloquent/rviz_visual_testing_framework/7.0.6-1.tar.gz";
-    name = "7.0.6-1.tar.gz";
-    sha256 = "9e43dc58187353959ea177f18a7f5c1760eb12eda6f64562797f0482b7b00478";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/eloquent/rviz_visual_testing_framework/7.0.7-1.tar.gz";
+    name = "7.0.7-1.tar.gz";
+    sha256 = "5a9254525dcfdeed45a136a0501caa5d0ebb9c44035347c4c0269ba2834b870d";
   };
 
   buildType = "ament_cmake";

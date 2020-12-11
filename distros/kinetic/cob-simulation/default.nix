@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-bringup-sim, cob-gazebo, cob-gazebo-objects, cob-gazebo-tools, cob-gazebo-worlds }:
 buildRosPackage {
   pname = "ros-kinetic-cob-simulation";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_simulation-release/archive/release/kinetic/cob_simulation/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "fbb1f02040fcaa706581a64ebf9f7704fb74f0b0c73a43169ca61a5dab73d68b";
+    url = "https://github.com/ipa320/cob_simulation-release/archive/release/kinetic/cob_simulation/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "c5ab1e3ba569f7747cf0ee6c1a8dd5edd2e3f50b7426f6783764b008440dc277";
   };
 
   buildType = "catkin";

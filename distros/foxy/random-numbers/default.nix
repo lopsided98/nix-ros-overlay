@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost }:
 buildRosPackage {
   pname = "ros-foxy-random-numbers";
-  version = "1.0.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/random_numbers-release/archive/release/foxy/random_numbers/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "ec03b0c18f5a669cbba971e71cb9b652b4689a1beb2426c716c62ce959f34926";
+    url = "https://github.com/moveit/random_numbers-release/archive/release/foxy/random_numbers/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "427a010ef39d42760986981e0fa0e47955b0d0f4cb9aec7cfc71d8a70c6b89d1";
   };
 
   buildType = "ament_cmake";

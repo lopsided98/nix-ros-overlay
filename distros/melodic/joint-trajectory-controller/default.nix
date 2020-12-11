@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, angles, catkin, cmake-modules, code-coverage, control-msgs, control-toolbox, controller-interface, controller-manager, hardware-interface, pluginlib, realtime-tools, roscpp, rostest, trajectory-msgs, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-joint-trajectory-controller";
-  version = "0.17.0-r1";
+  version = "0.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/joint_trajectory_controller/0.17.0-1.tar.gz";
-    name = "0.17.0-1.tar.gz";
-    sha256 = "c9f9867257a667bfe21b663f9daf801cc8acb7e69ff242f41ecaec78a0d45972";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/joint_trajectory_controller/0.17.1-1.tar.gz";
+    name = "0.17.1-1.tar.gz";
+    sha256 = "435b4070843067322d77e6143cc3411ff3ee496b9f18cf7ce096813cb7963696";
   };
 
   buildType = "catkin";

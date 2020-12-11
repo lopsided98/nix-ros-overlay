@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, cob-description, geometry-msgs, message-generation, message-runtime, moveit-msgs, pythonPackages, robot-state-publisher, roslib, rospy, rviz, schunk-description, sensor-msgs, std-msgs, tf, tf2-ros, trajectory-msgs, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-melodic-cob-grasp-generation";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/melodic/cob_grasp_generation/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "a1458ce47ba4511a9cb3365600e311cd2d34e0c8a73913dcc722d91ac1b60de5";
+    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/melodic/cob_grasp_generation/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "09554012e54949f6aae959bd4247b657bd81280c0c4e2595f24277534ea90a2d";
   };
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
   propagatedBuildInputs = [ actionlib actionlib-msgs cob-description geometry-msgs message-runtime moveit-msgs pythonPackages.scipy pythonPackages.six robot-state-publisher roslib rospy rviz schunk-description sensor-msgs std-msgs tf tf2-ros trajectory-msgs visualization-msgs xacro ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''Grasp generation for Care-O-bot based on OpenRAVE'';

@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-script-server, pythonPackages, roslib, rospy }:
 buildRosPackage {
   pname = "ros-melodic-cob-command-gui";
-  version = "0.6.18-r1";
+  version = "0.6.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_command_gui/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "7b85c446b55b6d58bc3da6056c814ab1e4097d709aaf78114a55ea4c0dd65009";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_command_gui/0.6.19-1.tar.gz";
+    name = "0.6.19-1.tar.gz";
+    sha256 = "1701a98d3b1a973455546a20f86ece15cb2ef964f1f8a98c49fea4675f1d69a5";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cob-msgs cob-script-server pythonPackages.pygraphviz pythonPackages.pygtk roslib rospy ];
+  propagatedBuildInputs = [ cob-msgs cob-script-server pythonPackages.pygobject3 roslib rospy ];
   nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {

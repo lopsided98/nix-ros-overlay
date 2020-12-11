@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-mypy }:
 buildRosPackage {
   pname = "ros-eloquent-ament-cmake-mypy";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_mypy/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "9aa9c67029b14b6a9e3fb0ba90fd65c6d6f32c06094fba1cf7f62007c818666c";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_mypy/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "52980c0c3ddc39d2f9387c55865ff05d791520e678a055fcb48122cff7f0b257";
   };
 
   buildType = "ament_cmake";

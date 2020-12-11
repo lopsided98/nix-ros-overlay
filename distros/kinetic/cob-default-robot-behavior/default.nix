@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cob-light, cob-script-server, rospy, std-msgs, std-srvs }:
+{ lib, buildRosPackage, fetchurl, catkin, cob-light, cob-script-server, pythonPackages, rospy, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-default-robot-behavior";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_default_robot_behavior/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "510ec5308edeb2d450ef6767b248288b078e14bc4fe0b944a2fb885ca307a8dc";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/kinetic/cob_default_robot_behavior/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "377d82dd68021bb09376c0edd458f159e53a4779201727c3cd5e624030e42949";
   };
 
   buildType = "catkin";
   propagatedBuildInputs = [ cob-light cob-script-server rospy std-msgs std-srvs ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''The cob_default_robot_behavior package provides helper scripts for standard robot behaviors.'';

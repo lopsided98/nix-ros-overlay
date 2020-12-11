@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, controller-interface, controller-manager, diff-drive-controller, geometry-msgs, hardware-interface, nav-msgs, pluginlib, realtime-tools, roscpp, rostest, rosunit, std-msgs, std-srvs, tf, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-ackermann-steering-controller";
-  version = "0.17.0-r1";
+  version = "0.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/ackermann_steering_controller/0.17.0-1.tar.gz";
-    name = "0.17.0-1.tar.gz";
-    sha256 = "c6a9497ba01e61521279152fdc1a308cee5856d8e03b031d6917b4965da235a2";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/ackermann_steering_controller/0.17.1-1.tar.gz";
+    name = "0.17.1-1.tar.gz";
+    sha256 = "e9672b4b535a059745bc2a5314fc19267346107fdf482b5f37ed0b6a1064a9ca";
   };
 
   buildType = "catkin";

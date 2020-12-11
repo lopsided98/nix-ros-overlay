@@ -2,18 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp }:
 buildRosPackage {
   pname = "ros-foxy-examples-rclcpp-minimal-timer";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/foxy/examples_rclcpp_minimal_timer/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "58097ce0c0838134d3d9c2d1035135cfb09d695100e0b25afd6f4d6aef7a549d";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/foxy/examples_rclcpp_minimal_timer/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "b60787e3aa6033099bd8ebf49cfb91e5f50bffcc78b0d69f4053aa6cf492cfe9";
   };
 
   buildType = "ament_cmake";
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 

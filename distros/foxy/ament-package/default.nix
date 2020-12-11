@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-foxy-ament-package";
-  version = "0.9.2-r1";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/foxy/ament_package/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "827beeb13d48ff7a347cabdc665b42d3056eeccdf1ef85e926b9a763543bb6dd";
+    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/foxy/ament_package/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "1e2abd458a2d64f43f57fe1796ee8457fb2667493b78a22584862d71acb86319";
   };
 
   buildType = "ament_python";

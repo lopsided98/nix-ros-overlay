@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, git, libxml2, llvm, openblas, ros-environment }:
+{ lib, buildRosPackage, fetchurl, catkin, git, libxml2, openblas, ros-environment }:
 buildRosPackage {
   pname = "ros-melodic-tvm-vendor";
-  version = "0.7.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/autowarefoundation/tvm_vendor-release/archive/release/melodic/tvm_vendor/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "76243a88db420c6c4c2a9849f4e1a47adcb7c51f40ca9ae6daa88fcbbb7c80b3";
+    url = "https://github.com/autowarefoundation/tvm_vendor-release/archive/release/melodic/tvm_vendor/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "511a053350273ffa7480269d5730915ca32972142ae9894be91b1690cfadd378";
   };
 
   buildType = "catkin";
   buildInputs = [ ros-environment ];
-  propagatedBuildInputs = [ git libxml2 llvm openblas ];
+  propagatedBuildInputs = [ git libxml2 openblas ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

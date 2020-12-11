@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager-msgs, rospy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-melodic-rqt-controller-manager";
-  version = "0.18.2-r1";
+  version = "0.18.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/rqt_controller_manager/0.18.2-1.tar.gz";
-    name = "0.18.2-1.tar.gz";
-    sha256 = "70066c6ab652efe76e9a88703135c47ef8d0f0f7a7577b73d4bbb2861ddaef63";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/rqt_controller_manager/0.18.3-1.tar.gz";
+    name = "0.18.3-1.tar.gz";
+    sha256 = "d1a3c797567d977ef0c802165baef646bfe79039541dc843bd3765ecc16286f2";
   };
 
   buildType = "catkin";

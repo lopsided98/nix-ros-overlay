@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, curl, pkg-config }:
 buildRosPackage {
   pname = "ros-foxy-libcurl-vendor";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/foxy/libcurl_vendor/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "b8252b67e68cd345ffa90ba41140ed1a31f5722028bd3cb8c1feea9208f0b0c6";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/foxy/libcurl_vendor/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "ff8636e6fce5807a762436f02ebc04a08784e18645cbdf8da1917438e321345b";
   };
 
   buildType = "ament_cmake";
