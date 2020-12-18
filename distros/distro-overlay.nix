@@ -149,6 +149,12 @@ let
       }) ];
     });
 
+    librealsense2 = rosSuper.librealsense2.overrideAttrs ({
+      buildInputs ? [], ...
+    }: {
+      buildInputs = buildInputs ++ [ self.glfw self.libGLU ];
+    });
+
     libuvc-camera = rosSuper.libuvc-camera.overrideAttrs ({
       postPatch ? "", ...
     }: {
