@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, locomotor, move-base-msgs, nav-2d-utils, nav-core, nav-core-adapter, roslint }:
 buildRosPackage {
   pname = "ros-kinetic-locomove-base";
-  version = "0.2.5";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/locomove_base/0.2.5-0.tar.gz";
-    name = "0.2.5-0.tar.gz";
-    sha256 = "775a49385eb2e6b31a980d64265b161829dca2ed744c3d50894a22c1a2721ecb";
+    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/locomove_base/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "d6d36bb11efd24d51901e47c265de216a4724a3a07227b7038b631853571a892";
   };
 
   buildType = "catkin";

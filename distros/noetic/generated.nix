@@ -324,6 +324,8 @@ self: super: {
 
  codec-image-transport = self.callPackage ./codec-image-transport {};
 
+ color-util = self.callPackage ./color-util {};
+
  combined-robot-hw = self.callPackage ./combined-robot-hw {};
 
  combined-robot-hw-tests = self.callPackage ./combined-robot-hw-tests {};
@@ -704,7 +706,11 @@ self: super: {
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
+ gazebo-video-monitor-msgs = self.callPackage ./gazebo-video-monitor-msgs {};
+
  gazebo-video-monitor-plugins = self.callPackage ./gazebo-video-monitor-plugins {};
+
+ gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
 
  gencpp = self.callPackage ./gencpp {};
 
@@ -763,6 +769,50 @@ self: super: {
  hardware-interface = self.callPackage ./hardware-interface {};
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
+
+ hector-compressed-map-transport = self.callPackage ./hector-compressed-map-transport {};
+
+ hector-gazebo = self.callPackage ./hector-gazebo {};
+
+ hector-gazebo-plugins = self.callPackage ./hector-gazebo-plugins {};
+
+ hector-gazebo-thermal-camera = self.callPackage ./hector-gazebo-thermal-camera {};
+
+ hector-gazebo-worlds = self.callPackage ./hector-gazebo-worlds {};
+
+ hector-geotiff = self.callPackage ./hector-geotiff {};
+
+ hector-geotiff-launch = self.callPackage ./hector-geotiff-launch {};
+
+ hector-geotiff-plugins = self.callPackage ./hector-geotiff-plugins {};
+
+ hector-imu-attitude-to-tf = self.callPackage ./hector-imu-attitude-to-tf {};
+
+ hector-imu-tools = self.callPackage ./hector-imu-tools {};
+
+ hector-map-server = self.callPackage ./hector-map-server {};
+
+ hector-map-tools = self.callPackage ./hector-map-tools {};
+
+ hector-mapping = self.callPackage ./hector-mapping {};
+
+ hector-marker-drawing = self.callPackage ./hector-marker-drawing {};
+
+ hector-models = self.callPackage ./hector-models {};
+
+ hector-nav-msgs = self.callPackage ./hector-nav-msgs {};
+
+ hector-sensors-description = self.callPackage ./hector-sensors-description {};
+
+ hector-sensors-gazebo = self.callPackage ./hector-sensors-gazebo {};
+
+ hector-slam = self.callPackage ./hector-slam {};
+
+ hector-slam-launch = self.callPackage ./hector-slam-launch {};
+
+ hector-trajectory-server = self.callPackage ./hector-trajectory-server {};
+
+ hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
 
  hfl-driver = self.callPackage ./hfl-driver {};
 
@@ -825,6 +875,10 @@ self: super: {
  interactive-markers = self.callPackage ./interactive-markers {};
 
  ipa-3d-fov-visualization = self.callPackage ./ipa-3d-fov-visualization {};
+
+ iris-lama = self.callPackage ./iris-lama {};
+
+ iris-lama-ros = self.callPackage ./iris-lama-ros {};
 
  ivcon = self.callPackage ./ivcon {};
 
@@ -1214,6 +1268,8 @@ self: super: {
 
  nav-grid-pub-sub = self.callPackage ./nav-grid-pub-sub {};
 
+ nav-grid-server = self.callPackage ./nav-grid-server {};
+
  nav-msgs = self.callPackage ./nav-msgs {};
 
  navfn = self.callPackage ./navfn {};
@@ -1497,6 +1553,12 @@ self: super: {
  robot-calibration-msgs = self.callPackage ./robot-calibration-msgs {};
 
  robot-localization = self.callPackage ./robot-localization {};
+
+ robot-nav-rviz-plugins = self.callPackage ./robot-nav-rviz-plugins {};
+
+ robot-nav-tools = self.callPackage ./robot-nav-tools {};
+
+ robot-nav-viz-demos = self.callPackage ./robot-nav-viz-demos {};
 
  robot-navigation = self.callPackage ./robot-navigation {};
 

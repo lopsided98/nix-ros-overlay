@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nav-2d-msgs, nav-grid, roslint, rosunit, tf }:
 buildRosPackage {
   pname = "ros-kinetic-nav-core2";
-  version = "0.2.5";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/nav_core2/0.2.5-0.tar.gz";
-    name = "0.2.5-0.tar.gz";
-    sha256 = "e31fa1f8808b4f7e21de3c59dc446e67483f870178ab6f0d937a0ad486b30e73";
+    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/nav_core2/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "b3319ad6c2d9f6237cd54d78b31c4394c3876c5a2f5aee61c8adfc023aaf8640";
   };
 
   buildType = "catkin";

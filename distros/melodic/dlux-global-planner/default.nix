@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav-core2, nav-grid, nav-grid-pub-sub, nav-msgs, pluginlib, roscpp, roslint, rostest, rosunit, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dlux-global-planner";
-  version = "0.2.5-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/dlux_global_planner/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "6a30b86cc1610cafd21bf8248d800d59d5dbd510bff2a0a767afca90a58d9cbc";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/dlux_global_planner/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "a5b6a4db7296280ca5a7bc11e95f0b04e35debd2dc299049d8332a8686f1811c";
   };
 
   buildType = "catkin";

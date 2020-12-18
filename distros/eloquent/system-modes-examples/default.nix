@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-lint-auto, rclcpp, rclcpp-lifecycle, ros2launch, system-modes }:
 buildRosPackage {
   pname = "ros-eloquent-system-modes-examples";
-  version = "0.4.1-r1";
+  version = "0.4.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/eloquent/system_modes_examples/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "ccfb5156537cd1778e042bcd3bd38db4fb4e1307ede08acebaef5dc3a88b97ca";
+    url = "https://github.com/microROS/system_modes-release/archive/release/eloquent/system_modes_examples/0.4.2-2.tar.gz";
+    name = "0.4.2-2.tar.gz";
+    sha256 = "b55a935ab0797a3779a5e474a9bc1d9c516fc62ba1eef10d1ffe146ae4010a16";
   };
 
   buildType = "ament_cmake";

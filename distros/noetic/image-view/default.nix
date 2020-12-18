@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-calibration-parsers, catkin, cv-bridge, dynamic-reconfigure, gtk3, image-transport, message-filters, message-generation, nodelet, rosconsole, roscpp, rostest, sensor-msgs, std-srvs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-noetic-image-view";
-  version = "1.15.2-r1";
+  version = "1.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_view/1.15.2-1.tar.gz";
-    name = "1.15.2-1.tar.gz";
-    sha256 = "cb3446e071fb4c256609be0e23c217aa93e48de7f95602f85191931e9fc3f956";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_view/1.15.3-1.tar.gz";
+    name = "1.15.3-1.tar.gz";
+    sha256 = "a515a45455748772fb12078e7b3d0bf081a97d13c7f20c0df8779d58c06b7352";
   };
 
   buildType = "catkin";

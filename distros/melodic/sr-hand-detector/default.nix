@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libyamlcpp, roscpp, roslib, rostest }:
 buildRosPackage {
   pname = "ros-melodic-sr-hand-detector";
-  version = "0.0.2-r1";
+  version = "0.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/shadow-robot/sr_hand_detector-release/archive/release/melodic/sr_hand_detector/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "73336699528058fa293a8597caf687bcbefc4c71735de10f5f172b8f21e8d94a";
+    url = "https://github.com/shadow-robot/sr_hand_detector-release/archive/release/melodic/sr_hand_detector/0.0.3-2.tar.gz";
+    name = "0.0.3-2.tar.gz";
+    sha256 = "542a25bb3b2df53eb8477962b57471d8d1fb080e74d0d182c58a5f86b05037b8";
   };
 
   buildType = "catkin";

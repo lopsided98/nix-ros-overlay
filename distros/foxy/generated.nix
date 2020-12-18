@@ -934,6 +934,8 @@ self: super: {
 
  ros-workspace = self.callPackage ./ros-workspace {};
 
+ rosauth = self.callPackage ./rosauth {};
+
  rosbag2 = self.callPackage ./rosbag2 {};
 
  rosbag2-bag-v2-plugins = self.callPackage ./rosbag2-bag-v2-plugins {};
@@ -1245,6 +1247,8 @@ self: super: {
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
+
+ tvm-vendor = self.callPackage ./tvm-vendor {};
 
  ublox = self.callPackage ./ublox {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-geometry, message-filters, rospy, rostest, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-camera-calibration";
-  version = "1.15.2-r1";
+  version = "1.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/camera_calibration/1.15.2-1.tar.gz";
-    name = "1.15.2-1.tar.gz";
-    sha256 = "21cb2dc6cc8de3ac56437b26c443b609bab4264b356fb02a9b4e1cc5e99bc5c0";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/camera_calibration/1.15.3-1.tar.gz";
+    name = "1.15.3-1.tar.gz";
+    sha256 = "3a608f8df6412fc0bf6f338119e5856ac49d133f16cae13e151abd8c262895ca";
   };
 
   buildType = "catkin";

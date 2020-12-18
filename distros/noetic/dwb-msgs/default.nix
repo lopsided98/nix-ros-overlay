@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-2d-msgs, nav-msgs }:
 buildRosPackage {
   pname = "ros-noetic-dwb-msgs";
-  version = "0.2.6-r1";
+  version = "0.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/dwb_msgs/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "859311b430c086b10d48098c92b460e9912db8ad835ffe113bf3342122c866c4";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/dwb_msgs/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
+    sha256 = "f0bc6b295dd86e6b4925cb9710b763f455252030d1ff36beb6f276ef467f0713";
   };
 
   buildType = "catkin";

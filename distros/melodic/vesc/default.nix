@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, vesc-ackermann, vesc-driver, vesc-msgs }:
 buildRosPackage {
   pname = "ros-melodic-vesc";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/f1tenth/vesc-release/archive/release/melodic/vesc/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "2177ac252efaf949e3c6981121e7d6b200af51c04b3f91a07828605df359e2d2";
+    url = "https://github.com/f1tenth/vesc-release/archive/release/melodic/vesc/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "ae523ded38e9e6b6a650cfa5b6b6f122f9a5cbc80b69aebae298e3c87dd81d4e";
   };
 
   buildType = "catkin";
