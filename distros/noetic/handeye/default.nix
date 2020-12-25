@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, baldor, catkin, criutils, geometry-msgs, message-generation, message-runtime, python3Packages, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-handeye";
-  version = "0.1.2-r1";
+  version = "0.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/crigroup/handeye-release/archive/release/noetic/handeye/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "e9bfb98b24529e1a17ee1da6241ec8f67b442438155b44afef74bfb647100fc0";
+    url = "https://github.com/crigroup/handeye-release/archive/release/noetic/handeye/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
+    sha256 = "aea294493fd622b577da646e8dbfc3ff835cf47d2e086f20d51eb4bf85cae4a1";
   };
 
   buildType = "catkin";

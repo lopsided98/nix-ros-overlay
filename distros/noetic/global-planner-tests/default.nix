@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libyamlcpp, map-server, nav-core2, nav-msgs, pluginlib, roscpp, roslint }:
 buildRosPackage {
   pname = "ros-noetic-global-planner-tests";
-  version = "0.2.6-r1";
+  version = "0.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/global_planner_tests/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "c462f9fda089a5e0533506ac0de665a520a58407acafd379e97edcf100f754b7";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/global_planner_tests/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
+    sha256 = "8f6ec1166452f3886e8ea39c541347398e1e7f97afb218cb01271e19bea16ee8";
   };
 
   buildType = "catkin";

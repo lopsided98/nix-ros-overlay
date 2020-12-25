@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, message-generation, message-runtime, rospy }:
 buildRosPackage {
   pname = "ros-noetic-flexbe-msgs";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/noetic/flexbe_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "943ad7eab31f2f411d59cf57cabcc3ba0bd6f757a524364c0bee3b5b58c0b1a2";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/noetic/flexbe_msgs/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "4f61e1dc052824bdb13864f4232f7e00baa4b442d0109849027154dc53653bdd";
   };
 
   buildType = "catkin";

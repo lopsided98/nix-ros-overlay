@@ -226,6 +226,8 @@ self: super: {
 
  camera-umd = self.callPackage ./camera-umd {};
 
+ can-dbc-parser = self.callPackage ./can-dbc-parser {};
+
  can-msgs = self.callPackage ./can-msgs {};
 
  canopen-402 = self.callPackage ./canopen-402 {};
@@ -490,6 +492,8 @@ self: super: {
 
  codec-image-transport = self.callPackage ./codec-image-transport {};
 
+ color-util = self.callPackage ./color-util {};
+
  combined-robot-hw = self.callPackage ./combined-robot-hw {};
 
  combined-robot-hw-tests = self.callPackage ./combined-robot-hw-tests {};
@@ -659,6 +663,8 @@ self: super: {
  diagnostics = self.callPackage ./diagnostics {};
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
+
+ dijkstra-mesh-planner = self.callPackage ./dijkstra-mesh-planner {};
 
  dingo-control = self.callPackage ./dingo-control {};
 
@@ -1078,7 +1084,11 @@ self: super: {
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
+ gazebo-video-monitor-msgs = self.callPackage ./gazebo-video-monitor-msgs {};
+
  gazebo-video-monitor-plugins = self.callPackage ./gazebo-video-monitor-plugins {};
+
+ gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
 
  gencpp = self.callPackage ./gencpp {};
 
@@ -1243,6 +1253,22 @@ self: super: {
  hector-trajectory-server = self.callPackage ./hector-trajectory-server {};
 
  hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
+
+ heifu-bringup = self.callPackage ./heifu-bringup {};
+
+ heifu-description = self.callPackage ./heifu-description {};
+
+ heifu-diagnostic = self.callPackage ./heifu-diagnostic {};
+
+ heifu-mavros = self.callPackage ./heifu-mavros {};
+
+ heifu-msgs = self.callPackage ./heifu-msgs {};
+
+ heifu-safety = self.callPackage ./heifu-safety {};
+
+ heifu-simple-waypoint = self.callPackage ./heifu-simple-waypoint {};
+
+ heifu-tools = self.callPackage ./heifu-tools {};
 
  heron-control = self.callPackage ./heron-control {};
 
@@ -1826,6 +1852,10 @@ self: super: {
 
  mbf-costmap-nav = self.callPackage ./mbf-costmap-nav {};
 
+ mbf-mesh-core = self.callPackage ./mbf-mesh-core {};
+
+ mbf-mesh-nav = self.callPackage ./mbf-mesh-nav {};
+
  mbf-msgs = self.callPackage ./mbf-msgs {};
 
  mbf-recovery-behaviors = self.callPackage ./mbf-recovery-behaviors {};
@@ -1850,6 +1880,14 @@ self: super: {
 
  media-export = self.callPackage ./media-export {};
 
+ mesh-client = self.callPackage ./mesh-client {};
+
+ mesh-controller = self.callPackage ./mesh-controller {};
+
+ mesh-layers = self.callPackage ./mesh-layers {};
+
+ mesh-map = self.callPackage ./mesh-map {};
+
  mesh-msgs = self.callPackage ./mesh-msgs {};
 
  mesh-msgs-conversions = self.callPackage ./mesh-msgs-conversions {};
@@ -1857,6 +1895,8 @@ self: super: {
  mesh-msgs-hdf5 = self.callPackage ./mesh-msgs-hdf5 {};
 
  mesh-msgs-transform = self.callPackage ./mesh-msgs-transform {};
+
+ mesh-navigation = self.callPackage ./mesh-navigation {};
 
  mesh-tools = self.callPackage ./mesh-tools {};
 
@@ -2149,6 +2189,8 @@ self: super: {
  nav-grid-iterators = self.callPackage ./nav-grid-iterators {};
 
  nav-grid-pub-sub = self.callPackage ./nav-grid-pub-sub {};
+
+ nav-grid-server = self.callPackage ./nav-grid-server {};
 
  nav-msgs = self.callPackage ./nav-msgs {};
 
@@ -2920,6 +2962,12 @@ self: super: {
 
  robot-mechanism-controllers = self.callPackage ./robot-mechanism-controllers {};
 
+ robot-nav-rviz-plugins = self.callPackage ./robot-nav-rviz-plugins {};
+
+ robot-nav-tools = self.callPackage ./robot-nav-tools {};
+
+ robot-nav-viz-demos = self.callPackage ./robot-nav-viz-demos {};
+
  robot-navigation = self.callPackage ./robot-navigation {};
 
  robot-one = self.callPackage ./robot-one {};
@@ -3562,6 +3610,8 @@ self: super: {
 
  sot-core = self.callPackage ./sot-core {};
 
+ sot-dynamic-pinocchio = self.callPackage ./sot-dynamic-pinocchio {};
+
  sot-tools = self.callPackage ./sot-tools {};
 
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
@@ -3573,6 +3623,8 @@ self: super: {
  sr-hand-detector = self.callPackage ./sr-hand-detector {};
 
  srdfdom = self.callPackage ./srdfdom {};
+
+ stag-ros = self.callPackage ./stag-ros {};
 
  stage = self.callPackage ./stage {};
 
@@ -4099,6 +4151,8 @@ self: super: {
  warthog-simulator = self.callPackage ./warthog-simulator {};
 
  warthog-viz = self.callPackage ./warthog-viz {};
+
+ wave-front-planner = self.callPackage ./wave-front-planner {};
 
  wave-gazebo = self.callPackage ./wave-gazebo {};
 

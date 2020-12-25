@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, dwb-local-planner, dynamic-reconfigure, nav-2d-msgs, nav-2d-utils, nav-core2, pluginlib, roscpp, roslint, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-dwb-plugins";
-  version = "0.2.6-r1";
+  version = "0.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/dwb_plugins/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "1304ec4154ee011a5d8adcb1ef3dce0b6e4392bfc4c9fe22005b3b16f3c26549";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/dwb_plugins/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
+    sha256 = "25246bce1d54d7eee93213312e53902c7e20db9431b517064c6db2c4009145bf";
   };
 
   buildType = "catkin";

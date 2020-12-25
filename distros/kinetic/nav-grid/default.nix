@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslint, rosunit }:
 buildRosPackage {
   pname = "ros-kinetic-nav-grid";
-  version = "0.2.5";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/nav_grid/0.2.5-0.tar.gz";
-    name = "0.2.5-0.tar.gz";
-    sha256 = "ab3bcc87ca807d97728d4148220feded4eb4e0c1c9270eabc12389078fb1bf4a";
+    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/nav_grid/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "c5eb9410f163416c77192126bb4b2984df6d7841f9eb57c7e27043215fef4e0e";
   };
 
   buildType = "catkin";

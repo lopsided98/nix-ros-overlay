@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, dwb-critics, dwb-local-planner, dwb-plugins, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav-core, nav-core2, nav-grid, nav-msgs, pluginlib, roslint, rostest, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-nav-core-adapter";
-  version = "0.2.6-r1";
+  version = "0.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/nav_core_adapter/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "752d744a559e57210fdfa7137f9e4e3d6b6dba76611c0c0ced759718032a3381";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/nav_core_adapter/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
+    sha256 = "df35f24c4d64eb0b25f8bf4fdffe2f09a8505992678da5f5c5ff432c99e1dd8c";
   };
 
   buildType = "catkin";

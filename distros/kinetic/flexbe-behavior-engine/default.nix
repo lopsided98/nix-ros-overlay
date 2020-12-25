@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, flexbe-core, flexbe-input, flexbe-mirror, flexbe-msgs, flexbe-onboard, flexbe-states, flexbe-testing, flexbe-widget }:
 buildRosPackage {
   pname = "ros-kinetic-flexbe-behavior-engine";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_behavior_engine/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "e577e677cb02771c1e6d0b33b8e5d19cd3e256e8151c421234ea1d10ed44fd1f";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_behavior_engine/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "1425beb8b02606668c4d2c1a43ee3e8901613f5bd492d741f829b9e4787910f4";
   };
 
   buildType = "catkin";

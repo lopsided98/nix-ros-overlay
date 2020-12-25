@@ -174,6 +174,8 @@ self: super: {
 
  cob-cartesian-controller = self.callPackage ./cob-cartesian-controller {};
 
+ cob-collision-monitor = self.callPackage ./cob-collision-monitor {};
+
  cob-collision-velocity-filter = self.callPackage ./cob-collision-velocity-filter {};
 
  cob-command-gui = self.callPackage ./cob-command-gui {};
@@ -224,6 +226,8 @@ self: super: {
 
  cob-generic-can = self.callPackage ./cob-generic-can {};
 
+ cob-grasp-generation = self.callPackage ./cob-grasp-generation {};
+
  cob-hand = self.callPackage ./cob-hand {};
 
  cob-hand-bridge = self.callPackage ./cob-hand-bridge {};
@@ -242,6 +246,8 @@ self: super: {
 
  cob-linear-nav = self.callPackage ./cob-linear-nav {};
 
+ cob-lookat-action = self.callPackage ./cob-lookat-action {};
+
  cob-map-accessibility-analysis = self.callPackage ./cob-map-accessibility-analysis {};
 
  cob-mapping-slam = self.callPackage ./cob-mapping-slam {};
@@ -254,7 +260,11 @@ self: super: {
 
  cob-monitoring = self.callPackage ./cob-monitoring {};
 
+ cob-moveit-bringup = self.callPackage ./cob-moveit-bringup {};
+
  cob-moveit-config = self.callPackage ./cob-moveit-config {};
+
+ cob-moveit-interface = self.callPackage ./cob-moveit-interface {};
 
  cob-msgs = self.callPackage ./cob-msgs {};
 
@@ -323,6 +333,8 @@ self: super: {
  code-coverage = self.callPackage ./code-coverage {};
 
  codec-image-transport = self.callPackage ./codec-image-transport {};
+
+ color-util = self.callPackage ./color-util {};
 
  combined-robot-hw = self.callPackage ./combined-robot-hw {};
 
@@ -456,6 +468,8 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
+ dijkstra-mesh-planner = self.callPackage ./dijkstra-mesh-planner {};
+
  dlux-global-planner = self.callPackage ./dlux-global-planner {};
 
  dlux-plugins = self.callPackage ./dlux-plugins {};
@@ -575,6 +589,8 @@ self: super: {
  eigenpy = self.callPackage ./eigenpy {};
 
  eiquadprog = self.callPackage ./eiquadprog {};
+
+ ergodic-exploration = self.callPackage ./ergodic-exploration {};
 
  executive-smach = self.callPackage ./executive-smach {};
 
@@ -702,9 +718,15 @@ self: super: {
 
  gazebo-ros-control = self.callPackage ./gazebo-ros-control {};
 
+ gazebo-ros-control-select-joints = self.callPackage ./gazebo-ros-control-select-joints {};
+
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
+ gazebo-video-monitor-msgs = self.callPackage ./gazebo-video-monitor-msgs {};
+
  gazebo-video-monitor-plugins = self.callPackage ./gazebo-video-monitor-plugins {};
+
+ gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
 
  gencpp = self.callPackage ./gencpp {};
 
@@ -762,7 +784,55 @@ self: super: {
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
+ hdf5-map-io = self.callPackage ./hdf5-map-io {};
+
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
+
+ hector-components-description = self.callPackage ./hector-components-description {};
+
+ hector-compressed-map-transport = self.callPackage ./hector-compressed-map-transport {};
+
+ hector-gazebo = self.callPackage ./hector-gazebo {};
+
+ hector-gazebo-plugins = self.callPackage ./hector-gazebo-plugins {};
+
+ hector-gazebo-thermal-camera = self.callPackage ./hector-gazebo-thermal-camera {};
+
+ hector-gazebo-worlds = self.callPackage ./hector-gazebo-worlds {};
+
+ hector-geotiff = self.callPackage ./hector-geotiff {};
+
+ hector-geotiff-launch = self.callPackage ./hector-geotiff-launch {};
+
+ hector-geotiff-plugins = self.callPackage ./hector-geotiff-plugins {};
+
+ hector-imu-attitude-to-tf = self.callPackage ./hector-imu-attitude-to-tf {};
+
+ hector-imu-tools = self.callPackage ./hector-imu-tools {};
+
+ hector-map-server = self.callPackage ./hector-map-server {};
+
+ hector-map-tools = self.callPackage ./hector-map-tools {};
+
+ hector-mapping = self.callPackage ./hector-mapping {};
+
+ hector-marker-drawing = self.callPackage ./hector-marker-drawing {};
+
+ hector-models = self.callPackage ./hector-models {};
+
+ hector-nav-msgs = self.callPackage ./hector-nav-msgs {};
+
+ hector-sensors-description = self.callPackage ./hector-sensors-description {};
+
+ hector-sensors-gazebo = self.callPackage ./hector-sensors-gazebo {};
+
+ hector-slam = self.callPackage ./hector-slam {};
+
+ hector-slam-launch = self.callPackage ./hector-slam-launch {};
+
+ hector-trajectory-server = self.callPackage ./hector-trajectory-server {};
+
+ hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
 
  hfl-driver = self.callPackage ./hfl-driver {};
 
@@ -825,6 +895,10 @@ self: super: {
  interactive-markers = self.callPackage ./interactive-markers {};
 
  ipa-3d-fov-visualization = self.callPackage ./ipa-3d-fov-visualization {};
+
+ iris-lama = self.callPackage ./iris-lama {};
+
+ iris-lama-ros = self.callPackage ./iris-lama-ros {};
 
  ivcon = self.callPackage ./ivcon {};
 
@@ -915,6 +989,8 @@ self: super: {
  kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
 
  kobuki-msgs = self.callPackage ./kobuki-msgs {};
+
+ label-manager = self.callPackage ./label-manager {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -1054,6 +1130,10 @@ self: super: {
 
  mbf-costmap-nav = self.callPackage ./mbf-costmap-nav {};
 
+ mbf-mesh-core = self.callPackage ./mbf-mesh-core {};
+
+ mbf-mesh-nav = self.callPackage ./mbf-mesh-nav {};
+
  mbf-msgs = self.callPackage ./mbf-msgs {};
 
  mbf-simple-nav = self.callPackage ./mbf-simple-nav {};
@@ -1065,6 +1145,26 @@ self: super: {
  mcl-3dl-msgs = self.callPackage ./mcl-3dl-msgs {};
 
  media-export = self.callPackage ./media-export {};
+
+ mesh-client = self.callPackage ./mesh-client {};
+
+ mesh-controller = self.callPackage ./mesh-controller {};
+
+ mesh-layers = self.callPackage ./mesh-layers {};
+
+ mesh-map = self.callPackage ./mesh-map {};
+
+ mesh-msgs = self.callPackage ./mesh-msgs {};
+
+ mesh-msgs-conversions = self.callPackage ./mesh-msgs-conversions {};
+
+ mesh-msgs-hdf5 = self.callPackage ./mesh-msgs-hdf5 {};
+
+ mesh-msgs-transform = self.callPackage ./mesh-msgs-transform {};
+
+ mesh-navigation = self.callPackage ./mesh-navigation {};
+
+ mesh-tools = self.callPackage ./mesh-tools {};
 
  message-filters = self.callPackage ./message-filters {};
 
@@ -1213,6 +1313,8 @@ self: super: {
  nav-grid-iterators = self.callPackage ./nav-grid-iterators {};
 
  nav-grid-pub-sub = self.callPackage ./nav-grid-pub-sub {};
+
+ nav-grid-server = self.callPackage ./nav-grid-server {};
 
  nav-msgs = self.callPackage ./nav-msgs {};
 
@@ -1497,6 +1599,12 @@ self: super: {
  robot-calibration-msgs = self.callPackage ./robot-calibration-msgs {};
 
  robot-localization = self.callPackage ./robot-localization {};
+
+ robot-nav-rviz-plugins = self.callPackage ./robot-nav-rviz-plugins {};
+
+ robot-nav-tools = self.callPackage ./robot-nav-tools {};
+
+ robot-nav-viz-demos = self.callPackage ./robot-nav-viz-demos {};
 
  robot-navigation = self.callPackage ./robot-navigation {};
 
@@ -1801,6 +1909,8 @@ self: super: {
  rviz = self.callPackage ./rviz {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
+
+ rviz-mesh-plugin = self.callPackage ./rviz-mesh-plugin {};
 
  rviz-plugin-tutorials = self.callPackage ./rviz-plugin-tutorials {};
 
@@ -2152,7 +2262,11 @@ self: super: {
 
  voxel-grid = self.callPackage ./voxel-grid {};
 
+ vrpn = self.callPackage ./vrpn {};
+
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ wave-front-planner = self.callPackage ./wave-front-planner {};
 
  webots-ros = self.callPackage ./webots-ros {};
 

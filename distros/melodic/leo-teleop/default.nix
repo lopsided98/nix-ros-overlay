@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joy, teleop-twist-joy, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-melodic-leo-teleop";
-  version = "1.1.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/melodic/leo_teleop/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "5a7be21e50b8f41fe96f68c9151c46958842ddbd1e0954516727efb09eebf22b";
+    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/melodic/leo_teleop/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "4145f717dae0c316f90a04069a3245a1cbfbfc75fe1e82559eb78cd5a26a08ad";
   };
 
   buildType = "catkin";
@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Teleop package for Leo Rover'';
+    description = ''Scripts and launch files for Leo Rover teleoperation'';
     license = with lib.licenses; [ mit ];
   };
 }

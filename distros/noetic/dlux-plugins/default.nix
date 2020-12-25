@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dlux-global-planner, global-planner-tests, nav-core2, nav-grid, pluginlib, roslint, rostest }:
 buildRosPackage {
   pname = "ros-noetic-dlux-plugins";
-  version = "0.2.6-r1";
+  version = "0.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/dlux_plugins/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "44592d2b8b60300cd4cb323354628e6fbf0b1bca75f5dcfb7e12ff3c3f811128";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/dlux_plugins/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
+    sha256 = "29ea1f12d379a9ee2b053d1d99e07437b9a5447405b5bbfb3fb32ced2be6385b";
   };
 
   buildType = "catkin";

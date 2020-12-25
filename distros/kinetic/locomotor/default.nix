@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, geometry-msgs, locomotor-msgs, nav-2d-msgs, nav-2d-utils, nav-core2, nav-msgs, pluginlib, roscpp, roslint, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-locomotor";
-  version = "0.2.5";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/locomotor/0.2.5-0.tar.gz";
-    name = "0.2.5-0.tar.gz";
-    sha256 = "19b6f2635913dfeeb3117561d98839c16f35661ef850c80e07477e1d8a5165c5";
+    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/locomotor/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "c711e7989a3408c11e25bb910f417e3d9fdcd511f96ecf350bd8270bd3b35842";
   };
 
   buildType = "catkin";
