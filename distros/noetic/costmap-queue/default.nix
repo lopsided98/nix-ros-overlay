@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nav-core2, roscpp, roslint, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-costmap-queue";
-  version = "0.2.6-r1";
+  version = "0.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/costmap_queue/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "f500e0fa9d62496b20cc05bf993c687fe429f28eb259ec20d30fcc4ce12bce48";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/costmap_queue/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
+    sha256 = "7870f42776a61cf4b3e5b610ac897aadeb72a007c942e199df365d86184b1e5a";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, flexbe-core, flexbe-mirror, flexbe-msgs, flexbe-onboard, rospy }:
 buildRosPackage {
   pname = "ros-melodic-flexbe-widget";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_widget/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "d81fd5a666f4bef1db78610a3b49b249bb9c2786403f959b9f7d13a5a697cf43";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_widget/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "e576ca29ea89fdb8c34fc425ec1a1b014372057d4fcc6e65adbbc9fc83ecf898";
   };
 
   buildType = "catkin";

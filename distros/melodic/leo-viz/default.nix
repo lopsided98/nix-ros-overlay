@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, joint-state-publisher-gui, leo-description, robot-state-publisher, rviz }:
 buildRosPackage {
   pname = "ros-melodic-leo-viz";
-  version = "0.2.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_desktop-release/archive/release/melodic/leo_viz/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "a1b653f6c43d6dd2673f101a8a989f7b035220235fe6f840faacd1a8cab81ccb";
+    url = "https://github.com/fictionlab-gbp/leo_desktop-release/archive/release/melodic/leo_viz/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "20967228c7022965ac545e6c1b87a35b0c514aa2bb78f7e0d625e13d69103ec9";
   };
 
   buildType = "catkin";

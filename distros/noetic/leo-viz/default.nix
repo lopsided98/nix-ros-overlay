@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, joint-state-publisher-gui, leo-description, robot-state-publisher, rviz }:
 buildRosPackage {
   pname = "ros-noetic-leo-viz";
-  version = "0.2.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_desktop-release/archive/release/noetic/leo_viz/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "fff41ccc9204d7a0fc66672b07c3b4865dc2cd64112f7e8ce2fe23778121c383";
+    url = "https://github.com/fictionlab-gbp/leo_desktop-release/archive/release/noetic/leo_viz/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "ed773e9094a5ffbfe607b216cfe80b2d1e90f6f1f03fc3d7a6f9374969d8c49f";
   };
 
   buildType = "catkin";

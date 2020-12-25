@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, cv-bridge, eigen-conversions, image-geometry, image-transport, message-filters, nodelet, rostest, sensor-msgs, stereo-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-depth-image-proc";
-  version = "1.15.2-r1";
+  version = "1.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/depth_image_proc/1.15.2-1.tar.gz";
-    name = "1.15.2-1.tar.gz";
-    sha256 = "bace13cb6af5a602c4356390a0dc4dea01d54bea2eceacbead2f5f7d8a1e95bd";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/depth_image_proc/1.15.3-1.tar.gz";
+    name = "1.15.3-1.tar.gz";
+    sha256 = "f1b044486256c1f7b6d48cefd360fc18b5109472a778314a9c20632db19b2663";
   };
 
   buildType = "catkin";

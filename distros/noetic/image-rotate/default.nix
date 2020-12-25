@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, cv-bridge, dynamic-reconfigure, geometry-msgs, image-transport, nodelet, roscpp, rostest, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-image-rotate";
-  version = "1.15.2-r1";
+  version = "1.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_rotate/1.15.2-1.tar.gz";
-    name = "1.15.2-1.tar.gz";
-    sha256 = "397ad1badf7d9d95aecc93edbac68700f7e66b28590def3a7e32368555742a15";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_rotate/1.15.3-1.tar.gz";
+    name = "1.15.3-1.tar.gz";
+    sha256 = "b94ef742d380068f7218f0bca639a69bb1bc50a7df01b147c056d1773a7d2487";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, geometry-msgs, locomotor-msgs, nav-2d-msgs, nav-2d-utils, nav-core2, nav-msgs, pluginlib, roscpp, roslint, rospy }:
 buildRosPackage {
   pname = "ros-melodic-locomotor";
-  version = "0.2.5-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/locomotor/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "d963fa2820b1c75aaf1f74fa7756f26d27cc254b1f01ab40a5c078c2bae8a224";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/locomotor/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "2d6254e21d33eb956ed0457e845767e0bc9eddcc5fc2852977945986b3414b03";
   };
 
   buildType = "catkin";

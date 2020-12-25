@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, compressed-image-transport, diff-drive-controller, gazebo-dev, gazebo-plugins, gazebo-ros, gazebo-ros-control, geometry-msgs, joint-state-controller, leo-description, nav-msgs, roscpp, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-leo-gazebo";
-  version = "0.1.3-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/melodic/leo_gazebo/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "f022e61f6859e9de0de327a65ff83527d6fed7125bfbd5a2dac6a0afe95b1a18";
+    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/melodic/leo_gazebo/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "fd5f430b97e02757675f5c3520f25d52511891abe1864ba393bb9d72880b23d3";
   };
 
   buildType = "catkin";

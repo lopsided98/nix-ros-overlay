@@ -2,20 +2,20 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, gps-common, nodelet, novatel-oem7-msgs, roscpp, rostest, sensor-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, gps-common, nav-msgs, nmea-msgs, nodelet, novatel-oem7-msgs, rosbag, roscpp, rostest, sensor-msgs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-novatel-oem7-driver";
-  version = "1.1.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/melodic/novatel_oem7_driver/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "e80774b05614c514c0427512b4b1cb1cf34f405df6ffee7b4951c1b7994774e9";
+    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/melodic/novatel_oem7_driver/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "cd25a9f02763a4a8868cfcb1a8fed502e161be184fa9b8b038128e82596a7f16";
   };
 
   buildType = "catkin";
-  checkInputs = [ rostest ];
-  propagatedBuildInputs = [ boost gps-common nodelet novatel-oem7-msgs roscpp sensor-msgs tf ];
+  checkInputs = [ rosbag rostest ];
+  propagatedBuildInputs = [ boost gps-common nav-msgs nmea-msgs nodelet novatel-oem7-msgs roscpp sensor-msgs tf2-geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

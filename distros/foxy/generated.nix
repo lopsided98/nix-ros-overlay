@@ -194,6 +194,12 @@ self: super: {
 
  control-toolbox = self.callPackage ./control-toolbox {};
 
+ controller-interface = self.callPackage ./controller-interface {};
+
+ controller-manager = self.callPackage ./controller-manager {};
+
+ controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
+
  costmap-queue = self.callPackage ./costmap-queue {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -235,6 +241,8 @@ self: super: {
  dolly-ignition = self.callPackage ./dolly-ignition {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
+
+ dsr-control2 = self.callPackage ./dsr-control2 {};
 
  dsr-description2 = self.callPackage ./dsr-description2 {};
 
@@ -431,6 +439,8 @@ self: super: {
  grbl-ros = self.callPackage ./grbl-ros {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
+
+ hardware-interface = self.callPackage ./hardware-interface {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
@@ -744,6 +754,30 @@ self: super: {
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
+ plansys2-bringup = self.callPackage ./plansys2-bringup {};
+
+ plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
+
+ plansys2-core = self.callPackage ./plansys2-core {};
+
+ plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
+
+ plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
+
+ plansys2-msgs = self.callPackage ./plansys2-msgs {};
+
+ plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
+
+ plansys2-planner = self.callPackage ./plansys2-planner {};
+
+ plansys2-popf-plan-solver = self.callPackage ./plansys2-popf-plan-solver {};
+
+ plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
+
+ plansys2-terminal = self.callPackage ./plansys2-terminal {};
+
  plotjuggler = self.callPackage ./plotjuggler {};
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
@@ -874,6 +908,8 @@ self: super: {
 
  ros1-rosbag-storage-vendor = self.callPackage ./ros1-rosbag-storage-vendor {};
 
+ ros2-control = self.callPackage ./ros2-control {};
+
  ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2action = self.callPackage ./ros2action {};
@@ -885,6 +921,8 @@ self: super: {
  ros2cli-common-extensions = self.callPackage ./ros2cli-common-extensions {};
 
  ros2component = self.callPackage ./ros2component {};
+
+ ros2controlcli = self.callPackage ./ros2controlcli {};
 
  ros2interface = self.callPackage ./ros2interface {};
 
@@ -933,6 +971,8 @@ self: super: {
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
+
+ rosauth = self.callPackage ./rosauth {};
 
  rosbag2 = self.callPackage ./rosbag2 {};
 
@@ -1182,6 +1222,8 @@ self: super: {
 
  test-osrf-testing-tools-cpp = self.callPackage ./test-osrf-testing-tools-cpp {};
 
+ test-robot-hardware = self.callPackage ./test-robot-hardware {};
+
  tf2 = self.callPackage ./tf2 {};
 
  tf2-bullet = self.callPackage ./tf2-bullet {};
@@ -1226,6 +1268,8 @@ self: super: {
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
+ transmission-interface = self.callPackage ./transmission-interface {};
+
  turtlebot3 = self.callPackage ./turtlebot3 {};
 
  turtlebot3-bringup = self.callPackage ./turtlebot3-bringup {};
@@ -1245,6 +1289,8 @@ self: super: {
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
+
+ tvm-vendor = self.callPackage ./tvm-vendor {};
 
  ublox = self.callPackage ./ublox {};
 

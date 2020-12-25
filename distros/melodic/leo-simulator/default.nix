@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, leo-gazebo }:
 buildRosPackage {
   pname = "ros-melodic-leo-simulator";
-  version = "0.1.3-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/melodic/leo_simulator/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "b03a8815470371a9d524b499b933e20456311ad3b464dfb850a34cfa49d36888";
+    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/melodic/leo_simulator/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "f6b09ed754080419085051822f8111afe129042eec015ae70d7f85dc5810a93e";
   };
 
   buildType = "catkin";

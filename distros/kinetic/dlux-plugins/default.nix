@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dlux-global-planner, global-planner-tests, nav-core2, nav-grid, pluginlib, roslint, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-dlux-plugins";
-  version = "0.2.5";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/dlux_plugins/0.2.5-0.tar.gz";
-    name = "0.2.5-0.tar.gz";
-    sha256 = "75edd442f24ab55b0a8993940580127a3f2decccfbab29b9d0ce54516bb12a70";
+    url = "https://github.com/locusrobotics/robot_navigation-release/archive/release/kinetic/dlux_plugins/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "8f8d049649dd1fbbe3fa269b8cfe1d3b6f814f60c653e09ceaaf0545a5b15bd9";
   };
 
   buildType = "catkin";

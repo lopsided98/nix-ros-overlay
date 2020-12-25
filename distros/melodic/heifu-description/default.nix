@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-heifu-description";
-  version = "0.7.1-r2";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/amferreiraBEV/heifu-release/archive/release/melodic/heifu_description/0.7.1-2.tar.gz";
-    name = "0.7.1-2.tar.gz";
-    sha256 = "0369bf2653fd75c28e5a1718be91311108bf971e869dc42d6c2dcbd05219ee16";
+    url = "https://github.com/amferreiraBEV/heifu-release/archive/release/melodic/heifu_description/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "56a7acf0c940519055b6423aac229336748087483a87a4bff547372c620462ef";
   };
 
   buildType = "catkin";

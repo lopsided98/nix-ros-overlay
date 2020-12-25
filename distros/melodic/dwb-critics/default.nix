@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, costmap-queue, dwb-local-planner, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav-core2, nav-grid-iterators, pluginlib, roscpp, roslint, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dwb-critics";
-  version = "0.2.5-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/dwb_critics/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "42ff253d658b161baff427aa5da4a789f5dcf17d61e316cc8f40bd320ce00a3f";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/dwb_critics/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "a9c0885092dc161332ea1bca9947fb2412e4c24e22dd3b23f7cc6803b0e51e13";
   };
 
   buildType = "catkin";

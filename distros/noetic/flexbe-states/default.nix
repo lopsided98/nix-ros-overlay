@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, flexbe-core, flexbe-msgs, flexbe-testing, geometry-msgs, rosbag, rospy, rostest }:
 buildRosPackage {
   pname = "ros-noetic-flexbe-states";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/noetic/flexbe_states/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "c0213f3849d06a5c97fab9b0fc311eda46787eade6169661fec8d9ae9ab9b0ab";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/noetic/flexbe_states/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "42049fb167f51778300a4caf5eddbb03f2084922bbd763990d673ad3bd0f482e";
   };
 
   buildType = "catkin";
