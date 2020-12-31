@@ -10,6 +10,7 @@ mkShell {
   buildInputs = [
     glibcLocales
     (buildEnv { paths = [
+      rosbash
       turtlebot3-description
       turtlebot3-teleop
       turtlebot3-gazebo
