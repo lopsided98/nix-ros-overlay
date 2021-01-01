@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, astra-launch, catkin, depthimage-to-laserscan, diagnostic-aggregator, freenect-launch, imu-filter-madgwick, imu-transformer, laser-filters, microstrain-3dmgx2-imu, nmea-comms, nmea-navsat-driver, nodelet, openni2-launch, pythonPackages, realsense-camera, rgbd-launch, robot-localization, robot-state-publisher, robot-upstart, roch-base, roch-capabilities, roch-control, roch-description, roch-safety-controller, roch-sensorpc, rocon-app-manager, rocon-app-manager-msgs, rocon-bubble-icons, rocon-interaction-msgs, roslaunch, rospy, rplidar-ros, tf, tf2-ros, zeroconf-avahi }:

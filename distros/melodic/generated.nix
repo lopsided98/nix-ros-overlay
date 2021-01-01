@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -709,6 +709,8 @@ self: super: {
  driver-base = self.callPackage ./driver-base {};
 
  driver-common = self.callPackage ./driver-common {};
+
+ drone-assets = self.callPackage ./drone-assets {};
 
  drone-wrapper = self.callPackage ./drone-wrapper {};
 

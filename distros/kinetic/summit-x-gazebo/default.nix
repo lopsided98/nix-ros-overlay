@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros, roscpp, std-msgs, std-srvs, summit-x-control, summit-x-description, summit-x-robot-control, tf, xacro }:

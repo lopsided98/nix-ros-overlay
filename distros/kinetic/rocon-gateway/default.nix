@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, gateway-msgs, pythonPackages, rocon-console, rocon-gateway-utils, rocon-hub-client, rocon-python-comms, rocon-python-redis, rocon-python-utils, rocon-python-wifi, rosgraph, roslib, roslint, rosparam, rospy, rosservice, rostopic, std-srvs, zeroconf-avahi, zeroconf-msgs }:

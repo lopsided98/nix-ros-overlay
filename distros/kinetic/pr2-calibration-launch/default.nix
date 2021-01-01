@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, calibration-estimation, calibration-launch, calibration-msgs, catkin, geometry-msgs, image-cb-detector, image-view, kdl-parser, laser-cb-detector, laser-joint-processor, laser-joint-projector, message-generation, message-runtime, monocam-settler, pr2-dense-laser-snapshotter, pr2-teleop, python-orocos-kdl, robot-mechanism-controllers, rospy, rostest, sensor-msgs, stereo-image-proc }:

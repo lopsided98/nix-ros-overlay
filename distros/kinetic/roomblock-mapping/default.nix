@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, gmapping, hector-mapping, map-server, robot-state-publisher, rosbag, roslaunch, rostest, rviz, slam-karto }:

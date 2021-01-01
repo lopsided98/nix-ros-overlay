@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diagnostic-msgs, diagnostic-updater, geometry-msgs, hardware-interface, naoqi-libqi, naoqi-libqicore, roscpp, rospy, sensor-msgs, std-msgs, tf }:

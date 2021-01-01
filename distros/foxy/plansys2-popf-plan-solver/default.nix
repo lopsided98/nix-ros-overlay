@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-core, pluginlib, popf, rclcpp, ros2run }:
 buildRosPackage {
   pname = "ros-foxy-plansys2-popf-plan-solver";
-  version = "1.0.2-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_popf_plan_solver/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "ef632cd542802f2122508171572a0077e08834a0587d2fd0631e4d1959d671b3";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_popf_plan_solver/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "bff426096919c18e214bb8c36a2b46e9b6dfe09615c43ae320790afc8bb31908";
   };
 
   buildType = "ament_cmake";

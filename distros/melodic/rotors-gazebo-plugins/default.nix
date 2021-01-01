@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, cv-bridge, gazebo, gazebo-plugins, gazebo-ros, geometry-msgs, glog, libyamlcpp, mav-msgs, mavros, octomap, octomap-msgs, octomap-ros, protobuf, rosbag, roscpp, rotors-comm, rotors-control, std-srvs, tf }:

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, katana, katana-arm-gazebo, katana-description, katana-gazebo-plugins, katana-moveit-ikfast-plugin, katana-msgs, katana-teleop, katana-tutorials, kni }:

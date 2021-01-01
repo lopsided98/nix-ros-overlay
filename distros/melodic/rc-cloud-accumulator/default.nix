@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-msgs, pcl, pcl-ros, roscpp, std-srvs, tf2, tf2-msgs, tf2-ros, vtkWithQt4 }:

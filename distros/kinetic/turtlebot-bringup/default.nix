@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, astra-launch, catkin, create-node, depthimage-to-laserscan, diagnostic-aggregator, freenect-launch, kobuki-bumper2pc, kobuki-capabilities, kobuki-node, kobuki-safety-controller, laptop-battery-monitor, openni2-launch, realsense-camera, robot-pose-ekf, robot-state-publisher, rocon-app-manager, rocon-bubble-icons, turtlebot-capabilities, turtlebot-description, yocs-cmd-vel-mux, zeroconf-avahi }:

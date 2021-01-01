@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rclcpp, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-plansys2-msgs";
-  version = "1.0.2-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_msgs/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "7a7457d3eb32ff6a085a1bb965be65d3056a5d84546a065d188662c4a1462ed6";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_msgs/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "feb82b6d3289bbc1d025aaff9f2022ede1ad1ab4b3453cd93c725706d356e2cb";
   };
 
   buildType = "ament_cmake";

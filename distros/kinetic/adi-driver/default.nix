@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, imu-filter-madgwick, roscpp, roslaunch, roslint, rostest, rqt-plot, rviz, rviz-imu-plugin, sensor-msgs, std-srvs, xacro }:

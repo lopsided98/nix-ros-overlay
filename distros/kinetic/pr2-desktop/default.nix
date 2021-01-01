@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, desktop-full, pr2-apps, pr2-base, pr2-ethercat-drivers, pr2-navigation, pr2-power-drivers, pr2-simulator, rqt-pr2-dashboard }:

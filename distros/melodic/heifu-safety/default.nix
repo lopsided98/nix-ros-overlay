@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, heifu-msgs, nav-msgs, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-melodic-heifu-safety";
-  version = "0.7.2-r1";
+  version = "0.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/amferreiraBEV/heifu-release/archive/release/melodic/heifu_safety/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "b126b1edc6d0a1271151bac28fa6d885fa6f551619477048ab645bc8b5ed7068";
+    url = "https://github.com/BV-OpenSource/heifu-release/archive/release/melodic/heifu_safety/0.7.6-1.tar.gz";
+    name = "0.7.6-1.tar.gz";
+    sha256 = "3748d7308801ab5c340566765ffe0e87c575419f33ede9bb3b783efea37cc92b";
   };
 
   buildType = "catkin";

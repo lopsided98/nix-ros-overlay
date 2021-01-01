@@ -1,21 +1,21 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, roslaunch, urdf, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-heifu-description";
-  version = "0.7.2-r1";
+  version = "0.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/amferreiraBEV/heifu-release/archive/release/melodic/heifu_description/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "56a7acf0c940519055b6423aac229336748087483a87a4bff547372c620462ef";
+    url = "https://github.com/BV-OpenSource/heifu-release/archive/release/melodic/heifu_description/0.7.6-1.tar.gz";
+    name = "0.7.6-1.tar.gz";
+    sha256 = "40a82ac71270a3039c5051949b65a96efca31568364b246ee0eca46bd11d5624";
   };
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ urdf xacro ];
+  propagatedBuildInputs = [ gazebo urdf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ati-ft-sensor, catkin, motion-module-tutorial, sensor-module-tutorial, thormang3-action-module, thormang3-balance-control, thormang3-base-module, thormang3-feet-ft-module, thormang3-gripper-module, thormang3-head-control-module, thormang3-kinematics-dynamics, thormang3-manager, thormang3-manipulation-module, thormang3-walking-module }:

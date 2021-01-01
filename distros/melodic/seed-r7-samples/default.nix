@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, moveit-commander, moveit-simple-controller-manager, roslaunch, rostest, rviz, rviz-plugin-tutorials, seed-r7-bringup, seed-r7-moveit-config, seed-r7-navigation, seed-r7-robot-interface, seed-r7-ros-controller, seed-r7-typef-moveit-config, smach-ros, smach-viewer }:

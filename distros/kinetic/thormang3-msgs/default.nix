@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, thormang3-action-module-msgs, thormang3-feet-ft-module-msgs, thormang3-head-control-module-msgs, thormang3-manipulation-module-msgs, thormang3-offset-tuner-msgs, thormang3-walking-module-msgs }:

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ar-track-alvar, catkin, checkerboard-detector, image-proc, image-view2, jsk-recognition-msgs, opencv-apps, posedetection-msgs, roseus, rostest, visualization-msgs }:

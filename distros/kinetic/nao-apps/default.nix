@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, catkin, diagnostic-msgs, dynamic-reconfigure, geometry-msgs, humanoid-nav-msgs, naoqi-bridge, naoqi-bridge-msgs, naoqi-driver, naoqi-driver-py, naoqi-pose, rospy, std-msgs, std-srvs, trajectory-msgs }:
