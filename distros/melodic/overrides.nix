@@ -16,17 +16,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   gazebo = self.gazebo_9;
 
-  pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix build with PCL >=1.11
-      (self.fetchpatch {
-        url = "https://github.com/ros-perception/perception_pcl/commit/e812d3cf1b67cc73841b41e690d53c74e5077a05.patch";
-        sha256 = "0savdifw90ql34zh6rff53hx3cy6rlmrwqzw80fsihkirls84b3w";
-        stripLen = 1;
-      })
-    ];
+  pcl-ros = rosSuper.pcl-ros.overrideAttrs (_: {
+    version = "1.7.2";
+    src = builtins.fetchTarball {
+      url = https://github.com/ros-perception/perception_pcl/archive/6900f7cf650e6c0df2aef45e0011833905b0ba9e.tar.gz;
+      sha256 = "15b7x3spiabf8cf94hf9szkh4vk8a0wdch3zqs6y2ysrxw01hbdi";
+    } + "/pcl_ros";
   });
 
   python-orocos-kdl = rosSuper.python-orocos-kdl.overrideAttrs ({
