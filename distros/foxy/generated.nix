@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -232,6 +232,8 @@ self: super: {
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
 
+ diff-drive-controller = self.callPackage ./diff-drive-controller {};
+
  dolly = self.callPackage ./dolly {};
 
  dolly-follow = self.callPackage ./dolly-follow {};
@@ -340,6 +342,8 @@ self: super: {
 
  ecl-utilities = self.callPackage ./ecl-utilities {};
 
+ effort-controllers = self.callPackage ./effort-controllers {};
+
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
@@ -347,6 +351,8 @@ self: super: {
  eigenpy = self.callPackage ./eigenpy {};
 
  eiquadprog = self.callPackage ./eiquadprog {};
+
+ embree-vendor = self.callPackage ./embree-vendor {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
 
@@ -400,6 +406,8 @@ self: super: {
 
  foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
 
+ forward-command-controller = self.callPackage ./forward-command-controller {};
+
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
  gazebo-dev = self.callPackage ./gazebo-dev {};
@@ -433,6 +441,8 @@ self: super: {
  gps-umd = self.callPackage ./gps-umd {};
 
  gpsd-client = self.callPackage ./gpsd-client {};
+
+ grasping-msgs = self.callPackage ./grasping-msgs {};
 
  grbl-msgs = self.callPackage ./grbl-msgs {};
 
@@ -470,9 +480,13 @@ self: super: {
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
+ joint-state-controller = self.callPackage ./joint-state-controller {};
+
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
 
  joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
+
+ joint-trajectory-controller = self.callPackage ./joint-trajectory-controller {};
 
  joy = self.callPackage ./joy {};
 
@@ -788,6 +802,8 @@ self: super: {
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
+ position-controllers = self.callPackage ./position-controllers {};
+
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
@@ -909,6 +925,8 @@ self: super: {
  ros1-rosbag-storage-vendor = self.callPackage ./ros1-rosbag-storage-vendor {};
 
  ros2-control = self.callPackage ./ros2-control {};
+
+ ros2-controllers = self.callPackage ./ros2-controllers {};
 
  ros2-ouster = self.callPackage ./ros2-ouster {};
 
@@ -1268,8 +1286,6 @@ self: super: {
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
- transmission-interface = self.callPackage ./transmission-interface {};
-
  turtlebot3 = self.callPackage ./turtlebot3 {};
 
  turtlebot3-bringup = self.callPackage ./turtlebot3-bringup {};
@@ -1323,6 +1339,8 @@ self: super: {
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
+
+ velocity-controllers = self.callPackage ./velocity-controllers {};
 
  velodyne = self.callPackage ./velodyne {};
 

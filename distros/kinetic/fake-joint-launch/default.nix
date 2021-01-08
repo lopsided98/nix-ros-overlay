@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, abb-irb2400-support, catkin, controller-manager, denso-ros-control, fake-joint-driver, nextage-description, pr2-description, robot-state-publisher, roslaunch, rostest, rviz, tra1-description, ur-description, vs060 }:

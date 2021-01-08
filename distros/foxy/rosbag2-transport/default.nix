@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, python-cmake-module, rclcpp, rmw, rmw-implementation-cmake, rosbag2-compression, rosbag2-cpp, rosbag2-storage, rosbag2-test-common, rpyutils, shared-queues-vendor, test-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-foxy-rosbag2-transport";
-  version = "0.3.5-r1";
+  version = "0.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_transport/0.3.5-1.tar.gz";
-    name = "0.3.5-1.tar.gz";
-    sha256 = "29c3275d3412b90ecfa3a3b45f748036759ccf8dc516d207bf2c0fb14843abba";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_transport/0.3.6-1.tar.gz";
+    name = "0.3.6-1.tar.gz";
+    sha256 = "b261e9a001b958150934ab8815762f0500e2387e5271670f70e0e0c189ff8576";
   };
 
   buildType = "ament_cmake";

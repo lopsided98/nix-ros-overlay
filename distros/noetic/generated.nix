@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -23,6 +23,18 @@ self: super: {
  apriltag = self.callPackage ./apriltag {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
+
+ arbotix = self.callPackage ./arbotix {};
+
+ arbotix-controllers = self.callPackage ./arbotix-controllers {};
+
+ arbotix-firmware = self.callPackage ./arbotix-firmware {};
+
+ arbotix-msgs = self.callPackage ./arbotix-msgs {};
+
+ arbotix-python = self.callPackage ./arbotix-python {};
+
+ arbotix-sensors = self.callPackage ./arbotix-sensors {};
 
  assimp-devel = self.callPackage ./assimp-devel {};
 
@@ -639,6 +651,8 @@ self: super: {
  exotica-time-indexed-rrt-connect-solver = self.callPackage ./exotica-time-indexed-rrt-connect-solver {};
 
  exotica-val-description = self.callPackage ./exotica-val-description {};
+
+ explore-lite = self.callPackage ./explore-lite {};
 
  fadecandy-driver = self.callPackage ./fadecandy-driver {};
 
@@ -1286,6 +1300,8 @@ self: super: {
 
  multires-image = self.callPackage ./multires-image {};
 
+ multirobot-map-merge = self.callPackage ./multirobot-map-merge {};
+
  multisense = self.callPackage ./multisense {};
 
  multisense-bringup = self.callPackage ./multisense-bringup {};
@@ -1389,6 +1405,8 @@ self: super: {
  openni2-launch = self.callPackage ./openni2-launch {};
 
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
+
+ openzen-sensor = self.callPackage ./openzen-sensor {};
 
  opt-camera = self.callPackage ./opt-camera {};
 

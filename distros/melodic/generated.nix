@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -710,6 +710,8 @@ self: super: {
 
  driver-common = self.callPackage ./driver-common {};
 
+ drone-assets = self.callPackage ./drone-assets {};
+
  drone-wrapper = self.callPackage ./drone-wrapper {};
 
  dual-quaternions = self.callPackage ./dual-quaternions {};
@@ -919,6 +921,8 @@ self: super: {
  exotica-time-indexed-rrt-connect-solver = self.callPackage ./exotica-time-indexed-rrt-connect-solver {};
 
  exotica-val-description = self.callPackage ./exotica-val-description {};
+
+ explore-lite = self.callPackage ./explore-lite {};
 
  face-detector = self.callPackage ./face-detector {};
 
@@ -1253,6 +1257,8 @@ self: super: {
  hector-trajectory-server = self.callPackage ./hector-trajectory-server {};
 
  hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
+
+ heifu = self.callPackage ./heifu {};
 
  heifu-bringup = self.callPackage ./heifu-bringup {};
 
@@ -2129,6 +2135,8 @@ self: super: {
  multimaster-msgs-fkie = self.callPackage ./multimaster-msgs-fkie {};
 
  multires-image = self.callPackage ./multires-image {};
+
+ multirobot-map-merge = self.callPackage ./multirobot-map-merge {};
 
  multisense = self.callPackage ./multisense {};
 
@@ -4037,8 +4045,6 @@ self: super: {
  variant = self.callPackage ./variant {};
 
  variant-msgs = self.callPackage ./variant-msgs {};
-
- variant-topic-test = self.callPackage ./variant-topic-test {};
 
  variant-topic-tools = self.callPackage ./variant-topic-tools {};
 

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, gazebo-plugins, gazebo-ros, kobuki-description, kobuki-gazebo-plugins, kobuki-random-walker, kobuki-safety-controller, robot-state-publisher, yocs-cmd-vel-mux }:

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, avahi, catkin, redis, rocon-console, rocon-gateway, rocon-python-comms, rocon-python-redis, rocon-semantic-version, rosgraph, std-srvs }:

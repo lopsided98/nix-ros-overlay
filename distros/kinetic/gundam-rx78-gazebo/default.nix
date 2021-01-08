@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, fake-localization, gazebo-plugins, gazebo-ros, gazebo-ros-control, gundam-rx78-control, gundam-rx78-description, roslaunch, roslint, rostest }:

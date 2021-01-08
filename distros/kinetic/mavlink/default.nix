@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-kinetic-mavlink";
-  version = "2020.12.12-r1";
+  version = "2021.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2020.12.12-1.tar.gz";
-    name = "2020.12.12-1.tar.gz";
-    sha256 = "86a46dac68ff10a8d21a713b03419f2b9d076ff892f8fca72e63480938ed7f91";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/kinetic/mavlink/2021.1.4-1.tar.gz";
+    name = "2021.1.4-1.tar.gz";
+    sha256 = "e8def84db36e4963a094d85b81e072c258b08d82c1f7212e7cc763d3cd762456";
   };
 
   buildType = "cmake";

@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rcutils }:
 buildRosPackage {
   pname = "ros-foxy-rosbag2-test-common";
-  version = "0.3.5-r1";
+  version = "0.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_test_common/0.3.5-1.tar.gz";
-    name = "0.3.5-1.tar.gz";
-    sha256 = "07ed6c2a9844a061695d9f2d5f311cd56c94b039053de27e57fff1b8aaf9061e";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_test_common/0.3.6-1.tar.gz";
+    name = "0.3.6-1.tar.gz";
+    sha256 = "09ecc028f22225b452e2c1833e7c3ab2083b5c23482e63b78e21dda44f3e39bb";
   };
 
   buildType = "ament_cmake";

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, checkerboard-detector, dynamic-tf-publisher, freenect-stack, gazebo-plugins, gazebo-ros, joint-state-publisher, nextage-gazebo, openni2-launch, robot-state-publisher, tf, turtlebot-description, urdf }:

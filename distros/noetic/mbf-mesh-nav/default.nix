@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, mbf-abstract-nav, mbf-mesh-core, mesh-map, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-mbf-mesh-nav";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mbf_mesh_nav/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "bf3f02873b9114b7fbff328a3c37e54865d3bfeac77fb2939528e109b2f89c65";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mbf_mesh_nav/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "13abd3b0db94a01e7f4c6e34370779dd0ac47e383a217adef1ab1a09e3886777";
   };
 
   buildType = "catkin";

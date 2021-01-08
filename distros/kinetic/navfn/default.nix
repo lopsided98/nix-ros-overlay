@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, netpbm, pcl-conversions, pcl-ros, pluginlib, rosconsole, roscpp, rosunit, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-navfn";
-  version = "1.14.8-r1";
+  version = "1.14.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navfn/1.14.8-1.tar.gz";
-    name = "1.14.8-1.tar.gz";
-    sha256 = "98416be0b2ea485f7b8fb5f1bb635ef084aeacd3033cb818f184f1d9e4929433";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/navfn/1.14.9-1.tar.gz";
+    name = "1.14.9-1.tar.gz";
+    sha256 = "8e06f5264bd0679ba8f5670a5452f5fdb18a52e347273f01c6866c8571210016";
   };
 
   buildType = "catkin";

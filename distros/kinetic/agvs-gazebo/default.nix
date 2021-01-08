@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, agvs-description, agvs-pad, agvs-robot-control, catkin, effort-controllers, gazebo-ros, joint-state-controller, roscpp, std-msgs, std-srvs, tf, velocity-controllers }:

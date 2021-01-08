@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-kinetic-librealsense2";
-  version = "2.40.0-r1";
+  version = "2.41.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/kinetic/librealsense2/2.40.0-1.tar.gz";
-    name = "2.40.0-1.tar.gz";
-    sha256 = "a8bcd9d71cdecc93e2f18692345114ec6bca0e35dd829319af963622362ca950";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/kinetic/librealsense2/2.41.0-1.tar.gz";
+    name = "2.41.0-1.tar.gz";
+    sha256 = "c466edb6377c7b36160bdd386c88ec83c627167986f10b0fb08c3760fde103a7";
   };
 
   buildType = "cmake";

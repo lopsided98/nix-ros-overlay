@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, hardware-interface, rclcpp }:
 buildRosPackage {
   pname = "ros-foxy-test-robot-hardware";
-  version = "0.1.0-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/bmagyar/ros2_control-release/archive/release/foxy/test_robot_hardware/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "4ee0e598bad9b11524dcf8269c17bbcab325f1640e604f5dd8dfd33157d598c4";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/test_robot_hardware/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "9fb7e759cc970b44d2121780f9df8c167565b2a87fa314f294c8f068c754388b";
   };
 
   buildType = "ament_cmake";

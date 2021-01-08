@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, ddynamic-reconfigure, diagnostic-updater, eigen, genmsg, image-transport, librealsense2, message-runtime, nav-msgs, nodelet, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-realsense2-camera";
-  version = "2.2.20-r1";
+  version = "2.2.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/kinetic/realsense2_camera/2.2.20-1.tar.gz";
-    name = "2.2.20-1.tar.gz";
-    sha256 = "dc035ea01274b6f842827468ab143c28df1f1cb63716c524209ddf18a0ac95cd";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/kinetic/realsense2_camera/2.2.21-1.tar.gz";
+    name = "2.2.21-1.tar.gz";
+    sha256 = "af5f1e1abf290794613308e27960125be401667aa484e699f46358863cd94010";
   };
 
   buildType = "catkin";

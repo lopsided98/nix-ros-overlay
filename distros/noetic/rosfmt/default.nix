@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, rosconsole, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-rosfmt";
-  version = "6.2.0-r1";
+  version = "7.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosfmt-release/archive/release/noetic/rosfmt/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "be52a461360a5d459c3794a4f167a4b9dc4d8032d952978fccb2f54eca2e51c0";
+    url = "https://github.com/xqms/rosfmt-release/archive/release/noetic/rosfmt/7.0.0-1.tar.gz";
+    name = "7.0.0-1.tar.gz";
+    sha256 = "b2c2c4f2436a5a0215d932e2cc308cfa91dde43404cba0af8986624a907b1def";
   };
 
   buildType = "catkin";

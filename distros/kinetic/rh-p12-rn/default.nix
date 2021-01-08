@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, rh-p12-rn-base-module, rh-p12-rn-base-module-msgs, rh-p12-rn-description, rh-p12-rn-gazebo, rh-p12-rn-gui, rh-p12-rn-manager }:

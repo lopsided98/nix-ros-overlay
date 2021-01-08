@@ -1,19 +1,20 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, grid-map-core, grid-map-cv, grid-map-filters, grid-map-loader, grid-map-msgs, grid-map-octomap, grid-map-ros, grid-map-rviz-plugin, grid-map-visualization, octomap-msgs, roscpp, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, grid-map-core, grid-map-cv, grid-map-filters, grid-map-loader, grid-map-msgs, grid-map-octomap, grid-map-ros, grid-map-rviz-plugin, grid-map-visualization, gtest, octomap-msgs, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-demos";
-  version = "1.6.2-r1";
+  version = "1.6.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_demos/1.6.2-1.tar.gz";
-    name = "1.6.2-1.tar.gz";
-    sha256 = "54210fb49c552faa381c3dc4ae4ba2d2e8e3af02d35e8ad48bb8b09c209e80ee";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_demos/1.6.4-2.tar.gz";
+    name = "1.6.4-2.tar.gz";
+    sha256 = "af010970395ae6e3b4ac8fedae39a35edba1a7f3fff7a5989bad9df899002722";
   };
 
   buildType = "catkin";
+  checkInputs = [ gtest ];
   propagatedBuildInputs = [ cv-bridge geometry-msgs grid-map-core grid-map-cv grid-map-filters grid-map-loader grid-map-msgs grid-map-octomap grid-map-ros grid-map-rviz-plugin grid-map-visualization octomap-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
