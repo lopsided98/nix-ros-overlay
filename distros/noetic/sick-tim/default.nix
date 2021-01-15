@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, libusb, libusb1, robot-state-publisher, roscpp, roslaunch, sensor-msgs, xacro }:

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, ur-bringup, ur-description, ur-driver, ur-e-description, ur-e-gazebo, ur-gazebo, ur-kinematics, ur-msgs, ur10-e-moveit-config, ur10-moveit-config, ur3-e-moveit-config, ur3-moveit-config, ur5-e-moveit-config, ur5-moveit-config }:

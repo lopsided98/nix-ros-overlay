@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, dynamic-reconfigure, eigen, franka-control, franka-description, franka-hw, geometry-msgs, hardware-interface, libfranka, message-generation, message-runtime, panda-moveit-config, pluginlib, realtime-tools, roscpp, rospy }:

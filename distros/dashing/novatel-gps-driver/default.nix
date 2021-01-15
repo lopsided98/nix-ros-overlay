@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, boost, diagnostic-msgs, diagnostic-updater, gps-msgs, libpcap, nav-msgs, novatel-gps-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs, swri-math-util, swri-roscpp, swri-serial-util, tf2, tf2-geometry-msgs }:

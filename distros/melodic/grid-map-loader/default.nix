@@ -1,19 +1,20 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, grid-map-msgs, grid-map-ros, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, grid-map-msgs, grid-map-ros, gtest, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-loader";
-  version = "1.6.2-r1";
+  version = "1.6.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_loader/1.6.2-1.tar.gz";
-    name = "1.6.2-1.tar.gz";
-    sha256 = "9670bfef23a27ede70e0de843882f6b641ce26c13052c1afcd5e1c741fbe6e99";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_loader/1.6.4-2.tar.gz";
+    name = "1.6.4-2.tar.gz";
+    sha256 = "3b32397c6eda6714eb4f31b6f64bcb55f63e934015a0e519e90e3dc2bdcf41f5";
   };
 
   buildType = "catkin";
+  checkInputs = [ gtest ];
   propagatedBuildInputs = [ grid-map-msgs grid-map-ros roscpp ];
   nativeBuildInputs = [ catkin ];
 

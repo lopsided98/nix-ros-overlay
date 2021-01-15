@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, yocs-cmd-vel-mux, yocs-controllers, yocs-diff-drive-pose-controller, yocs-joyop, yocs-keyop, yocs-math-toolkit, yocs-rapps, yocs-safety-controller, yocs-velocity-smoother, yocs-virtual-sensor, yocs-waypoints-navi }:

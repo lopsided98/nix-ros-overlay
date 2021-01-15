@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, SDL, binutils, camera-info-manager, catkin, daemontools, git, gtk2, image-transport, libudev, libxml2, message-generation, message-runtime, nav-msgs, roscpp, roslint, sensor-msgs, std-srvs, tf, wirelesstools }:

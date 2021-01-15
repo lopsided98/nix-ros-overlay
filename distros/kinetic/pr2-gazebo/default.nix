@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-aggregator, fingertip-pressure, gazebo, gazebo-plugins, geometry-msgs, image-proc, joint-trajectory-action, pr2-controller-configuration-gazebo, pr2-dashboard-aggregator, pr2-description, pr2-gazebo-plugins, pr2-gripper-action, pr2-head-action, pr2-mechanism-controllers, pr2-msgs, robot-mechanism-controllers, robot-pose-ekf, rospy, single-joint-position-action, std-msgs, stereo-image-proc, tf2-ros, topic-tools, xacro }:

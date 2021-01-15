@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-mypy, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch-ros, pkg-config, python3Packages, pythonPackages, rclcpp, std-msgs, std-srvs, tracetools, tracetools-launch, tracetools-read }:
 buildRosPackage {
   pname = "ros-foxy-tracetools-test";
-  version = "1.0.4-r1";
+  version = "1.0.5-r2";
 
   src = fetchurl {
-    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/tracetools_test/1.0.4-1";
+    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/tracetools_test/1.0.5-2";
     name = "archive.tar.gz";
-    sha256 = "755824ceeb41282fadfbb8d1c347c43987674950c9253193294e067626d880dd";
+    sha256 = "ec2ed4f93582bd657a6a5bdf2b60891cd7afed0926f00de78a217c6c26156858";
   };
 
   buildType = "ament_cmake";

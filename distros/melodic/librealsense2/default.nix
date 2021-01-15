@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-melodic-librealsense2";
-  version = "2.40.0-r1";
+  version = "2.41.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/melodic/librealsense2/2.40.0-1.tar.gz";
-    name = "2.40.0-1.tar.gz";
-    sha256 = "66631d8a7ea507f3f23e461921035a239f9ffa9972d675de6a8b8dc1b0cfa2b8";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/melodic/librealsense2/2.41.0-1.tar.gz";
+    name = "2.41.0-1.tar.gz";
+    sha256 = "65975e28f3f1134aafb1fceeffae868b7c5f2522ed5b731c5831507640af8f7e";
   };
 
   buildType = "cmake";

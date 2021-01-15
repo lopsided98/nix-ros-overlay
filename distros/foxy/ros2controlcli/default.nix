@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, controller-manager-msgs, rclpy, ros2cli, ros2node, ros2param, rosidl-runtime-py }:
 buildRosPackage {
   pname = "ros-foxy-ros2controlcli";
-  version = "0.1.0-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/bmagyar/ros2_control-release/archive/release/foxy/ros2controlcli/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "b7bbb31de8e0a3a287610275c6eb314c93d9779e5ef230a38b342922bd3ee7b0";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/ros2controlcli/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "b0d70dc508028ccdfb641d7b1baeac6e6d4c225986cb988e52fd8623d7e75978";
   };
 
   buildType = "ament_python";

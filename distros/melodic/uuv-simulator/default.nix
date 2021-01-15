@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, uuv-assistants, uuv-auv-control-allocator, uuv-control-cascaded-pid, uuv-control-msgs, uuv-control-utils, uuv-descriptions, uuv-gazebo, uuv-gazebo-plugins, uuv-gazebo-ros-plugins, uuv-gazebo-ros-plugins-msgs, uuv-gazebo-worlds, uuv-sensor-ros-plugins, uuv-sensor-ros-plugins-msgs, uuv-teleop, uuv-thruster-manager, uuv-trajectory-control, uuv-world-plugins, uuv-world-ros-plugins, uuv-world-ros-plugins-msgs }:

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, dynamic-reconfigure, geometry-msgs, image-transport, libyamlcpp, message-generation, message-runtime, opencv3, roscpp, roslib, sensor-msgs, std-msgs, usb-cam, uvc-camera }:

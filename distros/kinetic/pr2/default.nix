@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, audio-common, catkin, joystick-drivers, linux-networking, microstrain-3dmgx2-imu, pr2-apps, pr2-base, pr2-ethercat-drivers, pr2-navigation-apps, pr2-power-drivers, pr2-robot, prosilica-camera, urg-node, wge100-driver, wifi-ddwrt }:

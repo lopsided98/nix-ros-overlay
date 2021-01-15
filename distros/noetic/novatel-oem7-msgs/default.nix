@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-novatel-oem7-msgs";
-  version = "1.1.0-r2";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/noetic/novatel_oem7_msgs/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "d1b3cc62354b51aacd0a18b9c7b489469fcf2a737ac21fcd68e5e1d9c5d0afd9";
+    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/noetic/novatel_oem7_msgs/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "a741a6c39390dab95fc4a3222ebb671feda48fa14d71b3675e599d644518bb81";
   };
 
   buildType = "catkin";

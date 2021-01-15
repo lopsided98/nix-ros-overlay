@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, navigation, stdr-gui, stdr-resources, stdr-robot, stdr-server, turtlebot-bringup, turtlebot-navigation, yocs-velocity-smoother, yocs-virtual-sensor }:

@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-geometry-msgs";
-  version = "1.12.7";
+  version = "1.12.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/geometry_msgs/1.12.7-0.tar.gz";
-    name = "1.12.7-0.tar.gz";
-    sha256 = "60734262caf065a7eabc82f5c4033e3107a00a204e706a3884d6ee12fcac4d11";
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/geometry_msgs/1.12.8-1.tar.gz";
+    name = "1.12.8-1.tar.gz";
+    sha256 = "cbac8c272635cd628ac4ea51b1bbfcba1070c018d84c27da08af484512870d1c";
   };
 
   buildType = "catkin";

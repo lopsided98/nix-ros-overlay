@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, canopen-motor-node, catkin, cmake-modules, controller-manager, eigen, joint-state-controller, joint-state-publisher, moveit-core, moveit-ros-planning, pilz-control, prbt-hardware-support, robot-state-publisher, roscpp, roslaunch, rosservice, rostest, rviz, topic-tools, xacro }:

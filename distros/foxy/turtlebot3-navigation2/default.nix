@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-bringup }:
 buildRosPackage {
   pname = "ros-foxy-turtlebot3-navigation2";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/foxy/turtlebot3_navigation2/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "dc60741d76739200bef0327891e73c3c66b1b1cb7f750ae823d1c1339a2b7e5d";
+    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/foxy/turtlebot3_navigation2/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "ffef43127cb706840e25dcdb563eb3fa1687ea1d3cc80148ff12798ffedae0c3";
   };
 
   buildType = "ament_cmake";

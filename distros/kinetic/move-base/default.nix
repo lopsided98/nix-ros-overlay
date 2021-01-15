@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, base-local-planner, catkin, clear-costmap-recovery, cmake-modules, costmap-2d, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, move-base-msgs, nav-core, nav-msgs, navfn, pluginlib, roscpp, rospy, rotate-recovery, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-move-base";
-  version = "1.14.8-r1";
+  version = "1.14.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/move_base/1.14.8-1.tar.gz";
-    name = "1.14.8-1.tar.gz";
-    sha256 = "e2494972f56fdc2b2b3f2322f32af33eed7ad4434d1272d5b9b2b77f85f9cc80";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/move_base/1.14.9-1.tar.gz";
+    name = "1.14.9-1.tar.gz";
+    sha256 = "087bf2a32c87a9c5f8e6776f0dcc081441d759445182b2925818960dc487575f";
   };
 
   buildType = "catkin";

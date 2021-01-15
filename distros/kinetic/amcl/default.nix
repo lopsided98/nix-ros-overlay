@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, map-server, message-filters, nav-msgs, rosbag, roscpp, rostest, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-amcl";
-  version = "1.14.8-r1";
+  version = "1.14.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/1.14.8-1.tar.gz";
-    name = "1.14.8-1.tar.gz";
-    sha256 = "42a5d882ecbd3195bc5ac3096e0668f8ac79f85bd9170a33c14a4abd434e8084";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/1.14.9-1.tar.gz";
+    name = "1.14.9-1.tar.gz";
+    sha256 = "be917ca50baf2ca1a4b54e864c138db11b86f3e84756c643b9c13592b45c3ab9";
   };
 
   buildType = "catkin";

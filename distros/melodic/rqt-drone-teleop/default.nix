@@ -1,20 +1,20 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, roslib, rospy, rqt-gui, rqt-gui-py, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, drone-wrapper, geometry-msgs, pythonPackages, roslib, rospy, rqt-gui, rqt-gui-py, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rqt-drone-teleop";
-  version = "1.3.2-r5";
+  version = "1.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/rqt_drone_teleop/1.3.2-5.tar.gz";
-    name = "1.3.2-5.tar.gz";
-    sha256 = "2ca6f600ef27a59d6b5eadadf5f20a8c6c65c2a9fe74c7c9c08ac7a59a439144";
+    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/rqt_drone_teleop/1.3.6-1.tar.gz";
+    name = "1.3.6-1.tar.gz";
+    sha256 = "b4d44dff8d2eb16563250173c9d004286b26fc093e74f036dba7b94a878e6ae6";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ geometry-msgs pythonPackages.rospkg roslib rospy rqt-gui rqt-gui-py sensor-msgs ];
+  propagatedBuildInputs = [ drone-wrapper geometry-msgs pythonPackages.rospkg roslib rospy rqt-gui rqt-gui-py sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

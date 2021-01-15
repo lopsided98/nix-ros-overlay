@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, camera-info-manager-py, catkin, codec-image-transport, cv-bridge, dynamic-reconfigure, geometry-msgs, image-transport, message-generation, message-runtime, nav-msgs, rospy, sensor-msgs, std-msgs }:

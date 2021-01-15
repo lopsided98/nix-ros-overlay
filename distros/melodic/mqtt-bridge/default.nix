@@ -1,21 +1,22 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosbridge-library, rospy, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, pythonPackages, rosbridge-library, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mqtt-bridge";
-  version = "0.1.7-r7";
+  version = "0.1.8-r4";
 
   src = fetchurl {
-    url = "https://github.com/groove-x/mqtt_bridge-release/archive/release/melodic/mqtt_bridge/0.1.7-7.tar.gz";
-    name = "0.1.7-7.tar.gz";
-    sha256 = "9634feb4b2d21c826199396342529bccf22aaa9c7c262446f9a03e6165c920b8";
+    url = "https://github.com/groove-x/mqtt_bridge-release/archive/release/melodic/mqtt_bridge/0.1.8-4.tar.gz";
+    name = "0.1.8-4.tar.gz";
+    sha256 = "b6ee5c7ab85fd71dd76c4b8a59e74f17b12a6d593eff387183dc4d0d7e58dd4e";
   };
 
   buildType = "catkin";
+  buildInputs = [ pythonPackages.pip ];
   propagatedBuildInputs = [ rosbridge-library rospy std-msgs ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''The mqtt_bridge package'';

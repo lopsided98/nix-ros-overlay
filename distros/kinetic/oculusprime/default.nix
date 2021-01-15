@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, amcl, catkin, depthimage-to-laserscan, dwa-local-planner, dynamic-reconfigure, gmapping, map-server, move-base, nodelet, openni2-camera, openni2-launch, pcl-ros, roscpp, rospy, std-msgs, visualization-msgs }:

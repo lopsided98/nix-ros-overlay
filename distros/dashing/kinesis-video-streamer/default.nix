@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, aws-common, aws-ros2-common, image-transport, kinesis-manager, kinesis-video-msgs, launch, launch-ros, python3Packages, rclcpp, rmw-implementation }:

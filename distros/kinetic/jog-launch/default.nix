@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, fake-joint-launch, jog-controller, nextage-moveit-config, roslaunch, rostest, tra1-moveit-config, ur3-moveit-config, ur5-moveit-config }:

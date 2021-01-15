@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, amcl, ar-track-alvar-msgs, catkin, geometry-msgs, joint-state-publisher, map-server, move-base, moveit-core, moveit-msgs, moveit-ros-planning, moveit-ros-planning-interface, nav-msgs, open-manipulator-msgs, robot-state-publisher, roscpp, roslaunch, rospy, smach, smach-ros, std-msgs, trajectory-msgs }:

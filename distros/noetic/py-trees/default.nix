@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-py-trees";
-  version = "0.7.3-r1";
+  version = "0.7.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/stonier/py_trees-release/archive/release/noetic/py_trees/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "d87be5859962edd36fb396df2a71008893f72386ae16b902c64229115fd1b822";
+    url = "https://github.com/stonier/py_trees-release/archive/release/noetic/py_trees/0.7.6-2.tar.gz";
+    name = "0.7.6-2.tar.gz";
+    sha256 = "7d8e790d7269001586af8e85d78c8b8fb55dfdcee470d82ee22c53b720134e63";
   };
 
   buildType = "catkin";

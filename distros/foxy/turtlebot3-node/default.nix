@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, dynamixel-sdk, geometry-msgs, message-filters, nav-msgs, rclcpp, rcutils, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros, turtlebot3-msgs }:
 buildRosPackage {
   pname = "ros-foxy-turtlebot3-node";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/foxy/turtlebot3_node/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "93eb215553d42d7ac1369c0f1e9ce0570840bfc58020b1415dd8dafa6b26c3e8";
+    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/foxy/turtlebot3_node/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "00de388dca5096ec292744617db1b52acac455ca38a78682a9063cf445d199d2";
   };
 
   buildType = "ament_cmake";

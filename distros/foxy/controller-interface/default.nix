@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, hardware-interface, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-foxy-controller-interface";
-  version = "0.1.0-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/bmagyar/ros2_control-release/archive/release/foxy/controller_interface/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "7eca783fb596932164241e67c51c6620a8d4511a7cc50aae68658e206e4befa9";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/controller_interface/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "bb27463be6536f0fcb8cff7aca5a63ea9664a52c9fec47e27749217b56aeed0a";
   };
 
   buildType = "ament_cmake";

@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-noetic-librealsense2";
-  version = "2.40.0-r2";
+  version = "2.41.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/noetic/librealsense2/2.40.0-2.tar.gz";
-    name = "2.40.0-2.tar.gz";
-    sha256 = "4451f10b7e9c0be92413b6efda765c382dfd9fa183449c08122166988011509a";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/noetic/librealsense2/2.41.0-1.tar.gz";
+    name = "2.41.0-1.tar.gz";
+    sha256 = "780ad7a395eea6fe77921563d6c0eaa1db48a66c9ec09beff0d19cc98a22d2a4";
   };
 
   buildType = "cmake";

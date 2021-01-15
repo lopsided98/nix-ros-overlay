@@ -1,20 +1,20 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, autoware-config-msgs, catkin, cv-bridge, gtest, libyamlcpp, message-filters, pcl-conversions, pcl-ros, qt5, roscpp, roslint, rostest, sensor-msgs, std-msgs, tf, tf2, tf2-eigen, tf2-ros, velodyne-pointcloud }:
+{ lib, buildRosPackage, fetchurl, autoware-config-msgs, catkin, cv-bridge, gtest, libyamlcpp, message-filters, pcl-conversions, pcl-ros, qt5, roscpp, roslint, rostest, sensor-msgs, std-msgs, tf, tf2, tf2-eigen, tf2-ros, velodyne-pcl }:
 buildRosPackage {
   pname = "ros-noetic-points-preprocessor";
-  version = "1.14.9-r2";
+  version = "1.14.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/core_perception-release/archive/release/noetic/points_preprocessor/1.14.9-2.tar.gz";
-    name = "1.14.9-2.tar.gz";
-    sha256 = "94638e27cf0a363e87e96b3212b926c00a5ea37dfd470f41330e243879c299d1";
+    url = "https://github.com/nobleo/core_perception-release/archive/release/noetic/points_preprocessor/1.14.10-1.tar.gz";
+    name = "1.14.10-1.tar.gz";
+    sha256 = "6e5c22a3dc855829fb1b62ed64d9031ddb35193ffec0ae4073028393350d3a07";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ autoware-config-msgs cv-bridge gtest libyamlcpp message-filters pcl-conversions pcl-ros qt5.qtbase roscpp roslint rostest sensor-msgs std-msgs tf tf2 tf2-eigen tf2-ros velodyne-pointcloud ];
+  propagatedBuildInputs = [ autoware-config-msgs cv-bridge gtest libyamlcpp message-filters pcl-conversions pcl-ros qt5.qtbase roscpp roslint rostest sensor-msgs std-msgs tf tf2 tf2-eigen tf2-ros velodyne-pcl ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

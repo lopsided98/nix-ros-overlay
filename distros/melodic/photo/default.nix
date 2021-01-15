@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, libgphoto2, message-generation, message-runtime, opencv3, roscpp, self-test, sensor-msgs, std-msgs }:

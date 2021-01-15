@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros, gazebo-video-monitor-msgs, libyamlcpp, opencv3, roscpp, std-srvs }:
