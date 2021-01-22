@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, pythonPackages, rclpy, std-msgs, webots-ros2-abb, webots-ros2-core, webots-ros2-universal-robot }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-demos";
-  version = "1.0.3-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_demos/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "7ae0c2943f9a711f8a533269c154beca7604cbe0c45bc146b926181f5c695f9a";
+    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_demos/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "c816ae7efc7c08936ccd2bc8cecdacda3812ca8d2abf39d2c407dfecd37eb77f";
   };
 
   buildType = "ament_python";

@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, costmap-2d, dynamic-reconfigure, eigen, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, pcl-conversions, pcl-ros, pluginlib, roscpp, rospy, rosunit, std-msgs, tf, voxel-grid }:
 buildRosPackage {
   pname = "ros-kinetic-base-local-planner";
-  version = "1.14.8-r1";
+  version = "1.14.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/base_local_planner/1.14.8-1.tar.gz";
-    name = "1.14.8-1.tar.gz";
-    sha256 = "efc5663ba3f2156c3d712ea91d8b7497d011f2b98d8582241414894655af9d6f";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/base_local_planner/1.14.9-1.tar.gz";
+    name = "1.14.9-1.tar.gz";
+    sha256 = "f4064ec0b859c756c28faafa8710f0bb8f31b9fccb7351cf1403c537ae35ba18";
   };
 
   buildType = "catkin";

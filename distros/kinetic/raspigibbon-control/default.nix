@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, controller-interface, controller-manager, gazebo-ros-control, hardware-interface, joint-state-controller, robot-state-publisher, rospy, sensor-msgs, std-msgs }:

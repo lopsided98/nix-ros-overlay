@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, eigen, geometry-msgs, mcl-3dl-msgs, nav-msgs, pcl-ros, roscpp, roslint, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mcl-3dl";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/mcl_3dl-release/archive/release/kinetic/mcl_3dl/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "f73eeadfe3c17ae4de9ed7c11b8f58f7e32a30b621201a13091f7e7aadfa8500";
+    url = "https://github.com/at-wat/mcl_3dl-release/archive/release/kinetic/mcl_3dl/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "2a7f7cc79af9c09e680d6196d9ec76a75f1e181c7b7a267ad92705e039d26eae";
   };
 
   buildType = "catkin";

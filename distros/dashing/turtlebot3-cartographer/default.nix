@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, cartographer-ros }:
 buildRosPackage {
   pname = "ros-dashing-turtlebot3-cartographer";
-  version = "2.1.0-r1";
+  version = "2.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/dashing/turtlebot3_cartographer/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "a127d5c87f9c35520c6ebb026161c827008424afcd6b8034208c2eed47bd2b80";
+    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/dashing/turtlebot3_cartographer/2.1.1-2.tar.gz";
+    name = "2.1.1-2.tar.gz";
+    sha256 = "ad251e0bdfce42c93692c26b261aa1f3045157a482ba3f9f3c93a92fd16507d8";
   };
 
   buildType = "ament_cmake";

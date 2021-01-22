@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, roslib, rospy, rqt-gui, rqt-gui-py, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rqt-ground-robot-teleop";
-  version = "1.3.2-r5";
+  version = "1.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/rqt_ground_robot_teleop/1.3.2-5.tar.gz";
-    name = "1.3.2-5.tar.gz";
-    sha256 = "11a8a07b711e9ce314e73c73391520ad0751a72223f62b117fee388970746dd4";
+    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/rqt_ground_robot_teleop/1.3.6-1.tar.gz";
+    name = "1.3.6-1.tar.gz";
+    sha256 = "0889076e263c9e9ed29028537180ce4d9f8d510292c4e05173a4ec5ccae6e516";
   };
 
   buildType = "catkin";

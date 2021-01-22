@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -738,6 +738,10 @@ self: super: {
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
 
+ rc-reason-clients = self.callPackage ./rc-reason-clients {};
+
+ rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
+
  rcdiscover = self.callPackage ./rcdiscover {};
 
  rcl = self.callPackage ./rcl {};
@@ -1139,6 +1143,8 @@ self: super: {
  turtlebot3-description = self.callPackage ./turtlebot3-description {};
 
  turtlebot3-example = self.callPackage ./turtlebot3-example {};
+
+ turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
  turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
 

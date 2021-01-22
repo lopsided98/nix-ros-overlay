@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, hector-map-tools, hector-nav-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-noetic-hector-trajectory-server";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_trajectory_server/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "d2e1a9e0de820d802970913b8831dbb74a0acdd54dca9c4f12b3a678c419df57";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_trajectory_server/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "a20848163a5e938922f81393692d51bb726f5d8a454f00d3c394838fc6651b3f";
   };
 
   buildType = "catkin";

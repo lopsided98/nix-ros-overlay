@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, mbf-abstract-core, mesh-map }:
 buildRosPackage {
   pname = "ros-noetic-mbf-mesh-core";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mbf_mesh_core/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "8561aa278d9666d754fa17b1974e2dd55a8d1ddfa02587d29e1e2e3b011e78a5";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mbf_mesh_core/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "c8100c5101802412cc36db9aad410c7d28dd2a8935c39b8e552fa82bd2d6c6c0";
   };
 
   buildType = "catkin";

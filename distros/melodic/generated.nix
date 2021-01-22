@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -710,6 +710,8 @@ self: super: {
 
  driver-common = self.callPackage ./driver-common {};
 
+ drone-assets = self.callPackage ./drone-assets {};
+
  drone-wrapper = self.callPackage ./drone-wrapper {};
 
  dual-quaternions = self.callPackage ./dual-quaternions {};
@@ -919,6 +921,8 @@ self: super: {
  exotica-time-indexed-rrt-connect-solver = self.callPackage ./exotica-time-indexed-rrt-connect-solver {};
 
  exotica-val-description = self.callPackage ./exotica-val-description {};
+
+ explore-lite = self.callPackage ./explore-lite {};
 
  face-detector = self.callPackage ./face-detector {};
 
@@ -1138,6 +1142,10 @@ self: super: {
 
  gpsd-client = self.callPackage ./gpsd-client {};
 
+ graceful-controller = self.callPackage ./graceful-controller {};
+
+ graceful-controller-ros = self.callPackage ./graceful-controller-ros {};
+
  graft = self.callPackage ./graft {};
 
  graph-msgs = self.callPackage ./graph-msgs {};
@@ -1253,6 +1261,8 @@ self: super: {
  hector-trajectory-server = self.callPackage ./hector-trajectory-server {};
 
  hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
+
+ heifu = self.callPackage ./heifu {};
 
  heifu-bringup = self.callPackage ./heifu-bringup {};
 
@@ -2130,6 +2140,8 @@ self: super: {
 
  multires-image = self.callPackage ./multires-image {};
 
+ multirobot-map-merge = self.callPackage ./multirobot-map-merge {};
+
  multisense = self.callPackage ./multisense {};
 
  multisense-bringup = self.callPackage ./multisense-bringup {};
@@ -2856,6 +2868,8 @@ self: super: {
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
 
+ rc-genicam-camera = self.callPackage ./rc-genicam-camera {};
+
  rc-genicam-driver = self.callPackage ./rc-genicam-driver {};
 
  rc-hand-eye-calibration-client = self.callPackage ./rc-hand-eye-calibration-client {};
@@ -3466,6 +3480,8 @@ self: super: {
 
  rviz-python-tutorial = self.callPackage ./rviz-python-tutorial {};
 
+ rviz-satellite = self.callPackage ./rviz-satellite {};
+
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
  rxcpp-vendor = self.callPackage ./rxcpp-vendor {};
@@ -4037,8 +4053,6 @@ self: super: {
  variant = self.callPackage ./variant {};
 
  variant-msgs = self.callPackage ./variant-msgs {};
-
- variant-topic-test = self.callPackage ./variant-topic-test {};
 
  variant-topic-tools = self.callPackage ./variant-topic-tools {};
 

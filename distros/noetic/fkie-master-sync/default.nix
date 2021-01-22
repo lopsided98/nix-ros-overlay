@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, fkie-master-discovery, fkie-multimaster-msgs, rosgraph, roslib, rospy }:
 buildRosPackage {
   pname = "ros-noetic-fkie-master-sync";
-  version = "1.2.5-r2";
+  version = "1.2.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_master_sync/1.2.5-2.tar.gz";
-    name = "1.2.5-2.tar.gz";
-    sha256 = "b001297d007b4763d4a07012a93db834ef6d05aec31086b9ee5434f58364c0c5";
+    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_master_sync/1.2.6-2.tar.gz";
+    name = "1.2.6-2.tar.gz";
+    sha256 = "03889c2c4d499116a429d4cdad1701b7900fab9a5cbc1e15f83e2dbefc029201";
   };
 
   buildType = "catkin";

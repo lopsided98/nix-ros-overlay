@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-description";
-  version = "1.2.4-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_description/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "ab2694b1c9eba7870383b69c39f9d216eb84c4f828cd7bf19a09239272d4edb4";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_description/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "ea95db46d10146b4d3725ea1b08fe5ce49eb298fc76bfce097047ac93e0267f8";
   };
 
   buildType = "catkin";

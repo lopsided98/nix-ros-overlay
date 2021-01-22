@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-hector-imu-attitude-to-tf";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_imu_attitude_to_tf/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "983216eb4b44fa00b529c19c7fd5382eba915deb813eee0ce7adbd255d987596";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_imu_attitude_to_tf/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "ef7b01ee4e41b8929813fb34fe31b543b82205194e3b96ec9adc3e382a5ae0fe";
   };
 
   buildType = "catkin";

@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, pythonPackages, ros2cli, tracetools-trace }:
 buildRosPackage {
   pname = "ros-foxy-ros2trace";
-  version = "1.0.4-r1";
+  version = "1.0.5-r2";
 
   src = fetchurl {
-    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/ros2trace/1.0.4-1";
+    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/ros2trace/1.0.5-2";
     name = "archive.tar.gz";
-    sha256 = "afeb34fe6e2f6ffb861b1f54f2bcd4980c613c39cc5fa038ee231687e9564088";
+    sha256 = "a4bb0ac1ed82bcabfada71dcdc7dd0bcc0d1c48ea5b1b63df62a9c3a6847fe13";
   };
 
   buildType = "ament_python";

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, dccomms-ros, fftw, fftwSinglePrec, geographiclib, geometry-msgs, image-transport, interactive-markers, kdl-parser, libGL, libGLU, libxmlxx, muparser, nav-msgs, openscenegraph, osg-interactive-markers, osg-markers, osg-utils, pcl-ros, pluginlib, resource-retriever, robot-state-publisher, roscpp, sensor-msgs, tf, underwater-sensor-msgs, urdf, uwsim-bullet, uwsim-osgbullet, uwsim-osgocean, uwsim-osgworks, xacro }:

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, cost-map-core, cost-map-msgs, costmap-2d, ecl-build, ecl-command-line, ecl-console, grid-map-core, grid-map-costmap-2d, grid-map-ros, grid-map-visualization, libyamlcpp, nav-msgs, opencv3, roslib }:

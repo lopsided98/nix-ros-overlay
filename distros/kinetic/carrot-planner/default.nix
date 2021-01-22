@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, eigen, nav-core, pluginlib, roscpp, tf }:
 buildRosPackage {
   pname = "ros-kinetic-carrot-planner";
-  version = "1.14.8-r1";
+  version = "1.14.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/carrot_planner/1.14.8-1.tar.gz";
-    name = "1.14.8-1.tar.gz";
-    sha256 = "86584643f11e5d9556fc1a549405318aa07d24d12ce7a5786afc8d8c08a24090";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/carrot_planner/1.14.9-1.tar.gz";
+    name = "1.14.9-1.tar.gz";
+    sha256 = "de420cdc4190f1105e6d1b88b0df7b5b807e43c83abac56ece8982aed5417082";
   };
 
   buildType = "catkin";

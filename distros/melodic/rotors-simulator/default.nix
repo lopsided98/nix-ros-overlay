@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, rotors-comm, rotors-control, rotors-description, rotors-evaluation, rotors-gazebo, rotors-gazebo-plugins, rotors-hil-interface, rotors-joy-interface, rqt-rotors }:

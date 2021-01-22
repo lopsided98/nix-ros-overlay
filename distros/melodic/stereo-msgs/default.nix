@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-stereo-msgs";
-  version = "1.12.7";
+  version = "1.12.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/stereo_msgs/1.12.7-0.tar.gz";
-    name = "1.12.7-0.tar.gz";
-    sha256 = "18b3d8ec019e01a906981d524a8f1d0cc067e39f53494f1ce0a8c94e07801340";
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/stereo_msgs/1.12.8-1.tar.gz";
+    name = "1.12.8-1.tar.gz";
+    sha256 = "2b4e582d515c307c9416f19881898bcc23c45b356f55bfae0d51d112f04aa1c9";
   };
 
   buildType = "catkin";

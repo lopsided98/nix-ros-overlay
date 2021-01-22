@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, qt5 }:
 buildRosPackage {
   pname = "ros-foxy-plotjuggler";
-  version = "3.0.5-r2";
+  version = "3.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/foxy/plotjuggler/3.0.5-2.tar.gz";
-    name = "3.0.5-2.tar.gz";
-    sha256 = "1163bdf11db902632f393eb66631b3cbccd14d76a5f9a7498be4cc93ce039231";
+    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/foxy/plotjuggler/3.0.7-1.tar.gz";
+    name = "3.0.7-1.tar.gz";
+    sha256 = "da9b752c1dffdb1399aca9447286f0c0c37298a2e5049aba6f167df42b98cc28";
   };
 
   buildType = "catkin";

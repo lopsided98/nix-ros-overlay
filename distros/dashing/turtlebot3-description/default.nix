@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, urdf }:
 buildRosPackage {
   pname = "ros-dashing-turtlebot3-description";
-  version = "2.1.0-r1";
+  version = "2.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/dashing/turtlebot3_description/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "d29a730ae7bdfc78b91679ba6b4c0f8acd00787894fefd2445b8aa2b8eefa9d4";
+    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/dashing/turtlebot3_description/2.1.1-2.tar.gz";
+    name = "2.1.1-2.tar.gz";
+    sha256 = "ea6a31a23c6d39a84a0fa7da6b7c804a170f4d1ddfec567d3c058e71d93d314b";
   };
 
   buildType = "ament_cmake";

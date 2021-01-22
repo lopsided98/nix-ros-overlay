@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -16,6 +16,8 @@ self: super: {
 
  actionlib-tutorials = self.callPackage ./actionlib-tutorials {};
 
+ agni-tf-tools = self.callPackage ./agni-tf-tools {};
+
  amcl = self.callPackage ./amcl {};
 
  angles = self.callPackage ./angles {};
@@ -23,6 +25,18 @@ self: super: {
  apriltag = self.callPackage ./apriltag {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
+
+ arbotix = self.callPackage ./arbotix {};
+
+ arbotix-controllers = self.callPackage ./arbotix-controllers {};
+
+ arbotix-firmware = self.callPackage ./arbotix-firmware {};
+
+ arbotix-msgs = self.callPackage ./arbotix-msgs {};
+
+ arbotix-python = self.callPackage ./arbotix-python {};
+
+ arbotix-sensors = self.callPackage ./arbotix-sensors {};
 
  assimp-devel = self.callPackage ./assimp-devel {};
 
@@ -107,6 +121,8 @@ self: super: {
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
+
+ can-dbc-parser = self.callPackage ./can-dbc-parser {};
 
  can-msgs = self.callPackage ./can-msgs {};
 
@@ -640,6 +656,8 @@ self: super: {
 
  exotica-val-description = self.callPackage ./exotica-val-description {};
 
+ explore-lite = self.callPackage ./explore-lite {};
+
  fadecandy-driver = self.callPackage ./fadecandy-driver {};
 
  fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
@@ -774,9 +792,43 @@ self: super: {
 
  gpsd-client = self.callPackage ./gpsd-client {};
 
+ graceful-controller = self.callPackage ./graceful-controller {};
+
+ graceful-controller-ros = self.callPackage ./graceful-controller-ros {};
+
+ graft = self.callPackage ./graft {};
+
  graph-msgs = self.callPackage ./graph-msgs {};
 
  grasping-msgs = self.callPackage ./grasping-msgs {};
+
+ grid-map = self.callPackage ./grid-map {};
+
+ grid-map-core = self.callPackage ./grid-map-core {};
+
+ grid-map-costmap-2d = self.callPackage ./grid-map-costmap-2d {};
+
+ grid-map-cv = self.callPackage ./grid-map-cv {};
+
+ grid-map-demos = self.callPackage ./grid-map-demos {};
+
+ grid-map-filters = self.callPackage ./grid-map-filters {};
+
+ grid-map-loader = self.callPackage ./grid-map-loader {};
+
+ grid-map-msgs = self.callPackage ./grid-map-msgs {};
+
+ grid-map-octomap = self.callPackage ./grid-map-octomap {};
+
+ grid-map-pcl = self.callPackage ./grid-map-pcl {};
+
+ grid-map-ros = self.callPackage ./grid-map-ros {};
+
+ grid-map-rviz-plugin = self.callPackage ./grid-map-rviz-plugin {};
+
+ grid-map-sdf = self.callPackage ./grid-map-sdf {};
+
+ grid-map-visualization = self.callPackage ./grid-map-visualization {};
 
  gripper-action-controller = self.callPackage ./gripper-action-controller {};
 
@@ -1286,6 +1338,8 @@ self: super: {
 
  multires-image = self.callPackage ./multires-image {};
 
+ multirobot-map-merge = self.callPackage ./multirobot-map-merge {};
+
  multisense = self.callPackage ./multisense {};
 
  multisense-bringup = self.callPackage ./multisense-bringup {};
@@ -1368,6 +1422,8 @@ self: super: {
 
  octomap-ros = self.callPackage ./octomap-ros {};
 
+ octomap-rviz-plugins = self.callPackage ./octomap-rviz-plugins {};
+
  octomap-server = self.callPackage ./octomap-server {};
 
  octovis = self.callPackage ./octovis {};
@@ -1390,7 +1446,11 @@ self: super: {
 
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
 
+ openzen-sensor = self.callPackage ./openzen-sensor {};
+
  opt-camera = self.callPackage ./opt-camera {};
+
+ osqp-vendor = self.callPackage ./osqp-vendor {};
 
  oxford-gps-eth = self.callPackage ./oxford-gps-eth {};
 
@@ -1533,6 +1593,8 @@ self: super: {
  pyquaternion = self.callPackage ./pyquaternion {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
+
+ qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
 
@@ -1862,6 +1924,8 @@ self: super: {
 
  rqt-msg = self.callPackage ./rqt-msg {};
 
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
+
  rqt-nav-view = self.callPackage ./rqt-nav-view {};
 
  rqt-plot = self.callPackage ./rqt-plot {};
@@ -1916,6 +1980,8 @@ self: super: {
 
  rviz-python-tutorial = self.callPackage ./rviz-python-tutorial {};
 
+ rviz-satellite = self.callPackage ./rviz-satellite {};
+
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
  safety-limiter = self.callPackage ./safety-limiter {};
@@ -1965,6 +2031,8 @@ self: super: {
  sick-scan = self.callPackage ./sick-scan {};
 
  sick-tim = self.callPackage ./sick-tim {};
+
+ simple-grasping = self.callPackage ./simple-grasping {};
 
  simulators = self.callPackage ./simulators {};
 
@@ -2070,6 +2138,8 @@ self: super: {
 
  tablet-socket-msgs = self.callPackage ./tablet-socket-msgs {};
 
+ taskflow = self.callPackage ./taskflow {};
+
  teb-local-planner = self.callPackage ./teb-local-planner {};
 
  teleop-tools = self.callPackage ./teleop-tools {};
@@ -2158,9 +2228,15 @@ self: super: {
 
  turtlebot3-example = self.callPackage ./turtlebot3-example {};
 
+ turtlebot3-fake = self.callPackage ./turtlebot3-fake {};
+
+ turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
+
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlebot3-navigation = self.callPackage ./turtlebot3-navigation {};
+
+ turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
 
  turtlebot3-slam = self.callPackage ./turtlebot3-slam {};
 
@@ -2183,6 +2259,8 @@ self: super: {
  ublox-serialization = self.callPackage ./ublox-serialization {};
 
  udp-com = self.callPackage ./udp-com {};
+
+ ueye-cam = self.callPackage ./ueye-cam {};
 
  unique-id = self.callPackage ./unique-id {};
 
@@ -2217,6 +2295,12 @@ self: super: {
  usb-cam-hardware-interface = self.callPackage ./usb-cam-hardware-interface {};
 
  uuid-msgs = self.callPackage ./uuid-msgs {};
+
+ variant = self.callPackage ./variant {};
+
+ variant-msgs = self.callPackage ./variant-msgs {};
+
+ variant-topic-tools = self.callPackage ./variant-topic-tools {};
 
  vector-map-msgs = self.callPackage ./vector-map-msgs {};
 
@@ -2263,6 +2347,8 @@ self: super: {
  voxel-grid = self.callPackage ./voxel-grid {};
 
  vrpn = self.callPackage ./vrpn {};
+
+ vrpn-client-ros = self.callPackage ./vrpn-client-ros {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
 

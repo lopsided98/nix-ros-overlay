@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, zlib }:
 buildRosPackage {
   pname = "ros-noetic-cnpy";
-  version = "0.0.3-r1";
+  version = "0.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/PeterMitrano/cnpy-release/archive/release/noetic/cnpy/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "98cbf4fcf6056a7b6670e9417799d33e0405399a887df22f164aef7e956a3e28";
+    url = "https://github.com/PeterMitrano/cnpy-release/archive/release/noetic/cnpy/0.0.6-1.tar.gz";
+    name = "0.0.6-1.tar.gz";
+    sha256 = "4976d95c49104d5005fde64175107a526dbe77cea3953e5aebf7caf2d855fb3a";
   };
 
   buildType = "cmake";

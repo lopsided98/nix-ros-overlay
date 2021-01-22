@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, amcl, catkin, map-server, move-base, turtlebot3-bringup }:
 buildRosPackage {
   pname = "ros-kinetic-turtlebot3-navigation";
-  version = "1.2.4-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3_navigation/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "8907d803336ab5653fd75c0e54436c8b36989920f064dd21ccc44e5749ac21b4";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/kinetic/turtlebot3_navigation/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "0274c0d048f4ee2f9b21b4f776022ad51b8837468b2464279d3ca3ea7b446028";
   };
 
   buildType = "catkin";

@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, turtlebot3-bringup, turtlebot3-description, turtlebot3-example, turtlebot3-navigation, turtlebot3-slam, turtlebot3-teleop }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3";
-  version = "1.2.4-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "c157a82e2b877657766c672a275df44b154a7175b2e7e46b074dd3985dd82832";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "e394c49a47c91bb821f4c037d47671e7150d6efc7e1eac31fa8688566abd56fc";
   };
 
   buildType = "catkin";
