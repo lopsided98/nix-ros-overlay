@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, angles, capabilities, catkin, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, ecl-exceptions, ecl-sigslots, ecl-streams, ecl-threads, geometry-msgs, kobuki-driver, kobuki-ftdi, kobuki-keyop, kobuki-msgs, kobuki-rapps, kobuki-safety-controller, nav-msgs, nodelet, pluginlib, roscpp, rospy, sensor-msgs, std-msgs, tf }:

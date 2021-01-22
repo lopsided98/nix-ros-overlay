@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, binutils, boost, catkin, cppzmq, qt5, roslib }:
 buildRosPackage {
   pname = "ros-noetic-plotjuggler";
-  version = "3.0.5-r2";
+  version = "3.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/noetic/plotjuggler/3.0.5-2.tar.gz";
-    name = "3.0.5-2.tar.gz";
-    sha256 = "7d4bd97b8bc4fe66677e93278d77c508389453b4a665ff3508809d5a3d2a62f4";
+    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/noetic/plotjuggler/3.0.7-1.tar.gz";
+    name = "3.0.7-1.tar.gz";
+    sha256 = "e0c81c90f9974e694a27922184cbf41f79405336a2cf97592fee4b6032c4ac6a";
   };
 
   buildType = "catkin";

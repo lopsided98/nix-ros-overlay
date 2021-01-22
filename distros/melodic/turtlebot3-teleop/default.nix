@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, rospy }:
 buildRosPackage {
   pname = "ros-melodic-turtlebot3-teleop";
-  version = "1.2.4-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_teleop/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "29a0873b66a3b62f17e79465d6f66a539bb77e662c9a3d1c06846d3f2f32b722";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/melodic/turtlebot3_teleop/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "7eaab5159344f9de40e735bd4fbec6c287dba5e90848b5e9eaf7a65bd5696901";
   };
 
   buildType = "catkin";

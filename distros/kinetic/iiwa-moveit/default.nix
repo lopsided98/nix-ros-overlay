@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, effort-controllers, gazebo-ros-control, iiwa-description, joint-state-controller, joint-state-publisher, joint-trajectory-controller, moveit-fake-controller-manager, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-planning-interface, moveit-ros-visualization, moveit-ros-warehouse, moveit-setup-assistant, moveit-simple-controller-manager, position-controllers, robot-state-publisher, velocity-controllers, xacro }:

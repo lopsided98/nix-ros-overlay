@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, aws-ros1-common, catkin, gmock, gtest, h264-encoder-core, image-transport, image-transport-plugins, kinesis-video-msgs, message-generation, message-runtime, rostest, sensor-msgs }:

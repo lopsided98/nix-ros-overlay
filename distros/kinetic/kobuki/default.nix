@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, kobuki-auto-docking, kobuki-bumper2pc, kobuki-capabilities, kobuki-controller-tutorial, kobuki-description, kobuki-keyop, kobuki-node, kobuki-random-walker, kobuki-rapps, kobuki-safety-controller, kobuki-testsuite }:

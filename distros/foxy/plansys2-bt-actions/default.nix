@@ -1,21 +1,21 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, behaviortree-cpp-v3, plansys2-executor, plansys2-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, test-msgs }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, behaviortree-cpp-v3, geometry-msgs, plansys2-executor, plansys2-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, test-msgs }:
 buildRosPackage {
   pname = "ros-foxy-plansys2-bt-actions";
-  version = "1.0.2-r1";
+  version = "1.0.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_bt_actions/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "ef0b97c0af0951d6e2ffc812dadf6a03e90e9bc25448aec90118a35da867a95b";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_bt_actions/1.0.7-2.tar.gz";
+    name = "1.0.7-2.tar.gz";
+    sha256 = "bc984c8927f984e3b6eda5ad30a988227c8d0f066ad076fab09627d0c0cf32dc";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common plansys2-msgs ];
-  propagatedBuildInputs = [ behaviortree-cpp-v3 plansys2-executor rclcpp rclcpp-action rclcpp-lifecycle test-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common geometry-msgs plansys2-msgs test-msgs ];
+  propagatedBuildInputs = [ action-msgs behaviortree-cpp-v3 plansys2-executor rclcpp rclcpp-action rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

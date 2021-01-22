@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-actionlib-msgs";
-  version = "1.12.7";
+  version = "1.12.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/actionlib_msgs/1.12.7-0.tar.gz";
-    name = "1.12.7-0.tar.gz";
-    sha256 = "0ad19d4f8698df04a22979c4b64f21991696c55877c952dc592e92ffb82122f0";
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/actionlib_msgs/1.12.8-1.tar.gz";
+    name = "1.12.8-1.tar.gz";
+    sha256 = "a3f0988bbc95c105177a455c4a50864fe578210703a591eab085f7684047b636";
   };
 
   buildType = "catkin";

@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, angles, catkin, geometry-msgs, gridmap-2d, humanoid-nav-msgs, map-server, nav-msgs, opencv3, rosconsole, roscpp, rospy, sbpl, sensor-msgs, tf, visualization-msgs }:

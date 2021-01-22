@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, boost, catkin, cmake-modules, ecto, ecto-image-pipeline, ecto-ros, geometric-shapes, object-recognition-core, object-recognition-msgs, pluginlib, rostest, rostopic, visualization-msgs }:

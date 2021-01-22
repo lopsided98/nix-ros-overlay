@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, gazebo-dev, gazebo-plugins, geometry-msgs, image-transport, laser-geometry, message-filters, roscpp, rostest, rosunit, sensor-msgs, std-msgs, tf, tf2, tf2-ros, uuv-gazebo-plugins, uuv-sensor-ros-plugins-msgs, xacro }:

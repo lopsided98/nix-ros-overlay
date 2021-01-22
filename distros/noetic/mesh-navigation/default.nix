@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, dijkstra-mesh-planner, mbf-mesh-core, mbf-mesh-nav, mesh-client, mesh-controller, mesh-layers, mesh-map, wave-front-planner }:
 buildRosPackage {
   pname = "ros-noetic-mesh-navigation";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mesh_navigation/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "85843ccce40c21a3e9ec9f7534bd0cbe44c9bad52a1ec42fc9831e3735c58a3d";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mesh_navigation/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "e7adfa73671977e5ba5ad96be4d8bd01755184c22d7be59b6e9f1cd34123339b";
   };
 
   buildType = "catkin";

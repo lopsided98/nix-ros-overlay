@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, SDL, SDL_image, bullet, catkin, libyamlcpp, nav-msgs, roscpp, rospy, rostest, rosunit, tf2 }:
 buildRosPackage {
   pname = "ros-kinetic-map-server";
-  version = "1.14.8-r1";
+  version = "1.14.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.8-1.tar.gz";
-    name = "1.14.8-1.tar.gz";
-    sha256 = "493ee280ccf2f1f81ab27566a970ecb1cacedd6771b1a44033b6640a86b5ce58";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/kinetic/map_server/1.14.9-1.tar.gz";
+    name = "1.14.9-1.tar.gz";
+    sha256 = "3733a2eb738c7e8d40222fd5c53eb934d4e38b0a6d9d6db5832afa95280fe08b";
   };
 
   buildType = "catkin";

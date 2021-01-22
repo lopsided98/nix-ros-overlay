@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry2, joystick-drivers, moveit-pr2, perception, perception-pcl, pr2-apps, pr2-calibration, pr2-common, pr2-common-actions, pr2-controllers, pr2-kinematics, pr2-mechanism, pr2-navigation, ros-realtime, warehouse-ros, web-interface }:

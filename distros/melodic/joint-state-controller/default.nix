@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, hardware-interface, pluginlib, realtime-tools, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-joint-state-controller";
-  version = "0.17.1-r1";
+  version = "0.17.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/joint_state_controller/0.17.1-1.tar.gz";
-    name = "0.17.1-1.tar.gz";
-    sha256 = "cc4dc4363aa29123e60b91aad36d084fa586a0054ab1225f92c123a682c32bca";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/joint_state_controller/0.17.2-1.tar.gz";
+    name = "0.17.2-1.tar.gz";
+    sha256 = "eff367735f79b32aa52aba89499345d6b4389bb3cd2883d58f57c04b7ec89dd4";
   };
 
   buildType = "catkin";

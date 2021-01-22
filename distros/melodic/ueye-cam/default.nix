@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, camera-calibration-parsers, camera-info-manager, catkin, dynamic-reconfigure, image-transport, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ueye-cam";
-  version = "1.0.17-r1";
+  version = "1.0.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/anqixu/ueye_cam-release/archive/release/melodic/ueye_cam/1.0.17-1.tar.gz";
-    name = "1.0.17-1.tar.gz";
-    sha256 = "03d172816684251094ab052bb7b8d6c9be51d752e47f5bea0153f24ccc2932f2";
+    url = "https://github.com/anqixu/ueye_cam-release/archive/release/melodic/ueye_cam/1.0.18-1.tar.gz";
+    name = "1.0.18-1.tar.gz";
+    sha256 = "8286de2a4b958373e0b8fd3de53fb05632eb33a882a37388143139a306406e39";
   };
 
   buildType = "catkin";

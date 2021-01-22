@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, eigen, roscpp, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-hector-marker-drawing";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_marker_drawing/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "012ce3eb0fb086137811471b4f131e911bf029ebad81bbd3edc4130cebcabf69";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_marker_drawing/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "16158a1dd69bb1abc0ee73348febddda0d802d6be2630e38356931f1b1abba8b";
   };
 
   buildType = "catkin";

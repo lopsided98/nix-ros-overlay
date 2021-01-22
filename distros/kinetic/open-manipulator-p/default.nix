@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, open-manipulator-p-control-gui, open-manipulator-p-controller, open-manipulator-p-description, open-manipulator-p-libs, open-manipulator-p-teleop }:

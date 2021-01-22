@@ -1,19 +1,20 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, grid-map-core, octomap }:
+{ lib, buildRosPackage, fetchurl, catkin, grid-map-core, gtest, octomap }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-octomap";
-  version = "1.6.2-r1";
+  version = "1.6.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_octomap/1.6.2-1.tar.gz";
-    name = "1.6.2-1.tar.gz";
-    sha256 = "6f5113c1b3e4459b22a411ac42ad5d476f786bf914783c5b60c2228fb7121048";
+    url = "https://github.com/anybotics/grid_map-release/archive/release/melodic/grid_map_octomap/1.6.4-2.tar.gz";
+    name = "1.6.4-2.tar.gz";
+    sha256 = "6572bfb578b59433cf8a62c2f43c5dc9d2c378c23fd8ed93d2a3f94c30042676";
   };
 
   buildType = "catkin";
+  checkInputs = [ gtest ];
   propagatedBuildInputs = [ grid-map-core octomap ];
   nativeBuildInputs = [ catkin ];
 

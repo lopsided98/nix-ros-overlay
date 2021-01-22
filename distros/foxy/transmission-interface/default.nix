@@ -1,20 +1,20 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, hardware-interface, tinyxml2-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, hardware-interface, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-foxy-transmission-interface";
-  version = "0.1.0-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/bmagyar/ros2_control-release/archive/release/foxy/transmission_interface/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "53fecb70ea5c5892e719d0443d681e76ce9beceb00fc7c4c9739c0fd0aeccbfe";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/transmission_interface/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "bda19ee934d33894bf47d647a898730419c25d4fb920beb51ecc924d1de27500";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-cmake-gmock ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ hardware-interface tinyxml2-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 

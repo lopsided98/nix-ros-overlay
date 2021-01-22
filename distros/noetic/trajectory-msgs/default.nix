@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, rosbag-migration-rule, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-trajectory-msgs";
-  version = "1.13.0-r1";
+  version = "1.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/trajectory_msgs/1.13.0-1.tar.gz";
-    name = "1.13.0-1.tar.gz";
-    sha256 = "6dc809d37afe25c9f894e06fe4755ae53ec1b8a42a768a9d82b5b3fab5e6808b";
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/trajectory_msgs/1.13.1-1.tar.gz";
+    name = "1.13.1-1.tar.gz";
+    sha256 = "4d6c3b972523840d4add843ddec7a00ec69e6dedb1a5b56af6d4b3b121715360";
   };
 
   buildType = "catkin";

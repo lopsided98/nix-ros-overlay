@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cartographer-ros, catkin, map-server, move-base, ridgeback-navigation, roslaunch, urdf, xacro }:

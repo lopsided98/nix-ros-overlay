@@ -1,5 +1,5 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -767,6 +767,8 @@ self: super: {
  desktop = self.callPackage ./desktop {};
 
  desktop-full = self.callPackage ./desktop-full {};
+
+ dgps-ros = self.callPackage ./dgps-ros {};
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
 

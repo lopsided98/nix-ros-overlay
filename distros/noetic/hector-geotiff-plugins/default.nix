@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, hector-geotiff, hector-nav-msgs }:
 buildRosPackage {
   pname = "ros-noetic-hector-geotiff-plugins";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_geotiff_plugins/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "533d09e2d9d7bb05bfbb8ae0f3cc9235356db4033a108ed56befe177016d114b";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_geotiff_plugins/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "459611623a7d99d6d089fbc3709186cc824a47a3e057dc3d0f3bd6bcd9e2025d";
   };
 
   buildType = "catkin";

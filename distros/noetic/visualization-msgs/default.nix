@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-visualization-msgs";
-  version = "1.13.0-r1";
+  version = "1.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/visualization_msgs/1.13.0-1.tar.gz";
-    name = "1.13.0-1.tar.gz";
-    sha256 = "96d222c8ee8c4bc1cdca0b75e004d33933c3a7f73e5357f59d1cbe64f4bf9cd2";
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/visualization_msgs/1.13.1-1.tar.gz";
+    name = "1.13.1-1.tar.gz";
+    sha256 = "8b797706ed360a8918380e718f3b05702bcb85fd55d6cdec6ad4721e75dc84a6";
   };
 
   buildType = "catkin";

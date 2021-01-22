@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, four-wheel-steering-msgs, nav-msgs, pluginlib, realtime-tools, rosgraph-msgs, rostest, std-srvs, tf, urdf-geometry-parser }:
 buildRosPackage {
   pname = "ros-melodic-four-wheel-steering-controller";
-  version = "0.17.1-r1";
+  version = "0.17.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/four_wheel_steering_controller/0.17.1-1.tar.gz";
-    name = "0.17.1-1.tar.gz";
-    sha256 = "a11682db1d24ded3269dd50ff610fdadc11956c3e04225a8891ee244a4e47a59";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/four_wheel_steering_controller/0.17.2-1.tar.gz";
+    name = "0.17.2-1.tar.gz";
+    sha256 = "fc0688411a344b201c2f046fcbfc3519022d0d6b31ed6b00ef2c6a2550ff2807";
   };
 
   buildType = "catkin";

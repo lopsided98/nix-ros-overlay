@@ -1,16 +1,16 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, geometry-msgs, interactive-markers, message-generation, message-runtime, nav-msgs, rospy, sensor-msgs, std-msgs, turtlebot3-bringup, turtlebot3-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-turtlebot3-example";
-  version = "1.2.4-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/noetic/turtlebot3_example/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "e8efb5c89466f561f79bfd79ea92d1f201722b681d2d4153e5449b783003a765";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3-release/archive/release/noetic/turtlebot3_example/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "2af50c6d5cf49106fbe1621db7065e770dff1d781b106f477b25f8294645166c";
   };
 
   buildType = "catkin";
