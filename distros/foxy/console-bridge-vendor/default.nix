@@ -2,19 +2,19 @@
 # Copyright 2020 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, console-bridge }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, console-bridge, performance-test-fixture }:
 buildRosPackage {
   pname = "ros-foxy-console-bridge-vendor";
-  version = "1.2.2-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/foxy/console_bridge_vendor/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "b8ed773d0f7d7ceabf6981e0346c9e6b6bceee4f874ed591b534b02b14675a72";
+    url = "https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/foxy/console_bridge_vendor/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "b646b4771e320242ad7d2abeec85f2c11a242a903137e7113f600c26dfc9d08f";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-lint-auto ament-lint-common performance-test-fixture ];
   propagatedBuildInputs = [ console-bridge ];
   nativeBuildInputs = [ ament-cmake ];
 

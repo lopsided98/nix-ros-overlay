@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-copyright }:
 buildRosPackage {
   pname = "ros-foxy-ament-cmake-copyright";
-  version = "0.9.5-r1";
+  version = "0.9.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_cmake_copyright/0.9.5-1.tar.gz";
-    name = "0.9.5-1.tar.gz";
-    sha256 = "80b2c9bb29e1955bf2b5cbf6bfa9472ecee04995eefbba02606bc87891a97ea4";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_cmake_copyright/0.9.6-1.tar.gz";
+    name = "0.9.6-1.tar.gz";
+    sha256 = "efb76c5814799e60604146636141238d69a87c2121e3ca775ce5d042e698fdcb";
   };
 
   buildType = "ament_cmake";

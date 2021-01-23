@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-steering-controller, catkin, diff-drive-controller, effort-controllers, force-torque-sensor-controller, forward-command-controller, gripper-action-controller, imu-sensor-controller, joint-state-controller, joint-trajectory-controller, position-controllers, velocity-controllers }:
 buildRosPackage {
   pname = "ros-melodic-ros-controllers";
-  version = "0.17.0-r1";
+  version = "0.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/ros_controllers/0.17.0-1.tar.gz";
-    name = "0.17.0-1.tar.gz";
-    sha256 = "077eed8715d83605a2115ec190675ccaa576b6ad7cee1e71f0faab2b5b374226";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/ros_controllers/0.17.1-1.tar.gz";
+    name = "0.17.1-1.tar.gz";
+    sha256 = "2c23b7e5d88b815608d063c018e0c1acafc8283a61c221b7e28da9495cfe2cdf";
   };
 
   buildType = "catkin";

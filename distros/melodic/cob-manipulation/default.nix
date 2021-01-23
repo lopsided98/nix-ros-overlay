@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-collision-monitor, cob-grasp-generation, cob-lookat-action, cob-moveit-bringup, cob-moveit-interface, cob-obstacle-distance-moveit }:
 buildRosPackage {
   pname = "ros-melodic-cob-manipulation";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/melodic/cob_manipulation/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "807a678512016c08e7129cfcd2302627610a326f4f00018a0cb0be495a8c95c2";
+    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/melodic/cob_manipulation/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "374ab9c4e076862262a217de94016b55a2523e11052f063eadb5b474104b6d77";
   };
 
   buildType = "catkin";

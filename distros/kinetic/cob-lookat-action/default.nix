@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, angles, catkin, control-msgs, geometry-msgs, kdl-conversions, kdl-parser, message-generation, message-runtime, move-base-msgs, orocos-kdl, roscpp, rospy, sensor-msgs, tf, tf-conversions, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-lookat-action";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_lookat_action/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "fcb2252f64affb84bab51566010b7c096eae04653ad095787b7ae5582b866e6e";
+    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/kinetic/cob_lookat_action/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "0320a7a269ab54d840ab419e89b01db509ffd3c1f8c39552f7105c517fe8d723";
   };
 
   buildType = "catkin";

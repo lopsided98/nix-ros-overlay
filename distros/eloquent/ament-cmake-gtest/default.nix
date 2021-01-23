@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, gtest, gtest-vendor }:
 buildRosPackage {
   pname = "ros-eloquent-ament-cmake-gtest";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_gtest/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "fb5deca84e9ca16c331861b84f2c98d91d900927520e7302e6f0154b2150395a";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_gtest/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "a548be82859afbf6286271a13f6913b4c9f38d6f5d9cbe8e7f8fbc15add25a1c";
   };
 
   buildType = "ament_cmake";

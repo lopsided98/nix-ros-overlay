@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-melodic-cob-moveit-config";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/melodic/cob_moveit_config/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "9303daa7bd918d8604c518b08eea735466e95c2835c70aef4c10a332b48e875b";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/melodic/cob_moveit_config/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "e1052a445e6d6cd30165a2c6e7b097447547d7043f5947615d27391403ef25bc";
   };
 
   buildType = "catkin";

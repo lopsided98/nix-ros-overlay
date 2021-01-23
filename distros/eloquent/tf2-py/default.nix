@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, builtin-interfaces, geometry-msgs, python-cmake-module, rclpy, tf2 }:
 buildRosPackage {
   pname = "ros-eloquent-tf2-py";
-  version = "0.12.5-r1";
+  version = "0.12.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/eloquent/tf2_py/0.12.5-1.tar.gz";
-    name = "0.12.5-1.tar.gz";
-    sha256 = "a89f8bc4143650c6eea6ff94e6abe9d4f0cf53a8feba1d8cf14398edce3f77de";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/eloquent/tf2_py/0.12.6-1.tar.gz";
+    name = "0.12.6-1.tar.gz";
+    sha256 = "858d720bf97ff22ecb0dac76761b22855106505f74a7bf924aedb0f15fa6820e";
   };
 
   buildType = "ament_cmake";

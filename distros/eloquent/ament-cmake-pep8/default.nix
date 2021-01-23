@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-pep8 }:
 buildRosPackage {
   pname = "ros-eloquent-ament-cmake-pep8";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_pep8/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "f8cd9b5f684fd87e3ad81ca4cbbab4dbe9119e5d58989a3800a4e27bd5d2449e";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_pep8/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "1ff6999022eccc79c5739c6ea06ebcc7e5f187daeaa961cf5ffe7369fa86d411";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-index-cpp, geometry-msgs, interactive-markers, laser-geometry, map-msgs, nav-msgs, pluginlib, qt5, rclcpp, resource-retriever, rviz-common, rviz-rendering, rviz-rendering-tests, rviz-visual-testing-framework, tf2, tf2-geometry-msgs, tf2-ros, tinyxml-vendor, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-rviz-default-plugins";
-  version = "7.0.6-r1";
+  version = "7.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/eloquent/rviz_default_plugins/7.0.6-1.tar.gz";
-    name = "7.0.6-1.tar.gz";
-    sha256 = "a1383faa586f3e80b95cd71a212c503993ce7b07cfe9077987c3f5dbbd267edc";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/eloquent/rviz_default_plugins/7.0.7-1.tar.gz";
+    name = "7.0.7-1.tar.gz";
+    sha256 = "321891446953428eb5e361bf23557d8da7a25a4102ba6eb4fb0058e7b8d9a2bc";
   };
 
   buildType = "ament_cmake";

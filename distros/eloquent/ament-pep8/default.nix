@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-eloquent-ament-pep8";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_pep8/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "754c4c8c70bc44efae9150c022c67cb502e26d0c4e21d3eca618a2b02da7299b";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_pep8/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "5adb0f79faffdb4d3e6ea64882a022b40580c84ceabb2d7f12d128f5f180cb07";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-ros, ament-lint-auto, ament-lint-common, poco, poco-vendor, rmw-implementation, rosidl-generator-c, rosidl-typesupport-c, rosidl-typesupport-connext-cpp, rosidl-typesupport-interface, rosidl-typesupport-introspection-cpp, rosidl-typesupport-opensplice-cpp }:
 buildRosPackage {
   pname = "ros-eloquent-rosidl-typesupport-cpp";
-  version = "0.8.0-r2";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport-release/archive/release/eloquent/rosidl_typesupport_cpp/0.8.0-2.tar.gz";
-    name = "0.8.0-2.tar.gz";
-    sha256 = "13a3fb4c4f3a50db972ebfa963631032e7f03103499d93f30e9235bd394ea739";
+    url = "https://github.com/ros2-gbp/rosidl_typesupport-release/archive/release/eloquent/rosidl_typesupport_cpp/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "f57dde0792f12be1a8880fa410e2922694ebf6c7f02e32ade692525359be2f9d";
   };
 
   buildType = "ament_cmake";

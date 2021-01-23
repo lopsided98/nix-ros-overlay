@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nav-2d-msgs, nav-grid, roslint, rosunit, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-nav-core2";
-  version = "0.2.6-r1";
+  version = "0.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/nav_core2/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "d3d6c85b14aa60aa7c0c75518fbad88d106a9b60b24b36c963a6008abb7ac030";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/nav_core2/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
+    sha256 = "a102ef0294f5159bc5d4a4751951d302e0935ee0d0cf9ca8fedda3196bcfdae4";
   };
 
   buildType = "catkin";

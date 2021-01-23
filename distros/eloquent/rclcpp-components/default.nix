@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, class-loader, composition-interfaces, launch-testing, rclcpp, rcpputils, std-msgs }:
 buildRosPackage {
   pname = "ros-eloquent-rclcpp-components";
-  version = "0.8.4-r1";
+  version = "0.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/eloquent/rclcpp_components/0.8.4-1.tar.gz";
-    name = "0.8.4-1.tar.gz";
-    sha256 = "289f1b0cac85ca86c01501957217da62ba7c74a38e7fe15ffe44f0e761f997e5";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/eloquent/rclcpp_components/0.8.5-1.tar.gz";
+    name = "0.8.5-1.tar.gz";
+    sha256 = "82a296f8465d90ec34aa4801753d8be3c183598cfa9a0473c895eef9230a9f54";
   };
 
   buildType = "ament_cmake";

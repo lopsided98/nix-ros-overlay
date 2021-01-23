@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, clang, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-eloquent-ament-clang-tidy";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_clang_tidy/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "88158f652b70ee251bcb789fad5fac81c66169cd9ff5c8b2fe63ca2e0194e708";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_clang_tidy/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "e3ec86100eb1e01021e61ae3521f678a6e6b51457263090610166c3d1e8cab97";
   };
 
   buildType = "ament_python";

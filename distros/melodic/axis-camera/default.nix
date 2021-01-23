@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager-py, catkin, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rospy, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-axis-camera";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/axis_camera-release/archive/release/melodic/axis_camera/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "bfd2688c55b31c7c44318a4698f1de8bed6b5864367a9bb56d4c71ecfbdb5e0c";
+    url = "https://github.com/ros-drivers-gbp/axis_camera-release/archive/release/melodic/axis_camera/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "3aa25a07ebf93c287c17316b496745e4bd617589923075e968f17e15ba8c16bb";
   };
 
   buildType = "catkin";

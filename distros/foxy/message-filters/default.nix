@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, builtin-interfaces, python-cmake-module, rclcpp, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-message-filters";
-  version = "3.2.4-r1";
+  version = "3.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/foxy/message_filters/3.2.4-1.tar.gz";
-    name = "3.2.4-1.tar.gz";
-    sha256 = "5764cf3cc1922df4cd1cc263ecbf111feb0c629d374b29bb12f1d2413bf57dd4";
+    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/foxy/message_filters/3.2.5-1.tar.gz";
+    name = "3.2.5-1.tar.gz";
+    sha256 = "35cb4cafbb194b82e153f64d35deb278852b396bce21b3f116fa02176cb7cbe0";
   };
 
   buildType = "ament_cmake";

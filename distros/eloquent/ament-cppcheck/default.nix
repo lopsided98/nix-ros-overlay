@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cppcheck }:
 buildRosPackage {
   pname = "ros-eloquent-ament-cppcheck";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cppcheck/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "0a40269cf47562dfbf39c00ab14a53b3de86642b004f08af4a40719cc3563c7d";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cppcheck/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "3fe10e69d2e629f95da2b2b3e297e128c269c410ec50cd68e50a0a9cbbd39cb1";
   };
 
   buildType = "ament_python";

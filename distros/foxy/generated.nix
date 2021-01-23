@@ -194,6 +194,12 @@ self: super: {
 
  control-toolbox = self.callPackage ./control-toolbox {};
 
+ controller-interface = self.callPackage ./controller-interface {};
+
+ controller-manager = self.callPackage ./controller-manager {};
+
+ controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
+
  costmap-queue = self.callPackage ./costmap-queue {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -235,6 +241,8 @@ self: super: {
  dolly-ignition = self.callPackage ./dolly-ignition {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
+
+ dsr-control2 = self.callPackage ./dsr-control2 {};
 
  dsr-description2 = self.callPackage ./dsr-description2 {};
 
@@ -410,6 +418,8 @@ self: super: {
 
  geographic-msgs = self.callPackage ./geographic-msgs {};
 
+ geometric-shapes = self.callPackage ./geometric-shapes {};
+
  geometry2 = self.callPackage ./geometry2 {};
 
  geometry-msgs = self.callPackage ./geometry-msgs {};
@@ -429,6 +439,8 @@ self: super: {
  grbl-ros = self.callPackage ./grbl-ros {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
+
+ hardware-interface = self.callPackage ./hardware-interface {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
@@ -574,6 +586,46 @@ self: super: {
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
+ moveit-common = self.callPackage ./moveit-common {};
+
+ moveit-fake-controller-manager = self.callPackage ./moveit-fake-controller-manager {};
+
+ moveit-kinematics = self.callPackage ./moveit-kinematics {};
+
+ moveit-msgs = self.callPackage ./moveit-msgs {};
+
+ moveit-resources = self.callPackage ./moveit-resources {};
+
+ moveit-resources-fanuc-description = self.callPackage ./moveit-resources-fanuc-description {};
+
+ moveit-resources-fanuc-moveit-config = self.callPackage ./moveit-resources-fanuc-moveit-config {};
+
+ moveit-resources-panda-description = self.callPackage ./moveit-resources-panda-description {};
+
+ moveit-resources-panda-moveit-config = self.callPackage ./moveit-resources-panda-moveit-config {};
+
+ moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
+
+ moveit-ros-benchmarks = self.callPackage ./moveit-ros-benchmarks {};
+
+ moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
+
+ moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
+
+ moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
+
+ moveit-ros-planning-interface = self.callPackage ./moveit-ros-planning-interface {};
+
+ moveit-ros-robot-interaction = self.callPackage ./moveit-ros-robot-interaction {};
+
+ moveit-ros-visualization = self.callPackage ./moveit-ros-visualization {};
+
+ moveit-ros-warehouse = self.callPackage ./moveit-ros-warehouse {};
+
+ moveit-servo = self.callPackage ./moveit-servo {};
+
+ moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
+
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multires-image = self.callPackage ./multires-image {};
@@ -702,9 +754,35 @@ self: super: {
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
+ plansys2-bringup = self.callPackage ./plansys2-bringup {};
+
+ plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
+
+ plansys2-core = self.callPackage ./plansys2-core {};
+
+ plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
+
+ plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
+
+ plansys2-msgs = self.callPackage ./plansys2-msgs {};
+
+ plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
+
+ plansys2-planner = self.callPackage ./plansys2-planner {};
+
+ plansys2-popf-plan-solver = self.callPackage ./plansys2-popf-plan-solver {};
+
+ plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
+
+ plansys2-terminal = self.callPackage ./plansys2-terminal {};
+
  plotjuggler = self.callPackage ./plotjuggler {};
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
+
+ plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
 
  pluginlib = self.callPackage ./pluginlib {};
 
@@ -735,6 +813,10 @@ self: super: {
  quality-of-service-demo-py = self.callPackage ./quality-of-service-demo-py {};
 
  random-numbers = self.callPackage ./random-numbers {};
+
+ raspimouse = self.callPackage ./raspimouse {};
+
+ raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -812,6 +894,12 @@ self: super: {
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
 
+ robot-controllers = self.callPackage ./robot-controllers {};
+
+ robot-controllers-interface = self.callPackage ./robot-controllers-interface {};
+
+ robot-controllers-msgs = self.callPackage ./robot-controllers-msgs {};
+
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
@@ -819,6 +907,8 @@ self: super: {
  ros1-bridge = self.callPackage ./ros1-bridge {};
 
  ros1-rosbag-storage-vendor = self.callPackage ./ros1-rosbag-storage-vendor {};
+
+ ros2-control = self.callPackage ./ros2-control {};
 
  ros2-ouster = self.callPackage ./ros2-ouster {};
 
@@ -831,6 +921,8 @@ self: super: {
  ros2cli-common-extensions = self.callPackage ./ros2cli-common-extensions {};
 
  ros2component = self.callPackage ./ros2component {};
+
+ ros2controlcli = self.callPackage ./ros2controlcli {};
 
  ros2interface = self.callPackage ./ros2interface {};
 
@@ -879,6 +971,8 @@ self: super: {
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
+
+ rosauth = self.callPackage ./rosauth {};
 
  rosbag2 = self.callPackage ./rosbag2 {};
 
@@ -1008,7 +1102,13 @@ self: super: {
 
  rqt-topic = self.callPackage ./rqt-topic {};
 
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
+
  rttest = self.callPackage ./rttest {};
+
+ run-move-group = self.callPackage ./run-move-group {};
+
+ run-moveit-cpp = self.callPackage ./run-moveit-cpp {};
 
  rviz2 = self.callPackage ./rviz2 {};
 
@@ -1042,6 +1142,8 @@ self: super: {
 
  sick-scan2 = self.callPackage ./sick-scan2 {};
 
+ simple-launch = self.callPackage ./simple-launch {};
+
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
  smac-planner = self.callPackage ./smac-planner {};
@@ -1053,6 +1155,8 @@ self: super: {
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
+
+ srdfdom = self.callPackage ./srdfdom {};
 
  sros2 = self.callPackage ./sros2 {};
 
@@ -1118,11 +1222,15 @@ self: super: {
 
  test-osrf-testing-tools-cpp = self.callPackage ./test-osrf-testing-tools-cpp {};
 
+ test-robot-hardware = self.callPackage ./test-robot-hardware {};
+
  tf2 = self.callPackage ./tf2 {};
 
  tf2-bullet = self.callPackage ./tf2-bullet {};
 
  tf2-eigen = self.callPackage ./tf2-eigen {};
+
+ tf2-eigen-kdl = self.callPackage ./tf2-eigen-kdl {};
 
  tf2-geometry-msgs = self.callPackage ./tf2-geometry-msgs {};
 
@@ -1160,6 +1268,8 @@ self: super: {
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
+ transmission-interface = self.callPackage ./transmission-interface {};
+
  turtlebot3 = self.callPackage ./turtlebot3 {};
 
  turtlebot3-bringup = self.callPackage ./turtlebot3-bringup {};
@@ -1179,6 +1289,8 @@ self: super: {
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
+
+ tvm-vendor = self.callPackage ./tvm-vendor {};
 
  ublox = self.callPackage ./ublox {};
 
@@ -1232,6 +1344,8 @@ self: super: {
 
  vrxperience-msgs = self.callPackage ./vrxperience-msgs {};
 
+ warehouse-ros = self.callPackage ./warehouse-ros {};
+
  webots-ros2 = self.callPackage ./webots-ros2 {};
 
  webots-ros2-abb = self.callPackage ./webots-ros2-abb {};
@@ -1244,11 +1358,13 @@ self: super: {
 
  webots-ros2-examples = self.callPackage ./webots-ros2-examples {};
 
- webots-ros2-importer = self.callPackage ./webots-ros2-importer {};
-
  webots-ros2-msgs = self.callPackage ./webots-ros2-msgs {};
 
  webots-ros2-tiago = self.callPackage ./webots-ros2-tiago {};
+
+ webots-ros2-turtlebot = self.callPackage ./webots-ros2-turtlebot {};
+
+ webots-ros2-tutorials = self.callPackage ./webots-ros2-tutorials {};
 
  webots-ros2-universal-robot = self.callPackage ./webots-ros2-universal-robot {};
 

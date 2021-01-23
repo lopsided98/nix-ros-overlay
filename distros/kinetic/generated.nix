@@ -578,6 +578,8 @@ self: super: {
 
  collada-robots = self.callPackage ./collada-robots {};
 
+ color-util = self.callPackage ./color-util {};
+
  combined-robot-hw = self.callPackage ./combined-robot-hw {};
 
  combined-robot-hw-tests = self.callPackage ./combined-robot-hw-tests {};
@@ -2644,6 +2646,8 @@ self: super: {
 
  nav-grid-pub-sub = self.callPackage ./nav-grid-pub-sub {};
 
+ nav-grid-server = self.callPackage ./nav-grid-server {};
+
  nav-msgs = self.callPackage ./nav-msgs {};
 
  nav-pcontroller = self.callPackage ./nav-pcontroller {};
@@ -3612,6 +3616,12 @@ self: super: {
 
  robot-model = self.callPackage ./robot-model {};
 
+ robot-nav-rviz-plugins = self.callPackage ./robot-nav-rviz-plugins {};
+
+ robot-nav-tools = self.callPackage ./robot-nav-tools {};
+
+ robot-nav-viz-demos = self.callPackage ./robot-nav-viz-demos {};
+
  robot-navigation = self.callPackage ./robot-navigation {};
 
  robot-pose-ekf = self.callPackage ./robot-pose-ekf {};
@@ -4474,6 +4484,8 @@ self: super: {
 
  srdfdom = self.callPackage ./srdfdom {};
 
+ stag-ros = self.callPackage ./stag-ros {};
+
  stage = self.callPackage ./stage {};
 
  stage-ros = self.callPackage ./stage-ros {};
@@ -5117,6 +5129,14 @@ self: super: {
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
+
+ vesc = self.callPackage ./vesc {};
+
+ vesc-ackermann = self.callPackage ./vesc-ackermann {};
+
+ vesc-driver = self.callPackage ./vesc-driver {};
+
+ vesc-msgs = self.callPackage ./vesc-msgs {};
 
  video-stream-opencv = self.callPackage ./video-stream-opencv {};
 

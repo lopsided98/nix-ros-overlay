@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, camera-calibration-parsers, catkin, cv-bridge, dynamic-reconfigure, image-geometry, image-transport, nodelet, nodelet-topic-tools, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-image-proc";
-  version = "1.15.2-r1";
+  version = "1.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_proc/1.15.2-1.tar.gz";
-    name = "1.15.2-1.tar.gz";
-    sha256 = "7adcf41c3d90d53ca4b00316f67cdcb1693fd50c0487d1144fb088779a72de6f";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_proc/1.15.3-1.tar.gz";
+    name = "1.15.3-1.tar.gz";
+    sha256 = "712ef2d9d3602daa643c50e2ca841ae5125995651065726eaf9439fcf24a93db";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-calibration, catkin, depth-image-proc, image-proc, image-publisher, image-rotate, image-view, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-noetic-image-pipeline";
-  version = "1.15.2-r1";
+  version = "1.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_pipeline/1.15.2-1.tar.gz";
-    name = "1.15.2-1.tar.gz";
-    sha256 = "24a8960c97b6b039ca4a4a39825f23fe3d1af1069c082078b863acdc61d90d80";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_pipeline/1.15.3-1.tar.gz";
+    name = "1.15.3-1.tar.gz";
+    sha256 = "53a2f7e77bfc7df1998aceac5ddb531284d228ec6f739b51b7af035ec1226956";
   };
 
   buildType = "catkin";

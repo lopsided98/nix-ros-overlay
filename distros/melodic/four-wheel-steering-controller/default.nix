@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, four-wheel-steering-msgs, nav-msgs, pluginlib, realtime-tools, rosgraph-msgs, rostest, std-srvs, tf, urdf-geometry-parser }:
 buildRosPackage {
   pname = "ros-melodic-four-wheel-steering-controller";
-  version = "0.17.0-r1";
+  version = "0.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/four_wheel_steering_controller/0.17.0-1.tar.gz";
-    name = "0.17.0-1.tar.gz";
-    sha256 = "0190bb52d9a25d3a77ff015b2b1b69c0f16eb04f065a1b2409b79f45b517b34d";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/four_wheel_steering_controller/0.17.1-1.tar.gz";
+    name = "0.17.1-1.tar.gz";
+    sha256 = "a11682db1d24ded3269dd50ff610fdadc11956c3e04225a8891ee244a4e47a59";
   };
 
   buildType = "catkin";

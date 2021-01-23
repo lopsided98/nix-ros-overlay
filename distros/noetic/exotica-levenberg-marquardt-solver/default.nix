@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, exotica-core }:
 buildRosPackage {
   pname = "ros-noetic-exotica-levenberg-marquardt-solver";
-  version = "6.0.1-r1";
+  version = "6.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_levenberg_marquardt_solver/6.0.1-1.tar.gz";
-    name = "6.0.1-1.tar.gz";
-    sha256 = "b6d1e86d37715fc761e8acea0fba545c9d2134c7a676e0c77f406cf85e15d2f9";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_levenberg_marquardt_solver/6.0.2-1.tar.gz";
+    name = "6.0.2-1.tar.gz";
+    sha256 = "ac1b0dc1efc5317e02a4e490096e1f90d423c5325c6c0dd3d0ae7bfea1b3bf8a";
   };
 
   buildType = "catkin";

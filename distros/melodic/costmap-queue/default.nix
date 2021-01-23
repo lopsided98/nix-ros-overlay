@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nav-core2, roscpp, roslint, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-costmap-queue";
-  version = "0.2.5-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/costmap_queue/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "12cc3931e8f432c3951f95fd4379597f05ec41815ccc9aea7da7c3c9a4a3839b";
+    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/costmap_queue/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "d2cff3966f985060ab8a5a3b23c271d265d105a5ea3511b59d5717409cb91eab";
   };
 
   buildType = "catkin";

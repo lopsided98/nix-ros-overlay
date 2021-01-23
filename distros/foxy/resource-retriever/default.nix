@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-cpp, ament-index-python, ament-lint-auto, ament-lint-common, libcurl-vendor, python-cmake-module, pythonPackages }:
 buildRosPackage {
   pname = "ros-foxy-resource-retriever";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/foxy/resource_retriever/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "213352c5d5b04fd0ba561b823f33e9d45dc65a8bcecb4a881d95535867806e5f";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/foxy/resource_retriever/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "268fa444bd603eb6879698154fecdeb0b29b76e2e03c4fe52b44433b61a90c06";
   };
 
   buildType = "ament_cmake";

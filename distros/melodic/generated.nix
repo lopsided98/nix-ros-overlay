@@ -226,6 +226,8 @@ self: super: {
 
  camera-umd = self.callPackage ./camera-umd {};
 
+ can-dbc-parser = self.callPackage ./can-dbc-parser {};
+
  can-msgs = self.callPackage ./can-msgs {};
 
  canopen-402 = self.callPackage ./canopen-402 {};
@@ -293,6 +295,8 @@ self: super: {
  cloudwatch-metrics-common = self.callPackage ./cloudwatch-metrics-common {};
 
  cmake-modules = self.callPackage ./cmake-modules {};
+
+ cmd-vel-smoother = self.callPackage ./cmd-vel-smoother {};
 
  cob-3d-mapping-msgs = self.callPackage ./cob-3d-mapping-msgs {};
 
@@ -488,6 +492,8 @@ self: super: {
 
  codec-image-transport = self.callPackage ./codec-image-transport {};
 
+ color-util = self.callPackage ./color-util {};
+
  combined-robot-hw = self.callPackage ./combined-robot-hw {};
 
  combined-robot-hw-tests = self.callPackage ./combined-robot-hw-tests {};
@@ -507,6 +513,8 @@ self: super: {
  concert-service-msgs = self.callPackage ./concert-service-msgs {};
 
  concert-workflow-engine-msgs = self.callPackage ./concert-workflow-engine-msgs {};
+
+ contact-states-observer = self.callPackage ./contact-states-observer {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -655,6 +663,8 @@ self: super: {
  diagnostics = self.callPackage ./diagnostics {};
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
+
+ dijkstra-mesh-planner = self.callPackage ./dijkstra-mesh-planner {};
 
  dingo-control = self.callPackage ./dingo-control {};
 
@@ -849,6 +859,12 @@ self: super: {
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
  eus-assimp = self.callPackage ./eus-assimp {};
+
+ eus-nlopt = self.callPackage ./eus-nlopt {};
+
+ eus-qp = self.callPackage ./eus-qp {};
+
+ eus-qpoases = self.callPackage ./eus-qpoases {};
 
  euslime = self.callPackage ./euslime {};
 
@@ -1068,7 +1084,11 @@ self: super: {
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
+ gazebo-video-monitor-msgs = self.callPackage ./gazebo-video-monitor-msgs {};
+
  gazebo-video-monitor-plugins = self.callPackage ./gazebo-video-monitor-plugins {};
+
+ gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
 
  gencpp = self.callPackage ./gencpp {};
 
@@ -1233,6 +1253,22 @@ self: super: {
  hector-trajectory-server = self.callPackage ./hector-trajectory-server {};
 
  hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
+
+ heifu-bringup = self.callPackage ./heifu-bringup {};
+
+ heifu-description = self.callPackage ./heifu-description {};
+
+ heifu-diagnostic = self.callPackage ./heifu-diagnostic {};
+
+ heifu-mavros = self.callPackage ./heifu-mavros {};
+
+ heifu-msgs = self.callPackage ./heifu-msgs {};
+
+ heifu-safety = self.callPackage ./heifu-safety {};
+
+ heifu-simple-waypoint = self.callPackage ./heifu-simple-waypoint {};
+
+ heifu-tools = self.callPackage ./heifu-tools {};
 
  heron-control = self.callPackage ./heron-control {};
 
@@ -1462,6 +1498,8 @@ self: super: {
 
  joy-listener = self.callPackage ./joy-listener {};
 
+ joy-mouse = self.callPackage ./joy-mouse {};
+
  joy-teleop = self.callPackage ./joy-teleop {};
 
  joystick-drivers = self.callPackage ./joystick-drivers {};
@@ -1472,15 +1510,25 @@ self: super: {
 
  jsk-3rdparty = self.callPackage ./jsk-3rdparty {};
 
+ jsk-calibration = self.callPackage ./jsk-calibration {};
+
  jsk-common = self.callPackage ./jsk-common {};
 
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
 
+ jsk-control = self.callPackage ./jsk-control {};
+
+ jsk-footstep-controller = self.callPackage ./jsk-footstep-controller {};
+
  jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
+
+ jsk-footstep-planner = self.callPackage ./jsk-footstep-planner {};
 
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ jsk-ik-server = self.callPackage ./jsk-ik-server {};
 
  jsk-interactive = self.callPackage ./jsk-interactive {};
 
@@ -1511,6 +1559,8 @@ self: super: {
  jsk-rqt-plugins = self.callPackage ./jsk-rqt-plugins {};
 
  jsk-rviz-plugins = self.callPackage ./jsk-rviz-plugins {};
+
+ jsk-teleop-joy = self.callPackage ./jsk-teleop-joy {};
 
  jsk-tilt-laser = self.callPackage ./jsk-tilt-laser {};
 
@@ -1802,6 +1852,10 @@ self: super: {
 
  mbf-costmap-nav = self.callPackage ./mbf-costmap-nav {};
 
+ mbf-mesh-core = self.callPackage ./mbf-mesh-core {};
+
+ mbf-mesh-nav = self.callPackage ./mbf-mesh-nav {};
+
  mbf-msgs = self.callPackage ./mbf-msgs {};
 
  mbf-recovery-behaviors = self.callPackage ./mbf-recovery-behaviors {};
@@ -1826,6 +1880,14 @@ self: super: {
 
  media-export = self.callPackage ./media-export {};
 
+ mesh-client = self.callPackage ./mesh-client {};
+
+ mesh-controller = self.callPackage ./mesh-controller {};
+
+ mesh-layers = self.callPackage ./mesh-layers {};
+
+ mesh-map = self.callPackage ./mesh-map {};
+
  mesh-msgs = self.callPackage ./mesh-msgs {};
 
  mesh-msgs-conversions = self.callPackage ./mesh-msgs-conversions {};
@@ -1833,6 +1895,8 @@ self: super: {
  mesh-msgs-hdf5 = self.callPackage ./mesh-msgs-hdf5 {};
 
  mesh-msgs-transform = self.callPackage ./mesh-msgs-transform {};
+
+ mesh-navigation = self.callPackage ./mesh-navigation {};
 
  mesh-tools = self.callPackage ./mesh-tools {};
 
@@ -1957,8 +2021,6 @@ self: super: {
  moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
-
- moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
 
  moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
 
@@ -2127,6 +2189,8 @@ self: super: {
  nav-grid-iterators = self.callPackage ./nav-grid-iterators {};
 
  nav-grid-pub-sub = self.callPackage ./nav-grid-pub-sub {};
+
+ nav-grid-server = self.callPackage ./nav-grid-server {};
 
  nav-msgs = self.callPackage ./nav-msgs {};
 
@@ -2462,6 +2526,8 @@ self: super: {
 
  play-motion-msgs = self.callPackage ./play-motion-msgs {};
 
+ plotjuggler = self.callPackage ./plotjuggler {};
+
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
 
  plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
@@ -2663,8 +2729,6 @@ self: super: {
  ps3joy = self.callPackage ./ps3joy {};
 
  psen-scan = self.callPackage ./psen-scan {};
-
- psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
 
  px4-msgs = self.callPackage ./px4-msgs {};
 
@@ -2897,6 +2961,12 @@ self: super: {
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-mechanism-controllers = self.callPackage ./robot-mechanism-controllers {};
+
+ robot-nav-rviz-plugins = self.callPackage ./robot-nav-rviz-plugins {};
+
+ robot-nav-tools = self.callPackage ./robot-nav-tools {};
+
+ robot-nav-viz-demos = self.callPackage ./robot-nav-viz-demos {};
 
  robot-navigation = self.callPackage ./robot-navigation {};
 
@@ -3540,6 +3610,10 @@ self: super: {
 
  sot-core = self.callPackage ./sot-core {};
 
+ sot-dynamic-pinocchio = self.callPackage ./sot-dynamic-pinocchio {};
+
+ sot-tools = self.callPackage ./sot-tools {};
+
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
@@ -3549,6 +3623,8 @@ self: super: {
  sr-hand-detector = self.callPackage ./sr-hand-detector {};
 
  srdfdom = self.callPackage ./srdfdom {};
+
+ stag-ros = self.callPackage ./stag-ros {};
 
  stage = self.callPackage ./stage {};
 
@@ -3986,6 +4062,14 @@ self: super: {
 
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
 
+ vesc = self.callPackage ./vesc {};
+
+ vesc-ackermann = self.callPackage ./vesc-ackermann {};
+
+ vesc-driver = self.callPackage ./vesc-driver {};
+
+ vesc-msgs = self.callPackage ./vesc-msgs {};
+
  video-stream-opencv = self.callPackage ./video-stream-opencv {};
 
  view-controller-msgs = self.callPackage ./view-controller-msgs {};
@@ -4067,6 +4151,8 @@ self: super: {
  warthog-simulator = self.callPackage ./warthog-simulator {};
 
  warthog-viz = self.callPackage ./warthog-viz {};
+
+ wave-front-planner = self.callPackage ./wave-front-planner {};
 
  wave-gazebo = self.callPackage ./wave-gazebo {};
 

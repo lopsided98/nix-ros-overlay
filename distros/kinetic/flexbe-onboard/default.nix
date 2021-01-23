@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, flexbe-core, flexbe-msgs, rospy, rostest }:
 buildRosPackage {
   pname = "ros-kinetic-flexbe-onboard";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_onboard/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "8f75c8f2fbf5ff7af0637ccc35c80779c0113f593a3fd4cb3b5be26bc7c4612c";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/kinetic/flexbe_onboard/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "f56de393b2266239f89f519bc129bb6990a0e1e245db75029908570e49665b56";
   };
 
   buildType = "catkin";
