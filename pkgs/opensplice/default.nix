@@ -23,6 +23,7 @@ in stdenv.mkDerivation rec {
       configure \
       src/services/ddsi2e/sanitize.sh \
       install/make_*
+    sed -i "s#/usr/bin/ar#$AR#" setup/*-default.mak
   '';
 
   nativeBuildInputs = [ perl bison flex ];
