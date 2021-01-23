@@ -26,6 +26,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
         sha256 = "0savdifw90ql34zh6rff53hx3cy6rlmrwqzw80fsihkirls84b3w";
         stripLen = 1;
       })
+      (self.fetchpatch {
+        url = "https://github.com/ros-perception/perception_pcl/commit/ba0792cdf378f6faf0e12f517c80bd0dd5405d02.patch";
+        sha256 = "1b6vdipj6g0kah74fjkq598b0fr7z8857w9iw1hcv5hinwdypryk";
+        stripLen = 1;
+      })
     ];
   });
 
