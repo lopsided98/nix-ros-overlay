@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, khi-duaro-description, moveit-fake-controller-manager, moveit-kinematics, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-visualization, moveit-simple-controller-manager, robot-state-publisher, roslaunch, rostest, rviz, tf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-khi-duaro-moveit-config";
-  version = "1.1.2-r1";
+  version = "1.2.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_duaro_moveit_config/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "49163da73b919add96090f4f1f290dbd8b941a335ea169937312b75863ec3bbe";
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_duaro_moveit_config/1.2.0-5.tar.gz";
+    name = "1.2.0-5.tar.gz";
+    sha256 = "c2ce8eae0c51aca86511817807363afc251afac49c4392a651a1140b07e0af57";
   };
 
   buildType = "catkin";

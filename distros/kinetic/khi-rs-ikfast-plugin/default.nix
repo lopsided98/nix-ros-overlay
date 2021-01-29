@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, liblapack, moveit-core, pluginlib, roscpp, tf-conversions }:
 buildRosPackage {
   pname = "ros-kinetic-khi-rs-ikfast-plugin";
-  version = "1.1.2-r1";
+  version = "1.2.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs_ikfast_plugin/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "f38eeb5fe9d9ed489432cdab4465fd90105bf0855dca96de55bfda398c3a2004";
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs_ikfast_plugin/1.2.0-5.tar.gz";
+    name = "1.2.0-5.tar.gz";
+    sha256 = "ffa165109ab04e7363003d51e0b97e6dccd89c9adb92018c4487e6bdd7fe3f8e";
   };
 
   buildType = "catkin";

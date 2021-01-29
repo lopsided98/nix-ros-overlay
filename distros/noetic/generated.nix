@@ -44,6 +44,8 @@ self: super: {
 
  astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
 
+ async-comm = self.callPackage ./async-comm {};
+
  audibot = self.callPackage ./audibot {};
 
  audibot-description = self.callPackage ./audibot-description {};
@@ -1118,6 +1120,8 @@ self: super: {
 
  libsiftfast = self.callPackage ./libsiftfast {};
 
+ lms1xx = self.callPackage ./lms1xx {};
+
  locomotor = self.callPackage ./locomotor {};
 
  locomotor-msgs = self.callPackage ./locomotor-msgs {};
@@ -1392,6 +1396,8 @@ self: super: {
 
  nerian-stereo = self.callPackage ./nerian-stereo {};
 
+ nmea-comms = self.callPackage ./nmea-comms {};
+
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
@@ -1619,6 +1625,8 @@ self: super: {
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
 
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
+
+ rc-genicam-camera = self.callPackage ./rc-genicam-camera {};
 
  rc-genicam-driver = self.callPackage ./rc-genicam-driver {};
 
@@ -1984,6 +1992,8 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ rx-service-tools = self.callPackage ./rx-service-tools {};
+
  safety-limiter = self.callPackage ./safety-limiter {};
 
  safety-limiter-msgs = self.callPackage ./safety-limiter-msgs {};
@@ -2141,6 +2151,8 @@ self: super: {
  taskflow = self.callPackage ./taskflow {};
 
  teb-local-planner = self.callPackage ./teb-local-planner {};
+
+ teleop-legged-robots = self.callPackage ./teleop-legged-robots {};
 
  teleop-tools = self.callPackage ./teleop-tools {};
 

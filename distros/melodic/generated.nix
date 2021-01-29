@@ -1598,6 +1598,36 @@ self: super: {
 
  key-teleop = self.callPackage ./key-teleop {};
 
+ khi-duaro-description = self.callPackage ./khi-duaro-description {};
+
+ khi-duaro-gazebo = self.callPackage ./khi-duaro-gazebo {};
+
+ khi-duaro-ikfast-plugin = self.callPackage ./khi-duaro-ikfast-plugin {};
+
+ khi-duaro-moveit-config = self.callPackage ./khi-duaro-moveit-config {};
+
+ khi-robot = self.callPackage ./khi-robot {};
+
+ khi-robot-bringup = self.callPackage ./khi-robot-bringup {};
+
+ khi-robot-control = self.callPackage ./khi-robot-control {};
+
+ khi-robot-msgs = self.callPackage ./khi-robot-msgs {};
+
+ khi-robot-test = self.callPackage ./khi-robot-test {};
+
+ khi-rs007l-moveit-config = self.callPackage ./khi-rs007l-moveit-config {};
+
+ khi-rs007n-moveit-config = self.callPackage ./khi-rs007n-moveit-config {};
+
+ khi-rs080n-moveit-config = self.callPackage ./khi-rs080n-moveit-config {};
+
+ khi-rs-description = self.callPackage ./khi-rs-description {};
+
+ khi-rs-gazebo = self.callPackage ./khi-rs-gazebo {};
+
+ khi-rs-ikfast-plugin = self.callPackage ./khi-rs-ikfast-plugin {};
+
  kinesis-manager = self.callPackage ./kinesis-manager {};
 
  kinesis-video-msgs = self.callPackage ./kinesis-video-msgs {};
@@ -3484,6 +3514,8 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ rx-service-tools = self.callPackage ./rx-service-tools {};
+
  rxcpp-vendor = self.callPackage ./rxcpp-vendor {};
 
  rxros = self.callPackage ./rxros {};
@@ -3715,6 +3747,8 @@ self: super: {
  teb-local-planner = self.callPackage ./teb-local-planner {};
 
  teb-local-planner-tutorials = self.callPackage ./teb-local-planner-tutorials {};
+
+ teleop-legged-robots = self.callPackage ./teleop-legged-robots {};
 
  teleop-tools = self.callPackage ./teleop-tools {};
 

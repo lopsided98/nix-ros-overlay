@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, octomap }:
 buildRosPackage {
   pname = "ros-noetic-dynamic-edt-3d";
-  version = "1.9.5-r4";
+  version = "1.9.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/noetic/dynamic_edt_3d/1.9.5-4.tar.gz";
-    name = "1.9.5-4.tar.gz";
-    sha256 = "5e706bb118b62000c10af3217f63782f854ea0606ff175332df13da519b0d3c4";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/noetic/dynamic_edt_3d/1.9.6-1.tar.gz";
+    name = "1.9.6-1.tar.gz";
+    sha256 = "63235da0946f9e97a0126a7e1c21a0a431e330f44845cc3d7523413503ede4ca";
   };
 
   buildType = "cmake";

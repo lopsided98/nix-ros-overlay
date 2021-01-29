@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-noetic-octomap";
-  version = "1.9.5-r4";
+  version = "1.9.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/noetic/octomap/1.9.5-4.tar.gz";
-    name = "1.9.5-4.tar.gz";
-    sha256 = "2648c3ba5f31d3b93f6377d3b12bb4ed3f3212faae1422a73f6a222fb3e0a012";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/noetic/octomap/1.9.6-1.tar.gz";
+    name = "1.9.6-1.tar.gz";
+    sha256 = "c77e3e57696d76a69bd4c6fa731b14dcce92eb63c7db6675d8b841ca816714fc";
   };
 
   buildType = "cmake";

@@ -1920,6 +1920,8 @@ self: super: {
 
  khi-robot-msgs = self.callPackage ./khi-robot-msgs {};
 
+ khi-robot-test = self.callPackage ./khi-robot-test {};
+
  khi-rs007l-moveit-config = self.callPackage ./khi-rs007l-moveit-config {};
 
  khi-rs007n-moveit-config = self.callPackage ./khi-rs007n-moveit-config {};
@@ -4621,6 +4623,8 @@ self: super: {
  teb-local-planner = self.callPackage ./teb-local-planner {};
 
  teb-local-planner-tutorials = self.callPackage ./teb-local-planner-tutorials {};
+
+ teleop-legged-robots = self.callPackage ./teleop-legged-robots {};
 
  teleop-tools = self.callPackage ./teleop-tools {};
 
