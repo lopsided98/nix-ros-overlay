@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, interactive-markers, roscpp, roslaunch, roslint, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, interactive-markers, roscpp, roslaunch, roslint, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-interactive-marker-twist-server";
-  version = "1.2.0-r2";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/interactive_marker_twist_server-release/archive/release/noetic/interactive_marker_twist_server/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "95ce1531e7067a10fec566d21738937772b436ac55729e2bfa04acac98c5479d";
+    url = "https://github.com/ros-gbp/interactive_marker_twist_server-release/archive/release/noetic/interactive_marker_twist_server/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "58d695193fe358cddaabae164f677da27b3908503207c3ca1fcdedbbae922a0c";
   };
 
   buildType = "catkin";
   checkInputs = [ roslaunch roslint ];
-  propagatedBuildInputs = [ interactive-markers roscpp visualization-msgs ];
+  propagatedBuildInputs = [ interactive-markers roscpp tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

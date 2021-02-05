@@ -2,20 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, glfw3, gtk3, libGL, libGLU, libusb1, linuxHeaders, openssl, pkg-config, udev }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-foxy-librealsense2";
-  version = "2.34.0-r3";
+  version = "2.41.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/librealsense-release/archive/release/foxy/librealsense2/2.34.0-3.tar.gz";
-    name = "2.34.0-3.tar.gz";
-    sha256 = "3fb5217dd0bdbecce6dfd3db2bbcce25b843280cf7fc3b6ef2479d9222591d07";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/foxy/librealsense2/2.41.0-1.tar.gz";
+    name = "2.41.0-1.tar.gz";
+    sha256 = "68a97494e0d6ea89366c6ceebc27306bc3bf2b0b163360ade505a8f918b1c0d3";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ pkg-config ];
-  propagatedBuildInputs = [ glfw3 gtk3 libGL libGLU libusb1 linuxHeaders openssl udev ];
+  buildInputs = [ libusb1 openssl pkg-config udev ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

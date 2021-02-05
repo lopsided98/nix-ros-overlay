@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, pythonPackages, rospy, rostopic }:
 buildRosPackage {
   pname = "ros-kinetic-generic-throttle";
-  version = "0.6.19-r1";
+  version = "0.6.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/generic_throttle/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "4ba99ef99bcdd5560fe017b87922e92caaca5c3da88c664282e0bc0cdbf63c91";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/generic_throttle/0.6.20-1.tar.gz";
+    name = "0.6.20-1.tar.gz";
+    sha256 = "fbdb7e283cd0ed8346407bd9f632d6f81f866fa4596ca877c5f4ef2f95ed8e2b";
   };
 
   buildType = "catkin";

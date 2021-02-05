@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-sick-safetyscanners";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners-release/archive/release/noetic/sick_safetyscanners/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "a43f89f24ecd4eb9a0ac26120b642fe217effda5c4762e427f206aa82830fbe1";
+    url = "https://github.com/SICKAG/sick_safetyscanners-release/archive/release/noetic/sick_safetyscanners/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "df3f4bb715a9a522000f0d6a238afddd63781cae0d8046319ecc5c2b170d2ef0";
   };
 
   buildType = "catkin";

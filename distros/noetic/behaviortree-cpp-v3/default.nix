@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cppzmq, ncurses, roslib }:
 buildRosPackage {
   pname = "ros-noetic-behaviortree-cpp-v3";
-  version = "3.5.3-r1";
+  version = "3.5.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp-release/archive/release/noetic/behaviortree_cpp_v3/3.5.3-1.tar.gz";
-    name = "3.5.3-1.tar.gz";
-    sha256 = "be572da316779c43e60a73249a34a5211238ff0520b28ce7d42080abba68e7a8";
+    url = "https://github.com/BehaviorTree/behaviortree_cpp-release/archive/release/noetic/behaviortree_cpp_v3/3.5.6-1.tar.gz";
+    name = "3.5.6-1.tar.gz";
+    sha256 = "84953f257a1688fedaa43e75b5bab98ad2fca50aac91823f0d0d9b109aa31631";
   };
 
   buildType = "catkin";

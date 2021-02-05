@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-noetic-hector-xacro-tools";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models-release/archive/release/noetic/hector_xacro_tools/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "252570f0360451dcea70b1c054f12d133f407e9e3410f0579e8c38d34241a096";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models-release/archive/release/noetic/hector_xacro_tools/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "eca907694e740473c669aa65de10cd392a397190dcbb115d0851f2e8258f03ee";
   };
 
   buildType = "catkin";

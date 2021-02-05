@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-commander }:
 buildRosPackage {
   pname = "ros-noetic-pilz-industrial-motion-testutils";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_common-release/archive/release/noetic/pilz_industrial_motion_testutils/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "47709596acd2e8b133d3ba109c87e9bd762a41bf7272b35f7694b1b4f4a3f4db";
+    url = "https://github.com/PilzDE/pilz_common-release/archive/release/noetic/pilz_industrial_motion_testutils/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "819302e83331cc5ee9fef601ea175f8ac109de426b635360f273983a0d1be146";
   };
 
   buildType = "catkin";

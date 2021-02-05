@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, cmake }:
+{ lib, buildRosPackage, fetchurl, boost, cmake }:
 buildRosPackage {
   pname = "ros-melodic-async-comm";
-  version = "0.2.0-r1";
+  version = "0.2.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/dpkoch/async_comm-release/archive/release/melodic/async_comm/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "657753a9f478d51187d61862ab11deea0eaa38b107bc599084c6a2d49addfb2f";
+    url = "https://github.com/dpkoch/async_comm-release/archive/release/melodic/async_comm/0.2.1-2.tar.gz";
+    name = "0.2.1-2.tar.gz";
+    sha256 = "9cc4a16ea07097a37952f076d5fe82b9cc452f56e75b4bfa7c12786ca1c59926";
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ boost catkin ];
+  propagatedBuildInputs = [ boost ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

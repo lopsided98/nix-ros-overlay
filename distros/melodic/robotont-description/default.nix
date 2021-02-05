@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, robot-state-publisher, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-robotont-description";
-  version = "0.0.7-r1";
+  version = "0.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotont-release/robotont_description-release/archive/release/melodic/robotont_description/0.0.7-1.tar.gz";
-    name = "0.0.7-1.tar.gz";
-    sha256 = "d95ec61d0bfab76ba98bdf48cf9f7b5f0104e28252a6964fbdee9fb9a008f2a5";
+    url = "https://github.com/robotont-release/robotont_description-release/archive/release/melodic/robotont_description/0.0.8-1.tar.gz";
+    name = "0.0.8-1.tar.gz";
+    sha256 = "687044fd179f21de474782aa93b3e18f6619e3e9fd473c5d293e54396dedee5c";
   };
 
   buildType = "catkin";

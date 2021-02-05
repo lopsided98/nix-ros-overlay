@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, binutils, boost, catkin, diagnostic-msgs, geometry-msgs, nav-msgs, plotjuggler, plotjuggler-msgs, qt5, rosbag-storage, roscpp, roscpp-serialization, sensor-msgs, tf, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-plotjuggler-ros";
-  version = "1.0.0-r1";
+  version = "1.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins-release/archive/release/noetic/plotjuggler_ros/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "1ba86015faf8ea34c3b4ca038a0285e0e90879c10146906a74230a3b0cab802a";
+    url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins-release/archive/release/noetic/plotjuggler_ros/1.1.0-2.tar.gz";
+    name = "1.1.0-2.tar.gz";
+    sha256 = "f9f55efd6772124f574b8710fc74a292dc9aa58dacbd09ebdbb77b42869b5353";
   };
 
   buildType = "catkin";
