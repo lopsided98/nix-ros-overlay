@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, depth-image-proc, image-proc, nodelet, openni2-camera, pythonPackages, rgbd-launch, roslaunch, rospy, roswtf, tf, usbutils }:
 buildRosPackage {
   pname = "ros-kinetic-openni2-launch";
-  version = "0.4.2";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/openni2_camera-release/archive/release/kinetic/openni2_launch/0.4.2-0.tar.gz";
-    name = "0.4.2-0.tar.gz";
-    sha256 = "566982c3b938b9e2a938812f9f216ff4e70bf8f9e0e2a256413f87c6aa8570a8";
+    url = "https://github.com/ros-gbp/openni2_camera-release/archive/release/kinetic/openni2_launch/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "ddc560382ceba2134701d4f1c3136774637b2c2a1af19c15a07a944e1e49f222";
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.catkin-pkg roslaunch ];
-  propagatedBuildInputs = [ depth-image-proc image-proc nodelet openni2-camera rgbd-launch rospy roswtf tf usbutils ];
+  buildInputs = [ roslaunch ];
+  propagatedBuildInputs = [ depth-image-proc image-proc nodelet openni2-camera pythonPackages.catkin-pkg rgbd-launch rospy roswtf tf usbutils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

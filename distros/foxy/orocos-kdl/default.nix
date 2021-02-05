@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cppunit, eigen, eigen3-cmake-module, pkg-config }:
 buildRosPackage {
   pname = "ros-foxy-orocos-kdl";
-  version = "3.3.1-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/orocos_kinematics_dynamics-release/archive/release/foxy/orocos_kdl/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "a76f67c07a0e87df041957dcd9bdf0c27f665038f597e0dd0b62ea3df8b575e4";
+    url = "https://github.com/ros2-gbp/orocos_kinematics_dynamics-release/archive/release/foxy/orocos_kdl/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "98db0b3f2f98694048993f760461db36c01c9ee1cb2cf413ab061dd3882aa5cd";
   };
 
   buildType = "cmake";

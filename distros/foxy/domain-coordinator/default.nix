@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-foxy-domain-coordinator";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/foxy/domain_coordinator/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "efeccebd28642b468e619386391c2fec3a9c30b2a531402310ef26d38010f715";
+    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/foxy/domain_coordinator/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "af7d7476efae55600ff613e1899a5ec47687ab7922e5bf0a7182bb0df3834344";
   };
 
   buildType = "ament_python";

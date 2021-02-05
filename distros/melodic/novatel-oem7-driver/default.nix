@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, gps-common, nav-msgs, nmea-msgs, nodelet, novatel-oem7-msgs, rosbag, roscpp, rostest, sensor-msgs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-melodic-novatel-oem7-driver";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/melodic/novatel_oem7_driver/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "cd25a9f02763a4a8868cfcb1a8fed502e161be184fa9b8b038128e82596a7f16";
+    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/melodic/novatel_oem7_driver/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "097c43dea253790d85de8f3abbbb1f580d0b055cc9aea3e044e043a47c92ad81";
   };
 
   buildType = "catkin";

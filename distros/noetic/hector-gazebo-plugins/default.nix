@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, gazebo, gazebo-dev, gazebo-ros, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-noetic-hector-gazebo-plugins";
-  version = "0.5.2-r1";
+  version = "0.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_gazebo_plugins/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "18434dc1c9a65c79b8eee009392d5c198b81f2a0aceae3f47015217a5a6882e1";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_gazebo_plugins/0.5.3-1.tar.gz";
+    name = "0.5.3-1.tar.gz";
+    sha256 = "d542732d47227c31baf71fa393a181f516e269efefddc3ca64bdddeeae8d7867";
   };
 
   buildType = "catkin";

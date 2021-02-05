@@ -344,8 +344,6 @@ self: super: {
 
  ecl-utilities = self.callPackage ./ecl-utilities {};
 
- effort-controllers = self.callPackage ./effort-controllers {};
-
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
@@ -487,8 +485,6 @@ self: super: {
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
 
  joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
-
- joint-trajectory-controller = self.callPackage ./joint-trajectory-controller {};
 
  joy = self.callPackage ./joy {};
 
@@ -812,6 +808,8 @@ self: super: {
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
+ pybind11-vendor = self.callPackage ./pybind11-vendor {};
+
  python-cmake-module = self.callPackage ./python-cmake-module {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
@@ -943,6 +941,8 @@ self: super: {
  ros1-rosbag-storage-vendor = self.callPackage ./ros1-rosbag-storage-vendor {};
 
  ros2-control = self.callPackage ./ros2-control {};
+
+ ros2-control-test-assets = self.callPackage ./ros2-control-test-assets {};
 
  ros2-controllers = self.callPackage ./ros2-controllers {};
 
@@ -1266,8 +1266,6 @@ self: super: {
 
  test-osrf-testing-tools-cpp = self.callPackage ./test-osrf-testing-tools-cpp {};
 
- test-robot-hardware = self.callPackage ./test-robot-hardware {};
-
  tf2 = self.callPackage ./tf2 {};
 
  tf2-bullet = self.callPackage ./tf2-bullet {};
@@ -1341,6 +1339,8 @@ self: super: {
  turtlesim = self.callPackage ./turtlesim {};
 
  tvm-vendor = self.callPackage ./tvm-vendor {};
+
+ twist-stamper = self.callPackage ./twist-stamper {};
 
  ublox = self.callPackage ./ublox {};
 

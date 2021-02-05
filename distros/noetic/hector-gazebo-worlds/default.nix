@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros, hector-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-noetic-hector-gazebo-worlds";
-  version = "0.5.2-r1";
+  version = "0.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_gazebo_worlds/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "c29dfa36b7741dd9313f96b3d2f34b85721bb9a19c40e536f5f81cd796d30368";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_gazebo_worlds/0.5.3-1.tar.gz";
+    name = "0.5.3-1.tar.gz";
+    sha256 = "93cc02726ca22b5c9b5f90f4620996c75998c3598b86e3f2b4463dc9f1dfb583";
   };
 
   buildType = "catkin";

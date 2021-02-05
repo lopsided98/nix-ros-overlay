@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, dynamic-reconfigure, image-transport, message-generation, message-runtime, nodelet, openni2, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-openni2-camera";
-  version = "0.4.2";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/openni2_camera-release/archive/release/melodic/openni2_camera/0.4.2-0.tar.gz";
-    name = "0.4.2-0.tar.gz";
-    sha256 = "d154919dd68c19a6255bbbafd1d238d30baae4e6b146eb17875002511180181f";
+    url = "https://github.com/ros-gbp/openni2_camera-release/archive/release/melodic/openni2_camera/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "d1c49ec702ee89bce39cf2823c8bf1dca1eace9b9b6127736be24578036ff72c";
   };
 
   buildType = "catkin";

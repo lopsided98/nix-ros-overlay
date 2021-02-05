@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cartographer, cartographer-ros-msgs, eigen, libyamlcpp, lua5, nav-msgs, pcl, pcl-conversions, rclcpp, sensor-msgs, tf2, tf2-eigen, tf2-msgs, tf2-ros, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-dashing-cartographer-ros";
-  version = "1.0.9000-r1";
+  version = "1.0.9003-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/dashing/cartographer_ros/1.0.9000-1.tar.gz";
-    name = "1.0.9000-1.tar.gz";
-    sha256 = "bd296ee946e767b374ebd4488c1d06e4e6cca7ac37de7ef883e754b156a2e84e";
+    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/dashing/cartographer_ros/1.0.9003-1.tar.gz";
+    name = "1.0.9003-1.tar.gz";
+    sha256 = "361be20513b88a4aa2f2aa262a7cb64e029e035e2301305d374cb7abaede4fb1";
   };
 
   buildType = "ament_cmake";

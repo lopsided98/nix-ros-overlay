@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, pkg-config }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, flann, ode, pkg-config }:
 buildRosPackage {
   pname = "ros-noetic-ompl";
-  version = "1.5.1-r1";
+  version = "1.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ompl-release/archive/release/noetic/ompl/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "c1001b27d7f19cb9f8b6b9e574ba418505c2a427a0add635dc5daf751d0fa47f";
+    url = "https://github.com/ros-gbp/ompl-release/archive/release/noetic/ompl/1.5.2-1.tar.gz";
+    name = "1.5.2-1.tar.gz";
+    sha256 = "1f45c6363e62424015aa5efdb27a7b0412dd9018676149f23200126241b6715a";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake pkg-config ];
-  propagatedBuildInputs = [ boost eigen ];
+  propagatedBuildInputs = [ boost eigen flann ode ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

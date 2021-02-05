@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslaunch }:
 buildRosPackage {
   pname = "ros-kinetic-khi-rs-description";
-  version = "1.1.2-r1";
+  version = "1.2.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs_description/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "67217515755eb1c89dac53f8eaa6a122d6641ab5f7f9270b8b9b0cc7f1bfe4e7";
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/kinetic/khi_rs_description/1.2.0-5.tar.gz";
+    name = "1.2.0-5.tar.gz";
+    sha256 = "b20c4b2926a4cb48190f097bab1a22f8bc661722f0aa3a02e83173871e0ac490";
   };
 
   buildType = "catkin";

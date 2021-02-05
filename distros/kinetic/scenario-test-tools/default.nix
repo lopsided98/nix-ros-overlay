@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cob-sound, cob-srvs, control-msgs, geometry-msgs, move-base-msgs, pythonPackages, rospy, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-scenario-test-tools";
-  version = "0.6.19-r1";
+  version = "0.6.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/scenario_test_tools/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "9db274be12ac667113827522557d817b42095a244db0b3e99e5d4fa47bd33629";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/kinetic/scenario_test_tools/0.6.20-1.tar.gz";
+    name = "0.6.20-1.tar.gz";
+    sha256 = "ee32a9771a99ff9f0a0b40d0dcb79c719db9abe7b001b17e060495ffddfe52bc";
   };
 
   buildType = "catkin";

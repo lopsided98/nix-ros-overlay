@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake }:
 buildRosPackage {
   pname = "ros-noetic-vrpn";
-  version = "7.34.0-r1";
+  version = "7.34.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/vrpn-release/archive/release/noetic/vrpn/7.34.0-1.tar.gz";
-    name = "7.34.0-1.tar.gz";
-    sha256 = "03b70e511a7231e8f03a910d666c29a48732046e33f3d385287b6ba8b5919143";
+    url = "https://github.com/ros-drivers-gbp/vrpn-release/archive/release/noetic/vrpn/7.34.0-2.tar.gz";
+    name = "7.34.0-2.tar.gz";
+    sha256 = "babe397ffaa7b299d71ef36febe6389d952b280e24b64e82b775bfe4dd945bdd";
   };
 
   buildType = "cmake";
