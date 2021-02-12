@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gtest, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-bota-signal-handler";
-  version = "0.5.8-r1";
+  version = "0.5.9-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/noetic/bota_signal_handler/0.5.8-1";
+    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/noetic/bota_signal_handler/0.5.9-1";
     name = "archive.tar.gz";
-    sha256 = "489dec973794dc77d424e6ce8b4da17618963d57fa4019b0c591ddcfbbbf8277";
+    sha256 = "753ab413cd3a282318ad19b6a9d3665e321e21d360d266edeb1d598656170bb2";
   };
 
   buildType = "catkin";

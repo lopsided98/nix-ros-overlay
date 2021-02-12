@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, message-runtime, roscpp, roslaunch, rostest, rviz-visual-tools, tf2-geometry-msgs, toposens-driver, toposens-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, message-runtime, roscpp, roslaunch, rostest, rviz-visual-tools, tf2-geometry-msgs, toposens-description, toposens-driver, toposens-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-toposens-markers";
-  version = "2.1.1-r1";
+  version = "2.2.0-r3";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_markers/2.1.1-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_markers/2.2.0-3";
     name = "archive.tar.gz";
-    sha256 = "b0655bf1c10911a7b7ac3bd6ba1e1559f7808292cbd1568ecb2e1dc1547e4caf";
+    sha256 = "519220ef0f8568492cc1c1679a057d804bab9f3c37ae917f162b12ec58cc9412";
   };
 
   buildType = "catkin";
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ dynamic-reconfigure message-runtime roscpp rviz-visual-tools tf2-geometry-msgs toposens-driver toposens-msgs ];
+  propagatedBuildInputs = [ dynamic-reconfigure message-runtime roscpp rviz-visual-tools tf2-geometry-msgs toposens-description toposens-driver toposens-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

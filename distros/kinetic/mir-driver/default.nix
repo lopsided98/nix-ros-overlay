@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, diagnostic-msgs, dynamic-reconfigure, geometry-msgs, mir-actions, mir-description, mir-msgs, move-base-msgs, nav-msgs, pythonPackages, robot-state-publisher, rosgraph-msgs, roslaunch, rospy, rospy-message-converter, sensor-msgs, std-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mir-driver";
-  version = "1.0.6-r1";
+  version = "1.0.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_driver/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "3c6336e0b0347d16b88e5982e9fefb7fffd88cc82056077a6d37388884ff5aed";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_driver/1.0.7-2.tar.gz";
+    name = "1.0.7-2.tar.gz";
+    sha256 = "32363c178a1ae6ca86da6f414c2bd5497a8128a82d7ad7fb298d94bbe96d7953";
   };
 
   buildType = "catkin";

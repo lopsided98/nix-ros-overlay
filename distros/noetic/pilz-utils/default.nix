@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, clang, cmake-modules, code-coverage, roscpp, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-pilz-utils";
-  version = "0.7.1-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_common-release/archive/release/noetic/pilz_utils/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "8ac7d40019d37984f6ebe72bb8c65a63f80019f9c15d40a9f68c60e514f6c922";
+    url = "https://github.com/PilzDE/pilz_common-release/archive/release/noetic/pilz_utils/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "90a7aaec8293d761ba0e226e730c49c5ca6bf7fe337318c857de368f10387176";
   };
 
   buildType = "catkin";

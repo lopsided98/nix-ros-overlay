@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bota-device-driver, catkin, rokubimini, rokubimini-bus-manager, rokubimini-ethercat, rokubimini-factory, rokubimini-manager, rokubimini-msgs, rokubimini-serial }:
 buildRosPackage {
   pname = "ros-melodic-bota-driver";
-  version = "0.5.8-r1";
+  version = "0.5.9-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/melodic/bota_driver/0.5.8-1";
+    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/melodic/bota_driver/0.5.9-1";
     name = "archive.tar.gz";
-    sha256 = "8daee59cf0a68ccb10b21a4d4078e2af2447b64415eda86f7a91c28d79545ff5";
+    sha256 = "51df155e54278bba392e2b45abba2a7610386c302d6f963f5cc2f40dbc38e3c1";
   };
 
   buildType = "catkin";

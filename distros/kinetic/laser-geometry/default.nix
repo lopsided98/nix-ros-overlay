@@ -2,18 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, angles, boost, catkin, eigen, pythonPackages, roscpp, rosunit, sensor-msgs, tf, tf2 }:
+{ lib, buildRosPackage, fetchurl, angles, boost, catkin, eigen, pythonPackages, roscpp, rosunit, sensor-msgs, tf, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-laser-geometry";
-  version = "1.6.5-r1";
+  version = "1.6.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/laser_geometry-release/archive/release/kinetic/laser_geometry/1.6.5-1.tar.gz";
-    name = "1.6.5-1.tar.gz";
-    sha256 = "235a29117a388473f644ea173ce84051ad11c2ccfa0ba944654446c65fb41322";
+    url = "https://github.com/ros-gbp/laser_geometry-release/archive/release/kinetic/laser_geometry/1.6.7-1.tar.gz";
+    name = "1.6.7-1.tar.gz";
+    sha256 = "f279119bb104347e688f05bca0ef6939d5b2fa53edca311919c4c2ed14fa763d";
   };
 
   buildType = "catkin";
+  buildInputs = [ tf2-geometry-msgs ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ angles boost eigen pythonPackages.numpy roscpp sensor-msgs tf tf2 ];
   nativeBuildInputs = [ catkin ];
