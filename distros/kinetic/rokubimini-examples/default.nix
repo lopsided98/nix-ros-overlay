@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rokubimini, rokubimini-manager }:
 buildRosPackage {
   pname = "ros-kinetic-rokubimini-examples";
-  version = "0.5.8-r1";
+  version = "0.5.9-r2";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/kinetic/rokubimini_examples/0.5.8-1";
+    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/kinetic/rokubimini_examples/0.5.9-2";
     name = "archive.tar.gz";
-    sha256 = "cc0b75c56ef8a2881f43442e6eba4b9339b9e3bd30c9afd5113be19b320e9e85";
+    sha256 = "e9a9314bd94b0cdbf843e3004945d75616eb0e71966b8f3a42ac07eac1e6e346";
   };
 
   buildType = "catkin";

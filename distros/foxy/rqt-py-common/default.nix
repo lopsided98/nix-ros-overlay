@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, python-cmake-module, python-qt-binding, qt-gui, qt5, rclpy, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-rqt-py-common";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/foxy/rqt_py_common/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "8865519826e3e9d61d7c12a03a4d190d21a2c35e904f83b210643ad164af6cd0";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/foxy/rqt_py_common/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "134b115263c4f4559512c8c09db423d59276ae89bb32e08c1305b4f68729907b";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-pytest python-cmake-module ];
-  propagatedBuildInputs = [ python-qt-binding qt-gui qt5.qtbase rclpy rosidl-default-runtime ];
-  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
+  checkInputs = [ ament-cmake-pytest python-cmake-module rosidl-default-generators rosidl-default-runtime ];
+  propagatedBuildInputs = [ python-qt-binding qt-gui qt5.qtbase rclpy ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''rqt_py_common provides common functionality for rqt plugins written in Python.

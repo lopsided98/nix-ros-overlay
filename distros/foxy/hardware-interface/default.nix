@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, control-msgs, pluginlib, rcpputils, rcutils, ros2-control-test-assets, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-foxy-hardware-interface";
-  version = "0.1.5-r1";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/hardware_interface/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "ebfbcea1955f6157944412e5c7f30f27539700b34c2058e1d36b9d9ca8b01f21";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/hardware_interface/0.1.6-1.tar.gz";
+    name = "0.1.6-1.tar.gz";
+    sha256 = "b501141645cca3aa1a875ed09586c75aecd81c1f65e741f85589ade72c219a9d";
   };
 
   buildType = "ament_cmake";

@@ -148,6 +148,8 @@ self: super: {
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
+ bno055 = self.callPackage ./bno055 {};
+
  bond = self.callPackage ./bond {};
 
  bond-core = self.callPackage ./bond-core {};
@@ -344,6 +346,8 @@ self: super: {
 
  ecl-utilities = self.callPackage ./ecl-utilities {};
 
+ effort-controllers = self.callPackage ./effort-controllers {};
+
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
@@ -418,6 +422,10 @@ self: super: {
 
  gazebo-ros = self.callPackage ./gazebo-ros {};
 
+ gazebo-ros2-control = self.callPackage ./gazebo-ros2-control {};
+
+ gazebo-ros2-control-demos = self.callPackage ./gazebo-ros2-control-demos {};
+
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
  geodesy = self.callPackage ./geodesy {};
@@ -485,6 +493,8 @@ self: super: {
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
 
  joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
+
+ joint-trajectory-controller = self.callPackage ./joint-trajectory-controller {};
 
  joy = self.callPackage ./joy {};
 

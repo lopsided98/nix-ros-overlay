@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, toposens-bringup, toposens-description, toposens-driver, toposens-markers, toposens-msgs, toposens-pointcloud, toposens-sync }:
 buildRosPackage {
   pname = "ros-kinetic-toposens";
-  version = "2.1.1-r1";
+  version = "2.2.0-r3";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens/2.1.1-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens/2.2.0-3";
     name = "archive.tar.gz";
-    sha256 = "acfd12fd165d6989c42d374b2bf87f7073f660535982e061eb397c16b7bd905e";
+    sha256 = "4d7bc94dd963ddfda5c36b6b1098ba86811dd8bb4cbca464d4b39748308778e5";
   };
 
   buildType = "catkin";

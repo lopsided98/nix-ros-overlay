@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, message-runtime, roscpp, roslaunch, rostest, toposens-msgs }:
 buildRosPackage {
   pname = "ros-noetic-toposens-driver";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/noetic/toposens_driver/2.1.0-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/noetic/toposens_driver/2.2.0-1";
     name = "archive.tar.gz";
-    sha256 = "61a68366695b41b35f2db96c2044ed7463011b4b6eebe86c49072ca911482729";
+    sha256 = "58b14c6aa9002d7806a78dd5c38591d28d8e24c06b23783a79627c06b251d5e9";
   };
 
   buildType = "catkin";

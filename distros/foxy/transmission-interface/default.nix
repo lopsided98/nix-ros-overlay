@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, hardware-interface, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-foxy-transmission-interface";
-  version = "0.1.5-r1";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/transmission_interface/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "7a444b9341480d6b69efc16c0bd5246a0752e37d61aa26b8581d07c7472346ba";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/transmission_interface/0.1.6-1.tar.gz";
+    name = "0.1.6-1.tar.gz";
+    sha256 = "6c43b307ed5fede0bcecfe6f03c9c11076fcae39db4d76fcd630ec12b48ec75e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, message-runtime, roscpp, roslaunch, rostest, toposens-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-toposens-driver";
-  version = "2.1.1-r1";
+  version = "2.2.0-r3";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_driver/2.1.1-1";
+    url = "https://gitlab.com/toposens/public/toposens-release/repository/archive.tar.gz?ref=release/kinetic/toposens_driver/2.2.0-3";
     name = "archive.tar.gz";
-    sha256 = "1d82ae38c455f2eaff688162d46b1a4d4383672a05f09cc2548a7460f0dc9fce";
+    sha256 = "6999c7108e6b41058f7f042a99f1493a317a9cbaee523d2e0ef00cfe80362909";
   };
 
   buildType = "catkin";

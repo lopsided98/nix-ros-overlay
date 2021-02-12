@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-calibration-parsers, camera-info-manager, catkin, dynamic-reconfigure, image-transport, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-ueye-cam";
-  version = "1.0.18-r1";
+  version = "1.0.16";
 
   src = fetchurl {
-    url = "https://github.com/anqixu/ueye_cam-release/archive/release/kinetic/ueye_cam/1.0.18-1.tar.gz";
-    name = "1.0.18-1.tar.gz";
-    sha256 = "c53010bc085888f9f8cc88c69c91ec25c828a3de8aa65d867253c1a4d0c3447c";
+    url = "https://github.com/anqixu/ueye_cam-release/archive/release/kinetic/ueye_cam/1.0.16-0.tar.gz";
+    name = "1.0.16-0.tar.gz";
+    sha256 = "b58bc503b7feca34d7d68fe1af42d122635fbef9f5a6263d1d38269f09b18acc";
   };
 
   buildType = "catkin";

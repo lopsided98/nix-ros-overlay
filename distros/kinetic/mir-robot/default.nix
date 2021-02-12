@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mir-actions, mir-description, mir-driver, mir-dwb-critics, mir-gazebo, mir-msgs, mir-navigation, sdc21x0 }:
 buildRosPackage {
   pname = "ros-kinetic-mir-robot";
-  version = "1.0.6-r1";
+  version = "1.0.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_robot/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "72ccdda4a8658a16167e418835a087aadf6ed2c99402ca1099affd77f62dac36";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/kinetic/mir_robot/1.0.7-2.tar.gz";
+    name = "1.0.7-2.tar.gz";
+    sha256 = "a4267e7aa19d37d700ef9328deaf977581df0cac9ef5a261d3721ea6200d484d";
   };
 
   buildType = "catkin";
