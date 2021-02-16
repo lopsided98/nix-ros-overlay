@@ -248,6 +248,7 @@ let
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = ''
         wrapQtApp "$out/bin/rqt"
+        wrapQtApp "$out/lib/rqt_gui/rqt_gui"
       '';
     });
 
