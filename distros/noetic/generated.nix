@@ -1082,11 +1082,19 @@ self: super: {
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
+ laser-ortho-projector = self.callPackage ./laser-ortho-projector {};
+
  laser-pipeline = self.callPackage ./laser-pipeline {};
 
  laser-proc = self.callPackage ./laser-proc {};
 
  laser-scan-densifier = self.callPackage ./laser-scan-densifier {};
+
+ laser-scan-matcher = self.callPackage ./laser-scan-matcher {};
+
+ laser-scan-sparsifier = self.callPackage ./laser-scan-sparsifier {};
+
+ laser-scan-splitter = self.callPackage ./laser-scan-splitter {};
 
  leo = self.callPackage ./leo {};
 
@@ -1392,6 +1400,8 @@ self: super: {
 
  navigation-experimental = self.callPackage ./navigation-experimental {};
 
+ ncd-parser = self.callPackage ./ncd-parser {};
+
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
  neonavigation = self.callPackage ./neonavigation {};
@@ -1561,6 +1571,8 @@ self: super: {
  pointgrey-camera-driver = self.callPackage ./pointgrey-camera-driver {};
 
  points-preprocessor = self.callPackage ./points-preprocessor {};
+
+ polar-scan-matcher = self.callPackage ./polar-scan-matcher {};
 
  polled-camera = self.callPackage ./polled-camera {};
 
@@ -2015,6 +2027,10 @@ self: super: {
  sbpl-lattice-planner = self.callPackage ./sbpl-lattice-planner {};
 
  sbpl-recovery = self.callPackage ./sbpl-recovery {};
+
+ scan-to-cloud-converter = self.callPackage ./scan-to-cloud-converter {};
+
+ scan-tools = self.callPackage ./scan-tools {};
 
  scenario-test-tools = self.callPackage ./scenario-test-tools {};
 

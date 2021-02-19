@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-heron-msgs";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/heron-release/archive/release/melodic/heron_msgs/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "2933e0b40e335841c756ee738d66fd9ab2e52cbfb21f105495e721d155773500";
+    url = "https://github.com/clearpath-gbp/heron-release/archive/release/melodic/heron_msgs/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "899a24ec3766be77d115b0d13f93a17e06975b9d1efc66af3f760df81e0555ea";
   };
 
   buildType = "catkin";

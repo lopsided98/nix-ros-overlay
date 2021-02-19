@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake, python3, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-foxy-mavlink";
-  version = "2021.2.2-r1";
+  version = "2021.2.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/foxy/mavlink/2021.2.2-1.tar.gz";
-    name = "2021.2.2-1.tar.gz";
-    sha256 = "ac3424248eb63e6e02649d8ce2ac51b6500e67006e60f3599ea83ac7e791d3fd";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/foxy/mavlink/2021.2.15-1.tar.gz";
+    name = "2021.2.15-1.tar.gz";
+    sha256 = "18c0d9636d41c5909145c0c7a238cc8eeda7d56c230ed8ca0c665356a987b659";
   };
 
   buildType = "cmake";

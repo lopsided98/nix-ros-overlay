@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-heron-simulator";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/heron_simulator-release/archive/release/melodic/heron_simulator/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "1cc88488c8fc27c30383db03366ed7b99c191e833e3c5e495dc97386b345b8b3";
+    url = "https://github.com/clearpath-gbp/heron_simulator-release/archive/release/melodic/heron_simulator/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "de68848821a08e6a57118c951454d4216fe3f2110bdbc299954a3eba6523c38f";
   };
 
   buildType = "catkin";

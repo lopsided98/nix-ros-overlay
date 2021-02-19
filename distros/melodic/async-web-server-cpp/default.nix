@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, openssl, pythonPackages, roslib, rospy, rostest }:
 buildRosPackage {
   pname = "ros-melodic-async-web-server-cpp";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/fkie-release/async_web_server_cpp-release/archive/release/melodic/async_web_server_cpp/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "6e4642671a9b19d4bcf46d080a17c1873a9d3c40905150d93684eb09d5efd346";
+    url = "https://github.com/fkie-release/async_web_server_cpp-release/archive/release/melodic/async_web_server_cpp/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "f1094d659202fb2ed57ef45efe72c8748e7086c122be0f064e3804657c14d630";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, robot-localization, roslaunch, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-heron-control";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/heron-release/archive/release/melodic/heron_control/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "579c60f33d46897fc2a13ca3d0506c3d94c09bda498cc4417aed3c167d11e536";
+    url = "https://github.com/clearpath-gbp/heron-release/archive/release/melodic/heron_control/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "fd775e78508739fa2e7860a3c9b23c24e37f1b9015a75de364c91693aed01738";
   };
 
   buildType = "catkin";
