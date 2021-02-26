@@ -2382,6 +2382,8 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
+ mocap-optitrack = self.callPackage ./mocap-optitrack {};
+
  modelica-bridge = self.callPackage ./modelica-bridge {};
 
  mongodb-log = self.callPackage ./mongodb-log {};
@@ -2415,6 +2417,8 @@ self: super: {
  move-base-flex = self.callPackage ./move-base-flex {};
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
+
+ move-base-sequence = self.callPackage ./move-base-sequence {};
 
  move-base-to-manip = self.callPackage ./move-base-to-manip {};
 

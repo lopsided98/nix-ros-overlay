@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages, qt-gui-py-common, qwt-dependency, rosgraph, rostopic, rqt-gui, rqt-gui-py, rqt-py-common, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-rqt-plot";
-  version = "0.4.8";
+  version = "0.4.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_plot-release/archive/release/kinetic/rqt_plot/0.4.8-0.tar.gz";
-    name = "0.4.8-0.tar.gz";
-    sha256 = "a5af60dcd95878b5b9cb7c8195cecc9d7ecd88f1666ed22662d6d325acebaf9b";
+    url = "https://github.com/ros-gbp/rqt_plot-release/archive/release/kinetic/rqt_plot/0.4.13-1.tar.gz";
+    name = "0.4.13-1.tar.gz";
+    sha256 = "7e3019d3d908cdf352a306c6ab1bc6e188578e8c0e65299375fe39034346c255";
   };
 
   buildType = "catkin";

@@ -2012,6 +2012,8 @@ self: super: {
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
+ move-base-sequence = self.callPackage ./move-base-sequence {};
+
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
  moveback-recovery = self.callPackage ./moveback-recovery {};

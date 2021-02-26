@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-foxy-fastrtps";
-  version = "2.0.2-r1";
+  version = "2.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/foxy/fastrtps/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "ed5b0af5ca9257b9b83f527ff2e835da45153e74f405d64a08be2980deaee420";
+    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/foxy/fastrtps/2.0.2-2.tar.gz";
+    name = "2.0.2-2.tar.gz";
+    sha256 = "f503676f1f84b55b0b5d89c90257b93870cc519391b17c2f4642470c72a44e3d";
   };
 
   buildType = "cmake";

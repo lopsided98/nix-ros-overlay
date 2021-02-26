@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-noetic-librealsense2";
-  version = "2.41.0-r1";
+  version = "2.42.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/noetic/librealsense2/2.41.0-1.tar.gz";
-    name = "2.41.0-1.tar.gz";
-    sha256 = "780ad7a395eea6fe77921563d6c0eaa1db48a66c9ec09beff0d19cc98a22d2a4";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/noetic/librealsense2/2.42.0-1.tar.gz";
+    name = "2.42.0-1.tar.gz";
+    sha256 = "850d0729ca79fa340f020894279f3474f80b7476c349cbafde239a25f1fb2b1d";
   };
 
   buildType = "cmake";

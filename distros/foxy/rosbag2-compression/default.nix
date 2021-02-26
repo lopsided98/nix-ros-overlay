@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, rclcpp, rcpputils, rcutils, rosbag2-cpp, rosbag2-storage, rosbag2-test-common, zstd-vendor }:
 buildRosPackage {
   pname = "ros-foxy-rosbag2-compression";
-  version = "0.3.6-r1";
+  version = "0.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_compression/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "fabd90fdb34ec1a2d78ab99d64a51247eb11d5ab984053547b052aeed853fb75";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_compression/0.3.7-1.tar.gz";
+    name = "0.3.7-1.tar.gz";
+    sha256 = "4e5ad66b1101e9033790c0de6176592224306da2b2baa4b16616305af2628212";
   };
 
   buildType = "ament_cmake";

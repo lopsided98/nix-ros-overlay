@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, face-detector, leg-detector, people-msgs, people-tracking-filter, people-velocity-tracker }:
 buildRosPackage {
   pname = "ros-kinetic-people";
-  version = "1.1.3-r1";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/OSUrobotics/people-release/archive/release/kinetic/people/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "20e548c7174f57519c1b387f9fb970cd483da33777ae4e34e959bfb54500992b";
+    url = "https://github.com/OSUrobotics/people-release/archive/release/kinetic/people/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "74d5128047b88c0c1aae71d57e7386b10197639e1ea69f9c54ca613f5b7d3ca0";
   };
 
   buildType = "catkin";

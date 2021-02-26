@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, rclcpp, robot-state-publisher, sensor-msgs, tf2, tf2-msgs, turtlebot3-msgs }:
 buildRosPackage {
   pname = "ros-dashing-turtlebot3-fake-node";
-  version = "2.2.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3_simulations-release/archive/release/dashing/turtlebot3_fake_node/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "b8e4012f0c132ca25b72edc6eaa5c3a1fd4fa8eef7f99ab9e1048175a7768fd4";
+    url = "https://github.com/robotis-ros2-release/turtlebot3_simulations-release/archive/release/dashing/turtlebot3_fake_node/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "4ec191f0a14cd58a8bad3d2abcf2a1ab2a0e4cb065cc636c301d6c630bcaa753";
   };
 
   buildType = "ament_cmake";
