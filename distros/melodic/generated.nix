@@ -1284,11 +1284,15 @@ self: super: {
 
  heron-description = self.callPackage ./heron-description {};
 
+ heron-desktop = self.callPackage ./heron-desktop {};
+
  heron-gazebo = self.callPackage ./heron-gazebo {};
 
  heron-msgs = self.callPackage ./heron-msgs {};
 
  heron-simulator = self.callPackage ./heron-simulator {};
+
+ heron-viz = self.callPackage ./heron-viz {};
 
  hfl-driver = self.callPackage ./hfl-driver {};
 
@@ -1984,6 +1988,8 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
+ mocap-optitrack = self.callPackage ./mocap-optitrack {};
+
  mongodb-log = self.callPackage ./mongodb-log {};
 
  mongodb-store-msgs = self.callPackage ./mongodb-store-msgs {};
@@ -2011,6 +2017,8 @@ self: super: {
  move-base-flex = self.callPackage ./move-base-flex {};
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
+
+ move-base-sequence = self.callPackage ./move-base-sequence {};
 
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 

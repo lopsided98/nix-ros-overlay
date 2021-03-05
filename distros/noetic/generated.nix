@@ -22,6 +22,8 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
+ app-manager = self.callPackage ./app-manager {};
+
  apriltag = self.callPackage ./apriltag {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
@@ -608,7 +610,11 @@ self: super: {
 
  eiquadprog = self.callPackage ./eiquadprog {};
 
+ eml = self.callPackage ./eml {};
+
  ergodic-exploration = self.callPackage ./ergodic-exploration {};
+
+ ethercat-hardware = self.callPackage ./ethercat-hardware {};
 
  executive-smach = self.callPackage ./executive-smach {};
 
@@ -660,11 +666,37 @@ self: super: {
 
  explore-lite = self.callPackage ./explore-lite {};
 
+ face-detector = self.callPackage ./face-detector {};
+
  fadecandy-driver = self.callPackage ./fadecandy-driver {};
 
  fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
 
  fake-localization = self.callPackage ./fake-localization {};
+
+ fetch-auto-dock-msgs = self.callPackage ./fetch-auto-dock-msgs {};
+
+ fetch-calibration = self.callPackage ./fetch-calibration {};
+
+ fetch-depth-layer = self.callPackage ./fetch-depth-layer {};
+
+ fetch-description = self.callPackage ./fetch-description {};
+
+ fetch-driver-msgs = self.callPackage ./fetch-driver-msgs {};
+
+ fetch-ikfast-plugin = self.callPackage ./fetch-ikfast-plugin {};
+
+ fetch-maps = self.callPackage ./fetch-maps {};
+
+ fetch-moveit-config = self.callPackage ./fetch-moveit-config {};
+
+ fetch-navigation = self.callPackage ./fetch-navigation {};
+
+ fetch-open-auto-dock = self.callPackage ./fetch-open-auto-dock {};
+
+ fetch-ros = self.callPackage ./fetch-ros {};
+
+ fetch-teleop = self.callPackage ./fetch-teleop {};
 
  ff = self.callPackage ./ff {};
 
@@ -673,6 +705,8 @@ self: super: {
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
+
+ fingertip-pressure = self.callPackage ./fingertip-pressure {};
 
  fkie-master-discovery = self.callPackage ./fkie-master-discovery {};
 
@@ -872,6 +906,8 @@ self: super: {
 
  hector-imu-tools = self.callPackage ./hector-imu-tools {};
 
+ hector-localization = self.callPackage ./hector-localization {};
+
  hector-map-server = self.callPackage ./hector-map-server {};
 
  hector-map-tools = self.callPackage ./hector-map-tools {};
@@ -883,6 +919,10 @@ self: super: {
  hector-models = self.callPackage ./hector-models {};
 
  hector-nav-msgs = self.callPackage ./hector-nav-msgs {};
+
+ hector-pose-estimation = self.callPackage ./hector-pose-estimation {};
+
+ hector-pose-estimation-core = self.callPackage ./hector-pose-estimation-core {};
 
  hector-sensors-description = self.callPackage ./hector-sensors-description {};
 
@@ -1082,11 +1122,19 @@ self: super: {
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
+ laser-ortho-projector = self.callPackage ./laser-ortho-projector {};
+
  laser-pipeline = self.callPackage ./laser-pipeline {};
 
  laser-proc = self.callPackage ./laser-proc {};
 
  laser-scan-densifier = self.callPackage ./laser-scan-densifier {};
+
+ laser-scan-matcher = self.callPackage ./laser-scan-matcher {};
+
+ laser-scan-sparsifier = self.callPackage ./laser-scan-sparsifier {};
+
+ laser-scan-splitter = self.callPackage ./laser-scan-splitter {};
 
  leo = self.callPackage ./leo {};
 
@@ -1127,6 +1175,8 @@ self: super: {
  librviz-tutorial = self.callPackage ./librviz-tutorial {};
 
  libsiftfast = self.callPackage ./libsiftfast {};
+
+ libuvc-ros = self.callPackage ./libuvc-ros {};
 
  lms1xx = self.callPackage ./lms1xx {};
 
@@ -1238,6 +1288,8 @@ self: super: {
 
  message-runtime = self.callPackage ./message-runtime {};
 
+ message-to-tf = self.callPackage ./message-to-tf {};
+
  microstrain-3dmgx2-imu = self.callPackage ./microstrain-3dmgx2-imu {};
 
  mini-maxwell = self.callPackage ./mini-maxwell {};
@@ -1262,6 +1314,8 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
+ mocap-optitrack = self.callPackage ./mocap-optitrack {};
+
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  move-base = self.callPackage ./move-base {};
@@ -1269,6 +1323,8 @@ self: super: {
  move-base-flex = self.callPackage ./move-base-flex {};
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
+
+ move-base-sequence = self.callPackage ./move-base-sequence {};
 
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
@@ -1392,6 +1448,8 @@ self: super: {
 
  navigation-experimental = self.callPackage ./navigation-experimental {};
 
+ ncd-parser = self.callPackage ./ncd-parser {};
+
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
  neonavigation = self.callPackage ./neonavigation {};
@@ -1405,6 +1463,8 @@ self: super: {
  neonavigation-rviz-plugins = self.callPackage ./neonavigation-rviz-plugins {};
 
  nerian-stereo = self.callPackage ./nerian-stereo {};
+
+ network-interface = self.callPackage ./network-interface {};
 
  nmea-comms = self.callPackage ./nmea-comms {};
 
@@ -1465,6 +1525,8 @@ self: super: {
  openzen-sensor = self.callPackage ./openzen-sensor {};
 
  opt-camera = self.callPackage ./opt-camera {};
+
+ opw-kinematics = self.callPackage ./opw-kinematics {};
 
  osqp-vendor = self.callPackage ./osqp-vendor {};
 
@@ -1562,6 +1624,8 @@ self: super: {
 
  points-preprocessor = self.callPackage ./points-preprocessor {};
 
+ polar-scan-matcher = self.callPackage ./polar-scan-matcher {};
+
  polled-camera = self.callPackage ./polled-camera {};
 
  pose-base-controller = self.callPackage ./pose-base-controller {};
@@ -1583,6 +1647,8 @@ self: super: {
  pr2-dashboard-aggregator = self.callPackage ./pr2-dashboard-aggregator {};
 
  pr2-description = self.callPackage ./pr2-description {};
+
+ pr2-ethercat-drivers = self.callPackage ./pr2-ethercat-drivers {};
 
  pr2-hardware-interface = self.callPackage ./pr2-hardware-interface {};
 
@@ -1678,6 +1744,12 @@ self: super: {
 
  robot-calibration-msgs = self.callPackage ./robot-calibration-msgs {};
 
+ robot-controllers = self.callPackage ./robot-controllers {};
+
+ robot-controllers-interface = self.callPackage ./robot-controllers-interface {};
+
+ robot-controllers-msgs = self.callPackage ./robot-controllers-msgs {};
+
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-nav-rviz-plugins = self.callPackage ./robot-nav-rviz-plugins {};
@@ -1691,6 +1763,8 @@ self: super: {
  robot-self-filter = self.callPackage ./robot-self-filter {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
+
+ robot-upstart = self.callPackage ./robot-upstart {};
 
  roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
 
@@ -2016,6 +2090,10 @@ self: super: {
 
  sbpl-recovery = self.callPackage ./sbpl-recovery {};
 
+ scan-to-cloud-converter = self.callPackage ./scan-to-cloud-converter {};
+
+ scan-tools = self.callPackage ./scan-tools {};
+
  scenario-test-tools = self.callPackage ./scenario-test-tools {};
 
  schunk-description = self.callPackage ./schunk-description {};
@@ -2093,6 +2171,8 @@ self: super: {
  sophus = self.callPackage ./sophus {};
 
  sot-core = self.callPackage ./sot-core {};
+
+ sot-tools = self.callPackage ./sot-tools {};
 
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 

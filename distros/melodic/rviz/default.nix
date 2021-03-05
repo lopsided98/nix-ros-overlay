@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, catkin, cmake-modules, eigen, geometry-msgs, image-transport, interactive-markers, laser-geometry, libGL, libGLU, libyamlcpp, map-msgs, media-export, message-filters, message-generation, message-runtime, nav-msgs, ogre1_9, pluginlib, python-qt-binding, qt5, resource-retriever, rosbag, rosconsole, roscpp, roslib, rospy, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf, tinyxml-2, urdf, urdfdom, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rviz";
-  version = "1.13.15-r1";
+  version = "1.13.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rviz-release/archive/release/melodic/rviz/1.13.15-1.tar.gz";
-    name = "1.13.15-1.tar.gz";
-    sha256 = "2231a3c4f10650e37f5650cc85a25590474a6d1a1e26e2fd00cd8303581f6c02";
+    url = "https://github.com/ros-gbp/rviz-release/archive/release/melodic/rviz/1.13.16-1.tar.gz";
+    name = "1.13.16-1.tar.gz";
+    sha256 = "1addd391a6fc14528987b99bab69b59b99d22140d9c4ba90b3c925ca6ab80da2";
   };
 
   buildType = "catkin";

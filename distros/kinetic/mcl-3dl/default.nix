@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, eigen, geometry-msgs, mcl-3dl-msgs, nav-msgs, pcl-ros, roscpp, roslint, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-mcl-3dl";
-  version = "0.5.2-r1";
+  version = "0.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/mcl_3dl-release/archive/release/kinetic/mcl_3dl/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "2a7f7cc79af9c09e680d6196d9ec76a75f1e181c7b7a267ad92705e039d26eae";
+    url = "https://github.com/at-wat/mcl_3dl-release/archive/release/kinetic/mcl_3dl/0.5.3-1.tar.gz";
+    name = "0.5.3-1.tar.gz";
+    sha256 = "27950680b89b14dde24561eda4a95bad8c1ef174c374386bc91252f1c81f956d";
   };
 
   buildType = "catkin";
