@@ -217,6 +217,8 @@ let
             -i cmake/sip_configure.py
       '' + postPatch;
 
+      dontWrapQtApps = true;
+
       setupHook = self.writeText "python-qt-binding-setup-hook" ''
         _pythonQtBindingPreFixupHook() {
           # Prevent /build RPATH references
