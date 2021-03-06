@@ -301,6 +301,15 @@ let
       sha256 = "1qjwky7v4b9d9dmxzsybnhiz6xgx94grc67sdyvlp1d4kfkfsl4w";
     };
 
+    turtlesim = rosSuper.turtlesim.overrideAttrs ({
+      nativeBuildInputs ? [], ...
+    }: {
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      postFixup = ''
+        wrapQtApp "$out/lib/turtlesim/turtlesim_node"
+      '';
+    });
+
     uncrustify-vendor = patchVendorUrl rosSuper.uncrustify-vendor {
       url = "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.68.1.tar.gz";
       sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
