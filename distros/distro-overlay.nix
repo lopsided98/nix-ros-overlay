@@ -140,6 +140,34 @@ let
       sha256 = "0lpaskqxpklm05050wwvdqwhw30f2hpzss8sgyvczdpvvqzjg4vk";
     };
 
+    libqt-concurrent = rosSuper.libqt-concurrent.overrideAttrs ({ ... }: {
+      dontWrapQtApps = true;
+    });
+
+    libqt-core = rosSuper.libqt-core.overrideAttrs ({ ... }: {
+      dontWrapQtApps = true;
+    });
+
+    libqt-gui = rosSuper.libqt-gui.overrideAttrs ({ ... }: {
+      dontWrapQtApps = true;
+    });
+
+    libqt-network = rosSuper.libqt-network.overrideAttrs ({ ... }: {
+      dontWrapQtApps = true;
+    });
+
+    libqt-opengl = rosSuper.libqt-opengl.overrideAttrs ({ ... }: {
+      dontWrapQtApps = true;
+    });
+
+    libqt-opengl-dev = rosSuper.libqt-opengl-dev.overrideAttrs ({ ... }: {
+      dontWrapQtApps = true;
+    });
+
+    libqt-widgets = rosSuper.libqt-widgets.overrideAttrs ({ ... }: {
+      dontWrapQtApps = true;
+    });
+
     librealsense = rosSuper.librealsense.overrideAttrs ({
       patches ? [], ...
     }: {
@@ -202,6 +230,21 @@ let
       postPatch = postPatch + ''
         patchShebangs scripts
       '';
+    });
+
+    open-manipulator-control-gui = rosSuper.open-manipulator-control-gui.overrideAttrs ({
+      nativeBuildInputs ? [], ...
+    }: {
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      postFixup = ''
+        wrapQtApp "$out/lib/open_manipulator_control_gui/open_manipulator_control_gui"
+      '';
+    });
+
+    plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
+      nativeBuildInputs ? [], ...
+    }: {
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     });
 
     pr2-tilt-laser-interface = patchBoostSignals rosSuper.pr2-tilt-laser-interface;
@@ -285,6 +328,15 @@ let
       url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
       sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
     };
+
+    swri-profiler-tools = rosSuper.swri-profiler-tools.overrideAttrs ({
+      nativeBuildInputs ? [], ...
+    }: {
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      postFixup = ''
+        wrapQtApp "$out/lib/swri_profiler_tools/profiler"
+      '';
+    });
 
     swri-transform-util = rosSuper.swri-transform-util.overrideAttrs ({
       CXXFLAGS ? "", ...
