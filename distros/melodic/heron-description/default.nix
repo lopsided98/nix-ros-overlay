@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-heron-description";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/heron-release/archive/release/melodic/heron_description/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "1c381c2f5386fb22014eb10112ba4601c0bb76ac7a37db77e78b162ee6b7877c";
+    url = "https://github.com/clearpath-gbp/heron-release/archive/release/melodic/heron_description/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "8f667197332029beffb8c146923e072566af0eea4a53b913f07843853dfdfa4c";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, face-detector, leg-detector, people-msgs, people-tracking-filter, people-velocity-tracker }:
 buildRosPackage {
   pname = "ros-melodic-people";
-  version = "1.2.0-r1";
+  version = "1.4.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/OSUrobotics/people-release/archive/release/melodic/people/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "6261e11750ff43c0eecd09034928197e6266c0410bc1d8310dfa0dc899798a00";
+    url = "https://github.com/OSUrobotics/people-release/archive/release/melodic/people/1.4.0-4.tar.gz";
+    name = "1.4.0-4.tar.gz";
+    sha256 = "3257e4cec2b4985b1b8f0530bb4a37820ec2100a60f9694b36aff8c9df32c154";
   };
 
   buildType = "catkin";

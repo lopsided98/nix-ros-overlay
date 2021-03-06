@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libsForQt5, octomap, qt5 }:
 buildRosPackage {
   pname = "ros-noetic-octovis";
-  version = "1.9.6-r1";
+  version = "1.9.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/noetic/octovis/1.9.6-1.tar.gz";
-    name = "1.9.6-1.tar.gz";
-    sha256 = "feb098684affecd77636c6992084628036bf9101a41a42438723bb855b77401a";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/noetic/octovis/1.9.6-2.tar.gz";
+    name = "1.9.6-2.tar.gz";
+    sha256 = "6fb47ca3b08da643c13d00d9a7c0ecd5454ddb05ab30247bd9bf753d69701713";
   };
 
   buildType = "cmake";

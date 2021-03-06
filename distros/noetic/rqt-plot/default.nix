@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, python3Packages, qt-gui-py-common, qwt-dependency, rosgraph, rostopic, rqt-gui, rqt-gui-py, rqt-py-common, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rqt-plot";
-  version = "0.4.12-r1";
+  version = "0.4.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_plot-release/archive/release/noetic/rqt_plot/0.4.12-1.tar.gz";
-    name = "0.4.12-1.tar.gz";
-    sha256 = "ec87f7987fbfd36412dec72aa8c840e5ee5aea7ae8dc330843828e4b533590fe";
+    url = "https://github.com/ros-gbp/rqt_plot-release/archive/release/noetic/rqt_plot/0.4.13-1.tar.gz";
+    name = "0.4.13-1.tar.gz";
+    sha256 = "8507faa21362446af958f585d33f525dcc308af701462a4645fd07785bf8aa39";
   };
 
   buildType = "catkin";

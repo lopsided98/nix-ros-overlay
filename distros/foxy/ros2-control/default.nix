@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, controller-manager, hardware-interface, ros2-control-test-assets, ros2controlcli }:
 buildRosPackage {
   pname = "ros-foxy-ros2-control";
-  version = "0.1.6-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/ros2_control/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "9f1305546222300cf7f0ec3bc6689b43272274c5f91ff2752933edae2f765276";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/ros2_control/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "e1fac79247c73f151a609fed30b696ecae68a1e80821e1924d445a2977bbb899";
   };
 
   buildType = "ament_cmake";

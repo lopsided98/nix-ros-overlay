@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ncurses, roscpp, xclip }:
 buildRosPackage {
   pname = "ros-melodic-log-view";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/hatchbed/log_view-release/archive/release/melodic/log_view/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "823227e66081c3e8bfcfd9955d2f56edeb6d4468f71736909fbb9d76d014092a";
+    url = "https://github.com/hatchbed/log_view-release/archive/release/melodic/log_view/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "c1e9390e841e44f84c5a55bf2ff00596abb7bbb0a663bb86027f6d901645e71d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, dynamic-graph, dynamic-graph-python, git }:
 buildRosPackage {
   pname = "ros-noetic-dynamic-graph-tutorial";
-  version = "1.2.2-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/dynamic-graph-tutorial-ros-release/archive/release/noetic/dynamic-graph-tutorial/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "33213cea4468eb12ca6710d99006ed1b4ef7fb9586b2771d014830182bf1ba21";
+    url = "https://github.com/stack-of-tasks/dynamic-graph-tutorial-ros-release/archive/release/noetic/dynamic-graph-tutorial/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "a5499ce3759b782a0ce47408c2dcc025ccef46c53dd64e3080968beee6a08a60";
   };
 
   buildType = "cmake";

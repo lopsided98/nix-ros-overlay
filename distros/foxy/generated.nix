@@ -716,6 +716,8 @@ self: super: {
 
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
 
+ ntpd-driver = self.callPackage ./ntpd-driver {};
+
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
  octomap = self.callPackage ./octomap {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, velodyne-description, velodyne-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-velodyne-simulator";
-  version = "1.0.10-r1";
+  version = "1.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/melodic/velodyne_simulator/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "cdefbbe70f5ca2ebbfed172169054f6697252a29c23d24c53ae234b800fd0a38";
+    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/melodic/velodyne_simulator/1.0.11-1.tar.gz";
+    name = "1.0.11-1.tar.gz";
+    sha256 = "665e8d0899eb6dbb9321ca9665e1406154db0fc7530bf17397d05af9c654d671";
   };
 
   buildType = "catkin";

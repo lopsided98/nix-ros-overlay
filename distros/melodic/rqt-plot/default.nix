@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, pythonPackages, qt-gui-py-common, qwt-dependency, rosgraph, rostopic, rqt-gui, rqt-gui-py, rqt-py-common, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rqt-plot";
-  version = "0.4.9";
+  version = "0.4.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_plot-release/archive/release/melodic/rqt_plot/0.4.9-0.tar.gz";
-    name = "0.4.9-0.tar.gz";
-    sha256 = "226ffb18dfbf7e879f20e2aecae2243582a4fae28e74a1f7d3b291e68f6a28fb";
+    url = "https://github.com/ros-gbp/rqt_plot-release/archive/release/melodic/rqt_plot/0.4.13-1.tar.gz";
+    name = "0.4.13-1.tar.gz";
+    sha256 = "8ad543629315c87c8694d9efe79df4026582cea73d9183774b523e6fcb8a089a";
   };
 
   buildType = "catkin";
