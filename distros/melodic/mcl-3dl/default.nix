@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, eigen, geometry-msgs, mcl-3dl-msgs, nav-msgs, pcl-ros, roscpp, roslint, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mcl-3dl";
-  version = "0.5.2-r1";
+  version = "0.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/mcl_3dl-release/archive/release/melodic/mcl_3dl/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "bf0677ba2b61b080b63ad4bdb32742566863cb0f8d46eba0bc3cdff8428f86f2";
+    url = "https://github.com/at-wat/mcl_3dl-release/archive/release/melodic/mcl_3dl/0.5.3-1.tar.gz";
+    name = "0.5.3-1.tar.gz";
+    sha256 = "540c5728dbb160edcca1fc7265bc49e5b89f1fc1e6b6bb86aea51cc676549132";
   };
 
   buildType = "catkin";

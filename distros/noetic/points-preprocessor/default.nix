@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-config-msgs, catkin, cv-bridge, gtest, libyamlcpp, message-filters, pcl-conversions, pcl-ros, qt5, roscpp, roslint, rostest, sensor-msgs, std-msgs, tf, tf2, tf2-eigen, tf2-ros, velodyne-pcl }:
 buildRosPackage {
   pname = "ros-noetic-points-preprocessor";
-  version = "1.14.10-r1";
+  version = "1.14.11-r2";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/core_perception-release/archive/release/noetic/points_preprocessor/1.14.10-1.tar.gz";
-    name = "1.14.10-1.tar.gz";
-    sha256 = "6e5c22a3dc855829fb1b62ed64d9031ddb35193ffec0ae4073028393350d3a07";
+    url = "https://github.com/nobleo/core_perception-release/archive/release/noetic/points_preprocessor/1.14.11-2.tar.gz";
+    name = "1.14.11-2.tar.gz";
+    sha256 = "08ac3278a045c28b3fc6763c035db7479b739c4cdd126f18b14cf793fabf9b3e";
   };
 
   buildType = "catkin";

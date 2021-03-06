@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ncurses, roscpp, xclip }:
 buildRosPackage {
   pname = "ros-noetic-log-view";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/hatchbed/log_view-release/archive/release/noetic/log_view/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "93c01620d5b4e3c4b6511ee532ad2caffd0245064536f7447ba77facf16849ae";
+    url = "https://github.com/hatchbed/log_view-release/archive/release/noetic/log_view/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "ae83c301379e194490f5aa2a392d6a2b20986be11b5a36ff1d8bfff993c24e1d";
   };
 
   buildType = "catkin";

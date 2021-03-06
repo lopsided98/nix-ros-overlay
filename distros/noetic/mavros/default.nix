@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, boost, catkin, cmake-modules, diagnostic-msgs, diagnostic-updater, eigen, eigen-conversions, geographic-msgs, geographiclib, geometry-msgs, gtest, libmavconn, mavlink, mavros-msgs, message-runtime, nav-msgs, pluginlib, rosconsole-bridge, roscpp, rospy, rosunit, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mavros";
-  version = "1.5.2-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/mavros/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "ee8e6e0bf786a042779c6d5dcfacb51840bb4330daad9497ed26cea28151cef8";
+    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/mavros/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "61b74992d49a6ddd1aca85e5294ee11e265251807e71142b665ce1cdd23945cb";
   };
 
   buildType = "catkin";

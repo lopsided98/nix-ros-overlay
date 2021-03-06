@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-people-msgs";
-  version = "1.2.2-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/OSUrobotics/people-release/archive/release/noetic/people_msgs/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "0fc16f697e58974184b80ffbd67d294db3548012597e9803d4093dd7cb282e25";
+    url = "https://github.com/OSUrobotics/people-release/archive/release/noetic/people_msgs/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "23c5aadea89b2d9eb9f8f5bc712313ef205a9db3844d47f25bfe5e167525b840";
   };
 
   buildType = "catkin";

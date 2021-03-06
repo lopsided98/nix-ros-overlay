@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, cv-bridge, diagnostic-updater, eigen, geometry-msgs, image-transport, launch-ros, nav-msgs, opencv3, rclcpp, rclcpp-components, realsense2-camera-msgs, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-realsense2-camera";
-  version = "3.1.3-r1";
+  version = "3.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/foxy/realsense2_camera/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "38a40ec949b46dc7e8e7f54c517fe2c636a050eae425265f0fde9535a79f77bb";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/foxy/realsense2_camera/3.1.4-1.tar.gz";
+    name = "3.1.4-1.tar.gz";
+    sha256 = "7ebb01ce220b9af81dd8592eb0207891fc000249921c0d455aa677a6fbf69d04";
   };
 
   buildType = "ament_cmake";

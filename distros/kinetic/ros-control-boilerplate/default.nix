@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cmake-modules, control-msgs, control-toolbox, controller-manager, gflags, hardware-interface, joint-limits-interface, roscpp, rosparam-shortcuts, sensor-msgs, std-msgs, trajectory-msgs, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-ros-control-boilerplate";
-  version = "0.4.1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/davetcoleman/ros_control_boilerplate-release/archive/release/kinetic/ros_control_boilerplate/0.4.1-0.tar.gz";
-    name = "0.4.1-0.tar.gz";
-    sha256 = "549a61a022dc82b3c28a2fa180a965a35cf74e171e937a56b0e1466dcd2a679a";
+    url = "https://github.com/davetcoleman/ros_control_boilerplate-release/archive/release/kinetic/ros_control_boilerplate/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "65102150a54122d63ba24c22ea5032db8e284d262b7d17c1d1cb600881b237c9";
   };
 
   buildType = "catkin";

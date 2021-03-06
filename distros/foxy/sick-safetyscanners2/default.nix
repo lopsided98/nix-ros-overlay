@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, sensor-msgs, sick-safetyscanners-base, sick-safetyscanners2-interfaces }:
 buildRosPackage {
   pname = "ros-foxy-sick-safetyscanners2";
-  version = "1.0.0-r2";
+  version = "1.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners2-release/archive/release/foxy/sick_safetyscanners2/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "8151a4349dfb65f1f2202dd5ae40d8b217bb13cd9e9d3833cbd0b8253f96f77c";
+    url = "https://github.com/SICKAG/sick_safetyscanners2-release/archive/release/foxy/sick_safetyscanners2/1.0.1-2.tar.gz";
+    name = "1.0.1-2.tar.gz";
+    sha256 = "5847246ad4523ae0563e881b7fc6fb37071eddee47283a9b89b5b102f59da3af";
   };
 
   buildType = "ament_cmake";
