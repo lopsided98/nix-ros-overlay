@@ -137,34 +137,6 @@ let
       sha256 = "0lpaskqxpklm05050wwvdqwhw30f2hpzss8sgyvczdpvvqzjg4vk";
     };
 
-    libqt-concurrent = rosSuper.libqt-concurrent.overrideAttrs ({ ... }: {
-      dontWrapQtApps = true;
-    });
-
-    libqt-core = rosSuper.libqt-core.overrideAttrs ({ ... }: {
-      dontWrapQtApps = true;
-    });
-
-    libqt-gui = rosSuper.libqt-gui.overrideAttrs ({ ... }: {
-      dontWrapQtApps = true;
-    });
-
-    libqt-network = rosSuper.libqt-network.overrideAttrs ({ ... }: {
-      dontWrapQtApps = true;
-    });
-
-    libqt-opengl = rosSuper.libqt-opengl.overrideAttrs ({ ... }: {
-      dontWrapQtApps = true;
-    });
-
-    libqt-opengl-dev = rosSuper.libqt-opengl-dev.overrideAttrs ({ ... }: {
-      dontWrapQtApps = true;
-    });
-
-    libqt-widgets = rosSuper.libqt-widgets.overrideAttrs ({ ... }: {
-      dontWrapQtApps = true;
-    });
-
     librealsense = rosSuper.librealsense.overrideAttrs ({
       patches ? [], ...
     }: {
@@ -203,6 +175,7 @@ let
       nativeBuildInputs ? [],
       postFixup ? "", ...
     }: {
+      dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/mapviz/mapviz"
@@ -232,6 +205,7 @@ let
     open-manipulator-control-gui = rosSuper.open-manipulator-control-gui.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
+      dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = ''
         wrapQtApp "$out/lib/open_manipulator_control_gui/open_manipulator_control_gui"
@@ -241,6 +215,7 @@ let
     plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
+      dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     });
 
@@ -287,6 +262,7 @@ let
     rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
+      dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = ''
         wrapQtApp "$out/bin/rqt"
@@ -297,6 +273,7 @@ let
     rviz = rosSuper.rviz.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
+      dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = ''
         wrapQtApp "$out/lib/rviz/rviz"
@@ -329,6 +306,7 @@ let
     swri-profiler-tools = rosSuper.swri-profiler-tools.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
+      dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = ''
         wrapQtApp "$out/lib/swri_profiler_tools/profiler"
@@ -353,6 +331,7 @@ let
     turtlesim = rosSuper.turtlesim.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
+      dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = ''
         wrapQtApp "$out/lib/turtlesim/turtlesim_node"
