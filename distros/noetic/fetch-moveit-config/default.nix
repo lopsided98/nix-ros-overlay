@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, fetch-description, fetch-ikfast-plugin, joint-state-publisher, moveit-fake-controller-manager, moveit-kinematics, moveit-planners-ompl, moveit-python, moveit-ros-move-group, moveit-ros-visualization, moveit-simple-controller-manager, robot-state-publisher, rospy, rostest, xacro }:
 buildRosPackage {
   pname = "ros-noetic-fetch-moveit-config";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_moveit_config/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "03c5926ed7872fe04a801ab4e79feefef1089bdde445539e81cbcfe381740a15";
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_moveit_config/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "9dc3b097e595365fa0262b98d1c77dbd4cd3c592e23a2bad6da000f1940ce8dc";
   };
 
   buildType = "catkin";

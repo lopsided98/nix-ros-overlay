@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-fetch-description";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_description/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "f59f7ad66e1a9e07ab1c5b581b2ae2f6ebb2864c84f0f64cec0f536e030e0c8f";
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_description/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "e9b0b5bac52c230f416305f0cb8ff4cdb5a5567a3df8143795e6fda8e57f78d7";
   };
 
   buildType = "catkin";

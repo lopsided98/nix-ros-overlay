@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-fetch-maps";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_maps/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "6d30d9bd13cf660c83350a3f9181654ad9788809f867289b00a1cf3a4534f533";
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_maps/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "4679e269f796a687cef2c846602aec7a1de7873f1c0fcaa624b87f14a1efa265";
   };
 
   buildType = "catkin";

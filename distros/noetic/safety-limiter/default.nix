@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, eigen, geometry-msgs, nav-msgs, neonavigation-common, pcl, pcl-conversions, pcl-ros, roscpp, roslint, rostest, safety-limiter-msgs, sensor-msgs, std-msgs, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-safety-limiter";
-  version = "0.10.6-r1";
+  version = "0.10.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/safety_limiter/0.10.6-1.tar.gz";
-    name = "0.10.6-1.tar.gz";
-    sha256 = "f9b88eaaa62c18e46dfd9d3f905a2059b363d5b46360736ca6aff435067810a9";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/safety_limiter/0.10.8-1.tar.gz";
+    name = "0.10.8-1.tar.gz";
+    sha256 = "a1b56f0e95703a559f310e3c4f2a901c3653ba0890621dfd70f4371bd2f79447";
   };
 
   buildType = "catkin";

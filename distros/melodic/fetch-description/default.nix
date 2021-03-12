@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-fetch-description";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_description/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "3549d0508da99e8e906159816f711a15e035697ad013c1fcb13cbb767692dd14";
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_description/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "687e90ba5a74c8f638c2141f710509056186288a9b58291c6cec54c017680347";
   };
 
   buildType = "catkin";

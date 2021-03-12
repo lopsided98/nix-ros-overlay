@@ -740,6 +740,8 @@ self: super: {
 
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
+ pal-gazebo-worlds = self.callPackage ./pal-gazebo-worlds {};
+
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
  pcl-msgs = self.callPackage ./pcl-msgs {};

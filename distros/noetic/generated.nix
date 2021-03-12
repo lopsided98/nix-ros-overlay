@@ -680,6 +680,8 @@ self: super: {
 
  fetch-auto-dock-msgs = self.callPackage ./fetch-auto-dock-msgs {};
 
+ fetch-bringup = self.callPackage ./fetch-bringup {};
+
  fetch-calibration = self.callPackage ./fetch-calibration {};
 
  fetch-depth-layer = self.callPackage ./fetch-depth-layer {};
@@ -687,6 +689,8 @@ self: super: {
  fetch-description = self.callPackage ./fetch-description {};
 
  fetch-driver-msgs = self.callPackage ./fetch-driver-msgs {};
+
+ fetch-drivers = self.callPackage ./fetch-drivers {};
 
  fetch-ikfast-plugin = self.callPackage ./fetch-ikfast-plugin {};
 
@@ -767,6 +771,8 @@ self: super: {
  franka-msgs = self.callPackage ./franka-msgs {};
 
  franka-visualization = self.callPackage ./franka-visualization {};
+
+ freight-bringup = self.callPackage ./freight-bringup {};
 
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
@@ -1143,6 +1149,8 @@ self: super: {
  laser-scan-sparsifier = self.callPackage ./laser-scan-sparsifier {};
 
  laser-scan-splitter = self.callPackage ./laser-scan-splitter {};
+
+ led-msgs = self.callPackage ./led-msgs {};
 
  leo = self.callPackage ./leo {};
 
@@ -1671,6 +1679,8 @@ self: super: {
  pr2-mechanism-msgs = self.callPackage ./pr2-mechanism-msgs {};
 
  pr2-msgs = self.callPackage ./pr2-msgs {};
+
+ prosilica-gige-sdk = self.callPackage ./prosilica-gige-sdk {};
 
  ps3joy = self.callPackage ./ps3joy {};
 
@@ -2481,6 +2491,8 @@ self: super: {
  wireless-msgs = self.callPackage ./wireless-msgs {};
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
+
+ ws281x = self.callPackage ./ws281x {};
 
  wu-ros-tools = self.callPackage ./wu-ros-tools {};
 
