@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen-conversions, liblapack, moveit-core, pluginlib, roscpp, tf2-eigen, tf2-kdl }:
 buildRosPackage {
   pname = "ros-noetic-fetch-ikfast-plugin";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_ikfast_plugin/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "7f27ca168fe00fbd9a1e50dc5407bbf623d6a2cc54aa47b2876ff29707704242";
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_ikfast_plugin/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "dd967690c06c97e3cb82db0bdd22bd8ef9d29e653308b324bf9904e964d32d48";
   };
 
   buildType = "catkin";

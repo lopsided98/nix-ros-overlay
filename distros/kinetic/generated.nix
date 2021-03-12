@@ -2366,6 +2366,8 @@ self: super: {
 
  mir-robot = self.callPackage ./mir-robot {};
 
+ mitre-fast-layered-map = self.callPackage ./mitre-fast-layered-map {};
+
  mk = self.callPackage ./mk {};
 
  ml-classifiers = self.callPackage ./ml-classifiers {};

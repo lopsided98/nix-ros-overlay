@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, base-local-planner, catkin, clear-costmap-recovery, costmap-2d, fetch-depth-layer, fetch-maps, map-server, move-base, move-base-msgs, navfn, roslaunch, rotate-recovery, slam-karto, voxel-grid }:
 buildRosPackage {
   pname = "ros-noetic-fetch-navigation";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_navigation/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "b9d6ed800f2c34e96cb15e4c846dafca23fd60f95fd8fa9889b4c9ff141fbe98";
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_navigation/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "9e4ea90921f157347f53637387de35f39d9143820a8ceb15436cc51397513906";
   };
 
   buildType = "catkin";

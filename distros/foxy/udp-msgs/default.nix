@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-udp-msgs";
-  version = "0.0.2-r1";
+  version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/flynneva/udp_msgs-release/archive/release/foxy/udp_msgs/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "72a28f37207063ace66e6c9d495b744eec81ba381dd55c23af3bb9e9aad5b8a8";
+    url = "https://github.com/flynneva/udp_msgs-release/archive/release/foxy/udp_msgs/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
+    sha256 = "7b8d5517aa76084998a225508489812d0650a003c489af6bb94d5f743a3565a0";
   };
 
   buildType = "ament_cmake";

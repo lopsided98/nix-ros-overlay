@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, phidgets-api, roscpp, roslaunch, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-phidgets-accelerometer";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_accelerometer/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "2711b04fb49d94d74caba25cc6ce6dff6b755f84fd5f27215f098bd92cd55904";
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_accelerometer/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "9973c4e460483bea8ab2fe76f976fb9faf9708ee05d42ed408877d507c85889b";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diff-drive-controller, interactive-marker-twist-server, joint-state-controller, joy, robot-localization, roslaunch, teleop-twist-joy, topic-tools, twist-mux }:
 buildRosPackage {
   pname = "ros-melodic-warthog-control";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/melodic/warthog_control/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "b005fc1de6847771e3b4062f6319cd940dd334f78844d532c5c0f83b7f4a0c2d";
+    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/melodic/warthog_control/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "5d0aa4fa339942dbed6eb901307332befc8ce052f1d01eef3c74439b7622dad6";
   };
 
   buildType = "catkin";

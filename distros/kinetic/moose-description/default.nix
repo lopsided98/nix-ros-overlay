@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-moose-description";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/moose-release/archive/release/kinetic/moose_description/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "b186388f48dc5a1ea8df9275ed8ee33992af0f7f19adca4f30a7631aa291d5a1";
+    url = "https://github.com/clearpath-gbp/moose-release/archive/release/kinetic/moose_description/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "9097fd1a806ccac394431d01cfe2a9fde0036bfc53ae3ef0ff10717261eeffe4";
   };
 
   buildType = "catkin";

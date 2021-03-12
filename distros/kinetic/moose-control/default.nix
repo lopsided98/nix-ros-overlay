@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, interactive-marker-twist-server, joint-state-controller, joy, nav-msgs, realtime-tools, robot-localization, roslaunch, teleop-twist-joy, tf, topic-tools, twist-mux, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-moose-control";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/moose-release/archive/release/kinetic/moose_control/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "f6210417ae71de6184cccf52ac51b5e728b9ca3566090df1053b9b5dd5ef0420";
+    url = "https://github.com/clearpath-gbp/moose-release/archive/release/kinetic/moose_control/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "9ac98f4ed52f4dfc3ac7bfe1bf729c4f728b951879bdb60e5b0c1457b2382426";
   };
 
   buildType = "catkin";

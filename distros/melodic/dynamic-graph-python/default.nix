@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, dynamic-graph, eigenpy, git }:
 buildRosPackage {
   pname = "ros-melodic-dynamic-graph-python";
-  version = "4.0.1-r1";
+  version = "4.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/dynamic-graph-python-ros-release/archive/release/melodic/dynamic-graph-python/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "158a2774643b8697772ec940d99383d845d006fea9cb7cc6a7a5699593b9f66c";
+    url = "https://github.com/stack-of-tasks/dynamic-graph-python-ros-release/archive/release/melodic/dynamic-graph-python/4.0.3-1.tar.gz";
+    name = "4.0.3-1.tar.gz";
+    sha256 = "434872a6e2b6d482095a5bf4d12ab4dd3712e36e4d39d28dcd284ff57bc6a67f";
   };
 
   buildType = "cmake";

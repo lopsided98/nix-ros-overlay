@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen-conversions, liblapack, moveit-core, pluginlib, roscpp, tf2-eigen, tf2-kdl }:
 buildRosPackage {
   pname = "ros-melodic-fetch-ikfast-plugin";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_ikfast_plugin/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "24429d173975f72b6920d831762c727198d523f38dcd462c08beae779dc72643";
+    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_ikfast_plugin/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "a0544a3c2d4320f714505bee02841026dddbdd25819836b0bafce8ef8e5d9e64";
   };
 
   buildType = "catkin";

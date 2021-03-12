@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, catkin, curl, diagnostic-msgs, fetch-auto-dock-msgs, fetch-driver-msgs, libyamlcpp, mk, nav-msgs, power-msgs, python, robot-calibration-msgs, robot-controllers, robot-controllers-interface, rosconsole, roscpp, roscpp-serialization, rospack, rostime, sensor-msgs, urdf, urdfdom }:
 buildRosPackage {
   pname = "ros-melodic-fetch-drivers";
-  version = "0.8.8-r1";
+  version = "0.8.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/melodic/fetch_drivers/0.8.8-1.tar.gz";
-    name = "0.8.8-1.tar.gz";
-    sha256 = "1a93f3a08200d27d455c1fffb0d9aaf712183b52e4627161f9c3a65ba5164a62";
+    url = "https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/melodic/fetch_drivers/0.8.9-1.tar.gz";
+    name = "0.8.9-1.tar.gz";
+    sha256 = "21476cf4eb010a51179a0700644ac8a15f5aaa5ccb4d704e9d1d7ab102048f80";
   };
 
   buildType = "catkin";
