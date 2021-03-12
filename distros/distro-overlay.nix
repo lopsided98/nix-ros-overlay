@@ -24,11 +24,8 @@ let
   overrides = rosSelf: rosSuper: with rosSelf.lib; {
     # ROS package overrides/fixups
 
-    ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({
-      propagatedBuildInputs ? [], ...
-    }: {
-      propagatedBuildInputs = [ self.cmake rosSelf.ament-package ] ++ propagatedBuildInputs;
-      setupHook = ./ament-cmake-core-setup-hook.sh;
+    ament-package = rosSuper.ament-package.overrideAttrs ({ ... }: {
+      setupHook = ./ament-package-setup-hook.sh;
     });
 
     camera-calibration-parsers = patchBoostPython rosSuper.camera-calibration-parsers;

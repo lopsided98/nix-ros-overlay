@@ -13,7 +13,9 @@ _findAmentPackages() {
   then
     # ROS scripts use unbound variables
     set +u
-    source "$pkg"/share/*/local_setup.sh
+    for setup in "$pkg"/share/*/local_setup.sh; do
+      source "$setup"
+    done
     set -u
   fi
   _amentPackagesSeen["$pkg"]=1
