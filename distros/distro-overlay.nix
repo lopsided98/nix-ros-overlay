@@ -24,8 +24,8 @@ let
   overrides = rosSelf: rosSuper: with rosSelf.lib; {
     # ROS package overrides/fixups
 
-    ament-package = rosSuper.ament-package.overrideAttrs ({ ... }: {
-      setupHook = ./ament-package-setup-hook.sh;
+    ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({ ... }: {
+      setupHook = ./ament-cmake-core-setup-hook.sh;
     });
 
     camera-calibration-parsers = patchBoostPython rosSuper.camera-calibration-parsers;
@@ -248,13 +248,9 @@ let
     rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
       propagatedBuildInputs ? [], ...
     }: {
-      # Make sure all supported implementations are available to dependent
-      # packages. They are already part of the closure, so we might as well
-      # support them. This package could also be overriden to only support a
-      # single implementation to reduce closure size.
+      # The default implementation must be available to all dependent packages
+      # at build time.
       propagatedBuildInputs = with rosSelf; [
-        rmw-connext-cpp
-        rmw-cyclonedds-cpp
         rmw-fastrtps-cpp
       ] ++ propagatedBuildInputs;
     });

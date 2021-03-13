@@ -10,7 +10,11 @@ mkShell {
         ros-environment
         ros2topic
         ros2node
+        geometry-msgs
+        rmw-fastrtps-dynamic-cpp
       ];
     })
   ];
+
+  RMW_IMPLEMENTATION = "rmw_fastrtps_dynamic_cpp";
 }

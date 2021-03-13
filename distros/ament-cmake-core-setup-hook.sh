@@ -21,3 +21,11 @@ _findAmentPackages() {
   _amentPackagesSeen["$pkg"]=1
 }
 addEnvHooks "$hostOffset" _findAmentPackages
+
+_amentCmakeCorePreConfigureHook() {
+  # Don't create share/ament_index/resource_index/parent_prefix_path resource
+  # that contains references to all dependencies. This file isn't used with Nix
+  # and just bloats the closure.
+  cmakeFlags+=" -DAMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION=OFF"
+}
+preConfigureHooks+=(_amentCmakeCorePreConfigureHook)
