@@ -12,6 +12,8 @@ self: super: with super.lib; let
 
       colcon-library-path = pySelf.callPackage ./colcon/library-path.nix { };
 
+      colcon-metadata = pySelf.callPackage ./colcon/metadata.nix { };
+
       colcon-package-selection = pySelf.callPackage ./colcon/package-selection.nix { };
 
       colcon-pkg-config = pySelf.callPackage ./colcon/pkg-config.nix { };
@@ -42,8 +44,15 @@ self: super: with super.lib; let
 
 in {
   colcon = with self.python3Packages; colcon-core.withExtensions [
-    colcon-ros
+    colcon-cmake
+    colcon-core
+    colcon-library-path
+    colcon-metadata
     colcon-package-selection
+    colcon-python-setup-py
+    colcon-recursive-crawl
+    colcon-ros
+    colcon-test-result
   ];
 
   gazebo_7 = self.callPackage ./gazebo/7.nix { };
