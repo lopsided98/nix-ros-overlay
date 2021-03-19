@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-exotica-pendulum-dynamics-solver";
-  version = "6.0.2-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_pendulum_dynamics_solver/6.0.2-1.tar.gz";
-    name = "6.0.2-1.tar.gz";
-    sha256 = "dbe50b7a79d56a2d18711beae16074d3fd5464ec0fe5e270377fb9a012c220e0";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_pendulum_dynamics_solver/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "38e6fa8276bd9b2efba0761e8754e82fb72d4fe24c3572134034fe254d0ab357";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-foxy-tinyxml2-vendor";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tinyxml2_vendor-release/archive/release/foxy/tinyxml2_vendor/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "47b312fe3dbc2b5f069437c90e1fdfac96ae13e864445978f23f02f4e696f9db";
+    url = "https://github.com/ros2-gbp/tinyxml2_vendor-release/archive/release/foxy/tinyxml2_vendor/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "56d1a7c6d3e3499724b9789195f307831ff7bd5ad0a67584169492997ee40659";
   };
 
   buildType = "ament_cmake";

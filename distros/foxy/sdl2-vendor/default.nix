@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL2, ament-cmake }:
 buildRosPackage {
   pname = "ros-foxy-sdl2-vendor";
-  version = "2.4.1-r1";
+  version = "3.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/sdl2_vendor/2.4.1-1.tar.gz";
-    name = "2.4.1-1.tar.gz";
-    sha256 = "2c886f34e6e193fbac370bd8cd3da4f687bc19f6b898bd72fe8b1e540c52cbb4";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/sdl2_vendor/3.0.0-2.tar.gz";
+    name = "3.0.0-2.tar.gz";
+    sha256 = "f9612cb3f4bac0857cb1d2cdfbb91099780d2965f920ce0a1425806e6a6d5fc9";
   };
 
   buildType = "ament_cmake";

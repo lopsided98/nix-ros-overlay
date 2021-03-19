@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigen, git, graphviz }:
 buildRosPackage {
   pname = "ros-noetic-dynamic-graph";
-  version = "4.3.3-r4";
+  version = "4.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/dynamic-graph-ros-release/archive/release/noetic/dynamic-graph/4.3.3-4.tar.gz";
-    name = "4.3.3-4.tar.gz";
-    sha256 = "3e27d8b75c9a57bfa976987ebe9db9f12796d4d3971a7f53767cafc6e1f020f1";
+    url = "https://github.com/stack-of-tasks/dynamic-graph-ros-release/archive/release/noetic/dynamic-graph/4.3.4-1.tar.gz";
+    name = "4.3.4-1.tar.gz";
+    sha256 = "7c7e7d4acdfdd35814e7271e14345bb2064cd869a1127bb066f770634e59cdc7";
   };
 
   buildType = "cmake";

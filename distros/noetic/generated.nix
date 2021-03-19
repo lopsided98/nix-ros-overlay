@@ -44,8 +44,6 @@ self: super: {
 
  assisted-teleop = self.callPackage ./assisted-teleop {};
 
- astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
-
  async-comm = self.callPackage ./async-comm {};
 
  audibot = self.callPackage ./audibot {};
@@ -1348,6 +1346,8 @@ self: super: {
 
  moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
 
+ moveit-core = self.callPackage ./moveit-core {};
+
  moveit-fake-controller-manager = self.callPackage ./moveit-fake-controller-manager {};
 
  moveit-kinematics = self.callPackage ./moveit-kinematics {};
@@ -1385,8 +1385,6 @@ self: super: {
  moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
-
- moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
 
  moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
 
@@ -1505,6 +1503,8 @@ self: super: {
  obj-to-pointcloud = self.callPackage ./obj-to-pointcloud {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
+
+ ocean-battery-driver = self.callPackage ./ocean-battery-driver {};
 
  octomap = self.callPackage ./octomap {};
 
@@ -1652,6 +1652,8 @@ self: super: {
 
  position-controllers = self.callPackage ./position-controllers {};
 
+ power-monitor = self.callPackage ./power-monitor {};
+
  power-msgs = self.callPackage ./power-msgs {};
 
  pr2-common = self.callPackage ./pr2-common {};
@@ -1679,6 +1681,10 @@ self: super: {
  pr2-mechanism-msgs = self.callPackage ./pr2-mechanism-msgs {};
 
  pr2-msgs = self.callPackage ./pr2-msgs {};
+
+ pr2-power-board = self.callPackage ./pr2-power-board {};
+
+ pr2-power-drivers = self.callPackage ./pr2-power-drivers {};
 
  prosilica-gige-sdk = self.callPackage ./prosilica-gige-sdk {};
 
@@ -1713,6 +1719,8 @@ self: super: {
  qt-gui-py-common = self.callPackage ./qt-gui-py-common {};
 
  qwt-dependency = self.callPackage ./qwt-dependency {};
+
+ radar-msgs = self.callPackage ./radar-msgs {};
 
  random-numbers = self.callPackage ./random-numbers {};
 
@@ -2196,6 +2204,8 @@ self: super: {
 
  sot-core = self.callPackage ./sot-core {};
 
+ sot-dynamic-pinocchio = self.callPackage ./sot-dynamic-pinocchio {};
+
  sot-tools = self.callPackage ./sot-tools {};
 
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
@@ -2325,6 +2335,16 @@ self: super: {
  toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
 
  toposens-sync = self.callPackage ./toposens-sync {};
+
+ trac-ik = self.callPackage ./trac-ik {};
+
+ trac-ik-examples = self.callPackage ./trac-ik-examples {};
+
+ trac-ik-kinematics-plugin = self.callPackage ./trac-ik-kinematics-plugin {};
+
+ trac-ik-lib = self.callPackage ./trac-ik-lib {};
+
+ trac-ik-python = self.callPackage ./trac-ik-python {};
 
  track-odometry = self.callPackage ./track-odometry {};
 
@@ -2519,5 +2539,7 @@ self: super: {
  ypspur = self.callPackage ./ypspur {};
 
  ypspur-ros = self.callPackage ./ypspur-ros {};
+
+ zbar-ros = self.callPackage ./zbar-ros {};
 
 }

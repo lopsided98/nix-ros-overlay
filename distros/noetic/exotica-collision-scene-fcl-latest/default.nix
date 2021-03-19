@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, fcl-catkin, geometric-shapes }:
 buildRosPackage {
   pname = "ros-noetic-exotica-collision-scene-fcl-latest";
-  version = "6.0.2-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_collision_scene_fcl_latest/6.0.2-1.tar.gz";
-    name = "6.0.2-1.tar.gz";
-    sha256 = "fd63a22ba08911393e901997f2e865d9233fc44a26222a0b232cc7cbca3cb7ff";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_collision_scene_fcl_latest/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "a6be506591819ab6eddfa88423bdf00caffffef09367270fc720a625dfa78c98";
   };
 
   buildType = "catkin";

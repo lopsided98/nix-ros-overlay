@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigenpy, eiquadprog, git, graphviz, pinocchio }:
 buildRosPackage {
   pname = "ros-noetic-tsid";
-  version = "1.4.2-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/tsid-ros-release/archive/release/noetic/tsid/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "99b43a697219f69d23fe2404449829b87b213aacd96efa9bd93e3718a1a9a2b3";
+    url = "https://github.com/stack-of-tasks/tsid-ros-release/archive/release/noetic/tsid/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "e4470ce6f447a5f1c4e79eb083e5a3696df58671c5b1663d918657cfe1948379";
   };
 
   buildType = "cmake";

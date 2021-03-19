@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-foxy-test-interface-files";
-  version = "0.8.0-r1";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/test_interface_files-release/archive/release/foxy/test_interface_files/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "21839e5ca18524056a5e386ffeefa4923f2a9813a3cbf2502bdbc5a47d283568";
+    url = "https://github.com/ros2-gbp/test_interface_files-release/archive/release/foxy/test_interface_files/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "90359bb4913f6efa4a517faedbe243fff61b4824c6ec894bb96e70e75f166275";
   };
 
   buildType = "ament_cmake";

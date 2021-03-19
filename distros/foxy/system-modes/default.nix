@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-lint-auto, builtin-interfaces, launch-ros, rclcpp, rclcpp-lifecycle, rosidl-default-generators, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-index-python, ament-lint-auto, builtin-interfaces, launch-ros, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-lifecycle, ros2run, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-system-modes";
-  version = "0.4.2-r1";
+  version = "0.5.0-r6";
 
   src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "55141cb5d3fba675cf3743d350b31419f268ec54934732d38ff6ebb66e381ba4";
+    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes/0.5.0-6.tar.gz";
+    name = "0.5.0-6.tar.gz";
+    sha256 = "bff1f9647b051843cd56e0f83e89e0198f74de1b682c2f936bc8954e994d580b";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-gmock ament-cmake-gtest ament-cmake-pep257 ament-cmake-uncrustify ament-lint-auto ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-gmock ament-cmake-gtest ament-cmake-pep257 ament-cmake-uncrustify ament-index-python ament-lint-auto launch-testing-ament-cmake launch-testing-ros ros2run ];
   propagatedBuildInputs = [ builtin-interfaces launch-ros rclcpp rclcpp-lifecycle rosidl-default-generators std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

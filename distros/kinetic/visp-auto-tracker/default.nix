@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, libdmtx, message-filters, resource-retriever, roscpp, sensor-msgs, std-msgs, visp, visp-bridge, visp-tracker, zbar }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, libdmtx, message-filters, resource-retriever, roscpp, sensor-msgs, std-msgs, usb-cam, visp, visp-bridge, visp-tracker, zbar }:
 buildRosPackage {
   pname = "ros-kinetic-visp-auto-tracker";
-  version = "0.11.1-r1";
+  version = "0.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_auto_tracker/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "932449bfdec3f07765a70557d2c6262e1000dd4bd8e1d5766d31c9cffd8091e7";
+    url = "https://github.com/lagadic/vision_visp-release/archive/release/kinetic/visp_auto_tracker/0.12.0-1.tar.gz";
+    name = "0.12.0-1.tar.gz";
+    sha256 = "2a2a6b7ff20a7c24b6f2064102e243a1283dbe473765944f3b673b3e49c0e774";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ geometry-msgs libdmtx message-filters resource-retriever roscpp sensor-msgs std-msgs visp visp-bridge visp-tracker zbar ];
+  propagatedBuildInputs = [ geometry-msgs libdmtx message-filters resource-retriever roscpp sensor-msgs std-msgs usb-cam visp visp-bridge visp-tracker zbar ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

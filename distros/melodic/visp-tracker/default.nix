@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, image-proc, image-transport, message-generation, message-runtime, nodelet, resource-retriever, roscpp, rospy, sensor-msgs, std-msgs, tf, visp }:
 buildRosPackage {
   pname = "ros-melodic-visp-tracker";
-  version = "0.11.1-r1";
+  version = "0.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_tracker/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "f8f5b6ded7bc1e1a83f5e8ad2787c9e096a4e4a347bcdc9cd33665e8383e4b75";
+    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_tracker/0.12.0-1.tar.gz";
+    name = "0.12.0-1.tar.gz";
+    sha256 = "79361631cd6074296fdfd745be67548c32526a67080a3722a3b243963eadec53";
   };
 
   buildType = "catkin";

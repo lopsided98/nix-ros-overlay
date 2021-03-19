@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, exotica-python, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-exotica-cartpole-dynamics-solver";
-  version = "6.0.2-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_cartpole_dynamics_solver/6.0.2-1.tar.gz";
-    name = "6.0.2-1.tar.gz";
-    sha256 = "0edc0b00f3405bf966e9a985da932a5fcc5acf48ed3904b68d958183fbd97d22";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_cartpole_dynamics_solver/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "b2a9c8bb46835fe9a413d9bdab72e5ec9bf11ef2ac6bf158e801f11c9820981b";
   };
 
   buildType = "catkin";

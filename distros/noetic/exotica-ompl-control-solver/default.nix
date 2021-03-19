@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, ompl }:
 buildRosPackage {
   pname = "ros-noetic-exotica-ompl-control-solver";
-  version = "6.0.2-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_ompl_control_solver/6.0.2-1.tar.gz";
-    name = "6.0.2-1.tar.gz";
-    sha256 = "265bd3612a4fdebfcabe6c455a2c13540740f97bb14359fa1a28c0b04f4c27f1";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_ompl_control_solver/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "507ed2bf4bc516fa619a8db8445635823ba34c7d8a2680f5493e9f81089a21fa";
   };
 
   buildType = "catkin";

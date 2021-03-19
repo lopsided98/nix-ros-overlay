@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, catkin, geometry-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs, visp, visp-bridge }:
+{ lib, buildRosPackage, fetchurl, camera-calibration-parsers, catkin, geometry-msgs, message-generation, message-runtime, roscpp, rqt-console, sensor-msgs, std-msgs, visp, visp-bridge }:
 buildRosPackage {
   pname = "ros-melodic-visp-camera-calibration";
-  version = "0.11.1-r1";
+  version = "0.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_camera_calibration/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "ad0ec2a1443b13767d73f4e5769b764e1046498ad93b94c65454687e4ed574c0";
+    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_camera_calibration/0.12.0-1.tar.gz";
+    name = "0.12.0-1.tar.gz";
+    sha256 = "3a6a0b972d622f753c0f1b095ac9813974a29fc6bb55eb639acdd8183cc824fa";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ camera-calibration-parsers geometry-msgs message-generation message-runtime roscpp sensor-msgs std-msgs visp visp-bridge ];
+  propagatedBuildInputs = [ camera-calibration-parsers geometry-msgs message-generation message-runtime roscpp rqt-console sensor-msgs std-msgs visp visp-bridge ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

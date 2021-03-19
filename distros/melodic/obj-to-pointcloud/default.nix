@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, neonavigation-common, pcl, pcl-conversions, roscpp, roslint, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-obj-to-pointcloud";
-  version = "0.10.8-r1";
+  version = "0.10.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/obj_to_pointcloud/0.10.8-1.tar.gz";
-    name = "0.10.8-1.tar.gz";
-    sha256 = "891d6b13145969194a0d76738a604393d7c451223afccbab2411886ea16c999c";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/obj_to_pointcloud/0.10.10-1.tar.gz";
+    name = "0.10.10-1.tar.gz";
+    sha256 = "4c26b2682d74788241b9ed6e54dc30d3b37d27cb8cb7a430560b467cf8633c8f";
   };
 
   buildType = "catkin";

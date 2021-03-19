@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-cartpole-dynamics-solver, exotica-double-integrator-dynamics-solver, exotica-pendulum-dynamics-solver, exotica-pinocchio-dynamics-solver, exotica-quadrotor-dynamics-solver }:
 buildRosPackage {
   pname = "ros-noetic-exotica-dynamics-solvers";
-  version = "6.0.2-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_dynamics_solvers/6.0.2-1.tar.gz";
-    name = "6.0.2-1.tar.gz";
-    sha256 = "3a05abc0114ce0fe5100af6327353c7e1c7d669d35ac266e2ed5c0d2d55038ac";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_dynamics_solvers/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "f0ed917aab8759118f80ff7a5ca64c8675a5fa7cf8b9266d072e17a0dbd0f331";
   };
 
   buildType = "catkin";

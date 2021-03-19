@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, eigen, geometry-msgs, nav-msgs, neonavigation-common, pcl, pcl-conversions, pcl-ros, roscpp, roslint, rostest, safety-limiter-msgs, sensor-msgs, std-msgs, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-safety-limiter";
-  version = "0.10.8-r1";
+  version = "0.10.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/safety_limiter/0.10.8-1.tar.gz";
-    name = "0.10.8-1.tar.gz";
-    sha256 = "9f3a12c9910cfeeb041978dadcba9f1cddf8632e7e866d8a6174dd2f8bb5fb9e";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/safety_limiter/0.10.10-1.tar.gz";
+    name = "0.10.10-1.tar.gz";
+    sha256 = "26455c2ac67e48d5752daaeb58fad1e007e01f2ba07b6a53597555180030fa5d";
   };
 
   buildType = "catkin";
