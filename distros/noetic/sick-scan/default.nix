@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, message-generation, message-runtime, pcl-conversions, pcl-ros, roscpp, rospy, sensor-msgs, tf, tf2, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-sick-scan";
-  version = "1.7.8-r1";
+  version = "1.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_scan-release/archive/release/noetic/sick_scan/1.7.8-1.tar.gz";
-    name = "1.7.8-1.tar.gz";
-    sha256 = "03779ee8c369f4da0eaa8b73bd453ff8994b0c34ce7b89f41b528a31a4666bd6";
+    url = "https://github.com/SICKAG/sick_scan-release/archive/release/noetic/sick_scan/1.10.1-1.tar.gz";
+    name = "1.10.1-1.tar.gz";
+    sha256 = "733a8d4deaf6e4faa9977a175e435ec3c490c348606a411b13a5c4e733a5171e";
   };
 
   buildType = "catkin";

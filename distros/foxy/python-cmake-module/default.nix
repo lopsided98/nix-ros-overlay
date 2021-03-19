@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, python3 }:
 buildRosPackage {
   pname = "ros-foxy-python-cmake-module";
-  version = "0.8.0-r1";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_cmake_module-release/archive/release/foxy/python_cmake_module/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "eb1cce14aa1c234781fb0ddc2d9f037125758d48fd3c1ce00a4ce1c0fa53c617";
+    url = "https://github.com/ros2-gbp/python_cmake_module-release/archive/release/foxy/python_cmake_module/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "8693f665b38570b167804d0bb681fd8ffcccc1b0d634a13dcaa67750bd9cceeb";
   };
 
   buildType = "ament_cmake";

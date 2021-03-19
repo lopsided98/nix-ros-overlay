@@ -1282,6 +1282,8 @@ self: super: {
 
  heron-control = self.callPackage ./heron-control {};
 
+ heron-controller = self.callPackage ./heron-controller {};
+
  heron-description = self.callPackage ./heron-description {};
 
  heron-desktop = self.callPackage ./heron-desktop {};
@@ -1713,6 +1715,8 @@ self: super: {
  lauv-description = self.callPackage ./lauv-description {};
 
  lauv-gazebo = self.callPackage ./lauv-gazebo {};
+
+ led-msgs = self.callPackage ./led-msgs {};
 
  leg-detector = self.callPackage ./leg-detector {};
 
@@ -4252,6 +4256,8 @@ self: super: {
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
 
+ ws281x = self.callPackage ./ws281x {};
+
  wu-ros-tools = self.callPackage ./wu-ros-tools {};
 
  xacro = self.callPackage ./xacro {};
@@ -4321,6 +4327,8 @@ self: super: {
  ypspur-ros = self.callPackage ./ypspur-ros {};
 
  yujin-ocs = self.callPackage ./yujin-ocs {};
+
+ zbar-ros = self.callPackage ./zbar-ros {};
 
  zeroconf-msgs = self.callPackage ./zeroconf-msgs {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cmake-modules, control-msgs, control-toolbox, controller-manager, gflags, hardware-interface, joint-limits-interface, roscpp, rosparam-shortcuts, sensor-msgs, std-msgs, trajectory-msgs, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-melodic-ros-control-boilerplate";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/ros_control_boilerplate-release/archive/release/melodic/ros_control_boilerplate/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "ef24a60447530fb1c62e086164715eae45cd02d5d46f105020c9664d81712a8e";
+    url = "https://github.com/PickNikRobotics/ros_control_boilerplate-release/archive/release/melodic/ros_control_boilerplate/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "32bc71c9a5eea76b805a56072ea0e638cdf78f8ea2d8de13fb8c0c72fc512514";
   };
 
   buildType = "catkin";

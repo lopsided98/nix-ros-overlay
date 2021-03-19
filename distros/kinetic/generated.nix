@@ -1484,6 +1484,8 @@ self: super: {
 
  heron-control = self.callPackage ./heron-control {};
 
+ heron-controller = self.callPackage ./heron-controller {};
+
  heron-description = self.callPackage ./heron-description {};
 
  heron-desktop = self.callPackage ./heron-desktop {};

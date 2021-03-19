@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-aico-solver, exotica-cartpole-dynamics-solver, exotica-collision-scene-fcl-latest, exotica-core, exotica-core-task-maps, exotica-ddp-solver, exotica-double-integrator-dynamics-solver, exotica-ik-solver, exotica-ilqg-solver, exotica-ilqr-solver, exotica-levenberg-marquardt-solver, exotica-ompl-control-solver, exotica-ompl-solver, exotica-pendulum-dynamics-solver, exotica-pinocchio-dynamics-solver, exotica-python, exotica-quadrotor-dynamics-solver, exotica-scipy-solver, exotica-time-indexed-rrt-connect-solver, exotica-val-description, geometry-msgs, interactive-markers, robot-state-publisher, rostest, rosunit, rviz, sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-exotica-examples";
-  version = "6.0.2-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_examples/6.0.2-1.tar.gz";
-    name = "6.0.2-1.tar.gz";
-    sha256 = "72f131be7319f7af2fa98bb3d0b063c0a57fd34fdd4ecfeb7a7a2ce4846554bd";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_examples/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "e4f896f0df54aa32a139dd9c5f9a3567120d5c8d5930be0ec7e7a12a5fec6c75";
   };
 
   buildType = "catkin";

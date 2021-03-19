@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, visp-auto-tracker, visp-bridge, visp-camera-calibration, visp-hand2eye-calibration, visp-tracker }:
 buildRosPackage {
   pname = "ros-kinetic-vision-visp";
-  version = "0.11.1-r1";
+  version = "0.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/kinetic/vision_visp/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "7acc83ad9964e5258008a7551aca2785ea6d65f18d632eabdbbec62592b491ff";
+    url = "https://github.com/lagadic/vision_visp-release/archive/release/kinetic/vision_visp/0.12.0-1.tar.gz";
+    name = "0.12.0-1.tar.gz";
+    sha256 = "baad28fc882d65f718925044129b386e3ebcfe8b3ca92fb9bfdca0f62dcf5596";
   };
 
   buildType = "catkin";

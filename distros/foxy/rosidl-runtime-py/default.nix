@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, pythonPackages, rosidl-parser, std-msgs, std-srvs, test-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rosidl-runtime-py";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_runtime_py-release/archive/release/foxy/rosidl_runtime_py/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "e937cd207763bba46e6282b61f78eee9ca7440c96aee5fad878586d90c885389";
+    url = "https://github.com/ros2-gbp/rosidl_runtime_py-release/archive/release/foxy/rosidl_runtime_py/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "473cc66ae02a7bea0bcc51802a1d2547ae4fd13181370ceaa626e7a482b8b02f";
   };
 
   buildType = "ament_python";

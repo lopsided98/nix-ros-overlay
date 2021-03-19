@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-lint-auto, rclcpp, rclcpp-lifecycle, ros2launch, system-modes }:
 buildRosPackage {
   pname = "ros-dashing-system-modes-examples";
-  version = "0.4.2-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/dashing/system_modes_examples/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "c43b844a99a1dc127b1d3df083c551f39f4b7e2ac6738b7e12dae105f6d5f657";
+    url = "https://github.com/microROS/system_modes-release/archive/release/dashing/system_modes_examples/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "3d248062bd0c22c9c486037f696aa9d435b0ea95fd4df0eb7af72bec48c84412";
   };
 
   buildType = "ament_cmake";

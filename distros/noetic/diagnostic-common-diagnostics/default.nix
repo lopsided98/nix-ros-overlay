@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, hddtemp, python3Packages, rospy, rostest, tf }:
 buildRosPackage {
   pname = "ros-noetic-diagnostic-common-diagnostics";
-  version = "1.10.3-r1";
+  version = "1.10.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/noetic/diagnostic_common_diagnostics/1.10.3-1.tar.gz";
-    name = "1.10.3-1.tar.gz";
-    sha256 = "3dcdc4feaa3efa9bb0177403f9660671442a1fc1c96c98efb36e1739581823a7";
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/noetic/diagnostic_common_diagnostics/1.10.4-1.tar.gz";
+    name = "1.10.4-1.tar.gz";
+    sha256 = "280b746bb7e33a69b388fe26e7ab411052f263243dbe5da71f7b0a023f743ea6";
   };
 
   buildType = "catkin";

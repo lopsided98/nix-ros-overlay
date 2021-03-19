@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, ros-environment, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-kartech-linear-actuator-msgs";
-  version = "3.1.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/kartech_linear_actuator_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "6a4f2a58dbb3faed0221e5125d9022238071dc753e14719877487887affccd28";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/kartech_linear_actuator_msgs/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "409afffc6e63a693cb50418eba87e72cf78eb1ba0f7880a2f6e96f8a191d15d4";
   };
 
   buildType = "catkin";

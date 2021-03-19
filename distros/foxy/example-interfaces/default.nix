@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-example-interfaces";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/example_interfaces-release/archive/release/foxy/example_interfaces/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "cd5d69ea3a7eea5f2ec562a6ab2f15f6d3b58ff0bbbd67a53c06b3058b9b6699";
+    url = "https://github.com/ros2-gbp/example_interfaces-release/archive/release/foxy/example_interfaces/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "74a5cd21a531a90d5117d482943d18ad44f0b5b3679ec28a3331f32f660aa77d";
   };
 
   buildType = "ament_cmake";

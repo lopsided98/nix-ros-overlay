@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, base-local-planner, catkin, dwa-local-planner, gmapping, map-server, move-base, navfn, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-husky-navigation";
-  version = "0.4.6-r1";
+  version = "0.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_navigation/0.4.6-1.tar.gz";
-    name = "0.4.6-1.tar.gz";
-    sha256 = "60e5615ec49010db27830b0cd69386ee5472853e07614c2e179b6a07ee688ba5";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_navigation/0.4.7-1.tar.gz";
+    name = "0.4.7-1.tar.gz";
+    sha256 = "871d44bfd52cdeb700f2644f1d37b91250397e1b6437fc6fc3955f5a29fb49c6";
   };
 
   buildType = "catkin";

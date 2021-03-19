@@ -538,6 +538,8 @@ self: super: {
 
  launch = self.callPackage ./launch {};
 
+ launch-pal = self.callPackage ./launch-pal {};
+
  launch-ros = self.callPackage ./launch-ros {};
 
  launch-testing = self.callPackage ./launch-testing {};
@@ -1088,6 +1090,8 @@ self: super: {
 
  rosidl-typesupport-introspection-cpp = self.callPackage ./rosidl-typesupport-introspection-cpp {};
 
+ rosxbeepy = self.callPackage ./rosxbeepy {};
+
  rover-bringup = self.callPackage ./rover-bringup {};
 
  rover-description = self.callPackage ./rover-description {};
@@ -1435,6 +1439,10 @@ self: super: {
  webots-ros2-universal-robot = self.callPackage ./webots-ros2-universal-robot {};
 
  webots-ros2-ur-e-description = self.callPackage ./webots-ros2-ur-e-description {};
+
+ wiimote = self.callPackage ./wiimote {};
+
+ wiimote-msgs = self.callPackage ./wiimote-msgs {};
 
  xacro = self.callPackage ./xacro {};
 
