@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, sensor-msgs, teleop-twist-joy, teleop-twist-keyboard, volta-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-volta-teleoperator";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/botsync-gbp/volta-release/archive/release/kinetic/volta_teleoperator/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "9eab38801278a76d6d08c853c2056d7a1a1b77536329b265946c0da94dcea70c";
+    url = "https://github.com/botsync-gbp/volta-release/archive/release/kinetic/volta_teleoperator/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "2a17c2b25281eeb268469b838a7b4bb491a33684add1431a2945195fdc70b36e";
   };
 
   buildType = "catkin";

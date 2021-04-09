@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, exotica-python }:
 buildRosPackage {
   pname = "ros-melodic-exotica-ilqr-solver";
-  version = "6.1.0-r1";
+  version = "6.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_ilqr_solver/6.1.0-1.tar.gz";
-    name = "6.1.0-1.tar.gz";
-    sha256 = "47683f1b6d6a1b570a7c7929fc49ad13dee63a6562e0e454143edc65bae02c9f";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_ilqr_solver/6.1.1-1.tar.gz";
+    name = "6.1.1-1.tar.gz";
+    sha256 = "7a80f10763837b95e286f9d76bbc79297b66a92521adc43cddedd63bbac9a3d6";
   };
 
   buildType = "catkin";

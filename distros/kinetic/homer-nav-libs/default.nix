@@ -8,8 +8,8 @@ buildRosPackage {
   version = "0.1.53";
 
   src = fetchurl {
-    url = "https://gitlab.uni-koblenz.de/robbie/homer_nav_libs-release/repository/archive.tar.gz?ref=release/kinetic/homer_nav_libs/0.1.53-0";
-    name = "archive.tar.gz";
+    url = "https://gitlab.uni-koblenz.de/robbie/homer_nav_libs-release/-/archive/release/kinetic/homer_nav_libs/0.1.53-0/homer_nav_libs-release-release-kinetic-homer_nav_libs-0.1.53-0.tar.gz";
+    name = "homer_nav_libs-release-release-kinetic-homer_nav_libs-0.1.53-0.tar.gz";
     sha256 = "875763c5d69764aa9dca369f7e743e1c45c59fc52df48915892afdbf22af0cb5";
   };
 

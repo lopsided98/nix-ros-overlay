@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.5.9-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/melodic/bota_node/0.5.9-1";
-    name = "archive.tar.gz";
-    sha256 = "ea306dcf098dda086cf3646c8dd0543134cf5436f7a98639dc2496901ef6a9e9";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/melodic/bota_node/0.5.9-1/bota_driver-release-release-melodic-bota_node-0.5.9-1.tar.gz";
+    name = "bota_driver-release-release-melodic-bota_node-0.5.9-1.tar.gz";
+    sha256 = "d44e0034b91e8cfabd81199784d0dc92df6e08972305bea1205df1103d9993d2";
   };
 
   buildType = "catkin";

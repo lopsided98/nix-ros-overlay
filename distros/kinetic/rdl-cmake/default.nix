@@ -8,8 +8,8 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = "https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/kinetic/rdl_cmake/1.1.0-0";
-    name = "archive.tar.gz";
+    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/kinetic/rdl_cmake/1.1.0-0/rdl_release-release-kinetic-rdl_cmake-1.1.0-0.tar.gz";
+    name = "rdl_release-release-kinetic-rdl_cmake-1.1.0-0.tar.gz";
     sha256 = "d7973d56abb99d31251154588af5694865301492b6eaf2fd743d8f9fda76cf3a";
   };
 

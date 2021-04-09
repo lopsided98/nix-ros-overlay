@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, python-qt-binding, pythonPackages, roslint, rospy, rostest, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-melodic-rqt-reconfigure";
-  version = "0.5.3-r1";
+  version = "0.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/melodic/rqt_reconfigure/0.5.3-1.tar.gz";
-    name = "0.5.3-1.tar.gz";
-    sha256 = "54bf182c0c203226a0fd612ab16b5d3904f0be7272b45f05a49fe560eee197a7";
+    url = "https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/melodic/rqt_reconfigure/0.5.4-1.tar.gz";
+    name = "0.5.4-1.tar.gz";
+    sha256 = "2df7a0cf5fbaa895845208b22828c01dd85b6a749624b9f320e61f4133690544";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-utilities, control-msgs, diagnostic-msgs, diagnostic-updater, geometry-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-undercarriage-ctrl";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_undercarriage_ctrl/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "6cd06c61c257a17242b50bec1d7c0df909448848473737104990f18b1085e2c8";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_undercarriage_ctrl/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "ec724125f8a49bb67f240d305c33b2a1d552e2513bd8c5f979e8b0971f22208e";
   };
 
   buildType = "catkin";

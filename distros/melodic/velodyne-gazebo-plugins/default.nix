@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-velodyne-gazebo-plugins";
-  version = "1.0.11-r1";
+  version = "1.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/melodic/velodyne_gazebo_plugins/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "72db3cc09652427898487a4ffad1187fe9d5e61dd14492864ec5e561b21d87d4";
+    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/melodic/velodyne_gazebo_plugins/1.0.12-1.tar.gz";
+    name = "1.0.12-1.tar.gz";
+    sha256 = "eed8811150667a592172088751c437c0594c629fb47b8aef52ab646e0572a562";
   };
 
   buildType = "catkin";

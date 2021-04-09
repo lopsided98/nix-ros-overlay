@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-phidgets, dynamic-reconfigure, pythonPackages, roscpp, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-cob-voltage-control";
-  version = "0.7.4-r1";
+  version = "0.7.5-r3";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_voltage_control/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "6f95d8b289cabc833422d69fbab59850ee18c8d7e7a2f3e5afd6eb210eb48cfa";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_voltage_control/0.7.5-3.tar.gz";
+    name = "0.7.5-3.tar.gz";
+    sha256 = "ae8ad54248c9ecadd14b65dc6c5a84265e5099b272b53ee7bd107960a4ad7aa0";
   };
 
   buildType = "catkin";

@@ -8,6 +8,8 @@ self: super: {
 
  abb-driver = self.callPackage ./abb-driver {};
 
+ abb-egm-msgs = self.callPackage ./abb-egm-msgs {};
+
  abb-irb2400-moveit-config = self.callPackage ./abb-irb2400-moveit-config {};
 
  abb-irb2400-moveit-plugins = self.callPackage ./abb-irb2400-moveit-plugins {};
@@ -24,7 +26,13 @@ self: super: {
 
  abb-irb6640-support = self.callPackage ./abb-irb6640-support {};
 
+ abb-rapid-msgs = self.callPackage ./abb-rapid-msgs {};
+
+ abb-rapid-sm-addin-msgs = self.callPackage ./abb-rapid-sm-addin-msgs {};
+
  abb-resources = self.callPackage ./abb-resources {};
+
+ abb-robot-msgs = self.callPackage ./abb-robot-msgs {};
 
  abseil-cpp = self.callPackage ./abseil-cpp {};
 
@@ -175,6 +183,12 @@ self: super: {
  base-local-planner = self.callPackage ./base-local-planner {};
 
  bayesian-belief-networks = self.callPackage ./bayesian-belief-networks {};
+
+ bcap-core = self.callPackage ./bcap-core {};
+
+ bcap-service = self.callPackage ./bcap-service {};
+
+ bcap-service-test = self.callPackage ./bcap-service-test {};
 
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
@@ -632,6 +646,22 @@ self: super: {
 
  dense-laser-assembler = self.callPackage ./dense-laser-assembler {};
 
+ denso-robot-bringup = self.callPackage ./denso-robot-bringup {};
+
+ denso-robot-control = self.callPackage ./denso-robot-control {};
+
+ denso-robot-core = self.callPackage ./denso-robot-core {};
+
+ denso-robot-core-test = self.callPackage ./denso-robot-core-test {};
+
+ denso-robot-descriptions = self.callPackage ./denso-robot-descriptions {};
+
+ denso-robot-gazebo = self.callPackage ./denso-robot-gazebo {};
+
+ denso-robot-moveit-config = self.callPackage ./denso-robot-moveit-config {};
+
+ denso-robot-ros = self.callPackage ./denso-robot-ros {};
+
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
  depthcloud-encoder = self.callPackage ./depthcloud-encoder {};
@@ -1021,6 +1051,12 @@ self: super: {
  flexbe-widget = self.callPackage ./flexbe-widget {};
 
  flir-boson-usb = self.callPackage ./flir-boson-usb {};
+
+ flir-ptu-description = self.callPackage ./flir-ptu-description {};
+
+ flir-ptu-driver = self.callPackage ./flir-ptu-driver {};
+
+ flir-ptu-viz = self.callPackage ./flir-ptu-viz {};
 
  fmi-adapter = self.callPackage ./fmi-adapter {};
 
@@ -1640,8 +1676,6 @@ self: super: {
 
  kinesis-video-streamer = self.callPackage ./kinesis-video-streamer {};
 
- knowledge-representation = self.callPackage ./knowledge-representation {};
-
  kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-dock-drive = self.callPackage ./kobuki-dock-drive {};
@@ -1709,6 +1743,8 @@ self: super: {
  laser-scan-publisher-tutorial = self.callPackage ./laser-scan-publisher-tutorial {};
 
  laser-tilt-controller-filter = self.callPackage ./laser-tilt-controller-filter {};
+
+ launchfile-switcher = self.callPackage ./launchfile-switcher {};
 
  lauv-control = self.callPackage ./lauv-control {};
 
@@ -2065,6 +2101,14 @@ self: super: {
  moveit-resources-panda-moveit-config = self.callPackage ./moveit-resources-panda-moveit-config {};
 
  moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
+
+ moveit-resources-prbt-ikfast-manipulator-plugin = self.callPackage ./moveit-resources-prbt-ikfast-manipulator-plugin {};
+
+ moveit-resources-prbt-moveit-config = self.callPackage ./moveit-resources-prbt-moveit-config {};
+
+ moveit-resources-prbt-pg70-support = self.callPackage ./moveit-resources-prbt-pg70-support {};
+
+ moveit-resources-prbt-support = self.callPackage ./moveit-resources-prbt-support {};
 
  moveit-ros = self.callPackage ./moveit-ros {};
 
@@ -2570,6 +2614,18 @@ self: super: {
 
  pilz-utils = self.callPackage ./pilz-utils {};
 
+ pincher-arm = self.callPackage ./pincher-arm {};
+
+ pincher-arm-bringup = self.callPackage ./pincher-arm-bringup {};
+
+ pincher-arm-description = self.callPackage ./pincher-arm-description {};
+
+ pincher-arm-ikfast-plugin = self.callPackage ./pincher-arm-ikfast-plugin {};
+
+ pincher-arm-moveit-config = self.callPackage ./pincher-arm-moveit-config {};
+
+ pincher-arm-moveit-demos = self.callPackage ./pincher-arm-moveit-demos {};
+
  pinocchio = self.callPackage ./pinocchio {};
 
  planner-cspace = self.callPackage ./planner-cspace {};
@@ -2787,8 +2843,6 @@ self: super: {
  ps3joy = self.callPackage ./ps3joy {};
 
  psen-scan = self.callPackage ./psen-scan {};
-
- psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
 
  px4-msgs = self.callPackage ./px4-msgs {};
 
@@ -3833,22 +3887,6 @@ self: super: {
  timestamp-tools = self.callPackage ./timestamp-tools {};
 
  topic-tools = self.callPackage ./topic-tools {};
-
- toposens = self.callPackage ./toposens {};
-
- toposens-bringup = self.callPackage ./toposens-bringup {};
-
- toposens-description = self.callPackage ./toposens-description {};
-
- toposens-driver = self.callPackage ./toposens-driver {};
-
- toposens-markers = self.callPackage ./toposens-markers {};
-
- toposens-msgs = self.callPackage ./toposens-msgs {};
-
- toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
-
- toposens-sync = self.callPackage ./toposens-sync {};
 
  towr = self.callPackage ./towr {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, nav-msgs, roscpp, roslaunch, roslint, tf }:
 buildRosPackage {
   pname = "ros-melodic-mocap-optitrack";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/mocap_optitrack-release/archive/release/melodic/mocap_optitrack/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "97e8658dd34f099357b71e07c30623813c8298f5eb8be291194c2e6268e53f89";
+    url = "https://github.com/ros-drivers-gbp/mocap_optitrack-release/archive/release/melodic/mocap_optitrack/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "ff87f22a76366cd37a501fd7dab921b41b4abe0eca8f718e38b1fa5275d666e8";
   };
 
   buildType = "catkin";

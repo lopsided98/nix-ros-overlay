@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, velodyne-description, velodyne-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-noetic-velodyne-simulator";
-  version = "1.0.11-r1";
+  version = "1.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/noetic/velodyne_simulator/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "34810fce2fce720cad0500c5fdd58403e9774cbbbb04520cabb886029b20e035";
+    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/noetic/velodyne_simulator/1.0.12-1.tar.gz";
+    name = "1.0.12-1.tar.gz";
+    sha256 = "8960ed95157b60c216310020ad4978f88ed477ef9d5b3683ee8160044f871907";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, rclcpp }:
 buildRosPackage {
   pname = "ros-foxy-nav2-voxel-grid";
-  version = "0.4.5-r1";
+  version = "0.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_voxel_grid/0.4.5-1.tar.gz";
-    name = "0.4.5-1.tar.gz";
-    sha256 = "3573db33d1e45ea6be9eb0adf06e44e473e76af533bb871b8676675fde01935d";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_voxel_grid/0.4.7-1.tar.gz";
+    name = "0.4.7-1.tar.gz";
+    sha256 = "6cb15b7d90cecf330820221b3674f3076b113c9bd23b1327b0b3a8c977541f03";
   };
 
   buildType = "ament_cmake";

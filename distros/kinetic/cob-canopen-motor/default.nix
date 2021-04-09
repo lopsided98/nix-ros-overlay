@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-generic-can, cob-utilities, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-cob-canopen-motor";
-  version = "0.7.4-r1";
+  version = "0.7.5-r3";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_canopen_motor/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "9635dc8c7cb26752629e434b247eb7efac2b61fcfe5d93dd19c0cfe5bedf871c";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/kinetic/cob_canopen_motor/0.7.5-3.tar.gz";
+    name = "0.7.5-3.tar.gz";
+    sha256 = "285e535af0cb603bfe0c7da9c0ac608b6696c4772d713c94658bf4ebe28081cb";
   };
 
   buildType = "catkin";

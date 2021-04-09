@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, arduino, catkin, message-generation, message-runtime, rospy, rosserial-client, rosserial-msgs, rosserial-python }:
 buildRosPackage {
   pname = "ros-noetic-rosserial-arduino";
-  version = "0.9.1-r1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_arduino/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "8bb910a45bda782ba13c9badb2652bdf91bbc51cc5d599bc7d1ba92166153d97";
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_arduino/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "46d416adced28af57c50359dc91b2115b3facfea382bd5ec4da291685c565739";
   };
 
   buildType = "catkin";

@@ -8,9 +8,9 @@ buildRosPackage {
   version = "1.0.5-r2";
 
   src = fetchurl {
-    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/foxy/tracetools/1.0.5-2";
-    name = "archive.tar.gz";
-    sha256 = "312d1bdaa44472813977e5a79b19fa96655020905df4f689aeff243192051043";
+    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/-/archive/release/foxy/tracetools/1.0.5-2/ros2_tracing-release-release-foxy-tracetools-1.0.5-2.tar.gz";
+    name = "ros2_tracing-release-release-foxy-tracetools-1.0.5-2.tar.gz";
+    sha256 = "82e89315144b486b23e26cc59add26084f5d06173f2adcc04d7369e8b3a2eef3";
   };
 
   buildType = "ament_cmake";

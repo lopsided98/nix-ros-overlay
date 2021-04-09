@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-velodyne-description";
-  version = "1.0.11-r1";
+  version = "1.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/noetic/velodyne_description/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "255d082bfdf62a6556c1405d9cc31bae5f1f0099cd497d64741716357881a420";
+    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/noetic/velodyne_description/1.0.12-1.tar.gz";
+    name = "1.0.12-1.tar.gz";
+    sha256 = "44a7e306175507df35c7165e1daa76275c630e02d352f18f5ec21550a96bac38";
   };
 
   buildType = "catkin";

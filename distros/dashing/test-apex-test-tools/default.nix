@@ -8,8 +8,8 @@ buildRosPackage {
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/ApexAI/apex_test_tools-release/repository/archive.tar.gz?ref=release/dashing/test_apex_test_tools/0.0.1-1";
-    name = "archive.tar.gz";
+    url = "https://gitlab.com/ApexAI/apex_test_tools-release/-/archive/release/dashing/test_apex_test_tools/0.0.1-1/apex_test_tools-release-release-dashing-test_apex_test_tools-0.0.1-1.tar.gz";
+    name = "apex_test_tools-release-release-dashing-test_apex_test_tools-0.0.1-1.tar.gz";
     sha256 = "006c6431dda12ec1af3791f8cea08a963e537219e1cdc2f2942f57829dcd93f8";
   };
 

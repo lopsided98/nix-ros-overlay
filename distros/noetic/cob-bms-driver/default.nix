@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-srvs, diagnostic-msgs, diagnostic-updater, pythonPackages, roscpp, rospy, socketcan-interface, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-bms-driver";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_bms_driver/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "c5f737cbefd3ba781468395ab19f5685d18579a8bc12d6bab9f9b3fe9928768a";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_bms_driver/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "c3201d6c6554b524f9fce4a123bf9d064d98a4d8b8f3e141946fad09e198cd00";
   };
 
   buildType = "catkin";

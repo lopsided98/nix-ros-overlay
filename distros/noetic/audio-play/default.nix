@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, audio-common-msgs, catkin, gst_all_1, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-audio-play";
-  version = "0.3.10-r1";
+  version = "0.3.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/audio_common-release/archive/release/noetic/audio_play/0.3.10-1.tar.gz";
-    name = "0.3.10-1.tar.gz";
-    sha256 = "110eb048bd20ae8c425f451c6e57d3f81c10379b5c8e727e6dd6ba958c503643";
+    url = "https://github.com/ros-gbp/audio_common-release/archive/release/noetic/audio_play/0.3.11-1.tar.gz";
+    name = "0.3.11-1.tar.gz";
+    sha256 = "763d5d491156d3902552b81e0e093a269749603f90f369112af9fd0db8f681cd";
   };
 
   buildType = "catkin";

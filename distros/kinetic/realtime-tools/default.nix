@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rospy }:
 buildRosPackage {
   pname = "ros-kinetic-realtime-tools";
-  version = "1.11.1";
+  version = "1.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/realtime_tools-release/archive/release/kinetic/realtime_tools/1.11.1-0.tar.gz";
-    name = "1.11.1-0.tar.gz";
-    sha256 = "b8ba7ac211929a3f1e5b7ab0056dab8ae3b93581fcd5280ee16dc0e0a6c056c0";
+    url = "https://github.com/ros-gbp/realtime_tools-release/archive/release/kinetic/realtime_tools/1.11.2-1.tar.gz";
+    name = "1.11.2-1.tar.gz";
+    sha256 = "2532fa59c34dfa4486bc5afa841c088687691f8f00cc468bc8006ab973b005d4";
   };
 
   buildType = "catkin";

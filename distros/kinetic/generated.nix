@@ -8,6 +8,8 @@ self: super: {
 
  abb-driver = self.callPackage ./abb-driver {};
 
+ abb-egm-msgs = self.callPackage ./abb-egm-msgs {};
+
  abb-irb2400-moveit-config = self.callPackage ./abb-irb2400-moveit-config {};
 
  abb-irb2400-moveit-plugins = self.callPackage ./abb-irb2400-moveit-plugins {};
@@ -24,7 +26,13 @@ self: super: {
 
  abb-irb6640-support = self.callPackage ./abb-irb6640-support {};
 
+ abb-rapid-msgs = self.callPackage ./abb-rapid-msgs {};
+
+ abb-rapid-sm-addin-msgs = self.callPackage ./abb-rapid-sm-addin-msgs {};
+
  abb-resources = self.callPackage ./abb-resources {};
+
+ abb-robot-msgs = self.callPackage ./abb-robot-msgs {};
 
  abseil-cpp = self.callPackage ./abseil-cpp {};
 
@@ -4779,22 +4787,6 @@ self: super: {
  topic-switch = self.callPackage ./topic-switch {};
 
  topic-tools = self.callPackage ./topic-tools {};
-
- toposens = self.callPackage ./toposens {};
-
- toposens-bringup = self.callPackage ./toposens-bringup {};
-
- toposens-description = self.callPackage ./toposens-description {};
-
- toposens-driver = self.callPackage ./toposens-driver {};
-
- toposens-markers = self.callPackage ./toposens-markers {};
-
- toposens-msgs = self.callPackage ./toposens-msgs {};
-
- toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
-
- toposens-sync = self.callPackage ./toposens-sync {};
 
  towr = self.callPackage ./towr {};
 

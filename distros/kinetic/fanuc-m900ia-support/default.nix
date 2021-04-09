@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, fanuc-driver, fanuc-resources, joint-state-publisher, robot-state-publisher, roslaunch, rviz, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, fanuc-driver, fanuc-resources, industrial-robot-client, joint-state-publisher-gui, robot-state-publisher, roslaunch, rviz, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-fanuc-m900ia-support";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/fanuc-release/archive/release/kinetic/fanuc_m900ia_support/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "1265653360eee581019c0e8526b748f41d0b99969d7f9f804cedec6ed2668749";
+    url = "https://github.com/ros-industrial-release/fanuc-release/archive/release/kinetic/fanuc_m900ia_support/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "346d87f136a051308e8aad2aa32576c597cbc8d6002a8c96766b8d1ce2d8d97c";
   };
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ fanuc-driver fanuc-resources joint-state-publisher robot-state-publisher rviz xacro ];
+  propagatedBuildInputs = [ fanuc-driver fanuc-resources industrial-robot-client joint-state-publisher-gui robot-state-publisher rviz xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

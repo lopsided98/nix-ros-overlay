@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, geometry-msgs, message-generation, message-runtime, ros-environment, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-carla-msgs";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/carla-simulator/ros-carla-msgs-release/archive/release/noetic/carla_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "0a6b18d3a2d6092145ac06b49e6861d0ca59bbecb2361a98a30010a2fcd48747";
+    url = "https://github.com/carla-simulator/ros-carla-msgs-release/archive/release/noetic/carla_msgs/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "3566e5cc4d2f62ca20a6472842357cfa3193c5f03430e2525182ec461a3bdc32";
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ geometry-msgs message-runtime std-msgs ];
+  buildInputs = [ message-generation ros-environment ];
+  propagatedBuildInputs = [ diagnostic-msgs geometry-msgs message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

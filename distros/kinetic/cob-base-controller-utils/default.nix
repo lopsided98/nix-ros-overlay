@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, rospy, std-msgs, std-srvs, tf, tf2, urdf }:
 buildRosPackage {
   pname = "ros-kinetic-cob-base-controller-utils";
-  version = "0.7.12-r1";
+  version = "0.7.13-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_base_controller_utils/0.7.12-1.tar.gz";
-    name = "0.7.12-1.tar.gz";
-    sha256 = "5dc88890b651cf9c84f8f957f6ae3b0ef7bac7fe2c879f5b99559327cc7479a6";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_base_controller_utils/0.7.13-2.tar.gz";
+    name = "0.7.13-2.tar.gz";
+    sha256 = "2d2cbe156caabcd584b1a16aaa3a5111365430341130718146c20f4ad7c69f62";
   };
 
   buildType = "catkin";

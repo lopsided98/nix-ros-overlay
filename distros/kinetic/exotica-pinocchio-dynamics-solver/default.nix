@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, pinocchio, roscpp }:
 buildRosPackage {
   pname = "ros-kinetic-exotica-pinocchio-dynamics-solver";
-  version = "6.0.2-r1";
+  version = "6.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_pinocchio_dynamics_solver/6.0.2-1.tar.gz";
-    name = "6.0.2-1.tar.gz";
-    sha256 = "1b5e040f33080b2277baf0fca1818dde4bbf280c8b855c955e28f779e9d24579";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/kinetic/exotica_pinocchio_dynamics_solver/6.1.1-1.tar.gz";
+    name = "6.1.1-1.tar.gz";
+    sha256 = "0902a3b46333ed23b7042753a9b913dfb1f21a2dd51da143521b195cce21bace";
   };
 
   buildType = "catkin";

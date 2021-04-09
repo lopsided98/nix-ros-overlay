@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-python, launch, launch-ros, osrf-pycommon, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-foxy-nav2-common";
-  version = "0.4.5-r1";
+  version = "0.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_common/0.4.5-1.tar.gz";
-    name = "0.4.5-1.tar.gz";
-    sha256 = "c8428b79244d25c49920ced18ba6239974db7f389af7c2126f1da8ed612682f0";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_common/0.4.7-1.tar.gz";
+    name = "0.4.7-1.tar.gz";
+    sha256 = "7e51ea2c4b218081fd12bfc123723d12239cd96171b3c45becd6cb89107acb0a";
   };
 
   buildType = "ament_cmake";

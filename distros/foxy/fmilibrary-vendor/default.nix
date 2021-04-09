@@ -5,15 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git }:
 buildRosPackage {
   pname = "ros-foxy-fmilibrary-vendor";
-  version = "0.2.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/boschresearch/fmilibrary_vendor-release/archive/release/foxy/fmilibrary_vendor/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "f6ae4017b2c794172fcb6e1ac90149df341e3361c605b3c2d4874775b436b17e";
+    url = "https://github.com/ros2-gbp/fmilibrary_vendor-release/archive/release/foxy/fmilibrary_vendor/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "6522a9a7a98611615614fad9b50809a6275079c2ae0a3c8bbc2fff1221086cfa";
   };
 
-  buildType = "catkin";
+  buildType = "ament_cmake";
   buildInputs = [ git ];
   nativeBuildInputs = [ ament-cmake ];
 

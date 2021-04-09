@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen-conversions, exotica-collision-scene-fcl-latest, exotica-core, exotica-python, geometry-msgs, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-exotica-core-task-maps";
-  version = "6.1.0-r1";
+  version = "6.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_core_task_maps/6.1.0-1.tar.gz";
-    name = "6.1.0-1.tar.gz";
-    sha256 = "9c60b36d459145f5b8d7e13b7433c53fa75b5da352b8801f5561c401c0cd5e20";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_core_task_maps/6.1.1-1.tar.gz";
+    name = "6.1.1-1.tar.gz";
+    sha256 = "0e0bf5274381e2264b216f5d8ced4e6018d939210c1bf29b8214324bbc8cf689";
   };
 
   buildType = "catkin";

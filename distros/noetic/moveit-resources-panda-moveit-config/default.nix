@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, joint-state-publisher-gui, moveit-resources-panda-description, robot-state-publisher, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-noetic-moveit-resources-panda-moveit-config";
-  version = "0.7.1-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_panda_moveit_config/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "07ede809de542ec70211aba07f9f240c5ed0f6db4f2e29915b8d96d46be2ddec";
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_panda_moveit_config/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "a0cda146285e31b0abc036bcf6bbb92f6a37442fcdbd8d6e04aa799b0baffd35";
   };
 
   buildType = "catkin";

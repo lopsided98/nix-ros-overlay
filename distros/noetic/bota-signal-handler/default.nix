@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.5.9-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/noetic/bota_signal_handler/0.5.9-1";
-    name = "archive.tar.gz";
-    sha256 = "753ab413cd3a282318ad19b6a9d3665e321e21d360d266edeb1d598656170bb2";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/noetic/bota_signal_handler/0.5.9-1/bota_driver-release-release-noetic-bota_signal_handler-0.5.9-1.tar.gz";
+    name = "bota_driver-release-release-noetic-bota_signal_handler-0.5.9-1.tar.gz";
+    sha256 = "f5028c231265611b9ebe00996d80711f136fbf9d27f102b7ee591d64cce8716c";
   };
 
   buildType = "catkin";

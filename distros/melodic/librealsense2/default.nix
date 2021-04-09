@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-melodic-librealsense2";
-  version = "2.42.0-r1";
+  version = "2.43.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/melodic/librealsense2/2.42.0-1.tar.gz";
-    name = "2.42.0-1.tar.gz";
-    sha256 = "1f6da14bb91f55648ae2a69a0a8b3785748bcac1072763fabaf7835aa716a790";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/melodic/librealsense2/2.43.0-1.tar.gz";
+    name = "2.43.0-1.tar.gz";
+    sha256 = "4c3242c4fcd2c4e46f9c315fca1fb897263a0c438dbec7fb6258ba8f511ab4e2";
   };
 
   buildType = "cmake";

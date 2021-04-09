@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, fanuc-driver, fanuc-resources, joint-state-publisher, robot-state-publisher, roslaunch, rviz, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, fanuc-driver, fanuc-resources, industrial-robot-client, joint-state-publisher-gui, robot-state-publisher, roslaunch, rviz, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-fanuc-m6ib-support";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/fanuc-release/archive/release/kinetic/fanuc_m6ib_support/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "23bf414f70ce1c7636588ee46bfd80171d6929d5e0c93eaff0d309f3242062e9";
+    url = "https://github.com/ros-industrial-release/fanuc-release/archive/release/kinetic/fanuc_m6ib_support/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "907bcfdde09fd20d315a2c2b090e54678a0d26f88a5392ca5b0f426e458f327a";
   };
 
   buildType = "catkin";
   checkInputs = [ roslaunch ];
-  propagatedBuildInputs = [ fanuc-driver fanuc-resources joint-state-publisher robot-state-publisher rviz xacro ];
+  propagatedBuildInputs = [ fanuc-driver fanuc-resources industrial-robot-client joint-state-publisher-gui robot-state-publisher rviz xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
@@ -24,11 +24,13 @@ buildRosPackage {
     </p>
     <p>
       This package contains configuration data, 3D models and launch files
-      for Fanuc M-6iB manipulators. This currently includes the base model only.
+      for Fanuc M-6iB manipulators. This currently includes the base model
+      and the /6S variant.
     </p>
     <p><b>Specifications</b>:</p>
     <ul>
       <li>M-6iB - Normal Range</li>
+      <li>M-6iB/6S - Normal Range</li>
     </ul>
     <p>
       Joint limits and maximum joint velocities are based on the information in

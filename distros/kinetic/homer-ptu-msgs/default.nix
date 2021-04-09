@@ -8,8 +8,8 @@ buildRosPackage {
   version = "0.1.7-r2";
 
   src = fetchurl {
-    url = "https://gitlab.uni-koblenz.de/robbie/homer_ptu_msgs-release/repository/archive.tar.gz?ref=release/kinetic/homer_ptu_msgs/0.1.7-2";
-    name = "archive.tar.gz";
+    url = "https://gitlab.uni-koblenz.de/robbie/homer_ptu_msgs-release/-/archive/release/kinetic/homer_ptu_msgs/0.1.7-2/homer_ptu_msgs-release-release-kinetic-homer_ptu_msgs-0.1.7-2.tar.gz";
+    name = "homer_ptu_msgs-release-release-kinetic-homer_ptu_msgs-0.1.7-2.tar.gz";
     sha256 = "38139dbce8bcc522358ee39dd3d4be7e65e79654dcea7b8ae584e260b474fb96";
   };
 

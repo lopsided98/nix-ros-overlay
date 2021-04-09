@@ -2,18 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, roscpp, rosserial-msgs, std-msgs, topic-tools }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, python3, roscpp, rosserial-msgs, std-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-rosserial-server";
-  version = "0.9.1-r1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_server/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "108f4bd765f7d0c115c947849bad5a382068363e2715b8ea777bd2e716f52924";
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_server/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "b6ce6492de950113b015041396436e87ed1ea1b0736b0f2d4bf842383b7531ee";
   };
 
   buildType = "catkin";
+  buildInputs = [ python3 ];
   propagatedBuildInputs = [ boost roscpp rosserial-msgs std-msgs topic-tools ];
   nativeBuildInputs = [ catkin ];
 

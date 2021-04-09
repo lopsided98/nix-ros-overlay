@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.2.8-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/dashing/tracetools_test/0.2.8-1";
-    name = "archive.tar.gz";
-    sha256 = "a9450bbafff2fa4e1f269e4168418831dfad4a8cdca940ea2fc1fd998730acb4";
+    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/-/archive/release/dashing/tracetools_test/0.2.8-1/ros2_tracing-release-release-dashing-tracetools_test-0.2.8-1.tar.gz";
+    name = "ros2_tracing-release-release-dashing-tracetools_test-0.2.8-1.tar.gz";
+    sha256 = "f1664d011b343bcae3be8cd5e5fbe26f56cdaaf403cef05ca5ce4ce6171e035d";
   };
 
   buildType = "ament_cmake";

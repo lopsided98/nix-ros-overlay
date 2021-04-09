@@ -8,8 +8,8 @@ buildRosPackage {
   version = "1.0.29";
 
   src = fetchurl {
-    url = "https://gitlab.uni-koblenz.de/robbie/homer_tts-release/repository/archive.tar.gz?ref=release/kinetic/homer_tts/1.0.29-0";
-    name = "archive.tar.gz";
+    url = "https://gitlab.uni-koblenz.de/robbie/homer_tts-release/-/archive/release/kinetic/homer_tts/1.0.29-0/homer_tts-release-release-kinetic-homer_tts-1.0.29-0.tar.gz";
+    name = "homer_tts-release-release-kinetic-homer_tts-1.0.29-0.tar.gz";
     sha256 = "29c653c5625de780c20cf3e416c9211b0bac19f3ece308604a6fc0eae64ac555";
   };
 

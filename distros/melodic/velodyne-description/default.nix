@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-velodyne-description";
-  version = "1.0.11-r1";
+  version = "1.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/melodic/velodyne_description/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "111bc30a33cd409c18c0f1c32ff2a6c8be55d29d14907d5d7627e872c2ae0671";
+    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/melodic/velodyne_description/1.0.12-1.tar.gz";
+    name = "1.0.12-1.tar.gz";
+    sha256 = "20ce2f795658ae84dbb85a9d4f755c825352cc85090cc91be21abfc6b76db2bb";
   };
 
   buildType = "catkin";

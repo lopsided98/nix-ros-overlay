@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, audio-common-msgs, catkin, gst_all_1, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-audio-capture";
-  version = "0.3.10-r1";
+  version = "0.3.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/audio_common-release/archive/release/melodic/audio_capture/0.3.10-1.tar.gz";
-    name = "0.3.10-1.tar.gz";
-    sha256 = "5b4d47fc276ba32fb04a94ba1a7c9f50742dcff950c8e8ca83e26108a4de7c06";
+    url = "https://github.com/ros-gbp/audio_common-release/archive/release/melodic/audio_capture/0.3.11-1.tar.gz";
+    name = "0.3.11-1.tar.gz";
+    sha256 = "a992f06b5d928fa16258c4b3ec8c1474771d13380313485ce63ef4fb9dd3cc51";
   };
 
   buildType = "catkin";

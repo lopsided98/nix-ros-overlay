@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kinetic-flir-ptu-description";
-  version = "0.2.0";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/flir_ptu-release/archive/release/kinetic/flir_ptu_description/0.2.0-0.tar.gz";
-    name = "0.2.0-0.tar.gz";
-    sha256 = "90fccd005996b59742619f65837a44fcc94b4c1e76bafb7762ea076606ff50bf";
+    url = "https://github.com/ros-drivers-gbp/flir_ptu-release/archive/release/kinetic/flir_ptu_description/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "4b80e99350b01fc0b4801565b3c3089095c70db5d54df7c4cf0e89d766f69044";
   };
 
   buildType = "catkin";

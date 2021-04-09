@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, geometry-msgs, message-generation, message-runtime, roscpp, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-footprint-observer";
-  version = "0.8.12-r1";
+  version = "0.8.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_footprint_observer/0.8.12-1.tar.gz";
-    name = "0.8.12-1.tar.gz";
-    sha256 = "6e74046879cc9ddc6cc0f0e21208372360e1f9235db51033bb93c3ffda92340b";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_footprint_observer/0.8.13-1.tar.gz";
+    name = "0.8.13-1.tar.gz";
+    sha256 = "f78185b242ffe938a5fba9d51fdb38408a9e70931c85872a06c2030299e831c4";
   };
 
   buildType = "catkin";

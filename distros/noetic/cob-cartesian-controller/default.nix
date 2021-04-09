@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, catkin, cob-frame-tracker, cob-script-server, cob-srvs, cob-twist-controller, geometry-msgs, message-generation, message-runtime, python3Packages, robot-state-publisher, roscpp, roslint, rospy, rviz, std-msgs, std-srvs, tf, topic-tools, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-noetic-cob-cartesian-controller";
-  version = "0.8.12-r1";
+  version = "0.8.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_cartesian_controller/0.8.12-1.tar.gz";
-    name = "0.8.12-1.tar.gz";
-    sha256 = "1fdb0286c8fb3cb2c13963b85a23212a7b5b41ad0bdabc2d5bba085dfe3377d9";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_cartesian_controller/0.8.13-1.tar.gz";
+    name = "0.8.13-1.tar.gz";
+    sha256 = "af6c4a7445872464147f8357f8fd0be618f7145a26d342265e5c207ba0a1dce0";
   };
 
   buildType = "catkin";

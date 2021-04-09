@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-volta-msgs";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/botsync-gbp/volta-release/archive/release/melodic/volta_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "6949f3827ecc78cc7ced1ab8f03ba88705374d66ca47306f979b2ee28eeff10f";
+    url = "https://github.com/botsync-gbp/volta-release/archive/release/melodic/volta_msgs/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "483381d91e81756f81cf7a9f0e5a9de5f96f3cf7d8de27e530a497433fe1e33c";
   };
 
   buildType = "catkin";

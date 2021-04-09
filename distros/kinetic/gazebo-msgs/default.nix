@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs, std-srvs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-gazebo-msgs";
-  version = "2.5.20-r1";
+  version = "2.5.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_msgs/2.5.20-1.tar.gz";
-    name = "2.5.20-1.tar.gz";
-    sha256 = "3981052940f277bea77117b36deefe7f963483afc34820f75cf2a8abc781f24e";
+    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/kinetic/gazebo_msgs/2.5.21-1.tar.gz";
+    name = "2.5.21-1.tar.gz";
+    sha256 = "443ca41e9d52198f268e3d44ba00869ac2ee4ebe26f642ce901956eff9098df0";
   };
 
   buildType = "catkin";

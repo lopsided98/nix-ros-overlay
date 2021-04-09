@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-script-server, python3Packages, roslib, rospy }:
 buildRosPackage {
   pname = "ros-noetic-cob-command-gui";
-  version = "0.6.20-r1";
+  version = "0.6.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/cob_command_gui/0.6.20-1.tar.gz";
-    name = "0.6.20-1.tar.gz";
-    sha256 = "5f2c2ba3c291a72de4b8f837c74b64630ef8d851a6b62e5c315e4f4c1dc750ba";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/cob_command_gui/0.6.21-1.tar.gz";
+    name = "0.6.21-1.tar.gz";
+    sha256 = "673dd9d7483f604930f9412ba498cd94e06b196d4f0542c82bb363791e20e444";
   };
 
   buildType = "catkin";

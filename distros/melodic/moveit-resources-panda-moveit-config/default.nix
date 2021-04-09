@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, joint-state-publisher-gui, moveit-resources-panda-description, robot-state-publisher, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-melodic-moveit-resources-panda-moveit-config";
-  version = "0.7.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/melodic/moveit_resources_panda_moveit_config/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "7b47e6a6c571a84533c95dec9b1a6e7056843bc4e296ec20d985f293a2933763";
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/melodic/moveit_resources_panda_moveit_config/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "64287aa29d93df7a1c96ea81a22b3d9453a7be3d3d2be92f8631cbaad9a71911";
   };
 
   buildType = "catkin";

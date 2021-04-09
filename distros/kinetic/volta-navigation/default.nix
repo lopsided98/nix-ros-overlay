@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, catkin, dwa-local-planner, global-planner, gmapping, map-server, move-base }:
 buildRosPackage {
   pname = "ros-kinetic-volta-navigation";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/botsync-gbp/volta-release/archive/release/kinetic/volta_navigation/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "7d0e020355cbd333b4e14096108fc925cc0e005c58adb7d800927be1c37a5d3b";
+    url = "https://github.com/botsync-gbp/volta-release/archive/release/kinetic/volta_navigation/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "635ff7f55e74e8a06ce59881d26418172b8093a7ee51249d0b0f9960d6918592";
   };
 
   buildType = "catkin";

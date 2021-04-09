@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, rosserial-client, rosserial-python }:
 buildRosPackage {
   pname = "ros-noetic-rosserial-vex-cortex";
-  version = "0.9.1-r1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_vex_cortex/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "3468b34c8339af45c03b05a8393b49bf81b3b1e5f4e19ae87f31ab434dbc1ebe";
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_vex_cortex/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "8b88193e6ba6f2f6675575989424bf6d9b1e8fdd48d4199d3248b22e6f0629e6";
   };
 
   buildType = "catkin";

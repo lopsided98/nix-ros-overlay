@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-noetic-rosserial-msgs";
-  version = "0.9.1-r1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_msgs/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "c6859213e38abe0f7420df6dda9393ca927d7b02540b74c7b993c901c0da9d2a";
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_msgs/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "5fc6ee93f3dac1fdf6256e3db2a2a9db83918cc003fd9908657e1fc22551693a";
   };
 
   buildType = "catkin";

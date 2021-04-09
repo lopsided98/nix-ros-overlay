@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, geometry-msgs, laser-geometry, launch, launch-testing, map-msgs, message-filters, nav-msgs, nav2-common, nav2-lifecycle-manager, nav2-map-server, nav2-msgs, nav2-util, nav2-voxel-grid, pluginlib, rclcpp, rclcpp-lifecycle, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-foxy-nav2-costmap-2d";
-  version = "0.4.5-r1";
+  version = "0.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_costmap_2d/0.4.5-1.tar.gz";
-    name = "0.4.5-1.tar.gz";
-    sha256 = "ca0b70bb40ae31883cfbfc18b133ef6eb388fc724c8750accd4d1a52991d7941";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_costmap_2d/0.4.7-1.tar.gz";
+    name = "0.4.7-1.tar.gz";
+    sha256 = "a0547f62e47d8436f04fa72473c690c922b1cea6132aece7709e14ab1f26914f";
   };
 
   buildType = "ament_cmake";

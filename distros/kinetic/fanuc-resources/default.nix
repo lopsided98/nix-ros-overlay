@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-fanuc-resources";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/fanuc-release/archive/release/kinetic/fanuc_resources/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "938101a15261636944fd5f35b7784d873f2405d8764980f0fa643b6255783b36";
+    url = "https://github.com/ros-industrial-release/fanuc-release/archive/release/kinetic/fanuc_resources/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "5ea4d178e127360e59d899684c37b34f3cd455395cbddf0dd998f112dd1585bd";
   };
 
   buildType = "catkin";

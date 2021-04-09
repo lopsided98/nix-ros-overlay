@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, git, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-fmi-adapter";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/boschresearch/fmi_adapter-release/archive/release/melodic/fmi_adapter/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "560f868a23b5d96c3c97ec51af8053484e4ee418d69d650d0f1465d6900683b7";
+    url = "https://github.com/boschresearch/fmi_adapter-release/archive/release/melodic/fmi_adapter/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "0894a446abbe7f62af13d424e545bb3da0bb15e307f2b26ce2b4e30f2f062fe7";
   };
 
   buildType = "catkin";

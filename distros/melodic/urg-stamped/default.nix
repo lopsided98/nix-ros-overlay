@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roslint, rostest, rosunit, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-urg-stamped";
-  version = "0.0.9-r1";
+  version = "0.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/seqsense/urg_stamped-release/archive/release/melodic/urg_stamped/0.0.9-1.tar.gz";
-    name = "0.0.9-1.tar.gz";
-    sha256 = "17819d6be60366c1c6d586d33658734e8fc008e6b95b1420c9edef5e1e2e2a43";
+    url = "https://github.com/seqsense/urg_stamped-release/archive/release/melodic/urg_stamped/0.0.10-1.tar.gz";
+    name = "0.0.10-1.tar.gz";
+    sha256 = "22e1aa2efeb41c16ecb09cfabb80b419f66e50a6b6d59e7afa529fd8b88a9685";
   };
 
   buildType = "catkin";

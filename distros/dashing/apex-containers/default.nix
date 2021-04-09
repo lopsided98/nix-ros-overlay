@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/ApexAI/apex_containers-release/repository/archive.tar.gz?ref=release/dashing/apex_containers/0.0.2-1";
-    name = "archive.tar.gz";
-    sha256 = "6f1f26ef62b25cd375d5b84bbd2cfaa4a4357d53a2e807b0e8202bc99b3f34d4";
+    url = "https://gitlab.com/ApexAI/apex_containers-release/-/archive/release/dashing/apex_containers/0.0.2-1/apex_containers-release-release-dashing-apex_containers-0.0.2-1.tar.gz";
+    name = "apex_containers-release-release-dashing-apex_containers-0.0.2-1.tar.gz";
+    sha256 = "6c0ea6a94a5ad247477f49c908d524be80873e256c9382e5b3969fc433b6bd9b";
   };
 
   buildType = "ament_cmake";

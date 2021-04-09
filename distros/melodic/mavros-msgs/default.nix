@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geographic-msgs, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mavros-msgs";
-  version = "1.6.0-r1";
+  version = "1.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/mavros_msgs/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "5759c7719ae5250552c7a7beffbb2b224bc2f8e61ec5780d0f6b70572e2a7b5e";
+    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/mavros_msgs/1.7.1-1.tar.gz";
+    name = "1.7.1-1.tar.gz";
+    sha256 = "5952f361bd61e1e5d2782026fee357f6e80a1fda93284aa3b02bdf338bc9a0cb";
   };
 
   buildType = "catkin";

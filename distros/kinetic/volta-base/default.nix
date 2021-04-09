@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-kinetic-volta-base";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/botsync-gbp/volta-release/archive/release/kinetic/volta_base/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "e472ff308a257ff5654da25a23b57e9d5632086de5968f639df58e48324d23a8";
+    url = "https://github.com/botsync-gbp/volta-release/archive/release/kinetic/volta_base/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "b020739bf02ba03af20988334fc626725e9badbdc4063ee9a923d3384777c4e6";
   };
 
   buildType = "catkin";

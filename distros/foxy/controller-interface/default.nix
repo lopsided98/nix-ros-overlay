@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, hardware-interface, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-foxy-controller-interface";
-  version = "0.2.1-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/controller_interface/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "de6215623e70a5cb2f47677d879c449ce57405180ffd1ac05f9b460e0aa56552";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/controller_interface/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "1a5dd311c14074233172bd80b22d0dfac019864f09fa7c14952f6aa2d0f6a082";
   };
 
   buildType = "ament_cmake";

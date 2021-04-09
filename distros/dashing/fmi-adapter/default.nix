@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, fmilibrary-vendor, launch, launch-ros, launch-testing, rcl-interfaces, rclcpp, rclcpp-components, rclcpp-lifecycle, rcutils, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-fmi-adapter";
-  version = "0.1.7-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/boschresearch/fmi_adapter_ros2-release/archive/release/dashing/fmi_adapter/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "882c8da40eda002b618faf08fbd7e9122f5a5ca489288b3e7a3275a8a09857f8";
+    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/dashing/fmi_adapter/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "be78c5ffcc7e4e3b59beb9b2f30d5692ef8f2a205389f35ffd36f219241ce432";
   };
 
   buildType = "ament_cmake";

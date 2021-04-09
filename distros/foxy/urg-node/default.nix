@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, boost, builtin-interfaces, diagnostic-updater, laser-proc, rclcpp, rclcpp-components, rosidl-default-generators, sensor-msgs, std-srvs, urg-c, urg-node-msgs }:
 buildRosPackage {
   pname = "ros-foxy-urg-node";
-  version = "1.0.1-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urg_node-release/archive/release/foxy/urg_node/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "5c6cc57328ebaa07396660a2e1626cce40b47be913b2ab6f79bb0708499b4587";
+    url = "https://github.com/ros2-gbp/urg_node-release/archive/release/foxy/urg_node/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "8314b58a1ca008d6409201b53dd7f093654953e025f3515a0de4dbcb862f5af0";
   };
 
   buildType = "ament_cmake";

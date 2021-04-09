@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, python3Packages, rospy, rosserial-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rosserial-python";
-  version = "0.9.1-r1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_python/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "2393f56767cc42a0eb64ec4f38a475500dc729ca5244f917209dc60d2c3c371b";
+    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_python/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "0e115dc3f3a969b38ce2eb670dd8db6caa9266857dde5c2d2032a8ef3ff83f59";
   };
 
   buildType = "catkin";

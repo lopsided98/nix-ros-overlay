@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, geometry-msgs, image-transport, qt-gui-cpp, qt5, rclcpp, rqt-gui, rqt-gui-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rqt-image-view";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_image_view-release/archive/release/foxy/rqt_image_view/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "6ac79695da146938402bdc0a125a5b92b88b9fa1af313c3aeffe6d4e92d48ad9";
+    url = "https://github.com/ros2-gbp/rqt_image_view-release/archive/release/foxy/rqt_image_view/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "3e89cdf8e7f901fc8bd16970ab61d66656cccbe6c6e892bf4ab08f9992510e55";
   };
 
   buildType = "ament_cmake";

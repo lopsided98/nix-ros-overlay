@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-volta-rules";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/botsync-gbp/volta-release/archive/release/melodic/volta_rules/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "9c57ce850b0f102782315edce77cdcc43e6008b839289d440a7cc2c21944263c";
+    url = "https://github.com/botsync-gbp/volta-release/archive/release/melodic/volta_rules/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "99e60e515400135a52f641b9e5980b9e96c2b3f6412dd87594fb7f600cc68f1f";
   };
 
   buildType = "catkin";

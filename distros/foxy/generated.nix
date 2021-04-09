@@ -166,6 +166,8 @@ self: super: {
 
  can-msgs = self.callPackage ./can-msgs {};
 
+ carla-msgs = self.callPackage ./carla-msgs {};
+
  cartographer = self.callPackage ./cartographer {};
 
  cartographer-ros = self.callPackage ./cartographer-ros {};
@@ -688,9 +690,9 @@ self: super: {
 
  nav2-recoveries = self.callPackage ./nav2-recoveries {};
 
- nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
+ nav2-regulated-pure-pursuit-controller = self.callPackage ./nav2-regulated-pure-pursuit-controller {};
 
- nav2-system-tests = self.callPackage ./nav2-system-tests {};
+ nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
 
  nav2-util = self.callPackage ./nav2-util {};
 
@@ -729,6 +731,10 @@ self: super: {
  octovis = self.callPackage ./octovis {};
 
  ompl = self.callPackage ./ompl {};
+
+ openvslam = self.callPackage ./openvslam {};
+
+ oroca-rqt-command = self.callPackage ./oroca-rqt-command {};
 
  orocos-kdl = self.callPackage ./orocos-kdl {};
 
@@ -850,6 +856,18 @@ self: super: {
 
  random-numbers = self.callPackage ./random-numbers {};
 
+ raptor-can-dbc-parser = self.callPackage ./raptor-can-dbc-parser {};
+
+ raptor-dbw-can = self.callPackage ./raptor-dbw-can {};
+
+ raptor-dbw-joystick = self.callPackage ./raptor-dbw-joystick {};
+
+ raptor-dbw-msgs = self.callPackage ./raptor-dbw-msgs {};
+
+ raptor-pdu = self.callPackage ./raptor-pdu {};
+
+ raptor-pdu-msgs = self.callPackage ./raptor-pdu-msgs {};
+
  raspimouse = self.callPackage ./raspimouse {};
 
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
@@ -963,6 +981,8 @@ self: super: {
  ros2-controllers = self.callPackage ./ros2-controllers {};
 
  ros2-ouster = self.callPackage ./ros2-ouster {};
+
+ ros2-socketcan = self.callPackage ./ros2-socketcan {};
 
  ros2action = self.callPackage ./ros2action {};
 

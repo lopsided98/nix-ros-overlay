@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, nav2-costmap-2d, rclcpp }:
 buildRosPackage {
   pname = "ros-foxy-costmap-queue";
-  version = "0.4.5-r1";
+  version = "0.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/costmap_queue/0.4.5-1.tar.gz";
-    name = "0.4.5-1.tar.gz";
-    sha256 = "9b33a055fed3295e5f807e6c7384369d5e23f13a4cde9daebd34ea5c0f2dc32e";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/costmap_queue/0.4.7-1.tar.gz";
+    name = "0.4.7-1.tar.gz";
+    sha256 = "d82e0f1922caa20a0c0a370dd60b39066f06d2baac57a4c5e70e952e30bb7cef";
   };
 
   buildType = "ament_cmake";

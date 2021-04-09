@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, nav2-lifecycle-manager, nav2-msgs, nav2-util, pluginlib, qt5, rclcpp, rclcpp-lifecycle, resource-retriever, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-foxy-nav2-rviz-plugins";
-  version = "0.4.5-r1";
+  version = "0.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_rviz_plugins/0.4.5-1.tar.gz";
-    name = "0.4.5-1.tar.gz";
-    sha256 = "b46c97f76cf4b1cea25a9bb213dce9fd2c3a7e57384032a8e92a33af6601193e";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_rviz_plugins/0.4.7-1.tar.gz";
+    name = "0.4.7-1.tar.gz";
+    sha256 = "0323e28437cf16f0d7824b6d45e503de4fa61ec81f7e41b71d4c4415f0a46996";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, std-msgs }:
 buildRosPackage {
   pname = "ros-kinetic-volta-msgs";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/botsync-gbp/volta-release/archive/release/kinetic/volta_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "5f4f17517c4bc2f55ba214811071d43582c7557a79d91e785270dc98c8bc6fd6";
+    url = "https://github.com/botsync-gbp/volta-release/archive/release/kinetic/volta_msgs/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "a2fea342fa0eebcc89eaa1abdc5caf9f3d5565828c05e654bde117a567398302";
   };
 
   buildType = "catkin";

@@ -728,6 +728,18 @@ self: super: {
 
  radar-msgs = self.callPackage ./radar-msgs {};
 
+ raptor-can-dbc-parser = self.callPackage ./raptor-can-dbc-parser {};
+
+ raptor-dbw-can = self.callPackage ./raptor-dbw-can {};
+
+ raptor-dbw-joystick = self.callPackage ./raptor-dbw-joystick {};
+
+ raptor-dbw-msgs = self.callPackage ./raptor-dbw-msgs {};
+
+ raptor-pdu = self.callPackage ./raptor-pdu {};
+
+ raptor-pdu-msgs = self.callPackage ./raptor-pdu-msgs {};
+
  raspimouse = self.callPackage ./raspimouse {};
 
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
@@ -1183,8 +1195,6 @@ self: super: {
  urg-node = self.callPackage ./urg-node {};
 
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
-
- v4l2-camera = self.callPackage ./v4l2-camera {};
 
  velodyne = self.callPackage ./velodyne {};
 

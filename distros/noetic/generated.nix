@@ -4,6 +4,14 @@
 
 self: super: {
 
+ abb-egm-msgs = self.callPackage ./abb-egm-msgs {};
+
+ abb-rapid-msgs = self.callPackage ./abb-rapid-msgs {};
+
+ abb-rapid-sm-addin-msgs = self.callPackage ./abb-rapid-sm-addin-msgs {};
+
+ abb-robot-msgs = self.callPackage ./abb-robot-msgs {};
+
  ackermann-msgs = self.callPackage ./ackermann-msgs {};
 
  ackermann-steering-controller = self.callPackage ./ackermann-steering-controller {};
@@ -320,8 +328,6 @@ self: super: {
 
  cob-scan-unifier = self.callPackage ./cob-scan-unifier {};
 
- cob-script-server = self.callPackage ./cob-script-server {};
-
  cob-sick-lms1xx = self.callPackage ./cob-sick-lms1xx {};
 
  cob-sick-s300 = self.callPackage ./cob-sick-s300 {};
@@ -396,8 +402,6 @@ self: super: {
 
  cpp-common = self.callPackage ./cpp-common {};
 
- criutils = self.callPackage ./criutils {};
-
  csm = self.callPackage ./csm {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -470,6 +474,8 @@ self: super: {
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
+ depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
+
  derived-object-msgs = self.callPackage ./derived-object-msgs {};
 
  desktop = self.callPackage ./desktop {};
@@ -499,6 +505,10 @@ self: super: {
  dnn-detect = self.callPackage ./dnn-detect {};
 
  downward = self.callPackage ./downward {};
+
+ driver-base = self.callPackage ./driver-base {};
+
+ driver-common = self.callPackage ./driver-common {};
 
  dual-quaternions = self.callPackage ./dual-quaternions {};
 
@@ -616,6 +626,8 @@ self: super: {
 
  ergodic-exploration = self.callPackage ./ergodic-exploration {};
 
+ ethercat-grant = self.callPackage ./ethercat-grant {};
+
  ethercat-hardware = self.callPackage ./ethercat-hardware {};
 
  executive-smach = self.callPackage ./executive-smach {};
@@ -722,8 +734,6 @@ self: super: {
 
  fkie-multimaster = self.callPackage ./fkie-multimaster {};
 
- fkie-multimaster-msgs = self.callPackage ./fkie-multimaster-msgs {};
-
  fkie-node-manager-daemon = self.callPackage ./fkie-node-manager-daemon {};
 
  fkie-potree-rviz-plugin = self.callPackage ./fkie-potree-rviz-plugin {};
@@ -762,11 +772,15 @@ self: super: {
 
  franka-description = self.callPackage ./franka-description {};
 
+ franka-example-controllers = self.callPackage ./franka-example-controllers {};
+
  franka-gripper = self.callPackage ./franka-gripper {};
 
  franka-hw = self.callPackage ./franka-hw {};
 
  franka-msgs = self.callPackage ./franka-msgs {};
+
+ franka-ros = self.callPackage ./franka-ros {};
 
  franka-visualization = self.callPackage ./franka-visualization {};
 
@@ -1092,8 +1106,6 @@ self: super: {
 
  key-teleop = self.callPackage ./key-teleop {};
 
- knowledge-representation = self.callPackage ./knowledge-representation {};
-
  kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-dock-drive = self.callPackage ./kobuki-dock-drive {};
@@ -1374,6 +1386,14 @@ self: super: {
 
  moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
 
+ moveit-resources-prbt-ikfast-manipulator-plugin = self.callPackage ./moveit-resources-prbt-ikfast-manipulator-plugin {};
+
+ moveit-resources-prbt-moveit-config = self.callPackage ./moveit-resources-prbt-moveit-config {};
+
+ moveit-resources-prbt-pg70-support = self.callPackage ./moveit-resources-prbt-pg70-support {};
+
+ moveit-resources-prbt-support = self.callPackage ./moveit-resources-prbt-support {};
+
  moveit-ros = self.callPackage ./moveit-ros {};
 
  moveit-ros-benchmarks = self.callPackage ./moveit-ros-benchmarks {};
@@ -1562,6 +1582,8 @@ self: super: {
 
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
+ panda-moveit-config = self.callPackage ./panda-moveit-config {};
+
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
  pcl-msgs = self.callPackage ./pcl-msgs {};
@@ -1606,6 +1628,10 @@ self: super: {
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
+ picovoice-driver = self.callPackage ./picovoice-driver {};
+
+ picovoice-msgs = self.callPackage ./picovoice-msgs {};
+
  pid = self.callPackage ./pid {};
 
  pilz-industrial-motion-testutils = self.callPackage ./pilz-industrial-motion-testutils {};
@@ -1615,6 +1641,18 @@ self: super: {
  pilz-testutils = self.callPackage ./pilz-testutils {};
 
  pilz-utils = self.callPackage ./pilz-utils {};
+
+ pincher-arm = self.callPackage ./pincher-arm {};
+
+ pincher-arm-bringup = self.callPackage ./pincher-arm-bringup {};
+
+ pincher-arm-description = self.callPackage ./pincher-arm-description {};
+
+ pincher-arm-ikfast-plugin = self.callPackage ./pincher-arm-ikfast-plugin {};
+
+ pincher-arm-moveit-config = self.callPackage ./pincher-arm-moveit-config {};
+
+ pincher-arm-moveit-demos = self.callPackage ./pincher-arm-moveit-demos {};
 
  pinocchio = self.callPackage ./pinocchio {};
 
@@ -1686,17 +1724,15 @@ self: super: {
 
  pr2-power-drivers = self.callPackage ./pr2-power-drivers {};
 
+ prosilica-camera = self.callPackage ./prosilica-camera {};
+
  prosilica-gige-sdk = self.callPackage ./prosilica-gige-sdk {};
 
  ps3joy = self.callPackage ./ps3joy {};
 
- psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
-
  py-trees = self.callPackage ./py-trees {};
 
  py-trees-msgs = self.callPackage ./py-trees-msgs {};
-
- py-trees-ros = self.callPackage ./py-trees-ros {};
 
  pybind11-catkin = self.callPackage ./pybind11-catkin {};
 
@@ -2060,8 +2096,6 @@ self: super: {
 
  rqt-py-console = self.callPackage ./rqt-py-console {};
 
- rqt-py-trees = self.callPackage ./rqt-py-trees {};
-
  rqt-reconfigure = self.callPackage ./rqt-reconfigure {};
 
  rqt-robot-dashboard = self.callPackage ./rqt-robot-dashboard {};
@@ -2312,29 +2346,17 @@ self: super: {
 
  tf2-tools = self.callPackage ./tf2-tools {};
 
+ tf2-web-republisher = self.callPackage ./tf2-web-republisher {};
+
  tf-conversions = self.callPackage ./tf-conversions {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
 
  tile-map = self.callPackage ./tile-map {};
 
+ timestamp-tools = self.callPackage ./timestamp-tools {};
+
  topic-tools = self.callPackage ./topic-tools {};
-
- toposens = self.callPackage ./toposens {};
-
- toposens-bringup = self.callPackage ./toposens-bringup {};
-
- toposens-description = self.callPackage ./toposens-description {};
-
- toposens-driver = self.callPackage ./toposens-driver {};
-
- toposens-markers = self.callPackage ./toposens-markers {};
-
- toposens-msgs = self.callPackage ./toposens-msgs {};
-
- toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
-
- toposens-sync = self.callPackage ./toposens-sync {};
 
  trac-ik = self.callPackage ./trac-ik {};
 
@@ -2506,7 +2528,15 @@ self: super: {
 
  wfov-camera-msgs = self.callPackage ./wfov-camera-msgs {};
 
+ wge100-camera = self.callPackage ./wge100-camera {};
+
+ wge100-camera-firmware = self.callPackage ./wge100-camera-firmware {};
+
+ wge100-driver = self.callPackage ./wge100-driver {};
+
  wiimote = self.callPackage ./wiimote {};
+
+ willow-maps = self.callPackage ./willow-maps {};
 
  wireless-msgs = self.callPackage ./wireless-msgs {};
 

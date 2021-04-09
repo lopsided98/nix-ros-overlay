@@ -8,8 +8,8 @@ buildRosPackage {
   version = "1.1.0";
 
   src = fetchurl {
-    url = "https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/kinetic/rdl_urdfreader/1.1.0-0";
-    name = "archive.tar.gz";
+    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/kinetic/rdl_urdfreader/1.1.0-0/rdl_release-release-kinetic-rdl_urdfreader-1.1.0-0.tar.gz";
+    name = "rdl_release-release-kinetic-rdl_urdfreader-1.1.0-0.tar.gz";
     sha256 = "44a776b10b02d4faef56d3f77df5eb31ad2f4f9424255247823ab4499d3442c5";
   };
 

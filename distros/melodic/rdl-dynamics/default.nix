@@ -8,8 +8,8 @@ buildRosPackage {
   version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/jlack/rdl_release/repository/archive.tar.gz?ref=release/melodic/rdl_dynamics/3.2.0-1";
-    name = "archive.tar.gz";
+    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_dynamics/3.2.0-1/rdl_release-release-melodic-rdl_dynamics-3.2.0-1.tar.gz";
+    name = "rdl_release-release-melodic-rdl_dynamics-3.2.0-1.tar.gz";
     sha256 = "02996f90bf325b1c47f8b436761468a0af9662aa937ec90250cf10ecd7107fa0";
   };
 

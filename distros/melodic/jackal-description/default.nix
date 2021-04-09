@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, pointgrey-camera-description, robot-state-publisher, roslaunch, urdf, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-melodic-jackal-description";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_description/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "feedd3e11505db8b62c46c3dffa7c0dac1f51084e03ac177faaa2a70d44ac8d1";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/melodic/jackal_description/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "768484a6fb6f87871c0be6797b6221ed34a03b1551afb802293f506fdbfe3edf";
   };
 
   buildType = "catkin";

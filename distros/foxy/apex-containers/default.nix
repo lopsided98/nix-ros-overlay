@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/ApexAI/apex_containers-release/repository/archive.tar.gz?ref=release/foxy/apex_containers/0.0.3-1";
-    name = "archive.tar.gz";
-    sha256 = "32ed55b4adff00c9f65f3ab34c1cfaea899ade1d73963b41edeb33a2dee445aa";
+    url = "https://gitlab.com/ApexAI/apex_containers-release/-/archive/release/foxy/apex_containers/0.0.3-1/apex_containers-release-release-foxy-apex_containers-0.0.3-1.tar.gz";
+    name = "apex_containers-release-release-foxy-apex_containers-0.0.3-1.tar.gz";
+    sha256 = "4770a7df0dd7e9026017d7b491aef0a7edcaeaf62ebfb84fc461a40bc88e3560";
   };
 
   buildType = "ament_cmake";

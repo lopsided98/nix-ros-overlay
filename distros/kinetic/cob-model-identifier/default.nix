@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, geometry-msgs, kdl-parser, orocos-kdl, roscpp, roslint, rospy, sensor-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-kinetic-cob-model-identifier";
-  version = "0.7.12-r1";
+  version = "0.7.13-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_model_identifier/0.7.12-1.tar.gz";
-    name = "0.7.12-1.tar.gz";
-    sha256 = "445832d1f31ca72a4ab0bbd1a918d6b3f9aa8dfb8ededd2c86282058e85f260c";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/kinetic/cob_model_identifier/0.7.13-2.tar.gz";
+    name = "0.7.13-2.tar.gz";
+    sha256 = "d42eba4b11b39730baaa8a7eb4883ab18e3a97ee7ffca515cbb33d924dc1bf94";
   };
 
   buildType = "catkin";

@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.5.9-r2";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/repository/archive.tar.gz?ref=release/kinetic/rokubimini_manager/0.5.9-2";
-    name = "archive.tar.gz";
-    sha256 = "2124efd250bfb13718ecd1963817cd0c8b3a9e79d8181005167241441f96f1ff";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/kinetic/rokubimini_manager/0.5.9-2/bota_driver-release-release-kinetic-rokubimini_manager-0.5.9-2.tar.gz";
+    name = "bota_driver-release-release-kinetic-rokubimini_manager-0.5.9-2.tar.gz";
+    sha256 = "a4c368d66a7cf4df89812f9ec1ef8ba9d53388dd713094581b63ef89299dae5c";
   };
 
   buildType = "catkin";

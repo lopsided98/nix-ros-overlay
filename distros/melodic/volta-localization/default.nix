@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-localization }:
 buildRosPackage {
   pname = "ros-melodic-volta-localization";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/botsync-gbp/volta-release/archive/release/melodic/volta_localization/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "6974c44859e7b94136331e399957153e94151e35588c411bd6a7fa9de8d93135";
+    url = "https://github.com/botsync-gbp/volta-release/archive/release/melodic/volta_localization/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "8b63b7df42d7f42a6d313fabb4b7d48babcde31c73cc33600b7c1ff99a7a2db2";
   };
 
   buildType = "catkin";

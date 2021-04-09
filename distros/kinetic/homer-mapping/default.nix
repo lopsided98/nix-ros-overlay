@@ -8,8 +8,8 @@ buildRosPackage {
   version = "0.1.53";
 
   src = fetchurl {
-    url = "https://gitlab.uni-koblenz.de/robbie/homer_mapping-release/repository/archive.tar.gz?ref=release/kinetic/homer_mapping/0.1.53-0";
-    name = "archive.tar.gz";
+    url = "https://gitlab.uni-koblenz.de/robbie/homer_mapping-release/-/archive/release/kinetic/homer_mapping/0.1.53-0/homer_mapping-release-release-kinetic-homer_mapping-0.1.53-0.tar.gz";
+    name = "homer_mapping-release-release-kinetic-homer_mapping-0.1.53-0.tar.gz";
     sha256 = "e654ffefc17fd17fb005adbe83c437c1c9e41c617d61971146ae1136014d9c2b";
   };
 

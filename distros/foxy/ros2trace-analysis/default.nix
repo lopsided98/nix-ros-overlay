@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, pythonPackages, ros2cli, tracetools-analysis }:
 buildRosPackage {
   pname = "ros-foxy-ros2trace-analysis";
-  version = "1.0.1-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/ros-tracing/tracetools_analysis-release/repository/archive.tar.gz?ref=release/foxy/ros2trace_analysis/1.0.1-1";
-    name = "archive.tar.gz";
-    sha256 = "98ac881b1be3b0b0d8077ceb9fd908098506c602baff404a73e4f788a905869c";
+    url = "https://gitlab.com/ros-tracing/tracetools_analysis-release/-/archive/release/foxy/ros2trace_analysis/1.0.3-1/tracetools_analysis-release-release-foxy-ros2trace_analysis-1.0.3-1.tar.gz";
+    name = "tracetools_analysis-release-release-foxy-ros2trace_analysis-1.0.3-1.tar.gz";
+    sha256 = "4cb6188b451d8fb208353528850b75d5551605615aa9942de7e6a307119b6a88";
   };
 
   buildType = "ament_python";

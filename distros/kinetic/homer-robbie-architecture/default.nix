@@ -8,8 +8,8 @@ buildRosPackage {
   version = "1.0.2-r3";
 
   src = fetchurl {
-    url = "https://gitlab.uni-koblenz.de/robbie/homer_robbie_architecture/repository/archive.tar.gz?ref=release/kinetic/homer_robbie_architecture/1.0.2-3";
-    name = "archive.tar.gz";
+    url = "https://gitlab.uni-koblenz.de/robbie/homer_robbie_architecture/-/archive/release/kinetic/homer_robbie_architecture/1.0.2-3/homer_robbie_architecture-release-kinetic-homer_robbie_architecture-1.0.2-3.tar.gz";
+    name = "homer_robbie_architecture-release-kinetic-homer_robbie_architecture-1.0.2-3.tar.gz";
     sha256 = "46d28885ce35f865ff4408dc116e7f244723b584f60a0f36ff4f66564b294d23";
   };
 

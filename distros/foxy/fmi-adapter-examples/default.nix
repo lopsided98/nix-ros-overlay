@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fmi-adapter, launch, launch-ros }:
 buildRosPackage {
   pname = "ros-foxy-fmi-adapter-examples";
-  version = "0.1.8-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/boschresearch/fmi_adapter_ros2-release/archive/release/foxy/fmi_adapter_examples/0.1.8-1.tar.gz";
-    name = "0.1.8-1.tar.gz";
-    sha256 = "55f46ea7e09bc868c5200fc9f7ba8741779aa36f942aea3d9b40708c31c58a58";
+    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/foxy/fmi_adapter_examples/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "5c333c2215505baae55f1e1ee2aa0d8ee5a1f1396eff744f417c431ac74865d6";
   };
 
   buildType = "ament_cmake";
