@@ -328,6 +328,8 @@ self: super: {
 
  cob-scan-unifier = self.callPackage ./cob-scan-unifier {};
 
+ cob-script-server = self.callPackage ./cob-script-server {};
+
  cob-sick-lms1xx = self.callPackage ./cob-sick-lms1xx {};
 
  cob-sick-s300 = self.callPackage ./cob-sick-s300 {};
@@ -401,6 +403,8 @@ self: super: {
  costmap-queue = self.callPackage ./costmap-queue {};
 
  cpp-common = self.callPackage ./cpp-common {};
+
+ criutils = self.callPackage ./criutils {};
 
  csm = self.callPackage ./csm {};
 
@@ -733,6 +737,8 @@ self: super: {
  fkie-message-filters = self.callPackage ./fkie-message-filters {};
 
  fkie-multimaster = self.callPackage ./fkie-multimaster {};
+
+ fkie-multimaster-msgs = self.callPackage ./fkie-multimaster-msgs {};
 
  fkie-node-manager-daemon = self.callPackage ./fkie-node-manager-daemon {};
 
@@ -1105,6 +1111,8 @@ self: super: {
  kdl-parser-py = self.callPackage ./kdl-parser-py {};
 
  key-teleop = self.callPackage ./key-teleop {};
+
+ knowledge-representation = self.callPackage ./knowledge-representation {};
 
  kobuki-core = self.callPackage ./kobuki-core {};
 
@@ -1730,9 +1738,13 @@ self: super: {
 
  ps3joy = self.callPackage ./ps3joy {};
 
+ psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
+
  py-trees = self.callPackage ./py-trees {};
 
  py-trees-msgs = self.callPackage ./py-trees-msgs {};
+
+ py-trees-ros = self.callPackage ./py-trees-ros {};
 
  pybind11-catkin = self.callPackage ./pybind11-catkin {};
 
@@ -2095,6 +2107,8 @@ self: super: {
  rqt-py-common = self.callPackage ./rqt-py-common {};
 
  rqt-py-console = self.callPackage ./rqt-py-console {};
+
+ rqt-py-trees = self.callPackage ./rqt-py-trees {};
 
  rqt-reconfigure = self.callPackage ./rqt-reconfigure {};
 

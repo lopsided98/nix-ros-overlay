@@ -694,6 +694,8 @@ self: super: {
 
  nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
 
+ nav2-system-tests = self.callPackage ./nav2-system-tests {};
+
  nav2-util = self.callPackage ./nav2-util {};
 
  nav2-voxel-grid = self.callPackage ./nav2-voxel-grid {};
@@ -1465,6 +1467,8 @@ self: super: {
  wiimote-msgs = self.callPackage ./wiimote-msgs {};
 
  xacro = self.callPackage ./xacro {};
+
+ xacro-live = self.callPackage ./xacro-live {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 

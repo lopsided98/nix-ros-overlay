@@ -1676,6 +1676,8 @@ self: super: {
 
  kinesis-video-streamer = self.callPackage ./kinesis-video-streamer {};
 
+ knowledge-representation = self.callPackage ./knowledge-representation {};
+
  kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-dock-drive = self.callPackage ./kobuki-dock-drive {};
@@ -2843,6 +2845,8 @@ self: super: {
  ps3joy = self.callPackage ./ps3joy {};
 
  psen-scan = self.callPackage ./psen-scan {};
+
+ psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
 
  px4-msgs = self.callPackage ./px4-msgs {};
 
