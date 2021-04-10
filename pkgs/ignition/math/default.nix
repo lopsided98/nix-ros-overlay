@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
+{ lib, stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
 , majorVersion ? "6"
 , version ? "6.7.0"
 , srcSha256 ? "0hyhlqgjx3yrmk1fgp1brgq2lk8l26sihn8yfmm0garbxi70zspb"
@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
     "-DCMAKE_INSTALL_LIBDIR:PATH=lib"
   ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/math";
     description = "Math classes and functions for robot applications";
     license = licenses.asl20;

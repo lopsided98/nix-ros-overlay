@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchFromGitHub, cmake, ignition
+{ lib, stdenv, fetchFromGitHub, cmake, ignition
 , ignition-cmake ? ignition.cmake, ignition-common ? ignition.common, tinyxml-2
 , curl, jsoncpp, libyaml, libzip
 , majorVersion ? "4"

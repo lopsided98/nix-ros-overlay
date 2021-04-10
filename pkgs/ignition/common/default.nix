@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchFromGitHub, cmake, pkgconfig, ignition
+{ lib, stdenv, fetchFromGitHub, cmake, pkgconfig, ignition
 , ignition-cmake ? ignition.cmake, ignition-math ? ignition.math, libuuid
 , tinyxml-2, freeimage, gts, ffmpeg
 , majorVersion ? "3"

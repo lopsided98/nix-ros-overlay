@@ -1,4 +1,4 @@
-{ stdenv, callPackage, ... } @ args :
+{ callPackage, ... } @ args :
 
 callPackage ./. ({
   majorVersion = "";

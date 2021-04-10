@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
+{ lib, stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
 , ignition-math ? ignition.math, ignition-msgs ? ignition.msgs, protobuf
 , libuuid, sqlite, cppzmq, zeromq
 , majorVersion ? "8"
@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
     "-DCMAKE_INSTALL_LIBDIR:PATH=lib"
   ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/transport";
     description = "Provides fast and efficient asyncronous message passing, services, and data logging.";
     license = licenses.asl20;
