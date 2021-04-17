@@ -1450,7 +1450,7 @@ function instantiate(file, attribute, drvDir, system) {
             '--add-root', path.join(drvDir, attribute), '--indirect'
         ];
         if (system !== undefined) {
-            args.push('--system', system, '--extra-platforms', system);
+            args.push('--option', 'system', system);
         }
         let drvPaths;
         try {
