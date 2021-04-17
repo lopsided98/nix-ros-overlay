@@ -119,10 +119,11 @@ class PackageSet {
     } catch (e) {
       this.failedPackages.set(drvPath, attr)
       core.debug(`${attr} (${drvPath}) failed to build`)
+      // Get last 10 lines of stderr
+      const message = e.stderr.split('\n').slice(-10).join("\n")
       return {
         status: BuildStatus.BUILD_FAILURE,
-        attr, drvPath,
-        message: e
+        attr, drvPath, message
       }
     }
 
@@ -207,7 +208,10 @@ async function run() {
     for (let r of statusResults.get(BuildStatus.BUILD_FAILURE)!) {
       await core.group(
         `Failed to build ${r.attr} (${r.drvPath})`,
-        () => nix.printLog(r.drvPath!).catch(() => undefined)
+        async () => {
+          core.warning(r.message)
+          await nix.printLog(r.drvPath!).catch(() => undefined)
+        }
       )
     }
 

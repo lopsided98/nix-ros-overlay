@@ -75,19 +75,20 @@ export async function instantiate(
   drvDir: string,
   system?: string
 ): Promise<Array<string>> {
+  let args = [
+    file, '-A', attribute,
+    '--add-root', path.join(drvDir, attribute), '--indirect'
+  ]
+  if (system !== undefined) {
+    args.push('--system', system, '--extra-platforms', system)
+  }
+  let drvPaths
   try {
-    let args = [
-      file, '-A', attribute,
-      '--add-root', path.join(drvDir, attribute), '--indirect'
-    ]
-    if (system !== undefined) {
-      args.push('--system', system, '--extra-platforms', system)
-    }
-    const { stdout: drvPaths } = await execFile('nix-instantiate', args)
-    return parseLines(drvPaths)
+    drvPaths = (await execFile('nix-instantiate', args)).stdout
   } catch (e) {
     throw e.stderr
   }
+  return parseLines(drvPaths)
 }
 
 export async function realize(

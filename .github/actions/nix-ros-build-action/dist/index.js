@@ -1147,11 +1147,12 @@ const pLimit = __importStar(__webpack_require__(523));
 const nix = __importStar(__webpack_require__(253));
 const cachix = __importStar(__webpack_require__(163));
 class PackageSet {
-    constructor(nixFile, rootAttribute, cachixCache, buildDir = "build", failedBuildsCacheFile = 'failed-builds/failed-builds.json') {
+    constructor(nixFile, rootAttribute, cachixCache, system, buildDir = "build", failedBuildsCacheFile = 'failed-builds/failed-builds.json') {
         this.failedPackages = new Map();
         this.nixFile = nixFile;
         this.rootAttribute = rootAttribute;
         this.cachixCache = cachixCache;
+        this.system = system;
         this.drvDir = path.join(buildDir, 'drvs');
         this.resultDir = path.join(buildDir, 'results');
         this.failedBuildsCacheFile = failedBuildsCacheFile;
@@ -1169,7 +1170,7 @@ class PackageSet {
             core.debug(`Instantiating ${attr}`);
             let drvPaths;
             try {
-                drvPaths = yield nix.instantiate(this.nixFile, attr, this.drvDir);
+                drvPaths = yield nix.instantiate(this.nixFile, attr, this.drvDir, this.system);
             }
             catch (e) {
                 core.debug(`${attr} failed to evaluate`);
@@ -1224,10 +1225,11 @@ class PackageSet {
             catch (e) {
                 this.failedPackages.set(drvPath, attr);
                 core.debug(`${attr} (${drvPath}) failed to build`);
+                // Get last 10 lines of stderr
+                const message = e.stderr.split('\n').slice(-10).join("\n");
                 return {
                     status: 5 /* BUILD_FAILURE */,
-                    attr, drvPath,
-                    message: e
+                    attr, drvPath, message
                 };
             }
             core.debug(`Pushing ${attr} (${drvPath})`);
@@ -1267,10 +1269,11 @@ function run() {
             const nixFile = core.getInput('nix-file');
             const rootAttribute = core.getInput('root-attribute');
             const nixpkgs = core.getInput('nixpkgs');
+            const system = core.getInput('system') || undefined;
             const parallelism = parseInt(core.getInput('parallelism'));
             const cachixCache = core.getInput('cachix-cache');
             core.exportVariable('NIX_PATH', `nixpkgs=${nixpkgs}`);
-            const packageSet = new PackageSet(nixFile, rootAttribute, cachixCache);
+            const packageSet = new PackageSet(nixFile, rootAttribute, cachixCache, system);
             let results = yield packageSet.build(parallelism);
             const statusResults = new Map([
                 [0 /* SUCCESS */, []],
@@ -1297,7 +1300,10 @@ function run() {
                 core.endGroup();
             }
             for (let r of statusResults.get(5 /* BUILD_FAILURE */)) {
-                yield core.group(`Failed to build ${r.attr} (${r.drvPath})`, () => nix.printLog(r.drvPath).catch(() => undefined));
+                yield core.group(`Failed to build ${r.attr} (${r.drvPath})`, () => __awaiter(this, void 0, void 0, function* () {
+                    core.warning(r.message);
+                    yield nix.printLog(r.drvPath).catch(() => undefined);
+                }));
             }
             for (let r of statusResults.get(4 /* DEPENDENCY_FAILURE */)) {
                 core.startGroup(`Dependency of ${r.attr} (${r.drvPath}) failed to build`);
@@ -1439,20 +1445,21 @@ function printLog(drvPath) {
 exports.printLog = printLog;
 function instantiate(file, attribute, drvDir, system) {
     return __awaiter(this, void 0, void 0, function* () {
+        let args = [
+            file, '-A', attribute,
+            '--add-root', path.join(drvDir, attribute), '--indirect'
+        ];
+        if (system !== undefined) {
+            args.push('--system', system, '--extra-platforms', system);
+        }
+        let drvPaths;
         try {
-            let args = [
-                file, '-A', attribute,
-                '--add-root', path.join(drvDir, attribute), '--indirect'
-            ];
-            if (system !== undefined) {
-                args.push('--system', system, '--extra-platforms', system);
-            }
-            const { stdout: drvPaths } = yield execFile('nix-instantiate', args);
-            return parseLines(drvPaths);
+            drvPaths = (yield execFile('nix-instantiate', args)).stdout;
         }
         catch (e) {
             throw e.stderr;
         }
+        return parseLines(drvPaths);
     });
 }
 exports.instantiate = instantiate;
