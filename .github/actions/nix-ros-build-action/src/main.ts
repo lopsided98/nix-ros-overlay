@@ -27,6 +27,7 @@ class PackageSet {
   private nixFile: string
   private rootAttribute: string
   private cachixCache: string
+  private system?: string
   private drvDir: string
   private resultDir: string
   private failedBuildsCacheFile: string
@@ -37,12 +38,14 @@ class PackageSet {
     nixFile: string,
     rootAttribute: string,
     cachixCache: string,
+    system?: string,
     buildDir = "build",
     failedBuildsCacheFile = 'failed-builds/failed-builds.json'
   ) {
     this.nixFile = nixFile
     this.rootAttribute = rootAttribute
     this.cachixCache = cachixCache
+    this.system = system
     this.drvDir = path.join(buildDir, 'drvs')
     this.resultDir = path.join(buildDir, 'results')
     this.failedBuildsCacheFile = failedBuildsCacheFile
@@ -59,7 +62,7 @@ class PackageSet {
     core.debug(`Instantiating ${attr}`)
     let drvPaths: Array<string>
     try {
-      drvPaths = await nix.instantiate(this.nixFile, attr, this.drvDir)
+      drvPaths = await nix.instantiate(this.nixFile, attr, this.drvDir, this.system)
     } catch (e) {
       core.debug(`${attr} failed to evaluate`)
       return {
@@ -164,12 +167,13 @@ async function run() {
     const nixFile = core.getInput('nix-file')
     const rootAttribute = core.getInput('root-attribute')
     const nixpkgs = core.getInput('nixpkgs')
+    const system = core.getInput('system') || undefined
     const parallelism = parseInt(core.getInput('parallelism'))
     const cachixCache = core.getInput('cachix-cache')
 
     core.exportVariable('NIX_PATH', `nixpkgs=${nixpkgs}`)
 
-    const packageSet = new PackageSet(nixFile, rootAttribute, cachixCache)
+    const packageSet = new PackageSet(nixFile, rootAttribute, cachixCache, system)
 
     let results = await packageSet.build(parallelism)
 

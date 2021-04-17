@@ -1375,7 +1375,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.build = exports.realize = exports.instantiate = exports.printLog = exports.isValidBinaryCachePath = exports.getOutputs = exports.getRequisites = exports.listAttrs = void 0;
+exports.realize = exports.instantiate = exports.printLog = exports.isValidBinaryCachePath = exports.getOutputs = exports.getRequisites = exports.listAttrs = void 0;
 const childProcess = __importStar(__webpack_require__(129));
 const util = __importStar(__webpack_require__(669));
 const path = __importStar(__webpack_require__(622));
@@ -1437,13 +1437,17 @@ function printLog(drvPath) {
     });
 }
 exports.printLog = printLog;
-function instantiate(file, attribute, drvDir) {
+function instantiate(file, attribute, drvDir, system) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const { stdout: drvPaths } = yield execFile('nix-instantiate', [
+            let args = [
                 file, '-A', attribute,
                 '--add-root', path.join(drvDir, attribute), '--indirect'
-            ]);
+            ];
+            if (system !== undefined) {
+                args.push('--system', system, '--extra-platforms', system);
+            }
+            const { stdout: drvPaths } = yield execFile('nix-instantiate', args);
             return parseLines(drvPaths);
         }
         catch (e) {
@@ -1462,16 +1466,6 @@ function realize(drvPath, attribute, resultDir) {
     });
 }
 exports.realize = realize;
-function build(file, attribute, resultDir) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const { stdout: resultPath } = yield execFile('nix-build', [
-            file, '-A', attribute,
-            '--out-link', path.join(resultDir, attribute)
-        ]);
-        return resultPath.trim();
-    });
-}
-exports.build = build;
 
 
 /***/ }),

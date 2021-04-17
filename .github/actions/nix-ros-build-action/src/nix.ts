@@ -72,13 +72,18 @@ export async function printLog(drvPath: string) {
 export async function instantiate(
   file: string,
   attribute: string,
-  drvDir: string
+  drvDir: string,
+  system?: string
 ): Promise<Array<string>> {
   try {
-    const { stdout: drvPaths } = await execFile('nix-instantiate', [
+    let args = [
       file, '-A', attribute,
       '--add-root', path.join(drvDir, attribute), '--indirect'
-    ])
+    ]
+    if (system !== undefined) {
+      args.push('--system', system, '--extra-platforms', system)
+    }
+    const { stdout: drvPaths } = await execFile('nix-instantiate', args)
     return parseLines(drvPaths)
   } catch (e) {
     throw e.stderr
@@ -93,18 +98,6 @@ export async function realize(
   const { stdout: resultPath } = await execFile('nix-store', [
     '--realise', drvPath, '--no-build-output',
     '--add-root', path.join(resultDir, attribute), '--indirect'
-  ])
-  return resultPath.trim()
-}
-
-export async function build(
-  file: string,
-  attribute: string,
-  resultDir: string
-): Promise<string> {
-  const { stdout: resultPath } = await execFile('nix-build', [
-    file, '-A', attribute,
-    '--out-link', path.join(resultDir, attribute)
   ])
   return resultPath.trim()
 }

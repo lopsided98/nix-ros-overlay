@@ -4,18 +4,26 @@ author: Ben Wolsieffer
 inputs:
   nix-file:
     description: Nix file to evaluate
+    required: true
     default: release.nix
   root-attribute:
     description: Root attribute to begin evaluation
+    required: true
     default: rosPackages
   nixpkgs:
     description: URL used to download nixpkgs
+    required: true
     default: https://github.com/lopsided98/nixpkgs/archive/nix-ros.tar.gz
+  system:
+    description: Host system name (e.g. x86_64-linux). If different from the runner architecture, binfmt/qemu must be configured.
+    required: false
   parallelism:
     description: Number of builds to run in parallel
-    default: '20'
+    required: true
+    default: "20"
   cachix-cache:
     description: Name of the Cachix cache to use
+    required: true
     default: ros
 
 runs:
