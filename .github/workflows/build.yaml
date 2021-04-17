@@ -22,6 +22,7 @@ jobs:
     - uses: cachix/install-nix-action@v13
       with:
         extra_nix_config: |
+          max-jobs = 4
           extra-platforms = aarch64-linux
     - uses: docker/setup-qemu-action@v1
     - uses: cachix/cachix-action@v9
