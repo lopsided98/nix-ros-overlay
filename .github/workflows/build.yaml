@@ -19,19 +19,19 @@ jobs:
           - aarch64-linux
     steps:
     - uses: actions/checkout@v2
-    - uses: cachix/install-nix-action@v12
+    - uses: cachix/install-nix-action@v13
       with:
         extra_nix_config: |
           extra-platforms = aarch64-linux
     - uses: docker/setup-qemu-action@v1
-    - uses: cachix/cachix-action@v8
+    - uses: cachix/cachix-action@v9
       with:
         name: ros
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
         skipPush: true
     - name: Cache Failed Builds
       id: cache-failed-builds
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       with:
         path: failed-builds
         key: failed-builds-${{ matrix.distro }}-${{ matrix.system }}-${{ github.sha }}
