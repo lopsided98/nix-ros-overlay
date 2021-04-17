@@ -31,9 +31,9 @@ jobs:
       uses: actions/cache@v1
       with:
         path: failed-builds
-        key: ${{ matrix.system }}-${{ matrix.distro }}-failed-builds-${{ github.sha }}
+        key: failed-builds-${{ matrix.distro }}-${{ matrix.system }}-${{ github.sha }}
         restore-keys: |
-          ${{ matrix.system }}-${{ matrix.distro }}-failed-builds-
+          failed-builds-${{ matrix.distro }}-${{ matrix.system }}-
     - uses: ./.github/actions/nix-ros-build-action
       with:
         root-attribute: '${{ matrix.distro }}'
