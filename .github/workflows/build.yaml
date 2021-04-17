@@ -14,9 +14,13 @@ jobs:
           - dashing
           - eloquent
           - foxy
+        system:
+          - x86_64-linux
+          - aarch64-linux
     steps:
     - uses: actions/checkout@v2
     - uses: cachix/install-nix-action@v12
+    - uses: docker/setup-qemu-action@v1
     - uses: cachix/cachix-action@v8
       with:
         name: ros
@@ -33,3 +37,4 @@ jobs:
     - uses: ./.github/actions/nix-ros-build-action
       with:
         root-attribute: '${{ matrix.distro }}'
+        system: '${{ matrix.system }}'
