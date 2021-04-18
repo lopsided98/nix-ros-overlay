@@ -1226,7 +1226,7 @@ class PackageSet {
                 this.failedPackages.set(drvPath, attr);
                 core.debug(`${attr} (${drvPath}) failed to build`);
                 // Get last 10 lines of stderr
-                const message = e.stderr.split('\n').slice(-10).join("\n");
+                const message = e.stderr.split('\n').slice(-100).join("\n");
                 return {
                     status: 5 /* BUILD_FAILURE */,
                     attr, drvPath, message
