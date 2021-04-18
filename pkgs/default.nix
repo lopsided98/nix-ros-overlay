@@ -113,4 +113,6 @@ in {
   sdformat_6 = self.callPackage ./sdformat/6.nix { };
   sdformat_9 = self.callPackage ./sdformat { };
   sdformat = self.sdformat_9;
+
+  superflore = self.python3Packages.callPackage ./superflore { };
 }
