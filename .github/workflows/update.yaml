@@ -9,14 +9,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: staging
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.x"
+      - uses: cachix/install-nix-action@v13
       - name: Install Superflore
         run: |
-          python -m pip install --upgrade pip
-          pip install git+https://github.com/lopsided98/superflore.git@nixos-support
+          nix-env -f . -iA superflore
       - name: Update overlay
         env:
           # Don't use secrets.GITHUB_TOKEN because it prevents the PR from
