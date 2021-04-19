@@ -11,9 +11,13 @@ jobs:
         with:
           ref: staging
       - uses: cachix/install-nix-action@v13
+      - uses: cachix/cachix-action@v9
+        with:
+          name: ros
+          signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
       - name: Install Superflore
         run: |
-          nix-env -f . -iA superflore
+          nix-env -f . -iA rosdep superflore
       - name: Update overlay
         env:
           # Don't use secrets.GITHUB_TOKEN because it prevents the PR from
