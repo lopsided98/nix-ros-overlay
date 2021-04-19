@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, eigen, laser-geometry, message-filters, message-generation, message-runtime, nav-msgs, roscpp, tf, tf-conversions, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, eigen, laser-geometry, message-filters, message-generation, message-runtime, nav-msgs, roscpp, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-hector-mapping";
-  version = "0.5.1-r1";
+  version = "0.5.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_mapping/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "50637b90420532e5fdbd2136eba6ebd2dcf492fb172c7929d05bb7f0d5641f1c";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_mapping/0.5.2-4.tar.gz";
+    name = "0.5.2-4.tar.gz";
+    sha256 = "ecceebe2a85de049572d9362d99760a92a22acbfedf55e27f219fb590c3b5a75";
   };
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ boost eigen laser-geometry message-filters message-runtime nav-msgs roscpp tf tf-conversions visualization-msgs ];
+  propagatedBuildInputs = [ boost eigen laser-geometry message-filters message-runtime nav-msgs roscpp tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.com/jlack/rdl_release/-/archive/release/kinetic/rdl_benchmark/1.1.0-0/rdl_release-release-kinetic-rdl_benchmark-1.1.0-0.tar.gz";
     name = "rdl_release-release-kinetic-rdl_benchmark-1.1.0-0.tar.gz";
-    sha256 = "2fd90df67337deadde23ca02ecf0f683c26c8547fc268d5b9794d784a34c37b4";
+    sha256 = "944352a11d327120539fa85abf5df6181b688162f5ea144d034be3a8114d7ac4";
   };
 
   buildType = "catkin";

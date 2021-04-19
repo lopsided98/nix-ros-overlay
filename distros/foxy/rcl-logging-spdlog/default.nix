@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcutils, spdlog, spdlog-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, performance-test-fixture, rcpputils, rcutils, spdlog, spdlog-vendor }:
 buildRosPackage {
   pname = "ros-foxy-rcl-logging-spdlog";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/foxy/rcl_logging_spdlog/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "7399d2d8559620f9b27942a23d2bf7b005c67250bb7c443ed0cfecbba65c0c4d";
+    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/foxy/rcl_logging_spdlog/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "cd2d87435ef1c30ab82e5ef29d52b20f840efb3978baf1dccfc92dc68aeaa5f6";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ rcutils spdlog spdlog-vendor ];
+  checkInputs = [ ament-lint-auto ament-lint-common performance-test-fixture ];
+  propagatedBuildInputs = [ rcpputils rcutils spdlog spdlog-vendor ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

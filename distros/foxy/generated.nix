@@ -276,6 +276,10 @@ self: super: {
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
+ dynamixel-sdk-custom-interfaces = self.callPackage ./dynamixel-sdk-custom-interfaces {};
+
+ dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
+
  ecl-build = self.callPackage ./ecl-build {};
 
  ecl-command-line = self.callPackage ./ecl-command-line {};
@@ -614,6 +618,8 @@ self: super: {
 
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
+ moveit = self.callPackage ./moveit {};
+
  moveit-common = self.callPackage ./moveit-common {};
 
  moveit-fake-controller-manager = self.callPackage ./moveit-fake-controller-manager {};
@@ -621,6 +627,10 @@ self: super: {
  moveit-kinematics = self.callPackage ./moveit-kinematics {};
 
  moveit-msgs = self.callPackage ./moveit-msgs {};
+
+ moveit-planners = self.callPackage ./moveit-planners {};
+
+ moveit-plugins = self.callPackage ./moveit-plugins {};
 
  moveit-resources = self.callPackage ./moveit-resources {};
 
@@ -633,6 +643,8 @@ self: super: {
  moveit-resources-panda-moveit-config = self.callPackage ./moveit-resources-panda-moveit-config {};
 
  moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
+
+ moveit-ros = self.callPackage ./moveit-ros {};
 
  moveit-ros-benchmarks = self.callPackage ./moveit-ros-benchmarks {};
 
@@ -649,6 +661,8 @@ self: super: {
  moveit-ros-visualization = self.callPackage ./moveit-ros-visualization {};
 
  moveit-ros-warehouse = self.callPackage ./moveit-ros-warehouse {};
+
+ moveit-runtime = self.callPackage ./moveit-runtime {};
 
  moveit-servo = self.callPackage ./moveit-servo {};
 
@@ -1188,6 +1202,8 @@ self: super: {
 
  run-moveit-cpp = self.callPackage ./run-moveit-cpp {};
 
+ run-ompl-constrained-planning = self.callPackage ./run-ompl-constrained-planning {};
+
  rviz2 = self.callPackage ./rviz2 {};
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
@@ -1204,6 +1220,8 @@ self: super: {
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
+ rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
+
  sbg-driver = self.callPackage ./sbg-driver {};
 
  sdl2-vendor = self.callPackage ./sdl2-vendor {};
@@ -1211,6 +1229,8 @@ self: super: {
  self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
+
+ sensor-msgs-py = self.callPackage ./sensor-msgs-py {};
 
  serial-driver = self.callPackage ./serial-driver {};
 
@@ -1305,6 +1325,8 @@ self: super: {
  test-msgs = self.callPackage ./test-msgs {};
 
  test-osrf-testing-tools-cpp = self.callPackage ./test-osrf-testing-tools-cpp {};
+
+ test-rmw-implementation = self.callPackage ./test-rmw-implementation {};
 
  tf2 = self.callPackage ./tf2 {};
 
@@ -1451,6 +1473,8 @@ self: super: {
  webots-ros2-examples = self.callPackage ./webots-ros2-examples {};
 
  webots-ros2-msgs = self.callPackage ./webots-ros2-msgs {};
+
+ webots-ros2-tesla = self.callPackage ./webots-ros2-tesla {};
 
  webots-ros2-tiago = self.callPackage ./webots-ros2-tiago {};
 

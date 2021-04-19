@@ -270,6 +270,10 @@ self: super: {
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
+ dynamixel-sdk-custom-interfaces = self.callPackage ./dynamixel-sdk-custom-interfaces {};
+
+ dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
+
  ecl-build = self.callPackage ./ecl-build {};
 
  ecl-command-line = self.callPackage ./ecl-command-line {};

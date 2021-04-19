@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, diagnostic-msgs, geometry-msgs, nav-msgs, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-foxy-common-interfaces";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/common_interfaces/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "7b98e9226c90afe4013f99df7fb403b93714cb92ac008926563cfa292c8a89a3";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/common_interfaces/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "d2e8668f3ad1bbab33ae9da3034df8c4a45dac95f1e92c92bcb8622688c7fa17";
   };
 
   buildType = "ament_cmake";

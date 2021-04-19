@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch-ros, launch-testing, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-launch-testing-ros";
-  version = "0.11.1-r1";
+  version = "0.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/foxy/launch_testing_ros/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "f867a370bd03c72849a7b888720dde563ee520fd7ea84c1bb64239eba2665104";
+    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/foxy/launch_testing_ros/0.11.2-1.tar.gz";
+    name = "0.11.2-1.tar.gz";
+    sha256 = "ce429e005b42234305be336353f51f307ccc19550a74a706b6694faffcf0fe07";
   };
 
   buildType = "ament_python";

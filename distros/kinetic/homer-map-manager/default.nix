@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.uni-koblenz.de/robbie/homer_map_manager-release/-/archive/release/kinetic/homer_map_manager/0.1.54-0/homer_map_manager-release-release-kinetic-homer_map_manager-0.1.54-0.tar.gz";
     name = "homer_map_manager-release-release-kinetic-homer_map_manager-0.1.54-0.tar.gz";
-    sha256 = "27440ab6119c544c875eb802466e0a7155e68e2c5bd3892b14985c76cd9423b9";
+    sha256 = "d29b4fd5a2ef833014bfe9b4ef884206840602e330df0715c53560574b03f27a";
   };
 
   buildType = "catkin";

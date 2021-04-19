@@ -2064,6 +2064,8 @@ self: super: {
 
  move-base-sequence = self.callPackage ./move-base-sequence {};
 
+ move-basic = self.callPackage ./move-basic {};
+
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
  moveback-recovery = self.callPackage ./moveback-recovery {};
@@ -2965,6 +2967,8 @@ self: super: {
  range-sensor-layer = self.callPackage ./range-sensor-layer {};
 
  raw-description = self.callPackage ./raw-description {};
+
+ razor-imu-9dof = self.callPackage ./razor-imu-9dof {};
 
  rc-cloud-accumulator = self.callPackage ./rc-cloud-accumulator {};
 

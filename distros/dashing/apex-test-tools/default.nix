@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.com/ApexAI/apex_test_tools-release/-/archive/release/dashing/apex_test_tools/0.0.1-1/apex_test_tools-release-release-dashing-apex_test_tools-0.0.1-1.tar.gz";
     name = "apex_test_tools-release-release-dashing-apex_test_tools-0.0.1-1.tar.gz";
-    sha256 = "b6b2e089f91c2599d15173c41729109d70a03fc1e41823ffa1b293c9fdb461d4";
+    sha256 = "af1274a412a1f009810082131becd9f24130b28deb38e998203f974548bf6c39";
   };
 
   buildType = "ament_cmake";

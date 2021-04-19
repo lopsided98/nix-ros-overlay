@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-std-srvs";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/std_srvs/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "3f9f8cc2e1882b0a4bb008dbee489d73b1bf6c63436f6a53b210d888906c49de";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/std_srvs/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "a7b2e324ece1e54527f5acdcf1cd455cd7018af07d8ab6cfeb75de4840bd8218";
   };
 
   buildType = "ament_cmake";

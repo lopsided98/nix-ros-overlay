@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-foxy-rmw-implementation-cmake";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw-release/archive/release/foxy/rmw_implementation_cmake/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "ce4ff804bb7a9f35d597464bd2808c20ac5a48d34d414af1e67b5abaa00236cb";
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/foxy/rmw_implementation_cmake/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "e04fd128652b0627abeb64c7057ab0bcb938135c9aa3f27f03ee17eed14cb8a0";
   };
 
   buildType = "ament_cmake";

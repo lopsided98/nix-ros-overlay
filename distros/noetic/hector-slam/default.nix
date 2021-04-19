@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hector-compressed-map-transport, hector-geotiff, hector-geotiff-launch, hector-geotiff-plugins, hector-imu-attitude-to-tf, hector-map-server, hector-map-tools, hector-mapping, hector-marker-drawing, hector-nav-msgs, hector-slam-launch, hector-trajectory-server }:
 buildRosPackage {
   pname = "ros-noetic-hector-slam";
-  version = "0.5.1-r1";
+  version = "0.5.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_slam/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "30fb9aa259bc9ee0c7bd466098c612cb2e72a75ae6383207bff985b2c30e901d";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_slam/0.5.2-4.tar.gz";
+    name = "0.5.2-4.tar.gz";
+    sha256 = "d2d894897f630824f2ea1638608e99badafff6aa0a4b1940c1fc59b6b0e5eb64";
   };
 
   buildType = "catkin";

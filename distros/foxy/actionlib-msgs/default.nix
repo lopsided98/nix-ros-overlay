@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-actionlib-msgs";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/actionlib_msgs/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "f4f3e0b24772bbdde05690d3541d2f90669a3e6099db046a7ec1f6dda201c51f";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/actionlib_msgs/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "8f4f77ee69cffa1b9cf0aade27448e44ee649a6107b08a6e298b62f366fbc3d5";
   };
 
   buildType = "ament_cmake";

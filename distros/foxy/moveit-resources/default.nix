@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, moveit-resources-fanuc-description, moveit-resources-fanuc-moveit-config, moveit-resources-panda-description, moveit-resources-panda-moveit-config, moveit-resources-pr2-description, robot-state-publisher }:
 buildRosPackage {
   pname = "ros-foxy-moveit-resources";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit_resources-release/archive/release/foxy/moveit_resources/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "aaf2f2431e536be29d3747476f9a5603b0e62cf89456516611f67d35cf72b0a9";
+    url = "https://github.com/moveit/moveit_resources-release/archive/release/foxy/moveit_resources/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "a3063cafb4d3c4210ee74b6554ffef1ffc965fe1dfd4df8ec91ffb605f3e4e0c";
   };
 
   buildType = "ament_cmake";

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/foxy/marti_sensor_msgs/1.2.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/foxy/marti_sensor_msgs/1.2.0-1.tar.gz";
     name = "1.2.0-1.tar.gz";
     sha256 = "83f60894f864fc337c8062b43dd8882b8c6049633820048a1cad35988eb0d682";
   };

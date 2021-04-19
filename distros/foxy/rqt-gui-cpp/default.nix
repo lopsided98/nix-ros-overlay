@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt-gui, qt-gui-cpp, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-foxy-rqt-gui-cpp";
-  version = "1.0.7-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/foxy/rqt_gui_cpp/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "3b1d267733147a33e3a689144f64d42c4482449b544fabaec96702466e8885e0";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/foxy/rqt_gui_cpp/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "4a822b3483a082a53a52a7f071f861d370dedf5274b86eede42603c12f4b7600";
   };
 
   buildType = "ament_cmake";

@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.com/ros-tracing/tracetools_analysis-release/-/archive/release/dashing/tracetools_analysis/0.2.1-1/tracetools_analysis-release-release-dashing-tracetools_analysis-0.2.1-1.tar.gz";
     name = "tracetools_analysis-release-release-dashing-tracetools_analysis-0.2.1-1.tar.gz";
-    sha256 = "9136f5999555452ed1960996a6d725c3859665d907cc03568b882f97aa02c53c";
+    sha256 = "08617ad7569327399412dd3eaa8c7a8f81ed55625bab3a2c689d018ba160e2bb";
   };
 
   buildType = "ament_python";

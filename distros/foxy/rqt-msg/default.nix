@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, python-qt-binding, python3Packages, rclpy, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-foxy-rqt-msg";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_msg-release/archive/release/foxy/rqt_msg/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "318e4d9399ea181fe996338f30b06b41abf6bb72b6e66417b64d759122f9ff70";
+    url = "https://github.com/ros2-gbp/rqt_msg-release/archive/release/foxy/rqt_msg/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "6ce023ae638defd6ed5f9e1253f4d15db896e96b139f08114d73e4af1cfb2a42";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen }:
 buildRosPackage {
   pname = "ros-noetic-iris-lama";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/eupedrosa/iris_lama-release/archive/release/noetic/iris_lama/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "2bf9cd1fbcdfbd21d7bdcd2951d12f60badb8cc54c5007ef703be7ab1bd993ce";
+    url = "https://github.com/eupedrosa/iris_lama-release/archive/release/noetic/iris_lama/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "e44735c6be4270290423282d6dcb8240c750373bcc2e2ce1e3adacff6c0be378";
   };
 
   buildType = "catkin";

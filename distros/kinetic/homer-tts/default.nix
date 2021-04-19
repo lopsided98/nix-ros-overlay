@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.uni-koblenz.de/robbie/homer_tts-release/-/archive/release/kinetic/homer_tts/1.0.29-0/homer_tts-release-release-kinetic-homer_tts-1.0.29-0.tar.gz";
     name = "homer_tts-release-release-kinetic-homer_tts-1.0.29-0.tar.gz";
-    sha256 = "29c653c5625de780c20cf3e416c9211b0bac19f3ece308604a6fc0eae64ac555";
+    sha256 = "e8141568b40781c5e7ae02a50a28a66e5c51c9d9f8b360d5820a78efdf8d7361";
   };
 
   buildType = "catkin";

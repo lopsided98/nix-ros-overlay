@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-hector-imu-attitude-to-tf";
-  version = "0.5.1-r1";
+  version = "0.5.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_imu_attitude_to_tf/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "ef7b01ee4e41b8929813fb34fe31b543b82205194e3b96ec9adc3e382a5ae0fe";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_imu_attitude_to_tf/0.5.2-4.tar.gz";
+    name = "0.5.2-4.tar.gz";
+    sha256 = "10731ab0d6e13ee76b8dca754ed32049e2a7ea518a9474d119996ea8c87373ca";
   };
 
   buildType = "catkin";

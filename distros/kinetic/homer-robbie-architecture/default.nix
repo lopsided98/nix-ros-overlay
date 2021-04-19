@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.uni-koblenz.de/robbie/homer_robbie_architecture/-/archive/release/kinetic/homer_robbie_architecture/1.0.2-3/homer_robbie_architecture-release-kinetic-homer_robbie_architecture-1.0.2-3.tar.gz";
     name = "homer_robbie_architecture-release-kinetic-homer_robbie_architecture-1.0.2-3.tar.gz";
-    sha256 = "46d28885ce35f865ff4408dc116e7f244723b584f60a0f36ff4f66564b294d23";
+    sha256 = "7907d6f5820b9edd8ecaadcb2cdf2b6fe29db77f260139d3f1203a0a2224dffa";
   };
 
   buildType = "catkin";
