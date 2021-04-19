@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hector-map-tools, hector-nav-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-noetic-hector-trajectory-server";
-  version = "0.5.1-r1";
+  version = "0.5.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_trajectory_server/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "a20848163a5e938922f81393692d51bb726f5d8a454f00d3c394838fc6651b3f";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_trajectory_server/0.5.2-4.tar.gz";
+    name = "0.5.2-4.tar.gz";
+    sha256 = "44921895097d9e11f05cc3055f6574fab40062b082c9e9db6f4b7d30936b3430";
   };
 
   buildType = "catkin";

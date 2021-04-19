@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.uni-koblenz.de/robbie/homer_msgs-release/-/archive/release/kinetic/homer_msgs/0.1.6-1/homer_msgs-release-release-kinetic-homer_msgs-0.1.6-1.tar.gz";
     name = "homer_msgs-release-release-kinetic-homer_msgs-0.1.6-1.tar.gz";
-    sha256 = "b6e7861f84afa4caf9094f2c48005f74e996ac5d1a6e31085d38246053f7a9cf";
+    sha256 = "e9f91137552c0a4f07d7fd970b053f75d8ca45a9e6957a6cc0ebdc756715e1ee";
   };
 
   buildType = "catkin";

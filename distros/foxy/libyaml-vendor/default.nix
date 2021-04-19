@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, performance-test-fixture, rcpputils }:
 buildRosPackage {
   pname = "ros-foxy-libyaml-vendor";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libyaml_vendor-release/archive/release/foxy/libyaml_vendor/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "f16180e3aded15087e9e41e9f7acb34062ab01439f0e3f7b298a4cd5e4559040";
+    url = "https://github.com/ros2-gbp/libyaml_vendor-release/archive/release/foxy/libyaml_vendor/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "d708f94e913702062a24568fa0589bdc36de45fffb7423a7155de544b81066f0";
   };
 
   buildType = "ament_cmake";

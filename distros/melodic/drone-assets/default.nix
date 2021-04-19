@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-drone-assets";
-  version = "1.3.7-r3";
+  version = "1.3.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/drone_assets/1.3.7-3.tar.gz";
-    name = "1.3.7-3.tar.gz";
-    sha256 = "ac97d1219300c698c4ee91347f65f3f452f21b40cf9e49cb95e088e440db62c0";
+    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/drone_assets/1.3.8-1.tar.gz";
+    name = "1.3.8-1.tar.gz";
+    sha256 = "78de68ca2619e7015c587d3e930b31883ad12eb22d840960e36681fb5e25b77d";
   };
 
   buildType = "catkin";

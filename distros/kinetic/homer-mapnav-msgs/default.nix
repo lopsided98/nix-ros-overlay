@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.uni-koblenz.de/robbie/homer_mapnav_msgs-release/-/archive/release/kinetic/homer_mapnav_msgs/0.1.53-0/homer_mapnav_msgs-release-release-kinetic-homer_mapnav_msgs-0.1.53-0.tar.gz";
     name = "homer_mapnav_msgs-release-release-kinetic-homer_mapnav_msgs-0.1.53-0.tar.gz";
-    sha256 = "12038984195da143f1d65ed613d1a28b8614fa57f0490feb74fe2fa994cdbf53";
+    sha256 = "e932a8d3c526d1ef820a73bdfb75d244802153e2eaccae357803a8c773a82e7e";
   };
 
   buildType = "catkin";

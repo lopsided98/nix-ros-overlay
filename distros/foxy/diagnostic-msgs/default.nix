@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-diagnostic-msgs";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/diagnostic_msgs/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "98f41a5c64c85082936161088aa03021099d5937411f570e73dd31fefba81d5a";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/diagnostic_msgs/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "73736979b129074674c16914794c51923ba37aaa0cdc07176d845e8e2d953e43";
   };
 
   buildType = "ament_cmake";

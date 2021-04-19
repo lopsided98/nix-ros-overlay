@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/dashing/marti_sensor_msgs/1.2.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/dashing/marti_sensor_msgs/1.2.0-1.tar.gz";
     name = "1.2.0-1.tar.gz";
     sha256 = "a1b125db8a086ecaf822ba2389d3bf637a4a21f6bf6f15b4437bd151b2ba04ba";
   };

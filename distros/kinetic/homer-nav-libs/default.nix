@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.uni-koblenz.de/robbie/homer_nav_libs-release/-/archive/release/kinetic/homer_nav_libs/0.1.53-0/homer_nav_libs-release-release-kinetic-homer_nav_libs-0.1.53-0.tar.gz";
     name = "homer_nav_libs-release-release-kinetic-homer_nav_libs-0.1.53-0.tar.gz";
-    sha256 = "875763c5d69764aa9dca369f7e743e1c45c59fc52df48915892afdbf22af0cb5";
+    sha256 = "afad76b9900cd46ebe3143e79af881632ca4069a3ddae67314fe6a352aebcb92";
   };
 
   buildType = "catkin";

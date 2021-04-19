@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, qt-gui, rqt-gui }:
 buildRosPackage {
   pname = "ros-foxy-rqt-gui-py";
-  version = "1.0.7-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/foxy/rqt_gui_py/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "7f8b0c9f6678b5f9f7f20bca1a8e1763fef35394981baeb1a98d8c9f760a8da2";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/foxy/rqt_gui_py/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "24676fd2cd84cbcf850d3bf5daf9a6ac42e1e388a5abf8d390cab695b9ba4008";
   };
 
   buildType = "ament_python";

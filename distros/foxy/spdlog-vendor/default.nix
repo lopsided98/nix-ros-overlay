@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, spdlog }:
 buildRosPackage {
   pname = "ros-foxy-spdlog-vendor";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/spdlog_vendor-release/archive/release/foxy/spdlog_vendor/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "59d56c44263c161b784d9cf8d1d19d4f1e99c9b0efd5266cc81b5dd893c68724";
+    url = "https://github.com/ros2-gbp/spdlog_vendor-release/archive/release/foxy/spdlog_vendor/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "9cb16123ea0cd28d9405e155011697577c1aca151b898d9a28afa63d53ce8442";
   };
 
   buildType = "ament_cmake";

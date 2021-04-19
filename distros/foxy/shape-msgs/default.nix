@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-shape-msgs";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/shape_msgs/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "3f347fe010c14636023e45890aa10be3653d5bc477feb663d70a555b4b379695";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/shape_msgs/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "b69e0218aa85cb169e8604dbb5993c75914f44a0a3df57e0878270457ca985c8";
   };
 
   buildType = "ament_cmake";

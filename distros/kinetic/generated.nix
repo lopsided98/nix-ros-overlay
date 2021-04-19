@@ -308,8 +308,6 @@ self: super: {
 
  care-o-bot = self.callPackage ./care-o-bot {};
 
- care-o-bot-robot = self.callPackage ./care-o-bot-robot {};
-
  care-o-bot-simulation = self.callPackage ./care-o-bot-simulation {};
 
  carla-msgs = self.callPackage ./carla-msgs {};
@@ -1395,8 +1393,6 @@ self: super: {
  grizzly-viz = self.callPackage ./grizzly-viz {};
 
  grpc = self.callPackage ./grpc {};
-
- gscam = self.callPackage ./gscam {};
 
  gundam-robot = self.callPackage ./gundam-robot {};
 

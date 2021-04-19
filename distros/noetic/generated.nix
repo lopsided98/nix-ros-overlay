@@ -1642,6 +1642,10 @@ self: super: {
 
  pid = self.callPackage ./pid {};
 
+ pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
+
+ pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
+
  pilz-industrial-motion-testutils = self.callPackage ./pilz-industrial-motion-testutils {};
 
  pilz-msgs = self.callPackage ./pilz-msgs {};
@@ -1773,6 +1777,8 @@ self: super: {
  random-numbers = self.callPackage ./random-numbers {};
 
  raw-description = self.callPackage ./raw-description {};
+
+ razor-imu-9dof = self.callPackage ./razor-imu-9dof {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -2333,6 +2339,20 @@ self: super: {
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
+
+ tesseract-common = self.callPackage ./tesseract-common {};
+
+ tesseract-geometry = self.callPackage ./tesseract-geometry {};
+
+ tesseract-kinematics = self.callPackage ./tesseract-kinematics {};
+
+ tesseract-scene-graph = self.callPackage ./tesseract-scene-graph {};
+
+ tesseract-support = self.callPackage ./tesseract-support {};
+
+ tesseract-urdf = self.callPackage ./tesseract-urdf {};
+
+ tesseract-visualization = self.callPackage ./tesseract-visualization {};
 
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
 

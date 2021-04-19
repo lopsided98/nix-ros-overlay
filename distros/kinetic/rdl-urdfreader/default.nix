@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.com/jlack/rdl_release/-/archive/release/kinetic/rdl_urdfreader/1.1.0-0/rdl_release-release-kinetic-rdl_urdfreader-1.1.0-0.tar.gz";
     name = "rdl_release-release-kinetic-rdl_urdfreader-1.1.0-0.tar.gz";
-    sha256 = "44a776b10b02d4faef56d3f77df5eb31ad2f4f9424255247823ab4499d3442c5";
+    sha256 = "56c2b84e35909fa309d7a5167864bf978a22554a26b0311d6c30d35589b9b7f5";
   };
 
   buildType = "catkin";

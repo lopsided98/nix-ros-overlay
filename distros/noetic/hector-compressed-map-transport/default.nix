@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, eigen, geometry-msgs, hector-map-tools, image-transport, nav-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-hector-compressed-map-transport";
-  version = "0.5.1-r1";
+  version = "0.5.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_compressed_map_transport/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "3741cf10b494678719665e84216a3a3242df28c385f53576420786b830b651f1";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_compressed_map_transport/0.5.2-4.tar.gz";
+    name = "0.5.2-4.tar.gz";
+    sha256 = "13434ed757d7aa27414ba2495d0a296b6c4100cd21c4f513be3d6ca93cbbad9f";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, roscpp, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-hector-marker-drawing";
-  version = "0.5.1-r1";
+  version = "0.5.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_marker_drawing/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "16158a1dd69bb1abc0ee73348febddda0d802d6be2630e38356931f1b1abba8b";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_marker_drawing/0.5.2-4.tar.gz";
+    name = "0.5.2-4.tar.gz";
+    sha256 = "3859c57d91000a3fe44b89821cabcec52857a70a72639c0d6f94dc216b764d55";
   };
 
   buildType = "catkin";

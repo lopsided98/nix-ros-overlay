@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, object-recognition-msgs, octomap-msgs, sensor-msgs, shape-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-noetic-moveit-msgs";
-  version = "0.11.1-r1";
+  version = "0.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_msgs-release/archive/release/noetic/moveit_msgs/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "66809976ac82cf8a3cc92091416497ab86ce48bfba5c8511c60e05c0ef1cb0cc";
+    url = "https://github.com/ros-gbp/moveit_msgs-release/archive/release/noetic/moveit_msgs/0.11.2-1.tar.gz";
+    name = "0.11.2-1.tar.gz";
+    sha256 = "414a42e930bc0d2c047ff02c631a251455df053e1cce140166208c96f5a33a9e";
   };
 
   buildType = "catkin";

@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.com/jlack/rdl_release/-/archive/release/kinetic/rdl_cmake/1.1.0-0/rdl_release-release-kinetic-rdl_cmake-1.1.0-0.tar.gz";
     name = "rdl_release-release-kinetic-rdl_cmake-1.1.0-0.tar.gz";
-    sha256 = "d7973d56abb99d31251154588af5694865301492b6eaf2fd743d8f9fda76cf3a";
+    sha256 = "a74329b5e992686e8c42fe73ec706f11446431470012ea8b8d3389d2083a2208";
   };
 
   buildType = "catkin";

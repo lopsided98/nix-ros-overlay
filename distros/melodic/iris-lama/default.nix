@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen }:
 buildRosPackage {
   pname = "ros-melodic-iris-lama";
-  version = "1.1.0-r2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/eupedrosa/iris_lama-release/archive/release/melodic/iris_lama/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "819d1176a2b631109337b9309d86a1cb3b277daa7307c33b2f658ea110f97b4b";
+    url = "https://github.com/eupedrosa/iris_lama-release/archive/release/melodic/iris_lama/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "50395fa0959650024b0ff00692fb86b9d37b7aea8d330cd82a63a9ee917c121a";
   };
 
   buildType = "catkin";

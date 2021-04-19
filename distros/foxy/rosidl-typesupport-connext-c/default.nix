@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, connext-cmake-module, rcutils, rmw, rosidl-cmake, rosidl-generator-c, rosidl-generator-dds-idl, rosidl-parser, rosidl-runtime-c, rosidl-typesupport-connext-cpp }:
 buildRosPackage {
   pname = "ros-foxy-rosidl-typesupport-connext-c";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_connext-release/archive/release/foxy/rosidl_typesupport_connext_c/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "0890657b5828a45d86b026f5f4c6a83234fc634ddac4408d5b47fe1874e3faed";
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_connext-release/archive/release/foxy/rosidl_typesupport_connext_c/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "60b24753c51030c08d9cce34541a2ce02d528759da2eb0006fdf8ceff243a204";
   };
 
   buildType = "ament_cmake";
