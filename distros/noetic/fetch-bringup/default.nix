@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, depth-image-proc, diagnostic-aggregator, fetch-description, fetch-drivers, fetch-moveit-config, fetch-navigation, fetch-open-auto-dock, fetch-teleop, graft, image-proc, joy, openni2-launch, robot-state-publisher, sensor-msgs, sick-tim, sound-play }:
 buildRosPackage {
   pname = "ros-noetic-fetch-bringup";
-  version = "0.9.2-r1";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/noetic/fetch_bringup/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "fdb2a6fbcfc4a9a5f8c06a5f037002ae252e34de6897e4adbfdedcb4f27a314a";
+    url = "https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/noetic/fetch_bringup/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "2aefed0cb404f41fd0729945bff58a05784f6ff4872faf781fd673933b7d9bb1";
   };
 
   buildType = "catkin";

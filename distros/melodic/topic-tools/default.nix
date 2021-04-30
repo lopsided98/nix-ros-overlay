@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cpp-common, message-generation, message-runtime, rosbash, rosconsole, roscpp, rostest, rostime, rosunit, std-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-topic-tools";
-  version = "1.14.10-r1";
+  version = "1.14.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/topic_tools/1.14.10-1.tar.gz";
-    name = "1.14.10-1.tar.gz";
-    sha256 = "1f3498d53b9b013ac9a6d6d85864f6646ebb3538f1658ea2cdf36ebc03e00e2b";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/topic_tools/1.14.11-1.tar.gz";
+    name = "1.14.11-1.tar.gz";
+    sha256 = "508515c4be04d35a37c6be12e600284dd0dc5b590f626f0eae901ffe4a0b8f60";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-common, moveit-ros-planning-interface }:
 buildRosPackage {
   pname = "ros-foxy-run-move-group";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/run_move_group/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "af84ec6768b2bd6e28b9cc6a2f92e98f09ca87e84b53583dfdfff61dd0528182";
+    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/run_move_group/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "453800a49b924ceb2fbfd7b49965b45e76614e4277f3fefafaecfb3d6193fb84";
   };
 
   buildType = "ament_cmake";

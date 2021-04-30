@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-config-msgs, catkin, cv-bridge, gtest, libyamlcpp, message-filters, pcl-conversions, pcl-ros, qt5, roscpp, roslint, rostest, sensor-msgs, std-msgs, tf, tf2, tf2-eigen, tf2-ros, velodyne-pointcloud }:
 buildRosPackage {
   pname = "ros-melodic-points-preprocessor";
-  version = "1.14.13-r2";
+  version = "1.14.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/core_perception-release/archive/release/melodic/points_preprocessor/1.14.13-2.tar.gz";
-    name = "1.14.13-2.tar.gz";
-    sha256 = "96180eb61847e299023fe29e03a1856c806fb152b57b670c6a50ba1cfcc6d48f";
+    url = "https://github.com/nobleo/core_perception-release/archive/release/melodic/points_preprocessor/1.14.15-1.tar.gz";
+    name = "1.14.15-1.tar.gz";
+    sha256 = "ee99435ac069adf5eec07434497732d6206558dcde942241b331d44cd478c17b";
   };
 
   buildType = "catkin";

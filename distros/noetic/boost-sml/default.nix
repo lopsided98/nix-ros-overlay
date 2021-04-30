@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, roscpp, roslint, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-boost-sml";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/boost_sml-release/archive/release/noetic/boost_sml/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "f711e5bed75fd7d931b4db94f59f73e57b3af679f6525b01d4b0e1869f72f045";
+    url = "https://github.com/PickNikRobotics/boost_sml-release/archive/release/noetic/boost_sml/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "9c30d429372d194d44eefd350ff8d03df8b7cada5b4bedba2c6a0a0628760830";
   };
 
   buildType = "catkin";

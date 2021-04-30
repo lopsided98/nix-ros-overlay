@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-hls-lfcd-lds-driver";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/hls-lfcd-lds-driver-release/archive/release/noetic/hls_lfcd_lds_driver/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "5ec411d7393221815e2c31f2a850fafea7fd2defb6874cfa660ba913fa39bd8c";
+    url = "https://github.com/ROBOTIS-GIT-release/hls-lfcd-lds-driver-release/archive/release/noetic/hls_lfcd_lds_driver/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "220169c149322ff80704155057c73c31d36bd80a9ffc98a75040061c1c4e5b1c";
   };
 
   buildType = "catkin";

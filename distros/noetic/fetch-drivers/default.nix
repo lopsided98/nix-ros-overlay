@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, catkin, curl, diagnostic-msgs, fetch-auto-dock-msgs, fetch-driver-msgs, libyamlcpp, mk, nav-msgs, power-msgs, python3, robot-calibration-msgs, robot-controllers, robot-controllers-interface, rosconsole, roscpp, roscpp-serialization, rospack, rostime, sensor-msgs, urdf, urdfdom }:
 buildRosPackage {
   pname = "ros-noetic-fetch-drivers";
-  version = "0.9.2-r1";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/noetic/fetch_drivers/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "d504e7ef63e54745253de09244b81b3fb22b518de815de094924f773893c7647";
+    url = "https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/noetic/fetch_drivers/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "0c76111986c9801ed8e104c00cfc952a7891b156355347ec00b86b36e0e3822c";
   };
 
   buildType = "catkin";

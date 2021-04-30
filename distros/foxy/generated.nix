@@ -726,6 +726,8 @@ self: super: {
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
+ nerian-stereo = self.callPackage ./nerian-stereo {};
+
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nodl-python = self.callPackage ./nodl-python {};
@@ -749,6 +751,8 @@ self: super: {
  ompl = self.callPackage ./ompl {};
 
  openvslam = self.callPackage ./openvslam {};
+
+ openzen-driver = self.callPackage ./openzen-driver {};
 
  oroca-rqt-command = self.callPackage ./oroca-rqt-command {};
 
@@ -1250,6 +1254,8 @@ self: super: {
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
+ slider-publisher = self.callPackage ./slider-publisher {};
+
  smac-planner = self.callPackage ./smac-planner {};
 
  smclib = self.callPackage ./smclib {};
@@ -1305,6 +1311,8 @@ self: super: {
  system-modes = self.callPackage ./system-modes {};
 
  system-modes-examples = self.callPackage ./system-modes-examples {};
+
+ system-modes-msgs = self.callPackage ./system-modes-msgs {};
 
  tango-icons-vendor = self.callPackage ./tango-icons-vendor {};
 

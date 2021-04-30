@@ -542,6 +542,8 @@ self: super: {
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
+ dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
+
  easy-markers = self.callPackage ./easy-markers {};
 
  ecl-build = self.callPackage ./ecl-build {};
@@ -1642,6 +1644,8 @@ self: super: {
 
  pid = self.callPackage ./pid {};
 
+ pilz-control = self.callPackage ./pilz-control {};
+
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
 
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
@@ -1649,6 +1653,10 @@ self: super: {
  pilz-industrial-motion-testutils = self.callPackage ./pilz-industrial-motion-testutils {};
 
  pilz-msgs = self.callPackage ./pilz-msgs {};
+
+ pilz-robots = self.callPackage ./pilz-robots {};
+
+ pilz-status-indicator-rqt = self.callPackage ./pilz-status-indicator-rqt {};
 
  pilz-testutils = self.callPackage ./pilz-testutils {};
 
@@ -1735,6 +1743,20 @@ self: super: {
  pr2-power-board = self.callPackage ./pr2-power-board {};
 
  pr2-power-drivers = self.callPackage ./pr2-power-drivers {};
+
+ prbt-gazebo = self.callPackage ./prbt-gazebo {};
+
+ prbt-grippers = self.callPackage ./prbt-grippers {};
+
+ prbt-hardware-support = self.callPackage ./prbt-hardware-support {};
+
+ prbt-ikfast-manipulator-plugin = self.callPackage ./prbt-ikfast-manipulator-plugin {};
+
+ prbt-moveit-config = self.callPackage ./prbt-moveit-config {};
+
+ prbt-pg70-support = self.callPackage ./prbt-pg70-support {};
+
+ prbt-support = self.callPackage ./prbt-support {};
 
  prosilica-camera = self.callPackage ./prosilica-camera {};
 
@@ -1824,6 +1846,8 @@ self: super: {
 
  robot = self.callPackage ./robot {};
 
+ robot-body-filter = self.callPackage ./robot-body-filter {};
+
  robot-calibration = self.callPackage ./robot-calibration {};
 
  robot-calibration-msgs = self.callPackage ./robot-calibration-msgs {};
@@ -1899,6 +1923,8 @@ self: super: {
  ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
 
  ros-ign-image = self.callPackage ./ros-ign-image {};
+
+ ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
 
  ros-introspection = self.callPackage ./ros-introspection {};
 
@@ -2348,6 +2374,8 @@ self: super: {
 
  tesseract-scene-graph = self.callPackage ./tesseract-scene-graph {};
 
+ tesseract-srdf = self.callPackage ./tesseract-srdf {};
+
  tesseract-support = self.callPackage ./tesseract-support {};
 
  tesseract-urdf = self.callPackage ./tesseract-urdf {};
@@ -2535,6 +2563,18 @@ self: super: {
  vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
+
+ vision-visp = self.callPackage ./vision-visp {};
+
+ visp-auto-tracker = self.callPackage ./visp-auto-tracker {};
+
+ visp-bridge = self.callPackage ./visp-bridge {};
+
+ visp-camera-calibration = self.callPackage ./visp-camera-calibration {};
+
+ visp-hand2eye-calibration = self.callPackage ./visp-hand2eye-calibration {};
+
+ visp-tracker = self.callPackage ./visp-tracker {};
 
  visualization-marker-tutorials = self.callPackage ./visualization-marker-tutorials {};
 

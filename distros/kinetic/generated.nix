@@ -868,6 +868,8 @@ self: super: {
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
+ dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
+
  dynamixel-tutorials = self.callPackage ./dynamixel-tutorials {};
 
  dynamixel-workbench = self.callPackage ./dynamixel-workbench {};

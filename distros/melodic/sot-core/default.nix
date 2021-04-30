@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, dynamic-graph, dynamic-graph-python, pinocchio }:
 buildRosPackage {
   pname = "ros-melodic-sot-core";
-  version = "4.11.5-r2";
+  version = "4.11.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/sot-core-ros-release/archive/release/melodic/sot-core/4.11.5-2.tar.gz";
-    name = "4.11.5-2.tar.gz";
-    sha256 = "cd97257236edad1d9299d1c9e26ac664760ecee65a28dcf4fc6af301ca5910d4";
+    url = "https://github.com/stack-of-tasks/sot-core-ros-release/archive/release/melodic/sot-core/4.11.6-1.tar.gz";
+    name = "4.11.6-1.tar.gz";
+    sha256 = "83bae069452c9010919d4cc4395bdd999fbc7aa34a186dcc49b057828a5e9f41";
   };
 
   buildType = "cmake";

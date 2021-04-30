@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, rosconsole, roscpp, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-message-filters";
-  version = "1.14.10-r1";
+  version = "1.14.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/message_filters/1.14.10-1.tar.gz";
-    name = "1.14.10-1.tar.gz";
-    sha256 = "dc3838cfe3975721cc0d82d8c1865d5dd5250f0f168c29a34514c58bacb85e74";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/message_filters/1.14.11-1.tar.gz";
+    name = "1.14.11-1.tar.gz";
+    sha256 = "3c6b60f9944985cfd4a8898bea6f2a94d8a392015ece2993d8559fbb88d88acb";
   };
 
   buildType = "catkin";

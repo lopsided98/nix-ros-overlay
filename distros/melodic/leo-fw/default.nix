@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rosgraph, rosmon-msgs, rosnode, rospy, rosservice, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-leo-fw";
-  version = "1.1.3-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_robot-release/archive/release/melodic/leo_fw/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "670b9fb62599c7f02cdf4b10e0a98aafc0da1231a6da823e8d5e80df22aad563";
+    url = "https://github.com/fictionlab-gbp/leo_robot-release/archive/release/melodic/leo_fw/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "42c12033819e86cda2a5050f76d739ec7fdcc17e9d6de5e545c275bffc7ede41";
   };
 
   buildType = "catkin";

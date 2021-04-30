@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genpy, rosbag, rospy, rostest }:
 buildRosPackage {
   pname = "ros-melodic-rostopic";
-  version = "1.14.10-r1";
+  version = "1.14.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rostopic/1.14.10-1.tar.gz";
-    name = "1.14.10-1.tar.gz";
-    sha256 = "1ba7c973718aedd89cd023759e1c53a39b67265f5798fb60a4fab00a4a9b76f2";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rostopic/1.14.11-1.tar.gz";
+    name = "1.14.11-1.tar.gz";
+    sha256 = "479ce44dad57f7cc9fd107d9036817ab82b4bf95d22bc71671f5c431b1ccebc5";
   };
 
   buildType = "catkin";

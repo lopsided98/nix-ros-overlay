@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, python-qt-binding, python3Packages, qt-gui, rospy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-noetic-rqt-runtime-monitor";
-  version = "0.5.8-r1";
+  version = "0.5.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_runtime_monitor-release/archive/release/noetic/rqt_runtime_monitor/0.5.8-1.tar.gz";
-    name = "0.5.8-1.tar.gz";
-    sha256 = "814f84fe0bdc566a9ad9e8b133384468c8f70423da1616bb20b58aa983f37626";
+    url = "https://github.com/ros-gbp/rqt_runtime_monitor-release/archive/release/noetic/rqt_runtime_monitor/0.5.9-1.tar.gz";
+    name = "0.5.9-1.tar.gz";
+    sha256 = "237206b6bdd8850ce375e7900125b5864646556a68acb107989624cefc5c0d33";
   };
 
   buildType = "catkin";

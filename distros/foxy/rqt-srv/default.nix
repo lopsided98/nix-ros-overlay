@@ -2,20 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclpy, rqt-gui, rqt-gui-py, rqt-msg }:
+{ lib, buildRosPackage, fetchurl, rclpy, rqt-gui, rqt-gui-py, rqt-msg }:
 buildRosPackage {
   pname = "ros-foxy-rqt-srv";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_srv-release/archive/release/foxy/rqt_srv/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "5c4fb97379ed52db252a1d5cdeb059fe45c495b6f312459a85cbe1d3964b55b6";
+    url = "https://github.com/ros2-gbp/rqt_srv-release/archive/release/foxy/rqt_srv/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "1c5dcfcc4583b81a4525ee5451701d0cb7c0e271a5b472b4cea8674c78747b9f";
   };
 
-  buildType = "ament_cmake";
+  buildType = "ament_python";
   propagatedBuildInputs = [ rclpy rqt-gui rqt-gui-py rqt-msg ];
-  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''A Python GUI plugin for introspecting available ROS message types.
