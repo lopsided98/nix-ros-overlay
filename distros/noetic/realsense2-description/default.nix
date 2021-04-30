@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosunit, xacro }:
 buildRosPackage {
   pname = "ros-noetic-realsense2-description";
-  version = "2.2.22-r1";
+  version = "2.2.24-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/noetic/realsense2_description/2.2.22-1.tar.gz";
-    name = "2.2.22-1.tar.gz";
-    sha256 = "641098008e6d40aaee4fd97dfc77164cbb4b074b48d615cebf6319a854253494";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/noetic/realsense2_description/2.2.24-1.tar.gz";
+    name = "2.2.24-1.tar.gz";
+    sha256 = "75c0d55590b06849a95533b9b3e2c440d5ded76b8aa2e94cff6596ececfd13d1";
   };
 
   buildType = "catkin";

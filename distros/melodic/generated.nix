@@ -774,6 +774,8 @@ self: super: {
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
+ dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
+
  dynamixel-workbench = self.callPackage ./dynamixel-workbench {};
 
  dynamixel-workbench-controllers = self.callPackage ./dynamixel-workbench-controllers {};
@@ -1171,6 +1173,8 @@ self: super: {
  gmapping = self.callPackage ./gmapping {};
 
  goal-passer = self.callPackage ./goal-passer {};
+
+ gpio-control = self.callPackage ./gpio-control {};
 
  gps-common = self.callPackage ./gps-common {};
 
@@ -1736,13 +1740,21 @@ self: super: {
 
  laser-joint-projector = self.callPackage ./laser-joint-projector {};
 
+ laser-ortho-projector = self.callPackage ./laser-ortho-projector {};
+
  laser-pipeline = self.callPackage ./laser-pipeline {};
 
  laser-proc = self.callPackage ./laser-proc {};
 
  laser-scan-densifier = self.callPackage ./laser-scan-densifier {};
 
+ laser-scan-matcher = self.callPackage ./laser-scan-matcher {};
+
  laser-scan-publisher-tutorial = self.callPackage ./laser-scan-publisher-tutorial {};
+
+ laser-scan-sparsifier = self.callPackage ./laser-scan-sparsifier {};
+
+ laser-scan-splitter = self.callPackage ./laser-scan-splitter {};
 
  laser-tilt-controller-filter = self.callPackage ./laser-tilt-controller-filter {};
 
@@ -2312,6 +2324,8 @@ self: super: {
 
  navigation-tutorials = self.callPackage ./navigation-tutorials {};
 
+ ncd-parser = self.callPackage ./ncd-parser {};
+
  neo-local-planner = self.callPackage ./neo-local-planner {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
@@ -2663,6 +2677,8 @@ self: super: {
  pointgrey-camera-driver = self.callPackage ./pointgrey-camera-driver {};
 
  points-preprocessor = self.callPackage ./points-preprocessor {};
+
+ polar-scan-matcher = self.callPackage ./polar-scan-matcher {};
 
  polled-camera = self.callPackage ./polled-camera {};
 
@@ -3631,6 +3647,10 @@ self: super: {
  sbpl-lattice-planner = self.callPackage ./sbpl-lattice-planner {};
 
  sbpl-recovery = self.callPackage ./sbpl-recovery {};
+
+ scan-to-cloud-converter = self.callPackage ./scan-to-cloud-converter {};
+
+ scan-tools = self.callPackage ./scan-tools {};
 
  scenario-test-tools = self.callPackage ./scenario-test-tools {};
 

@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-index-python, ament-lint-auto, builtin-interfaces, launch-ros, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-lifecycle, ros2run, rosidl-default-generators, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-index-python, ament-lint-auto, builtin-interfaces, launch-ros, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-lifecycle, ros2run, system-modes-msgs }:
 buildRosPackage {
   pname = "ros-foxy-system-modes";
-  version = "0.6.0-r1";
+  version = "0.7.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "0f100d44cce9d7043cab8b5d1241a506e11b5a30eb2eca9087f85e0a1086b0a9";
+    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes/0.7.1-2.tar.gz";
+    name = "0.7.1-2.tar.gz";
+    sha256 = "4ed0d952b61b9ae5e077f88be6cc2188ff6d0d8bb2dc95f5412a4bd14d225b61";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-gmock ament-cmake-gtest ament-cmake-pep257 ament-cmake-uncrustify ament-index-python ament-lint-auto launch-testing-ament-cmake launch-testing-ros ros2run ];
-  propagatedBuildInputs = [ builtin-interfaces launch-ros rclcpp rclcpp-lifecycle rosidl-default-generators std-msgs ];
+  propagatedBuildInputs = [ builtin-interfaces launch-ros rclcpp rclcpp-lifecycle system-modes-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

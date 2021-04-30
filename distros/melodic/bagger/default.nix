@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, rosbag, roscpp, roslint, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-bagger";
-  version = "0.1.3";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/squarerobot/bagger-release/archive/release/melodic/bagger/0.1.3-0.tar.gz";
-    name = "0.1.3-0.tar.gz";
-    sha256 = "e8275de0f4ad29f758472ae12d8ce534b53705ec57066e8611498b6077188226";
+    url = "https://github.com/squarerobot/bagger-release/archive/release/melodic/bagger/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "417cbd4e7a43e72355430d0608a328aa14091eb94650d4f28910ada5e68c664f";
   };
 
   buildType = "catkin";

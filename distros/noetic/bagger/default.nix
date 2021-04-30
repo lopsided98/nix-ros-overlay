@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, rosbag, roscpp, roslint, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-bagger";
-  version = "0.1.3-r4";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/squarerobot/bagger-release/archive/release/noetic/bagger/0.1.3-4.tar.gz";
-    name = "0.1.3-4.tar.gz";
-    sha256 = "acd129c677edeac531445ce4b48eb37e89e0f94e67ad2b45e7705a305a167ed3";
+    url = "https://github.com/squarerobot/bagger-release/archive/release/noetic/bagger/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "781c7b23f9e302fabb4b9067e62e3ef8158a8ea4f3a2276fe5ce03530884eed3";
   };
 
   buildType = "catkin";

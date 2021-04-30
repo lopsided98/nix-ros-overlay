@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, python3Packages, qt-gui-py-common, roslib, rosmsg, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-noetic-rqt-publisher";
-  version = "0.4.9-r1";
+  version = "0.4.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_publisher-release/archive/release/noetic/rqt_publisher/0.4.9-1.tar.gz";
-    name = "0.4.9-1.tar.gz";
-    sha256 = "5d6f4d72eb217abcc8e739cadda1f69a644dfcb08a28cfcdc9726b01487dd498";
+    url = "https://github.com/ros-gbp/rqt_publisher-release/archive/release/noetic/rqt_publisher/0.4.10-1.tar.gz";
+    name = "0.4.10-1.tar.gz";
+    sha256 = "5cbe23d13ab2d2c4286bb3e6d6b2e56396845732c3bf6574e6a129cedc642c07";
   };
 
   buildType = "catkin";

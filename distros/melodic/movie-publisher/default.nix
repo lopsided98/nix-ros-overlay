@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, ffmpeg, pythonPackages, rosbash-params, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-movie-publisher";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/peci1/movie_publisher-release/archive/release/melodic/movie_publisher/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "d25ff36cadc9c0e22259a1e55b9e761efcc0e9ed0f4c1fcd30c1f919dfb90f4b";
+    url = "https://github.com/peci1/movie_publisher-release/archive/release/melodic/movie_publisher/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "917662a10f791fb87c5a3e7d42433f0c0a83365c5e9eba6aa3c05642e6df1f71";
   };
 
   buildType = "catkin";

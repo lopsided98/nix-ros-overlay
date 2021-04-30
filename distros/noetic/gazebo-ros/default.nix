@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, gazebo-dev, gazebo-msgs, geometry-msgs, python, roscpp, rosgraph-msgs, roslib, std-msgs, std-srvs, tf, tinyxml }:
 buildRosPackage {
   pname = "ros-noetic-gazebo-ros";
-  version = "2.9.1-r1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/noetic/gazebo_ros/2.9.1-1.tar.gz";
-    name = "2.9.1-1.tar.gz";
-    sha256 = "e11f96ea6b51f1869770a141e130245d88a166f608935966083044859ffe1d6a";
+    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/noetic/gazebo_ros/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
+    sha256 = "24232fe990ef4d5802f18b33b0a0dcf527595adfa9ed5fe16f4b4e55d73be5b2";
   };
 
   buildType = "catkin";
