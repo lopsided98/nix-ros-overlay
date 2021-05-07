@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, octomap }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, cmake, octomap }:
 buildRosPackage {
   pname = "ros-foxy-dynamic-edt-3d";
-  version = "1.9.5-r2";
+  version = "1.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/foxy/dynamic_edt_3d/1.9.5-2.tar.gz";
-    name = "1.9.5-2.tar.gz";
-    sha256 = "54c3247c65810814e12ebae2093f4f6d18e2c98c3f9773ada68f2690d5d1eff0";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/foxy/dynamic_edt_3d/1.9.7-1.tar.gz";
+    name = "1.9.7-1.tar.gz";
+    sha256 = "875f29170fcf67ae8c6cdafe91baea41b258714a4eae930eb7c4ae712d731523";
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ octomap ];
+  propagatedBuildInputs = [ ament-cmake octomap ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-moveit-resources-panda-description";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/melodic/moveit_resources_panda_description/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "2ea454f18275d032d3840a98a7c73c8875fd79d6bd6ef30792d715b6e2e9eee1";
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/melodic/moveit_resources_panda_description/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "11ab71e36ddcaa98661635dc5c4adc03de3efd20564106387d2f330a161fad93";
   };
 
   buildType = "catkin";

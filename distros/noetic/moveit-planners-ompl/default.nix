@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, moveit-core, moveit-resources-fanuc-description, moveit-resources-panda-description, moveit-resources-pr2-description, moveit-ros-planning, ompl, pluginlib, rosconsole, roscpp, rostest, rosunit, tf2, tf2-eigen }:
 buildRosPackage {
   pname = "ros-noetic-moveit-planners-ompl";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_planners_ompl/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "5ed08d714296e7f164454f410b13a05d65c7b6ac5478770dc02bfffba07324f0";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_planners_ompl/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "97e8073177b88339e04093c31836d56ab1eab521a6bec01841cfe3ddbb08b959";
   };
 
   buildType = "catkin";

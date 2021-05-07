@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, canopen-motor-node, catkin, cmake-modules, code-coverage, controller-manager, eigen, joint-state-controller, joint-state-publisher, moveit-core, moveit-ros-planning, robot-state-publisher, roscpp, roslaunch, roslint, rosservice, rostest, rosunit, rviz, sensor-msgs, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-noetic-moveit-resources-prbt-support";
-  version = "0.7.2-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_prbt_support/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "03bd797f0ee3d71990586f630ddead1330259299c753bedf5c43adf8f66bc2e1";
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_prbt_support/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "e18673001b74ec83b9a3417f45e9bc7f86018b6a79b600be669eb800c4cd37fd";
   };
 
   buildType = "catkin";

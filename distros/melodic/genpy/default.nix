@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genmsg, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-genpy";
-  version = "0.6.15-r1";
+  version = "0.6.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/genpy-release/archive/release/melodic/genpy/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "4085c1c3c0798218f15ba925883c2e02faadce969e4179b30593e6f69a9aaacd";
+    url = "https://github.com/ros-gbp/genpy-release/archive/release/melodic/genpy/0.6.16-1.tar.gz";
+    name = "0.6.16-1.tar.gz";
+    sha256 = "1b1e9c10f9bc7976395bc7d966d6ec895f1a5d5d4c161a11c3f38c8a2e614f7d";
   };
 
   buildType = "catkin";

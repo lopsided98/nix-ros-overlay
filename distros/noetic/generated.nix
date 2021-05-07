@@ -94,6 +94,8 @@ self: super: {
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
+ azure-iot-sdk-c = self.callPackage ./azure-iot-sdk-c {};
+
  backward-ros = self.callPackage ./backward-ros {};
 
  bagger = self.callPackage ./bagger {};
@@ -412,6 +414,10 @@ self: super: {
 
  cv-camera = self.callPackage ./cv-camera {};
 
+ darknet-ros = self.callPackage ./darknet-ros {};
+
+ darknet-ros-msgs = self.callPackage ./darknet-ros-msgs {};
+
  dataspeed-can = self.callPackage ./dataspeed-can {};
 
  dataspeed-can-msg-filters = self.callPackage ./dataspeed-can-msg-filters {};
@@ -513,6 +519,10 @@ self: super: {
  driver-base = self.callPackage ./driver-base {};
 
  driver-common = self.callPackage ./driver-common {};
+
+ drone-assets = self.callPackage ./drone-assets {};
+
+ drone-wrapper = self.callPackage ./drone-wrapper {};
 
  dual-quaternions = self.callPackage ./dual-quaternions {};
 
@@ -824,6 +834,8 @@ self: super: {
 
  genmsg = self.callPackage ./genmsg {};
 
+ genmypy = self.callPackage ./genmypy {};
+
  gennodejs = self.callPackage ./gennodejs {};
 
  genpy = self.callPackage ./genpy {};
@@ -1045,6 +1057,8 @@ self: super: {
  ixblue-stdbin-decoder = self.callPackage ./ixblue-stdbin-decoder {};
 
  jderobot-assets = self.callPackage ./jderobot-assets {};
+
+ jderobot-drones = self.callPackage ./jderobot-drones {};
 
  joint-limits-interface = self.callPackage ./joint-limits-interface {};
 
@@ -1530,6 +1544,8 @@ self: super: {
 
  novatel-oem7-msgs = self.callPackage ./novatel-oem7-msgs {};
 
+ ntpd-driver = self.callPackage ./ntpd-driver {};
+
  obj-to-pointcloud = self.callPackage ./obj-to-pointcloud {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
@@ -1646,6 +1662,8 @@ self: super: {
 
  pilz-control = self.callPackage ./pilz-control {};
 
+ pilz-industrial-motion = self.callPackage ./pilz-industrial-motion {};
+
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
 
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
@@ -1653,6 +1671,8 @@ self: super: {
  pilz-industrial-motion-testutils = self.callPackage ./pilz-industrial-motion-testutils {};
 
  pilz-msgs = self.callPackage ./pilz-msgs {};
+
+ pilz-robot-programming = self.callPackage ./pilz-robot-programming {};
 
  pilz-robots = self.callPackage ./pilz-robots {};
 
@@ -2104,9 +2124,13 @@ self: super: {
 
  rqt-dep = self.callPackage ./rqt-dep {};
 
+ rqt-drone-teleop = self.callPackage ./rqt-drone-teleop {};
+
  rqt-ez-publisher = self.callPackage ./rqt-ez-publisher {};
 
  rqt-graph = self.callPackage ./rqt-graph {};
+
+ rqt-ground-robot-teleop = self.callPackage ./rqt-ground-robot-teleop {};
 
  rqt-gui = self.callPackage ./rqt-gui {};
 
@@ -2257,6 +2281,8 @@ self: super: {
  slam-toolbox-rviz = self.callPackage ./slam-toolbox-rviz {};
 
  slic = self.callPackage ./slic {};
+
+ slider-publisher = self.callPackage ./slider-publisher {};
 
  slime-ros = self.callPackage ./slime-ros {};
 

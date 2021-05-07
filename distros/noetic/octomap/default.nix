@@ -2,18 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake }:
 buildRosPackage {
   pname = "ros-noetic-octomap";
-  version = "1.9.6-r2";
+  version = "1.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/noetic/octomap/1.9.6-2.tar.gz";
-    name = "1.9.6-2.tar.gz";
-    sha256 = "8c374f5ef014c9d5496aa7bccb496dba458a5ce2c4d3ace2d6f4c4104cda3296";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/noetic/octomap/1.9.7-1.tar.gz";
+    name = "1.9.7-1.tar.gz";
+    sha256 = "070c0eb719b120814c7ab76ec0f38ba46e924bac8b5415080bc080fa3aeb404f";
   };
 
   buildType = "cmake";
+  propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

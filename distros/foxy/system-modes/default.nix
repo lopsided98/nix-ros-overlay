@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-index-python, ament-lint-auto, builtin-interfaces, launch-ros, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-lifecycle, ros2run, system-modes-msgs }:
 buildRosPackage {
   pname = "ros-foxy-system-modes";
-  version = "0.7.1-r2";
+  version = "0.7.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes/0.7.1-2.tar.gz";
-    name = "0.7.1-2.tar.gz";
-    sha256 = "4ed0d952b61b9ae5e077f88be6cc2188ff6d0d8bb2dc95f5412a4bd14d225b61";
+    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes/0.7.1-3.tar.gz";
+    name = "0.7.1-3.tar.gz";
+    sha256 = "7117fc6f467a6ec92295ad0b49b67bd3fb0c55020051f6b2a7ec513fd88840fb";
   };
 
   buildType = "ament_cmake";

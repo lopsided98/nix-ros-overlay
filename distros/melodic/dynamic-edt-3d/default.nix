@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, octomap }:
 buildRosPackage {
   pname = "ros-melodic-dynamic-edt-3d";
-  version = "1.9.0-r1";
+  version = "1.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/melodic/dynamic_edt_3d/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "b3da422d3baebaea5aa422558b878f02058f7695617e5b116ee7bdf1723c12cc";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/melodic/dynamic_edt_3d/1.9.7-1.tar.gz";
+    name = "1.9.7-1.tar.gz";
+    sha256 = "b716b393f7a79fbcf653cb96ed7ce995ef0d02f29653db7ecf7087259a31322d";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, moveit-resources-fanuc-description, robot-state-publisher, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-noetic-moveit-resources-fanuc-moveit-config";
-  version = "0.7.2-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_fanuc_moveit_config/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "98d01c59b11310f98c0c4c6fc9a9dc465256296978b5f27663d079dfa47c47cc";
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_fanuc_moveit_config/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "29cd4e85a6cef4f7f8b1c3bb7c79527a23dce9affd8d53c7c63049656d0145f6";
   };
 
   buildType = "catkin";
