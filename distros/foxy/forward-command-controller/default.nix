@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-forward-command-controller";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/forward_command_controller/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "0995f3fb3aaa6e01080b53000f9213d5be9c98fd098ab4344ffb0b726a7bed96";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/forward_command_controller/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "803c0e5a55729234362df019cb02cb18182ed7fe48d04e4bcb166c29ed01b0d4";
   };
 
   buildType = "ament_cmake";

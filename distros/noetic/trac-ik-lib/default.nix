@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, eigen, kdl-parser, nlopt, pkg-config, roscpp, urdf }:
 buildRosPackage {
   pname = "ros-noetic-trac-ik-lib";
-  version = "1.6.1-r6";
+  version = "1.6.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/traclabs/trac_ik-release/archive/release/noetic/trac_ik_lib/1.6.1-6.tar.gz";
-    name = "1.6.1-6.tar.gz";
-    sha256 = "1e3cf96735799225f4674ccd134181aa284168b7520c4a620c458e6027b1d1e7";
+    url = "https://github.com/traclabs/trac_ik-release/archive/release/noetic/trac_ik_lib/1.6.6-1.tar.gz";
+    name = "1.6.6-1.tar.gz";
+    sha256 = "3fc21184382c87e093b56e09b23d7683e216ed6fac1e807a6ce118712916ef04";
   };
 
   buildType = "catkin";

@@ -1142,6 +1142,8 @@ self: super: {
 
  genmsg = self.callPackage ./genmsg {};
 
+ genmypy = self.callPackage ./genmypy {};
+
  gennodejs = self.callPackage ./gennodejs {};
 
  genpy = self.callPackage ./genpy {};
@@ -2419,6 +2421,8 @@ self: super: {
  octomap-rviz-plugins = self.callPackage ./octomap-rviz-plugins {};
 
  octomap-server = self.callPackage ./octomap-server {};
+
+ octovis = self.callPackage ./octovis {};
 
  odom-frame-publisher = self.callPackage ./odom-frame-publisher {};
 

@@ -8,8 +8,8 @@ buildRosPackage {
   version = "0.2.8-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/ros-tracing/ros2_tracing-release/-/archive/release/dashing/ros2trace/0.2.8-1/ros2_tracing-release-release-dashing-ros2trace-0.2.8-1.tar.gz";
-    name = "ros2_tracing-release-release-dashing-ros2trace-0.2.8-1.tar.gz";
+    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/dashing/ros2trace/0.2.8-1.tar.gz";
+    name = "0.2.8-1.tar.gz";
     sha256 = "4bcc78d1660a369807ba81094fe5879ae4c719d8d4ccb0ad92dae052ad33e083";
   };
 

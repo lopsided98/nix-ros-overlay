@@ -494,6 +494,8 @@ self: super: {
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
+ joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
+
  joint-state-controller = self.callPackage ./joint-state-controller {};
 
  joint-state-publisher = self.callPackage ./joint-state-publisher {};

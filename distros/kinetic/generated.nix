@@ -1334,6 +1334,8 @@ self: super: {
 
  goal-passer = self.callPackage ./goal-passer {};
 
+ gpio-control = self.callPackage ./gpio-control {};
+
  gps-common = self.callPackage ./gps-common {};
 
  gps-goal = self.callPackage ./gps-goal {};

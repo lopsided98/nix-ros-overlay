@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, diff-drive-controller, effort-controllers, forward-command-controller, joint-state-controller, joint-trajectory-controller, position-controllers, velocity-controllers }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, diff-drive-controller, effort-controllers, forward-command-controller, joint-state-broadcaster, joint-state-controller, joint-trajectory-controller, position-controllers, velocity-controllers }:
 buildRosPackage {
   pname = "ros-foxy-ros2-controllers";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/ros2_controllers/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "5890b99f3d442576cb8960a82f2ca6078480df0a192dd97c7126b98a1545327b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/ros2_controllers/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "61fe8300e897a39cfcb778988028ba5ed7bc14cc38f6e16733c986dbc8925bc6";
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ diff-drive-controller effort-controllers forward-command-controller joint-state-controller joint-trajectory-controller position-controllers velocity-controllers ];
+  propagatedBuildInputs = [ diff-drive-controller effort-controllers forward-command-controller joint-state-broadcaster joint-state-controller joint-trajectory-controller position-controllers velocity-controllers ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libcap, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-ethercat-grant";
-  version = "0.2.5-r3";
+  version = "0.2.5-r5";
 
   src = fetchurl {
-    url = "https://github.com/shadow-robot/ethercat_grant-release/archive/release/noetic/ethercat_grant/0.2.5-3.tar.gz";
-    name = "0.2.5-3.tar.gz";
-    sha256 = "5038c00d18399930e6b88a67b0472a4b89ee3ad5c97e2110f5872975caf60cbb";
+    url = "https://github.com/shadow-robot/ethercat_grant-release/archive/release/noetic/ethercat_grant/0.2.5-5.tar.gz";
+    name = "0.2.5-5.tar.gz";
+    sha256 = "9ad306c1bb8772ccb1ec19c4baae841715a3e16e3d36116a57ab21486d596c60";
   };
 
   buildType = "catkin";

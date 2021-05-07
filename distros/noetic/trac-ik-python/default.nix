@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rospy, swig, tf, tf-conversions, trac-ik-lib }:
+{ lib, buildRosPackage, fetchurl, catkin, nlopt, rospy, swig, tf, tf-conversions, trac-ik-lib }:
 buildRosPackage {
   pname = "ros-noetic-trac-ik-python";
-  version = "1.6.1-r6";
+  version = "1.6.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/traclabs/trac_ik-release/archive/release/noetic/trac_ik_python/1.6.1-6.tar.gz";
-    name = "1.6.1-6.tar.gz";
-    sha256 = "83bd0dfb591bc4d63f8a3f3f4539ac0aa8a58c157689b715413f4d3f95a50733";
+    url = "https://github.com/traclabs/trac_ik-release/archive/release/noetic/trac_ik_python/1.6.6-1.tar.gz";
+    name = "1.6.6-1.tar.gz";
+    sha256 = "fc8d13dfbc13c7b9513a9edd3f4b552c75e5b72d702d4a8b9475af6617719773";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rospy swig tf tf-conversions trac-ik-lib ];
+  propagatedBuildInputs = [ nlopt rospy swig tf tf-conversions trac-ik-lib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
