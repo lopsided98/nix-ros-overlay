@@ -1,4 +1,4 @@
-{ lib, mkDerivation, fetchurl, fetchpatch, cmake, pkgconfig, ronn, libGL
+{ lib, mkDerivation, fetchurl, fetchpatch, cmake, pkg-config, ronn, libGL
 , openal, hdf5, curl, tinyxml, tinyxml-2, libtar, gts, libusb, qtbase, gdal
 , libuuid, graphviz, qwt6, freeimage, boost, protobuf, sdformat, tbb, ogre1_10
 , ffmpeg, ignition, ignition-cmake ? ignition.cmake0
@@ -24,7 +24,7 @@ mkDerivation rec {
 
   cmakeFlags = [ "-DUSE_HOST_CFLAGS=False" ];
 
-  nativeBuildInputs = [ cmake pkgconfig ronn ];
+  nativeBuildInputs = [ cmake pkg-config ronn ];
 
   buildInputs = [
     libGL

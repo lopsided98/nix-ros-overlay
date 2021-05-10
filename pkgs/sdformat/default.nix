@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, cmake, pkgconfig, ruby, boost, ignition
+{ lib, stdenv, fetchurl, cmake, pkg-config, ruby, boost, ignition
 , ignition-math ? ignition.math, tinyxml, urdfdom, urdfdom-headers
 , console-bridge
 , version ? "9.3.0"
@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
 
   enableParallelBuilding = true;
 
-  nativeBuildInputs = [ cmake pkgconfig ruby ];
+  nativeBuildInputs = [ cmake pkg-config ruby ];
   buildInputs = [ urdfdom ];
   propagatedBuildInputs = [ ignition-math tinyxml ]
     ++ lib.optional (lib.versionOlder version "9") boost;

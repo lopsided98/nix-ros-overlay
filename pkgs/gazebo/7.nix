@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, fetchpatch, cmake, pkgconfig, ronn, libGL, openal, hdf5
+{ lib, stdenv, fetchurl, fetchpatch, cmake, pkg-config, ronn, libGL, openal, hdf5
 , curl, tinyxml, tinyxml-2, libtar, gts, libusb1, qt4, gdal, libuuid, graphviz
 , freeimage, ffmpeg, tbb, boost, protobuf, sdformat_4, ogre1_9, ignition
 
@@ -31,7 +31,7 @@ stdenv.mkDerivation rec {
     "-DENABLE_TESTS_COMPILATION=False"
   ];
 
-  nativeBuildInputs = [ cmake pkgconfig ronn ];
+  nativeBuildInputs = [ cmake pkg-config ronn ];
 
   buildInputs = [
     libGL
