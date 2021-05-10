@@ -16,6 +16,29 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   gazebo = self.gazebo_9;
 
+  image-view = rosSuper.image-view.overrideAttrs (old: with self; {
+    # the problem is very similar to this:
+    # https://github.com/ros/ros-overlay/issues/607
+    cmakeFlags = [
+      "-DGTK2_GLIBCONFIG_INCLUDE_DIR:PATH=${glib.out}/lib/glib-2.0/include"
+      "-DGTK2_GDKCONFIG_INCLUDE_DIR:PATH=${gtk2.out}/lib/gtk-2.0/include"
+    ];
+  });
+
+  libfranka = rosSuper.libfranka.overrideAttrs (old: {
+    propagatedBuildInputs = with self; [ zlib pcre ] ++ old.propagatedBuildInputs;
+  });
+
+  moveit-core = (rosSelf.callPackage ../noetic/moveit-core {}).overrideAttrs (old: {
+    pname = "ros-melodic-moveit-core";
+    src = fetchTarball {
+      url = "https://github.com/ros-gbp/moveit-release/archive/refs/tags/release/melodic/moveit_core/1.0.7-1.tar.gz";
+      sha256 = "1b41dwdfwpywkf706403pk5ak810ijr46gri0phhi0wbnr071mqn";
+    };
+  });
+
+  moveit-ros-perception = (rosSelf.callPackage ./moveit-ros-perception {});
+
   pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
     patches ? [], ...
   }: {
