@@ -1,7 +1,7 @@
 { lib, mkDerivation, fetchurl, fetchpatch, cmake, pkg-config, ronn, libGL
 , openal, hdf5, curl, tinyxml, tinyxml-2, libtar, gts, libusb1, qtbase, gdal
-, libuuid, graphviz, qwt, freeimage, boost, protobuf, sdformat, tbb, ogre1_10
-, ffmpeg, ignition, ignition-cmake ? ignition.cmake0
+, libuuid, graphviz, libsForQt5, freeimage, boost, protobuf, sdformat, tbb
+, ogre1_10, ffmpeg, ignition, ignition-cmake ? ignition.cmake0
 , ignition-common ? ignition.common, ignition-math ? ignition.math4
 , ignition-transport ? ignition.transport, ignition-msgs ? ignition.msgs
 , ignition-fuel-tools ? ignition.fuel-tools
@@ -42,7 +42,7 @@ mkDerivation rec {
     graphviz
     ignition-cmake
     ignition-common
-    qwt
+    libsForQt5.qwt
   ] ++ optional withBulletEngineSupport bullet;
 
   propagatedBuildInputs = [
