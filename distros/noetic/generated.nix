@@ -646,6 +646,8 @@ self: super: {
 
  ethercat-hardware = self.callPackage ./ethercat-hardware {};
 
+ ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
+
  executive-smach = self.callPackage ./executive-smach {};
 
  executive-smach-visualization = self.callPackage ./executive-smach-visualization {};
@@ -1067,6 +1069,8 @@ self: super: {
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
 
  joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
+
+ joint-trajectory-action = self.callPackage ./joint-trajectory-action {};
 
  joint-trajectory-controller = self.callPackage ./joint-trajectory-controller {};
 
@@ -1734,11 +1738,19 @@ self: super: {
 
  power-msgs = self.callPackage ./power-msgs {};
 
+ pr2-arm-kinematics = self.callPackage ./pr2-arm-kinematics {};
+
+ pr2-calibration-controllers = self.callPackage ./pr2-calibration-controllers {};
+
  pr2-common = self.callPackage ./pr2-common {};
 
  pr2-controller-interface = self.callPackage ./pr2-controller-interface {};
 
  pr2-controller-manager = self.callPackage ./pr2-controller-manager {};
+
+ pr2-controllers = self.callPackage ./pr2-controllers {};
+
+ pr2-controllers-msgs = self.callPackage ./pr2-controllers-msgs {};
 
  pr2-dashboard-aggregator = self.callPackage ./pr2-dashboard-aggregator {};
 
@@ -1746,11 +1758,19 @@ self: super: {
 
  pr2-ethercat-drivers = self.callPackage ./pr2-ethercat-drivers {};
 
+ pr2-gripper-action = self.callPackage ./pr2-gripper-action {};
+
  pr2-hardware-interface = self.callPackage ./pr2-hardware-interface {};
+
+ pr2-head-action = self.callPackage ./pr2-head-action {};
+
+ pr2-kinematics = self.callPackage ./pr2-kinematics {};
 
  pr2-machine = self.callPackage ./pr2-machine {};
 
  pr2-mechanism = self.callPackage ./pr2-mechanism {};
+
+ pr2-mechanism-controllers = self.callPackage ./pr2-mechanism-controllers {};
 
  pr2-mechanism-diagnostics = self.callPackage ./pr2-mechanism-diagnostics {};
 
@@ -1879,6 +1899,8 @@ self: super: {
  robot-controllers-msgs = self.callPackage ./robot-controllers-msgs {};
 
  robot-localization = self.callPackage ./robot-localization {};
+
+ robot-mechanism-controllers = self.callPackage ./robot-mechanism-controllers {};
 
  robot-nav-rviz-plugins = self.callPackage ./robot-nav-rviz-plugins {};
 
@@ -2270,6 +2292,8 @@ self: super: {
 
  simulators = self.callPackage ./simulators {};
 
+ single-joint-position-action = self.callPackage ./single-joint-position-action {};
+
  slam-gmapping = self.callPackage ./slam-gmapping {};
 
  slam-karto = self.callPackage ./slam-karto {};
@@ -2633,6 +2657,8 @@ self: super: {
  wge100-camera-firmware = self.callPackage ./wge100-camera-firmware {};
 
  wge100-driver = self.callPackage ./wge100-driver {};
+
+ wifi-ddwrt = self.callPackage ./wifi-ddwrt {};
 
  wiimote = self.callPackage ./wiimote {};
 

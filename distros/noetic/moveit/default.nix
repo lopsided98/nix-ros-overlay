@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-commander, moveit-core, moveit-planners, moveit-plugins, moveit-ros, moveit-setup-assistant }:
 buildRosPackage {
   pname = "ros-noetic-moveit";
-  version = "1.1.3-r1";
+  version = "1.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "922477480dbdc31f24c4916ae07f567519e7d8b13adcf2af7a679f4e4ffa13a5";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit/1.1.4-1.tar.gz";
+    name = "1.1.4-1.tar.gz";
+    sha256 = "cfe740a2a6ed38b2016d76cf5e5d51c1abc55fcecfdbb88999aeb1f473f0545b";
   };
 
   buildType = "catkin";

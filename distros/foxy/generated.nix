@@ -1430,6 +1430,8 @@ self: super: {
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
+ ur-client-library = self.callPackage ./ur-client-library {};
+
  urdf = self.callPackage ./urdf {};
 
  urdfdom = self.callPackage ./urdfdom {};

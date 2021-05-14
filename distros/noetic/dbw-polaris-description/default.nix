@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, roslaunch, roslib, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-dbw-polaris-description";
-  version = "0.0.4-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_description/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "65a9dbff4e56ab7633a7dc7fbf07fc559ed21d6d47888ed799209df42530d222";
+    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_description/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "9b770811e84e71eae953cb787c745152ad47dd1331ac9e1f36d0b487cedd1a02";
   };
 
   buildType = "catkin";
