@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ocean-battery-driver, power-monitor, pr2-power-board }:
 buildRosPackage {
   pname = "ros-noetic-pr2-power-drivers";
-  version = "1.1.8-r1";
+  version = "1.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/noetic/pr2_power_drivers/1.1.8-1.tar.gz";
-    name = "1.1.8-1.tar.gz";
-    sha256 = "b516414a382960abb0ed4d2092fa16c4f85ff984d36fbea56704927116e15a19";
+    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/noetic/pr2_power_drivers/1.1.10-1.tar.gz";
+    name = "1.1.10-1.tar.gz";
+    sha256 = "49207b2ea4bf92d7ac759ae7bb42dfd4931840fd59631e754f5b2dbccaa12665";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pluginlib, pluginlib-tutorials, python3Packages, ros-introspection, roslint, stereo-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-roscompile";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/wu-robotics/roscompile-release/archive/release/noetic/roscompile/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "675aff42dbbf990ffb8eaa64c4e1edd2bd526e47be2cf36e6138d4b49716b946";
+    url = "https://github.com/wu-robotics/roscompile-release/archive/release/noetic/roscompile/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "1f4081ebd062fcc0ebe0bcb6054ba3e0673bc624a48518964dcccc5411587e82";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, dynamic-reconfigure, message-generation, message-runtime, std-msgs, uuid-msgs }:
 buildRosPackage {
   pname = "ros-noetic-py-trees-msgs";
-  version = "0.3.6-r1";
+  version = "0.3.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/stonier/py_trees_msgs-release/archive/release/noetic/py_trees_msgs/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "a472c703fa0c24a837a7a12176663d4a76cda25e174c58c6b8b700cc430b723c";
+    url = "https://github.com/stonier/py_trees_msgs-release/archive/release/noetic/py_trees_msgs/0.3.7-2.tar.gz";
+    name = "0.3.7-2.tar.gz";
+    sha256 = "9c976c1ff899f72608b244e445fe3900ef0b32b2ac4d7361c3c5ccd1a6f36c4e";
   };
 
   buildType = "catkin";

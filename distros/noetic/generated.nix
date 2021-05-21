@@ -26,6 +26,8 @@ self: super: {
 
  agni-tf-tools = self.callPackage ./agni-tf-tools {};
 
+ allocators = self.callPackage ./allocators {};
+
  amcl = self.callPackage ./amcl {};
 
  angles = self.callPackage ./angles {};
@@ -118,6 +120,8 @@ self: super: {
 
  boost-sml = self.callPackage ./boost-sml {};
 
+ bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
+
  bota-device-driver = self.callPackage ./bota-device-driver {};
 
  bota-driver = self.callPackage ./bota-driver {};
@@ -127,6 +131,16 @@ self: super: {
  bota-signal-handler = self.callPackage ./bota-signal-handler {};
 
  bota-worker = self.callPackage ./bota-worker {};
+
+ calibration = self.callPackage ./calibration {};
+
+ calibration-estimation = self.callPackage ./calibration-estimation {};
+
+ calibration-launch = self.callPackage ./calibration-launch {};
+
+ calibration-msgs = self.callPackage ./calibration-msgs {};
+
+ calibration-setup-helper = self.callPackage ./calibration-setup-helper {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
 
@@ -646,6 +660,8 @@ self: super: {
 
  ethercat-hardware = self.callPackage ./ethercat-hardware {};
 
+ ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
+
  executive-smach = self.callPackage ./executive-smach {};
 
  executive-smach-visualization = self.callPackage ./executive-smach-visualization {};
@@ -990,6 +1006,8 @@ self: super: {
 
  ifm3d = self.callPackage ./ifm3d {};
 
+ image-cb-detector = self.callPackage ./image-cb-detector {};
+
  image-common = self.callPackage ./image-common {};
 
  image-exposure-msgs = self.callPackage ./image-exposure-msgs {};
@@ -1040,6 +1058,8 @@ self: super: {
 
  interactive-markers = self.callPackage ./interactive-markers {};
 
+ interval-intersection = self.callPackage ./interval-intersection {};
+
  ipa-3d-fov-visualization = self.callPackage ./ipa-3d-fov-visualization {};
 
  iris-lama = self.callPackage ./iris-lama {};
@@ -1068,7 +1088,15 @@ self: super: {
 
  joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
 
+ joint-states-settler = self.callPackage ./joint-states-settler {};
+
+ joint-trajectory-action = self.callPackage ./joint-trajectory-action {};
+
+ joint-trajectory-action-tools = self.callPackage ./joint-trajectory-action-tools {};
+
  joint-trajectory-controller = self.callPackage ./joint-trajectory-controller {};
+
+ joint-trajectory-generator = self.callPackage ./joint-trajectory-generator {};
 
  joy = self.callPackage ./joy {};
 
@@ -1162,6 +1190,8 @@ self: super: {
 
  laser-assembler = self.callPackage ./laser-assembler {};
 
+ laser-cb-detector = self.callPackage ./laser-cb-detector {};
+
  laser-filtering = self.callPackage ./laser-filtering {};
 
  laser-filters = self.callPackage ./laser-filters {};
@@ -1229,6 +1259,8 @@ self: super: {
  libuvc-ros = self.callPackage ./libuvc-ros {};
 
  lms1xx = self.callPackage ./lms1xx {};
+
+ lockfree = self.callPackage ./lockfree {};
 
  locomotor = self.callPackage ./locomotor {};
 
@@ -1366,6 +1398,8 @@ self: super: {
 
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
 
+ monocam-settler = self.callPackage ./monocam-settler {};
+
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  move-base = self.callPackage ./move-base {};
@@ -1379,6 +1413,10 @@ self: super: {
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
  moveit = self.callPackage ./moveit {};
+
+ moveit-calibration-gui = self.callPackage ./moveit-calibration-gui {};
+
+ moveit-calibration-plugins = self.callPackage ./moveit-calibration-plugins {};
 
  moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
 
@@ -1734,11 +1772,25 @@ self: super: {
 
  power-msgs = self.callPackage ./power-msgs {};
 
+ pr2-arm-kinematics = self.callPackage ./pr2-arm-kinematics {};
+
+ pr2-arm-move-ik = self.callPackage ./pr2-arm-move-ik {};
+
+ pr2-calibration-controllers = self.callPackage ./pr2-calibration-controllers {};
+
  pr2-common = self.callPackage ./pr2-common {};
+
+ pr2-common-action-msgs = self.callPackage ./pr2-common-action-msgs {};
+
+ pr2-common-actions = self.callPackage ./pr2-common-actions {};
 
  pr2-controller-interface = self.callPackage ./pr2-controller-interface {};
 
  pr2-controller-manager = self.callPackage ./pr2-controller-manager {};
+
+ pr2-controllers = self.callPackage ./pr2-controllers {};
+
+ pr2-controllers-msgs = self.callPackage ./pr2-controllers-msgs {};
 
  pr2-dashboard-aggregator = self.callPackage ./pr2-dashboard-aggregator {};
 
@@ -1746,11 +1798,19 @@ self: super: {
 
  pr2-ethercat-drivers = self.callPackage ./pr2-ethercat-drivers {};
 
+ pr2-gripper-action = self.callPackage ./pr2-gripper-action {};
+
  pr2-hardware-interface = self.callPackage ./pr2-hardware-interface {};
+
+ pr2-head-action = self.callPackage ./pr2-head-action {};
+
+ pr2-kinematics = self.callPackage ./pr2-kinematics {};
 
  pr2-machine = self.callPackage ./pr2-machine {};
 
  pr2-mechanism = self.callPackage ./pr2-mechanism {};
+
+ pr2-mechanism-controllers = self.callPackage ./pr2-mechanism-controllers {};
 
  pr2-mechanism-diagnostics = self.callPackage ./pr2-mechanism-diagnostics {};
 
@@ -1763,6 +1823,10 @@ self: super: {
  pr2-power-board = self.callPackage ./pr2-power-board {};
 
  pr2-power-drivers = self.callPackage ./pr2-power-drivers {};
+
+ pr2-tilt-laser-interface = self.callPackage ./pr2-tilt-laser-interface {};
+
+ pr2-tuck-arms-action = self.callPackage ./pr2-tuck-arms-action {};
 
  prbt-gazebo = self.callPackage ./prbt-gazebo {};
 
@@ -1880,6 +1944,8 @@ self: super: {
 
  robot-localization = self.callPackage ./robot-localization {};
 
+ robot-mechanism-controllers = self.callPackage ./robot-mechanism-controllers {};
+
  robot-nav-rviz-plugins = self.callPackage ./robot-nav-rviz-plugins {};
 
  robot-nav-tools = self.callPackage ./robot-nav-tools {};
@@ -1952,11 +2018,15 @@ self: super: {
 
  ros-pytest = self.callPackage ./ros-pytest {};
 
+ ros-realtime = self.callPackage ./ros-realtime {};
+
  ros-tutorials = self.callPackage ./ros-tutorials {};
 
  ros-type-introspection = self.callPackage ./ros-type-introspection {};
 
  rosapi = self.callPackage ./rosapi {};
+
+ rosatomic = self.callPackage ./rosatomic {};
 
  rosauth = self.callPackage ./rosauth {};
 
@@ -2065,6 +2135,8 @@ self: super: {
  rospy-message-converter = self.callPackage ./rospy-message-converter {};
 
  rospy-tutorials = self.callPackage ./rospy-tutorials {};
+
+ rosrt = self.callPackage ./rosrt {};
 
  rosserial = self.callPackage ./rosserial {};
 
@@ -2196,6 +2268,8 @@ self: super: {
 
  rqt-web = self.callPackage ./rqt-web {};
 
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
+
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
  rviz = self.callPackage ./rviz {};
@@ -2250,6 +2324,8 @@ self: super: {
 
  self-test = self.callPackage ./self-test {};
 
+ sensor-filters = self.callPackage ./sensor-filters {};
+
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  septentrio-gnss-driver = self.callPackage ./septentrio-gnss-driver {};
@@ -2257,6 +2333,8 @@ self: super: {
  service-tools = self.callPackage ./service-tools {};
 
  sesame-ros = self.callPackage ./sesame-ros {};
+
+ settlerlib = self.callPackage ./settlerlib {};
 
  shape-msgs = self.callPackage ./shape-msgs {};
 
@@ -2269,6 +2347,8 @@ self: super: {
  simple-grasping = self.callPackage ./simple-grasping {};
 
  simulators = self.callPackage ./simulators {};
+
+ single-joint-position-action = self.callPackage ./single-joint-position-action {};
 
  slam-gmapping = self.callPackage ./slam-gmapping {};
 
@@ -2633,6 +2713,8 @@ self: super: {
  wge100-camera-firmware = self.callPackage ./wge100-camera-firmware {};
 
  wge100-driver = self.callPackage ./wge100-driver {};
+
+ wifi-ddwrt = self.callPackage ./wifi-ddwrt {};
 
  wiimote = self.callPackage ./wiimote {};
 

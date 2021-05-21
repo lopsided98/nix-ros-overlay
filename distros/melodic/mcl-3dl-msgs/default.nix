@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mcl-3dl-msgs";
-  version = "0.2.0-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/mcl_3dl_msgs-release/archive/release/melodic/mcl_3dl_msgs/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "ffce8cd5dfce7939118c69b6e47b65822d52589ad14a0a0de78be29b2d68badf";
+    url = "https://github.com/at-wat/mcl_3dl_msgs-release/archive/release/melodic/mcl_3dl_msgs/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "ad178c99d899d9f4b493afc8dbaf7f719c04af32bd853ac59bab90b85162a833";
   };
 
   buildType = "catkin";

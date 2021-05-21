@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dbw-polaris-can, dbw-polaris-msgs, joy, roscpp, roslaunch, roslib, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dbw-polaris-joystick-demo";
-  version = "0.0.4-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/melodic/dbw_polaris_joystick_demo/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "5401b291debe119909d5828faef1a0f413e9884ce0859400aea26166a3a391a3";
+    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/melodic/dbw_polaris_joystick_demo/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "2eb169222ae90f560f008eaedf494180fd381d5ba679de180266e43b9b159f49";
   };
 
   buildType = "catkin";

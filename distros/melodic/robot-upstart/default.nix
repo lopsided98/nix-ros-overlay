@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, daemontools, nettools, roslaunch, roslint, rosunit, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, daemontools, nettools, roslaunch, roslint, rosunit, util-linux, xacro }:
 buildRosPackage {
   pname = "ros-melodic-robot-upstart";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/melodic/robot_upstart/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "63ba9b49a0439bb01b5f36bc0a25200b82751e9af2ba8a751a8a8de6e76ea121";
+    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/melodic/robot_upstart/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "5c691943bed1f9d4c20a817d902bd00460705f7836d6fc2f3142de8f1c4c8153";
   };
 
   buildType = "catkin";
   checkInputs = [ roslint rosunit ];
-  propagatedBuildInputs = [ daemontools nettools roslaunch xacro ];
+  propagatedBuildInputs = [ daemontools nettools roslaunch util-linux xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

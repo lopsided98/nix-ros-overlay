@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, pr2-msgs, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-power-monitor";
-  version = "1.1.8-r1";
+  version = "1.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/noetic/power_monitor/1.1.8-1.tar.gz";
-    name = "1.1.8-1.tar.gz";
-    sha256 = "9940b21f21ffa19ba337411c0d23bd8580e9c03f9eece75f6b32ec5b02764267";
+    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/noetic/power_monitor/1.1.10-1.tar.gz";
+    name = "1.1.10-1.tar.gz";
+    sha256 = "379ca3049bcd3d48bba2379b85a1b37cdd391196e55adc3d2276656940b9387c";
   };
 
   buildType = "catkin";

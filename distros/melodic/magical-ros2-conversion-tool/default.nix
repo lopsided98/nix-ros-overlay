@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ros-introspection, roscompile, roslint }:
 buildRosPackage {
   pname = "ros-melodic-magical-ros2-conversion-tool";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/wu-robotics/roscompile-release/archive/release/melodic/magical_ros2_conversion_tool/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "8434766585163e348ae2bacbc6760f5b1dc4e44db6332c4ae656faa70d18da47";
+    url = "https://github.com/wu-robotics/roscompile-release/archive/release/melodic/magical_ros2_conversion_tool/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "64f1110ed8827dd7a8bf2d5336683dde212b891b2bc023e09cc424125e147dcc";
   };
 
   buildType = "catkin";
