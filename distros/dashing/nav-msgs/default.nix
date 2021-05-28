@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-dashing-nav-msgs";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/dashing/nav_msgs/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "6008fe705f2baedf9e184b8516bd840f2cfb34eb89187d3b281df13b548cca7e";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/dashing/nav_msgs/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "782db1bdfa3aa2c99d943d0d425200f9a0d5a30f1b861124d36708fc0e237a4c";
   };
 
   buildType = "ament_cmake";

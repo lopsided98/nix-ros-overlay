@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-sdc21x0";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/sdc21x0/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "a452f391d4d28527ad083caa028f55c3ab22a2ed3268741eb5254d2df3864a68";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/sdc21x0/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "ed315a6ec7d5a2b6700e894b9883db1dcb9f1fe7921f24b977f5da7a5a7152ff";
   };
 
   buildType = "catkin";

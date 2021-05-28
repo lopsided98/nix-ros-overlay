@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-fadecandy-msgs";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/iron-ox/fadecandy_ros-release/archive/release/noetic/fadecandy_msgs/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "402372d8c17569423ea2bb5ceb95c12472b45f53e3ea4982a4015e93d62b3ff8";
+    url = "https://github.com/iron-ox/fadecandy_ros-release/archive/release/noetic/fadecandy_msgs/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "ef803f4e2302e6802cc6b2ce57d53070487663411e95463452adfc986ec7f0ac";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-cmake, boost, console-bridge, console-bridge-vendor, tinyxml2-vendor, urdf, urdfdom-headers, urdfdom-py }:
 buildRosPackage {
   pname = "ros-foxy-srdfdom";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/srdfdom-release/archive/release/foxy/srdfdom/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "5b37fb645c38a5791a0519a8df56875c0111254f808cdeda6cced47b2f36f669";
+    url = "https://github.com/moveit/srdfdom-release/archive/release/foxy/srdfdom/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "fcc96f1c6ef4ce5070a873bb588749215eb2ee5faeb1034610da72ebf0e4670f";
   };
 
   buildType = "ament_cmake";

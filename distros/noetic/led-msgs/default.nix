@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-led-msgs";
-  version = "0.0.9-r1";
+  version = "0.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/CopterExpress/ros_led-release/archive/release/noetic/led_msgs/0.0.9-1.tar.gz";
-    name = "0.0.9-1.tar.gz";
-    sha256 = "b439cf190c5c582ef99e48cc946c9997f994e4afc97c19a0c89124cc497c1062";
+    url = "https://github.com/CopterExpress/ros_led-release/archive/release/noetic/led_msgs/0.0.11-1.tar.gz";
+    name = "0.0.11-1.tar.gz";
+    sha256 = "214072ab918d642a84d04b0e07b0b70e8b41208f2dac55c6bb2dc1cff10d1178";
   };
 
   buildType = "catkin";

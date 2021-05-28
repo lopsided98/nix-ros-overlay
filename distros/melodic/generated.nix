@@ -106,6 +106,8 @@ self: super: {
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
+ aruco-pose = self.callPackage ./aruco-pose {};
+
  aruco-ros = self.callPackage ./aruco-ros {};
 
  asmach = self.callPackage ./asmach {};
@@ -173,6 +175,8 @@ self: super: {
  aws-ros1-common = self.callPackage ./aws-ros1-common {};
 
  axis-camera = self.callPackage ./axis-camera {};
+
+ azure-iot-sdk-c = self.callPackage ./azure-iot-sdk-c {};
 
  backward-ros = self.callPackage ./backward-ros {};
 
@@ -307,6 +311,14 @@ self: super: {
  cloudwatch-metrics-collector = self.callPackage ./cloudwatch-metrics-collector {};
 
  cloudwatch-metrics-common = self.callPackage ./cloudwatch-metrics-common {};
+
+ clover = self.callPackage ./clover {};
+
+ clover-blocks = self.callPackage ./clover-blocks {};
+
+ clover-description = self.callPackage ./clover-description {};
+
+ clover-simulation = self.callPackage ./clover-simulation {};
 
  cmake-modules = self.callPackage ./cmake-modules {};
 
@@ -557,6 +569,8 @@ self: super: {
  costmap-tf-layer = self.callPackage ./costmap-tf-layer {};
 
  cpp-common = self.callPackage ./cpp-common {};
+
+ cpr-common-core-msgs = self.callPackage ./cpr-common-core-msgs {};
 
  cpr-multimaster-tools = self.callPackage ./cpr-multimaster-tools {};
 
@@ -2618,6 +2632,10 @@ self: super: {
 
  pilz-industrial-motion = self.callPackage ./pilz-industrial-motion {};
 
+ pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
+
+ pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
+
  pilz-industrial-motion-testutils = self.callPackage ./pilz-industrial-motion-testutils {};
 
  pilz-msgs = self.callPackage ./pilz-msgs {};
@@ -3438,6 +3456,8 @@ self: super: {
 
  roswww = self.callPackage ./roswww {};
 
+ roswww-static = self.callPackage ./roswww-static {};
+
  rotate-recovery = self.callPackage ./rotate-recovery {};
 
  rotors-comm = self.callPackage ./rotors-comm {};
@@ -3699,6 +3719,8 @@ self: super: {
  self-test = self.callPackage ./self-test {};
 
  semantic-point-annotator = self.callPackage ./semantic-point-annotator {};
+
+ sensor-filters = self.callPackage ./sensor-filters {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 

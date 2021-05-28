@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, py-trees, py-trees-msgs, python3Packages, qt-dotgraph, rospy, rqt-bag, rqt-graph, rqt-gui, rqt-gui-py, unique-id }:
 buildRosPackage {
   pname = "ros-noetic-rqt-py-trees";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/stonier/rqt_py_trees-release/archive/release/noetic/rqt_py_trees/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "78101685d5cb8d67ab3ba9a7a263d297b64e52b0fe81bc7ab2182167a05e2408";
+    url = "https://github.com/stonier/rqt_py_trees-release/archive/release/noetic/rqt_py_trees/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "4a243cfcf715beaf4d54717872166e67638d4da8530c1eeda1d78e6046619a79";
   };
 
   buildType = "catkin";

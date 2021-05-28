@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, control-msgs, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools }:
 buildRosPackage {
   pname = "ros-foxy-control-toolbox";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/control_toolbox-release/archive/release/foxy/control_toolbox/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "8ddf13fb64a4259acb9a9bc609e8b411aa77e12765f5c7673ac6ca574fb5073d";
+    url = "https://github.com/ros-gbp/control_toolbox-release/archive/release/foxy/control_toolbox/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "d1dedcf0b9134b3d066539b3b83d4e0bfe91e588ef060c72bcc75a3b6be1f854";
   };
 
   buildType = "ament_cmake";

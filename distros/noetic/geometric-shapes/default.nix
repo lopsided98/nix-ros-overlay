@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, catkin, console-bridge, eigen, eigen-stl-containers, octomap, pkg-config, qhull, random-numbers, resource-retriever, rosunit, shape-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-geometric-shapes";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometric_shapes-release/archive/release/noetic/geometric_shapes/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "9281180d07d4d7b92b16eb819841a3717820342125a50f94c1fd9af036e015b0";
+    url = "https://github.com/ros-gbp/geometric_shapes-release/archive/release/noetic/geometric_shapes/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "6f105fb610c996aabe52df57a2bed75ee9337a01f079495b78a1fa182ed66d63";
   };
 
   buildType = "catkin";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains generic definitions of geometric shapes and bodies.'';
+    description = ''Generic definitions of geometric shapes and bodies.'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

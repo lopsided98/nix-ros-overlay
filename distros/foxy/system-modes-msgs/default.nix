@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-system-modes-msgs";
-  version = "0.7.1-r3";
+  version = "0.7.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes_msgs/0.7.1-3.tar.gz";
-    name = "0.7.1-3.tar.gz";
-    sha256 = "9993f0bd62647006dfe60e6708cbfb6e66b62d889dde8365779d862158cbe168";
+    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes_msgs/0.7.1-4.tar.gz";
+    name = "0.7.1-4.tar.gz";
+    sha256 = "b9a267b941dff73f441b246e569fd91f01400c17512007c3c86a641c1cbf6ba9";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-cmake-cppcheck ament-cmake-cpplint rosidl-default-runtime ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ rosidl-default-runtime ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {

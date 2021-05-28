@@ -794,6 +794,12 @@ self: super: {
 
  rcutils = self.callPackage ./rcutils {};
 
+ realsense2-camera = self.callPackage ./realsense2-camera {};
+
+ realsense2-camera-msgs = self.callPackage ./realsense2-camera-msgs {};
+
+ realsense2-description = self.callPackage ./realsense2-description {};
+
  realsense-camera-msgs = self.callPackage ./realsense-camera-msgs {};
 
  realsense-ros2-camera = self.callPackage ./realsense-ros2-camera {};

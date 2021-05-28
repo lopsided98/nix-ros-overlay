@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, assimp, boost, bullet, catkin, console-bridge, eigen, eigen-stl-containers, fcl, geometric-shapes, geometry-msgs, kdl-parser, moveit-msgs, moveit-resources-panda-moveit-config, moveit-resources-pr2-description, octomap, octomap-msgs, orocos-kdl, pkg-config, pybind11-catkin, random-numbers, rosconsole, roslib, rostime, rosunit, sensor-msgs, shape-msgs, srdfdom, std-msgs, tf2-eigen, tf2-geometry-msgs, tf2-kdl, trajectory-msgs, urdf, urdfdom, urdfdom-headers, visualization-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-moveit-core";
-  version = "1.1.3-r1";
+  version = "1.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_core/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "e4e4a349f5604a01f56541e3f899a37ec257e83e1ff66d352f0137c3fcad10e2";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_core/1.1.5-1.tar.gz";
+    name = "1.1.5-1.tar.gz";
+    sha256 = "b7cfb4321101449d29618118b9d15d449a9b372bf974ee4b787e72e4ceed048a";
   };
 
   buildType = "catkin";

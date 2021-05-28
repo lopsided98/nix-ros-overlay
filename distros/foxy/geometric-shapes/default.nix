@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-cmake, assimp, boost, console-bridge-vendor, eigen, eigen-stl-containers, eigen3-cmake-module, geometry-msgs, octomap, pkg-config, qhull, random-numbers, rclcpp, resource-retriever, rosidl-default-generators, rosidl-default-runtime, shape-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-foxy-geometric-shapes";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/geometric_shapes-release/archive/release/foxy/geometric_shapes/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "e340ba7fb38b9c0d2422fb725e59fa7bf3efc26e1b4dc8708eec2f8bd70b34ff";
+    url = "https://github.com/moveit/geometric_shapes-release/archive/release/foxy/geometric_shapes/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "43521de7c972e38c71c46db761995d9626c51b7ecd66b83f6b91354f90fc0a79";
   };
 
   buildType = "ament_cmake";

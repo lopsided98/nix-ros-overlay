@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-dashing-std-srvs";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/dashing/std_srvs/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "bcb644039f652a75affdc40df47eddeccb9958f405ab15fbc52a15c953c0843f";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/dashing/std_srvs/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "3784a454b63cd6f31610b5857e02c5245283e4f16fa01aab001af12916d2b5ff";
   };
 
   buildType = "ament_cmake";
