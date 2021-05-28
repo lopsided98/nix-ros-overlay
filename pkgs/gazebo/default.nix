@@ -20,6 +20,13 @@ mkDerivation rec {
     sha256 = srcSha256;
   };
 
+  # Fix compatibility with qwt headers not in subdirectory
+  # https://github.com/osrf/gazebo/pull/2887
+  patches = lib.optional (lib.versionOlder version "11.3.0") (fetchpatch {
+    url = "https://github.com/osrf/gazebo/commit/25d3381c083a9eeafcee34ef648339a83e192676.patch";
+    sha256 = "1qixrz2jiqdc37mgcsnv562m7mzr6w0rd67fmkr5710n6dnky4y7";
+  });
+
   enableParallelBuilding = true;
 
   cmakeFlags = [ "-DUSE_HOST_CFLAGS=False" ];
