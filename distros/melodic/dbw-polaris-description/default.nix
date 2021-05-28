@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, roslaunch, roslib, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-dbw-polaris-description";
-  version = "0.0.4-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/melodic/dbw_polaris_description/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "e47d4cc2cf5b8bf9ccd9c60a254517ba9f7e14b0213f53cfc26eb42dc8a60c3b";
+    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/melodic/dbw_polaris_description/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "af3c10674ef2b53c465d213369595fc02994e948f3a63458c569de51a3452367";
   };
 
   buildType = "catkin";

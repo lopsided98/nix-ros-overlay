@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ros-introspection, roscompile, roslint }:
 buildRosPackage {
   pname = "ros-noetic-magical-ros2-conversion-tool";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/wu-robotics/roscompile-release/archive/release/noetic/magical_ros2_conversion_tool/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "239d6d47087638c7081c6133064bb3558a0f1fea45ed8417de26530eed6b6ed5";
+    url = "https://github.com/wu-robotics/roscompile-release/archive/release/noetic/magical_ros2_conversion_tool/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "ee4a496fc629420949f653293ac017c24c09981af81f9cc48cd1dc127708ae61";
   };
 
   buildType = "catkin";

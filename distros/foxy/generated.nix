@@ -156,6 +156,8 @@ self: super: {
 
  bondcpp = self.callPackage ./bondcpp {};
 
+ bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
+
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
@@ -568,6 +570,8 @@ self: super: {
 
  libg2o = self.callPackage ./libg2o {};
 
+ libmavconn = self.callPackage ./libmavconn {};
+
  libphidget22 = self.callPackage ./libphidget22 {};
 
  librealsense2 = self.callPackage ./librealsense2 {};
@@ -610,11 +614,17 @@ self: super: {
 
  mavlink = self.callPackage ./mavlink {};
 
+ mavros = self.callPackage ./mavros {};
+
+ mavros-msgs = self.callPackage ./mavros-msgs {};
+
  message-filters = self.callPackage ./message-filters {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
+
+ mocap-msgs = self.callPackage ./mocap-msgs {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
@@ -843,6 +853,8 @@ self: super: {
  plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
 
  pluginlib = self.callPackage ./pluginlib {};
+
+ point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
@@ -1186,6 +1198,8 @@ self: super: {
 
  rqt-reconfigure = self.callPackage ./rqt-reconfigure {};
 
+ rqt-robot-dashboard = self.callPackage ./rqt-robot-dashboard {};
+
  rqt-robot-monitor = self.callPackage ./rqt-robot-monitor {};
 
  rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
@@ -1429,6 +1443,8 @@ self: super: {
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
+
+ ur-client-library = self.callPackage ./ur-client-library {};
 
  urdf = self.callPackage ./urdf {};
 

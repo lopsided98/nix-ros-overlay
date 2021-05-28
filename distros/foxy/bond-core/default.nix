@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, bond, bondcpp, smclib, test-bond }:
 buildRosPackage {
   pname = "ros-foxy-bond-core";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/foxy/bond_core/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "b5d98b85b71709d7e8eaf9c105f1c5c8c2380d82c26407a46c29c34bab9a4bd2";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/foxy/bond_core/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "74f015ff8d79f37706f0a06d7522bf3b64a7e48f77a6ba13a9ec810112805b1b";
   };
 
   buildType = "ament_cmake";

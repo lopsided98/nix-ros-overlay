@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dbw-fca-can, dbw-fca-description, dbw-fca-joystick-demo, dbw-fca-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dbw-fca";
-  version = "1.0.10-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "758a1c41ad0b146d0c5a8a8d74e6a108f3b823ef3b93dcdb157a18a670d033c8";
+    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "449771786211501c849d229b2ea64bebb3219f2ff1a9a4924b6dda1d8b00dab2";
   };
 
   buildType = "catkin";

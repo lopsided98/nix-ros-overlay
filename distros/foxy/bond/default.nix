@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-bond";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/foxy/bond/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "bb74416f8ef1aea39bcf056ca961c4c37dd66ec18f81258374a897a1e0cd3b80";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/foxy/bond/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "697372b7c264f10a6383c91922e628418fbc8fd9678638796051bc573f1e3877";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dbw-fca-can, dbw-fca-msgs, joy, roscpp, roslaunch, roslib, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dbw-fca-joystick-demo";
-  version = "1.0.10-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca_joystick_demo/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "34b2c455eea10d73bc443105314109cd9837792a5e836fb9148cd79314eb544e";
+    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca_joystick_demo/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "accb8db15f7f579109ea55c57ab25d7a61c40f975980397a8fa72d032047ebd4";
   };
 
   buildType = "catkin";

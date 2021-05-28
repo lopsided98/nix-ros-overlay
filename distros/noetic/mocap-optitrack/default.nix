@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, nav-msgs, roscpp, roslaunch, roslint, tf }:
 buildRosPackage {
   pname = "ros-noetic-mocap-optitrack";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/mocap_optitrack-release/archive/release/noetic/mocap_optitrack/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "f2e68932593f5a3388d36fe68a2e74ab49b524eecebff321b1286b45d801e7ac";
+    url = "https://github.com/ros-drivers-gbp/mocap_optitrack-release/archive/release/noetic/mocap_optitrack/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "f716b1b8ee1eb54407d3105c99823da87bb1a8dacc9ee18069e21e0e60084ea7";
   };
 
   buildType = "catkin";

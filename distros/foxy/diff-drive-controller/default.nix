@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, controller-interface, controller-manager, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-foxy-diff-drive-controller";
-  version = "0.2.1-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/diff_drive_controller/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "d4f42c99320ce0c061b2d7992d3deb0fa803f57bfd73e7cac109f4b3c723c0f8";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/diff_drive_controller/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "603f485e1f5686cfde2ae49d449ddc80901dce0f082b82ecef8ce1854dbdfcb2";
   };
 
   buildType = "ament_cmake";
