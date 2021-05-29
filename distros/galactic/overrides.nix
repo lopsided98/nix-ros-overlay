@@ -4,6 +4,15 @@ self:
 rosSelf: rosSuper: with rosSelf.lib; {
   gazebo = self.gazebo_11;
 
+  iceoryx-posh = patchVendorGit rosSuper.iceoryx-posh {
+    url = "https://github.com/skystrife/cpptoml.git";
+    file = "cmake/cpptoml/cpptoml.cmake.in";
+    fetchgitArgs = {
+      rev = "v0.1.1";
+      sha256 = "0gxzzi4xbjszzlvmzaniayrd190kag1pmkn1h384s80cvqphbr00";
+    };
+  };
+
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.6.20200417.tar.gz";
     sha256 = "17xfc07bgllqr808jm779z98gwz01iik9skw2hcwpgg4j7kdxn5d";
