@@ -19,7 +19,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '' + postPatch;
   });
 
-  cv-bridge = (patchBoostPython rosSuper.cv-bridge).overrideAttrs ({
+  cv-bridge = rosSuper.cv-bridge.overrideAttrs ({
     patches ? [],
     propagatedBuildInputs ? [], ...
   }: {

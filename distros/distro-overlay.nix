@@ -62,6 +62,8 @@ let
 
     cob-light = patchBoostSignals rosSuper.cob-light;
 
+    cv-bridge = patchBoostPython rosSuper.cv-bridge;
+
     cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
       cmakeFlags ? [], preConfigure ? "", ...
     }: {

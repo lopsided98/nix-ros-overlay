@@ -2,7 +2,7 @@
 self:
 # Distro package set
 rosSelf: rosSuper: with rosSelf.lib; {
-  cv-bridge = (patchBoostPython rosSuper.cv-bridge).overrideAttrs ({
+  cv-bridge = rosSuper.cv-bridge.overrideAttrs ({
     patches ? [],
     propagatedBuildInputs ? [], ...
   }: {
