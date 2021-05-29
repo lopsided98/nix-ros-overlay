@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, bond, rclcpp, rclcpp-lifecycle, smclib, utillinux }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, bond, rclcpp, rclcpp-lifecycle, smclib, util-linux }:
 buildRosPackage {
   pname = "ros-dashing-bondcpp";
   version = "2.0.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ bond rclcpp rclcpp-lifecycle smclib utillinux ];
+  propagatedBuildInputs = [ bond rclcpp rclcpp-lifecycle smclib util-linux ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

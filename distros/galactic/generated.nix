@@ -92,6 +92,8 @@ self: super: {
 
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
 
+ ament-copyright = self.callPackage ./ament-copyright {};
+
  ament-cppcheck = self.callPackage ./ament-cppcheck {};
 
  ament-cpplint = self.callPackage ./ament-cpplint {};
@@ -113,6 +115,8 @@ self: super: {
  ament-mypy = self.callPackage ./ament-mypy {};
 
  ament-nodl = self.callPackage ./ament-nodl {};
+
+ ament-package = self.callPackage ./ament-package {};
 
  ament-pclint = self.callPackage ./ament-pclint {};
 
@@ -369,6 +373,10 @@ self: super: {
  laser-geometry = self.callPackage ./laser-geometry {};
 
  laser-proc = self.callPackage ./laser-proc {};
+
+ launch = self.callPackage ./launch {};
+
+ launch-ros = self.callPackage ./launch-ros {};
 
  launch-testing = self.callPackage ./launch-testing {};
 
@@ -658,6 +666,8 @@ self: super: {
 
  ros2bag = self.callPackage ./ros2bag {};
 
+ ros2cli = self.callPackage ./ros2cli {};
+
  ros2cli-common-extensions = self.callPackage ./ros2cli-common-extensions {};
 
  ros2cli-test-interfaces = self.callPackage ./ros2cli-test-interfaces {};
@@ -735,6 +745,8 @@ self: super: {
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
 
  rosidl-adapter = self.callPackage ./rosidl-adapter {};
+
+ rosidl-cli = self.callPackage ./rosidl-cli {};
 
  rosidl-cmake = self.callPackage ./rosidl-cmake {};
 

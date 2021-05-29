@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bondcpp, boost, catkin, cmake-modules, message-generation, message-runtime, pluginlib, rosconsole, roscpp, rospy, std-msgs, utillinux }:
+{ lib, buildRosPackage, fetchurl, bondcpp, boost, catkin, cmake-modules, message-generation, message-runtime, pluginlib, rosconsole, roscpp, rospy, std-msgs, util-linux }:
 buildRosPackage {
   pname = "ros-melodic-nodelet";
   version = "1.9.16";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ cmake-modules message-generation ];
-  propagatedBuildInputs = [ bondcpp boost message-runtime pluginlib rosconsole roscpp rospy std-msgs utillinux ];
+  propagatedBuildInputs = [ bondcpp boost message-runtime pluginlib rosconsole roscpp rospy std-msgs util-linux ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

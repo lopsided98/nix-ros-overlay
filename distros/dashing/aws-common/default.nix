@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, cmake, curl, openssl, ros-environment, utillinux, zlib }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, cmake, curl, openssl, ros-environment, util-linux, zlib }:
 buildRosPackage {
   pname = "ros-dashing-aws-common";
   version = "2.2.0-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "cmake";
   buildInputs = [ ros-environment ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest ];
-  propagatedBuildInputs = [ curl openssl utillinux zlib ];
+  propagatedBuildInputs = [ curl openssl util-linux zlib ];
   nativeBuildInputs = [ ament-cmake-gmock ament-cmake-gtest cmake ];
 
   meta = {
