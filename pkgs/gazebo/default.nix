@@ -7,8 +7,8 @@
 , ignition-fuel-tools ? ignition.fuel-tools
 
 , bullet, withBulletEngineSupport ? false
-, version ? "11.3.0"
-, srcSha256 ? "1x4200vjxvlkns0knq1k8ms5lqlvpnz5qqx2gb2mc4l4l532jih9"
+, version ? "11.5.1"
+, srcSha256 ? "0g9hna359r27j1wnncpyfvzrsjh6azki63cpa2kv1m3q4akpicy7"
 , ... }: with lib;
 
 mkDerivation rec {
