@@ -18,6 +18,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "17xfc07bgllqr808jm779z98gwz01iik9skw2hcwpgg4j7kdxn5d";
   };
 
+  pybind11-vendor = patchVendorUrl rosSuper.pybind11-vendor {
+    url = "https://github.com/pybind/pybind11/archive/v2.5.0.tar.gz";
+    sha256 = "0145vj9hrhb9qjp6jfvw0d1qc31lbb103xzxscr0yms0asv4sl4p";
+  };
+
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
