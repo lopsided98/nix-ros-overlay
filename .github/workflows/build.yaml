@@ -13,6 +13,7 @@ jobs:
           - dashing
           - eloquent
           - foxy
+          - galactic
         system:
           - x86_64-linux
           - aarch64-linux

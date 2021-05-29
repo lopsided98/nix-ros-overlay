@@ -33,5 +33,10 @@ self: super: {
       distro = "foxy";
       python = self.python3;
     } self super;
+
+    galactic = import ./distro-overlay.nix {
+      distro = "galactic";
+      python = self.python3;
+    } self super;
   };
 }
