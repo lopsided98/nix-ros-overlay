@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ecl-command-line, libftdi, libusb, pkg-config }:
+{ lib, buildRosPackage, fetchurl, catkin, ecl-command-line, libftdi, libusb1, pkg-config }:
 buildRosPackage {
   pname = "ros-noetic-kobuki-ftdi";
   version = "0.7.12-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ pkg-config ];
-  propagatedBuildInputs = [ ecl-command-line libftdi libusb ];
+  propagatedBuildInputs = [ ecl-command-line libftdi libusb1 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

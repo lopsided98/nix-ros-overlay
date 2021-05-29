@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, libusb, libusb1, robot-state-publisher, roscpp, roslaunch, sensor-msgs, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, libusb1, robot-state-publisher, roscpp, roslaunch, sensor-msgs, xacro }:
 buildRosPackage {
   pname = "ros-melodic-sick-tim";
   version = "0.0.17-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ roslaunch ];
-  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure libusb libusb1 robot-state-publisher roscpp sensor-msgs xacro ];
+  propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure libusb1 robot-state-publisher roscpp sensor-msgs xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

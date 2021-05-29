@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bond, catkin, pythonPackages, rospy, smclib, utillinux }:
+{ lib, buildRosPackage, fetchurl, bond, catkin, pythonPackages, rospy, smclib, util-linux }:
 buildRosPackage {
   pname = "ros-melodic-bondpy";
   version = "1.8.5-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ bond ];
-  propagatedBuildInputs = [ rospy smclib utillinux ];
+  propagatedBuildInputs = [ rospy smclib util-linux ];
   nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {

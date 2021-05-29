@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, gmock, roscpp, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, gtest, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-noetic-ddynamic-reconfigure";
   version = "0.3.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ gmock rostest ];
+  checkInputs = [ gtest rostest ];
   propagatedBuildInputs = [ dynamic-reconfigure roscpp ];
   nativeBuildInputs = [ catkin ];
 

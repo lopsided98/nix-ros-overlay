@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-common, catkin, cmake, ffmpeg, gmock, gtest }:
+{ lib, buildRosPackage, fetchurl, aws-common, catkin, cmake, ffmpeg, gtest }:
 buildRosPackage {
   pname = "ros-melodic-h264-encoder-core";
   version = "2.0.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  checkInputs = [ gmock gtest ];
+  checkInputs = [ gtest ];
   propagatedBuildInputs = [ aws-common ffmpeg ];
   nativeBuildInputs = [ catkin cmake ];
 
