@@ -55,7 +55,6 @@ in {
     colcon-test-result
   ];
 
-  gazebo_7 = self.callPackage ./gazebo/7.nix { };
   gazebo_9 = self.libsForQt5.callPackage ./gazebo/9.nix { };
   gazebo_11 = self.libsForQt5.callPackage ./gazebo { };
   gazebo = self.gazebo_11;
@@ -75,19 +74,16 @@ in {
     fuel-tools4 = self.callPackage ./ignition/fuel-tools { };
     fuel-tools = self.ignition.fuel-tools4;
 
-    math2 = self.callPackage ./ignition/math/2.nix { };
     math4 = self.callPackage ./ignition/math/4.nix { };
     math6 = self.callPackage ./ignition/math { };
     math = self.ignition.math6;
 
-    msgs0 = self.callPackage ./ignition/msgs/0.nix { };
     msgs1 = self.callPackage ./ignition/msgs/1.nix { };
     msgs5 = self.callPackage ./ignition/msgs { };
     msgs = self.ignition.msgs5;
 
     tools = self.callPackage ./ignition/tools { };
 
-    transport2 = self.callPackage ./ignition/transport/2.nix { };
     transport4 = self.callPackage ./ignition/transport/4.nix { };
     transport8 = self.callPackage ./ignition/transport { };
     transport = self.ignition.transport8;
@@ -102,7 +98,6 @@ in {
   python37 = pythonOverridesFor super.python37;
   python38 = pythonOverridesFor super.python38;
 
-  sdformat_4 = self.callPackage ./sdformat/4.nix { };
   sdformat_6 = self.callPackage ./sdformat/6.nix { };
   sdformat_9 = self.callPackage ./sdformat { };
   sdformat = self.sdformat_9;
