@@ -38,6 +38,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "1ab4d7ngvx009vajqv3kxw0s77z0hdd9xb8in1mvx86i1l3vndxa";
   };
 
+  libyaml-vendor = patchVendorUrl rosSuper.libyaml-vendor {
+    url = "https://github.com/yaml/libyaml/archive/10c907871f1ccd779c7fccf6b81a62762b5c4e7b.zip";
+    sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
+  };
+
   nav2-util = rosSuper.nav2-util.overrideAttrs ({
     patches ? [], ...
   }: {

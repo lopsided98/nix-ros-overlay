@@ -160,11 +160,6 @@ let
       '';
     });
 
-    libyaml-vendor = patchVendorUrl rosSuper.libyaml-vendor {
-      url = "https://github.com/yaml/libyaml/archive/10c907871f1ccd779c7fccf6b81a62762b5c4e7b.zip";
-      sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
-    };
-
     map-server = rosSuper.map-server.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {

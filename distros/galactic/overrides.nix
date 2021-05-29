@@ -18,6 +18,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "17xfc07bgllqr808jm779z98gwz01iik9skw2hcwpgg4j7kdxn5d";
   };
 
+  libyaml-vendor = patchVendorUrl rosSuper.libyaml-vendor {
+    url = "https://github.com/yaml/libyaml/archive/refs/tags/0.2.5.zip";
+    sha256 = "1j6br21rc379wizvclz46s3kih0kfii6m923p4x4s37wdnm5nq0l";
+  };
+
   pybind11-vendor = patchVendorUrl rosSuper.pybind11-vendor {
     url = "https://github.com/pybind/pybind11/archive/v2.5.0.tar.gz";
     sha256 = "0145vj9hrhb9qjp6jfvw0d1qc31lbb103xzxscr0yms0asv4sl4p";
