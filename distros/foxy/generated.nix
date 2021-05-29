@@ -634,6 +634,8 @@ self: super: {
 
  moveit-common = self.callPackage ./moveit-common {};
 
+ moveit-core = self.callPackage ./moveit-core {};
+
  moveit-fake-controller-manager = self.callPackage ./moveit-fake-controller-manager {};
 
  moveit-kinematics = self.callPackage ./moveit-kinematics {};

@@ -324,6 +324,8 @@ self: super: {
 
  cob-object-detection-visualizer = self.callPackage ./cob-object-detection-visualizer {};
 
+ cob-obstacle-distance = self.callPackage ./cob-obstacle-distance {};
+
  cob-omni-drive-controller = self.callPackage ./cob-omni-drive-controller {};
 
  cob-perception-common = self.callPackage ./cob-perception-common {};
@@ -719,6 +721,10 @@ self: super: {
  fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
 
  fake-localization = self.callPackage ./fake-localization {};
+
+ fcl = self.callPackage ./fcl {};
+
+ fcl-catkin = self.callPackage ./fcl-catkin {};
 
  fetch-auto-dock-msgs = self.callPackage ./fetch-auto-dock-msgs {};
 

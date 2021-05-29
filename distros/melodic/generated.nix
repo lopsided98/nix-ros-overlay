@@ -464,6 +464,10 @@ self: super: {
 
  cob-object-detection-visualizer = self.callPackage ./cob-object-detection-visualizer {};
 
+ cob-obstacle-distance = self.callPackage ./cob-obstacle-distance {};
+
+ cob-obstacle-distance-moveit = self.callPackage ./cob-obstacle-distance-moveit {};
+
  cob-omni-drive-controller = self.callPackage ./cob-omni-drive-controller {};
 
  cob-perception-common = self.callPackage ./cob-perception-common {};
@@ -983,6 +987,8 @@ self: super: {
  fake-joint-launch = self.callPackage ./fake-joint-launch {};
 
  fake-localization = self.callPackage ./fake-localization {};
+
+ fcl-catkin = self.callPackage ./fcl-catkin {};
 
  fetch-auto-dock-msgs = self.callPackage ./fetch-auto-dock-msgs {};
 
@@ -2104,6 +2110,8 @@ self: super: {
 
  moveit-controller-manager-example = self.callPackage ./moveit-controller-manager-example {};
 
+ moveit-core = self.callPackage ./moveit-core {};
+
  moveit-fake-controller-manager = self.callPackage ./moveit-fake-controller-manager {};
 
  moveit-kinematics = self.callPackage ./moveit-kinematics {};
@@ -3109,6 +3117,8 @@ self: super: {
  robot-activity-msgs = self.callPackage ./robot-activity-msgs {};
 
  robot-activity-tutorials = self.callPackage ./robot-activity-tutorials {};
+
+ robot-body-filter = self.callPackage ./robot-body-filter {};
 
  robot-calibration = self.callPackage ./robot-calibration {};
 
