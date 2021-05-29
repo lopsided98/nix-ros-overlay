@@ -11,7 +11,6 @@ jobs:
           - melodicPython3
           - noetic
           - dashing
-          - eloquent
           - foxy
           - galactic
         system:
