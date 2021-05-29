@@ -34,6 +34,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  pybind11-catkin = patchVendorUrl rosSuper.pybind11-catkin {
+    url = "https://github.com/pybind/pybind11/archive/v2.4.3.zip";
+    sha256 = "0r6kj10g774s94krnxcc0r8swnm5h0r6mxysxwx8gy9n52f1xk7i";
+  };
+
   python-orocos-kdl = rosSuper.python-orocos-kdl.overrideAttrs ({
     patches ? [], ...
   }: {
