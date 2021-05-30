@@ -2162,6 +2162,8 @@ self: super: {
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
 
+ moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
+
  moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
 
  moveit-ros-planning-interface = self.callPackage ./moveit-ros-planning-interface {};
