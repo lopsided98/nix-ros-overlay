@@ -1,7 +1,7 @@
 { lib, stdenv, fetchFromGitHub, cmake, pkg-config
 , majorVersion ? "2"
-, version ? "2.5.0"
-, srcSha256 ? "1xgw1hccr005sd2456hn9ligrfj3xk81v3bhw0vvv61nmh5l4k7f"
+, version ? "2.8.0"
+, srcSha256 ? "0z8z223xk9ignr6wfhydig89ny4cg5ma8rcz9lyjs4f62rid4ad0"
 , ... }:
 
 stdenv.mkDerivation rec {
