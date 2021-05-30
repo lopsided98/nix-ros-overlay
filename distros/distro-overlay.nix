@@ -88,6 +88,11 @@ let
 
     fake-localization = patchBoostSignals rosSuper.fake-localization;
 
+    fcl-catkin = patchVendorUrl rosSuper.fcl-catkin {
+      url = "https://github.com/flexible-collision-library/fcl/archive/v0.6.1.zip";
+      sha256 = "0nryr4hg3lha1aaz35wbqr42lb6l8alfcy6slj2yn2dgb5syrmn2";
+    };
+
     fmilibrary-vendor = patchVendorGit rosSuper.fmilibrary-vendor {
       url = "https://github.com/modelon-community/fmi-library.git";
       fetchgitArgs = {
