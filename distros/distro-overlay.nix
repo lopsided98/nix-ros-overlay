@@ -117,8 +117,12 @@ let
     laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
 
     libfranka = rosSuper.libfranka.overrideAttrs ({
-      cmakeFlags ? [], ...
+      patches ? [], cmakeFlags ? [], ...
     }: {
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/frankaemika/libfranka/commit/fbec4214e288d8dd941ddf6c192c9f6f9757d808.patch";
+        sha256 = "00n0xm8chsw16prh02prdn0n6rihpbjwn3jdqmj4l8rwwjdiq8d5";
+      }) ];
       # Uses custom flag to disable tests. Attempts to download GTest without
       # this.
       cmakeFlags = cmakeFlags ++ [ "-DBUILD_TESTS=OFF" ];
