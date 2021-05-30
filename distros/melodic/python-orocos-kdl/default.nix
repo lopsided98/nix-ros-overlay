@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ catkin orocos-kdl pythonPackages.sip ];
+  propagatedBuildInputs = [ catkin orocos-kdl pythonPackages.sip_4 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

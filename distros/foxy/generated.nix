@@ -644,6 +644,8 @@ self: super: {
 
  moveit-planners = self.callPackage ./moveit-planners {};
 
+ moveit-planners-ompl = self.callPackage ./moveit-planners-ompl {};
+
  moveit-plugins = self.callPackage ./moveit-plugins {};
 
  moveit-resources = self.callPackage ./moveit-resources {};
@@ -665,6 +667,8 @@ self: super: {
  moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
+
+ moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
 
  moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
 

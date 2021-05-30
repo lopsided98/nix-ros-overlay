@@ -1474,6 +1474,8 @@ self: super: {
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
 
+ moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
+
  moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
 
  moveit-ros-planning-interface = self.callPackage ./moveit-ros-planning-interface {};
@@ -2493,6 +2495,8 @@ self: super: {
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
  tesseract-common = self.callPackage ./tesseract-common {};
+
+ tesseract-environment = self.callPackage ./tesseract-environment {};
 
  tesseract-geometry = self.callPackage ./tesseract-geometry {};
 
