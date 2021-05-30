@@ -35,15 +35,9 @@ self: super: with super.lib; let
       rosinstall-generator = pySelf.callPackage ./rosinstall-generator { };
 
       rospkg = pySelf.callPackage ./rospkg { };
-
-      # These overrides have to be done here (rather than in rosPackages)
-      # because packageOverrides doesn't compose
-
-      # ROS packages are generally transitioning away from SIP, so they usually
-      # aren't compatible with the latest SIP. This situation is somewhat in
-      # flux, so it is easier to do it here than in rosdep.
-      sip = pySelf.sip_4;
     } // optionalAttrs pySuper.isPy3k {
+      # This has to be done here (rather than in rosPackages) because
+      # packageOverrides doesn't compose
       wxPython = pySelf.wxPython_4_0;
     };
   });
