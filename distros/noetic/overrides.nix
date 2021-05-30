@@ -2,6 +2,17 @@
 self:
 # Distro package set
 rosSelf: rosSuper: with rosSelf.lib; {
+  eigenpy = rosSuper.eigenpy.overrideAttrs ({
+    patches ? [], cmakeFlags ? [], ...
+  }: {
+    # Allow hardcoded Python path to be overridden
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ipab-slmc/eigenpy_catkin-release/commit/5cb1b98b598670be41b2e9eefed58da7335ea93d.patch";
+      sha256 = "1bliaamiajbw36s8jqs5ksj96w0cm26gy1dirr6i7vhk2grksxfx";
+    }) ];
+    cmakeFlags = cmakeFlags ++ [ "-DPYTHON_EXECUTABLE=${rosSelf.python.interpreter}" ];
+  });
+
   gazebo = self.gazebo_11;
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
