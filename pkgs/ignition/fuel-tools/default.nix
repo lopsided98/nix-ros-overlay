@@ -1,9 +1,9 @@
 { lib, stdenv, fetchFromGitHub, cmake, ignition
-, ignition-cmake ? ignition.cmake, ignition-common ? ignition.common, tinyxml-2
-, curl, jsoncpp, libyaml, libzip
-, majorVersion ? "4"
-, version ? "4.2.1"
-, srcSha256 ? "1nkkg70z2b7b8aa5sk9hd0ggm0rymrynzn8rfkv82866nkkxc83i"
+, ignition-cmake ? ignition.cmake, ignition-common ? ignition.common
+, ignition-msgs ? ignition.msgs, tinyxml-2, curl, jsoncpp, libyaml, libzip
+, majorVersion ? "6"
+, version ? "6.0.0"
+, srcSha256 ? "07c489yc0n7gry0czp85siaqy9ar03ggaj70lcphwq6zp98gzz4h"
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   propagatedNativeBuildInputs = [ ignition-cmake ];
   propagatedBuildInputs = [ ignition-common tinyxml-2 curl jsoncpp libyaml
     libzip ]
-    ++ lib.optional (lib.versionAtLeast version "4") ignition.msgs;
+    ++ lib.optional (lib.versionAtLeast version "4") ignition-msgs;
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/fuel_tools";

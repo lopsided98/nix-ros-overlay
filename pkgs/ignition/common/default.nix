@@ -1,9 +1,9 @@
 { lib, stdenv, fetchFromGitHub, cmake, pkg-config, ignition
-, ignition-cmake ? ignition.cmake, ignition-math ? ignition.math, libuuid
-, tinyxml-2, freeimage, gts, ffmpeg
-, majorVersion ? "3"
-, version ? "3.7.0"
-, srcSha256 ? "06a0s4bqmyjxkg2lq6xa88lybfgqmz195l2nl3cqqdlnczhzshag"
+, ignition-cmake ? ignition.cmake, ignition-math ? ignition.math
+, ignition-utils ? ignition.utils, libuuid, tinyxml-2, freeimage, gts, ffmpeg
+, majorVersion ? "4"
+, version ? "4.0.0"
+, srcSha256 ? "1vfgjd527z3jypdvnz6w2yfm8n6brrxxh4mcb9srf4bn9apawzwp"
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -21,7 +21,8 @@ stdenv.mkDerivation rec {
   propagatedNativeBuildInputs = [ ignition-cmake ];
   buildInputs = [ ignition-math tinyxml-2 ]
     ++ lib.optionals (lib.versionAtLeast version "3")
-      [ ignition-math gts freeimage ffmpeg ];
+      [ ignition-math gts freeimage ffmpeg ]
+    ++ lib.optional (lib.versionAtLeast version "4") ignition-utils;
   propagatedBuildInputs = [ libuuid ]
     ++ lib.optionals (lib.versionOlder version "3")
       [ ignition-math gts freeimage ffmpeg ];

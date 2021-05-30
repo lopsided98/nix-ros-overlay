@@ -1,8 +1,8 @@
 { lib, stdenv, fetchFromGitHub, cmake, tinyxml-2, ignition
 , ignition-cmake ? ignition.cmake, protobuf, ignition-math ? ignition.math
-, majorVersion ? "5"
-, version ? "5.4.0"
-, srcSha256 ? "165i79fnx6g4zdnzmlna6yiw9zifbpxf1qan24r81x5cnk3faf92"
+, majorVersion ? "7"
+, version ? "7.1.0"
+, srcSha256 ? "0sc6mgjxdyx973ziq9svkna35pz9f5cikcf7980vc69vlfaiv9k7"
 , ... }:
 
 stdenv.mkDerivation rec {

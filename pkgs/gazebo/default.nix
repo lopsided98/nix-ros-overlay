@@ -3,8 +3,8 @@
 , libuuid, graphviz, libsForQt5, freeimage, boost, protobuf, sdformat, tbb
 , ogre1_10, ffmpeg, ignition, ignition-cmake ? ignition.cmake0
 , ignition-common ? ignition.common, ignition-math ? ignition.math4
-, ignition-transport ? ignition.transport, ignition-msgs ? ignition.msgs
-, ignition-fuel-tools ? ignition.fuel-tools
+, ignition-transport ? ignition.transport8, ignition-msgs ? ignition.msgs
+, ignition-fuel-tools ? ignition.fuel-tools4
 
 , bullet, withBulletEngineSupport ? false
 , version ? "11.5.1"
