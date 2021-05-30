@@ -34,6 +34,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  image-view = rosSuper.image-view.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    # The problem is very similar to this:
+    # https://github.com/ros/ros-overlay/issues/607
+    cmakeFlags = cmakeFlags ++ [
+      "-DGTK2_GLIBCONFIG_INCLUDE_DIR:PATH=${self.glib.out}/lib/glib-2.0/include"
+      "-DGTK2_GDKCONFIG_INCLUDE_DIR:PATH=${self.gtk2.out}/lib/gtk-2.0/include"
+    ];
+  });
+
   pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
     patches ? [], ...
   }: {
