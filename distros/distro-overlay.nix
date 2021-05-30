@@ -68,7 +68,7 @@ let
       cmakeFlags ? [], preConfigure ? "", ...
     }: {
       # Tries to download something with maven
-      cmakeFlags = [ "-DBUILD_IDLC=OFF" ];
+      cmakeFlags = cmakeFlags ++ [ "-DBUILD_IDLC=OFF" ];
 
       # Fix running ddsconf from within the build directory (probably an RPATH
       # issue)
