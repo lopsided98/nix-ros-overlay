@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, control-msgs, control-toolbox, geometry-msgs, joy, moveit-common, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-planning-interface, robot-state-publisher, ros-testing, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-foxy-moveit-servo";
-  version = "2.1.3-r1";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_servo/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "2f142eb290f6f90b775a1b7b85c14ce6c5071c791e1026ca27371f2f9a1808a4";
+    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_servo/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "f933f1f5a0b7e03a1759046e3dcd57da9672dd41459b1c18334fddb773dbb825";
   };
 
   buildType = "ament_cmake";

@@ -492,6 +492,8 @@ self: super: {
 
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
+ object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
+
  octomap = self.callPackage ./octomap {};
 
  octomap-msgs = self.callPackage ./octomap-msgs {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, console-bridge }:
 buildRosPackage {
   pname = "ros-foxy-ur-client-library";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_Client_Library-release/archive/release/foxy/ur_client_library/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "bb15dd6655becd4f6a536a34592d2f3e9b67dbd3a23dedd81cbdc74d7891be78";
+    url = "https://github.com/UniversalRobots/Universal_Robots_Client_Library-release/archive/release/foxy/ur_client_library/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "939c992144de23c1ac4ac5d8cde6a12fef01c8cca515e8eebf90355a376dc15d";
   };
 
   buildType = "cmake";

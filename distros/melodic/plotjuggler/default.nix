@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, binutils, boost, catkin, cppzmq, qt5, roslib }:
 buildRosPackage {
   pname = "ros-melodic-plotjuggler";
-  version = "3.1.1-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/melodic/plotjuggler/3.1.1-1.tar.gz";
-    name = "3.1.1-1.tar.gz";
-    sha256 = "462d2a3224c59fcf6170b488822c9daf598335ac4befc56ed7a70d49ff7d907a";
+    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/melodic/plotjuggler/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "7b90d76bd39e0d68b1e79fd4ed1a83c66025a1437104937d7dd174a842a58713";
   };
 
   buildType = "catkin";

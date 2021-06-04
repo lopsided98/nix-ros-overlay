@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-dashing-hls-lfcd-lds-driver";
-  version = "2.0.2-r2";
+  version = "2.0.2-r5";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/hls_lfcd_lds_driver-release/archive/release/dashing/hls_lfcd_lds_driver/2.0.2-2.tar.gz";
-    name = "2.0.2-2.tar.gz";
-    sha256 = "a8a86f9afe5bffd509761a72a4491e030d78800164fccb7234f96da212f6c0c6";
+    url = "https://github.com/robotis-ros2-release/hls_lfcd_lds_driver-release/archive/release/dashing/hls_lfcd_lds_driver/2.0.2-5.tar.gz";
+    name = "2.0.2-5.tar.gz";
+    sha256 = "01068f71336eb3e0073d551085ce16b4f7db53fa8be761d8462a98a8e5187464";
   };
 
   buildType = "ament_cmake";

@@ -808,6 +808,8 @@ self: super: {
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
+ foxglove-msgs = self.callPackage ./foxglove-msgs {};
+
  franka-control = self.callPackage ./franka-control {};
 
  franka-description = self.callPackage ./franka-description {};
@@ -1041,6 +1043,8 @@ self: super: {
  imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
+
+ imu-monitor = self.callPackage ./imu-monitor {};
 
  imu-pipeline = self.callPackage ./imu-pipeline {};
 
@@ -1636,6 +1640,8 @@ self: super: {
 
  opw-kinematics = self.callPackage ./opw-kinematics {};
 
+ osm-cartography = self.callPackage ./osm-cartography {};
+
  osqp-vendor = self.callPackage ./osqp-vendor {};
 
  oxford-gps-eth = self.callPackage ./oxford-gps-eth {};
@@ -1788,13 +1794,21 @@ self: super: {
 
  pr2-arm-move-ik = self.callPackage ./pr2-arm-move-ik {};
 
+ pr2-bringup = self.callPackage ./pr2-bringup {};
+
  pr2-calibration-controllers = self.callPackage ./pr2-calibration-controllers {};
+
+ pr2-camera-synchronizer = self.callPackage ./pr2-camera-synchronizer {};
 
  pr2-common = self.callPackage ./pr2-common {};
 
  pr2-common-action-msgs = self.callPackage ./pr2-common-action-msgs {};
 
  pr2-common-actions = self.callPackage ./pr2-common-actions {};
+
+ pr2-computer-monitor = self.callPackage ./pr2-computer-monitor {};
+
+ pr2-controller-configuration = self.callPackage ./pr2-controller-configuration {};
 
  pr2-controller-interface = self.callPackage ./pr2-controller-interface {};
 
@@ -1807,6 +1821,8 @@ self: super: {
  pr2-dashboard-aggregator = self.callPackage ./pr2-dashboard-aggregator {};
 
  pr2-description = self.callPackage ./pr2-description {};
+
+ pr2-ethercat = self.callPackage ./pr2-ethercat {};
 
  pr2-ethercat-drivers = self.callPackage ./pr2-ethercat-drivers {};
 
@@ -1839,6 +1855,10 @@ self: super: {
  pr2-power-board = self.callPackage ./pr2-power-board {};
 
  pr2-power-drivers = self.callPackage ./pr2-power-drivers {};
+
+ pr2-robot = self.callPackage ./pr2-robot {};
+
+ pr2-run-stop-auto-restart = self.callPackage ./pr2-run-stop-auto-restart {};
 
  pr2-teleop = self.callPackage ./pr2-teleop {};
 
@@ -2202,6 +2222,8 @@ self: super: {
 
  rotate-recovery = self.callPackage ./rotate-recovery {};
 
+ route-network = self.callPackage ./route-network {};
+
  rqt = self.callPackage ./rqt {};
 
  rqt-action = self.callPackage ./rqt-action {};
@@ -2251,6 +2273,8 @@ self: super: {
  rqt-plot = self.callPackage ./rqt-plot {};
 
  rqt-pose-view = self.callPackage ./rqt-pose-view {};
+
+ rqt-pr2-dashboard = self.callPackage ./rqt-pr2-dashboard {};
 
  rqt-publisher = self.callPackage ./rqt-publisher {};
 
@@ -2515,6 +2539,8 @@ self: super: {
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
 
  test-mavros = self.callPackage ./test-mavros {};
+
+ test-osm = self.callPackage ./test-osm {};
 
  tf = self.callPackage ./tf {};
 

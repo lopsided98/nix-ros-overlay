@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-foxy-moveit-common";
-  version = "2.1.3-r1";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_common/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "35e3addcabd5024b5c1dc151a36525f1a286afd8d3d246bc8f16244b3ab7873e";
+    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_common/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "12c0606cfeef194d56776cc4613d54c50de46b312bce5952db7cfd8e047f4d01";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''Common support functionality used throughout MoveIt'';
