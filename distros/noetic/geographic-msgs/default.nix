@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs, uuid-msgs }:
 buildRosPackage {
   pname = "ros-noetic-geographic-msgs";
-  version = "0.5.5-r1";
+  version = "0.5.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/noetic/geographic_msgs/0.5.5-1.tar.gz";
-    name = "0.5.5-1.tar.gz";
-    sha256 = "23116da81c5941eae2ea1b954016f7417c2682a2aa6cbe8f4d2ecaada24e98ae";
+    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/noetic/geographic_msgs/0.5.6-1.tar.gz";
+    name = "0.5.6-1.tar.gz";
+    sha256 = "0c19562199a4f9f813362ad87d4345bb8ae77c77c41f7fe332eb672ad19d2d79";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, base-local-planner, catkin, dwa-local-planner, dwb-critics, dwb-local-planner, dwb-plugins, hector-mapping, map-server, mir-driver, mir-dwb-critics, mir-gazebo, move-base, nav-core-adapter, python3Packages, roslaunch, sbpl-lattice-planner, teb-local-planner }:
 buildRosPackage {
   pname = "ros-noetic-mir-navigation";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_navigation/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "77c4a6ad42c5dd44b7f4493121e844421b37fcc3c7b122125cd0e68a4672dbfe";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_navigation/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "f94d866f0d58852d97326ff96225843bd2b1545ba1d9f57e9d2b8782707e479b";
   };
 
   buildType = "catkin";

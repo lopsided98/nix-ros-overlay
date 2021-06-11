@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, fake-localization, gazebo-ros, joint-state-publisher, mir-description, mir-driver, robot-localization, robot-state-publisher, roslaunch, rostopic, rqt-robot-steering, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-mir-gazebo";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_gazebo/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "2a5455e17a833ca1c4498603c05b4d6de72c65933b74273c9b70daf338a648cc";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_gazebo/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "d13b5b25f25b9320ed7f9a0ece602841cf88ee62c6d23ac62a240a1fa492afcb";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, graphicsmagick, launch, launch-ros, launch-testing, nav-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp, rclcpp-lifecycle, std-msgs, tf2, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-galactic-nav2-map-server";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_map_server/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "e28d3acae76b0dceebaf740c89ab91df6b01bb36c6872923aa26826c7aa72348";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_map_server/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "0ef80058086975dd9fcaf14b1f3d989123af53d181e4e53ce52bd3f4769a78c5";
   };
 
   buildType = "ament_cmake";

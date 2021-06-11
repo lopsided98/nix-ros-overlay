@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-visualization, moveit-simple-controller-manager, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-melodic-denso-robot-moveit-config";
-  version = "3.1.2-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_moveit_config/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "5b3d0b52b039421f12b4b11a5cab2a1387cfdb47f971c079a6d05d47d0b7741c";
+    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_moveit_config/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "399a482bbaf6ef0aa129e0607ebec00e9167e0b9230f0b94d271fdbae2fea7d6";
   };
 
   buildType = "catkin";

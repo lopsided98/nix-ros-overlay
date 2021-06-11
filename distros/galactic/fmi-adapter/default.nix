@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, fmilibrary-vendor, launch, launch-ros, launch-testing, rcl-interfaces, rclcpp, rclcpp-components, rclcpp-lifecycle, rcutils, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-fmi-adapter";
-  version = "2.1.0-r2";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/galactic/fmi_adapter/2.1.0-2.tar.gz";
-    name = "2.1.0-2.tar.gz";
-    sha256 = "99610aff9628eb0f51e6bb2395c039c78efb2a30ccf51c47641538cad9e50234";
+    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/galactic/fmi_adapter/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "ca8fec656cf8281f61501e869589f8feee04a91eb0ba2100cb5d5c6149dfa820";
   };
 
   buildType = "ament_cmake";

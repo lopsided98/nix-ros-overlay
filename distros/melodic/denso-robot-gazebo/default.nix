@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros-control, gazebo-ros-pkgs, joint-state-controller, joint-trajectory-controller }:
 buildRosPackage {
   pname = "ros-melodic-denso-robot-gazebo";
-  version = "3.1.2-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_gazebo/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "582a7e77c309ccd7fae05a4e1202de1e398813d41d93c1774579c5a319129673";
+    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_gazebo/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "c7442f7cd0ba21a4ced665b742ba53c22d36ff9a03fa546d1415c969499aa65e";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, rostest, xacro }:
 buildRosPackage {
   pname = "ros-melodic-leo-description";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/melodic/leo_description/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "8e6ce8a4b951bbfc99a9422b646c267eb685730c239bb7be953d71d9d91bbb32";
+    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/melodic/leo_description/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "360ef65d8f1517a31541eb715af5b66a7fd923dbc776f4a125fac219c70ab23d";
   };
 
   buildType = "catkin";

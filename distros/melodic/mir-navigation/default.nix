@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, base-local-planner, catkin, dwb-critics, dwb-local-planner, dwb-plugins, hector-mapping, map-server, mir-driver, mir-dwb-critics, mir-gazebo, move-base, nav-core-adapter, pythonPackages, roslaunch, sbpl-lattice-planner }:
 buildRosPackage {
   pname = "ros-melodic-mir-navigation";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_navigation/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "17970fa4703c743d5b53c81cd2337a3ea27910777f273ec41e16e5b1a1f1e08c";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_navigation/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "71f147dada6957cc290b35ee2852714e41e6a6e0ea6655fd172732ea256fe071";
   };
 
   buildType = "catkin";

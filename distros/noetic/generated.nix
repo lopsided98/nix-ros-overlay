@@ -808,6 +808,8 @@ self: super: {
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
+ foxglove-msgs = self.callPackage ./foxglove-msgs {};
+
  franka-control = self.callPackage ./franka-control {};
 
  franka-description = self.callPackage ./franka-description {};
@@ -1042,6 +1044,8 @@ self: super: {
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
 
+ imu-monitor = self.callPackage ./imu-monitor {};
+
  imu-pipeline = self.callPackage ./imu-pipeline {};
 
  imu-processors = self.callPackage ./imu-processors {};
@@ -1109,8 +1113,6 @@ self: super: {
  joy-listener = self.callPackage ./joy-listener {};
 
  joy-teleop = self.callPackage ./joy-teleop {};
-
- joystick-drivers = self.callPackage ./joystick-drivers {};
 
  joystick-interrupt = self.callPackage ./joystick-interrupt {};
 
@@ -1636,6 +1638,8 @@ self: super: {
 
  opw-kinematics = self.callPackage ./opw-kinematics {};
 
+ osm-cartography = self.callPackage ./osm-cartography {};
+
  osqp-vendor = self.callPackage ./osqp-vendor {};
 
  oxford-gps-eth = self.callPackage ./oxford-gps-eth {};
@@ -1655,6 +1659,8 @@ self: super: {
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
+
+ parameter-pa = self.callPackage ./parameter-pa {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
@@ -1788,13 +1794,21 @@ self: super: {
 
  pr2-arm-move-ik = self.callPackage ./pr2-arm-move-ik {};
 
+ pr2-bringup = self.callPackage ./pr2-bringup {};
+
  pr2-calibration-controllers = self.callPackage ./pr2-calibration-controllers {};
+
+ pr2-camera-synchronizer = self.callPackage ./pr2-camera-synchronizer {};
 
  pr2-common = self.callPackage ./pr2-common {};
 
  pr2-common-action-msgs = self.callPackage ./pr2-common-action-msgs {};
 
  pr2-common-actions = self.callPackage ./pr2-common-actions {};
+
+ pr2-computer-monitor = self.callPackage ./pr2-computer-monitor {};
+
+ pr2-controller-configuration = self.callPackage ./pr2-controller-configuration {};
 
  pr2-controller-interface = self.callPackage ./pr2-controller-interface {};
 
@@ -1807,6 +1821,8 @@ self: super: {
  pr2-dashboard-aggregator = self.callPackage ./pr2-dashboard-aggregator {};
 
  pr2-description = self.callPackage ./pr2-description {};
+
+ pr2-ethercat = self.callPackage ./pr2-ethercat {};
 
  pr2-ethercat-drivers = self.callPackage ./pr2-ethercat-drivers {};
 
@@ -1840,9 +1856,11 @@ self: super: {
 
  pr2-power-drivers = self.callPackage ./pr2-power-drivers {};
 
- pr2-teleop = self.callPackage ./pr2-teleop {};
+ pr2-robot = self.callPackage ./pr2-robot {};
 
- pr2-teleop-general = self.callPackage ./pr2-teleop-general {};
+ pr2-run-stop-auto-restart = self.callPackage ./pr2-run-stop-auto-restart {};
+
+ pr2-teleop = self.callPackage ./pr2-teleop {};
 
  pr2-tilt-laser-interface = self.callPackage ./pr2-tilt-laser-interface {};
 
@@ -1867,8 +1885,6 @@ self: super: {
  prosilica-camera = self.callPackage ./prosilica-camera {};
 
  prosilica-gige-sdk = self.callPackage ./prosilica-gige-sdk {};
-
- ps3joy = self.callPackage ./ps3joy {};
 
  psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
 
@@ -2202,6 +2218,8 @@ self: super: {
 
  rotate-recovery = self.callPackage ./rotate-recovery {};
 
+ route-network = self.callPackage ./route-network {};
+
  rqt = self.callPackage ./rqt {};
 
  rqt-action = self.callPackage ./rqt-action {};
@@ -2251,6 +2269,8 @@ self: super: {
  rqt-plot = self.callPackage ./rqt-plot {};
 
  rqt-pose-view = self.callPackage ./rqt-pose-view {};
+
+ rqt-pr2-dashboard = self.callPackage ./rqt-pr2-dashboard {};
 
  rqt-publisher = self.callPackage ./rqt-publisher {};
 
@@ -2321,6 +2341,10 @@ self: super: {
  sbpl-lattice-planner = self.callPackage ./sbpl-lattice-planner {};
 
  sbpl-recovery = self.callPackage ./sbpl-recovery {};
+
+ scaled-controllers = self.callPackage ./scaled-controllers {};
+
+ scaled-joint-trajectory-controller = self.callPackage ./scaled-joint-trajectory-controller {};
 
  scan-to-cloud-converter = self.callPackage ./scan-to-cloud-converter {};
 
@@ -2420,6 +2444,10 @@ self: super: {
 
  speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
 
+ speed-scaling-interface = self.callPackage ./speed-scaling-interface {};
+
+ speed-scaling-state-controller = self.callPackage ./speed-scaling-state-controller {};
+
  srdfdom = self.callPackage ./srdfdom {};
 
  stag-ros = self.callPackage ./stag-ros {};
@@ -2515,6 +2543,8 @@ self: super: {
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
 
  test-mavros = self.callPackage ./test-mavros {};
+
+ test-osm = self.callPackage ./test-osm {};
 
  tf = self.callPackage ./tf {};
 
@@ -2741,8 +2771,6 @@ self: super: {
  wge100-driver = self.callPackage ./wge100-driver {};
 
  wifi-ddwrt = self.callPackage ./wifi-ddwrt {};
-
- wiimote = self.callPackage ./wiimote {};
 
  willow-maps = self.callPackage ./willow-maps {};
 

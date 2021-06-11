@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-index-python, ament-lint-auto, python3Packages }:
 buildRosPackage {
   pname = "ros-foxy-xacro";
-  version = "2.0.5-r1";
+  version = "2.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/xacro-release/archive/release/foxy/xacro/2.0.5-1.tar.gz";
-    name = "2.0.5-1.tar.gz";
-    sha256 = "89ed2a540f3b582d58596ef45f2db063ca61dad2710720cd6f405948b118312c";
+    url = "https://github.com/ros-gbp/xacro-release/archive/release/foxy/xacro/2.0.6-1.tar.gz";
+    name = "2.0.6-1.tar.gz";
+    sha256 = "a908a72b0aae1a53618b3ef49de9c87d9459d7beba6452de75d9c7a02e1cae16";
   };
 
   buildType = "ament_cmake";

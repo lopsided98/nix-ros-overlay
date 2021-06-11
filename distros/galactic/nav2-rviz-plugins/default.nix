@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, nav2-lifecycle-manager, nav2-msgs, nav2-util, pluginlib, qt5, rclcpp, rclcpp-lifecycle, resource-retriever, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-galactic-nav2-rviz-plugins";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_rviz_plugins/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "630b9ae1ec1a704cb1343dbeded2bb99f8a8679a31dcf752e053871d51d99d64";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_rviz_plugins/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "21eb7c3f58bfd472cf2be3b195745f943ecec2db5372228ed60798df5aeec90c";
   };
 
   buildType = "ament_cmake";
