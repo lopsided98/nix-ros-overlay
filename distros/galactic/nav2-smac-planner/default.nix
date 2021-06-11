@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, builtin-interfaces, ceres-solver, eigen, eigen3-cmake-module, geometry-msgs, nav-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, ompl, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-galactic-nav2-smac-planner";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_smac_planner/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "0f727f826984174c037898a7d9e58a6c4b3f6ee376f2c921c198ca8e6bc19c3a";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_smac_planner/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "bd316ceb61497ec63560e6396f522b8203bb4994b852212f021cfb24984918ac";
   };
 
   buildType = "ament_cmake";

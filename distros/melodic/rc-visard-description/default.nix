@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslaunch, xacro }:
 buildRosPackage {
   pname = "ros-melodic-rc-visard-description";
-  version = "3.1.0-r2";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_visard_description/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "969cac0e0d0818eb366ea276997aef8ae32c2fc2bd9fb40cd82aca8a60395575";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_visard_description/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "dfcb05e9b5046061e9059414ee2399a7429494f203014d8c0ab0f92ecf2d8c5a";
   };
 
   buildType = "catkin";

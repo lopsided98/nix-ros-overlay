@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake, python3, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-galactic-mavlink";
-  version = "2021.5.5-r1";
+  version = "2021.6.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/galactic/mavlink/2021.5.5-1.tar.gz";
-    name = "2021.5.5-1.tar.gz";
-    sha256 = "aab8b0bff4284aa567b3bb101374bc445be2e527f70199e014abdddbb5f81dc1";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/galactic/mavlink/2021.6.6-1.tar.gz";
+    name = "2021.6.6-1.tar.gz";
+    sha256 = "946bdffc6db618d635e3ce9f786e7380fe6c5da298a40ee400e2467c501d08dd";
   };
 
   buildType = "cmake";

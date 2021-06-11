@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, interactive-markers, message-runtime, rc-common-msgs, rc-pick-client, roscpp, shape-msgs, tf, visualization-msgs, wxGTK }:
 buildRosPackage {
   pname = "ros-noetic-rc-roi-manager-gui";
-  version = "3.1.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_roi_manager_gui/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "c74c22da2864caddaa117bebe2bc6628c54ef1f748664e9e6d2773520c0295da";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_roi_manager_gui/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "f8965c08f16dc14848512026f1096a1d58a8c1cbd660152e66eb1494f29412f6";
   };
 
   buildType = "catkin";

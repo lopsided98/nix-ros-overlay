@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, binutils, boost, diagnostic-msgs, fastcdr, geometry-msgs, nav-msgs, plotjuggler, plotjuggler-msgs, qt5, rclcpp, rcpputils, rosbag2, rosbag2-transport, sensor-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-plotjuggler-ros";
-  version = "1.1.1-r4";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins-release/archive/release/foxy/plotjuggler_ros/1.1.1-4.tar.gz";
-    name = "1.1.1-4.tar.gz";
-    sha256 = "29c9ac4bcee1a8593d33d80bc63db73139249bc02c39040b1a194f49188a0ff7";
+    url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins-release/archive/release/foxy/plotjuggler_ros/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "fd33c67f1d90826e1c544b4448305a29d4a7f19f22298e4c496283158501e645";
   };
 
   buildType = "catkin";

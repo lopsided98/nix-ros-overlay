@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geodesy, geographic-msgs }:
 buildRosPackage {
   pname = "ros-noetic-geographic-info";
-  version = "0.5.5-r1";
+  version = "0.5.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/noetic/geographic_info/0.5.5-1.tar.gz";
-    name = "0.5.5-1.tar.gz";
-    sha256 = "a19fe073d334e4b20d67d705e9af80c7899de201888a1814b093f02158220cb8";
+    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/noetic/geographic_info/0.5.6-1.tar.gz";
+    name = "0.5.6-1.tar.gz";
+    sha256 = "be539a05f207583008d37725779e71984db5d3a5991dbbd19f6e158cd3c90272";
   };
 
   buildType = "catkin";

@@ -24,6 +24,8 @@ self: super: {
 
  ament-cmake-auto = self.callPackage ./ament-cmake-auto {};
 
+ ament-cmake-catch2 = self.callPackage ./ament-cmake-catch2 {};
+
  ament-cmake-clang-format = self.callPackage ./ament-cmake-clang-format {};
 
  ament-cmake-clang-tidy = self.callPackage ./ament-cmake-clang-tidy {};
@@ -426,6 +428,8 @@ self: super: {
 
  mavlink = self.callPackage ./mavlink {};
 
+ menge-vendor = self.callPackage ./menge-vendor {};
+
  message-filters = self.callPackage ./message-filters {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
@@ -491,6 +495,8 @@ self: super: {
  nodl-python = self.callPackage ./nodl-python {};
 
  ntpd-driver = self.callPackage ./ntpd-driver {};
+
+ object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
  octomap = self.callPackage ./octomap {};
 
@@ -629,6 +635,8 @@ self: super: {
  realtime-tools = self.callPackage ./realtime-tools {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
+
+ rmf-visualization-msgs = self.callPackage ./rmf-visualization-msgs {};
 
  rmw = self.callPackage ./rmw {};
 

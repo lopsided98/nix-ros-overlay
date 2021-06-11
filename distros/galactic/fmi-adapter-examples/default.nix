@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fmi-adapter, launch, launch-ros }:
 buildRosPackage {
   pname = "ros-galactic-fmi-adapter-examples";
-  version = "2.1.0-r2";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/galactic/fmi_adapter_examples/2.1.0-2.tar.gz";
-    name = "2.1.0-2.tar.gz";
-    sha256 = "423d1407ec4c3ea2022bbfeb2a3e1da9b7b7f5cce7b817c40f67036a6d291302";
+    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/galactic/fmi_adapter_examples/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "6fa264616c1823d9496d83a2011ea12904205a136c7c79f4506818599d1325c3";
   };
 
   buildType = "ament_cmake";

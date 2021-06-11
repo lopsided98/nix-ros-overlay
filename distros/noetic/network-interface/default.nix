@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, roslint, rosunit, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-network-interface";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/network_interface-release/archive/release/noetic/network_interface/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "6ba8757292ea0ae9499c9142cf2b47cac91ac0f5f2ffd21c977801657ae38d64";
+    url = "https://github.com/astuff/network_interface-release/archive/release/noetic/network_interface/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "b55512f9cb6c73bfe0ba29cde2a3d47a4e9a8e14e339440a57ccd8a5a1cefaf5";
   };
 
   buildType = "catkin";

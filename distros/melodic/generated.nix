@@ -2588,6 +2588,8 @@ self: super: {
 
  parameter-assertions = self.callPackage ./parameter-assertions {};
 
+ parameter-pa = self.callPackage ./parameter-pa {};
+
  parrot-arsdk = self.callPackage ./parrot-arsdk {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
@@ -3684,6 +3686,10 @@ self: super: {
 
  sbpl-recovery = self.callPackage ./sbpl-recovery {};
 
+ scaled-controllers = self.callPackage ./scaled-controllers {};
+
+ scaled-joint-trajectory-controller = self.callPackage ./scaled-joint-trajectory-controller {};
+
  scan-to-cloud-converter = self.callPackage ./scan-to-cloud-converter {};
 
  scan-tools = self.callPackage ./scan-tools {};
@@ -3809,6 +3815,10 @@ self: super: {
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
 
  speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
+
+ speed-scaling-interface = self.callPackage ./speed-scaling-interface {};
+
+ speed-scaling-state-controller = self.callPackage ./speed-scaling-state-controller {};
 
  sr-hand-detector = self.callPackage ./sr-hand-detector {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, gazebo-ros-pkgs, geometry-msgs, launch, launch-ros, launch-testing, lcov, nav-msgs, nav2-amcl, nav2-behavior-tree, nav2-bringup, nav2-common, nav2-lifecycle-manager, nav2-map-server, nav2-msgs, nav2-navfn-planner, nav2-planner, nav2-util, navigation2, python3Packages, rclcpp, rclpy, robot-state-publisher, std-msgs, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-galactic-nav2-system-tests";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_system_tests/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "1ba25f17fd2d671f7fa646cb7b71a890868ea9249c477effe9ab8d66ac94bb21";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_system_tests/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "655f89f9402d51d1ea9efae0e6eb3968b898088fd51e69b3910989e03ffa1e9a";
   };
 
   buildType = "ament_cmake";

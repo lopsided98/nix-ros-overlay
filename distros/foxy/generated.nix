@@ -552,6 +552,8 @@ self: super: {
 
  launch-ros = self.callPackage ./launch-ros {};
 
+ launch-system-modes = self.callPackage ./launch-system-modes {};
+
  launch-testing = self.callPackage ./launch-testing {};
 
  launch-testing-ament-cmake = self.callPackage ./launch-testing-ament-cmake {};
@@ -635,8 +637,6 @@ self: super: {
  moveit-common = self.callPackage ./moveit-common {};
 
  moveit-core = self.callPackage ./moveit-core {};
-
- moveit-fake-controller-manager = self.callPackage ./moveit-fake-controller-manager {};
 
  moveit-kinematics = self.callPackage ./moveit-kinematics {};
 
@@ -1352,6 +1352,8 @@ self: super: {
 
  test-interface-files = self.callPackage ./test-interface-files {};
 
+ test-launch-system-modes = self.callPackage ./test-launch-system-modes {};
+
  test-msgs = self.callPackage ./test-msgs {};
 
  test-osrf-testing-tools-cpp = self.callPackage ./test-osrf-testing-tools-cpp {};
@@ -1429,8 +1431,6 @@ self: super: {
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
-
- tvm-vendor = self.callPackage ./tvm-vendor {};
 
  twist-stamper = self.callPackage ./twist-stamper {};
 

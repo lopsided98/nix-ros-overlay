@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-galactic-control-msgs";
-  version = "3.0.0-r1";
+  version = "3.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/galactic/control_msgs/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "279c970e11e27ead0a0727247ab34d26a3fa0b50d6da7f36a6dd03119ac0aec2";
+    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/galactic/control_msgs/3.0.0-2.tar.gz";
+    name = "3.0.0-2.tar.gz";
+    sha256 = "c159acb41dab529238cc07e9c0cfb237c72fa99f53625f5d85c40e1c3fbf3599";
   };
 
   buildType = "ament_cmake";

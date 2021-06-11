@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-sdc21x0";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/sdc21x0/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "1196af31b64c8eaf7e1d3338de2fc35915731af10ce73cbd6fd4b22d434ff874";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/sdc21x0/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "ba36cc5570fc9c1e86170c6d6b25c913ff595d792d65b709ea6458be53554c94";
   };
 
   buildType = "catkin";
