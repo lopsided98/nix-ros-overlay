@@ -166,6 +166,8 @@ self: super: {
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
 
+ can-dbc-parser = self.callPackage ./can-dbc-parser {};
+
  can-msgs = self.callPackage ./can-msgs {};
 
  carla-msgs = self.callPackage ./carla-msgs {};
@@ -275,6 +277,8 @@ self: super: {
  dynamic-graph = self.callPackage ./dynamic-graph {};
 
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
+
+ dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
@@ -896,8 +900,6 @@ self: super: {
 
  random-numbers = self.callPackage ./random-numbers {};
 
- raptor-can-dbc-parser = self.callPackage ./raptor-can-dbc-parser {};
-
  raptor-dbw-can = self.callPackage ./raptor-dbw-can {};
 
  raptor-dbw-joystick = self.callPackage ./raptor-dbw-joystick {};
@@ -923,6 +925,8 @@ self: super: {
  rc-reason-clients = self.callPackage ./rc-reason-clients {};
 
  rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
+
+ rcdiscover = self.callPackage ./rcdiscover {};
 
  rcl = self.callPackage ./rcl {};
 
@@ -1432,6 +1436,8 @@ self: super: {
 
  turtlesim = self.callPackage ./turtlesim {};
 
+ twist-mux = self.callPackage ./twist-mux {};
+
  twist-stamper = self.callPackage ./twist-stamper {};
 
  ublox = self.callPackage ./ublox {};
@@ -1453,6 +1459,8 @@ self: super: {
  ur-client-library = self.callPackage ./ur-client-library {};
 
  urdf = self.callPackage ./urdf {};
+
+ urdf-test = self.callPackage ./urdf-test {};
 
  urdfdom = self.callPackage ./urdfdom {};
 

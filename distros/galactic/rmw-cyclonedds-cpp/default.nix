@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, cyclonedds, rcpputils, rcutils, rmw, rmw-dds-common, rosidl-runtime-c, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp }:
 buildRosPackage {
   pname = "ros-galactic-rmw-cyclonedds-cpp";
-  version = "0.22.2-r1";
+  version = "0.22.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/galactic/rmw_cyclonedds_cpp/0.22.2-1.tar.gz";
-    name = "0.22.2-1.tar.gz";
-    sha256 = "967f5594262b20f00ea7f005f902ae85e7180441d90639e90330393789d19d26";
+    url = "https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/galactic/rmw_cyclonedds_cpp/0.22.3-1.tar.gz";
+    name = "0.22.3-1.tar.gz";
+    sha256 = "2fc03f09537ea23892b56d173f50b10728f057ae6b56cccbd13848e253c89d6e";
   };
 
   buildType = "ament_cmake";

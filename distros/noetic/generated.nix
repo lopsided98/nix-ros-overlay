@@ -166,7 +166,15 @@ self: super: {
 
  carrot-planner = self.callPackage ./carrot-planner {};
 
+ cartesian-control-msgs = self.callPackage ./cartesian-control-msgs {};
+
+ cartesian-interface = self.callPackage ./cartesian-interface {};
+
  cartesian-msgs = self.callPackage ./cartesian-msgs {};
+
+ cartesian-trajectory-controller = self.callPackage ./cartesian-trajectory-controller {};
+
+ cartesian-trajectory-interpolation = self.callPackage ./cartesian-trajectory-interpolation {};
 
  catch-ros = self.callPackage ./catch-ros {};
 
@@ -1556,6 +1564,8 @@ self: super: {
 
  ncd-parser = self.callPackage ./ncd-parser {};
 
+ neo-local-planner = self.callPackage ./neo-local-planner {};
+
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
  neonavigation = self.callPackage ./neonavigation {};
@@ -1661,6 +1671,8 @@ self: super: {
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
 
  parameter-pa = self.callPackage ./parameter-pa {};
+
+ pass-through-controllers = self.callPackage ./pass-through-controllers {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
@@ -1938,6 +1950,10 @@ self: super: {
 
  rc-pick-client = self.callPackage ./rc-pick-client {};
 
+ rc-reason-clients = self.callPackage ./rc-reason-clients {};
+
+ rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
+
  rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
 
  rc-silhouettematch-client = self.callPackage ./rc-silhouettematch-client {};
@@ -2035,6 +2051,8 @@ self: super: {
  ros-control-boilerplate = self.callPackage ./ros-control-boilerplate {};
 
  ros-controllers = self.callPackage ./ros-controllers {};
+
+ ros-controllers-cartesian = self.callPackage ./ros-controllers-cartesian {};
 
  ros-core = self.callPackage ./ros-core {};
 
@@ -2633,6 +2651,8 @@ self: super: {
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
+
+ twist-controller = self.callPackage ./twist-controller {};
 
  twist-mux = self.callPackage ./twist-mux {};
 

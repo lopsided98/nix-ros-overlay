@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, message-generation, message-runtime, nkf, roscpp, sound-play }:
 buildRosPackage {
   pname = "ros-melodic-voice-text";
-  version = "2.1.21-r3";
+  version = "2.1.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/voice_text/2.1.21-3.tar.gz";
-    name = "2.1.21-3.tar.gz";
-    sha256 = "409a462a24d07c8cfb462b8b7a127871d42f022cf56df4c7e3404b7a38a4c6ae";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/voice_text/2.1.22-1.tar.gz";
+    name = "2.1.22-1.tar.gz";
+    sha256 = "eed24d2b0ae5c11193df2589df08da92ed66e159030ed07fb6f63ebcde03ca5d";
   };
 
   buildType = "catkin";

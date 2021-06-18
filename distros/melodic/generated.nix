@@ -82,6 +82,8 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ aques-talk = self.callPackage ./aques-talk {};
+
  ar-track-alvar = self.callPackage ./ar-track-alvar {};
 
  ar-track-alvar-msgs = self.callPackage ./ar-track-alvar-msgs {};
@@ -262,7 +264,15 @@ self: super: {
 
  carrot-planner = self.callPackage ./carrot-planner {};
 
+ cartesian-control-msgs = self.callPackage ./cartesian-control-msgs {};
+
+ cartesian-interface = self.callPackage ./cartesian-interface {};
+
  cartesian-msgs = self.callPackage ./cartesian-msgs {};
+
+ cartesian-trajectory-controller = self.callPackage ./cartesian-trajectory-controller {};
+
+ cartesian-trajectory-interpolation = self.callPackage ./cartesian-trajectory-interpolation {};
 
  cartographer = self.callPackage ./cartographer {};
 
@@ -279,6 +289,8 @@ self: super: {
  catkin-pip = self.callPackage ./catkin-pip {};
 
  catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
+
+ chaplus-ros = self.callPackage ./chaplus-ros {};
 
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
 
@@ -2592,6 +2604,8 @@ self: super: {
 
  parrot-arsdk = self.callPackage ./parrot-arsdk {};
 
+ pass-through-controllers = self.callPackage ./pass-through-controllers {};
+
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
  pcl-msgs = self.callPackage ./pcl-msgs {};
@@ -3036,6 +3050,10 @@ self: super: {
 
  rc-pick-client = self.callPackage ./rc-pick-client {};
 
+ rc-reason-clients = self.callPackage ./rc-reason-clients {};
+
+ rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
+
  rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
 
  rc-silhouettematch-client = self.callPackage ./rc-silhouettematch-client {};
@@ -3251,6 +3269,8 @@ self: super: {
  ros-control-boilerplate = self.callPackage ./ros-control-boilerplate {};
 
  ros-controllers = self.callPackage ./ros-controllers {};
+
+ ros-controllers-cartesian = self.callPackage ./ros-controllers-cartesian {};
 
  ros-core = self.callPackage ./ros-core {};
 
@@ -4083,6 +4103,8 @@ self: super: {
  tuw-vehicle-msgs = self.callPackage ./tuw-vehicle-msgs {};
 
  tvm-vendor = self.callPackage ./tvm-vendor {};
+
+ twist-controller = self.callPackage ./twist-controller {};
 
  twist-mux = self.callPackage ./twist-mux {};
 

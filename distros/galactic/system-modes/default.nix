@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-index-python, ament-lint-auto, builtin-interfaces, launch-ros, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-lifecycle, ros2run, system-modes-msgs }:
 buildRosPackage {
   pname = "ros-galactic-system-modes";
-  version = "0.7.1-r3";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/system_modes-release/archive/release/galactic/system_modes/0.7.1-3.tar.gz";
-    name = "0.7.1-3.tar.gz";
-    sha256 = "9e30700ca05a3414bb301cc41b6ceb03b150f1d4e1fb404b9456b1e9f57ed38c";
+    url = "https://github.com/ros2-gbp/system_modes-release/archive/release/galactic/system_modes/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "2863caf47d437d34ec5adc17cdd8703039c08628fb0e17b57a1f4caa707708eb";
   };
 
   buildType = "ament_cmake";

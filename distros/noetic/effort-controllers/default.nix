@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, control-msgs, control-toolbox, controller-interface, controller-manager, forward-command-controller, hardware-interface, joint-state-controller, pluginlib, realtime-tools, robot-state-publisher, roscpp, rosgraph-msgs, rostest, sensor-msgs, std-msgs, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-effort-controllers";
-  version = "0.18.1-r1";
+  version = "0.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/effort_controllers/0.18.1-1.tar.gz";
-    name = "0.18.1-1.tar.gz";
-    sha256 = "692393aed0b39e79e6ff08e04273126b931b672568baca7062a86572a20d3f1f";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/effort_controllers/0.19.0-1.tar.gz";
+    name = "0.19.0-1.tar.gz";
+    sha256 = "48eab98ddf97ac7e2adee655d4c1ce4c9d3fbd152bd7fe980feb8cd1746606ca";
   };
 
   buildType = "catkin";
