@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, ros-environment, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-derived-object-msgs";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/derived_object_msgs/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "1fff6c0bd05b79f989d167655e30ea713e9b65bd501141402dd5f80bf780798c";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/derived_object_msgs/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "4ea1519b31275a2df6f3ca203077fca8b5447d588c02e69898463d3c3a9a7037";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, hardware-interface, pluginlib, resource-retriever, roscpp, tinyxml }:
 buildRosPackage {
   pname = "ros-noetic-transmission-interface";
-  version = "0.19.4-r1";
+  version = "0.19.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/transmission_interface/0.19.4-1.tar.gz";
-    name = "0.19.4-1.tar.gz";
-    sha256 = "cce664686d2a60a3880936817d3a560cafc49693455787e2f872052de18462c4";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/transmission_interface/0.19.5-1.tar.gz";
+    name = "0.19.5-1.tar.gz";
+    sha256 = "5105c573a9eace338fc2d3b1a09a3ffc87824fe3f1680c2343d40bd0ee551de5";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bison, cacert, catkin, flex, gawk, python, rostest, time }:
 buildRosPackage {
   pname = "ros-melodic-downward";
-  version = "2.1.21-r3";
+  version = "2.1.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/downward/2.1.21-3.tar.gz";
-    name = "2.1.21-3.tar.gz";
-    sha256 = "4f15f016383579ae56cf88c1c58f65739ed61f61e78228d1d2d91d24f1f432f9";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/downward/2.1.22-1.tar.gz";
+    name = "2.1.22-1.tar.gz";
+    sha256 = "a961d1f9b2b9f6af11ea5272feb72e89c58b76f6f73fb1847d13814f07b1661c";
   };
 
   buildType = "catkin";

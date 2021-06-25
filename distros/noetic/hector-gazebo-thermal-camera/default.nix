@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo, gazebo-plugins, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-hector-gazebo-thermal-camera";
-  version = "0.5.3-r1";
+  version = "0.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_gazebo_thermal_camera/0.5.3-1.tar.gz";
-    name = "0.5.3-1.tar.gz";
-    sha256 = "ee40ddebaf2ffffd2194dc3d529742a87cced11f9b1e1191ab0f193a2c3c78e5";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_gazebo_thermal_camera/0.5.4-1.tar.gz";
+    name = "0.5.4-1.tar.gz";
+    sha256 = "64ac64b5360fd91f91890f06fe200f1c05e509a49bb8614dcb43f8cf4375f01b";
   };
 
   buildType = "catkin";

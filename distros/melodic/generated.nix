@@ -82,6 +82,8 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ aques-talk = self.callPackage ./aques-talk {};
+
  ar-track-alvar = self.callPackage ./ar-track-alvar {};
 
  ar-track-alvar-msgs = self.callPackage ./ar-track-alvar-msgs {};
@@ -212,8 +214,6 @@ self: super: {
 
  boost-sml = self.callPackage ./boost-sml {};
 
- bota-device-driver = self.callPackage ./bota-device-driver {};
-
  bota-driver = self.callPackage ./bota-driver {};
 
  bota-node = self.callPackage ./bota-node {};
@@ -262,7 +262,15 @@ self: super: {
 
  carrot-planner = self.callPackage ./carrot-planner {};
 
+ cartesian-control-msgs = self.callPackage ./cartesian-control-msgs {};
+
+ cartesian-interface = self.callPackage ./cartesian-interface {};
+
  cartesian-msgs = self.callPackage ./cartesian-msgs {};
+
+ cartesian-trajectory-controller = self.callPackage ./cartesian-trajectory-controller {};
+
+ cartesian-trajectory-interpolation = self.callPackage ./cartesian-trajectory-interpolation {};
 
  cartographer = self.callPackage ./cartographer {};
 
@@ -279,6 +287,8 @@ self: super: {
  catkin-pip = self.callPackage ./catkin-pip {};
 
  catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
+
+ chaplus-ros = self.callPackage ./chaplus-ros {};
 
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
 
@@ -559,6 +569,22 @@ self: super: {
  controller-manager-tests = self.callPackage ./controller-manager-tests {};
 
  convex-decomposition = self.callPackage ./convex-decomposition {};
+
+ copernicus-base = self.callPackage ./copernicus-base {};
+
+ copernicus-control = self.callPackage ./copernicus-control {};
+
+ copernicus-description = self.callPackage ./copernicus-description {};
+
+ copernicus-localization = self.callPackage ./copernicus-localization {};
+
+ copernicus-msgs = self.callPackage ./copernicus-msgs {};
+
+ copernicus-navigation = self.callPackage ./copernicus-navigation {};
+
+ copernicus-rules = self.callPackage ./copernicus-rules {};
+
+ copernicus-teleoperator = self.callPackage ./copernicus-teleoperator {};
 
  costmap-2d = self.callPackage ./costmap-2d {};
 
@@ -2592,6 +2618,8 @@ self: super: {
 
  parrot-arsdk = self.callPackage ./parrot-arsdk {};
 
+ pass-through-controllers = self.callPackage ./pass-through-controllers {};
+
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
  pcl-msgs = self.callPackage ./pcl-msgs {};
@@ -3036,6 +3064,10 @@ self: super: {
 
  rc-pick-client = self.callPackage ./rc-pick-client {};
 
+ rc-reason-clients = self.callPackage ./rc-reason-clients {};
+
+ rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
+
  rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
 
  rc-silhouettematch-client = self.callPackage ./rc-silhouettematch-client {};
@@ -3222,12 +3254,6 @@ self: super: {
 
  rokubimini-ethercat = self.callPackage ./rokubimini-ethercat {};
 
- rokubimini-examples = self.callPackage ./rokubimini-examples {};
-
- rokubimini-factory = self.callPackage ./rokubimini-factory {};
-
- rokubimini-manager = self.callPackage ./rokubimini-manager {};
-
  rokubimini-msgs = self.callPackage ./rokubimini-msgs {};
 
  rokubimini-serial = self.callPackage ./rokubimini-serial {};
@@ -3251,6 +3277,8 @@ self: super: {
  ros-control-boilerplate = self.callPackage ./ros-control-boilerplate {};
 
  ros-controllers = self.callPackage ./ros-controllers {};
+
+ ros-controllers-cartesian = self.callPackage ./ros-controllers-cartesian {};
 
  ros-core = self.callPackage ./ros-core {};
 
@@ -4083,6 +4111,8 @@ self: super: {
  tuw-vehicle-msgs = self.callPackage ./tuw-vehicle-msgs {};
 
  tvm-vendor = self.callPackage ./tvm-vendor {};
+
+ twist-controller = self.callPackage ./twist-controller {};
 
  twist-mux = self.callPackage ./twist-mux {};
 

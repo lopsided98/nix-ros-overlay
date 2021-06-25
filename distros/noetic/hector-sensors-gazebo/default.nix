@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-plugins, hector-gazebo-plugins, hector-sensors-description }:
 buildRosPackage {
   pname = "ros-noetic-hector-sensors-gazebo";
-  version = "0.5.3-r1";
+  version = "0.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_sensors_gazebo/0.5.3-1.tar.gz";
-    name = "0.5.3-1.tar.gz";
-    sha256 = "d3f9828077271e47f60b41a71af04338da993a188aa40c339365a6fb900920d5";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_sensors_gazebo/0.5.4-1.tar.gz";
+    name = "0.5.4-1.tar.gz";
+    sha256 = "bc0da9a58e2e5cb58449c13458bbe9863b1fbe1eb0a1f34f31c336c5fbb9c186";
   };
 
   buildType = "catkin";

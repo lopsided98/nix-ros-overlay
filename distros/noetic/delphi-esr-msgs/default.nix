@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, ros-environment, rosbag-migration-rule, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-delphi-esr-msgs";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/delphi_esr_msgs/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "eddb38859f716d8d4b24bcca98afaf5a6a5e12950b28a2090852f46b6e4dcc11";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/delphi_esr_msgs/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "f4816ec2a907d27373333aa1f5b7cd7aa10acb4ef7f0559050306eff505e6bb6";
   };
 
   buildType = "catkin";

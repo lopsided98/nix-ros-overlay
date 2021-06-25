@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, sensor-msgs, std-msgs, xacro }:
 buildRosPackage {
   pname = "ros-melodic-rokubimini-description";
-  version = "0.5.9-r1";
+  version = "0.6.0-r3";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/melodic/rokubimini_description/0.5.9-1/bota_driver-release-release-melodic-rokubimini_description-0.5.9-1.tar.gz";
-    name = "bota_driver-release-release-melodic-rokubimini_description-0.5.9-1.tar.gz";
-    sha256 = "123c4e83ffe29893dfa08fc0c658d7c0a8dc58cf4afaf559f5cd289c2e9ba9d2";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/melodic/rokubimini_description/0.6.0-3/bota_driver-release-release-melodic-rokubimini_description-0.6.0-3.tar.gz";
+    name = "bota_driver-release-release-melodic-rokubimini_description-0.6.0-3.tar.gz";
+    sha256 = "0f49d319244e206be84c06269024f338f89c52f485a24b48434666540a8cf3b5";
   };
 
   buildType = "catkin";

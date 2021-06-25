@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, roslib }:
 buildRosPackage {
   pname = "ros-melodic-mini-maxwell";
-  version = "2.1.21-r3";
+  version = "2.1.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/mini_maxwell/2.1.21-3.tar.gz";
-    name = "2.1.21-3.tar.gz";
-    sha256 = "3f10e85ae3f503134406c164c21939cf74588f6f38687ceb96d0f835085f8701";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/mini_maxwell/2.1.22-1.tar.gz";
+    name = "2.1.22-1.tar.gz";
+    sha256 = "e3fff426221703d58aca43e821fade1f92dda4fb60472c77aed6b966827a6b9c";
   };
 
   buildType = "catkin";

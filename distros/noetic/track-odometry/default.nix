@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, message-filters, nav-msgs, neonavigation-common, roscpp, roslint, rostest, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-noetic-track-odometry";
-  version = "0.10.10-r1";
+  version = "0.10.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/track_odometry/0.10.10-1.tar.gz";
-    name = "0.10.10-1.tar.gz";
-    sha256 = "ed32b479352a1074d379510660eeeb41a62159ea8576f8373217b2e9bf19a264";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/track_odometry/0.10.11-1.tar.gz";
+    name = "0.10.11-1.tar.gz";
+    sha256 = "a57bdbf32c0ef5af08b43ae3e03c134ab75c14c8372b744930693bfc1514ad9a";
   };
 
   buildType = "catkin";

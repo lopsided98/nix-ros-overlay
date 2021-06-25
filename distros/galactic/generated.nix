@@ -230,6 +230,12 @@ self: super: {
 
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
+ dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
+
+ dynamixel-sdk-custom-interfaces = self.callPackage ./dynamixel-sdk-custom-interfaces {};
+
+ dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
+
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
@@ -308,6 +314,8 @@ self: super: {
 
  geographic-msgs = self.callPackage ./geographic-msgs {};
 
+ geometric-shapes = self.callPackage ./geometric-shapes {};
+
  geometry2 = self.callPackage ./geometry2 {};
 
  geometry-msgs = self.callPackage ./geometry-msgs {};
@@ -380,6 +388,8 @@ self: super: {
 
  launch-ros = self.callPackage ./launch-ros {};
 
+ launch-system-modes = self.callPackage ./launch-system-modes {};
+
  launch-testing = self.callPackage ./launch-testing {};
 
  launch-testing-ament-cmake = self.callPackage ./launch-testing-ament-cmake {};
@@ -395,6 +405,8 @@ self: super: {
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
 
  libg2o = self.callPackage ./libg2o {};
+
+ libmavconn = self.callPackage ./libmavconn {};
 
  libphidget22 = self.callPackage ./libphidget22 {};
 
@@ -428,6 +440,10 @@ self: super: {
 
  mavlink = self.callPackage ./mavlink {};
 
+ mavros = self.callPackage ./mavros {};
+
+ mavros-msgs = self.callPackage ./mavros-msgs {};
+
  menge-vendor = self.callPackage ./menge-vendor {};
 
  message-filters = self.callPackage ./message-filters {};
@@ -435,6 +451,22 @@ self: super: {
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
+
+ moveit-msgs = self.callPackage ./moveit-msgs {};
+
+ moveit-resources = self.callPackage ./moveit-resources {};
+
+ moveit-resources-fanuc-description = self.callPackage ./moveit-resources-fanuc-description {};
+
+ moveit-resources-fanuc-moveit-config = self.callPackage ./moveit-resources-fanuc-moveit-config {};
+
+ moveit-resources-panda-description = self.callPackage ./moveit-resources-panda-description {};
+
+ moveit-resources-panda-moveit-config = self.callPackage ./moveit-resources-panda-moveit-config {};
+
+ moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
+
+ nao-interfaces = self.callPackage ./nao-interfaces {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -506,6 +538,8 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
+ openvslam = self.callPackage ./openvslam {};
+
  orocos-kdl = self.callPackage ./orocos-kdl {};
 
  osqp-vendor = self.callPackage ./osqp-vendor {};
@@ -558,6 +592,12 @@ self: super: {
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
+ plotjuggler = self.callPackage ./plotjuggler {};
+
+ plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
+
+ plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
+
  pluginlib = self.callPackage ./pluginlib {};
 
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
@@ -586,6 +626,8 @@ self: super: {
 
  radar-msgs = self.callPackage ./radar-msgs {};
 
+ random-numbers = self.callPackage ./random-numbers {};
+
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
@@ -593,6 +635,12 @@ self: super: {
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
 
  rc-genicam-driver = self.callPackage ./rc-genicam-driver {};
+
+ rc-reason-clients = self.callPackage ./rc-reason-clients {};
+
+ rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
+
+ rcdiscover = self.callPackage ./rcdiscover {};
 
  rcl = self.callPackage ./rcl {};
 
@@ -636,7 +684,31 @@ self: super: {
 
  resource-retriever = self.callPackage ./resource-retriever {};
 
+ rmf-building-map-msgs = self.callPackage ./rmf-building-map-msgs {};
+
+ rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
+
+ rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
+
+ rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
+
+ rmf-door-msgs = self.callPackage ./rmf-door-msgs {};
+
+ rmf-fleet-msgs = self.callPackage ./rmf-fleet-msgs {};
+
+ rmf-ingestor-msgs = self.callPackage ./rmf-ingestor-msgs {};
+
+ rmf-lift-msgs = self.callPackage ./rmf-lift-msgs {};
+
+ rmf-task-msgs = self.callPackage ./rmf-task-msgs {};
+
+ rmf-traffic-msgs = self.callPackage ./rmf-traffic-msgs {};
+
+ rmf-utils = self.callPackage ./rmf-utils {};
+
  rmf-visualization-msgs = self.callPackage ./rmf-visualization-msgs {};
+
+ rmf-workcell-msgs = self.callPackage ./rmf-workcell-msgs {};
 
  rmw = self.callPackage ./rmw {};
 
@@ -890,9 +962,13 @@ self: super: {
 
  smclib = self.callPackage ./smclib {};
 
+ soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
+
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
+
+ srdfdom = self.callPackage ./srdfdom {};
 
  sros2 = self.callPackage ./sros2 {};
 
@@ -907,6 +983,10 @@ self: super: {
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
+
+ stubborn-buddies = self.callPackage ./stubborn-buddies {};
+
+ stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
 
  system-modes = self.callPackage ./system-modes {};
 
@@ -929,6 +1009,8 @@ self: super: {
  test-bond = self.callPackage ./test-bond {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
+
+ test-launch-system-modes = self.callPackage ./test-launch-system-modes {};
 
  test-msgs = self.callPackage ./test-msgs {};
 
@@ -978,6 +1060,14 @@ self: super: {
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
+ turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
+
+ turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
+
+ turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
+
+ turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
+
  turtlesim = self.callPackage ./turtlesim {};
 
  ublox = self.callPackage ./ublox {};
@@ -1017,6 +1107,8 @@ self: super: {
  vision-opencv = self.callPackage ./vision-opencv {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
+
+ warehouse-ros = self.callPackage ./warehouse-ros {};
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, ros-environment, rosbag-migration-rule, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-pacmod-msgs";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/pacmod_msgs/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "3bf0ce0f3c1971b85a0af45522044352ea6f6e5b1baa313563cc8fc035536eb6";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/pacmod_msgs/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "4778add999c3cc09f4961506e49e9a8d4b1d6fcfde80033e27944ee722824fcb";
   };
 
   buildType = "catkin";

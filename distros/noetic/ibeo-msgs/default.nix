@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, ros-environment, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-ibeo-msgs";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/ibeo_msgs/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "d3444d954ef9fb4ca54a1649051d275756f7bdf0312716a14a7c1ca60311dd8e";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/ibeo_msgs/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "f0e57dc58d1148f5c8bb9dc5723f9c5b5cc3a4e86d02ab110b5e03f595c659e4";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, turtlebot3-fake-node, turtlebot3-gazebo }:
 buildRosPackage {
   pname = "ros-foxy-turtlebot3-simulations";
-  version = "2.2.2-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3_simulations-release/archive/release/foxy/turtlebot3_simulations/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "c75666dd3406bec6dd0490246e77ac6d2dbbb2e6fbbcabe375e49216fcba3b7c";
+    url = "https://github.com/robotis-ros2-release/turtlebot3_simulations-release/archive/release/foxy/turtlebot3_simulations/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "faaabdafc9b0404adebbbc0e1c72aec9807b4697c431c556e20b04aeb408d6cb";
   };
 
   buildType = "ament_cmake";
