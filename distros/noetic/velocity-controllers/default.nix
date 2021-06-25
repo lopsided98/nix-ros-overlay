@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, control-msgs, control-toolbox, controller-interface, forward-command-controller, hardware-interface, pluginlib, realtime-tools, roscpp, std-msgs, urdf }:
 buildRosPackage {
   pname = "ros-noetic-velocity-controllers";
-  version = "0.18.1-r1";
+  version = "0.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/velocity_controllers/0.18.1-1.tar.gz";
-    name = "0.18.1-1.tar.gz";
-    sha256 = "f4c93c0a7ea10a062fec2329a76e23dfdcbf4da2ac307aeb0638f54bc8c25a09";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/velocity_controllers/0.19.0-1.tar.gz";
+    name = "0.19.0-1.tar.gz";
+    sha256 = "5281f0510e937a8ce981053f9bbc4c9c81ea84254b097fb6df2481edf4963fed";
   };
 
   buildType = "catkin";

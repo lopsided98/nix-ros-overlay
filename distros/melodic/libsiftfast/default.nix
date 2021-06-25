@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, mk, pythonPackages, rosboost-cfg, roslib, rospack, subversion }:
 buildRosPackage {
   pname = "ros-melodic-libsiftfast";
-  version = "2.1.21-r3";
+  version = "2.1.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/libsiftfast/2.1.21-3.tar.gz";
-    name = "2.1.21-3.tar.gz";
-    sha256 = "0772c84e89ec4ee8e4ddac0e42ee1543b586dc12e5ec8b98e69876999f0d329e";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/libsiftfast/2.1.22-1.tar.gz";
+    name = "2.1.22-1.tar.gz";
+    sha256 = "9a6b98bf3366af7e8fcd205dc09ec3976243037f5c4eeccbe5045740aaa76421";
   };
 
   buildType = "catkin";

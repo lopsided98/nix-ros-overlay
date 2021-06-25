@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, rclcpp, robot-state-publisher, sensor-msgs, tf2, tf2-msgs, turtlebot3-msgs }:
 buildRosPackage {
   pname = "ros-foxy-turtlebot3-fake-node";
-  version = "2.2.2-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3_simulations-release/archive/release/foxy/turtlebot3_fake_node/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "fff9bb4bbb00f9025a2fa3299e9d72b142115b01bd52ae02ed875eb8759664ec";
+    url = "https://github.com/robotis-ros2-release/turtlebot3_simulations-release/archive/release/foxy/turtlebot3_fake_node/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "421f133a1c3f049ef1ecb28ed78452ae89b9707cdbeff59547725d01e6c57e3c";
   };
 
   buildType = "ament_cmake";

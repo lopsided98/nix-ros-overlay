@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rokubimini }:
+{ lib, buildRosPackage, fetchurl, bota-node, catkin, rokubimini }:
 buildRosPackage {
   pname = "ros-melodic-rokubimini-bus-manager";
-  version = "0.5.9-r1";
+  version = "0.6.0-r3";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/melodic/rokubimini_bus_manager/0.5.9-1/bota_driver-release-release-melodic-rokubimini_bus_manager-0.5.9-1.tar.gz";
-    name = "bota_driver-release-release-melodic-rokubimini_bus_manager-0.5.9-1.tar.gz";
-    sha256 = "fc15c519675390554411cc7f4d97e44e6e9cc08446931e7ada663e55fb057702";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/melodic/rokubimini_bus_manager/0.6.0-3/bota_driver-release-release-melodic-rokubimini_bus_manager-0.6.0-3.tar.gz";
+    name = "bota_driver-release-release-melodic-rokubimini_bus_manager-0.6.0-3.tar.gz";
+    sha256 = "2905cb6d10c6e585b09545c91e2ae4a4c23cf831999d676883b2a71c998e5cce";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ rokubimini ];
+  propagatedBuildInputs = [ bota-node rokubimini ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

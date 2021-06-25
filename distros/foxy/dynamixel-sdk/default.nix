@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-foxy-dynamixel-sdk";
-  version = "3.7.40-r3";
+  version = "3.7.40-r4";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/dynamixel_sdk-release/archive/release/foxy/dynamixel_sdk/3.7.40-3.tar.gz";
-    name = "3.7.40-3.tar.gz";
-    sha256 = "63485d65ef4d98ef89fd488cab1168077e38ec26ec3449b91c32a22505201a3b";
+    url = "https://github.com/robotis-ros2-release/dynamixel_sdk-release/archive/release/foxy/dynamixel_sdk/3.7.40-4.tar.gz";
+    name = "3.7.40-4.tar.gz";
+    sha256 = "c78aafa4e33d923a2e727bd06e9cddc775b73cc68db9da4d11e3ca3635b2c8cd";
   };
 
   buildType = "ament_cmake";

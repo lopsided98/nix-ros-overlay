@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-cspace, joystick-interrupt, map-organizer, neonavigation-common, neonavigation-launch, obj-to-pointcloud, planner-cspace, safety-limiter, track-odometry, trajectory-tracker }:
 buildRosPackage {
   pname = "ros-noetic-neonavigation";
-  version = "0.10.10-r1";
+  version = "0.10.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/neonavigation/0.10.10-1.tar.gz";
-    name = "0.10.10-1.tar.gz";
-    sha256 = "fbc67584929d31b357defd99f937ee341089b5b9cbcf540a8f9b2a86ee72b2cd";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/neonavigation/0.10.11-1.tar.gz";
+    name = "0.10.11-1.tar.gz";
+    sha256 = "87b080dba20d0ce30fcd5a4310ceafdcd4149eb3cf5f6d916b027d782e30d7be";
   };
 
   buildType = "catkin";

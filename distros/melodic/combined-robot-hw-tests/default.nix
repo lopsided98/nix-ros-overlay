@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, combined-robot-hw, controller-manager, controller-manager-msgs, controller-manager-tests, hardware-interface, pluginlib, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-combined-robot-hw-tests";
-  version = "0.18.3-r1";
+  version = "0.18.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/combined_robot_hw_tests/0.18.3-1.tar.gz";
-    name = "0.18.3-1.tar.gz";
-    sha256 = "3c3c6ba6f41f2a1e256b4c48ac9355b3d9cd38bfa0fbf8a4488860acb4595c55";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/combined_robot_hw_tests/0.18.4-1.tar.gz";
+    name = "0.18.4-1.tar.gz";
+    sha256 = "69832526f9f047fbd4241bfd9bcfb67123cb1ffed88383bbc44dba805a51dc0b";
   };
 
   buildType = "catkin";

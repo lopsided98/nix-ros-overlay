@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-hardware-interface";
-  version = "0.19.4-r1";
+  version = "0.19.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/hardware_interface/0.19.4-1.tar.gz";
-    name = "0.19.4-1.tar.gz";
-    sha256 = "599c3579366d95a3c6debff690ac69db156da5b3a153b60747efffd0b63603be";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/hardware_interface/0.19.5-1.tar.gz";
+    name = "0.19.5-1.tar.gz";
+    sha256 = "16bf376a04d3fb720ae204b3ef0b2ef7be36ca92bef987b3644caf88dffaca1a";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros, hector-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-melodic-hector-gazebo-worlds";
-  version = "0.5.1";
+  version = "0.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/melodic/hector_gazebo_worlds/0.5.1-0.tar.gz";
-    name = "0.5.1-0.tar.gz";
-    sha256 = "71ada41731ad64e3a1815c57a0f4ef98f526afaf0decf58eb26745721a39ce5b";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/melodic/hector_gazebo_worlds/0.5.4-1.tar.gz";
+    name = "0.5.4-1.tar.gz";
+    sha256 = "f155a9a3e1bf7eb33b575241e2a049056ced64687bf207ae23c90efeb60a55ea";
   };
 
   buildType = "catkin";

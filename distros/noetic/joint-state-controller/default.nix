@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, hardware-interface, pluginlib, realtime-tools, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-joint-state-controller";
-  version = "0.18.1-r1";
+  version = "0.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/joint_state_controller/0.18.1-1.tar.gz";
-    name = "0.18.1-1.tar.gz";
-    sha256 = "2b31f7599a1a6680d18e99f931e0e3bdfb55953e430f1d10e9d3516f5a33e171";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/joint_state_controller/0.19.0-1.tar.gz";
+    name = "0.19.0-1.tar.gz";
+    sha256 = "e0968620e901d8ca8a2e1a4d032d5afde60acdbf61440a63073483c008c093ba";
   };
 
   buildType = "catkin";

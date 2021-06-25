@@ -122,8 +122,6 @@ self: super: {
 
  bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
 
- bota-device-driver = self.callPackage ./bota-device-driver {};
-
  bota-driver = self.callPackage ./bota-driver {};
 
  bota-node = self.callPackage ./bota-node {};
@@ -166,7 +164,15 @@ self: super: {
 
  carrot-planner = self.callPackage ./carrot-planner {};
 
+ cartesian-control-msgs = self.callPackage ./cartesian-control-msgs {};
+
+ cartesian-interface = self.callPackage ./cartesian-interface {};
+
  cartesian-msgs = self.callPackage ./cartesian-msgs {};
+
+ cartesian-trajectory-controller = self.callPackage ./cartesian-trajectory-controller {};
+
+ cartesian-trajectory-interpolation = self.callPackage ./cartesian-trajectory-interpolation {};
 
  catch-ros = self.callPackage ./catch-ros {};
 
@@ -1556,6 +1562,8 @@ self: super: {
 
  ncd-parser = self.callPackage ./ncd-parser {};
 
+ neo-local-planner = self.callPackage ./neo-local-planner {};
+
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
  neonavigation = self.callPackage ./neonavigation {};
@@ -1661,6 +1669,8 @@ self: super: {
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
 
  parameter-pa = self.callPackage ./parameter-pa {};
+
+ pass-through-controllers = self.callPackage ./pass-through-controllers {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
@@ -1938,6 +1948,10 @@ self: super: {
 
  rc-pick-client = self.callPackage ./rc-pick-client {};
 
+ rc-reason-clients = self.callPackage ./rc-reason-clients {};
+
+ rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
+
  rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
 
  rc-silhouettematch-client = self.callPackage ./rc-silhouettematch-client {};
@@ -2008,12 +2022,6 @@ self: super: {
 
  rokubimini-ethercat = self.callPackage ./rokubimini-ethercat {};
 
- rokubimini-examples = self.callPackage ./rokubimini-examples {};
-
- rokubimini-factory = self.callPackage ./rokubimini-factory {};
-
- rokubimini-manager = self.callPackage ./rokubimini-manager {};
-
  rokubimini-msgs = self.callPackage ./rokubimini-msgs {};
 
  rokubimini-serial = self.callPackage ./rokubimini-serial {};
@@ -2035,6 +2043,8 @@ self: super: {
  ros-control-boilerplate = self.callPackage ./ros-control-boilerplate {};
 
  ros-controllers = self.callPackage ./ros-controllers {};
+
+ ros-controllers-cartesian = self.callPackage ./ros-controllers-cartesian {};
 
  ros-core = self.callPackage ./ros-core {};
 
@@ -2612,6 +2622,18 @@ self: super: {
 
  turtlebot3 = self.callPackage ./turtlebot3 {};
 
+ turtlebot3-autorace-2020 = self.callPackage ./turtlebot3-autorace-2020 {};
+
+ turtlebot3-autorace-camera = self.callPackage ./turtlebot3-autorace-camera {};
+
+ turtlebot3-autorace-core = self.callPackage ./turtlebot3-autorace-core {};
+
+ turtlebot3-autorace-detect = self.callPackage ./turtlebot3-autorace-detect {};
+
+ turtlebot3-autorace-driving = self.callPackage ./turtlebot3-autorace-driving {};
+
+ turtlebot3-autorace-msgs = self.callPackage ./turtlebot3-autorace-msgs {};
+
  turtlebot3-bringup = self.callPackage ./turtlebot3-bringup {};
 
  turtlebot3-description = self.callPackage ./turtlebot3-description {};
@@ -2633,6 +2655,8 @@ self: super: {
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
+
+ twist-controller = self.callPackage ./twist-controller {};
 
  twist-mux = self.callPackage ./twist-mux {};
 

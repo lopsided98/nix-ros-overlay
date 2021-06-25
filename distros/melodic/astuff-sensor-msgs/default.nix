@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, delphi-esr-msgs, delphi-srr-msgs, derived-object-msgs, ibeo-msgs, kartech-linear-actuator-msgs, mobileye-560-660-msgs, neobotix-usboard-msgs, pacmod-msgs, radar-msgs, ros-environment }:
 buildRosPackage {
   pname = "ros-melodic-astuff-sensor-msgs";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/astuff_sensor_msgs/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "9e66ef493c6ad8152a2b2ac9f4d36f7d09f20ed5e83ee66f335e171bd27a93c8";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/astuff_sensor_msgs/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "a96b19f4f23210692d87fdc878b65082a2fab92235461559b586608338996dbe";
   };
 
   buildType = "catkin";

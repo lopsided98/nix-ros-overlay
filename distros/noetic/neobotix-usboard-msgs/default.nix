@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, ros-environment, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-neobotix-usboard-msgs";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/neobotix_usboard_msgs/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "f94f71b1bdc621c541bc1035c9ed794dd6b7f79432d9a9482587108aa36b0b52";
+    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/neobotix_usboard_msgs/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "caefc604c5d3ad50449839b1d48d05cc3d2c0f3695abb2c89ac1411d9e5f1500";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-plugins, hector-gazebo-plugins, hector-sensors-description }:
 buildRosPackage {
   pname = "ros-melodic-hector-sensors-gazebo";
-  version = "0.5.1";
+  version = "0.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/melodic/hector_sensors_gazebo/0.5.1-0.tar.gz";
-    name = "0.5.1-0.tar.gz";
-    sha256 = "f6c2dbc7c925947b911f5fc7065443bd12d24193b7a9168347c560fab1300d09";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/melodic/hector_sensors_gazebo/0.5.4-1.tar.gz";
+    name = "0.5.4-1.tar.gz";
+    sha256 = "1233ccf3a39ff184ec0376f06473d50ed22d8562f5a06ad6d251efb58b26e446";
   };
 
   buildType = "catkin";

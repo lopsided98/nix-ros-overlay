@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, gazebo, gazebo-dev, gazebo-ros, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, std-msgs, std-srvs, tf }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, gazebo, gazebo-dev, gazebo-ros, geographic-msgs, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-noetic-hector-gazebo-plugins";
-  version = "0.5.3-r1";
+  version = "0.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_gazebo_plugins/0.5.3-1.tar.gz";
-    name = "0.5.3-1.tar.gz";
-    sha256 = "d542732d47227c31baf71fa393a181f516e269efefddc3ca64bdddeeae8d7867";
+    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_gazebo_plugins/0.5.4-1.tar.gz";
+    name = "0.5.4-1.tar.gz";
+    sha256 = "69f1b1d7f5c99497a402a1ac263605e80f820f1c9fc166c61ea4c7dca9af8da6";
   };
 
   buildType = "catkin";
   buildInputs = [ gazebo-dev message-generation ];
-  propagatedBuildInputs = [ dynamic-reconfigure gazebo gazebo-ros geometry-msgs message-runtime nav-msgs roscpp std-msgs std-srvs tf ];
+  propagatedBuildInputs = [ dynamic-reconfigure gazebo gazebo-ros geographic-msgs geometry-msgs message-runtime nav-msgs roscpp std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
