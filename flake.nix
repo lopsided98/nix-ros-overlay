@@ -14,7 +14,7 @@
         overlays = [ self.overlay ];
       };
     in {
-      packages = pkgs.rosPackages;
+      legacyPackages = pkgs.rosPackages;
     }) // {
       overlay = import ./overlay.nix;
       nixosModule = import ./modules;
