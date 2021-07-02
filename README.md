@@ -16,7 +16,8 @@ Want to use ROS, but don't want to run Ubuntu? This project uses the power of [N
 
 ## Examples
 
-Turtlebot 3 simulation in Gazebo:
+### Turtlebot 3 simulation in Gazebo
+
 ```
 nix-shell \
   -I nix-ros-overlay=https://github.com/lopsided98/nix-ros-overlay/archive/master.tar.gz \
@@ -28,6 +29,62 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 # Spawn a new nix-shell in a new terminal and then:
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
+
+### Applying local overrides
+
+Since packages are generated, some of them may not build. Here is how to apply overrides locally.
+
+```nix
+# default.nix
+let
+  sources = import ./sources.nix;
+
+  nix-ros-overlay = import "${sources.nix-ros-overlay}/overlay.nix";
+
+  local-overlay = import ./overlay.nix;
+
+  pkgs = import sources.nixpkgs {
+    overlays = [
+      nix-ros-overlay
+      local-overlay
+    ];
+  };
+
+  ros = with pkgs.rosPackages.melodic; buildEnv {
+    paths = [ desktop-full franka-ros ];
+  };
+in
+
+pkgs.mkShell { buildInputs = [ ros ]; }
+
+```
+
+```nix
+# overlay.nix
+self: super: {
+  # unfortunately, overlays do not compose, so we have to use this structure
+  rosPackages = super.rosPackages // {
+    melodicPython3 = super.rosPackages.melodicPython3.extend (rosSelf: rosSuper: {
+      libfranka = rosSuper.libfranka.overrideAttrs (old: {
+        # add dependencies missing from generated package
+        propagatedBuildInputs = with super; [ zlib pcre ] ++ old.propagatedBuildInputs;
+      });
+    });
+  };
+}
+```
+
+```nix
+# sources.nix
+{
+  # there are many ways to specify sources. in this example we pin the versions
+  # of the base package set and this overlay by specifying git commit hashes.
+  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/archive/<hash>.tar.gz";
+  nix-ros-overlay = fetchTarball "https://github.com/lopsided98/nix-ros-overlay/archive/<hash>.tar.gz";
+}
+```
+
+We add patches as overlays to the generated package collection. Global overlays go to [`./distros/distro-overlay.nix`](./distros/distro-overlay.nix), and distribution-specific overrides are in `./distro/<distro>/overrides.nix`.
 
 ## Current status
 
