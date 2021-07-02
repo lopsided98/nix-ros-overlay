@@ -410,6 +410,8 @@ self: super: {
 
  libphidget22 = self.callPackage ./libphidget22 {};
 
+ librealsense2 = self.callPackage ./librealsense2 {};
+
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
@@ -452,7 +454,21 @@ self: super: {
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
+ moveit = self.callPackage ./moveit {};
+
+ moveit-common = self.callPackage ./moveit-common {};
+
+ moveit-core = self.callPackage ./moveit-core {};
+
+ moveit-kinematics = self.callPackage ./moveit-kinematics {};
+
  moveit-msgs = self.callPackage ./moveit-msgs {};
+
+ moveit-planners = self.callPackage ./moveit-planners {};
+
+ moveit-planners-ompl = self.callPackage ./moveit-planners-ompl {};
+
+ moveit-plugins = self.callPackage ./moveit-plugins {};
 
  moveit-resources = self.callPackage ./moveit-resources {};
 
@@ -465,6 +481,32 @@ self: super: {
  moveit-resources-panda-moveit-config = self.callPackage ./moveit-resources-panda-moveit-config {};
 
  moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
+
+ moveit-ros = self.callPackage ./moveit-ros {};
+
+ moveit-ros-benchmarks = self.callPackage ./moveit-ros-benchmarks {};
+
+ moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
+
+ moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
+
+ moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
+
+ moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
+
+ moveit-ros-planning-interface = self.callPackage ./moveit-ros-planning-interface {};
+
+ moveit-ros-robot-interaction = self.callPackage ./moveit-ros-robot-interaction {};
+
+ moveit-ros-visualization = self.callPackage ./moveit-ros-visualization {};
+
+ moveit-ros-warehouse = self.callPackage ./moveit-ros-warehouse {};
+
+ moveit-runtime = self.callPackage ./moveit-runtime {};
+
+ moveit-servo = self.callPackage ./moveit-servo {};
+
+ moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
  nao-interfaces = self.callPackage ./nao-interfaces {};
 
@@ -608,6 +650,8 @@ self: super: {
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
 
+ qpoases-vendor = self.callPackage ./qpoases-vendor {};
+
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
 
  qt-gui = self.callPackage ./qt-gui {};
@@ -680,6 +724,12 @@ self: super: {
 
  rcutils = self.callPackage ./rcutils {};
 
+ realsense2-camera = self.callPackage ./realsense2-camera {};
+
+ realsense2-camera-msgs = self.callPackage ./realsense2-camera-msgs {};
+
+ realsense2-description = self.callPackage ./realsense2-description {};
+
  realtime-tools = self.callPackage ./realtime-tools {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
@@ -701,6 +751,8 @@ self: super: {
  rmf-lift-msgs = self.callPackage ./rmf-lift-msgs {};
 
  rmf-task-msgs = self.callPackage ./rmf-task-msgs {};
+
+ rmf-traffic = self.callPackage ./rmf-traffic {};
 
  rmf-traffic-msgs = self.callPackage ./rmf-traffic-msgs {};
 
@@ -924,6 +976,12 @@ self: super: {
 
  rttest = self.callPackage ./rttest {};
 
+ run-move-group = self.callPackage ./run-move-group {};
+
+ run-moveit-cpp = self.callPackage ./run-moveit-cpp {};
+
+ run-ompl-constrained-planning = self.callPackage ./run-ompl-constrained-planning {};
+
  rviz2 = self.callPackage ./rviz2 {};
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
@@ -1037,6 +1095,8 @@ self: super: {
  tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
  tf2-tools = self.callPackage ./tf2-tools {};
+
+ tf-transformations = self.callPackage ./tf-transformations {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
 

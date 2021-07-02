@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, industrial-msgs, industrial-robot-client, pythonPackages, roslaunch, rospy, sensor-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-industrial-robot-simulator";
-  version = "0.7.1-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_robot_simulator/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "2bfbab889523137f608c09ad70ae7f13953e539f7999237d9296648e4d523962";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_robot_simulator/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "4c05ef91e4abaee01a5d477cc2776bff8cf9a5efceff541caf19ce7d7496138e";
   };
 
   buildType = "catkin";

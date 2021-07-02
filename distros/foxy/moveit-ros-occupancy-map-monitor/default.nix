@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, geometric-shapes, moveit-common, moveit-core, moveit-msgs, octomap, pluginlib, rclcpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-moveit-ros-occupancy-map-monitor";
-  version = "2.1.4-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_ros_occupancy_map_monitor/2.1.4-1.tar.gz";
-    name = "2.1.4-1.tar.gz";
-    sha256 = "809d23843391ac8ee64e5258bc98310d1623e8c03813dd7bf87338bf3356b4c7";
+    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_ros_occupancy_map_monitor/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "604bc1813f9feb88d2a38a8d5b85d5d4925d35dc456d3b7da9efd196c3872c7f";
   };
 
   buildType = "ament_cmake";

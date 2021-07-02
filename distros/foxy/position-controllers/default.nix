@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, controller-manager, forward-command-controller, hardware-interface, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-foxy-position-controllers";
-  version = "0.3.1-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/position_controllers/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "0c5c75c15f600dbef0a77de03e9b40d101c5ea2a5b24d3d39c9a3d06c4991de9";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/position_controllers/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "67fbaceb5a62772eb2e41487682737a3134af52cc5f26b6feca4b9ea3f31a59f";
   };
 
   buildType = "ament_cmake";
