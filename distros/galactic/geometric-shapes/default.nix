@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-cmake, assimp, boost, console-bridge-vendor, eigen, eigen-stl-containers, eigen3-cmake-module, geometry-msgs, octomap, pkg-config, qhull, random-numbers, rclcpp, resource-retriever, rosidl-default-generators, rosidl-default-runtime, shape-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-galactic-geometric-shapes";
-  version = "2.1.0-r1";
+  version = "2.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/moveit/geometric_shapes-release/archive/release/galactic/geometric_shapes/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "297188a25c428a2ddd49e921c2b89a969ace3ce538fdb6e39bb1d34c31bca12f";
+    url = "https://github.com/moveit/geometric_shapes-release/archive/release/galactic/geometric_shapes/2.1.0-2.tar.gz";
+    name = "2.1.0-2.tar.gz";
+    sha256 = "b9e0b3411f625d8136db04625f7fae1a45311f1f8e6c3072653dc1d0428889f9";
   };
 
   buildType = "ament_cmake";

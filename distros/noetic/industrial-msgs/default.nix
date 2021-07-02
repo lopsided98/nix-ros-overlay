@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-noetic-industrial-msgs";
-  version = "0.7.1-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_msgs/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "c1cc02b17cffe63eacfb0ba825cde514478f3c405ced7b8e63c5756085b50554";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_msgs/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "968eeecc295534a4e6fa948a2b3ee8af6b5999ac3b20d4be7130c7fe6a890b4c";
   };
 
   buildType = "catkin";

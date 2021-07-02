@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, ddynamic-reconfigure, diagnostic-updater, eigen, genmsg, image-transport, librealsense2, message-runtime, nav-msgs, nodelet, roscpp, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-melodic-realsense2-camera";
-  version = "2.3.0-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/melodic/realsense2_camera/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "a54563887751fe230e7f4fd9b1f5d62e641f48fb395afcdc2150d4273aad97c0";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/melodic/realsense2_camera/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "0188482ed8dbff76805463de0a0c25cf9e47c63722ec80b4e0d6a76b97f37b4f";
   };
 
   buildType = "catkin";

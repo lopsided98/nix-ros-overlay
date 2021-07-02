@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, code-coverage, fmt, pilz-testutils, robot-state-publisher, rosbag, rosconsole-bridge, roscpp, roslaunch, rostest, rosunit, rviz, sensor-msgs, xacro }:
 buildRosPackage {
   pname = "ros-melodic-psen-scan-v2";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/psen_scan_v2-release/archive/release/melodic/psen_scan_v2/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "2c8b2835cc189797eac002438990ad47080e21f22556da3d5efb600b7677134c";
+    url = "https://github.com/PilzDE/psen_scan_v2-release/archive/release/melodic/psen_scan_v2/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "3e6f6dbac65d6f4dfc73586ae9b5d2ff6678a3dbabac789bcf51209f54ac99f8";
   };
 
   buildType = "catkin";

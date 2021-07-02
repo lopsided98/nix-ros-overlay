@@ -422,6 +422,8 @@ self: super: {
 
  foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
 
+ force-torque-sensor-broadcaster = self.callPackage ./force-torque-sensor-broadcaster {};
+
  forward-command-controller = self.callPackage ./forward-command-controller {};
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
@@ -468,6 +470,8 @@ self: super: {
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
+ gripper-controllers = self.callPackage ./gripper-controllers {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
@@ -495,6 +499,8 @@ self: super: {
  image-transport-plugins = self.callPackage ./image-transport-plugins {};
 
  image-view = self.callPackage ./image-view {};
+
+ imu-sensor-broadcaster = self.callPackage ./imu-sensor-broadcaster {};
 
  interactive-markers = self.callPackage ./interactive-markers {};
 
@@ -617,6 +623,8 @@ self: super: {
  marti-status-msgs = self.callPackage ./marti-status-msgs {};
 
  marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
+
+ massrobotics-amr-sender = self.callPackage ./massrobotics-amr-sender {};
 
  mavlink = self.callPackage ./mavlink {};
 
@@ -1387,6 +1395,8 @@ self: super: {
  tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
  tf2-tools = self.callPackage ./tf2-tools {};
+
+ tf-transformations = self.callPackage ./tf-transformations {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
 

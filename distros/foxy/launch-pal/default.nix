@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-foxy-launch-pal";
-  version = "0.0.2-r3";
+  version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/launch_pal-release/archive/release/foxy/launch_pal/0.0.2-3.tar.gz";
-    name = "0.0.2-3.tar.gz";
-    sha256 = "40d7edd6eb447e7a05dbb6e0b42159c722caf4882a056e656542404ca2c0e954";
+    url = "https://github.com/pal-gbp/launch_pal-release/archive/release/foxy/launch_pal/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
+    sha256 = "3487c6fbe6e9af8269bca39c514bc141151d850a89d20e6fd6362faa6694f8e0";
   };
 
   buildType = "ament_python";

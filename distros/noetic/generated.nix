@@ -576,6 +576,8 @@ self: super: {
 
  dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
 
+ dynamixel-workbench-msgs = self.callPackage ./dynamixel-workbench-msgs {};
+
  easy-markers = self.callPackage ./easy-markers {};
 
  ecl-build = self.callPackage ./ecl-build {};
@@ -1050,6 +1052,8 @@ self: super: {
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
 
+ imu-from-ios-sensorlog = self.callPackage ./imu-from-ios-sensorlog {};
+
  imu-monitor = self.callPackage ./imu-monitor {};
 
  imu-pipeline = self.callPackage ./imu-pipeline {};
@@ -1062,11 +1066,23 @@ self: super: {
 
  imu-transformer = self.callPackage ./imu-transformer {};
 
+ industrial-core = self.callPackage ./industrial-core {};
+
+ industrial-deprecated = self.callPackage ./industrial-deprecated {};
+
  industrial-msgs = self.callPackage ./industrial-msgs {};
+
+ industrial-robot-client = self.callPackage ./industrial-robot-client {};
+
+ industrial-robot-simulator = self.callPackage ./industrial-robot-simulator {};
 
  industrial-robot-status-controller = self.callPackage ./industrial-robot-status-controller {};
 
  industrial-robot-status-interface = self.callPackage ./industrial-robot-status-interface {};
+
+ industrial-trajectory-filters = self.callPackage ./industrial-trajectory-filters {};
+
+ industrial-utils = self.callPackage ./industrial-utils {};
 
  interactive-marker-tutorials = self.callPackage ./interactive-marker-tutorials {};
 
@@ -1097,6 +1113,8 @@ self: super: {
  jderobot-drones = self.callPackage ./jderobot-drones {};
 
  joint-limits-interface = self.callPackage ./joint-limits-interface {};
+
+ joint-qualification-controllers = self.callPackage ./joint-qualification-controllers {};
 
  joint-state-controller = self.callPackage ./joint-state-controller {};
 
@@ -1630,6 +1648,16 @@ self: super: {
 
  open-karto = self.callPackage ./open-karto {};
 
+ open-manipulator-gazebo = self.callPackage ./open-manipulator-gazebo {};
+
+ open-manipulator-msgs = self.callPackage ./open-manipulator-msgs {};
+
+ open-manipulator-p-gazebo = self.callPackage ./open-manipulator-p-gazebo {};
+
+ open-manipulator-p-simulations = self.callPackage ./open-manipulator-p-simulations {};
+
+ open-manipulator-simulations = self.callPackage ./open-manipulator-simulations {};
+
  opencv-apps = self.callPackage ./opencv-apps {};
 
  opengm = self.callPackage ./opengm {};
@@ -1806,6 +1834,8 @@ self: super: {
 
  pr2-bringup = self.callPackage ./pr2-bringup {};
 
+ pr2-bringup-tests = self.callPackage ./pr2-bringup-tests {};
+
  pr2-calibration-controllers = self.callPackage ./pr2-calibration-controllers {};
 
  pr2-camera-synchronizer = self.callPackage ./pr2-camera-synchronizer {};
@@ -1827,6 +1857,8 @@ self: super: {
  pr2-controllers = self.callPackage ./pr2-controllers {};
 
  pr2-controllers-msgs = self.callPackage ./pr2-controllers-msgs {};
+
+ pr2-counterbalance-check = self.callPackage ./pr2-counterbalance-check {};
 
  pr2-dashboard-aggregator = self.callPackage ./pr2-dashboard-aggregator {};
 
@@ -1858,6 +1890,8 @@ self: super: {
 
  pr2-mechanism-msgs = self.callPackage ./pr2-mechanism-msgs {};
 
+ pr2-motor-diagnostic-tool = self.callPackage ./pr2-motor-diagnostic-tool {};
+
  pr2-msgs = self.callPackage ./pr2-msgs {};
 
  pr2-position-scripts = self.callPackage ./pr2-position-scripts {};
@@ -1869,6 +1903,10 @@ self: super: {
  pr2-robot = self.callPackage ./pr2-robot {};
 
  pr2-run-stop-auto-restart = self.callPackage ./pr2-run-stop-auto-restart {};
+
+ pr2-self-test = self.callPackage ./pr2-self-test {};
+
+ pr2-self-test-msgs = self.callPackage ./pr2-self-test-msgs {};
 
  pr2-teleop = self.callPackage ./pr2-teleop {};
 
@@ -2013,6 +2051,8 @@ self: super: {
  robot-upstart = self.callPackage ./robot-upstart {};
 
  roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
+
+ robotis-manipulator = self.callPackage ./robotis-manipulator {};
 
  rokubimini = self.callPackage ./rokubimini {};
 
@@ -2402,6 +2442,8 @@ self: super: {
 
  simple-grasping = self.callPackage ./simple-grasping {};
 
+ simple-message = self.callPackage ./simple-message {};
+
  simulators = self.callPackage ./simulators {};
 
  single-joint-position-action = self.callPackage ./single-joint-position-action {};
@@ -2583,6 +2625,8 @@ self: super: {
  tf-conversions = self.callPackage ./tf-conversions {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
+
+ thunder-line-follower-pmr3100 = self.callPackage ./thunder-line-follower-pmr3100 {};
 
  tile-map = self.callPackage ./tile-map {};
 
@@ -2773,6 +2817,22 @@ self: super: {
  vl53l1x = self.callPackage ./vl53l1x {};
 
  voice-text = self.callPackage ./voice-text {};
+
+ volta-base = self.callPackage ./volta-base {};
+
+ volta-control = self.callPackage ./volta-control {};
+
+ volta-description = self.callPackage ./volta-description {};
+
+ volta-localization = self.callPackage ./volta-localization {};
+
+ volta-msgs = self.callPackage ./volta-msgs {};
+
+ volta-navigation = self.callPackage ./volta-navigation {};
+
+ volta-rules = self.callPackage ./volta-rules {};
+
+ volta-teleoperator = self.callPackage ./volta-teleoperator {};
 
  voxel-grid = self.callPackage ./voxel-grid {};
 
