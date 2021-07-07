@@ -14,6 +14,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
   };
 
+  ros1-rosbag-storage-vendor = patchVendorUrl rosSuper.ros1-rosbag-storage-vendor {
+    url = "https://github.com/ros/ros_comm/archive/669fbd32d2f92cc295f4b024fcb2f982fddec0f0.zip";
+    sha256 = "0phwk8imiy72xnizqj3y6vn5crjrcpr4qazhphv49r8zprirn6nj";
+  };
+
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";

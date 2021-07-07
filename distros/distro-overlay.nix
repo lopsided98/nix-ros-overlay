@@ -249,6 +249,22 @@ let
       '';
     });
 
+    ros1-rosbag-storage-vendor = rosSuper.ros1-rosbag-storage-vendor.overrideAttrs ({
+      buildInputs ? [], propagatedBuildInputs ? [], ...
+    }: with self.rosPackages.noetic; {
+      # Depends on ROS 1 packages that can't be specified in package.xml
+      buildInputs = buildInputs ++ [ roscpp ];
+      # Should be specified as build_export_depend
+      propagatedBuildInputs = propagatedBuildInputs ++ [ self.bzip2 roslz4 ];
+    });
+
+    rosbag2-bag-v2-plugins = rosSuper.rosbag2-bag-v2-plugins.overrideAttrs ({
+      buildInputs ? [], ...
+    }: with self.rosPackages.noetic; {
+      # Depends on ROS 1 packages that can't be specified in package.xml
+      buildInputs = buildInputs ++ [ roscpp ];
+    });
+
     roscpp = patchBoostSignals rosSuper.roscpp;
 
     rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
