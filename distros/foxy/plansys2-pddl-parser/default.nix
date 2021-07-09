@@ -2,19 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, plansys2-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-plansys2-pddl-parser";
-  version = "1.0.9-r1";
+  version = "1.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_pddl_parser/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "a3149ef24c0b6f6a1e3eed4158408365a315f12215abb4624cc590b8b9252ede";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_pddl_parser/1.0.10-1.tar.gz";
+    name = "1.0.10-1.tar.gz";
+    sha256 = "4fc997f2e7242c21eaa1256424d0ee46227b8d41768a6d69c85586cd89cdd62f";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ plansys2-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -168,6 +168,8 @@ self: super: {
 
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
+ cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
+
  class-loader = self.callPackage ./class-loader {};
 
  common-interfaces = self.callPackage ./common-interfaces {};
@@ -634,6 +636,30 @@ self: super: {
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
+ plansys2-bringup = self.callPackage ./plansys2-bringup {};
+
+ plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
+
+ plansys2-core = self.callPackage ./plansys2-core {};
+
+ plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
+
+ plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
+
+ plansys2-msgs = self.callPackage ./plansys2-msgs {};
+
+ plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
+
+ plansys2-planner = self.callPackage ./plansys2-planner {};
+
+ plansys2-popf-plan-solver = self.callPackage ./plansys2-popf-plan-solver {};
+
+ plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
+
+ plansys2-terminal = self.callPackage ./plansys2-terminal {};
+
  plotjuggler = self.callPackage ./plotjuggler {};
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
@@ -713,6 +739,8 @@ self: super: {
  rclcpp = self.callPackage ./rclcpp {};
 
  rclcpp-action = self.callPackage ./rclcpp-action {};
+
+ rclcpp-cascade-lifecycle = self.callPackage ./rclcpp-cascade-lifecycle {};
 
  rclcpp-components = self.callPackage ./rclcpp-components {};
 

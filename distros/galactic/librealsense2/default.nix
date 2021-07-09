@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/galactic/librealsense2/2.48.0-1.tar.gz";
     name = "2.48.0-1.tar.gz";
-    sha256 = "adc3306a0b5c9e579605dc01d33162927143145b631778f918be837f587b2525";
+    sha256 = "fb0271473cdad9195ed1a9d457432a416964b1553e518be573e61164289ec8e9";
   };
 
   buildType = "ament_cmake";

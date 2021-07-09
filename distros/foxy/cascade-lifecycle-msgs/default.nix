@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, lifecycle-msgs, rclcpp, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-foxy-cascade-lifecycle-msgs";
-  version = "0.0.7-r4";
+  version = "0.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/fmrico/cascade_lifecycle-release/archive/release/foxy/cascade_lifecycle_msgs/0.0.7-4.tar.gz";
-    name = "0.0.7-4.tar.gz";
-    sha256 = "efe3b41e8c2b10db244b8bde561b31438dc51b9bbc3fe1d077c6117e6506d360";
+    url = "https://github.com/fmrico/cascade_lifecycle-release/archive/release/foxy/cascade_lifecycle_msgs/0.0.8-1.tar.gz";
+    name = "0.0.8-1.tar.gz";
+    sha256 = "f0e734ab6805379d32d941c7358bcbdc82d1774c192a0201be5c7f8fb0168081";
   };
 
   buildType = "ament_cmake";

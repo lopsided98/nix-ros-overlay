@@ -200,6 +200,8 @@ self: super: {
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
+ bev-mavros = self.callPackage ./bev-mavros {};
+
  bfl = self.callPackage ./bfl {};
 
  blender-gazebo = self.callPackage ./blender-gazebo {};
@@ -532,6 +534,8 @@ self: super: {
 
  codec-image-transport = self.callPackage ./codec-image-transport {};
 
+ collision-avoidance = self.callPackage ./collision-avoidance {};
+
  color-util = self.callPackage ./color-util {};
 
  combined-robot-hw = self.callPackage ./combined-robot-hw {};
@@ -555,6 +559,8 @@ self: super: {
  concert-workflow-engine-msgs = self.callPackage ./concert-workflow-engine-msgs {};
 
  contact-states-observer = self.callPackage ./contact-states-observer {};
+
+ control-bringup = self.callPackage ./control-bringup {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -1178,6 +1184,8 @@ self: super: {
 
  gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
 
+ gcs-interface = self.callPackage ./gcs-interface {};
+
  gencpp = self.callPackage ./gencpp {};
 
  generic-throttle = self.callPackage ./generic-throttle {};
@@ -1212,6 +1220,8 @@ self: super: {
 
  geos-cmake-module = self.callPackage ./geos-cmake-module {};
 
+ gimbal = self.callPackage ./gimbal {};
+
  gl-dependency = self.callPackage ./gl-dependency {};
 
  global-planner = self.callPackage ./global-planner {};
@@ -1219,6 +1229,8 @@ self: super: {
  global-planner-tests = self.callPackage ./global-planner-tests {};
 
  gmapping = self.callPackage ./gmapping {};
+
+ gnss-utils = self.callPackage ./gnss-utils {};
 
  goal-passer = self.callPackage ./goal-passer {};
 
@@ -1229,6 +1241,8 @@ self: super: {
  gps-umd = self.callPackage ./gps-umd {};
 
  gpsd-client = self.callPackage ./gpsd-client {};
+
+ gpu-voxels-ros = self.callPackage ./gpu-voxels-ros {};
 
  graceful-controller = self.callPackage ./graceful-controller {};
 
@@ -1353,20 +1367,6 @@ self: super: {
  heifu = self.callPackage ./heifu {};
 
  heifu-bringup = self.callPackage ./heifu-bringup {};
-
- heifu-description = self.callPackage ./heifu-description {};
-
- heifu-diagnostic = self.callPackage ./heifu-diagnostic {};
-
- heifu-mavros = self.callPackage ./heifu-mavros {};
-
- heifu-msgs = self.callPackage ./heifu-msgs {};
-
- heifu-safety = self.callPackage ./heifu-safety {};
-
- heifu-simple-waypoint = self.callPackage ./heifu-simple-waypoint {};
-
- heifu-tools = self.callPackage ./heifu-tools {};
 
  heron-control = self.callPackage ./heron-control {};
 
@@ -1990,6 +1990,8 @@ self: super: {
 
  mavros = self.callPackage ./mavros {};
 
+ mavros-commands = self.callPackage ./mavros-commands {};
+
  mavros-extras = self.callPackage ./mavros-extras {};
 
  mavros-msgs = self.callPackage ./mavros-msgs {};
@@ -2368,6 +2370,8 @@ self: super: {
 
  navigation = self.callPackage ./navigation {};
 
+ navigation-controller = self.callPackage ./navigation-controller {};
+
  navigation-experimental = self.callPackage ./navigation-experimental {};
 
  navigation-layers = self.callPackage ./navigation-layers {};
@@ -2708,9 +2712,13 @@ self: super: {
 
  pinocchio = self.callPackage ./pinocchio {};
 
+ planner = self.callPackage ./planner {};
+
  planner-cspace = self.callPackage ./planner-cspace {};
 
  planner-cspace-msgs = self.callPackage ./planner-cspace-msgs {};
+
+ planners-manager = self.callPackage ./planners-manager {};
 
  play-motion = self.callPackage ./play-motion {};
 
@@ -2917,6 +2925,8 @@ self: super: {
  prbt-pg70-support = self.callPackage ./prbt-pg70-support {};
 
  prbt-support = self.callPackage ./prbt-support {};
+
+ priority-manager = self.callPackage ./priority-manager {};
 
  prosilica-camera = self.callPackage ./prosilica-camera {};
 
@@ -3636,6 +3646,8 @@ self: super: {
 
  rr-rover-zero-driver = self.callPackage ./rr-rover-zero-driver {};
 
+ rrt = self.callPackage ./rrt {};
+
  rslidar = self.callPackage ./rslidar {};
 
  rslidar-driver = self.callPackage ./rslidar-driver {};
@@ -3863,6 +3875,8 @@ self: super: {
  static-transform-mux = self.callPackage ./static-transform-mux {};
 
  statistics-msgs = self.callPackage ./statistics-msgs {};
+
+ status-diagnostic = self.callPackage ./status-diagnostic {};
 
  std-capabilities = self.callPackage ./std-capabilities {};
 
@@ -4120,6 +4134,8 @@ self: super: {
 
  twist-recovery = self.callPackage ./twist-recovery {};
 
+ uav-msgs = self.callPackage ./uav-msgs {};
+
  ubiquity-motor = self.callPackage ./ubiquity-motor {};
 
  ublox = self.callPackage ./ublox {};
@@ -4373,6 +4389,8 @@ self: super: {
  wave-gazebo = self.callPackage ./wave-gazebo {};
 
  wave-gazebo-plugins = self.callPackage ./wave-gazebo-plugins {};
+
+ waypoints-manager = self.callPackage ./waypoints-manager {};
 
  web-video-server = self.callPackage ./web-video-server {};
 

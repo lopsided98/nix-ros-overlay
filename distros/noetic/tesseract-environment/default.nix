@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, console-bridge, eigen, gtest, llvmPackages, orocos-kdl, ros-industrial-cmake-boilerplate, tesseract-collision, tesseract-common, tesseract-geometry, tesseract-kinematics, tesseract-scene-graph, tesseract-support, tesseract-urdf }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-environment";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_environment/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "f8c7e24e93543b4f207aef1eab68fe04b9fd2d4ed3d573cc52643131734f51d1";
+    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_environment/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "720aaf4a9e72f27db13c17d5ba5dd2e8e1c448a2d3cdb0f3451396ba2271bead";
   };
 
   buildType = "cmake";
