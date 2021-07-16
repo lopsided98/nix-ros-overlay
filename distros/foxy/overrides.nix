@@ -17,10 +17,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
   python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
     patches ? [], ...
   }: {
-    patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/ros-visualization/python_qt_binding/commit/d97ecb27e4460633f97b816e3217b032a93c5da0.patch";
-      sha256 = "08sdsm879bq349kq2k3wbs7p3l2syzrxdw3cgdvxfj2inkhdbf9f";
-    }) ];
+    patches = [
+      # Fix finding PyQt5 SIP bindings with SIP >=5
+      (self.fetchpatch {
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/d97ecb27e4460633f97b816e3217b032a93c5da0.patch";
+        sha256 = "08sdsm879bq349kq2k3wbs7p3l2syzrxdw3cgdvxfj2inkhdbf9f";
+      })
+    ] ++ patches;
   });
 
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
