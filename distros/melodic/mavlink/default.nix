@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-mavlink";
-  version = "2021.6.6-r1";
+  version = "2021.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/melodic/mavlink/2021.6.6-1.tar.gz";
-    name = "2021.6.6-1.tar.gz";
-    sha256 = "6a3a62f5f8411d44573b85888788be5e174a9611e76ad5a8ce021e692a1129f2";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/melodic/mavlink/2021.7.7-1.tar.gz";
+    name = "2021.7.7-1.tar.gz";
+    sha256 = "ae5288afecde7eee8d675b9897c61d1c73c21c636ed87b9c9e08b6b7a022d018";
   };
 
   buildType = "cmake";

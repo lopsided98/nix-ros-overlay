@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-kvh-geo-fog-3d-msgs";
-  version = "1.3.3-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/MITRE/kvh_geo_fog_3d-release/archive/release/melodic/kvh_geo_fog_3d_msgs/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "0ea3ac9d0959826daed2ff9fe600c80939b2529744e74f1ebd0d96c6c24c1b37";
+    url = "https://github.com/MITRE/kvh_geo_fog_3d-release/archive/release/melodic/kvh_geo_fog_3d_msgs/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "80c23203e375105bd7e99139b21ddce46d251c4ce43709ef3c1f80f91ef65107";
   };
 
   buildType = "catkin";

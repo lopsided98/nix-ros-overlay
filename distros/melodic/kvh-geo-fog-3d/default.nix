@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, kvh-geo-fog-3d-driver, kvh-geo-fog-3d-msgs, kvh-geo-fog-3d-rviz }:
 buildRosPackage {
   pname = "ros-melodic-kvh-geo-fog-3d";
-  version = "1.3.3-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/MITRE/kvh_geo_fog_3d-release/archive/release/melodic/kvh_geo_fog_3d/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "014ddc8b7bf8a2239353b8aa0b6bce023d2b809d407284eb8ef4de6e505149b1";
+    url = "https://github.com/MITRE/kvh_geo_fog_3d-release/archive/release/melodic/kvh_geo_fog_3d/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "dd37181032cc101a812e169099344c177d61c29e3942d071063bd83c90a6f0cf";
   };
 
   buildType = "catkin";

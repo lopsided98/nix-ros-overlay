@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, heifu-bringup, heifu-description, heifu-mavros, heifu-msgs, heifu-safety, heifu-simple-waypoint, heifu-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, collision-avoidance, control-bringup, gcs-interface, gimbal, gnss-utils, gpu-voxels-ros, heifu-bringup, libmavconn, mavros, mavros-commands, mavros-extras, mavros-msgs, navigation-controller, planner, planners-manager, priority-manager, rrt, status-diagnostic, test-mavros, uav-msgs, waypoints-manager }:
 buildRosPackage {
   pname = "ros-melodic-heifu";
-  version = "0.7.7-r2";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/BV-OpenSource/heifu-release/archive/release/melodic/heifu/0.7.7-2.tar.gz";
-    name = "0.7.7-2.tar.gz";
-    sha256 = "8436cf31ff37312589400f124aeaeed1aacb9093847ea92546287d8e1147c909";
+    url = "https://github.com/BV-OpenSource/heifu-release/archive/release/melodic/heifu/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "9d924036981d7bc4aec3b2205d86dddcf7e7c4b9dd48696841acb679945aec60";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ heifu-bringup heifu-description heifu-mavros heifu-msgs heifu-safety heifu-simple-waypoint heifu-tools ];
+  propagatedBuildInputs = [ collision-avoidance control-bringup gcs-interface gimbal gnss-utils gpu-voxels-ros heifu-bringup libmavconn mavros mavros-commands mavros-extras mavros-msgs navigation-controller planner planners-manager priority-manager rrt status-diagnostic test-mavros uav-msgs waypoints-manager ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

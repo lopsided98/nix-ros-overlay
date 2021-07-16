@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, interactive-markers, moveit-common, moveit-ros-planning, rclcpp, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-moveit-ros-robot-interaction";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_ros_robot_interaction/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "bf050dd6a9b24ec66a40f99524a9349a8c0c6a2fa4de2046784c310a58206f33";
+    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_ros_robot_interaction/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "13bccb8e892f2c9c0c58214d07dd99a79b8d6050325443a3000d042e825bbdab";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, behaviortree-cpp-v3, cppzmq, geometry-msgs, plansys2-executor, plansys2-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, test-msgs }:
 buildRosPackage {
   pname = "ros-foxy-plansys2-bt-actions";
-  version = "1.0.9-r1";
+  version = "1.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_bt_actions/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "24a95ec8285f690b0d760c6a0c780075665110a9f254e6bf56b03fc749b23977";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_bt_actions/1.0.10-1.tar.gz";
+    name = "1.0.10-1.tar.gz";
+    sha256 = "4c47a3165b9d70c7a2a7a776adaf1786f24e2f3c15de6e7ec918a4e89e002a2d";
   };
 
   buildType = "ament_cmake";

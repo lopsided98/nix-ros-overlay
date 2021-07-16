@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, qt5, rosbuild }:
 buildRosPackage {
   pname = "ros-melodic-python-qt-binding";
-  version = "0.4.3-r1";
+  version = "0.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/python_qt_binding-release/archive/release/melodic/python_qt_binding/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "e4da2117e4480a5f73a6cd256f7f66777bc95e90977c01450adb53befff30236";
+    url = "https://github.com/ros-gbp/python_qt_binding-release/archive/release/melodic/python_qt_binding/0.4.4-1.tar.gz";
+    name = "0.4.4-1.tar.gz";
+    sha256 = "81666239682642c2c08f0a507f113efe4df1cd7f2cb778d3d02d913bcfa68478";
   };
 
   buildType = "catkin";

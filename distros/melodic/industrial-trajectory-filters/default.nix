@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, class-loader, moveit-core, moveit-ros-planning, orocos-kdl, pluginlib, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-industrial-trajectory-filters";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_trajectory_filters/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "309487fd3ede43c60b560ba7ab53c62114db02abeab929d819ba8d859de0f75d";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_trajectory_filters/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "a9e5f67a1156a469a399a90351db828360728b186e0d1bb287991cc4b74ffbae";
   };
 
   buildType = "catkin";

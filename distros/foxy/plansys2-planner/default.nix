@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, lifecycle-msgs, plansys2-core, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, plansys2-popf-plan-solver, plansys2-problem-expert, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, ros2run, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-plansys2-planner";
-  version = "1.0.9-r1";
+  version = "1.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_planner/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "d34f1778874c3a81c8df1c2006e9a6273f3ab7ae8b5a1513a2df07d2f06fb4fa";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_planner/1.0.10-1.tar.gz";
+    name = "1.0.10-1.tar.gz";
+    sha256 = "f9dcba67f41fb56265d00d62b5f26951a9d74c1ddda535c1807d4b9f0850de07";
   };
 
   buildType = "ament_cmake";
