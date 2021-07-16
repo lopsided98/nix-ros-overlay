@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, turtlebot3-fake, turtlebot3-gazebo }:
 buildRosPackage {
   pname = "ros-noetic-turtlebot3-simulations";
-  version = "1.3.1-r1";
+  version = "1.3.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/noetic/turtlebot3_simulations/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "717bedf9950d6e1238d8892074d91aef195ee9f8f351f98e7348b0ccb03bb2b3";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/noetic/turtlebot3_simulations/1.3.2-2.tar.gz";
+    name = "1.3.2-2.tar.gz";
+    sha256 = "aa1474452ef725257bb52b83f2bce1284a5cabccdbb070b2b920732c522cc78e";
   };
 
   buildType = "catkin";

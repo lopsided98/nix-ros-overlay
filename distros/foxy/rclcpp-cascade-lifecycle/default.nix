@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cascade-lifecycle-msgs, lifecycle-msgs, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-foxy-rclcpp-cascade-lifecycle";
-  version = "0.0.7-r4";
+  version = "0.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/fmrico/cascade_lifecycle-release/archive/release/foxy/rclcpp_cascade_lifecycle/0.0.7-4.tar.gz";
-    name = "0.0.7-4.tar.gz";
-    sha256 = "92bfb8ad368e90dc726a9d815ccaedb91814809efad10f9b70d134733af36cb1";
+    url = "https://github.com/fmrico/cascade_lifecycle-release/archive/release/foxy/rclcpp_cascade_lifecycle/0.0.8-1.tar.gz";
+    name = "0.0.8-1.tar.gz";
+    sha256 = "9cbd26130896e20268e8257b232fc9ea9d39b7978445f27d9746aa2fb7dd4aa5";
   };
 
   buildType = "ament_cmake";

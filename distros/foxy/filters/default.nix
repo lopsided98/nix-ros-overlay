@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-uncrustify, ament-cmake-xmllint, boost, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-foxy-filters";
-  version = "2.0.0-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/filters-release/archive/release/foxy/filters/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "b44ffe186083a34e1a81ded565c3fec29bb45d43cc9388211fa56928424cc36c";
+    url = "https://github.com/ros2-gbp/filters-release/archive/release/foxy/filters/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "60c7b2e8ac1e208d6c2815a4b468c24cfc739266974bae0a26369b13db8d47d6";
   };
 
   buildType = "ament_cmake";

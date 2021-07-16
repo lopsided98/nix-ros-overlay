@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, husky-gazebo }:
 buildRosPackage {
   pname = "ros-melodic-husky-simulator";
-  version = "0.4.8-r1";
+  version = "0.4.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_simulator/0.4.8-1.tar.gz";
-    name = "0.4.8-1.tar.gz";
-    sha256 = "2f3532b926034c6710efd7c4f4028bb9da5d47e717380ea70f8ef3c78b6bb1a4";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_simulator/0.4.9-1.tar.gz";
+    name = "0.4.9-1.tar.gz";
+    sha256 = "34f4590997ab7a51c29e2f09dcaa27a08799eec6e0df288f45346277cadbbc1a";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rosunit, urdf }:
 buildRosPackage {
   pname = "ros-melodic-industrial-utils";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_utils/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "370bac7fd0ecd826d5bdf7e3014d08b5f8de165004ec81b089f1e72b370abd19";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_utils/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "82705cad368cb6995c9d75f3045802d2a86aae8de325ee517d8f066e3ad19c58";
   };
 
   buildType = "catkin";

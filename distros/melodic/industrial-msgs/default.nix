@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-industrial-msgs";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_msgs/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "effd2f4ca3973ab57fa500372365179f57492236e63aaf2ff343820d3a1ff545";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_msgs/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "ea2f9d7bed6e3bfd7c2a3fe74718d450c5b886f20904bc5b222f14848fb02110";
   };
 
   buildType = "catkin";

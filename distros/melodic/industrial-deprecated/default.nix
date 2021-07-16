@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-industrial-deprecated";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_deprecated/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "1c2ecfdd2b46177d0d874f24c1daa05e55141a17db32ba238122c29009d79739";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_deprecated/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "32ee44d4411020c706eb55523f8dffb857ec94615f83d78c44fc90d8310a9d87";
   };
 
   buildType = "catkin";

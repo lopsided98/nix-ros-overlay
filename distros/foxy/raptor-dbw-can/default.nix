@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, can-dbc-parser, can-msgs, geometry-msgs, raptor-dbw-msgs, raptor-pdu, raptor-pdu-msgs, rclcpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-raptor-dbw-can";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/NewEagleRaptor/raptor-dbw-ros2-release/archive/release/foxy/raptor_dbw_can/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "14aa0ceed1d5cbc1d4a6fe871459af434a00f8508c2b4fcba88ebbdca7b32b18";
+    url = "https://github.com/NewEagleRaptor/raptor-dbw-ros2-release/archive/release/foxy/raptor_dbw_can/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "fca24aadcaf1b0e28fdc5862e97c01a2ab5cf29a4a6d9f179153883be35a6cd8";
   };
 
   buildType = "ament_cmake";

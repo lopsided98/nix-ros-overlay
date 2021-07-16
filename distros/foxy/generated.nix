@@ -146,6 +146,8 @@ self: super: {
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
 
+ backward-ros = self.callPackage ./backward-ros {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -598,6 +600,8 @@ self: super: {
 
  logging-demo = self.callPackage ./logging-demo {};
 
+ lua-vendor = self.callPackage ./lua-vendor {};
+
  map-msgs = self.callPackage ./map-msgs {};
 
  map-transformer = self.callPackage ./map-transformer {};
@@ -871,6 +875,20 @@ self: super: {
  plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
 
  pluginlib = self.callPackage ./pluginlib {};
+
+ pmb2-2dnav = self.callPackage ./pmb2-2dnav {};
+
+ pmb2-bringup = self.callPackage ./pmb2-bringup {};
+
+ pmb2-controller-configuration = self.callPackage ./pmb2-controller-configuration {};
+
+ pmb2-description = self.callPackage ./pmb2-description {};
+
+ pmb2-maps = self.callPackage ./pmb2-maps {};
+
+ pmb2-navigation = self.callPackage ./pmb2-navigation {};
+
+ pmb2-robot = self.callPackage ./pmb2-robot {};
 
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
 

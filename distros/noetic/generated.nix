@@ -896,6 +896,8 @@ self: super: {
 
  gmapping = self.callPackage ./gmapping {};
 
+ gmcl = self.callPackage ./gmcl {};
+
  goal-passer = self.callPackage ./goal-passer {};
 
  gpp-interface = self.callPackage ./gpp-interface {};
@@ -1962,6 +1964,8 @@ self: super: {
 
  qt-gui-py-common = self.callPackage ./qt-gui-py-common {};
 
+ quanergy-client = self.callPackage ./quanergy-client {};
+
  qwt-dependency = self.callPackage ./qwt-dependency {};
 
  radar-msgs = self.callPackage ./radar-msgs {};
@@ -2601,6 +2605,8 @@ self: super: {
  tf = self.callPackage ./tf {};
 
  tf2 = self.callPackage ./tf2 {};
+
+ tf2-2d = self.callPackage ./tf2-2d {};
 
  tf2-bullet = self.callPackage ./tf2-bullet {};
 

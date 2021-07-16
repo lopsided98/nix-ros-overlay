@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-foxy-rcdiscover";
-  version = "1.1.2-r1";
+  version = "1.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rcdiscover-release/archive/release/foxy/rcdiscover/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "f759212447ad9b29e3be4070e3667135c2e16b4deccbc4c9f330f3c417d5541a";
+    url = "https://github.com/roboception-gbp/rcdiscover-release/archive/release/foxy/rcdiscover/1.1.4-1.tar.gz";
+    name = "1.1.4-1.tar.gz";
+    sha256 = "a78655ab6373401ce8b964d495302eec0e23c17da882aab606bb72fc3155985a";
   };
 
   buildType = "cmake";
