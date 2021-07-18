@@ -1,7 +1,10 @@
-self: super: with super.lib; let
+self: super: with self.lib; let
 
-  pythonOverridesFor = python: python.override (old: {
-    packageOverrides = pySelf: pySuper: {
+  pythonOverridesFor = superPython: fix (python: superPython.override ({
+    packageOverrides ? _: _: {}, ...
+  }: {
+    self = python;
+    packageOverrides = composeExtensions packageOverrides (pySelf: pySuper: {
       bson = pySelf.callPackage ./bson { };
 
       catkin-pkg = pySelf.callPackage ./catkin-pkg { };
@@ -39,8 +42,8 @@ self: super: with super.lib; let
       # This has to be done here (rather than in rosPackages) because
       # packageOverrides doesn't compose
       wxPython = pySelf.wxPython_4_0;
-    };
-  });
+    });
+  }));
 
 in {
   colcon = with self.python3Packages; colcon-core.withExtensions [
