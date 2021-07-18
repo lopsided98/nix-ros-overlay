@@ -1,6 +1,16 @@
 { distro, python }:
 self: super:
 let
+  pythonOverridesFor = with self.lib; superPython: fix (python: superPython.override ({
+    packageOverrides ? _: _: {}, ...
+  }: {
+    self = python;
+    packageOverrides = composeExtensions packageOverrides
+      (pySelf: pySuper: optionalAttrs pySuper.isPy3k {
+        wxPython = pySelf.wxPython_4_0;
+      });
+  }));
+
   base = rosSelf: rosSuper: {
     lib = super.lib // import ../lib { inherit self rosSelf; };
 
@@ -12,8 +22,11 @@ let
       inherit (self) buildEnv;
     };
 
-    inherit python;
+    python = pythonOverridesFor python;
     pythonPackages = rosSelf.python.pkgs;
+
+    python3 = pythonOverridesFor self.python3;
+    python3Packages = rosSelf.python3.pkgs;
 
     boost = self.boost.override {
       python = rosSelf.python;

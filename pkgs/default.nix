@@ -38,10 +38,6 @@ self: super: with self.lib; let
       rosinstall-generator = pySelf.callPackage ./rosinstall-generator { };
 
       rospkg = pySelf.callPackage ./rospkg { };
-    } // optionalAttrs pySuper.isPy3k {
-      # This has to be done here (rather than in rosPackages) because
-      # packageOverrides doesn't compose
-      wxPython = pySelf.wxPython_4_0;
     });
   }));
 
