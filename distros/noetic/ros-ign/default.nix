@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ros-ign-bridge, ros-ign-gazebo-demos, ros-ign-image }:
 buildRosPackage {
   pname = "ros-noetic-ros-ign";
-  version = "0.111.0-r1";
+  version = "0.111.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_ign-release/archive/release/noetic/ros_ign/0.111.0-1.tar.gz";
-    name = "0.111.0-1.tar.gz";
-    sha256 = "21beeed679e05614595d381e55753bb6de4596921da96d621f53fb3c018e64ff";
+    url = "https://github.com/ros-gbp/ros_ign-release/archive/release/noetic/ros_ign/0.111.1-2.tar.gz";
+    name = "0.111.1-2.tar.gz";
+    sha256 = "84789b6bdd9557c10bf47b65f855476e15db0ff69de6541857b93ffee9e54470";
   };
 
   buildType = "catkin";

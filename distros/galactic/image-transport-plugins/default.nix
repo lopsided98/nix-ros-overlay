@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, compressed-depth-image-transport, compressed-image-transport, theora-image-transport }:
 buildRosPackage {
   pname = "ros-galactic-image-transport-plugins";
-  version = "2.3.0-r5";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/galactic/image_transport_plugins/2.3.0-5.tar.gz";
-    name = "2.3.0-5.tar.gz";
-    sha256 = "2b5138bf52dbb1d5f8376346191f6482e0cb3d4eb9664ca0c12d720da3d3a085";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/galactic/image_transport_plugins/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "f771323208546bf66408b6d662b19010c19e3aa84d42968c5e778d4ba7957469";
   };
 
   buildType = "ament_cmake";

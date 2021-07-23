@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, control-msgs, control-toolbox, geometry-msgs, joy, moveit-common, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-planning-interface, robot-state-publisher, ros-testing, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-galactic-moveit-servo";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_servo/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "ad9a7b980c6b0aa145dba1a4810c4356e8d21c225f79cec68fa3db7baa23fa3d";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_servo/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "582ad27bf9605bcf6d4eac6360dbd61913719d46dd0d0d0fe833f23d5789611f";
   };
 
   buildType = "ament_cmake";

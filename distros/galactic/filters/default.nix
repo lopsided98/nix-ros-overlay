@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-uncrustify, ament-cmake-xmllint, boost, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-galactic-filters";
-  version = "2.0.0-r3";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/filters-release/archive/release/galactic/filters/2.0.0-3.tar.gz";
-    name = "2.0.0-3.tar.gz";
-    sha256 = "23fa210e8ab8625a1f8517e8143b5f50b34091f4ee217645fc5a6a0bb5b7ff84";
+    url = "https://github.com/ros2-gbp/filters-release/archive/release/galactic/filters/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "2a6c14d40944d30277c034fd6b83c3e7bcbb5d1c53797881a342f50fb55aff72";
   };
 
   buildType = "ament_cmake";

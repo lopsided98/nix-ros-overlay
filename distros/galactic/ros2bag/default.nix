@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch-testing, launch-testing-ros, pythonPackages, ros2cli, rosbag2-py, rosbag2-transport }:
 buildRosPackage {
   pname = "ros-galactic-ros2bag";
-  version = "0.9.0-r1";
+  version = "0.9.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/ros2bag/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "e4b56d82794ac62ae5805ef73c2993a5dad9f4d7fe747c60c876907ab5e6291a";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/ros2bag/0.9.1-3.tar.gz";
+    name = "0.9.1-3.tar.gz";
+    sha256 = "ed14a055798affc082d89a29b3c7b25c9eb67ac0d3c730712fdef79c7368439e";
   };
 
   buildType = "ament_python";

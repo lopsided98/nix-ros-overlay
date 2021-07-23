@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-common, moveit-ros-planning-interface, warehouse-ros-mongo }:
 buildRosPackage {
   pname = "ros-galactic-run-ompl-constrained-planning";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/run_ompl_constrained_planning/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "dcfb7214f6295e9018619a6e475817cdd4cf37413de50b2e9ad2b9ae8778cc1c";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/run_ompl_constrained_planning/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "b6f251d9c8dad11feb8677dab6e291f53a257455955f8ab4741b70524b6b8db0";
   };
 
   buildType = "ament_cmake";

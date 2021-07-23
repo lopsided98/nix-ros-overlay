@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch-xml, nav-msgs, pcl-conversions, poco, rclcpp, rosidl-default-generators, rosidl-default-runtime, std-srvs, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-bosch-locator-bridge";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/locator_ros_bridge-release/archive/release/foxy/bosch_locator_bridge/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "198862ab0d43504568c8129df228af3bea299c162b0ff095dd7872fb3c66d143";
+    url = "https://github.com/ros2-gbp/locator_ros_bridge-release/archive/release/foxy/bosch_locator_bridge/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "588323f3c1fda3430d1c31efcda9a121a2f37946e842d38d1232065647fe2436";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The bosch_locator_bridge package'';
+    description = ''ROS interface to Rexroth ROKIT Locator'';
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -836,6 +836,24 @@ self: super: {
 
  freight-bringup = self.callPackage ./freight-bringup {};
 
+ fuse = self.callPackage ./fuse {};
+
+ fuse-core = self.callPackage ./fuse-core {};
+
+ fuse-doc = self.callPackage ./fuse-doc {};
+
+ fuse-loss = self.callPackage ./fuse-loss {};
+
+ fuse-msgs = self.callPackage ./fuse-msgs {};
+
+ fuse-optimizers = self.callPackage ./fuse-optimizers {};
+
+ fuse-publishers = self.callPackage ./fuse-publishers {};
+
+ fuse-variables = self.callPackage ./fuse-variables {};
+
+ fuse-viz = self.callPackage ./fuse-viz {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
@@ -1086,6 +1104,8 @@ self: super: {
 
  industrial-utils = self.callPackage ./industrial-utils {};
 
+ inorbit-republisher = self.callPackage ./inorbit-republisher {};
+
  interactive-marker-tutorials = self.callPackage ./interactive-marker-tutorials {};
 
  interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
@@ -1201,6 +1221,14 @@ self: super: {
  kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
 
  kobuki-msgs = self.callPackage ./kobuki-msgs {};
+
+ kvh-geo-fog-3d = self.callPackage ./kvh-geo-fog-3d {};
+
+ kvh-geo-fog-3d-driver = self.callPackage ./kvh-geo-fog-3d-driver {};
+
+ kvh-geo-fog-3d-msgs = self.callPackage ./kvh-geo-fog-3d-msgs {};
+
+ kvh-geo-fog-3d-rviz = self.callPackage ./kvh-geo-fog-3d-rviz {};
 
  label-manager = self.callPackage ./label-manager {};
 
@@ -1966,6 +1994,8 @@ self: super: {
 
  quanergy-client = self.callPackage ./quanergy-client {};
 
+ quanergy-client-ros = self.callPackage ./quanergy-client-ros {};
+
  qwt-dependency = self.callPackage ./qwt-dependency {};
 
  radar-msgs = self.callPackage ./radar-msgs {};
@@ -2517,6 +2547,8 @@ self: super: {
  std-msgs = self.callPackage ./std-msgs {};
 
  std-srvs = self.callPackage ./std-srvs {};
+
+ steering-functions = self.callPackage ./steering-functions {};
 
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 

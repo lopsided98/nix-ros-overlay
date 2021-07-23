@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, example-interfaces, launch-testing, osrf-testing-tools-cpp, rcl, rcutils, rosidl-generator-c, rosidl-typesupport-c, std-msgs, test-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rclc";
-  version = "1.0.0-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclc-release/archive/release/foxy/rclc/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "1a910dedc390f603316b41c67f01a0d2361b247430a9de6cc86ebd5b70596044";
+    url = "https://github.com/ros2-gbp/rclc-release/archive/release/foxy/rclc/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "c779af82a8faf121daa84efcad6f33f47e6445fb9cdbbeb500e66a4f0ec2f11e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ignition, image-transport, ros-ign-bridge, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-ros-ign-image";
-  version = "0.111.0-r1";
+  version = "0.111.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_ign-release/archive/release/noetic/ros_ign_image/0.111.0-1.tar.gz";
-    name = "0.111.0-1.tar.gz";
-    sha256 = "689bdefbecb3826cb6c2fcea4191b7fe23545635f9be4e184e0090f81112f5f0";
+    url = "https://github.com/ros-gbp/ros_ign-release/archive/release/noetic/ros_ign_image/0.111.1-2.tar.gz";
+    name = "0.111.1-2.tar.gz";
+    sha256 = "d03bede505b6f6e15a966cec96d398f3b95e9a14c02890b96dbc89edd14d6786";
   };
 
   buildType = "catkin";
