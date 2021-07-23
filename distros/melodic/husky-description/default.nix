@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, realsense2-description, roslaunch, urdf, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-melodic-husky-description";
-  version = "0.4.9-r1";
+  version = "0.4.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_description/0.4.9-1.tar.gz";
-    name = "0.4.9-1.tar.gz";
-    sha256 = "7f98a40d620a10e68c17008954a7b058986fc4528c61825b4b61e6c62af1d0cd";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_description/0.4.10-1.tar.gz";
+    name = "0.4.10-1.tar.gz";
+    sha256 = "ed1b31abad1d0184c6b4ebeef0a4c4130d5190e4113d8b2743f9ba889f160251";
   };
 
   buildType = "catkin";

@@ -6,6 +6,8 @@ self: super: {
 
  acado-vendor = self.callPackage ./acado-vendor {};
 
+ ackermann-msgs = self.callPackage ./ackermann-msgs {};
+
  action-msgs = self.callPackage ./action-msgs {};
 
  action-tutorials-cpp = self.callPackage ./action-tutorials-cpp {};
@@ -142,6 +144,8 @@ self: super: {
 
  autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
 
+ backward-ros = self.callPackage ./backward-ros {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -171,6 +175,8 @@ self: super: {
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
 
  class-loader = self.callPackage ./class-loader {};
+
+ color-names = self.callPackage ./color-names {};
 
  common-interfaces = self.callPackage ./common-interfaces {};
 
@@ -242,6 +248,8 @@ self: super: {
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
+ embree-vendor = self.callPackage ./embree-vendor {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-cbg-executor = self.callPackage ./examples-rclcpp-cbg-executor {};
@@ -300,6 +308,8 @@ self: super: {
 
  foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
 
+ four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
@@ -337,6 +347,8 @@ self: super: {
  grbl-ros = self.callPackage ./grbl-ros {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
+
+ hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  iceoryx-binding-c = self.callPackage ./iceoryx-binding-c {};
 
@@ -510,7 +522,11 @@ self: super: {
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
- nao-interfaces = self.callPackage ./nao-interfaces {};
+ nao-button-sim = self.callPackage ./nao-button-sim {};
+
+ nao-command-msgs = self.callPackage ./nao-command-msgs {};
+
+ nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -694,6 +710,8 @@ self: super: {
 
  quality-of-service-demo-py = self.callPackage ./quality-of-service-demo-py {};
 
+ quaternion-operation = self.callPackage ./quaternion-operation {};
+
  radar-msgs = self.callPackage ./radar-msgs {};
 
  random-numbers = self.callPackage ./random-numbers {};
@@ -736,6 +754,8 @@ self: super: {
 
  rclc-lifecycle = self.callPackage ./rclc-lifecycle {};
 
+ rclc-parameter = self.callPackage ./rclc-parameter {};
+
  rclcpp = self.callPackage ./rclcpp {};
 
  rclcpp-action = self.callPackage ./rclcpp-action {};
@@ -750,6 +770,8 @@ self: super: {
 
  rcpputils = self.callPackage ./rcpputils {};
 
+ rcss3d-agent = self.callPackage ./rcss3d-agent {};
+
  rcutils = self.callPackage ./rcutils {};
 
  realsense2-camera = self.callPackage ./realsense2-camera {};
@@ -762,7 +784,11 @@ self: super: {
 
  resource-retriever = self.callPackage ./resource-retriever {};
 
+ rmf-battery = self.callPackage ./rmf-battery {};
+
  rmf-building-map-msgs = self.callPackage ./rmf-building-map-msgs {};
+
+ rmf-building-map-tools = self.callPackage ./rmf-building-map-tools {};
 
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
@@ -781,6 +807,12 @@ self: super: {
  rmf-task-msgs = self.callPackage ./rmf-task-msgs {};
 
  rmf-traffic = self.callPackage ./rmf-traffic {};
+
+ rmf-traffic-editor = self.callPackage ./rmf-traffic-editor {};
+
+ rmf-traffic-editor-assets = self.callPackage ./rmf-traffic-editor-assets {};
+
+ rmf-traffic-editor-test-maps = self.callPackage ./rmf-traffic-editor-test-maps {};
 
  rmf-traffic-msgs = self.callPackage ./rmf-traffic-msgs {};
 
@@ -871,6 +903,8 @@ self: super: {
  ros-environment = self.callPackage ./ros-environment {};
 
  ros-ign = self.callPackage ./ros-ign {};
+
+ ros-ign-interfaces = self.callPackage ./ros-ign-interfaces {};
 
  ros-testing = self.callPackage ./ros-testing {};
 
@@ -1160,11 +1194,19 @@ self: super: {
 
  ublox = self.callPackage ./ublox {};
 
+ ublox-dgnss = self.callPackage ./ublox-dgnss {};
+
+ ublox-dgnss-node = self.callPackage ./ublox-dgnss-node {};
+
  ublox-gps = self.callPackage ./ublox-gps {};
 
  ublox-msgs = self.callPackage ./ublox-msgs {};
 
  ublox-serialization = self.callPackage ./ublox-serialization {};
+
+ ublox-ubx-interfaces = self.callPackage ./ublox-ubx-interfaces {};
+
+ ublox-ubx-msgs = self.callPackage ./ublox-ubx-msgs {};
 
  udp-driver = self.callPackage ./udp-driver {};
 
@@ -1190,7 +1232,11 @@ self: super: {
 
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
 
+ usb-cam = self.callPackage ./usb-cam {};
+
  v4l2-camera = self.callPackage ./v4l2-camera {};
+
+ vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

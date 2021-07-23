@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, code-coverage, fmt, pilz-testutils, robot-state-publisher, rosbag, rosconsole-bridge, roscpp, roslaunch, rostest, rosunit, rviz, sensor-msgs, xacro }:
 buildRosPackage {
   pname = "ros-noetic-psen-scan-v2";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/PilzDE/psen_scan_v2-release/archive/release/noetic/psen_scan_v2/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "0a5414452789d498da939b00605d3eba9c81fdc327bacbce4bae31a681e73538";
+    url = "https://github.com/PilzDE/psen_scan_v2-release/archive/release/noetic/psen_scan_v2/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "4e3b72c3a89fe3bb5d62bf2028a1022129a580479f26d2a62100c9474f217435";
   };
 
   buildType = "catkin";

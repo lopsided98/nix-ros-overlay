@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, cv-bridge, image-transport, libogg, libtheora, pluginlib, rclcpp, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-theora-image-transport";
-  version = "2.3.0-r5";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/galactic/theora_image_transport/2.3.0-5.tar.gz";
-    name = "2.3.0-5.tar.gz";
-    sha256 = "a0deb31f2e95b09e06ea963b3cb6b06ff39df1ea4fe1b3b9b61de71799448360";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/galactic/theora_image_transport/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "f1ff380ed47fa07afc04a90138f5787165056e7da5352b06a7be6ebf7ff91154";
   };
 
   buildType = "ament_cmake";

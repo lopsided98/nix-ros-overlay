@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-index-cpp, ament-lint-auto, ament-lint-common, pluginlib, rcpputils, rmw, rmw-fastrtps-cpp, rosbag2-cpp, rosbag2-test-common, rosidl-runtime-cpp, test-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rosbag2-converter-default-plugins";
-  version = "0.3.7-r1";
+  version = "0.3.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_converter_default_plugins/0.3.7-1.tar.gz";
-    name = "0.3.7-1.tar.gz";
-    sha256 = "cdc8e0eb24507b17d35901dcbef059ddfe5fd0693d4ed4a05f479411cb9fa9dd";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_converter_default_plugins/0.3.8-1.tar.gz";
+    name = "0.3.8-1.tar.gz";
+    sha256 = "20bfa740b28fb280ceed092eb2ac7079131e570dc5fa6f78fa8ad93d2384ccbd";
   };
 
   buildType = "ament_cmake";

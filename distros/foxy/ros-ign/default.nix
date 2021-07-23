@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-ign-bridge, ros-ign-gazebo, ros-ign-gazebo-demos, ros-ign-image }:
 buildRosPackage {
   pname = "ros-foxy-ros-ign";
-  version = "0.221.1-r1";
+  version = "0.221.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/foxy/ros_ign/0.221.1-1.tar.gz";
-    name = "0.221.1-1.tar.gz";
-    sha256 = "c947e01a17d76bc3871d5e8a6d6eef0eb182d3421d89e7d14d886db289724899";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/foxy/ros_ign/0.221.2-1.tar.gz";
+    name = "0.221.2-1.tar.gz";
+    sha256 = "e16c78fd9bf2039ea9a3b36b5c7dca8154894910bc4423ce8d82cfddc311279e";
   };
 
   buildType = "ament_cmake";

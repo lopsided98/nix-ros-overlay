@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-warthog-msgs";
-  version = "0.1.3-r1";
+  version = "0.1.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/melodic/warthog_msgs/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "bf3be025e0b3929028832d7220b11ecc76957a37db0dd553909ca706f8bf8896";
+    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/melodic/warthog_msgs/0.1.4-2.tar.gz";
+    name = "0.1.4-2.tar.gz";
+    sha256 = "3df0ba916742d200c6f69b1abd42bf3d5f258783b25df029bb6aba3a41b7f76f";
   };
 
   buildType = "catkin";

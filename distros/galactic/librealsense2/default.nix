@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-galactic-librealsense2";
-  version = "2.48.0-r1";
+  version = "2.48.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/galactic/librealsense2/2.48.0-1.tar.gz";
-    name = "2.48.0-1.tar.gz";
-    sha256 = "fb0271473cdad9195ed1a9d457432a416964b1553e518be573e61164289ec8e9";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/galactic/librealsense2/2.48.0-2.tar.gz";
+    name = "2.48.0-2.tar.gz";
+    sha256 = "a041d44b269f2ef41485eebefb5264bf8910df794c07e831120ec0f55a68208d";
   };
 
   buildType = "ament_cmake";

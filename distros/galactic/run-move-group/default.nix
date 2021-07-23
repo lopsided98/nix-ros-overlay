@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-common, moveit-ros-planning-interface }:
 buildRosPackage {
   pname = "ros-galactic-run-move-group";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/run_move_group/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "762f994116876259c9b776090ba6bf335263285da11a691499a54e80dccd66be";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/run_move_group/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "a3efb1e1b57a30f40e63982e472e691faf653c8c0d54a62c15e2494a76fd679e";
   };
 
   buildType = "ament_cmake";

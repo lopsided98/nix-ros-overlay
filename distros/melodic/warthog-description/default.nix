@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-warthog-description";
-  version = "0.1.3-r1";
+  version = "0.1.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/melodic/warthog_description/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "7fb3fe0903dfeed8112c5c68854e6952136d1588d495a85d902d92a46f3e82af";
+    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/melodic/warthog_description/0.1.4-2.tar.gz";
+    name = "0.1.4-2.tar.gz";
+    sha256 = "980542ca1871b6455b04b5b65038126f5c8441a9415fe2432852f8391b96b3df";
   };
 
   buildType = "catkin";

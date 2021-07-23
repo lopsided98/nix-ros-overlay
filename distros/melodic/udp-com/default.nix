@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, nodelet, roscpp, roslint, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-udp-com";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/flynneva/udp_com-release/archive/release/melodic/udp_com/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "8f844c3da576c2b248db9f6e4cc2ef8b17e4a5014492be84a5378998827ac6ec";
+    url = "https://github.com/flynneva/udp_com-release/archive/release/melodic/udp_com/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "2a27e17103618c78691b9d353174c16fb4565148e8be0825fc629dc55ebbb068";
   };
 
   buildType = "catkin";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The udp_com package'';
+    description = ''Generic UDP communication ROS package'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

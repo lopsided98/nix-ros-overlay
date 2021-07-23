@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, zstd }:
 buildRosPackage {
   pname = "ros-galactic-zstd-vendor";
-  version = "0.9.0-r1";
+  version = "0.9.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/zstd_vendor/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "458b4123b36ab48b26f9f7f34c28aaf973807b8df5a095aad98fd1b02c683db7";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/zstd_vendor/0.9.1-3.tar.gz";
+    name = "0.9.1-3.tar.gz";
+    sha256 = "08637d6df6372281da5a340b09e07cdc9c73400530f8748519bff32b70a73428";
   };
 
   buildType = "ament_cmake";

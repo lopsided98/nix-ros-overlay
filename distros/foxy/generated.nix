@@ -878,17 +878,23 @@ self: super: {
 
  pmb2-2dnav = self.callPackage ./pmb2-2dnav {};
 
+ pmb2-2dnav-gazebo = self.callPackage ./pmb2-2dnav-gazebo {};
+
  pmb2-bringup = self.callPackage ./pmb2-bringup {};
 
  pmb2-controller-configuration = self.callPackage ./pmb2-controller-configuration {};
 
  pmb2-description = self.callPackage ./pmb2-description {};
 
+ pmb2-gazebo = self.callPackage ./pmb2-gazebo {};
+
  pmb2-maps = self.callPackage ./pmb2-maps {};
 
  pmb2-navigation = self.callPackage ./pmb2-navigation {};
 
  pmb2-robot = self.callPackage ./pmb2-robot {};
+
+ pmb2-simulation = self.callPackage ./pmb2-simulation {};
 
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
 
@@ -1002,6 +1008,8 @@ self: super: {
 
  realsense-examples = self.callPackage ./realsense-examples {};
 
+ realsense-hardware-interface = self.callPackage ./realsense-hardware-interface {};
+
  realsense-msgs = self.callPackage ./realsense-msgs {};
 
  realsense-node = self.callPackage ./realsense-node {};
@@ -1108,9 +1116,9 @@ self: super: {
 
  ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
 
- ros-ign-gazebo = self.callPackage ./ros-ign-gazebo {};
-
  ros-ign-image = self.callPackage ./ros-ign-image {};
+
+ ros-ign-interfaces = self.callPackage ./ros-ign-interfaces {};
 
  ros-testing = self.callPackage ./ros-testing {};
 
@@ -1504,6 +1512,8 @@ self: super: {
 
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
 
+ usb-cam = self.callPackage ./usb-cam {};
+
  v4l2-camera = self.callPackage ./v4l2-camera {};
 
  velocity-controllers = self.callPackage ./velocity-controllers {};
@@ -1534,13 +1544,19 @@ self: super: {
 
  webots-ros2-abb = self.callPackage ./webots-ros2-abb {};
 
+ webots-ros2-control = self.callPackage ./webots-ros2-control {};
+
  webots-ros2-core = self.callPackage ./webots-ros2-core {};
 
  webots-ros2-demos = self.callPackage ./webots-ros2-demos {};
 
+ webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
+
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
 
  webots-ros2-examples = self.callPackage ./webots-ros2-examples {};
+
+ webots-ros2-mavic = self.callPackage ./webots-ros2-mavic {};
 
  webots-ros2-msgs = self.callPackage ./webots-ros2-msgs {};
 

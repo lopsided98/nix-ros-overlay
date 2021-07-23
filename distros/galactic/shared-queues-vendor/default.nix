@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-galactic-shared-queues-vendor";
-  version = "0.9.0-r1";
+  version = "0.9.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/shared_queues_vendor/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "90dc2c7420d8c671080403277fb2c731e172744395127a371ad38ac993f2d8e1";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/shared_queues_vendor/0.9.1-3.tar.gz";
+    name = "0.9.1-3.tar.gz";
+    sha256 = "60e2698b9a59dd811f9fe4c84a11371b202df1a4c866090c8f1e8817661ccaaa";
   };
 
   buildType = "ament_cmake";
