@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cacert, cmake, cmake-modules, git, opencv3, openssl }:
 buildRosPackage {
   pname = "ros-melodic-slic";
-  version = "2.1.23-r1";
+  version = "2.1.24-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/slic/2.1.23-1.tar.gz";
-    name = "2.1.23-1.tar.gz";
-    sha256 = "565be41ab0971e1307cd57d5852aab77d4e2af710931e325b83026528ad4968c";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/slic/2.1.24-1.tar.gz";
+    name = "2.1.24-1.tar.gz";
+    sha256 = "e007e40244375ee5d06d9d254db91c142349edfb218b6b12fe76fd84297eb9bf";
   };
 
   buildType = "cmake";

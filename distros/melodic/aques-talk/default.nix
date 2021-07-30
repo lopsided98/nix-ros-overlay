@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, kakasi, nkf, sound-play }:
 buildRosPackage {
   pname = "ros-melodic-aques-talk";
-  version = "2.1.23-r1";
+  version = "2.1.24-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/aques_talk/2.1.23-1.tar.gz";
-    name = "2.1.23-1.tar.gz";
-    sha256 = "44a514bca2a5779849875e31040927929d95f8c70b24752092a983f4cc4e4d88";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/aques_talk/2.1.24-1.tar.gz";
+    name = "2.1.24-1.tar.gz";
+    sha256 = "82869afa17eba0e36a858850f810ec92304ee2332d37868e5c03cd20fa399fe6";
   };
 
   buildType = "catkin";

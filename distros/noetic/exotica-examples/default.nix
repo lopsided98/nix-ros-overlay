@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-aico-solver, exotica-cartpole-dynamics-solver, exotica-collision-scene-fcl-latest, exotica-core, exotica-core-task-maps, exotica-ddp-solver, exotica-double-integrator-dynamics-solver, exotica-ik-solver, exotica-ilqg-solver, exotica-ilqr-solver, exotica-levenberg-marquardt-solver, exotica-ompl-control-solver, exotica-ompl-solver, exotica-pendulum-dynamics-solver, exotica-pinocchio-dynamics-solver, exotica-python, exotica-quadrotor-dynamics-solver, exotica-scipy-solver, exotica-time-indexed-rrt-connect-solver, exotica-val-description, geometry-msgs, interactive-markers, python3Packages, robot-state-publisher, rostest, rosunit, rviz, sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-exotica-examples";
-  version = "6.1.1-r1";
+  version = "6.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_examples/6.1.1-1.tar.gz";
-    name = "6.1.1-1.tar.gz";
-    sha256 = "fc82861ba5e048f0ba3ff5f40b53bd2d1d1288069221db60385299b4e69fec32";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_examples/6.2.0-1.tar.gz";
+    name = "6.2.0-1.tar.gz";
+    sha256 = "253c541a3cb1eb6215226dd062360c131ef478065abdcde75455d25b8213d262";
   };
 
   buildType = "catkin";

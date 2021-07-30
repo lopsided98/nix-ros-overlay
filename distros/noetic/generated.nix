@@ -2882,6 +2882,8 @@ self: super: {
 
  wave-front-planner = self.callPackage ./wave-front-planner {};
 
+ web-video-server = self.callPackage ./web-video-server {};
+
  webots-ros = self.callPackage ./webots-ros {};
 
  wfov-camera-msgs = self.callPackage ./wfov-camera-msgs {};

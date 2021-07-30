@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genmsg }:
 buildRosPackage {
   pname = "ros-noetic-roslang";
-  version = "1.15.7-r1";
+  version = "1.15.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/noetic/roslang/1.15.7-1.tar.gz";
-    name = "1.15.7-1.tar.gz";
-    sha256 = "1dc142fe4396e3edfcd75777bf049cae4daa6d88ae445d8a08211c33ec277468";
+    url = "https://github.com/ros-gbp/ros-release/archive/release/noetic/roslang/1.15.8-1.tar.gz";
+    name = "1.15.8-1.tar.gz";
+    sha256 = "920854f983ee43f4eda52a44e2e318f1db47ffd36f74af6cd43c9139c0d5f053";
   };
 
   buildType = "catkin";

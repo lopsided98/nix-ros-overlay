@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, filters, git, laser-filters, laser-geometry, mk }:
 buildRosPackage {
   pname = "ros-melodic-laser-filters-jsk-patch";
-  version = "2.1.23-r1";
+  version = "2.1.24-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/laser_filters_jsk_patch/2.1.23-1.tar.gz";
-    name = "2.1.23-1.tar.gz";
-    sha256 = "7f4583a260f42817fe55cd2bb350d4b3c95045a7a1b89f05f54ca56f159e3aa1";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/laser_filters_jsk_patch/2.1.24-1.tar.gz";
+    name = "2.1.24-1.tar.gz";
+    sha256 = "3efd3a7b0b31928f8ee41e047b5a212c766bf2ad3bd8c1d7607fd13d5cfb2a28";
   };
 
   buildType = "catkin";

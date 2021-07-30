@@ -526,6 +526,8 @@ self: super: {
 
  nao-command-msgs = self.callPackage ./nao-command-msgs {};
 
+ nao-lola = self.callPackage ./nao-lola {};
+
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
@@ -1081,6 +1083,8 @@ self: super: {
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
  smclib = self.callPackage ./smclib {};
+
+ soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
 
  soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
 

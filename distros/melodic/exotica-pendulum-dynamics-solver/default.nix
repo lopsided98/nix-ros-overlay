@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-exotica-pendulum-dynamics-solver";
-  version = "6.1.1-r1";
+  version = "6.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_pendulum_dynamics_solver/6.1.1-1.tar.gz";
-    name = "6.1.1-1.tar.gz";
-    sha256 = "ddd9d3c39477c96547e64ddacf8030ee86bb1845240d87ea02660fd7f9512153";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_pendulum_dynamics_solver/6.2.0-1.tar.gz";
+    name = "6.2.0-1.tar.gz";
+    sha256 = "8a80eee1ef29f578cc6ccf406b01044127ed46c988dab54484779b2b2b9963f0";
   };
 
   buildType = "catkin";
