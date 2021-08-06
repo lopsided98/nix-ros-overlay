@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, dynamic-reconfigure, eigen, eigen-conversions, franka-control, franka-description, franka-gripper, franka-hw, geometry-msgs, hardware-interface, libfranka, message-generation, message-runtime, panda-moveit-config, pluginlib, realtime-tools, roscpp, rospy, tf, tf-conversions }:
 buildRosPackage {
   pname = "ros-noetic-franka-example-controllers";
-  version = "0.7.1-r2";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_example_controllers/0.7.1-2.tar.gz";
-    name = "0.7.1-2.tar.gz";
-    sha256 = "8ed58351a55468de04d19bf16ef19922f56ba1acbc1064e2fc552d0645a2f5bd";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_example_controllers/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "dbed2239cd51deddb45df921ea510e5e0fb0da78fca098bf1aff2f05000cebe8";
   };
 
   buildType = "catkin";

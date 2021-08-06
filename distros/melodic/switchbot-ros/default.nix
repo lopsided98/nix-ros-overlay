@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-runtime, pythonPackages, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-switchbot-ros";
-  version = "2.1.23-r1";
+  version = "2.1.24-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/switchbot_ros/2.1.23-1.tar.gz";
-    name = "2.1.23-1.tar.gz";
-    sha256 = "1a8c29d7ac6f11009a88d3110b30613fcbdc80aab88b4b8aa57db63e4bf5b0ef";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/switchbot_ros/2.1.24-1.tar.gz";
+    name = "2.1.24-1.tar.gz";
+    sha256 = "328df93d029dd75726982089e88ce3112d497a3ec7c2df4bfd5e8c8b8035ff08";
   };
 
   buildType = "catkin";

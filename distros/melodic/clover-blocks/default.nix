@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rospy }:
 buildRosPackage {
   pname = "ros-melodic-clover-blocks";
-  version = "0.21.3-r1";
+  version = "0.21.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/clover_blocks/0.21.3-1.tar.gz";
-    name = "0.21.3-1.tar.gz";
-    sha256 = "14a77b30e6f765ca68bc9d3be75f38ff8396695b509d1e9487226973e4deeb23";
+    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/clover_blocks/0.21.2-1.tar.gz";
+    name = "0.21.2-1.tar.gz";
+    sha256 = "e239ebc11090127ed61030db7fa8c71e9218c00dadfb86328d0204ee0412a651";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-galactic-fastrtps";
-  version = "2.3.1-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/galactic/fastrtps/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "78fdec7c410caa774b0a82ce8cd7c1e5068224ef0ed9a5a465f5308f5d4ff6f6";
+    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/galactic/fastrtps/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "eddb31f507208251544e87541ec323e776d6094cb42bbfa2fb38aff6c9b6a82b";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, fcl, filters, geometric-shapes, geometry-msgs, laser-geometry, message-generation, message-runtime, moveit-core, moveit-ros-perception, pcl, pcl-conversions, pkg-config, roscpp, rostest, sensor-msgs, std-msgs, tf2, tf2-eigen, tf2-ros, tf2-sensor-msgs, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-robot-body-filter";
-  version = "1.1.9-r1";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/peci1/robot_body_filter-release/archive/release/melodic/robot_body_filter/1.1.9-1.tar.gz";
-    name = "1.1.9-1.tar.gz";
-    sha256 = "d16cb56b66e5add7d8c5f35951a7e357ad59eab88a5f89149d4b18ef432afb96";
+    url = "https://github.com/peci1/robot_body_filter-release/archive/release/melodic/robot_body_filter/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "d51b48b1688bcf9d53181d592d1f346f3adb017bc1995143bb144d98a87b992f";
   };
 
   buildType = "catkin";

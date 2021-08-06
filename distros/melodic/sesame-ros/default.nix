@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, catkin-virtualenv, libffi, message-generation, message-runtime, openssl }:
 buildRosPackage {
   pname = "ros-melodic-sesame-ros";
-  version = "2.1.23-r1";
+  version = "2.1.24-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/sesame_ros/2.1.23-1.tar.gz";
-    name = "2.1.23-1.tar.gz";
-    sha256 = "54c6a98ad8fd96458951922cad11a0479c9d2896aa446eeeed3d105ea124a97e";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/sesame_ros/2.1.24-1.tar.gz";
+    name = "2.1.24-1.tar.gz";
+    sha256 = "d066f569e031178d47310e1b7761bd1f7e9d038843876838cb1fdc167e7b99ac";
   };
 
   buildType = "catkin";

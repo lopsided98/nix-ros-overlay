@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-plugins, gazebo-ros, xacro }:
 buildRosPackage {
   pname = "ros-melodic-clover-description";
-  version = "0.21.3-r1";
+  version = "0.21.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/clover_description/0.21.3-1.tar.gz";
-    name = "0.21.3-1.tar.gz";
-    sha256 = "a9c169ffff5118a6bb54ffa2fcc3a50278547a9cad575b887b0c1f289d71e1f2";
+    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/clover_description/0.21.2-1.tar.gz";
+    name = "0.21.2-1.tar.gz";
+    sha256 = "343e10bb269be05deb36111a2ca4bbdb6adde31de38df4ff7d660bd35a2fa77e";
   };
 
   buildType = "catkin";

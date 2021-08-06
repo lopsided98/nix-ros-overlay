@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, catkin-virtualenv, cv-bridge, cv-camera, geographiclib, geometry-msgs, led-msgs, mavros, mavros-extras, message-generation, nodelet, pythonPackages, ros-pytest, rosbridge-server, roscpp, rospy, sensor-msgs, std-msgs, std-srvs, tf, tf2, tf2-geometry-msgs, tf2-ros, tf2-web-republisher, visualization-msgs, web-video-server }:
 buildRosPackage {
   pname = "ros-melodic-clover";
-  version = "0.21.3-r1";
+  version = "0.21.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/clover/0.21.3-1.tar.gz";
-    name = "0.21.3-1.tar.gz";
-    sha256 = "65905f65df78466fe585a3417d513ba448fb2d2d55fe86f4b1649084fe14c4cc";
+    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/clover/0.21.2-1.tar.gz";
+    name = "0.21.2-1.tar.gz";
+    sha256 = "778f01196b1c57d7b4b622146a5e72757fc97d1dda17fbc0bca67c2b11a6465b";
   };
 
   buildType = "catkin";

@@ -1128,6 +1128,8 @@ self: super: {
 
  franka-example-controllers = self.callPackage ./franka-example-controllers {};
 
+ franka-gazebo = self.callPackage ./franka-gazebo {};
+
  franka-gripper = self.callPackage ./franka-gripper {};
 
  franka-hw = self.callPackage ./franka-hw {};
@@ -3681,6 +3683,8 @@ self: super: {
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
  rtmbuild = self.callPackage ./rtmbuild {};
 
