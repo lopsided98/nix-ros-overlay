@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, geometry-msgs, image-publisher, image-transport, message-generation, message-runtime, nodelet, ros-pytest, roscpp, rostest, sensor-msgs, std-msgs, tf, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-aruco-pose";
-  version = "0.21.3-r1";
+  version = "0.21.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/aruco_pose/0.21.3-1.tar.gz";
-    name = "0.21.3-1.tar.gz";
-    sha256 = "56de0156088bf874c4adbc573265f2a5416cf102692e44256a6d10bdae5e7bdd";
+    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/aruco_pose/0.21.2-1.tar.gz";
+    name = "0.21.2-1.tar.gz";
+    sha256 = "2506649647c6e2372fe659fe72c03888aefe3fa5a395c765a4d381def7be84ce";
   };
 
   buildType = "catkin";

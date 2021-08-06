@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genmsg, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-view-controller-msgs";
-  version = "0.1.3-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/view_controller_msgs-release/archive/release/noetic/view_controller_msgs/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "2790e733c8c9880af8643f5b59523aa1a7a82d562901fc14b307ccfa3b4411bd";
+    url = "https://github.com/ros-gbp/view_controller_msgs-release/archive/release/noetic/view_controller_msgs/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "2157172387b8868d01b73a0cf00fb1425748b9707b54b40f97eb1ef40505aadf";
   };
 
   buildType = "catkin";

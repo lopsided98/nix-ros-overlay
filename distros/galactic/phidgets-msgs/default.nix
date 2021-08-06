@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-phidgets-msgs";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/galactic/phidgets_msgs/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "4550572daedcc1c4d8265678ee3b53e7d6b9dcb8248e8ec07f8473573f103381";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/galactic/phidgets_msgs/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "8b514cbb4815b072df8208cf07cda9ace0e2a576d844b5ac3357d5fd1411e646";
   };
 
   buildType = "ament_cmake";

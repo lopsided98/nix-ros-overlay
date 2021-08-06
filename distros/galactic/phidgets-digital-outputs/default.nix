@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, phidgets-msgs, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-phidgets-digital-outputs";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/galactic/phidgets_digital_outputs/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "b44fe76181b39e966785e5f0c7c5e04f2144f02559aac4d48b43b005a6195be7";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/galactic/phidgets_digital_outputs/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "96f686b37d6765153991b900204a3e545b4f78c13ed51d51d7bd6efed2841f75";
   };
 
   buildType = "ament_cmake";

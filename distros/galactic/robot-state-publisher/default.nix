@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, kdl-parser, launch-ros, launch-testing-ament-cmake, orocos-kdl, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2-ros, urdf, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-galactic-robot-state-publisher";
-  version = "2.4.3-r2";
+  version = "2.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/galactic/robot_state_publisher/2.4.3-2.tar.gz";
-    name = "2.4.3-2.tar.gz";
-    sha256 = "bc7e9eb0e41d0da37afdd0f55fb98ce54d3cf28bb6a620e8618944acf9de8aaa";
+    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/galactic/robot_state_publisher/2.5.1-1.tar.gz";
+    name = "2.5.1-1.tar.gz";
+    sha256 = "b0428425ce47d88be2465f64ab2bc4c2b848e73401cccc07186e1d13b0aa9232";
   };
 
   buildType = "ament_cmake";

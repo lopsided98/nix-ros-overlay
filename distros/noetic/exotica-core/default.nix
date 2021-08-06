@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, cppzmq, eigen-conversions, geometry-msgs, kdl-parser, moveit-core, moveit-msgs, moveit-ros-planning, msgpack, orocos-kdl, pluginlib, roscpp, rosunit, std-msgs, tf, tf-conversions, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-noetic-exotica-core";
-  version = "6.1.1-r1";
+  version = "6.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_core/6.1.1-1.tar.gz";
-    name = "6.1.1-1.tar.gz";
-    sha256 = "156815433c405fca51fe552806eb98b8f3f3e67ee047f8511a43f01315c2bd34";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_core/6.2.0-1.tar.gz";
+    name = "6.2.0-1.tar.gz";
+    sha256 = "e5a0d4c3011d40a110dacdbb595f0bc0cbfb55eab42da9d5bfdb644453aab6ab";
   };
 
   buildType = "catkin";

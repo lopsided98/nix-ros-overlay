@@ -394,6 +394,24 @@ self: super: {
 
  key-teleop = self.callPackage ./key-teleop {};
 
+ lanelet2 = self.callPackage ./lanelet2 {};
+
+ lanelet2-core = self.callPackage ./lanelet2-core {};
+
+ lanelet2-examples = self.callPackage ./lanelet2-examples {};
+
+ lanelet2-maps = self.callPackage ./lanelet2-maps {};
+
+ lanelet2-projection = self.callPackage ./lanelet2-projection {};
+
+ lanelet2-python = self.callPackage ./lanelet2-python {};
+
+ lanelet2-routing = self.callPackage ./lanelet2-routing {};
+
+ lanelet2-traffic-rules = self.callPackage ./lanelet2-traffic-rules {};
+
+ lanelet2-validation = self.callPackage ./lanelet2-validation {};
+
  laser-geometry = self.callPackage ./laser-geometry {};
 
  laser-proc = self.callPackage ./laser-proc {};
@@ -522,9 +540,13 @@ self: super: {
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
+ mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
  nao-command-msgs = self.callPackage ./nao-command-msgs {};
+
+ nao-lola = self.callPackage ./nao-lola {};
 
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
 
@@ -1081,6 +1103,8 @@ self: super: {
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
  smclib = self.callPackage ./smclib {};
+
+ soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
 
  soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
 

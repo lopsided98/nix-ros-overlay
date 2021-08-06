@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bison, catkin, flex, gawk, mk, rosbuild, roslib, rospack }:
 buildRosPackage {
   pname = "ros-melodic-ffha";
-  version = "2.1.23-r1";
+  version = "2.1.24-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/ffha/2.1.23-1.tar.gz";
-    name = "2.1.23-1.tar.gz";
-    sha256 = "ba6aa626677012ae042dd37863eba71088fb9b8b11305a34e530fe5d3c2ea646";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/ffha/2.1.24-1.tar.gz";
+    name = "2.1.24-1.tar.gz";
+    sha256 = "dd6a5b76ff585b5fcd82a8f2b641f9ed35d0787535866027d563cb1ea312f8e0";
   };
 
   buildType = "catkin";

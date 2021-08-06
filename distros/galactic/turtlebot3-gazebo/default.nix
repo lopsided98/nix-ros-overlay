@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gazebo-ros-pkgs, geometry-msgs, nav-msgs, rclcpp, sensor-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-galactic-turtlebot3-gazebo";
-  version = "2.2.4-r1";
+  version = "2.2.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3_simulations-release/archive/release/galactic/turtlebot3_gazebo/2.2.4-1.tar.gz";
-    name = "2.2.4-1.tar.gz";
-    sha256 = "865093b702e896467230cca014ebd7f24f318bd335b76f9853cdd08864ab5832";
+    url = "https://github.com/robotis-ros2-release/turtlebot3_simulations-release/archive/release/galactic/turtlebot3_gazebo/2.2.4-2.tar.gz";
+    name = "2.2.4-2.tar.gz";
+    sha256 = "e76517cb5f513868ea7a76963666d5d9e7ef03b4c25611b0bdfed12c5e6f1036";
   };
 
   buildType = "ament_cmake";

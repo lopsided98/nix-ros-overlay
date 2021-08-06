@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cacert, cmake, cv-bridge, git, openssl }:
 buildRosPackage {
   pname = "ros-melodic-libcmt";
-  version = "2.1.23-r1";
+  version = "2.1.24-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/libcmt/2.1.23-1.tar.gz";
-    name = "2.1.23-1.tar.gz";
-    sha256 = "1562ae8d15a3bfea334c3425bc626435a30091fbc6236763533a5de8bef517d4";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/libcmt/2.1.24-1.tar.gz";
+    name = "2.1.24-1.tar.gz";
+    sha256 = "e0ece8617dc15630f1584003705c73484db1f27123b3dc943d31d2878bd0cfc4";
   };
 
   buildType = "cmake";

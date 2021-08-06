@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exotica-core, exotica-python }:
 buildRosPackage {
   pname = "ros-noetic-exotica-ilqr-solver";
-  version = "6.1.1-r1";
+  version = "6.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_ilqr_solver/6.1.1-1.tar.gz";
-    name = "6.1.1-1.tar.gz";
-    sha256 = "554ea850f68fcaafac94a4718236d025309bd54ad626a43083485e917f256473";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_ilqr_solver/6.2.0-1.tar.gz";
+    name = "6.2.0-1.tar.gz";
+    sha256 = "a796cfef3920486d26caf201e22191c2663dd97f846c52c6344faf8649f5441a";
   };
 
   buildType = "catkin";

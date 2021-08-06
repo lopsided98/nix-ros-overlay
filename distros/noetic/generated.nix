@@ -576,7 +576,15 @@ self: super: {
 
  dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
 
+ dynamixel-workbench = self.callPackage ./dynamixel-workbench {};
+
+ dynamixel-workbench-controllers = self.callPackage ./dynamixel-workbench-controllers {};
+
  dynamixel-workbench-msgs = self.callPackage ./dynamixel-workbench-msgs {};
+
+ dynamixel-workbench-operators = self.callPackage ./dynamixel-workbench-operators {};
+
+ dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
  easy-markers = self.callPackage ./easy-markers {};
 
@@ -823,6 +831,8 @@ self: super: {
  franka-description = self.callPackage ./franka-description {};
 
  franka-example-controllers = self.callPackage ./franka-example-controllers {};
+
+ franka-gazebo = self.callPackage ./franka-gazebo {};
 
  franka-gripper = self.callPackage ./franka-gripper {};
 
@@ -1471,6 +1481,8 @@ self: super: {
  move-base-msgs = self.callPackage ./move-base-msgs {};
 
  move-base-sequence = self.callPackage ./move-base-sequence {};
+
+ move-basic = self.callPackage ./move-basic {};
 
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
@@ -2398,6 +2410,8 @@ self: super: {
 
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
+ rtcm-msgs = self.callPackage ./rtcm-msgs {};
+
  rviz = self.callPackage ./rviz {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
@@ -2533,6 +2547,8 @@ self: super: {
  speed-scaling-interface = self.callPackage ./speed-scaling-interface {};
 
  speed-scaling-state-controller = self.callPackage ./speed-scaling-state-controller {};
+
+ sr-hand-detector = self.callPackage ./sr-hand-detector {};
 
  srdfdom = self.callPackage ./srdfdom {};
 
@@ -2881,6 +2897,8 @@ self: super: {
  warehouse-ros = self.callPackage ./warehouse-ros {};
 
  wave-front-planner = self.callPackage ./wave-front-planner {};
+
+ web-video-server = self.callPackage ./web-video-server {};
 
  webots-ros = self.callPackage ./webots-ros {};
 

@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, exotica-core, pinocchio, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, clang, exotica-core, pinocchio, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-exotica-pinocchio-dynamics-solver";
-  version = "6.1.1-r1";
+  version = "6.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_pinocchio_dynamics_solver/6.1.1-1.tar.gz";
-    name = "6.1.1-1.tar.gz";
-    sha256 = "6f34d0014013026de5d84d11fc1e5d48c3131c3edcfaa460887a1fd5ba5e4d33";
+    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_pinocchio_dynamics_solver/6.2.0-1.tar.gz";
+    name = "6.2.0-1.tar.gz";
+    sha256 = "f4d67d2e53282319f64a1cafb9d9077180a7dec2c5e5b2dac253ff0b922456aa";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ exotica-core pinocchio roscpp ];
+  propagatedBuildInputs = [ clang exotica-core pinocchio roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, diagnostic-msgs, diagnostic-updater, eigen, eigen-conversions, geographic-msgs, geographiclib, geometry-msgs, libyamlcpp, message-filters, message-generation, message-runtime, nav-msgs, nodelet, pythonPackages, rosbag, roscpp, roslint, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-robot-localization";
-  version = "2.6.10-r1";
+  version = "2.6.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/cra-ros-pkg/robot_localization-release/archive/release/melodic/robot_localization/2.6.10-1.tar.gz";
-    name = "2.6.10-1.tar.gz";
-    sha256 = "6c29f8412e50f60f391ff48c25e591363661ee99456f70383896617c990c32d5";
+    url = "https://github.com/cra-ros-pkg/robot_localization-release/archive/release/melodic/robot_localization/2.6.11-1.tar.gz";
+    name = "2.6.11-1.tar.gz";
+    sha256 = "460ae8491dd7487f761ebb69e2bc052d836502abcf682f9174b28c6493828693";
   };
 
   buildType = "catkin";
