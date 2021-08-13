@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, performance-test-fixture, rcl, rcpputils, rosidl-default-generators, rosidl-default-runtime, statistics-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-libstatistics-collector";
-  version = "1.1.0-r3";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libstatistics_collector-release/archive/release/galactic/libstatistics_collector/1.1.0-3.tar.gz";
-    name = "1.1.0-3.tar.gz";
-    sha256 = "dcc144c88c9e8749840a888cc14333b517f7cfc34ee2c5a1f10f58d01ab942be";
+    url = "https://github.com/ros2-gbp/libstatistics_collector-release/archive/release/galactic/libstatistics_collector/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "6284d61d302e63e118c53ca206be56a742b4488ae6e0a8d3c868013d94ae9412";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cartesian-control-msgs, catkin, joint-trajectory-controller, roscpp, rospy, rosunit, tf2-eigen }:
 buildRosPackage {
   pname = "ros-melodic-cartesian-trajectory-interpolation";
-  version = "0.1.3-r1";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/melodic/cartesian_trajectory_interpolation/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "106dcf4af4f487b26db8189c1e2b8b9bb8cbb00d33ac9cb505095945c901a9f6";
+    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/melodic/cartesian_trajectory_interpolation/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "f8b6831909f4f9bde2ddf08f3d42ae030fd18cc4c0a27b279dfe22a60a6daffc";
   };
 
   buildType = "catkin";

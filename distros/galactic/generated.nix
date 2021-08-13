@@ -248,8 +248,6 @@ self: super: {
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
- embree-vendor = self.callPackage ./embree-vendor {};
-
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-cbg-executor = self.callPackage ./examples-rclcpp-cbg-executor {};
@@ -331,6 +329,8 @@ self: super: {
  geometry2 = self.callPackage ./geometry2 {};
 
  geometry-msgs = self.callPackage ./geometry-msgs {};
+
+ geometry-tutorials = self.callPackage ./geometry-tutorials {};
 
  gmock-vendor = self.callPackage ./gmock-vendor {};
 
@@ -608,6 +608,8 @@ self: super: {
 
  nodl-python = self.callPackage ./nodl-python {};
 
+ nodl-to-policy = self.callPackage ./nodl-to-policy {};
+
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
@@ -673,6 +675,8 @@ self: super: {
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
+
+ picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
 
  plansys2-bringup = self.callPackage ./plansys2-bringup {};
 
@@ -932,6 +936,8 @@ self: super: {
 
  ros-workspace = self.callPackage ./ros-workspace {};
 
+ rosapi = self.callPackage ./rosapi {};
+
  rosbag2 = self.callPackage ./rosbag2 {};
 
  rosbag2-bag-v2-plugins = self.callPackage ./rosbag2-bag-v2-plugins {};
@@ -957,6 +963,14 @@ self: super: {
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
 
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
+
+ rosbridge-library = self.callPackage ./rosbridge-library {};
+
+ rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
+
+ rosbridge-server = self.callPackage ./rosbridge-server {};
+
+ rosbridge-suite = self.callPackage ./rosbridge-suite {};
 
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
 
@@ -1059,6 +1073,8 @@ self: super: {
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
 
  rttest = self.callPackage ./rttest {};
+
+ ruckig = self.callPackage ./ruckig {};
 
  run-move-group = self.callPackage ./run-move-group {};
 
@@ -1205,6 +1221,10 @@ self: super: {
  tracetools-test = self.callPackage ./tracetools-test {};
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
+
+ turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
+
+ turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
 
  turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
