@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pcl-ros, quanergy-client, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-quanergy-client-ros";
-  version = "4.0.0-r1";
+  version = "4.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/QuanergySystems/quanergy_client_ros-release/archive/release/noetic/quanergy_client_ros/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "bb1bbcd771601402b9bc57f6f0032561ef127d45c4e6424a91b483d54c3c93a7";
+    url = "https://github.com/QuanergySystems/quanergy_client_ros-release/archive/release/noetic/quanergy_client_ros/4.0.0-2.tar.gz";
+    name = "4.0.0-2.tar.gz";
+    sha256 = "737d653907cd30df6587b0d844d82a1af35b6bbb843474b2dee9ce429cd3dd43";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, cartesian-interface, cartesian-trajectory-interpolation, catkin, control-msgs, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-state-controller, joint-trajectory-controller, kdl-parser, pluginlib, robot-state-publisher, ros-control-boilerplate, roscpp, rospy, rostest, speed-scaling-interface, trajectory-msgs, xacro }:
 buildRosPackage {
   pname = "ros-melodic-cartesian-trajectory-controller";
-  version = "0.1.3-r1";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/melodic/cartesian_trajectory_controller/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "c46a01abaeb00170a359eb7a8a7068edb8983f88385c35d0437ba7cc64059bdc";
+    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/melodic/cartesian_trajectory_controller/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "f7341c2494a83b7152a8aa0d9d95134091012c2b80b0598ed39b0f767070d685";
   };
 
   buildType = "catkin";

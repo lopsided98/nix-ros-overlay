@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-noetic-slider-publisher";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/oKermorgant/slider_publisher-release/archive/release/noetic/slider_publisher/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "82a79a0a9cac662cf81c61dd3efffacee06847054bf5c5f3c0de5e9f59be9dbe";
+    url = "https://github.com/oKermorgant/slider_publisher-release/archive/release/noetic/slider_publisher/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "c625745bc79b0ccb639536e058b81b0b04d4df513d1b1f0aea66cd6dc4621935";
   };
 
   buildType = "catkin";

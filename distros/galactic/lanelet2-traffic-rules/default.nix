@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, gtest, lanelet2-core, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-galactic-lanelet2-traffic-rules";
-  version = "1.1.1-r1";
+  version = "1.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/galactic/lanelet2_traffic_rules/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "58952f01ce2ee3d971e77f278eff800fb1c79e89e81a3942f1c6e3f3779e8cfc";
+    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/galactic/lanelet2_traffic_rules/1.1.1-2.tar.gz";
+    name = "1.1.1-2.tar.gz";
+    sha256 = "8ad0c5f333f79f1b842a5e4f5c9c4cca5e08b8c7480505f7988f435c28ea4e7f";
   };
 
   buildType = "catkin";

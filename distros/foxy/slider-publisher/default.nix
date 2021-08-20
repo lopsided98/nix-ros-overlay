@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-foxy-slider-publisher";
-  version = "1.0.2-r2";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/oKermorgant/slider_publisher-release/archive/release/foxy/slider_publisher/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "32cd644d8107e3573bc68eaa103ce05de211dab7532f9350b77fbfe9e0465bd8";
+    url = "https://github.com/oKermorgant/slider_publisher-release/archive/release/foxy/slider_publisher/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "01b7914b50f8a8efbe30490bf31a87432db54760d97976b56f860061dfd34c8d";
   };
 
   buildType = "ament_python";

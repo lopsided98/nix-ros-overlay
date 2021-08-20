@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, pythonPackages, rclpy, webots-ros2-core }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-tesla";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_tesla/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "ea2c7a201cb2ac8fd573635af2cc6be7cf3abd45e11c5960bb50ac174e16d38f";
+    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_tesla/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "6873421bd0e2e3a36e8e94e45e55d6a374523476ff25ae61e6a440ffc7816ccc";
   };
 
   buildType = "ament_python";
