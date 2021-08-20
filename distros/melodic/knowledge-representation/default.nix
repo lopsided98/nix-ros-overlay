@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, libpqxx, postgresql, python, pythonPackages, roslint, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-knowledge-representation";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/utexas-bwi-gbp/knowledge_representation-release/archive/release/melodic/knowledge_representation/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "37052ecadaa9888e16018694a23ba7e0dc36a96d6273097d3b6005fb27df2a90";
+    url = "https://github.com/utexas-bwi-gbp/knowledge_representation-release/archive/release/melodic/knowledge_representation/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "9d78c86fd031e08f16d5c2592b9f6d24a4d91f97a8c894752727c37ea292820d";
   };
 
   buildType = "catkin";

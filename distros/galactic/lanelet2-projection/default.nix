@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, geographiclib, gtest, lanelet2-io, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-galactic-lanelet2-projection";
-  version = "1.1.1-r1";
+  version = "1.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/galactic/lanelet2_projection/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "cd528b555940160b5aac2bfeaff8038e54c04c28df03de6d8d46c74189a6f4e2";
+    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/galactic/lanelet2_projection/1.1.1-2.tar.gz";
+    name = "1.1.1-2.tar.gz";
+    sha256 = "293354a8b0c072c64b55cc333417e3f49b111262cfa69c055eede98038bc537e";
   };
 
   buildType = "catkin";

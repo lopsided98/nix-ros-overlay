@@ -3694,6 +3694,8 @@ self: super: {
 
  rtmros-nextage = self.callPackage ./rtmros-nextage {};
 
+ ruckig = self.callPackage ./ruckig {};
+
  rviz = self.callPackage ./rviz {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};

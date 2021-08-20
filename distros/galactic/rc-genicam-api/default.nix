@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libpng, libusb1 }:
 buildRosPackage {
   pname = "ros-galactic-rc-genicam-api";
-  version = "2.5.0-r2";
+  version = "2.5.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/galactic/rc_genicam_api/2.5.0-2.tar.gz";
-    name = "2.5.0-2.tar.gz";
-    sha256 = "ae48fa7ca9df46f6cb89c342978c5b0462cc11cd66058195ecbcd010b9cbeb1f";
+    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/galactic/rc_genicam_api/2.5.6-1.tar.gz";
+    name = "2.5.6-1.tar.gz";
+    sha256 = "51fc487557e1cd25ca9e2248e3c99e3a280335289857db11192d28f586519aa1";
   };
 
   buildType = "cmake";

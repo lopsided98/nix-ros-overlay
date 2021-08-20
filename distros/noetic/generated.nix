@@ -774,6 +774,12 @@ self: super: {
 
  ffha = self.callPackage ./ffha {};
 
+ fiducial-msgs = self.callPackage ./fiducial-msgs {};
+
+ fiducial-slam = self.callPackage ./fiducial-slam {};
+
+ fiducials = self.callPackage ./fiducials {};
+
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
@@ -1125,6 +1131,8 @@ self: super: {
  interval-intersection = self.callPackage ./interval-intersection {};
 
  ipa-3d-fov-visualization = self.callPackage ./ipa-3d-fov-visualization {};
+
+ ira-laser-tools = self.callPackage ./ira-laser-tools {};
 
  iris-lama = self.callPackage ./iris-lama {};
 
@@ -1683,6 +1691,8 @@ self: super: {
  octovis = self.callPackage ./octovis {};
 
  odva-ethernetip = self.callPackage ./odva-ethernetip {};
+
+ oled-display-node = self.callPackage ./oled-display-node {};
 
  ompl = self.callPackage ./ompl {};
 
@@ -2412,6 +2422,8 @@ self: super: {
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
+ ruckig = self.callPackage ./ruckig {};
+
  rviz = self.callPackage ./rviz {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
@@ -2761,6 +2773,8 @@ self: super: {
  twist-mux-msgs = self.callPackage ./twist-mux-msgs {};
 
  twist-recovery = self.callPackage ./twist-recovery {};
+
+ ubiquity-motor = self.callPackage ./ubiquity-motor {};
 
  ublox = self.callPackage ./ublox {};
 

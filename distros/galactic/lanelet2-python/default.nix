@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, boost, gtest, lanelet2-core, lanelet2-io, lanelet2-projection, lanelet2-routing, lanelet2-traffic-rules, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-galactic-lanelet2-python";
-  version = "1.1.1-r1";
+  version = "1.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/galactic/lanelet2_python/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "12adb6188fed913af61e6f1fc95ab2b58db3c467f3388eac7584c356a4b68cdc";
+    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/galactic/lanelet2_python/1.1.1-2.tar.gz";
+    name = "1.1.1-2.tar.gz";
+    sha256 = "75e6c390b165fd5389383c59ed5e91ea62fd8a06d71627a49bd980a721311e11";
   };
 
   buildType = "catkin";

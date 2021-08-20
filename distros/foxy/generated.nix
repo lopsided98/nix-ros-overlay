@@ -372,6 +372,10 @@ self: super: {
 
  embree-vendor = self.callPackage ./embree-vendor {};
 
+ espeak-interfaces = self.callPackage ./espeak-interfaces {};
+
+ espeak-ros = self.callPackage ./espeak-ros {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-minimal-action-client = self.callPackage ./examples-rclcpp-minimal-action-client {};
@@ -455,6 +459,8 @@ self: super: {
  geometry2 = self.callPackage ./geometry2 {};
 
  geometry-msgs = self.callPackage ./geometry-msgs {};
+
+ geometry-tutorials = self.callPackage ./geometry-tutorials {};
 
  gmock-vendor = self.callPackage ./gmock-vendor {};
 
@@ -844,6 +850,8 @@ self: super: {
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
+ picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
+
  plansys2-bringup = self.callPackage ./plansys2-bringup {};
 
  plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
@@ -1124,6 +1132,8 @@ self: super: {
 
  ros-workspace = self.callPackage ./ros-workspace {};
 
+ rosapi = self.callPackage ./rosapi {};
+
  rosauth = self.callPackage ./rosauth {};
 
  rosbag2 = self.callPackage ./rosbag2 {};
@@ -1145,6 +1155,14 @@ self: super: {
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
 
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
+
+ rosbridge-library = self.callPackage ./rosbridge-library {};
+
+ rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
+
+ rosbridge-server = self.callPackage ./rosbridge-server {};
+
+ rosbridge-suite = self.callPackage ./rosbridge-suite {};
 
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
 
@@ -1264,6 +1282,8 @@ self: super: {
 
  rttest = self.callPackage ./rttest {};
 
+ ruckig = self.callPackage ./ruckig {};
+
  run-move-group = self.callPackage ./run-move-group {};
 
  run-moveit-cpp = self.callPackage ./run-moveit-cpp {};
@@ -1321,6 +1341,8 @@ self: super: {
  smac-planner = self.callPackage ./smac-planner {};
 
  smclib = self.callPackage ./smclib {};
+
+ soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
 
  sophus = self.callPackage ./sophus {};
 
@@ -1448,6 +1470,10 @@ self: super: {
 
  transmission-interface = self.callPackage ./transmission-interface {};
 
+ turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
+
+ turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
+
  turtlebot3 = self.callPackage ./turtlebot3 {};
 
  turtlebot3-bringup = self.callPackage ./turtlebot3-bringup {};
@@ -1561,6 +1587,8 @@ self: super: {
  webots-ros2-msgs = self.callPackage ./webots-ros2-msgs {};
 
  webots-ros2-tesla = self.callPackage ./webots-ros2-tesla {};
+
+ webots-ros2-tests = self.callPackage ./webots-ros2-tests {};
 
  webots-ros2-tiago = self.callPackage ./webots-ros2-tiago {};
 

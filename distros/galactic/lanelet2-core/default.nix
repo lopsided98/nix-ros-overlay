@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, boost, eigen, gtest, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-galactic-lanelet2-core";
-  version = "1.1.1-r1";
+  version = "1.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/galactic/lanelet2_core/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "b0a84915cf69ef9b1886a93a83134713406811826944225f9350154fbb812ac2";
+    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/galactic/lanelet2_core/1.1.1-2.tar.gz";
+    name = "1.1.1-2.tar.gz";
+    sha256 = "3b30a139e00cbc0aa372af61f2d7221d1e57b8337a142afa8d22c94893e4ce9d";
   };
 
   buildType = "catkin";
