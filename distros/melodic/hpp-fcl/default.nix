@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ipab-slmc/hpp-fcl_catkin-release/archive/release/melodic/hpp-fcl/1.0.1-2.tar.gz";
     name = "1.0.1-2.tar.gz";
-    sha256 = "f6c9669e0b2cf9cbc04bfc89014ae8a82b0895e65eec29d65ca557ca6d375a41";
+    sha256 = "2fdf0400d19ccdc82b6788b4715d5adf11af7e3159f8cd87f5a401ddd3fb53f5";
   };
 
   buildType = "catkin";

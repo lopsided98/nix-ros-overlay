@@ -1284,6 +1284,16 @@ self: super: {
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
 
+ velodyne = self.callPackage ./velodyne {};
+
+ velodyne-driver = self.callPackage ./velodyne-driver {};
+
+ velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
+
+ velodyne-msgs = self.callPackage ./velodyne-msgs {};
+
+ velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
  vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
