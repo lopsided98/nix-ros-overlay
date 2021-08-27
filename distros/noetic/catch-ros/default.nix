@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-catch-ros";
-  version = "0.4.0-r1";
+  version = "0.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/AIS-Bonn/catch_ros-release/archive/release/noetic/catch_ros/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "90889dd3dc2c5b6d0065ee5db36dc7d6540bf14e7d3b219db5a34824155d12af";
+    url = "https://github.com/AIS-Bonn/catch_ros-release/archive/release/noetic/catch_ros/0.5.0-2.tar.gz";
+    name = "0.5.0-2.tar.gz";
+    sha256 = "27b522f2d7b6237b97deae26ce18b14d3e1d65af14ba1ff1fd3fab1822f657e5";
   };
 
   buildType = "catkin";

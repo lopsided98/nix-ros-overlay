@@ -818,6 +818,8 @@ self: super: {
 
  flexbe-widget = self.callPackage ./flexbe-widget {};
 
+ floam = self.callPackage ./floam {};
+
  fmi-adapter = self.callPackage ./fmi-adapter {};
 
  fmi-adapter-examples = self.callPackage ./fmi-adapter-examples {};
@@ -887,6 +889,8 @@ self: super: {
  gazebo-video-monitor-msgs = self.callPackage ./gazebo-video-monitor-msgs {};
 
  gazebo-video-monitor-plugins = self.callPackage ./gazebo-video-monitor-plugins {};
+
+ gazebo-video-monitor-utils = self.callPackage ./gazebo-video-monitor-utils {};
 
  gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
 
@@ -2073,6 +2077,8 @@ self: super: {
  resource-retriever = self.callPackage ./resource-retriever {};
 
  rgbd-launch = self.callPackage ./rgbd-launch {};
+
+ rm-controllers = self.callPackage ./rm-controllers {};
 
  robot = self.callPackage ./robot {};
 

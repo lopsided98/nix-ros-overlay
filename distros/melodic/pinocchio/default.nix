@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/melodic/pinocchio/2.6.3-1.tar.gz";
     name = "2.6.3-1.tar.gz";
-    sha256 = "a2a4f78cec9aebbb7284b51ed82afcabe1e98b082cbfc97eb4e2a4ce56cff404";
+    sha256 = "1ba8c67025587c618522040b7cb3e881185a89cb42a5578774f5a8ac304e43dd";
   };
 
   buildType = "cmake";

@@ -1108,6 +1108,8 @@ self: super: {
 
  flir-ptu-viz = self.callPackage ./flir-ptu-viz {};
 
+ floam = self.callPackage ./floam {};
+
  fmi-adapter = self.callPackage ./fmi-adapter {};
 
  fmi-adapter-examples = self.callPackage ./fmi-adapter-examples {};
