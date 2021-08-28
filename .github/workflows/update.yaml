@@ -25,14 +25,7 @@ jobs:
           # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#about-workflow-events
           SUPERFLORE_GITHUB_TOKEN: ${{ secrets.SUPERFLORE_GITHUB_TOKEN }}
           ROS_OS_OVERRIDE: nixos
-          ROSDEP_SOURCE_PATH: rosdep-sources
         run: |
-          mkdir -p "$ROSDEP_SOURCE_PATH"
-          cat << EOF > "$ROSDEP_SOURCE_PATH/20-sources.list"
-          yaml https://raw.githubusercontent.com/lopsided98/rosdistro/nixos-support/rosdep/base.yaml
-          yaml https://raw.githubusercontent.com/lopsided98/rosdistro/nixos-support/rosdep/python.yaml
-          yaml https://raw.githubusercontent.com/lopsided98/rosdistro/nixos-support/rosdep/ruby.yaml
-          EOF
           rosdep update
           git config --local user.email "superflore@github.com"
           git config --local user.name "Superflore"
