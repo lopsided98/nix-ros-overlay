@@ -45,6 +45,19 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  pcl-conversions = rosSuper.pcl-conversions.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix build with PCL >=1.12
+      (self.fetchpatch {
+        url = "https://github.com/ros-perception/perception_pcl/commit/6900f7cf650e6c0df2aef45e0011833905b0ba9e.patch";
+        sha256 = "1s011hrk656a8aziwa1klk20bwyhpvqzh0qcaqv25nnxc946km5a";
+        stripLen = 1;
+      })
+    ];
+  });
+
   pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -58,6 +71,22 @@ rosSelf: rosSuper: with rosSelf.lib; {
       (self.fetchpatch {
         url = "https://github.com/ros-perception/perception_pcl/commit/ba0792cdf378f6faf0e12f517c80bd0dd5405d02.patch";
         sha256 = "1b6vdipj6g0kah74fjkq598b0fr7z8857w9iw1hcv5hinwdypryk";
+        stripLen = 1;
+      })
+      # Fix build with PCL >=1.12
+      (self.fetchpatch {
+        url = "https://github.com/ros-perception/perception_pcl/commit/25a073a3509e068734ba0edf1e991d1c01c04e68.patch";
+        sha256 = "0ylh7zcbs16q830bfs91mmzzdx7w1zxjr14n0l34i73swvhfikqi";
+        stripLen = 1;
+      })
+      (self.fetchpatch {
+        url = "https://github.com/ros-perception/perception_pcl/commit/1d1e1a05d97cdbf93e67c153f1100fc14c26e31c.patch";
+        sha256 = "1pk365g33fpns3h3v0ldjpfv1530ppg1q3pgv4z8z9pi2n4h2rmm";
+        stripLen = 1;
+      })
+      (self.fetchpatch {
+        url = "https://github.com/ros-perception/perception_pcl/commit/1887ba26ff71db41655691e5ad4d83c7baaed3b9.patch";
+        sha256 = "06snxln3q1ywydcx2fq6vhm8fi3wkl8kc7cz3qxim750h35nmvs4";
         stripLen = 1;
       })
     ];
