@@ -12,6 +12,7 @@ buildPythonPackage rec {
   propagatedBuildInputs = [ catkin-pkg setuptools osrf-pycommon pyyaml ];
 
   doCheck = false;
+  pythonImportsCheck = ["catkin_tools" ];
 
   meta = with lib; {
     description = "Command line tools for working with catkin";
