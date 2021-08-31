@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, fetchpatch, python3Packages, osrf-pycommon, pyyaml}:
+{ lib, buildPythonPackage, fetchPypi, fetchpatch, setuptools, catkin-pkg, osrf-pycommon, pyyaml}:
 
 buildPythonPackage rec {
   pname = "catkin_tools";
@@ -9,7 +9,7 @@ buildPythonPackage rec {
     sha256 = "17r6sz7jdq78mab8n5ihcf991f8lwykdjcddlgsz7c1ab7j4dkns";
   };
 
-  propagatedBuildInputs = [ python3Packages.catkin-pkg python3Packages.setuptools osrf-pycommon pyyaml ];
+  propagatedBuildInputs = [ catkin-pkg setuptools osrf-pycommon pyyaml ];
 
   doCheck = false;
 
