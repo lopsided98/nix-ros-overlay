@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, fetchpatch }:
+{ lib, buildPythonPackage, fetchPypi, fetchpatch, python, nose}:
 
 buildPythonPackage rec {
   pname = "osrf_pycommon";
@@ -9,7 +9,8 @@ buildPythonPackage rec {
     sha256 = "01qi6m7frc6g2pyy2wmy29c3xdpbgxmwn11ax48qy3fav4mq5ky3";
   };
 
-  doCheck = false;
+  buildInputs = [ nose ];
+  checkPhase = "${python.interpreter} ./setup.py nosetests";
 
   meta = with lib; {
     description = "Commonly needed Python modules, used by Python software developed at OSRF";
