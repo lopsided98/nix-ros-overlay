@@ -1,4 +1,5 @@
-{ lib, buildPythonPackage, fetchPypi, fetchpatch, setuptools, catkin-pkg, osrf-pycommon, pyyaml}:
+{ lib, buildPythonPackage, fetchPypi, setuptools, catkin-pkg, osrf-pycommon
+, pyyaml }:
 
 buildPythonPackage rec {
   pname = "catkin_tools";
@@ -9,10 +10,11 @@ buildPythonPackage rec {
     sha256 = "17r6sz7jdq78mab8n5ihcf991f8lwykdjcddlgsz7c1ab7j4dkns";
   };
 
-  propagatedBuildInputs = [ catkin-pkg setuptools osrf-pycommon pyyaml ];
+  propagatedBuildInputs = [ setuptools catkin-pkg osrf-pycommon pyyaml ];
 
+  # No tests in PyPi tarball
   doCheck = false;
-  pythonImportsCheck = ["catkin_tools" ];
+  pythonImportsCheck = [ "catkin_tools" ];
 
   meta = with lib; {
     description = "Command line tools for working with catkin";
