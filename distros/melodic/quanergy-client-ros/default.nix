@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pcl-ros, quanergy-client, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-quanergy-client-ros";
-  version = "4.0.0-r2";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/QuanergySystems/quanergy_client_ros-release/archive/release/melodic/quanergy_client_ros/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "5553613a8d80533a3f3ee1fa87c85b428ce55e6b683dd58154792cc0d15b188a";
+    url = "https://github.com/QuanergySystems/quanergy_client_ros-release/archive/release/melodic/quanergy_client_ros/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "e93e0ae57bbbc6819454155c86e139d73706ea44e0f1ef9af6cb39416fe8e9b4";
   };
 
   buildType = "catkin";

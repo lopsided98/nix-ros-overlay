@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, espeak, espeak-interfaces, pythonPackages }:
 buildRosPackage {
   pname = "ros-foxy-espeak-ros";
-  version = "0.1.0-r6";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/espeak-ros2/espeak-ros2-release/-/archive/release/foxy/espeak_ros/0.1.0-6/espeak-ros2-release-release-foxy-espeak_ros-0.1.0-6.tar.gz";
-    name = "espeak-ros2-release-release-foxy-espeak_ros-0.1.0-6.tar.gz";
-    sha256 = "9be64de8d00cc217a13aaa3eceab87f09ef4bbfe23b2356540720f5d0df84ced";
+    url = "https://gitlab.com/espeak-ros2/espeak-ros2-release/-/archive/release/foxy/espeak_ros/1.0.0-1/espeak-ros2-release-release-foxy-espeak_ros-1.0.0-1.tar.gz";
+    name = "espeak-ros2-release-release-foxy-espeak_ros-1.0.0-1.tar.gz";
+    sha256 = "bbefb7e80bc3dbdfbf467050cabd658a12ca4a8216fb9122e2785e68960a8e6e";
   };
 
   buildType = "ament_python";

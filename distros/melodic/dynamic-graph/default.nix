@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigen, git, graphviz }:
 buildRosPackage {
   pname = "ros-melodic-dynamic-graph";
-  version = "4.3.4-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/dynamic-graph-ros-release/archive/release/melodic/dynamic-graph/4.3.4-1.tar.gz";
-    name = "4.3.4-1.tar.gz";
-    sha256 = "621521f87a4002ffae23a5a7555d17d637b68b77c5dd1d5cdf4d181b8f71e720";
+    url = "https://github.com/stack-of-tasks/dynamic-graph-ros-release/archive/release/melodic/dynamic-graph/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "595d95e92da27ce03d6c82999fb73b40f1fd8f50cdd72a4f7af5d6261a8a4ae9";
   };
 
   buildType = "cmake";
