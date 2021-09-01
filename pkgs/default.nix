@@ -9,6 +9,8 @@ self: super: with self.lib; let
 
       catkin-pkg = pySelf.callPackage ./catkin-pkg { };
 
+      catkin-tools = pySelf.callPackage ./catkin-tools { };
+
       colcon-cmake = pySelf.callPackage ./colcon/cmake.nix { };
 
       colcon-core = pySelf.callPackage ./colcon/core.nix { };
@@ -30,6 +32,8 @@ self: super: with self.lib; let
       colcon-test-result = pySelf.callPackage ./colcon/test-result.nix { };
 
       empy = pySelf.callPackage ./empy { };
+
+      osrf-pycommon = pySelf.callPackage ./osrf-pycommon {};
 
       rosdep = pySelf.callPackage ./rosdep { };
 
