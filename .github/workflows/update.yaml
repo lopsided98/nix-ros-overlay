@@ -26,6 +26,7 @@ jobs:
           SUPERFLORE_GITHUB_TOKEN: ${{ secrets.SUPERFLORE_GITHUB_TOKEN }}
           ROS_OS_OVERRIDE: nixos
         run: |
+          sudo -E rosdep init
           rosdep update
           git config --local user.email "superflore@github.com"
           git config --local user.name "Superflore"
