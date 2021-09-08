@@ -24,6 +24,8 @@ self: super: {
 
  ament-cmake-auto = self.callPackage ./ament-cmake-auto {};
 
+ ament-cmake-catch2 = self.callPackage ./ament-cmake-catch2 {};
+
  ament-cmake-clang-format = self.callPackage ./ament-cmake-clang-format {};
 
  ament-cmake-clang-tidy = self.callPackage ./ament-cmake-clang-tidy {};
@@ -138,6 +140,8 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ asio-cmake-module = self.callPackage ./asio-cmake-module {};
+
  astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
 
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
@@ -145,6 +149,8 @@ self: super: {
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
+
+ aws-robomaker-small-warehouse-world = self.callPackage ./aws-robomaker-small-warehouse-world {};
 
  backward-ros = self.callPackage ./backward-ros {};
 
@@ -488,6 +494,8 @@ self: super: {
 
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
+ ifm3d-core = self.callPackage ./ifm3d-core {};
+
  image-common = self.callPackage ./image-common {};
 
  image-geometry = self.callPackage ./image-geometry {};
@@ -513,6 +521,8 @@ self: super: {
  interactive-markers = self.callPackage ./interactive-markers {};
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
+
+ io-context = self.callPackage ./io-context {};
 
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
 
@@ -547,6 +557,8 @@ self: super: {
  lanelet2-core = self.callPackage ./lanelet2-core {};
 
  lanelet2-examples = self.callPackage ./lanelet2-examples {};
+
+ lanelet2-io = self.callPackage ./lanelet2-io {};
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
@@ -642,7 +654,11 @@ self: super: {
 
  mavros-msgs = self.callPackage ./mavros-msgs {};
 
+ menge-vendor = self.callPackage ./menge-vendor {};
+
  message-filters = self.callPackage ./message-filters {};
+
+ micro-ros-msgs = self.callPackage ./micro-ros-msgs {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
@@ -1028,6 +1044,30 @@ self: super: {
 
  resource-retriever = self.callPackage ./resource-retriever {};
 
+ rmf-building-map-msgs = self.callPackage ./rmf-building-map-msgs {};
+
+ rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
+
+ rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
+
+ rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
+
+ rmf-door-msgs = self.callPackage ./rmf-door-msgs {};
+
+ rmf-fleet-msgs = self.callPackage ./rmf-fleet-msgs {};
+
+ rmf-ingestor-msgs = self.callPackage ./rmf-ingestor-msgs {};
+
+ rmf-lift-msgs = self.callPackage ./rmf-lift-msgs {};
+
+ rmf-task-msgs = self.callPackage ./rmf-task-msgs {};
+
+ rmf-traffic-msgs = self.callPackage ./rmf-traffic-msgs {};
+
+ rmf-visualization-msgs = self.callPackage ./rmf-visualization-msgs {};
+
+ rmf-workcell-msgs = self.callPackage ./rmf-workcell-msgs {};
+
  rmw = self.callPackage ./rmw {};
 
  rmw-connext-cpp = self.callPackage ./rmw-connext-cpp {};
@@ -1366,6 +1406,10 @@ self: super: {
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
 
+ stubborn-buddies = self.callPackage ./stubborn-buddies {};
+
+ stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
+
  swri-console-util = self.callPackage ./swri-console-util {};
 
  swri-dbw-interface = self.callPackage ./swri-dbw-interface {};
@@ -1417,8 +1461,6 @@ self: super: {
  test-launch-system-modes = self.callPackage ./test-launch-system-modes {};
 
  test-msgs = self.callPackage ./test-msgs {};
-
- test-osrf-testing-tools-cpp = self.callPackage ./test-osrf-testing-tools-cpp {};
 
  test-rmw-implementation = self.callPackage ./test-rmw-implementation {};
 

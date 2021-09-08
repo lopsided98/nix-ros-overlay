@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hardware-interface, joint-limits-interface, qb-device-msgs, qb-device-srvs, roscpp, rostest, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-melodic-qb-device-hardware-interface";
-  version = "2.0.1";
+  version = "2.2.1-r3";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_hardware_interface/2.0.1-0.tar.gz";
-    name = "2.0.1-0.tar.gz";
-    sha256 = "16e0d28b4e8b145ae272049cdf232830fd7e6ffc50145bcb04a1570fa1e0f791";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_hardware_interface/2.2.1-3.tar.gz";
+    name = "2.2.1-3.tar.gz";
+    sha256 = "09aeea2c08ce2007eea90577857ddaa0a4173981fb5d84de4203a8feebccd470";
   };
 
   buildType = "catkin";

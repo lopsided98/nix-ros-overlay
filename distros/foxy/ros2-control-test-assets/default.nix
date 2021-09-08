@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-foxy-ros2-control-test-assets";
-  version = "0.7.1-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/ros2_control_test_assets/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "35e10772f1d182091ada1902e717e7f60111c8d19164b71a5c13942f5f984673";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/ros2_control_test_assets/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "25d5f1ab4bd9304e06a0867e18a35ef09aee185b96fd342b76e7427ca09e504a";
   };
 
   buildType = "ament_cmake";

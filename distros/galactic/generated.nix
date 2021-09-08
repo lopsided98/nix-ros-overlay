@@ -142,6 +142,14 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ asio-cmake-module = self.callPackage ./asio-cmake-module {};
+
+ automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
+
+ automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
+
+ automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
+
  autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
 
  backward-ros = self.callPackage ./backward-ros {};
@@ -356,6 +364,8 @@ self: super: {
 
  iceoryx-utils = self.callPackage ./iceoryx-utils {};
 
+ ifm3d-core = self.callPackage ./ifm3d-core {};
+
  image-common = self.callPackage ./image-common {};
 
  image-geometry = self.callPackage ./image-geometry {};
@@ -380,6 +390,8 @@ self: super: {
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
+ io-context = self.callPackage ./io-context {};
+
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
 
  joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
@@ -399,6 +411,8 @@ self: super: {
  lanelet2-core = self.callPackage ./lanelet2-core {};
 
  lanelet2-examples = self.callPackage ./lanelet2-examples {};
+
+ lanelet2-io = self.callPackage ./lanelet2-io {};
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
@@ -481,6 +495,8 @@ self: super: {
  menge-vendor = self.callPackage ./menge-vendor {};
 
  message-filters = self.callPackage ./message-filters {};
+
+ micro-ros-msgs = self.callPackage ./micro-ros-msgs {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
@@ -824,13 +840,21 @@ self: super: {
 
  rmf-door-msgs = self.callPackage ./rmf-door-msgs {};
 
+ rmf-fleet-adapter = self.callPackage ./rmf-fleet-adapter {};
+
+ rmf-fleet-adapter-python = self.callPackage ./rmf-fleet-adapter-python {};
+
  rmf-fleet-msgs = self.callPackage ./rmf-fleet-msgs {};
 
  rmf-ingestor-msgs = self.callPackage ./rmf-ingestor-msgs {};
 
  rmf-lift-msgs = self.callPackage ./rmf-lift-msgs {};
 
+ rmf-task = self.callPackage ./rmf-task {};
+
  rmf-task-msgs = self.callPackage ./rmf-task-msgs {};
+
+ rmf-task-ros2 = self.callPackage ./rmf-task-ros2 {};
 
  rmf-traffic = self.callPackage ./rmf-traffic {};
 
@@ -841,6 +865,8 @@ self: super: {
  rmf-traffic-editor-test-maps = self.callPackage ./rmf-traffic-editor-test-maps {};
 
  rmf-traffic-msgs = self.callPackage ./rmf-traffic-msgs {};
+
+ rmf-traffic-ros2 = self.callPackage ./rmf-traffic-ros2 {};
 
  rmf-utils = self.callPackage ./rmf-utils {};
 
@@ -1121,6 +1147,10 @@ self: super: {
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
+
+ smacc2 = self.callPackage ./smacc2 {};
+
+ smacc2-msgs = self.callPackage ./smacc2-msgs {};
 
  smclib = self.callPackage ./smclib {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, combined-robot-hw, controller-interface, franka-description, franka-msgs, gtest, hardware-interface, joint-limits-interface, libfranka, message-generation, pluginlib, roscpp, rostest, std-srvs, urdf }:
 buildRosPackage {
   pname = "ros-melodic-franka-hw";
-  version = "0.8.0-r1";
+  version = "0.8.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_hw/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "7b0688fc23757b0169ad5e90ff363cb67462b6ebc70d394a0ae8b42a5aabc52a";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_hw/0.8.1-2.tar.gz";
+    name = "0.8.1-2.tar.gz";
+    sha256 = "922e1bd73bcdebd7eff90484d228210b4c18b8a7921feaf0d392b94e09928c15";
   };
 
   buildType = "catkin";

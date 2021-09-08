@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-galactic-geometry-tutorials";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/galactic/geometry_tutorials/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "007f0ead432be1cb14ddd0ea64ecfc72629878f12ecdbda14566749d5b6366e5";
+    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/galactic/geometry_tutorials/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "5cefc15dadbb18e4ec2745610625d85fcbb228ff5b2a16cbc22c3d2259e33fc3";
   };
 
   buildType = "ament_cmake";

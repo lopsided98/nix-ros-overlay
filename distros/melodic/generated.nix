@@ -1464,6 +1464,8 @@ self: super: {
 
  ifm3d = self.callPackage ./ifm3d {};
 
+ ifm3d-core = self.callPackage ./ifm3d-core {};
+
  igvc-self-drive-description = self.callPackage ./igvc-self-drive-description {};
 
  igvc-self-drive-gazebo = self.callPackage ./igvc-self-drive-gazebo {};
@@ -1781,6 +1783,8 @@ self: super: {
  lanelet2-core = self.callPackage ./lanelet2-core {};
 
  lanelet2-examples = self.callPackage ./lanelet2-examples {};
+
+ lanelet2-io = self.callPackage ./lanelet2-io {};
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
@@ -2976,7 +2980,11 @@ self: super: {
 
  qb-chain-control = self.callPackage ./qb-chain-control {};
 
+ qb-chain-controllers = self.callPackage ./qb-chain-controllers {};
+
  qb-chain-description = self.callPackage ./qb-chain-description {};
+
+ qb-chain-msgs = self.callPackage ./qb-chain-msgs {};
 
  qb-device = self.callPackage ./qb-device {};
 
@@ -2987,6 +2995,8 @@ self: super: {
  qb-device-description = self.callPackage ./qb-device-description {};
 
  qb-device-driver = self.callPackage ./qb-device-driver {};
+
+ qb-device-gazebo = self.callPackage ./qb-device-gazebo {};
 
  qb-device-hardware-interface = self.callPackage ./qb-device-hardware-interface {};
 
@@ -3002,6 +3012,8 @@ self: super: {
 
  qb-hand-description = self.callPackage ./qb-hand-description {};
 
+ qb-hand-gazebo = self.callPackage ./qb-hand-gazebo {};
+
  qb-hand-hardware-interface = self.callPackage ./qb-hand-hardware-interface {};
 
  qb-move = self.callPackage ./qb-move {};
@@ -3009,6 +3021,8 @@ self: super: {
  qb-move-control = self.callPackage ./qb-move-control {};
 
  qb-move-description = self.callPackage ./qb-move-description {};
+
+ qb-move-gazebo = self.callPackage ./qb-move-gazebo {};
 
  qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
 
@@ -3699,6 +3713,8 @@ self: super: {
  ruckig = self.callPackage ./ruckig {};
 
  rviz = self.callPackage ./rviz {};
+
+ rviz-animated-view-controller = self.callPackage ./rviz-animated-view-controller {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 

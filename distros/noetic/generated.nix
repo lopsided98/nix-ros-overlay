@@ -1062,6 +1062,8 @@ self: super: {
 
  ifm3d = self.callPackage ./ifm3d {};
 
+ ifm3d-core = self.callPackage ./ifm3d-core {};
+
  image-cb-detector = self.callPackage ./image-cb-detector {};
 
  image-common = self.callPackage ./image-common {};
@@ -1259,6 +1261,8 @@ self: super: {
  lanelet2-core = self.callPackage ./lanelet2-core {};
 
  lanelet2-examples = self.callPackage ./lanelet2-examples {};
+
+ lanelet2-io = self.callPackage ./lanelet2-io {};
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
@@ -1458,6 +1462,12 @@ self: super: {
 
  microstrain-3dmgx2-imu = self.callPackage ./microstrain-3dmgx2-imu {};
 
+ microstrain-inertial-driver = self.callPackage ./microstrain-inertial-driver {};
+
+ microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
+
+ microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
+
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
  mir-actions = self.callPackage ./mir-actions {};
@@ -1581,6 +1591,8 @@ self: super: {
  mpc-local-planner-examples = self.callPackage ./mpc-local-planner-examples {};
 
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
+
+ mqtt-bridge = self.callPackage ./mqtt-bridge {};
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
@@ -2004,6 +2016,12 @@ self: super: {
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
 
+ qb-move = self.callPackage ./qb-move {};
+
+ qb-move-control = self.callPackage ./qb-move-control {};
+
+ qb-move-description = self.callPackage ./qb-move-description {};
+
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
@@ -2078,7 +2096,27 @@ self: super: {
 
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
+ rm-base = self.callPackage ./rm-base {};
+
+ rm-calibration-controllers = self.callPackage ./rm-calibration-controllers {};
+
+ rm-chassis-controllers = self.callPackage ./rm-chassis-controllers {};
+
+ rm-common = self.callPackage ./rm-common {};
+
+ rm-control = self.callPackage ./rm-control {};
+
  rm-controllers = self.callPackage ./rm-controllers {};
+
+ rm-description = self.callPackage ./rm-description {};
+
+ rm-gazebo = self.callPackage ./rm-gazebo {};
+
+ rm-gimbal-controllers = self.callPackage ./rm-gimbal-controllers {};
+
+ rm-msgs = self.callPackage ./rm-msgs {};
+
+ rm-shooter-controllers = self.callPackage ./rm-shooter-controllers {};
 
  robot = self.callPackage ./robot {};
 
@@ -2107,6 +2145,8 @@ self: super: {
  robot-navigation = self.callPackage ./robot-navigation {};
 
  robot-self-filter = self.callPackage ./robot-self-filter {};
+
+ robot-state-controller = self.callPackage ./robot-state-controller {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
@@ -2431,6 +2471,8 @@ self: super: {
  ruckig = self.callPackage ./ruckig {};
 
  rviz = self.callPackage ./rviz {};
+
+ rviz-animated-view-controller = self.callPackage ./rviz-animated-view-controller {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 

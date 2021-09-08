@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-test, launch-testing, python-cmake-module }:
 buildRosPackage {
   pname = "ros-foxy-launch-testing-ament-cmake";
-  version = "0.10.5-r1";
+  version = "0.10.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/foxy/launch_testing_ament_cmake/0.10.5-1.tar.gz";
-    name = "0.10.5-1.tar.gz";
-    sha256 = "fe621632b2cca00ace5d3691c1aa73b86205b5764a69736088df3c341f900ea2";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/foxy/launch_testing_ament_cmake/0.10.6-1.tar.gz";
+    name = "0.10.6-1.tar.gz";
+    sha256 = "a064c0f530e5b5a3ce5646f56f10e892ff2d4b762524efbba2a3e999f496ef8d";
   };
 
   buildType = "ament_cmake";
