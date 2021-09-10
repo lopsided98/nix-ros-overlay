@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rclpy, rqt-gui, rqt-gui-py, rqt-msg }:
 buildRosPackage {
   pname = "ros-galactic-rqt-srv";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_srv-release/archive/release/galactic/rqt_srv/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "e58cb772bb39fba67a7247e1f45e866155c69ee1f533aaf5a674c1e261ebe98a";
+    url = "https://github.com/ros2-gbp/rqt_srv-release/archive/release/galactic/rqt_srv/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "792cad20d9d26660de5c5314e4da193069104005a0cc91aa551590b67da2cedc";
   };
 
   buildType = "ament_python";

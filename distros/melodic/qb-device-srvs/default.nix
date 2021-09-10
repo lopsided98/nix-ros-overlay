@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, qb-device-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-qb-device-srvs";
-  version = "2.0.1";
+  version = "2.2.1-r3";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_srvs/2.0.1-0.tar.gz";
-    name = "2.0.1-0.tar.gz";
-    sha256 = "3368262c75e15bb0fe756a1a54ae5dbef310d58c351c97e62766135641c68cab";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_srvs/2.2.1-3.tar.gz";
+    name = "2.2.1-3.tar.gz";
+    sha256 = "6f173cc6e299a30ea0be552c1f122b010231e2c62e5be0c1e573ade2beda55b6";
   };
 
   buildType = "catkin";

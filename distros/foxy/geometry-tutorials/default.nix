@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-foxy-geometry-tutorials";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/foxy/geometry_tutorials/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "c294ac107c09cf598710b598a131a49047d2326a1b2a110ba4c190e1ddc98bba";
+    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/foxy/geometry_tutorials/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "cdc7c3cc9a32f805b6a871f001e9fa925cc01f11186d3a7e6370dcfe16ef71cd";
   };
 
   buildType = "ament_cmake";

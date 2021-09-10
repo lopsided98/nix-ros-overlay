@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch, launch-ros, rclcpp, tf2, tf2-ros, turtlesim }:
 buildRosPackage {
   pname = "ros-galactic-turtle-tf2-cpp";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/galactic/turtle_tf2_cpp/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "070e480375537b74c673358ab7b24c110b2f83572e2bb570211caa5383462830";
+    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/galactic/turtle_tf2_cpp/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "6888a79a8f9b4ca2442f9fd1942b04ab912dbd582e0bf4acd9a7921ccd81971d";
   };
 
   buildType = "ament_cmake";

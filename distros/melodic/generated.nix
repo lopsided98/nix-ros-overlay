@@ -1166,11 +1166,17 @@ self: super: {
 
  fuse = self.callPackage ./fuse {};
 
+ fuse-constraints = self.callPackage ./fuse-constraints {};
+
  fuse-core = self.callPackage ./fuse-core {};
 
  fuse-doc = self.callPackage ./fuse-doc {};
 
+ fuse-graphs = self.callPackage ./fuse-graphs {};
+
  fuse-loss = self.callPackage ./fuse-loss {};
+
+ fuse-models = self.callPackage ./fuse-models {};
 
  fuse-msgs = self.callPackage ./fuse-msgs {};
 
@@ -1463,6 +1469,8 @@ self: super: {
  ieee80211-channels = self.callPackage ./ieee80211-channels {};
 
  ifm3d = self.callPackage ./ifm3d {};
+
+ ifm3d-core = self.callPackage ./ifm3d-core {};
 
  igvc-self-drive-description = self.callPackage ./igvc-self-drive-description {};
 
@@ -1781,6 +1789,8 @@ self: super: {
  lanelet2-core = self.callPackage ./lanelet2-core {};
 
  lanelet2-examples = self.callPackage ./lanelet2-examples {};
+
+ lanelet2-io = self.callPackage ./lanelet2-io {};
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
@@ -2672,6 +2682,8 @@ self: super: {
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
+ pf-driver = self.callPackage ./pf-driver {};
+
  pheeno-ros-description = self.callPackage ./pheeno-ros-description {};
 
  phidgets-api = self.callPackage ./phidgets-api {};
@@ -2976,7 +2988,11 @@ self: super: {
 
  qb-chain-control = self.callPackage ./qb-chain-control {};
 
+ qb-chain-controllers = self.callPackage ./qb-chain-controllers {};
+
  qb-chain-description = self.callPackage ./qb-chain-description {};
+
+ qb-chain-msgs = self.callPackage ./qb-chain-msgs {};
 
  qb-device = self.callPackage ./qb-device {};
 
@@ -2987,6 +3003,8 @@ self: super: {
  qb-device-description = self.callPackage ./qb-device-description {};
 
  qb-device-driver = self.callPackage ./qb-device-driver {};
+
+ qb-device-gazebo = self.callPackage ./qb-device-gazebo {};
 
  qb-device-hardware-interface = self.callPackage ./qb-device-hardware-interface {};
 
@@ -3002,6 +3020,8 @@ self: super: {
 
  qb-hand-description = self.callPackage ./qb-hand-description {};
 
+ qb-hand-gazebo = self.callPackage ./qb-hand-gazebo {};
+
  qb-hand-hardware-interface = self.callPackage ./qb-hand-hardware-interface {};
 
  qb-move = self.callPackage ./qb-move {};
@@ -3009,6 +3029,8 @@ self: super: {
  qb-move-control = self.callPackage ./qb-move-control {};
 
  qb-move-description = self.callPackage ./qb-move-description {};
+
+ qb-move-gazebo = self.callPackage ./qb-move-gazebo {};
 
  qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
 
@@ -3700,6 +3722,8 @@ self: super: {
 
  rviz = self.callPackage ./rviz {};
 
+ rviz-animated-view-controller = self.callPackage ./rviz-animated-view-controller {};
+
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 
  rviz-mesh-plugin = self.callPackage ./rviz-mesh-plugin {};
@@ -3869,6 +3893,8 @@ self: super: {
  sot-dynamic-pinocchio = self.callPackage ./sot-dynamic-pinocchio {};
 
  sot-tools = self.callPackage ./sot-tools {};
+
+ spacenav-node = self.callPackage ./spacenav-node {};
 
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 

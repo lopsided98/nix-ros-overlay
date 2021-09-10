@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-qb-move-description";
-  version = "2.0.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/melodic/qb_move_description/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "2d1f33dc9544f001b41cd0c45f89465a068bda8b7a5948953d21581639069f5c";
+    url = "https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/melodic/qb_move_description/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "a00e40888c01b1759b70f6aae1dfc8bac4d0f3f00055362f0346bbf0e6941c2a";
   };
 
   buildType = "catkin";

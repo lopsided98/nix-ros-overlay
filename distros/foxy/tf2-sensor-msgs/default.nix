@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, eigen, eigen3-cmake-module, sensor-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-tf2-sensor-msgs";
-  version = "0.13.10-r1";
+  version = "0.13.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/tf2_sensor_msgs/0.13.10-1.tar.gz";
-    name = "0.13.10-1.tar.gz";
-    sha256 = "31537c5a0d00ef9150b409bd85bcb5c11464ed7e353474cd81ba8d3686533113";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/tf2_sensor_msgs/0.13.11-1.tar.gz";
+    name = "0.13.11-1.tar.gz";
+    sha256 = "c89036bfcd2ef4f8848a8de58c93f46a357d648a646cb000ba901c9c6103bed4";
   };
 
   buildType = "ament_cmake";

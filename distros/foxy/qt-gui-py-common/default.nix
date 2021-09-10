@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding }:
 buildRosPackage {
   pname = "ros-foxy-qt-gui-py-common";
-  version = "1.1.2-r2";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/foxy/qt_gui_py_common/1.1.2-2.tar.gz";
-    name = "1.1.2-2.tar.gz";
-    sha256 = "8b9e0ee1fef1a69e56d2454ef75c72a774d447f3e20100f9d414d49b4d18d90e";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/foxy/qt_gui_py_common/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "2ad6a653a25b88d458f7a654ef9f0a122f321f656aac220e703fb135ee455a2a";
   };
 
   buildType = "ament_cmake";

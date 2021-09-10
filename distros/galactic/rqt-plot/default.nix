@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, qt-gui-py-common, rclpy, rqt-gui, rqt-gui-py, rqt-py-common, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-rqt-plot";
-  version = "1.0.10-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/galactic/rqt_plot/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "f20751607252a8ac3d3bbaa5d727c9783d6327d6e99c518bd9dfdafdd08722fe";
+    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/galactic/rqt_plot/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "62e816285327a8eb886b9d5cc7c4159aa584185c1a54b78bf5a2c31a9ccdd467";
   };
 
   buildType = "ament_python";

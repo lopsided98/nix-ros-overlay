@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl,  }:
 buildRosPackage {
   pname = "ros-galactic-rmf-traffic-editor-assets";
-  version = "1.3.0-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/galactic/rmf_traffic_editor_assets/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "1060a5ea3cc4e0a2ff51bf8cada19c1badbe7dc6a679715b32e9139123595d39";
+    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/galactic/rmf_traffic_editor_assets/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "3d1e84f86ebb88391ac8e9ded87eedb2511370fc6146b938344efafcfb43606f";
   };
 
   buildType = "ament_python";

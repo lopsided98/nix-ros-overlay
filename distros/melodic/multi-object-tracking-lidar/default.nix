@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, pcl, pcl-ros, roscpp, sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-multi-object-tracking-lidar";
-  version = "1.0.2-r1";
+  version = "1.0.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/praveen-palanisamy/multi_object_tracking_lidar-release/archive/release/melodic/multi_object_tracking_lidar/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "736bfb056dc664589213481247b3c7c824f011e8ed6edcf937eb5dcc5e7b7790";
+    url = "https://github.com/praveen-palanisamy/multi_object_tracking_lidar-release/archive/release/melodic/multi_object_tracking_lidar/1.0.4-2.tar.gz";
+    name = "1.0.4-2.tar.gz";
+    sha256 = "63755a5dbaa0f51fce61f80fb41810d2dbeee04ea715a685ea4e130ccb6691fe";
   };
 
   buildType = "catkin";
