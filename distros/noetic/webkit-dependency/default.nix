@@ -1,8 +1,8 @@
 
-# Copyright 2020 Open Source Robotics Foundation
+# Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, catkin, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-webkit-dependency";
   version = "1.1.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ pythonPackages.pyqt5_with_qtwebkit ];
+  propagatedBuildInputs = [ python3Packages.pyqt5_with_qtwebkit ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, control-msgs, control-toolbox, controller-interface, controller-manager, eigen-conversions, franka-example-controllers, franka-gripper, franka-hw, franka-msgs, gazebo-dev, gazebo-ros, gazebo-ros-control, gtest, hardware-interface, joint-limits-interface, kdl-parser, pluginlib, roscpp, rostest, std-msgs, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-melodic-franka-gazebo";
-  version = "0.8.0-r1";
+  version = "0.8.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_gazebo/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "596ca26ce1a567d664f987fc7caf9dfc085fd5ba4134551f05a3506a17d81f33";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_gazebo/0.8.1-2.tar.gz";
+    name = "0.8.1-2.tar.gz";
+    sha256 = "744e40d8cba133c9225208368b0a3d5d257a6fbe3a657b0d37d8085ccdc0ca35";
   };
 
   buildType = "catkin";

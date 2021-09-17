@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, qb-hand-control, qb-hand-description, qb-hand-hardware-interface }:
+{ lib, buildRosPackage, fetchurl, catkin, qb-hand-control, qb-hand-description, qb-hand-gazebo, qb-hand-hardware-interface }:
 buildRosPackage {
   pname = "ros-melodic-qb-hand";
-  version = "2.0.0-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/melodic/qb_hand/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "aabf19f098662ae7195c61133104fbb799d47e58f9fcc52a069fcd08978b3cc9";
+    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/melodic/qb_hand/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "c5f392b47b9ba4596bfdd4de7d478838156926462422b5cbc0261a60b4c0d4b2";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ qb-hand-control qb-hand-description qb-hand-hardware-interface ];
+  propagatedBuildInputs = [ qb-hand-control qb-hand-description qb-hand-gazebo qb-hand-hardware-interface ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

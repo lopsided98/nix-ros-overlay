@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rmf-dispenser-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-galactic-rmf-task-msgs";
-  version = "1.3.0-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/galactic/rmf_task_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "484cbaf76a57288cf1427f22eccf44ff20b0a8b6302f66439ebc304c8016f951";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/galactic/rmf_task_msgs/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "038bccd4807f783c1977419b6f0d69bcf3feb3df995eabfcbb01ff59425156b1";
   };
 
   buildType = "ament_cmake";
