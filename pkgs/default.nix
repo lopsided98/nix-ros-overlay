@@ -19,7 +19,13 @@ self: super: with self.lib; let
 
       colcon-metadata = pySelf.callPackage ./colcon/metadata.nix { };
 
+      colcon-notification = pySelf.callPackage ./colcon/notification.nix { };
+
+      colcon-output = pySelf.callPackage ./colcon/output.nix { };
+
       colcon-package-selection = pySelf.callPackage ./colcon/package-selection.nix { };
+
+      colcon-parallel-executor = pySelf.callPackage ./colcon/parallel-executor.nix { };
 
       colcon-pkg-config = pySelf.callPackage ./colcon/pkg-config.nix { };
 
