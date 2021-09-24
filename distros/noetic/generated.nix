@@ -50,6 +50,8 @@ self: super: {
 
  arbotix-sensors = self.callPackage ./arbotix-sensors {};
 
+ aruco-detect = self.callPackage ./aruco-detect {};
+
  assimp-devel = self.callPackage ./assimp-devel {};
 
  assisted-teleop = self.callPackage ./assisted-teleop {};
@@ -187,6 +189,8 @@ self: super: {
  class-loader = self.callPackage ./class-loader {};
 
  clear-costmap-recovery = self.callPackage ./clear-costmap-recovery {};
+
+ clober-msgs = self.callPackage ./clober-msgs {};
 
  cmake-modules = self.callPackage ./cmake-modules {};
 
@@ -796,6 +800,8 @@ self: super: {
 
  fkie-multimaster-msgs = self.callPackage ./fkie-multimaster-msgs {};
 
+ fkie-node-manager = self.callPackage ./fkie-node-manager {};
+
  fkie-node-manager-daemon = self.callPackage ./fkie-node-manager-daemon {};
 
  fkie-potree-rviz-plugin = self.callPackage ./fkie-potree-rviz-plugin {};
@@ -856,11 +862,17 @@ self: super: {
 
  fuse = self.callPackage ./fuse {};
 
+ fuse-constraints = self.callPackage ./fuse-constraints {};
+
  fuse-core = self.callPackage ./fuse-core {};
 
  fuse-doc = self.callPackage ./fuse-doc {};
 
+ fuse-graphs = self.callPackage ./fuse-graphs {};
+
  fuse-loss = self.callPackage ./fuse-loss {};
+
+ fuse-models = self.callPackage ./fuse-models {};
 
  fuse-msgs = self.callPackage ./fuse-msgs {};
 
@@ -1062,6 +1074,8 @@ self: super: {
 
  ifm3d = self.callPackage ./ifm3d {};
 
+ ifm3d-core = self.callPackage ./ifm3d-core {};
+
  image-cb-detector = self.callPackage ./image-cb-detector {};
 
  image-common = self.callPackage ./image-common {};
@@ -1260,6 +1274,8 @@ self: super: {
 
  lanelet2-examples = self.callPackage ./lanelet2-examples {};
 
+ lanelet2-io = self.callPackage ./lanelet2-io {};
+
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
  lanelet2-projection = self.callPackage ./lanelet2-projection {};
@@ -1339,6 +1355,8 @@ self: super: {
  librviz-tutorial = self.callPackage ./librviz-tutorial {};
 
  libsiftfast = self.callPackage ./libsiftfast {};
+
+ libuvc-camera = self.callPackage ./libuvc-camera {};
 
  libuvc-ros = self.callPackage ./libuvc-ros {};
 
@@ -1457,6 +1475,12 @@ self: super: {
  message-to-tf = self.callPackage ./message-to-tf {};
 
  microstrain-3dmgx2-imu = self.callPackage ./microstrain-3dmgx2-imu {};
+
+ microstrain-inertial-driver = self.callPackage ./microstrain-inertial-driver {};
+
+ microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
+
+ microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
 
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
@@ -1581,6 +1605,8 @@ self: super: {
  mpc-local-planner-examples = self.callPackage ./mpc-local-planner-examples {};
 
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
+
+ mqtt-bridge = self.callPackage ./mqtt-bridge {};
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
@@ -2004,6 +2030,28 @@ self: super: {
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
 
+ qb-chain = self.callPackage ./qb-chain {};
+
+ qb-chain-control = self.callPackage ./qb-chain-control {};
+
+ qb-chain-controllers = self.callPackage ./qb-chain-controllers {};
+
+ qb-chain-description = self.callPackage ./qb-chain-description {};
+
+ qb-chain-msgs = self.callPackage ./qb-chain-msgs {};
+
+ qb-hand = self.callPackage ./qb-hand {};
+
+ qb-hand-control = self.callPackage ./qb-hand-control {};
+
+ qb-hand-description = self.callPackage ./qb-hand-description {};
+
+ qb-move = self.callPackage ./qb-move {};
+
+ qb-move-control = self.callPackage ./qb-move-control {};
+
+ qb-move-description = self.callPackage ./qb-move-description {};
+
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
@@ -2078,7 +2126,27 @@ self: super: {
 
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
+ rm-base = self.callPackage ./rm-base {};
+
+ rm-calibration-controllers = self.callPackage ./rm-calibration-controllers {};
+
+ rm-chassis-controllers = self.callPackage ./rm-chassis-controllers {};
+
+ rm-common = self.callPackage ./rm-common {};
+
+ rm-control = self.callPackage ./rm-control {};
+
  rm-controllers = self.callPackage ./rm-controllers {};
+
+ rm-description = self.callPackage ./rm-description {};
+
+ rm-gazebo = self.callPackage ./rm-gazebo {};
+
+ rm-gimbal-controllers = self.callPackage ./rm-gimbal-controllers {};
+
+ rm-msgs = self.callPackage ./rm-msgs {};
+
+ rm-shooter-controllers = self.callPackage ./rm-shooter-controllers {};
 
  robot = self.callPackage ./robot {};
 
@@ -2107,6 +2175,8 @@ self: super: {
  robot-navigation = self.callPackage ./robot-navigation {};
 
  robot-self-filter = self.callPackage ./robot-self-filter {};
+
+ robot-state-controller = self.callPackage ./robot-state-controller {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
@@ -2278,6 +2348,8 @@ self: super: {
 
  rospatlite = self.callPackage ./rospatlite {};
 
+ rospilot = self.callPackage ./rospilot {};
+
  rosping = self.callPackage ./rosping {};
 
  rospy = self.callPackage ./rospy {};
@@ -2323,6 +2395,8 @@ self: super: {
  rostime = self.callPackage ./rostime {};
 
  rostopic = self.callPackage ./rostopic {};
+
+ rostwitter = self.callPackage ./rostwitter {};
 
  rosunit = self.callPackage ./rosunit {};
 
@@ -2431,6 +2505,8 @@ self: super: {
  ruckig = self.callPackage ./ruckig {};
 
  rviz = self.callPackage ./rviz {};
+
+ rviz-animated-view-controller = self.callPackage ./rviz-animated-view-controller {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 
@@ -2557,6 +2633,8 @@ self: super: {
  sot-dynamic-pinocchio = self.callPackage ./sot-dynamic-pinocchio {};
 
  sot-tools = self.callPackage ./sot-tools {};
+
+ spacenav-node = self.callPackage ./spacenav-node {};
 
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 
@@ -2919,6 +2997,8 @@ self: super: {
  wave-front-planner = self.callPackage ./wave-front-planner {};
 
  web-video-server = self.callPackage ./web-video-server {};
+
+ webkit-dependency = self.callPackage ./webkit-dependency {};
 
  webots-ros = self.callPackage ./webots-ros {};
 

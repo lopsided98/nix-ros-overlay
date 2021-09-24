@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libyamlcpp, roscpp, roslib, rostest }:
 buildRosPackage {
   pname = "ros-noetic-sr-hand-detector";
-  version = "0.0.6-r1";
+  version = "0.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/shadow-robot/sr_hand_detector-release/archive/release/noetic/sr_hand_detector/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "4bae5c77b710f128080d5cbbb2b5a28de35e94ce1b4bac0a889f71f8aa0e7d14";
+    url = "https://github.com/shadow-robot/sr_hand_detector-release/archive/release/noetic/sr_hand_detector/0.0.7-1.tar.gz";
+    name = "0.0.7-1.tar.gz";
+    sha256 = "77712161a9eeaee8ef841518df0de85dbff230bf860fd466ce4c75580c0a2758";
   };
 
   buildType = "catkin";

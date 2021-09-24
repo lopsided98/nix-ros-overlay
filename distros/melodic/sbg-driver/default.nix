@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-sbg-driver";
-  version = "2.0.2-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/SBG-Systems/sbg_ros_driver-release/archive/release/melodic/sbg_driver/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "e4993f0efb6ad38028d9c4d521e40a631f6c66b844a91188790803620f59ac3c";
+    url = "https://github.com/SBG-Systems/sbg_ros_driver-release/archive/release/melodic/sbg_driver/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "d9eacffb9bd5b9b0807ad482598c36932f04ca9b8313bc1714c140a6c5a02d7b";
   };
 
   buildType = "catkin";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The SBG ROS Driver package'';
+    description = ''ROS driver package for communication with the SBG navigation systems.'';
     license = with lib.licenses; [ mit ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, camera-calibration-parsers, cv-bridge, eigen, geometry-msgs, image-geometry, image-transport, message-filters, nav-msgs, pkg-config, rclcpp, rclcpp-components, rclpy, std-msgs, swri-geometry-util, swri-math-util, swri-opencv-util, swri-roscpp, tf2 }:
 buildRosPackage {
   pname = "ros-foxy-swri-image-util";
-  version = "3.3.2-r1";
+  version = "3.3.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_image_util/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "b98d0ce2733c701d73219a4aa724a7a980453cce2b5a4b9d1c740401c2c21c81";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_image_util/3.3.2-2.tar.gz";
+    name = "3.3.2-2.tar.gz";
+    sha256 = "a31c90aee6ce468170955328f65f17c5524dbd3967f279ea8499f5fdd4e92e7c";
   };
 
   buildType = "ament_cmake";

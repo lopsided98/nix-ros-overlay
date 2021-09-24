@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-index-python, ament-lint-auto, python3Packages }:
 buildRosPackage {
   pname = "ros-galactic-xacro";
-  version = "2.0.6-r1";
+  version = "2.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/xacro-release/archive/release/galactic/xacro/2.0.6-1.tar.gz";
-    name = "2.0.6-1.tar.gz";
-    sha256 = "7b4cea7136e4c340cacf3e08d63adfe6e34923baec25425adf0969e6765dbcd6";
+    url = "https://github.com/ros2-gbp/xacro-release/archive/release/galactic/xacro/2.0.7-1.tar.gz";
+    name = "2.0.7-1.tar.gz";
+    sha256 = "c6aeb71b83e4aa7c0f2a074ecef114137db3474c3b4728308a100e1baa20c847";
   };
 
   buildType = "ament_cmake";

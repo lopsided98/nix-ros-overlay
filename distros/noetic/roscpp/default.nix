@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, message-generation, message-runtime, pkg-config, rosconsole, roscpp-serialization, roscpp-traits, rosgraph-msgs, roslang, rostime, std-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-roscpp";
-  version = "1.15.11-r1";
+  version = "1.15.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roscpp/1.15.11-1.tar.gz";
-    name = "1.15.11-1.tar.gz";
-    sha256 = "3c50622bd7b6df12e5d2c100fb81e4523ee29aa4358a96c2ee413dbe0e8c8a30";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roscpp/1.15.13-1.tar.gz";
+    name = "1.15.13-1.tar.gz";
+    sha256 = "eab9666a6afd03455a24ae82fb5798ee67bf3b95046d09bc31cb3870199be150";
   };
 
   buildType = "catkin";

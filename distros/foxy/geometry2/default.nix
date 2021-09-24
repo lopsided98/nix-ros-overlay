@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tf2, tf2-bullet, tf2-eigen, tf2-geometry-msgs, tf2-kdl, tf2-msgs, tf2-py, tf2-ros, tf2-sensor-msgs, tf2-tools }:
 buildRosPackage {
   pname = "ros-foxy-geometry2";
-  version = "0.13.10-r1";
+  version = "0.13.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/geometry2/0.13.10-1.tar.gz";
-    name = "0.13.10-1.tar.gz";
-    sha256 = "e25dab04c5f0b7e0205e66765fae470d5f0c4317e87f2ada01b29ee38617a4d1";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/geometry2/0.13.11-1.tar.gz";
+    name = "0.13.11-1.tar.gz";
+    sha256 = "26a3fa86990b9855b82cc38b957c62c34a362fa372cd302ee8d9802514b30ff0";
   };
 
   buildType = "ament_cmake";

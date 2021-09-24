@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-galactic-moveit-resources-fanuc-description";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit_resources-release/archive/release/galactic/moveit_resources_fanuc_description/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "6f083913956f4ee0d31d08ceddc87467ec21350698fdbeb07d29337ade8473f4";
+    url = "https://github.com/moveit/moveit_resources-release/archive/release/galactic/moveit_resources_fanuc_description/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "028987a544066bd3cfa1914db531bf001967299e8ff08a85d79b553c1e5a2173";
   };
 
   buildType = "ament_cmake";

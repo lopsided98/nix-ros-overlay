@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, cmake, console-bridge }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake }:
 buildRosPackage {
   pname = "ros-melodic-ur-client-library";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_Client_Library-release/archive/release/melodic/ur_client_library/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "8cca441a3b463d919308266893d64a333bcf03447806f75b6d7209c218bef032";
+    url = "https://github.com/UniversalRobots/Universal_Robots_Client_Library-release/archive/release/melodic/ur_client_library/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "814891aa75084347e1e8d47794988b399236ddcda021e2e2629de5702e2eae4f";
   };
 
   buildType = "cmake";
   buildInputs = [ boost ];
-  propagatedBuildInputs = [ catkin console-bridge ];
+  propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

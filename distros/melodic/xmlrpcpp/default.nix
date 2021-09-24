@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, rostime }:
 buildRosPackage {
   pname = "ros-melodic-xmlrpcpp";
-  version = "1.14.11-r1";
+  version = "1.14.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/xmlrpcpp/1.14.11-1.tar.gz";
-    name = "1.14.11-1.tar.gz";
-    sha256 = "118e05e22780e149753b5d2cb4b09a462631e6f83a1132d0c7c6b909bcd4d612";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/xmlrpcpp/1.14.12-1.tar.gz";
+    name = "1.14.12-1.tar.gz";
+    sha256 = "9298d00c0bfe34dd3ba5bf3da594fb4b7271a12ca46db8a30f5b23493245bbd7";
   };
 
   buildType = "catkin";

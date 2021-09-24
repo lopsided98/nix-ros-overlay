@@ -2,24 +2,24 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, rclcpp, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, asio-cmake-module, io-context, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, std-msgs, udp-msgs }:
 buildRosPackage {
   pname = "ros-galactic-udp-driver";
-  version = "0.0.6-r2";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/galactic/udp_driver/0.0.6-2.tar.gz";
-    name = "0.0.6-2.tar.gz";
-    sha256 = "61f3c125877c2372c552f40ba7567526eb4fb464e191c33b4fedc254a3c3c860";
+    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/galactic/udp_driver/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "c0832f450e2aebabfce86df050e1b5453f3008a511d7d6ad6411f4c47e811fca";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ boost rclcpp std-msgs ];
-  nativeBuildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ asio io-context lifecycle-msgs rclcpp rclcpp-components rclcpp-lifecycle std-msgs udp-msgs ];
+  nativeBuildInputs = [ ament-cmake-auto asio-cmake-module ];
 
   meta = {
-    description = ''A template class and associated utilities which encapsulate basic reading from UDP sockets'';
+    description = ''A library to write Synchronous and Asynchronous networking applications, ROS and ROS2 nodes'';
     license = with lib.licenses; [ asl20 ];
   };
 }

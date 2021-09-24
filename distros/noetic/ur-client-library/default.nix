@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, cmake, console-bridge }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cmake }:
 buildRosPackage {
   pname = "ros-noetic-ur-client-library";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_Client_Library-release/archive/release/noetic/ur_client_library/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "9398c88246ba5578db779a85b9d5ddd171668d13873a1a00a781d823452f39ee";
+    url = "https://github.com/UniversalRobots/Universal_Robots_Client_Library-release/archive/release/noetic/ur_client_library/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "7d30ae4a429ddaef8efd9d4d2987cc4faf10d71b12e77967338840f1d3595826";
   };
 
   buildType = "cmake";
   buildInputs = [ boost ];
-  propagatedBuildInputs = [ catkin console-bridge ];
+  propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

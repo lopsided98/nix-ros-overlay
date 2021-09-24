@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rclpy, rqt-gui, rqt-gui-py, rqt-msg }:
 buildRosPackage {
   pname = "ros-foxy-rqt-srv";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_srv-release/archive/release/foxy/rqt_srv/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "1c5dcfcc4583b81a4525ee5451701d0cb7c0e271a5b472b4cea8674c78747b9f";
+    url = "https://github.com/ros2-gbp/rqt_srv-release/archive/release/foxy/rqt_srv/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "7b126f474d382c6d52510f804ebc633a5b8f7b9912cfe3503404c1e4d8943df3";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pcl-conversions, pcl-msgs, pcl-ros }:
 buildRosPackage {
   pname = "ros-melodic-perception-pcl";
-  version = "1.7.1-r1";
+  version = "1.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/melodic/perception_pcl/1.7.1-1.tar.gz";
-    name = "1.7.1-1.tar.gz";
-    sha256 = "e9dcc8b15f57efae94a5475f931f2a945c6f78a6ae455be270e0a5e9ff69eb0c";
+    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/melodic/perception_pcl/1.7.3-1.tar.gz";
+    name = "1.7.3-1.tar.gz";
+    sha256 = "503b98798df94bcbce84828d6f07a175a87f4e9719eb3a56198dc97792378359";
   };
 
   buildType = "catkin";

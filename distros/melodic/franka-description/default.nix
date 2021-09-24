@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-melodic-franka-description";
-  version = "0.8.0-r1";
+  version = "0.8.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_description/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "2be5aadd4d6ad6b77207e4d024570f7d70c588eeb6d565106008339b8a03732b";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_description/0.8.1-2.tar.gz";
+    name = "0.8.1-2.tar.gz";
+    sha256 = "9372a9dacec54997429650d9c1a1b93469e3728e938cdea9401539770031cace";
   };
 
   buildType = "catkin";

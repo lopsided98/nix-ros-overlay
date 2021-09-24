@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cpp-common, lz4, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-roslz4";
-  version = "1.14.11-r1";
+  version = "1.14.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roslz4/1.14.11-1.tar.gz";
-    name = "1.14.11-1.tar.gz";
-    sha256 = "a3f329a4f31f60caf63ffcb8d00253f8542e6781d494243f1642d0200a9cc36b";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roslz4/1.14.12-1.tar.gz";
+    name = "1.14.12-1.tar.gz";
+    sha256 = "d110cc796c0f2270c1469a408fdf65065a9ccdac9e7bd10a99ac867a9a2d69fd";
   };
 
   buildType = "catkin";

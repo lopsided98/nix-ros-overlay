@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch, launch-ros, rclcpp, tf2, tf2-ros, turtlesim }:
 buildRosPackage {
   pname = "ros-foxy-turtle-tf2-cpp";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/foxy/turtle_tf2_cpp/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "34c2f80aa0a0713a485f087a0688e511afbe6a2d743f66b7ee649180786563e1";
+    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/foxy/turtle_tf2_cpp/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "95c28fe2c391de9a609a38c038e37f31c03f703e46dfffc8a8a80e7cb9f2a07c";
   };
 
   buildType = "ament_cmake";

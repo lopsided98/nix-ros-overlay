@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ceres-solver, cmake-modules, eigen, gtest, interactive-markers, libg2o, liblapack, map-server, message-filters, message-runtime, nav-msgs, pluginlib, qt5, rosconsole, roscpp, sensor-msgs, slam-toolbox-msgs, sparse-bundle-adjustment, std-msgs, std-srvs, suitesparse, tbb, tf, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-slam-toolbox";
-  version = "1.5.5-r1";
+  version = "1.5.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/noetic/slam_toolbox/1.5.5-1.tar.gz";
-    name = "1.5.5-1.tar.gz";
-    sha256 = "549b5ea6ce1834562da8b90f288ac6f3b0d50b97e00ce5a70c4e282efe1d40ec";
+    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/noetic/slam_toolbox/1.5.6-1.tar.gz";
+    name = "1.5.6-1.tar.gz";
+    sha256 = "8cc607ced61f8d2d6f167ba6e802cf055e9b702bf897dfd5310e85fb2b6172a7";
   };
 
   buildType = "catkin";
