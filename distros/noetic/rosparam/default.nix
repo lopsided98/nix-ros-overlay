@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, rosgraph }:
 buildRosPackage {
   pname = "ros-noetic-rosparam";
-  version = "1.15.11-r1";
+  version = "1.15.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosparam/1.15.11-1.tar.gz";
-    name = "1.15.11-1.tar.gz";
-    sha256 = "6837593e5ff354f17c07d9e928beff359e5baefa5993901d8e918e220cb06ff7";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosparam/1.15.13-1.tar.gz";
+    name = "1.15.13-1.tar.gz";
+    sha256 = "73c18037d76a06d27b15113700d3b4dab6b50997f67d4a3de83c84b1f0ce575b";
   };
 
   buildType = "catkin";

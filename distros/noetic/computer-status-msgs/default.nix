@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-computer-status-msgs";
-  version = "2.0.0-r2";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/130s/computer_status_msgs-release/archive/release/kinetic/computer_status_msgs/2.0.0-2.tar.gz";
-    name = "2.0.0-2.tar.gz";
-    sha256 = "69f402bd2ecc328385908e0142da03751096a9957d9dd4db41afd93e5298b81b";
+    url = "https://github.com/130s/computer_status_msgs-release/archive/release/noetic/computer_status_msgs/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "45c5641d25d2b6021629fcc253fd5e6d093dfc8b2603c842bf1beee24fb5f8b3";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, nav2-behavior-tree, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-galactic-nav2-recoveries";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_recoveries/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "6ca713427016dbddc28253636ccea8b2f9e464bafa94fdb685cd855a29b0d22b";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_recoveries/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "0b02b1847728ee9b1a328eaa406be05c23b311502f5c562af7b219cda9ad848b";
   };
 
   buildType = "ament_cmake";

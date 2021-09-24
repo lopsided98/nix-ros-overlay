@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, eigen, geometry-msgs, interactive-markers, nav-msgs, neonavigation-common, roscpp, roslint, rostest, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-melodic-trajectory-tracker";
-  version = "0.10.11-r1";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/trajectory_tracker/0.10.11-1.tar.gz";
-    name = "0.10.11-1.tar.gz";
-    sha256 = "22652522e436d7c52e1637b5e2c96d6a815baa208bd2ce89b0738f50a2db0c9e";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/trajectory_tracker/0.11.0-1.tar.gz";
+    name = "0.11.0-1.tar.gz";
+    sha256 = "56cd70d3089f81f540477790a110981f8905055406bbd6e05392e0a8b30a422e";
   };
 
   buildType = "catkin";

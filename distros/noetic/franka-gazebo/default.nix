@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, control-msgs, control-toolbox, controller-interface, controller-manager, eigen-conversions, franka-example-controllers, franka-gripper, franka-hw, franka-msgs, gazebo-dev, gazebo-ros, gazebo-ros-control, gtest, hardware-interface, joint-limits-interface, kdl-parser, pluginlib, roscpp, rostest, std-msgs, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-noetic-franka-gazebo";
-  version = "0.8.0-r1";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_gazebo/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "4e9ab990dafb016109a030284fc390af025d5ee8482a238bba6a5dcf0522ea20";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_gazebo/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "46271d33a777e64854b1c843a6466d801222cc7e308d39bff560d700dc4da962";
   };
 
   buildType = "catkin";

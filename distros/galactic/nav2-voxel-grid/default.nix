@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, rclcpp }:
 buildRosPackage {
   pname = "ros-galactic-nav2-voxel-grid";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_voxel_grid/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "8f7dbaaf23cb1e7cda49178032a17d960b7096f5abf716d90b144186f35ba5f9";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_voxel_grid/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "3bf9e8b9007143d784c20929e1bd706865b6d6002ce22ff872973d96e0d0a20f";
   };
 
   buildType = "ament_cmake";

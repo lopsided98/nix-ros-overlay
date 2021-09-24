@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pcl-conversions, pcl-msgs, pcl-ros }:
 buildRosPackage {
   pname = "ros-galactic-perception-pcl";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/galactic/perception_pcl/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "52d8232a423cc083223bb73df0740bc8eeaad36b9eb50405924b2e4d4f66860f";
+    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/galactic/perception_pcl/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "c428f92dc465ad203b69d78898eb1b333f1b5ac84d4acfe553b247c9d0bbe385";
   };
 
   buildType = "ament_cmake";

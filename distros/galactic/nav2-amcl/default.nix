@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch-ros, launch-testing, message-filters, nav-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-galactic-nav2-amcl";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_amcl/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "ba3fbcbaaae8bffbfb363f27975d5ba01b02b9537a6d0eef462a0169201938a5";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_amcl/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "470fd987afb8b7b89a6b7436bd100d77cdb17006e6410352aead9356bd38739f";
   };
 
   buildType = "ament_cmake";

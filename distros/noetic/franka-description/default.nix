@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-noetic-franka-description";
-  version = "0.8.0-r1";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_description/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "f9c5839d84b866337cbbc1aa0fd398291ada7d03de327d3cabf3c006cba03633";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_description/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "6dd7bd6df274a27db4173a62c551b32e9028350a8039d24ba72509f9448aaf6f";
   };
 
   buildType = "catkin";
