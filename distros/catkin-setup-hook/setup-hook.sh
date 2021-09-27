@@ -42,15 +42,16 @@ _runCatkinEnvHook() {
 _runCatkinEnvHooksArray() {
   # Run hooks in sorted order of their file names
   # This would fail if a filename contained EOT
+  local eot=$(printf '\004')
   while IFS= read -rd '' hook; do
     _runCatkinEnvHook "$hook"
   done < <(printf "%s\0" "$@" | \
            # Replace final / with EOT, separating the file name
-           sed -z 's|\(.*\)/|\1'$'\4''|' | \
+           sed -z 's|\(.*\)/|\1'${eot}'|' | \
            # Sort on second EOT separated field (file name)
-           LC_ALL=C sort -zt$'\4' -k2 | \
+           LC_ALL=C sort -zt${eot} -k2 | \
            # Substitute / back in for EOT
-           sed -z 's|'$'\4''|/|')
+           sed -z 's|'${eot}'|/|')
 }
 
 _runCatkinEnvHooks() {
