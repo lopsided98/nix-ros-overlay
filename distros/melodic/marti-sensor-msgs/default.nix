@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-marti-sensor-msgs";
-  version = "0.10.0-r1";
+  version = "0.10.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/melodic/marti_sensor_msgs/0.10.0-1.tar.gz";
-    name = "0.10.0-1.tar.gz";
-    sha256 = "3017eb3324444f38714aae48f986ab73734b5ea75e50cd50d90ecd7d70857e2e";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/melodic/marti_sensor_msgs/0.10.0-2.tar.gz";
+    name = "0.10.0-2.tar.gz";
+    sha256 = "f67e116de61763b26fba3c3971f443cf89efa11812303b06d6c303ef688ed9e2";
   };
 
   buildType = "catkin";

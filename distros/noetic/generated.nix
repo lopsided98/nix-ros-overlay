@@ -1318,11 +1318,17 @@ self: super: {
 
  leo = self.callPackage ./leo {};
 
+ leo-bringup = self.callPackage ./leo-bringup {};
+
  leo-description = self.callPackage ./leo-description {};
 
  leo-desktop = self.callPackage ./leo-desktop {};
 
+ leo-fw = self.callPackage ./leo-fw {};
+
  leo-gazebo = self.callPackage ./leo-gazebo {};
+
+ leo-robot = self.callPackage ./leo-robot {};
 
  leo-simulator = self.callPackage ./leo-simulator {};
 
@@ -1537,6 +1543,8 @@ self: super: {
  moveit-kinematics = self.callPackage ./moveit-kinematics {};
 
  moveit-msgs = self.callPackage ./moveit-msgs {};
+
+ moveit-opw-kinematics-plugin = self.callPackage ./moveit-opw-kinematics-plugin {};
 
  moveit-planners = self.callPackage ./moveit-planners {};
 
@@ -1801,6 +1809,8 @@ self: super: {
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
+
+ phidgets-analog-outputs = self.callPackage ./phidgets-analog-outputs {};
 
  phidgets-api = self.callPackage ./phidgets-api {};
 
@@ -2126,8 +2136,6 @@ self: super: {
 
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
- rm-base = self.callPackage ./rm-base {};
-
  rm-calibration-controllers = self.callPackage ./rm-calibration-controllers {};
 
  rm-chassis-controllers = self.callPackage ./rm-chassis-controllers {};
@@ -2138,11 +2146,15 @@ self: super: {
 
  rm-controllers = self.callPackage ./rm-controllers {};
 
+ rm-dbus = self.callPackage ./rm-dbus {};
+
  rm-description = self.callPackage ./rm-description {};
 
  rm-gazebo = self.callPackage ./rm-gazebo {};
 
  rm-gimbal-controllers = self.callPackage ./rm-gimbal-controllers {};
+
+ rm-hw = self.callPackage ./rm-hw {};
 
  rm-msgs = self.callPackage ./rm-msgs {};
 

@@ -1548,6 +1548,8 @@ self: super: {
 
  industrial-utils = self.callPackage ./industrial-utils {};
 
+ inorbit-republisher = self.callPackage ./inorbit-republisher {};
+
  interactive-marker-proxy = self.callPackage ./interactive-marker-proxy {};
 
  interactive-marker-tutorials = self.callPackage ./interactive-marker-tutorials {};

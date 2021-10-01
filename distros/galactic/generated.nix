@@ -204,6 +204,12 @@ self: super: {
 
  control-toolbox = self.callPackage ./control-toolbox {};
 
+ controller-interface = self.callPackage ./controller-interface {};
+
+ controller-manager = self.callPackage ./controller-manager {};
+
+ controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
+
  costmap-queue = self.callPackage ./costmap-queue {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -361,6 +367,8 @@ self: super: {
  grbl-ros = self.callPackage ./grbl-ros {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
+
+ hardware-interface = self.callPackage ./hardware-interface {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
@@ -946,6 +954,10 @@ self: super: {
 
  ros1-rosbag-storage-vendor = self.callPackage ./ros1-rosbag-storage-vendor {};
 
+ ros2-control = self.callPackage ./ros2-control {};
+
+ ros2-control-test-assets = self.callPackage ./ros2-control-test-assets {};
+
  ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
@@ -961,6 +973,8 @@ self: super: {
  ros2cli-test-interfaces = self.callPackage ./ros2cli-test-interfaces {};
 
  ros2component = self.callPackage ./ros2component {};
+
+ ros2controlcli = self.callPackage ./ros2controlcli {};
 
  ros2interface = self.callPackage ./ros2interface {};
 
@@ -1133,6 +1147,8 @@ self: super: {
  rqt-robot-monitor = self.callPackage ./rqt-robot-monitor {};
 
  rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
+
+ rqt-runtime-monitor = self.callPackage ./rqt-runtime-monitor {};
 
  rqt-service-caller = self.callPackage ./rqt-service-caller {};
 
@@ -1327,6 +1343,8 @@ self: super: {
  tracetools-test = self.callPackage ./tracetools-test {};
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
+
+ transmission-interface = self.callPackage ./transmission-interface {};
 
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 

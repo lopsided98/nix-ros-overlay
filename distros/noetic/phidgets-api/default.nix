@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libphidget22 }:
 buildRosPackage {
   pname = "ros-noetic-phidgets-api";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_api/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "82c3c565bca2961eadb2acc1d543bd1a8369579859ee668016f9edda4a3cc5bc";
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_api/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "875c61236a2d3d493d14ff125851c160c24f42deafcb02dc626304c04ae9499e";
   };
 
   buildType = "catkin";
