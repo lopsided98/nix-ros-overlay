@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gtest, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-bota-signal-handler";
-  version = "0.6.0-r5";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/melodic/bota_signal_handler/0.6.0-5/bota_driver-release-release-melodic-bota_signal_handler-0.6.0-5.tar.gz";
-    name = "bota_driver-release-release-melodic-bota_signal_handler-0.6.0-5.tar.gz";
-    sha256 = "54609572eb3d346054a85e8ad3b39a6f31d5dbb2312a7e3d0f7ee92d4de385ef";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/melodic/bota_signal_handler/0.6.1-1/bota_driver-release-release-melodic-bota_signal_handler-0.6.1-1.tar.gz";
+    name = "bota_driver-release-release-melodic-bota_signal_handler-0.6.1-1.tar.gz";
+    sha256 = "bd544d86c3b6fb896fccd1dd079ec588a3d50afd6577c1299c7eabe9bec020ca";
   };
 
   buildType = "catkin";

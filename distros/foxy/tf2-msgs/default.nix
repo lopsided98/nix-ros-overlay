@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-tf2-msgs";
-  version = "0.13.11-r1";
+  version = "0.13.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/tf2_msgs/0.13.11-1.tar.gz";
-    name = "0.13.11-1.tar.gz";
-    sha256 = "3130068ae9bb5c9161d4c983ba36f7d3af37eff2b9da9bc13c0a11606e8986b4";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/tf2_msgs/0.13.12-1.tar.gz";
+    name = "0.13.12-1.tar.gz";
+    sha256 = "56e8df9f8043867338ae74ce8d70c0ec7a40b11ce6224aae68d6aec3cfaec453";
   };
 
   buildType = "ament_cmake";

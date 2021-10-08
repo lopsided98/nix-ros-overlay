@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, can-msgs, catkin, dataspeed-can-msg-filters, dataspeed-can-usb, dataspeed-ulc-can, dbw-polaris-description, dbw-polaris-msgs, geometry-msgs, nodelet, roscpp, roslaunch, rospy, sensor-msgs, socketcan-bridge, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-dbw-polaris-can";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_can/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "2515778c68b8f9cb2153e1f886b0d6d5c7b97355ac0acafadab0bcaea7aa53ee";
+    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_can/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "4622a58474d705636d1bf6bd68eab77d2e65ba78de2d7483fa510f44f3d15e70";
   };
 
   buildType = "catkin";

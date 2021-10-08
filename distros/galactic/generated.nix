@@ -204,6 +204,12 @@ self: super: {
 
  control-toolbox = self.callPackage ./control-toolbox {};
 
+ controller-interface = self.callPackage ./controller-interface {};
+
+ controller-manager = self.callPackage ./controller-manager {};
+
+ controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
+
  costmap-queue = self.callPackage ./costmap-queue {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -227,6 +233,8 @@ self: super: {
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
+
+ diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
  domain-bridge = self.callPackage ./domain-bridge {};
 
@@ -253,6 +261,8 @@ self: super: {
  dynamixel-sdk-custom-interfaces = self.callPackage ./dynamixel-sdk-custom-interfaces {};
 
  dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
+
+ effort-controllers = self.callPackage ./effort-controllers {};
 
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
@@ -316,6 +326,10 @@ self: super: {
 
  foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
 
+ force-torque-sensor-broadcaster = self.callPackage ./force-torque-sensor-broadcaster {};
+
+ forward-command-controller = self.callPackage ./forward-command-controller {};
+
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
  gazebo-dev = self.callPackage ./gazebo-dev {};
@@ -360,7 +374,11 @@ self: super: {
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
+ gripper-controllers = self.callPackage ./gripper-controllers {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
+
+ hardware-interface = self.callPackage ./hardware-interface {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
@@ -392,15 +410,21 @@ self: super: {
 
  image-view = self.callPackage ./image-view {};
 
+ imu-sensor-broadcaster = self.callPackage ./imu-sensor-broadcaster {};
+
  interactive-markers = self.callPackage ./interactive-markers {};
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
  io-context = self.callPackage ./io-context {};
 
+ joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
+
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
 
  joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
+
+ joint-trajectory-controller = self.callPackage ./joint-trajectory-controller {};
 
  joy = self.callPackage ./joy {};
 
@@ -740,6 +764,8 @@ self: super: {
 
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
 
+ position-controllers = self.callPackage ./position-controllers {};
+
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
 
  python-cmake-module = self.callPackage ./python-cmake-module {};
@@ -946,6 +972,12 @@ self: super: {
 
  ros1-rosbag-storage-vendor = self.callPackage ./ros1-rosbag-storage-vendor {};
 
+ ros2-control = self.callPackage ./ros2-control {};
+
+ ros2-control-test-assets = self.callPackage ./ros2-control-test-assets {};
+
+ ros2-controllers = self.callPackage ./ros2-controllers {};
+
  ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
@@ -961,6 +993,8 @@ self: super: {
  ros2cli-test-interfaces = self.callPackage ./ros2cli-test-interfaces {};
 
  ros2component = self.callPackage ./ros2component {};
+
+ ros2controlcli = self.callPackage ./ros2controlcli {};
 
  ros2interface = self.callPackage ./ros2interface {};
 
@@ -1133,6 +1167,8 @@ self: super: {
  rqt-robot-monitor = self.callPackage ./rqt-robot-monitor {};
 
  rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
+
+ rqt-runtime-monitor = self.callPackage ./rqt-runtime-monitor {};
 
  rqt-service-caller = self.callPackage ./rqt-service-caller {};
 
@@ -1328,6 +1364,8 @@ self: super: {
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
+ transmission-interface = self.callPackage ./transmission-interface {};
+
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 
  turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
@@ -1387,6 +1425,8 @@ self: super: {
  usb-cam = self.callPackage ./usb-cam {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
+
+ velocity-controllers = self.callPackage ./velocity-controllers {};
 
  velodyne = self.callPackage ./velodyne {};
 

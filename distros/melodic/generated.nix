@@ -216,6 +216,8 @@ self: super: {
 
  bota-driver = self.callPackage ./bota-driver {};
 
+ bota-driver-testing = self.callPackage ./bota-driver-testing {};
+
  bota-node = self.callPackage ./bota-node {};
 
  bota-signal-handler = self.callPackage ./bota-signal-handler {};
@@ -604,6 +606,8 @@ self: super: {
 
  cpr-multimaster-tools = self.callPackage ./cpr-multimaster-tools {};
 
+ cpu-temperature-diagnostics = self.callPackage ./cpu-temperature-diagnostics {};
+
  criutils = self.callPackage ./criutils {};
 
  csm = self.callPackage ./csm {};
@@ -929,6 +933,8 @@ self: super: {
  eiquadprog = self.callPackage ./eiquadprog {};
 
  eml = self.callPackage ./eml {};
+
+ end-effector = self.callPackage ./end-effector {};
 
  er-public-msgs = self.callPackage ./er-public-msgs {};
 
@@ -1547,6 +1553,8 @@ self: super: {
  industrial-trajectory-filters = self.callPackage ./industrial-trajectory-filters {};
 
  industrial-utils = self.callPackage ./industrial-utils {};
+
+ inorbit-republisher = self.callPackage ./inorbit-republisher {};
 
  interactive-marker-proxy = self.callPackage ./interactive-marker-proxy {};
 
@@ -3407,6 +3415,8 @@ self: super: {
  roscreate = self.callPackage ./roscreate {};
 
  rosdiagnostic = self.callPackage ./rosdiagnostic {};
+
+ rosee-msg = self.callPackage ./rosee-msg {};
 
  rosemacs = self.callPackage ./rosemacs {};
 
