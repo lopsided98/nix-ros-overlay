@@ -1372,6 +1372,8 @@ self: super: {
 
  rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
 
+ rqt-runtime-monitor = self.callPackage ./rqt-runtime-monitor {};
+
  rqt-service-caller = self.callPackage ./rqt-service-caller {};
 
  rqt-shell = self.callPackage ./rqt-shell {};

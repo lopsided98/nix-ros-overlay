@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bondcpp, boost, catkin, cmake-modules, message-generation, message-runtime, pluginlib, rosconsole, roscpp, rospy, std-msgs, util-linux }:
 buildRosPackage {
   pname = "ros-noetic-nodelet";
-  version = "1.10.1-r1";
+  version = "1.10.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet/1.10.1-1.tar.gz";
-    name = "1.10.1-1.tar.gz";
-    sha256 = "e5fc828f77cb9bc673340bae8e29fde4d16be54ceec4ef23153e29bc9aa0c00b";
+    url = "https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet/1.10.2-1.tar.gz";
+    name = "1.10.2-1.tar.gz";
+    sha256 = "71cd76bda95fa2bcb3938a4b1700faa2dcbaf741e0ba2494934e560b4c5ee92c";
   };
 
   buildType = "catkin";

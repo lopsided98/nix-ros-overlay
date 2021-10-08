@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, qt5, rviz-common }:
 buildRosPackage {
   pname = "ros-foxy-rviz-visual-testing-framework";
-  version = "8.2.3-r1";
+  version = "8.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz_visual_testing_framework/8.2.3-1.tar.gz";
-    name = "8.2.3-1.tar.gz";
-    sha256 = "d6cb35af76e5b9e0231459a6f413f517c4768140a6158628c5f9e806a4d06a1d";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz_visual_testing_framework/8.2.4-1.tar.gz";
+    name = "8.2.4-1.tar.gz";
+    sha256 = "ae58b014d67e43f8334cef764d2fbc581eecffbf704960a9f86a3b17b8428557";
   };
 
   buildType = "ament_cmake";

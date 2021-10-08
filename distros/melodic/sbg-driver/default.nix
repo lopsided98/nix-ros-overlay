@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-sbg-driver";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/SBG-Systems/sbg_ros_driver-release/archive/release/melodic/sbg_driver/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "d9eacffb9bd5b9b0807ad482598c36932f04ca9b8313bc1714c140a6c5a02d7b";
+    url = "https://github.com/SBG-Systems/sbg_ros_driver-release/archive/release/melodic/sbg_driver/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "76e75583d09bd612ed0d336e641cc886601ff2990e07c9baeeba1d3ab8097997";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, roslaunch, roslib, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-dbw-mkz-description";
-  version = "1.4.0-r1";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/noetic/dbw_mkz_description/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "7ab02ae3997621fd53c3693f9851bd6fbcdf047b98d5c20eaba770394f5d1612";
+    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/noetic/dbw_mkz_description/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "d991ee4c29949a3aa20cdb07ca19a3dab32721a6296d4791a422e7f9f4bddafa";
   };
 
   buildType = "catkin";

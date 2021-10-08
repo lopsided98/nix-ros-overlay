@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosconsole, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-rosfmt";
-  version = "6.2.0-r1";
+  version = "7.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosfmt-release/archive/release/melodic/rosfmt/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "2d4429dfb2fe8c718c060da04c0ac1cfbbf3befcdcca82b079bcdc9f8f1bfe53";
+    url = "https://github.com/xqms/rosfmt-release/archive/release/melodic/rosfmt/7.0.0-1.tar.gz";
+    name = "7.0.0-1.tar.gz";
+    sha256 = "9b377b866f2d9d6fc807b982f0893cf58a95fbce0af4a7cc92b88507db5c037b";
   };
 
   buildType = "catkin";

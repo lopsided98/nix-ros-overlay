@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, console-bridge, console-bridge-vendor, geometry-msgs, rcutils }:
 buildRosPackage {
   pname = "ros-foxy-tf2";
-  version = "0.13.11-r1";
+  version = "0.13.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/tf2/0.13.11-1.tar.gz";
-    name = "0.13.11-1.tar.gz";
-    sha256 = "e3a4075c30e851c54d0a4449bc01246a2aaed421f9270d14ade587f262a273d1";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/tf2/0.13.12-1.tar.gz";
+    name = "0.13.12-1.tar.gz";
+    sha256 = "511a596613d525ac12605da01086e7399a4642b722ec177482242587a8fb7d7a";
   };
 
   buildType = "ament_cmake";

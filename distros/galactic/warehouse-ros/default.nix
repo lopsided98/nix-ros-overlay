@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-lint-auto, boost, geometry-msgs, openssl, pluginlib, rclcpp, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-galactic-warehouse-ros";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/warehouse_ros-release/archive/release/galactic/warehouse_ros/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "5de10f5f42f9a055c0775b226714bd629f9b0b7fcf682a1cb89ce12735217331";
+    url = "https://github.com/moveit/warehouse_ros-release/archive/release/galactic/warehouse_ros/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "c559cc10d1bdb1fbce7222f80c65e042fdc094661fa9a876c2e0669fde8140b3";
   };
 
   buildType = "ament_cmake";

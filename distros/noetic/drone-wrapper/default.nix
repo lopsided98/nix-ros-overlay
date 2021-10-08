@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, mavros, mavros-msgs, rospy, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-drone-wrapper";
-  version = "1.4.0-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/noetic/drone_wrapper/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "a08c33118fc65b516e994a1c0d433256fd4e3a9b2a2f686726dcb6915e234b8e";
+    url = "https://github.com/JdeRobot/drones-release/archive/release/noetic/drone_wrapper/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "a3b6b97dd4608ffae016999446165c3b7cdc2a25845cc7344482d58ded3e52c3";
   };
 
   buildType = "catkin";
