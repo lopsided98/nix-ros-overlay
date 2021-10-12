@@ -42,6 +42,8 @@ _runCatkinEnvHook() {
 _runCatkinEnvHooksArray() {
   # Run hooks in sorted order of their file names
   # This would fail if a filename contained EOT
+  
+  # Work around https://github.com/NixOS/nix/issues/5262
   local eot=$(printf '\004')
   while IFS= read -rd '' hook; do
     _runCatkinEnvHook "$hook"
