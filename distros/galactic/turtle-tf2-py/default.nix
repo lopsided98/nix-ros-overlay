@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, launch, launch-ros, pythonPackages, rclpy, tf-transformations, tf2-ros, turtlesim }:
 buildRosPackage {
   pname = "ros-galactic-turtle-tf2-py";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/galactic/turtle_tf2_py/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "6c3e3d5ccfc070eae63e8529368c0071d747c74511917b6d410ebaf54c2b9189";
+    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/galactic/turtle_tf2_py/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "0e430ea4379a34cd7c85e0c4a51ef3b41cb290e5a836762200fe0e6ce1d1f15f";
   };
 
   buildType = "ament_python";

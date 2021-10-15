@@ -236,6 +236,14 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
+ dolly = self.callPackage ./dolly {};
+
+ dolly-follow = self.callPackage ./dolly-follow {};
+
+ dolly-gazebo = self.callPackage ./dolly-gazebo {};
+
+ dolly-ignition = self.callPackage ./dolly-ignition {};
+
  domain-bridge = self.callPackage ./domain-bridge {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
@@ -563,6 +571,8 @@ self: super: {
  moveit-ros = self.callPackage ./moveit-ros {};
 
  moveit-ros-benchmarks = self.callPackage ./moveit-ros-benchmarks {};
+
+ moveit-ros-control-interface = self.callPackage ./moveit-ros-control-interface {};
 
  moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
 
@@ -1445,6 +1455,8 @@ self: super: {
  visualization-msgs = self.callPackage ./visualization-msgs {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 

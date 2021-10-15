@@ -3052,6 +3052,8 @@ self: super: {
 
  qt-gui-py-common = self.callPackage ./qt-gui-py-common {};
 
+ qt-paramedit = self.callPackage ./qt-paramedit {};
+
  qt-qmake = self.callPackage ./qt-qmake {};
 
  qt-ros = self.callPackage ./qt-ros {};
@@ -3623,6 +3625,8 @@ self: super: {
  rqt-multiplot = self.callPackage ./rqt-multiplot {};
 
  rqt-nav-view = self.callPackage ./rqt-nav-view {};
+
+ rqt-paramedit = self.callPackage ./rqt-paramedit {};
 
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
