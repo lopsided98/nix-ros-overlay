@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, roslib, rospy, rqt-gui, rqt-gui-py, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rqt-ground-robot-teleop";
-  version = "1.3.8-r1";
+  version = "1.3.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/rqt_ground_robot_teleop/1.3.8-1.tar.gz";
-    name = "1.3.8-1.tar.gz";
-    sha256 = "889e5838ef66a6a37cf69424708b51bdbe3ce73e1407d6d41d7dcfde40ddfcbe";
+    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/rqt_ground_robot_teleop/1.3.9-1.tar.gz";
+    name = "1.3.9-1.tar.gz";
+    sha256 = "e35de51c03c4cda07e7bcac3c7891d12ef7d6b24b3c468ed295df04d359499f1";
   };
 
   buildType = "catkin";

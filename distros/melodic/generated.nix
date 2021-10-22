@@ -2104,6 +2104,12 @@ self: super: {
 
  microstrain-3dmgx2-imu = self.callPackage ./microstrain-3dmgx2-imu {};
 
+ microstrain-inertial-driver = self.callPackage ./microstrain-inertial-driver {};
+
+ microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
+
+ microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
+
  microstrain-mips = self.callPackage ./microstrain-mips {};
 
  mikrotik-swos-tools = self.callPackage ./mikrotik-swos-tools {};
@@ -3052,6 +3058,8 @@ self: super: {
 
  qt-gui-py-common = self.callPackage ./qt-gui-py-common {};
 
+ qt-paramedit = self.callPackage ./qt-paramedit {};
+
  qt-qmake = self.callPackage ./qt-qmake {};
 
  qt-ros = self.callPackage ./qt-ros {};
@@ -3624,6 +3632,8 @@ self: super: {
 
  rqt-nav-view = self.callPackage ./rqt-nav-view {};
 
+ rqt-paramedit = self.callPackage ./rqt-paramedit {};
+
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
  rqt-plot = self.callPackage ./rqt-plot {};
@@ -3999,6 +4009,8 @@ self: super: {
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
+
+ tello-driver = self.callPackage ./tello-driver {};
 
  teraranger = self.callPackage ./teraranger {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ublox-gps, ublox-msgs, ublox-serialization }:
 buildRosPackage {
   pname = "ros-melodic-ublox";
-  version = "1.4.1-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/KumarRobotics/ublox-release/archive/release/melodic/ublox/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "88fc16b1221df1f68aecbf5f0edfc0a763fe28055442f5f730c8c7c648a240a8";
+    url = "https://github.com/KumarRobotics/ublox-release/archive/release/melodic/ublox/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "e7ae5c8870070c6229a4a3ff637088e3e8060220889dfed4a9a6a3f563a94d6d";
   };
 
   buildType = "catkin";

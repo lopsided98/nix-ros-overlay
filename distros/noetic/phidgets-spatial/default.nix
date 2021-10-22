@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, imu-filter-madgwick, nodelet, phidgets-api, pluginlib, roscpp, roslaunch, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-phidgets-spatial";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_spatial/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "2c9ec42c52b8ef017867fac29d9b11c2888bdcf483176a420e3f60769f3e8a9c";
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_spatial/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "17d87ddae46879a5dc801a4385a2581cc928f749870b6aa69ef0705edca948ef";
   };
 
   buildType = "catkin";

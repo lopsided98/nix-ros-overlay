@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bota-node, catkin, geometry-msgs, gtest, rokubimini, rokubimini-bus-manager, rokubimini-ethercat, rokubimini-msgs, rokubimini-serial, rosgraph-msgs, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-bota-driver-testing";
-  version = "0.6.1-r1";
+  version = "0.6.1-r2";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/noetic/bota_driver_testing/0.6.1-1/bota_driver-release-release-noetic-bota_driver_testing-0.6.1-1.tar.gz";
-    name = "bota_driver-release-release-noetic-bota_driver_testing-0.6.1-1.tar.gz";
-    sha256 = "ac50c8e4df53bcde4aa759a249b37ffde265f8382aa38eddf13b4ef00bd164eb";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/noetic/bota_driver_testing/0.6.1-2/bota_driver-release-release-noetic-bota_driver_testing-0.6.1-2.tar.gz";
+    name = "bota_driver-release-release-noetic-bota_driver_testing-0.6.1-2.tar.gz";
+    sha256 = "1b24dff517d15502be681786d9080ef32b006f8f7a4bd7e9a577e5f041b27430";
   };
 
   buildType = "catkin";

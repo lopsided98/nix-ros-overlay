@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, pmb2-2dnav, pmb2-gazebo }:
 buildRosPackage {
   pname = "ros-foxy-pmb2-2dnav-gazebo";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_simulation-gbp/archive/release/foxy/pmb2_2dnav_gazebo/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "588064ee3de24260efde52b106b49951a1e1c07aa28d396a7712bfd57c3ba579";
+    url = "https://github.com/pal-gbp/pmb2_simulation-gbp/archive/release/foxy/pmb2_2dnav_gazebo/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "cb0cd5657a62eb893314ffe69deaca91b90e651e840eb8263bf192c8a180c4c6";
   };
 
   buildType = "ament_cmake";

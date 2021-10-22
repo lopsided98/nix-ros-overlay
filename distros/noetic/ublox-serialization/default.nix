@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roscpp-serialization }:
 buildRosPackage {
   pname = "ros-noetic-ublox-serialization";
-  version = "1.4.1-r2";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/KumarRobotics/ublox-release/archive/release/noetic/ublox_serialization/1.4.1-2.tar.gz";
-    name = "1.4.1-2.tar.gz";
-    sha256 = "99b1445d71dce681e50a7d50580a74bf104e1c09a549d30b46f6e18e1e8146cb";
+    url = "https://github.com/KumarRobotics/ublox-release/archive/release/noetic/ublox_serialization/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "20074e162992ec6207586b72344c2ab8dab07cad30d63af6e705a25a8fb01378";
   };
 
   buildType = "catkin";

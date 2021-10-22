@@ -236,6 +236,14 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
+ dolly = self.callPackage ./dolly {};
+
+ dolly-follow = self.callPackage ./dolly-follow {};
+
+ dolly-gazebo = self.callPackage ./dolly-gazebo {};
+
+ dolly-ignition = self.callPackage ./dolly-ignition {};
+
  domain-bridge = self.callPackage ./domain-bridge {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
@@ -456,6 +464,8 @@ self: super: {
 
  lanelet2-validation = self.callPackage ./lanelet2-validation {};
 
+ laser-filters = self.callPackage ./laser-filters {};
+
  laser-geometry = self.callPackage ./laser-geometry {};
 
  laser-proc = self.callPackage ./laser-proc {};
@@ -564,6 +574,8 @@ self: super: {
 
  moveit-ros-benchmarks = self.callPackage ./moveit-ros-benchmarks {};
 
+ moveit-ros-control-interface = self.callPackage ./moveit-ros-control-interface {};
+
  moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
@@ -585,6 +597,8 @@ self: super: {
  moveit-servo = self.callPackage ./moveit-servo {};
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
+
+ moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -763,6 +777,8 @@ self: super: {
  pluginlib = self.callPackage ./pluginlib {};
 
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
+
+ pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
  position-controllers = self.callPackage ./position-controllers {};
 
@@ -1210,6 +1226,8 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ sbg-driver = self.callPackage ./sbg-driver {};
+
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 
  sdformat-urdf = self.callPackage ./sdformat-urdf {};
@@ -1445,6 +1463,8 @@ self: super: {
  visualization-msgs = self.callPackage ./visualization-msgs {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 
