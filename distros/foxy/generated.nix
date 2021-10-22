@@ -728,6 +728,8 @@ self: super: {
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
+ mppic = self.callPackage ./mppic {};
+
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multires-image = self.callPackage ./multires-image {};
@@ -829,6 +831,10 @@ self: super: {
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
  pal-gazebo-worlds = self.callPackage ./pal-gazebo-worlds {};
+
+ pal-statistics = self.callPackage ./pal-statistics {};
+
+ pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
@@ -1658,13 +1664,19 @@ self: super: {
 
  velodyne = self.callPackage ./velodyne {};
 
+ velodyne-description = self.callPackage ./velodyne-description {};
+
  velodyne-driver = self.callPackage ./velodyne-driver {};
+
+ velodyne-gazebo-plugins = self.callPackage ./velodyne-gazebo-plugins {};
 
  velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
 
  velodyne-msgs = self.callPackage ./velodyne-msgs {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
+ velodyne-simulator = self.callPackage ./velodyne-simulator {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
 
@@ -1677,6 +1689,8 @@ self: super: {
  vrxperience-msgs = self.callPackage ./vrxperience-msgs {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 

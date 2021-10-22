@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, sensor-msgs, std-msgs, ublox-serialization }:
 buildRosPackage {
   pname = "ros-noetic-ublox-msgs";
-  version = "1.4.1-r2";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/KumarRobotics/ublox-release/archive/release/noetic/ublox_msgs/1.4.1-2.tar.gz";
-    name = "1.4.1-2.tar.gz";
-    sha256 = "1ad2f25900e26c8d672d2d87eda24d430a0b02bad9c10467309e0d38ce56f401";
+    url = "https://github.com/KumarRobotics/ublox-release/archive/release/noetic/ublox_msgs/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "9fc88ab1605cd2996a97bcbe81ad844a8e8d51d4827f67d4c1ab0a72784d881d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, easy-markers, geometry-msgs, kalman-filter, leg-detector, people-msgs, roslaunch, roslib, roslint, rospy }:
 buildRosPackage {
   pname = "ros-noetic-people-velocity-tracker";
-  version = "1.4.0-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/OSUrobotics/people-release/archive/release/noetic/people_velocity_tracker/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "e01129e7da9a70ca43d9612728c1f44677c8ab050f5af95dc246abbf4f3e64b7";
+    url = "https://github.com/OSUrobotics/people-release/archive/release/noetic/people_velocity_tracker/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "74f53f59f4d27e127b40e908bc6dddc8459ffd2799a54ee69331e136c77a34ed";
   };
 
   buildType = "catkin";

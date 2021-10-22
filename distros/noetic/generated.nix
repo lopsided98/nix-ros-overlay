@@ -2572,6 +2572,8 @@ self: super: {
 
  sainsmart-relay-usb = self.callPackage ./sainsmart-relay-usb {};
 
+ sbg-driver = self.callPackage ./sbg-driver {};
+
  sbpl = self.callPackage ./sbpl {};
 
  sbpl-lattice-planner = self.callPackage ./sbpl-lattice-planner {};

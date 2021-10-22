@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ethercat-grant, rokubimini, rokubimini-bus-manager, rokubimini-msgs, soem }:
 buildRosPackage {
   pname = "ros-noetic-rokubimini-ethercat";
-  version = "0.6.1-r1";
+  version = "0.6.1-r2";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/noetic/rokubimini_ethercat/0.6.1-1/bota_driver-release-release-noetic-rokubimini_ethercat-0.6.1-1.tar.gz";
-    name = "bota_driver-release-release-noetic-rokubimini_ethercat-0.6.1-1.tar.gz";
-    sha256 = "5e7a046ebe1148a8d4d71639807d90e1307bd5aa5874cafdb0dd34933a5ec83d";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/noetic/rokubimini_ethercat/0.6.1-2/bota_driver-release-release-noetic-rokubimini_ethercat-0.6.1-2.tar.gz";
+    name = "bota_driver-release-release-noetic-rokubimini_ethercat-0.6.1-2.tar.gz";
+    sha256 = "f45d85861851179df943fb6dd0908004d15513782b1b8aaa51fcc35b7f188124";
   };
 
   buildType = "catkin";

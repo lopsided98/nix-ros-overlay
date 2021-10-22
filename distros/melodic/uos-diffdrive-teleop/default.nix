@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, ps3joy, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-uos-diffdrive-teleop";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/uos-tools/archive/release/melodic/uos_diffdrive_teleop/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "ed2ad1015d480ccef3959ab73923dd4100fb7f549e5827e15a56a3bfdc31c593";
+    url = "https://github.com/uos-gbp/uos-tools/archive/release/melodic/uos_diffdrive_teleop/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "97046be610e69043ee9998448c35c4427b8acfab629215481681f528de564b75";
   };
 
   buildType = "catkin";
