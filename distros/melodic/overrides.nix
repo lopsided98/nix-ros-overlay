@@ -45,19 +45,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
-  pcl-conversions = rosSuper.pcl-conversions.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix build with PCL >=1.12
-      (self.fetchpatch {
-        url = "https://github.com/ros-perception/perception_pcl/commit/6900f7cf650e6c0df2aef45e0011833905b0ba9e.patch";
-        sha256 = "1s011hrk656a8aziwa1klk20bwyhpvqzh0qcaqv25nnxc946km5a";
-        stripLen = 1;
-      })
-    ];
-  });
-
   pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
     patches ? [], ...
   }: {
