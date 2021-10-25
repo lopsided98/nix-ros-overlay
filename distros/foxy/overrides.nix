@@ -30,16 +30,4 @@ rosSelf: rosSuper: with rosSelf.lib; {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
   };
-
-  yaml-cpp-vendor = rosSuper.yaml-cpp-vendor.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = [
-      # Fix "CMake Error: Unknown argument -std=c++14 -w"
-      (self.fetchpatch {
-        url = "https://github.com/ros2/yaml_cpp_vendor/pull/24.patch";
-        sha256 = "0via2vcvx0r0w8n626n7ghljadd2apdqn0wcqygmgbd7dmvfr97h";
-      })
-    ] ++ patches;
-  });
 }
