@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geographic-msgs, geometry-msgs, rcl-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-mavros-msgs";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/foxy/mavros_msgs/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "6f9d25bfb7647eab9067758e347c9821a892465d88ebf0cd36f0d53672d0ff1f";
+    url = "https://github.com/mavlink/mavros-release/archive/release/foxy/mavros_msgs/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "63c525d4121d4db463fdcc5bd6c0f7e9c00329d7ada37a5cd18ca3040f267df4";
   };
 
   buildType = "ament_cmake";

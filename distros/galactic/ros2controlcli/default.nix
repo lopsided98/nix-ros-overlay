@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, controller-manager, controller-manager-msgs, rclpy, ros2cli, ros2node, ros2param, rosidl-runtime-py }:
 buildRosPackage {
   pname = "ros-galactic-ros2controlcli";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/ros2controlcli/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "89ca90181d5776b2e6d9403db3ef6b97b2c2189ea3314cfbbb57840d6c7d3f1f";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/ros2controlcli/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "3e75ae6da2f26e25c715471c983797aeff3fd941e2e61f938dbe96658592169b";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, console-bridge, mavlink, python3Packages }:
 buildRosPackage {
   pname = "ros-foxy-libmavconn";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/foxy/libmavconn/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "1ace47d553aa6a398fe4d2b90cb52dec75cd86114a724df6631da74eea737604";
+    url = "https://github.com/mavlink/mavros-release/archive/release/foxy/libmavconn/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "128f16112ed4da3414b2bd8f30c2f3eef024ae1f59e9e262f48695529937db09";
   };
 
   buildType = "ament_cmake";

@@ -616,6 +616,8 @@ self: super: {
 
  cv-camera = self.callPackage ./cv-camera {};
 
+ cvp-mesh-planner = self.callPackage ./cvp-mesh-planner {};
+
  dataflow-lite = self.callPackage ./dataflow-lite {};
 
  dataspeed-can = self.callPackage ./dataspeed-can {};
@@ -2089,8 +2091,6 @@ self: super: {
  mesh-msgs-transform = self.callPackage ./mesh-msgs-transform {};
 
  mesh-navigation = self.callPackage ./mesh-navigation {};
-
- mesh-tools = self.callPackage ./mesh-tools {};
 
  message-filters = self.callPackage ./message-filters {};
 
@@ -3736,8 +3736,6 @@ self: super: {
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 
- rviz-mesh-plugin = self.callPackage ./rviz-mesh-plugin {};
-
  rviz-plugin-tutorials = self.callPackage ./rviz-plugin-tutorials {};
 
  rviz-python-tutorial = self.callPackage ./rviz-python-tutorial {};
@@ -4009,8 +4007,6 @@ self: super: {
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
-
- tello-driver = self.callPackage ./tello-driver {};
 
  teraranger = self.callPackage ./teraranger {};
 
@@ -4443,8 +4439,6 @@ self: super: {
  warthog-simulator = self.callPackage ./warthog-simulator {};
 
  warthog-viz = self.callPackage ./warthog-viz {};
-
- wave-front-planner = self.callPackage ./wave-front-planner {};
 
  wave-gazebo = self.callPackage ./wave-gazebo {};
 

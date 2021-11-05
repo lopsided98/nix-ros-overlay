@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, genmsg, geometry-msgs, message-generation, message-runtime, nav-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mbf-msgs";
-  version = "0.3.4-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_msgs/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "ae9411185c0fd34c0c18731b59f14d1fdb62888d0cc6a83b80183231bab7fa0f";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/melodic/mbf_msgs/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "8a7a97b7cd070f511e22b7704a43efa255c789ad5a2d9542a24512c5ac807053";
   };
 
   buildType = "catkin";

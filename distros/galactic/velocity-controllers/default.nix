@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-manager, forward-command-controller, hardware-interface, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-galactic-velocity-controllers";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/velocity_controllers/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "017736d8cc6bcf59a3d42780ebb30bea6912f2ca992ca31d32e73c08fbf6d633";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/velocity_controllers/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "ed095bd439478ba48335b27ff8c76f90b3fe9757684a5249f4a8276a164b5903";
   };
 
   buildType = "ament_cmake";

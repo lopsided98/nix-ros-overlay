@@ -656,13 +656,25 @@ self: super: {
 
  mavros = self.callPackage ./mavros {};
 
+ mavros-extras = self.callPackage ./mavros-extras {};
+
  mavros-msgs = self.callPackage ./mavros-msgs {};
 
  menge-vendor = self.callPackage ./menge-vendor {};
 
  message-filters = self.callPackage ./message-filters {};
 
+ micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
+
+ micro-ros-diagnostic-msgs = self.callPackage ./micro-ros-diagnostic-msgs {};
+
  micro-ros-msgs = self.callPackage ./micro-ros-msgs {};
+
+ microstrain-inertial-driver = self.callPackage ./microstrain-inertial-driver {};
+
+ microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
+
+ microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
@@ -1244,6 +1256,8 @@ self: super: {
 
  rosapi = self.callPackage ./rosapi {};
 
+ rosapi-msgs = self.callPackage ./rosapi-msgs {};
+
  rosauth = self.callPackage ./rosauth {};
 
  rosbag2 = self.callPackage ./rosbag2 {};
@@ -1273,6 +1287,8 @@ self: super: {
  rosbridge-server = self.callPackage ./rosbridge-server {};
 
  rosbridge-suite = self.callPackage ./rosbridge-suite {};
+
+ rosbridge-test-msgs = self.callPackage ./rosbridge-test-msgs {};
 
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
 
@@ -1694,19 +1710,13 @@ self: super: {
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 
- webots-ros2-abb = self.callPackage ./webots-ros2-abb {};
-
  webots-ros2-control = self.callPackage ./webots-ros2-control {};
 
  webots-ros2-core = self.callPackage ./webots-ros2-core {};
 
- webots-ros2-demos = self.callPackage ./webots-ros2-demos {};
-
  webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
 
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
-
- webots-ros2-examples = self.callPackage ./webots-ros2-examples {};
 
  webots-ros2-importer = self.callPackage ./webots-ros2-importer {};
 
@@ -1722,11 +1732,7 @@ self: super: {
 
  webots-ros2-turtlebot = self.callPackage ./webots-ros2-turtlebot {};
 
- webots-ros2-tutorials = self.callPackage ./webots-ros2-tutorials {};
-
  webots-ros2-universal-robot = self.callPackage ./webots-ros2-universal-robot {};
-
- webots-ros2-ur-e-description = self.callPackage ./webots-ros2-ur-e-description {};
 
  wiimote = self.callPackage ./wiimote {};
 

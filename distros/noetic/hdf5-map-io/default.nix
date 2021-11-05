@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, lvr2 }:
 buildRosPackage {
   pname = "ros-noetic-hdf5-map-io";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/noetic/hdf5_map_io/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "690c310577b2abed1587f3a063ba0419bc77797f19721067524f16030cf3842d";
+    url = "https://github.com/uos-gbp/mesh-tools/archive/release/noetic/hdf5_map_io/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "31ca04db6683ffac320887907022e7d8ae3bf6965eb11252d0bf1f6836f4b571";
   };
 
   buildType = "catkin";

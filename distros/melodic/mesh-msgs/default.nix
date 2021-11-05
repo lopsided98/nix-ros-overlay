@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mesh-msgs";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/mesh_msgs/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "ba6c804561859c215f9c3cd004171cb5590ec74a942cd4a8f52f5ca8946e6a53";
+    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/mesh_msgs/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "af4b068be99fc1027125bc8e7546fcd8b2e2acb92da883a982e1e327ec64b669";
   };
 
   buildType = "catkin";

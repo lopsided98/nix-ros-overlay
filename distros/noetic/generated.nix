@@ -144,6 +144,8 @@ self: super: {
 
  calibration-setup-helper = self.callPackage ./calibration-setup-helper {};
 
+ camera-aravis = self.callPackage ./camera-aravis {};
+
  camera-calibration = self.callPackage ./camera-calibration {};
 
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
@@ -1502,8 +1504,6 @@ self: super: {
 
  mesh-navigation = self.callPackage ./mesh-navigation {};
 
- mesh-tools = self.callPackage ./mesh-tools {};
-
  message-filters = self.callPackage ./message-filters {};
 
  message-generation = self.callPackage ./message-generation {};
@@ -1635,6 +1635,8 @@ self: super: {
  moveit-servo = self.callPackage ./moveit-servo {};
 
  moveit-setup-assistant = self.callPackage ./moveit-setup-assistant {};
+
+ moveit-sim-controller = self.callPackage ./moveit-sim-controller {};
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
@@ -2446,6 +2448,8 @@ self: super: {
 
  roswtf = self.callPackage ./roswtf {};
 
+ roswww = self.callPackage ./roswww {};
+
  rotate-recovery = self.callPackage ./rotate-recovery {};
 
  route-network = self.callPackage ./route-network {};
@@ -2553,8 +2557,6 @@ self: super: {
  rviz-animated-view-controller = self.callPackage ./rviz-animated-view-controller {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
-
- rviz-mesh-plugin = self.callPackage ./rviz-mesh-plugin {};
 
  rviz-plugin-tutorials = self.callPackage ./rviz-plugin-tutorials {};
 

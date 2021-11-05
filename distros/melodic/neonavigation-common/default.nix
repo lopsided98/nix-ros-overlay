@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roslint, rostest, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-neonavigation-common";
-  version = "0.11.0-r1";
+  version = "0.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/neonavigation_common/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "c8905e70f394a421dd865180afb90d018ede6d32c0ae36da496c700432059b7e";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/neonavigation_common/0.11.1-1.tar.gz";
+    name = "0.11.1-1.tar.gz";
+    sha256 = "4d3311a9e2222c1ec2cdd168d91a3cc72ee0fd8e9959f0341d0d871067bd569d";
   };
 
   buildType = "catkin";

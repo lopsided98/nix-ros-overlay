@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mbf-abstract-core, mbf-abstract-nav, mbf-costmap-core, mbf-costmap-nav, mbf-msgs, mbf-simple-nav, mbf-utility }:
 buildRosPackage {
   pname = "ros-noetic-move-base-flex";
-  version = "0.3.4-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/move_base_flex/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "70d41a45b7c83d5a3fd7089cf1daff41118b15ddde8dace0fbcff57e85fc2e0d";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/move_base_flex/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "5f98632ccdf48a5d5ce61e1da7db0f15d36ea302dfa83b0f8f4981b428511a90";
   };
 
   buildType = "catkin";

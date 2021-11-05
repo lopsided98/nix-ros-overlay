@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-action, test-msgs }:
 buildRosPackage {
   pname = "ros-foxy-realtime-tools";
-  version = "2.1.1-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/realtime_tools-release/archive/release/foxy/realtime_tools/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "229436487700e89cd204189c2dd38c405579adb4b707c943a0195b12da3509d1";
+    url = "https://github.com/ros-gbp/realtime_tools-release/archive/release/foxy/realtime_tools/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "7ccfcdccb6f2398cbe2e563fc7b458640fa6f0efeb5a44e5161eaa232df13a28";
   };
 
   buildType = "ament_cmake";

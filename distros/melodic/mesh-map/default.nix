@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, mesh-client, mesh-msgs-conversions, pluginlib, roscpp, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-mesh-map";
-  version = "1.0.0-r3";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/mesh_map/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "6b8546ff1989bf3ba3e3b9f9e5e90e272c1e0071425a0477879d15f428c03156";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/mesh_map/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "ced769075211598fadf2945220bde45d0e8121a8f3e8e0517e3339e50204a697";
   };
 
   buildType = "catkin";

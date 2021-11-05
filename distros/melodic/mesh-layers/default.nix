@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, mesh-map }:
 buildRosPackage {
   pname = "ros-melodic-mesh-layers";
-  version = "1.0.0-r3";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/mesh_layers/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "582abf8dd35ac49906d5ae794999562d74379ad9d03c055405b5680c73812011";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/mesh_layers/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "3670389864a814d1be85ca20826d8ac929330466268850b39a44c0bd50aceb6d";
   };
 
   buildType = "catkin";

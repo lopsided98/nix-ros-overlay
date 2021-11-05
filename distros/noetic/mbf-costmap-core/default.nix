@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, geometry-msgs, mbf-abstract-core, mbf-utility, nav-core, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-mbf-costmap-core";
-  version = "0.3.4-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/mbf_costmap_core/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "d3707028367b85f5eb9c4e62278a47fe353d7e856b53d00c5b67c3cbf32aab21";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/mbf_costmap_core/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "9942ff1299b2b7714ff6276b0b42e87c2fefb00e01f758dc65e7d322204538ba";
   };
 
   buildType = "catkin";

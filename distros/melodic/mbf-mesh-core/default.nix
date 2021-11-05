@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mbf-abstract-core, mesh-map }:
 buildRosPackage {
   pname = "ros-melodic-mbf-mesh-core";
-  version = "1.0.0-r3";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/mbf_mesh_core/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "b46630c003dfda4f59517bedaec6f669ad00b0bd7b51b5adcb3b269ec9a3f0a2";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/mbf_mesh_core/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "e90b7695399948cfe2e81f2a1a7a72039bdb08f31e9ec199ad0cf6be03762170";
   };
 
   buildType = "catkin";
