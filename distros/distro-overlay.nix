@@ -25,13 +25,29 @@ let
     python = pythonOverridesFor python;
     pythonPackages = rosSelf.python.pkgs;
 
-    python3 = pythonOverridesFor self.python3;
+    python3 = pythonOverridesFor self.python38;
     python3Packages = rosSelf.python3.pkgs;
 
-    boost = self.boost.override {
+    boost = (self.boost.override {
       python = rosSelf.python;
       enablePython = true;
-    };
+      enableNumpy = true;
+    }).overrideAttrs (old: {
+      # boost python detection from mrt is somewhat fragile. If we
+      # build with python-3.8, for example, we get libraries with
+      # names like `libboost_python38.so`. mrt looks for
+      # `libboost_python3.so`, so we help it find the libraries it's
+      # looking for.
+      postFixup =
+        let suffix = super.lib.strings.concatStrings
+          (super.lib.splitVersion rosSelf.python.pythonVersion);
+        in old.postFixup or "" + ''
+        if [ ! -f $out/lib/libboost_python3.so ]; then
+          ln -s $out/lib/libboost_numpy${suffix}.so $out/lib/libboost_numpy3.so
+          ln -s $out/lib/libboost_python${suffix}.so $out/lib/libboost_python3.so
+        fi
+      '';
+    });
   };
 
   overrides = rosSelf: rosSuper: with rosSelf.lib; {

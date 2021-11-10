@@ -16,7 +16,7 @@ self: super: {
 
     noetic = import ./distro-overlay.nix {
       distro = "noetic";
-      python = self.python3;
+      python = self.python38;
     } self super;
 
     dashing = import ./distro-overlay.nix {
