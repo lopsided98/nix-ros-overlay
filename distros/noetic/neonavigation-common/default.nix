@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roslint, rostest, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-neonavigation-common";
-  version = "0.11.0-r1";
+  version = "0.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/neonavigation_common/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "46e4902fe6f31055311cb20114e74e1ed8c1a2968d6885ef87d2e07937c01843";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/neonavigation_common/0.11.2-1.tar.gz";
+    name = "0.11.2-1.tar.gz";
+    sha256 = "cfbf49df3f8a85b14e23505942c17f038722a1a2b67ef1d6eb25a8c343faa2d5";
   };
 
   buildType = "catkin";

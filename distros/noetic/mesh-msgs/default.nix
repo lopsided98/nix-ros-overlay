@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mesh-msgs";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/noetic/mesh_msgs/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "08dfa61162be8282356379328097699ba5a051d050c928a1d5a61e9d1c4ddff5";
+    url = "https://github.com/uos-gbp/mesh-tools/archive/release/noetic/mesh_msgs/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "4ac4997e202d67691249727fe4aa2a5129ce2292de59ba38a963020dfcdb1853";
   };
 
   buildType = "catkin";

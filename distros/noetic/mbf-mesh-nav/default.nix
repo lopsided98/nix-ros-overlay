@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, mbf-abstract-nav, mbf-mesh-core, mesh-map, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-mbf-mesh-nav";
-  version = "1.0.0-r2";
+  version = "1.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mbf_mesh_nav/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "13abd3b0db94a01e7f4c6e34370779dd0ac47e383a217adef1ab1a09e3886777";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mbf_mesh_nav/1.0.1-2.tar.gz";
+    name = "1.0.1-2.tar.gz";
+    sha256 = "83155069a48c6a31234e76247db9d783bb8edf2037323ae9db684cf99f0f9b11";
   };
 
   buildType = "catkin";

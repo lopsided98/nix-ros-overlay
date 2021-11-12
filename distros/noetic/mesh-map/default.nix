@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, mesh-client, mesh-msgs-conversions, pluginlib, roscpp, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-mesh-map";
-  version = "1.0.0-r2";
+  version = "1.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mesh_map/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "3b6bc068a0bd78004896a044cbf855cea9431968fa1d83163e609f2517d1c55e";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mesh_map/1.0.1-2.tar.gz";
+    name = "1.0.1-2.tar.gz";
+    sha256 = "449d021b79a204f4b71da4eb3259d7a62d9f35d32ad38b0629c7eac9fbb2737e";
   };
 
   buildType = "catkin";

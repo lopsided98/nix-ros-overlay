@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-action, test-msgs }:
 buildRosPackage {
   pname = "ros-galactic-realtime-tools";
-  version = "2.1.1-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/realtime_tools-release/archive/release/galactic/realtime_tools/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "a14f59a183ac57b0724868652268be49e4170b0d6e9c1aaa8685562812a5af6e";
+    url = "https://github.com/ros-gbp/realtime_tools-release/archive/release/galactic/realtime_tools/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "4126ff1601cf3dd58c01280a4cf320d53b1350c389918853002332eb445e533b";
   };
 
   buildType = "ament_cmake";

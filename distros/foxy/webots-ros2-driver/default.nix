@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, pluginlib, python-cmake-module, rclcpp, rclcpp-lifecycle, rclpy, sensor-msgs, std-msgs, tf2-ros, tinyxml2-vendor, vision-msgs, webots-ros2-msgs }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-driver";
-  version = "1.1.1-r1";
+  version = "1.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros2-release/archive/release/foxy/webots_ros2_driver/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "4c4fb4a35a13314a6c34e4a3feac1abce02e525a7111ec3e8e19a37d404f6fc3";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_driver/1.1.3-2.tar.gz";
+    name = "1.1.3-2.tar.gz";
+    sha256 = "08fa0ed0713f9cf2ed445167cce8f2f5c9044e833444780041075ddda95c9fb0";
   };
 
   buildType = "ament_cmake";

@@ -616,6 +616,8 @@ self: super: {
 
  cv-camera = self.callPackage ./cv-camera {};
 
+ cvp-mesh-planner = self.callPackage ./cvp-mesh-planner {};
+
  dataflow-lite = self.callPackage ./dataflow-lite {};
 
  dataspeed-can = self.callPackage ./dataspeed-can {};
@@ -2090,8 +2092,6 @@ self: super: {
 
  mesh-navigation = self.callPackage ./mesh-navigation {};
 
- mesh-tools = self.callPackage ./mesh-tools {};
-
  message-filters = self.callPackage ./message-filters {};
 
  message-generation = self.callPackage ./message-generation {};
@@ -3484,6 +3484,8 @@ self: super: {
 
  rosmsg = self.callPackage ./rosmsg {};
 
+ rosmsg-cpp = self.callPackage ./rosmsg-cpp {};
+
  rosnode = self.callPackage ./rosnode {};
 
  rosnode-rtc = self.callPackage ./rosnode-rtc {};
@@ -3735,8 +3737,6 @@ self: super: {
  rviz-animated-view-controller = self.callPackage ./rviz-animated-view-controller {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
-
- rviz-mesh-plugin = self.callPackage ./rviz-mesh-plugin {};
 
  rviz-plugin-tutorials = self.callPackage ./rviz-plugin-tutorials {};
 
@@ -4443,8 +4443,6 @@ self: super: {
  warthog-simulator = self.callPackage ./warthog-simulator {};
 
  warthog-viz = self.callPackage ./warthog-viz {};
-
- wave-front-planner = self.callPackage ./wave-front-planner {};
 
  wave-gazebo = self.callPackage ./wave-gazebo {};
 

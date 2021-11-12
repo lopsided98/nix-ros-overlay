@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, eigen, jsoncpp, lvr2, pkg-config, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-mesh-client";
-  version = "1.0.0-r2";
+  version = "1.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mesh_client/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "1855347ff80f703c15eb541287e0289191215fdbfbe55ecdd504a45ee4ff4048";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mesh_client/1.0.1-2.tar.gz";
+    name = "1.0.1-2.tar.gz";
+    sha256 = "2e48408be7af93a21f425580e2b528bf61f4e4563f2cb9c089acc717f5e4acfa";
   };
 
   buildType = "catkin";

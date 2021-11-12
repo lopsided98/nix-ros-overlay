@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, hdf5-map-io, label-manager, mesh-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mesh-msgs-hdf5";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/noetic/mesh_msgs_hdf5/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "88beecc46310337e26e19043aa216d8420ed7c32e609f2199ee6871fcfaa4018";
+    url = "https://github.com/uos-gbp/mesh-tools/archive/release/noetic/mesh_msgs_hdf5/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "7279fa88fdb99d73322b17b85ba620afa1957bc3ff85ffda44fbef68b30d7ca3";
   };
 
   buildType = "catkin";
@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Read and write mesh_msgs to and from hdf5'';
+    description = ''Read mesh_msgs from hdf5'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

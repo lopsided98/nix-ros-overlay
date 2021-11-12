@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mbf-abstract-core, mesh-map }:
 buildRosPackage {
   pname = "ros-noetic-mbf-mesh-core";
-  version = "1.0.0-r2";
+  version = "1.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mbf_mesh_core/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "c8100c5101802412cc36db9aad410c7d28dd2a8935c39b8e552fa82bd2d6c6c0";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mbf_mesh_core/1.0.1-2.tar.gz";
+    name = "1.0.1-2.tar.gz";
+    sha256 = "f337999c2ea623831a872308f4932be1eca59747d293a5fd16247240063859be";
   };
 
   buildType = "catkin";

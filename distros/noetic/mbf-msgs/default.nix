@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, genmsg, geometry-msgs, message-generation, message-runtime, nav-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mbf-msgs";
-  version = "0.3.4-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/mbf_msgs/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "23c083d3ba5a607a3abb85791d611112ad960073b2ef52f90aae97811c1f7fe6";
+    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/mbf_msgs/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "1f43c2ee455624205424362a51065d378e4a24755d17d0b166c746caf1cc0378";
   };
 
   buildType = "catkin";

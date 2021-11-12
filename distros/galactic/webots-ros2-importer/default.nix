@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, python3Packages, pythonPackages, xacro }:
 buildRosPackage {
   pname = "ros-galactic-webots-ros2-importer";
-  version = "1.0.6-r2";
+  version = "1.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2_importer/1.0.6-2.tar.gz";
-    name = "1.0.6-2.tar.gz";
-    sha256 = "ae80d7e765bbef9f871fc59834cf914796fe9264d9be3a2357610163bb03d062";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2_importer/1.1.2-2.tar.gz";
+    name = "1.1.2-2.tar.gz";
+    sha256 = "1e174310676bad25e5353d00bdc2697a37a6d95bc9a04b10e9c134906f60327e";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pillow python3Packages.pycodestyle pythonPackages.numpy pythonPackages.pillow pythonPackages.pytest ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.numpy python3Packages.pillow python3Packages.pycodestyle pythonPackages.pytest ];
   propagatedBuildInputs = [ builtin-interfaces python3Packages.lark-parser python3Packages.pycollada xacro ];
 
   meta = {

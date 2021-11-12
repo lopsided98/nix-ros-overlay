@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, laser-geometry, pcl, pcl-ros, roscpp, sensor-msgs, std-msgs, tf, vtkWithQt5 }:
 buildRosPackage {
   pname = "ros-melodic-ira-laser-tools";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/iralabdisco/ira_laser_tools-release/archive/release/melodic/ira_laser_tools/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "3f6b86175e481a8d8c96f645f828fb3c7f9627a6d3ae87f1c212bf8a022689c7";
+    url = "https://github.com/iralabdisco/ira_laser_tools-release/archive/release/melodic/ira_laser_tools/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "6986f1a7ae2ad688a40edb8e0dc5687eca413a21631eaae2c608c6f84fa06541";
   };
 
   buildType = "catkin";
