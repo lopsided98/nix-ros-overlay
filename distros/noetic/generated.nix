@@ -32,8 +32,6 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
- app-manager = self.callPackage ./app-manager {};
-
  apriltag = self.callPackage ./apriltag {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
@@ -143,6 +141,8 @@ self: super: {
  calibration-msgs = self.callPackage ./calibration-msgs {};
 
  calibration-setup-helper = self.callPackage ./calibration-setup-helper {};
+
+ camera-aravis = self.callPackage ./camera-aravis {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
 
@@ -443,6 +443,8 @@ self: super: {
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cv-camera = self.callPackage ./cv-camera {};
+
+ cvp-mesh-planner = self.callPackage ./cvp-mesh-planner {};
 
  darknet-ros = self.callPackage ./darknet-ros {};
 
@@ -1502,8 +1504,6 @@ self: super: {
 
  mesh-navigation = self.callPackage ./mesh-navigation {};
 
- mesh-tools = self.callPackage ./mesh-tools {};
-
  message-filters = self.callPackage ./message-filters {};
 
  message-generation = self.callPackage ./message-generation {};
@@ -1635,6 +1635,8 @@ self: super: {
  moveit-servo = self.callPackage ./moveit-servo {};
 
  moveit-setup-assistant = self.callPackage ./moveit-setup-assistant {};
+
+ moveit-sim-controller = self.callPackage ./moveit-sim-controller {};
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
@@ -2380,6 +2382,8 @@ self: super: {
 
  rosmsg = self.callPackage ./rosmsg {};
 
+ rosmsg-cpp = self.callPackage ./rosmsg-cpp {};
+
  rosnode = self.callPackage ./rosnode {};
 
  rosout = self.callPackage ./rosout {};
@@ -2445,6 +2449,8 @@ self: super: {
  rosunit = self.callPackage ./rosunit {};
 
  roswtf = self.callPackage ./roswtf {};
+
+ roswww = self.callPackage ./roswww {};
 
  rotate-recovery = self.callPackage ./rotate-recovery {};
 
@@ -2553,8 +2559,6 @@ self: super: {
  rviz-animated-view-controller = self.callPackage ./rviz-animated-view-controller {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
-
- rviz-mesh-plugin = self.callPackage ./rviz-mesh-plugin {};
 
  rviz-plugin-tutorials = self.callPackage ./rviz-plugin-tutorials {};
 
@@ -2781,6 +2785,8 @@ self: super: {
  tesseract-scene-graph = self.callPackage ./tesseract-scene-graph {};
 
  tesseract-srdf = self.callPackage ./tesseract-srdf {};
+
+ tesseract-state-solver = self.callPackage ./tesseract-state-solver {};
 
  tesseract-support = self.callPackage ./tesseract-support {};
 
@@ -3041,8 +3047,6 @@ self: super: {
  vrpn-client-ros = self.callPackage ./vrpn-client-ros {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
-
- wave-front-planner = self.callPackage ./wave-front-planner {};
 
  web-video-server = self.callPackage ./web-video-server {};
 

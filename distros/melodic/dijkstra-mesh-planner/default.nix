@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, mbf-mesh-core, mbf-msgs, mbf-utility, mesh-map, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-dijkstra-mesh-planner";
-  version = "1.0.0-r3";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/dijkstra_mesh_planner/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "83c7c2cbb2848d5e8be81d6a33412548a8e01c8cea5405a5ae9787b0f2133951";
+    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/dijkstra_mesh_planner/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "9b0df6ecfa43cd8dde6d68e8253170f015448b0d74338fe1214af831d4771d9e";
   };
 
   buildType = "catkin";

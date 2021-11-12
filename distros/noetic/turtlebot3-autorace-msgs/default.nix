@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-turtlebot3-autorace-msgs";
-  version = "1.1.0-r7";
+  version = "1.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace_2020_release/archive/release/noetic/turtlebot3_autorace_msgs/1.1.0-7.tar.gz";
-    name = "1.1.0-7.tar.gz";
-    sha256 = "4fce4e1f725b2eb980e9c499c2063fa0aab3c0accfb59017f52f91aece9423e1";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace_2020_release/archive/release/noetic/turtlebot3_autorace_msgs/1.1.1-2.tar.gz";
+    name = "1.1.1-2.tar.gz";
+    sha256 = "0be60a38d898e2c517a0ce6fba2360255125adbaf9593d1abf76382dcb63bc21";
   };
 
   buildType = "catkin";

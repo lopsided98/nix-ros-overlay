@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-robot-calibration-msgs";
-  version = "0.6.4-r1";
+  version = "0.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/noetic/robot_calibration_msgs/0.6.4-1.tar.gz";
-    name = "0.6.4-1.tar.gz";
-    sha256 = "90dcef12df3501596deef0b54aecae6da568f24a0702d533a16f3503dace8215";
+    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/noetic/robot_calibration_msgs/0.6.5-1.tar.gz";
+    name = "0.6.5-1.tar.gz";
+    sha256 = "dcc0c22d1e110b7eb81658606d1431938b2195c86d95bc8f36ee98aae92d665d";
   };
 
   buildType = "catkin";

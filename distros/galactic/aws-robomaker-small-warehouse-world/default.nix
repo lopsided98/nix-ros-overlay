@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gazebo, gazebo-plugins, gazebo-ros }:
 buildRosPackage {
   pname = "ros-galactic-aws-robomaker-small-warehouse-world";
-  version = "1.0.1-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/aws_robomaker_small_warehouse_world-release/archive/release/galactic/aws_robomaker_small_warehouse_world/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "7485dfccaa889cdfa621d0e8e7d05236a36fc3021c913123f83edda251bd310c";
+    url = "https://github.com/aws-gbp/aws_robomaker_small_warehouse_world-release/archive/release/galactic/aws_robomaker_small_warehouse_world/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "846ceec0b2874b4a3af5df80f660ae65dc4d8e1fc13e2d6ea8dd9d62a437ca4d";
   };
 
   buildType = "ament_cmake";

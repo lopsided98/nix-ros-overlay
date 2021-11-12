@@ -348,6 +348,10 @@ self: super: {
 
  gazebo-ros = self.callPackage ./gazebo-ros {};
 
+ gazebo-ros2-control = self.callPackage ./gazebo-ros2-control {};
+
+ gazebo-ros2-control-demos = self.callPackage ./gazebo-ros2-control-demos {};
+
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
  geodesy = self.callPackage ./geodesy {};
@@ -530,13 +534,25 @@ self: super: {
 
  mavros = self.callPackage ./mavros {};
 
+ mavros-extras = self.callPackage ./mavros-extras {};
+
  mavros-msgs = self.callPackage ./mavros-msgs {};
 
  menge-vendor = self.callPackage ./menge-vendor {};
 
  message-filters = self.callPackage ./message-filters {};
 
+ micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
+
+ micro-ros-diagnostic-msgs = self.callPackage ./micro-ros-diagnostic-msgs {};
+
  micro-ros-msgs = self.callPackage ./micro-ros-msgs {};
+
+ microstrain-inertial-driver = self.callPackage ./microstrain-inertial-driver {};
+
+ microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
+
+ microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
@@ -699,6 +715,10 @@ self: super: {
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
  ouster-msgs = self.callPackage ./ouster-msgs {};
+
+ pal-statistics = self.callPackage ./pal-statistics {};
+
+ pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
@@ -1062,6 +1082,8 @@ self: super: {
 
  rosapi = self.callPackage ./rosapi {};
 
+ rosapi-msgs = self.callPackage ./rosapi-msgs {};
+
  rosbag2 = self.callPackage ./rosbag2 {};
 
  rosbag2-bag-v2-plugins = self.callPackage ./rosbag2-bag-v2-plugins {};
@@ -1095,6 +1117,8 @@ self: super: {
  rosbridge-server = self.callPackage ./rosbridge-server {};
 
  rosbridge-suite = self.callPackage ./rosbridge-suite {};
+
+ rosbridge-test-msgs = self.callPackage ./rosbridge-test-msgs {};
 
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
 
@@ -1245,6 +1269,8 @@ self: super: {
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
+
+ simple-launch = self.callPackage ./simple-launch {};
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
@@ -1468,31 +1494,29 @@ self: super: {
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 
- webots-ros2-abb = self.callPackage ./webots-ros2-abb {};
+ webots-ros2-control = self.callPackage ./webots-ros2-control {};
 
  webots-ros2-core = self.callPackage ./webots-ros2-core {};
 
- webots-ros2-demos = self.callPackage ./webots-ros2-demos {};
+ webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
 
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
 
- webots-ros2-examples = self.callPackage ./webots-ros2-examples {};
-
  webots-ros2-importer = self.callPackage ./webots-ros2-importer {};
+
+ webots-ros2-mavic = self.callPackage ./webots-ros2-mavic {};
 
  webots-ros2-msgs = self.callPackage ./webots-ros2-msgs {};
 
  webots-ros2-tesla = self.callPackage ./webots-ros2-tesla {};
 
+ webots-ros2-tests = self.callPackage ./webots-ros2-tests {};
+
  webots-ros2-tiago = self.callPackage ./webots-ros2-tiago {};
 
  webots-ros2-turtlebot = self.callPackage ./webots-ros2-turtlebot {};
 
- webots-ros2-tutorials = self.callPackage ./webots-ros2-tutorials {};
-
  webots-ros2-universal-robot = self.callPackage ./webots-ros2-universal-robot {};
-
- webots-ros2-ur-e-description = self.callPackage ./webots-ros2-ur-e-description {};
 
  wiimote = self.callPackage ./wiimote {};
 

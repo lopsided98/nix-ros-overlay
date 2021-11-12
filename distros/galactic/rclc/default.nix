@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, example-interfaces, launch-testing, osrf-testing-tools-cpp, rcl, rcutils, rosidl-generator-c, rosidl-typesupport-c, std-msgs, test-msgs }:
 buildRosPackage {
   pname = "ros-galactic-rclc";
-  version = "2.0.4-r1";
+  version = "2.0.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclc-release/archive/release/galactic/rclc/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "6fcedc0137c9ad1324bbdceacbd73c04222d03428793968c8b98a37aae20d82d";
+    url = "https://github.com/ros2-gbp/rclc-release/archive/release/galactic/rclc/2.0.5-2.tar.gz";
+    name = "2.0.5-2.tar.gz";
+    sha256 = "cd5c6bfd66b2655e35d51456c967eff4e1473332167c5713b6b82db483937780";
   };
 
   buildType = "ament_cmake";

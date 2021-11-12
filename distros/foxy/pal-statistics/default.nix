@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, pal-statistics-msgs, rclcpp, rclpy }:
 buildRosPackage {
   pname = "ros-foxy-pal-statistics";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_statistics-release/archive/release/foxy/pal_statistics/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "a09f8f5b7fa4882ea67599f47e16900cfa10263f6a797d0d40f09bd498531f0a";
+    url = "https://github.com/pal-gbp/pal_statistics-release/archive/release/foxy/pal_statistics/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "f43018efb414dc8d17aafb3999c31defe5c4efbeb09f977c6923c1d966c4180f";
   };
 
   buildType = "ament_cmake";

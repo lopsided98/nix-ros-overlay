@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, mavros, mavros-msgs, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-tello-driver";
-  version = "1.3.9-r1";
+  version = "1.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/tello_driver/1.3.9-1.tar.gz";
-    name = "1.3.9-1.tar.gz";
-    sha256 = "669e86532e3a89d0f4b2a21e1e61193f8db66984608f3e592332f390e0660cb4";
+    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/tello_driver/1.3.10-1.tar.gz";
+    name = "1.3.10-1.tar.gz";
+    sha256 = "50b3b304d69506b2c50e52ce670354c013abd89bd5668f5f508fb8221a173d15";
   };
 
   buildType = "catkin";

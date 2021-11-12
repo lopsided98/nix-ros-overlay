@@ -2,21 +2,21 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, console-bridge, eigen, gtest, opw-kinematics, orocos-kdl, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-scene-graph, tesseract-srdf, tesseract-support, tesseract-urdf }:
+{ lib, buildRosPackage, fetchurl, cmake, console-bridge, eigen, gtest, libyamlcpp, opw-kinematics, orocos-kdl, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-scene-graph, tesseract-state-solver, tesseract-support, tesseract-urdf }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-kinematics";
-  version = "0.5.0-r1";
+  version = "0.6.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_kinematics/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "5178a5136b7e754f1ab5501188d7775b75a9a48b1affd7c5dc537e020739c6c5";
+    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_kinematics/0.6.6-1.tar.gz";
+    name = "0.6.6-1.tar.gz";
+    sha256 = "deac10351f396271c9e0c195b9ff93c487bf45c21e50d1ce8b39203f72f21745";
   };
 
   buildType = "cmake";
   buildInputs = [ ros-industrial-cmake-boilerplate ];
   checkInputs = [ gtest tesseract-support tesseract-urdf ];
-  propagatedBuildInputs = [ console-bridge eigen opw-kinematics orocos-kdl tesseract-common tesseract-scene-graph tesseract-srdf ];
+  propagatedBuildInputs = [ console-bridge eigen libyamlcpp opw-kinematics orocos-kdl tesseract-common tesseract-scene-graph tesseract-state-solver ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

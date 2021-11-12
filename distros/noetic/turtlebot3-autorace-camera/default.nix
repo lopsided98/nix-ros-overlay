@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, pythonPackages, rospy, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, python3Packages, pythonPackages, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-turtlebot3-autorace-camera";
-  version = "1.1.0-r7";
+  version = "1.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace_2020_release/archive/release/noetic/turtlebot3_autorace_camera/1.1.0-7.tar.gz";
-    name = "1.1.0-7.tar.gz";
-    sha256 = "894e634fd19fa53b1e4041e6dfd29588291969d612c78b8e6c2d388d60b2270a";
+    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace_2020_release/archive/release/noetic/turtlebot3_autorace_camera/1.1.1-2.tar.gz";
+    name = "1.1.1-2.tar.gz";
+    sha256 = "677cf80fe061c8cc01ba31bcb80ffa83907efd5954e4068878bca8a0fe2eb992";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure pythonPackages.enum34 pythonPackages.numpy pythonPackages.opencv3 rospy sensor-msgs ];
+  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure python3Packages.opencv3 pythonPackages.enum34 pythonPackages.numpy rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cppzmq, ncurses, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, cppzmq, ncurses, rclcpp }:
 buildRosPackage {
   pname = "ros-foxy-behaviortree-cpp-v3";
-  version = "3.5.6-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp-release/archive/release/foxy/behaviortree_cpp_v3/3.5.6-1.tar.gz";
-    name = "3.5.6-1.tar.gz";
-    sha256 = "5d5753c234516f08e81defd1b08af59b9f38279d46c32dc4578fc70e6f172975";
+    url = "https://github.com/BehaviorTree/behaviortree_cpp-release/archive/release/foxy/behaviortree_cpp_v3/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "815de4f03f7de7dccc05d26030c59ba7ac72c52bcdeb5d62d0845c2f70e6a2ad";
   };
 
   buildType = "catkin";
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ cppzmq ncurses rclcpp ];
+  propagatedBuildInputs = [ boost cppzmq ncurses rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
