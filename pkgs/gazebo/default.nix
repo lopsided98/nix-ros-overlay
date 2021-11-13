@@ -21,6 +21,11 @@ mkDerivation rec {
   };
 
   patches =
+    # Fix compatibility with OpenAL v1.20.0
+    lib.optional (lib.versionOlder version "11.0.0") (fetchpatch {
+      url = "https://github.com/osrf/gazebo/commit/b4429a242c43e01c367bc02afa2c4a0e6b59dddd.patch";
+      sha256 = "045dp4pr0gn5ns84w785r4x2g0dfrkrb9wy5pk0yqwq6azsj6v23";
+    }) ++
     # Fix compatibility with qwt headers not in subdirectory
     # https://github.com/osrf/gazebo/pull/2887
     lib.optional (lib.versionOlder version "11.3.0") (fetchpatch {
