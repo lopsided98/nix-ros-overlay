@@ -59,6 +59,7 @@ let
           makeWrapper "$file" "$link" \
             --prefix PATH : "$out/bin" \
             --prefix CMAKE_PREFIX_PATH : "$out" \
+            --prefix AMENT_PREFIX_PATH : "$out" \
             --prefix ROS_PACKAGE_PATH : "$out/share"
         done
       fi
