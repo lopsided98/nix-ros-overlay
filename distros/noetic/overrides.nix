@@ -24,4 +24,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
     url = "https://github.com/fmtlib/fmt/releases/download/7.1.2/fmt-7.1.2.zip";
     sha256 = "19qfd19mvzg4awqbh5x10m8riyyy0dbpadpidp3mrs81gjmnhsad";
   };
+
+  rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Fix usage of removed ElementTree.getiterator() method
+    # https://github.com/ros-visualization/rqt/pull/241
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ros-visualization/rqt/commit/aaf8da523b32307ad906e48fa977eff1779b0154.patch";
+      stripLen = 1;
+      sha256 = "1p2rh2l74plq5aa319mxgi0hqm2if0qk3mr5fz8zif1zpgz4wvh3";
+    }) ];
+  });
 }

@@ -286,16 +286,8 @@ let
     });
 
     rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
-      patches ? [], nativeBuildInputs ? [], ...
+      nativeBuildInputs ? [], ...
     }: {
-      # Fix usage of removed ElementTree.getiterator() method
-      # https://github.com/ros-visualization/rqt/pull/241
-      patches = patches ++ [ (self.fetchpatch {
-        url = "https://github.com/ros-visualization/rqt/commit/aaf8da523b32307ad906e48fa977eff1779b0154.patch";
-        stripLen = 1;
-        sha256 = "1p2rh2l74plq5aa319mxgi0hqm2if0qk3mr5fz8zif1zpgz4wvh3";
-      }) ];
-
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = ''
