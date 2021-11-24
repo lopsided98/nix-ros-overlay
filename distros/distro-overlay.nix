@@ -274,17 +274,6 @@ let
       ] ++ propagatedBuildInputs;
     });
 
-    rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
-      nativeBuildInputs ? [], ...
-    }: {
-      dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/bin/rqt"
-        wrapQtApp "$out/lib/rqt_gui/rqt_gui"
-      '';
-    });
-
     rqt-graph = rosSuper.rqt-graph.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
@@ -293,6 +282,17 @@ let
       postFixup = ''
         wrapQtApp "$out/bin/rqt_graph"
         wrapQtApp "$out/lib/rqt_graph/rqt_graph"
+      '';
+    });
+
+    rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
+      nativeBuildInputs ? [], ...
+    }: {
+      dontWrapQtApps = false;
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      postFixup = ''
+        wrapQtApp "$out/bin/rqt"
+        wrapQtApp "$out/lib/rqt_gui/rqt_gui"
       '';
     });
 
