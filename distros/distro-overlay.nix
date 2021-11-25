@@ -28,10 +28,14 @@ let
     python3 = pythonOverridesFor self.python3;
     python3Packages = rosSelf.python3.pkgs;
 
-    boost = self.boost.override {
-      python = rosSelf.python;
-      enablePython = true;
-    };
+    boost =
+      # Trigger an error when nixpkgs default has changed so that this is no
+      # longer needed
+      assert self.lib.versionOlder self.boost.version "1.73.0";
+      self.boost173.override {
+        python = rosSelf.python;
+        enablePython = true;
+      };
   };
 
   overrides = rosSelf: rosSuper: with rosSelf.lib; {
@@ -40,8 +44,6 @@ let
     ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({ ... }: {
       setupHook = ./ament-cmake-core-setup-hook.sh;
     });
-
-    camera-calibration-parsers = patchBoostPython rosSuper.camera-calibration-parsers;
 
     catkin = rosSuper.catkin.overrideAttrs ({
       propagatedBuildInputs ? [],
@@ -74,8 +76,6 @@ let
     });
 
     cob-light = patchBoostSignals rosSuper.cob-light;
-
-    cv-bridge = patchBoostPython rosSuper.cv-bridge;
 
     cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
       cmakeFlags ? [], preConfigure ? "", ...
@@ -468,8 +468,6 @@ let
       url = "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.68.1.tar.gz";
       sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
     };
-
-    urdf = patchBoostPython rosSuper.urdf;
 
     yaml-cpp-vendor = (patchVendorUrl rosSuper.yaml-cpp-vendor {
       url = "https://github.com/jbeder/yaml-cpp/archive/0f9a586ca1dc29c2ecb8dd715a315b93e3f40f79.zip";
