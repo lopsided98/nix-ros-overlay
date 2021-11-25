@@ -25,8 +25,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "19qfd19mvzg4awqbh5x10m8riyyy0dbpadpidp3mrs81gjmnhsad";
   };
 
+  rqt-graph = rosSuper.rqt-graph.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_graph/rqt_graph"
+    '';
+  });
+
   rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
-    patches ? [], ...
+    patches ? [], postFixup ? "", ...
   }: {
     # Fix usage of removed ElementTree.getiterator() method
     # https://github.com/ros-visualization/rqt/pull/241
@@ -35,5 +43,89 @@ rosSelf: rosSuper: with rosSelf.lib; {
       stripLen = 1;
       sha256 = "1p2rh2l74plq5aa319mxgi0hqm2if0qk3mr5fz8zif1zpgz4wvh3";
     }) ];
+
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_gui/rqt_gui"
+    '';
+  });
+
+  rqt-msg = rosSuper.rqt-msg.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_msg/rqt_msg"
+    '';
+  });
+
+  rqt-plot = rosSuper.rqt-plot.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_plot/rqt_plot"
+    '';
+  });
+  
+  rqt-publisher = rosSuper.rqt-publisher.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_publisher/rqt_publisher"
+    '';
+  });
+
+  rqt-py-console = rosSuper.rqt-py-console.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_py_console/rqt_py_console"
+    '';
+  });
+
+  rqt-reconfigure = rosSuper.rqt-reconfigure.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_reconfigure/rqt_reconfigure"
+    '';
+  });
+
+  rqt-service-caller = rosSuper.rqt-service-caller.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_service_caller/rqt_service_caller"
+    '';
+  });
+
+  rqt-shell = rosSuper.rqt-shell.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_shell/rqt_shell"
+    '';
+  });
+
+  rqt-srv = rosSuper.rqt-srv.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_srv/rqt_srv"
+    '';
+  });
+
+  rqt-top = rosSuper.rqt-top.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_top/rqt_top"
+    '';
+  });
+
+  rqt-topic = rosSuper.rqt-topic.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_topic/rqt_topic"
+    '';
   });
 }

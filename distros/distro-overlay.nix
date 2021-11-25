@@ -275,43 +275,41 @@ let
     });
 
     rqt-graph = rosSuper.rqt-graph.overrideAttrs ({
-      nativeBuildInputs ? [], ...
+      nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
+      postFixup = postFixup + ''
         wrapQtApp "$out/bin/rqt_graph"
-        wrapQtApp "$out/lib/rqt_graph/rqt_graph"
       '';
     });
 
     rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
-      nativeBuildInputs ? [], ...
+      nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
+      postFixup = postFixup + ''
         wrapQtApp "$out/bin/rqt"
-        wrapQtApp "$out/lib/rqt_gui/rqt_gui"
       '';
     });
 
     rqt-msg = rosSuper.rqt-msg.overrideAttrs ({
-      nativeBuildInputs ? [], ...
+      nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
+      postFixup = postFixup + ''
         wrapQtApp "$out/bin/rqt_msg"
       '';
     });
 
     rqt-plot = rosSuper.rqt-plot.overrideAttrs ({
-      nativeBuildInputs ? [], ...
+      nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
+      postFixup = postFixup + ''
         wrapQtApp "$out/bin/rqt_plot"
       '';
     });
@@ -321,9 +319,6 @@ let
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/bin/rqt_publisher"
-      '';
     });
 
     rqt-py-console = rosSuper.rqt-py-console.overrideAttrs ({
@@ -331,9 +326,6 @@ let
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/bin/rqt_py_console"
-      '';
     });
 
     rqt-reconfigure = rosSuper.rqt-reconfigure.overrideAttrs ({
@@ -341,9 +333,6 @@ let
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/bin/rqt_reconfigure"
-      '';
     });
 
     rqt-service-caller = rosSuper.rqt-service-caller.overrideAttrs ({
@@ -351,29 +340,23 @@ let
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/bin/rqt_service_caller"
-      '';
     });
 
     rqt-shell = rosSuper.rqt-shell.overrideAttrs ({
-      nativeBuildInputs ? [], ...
+      nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
+      postFixup = postFixup + ''
         wrapQtApp "$out/bin/rqt_shell"
       '';
     });
 
     rqt-srv = rosSuper.rqt-srv.overrideAttrs ({
-      nativeBuildInputs ? [], ...
+      nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/bin/rqt_srv"
-      '';
     });
 
     rqt-top = rosSuper.rqt-top.overrideAttrs ({
@@ -381,9 +364,6 @@ let
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/bin/rqt_top"
-      '';
     });
 
     rqt-topic = rosSuper.rqt-topic.overrideAttrs ({
@@ -391,17 +371,14 @@ let
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/bin/rqt_topic"
-      '';
     });
 
     rviz = rosSuper.rviz.overrideAttrs ({
-      nativeBuildInputs ? [], ...
+      nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
+      postFixup = postFixup + ''
         wrapQtApp "$out/lib/rviz/rviz"
       '';
     });
