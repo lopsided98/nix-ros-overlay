@@ -94,6 +94,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
+  roscpp = rosSuper.roscpp.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Use qualified placeholders as required by Boost 1.73
+    postPatch = postPatch + ''
+      find . \( -name '*.cpp' -o -name '*.h' \) -exec sed -i \
+        -e 's/\(_[[:digit:]]\)/boost::placeholders::\1/g' {} +
+    '';
+  });
+
   rosfmt = patchVendorUrl rosSuper.rosfmt {
     url = "https://github.com/fmtlib/fmt/releases/download/6.0.0/fmt-6.0.0.zip";
     sha256 = "0h148anbaqgch6n69pxsvs1c9wmykgd052wmzgdia7qpz8w6p8dl";
