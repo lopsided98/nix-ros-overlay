@@ -7,11 +7,11 @@ let
   };
 in stdenv.mkDerivation rec {
   pname = "geographiclib";
-  version = "1.51";
+  version = "1.52";
 
   src = fetchurl {
     url = "mirror://sourceforge/${pname}/GeographicLib-${version}.tar.gz";
-    sha256 = "046k49h52n2qxclqdzjmqj6pbvqsb28hn7lnsrdi1xbxc54hjdrl";
+    sha256 = "0axcx3040a2b1qazsp0n678qf1rl18rl94kwz4pimxgb2v6lahax";
   };
 
   nativeBuildInputs = [ cmake ];
