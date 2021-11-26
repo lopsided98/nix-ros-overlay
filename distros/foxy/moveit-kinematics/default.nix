@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, eigen, moveit-common, moveit-core, moveit-msgs, moveit-resources-fanuc-description, moveit-resources-fanuc-moveit-config, moveit-resources-panda-description, moveit-resources-panda-moveit-config, moveit-ros-planning, orocos-kdl, pluginlib, pythonPackages, ros-testing, tf2, tf2-kdl, urdfdom }:
 buildRosPackage {
   pname = "ros-foxy-moveit-kinematics";
-  version = "2.2.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_kinematics/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "2204048d999d8fca2ec2ebd3ab75e09d4369198b804bb6c78f5edf4f29900db0";
+    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_kinematics/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "0249b9f79b0b392c7a1ea01787ec2e5a39cc52254180b6695e4e612f11bc610f";
   };
 
   buildType = "ament_cmake";

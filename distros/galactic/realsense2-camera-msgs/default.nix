@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-realsense2-camera-msgs";
-  version = "3.2.2-r2";
+  version = "3.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/galactic/realsense2_camera_msgs/3.2.2-2.tar.gz";
-    name = "3.2.2-2.tar.gz";
-    sha256 = "5a4b1627446662459a841a631d59d7a8d4b7d82a926ecba4f481c75b7e693cfc";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/galactic/realsense2_camera_msgs/3.2.3-1.tar.gz";
+    name = "3.2.3-1.tar.gz";
+    sha256 = "a3edf50c8fc2fd0a4b18614a49bd7b94dab94294fcec0d13ac5fe931025ed346";
   };
 
   buildType = "ament_cmake";

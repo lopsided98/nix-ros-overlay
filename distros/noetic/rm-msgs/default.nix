@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rm-msgs";
-  version = "0.1.7-r3";
+  version = "0.1.7-r4";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_msgs/0.1.7-3.tar.gz";
-    name = "0.1.7-3.tar.gz";
-    sha256 = "5cbfcb09b9b23668ecbe61880c234908ad0c86754819dbfd7cb4a970b8d729b9";
+    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_msgs/0.1.7-4.tar.gz";
+    name = "0.1.7-4.tar.gz";
+    sha256 = "b6cca7c05179d2148fa9599e07aef3159b9ab61cb71f38d501f8ab89eda4c477";
   };
 
   buildType = "catkin";

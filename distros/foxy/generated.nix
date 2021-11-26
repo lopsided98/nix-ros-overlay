@@ -640,6 +640,8 @@ self: super: {
 
  marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
 
+ marti-introspection-msgs = self.callPackage ./marti-introspection-msgs {};
+
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 
  marti-perception-msgs = self.callPackage ./marti-perception-msgs {};
@@ -1402,6 +1404,8 @@ self: super: {
 
  rqt-srv = self.callPackage ./rqt-srv {};
 
+ rqt-tf-tree = self.callPackage ./rqt-tf-tree {};
+
  rqt-top = self.callPackage ./rqt-top {};
 
  rqt-topic = self.callPackage ./rqt-topic {};
@@ -1471,6 +1475,8 @@ self: super: {
  smac-planner = self.callPackage ./smac-planner {};
 
  smclib = self.callPackage ./smclib {};
+
+ snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
  soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
 

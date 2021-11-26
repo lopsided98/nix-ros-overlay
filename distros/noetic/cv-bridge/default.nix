@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, opencv3, python3, python3Packages, rosconsole, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cv-bridge";
-  version = "1.15.0-r1";
+  version = "1.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/noetic/cv_bridge/1.15.0-1.tar.gz";
-    name = "1.15.0-1.tar.gz";
-    sha256 = "62b9751b8a29f6ee3ca3d24f59dcd29ebdfba92e0002f3c2a23d333612dd3dcb";
+    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/noetic/cv_bridge/1.16.0-1.tar.gz";
+    name = "1.16.0-1.tar.gz";
+    sha256 = "e6a11ec534e810c25eea0b8a28ad0a7f48afe616ba27d489c82800f4e8d19e28";
   };
 
   buildType = "catkin";

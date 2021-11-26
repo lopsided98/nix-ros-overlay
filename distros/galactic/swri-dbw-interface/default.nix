@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-galactic-swri-dbw-interface";
-  version = "3.3.2-r2";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_dbw_interface/3.3.2-2.tar.gz";
-    name = "3.3.2-2.tar.gz";
-    sha256 = "f69cef07cc4adf8cd1fde2718bdb19f743d87a462e8e520b5864317917b0c0ca";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_dbw_interface/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "196c6d5122cb565883af349fe76adca71e0dceb86e32bd408a9c703156fc5c94";
   };
 
   buildType = "ament_cmake";

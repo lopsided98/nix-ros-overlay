@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rm-common, rm-description, rm-gazebo, rm-hw, rm-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rm-control";
-  version = "0.1.7-r3";
+  version = "0.1.7-r4";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_control/0.1.7-3.tar.gz";
-    name = "0.1.7-3.tar.gz";
-    sha256 = "cced513a80e500ac41365668df44ef4df96f78c2a016b6b6fc4636f00fe1f3f5";
+    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_control/0.1.7-4.tar.gz";
+    name = "0.1.7-4.tar.gz";
+    sha256 = "0605a9c780415c3c261d3a10eb8dc0c0bc4bbd6b36f022ab85a5b6e53dd627a7";
   };
 
   buildType = "catkin";

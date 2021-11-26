@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, swri-math-util }:
 buildRosPackage {
   pname = "ros-foxy-swri-opencv-util";
-  version = "3.3.2-r2";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_opencv_util/3.3.2-2.tar.gz";
-    name = "3.3.2-2.tar.gz";
-    sha256 = "5e8db7110c473d71d7baf5744f4fc524227832355a275cc2ed0b9b23414b10f4";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_opencv_util/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "167e60dbd2012b88070b474c85628728dac3fa8db318c57895e0ba2d2d698ee2";
   };
 
   buildType = "ament_cmake";

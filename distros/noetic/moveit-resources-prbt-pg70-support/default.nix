@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-resources-prbt-ikfast-manipulator-plugin, moveit-resources-prbt-moveit-config, moveit-resources-prbt-support, xacro }:
 buildRosPackage {
   pname = "ros-noetic-moveit-resources-prbt-pg70-support";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_prbt_pg70_support/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "3dd2bad13bc6d85c996744ebac996b016d441026a2ea28816e912447f4bf6f6e";
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_prbt_pg70_support/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "12d22c95034d670242999e2fb67155c8a5fadc627e03003d67e636b92457dbef";
   };
 
   buildType = "catkin";

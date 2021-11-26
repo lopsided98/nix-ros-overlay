@@ -3002,7 +3002,11 @@ self: super: {
 
  qb-chain-control = self.callPackage ./qb-chain-control {};
 
+ qb-chain-controllers = self.callPackage ./qb-chain-controllers {};
+
  qb-chain-description = self.callPackage ./qb-chain-description {};
+
+ qb-chain-msgs = self.callPackage ./qb-chain-msgs {};
 
  qb-device = self.callPackage ./qb-device {};
 
@@ -3746,6 +3750,24 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ rwt-app-chooser = self.callPackage ./rwt-app-chooser {};
+
+ rwt-image-view = self.callPackage ./rwt-image-view {};
+
+ rwt-moveit = self.callPackage ./rwt-moveit {};
+
+ rwt-nav = self.callPackage ./rwt-nav {};
+
+ rwt-plot = self.callPackage ./rwt-plot {};
+
+ rwt-robot-monitor = self.callPackage ./rwt-robot-monitor {};
+
+ rwt-speech-recognition = self.callPackage ./rwt-speech-recognition {};
+
+ rwt-steer = self.callPackage ./rwt-steer {};
+
+ rwt-utils-3rdparty = self.callPackage ./rwt-utils-3rdparty {};
+
  rx-service-tools = self.callPackage ./rx-service-tools {};
 
  rxcpp-vendor = self.callPackage ./rxcpp-vendor {};
@@ -3887,6 +3909,8 @@ self: super: {
  smach-viewer = self.callPackage ./smach-viewer {};
 
  smclib = self.callPackage ./smclib {};
+
+ snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
  social-navigation-layers = self.callPackage ./social-navigation-layers {};
 
@@ -4387,6 +4411,8 @@ self: super: {
  visualization-msgs = self.callPackage ./visualization-msgs {};
 
  visualization-osg = self.callPackage ./visualization-osg {};
+
+ visualization-rwt = self.callPackage ./visualization-rwt {};
 
  visualization-tutorials = self.callPackage ./visualization-tutorials {};
 

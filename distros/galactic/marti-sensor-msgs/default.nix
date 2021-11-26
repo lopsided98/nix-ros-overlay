@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-galactic-marti-sensor-msgs";
-  version = "1.1.0-r3";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/galactic/marti_sensor_msgs/1.1.0-3.tar.gz";
-    name = "1.1.0-3.tar.gz";
-    sha256 = "5456fb1c174cd01b01472df6b5c44068d7b1e0e06da84da0dda7ac59779f9bb6";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/galactic/marti_sensor_msgs/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "b63cca472a7f7c24a23e9f9860a3dcc8244e2efb8699a8df150c56510d34cecb";
   };
 
   buildType = "ament_cmake";

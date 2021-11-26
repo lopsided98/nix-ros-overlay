@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, image-geometry, image-proc, image-transport, message-filters, nodelet, rostest, sensor-msgs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-noetic-stereo-image-proc";
-  version = "1.15.3-r1";
+  version = "1.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/stereo_image_proc/1.15.3-1.tar.gz";
-    name = "1.15.3-1.tar.gz";
-    sha256 = "4c6bb1d6b65ac2678615ee36de06708d68fef9f1aaacefe2faefb1c185f235ee";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/stereo_image_proc/1.16.0-1.tar.gz";
+    name = "1.16.0-1.tar.gz";
+    sha256 = "237fcc2babed3db90c04c6e43c4a67e10b1bf5fc4be0b653e8a4e2e16b7a1e67";
   };
 
   buildType = "catkin";

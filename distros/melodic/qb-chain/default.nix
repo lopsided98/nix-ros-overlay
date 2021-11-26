@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, qb-chain-control, qb-chain-description }:
+{ lib, buildRosPackage, fetchurl, catkin, qb-chain-control, qb-chain-controllers, qb-chain-description, qb-chain-msgs }:
 buildRosPackage {
   pname = "ros-melodic-qb-chain";
-  version = "2.0.0";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/melodic/qb_chain/2.0.0-0.tar.gz";
-    name = "2.0.0-0.tar.gz";
-    sha256 = "e21beffe73643665345d9027e82e376dd9b4cad3b1e429653276333060221e60";
+    url = "https://bitbucket.org/qbrobotics/qbchain-ros-release/get/release/melodic/qb_chain/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "129a5060e66b66399afd5e6d2e7f4de57eb9dd101c06689f83eaf7a8413d0a8f";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ qb-chain-control qb-chain-description ];
+  propagatedBuildInputs = [ qb-chain-control qb-chain-controllers qb-chain-description qb-chain-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, boost, cv-bridge, diagnostic-msgs, geographic-msgs, geometry-msgs, geos, gps-msgs, launch-xml, libyamlcpp, marti-nav-msgs, pkg-config, proj, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-py, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-swri-transform-util";
-  version = "3.3.2-r2";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_transform_util/3.3.2-2.tar.gz";
-    name = "3.3.2-2.tar.gz";
-    sha256 = "c9edd0533958c99070d25d2afe047f2f65579a6b5724bbc4d586d7eadf9dc6aa";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_transform_util/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "b7ea5b7420551928f282fee717706cfb3192e62bd50247c6f6be5f43ccedfca5";
   };
 
   buildType = "ament_cmake";

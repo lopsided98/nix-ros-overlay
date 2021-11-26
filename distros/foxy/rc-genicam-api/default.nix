@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libpng, libusb1 }:
 buildRosPackage {
   pname = "ros-foxy-rc-genicam-api";
-  version = "2.5.6-r1";
+  version = "2.5.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/foxy/rc_genicam_api/2.5.6-1.tar.gz";
-    name = "2.5.6-1.tar.gz";
-    sha256 = "20a621c8649a6f5b336f6237f9c635cde01fc8ae280a91d472658414bc404e2a";
+    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/foxy/rc_genicam_api/2.5.12-1.tar.gz";
+    name = "2.5.12-1.tar.gz";
+    sha256 = "703174f821ddb554ad13dbb567e4f8f0f58072f6f2e09171b248d18425be06b9";
   };
 
   buildType = "cmake";

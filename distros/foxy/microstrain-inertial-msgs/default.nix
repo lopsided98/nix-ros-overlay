@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-microstrain-inertial-msgs";
-  version = "2.0.6-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-ros2-release/archive/release/foxy/microstrain_inertial_msgs/2.0.6-1.tar.gz";
-    name = "2.0.6-1.tar.gz";
-    sha256 = "eb02317ed916db8170e11d793f1cb62af6cc17942775c130f3215709775e14f8";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-ros2-release/archive/release/foxy/microstrain_inertial_msgs/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "a6d7c6d73602016384be6e30c49f0efa37f948d0f28579a44c784d3dfcab921f";
   };
 
   buildType = "ament_cmake";
