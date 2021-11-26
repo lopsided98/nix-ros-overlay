@@ -11,6 +11,6 @@ buildPythonPackage rec {
 
   meta = {
     description = "A powerful and robust templating system for Python";
-    homepage = http://www.alcyone.com/software/empy/;
+    homepage = "http://www.alcyone.com/software/empy/";
   };
 }
