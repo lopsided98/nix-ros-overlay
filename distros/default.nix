@@ -19,11 +19,6 @@ self: super: {
       python = self.python3;
     } self super;
 
-    dashing = import ./distro-overlay.nix {
-      distro = "dashing";
-      python = self.python3;
-    } self super;
-
     foxy = import ./distro-overlay.nix {
       distro = "foxy";
       python = self.python3;
