@@ -9,13 +9,13 @@ let
   }.${stdenv.hostPlatform.system} or (throw "Unsupported platform");
 in stdenv.mkDerivation rec {
   pname = "opensplice";
-  version = "6.9.190925";
+  version = "6.9.210323";
 
   src = fetchFromGitHub {
     owner = "ADLINK-IST";
     repo = pname;
     rev = "OSPL_V${lib.replaceStrings ["."] ["_"] version}OSS_RELEASE";
-    sha256 = "1q8m6k6jk66n0s5g9c058l39j02n0jl1prxbh37c1g5lh4ajg4rd";
+    sha256 = "0zg1gcrxkgp20yd7dil30qrm6w58jvn9x106rvsfs8q1vaafg5f7";
   };
 
   postPatch = ''
