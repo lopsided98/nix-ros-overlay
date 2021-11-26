@@ -692,6 +692,8 @@ self: super: {
 
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
+ euslisp = self.callPackage ./euslisp {};
+
  executive-smach = self.callPackage ./executive-smach {};
 
  executive-smach-visualization = self.callPackage ./executive-smach-visualization {};
@@ -2568,6 +2570,22 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ rwt-app-chooser = self.callPackage ./rwt-app-chooser {};
+
+ rwt-image-view = self.callPackage ./rwt-image-view {};
+
+ rwt-nav = self.callPackage ./rwt-nav {};
+
+ rwt-plot = self.callPackage ./rwt-plot {};
+
+ rwt-robot-monitor = self.callPackage ./rwt-robot-monitor {};
+
+ rwt-speech-recognition = self.callPackage ./rwt-speech-recognition {};
+
+ rwt-steer = self.callPackage ./rwt-steer {};
+
+ rwt-utils-3rdparty = self.callPackage ./rwt-utils-3rdparty {};
+
  rx-service-tools = self.callPackage ./rx-service-tools {};
 
  safety-limiter = self.callPackage ./safety-limiter {};
@@ -3016,6 +3034,8 @@ self: super: {
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
 
+ visualization-rwt = self.callPackage ./visualization-rwt {};
+
  visualization-tutorials = self.callPackage ./visualization-tutorials {};
 
  viz = self.callPackage ./viz {};
@@ -3047,6 +3067,12 @@ self: super: {
  vrpn-client-ros = self.callPackage ./vrpn-client-ros {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ warthog-control = self.callPackage ./warthog-control {};
+
+ warthog-description = self.callPackage ./warthog-description {};
+
+ warthog-msgs = self.callPackage ./warthog-msgs {};
 
  web-video-server = self.callPackage ./web-video-server {};
 

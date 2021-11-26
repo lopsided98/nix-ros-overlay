@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-power-msgs";
-  version = "0.4.1-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/power_msgs-release/archive/release/noetic/power_msgs/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "0ffc282953f4d9de6d8e6f86ab896d457b9b6d3a38448af09c35d63dd2507c71";
+    url = "https://github.com/fetchrobotics-gbp/power_msgs-release/archive/release/noetic/power_msgs/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "696eff7295d1352040e3223f176fa488815f14ef05066ee6ab43e479791d4120";
   };
 
   buildType = "catkin";

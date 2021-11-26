@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-noetic-moveit-resources-prbt-support";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_prbt_support/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "c211113420080b2d7a0220450c08eb5ad644fea1dd690d0b4f3a80e9d76ba7db";
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_prbt_support/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "ea64280d527970b6d0740709f21d84e8e2333c5f1eb2519ea51bbb6658a78d9f";
   };
 
   buildType = "catkin";

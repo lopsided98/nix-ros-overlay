@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-marti-dbw-msgs";
-  version = "1.1.0-r3";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/galactic/marti_dbw_msgs/1.1.0-3.tar.gz";
-    name = "1.1.0-3.tar.gz";
-    sha256 = "30c85029706f37e4a5b0ca28438e1fcfd89faa2f74eb9d2f8bd6371effec42b0";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/galactic/marti_dbw_msgs/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "5a9911555baf2193cf06b608fba4b1acffa794c5e17dd77e1d10d14b8319d59f";
   };
 
   buildType = "ament_cmake";

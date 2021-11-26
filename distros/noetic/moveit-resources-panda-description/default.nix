@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-moveit-resources-panda-description";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_panda_description/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "5fa6bda81b6bdbc7d881bfe593c83aa83e90dae976359c1dac53048b5fd180ec";
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_panda_description/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "85a92c552a02e2aebd256f06253b2f188cfd606ca40f639a63757fe94f650f4e";
   };
 
   buildType = "catkin";

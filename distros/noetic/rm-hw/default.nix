@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, hardware-interface, joint-limits-interface, realtime-tools, rm-common, rm-msgs, roscpp, roslint, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-noetic-rm-hw";
-  version = "0.1.7-r3";
+  version = "0.1.7-r4";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_hw/0.1.7-3.tar.gz";
-    name = "0.1.7-3.tar.gz";
-    sha256 = "d75b09754f020e9536cba1101f76ab0524171188abbc8dc7be8783154e9864d6";
+    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_hw/0.1.7-4.tar.gz";
+    name = "0.1.7-4.tar.gz";
+    sha256 = "30af91eafacbf2eba6f70205af82ed45c9715d10da9b6105fcc8bb30539f61f6";
   };
 
   buildType = "catkin";

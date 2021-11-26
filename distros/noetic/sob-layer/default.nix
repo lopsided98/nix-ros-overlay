@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, dynamic-reconfigure, pluginlib }:
 buildRosPackage {
   pname = "ros-noetic-sob-layer";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/dorezyuk/sob_layer-release/archive/release/noetic/sob_layer/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "36f7c92005ca9a03b8b335f36b46dddedf04d70ba03aabffcd38d7820697259c";
+    url = "https://github.com/dorezyuk/sob_layer-release/archive/release/noetic/sob_layer/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "299f36006f303aaadc08ae0c47f92ccb4890517ae524e3290939dd1035cdf68b";
   };
 
   buildType = "catkin";

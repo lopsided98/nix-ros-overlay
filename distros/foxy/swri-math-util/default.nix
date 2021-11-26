@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-foxy-swri-math-util";
-  version = "3.3.2-r2";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_math_util/3.3.2-2.tar.gz";
-    name = "3.3.2-2.tar.gz";
-    sha256 = "6cbd84092cad5d0405b7a94a504f4f07c99315761013f3ddbdf06dd31c85ba2d";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_math_util/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "52f51dfba83dbc21a8efe1aa1fd43d5632649acf63f3a78815aaaa5e1789a27d";
   };
 
   buildType = "ament_cmake";

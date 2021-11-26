@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-marti-status-msgs";
-  version = "1.1.0-r3";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/galactic/marti_status_msgs/1.1.0-3.tar.gz";
-    name = "1.1.0-3.tar.gz";
-    sha256 = "3b7a194dfccd11cebaa1e8ad78bbc29f2449abc7696b15bb6d8910e9e29113dd";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/galactic/marti_status_msgs/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "2c75a884abc4388ca1ed4771846f6ecd667d04ae3c44c0e1e855533659b77a6a";
   };
 
   buildType = "ament_cmake";

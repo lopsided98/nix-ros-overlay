@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, microstrain-inertial-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-microstrain-inertial-examples";
-  version = "2.0.6-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-ros2-release/archive/release/foxy/microstrain_inertial_examples/2.0.6-1.tar.gz";
-    name = "2.0.6-1.tar.gz";
-    sha256 = "9aadaa34a27851b3662819f7070c66e51d80c03cde6ee8544fd17f953cb24f19";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-ros2-release/archive/release/foxy/microstrain_inertial_examples/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "e1f21e690ac94751da283429f407bcff938b0a9b688cc754d727af4c5a5dde7b";
   };
 
   buildType = "ament_cmake";

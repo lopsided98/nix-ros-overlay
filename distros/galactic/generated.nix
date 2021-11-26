@@ -392,6 +392,8 @@ self: super: {
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
+ hash-library-vendor = self.callPackage ./hash-library-vendor {};
+
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  iceoryx-binding-c = self.callPackage ./iceoryx-binding-c {};
@@ -519,6 +521,8 @@ self: super: {
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
 
  marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
+
+ marti-introspection-msgs = self.callPackage ./marti-introspection-msgs {};
 
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 
@@ -1216,9 +1220,13 @@ self: super: {
 
  rqt-srv = self.callPackage ./rqt-srv {};
 
+ rqt-tf-tree = self.callPackage ./rqt-tf-tree {};
+
  rqt-top = self.callPackage ./rqt-top {};
 
  rqt-topic = self.callPackage ./rqt-topic {};
+
+ rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
 
@@ -1279,6 +1287,8 @@ self: super: {
  smacc2-msgs = self.callPackage ./smacc2-msgs {};
 
  smclib = self.callPackage ./smclib {};
+
+ snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
  soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
 
@@ -1414,13 +1424,29 @@ self: super: {
 
  turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
 
+ turtlebot3 = self.callPackage ./turtlebot3 {};
+
+ turtlebot3-bringup = self.callPackage ./turtlebot3-bringup {};
+
+ turtlebot3-cartographer = self.callPackage ./turtlebot3-cartographer {};
+
+ turtlebot3-description = self.callPackage ./turtlebot3-description {};
+
+ turtlebot3-example = self.callPackage ./turtlebot3-example {};
+
  turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
  turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
 
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
+ turtlebot3-navigation2 = self.callPackage ./turtlebot3-navigation2 {};
+
+ turtlebot3-node = self.callPackage ./turtlebot3-node {};
+
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
+
+ turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
 
