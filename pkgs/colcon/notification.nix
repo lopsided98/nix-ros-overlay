@@ -13,6 +13,8 @@ buildPythonPackage rec {
 
   doCheck = false;
 
+  disabled = isPy27;
+
   meta = with lib; {
     description = "An extension for colcon-core to provide status notifications.";
     homepage = "https://colcon.readthedocs.io";
