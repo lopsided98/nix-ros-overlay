@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/hpp-fcl_catkin-release/archive/release/melodic/hpp-fcl/1.0.1-2.tar.gz";
+    url = "https://github.com/humanoid-path-planner/hpp-fcl-ros-release/archive/release/melodic/hpp-fcl/1.0.1-2.tar.gz";
     name = "1.0.1-2.tar.gz";
     sha256 = "2fdf0400d19ccdc82b6788b4715d5adf11af7e3159f8cd87f5a401ddd3fb53f5";
   };

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, builtin-interfaces, rcl-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-galactic-rosapi-msgs";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/galactic/rosapi_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "16df7c22ad3b61c8706814334e45142f04b60b4e10aa826bfa86c40dd1ad4cb8";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/galactic/rosapi_msgs/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "cd2e3e4f917930d3004c65b4e0f2c2402b2ee537a05137a80ab0325bcf3cd232";
   };
 
   buildType = "ament_cmake";

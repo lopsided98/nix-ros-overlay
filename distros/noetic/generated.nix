@@ -1268,6 +1268,8 @@ self: super: {
 
  jsk-visualization = self.callPackage ./jsk-visualization {};
 
+ jskeus = self.callPackage ./jskeus {};
+
  julius = self.callPackage ./julius {};
 
  kalman-filter = self.callPackage ./kalman-filter {};
@@ -1363,6 +1365,8 @@ self: super: {
  leo-fw = self.callPackage ./leo-fw {};
 
  leo-gazebo = self.callPackage ./leo-gazebo {};
+
+ leo-msgs = self.callPackage ./leo-msgs {};
 
  leo-robot = self.callPackage ./leo-robot {};
 
@@ -1676,6 +1680,24 @@ self: super: {
 
  multisense-ros = self.callPackage ./multisense-ros {};
 
+ nav2d = self.callPackage ./nav2d {};
+
+ nav2d-exploration = self.callPackage ./nav2d-exploration {};
+
+ nav2d-karto = self.callPackage ./nav2d-karto {};
+
+ nav2d-localizer = self.callPackage ./nav2d-localizer {};
+
+ nav2d-msgs = self.callPackage ./nav2d-msgs {};
+
+ nav2d-navigator = self.callPackage ./nav2d-navigator {};
+
+ nav2d-operator = self.callPackage ./nav2d-operator {};
+
+ nav2d-remote = self.callPackage ./nav2d-remote {};
+
+ nav2d-tutorials = self.callPackage ./nav2d-tutorials {};
+
  nav-2d-msgs = self.callPackage ./nav-2d-msgs {};
 
  nav-2d-utils = self.callPackage ./nav-2d-utils {};
@@ -1743,6 +1765,8 @@ self: super: {
  novatel-oem7-msgs = self.callPackage ./novatel-oem7-msgs {};
 
  ntpd-driver = self.callPackage ./ntpd-driver {};
+
+ ntrip-client = self.callPackage ./ntrip-client {};
 
  obj-to-pointcloud = self.callPackage ./obj-to-pointcloud {};
 
@@ -2686,6 +2710,8 @@ self: super: {
 
  smclib = self.callPackage ./smclib {};
 
+ snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
+
  sob-layer = self.callPackage ./sob-layer {};
 
  socketcan-bridge = self.callPackage ./socketcan-bridge {};
@@ -3117,6 +3143,8 @@ self: super: {
  xpp-states = self.callPackage ./xpp-states {};
 
  xpp-vis = self.callPackage ./xpp-vis {};
+
+ xsens-mti-driver = self.callPackage ./xsens-mti-driver {};
 
  xv-11-laser-driver = self.callPackage ./xv-11-laser-driver {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rm-common, roscpp, roslint }:
 buildRosPackage {
   pname = "ros-noetic-rm-dbus";
-  version = "0.1.7-r4";
+  version = "0.1.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_dbus/0.1.7-4.tar.gz";
-    name = "0.1.7-4.tar.gz";
-    sha256 = "dc79cce8a1986346bd9381483eb164b360fc0cbf61a528b85439955f04b059c7";
+    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_dbus/0.1.8-2.tar.gz";
+    name = "0.1.8-2.tar.gz";
+    sha256 = "1c2609f762d77aeaff69d77b5116621e214ee111723b172b99b0efcf8dfbd7ab";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-noetic-rm-description";
-  version = "0.1.7-r4";
+  version = "0.1.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_description/0.1.7-4.tar.gz";
-    name = "0.1.7-4.tar.gz";
-    sha256 = "1470e78b4939ea96d15657aab38ad091b072978c8328b81d099e4135bf692c28";
+    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_description/0.1.8-2.tar.gz";
+    name = "0.1.8-2.tar.gz";
+    sha256 = "17ba696169d8fe55c2d0b0fe844f5c6f8da2d2efd5c0bd6e0f134c7b12570a00";
   };
 
   buildType = "catkin";

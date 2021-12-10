@@ -514,6 +514,8 @@ self: super: {
 
  logging-demo = self.callPackage ./logging-demo {};
 
+ lua-vendor = self.callPackage ./lua-vendor {};
+
  map-msgs = self.callPackage ./map-msgs {};
 
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
@@ -696,7 +698,11 @@ self: super: {
 
  nodl-to-policy = self.callPackage ./nodl-to-policy {};
 
+ nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
+
  ntpd-driver = self.callPackage ./ntpd-driver {};
+
+ ntrip-client = self.callPackage ./ntrip-client {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
@@ -719,6 +725,10 @@ self: super: {
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
  ouster-msgs = self.callPackage ./ouster-msgs {};
+
+ ouxt-common = self.callPackage ./ouxt-common {};
+
+ ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
 
  pal-statistics = self.callPackage ./pal-statistics {};
 
@@ -925,8 +935,6 @@ self: super: {
  rmf-demos-dashboard-resources = self.callPackage ./rmf-demos-dashboard-resources {};
 
  rmf-demos-gz = self.callPackage ./rmf-demos-gz {};
-
- rmf-demos-ign = self.callPackage ./rmf-demos-ign {};
 
  rmf-demos-maps = self.callPackage ./rmf-demos-maps {};
 
@@ -1452,6 +1460,8 @@ self: super: {
 
  tvm-vendor = self.callPackage ./tvm-vendor {};
 
+ twist-mux = self.callPackage ./twist-mux {};
+
  ublox = self.callPackage ./ublox {};
 
  ublox-dgnss = self.callPackage ./ublox-dgnss {};
@@ -1479,6 +1489,8 @@ self: super: {
  urdf = self.callPackage ./urdf {};
 
  urdf-parser-plugin = self.callPackage ./urdf-parser-plugin {};
+
+ urdf-tutorial = self.callPackage ./urdf-tutorial {};
 
  urdfdom = self.callPackage ./urdfdom {};
 

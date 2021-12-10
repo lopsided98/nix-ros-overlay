@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, raptor-dbw-msgs, rclcpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-raptor-dbw-joystick";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/NewEagleRaptor/raptor-dbw-ros2-release/archive/release/foxy/raptor_dbw_joystick/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "179ff82e7809594d36a532b0bccdf072c904ed7a18c66fe58a39d82e90f528cf";
+    url = "https://github.com/NewEagleRaptor/raptor-dbw-ros2-release/archive/release/foxy/raptor_dbw_joystick/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "21b40c3fcb94b0cfb96587d36c26c87e89bb8aa04a9d665c3e216bd6d3187137";
   };
 
   buildType = "ament_cmake";

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/noetic/eigenpy/2.6.9-1.tar.gz";
+    url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/noetic/eigenpy/2.6.9-1.tar.gz";
     name = "2.6.9-1.tar.gz";
     sha256 = "9449ffa6a473d13b3f73a3fa96b1ab6cf45ec6a14caaeb7fbf17afefcc037342";
   };

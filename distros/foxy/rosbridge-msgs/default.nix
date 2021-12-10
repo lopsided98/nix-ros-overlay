@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-rosbridge-msgs";
-  version = "1.1.0-r1";
+  version = "1.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/foxy/rosbridge_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "417975308528eef3ae1c3ddedd6ed95b8362c970350cee3dfd38149d32647732";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/foxy/rosbridge_msgs/1.1.1-2.tar.gz";
+    name = "1.1.1-2.tar.gz";
+    sha256 = "17b1efc8f8761fb6e37542b13812d1f59211604f319469f1660b26966590f3bf";
   };
 
   buildType = "ament_cmake";

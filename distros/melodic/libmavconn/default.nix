@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, console-bridge, gtest, mavlink, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-libmavconn";
-  version = "1.10.0-r1";
+  version = "1.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/libmavconn/1.10.0-1.tar.gz";
-    name = "1.10.0-1.tar.gz";
-    sha256 = "b7ceb6ba0f2edfa9f31e532aaecf1868ec77135792b952ea90f8ee401fb250b4";
+    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/libmavconn/1.12.1-1.tar.gz";
+    name = "1.12.1-1.tar.gz";
+    sha256 = "57f9cdb7e7345f295fdc749d03fa0cac0b8e304b2e5ce53b0f6949802c918a0d";
   };
 
   buildType = "catkin";

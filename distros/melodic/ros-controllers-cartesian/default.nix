@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cartesian-interface, cartesian-trajectory-controller, cartesian-trajectory-interpolation, catkin, twist-controller }:
 buildRosPackage {
   pname = "ros-melodic-ros-controllers-cartesian";
-  version = "0.1.4-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/melodic/ros_controllers_cartesian/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "5ded3fcc388472e298f2112c0e38d7ae587bd631f78e2c8c3bb2b84eaa32e2d2";
+    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/melodic/ros_controllers_cartesian/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "e3597c556925f2afd4b288b328f82e70e65f205646eaaf58734a332fc6ece64a";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, controller-interface, effort-controllers, hardware-interface, pluginlib, realtime-tools, rm-common, rm-msgs, roscpp, roslint }:
 buildRosPackage {
   pname = "ros-noetic-rm-calibration-controllers";
-  version = "0.1.1-r1";
+  version = "0.1.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_calibration_controllers/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "fc9807f8ad601650cf3e885e6606114b9638c74a7cf351e89feb306daa5461f9";
+    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_calibration_controllers/0.1.1-3.tar.gz";
+    name = "0.1.1-3.tar.gz";
+    sha256 = "5385f5e78f42855c490adf9d0fb9e34f50a6ba91a6bee48814cc622b1f5d702e";
   };
 
   buildType = "catkin";

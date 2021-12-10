@@ -2616,6 +2616,8 @@ self: super: {
 
  optpp-catkin = self.callPackage ./optpp-catkin {};
 
+ opw-kinematics = self.callPackage ./opw-kinematics {};
+
  orocos-kdl = self.callPackage ./orocos-kdl {};
 
  orocos-kinematics-dynamics = self.callPackage ./orocos-kinematics-dynamics {};
@@ -3347,6 +3349,8 @@ self: super: {
  ros-environment = self.callPackage ./ros-environment {};
 
  ros-ethercat-eml = self.callPackage ./ros-ethercat-eml {};
+
+ ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
 
  ros-introspection = self.callPackage ./ros-introspection {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, clang, cmake, cppcheck, gtest, include-what-you-use, lcov }:
 buildRosPackage {
   pname = "ros-noetic-ros-industrial-cmake-boilerplate";
-  version = "0.2.13-r1";
+  version = "0.2.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_industrial_cmake_boilerplate-release/archive/release/noetic/ros_industrial_cmake_boilerplate/0.2.13-1.tar.gz";
-    name = "0.2.13-1.tar.gz";
-    sha256 = "f056d28be03eb3ebe6407d7315bac975f73e5a0929c17fb6d925ffccae441d5b";
+    url = "https://github.com/ros-industrial-release/ros_industrial_cmake_boilerplate-release/archive/release/noetic/ros_industrial_cmake_boilerplate/0.2.14-1.tar.gz";
+    name = "0.2.14-1.tar.gz";
+    sha256 = "8c4388e495af822b2fb4da7c0cc7b2cf1e9031f03ae79bbc363b60976a46a6d0";
   };
 
   buildType = "cmake";

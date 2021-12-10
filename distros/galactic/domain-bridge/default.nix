@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-testing, launch-testing-ament-cmake, libyamlcpp, rclcpp, rcutils, rmw-connextdds, rmw-cyclonedds-cpp, rmw-fastrtps-cpp, rmw-implementation-cmake, rosbag2-cpp, rosidl-default-generators, rosidl-default-runtime, rosidl-typesupport-cpp, test-msgs, zstd-vendor }:
 buildRosPackage {
   pname = "ros-galactic-domain-bridge";
-  version = "0.4.0-r1";
+  version = "0.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/domain_bridge-release/archive/release/galactic/domain_bridge/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "801b5acd4ffc9bd321ce47eb5a2047210c158feca3433f73be1f5906778c38a1";
+    url = "https://github.com/ros2-gbp/domain_bridge-release/archive/release/galactic/domain_bridge/0.4.0-2.tar.gz";
+    name = "0.4.0-2.tar.gz";
+    sha256 = "07b6329f739006e11a9fdfd9a42c93c6488b72d6f9bf5b9ee4ef11e9779c3fa3";
   };
 
   buildType = "ament_cmake";

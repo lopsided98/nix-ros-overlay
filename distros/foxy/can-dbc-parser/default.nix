@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, can-msgs }:
 buildRosPackage {
   pname = "ros-foxy-can-dbc-parser";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/NewEagleRaptor/raptor-dbw-ros2-release/archive/release/foxy/can_dbc_parser/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "a42bada40317be633003986455505424957a9378175a2689d57029e1a3ba990a";
+    url = "https://github.com/NewEagleRaptor/raptor-dbw-ros2-release/archive/release/foxy/can_dbc_parser/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "28b18fdf2fe15fb5c33f761f610ae929157099672439fd3c4de70e00efc9671e";
   };
 
   buildType = "ament_cmake";

@@ -842,6 +842,10 @@ self: super: {
 
  ouster-msgs = self.callPackage ./ouster-msgs {};
 
+ ouxt-common = self.callPackage ./ouxt-common {};
+
+ ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
+
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
  pal-gazebo-worlds = self.callPackage ./pal-gazebo-worlds {};
@@ -951,6 +955,8 @@ self: super: {
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
  position-controllers = self.callPackage ./position-controllers {};
+
+ psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
 
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
@@ -1093,8 +1099,6 @@ self: super: {
  rmf-demos-dashboard-resources = self.callPackage ./rmf-demos-dashboard-resources {};
 
  rmf-demos-gz = self.callPackage ./rmf-demos-gz {};
-
- rmf-demos-ign = self.callPackage ./rmf-demos-ign {};
 
  rmf-demos-maps = self.callPackage ./rmf-demos-maps {};
 
@@ -1667,6 +1671,8 @@ self: super: {
  urdf = self.callPackage ./urdf {};
 
  urdf-test = self.callPackage ./urdf-test {};
+
+ urdf-tutorial = self.callPackage ./urdf-tutorial {};
 
  urdfdom = self.callPackage ./urdfdom {};
 

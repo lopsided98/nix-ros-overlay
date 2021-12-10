@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/foxy/eigenpy/2.5.0-1.tar.gz";
+    url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/foxy/eigenpy/2.5.0-1.tar.gz";
     name = "2.5.0-1.tar.gz";
     sha256 = "f0a68dd33a86dcaefdea50269f6153d84bde5d8d14a1f1333be4fafa644158d4";
   };
