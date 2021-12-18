@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, automake, catkin, cmake, doxygen, libtool, omniorb, pkg-config, python, util-linux }:
+{ lib, buildRosPackage, fetchurl, automake, catkin, cmake, doxygen, libtool, omniorb, pkg-config, python, utillinux }:
 buildRosPackage {
   pname = "ros-melodic-openrtm-aist";
   version = "1.1.2-r7";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ doxygen python ];
-  propagatedBuildInputs = [ catkin omniorb util-linux ];
+  propagatedBuildInputs = [ catkin omniorb utillinux ];
   nativeBuildInputs = [ automake cmake libtool pkg-config ];
 
   meta = {

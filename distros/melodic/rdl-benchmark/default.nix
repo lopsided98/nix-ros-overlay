@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_benchmark/3.2.0-1/rdl_release-release-melodic-rdl_benchmark-3.2.0-1.tar.gz";
     name = "rdl_release-release-melodic-rdl_benchmark-3.2.0-1.tar.gz";
-    sha256 = "d351794b18247cd31330fe3a9d7a84cd41c5bd8b65b3f9ed11a9abae582fed82";
+    sha256 = "b3764041b76d8541b11d5acdb176bed3be086ec1b953a41aa2b56b42898d34aa";
   };
 
   buildType = "catkin";

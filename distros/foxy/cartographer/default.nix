@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cairo, ceres-solver, cmake, eigen, gflags, glog, gtest, lua5, protobuf, python3Packages }:
+{ lib, buildRosPackage, fetchurl, boost, cairo, ceres-solver, cmake, eigen, gflags, glog, gmock, gtest, lua5, protobuf, python3Packages }:
 buildRosPackage {
   pname = "ros-foxy-cartographer";
   version = "1.0.9001-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ gtest python3Packages.sphinx ];
+  buildInputs = [ gmock gtest python3Packages.sphinx ];
   propagatedBuildInputs = [ boost cairo ceres-solver eigen gflags glog lua5 protobuf ];
   nativeBuildInputs = [ cmake ];
 

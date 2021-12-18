@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, ceres-solver, fuse-core, libsForQt5, pluginlib, qt5, roscpp, roslint }:
+{ lib, buildRosPackage, fetchurl, catkin, ceres-solver, fuse-core, pluginlib, qt5, qwt6, roscpp, roslint }:
 buildRosPackage {
   pname = "ros-melodic-fuse-loss";
   version = "0.4.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ libsForQt5.qwt qt5.qtbase roslint ];
+  checkInputs = [ qt5.qtbase qwt6 roslint ];
   propagatedBuildInputs = [ ceres-solver fuse-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 

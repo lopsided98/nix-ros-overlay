@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, git }:
 buildRosPackage {
   pname = "ros-galactic-osqp-vendor";
-  version = "0.0.3-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tier4/osqp_vendor-release/archive/release/galactic/osqp_vendor/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "de39e5484b5e279152fcd20cb5bd3b00202a77f56a276025709adb0a14d5c5e3";
+    url = "https://github.com/tier4/osqp_vendor-release/archive/release/galactic/osqp_vendor/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "366e082d8adb27d1206b58e830e162a5342dfc30ec076ec7f1e0ff786c90f64c";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
     description = ''Wrapper around osqp that ships with a CMake module'';

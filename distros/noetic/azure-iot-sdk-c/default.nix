@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, curl, openssl, util-linux }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake, curl, openssl, utillinux }:
 buildRosPackage {
   pname = "ros-noetic-azure-iot-sdk-c";
   version = "1.7.0-r4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ catkin curl openssl util-linux ];
+  propagatedBuildInputs = [ catkin curl openssl utillinux ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-controller }:
 buildRosPackage {
   pname = "ros-noetic-rm-controllers";
-  version = "0.1.1-r1";
+  version = "0.1.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_controllers/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "3af46e86f087d38dbf5bffa07f8238d879e28cb19c1770418a55ce63dffafa27";
+    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_controllers/0.1.1-3.tar.gz";
+    name = "0.1.1-3.tar.gz";
+    sha256 = "05554d86404cc251e581c2c2563028d7bd8c92e44ba8ca199de962db555ff462";
   };
 
   buildType = "catkin";

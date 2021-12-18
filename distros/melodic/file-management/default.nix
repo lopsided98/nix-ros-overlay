@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-common, cmake, dataflow-lite, gtest }:
+{ lib, buildRosPackage, fetchurl, aws-common, cmake, dataflow-lite, gmock, gtest }:
 buildRosPackage {
   pname = "ros-melodic-file-management";
   version = "1.1.5-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  checkInputs = [ gtest ];
+  checkInputs = [ gmock gtest ];
   propagatedBuildInputs = [ aws-common dataflow-lite ];
   nativeBuildInputs = [ cmake ];
 

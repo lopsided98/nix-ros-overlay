@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, ros-industrial-cmake-boilerplate, tesseract-common }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-support";
-  version = "0.6.7-r1";
+  version = "0.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_support/0.6.7-1.tar.gz";
-    name = "0.6.7-1.tar.gz";
-    sha256 = "6d8bef275328f75d6e140e9bf0e321559e20449c77e1bdcd46336ca95ebad48a";
+    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_support/0.6.9-1.tar.gz";
+    name = "0.6.9-1.tar.gz";
+    sha256 = "c65f97879f060844ddaf1c768083fad7429acc599782be318e2f4625dcec61ff";
   };
 
   buildType = "cmake";

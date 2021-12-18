@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-bno055";
-  version = "0.1.1-r2";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bno055-release/archive/release/galactic/bno055/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "a1d17f9323dded8540cf06d0fed09ce06e38bd35506ab61ad5760698731d60b7";
+    url = "https://github.com/ros2-gbp/bno055-release/archive/release/galactic/bno055/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "27e2b582a198a75cdf0c5189881d47222e74527e2cac0391a2f4def78f1489c5";
   };
 
   buildType = "ament_python";

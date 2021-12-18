@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libusb1 }:
+{ lib, buildRosPackage, fetchurl, catkin, libusb }:
 buildRosPackage {
   pname = "ros-melodic-libphidgets";
   version = "0.6.17-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ libusb1 ];
+  propagatedBuildInputs = [ libusb ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

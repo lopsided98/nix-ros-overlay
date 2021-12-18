@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, gtest-vendor, lcov, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-foxy-mrt-cmake-modules";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/KIT-MRT/mrt_cmake_modules-release/archive/release/foxy/mrt_cmake_modules/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "b7bf3dcf5f190f8287847a109f5fca060184db2fdd4fd29c63cdbafb195b43ef";
+    url = "https://github.com/KIT-MRT/mrt_cmake_modules-release/archive/release/foxy/mrt_cmake_modules/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "5cdfc80bb4ea0a2225701ef2ed428945c0e819eb5ce748f59ab86499b2cb116c";
   };
 
   buildType = "catkin";

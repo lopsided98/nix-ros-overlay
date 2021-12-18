@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, libusb1, openssl, pkg-config, udev }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, libudev, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-galactic-librealsense2";
   version = "2.50.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ libusb1 openssl pkg-config udev ];
+  buildInputs = [ libudev libusb1 openssl pkg-config udev ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.6.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/pinocchio_catkin-release/archive/release/melodic/pinocchio/2.6.4-1.tar.gz";
+    url = "https://github.com/stack-of-tasks/pinocchio-ros-release/archive/release/melodic/pinocchio/2.6.4-1.tar.gz";
     name = "2.6.4-1.tar.gz";
     sha256 = "434704c185cf69d766d543a78f030522c6b43127bcde587282dfb50c85fac2f3";
   };

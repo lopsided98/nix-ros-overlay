@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.com/ApexAI/apex_test_tools-release/-/archive/release/foxy/apex_test_tools/0.0.2-1/apex_test_tools-release-release-foxy-apex_test_tools-0.0.2-1.tar.gz";
     name = "apex_test_tools-release-release-foxy-apex_test_tools-0.0.2-1.tar.gz";
-    sha256 = "5397b4f6725e6f7a8ade5832dd802bbe9b9506fa69f2ab7402c6ebb840c3a260";
+    sha256 = "892bad4ede47e5e159b2d8ced4a6381f116176ecc5469783003c5cdf350ed661";
   };
 
   buildType = "ament_cmake";

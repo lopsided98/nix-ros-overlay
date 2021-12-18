@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, gazebo-dev, gazebo-ros, geometry-msgs, rclcpp, rmf-building-map-msgs, rmf-fleet-msgs, rmf-robot-sim-common }:
 buildRosPackage {
   pname = "ros-foxy-rmf-robot-sim-gazebo-plugins";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/foxy/rmf_robot_sim_gazebo_plugins/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "5ee9d645b6b12ebc1856a43e2c86e56f9cd3f5e4d64aefdf4b3739a44e35c610";
+    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/foxy/rmf_robot_sim_gazebo_plugins/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "c55e49919ad136b8ec6c94dc8f37a6c02b2c462bf6a0e8a1fe994f2c3039d7d2";
   };
 
   buildType = "ament_cmake";

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipab-slmc/eigenpy_catkin-release/archive/release/melodic/eigenpy/2.6.9-1.tar.gz";
+    url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/melodic/eigenpy/2.6.9-1.tar.gz";
     name = "2.6.9-1.tar.gz";
     sha256 = "07ad3559467602369b9a5f49f1e91536451b13c6981379905211a48152694876";
   };

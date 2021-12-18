@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gtest, libsForQt5, qt5, rosbag, roscpp, rqt-gui, rqt-gui-cpp, variant-topic-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, gtest, qt5, qwt6, rosbag, roscpp, rqt-gui, rqt-gui-cpp, variant-topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-rqt-multiplot";
   version = "0.0.12-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ libsForQt5.qwt qt5.qtbase rosbag roscpp rqt-gui rqt-gui-cpp variant-topic-tools ];
+  propagatedBuildInputs = [ qt5.qtbase qwt6 rosbag roscpp rqt-gui rqt-gui-cpp variant-topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

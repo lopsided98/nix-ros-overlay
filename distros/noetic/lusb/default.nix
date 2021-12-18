@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, libusb1 }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, libusb, libusb1 }:
 buildRosPackage {
   pname = "ros-noetic-lusb";
   version = "1.1.0-r1";
@@ -14,7 +14,8 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ boost libusb1 ];
+  buildInputs = [ libusb1 ];
+  propagatedBuildInputs = [ boost libusb ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

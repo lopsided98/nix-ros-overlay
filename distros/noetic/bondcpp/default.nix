@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bond, boost, catkin, cmake-modules, roscpp, smclib, util-linux }:
+{ lib, buildRosPackage, fetchurl, bond, boost, catkin, cmake-modules, roscpp, smclib, utillinux }:
 buildRosPackage {
   pname = "ros-noetic-bondcpp";
   version = "1.8.6-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ cmake-modules ];
-  propagatedBuildInputs = [ bond boost roscpp smclib util-linux ];
+  propagatedBuildInputs = [ bond boost roscpp smclib utillinux ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

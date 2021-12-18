@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-command-line, libftdi, libusb1, pkg-config }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-command-line, libftdi, libusb, pkg-config }:
 buildRosPackage {
   pname = "ros-foxy-kobuki-ftdi";
   version = "1.0.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ecl-build pkg-config ];
-  propagatedBuildInputs = [ ecl-command-line libftdi libusb1 ];
+  propagatedBuildInputs = [ ecl-command-line libftdi libusb ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

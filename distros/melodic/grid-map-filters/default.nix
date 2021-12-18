@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, filters, grid-map-core, grid-map-msgs, grid-map-ros, gtest, opencv3, tbb }:
+{ lib, buildRosPackage, fetchurl, catkin, filters, gmock, grid-map-core, grid-map-msgs, grid-map-ros, gtest, opencv3, tbb }:
 buildRosPackage {
   pname = "ros-melodic-grid-map-filters";
   version = "1.6.4-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ gtest ];
+  checkInputs = [ gmock gtest ];
   propagatedBuildInputs = [ filters grid-map-core grid-map-msgs grid-map-ros opencv3 tbb ];
   nativeBuildInputs = [ catkin ];
 

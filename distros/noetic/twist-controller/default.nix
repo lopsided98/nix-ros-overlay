@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cartesian-interface, catkin, controller-interface, dynamic-reconfigure, geometry-msgs, hardware-interface, realtime-tools, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-twist-controller";
-  version = "0.1.4-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/noetic/twist_controller/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "9227c502123d4538f51ec94536fe189daf1de5ab3cbf8ccde044c242238f181a";
+    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/noetic/twist_controller/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "1ce2d703821975d1535d64e9e5c182991f4e004fa5ebca3613468eb1521c3494";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, hardware-interface, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-cartesian-interface";
-  version = "0.1.4-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/noetic/cartesian_interface/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "68ec44c6147522d337527352ba97241fc7b71484cb9d7557e939c36ec7da5df3";
+    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/noetic/cartesian_interface/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "1f2aa6bb27030a2dfc1eabab2549db60369b49ed65f3a5f8452aea0ea4957b8e";
   };
 
   buildType = "catkin";

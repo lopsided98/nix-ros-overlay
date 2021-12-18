@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, rostest, xacro }:
 buildRosPackage {
   pname = "ros-noetic-leo-description";
-  version = "1.2.2-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/noetic/leo_description/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "0663ddfecbba76660c215c788834866fc816036cf79734261693a906004fbb17";
+    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/noetic/leo_description/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "45d4e0728755c83bfe5cd646da3f2256d3808f46facd6b6aaba581ebeddf26c7";
   };
 
   buildType = "catkin";

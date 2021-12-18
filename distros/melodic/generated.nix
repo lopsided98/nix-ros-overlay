@@ -476,10 +476,6 @@ self: super: {
 
  cob-object-detection-visualizer = self.callPackage ./cob-object-detection-visualizer {};
 
- cob-obstacle-distance = self.callPackage ./cob-obstacle-distance {};
-
- cob-obstacle-distance-moveit = self.callPackage ./cob-obstacle-distance-moveit {};
-
  cob-omni-drive-controller = self.callPackage ./cob-omni-drive-controller {};
 
  cob-perception-common = self.callPackage ./cob-perception-common {};
@@ -1024,8 +1020,6 @@ self: super: {
 
  fake-localization = self.callPackage ./fake-localization {};
 
- fcl-catkin = self.callPackage ./fcl-catkin {};
-
  fetch-auto-dock-msgs = self.callPackage ./fetch-auto-dock-msgs {};
 
  fetch-bringup = self.callPackage ./fetch-bringup {};
@@ -1174,17 +1168,11 @@ self: super: {
 
  fuse = self.callPackage ./fuse {};
 
- fuse-constraints = self.callPackage ./fuse-constraints {};
-
  fuse-core = self.callPackage ./fuse-core {};
 
  fuse-doc = self.callPackage ./fuse-doc {};
 
- fuse-graphs = self.callPackage ./fuse-graphs {};
-
  fuse-loss = self.callPackage ./fuse-loss {};
-
- fuse-models = self.callPackage ./fuse-models {};
 
  fuse-msgs = self.callPackage ./fuse-msgs {};
 
@@ -1477,8 +1465,6 @@ self: super: {
  ieee80211-channels = self.callPackage ./ieee80211-channels {};
 
  ifm3d = self.callPackage ./ifm3d {};
-
- ifm3d-core = self.callPackage ./ifm3d-core {};
 
  igvc-self-drive-description = self.callPackage ./igvc-self-drive-description {};
 
@@ -1799,8 +1785,6 @@ self: super: {
  lanelet2-core = self.callPackage ./lanelet2-core {};
 
  lanelet2-examples = self.callPackage ./lanelet2-examples {};
-
- lanelet2-io = self.callPackage ./lanelet2-io {};
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
@@ -2184,8 +2168,6 @@ self: super: {
 
  moveit-controller-manager-example = self.callPackage ./moveit-controller-manager-example {};
 
- moveit-core = self.callPackage ./moveit-core {};
-
  moveit-fake-controller-manager = self.callPackage ./moveit-fake-controller-manager {};
 
  moveit-kinematics = self.callPackage ./moveit-kinematics {};
@@ -2235,8 +2217,6 @@ self: super: {
  moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
-
- moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
 
  moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
 
@@ -2502,6 +2482,8 @@ self: super: {
 
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
+ ntrip-client = self.callPackage ./ntrip-client {};
+
  obj-to-pointcloud = self.callPackage ./obj-to-pointcloud {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
@@ -2616,6 +2598,8 @@ self: super: {
 
  optpp-catkin = self.callPackage ./optpp-catkin {};
 
+ opw-kinematics = self.callPackage ./opw-kinematics {};
+
  orocos-kdl = self.callPackage ./orocos-kdl {};
 
  orocos-kinematics-dynamics = self.callPackage ./orocos-kinematics-dynamics {};
@@ -2695,8 +2679,6 @@ self: super: {
  perception = self.callPackage ./perception {};
 
  perception-pcl = self.callPackage ./perception-pcl {};
-
- pf-driver = self.callPackage ./pf-driver {};
 
  pheeno-ros-description = self.callPackage ./pheeno-ros-description {};
 
@@ -3168,8 +3150,6 @@ self: super: {
 
  resized-image-transport = self.callPackage ./resized-image-transport {};
 
- resource-retriever = self.callPackage ./resource-retriever {};
-
  rexrov2-control = self.callPackage ./rexrov2-control {};
 
  rexrov2-description = self.callPackage ./rexrov2-description {};
@@ -3213,8 +3193,6 @@ self: super: {
  robot-activity-msgs = self.callPackage ./robot-activity-msgs {};
 
  robot-activity-tutorials = self.callPackage ./robot-activity-tutorials {};
-
- robot-body-filter = self.callPackage ./robot-body-filter {};
 
  robot-calibration = self.callPackage ./robot-calibration {};
 
@@ -3927,8 +3905,6 @@ self: super: {
  sot-dynamic-pinocchio = self.callPackage ./sot-dynamic-pinocchio {};
 
  sot-tools = self.callPackage ./sot-tools {};
-
- spacenav-node = self.callPackage ./spacenav-node {};
 
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 

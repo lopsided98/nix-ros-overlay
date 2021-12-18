@@ -2,19 +2,19 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, joy, launch-xml, rmf-building-sim-gazebo-plugins, rmf-demos, rmf-robot-sim-gazebo-plugins, teleop-twist-joy }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, gazebo-plugins, joy, launch-xml, rmf-building-sim-gazebo-plugins, rmf-demos, rmf-robot-sim-gazebo-plugins, teleop-twist-joy }:
 buildRosPackage {
   pname = "ros-foxy-rmf-demos-gz";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/foxy/rmf_demos_gz/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "717abb6b147b5fbd328521f14a174380bdf92205644c8c0752bf98cf14c852c2";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/foxy/rmf_demos_gz/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "c17d0b8bcf7adf37d167bd3fcc10feec306f1af12699510913ea64b8e222db35";
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ joy launch-xml rmf-building-sim-gazebo-plugins rmf-demos rmf-robot-sim-gazebo-plugins teleop-twist-joy ];
+  propagatedBuildInputs = [ gazebo-plugins joy launch-xml rmf-building-sim-gazebo-plugins rmf-demos rmf-robot-sim-gazebo-plugins teleop-twist-joy ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

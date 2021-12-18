@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-common, boost, catkin, cmake, gtest }:
+{ lib, buildRosPackage, fetchurl, aws-common, boost, catkin, cmake, gmock }:
 buildRosPackage {
   pname = "ros-melodic-s3-common";
   version = "1.0.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  checkInputs = [ gtest ];
+  checkInputs = [ gmock ];
   propagatedBuildInputs = [ aws-common boost ];
   nativeBuildInputs = [ catkin cmake ];
 

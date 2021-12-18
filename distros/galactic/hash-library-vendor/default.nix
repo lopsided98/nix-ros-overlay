@@ -2,20 +2,20 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, git }:
 buildRosPackage {
   pname = "ros-galactic-hash-library-vendor";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tier4/hash_library_vendor-release/archive/release/galactic/hash_library_vendor/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "571f885109fc8700a37b96607f96d8e8e70506a48acec360c144d4a9f996e886";
+    url = "https://github.com/tier4/hash_library_vendor-release/archive/release/galactic/hash_library_vendor/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "62bda6cb3b853dcb0394424cb1f1da97d08be3e05a5b145f912394393d4c76e9";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  nativeBuildInputs = [ ament-cmake-auto ];
+  nativeBuildInputs = [ ament-cmake-auto git ];
 
   meta = {
     description = ''ROS2 vendor package for stbrumme/hash-library'';

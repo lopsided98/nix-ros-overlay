@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, gtest, pal-statistics-msgs, roscpp, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, gmock, pal-statistics-msgs, roscpp, rospy, rostest }:
 buildRosPackage {
   pname = "ros-melodic-pal-statistics";
   version = "1.4.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ gtest rostest ];
+  checkInputs = [ gmock rostest ];
   propagatedBuildInputs = [ boost pal-statistics-msgs roscpp rospy ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, gtest, python3Packages }:
+{ lib, buildRosPackage, fetchurl, cmake, gmock, gtest, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-catkin";
   version = "0.8.10-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ python3Packages.mock python3Packages.nose ];
-  propagatedBuildInputs = [ cmake gtest python3Packages.catkin-pkg python3Packages.empy python3Packages.nose python3Packages.setuptools ];
+  propagatedBuildInputs = [ cmake gmock gtest python3Packages.catkin-pkg python3Packages.empy python3Packages.nose python3Packages.setuptools ];
   nativeBuildInputs = [ cmake python3Packages.setuptools ];
 
   meta = {

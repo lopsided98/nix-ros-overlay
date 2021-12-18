@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, gtest-vendor, lcov, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-galactic-mrt-cmake-modules";
-  version = "1.0.8-r3";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/KIT-MRT/mrt_cmake_modules-release/archive/release/galactic/mrt_cmake_modules/1.0.8-3.tar.gz";
-    name = "1.0.8-3.tar.gz";
-    sha256 = "8d00dd6c383e08e96b6af38bc88bd6f7b7e02c1402950cdeba102cdcd06edb62";
+    url = "https://github.com/KIT-MRT/mrt_cmake_modules-release/archive/release/galactic/mrt_cmake_modules/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "90ae9ca8a6295fbf44d849e1a3e81ae1c29a9bcddf2ac3d2e0e23467678994d2";
   };
 
   buildType = "catkin";

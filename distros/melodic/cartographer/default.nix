@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cairo, catkin, ceres-solver, eigen, gflags, glog, gtest, lua5, protobuf, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, boost, cairo, catkin, ceres-solver, eigen, gflags, glog, gmock, lua5, protobuf, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-cartographer";
   version = "1.0.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ gtest pythonPackages.sphinx ];
+  buildInputs = [ gmock pythonPackages.sphinx ];
   propagatedBuildInputs = [ boost cairo ceres-solver eigen gflags glog lua5 protobuf ];
   nativeBuildInputs = [ catkin ];
 

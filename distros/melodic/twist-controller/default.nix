@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cartesian-interface, catkin, controller-interface, dynamic-reconfigure, geometry-msgs, hardware-interface, realtime-tools, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-twist-controller";
-  version = "0.1.4-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/melodic/twist_controller/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "8c275c6ef6b7611f343767f43399b67b5349c1fc4091df5a3773cdec2b0181be";
+    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/melodic/twist_controller/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "29963ca38d385ca8d2ee9e79ca9aab624a347d42bb38e5193b98238820ed30c3";
   };
 
   buildType = "catkin";

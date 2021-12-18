@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, controller-manager-msgs, dynamic-reconfigure, eigen, geometry-msgs, realtime-tools, rm-msgs, roscpp, roslint, tf }:
 buildRosPackage {
   pname = "ros-noetic-rm-common";
-  version = "0.1.7-r4";
+  version = "0.1.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_common/0.1.7-4.tar.gz";
-    name = "0.1.7-4.tar.gz";
-    sha256 = "724c458d1158afc7a0fd30d0c0f27eb69911e82448109eb4bbc50c3642b194a5";
+    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_common/0.1.8-2.tar.gz";
+    name = "0.1.8-2.tar.gz";
+    sha256 = "2b22d278701759dfc20d8906a2b75f360d702cd954269ef160a5ed9e37c9819f";
   };
 
   buildType = "catkin";
