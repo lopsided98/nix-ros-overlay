@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, libpng, libusb }:
+{ lib, buildRosPackage, fetchurl, cmake, libpng, libusb1 }:
 buildRosPackage {
   pname = "ros-melodic-rc-genicam-api";
   version = "2.5.12-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ libpng libusb ];
+  propagatedBuildInputs = [ libpng libusb1 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

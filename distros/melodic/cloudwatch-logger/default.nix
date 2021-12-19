@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-common, aws-ros1-common, catkin, cloudwatch-logs-common, gmock, gtest, roscpp, rostest, std-msgs, std-srvs }:
+{ lib, buildRosPackage, fetchurl, aws-common, aws-ros1-common, catkin, cloudwatch-logs-common, gtest, roscpp, rostest, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-cloudwatch-logger";
   version = "2.3.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ gmock gtest rostest ];
+  checkInputs = [ gtest rostest ];
   propagatedBuildInputs = [ aws-common aws-ros1-common cloudwatch-logs-common roscpp std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 

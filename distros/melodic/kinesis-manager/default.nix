@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-common, boost, catkin, cmake, curl, gmock, gtest, log4cplus, openssl, pkg-config }:
+{ lib, buildRosPackage, fetchurl, aws-common, boost, catkin, cmake, curl, gtest, log4cplus, openssl, pkg-config }:
 buildRosPackage {
   pname = "ros-melodic-kinesis-manager";
   version = "2.0.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  checkInputs = [ gmock gtest ];
+  checkInputs = [ gtest ];
   propagatedBuildInputs = [ aws-common boost curl log4cplus openssl ];
   nativeBuildInputs = [ catkin cmake pkg-config ];
 

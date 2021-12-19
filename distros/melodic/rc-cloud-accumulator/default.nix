@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-msgs, pcl, pcl-ros, roscpp, std-srvs, tf2, tf2-msgs, tf2-ros, vtkWithQt4 }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-msgs, pcl, pcl-ros, roscpp, std-srvs, tf2, tf2-msgs, tf2-ros, vtkWithQt5 }:
 buildRosPackage {
   pname = "ros-melodic-rc-cloud-accumulator";
   version = "1.0.4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ geometry-msgs nav-msgs pcl pcl-ros roscpp std-srvs tf2 tf2-msgs tf2-ros vtkWithQt4 ];
+  propagatedBuildInputs = [ geometry-msgs nav-msgs pcl pcl-ros roscpp std-srvs tf2 tf2-msgs tf2-ros vtkWithQt5 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

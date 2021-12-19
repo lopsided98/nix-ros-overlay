@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, libusb, libusb1 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, libusb1 }:
 buildRosPackage {
   pname = "ros-galactic-libphidget22";
   version = "2.2.1-r1";
@@ -14,8 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ libusb1 ];
-  propagatedBuildInputs = [ libusb ];
+  propagatedBuildInputs = [ libusb1 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

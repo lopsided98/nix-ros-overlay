@@ -2,7 +2,7 @@
 # Copyright 2021 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, aws-common, aws-ros1-common, catkin, gmock, gtest, message-generation, message-runtime, ros-monitoring-msgs, roscpp, rospy, rostest, std-msgs }:
+{ lib, buildRosPackage, fetchurl, aws-common, aws-ros1-common, catkin, gtest, message-generation, message-runtime, ros-monitoring-msgs, roscpp, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-health-metric-collector";
   version = "2.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  checkInputs = [ gmock gtest rostest ];
+  checkInputs = [ gtest rostest ];
   propagatedBuildInputs = [ aws-common aws-ros1-common message-generation message-runtime ros-monitoring-msgs roscpp rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
