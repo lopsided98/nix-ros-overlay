@@ -470,6 +470,8 @@ self: super: {
 
  gmock-vendor = self.callPackage ./gmock-vendor {};
 
+ google-benchmark-vendor = self.callPackage ./google-benchmark-vendor {};
+
  gps-msgs = self.callPackage ./gps-msgs {};
 
  gps-tools = self.callPackage ./gps-tools {};
@@ -495,6 +497,8 @@ self: super: {
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
+
+ ifm3d-core = self.callPackage ./ifm3d-core {};
 
  image-common = self.callPackage ./image-common {};
 
@@ -558,6 +562,8 @@ self: super: {
 
  lanelet2-examples = self.callPackage ./lanelet2-examples {};
 
+ lanelet2-io = self.callPackage ./lanelet2-io {};
+
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
  lanelet2-projection = self.callPackage ./lanelet2-projection {};
@@ -579,6 +585,8 @@ self: super: {
  launch-pal = self.callPackage ./launch-pal {};
 
  launch-ros = self.callPackage ./launch-ros {};
+
+ launch-system-modes = self.callPackage ./launch-system-modes {};
 
  launch-testing = self.callPackage ./launch-testing {};
 
@@ -684,11 +692,15 @@ self: super: {
 
  moveit-common = self.callPackage ./moveit-common {};
 
+ moveit-core = self.callPackage ./moveit-core {};
+
  moveit-kinematics = self.callPackage ./moveit-kinematics {};
 
  moveit-msgs = self.callPackage ./moveit-msgs {};
 
  moveit-planners = self.callPackage ./moveit-planners {};
+
+ moveit-planners-ompl = self.callPackage ./moveit-planners-ompl {};
 
  moveit-plugins = self.callPackage ./moveit-plugins {};
 
@@ -711,6 +723,8 @@ self: super: {
  moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
+
+ moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
 
  moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
 
@@ -1118,6 +1132,8 @@ self: super: {
 
  rmf-task-ros2 = self.callPackage ./rmf-task-ros2 {};
 
+ rmf-traffic = self.callPackage ./rmf-traffic {};
+
  rmf-traffic-editor = self.callPackage ./rmf-traffic-editor {};
 
  rmf-traffic-editor-assets = self.callPackage ./rmf-traffic-editor-assets {};
@@ -1474,6 +1490,8 @@ self: super: {
 
  sophus = self.callPackage ./sophus {};
 
+ spacenav = self.callPackage ./spacenav {};
+
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
@@ -1632,6 +1650,8 @@ self: super: {
 
  turtlesim = self.callPackage ./turtlesim {};
 
+ tvm-vendor = self.callPackage ./tvm-vendor {};
+
  twist-mux = self.callPackage ./twist-mux {};
 
  twist-stamper = self.callPackage ./twist-stamper {};
@@ -1717,6 +1737,8 @@ self: super: {
  webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
 
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
+
+ webots-ros2-importer = self.callPackage ./webots-ros2-importer {};
 
  webots-ros2-mavic = self.callPackage ./webots-ros2-mavic {};
 

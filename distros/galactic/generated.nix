@@ -96,6 +96,8 @@ self: super: {
 
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
 
+ ament-copyright = self.callPackage ./ament-copyright {};
+
  ament-cppcheck = self.callPackage ./ament-cppcheck {};
 
  ament-cpplint = self.callPackage ./ament-cpplint {};
@@ -117,6 +119,8 @@ self: super: {
  ament-mypy = self.callPackage ./ament-mypy {};
 
  ament-nodl = self.callPackage ./ament-nodl {};
+
+ ament-package = self.callPackage ./ament-package {};
 
  ament-pclint = self.callPackage ./ament-pclint {};
 
@@ -366,6 +370,8 @@ self: super: {
 
  gmock-vendor = self.callPackage ./gmock-vendor {};
 
+ google-benchmark-vendor = self.callPackage ./google-benchmark-vendor {};
+
  gps-msgs = self.callPackage ./gps-msgs {};
 
  gps-tools = self.callPackage ./gps-tools {};
@@ -395,6 +401,8 @@ self: super: {
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
  iceoryx-utils = self.callPackage ./iceoryx-utils {};
+
+ ifm3d-core = self.callPackage ./ifm3d-core {};
 
  image-common = self.callPackage ./image-common {};
 
@@ -448,6 +456,8 @@ self: super: {
 
  lanelet2-examples = self.callPackage ./lanelet2-examples {};
 
+ lanelet2-io = self.callPackage ./lanelet2-io {};
+
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
  lanelet2-projection = self.callPackage ./lanelet2-projection {};
@@ -465,6 +475,12 @@ self: super: {
  laser-geometry = self.callPackage ./laser-geometry {};
 
  laser-proc = self.callPackage ./laser-proc {};
+
+ launch = self.callPackage ./launch {};
+
+ launch-ros = self.callPackage ./launch-ros {};
+
+ launch-system-modes = self.callPackage ./launch-system-modes {};
 
  launch-testing = self.callPackage ./launch-testing {};
 
@@ -552,11 +568,15 @@ self: super: {
 
  moveit-common = self.callPackage ./moveit-common {};
 
+ moveit-core = self.callPackage ./moveit-core {};
+
  moveit-kinematics = self.callPackage ./moveit-kinematics {};
 
  moveit-msgs = self.callPackage ./moveit-msgs {};
 
  moveit-planners = self.callPackage ./moveit-planners {};
+
+ moveit-planners-ompl = self.callPackage ./moveit-planners-ompl {};
 
  moveit-plugins = self.callPackage ./moveit-plugins {};
 
@@ -581,6 +601,8 @@ self: super: {
  moveit-ros-move-group = self.callPackage ./moveit-ros-move-group {};
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
+
+ moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
 
  moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
 
@@ -942,6 +964,8 @@ self: super: {
 
  rmf-task-ros2 = self.callPackage ./rmf-task-ros2 {};
 
+ rmf-traffic = self.callPackage ./rmf-traffic {};
+
  rmf-traffic-editor = self.callPackage ./rmf-traffic-editor {};
 
  rmf-traffic-editor-assets = self.callPackage ./rmf-traffic-editor-assets {};
@@ -1009,6 +1033,8 @@ self: super: {
  ros2action = self.callPackage ./ros2action {};
 
  ros2bag = self.callPackage ./ros2bag {};
+
+ ros2cli = self.callPackage ./ros2cli {};
 
  ros2cli-common-extensions = self.callPackage ./ros2cli-common-extensions {};
 
@@ -1109,6 +1135,8 @@ self: super: {
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
 
  rosidl-adapter = self.callPackage ./rosidl-adapter {};
+
+ rosidl-cli = self.callPackage ./rosidl-cli {};
 
  rosidl-cmake = self.callPackage ./rosidl-cmake {};
 
@@ -1274,6 +1302,8 @@ self: super: {
 
  soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
 
+ spacenav = self.callPackage ./spacenav {};
+
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
@@ -1430,6 +1460,8 @@ self: super: {
 
  turtlesim = self.callPackage ./turtlesim {};
 
+ tvm-vendor = self.callPackage ./tvm-vendor {};
+
  twist-mux = self.callPackage ./twist-mux {};
 
  ublox = self.callPackage ./ublox {};
@@ -1509,6 +1541,8 @@ self: super: {
  webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
 
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
+
+ webots-ros2-importer = self.callPackage ./webots-ros2-importer {};
 
  webots-ros2-mavic = self.callPackage ./webots-ros2-mavic {};
 

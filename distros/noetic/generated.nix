@@ -48,6 +48,8 @@ self: super: {
 
  arbotix-sensors = self.callPackage ./arbotix-sensors {};
 
+ aruco-detect = self.callPackage ./aruco-detect {};
+
  assimp-devel = self.callPackage ./assimp-devel {};
 
  assisted-teleop = self.callPackage ./assisted-teleop {};
@@ -335,6 +337,8 @@ self: super: {
  cob-object-detection-msgs = self.callPackage ./cob-object-detection-msgs {};
 
  cob-object-detection-visualizer = self.callPackage ./cob-object-detection-visualizer {};
+
+ cob-obstacle-distance = self.callPackage ./cob-obstacle-distance {};
 
  cob-omni-drive-controller = self.callPackage ./cob-omni-drive-controller {};
 
@@ -748,6 +752,10 @@ self: super: {
 
  fake-localization = self.callPackage ./fake-localization {};
 
+ fcl = self.callPackage ./fcl {};
+
+ fcl-catkin = self.callPackage ./fcl-catkin {};
+
  fetch-auto-dock-msgs = self.callPackage ./fetch-auto-dock-msgs {};
 
  fetch-bringup = self.callPackage ./fetch-bringup {};
@@ -801,6 +809,8 @@ self: super: {
  fkie-multimaster = self.callPackage ./fkie-multimaster {};
 
  fkie-multimaster-msgs = self.callPackage ./fkie-multimaster-msgs {};
+
+ fkie-node-manager = self.callPackage ./fkie-node-manager {};
 
  fkie-node-manager-daemon = self.callPackage ./fkie-node-manager-daemon {};
 
@@ -862,11 +872,17 @@ self: super: {
 
  fuse = self.callPackage ./fuse {};
 
+ fuse-constraints = self.callPackage ./fuse-constraints {};
+
  fuse-core = self.callPackage ./fuse-core {};
 
  fuse-doc = self.callPackage ./fuse-doc {};
 
+ fuse-graphs = self.callPackage ./fuse-graphs {};
+
  fuse-loss = self.callPackage ./fuse-loss {};
+
+ fuse-models = self.callPackage ./fuse-models {};
 
  fuse-msgs = self.callPackage ./fuse-msgs {};
 
@@ -1084,6 +1100,8 @@ self: super: {
 
  ifm3d = self.callPackage ./ifm3d {};
 
+ ifm3d-core = self.callPackage ./ifm3d-core {};
+
  image-cb-detector = self.callPackage ./image-cb-detector {};
 
  image-common = self.callPackage ./image-common {};
@@ -1296,6 +1314,8 @@ self: super: {
 
  lanelet2-examples = self.callPackage ./lanelet2-examples {};
 
+ lanelet2-io = self.callPackage ./lanelet2-io {};
+
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
  lanelet2-projection = self.callPackage ./lanelet2-projection {};
@@ -1383,6 +1403,8 @@ self: super: {
  librviz-tutorial = self.callPackage ./librviz-tutorial {};
 
  libsiftfast = self.callPackage ./libsiftfast {};
+
+ libuvc-camera = self.callPackage ./libuvc-camera {};
 
  libuvc-ros = self.callPackage ./libuvc-ros {};
 
@@ -1618,6 +1640,8 @@ self: super: {
 
  moveit-ros-occupancy-map-monitor = self.callPackage ./moveit-ros-occupancy-map-monitor {};
 
+ moveit-ros-perception = self.callPackage ./moveit-ros-perception {};
+
  moveit-ros-planning = self.callPackage ./moveit-ros-planning {};
 
  moveit-ros-planning-interface = self.callPackage ./moveit-ros-planning-interface {};
@@ -1645,6 +1669,8 @@ self: super: {
  mpc-local-planner-examples = self.callPackage ./mpc-local-planner-examples {};
 
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
+
+ mqtt-bridge = self.callPackage ./mqtt-bridge {};
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
@@ -2182,6 +2208,8 @@ self: super: {
 
  resized-image-transport = self.callPackage ./resized-image-transport {};
 
+ resource-retriever = self.callPackage ./resource-retriever {};
+
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
  rm-calibration-controllers = self.callPackage ./rm-calibration-controllers {};
@@ -2289,6 +2317,8 @@ self: super: {
  ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
 
  ros-ign-image = self.callPackage ./ros-ign-image {};
+
+ ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
 
  ros-introspection = self.callPackage ./ros-introspection {};
 
@@ -2414,6 +2444,8 @@ self: super: {
 
  rospatlite = self.callPackage ./rospatlite {};
 
+ rospilot = self.callPackage ./rospilot {};
+
  rosping = self.callPackage ./rosping {};
 
  rospy = self.callPackage ./rospy {};
@@ -2459,6 +2491,8 @@ self: super: {
  rostime = self.callPackage ./rostime {};
 
  rostopic = self.callPackage ./rostopic {};
+
+ rostwitter = self.callPackage ./rostwitter {};
 
  rosunit = self.callPackage ./rosunit {};
 
@@ -2716,6 +2750,8 @@ self: super: {
 
  sot-tools = self.callPackage ./sot-tools {};
 
+ spacenav-node = self.callPackage ./spacenav-node {};
+
  sparse-bundle-adjustment = self.callPackage ./sparse-bundle-adjustment {};
 
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
@@ -2807,6 +2843,8 @@ self: super: {
  tello-driver = self.callPackage ./tello-driver {};
 
  tesseract-common = self.callPackage ./tesseract-common {};
+
+ tesseract-environment = self.callPackage ./tesseract-environment {};
 
  tesseract-geometry = self.callPackage ./tesseract-geometry {};
 
@@ -3087,6 +3125,8 @@ self: super: {
  warthog-msgs = self.callPackage ./warthog-msgs {};
 
  web-video-server = self.callPackage ./web-video-server {};
+
+ webkit-dependency = self.callPackage ./webkit-dependency {};
 
  webots-ros = self.callPackage ./webots-ros {};
 
