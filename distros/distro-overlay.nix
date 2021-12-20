@@ -443,20 +443,10 @@ let
       sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
     };
 
-    yaml-cpp-vendor = (patchVendorUrl rosSuper.yaml-cpp-vendor {
+    yaml-cpp-vendor = patchVendorUrl rosSuper.yaml-cpp-vendor {
       url = "https://github.com/jbeder/yaml-cpp/archive/0f9a586ca1dc29c2ecb8dd715a315b93e3f40f79.zip";
       sha256 = "1g45f71mk4gyca550177qf70v5cvavlsalmg7x8bi59j6z6f0mgz";
-    }).overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = [
-        # Fix "CMake Error: Unknown argument -std=c++14 -w"
-        (self.fetchpatch {
-          url = "https://github.com/ros2/yaml_cpp_vendor/pull/24.patch";
-          sha256 = "0via2vcvx0r0w8n626n7ghljadd2apdqn0wcqygmgbd7dmvfr97h";
-        })
-      ] ++ patches;
-    });
+    };
   };
 in self.lib.makeExtensible (rosSelf: self.rosPackages.lib.mergeOverlays [
   base
