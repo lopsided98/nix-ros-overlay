@@ -2,8 +2,8 @@
 
 callPackage ./. ({
   majorVersion = "4";
-  version = "4.3.0";
-  srcSha256 = "028f6ai61fxdg0ilss3hx7m9kdpahpwrcjqw1gv2rjdb9wh1iwn6";
+  version = "4.4.0";
+  srcSha256 = "1366nxy518amxs618h97jqzsl9755ig78w04s1ci3w5nir5silmq";
   ignition-common = ignition.common3;
   ignition-msgs = ignition.msgs5;
 } // args)
