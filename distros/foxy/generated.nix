@@ -1488,6 +1488,8 @@ self: super: {
 
  soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
 
+ sol-vendor = self.callPackage ./sol-vendor {};
+
  sophus = self.callPackage ./sophus {};
 
  spacenav = self.callPackage ./spacenav {};

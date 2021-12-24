@@ -560,6 +560,8 @@ self: super: {
 
  microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
 
+ microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
+
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
@@ -666,6 +668,8 @@ self: super: {
 
  nav2-regulated-pure-pursuit-controller = self.callPackage ./nav2-regulated-pure-pursuit-controller {};
 
+ nav2-rotation-shim-controller = self.callPackage ./nav2-rotation-shim-controller {};
+
  nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
 
  nav2-simple-commander = self.callPackage ./nav2-simple-commander {};
@@ -709,6 +713,8 @@ self: super: {
  octomap = self.callPackage ./octomap {};
 
  octomap-msgs = self.callPackage ./octomap-msgs {};
+
+ octomap-ros = self.callPackage ./octomap-ros {};
 
  octovis = self.callPackage ./octovis {};
 
@@ -1286,6 +1292,10 @@ self: super: {
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
+ sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
+
+ sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
+
  simple-launch = self.callPackage ./simple-launch {};
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
@@ -1301,6 +1311,8 @@ self: super: {
  soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
 
  soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
+
+ sol-vendor = self.callPackage ./sol-vendor {};
 
  spacenav = self.callPackage ./spacenav {};
 

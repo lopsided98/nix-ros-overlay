@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/foxy/eigenpy/2.5.0-1.tar.gz";
     name = "2.5.0-1.tar.gz";
-    sha256 = "003a4af776f2fc24b0b26badf132debcb2d3bced66d26afe87b3ff334302207b";
+    sha256 = "f0a68dd33a86dcaefdea50269f6153d84bde5d8d14a1f1333be4fafa644158d4";
   };
 
   buildType = "cmake";
