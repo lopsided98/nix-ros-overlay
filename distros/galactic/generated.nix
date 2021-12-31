@@ -184,6 +184,8 @@ self: super: {
 
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
 
+ chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
+
  class-loader = self.callPackage ./class-loader {};
 
  color-names = self.callPackage ./color-names {};
@@ -518,6 +520,12 @@ self: super: {
 
  map-msgs = self.callPackage ./map-msgs {};
 
+ mapviz = self.callPackage ./mapviz {};
+
+ mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
+
+ mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
@@ -560,21 +568,29 @@ self: super: {
 
  microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
 
+ microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
+
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  moveit = self.callPackage ./moveit {};
 
+ moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
+
  moveit-common = self.callPackage ./moveit-common {};
 
  moveit-core = self.callPackage ./moveit-core {};
+
+ moveit-hybrid-planning = self.callPackage ./moveit-hybrid-planning {};
 
  moveit-kinematics = self.callPackage ./moveit-kinematics {};
 
  moveit-msgs = self.callPackage ./moveit-msgs {};
 
  moveit-planners = self.callPackage ./moveit-planners {};
+
+ moveit-planners-chomp = self.callPackage ./moveit-planners-chomp {};
 
  moveit-planners-ompl = self.callPackage ./moveit-planners-ompl {};
 
@@ -591,6 +607,14 @@ self: super: {
  moveit-resources-panda-moveit-config = self.callPackage ./moveit-resources-panda-moveit-config {};
 
  moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
+
+ moveit-resources-prbt-ikfast-manipulator-plugin = self.callPackage ./moveit-resources-prbt-ikfast-manipulator-plugin {};
+
+ moveit-resources-prbt-moveit-config = self.callPackage ./moveit-resources-prbt-moveit-config {};
+
+ moveit-resources-prbt-pg70-support = self.callPackage ./moveit-resources-prbt-pg70-support {};
+
+ moveit-resources-prbt-support = self.callPackage ./moveit-resources-prbt-support {};
 
  moveit-ros = self.callPackage ./moveit-ros {};
 
@@ -618,11 +642,15 @@ self: super: {
 
  moveit-servo = self.callPackage ./moveit-servo {};
 
+ moveit-setup-assistant = self.callPackage ./moveit-setup-assistant {};
+
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ multires-image = self.callPackage ./multires-image {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -665,6 +693,8 @@ self: super: {
  nav2-recoveries = self.callPackage ./nav2-recoveries {};
 
  nav2-regulated-pure-pursuit-controller = self.callPackage ./nav2-regulated-pure-pursuit-controller {};
+
+ nav2-rotation-shim-controller = self.callPackage ./nav2-rotation-shim-controller {};
 
  nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
 
@@ -709,6 +739,10 @@ self: super: {
  octomap = self.callPackage ./octomap {};
 
  octomap-msgs = self.callPackage ./octomap-msgs {};
+
+ octomap-ros = self.callPackage ./octomap-ros {};
+
+ octomap-rviz-plugins = self.callPackage ./octomap-rviz-plugins {};
 
  octovis = self.callPackage ./octovis {};
 
@@ -777,6 +811,10 @@ self: super: {
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
  picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
+
+ pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
+
+ pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
 
  plansys2-bringup = self.callPackage ./plansys2-bringup {};
 
@@ -1242,12 +1280,6 @@ self: super: {
 
  ruckig = self.callPackage ./ruckig {};
 
- run-move-group = self.callPackage ./run-move-group {};
-
- run-moveit-cpp = self.callPackage ./run-moveit-cpp {};
-
- run-ompl-constrained-planning = self.callPackage ./run-ompl-constrained-planning {};
-
  rviz2 = self.callPackage ./rviz2 {};
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
@@ -1286,6 +1318,12 @@ self: super: {
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
+ sick-safetyscanners2 = self.callPackage ./sick-safetyscanners2 {};
+
+ sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
+
+ sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
+
  simple-launch = self.callPackage ./simple-launch {};
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
@@ -1301,6 +1339,8 @@ self: super: {
  soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
 
  soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
+
+ sol-vendor = self.callPackage ./sol-vendor {};
 
  spacenav = self.callPackage ./spacenav {};
 
@@ -1408,6 +1448,8 @@ self: super: {
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
 
+ tile-map = self.callPackage ./tile-map {};
+
  tinyxml2-vendor = self.callPackage ./tinyxml2-vendor {};
 
  tinyxml-vendor = self.callPackage ./tinyxml-vendor {};
@@ -1514,7 +1556,11 @@ self: super: {
 
  velodyne = self.callPackage ./velodyne {};
 
+ velodyne-description = self.callPackage ./velodyne-description {};
+
  velodyne-driver = self.callPackage ./velodyne-driver {};
+
+ velodyne-gazebo-plugins = self.callPackage ./velodyne-gazebo-plugins {};
 
  velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
 
@@ -1522,9 +1568,13 @@ self: super: {
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
+ velodyne-simulator = self.callPackage ./velodyne-simulator {};
+
  vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
+
+ visp = self.callPackage ./visp {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
 

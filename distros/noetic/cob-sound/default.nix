@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, alsaOss, catkin, cob-srvs, diagnostic-msgs, message-generation, message-runtime, roscpp, rospy, std-msgs, std-srvs, visualization-msgs, vlc }:
 buildRosPackage {
   pname = "ros-noetic-cob-sound";
-  version = "0.7.5-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_sound/0.7.5-1.tar.gz";
-    name = "0.7.5-1.tar.gz";
-    sha256 = "e74c7890941d3497a990866d186755ef6749ee9a58ed1f005b428216c66d3b92";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_sound/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "347d6370c02fe9aefd81af4dc51869b372b699ebd0f7c02087a26eb7c5b788cc";
   };
 
   buildType = "catkin";

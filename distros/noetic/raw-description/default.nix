@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-description, gazebo-ros, xacro }:
 buildRosPackage {
   pname = "ros-noetic-raw-description";
-  version = "0.7.4-r1";
+  version = "0.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_common-release/archive/release/noetic/raw_description/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "9fa553b6f369b6845c67875778028089c44066691724015cb9fcaadf59608ec3";
+    url = "https://github.com/ipa320/cob_common-release/archive/release/noetic/raw_description/0.7.7-1.tar.gz";
+    name = "0.7.7-1.tar.gz";
+    sha256 = "0abf310c464787041f5a67fc91c74b1e15e451f2bc6a80fae072a587ab29d40e";
   };
 
   buildType = "catkin";

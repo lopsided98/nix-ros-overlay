@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, roscpp, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-vision-utils";
-  version = "0.6.17-r1";
+  version = "0.6.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_vision_utils/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "9b9538ccb43aeb613befe6036c209c696d86d0d391407e773052501940635d92";
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_vision_utils/0.6.18-1.tar.gz";
+    name = "0.6.18-1.tar.gz";
+    sha256 = "de18b314f11dc4cdd3d182874f242139503d834a0067fb8f7bebad47604dd3f9";
   };
 
   buildType = "catkin";

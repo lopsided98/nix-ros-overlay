@@ -150,6 +150,8 @@ self: super: {
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
 
+ avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
+
  aws-robomaker-small-warehouse-world = self.callPackage ./aws-robomaker-small-warehouse-world {};
 
  backward-ros = self.callPackage ./backward-ros {};
@@ -488,6 +490,8 @@ self: super: {
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
+ grepros = self.callPackage ./grepros {};
+
  gripper-controllers = self.callPackage ./gripper-controllers {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
@@ -678,6 +682,8 @@ self: super: {
 
  microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
 
+ microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
+
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
@@ -825,6 +831,8 @@ self: super: {
  octomap-msgs = self.callPackage ./octomap-msgs {};
 
  octomap-ros = self.callPackage ./octomap-ros {};
+
+ octomap-rviz-plugins = self.callPackage ./octomap-rviz-plugins {};
 
  octovis = self.callPackage ./octovis {};
 
@@ -1487,6 +1495,8 @@ self: super: {
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
  soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
+
+ sol-vendor = self.callPackage ./sol-vendor {};
 
  sophus = self.callPackage ./sophus {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-simple-controller-manager }:
 buildRosPackage {
   pname = "ros-galactic-moveit-plugins";
-  version = "2.3.0-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_plugins/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "4d79ae71be92e2daee0b8268583f70d5a1a3babe7feb65bc522fe0114bcc0dcb";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_plugins/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "ee497ba4a0c0cb67e620ab1ef98cacd7ba7b849c2067553b901ef3c8be57c92f";
   };
 
   buildType = "ament_cmake";

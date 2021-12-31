@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, class-loader, compressed-depth-image-transport, compressed-image-transport, cv-bridge, geometry-msgs, image-geometry, image-transport, laser-geometry, message-filters, nav-msgs, nav2-common, octomap, octomap-msgs, pcl, pcl-conversions, pluginlib, rclcpp, rclcpp-components, rclpy, rosgraph-msgs, rosidl-default-generators, rosidl-default-runtime, rtabmap, rviz-common, rviz-default-plugins, rviz-rendering, sensor-msgs, std-msgs, std-srvs, stereo-msgs, tf2, tf2-eigen, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-galactic-rtabmap-ros";
-  version = "0.20.15-r2";
+  version = "0.20.16-r2";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/galactic/rtabmap_ros/0.20.15-2.tar.gz";
-    name = "0.20.15-2.tar.gz";
-    sha256 = "6dd3c53c5bf8dacaa5c42f12e9314391648d89a0d3a0f1d6986202f73300506b";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/galactic/rtabmap_ros/0.20.16-2.tar.gz";
+    name = "0.20.16-2.tar.gz";
+    sha256 = "7889e7a44744ccef3141b82196a12fdf595fc3612727865e4a17332d104b184d";
   };
 
   buildType = "ament_cmake";

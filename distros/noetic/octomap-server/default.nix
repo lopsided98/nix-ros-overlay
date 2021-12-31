@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, nav-msgs, nodelet, octomap, octomap-msgs, octomap-ros, pcl-conversions, pcl-ros, roscpp, sensor-msgs, std-msgs, std-srvs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-octomap-server";
-  version = "0.6.6-r1";
+  version = "0.6.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap_mapping-release/archive/release/noetic/octomap_server/0.6.6-1.tar.gz";
-    name = "0.6.6-1.tar.gz";
-    sha256 = "71af12549d79fa6f95ef02fc696b945b887dfcacd83db10d0d3952a14772c572";
+    url = "https://github.com/ros-gbp/octomap_mapping-release/archive/release/noetic/octomap_server/0.6.7-1.tar.gz";
+    name = "0.6.7-1.tar.gz";
+    sha256 = "d85b080b98a1699bcd6423c97bc0807b9a7790d06aa745651622af0c478b2c7a";
   };
 
   buildType = "catkin";

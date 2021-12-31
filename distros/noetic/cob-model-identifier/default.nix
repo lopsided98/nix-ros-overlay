@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, geometry-msgs, kdl-parser, orocos-kdl, roscpp, roslint, rospy, sensor-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-model-identifier";
-  version = "0.8.13-r1";
+  version = "0.8.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_model_identifier/0.8.13-1.tar.gz";
-    name = "0.8.13-1.tar.gz";
-    sha256 = "c8384829ffcd9235b5da5f4519ac911c417b449a615e2f453e95e357f28f3310";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_model_identifier/0.8.17-1.tar.gz";
+    name = "0.8.17-1.tar.gz";
+    sha256 = "66377800a1fcdc5c2c106ea5269d07098fc1887d7d2c241649946c1cfa19904e";
   };
 
   buildType = "catkin";

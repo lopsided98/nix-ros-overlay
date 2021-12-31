@@ -2110,6 +2110,8 @@ self: super: {
 
  microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
 
+ microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
+
  microstrain-mips = self.callPackage ./microstrain-mips {};
 
  mikrotik-swos-tools = self.callPackage ./mikrotik-swos-tools {};

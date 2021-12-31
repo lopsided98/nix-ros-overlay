@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, boost, catkin, cob-base-controller-utils, controller-interface, geometry-msgs, hardware-interface, nav-msgs, pluginlib, realtime-tools, roscpp, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-tricycle-controller";
-  version = "0.8.13-r1";
+  version = "0.8.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_tricycle_controller/0.8.13-1.tar.gz";
-    name = "0.8.13-1.tar.gz";
-    sha256 = "3feaad75b3278dae7663d373998d598a8022ddbf0ff43c90c0a2b75736ce9f56";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_tricycle_controller/0.8.17-1.tar.gz";
+    name = "0.8.17-1.tar.gz";
+    sha256 = "73a6f904572a4c299d2bb73b01cacfa95d332dac1a8133d6f240ce71d564948f";
   };
 
   buildType = "catkin";

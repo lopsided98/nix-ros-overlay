@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-docker-control, cob-reflector-referencing, cob-safety-controller }:
 buildRosPackage {
   pname = "ros-noetic-cob-substitute";
-  version = "0.6.10-r1";
+  version = "0.6.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/noetic/cob_substitute/0.6.10-1.tar.gz";
-    name = "0.6.10-1.tar.gz";
-    sha256 = "898d8257f335760040780b96d159a28d2c6f0550a1e5af9edf8716572de010f5";
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/noetic/cob_substitute/0.6.11-1.tar.gz";
+    name = "0.6.11-1.tar.gz";
+    sha256 = "9f6abb857678e7be1f7ca7870eafdb8e6c1311246d12e6a88bdb0f0c216c7e32";
   };
 
   buildType = "catkin";

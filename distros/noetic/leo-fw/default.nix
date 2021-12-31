@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, leo-msgs, nav-msgs, python3Packages, roscpp, rosgraph, rosmon-msgs, rosnode, rospy, rosservice, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-leo-fw";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_robot-release/archive/release/noetic/leo_fw/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "9eed60bad8b4d0eb63316e9b3744b07e912215284174bbafc57704a2fde0262f";
+    url = "https://github.com/fictionlab-gbp/leo_robot-release/archive/release/noetic/leo_fw/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "5d22bf400eaa6ea3afb1ae0015e188e9f9554f61e6ac5fc3eee88a8a8541581d";
   };
 
   buildType = "catkin";

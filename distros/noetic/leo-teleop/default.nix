@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joy, teleop-twist-joy, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-noetic-leo-teleop";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/noetic/leo_teleop/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "843c4268f9281ad8a9bdb4a2623b546fa849cf45ffef234a9a26da10e7fe4cde";
+    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/noetic/leo_teleop/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "c4affcef4833c40698162fee458cf18a87b619515ec1fca4da4aa759b00f27ba";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, geometry-msgs, openssl, ros-babel-fish-test-msgs, rosapi, roscpp, roscpp-tutorials, rosgraph-msgs, roslib, rostest, std-msgs, std-srvs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ros-babel-fish";
-  version = "0.9.0-r1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/StefanFabian/ros_babel_fish-release/archive/release/melodic/ros_babel_fish/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "a77c88ba1fbe3131cb23d79a40eda505d5243dcd2439765f3f234b3fec442283";
+    url = "https://github.com/StefanFabian/ros_babel_fish-release/archive/release/melodic/ros_babel_fish/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "394a08a9ae770f97183f60302b4a037b9ed207b4480c1937e7e5aa85e62751fb";
   };
 
   buildType = "catkin";
@@ -19,7 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ros_babel_fish package'';
+    description = ''A runtime message handler for ROS.
+    Allows subscription, publishing, calling of services and actions with messages known only at runtime.'';
     license = with lib.licenses; [ mit ];
   };
 }
