@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, rosgraph }:
 buildRosPackage {
   pname = "ros-noetic-rosparam";
-  version = "1.15.13-r1";
+  version = "1.15.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosparam/1.15.13-1.tar.gz";
-    name = "1.15.13-1.tar.gz";
-    sha256 = "73c18037d76a06d27b15113700d3b4dab6b50997f67d4a3de83c84b1f0ce575b";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosparam/1.15.14-1.tar.gz";
+    name = "1.15.14-1.tar.gz";
+    sha256 = "f12e4315c20a91278f15708d7d4efd227a11ef79c2cee09ebea9f39626a16967";
   };
 
   buildType = "catkin";

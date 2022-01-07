@@ -1,5 +1,5 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, dnsmasq, ffmpeg, geometry-msgs, hostapd, libgphoto2, libjpeg_turbo, libmicrohttpd, libnl, mavlink, message-generation, message-runtime, opencv3, python3Packages, rosbash, rosbridge-suite, roscpp, roslaunch, roslint, rospy, sensor-msgs, std-msgs, std-srvs, vision-opencv }:

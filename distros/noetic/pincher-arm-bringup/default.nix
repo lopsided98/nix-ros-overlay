@@ -1,5 +1,5 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, arbotix-controllers, arbotix-python, catkin, control-msgs, pincher-arm-description, robot-state-publisher, rospy, sensor-msgs, std-msgs, xacro }:

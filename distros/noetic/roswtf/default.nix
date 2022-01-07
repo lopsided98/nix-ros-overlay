@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, python3Packages, rosbag, rosbuild, rosgraph, roslang, roslaunch, roslib, rosnode, rosservice, rostest, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-roswtf";
-  version = "1.15.13-r1";
+  version = "1.15.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roswtf/1.15.13-1.tar.gz";
-    name = "1.15.13-1.tar.gz";
-    sha256 = "82329746aeb14126428307aac67d7e4baf6c32b12b7e386ec75ab1580c4a1c38";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roswtf/1.15.14-1.tar.gz";
+    name = "1.15.14-1.tar.gz";
+    sha256 = "121e7aab55f5bc721c6b70bf1881ab3a3ae42e8937da3a59a782d41b2ec46664";
   };
 
   buildType = "catkin";

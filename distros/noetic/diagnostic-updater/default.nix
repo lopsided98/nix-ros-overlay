@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-diagnostic-updater";
-  version = "1.10.4-r1";
+  version = "1.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/noetic/diagnostic_updater/1.10.4-1.tar.gz";
-    name = "1.10.4-1.tar.gz";
-    sha256 = "690b626c6015e30cb3bcb064930e12556b17fb0d5525ad6020bba4e3561a9458";
+    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/noetic/diagnostic_updater/1.11.0-1.tar.gz";
+    name = "1.11.0-1.tar.gz";
+    sha256 = "303c2443b8e3d5e414187368fda5461fa6db22756f40c067c86d0650af79975f";
   };
 
   buildType = "catkin";

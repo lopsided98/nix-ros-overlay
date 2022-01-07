@@ -1,5 +1,5 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -149,6 +149,8 @@ self: super: {
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
+
+ avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
  aws-robomaker-small-warehouse-world = self.callPackage ./aws-robomaker-small-warehouse-world {};
 
@@ -488,6 +490,8 @@ self: super: {
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
+ grepros = self.callPackage ./grepros {};
+
  gripper-controllers = self.callPackage ./gripper-controllers {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
@@ -608,7 +612,11 @@ self: super: {
 
  libmavconn = self.callPackage ./libmavconn {};
 
+ libnabo = self.callPackage ./libnabo {};
+
  libphidget22 = self.callPackage ./libphidget22 {};
+
+ libpointmatcher = self.callPackage ./libpointmatcher {};
 
  librealsense2 = self.callPackage ./librealsense2 {};
 
@@ -677,6 +685,8 @@ self: super: {
  microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
 
  microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
+
+ microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
@@ -804,6 +814,8 @@ self: super: {
 
  nerian-stereo = self.callPackage ./nerian-stereo {};
 
+ nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
+
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nodl-python = self.callPackage ./nodl-python {};
@@ -822,9 +834,15 @@ self: super: {
 
  octomap = self.callPackage ./octomap {};
 
+ octomap-mapping = self.callPackage ./octomap-mapping {};
+
  octomap-msgs = self.callPackage ./octomap-msgs {};
 
  octomap-ros = self.callPackage ./octomap-ros {};
+
+ octomap-rviz-plugins = self.callPackage ./octomap-rviz-plugins {};
+
+ octomap-server = self.callPackage ./octomap-server {};
 
  octovis = self.callPackage ./octovis {};
 
@@ -1487,6 +1505,8 @@ self: super: {
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
  soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
+
+ sol-vendor = self.callPackage ./sol-vendor {};
 
  sophus = self.callPackage ./sophus {};
 

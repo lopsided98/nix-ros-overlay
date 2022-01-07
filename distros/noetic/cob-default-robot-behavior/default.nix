@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cob-light, cob-script-server, python3Packages, rospy, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-cob-default-robot-behavior";
-  version = "0.7.5-r1";
+  version = "0.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/noetic/cob_default_robot_behavior/0.7.5-1.tar.gz";
-    name = "0.7.5-1.tar.gz";
-    sha256 = "7e12701b80dc9c19685009dea621ab59ad9b38afd5f1530bea4d9da09b727edc";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/noetic/cob_default_robot_behavior/0.7.6-1.tar.gz";
+    name = "0.7.6-1.tar.gz";
+    sha256 = "04a3a72c8b8ab058f179a5ce8ef80f7ef7f5d746c4783ce6273d1f1aef22ce07";
   };
 
   buildType = "catkin";

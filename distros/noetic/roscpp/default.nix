@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, message-generation, message-runtime, pkg-config, rosconsole, roscpp-serialization, roscpp-traits, rosgraph-msgs, roslang, rostime, std-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-roscpp";
-  version = "1.15.13-r1";
+  version = "1.15.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roscpp/1.15.13-1.tar.gz";
-    name = "1.15.13-1.tar.gz";
-    sha256 = "eab9666a6afd03455a24ae82fb5798ee67bf3b95046d09bc31cb3870199be150";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roscpp/1.15.14-1.tar.gz";
+    name = "1.15.14-1.tar.gz";
+    sha256 = "3688072f3bcb5b0c36c0299ff7b7e69a420381b6fcf636208b834cfaaf4b0f30";
   };
 
   buildType = "catkin";

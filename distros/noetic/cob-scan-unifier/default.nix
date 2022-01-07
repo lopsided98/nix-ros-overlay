@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, laser-geometry, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-scan-unifier";
-  version = "0.7.5-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_scan_unifier/0.7.5-1.tar.gz";
-    name = "0.7.5-1.tar.gz";
-    sha256 = "6fd49355fe7922287cce557800991aba664ab2c182f111a0ff6c95cba1223776";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_scan_unifier/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "edab7dd3c37f5f5f5eb183c0645c74d2adbe40051bda247ca2ba9ca599853079";
   };
 
   buildType = "catkin";

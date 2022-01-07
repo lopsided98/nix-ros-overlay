@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, eigen, glog, libg2o, libyamlcpp, opencv3 }:
 buildRosPackage {
   pname = "ros-galactic-openvslam";
-  version = "0.2.3-r3";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/OpenVSLAM-Community/openvslam-release/archive/release/galactic/openvslam/0.2.3-3.tar.gz";
-    name = "0.2.3-3.tar.gz";
-    sha256 = "942efc34b17b39cd4eb9051f757c00c8c5efb66b1acb09a9beae736189f9b74e";
+    url = "https://github.com/OpenVSLAM-Community/openvslam-release/archive/release/galactic/openvslam/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "f538afb090fb261f4f086249cda7a195c41375ed30453a21550de24b7a8f8be6";
   };
 
   buildType = "cmake";

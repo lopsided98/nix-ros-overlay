@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-galactic-ros2-control-test-assets";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/ros2_control_test_assets/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "71cbb3533b3a9876e488871e9acb2120ef4ee5b506b09db8131bf53359e7fd05";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/ros2_control_test_assets/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "d69ccc2ff88c42f88e3338efe9d139183592bcd61a5105bc11af222a3c037784";
   };
 
   buildType = "ament_cmake";

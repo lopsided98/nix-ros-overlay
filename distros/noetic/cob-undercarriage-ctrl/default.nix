@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-utilities, control-msgs, diagnostic-msgs, diagnostic-updater, geometry-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-undercarriage-ctrl";
-  version = "0.7.5-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_undercarriage_ctrl/0.7.5-1.tar.gz";
-    name = "0.7.5-1.tar.gz";
-    sha256 = "ec724125f8a49bb67f240d305c33b2a1d552e2513bd8c5f979e8b0971f22208e";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_undercarriage_ctrl/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "7e9387cf4b829a20e68255c47538144219e8957629d73525537e52194e7f96c6";
   };
 
   buildType = "catkin";

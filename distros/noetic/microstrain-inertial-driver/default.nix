@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, curl, diagnostic-aggregator, diagnostic-updater, geometry-msgs, jq, mavros-msgs, message-generation, message-runtime, microstrain-inertial-msgs, nav-msgs, nmea-msgs, roscpp, roslint, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-microstrain-inertial-driver";
-  version = "2.2.1-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_driver/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "38806f6e30f5f66eb2c72f3e5704f44964d6c49e81a2ee1cf0a10a871ce2e20f";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_driver/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "1cf5cf9b170dc6523edea87b4b095ffcbed94fd444fa246cc2e85102618b4f50";
   };
 
   buildType = "catkin";

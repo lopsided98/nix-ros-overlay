@@ -1,5 +1,5 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-msgs, rdl-dynamics, rdl-msgs, rdl-urdfreader, roscpp, rostest, sensor-msgs }:
@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_ros_tools/3.2.0-1/rdl_release-release-melodic-rdl_ros_tools-3.2.0-1.tar.gz";
     name = "rdl_release-release-melodic-rdl_ros_tools-3.2.0-1.tar.gz";
-    sha256 = "3d535dc2d58a675a64d78d2b30820586f00b16e350008e146e9ac19415e0c926";
+    sha256 = "36c236da8fa738216e65211f173f73a203d2b99a582e396aabf170e26d841483";
   };
 
   buildType = "catkin";

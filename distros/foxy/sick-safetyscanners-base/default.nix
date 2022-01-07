@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, cmake }:
 buildRosPackage {
   pname = "ros-foxy-sick-safetyscanners-base";
-  version = "1.0.0-r2";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners_base-release/archive/release/foxy/sick_safetyscanners_base/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "d6a64e72be2befd145be5f65480845a715a384fb39d2a85f9a996d584a1f3768";
+    url = "https://github.com/SICKAG/sick_safetyscanners_base-release/archive/release/foxy/sick_safetyscanners_base/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "5135b0b92898039b9f24f62c96a117cf698e65df9e81d11e151a7edea81896ef";
   };
 
   buildType = "cmake";

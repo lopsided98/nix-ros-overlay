@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, control-msgs, moveit-common, moveit-core, pluginlib, rclcpp, rclcpp-action }:
 buildRosPackage {
   pname = "ros-galactic-moveit-simple-controller-manager";
-  version = "2.3.0-r1";
+  version = "2.3.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_simple_controller_manager/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "3ed83dc851cf10276a4ba3442f8f058329b8ebac38775bdad4bd24ee2261e13e";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_simple_controller_manager/2.3.2-2.tar.gz";
+    name = "2.3.2-2.tar.gz";
+    sha256 = "54129dada8d1f227484b7f823dae655fdfa849f9ab4960d8f428002118e67595";
   };
 
   buildType = "ament_cmake";

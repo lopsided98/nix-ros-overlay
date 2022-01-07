@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, moveit-core, moveit-resources-fanuc-description, moveit-resources-panda-description, moveit-resources-pr2-description, moveit-ros-planning, ompl, pluginlib, rosconsole, roscpp, rostest, rosunit, tf2, tf2-eigen }:
 buildRosPackage {
   pname = "ros-noetic-moveit-planners-ompl";
-  version = "1.1.6-r1";
+  version = "1.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_planners_ompl/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "78ccf8981abb3b1f843e8738cbde3950c6e872eb17d67f1e5e3e923b227f9953";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_planners_ompl/1.1.7-1.tar.gz";
+    name = "1.1.7-1.tar.gz";
+    sha256 = "7ceada1bc93fe52109f7cb595c02f549bc1e53d9ad784b5701fa54c720bc9dfb";
   };
 
   buildType = "catkin";

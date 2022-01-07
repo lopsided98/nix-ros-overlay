@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, microstrain-inertial-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-microstrain-inertial-examples";
-  version = "2.2.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-ros2-release/archive/release/foxy/microstrain_inertial_examples/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "211203e7307f02e28171451014999e695a287f20aea89cc38986a59543c51b48";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-ros2-release/archive/release/foxy/microstrain_inertial_examples/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "a9c3d21614df29e4c3744c0ca07e79a72e9012b71e3651761f8234ee355053aa";
   };
 
   buildType = "ament_cmake";

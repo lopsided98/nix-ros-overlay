@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, eigen, freeglut, glew, image-transport, libGL, libGLU, llvmPackages, message-filters, moveit-core, moveit-msgs, moveit-ros-occupancy-map-monitor, moveit-ros-planning, nodelet, object-recognition-msgs, pluginlib, rosconsole, roscpp, rosunit, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-noetic-moveit-ros-perception";
-  version = "1.1.6-r1";
+  version = "1.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_perception/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "7ef0a3b1a2b0bbc6206f4bcee9a2fc1c5c51eab3410d352556b8f6fd3c7d46b8";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_perception/1.1.7-1.tar.gz";
+    name = "1.1.7-1.tar.gz";
+    sha256 = "3a1fd8a7a4c95cc34de1a88d1c71d6b37ae111893074bdb8795aa75b320e73a3";
   };
 
   buildType = "catkin";

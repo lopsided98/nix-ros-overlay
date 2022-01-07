@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, moveit-ros-planning, rosconsole, roscpp, tf2-eigen, tf2-ros, warehouse-ros }:
 buildRosPackage {
   pname = "ros-noetic-moveit-ros-warehouse";
-  version = "1.1.6-r1";
+  version = "1.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_warehouse/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "8b2624d9b606175b910dbcbcd6703bef31933c2170b01aa729306a00f043c807";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_warehouse/1.1.7-1.tar.gz";
+    name = "1.1.7-1.tar.gz";
+    sha256 = "67f54005e98d87dce6073a670e49079a4f7749eedfbbea07f71c982061aaf5f4";
   };
 
   buildType = "catkin";

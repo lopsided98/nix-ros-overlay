@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-core, moveit-planners, moveit-plugins, moveit-ros-move-group, moveit-ros-planning, moveit-ros-planning-interface, moveit-ros-warehouse }:
 buildRosPackage {
   pname = "ros-galactic-moveit-runtime";
-  version = "2.3.0-r1";
+  version = "2.3.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_runtime/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "120d3781bbdf962e1d2b3d90719e029c63c536ecfa9e1e1bc3ec2893bada3ce2";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_runtime/2.3.2-2.tar.gz";
+    name = "2.3.2-2.tar.gz";
+    sha256 = "74e5c31db464856fa5fe665a37828fe561fc01b3507c0e68f0320b97167e66dd";
   };
 
   buildType = "ament_cmake";

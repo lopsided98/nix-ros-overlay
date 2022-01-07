@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, genmsg, genpy, python3Packages, rosbag-storage, rosconsole, roscpp, roscpp-serialization, roslib, rospy, std-srvs, topic-tools, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-rosbag";
-  version = "1.15.13-r1";
+  version = "1.15.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosbag/1.15.13-1.tar.gz";
-    name = "1.15.13-1.tar.gz";
-    sha256 = "c72a586f8eef3c1297f9bf1951a8a9d43082c404ceeba8939ff4dff68b23779d";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosbag/1.15.14-1.tar.gz";
+    name = "1.15.14-1.tar.gz";
+    sha256 = "e3426d956008f84016560651eeb1fcd2be6e955097c11439ee1c5548ac70fb8f";
   };
 
   buildType = "catkin";
