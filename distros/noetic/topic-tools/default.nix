@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cpp-common, message-generation, message-runtime, rosbash, rosconsole, roscpp, rostest, rostime, rosunit, std-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-topic-tools";
-  version = "1.15.13-r1";
+  version = "1.15.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/topic_tools/1.15.13-1.tar.gz";
-    name = "1.15.13-1.tar.gz";
-    sha256 = "7508b418bf7f1c026fde205539215685e9f3b1befc55bd81424a619fa5b3f610";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/topic_tools/1.15.14-1.tar.gz";
+    name = "1.15.14-1.tar.gz";
+    sha256 = "97f54cd64236f2ecf068d941ca694189c67235d7acd5ee3b38ccbb560e726573";
   };
 
   buildType = "catkin";

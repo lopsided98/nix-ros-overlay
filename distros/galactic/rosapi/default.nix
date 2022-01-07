@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake-ros, builtin-interfaces, geometry-msgs, rcl-interfaces, rclpy, rmw-dds-common, ros2node, ros2param, ros2pkg, ros2service, ros2topic, rosapi-msgs, rosbridge-library, sensor-msgs, shape-msgs }:
 buildRosPackage {
   pname = "ros-galactic-rosapi";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/galactic/rosapi/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "600993ce7090a43af4e80fd52571cd329f253e58f20148785a94d3488710cc45";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/galactic/rosapi/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "328b91c68dfbfc0a746444ba33140e781058aed6f409c6afa1daa4ad8b36032a";
   };
 
   buildType = "ament_cmake";

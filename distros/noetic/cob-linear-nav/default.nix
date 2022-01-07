@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, angles, catkin, cob-srvs, geometry-msgs, move-base-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-linear-nav";
-  version = "0.6.11-r1";
+  version = "0.6.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_linear_nav/0.6.11-1.tar.gz";
-    name = "0.6.11-1.tar.gz";
-    sha256 = "11ae20b43adaabd42bc562f71e9ba2acf5c90c42fe71cb11381a92ceb25c08fd";
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_linear_nav/0.6.12-1.tar.gz";
+    name = "0.6.12-1.tar.gz";
+    sha256 = "c5960f0f81f66ef448f648382f5a154a915c171cf8b9eda1ec0cc76fc9be0ce0";
   };
 
   buildType = "catkin";

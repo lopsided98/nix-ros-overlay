@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cob-utilities, libntcan, libpcan, socketcan-interface }:
 buildRosPackage {
   pname = "ros-noetic-cob-generic-can";
-  version = "0.7.5-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_generic_can/0.7.5-1.tar.gz";
-    name = "0.7.5-1.tar.gz";
-    sha256 = "0729f0a8bfb859f8a5939bdf96acc2d6acc111dabc36428557bdc2b49f426393";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_generic_can/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "d054777f22235d44ae04c88bb5984d66765d4a163853883ce14cc8e41c5297a7";
   };
 
   buildType = "catkin";

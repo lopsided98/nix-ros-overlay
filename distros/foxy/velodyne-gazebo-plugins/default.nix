@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, gazebo-dev, gazebo-msgs, gazebo-ros, rclcpp, sensor-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-foxy-velodyne-gazebo-plugins";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/foxy/velodyne_gazebo_plugins/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "133b902dd1174c7f3243222967bda7ed7adfceeca4d206fdc2ec9fdbafc2a26a";
+    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/foxy/velodyne_gazebo_plugins/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "5d0a81933aff085a4f89018dfab16074d7d18b5fe88c4687670a3584666f9d44";
   };
 
   buildType = "ament_cmake";

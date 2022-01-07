@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, eigen-conversions, moveit-core, moveit-resources-fanuc-moveit-config, moveit-ros-planning, opw-kinematics, pluginlib, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-noetic-moveit-opw-kinematics-plugin";
-  version = "0.3.1-r2";
+  version = "0.4.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/JeroenDM/moveit_opw_kinematics_plugin-release/archive/release/noetic/moveit_opw_kinematics_plugin/0.3.1-2.tar.gz";
-    name = "0.3.1-2.tar.gz";
-    sha256 = "c1222455493b3d0d601d777ea264e4ef6b5f9ee6b3c6ad330eb2fa871ae54fbf";
+    url = "https://github.com/JeroenDM/moveit_opw_kinematics_plugin-release/archive/release/noetic/moveit_opw_kinematics_plugin/0.4.0-3.tar.gz";
+    name = "0.4.0-3.tar.gz";
+    sha256 = "4ea47a42e607c52c82470fb1dff8e901368c18071eeb331592803c9322d20d3f";
   };
 
   buildType = "catkin";

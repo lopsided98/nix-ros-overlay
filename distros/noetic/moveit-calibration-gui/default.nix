@@ -1,5 +1,5 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, class-loader, cv-bridge, eigen, geometric-shapes, image-geometry, moveit-calibration-plugins, moveit-core, moveit-ros-perception, moveit-ros-planning, moveit-ros-planning-interface, moveit-ros-visualization, moveit-visual-tools, pkg-config, pluginlib, qt5, rosconsole, roscpp, rostest, rviz, rviz-visual-tools, tf2-eigen }:

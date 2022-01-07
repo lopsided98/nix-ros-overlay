@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, control-toolbox, geometry-msgs, joy-teleop, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-planning-interface, rosparam-shortcuts, rostest, sensor-msgs, spacenav-node, std-msgs, std-srvs, tf2-eigen, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-noetic-moveit-servo";
-  version = "1.1.6-r1";
+  version = "1.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_servo/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "5c094385c675b0b30f2e0c725acc10e355973495ce9098f80f71e7f94c0c967f";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_servo/1.1.7-1.tar.gz";
+    name = "1.1.7-1.tar.gz";
+    sha256 = "005d9796af4a4c0155f17a5f38413b40389ca8a02722c08dfde231a477f3fc6f";
   };
 
   buildType = "catkin";

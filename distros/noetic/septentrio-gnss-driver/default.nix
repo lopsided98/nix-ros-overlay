@@ -1,5 +1,5 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, diagnostic-msgs, geometry-msgs, gps-common, libpcap, message-generation, message-runtime, rosconsole, roscpp, roscpp-serialization, rostime, sensor-msgs, xmlrpcpp }:

@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch-ros, launch-testing, message-filters, nav-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-galactic-nav2-amcl";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_amcl/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "470fd987afb8b7b89a6b7436bd100d77cdb17006e6410352aead9356bd38739f";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_amcl/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "52741f51ccf7df564b0eb37b8be6e7e8b2d8ee16337c466d6c475cb294fb4306";
   };
 
   buildType = "ament_cmake";

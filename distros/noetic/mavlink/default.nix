@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-mavlink";
-  version = "2021.12.12-r1";
+  version = "2022.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/noetic/mavlink/2021.12.12-1.tar.gz";
-    name = "2021.12.12-1.tar.gz";
-    sha256 = "3244d66f361336644d78ef0dbbfa1181f86e1cf796563b3823e3972ae0fb8eb9";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/noetic/mavlink/2022.1.5-1.tar.gz";
+    name = "2022.1.5-1.tar.gz";
+    sha256 = "6ff80173db17b9b162d3b6529c09bf8a9733402c10583fc6c59925bdd890ad3f";
   };
 
   buildType = "cmake";

@@ -1,5 +1,5 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ijnek/soccer_interfaces-release/archive/release/foxy/soccer_vision_msgs/1.0.0-1.tar.gz";
     name = "1.0.0-1.tar.gz";
-    sha256 = "515d4b307a9882bf727f18db82a91c046fded75eeacf0076a2c582ebbf0cbfa4";
+    sha256 = "d59a2ec88425566e1e3dc7bae897041e4c1bd89f167ffdda324d8bc0fb68db47";
   };
 
   buildType = "ament_cmake";

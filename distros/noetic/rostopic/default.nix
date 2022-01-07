@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, genpy, rosbag, rospy, rostest }:
 buildRosPackage {
   pname = "ros-noetic-rostopic";
-  version = "1.15.13-r1";
+  version = "1.15.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rostopic/1.15.13-1.tar.gz";
-    name = "1.15.13-1.tar.gz";
-    sha256 = "244ec370ad517f8bcb40b0b80f6e2a0a4b8e08cca1d230115447c6eb42517723";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rostopic/1.15.14-1.tar.gz";
+    name = "1.15.14-1.tar.gz";
+    sha256 = "65b462569451164e912a13514795bab6c2fb9724c51b58b5d5a762fd7f1e39d4";
   };
 
   buildType = "catkin";

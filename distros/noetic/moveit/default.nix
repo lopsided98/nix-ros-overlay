@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, moveit-commander, moveit-core, moveit-planners, moveit-plugins, moveit-ros, moveit-setup-assistant }:
 buildRosPackage {
   pname = "ros-noetic-moveit";
-  version = "1.1.6-r1";
+  version = "1.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "ab9afcd8d27c38b9df39df12ccd8c7cd04963d0dbb7b7e2eb8c1cdfcc23b16a9";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit/1.1.7-1.tar.gz";
+    name = "1.1.7-1.tar.gz";
+    sha256 = "36505765e87c53bbb973ca8063f9f5c6f72c22a8b6db9f2454f20315648908a6";
   };
 
   buildType = "catkin";

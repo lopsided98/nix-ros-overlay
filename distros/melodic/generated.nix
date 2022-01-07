@@ -1,5 +1,5 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -1916,6 +1916,8 @@ self: super: {
 
  libmodbus = self.callPackage ./libmodbus {};
 
+ libnabo = self.callPackage ./libnabo {};
+
  libntcan = self.callPackage ./libntcan {};
 
  libpcan = self.callPackage ./libpcan {};
@@ -2109,6 +2111,8 @@ self: super: {
  microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
 
  microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
+
+ microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
 
  microstrain-mips = self.callPackage ./microstrain-mips {};
 

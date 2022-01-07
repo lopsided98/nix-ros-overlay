@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, console-bridge, gtest, mavlink, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-libmavconn";
-  version = "1.12.2-r1";
+  version = "1.12.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/libmavconn/1.12.2-1.tar.gz";
-    name = "1.12.2-1.tar.gz";
-    sha256 = "c0e2f7507ddf8622075c2bc3309d16285ce562ef91e9d46f4f4dff3f8089ac1a";
+    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/libmavconn/1.12.2-2.tar.gz";
+    name = "1.12.2-2.tar.gz";
+    sha256 = "52ba3dbdd2ec3b3bbf2cd62c451e6b5a98c287d842b849d3a5d754ec4162d7d0";
   };
 
   buildType = "catkin";

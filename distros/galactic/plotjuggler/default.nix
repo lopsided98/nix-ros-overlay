@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, qt5 }:
 buildRosPackage {
   pname = "ros-galactic-plotjuggler";
-  version = "3.3.0-r1";
+  version = "3.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/galactic/plotjuggler/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "8ff87369227746810a8068000a5379d6369035e98df6007fedfc4929c2f3f1e2";
+    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/galactic/plotjuggler/3.3.4-1.tar.gz";
+    name = "3.3.4-1.tar.gz";
+    sha256 = "a4a9055591b9e5f42beca45b55be8a5d52ad825fe00e1c608775667882bd629c";
   };
 
   buildType = "catkin";

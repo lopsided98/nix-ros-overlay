@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake, python3, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-galactic-mavlink";
-  version = "2021.12.12-r1";
+  version = "2022.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/galactic/mavlink/2021.12.12-1.tar.gz";
-    name = "2021.12.12-1.tar.gz";
-    sha256 = "3a5d384f97787439e721b3968e1fe1da9057bead3ae3a050f67e9ca3d299b724";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/galactic/mavlink/2022.1.5-1.tar.gz";
+    name = "2022.1.5-1.tar.gz";
+    sha256 = "86e3dca5cd7037ae855cd42ddd5f6e1afba06c3420e204ca3bbbae153e06c794";
   };
 
   buildType = "cmake";

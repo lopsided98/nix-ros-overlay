@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cob-navigation-config, cob-supported-robots, dwa-local-planner, move-base, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-noetic-cob-navigation-local";
-  version = "0.6.11-r1";
+  version = "0.6.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_navigation_local/0.6.11-1.tar.gz";
-    name = "0.6.11-1.tar.gz";
-    sha256 = "a4ed7ae339a6f545f64bb74848494e1a8e137fe1bfd73402ac9a053197804bd8";
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_navigation_local/0.6.12-1.tar.gz";
+    name = "0.6.12-1.tar.gz";
+    sha256 = "571daaf3c127c4047266506731334e6e4ff8f599d0a744c559a2c70a6aa2a5fc";
   };
 
   buildType = "catkin";

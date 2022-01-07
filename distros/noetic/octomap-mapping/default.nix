@@ -1,16 +1,16 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, octomap-server }:
 buildRosPackage {
   pname = "ros-noetic-octomap-mapping";
-  version = "0.6.6-r1";
+  version = "0.6.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap_mapping-release/archive/release/noetic/octomap_mapping/0.6.6-1.tar.gz";
-    name = "0.6.6-1.tar.gz";
-    sha256 = "def38407af47964a673eba4866068684bdfdaa2e06640e7e3d97afadad8ea5d4";
+    url = "https://github.com/ros-gbp/octomap_mapping-release/archive/release/noetic/octomap_mapping/0.6.7-1.tar.gz";
+    name = "0.6.7-1.tar.gz";
+    sha256 = "ee74a243e61605b47a6e8444e0db6edcc84c5e4f4182f53fe42e555aa11ed8d6";
   };
 
   buildType = "catkin";

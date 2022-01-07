@@ -1,5 +1,5 @@
 
-# Copyright 2021 Open Source Robotics Foundation
+# Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -303,6 +303,8 @@ self: super: {
  cob-linear-nav = self.callPackage ./cob-linear-nav {};
 
  cob-lookat-action = self.callPackage ./cob-lookat-action {};
+
+ cob-manipulation-msgs = self.callPackage ./cob-manipulation-msgs {};
 
  cob-map-accessibility-analysis = self.callPackage ./cob-map-accessibility-analysis {};
 
@@ -984,6 +986,8 @@ self: super: {
 
  grasping-msgs = self.callPackage ./grasping-msgs {};
 
+ grepros = self.callPackage ./grepros {};
+
  grid-map = self.callPackage ./grid-map {};
 
  grid-map-core = self.callPackage ./grid-map-core {};
@@ -1013,6 +1017,8 @@ self: super: {
  grid-map-visualization = self.callPackage ./grid-map-visualization {};
 
  gripper-action-controller = self.callPackage ./gripper-action-controller {};
+
+ grpc = self.callPackage ./grpc {};
 
  handeye = self.callPackage ./handeye {};
 
@@ -1175,6 +1181,8 @@ self: super: {
  interval-intersection = self.callPackage ./interval-intersection {};
 
  ipa-3d-fov-visualization = self.callPackage ./ipa-3d-fov-visualization {};
+
+ ipa-differential-docking = self.callPackage ./ipa-differential-docking {};
 
  ira-laser-tools = self.callPackage ./ira-laser-tools {};
 
@@ -1390,6 +1398,8 @@ self: super: {
 
  libmavconn = self.callPackage ./libmavconn {};
 
+ libnabo = self.callPackage ./libnabo {};
+
  libntcan = self.callPackage ./libntcan {};
 
  libpcan = self.callPackage ./libpcan {};
@@ -1541,6 +1551,8 @@ self: super: {
  microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
 
  microstrain-inertial-msgs = self.callPackage ./microstrain-inertial-msgs {};
+
+ microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
 
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
@@ -2681,6 +2693,8 @@ self: super: {
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  septentrio-gnss-driver = self.callPackage ./septentrio-gnss-driver {};
+
+ serial = self.callPackage ./serial {};
 
  service-tools = self.callPackage ./service-tools {};
 
