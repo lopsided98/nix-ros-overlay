@@ -28,14 +28,10 @@ let
     python3 = pythonOverridesFor self.python3;
     python3Packages = rosSelf.python3.pkgs;
 
-    boost =
-      # Trigger an error when nixpkgs default has changed so that this is no
-      # longer needed
-      assert self.lib.versionOlder self.boost.version "1.73.0";
-      self.boost173.override {
-        python = rosSelf.python;
-        enablePython = true;
-      };
+    boost = self.boost.override {
+      python = rosSelf.python;
+      enablePython = true;
+    };
   };
 
   overrides = rosSelf: rosSuper: with rosSelf.lib; {
