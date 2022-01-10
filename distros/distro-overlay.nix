@@ -408,10 +408,21 @@ let
       '';
     });
 
+    # Fix compatibility with assimp 5.1
+    # https://github.com/ros2/rviz/pull/817
+    rviz-assimp-vendor = rosSuper.rviz-assimp-vendor.overrideAttrs ({
+      patches ? [], ...
+    }: {
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/ros2/rviz/commit/dfbc93e23505f708a84ba7f5d8ebd1164f662804.patch";
+        stripLen = 1;
+        sha256 = "sha256-JW3GgSukrWR19je35crNeQNSDR6ZRoFRzpR/MBcwMws=";
+      }) ];
+    });
+
     rviz-ogre-vendor = rosSuper.rviz-ogre-vendor.overrideAttrs ({
       preFixup ? "", ...
     }: {
-      dontFixCmake = true;
       preFixup = ''
         # Prevent /build RPATH references
         rm -r ogre_install
