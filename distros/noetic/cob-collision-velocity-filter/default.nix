@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cob-footprint-observer, costmap-2d, dynamic-reconfigure, geometry-msgs, nav-msgs, roscpp, tf, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-collision-velocity-filter";
-  version = "0.8.17-r1";
+  version = "0.8.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_collision_velocity_filter/0.8.17-1.tar.gz";
-    name = "0.8.17-1.tar.gz";
-    sha256 = "27ddbfd75c50958905b50bb868d13e29b5e6525d2dab38ac578075f36e2d4cc2";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_collision_velocity_filter/0.8.18-1.tar.gz";
+    name = "0.8.18-1.tar.gz";
+    sha256 = "45891e4921ef07e04c77b650656477b19250989f6df640eff9909a3571ca4d53";
   };
 
   buildType = "catkin";

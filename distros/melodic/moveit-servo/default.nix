@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, control-toolbox, geometry-msgs, joy-teleop, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-planning-interface, rosparam-shortcuts, rostest, sensor-msgs, spacenav-node, std-msgs, std-srvs, tf2-eigen, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-moveit-servo";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_servo/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "a5da870e0876a50fb776b1fbd625c085d2007a2cee0c6058ac15053ddee0134e";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_servo/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "dbeedb354a5a3a109f0b9e36e2d3625fdccf9007869e76ca406a41e190eb3da4";
   };
 
   buildType = "catkin";

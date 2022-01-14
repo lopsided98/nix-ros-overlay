@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, moveit-ros-planning-interface, robot-state-publisher, ros-control, ros-controllers, roscpp, rospy, sensor-msgs, std-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, moveit-ros-planning-interface, moveit-simple-controller-manager, robot-state-publisher, ros-control, ros-controllers, roscpp, rospy, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-webots-ros";
-  version = "4.1.0-r1";
+  version = "5.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros-release/archive/release/melodic/webots_ros/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "4c1930c9dfedcadd5d279e06072d97e04e61dea98e6dc49122923aa41d5b726e";
+    url = "https://github.com/cyberbotics/webots_ros-release/archive/release/melodic/webots_ros/5.0.1-2.tar.gz";
+    name = "5.0.1-2.tar.gz";
+    sha256 = "eba56b3a93053246bbce5f7269abb99da3ee8d1ef5cce05a83f17651d7b66d89";
   };
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ message-runtime moveit-ros-planning-interface robot-state-publisher ros-control ros-controllers roscpp rospy sensor-msgs std-msgs tf ];
+  propagatedBuildInputs = [ message-runtime moveit-ros-planning-interface moveit-simple-controller-manager robot-state-publisher ros-control ros-controllers roscpp rospy sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

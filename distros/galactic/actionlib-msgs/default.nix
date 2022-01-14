@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-actionlib-msgs";
-  version = "2.2.3-r1";
+  version = "2.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/galactic/actionlib_msgs/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "a59b69d5f9da1a68adedb243eca0fbee4faf1a9d8dd2856c1f9f9eb0a6456222";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/galactic/actionlib_msgs/2.2.4-1.tar.gz";
+    name = "2.2.4-1.tar.gz";
+    sha256 = "5d2ce4cb8dd390e77e86ce2424071d6714ba8a743f9e50179479a683316407be";
   };
 
   buildType = "ament_cmake";

@@ -1270,8 +1270,6 @@ self: super: {
 
  jsk-rqt-plugins = self.callPackage ./jsk-rqt-plugins {};
 
- jsk-rviz-plugins = self.callPackage ./jsk-rviz-plugins {};
-
  jsk-tilt-laser = self.callPackage ./jsk-tilt-laser {};
 
  jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
@@ -1407,6 +1405,8 @@ self: super: {
  libphidget22 = self.callPackage ./libphidget22 {};
 
  libphidgets = self.callPackage ./libphidgets {};
+
+ libpointmatcher = self.callPackage ./libpointmatcher {};
 
  librealsense2 = self.callPackage ./librealsense2 {};
 
@@ -2605,6 +2605,8 @@ self: super: {
  rqt-topic = self.callPackage ./rqt-topic {};
 
  rqt-web = self.callPackage ./rqt-web {};
+
+ rslidar-sdk = self.callPackage ./rslidar-sdk {};
 
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 

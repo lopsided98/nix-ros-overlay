@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-ridgeback-description";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_description/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "1302bf1c13fdff3e763c4f7edc51b2b0e1a0eb36e45a834931d826b20eea6937";
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_description/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "c8ebf4371f0ccd63db91fee284f6cf4aab99fe6e28bcbdbf8fbdbf2162dccdb6";
   };
 
   buildType = "catkin";

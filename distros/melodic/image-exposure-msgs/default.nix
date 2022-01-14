@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, statistics-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-image-exposure-msgs";
-  version = "0.14.1-r1";
+  version = "0.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/melodic/image_exposure_msgs/0.14.1-1.tar.gz";
-    name = "0.14.1-1.tar.gz";
-    sha256 = "1a1518bbeb26d3e52459bc25560ad67da0c3c059fa238494d411cc1585366a9c";
+    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/melodic/image_exposure_msgs/0.14.2-1.tar.gz";
+    name = "0.14.2-1.tar.gz";
+    sha256 = "c6ba39025b456f77a855837ff900d4fa5a327054fcda320f2d2e94c219ef8ac5";
   };
 
   buildType = "catkin";

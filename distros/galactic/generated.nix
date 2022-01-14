@@ -506,6 +506,8 @@ self: super: {
 
  libphidget22 = self.callPackage ./libphidget22 {};
 
+ libpointmatcher = self.callPackage ./libpointmatcher {};
+
  librealsense2 = self.callPackage ./librealsense2 {};
 
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
@@ -756,8 +758,6 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
- openvslam = self.callPackage ./openvslam {};
-
  orocos-kdl = self.callPackage ./orocos-kdl {};
 
  osqp-vendor = self.callPackage ./osqp-vendor {};
@@ -946,8 +946,6 @@ self: super: {
 
  rcpputils = self.callPackage ./rcpputils {};
 
- rcss3d-agent = self.callPackage ./rcss3d-agent {};
-
  rcutils = self.callPackage ./rcutils {};
 
  realsense2-camera = self.callPackage ./realsense2-camera {};
@@ -1134,6 +1132,8 @@ self: super: {
 
  ros-ign-interfaces = self.callPackage ./ros-ign-interfaces {};
 
+ ros-image-to-qimage = self.callPackage ./ros-image-to-qimage {};
+
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
@@ -1244,6 +1244,10 @@ self: super: {
 
  rqt-gui-py = self.callPackage ./rqt-gui-py {};
 
+ rqt-image-overlay = self.callPackage ./rqt-image-overlay {};
+
+ rqt-image-overlay-layer = self.callPackage ./rqt-image-overlay-layer {};
+
  rqt-image-view = self.callPackage ./rqt-image-view {};
 
  rqt-moveit = self.callPackage ./rqt-moveit {};
@@ -1346,7 +1350,7 @@ self: super: {
 
  soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
 
- soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
+ soccer-object-msgs = self.callPackage ./soccer-object-msgs {};
 
  sol-vendor = self.callPackage ./sol-vendor {};
 

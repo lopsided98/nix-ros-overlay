@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, interactive-marker-twist-server, joint-state-controller, joy, nav-msgs, realtime-tools, robot-localization, roslaunch, teleop-twist-joy, tf, topic-tools, urdf }:
 buildRosPackage {
   pname = "ros-melodic-ridgeback-control";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_control/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "6a4b2835003527236f6f60e87ba7ac8f168b701dd1d753bce8c96cb5bdbfd663";
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/melodic/ridgeback_control/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "08547888015f3a2b37c26a66654b23adf741d755aad3efe47f88971422a1eb30";
   };
 
   buildType = "catkin";

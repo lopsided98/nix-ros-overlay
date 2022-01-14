@@ -8,9 +8,9 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/ntrip_client-ros2-release/archive/release/galactic/ntrip_client/1.0.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/ntrip_client-release/archive/release/galactic/ntrip_client/1.0.0-1.tar.gz";
     name = "1.0.0-1.tar.gz";
-    sha256 = "ccc17605a247e6d1a808adda9ec0b0769e1d20fe391de7e54159b092bf9a9386";
+    sha256 = "2a56f3a461beb8cd3700cb13dc174ff2e2e43cbec730619e6c1279f9339ffb91";
   };
 
   buildType = "ament_python";
