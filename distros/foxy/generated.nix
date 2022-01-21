@@ -190,7 +190,23 @@ self: super: {
 
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
 
+ chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
+
  class-loader = self.callPackage ./class-loader {};
+
+ clober-bringup = self.callPackage ./clober-bringup {};
+
+ clober-description = self.callPackage ./clober-description {};
+
+ clober-msgs = self.callPackage ./clober-msgs {};
+
+ clober-navigation = self.callPackage ./clober-navigation {};
+
+ clober-serial = self.callPackage ./clober-serial {};
+
+ clober-simulation = self.callPackage ./clober-simulation {};
+
+ clober-slam = self.callPackage ./clober-slam {};
 
  color-names = self.callPackage ./color-names {};
 
@@ -504,6 +520,8 @@ self: super: {
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
 
+ ign-ros2-control-demos = self.callPackage ./ign-ros2-control-demos {};
+
  image-common = self.callPackage ./image-common {};
 
  image-geometry = self.callPackage ./image-geometry {};
@@ -700,6 +718,8 @@ self: super: {
 
  moveit = self.callPackage ./moveit {};
 
+ moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
+
  moveit-common = self.callPackage ./moveit-common {};
 
  moveit-core = self.callPackage ./moveit-core {};
@@ -709,6 +729,8 @@ self: super: {
  moveit-msgs = self.callPackage ./moveit-msgs {};
 
  moveit-planners = self.callPackage ./moveit-planners {};
+
+ moveit-planners-chomp = self.callPackage ./moveit-planners-chomp {};
 
  moveit-planners-ompl = self.callPackage ./moveit-planners-ompl {};
 
@@ -847,8 +869,6 @@ self: super: {
  octovis = self.callPackage ./octovis {};
 
  ompl = self.callPackage ./ompl {};
-
- openvslam = self.callPackage ./openvslam {};
 
  openzen-driver = self.callPackage ./openzen-driver {};
 
@@ -1504,7 +1524,7 @@ self: super: {
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
- soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
+ soccer-object-msgs = self.callPackage ./soccer-object-msgs {};
 
  sol-vendor = self.callPackage ./sol-vendor {};
 

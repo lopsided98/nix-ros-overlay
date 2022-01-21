@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, laser-geometry, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-scan-unifier";
-  version = "0.7.10-r1";
+  version = "0.7.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_scan_unifier/0.7.10-1.tar.gz";
-    name = "0.7.10-1.tar.gz";
-    sha256 = "edab7dd3c37f5f5f5eb183c0645c74d2adbe40051bda247ca2ba9ca599853079";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_scan_unifier/0.7.11-1.tar.gz";
+    name = "0.7.11-1.tar.gz";
+    sha256 = "e3ef09b3f86a4ba7afa8fdc962e38b426a5762a5cf8c1b18d763517f598dc51b";
   };
 
   buildType = "catkin";

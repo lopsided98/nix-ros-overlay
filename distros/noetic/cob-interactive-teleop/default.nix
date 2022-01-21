@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, interactive-markers, roscpp, rviz, std-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-interactive-teleop";
-  version = "0.6.26-r1";
+  version = "0.6.27-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/cob_interactive_teleop/0.6.26-1.tar.gz";
-    name = "0.6.26-1.tar.gz";
-    sha256 = "f19dcf3e8b33b8f9cc6e349143b0e245ff0b4114ea7f7ef7fd5357397f158466";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/cob_interactive_teleop/0.6.27-1.tar.gz";
+    name = "0.6.27-1.tar.gz";
+    sha256 = "ab80181672935319300567b9d5552860ce4dee4f2fbcd9a5b1b38c79ef769435";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, control-toolbox, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-action, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-galactic-gripper-controllers";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/gripper_controllers/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "fa86829c262273956b4af81b8ac83e8ddaf335e75f2618f46d8f6c8ba76404e2";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/gripper_controllers/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "67002322ed8742811f3fa6792614c7f0ef0280d8e20c0c0f0d035acf4d92a7fe";
   };
 
   buildType = "ament_cmake";

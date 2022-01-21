@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, jackal-msgs, jackal-viz }:
 buildRosPackage {
   pname = "ros-melodic-jackal-desktop";
-  version = "0.3.2-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal_desktop-release/archive/release/melodic/jackal_desktop/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "75057128589c98a64195ceccf02f1fa7595d11b7536fe69c0187b42f5ae3829c";
+    url = "https://github.com/clearpath-gbp/jackal_desktop-release/archive/release/melodic/jackal_desktop/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "72c94376d4b6d0af285c61998eee8da28ca5e08e172f3a9826a7e8f2b4ed7dee";
   };
 
   buildType = "catkin";

@@ -542,6 +542,14 @@ self: super: {
 
  dijkstra-mesh-planner = self.callPackage ./dijkstra-mesh-planner {};
 
+ dingo-control = self.callPackage ./dingo-control {};
+
+ dingo-description = self.callPackage ./dingo-description {};
+
+ dingo-msgs = self.callPackage ./dingo-msgs {};
+
+ dingo-navigation = self.callPackage ./dingo-navigation {};
+
  dlux-global-planner = self.callPackage ./dlux-global-planner {};
 
  dlux-plugins = self.callPackage ./dlux-plugins {};
@@ -1184,6 +1192,8 @@ self: super: {
 
  ipa-differential-docking = self.callPackage ./ipa-differential-docking {};
 
+ ipcamera-driver = self.callPackage ./ipcamera-driver {};
+
  ira-laser-tools = self.callPackage ./ira-laser-tools {};
 
  iris-lama = self.callPackage ./iris-lama {};
@@ -1269,8 +1279,6 @@ self: super: {
  jsk-roseus = self.callPackage ./jsk-roseus {};
 
  jsk-rqt-plugins = self.callPackage ./jsk-rqt-plugins {};
-
- jsk-rviz-plugins = self.callPackage ./jsk-rviz-plugins {};
 
  jsk-tilt-laser = self.callPackage ./jsk-tilt-laser {};
 
@@ -1407,6 +1415,8 @@ self: super: {
  libphidget22 = self.callPackage ./libphidget22 {};
 
  libphidgets = self.callPackage ./libphidgets {};
+
+ libpointmatcher = self.callPackage ./libpointmatcher {};
 
  librealsense2 = self.callPackage ./librealsense2 {};
 
@@ -2224,6 +2234,14 @@ self: super: {
 
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
+ ridgeback-control = self.callPackage ./ridgeback-control {};
+
+ ridgeback-description = self.callPackage ./ridgeback-description {};
+
+ ridgeback-msgs = self.callPackage ./ridgeback-msgs {};
+
+ ridgeback-navigation = self.callPackage ./ridgeback-navigation {};
+
  rm-calibration-controllers = self.callPackage ./rm-calibration-controllers {};
 
  rm-chassis-controllers = self.callPackage ./rm-chassis-controllers {};
@@ -2605,6 +2623,8 @@ self: super: {
  rqt-topic = self.callPackage ./rqt-topic {};
 
  rqt-web = self.callPackage ./rqt-web {};
+
+ rslidar-sdk = self.callPackage ./rslidar-sdk {};
 
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 

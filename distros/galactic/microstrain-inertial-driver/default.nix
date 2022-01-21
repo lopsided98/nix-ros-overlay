@@ -8,9 +8,9 @@ buildRosPackage {
   version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-ros2-release/archive/release/galactic/microstrain_inertial_driver/2.4.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/galactic/microstrain_inertial_driver/2.4.0-1.tar.gz";
     name = "2.4.0-1.tar.gz";
-    sha256 = "f165c01ffe880ae76071e49bdff4fd13563e6ce6784c3495149df0dc8ae6444d";
+    sha256 = "2d101677955d30183c2fa08046787362361774dbb57726f98070e3c614336056";
   };
 
   buildType = "ament_cmake";

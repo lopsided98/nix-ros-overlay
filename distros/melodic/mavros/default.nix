@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, boost, catkin, cmake-modules, diagnostic-msgs, diagnostic-updater, eigen, eigen-conversions, geographic-msgs, geographiclib, geometry-msgs, gtest, libmavconn, mavlink, mavros-msgs, message-runtime, nav-msgs, pluginlib, rosconsole-bridge, roscpp, rospy, rosunit, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mavros";
-  version = "1.12.2-r1";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/mavros/1.12.2-1.tar.gz";
-    name = "1.12.2-1.tar.gz";
-    sha256 = "f37bcda0fb9eff0f84adf973c917ea96492da9c14a27c835a4afbd1a4eb31a57";
+    url = "https://github.com/mavlink/mavros-release/archive/release/melodic/mavros/1.13.0-1.tar.gz";
+    name = "1.13.0-1.tar.gz";
+    sha256 = "5d7f630e1313f53975d7b03f910cbc2e871ec31a8e384c229bfdb8002603f05e";
   };
 
   buildType = "catkin";

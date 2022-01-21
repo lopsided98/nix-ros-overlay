@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, geometry-msgs, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-foxy-force-torque-sensor-broadcaster";
-  version = "0.5.1-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/force_torque_sensor_broadcaster/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "5cd4eefe34f18f5cffa1449dbcad04ab1c9cd440c159a6296c5c4a781fdc3da5";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/force_torque_sensor_broadcaster/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "bf2704ed5667aae1e8d37cbbd139b6001828561f30f8caba67d1fbaec593ff03";
   };
 
   buildType = "ament_cmake";
