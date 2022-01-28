@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-galactic-shape-msgs";
-  version = "2.2.3-r1";
+  version = "2.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/galactic/shape_msgs/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "ca2153e9c6d11d320a313187d6ef8cfec24baaafcd6caab1532a29db96131e7e";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/galactic/shape_msgs/2.2.4-1.tar.gz";
+    name = "2.2.4-1.tar.gz";
+    sha256 = "cf37da06696fbce13ff4ec25bff0c3d5a4357ec992e0ba1045b884c18cf93382";
   };
 
   buildType = "ament_cmake";

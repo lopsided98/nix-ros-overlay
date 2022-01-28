@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, qt-gui-py-common, rclpy, rqt-gui, rqt-gui-py, rqt-py-common, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rqt-plot";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/foxy/rqt_plot/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "4657f76028513187a4cb879d3ad871a54dcf7e5b529355cc16e53535fff1edf7";
+    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/foxy/rqt_plot/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "8a275cdec0aa6e699be6052bea5d877ac1256877c54e2fc61c1329ea50ca3c69";
   };
 
   buildType = "ament_python";

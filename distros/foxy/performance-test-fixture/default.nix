@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-export-dependencies, ament-cmake-export-targets, ament-cmake-google-benchmark, ament-cmake-test, ament-lint-auto, ament-lint-common, google-benchmark-vendor, osrf-testing-tools-cpp }:
 buildRosPackage {
   pname = "ros-foxy-performance-test-fixture";
-  version = "0.0.6-r1";
+  version = "0.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/performance_test_fixture-release/archive/release/foxy/performance_test_fixture/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "bb991825295f8847d1961b384890df1dc2060d038b8a032dd44417fb78557d1f";
+    url = "https://github.com/ros2-gbp/performance_test_fixture-release/archive/release/foxy/performance_test_fixture/0.0.8-1.tar.gz";
+    name = "0.0.8-1.tar.gz";
+    sha256 = "64cd6290440fee8c847b270ef62ff2d2827328485727b1376e2427b599e115df";
   };
 
   buildType = "ament_cmake";

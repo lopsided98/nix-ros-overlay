@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, ros-environment, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-galactic-webots-ros2-control";
-  version = "1.2.0-r2";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2_control/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "bc6a6b1f4ec11278e6c3bdbef2f1b85bdc1ebf4f7c24d9697e7f831e800bf4a0";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2_control/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "1dfc8bfd82441783e9d79930ec41c6e1e9ae5baecb79d2b22a11d6f518b6bc02";
   };
 
   buildType = "ament_cmake";

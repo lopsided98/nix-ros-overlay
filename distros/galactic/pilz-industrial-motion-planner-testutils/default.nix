@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, eigen3-cmake-module, moveit-common, moveit-core, moveit-msgs, rclcpp, tf2-eigen }:
 buildRosPackage {
   pname = "ros-galactic-pilz-industrial-motion-planner-testutils";
-  version = "2.3.2-r2";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/pilz_industrial_motion_planner_testutils/2.3.2-2.tar.gz";
-    name = "2.3.2-2.tar.gz";
-    sha256 = "bdf51561e976dbc3fee8b540349f601f41d58952cba6fe9b8c360bf7b8a21bae";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/pilz_industrial_motion_planner_testutils/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "13c6f41e9fdd442b6902f7c75928360ed7ca60052132caa34f518afbf5e3114a";
   };
 
   buildType = "ament_cmake";

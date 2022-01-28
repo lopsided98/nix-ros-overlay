@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python-qt-binding, qt-dotgraph, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-galactic-rqt-graph";
-  version = "1.2.0-r2";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/galactic/rqt_graph/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "7858c8de972f02a0cf13513a9f9a0d45da2bd79caca46674977eac15c208e49b";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/galactic/rqt_graph/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "8ed94499f129f3934c45ef4fd9b43f49d7ad1b11cae29c674f5fd711c6517495";
   };
 
   buildType = "ament_python";

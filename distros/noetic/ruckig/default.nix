@@ -5,19 +5,19 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-noetic-ruckig";
-  version = "0.4.0-r1";
+  version = "0.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pantor/ruckig-release/archive/release/noetic/ruckig/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "697d2d3be36b7421c946fd48384c72ffdb9d3af191975bccdc5a09b6be9d2ba8";
+    url = "https://github.com/pantor/ruckig-release/archive/release/noetic/ruckig/0.6.3-1.tar.gz";
+    name = "0.6.3-1.tar.gz";
+    sha256 = "4a2c3b585dc2ec8d9af8c6ae46197e4344f214771c7d55c7c7fb3faca8690329";
   };
 
   buildType = "cmake";
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Online Trajectory Generation. Real-time. Jerk-constrained. Time-optimal.'';
+    description = ''Instantaneous Motion Generation for Robots and Machines.'';
     license = with lib.licenses; [ mit ];
   };
 }

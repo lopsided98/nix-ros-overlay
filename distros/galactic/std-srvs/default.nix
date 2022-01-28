@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-galactic-std-srvs";
-  version = "2.2.3-r1";
+  version = "2.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/galactic/std_srvs/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "da04ccd6f2e0e71676a1c02d531e2dee2942c955874f1665bda5f9823171e0a2";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/galactic/std_srvs/2.2.4-1.tar.gz";
+    name = "2.2.4-1.tar.gz";
+    sha256 = "0abc409bfdf8a76ae15722bdd5b2ebf06f0fe10bcc68cb57629f738db7440985";
   };
 
   buildType = "ament_cmake";

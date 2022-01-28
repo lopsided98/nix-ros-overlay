@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, controller-manager, moveit-common, moveit-resources-panda-moveit-config, moveit-ros-move-group, moveit-ros-planning-interface, robot-state-publisher, rviz2, tf2-ros, warehouse-ros-mongo }:
 buildRosPackage {
   pname = "ros-foxy-run-ompl-constrained-planning";
-  version = "2.2.2-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/run_ompl_constrained_planning/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "0ed38dbf02f5db6c8903721304c67d744f113762762c916eef7129e8e21647aa";
+    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/run_ompl_constrained_planning/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "53ecd09290add9920ab753edd5bb0fb4a1e5de7df60698f599bd48ae91fb49ce";
   };
 
   buildType = "ament_cmake";

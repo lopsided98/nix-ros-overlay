@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-wfov-camera-msgs";
-  version = "0.14.1-r1";
+  version = "0.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/melodic/wfov_camera_msgs/0.14.1-1.tar.gz";
-    name = "0.14.1-1.tar.gz";
-    sha256 = "c9b9f265c88ee3687366617abbb64324044753b3ba24b8967123014a7fb51fbc";
+    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/melodic/wfov_camera_msgs/0.14.2-1.tar.gz";
+    name = "0.14.2-1.tar.gz";
+    sha256 = "6082f10c40e6051afe2fd9e75d062bc0246e99d57d607959a016d95e9a0ad22c";
   };
 
   buildType = "catkin";

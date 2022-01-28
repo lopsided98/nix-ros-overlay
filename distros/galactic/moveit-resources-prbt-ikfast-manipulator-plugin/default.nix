@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-core, pluginlib, rclcpp, tf2-eigen, tf2-eigen-kdl, tf2-geometry-msgs, tf2-kdl }:
 buildRosPackage {
   pname = "ros-galactic-moveit-resources-prbt-ikfast-manipulator-plugin";
-  version = "2.3.2-r2";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_resources_prbt_ikfast_manipulator_plugin/2.3.2-2.tar.gz";
-    name = "2.3.2-2.tar.gz";
-    sha256 = "130ef6be164f203eb2a0d4856d9c6b7c456af2569dfc78c791cd521c86a3f284";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_resources_prbt_ikfast_manipulator_plugin/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "fa0b48ddcac47b467580b8fe84b3dfda619e1497780016c9d28d5858dd20f3fb";
   };
 
   buildType = "ament_cmake";

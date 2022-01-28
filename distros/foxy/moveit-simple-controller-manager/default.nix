@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, control-msgs, moveit-common, moveit-core, pluginlib, rclcpp, rclcpp-action }:
 buildRosPackage {
   pname = "ros-foxy-moveit-simple-controller-manager";
-  version = "2.2.2-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_simple_controller_manager/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "bbb4fcffcf9b181b949f1028208fd61b5288c4fbfd1c781edaee4f796a5319fe";
+    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_simple_controller_manager/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "ec3eadf03ab111a3e9c45b3916c5a5d04867f8525f86362b4eef3a638b372b2f";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mia-hand-msgs";
-  version = "1.0.0-r1";
+  version = "1.0.0-r13";
 
   src = fetchurl {
-    url = "https://github.com/Prensilia-srl/mia_hand_ros_pkgs-release/archive/release/noetic/mia_hand_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "15535828ba0e7be310ea2e9ae6f5c5a9fb085da2b5280d2f536ef10b4dedaca6";
+    url = "https://github.com/Prensilia-srl/mia_hand_ros_pkgs-release/archive/release/noetic/mia_hand_msgs/1.0.0-13.tar.gz";
+    name = "1.0.0-13.tar.gz";
+    sha256 = "79bbde4295d3ab46307fabc372618919142f7ab82ee17de8b9f04340c5a8d6d1";
   };
 
   buildType = "catkin";

@@ -542,6 +542,18 @@ self: super: {
 
  dijkstra-mesh-planner = self.callPackage ./dijkstra-mesh-planner {};
 
+ dingo-control = self.callPackage ./dingo-control {};
+
+ dingo-description = self.callPackage ./dingo-description {};
+
+ dingo-desktop = self.callPackage ./dingo-desktop {};
+
+ dingo-msgs = self.callPackage ./dingo-msgs {};
+
+ dingo-navigation = self.callPackage ./dingo-navigation {};
+
+ dingo-viz = self.callPackage ./dingo-viz {};
+
  dlux-global-planner = self.callPackage ./dlux-global-planner {};
 
  dlux-plugins = self.callPackage ./dlux-plugins {};
@@ -1086,6 +1098,10 @@ self: super: {
 
  hokuyo3d = self.callPackage ./hokuyo3d {};
 
+ hri-msgs = self.callPackage ./hri-msgs {};
+
+ human-description = self.callPackage ./human-description {};
+
  husky-control = self.callPackage ./husky-control {};
 
  husky-description = self.callPackage ./husky-description {};
@@ -1184,6 +1200,8 @@ self: super: {
 
  ipa-differential-docking = self.callPackage ./ipa-differential-docking {};
 
+ ipcamera-driver = self.callPackage ./ipcamera-driver {};
+
  ira-laser-tools = self.callPackage ./ira-laser-tools {};
 
  iris-lama = self.callPackage ./iris-lama {};
@@ -1204,9 +1222,13 @@ self: super: {
 
  jackal-description = self.callPackage ./jackal-description {};
 
+ jackal-gazebo = self.callPackage ./jackal-gazebo {};
+
  jackal-msgs = self.callPackage ./jackal-msgs {};
 
  jackal-navigation = self.callPackage ./jackal-navigation {};
+
+ jackal-simulator = self.callPackage ./jackal-simulator {};
 
  jackal-tutorials = self.callPackage ./jackal-tutorials {};
 
@@ -1269,8 +1291,6 @@ self: super: {
  jsk-roseus = self.callPackage ./jsk-roseus {};
 
  jsk-rqt-plugins = self.callPackage ./jsk-rqt-plugins {};
-
- jsk-rviz-plugins = self.callPackage ./jsk-rviz-plugins {};
 
  jsk-tilt-laser = self.callPackage ./jsk-tilt-laser {};
 
@@ -1407,6 +1427,8 @@ self: super: {
  libphidget22 = self.callPackage ./libphidget22 {};
 
  libphidgets = self.callPackage ./libphidgets {};
+
+ libpointmatcher = self.callPackage ./libpointmatcher {};
 
  librealsense2 = self.callPackage ./librealsense2 {};
 
@@ -2224,6 +2246,18 @@ self: super: {
 
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
+ ridgeback-control = self.callPackage ./ridgeback-control {};
+
+ ridgeback-description = self.callPackage ./ridgeback-description {};
+
+ ridgeback-desktop = self.callPackage ./ridgeback-desktop {};
+
+ ridgeback-msgs = self.callPackage ./ridgeback-msgs {};
+
+ ridgeback-navigation = self.callPackage ./ridgeback-navigation {};
+
+ ridgeback-viz = self.callPackage ./ridgeback-viz {};
+
  rm-calibration-controllers = self.callPackage ./rm-calibration-controllers {};
 
  rm-chassis-controllers = self.callPackage ./rm-chassis-controllers {};
@@ -2285,6 +2319,8 @@ self: super: {
  roboticsgroup-upatras-gazebo-plugins = self.callPackage ./roboticsgroup-upatras-gazebo-plugins {};
 
  robotis-manipulator = self.callPackage ./robotis-manipulator {};
+
+ robotraconteur = self.callPackage ./robotraconteur {};
 
  rokubimini = self.callPackage ./rokubimini {};
 
@@ -2605,6 +2641,8 @@ self: super: {
  rqt-topic = self.callPackage ./rqt-topic {};
 
  rqt-web = self.callPackage ./rqt-web {};
+
+ rslidar-sdk = self.callPackage ./rslidar-sdk {};
 
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
@@ -3136,7 +3174,11 @@ self: super: {
 
  warthog-description = self.callPackage ./warthog-description {};
 
+ warthog-desktop = self.callPackage ./warthog-desktop {};
+
  warthog-msgs = self.callPackage ./warthog-msgs {};
+
+ warthog-viz = self.callPackage ./warthog-viz {};
 
  web-video-server = self.callPackage ./web-video-server {};
 

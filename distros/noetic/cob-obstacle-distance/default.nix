@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, catkin, cob-control-msgs, cob-srvs, dynamic-reconfigure, eigen, eigen-conversions, fcl, geometry-msgs, interactive-markers, joint-state-publisher, kdl-conversions, kdl-parser, moveit-msgs, orocos-kdl, pkg-config, robot-state-publisher, roscpp, roslib, roslint, rospy, rviz, sensor-msgs, shape-msgs, std-msgs, tf, tf-conversions, urdf, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-noetic-cob-obstacle-distance";
-  version = "0.8.17-r1";
+  version = "0.8.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_obstacle_distance/0.8.17-1.tar.gz";
-    name = "0.8.17-1.tar.gz";
-    sha256 = "7de7dc257ac1d212f5e784c0cdf4c02909bffe20c576532365619b5e681cdcdf";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_obstacle_distance/0.8.18-1.tar.gz";
+    name = "0.8.18-1.tar.gz";
+    sha256 = "61d001ed2bdf818bc02d3db5ab62284cde5517b760509212d15ad18ae5c248c4";
   };
 
   buildType = "catkin";

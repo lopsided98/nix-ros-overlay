@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-galactic-imu-sensor-broadcaster";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/imu_sensor_broadcaster/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "dfb839801c2ffca3e38a77db0a7143114ede39f6474d9e8f2fb0fee884e0d8dc";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/imu_sensor_broadcaster/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "cd4c1f73f3c9233b917b4a05cda4f969b87b8c748cbf230e2dc4b77e142e192b";
   };
 
   buildType = "ament_cmake";

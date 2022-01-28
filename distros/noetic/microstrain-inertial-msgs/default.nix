@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-microstrain-inertial-msgs";
-  version = "2.4.1-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_msgs/2.4.1-1.tar.gz";
-    name = "2.4.1-1.tar.gz";
-    sha256 = "cc163ed0fe5ce230d79672265e78d754b81a0eb99683b5124e2cecdd0be0a5a3";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_msgs/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "e9c47f085a993b61a84499776972e5724437624ac33e7611e6ee7ae7427f10c2";
   };
 
   buildType = "catkin";
