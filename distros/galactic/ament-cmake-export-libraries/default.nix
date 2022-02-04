@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-galactic-ament-cmake-export-libraries";
-  version = "1.1.4-r1";
+  version = "1.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/galactic/ament_cmake_export_libraries/1.1.4-1.tar.gz";
-    name = "1.1.4-1.tar.gz";
-    sha256 = "b3423fb9a7cb5bcb9d32cab9c79e8fdc3ffcac4e1e9fba0389a9d95d073bea1f";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/galactic/ament_cmake_export_libraries/1.1.5-1.tar.gz";
+    name = "1.1.5-1.tar.gz";
+    sha256 = "5bacd72181bdc1a7f7a98c93d51dba9b4c4d91c3b1d8dd135a99380d2f474ca2";
   };
 
   buildType = "ament_cmake";

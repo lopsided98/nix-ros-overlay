@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, pythonPackages, rclpy, std-msgs, webots-ros2-control, webots-ros2-core, webots-ros2-driver, webots-ros2-epuck, webots-ros2-importer, webots-ros2-mavic, webots-ros2-msgs, webots-ros2-tesla, webots-ros2-tests, webots-ros2-tiago, webots-ros2-turtlebot, webots-ros2-universal-robot }:
 buildRosPackage {
   pname = "ros-galactic-webots-ros2";
-  version = "1.2.0-r2";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "618ad641c643dbc1ce57cd21bccfcfa0a07ade2f7d1198ae74ac70a5f014f157";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "dfda7ec827e4a1b7b4064e9848b859823471ac414dfaef14b45b38bfb9421b46";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, class-loader, rcpputils, rcutils, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-foxy-pluginlib";
-  version = "2.5.3-r1";
+  version = "2.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/foxy/pluginlib/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "5c0a830951ab383e38f101a7a7543ac6340335f1f9789d1bb2b03ee831113738";
+    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/foxy/pluginlib/2.5.4-1.tar.gz";
+    name = "2.5.4-1.tar.gz";
+    sha256 = "df2d9db0e320e5e85de6e5048452620a9b13c4cb9bbe8fd267ac08df8f3f102a";
   };
 
   buildType = "ament_cmake";

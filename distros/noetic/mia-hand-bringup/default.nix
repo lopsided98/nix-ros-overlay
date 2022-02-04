@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mia-hand-description, mia-hand-driver, mia-hand-gazebo, mia-hand-ros-control }:
 buildRosPackage {
   pname = "ros-noetic-mia-hand-bringup";
-  version = "1.0.0-r1";
+  version = "1.0.0-r13";
 
   src = fetchurl {
-    url = "https://github.com/Prensilia-srl/mia_hand_ros_pkgs-release/archive/release/noetic/mia_hand_bringup/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "c1427e98473cee816954a8c483e1388360c5df7677f19a2d373c1ebd5b7e4cc6";
+    url = "https://github.com/Prensilia-srl/mia_hand_ros_pkgs-release/archive/release/noetic/mia_hand_bringup/1.0.0-13.tar.gz";
+    name = "1.0.0-13.tar.gz";
+    sha256 = "54ea4beba19456237a3ca82d07a4e120f5af1553f3075bdd89db35962da5d955";
   };
 
   buildType = "catkin";

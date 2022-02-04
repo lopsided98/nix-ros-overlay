@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, qt5 }:
 buildRosPackage {
   pname = "ros-foxy-plotjuggler";
-  version = "3.3.2-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/foxy/plotjuggler/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "9cc146e0c81b020190d91d980726e4eb615617ec55f92b51491d5b38683ddb7f";
+    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/foxy/plotjuggler/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "3f0e4834cc67a69e393a0e67733d58e66793b81f9887b4a93c055e3d3ce2f97b";
   };
 
   buildType = "catkin";

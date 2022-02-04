@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, bluez, cwiid, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, std-srvs, wiimote-msgs }:
 buildRosPackage {
   pname = "ros-galactic-wiimote";
-  version = "3.0.0-r5";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/galactic/wiimote/3.0.0-5.tar.gz";
-    name = "3.0.0-5.tar.gz";
-    sha256 = "11100d028ef758a3d8a04ab3430f4263228874c03f402088e72bc368897ca716";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/galactic/wiimote/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "be48f544d7890782c858aa68c8ef39ecdb1f6fefc4b0ebef1b96f8226e7e67f5";
   };
 
   buildType = "ament_cmake";

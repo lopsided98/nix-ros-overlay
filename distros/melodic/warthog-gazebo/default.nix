@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-plugins, gazebo-ros, gazebo-ros-control, hector-gazebo-plugins, joint-state-publisher, roscpp, roslaunch, warthog-control, warthog-description }:
 buildRosPackage {
   pname = "ros-melodic-warthog-gazebo";
-  version = "0.2.1-r1";
+  version = "0.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog_simulator-release/archive/release/melodic/warthog_gazebo/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "31abcb4928145948bffd645a6f87394cd1868586d0ad00df4dafa09ba01790f5";
+    url = "https://github.com/clearpath-gbp/warthog_simulator-release/archive/release/melodic/warthog_gazebo/0.2.2-2.tar.gz";
+    name = "0.2.2-2.tar.gz";
+    sha256 = "8440194957dc342739f264bfc6c722aade6e49bcadc6d2e64506b2378e9bab59";
   };
 
   buildType = "catkin";

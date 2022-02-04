@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, curl, diagnostic-updater, dpkg, dynamic-reconfigure, image-exposure-msgs, image-proc, image-transport, libraw1394, libusb1, nodelet, roscpp, roslaunch, roslint, sensor-msgs, stereo-image-proc, wfov-camera-msgs }:
 buildRosPackage {
   pname = "ros-noetic-pointgrey-camera-driver";
-  version = "0.15.0-r1";
+  version = "0.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/noetic/pointgrey_camera_driver/0.15.0-1.tar.gz";
-    name = "0.15.0-1.tar.gz";
-    sha256 = "70339f114659294dcdcb58bd3e8db2a80eac8a1f537dc84693a94e54a672ae27";
+    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/noetic/pointgrey_camera_driver/0.15.1-1.tar.gz";
+    name = "0.15.1-1.tar.gz";
+    sha256 = "5af5603bb72ac4da3259ca169526f83b47ac2d62f5ae2755983696bf1ade1a81";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, mimick-vendor, osrf-testing-tools-cpp, rcl-interfaces, rcl-logging-spdlog, rcl-yaml-param-parser, rcpputils, rcutils, rmw, rmw-implementation, rmw-implementation-cmake, rosidl-runtime-c, test-msgs, tracetools }:
 buildRosPackage {
   pname = "ros-foxy-rcl";
-  version = "1.1.11-r1";
+  version = "1.1.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/foxy/rcl/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "e6e9ab8c106642697bd5c39488874c93aa8a0bf800e942f9d092b15e3a3f1f91";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/foxy/rcl/1.1.12-1.tar.gz";
+    name = "1.1.12-1.tar.gz";
+    sha256 = "ca70c2367f151aa670fc55cd0ff61077edd05eab5e6597523013afc2e378da73";
   };
 
   buildType = "ament_cmake";

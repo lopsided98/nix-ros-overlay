@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, pythonPackages, rosbag, rosbuild, rosgraph, roslang, roslaunch, roslib, rosnode, rosservice, rostest, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-roswtf";
-  version = "1.14.12-r1";
+  version = "1.14.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roswtf/1.14.12-1.tar.gz";
-    name = "1.14.12-1.tar.gz";
-    sha256 = "e950d40bbf89737e16a3a52e1e2c387da1ccfcffc3677ed3527f1f929c4b3f94";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roswtf/1.14.13-1.tar.gz";
+    name = "1.14.13-1.tar.gz";
+    sha256 = "5c6ff528c7c6a8dcff6d24603e208c9f9223cdafe33741a0e46569fe4f05965f";
   };
 
   buildType = "catkin";

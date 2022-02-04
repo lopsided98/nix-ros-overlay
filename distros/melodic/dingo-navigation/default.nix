@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, catkin, gmapping, map-server, move-base, roslaunch }:
 buildRosPackage {
   pname = "ros-melodic-dingo-navigation";
-  version = "0.1.9-r2";
+  version = "0.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/melodic/dingo_navigation/0.1.9-2.tar.gz";
-    name = "0.1.9-2.tar.gz";
-    sha256 = "c9c7acc5177110ea5ee6ef69241bb8e2dc42d1131a02de8d4166ac352add1f38";
+    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/melodic/dingo_navigation/0.1.10-1.tar.gz";
+    name = "0.1.10-1.tar.gz";
+    sha256 = "a4e94d20963dd88256b78523d8570f0409ebb333f3aefee0bb203e1a56825c1d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, warthog-gazebo }:
 buildRosPackage {
   pname = "ros-melodic-warthog-simulator";
-  version = "0.2.1-r1";
+  version = "0.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog_simulator-release/archive/release/melodic/warthog_simulator/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "74906c172ae52e51327685dd41f026da754359b26db911a68c7ddfe9fe79f096";
+    url = "https://github.com/clearpath-gbp/warthog_simulator-release/archive/release/melodic/warthog_simulator/0.2.2-2.tar.gz";
+    name = "0.2.2-2.tar.gz";
+    sha256 = "be0d98e29d052f06df7da430fa0363812a499e4ac58cd1d47ba30f960c487f26";
   };
 
   buildType = "catkin";

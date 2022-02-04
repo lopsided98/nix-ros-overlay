@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, diff-drive-controller, effort-controllers, force-torque-sensor-broadcaster, forward-command-controller, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, position-controllers, velocity-controllers }:
 buildRosPackage {
   pname = "ros-galactic-ros2-controllers";
-  version = "1.2.0-r1";
+  version = "1.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/ros2_controllers/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "6b6b2401381d92f219e6c714abe979341fee3f7e806742c4f4fe663056afb285";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/ros2_controllers/1.3.0-2.tar.gz";
+    name = "1.3.0-2.tar.gz";
+    sha256 = "899542f07272359dd517c29d25c7e13ec0a77a93849e03f968664f9158192b28";
   };
 
   buildType = "ament_cmake";

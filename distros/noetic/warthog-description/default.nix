@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-warthog-description";
-  version = "0.1.4-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/noetic/warthog_description/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "eb838c4e56ce768fa28c4fea06dd0419e3499cbea9b4a2b59ca4dc22afa365de";
+    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/noetic/warthog_description/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "0a96a612f1fd8bfbae68dc7f0af5e83c51376a70fbca626f843e263edff53b6b";
   };
 
   buildType = "catkin";

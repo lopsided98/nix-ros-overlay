@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, angles, control-msgs, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-galactic-joint-trajectory-controller";
-  version = "1.2.0-r1";
+  version = "1.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/joint_trajectory_controller/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "44b55dd9c25adbc70b8872beadb78a61fdbcd6706ba59a1231434de355ebf8b8";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/joint_trajectory_controller/1.3.0-2.tar.gz";
+    name = "1.3.0-2.tar.gz";
+    sha256 = "d9caf6b734079edde7f53dee3d12f73cc14ff823ab9abb6bd784a727d76f6176";
   };
 
   buildType = "ament_cmake";

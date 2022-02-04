@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-micro-ros-diagnostic-msgs";
-  version = "0.2.0-r4";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/micro_ros_diagnostics-release/archive/release/galactic/micro_ros_diagnostic_msgs/0.2.0-4.tar.gz";
-    name = "0.2.0-4.tar.gz";
-    sha256 = "31ceb40a77d1c2b0fd10295bfd958b702f6d4bd950bc2b30942f387977f413eb";
+    url = "https://github.com/ros2-gbp/micro_ros_diagnostics-release/archive/release/galactic/micro_ros_diagnostic_msgs/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "815fc35ca5439e2bb508bd5f16b3ebefa07b64c65a89b27184aa7224c6f136e4";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing  diagnostics related messages and service definitions for micro-ROS.'';
+    description = ''Ccontains messages and service definitions for micro-ROS diagnostics.'';
     license = with lib.licenses; [ asl20 ];
   };
 }

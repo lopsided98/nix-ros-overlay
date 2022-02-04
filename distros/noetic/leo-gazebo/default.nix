@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, compressed-image-transport, diff-drive-controller, gazebo-dev, gazebo-plugins, gazebo-ros, gazebo-ros-control, geometry-msgs, joint-state-controller, leo-description, nav-msgs, roscpp, topic-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, compressed-image-transport, controller-manager, diff-drive-controller, gazebo-plugins, gazebo-ros, gazebo-ros-control, geometry-msgs, joint-state-controller, leo-description, leo-gazebo-plugins, leo-gazebo-worlds, nav-msgs, robot-state-publisher, topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-leo-gazebo";
-  version = "0.2.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/noetic/leo_gazebo/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "a561a1003237ae2a2536e654a5208639e701f2cd308775147aaaca418c96f02f";
+    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/noetic/leo_gazebo/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "5b4507f3a0811debf7e76b83c1e59991848313758131c4f6dee3efb3e6acfc8d";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ compressed-image-transport diff-drive-controller gazebo-dev gazebo-plugins gazebo-ros gazebo-ros-control geometry-msgs joint-state-controller leo-description nav-msgs roscpp topic-tools ];
+  propagatedBuildInputs = [ compressed-image-transport controller-manager diff-drive-controller gazebo-plugins gazebo-ros gazebo-ros-control geometry-msgs joint-state-controller leo-description leo-gazebo-plugins leo-gazebo-worlds nav-msgs robot-state-publisher topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

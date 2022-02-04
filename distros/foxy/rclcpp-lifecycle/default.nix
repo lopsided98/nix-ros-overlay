@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, lifecycle-msgs, mimick-vendor, performance-test-fixture, rcl-lifecycle, rclcpp, rcutils, rmw, rosidl-typesupport-cpp, test-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rclcpp-lifecycle";
-  version = "2.4.0-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/foxy/rclcpp_lifecycle/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "2c1a195db7839de79edde1917aabb703e5cb97d6f57c4e2e4252ce87023e56a0";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/foxy/rclcpp_lifecycle/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "a1ce5483d008de946962689448e589b25a9d9d9676aa8e8d16ef14f4b8d98a41";
   };
 
   buildType = "ament_cmake";

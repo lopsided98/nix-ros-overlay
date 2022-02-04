@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tier4/osqp_vendor-release/archive/release/galactic/osqp_vendor/0.0.4-1.tar.gz";
+    url = "https://github.com/ros2-gbp/osqp_vendor-release/archive/release/galactic/osqp_vendor/0.0.4-1.tar.gz";
     name = "0.0.4-1.tar.gz";
     sha256 = "366e082d8adb27d1206b58e830e162a5342dfc30ec076ec7f1e0ff786c90f64c";
   };

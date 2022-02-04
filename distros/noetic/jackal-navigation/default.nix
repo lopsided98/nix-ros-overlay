@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, catkin, gmapping, map-server, move-base, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-jackal-navigation";
-  version = "0.8.0-r2";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/noetic/jackal_navigation/0.8.0-2.tar.gz";
-    name = "0.8.0-2.tar.gz";
-    sha256 = "763f658d66cee27fb29268e67f179b2dbec849461f62df9382e439ade12c65ec";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/noetic/jackal_navigation/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "76be20fcbfd0c181b7cdf5fc059e734ffe8b98ac34031a5ff2480ef7b1810947";
   };
 
   buildType = "catkin";

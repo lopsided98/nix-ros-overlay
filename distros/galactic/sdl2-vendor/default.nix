@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL2, ament-cmake }:
 buildRosPackage {
   pname = "ros-galactic-sdl2-vendor";
-  version = "3.0.0-r5";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/galactic/sdl2_vendor/3.0.0-5.tar.gz";
-    name = "3.0.0-5.tar.gz";
-    sha256 = "bbc720e13309dd0729ae69c65b7248a0ebacd497b376335fdcad8fd7a03bddf5";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/galactic/sdl2_vendor/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "79ee99025f6823c0e98ed467bbaf9c9ad1a6329b357e133558a8f9486a3c7446";
   };
 
   buildType = "ament_cmake";

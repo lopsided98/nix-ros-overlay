@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-galactic-ament-package";
-  version = "0.12.0-r2";
+  version = "0.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/galactic/ament_package/0.12.0-2.tar.gz";
-    name = "0.12.0-2.tar.gz";
-    sha256 = "dcf641a1b3db8b8173f1e979cc2f49cc41ac43365c04f72ba142f54476ea9f97";
+    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/galactic/ament_package/0.13.1-1.tar.gz";
+    name = "0.13.1-1.tar.gz";
+    sha256 = "ed79a9e470066e263d964dd66741950e11d5385e20f12a85e1966050c835998b";
   };
 
   buildType = "ament_python";

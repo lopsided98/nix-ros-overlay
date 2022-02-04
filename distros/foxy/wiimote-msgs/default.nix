@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-wiimote-msgs";
-  version = "3.0.0-r2";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/wiimote_msgs/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "48880d97a45d963bd3267f60e1d21c74c50e543166f3e321d0928a855e1db0a8";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/wiimote_msgs/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "6c2b9554f6bae40e57d3e60948792622a2852e2135e1ce77a78333f772fecf99";
   };
 
   buildType = "ament_cmake";

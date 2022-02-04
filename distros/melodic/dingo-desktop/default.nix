@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dingo-msgs, dingo-viz }:
 buildRosPackage {
   pname = "ros-melodic-dingo-desktop";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo_desktop-release/archive/release/melodic/dingo_desktop/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "db4ea8291d9ba30cbf19fd72a473dc9c047bcd16e2b6c97ddb73ea464a02dd75";
+    url = "https://github.com/clearpath-gbp/dingo_desktop-release/archive/release/melodic/dingo_desktop/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "783a5da55c27e4175f547cbe6894001f3792040759fcbbc4e9d56f65b801d4ca";
   };
 
   buildType = "catkin";
