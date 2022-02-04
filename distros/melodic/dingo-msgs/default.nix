@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dingo-msgs";
-  version = "0.1.9-r2";
+  version = "0.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/melodic/dingo_msgs/0.1.9-2.tar.gz";
-    name = "0.1.9-2.tar.gz";
-    sha256 = "149b26e9f04cae21c9f3e5947a908cada8d0be81e71d76881e2a259429b81155";
+    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/melodic/dingo_msgs/0.1.10-1.tar.gz";
+    name = "0.1.10-1.tar.gz";
+    sha256 = "e4822a65d81656b3e248a1eaf98204a9d03cf4d7d0d56b61c962e41366050022";
   };
 
   buildType = "catkin";

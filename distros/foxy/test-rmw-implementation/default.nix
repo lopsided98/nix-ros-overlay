@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp, rcutils, rmw, rmw-dds-common, rmw-implementation, rmw-implementation-cmake, test-msgs }:
 buildRosPackage {
   pname = "ros-foxy-test-rmw-implementation";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/foxy/test_rmw_implementation/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "ac1267ff6e3b4dbc7796d45cd3cb4ba22417e5ea97ca33acb6c3dc09baef66e6";
+    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/foxy/test_rmw_implementation/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "5f92130b441af78cb91c0b78673f070f81ff2c0de2be8a4035437ffe0ef83573";
   };
 
   buildType = "ament_cmake";

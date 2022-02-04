@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, eigen, moveit-common, moveit-core, moveit-msgs, moveit-resources-fanuc-description, moveit-resources-fanuc-moveit-config, moveit-resources-panda-description, moveit-resources-panda-moveit-config, moveit-ros-planning, orocos-kdl, pluginlib, pythonPackages, ros-testing, tf2, tf2-kdl, urdfdom }:
 buildRosPackage {
   pname = "ros-galactic-moveit-kinematics";
-  version = "2.3.2-r2";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_kinematics/2.3.2-2.tar.gz";
-    name = "2.3.2-2.tar.gz";
-    sha256 = "2691475c8f884a0c96667abef7bbf05749076d151dc3bcf1230777d9e3273a5f";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_kinematics/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "f9b7af777f61b562071b48f59c93d87da22b2b47facca43c9bde5deb81f53149";
   };
 
   buildType = "ament_cmake";

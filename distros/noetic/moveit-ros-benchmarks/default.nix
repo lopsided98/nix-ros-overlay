@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-ros-planning, moveit-ros-warehouse, pluginlib, roscpp, tf2-eigen }:
 buildRosPackage {
   pname = "ros-noetic-moveit-ros-benchmarks";
-  version = "1.1.7-r1";
+  version = "1.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_benchmarks/1.1.7-1.tar.gz";
-    name = "1.1.7-1.tar.gz";
-    sha256 = "fc20f479be8bd03c228354b1643708867099ab44e9ba7a45bcece7b60cbd43dd";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_benchmarks/1.1.8-1.tar.gz";
+    name = "1.1.8-1.tar.gz";
+    sha256 = "5a5f9758ddb476a5760e50599658762924ae353e149b136635b184076e4b1276";
   };
 
   buildType = "catkin";

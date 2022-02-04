@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-wiimote-msgs";
-  version = "3.0.0-r5";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/galactic/wiimote_msgs/3.0.0-5.tar.gz";
-    name = "3.0.0-5.tar.gz";
-    sha256 = "930adde8038f2452d8cde05ce5c3924b5a1d72650bcd1a2352b841eaee3136a8";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/galactic/wiimote_msgs/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "76e4b645e25d56935f61d3e63d68179d8f12da8e98f30b3626c92aa07d76dfc8";
   };
 
   buildType = "ament_cmake";

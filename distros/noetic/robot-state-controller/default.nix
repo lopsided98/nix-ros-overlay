@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, hardware-interface, kdl-parser, pluginlib, realtime-tools, rm-common, roscpp, roslint, tf2-kdl, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-noetic-robot-state-controller";
-  version = "0.1.1-r3";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/robot_state_controller/0.1.1-3.tar.gz";
-    name = "0.1.1-3.tar.gz";
-    sha256 = "141f326c9938e86964006050b4cf53b83e4377899a3851fb797ad105a160d9c7";
+    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/robot_state_controller/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "bbe3ed5c9b5aa781c1f9e96cdd184a9358c0fac23a0da3807729922431b42743";
   };
 
   buildType = "catkin";

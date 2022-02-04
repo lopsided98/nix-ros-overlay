@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-galactic-joy-linux";
-  version = "3.0.0-r5";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/galactic/joy_linux/3.0.0-5.tar.gz";
-    name = "3.0.0-5.tar.gz";
-    sha256 = "fbb0690f8e86319628f9658596caf1b809adb26c5e00e7decc7e6acc63ce9e9f";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/galactic/joy_linux/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "f7cf460a6939d956ad4ddb556b9247be6158649c49e2299e6834ad294a32b9dc";
   };
 
   buildType = "ament_cmake";

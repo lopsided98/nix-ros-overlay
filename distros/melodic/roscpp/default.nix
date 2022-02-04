@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cpp-common, message-generation, message-runtime, pkg-config, rosconsole, roscpp-serialization, roscpp-traits, rosgraph-msgs, roslang, rostime, std-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-roscpp";
-  version = "1.14.12-r1";
+  version = "1.14.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roscpp/1.14.12-1.tar.gz";
-    name = "1.14.12-1.tar.gz";
-    sha256 = "a1686710b118826565657dc1715e39c2abdc7b218bdb8fe855524bab25765215";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roscpp/1.14.13-1.tar.gz";
+    name = "1.14.13-1.tar.gz";
+    sha256 = "a99b07fcd568c729b2ad2a98af780072f698bcb1de34df839eb421e970f82463";
   };
 
   buildType = "catkin";

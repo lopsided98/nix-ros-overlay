@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, libyamlcpp, moveit-common, moveit-core, moveit-resources-panda-moveit-config, moveit-ros-planning, moveit-ros-visualization, ogre1_9, ompl, rclcpp, srdfdom, urdf, xacro }:
 buildRosPackage {
   pname = "ros-galactic-moveit-setup-assistant";
-  version = "2.3.2-r2";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_setup_assistant/2.3.2-2.tar.gz";
-    name = "2.3.2-2.tar.gz";
-    sha256 = "737d4b88633c8b0e6aa450e4a4640482d7be49ce0fce308056a6f954d4581cb2";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_setup_assistant/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "132bee5b1c92fb0cc89bb0aec3f74c446f3883ea1bb1272f7279f33a48dd68e3";
   };
 
   buildType = "ament_cmake";

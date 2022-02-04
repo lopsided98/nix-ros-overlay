@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, libspnav, rclcpp, rclcpp-components, sensor-msgs, spacenavd }:
 buildRosPackage {
   pname = "ros-foxy-spacenav";
-  version = "3.0.0-r2";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/spacenav/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "cac7c934e607809336af35f089ca8a285f88b65ad0c91fe94838628719407dc5";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/spacenav/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "d9ce40277ae6cbf04912a3bb544482fd6e37b93c89b11a896eb45928f5cb7c90";
   };
 
   buildType = "ament_cmake";

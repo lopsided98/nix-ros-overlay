@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-nao-command-msgs";
-  version = "0.0.3-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ijnek/nao_interfaces-release/archive/release/galactic/nao_command_msgs/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "c3fa99b82e75f19a7d80eb378857f1359ed6260f15ea2de0574b7364798959fd";
+    url = "https://github.com/ijnek/nao_interfaces-release/archive/release/galactic/nao_command_msgs/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "0a97e76e0aada6eabbe460a4cc40657969934eb0bf79862d2aa9136c667ba150";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package providing sensor msgs to be used with a NAO robot.'';
+    description = ''Package defining command msgs to be sent to NAO robot.'';
     license = with lib.licenses; [ asl20 ];
   };
 }

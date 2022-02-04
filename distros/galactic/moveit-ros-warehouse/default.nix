@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-common, moveit-core, moveit-ros-planning, rclcpp, tf2-eigen, tf2-ros, warehouse-ros }:
 buildRosPackage {
   pname = "ros-galactic-moveit-ros-warehouse";
-  version = "2.3.2-r2";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_ros_warehouse/2.3.2-2.tar.gz";
-    name = "2.3.2-2.tar.gz";
-    sha256 = "a8d94446180a948a022f3716c59fb0f37ac77bb4e1aca2e25c09898dd13feccd";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_ros_warehouse/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "cb74ddfd633f1c9cab6dcdd967ac854dd3c5b8d7ae428cf2b52675c969642c71";
   };
 
   buildType = "ament_cmake";

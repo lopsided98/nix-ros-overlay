@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, bluez, cwiid, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, std-srvs, wiimote-msgs }:
 buildRosPackage {
   pname = "ros-foxy-wiimote";
-  version = "3.0.0-r2";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/wiimote/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "a191252948cca561904c07a6b20c343791e5be9a8a3c35c5ad8140b7aad1d786";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/wiimote/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "1cde95d93447b9dc6b7212460b8d4675637e47ea31e7dd5ce4745fc799a5fd70";
   };
 
   buildType = "ament_cmake";

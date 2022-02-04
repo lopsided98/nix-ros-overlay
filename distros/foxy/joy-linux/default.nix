@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-joy-linux";
-  version = "3.0.0-r2";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/joy_linux/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "ea5d00c7f2893d8726d79e5ca28dd34a4f927b9b412172100bb6a84da83fd806";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/joy_linux/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "95d97d9bfd85e6a8455bc36ca5d9a01aaab46ec8422e0abd0ead7f56b0b8cf4a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-micro-ros-diagnostic-msgs";
-  version = "0.2.0-r4";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/micro_ros_diagnostics-release/archive/release/foxy/micro_ros_diagnostic_msgs/0.2.0-4.tar.gz";
-    name = "0.2.0-4.tar.gz";
-    sha256 = "4cc77e0a2ee6aa277f253287c5daa6fc8d67d20c6b66f5809546da79fb948f0f";
+    url = "https://github.com/ros2-gbp/micro_ros_diagnostics-release/archive/release/foxy/micro_ros_diagnostic_msgs/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "56db0f97346c8935919a71aa0149f39f032a811a1c927b1c58288ae3d0516845";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing  diagnostics related messages and service definitions for micro-ROS.'';
+    description = ''Ccontains messages and service definitions for micro-ROS diagnostics.'';
     license = with lib.licenses; [ asl20 ];
   };
 }

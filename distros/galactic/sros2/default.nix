@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-mypy, ament-pep257, python3Packages, pythonPackages, rclpy, ros-testing, ros2cli, test-msgs }:
 buildRosPackage {
   pname = "ros-galactic-sros2";
-  version = "0.10.2-r2";
+  version = "0.10.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sros2-release/archive/release/galactic/sros2/0.10.2-2.tar.gz";
-    name = "0.10.2-2.tar.gz";
-    sha256 = "e2a5da1776045744622be952d57f3c6cd63e5b13c70b84a0b055eb2f5d425baf";
+    url = "https://github.com/ros2-gbp/sros2-release/archive/release/galactic/sros2/0.10.3-1.tar.gz";
+    name = "0.10.3-1.tar.gz";
+    sha256 = "602dfec0a3a9a51251d5f316e702ff4bfc6fa9faffad789917e954d970055881";
   };
 
   buildType = "ament_python";

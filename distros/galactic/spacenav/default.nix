@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, libspnav, rclcpp, rclcpp-components, sensor-msgs, spacenavd }:
 buildRosPackage {
   pname = "ros-galactic-spacenav";
-  version = "3.0.0-r5";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/galactic/spacenav/3.0.0-5.tar.gz";
-    name = "3.0.0-5.tar.gz";
-    sha256 = "8f78eda444a5c30c4c3534a083e551a7aa33e6e37c2bb5fdddf8d3bf5d867c05";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/galactic/spacenav/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "349fa335de0b3b900d58255a62f6613a3cf8767e681127078246fdda57dedd82";
   };
 
   buildType = "ament_cmake";

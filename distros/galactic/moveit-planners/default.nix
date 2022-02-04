@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-planners-ompl, pilz-industrial-motion-planner }:
 buildRosPackage {
   pname = "ros-galactic-moveit-planners";
-  version = "2.3.2-r2";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_planners/2.3.2-2.tar.gz";
-    name = "2.3.2-2.tar.gz";
-    sha256 = "4cc2446fc1a8154a6f379c436c538e000c6b7313814222d32057f6ff2b6f533a";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_planners/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "c1913e540533950f65b9cdefaebd2ea52dc9e1111d9fee78707b9b6e54232bac";
   };
 
   buildType = "ament_cmake";

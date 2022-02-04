@@ -1438,11 +1438,15 @@ self: super: {
 
  hpp-fcl = self.callPackage ./hpp-fcl {};
 
+ hri-msgs = self.callPackage ./hri-msgs {};
+
  hrpsys = self.callPackage ./hrpsys {};
 
  hrpsys-ros-bridge = self.callPackage ./hrpsys-ros-bridge {};
 
  hrpsys-tools = self.callPackage ./hrpsys-tools {};
+
+ human-description = self.callPackage ./human-description {};
 
  husky-base = self.callPackage ./husky-base {};
 
@@ -1610,10 +1614,6 @@ self: super: {
 
  jderobot-assets = self.callPackage ./jderobot-assets {};
 
- jderobot-camviz = self.callPackage ./jderobot-camviz {};
-
- jderobot-carviz = self.callPackage ./jderobot-carviz {};
-
  jderobot-color-tuner = self.callPackage ./jderobot-color-tuner {};
 
  jderobot-drones = self.callPackage ./jderobot-drones {};
@@ -1703,8 +1703,6 @@ self: super: {
  jsk-roseus = self.callPackage ./jsk-roseus {};
 
  jsk-rqt-plugins = self.callPackage ./jsk-rqt-plugins {};
-
- jsk-rviz-plugins = self.callPackage ./jsk-rviz-plugins {};
 
  jsk-teleop-joy = self.callPackage ./jsk-teleop-joy {};
 
@@ -1925,6 +1923,8 @@ self: super: {
  libphidget21 = self.callPackage ./libphidget21 {};
 
  libphidgets = self.callPackage ./libphidgets {};
+
+ libpointmatcher = self.callPackage ./libpointmatcher {};
 
  libqt-concurrent = self.callPackage ./libqt-concurrent {};
 
@@ -3720,6 +3720,8 @@ self: super: {
 
  rslidar-pointcloud = self.callPackage ./rslidar-pointcloud {};
 
+ rslidar-sdk = self.callPackage ./rslidar-sdk {};
+
  rsm-additions = self.callPackage ./rsm-additions {};
 
  rsm-core = self.callPackage ./rsm-core {};
@@ -4101,6 +4103,8 @@ self: super: {
  timestamp-tools = self.callPackage ./timestamp-tools {};
 
  topic-tools = self.callPackage ./topic-tools {};
+
+ tork-moveit-tutorial = self.callPackage ./tork-moveit-tutorial {};
 
  towr = self.callPackage ./towr {};
 

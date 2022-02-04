@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-leo-msgs";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/noetic/leo_msgs/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "c76b8fb7f0a394325ecdb8dbd0a260a065872389b7d1f89127ebc692c96724f1";
+    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/noetic/leo_msgs/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "0e823c87c206d5bd3f169b8032b0458dd2fb8a95e7f24d4bc5519f00b337afad";
   };
 
   buildType = "catkin";

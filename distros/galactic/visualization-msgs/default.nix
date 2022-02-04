@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-visualization-msgs";
-  version = "2.2.3-r1";
+  version = "2.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/galactic/visualization_msgs/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "6f75b46f14a1c4cff806bb0207b7fd37dc74f8f5471e03625ee26eb179f30399";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/galactic/visualization_msgs/2.2.4-1.tar.gz";
+    name = "2.2.4-1.tar.gz";
+    sha256 = "a5aae2c521469572f63d364d10687e978fbe167161ab419dcca89612d488d932";
   };
 
   buildType = "ament_cmake";

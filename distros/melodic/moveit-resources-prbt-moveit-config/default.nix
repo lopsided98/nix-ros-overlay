@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, moveit-resources-prbt-ikfast-manipulator-plugin, moveit-resources-prbt-support, robot-state-publisher, rviz, xacro }:
 buildRosPackage {
   pname = "ros-melodic-moveit-resources-prbt-moveit-config";
-  version = "0.7.3-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/melodic/moveit_resources_prbt_moveit_config/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "cc1e2a2f1fef9e0a366b65158d0687aa47e40d4e24c50a1f19be9fd5b5c46dc1";
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/melodic/moveit_resources_prbt_moveit_config/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "6490af49b68db504222c288e8030b21812161ba60eb3523149adea6d9919386d";
   };
 
   buildType = "catkin";

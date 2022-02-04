@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-commander, moveit-core, moveit-msgs, tf2-eigen }:
 buildRosPackage {
   pname = "ros-noetic-pilz-industrial-motion-planner-testutils";
-  version = "1.1.7-r1";
+  version = "1.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/pilz_industrial_motion_planner_testutils/1.1.7-1.tar.gz";
-    name = "1.1.7-1.tar.gz";
-    sha256 = "a5f6864a15a333ebe017326d21f39bfb6dc23a66a27c4a7acf599d9e6549d299";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/pilz_industrial_motion_planner_testutils/1.1.8-1.tar.gz";
+    name = "1.1.8-1.tar.gz";
+    sha256 = "2c735dd904725db7a446855546c12cb4a6c08eccf463016127c82b564d92158f";
   };
 
   buildType = "catkin";

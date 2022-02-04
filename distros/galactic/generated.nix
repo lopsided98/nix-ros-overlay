@@ -154,6 +154,8 @@ self: super: {
 
  aws-robomaker-small-warehouse-world = self.callPackage ./aws-robomaker-small-warehouse-world {};
 
+ azure-iot-sdk-c = self.callPackage ./azure-iot-sdk-c {};
+
  backward-ros = self.callPackage ./backward-ros {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
@@ -213,6 +215,8 @@ self: super: {
  controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
 
  costmap-queue = self.callPackage ./costmap-queue {};
+
+ cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
 
@@ -480,6 +484,8 @@ self: super: {
 
  launch = self.callPackage ./launch {};
 
+ launch-param-builder = self.callPackage ./launch-param-builder {};
+
  launch-ros = self.callPackage ./launch-ros {};
 
  launch-system-modes = self.callPackage ./launch-system-modes {};
@@ -505,6 +511,8 @@ self: super: {
  libnabo = self.callPackage ./libnabo {};
 
  libphidget22 = self.callPackage ./libphidget22 {};
+
+ libpointmatcher = self.callPackage ./libpointmatcher {};
 
  librealsense2 = self.callPackage ./librealsense2 {};
 
@@ -756,8 +764,6 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
- openvslam = self.callPackage ./openvslam {};
-
  orocos-kdl = self.callPackage ./orocos-kdl {};
 
  osqp-vendor = self.callPackage ./osqp-vendor {};
@@ -948,6 +954,10 @@ self: super: {
 
  rcss3d-agent = self.callPackage ./rcss3d-agent {};
 
+ rcss3d-agent-basic = self.callPackage ./rcss3d-agent-basic {};
+
+ rcss3d-agent-msgs = self.callPackage ./rcss3d-agent-msgs {};
+
  rcutils = self.callPackage ./rcutils {};
 
  realsense2-camera = self.callPackage ./realsense2-camera {};
@@ -1134,6 +1144,8 @@ self: super: {
 
  ros-ign-interfaces = self.callPackage ./ros-ign-interfaces {};
 
+ ros-image-to-qimage = self.callPackage ./ros-image-to-qimage {};
+
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
@@ -1244,6 +1256,10 @@ self: super: {
 
  rqt-gui-py = self.callPackage ./rqt-gui-py {};
 
+ rqt-image-overlay = self.callPackage ./rqt-image-overlay {};
+
+ rqt-image-overlay-layer = self.callPackage ./rqt-image-overlay-layer {};
+
  rqt-image-view = self.callPackage ./rqt-image-view {};
 
  rqt-moveit = self.callPackage ./rqt-moveit {};
@@ -1279,6 +1295,10 @@ self: super: {
  rqt-top = self.callPackage ./rqt-top {};
 
  rqt-topic = self.callPackage ./rqt-topic {};
+
+ rslidar-msg = self.callPackage ./rslidar-msg {};
+
+ rslidar-sdk = self.callPackage ./rslidar-sdk {};
 
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
@@ -1346,7 +1366,7 @@ self: super: {
 
  soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
 
- soccer-vision-msgs = self.callPackage ./soccer-vision-msgs {};
+ soccer-object-msgs = self.callPackage ./soccer-object-msgs {};
 
  sol-vendor = self.callPackage ./sol-vendor {};
 
@@ -1417,6 +1437,8 @@ self: super: {
  teleop-twist-joy = self.callPackage ./teleop-twist-joy {};
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
+
+ tensorrt-cmake-module = self.callPackage ./tensorrt-cmake-module {};
 
  test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
 
