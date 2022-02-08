@@ -458,6 +458,18 @@ let
       CXXFLAGS = CXXFLAGS + " -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H";
     });
 
+    # Fix compatibility with yaml-cpp 0.7.0
+    # https://github.com/swri-robotics/marti_common/pull/648
+    swri-yaml-util = rosSuper.swri-yaml-util.overrideAttrs ({
+      patches ? [], ...
+    }: {
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/lopsided98/marti_common/commit/674b2d22e5c4e4950ffcaabaef09cf9ba2111557.patch";
+        stripLen = 1;
+        sha256 = "sha256-HXdDCd9Op/WvYEpzAbVBdhyICobl6KKg9Smt1sewokw=";
+      }) ];
+    });
+
     tf = patchBoostSignals rosSuper.tf;
 
     tf2 = patchBoostSignals rosSuper.tf2;
