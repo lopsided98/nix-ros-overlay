@@ -452,9 +452,20 @@ let
       '';
     });
 
-    swri-transform-util = rosSuper.swri-transform-util.overrideAttrs ({
-      CXXFLAGS ? "", ...
+    swri-transform-util = (rosSuper.swri-transform-util.override {
+      # PROJ 8 finally removed the deprecated proj_api.h header
+      proj = self.proj_7;
+    }).overrideAttrs ({
+      patches ? [], CXXFLAGS ? "", ...
     }: {
+      # Use CMake to find PROJ
+      # https://github.com/swri-robotics/marti_common/pull/649
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/swri-robotics/marti_common/commit/6f8dbca5d4adaca84823249fde8bec3360ab1fb8.patch";
+        stripLen = 1;
+        sha256 = "sha256-kO4U26RttaC5mEhsCqtZV5rUlS0QIaA6I7Bhxlnb8d8=";
+      }) ];
+
       CXXFLAGS = CXXFLAGS + " -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H";
     });
 
