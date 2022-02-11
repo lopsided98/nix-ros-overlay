@@ -548,9 +548,13 @@ self: super: {
 
  dingo-desktop = self.callPackage ./dingo-desktop {};
 
+ dingo-gazebo = self.callPackage ./dingo-gazebo {};
+
  dingo-msgs = self.callPackage ./dingo-msgs {};
 
  dingo-navigation = self.callPackage ./dingo-navigation {};
+
+ dingo-simulator = self.callPackage ./dingo-simulator {};
 
  dingo-viz = self.callPackage ./dingo-viz {};
 

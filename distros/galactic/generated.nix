@@ -590,6 +590,8 @@ self: super: {
 
  moveit-common = self.callPackage ./moveit-common {};
 
+ moveit-configs-utils = self.callPackage ./moveit-configs-utils {};
+
  moveit-core = self.callPackage ./moveit-core {};
 
  moveit-hybrid-planning = self.callPackage ./moveit-hybrid-planning {};
@@ -1559,6 +1561,8 @@ self: super: {
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
+
+ ur-client-library = self.callPackage ./ur-client-library {};
 
  urdf = self.callPackage ./urdf {};
 

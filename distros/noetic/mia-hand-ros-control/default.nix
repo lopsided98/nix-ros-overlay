@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, control-msgs, control-toolbox, controller-manager, hardware-interface, joint-limits-interface, mia-hand-description, mia-hand-driver, pluginlib, ros-controllers, roscpp, rqt-joint-trajectory-controller, trajectory-msgs, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-noetic-mia-hand-ros-control";
-  version = "1.0.0-r13";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/Prensilia-srl/mia_hand_ros_pkgs-release/archive/release/noetic/mia_hand_ros_control/1.0.0-13.tar.gz";
-    name = "1.0.0-13.tar.gz";
-    sha256 = "3bb26cf31e64e8b7c4aa3e95787dbd80788af7266903ac712b79eec0363469cb";
+    url = "https://github.com/Prensilia-srl/mia_hand_ros_pkgs-release/archive/release/noetic/mia_hand_ros_control/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "76c42b9e8248068f77ce1dd77ff21b7071d88dfc68f9d1358edc2bc8a4ce76eb";
   };
 
   buildType = "catkin";

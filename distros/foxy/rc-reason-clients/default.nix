@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, python3Packages, pythonPackages, rc-reason-msgs, rclpy, ros2pkg, tf2-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rc-reason-clients";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_reason_clients-release/archive/release/foxy/rc_reason_clients/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "ad033a9a070702944c878c8dc5eb20c8c2f958321bb1516728edb3d808b18d42";
+    url = "https://github.com/roboception-gbp/rc_reason_clients-release/archive/release/foxy/rc_reason_clients/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "9f6fc761497712168142296354efd49a180780f3d80f72e65996a016cdcdf672";
   };
 
   buildType = "ament_python";

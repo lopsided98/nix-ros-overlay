@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3Packages, qt5 }:
 buildRosPackage {
   pname = "ros-foxy-python-qt-binding";
-  version = "1.0.5-r1";
+  version = "1.0.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/foxy/python_qt_binding/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "f914e6d0b4c6c2e79ce000cd4d98117f08567a781e1a542d9d551f2c455f8132";
+    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/foxy/python_qt_binding/1.0.6-2.tar.gz";
+    name = "1.0.6-2.tar.gz";
+    sha256 = "677afe0d5db221190285bf5a62827ce95442d3d2b2bdbeb296c3bd512748feab";
   };
 
   buildType = "ament_cmake";

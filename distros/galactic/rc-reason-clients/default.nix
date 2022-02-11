@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, python3Packages, pythonPackages, rc-reason-msgs, rclpy, ros2pkg, tf2-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-galactic-rc-reason-clients";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_reason_clients-release/archive/release/galactic/rc_reason_clients/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "d2e59341adf62d93e74e63fb8aecb2514d6b7da07f7c6c327a7fe91c8ec1079e";
+    url = "https://github.com/roboception-gbp/rc_reason_clients-release/archive/release/galactic/rc_reason_clients/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "3825ba19925bfd8373d590e7d9f9954bb1b0d9bd0d5acd9addd07166ba8add02";
   };
 
   buildType = "ament_python";

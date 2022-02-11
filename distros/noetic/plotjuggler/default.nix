@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, binutils, boost, catkin, cppzmq, qt5, roslib }:
 buildRosPackage {
   pname = "ros-noetic-plotjuggler";
-  version = "3.4.0-r1";
+  version = "3.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/noetic/plotjuggler/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "0bf81812bb0126f18b7b63246cbb7eab86fbef63896dba3eae517126f0460a85";
+    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/noetic/plotjuggler/3.4.1-1.tar.gz";
+    name = "3.4.1-1.tar.gz";
+    sha256 = "8e83d749e670ab6ea129512f7470856a5ebc3c7a424ded9b783e8e6d16689198";
   };
 
   buildType = "catkin";

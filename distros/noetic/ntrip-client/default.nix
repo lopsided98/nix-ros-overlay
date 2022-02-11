@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mavros-msgs, nmea-msgs, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-ntrip-client";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/ntrip_client-release/archive/release/noetic/ntrip_client/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "f4de7fad28471c2f4d1307e157b3cf4ff6f953133f241ac801b5b5a2e221fb81";
+    url = "https://github.com/LORD-MicroStrain/ntrip_client-release/archive/release/noetic/ntrip_client/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "cf1cf0459dbbd26305989ef21308f7a52c57e6842ab07e651530c8096148fefc";
   };
 
   buildType = "catkin";

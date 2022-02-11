@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, diagnostic-updater, dynamic-reconfigure, geometry-msgs, image-transport, message-generation, message-runtime, nav-msgs, nodelet, protobuf, rc-common-msgs, rc-dynamics-api, rc-genicam-api, roscpp, sensor-msgs, stereo-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rc-visard-driver";
-  version = "3.2.4-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_visard_driver/3.2.4-1.tar.gz";
-    name = "3.2.4-1.tar.gz";
-    sha256 = "6a0ca88bd27602bdf4f5fff8470f91f1bcf0fa6479aca677e4c41d9faac380b4";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_visard_driver/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "6dbe6edfa1132c3aade3347f98a0dd430bed1a822c611e91e2c3468f9c848207";
   };
 
   buildType = "catkin";

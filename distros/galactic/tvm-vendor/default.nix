@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/autowarefoundation/tvm_vendor-release/archive/release/galactic/tvm_vendor/0.7.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/tvm_vendor-release/archive/release/galactic/tvm_vendor/0.7.3-1.tar.gz";
     name = "0.7.3-1.tar.gz";
     sha256 = "b0fb82c63fe0dcf47a26f531e4bf88fbbbb1b03b2af5c7b5c5e193309678c4bc";
   };

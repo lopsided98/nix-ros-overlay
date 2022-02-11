@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp }:
 buildRosPackage {
   pname = "ros-foxy-rviz-assimp-vendor";
-  version = "8.2.5-r1";
+  version = "8.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz_assimp_vendor/8.2.5-1.tar.gz";
-    name = "8.2.5-1.tar.gz";
-    sha256 = "3cb31ef6684f4871f9eac4e2fb23dd7fe3690da73f0cf206659a473173399fad";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz_assimp_vendor/8.2.6-1.tar.gz";
+    name = "8.2.6-1.tar.gz";
+    sha256 = "aa2dc94b3a6787f6e0480fee0b1be18e50200e565e0a01b4ae9fda0547188961";
   };
 
   buildType = "ament_cmake";
