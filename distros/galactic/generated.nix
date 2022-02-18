@@ -394,6 +394,8 @@ self: super: {
 
  gripper-controllers = self.callPackage ./gripper-controllers {};
 
+ gscam = self.callPackage ./gscam {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
@@ -590,6 +592,8 @@ self: super: {
 
  moveit-common = self.callPackage ./moveit-common {};
 
+ moveit-configs-utils = self.callPackage ./moveit-configs-utils {};
+
  moveit-core = self.callPackage ./moveit-core {};
 
  moveit-hybrid-planning = self.callPackage ./moveit-hybrid-planning {};
@@ -661,8 +665,6 @@ self: super: {
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multires-image = self.callPackage ./multires-image {};
-
- nao-button-sim = self.callPackage ./nao-button-sim {};
 
  nao-command-msgs = self.callPackage ./nao-command-msgs {};
 
@@ -1559,6 +1561,8 @@ self: super: {
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
+
+ ur-client-library = self.callPackage ./ur-client-library {};
 
  urdf = self.callPackage ./urdf {};
 

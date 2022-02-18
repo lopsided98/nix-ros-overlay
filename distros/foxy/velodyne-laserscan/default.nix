@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-velodyne-laserscan";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/foxy/velodyne_laserscan/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "1384f7a87a0541b0300293ca5c8a46758f57451f96f5560adf04eaf483f9fd64";
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/foxy/velodyne_laserscan/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "6c8e5434b0d44c53c2239ec6d48f612e526e073d4ce925189c75036ba50290af";
   };
 
   buildType = "ament_cmake";

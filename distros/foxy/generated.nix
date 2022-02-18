@@ -156,6 +156,8 @@ self: super: {
 
  backward-ros = self.callPackage ./backward-ros {};
 
+ bag-recorder-nodes = self.callPackage ./bag-recorder-nodes {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -241,6 +243,12 @@ self: super: {
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
+
+ dataspeed-can = self.callPackage ./dataspeed-can {};
+
+ dataspeed-can-msg-filters = self.callPackage ./dataspeed-can-msg-filters {};
+
+ dataspeed-can-usb = self.callPackage ./dataspeed-can-usb {};
 
  delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
 
@@ -510,6 +518,8 @@ self: super: {
 
  gripper-controllers = self.callPackage ./gripper-controllers {};
 
+ gscam = self.callPackage ./gscam {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
@@ -651,6 +661,8 @@ self: super: {
  logging-demo = self.callPackage ./logging-demo {};
 
  lua-vendor = self.callPackage ./lua-vendor {};
+
+ lusb = self.callPackage ./lusb {};
 
  map-msgs = self.callPackage ./map-msgs {};
 
@@ -1229,6 +1241,8 @@ self: super: {
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
+
+ robot-upstart = self.callPackage ./robot-upstart {};
 
  ros1-bridge = self.callPackage ./ros1-bridge {};
 

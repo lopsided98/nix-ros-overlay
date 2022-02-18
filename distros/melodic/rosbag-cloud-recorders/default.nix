@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, aws-common, aws-ros1-common, boost, catkin, file-uploader-msgs, gtest, recorder-msgs, rosbag-storage, roscpp, roslint, rostest, topic-tools, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-rosbag-cloud-recorders";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/rosbag_uploader-release/archive/release/melodic/rosbag_cloud_recorders/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "7558cdb87a1dc7a56a0dc4eaeedc550724cdb293a0b56a7e5a44a707adcb8e9a";
+    url = "https://github.com/aws-gbp/rosbag_uploader-release/archive/release/melodic/rosbag_cloud_recorders/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "35540e67e87bbd85c8311535c8b585de9736b7fb2e640e7b45dcd6d802de098c";
   };
 
   buildType = "catkin";

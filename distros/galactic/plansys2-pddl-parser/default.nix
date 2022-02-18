@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, plansys2-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-plansys2-pddl-parser";
-  version = "2.0.0-r3";
+  version = "2.0.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_pddl_parser/2.0.0-3.tar.gz";
-    name = "2.0.0-3.tar.gz";
-    sha256 = "5b8173f01fbf026a608db04c72fb166a4028bada383c4ef4f961c3761722df2d";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_pddl_parser/2.0.1-3.tar.gz";
+    name = "2.0.1-3.tar.gz";
+    sha256 = "3441ffa0121b3d29187032ae8c8001b898a81e6d4ffec30667c8acf7a8185705";
   };
 
   buildType = "ament_cmake";

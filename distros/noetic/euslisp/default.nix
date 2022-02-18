@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, libGL, libGLU, libjpeg, libpng, mk, postgresql, xorg }:
 buildRosPackage {
   pname = "ros-noetic-euslisp";
-  version = "9.28.0-r1";
+  version = "9.29.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/euslisp-release/archive/release/noetic/euslisp/9.28.0-1.tar.gz";
-    name = "9.28.0-1.tar.gz";
-    sha256 = "e96dd4d4acd2d76c5b1fa660982b54e0e06efd9746a6f7ce7909dc128abccd95";
+    url = "https://github.com/tork-a/euslisp-release/archive/release/noetic/euslisp/9.29.0-1.tar.gz";
+    name = "9.29.0-1.tar.gz";
+    sha256 = "ecbf0b5ab05617eac190bb25eaf140fe576d01de47e779b5ad9c2a911d800693";
   };
 
   buildType = "cmake";

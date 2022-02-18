@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-melodic-kinesis-video-msgs";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/kinesis_video_streamer-release/archive/release/melodic/kinesis_video_msgs/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "d3116f1e9c9aea3eeda1de9c5a49056834699356ebdf058f713112425306ca09";
+    url = "https://github.com/aws-gbp/kinesis_video_streamer-release/archive/release/melodic/kinesis_video_msgs/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "e857e438116f810e6523c5124130522aae0efb005c5eb615943d0a129554bdaf";
   };
 
   buildType = "catkin";

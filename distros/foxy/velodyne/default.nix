@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, velodyne-driver, velodyne-laserscan, velodyne-msgs, velodyne-pointcloud }:
 buildRosPackage {
   pname = "ros-foxy-velodyne";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/foxy/velodyne/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "6af955d9a5f27ae867bd15ecdbe93f53a6ec881bba3b80c06e5f31e747641c15";
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/foxy/velodyne/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "7b8eea45da04784f481634bfeb2fd0c41990b24a69ea4ca412b329d2a90b187e";
   };
 
   buildType = "ament_cmake";

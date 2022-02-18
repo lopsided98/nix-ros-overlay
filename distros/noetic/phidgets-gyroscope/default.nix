@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, phidgets-api, roscpp, roslaunch, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-phidgets-gyroscope";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_gyroscope/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "a61696b21a19d3e04ca7c11168f03833ef8876e8325ab93bcb51a18c4d511777";
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_gyroscope/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "9fd0c6d3ec73a911dd38644bf60c1d00a57f8b28a7d0d33b461a0433effa7eb9";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mir-actions, mir-description, mir-driver, mir-dwb-critics, mir-gazebo, mir-msgs, mir-navigation, sdc21x0 }:
 buildRosPackage {
   pname = "ros-noetic-mir-robot";
-  version = "1.1.4-r1";
+  version = "1.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_robot/1.1.4-1.tar.gz";
-    name = "1.1.4-1.tar.gz";
-    sha256 = "1d42da1666a62d58ed6b61b4f50f476d1a82d4ab409681f963f0bf1e4d7b132b";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_robot/1.1.5-1.tar.gz";
+    name = "1.1.5-1.tar.gz";
+    sha256 = "1ac77b5e6f4c9ccbceca3a88bd8571865b9032029b5d817d449de91022e28257";
   };
 
   buildType = "catkin";

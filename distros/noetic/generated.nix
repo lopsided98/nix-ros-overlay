@@ -548,9 +548,13 @@ self: super: {
 
  dingo-desktop = self.callPackage ./dingo-desktop {};
 
+ dingo-gazebo = self.callPackage ./dingo-gazebo {};
+
  dingo-msgs = self.callPackage ./dingo-msgs {};
 
  dingo-navigation = self.callPackage ./dingo-navigation {};
+
+ dingo-simulator = self.callPackage ./dingo-simulator {};
 
  dingo-viz = self.callPackage ./dingo-viz {};
 
@@ -1448,6 +1452,8 @@ self: super: {
 
  lockfree = self.callPackage ./lockfree {};
 
+ lockmount-description = self.callPackage ./lockmount-description {};
+
  locomotor = self.callPackage ./locomotor {};
 
  locomotor-msgs = self.callPackage ./locomotor-msgs {};
@@ -2223,8 +2229,6 @@ self: super: {
  rc-reason-clients = self.callPackage ./rc-reason-clients {};
 
  rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
-
- rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
 
  rc-silhouettematch-client = self.callPackage ./rc-silhouettematch-client {};
 

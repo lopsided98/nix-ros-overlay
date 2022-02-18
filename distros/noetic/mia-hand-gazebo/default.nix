@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, control-toolbox, controller-manager, gazebo-ros-control, hardware-interface, joint-limits-interface, mia-hand-description, mia-hand-ros-control, pluginlib, roscpp, std-msgs, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-noetic-mia-hand-gazebo";
-  version = "1.0.0-r13";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/Prensilia-srl/mia_hand_ros_pkgs-release/archive/release/noetic/mia_hand_gazebo/1.0.0-13.tar.gz";
-    name = "1.0.0-13.tar.gz";
-    sha256 = "d6c0d9e445c9924203c1d902c8e1dd4b548e5a09b7d0c1b289a65bfa792894f7";
+    url = "https://github.com/Prensilia-srl/mia_hand_ros_pkgs-release/archive/release/noetic/mia_hand_gazebo/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "65a76cc981c7e7283376aef273ece732f8be91c6a9e9da27ea4be9b0d3d3ebb4";
   };
 
   buildType = "catkin";

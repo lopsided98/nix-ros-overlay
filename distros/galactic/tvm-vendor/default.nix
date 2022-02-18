@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, libxml2, openblas, ros-environment, spirv-headers, spirv-tools, vulkan-loader }:
 buildRosPackage {
   pname = "ros-galactic-tvm-vendor";
-  version = "0.7.3-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/autowarefoundation/tvm_vendor-release/archive/release/galactic/tvm_vendor/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "b0fb82c63fe0dcf47a26f531e4bf88fbbbb1b03b2af5c7b5c5e193309678c4bc";
+    url = "https://github.com/ros2-gbp/tvm_vendor-release/archive/release/galactic/tvm_vendor/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "b42ffb4f9599de069dba6659c059602069adbe36ac4a1ac356b1f013120328be";
   };
 
   buildType = "catkin";

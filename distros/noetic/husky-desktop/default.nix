@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, husky-msgs, husky-viz }:
 buildRosPackage {
   pname = "ros-noetic-husky-desktop";
-  version = "0.6.1-r1";
+  version = "0.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_desktop/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "c10bf434897ac56ce4f78c89e117d94e61993916331f04d6f47d56c1bc90bb80";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_desktop/0.6.2-1.tar.gz";
+    name = "0.6.2-1.tar.gz";
+    sha256 = "d9eb767589795f5e848b0cef73f96f45c9ff066439626686f53103f685045749";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, controller-manager, moveit-common, moveit-core, moveit-msgs, moveit-planners-ompl, moveit-resources-panda-moveit-config, moveit-ros-planning, moveit-ros-planning-interface, pluginlib, rclcpp, rclcpp-action, rclcpp-components, robot-state-publisher, ros-testing, rviz2, std-msgs, std-srvs, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-galactic-moveit-hybrid-planning";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_hybrid_planning/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "c3b8e4f9be962bc6321ceda50fad0f728b6b6606fe58591e82a03a175c52a23b";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_hybrid_planning/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "706da66907af5351fc015130d026c7e24da72d64698971f3f6592d592507d371";
   };
 
   buildType = "ament_cmake";

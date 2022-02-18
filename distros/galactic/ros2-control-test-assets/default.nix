@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-galactic-ros2-control-test-assets";
-  version = "1.3.0-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/ros2_control_test_assets/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "d69ccc2ff88c42f88e3338efe9d139183592bcd61a5105bc11af222a3c037784";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/ros2_control_test_assets/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "fe146bb001f59c8bf9f00d0020476e734a302a0553712c9d033768e3ec96d42e";
   };
 
   buildType = "ament_cmake";

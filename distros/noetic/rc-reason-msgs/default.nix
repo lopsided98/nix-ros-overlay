@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, rc-common-msgs, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rc-reason-msgs";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_reason_clients_ros-release/archive/release/noetic/rc_reason_msgs/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "ba2c6748e5e0f8b2a0660a91627b99b7323acfc906771fa76426a17545047ba5";
+    url = "https://github.com/roboception-gbp/rc_reason_clients_ros-release/archive/release/noetic/rc_reason_msgs/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "50a7fbb919cef19e7fc1136fadb1379b05b32ead2bc6eb11c88a5bbfe8dfc5d5";
   };
 
   buildType = "catkin";

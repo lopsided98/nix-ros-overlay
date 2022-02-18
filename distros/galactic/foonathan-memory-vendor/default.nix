@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-xmllint, cmake, git }:
 buildRosPackage {
   pname = "ros-galactic-foonathan-memory-vendor";
-  version = "1.0.0-r3";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/foonathan_memory_vendor-release/archive/release/galactic/foonathan_memory_vendor/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "624c8dff568b167d7c4707efc5b172312349947241b0aab663cf0ee7be365ad9";
+    url = "https://github.com/ros2-gbp/foonathan_memory_vendor-release/archive/release/galactic/foonathan_memory_vendor/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "753733941d76b2f208aaf6418f9a4fb70efbec005c2c2ae7b4045a7da98bce92";
   };
 
   buildType = "cmake";
