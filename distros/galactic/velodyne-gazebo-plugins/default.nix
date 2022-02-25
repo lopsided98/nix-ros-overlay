@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/galactic/velodyne_gazebo_plugins/2.0.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/velodyne_simulator-release/archive/release/galactic/velodyne_gazebo_plugins/2.0.2-1.tar.gz";
     name = "2.0.2-1.tar.gz";
     sha256 = "f111781e9bd1aa946f9ea2c1ab0fcc5a1e7f2a760e4e68a6ab5885e7f43b1c43";
   };

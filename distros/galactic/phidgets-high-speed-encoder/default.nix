@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, phidgets-msgs, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-galactic-phidgets-high-speed-encoder";
-  version = "2.2.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/galactic/phidgets_high_speed_encoder/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "b34fb8948fca836dec78b1b7ef46011e32e168ac7e0ad8cfe7fbff0581840a63";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/galactic/phidgets_high_speed_encoder/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "3beb416be7b352d97a470388d8c2c4e5f20633bc14b883a40bd042d64378f21d";
   };
 
   buildType = "ament_cmake";

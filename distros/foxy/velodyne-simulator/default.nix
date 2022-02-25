@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/foxy/velodyne_simulator/2.0.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/velodyne_simulator-release/archive/release/foxy/velodyne_simulator/2.0.2-1.tar.gz";
     name = "2.0.2-1.tar.gz";
     sha256 = "5a795530db06dd6f71d4cf29019e8051efc275eb67b6ea6e540e5abd88f6052a";
   };

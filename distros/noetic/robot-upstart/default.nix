@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, daemontools, nettools, roslaunch, roslint, rosunit, util-linux, xacro }:
 buildRosPackage {
   pname = "ros-noetic-robot-upstart";
-  version = "0.4.1-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/noetic/robot_upstart/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "148590e64f794942f3942dfc780d193eaaca9529bc085cc9627c4859df8f65ee";
+    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/noetic/robot_upstart/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "3c22f90aa2a8fb62bfb8826fe47b3a3f10a58f3afa5012825e33272d21d5edb3";
   };
 
   buildType = "catkin";

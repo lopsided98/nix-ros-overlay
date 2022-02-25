@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, chomp-motion-planner, moveit-common, moveit-core, pluginlib }:
 buildRosPackage {
   pname = "ros-galactic-moveit-chomp-optimizer-adapter";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_chomp_optimizer_adapter/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "3fc5eaf64a6fa1a1137b61df4bf02ee021afc9b75b88adfd0036985e452ee3d3";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_chomp_optimizer_adapter/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "661a6686035bd43bdda5ee07430193872ceeee9922b4ef9a993ff6680b40eb38";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, pcl, pcl-msgs, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-pcl-conversions";
-  version = "1.7.3-r1";
+  version = "1.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/noetic/pcl_conversions/1.7.3-1.tar.gz";
-    name = "1.7.3-1.tar.gz";
-    sha256 = "d28ce7647f4e4360aa87d539c1dfeb5a6d17fda83b4093408c1666ba66a922bb";
+    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/noetic/pcl_conversions/1.7.4-1.tar.gz";
+    name = "1.7.4-1.tar.gz";
+    sha256 = "45306daa50a760bad09b95e2f544068caca7d0a872f4afca5d67237f2d44aa76";
   };
 
   buildType = "catkin";

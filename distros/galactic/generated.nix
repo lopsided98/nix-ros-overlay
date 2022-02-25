@@ -394,6 +394,8 @@ self: super: {
 
  gripper-controllers = self.callPackage ./gripper-controllers {};
 
+ gscam = self.callPackage ./gscam {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
@@ -409,6 +411,8 @@ self: super: {
  iceoryx-utils = self.callPackage ./iceoryx-utils {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
+
+ ign-ros2-control-demos = self.callPackage ./ign-ros2-control-demos {};
 
  image-common = self.callPackage ./image-common {};
 
@@ -589,6 +593,8 @@ self: super: {
  moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
 
  moveit-common = self.callPackage ./moveit-common {};
+
+ moveit-configs-utils = self.callPackage ./moveit-configs-utils {};
 
  moveit-core = self.callPackage ./moveit-core {};
 
@@ -1082,6 +1088,8 @@ self: super: {
 
  ros2-controllers = self.callPackage ./ros2-controllers {};
 
+ ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
+
  ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
@@ -1559,6 +1567,8 @@ self: super: {
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
+
+ ur-client-library = self.callPackage ./ur-client-library {};
 
  urdf = self.callPackage ./urdf {};
 

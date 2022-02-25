@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, phidgets-api, phidgets-msgs, roscpp, roslaunch, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-phidgets-analog-outputs";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_analog_outputs/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "7ed1418505107f24f34145f24f712f6eb56c287e5f68cf4e3ed23a331f0a11dd";
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_analog_outputs/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "e8cbb685f292ea3900eb38dcdee08dd34654608707c0492f73a314f82606825c";
   };
 
   buildType = "catkin";

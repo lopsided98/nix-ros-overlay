@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, libjpeg, liblapack, libpng, libv4l, libxml2, opencv3, xorg }:
 buildRosPackage {
   pname = "ros-galactic-visp";
-  version = "3.4.0-r2";
+  version = "3.5.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/lagadic/visp-release/archive/release/galactic/visp/3.4.0-2.tar.gz";
-    name = "3.4.0-2.tar.gz";
-    sha256 = "00a97b20710104bd70c17c4aec491a0511a3cd6e984e00a592baae8e28581406";
+    url = "https://github.com/lagadic/visp-release/archive/release/galactic/visp/3.5.0-3.tar.gz";
+    name = "3.5.0-3.tar.gz";
+    sha256 = "597822d5c324767ca87da01c15bd73dac45fb69dc79ddc19919f3e6c9a928a04";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, libGL, libGLU, libjpeg, libpng, mk, postgresql, xorg }:
 buildRosPackage {
   pname = "ros-melodic-euslisp";
-  version = "9.27.0-r1";
+  version = "9.29.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/euslisp-release/archive/release/melodic/euslisp/9.27.0-1.tar.gz";
-    name = "9.27.0-1.tar.gz";
-    sha256 = "6afe4048c28c7c5d1b94a85be4c774797eac4f43835fa20511e841eac47f5907";
+    url = "https://github.com/tork-a/euslisp-release/archive/release/melodic/euslisp/9.29.0-4.tar.gz";
+    name = "9.29.0-4.tar.gz";
+    sha256 = "9c7b800c4049a0597cb8aff7875fd7488f3a56682e5879965399cc10f3da8166";
   };
 
   buildType = "cmake";

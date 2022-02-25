@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, diagnostic-updater, dynamic-reconfigure, image-proc, image-transport, message-filters, nodelet, roscpp, sensor-msgs, std-msgs, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-noetic-avt-vimba-camera";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/avt_vimba_camera-release/archive/release/noetic/avt_vimba_camera/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "49dff7f903af47dab6e53a0fc001016c2254a52a9eff3fd170189ed6584bc692";
+    url = "https://github.com/astuff/avt_vimba_camera-release/archive/release/noetic/avt_vimba_camera/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "0bc50924547603cf97f41dfb59ee695582d035802a8e6c3b5bcc9e52a2f1ecce";
   };
 
   buildType = "catkin";

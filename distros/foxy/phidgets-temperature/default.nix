@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-phidgets-temperature";
-  version = "2.0.2-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/foxy/phidgets_temperature/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "9b7646ba800f43e078678b7aaa5cf4df7d0dca5706c31d9d3f1f1751e088cf24";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/foxy/phidgets_temperature/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "4eca76e80249050cc615fc6285a1601a8b5cabda73b1170a6b916e1de74615fe";
   };
 
   buildType = "ament_cmake";

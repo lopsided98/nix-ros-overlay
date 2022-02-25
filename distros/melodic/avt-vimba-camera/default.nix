@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, diagnostic-updater, dynamic-reconfigure, image-proc, image-transport, message-filters, nodelet, roscpp, sensor-msgs, std-msgs, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-melodic-avt-vimba-camera";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/avt_vimba_camera-release/archive/release/melodic/avt_vimba_camera/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "13e807526426a15d481207dd213bfeb3683ead4e188353da61ead6b0f70a9a3d";
+    url = "https://github.com/astuff/avt_vimba_camera-release/archive/release/melodic/avt_vimba_camera/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "3e91999ce02aa63045feae3ec63bbf82f1badc08c3553ded70decc109967548d";
   };
 
   buildType = "catkin";

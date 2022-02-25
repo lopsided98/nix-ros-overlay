@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-velodyne-msgs";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/foxy/velodyne_msgs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "ca34811a64993988832d77a9dfed728a9d6c6785e10d90820edae0dd700eab41";
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/foxy/velodyne_msgs/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "0e1988c6ca72a6ba237845af37bfbd41d46f10a0404ebf2c68202524d46ef857";
   };
 
   buildType = "ament_cmake";

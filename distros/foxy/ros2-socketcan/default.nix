@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, can-msgs, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-foxy-ros2-socketcan";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/autowarefoundation/ros2_socketcan-release/archive/release/foxy/ros2_socketcan/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "da4596e101c9cc6bb3096723c50152e3997d85c664df4380296ec1a78bade10f";
+    url = "https://github.com/ros2-gbp/ros2_socketcan-release/archive/release/foxy/ros2_socketcan/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "0e1d360e58b44ddfa46158a568d646042a0738513f9e42e801de5f73a3eabecb";
   };
 
   buildType = "ament_cmake";

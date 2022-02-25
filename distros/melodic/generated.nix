@@ -3136,8 +3136,6 @@ self: super: {
 
  rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
 
- rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
-
  rc-silhouettematch-client = self.callPackage ./rc-silhouettematch-client {};
 
  rc-tagdetect-client = self.callPackage ./rc-tagdetect-client {};

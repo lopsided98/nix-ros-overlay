@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-noetic-mir-msgs";
-  version = "1.1.4-r1";
+  version = "1.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_msgs/1.1.4-1.tar.gz";
-    name = "1.1.4-1.tar.gz";
-    sha256 = "9207bda20d2d6f5cc4edcf04c947f79cb6ce8497402b58178c7b86a6a3498959";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_msgs/1.1.5-1.tar.gz";
+    name = "1.1.5-1.tar.gz";
+    sha256 = "86904b4498b5e34ba6f5c45a8d42a33a01ca6b635bf5ded2ff1793912c617992";
   };
 
   buildType = "catkin";

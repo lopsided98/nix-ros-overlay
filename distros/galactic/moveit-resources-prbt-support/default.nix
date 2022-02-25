@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, xacro }:
 buildRosPackage {
   pname = "ros-galactic-moveit-resources-prbt-support";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_resources_prbt_support/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "14bd279e06cca24ed2376ff454a67c7a1cd5847c357e4ed925b0c416984b46df";
+    url = "https://github.com/moveit/moveit2-release/archive/release/galactic/moveit_resources_prbt_support/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "f6b01994d43bd6caa7ecc5b7d0ca5c52cebdcc7d9cd9bbdb112554ca9244889e";
   };
 
   buildType = "ament_cmake";

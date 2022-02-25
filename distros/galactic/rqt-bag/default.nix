@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, rclpy, rosbag2-py, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-galactic-rqt-bag";
-  version = "1.1.1-r2";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_bag-release/archive/release/galactic/rqt_bag/1.1.1-2.tar.gz";
-    name = "1.1.1-2.tar.gz";
-    sha256 = "3492f0a933c5187de62d33f8d48a2f6129c3fd580db4e29bb85d9fa15fa0c4ca";
+    url = "https://github.com/ros2-gbp/rqt_bag-release/archive/release/galactic/rqt_bag/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "6cfc07c51560bb4ac31b3f2cca712901ff9791c635f637d5e1468a3b88940b12";
   };
 
   buildType = "ament_python";

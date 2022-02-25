@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-novatel-oem7-msgs";
-  version = "2.2.0-r1";
+  version = "3.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/noetic/novatel_oem7_msgs/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "cc252d4e31a3a573438b743f5805bdec557d32cde5648aa0a1d20a0f1b84ac93";
+    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/noetic/novatel_oem7_msgs/3.0.0-2.tar.gz";
+    name = "3.0.0-2.tar.gz";
+    sha256 = "529b477319363b059a756ba5890176aa9339129e3fe9691d30a4aef7b58cc24f";
   };
 
   buildType = "catkin";
