@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, geometry-msgs, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-galactic-force-torque-sensor-broadcaster";
-  version = "1.3.0-r2";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/force_torque_sensor_broadcaster/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "35777954f04b3a0aa75bea1f3fef7f408870c3abef6db20e69b0f25dbfa014f5";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/force_torque_sensor_broadcaster/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "2e9cf0ad9dffac4b96f7314948f6e4a3f140aabde97a9949118aa476143815ca";
   };
 
   buildType = "ament_cmake";

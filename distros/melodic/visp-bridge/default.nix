@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-calibration-parsers, catkin, geometry-msgs, roscpp, sensor-msgs, std-msgs, visp }:
 buildRosPackage {
   pname = "ros-melodic-visp-bridge";
-  version = "0.12.0-r1";
+  version = "0.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_bridge/0.12.0-1.tar.gz";
-    name = "0.12.0-1.tar.gz";
-    sha256 = "b4db42aa2bfba345b688738c06e27cc34c537e4100b2a88265e459db153229c2";
+    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_bridge/0.13.0-1.tar.gz";
+    name = "0.13.0-1.tar.gz";
+    sha256 = "c0d87800295906d6a4c37792309e436c87bbdefdbe9747328a98a0752bb7b80a";
   };
 
   buildType = "catkin";

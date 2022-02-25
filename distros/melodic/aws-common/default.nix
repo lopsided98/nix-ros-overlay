@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, curl, gtest, openssl, ros-environment, util-linux, zlib }:
 buildRosPackage {
   pname = "ros-melodic-aws-common";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/aws_common-release/archive/release/melodic/aws_common/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "ca6b356a24bbfc7851da14716f3f90cdc751ce5d7620f5eda2401cdfebdddbfe";
+    url = "https://github.com/aws-gbp/aws_common-release/archive/release/melodic/aws_common/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "d432e283db309fa929373f84ea3aa48ce7919caa608ebc5b033b0b55336e8d19";
   };
 
   buildType = "cmake";

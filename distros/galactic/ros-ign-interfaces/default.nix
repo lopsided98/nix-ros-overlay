@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-ros-ign-interfaces";
-  version = "0.233.3-r1";
+  version = "0.233.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/galactic/ros_ign_interfaces/0.233.3-1.tar.gz";
-    name = "0.233.3-1.tar.gz";
-    sha256 = "1b1a48d3b863b10f18e5444fc1d95ae874c99b251cb96e5f5e1c8c104ea0e02f";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/galactic/ros_ign_interfaces/0.233.4-1.tar.gz";
+    name = "0.233.4-1.tar.gz";
+    sha256 = "4787706d92b1bb6599ac170efdd55b03c698e921fa805a973b0a1c0eeb20bd80";
   };
 
   buildType = "ament_cmake";

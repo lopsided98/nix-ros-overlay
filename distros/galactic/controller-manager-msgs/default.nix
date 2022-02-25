@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-galactic-controller-manager-msgs";
-  version = "1.3.0-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/controller_manager_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "0848bb9a09dda6a50a834efff91a535c508719a369f6bd957e58300bc5f2552a";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/controller_manager_msgs/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "90c9901e61c07e7e229314510fada811f374a4ea41681e176d75b5acea021815";
   };
 
   buildType = "ament_cmake";

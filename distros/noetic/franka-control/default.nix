@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, franka-description, franka-gripper, franka-hw, franka-msgs, geometry-msgs, joint-state-publisher, libfranka, pluginlib, realtime-tools, robot-state-publisher, roscpp, sensor-msgs, std-srvs, tf, tf2-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, franka-description, franka-gripper, franka-hw, franka-msgs, geometry-msgs, joint-state-publisher, joint-trajectory-controller, libfranka, pluginlib, realtime-tools, robot-state-publisher, roscpp, sensor-msgs, std-srvs, tf, tf2-msgs }:
 buildRosPackage {
   pname = "ros-noetic-franka-control";
-  version = "0.8.1-r1";
+  version = "0.8.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_control/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "76538347272c693f28ffea0b2f7b110e2dadc2be1eec0b35f51867ad257acdda";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_control/0.8.2-2.tar.gz";
+    name = "0.8.2-2.tar.gz";
+    sha256 = "511b0fb4d672f0bd462c9acae0b2b7488888e9cbe9a2136fba3cf5321d7d89f3";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ controller-interface controller-manager franka-description franka-gripper franka-hw franka-msgs geometry-msgs joint-state-publisher libfranka pluginlib realtime-tools robot-state-publisher roscpp sensor-msgs std-srvs tf tf2-msgs ];
+  propagatedBuildInputs = [ controller-interface controller-manager franka-description franka-gripper franka-hw franka-msgs geometry-msgs joint-state-publisher joint-trajectory-controller libfranka pluginlib realtime-tools robot-state-publisher roscpp sensor-msgs std-srvs tf tf2-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

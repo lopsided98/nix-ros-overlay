@@ -18,6 +18,8 @@ self: super: {
 
  actionlib = self.callPackage ./actionlib {};
 
+ actionlib-lisp = self.callPackage ./actionlib-lisp {};
+
  actionlib-msgs = self.callPackage ./actionlib-msgs {};
 
  actionlib-tools = self.callPackage ./actionlib-tools {};
@@ -187,6 +189,18 @@ self: super: {
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
+
+ cl-tf = self.callPackage ./cl-tf {};
+
+ cl-tf2 = self.callPackage ./cl-tf2 {};
+
+ cl-transforms = self.callPackage ./cl-transforms {};
+
+ cl-transforms-stamped = self.callPackage ./cl-transforms-stamped {};
+
+ cl-urdf = self.callPackage ./cl-urdf {};
+
+ cl-utils = self.callPackage ./cl-utils {};
 
  class-loader = self.callPackage ./class-loader {};
 
@@ -548,9 +562,13 @@ self: super: {
 
  dingo-desktop = self.callPackage ./dingo-desktop {};
 
+ dingo-gazebo = self.callPackage ./dingo-gazebo {};
+
  dingo-msgs = self.callPackage ./dingo-msgs {};
 
  dingo-navigation = self.callPackage ./dingo-navigation {};
+
+ dingo-simulator = self.callPackage ./dingo-simulator {};
 
  dingo-viz = self.callPackage ./dingo-viz {};
 
@@ -1098,6 +1116,8 @@ self: super: {
 
  hokuyo3d = self.callPackage ./hokuyo3d {};
 
+ hri = self.callPackage ./hri {};
+
  hri-msgs = self.callPackage ./hri-msgs {};
 
  human-description = self.callPackage ./human-description {};
@@ -1149,6 +1169,12 @@ self: super: {
  image-view2 = self.callPackage ./image-view2 {};
 
  imagesift = self.callPackage ./imagesift {};
+
+ imagezero = self.callPackage ./imagezero {};
+
+ imagezero-image-transport = self.callPackage ./imagezero-image-transport {};
+
+ imagezero-ros = self.callPackage ./imagezero-ros {};
 
  imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
 
@@ -1447,6 +1473,8 @@ self: super: {
  lms1xx = self.callPackage ./lms1xx {};
 
  lockfree = self.callPackage ./lockfree {};
+
+ lockmount-description = self.callPackage ./lockmount-description {};
 
  locomotor = self.callPackage ./locomotor {};
 
@@ -2224,8 +2252,6 @@ self: super: {
 
  rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
 
- rc-roi-manager-gui = self.callPackage ./rc-roi-manager-gui {};
-
  rc-silhouettematch-client = self.callPackage ./rc-silhouettematch-client {};
 
  rc-tagdetect-client = self.callPackage ./rc-tagdetect-client {};
@@ -2474,7 +2500,11 @@ self: super: {
 
  roslisp = self.callPackage ./roslisp {};
 
+ roslisp-common = self.callPackage ./roslisp-common {};
+
  roslisp-repl = self.callPackage ./roslisp-repl {};
+
+ roslisp-utilities = self.callPackage ./roslisp-utilities {};
 
  roslz4 = self.callPackage ./roslz4 {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, curl, diagnostic-updater, dynamic-reconfigure, geometry-msgs, image-transport, message-generation, message-runtime, nav-msgs, nodelet, protobuf, rc-common-msgs, rc-dynamics-api, rc-genicam-api, roscpp, sensor-msgs, stereo-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rc-visard-driver";
-  version = "3.2.4-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_visard_driver/3.2.4-1.tar.gz";
-    name = "3.2.4-1.tar.gz";
-    sha256 = "18cdbf2a9e849eb91b29bb889c296e4ec579aa533e9866532317b81b441edf9b";
+    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_visard_driver/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "31fb020aa5cea7aa83940811b5ea52c940b59b8997b19e4fd713e6a7e0f33ec2";
   };
 
   buildType = "catkin";

@@ -156,6 +156,8 @@ self: super: {
 
  backward-ros = self.callPackage ./backward-ros {};
 
+ bag-recorder-nodes = self.callPackage ./bag-recorder-nodes {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -241,6 +243,54 @@ self: super: {
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
+
+ dataspeed-can = self.callPackage ./dataspeed-can {};
+
+ dataspeed-can-msg-filters = self.callPackage ./dataspeed-can-msg-filters {};
+
+ dataspeed-can-usb = self.callPackage ./dataspeed-can-usb {};
+
+ dataspeed-dbw-common = self.callPackage ./dataspeed-dbw-common {};
+
+ dataspeed-dbw-gateway = self.callPackage ./dataspeed-dbw-gateway {};
+
+ dataspeed-dbw-msgs = self.callPackage ./dataspeed-dbw-msgs {};
+
+ dataspeed-ulc = self.callPackage ./dataspeed-ulc {};
+
+ dataspeed-ulc-can = self.callPackage ./dataspeed-ulc-can {};
+
+ dataspeed-ulc-msgs = self.callPackage ./dataspeed-ulc-msgs {};
+
+ dbw-fca = self.callPackage ./dbw-fca {};
+
+ dbw-fca-can = self.callPackage ./dbw-fca-can {};
+
+ dbw-fca-description = self.callPackage ./dbw-fca-description {};
+
+ dbw-fca-joystick-demo = self.callPackage ./dbw-fca-joystick-demo {};
+
+ dbw-fca-msgs = self.callPackage ./dbw-fca-msgs {};
+
+ dbw-ford = self.callPackage ./dbw-ford {};
+
+ dbw-ford-can = self.callPackage ./dbw-ford-can {};
+
+ dbw-ford-description = self.callPackage ./dbw-ford-description {};
+
+ dbw-ford-joystick-demo = self.callPackage ./dbw-ford-joystick-demo {};
+
+ dbw-ford-msgs = self.callPackage ./dbw-ford-msgs {};
+
+ dbw-polaris = self.callPackage ./dbw-polaris {};
+
+ dbw-polaris-can = self.callPackage ./dbw-polaris-can {};
+
+ dbw-polaris-description = self.callPackage ./dbw-polaris-description {};
+
+ dbw-polaris-joystick-demo = self.callPackage ./dbw-polaris-joystick-demo {};
+
+ dbw-polaris-msgs = self.callPackage ./dbw-polaris-msgs {};
 
  delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
 
@@ -510,6 +560,8 @@ self: super: {
 
  gripper-controllers = self.callPackage ./gripper-controllers {};
 
+ gscam = self.callPackage ./gscam {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
@@ -651,6 +703,8 @@ self: super: {
  logging-demo = self.callPackage ./logging-demo {};
 
  lua-vendor = self.callPackage ./lua-vendor {};
+
+ lusb = self.callPackage ./lusb {};
 
  map-msgs = self.callPackage ./map-msgs {};
 
@@ -1229,6 +1283,8 @@ self: super: {
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
+
+ robot-upstart = self.callPackage ./robot-upstart {};
 
  ros1-bridge = self.callPackage ./ros1-bridge {};
 

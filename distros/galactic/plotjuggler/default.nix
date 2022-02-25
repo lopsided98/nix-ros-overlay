@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, qt5 }:
 buildRosPackage {
   pname = "ros-galactic-plotjuggler";
-  version = "3.3.4-r1";
+  version = "3.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/galactic/plotjuggler/3.3.4-1.tar.gz";
-    name = "3.3.4-1.tar.gz";
-    sha256 = "a4a9055591b9e5f42beca45b55be8a5d52ad825fe00e1c608775667882bd629c";
+    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/galactic/plotjuggler/3.4.2-1.tar.gz";
+    name = "3.4.2-1.tar.gz";
+    sha256 = "917322dd3b9ef735c0db860c71ff7f3ce09f47cc9dad98b8ddbf4f5d583a223f";
   };
 
   buildType = "catkin";

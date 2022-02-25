@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-galactic-diff-drive-controller";
-  version = "1.3.0-r2";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/diff_drive_controller/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "0378b75ccdaaeb31b8633c55ede30eda592f4c8f6043257a090a3fa6a955f286";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/diff_drive_controller/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "6423626416240b411c4d96034673bda119fbd4757678314b41ad20825de54fd0";
   };
 
   buildType = "ament_cmake";

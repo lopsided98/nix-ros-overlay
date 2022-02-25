@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-foxy-librealsense2";
-  version = "2.50.0-r1";
+  version = "2.50.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/foxy/librealsense2/2.50.0-1.tar.gz";
-    name = "2.50.0-1.tar.gz";
-    sha256 = "236df4c248e311f132814ba9884da6c72a2731dfffb8451a935e9065655d7f03";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/foxy/librealsense2/2.50.0-2.tar.gz";
+    name = "2.50.0-2.tar.gz";
+    sha256 = "e42fbeda426e0be82aa345fe4dadf0091435e3634ef49791a563aa73db636354";
   };
 
   buildType = "ament_cmake";

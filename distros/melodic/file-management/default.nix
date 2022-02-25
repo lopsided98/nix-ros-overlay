@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-common, cmake, dataflow-lite, gtest }:
 buildRosPackage {
   pname = "ros-melodic-file-management";
-  version = "1.1.5-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/file_management/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "ba98a28f68f31e1a51a1fb3de6afc22b8797f88ddeb0416a1d85fdbbc863e51d";
+    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/file_management/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "56eb2cea0667a774bc0205104fedbdd3f935968d941ec70a051d52ad7f3cd048";
   };
 
   buildType = "cmake";

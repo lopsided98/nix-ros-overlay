@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, microstrain-inertial-msgs, nav-msgs, rclpy, rqt-gui, rqt-gui-py, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-microstrain-inertial-rqt";
-  version = "2.5.0-r1";
+  version = "2.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/foxy/microstrain_inertial_rqt/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "f4c017d0809072faeec32d3e76d84033c7a37dc8f6f36589d3ecee66ee90feee";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/foxy/microstrain_inertial_rqt/2.5.1-1.tar.gz";
+    name = "2.5.1-1.tar.gz";
+    sha256 = "72b3b25628d2f9b7fe3340a286aeed7b0014f0f127efaf990dee5068c09b4503";
   };
 
   buildType = "ament_python";

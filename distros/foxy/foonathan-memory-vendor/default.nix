@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-xmllint, cmake, git }:
 buildRosPackage {
   pname = "ros-foxy-foonathan-memory-vendor";
-  version = "1.0.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/foonathan_memory_vendor-release/archive/release/foxy/foonathan_memory_vendor/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "64487af73cf438cf39c3de29d20646bf7c410894dad634b9cac087625402f88b";
+    url = "https://github.com/ros2-gbp/foonathan_memory_vendor-release/archive/release/foxy/foonathan_memory_vendor/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "72237602a3dedee05aafe1ce726a97754debd386bada768617a3e6c90184f283";
   };
 
   buildType = "cmake";

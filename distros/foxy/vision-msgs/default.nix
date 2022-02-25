@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/Kukanani/vision_msgs-release/archive/release/foxy/vision_msgs/2.0.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/vision_msgs-release/archive/release/foxy/vision_msgs/2.0.0-1.tar.gz";
     name = "2.0.0-1.tar.gz";
     sha256 = "3f6e7fde4e470ccb2cbdc0235753a772bb7e2ad1f7f2c6a625a51a2d42f15894";
   };

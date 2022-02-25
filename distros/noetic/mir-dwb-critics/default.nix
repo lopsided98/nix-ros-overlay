@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, costmap-queue, dwb-critics, dwb-local-planner, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav-core2, nav-grid-iterators, pluginlib, python3Packages, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mir-dwb-critics";
-  version = "1.1.4-r1";
+  version = "1.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_dwb_critics/1.1.4-1.tar.gz";
-    name = "1.1.4-1.tar.gz";
-    sha256 = "40ed5b44cf81e2ebb2d198312c48cf9cda4fc482c7c66542802fd4adbc308c89";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_dwb_critics/1.1.5-1.tar.gz";
+    name = "1.1.5-1.tar.gz";
+    sha256 = "1e3a2c6855cc7b2ccd67a16e1ecf9ed9f219a6ad583436c6f14b65947092d525";
   };
 
   buildType = "catkin";

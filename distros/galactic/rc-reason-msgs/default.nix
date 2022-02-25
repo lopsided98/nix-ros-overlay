@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, geometry-msgs, rc-common-msgs, rosidl-default-generators, rosidl-default-runtime, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-rc-reason-msgs";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_reason_clients-release/archive/release/galactic/rc_reason_msgs/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "44ed59b880e13f073571177f633a592488ef8d409766f299e35d034328bdf7d8";
+    url = "https://github.com/roboception-gbp/rc_reason_clients-release/archive/release/galactic/rc_reason_msgs/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "8377b453dc88baf021f4dd6871e7993ff9c05ad7f6de786a3f46be32f4d93be2";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch, phidgets-analog-inputs, phidgets-digital-inputs, phidgets-digital-outputs }:
 buildRosPackage {
   pname = "ros-galactic-phidgets-ik";
-  version = "2.2.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/galactic/phidgets_ik/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "9f9ac59d39b5d5c6a30e2b6112c673b865180d1231d1157e05e3fe1b33869be8";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/galactic/phidgets_ik/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "fbef84b727378fe2651f54d67545727ffb9eccd668115dcd61560062ff13eb18";
   };
 
   buildType = "ament_cmake";
