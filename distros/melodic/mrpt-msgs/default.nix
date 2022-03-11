@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-msgs";
-  version = "0.1.22";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_msgs-release/archive/release/melodic/mrpt_msgs/0.1.22-0.tar.gz";
-    name = "0.1.22-0.tar.gz";
-    sha256 = "baf8fd73e1c316f837c29fcaea20d6cb5cb84d4083813944b09005de9297de1d";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_msgs-release/archive/release/melodic/mrpt_msgs/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "0160776a2d1aaf5360e5a76730dee50a1077ba77fb006aa0378fea3aed1b505e";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, curl, cv-bridge, dynamic-reconfigure, message-generation, message-runtime, nodelet, roscpp, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-nerian-stereo";
-  version = "3.9.0-r3";
+  version = "3.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/nerian-vision/nerian_stereo-release/archive/release/melodic/nerian_stereo/3.9.0-3.tar.gz";
-    name = "3.9.0-3.tar.gz";
-    sha256 = "76e540e8302dc7084e49c711a0b0ca0a6c0bbef6f14a9e808cfcab7079b2dac8";
+    url = "https://github.com/nerian-vision/nerian_stereo-release/archive/release/melodic/nerian_stereo/3.9.1-1.tar.gz";
+    name = "3.9.1-1.tar.gz";
+    sha256 = "abba9d9164a09220a25d121267acf7c0409d604e19d2e734d20dace5184ca303";
   };
 
   buildType = "catkin";

@@ -674,6 +674,14 @@ self: super: {
 
  launch-yaml = self.callPackage ./launch-yaml {};
 
+ leo = self.callPackage ./leo {};
+
+ leo-description = self.callPackage ./leo-description {};
+
+ leo-msgs = self.callPackage ./leo-msgs {};
+
+ leo-teleop = self.callPackage ./leo-teleop {};
+
  lgsvl-bridge = self.callPackage ./lgsvl-bridge {};
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};

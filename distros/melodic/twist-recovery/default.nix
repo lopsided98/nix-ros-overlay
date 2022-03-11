@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, geometry-msgs, nav-core, pluginlib, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-twist-recovery";
-  version = "0.3.3-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/twist_recovery/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "42f3ed698ba40488337c23be1ee88d0980097420c6ef3c81003dcfdad3d75d0b";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/twist_recovery/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "dc76ad46cb3e96c0e8335fc419562933eba699b3a9270983f69355bf0a9cb592";
   };
 
   buildType = "catkin";

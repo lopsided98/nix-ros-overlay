@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, geometry-msgs, move-base-msgs, nav-msgs, roscpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-pose-base-controller";
-  version = "0.3.4-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/pose_base_controller/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "9ecad9f30d8a04f5e2f9efbe2edd14c86ee667ce64e5eaf7289f70f3829e46d5";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/pose_base_controller/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "8f3cf09557eb016ea6cb2fa3e1877dd9ba475f2b2b669f6a45aafa8609036004";
   };
 
   buildType = "catkin";

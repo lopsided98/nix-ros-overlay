@@ -1438,6 +1438,8 @@ self: super: {
 
  hpp-fcl = self.callPackage ./hpp-fcl {};
 
+ hri = self.callPackage ./hri {};
+
  hri-msgs = self.callPackage ./hri-msgs {};
 
  hrpsys = self.callPackage ./hrpsys {};
@@ -2999,8 +3001,6 @@ self: super: {
  pyquaternion = self.callPackage ./pyquaternion {};
 
  pyros-test = self.callPackage ./pyros-test {};
-
- pyros-utils = self.callPackage ./pyros-utils {};
 
  python-orocos-kdl = self.callPackage ./python-orocos-kdl {};
 

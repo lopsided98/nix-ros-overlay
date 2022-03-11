@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch-ros, rclcpp, rclcpp-components, realsense2-camera-msgs, xacro }:
 buildRosPackage {
   pname = "ros-foxy-realsense2-description";
-  version = "3.2.3-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/foxy/realsense2_description/3.2.3-1.tar.gz";
-    name = "3.2.3-1.tar.gz";
-    sha256 = "8d238db512b7d475f2eb9b284dfcb039cc64dbe6c409b2b10549fc12ba4384e4";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/foxy/realsense2_description/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "1ecba40f3b2b9279cef5376d7f2e48e7ce686fee89ed0af0ce8210ca762bf661";
   };
 
   buildType = "ament_cmake";

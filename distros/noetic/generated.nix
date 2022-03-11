@@ -1740,6 +1740,8 @@ self: super: {
 
  mqtt-bridge = self.callPackage ./mqtt-bridge {};
 
+ mrpt-bridge = self.callPackage ./mrpt-bridge {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
@@ -1763,6 +1765,8 @@ self: super: {
  multisense-lib = self.callPackage ./multisense-lib {};
 
  multisense-ros = self.callPackage ./multisense-ros {};
+
+ mvsim = self.callPackage ./mvsim {};
 
  nav2d = self.callPackage ./nav2d {};
 
@@ -2049,6 +2053,8 @@ self: super: {
  polled-camera = self.callPackage ./polled-camera {};
 
  pose-base-controller = self.callPackage ./pose-base-controller {};
+
+ pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  pose-follower = self.callPackage ./pose-follower {};
 
