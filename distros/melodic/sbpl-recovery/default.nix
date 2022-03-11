@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, nav-core, pluginlib, pose-follower, roscpp, sbpl-lattice-planner, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-sbpl-recovery";
-  version = "0.3.3-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/sbpl_recovery/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "24aab134f21caea064f1e410dfc852452977c99f2e064b97203e2e701c31ded5";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/sbpl_recovery/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "740c25ade316477bc2ab37c5e138c35ae2122911d2a766fad2b39aa63a89e9e3";
   };
 
   buildType = "catkin";

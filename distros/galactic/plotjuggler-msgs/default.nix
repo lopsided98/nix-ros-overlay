@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-plotjuggler-msgs";
-  version = "0.1.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler_msgs-release/archive/release/galactic/plotjuggler_msgs/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "7ff43f03d9b027a4ec4b54cf73168c3eba87ba81dbb9c9671f40da0887af8e5d";
+    url = "https://github.com/facontidavide/plotjuggler_msgs-release/archive/release/galactic/plotjuggler_msgs/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "34ed10630b4a9d8f9b4158f1feab145091b0267ce283ec37281639fe9b5351a0";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rosidl-cmake ];
-  propagatedBuildInputs = [ builtin-interfaces rosidl-default-runtime ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ rosidl-default-runtime std-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {

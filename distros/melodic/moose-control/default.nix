@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, interactive-marker-twist-server, joint-state-controller, joy, nav-msgs, realtime-tools, robot-localization, roslaunch, teleop-twist-joy, tf, topic-tools, twist-mux, urdf }:
 buildRosPackage {
   pname = "ros-melodic-moose-control";
-  version = "0.1.0-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/moose-release/archive/release/melodic/moose_control/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "f50a333e218c43523c15fe346cffeba3d2eda02b3dec0798f1d084a61d59308b";
+    url = "https://github.com/clearpath-gbp/moose-release/archive/release/melodic/moose_control/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "dddeeba8753258287685cba99d83f9337a546e27b0834e002367c46ea7144354";
   };
 
   buildType = "catkin";

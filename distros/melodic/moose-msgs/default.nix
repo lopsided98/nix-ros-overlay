@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-moose-msgs";
-  version = "0.1.0-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/moose-release/archive/release/melodic/moose_msgs/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "56ed8ed04d1dc05c96e7d477c0b8c4d79e7f510a4c0d4269b9e40a008d333f60";
+    url = "https://github.com/clearpath-gbp/moose-release/archive/release/melodic/moose_msgs/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "d209489cb9586c4bb2edfd3df3020fc7e2741671914f9961480a387158b9c744";
   };
 
   buildType = "catkin";

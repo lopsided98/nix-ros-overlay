@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assisted-teleop, catkin, goal-passer, pose-base-controller, pose-follower, sbpl-lattice-planner, sbpl-recovery, twist-recovery }:
 buildRosPackage {
   pname = "ros-noetic-navigation-experimental";
-  version = "0.3.4-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/navigation_experimental/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "f34b9e69bcb084cbc6c3909ab561d0ea09499d1f7f18376b5cec9abda07cc35a";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/navigation_experimental/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "983a17e89402e54c4cb8dd6e895158f93a6d8ee9f453f28cd2ddd66da5482226";
   };
 
   buildType = "catkin";

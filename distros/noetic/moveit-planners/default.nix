@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, chomp-motion-planner, moveit-planners-chomp, moveit-planners-ompl, pilz-industrial-motion-planner }:
 buildRosPackage {
   pname = "ros-noetic-moveit-planners";
-  version = "1.1.8-r1";
+  version = "1.1.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_planners/1.1.8-1.tar.gz";
-    name = "1.1.8-1.tar.gz";
-    sha256 = "6543d6f8c2e1cc2a2f0a370438f9e9fb6683de7a2fc1bb2632ea5d506d3303dd";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_planners/1.1.9-1.tar.gz";
+    name = "1.1.9-1.tar.gz";
+    sha256 = "b163a52b698678c8d6368cca0157222f04b94edc62536c599ca97cb7cb41de85";
   };
 
   buildType = "catkin";

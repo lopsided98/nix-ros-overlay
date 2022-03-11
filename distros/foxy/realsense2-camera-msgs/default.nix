@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-realsense2-camera-msgs";
-  version = "3.2.3-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/foxy/realsense2_camera_msgs/3.2.3-1.tar.gz";
-    name = "3.2.3-1.tar.gz";
-    sha256 = "9d8d0bd3e56c0ad46580fb6ea458761a6bc9590db6152f0d71620aea73f90708";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/foxy/realsense2_camera_msgs/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "61e336e0799b56ff9422fbde6dac20d0432516befbbe54f2fbbd030b092d5087";
   };
 
   buildType = "ament_cmake";

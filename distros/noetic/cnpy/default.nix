@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake, zlib }:
+{ lib, buildRosPackage, fetchurl, catkin, zlib }:
 buildRosPackage {
   pname = "ros-noetic-cnpy";
-  version = "0.0.7-r3";
+  version = "0.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/PeterMitrano/cnpy-release/archive/release/noetic/cnpy/0.0.7-3.tar.gz";
-    name = "0.0.7-3.tar.gz";
-    sha256 = "782dc178efb2fd281be33e1d8205e268597dc72086649a1b5695948019f36b20";
+    url = "https://github.com/PeterMitrano/cnpy-release/archive/release/noetic/cnpy/0.0.8-1.tar.gz";
+    name = "0.0.8-1.tar.gz";
+    sha256 = "87f066147c2ba2f9c142065072514b6cecef45bf5aa506dcc85fbc0b07c5eee3";
   };
 
-  buildType = "cmake";
-  buildInputs = [ cmake zlib ];
+  buildType = "catkin";
+  buildInputs = [ zlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

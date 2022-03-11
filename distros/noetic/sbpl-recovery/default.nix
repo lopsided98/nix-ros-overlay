@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, nav-core, pluginlib, pose-follower, roscpp, sbpl-lattice-planner, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-sbpl-recovery";
-  version = "0.3.4-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/sbpl_recovery/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "4c77993dc6998a1db0f75d158911a87769229aa6196f65616f06d0d106765162";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/sbpl_recovery/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "a49c0fc38311c59b0d800abd526710e6a101283aaea8c3c08cd97d954ff0fc6d";
   };
 
   buildType = "catkin";

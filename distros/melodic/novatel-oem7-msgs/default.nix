@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-novatel-oem7-msgs";
-  version = "3.0.0-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/melodic/novatel_oem7_msgs/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "f578782b25732b5357f60e1cf63d9eeb99bda7662156af44caa442365178f04c";
+    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/melodic/novatel_oem7_msgs/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "b1806982b4865c8c545fa1f03fc1ca794b2c41cf9f54ea38433c2fc259b47093";
   };
 
   buildType = "catkin";

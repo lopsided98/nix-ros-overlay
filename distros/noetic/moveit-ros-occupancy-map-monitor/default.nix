@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, geometric-shapes, moveit-core, moveit-msgs, octomap, pluginlib, rosunit, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-moveit-ros-occupancy-map-monitor";
-  version = "1.1.8-r1";
+  version = "1.1.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_occupancy_map_monitor/1.1.8-1.tar.gz";
-    name = "1.1.8-1.tar.gz";
-    sha256 = "9ae85d86e22892fa109affe129ffa3bf8d386f3248db955ece0fc72091c91501";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_occupancy_map_monitor/1.1.9-1.tar.gz";
+    name = "1.1.9-1.tar.gz";
+    sha256 = "b84eb5e713bc7615aacc59889e5bac1d8c78d2b2dbb9fbf5ef3abd03f8129120";
   };
 
   buildType = "catkin";

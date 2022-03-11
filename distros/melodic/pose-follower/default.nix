@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, dynamic-reconfigure, nav-core, nav-msgs, pluginlib, roscpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-pose-follower";
-  version = "0.3.3-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/pose_follower/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "d41dd5aab341f0af1b8eec70fb7db581f1857cf8d0d5574f5039f53288b3761b";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/pose_follower/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "3d7469e679df65dbb213d895ea3297f9ca9e1df52c25e8edc8e561c08a38a14f";
   };
 
   buildType = "catkin";
