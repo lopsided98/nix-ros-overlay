@@ -1,7 +1,7 @@
 { lib, mkDerivation, fetchurl, fetchpatch, cmake, pkg-config, ronn, libGL
 , openal, hdf5, curl, tinyxml, tinyxml-2, libtar, gts, libusb1, qtbase, gdal
 , libuuid, graphviz, libsForQt5, freeimage, boost, protobuf, sdformat, tbb
-, ogre1_10, ffmpeg, ignition, ignition-cmake ? ignition.cmake0
+, ogre1_9, ffmpeg, ignition, ignition-cmake ? ignition.cmake0
 , ignition-common ? ignition.common, ignition-math ? ignition.math4
 , ignition-transport ? ignition.transport8, ignition-msgs ? ignition.msgs
 , ignition-fuel-tools ? ignition.fuel-tools4
@@ -70,7 +70,7 @@ mkDerivation rec {
     protobuf
     sdformat
     tbb
-    ogre1_10
+    ogre1_9
     ffmpeg
     ignition-math
     ignition-transport
