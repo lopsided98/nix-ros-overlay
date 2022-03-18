@@ -28,5 +28,7 @@ self: super: {
       distro = "galactic";
       python = self.python3;
     } self super;
+
+    recurseForDerivations = true;
   };
 }
