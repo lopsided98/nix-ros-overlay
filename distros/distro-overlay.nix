@@ -54,6 +54,8 @@ let
       setupHook = ./ament-cmake-core-setup-hook.sh;
     });
 
+    camera-calibration-parsers = patchBoostPython rosSuper.camera-calibration-parsers;
+
     catkin = rosSuper.catkin.overrideAttrs ({
       propagatedBuildInputs ? [],
       prePhases ? [],
@@ -85,6 +87,8 @@ let
     });
 
     cob-light = patchBoostSignals rosSuper.cob-light;
+
+    cv-bridge = patchBoostPython rosSuper.cv-bridge;
 
     cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
       cmakeFlags ? [], preConfigure ? "", ...
@@ -504,6 +508,8 @@ let
       url = "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.68.1.tar.gz";
       sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
     };
+
+    urdf = patchBoostPython rosSuper.urdf;
 
     yaml-cpp-vendor = patchVendorUrl rosSuper.yaml-cpp-vendor {
       url = "https://github.com/jbeder/yaml-cpp/archive/0f9a586ca1dc29c2ecb8dd715a315b93e3f40f79.zip";
