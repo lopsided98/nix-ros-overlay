@@ -8,9 +8,9 @@ buildRosPackage {
   version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_urdfreader/3.2.0-1/rdl_release-release-melodic-rdl_urdfreader-3.2.0-1.tar.gz";
-    name = "rdl_release-release-melodic-rdl_urdfreader-3.2.0-1.tar.gz";
-    sha256 = "21e9d728f57fa66aa13948bb25fd1900aa5926410fe533b6e92da0f8acf00ffa";
+    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_urdfreader/3.2.0-1/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "acf08d42afc98a4ffb76a16dfc67124f19f3adeb56167f886322019cb3fc83ee";
   };
 
   buildType = "catkin";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rdl_urdfreader package'';
-    license = with lib.licenses; [ "zlib" ];
+    license = with lib.licenses; [ "Zlib" ];
   };
 }

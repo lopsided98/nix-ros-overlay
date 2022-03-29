@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The OSG Works library adapted to UWSim. See https://code.google.com/p/osgworks'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

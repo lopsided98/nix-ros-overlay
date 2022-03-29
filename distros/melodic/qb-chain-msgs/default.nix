@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''message to control end-effector pose, robot sitiffness and velocity'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

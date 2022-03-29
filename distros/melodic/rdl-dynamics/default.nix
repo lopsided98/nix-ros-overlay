@@ -8,9 +8,9 @@ buildRosPackage {
   version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_dynamics/3.2.0-1/rdl_release-release-melodic-rdl_dynamics-3.2.0-1.tar.gz";
-    name = "rdl_release-release-melodic-rdl_dynamics-3.2.0-1.tar.gz";
-    sha256 = "85053786c16693de1bd832d6f81307d41d63b593e2f2b54cd32d8adca0a03bf1";
+    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_dynamics/3.2.0-1/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "02996f90bf325b1c47f8b436761468a0af9662aa937ec90250cf10ecd7107fa0";
   };
 
   buildType = "catkin";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rdl_dynamics package'';
-    license = with lib.licenses; [ "zlib" ];
+    license = with lib.licenses; [ "Zlib" ];
   };
 }

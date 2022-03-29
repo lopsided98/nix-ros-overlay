@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''gundam_rx78_description contains the ROS URDF file of the GUNDAM RX-78 robot'';
-    license = with lib.licenses; [ "TERMS OF USE FOR GUNDAM RESEARCH OPEN SIMULATOR Attribution-NonCommercial-ShareAlike" bsdOriginal ];
+    license = with lib.licenses; [ "TERMS-OF-USE-FOR-GUNDAM-RESEARCH-OPEN-SIMULATOR-Attribution-NonCommercial-ShareAlike" bsdOriginal ];
   };
 }

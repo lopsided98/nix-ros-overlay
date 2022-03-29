@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The baldor package'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

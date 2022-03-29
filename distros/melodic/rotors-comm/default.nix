@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''RotorS specific messages and services.'';
-    license = with lib.licenses; [ asl20 ];
+    license = with lib.licenses; [ "ASL-2.0" ];
   };
 }

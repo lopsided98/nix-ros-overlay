@@ -8,9 +8,9 @@ buildRosPackage {
   version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl/3.2.0-1/rdl_release-release-melodic-rdl-3.2.0-1.tar.gz";
-    name = "rdl_release-release-melodic-rdl-3.2.0-1.tar.gz";
-    sha256 = "402f1c9db58df28b9506bff1ae06cafb299e6a076cb46a1bc44f8bfc9019436e";
+    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl/3.2.0-1/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "697a892941f85b37eb08270936b94605ef7745c4aa2f7788f64b1a4974b5bf46";
   };
 
   buildType = "catkin";
@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rdl meta-package'';
-    license = with lib.licenses; [ "zlib" ];
+    license = with lib.licenses; [ "Zlib" ];
   };
 }

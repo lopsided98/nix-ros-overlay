@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''sdsdddsdsds'';
-    license = with lib.licenses; [ bsdOriginal lgpl2 gpl1 ];
+    license = with lib.licenses; [ bsdOriginal "LGPL" "GPL-for-sigblock" ];
   };
 }

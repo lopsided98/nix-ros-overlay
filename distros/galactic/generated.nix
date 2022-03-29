@@ -532,6 +532,8 @@ self: super: {
 
  lua-vendor = self.callPackage ./lua-vendor {};
 
+ magic-enum = self.callPackage ./magic-enum {};
+
  map-msgs = self.callPackage ./map-msgs {};
 
  mapviz = self.callPackage ./mapviz {};
@@ -783,6 +785,10 @@ self: super: {
  ouxt-common = self.callPackage ./ouxt-common {};
 
  ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
+
+ paho-mqtt-c = self.callPackage ./paho-mqtt-c {};
+
+ paho-mqtt-cpp = self.callPackage ./paho-mqtt-cpp {};
 
  pal-statistics = self.callPackage ./pal-statistics {};
 
@@ -1364,6 +1370,8 @@ self: super: {
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
+ slider-publisher = self.callPackage ./slider-publisher {};
+
  smacc2 = self.callPackage ./smacc2 {};
 
  smacc2-msgs = self.callPackage ./smacc2-msgs {};
@@ -1499,6 +1507,10 @@ self: super: {
  topic-monitor = self.callPackage ./topic-monitor {};
 
  topic-statistics-demo = self.callPackage ./topic-statistics-demo {};
+
+ topic-tools = self.callPackage ./topic-tools {};
+
+ topic-tools-interfaces = self.callPackage ./topic-tools-interfaces {};
 
  tracetools = self.callPackage ./tracetools {};
 

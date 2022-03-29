@@ -24,6 +24,6 @@ been changed since 2001 and appears to be very stable.  We plan on
 keeping this package in this revision for mesh conversions.  This
 package is only available as a single source file for download.  There
 are no local modifications to this package.'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

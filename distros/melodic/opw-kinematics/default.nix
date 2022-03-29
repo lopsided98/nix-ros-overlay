@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, gtest, ros-industrial-cmake-boilerplate }:
 buildRosPackage {
   pname = "ros-melodic-opw-kinematics";
-  version = "0.4.4-r1";
+  version = "0.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/opw_kinematics-release/archive/release/melodic/opw_kinematics/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "a9c07bf7cce9ff8248cf00d681099def8d9dc4736f2a4b89ba54fbe3aee17b64";
+    url = "https://github.com/ros-industrial-release/opw_kinematics-release/archive/release/melodic/opw_kinematics/0.4.5-1.tar.gz";
+    name = "0.4.5-1.tar.gz";
+    sha256 = "3708584322d44413993005850d470ca1c32ef10eab0c44d7efa9cc5d950cd7fe";
   };
 
   buildType = "cmake";

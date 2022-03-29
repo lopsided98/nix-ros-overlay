@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''Allows to store poses during teach-in.'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL-3.0-only" ];
   };
 }

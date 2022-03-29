@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package with external libraries used in Industrial and Service workspaces. Currentlly supported Libraries: Reflexxes, Libmodbus.'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL-3.0-only" ];
   };
 }

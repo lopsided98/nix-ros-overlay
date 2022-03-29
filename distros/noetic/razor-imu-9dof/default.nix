@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''razor_imu_9dof is a package that provides a ROS driver for the Sparkfun OpenLog Artemis, 9DoF Razor IMU M0, 9DOF Razor IMU and 9DOF Sensor Stick. It also provides Arduino firmware that runs on the board, and which must be installed on it for the system to work. A node which displays the attitude (roll, pitch and yaw) of the board (or any IMU) is provided for testing.'';
-    license = with lib.licenses; [ bsdOriginal gpl3 ];
+    license = with lib.licenses; [ bsdOriginal "GPL-3.0-only" ];
   };
 }

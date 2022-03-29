@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Catkinized ROS packaging of the OpenKarto library'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL-3.0-only" ];
   };
 }

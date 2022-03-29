@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch-ros, rclcpp, rclcpp-components, realsense2-camera-msgs, xacro }:
 buildRosPackage {
   pname = "ros-foxy-realsense2-description";
-  version = "4.0.2-r1";
+  version = "4.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/foxy/realsense2_description/4.0.2-1.tar.gz";
-    name = "4.0.2-1.tar.gz";
-    sha256 = "1ecba40f3b2b9279cef5376d7f2e48e7ce686fee89ed0af0ce8210ca762bf661";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/foxy/realsense2_description/4.0.4-1.tar.gz";
+    name = "4.0.4-1.tar.gz";
+    sha256 = "e68b7ccd5281d036c9b999e866ac9b128340d1d6472e19453c63527e464af135";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''RealSense Camera description package for Intel 3D D400 cameras'';
+    description = ''RealSense description package for Intel 3D D400 cameras'';
     license = with lib.licenses; [ asl20 ];
   };
 }

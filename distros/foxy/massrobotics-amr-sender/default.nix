@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''MassRobotics AMR Interop Sender'';
-    license = with lib.licenses; [ "3-Clause BSD License" ];
+    license = with lib.licenses; [ "3-Clause-BSD-License" ];
   };
 }

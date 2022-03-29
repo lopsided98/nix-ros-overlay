@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''C++ stdlib-compatible wrapper around tlsf allocator and ROS2 examples'';
-    license = with lib.licenses; [ lgpl21 asl20 ];
+    license = with lib.licenses; [ "LGPL-2.1-only" asl20 ];
   };
 }

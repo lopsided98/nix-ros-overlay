@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''visp_hand2eye_calibration estimates the camera position with respect
      to its effector using the ViSP library.'';
-    license = with lib.licenses; [ gpl2 ];
+    license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

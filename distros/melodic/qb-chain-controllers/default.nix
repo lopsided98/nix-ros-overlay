@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the specific controllers for qbrobotics® kinematic structures, e.g. the qbdelta controller.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

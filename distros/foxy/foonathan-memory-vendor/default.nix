@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Foonathan/memory vendor package for Fast-RTPS.'';
-    license = with lib.licenses; [ asl20 "zlib License" ];
+    license = with lib.licenses; [ asl20 "Zlib" ];
   };
 }

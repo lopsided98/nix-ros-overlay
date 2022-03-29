@@ -23,6 +23,6 @@ buildRosPackage {
     to the base_local_planner of the 2D navigation stack.
     It provides a generic and versatile model predictive control implementation
     with minimum-time and quadratic-form receding-horizon configurations.'';
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "GPL-3.0-only" ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Gazebo models and runtime configuration for igvc_self_drive simulator'';
-    license = with lib.licenses; [ bsd2 ];
+    license = with lib.licenses; [ "BSD-2-Clause" ];
   };
 }

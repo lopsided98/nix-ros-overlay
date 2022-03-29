@@ -24,6 +24,6 @@ buildRosPackage {
      for stereo vision.
 
      Currently uses the base driver from Morgan Quigley's uvc_cam package.'';
-    license = with lib.licenses; [ gpl2 ];
+    license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

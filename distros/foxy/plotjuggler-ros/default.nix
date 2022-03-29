@@ -13,12 +13,12 @@ buildRosPackage {
     sha256 = "b9ccd0527820889123388af70c416c86717b779845ff11a7c486e3280f85974f";
   };
 
-  buildType = "catkin";
+  buildType = "ament_cmake";
   propagatedBuildInputs = [ binutils boost diagnostic-msgs fastcdr geometry-msgs nav-msgs plotjuggler plotjuggler-msgs qt5.qtbase qt5.qtsvg qt5.qtwebsockets rclcpp rcpputils rosbag2 rosbag2-transport sensor-msgs tf2-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''PlotJuggler plugin for ROS'';
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "AGPLv3" ];
   };
 }

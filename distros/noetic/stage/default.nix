@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Mobile robot simulator http://rtv.github.com/Stage'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

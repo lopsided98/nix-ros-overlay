@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''Graph-based Simultaneous Localization and Mapping module.
     Includes OpenKarto GraphSLAM library by &quot;SRI International&quot;.'';
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "GPL-3.0-only" ];
   };
 }

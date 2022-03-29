@@ -13,7 +13,7 @@ buildRosPackage {
     sha256 = "60f57740a85c06ac445b2a97b0601e634ee9f6a3b27577f411d79660ccde8e8e";
   };
 
-  buildType = "catkin";
+  buildType = "ament_cmake";
   buildInputs = [ ros-environment ];
   propagatedBuildInputs = [ git libxml2 openblas spirv-headers spirv-tools vulkan-loader ];
   nativeBuildInputs = [ ament-cmake ];

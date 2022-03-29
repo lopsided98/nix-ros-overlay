@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''fast downward: PDDL Planner (http://www.fast-downward.org)'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

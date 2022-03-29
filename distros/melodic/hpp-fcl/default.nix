@@ -2,24 +2,24 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, assimp, boost, catkin, eigen, git, octomap }:
+{ lib, buildRosPackage, fetchurl, assimp, boost, catkin, cmake, doxygen, eigen, eigenpy, git, octomap, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-hpp-fcl";
-  version = "1.0.1-r2";
+  version = "1.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/humanoid-path-planner/hpp-fcl-ros-release/archive/release/melodic/hpp-fcl/1.0.1-2.tar.gz";
-    name = "1.0.1-2.tar.gz";
-    sha256 = "2fdf0400d19ccdc82b6788b4715d5adf11af7e3159f8cd87f5a401ddd3fb53f5";
+    url = "https://github.com/humanoid-path-planner/hpp-fcl-ros-release/archive/release/melodic/hpp-fcl/1.8.1-1.tar.gz";
+    name = "1.8.1-1.tar.gz";
+    sha256 = "594d688b680ff946d06f8ddd0ccebd41ea887af0ad261efc5a097b10b4a97e8b";
   };
 
-  buildType = "catkin";
-  buildInputs = [ git ];
-  propagatedBuildInputs = [ assimp boost eigen octomap ];
-  nativeBuildInputs = [ catkin ];
+  buildType = "cmake";
+  buildInputs = [ doxygen git pythonPackages.lxml ];
+  propagatedBuildInputs = [ assimp boost catkin eigen eigenpy octomap python pythonPackages.numpy ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''HPP fork of FCL with bug fixes.'';
+    description = ''An extension of the Flexible Collision Library.'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

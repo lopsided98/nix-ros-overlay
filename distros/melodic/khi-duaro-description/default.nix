@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The khi_duaro_description package'';
-    license = with lib.licenses; [ bsdOriginal "KHI CAD license (mesh data, see readme)" ];
+    license = with lib.licenses; [ bsdOriginal "KHI-CAD-license-mesh-data,-see-readme-" ];
   };
 }

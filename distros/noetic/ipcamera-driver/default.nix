@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Simple node to publish regular IP camera video streams to a ros topic.'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''A handful of useful utility functions for nav_2d packages.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The spatio-temporal 3D obstacle costmap package'';
-    license = with lib.licenses; [ lgpl21 ];
+    license = with lib.licenses; [ "LGPL-2.1-only" ];
   };
 }

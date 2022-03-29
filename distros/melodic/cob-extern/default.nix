@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The cob_extern stack contains third party libraries needed for operating Care-O-bot. The packages are downloaded from the manufactorers website and not changed in any way.'';
-    license = with lib.licenses; [ lgpl2 "proprietary" ];
+    license = with lib.licenses; [ "LGPL" "Proprietary" ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Topic tools for treating messages as variant types.'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "GNU-Lesser-General-Public-License-LGPL-" ];
   };
 }

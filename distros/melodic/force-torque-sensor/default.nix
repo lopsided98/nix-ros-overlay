@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The force_torque_sensor package'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL-3.0-only" ];
   };
 }

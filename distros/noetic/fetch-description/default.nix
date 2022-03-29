@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF for Fetch Robot.'';
-    license = with lib.licenses; [ "CC-BY-SA-3.0" ];
+    license = with lib.licenses; [ cc-by-nc-sa-40 ];
   };
 }

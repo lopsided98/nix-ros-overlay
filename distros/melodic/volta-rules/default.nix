@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''The volta_rules package'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Simulation files for the PMB2 robot.'';
-    license = with lib.licenses; [ "Modified BSD" ];
+    license = with lib.licenses; [ "Modified-BSD" ];
   };
 }

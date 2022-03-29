@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The copernicus_teleoperator package'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

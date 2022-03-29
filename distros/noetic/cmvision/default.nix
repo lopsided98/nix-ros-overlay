@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Node for the Color Machine Vision Project, used for fast color blob detection'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''The dwb_critics package'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

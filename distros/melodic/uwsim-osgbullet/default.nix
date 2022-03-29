@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The OSG Bullet library adapted to UWSim. See https://code.google.com/p/osgbullet'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

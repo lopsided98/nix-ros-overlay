@@ -724,6 +724,8 @@ self: super: {
 
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
+ euslime = self.callPackage ./euslime {};
+
  euslisp = self.callPackage ./euslisp {};
 
  executive-smach = self.callPackage ./executive-smach {};
@@ -783,6 +785,8 @@ self: super: {
  fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
 
  fake-localization = self.callPackage ./fake-localization {};
+
+ fath-pivot-mount-description = self.callPackage ./fath-pivot-mount-description {};
 
  fcl = self.callPackage ./fcl {};
 
@@ -866,6 +870,10 @@ self: super: {
 
  flexbe-widget = self.callPackage ./flexbe-widget {};
 
+ flir-camera-description = self.callPackage ./flir-camera-description {};
+
+ flir-camera-driver = self.callPackage ./flir-camera-driver {};
+
  floam = self.callPackage ./floam {};
 
  fmi-adapter = self.callPackage ./fmi-adapter {};
@@ -881,6 +889,8 @@ self: super: {
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
+
+ frame-editor = self.callPackage ./frame-editor {};
 
  franka-control = self.callPackage ./franka-control {};
 
@@ -1115,6 +1125,8 @@ self: super: {
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hokuyo3d = self.callPackage ./hokuyo3d {};
+
+ hpp-fcl = self.callPackage ./hpp-fcl {};
 
  hri = self.callPackage ./hri {};
 
@@ -1474,8 +1486,6 @@ self: super: {
 
  lockfree = self.callPackage ./lockfree {};
 
- lockmount-description = self.callPackage ./lockmount-description {};
-
  locomotor = self.callPackage ./locomotor {};
 
  locomotor-msgs = self.callPackage ./locomotor-msgs {};
@@ -1487,6 +1497,8 @@ self: super: {
  lpg-planner = self.callPackage ./lpg-planner {};
 
  lusb = self.callPackage ./lusb {};
+
+ magic-enum = self.callPackage ./magic-enum {};
 
  magical-ros2-conversion-tool = self.callPackage ./magical-ros2-conversion-tool {};
 
@@ -1931,6 +1943,10 @@ self: super: {
  p2os-urdf = self.callPackage ./p2os-urdf {};
 
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
+
+ paho-mqtt-c = self.callPackage ./paho-mqtt-c {};
+
+ paho-mqtt-cpp = self.callPackage ./paho-mqtt-cpp {};
 
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
 
@@ -2482,6 +2498,8 @@ self: super: {
 
  rosdoc-lite = self.callPackage ./rosdoc-lite {};
 
+ rosee-msg = self.callPackage ./rosee-msg {};
+
  rosemacs = self.callPackage ./rosemacs {};
 
  roseus = self.callPackage ./roseus {};
@@ -2864,6 +2882,8 @@ self: super: {
 
  speed-scaling-state-controller = self.callPackage ./speed-scaling-state-controller {};
 
+ spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
+
  sr-hand-detector = self.callPackage ./sr-hand-detector {};
 
  srdfdom = self.callPackage ./srdfdom {};
@@ -3007,6 +3027,24 @@ self: super: {
  timestamp-tools = self.callPackage ./timestamp-tools {};
 
  topic-tools = self.callPackage ./topic-tools {};
+
+ toposens = self.callPackage ./toposens {};
+
+ toposens-bringup = self.callPackage ./toposens-bringup {};
+
+ toposens-description = self.callPackage ./toposens-description {};
+
+ toposens-driver = self.callPackage ./toposens-driver {};
+
+ toposens-echo-driver = self.callPackage ./toposens-echo-driver {};
+
+ toposens-markers = self.callPackage ./toposens-markers {};
+
+ toposens-msgs = self.callPackage ./toposens-msgs {};
+
+ toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
+
+ toposens-sync = self.callPackage ./toposens-sync {};
 
  trac-ik = self.callPackage ./trac-ik {};
 

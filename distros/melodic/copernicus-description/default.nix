@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The copernicus_description package'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

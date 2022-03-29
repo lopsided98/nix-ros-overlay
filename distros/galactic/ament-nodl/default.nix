@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Ament extension for exporting NoDL .xml files'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL-3.0-only" ];
   };
 }

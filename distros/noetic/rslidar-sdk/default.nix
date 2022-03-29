@@ -5,15 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, libpcap, libyamlcpp, pcl, pcl-conversions, pcl-ros, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rslidar-sdk";
-  version = "1.3.0-r4";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/rslidar_sdk-release/archive/release/noetic/rslidar_sdk/1.3.0-4.tar.gz";
-    name = "1.3.0-4.tar.gz";
-    sha256 = "f19e7aff675714176889e6f190bfae965f5c047d84a25b8d20f64e445dea616b";
+    url = "https://github.com/nobleo/rslidar_sdk-release/archive/release/noetic/rslidar_sdk/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "a3612756dc300bd8ee422b1d99dc46bc317814c568d5491fc987c72ce65f8d09";
   };
 
-  buildType = "ament_cmake";
+  buildType = "catkin";
   propagatedBuildInputs = [ libpcap libyamlcpp pcl pcl-conversions pcl-ros roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -23,6 +23,6 @@ buildRosPackage {
     description = ''For every image, computes its sift features and send a new message with the image, its intrinsic parameters, and the features.
     Parameters include:
     display - shows the image on the local computer'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package wraps the libphidgets to use it as a ros dependency'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

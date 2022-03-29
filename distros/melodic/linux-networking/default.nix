@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The linux_networking package'';
-    license = with lib.licenses; [ "TODO" ];
+    license = with lib.licenses; [ "TODO-CATKIN-PACKAGE-LICENSE" ];
   };
 }

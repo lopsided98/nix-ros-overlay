@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, asio-cmake-module, example-interfaces, rclcpp, std-msgs, udp-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, asio-cmake-module, rclcpp, std-msgs, udp-msgs }:
 buildRosPackage {
   pname = "ros-galactic-io-context";
-  version = "1.0.1-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/galactic/io_context/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "fe1781df60e76e5eb0e03bf46f2b36127e500c65431491014d0729fdffef5a14";
+    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/galactic/io_context/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "7bceb53fd40beec256ad4b4a2c1720b2d37bda18e852a3805f85bf9dca772c5e";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ asio example-interfaces rclcpp std-msgs udp-msgs ];
+  propagatedBuildInputs = [ asio rclcpp std-msgs udp-msgs ];
   nativeBuildInputs = [ ament-cmake-auto asio-cmake-module ];
 
   meta = {

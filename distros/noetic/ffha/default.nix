@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''ffha: PDDL Planner (http://ipc.informatik.uni-freiburg.de)'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

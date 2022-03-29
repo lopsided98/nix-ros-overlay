@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-laser-scan-densifier";
-  version = "0.7.11-r1";
+  version = "0.7.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/laser_scan_densifier/0.7.11-1.tar.gz";
-    name = "0.7.11-1.tar.gz";
-    sha256 = "a60a3e21ad41b4db8204cef4d0d4622f5d1aca8b1f3a55e279fec391ebfd4bda";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/laser_scan_densifier/0.7.12-1.tar.gz";
+    name = "0.7.12-1.tar.gz";
+    sha256 = "7efdb98150f84c6bc67f5416fe08325e05e65b1b590f1b7d0b2845375336536e";
   };
 
   buildType = "catkin";

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Converts between ROS structures and ViSP structures.'';
-    license = with lib.licenses; [ gpl2 ];
+    license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

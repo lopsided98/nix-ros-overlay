@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The abseil_cpp package'';
-    license = with lib.licenses; [ "Apache-1.0" ];
+    license = with lib.licenses; [ "Apache" ];
   };
 }

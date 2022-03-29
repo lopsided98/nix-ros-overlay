@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.6.1-r2";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/noetic/bota_node/0.6.1-2/bota_driver-release-release-noetic-bota_node-0.6.1-2.tar.gz";
-    name = "bota_driver-release-release-noetic-bota_node-0.6.1-2.tar.gz";
-    sha256 = "3972167a99dec308b955c57ab11a0a8c93dcecf4405a5cad982ee098bf0d254a";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/noetic/bota_node/0.6.1-2/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "6bc5c8ffa4fb73553588838abac77348f29308fd241bac196cda5f57d4560acb";
   };
 
   buildType = "catkin";

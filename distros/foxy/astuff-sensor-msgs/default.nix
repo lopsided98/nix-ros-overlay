@@ -13,7 +13,7 @@ buildRosPackage {
     sha256 = "258c5f14af862f6c85ca8573cfcbcd9edfa67b502f94ce97f84cd6fa28d4ab3a";
   };
 
-  buildType = "catkin";
+  buildType = "ament_cmake";
   buildInputs = [ ros-environment ];
   propagatedBuildInputs = [ delphi-esr-msgs delphi-srr-msgs derived-object-msgs ibeo-msgs kartech-linear-actuator-msgs mobileye-560-660-msgs neobotix-usboard-msgs pacmod-msgs ];
   nativeBuildInputs = [ ament-cmake ];

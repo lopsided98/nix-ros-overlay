@@ -30,6 +30,6 @@ buildRosPackage {
         <p>
          Main node structure and amcl-algorithms’s code was derived, with thanks, from Brian Gerkey's amcl package.     
         </p>'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

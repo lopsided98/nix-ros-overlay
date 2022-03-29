@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.6.1-r2";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/noetic/rokubimini_description/0.6.1-2/bota_driver-release-release-noetic-rokubimini_description-0.6.1-2.tar.gz";
-    name = "bota_driver-release-release-noetic-rokubimini_description-0.6.1-2.tar.gz";
-    sha256 = "dd660bfd5bad54b0c7c76a041109fc63b3709c3490db1884b04e1d80ee6bf042";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/noetic/rokubimini_description/0.6.1-2/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "080320618e1d3c340315f44a036b4b4f7aeb22ece7afc883430749e7c3105597";
   };
 
   buildType = "catkin";

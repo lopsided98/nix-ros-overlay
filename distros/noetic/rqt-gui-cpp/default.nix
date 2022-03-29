@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, qt-gui, qt-gui-cpp, qt5, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-rqt-gui-cpp";
-  version = "0.5.2-r1";
+  version = "0.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt-release/archive/release/noetic/rqt_gui_cpp/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "d0958fbb96bdfc3dcd19d7ee86bed772f2b66a351a916c272d5a80cbd3935dc9";
+    url = "https://github.com/ros-gbp/rqt-release/archive/release/noetic/rqt_gui_cpp/0.5.3-1.tar.gz";
+    name = "0.5.3-1.tar.gz";
+    sha256 = "1b87265e422398938561fb938fc66f820ff63f28f5c8da4b198410b3eeb2f5cf";
   };
 
   buildType = "catkin";

@@ -30,6 +30,6 @@ buildRosPackage {
     This computer vision algorithm computes the pose (i.e. position and
     orientation) of an object in an image. It is fast enough to allow
     object online tracking using a camera.'';
-    license = with lib.licenses; [ gpl2 ];
+    license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

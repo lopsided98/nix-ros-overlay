@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = ''A ROS camera driver that uses gstreamer to connect to
     devices such as webcams.'';
-    license = with lib.licenses; [ asl20 ];
+    license = with lib.licenses; [ "Apache-2.0-License" ];
   };
 }

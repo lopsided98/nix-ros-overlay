@@ -4,6 +4,8 @@
 
 self: super: {
 
+ acado-vendor = self.callPackage ./acado-vendor {};
+
  ackermann-msgs = self.callPackage ./ackermann-msgs {};
 
  action-msgs = self.callPackage ./action-msgs {};
@@ -149,6 +151,8 @@ self: super: {
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
+
+ autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
@@ -954,6 +958,8 @@ self: super: {
 
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
+ paho-mqtt-c = self.callPackage ./paho-mqtt-c {};
+
  pal-gazebo-worlds = self.callPackage ./pal-gazebo-worlds {};
 
  pal-statistics = self.callPackage ./pal-statistics {};
@@ -1147,6 +1153,8 @@ self: super: {
  rclc-examples = self.callPackage ./rclc-examples {};
 
  rclc-lifecycle = self.callPackage ./rclc-lifecycle {};
+
+ rclc-parameter = self.callPackage ./rclc-parameter {};
 
  rclcpp = self.callPackage ./rclcpp {};
 

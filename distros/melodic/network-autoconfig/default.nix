@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS Networking Autoconfiguration'';
-    license = with lib.licenses; [ mit "Apache-1.0" ];
+    license = with lib.licenses; [ mit "Apache" ];
   };
 }

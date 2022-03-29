@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''The costmap_queue package'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

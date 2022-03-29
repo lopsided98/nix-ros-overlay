@@ -13,7 +13,7 @@ buildRosPackage {
     sha256 = "7ac2b7863a08277506c55af3df35054cb441623002173e5b619155e44d05d97c";
   };
 
-  buildType = "catkin";
+  buildType = "ament_cmake";
   buildInputs = [ ros-environment rosidl-default-generators ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ builtin-interfaces diagnostic-msgs geometry-msgs rosidl-default-runtime std-msgs ];

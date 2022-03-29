@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Contains a set of tutorials that run 2D-Navigation within Stage-Simulator.'';
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "GPL-3.0-only" ];
   };
 }

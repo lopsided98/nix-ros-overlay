@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Enables matching a mesh model file (e.g. STL) to a point cloud using ROS.'';
-    license = with lib.licenses; [ bsd2 ];
+    license = with lib.licenses; [ "BSD-2-Clause" ];
   };
 }

@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''3D visualization tool for ROS.'';
-    license = with lib.licenses; [ bsdOriginal "CC-BY-SA-3.0" ];
+    license = with lib.licenses; [ bsdOriginal "Creative-Commons" ];
   };
 }

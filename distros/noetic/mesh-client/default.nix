@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The mesh_client package'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

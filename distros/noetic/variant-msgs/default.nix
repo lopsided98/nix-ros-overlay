@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Variant messages are designed to accommodate the information content of any invariant message. They are truly generic and can freely be converted to and from specific message objects.'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "GNU-Lesser-General-Public-License-LGPL-" ];
   };
 }

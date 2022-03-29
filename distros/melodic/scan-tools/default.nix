@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Laser scan processing tools.'';
-    license = with lib.licenses; [ bsdOriginal lgpl2 ];
+    license = with lib.licenses; [ bsdOriginal "LGPL-3.0-only" ];
   };
 }

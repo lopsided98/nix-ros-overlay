@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Library to compute SIFT features'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

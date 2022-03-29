@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Provides ROS message definitions, representing RAPID data from ABB robot controllers.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

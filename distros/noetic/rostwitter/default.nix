@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rostwitter package'';
-    license = with lib.licenses; [ "Apache-1.0" ];
+    license = with lib.licenses; [ "Apache" ];
   };
 }

@@ -13,7 +13,7 @@ buildRosPackage {
     sha256 = "2754a3a1a90ad84be9e6e470d5201f7e1e7da603a325b8b082925f84829b33d6";
   };
 
-  buildType = "ament_cmake";
+  buildType = "catkin";
   propagatedBuildInputs = [ message-generation message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Utilities for launch files'';
-    license = with lib.licenses; [ "Apache-1.0" ];
+    license = with lib.licenses; [ "Apache" ];
   };
 }

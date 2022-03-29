@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Various helper utilities not associated with a particular stack'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-&-GPL" ];
   };
 }

@@ -8,9 +8,9 @@ buildRosPackage {
   version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_msgs/3.2.0-1/rdl_release-release-melodic-rdl_msgs-3.2.0-1.tar.gz";
-    name = "rdl_release-release-melodic-rdl_msgs-3.2.0-1.tar.gz";
-    sha256 = "e51406d626a0114ed044ee5e90462bc10737ed057a5abf50f808fdea52cd6ddf";
+    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_msgs/3.2.0-1/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "338e4d203d43511f7232d2528f44364d36c739eb86f5de1b791e68ea2e9273d2";
   };
 
   buildType = "catkin";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Custom msgs for rdl types'';
-    license = with lib.licenses; [ "zlib" ];
+    license = with lib.licenses; [ "Zlib" ];
   };
 }

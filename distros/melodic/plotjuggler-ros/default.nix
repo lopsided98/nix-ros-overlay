@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''PlotJuggler plugin for ROS'';
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "AGPLv3" ];
   };
 }

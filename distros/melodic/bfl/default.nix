@@ -27,6 +27,6 @@ buildRosPackage {
   compile the library, because BFL is not available from an OS package
   manager.  This ROS package compiles BFL with the Boost library for
   matrix operations and random number generation.'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

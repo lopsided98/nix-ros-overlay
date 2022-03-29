@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Driver file descriptions for P2OS/ARCOS robot'';
-    license = with lib.licenses; [ gpl2 ];
+    license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

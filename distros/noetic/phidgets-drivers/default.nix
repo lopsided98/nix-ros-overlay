@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''API and ROS drivers for Phidgets devices'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-&-LGPL" ];
   };
 }

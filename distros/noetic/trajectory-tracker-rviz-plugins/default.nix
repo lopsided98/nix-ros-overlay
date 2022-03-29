@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Rviz plugins for trajectory_tracker_msgs'';
-    license = with lib.licenses; [ bsdOriginal "CC-BY-SA-3.0" ];
+    license = with lib.licenses; [ bsdOriginal "Creative-Commons" ];
   };
 }

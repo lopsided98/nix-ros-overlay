@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS1 H264 encoder node'';
-    license = with lib.licenses; [ lgpl21 ];
+    license = with lib.licenses; [ "LGPL-2.1-only" ];
   };
 }

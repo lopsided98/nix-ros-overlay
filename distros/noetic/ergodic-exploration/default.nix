@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''Robot agnostic information theoretic exploration strategy'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

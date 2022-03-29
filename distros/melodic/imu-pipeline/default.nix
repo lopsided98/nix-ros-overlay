@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''imu_pipeline'';
-    license = with lib.licenses; [ bsdOriginal gpl1 ];
+    license = with lib.licenses; [ bsdOriginal "GPL" ];
   };
 }

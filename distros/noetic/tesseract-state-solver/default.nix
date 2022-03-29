@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, console-bridge, eigen, gtest, orocos-kdl, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-scene-graph, tesseract-support, tesseract-urdf }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-state-solver";
-  version = "0.6.9-r1";
+  version = "0.8.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_state_solver/0.6.9-1.tar.gz";
-    name = "0.6.9-1.tar.gz";
-    sha256 = "16475414eb53d97280a5a2d6eb06581788087b8c636b0ac4c6beb96452a05e1a";
+    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_state_solver/0.8.6-1.tar.gz";
+    name = "0.8.6-1.tar.gz";
+    sha256 = "276a04d82d2fbd90a0bd4d837a0bf8146a16e2189abeaef32c815c554c625b60";
   };
 
   buildType = "cmake";

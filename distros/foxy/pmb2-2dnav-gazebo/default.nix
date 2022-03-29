@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = ''PMB2-specific launch files needed to run
     navigation on the PMB2 robot.'';
-    license = with lib.licenses; [ "Modified BSD" ];
+    license = with lib.licenses; [ "Modified-BSD" ];
   };
 }

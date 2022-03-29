@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The lms1xx package contains a basic ROS driver for the SICK LMS1xx line of LIDARs.'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

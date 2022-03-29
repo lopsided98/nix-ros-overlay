@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''TODO: Package description'';
-    license = with lib.licenses; [ "TODO: License declaration" ];
+    license = with lib.licenses; [ "TODO-License-declaration" ];
   };
 }

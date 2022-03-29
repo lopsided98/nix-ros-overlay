@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cob-actions, cob-light, cob-script-server, cob-sound, geometry-msgs, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-cob-teleop";
-  version = "0.6.27-r1";
+  version = "0.6.28-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/cob_teleop/0.6.27-1.tar.gz";
-    name = "0.6.27-1.tar.gz";
-    sha256 = "60fc73bf5cb39dcc5be8b5c3990ee85c0eb176953bada1c1eaf753aae789a38d";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/cob_teleop/0.6.28-1.tar.gz";
+    name = "0.6.28-1.tar.gz";
+    sha256 = "6c0af771ae8da51ebe1b8bff718166782ae254444c08ea6e233377fb9825d10e";
   };
 
   buildType = "catkin";

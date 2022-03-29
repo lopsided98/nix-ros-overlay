@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Move any joint with any controller!'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

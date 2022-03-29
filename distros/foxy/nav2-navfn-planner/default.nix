@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''TODO'';
-    license = with lib.licenses; [ asl20 bsdOriginal ];
+    license = with lib.licenses; [ asl20 "BSD-3-Clause" ];
   };
 }

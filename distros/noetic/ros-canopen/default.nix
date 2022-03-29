@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''A generic canopen implementation for ROS'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

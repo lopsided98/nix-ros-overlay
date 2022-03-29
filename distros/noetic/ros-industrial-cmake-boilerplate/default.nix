@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Contains boilerplate cmake script, macros and utils'';
-    license = with lib.licenses; [ asl20 bsdOriginal ];
+    license = with lib.licenses; [ asl20 "BSD-3-Clause" ];
   };
 }

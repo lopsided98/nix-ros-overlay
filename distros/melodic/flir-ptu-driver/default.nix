@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Driver for the FLIR pan/tilt units.'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

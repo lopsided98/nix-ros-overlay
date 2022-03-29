@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Serving and persisting label information'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

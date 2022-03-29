@@ -13,7 +13,7 @@ buildRosPackage {
     sha256 = "85ccd955cbadc897374c94ea50e08eecb1aa5562d37fb8a90fa18001ab832a3b";
   };
 
-  buildType = "catkin";
+  buildType = "ament_cmake";
   buildInputs = [ ros-environment ];
   propagatedBuildInputs = [ automotive-navigation-msgs automotive-platform-msgs ];
   nativeBuildInputs = [ ament-cmake ];

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''converts point clouds and attributes into meshes and mesh attributes'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The psen_scan package for Pilz laser scanner'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL-3.0-only" ];
   };
 }

@@ -26,6 +26,6 @@ buildRosPackage {
 
   This implementation is created for the specific purpose of creating
   over-segmentations in an OpenCV-based environment.'';
-    license = with lib.licenses; [ "N/A" ];
+    license = with lib.licenses; [ "N-A" ];
   };
 }

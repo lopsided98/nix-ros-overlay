@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''A ROS2 wrapper for xbee devices using digi-xbee python API'';
-    license = with lib.licenses; [ "TODO: License declaration" ];
+    license = with lib.licenses; [ "TODO-License-declaration" ];
   };
 }

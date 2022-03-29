@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, python-qt-binding, pythonPackages, qt-gui, qt-gui-py-common, rospy, rqt-bag, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-melodic-rqt-robot-monitor";
-  version = "0.5.13-r1";
+  version = "0.5.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_robot_monitor-release/archive/release/melodic/rqt_robot_monitor/0.5.13-1.tar.gz";
-    name = "0.5.13-1.tar.gz";
-    sha256 = "e77c163447c085b75b36d89c0f8a06b52f44efa1ba470c5cb2e0aef5a03adb6b";
+    url = "https://github.com/ros-gbp/rqt_robot_monitor-release/archive/release/melodic/rqt_robot_monitor/0.5.14-1.tar.gz";
+    name = "0.5.14-1.tar.gz";
+    sha256 = "914de4f23e33719f90164020750d84e1445f37c7abfef9b477927235eae3b527";
   };
 
   buildType = "catkin";

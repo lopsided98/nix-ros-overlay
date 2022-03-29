@@ -8,9 +8,9 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/espeak-ros2/espeak-ros2-release/-/archive/release/foxy/espeak_interfaces/1.0.0-1/espeak-ros2-release-release-foxy-espeak_interfaces-1.0.0-1.tar.gz";
-    name = "espeak-ros2-release-release-foxy-espeak_interfaces-1.0.0-1.tar.gz";
-    sha256 = "9fac62992b1ae3f6de3aded1216811a042f6a0389e8764fc8666bb8a9248e3fb";
+    url = "https://gitlab.com/espeak-ros2/espeak-ros2-release/-/archive/release/foxy/espeak_interfaces/1.0.0-1/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "946b044e2311581d5f544fd31566154f17ae0bf36c41c41a2e020b91e957ea2a";
   };
 
   buildType = "ament_cmake";

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''ros2 hardware interface for realsense camera'';
-    license = with lib.licenses; [ asl20 ];
+    license = with lib.licenses; [ "apache-2.0" ];
   };
 }

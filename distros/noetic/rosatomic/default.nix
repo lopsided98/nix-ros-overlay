@@ -20,6 +20,6 @@ buildRosPackage {
     description = ''rosatomic provides the C++11-style atomic operations by pulling symbols from the proposed Boost.Atomic
      package into the ros namespace.  Once C++11-style atomics (std::atomic) are available from compilers, rosatomic will
      conditionally use those instead.'';
-    license = with lib.licenses; [ bsdOriginal boost ];
+    license = with lib.licenses; [ bsdOriginal "BSL-1.0" ];
   };
 }

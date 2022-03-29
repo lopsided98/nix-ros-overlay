@@ -13,7 +13,7 @@ buildRosPackage {
     sha256 = "bd6f9c0bb160e9ba0e1ae3672a072f1e2743a8e02d1b9e2e49a8dbbc723c3864";
   };
 
-  buildType = "catkin";
+  buildType = "ament_cmake";
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ boost lanelet2-core lanelet2-traffic-rules mrt-cmake-modules ];
   nativeBuildInputs = [ ament-cmake-core mrt-cmake-modules ];

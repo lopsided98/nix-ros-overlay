@@ -21,6 +21,6 @@ buildRosPackage {
     description = ''Graphical interface, written in PySide, to manage the running and 
      configured ROS nodes on different hosts. For discovering 
      the running ROS master master_discovery node will be used.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-&-some-icons-are-licensed-under-LGPL-or-CC-BY-NC-3.0" ];
   };
 }

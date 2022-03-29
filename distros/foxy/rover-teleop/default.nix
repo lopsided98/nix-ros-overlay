@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Contains Rover provided teleoperation applications.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

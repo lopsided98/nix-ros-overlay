@@ -29,6 +29,6 @@ buildRosPackage {
 
     ViSP can be useful in robotics, computer vision, augmented reality
     and computer animation.'';
-    license = with lib.licenses; [ gpl2 ];
+    license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

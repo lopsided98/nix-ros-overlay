@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The move_base_sequence package'';
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "GPL-3.0-only" ];
   };
 }

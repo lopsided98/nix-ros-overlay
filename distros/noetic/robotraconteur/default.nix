@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bluez, boost, catkin, dbus, libusb1, openssl, python3, python3Packages, zlib }:
 buildRosPackage {
   pname = "ros-noetic-robotraconteur";
-  version = "0.15.4-r1";
+  version = "0.15.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros-release/archive/release/noetic/robotraconteur/0.15.4-1.tar.gz";
-    name = "0.15.4-1.tar.gz";
-    sha256 = "82a221b2e1b37291f02de6bd3962f0190de41f7de2f106bd953ce4fb3e58bfd1";
+    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros-release/archive/release/noetic/robotraconteur/0.15.5-1.tar.gz";
+    name = "0.15.5-1.tar.gz";
+    sha256 = "db9915e61c7d083039943fbab37e24d53709b8237ac97f026b55b3e4ce84a30d";
   };
 
   buildType = "cmake";

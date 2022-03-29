@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''libqt-widgets metapackage supporting qt4 and qt5'';
-    license = with lib.licenses; [ "United States Government Purpose" "SwRI Proprietary" ];
+    license = with lib.licenses; [ "United-States-Government-Purpose" "SwRI-Proprietary" ];
   };
 }

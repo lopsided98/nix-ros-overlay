@@ -24,6 +24,6 @@ buildRosPackage {
     within this map to create a plan for navigation. When used together with
     a SLAM module it can also be used to perform autonomous exploration of
     the robot's workspace.'';
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "GPL-3.0-only" ];
   };
 }

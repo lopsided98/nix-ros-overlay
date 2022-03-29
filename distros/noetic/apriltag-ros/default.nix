@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, apriltag, catkin, cmake-modules, cv-bridge, eigen, geometry-msgs, image-geometry, image-transport, message-generation, message-runtime, nodelet, opencv3, pluginlib, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-apriltag-ros";
-  version = "3.1.2-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/AprilRobotics/apriltag_ros-release/archive/release/noetic/apriltag_ros/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "303875c5224713f03cba55605b0d5110fbce4325ecce284505aa825ea8224537";
+    url = "https://github.com/AprilRobotics/apriltag_ros-release/archive/release/noetic/apriltag_ros/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "2e7f1a6a2c72ad6563abb377f77f977af9c3dddfaad9214c45f47e95a11ec8a4";
   };
 
   buildType = "catkin";

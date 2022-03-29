@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The sr_hand_detector package'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

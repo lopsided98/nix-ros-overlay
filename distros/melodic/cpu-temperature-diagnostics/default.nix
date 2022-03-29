@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Collect and diagnose cpu temperature informations'';
-    license = with lib.licenses; [ "(c) Ascent Robotics Inc. All rights reserved." ];
+    license = with lib.licenses; [ "-c-Ascent-Robotics-Inc.-All-rights-reserved." ];
   };
 }

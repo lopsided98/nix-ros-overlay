@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package with the ROS-equivalent of PX4 uORB msgs'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

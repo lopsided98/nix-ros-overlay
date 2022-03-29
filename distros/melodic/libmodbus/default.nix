@@ -23,6 +23,6 @@ buildRosPackage {
       2) Moving Mean
       3) Gravity Compensation (used for force-torque sensors)
       4) Threshold Filter'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL-3.0-only" ];
   };
 }

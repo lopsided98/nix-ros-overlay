@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''Refactored map server for ROS2 Navigation'';
-    license = with lib.licenses; [ asl20 bsdOriginal ];
+    license = with lib.licenses; [ asl20 "BSD-3-Clause" ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the ROS interface for qbrobotics® qbhand device.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

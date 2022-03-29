@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages for communicating with a Rover Pro.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

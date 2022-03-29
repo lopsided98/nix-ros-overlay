@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Node/nodelet combination to transform sensor_msgs::Imu data from one frame into another.'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

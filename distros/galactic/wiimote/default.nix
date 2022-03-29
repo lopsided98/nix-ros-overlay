@@ -28,6 +28,6 @@ buildRosPackage {
     nodes to control the Wiimote's LEDs and vibration for feedback to the human
     Wiimote operator. LEDs and vibration may be switched on and off, or made to
     operate according to a timed pattern.'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

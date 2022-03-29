@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The pilz_trajectory_generation package containing the MoveIt! plugin pilz_command_planner.'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL-3.0-only" ];
   };
 }

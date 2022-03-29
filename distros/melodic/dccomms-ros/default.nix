@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The dccomms_ros package'';
-    license = with lib.licenses; [ "TODO" ];
+    license = with lib.licenses; [ "TODO-CATKIN-PACKAGE-LICENSE" ];
   };
 }

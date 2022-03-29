@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Ros navigation utilities.'';
-    license = with lib.licenses; [ "Yujin Robot" ];
+    license = with lib.licenses; [ "Yujin-Robot" ];
   };
 }

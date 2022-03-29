@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''This is an implementation of the EtherCAT master protocol for the PR2
       robot based on the work done at Flanders' Mechatronics Technology Centre.'';
-    license = with lib.licenses; [ "Binary Only" ];
+    license = with lib.licenses; [ "Binary-Only" ];
   };
 }

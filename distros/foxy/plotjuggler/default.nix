@@ -13,12 +13,12 @@ buildRosPackage {
     sha256 = "be3ba195a60718a5080a63e34385447a84daba6f8d74c15a771652321bb6f502";
   };
 
-  buildType = "catkin";
+  buildType = "ament_cmake";
   propagatedBuildInputs = [ ament-index-cpp binutils boost cppzmq qt5.qtbase qt5.qtsvg qt5.qtwebsockets qt5.qtx11extras ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''PlotJuggler: juggle with data'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL-3.0-only" ];
   };
 }

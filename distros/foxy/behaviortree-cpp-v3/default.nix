@@ -13,7 +13,7 @@ buildRosPackage {
     sha256 = "1650215dfeff9009bb656a5554d379673c51167e50d1ba630e4a107bd16f1ec3";
   };
 
-  buildType = "catkin";
+  buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ ament-index-cpp boost cppzmq ncurses rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

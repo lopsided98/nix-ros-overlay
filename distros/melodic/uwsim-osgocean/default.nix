@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The OSG Ocean library adapted to UWSim. See https://code.google.com/p/osgocean'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

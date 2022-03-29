@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''A ROS package providing access to the HEBI C++ API.'';
-    license = with lib.licenses; [ "HEBI C++ Software License (https://www.hebirobotics.com/softwarelicense)" ];
+    license = with lib.licenses; [ "HEBI-C-Software-License-https-www.hebirobotics.com-softwarelicense-" ];
   };
 }

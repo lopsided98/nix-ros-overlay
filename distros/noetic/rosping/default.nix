@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = ''rosping is the tool to send ICMP ECHO_REQUEST to network hosts where roscore is running, and send back to you as rostopic message. <br/>
     For echoing ROS node, use <a href="http://wiki.ros.org/rosnode">rosnode</a>.'';
-    license = with lib.licenses; [ boost ];
+    license = with lib.licenses; [ "BSL-1.0" ];
   };
 }

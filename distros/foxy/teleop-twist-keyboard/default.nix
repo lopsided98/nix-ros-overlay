@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''A robot-agnostic teleoperation node to convert keyboard commands to Twist
     messages.'';
-    license = with lib.licenses; [ bsd2 ];
+    license = with lib.licenses; [ "BSD-License-2.0" ];
   };
 }

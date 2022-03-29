@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''A package containing scripts for demos'';
-    license = with lib.licenses; [ asl20 ];
+    license = with lib.licenses; [ "Apache-Licence-2.0" ];
   };
 }

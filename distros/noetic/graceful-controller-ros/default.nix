@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, base-local-planner, catkin, costmap-2d, dynamic-reconfigure, geometry-msgs, graceful-controller, nav-core, nav-msgs, pluginlib, roscpp, std-msgs, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-graceful-controller-ros";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/mikeferguson/graceful_controller-gbp/archive/release/noetic/graceful_controller_ros/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "957ba8bc12549f73afb8f9f9d54b8dc9072e8c3005dd3bdafc54ab211edd3501";
+    url = "https://github.com/mikeferguson/graceful_controller-gbp/archive/release/noetic/graceful_controller_ros/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "dbf471ed9f9227880baa95f95e1ce2f58d39867fcd4e4cc3244f095cf5ec77ec";
   };
 
   buildType = "catkin";

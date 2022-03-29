@@ -8,9 +8,9 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/espeak-ros2/espeak-ros2-release/-/archive/release/foxy/espeak_ros/1.0.0-1/espeak-ros2-release-release-foxy-espeak_ros-1.0.0-1.tar.gz";
-    name = "espeak-ros2-release-release-foxy-espeak_ros-1.0.0-1.tar.gz";
-    sha256 = "bbefb7e80bc3dbdfbf467050cabd658a12ca4a8216fb9122e2785e68960a8e6e";
+    url = "https://gitlab.com/espeak-ros2/espeak-ros2-release/-/archive/release/foxy/espeak_ros/1.0.0-1/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "0fcfc70a61735971c858a4ed23dfeb920c1db630f0228556f11816c7124603e5";
   };
 
   buildType = "ament_python";

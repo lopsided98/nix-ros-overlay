@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, genmsg, genpy, python-qt-binding, qt-gui, rosbag, roslib, rospy, rostopic, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rqt-py-common";
-  version = "0.5.2-r1";
+  version = "0.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt-release/archive/release/melodic/rqt_py_common/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "8c59891fcdbf11af9c98cc0ad0b3248a35250d781bf855c3d0d48f27d67a70ff";
+    url = "https://github.com/ros-gbp/rqt-release/archive/release/melodic/rqt_py_common/0.5.3-1.tar.gz";
+    name = "0.5.3-1.tar.gz";
+    sha256 = "7a2326df173b225e7f9033904fad9d30b3efc55fb94cd23fcfd75c4e094d5fa0";
   };
 
   buildType = "catkin";

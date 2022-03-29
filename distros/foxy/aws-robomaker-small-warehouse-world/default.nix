@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''AWS RoboMaker package for a warehouse world to use in manufacturing and logistics robot applications.'';
-    license = with lib.licenses; [ mit ];
+    license = with lib.licenses; [ "MIT-0" ];
   };
 }

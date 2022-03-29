@@ -1024,6 +1024,8 @@ self: super: {
 
  fake-localization = self.callPackage ./fake-localization {};
 
+ fath-pivot-mount-description = self.callPackage ./fath-pivot-mount-description {};
+
  fcl-catkin = self.callPackage ./fcl-catkin {};
 
  fetch-auto-dock-msgs = self.callPackage ./fetch-auto-dock-msgs {};
@@ -1131,6 +1133,8 @@ self: super: {
  four-wheel-steering-controller = self.callPackage ./four-wheel-steering-controller {};
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
+
+ frame-editor = self.callPackage ./frame-editor {};
 
  franka-control = self.callPackage ./franka-control {};
 
@@ -4101,6 +4105,24 @@ self: super: {
  timestamp-tools = self.callPackage ./timestamp-tools {};
 
  topic-tools = self.callPackage ./topic-tools {};
+
+ toposens = self.callPackage ./toposens {};
+
+ toposens-bringup = self.callPackage ./toposens-bringup {};
+
+ toposens-description = self.callPackage ./toposens-description {};
+
+ toposens-driver = self.callPackage ./toposens-driver {};
+
+ toposens-echo-driver = self.callPackage ./toposens-echo-driver {};
+
+ toposens-markers = self.callPackage ./toposens-markers {};
+
+ toposens-msgs = self.callPackage ./toposens-msgs {};
+
+ toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
+
+ toposens-sync = self.callPackage ./toposens-sync {};
 
  tork-moveit-tutorial = self.callPackage ./tork-moveit-tutorial {};
 

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The imu_from_ios_sensorlog package'';
-    license = with lib.licenses; [ "TODO" ];
+    license = with lib.licenses; [ "TODO-CATKIN-PACKAGE-LICENSE" ];
   };
 }

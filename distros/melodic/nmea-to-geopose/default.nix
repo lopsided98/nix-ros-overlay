@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The nmea_to_geopose package'';
-    license = with lib.licenses; [ "Apachi 2" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package containing utility code for C++.'';
-    license = with lib.licenses; [ asl20 bsdOriginal ];
+    license = with lib.licenses; [ asl20 "BSD-3-Clause" ];
   };
 }

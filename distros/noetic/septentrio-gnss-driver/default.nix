@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROSaic: C++ driver for Septentrio's mosaic receivers and beyond'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause-License" ];
   };
 }

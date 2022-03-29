@@ -8,9 +8,9 @@ buildRosPackage {
   version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/ApexAI/point_cloud_msg_wrapper-release/-/archive/release/galactic/point_cloud_msg_wrapper/1.0.7-1/point_cloud_msg_wrapper-release-release-galactic-point_cloud_msg_wrapper-1.0.7-1.tar.gz";
-    name = "point_cloud_msg_wrapper-release-release-galactic-point_cloud_msg_wrapper-1.0.7-1.tar.gz";
-    sha256 = "806dd274522a1260c4201ffd3ccb1d2e8b8fc2ead67c884dd1702eed0bca2007";
+    url = "https://gitlab.com/ApexAI/point_cloud_msg_wrapper-release/-/archive/release/galactic/point_cloud_msg_wrapper/1.0.7-1/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "dce60d50bb7d80f2b9c77e5ddc1697666e647f21b4ccd5df0e198f66610a31a6";
   };
 
   buildType = "ament_cmake";

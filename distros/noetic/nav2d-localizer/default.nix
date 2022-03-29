@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''Wrapper around Particle Filter implementation.
     The SelfLocalizer can be used as library or as a ros-node.'';
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "GPL-3.0-only" ];
   };
 }

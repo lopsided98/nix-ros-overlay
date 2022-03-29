@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/melodic/rokubimini_bus_manager/0.6.1-1/bota_driver-release-release-melodic-rokubimini_bus_manager-0.6.1-1.tar.gz";
-    name = "bota_driver-release-release-melodic-rokubimini_bus_manager-0.6.1-1.tar.gz";
-    sha256 = "c1183bd1a9fa9877b99d9c193cd8274f039d16c9bcf268d33b77d8fcbd0c00d4";
+    url = "https://gitlab.com/botasys/bota_driver-release/-/archive/release/melodic/rokubimini_bus_manager/0.6.1-1/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "959832b0c624517b30028c18322fe0d2e30e01677bc05f2cf9c8a89ceb225994";
   };
 
   buildType = "catkin";

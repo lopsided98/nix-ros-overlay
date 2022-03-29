@@ -21,6 +21,6 @@ buildRosPackage {
     description = ''The pythonwifi package is available through pypi, but not through a 
     deb package. This is copy of the package suitable for use through the
     ROS ecosystem.'';
-    license = with lib.licenses; [ gpl2 ];
+    license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

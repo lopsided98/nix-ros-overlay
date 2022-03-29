@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Messages used for 2D-Navigation.'';
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "GPL-3.0-only" ];
   };
 }

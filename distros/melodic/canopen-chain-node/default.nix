@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Base implementation for CANopen chains node with support for management services and diagnostics'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL-3.0-only" ];
   };
 }

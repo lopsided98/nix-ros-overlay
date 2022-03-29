@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, eigen, geometry-msgs, nav-msgs, roscpp, roslib, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-steering-functions";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/steering_functions-release/archive/release/noetic/steering_functions/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "b5c609ae4d3cc7ac00530c7ef805d9cc9f0313dd3b3be10dca6cf8481ceb052e";
+    url = "https://github.com/nobleo/steering_functions-release/archive/release/noetic/steering_functions/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "2a652f09d03ada9a6959f635e36563705c6e3447b809a154f377206197493cc4";
   };
 
   buildType = "catkin";

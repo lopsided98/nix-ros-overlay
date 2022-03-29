@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Basic message types for two dimensional navigation, extending from geometry_msgs::Pose2D.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

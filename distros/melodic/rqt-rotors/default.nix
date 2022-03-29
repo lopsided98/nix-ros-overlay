@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rqt_rotors package'';
-    license = with lib.licenses; [ asl20 ];
+    license = with lib.licenses; [ "ASL-2.0" ];
   };
 }

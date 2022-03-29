@@ -23,6 +23,6 @@ buildRosPackage {
     heavily modified from the package available on SourceForge in order to
     support roscpp's threading model. As such, we are maintaining our
     own fork.'';
-    license = with lib.licenses; [ lgpl21 ];
+    license = with lib.licenses; [ "LGPL-2.1-only" ];
   };
 }

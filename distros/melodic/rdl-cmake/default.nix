@@ -8,9 +8,9 @@ buildRosPackage {
   version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_cmake/3.2.0-1/rdl_release-release-melodic-rdl_cmake-3.2.0-1.tar.gz";
-    name = "rdl_release-release-melodic-rdl_cmake-3.2.0-1.tar.gz";
-    sha256 = "30c5695aa0bb0847d991d05020be78e50d5795c51b832eeb17990da8c0488bc2";
+    url = "https://gitlab.com/jlack/rdl_release/-/archive/release/melodic/rdl_cmake/3.2.0-1/archive.tar.gz";
+    name = "archive.tar.gz";
+    sha256 = "dd87bce11db76a5bd23cb7919bd886b93bb97b99df3396b824b6132619dacb7e";
   };
 
   buildType = "catkin";
@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The rdl_cmake package'';
-    license = with lib.licenses; [ "zlib" ];
+    license = with lib.licenses; [ "Zlib" ];
   };
 }

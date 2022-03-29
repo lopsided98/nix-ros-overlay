@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-galactic-asio-cmake-module";
-  version = "1.0.1-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/galactic/asio_cmake_module/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "d99bfb223aacbe7fa819e07123708eaeddc0a78c0861bf50a93bbab34e4a5616";
+    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/galactic/asio_cmake_module/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "6637bf183dcfbd6c3f2e4f0900b776f3f98b8fccabb5e55ba0bce5a49c0594ff";
   };
 
   buildType = "ament_cmake";

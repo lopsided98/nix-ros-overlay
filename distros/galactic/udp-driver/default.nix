@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, asio-cmake-module, io-context, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, std-msgs, udp-msgs }:
 buildRosPackage {
   pname = "ros-galactic-udp-driver";
-  version = "1.0.1-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/galactic/udp_driver/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "c0832f450e2aebabfce86df050e1b5453f3008a511d7d6ad6411f4c47e811fca";
+    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/galactic/udp_driver/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "a8db46b11f9368828d770dde8118732da8ce7c4363cb370eec2145c7cc56ab04";
   };
 
   buildType = "ament_cmake";

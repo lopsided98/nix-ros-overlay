@@ -27,6 +27,6 @@ buildRosPackage {
     This package also provides support for map_server based initialization of a
     costmap, rolling window based costmaps, and parameter based subscription to
     and configuration of sensor topics.'';
-    license = with lib.licenses; [ bsdOriginal asl20 ];
+    license = with lib.licenses; [ "BSD-3-Clause" asl20 ];
   };
 }

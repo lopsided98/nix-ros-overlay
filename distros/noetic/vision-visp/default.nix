@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Virtual package providing ViSP related packages.'';
-    license = with lib.licenses; [ gpl2 ];
+    license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

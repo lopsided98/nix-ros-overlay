@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Bundle python requirements in a catkin package via virtualenv.'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

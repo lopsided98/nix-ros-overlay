@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''ff: pddl planner. see http://www.loria.fr/~hoffmanj/ff.html'';
-    license = with lib.licenses; [ gpl1 ];
+    license = with lib.licenses; [ "GPL" ];
   };
 }

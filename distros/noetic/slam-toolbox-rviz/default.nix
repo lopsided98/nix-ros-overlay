@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides a sped up improved slam karto with updated SDK and visualization and modification toolsets'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

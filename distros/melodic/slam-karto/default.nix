@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = ''This package pulls in the Karto mapping library, and provides a ROS
      wrapper for using it.'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

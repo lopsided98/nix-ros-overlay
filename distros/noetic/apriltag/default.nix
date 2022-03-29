@@ -2,19 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, python3Packages }:
+{ lib, buildRosPackage, fetchurl, cmake, opencv3, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-apriltag";
-  version = "3.1.6-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/AprilRobotics/apriltag-release/archive/release/noetic/apriltag/3.1.6-1.tar.gz";
-    name = "3.1.6-1.tar.gz";
-    sha256 = "5e1ab4f3dc574ade6e959333fbbb58f5122cf3a4e6a7f450090ef82f77dea27a";
+    url = "https://github.com/AprilRobotics/apriltag-release/archive/release/noetic/apriltag/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "aa4d2209785b7a6a2acdd86d1939d886efd3a7ddbc5401d1e0d4f67de6a4ac45";
   };
 
   buildType = "cmake";
   buildInputs = [ python3Packages.numpy ];
+  checkInputs = [ opencv3 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

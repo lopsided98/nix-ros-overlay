@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''URDF description of Rover.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-3-Clause" ];
   };
 }

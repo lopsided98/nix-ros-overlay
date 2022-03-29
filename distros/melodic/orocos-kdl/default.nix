@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = ''This package contains a recent version of the Kinematics and Dynamics
     Library (KDL), distributed by the Orocos Project.'';
-    license = with lib.licenses; [ lgpl2 ];
+    license = with lib.licenses; [ "LGPL" ];
   };
 }

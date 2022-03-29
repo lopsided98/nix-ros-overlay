@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Extensions for slime to assist in working with ROS packages'';
-    license = with lib.licenses; [ publicDomain ];
+    license = with lib.licenses; [ "PD" ];
   };
 }

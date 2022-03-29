@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''visp_camera_calibration allows easy calibration of
      cameras using a customizable pattern and ViSP library.'';
-    license = with lib.licenses; [ gpl2 ];
+    license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

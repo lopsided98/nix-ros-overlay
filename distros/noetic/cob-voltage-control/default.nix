@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-phidgets, dynamic-reconfigure, python3Packages, roscpp, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-voltage-control";
-  version = "0.7.11-r1";
+  version = "0.7.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_voltage_control/0.7.11-1.tar.gz";
-    name = "0.7.11-1.tar.gz";
-    sha256 = "f0097a60b2c6676a8a5b1fd8c77007002c5a331224b6fdddd8e6ba9d002ec21c";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_voltage_control/0.7.12-1.tar.gz";
+    name = "0.7.12-1.tar.gz";
+    sha256 = "bd21f7c884b3d25318f342bceaf6618fd61efc6b73e25827cb96c1593c0e9518";
   };
 
   buildType = "catkin";
