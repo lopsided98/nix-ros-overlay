@@ -1,22 +1,17 @@
-{ lib, buildPythonPackage, fetchPypi, fetchpatch, catkin-pkg, rosdistro, rospkg
-, pyyaml, pytestCheckHook }:
+{ lib, buildPythonPackage, fetchFromGitHub, fetchpatch, catkin-pkg, rosdistro
+, rospkg, pyyaml, pytestCheckHook }:
 
 buildPythonPackage rec {
   pname = "rosinstall_generator";
-  version = "0.1.22";
+  version = "unstable-20211203";
 
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "1idq8xacz7s59mb7aakma3g2w1n89i3dkcdjgzvs221zrncjbli2";
+  src = fetchFromGitHub {
+    owner = "ros-infrastructure";
+    repo = pname;
+    # Contains several important fixes
+    rev = "9024a02e0aa0e09b3a533458e05a4e862eae7ddf";
+    sha256 = "sha256-yDKQQyZE75rYDS6hL638fOJxaqkNEQ/g5NG0eBEY/K0=";
   };
-
-  patches = [
-    # Fix GitLab tarball downloads
-    (fetchpatch {
-      url = "https://github.com/lopsided98/rosinstall_generator/commit/16291631160ba9801ea5b551d6840d692acf1e44.patch";
-      sha256 = "0ynbq2n5qd49a72ylcp8cim02b2srmr1956ifp6cww1s1jrvbhgc";
-    })
-  ];
 
   propagatedBuildInputs = [ catkin-pkg rosdistro rospkg pyyaml ];
 
