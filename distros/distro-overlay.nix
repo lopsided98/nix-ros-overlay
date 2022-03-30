@@ -223,9 +223,17 @@ let
     });
 
     mapviz = rosSuper.mapviz.overrideAttrs ({
+      patches ? [],
       nativeBuildInputs ? [],
       postFixup ? "", ...
     }: {
+      # Fix linking to GLUT with CMake 3.22
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/swri-robotics/mapviz/commit/b3c8e19bc1b7e1d2478c0b13a848d7caf40b4e5e.patch";
+        sha256 = "sha256-abjP9Pn3v+aLZBOI0KiGihHgt2WLadDvdaKVyk2IlPY=";
+        stripLen = 1;
+      }) ];
+
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = postFixup + ''
