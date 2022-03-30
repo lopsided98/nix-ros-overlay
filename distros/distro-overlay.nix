@@ -143,25 +143,6 @@ let
 
     gmapping = patchBoostSignals rosSuper.gmapping;
 
-    # These packages fail to build with testing disabled [1]. This has bee
-    # fixed upstream [2] but the patch is difficult to apply, so we just enable
-    # testing instead.
-    #
-    # [1] https://github.com/lopsided98/nix-ros-overlay/issues/160
-    # [2] https://github.com/husky/husky/pull/202
-    husky-control = rosSuper.husky-control.overrideAttrs ({ ... }: {
-      doCheck = true;
-    });
-    husky-description = rosSuper.husky-description.overrideAttrs ({ ... }: {
-      doCheck = true;
-    });
-    husky-navigation = rosSuper.husky-navigation.overrideAttrs ({ ... }: {
-      doCheck = true;
-    });
-    husky-viz = rosSuper.husky-viz.overrideAttrs ({ ... }: {
-      doCheck = true;
-    });
-
     image-cb-detector = patchBoostSignals rosSuper.image-cb-detector;
 
     laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
