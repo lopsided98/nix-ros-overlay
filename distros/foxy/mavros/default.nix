@@ -22,6 +22,6 @@ buildRosPackage {
   meta = {
     description = ''MAVROS -- MAVLink extendable communication node for ROS
     with proxy for Ground Control Station.'';
-    license = with lib.licenses; [ "GPL-3.0-only" "LGPL-3.0-only" bsdOriginal ];
+    license = with lib.licenses; [ gpl3Only lgpl3Only bsdOriginal ];
   };
 }

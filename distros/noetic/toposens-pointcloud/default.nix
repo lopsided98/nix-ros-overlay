@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''PCL integration for TS sensors mounted on Turtlebot3.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

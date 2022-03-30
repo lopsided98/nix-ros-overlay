@@ -24,6 +24,6 @@ buildRosPackage {
       3) Gravity Compensation (used for force-torque sensors)
       4) Threshold Filter
       5) Kalman Filter'';
-    license = with lib.licenses; [ "LGPL-3.0-only" ];
+    license = with lib.licenses; [ lgpl3Only ];
   };
 }

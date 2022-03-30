@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides common interfaces for navigation specific robot actions. It contains the AbstractPlanner, AbstractController and AbstractRecovery plugin interfaces. This interfaces have to be implemented by the plugins to make the plugin available for Move Base Flex. The abstract classes provides a meaningful interface enabling the planners, controllers and recovery behaviors to return information, e.g. why something went wrong. Derivided interfaces can, for example, provide methods to initialize the planner, controller or recovery with map representations like costmap_2d, grid_map or other representations.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains a device-independent hardware interface for qbrobotics® devices.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

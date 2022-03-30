@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message and service definitions for interacting with Universal Robots robot controllers.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Read mesh_msgs from hdf5'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

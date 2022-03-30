@@ -24,6 +24,6 @@ buildRosPackage {
     works by evaluating a set of predefined motion primitives based on a local
     costmap and a desired direction. The best evaluated motion command will be
     send to the mobile base.'';
-    license = with lib.licenses; [ "GPL-3.0-only" ];
+    license = with lib.licenses; [ gpl3Only ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The mbf_recovery_behaviors package'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

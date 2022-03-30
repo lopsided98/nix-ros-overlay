@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''CiA(r) CANopen 301 master implementation with support for interprocess master synchronisation.'';
-    license = with lib.licenses; [ "LGPL-3.0-only" ];
+    license = with lib.licenses; [ lgpl3Only ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS driver for LP-Research OpenZen'';
-    license = with lib.licenses; [ mit "BSL-1.0" "LGPL-3.0-only" bsdOriginal ];
+    license = with lib.licenses; [ mit "BSL-1.0" lgpl3Only bsdOriginal ];
   };
 }

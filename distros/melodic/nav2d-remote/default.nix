@@ -22,6 +22,6 @@ buildRosPackage {
     navigator node from navigation_2d. Currently there is one node to control one
     robot with a joystick and one to control multiple robots in simulation.
     It can send commands directly to the operator or start and stop navigator actions.'';
-    license = with lib.licenses; [ "GPL-3.0-only" ];
+    license = with lib.licenses; [ gpl3Only ];
   };
 }

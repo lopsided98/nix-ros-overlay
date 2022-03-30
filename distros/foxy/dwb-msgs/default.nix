@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Message/Service definitions specifically for the dwb_core'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

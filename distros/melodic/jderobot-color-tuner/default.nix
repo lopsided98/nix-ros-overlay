@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The jderobot_color_tuner tool package'';
-    license = with lib.licenses; [ "GPL-3.0-only" ];
+    license = with lib.licenses; [ gpl3Only ];
   };
 }

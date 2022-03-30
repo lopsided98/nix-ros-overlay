@@ -21,6 +21,6 @@ buildRosPackage {
     description = ''<p>
      An incremental laser scan matcher, using Andrea Censi's Canonical Scan Matcher (CSM) implementation. See <a href="http://censi.mit.edu/software/csm/">the web site</a> for more about CSM. NOTE the CSM library is licensed under the GNU Lesser General Public License v3, whereas the rest of the code is released under the BSD license.
     </p>'';
-    license = with lib.licenses; [ bsdOriginal "LGPL-3.0-only" ];
+    license = with lib.licenses; [ bsdOriginal lgpl3Only ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Various Message Types for Mesh Data.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

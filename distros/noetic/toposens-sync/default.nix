@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Operational sync of multiple TS sensors.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

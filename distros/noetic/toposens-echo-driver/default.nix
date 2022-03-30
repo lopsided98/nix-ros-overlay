@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS device driver for communication with TS ECHO sensors on a CAN bus'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

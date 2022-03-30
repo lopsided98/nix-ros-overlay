@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, franka-control, franka-description, franka-example-controllers, franka-gazebo, franka-gripper, franka-hw, franka-msgs, franka-visualization, panda-moveit-config }:
 buildRosPackage {
   pname = "ros-melodic-franka-ros";
-  version = "0.8.2-r1";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_ros/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "2762eb70f24ee64dc5436b77dfb51333082cc7902b7ebbdeaf56776d8fc09156";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_ros/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "0698e1aff8087bdd764d7a4ac350da73a6bafe85c54190fac5097bb2ae9fc692";
   };
 
   buildType = "catkin";

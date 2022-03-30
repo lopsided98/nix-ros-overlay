@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, franka-description, libfranka, roscpp, sensor-msgs, xacro }:
 buildRosPackage {
   pname = "ros-melodic-franka-visualization";
-  version = "0.8.2-r1";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_visualization/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "68fe5c756bb5b0f424ea97a4465658e17f43d720925b571300f7da04b83aea71";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_visualization/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "d856dcc1a9380200475115faac6e20e63715c5a7d39264576fd5d12b68028aa4";
   };
 
   buildType = "catkin";

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launch files for bringup and demos of toposens package.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

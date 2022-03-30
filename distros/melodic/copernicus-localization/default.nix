@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The copernicus_localization package'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

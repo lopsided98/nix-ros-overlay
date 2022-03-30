@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''LGSVL Simulator Bridge'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

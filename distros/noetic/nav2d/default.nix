@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Meta-Package containing modules for 2D-Navigation'';
-    license = with lib.licenses; [ "GPL-3.0-only" ];
+    license = with lib.licenses; [ gpl3Only ];
   };
 }

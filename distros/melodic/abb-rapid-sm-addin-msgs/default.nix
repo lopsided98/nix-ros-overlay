@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = ''Provides ROS message and service definitions, representing interaction
     with ABB robot controllers using the RobotWare StateMachine Add-In.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

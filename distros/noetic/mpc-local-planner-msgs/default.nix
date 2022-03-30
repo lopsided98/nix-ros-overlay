@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package provides message types that are used by the package mpc_local_planner'';
-    license = with lib.licenses; [ "GPL-3.0-only" ];
+    license = with lib.licenses; [ gpl3Only ];
   };
 }

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launch files for Rover Simulation'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

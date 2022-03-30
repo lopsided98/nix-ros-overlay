@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS support for Toposens 3D Ultrasound sensors.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

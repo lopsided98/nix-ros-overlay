@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The Continuous Vector Field Planner (CVP) mesh planner package'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

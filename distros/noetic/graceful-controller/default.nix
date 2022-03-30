@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''A controller.'';
-    license = with lib.licenses; [ "LGPL-3.0-only" ];
+    license = with lib.licenses; [ lgpl3Only ];
   };
 }

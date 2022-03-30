@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS 2 Driver for LP-Research inertial measurement units and satellite navigation senors'';
-    license = with lib.licenses; [ mit "BSL-1.0" "LGPL-3.0-only" bsdOriginal ];
+    license = with lib.licenses; [ mit "BSL-1.0" lgpl3Only bsdOriginal ];
   };
 }

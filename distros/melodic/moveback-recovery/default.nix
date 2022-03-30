@@ -21,6 +21,6 @@ buildRosPackage {
     description = ''The Move Base Flex (MBF) recovery behavior moves the robot back for specified length.
         It also checks the costmap for a possible collision behind the robot while moving and
         stops the robot if necessary.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

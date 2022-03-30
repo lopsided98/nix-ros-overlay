@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Generic CAN interface description with helpers for filtering and driver implementation. Further a socketcan implementation based on boost::asio is included.'';
-    license = with lib.licenses; [ "LGPL-3.0-only" ];
+    license = with lib.licenses; [ lgpl3Only ];
   };
 }

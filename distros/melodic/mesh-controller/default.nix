@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The mesh_controller package'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''This package contains the ROS control node for qbrobotics® qbhand device.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

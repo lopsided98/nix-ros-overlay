@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Metapackage that groups together the gazebo_video_monitors packages.'';
-    license = with lib.licenses; [ "GPL-3.0-only" ];
+    license = with lib.licenses; [ gpl3Only ];
   };
 }

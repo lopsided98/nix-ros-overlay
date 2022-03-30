@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS message definitions for TS sensors.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

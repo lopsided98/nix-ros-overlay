@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Rviz integration for TS sensor data.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

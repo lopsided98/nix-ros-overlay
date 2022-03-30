@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = ''Package with ReflexxesTypeII implementation and header files'';
-    license = with lib.licenses; [ "LGPL-3.0-only" ];
+    license = with lib.licenses; [ lgpl3Only ];
   };
 }

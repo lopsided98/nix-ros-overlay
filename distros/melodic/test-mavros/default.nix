@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Tests for MAVROS package'';
-    license = with lib.licenses; [ bsdOriginal "GPL-3.0-only" "LGPL-3.0-only" ];
+    license = with lib.licenses; [ bsdOriginal gpl3Only lgpl3Only ];
   };
 }

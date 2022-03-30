@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Extra nodes and plugins for <a href="http://wiki.ros.org/mavros">MAVROS</a>.'';
-    license = with lib.licenses; [ "GPL-3.0-only" "LGPL-3.0-only" bsdOriginal ];
+    license = with lib.licenses; [ gpl3Only lgpl3Only bsdOriginal ];
   };
 }

@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''The dijkstra_mesh_planner package'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

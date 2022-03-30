@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''Provides controllers that use the speed scaling interface.'';
-    license = with lib.licenses; [ asl20 "BSD-3-Clause" ];
+    license = with lib.licenses; [ asl20 bsd3 ];
   };
 }

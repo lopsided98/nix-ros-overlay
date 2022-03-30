@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = ''3D models of the sensor for visualization.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

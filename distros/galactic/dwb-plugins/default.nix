@@ -22,6 +22,6 @@ buildRosPackage {
   meta = {
     description = ''Standard implementations of the GoalChecker
       and TrajectoryGenerators for dwb_core'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

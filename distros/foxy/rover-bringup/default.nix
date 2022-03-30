@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Launch files and configuration scripts for operation of the Rover and suported sensors.'';
-    license = with lib.licenses; [ "BSD-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

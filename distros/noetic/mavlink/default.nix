@@ -24,6 +24,6 @@ buildRosPackage {
   for both 1.0 and 2.0 versions of protocol.
 
   For pymavlink use separate install via rosdep (python-pymavlink).'';
-    license = with lib.licenses; [ "LGPL-3.0-only" ];
+    license = with lib.licenses; [ lgpl3Only ];
   };
 }
