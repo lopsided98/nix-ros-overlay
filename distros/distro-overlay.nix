@@ -402,14 +402,15 @@ let
     });
 
     # Fix compatibility with assimp 5.1
-    # https://github.com/ros2/rviz/pull/817
+    # https://github.com/ros2/rviz/pull/827
     rviz-assimp-vendor = rosSuper.rviz-assimp-vendor.overrideAttrs ({
       patches ? [], ...
     }: {
       patches = patches ++ [ (self.fetchpatch {
-        url = "https://github.com/ros2/rviz/commit/dfbc93e23505f708a84ba7f5d8ebd1164f662804.patch";
-        stripLen = 1;
+        url = "https://github.com/ros2/rviz/commit/95ddcea7459cc4faf9954ba018491d1eea8d4280.patch";
         sha256 = "sha256-JW3GgSukrWR19je35crNeQNSDR6ZRoFRzpR/MBcwMws=";
+        stripLen = 1;
+        includes = [ "rviz_assimp_vendor-extras.cmake.in" ];
       }) ];
     });
 
@@ -420,6 +421,19 @@ let
         # Prevent /build RPATH references
         rm -r ogre_install
       '' + preFixup;
+    });
+
+    # Fix compatibility with assimp 5.1
+    # https://github.com/ros2/rviz/pull/827
+    rviz-rendering = rosSuper.rviz-rendering.overrideAttrs ({
+      patches ? [], ...
+    }: {
+      patches = patches ++ [ (self.fetchpatch {
+        url = "https://github.com/ros2/rviz/commit/95ddcea7459cc4faf9954ba018491d1eea8d4280.patch";
+        sha256 = "sha256-1kYIrcdm7mu39OFXeDmMWGJygeTKr1fc6ECbM5hf3ZU=";
+        stripLen = 1;
+        includes = [ "CMakeLists.txt" ];
+      }) ];
     });
 
     rxcpp-vendor = patchVendorUrl rosSuper.rxcpp-vendor {
