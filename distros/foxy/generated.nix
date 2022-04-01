@@ -682,9 +682,13 @@ self: super: {
 
  leo-description = self.callPackage ./leo-description {};
 
+ leo-desktop = self.callPackage ./leo-desktop {};
+
  leo-msgs = self.callPackage ./leo-msgs {};
 
  leo-teleop = self.callPackage ./leo-teleop {};
+
+ leo-viz = self.callPackage ./leo-viz {};
 
  lgsvl-bridge = self.callPackage ./lgsvl-bridge {};
 

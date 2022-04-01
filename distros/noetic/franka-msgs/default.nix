@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-franka-msgs";
-  version = "0.8.2-r2";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_msgs/0.8.2-2.tar.gz";
-    name = "0.8.2-2.tar.gz";
-    sha256 = "9e3b6c243b474f240e7ce29139e00e7fa2bba094aab93b3b71967708ef9e804b";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_msgs/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "e0fda6c228ccf1a692dc951dcca53197c446070599c16b8bbbe67a9bc82395fd";
   };
 
   buildType = "catkin";

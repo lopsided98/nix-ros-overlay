@@ -50,7 +50,13 @@ self: super: {
 
  arbotix-sensors = self.callPackage ./arbotix-sensors {};
 
+ aruco = self.callPackage ./aruco {};
+
  aruco-detect = self.callPackage ./aruco-detect {};
+
+ aruco-msgs = self.callPackage ./aruco-msgs {};
+
+ aruco-ros = self.callPackage ./aruco-ros {};
 
  assimp-devel = self.callPackage ./assimp-devel {};
 
@@ -553,6 +559,26 @@ self: super: {
  diagnostics = self.callPackage ./diagnostics {};
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
+
+ diffbot-base = self.callPackage ./diffbot-base {};
+
+ diffbot-bringup = self.callPackage ./diffbot-bringup {};
+
+ diffbot-control = self.callPackage ./diffbot-control {};
+
+ diffbot-description = self.callPackage ./diffbot-description {};
+
+ diffbot-gazebo = self.callPackage ./diffbot-gazebo {};
+
+ diffbot-mbf = self.callPackage ./diffbot-mbf {};
+
+ diffbot-msgs = self.callPackage ./diffbot-msgs {};
+
+ diffbot-navigation = self.callPackage ./diffbot-navigation {};
+
+ diffbot-robot = self.callPackage ./diffbot-robot {};
+
+ diffbot-slam = self.callPackage ./diffbot-slam {};
 
  dijkstra-mesh-planner = self.callPackage ./dijkstra-mesh-planner {};
 
@@ -2324,15 +2350,9 @@ self: super: {
 
  rm-common = self.callPackage ./rm-common {};
 
- rm-control = self.callPackage ./rm-control {};
-
  rm-controllers = self.callPackage ./rm-controllers {};
 
  rm-dbus = self.callPackage ./rm-dbus {};
-
- rm-description = self.callPackage ./rm-description {};
-
- rm-gazebo = self.callPackage ./rm-gazebo {};
 
  rm-gimbal-controllers = self.callPackage ./rm-gimbal-controllers {};
 
@@ -3029,6 +3049,8 @@ self: super: {
  topic-tools = self.callPackage ./topic-tools {};
 
  toposens = self.callPackage ./toposens {};
+
+ toposens-sensor-library = self.callPackage ./toposens-sensor-library {};
 
  toposens-bringup = self.callPackage ./toposens-bringup {};
 

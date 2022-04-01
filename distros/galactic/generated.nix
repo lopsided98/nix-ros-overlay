@@ -442,6 +442,8 @@ self: super: {
 
  io-context = self.callPackage ./io-context {};
 
+ irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
+
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
 
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
@@ -1581,6 +1583,8 @@ self: super: {
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-description = self.callPackage ./ur-description {};
 
  urdf = self.callPackage ./urdf {};
 
