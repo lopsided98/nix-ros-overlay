@@ -682,9 +682,13 @@ self: super: {
 
  leo-description = self.callPackage ./leo-description {};
 
+ leo-desktop = self.callPackage ./leo-desktop {};
+
  leo-msgs = self.callPackage ./leo-msgs {};
 
  leo-teleop = self.callPackage ./leo-teleop {};
+
+ leo-viz = self.callPackage ./leo-viz {};
 
  lgsvl-bridge = self.callPackage ./lgsvl-bridge {};
 
@@ -1593,6 +1597,10 @@ self: super: {
  slider-publisher = self.callPackage ./slider-publisher {};
 
  smac-planner = self.callPackage ./smac-planner {};
+
+ smacc2 = self.callPackage ./smacc2 {};
+
+ smacc2-msgs = self.callPackage ./smacc2-msgs {};
 
  smclib = self.callPackage ./smclib {};
 

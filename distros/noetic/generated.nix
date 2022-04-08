@@ -50,7 +50,13 @@ self: super: {
 
  arbotix-sensors = self.callPackage ./arbotix-sensors {};
 
+ aruco = self.callPackage ./aruco {};
+
  aruco-detect = self.callPackage ./aruco-detect {};
+
+ aruco-msgs = self.callPackage ./aruco-msgs {};
+
+ aruco-ros = self.callPackage ./aruco-ros {};
 
  assimp-devel = self.callPackage ./assimp-devel {};
 
@@ -554,6 +560,26 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
+ diffbot-base = self.callPackage ./diffbot-base {};
+
+ diffbot-bringup = self.callPackage ./diffbot-bringup {};
+
+ diffbot-control = self.callPackage ./diffbot-control {};
+
+ diffbot-description = self.callPackage ./diffbot-description {};
+
+ diffbot-gazebo = self.callPackage ./diffbot-gazebo {};
+
+ diffbot-mbf = self.callPackage ./diffbot-mbf {};
+
+ diffbot-msgs = self.callPackage ./diffbot-msgs {};
+
+ diffbot-navigation = self.callPackage ./diffbot-navigation {};
+
+ diffbot-robot = self.callPackage ./diffbot-robot {};
+
+ diffbot-slam = self.callPackage ./diffbot-slam {};
+
  dijkstra-mesh-planner = self.callPackage ./dijkstra-mesh-planner {};
 
  dingo-control = self.callPackage ./dingo-control {};
@@ -716,6 +742,8 @@ self: super: {
 
  eml = self.callPackage ./eml {};
 
+ end-effector = self.callPackage ./end-effector {};
+
  ergodic-exploration = self.callPackage ./ergodic-exploration {};
 
  ethercat-grant = self.callPackage ./ethercat-grant {};
@@ -724,9 +752,13 @@ self: super: {
 
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
+ eus-assimp = self.callPackage ./eus-assimp {};
+
  euslime = self.callPackage ./euslime {};
 
  euslisp = self.callPackage ./euslisp {};
+
+ eusurdf = self.callPackage ./eusurdf {};
 
  executive-smach = self.callPackage ./executive-smach {};
 
@@ -1318,6 +1350,8 @@ self: super: {
 
  jsk-interactive-test = self.callPackage ./jsk-interactive-test {};
 
+ jsk-model-tools = self.callPackage ./jsk-model-tools {};
+
  jsk-network-tools = self.callPackage ./jsk-network-tools {};
 
  jsk-recognition = self.callPackage ./jsk-recognition {};
@@ -1451,6 +1485,8 @@ self: super: {
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
  libcmt = self.callPackage ./libcmt {};
+
+ libcreate = self.callPackage ./libcreate {};
 
  libdlib = self.callPackage ./libdlib {};
 
@@ -1916,6 +1952,8 @@ self: super: {
 
  openni2-launch = self.callPackage ./openni2-launch {};
 
+ openrtm-aist = self.callPackage ./openrtm-aist {};
+
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
 
  openzen-sensor = self.callPackage ./openzen-sensor {};
@@ -2229,6 +2267,8 @@ self: super: {
  qb-move-description = self.callPackage ./qb-move-description {};
 
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
+
+ qt-advanced-docking = self.callPackage ./qt-advanced-docking {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
 
@@ -3029,6 +3069,8 @@ self: super: {
  topic-tools = self.callPackage ./topic-tools {};
 
  toposens = self.callPackage ./toposens {};
+
+ toposens-sensor-library = self.callPackage ./toposens-sensor-library {};
 
  toposens-bringup = self.callPackage ./toposens-bringup {};
 

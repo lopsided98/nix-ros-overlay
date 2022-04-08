@@ -442,6 +442,8 @@ self: super: {
 
  io-context = self.callPackage ./io-context {};
 
+ irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
+
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
 
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
@@ -866,6 +868,8 @@ self: super: {
 
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
 
+ plansys2-tools = self.callPackage ./plansys2-tools {};
+
  plotjuggler = self.callPackage ./plotjuggler {};
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
@@ -1187,6 +1191,8 @@ self: super: {
  rosbag2-storage = self.callPackage ./rosbag2-storage {};
 
  rosbag2-storage-default-plugins = self.callPackage ./rosbag2-storage-default-plugins {};
+
+ rosbag2-storage-mcap = self.callPackage ./rosbag2-storage-mcap {};
 
  rosbag2-test-common = self.callPackage ./rosbag2-test-common {};
 
@@ -1581,6 +1587,8 @@ self: super: {
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-description = self.callPackage ./ur-description {};
 
  urdf = self.callPackage ./urdf {};
 

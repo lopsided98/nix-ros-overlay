@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rclcpp, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-plansys2-msgs";
-  version = "2.0.1-r3";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_msgs/2.0.1-3.tar.gz";
-    name = "2.0.1-3.tar.gz";
-    sha256 = "df7293e4a536542b9a255ef6a9f87c9c8c308895904154fd3296676924911906";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_msgs/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "d35ed688059a2a25c54d5b6a8a4c9b75e0bbe931f0634ae99c499d855214421f";
   };
 
   buildType = "ament_cmake";

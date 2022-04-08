@@ -614,6 +614,8 @@ self: super: {
 
  cv-bridge = self.callPackage ./cv-bridge {};
 
+ cv-bridge-python3 = self.callPackage ./cv-bridge-python3 {};
+
  cv-camera = self.callPackage ./cv-camera {};
 
  cvp-mesh-planner = self.callPackage ./cvp-mesh-planner {};
