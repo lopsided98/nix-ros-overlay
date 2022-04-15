@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, asio, diagnostic-msgs, diagnostic-updater, geometry-msgs, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2, ublox-msgs, ublox-serialization }:
 buildRosPackage {
   pname = "ros-foxy-ublox-gps";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/KumarRobotics/ublox-release/archive/release/foxy/ublox_gps/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "9c7aecadc3643bec4b92286d257a6334e8c0f6cbd1b403b1095824e2d883af05";
+    url = "https://github.com/ros2-gbp/ublox-release/archive/release/foxy/ublox_gps/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "b1ef018e9e276cb4cf3ec87978ef94326739e608de36465170a50181686f4b5d";
   };
 
   buildType = "ament_cmake";

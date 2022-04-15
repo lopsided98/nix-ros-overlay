@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-pr2-hardware-interface";
-  version = "1.8.18";
+  version = "1.8.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_hardware_interface/1.8.18-0.tar.gz";
-    name = "1.8.18-0.tar.gz";
-    sha256 = "abbcd1c6b4af9419057f2bb0b7f7677943e16e03abdd15933e41efdc16975247";
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_hardware_interface/1.8.20-1.tar.gz";
+    name = "1.8.20-1.tar.gz";
+    sha256 = "9ce45f51e932c93e2b463687e8b2a00756aa97f885b00636c9d2095f9b09b7d6";
   };
 
   buildType = "catkin";

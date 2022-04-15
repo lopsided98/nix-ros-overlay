@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, franka-control, franka-description, franka-example-controllers, franka-gazebo, franka-gripper, franka-hw, franka-msgs, franka-visualization, panda-moveit-config }:
 buildRosPackage {
   pname = "ros-noetic-franka-ros";
-  version = "0.8.2-r2";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_ros/0.8.2-2.tar.gz";
-    name = "0.8.2-2.tar.gz";
-    sha256 = "97aafc59d74299b9971bec7496a4e597d9839fd6dd47b6fa858ea5d1e985dfdf";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_ros/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "f3c6821400ec368e35794d03054d8d0680819bc630baf553dfda1382f1c6da9d";
   };
 
   buildType = "catkin";

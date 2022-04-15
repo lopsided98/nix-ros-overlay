@@ -2,21 +2,21 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, orocos-kdl, python-orocos-kdl, pythonPackages, rostest, urdf, urdfdom-py }:
+{ lib, buildRosPackage, fetchurl, catkin, python-orocos-kdl, pythonPackages, rostest, urdfdom-py }:
 buildRosPackage {
   pname = "ros-melodic-kdl-parser-py";
-  version = "1.13.1";
+  version = "1.13.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/kdl_parser-release/archive/release/melodic/kdl_parser_py/1.13.1-0.tar.gz";
-    name = "1.13.1-0.tar.gz";
-    sha256 = "66da27c1d53a445cc5334768a54a2f792df8c46475fe24a91ff486675082c86a";
+    url = "https://github.com/ros-gbp/kdl_parser-release/archive/release/melodic/kdl_parser_py/1.13.3-1.tar.gz";
+    name = "1.13.3-1.tar.gz";
+    sha256 = "5463332e38a5d3483f6dd76859eac55d39560a019eddb02709a04adbd98490b3";
   };
 
   buildType = "catkin";
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ orocos-kdl python-orocos-kdl urdf urdfdom-py ];
-  nativeBuildInputs = [ catkin pythonPackages.catkin-pkg ];
+  propagatedBuildInputs = [ python-orocos-kdl urdfdom-py ];
+  nativeBuildInputs = [ catkin pythonPackages.catkin-pkg pythonPackages.setuptools ];
 
   meta = {
     description = ''The Kinematics and Dynamics Library (KDL) defines a tree structure

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-graceful-controller";
-  version = "0.4.1-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/mikeferguson/graceful_controller-gbp/archive/release/noetic/graceful_controller/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "0228d4c198dc85dd886df9ca9a96299fbb202bfbb67bdf056e719c9ce181ceba";
+    url = "https://github.com/mikeferguson/graceful_controller-gbp/archive/release/noetic/graceful_controller/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "f32d7af9a5f1d8acaef59eec3f9ed9f2221fa8ae43f318c3769961c69bfa54a9";
   };
 
   buildType = "catkin";

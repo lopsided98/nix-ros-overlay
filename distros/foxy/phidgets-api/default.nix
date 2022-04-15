@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, libphidget22 }:
 buildRosPackage {
   pname = "ros-foxy-phidgets-api";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/foxy/phidgets_api/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "ef33bfcb1e4046fce79ef924fe748cbf307a7e55a127fc0f98370305147b6660";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/foxy/phidgets_api/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "ad71b362a36d03cf333d374d229011f8f4f0652b47d2eff0b78069f3a01cd147";
   };
 
   buildType = "ament_cmake";

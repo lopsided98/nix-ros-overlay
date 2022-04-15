@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-foxy-ublox-serialization";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/KumarRobotics/ublox-release/archive/release/foxy/ublox_serialization/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "ac874bcd362f1af81d883cdd9daa385bd04838e764d3caef681b7b76f66523ad";
+    url = "https://github.com/ros2-gbp/ublox-release/archive/release/foxy/ublox_serialization/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "4f42a93a500feac28525a5908300e3e19baf80334170c560bc1e522b0b1e5921";
   };
 
   buildType = "ament_cmake";

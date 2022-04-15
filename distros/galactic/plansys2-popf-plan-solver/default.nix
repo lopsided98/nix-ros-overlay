@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-core, pluginlib, popf, rclcpp, ros2run }:
 buildRosPackage {
   pname = "ros-galactic-plansys2-popf-plan-solver";
-  version = "2.0.1-r3";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_popf_plan_solver/2.0.1-3.tar.gz";
-    name = "2.0.1-3.tar.gz";
-    sha256 = "e746cba7018b9c81cc72ec5d0f3484b648ba715100319c5894af53c4c298b923";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_popf_plan_solver/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "cebb036cdb2633dd49818cce4d84863de6375a228753c0dd12bbae13b05e3e02";
   };
 
   buildType = "ament_cmake";

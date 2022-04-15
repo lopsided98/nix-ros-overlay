@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, orocos-kdl, rosconsole, roscpp, rostest, tinyxml, tinyxml-2, urdf, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-melodic-kdl-parser";
-  version = "1.13.1";
+  version = "1.13.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/kdl_parser-release/archive/release/melodic/kdl_parser/1.13.1-0.tar.gz";
-    name = "1.13.1-0.tar.gz";
-    sha256 = "5931eb562bb310633fedf3c2e40b435cfa6a8d25caddb4077c04932c66c2a8a9";
+    url = "https://github.com/ros-gbp/kdl_parser-release/archive/release/melodic/kdl_parser/1.13.3-1.tar.gz";
+    name = "1.13.3-1.tar.gz";
+    sha256 = "3330b28612c51a321bfa0ab45e542b774ad69f8d73acb2f1377c20b65c90f50a";
   };
 
   buildType = "catkin";

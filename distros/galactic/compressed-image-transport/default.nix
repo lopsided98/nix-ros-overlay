@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, image-transport }:
 buildRosPackage {
   pname = "ros-galactic-compressed-image-transport";
-  version = "2.3.1-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/galactic/compressed_image_transport/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "def53261c78f0c5506df72d3c2aecce2b7f2d898c3465c3e7013dda512aae7be";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/galactic/compressed_image_transport/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "6b4f99fcf6978ea5daff7db6d451b0e269979af8c11edd59b1cf8174bf20183e";
   };
 
   buildType = "ament_cmake";

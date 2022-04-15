@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/galactic/velodyne_laserscan/2.2.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/galactic/velodyne_laserscan/2.2.0-1.tar.gz";
     name = "2.2.0-1.tar.gz";
     sha256 = "409d3a53c5b4a6c7164b3f85d7e9a4635119751820fd22c7c46b8730b3ee1794";
   };

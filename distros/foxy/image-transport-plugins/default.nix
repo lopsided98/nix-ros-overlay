@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, compressed-depth-image-transport, compressed-image-transport, theora-image-transport }:
 buildRosPackage {
   pname = "ros-foxy-image-transport-plugins";
-  version = "2.3.1-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/foxy/image_transport_plugins/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "a8523812ca9d9100d185b1d247003a8a3fa4db17a31c445a80edcff9808abf54";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/foxy/image_transport_plugins/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "7b19313282785c7640029f68db7a3c4cfab2f46ce2781574fa64451ffac8ee4c";
   };
 
   buildType = "ament_cmake";

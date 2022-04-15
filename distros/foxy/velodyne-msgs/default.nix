@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/foxy/velodyne_msgs/2.1.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/foxy/velodyne_msgs/2.1.1-1.tar.gz";
     name = "2.1.1-1.tar.gz";
     sha256 = "0e1988c6ca72a6ba237845af37bfbd41d46f10a0404ebf2c68202524d46ef857";
   };

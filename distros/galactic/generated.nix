@@ -442,6 +442,30 @@ self: super: {
 
  io-context = self.callPackage ./io-context {};
 
+ irobot-create-common-bringup = self.callPackage ./irobot-create-common-bringup {};
+
+ irobot-create-control = self.callPackage ./irobot-create-control {};
+
+ irobot-create-description = self.callPackage ./irobot-create-description {};
+
+ irobot-create-gazebo-bringup = self.callPackage ./irobot-create-gazebo-bringup {};
+
+ irobot-create-gazebo-plugins = self.callPackage ./irobot-create-gazebo-plugins {};
+
+ irobot-create-gazebo-sim = self.callPackage ./irobot-create-gazebo-sim {};
+
+ irobot-create-ignition-bringup = self.callPackage ./irobot-create-ignition-bringup {};
+
+ irobot-create-ignition-sim = self.callPackage ./irobot-create-ignition-sim {};
+
+ irobot-create-ignition-toolbox = self.callPackage ./irobot-create-ignition-toolbox {};
+
+ irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
+
+ irobot-create-nodes = self.callPackage ./irobot-create-nodes {};
+
+ irobot-create-toolbox = self.callPackage ./irobot-create-toolbox {};
+
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
 
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
@@ -750,6 +774,10 @@ self: super: {
 
  nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
 
+ novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
+
+ novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
+
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  ntrip-client = self.callPackage ./ntrip-client {};
@@ -865,6 +893,8 @@ self: super: {
  plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
 
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
+
+ plansys2-tools = self.callPackage ./plansys2-tools {};
 
  plotjuggler = self.callPackage ./plotjuggler {};
 
@@ -1084,6 +1114,8 @@ self: super: {
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
+ robot-upstart = self.callPackage ./robot-upstart {};
+
  ros1-bridge = self.callPackage ./ros1-bridge {};
 
  ros1-rosbag-storage-vendor = self.callPackage ./ros1-rosbag-storage-vendor {};
@@ -1187,6 +1219,8 @@ self: super: {
  rosbag2-storage = self.callPackage ./rosbag2-storage {};
 
  rosbag2-storage-default-plugins = self.callPackage ./rosbag2-storage-default-plugins {};
+
+ rosbag2-storage-mcap = self.callPackage ./rosbag2-storage-mcap {};
 
  rosbag2-test-common = self.callPackage ./rosbag2-test-common {};
 
@@ -1581,6 +1615,10 @@ self: super: {
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-description = self.callPackage ./ur-description {};
+
+ ur-msgs = self.callPackage ./ur-msgs {};
 
  urdf = self.callPackage ./urdf {};
 
