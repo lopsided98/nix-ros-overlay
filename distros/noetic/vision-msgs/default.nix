@@ -5,17 +5,18 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, rosunit, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-vision-msgs";
-  version = "0.0.1-r1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/Kukanani/vision_msgs-release/archive/release/noetic/vision_msgs/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "a2fe139f1c97bb56e6d891da6881080d5f8d5b31190d9f3db5fcf7f6bc462974";
+    url = "https://github.com/Kukanani/vision_msgs-release/archive/release/noetic/vision_msgs/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "aa7c87e6b6bd88fe1f2f7626d97fe0940afee038a5c7bbd95d6d29c5859c0507";
   };
 
   buildType = "catkin";
+  buildInputs = [ message-generation ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ geometry-msgs message-generation message-runtime sensor-msgs std-msgs ];
+  propagatedBuildInputs = [ geometry-msgs message-runtime sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

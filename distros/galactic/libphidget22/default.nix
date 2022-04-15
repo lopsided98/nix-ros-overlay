@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1 }:
 buildRosPackage {
   pname = "ros-galactic-libphidget22";
-  version = "2.2.2-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/galactic/libphidget22/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "46dc58a7b8e145a772b6c26892bdd082775c3b2d62515eca39264845d329d813";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/galactic/libphidget22/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "c91c3a49106020613554ece910435d677cea5c6eed3c8c51a6a5459a4ce7b7f3";
   };
 
   buildType = "ament_cmake";

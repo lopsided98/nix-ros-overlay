@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, rostest, urdfdom-py }:
 buildRosPackage {
   pname = "ros-noetic-kdl-parser-py";
-  version = "1.14.1-r1";
+  version = "1.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/kdl_parser-release/archive/release/noetic/kdl_parser_py/1.14.1-1.tar.gz";
-    name = "1.14.1-1.tar.gz";
-    sha256 = "a5d621fcd4752eec65b43af22543b33c9bc47b513438d8285ac51fd61b16602e";
+    url = "https://github.com/ros-gbp/kdl_parser-release/archive/release/noetic/kdl_parser_py/1.14.2-1.tar.gz";
+    name = "1.14.2-1.tar.gz";
+    sha256 = "21e02913bc61d60fb30d14533c9073c4ce350f6c8d642e40301bca23c6df351c";
   };
 
   buildType = "catkin";

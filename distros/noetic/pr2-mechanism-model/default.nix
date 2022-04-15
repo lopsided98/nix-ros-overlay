@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, hardware-interface, kdl-parser, pluginlib, pr2-hardware-interface, roscpp, rostest, rosunit, urdf, urdfdom }:
 buildRosPackage {
   pname = "ros-noetic-pr2-mechanism-model";
-  version = "1.8.18-r1";
+  version = "1.8.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/noetic/pr2_mechanism_model/1.8.18-1.tar.gz";
-    name = "1.8.18-1.tar.gz";
-    sha256 = "8b5f4e54d8c25dc2971661b757e38c1c1af64695d7791c778fbd9af6107e4e42";
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/noetic/pr2_mechanism_model/1.8.20-1.tar.gz";
+    name = "1.8.20-1.tar.gz";
+    sha256 = "d0666b26576067e36060036a57987b3488edde73c3c9b04ed95d8e5bc0d667f4";
   };
 
   buildType = "catkin";

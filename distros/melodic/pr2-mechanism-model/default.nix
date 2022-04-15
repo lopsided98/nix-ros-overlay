@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, hardware-interface, kdl-parser, pluginlib, pr2-hardware-interface, roscpp, rostest, rosunit, urdf, urdfdom }:
 buildRosPackage {
   pname = "ros-melodic-pr2-mechanism-model";
-  version = "1.8.18";
+  version = "1.8.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_mechanism_model/1.8.18-0.tar.gz";
-    name = "1.8.18-0.tar.gz";
-    sha256 = "d20f677226a4c6286216f0b159340ec70dfc1a7473623ddd4c39c526f25947e0";
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_mechanism_model/1.8.20-1.tar.gz";
+    name = "1.8.20-1.tar.gz";
+    sha256 = "f241977ea5b1ddc575ca11ead81f5a795c98c7a4258a36fe2c6d83edd1ae2fa9";
   };
 
   buildType = "catkin";

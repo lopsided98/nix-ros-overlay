@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, plansys2-domain-expert, plansys2-executor, plansys2-lifecycle-manager, plansys2-planner, plansys2-problem-expert, rclcpp }:
 buildRosPackage {
   pname = "ros-galactic-plansys2-bringup";
-  version = "2.0.1-r3";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_bringup/2.0.1-3.tar.gz";
-    name = "2.0.1-3.tar.gz";
-    sha256 = "570a0835dc87b3265b21ebec7afdf75740a2122c54c16ba93c7ddc0b2ccc0f5f";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_bringup/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "2e2e9c1e9dcec819330320432762e5a2b3ad41846f7c5e12845d04dd9ddfcb7f";
   };
 
   buildType = "ament_cmake";

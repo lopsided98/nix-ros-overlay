@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch, phidgets-analog-inputs, phidgets-digital-inputs, phidgets-digital-outputs }:
 buildRosPackage {
   pname = "ros-foxy-phidgets-ik";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/foxy/phidgets_ik/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "524deb70a8b4ab74b58c2a4928711a8abdaf2ec61011ce04280aa193334713d3";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/foxy/phidgets_ik/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "e6d73610c1c819c64e894ae3a0eb6e5bfd59538bb2e777bab02ca6c1b9c16d76";
   };
 
   buildType = "ament_cmake";

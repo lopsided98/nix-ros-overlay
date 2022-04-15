@@ -50,7 +50,13 @@ self: super: {
 
  arbotix-sensors = self.callPackage ./arbotix-sensors {};
 
+ aruco = self.callPackage ./aruco {};
+
  aruco-detect = self.callPackage ./aruco-detect {};
+
+ aruco-msgs = self.callPackage ./aruco-msgs {};
+
+ aruco-ros = self.callPackage ./aruco-ros {};
 
  assimp-devel = self.callPackage ./assimp-devel {};
 
@@ -554,6 +560,26 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
+ diffbot-base = self.callPackage ./diffbot-base {};
+
+ diffbot-bringup = self.callPackage ./diffbot-bringup {};
+
+ diffbot-control = self.callPackage ./diffbot-control {};
+
+ diffbot-description = self.callPackage ./diffbot-description {};
+
+ diffbot-gazebo = self.callPackage ./diffbot-gazebo {};
+
+ diffbot-mbf = self.callPackage ./diffbot-mbf {};
+
+ diffbot-msgs = self.callPackage ./diffbot-msgs {};
+
+ diffbot-navigation = self.callPackage ./diffbot-navigation {};
+
+ diffbot-robot = self.callPackage ./diffbot-robot {};
+
+ diffbot-slam = self.callPackage ./diffbot-slam {};
+
  dijkstra-mesh-planner = self.callPackage ./dijkstra-mesh-planner {};
 
  dingo-control = self.callPackage ./dingo-control {};
@@ -716,6 +742,8 @@ self: super: {
 
  eml = self.callPackage ./eml {};
 
+ end-effector = self.callPackage ./end-effector {};
+
  ergodic-exploration = self.callPackage ./ergodic-exploration {};
 
  ethercat-grant = self.callPackage ./ethercat-grant {};
@@ -724,9 +752,13 @@ self: super: {
 
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
+ eus-assimp = self.callPackage ./eus-assimp {};
+
  euslime = self.callPackage ./euslime {};
 
  euslisp = self.callPackage ./euslisp {};
+
+ eusurdf = self.callPackage ./eusurdf {};
 
  executive-smach = self.callPackage ./executive-smach {};
 
@@ -1318,6 +1350,8 @@ self: super: {
 
  jsk-interactive-test = self.callPackage ./jsk-interactive-test {};
 
+ jsk-model-tools = self.callPackage ./jsk-model-tools {};
+
  jsk-network-tools = self.callPackage ./jsk-network-tools {};
 
  jsk-recognition = self.callPackage ./jsk-recognition {};
@@ -1351,6 +1385,38 @@ self: super: {
  kdl-parser-py = self.callPackage ./kdl-parser-py {};
 
  key-teleop = self.callPackage ./key-teleop {};
+
+ khi-duaro-description = self.callPackage ./khi-duaro-description {};
+
+ khi-duaro-gazebo = self.callPackage ./khi-duaro-gazebo {};
+
+ khi-duaro-ikfast-plugin = self.callPackage ./khi-duaro-ikfast-plugin {};
+
+ khi-duaro-moveit-config = self.callPackage ./khi-duaro-moveit-config {};
+
+ khi-robot = self.callPackage ./khi-robot {};
+
+ khi-robot-bringup = self.callPackage ./khi-robot-bringup {};
+
+ khi-robot-control = self.callPackage ./khi-robot-control {};
+
+ khi-robot-msgs = self.callPackage ./khi-robot-msgs {};
+
+ khi-robot-test = self.callPackage ./khi-robot-test {};
+
+ khi-rs007l-moveit-config = self.callPackage ./khi-rs007l-moveit-config {};
+
+ khi-rs007n-moveit-config = self.callPackage ./khi-rs007n-moveit-config {};
+
+ khi-rs013n-moveit-config = self.callPackage ./khi-rs013n-moveit-config {};
+
+ khi-rs080n-moveit-config = self.callPackage ./khi-rs080n-moveit-config {};
+
+ khi-rs-description = self.callPackage ./khi-rs-description {};
+
+ khi-rs-gazebo = self.callPackage ./khi-rs-gazebo {};
+
+ khi-rs-ikfast-plugin = self.callPackage ./khi-rs-ikfast-plugin {};
 
  knowledge-representation = self.callPackage ./knowledge-representation {};
 
@@ -1451,6 +1517,8 @@ self: super: {
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
  libcmt = self.callPackage ./libcmt {};
+
+ libcreate = self.callPackage ./libcreate {};
 
  libdlib = self.callPackage ./libdlib {};
 
@@ -1860,6 +1928,10 @@ self: super: {
 
  nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
 
+ novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
+
+ novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
+
  novatel-oem7-driver = self.callPackage ./novatel-oem7-driver {};
 
  novatel-oem7-msgs = self.callPackage ./novatel-oem7-msgs {};
@@ -1915,6 +1987,8 @@ self: super: {
  openni2-camera = self.callPackage ./openni2-camera {};
 
  openni2-launch = self.callPackage ./openni2-launch {};
+
+ openrtm-aist = self.callPackage ./openrtm-aist {};
 
  openslam-gmapping = self.callPackage ./openslam-gmapping {};
 
@@ -2108,6 +2182,8 @@ self: super: {
 
  pr2-controller-configuration = self.callPackage ./pr2-controller-configuration {};
 
+ pr2-controller-configuration-gazebo = self.callPackage ./pr2-controller-configuration-gazebo {};
+
  pr2-controller-interface = self.callPackage ./pr2-controller-interface {};
 
  pr2-controller-manager = self.callPackage ./pr2-controller-manager {};
@@ -2125,6 +2201,10 @@ self: super: {
  pr2-ethercat = self.callPackage ./pr2-ethercat {};
 
  pr2-ethercat-drivers = self.callPackage ./pr2-ethercat-drivers {};
+
+ pr2-gazebo = self.callPackage ./pr2-gazebo {};
+
+ pr2-gazebo-plugins = self.callPackage ./pr2-gazebo-plugins {};
 
  pr2-gripper-action = self.callPackage ./pr2-gripper-action {};
 
@@ -2165,6 +2245,8 @@ self: super: {
  pr2-self-test = self.callPackage ./pr2-self-test {};
 
  pr2-self-test-msgs = self.callPackage ./pr2-self-test-msgs {};
+
+ pr2-simulator = self.callPackage ./pr2-simulator {};
 
  pr2-teleop = self.callPackage ./pr2-teleop {};
 
@@ -2229,6 +2311,8 @@ self: super: {
  qb-move-description = self.callPackage ./qb-move-description {};
 
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
+
+ qt-advanced-docking = self.callPackage ./qt-advanced-docking {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
 
@@ -2339,6 +2423,8 @@ self: super: {
  rm-hw = self.callPackage ./rm-hw {};
 
  rm-msgs = self.callPackage ./rm-msgs {};
+
+ rm-orientation-controller = self.callPackage ./rm-orientation-controller {};
 
  rm-shooter-controllers = self.callPackage ./rm-shooter-controllers {};
 
@@ -3030,6 +3116,8 @@ self: super: {
 
  toposens = self.callPackage ./toposens {};
 
+ toposens-sensor-library = self.callPackage ./toposens-sensor-library {};
+
  toposens-bringup = self.callPackage ./toposens-bringup {};
 
  toposens-description = self.callPackage ./toposens-description {};
@@ -3133,6 +3221,8 @@ self: super: {
  udp-com = self.callPackage ./udp-com {};
 
  ueye-cam = self.callPackage ./ueye-cam {};
+
+ um7 = self.callPackage ./um7 {};
 
  unique-id = self.callPackage ./unique-id {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pr2-controller-interface, pr2-controller-manager, pr2-hardware-interface, pr2-mechanism-diagnostics, pr2-mechanism-model }:
 buildRosPackage {
   pname = "ros-melodic-pr2-mechanism";
-  version = "1.8.18";
+  version = "1.8.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_mechanism/1.8.18-0.tar.gz";
-    name = "1.8.18-0.tar.gz";
-    sha256 = "c6ed5bf479132aac212fc57681dc0223a03708b808e2ee0c0c8c27318348f468";
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_mechanism/1.8.20-1.tar.gz";
+    name = "1.8.20-1.tar.gz";
+    sha256 = "d9fc465f3077fe29eec22da9d34f1573c8639c010bf1707686b6fde3e233d7a0";
   };
 
   buildType = "catkin";

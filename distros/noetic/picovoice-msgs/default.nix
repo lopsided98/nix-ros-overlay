@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-noetic-picovoice-msgs";
-  version = "0.0.4-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/reinzor/picovoice_ros-release/archive/release/noetic/picovoice_msgs/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "029e8ce3645694b964d6405c19286ff2b9cd24c249d0877ca2a6bde6c416d2b7";
+    url = "https://github.com/reinzor/picovoice_ros-release/archive/release/noetic/picovoice_msgs/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "d63ee582eba6b4e8fe24de8e2b6289cbabcc4fbea585966e10f7605cda05975a";
   };
 
   buildType = "catkin";

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/foxy/velodyne_laserscan/2.1.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/foxy/velodyne_laserscan/2.1.1-1.tar.gz";
     name = "2.1.1-1.tar.gz";
     sha256 = "6c8e5434b0d44c53c2239ec6d48f612e526e073d4ce925189c75036ba50290af";
   };

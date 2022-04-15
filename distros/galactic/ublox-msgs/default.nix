@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, rosidl-default-generators, sensor-msgs, std-msgs, ublox-serialization }:
 buildRosPackage {
   pname = "ros-galactic-ublox-msgs";
-  version = "2.0.0-r3";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox-release/archive/release/galactic/ublox_msgs/2.0.0-3.tar.gz";
-    name = "2.0.0-3.tar.gz";
-    sha256 = "0113650136af7affb3af3f6aa0cc3a066b6849ba9bdb51adb1eca7b69b0d1214";
+    url = "https://github.com/ros2-gbp/ublox-release/archive/release/galactic/ublox_msgs/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "3993c5a8e646795c33351042535c5fc3f61bd5a27d41afe262edce5e6e744b52";
   };
 
   buildType = "ament_cmake";

@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, message-filters, roscpp, sensor-msgs, std-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, message-filters, nodelet, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-imu-complementary-filter";
-  version = "1.2.3-r1";
+  version = "1.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_complementary_filter/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "e4fb380b8e4d8aee751f8c42882a8a4ebe6cab0c8403622b9aedae1c156b43e8";
+    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_complementary_filter/1.2.4-1.tar.gz";
+    name = "1.2.4-1.tar.gz";
+    sha256 = "142c83020a468fc94249bb22a25d87af485d663b2e0f9ce713388747d514e7de";
   };
 
   buildType = "catkin";
   buildInputs = [ cmake-modules ];
-  propagatedBuildInputs = [ message-filters roscpp sensor-msgs std-msgs tf ];
+  propagatedBuildInputs = [ geometry-msgs message-filters nodelet roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

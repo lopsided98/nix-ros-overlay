@@ -600,6 +600,8 @@ self: super: {
 
  imu-sensor-broadcaster = self.callPackage ./imu-sensor-broadcaster {};
 
+ interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
+
  interactive-markers = self.callPackage ./interactive-markers {};
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
@@ -682,9 +684,13 @@ self: super: {
 
  leo-description = self.callPackage ./leo-description {};
 
+ leo-desktop = self.callPackage ./leo-desktop {};
+
  leo-msgs = self.callPackage ./leo-msgs {};
 
  leo-teleop = self.callPackage ./leo-teleop {};
+
+ leo-viz = self.callPackage ./leo-viz {};
 
  lgsvl-bridge = self.callPackage ./lgsvl-bridge {};
 
@@ -1594,6 +1600,10 @@ self: super: {
 
  smac-planner = self.callPackage ./smac-planner {};
 
+ smacc2 = self.callPackage ./smacc2 {};
+
+ smacc2-msgs = self.callPackage ./smacc2-msgs {};
+
  smclib = self.callPackage ./smclib {};
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
@@ -1787,6 +1797,8 @@ self: super: {
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-msgs = self.callPackage ./ur-msgs {};
 
  urdf = self.callPackage ./urdf {};
 

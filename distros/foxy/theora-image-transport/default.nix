@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, cv-bridge, image-transport, libogg, libtheora, pluginlib, rclcpp, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-theora-image-transport";
-  version = "2.3.1-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/foxy/theora_image_transport/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "fdad4bc6a4aac029ae0aad4856aca3f27434997c9b8034d99736cccad3b0f552";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/foxy/theora_image_transport/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "2435aebaff4096dce6b1d3478a56b8474ecddb768f51aaed54f97fb6ee6af1ac";
   };
 
   buildType = "ament_cmake";
