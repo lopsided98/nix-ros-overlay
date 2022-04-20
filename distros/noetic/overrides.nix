@@ -15,6 +15,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "0ynyw672033psdy018sqzc6mv9yvfxyp43c5d6x1iqk9cz6p4hfk";
   };
 
+  mapviz = rosSuper.mapviz.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Fix linking to GLUT with CMake 3.22
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/swri-robotics/mapviz/commit/b3c8e19bc1b7e1d2478c0b13a848d7caf40b4e5e.patch";
+      sha256 = "sha256-abjP9Pn3v+aLZBOI0KiGihHgt2WLadDvdaKVyk2IlPY=";
+      stripLen = 1;
+    }) ];
+  });
+
   pybind11-catkin = patchVendorUrl rosSuper.pybind11-catkin {
     url = "https://github.com/pybind/pybind11/archive/v2.5.0.zip";
     sha256 = "080mss10aadal8sk3bib2dr2ygx6hmxn2g92qsq42v3zhchz2n8q";
