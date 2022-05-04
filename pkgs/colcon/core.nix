@@ -43,6 +43,8 @@ let
 
     disabled = isPy27;
 
+    setupHook = ./setup-hook.sh;
+
     passthru = {
       inherit withExtensions;
     };

@@ -277,6 +277,8 @@ let
 
     roscpp = patchBoostSignals rosSuper.roscpp;
 
+    rosidl-runtime-rs = rosSelf.callPackage ../pkgs/ros2-rust/rosidl-runtime-rs.nix { };
+
     rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
       propagatedBuildInputs ? [], ...
     }: {
@@ -513,7 +515,7 @@ let
   };
 in self.lib.makeExtensible (rosSelf: self.rosPackages.lib.mergeOverlays [
   base
-  (import (./. + "/${distro}/generated.nix"))
+  (import ./${distro}/generated.nix)
   overrides
-  (import (./. + "/${distro}/overrides.nix") self)
+  (import ./${distro}/overrides.nix self)
 ] rosSelf {})

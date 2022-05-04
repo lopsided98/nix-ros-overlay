@@ -78,8 +78,8 @@ preConfigureHooks+=(_catkinPreConfigureHook)
 
 _catkinPostInstallHook() {
   pushd $out
-  rm -f *setup.*sh
-  rm -f _setup_util.py env.sh .rosinstall
+  #rm -f *setup.*sh
+  #rm -f _setup_util.py env.sh .rosinstall
   popd
 }
 postInstallHooks+=(_catkinPostInstallHook)

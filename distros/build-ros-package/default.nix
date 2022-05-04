@@ -1,4 +1,4 @@
-{ stdenv, lib, pythonPackages }:
+{ stdenv, lib, colcon, python3Packages }:
 { buildType ? "catkin"
   # Too difficult to fix all the problems with the tests in each package
 , doCheck ? false
@@ -14,21 +14,28 @@
 # correctly.
 , dontWrapQtApps ? true
 , CXXFLAGS ? ""
+, nativeBuildInputs ? []
 , passthru ? {}
 , ...
 }@args:
 
-(if buildType == "ament_python" then pythonPackages.buildPythonPackage
-else stdenv.mkDerivation) (args // {
+stdenv.mkDerivation (args // {
   inherit doCheck strictDeps dontWrapQtApps;
 
   # Disable warnings that cause "Log limit exceeded" errors on Hydra in lots of
   # packages that use Eigen
   CXXFLAGS = CXXFLAGS + "-Wno-deprecated-declarations -Wno-deprecated-copy";
 
+  nativeBuildInputs = nativeBuildInputs ++ [ colcon python3Packages.colcon-core ];
+
+  dontUseCmakeConfigure = true;
+  buildPhase = ''
+    runHook preBuild
+    colcon --log-level info build --install-base "$out" --merge-install
+    runHook postBuild
+  '';
+
   passthru = passthru // {
     rosPackage = true;
   };
-} // lib.optionalAttrs (buildType == "ament_python") {
-  dontUseCmakeConfigure = true;
 })
