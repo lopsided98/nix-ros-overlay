@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cppcheck }:
 buildRosPackage {
   pname = "ros-galactic-ament-cppcheck";
-  version = "0.10.6-r1";
+  version = "0.10.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/galactic/ament_cppcheck/0.10.6-1.tar.gz";
-    name = "0.10.6-1.tar.gz";
-    sha256 = "3d998c23923e2f0196a8d7d50b9618c9cabde72adb5cf4464530413a8bd4b52a";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/galactic/ament_cppcheck/0.10.7-1.tar.gz";
+    name = "0.10.7-1.tar.gz";
+    sha256 = "2b0bdeed6636714c0673c6d9a04b66f67b189bef8e61c1620134104bd2abfaee";
   };
 
   buildType = "ament_python";

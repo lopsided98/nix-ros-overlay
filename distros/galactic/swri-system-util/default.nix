@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-galactic-swri-system-util";
-  version = "3.4.0-r1";
+  version = "3.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_system_util/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "6cc3dba9637825817e35ca7515eb407ba70d9d9f8579f2f7557a046b37e3093d";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_system_util/3.4.1-1.tar.gz";
+    name = "3.4.1-1.tar.gz";
+    sha256 = "3ab5d9d0e5b375f0db3ec0c0278d1e8546a175b9ff741889298bf68e3ed2595e";
   };
 
   buildType = "ament_cmake";

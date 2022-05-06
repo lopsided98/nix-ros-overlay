@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, cmake, console-bridge }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-galactic-ur-client-library";
-  version = "1.0.0-r3";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_Client_Library-release/archive/release/galactic/ur_client_library/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "b3378b1cfc4478adc8dc336d75c18d547d8ded7fbea268d013e9741e73d01f35";
+    url = "https://github.com/UniversalRobots/Universal_Robots_Client_Library-release/archive/release/galactic/ur_client_library/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "d6578b686f968452f71055cb9c20338d14a0f3cc3615e2a9b0b4527e8ab376f3";
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ ament-cmake console-bridge ];
+  propagatedBuildInputs = [ ament-cmake ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

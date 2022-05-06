@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-galactic-swri-math-util";
-  version = "3.4.0-r1";
+  version = "3.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_math_util/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "1c5ee1d7c512420387f83f82ec6af7ec68e18de150deee485fa947e62847925a";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_math_util/3.4.1-1.tar.gz";
+    name = "3.4.1-1.tar.gz";
+    sha256 = "2288c87b8e22144c57bebef53c9b34a78ce091366d10cad62bca68b0fa240145";
   };
 
   buildType = "ament_cmake";

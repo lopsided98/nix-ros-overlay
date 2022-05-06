@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-mypy }:
 buildRosPackage {
   pname = "ros-galactic-ament-cmake-mypy";
-  version = "0.10.6-r1";
+  version = "0.10.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/galactic/ament_cmake_mypy/0.10.6-1.tar.gz";
-    name = "0.10.6-1.tar.gz";
-    sha256 = "019279efc7219e980906c2ca05cd5a43b5033fd8036cfe0788b49172ba142f04";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/galactic/ament_cmake_mypy/0.10.7-1.tar.gz";
+    name = "0.10.7-1.tar.gz";
+    sha256 = "1590afba2fb639f99993a442fb3aa5bfb899ec2c633ea58a11991e300d05bba4";
   };
 
   buildType = "ament_cmake";

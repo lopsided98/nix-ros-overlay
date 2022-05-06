@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-recorder-msgs";
-  version = "1.0.2-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/rosbag_uploader-release/archive/release/melodic/recorder_msgs/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "3065e9f7c51beeff9d0e8d10c1cc7b8d3968086a85228cd715c7e29f7cd19503";
+    url = "https://github.com/aws-gbp/rosbag_uploader-release/archive/release/melodic/recorder_msgs/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "f5a741c359bf9420a8bdb479bc65c235a72e3af4f510eb8a8f3716f832019246";
   };
 
   buildType = "catkin";

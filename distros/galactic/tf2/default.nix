@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, geometry-msgs, rcutils }:
 buildRosPackage {
   pname = "ros-galactic-tf2";
-  version = "0.17.2-r1";
+  version = "0.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/tf2/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "aab05abae43e5c87e8fbf8fbd961cc57a935c20cb99d6cd5b52f7c77440f6a25";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/tf2/0.17.3-1.tar.gz";
+    name = "0.17.3-1.tar.gz";
+    sha256 = "e73f8c6868e104d8805a20e09dc7bc5db891130fe3ffb5745758e9e237478a35";
   };
 
   buildType = "ament_cmake";

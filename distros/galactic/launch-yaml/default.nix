@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch, pythonPackages }:
 buildRosPackage {
   pname = "ros-galactic-launch-yaml";
-  version = "0.17.0-r2";
+  version = "0.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/galactic/launch_yaml/0.17.0-2.tar.gz";
-    name = "0.17.0-2.tar.gz";
-    sha256 = "dbd7c6859d320ba315824997ba32a86ab9722300c3b3fc7bf2acbf87b04b5813";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/galactic/launch_yaml/0.17.1-1.tar.gz";
+    name = "0.17.1-1.tar.gz";
+    sha256 = "f1f844af8829db7bc2df4e6f8a3ed77f7cdc365fa69a318bec7caaa8ddbef764";
   };
 
   buildType = "ament_python";

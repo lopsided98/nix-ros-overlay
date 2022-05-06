@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, ignition, rclcpp }:
 buildRosPackage {
   pname = "ros-galactic-irobot-create-toolbox";
-  version = "1.0.1-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/galactic/irobot_create_toolbox/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "e10b7413e5fbd5e815c0396a373ba8868af036a7eded9f786ac75314b2a6d457";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/galactic/irobot_create_toolbox/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "9c33925f0bbbf2e800375664aca44d2e7e13490d50f9683d771ef6fc458f9169";
   };
 
   buildType = "ament_cmake";

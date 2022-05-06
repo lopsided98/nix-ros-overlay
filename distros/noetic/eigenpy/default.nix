@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-eigenpy";
-  version = "2.7.1-r1";
+  version = "2.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/noetic/eigenpy/2.7.1-1.tar.gz";
-    name = "2.7.1-1.tar.gz";
-    sha256 = "f303b60dc5a2132d470d111a83164716ac65647464aeaeb1670d9112abc8e421";
+    url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/noetic/eigenpy/2.7.2-1.tar.gz";
+    name = "2.7.2-1.tar.gz";
+    sha256 = "9eae8aa2ca61fdbcb380ff8c98d3ce4573230d914d5da0c7599703bce44bd8d4";
   };
 
   buildType = "cmake";

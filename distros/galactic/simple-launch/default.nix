@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, launch, launch-ros, xacro }:
 buildRosPackage {
   pname = "ros-galactic-simple-launch";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/oKermorgant/simple_launch-release/archive/release/galactic/simple_launch/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "e27bd988f504871bbfddc8c802b77045eb14a23b6e6621de22f8306b09a32c10";
+    url = "https://github.com/oKermorgant/simple_launch-release/archive/release/galactic/simple_launch/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "32f00772530a8edb683687837ca469ddc6dd2b738c6704e2eba49c85124efc0b";
   };
 
   buildType = "ament_python";

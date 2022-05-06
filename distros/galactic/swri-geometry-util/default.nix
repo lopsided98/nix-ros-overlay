@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cv-bridge, eigen, geos, pkg-config, rclcpp, tf2 }:
 buildRosPackage {
   pname = "ros-galactic-swri-geometry-util";
-  version = "3.4.0-r1";
+  version = "3.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_geometry_util/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "e6a177c737ddc547556e046586c8030fe1d89c9daaa32ae169e5cc1406c3e687";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_geometry_util/3.4.1-1.tar.gz";
+    name = "3.4.1-1.tar.gz";
+    sha256 = "c57914b8333ee11726c1e52938e4c394830aed2f635a4d74077ca81912041ac3";
   };
 
   buildType = "ament_cmake";

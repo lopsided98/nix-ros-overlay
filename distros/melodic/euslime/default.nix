@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, catkin-virtualenv, roseus, slime-ros }:
 buildRosPackage {
   pname = "ros-melodic-euslime";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/jsk-ros-pkg/euslime-release/archive/release/melodic/euslime/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "7b1218610fe3dcd041423a9651ba5111032e787359bf3c845887f7de2968c3b3";
+    url = "https://github.com/jsk-ros-pkg/euslime-release/archive/release/melodic/euslime/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "7a4181eef5f1c6e75c02f475c13b4b11f31f18ea14b588a62d092cd0a1fab7da";
   };
 
   buildType = "catkin";

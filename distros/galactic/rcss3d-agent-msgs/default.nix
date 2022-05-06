@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-galactic-rcss3d-agent-msgs";
-  version = "0.0.6-r1";
+  version = "0.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-sports/rcss3d_agent-release/archive/release/galactic/rcss3d_agent_msgs/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "1524e1d1dda07451f2a9863c6388fb685c40e43848c2de870e34f5185c8dcfb3";
+    url = "https://github.com/ros2-gbp/rcss3d_agent-release/archive/release/galactic/rcss3d_agent_msgs/0.0.7-1.tar.gz";
+    name = "0.0.7-1.tar.gz";
+    sha256 = "bf91d94050580c1b32436912a1a42e7fbdebea46ffaee0f159fde3ea3f8a8034";
   };
 
   buildType = "ament_cmake";

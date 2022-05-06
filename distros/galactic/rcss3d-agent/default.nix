@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, rcss3d-agent-msgs }:
 buildRosPackage {
   pname = "ros-galactic-rcss3d-agent";
-  version = "0.0.6-r1";
+  version = "0.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-sports/rcss3d_agent-release/archive/release/galactic/rcss3d_agent/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "aa978f222139cb2c0ea56ef626131ae5167f0dec8e1f18643a240b03c1ad38d4";
+    url = "https://github.com/ros2-gbp/rcss3d_agent-release/archive/release/galactic/rcss3d_agent/0.0.7-1.tar.gz";
+    name = "0.0.7-1.tar.gz";
+    sha256 = "2e259621ca9bed24e18deba8f487803d52048ace76d469e848e355a5286ec0fa";
   };
 
   buildType = "ament_cmake";

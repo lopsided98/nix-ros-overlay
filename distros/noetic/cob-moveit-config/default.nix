@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-noetic-cob-moveit-config";
-  version = "0.7.6-r1";
+  version = "0.7.6-r4";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/noetic/cob_moveit_config/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "7c00139e3b54bb551daf98b7a15f08ace9bd2936c8fdff1ad74b3d3b69de4d38";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/noetic/cob_moveit_config/0.7.6-4.tar.gz";
+    name = "0.7.6-4.tar.gz";
+    sha256 = "aae8fb9e574992a4b2657d32106055e4f8133f2aec1a7fc21d8c462573b312cf";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-common, aws-ros1-common, catkin, gtest, lex-common, lex-common-msgs, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-lex-node";
-  version = "2.0.3-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/lex_node-release/archive/release/melodic/lex_node/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "e7ef63cc1fb0b85d1c3e4c69d8feb4866ba240937ad8e639c7afd8ddf5253a81";
+    url = "https://github.com/aws-gbp/lex_node-release/archive/release/melodic/lex_node/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "24375a02bbf5b57fa1fb9765d43c4cbcf76f7c14e3f250369a738f023ab773e6";
   };
 
   buildType = "catkin";

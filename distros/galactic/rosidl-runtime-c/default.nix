@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, performance-test-fixture, rcutils, rosidl-typesupport-interface }:
 buildRosPackage {
   pname = "ros-galactic-rosidl-runtime-c";
-  version = "2.2.1-r2";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/galactic/rosidl_runtime_c/2.2.1-2.tar.gz";
-    name = "2.2.1-2.tar.gz";
-    sha256 = "9586b262cfbaba9c558b97f8faeaf473f530fc343a140c3541c35e10bed70422";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/galactic/rosidl_runtime_c/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "5359235333c69e31e10c4553c5121673fc6a62a5e9a90a8b74b7957ff408b149";
   };
 
   buildType = "ament_cmake";

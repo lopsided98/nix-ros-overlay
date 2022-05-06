@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, composition-interfaces, launch, lifecycle-msgs, osrf-pycommon, python3Packages, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-galactic-launch-ros";
-  version = "0.14.2-r1";
+  version = "0.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/galactic/launch_ros/0.14.2-1.tar.gz";
-    name = "0.14.2-1.tar.gz";
-    sha256 = "db6c0cc59b01aa5492e04d342273b60adccd3d65c0b79016dcd8e695517acca8";
+    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/galactic/launch_ros/0.14.3-1.tar.gz";
+    name = "0.14.3-1.tar.gz";
+    sha256 = "397e2294e74ccaace65ef10693ac703b74f5f8e41e50cc2be83dbe526c28515e";
   };
 
   buildType = "ament_python";

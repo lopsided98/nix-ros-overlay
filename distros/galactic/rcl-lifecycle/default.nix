@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, lifecycle-msgs, osrf-testing-tools-cpp, rcl, rcutils, rmw, rosidl-runtime-c, tracetools }:
 buildRosPackage {
   pname = "ros-galactic-rcl-lifecycle";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/galactic/rcl_lifecycle/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "35842262797f8dc1ea327f75416517fd408b5def01668c8604d8f25b0835bedb";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/galactic/rcl_lifecycle/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "f6ca48cdefc3c7dbd36fbae5002b627ad64feada2eb90fe4c9a30aeb95af3b2b";
   };
 
   buildType = "ament_cmake";

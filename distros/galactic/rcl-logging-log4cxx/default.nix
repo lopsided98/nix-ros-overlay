@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch-testing, log4cxx, python3Packages, rcl-logging-interface, rcutils }:
 buildRosPackage {
   pname = "ros-galactic-rcl-logging-log4cxx";
-  version = "2.1.2-r2";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/galactic/rcl_logging_log4cxx/2.1.2-2.tar.gz";
-    name = "2.1.2-2.tar.gz";
-    sha256 = "ccd2ee876612f52a78778b60c337b4adcc05b462099fc7b05632ec69244f7a48";
+    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/galactic/rcl_logging_log4cxx/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "4b7cb48398670396eb3209addcd6b9a813e8fa75b1ae226f29e9a4c710c2c9b7";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mavros-msgs, nmea-msgs, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-ntrip-client";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/ntrip_client-release/archive/release/melodic/ntrip_client/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "bd8fa6101b2348b83714b27576dfea851faea7194fc89910a59060912b387220";
+    url = "https://github.com/LORD-MicroStrain/ntrip_client-release/archive/release/melodic/ntrip_client/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "0eadc0bcc6f8dd8f6b5c00f6e3c66a9b8ac0eba1c09a4193a0a54179f42866aa";
   };
 
   buildType = "catkin";

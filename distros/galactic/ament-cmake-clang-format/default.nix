@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test }:
 buildRosPackage {
   pname = "ros-galactic-ament-cmake-clang-format";
-  version = "0.10.6-r1";
+  version = "0.10.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/galactic/ament_cmake_clang_format/0.10.6-1.tar.gz";
-    name = "0.10.6-1.tar.gz";
-    sha256 = "097e0264ecda25cf678d2f001d252f3b4ed74eeb842c574caac975769dd35aa0";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/galactic/ament_cmake_clang_format/0.10.7-1.tar.gz";
+    name = "0.10.7-1.tar.gz";
+    sha256 = "e403d4df307a19921e971935b320e2839891e9fbbf0a5cdb08404ed70a7fc0c9";
   };
 
   buildType = "ament_cmake";

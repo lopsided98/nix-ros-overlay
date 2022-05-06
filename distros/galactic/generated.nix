@@ -346,6 +346,8 @@ self: super: {
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
+ foxglove-msgs = self.callPackage ./foxglove-msgs {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
@@ -434,7 +436,13 @@ self: super: {
 
  image-view = self.callPackage ./image-view {};
 
+ imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
+
+ imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
+
  imu-sensor-broadcaster = self.callPackage ./imu-sensor-broadcaster {};
+
+ imu-tools = self.callPackage ./imu-tools {};
 
  interactive-markers = self.callPackage ./interactive-markers {};
 
@@ -591,6 +599,8 @@ self: super: {
  mavros-extras = self.callPackage ./mavros-extras {};
 
  mavros-msgs = self.callPackage ./mavros-msgs {};
+
+ mcap-vendor = self.callPackage ./mcap-vendor {};
 
  menge-vendor = self.callPackage ./menge-vendor {};
 
@@ -1364,6 +1374,8 @@ self: super: {
 
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 
+ rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
+
  rviz-ogre-vendor = self.callPackage ./rviz-ogre-vendor {};
 
  rviz-rendering = self.callPackage ./rviz-rendering {};
@@ -1387,6 +1399,8 @@ self: super: {
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  sensor-msgs-py = self.callPackage ./sensor-msgs-py {};
+
+ septentrio-gnss-driver = self.callPackage ./septentrio-gnss-driver {};
 
  serial-driver = self.callPackage ./serial-driver {};
 
@@ -1584,6 +1598,24 @@ self: super: {
 
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
+ turtlebot4-description = self.callPackage ./turtlebot4-description {};
+
+ turtlebot4-desktop = self.callPackage ./turtlebot4-desktop {};
+
+ turtlebot4-ignition-bringup = self.callPackage ./turtlebot4-ignition-bringup {};
+
+ turtlebot4-ignition-toolbox = self.callPackage ./turtlebot4-ignition-toolbox {};
+
+ turtlebot4-msgs = self.callPackage ./turtlebot4-msgs {};
+
+ turtlebot4-navigation = self.callPackage ./turtlebot4-navigation {};
+
+ turtlebot4-node = self.callPackage ./turtlebot4-node {};
+
+ turtlebot4-simulator = self.callPackage ./turtlebot4-simulator {};
+
+ turtlebot4-viz = self.callPackage ./turtlebot4-viz {};
+
  turtlesim = self.callPackage ./turtlesim {};
 
  tvm-vendor = self.callPackage ./tvm-vendor {};
@@ -1614,11 +1646,23 @@ self: super: {
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
+ ur-bringup = self.callPackage ./ur-bringup {};
+
+ ur-calibration = self.callPackage ./ur-calibration {};
+
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-controllers = self.callPackage ./ur-controllers {};
+
+ ur-dashboard-msgs = self.callPackage ./ur-dashboard-msgs {};
 
  ur-description = self.callPackage ./ur-description {};
 
+ ur-moveit-config = self.callPackage ./ur-moveit-config {};
+
  ur-msgs = self.callPackage ./ur-msgs {};
+
+ ur-robot-driver = self.callPackage ./ur-robot-driver {};
 
  urdf = self.callPackage ./urdf {};
 

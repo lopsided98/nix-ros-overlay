@@ -2,21 +2,21 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-index-cpp, ament-lint-auto, ament-lint-common, pluginlib, python3Packages, rcutils, ros-environment, rosbag2-storage }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-index-cpp, ament-lint-auto, ament-lint-common, mcap-vendor, pluginlib, rcutils, rosbag2-storage }:
 buildRosPackage {
   pname = "ros-galactic-rosbag2-storage-mcap";
-  version = "0.1.1-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/galactic/rosbag2_storage_mcap/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "add936e76c297124bdc1dab1f588ecc16c0d5ae3c6eb95083afc9e221faabe5f";
+    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/galactic/rosbag2_storage_mcap/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "dd309854f8f0e0581b028e8e1cf52c28c6fe9369c663a2ffd386e659a48884ab";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-clang-format ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-index-cpp pluginlib rcutils ros-environment rosbag2-storage ];
-  nativeBuildInputs = [ ament-cmake python3Packages.pip ];
+  propagatedBuildInputs = [ ament-index-cpp mcap-vendor pluginlib rcutils rosbag2-storage ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''rosbag2 storage plugin using the MCAP file format'';

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-galactic-tf2-msgs";
-  version = "0.17.2-r1";
+  version = "0.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/tf2_msgs/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "92c2814f3cfc8fdc4b8659b7ed564b6239364c08207a6209168ca8e121565be2";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/tf2_msgs/0.17.3-1.tar.gz";
+    name = "0.17.3-1.tar.gz";
+    sha256 = "c1fa046fa8f20189db4ec35f979a80d087e7ed205160f3974665c59397a9bf92";
   };
 
   buildType = "ament_cmake";

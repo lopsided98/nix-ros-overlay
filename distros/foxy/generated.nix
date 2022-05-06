@@ -512,6 +512,8 @@ self: super: {
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
+ foxglove-msgs = self.callPackage ./foxglove-msgs {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
@@ -598,7 +600,13 @@ self: super: {
 
  image-view = self.callPackage ./image-view {};
 
+ imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
+
+ imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
+
  imu-sensor-broadcaster = self.callPackage ./imu-sensor-broadcaster {};
+
+ imu-tools = self.callPackage ./imu-tools {};
 
  interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
 
@@ -761,6 +769,8 @@ self: super: {
  mavros-extras = self.callPackage ./mavros-extras {};
 
  mavros-msgs = self.callPackage ./mavros-msgs {};
+
+ mcap-vendor = self.callPackage ./mcap-vendor {};
 
  menge-vendor = self.callPackage ./menge-vendor {};
 
@@ -1402,6 +1412,8 @@ self: super: {
 
  rosbag2-storage-default-plugins = self.callPackage ./rosbag2-storage-default-plugins {};
 
+ rosbag2-storage-mcap = self.callPackage ./rosbag2-storage-mcap {};
+
  rosbag2-test-common = self.callPackage ./rosbag2-test-common {};
 
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
@@ -1558,6 +1570,8 @@ self: super: {
 
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 
+ rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
+
  rviz-ogre-vendor = self.callPackage ./rviz-ogre-vendor {};
 
  rviz-rendering = self.callPackage ./rviz-rendering {};
@@ -1577,6 +1591,8 @@ self: super: {
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  sensor-msgs-py = self.callPackage ./sensor-msgs-py {};
+
+ septentrio-gnss-driver = self.callPackage ./septentrio-gnss-driver {};
 
  serial-driver = self.callPackage ./serial-driver {};
 

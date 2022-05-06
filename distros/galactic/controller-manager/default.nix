@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, controller-interface, controller-manager-msgs, hardware-interface, launch, launch-ros, pluginlib, rclcpp, rcpputils, ros2-control-test-assets, ros2param, ros2run }:
 buildRosPackage {
   pname = "ros-galactic-controller-manager";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/controller_manager/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "c72d0162bcea201c8054b93f0543ef74dfac615f4e41bb3c7f4f5158302e5436";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/controller_manager/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "ef4534caa315aff1a46eaa7ade22e3e4c9bf98067093e30dc5bcd82f504200e1";
   };
 
   buildType = "ament_cmake";

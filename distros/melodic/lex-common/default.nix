@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aws-common, catkin, cmake, gtest, ros-environment }:
 buildRosPackage {
   pname = "ros-melodic-lex-common";
-  version = "1.0.1-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/aws-gbp/lex_common-release/archive/release/melodic/lex_common/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "c19408145479820b1c6aac9421d65161786b8e17b679ae4fd6db36a003d3ab52";
+    url = "https://github.com/aws-gbp/lex_common-release/archive/release/melodic/lex_common/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "69a222e4226dfcaf24a2a5c923b70f37b411c95a51ae870b97a6734178cd8536";
   };
 
   buildType = "cmake";

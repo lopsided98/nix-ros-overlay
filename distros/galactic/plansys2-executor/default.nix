@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, behaviortree-cpp-v3, cppzmq, lifecycle-msgs, plansys2-core, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, plansys2-planner, plansys2-problem-expert, popf, rclcpp, rclcpp-action, rclcpp-cascade-lifecycle, rclcpp-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-plansys2-executor";
-  version = "2.0.3-r1";
+  version = "2.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_executor/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "c0edaed5b43d4650bf9b36931860c2d0661600a73ea403f4c80fbfc2618a4827";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_executor/2.0.8-1.tar.gz";
+    name = "2.0.8-1.tar.gz";
+    sha256 = "ec1d1c1b5a4dca2e93616354f7e7cab23624a48eb13e280645adf21de7495882";
   };
 
   buildType = "ament_cmake";

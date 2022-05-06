@@ -946,6 +946,8 @@ self: super: {
 
  ethercat-hardware = self.callPackage ./ethercat-hardware {};
 
+ ethercat-manager = self.callPackage ./ethercat-manager {};
+
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
  eus-assimp = self.callPackage ./eus-assimp {};
@@ -2126,6 +2128,10 @@ self: super: {
 
  mikrotik-swos-tools = self.callPackage ./mikrotik-swos-tools {};
 
+ minas = self.callPackage ./minas {};
+
+ minas-control = self.callPackage ./minas-control {};
+
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
  mir-actions = self.callPackage ./mir-actions {};
@@ -2371,8 +2377,6 @@ self: super: {
  multisense-lib = self.callPackage ./multisense-lib {};
 
  multisense-ros = self.callPackage ./multisense-ros {};
-
- mvsim = self.callPackage ./mvsim {};
 
  nanomsg = self.callPackage ./nanomsg {};
 
@@ -2711,6 +2715,8 @@ self: super: {
  perception = self.callPackage ./perception {};
 
  perception-pcl = self.callPackage ./perception-pcl {};
+
+ pf-description = self.callPackage ./pf-description {};
 
  pf-driver = self.callPackage ./pf-driver {};
 
@@ -4110,6 +4116,8 @@ self: super: {
 
  toposens = self.callPackage ./toposens {};
 
+ toposens-sensor-library = self.callPackage ./toposens-sensor-library {};
+
  toposens-bringup = self.callPackage ./toposens-bringup {};
 
  toposens-description = self.callPackage ./toposens-description {};
@@ -4131,6 +4139,12 @@ self: super: {
  towr = self.callPackage ./towr {};
 
  towr-ros = self.callPackage ./towr-ros {};
+
+ tra1-bringup = self.callPackage ./tra1-bringup {};
+
+ tra1-description = self.callPackage ./tra1-description {};
+
+ tra1-moveit-config = self.callPackage ./tra1-moveit-config {};
 
  trac-ik = self.callPackage ./trac-ik {};
 

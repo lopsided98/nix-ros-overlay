@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, irobot-create-control, urdf, xacro }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-lint-auto, urdf }:
 buildRosPackage {
   pname = "ros-galactic-irobot-create-description";
-  version = "1.0.1-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/galactic/irobot_create_description/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "5e5324978a0a6743b10055ed00c1f9ad8efcac63be0c1b0b1eeeb028822902b0";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/galactic/irobot_create_description/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "c9ecf65ec72d8f4f8d2486ab74903529f8f6787a13d07ccdb424284187570394";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-lint-cmake ament-cmake-pep257 ament-cmake-uncrustify ament-cmake-xmllint ament-lint-auto ];
-  propagatedBuildInputs = [ irobot-create-control urdf xacro ];
+  checkInputs = [ ament-cmake-lint-cmake ament-lint-auto ];
+  propagatedBuildInputs = [ urdf ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

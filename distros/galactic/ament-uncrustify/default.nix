@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, uncrustify-vendor }:
 buildRosPackage {
   pname = "ros-galactic-ament-uncrustify";
-  version = "0.10.6-r1";
+  version = "0.10.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/galactic/ament_uncrustify/0.10.6-1.tar.gz";
-    name = "0.10.6-1.tar.gz";
-    sha256 = "a16d88d8454ec777c16e92815871bb3eca9b967be882dc9b51b97e1ef078773a";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/galactic/ament_uncrustify/0.10.7-1.tar.gz";
+    name = "0.10.7-1.tar.gz";
+    sha256 = "77bf7841dca0533fe0005a51a197eeac712a508eb0c0f48aedffe27bf0626592";
   };
 
   buildType = "ament_python";
