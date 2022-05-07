@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, diagnostic-msgs, geometry-msgs, gps-common, libpcap, message-generation, message-runtime, rosconsole, roscpp, roscpp-serialization, rostime, sensor-msgs, xmlrpcpp }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, diagnostic-msgs, geographiclib, geometry-msgs, gps-common, libpcap, message-generation, message-runtime, nav-msgs, nmea-msgs, rosconsole, roscpp, roscpp-serialization, rostime, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-septentrio-gnss-driver";
-  version = "1.0.8-r1";
+  version = "1.1.0-r7";
 
   src = fetchurl {
-    url = "https://github.com/septentrio-users/septentrio_gnss_driver-release/archive/release/noetic/septentrio_gnss_driver/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "4f57d9e9cee6be0f612b13cdfb9b8b958f045d471a1cf095575dc8f7f355bd82";
+    url = "https://github.com/septentrio-users/septentrio_gnss_driver-release/archive/release/noetic/septentrio_gnss_driver/1.1.0-7.tar.gz";
+    name = "1.1.0-7.tar.gz";
+    sha256 = "2f71fe83b75dbaf47065f37e9c4bdcff177ff20e0daa97a541445c15963ed02f";
   };
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
-  propagatedBuildInputs = [ boost cpp-common diagnostic-msgs geometry-msgs gps-common libpcap message-runtime rosconsole roscpp roscpp-serialization rostime sensor-msgs xmlrpcpp ];
+  propagatedBuildInputs = [ boost cpp-common diagnostic-msgs geographiclib geometry-msgs gps-common libpcap message-runtime nav-msgs nmea-msgs rosconsole roscpp roscpp-serialization rostime sensor-msgs tf2 tf2-geometry-msgs tf2-ros xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

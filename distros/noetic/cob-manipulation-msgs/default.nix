@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, moveit-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-manipulation-msgs";
-  version = "0.7.6-r1";
+  version = "0.7.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/noetic/cob_manipulation_msgs/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "f41e5d52ca49b9b4b7bc8873311574bc23ef5e3c99bbc38e72f76f6dc84ddb25";
+    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/noetic/cob_manipulation_msgs/0.7.6-2.tar.gz";
+    name = "0.7.6-2.tar.gz";
+    sha256 = "316c86387cf2b7fac6d808ca2ba90f93476576cd36951284e9d7d4223f102231";
   };
 
   buildType = "catkin";

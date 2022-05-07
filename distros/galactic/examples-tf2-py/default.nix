@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch-ros, pythonPackages, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-galactic-examples-tf2-py";
-  version = "0.17.2-r1";
+  version = "0.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/examples_tf2_py/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "8f9997816b686643aac6eb5ba5898881f3fa8465ea776cb91d0605c1e523bc3a";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/examples_tf2_py/0.17.3-1.tar.gz";
+    name = "0.17.3-1.tar.gz";
+    sha256 = "36dbdc9c6a5dd2b66af43e8162bb16e8e5d542e12c9042eaf8930fffed535684";
   };
 
   buildType = "ament_python";

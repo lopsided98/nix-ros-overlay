@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, lifecycle-msgs, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-galactic-plansys2-lifecycle-manager";
-  version = "2.0.3-r1";
+  version = "2.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_lifecycle_manager/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "5f7a78fa8107ce014792326d65c9f89838b483953e226e86c3545049e1477983";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_lifecycle_manager/2.0.8-1.tar.gz";
+    name = "2.0.8-1.tar.gz";
+    sha256 = "92fdc2acaf21df9f0fc6b5ed5b826e524dd3073d8b8f29a30be861d15ad0e41b";
   };
 
   buildType = "ament_cmake";

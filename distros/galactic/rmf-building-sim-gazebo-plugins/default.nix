@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, gazebo-dev, gazebo-ros, menge-vendor, opencv3, qt5, rclcpp, rmf-building-sim-common, rmf-fleet-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, gazebo-dev, gazebo-ros, menge-vendor, opencv, qt5, rclcpp, rmf-building-sim-common, rmf-fleet-msgs }:
 buildRosPackage {
   pname = "ros-galactic-rmf-building-sim-gazebo-plugins";
   version = "1.3.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ gazebo-dev gazebo-ros menge-vendor opencv3 qt5.qtbase rclcpp rmf-building-sim-common rmf-fleet-msgs ];
+  propagatedBuildInputs = [ gazebo-dev gazebo-ros menge-vendor opencv qt5.qtbase rclcpp rmf-building-sim-common rmf-fleet-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

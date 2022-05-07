@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, flir-camera-description, spinnaker-camera-driver }:
 buildRosPackage {
   pname = "ros-noetic-flir-camera-driver";
-  version = "0.2.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/noetic/flir_camera_driver/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "d7c34b9c69f6f63522013884324ee24bf4a372a6e4e9a791f806def69d47ccdd";
+    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/noetic/flir_camera_driver/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "327f8ef92766d5cd10aa75ec9a05549509a7d5ef1ca1514f756dd72200c10229";
   };
 
   buildType = "catkin";

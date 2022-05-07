@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-foxy-robot-upstart";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/foxy/robot_upstart/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "f5d061ef21b1f997084a715a047383b746c2863ebd0510a5ecfa8577acaea0e6";
+    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/foxy/robot_upstart/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "4247d0c32fca3a7e92edc2b832b76924359a069df0c552af2a1e11646337e0f4";
   };
 
   buildType = "ament_python";

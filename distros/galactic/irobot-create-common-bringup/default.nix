@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, irobot-create-control, irobot-create-description, joint-state-publisher, robot-state-publisher, ros2launch, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-galactic-irobot-create-common-bringup";
-  version = "1.0.1-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/galactic/irobot_create_common_bringup/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "ed35e63aa0b5df102b5a1949c54e432b3458448f2a9a7b970760afd845ec9b80";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/galactic/irobot_create_common_bringup/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "47e3739e655fce791271407bbe0ca3c32a8ecde4ff2fd81bd6198e44af95ce8a";
   };
 
   buildType = "ament_cmake";

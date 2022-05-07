@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, map-server, nav-2d-utils, nav-grid, nav-grid-iterators, nav-grid-pub-sub, nav-msgs, opencv3, roscpp, roslib, roslint }:
+{ lib, buildRosPackage, fetchurl, catkin, map-server, nav-2d-utils, nav-grid, nav-grid-iterators, nav-grid-pub-sub, nav-msgs, opencv, roscpp, roslib, roslint }:
 buildRosPackage {
   pname = "ros-melodic-nav-grid-server";
   version = "0.3.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ map-server roslib roslint ];
-  propagatedBuildInputs = [ nav-2d-utils nav-grid nav-grid-iterators nav-grid-pub-sub nav-msgs opencv3 roscpp ];
+  propagatedBuildInputs = [ nav-2d-utils nav-grid nav-grid-iterators nav-grid-pub-sub nav-msgs opencv roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

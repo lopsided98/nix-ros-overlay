@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, nav2-common, navigation2, slam-toolbox }:
 buildRosPackage {
   pname = "ros-galactic-nav2-bringup";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_bringup/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "f7bfdc6242b6123e94b59ff0d0a2024cfaa24b1f46abc6cac16e7a9232b0f92c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_bringup/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "2d49b9631632977540f7d91345d31ace377195b705540073b18d398728c86fc5";
   };
 
   buildType = "ament_cmake";

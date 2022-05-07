@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, libpqxx, postgresql, python3, python3Packages, roslint, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-knowledge-representation";
-  version = "0.9.5-r1";
+  version = "0.9.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/utexas-bwi-gbp/knowledge_representation-release/archive/release/noetic/knowledge_representation/0.9.5-1.tar.gz";
-    name = "0.9.5-1.tar.gz";
-    sha256 = "3cdbf4f6a2964d8e9dd9e281936f812e4eee24c1936b3d62aa817f1389ef0e07";
+    url = "https://github.com/utexas-bwi-gbp/knowledge_representation-release/archive/release/noetic/knowledge_representation/0.9.6-1.tar.gz";
+    name = "0.9.6-1.tar.gz";
+    sha256 = "fad16bb2d5c4b082e11b1969accdf506789cbc771b76fae614f0fbbf5a2b40c1";
   };
 
   buildType = "catkin";

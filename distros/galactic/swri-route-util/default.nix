@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, marti-common-msgs, marti-nav-msgs, rclcpp, swri-geometry-util, swri-math-util, swri-roscpp, swri-transform-util, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-galactic-swri-route-util";
-  version = "3.4.0-r1";
+  version = "3.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_route_util/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "5a590f468faded6cbcfb8e089b31e842e04a5ccf875d51d38d65e812531c70fe";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_route_util/3.4.1-1.tar.gz";
+    name = "3.4.1-1.tar.gz";
+    sha256 = "eeffd4e7b29f26aa608a5359d831533c16c6bd9040cd30af5ffa80e7a01e3bce";
   };
 
   buildType = "ament_cmake";

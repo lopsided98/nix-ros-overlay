@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, geometry-msgs, laser-geometry, launch, launch-testing, map-msgs, message-filters, nav-msgs, nav2-common, nav2-lifecycle-manager, nav2-map-server, nav2-msgs, nav2-util, nav2-voxel-grid, pluginlib, rclcpp, rclcpp-lifecycle, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-galactic-nav2-costmap-2d";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_costmap_2d/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "dc26b6e385625b8cf9b41847398e099c6776ff2a5f49d933c481f0548cec0ccb";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_costmap_2d/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "30b00ee13cb65fcd10e76c80e3213a1a7909b28500b9463e5756af4124a6c6c9";
   };
 
   buildType = "ament_cmake";

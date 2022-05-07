@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, opencv3, rclcpp, rmw-implementation-cmake, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, opencv, rclcpp, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-intra-process-demo";
   version = "0.14.3-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ std-msgs ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake rmw-implementation-cmake ];
-  propagatedBuildInputs = [ opencv3 rclcpp sensor-msgs ];
+  propagatedBuildInputs = [ opencv rclcpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

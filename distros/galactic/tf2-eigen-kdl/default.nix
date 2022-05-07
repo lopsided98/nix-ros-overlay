@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, orocos-kdl, tf2 }:
 buildRosPackage {
   pname = "ros-galactic-tf2-eigen-kdl";
-  version = "0.17.2-r1";
+  version = "0.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/tf2_eigen_kdl/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "153866e62c46b7b63c3d780e3a9ce210985c91ffa820cc269dfc2750623b892c";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/tf2_eigen_kdl/0.17.3-1.tar.gz";
+    name = "0.17.3-1.tar.gz";
+    sha256 = "18c4088c08d200e718750f3dc94cf30425037466a9fa7dae4e530906cd554c49";
   };
 
   buildType = "ament_cmake";

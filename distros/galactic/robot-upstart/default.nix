@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-galactic-robot-upstart";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/galactic/robot_upstart/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "da6d007b9110ea957e9fd9c6b698e494429d47b17c9176b8d433ebb0cf5c4b6f";
+    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/galactic/robot_upstart/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "23415f06e9d88ad1af93bce698c639efb24850d1f528528e4fe4da4b32ecbe9d";
   };
 
   buildType = "ament_python";

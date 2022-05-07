@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, plansys2-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-msgs, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-plansys2-pddl-parser";
-  version = "2.0.3-r1";
+  version = "2.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_pddl_parser/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "88b2c6abe44d8c92c636fd558b6889e97e9063c57c2f0a276fc88388612780b7";
+    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/galactic/plansys2_pddl_parser/2.0.8-1.tar.gz";
+    name = "2.0.8-1.tar.gz";
+    sha256 = "a5c1a57e29b045f0512d7b319f1a2317aaf93f835468cde8d128b8210e0588b0";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ plansys2-msgs std-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-index-cpp ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ plansys2-msgs rclcpp std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

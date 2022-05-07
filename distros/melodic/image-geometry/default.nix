@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, opencv3, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, opencv, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-image-geometry";
   version = "1.13.0";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ opencv3 sensor-msgs ];
+  propagatedBuildInputs = [ opencv sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, angles, boost, control-msgs, geometry-msgs, irobot-create-msgs, irobot-create-toolbox, nav-msgs, rclcpp, rclcpp-action, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-galactic-irobot-create-nodes";
-  version = "1.0.1-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/galactic/irobot_create_nodes/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "eff3a2a6943772dd2ba1b53e65883006b6fd859351f264018002cebb6a8947b8";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/galactic/irobot_create_nodes/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "fdc6f1adcfd8b407bad06d528d724f6d43091ffa4560da66d3dc1748f874d87e";
   };
 
   buildType = "ament_cmake";

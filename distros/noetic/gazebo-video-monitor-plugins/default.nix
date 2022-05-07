@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros, gazebo-video-monitor-msgs, libyamlcpp, opencv3, roscpp, std-srvs }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros, gazebo-video-monitor-msgs, libyamlcpp, opencv, roscpp, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-gazebo-video-monitor-plugins";
   version = "0.7.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ libyamlcpp ];
-  propagatedBuildInputs = [ gazebo-ros gazebo-video-monitor-msgs opencv3 roscpp std-srvs ];
+  propagatedBuildInputs = [ gazebo-ros gazebo-video-monitor-msgs opencv roscpp std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

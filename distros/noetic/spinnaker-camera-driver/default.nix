@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, curl, diagnostic-updater, dpkg, dynamic-reconfigure, image-exposure-msgs, image-proc, image-transport, libusb1, nodelet, roscpp, roslaunch, roslint, sensor-msgs, wfov-camera-msgs }:
 buildRosPackage {
   pname = "ros-noetic-spinnaker-camera-driver";
-  version = "0.2.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/noetic/spinnaker_camera_driver/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "d011ea1c0289cdf7318a96d0af10c0f23bfb7aad54062ee92d473119ecd7941d";
+    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/noetic/spinnaker_camera_driver/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "2a8560cf47e4b405439333bfea119075f8a617c341056e47e5868685466b7b4c";
   };
 
   buildType = "catkin";

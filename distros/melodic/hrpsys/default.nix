@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, SDL, cmake, doxygen, freeglut, git, glew, graphviz, irrlicht, libxml2, mk, opencv3, openhrp3, pkg-config, pythonPackages, qhull, xorg }:
+{ lib, buildRosPackage, fetchurl, SDL, cmake, doxygen, freeglut, git, glew, graphviz, irrlicht, libxml2, mk, opencv, openhrp3, pkg-config, pythonPackages, qhull, xorg }:
 buildRosPackage {
   pname = "ros-melodic-hrpsys";
   version = "315.15.0-r8";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ doxygen git glew graphviz mk ];
-  propagatedBuildInputs = [ SDL freeglut irrlicht libxml2 opencv3 openhrp3 pythonPackages.tkinter qhull xorg.libXmu ];
+  propagatedBuildInputs = [ SDL freeglut irrlicht libxml2 opencv openhrp3 pythonPackages.tkinter qhull xorg.libXmu ];
   nativeBuildInputs = [ cmake pkg-config ];
 
   meta = {

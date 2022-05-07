@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, dynamic-reconfigure, geometry-msgs, mrpt-bridge, mrpt1, roscpp, tf, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, dynamic-reconfigure, geometry-msgs, mrpt-bridge, mrpt2, roscpp, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-reactivenav2d";
-  version = "0.1.26-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_reactivenav2d/0.1.26-1.tar.gz";
-    name = "0.1.26-1.tar.gz";
-    sha256 = "6c7352f0b6f9eda20e956b30797e10bb40b0aa1ba0a22be33a872f5d3a2eb47a";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_reactivenav2d/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "679da45a84c04348062a832fc991de4c3ae33c955ebeae73dec5845a0df39eb4";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ actionlib actionlib-msgs dynamic-reconfigure geometry-msgs mrpt-bridge mrpt1 roscpp tf visualization-msgs ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs dynamic-reconfigure geometry-msgs mrpt-bridge mrpt2 roscpp tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

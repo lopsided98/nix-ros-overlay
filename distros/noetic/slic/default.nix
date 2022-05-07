@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cacert, cmake, cmake-modules, git, opencv3, openssl }:
+{ lib, buildRosPackage, fetchurl, cacert, cmake, cmake-modules, git, opencv, openssl }:
 buildRosPackage {
   pname = "ros-noetic-slic";
   version = "2.1.21-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ cacert cmake-modules git openssl ];
-  propagatedBuildInputs = [ opencv3 ];
+  propagatedBuildInputs = [ opencv ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

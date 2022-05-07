@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-foxy-clober-bringup";
-  version = "0.1.0-r2";
+  version = "0.2.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/CLOBOT-Co-Ltd-release/clober_ros2-release/archive/release/foxy/clober_bringup/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "9d49343e86f45556902c07b874fe7cfc5ca810ab3bd32c48366ee52ad62e6cfd";
+    url = "https://github.com/CLOBOT-Co-Ltd-release/clober_ros2-release/archive/release/foxy/clober_bringup/0.2.0-5.tar.gz";
+    name = "0.2.0-5.tar.gz";
+    sha256 = "4a81d8bbfaa193268b2cfda800c52fa48cf0b1870404e2c9ca20a7d6449e01dc";
   };
 
   buildType = "ament_cmake";

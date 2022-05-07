@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, python3Packages }:
 buildRosPackage {
   pname = "ros-foxy-swri-prefix-tools";
-  version = "3.4.0-r1";
+  version = "3.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_prefix_tools/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "8820840166871532f1aa6ffe3feeed6d744467324f33201488d7b33db14d364a";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_prefix_tools/3.4.1-1.tar.gz";
+    name = "3.4.1-1.tar.gz";
+    sha256 = "b524de5f7876182f2b0e754d63ac6886d6f1fa865d3c9743c7c4f5d838cea50e";
   };
 
   buildType = "ament_cmake";

@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dnsmasq, ffmpeg, geometry-msgs, hostapd, libgphoto2, libjpeg_turbo, libmicrohttpd, libnl, mavlink, message-generation, message-runtime, opencv3, python3Packages, rosbash, rosbridge-suite, roscpp, roslaunch, roslint, rospy, sensor-msgs, std-msgs, std-srvs, vision-opencv }:
+{ lib, buildRosPackage, fetchurl, catkin, dnsmasq, ffmpeg, geometry-msgs, hostapd, libgphoto2, libjpeg_turbo, libmicrohttpd, libnl, mavlink, message-generation, message-runtime, opencv, python3Packages, rosbash, rosbridge-suite, roscpp, roslaunch, roslint, rospy, sensor-msgs, std-msgs, std-srvs, vision-opencv }:
 buildRosPackage {
   pname = "ros-noetic-rospilot";
   version = "1.6.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ffmpeg libgphoto2 libjpeg_turbo libmicrohttpd message-generation opencv3 roscpp roslint ];
+  buildInputs = [ ffmpeg libgphoto2 libjpeg_turbo libmicrohttpd message-generation opencv roscpp roslint ];
   propagatedBuildInputs = [ dnsmasq geometry-msgs hostapd libnl mavlink message-runtime python3Packages.cherrypy python3Packages.colorama python3Packages.psutil python3Packages.pyserial rosbash rosbridge-suite roslaunch rospy sensor-msgs std-msgs std-srvs vision-opencv ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 

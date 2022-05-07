@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-galactic-slider-publisher";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/oKermorgant/slider_publisher-release/archive/release/galactic/slider_publisher/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "525137f72228fdee500deeef844d9271be4c543c5442fd7e5107d3d67143ca20";
+    url = "https://github.com/oKermorgant/slider_publisher-release/archive/release/galactic/slider_publisher/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "422dac2ae3a2d53b0314e99bf19996c72e7e1f6733dcfa4c87b894407a3a1b38";
   };
 
   buildType = "ament_python";

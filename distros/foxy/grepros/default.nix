@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, builtin-interfaces, python3Packages, pythonPackages, rclpy, rosidl-parser, rosidl-runtime-py, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-grepros";
-  version = "0.4.4-r1";
+  version = "0.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/suurjaak/grepros-release/archive/release/foxy/grepros/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "fee5e4face7dbfba341b71f0e54d0216be6c2ae33615c36fc368251f38327cb4";
+    url = "https://github.com/suurjaak/grepros-release/archive/release/foxy/grepros/0.4.5-1.tar.gz";
+    name = "0.4.5-1.tar.gz";
+    sha256 = "ed5c6379f572943f568a94451f51050090ee35b24665f471887b6accca44eb5c";
   };
 
   buildType = "ament_python";

@@ -172,6 +172,10 @@ self: super: {
 
  capabilities = self.callPackage ./capabilities {};
 
+ care-o-bot = self.callPackage ./care-o-bot {};
+
+ care-o-bot-simulation = self.callPackage ./care-o-bot-simulation {};
+
  carla-msgs = self.callPackage ./carla-msgs {};
 
  carrot-planner = self.callPackage ./carrot-planner {};
@@ -242,6 +246,10 @@ self: super: {
 
  cob-bms-driver = self.callPackage ./cob-bms-driver {};
 
+ cob-bringup = self.callPackage ./cob-bringup {};
+
+ cob-bringup-sim = self.callPackage ./cob-bringup-sim {};
+
  cob-calibration-data = self.callPackage ./cob-calibration-data {};
 
  cob-cam3d-throttle = self.callPackage ./cob-cam3d-throttle {};
@@ -290,6 +298,8 @@ self: super: {
 
  cob-frame-tracker = self.callPackage ./cob-frame-tracker {};
 
+ cob-gazebo = self.callPackage ./cob-gazebo {};
+
  cob-gazebo-objects = self.callPackage ./cob-gazebo-objects {};
 
  cob-gazebo-plugins = self.callPackage ./cob-gazebo-plugins {};
@@ -323,6 +333,8 @@ self: super: {
  cob-linear-nav = self.callPackage ./cob-linear-nav {};
 
  cob-lookat-action = self.callPackage ./cob-lookat-action {};
+
+ cob-manipulation = self.callPackage ./cob-manipulation {};
 
  cob-manipulation-msgs = self.callPackage ./cob-manipulation-msgs {};
 
@@ -378,6 +390,8 @@ self: super: {
 
  cob-relayboard = self.callPackage ./cob-relayboard {};
 
+ cob-robots = self.callPackage ./cob-robots {};
+
  cob-safety-controller = self.callPackage ./cob-safety-controller {};
 
  cob-scan-unifier = self.callPackage ./cob-scan-unifier {};
@@ -387,6 +401,8 @@ self: super: {
  cob-sick-lms1xx = self.callPackage ./cob-sick-lms1xx {};
 
  cob-sick-s300 = self.callPackage ./cob-sick-s300 {};
+
+ cob-simulation = self.callPackage ./cob-simulation {};
 
  cob-sound = self.callPackage ./cob-sound {};
 
@@ -639,6 +655,8 @@ self: super: {
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamic-reconfigure = self.callPackage ./dynamic-reconfigure {};
+
+ dynamic-robot-state-publisher = self.callPackage ./dynamic-robot-state-publisher {};
 
  dynamic-tf-publisher = self.callPackage ./dynamic-tf-publisher {};
 
@@ -1712,6 +1730,8 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
+ mocap-nokov = self.callPackage ./mocap-nokov {};
+
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
 
  monocam-settler = self.callPackage ./monocam-settler {};
@@ -1822,7 +1842,21 @@ self: super: {
 
  mrpt-bridge = self.callPackage ./mrpt-bridge {};
 
+ mrpt-local-obstacles = self.callPackage ./mrpt-local-obstacles {};
+
+ mrpt-localization = self.callPackage ./mrpt-localization {};
+
+ mrpt-map = self.callPackage ./mrpt-map {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
+
+ mrpt-navigation = self.callPackage ./mrpt-navigation {};
+
+ mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
+
+ mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
+
+ mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1845,8 +1879,6 @@ self: super: {
  multisense-lib = self.callPackage ./multisense-lib {};
 
  multisense-ros = self.callPackage ./multisense-ros {};
-
- mvsim = self.callPackage ./mvsim {};
 
  nav2d = self.callPackage ./nav2d {};
 
@@ -1987,6 +2019,10 @@ self: super: {
  openni2-camera = self.callPackage ./openni2-camera {};
 
  openni2-launch = self.callPackage ./openni2-launch {};
+
+ openni-description = self.callPackage ./openni-description {};
+
+ openni-launch = self.callPackage ./openni-launch {};
 
  openrtm-aist = self.callPackage ./openrtm-aist {};
 
@@ -2311,8 +2347,6 @@ self: super: {
  qb-move-description = self.callPackage ./qb-move-description {};
 
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
-
- qt-advanced-docking = self.callPackage ./qt-advanced-docking {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
 
@@ -2980,6 +3014,8 @@ self: super: {
 
  stage-ros = self.callPackage ./stage-ros {};
 
+ static-transform-mux = self.callPackage ./static-transform-mux {};
+
  statistics-msgs = self.callPackage ./statistics-msgs {};
 
  std-msgs = self.callPackage ./std-msgs {};
@@ -3104,6 +3140,8 @@ self: super: {
 
  tf-conversions = self.callPackage ./tf-conversions {};
 
+ tf-remapper-cpp = self.callPackage ./tf-remapper-cpp {};
+
  theora-image-transport = self.callPackage ./theora-image-transport {};
 
  thunder-line-follower-pmr3100 = self.callPackage ./thunder-line-follower-pmr3100 {};
@@ -3221,6 +3259,8 @@ self: super: {
  udp-com = self.callPackage ./udp-com {};
 
  ueye-cam = self.callPackage ./ueye-cam {};
+
+ um6 = self.callPackage ./um6 {};
 
  um7 = self.callPackage ./um7 {};
 

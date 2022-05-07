@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, opencv3, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, opencv, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-image-geometry";
   version = "2.2.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
-  propagatedBuildInputs = [ opencv3 sensor-msgs ];
+  propagatedBuildInputs = [ opencv sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-python ament-cmake-ros ];
 
   meta = {

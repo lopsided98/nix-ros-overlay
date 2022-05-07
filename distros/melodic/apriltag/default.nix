@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, opencv3 }:
+{ lib, buildRosPackage, fetchurl, cmake, opencv }:
 buildRosPackage {
   pname = "ros-melodic-apriltag";
   version = "3.2.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  checkInputs = [ opencv3 ];
+  checkInputs = [ opencv ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

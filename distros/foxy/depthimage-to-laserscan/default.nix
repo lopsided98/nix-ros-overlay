@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, image-geometry, opencv3, rclcpp, rclcpp-components, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, image-geometry, opencv, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-depthimage-to-laserscan";
   version = "2.3.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ image-geometry opencv3 rclcpp rclcpp-components sensor-msgs ];
+  propagatedBuildInputs = [ image-geometry opencv rclcpp rclcpp-components sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

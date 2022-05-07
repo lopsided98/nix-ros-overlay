@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, opencv3, python3, python3Packages, rosconsole, rostest, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, opencv, python3, python3Packages, rosconsole, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cv-bridge";
   version = "1.16.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ python3Packages.numpy rostest ];
-  propagatedBuildInputs = [ boost opencv3 python3 python3Packages.opencv3 rosconsole sensor-msgs ];
+  propagatedBuildInputs = [ boost opencv python3 python3Packages.opencv3 rosconsole sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

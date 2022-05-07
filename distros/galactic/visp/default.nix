@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, libjpeg, liblapack, libpng, libv4l, libxml2, opencv3, xorg }:
+{ lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, libjpeg, liblapack, libpng, libv4l, libxml2, opencv, xorg }:
 buildRosPackage {
   pname = "ros-galactic-visp";
   version = "3.5.0-r3";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ bzip2 doxygen ];
-  propagatedBuildInputs = [ eigen libjpeg liblapack libpng libv4l libxml2 opencv3 xorg.libX11 ];
+  propagatedBuildInputs = [ eigen libjpeg liblapack libpng libv4l libxml2 opencv xorg.libX11 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

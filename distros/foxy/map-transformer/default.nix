@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, opencv3, yaml-cpp-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, opencv, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-foxy-map-transformer";
   version = "1.0.3-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ opencv3 yaml-cpp-vendor ];
+  propagatedBuildInputs = [ opencv yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

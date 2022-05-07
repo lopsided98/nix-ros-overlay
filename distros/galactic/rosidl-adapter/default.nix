@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3Packages, rosidl-cli }:
 buildRosPackage {
   pname = "ros-galactic-rosidl-adapter";
-  version = "2.2.1-r2";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/galactic/rosidl_adapter/2.2.1-2.tar.gz";
-    name = "2.2.1-2.tar.gz";
-    sha256 = "2d866590706b67064b4241b50d71d4d81694608738967648f7c72e9d8d428bf6";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/galactic/rosidl_adapter/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "055ab655b3438630b934345e75e43c92b819df74b98a067ff850d1d9d5faee9c";
   };
 
   buildType = "ament_cmake";

@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib, boost, catkin, cv-bridge, darknet-ros-msgs, image-transport, message-generation, nodelet, opencv3, roscpp, rospy, rostest, sensor-msgs, std-msgs, wget, xorg }:
+{ lib, buildRosPackage, fetchurl, actionlib, boost, catkin, cv-bridge, darknet-ros-msgs, image-transport, message-generation, nodelet, opencv, roscpp, rospy, rostest, sensor-msgs, std-msgs, wget, xorg }:
 buildRosPackage {
   pname = "ros-noetic-darknet-ros";
   version = "1.1.5-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   checkInputs = [ rostest wget ];
-  propagatedBuildInputs = [ actionlib boost cv-bridge darknet-ros-msgs image-transport message-generation nodelet opencv3 roscpp rospy sensor-msgs std-msgs xorg.libX11 xorg.libXext xorg.libXtst ];
+  propagatedBuildInputs = [ actionlib boost cv-bridge darknet-ros-msgs image-transport message-generation nodelet opencv roscpp rospy sensor-msgs std-msgs xorg.libX11 xorg.libXext xorg.libXtst ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

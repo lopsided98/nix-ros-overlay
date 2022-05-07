@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, camera-info-manager, ffmpeg, image-transport, image-transport-plugins, rclcpp, rclcpp-components, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, v4l-utils }:
 buildRosPackage {
   pname = "ros-foxy-usb-cam";
-  version = "0.4.1-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/usb_cam-release/archive/release/foxy/usb_cam/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "b890f9babfa81aa5c85b116196e9b99b69a6ec90595ad98e3dfab1d616d4c96f";
+    url = "https://github.com/ros-gbp/usb_cam-release/archive/release/foxy/usb_cam/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "4ebd79d187833e24d7d24a13209274c528d271f073c4c700a73dcc57674f4b3d";
   };
 
   buildType = "ament_cmake";
