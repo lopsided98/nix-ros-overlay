@@ -307,6 +307,16 @@ let
       '';
     });
 
+    rqt-image-view = rosSuper.rqt-image-view.overrideAttrs ({
+      nativeBuildInputs ? [], postFixup ? "", ...
+    }: {
+      dontWrapQtApps = false;
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      postFixup = postFixup + ''
+        wrapQtApp "$out/bin/rqt_image_view"
+      '';
+    });
+
     rqt-msg = rosSuper.rqt-msg.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
