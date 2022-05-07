@@ -23,6 +23,20 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "1j6br21rc379wizvclz46s3kih0kfii6m923p4x4s37wdnm5nq0l";
   };
 
+  nav2-util = rosSuper.nav2-util.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # Restrict test_msgs to test_dependency
+      # https://github.com/ros-planning/navigation2/pull/2827
+      (self.fetchpatch {
+        url = "https://github.com/ros-planning/navigation2/commit/5cc006ea831e74af7ab08a08131786d27655e22a.patch";
+        sha256 = "sha256-ahQT6yqrmPV7Peh70rdIMhB6rtBSUaD1N3YBORsm8n0=";
+        stripLen = 1;
+      })
+    ] ++ patches;
+  });
+
   pybind11-vendor = patchVendorUrl rosSuper.pybind11-vendor {
     url = "https://github.com/pybind/pybind11/archive/v2.5.0.tar.gz";
     sha256 = "0145vj9hrhb9qjp6jfvw0d1qc31lbb103xzxscr0yms0asv4sl4p";
