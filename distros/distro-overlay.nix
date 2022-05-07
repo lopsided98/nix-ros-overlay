@@ -313,7 +313,7 @@ let
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = postFixup + ''
-        wrapQtApp "$out/bin/rqt_image_view"
+        wrapQtApp "$out/lib/rqt_image_view/rqt_image_view"
       '';
     });
 

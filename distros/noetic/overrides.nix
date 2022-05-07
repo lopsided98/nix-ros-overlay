@@ -45,10 +45,18 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
-    patches ? [], postFixup ? "", ...
+    postFixup ? "", ...
   }: {
     postFixup = postFixup + ''
       wrapQtApp "$out/lib/rqt_gui/rqt_gui"
+    '';
+  });
+
+  rqt-image-view = rosSuper.rqt-image-view.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/bin/rqt_image_view"
     '';
   });
 
