@@ -44,6 +44,19 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
   };
 
+  # Fix compatibility with assimp 5.1
+  # https://github.com/ros2/rviz/pull/827
+  rviz-rendering = rosSuper.rviz-rendering.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ros2/rviz/commit/95ddcea7459cc4faf9954ba018491d1eea8d4280.patch";
+      sha256 = "sha256-1kYIrcdm7mu39OFXeDmMWGJygeTKr1fc6ECbM5hf3ZU=";
+      stripLen = 1;
+      includes = [ "CMakeLists.txt" ];
+    }) ];
+  });
+
   yaml-cpp-vendor = rosSuper.yaml-cpp-vendor.overrideAttrs ({
     patches ? [], ...
   }: {
