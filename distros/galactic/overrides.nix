@@ -23,6 +23,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "1j6br21rc379wizvclz46s3kih0kfii6m923p4x4s37wdnm5nq0l";
   };
 
+  mapviz = rosSuper.mapviz.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Fix linking to GLUT with CMake 3.22
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/swri-robotics/mapviz/commit/d68247748c0647f4f6a77d4f098e8ff2beedd39b.patch";
+      sha256 = "sha256-o4NnuMA7N2kn4QAPb9ZkZF8j8aVI7/xQJYX6EGQEkBw=";
+      stripLen = 1;
+    }) ];
+  });
+
   nav2-util = rosSuper.nav2-util.overrideAttrs ({
     patches ? [], ...
   }: {
