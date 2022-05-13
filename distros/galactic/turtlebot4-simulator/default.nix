@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, turtlebot4-ignition-bringup, turtlebot4-ignition-gui-plugins, turtlebot4-ignition-toolbox }:
 buildRosPackage {
   pname = "ros-galactic-turtlebot4-simulator";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_simulator-release/archive/release/galactic/turtlebot4_simulator/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "11de2a7c9481102234c252e0166551791c2bf8d2dd0cee1abf9714b4dc99c044";
+    url = "https://github.com/ros2-gbp/turtlebot4_simulator-release/archive/release/galactic/turtlebot4_simulator/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "2721b40c617b6a564a7b36ba9312e37a6fff3870806eda9991c5c80ceced0e7b";
   };
 
   buildType = "ament_cmake";

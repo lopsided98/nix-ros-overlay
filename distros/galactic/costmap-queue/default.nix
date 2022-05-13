@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, nav2-costmap-2d, rclcpp }:
 buildRosPackage {
   pname = "ros-galactic-costmap-queue";
-  version = "1.0.9-r1";
+  version = "1.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/costmap_queue/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "f5a30727da14f9ca35bf9201713b0b04e14b343e5e348cdcf8813c6d0490f6c9";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/costmap_queue/1.0.10-1.tar.gz";
+    name = "1.0.10-1.tar.gz";
+    sha256 = "227a7e0cda4a0a5fcb066319dd1c6566574bb3bc2bb3bffae3c6afc004cf1b60";
   };
 
   buildType = "ament_cmake";

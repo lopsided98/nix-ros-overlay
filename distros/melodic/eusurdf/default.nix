@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, collada-urdf-jsk-patch, gazebo-ros, pythonPackages, roseus, rostest }:
 buildRosPackage {
   pname = "ros-melodic-eusurdf";
-  version = "0.4.3";
+  version = "0.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/melodic/eusurdf/0.4.3-0.tar.gz";
-    name = "0.4.3-0.tar.gz";
-    sha256 = "47f6b8cfb42f9516ed0993922e6f3059cb387fa533cda56fed5e2fb81937f395";
+    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/melodic/eusurdf/0.4.4-1.tar.gz";
+    name = "0.4.4-1.tar.gz";
+    sha256 = "e65fe8bb4fa58516ec9b7833d07302ee91b8283808e5fe7f18c31db1f974722f";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigen, git, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-eigenpy";
-  version = "2.7.2-r1";
+  version = "2.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/melodic/eigenpy/2.7.2-1.tar.gz";
-    name = "2.7.2-1.tar.gz";
-    sha256 = "e6f7edf9060c26c59d57b119df1fc730d6aa2e4da0a9074660b77aaa40ccfa7d";
+    url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/melodic/eigenpy/2.7.4-1.tar.gz";
+    name = "2.7.4-1.tar.gz";
+    sha256 = "3664e366f7ebd962056f104b284f8933eeee40c14a35371a30e6594c0e014959";
   };
 
   buildType = "cmake";

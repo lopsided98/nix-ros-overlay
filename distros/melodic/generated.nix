@@ -4506,6 +4506,8 @@ self: super: {
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
 
+ warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
+
  warthog-control = self.callPackage ./warthog-control {};
 
  warthog-description = self.callPackage ./warthog-description {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-lint-auto, ament-lint-common, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-nav2-gazebo-spawner";
-  version = "1.0.9-r1";
+  version = "1.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_gazebo_spawner/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "0127e75064ab655841813c745dd8d423dafc4dd8877913d7c46185a2e9b22bb9";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_gazebo_spawner/1.0.10-1.tar.gz";
+    name = "1.0.10-1.tar.gz";
+    sha256 = "1930cf2a4ad3e9e8f73043b273549cb43e0e0ec26eaef6375f316b1ea7fa1fdc";
   };
 
   buildType = "ament_python";

@@ -2080,6 +2080,10 @@ self: super: {
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
+ pf-description = self.callPackage ./pf-description {};
+
+ pf-driver = self.callPackage ./pf-driver {};
+
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
@@ -3387,6 +3391,8 @@ self: super: {
  vrpn-client-ros = self.callPackage ./vrpn-client-ros {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
 
  warthog-control = self.callPackage ./warthog-control {};
 

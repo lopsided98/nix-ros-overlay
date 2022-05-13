@@ -230,6 +230,8 @@ self: super: {
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
+ depthai = self.callPackage ./depthai {};
+
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
  desktop = self.callPackage ./desktop {};

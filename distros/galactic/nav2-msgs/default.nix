@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, nav-msgs, nav2-common, rclcpp, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-nav2-msgs";
-  version = "1.0.9-r1";
+  version = "1.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_msgs/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "4f7946653eca774cabc0868fcef181f859caa774b81e3a6bad5e0df241205b3e";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_msgs/1.0.10-1.tar.gz";
+    name = "1.0.10-1.tar.gz";
+    sha256 = "1f46c6e12b5f2ee63e49c9282b51c8ff11677e61985b7ab4ddb5c4d4696eb75d";
   };
 
   buildType = "ament_cmake";

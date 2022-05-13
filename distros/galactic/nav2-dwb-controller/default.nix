@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, costmap-queue, dwb-core, dwb-critics, dwb-msgs, dwb-plugins, nav-2d-msgs, nav-2d-utils }:
 buildRosPackage {
   pname = "ros-galactic-nav2-dwb-controller";
-  version = "1.0.9-r1";
+  version = "1.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_dwb_controller/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "b021b4c71f600092d8dee8d6db8f927ce968cd271f66c09c822d835454f5c25d";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_dwb_controller/1.0.10-1.tar.gz";
+    name = "1.0.10-1.tar.gz";
+    sha256 = "b464973623b7225bea330cb8d138d8f81e2cbf6ca71ff5dd6940f8289bef3b50";
   };
 
   buildType = "ament_cmake";

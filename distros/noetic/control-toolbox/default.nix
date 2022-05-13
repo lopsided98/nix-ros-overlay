@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, control-msgs, dynamic-reconfigure, message-generation, message-runtime, realtime-tools, roscpp, rosunit, std-msgs, tinyxml }:
 buildRosPackage {
   pname = "ros-noetic-control-toolbox";
-  version = "1.18.2-r1";
+  version = "1.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/control_toolbox-release/archive/release/noetic/control_toolbox/1.18.2-1.tar.gz";
-    name = "1.18.2-1.tar.gz";
-    sha256 = "f0cfd52a0e7ecb256997808fd3caa730e31ddfe2e9404174d875f13100caaae2";
+    url = "https://github.com/ros-gbp/control_toolbox-release/archive/release/noetic/control_toolbox/1.19.0-1.tar.gz";
+    name = "1.19.0-1.tar.gz";
+    sha256 = "64f03769fcf0512c51bca4e1cc1278d05dfee163887a851b48f83b5c30524cfe";
   };
 
   buildType = "catkin";
