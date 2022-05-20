@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy }:
 buildRosPackage {
   pname = "ros-melodic-chaplus-ros";
-  version = "2.1.24-r1";
+  version = "2.1.24-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/chaplus_ros/2.1.24-1.tar.gz";
-    name = "2.1.24-1.tar.gz";
-    sha256 = "39bb3f7e562d4f135fd6281b7abf4b71e20bdbf7559aa56909093bb446fba75e";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/chaplus_ros/2.1.24-2.tar.gz";
+    name = "2.1.24-2.tar.gz";
+    sha256 = "d606d591bf48e7447ed61a3141dfd244bdc9c1560d81648504a05ca8de8fcfb8";
   };
 
   buildType = "catkin";

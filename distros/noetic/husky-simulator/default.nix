@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, husky-gazebo }:
 buildRosPackage {
   pname = "ros-noetic-husky-simulator";
-  version = "0.6.2-r1";
+  version = "0.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_simulator/0.6.2-1.tar.gz";
-    name = "0.6.2-1.tar.gz";
-    sha256 = "89a6fb7ec65c7c1ffeabb82086155027cd96f326c1c72caac0261133f8ae4a64";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_simulator/0.6.3-1.tar.gz";
+    name = "0.6.3-1.tar.gz";
+    sha256 = "96c15f21e9674dac759904c2d81d957d126c7def7e1edf95f27634b8ea901310";
   };
 
   buildType = "catkin";

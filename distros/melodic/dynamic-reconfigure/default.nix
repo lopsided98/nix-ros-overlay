@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, message-generation, message-runtime, roscpp, roscpp-serialization, roslib, rospy, rosservice, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dynamic-reconfigure";
-  version = "1.6.4-r1";
+  version = "1.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/melodic/dynamic_reconfigure/1.6.4-1.tar.gz";
-    name = "1.6.4-1.tar.gz";
-    sha256 = "30e130c37526441336a00f251d9484378f476ecb497548ad7925faf246c3e5ca";
+    url = "https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/melodic/dynamic_reconfigure/1.6.5-1.tar.gz";
+    name = "1.6.5-1.tar.gz";
+    sha256 = "5e609322e2ed6ab0698b93ffa4fd89c7fee57f5e08ec4cc881e5f8246e9707b2";
   };
 
   buildType = "catkin";

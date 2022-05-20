@@ -1504,6 +1504,8 @@ self: super: {
 
  laser-scan-splitter = self.callPackage ./laser-scan-splitter {};
 
+ laser-tilt-controller-filter = self.callPackage ./laser-tilt-controller-filter {};
+
  led-msgs = self.callPackage ./led-msgs {};
 
  leo = self.callPackage ./leo {};
@@ -2080,6 +2082,10 @@ self: super: {
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
+ pf-description = self.callPackage ./pf-description {};
+
+ pf-driver = self.callPackage ./pf-driver {};
+
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
@@ -2266,7 +2272,25 @@ self: super: {
 
  pr2-motor-diagnostic-tool = self.callPackage ./pr2-motor-diagnostic-tool {};
 
+ pr2-move-base = self.callPackage ./pr2-move-base {};
+
  pr2-msgs = self.callPackage ./pr2-msgs {};
+
+ pr2-navigation = self.callPackage ./pr2-navigation {};
+
+ pr2-navigation-config = self.callPackage ./pr2-navigation-config {};
+
+ pr2-navigation-global = self.callPackage ./pr2-navigation-global {};
+
+ pr2-navigation-local = self.callPackage ./pr2-navigation-local {};
+
+ pr2-navigation-perception = self.callPackage ./pr2-navigation-perception {};
+
+ pr2-navigation-self-filter = self.callPackage ./pr2-navigation-self-filter {};
+
+ pr2-navigation-slam = self.callPackage ./pr2-navigation-slam {};
+
+ pr2-navigation-teleop = self.callPackage ./pr2-navigation-teleop {};
 
  pr2-position-scripts = self.callPackage ./pr2-position-scripts {};
 
@@ -2539,6 +2563,8 @@ self: super: {
  ros-emacs-utils = self.callPackage ./ros-emacs-utils {};
 
  ros-environment = self.callPackage ./ros-environment {};
+
+ ros-ethercat-eml = self.callPackage ./ros-ethercat-eml {};
 
  ros-ign = self.callPackage ./ros-ign {};
 
@@ -2913,6 +2939,8 @@ self: super: {
  sdhlibrary-cpp = self.callPackage ./sdhlibrary-cpp {};
 
  self-test = self.callPackage ./self-test {};
+
+ semantic-point-annotator = self.callPackage ./semantic-point-annotator {};
 
  sensor-filters = self.callPackage ./sensor-filters {};
 
@@ -3387,6 +3415,8 @@ self: super: {
  vrpn-client-ros = self.callPackage ./vrpn-client-ros {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
 
  warthog-control = self.callPackage ./warthog-control {};
 

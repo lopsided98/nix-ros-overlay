@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mk, roslib, rospack, rsync, unzip, wget }:
 buildRosPackage {
   pname = "ros-melodic-julius";
-  version = "2.1.24-r1";
+  version = "2.1.24-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/julius/2.1.24-1.tar.gz";
-    name = "2.1.24-1.tar.gz";
-    sha256 = "e9584e6b499d9efac760ae114e921b80a72304897d4ccb4d1e41fb6521d460ce";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/julius/2.1.24-2.tar.gz";
+    name = "2.1.24-2.tar.gz";
+    sha256 = "c729762c703fad77210f45279b17b1e807fe9e48bff481fa5a321f1099ad1da0";
   };
 
   buildType = "catkin";

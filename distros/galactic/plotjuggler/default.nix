@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, qt5 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-galactic-plotjuggler";
-  version = "3.4.2-r1";
+  version = "3.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/galactic/plotjuggler/3.4.2-1.tar.gz";
-    name = "3.4.2-1.tar.gz";
-    sha256 = "917322dd3b9ef735c0db860c71ff7f3ce09f47cc9dad98b8ddbf4f5d583a223f";
+    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/galactic/plotjuggler/3.4.4-1.tar.gz";
+    name = "3.4.4-1.tar.gz";
+    sha256 = "bbb66613ad9ef0d3a49f89618a2ec8f8e84b576ee79938d3c07d17cd1525d956";
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ ament-index-cpp binutils boost cppzmq qt5.qtbase qt5.qtsvg qt5.qtwebsockets qt5.qtx11extras ];
+  propagatedBuildInputs = [ ament-index-cpp binutils boost cppzmq qt5.qtbase qt5.qtsvg qt5.qtwebsockets qt5.qtx11extras rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

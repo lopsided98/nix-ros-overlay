@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, forward-command-controller, hardware-interface, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-position-controllers";
-  version = "0.19.0-r1";
+  version = "0.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/position_controllers/0.19.0-1.tar.gz";
-    name = "0.19.0-1.tar.gz";
-    sha256 = "eb065ab91e1908cb598cf0ad100582163e0b99d4ddc7790568a99ffa4ff176b4";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/position_controllers/0.20.0-1.tar.gz";
+    name = "0.20.0-1.tar.gz";
+    sha256 = "73ed1c9e8d03e2565928ecfe15daf1b5de9e58fda1f5b731203c38b5ee8ada90";
   };
 
   buildType = "catkin";

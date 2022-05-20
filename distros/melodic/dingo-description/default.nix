@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, realsense2-description, robot-state-publisher, urdf, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-melodic-dingo-description";
-  version = "0.1.10-r1";
+  version = "0.1.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/melodic/dingo_description/0.1.10-1.tar.gz";
-    name = "0.1.10-1.tar.gz";
-    sha256 = "79b3e3015c6819d91db0000f8ff3877731b111b9245e304fafb69f27bcb034f5";
+    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/melodic/dingo_description/0.1.11-1.tar.gz";
+    name = "0.1.11-1.tar.gz";
+    sha256 = "6b3bb0a5f5024f163d7498bdb1dbdbd8b1d7af30a0e2c9a2dc406534e8cbcfb3";
   };
 
   buildType = "catkin";

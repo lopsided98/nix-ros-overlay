@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pluginlib, rosconsole, roscpp, roslib, rostest }:
 buildRosPackage {
   pname = "ros-melodic-filters";
-  version = "1.8.2-r1";
+  version = "1.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/filters-release/archive/release/melodic/filters/1.8.2-1.tar.gz";
-    name = "1.8.2-1.tar.gz";
-    sha256 = "b88bbcf6eb05e6297b7026ce3e6ab28bf80612b7f4059519e8c01f12fb1ac794";
+    url = "https://github.com/ros-gbp/filters-release/archive/release/melodic/filters/1.8.3-1.tar.gz";
+    name = "1.8.3-1.tar.gz";
+    sha256 = "8cd183df34d0c9458e0a3f90d5a1d2885aa9363978347e3e3cfc3d01ec709261";
   };
 
   buildType = "catkin";

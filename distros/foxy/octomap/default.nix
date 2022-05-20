@@ -2,19 +2,18 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
+{ lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-foxy-octomap";
-  version = "1.9.7-r1";
+  version = "1.9.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/foxy/octomap/1.9.7-1.tar.gz";
-    name = "1.9.7-1.tar.gz";
-    sha256 = "98bf2fe150437da7c6438b4936778889dbea3400775c90195c7916f7c83d28a2";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/foxy/octomap/1.9.8-1.tar.gz";
+    name = "1.9.8-1.tar.gz";
+    sha256 = "3c87ff348c5a0afd6f96c0f1ac077fecaccfc82d1fcd5f93ef2d1358dbba671f";
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ ament-cmake ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

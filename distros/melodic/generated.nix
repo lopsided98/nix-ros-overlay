@@ -1832,8 +1832,6 @@ self: super: {
 
  laser-filters = self.callPackage ./laser-filters {};
 
- laser-filters-jsk-patch = self.callPackage ./laser-filters-jsk-patch {};
-
  laser-geometry = self.callPackage ./laser-geometry {};
 
  laser-joint-processor = self.callPackage ./laser-joint-processor {};
@@ -4505,6 +4503,8 @@ self: super: {
  wamv-gazebo = self.callPackage ./wamv-gazebo {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
+
+ warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
 
  warthog-control = self.callPackage ./warthog-control {};
 

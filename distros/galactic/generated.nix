@@ -230,6 +230,8 @@ self: super: {
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
+ depthai = self.callPackage ./depthai {};
+
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
  desktop = self.callPackage ./desktop {};
@@ -275,6 +277,12 @@ self: super: {
  dynamixel-sdk-custom-interfaces = self.callPackage ./dynamixel-sdk-custom-interfaces {};
 
  dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
+
+ ecl-build = self.callPackage ./ecl-build {};
+
+ ecl-license = self.callPackage ./ecl-license {};
+
+ ecl-tools = self.callPackage ./ecl-tools {};
 
  effort-controllers = self.callPackage ./effort-controllers {};
 
@@ -1749,6 +1757,8 @@ self: super: {
  xacro = self.callPackage ./xacro {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
+
+ zmqpp-vendor = self.callPackage ./zmqpp-vendor {};
 
  zstd-vendor = self.callPackage ./zstd-vendor {};
 

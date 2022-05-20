@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake }:
 buildRosPackage {
   pname = "ros-melodic-toposens-sensor-library";
-  version = "1.1.4-r1";
+  version = "1.2.4-r4";
 
   src = fetchurl {
-    url = "https://gitlab.com/toposens/public/toposens-library-release/-/archive/release/melodic/toposens-sensor-library/1.1.4-1/archive.tar.gz";
+    url = "https://gitlab.com/toposens/public/toposens-library-release/-/archive/release/melodic/toposens-sensor-library/1.2.4-4/archive.tar.gz";
     name = "archive.tar.gz";
-    sha256 = "040af85195cfdb9c9f9be372be53490f54b6998280de3d37f73b72265c993359";
+    sha256 = "c2388a269c1a3e4afa77bbfc7c683140d2ccf61bdd150e952cfa9d40662fd80e";
   };
 
   buildType = "cmake";

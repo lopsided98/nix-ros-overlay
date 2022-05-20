@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, geometry-msgs, gtest, pluginlib, roscpp, rostest, rostime, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-warehouse-ros";
-  version = "0.9.4-r1";
+  version = "0.9.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/warehouse_ros-release/archive/release/melodic/warehouse_ros/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "30ead0eff97639e117939b3dbf2a7310e922dfe53ce2963591e2fb20976a27e7";
+    url = "https://github.com/ros-gbp/warehouse_ros-release/archive/release/melodic/warehouse_ros/0.9.5-1.tar.gz";
+    name = "0.9.5-1.tar.gz";
+    sha256 = "5ca7ab01596b0a016cd246426d942d88e503ebbcf407e379589560459a64f88d";
   };
 
   buildType = "catkin";
