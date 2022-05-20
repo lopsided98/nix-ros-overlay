@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, git, message-generation, message-runtime, mk, rospy, std-msgs, unzip }:
 buildRosPackage {
   pname = "ros-melodic-bayesian-belief-networks";
-  version = "2.1.24-r1";
+  version = "2.1.24-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/bayesian_belief_networks/2.1.24-1.tar.gz";
-    name = "2.1.24-1.tar.gz";
-    sha256 = "e1b42c1dfb5284eed1db5beb5ea6c769ebc2cbef17b89674d95eed6e15936f12";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/bayesian_belief_networks/2.1.24-2.tar.gz";
+    name = "2.1.24-2.tar.gz";
+    sha256 = "6d1673ffd1144446dd32eda73d25e4885dccce3f4c922e4a2ec9fb9214310af8";
   };
 
   buildType = "catkin";

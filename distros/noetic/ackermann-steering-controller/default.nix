@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, controller-interface, controller-manager, controller-manager-msgs, diff-drive-controller, geometry-msgs, hardware-interface, nav-msgs, pluginlib, realtime-tools, roscpp, rostest, std-msgs, std-srvs, tf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-noetic-ackermann-steering-controller";
-  version = "0.19.0-r1";
+  version = "0.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/ackermann_steering_controller/0.19.0-1.tar.gz";
-    name = "0.19.0-1.tar.gz";
-    sha256 = "23f563369e94501bb09f64ed544b80ed071630d5aeb8001f54da0e1237b5093e";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/ackermann_steering_controller/0.20.0-1.tar.gz";
+    name = "0.20.0-1.tar.gz";
+    sha256 = "58506e4644b956f71b96fae9bae470062fb74482bfb9749db057b8a7cb3bd402";
   };
 
   buildType = "catkin";

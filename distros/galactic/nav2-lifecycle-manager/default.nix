@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, bondcpp, geometry-msgs, lifecycle-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp-action, rclcpp-lifecycle, std-msgs, std-srvs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-galactic-nav2-lifecycle-manager";
-  version = "1.0.9-r1";
+  version = "1.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_lifecycle_manager/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "d45928cbf7ededd041ecde3149882196203ba97fcb9463e22bbcba59dfe70f32";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_lifecycle_manager/1.0.11-1.tar.gz";
+    name = "1.0.11-1.tar.gz";
+    sha256 = "3295f2d0fbf9ce378849cd267a53d9be4e00008a41c9a8aba9ed9251b571ee85";
   };
 
   buildType = "ament_cmake";

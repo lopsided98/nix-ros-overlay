@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, cmake, libsForQt5, octomap, qt5 }:
+{ lib, buildRosPackage, fetchurl, cmake, libsForQt5, octomap, qt5 }:
 buildRosPackage {
   pname = "ros-galactic-octovis";
-  version = "1.9.7-r1";
+  version = "1.9.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/galactic/octovis/1.9.7-1.tar.gz";
-    name = "1.9.7-1.tar.gz";
-    sha256 = "06e6523f0fd18be71735ae45910cbfce375069c179503121d1369c56b0cbbebe";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/galactic/octovis/1.9.8-1.tar.gz";
+    name = "1.9.8-1.tar.gz";
+    sha256 = "c85f90f5b2d37cf5ff1b29a87b5f811bb7e0a9fabce8325d1c0653a432212ad1";
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ ament-cmake libsForQt5.libqglviewer octomap qt5.qtbase ];
+  propagatedBuildInputs = [ libsForQt5.libqglviewer octomap qt5.qtbase ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

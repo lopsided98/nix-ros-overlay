@@ -310,6 +310,8 @@ self: super: {
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
+ depthai = self.callPackage ./depthai {};
+
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
  derived-object-msgs = self.callPackage ./derived-object-msgs {};
@@ -573,6 +575,26 @@ self: super: {
  hardware-interface = self.callPackage ./hardware-interface {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
+
+ husky-base = self.callPackage ./husky-base {};
+
+ husky-bringup = self.callPackage ./husky-bringup {};
+
+ husky-control = self.callPackage ./husky-control {};
+
+ husky-description = self.callPackage ./husky-description {};
+
+ husky-desktop = self.callPackage ./husky-desktop {};
+
+ husky-gazebo = self.callPackage ./husky-gazebo {};
+
+ husky-msgs = self.callPackage ./husky-msgs {};
+
+ husky-robot = self.callPackage ./husky-robot {};
+
+ husky-simulator = self.callPackage ./husky-simulator {};
+
+ husky-viz = self.callPackage ./husky-viz {};
 
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
@@ -859,6 +881,8 @@ self: super: {
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
  mppic = self.callPackage ./mppic {};
+
+ mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 

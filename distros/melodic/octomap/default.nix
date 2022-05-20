@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake }:
 buildRosPackage {
   pname = "ros-melodic-octomap";
-  version = "1.9.7-r1";
+  version = "1.9.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/melodic/octomap/1.9.7-1.tar.gz";
-    name = "1.9.7-1.tar.gz";
-    sha256 = "4e0637858158938f744a53cbbfaa410f5d67d103cdd78cfc759d86321877a8fd";
+    url = "https://github.com/ros-gbp/octomap-release/archive/release/melodic/octomap/1.9.8-1.tar.gz";
+    name = "1.9.8-1.tar.gz";
+    sha256 = "deed4682029157898edbe591eada25b7c2acdef246d5097343ef79cc4f137245";
   };
 
   buildType = "cmake";

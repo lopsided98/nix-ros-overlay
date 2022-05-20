@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, geometry-msgs, gtest, pluginlib, roscpp, rostest, rostime, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-warehouse-ros";
-  version = "0.9.4-r1";
+  version = "0.9.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/warehouse_ros-release/archive/release/noetic/warehouse_ros/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "e13a08e95124d32895d6182a372c459102e2181b68ac72f31cb1bf595ccd4c34";
+    url = "https://github.com/ros-gbp/warehouse_ros-release/archive/release/noetic/warehouse_ros/0.9.5-1.tar.gz";
+    name = "0.9.5-1.tar.gz";
+    sha256 = "f3ea5eab008525e1e38cdbaffb5b43fa4db549a217abda35e8fb39111281ba91";
   };
 
   buildType = "catkin";

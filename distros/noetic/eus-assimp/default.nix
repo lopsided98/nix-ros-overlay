@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp-devel, catkin, euslisp, pkg-config, roseus }:
 buildRosPackage {
   pname = "ros-noetic-eus-assimp";
-  version = "0.4.3-r1";
+  version = "0.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/noetic/eus_assimp/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "a77826bcb3b116fb363b1747899a6b7e845ae8cd311d07d09d2548beb754c8a4";
+    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/noetic/eus_assimp/0.4.4-1.tar.gz";
+    name = "0.4.4-1.tar.gz";
+    sha256 = "f166cf1a93f42fc5f713ab98b2048206a69fefd26cebafeb45b9da845cd8317e";
   };
 
   buildType = "catkin";

@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/NOKOV-MOCAP/mocap_nokov_release/archive/release/noetic/mocap_nokov/0.0.1-1.tar.gz";
     name = "0.0.1-1.tar.gz";
-    sha256 = "23fc5402d82811d8eb216a60838c170533e8a9bc8726849f62b66c2d33362132";
+    sha256 = "59aabc6a6fe038462221dc84bdb2f5f1b3562b194c7467740782b6c9519e4e72";
   };
 
   buildType = "catkin";

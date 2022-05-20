@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, lifecycle-msgs, nav2-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-galactic-nav2-simple-commander";
-  version = "1.0.9-r1";
+  version = "1.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_simple_commander/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "f195205c4009f180eab8644181269c53c2af30da6a3700eb17641412be4ca104";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_simple_commander/1.0.11-1.tar.gz";
+    name = "1.0.11-1.tar.gz";
+    sha256 = "fbddc7ed655af8fc30e5defb0f25a6499d921577f19ececaefa3956c545a7ae3";
   };
 
   buildType = "ament_python";

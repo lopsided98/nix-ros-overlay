@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-python, launch, launch-ros, osrf-pycommon, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-galactic-nav2-common";
-  version = "1.0.9-r1";
+  version = "1.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_common/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "a23d5360fd4b1a21c540e5ed51c14701b5ccee010a2fd6d957df3675b83ef31c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_common/1.0.11-1.tar.gz";
+    name = "1.0.11-1.tar.gz";
+    sha256 = "197efdc63bd761783b46a4b76767ece88514832254968a2a815258e0fb1cd9e8";
   };
 
   buildType = "ament_cmake";
