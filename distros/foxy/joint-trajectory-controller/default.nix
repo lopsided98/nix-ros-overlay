@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, angles, control-msgs, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-foxy-joint-trajectory-controller";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/joint_trajectory_controller/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "7bee94e92fadc54dddb5d3ff934e8e2e3c596f38c92deadda039aaa4a9232510";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/joint_trajectory_controller/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "b659ba9f52b16797229602a84270cd4039479f947f5989e290e08b005c40a6c5";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cpplint, curl, diagnostic-aggregator, diagnostic-updater, geometry-msgs, jq, lifecycle-msgs, mavros-msgs, microstrain-inertial-msgs, nav-msgs, nmea-msgs, rclcpp-lifecycle, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-galactic-microstrain-inertial-driver";
-  version = "2.5.1-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/galactic/microstrain_inertial_driver/2.5.1-1.tar.gz";
-    name = "2.5.1-1.tar.gz";
-    sha256 = "9f9aabdb08509623ff3e4edbc05d39c520f0f6c07f56de4c6c015c1ad58e47ae";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/galactic/microstrain_inertial_driver/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "d1bb7364b3b67b2bd28b31144c5384d18eb304d5d90336d845b7cdc03c8b5773";
   };
 
   buildType = "ament_cmake";

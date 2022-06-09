@@ -146,6 +146,8 @@ self: super: {
 
  audio-to-spectrogram = self.callPackage ./audio-to-spectrogram {};
 
+ audio-video-recorder = self.callPackage ./audio-video-recorder {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -1717,8 +1719,6 @@ self: super: {
  jsk-teleop-joy = self.callPackage ./jsk-teleop-joy {};
 
  jsk-tilt-laser = self.callPackage ./jsk-tilt-laser {};
-
- jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
 
  jsk-visualization = self.callPackage ./jsk-visualization {};
 

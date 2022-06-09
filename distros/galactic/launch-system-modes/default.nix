@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch, osrf-pycommon, python3Packages, pythonPackages, rclpy, system-modes-msgs }:
 buildRosPackage {
   pname = "ros-galactic-launch-system-modes";
-  version = "0.9.0-r1";
+  version = "0.9.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/system_modes-release/archive/release/galactic/launch_system_modes/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "d744b53f51d8495bdc8e7ed7a585a780bb9d02a4a59990dd72640ba97e8f1a9f";
+    url = "https://github.com/ros2-gbp/system_modes-release/archive/release/galactic/launch_system_modes/0.9.0-3.tar.gz";
+    name = "0.9.0-3.tar.gz";
+    sha256 = "89650259c93e45c1bad47364beef43f3aa9bab821c8fd1d15ab9ff36365600e0";
   };
 
   buildType = "ament_python";

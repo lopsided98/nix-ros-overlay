@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, rosapi, rosbridge-library, rosbridge-server }:
 buildRosPackage {
   pname = "ros-galactic-rosbridge-suite";
-  version = "1.1.2-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/galactic/rosbridge_suite/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "ea8237c3b21ec3eed36660824af8b2e77985642bdb435cf9012115c210fc2707";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/galactic/rosbridge_suite/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "ca93dacd3d71963898a4c6bfd6ba04e2558b967273b196c48a1bd52691775f35";
   };
 
   buildType = "ament_cmake";

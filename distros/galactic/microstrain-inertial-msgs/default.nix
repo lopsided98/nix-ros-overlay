@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-microstrain-inertial-msgs";
-  version = "2.5.1-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/galactic/microstrain_inertial_msgs/2.5.1-1.tar.gz";
-    name = "2.5.1-1.tar.gz";
-    sha256 = "a592938f4ed14d8a90988bb0498a16217ffb08532f9501c7d5000d5bef3427ea";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/galactic/microstrain_inertial_msgs/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "2aacf1a64b749d8951b21aff8a4c736058547b0d591e431349607d09e1bd8d21";
   };
 
   buildType = "ament_cmake";

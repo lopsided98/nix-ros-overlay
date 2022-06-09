@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, image-geometry, image-transport, image-view, message-filters, message-generation, message-runtime, pcl-ros, pythonPackages, roscpp, rostest, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-melodic-image-view2";
-  version = "2.2.11-r1";
+  version = "2.2.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/image_view2/2.2.11-1.tar.gz";
-    name = "2.2.11-1.tar.gz";
-    sha256 = "1921a60f86711937e0a5849018f4396eb5300868081912f1e9eac72da3724ea4";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/image_view2/2.2.12-1.tar.gz";
+    name = "2.2.12-1.tar.gz";
+    sha256 = "6ca6f03b21bd7feee26a9935b7f2eea8fa7c3c4e9dccf12013b415d4b7c61a50";
   };
 
   buildType = "catkin";

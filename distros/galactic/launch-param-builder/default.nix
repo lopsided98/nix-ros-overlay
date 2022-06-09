@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-index-python, python3Packages, pythonPackages, rclpy, xacro }:
 buildRosPackage {
   pname = "ros-galactic-launch-param-builder";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/launch_param_builder-release/archive/release/galactic/launch_param_builder/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "25e509f790330382d2152f27e66668839668e3ac0b34af480db51c6770d49a1b";
+    url = "https://github.com/PickNikRobotics/launch_param_builder-release/archive/release/galactic/launch_param_builder/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "408197f535f9f8aaba6fd842a8b50e311a1e304ae1bb2060242897d7739acb72";
   };
 
   buildType = "ament_python";
