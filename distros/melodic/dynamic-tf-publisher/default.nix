@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rospy, tf }:
 buildRosPackage {
   pname = "ros-melodic-dynamic-tf-publisher";
-  version = "2.2.11-r1";
+  version = "2.2.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/dynamic_tf_publisher/2.2.11-1.tar.gz";
-    name = "2.2.11-1.tar.gz";
-    sha256 = "886b71646612b3537999fc3ddd2cb4cfc7aacae23b22c8ba02a5f2e2ae5977be";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/dynamic_tf_publisher/2.2.12-1.tar.gz";
+    name = "2.2.12-1.tar.gz";
+    sha256 = "6fe4cbaddcfc91c3e9e36ffc338bff1d07dc6d79f7126b789fcd292927e8e2db";
   };
 
   buildType = "catkin";

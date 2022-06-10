@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, geometry-msgs, gtest, mrpt2, ros-environment, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-melodic-pose-cov-ops";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/pose_cov_ops-release/archive/release/melodic/pose_cov_ops/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "ac4c22782f5b83108c80988bd6077869e5c9f88a0aeaabb58dfc3b03e547f71e";
+    url = "https://github.com/mrpt-ros-pkg-release/pose_cov_ops-release/archive/release/melodic/pose_cov_ops/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "4becd01ee62b1534be3e71765eccaab5395e5abb96ea3e35a59d433d15ed1af9";
   };
 
   buildType = "cmake";

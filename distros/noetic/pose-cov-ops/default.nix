@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, geometry-msgs, gtest, mrpt2, ros-environment, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-pose-cov-ops";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/pose_cov_ops-release/archive/release/noetic/pose_cov_ops/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "a39bd4d3350f24be404f95c4e4e524b4dfa68cc05aa67f6bf0152d1286daa921";
+    url = "https://github.com/mrpt-ros-pkg-release/pose_cov_ops-release/archive/release/noetic/pose_cov_ops/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "6d1321ca05bc4d672248a8e30a0a523270b76ac7ebefa6d368d7f7b92954c0dc";
   };
 
   buildType = "cmake";

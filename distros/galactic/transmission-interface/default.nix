@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, hardware-interface }:
 buildRosPackage {
   pname = "ros-galactic-transmission-interface";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/transmission_interface/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "67a0f8b0b5b864dabbad7698832afaa5e99d45af475a9ce490ef1b6dcb26d26b";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/transmission_interface/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "928c20f4eabd83fbf173e9b28cc8df5151054234be3ac30cbfd3eae5cc4c2bd3";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-manager, forward-command-controller, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-foxy-effort-controllers";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/effort_controllers/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "1e3ce55c6318b3a0c94586a7fd04b26d87c3bf50ff50bcb7acf01b511110d0e6";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/effort_controllers/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "b02c889e98f4539ad4205b1cbfdd91a20ff76f105c9770cdf691dbd8a91c23ac";
   };
 
   buildType = "ament_cmake";

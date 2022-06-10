@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, dwb-msgs, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-util, pluginlib, rclcpp, sensor-msgs, std-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-galactic-dwb-core";
-  version = "1.0.11-r1";
+  version = "1.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/dwb_core/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "5f37823566c17f1e3f5f69d28305022310a6cffa1f2e5e487310f6af3b7f9500";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/dwb_core/1.0.12-1.tar.gz";
+    name = "1.0.12-1.tar.gz";
+    sha256 = "a183c107ab0edb87290647f4333a259da8a3bff19aa462ef180ae83038d38f6b";
   };
 
   buildType = "ament_cmake";

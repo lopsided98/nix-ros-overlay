@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, launch, launch-ros, xacro }:
 buildRosPackage {
   pname = "ros-foxy-simple-launch";
-  version = "1.3.1-r1";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/oKermorgant/simple_launch-release/archive/release/foxy/simple_launch/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "94b1612e8028b244406a5a2230f6bf8b1edd853355d7f0cfcfa3b4514140f7e1";
+    url = "https://github.com/oKermorgant/simple_launch-release/archive/release/foxy/simple_launch/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "d42d38532c922bf5bd79d2c2c35416f35cc4eec1053432c9a9067ece0d553694";
   };
 
   buildType = "ament_python";

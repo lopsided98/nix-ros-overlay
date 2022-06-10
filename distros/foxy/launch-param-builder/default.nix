@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-index-python, python3Packages, pythonPackages, rclpy, xacro }:
 buildRosPackage {
   pname = "ros-foxy-launch-param-builder";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/launch_param_builder-release/archive/release/foxy/launch_param_builder/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "530e4a7ec9daa50d844a22f4849a2df74869484d3cece8903752a6ae2bf46335";
+    url = "https://github.com/PickNikRobotics/launch_param_builder-release/archive/release/foxy/launch_param_builder/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "8c427e92d6cd8ff40edfa0d78462b0f8f84ac1068309fc1c82d59a4fe3cb4075";
   };
 
   buildType = "ament_python";

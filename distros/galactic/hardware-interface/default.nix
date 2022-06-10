@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, control-msgs, lifecycle-msgs, pluginlib, rclcpp-lifecycle, rcpputils, rcutils, ros2-control-test-assets, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-galactic-hardware-interface";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/hardware_interface/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "b6401678c43cbfb28b5fa28f8c80f34f2fec28593338476167e2ffeb8e107bc6";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/galactic/hardware_interface/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "9a34ff4d199a331171e6d092daac9bed50965634b2b73ce64fbb0284e16c24f7";
   };
 
   buildType = "ament_cmake";

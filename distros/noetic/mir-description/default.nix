@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diff-drive-controller, gazebo-plugins, gazebo-ros-control, hector-gazebo-plugins, joint-state-controller, joint-state-publisher, joint-state-publisher-gui, position-controllers, robot-state-publisher, roslaunch, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-mir-description";
-  version = "1.1.5-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_description/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "1493c3d5d2f284a4385487e1bce11491b798464c2d1690eea3051b26309daa06";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_description/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "b6206ed02b24e22354bc239fafa903d9cf6618251656d81b8e6093e89c9105f2";
   };
 
   buildType = "catkin";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''URDF description of the MiR100 robot'';
+    description = ''URDF description of the MiR robot'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, microstrain-inertial-msgs, nav-msgs, rospy, rqt-gui, rqt-gui-py, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-melodic-microstrain-inertial-rqt";
-  version = "2.5.1-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/melodic/microstrain_inertial_rqt/2.5.1-1.tar.gz";
-    name = "2.5.1-1.tar.gz";
-    sha256 = "f3041bbd95ac8a94952c1f994cdf48aa9a060319ea89f1715c979fa44b95abea";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/melodic/microstrain_inertial_rqt/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "77900553fe061f856b8dfa7d530ec27c408ed5425dde215913e3c747f31a3b59";
   };
 
   buildType = "catkin";

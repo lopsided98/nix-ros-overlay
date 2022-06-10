@@ -174,6 +174,8 @@ self: super: {
 
  care-o-bot = self.callPackage ./care-o-bot {};
 
+ care-o-bot-robot = self.callPackage ./care-o-bot-robot {};
+
  care-o-bot-simulation = self.callPackage ./care-o-bot-simulation {};
 
  carla-msgs = self.callPackage ./carla-msgs {};
@@ -553,6 +555,16 @@ self: super: {
  delphi-srr-msgs = self.callPackage ./delphi-srr-msgs {};
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
+
+ depthai = self.callPackage ./depthai {};
+
+ depthai-ros = self.callPackage ./depthai-ros {};
+
+ depthai-bridge = self.callPackage ./depthai-bridge {};
+
+ depthai-examples = self.callPackage ./depthai-examples {};
+
+ depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
@@ -1516,6 +1528,14 @@ self: super: {
 
  leo-desktop = self.callPackage ./leo-desktop {};
 
+ leo-example-follow-ar-tag = self.callPackage ./leo-example-follow-ar-tag {};
+
+ leo-example-line-follower = self.callPackage ./leo-example-line-follower {};
+
+ leo-example-object-detection = self.callPackage ./leo-example-object-detection {};
+
+ leo-examples = self.callPackage ./leo-examples {};
+
  leo-fw = self.callPackage ./leo-fw {};
 
  leo-gazebo = self.callPackage ./leo-gazebo {};
@@ -1626,6 +1646,8 @@ self: super: {
 
  marvelmind-nav = self.callPackage ./marvelmind-nav {};
 
+ massrobotics-amr-sender = self.callPackage ./massrobotics-amr-sender {};
+
  mavlink = self.callPackage ./mavlink {};
 
  mavros = self.callPackage ./mavros {};
@@ -1710,6 +1732,8 @@ self: super: {
 
  microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
 
+ mikrotik-swos-tools = self.callPackage ./mikrotik-swos-tools {};
+
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
  mir-actions = self.callPackage ./mir-actions {};
@@ -1735,6 +1759,8 @@ self: super: {
  mocap-nokov = self.callPackage ./mocap-nokov {};
 
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
+
+ monkeywrench = self.callPackage ./monkeywrench {};
 
  monocam-settler = self.callPackage ./monocam-settler {};
 
@@ -1834,6 +1860,8 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ movie-publisher = self.callPackage ./movie-publisher {};
+
  mpc-local-planner = self.callPackage ./mpc-local-planner {};
 
  mpc-local-planner-examples = self.callPackage ./mpc-local-planner-examples {};
@@ -1841,6 +1869,8 @@ self: super: {
  mpc-local-planner-msgs = self.callPackage ./mpc-local-planner-msgs {};
 
  mqtt-bridge = self.callPackage ./mqtt-bridge {};
+
+ mqtt-client = self.callPackage ./mqtt-client {};
 
  mrpt-bridge = self.callPackage ./mrpt-bridge {};
 
@@ -2608,6 +2638,8 @@ self: super: {
 
  rosbash = self.callPackage ./rosbash {};
 
+ rosbash-params = self.callPackage ./rosbash-params {};
+
  rosboost-cfg = self.callPackage ./rosboost-cfg {};
 
  rosbridge-library = self.callPackage ./rosbridge-library {};
@@ -3162,6 +3194,8 @@ self: super: {
 
  tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
+ tf2-server = self.callPackage ./tf2-server {};
+
  tf2-tools = self.callPackage ./tf2-tools {};
 
  tf2-web-republisher = self.callPackage ./tf2-web-republisher {};
@@ -3177,6 +3211,8 @@ self: super: {
  tile-map = self.callPackage ./tile-map {};
 
  timestamp-tools = self.callPackage ./timestamp-tools {};
+
+ tof-sensor-controller = self.callPackage ./tof-sensor-controller {};
 
  topic-tools = self.callPackage ./topic-tools {};
 
@@ -3283,6 +3319,8 @@ self: super: {
  ublox-msgs = self.callPackage ./ublox-msgs {};
 
  ublox-serialization = self.callPackage ./ublox-serialization {};
+
+ ubnt-airos-tools = self.callPackage ./ubnt-airos-tools {};
 
  udp-com = self.callPackage ./udp-com {};
 

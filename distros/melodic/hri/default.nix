@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, geometry-msgs, hri-msgs, rosconsole, roscpp, sensor-msgs, std-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, geometry-msgs, hri-msgs, rosconsole, roscpp, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-hri";
-  version = "0.4.3-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros4hri/libhri-release/archive/release/melodic/hri/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "81b6bc6d35f6ed7f7e455dc3f2a644642f33889a3aa07fd8a274462996101c3a";
+    url = "https://github.com/ros4hri/libhri-release/archive/release/melodic/hri/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "f1855981d95343c53912ee8fcbfabc4526465636ed127fce75f14ef89698ad89";
   };
 
   buildType = "catkin";
   buildInputs = [ boost ];
-  propagatedBuildInputs = [ cv-bridge geometry-msgs hri-msgs rosconsole roscpp sensor-msgs std-msgs tf ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs hri-msgs rosconsole roscpp sensor-msgs std-msgs tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

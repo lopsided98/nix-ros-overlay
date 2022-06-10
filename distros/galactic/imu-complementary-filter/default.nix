@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, message-filters, rclcpp, sensor-msgs, std-msgs, tf2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, message-filters, rclcpp, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-galactic-imu-complementary-filter";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/galactic/imu_complementary_filter/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "0124e2d1a244675bec830e3fd35b1d79c8896657cacfc6618cecc708ef5f2ea9";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/galactic/imu_complementary_filter/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "b89699b5b628132a105294c7b1249bd306f57d354c2e62c05cfb3abc82ce5d4e";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ geometry-msgs message-filters rclcpp sensor-msgs std-msgs tf2 ];
+  buildInputs = [ geometry-msgs message-filters rclcpp sensor-msgs std-msgs tf2 tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
