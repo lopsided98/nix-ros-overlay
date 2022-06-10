@@ -18,6 +18,8 @@ self: super: {
 
  actionlib-msgs = self.callPackage ./actionlib-msgs {};
 
+ ament-black = self.callPackage ./ament-black {};
+
  ament-clang-format = self.callPackage ./ament-clang-format {};
 
  ament-clang-tidy = self.callPackage ./ament-clang-tidy {};

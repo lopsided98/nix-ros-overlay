@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, geometry-msgs, gtest, mrpt2, ros-environment }:
 buildRosPackage {
   pname = "ros-galactic-pose-cov-ops";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/galactic/pose_cov_ops/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "3e8171eb21da07f015162351c7360afcc6d40ccb4c83f759967f6e1d198c7b8a";
+    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/galactic/pose_cov_ops/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "a8c00418faf3dc70656add5ee3a60c3ca821cb0df2e342333e6f22527bade77a";
   };
 
   buildType = "cmake";

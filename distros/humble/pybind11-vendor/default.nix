@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, pybind11 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-pybind11-vendor";
   version = "2.4.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ pybind11 ];
+  propagatedBuildInputs = [ pythonPackages.pybind11 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
