@@ -93,8 +93,12 @@ let
     cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
       cmakeFlags ? [], preConfigure ? "", ...
     }: {
-      # Tries to download something with maven
-      cmakeFlags = cmakeFlags ++ [ "-DBUILD_IDLC=OFF" ];
+      cmakeFlags = cmakeFlags ++ [
+        # Tries to download something with maven
+        "-DBUILD_IDLC=OFF"
+        # src/tools/ddsperf/CMakeFiles/ddsperf_types_generate.dir/build.make:74: *** target pattern contains no '%'.  Stop.
+        "-DBUILD_DDSPERF=OFF"
+      ];
 
       # Fix running ddsconf from within the build directory (probably an RPATH
       # issue)
