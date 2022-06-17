@@ -312,6 +312,14 @@ self: super: {
 
  depthai = self.callPackage ./depthai {};
 
+ depthai-ros = self.callPackage ./depthai-ros {};
+
+ depthai-bridge = self.callPackage ./depthai-bridge {};
+
+ depthai-examples = self.callPackage ./depthai-examples {};
+
+ depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
+
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
  derived-object-msgs = self.callPackage ./derived-object-msgs {};
@@ -451,6 +459,8 @@ self: super: {
  eiquadprog = self.callPackage ./eiquadprog {};
 
  embree-vendor = self.callPackage ./embree-vendor {};
+
+ end-effector = self.callPackage ./end-effector {};
 
  espeak-interfaces = self.callPackage ./espeak-interfaces {};
 
@@ -754,6 +764,20 @@ self: super: {
 
  lusb = self.callPackage ./lusb {};
 
+ maliput = self.callPackage ./maliput {};
+
+ maliput-dragway = self.callPackage ./maliput-dragway {};
+
+ maliput-drake = self.callPackage ./maliput-drake {};
+
+ maliput-malidrive = self.callPackage ./maliput-malidrive {};
+
+ maliput-multilane = self.callPackage ./maliput-multilane {};
+
+ maliput-object = self.callPackage ./maliput-object {};
+
+ maliput-py = self.callPackage ./maliput-py {};
+
  map-msgs = self.callPackage ./map-msgs {};
 
  map-transformer = self.callPackage ./map-transformer {};
@@ -1018,6 +1042,8 @@ self: super: {
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
+ performance-test = self.callPackage ./performance-test {};
+
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
@@ -1105,6 +1131,8 @@ self: super: {
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
+
+ pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
 
@@ -1453,6 +1481,8 @@ self: super: {
  rosbridge-suite = self.callPackage ./rosbridge-suite {};
 
  rosbridge-test-msgs = self.callPackage ./rosbridge-test-msgs {};
+
+ rosee-msg = self.callPackage ./rosee-msg {};
 
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
 
@@ -1929,6 +1959,8 @@ self: super: {
  xacro-live = self.callPackage ./xacro-live {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
+
+ zmqpp-vendor = self.callPackage ./zmqpp-vendor {};
 
  zstd-vendor = self.callPackage ./zstd-vendor {};
 

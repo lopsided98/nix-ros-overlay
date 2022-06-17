@@ -846,6 +846,10 @@ self: super: {
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
+ performance-report = self.callPackage ./performance-report {};
+
+ performance-test = self.callPackage ./performance-test {};
+
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
@@ -1102,6 +1106,12 @@ self: super: {
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
 
+ robot-controllers = self.callPackage ./robot-controllers {};
+
+ robot-controllers-interface = self.callPackage ./robot-controllers-interface {};
+
+ robot-controllers-msgs = self.callPackage ./robot-controllers-msgs {};
+
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
@@ -1329,6 +1339,8 @@ self: super: {
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
  sdl2-vendor = self.callPackage ./sdl2-vendor {};
+
+ self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 

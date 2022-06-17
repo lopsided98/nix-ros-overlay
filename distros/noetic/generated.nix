@@ -1064,6 +1064,8 @@ self: super: {
 
  goal-passer = self.callPackage ./goal-passer {};
 
+ gpio-controller = self.callPackage ./gpio-controller {};
+
  gpp-interface = self.callPackage ./gpp-interface {};
 
  gpp-plugin = self.callPackage ./gpp-plugin {};
@@ -1733,6 +1735,8 @@ self: super: {
  microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
 
  mikrotik-swos-tools = self.callPackage ./mikrotik-swos-tools {};
+
+ mimic-joint-controller = self.callPackage ./mimic-joint-controller {};
 
  mini-maxwell = self.callPackage ./mini-maxwell {};
 

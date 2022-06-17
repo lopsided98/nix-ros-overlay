@@ -2,21 +2,21 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rosbridge-library, rosgraph, rosnode, rospy }:
+{ lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, python3Packages, rosbridge-library, rosgraph, rosnode, rospy }:
 buildRosPackage {
   pname = "ros-noetic-rosapi";
-  version = "0.11.13-r1";
+  version = "0.11.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosapi/0.11.13-1.tar.gz";
-    name = "0.11.13-1.tar.gz";
-    sha256 = "7f6c99d9bf84c75f396ddc7ce31bcea6d9ef5a3f92f1819c10a010cd9b260f62";
+    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosapi/0.11.14-1.tar.gz";
+    name = "0.11.14-1.tar.gz";
+    sha256 = "7eed9ef3333837df51f12c4ee571b3329030b437b9341d81ade34b7fb1840cf0";
   };
 
   buildType = "catkin";
   buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime rosbridge-library rosgraph rosnode rospy ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = ''Provides service calls for getting ros meta-information, like list of

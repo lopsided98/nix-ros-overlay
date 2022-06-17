@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, control-toolbox, controller-interface, dynamic-reconfigure, effort-controllers, forward-command-controller, hardware-interface, pluginlib, realtime-tools, rm-common, rm-msgs, roscpp, roslint, tf2, tf2-eigen, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rm-gimbal-controllers";
-  version = "0.1.4-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_gimbal_controllers/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "7f9539163424ec2c1e8819e7d81ec0fa606b415554a4e9f514f9d7bddce9ba83";
+    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_gimbal_controllers/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "bafa8c534faf6970c510e9e2256f402cbaf8a7e9815e1a22b4b0b26e768de408";
   };
 
   buildType = "catkin";
