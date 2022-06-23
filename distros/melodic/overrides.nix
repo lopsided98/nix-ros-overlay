@@ -64,7 +64,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
-  opencv = opencv3;
+  opencv = self.opencv3;
 
   pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
     patches ? [], ...
