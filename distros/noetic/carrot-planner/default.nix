@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, eigen, nav-core, pluginlib, roscpp, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, angles, base-local-planner, catkin, costmap-2d, eigen, nav-core, pluginlib, roscpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-carrot-planner";
-  version = "1.17.1-r1";
+  version = "1.17.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/carrot_planner/1.17.1-1.tar.gz";
-    name = "1.17.1-1.tar.gz";
-    sha256 = "193637bdfaa2a703f05a4d0e68ff02e5cf937d5860974315054792535e922809";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/carrot_planner/1.17.2-1.tar.gz";
+    name = "1.17.2-1.tar.gz";
+    sha256 = "4b97d1b64c80686f5e27d0bc312f2cdc1cc158bc6cf25b15c4d8489fdb7b7f73";
   };
 
   buildType = "catkin";
   buildInputs = [ tf2-geometry-msgs ];
-  propagatedBuildInputs = [ base-local-planner costmap-2d eigen nav-core pluginlib roscpp tf2 tf2-ros ];
+  propagatedBuildInputs = [ angles base-local-planner costmap-2d eigen nav-core pluginlib roscpp tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

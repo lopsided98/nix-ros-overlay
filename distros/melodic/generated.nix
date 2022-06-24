@@ -1706,6 +1706,8 @@ self: super: {
 
  jsk-pr2eus = self.callPackage ./jsk-pr2eus {};
 
+ jsk-python-orocos-kdl-python3 = self.callPackage ./jsk-python-orocos-kdl-python3 {};
+
  jsk-recognition = self.callPackage ./jsk-recognition {};
 
  jsk-recognition-msgs = self.callPackage ./jsk-recognition-msgs {};
@@ -2314,16 +2316,6 @@ self: super: {
 
  mrpt1 = self.callPackage ./mrpt1 {};
 
- mrpt-bridge = self.callPackage ./mrpt-bridge {};
-
- mrpt-ekf-slam-2d = self.callPackage ./mrpt-ekf-slam-2d {};
-
- mrpt-ekf-slam-3d = self.callPackage ./mrpt-ekf-slam-3d {};
-
- mrpt-graphslam-2d = self.callPackage ./mrpt-graphslam-2d {};
-
- mrpt-icp-slam-2d = self.callPackage ./mrpt-icp-slam-2d {};
-
  mrpt-local-obstacles = self.callPackage ./mrpt-local-obstacles {};
 
  mrpt-localization = self.callPackage ./mrpt-localization {};
@@ -2332,11 +2324,11 @@ self: super: {
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
+ mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
+
  mrpt-navigation = self.callPackage ./mrpt-navigation {};
 
  mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
-
- mrpt-rbpf-slam = self.callPackage ./mrpt-rbpf-slam {};
 
  mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
 

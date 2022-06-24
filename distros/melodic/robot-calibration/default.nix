@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, camera-calibration-parsers, catkin, ceres-solver, code-coverage, control-msgs, cv-bridge, eigen, geometric-shapes, geometry-msgs, gflags, kdl-parser, moveit-msgs, nav-msgs, orocos-kdl, pluginlib, protobuf, robot-calibration-msgs, rosbag, roscpp, sensor-msgs, std-msgs, suitesparse, tf, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-robot-calibration";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/melodic/robot_calibration/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "bc802d9ee3d0dc1dc1737c925e8ac21aee07ff1cdc8a08b49c71b507d33c87e2";
+    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/melodic/robot_calibration/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "7fdd451c86b8c47d73377414efa7da84f2a0cb3d8126e59033d1dc38600ed295";
   };
 
   buildType = "catkin";

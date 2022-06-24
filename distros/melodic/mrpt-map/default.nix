@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, mrpt-bridge, mrpt2, nav-msgs, roscpp, sensor-msgs, std-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, catkin, mrpt2, nav-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-map";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_map/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "7af95b573fa3ab1972b6e4ca1b6246c1991a98eff45bb9ba1c4e1b3e46172725";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_map/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "cc4cd1cb16baafe5f840c91d26c5fc63f8980567d7620ab1e43a0eb042e4ff7c";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ mrpt-bridge mrpt2 nav-msgs roscpp sensor-msgs std-msgs tf ];
+  propagatedBuildInputs = [ mrpt2 nav-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

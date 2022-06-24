@@ -126,6 +126,8 @@ self: super: {
 
  bondpy = self.callPackage ./bondpy {};
 
+ boost-plugin-loader = self.callPackage ./boost-plugin-loader {};
+
  boost-sml = self.callPackage ./boost-sml {};
 
  bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
@@ -1064,6 +1066,8 @@ self: super: {
 
  goal-passer = self.callPackage ./goal-passer {};
 
+ gpio-controller = self.callPackage ./gpio-controller {};
+
  gpp-interface = self.callPackage ./gpp-interface {};
 
  gpp-plugin = self.callPackage ./gpp-plugin {};
@@ -1734,6 +1738,8 @@ self: super: {
 
  mikrotik-swos-tools = self.callPackage ./mikrotik-swos-tools {};
 
+ mimic-joint-controller = self.callPackage ./mimic-joint-controller {};
+
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
  mir-actions = self.callPackage ./mir-actions {};
@@ -1872,21 +1878,9 @@ self: super: {
 
  mqtt-client = self.callPackage ./mqtt-client {};
 
- mrpt-bridge = self.callPackage ./mrpt-bridge {};
-
- mrpt-local-obstacles = self.callPackage ./mrpt-local-obstacles {};
-
- mrpt-localization = self.callPackage ./mrpt-localization {};
-
- mrpt-map = self.callPackage ./mrpt-map {};
-
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrpt-navigation = self.callPackage ./mrpt-navigation {};
-
- mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
-
- mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 

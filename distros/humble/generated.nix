@@ -108,6 +108,8 @@ self: super: {
 
  ament-cpplint = self.callPackage ./ament-cpplint {};
 
+ ament-download = self.callPackage ./ament-download {};
+
  ament-flake8 = self.callPackage ./ament-flake8 {};
 
  ament-index-cpp = self.callPackage ./ament-index-cpp {};
@@ -162,6 +164,8 @@ self: super: {
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
+ aws-robomaker-small-warehouse-world = self.callPackage ./aws-robomaker-small-warehouse-world {};
+
  backward-ros = self.callPackage ./backward-ros {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
@@ -173,6 +177,8 @@ self: super: {
  bond-core = self.callPackage ./bond-core {};
 
  bondcpp = self.callPackage ./bondcpp {};
+
+ boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
  bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
 
@@ -352,6 +358,8 @@ self: super: {
 
  filters = self.callPackage ./filters {};
 
+ fluent-rviz = self.callPackage ./fluent-rviz {};
+
  fmi-adapter = self.callPackage ./fmi-adapter {};
 
  fmi-adapter-examples = self.callPackage ./fmi-adapter-examples {};
@@ -384,6 +392,8 @@ self: super: {
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
+ gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
+
  geodesy = self.callPackage ./geodesy {};
 
  geographic-info = self.callPackage ./geographic-info {};
@@ -411,6 +421,8 @@ self: super: {
  gpsd-client = self.callPackage ./gpsd-client {};
 
  graph-msgs = self.callPackage ./graph-msgs {};
+
+ grasping-msgs = self.callPackage ./grasping-msgs {};
 
  grbl-msgs = self.callPackage ./grbl-msgs {};
 
@@ -846,6 +858,10 @@ self: super: {
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
+ performance-report = self.callPackage ./performance-report {};
+
+ performance-test = self.callPackage ./performance-test {};
+
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
@@ -928,6 +944,8 @@ self: super: {
 
  quaternion-operation = self.callPackage ./quaternion-operation {};
 
+ r2r-spl-7 = self.callPackage ./r2r-spl-7 {};
+
  radar-msgs = self.callPackage ./radar-msgs {};
 
  random-numbers = self.callPackage ./random-numbers {};
@@ -945,6 +963,14 @@ self: super: {
  rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
 
  rcdiscover = self.callPackage ./rcdiscover {};
+
+ rcgcd-spl-14 = self.callPackage ./rcgcd-spl-14 {};
+
+ rcgcd-spl-14-conversion = self.callPackage ./rcgcd-spl-14-conversion {};
+
+ rcgcrd-spl-4 = self.callPackage ./rcgcrd-spl-4 {};
+
+ rcgcrd-spl-4-conversion = self.callPackage ./rcgcrd-spl-4-conversion {};
 
  rcl = self.callPackage ./rcl {};
 
@@ -1101,6 +1127,12 @@ self: super: {
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
+
+ robot-controllers = self.callPackage ./robot-controllers {};
+
+ robot-controllers-interface = self.callPackage ./robot-controllers-interface {};
+
+ robot-controllers-msgs = self.callPackage ./robot-controllers-msgs {};
 
  robot-localization = self.callPackage ./robot-localization {};
 
@@ -1302,6 +1334,10 @@ self: super: {
 
  rqt-topic = self.callPackage ./rqt-topic {};
 
+ rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
+
+ rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
+
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
 
  rttest = self.callPackage ./rttest {};
@@ -1328,7 +1364,11 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ sdformat-test-files = self.callPackage ./sdformat-test-files {};
+
  sdl2-vendor = self.callPackage ./sdl2-vendor {};
+
+ self-test = self.callPackage ./self-test {};
 
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
@@ -1358,6 +1398,8 @@ self: super: {
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
+ soccer-interfaces = self.callPackage ./soccer-interfaces {};
+
  soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
 
  soccer-object-msgs = self.callPackage ./soccer-object-msgs {};
@@ -1373,6 +1415,10 @@ self: super: {
  spacenav = self.callPackage ./spacenav {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
+
+ splsm-7 = self.callPackage ./splsm-7 {};
+
+ splsm-7-conversion = self.callPackage ./splsm-7-conversion {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
 
@@ -1506,13 +1552,29 @@ self: super: {
 
  turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
 
+ turtlebot3 = self.callPackage ./turtlebot3 {};
+
+ turtlebot3-bringup = self.callPackage ./turtlebot3-bringup {};
+
+ turtlebot3-cartographer = self.callPackage ./turtlebot3-cartographer {};
+
+ turtlebot3-description = self.callPackage ./turtlebot3-description {};
+
+ turtlebot3-example = self.callPackage ./turtlebot3-example {};
+
  turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
  turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
 
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
+ turtlebot3-navigation2 = self.callPackage ./turtlebot3-navigation2 {};
+
+ turtlebot3-node = self.callPackage ./turtlebot3-node {};
+
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
+
+ turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
 
@@ -1544,11 +1606,25 @@ self: super: {
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
+ ur = self.callPackage ./ur {};
+
+ ur-bringup = self.callPackage ./ur-bringup {};
+
+ ur-calibration = self.callPackage ./ur-calibration {};
+
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-controllers = self.callPackage ./ur-controllers {};
+
+ ur-dashboard-msgs = self.callPackage ./ur-dashboard-msgs {};
 
  ur-description = self.callPackage ./ur-description {};
 
+ ur-moveit-config = self.callPackage ./ur-moveit-config {};
+
  ur-msgs = self.callPackage ./ur-msgs {};
+
+ ur-robot-driver = self.callPackage ./ur-robot-driver {};
 
  urdf = self.callPackage ./urdf {};
 

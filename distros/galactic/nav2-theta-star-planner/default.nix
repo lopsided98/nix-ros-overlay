@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros }:
 buildRosPackage {
   pname = "ros-galactic-nav2-theta-star-planner";
-  version = "1.0.11-r1";
+  version = "1.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_theta_star_planner/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "1fd908a17bdf363c238087f412de17250bb812e32d8cb03b9670e2adbf27f69c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/nav2_theta_star_planner/1.0.12-1.tar.gz";
+    name = "1.0.12-1.tar.gz";
+    sha256 = "f5c78bf161d62ea9ae300f3327dcb1c3565df948c378bf6e0f5ce2495853fb09";
   };
 
   buildType = "ament_cmake";
