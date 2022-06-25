@@ -58,12 +58,21 @@ let
 
     catkin = rosSuper.catkin.overrideAttrs ({
       propagatedBuildInputs ? [],
-      prePhases ? [],
+      patches ? [],
       postPatch ? "", ...
     }: let
       setupHook = rosSelf.callPackage ./catkin-setup-hook { };
     in {
       propagatedBuildInputs = [ self.cmake setupHook ] ++ propagatedBuildInputs;
+
+      patches = [
+        # Fix compatibility with setuptools 61
+        # https://github.com/ros/catkin/pull/1176
+        (self.fetchpatch {
+          url = "https://github.com/ros/catkin/commit/e082348c4992e1850ba5e2bd02bbd7bd0c4c4b82.patch";
+          hash = "sha256-NNdV30gNWBf7p8IjyCmnvz9MnU4zFkd4aaXNjs411MA=";
+        })
+      ];
 
       postPatch = postPatch + ''
         patchShebangs cmake
