@@ -28,6 +28,8 @@ self: super: {
 
  ament-cmake-auto = self.callPackage ./ament-cmake-auto {};
 
+ ament-cmake-black = self.callPackage ./ament-cmake-black {};
+
  ament-cmake-catch2 = self.callPackage ./ament-cmake-catch2 {};
 
  ament-cmake-clang-format = self.callPackage ./ament-cmake-clang-format {};
@@ -170,6 +172,8 @@ self: super: {
 
  bondcpp = self.callPackage ./bondcpp {};
 
+ boost-geometry-util = self.callPackage ./boost-geometry-util {};
+
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
@@ -234,6 +238,14 @@ self: super: {
 
  depthai = self.callPackage ./depthai {};
 
+ depthai-ros = self.callPackage ./depthai-ros {};
+
+ depthai-bridge = self.callPackage ./depthai-bridge {};
+
+ depthai-examples = self.callPackage ./depthai-examples {};
+
+ depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
+
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
  desktop = self.callPackage ./desktop {};
@@ -282,9 +294,75 @@ self: super: {
 
  ecl-build = self.callPackage ./ecl-build {};
 
+ ecl-command-line = self.callPackage ./ecl-command-line {};
+
+ ecl-concepts = self.callPackage ./ecl-concepts {};
+
+ ecl-config = self.callPackage ./ecl-config {};
+
+ ecl-console = self.callPackage ./ecl-console {};
+
+ ecl-containers = self.callPackage ./ecl-containers {};
+
+ ecl-converters = self.callPackage ./ecl-converters {};
+
+ ecl-converters-lite = self.callPackage ./ecl-converters-lite {};
+
+ ecl-core = self.callPackage ./ecl-core {};
+
+ ecl-core-apps = self.callPackage ./ecl-core-apps {};
+
+ ecl-devices = self.callPackage ./ecl-devices {};
+
+ ecl-eigen = self.callPackage ./ecl-eigen {};
+
+ ecl-errors = self.callPackage ./ecl-errors {};
+
+ ecl-exceptions = self.callPackage ./ecl-exceptions {};
+
+ ecl-filesystem = self.callPackage ./ecl-filesystem {};
+
+ ecl-formatters = self.callPackage ./ecl-formatters {};
+
+ ecl-geometry = self.callPackage ./ecl-geometry {};
+
+ ecl-io = self.callPackage ./ecl-io {};
+
+ ecl-ipc = self.callPackage ./ecl-ipc {};
+
  ecl-license = self.callPackage ./ecl-license {};
 
+ ecl-linear-algebra = self.callPackage ./ecl-linear-algebra {};
+
+ ecl-lite = self.callPackage ./ecl-lite {};
+
+ ecl-manipulators = self.callPackage ./ecl-manipulators {};
+
+ ecl-math = self.callPackage ./ecl-math {};
+
+ ecl-mobile-robot = self.callPackage ./ecl-mobile-robot {};
+
+ ecl-mpl = self.callPackage ./ecl-mpl {};
+
+ ecl-sigslots = self.callPackage ./ecl-sigslots {};
+
+ ecl-sigslots-lite = self.callPackage ./ecl-sigslots-lite {};
+
+ ecl-statistics = self.callPackage ./ecl-statistics {};
+
+ ecl-streams = self.callPackage ./ecl-streams {};
+
+ ecl-threads = self.callPackage ./ecl-threads {};
+
+ ecl-time = self.callPackage ./ecl-time {};
+
+ ecl-time-lite = self.callPackage ./ecl-time-lite {};
+
  ecl-tools = self.callPackage ./ecl-tools {};
+
+ ecl-type-traits = self.callPackage ./ecl-type-traits {};
+
+ ecl-utilities = self.callPackage ./ecl-utilities {};
 
  effort-controllers = self.callPackage ./effort-controllers {};
 
@@ -342,6 +420,8 @@ self: super: {
 
  filters = self.callPackage ./filters {};
 
+ fluent-rviz = self.callPackage ./fluent-rviz {};
+
  fmi-adapter = self.callPackage ./fmi-adapter {};
 
  fmi-adapter-examples = self.callPackage ./fmi-adapter-examples {};
@@ -371,6 +451,8 @@ self: super: {
  gazebo-ros2-control-demos = self.callPackage ./gazebo-ros2-control-demos {};
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
+
+ gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -710,6 +792,8 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ mrpt-msgs = self.callPackage ./mrpt-msgs {};
+
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multires-image = self.callPackage ./multires-image {};
@@ -854,6 +938,8 @@ self: super: {
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
+ performance-test = self.callPackage ./performance-test {};
+
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
@@ -928,7 +1014,11 @@ self: super: {
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
+ pose-cov-ops = self.callPackage ./pose-cov-ops {};
+
  position-controllers = self.callPackage ./position-controllers {};
+
+ py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
 
@@ -956,6 +1046,8 @@ self: super: {
 
  quaternion-operation = self.callPackage ./quaternion-operation {};
 
+ r2r-spl-7 = self.callPackage ./r2r-spl-7 {};
+
  radar-msgs = self.callPackage ./radar-msgs {};
 
  random-numbers = self.callPackage ./random-numbers {};
@@ -973,6 +1065,14 @@ self: super: {
  rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
 
  rcdiscover = self.callPackage ./rcdiscover {};
+
+ rcgcd-spl-14 = self.callPackage ./rcgcd-spl-14 {};
+
+ rcgcd-spl-14-conversion = self.callPackage ./rcgcd-spl-14-conversion {};
+
+ rcgcrd-spl-4 = self.callPackage ./rcgcrd-spl-4 {};
+
+ rcgcrd-spl-4-conversion = self.callPackage ./rcgcrd-spl-4-conversion {};
 
  rcl = self.callPackage ./rcl {};
 
@@ -1368,6 +1468,10 @@ self: super: {
 
  rslidar-sdk = self.callPackage ./rslidar-sdk {};
 
+ rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
+
+ rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
+
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
@@ -1444,11 +1548,17 @@ self: super: {
 
  sol-vendor = self.callPackage ./sol-vendor {};
 
+ sophus = self.callPackage ./sophus {};
+
  spacenav = self.callPackage ./spacenav {};
 
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
+
+ splsm-7 = self.callPackage ./splsm-7 {};
+
+ splsm-7-conversion = self.callPackage ./splsm-7-conversion {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
 
@@ -1520,8 +1630,6 @@ self: super: {
 
  test-interface-files = self.callPackage ./test-interface-files {};
 
- test-launch-system-modes = self.callPackage ./test-launch-system-modes {};
-
  test-msgs = self.callPackage ./test-msgs {};
 
  tf2 = self.callPackage ./tf2 {};
@@ -1572,6 +1680,8 @@ self: super: {
 
  tracetools = self.callPackage ./tracetools {};
 
+ tracetools-analysis = self.callPackage ./tracetools-analysis {};
+
  tracetools-launch = self.callPackage ./tracetools-launch {};
 
  tracetools-test = self.callPackage ./tracetools-test {};
@@ -1608,9 +1718,21 @@ self: super: {
 
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
+ turtlebot4-base = self.callPackage ./turtlebot4-base {};
+
+ turtlebot4-bringup = self.callPackage ./turtlebot4-bringup {};
+
+ turtlebot4-cpp-examples = self.callPackage ./turtlebot4-cpp-examples {};
+
+ turtlebot4-cpp-tutorials = self.callPackage ./turtlebot4-cpp-tutorials {};
+
  turtlebot4-description = self.callPackage ./turtlebot4-description {};
 
  turtlebot4-desktop = self.callPackage ./turtlebot4-desktop {};
+
+ turtlebot4-diagnostics = self.callPackage ./turtlebot4-diagnostics {};
+
+ turtlebot4-examples = self.callPackage ./turtlebot4-examples {};
 
  turtlebot4-ignition-bringup = self.callPackage ./turtlebot4-ignition-bringup {};
 
@@ -1622,7 +1744,17 @@ self: super: {
 
  turtlebot4-node = self.callPackage ./turtlebot4-node {};
 
+ turtlebot4-python-examples = self.callPackage ./turtlebot4-python-examples {};
+
+ turtlebot4-python-tutorials = self.callPackage ./turtlebot4-python-tutorials {};
+
+ turtlebot4-robot = self.callPackage ./turtlebot4-robot {};
+
  turtlebot4-simulator = self.callPackage ./turtlebot4-simulator {};
+
+ turtlebot4-tests = self.callPackage ./turtlebot4-tests {};
+
+ turtlebot4-tutorials = self.callPackage ./turtlebot4-tutorials {};
 
  turtlebot4-viz = self.callPackage ./turtlebot4-viz {};
 

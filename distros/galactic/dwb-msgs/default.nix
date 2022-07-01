@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, nav-2d-msgs, nav-msgs, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-dwb-msgs";
-  version = "1.0.11-r1";
+  version = "1.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/dwb_msgs/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "b2ca84d5e5f2bad9f9d46a044b85fa7f815a2019ee2e4aa1cbd3537ccb2c065f";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/galactic/dwb_msgs/1.0.12-1.tar.gz";
+    name = "1.0.12-1.tar.gz";
+    sha256 = "f4700ca459805066a26d4c388b33f62be0a4678681c6604d8e261e2c56d88354";
   };
 
   buildType = "ament_cmake";

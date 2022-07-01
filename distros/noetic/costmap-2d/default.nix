@@ -2,21 +2,21 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, geometry-msgs, laser-geometry, map-msgs, map-server, message-filters, message-generation, message-runtime, nav-msgs, pluginlib, rosbag, rosconsole, roscpp, rostest, rosunit, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs, voxel-grid }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, eigen, geometry-msgs, laser-geometry, map-msgs, map-server, message-filters, message-generation, message-runtime, nav-msgs, pluginlib, rosbag, rosconsole, roscpp, rostest, rosunit, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs, voxel-grid }:
 buildRosPackage {
   pname = "ros-noetic-costmap-2d";
-  version = "1.17.1-r1";
+  version = "1.17.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/costmap_2d/1.17.1-1.tar.gz";
-    name = "1.17.1-1.tar.gz";
-    sha256 = "41e3539a9e75d2ac7ed492e115128f999bf108a7ea29a7c60ac26426c7edd537";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/costmap_2d/1.17.2-1.tar.gz";
+    name = "1.17.2-1.tar.gz";
+    sha256 = "9006e8366006566d6f5a859dbd972c4a572cd5723ed01cb125436d7da37e2d7a";
   };
 
   buildType = "catkin";
   buildInputs = [ cmake-modules message-generation tf2-geometry-msgs tf2-sensor-msgs ];
   checkInputs = [ map-server rosbag rostest rosunit ];
-  propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs laser-geometry map-msgs message-filters message-runtime nav-msgs pluginlib rosconsole roscpp rostest sensor-msgs std-msgs tf2 tf2-ros visualization-msgs voxel-grid ];
+  propagatedBuildInputs = [ dynamic-reconfigure eigen geometry-msgs laser-geometry map-msgs message-filters message-runtime nav-msgs pluginlib rosconsole roscpp rostest sensor-msgs std-msgs tf2 tf2-ros visualization-msgs voxel-grid ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

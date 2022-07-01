@@ -5,15 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, geometry-msgs, gtest, mrpt2, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-pose-cov-ops";
-  version = "0.3.4-r1";
+  version = "0.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/humble/pose_cov_ops/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "47629a776d64c1cf59d61570b18f1fc22fab5a94386f78e19bd4e92006b0fc5e";
+    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/humble/pose_cov_ops/0.3.6-1.tar.gz";
+    name = "0.3.6-1.tar.gz";
+    sha256 = "298e0ecc078c61cb172f85f2ef3e326e9803293ec0f7da266e7a8512dbf38504";
   };
 
-  buildType = "cmake";
+  buildType = "ament_cmake";
   buildInputs = [ ament-cmake-xmllint ros-environment ];
   checkInputs = [ ament-lint-auto ament-lint-common gtest ];
   propagatedBuildInputs = [ geometry-msgs mrpt2 ];

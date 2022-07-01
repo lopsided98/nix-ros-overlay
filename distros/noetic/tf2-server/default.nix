@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, gtest, message-generation, message-runtime, nodelet, python3Packages, roscpp, rospy, rostest, tf, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-tf2-server";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/peci1/tf2_server-release/archive/release/noetic/tf2_server/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "7b473444ace213203c6d276cdb7ef2f37794da2187901cdfdbb6d68b59746f8a";
+    url = "https://github.com/peci1/tf2_server-release/archive/release/noetic/tf2_server/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "0ec115bae4a412ef6d2ffb78be3ac3eaf93d84afba296b398c3253447f5c120d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, pr2-mechanism-model, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-pr2-controller-interface";
-  version = "1.8.20-r1";
+  version = "1.8.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/noetic/pr2_controller_interface/1.8.20-1.tar.gz";
-    name = "1.8.20-1.tar.gz";
-    sha256 = "342a638061f38dae1fafd79fdfb455d8e72bf18baf33f8da65e8c2921b90aadf";
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/noetic/pr2_controller_interface/1.8.21-1.tar.gz";
+    name = "1.8.21-1.tar.gz";
+    sha256 = "df620b6b8c062ebddcc12df1b44e4f8f68ccde059936d8ac3c7a3be9f9edce67";
   };
 
   buildType = "catkin";

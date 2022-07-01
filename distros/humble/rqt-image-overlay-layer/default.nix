@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, message-filters, pluginlib, qt5, rclcpp, rcpputils, rosidl-runtime-cpp }:
 buildRosPackage {
   pname = "ros-humble-rqt-image-overlay-layer";
-  version = "0.0.5-r2";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_image_overlay-release/archive/release/humble/rqt_image_overlay_layer/0.0.5-2.tar.gz";
-    name = "0.0.5-2.tar.gz";
-    sha256 = "b8dc9346f0cb299558cfa9a8311b693133546b0bc5af24eb81bf32614405b2f9";
+    url = "https://github.com/ros2-gbp/rqt_image_overlay-release/archive/release/humble/rqt_image_overlay_layer/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "00a8669b2da753054fe1b7080d8ed91376e8f5870dc28b648fe0ce06cf867bcd";
   };
 
   buildType = "ament_cmake";

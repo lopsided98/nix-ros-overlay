@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp-components, rcss3d-agent }:
 buildRosPackage {
   pname = "ros-humble-rcss3d-agent-basic";
-  version = "0.0.7-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcss3d_agent-release/archive/release/humble/rcss3d_agent_basic/0.0.7-1.tar.gz";
-    name = "0.0.7-1.tar.gz";
-    sha256 = "2d65714464a0ac3bdc1088f415e7a463bfcc7d687c54464a63f64e61aea6bf2e";
+    url = "https://github.com/ros2-gbp/rcss3d_agent-release/archive/release/humble/rcss3d_agent_basic/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "ded0658fe1d76fc73085dbf2b55e56cf7383ca65d073c64cce65e82058821757";
   };
 
   buildType = "ament_cmake";

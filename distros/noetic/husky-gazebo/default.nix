@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, gazebo-plugins, gazebo-ros, gazebo-ros-control, hector-gazebo-plugins, husky-control, husky-description, pointcloud-to-laserscan, roslaunch, rostopic, velodyne-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-noetic-husky-gazebo";
-  version = "0.6.3-r1";
+  version = "0.6.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_gazebo/0.6.3-1.tar.gz";
-    name = "0.6.3-1.tar.gz";
-    sha256 = "5f61a79cf313359e882853e9c36d3787d3ca5785e26d6f1ea2580a9c8da01032";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_gazebo/0.6.4-2.tar.gz";
+    name = "0.6.4-2.tar.gz";
+    sha256 = "5926be296e854845807759aa7d4bcf82d0dce50dbc5e6440ad76de4e6770c04c";
   };
 
   buildType = "catkin";
