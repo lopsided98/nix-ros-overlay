@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-xmllint }:
 buildRosPackage {
   pname = "ros-humble-tensorrt-cmake-module";
-  version = "0.0.2-r3";
+  version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tensorrt_cmake_module-release/archive/release/humble/tensorrt_cmake_module/0.0.2-3.tar.gz";
-    name = "0.0.2-3.tar.gz";
-    sha256 = "e2a872466534fab60a991122816f3876aca8ab236d1280d5ddc1cc5840d9bb0d";
+    url = "https://github.com/ros2-gbp/tensorrt_cmake_module-release/archive/release/humble/tensorrt_cmake_module/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
+    sha256 = "88f160087413626acfae816787221f5e9f5afe5b11fb478808645c5892d7f838";
   };
 
   buildType = "ament_cmake";

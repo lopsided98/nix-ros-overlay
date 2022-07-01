@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, controller-interface, forward-command-controller, hardware-interface, pluginlib, realtime-tools, rm-common, rm-msgs, roscpp, roslint, sensor-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rm-orientation-controller";
-  version = "0.1.4-r1";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_orientation_controller/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "c33e18f1b6bc67e127e0d35f5485da9d9a61d8b7899d5b45856ad32d16da06cc";
+    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_orientation_controller/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "c5bdefd94013ce7d7c5d8c90f7af5b47d61a842961e6ed0bf080007906c059c1";
   };
 
   buildType = "catkin";

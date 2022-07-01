@@ -126,6 +126,8 @@ self: super: {
 
  bondpy = self.callPackage ./bondpy {};
 
+ boost-plugin-loader = self.callPackage ./boost-plugin-loader {};
+
  boost-sml = self.callPackage ./boost-sml {};
 
  bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
@@ -433,6 +435,10 @@ self: super: {
  code-coverage = self.callPackage ./code-coverage {};
 
  codec-image-transport = self.callPackage ./codec-image-transport {};
+
+ collada-parser = self.callPackage ./collada-parser {};
+
+ collada-urdf = self.callPackage ./collada-urdf {};
 
  color-util = self.callPackage ./color-util {};
 
@@ -774,6 +780,8 @@ self: super: {
 
  end-effector = self.callPackage ./end-effector {};
 
+ er-public-msgs = self.callPackage ./er-public-msgs {};
+
  ergodic-exploration = self.callPackage ./ergodic-exploration {};
 
  ethercat-grant = self.callPackage ./ethercat-grant {};
@@ -783,6 +791,8 @@ self: super: {
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
  eus-assimp = self.callPackage ./eus-assimp {};
+
+ euscollada = self.callPackage ./euscollada {};
 
  euslime = self.callPackage ./euslime {};
 
@@ -1063,6 +1073,8 @@ self: super: {
  gmcl = self.callPackage ./gmcl {};
 
  goal-passer = self.callPackage ./goal-passer {};
+
+ gpio-controller = self.callPackage ./gpio-controller {};
 
  gpp-interface = self.callPackage ./gpp-interface {};
 
@@ -1734,6 +1746,8 @@ self: super: {
 
  mikrotik-swos-tools = self.callPackage ./mikrotik-swos-tools {};
 
+ mimic-joint-controller = self.callPackage ./mimic-joint-controller {};
+
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
  mir-actions = self.callPackage ./mir-actions {};
@@ -1872,7 +1886,7 @@ self: super: {
 
  mqtt-client = self.callPackage ./mqtt-client {};
 
- mrpt-bridge = self.callPackage ./mrpt-bridge {};
+ mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
 
  mrpt-local-obstacles = self.callPackage ./mrpt-local-obstacles {};
 
@@ -1882,11 +1896,17 @@ self: super: {
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
+ mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
+
  mrpt-navigation = self.callPackage ./mrpt-navigation {};
 
  mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
 
  mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
+
+ mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
+
+ mrpt-sensors = self.callPackage ./mrpt-sensors {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -3145,6 +3165,8 @@ self: super: {
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
  tello-driver = self.callPackage ./tello-driver {};
+
+ tesseract-collision = self.callPackage ./tesseract-collision {};
 
  tesseract-common = self.callPackage ./tesseract-common {};
 

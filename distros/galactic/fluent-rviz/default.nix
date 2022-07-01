@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, geometry-msgs, ouxt-lint-common, rclcpp, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-galactic-fluent-rviz";
-  version = "0.0.2-r1";
+  version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fluent_rviz-release/archive/release/galactic/fluent_rviz/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "00855cded4d1983fe976b0cfc99187503dca9e5583aee875eb5a19c02d061807";
+    url = "https://github.com/ros2-gbp/fluent_rviz-release/archive/release/galactic/fluent_rviz/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
+    sha256 = "61441e2726c330cc04965f807a4df8bc0ba0dc03496ba41807d4712858a809c7";
   };
 
   buildType = "ament_cmake";

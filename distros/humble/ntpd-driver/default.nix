@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, poco, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-ntpd-driver";
-  version = "2.1.0-r1";
+  version = "2.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ntpd_driver-release/archive/release/humble/ntpd_driver/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "b0a540240f8c5f9240cd057fa94e9839dd7e0bf0bc50d3e1a01db7d88779f066";
+    url = "https://github.com/ros2-gbp/ntpd_driver-release/archive/release/humble/ntpd_driver/2.1.0-2.tar.gz";
+    name = "2.1.0-2.tar.gz";
+    sha256 = "682fec236cc686248ffcfe7d5a3f074efa029fcf6859f7f5594e01b4d28fc51a";
   };
 
   buildType = "ament_cmake";

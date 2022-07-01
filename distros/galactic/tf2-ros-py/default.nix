@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, pythonPackages, rclpy, sensor-msgs, std-msgs, tf2-msgs, tf2-py }:
 buildRosPackage {
   pname = "ros-galactic-tf2-ros-py";
-  version = "0.17.3-r1";
+  version = "0.17.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/tf2_ros_py/0.17.3-1.tar.gz";
-    name = "0.17.3-1.tar.gz";
-    sha256 = "dd22835487b8605c373a42fc0b8025519ae76776d153876e7b6b4c3ca83f1ab8";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/tf2_ros_py/0.17.4-1.tar.gz";
+    name = "0.17.4-1.tar.gz";
+    sha256 = "31ba1feb43eaf63c62591812dfc0af758ca50de65bf9b07d1670ca1dd6fe234d";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosapi, rosbridge-library, rosbridge-server }:
 buildRosPackage {
   pname = "ros-melodic-rosbridge-suite";
-  version = "0.11.13-r1";
+  version = "0.11.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_suite/0.11.13-1.tar.gz";
-    name = "0.11.13-1.tar.gz";
-    sha256 = "cc42c8d4a63e7fdf1ca54c691cdab84d6807fec6c86845d50d2dcc948c6c0833";
+    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_suite/0.11.14-1.tar.gz";
+    name = "0.11.14-1.tar.gz";
+    sha256 = "5692c065bca1dae9c1986bb94afedad08112e8ea21b2c40966551098d46f9887";
   };
 
   buildType = "catkin";

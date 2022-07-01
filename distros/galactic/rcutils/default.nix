@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, mimick-vendor, osrf-testing-tools-cpp, performance-test-fixture, python3Packages }:
 buildRosPackage {
   pname = "ros-galactic-rcutils";
-  version = "4.0.2-r2";
+  version = "4.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/galactic/rcutils/4.0.2-2.tar.gz";
-    name = "4.0.2-2.tar.gz";
-    sha256 = "afe979208f0510ed365ea45b5d151f68a66497a972aaff8bab9d799c1ee46718";
+    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/galactic/rcutils/4.0.3-1.tar.gz";
+    name = "4.0.3-1.tar.gz";
+    sha256 = "8752afbefe05ac191fad55b65e85e6a83c443ef2d68f0eb00e757e07f47d542a";
   };
 
   buildType = "ament_cmake";

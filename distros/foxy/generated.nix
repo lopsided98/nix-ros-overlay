@@ -102,6 +102,8 @@ self: super: {
 
  ament-cpplint = self.callPackage ./ament-cpplint {};
 
+ ament-download = self.callPackage ./ament-download {};
+
  ament-flake8 = self.callPackage ./ament-flake8 {};
 
  ament-index-cpp = self.callPackage ./ament-index-cpp {};
@@ -171,6 +173,8 @@ self: super: {
  bond-core = self.callPackage ./bond-core {};
 
  bondcpp = self.callPackage ./bondcpp {};
+
+ boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
  bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
 
@@ -244,6 +248,20 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
+ crane-plus = self.callPackage ./crane-plus {};
+
+ crane-plus-control = self.callPackage ./crane-plus-control {};
+
+ crane-plus-description = self.callPackage ./crane-plus-description {};
+
+ crane-plus-examples = self.callPackage ./crane-plus-examples {};
+
+ crane-plus-gazebo = self.callPackage ./crane-plus-gazebo {};
+
+ crane-plus-ignition = self.callPackage ./crane-plus-ignition {};
+
+ crane-plus-moveit-config = self.callPackage ./crane-plus-moveit-config {};
+
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
@@ -311,6 +329,14 @@ self: super: {
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
  depthai = self.callPackage ./depthai {};
+
+ depthai-ros = self.callPackage ./depthai-ros {};
+
+ depthai-bridge = self.callPackage ./depthai-bridge {};
+
+ depthai-examples = self.callPackage ./depthai-examples {};
+
+ depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
@@ -452,6 +478,8 @@ self: super: {
 
  embree-vendor = self.callPackage ./embree-vendor {};
 
+ end-effector = self.callPackage ./end-effector {};
+
  espeak-interfaces = self.callPackage ./espeak-interfaces {};
 
  espeak-ros = self.callPackage ./espeak-ros {};
@@ -500,6 +528,8 @@ self: super: {
 
  filters = self.callPackage ./filters {};
 
+ fluent-rviz = self.callPackage ./fluent-rviz {};
+
  fmi-adapter = self.callPackage ./fmi-adapter {};
 
  fmi-adapter-examples = self.callPackage ./fmi-adapter-examples {};
@@ -529,6 +559,8 @@ self: super: {
  gazebo-ros2-control-demos = self.callPackage ./gazebo-ros2-control-demos {};
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
+
+ gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -753,6 +785,24 @@ self: super: {
  lua-vendor = self.callPackage ./lua-vendor {};
 
  lusb = self.callPackage ./lusb {};
+
+ maliput = self.callPackage ./maliput {};
+
+ maliput-dragway = self.callPackage ./maliput-dragway {};
+
+ maliput-drake = self.callPackage ./maliput-drake {};
+
+ maliput-integration = self.callPackage ./maliput-integration {};
+
+ maliput-malidrive = self.callPackage ./maliput-malidrive {};
+
+ maliput-multilane = self.callPackage ./maliput-multilane {};
+
+ maliput-object = self.callPackage ./maliput-object {};
+
+ maliput-object-py = self.callPackage ./maliput-object-py {};
+
+ maliput-py = self.callPackage ./maliput-py {};
 
  map-msgs = self.callPackage ./map-msgs {};
 
@@ -1018,6 +1068,8 @@ self: super: {
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
+ performance-test = self.callPackage ./performance-test {};
+
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
@@ -1106,6 +1158,8 @@ self: super: {
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
+ pose-cov-ops = self.callPackage ./pose-cov-ops {};
+
  position-controllers = self.callPackage ./position-controllers {};
 
  psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
@@ -1140,6 +1194,8 @@ self: super: {
 
  quaternion-operation = self.callPackage ./quaternion-operation {};
 
+ r2r-spl-7 = self.callPackage ./r2r-spl-7 {};
+
  radar-msgs = self.callPackage ./radar-msgs {};
 
  random-numbers = self.callPackage ./random-numbers {};
@@ -1171,6 +1227,14 @@ self: super: {
  rc-reason-msgs = self.callPackage ./rc-reason-msgs {};
 
  rcdiscover = self.callPackage ./rcdiscover {};
+
+ rcgcd-spl-14 = self.callPackage ./rcgcd-spl-14 {};
+
+ rcgcd-spl-14-conversion = self.callPackage ./rcgcd-spl-14-conversion {};
+
+ rcgcrd-spl-4 = self.callPackage ./rcgcrd-spl-4 {};
+
+ rcgcrd-spl-4-conversion = self.callPackage ./rcgcrd-spl-4-conversion {};
 
  rcl = self.callPackage ./rcl {};
 
@@ -1454,6 +1518,8 @@ self: super: {
 
  rosbridge-test-msgs = self.callPackage ./rosbridge-test-msgs {};
 
+ rosee-msg = self.callPackage ./rosee-msg {};
+
  rosgraph-msgs = self.callPackage ./rosgraph-msgs {};
 
  rosidl-adapter = self.callPackage ./rosidl-adapter {};
@@ -1572,6 +1638,10 @@ self: super: {
 
  rqt-topic = self.callPackage ./rqt-topic {};
 
+ rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
+
+ rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
+
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
@@ -1659,6 +1729,10 @@ self: super: {
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
+
+ splsm-7 = self.callPackage ./splsm-7 {};
+
+ splsm-7-conversion = self.callPackage ./splsm-7-conversion {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
 
@@ -1776,6 +1850,8 @@ self: super: {
 
  tracetools = self.callPackage ./tracetools {};
 
+ tracetools-analysis = self.callPackage ./tracetools-analysis {};
+
  tracetools-launch = self.callPackage ./tracetools-launch {};
 
  tracetools-test = self.callPackage ./tracetools-test {};
@@ -1836,9 +1912,21 @@ self: super: {
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
+ ur-bringup = self.callPackage ./ur-bringup {};
+
  ur-client-library = self.callPackage ./ur-client-library {};
 
+ ur-controllers = self.callPackage ./ur-controllers {};
+
+ ur-dashboard-msgs = self.callPackage ./ur-dashboard-msgs {};
+
+ ur-description = self.callPackage ./ur-description {};
+
+ ur-moveit-config = self.callPackage ./ur-moveit-config {};
+
  ur-msgs = self.callPackage ./ur-msgs {};
+
+ ur-robot-driver = self.callPackage ./ur-robot-driver {};
 
  urdf = self.callPackage ./urdf {};
 
@@ -1929,6 +2017,8 @@ self: super: {
  xacro-live = self.callPackage ./xacro-live {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
+
+ zmqpp-vendor = self.callPackage ./zmqpp-vendor {};
 
  zstd-vendor = self.callPackage ./zstd-vendor {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, console-bridge, mavlink, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-libmavconn";
-  version = "2.1.0-r3";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/humble/libmavconn/2.1.0-3.tar.gz";
-    name = "2.1.0-3.tar.gz";
-    sha256 = "1d0c3ac972c444522a8f34433213281142459241ffdd08efbb64c154793502a6";
+    url = "https://github.com/ros2-gbp/mavros-release/archive/release/humble/libmavconn/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "f3e2ee1bb2f20dbb3756386dfd4035ecc839f98ac2db1df7049c9a3cd3d7c0fa";
   };
 
   buildType = "ament_cmake";

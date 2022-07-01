@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, pythonPackages, ros2cli }:
 buildRosPackage {
   pname = "ros-galactic-ros2multicast";
-  version = "0.13.3-r1";
+  version = "0.13.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/galactic/ros2multicast/0.13.3-1.tar.gz";
-    name = "0.13.3-1.tar.gz";
-    sha256 = "2154f171ddd909dc361d9860ca2a009a5538f1a5cbc2537380e69d3450a92bd3";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/galactic/ros2multicast/0.13.4-1.tar.gz";
+    name = "0.13.4-1.tar.gz";
+    sha256 = "ad486fde2a9d1504ad379a0c559cafd38533498be8707dc3613ed7bfc0fbd2ca";
   };
 
   buildType = "ament_python";

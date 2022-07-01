@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-moveit-resources-fanuc-description";
-  version = "2.0.4-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/humble/moveit_resources_fanuc_description/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "3698f8f92f11baf94e2b0e05f9d51ca270d8f699712228e937a77814597ab1c2";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/humble/moveit_resources_fanuc_description/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "00c4614194fe443fc78eb6968211e0bccba534c7b22a09edef23531dc4fa7eae";
   };
 
   buildType = "ament_cmake";

@@ -536,6 +536,10 @@ self: super: {
 
  codec-image-transport = self.callPackage ./codec-image-transport {};
 
+ collada-parser = self.callPackage ./collada-parser {};
+
+ collada-urdf = self.callPackage ./collada-urdf {};
+
  color-util = self.callPackage ./color-util {};
 
  combined-robot-hw = self.callPackage ./combined-robot-hw {};
@@ -959,6 +963,8 @@ self: super: {
  eus-qp = self.callPackage ./eus-qp {};
 
  eus-qpoases = self.callPackage ./eus-qpoases {};
+
+ euscollada = self.callPackage ./euscollada {};
 
  euslime = self.callPackage ./euslime {};
 
@@ -1706,6 +1712,8 @@ self: super: {
 
  jsk-pr2eus = self.callPackage ./jsk-pr2eus {};
 
+ jsk-python-orocos-kdl-python3 = self.callPackage ./jsk-python-orocos-kdl-python3 {};
+
  jsk-recognition = self.callPackage ./jsk-recognition {};
 
  jsk-recognition-msgs = self.callPackage ./jsk-recognition-msgs {};
@@ -1718,7 +1726,11 @@ self: super: {
 
  jsk-teleop-joy = self.callPackage ./jsk-teleop-joy {};
 
+ jsk-tf2-py-python3 = self.callPackage ./jsk-tf2-py-python3 {};
+
  jsk-tilt-laser = self.callPackage ./jsk-tilt-laser {};
+
+ jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
 
  jsk-visualization = self.callPackage ./jsk-visualization {};
 
@@ -2314,13 +2326,11 @@ self: super: {
 
  mrpt1 = self.callPackage ./mrpt1 {};
 
- mrpt-bridge = self.callPackage ./mrpt-bridge {};
-
  mrpt-ekf-slam-2d = self.callPackage ./mrpt-ekf-slam-2d {};
 
  mrpt-ekf-slam-3d = self.callPackage ./mrpt-ekf-slam-3d {};
 
- mrpt-graphslam-2d = self.callPackage ./mrpt-graphslam-2d {};
+ mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
 
  mrpt-icp-slam-2d = self.callPackage ./mrpt-icp-slam-2d {};
 
@@ -2332,6 +2342,8 @@ self: super: {
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
+ mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
+
  mrpt-navigation = self.callPackage ./mrpt-navigation {};
 
  mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
@@ -2339,6 +2351,10 @@ self: super: {
  mrpt-rbpf-slam = self.callPackage ./mrpt-rbpf-slam {};
 
  mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
+
+ mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
+
+ mrpt-sensors = self.callPackage ./mrpt-sensors {};
 
  mrpt-slam = self.callPackage ./mrpt-slam {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, diagnostic-msgs, diagnostic-updater, pr2-mechanism-model, pr2-mechanism-msgs, roscpp, rospy, rostest, std-msgs, std-srvs, urdf }:
 buildRosPackage {
   pname = "ros-melodic-pr2-mechanism-diagnostics";
-  version = "1.8.20-r1";
+  version = "1.8.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_mechanism_diagnostics/1.8.20-1.tar.gz";
-    name = "1.8.20-1.tar.gz";
-    sha256 = "233eefb27b334851a0fbc9e9d13215934b09f9ba90c7cc304a9188e24f41eea8";
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_mechanism_diagnostics/1.8.21-1.tar.gz";
+    name = "1.8.21-1.tar.gz";
+    sha256 = "3badb0392210f96cb78d66bbc1b3e6fd5f1d4b07d162612225c02529d66ad395";
   };
 
   buildType = "catkin";

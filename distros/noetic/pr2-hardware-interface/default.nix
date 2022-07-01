@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-pr2-hardware-interface";
-  version = "1.8.20-r1";
+  version = "1.8.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/noetic/pr2_hardware_interface/1.8.20-1.tar.gz";
-    name = "1.8.20-1.tar.gz";
-    sha256 = "73009b090f3fb86f9d2a2b888711cca808fcfa69b2d867feb3c46005b43cd3d2";
+    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/noetic/pr2_hardware_interface/1.8.21-1.tar.gz";
+    name = "1.8.21-1.tar.gz";
+    sha256 = "49586d13272ba7514ab047b8f34173b27271b3bb675e3d1fa52787ce3b66d4cd";
   };
 
   buildType = "catkin";

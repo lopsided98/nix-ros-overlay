@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, eigen, nav-core, pluginlib, roscpp, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-clear-costmap-recovery";
-  version = "1.17.1-r1";
+  version = "1.17.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/clear_costmap_recovery/1.17.1-1.tar.gz";
-    name = "1.17.1-1.tar.gz";
-    sha256 = "19ba82e12b6d0282e13403cf382f42eaf9bbcfd5474740ff0094e85609676f06";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/clear_costmap_recovery/1.17.2-1.tar.gz";
+    name = "1.17.2-1.tar.gz";
+    sha256 = "332dce9e91e3da8c242b94d812cb29f488403bdc5febab4ab4b52c8e6bcc6948";
   };
 
   buildType = "catkin";

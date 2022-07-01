@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-soccer-vision-attribute-msgs";
-  version = "0.0.1-r2";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/soccer_interfaces-release/archive/release/humble/soccer_vision_attribute_msgs/0.0.1-2.tar.gz";
-    name = "0.0.1-2.tar.gz";
-    sha256 = "7125bbe67762fe27d5f08d27690b9514b9e443f1e55de040cc51129c52b8e5cc";
+    url = "https://github.com/ros2-gbp/soccer_interfaces-release/archive/release/humble/soccer_vision_attribute_msgs/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "dbf7fe11d29216fe3df9e25a18acd15628b9337d9ec62e80127dbd5ef1b0f30b";
   };
 
   buildType = "ament_cmake";

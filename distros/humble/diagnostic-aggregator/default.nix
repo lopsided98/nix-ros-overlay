@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, diagnostic-msgs, launch-testing-ament-cmake, launch-testing-ros, pluginlib, rclcpp, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-diagnostic-aggregator";
-  version = "2.1.3-r3";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostic_aggregator/2.1.3-3.tar.gz";
-    name = "2.1.3-3.tar.gz";
-    sha256 = "33453341c6e711d393b2e5be831fbbf9acda211653a1369f7ab36d21392bf747";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostic_aggregator/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "2fecf33067be564781b0efb26e815457a51523c52eeb680725b4e3d77026952d";
   };
 
   buildType = "ament_cmake";

@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rosapi, rosauth, rosbridge-library, rosbridge-msgs, rospy, rostest }:
 buildRosPackage {
   pname = "ros-melodic-rosbridge-server";
-  version = "0.11.13-r1";
+  version = "0.11.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_server/0.11.13-1.tar.gz";
-    name = "0.11.13-1.tar.gz";
-    sha256 = "d699e369ab5377894f549cc369194340d97185b362a9e685f2ede6d4e9c9fcfc";
+    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_server/0.11.14-1.tar.gz";
+    name = "0.11.14-1.tar.gz";
+    sha256 = "f4930786659ffde8fa7b30bb69093d05be004b59117841f5dd0536471b5a22bc";
   };
 
   buildType = "catkin";
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ pythonPackages.autobahn pythonPackages.backports_ssl_match_hostname pythonPackages.tornado pythonPackages.twisted rosapi rosauth rosbridge-library rosbridge-msgs rospy ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
   meta = {
     description = ''A WebSocket interface to rosbridge.'';
