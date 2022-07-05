@@ -2,6 +2,7 @@
 
 self: super: {
   rosPackages = rec {
+    recurseForDerivations = true;
     lib = super.lib // import ../lib { inherit lib self; };
 
     melodic = import ./distro-overlay.nix {

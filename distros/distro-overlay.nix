@@ -12,6 +12,7 @@ let
   }));
 
   base = rosSelf: rosSuper: {
+    recurseForDerivations = true;
     lib = super.lib // import ../lib { inherit self rosSelf; };
 
     callPackage = self.newScope rosSelf;
