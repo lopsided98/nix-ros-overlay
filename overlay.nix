@@ -1,5 +1,5 @@
-self: super: with super.lib;
+final: prev: with prev.lib;
 foldr composeExtensions (_: _: {}) [
   (import ./pkgs)
   (import ./distros)
-] self super
+] final prev
