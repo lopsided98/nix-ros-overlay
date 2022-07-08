@@ -7,7 +7,8 @@ let
     pname = "colcon";
     inherit (package) version;
     phases = [ "installPhase" "fixupPhase" ];
-    buildInputs = [ makeWrapper package] ++ extensions;
+    nativeBuildInputs = [ makeWrapper ];
+    buildInputs = [ package ] ++ extensions;
 
     installPhase = ''
       makeWrapper '${package}/bin/colcon' "$out/bin/colcon" \

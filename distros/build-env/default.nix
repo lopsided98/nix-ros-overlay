@@ -43,7 +43,7 @@ let
     # nix-shell -p does.
     paths = propagatedPaths.rosPackages;
 
-    buildInputs = optional wrapPrograms makeWrapper;
+    nativeBuildInputs = optional wrapPrograms makeWrapper;
 
     postBuild = ''
       "${buildPackages.perl}/bin/perl" "${./setup-hook-builder.pl}"
