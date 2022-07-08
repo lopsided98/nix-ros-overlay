@@ -168,6 +168,8 @@ self: super: {
 
  backward-ros = self.callPackage ./backward-ros {};
 
+ bag2-to-image = self.callPackage ./bag2-to-image {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -801,6 +803,8 @@ self: super: {
  navigation2 = self.callPackage ./navigation2 {};
 
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
+
+ nerian-stereo = self.callPackage ./nerian-stereo {};
 
  nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
 

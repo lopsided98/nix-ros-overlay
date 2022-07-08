@@ -1886,7 +1886,15 @@ self: super: {
 
  mqtt-client = self.callPackage ./mqtt-client {};
 
+ mrpt-ekf-slam-2d = self.callPackage ./mrpt-ekf-slam-2d {};
+
+ mrpt-ekf-slam-3d = self.callPackage ./mrpt-ekf-slam-3d {};
+
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
+
+ mrpt-graphslam-2d = self.callPackage ./mrpt-graphslam-2d {};
+
+ mrpt-icp-slam-2d = self.callPackage ./mrpt-icp-slam-2d {};
 
  mrpt-local-obstacles = self.callPackage ./mrpt-local-obstacles {};
 
@@ -1902,11 +1910,15 @@ self: super: {
 
  mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
 
+ mrpt-rbpf-slam = self.callPackage ./mrpt-rbpf-slam {};
+
  mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
 
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-slam = self.callPackage ./mrpt-slam {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
