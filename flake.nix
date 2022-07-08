@@ -11,12 +11,12 @@
     eachSystem allSystems (system: let
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ self.overlay ];
+        overlays = [ self.overlays.default ];
       };
     in {
       legacyPackages = pkgs.rosPackages;
     }) // {
-      overlay = import ./overlay.nix;
-      nixosModule = import ./modules;
+      overlays.default = import ./overlay.nix;
+      nixosModules.default = import ./modules;
     };
 }
