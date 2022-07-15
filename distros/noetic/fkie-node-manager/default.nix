@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, dynamic-reconfigure, fkie-master-discovery, fkie-master-sync, fkie-multimaster-msgs, fkie-node-manager-daemon, python-qt-binding, python3Packages, rosgraph, roslaunch, roslib, rosmsg, rospy, rosservice, rqt-gui, rqt-reconfigure, screen, xterm }:
 buildRosPackage {
   pname = "ros-noetic-fkie-node-manager";
-  version = "1.2.7-r1";
+  version = "1.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_node_manager/1.2.7-1.tar.gz";
-    name = "1.2.7-1.tar.gz";
-    sha256 = "cc1bfb1eb02d1e7e28feb6902e61121f928b01a74f0b9204299386bd45318b73";
+    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_node_manager/1.3.0-2.tar.gz";
+    name = "1.3.0-2.tar.gz";
+    sha256 = "b0bbcec7e9087a14a19c45255242d39662ed77f2b08bb6e40f385c25f2e2f017";
   };
 
   buildType = "catkin";
-  buildInputs = [ python3Packages.catkin-pkg ];
   propagatedBuildInputs = [ diagnostic-msgs dynamic-reconfigure fkie-master-discovery fkie-master-sync fkie-multimaster-msgs fkie-node-manager-daemon python-qt-binding python3Packages.docutils python3Packages.paramiko python3Packages.pycryptodomex python3Packages.pyqt5_with_qtwebkit python3Packages.ruamel_yaml rosgraph roslaunch roslib rosmsg rospy rosservice rqt-gui rqt-reconfigure screen xterm ];
   nativeBuildInputs = [ catkin ];
 

@@ -5,18 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, fkie-master-discovery, fkie-multimaster-msgs, python3Packages, roslaunch, rospy, rostest, screen }:
 buildRosPackage {
   pname = "ros-noetic-fkie-node-manager-daemon";
-  version = "1.2.7-r1";
+  version = "1.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_node_manager_daemon/1.2.7-1.tar.gz";
-    name = "1.2.7-1.tar.gz";
-    sha256 = "3fa68a0bf213d497d7b682978a9be23f70068066cf05c397eaa1b940994d63fc";
+    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_node_manager_daemon/1.3.0-2.tar.gz";
+    name = "1.3.0-2.tar.gz";
+    sha256 = "5048b20fa316d70db15dc49267fc557cde70dbb91b712f99737f5115be97ef04";
   };
 
   buildType = "catkin";
-  buildInputs = [ python3Packages.catkin-pkg ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ diagnostic-msgs fkie-master-discovery fkie-multimaster-msgs python3Packages.grpcio python3Packages.psutil python3Packages.rospkg python3Packages.ruamel_yaml roslaunch rospy screen ];
+  propagatedBuildInputs = [ diagnostic-msgs fkie-master-discovery fkie-multimaster-msgs python3Packages.grpcio python3Packages.grpcio-tools python3Packages.psutil python3Packages.rospkg python3Packages.ruamel_yaml roslaunch rospy screen ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

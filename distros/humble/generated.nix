@@ -168,6 +168,8 @@ self: super: {
 
  backward-ros = self.callPackage ./backward-ros {};
 
+ bag2-to-image = self.callPackage ./bag2-to-image {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -492,6 +494,8 @@ self: super: {
 
  io-context = self.callPackage ./io-context {};
 
+ joint-limits = self.callPackage ./joint-limits {};
+
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
 
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
@@ -802,6 +806,8 @@ self: super: {
 
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
+ nerian-stereo = self.callPackage ./nerian-stereo {};
+
  nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
@@ -863,8 +869,6 @@ self: super: {
  perception = self.callPackage ./perception {};
 
  perception-pcl = self.callPackage ./perception-pcl {};
-
- performance-report = self.callPackage ./performance-report {};
 
  performance-test = self.callPackage ./performance-test {};
 
@@ -1662,9 +1666,19 @@ self: super: {
 
  velocity-controllers = self.callPackage ./velocity-controllers {};
 
+ velodyne = self.callPackage ./velodyne {};
+
  velodyne-description = self.callPackage ./velodyne-description {};
 
+ velodyne-driver = self.callPackage ./velodyne-driver {};
+
  velodyne-gazebo-plugins = self.callPackage ./velodyne-gazebo-plugins {};
+
+ velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
+
+ velodyne-msgs = self.callPackage ./velodyne-msgs {};
+
+ velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
 

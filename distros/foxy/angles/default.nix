@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages }:
 buildRosPackage {
   pname = "ros-foxy-angles";
-  version = "1.12.3-r1";
+  version = "1.12.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/angles-release/archive/release/foxy/angles/1.12.3-1.tar.gz";
-    name = "1.12.3-1.tar.gz";
-    sha256 = "2ece091460ffc83df530336e95aaf361e1d760d236a3a0a04e3df2768d8ab94d";
+    url = "https://github.com/ros2-gbp/angles-release/archive/release/foxy/angles/1.12.6-1.tar.gz";
+    name = "1.12.6-1.tar.gz";
+    sha256 = "a4f16d3854d340b4008e2cd556fe411cdf39c00764902264d2d6fa5dabe28e69";
   };
 
   buildType = "ament_cmake";
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python python3Packages.setuptools ];
 
   meta = {
     description = ''This package provides a set of simple math utilities to work

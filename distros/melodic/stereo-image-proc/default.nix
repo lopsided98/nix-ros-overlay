@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, image-geometry, image-proc, image-transport, message-filters, nodelet, rostest, sensor-msgs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-melodic-stereo-image-proc";
-  version = "1.15.0-r1";
+  version = "1.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/stereo_image_proc/1.15.0-1.tar.gz";
-    name = "1.15.0-1.tar.gz";
-    sha256 = "d5db016ee55d4ece1413ee83fe1d02315c43e0e97c4a320ece9310b061c45c1d";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/stereo_image_proc/1.15.2-1.tar.gz";
+    name = "1.15.2-1.tar.gz";
+    sha256 = "0eb1ce0600f114d0ba5e2e145c05c4cc0b76c8fcd92186100851b0ddaf56c0e3";
   };
 
   buildType = "catkin";

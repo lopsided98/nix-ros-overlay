@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch, launch-testing, osrf-testing-tools-cpp, rclcpp, rmw-implementation, rmw-implementation-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-performance-test";
-  version = "1.0.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/performance_test-release/archive/release/foxy/performance_test/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "9035cf4ff43fa584da5ed5cc28853032b3d143eb7bd75606d94cad0c159b250b";
+    url = "https://github.com/ros2-gbp/performance_test-release/archive/release/foxy/performance_test/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "525cfade4a96984b86c41f451b3f15cf7617c346952e1a48139c437fd94513f5";
   };
 
   buildType = "ament_cmake";

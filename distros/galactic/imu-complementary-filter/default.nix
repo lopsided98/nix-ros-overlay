@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, message-filters, rclcpp, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-galactic-imu-complementary-filter";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/galactic/imu_complementary_filter/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "b89699b5b628132a105294c7b1249bd306f57d354c2e62c05cfb3abc82ce5d4e";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/galactic/imu_complementary_filter/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "a9805b2dcd9e9e5866d320a51216b2746b56aa8cabd0cfc0d5745ab785ae40b4";
   };
 
   buildType = "ament_cmake";

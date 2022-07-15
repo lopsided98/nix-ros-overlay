@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-nerian-stereo";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/nerian-vision/nerian_stereo_ros2-release/archive/release/foxy/nerian_stereo/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "16ae46284080599ab25f9ab506f11696fefefe00f6bf598dde4a82a134a9318d";
+    url = "https://github.com/nerian-vision/nerian_stereo_ros2-release/archive/release/foxy/nerian_stereo/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "33f56cf27bfb2363f02ad66a3ef9ad6ad162fb055a4916f9435e3f59dd58ed10";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-galactic-magic-enum";
-  version = "0.7.3-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/magic_enum-release/archive/release/galactic/magic_enum/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "b7a5b2ddba201a6238ddbeada09f5eb887711aff17b87f7418f1cb2202aa0eec";
+    url = "https://github.com/nobleo/magic_enum-release/archive/release/galactic/magic_enum/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "41c5912bf40f134d2beddb3138d243ed76be21f27875bb777f78a1ab04bcb7c4";
   };
 
   buildType = "cmake";
