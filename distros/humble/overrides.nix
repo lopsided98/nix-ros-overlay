@@ -9,7 +9,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   }: {
     patches = patches ++ [
       (self.fetchpatch {
-        url = "https://github.com/lopsided98/iceoryx/commit/d2c9d1b4e7a7c7740f1e55ff099986a4e5273b5d.patch";
+        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/acc1e979a2d5ca30737efb077b00b42f1c4a8429.patch";
         hash = "sha256-npFHdb0a3JBA8T6vke54DA08C93aNc/7c6xrfMBo7zI=";
         stripLen = 1;
       })
@@ -28,7 +28,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   }: {
     patches = patches ++ [
       (self.fetchpatch {
-        url = "https://github.com/lopsided98/iceoryx/commit/96c327430254d455c74f0dbd637b4573193d9531.patch";
+        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/d4519632964794553791ef3f951ed47ca52ebbb6.patch";
         hash = "sha256-f4kITUql8uFSptFmu7LZGChlfDG63b0gmsRyHp1NsWw=";
         stripLen = 1;
       })
