@@ -7,6 +7,7 @@
   };
 
   outputs = { self, nixpkgs, flake-utils }:
+    with nixpkgs.lib;
     with flake-utils.lib;
     eachSystem allSystems (system: let
       pkgs = import nixpkgs {
@@ -18,5 +19,12 @@
     }) // {
       overlays.default = import ./overlay.nix;
       nixosModules.default = import ./modules;
+
+      overlay = nixpkgs.lib.warn
+        "'nix-ros-overlay.overlay' is deprecated, use 'nix-ros-overlay.overlays.default' instead"
+        self.overlays.default;
+      nixosModule = nixpkgs.lib.warn
+        "'nix-ros-overlay.nixosModule' is deprecated, use 'nix-ros-overlay.nixosModules.default' instead"
+        self.nixosModules.default;
     };
 }
