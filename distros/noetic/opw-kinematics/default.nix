@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, gtest, ros-industrial-cmake-boilerplate }:
 buildRosPackage {
   pname = "ros-noetic-opw-kinematics";
-  version = "0.4.6-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/opw_kinematics-release/archive/release/noetic/opw_kinematics/0.4.6-1.tar.gz";
-    name = "0.4.6-1.tar.gz";
-    sha256 = "35e451e0bfdafa08c2c3aa83707151fa50b268218acc0fb200b162390d061eea";
+    url = "https://github.com/ros-industrial-release/opw_kinematics-release/archive/release/noetic/opw_kinematics/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "076f8b32d2e15749226cf1e5f41fc999b7345b2beec597905692a8515dfcf2f6";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL_image, catkin, jsk-tools, libyamlcpp, map-server, nav-msgs, python3Packages, pythonPackages, rosconsole, roscpp, rosmake, rospy, tf }:
 buildRosPackage {
   pname = "ros-noetic-multi-map-server";
-  version = "2.2.11-r2";
+  version = "2.2.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/multi_map_server/2.2.11-2.tar.gz";
-    name = "2.2.11-2.tar.gz";
-    sha256 = "e29c65c0ecd6a1199c1f247b056d171b575c49225866c48f504a2c06b6735d1c";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/multi_map_server/2.2.12-1.tar.gz";
+    name = "2.2.12-1.tar.gz";
+    sha256 = "2c5ce65b15604abc1c9786f7a777931762d636f6d8198a7db495c89fa7843f3a";
   };
 
   buildType = "catkin";

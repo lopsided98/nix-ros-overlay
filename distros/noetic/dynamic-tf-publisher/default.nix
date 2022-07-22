@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, rospy, tf }:
 buildRosPackage {
   pname = "ros-noetic-dynamic-tf-publisher";
-  version = "2.2.11-r2";
+  version = "2.2.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/dynamic_tf_publisher/2.2.11-2.tar.gz";
-    name = "2.2.11-2.tar.gz";
-    sha256 = "641d4138a4c105415c5199235e6b783357adbf11831e9ab0e60ec3a368bcefc5";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/dynamic_tf_publisher/2.2.12-1.tar.gz";
+    name = "2.2.12-1.tar.gz";
+    sha256 = "d86fbdd0d5b80c942ab48aa045fb81528da2cc0d5814c25545ea708230d36b52";
   };
 
   buildType = "catkin";

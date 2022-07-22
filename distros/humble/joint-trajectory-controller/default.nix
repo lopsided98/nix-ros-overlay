@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, angles, control-msgs, control-toolbox, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-joint-trajectory-controller";
-  version = "2.6.0-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/joint_trajectory_controller/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "5ed590175c6ddbe4bfc9d280898086330425e92a4141eabbd7836ec4d8c1d730";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/joint_trajectory_controller/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "f94c3bc85c19aa51980e27348926fa4e930a73872dea21a320a68037a3c376f1";
   };
 
   buildType = "ament_cmake";

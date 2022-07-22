@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, builtin-interfaces, geometry-msgs, nav-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, sensor-msgs, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-imu-filter-madgwick";
-  version = "2.1.1-r1";
+  version = "2.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/humble/imu_filter_madgwick/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "d0728ac0a2c455f20357dfcaba127485688604f1667c39bca11351be7e521a0b";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/humble/imu_filter_madgwick/2.1.1-2.tar.gz";
+    name = "2.1.1-2.tar.gz";
+    sha256 = "4f61fe56b2166f3e4cd757d841fa751c747f9009a26417108257197b6f95bb1d";
   };
 
   buildType = "ament_cmake";

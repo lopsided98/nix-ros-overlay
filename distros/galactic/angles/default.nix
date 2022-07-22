@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages }:
 buildRosPackage {
   pname = "ros-galactic-angles";
-  version = "1.12.4-r2";
+  version = "1.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/angles-release/archive/release/galactic/angles/1.12.4-2.tar.gz";
-    name = "1.12.4-2.tar.gz";
-    sha256 = "374d88ee725f7a532408549f8933795ec1d360095395410b1c8f72a6c307a17b";
+    url = "https://github.com/ros2-gbp/angles-release/archive/release/galactic/angles/1.14.0-1.tar.gz";
+    name = "1.14.0-1.tar.gz";
+    sha256 = "3c77795be096e8bbeb34b3ae79528a2764cf5db6177361ab208e3321f223b866";
   };
 
   buildType = "ament_cmake";
-  nativeBuildInputs = [ ament-cmake python3Packages.setuptools ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python python3Packages.setuptools ];
 
   meta = {
     description = ''This package provides a set of simple math utilities to work

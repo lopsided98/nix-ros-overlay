@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, image-geometry, image-transport, image-view, message-filters, message-generation, message-runtime, pcl-ros, python3Packages, roscpp, rostest, sensor-msgs, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-noetic-image-view2";
-  version = "2.2.11-r2";
+  version = "2.2.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/image_view2/2.2.11-2.tar.gz";
-    name = "2.2.11-2.tar.gz";
-    sha256 = "07e18eb3ce6a3761e5d3a2a6ded61460d1e41b08001bc442bd8a1c3c5e0b4dc2";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/image_view2/2.2.12-1.tar.gz";
+    name = "2.2.12-1.tar.gz";
+    sha256 = "342ebba57f329112be80d432c5f1eca5aeb7b00d44c4e5171e021a74feb52209";
   };
 
   buildType = "catkin";

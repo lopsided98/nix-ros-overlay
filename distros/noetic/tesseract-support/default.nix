@@ -2,19 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, ros-industrial-cmake-boilerplate, tesseract-common }:
+{ lib, buildRosPackage, fetchurl, cmake, gtest, ros-industrial-cmake-boilerplate, tesseract-common }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-support";
-  version = "0.8.6-r1";
+  version = "0.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_support/0.8.6-1.tar.gz";
-    name = "0.8.6-1.tar.gz";
-    sha256 = "bf93f39eecfde80a2434bd4eeef21a305cc1deed3e4cfcacdc636436c2b1ab92";
+    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_support/0.10.0-1.tar.gz";
+    name = "0.10.0-1.tar.gz";
+    sha256 = "f8d6b95012b572b247346d6299462853e1e4609398a7ee27802690d3f07dd85c";
   };
 
   buildType = "cmake";
   buildInputs = [ ros-industrial-cmake-boilerplate tesseract-common ];
+  checkInputs = [ gtest ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

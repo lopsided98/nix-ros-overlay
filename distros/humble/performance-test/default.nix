@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch, launch-testing, osrf-testing-tools-cpp, rclcpp, rmw-implementation, rmw-implementation-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-performance-test";
-  version = "1.1.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/performance_test-release/archive/release/humble/performance_test/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "86837cb1939cb826de597334ba5d7653deafbcf42a572ab28c7b45406d94ef1e";
+    url = "https://github.com/ros2-gbp/performance_test-release/archive/release/humble/performance_test/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "c2c82361579b9a02dea39bc4d3b589c0ed055bacf12b701e291e4629d96f7585";
   };
 
   buildType = "ament_cmake";

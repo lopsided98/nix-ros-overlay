@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-galactic-image-transport";
-  version = "2.3.1-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/galactic/image_transport/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "d91cad7553e537d5a94395a4cf1ac807ff599d021f268ac14ac9b44e324a35c7";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/galactic/image_transport/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "57d015f1158eb157ccc9d118409531273d134485ff0ebc0dc7a32ca37a62b542";
   };
 
   buildType = "ament_cmake";

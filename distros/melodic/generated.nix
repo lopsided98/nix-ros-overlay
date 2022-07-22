@@ -1146,6 +1146,8 @@ self: super: {
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
+ foxglove-msgs = self.callPackage ./foxglove-msgs {};
+
  frame-editor = self.callPackage ./frame-editor {};
 
  franka-control = self.callPackage ./franka-control {};
@@ -3051,6 +3053,8 @@ self: super: {
  qb-device-description = self.callPackage ./qb-device-description {};
 
  qb-device-driver = self.callPackage ./qb-device-driver {};
+
+ qb-device-gazebo = self.callPackage ./qb-device-gazebo {};
 
  qb-device-hardware-interface = self.callPackage ./qb-device-hardware-interface {};
 

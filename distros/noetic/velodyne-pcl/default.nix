@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pcl-ros, roslint }:
 buildRosPackage {
   pname = "ros-noetic-velodyne-pcl";
-  version = "1.6.1-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_pcl/1.6.1-1.tar.gz";
-    name = "1.6.1-1.tar.gz";
-    sha256 = "08d0a84826d952dc1b0ae6cec5909fcb70a291dcd96f817cf54a34e24024751e";
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_pcl/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "d4dae03da906b8fa5814d3c20b469e637a6046d89d5130567474c1f4e9dadbe8";
   };
 
   buildType = "catkin";

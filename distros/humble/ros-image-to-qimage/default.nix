@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, qt5, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros-image-to-qimage";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_image_to_qimage-release/archive/release/humble/ros_image_to_qimage/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "298b7641924fd579da9ca0592643229beb33470fbd90480b8534a3c96df1cc95";
+    url = "https://github.com/ros2-gbp/ros_image_to_qimage-release/archive/release/humble/ros_image_to_qimage/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "871e132e8af334e312f8594c0b7484f7e239baf7f404b671206e03b44102a245";
   };
 
   buildType = "ament_cmake";

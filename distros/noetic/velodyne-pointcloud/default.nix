@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, diagnostic-updater, dynamic-reconfigure, eigen, libyamlcpp, nodelet, roscpp, roslaunch, roslib, roslint, rostest, rosunit, sensor-msgs, tf2-ros, velodyne-driver, velodyne-laserscan, velodyne-msgs }:
 buildRosPackage {
   pname = "ros-noetic-velodyne-pointcloud";
-  version = "1.6.1-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_pointcloud/1.6.1-1.tar.gz";
-    name = "1.6.1-1.tar.gz";
-    sha256 = "49cf0b37a42143d5cbbc93086d4a478372201ef6b758891a06807abba7e16c29";
+    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_pointcloud/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "b8425f2244f94b610459ede15bdb228eb842e4cd84a6ae10aed6dd67962b6de7";
   };
 
   buildType = "catkin";

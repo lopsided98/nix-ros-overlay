@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, qb-device-srvs, qb-device-utils, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-qb-device-driver";
-  version = "2.0.1";
+  version = "3.0.4-r3";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_driver/2.0.1-0.tar.gz";
-    name = "2.0.1-0.tar.gz";
-    sha256 = "5b3ec2c7b2ecf6aa8e1b99156423cb9f88208eb8d02024c2b30b8c6b1570e5d4";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_driver/3.0.4-3.tar.gz";
+    name = "3.0.4-3.tar.gz";
+    sha256 = "88165e642422e39a656dc437b119ad761d025fe87bc5b231b8e7aa8a4e58d929";
   };
 
   buildType = "catkin";

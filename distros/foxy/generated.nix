@@ -792,6 +792,8 @@ self: super: {
 
  maliput-drake = self.callPackage ./maliput-drake {};
 
+ maliput-full = self.callPackage ./maliput-full {};
+
  maliput-integration = self.callPackage ./maliput-integration {};
 
  maliput-malidrive = self.callPackage ./maliput-malidrive {};
@@ -1211,6 +1213,8 @@ self: super: {
  raptor-pdu-msgs = self.callPackage ./raptor-pdu-msgs {};
 
  raspimouse = self.callPackage ./raspimouse {};
+
+ raspimouse-description = self.callPackage ./raspimouse-description {};
 
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
 
@@ -1973,6 +1977,8 @@ self: super: {
  vision-opencv = self.callPackage ./vision-opencv {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
+
+ vrpn = self.callPackage ./vrpn {};
 
  vrxperience-bridge = self.callPackage ./vrxperience-bridge {};
 
