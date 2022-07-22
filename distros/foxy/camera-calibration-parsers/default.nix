@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, rcpputils, sensor-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-foxy-camera-calibration-parsers";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/foxy/camera_calibration_parsers/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "095e7dca0a824d48a168961e4fe157d55cef0e2a7b7a126252b713ed7e8f28f0";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/foxy/camera_calibration_parsers/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "bd0f502363620e2bddef611dcde02e001208564be1c949f1a7feb0ddf622c2d1";
   };
 
   buildType = "ament_cmake";

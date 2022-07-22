@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, message-filters, rclcpp, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-imu-complementary-filter";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/foxy/imu_complementary_filter/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "917d1cf764c96a1e68ba19046cd5a5ba656520fcee654492c40bc650c2bf0b4c";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/foxy/imu_complementary_filter/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "59f4c53358e5bed435241d6b96098bfdc6f9e7eb7b7d417e8dcd3d977502aceb";
   };
 
   buildType = "ament_cmake";

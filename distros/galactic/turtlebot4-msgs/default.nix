@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-turtlebot4-msgs";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4-release/archive/release/galactic/turtlebot4_msgs/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "1c3b89649c5251aab468fc6bcc71b6914cf1290f91b7e1644b938ef93cbfdfd8";
+    url = "https://github.com/ros2-gbp/turtlebot4-release/archive/release/galactic/turtlebot4_msgs/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "e73f3c3470a535dfd614e85824e38c740fc8bf7c4862aec073f4ed6bebe2ad69";
   };
 
   buildType = "ament_cmake";

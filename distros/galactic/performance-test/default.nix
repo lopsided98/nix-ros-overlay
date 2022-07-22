@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch, launch-testing, osrf-testing-tools-cpp, rclcpp, rmw-implementation, rmw-implementation-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-galactic-performance-test";
-  version = "1.0.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/performance_test-release/archive/release/galactic/performance_test/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "8c787535f563bb788d647b5519c9a15cdacaac88b1ef87652762314dc0c413bd";
+    url = "https://github.com/ros2-gbp/performance_test-release/archive/release/galactic/performance_test/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "9e8b988f5349aa1b8a340cd3f240ff2758d040a58da673e33f06af79541cc798";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, builtin-interfaces, example-interfaces, osrf-testing-tools-cpp, rcl, rcl-interfaces, rclc, rclcpp, rcutils, rosidl-runtime-c, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rclc-parameter";
-  version = "4.0.0-r1";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclc-release/archive/release/humble/rclc_parameter/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "59378a31bc294f3a96e57a84b3d7f8332eb3e5fde7f7dd0d390e2b7af9e1f7bf";
+    url = "https://github.com/ros2-gbp/rclc-release/archive/release/humble/rclc_parameter/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "fec60d842c9539ad58782da003118668a093d1ccd5fb08d4537bf468a05aa1f9";
   };
 
   buildType = "ament_cmake";

@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-angles";
-  version = "1.13.0-r3";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/angles-release/archive/release/humble/angles/1.13.0-3.tar.gz";
-    name = "1.13.0-3.tar.gz";
-    sha256 = "02c2047e640dfd8c64cc9df09d782564134db279c0396e0d5c177c728e36a9d3";
+    url = "https://github.com/ros2-gbp/angles-release/archive/release/humble/angles/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "fb21b4e5062cfbf56918f2ee479ed07d925f2108075f656261078df0eef3c606";
   };
 
   buildType = "ament_cmake";
   propagatedBuildInputs = [ ament-cmake ];
-  nativeBuildInputs = [ ament-cmake python3Packages.setuptools ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python python3Packages.setuptools ];
 
   meta = {
     description = ''This package provides a set of simple math utilities to work

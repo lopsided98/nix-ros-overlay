@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, clang, cmake, console-bridge, eigen, gtest, lcov, libyamlcpp, ros-industrial-cmake-boilerplate, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-common";
-  version = "0.8.6-r1";
+  version = "0.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_common/0.8.6-1.tar.gz";
-    name = "0.8.6-1.tar.gz";
-    sha256 = "5c4ece28129365022c802643d8003476e3bdee5c0ce36a45ab150864c7ec3f25";
+    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_common/0.10.0-1.tar.gz";
+    name = "0.10.0-1.tar.gz";
+    sha256 = "c1ae68273e615d8674706e93918beeae6a1c0abb629106ab61dc11587f1c03cc";
   };
 
   buildType = "cmake";

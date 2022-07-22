@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, qt5, sensor-msgs }:
 buildRosPackage {
   pname = "ros-galactic-ros-image-to-qimage";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_image_to_qimage-release/archive/release/galactic/ros_image_to_qimage/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "53f38fc3a197011cbe0978745d73f38f5943fbeb86d253530dbd11696ec8c8f4";
+    url = "https://github.com/ros2-gbp/ros_image_to_qimage-release/archive/release/galactic/ros_image_to_qimage/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "3fb3c0549f954b1438de980fa1edd4eab93c3dbb966b0b5bdde4a750550ba940";
   };
 
   buildType = "ament_cmake";

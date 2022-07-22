@@ -370,6 +370,8 @@ self: super: {
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
+ eigenpy = self.callPackage ./eigenpy {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-cbg-executor = self.callPackage ./examples-rclcpp-cbg-executor {};
@@ -652,6 +654,8 @@ self: super: {
 
  lifecycle-msgs = self.callPackage ./lifecycle-msgs {};
 
+ log-view = self.callPackage ./log-view {};
+
  logging-demo = self.callPackage ./logging-demo {};
 
  lua-vendor = self.callPackage ./lua-vendor {};
@@ -867,6 +871,8 @@ self: super: {
  navigation2 = self.callPackage ./navigation2 {};
 
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
+
+ nerian-stereo = self.callPackage ./nerian-stereo {};
 
  nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
 
@@ -1763,6 +1769,8 @@ self: super: {
  tvm-vendor = self.callPackage ./tvm-vendor {};
 
  twist-mux = self.callPackage ./twist-mux {};
+
+ twist-stamper = self.callPackage ./twist-stamper {};
 
  ublox = self.callPackage ./ublox {};
 

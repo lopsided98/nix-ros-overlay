@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gtest, fmt, maliput, maliput-drake, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-foxy-maliput-malidrive";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/maliput_malidrive-release/archive/release/foxy/maliput_malidrive/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "f643c9761b5333d6cc0856263e49ef2931b4820f5b141f800639a2d800276971";
+    url = "https://github.com/ros2-gbp/maliput_malidrive-release/archive/release/foxy/maliput_malidrive/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "e37a774e2665aa4364f3cd6c3bb3f1a941c517ce2e3457e163b935edac5741cd";
   };
 
   buildType = "ament_cmake";

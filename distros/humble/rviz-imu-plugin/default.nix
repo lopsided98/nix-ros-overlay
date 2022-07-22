@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, message-filters, pluginlib, qt5, rclcpp, rviz-common, rviz-ogre-vendor, rviz-rendering, sensor-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-rviz-imu-plugin";
-  version = "2.1.1-r1";
+  version = "2.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/humble/rviz_imu_plugin/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "ed2e7e14e30b972a86d50f9acab890bf5c8811755e3d1d78f84732a1b59cbee0";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/humble/rviz_imu_plugin/2.1.1-2.tar.gz";
+    name = "2.1.1-2.tar.gz";
+    sha256 = "80464e8983cb36774125bccdad20c54b2bf71780a4742bb7b22390430f1fe896";
   };
 
   buildType = "ament_cmake";

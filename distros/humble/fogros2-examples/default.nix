@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, fogros2, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-fogros2-examples";
-  version = "0.1.6-r3";
+  version = "0.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fogros2-release/archive/release/humble/fogros2_examples/0.1.6-3.tar.gz";
-    name = "0.1.6-3.tar.gz";
-    sha256 = "b85aecd15e3e9df1eb973162f632b32313bdac7ea88daed79daf9e438111055a";
+    url = "https://github.com/ros2-gbp/fogros2-release/archive/release/humble/fogros2_examples/0.1.7-1.tar.gz";
+    name = "0.1.7-1.tar.gz";
+    sha256 = "de71035ee00fb2c2b280815d8b277cbb1d61a09be05d638ff8eba42243c7ac21";
   };
 
   buildType = "ament_python";

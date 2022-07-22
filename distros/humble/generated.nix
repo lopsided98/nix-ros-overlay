@@ -20,6 +20,8 @@ self: super: {
 
  adaptive-component = self.callPackage ./adaptive-component {};
 
+ affordance-primitives = self.callPackage ./affordance-primitives {};
+
  ament-acceleration = self.callPackage ./ament-acceleration {};
 
  ament-clang-format = self.callPackage ./ament-clang-format {};
@@ -168,6 +170,8 @@ self: super: {
 
  backward-ros = self.callPackage ./backward-ros {};
 
+ bag2-to-image = self.callPackage ./bag2-to-image {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -309,6 +313,8 @@ self: super: {
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
+
+ eigenpy = self.callPackage ./eigenpy {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
 
@@ -492,6 +498,8 @@ self: super: {
 
  io-context = self.callPackage ./io-context {};
 
+ joint-limits = self.callPackage ./joint-limits {};
+
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
 
  joint-state-publisher = self.callPackage ./joint-state-publisher {};
@@ -617,6 +625,10 @@ self: super: {
  marti-status-msgs = self.callPackage ./marti-status-msgs {};
 
  marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
+
+ marvelmind-ros2 = self.callPackage ./marvelmind-ros2 {};
+
+ marvelmind-ros2-msgs = self.callPackage ./marvelmind-ros2-msgs {};
 
  mavlink = self.callPackage ./mavlink {};
 
@@ -802,6 +814,8 @@ self: super: {
 
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
+ nerian-stereo = self.callPackage ./nerian-stereo {};
+
  nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
@@ -864,8 +878,6 @@ self: super: {
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
- performance-report = self.callPackage ./performance-report {};
-
  performance-test = self.callPackage ./performance-test {};
 
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
@@ -903,6 +915,32 @@ self: super: {
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
 
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
+
+ plansys2-bringup = self.callPackage ./plansys2-bringup {};
+
+ plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
+
+ plansys2-core = self.callPackage ./plansys2-core {};
+
+ plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
+
+ plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
+
+ plansys2-msgs = self.callPackage ./plansys2-msgs {};
+
+ plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
+
+ plansys2-planner = self.callPackage ./plansys2-planner {};
+
+ plansys2-popf-plan-solver = self.callPackage ./plansys2-popf-plan-solver {};
+
+ plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
+
+ plansys2-terminal = self.callPackage ./plansys2-terminal {};
+
+ plansys2-tools = self.callPackage ./plansys2-tools {};
 
  plotjuggler = self.callPackage ./plotjuggler {};
 
@@ -1392,6 +1430,12 @@ self: super: {
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
+ sick-safetyscanners2 = self.callPackage ./sick-safetyscanners2 {};
+
+ sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
+
+ sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
+
  simple-launch = self.callPackage ./simple-launch {};
 
  simulation = self.callPackage ./simulation {};
@@ -1662,9 +1706,19 @@ self: super: {
 
  velocity-controllers = self.callPackage ./velocity-controllers {};
 
+ velodyne = self.callPackage ./velodyne {};
+
  velodyne-description = self.callPackage ./velodyne-description {};
 
+ velodyne-driver = self.callPackage ./velodyne-driver {};
+
  velodyne-gazebo-plugins = self.callPackage ./velodyne-gazebo-plugins {};
+
+ velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
+
+ velodyne-msgs = self.callPackage ./velodyne-msgs {};
+
+ velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
 

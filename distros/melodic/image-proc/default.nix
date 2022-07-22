@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, camera-calibration-parsers, catkin, cv-bridge, dynamic-reconfigure, image-geometry, image-transport, nodelet, nodelet-topic-tools, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-image-proc";
-  version = "1.15.0-r1";
+  version = "1.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_proc/1.15.0-1.tar.gz";
-    name = "1.15.0-1.tar.gz";
-    sha256 = "146972719c251c70dd8702ef84d65da3a188f8b30090e95ca70455cc8282d9a3";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_proc/1.15.2-1.tar.gz";
+    name = "1.15.2-1.tar.gz";
+    sha256 = "e93866f644228cb471e156021c77dd987a92015937ca917048616898b1d6f778";
   };
 
   buildType = "catkin";

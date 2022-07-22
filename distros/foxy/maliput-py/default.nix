@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-flake8, ament-cmake-pytest, maliput, pybind11, python3 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-flake8, ament-cmake-pytest, maliput, python3, pythonPackages }:
 buildRosPackage {
   pname = "ros-foxy-maliput-py";
   version = "0.1.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ python3 ];
   checkInputs = [ ament-cmake-clang-format ament-cmake-flake8 ament-cmake-pytest ];
-  propagatedBuildInputs = [ maliput pybind11 ];
+  propagatedBuildInputs = [ maliput pythonPackages.pybind11 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

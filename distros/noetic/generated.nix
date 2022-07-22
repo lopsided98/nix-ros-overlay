@@ -56,6 +56,8 @@ self: super: {
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
+ aruco-opencv = self.callPackage ./aruco-opencv {};
+
  aruco-ros = self.callPackage ./aruco-ros {};
 
  assimp-devel = self.callPackage ./assimp-devel {};
@@ -79,6 +81,8 @@ self: super: {
  audio-play = self.callPackage ./audio-play {};
 
  audio-to-spectrogram = self.callPackage ./audio-to-spectrogram {};
+
+ audio-video-recorder = self.callPackage ./audio-video-recorder {};
 
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
@@ -784,6 +788,8 @@ self: super: {
 
  ergodic-exploration = self.callPackage ./ergodic-exploration {};
 
+ ess-imu-ros1-uart-driver = self.callPackage ./ess-imu-ros1-uart-driver {};
+
  ethercat-grant = self.callPackage ./ethercat-grant {};
 
  ethercat-hardware = self.callPackage ./ethercat-hardware {};
@@ -1206,6 +1212,8 @@ self: super: {
 
  hri-msgs = self.callPackage ./hri-msgs {};
 
+ hri-rviz = self.callPackage ./hri-rviz {};
+
  human-description = self.callPackage ./human-description {};
 
  husky-control = self.callPackage ./husky-control {};
@@ -1616,6 +1624,8 @@ self: super: {
 
  lpg-planner = self.callPackage ./lpg-planner {};
 
+ lsc-ros-driver = self.callPackage ./lsc-ros-driver {};
+
  lusb = self.callPackage ./lusb {};
 
  magic-enum = self.callPackage ./magic-enum {};
@@ -1886,7 +1896,15 @@ self: super: {
 
  mqtt-client = self.callPackage ./mqtt-client {};
 
+ mrpt-ekf-slam-2d = self.callPackage ./mrpt-ekf-slam-2d {};
+
+ mrpt-ekf-slam-3d = self.callPackage ./mrpt-ekf-slam-3d {};
+
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
+
+ mrpt-graphslam-2d = self.callPackage ./mrpt-graphslam-2d {};
+
+ mrpt-icp-slam-2d = self.callPackage ./mrpt-icp-slam-2d {};
 
  mrpt-local-obstacles = self.callPackage ./mrpt-local-obstacles {};
 
@@ -1902,11 +1920,15 @@ self: super: {
 
  mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
 
+ mrpt-rbpf-slam = self.callPackage ./mrpt-rbpf-slam {};
+
  mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
 
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-slam = self.callPackage ./mrpt-slam {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -2394,6 +2416,8 @@ self: super: {
 
  pybind11-catkin = self.callPackage ./pybind11-catkin {};
 
+ pyhri = self.callPackage ./pyhri {};
+
  pyquaternion = self.callPackage ./pyquaternion {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
@@ -2408,17 +2432,45 @@ self: super: {
 
  qb-chain-msgs = self.callPackage ./qb-chain-msgs {};
 
+ qb-device = self.callPackage ./qb-device {};
+
+ qb-device-bringup = self.callPackage ./qb-device-bringup {};
+
+ qb-device-control = self.callPackage ./qb-device-control {};
+
+ qb-device-description = self.callPackage ./qb-device-description {};
+
+ qb-device-driver = self.callPackage ./qb-device-driver {};
+
+ qb-device-gazebo = self.callPackage ./qb-device-gazebo {};
+
+ qb-device-hardware-interface = self.callPackage ./qb-device-hardware-interface {};
+
+ qb-device-msgs = self.callPackage ./qb-device-msgs {};
+
+ qb-device-srvs = self.callPackage ./qb-device-srvs {};
+
+ qb-device-utils = self.callPackage ./qb-device-utils {};
+
  qb-hand = self.callPackage ./qb-hand {};
 
  qb-hand-control = self.callPackage ./qb-hand-control {};
 
  qb-hand-description = self.callPackage ./qb-hand-description {};
 
+ qb-hand-gazebo = self.callPackage ./qb-hand-gazebo {};
+
+ qb-hand-hardware-interface = self.callPackage ./qb-hand-hardware-interface {};
+
  qb-move = self.callPackage ./qb-move {};
 
  qb-move-control = self.callPackage ./qb-move-control {};
 
  qb-move-description = self.callPackage ./qb-move-description {};
+
+ qb-move-gazebo = self.callPackage ./qb-move-gazebo {};
+
+ qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
 
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 

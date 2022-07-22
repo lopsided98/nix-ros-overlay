@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-calibration-parsers, catkin, cv-bridge, dynamic-reconfigure, gtk2, image-transport, message-filters, message-generation, nodelet, rosconsole, roscpp, rostest, sensor-msgs, std-srvs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-melodic-image-view";
-  version = "1.15.0-r1";
+  version = "1.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_view/1.15.0-1.tar.gz";
-    name = "1.15.0-1.tar.gz";
-    sha256 = "4642943d875d6450ed805d977595e993d7d6bf83fe487b018e1e1300e2edfa7a";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_view/1.15.2-1.tar.gz";
+    name = "1.15.2-1.tar.gz";
+    sha256 = "29776f65d7776982f87630615460afec9ae3666212b1ce2384b91c954cce154c";
   };
 
   buildType = "catkin";

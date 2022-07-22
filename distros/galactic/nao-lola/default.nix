@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, nao-command-msgs, nao-sensor-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-galactic-nao-lola";
-  version = "0.0.4-r1";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ijnek/nao_lola-release/archive/release/galactic/nao_lola/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "e6fa466bf82175af43aad3397b46c25977b6e414525c046f07d87fcd159be3fd";
+    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/galactic/nao_lola/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "7698764e64152cd55248ed644c71d2f0cb174303033cbf1a6a762ba7edb3375a";
   };
 
   buildType = "ament_cmake";
