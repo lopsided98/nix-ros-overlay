@@ -1,46 +1,18 @@
 # Top level package set
 self:
 # Distro package set
-rosSelf: rosSuper: with rosSelf.lib; {
-  angles = rosSuper.angles.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-    substituteInPlace setup.py --replace \
-      "from distutils.core import setup" \
-      "from setuptools import setup"
-    '';
-  });
-
-  roslint = rosSuper.roslint.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-    substituteInPlace setup.py --replace \
-      "from distutils.core import setup" \
-      "from setuptools import setup"
-    '';
-  });
-
-  laser-geometry = rosSuper.laser-geometry.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-    substituteInPlace setup.py --replace \
-      "from distutils.core import setup" \
-      "from setuptools import setup"
-    '';
-  });
-
-  resource-retriever = rosSuper.resource-retriever.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-    substituteInPlace setup.py --replace \
-      "from distutils.core import setup" \
-      "from setuptools import setup"
-    '';
-  });
+rosSelf: rosSuper: with rosSelf.lib;
+  let packages = [ "angles" "roslint" "laser-geometry" "resource-retriever" ];
+  in self.lib.genAttrs packages (name:
+    rosSuper.${name}.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+      substituteInPlace setup.py --replace \
+        "from distutils.core import setup" \
+        "from setuptools import setup"
+      '';
+  })) // {
 
   eigenpy = rosSuper.eigenpy.overrideAttrs ({
     cmakeFlags ? [], ...
