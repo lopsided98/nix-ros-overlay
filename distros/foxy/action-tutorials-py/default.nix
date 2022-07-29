@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-tutorials-interfaces, ament-lint-auto, ament-lint-common, rclpy }:
 buildRosPackage {
   pname = "ros-foxy-action-tutorials-py";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/action_tutorials_py/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "afd80319550d71052ac8543e26dabe243d548a6543cd916f71da38eb6e652ea8";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/action_tutorials_py/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "b093ae3e3e88cfc08ad4d25476c9a29f37923bc6e4cceaabb43ccf46d3a7eba1";
   };
 
   buildType = "ament_python";

@@ -452,6 +452,8 @@ self: super: {
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
+ hpp-fcl = self.callPackage ./hpp-fcl {};
+
  iceoryx-binding-c = self.callPackage ./iceoryx-binding-c {};
 
  iceoryx-hoofs = self.callPackage ./iceoryx-hoofs {};
@@ -732,7 +734,17 @@ self: super: {
 
  moveit-servo = self.callPackage ./moveit-servo {};
 
+ moveit-setup-app-plugins = self.callPackage ./moveit-setup-app-plugins {};
+
  moveit-setup-assistant = self.callPackage ./moveit-setup-assistant {};
+
+ moveit-setup-controllers = self.callPackage ./moveit-setup-controllers {};
+
+ moveit-setup-core-plugins = self.callPackage ./moveit-setup-core-plugins {};
+
+ moveit-setup-framework = self.callPackage ./moveit-setup-framework {};
+
+ moveit-setup-srdf-plugins = self.callPackage ./moveit-setup-srdf-plugins {};
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 

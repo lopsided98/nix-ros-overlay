@@ -602,6 +602,8 @@ self: super: {
 
  costmap-cspace-msgs = self.callPackage ./costmap-cspace-msgs {};
 
+ costmap-cspace-rviz-plugins = self.callPackage ./costmap-cspace-rviz-plugins {};
+
  costmap-queue = self.callPackage ./costmap-queue {};
 
  costmap-tf-layer = self.callPackage ./costmap-tf-layer {};
@@ -2001,6 +2003,8 @@ self: super: {
  log-view = self.callPackage ./log-view {};
 
  lpg-planner = self.callPackage ./lpg-planner {};
+
+ lsc-ros-driver = self.callPackage ./lsc-ros-driver {};
 
  lusb = self.callPackage ./lusb {};
 

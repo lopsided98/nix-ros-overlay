@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, example-interfaces, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-demo-nodes-py";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/demo_nodes_py/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "0d5d5a6a942764e89cef5d7c683ba8e08a79cd1ef298900fab10f7922caebdd4";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/demo_nodes_py/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "1fa2326b06f4efb8548b6476d2cefa65902e78000e1ab13e21c50867a1c58fc6";
   };
 
   buildType = "ament_python";

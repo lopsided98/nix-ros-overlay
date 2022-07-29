@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-foxy-ament-pclint";
-  version = "0.9.6-r1";
+  version = "0.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_pclint/0.9.6-1.tar.gz";
-    name = "0.9.6-1.tar.gz";
-    sha256 = "e76d16ecd5be3086fa5c5bac61405e3e84f3dda012d68c1c28bf7656c1ac4a14";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_pclint/0.9.7-1.tar.gz";
+    name = "0.9.7-1.tar.gz";
+    sha256 = "2a1e0a247f7967924b513ee9fa60a42e7ddabecd34d8b9cb2b71c7db9d10ab46";
   };
 
   buildType = "ament_python";

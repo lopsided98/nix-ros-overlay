@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rclcpp-components, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-image-tools";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/image_tools/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "fa6275372573c17bb7784c24caa06f9a81be1c59e6f4856ac9ffe162e11617d0";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/image_tools/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "fec375d02308d9ee1ae15cf7a4389b8959df276217fb7edd56f026b3ee7308b9";
   };
 
   buildType = "ament_cmake";

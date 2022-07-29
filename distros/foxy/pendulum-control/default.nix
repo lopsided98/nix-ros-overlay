@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pendulum-msgs, rclcpp, rmw-implementation-cmake, ros2run, rttest, tlsf-cpp }:
 buildRosPackage {
   pname = "ros-foxy-pendulum-control";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/pendulum_control/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "31054b12c38ba4717b013dfc9f55aeea9989c6af02401d717421a354c1cda4c4";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/pendulum_control/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "863ce27f01834250fca91abc76fc448b716fc8c0c8c2882020509ea525e54e5e";
   };
 
   buildType = "ament_cmake";

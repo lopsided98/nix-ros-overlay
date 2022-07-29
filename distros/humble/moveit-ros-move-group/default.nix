@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-common, moveit-core, moveit-kinematics, moveit-resources-fanuc-moveit-config, moveit-ros-occupancy-map-monitor, moveit-ros-planning, pluginlib, rclcpp, rclcpp-action, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-moveit-ros-move-group";
-  version = "2.5.1-r1";
+  version = "2.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_ros_move_group/2.5.1-1.tar.gz";
-    name = "2.5.1-1.tar.gz";
-    sha256 = "87d7ee754b15625b78bebc9a50b0c1954e07f5fc1d2d79085655f1fc3ec63e88";
+    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_ros_move_group/2.5.3-1.tar.gz";
+    name = "2.5.3-1.tar.gz";
+    sha256 = "9f0f4982209735670586b3776bcea333b5a0b3169750bd5dd8439c0ab5126521";
   };
 
   buildType = "ament_cmake";

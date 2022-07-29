@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-dummy-sensors";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/dummy_sensors/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "803abc65c58c7af83296bc886fd387ecf82c0721d0bbeadaaed1426d5e578c45";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/dummy_sensors/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "e56dde37970e438fab53919b8862b8ce528ea5deb3fbda60a1a41738aa95816f";
   };
 
   buildType = "ament_cmake";

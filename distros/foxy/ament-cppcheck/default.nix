@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cppcheck }:
 buildRosPackage {
   pname = "ros-foxy-ament-cppcheck";
-  version = "0.9.6-r1";
+  version = "0.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_cppcheck/0.9.6-1.tar.gz";
-    name = "0.9.6-1.tar.gz";
-    sha256 = "ebe4dd748dfe04ed5c5848dd077fe04120a9e50223cdfe2ecaa3ddfe6e2925e8";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_cppcheck/0.9.7-1.tar.gz";
+    name = "0.9.7-1.tar.gz";
+    sha256 = "6b1d0ba00aa5a8d1992ba3c9b4a80aaa9b1073d69510bd6d9cb7d18fafff5f57";
   };
 
   buildType = "ament_python";

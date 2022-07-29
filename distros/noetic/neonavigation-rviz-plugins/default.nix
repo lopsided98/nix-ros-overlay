@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, trajectory-tracker-rviz-plugins }:
 buildRosPackage {
   pname = "ros-noetic-neonavigation-rviz-plugins";
-  version = "0.3.1-r1";
+  version = "0.11.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/noetic/neonavigation_rviz_plugins/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "3f2df4ea596e0f1a3c4660efd924e969b7d255c4f1190ab8bda0b91e1f3fb8f4";
+    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/noetic/neonavigation_rviz_plugins/0.11.6-1.tar.gz";
+    name = "0.11.6-1.tar.gz";
+    sha256 = "effd352b1933ebc8ec68464755b7be27b2e701f36bfa13b1d4afe44bc12c81e0";
   };
 
   buildType = "catkin";

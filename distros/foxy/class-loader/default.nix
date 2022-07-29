@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, rcpputils }:
 buildRosPackage {
   pname = "ros-foxy-class-loader";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/foxy/class_loader/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "c75955459e9ad5f60755571d3a8018dfe27ef9204544d7346c1d04fe1a71f1d4";
+    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/foxy/class_loader/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "4f79f4f883be95b2580b184def1ef5779a2d60135849b139e3ee678e3f0ef60e";
   };
 
   buildType = "ament_cmake";

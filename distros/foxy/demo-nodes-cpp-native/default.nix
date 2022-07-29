@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rmw-fastrtps-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-demo-nodes-cpp-native";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/demo_nodes_cpp_native/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "9e082ddaa648aaa990973210b016667d2b3ec0f7352e49bb4bccb3fc6f42e6bd";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/demo_nodes_cpp_native/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "4311884b4f0a75a4045e26a64e4a95c49f3937eb199aba59a50d9124670bcff7";
   };
 
   buildType = "ament_cmake";

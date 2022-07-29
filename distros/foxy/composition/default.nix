@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rcutils, rmw-implementation-cmake, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-composition";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/composition/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "120513c48efdbab0b7eb4b1ac018740f5a57d8c84cb2e1a45eb3f971cb87641e";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/composition/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "df5d41e3c4b82aa0f9b6d18566cbed1664bfc0cee2972aa9778885f8b94c674a";
   };
 
   buildType = "ament_cmake";

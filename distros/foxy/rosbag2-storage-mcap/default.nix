@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-index-cpp, ament-lint-auto, ament-lint-common, mcap-vendor, pluginlib, rcutils, rosbag2-storage }:
 buildRosPackage {
   pname = "ros-foxy-rosbag2-storage-mcap";
-  version = "0.1.5-r1";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/foxy/rosbag2_storage_mcap/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "709d83331da130c452606c4293bbbd02bc424da8d644dbb09e783fae96398bda";
+    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/foxy/rosbag2_storage_mcap/0.1.6-1.tar.gz";
+    name = "0.1.6-1.tar.gz";
+    sha256 = "1f58e12a4adc5c5223a19cb6b6c6682f6beb1da643b3bd18874c9c4703c6cfbc";
   };
 
   buildType = "ament_cmake";
