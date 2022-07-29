@@ -500,6 +500,8 @@ self: super: {
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
+ hpp-fcl = self.callPackage ./hpp-fcl {};
+
  iceoryx-binding-c = self.callPackage ./iceoryx-binding-c {};
 
  iceoryx-posh = self.callPackage ./iceoryx-posh {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-foxy-ros-environment";
-  version = "2.5.0-r1";
+  version = "2.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_environment-release/archive/release/foxy/ros_environment/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "8b05844856b38b6501c6425570167c9862fc1e4e9464e18324408d8788f35064";
+    url = "https://github.com/ros2-gbp/ros_environment-release/archive/release/foxy/ros_environment/2.5.1-1.tar.gz";
+    name = "2.5.1-1.tar.gz";
+    sha256 = "8d594c0fd0788f084b93283c11cf3991e5bdaf76b666c1b602b4df7ca7019ce8";
   };
 
   buildType = "ament_cmake";

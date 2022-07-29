@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, class-loader, composition-interfaces, launch-testing, rclcpp, rcpputils, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rclcpp-components";
-  version = "2.4.1-r1";
+  version = "2.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/foxy/rclcpp_components/2.4.1-1.tar.gz";
-    name = "2.4.1-1.tar.gz";
-    sha256 = "e0aa605d1ab620af52e8a4e6cda53c1782e4e9a0ac47d03048095f270daa17eb";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/foxy/rclcpp_components/2.4.2-1.tar.gz";
+    name = "2.4.2-1.tar.gz";
+    sha256 = "05cd4ee2ddc0ba33e249a8b91a7f741f03de5d0ed821d76f7988fbc948b1606c";
   };
 
   buildType = "ament_cmake";

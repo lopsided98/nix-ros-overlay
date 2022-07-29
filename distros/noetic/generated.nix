@@ -482,6 +482,8 @@ self: super: {
 
  costmap-cspace-msgs = self.callPackage ./costmap-cspace-msgs {};
 
+ costmap-cspace-rviz-plugins = self.callPackage ./costmap-cspace-rviz-plugins {};
+
  costmap-queue = self.callPackage ./costmap-queue {};
 
  cpp-common = self.callPackage ./cpp-common {};

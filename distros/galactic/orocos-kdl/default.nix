@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cppunit, eigen, eigen3-cmake-module, pkg-config }:
 buildRosPackage {
   pname = "ros-galactic-orocos-kdl";
-  version = "3.3.3-r2";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/orocos_kinematics_dynamics-release/archive/release/galactic/orocos_kdl/3.3.3-2.tar.gz";
-    name = "3.3.3-2.tar.gz";
-    sha256 = "206b66355ec5806700ad2e95d334e9778b3e239e0a90c379583c82c0078f0fde";
+    url = "https://github.com/ros2-gbp/orocos_kinematics_dynamics-release/archive/release/galactic/orocos_kdl/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "a05fa79711b5301584f34e7e4107fbaec8239f90249608ff8f0842a4171982a2";
   };
 
   buildType = "cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = ''This package contains a recent version of the Kinematics and Dynamics
     Library (KDL), distributed by the Orocos Project.'';
-    license = with lib.licenses; [ "LGPL" ];
+    license = with lib.licenses; [ "LGPL-2.1-or-later" ];
   };
 }

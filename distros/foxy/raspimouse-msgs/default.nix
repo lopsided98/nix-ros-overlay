@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-raspimouse-msgs";
-  version = "1.0.2-r1";
+  version = "1.1.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/rt-net/raspimouse2-release/archive/release/foxy/raspimouse_msgs/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "a27e607fbda45931b237e08575a1c821f21b255e4ea6191c200b915036011c7f";
+    url = "https://github.com/ros2-gbp/raspimouse2-release/archive/release/foxy/raspimouse_msgs/1.1.0-4.tar.gz";
+    name = "1.1.0-4.tar.gz";
+    sha256 = "0ae01769bf1c313fe9a10e6b8b0974ff656a930f79e3dbe6be22aa964d4ed6ed";
   };
 
   buildType = "ament_cmake";

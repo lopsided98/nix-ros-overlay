@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, mimick-vendor, osrf-testing-tools-cpp, python3Packages }:
 buildRosPackage {
   pname = "ros-foxy-rcutils";
-  version = "1.1.3-r1";
+  version = "1.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/foxy/rcutils/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "4c6206bfebf5686a888d7fc0adcfb7aa863f9d9eb7fbca9849dc2954d833adef";
+    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/foxy/rcutils/1.1.4-1.tar.gz";
+    name = "1.1.4-1.tar.gz";
+    sha256 = "d946a8ab99a8abce8f229b10321a3fa4987a37cecd8b9ebd707cd29d951c5290";
   };
 
   buildType = "ament_cmake";

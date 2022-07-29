@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-quality-of-service-demo-py";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/quality_of_service_demo_py/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "1aa870cbb1acffdf0123e51e96cadff24a70a0665436069ba1298b34b75c90e7";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/quality_of_service_demo_py/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "5d359325990ef368ce4c95b4228a6ef58c720c6d770a156c703693c65d3c9be7";
   };
 
   buildType = "ament_python";

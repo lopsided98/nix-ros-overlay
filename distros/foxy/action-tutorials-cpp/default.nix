@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-tutorials-interfaces, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-action, rclcpp-components }:
 buildRosPackage {
   pname = "ros-foxy-action-tutorials-cpp";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/action_tutorials_cpp/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "816ab33375f8cc567cfb192bff96c4847eac39e290c69cf94384c67ccd4f3aca";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/action_tutorials_cpp/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "ece75ba361659c1f67b03a5066848efbc3e512aa17bc368bd1698b0b0d6c463f";
   };
 
   buildType = "ament_cmake";

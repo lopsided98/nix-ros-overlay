@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, graphviz, gtk3, pythonPackages, rostest, smach-msgs, smach-ros }:
 buildRosPackage {
   pname = "ros-noetic-smach-viewer";
-  version = "3.0.1-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/noetic/smach_viewer/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "a95f02adf13d5498bd088ccbd370fb31eb2fefaaf8dfe8ef702c74385beec500";
+    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/noetic/smach_viewer/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "9278df7babf2e3ccb008f0dd7e3bbfc858dc5891441be80136932a34e37e388e";
   };
 
   buildType = "catkin";
