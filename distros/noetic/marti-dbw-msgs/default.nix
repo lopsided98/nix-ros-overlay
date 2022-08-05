@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-marti-dbw-msgs";
-  version = "0.10.0-r1";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/noetic/marti_dbw_msgs/0.10.0-1.tar.gz";
-    name = "0.10.0-1.tar.gz";
-    sha256 = "d2fe821a58922635f36ac9e0907878c57bc45fada41eaf463885429453546323";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/noetic/marti_dbw_msgs/0.11.0-1.tar.gz";
+    name = "0.11.0-1.tar.gz";
+    sha256 = "176be07b25ce1ad4e6cbfe8812797d1848b25d42880657c7bce29808f50ecc2e";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, diagnostic-msgs, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-sick-s300";
-  version = "0.7.12-r1";
+  version = "0.7.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_sick_s300/0.7.12-1.tar.gz";
-    name = "0.7.12-1.tar.gz";
-    sha256 = "488690eee681032788e6e5b419f86fe12ddf04377769e6af7232cc6e6882a885";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_sick_s300/0.7.13-1.tar.gz";
+    name = "0.7.13-1.tar.gz";
+    sha256 = "22cf92128deb44b82975f01a526409e35267dfbe0c9158fc12eb6f23a41b9365";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, xclip }:
 buildRosPackage {
   pname = "ros-galactic-log-view";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/hatchbed/log_view-release/archive/release/galactic/log_view/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "781f8752d3cb932e45943a800019cfdf176d0439e2090bc20a2be58ae81e49dc";
+    url = "https://github.com/hatchbed/log_view-release/archive/release/galactic/log_view/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "55c2303791e76491663e055ee27be106349e75c0789973bd9ba4eebef2f9857f";
   };
 
   buildType = "ament_cmake";

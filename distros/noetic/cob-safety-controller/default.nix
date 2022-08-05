@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-cob-safety-controller";
-  version = "0.6.11-r1";
+  version = "0.6.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/noetic/cob_safety_controller/0.6.11-1.tar.gz";
-    name = "0.6.11-1.tar.gz";
-    sha256 = "4be7cda7abf295591cc373314f4e05f2aec6e9d7d8798a381f49fc0b36ac7d3d";
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/noetic/cob_safety_controller/0.6.12-1.tar.gz";
+    name = "0.6.12-1.tar.gz";
+    sha256 = "747c9afba9892dabb5d2be7cf75d8c48294badb4125098fd6304a6dae434838a";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosbag, rosbag-snapshot-msgs, roscpp, rosgraph-msgs, roslint, rospy, rostest, rostopic, std-msgs, std-srvs, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-rosbag-snapshot";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosbag_snapshot-release/archive/release/melodic/rosbag_snapshot/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "1e6ebfa8f2773794f99a2379a42b9ca80ad6aea174b24626f6f5a32044f3c23a";
+    url = "https://github.com/ros-gbp/rosbag_snapshot-release/archive/release/melodic/rosbag_snapshot/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "3e14fb72af8e6f077fd2c6982e9d4b6737d01fa361168e3130d27e1c3c74be33";
   };
 
   buildType = "catkin";

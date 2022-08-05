@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-galactic-ur-dashboard-msgs";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/galactic/ur_dashboard_msgs/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "3757b89103709b4ee4046b73b36165566f95edfc19334b6555b40e5f3da04095";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/galactic/ur_dashboard_msgs/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "596971e660369abe842730627cc0e66e5c370f594f4e991c14597bdb5a13274b";
   };
 
   buildType = "ament_cmake";

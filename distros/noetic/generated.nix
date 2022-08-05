@@ -1658,6 +1658,8 @@ self: super: {
 
  marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
 
+ marti-introspection-msgs = self.callPackage ./marti-introspection-msgs {};
+
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 
  marti-perception-msgs = self.callPackage ./marti-perception-msgs {};
@@ -3101,8 +3103,6 @@ self: super: {
  smach-msgs = self.callPackage ./smach-msgs {};
 
  smach-ros = self.callPackage ./smach-ros {};
-
- smach-viewer = self.callPackage ./smach-viewer {};
 
  smclib = self.callPackage ./smclib {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, geometry-msgs, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-humble-force-torque-sensor-broadcaster";
-  version = "2.9.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/force_torque_sensor_broadcaster/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "468ca1f95c1c59c4c61aa6218c22021deaadfa533be6a870c0531ffa24591e2a";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/force_torque_sensor_broadcaster/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "438dd66282947684cbf15c4deb4182b8b9d0c8db05fdeff09c70bd30eabec0dd";
   };
 
   buildType = "ament_cmake";

@@ -950,6 +950,8 @@ self: super: {
 
  er-public-msgs = self.callPackage ./er-public-msgs {};
 
+ ess-imu-ros1-uart-driver = self.callPackage ./ess-imu-ros1-uart-driver {};
+
  ethercat-grant = self.callPackage ./ethercat-grant {};
 
  ethercat-hardware = self.callPackage ./ethercat-hardware {};
@@ -2035,6 +2037,8 @@ self: super: {
  marti-data-structures = self.callPackage ./marti-data-structures {};
 
  marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
+
+ marti-introspection-msgs = self.callPackage ./marti-introspection-msgs {};
 
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 
@@ -3949,8 +3953,6 @@ self: super: {
  smach-msgs = self.callPackage ./smach-msgs {};
 
  smach-ros = self.callPackage ./smach-ros {};
-
- smach-viewer = self.callPackage ./smach-viewer {};
 
  smclib = self.callPackage ./smclib {};
 

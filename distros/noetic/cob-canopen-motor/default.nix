@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-generic-can, cob-utilities, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-cob-canopen-motor";
-  version = "0.7.12-r1";
+  version = "0.7.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_canopen_motor/0.7.12-1.tar.gz";
-    name = "0.7.12-1.tar.gz";
-    sha256 = "0c2bedf468849a49ccd6bdb63b0a1bc2e09326ecd48171aa108c80e626116475";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_canopen_motor/0.7.13-1.tar.gz";
+    name = "0.7.13-1.tar.gz";
+    sha256 = "69d6967e9cbb3f053503e35d8600be4f08bb38b9e0d622f1dbff6286366dcc57";
   };
 
   buildType = "catkin";
