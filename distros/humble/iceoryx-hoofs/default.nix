@@ -2,7 +2,7 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, acl, cmake }:
+{ lib, stdenv, buildRosPackage, fetchurl, acl, cmake }:
 buildRosPackage {
   pname = "ros-humble-iceoryx-hoofs";
   version = "2.0.2-r3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  propagatedBuildInputs = [ acl ];
+  propagatedBuildInputs = lib.optional stdenv.isLinux [ acl ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

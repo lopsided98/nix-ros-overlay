@@ -1200,6 +1200,8 @@ self: super: {
 
  ros2bag = self.callPackage ./ros2bag {};
 
+ ros2cli = self.callPackage ./ros2cli {};
+
  ros2cli-common-extensions = self.callPackage ./ros2cli-common-extensions {};
 
  ros2cli-test-interfaces = self.callPackage ./ros2cli-test-interfaces {};
@@ -1215,6 +1217,10 @@ self: super: {
  ros2lifecycle-test-fixtures = self.callPackage ./ros2lifecycle-test-fixtures {};
 
  ros2nodl = self.callPackage ./ros2nodl {};
+
+ ros2pkg = self.callPackage ./ros2pkg {};
+
+ ros2run = self.callPackage ./ros2run {};
 
  ros2test = self.callPackage ./ros2test {};
 
