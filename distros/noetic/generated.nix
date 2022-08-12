@@ -1240,6 +1240,8 @@ self: super: {
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
 
+ ign-ros-control-demos = self.callPackage ./ign-ros-control-demos {};
+
  image-cb-detector = self.callPackage ./image-cb-detector {};
 
  image-common = self.callPackage ./image-common {};
@@ -1657,6 +1659,8 @@ self: super: {
  marti-data-structures = self.callPackage ./marti-data-structures {};
 
  marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
+
+ marti-introspection-msgs = self.callPackage ./marti-introspection-msgs {};
 
  marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
 
@@ -3101,8 +3105,6 @@ self: super: {
  smach-msgs = self.callPackage ./smach-msgs {};
 
  smach-ros = self.callPackage ./smach-ros {};
-
- smach-viewer = self.callPackage ./smach-viewer {};
 
  smclib = self.callPackage ./smclib {};
 

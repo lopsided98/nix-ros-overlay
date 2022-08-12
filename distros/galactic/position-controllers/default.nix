@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-manager, forward-command-controller, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-galactic-position-controllers";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/position_controllers/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "1031183774f47708e630a713e8fe5c6a308b43c8f531cf963934d70b1ff08105";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/position_controllers/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "0c712a3259795150291275b8e933a953c9545da03f24e2352d707a07499b9a87";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-control-msgs";
-  version = "0.8.18-r1";
+  version = "0.8.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_control_msgs/0.8.18-1.tar.gz";
-    name = "0.8.18-1.tar.gz";
-    sha256 = "a057d496c0a50eb5d4e126fd2aa3dadd1a556a57acb49020492b3f2dd24916ab";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_control_msgs/0.8.19-1.tar.gz";
+    name = "0.8.19-1.tar.gz";
+    sha256 = "155ed798d03d9535d8b946fb0c02e459198f62c6c7b52608e0c1ab17902850de";
   };
 
   buildType = "catkin";

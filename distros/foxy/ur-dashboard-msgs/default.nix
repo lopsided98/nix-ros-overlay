@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-ur-dashboard-msgs";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/foxy/ur_dashboard_msgs/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "8f8322e2c48bd8d7be981d119b0dc52783cdfe4a562b2caf02e81001c6859e86";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/foxy/ur_dashboard_msgs/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "26d405770c4d0dc9c24a19672b8eb4be60c5432e309dd5eb425e1311f7ccfab5";
   };
 
   buildType = "ament_cmake";

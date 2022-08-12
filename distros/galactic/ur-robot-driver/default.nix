@@ -2,19 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, controller-manager, controller-manager-msgs, geometry-msgs, hardware-interface, launch-testing-ament-cmake, pluginlib, rclcpp, rclpy, std-msgs, std-srvs, tf2-geometry-msgs, ur-bringup, ur-client-library, ur-controllers, ur-dashboard-msgs, ur-description, ur-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, controller-manager, controller-manager-msgs, geometry-msgs, hardware-interface, launch-testing-ament-cmake, pluginlib, rclcpp, rclcpp-lifecycle, rclpy, std-msgs, std-srvs, tf2-geometry-msgs, ur-bringup, ur-client-library, ur-controllers, ur-dashboard-msgs, ur-description, ur-msgs }:
 buildRosPackage {
   pname = "ros-galactic-ur-robot-driver";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/galactic/ur_robot_driver/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "2eaa518ce247099a29c81ed87799df67b2a9b2aa3ca5a1550afd5f61f0a45c72";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/galactic/ur_robot_driver/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "a9fad5ce4af1c8b72d8a2f6341937d488faf0b5d7cc0fdb01008cc69e4f78e38";
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ controller-manager controller-manager-msgs geometry-msgs hardware-interface launch-testing-ament-cmake pluginlib rclcpp rclpy std-msgs std-srvs tf2-geometry-msgs ur-bringup ur-client-library ur-controllers ur-dashboard-msgs ur-description ur-msgs ];
+  checkInputs = [ launch-testing-ament-cmake ];
+  propagatedBuildInputs = [ controller-manager controller-manager-msgs geometry-msgs hardware-interface pluginlib rclcpp rclcpp-lifecycle rclpy std-msgs std-srvs tf2-geometry-msgs ur-bringup ur-client-library ur-controllers ur-dashboard-msgs ur-description ur-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-joint-state-broadcaster";
-  version = "0.8.0-r1";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/joint_state_broadcaster/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "137c5a34a77307220b625103279083033cf80da05e6973038793f0ccaee02f2b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/joint_state_broadcaster/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "be98c862cba435259bbb249d8b5e535070cfd6db54079e462b930cf6f7bb0185";
   };
 
   buildType = "ament_cmake";

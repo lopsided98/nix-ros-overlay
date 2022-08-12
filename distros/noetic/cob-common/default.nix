@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-actions, cob-description, cob-msgs, cob-srvs, raw-description }:
 buildRosPackage {
   pname = "ros-noetic-cob-common";
-  version = "0.7.7-r1";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_common-release/archive/release/noetic/cob_common/0.7.7-1.tar.gz";
-    name = "0.7.7-1.tar.gz";
-    sha256 = "c6f9ef0ed9e0b363c43a81a7d091999e37e854eaa9d20dd4773bc5c07f2573fb";
+    url = "https://github.com/ipa320/cob_common-release/archive/release/noetic/cob_common/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
+    sha256 = "107d9ddf164b8d0bb175b49675311c97558a5b5f84cba6555c2bb15544595acc";
   };
 
   buildType = "catkin";

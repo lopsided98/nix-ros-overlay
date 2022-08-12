@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, message-filters, pluginlib, qt5, rclcpp, rcpputils, rosidl-runtime-cpp }:
 buildRosPackage {
   pname = "ros-galactic-rqt-image-overlay-layer";
-  version = "0.0.6-r1";
+  version = "0.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_image_overlay-release/archive/release/galactic/rqt_image_overlay_layer/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "a65a299e252ed5703a06ff96682392554b008f0cdffc8ea67b2cff433a243739";
+    url = "https://github.com/ros2-gbp/rqt_image_overlay-release/archive/release/galactic/rqt_image_overlay_layer/0.0.7-1.tar.gz";
+    name = "0.0.7-1.tar.gz";
+    sha256 = "22f81b6706562d2cf059f5311597a2f06d04e0edee28f5e05458e0bd94aa5ff1";
   };
 
   buildType = "ament_cmake";

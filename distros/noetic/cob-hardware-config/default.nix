@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-calibration-data, cob-description, cob-omni-drive-controller, cob-supported-robots, costmap-2d, diagnostic-aggregator, joint-state-controller, joint-state-publisher, joint-state-publisher-gui, joint-trajectory-controller, laser-filters, position-controllers, raw-description, robot-state-publisher, roslaunch, rostest, rviz, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-noetic-cob-hardware-config";
-  version = "0.7.6-r4";
+  version = "0.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/noetic/cob_hardware_config/0.7.6-4.tar.gz";
-    name = "0.7.6-4.tar.gz";
-    sha256 = "004e7782371c933b213222f26fcf28d16a643cc0cc1438e70d847396e6eab375";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/noetic/cob_hardware_config/0.7.7-1.tar.gz";
+    name = "0.7.7-1.tar.gz";
+    sha256 = "abd28ec1757cfff0bd13263d263fae7be57fdacea82e49c50dfeee9257b5e3bb";
   };
 
   buildType = "catkin";

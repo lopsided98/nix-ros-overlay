@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslaunch }:
 buildRosPackage {
   pname = "ros-noetic-cob-default-env-config";
-  version = "0.6.12-r1";
+  version = "0.6.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_environments-release/archive/release/noetic/cob_default_env_config/0.6.12-1.tar.gz";
-    name = "0.6.12-1.tar.gz";
-    sha256 = "25bf7d51166ad5d395862797d4ea5ecfbfa8a075d542af97b88b734150d1a390";
+    url = "https://github.com/ipa320/cob_environments-release/archive/release/noetic/cob_default_env_config/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
+    sha256 = "6cde5633df93fa2800618827ee773455398dc8cd7da437f0ae49b363a12d9a7b";
   };
 
   buildType = "catkin";

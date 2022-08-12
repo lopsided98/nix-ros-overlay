@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-libdlib";
-  version = "0.6.17-r1";
+  version = "0.6.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/noetic/libdlib/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "704258cc1b7c08346fb6a622edfeac3a1575bfdf2d586039f83baa2d65a792f0";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/noetic/libdlib/0.6.18-1.tar.gz";
+    name = "0.6.18-1.tar.gz";
+    sha256 = "217bb8d8c749b3c2d3235183c0ee685a1bb0310ab92391a8b2a4b1e37a748f7c";
   };
 
   buildType = "catkin";

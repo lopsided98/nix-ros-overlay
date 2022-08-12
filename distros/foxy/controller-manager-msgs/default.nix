@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-controller-manager-msgs";
-  version = "0.10.1-r1";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/controller_manager_msgs/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "06f238af7bfe03c95e09e85af394d7bdd333eb69e7ff1eae3f4b21085d158963";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/controller_manager_msgs/0.11.0-1.tar.gz";
+    name = "0.11.0-1.tar.gz";
+    sha256 = "352bc1691a1bee337ebd71a29b937780a7790ca111e28f1006cb79d14410d881";
   };
 
   buildType = "ament_cmake";

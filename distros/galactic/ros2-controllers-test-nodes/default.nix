@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, pythonPackages, rclpy, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-galactic-ros2-controllers-test-nodes";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/ros2_controllers_test_nodes/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "470098336b64996691a49be6c105b221ba078c1f6473bdacd1e48846b019f0b2";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/ros2_controllers_test_nodes/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "7ead9df1d0e154cfbe948abed5f78921510638b8b9a2cc1255d72901493d55bd";
   };
 
   buildType = "ament_python";

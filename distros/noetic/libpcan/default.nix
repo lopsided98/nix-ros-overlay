@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-libpcan";
-  version = "0.6.17-r1";
+  version = "0.6.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/noetic/libpcan/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "2fe5ad3a5608e48eedb6c3e4bbcd846635f5193cd634dd45e3a1df902a00eaeb";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/noetic/libpcan/0.6.18-1.tar.gz";
+    name = "0.6.18-1.tar.gz";
+    sha256 = "634d7fe32f5cdda1a70fd01d76ec7538948cf891bf037594f8358eafbf9ea091";
   };
 
   buildType = "catkin";
