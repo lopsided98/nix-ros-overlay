@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-splsm-7";
-  version = "0.0.1-r1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/foxy/splsm_7/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "9a9f8090ce847e013a4e4cf3763b84a2abca6ff033c78e59d2a5752ed3a9f611";
+    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/foxy/splsm_7/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "1d317dfd35dab465b9c0c49c98d1a5c18eb14e7972207f0fe7b11d6c50ae6dde";
   };
 
   buildType = "ament_cmake";

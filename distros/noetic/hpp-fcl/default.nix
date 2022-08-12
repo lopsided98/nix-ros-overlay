@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, catkin, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-hpp-fcl";
-  version = "1.8.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/humanoid-path-planner/hpp-fcl-ros-release/archive/release/noetic/hpp-fcl/1.8.1-1.tar.gz";
-    name = "1.8.1-1.tar.gz";
-    sha256 = "0e77963fcce64b51ec4f27c9a196757af2d0783feb5463b784b87a1e8fc62399";
+    url = "https://github.com/humanoid-path-planner/hpp-fcl-ros-release/archive/release/noetic/hpp-fcl/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "6638c9e5e5ad0517eefe6abc79b008af595b6f2acf3d13d65cf434d7dba5bbc9";
   };
 
   buildType = "cmake";

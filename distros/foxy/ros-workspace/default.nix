@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-package, cmake }:
 buildRosPackage {
   pname = "ros-foxy-ros-workspace";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_workspace-release/archive/release/foxy/ros_workspace/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "decafbf4c498c03d4a8f711413674c575af456e008c4f2fc8790618b1492cd40";
+    url = "https://github.com/ros2-gbp/ros_workspace-release/archive/release/foxy/ros_workspace/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "e3797244bf456109aa2752c797d1f45d2875c576631cfa6291bc66a29abcc652";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, angles, catkin, cob-srvs, geometry-msgs, move-base-msgs, nav-msgs, roscpp, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-linear-nav";
-  version = "0.6.12-r1";
+  version = "0.6.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_linear_nav/0.6.12-1.tar.gz";
-    name = "0.6.12-1.tar.gz";
-    sha256 = "c5960f0f81f66ef448f648382f5a154a915c171cf8b9eda1ec0cc76fc9be0ce0";
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_linear_nav/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
+    sha256 = "713e99b6492a0821b52b9e6baa08dc6b109d5bf10395cca74a8f6e1eaa5d7dba";
   };
 
   buildType = "catkin";

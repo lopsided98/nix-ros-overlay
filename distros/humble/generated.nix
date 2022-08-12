@@ -406,6 +406,10 @@ self: super: {
 
  gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
 
+ generate-parameter-library = self.callPackage ./generate-parameter-library {};
+
+ generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
  geodesy = self.callPackage ./geodesy {};
 
  geographic-info = self.callPackage ./geographic-info {};
@@ -572,11 +576,17 @@ self: super: {
 
  leo = self.callPackage ./leo {};
 
+ leo-bringup = self.callPackage ./leo-bringup {};
+
  leo-description = self.callPackage ./leo-description {};
 
  leo-desktop = self.callPackage ./leo-desktop {};
 
+ leo-fw = self.callPackage ./leo-fw {};
+
  leo-msgs = self.callPackage ./leo-msgs {};
+
+ leo-robot = self.callPackage ./leo-robot {};
 
  leo-teleop = self.callPackage ./leo-teleop {};
 
@@ -875,6 +885,8 @@ self: super: {
  ouxt-common = self.callPackage ./ouxt-common {};
 
  ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
+
+ parameter-traits = self.callPackage ./parameter-traits {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
@@ -1364,6 +1376,8 @@ self: super: {
 
  rqt-image-view = self.callPackage ./rqt-image-view {};
 
+ rqt-joint-trajectory-controller = self.callPackage ./rqt-joint-trajectory-controller {};
+
  rqt-moveit = self.callPackage ./rqt-moveit {};
 
  rqt-msg = self.callPackage ./rqt-msg {};
@@ -1540,6 +1554,8 @@ self: super: {
 
  tango-icons-vendor = self.callPackage ./tango-icons-vendor {};
 
+ tcb-span = self.callPackage ./tcb-span {};
+
  teleop-tools = self.callPackage ./teleop-tools {};
 
  teleop-tools-msgs = self.callPackage ./teleop-tools-msgs {};
@@ -1615,6 +1631,8 @@ self: super: {
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
  transmission-interface = self.callPackage ./transmission-interface {};
+
+ tricycle-controller = self.callPackage ./tricycle-controller {};
 
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 

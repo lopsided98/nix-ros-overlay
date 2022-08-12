@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-cob-reflector-referencing";
-  version = "0.6.11-r1";
+  version = "0.6.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/noetic/cob_reflector_referencing/0.6.11-1.tar.gz";
-    name = "0.6.11-1.tar.gz";
-    sha256 = "053bef87c9fbbbdc25cc44ad820aede0bf4c0ad2c1598f537aa76ce157fcba5b";
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/noetic/cob_reflector_referencing/0.6.12-1.tar.gz";
+    name = "0.6.12-1.tar.gz";
+    sha256 = "6631e274bff81a1e2b68c33d055157ed3dfd0c80c7af0feb9fd9eebaeb6454b2";
   };
 
   buildType = "catkin";

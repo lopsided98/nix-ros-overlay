@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-ipa-differential-docking";
-  version = "0.6.11-r1";
+  version = "0.6.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/noetic/ipa_differential_docking/0.6.11-1.tar.gz";
-    name = "0.6.11-1.tar.gz";
-    sha256 = "09b554178afbb3ad4f95ac879fb9f1186e7cdb5a48e3400b9483969416f74468";
+    url = "https://github.com/ipa320/cob_substitute-release/archive/release/noetic/ipa_differential_docking/0.6.12-1.tar.gz";
+    name = "0.6.12-1.tar.gz";
+    sha256 = "1702147d1a9b120c18f7c2ee3a821566be140039abbe5013ed217d8383e8e0b7";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-cob-navigation-config";
-  version = "0.6.12-r1";
+  version = "0.6.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_navigation_config/0.6.12-1.tar.gz";
-    name = "0.6.12-1.tar.gz";
-    sha256 = "75314196a7d593581b1c1705a7908bbb6a14dbf88fd5f3bfe7b9c90e6014b2c7";
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_navigation_config/0.6.13-1.tar.gz";
+    name = "0.6.13-1.tar.gz";
+    sha256 = "7bd8380ec54e08b901b93eac51e96993f667abe16229df31593fd71cbc34fb21";
   };
 
   buildType = "catkin";

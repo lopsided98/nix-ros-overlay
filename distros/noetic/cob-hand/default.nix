@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-hand-bridge }:
 buildRosPackage {
   pname = "ros-noetic-cob-hand";
-  version = "0.6.9-r1";
+  version = "0.6.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_hand-release/archive/release/noetic/cob_hand/0.6.9-1.tar.gz";
-    name = "0.6.9-1.tar.gz";
-    sha256 = "80b3f611a8be6ea90a1f9f1df5c704a035a347b3419f743f757b1b6138224d04";
+    url = "https://github.com/ipa320/cob_hand-release/archive/release/noetic/cob_hand/0.6.10-1.tar.gz";
+    name = "0.6.10-1.tar.gz";
+    sha256 = "def20ffe69e0af6e5d173018e5d5e7fdb287a80eecb71217dc8fb7ceaf721899";
   };
 
   buildType = "catkin";

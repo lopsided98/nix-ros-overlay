@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-forward-command-controller";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/forward_command_controller/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "8137050c5416328fb968d82397ebb070124ff385a351c7d39ada21f03f25b47b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/forward_command_controller/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "6dc1f04d629f593c82492212d34585f52482206a69c5f4cc5c05dadebb1291df";
   };
 
   buildType = "ament_cmake";
