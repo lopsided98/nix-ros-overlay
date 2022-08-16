@@ -3,12 +3,12 @@
 , libuuid, graphviz, libsForQt5, freeimage, boost, protobuf, sdformat, tbb
 , ogre1_9, ffmpeg, ignition, ignition-cmake ? ignition.cmake0
 , ignition-common ? ignition.common, ignition-math ? ignition.math4
-, ignition-transport ? ignition.transport8, ignition-msgs ? ignition.msgs
+, ignition-transport ? ignition.transport8, ignition-msgs ? ignition.msgs5
 , ignition-fuel-tools ? ignition.fuel-tools4
 
 , bullet, withBulletEngineSupport ? false
-, version ? "11.9.0"
-, srcSha256 ? "0bhzp28kcif5qhbx8wdhvj7rdkcmiy4b8l50p8ss8858g3kwbpsp"
+, version ? "11.11.0"
+, srcSha256 ? "sha256-DCY3qHPtFOhI550+3IZyyPs5ABBzKHzpTpmRqudt2Vg="
 , ... }: with lib;
 
 mkDerivation rec {
@@ -31,12 +31,6 @@ mkDerivation rec {
     lib.optional (lib.versionOlder version "11.3.0") (fetchpatch {
       url = "https://github.com/osrf/gazebo/commit/25d3381c083a9eeafcee34ef648339a83e192676.patch";
       sha256 = "1qixrz2jiqdc37mgcsnv562m7mzr6w0rd67fmkr5710n6dnky4y7";
-    }) ++
-    # Fix CMake relative install path assumptions
-    # https://github.com/osrf/gazebo/pull/3138
-    lib.optional (lib.versionAtLeast version "11.8.0") (fetchpatch {
-      url = "https://github.com/osrf/gazebo/commit/9bf5dac1546f3982d9da783a6ac5d7e674ddbe24.patch";
-      sha256 = "0h9fmch8rgnsi3gnxvwfp0g9jgzy0z9p7nah005qw9lzmkvdrvs7";
     });
 
   enableParallelBuilding = true;

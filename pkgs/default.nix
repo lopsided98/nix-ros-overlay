@@ -82,8 +82,8 @@ in {
 
     fuel-tools1 = self.callPackage ./ignition/fuel-tools/1.nix { };
     fuel-tools4 = self.callPackage ./ignition/fuel-tools/4.nix { };
-    fuel-tools6 = self.callPackage ./ignition/fuel-tools { };
-    fuel-tools = self.ignition.fuel-tools6;
+    fuel-tools7 = self.callPackage ./ignition/fuel-tools { };
+    fuel-tools = self.ignition.fuel-tools7;
 
     math4 = self.callPackage ./ignition/math/4.nix { };
     math6 = self.callPackage ./ignition/math { };
@@ -91,15 +91,15 @@ in {
 
     msgs1 = self.callPackage ./ignition/msgs/1.nix { };
     msgs5 = self.callPackage ./ignition/msgs/5.nix { };
-    msgs7 = self.callPackage ./ignition/msgs { };
-    msgs = self.ignition.msgs7;
+    msgs8 = self.callPackage ./ignition/msgs { };
+    msgs = self.ignition.msgs8;
 
     tools = self.callPackage ./ignition/tools { };
 
     transport4 = self.callPackage ./ignition/transport/4.nix { };
     transport8 = self.callPackage ./ignition/transport/8.nix { };
-    transport10 = self.callPackage ./ignition/transport { };
-    transport = self.ignition.transport10;
+    transport11 = self.callPackage ./ignition/transport { };
+    transport = self.ignition.transport11;
 
     utils1 = self.callPackage ./ignition/utils { };
     utils = self.ignition.utils1;

@@ -2,15 +2,16 @@
 , ignition-cmake ? ignition.cmake, ignition-math ? ignition.math
 , ignition-utils ? ignition.utils, libuuid, tinyxml-2, freeimage, gts, ffmpeg
 , majorVersion ? "4"
-, version ? "4.0.0"
-, srcSha256 ? "1vfgjd527z3jypdvnz6w2yfm8n6brrxxh4mcb9srf4bn9apawzwp"
+, version ? "4.5.1"
+, srcSha256 ? "sha256-Ut5/pvcpCbZH2QGleXW2bfiVcWm5zBdt7r1Hx+4F924="
 , ... }:
 
 stdenv.mkDerivation rec {
   pname = "ignition-common${majorVersion}";
   inherit version;
 
-  src = fetchFromGitHub {
+  src = fetchFromGitHub rec {
+    name = "${rev}-source";
     owner = "ignitionrobotics";
     repo = "ign-common";
     rev = "${pname}_${version}";

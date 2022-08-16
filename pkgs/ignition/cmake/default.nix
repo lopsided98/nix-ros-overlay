@@ -1,14 +1,15 @@
 { lib, stdenv, fetchFromGitHub, cmake, pkg-config
 , majorVersion ? "2"
-, version ? "2.9.0"
-, srcSha256 ? "0yg5prhkgysp2wqrsh71mv582ry154sm14ps20rsq138zhnf9751"
+, version ? "2.14.0"
+, srcSha256 ? "sha256-23QwqdBBKNB/Q/6e2aitWZ433FFfhpIfbm9jvEiKNG8="
 , ... }:
 
 stdenv.mkDerivation rec {
   pname = "ignition-cmake${majorVersion}";
   inherit version;
 
-  src = fetchFromGitHub {
+  src = fetchFromGitHub rec {
+    name = "${rev}-source";
     owner = "ignitionrobotics";
     repo = "ign-cmake";
     rev = "${pname}_${version}";

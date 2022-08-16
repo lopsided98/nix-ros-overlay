@@ -1,8 +1,8 @@
 { callPackage, sdformat_6, ignition, ... } @ args:
 
 callPackage ./. (args // {
-  version = "9.18.0";
-  srcSha256 = "0j9458bzm7a3pl4nsialypw2s3p1fk3sjpji8kw8aqkrdrpdw03d";
+  version = "9.19.0";
+  srcSha256 = "sha256-HzykMIJLEgrgx8TAA3oaVue2v2xQcxsUi1x1v8Rtf+c=";
   sdformat = sdformat_6;
   ignition-common = ignition.common1;
   ignition-transport = ignition.transport4;

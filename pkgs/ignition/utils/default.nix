@@ -1,15 +1,16 @@
 { lib, stdenv, fetchFromGitHub, cmake, ignition
 , ignition-cmake ? ignition.cmake
 , majorVersion ? "1"
-, version ? "1.0.0"
-, srcSha256 ? "1y7x1gpwm2ws7sljxgk7yqsngjcgya4vi3xlasfl7hzh9lfps8zg"
+, version ? "1.4.0"
+, srcSha256 ? "sha256-+kV/iYA1XmMpgK6G4Q69uT1ZZexVAphX6mD5SRQGI7k="
 , ... }:
 
 stdenv.mkDerivation rec {
   pname = "ignition-utils${majorVersion}";
   inherit version;
 
-  src = fetchFromGitHub {
+  src = fetchFromGitHub rec {
+    name = "${rev}-source";
     owner = "ignitionrobotics";
     repo = "ign-utils";
     rev = "${pname}_${version}";

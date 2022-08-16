@@ -1,8 +1,8 @@
 { lib, stdenv, fetchurl, cmake, pkg-config, ruby, boost, ignition
 , ignition-math ? ignition.math, tinyxml, urdfdom, urdfdom-headers
 , console-bridge
-, version ? "9.3.0"
-, srcSha256 ? "01jikzpv073dz0k4s3wabcm5frndjzkhbjbb3nzw6qbfb1d45arh"
+, version ? "9.8.0"
+, srcSha256 ? "sha256-kJz6qlxbmIrWOwvhLbb12ZCLbajMJ0p9Opzj6lzDtPs="
 , ...
   }:
 

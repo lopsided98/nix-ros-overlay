@@ -1,14 +1,15 @@
 { lib, stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
 , majorVersion ? "6"
-, version ? "6.7.0"
-, srcSha256 ? "0hyhlqgjx3yrmk1fgp1brgq2lk8l26sihn8yfmm0garbxi70zspb"
+, version ? "6.12.0"
+, srcSha256 ? "sha256-tKVaRzxLzMfAyL6+xRmmTgFKxFXAjoNyf8pgwOkWb/Q="
 , ... }:
 
 stdenv.mkDerivation rec {
   pname = "ignition-math${majorVersion}";
   inherit version;
 
-  src = fetchFromGitHub {
+  src = fetchFromGitHub rec {
+    name = "${rev}-source";
     owner = "ignitionrobotics";
     repo = "ign-math";
     rev = "${pname}_${version}";

@@ -1,16 +1,17 @@
 { lib, stdenv, fetchFromGitHub, cmake, ignition
 , ignition-cmake ? ignition.cmake, ignition-common ? ignition.common
 , ignition-msgs ? ignition.msgs, tinyxml-2, curl, jsoncpp, libyaml, libzip
-, majorVersion ? "6"
-, version ? "6.0.0"
-, srcSha256 ? "07c489yc0n7gry0czp85siaqy9ar03ggaj70lcphwq6zp98gzz4h"
+, majorVersion ? "7"
+, version ? "7.0.0"
+, srcSha256 ? "sha256-yHiHfYjZuLOzly30nAE//r65ibzZ6DGoZSCQiWRXIHg="
 , ... }:
 
 stdenv.mkDerivation rec {
   pname = "ignition-fuel-tools${majorVersion}";
   inherit version;
 
-  src = fetchFromGitHub {
+  src = fetchFromGitHub rec {
+    name = "${rev}-source";
     owner = "ignitionrobotics";
     repo = "ign-fuel-tools";
     rev = "${pname}_${version}";

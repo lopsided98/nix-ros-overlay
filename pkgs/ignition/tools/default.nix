@@ -2,13 +2,14 @@
 
 stdenv.mkDerivation rec {
   pname = "ignition-tools";
-  version = "1.2.0";
+  version = "1.5.0";
 
-  src = fetchFromGitHub {
+  src = fetchFromGitHub rec {
+    name = "${rev}-source";
     owner = "ignitionrobotics";
     repo = "ign-tools";
     rev = "${pname}_${version}";
-    sha256 = "1zf5hrwkfp7cilfqsk8spdi7dsygj2bff5w3d56cd97ym7r4d1zi";
+    sha256 = "sha256-HgYT7MARRnOdUuUllxRn9pl7tsWO5RDIFDObzJQgZpc=";
   };
 
   nativeBuildInputs = [ cmake ruby ];

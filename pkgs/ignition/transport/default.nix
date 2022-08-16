@@ -1,16 +1,17 @@
 { lib, stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
 , ignition-math ? ignition.math, ignition-msgs ? ignition.msgs
 , ignition-utils ? ignition.utils, protobuf, libuuid, sqlite, cppzmq, zeromq
-, majorVersion ? "10"
-, version ? "10.0.0"
-, srcSha256 ? "0jhqn1hai25mg1807ixhp903jg8gqwl8kqrm4na50q8gl6jnv7hi"
+, majorVersion ? "11"
+, version ? "11.1.0"
+, srcSha256 ? "sha256-bOsulr8O5sRJ3XAQOP9xWCgoXqEH6M+IEFa0Sx6vze0="
 , ... }:
 
 stdenv.mkDerivation rec {
   pname = "ignition-transport${majorVersion}";
   inherit version;
 
-  src = fetchFromGitHub {
+  src = fetchFromGitHub rec {
+    name = "${rev}-source";
     owner = "ignitionrobotics";
     repo = "ign-transport";
     rev = "${pname}_${version}";

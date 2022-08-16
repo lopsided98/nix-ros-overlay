@@ -1,15 +1,16 @@
 { lib, stdenv, fetchFromGitHub, cmake, tinyxml-2, ignition
 , ignition-cmake ? ignition.cmake, protobuf, ignition-math ? ignition.math
-, majorVersion ? "7"
-, version ? "7.1.0"
-, srcSha256 ? "0sc6mgjxdyx973ziq9svkna35pz9f5cikcf7980vc69vlfaiv9k7"
+, majorVersion ? "8"
+, version ? "8.6.0"
+, srcSha256 ? "sha256-Rk9as7eQ6gmY2bYCHv4TnwBX5B+He+0SEEAQhCpfUaM="
 , ... }:
 
 stdenv.mkDerivation rec {
   pname = "ignition-msgs${majorVersion}";
   inherit version;
 
-  src = fetchFromGitHub {
+  src = fetchFromGitHub rec {
+    name = "${rev}-source";
     owner = "ignitionrobotics";
     repo = "ign-msgs";
     rev = "${pname}_${version}";

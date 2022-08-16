@@ -1,8 +1,8 @@
 { callPackage, ignition, ... } @ args:
 
 callPackage ./. (args // {
-  version = "6.2.0";
-  srcSha256 = "1ylqb22p0w3mikpl6vjqi4jkq15sqzl765i3232a0fd6y148d0dy";
+  version = "6.3.1";
+  srcSha256 = "sha256-JPjDFLFP0+mZ7q1am3iPmDlcyGG/i1Yti8zKdY7d7ME=";
   ignition-math = ignition.math4;
 })
 
