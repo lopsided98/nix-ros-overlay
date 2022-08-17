@@ -608,6 +608,8 @@ self: super: {
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
+ hpp-fcl = self.callPackage ./hpp-fcl {};
+
  husky-base = self.callPackage ./husky-base {};
 
  husky-bringup = self.callPackage ./husky-bringup {};
@@ -1104,6 +1106,8 @@ self: super: {
 
  picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
 
+ pinocchio = self.callPackage ./pinocchio {};
+
  plansys2-bringup = self.callPackage ./plansys2-bringup {};
 
  plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
@@ -1217,6 +1221,8 @@ self: super: {
  raspimouse-description = self.callPackage ./raspimouse-description {};
 
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
+
+ raspimouse-ros2-examples = self.callPackage ./raspimouse-ros2-examples {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -1705,6 +1711,8 @@ self: super: {
  sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
 
  sick-scan2 = self.callPackage ./sick-scan2 {};
+
+ simple-actions = self.callPackage ./simple-actions {};
 
  simple-launch = self.callPackage ./simple-launch {};
 

@@ -1222,13 +1222,23 @@ self: super: {
 
  ros2acceleration = self.callPackage ./ros2acceleration {};
 
+ ros2action = self.callPackage ./ros2action {};
+
  ros2bag = self.callPackage ./ros2bag {};
+
+ ros2cli = self.callPackage ./ros2cli {};
 
  ros2cli-common-extensions = self.callPackage ./ros2cli-common-extensions {};
 
  ros2cli-test-interfaces = self.callPackage ./ros2cli-test-interfaces {};
 
+ ros2component = self.callPackage ./ros2component {};
+
  ros2controlcli = self.callPackage ./ros2controlcli {};
+
+ ros2doctor = self.callPackage ./ros2doctor {};
+
+ ros2interface = self.callPackage ./ros2interface {};
 
  ros2launch = self.callPackage ./ros2launch {};
 
@@ -1236,11 +1246,27 @@ self: super: {
 
  ros2launch-security-examples = self.callPackage ./ros2launch-security-examples {};
 
+ ros2lifecycle = self.callPackage ./ros2lifecycle {};
+
  ros2lifecycle-test-fixtures = self.callPackage ./ros2lifecycle-test-fixtures {};
+
+ ros2multicast = self.callPackage ./ros2multicast {};
+
+ ros2node = self.callPackage ./ros2node {};
 
  ros2nodl = self.callPackage ./ros2nodl {};
 
+ ros2param = self.callPackage ./ros2param {};
+
+ ros2pkg = self.callPackage ./ros2pkg {};
+
+ ros2run = self.callPackage ./ros2run {};
+
+ ros2service = self.callPackage ./ros2service {};
+
  ros2test = self.callPackage ./ros2test {};
+
+ ros2topic = self.callPackage ./ros2topic {};
 
  ros2trace = self.callPackage ./ros2trace {};
 

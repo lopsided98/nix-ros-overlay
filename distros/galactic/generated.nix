@@ -984,6 +984,8 @@ self: super: {
 
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
 
+ pinocchio = self.callPackage ./pinocchio {};
+
  plansys2-bringup = self.callPackage ./plansys2-bringup {};
 
  plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
@@ -1535,6 +1537,8 @@ self: super: {
  sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
 
  sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
+
+ simple-actions = self.callPackage ./simple-actions {};
 
  simple-launch = self.callPackage ./simple-launch {};
 

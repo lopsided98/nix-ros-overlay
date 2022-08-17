@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-lint-auto, ament-lint-common, git }:
 buildRosPackage {
   pname = "ros-foxy-mcap-vendor";
-  version = "0.1.6-r1";
+  version = "0.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/foxy/mcap_vendor/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "fd80d3964423381c9ce2ec6065ba3adfcf1e6b58a57d283d8f82e43b3c65a1d3";
+    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/foxy/mcap_vendor/0.1.7-1.tar.gz";
+    name = "0.1.7-1.tar.gz";
+    sha256 = "c4f93c8e9fc3f0f38a8c39cb9b6bfdfe23f71ab935bccd73a896662892bf1720";
   };
 
   buildType = "ament_cmake";

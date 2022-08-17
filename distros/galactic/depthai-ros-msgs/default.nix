@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rclcpp, rosidl-default-generators, sensor-msgs, std-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-galactic-depthai-ros-msgs";
-  version = "2.5.2-r1";
+  version = "2.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/galactic/depthai_ros_msgs/2.5.2-1.tar.gz";
-    name = "2.5.2-1.tar.gz";
-    sha256 = "5f2ac0c88f91cf3458b4e2eddf043e040220e20f496ec14c813cadb30af057b1";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/galactic/depthai_ros_msgs/2.5.3-1.tar.gz";
+    name = "2.5.3-1.tar.gz";
+    sha256 = "af060ae0e740562582cd76c2c6953cbcd0df4f74fbb1fcfb7efa2f6a380cc5bd";
   };
 
   buildType = "ament_cmake";
