@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, depthai, depthai-bridge, depthai-examples, depthai-ros-msgs }:
 buildRosPackage {
   pname = "ros-galactic-depthai-ros";
-  version = "2.5.2-r1";
+  version = "2.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/galactic/depthai-ros/2.5.2-1.tar.gz";
-    name = "2.5.2-1.tar.gz";
-    sha256 = "2b3ea334485048935cf9ecad697e65e1af841284566e7677c523c4cd6bdbf31c";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/galactic/depthai-ros/2.5.3-1.tar.gz";
+    name = "2.5.3-1.tar.gz";
+    sha256 = "d05958abad07b6830d1bee0fde71ea1c5b6ca8474d9ada2c1e9c737fdbfafe04";
   };
 
   buildType = "ament_cmake";
