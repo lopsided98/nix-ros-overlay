@@ -19,11 +19,6 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
 
-  cmakeFlags = [
-    "-DCMAKE_INSTALL_INCLUDEDIR:PATH=include"
-    "-DCMAKE_INSTALL_LIBDIR:PATH=lib"
-  ];
-
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/math";
     description = "Math classes and functions for robot applications";

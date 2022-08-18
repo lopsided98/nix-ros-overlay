@@ -24,11 +24,6 @@ stdenv.mkDerivation rec {
     ++ lib.optional (lib.versionAtLeast version "5") ignition-utils;
   propagatedBuildInputs = [ protobuf cppzmq zeromq libuuid ignition-msgs ];
 
-  cmakeFlags= [
-    "-DCMAKE_INSTALL_INCLUDEDIR:PATH=include"
-    "-DCMAKE_INSTALL_LIBDIR:PATH=lib"
-  ];
-
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/transport";
     description = "Provides fast and efficient asyncronous message passing, services, and data logging.";
