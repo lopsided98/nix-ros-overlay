@@ -8,7 +8,7 @@
 
 , bullet, withBulletEngineSupport ? false
 , version ? "11.11.0"
-, srcSha256 ? "sha256-DCY3qHPtFOhI550+3IZyyPs5ABBzKHzpTpmRqudt2Vg="
+, srcHash ? "sha256-DCY3qHPtFOhI550+3IZyyPs5ABBzKHzpTpmRqudt2Vg="
 , ... }: with lib;
 
 mkDerivation rec {
@@ -17,7 +17,7 @@ mkDerivation rec {
 
   src = fetchurl {
     url = "https://osrf-distributions.s3.amazonaws.com/gazebo/releases/${pname}-${version}.tar.bz2";
-    sha256 = srcSha256;
+    hash = srcHash;
   };
 
   patches =

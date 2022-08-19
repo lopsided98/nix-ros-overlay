@@ -3,5 +3,5 @@
 callPackage ./. ({
   majorVersion = "3";
   version = "3.14.1";
-  srcSha256 = "sha256-UcXNt42CiqN//nfMSTjbGH8Imeey2HojojOw2t8csHw=";
+  srcHash = "sha256-UcXNt42CiqN//nfMSTjbGH8Imeey2HojojOw2t8csHw=";
 } // args)

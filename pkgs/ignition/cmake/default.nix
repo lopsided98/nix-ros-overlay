@@ -1,7 +1,7 @@
 { lib, stdenv, fetchFromGitHub, fetchpatch, cmake, pkg-config
 , majorVersion ? "2"
 , version ? "2.14.0"
-, srcSha256 ? "sha256-23QwqdBBKNB/Q/6e2aitWZ433FFfhpIfbm9jvEiKNG8="
+, srcHash ? "sha256-23QwqdBBKNB/Q/6e2aitWZ433FFfhpIfbm9jvEiKNG8="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
     owner = "ignitionrobotics";
     repo = "ign-cmake";
     rev = "${pname}_${version}";
-    sha256 = srcSha256;
+    hash = srcHash;
   };
 
   # Fix pkgconfig with absolute CMAKE_INSTALL_*DIR

@@ -3,7 +3,7 @@
 , ignition-utils ? ignition.utils, protobuf, libuuid, sqlite, cppzmq, zeromq
 , majorVersion ? "11"
 , version ? "11.1.0"
-, srcSha256 ? "sha256-bOsulr8O5sRJ3XAQOP9xWCgoXqEH6M+IEFa0Sx6vze0="
+, srcHash ? "sha256-bOsulr8O5sRJ3XAQOP9xWCgoXqEH6M+IEFa0Sx6vze0="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
     owner = "ignitionrobotics";
     repo = "ign-transport";
     rev = "${pname}_${version}";
-    sha256 = srcSha256;
+    hash = srcHash;
   };
 
   nativeBuildInputs = [ cmake ];

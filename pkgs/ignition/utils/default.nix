@@ -2,7 +2,7 @@
 , ignition-cmake ? ignition.cmake
 , majorVersion ? "1"
 , version ? "1.4.0"
-, srcSha256 ? "sha256-+kV/iYA1XmMpgK6G4Q69uT1ZZexVAphX6mD5SRQGI7k="
+, srcHash ? "sha256-+kV/iYA1XmMpgK6G4Q69uT1ZZexVAphX6mD5SRQGI7k="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
     owner = "ignitionrobotics";
     repo = "ign-utils";
     rev = "${pname}_${version}";
-    sha256 = srcSha256;
+    hash = srcHash;
   };
 
   nativeBuildInputs = [ cmake ignition-cmake ];

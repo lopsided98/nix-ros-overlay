@@ -3,7 +3,7 @@
 callPackage ./. ({
   majorVersion = "";
   version = "1.1.1";
-  srcSha256 = "0338whym8p2alg29nq2d7hvg3vg5qpngcw9y7lswzp9rnacznzwz";
+  srcHash = "sha256-n3/7mbI53c81PT5x9uzF5e3xNjxNYJvEo0pcVD3kaAw=";
   ignition-cmake = ignition.cmake0;
   ignition-math = ignition.math4;
 } // args)

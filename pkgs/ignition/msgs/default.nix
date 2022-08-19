@@ -2,7 +2,7 @@
 , ignition-cmake ? ignition.cmake, protobuf, ignition-math ? ignition.math
 , majorVersion ? "8"
 , version ? "8.6.0"
-, srcSha256 ? "sha256-Rk9as7eQ6gmY2bYCHv4TnwBX5B+He+0SEEAQhCpfUaM="
+, srcHash ? "sha256-Rk9as7eQ6gmY2bYCHv4TnwBX5B+He+0SEEAQhCpfUaM="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
     owner = "ignitionrobotics";
     repo = "ign-msgs";
     rev = "${pname}_${version}";
-    sha256 = srcSha256;
+    hash = srcHash;
   };
 
   nativeBuildInputs = [ cmake ];

@@ -1,7 +1,7 @@
 { lib, stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
 , majorVersion ? "6"
 , version ? "6.12.0"
-, srcSha256 ? "sha256-tKVaRzxLzMfAyL6+xRmmTgFKxFXAjoNyf8pgwOkWb/Q="
+, srcHash ? "sha256-tKVaRzxLzMfAyL6+xRmmTgFKxFXAjoNyf8pgwOkWb/Q="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
     owner = "ignitionrobotics";
     repo = "ign-math";
     rev = "${pname}_${version}";
-    sha256 = srcSha256;
+    hash = srcHash;
   };
 
   nativeBuildInputs = [ cmake ];

@@ -2,7 +2,7 @@
 , ignition-math ? ignition.math, tinyxml, urdfdom, urdfdom-headers
 , console-bridge
 , version ? "9.8.0"
-, srcSha256 ? "sha256-kJz6qlxbmIrWOwvhLbb12ZCLbajMJ0p9Opzj6lzDtPs="
+, srcHash ? "sha256-kJz6qlxbmIrWOwvhLbb12ZCLbajMJ0p9Opzj6lzDtPs="
 , ...
   }:
 
@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl { 
     url = "https://osrf-distributions.s3.amazonaws.com/${pname}/releases/${pname}-${version}.tar.bz2";
-    sha256 = srcSha256;
+    hash = srcHash;
   };
 
   prePatch = ''

@@ -2,7 +2,7 @@
 
 callPackage ./. (args // {
   version = "9.19.0";
-  srcSha256 = "sha256-HzykMIJLEgrgx8TAA3oaVue2v2xQcxsUi1x1v8Rtf+c=";
+  srcHash = "sha256-HzykMIJLEgrgx8TAA3oaVue2v2xQcxsUi1x1v8Rtf+c=";
   sdformat = sdformat_6;
   ignition-common = ignition.common1;
   ignition-transport = ignition.transport4;

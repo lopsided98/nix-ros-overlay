@@ -3,7 +3,7 @@
 , ignition-utils ? ignition.utils, libuuid, tinyxml-2, freeimage, gts, ffmpeg
 , majorVersion ? "4"
 , version ? "4.5.1"
-, srcSha256 ? "sha256-Ut5/pvcpCbZH2QGleXW2bfiVcWm5zBdt7r1Hx+4F924="
+, srcHash ? "sha256-Ut5/pvcpCbZH2QGleXW2bfiVcWm5zBdt7r1Hx+4F924="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
     owner = "ignitionrobotics";
     repo = "ign-common";
     rev = "${pname}_${version}";
-    sha256 = srcSha256;
+    hash = srcHash;
   };
 
   nativeBuildInputs = [ cmake ];

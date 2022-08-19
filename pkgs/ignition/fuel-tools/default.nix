@@ -3,7 +3,7 @@
 , ignition-msgs ? ignition.msgs, tinyxml-2, curl, jsoncpp, libyaml, libzip
 , majorVersion ? "7"
 , version ? "7.0.0"
-, srcSha256 ? "sha256-yHiHfYjZuLOzly30nAE//r65ibzZ6DGoZSCQiWRXIHg="
+, srcHash ? "sha256-yHiHfYjZuLOzly30nAE//r65ibzZ6DGoZSCQiWRXIHg="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
     owner = "ignitionrobotics";
     repo = "ign-fuel-tools";
     rev = "${pname}_${version}";
-    sha256 = srcSha256;
+    hash = srcHash;
   };
 
   nativeBuildInputs = [ cmake ];
